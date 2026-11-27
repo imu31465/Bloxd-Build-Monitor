@@ -1,443 +1,443 @@
 export const id = 122;
 export const ids = [122];
 export const modules = {
-  42593: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => lW,
-      g: () => wW,
-      i: () => ZW,
-      l: () => tW,
-      m: () => xW
+  42653: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => rR,
+      f: () => fR,
+      h: () => KR,
+      k: () => VR,
+      o: () => wR
     });
-    var mW = OW(1217),
-      EW = OW(3083),
-      NW = OW(38333),
-      PW = OW(38702);
-    class LW {
-      constructor(WW, iW) {
-        this.pose = WW, this.nodes = void 0, this.nodes = WW.boneNames.map((WW => iW.get(WW)))
+    var yR = GR(1317),
+      tR = GR(3178),
+      uR = GR(38287),
+      ZR = GR(38686);
+    class qR {
+      constructor(RR, JR) {
+        this.pose = RR, this.nodes = void 0, this.nodes = RR.boneNames.map((RR => JR.get(RR)))
       }
-      write(WW) {
-        this.pose.pose(WW), (0, PW.s)(this.pose, this.nodes)
+      write(RR) {
+        this.pose.pose(RR), (0, ZR.p)(this.pose, this.nodes)
       }
     }
 
-    function cW(WW) {
-      WW.unfreezeWorldMatrix();
-      for (const iW of WW.getChildren()) cW(iW)
+    function iR(RR) {
+      RR.unfreezeWorldMatrix();
+      for (const JR of RR.getChildren()) iR(JR)
     }
-    async function wW(WW, iW, OW, mW) {
+    async function fR(RR, JR, GR, yR) {
       let {
-        keepTransforms: EW,
-        backFaceCulling: PW
-      } = mW;
-      const LW = await (0, NW.j)(iW, WW),
-        wW = (0, NW.e)(null !== OW && void 0 !== OW ? OW : iW, WW, void 0, PW);
-      (0, NW.l)(LW, wW, {
-        keepTransforms: EW,
-        backFaceCulling: PW,
-        onProcessedMesh: iW => {
-          WW.xEW(iW, !1), iW.isVisible = !1
+        keepTransforms: tR,
+        backFaceCulling: ZR
+      } = yR;
+      const qR = await (0, uR.k)(JR, RR),
+        fR = (0, uR.f)(null !== GR && void 0 !== GR ? GR : JR, RR, void 0, ZR);
+      (0, uR.m)(qR, fR, {
+        keepTransforms: tR,
+        backFaceCulling: ZR,
+        onProcessedMesh: JR => {
+          RR.stR(JR, !1), JR.isVisible = !1
         }
       });
-      for (const NW of LW.rootNodes) cW(NW);
-      return LW
+      for (const uR of qR.rootNodes) iR(uR);
+      return qR
     }
 
-    function tW(WW, iW) {
-      WW.isVisible = iW;
-      for (const OW of WW.getChildMeshes()) OW.isVisible = iW
+    function VR(RR, JR) {
+      RR.isVisible = JR;
+      for (const GR of RR.getChildMeshes()) GR.isVisible = JR
     }
 
-    function ZW(WW) {
-      const iW = new Map;
-      for (const OW of WW.getNodes()) iW.set(OW.name, OW);
-      return iW
+    function KR(RR) {
+      const JR = new Map;
+      for (const GR of RR.getNodes()) JR.set(GR.name, GR);
+      return JR
     }
 
-    function xW(WW, iW, OW, mW) {
-      tW(WW, !0), (0, NW.t)(WW, iW.overlayColour), OW.attachTransformNode(WW, mW, OW.getNamedNode(mW, iW.destNode))
+    function wR(RR, JR, GR, yR) {
+      VR(RR, !0), (0, uR.r)(RR, JR.overlayColour), GR.attachTransformNode(RR, yR, GR.getNamedNode(yR, JR.destNode))
     }
-    class lW {
-      constructor(WW, iW, OW) {
-        this.rb = WW, this.thinInstMgr = iW, this.uD = OW, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
+    class rR {
+      constructor(RR, JR, GR) {
+        this.tL = RR, this.thinInstMgr = JR, this.JI = GR, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
       }
-      loadModel(WW, iW, OW) {
-        const mW = (0, NW.h)(WW, iW);
-        return mW in this.modelCache || (this.modelCache[mW] = (async () => {
+      loadModel(RR, JR, GR) {
+        const yR = (0, uR.i)(RR, JR);
+        return yR in this.modelCache || (this.modelCache[yR] = (async () => {
           try {
-            const mW = ZW(await wW(this.rb, WW, iW, {
-                keepTransforms: void 0 !== OW,
+            const yR = KR(await fR(this.tL, RR, JR, {
+                keepTransforms: void 0 !== GR,
                 backFaceCulling: !1
               })),
-              EW = void 0 === OW ? null : (0, PW.m)(OW, (WW => {
-                const iW = mW.get(WW);
-                return iW ? (0, PW.i)(iW) : null
+              tR = void 0 === GR ? null : (0, ZR.i)(GR, (RR => {
+                const JR = yR.get(RR);
+                return JR ? (0, ZR.h)(JR) : null
               }));
             return {
-              nodesByName: mW,
-              bones: null === EW ? null : new LW(EW, mW)
+              nodesByName: yR,
+              bones: null === tR ? null : new qR(tR, yR)
             }
-          } catch (EW) {
-            throw delete this.modelCache[mW], console.error(`Failed to load preview attachment ${mW}:`, EW), EW
+          } catch (tR) {
+            throw delete this.modelCache[yR], console.error(`Failed to load preview attachment ${yR}:`, tR), tR
           }
-        })()), this.modelCache[mW]
+        })()), this.modelCache[yR]
       }
-      async update(WW, iW) {
-        var OW;
+      async update(RR, JR) {
+        var GR;
         const {
-          thinInstMgr: NW,
-          uD: PW
+          thinInstMgr: uR,
+          JI: ZR
         } = this;
-        this.cosmeticNames[WW] = iW;
-        const LW = this.attachmentsByType[WW];
-        if (LW)
+        this.cosmeticNames[RR] = JR;
+        const qR = this.attachmentsByType[RR];
+        if (qR)
           for (const {
-              mesh: EW,
-              destNode: wW,
-              bones: ZW
+              mesh: tR,
+              destNode: fR,
+              bones: KR
             }
-            of LW) {
-            null !== ZW && (0, mW.tb)(this.shownBones, ZW), tW(EW, !1);
-            const WW = NW.getNamedNode(PW, wW);
-            NW.detachTransformNodeIfFound(EW, PW, WW)
+            of qR) {
+            null !== KR && (0, yR.bb)(this.shownBones, KR), VR(tR, !1);
+            const RR = uR.getNamedNode(ZR, fR);
+            uR.detachTransformNodeIfFound(tR, ZR, RR)
           }
-        this.attachmentsByType[WW] = [];
-        const cW = (0, EW.l)(WW, iW);
-        if (null !== cW && void 0 !== cW && null !== (OW = cW.attachments) && void 0 !== OW && OW.length)
-          for (const mW of cW.attachments) {
-            let OW;
+        this.attachmentsByType[RR] = [];
+        const iR = (0, tR.m)(RR, JR);
+        if (null !== iR && void 0 !== iR && null !== (GR = iR.attachments) && void 0 !== GR && GR.length)
+          for (const yR of iR.attachments) {
+            let GR;
             try {
-              OW = await this.loadModel(mW.modelGlb, mW.texture, mW.animation)
+              GR = await this.loadModel(yR.modelGlb, yR.texture, yR.animation)
             } catch {
               continue
             }
-            if (this.cosmeticNames[WW] !== iW) return;
-            const EW = OW.nodesByName.get(mW.modelNode);
-            EW ? (xW(EW, mW, NW, PW), this.attachmentsByType[WW].push({
-              mesh: EW,
-              destNode: mW.destNode,
-              bones: OW.bones
-            }), null !== OW.bones && this.shownBones.push(OW.bones)) : console.error(`Preview attachment node ${mW.modelNode} not found in ${mW.modelGlb}`)
+            if (this.cosmeticNames[RR] !== JR) return;
+            const tR = GR.nodesByName.get(yR.modelNode);
+            tR ? (wR(tR, yR, uR, ZR), this.attachmentsByType[RR].push({
+              mesh: tR,
+              destNode: yR.destNode,
+              bones: GR.bones
+            }), null !== GR.bones && this.shownBones.push(GR.bones)) : console.error(`Preview attachment node ${yR.modelNode} not found in ${yR.modelGlb}`)
           }
       }
-      writePoses(WW) {
-        for (const iW of this.shownBones) iW.write(WW)
+      writePoses(RR) {
+        for (const JR of this.shownBones) JR.write(RR)
       }
     }
   },
-  40011: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => xW
+  40035: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => wR
     });
-    var mW = OW(38379),
-      EW = OW(38493),
-      NW = OW(38472),
-      PW = OW(38405),
-      LW = OW(38388);
+    var yR = GR(38349),
+      tR = GR(38456),
+      uR = GR(38437),
+      ZR = GR(38366),
+      qR = GR(38358);
 
-    function cW(WW) {
-      return `\n\t\t\t\t${(0,LW.v)(WW,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function iR(RR) {
+      return `\n\t\t\t\t${(0,qR.y)(RR,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, LW.B)(WW, "float", "s", "sin(ang)")
+        (0, qR.G)(RR, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, LW.B)(WW, "float", "c", "cos(ang)")
+        (0, qR.G)(RR, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, LW.m)(WW, "mat2", "c", "s", "-s", "c")
+        (0, qR.n)(RR, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function wW(WW, iW) {
-      let OW = (0, LW.Ib)(WW, "skele" + (iW - 1));
-      for (let EW = iW - 2; EW >= 0; EW--) OW = (0, LW.yb)(WW, `boneIdx == ${EW}`, (0, LW.Ib)(WW, `skele${EW}`), OW);
-      const mW = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,LW.B)(WW,"int","boneIdx",(0,LW.Db)(WW,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,LW.B)(WW,"vec3","bone",OW)}\n\t\t\t\t${(0,LW.B)(WW,"vec2","pivot",(0,LW.m)(WW,"vec2","0.0",`${(0,LW.Pb)(WW,"position")}.z`))}\n\t\t\t\t${(0,LW.ab)(WW)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${mW}));`:`positionUpdated.yz += ${mW};`}\n\t\t`
+    function fR(RR, JR) {
+      let GR = (0, qR.Jb)(RR, "skele" + (JR - 1));
+      for (let tR = JR - 2; tR >= 0; tR--) GR = (0, qR.Ab)(RR, `boneIdx == ${tR}`, (0, qR.Jb)(RR, `skele${tR}`), GR);
+      const yR = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,qR.G)(RR,"int","boneIdx",(0,qR.Fb)(RR,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,qR.G)(RR,"vec3","bone",GR)}\n\t\t\t\t${(0,qR.G)(RR,"vec2","pivot",(0,qR.n)(RR,"vec2","0.0",`${(0,qR.Nb)(RR,"position")}.z`))}\n\t\t\t\t${(0,qR.db)(RR)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${yR}));`:`positionUpdated.yz += ${yR};`}\n\t\t`
     }
 
-    function tW(WW) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,LW.m)(WW,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function VR(RR) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,qR.n)(RR,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const ZW = {
+    const KR = {
         x: 0,
         y: 0,
         z: 0,
-        mZ(WW, iW) {
-          return this.x = WW[iW], this.y = WW[iW + 1], this.z = WW[iW + 2], this
+        yK(RR, JR) {
+          return this.x = RR[JR], this.y = RR[JR + 1], this.z = RR[JR + 2], this
         }
       },
-      xW = {
+      wR = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (WW, iW) => ({
-          ...(0, mW.c)("CAPE"),
-          BLOXD_CAPE_BONES: `${WW}`,
-          BLOXD_CAPE_MAX_Y: (0, EW.ob)(iW)
+        defines: (RR, JR) => ({
+          ...(0, yR.e)("CAPE"),
+          BLOXD_CAPE_BONES: `${RR}`,
+          BLOXD_CAPE_MAX_Y: (0, tR.eb)(JR)
         }),
-        getUniforms(WW) {
-          return (0, NW.e)(function(WW) {
-            const iW = [];
-            for (let OW = 0; OW < WW; OW++) iW.push({
-              name: `skele${OW}`,
+        getUniforms(RR) {
+          return (0, uR.e)(function(RR) {
+            const JR = [];
+            for (let GR = 0; GR < RR; GR++) JR.push({
+              name: `skele${GR}`,
               type: "highp vec3"
             });
-            return iW
-          }(this.skeleLen), "vertex", WW)
+            return JR
+          }(this.skeleLen), "vertex", RR)
         },
-        bind(WW) {
-          for (let iW = 0; iW < this.skeleLen; iW++) WW.updateVector3(`skele${iW}`, ZW.mZ(this.skele, 3 * iW))
+        bind(RR) {
+          for (let JR = 0; JR < this.skeleLen; JR++) RR.updateVector3(`skele${JR}`, KR.yK(this.skele, 3 * JR))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(WW, iW) {
-          return "vertex" !== WW ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: cW(iW),
-            CUSTOM_VERTEX_UPDATE_POSITION: wW(iW, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: tW(iW)
+        getCustomCode(RR, JR) {
+          return "vertex" !== RR ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: iR(JR),
+            CUSTOM_VERTEX_UPDATE_POSITION: fR(JR, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: VR(JR)
           }
         }
       };
-    (0, PW.m)(xW)
+    (0, ZR.n)(wR)
   },
-  39915: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => tW,
-      d: () => ZW
+  39922: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => VR,
+      f: () => KR
     });
-    var mW = OW(38379),
-      EW = OW(38472),
-      NW = OW(38388),
-      PW = OW(38405);
-    const LW = "bloxdTextLodBias",
-      cW = [{
-        name: LW,
+    var yR = GR(38349),
+      tR = GR(38437),
+      uR = GR(38358),
+      ZR = GR(38366);
+    const qR = "bloxdTextLodBias",
+      iR = [{
+        name: qR,
         type: "float"
       }],
-      wW = "bloxdTextSample",
-      tW = {
+      fR = "bloxdTextSample",
+      VR = {
         planes: -.5,
         boards: -.5
       },
-      ZW = {
+      KR = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, mW.c)("TEXT_SAMPLER"),
-        getUniforms: WW => (0, EW.e)(cW, "fragment", WW),
-        bind(WW) {
-          WW.updateFloat(LW, this.lodBias)
+        defines: () => (0, yR.e)("TEXT_SAMPLER"),
+        getUniforms: RR => (0, tR.e)(iR, "fragment", RR),
+        bind(RR) {
+          RR.updateFloat(qR, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(WW, iW) {
-          if ("fragment" !== WW) return null;
-          const OW = (0, NW.K)(iW, `vec4 ${wW}(sampler2D s, vec2 uv, float bias)`, `fn ${wW}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            mW = (0, NW.K)(iW, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            EW = `${(0,NW.W)(iW,"vDiffuseUV")} + uvOffset`,
-            PW = (0, NW.K)(iW, `${wW}(diffuseSampler, ${EW}, ${(0,NW.Ib)(iW,LW)})`, `${wW}(diffuseSampler, diffuseSamplerSampler, ${EW}, ${(0,NW.Ib)(iW,LW)})`);
+        getCustomCode(RR, JR) {
+          if ("fragment" !== RR) return null;
+          const GR = (0, uR.M)(JR, `vec4 ${fR}(sampler2D s, vec2 uv, float bias)`, `fn ${fR}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            yR = (0, uR.M)(JR, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            tR = `${(0,uR.V)(JR,"vDiffuseUV")} + uvOffset`,
+            ZR = (0, uR.M)(JR, `${fR}(diffuseSampler, ${tR}, ${(0,uR.Jb)(JR,qR)})`, `${fR}(diffuseSampler, diffuseSamplerSampler, ${tR}, ${(0,uR.Jb)(JR,qR)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${OW} {\n\t\t\t\t\t${(0,NW.B)(iW,"vec4","texel",mW)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,NW.m)(iW,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,NW.m)(iW,"vec3","0.0")}, ${(0,NW.m)(iW,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, NW.F)(iW)]: `baseColor = ${PW};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${GR} {\n\t\t\t\t\t${(0,uR.G)(JR,"vec4","texel",yR)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,uR.n)(JR,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,uR.n)(JR,"vec3","0.0")}, ${(0,uR.n)(JR,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, uR.I)(JR)]: `baseColor = ${ZR};`
           }
         }
       };
-    (0, PW.m)(ZW)
+    (0, ZR.n)(KR)
   },
-  42601: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      CapeMaterialPlugin: () => MW,
-      HueTintMaterialPlugin: () => KW,
-      LifeformMaterialPlugin: () => SW,
-      OverlayMaterialPlugin: () => YW
+  42663: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      CapeMaterialPlugin: () => AR,
+      HueTintMaterialPlugin: () => CR,
+      LifeformMaterialPlugin: () => XR,
+      OverlayMaterialPlugin: () => MR
     });
-    var mW = OW(42603),
-      EW = OW(39198);
-    class NW extends((0, mW.d)(EW.b)) {}(0, mW.g)(EW.b, NW);
-    var PW = OW(38485);
-    class LW extends((0, mW.d)(PW.e)) {}(0, mW.g)(PW.e, LW);
-    var cW = OW(39025);
-    class wW extends((0, mW.d)(cW.f)) {}(0, mW.g)(cW.f, wW);
-    var tW = OW(38511),
-      ZW = OW(41782),
-      xW = OW(38502);
-    class lW extends((0, mW.d)(xW.h)) {
-      constructor(WW, iW, OW) {
-        super(WW, iW, OW), (0, tW.i)(WW)
+    var yR = GR(42671),
+      tR = GR(39172);
+    class uR extends((0, yR.d)(tR.e)) {}(0, yR.e)(tR.e, uR);
+    var ZR = GR(38453);
+    class qR extends((0, yR.d)(ZR.f)) {}(0, yR.e)(ZR.f, qR);
+    var iR = GR(39010);
+    class fR extends((0, yR.d)(iR.f)) {}(0, yR.e)(iR.f, fR);
+    var VR = GR(38475),
+      KR = GR(41781),
+      wR = GR(38466);
+    class rR extends((0, yR.d)(wR.e)) {
+      constructor(RR, JR, GR) {
+        super(RR, JR, GR), (0, VR.j)(RR)
       }
-      dispose(WW) {
-        (0, tW.k)(this._material), super.dispose(WW)
+      dispose(RR) {
+        (0, VR.l)(this._material), super.dispose(RR)
       }
-    }(0, mW.g)(xW.h, lW), (0, xW.j)({
-      disableUnusedSpecularTerm: mW.c,
-      isLightingDisabled: WW => WW instanceof ZW.StandardMaterial && WW.disableLighting
+    }(0, yR.e)(wR.e, rR), (0, wR.i)({
+      disableUnusedSpecularTerm: yR.b,
+      isLightingDisabled: RR => RR instanceof KR.StandardMaterial && RR.disableLighting
     });
-    var AW = OW(39915);
-    class bW extends((0, mW.d)(AW.d)) {}(0, mW.g)(AW.d, bW);
-    var jW = OW(40011),
-      UW = OW(38376),
-      kW = OW(39308),
-      sW = OW(38500);
-    class MW extends((0, mW.d)(jW.b)) {}(0, mW.g)(jW.b, MW);
-    class KW extends((0, mW.d)(UW.b)) {}(0, mW.g)(UW.b, KW);
-    class SW extends((0, mW.d)(kW.m)) {}(0, mW.g)(kW.m, SW);
-    class YW extends((0, mW.d)(sW.c)) {}(0, mW.g)(sW.c, YW)
+    var eR = GR(39922);
+    class aR extends((0, yR.d)(eR.f)) {}(0, yR.e)(eR.f, aR);
+    var LR = GR(40035),
+      nR = GR(38340),
+      UR = GR(39288),
+      WR = GR(38460);
+    class AR extends((0, yR.d)(LR.c)) {}(0, yR.e)(LR.c, AR);
+    class CR extends((0, yR.d)(nR.c)) {}(0, yR.e)(nR.c, CR);
+    class XR extends((0, yR.d)(UR.q)) {}(0, yR.e)(UR.q, XR);
+    class MR extends((0, yR.d)(WR.b)) {}(0, yR.e)(WR.b, MR)
   },
-  10106: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW,
-      e: () => PW,
-      h: () => LW,
-      j: () => cW
+  10234: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      g: () => ZR,
+      j: () => qR,
+      l: () => iR
     });
-    var mW = OW(27);
-    const EW = "touchSprintChanged";
-    let NW = !0;
+    var yR = GR(32);
+    const tR = "touchSprintChanged";
+    let uR = !0;
 
-    function PW() {
-      return NW
+    function ZR() {
+      return uR
     }
 
-    function LW(WW) {
-      WW !== NW && (NW = WW, mW.l.iZ(EW, WW))
+    function qR(RR) {
+      RR !== uR && (uR = RR, yR.n.JK(tR, RR))
     }
 
-    function cW(WW, iW) {
-      return null !== WW && null !== iW && WW > iW
+    function iR(RR, JR) {
+      return null !== RR && null !== JR && RR > JR
     }
   },
-  42603: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => XW,
-      d: () => sW,
-      g: () => rW
+  42671: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => SR,
+      d: () => WR,
+      e: () => FR
     });
-    var mW = OW(41782),
-      EW = OW(42612),
-      NW = OW(42652),
-      PW = OW(42616),
-      LW = OW(38995),
-      cW = OW(39004),
-      wW = OW(39009),
-      tW = OW(39011),
-      ZW = OW(38464),
-      xW = OW(38427),
-      lW = OW(38431),
-      AW = OW(42623),
-      bW = OW(38405),
-      jW = OW(38419),
-      UW = OW(38388);
+    var yR = GR(41781),
+      tR = GR(42677),
+      uR = GR(42722),
+      ZR = GR(42685),
+      qR = GR(38986),
+      iR = GR(38988),
+      fR = GR(38995),
+      VR = GR(38998),
+      KR = GR(38424),
+      wR = GR(38391),
+      rR = GR(38397),
+      eR = GR(42693),
+      aR = GR(38366),
+      LR = GR(38382),
+      nR = GR(38358);
 
-    function kW(WW, iW) {
-      return Object.assign((function(WW, OW, mW, EW) {
-        return iW(this.featureState, WW, OW, mW, EW)
+    function UR(RR, JR) {
+      return Object.assign((function(RR, GR, yR, tR) {
+        return JR(this.featureState, RR, GR, yR, tR)
       }), {
-        cZ: WW
+        iK: RR
       })
     }
 
-    function sW(WW) {
-      const iW = class extends AW.e {
-          constructor(iW, OW) {
-            const mW = (0, jW.bb)(iW),
-              EW = mW && (0, jW.v)(mW, WW.name);
-            for (var NW = arguments.length, PW = new Array(NW > 2 ? NW - 2 : 0), LW = 2; LW < NW; LW++) PW[LW - 2] = arguments[LW];
-            super(iW, WW.name, WW.priority, EW ? EW.defines : WW.defines(...PW), !1), this.featureState = void 0, this.featureState = OW, this._pluginManager._addPlugin(this), this._enable(!0), (0, jW.x)(this._material, WW, this.featureState, this._pluginDefineNames)
+    function WR(RR) {
+      const JR = class extends eR.e {
+          constructor(JR, GR) {
+            const yR = (0, LR.bb)(JR),
+              tR = yR && (0, LR.E)(yR, RR.name);
+            for (var uR = arguments.length, ZR = new Array(uR > 2 ? uR - 2 : 0), qR = 2; qR < uR; qR++) ZR[qR - 2] = arguments[qR];
+            super(JR, RR.name, RR.priority, tR ? tR.defines : RR.defines(...ZR), !1), this.featureState = void 0, this.featureState = GR, this._pluginManager._addPlugin(this), this._enable(!0), (0, LR.H)(this._material, RR, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return WW.className
+            return RR.className
           }
-          isCompatible(WW) {
-            return WW === UW.e.GLSL || WW === UW.e.WGSL
+          isCompatible(RR) {
+            return RR === nR.c.GLSL || RR === nR.c.WGSL
           }
         },
-        OW = (0, bW.i)(WW);
-      for (const [mW, EW] of Object.entries(bW.d)) {
-        const NW = WW[mW];
-        if (NW) {
-          const WW = OW[mW];
-          Object.defineProperty(iW.prototype, EW, {
-            value: kW(NW, WW),
+        GR = (0, aR.i)(RR);
+      for (const [yR, tR] of Object.entries(aR.e)) {
+        const uR = RR[yR];
+        if (uR) {
+          const RR = GR[yR];
+          Object.defineProperty(JR.prototype, tR, {
+            value: UR(uR, RR),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return iW
+      return JR
     }
-    class MW extends(sW(LW.e)) {}
-    var KW = OW(41359),
-      SW = OW(42630),
-      YW = OW(42633);
+    class AR extends(WR(qR.c)) {}
+    var CR = GR(41352),
+      XR = GR(42697),
+      MR = GR(42704);
 
-    function yW(WW, iW, OW) {
-      return (0, YW.i)(OW, iW.urls, (() => async function(WW, iW, OW) {
+    function BR(RR, JR, GR) {
+      return (0, MR.c)(GR, JR.urls, (() => async function(RR, JR, GR) {
         const {
-          width: mW
-        } = WW[0].getSize(), EW = WW.map(((WW, OW) => {
-          var EW;
-          const NW = Math.round(WW.getSize().height / mW),
-            PW = null === iW || void 0 === iW ? void 0 : iW[OW];
+          width: yR
+        } = RR[0].getSize(), tR = RR.map(((RR, GR) => {
+          var tR;
+          const uR = Math.round(RR.getSize().height / yR),
+            ZR = null === JR || void 0 === JR ? void 0 : JR[GR];
           return {
-            pixels: PW && PW.byteLength === mW * mW * NW * 4 ? PW : null !== (EW = TW.get(WW.getInternalTexture())) && void 0 !== EW ? EW : WW._readPixelsSync(),
-            layers: NW
+            pixels: ZR && ZR.byteLength === yR * yR * uR * 4 ? ZR : null !== (tR = lR.get(RR.getInternalTexture())) && void 0 !== tR ? tR : RR._readPixelsSync(),
+            layers: uR
           }
-        })), NW = Math.min(OW.VA().getCaps().texture2DArrayMaxLayerCount, 256), LW = (0, YW.e)(EW, mW, NW).map((WW => {
+        })), uR = Math.min(GR.ke().getCaps().texture2DArrayMaxLayerCount, 256), qR = (0, MR.b)(tR, yR, uR).map((RR => {
           let {
-            pixels: iW,
-            layers: EW
-          } = WW;
+            pixels: JR,
+            layers: tR
+          } = RR;
           return {
-            atlas: new SW.b(iW, mW, mW, EW, KW.c.TEXTUREFORMAT_RGBA, OW, !0, !1, PW.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: EW
+            atlas: new XR.d(JR, yR, yR, tR, CR.c.TEXTUREFORMAT_RGBA, GR, !0, !1, ZR.c.NEAREST_NEAREST_MIPLINEAR),
+            layers: tR
           }
         }));
-        return WW.forEach(((WW, iW) => {
-          const mW = WW.getInternalTexture();
-          TW.has(mW) || (! function(WW, iW) {
-            const OW = iW.createRawTexture(new Uint8Array(4), 1, 1, KW.c.TEXTUREFORMAT_RGBA, !1, !1, PW.d.NEAREST_SAMPLINGMODE);
-            WW._hardwareTexture.release(), iW.unbindAllTextures(), OW._swapAndDie(WW, !1)
-          }(mW, OW.VA()), TW.set(mW, EW[iW].pixels))
-        })), LW
-      }(WW, iW.pixels, OW)))
+        return RR.forEach(((RR, JR) => {
+          const yR = RR.getInternalTexture();
+          lR.has(yR) || (! function(RR, JR) {
+            const GR = JR.createRawTexture(new Uint8Array(4), 1, 1, CR.c.TEXTUREFORMAT_RGBA, !1, !1, ZR.c.NEAREST_SAMPLINGMODE);
+            RR._hardwareTexture.release(), JR.unbindAllTextures(), GR._swapAndDie(RR, !1)
+          }(yR, GR.ke()), lR.set(yR, tR[JR].pixels))
+        })), qR
+      }(RR, JR.pixels, GR)))
     }
-    const TW = new WeakMap;
-    var JW = OW(39017);
-    class hW extends(sW(cW.e)) {
-      constructor(WW, iW) {
-        super(WW, iW), this.loaded = new Set, this.mirrors = void 0, this.mirrors = iW.textures.map((WW => WW.mirror)), iW.useWebGL2 && !iW.imagesPerAtlas.length && iW.textureAtlases.splice(0, iW.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((WW, iW) => {
-          WW.onLoadObservable.add((WW => {
-            this.setTextureArrayData(WW, iW).catch((WW => {
-              console.error(`Failed to build the texture arrays, at atlas ${iW}`, WW)
+    const lR = new WeakMap;
+    var pR = GR(39007);
+    class gR extends(WR(iR.j)) {
+      constructor(RR, JR) {
+        super(RR, JR), this.loaded = new Set, this.mirrors = void 0, this.mirrors = JR.textures.map((RR => RR.mirror)), JR.useWebGL2 && !JR.imagesPerAtlas.length && JR.textureAtlases.splice(0, JR.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((RR, JR) => {
+          RR.onLoadObservable.add((RR => {
+            this.setTextureArrayData(RR, JR).catch((RR => {
+              console.error(`Failed to build the texture arrays, at atlas ${JR}`, RR)
             }))
           }))
-        })), (0, JW.h)(iW, WW.shaderLanguage)
+        })), (0, pR.l)(JR, RR.shaderLanguage)
       }
-      async setTextureArrayData(WW, iW) {
-        const OW = this.featureState,
+      async setTextureArrayData(RR, JR) {
+        const GR = this.featureState,
           {
-            width: mW,
-            height: EW
-          } = WW.getSize(),
-          NW = this._material.shaderLanguage;
-        if (!OW.useWebGL2) return void(0, JW.f)(this._material, OW, iW, mW, Math.round(EW / mW), NW);
-        if (this.loaded.add(iW), this.loaded.size < this.mirrors.length) return;
-        const PW = await yW(this.mirrors, OW.sources, this._material.bD());
-        (0, JW.d)(this._material, OW, PW, mW, NW)
+            width: yR,
+            height: tR
+          } = RR.getSize(),
+          uR = this._material.shaderLanguage;
+        if (!GR.useWebGL2) return void(0, pR.g)(this._material, GR, JR, yR, Math.round(tR / yR), uR);
+        if (this.loaded.add(JR), this.loaded.size < this.mirrors.length) return;
+        const ZR = await BR(this.mirrors, GR.sources, this._material.jH());
+        (0, pR.e)(this._material, GR, ZR, yR, uR)
       }
     }
-    var HW = OW(42635),
-      nW = OW(41818),
-      uW = OW(38235),
-      oW = OW(42641),
-      dW = OW(41927),
-      eW = OW(41808),
-      vW = OW(42588),
-      gW = OW(38669),
-      DW = OW(42650);
-    class VW extends HW.e {
+    var bR = GR(42711),
+      vR = GR(41822),
+      OR = GR(38195),
+      xR = GR(42714),
+      NR = GR(41951),
+      DR = GR(41813),
+      HR = GR(42644),
+      oR = GR(38650),
+      cR = GR(42716);
+    class PR extends bR.b {
       getData() {
         return null
       }
@@ -446,452 +446,452 @@ export const modules = {
         super._rebuild()
       }
     }
-    const pW = {
-      Mesh: oW.e,
-      TransformNode: vW.e,
-      OZ: HW.e,
-      VertexBuffer: HW.g,
-      BoundingInfo: nW.b,
-      fA: uW.fA,
-      ArenaBuffer: VW,
-      SubMesh: eW.d,
-      VertexData: dW.c,
-      MirroredGeometry: DW.c,
-      meshFromArrays: DW.d,
-      plainMeshFromArrays: DW.e
+    const IR = {
+      Mesh: xR.b,
+      TransformNode: HR.c,
+      GK: bR.b,
+      VertexBuffer: bR.c,
+      BoundingInfo: vR.c,
+      Fe: OR.Fe,
+      ArenaBuffer: PR,
+      SubMesh: DR.b,
+      VertexData: NR.c,
+      MirroredGeometry: cR.b,
+      meshFromArrays: cR.e,
+      plainMeshFromArrays: cR.i
     };
-    (0, gW.f)(pW);
-    var fW = OW(38511);
-    class CW extends(sW(tW.l)) {
-      constructor(WW, iW) {
-        if (super(WW, iW), WW instanceof mW.StandardMaterial && iW.dirLightCount > 0) {
-          const iW = WW,
-            OW = iW._blockDirtyMechanism;
-          iW._blockDirtyMechanism = !0, WW.disableLighting = !0, iW._blockDirtyMechanism = OW;
-          const mW = (0, jW.bb)(WW);
-          mW && (mW.disableLighting = !0, (0, jW._)(mW))
-        }(0, fW.i)(WW)
+    (0, oR.g)(IR);
+    var mR = GR(38475);
+    class zR extends(WR(VR.h)) {
+      constructor(RR, JR) {
+        if (super(RR, JR), RR instanceof yR.StandardMaterial && JR.dirLightCount > 0) {
+          const JR = RR,
+            GR = JR._blockDirtyMechanism;
+          JR._blockDirtyMechanism = !0, RR.disableLighting = !0, JR._blockDirtyMechanism = GR;
+          const yR = (0, LR.bb)(RR);
+          yR && (yR.disableLighting = !0, (0, LR._)(yR))
+        }(0, mR.j)(RR)
       }
-      dispose(WW) {
-        (0, fW.k)(this._material), super.dispose(WW)
+      dispose(RR) {
+        (0, mR.l)(this._material), super.dispose(RR)
       }
     }
 
-    function XW(WW, iW) {
-      if (!(iW instanceof mW.StandardMaterial) || iW.specularTexture) return;
+    function SR(RR, JR) {
+      if (!(JR instanceof yR.StandardMaterial) || JR.specularTexture) return;
       const {
-        r: OW,
-        g: EW,
-        b: NW
-      } = iW.specularColor;
-      0 === OW && 0 === EW && 0 === NW && (WW.SPECULARTERM = !1)
-    }(0, tW.h)({
-      disableUnusedSpecularTerm: XW
+        r: GR,
+        g: tR,
+        b: uR
+      } = JR.specularColor;
+      0 === GR && 0 === tR && 0 === uR && (RR.SPECULARTERM = !1)
+    }(0, VR.f)({
+      disableUnusedSpecularTerm: SR
     });
-    var BW = OW(38437),
-      qW = OW(38683);
-    const RW = new RegExp(`^#define ${wW.c}\\s*$`, "m");
-    class GW extends(sW(wW.i)) {
-      constructor(WW, iW) {
-        super(WW, iW), this.JA = !1, iW.ditherOnlyWhileFading && (qW.h.add(WW), this.prewarmDitherTwins(WW))
+    var jR = GR(38406),
+      dR = GR(38666);
+    const ER = new RegExp(`^#define ${fR.e}\\s*$`, "m");
+    class YR extends(WR(fR.j)) {
+      constructor(RR, JR) {
+        super(RR, JR), this.He = !1, JR.ditherOnlyWhileFading && (dR.f.add(RR), this.prewarmDitherTwins(RR))
       }
-      prewarmDitherTwins(WW) {
-        const iW = new WeakSet;
-        WW.onEffectCreatedObservable.add((OW => {
+      prewarmDitherTwins(RR) {
+        const JR = new WeakSet;
+        RR.onEffectCreatedObservable.add((GR => {
           let {
-            effect: mW,
-            subMesh: EW
-          } = OW;
-          if (this.featureState.prewarmingDither || iW.has(mW)) return;
-          iW.add(mW);
-          const NW = null === EW || void 0 === EW ? void 0 : EW.getMesh();
-          NW && !RW.test(mW.defines) && WW.bD().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(NW) || iW.delete(mW)
+            effect: yR,
+            subMesh: tR
+          } = GR;
+          if (this.featureState.prewarmingDither || JR.has(yR)) return;
+          JR.add(yR);
+          const uR = null === tR || void 0 === tR ? void 0 : tR.getMesh();
+          uR && !ER.test(yR.defines) && RR.jH().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(uR) || JR.delete(yR)
           }))
         }))
       }
-      prewarmDither(WW) {
-        if (this.JA || WW.Ay()) return !1;
-        const iW = new eW.d(0, 0, 0, 0, 0, WW, void 0, !1, !1);
+      prewarmDither(RR) {
+        if (this.He || RR.oB()) return !1;
+        const JR = new DR.b(0, 0, 0, 0, 0, RR, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(WW, iW)
+          this._material.isReadyForSubMesh(RR, JR)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== iW.effect
+        return null !== JR.effect
       }
-      dispose(WW) {
-        this.JA = !0, super.dispose(WW)
+      dispose(RR) {
+        this.He = !0, super.dispose(RR)
       }
     }
-    class IW extends(sW(ZW.d)) {}
-    const aW = new Map;
+    class kR extends(WR(KR.e)) {}
+    const QR = new Map;
 
-    function rW(WW, iW) {
-      aW.set(WW, iW)
+    function FR(RR, JR) {
+      QR.set(RR, JR)
     }
-    rW(LW.e, MW), rW(cW.e, hW), rW(wW.i, GW), rW(tW.l, CW), rW(ZW.d, IW), (0, xW.c)({
-      create: (WW, iW) => {
-        const OW = new mW.StandardMaterial(WW.name, iW);
-        return (0, BW.w)(WW, OW), OW.detailMap._pluginDefineNames
+    FR(qR.c, AR), FR(iR.j, gR), FR(fR.j, YR), FR(VR.h, zR), FR(KR.e, kR), (0, wR.b)({
+      create: (RR, JR) => {
+        const GR = new yR.StandardMaterial(RR.name, JR);
+        return (0, jR.t)(RR, GR), GR.detailMap._pluginDefineNames
       },
-      write: (WW, iW, OW) => {
-        (0, BW.Z)(WW.mirror, iW, OW)
+      write: (RR, JR, GR) => {
+        (0, jR.ab)(RR.mirror, JR, GR)
       },
-      addFeature: (WW, iW, OW) => {
-        const mW = aW.get(iW.feature);
-        if (!mW) throw new Error(`${iW.feature.name} has no plugin class (registerPluginClass)`);
-        new mW(WW.mirror, iW.state, ...OW)
+      addFeature: (RR, JR, GR) => {
+        const yR = QR.get(JR.feature);
+        if (!yR) throw new Error(`${JR.feature.name} has no plugin class (registerPluginClass)`);
+        new yR(RR.mirror, JR.state, ...GR)
       },
-      texture: (WW, iW, OW) => {
+      texture: (RR, JR, GR) => {
         let {
-          url: mW,
-          noMipmap: EW,
-          invertY: NW,
-          samplingMode: LW,
-          data: cW,
-          sets: wW
-        } = OW;
-        if (!cW) {
-          const OW = new PW.d(mW, iW, EW, NW, LW);
-          return Object.assign(OW, wW), void(0, lW.O)(WW, OW)
+          url: yR,
+          noMipmap: tR,
+          invertY: uR,
+          samplingMode: qR,
+          data: iR,
+          sets: fR
+        } = GR;
+        if (!iR) {
+          const GR = new ZR.c(yR, JR, tR, uR, qR);
+          return Object.assign(GR, fR), void(0, rR.J)(RR, GR)
         }
-        const tW = {},
-          ZW = new Promise(((WW, iW) => {
-            tW.onLoad = WW, tW.onError = (WW, OW) => {
-              iW(new Error(`${cW.context}: ${(null===OW||void 0===OW?void 0:OW.message)||WW||"Failed to load texture"}`))
+        const VR = {},
+          KR = new Promise(((RR, JR) => {
+            VR.onLoad = RR, VR.onError = (RR, GR) => {
+              JR(new Error(`${iR.context}: ${(null===GR||void 0===GR?void 0:GR.message)||RR||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: xW,
-            bytes: AW,
-            label: bW
-          } = cW,
-          jW = {
-            noMipmap: EW,
+            mimeType: wR,
+            bytes: eR,
+            label: aR
+          } = iR,
+          LR = {
+            noMipmap: tR,
             invertY: !1,
-            samplingMode: LW,
-            ...tW,
-            mimeType: xW,
+            samplingMode: qR,
+            ...VR,
+            mimeType: wR,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          UW = new PW.d(null, iW, jW);
-        BW.z.set(UW, ZW), Object.assign(UW, wW), UW.updateURL(mW, AW);
-        const kW = UW.getInternalTexture();
-        kW && (kW.label = bW), WW.uvSet = UW.coordinatesIndex, WW.matrix.set((0, BW.U)(UW)), (0, lW.O)(WW, UW)
+          nR = new ZR.c(null, JR, LR);
+        jR.v.set(nR, KR), Object.assign(nR, fR), nR.updateURL(yR, eR);
+        const UR = nR.getInternalTexture();
+        UR && (UR.label = aR), RR.uvSet = nR.coordinatesIndex, RR.matrix.set((0, jR.T)(nR)), (0, rR.J)(RR, nR)
       },
-      cube: (WW, iW, OW) => {
+      cube: (RR, JR, GR) => {
         let {
-          rootUrl: mW,
-          files: NW,
-          noMipmap: LW,
-          luminance: cW
-        } = OW;
+          rootUrl: yR,
+          files: uR,
+          noMipmap: qR,
+          luminance: iR
+        } = GR;
         const {
-          samplingMode: wW
-        } = WW.sampler, tW = wW === (0, lW.A)(LW) ? null : () => {
-          (0, BW.R)(ZW, wW)
-        }, ZW = new EW.b(mW, iW, null, LW, NW, tW, null, (0, lW.z)(cW));
-        ZW.coordinatesMode = PW.d.SKYBOX_MODE, (0, lW.O)(WW, ZW)
+          samplingMode: fR
+        } = RR.sampler, VR = fR === (0, rR.A)(qR) ? null : () => {
+          (0, jR.P)(KR, fR)
+        }, KR = new tR.d(yR, JR, null, qR, uR, VR, null, (0, rR.w)(iR));
+        KR.coordinatesMode = ZR.c.SKYBOX_MODE, (0, rR.J)(RR, KR)
       },
-      canvas: (WW, iW, OW) => {
+      canvas: (RR, JR, GR) => {
         let {
-          width: mW,
-          height: EW,
-          mipmaps: LW,
-          samplingMode: cW,
-          hasAlpha: wW = !1,
-          wrap: tW = PW.d.CLAMP_ADDRESSMODE
-        } = OW;
-        const ZW = new NW.d(iW, {
-          width: mW,
-          height: EW
-        }, WW, LW, cW);
-        ZW.hasAlpha = wW, ZW.wrapU = tW, ZW.wrapV = tW;
-        const xW = (0, BW.H)(ZW);
-        return (0, BW.K)(xW, ZW), xW
+          width: yR,
+          height: tR,
+          mipmaps: qR,
+          samplingMode: iR,
+          hasAlpha: fR = !1,
+          wrap: VR = ZR.c.CLAMP_ADDRESSMODE
+        } = GR;
+        const KR = new uR.b(JR, {
+          width: yR,
+          height: tR
+        }, RR, qR, iR);
+        KR.hasAlpha = fR, KR.wrapU = VR, KR.wrapV = VR;
+        const wR = (0, jR.D)(KR);
+        return (0, jR.G)(wR, KR), wR
       }
     })
   },
-  42650: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => tW,
-      d: () => ZW,
-      e: () => xW
+  42716: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => VR,
+      e: () => KR,
+      i: () => wR
     });
-    var mW = OW(42635),
-      EW = OW(41582),
-      NW = OW(41818),
-      PW = OW(41929),
-      LW = OW(42641),
-      cW = OW(41927),
-      wW = OW(38562);
-    class tW extends PW.b {
+    var yR = GR(42711),
+      tR = GR(41586),
+      uR = GR(41822),
+      ZR = GR(41957),
+      qR = GR(42714),
+      iR = GR(41951),
+      fR = GR(38532);
+    class VR extends ZR.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (WW, iW) => {
-          this.releaseUnlessInstanced(iW)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (RR, JR) => {
+          this.releaseUnlessInstanced(JR)
         }, this.onLinked = null
       }
-      link(WW) {
-        var iW;
-        (0, wW.k)(WW), this.model = WW, null === (iW = this.onLinked) || void 0 === iW || iW.call(this, WW)
+      link(RR) {
+        var JR;
+        (0, fR.m)(RR), this.model = RR, null === (JR = this.onLinked) || void 0 === JR || JR.call(this, RR)
       }
       relink() {
         this.release();
-        const WW = [];
-        for (const EW of Object.values(this._vertexBuffers))
-          if (!EW.getIsInstanced()) {
+        const RR = [];
+        for (const tR of Object.values(this._vertexBuffers))
+          if (!tR.getIsInstanced()) {
             const {
-              byteOffset: iW,
-              byteStride: OW,
-              type: mW,
-              normalized: NW
-            } = EW;
-            WW.push({
-              kind: EW.getKind(),
-              data: EW.getData(),
-              offset: iW,
-              stride: OW,
-              components: EW.getSize(),
-              glType: mW,
-              isNormalized: NW
+              byteOffset: JR,
+              byteStride: GR,
+              type: yR,
+              normalized: uR
+            } = tR;
+            RR.push({
+              kind: tR.getKind(),
+              data: tR.getData(),
+              offset: JR,
+              stride: GR,
+              components: tR.getSize(),
+              glType: yR,
+              isNormalized: uR
             })
-          } const iW = this._indices.length ? this._indices : null,
+          } const JR = this._indices.length ? this._indices : null,
           {
-            minimum: OW,
-            maximum: mW
+            minimum: GR,
+            maximum: yR
           } = this.extend;
-        this.link(new wW.d(WW, iW, this.getTotalVertices(), new Float64Array(OW.wEW()), new Float64Array(mW.wEW())))
+        this.link(new fR.e(RR, JR, this.getTotalVertices(), new Float64Array(GR.QtR()), new Float64Array(yR.QtR())))
       }
-      copy(WW) {
-        if (!this.model) return super.copy(WW);
-        const iW = new tW(WW, this.bD()),
-          OW = this.IEW(void 0, !0);
-        OW && iW.setIndices(OW);
-        let PW = !1;
-        for (const NW in this._vertexBuffers) {
-          const WW = this._vertexBuffers[NW],
-            OW = WW.getData();
-          if (!OW) continue;
-          const LW = WW.getSize(),
+      copy(RR) {
+        if (!this.model) return super.copy(RR);
+        const JR = new VR(RR, this.jH()),
+          GR = this.NuR(void 0, !0);
+        GR && JR.setIndices(GR);
+        let ZR = !1;
+        for (const uR in this._vertexBuffers) {
+          const RR = this._vertexBuffers[uR],
+            GR = RR.getData();
+          if (!GR) continue;
+          const qR = RR.getSize(),
             {
-              type: cW,
-              byteOffset: wW,
-              byteStride: tW,
-              normalized: ZW
-            } = WW;
-          PW ||= WW.isUpdatable();
-          const xW = WW.getIsInstanced() ? (OW instanceof Array ? 4 * OW.length : OW.byteLength) / tW : this.getTotalVertices(),
-            lW = (0, EW.l)(OW, LW, cW, wW, tW, xW, !0),
-            AW = {
-              updatable: WW.isUpdatable(),
-              stride: LW,
-              type: cW,
-              normalized: ZW,
+              type: iR,
+              byteOffset: fR,
+              byteStride: VR,
+              normalized: KR
+            } = RR;
+          ZR ||= RR.isUpdatable();
+          const wR = RR.getIsInstanced() ? (GR instanceof Array ? 4 * GR.length : GR.byteLength) / VR : this.getTotalVertices(),
+            rR = (0, tR.l)(GR, qR, iR, fR, VR, wR, !0),
+            eR = {
+              updatable: RR.isUpdatable(),
+              stride: qR,
+              type: iR,
+              normalized: KR,
               takeBufferOwnership: !0,
-              instanced: WW.getIsInstanced()
+              instanced: RR.getIsInstanced()
             };
-          iW.setVerticesBuffer(new mW.g(this.VA(), lW, NW, AW), xW)
+          JR.setVerticesBuffer(new yR.c(this.ke(), rR, uR, eR), wR)
         }
-        return iW._updatable = PW, iW._boundingInfo = new NW.b(this.extend.minimum, this.extend.maximum), iW.relink(), iW
+        return JR._updatable = ZR, JR._boundingInfo = new uR.c(this.extend.minimum, this.extend.maximum), JR.relink(), JR
       }
-      static mergeMeshes(WW, iW, OW, mW, EW, NW) {
-        const cW = WW[0].bD(),
-          wW = new LW.e(WW[0].name + "_merged", cW),
-          ZW = new tW(PW.b.RandomId(), cW, void 0, !1, wW);
+      static mergeMeshes(RR, JR, GR, yR, tR, uR) {
+        const iR = RR[0].jH(),
+          fR = new qR.b(RR[0].name + "_merged", iR),
+          KR = new VR(ZR.e.RandomId(), iR, void 0, !1, fR);
         try {
-          if (!LW.e.MergeMeshes(WW, iW, OW, wW, EW, NW)) return wW.dispose(), null
-        } catch (xW) {
-          throw wW.dispose(), xW
+          if (!qR.b.MergeMeshes(RR, JR, GR, fR, tR, uR)) return fR.dispose(), null
+        } catch (wR) {
+          throw fR.dispose(), wR
         }
-        return ZW.relink(), wW
+        return KR.relink(), fR
       }
-      removeVerticesData(WW) {
-        this.releaseUnlessInstanced(WW), super.removeVerticesData(WW)
+      removeVerticesData(RR) {
+        this.releaseUnlessInstanced(RR), super.removeVerticesData(RR)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(WW) {
-        var iW;
-        WW && null !== (iW = this.getVertexBuffer(WW)) && void 0 !== iW && iW.getIsInstanced() || this.release()
+      releaseUnlessInstanced(RR) {
+        var JR;
+        RR && null !== (JR = this.getVertexBuffer(RR)) && void 0 !== JR && JR.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, wW.q)(this.model), this.model = null)
+        this.model && ((0, fR.s)(this.model), this.model = null)
       }
     }
 
-    function ZW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new LW.e(WW, OW);
-      const EW = (0, wW.i)(iW),
+    function KR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new qR.b(RR, GR);
+      const tR = (0, fR.j)(JR),
         {
-          positions: NW,
-          normals: ZW,
-          uvs: xW,
-          indices: lW,
-          named: AW = {}
-        } = iW,
-        bW = new cW.c;
-      bW.positions = NW, bW.normals = null !== ZW && void 0 !== ZW ? ZW : null, bW.uvs = null !== xW && void 0 !== xW ? xW : null, bW.indices = lW;
-      const jW = new tW(PW.b.RandomId(), OW, bW, !1, mW);
+          positions: uR,
+          normals: KR,
+          uvs: wR,
+          indices: rR,
+          named: eR = {}
+        } = JR,
+        aR = new iR.c;
+      aR.positions = uR, aR.normals = null !== KR && void 0 !== KR ? KR : null, aR.uvs = null !== wR && void 0 !== wR ? wR : null, aR.indices = rR;
+      const LR = new VR(ZR.e.RandomId(), GR, aR, !1, yR);
       for (const {
-          kind: PW,
-          components: LW
+          kind: ZR,
+          components: qR
         }
-        of EW.vertexAttributes) PW in AW && mW.setVerticesData(PW, AW[PW], !1, LW);
-      return jW.link(EW), mW
+        of tR.vertexAttributes) ZR in eR && yR.setVerticesData(ZR, eR[ZR], !1, qR);
+      return LR.link(tR), yR
     }
 
-    function xW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const EW = new LW.e(WW, OW),
+    function wR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const tR = new qR.b(RR, GR),
         {
-          positions: NW,
-          normals: PW,
-          uvs: wW,
-          indices: tW
-        } = iW;
-      return Object.assign(new cW.c, {
-        positions: NW,
-        normals: PW,
-        uvs: wW,
-        indices: tW
-      }).applyToMesh(EW, mW), EW
+          positions: uR,
+          normals: ZR,
+          uvs: fR,
+          indices: VR
+        } = JR;
+      return Object.assign(new iR.c, {
+        positions: uR,
+        normals: ZR,
+        uvs: fR,
+        indices: VR
+      }).applyToMesh(tR, yR), tR
     }
   },
-  42633: (WW, iW, OW) => {
-    function mW(WW, iW, OW) {
-      const mW = iW * iW * 4,
-        EW = WW[0].layers,
-        NW = EW * (WW.length - 1) + WW[WW.length - 1].layers,
-        PW = new Uint8Array(NW * mW);
-      WW.forEach(((iW, OW) => {
-        const NW = OW + 1 < WW.length ? Math.min(iW.layers, EW) : iW.layers;
-        PW.set(new Uint8Array(iW.pixels.buffer, iW.pixels.byteOffset, NW * mW), OW * EW * mW)
+  42704: (RR, JR, GR) => {
+    function yR(RR, JR, GR) {
+      const yR = JR * JR * 4,
+        tR = RR[0].layers,
+        uR = tR * (RR.length - 1) + RR[RR.length - 1].layers,
+        ZR = new Uint8Array(uR * yR);
+      RR.forEach(((JR, GR) => {
+        const uR = GR + 1 < RR.length ? Math.min(JR.layers, tR) : JR.layers;
+        ZR.set(new Uint8Array(JR.pixels.buffer, JR.pixels.byteOffset, uR * yR), GR * tR * yR)
       }));
-      const LW = Math.max(1, Math.min(NW, OW || NW));
-      if (LW === NW) return [{
-        pixels: PW,
-        layers: NW
+      const qR = Math.max(1, Math.min(uR, GR || uR));
+      if (qR === uR) return [{
+        pixels: ZR,
+        layers: uR
       }];
-      const cW = [];
-      for (let wW = 0; wW < NW; wW += LW) {
-        const WW = Math.min(NW, wW + LW);
-        cW.push({
-          pixels: PW.slice(wW * mW, WW * mW),
-          layers: WW - wW
+      const iR = [];
+      for (let fR = 0; fR < uR; fR += qR) {
+        const RR = Math.min(uR, fR + qR);
+        iR.push({
+          pixels: ZR.slice(fR * yR, RR * yR),
+          layers: RR - fR
         })
       }
-      return cW
+      return iR
     }
-    OW.d(iW, {
-      e: () => mW,
-      i: () => NW
+    GR.d(JR, {
+      b: () => yR,
+      c: () => uR
     });
-    const EW = new WeakMap;
+    const tR = new WeakMap;
 
-    function NW(WW, iW, OW) {
-      var mW, NW;
-      const PW = null !== (mW = EW.get(WW)) && void 0 !== mW ? mW : new Map;
-      EW.set(WW, PW);
-      const LW = null !== (NW = PW.get(iW[0])) && void 0 !== NW ? NW : [];
-      PW.set(iW[0], LW);
-      const cW = LW.find((WW => WW.urls.length === iW.length && WW.urls.every(((WW, OW) => WW === iW[OW]))));
-      if (cW) return cW.built;
-      const wW = {
-        urls: [...iW],
-        built: OW()
+    function uR(RR, JR, GR) {
+      var yR, uR;
+      const ZR = null !== (yR = tR.get(RR)) && void 0 !== yR ? yR : new Map;
+      tR.set(RR, ZR);
+      const qR = null !== (uR = ZR.get(JR[0])) && void 0 !== uR ? uR : [];
+      ZR.set(JR[0], qR);
+      const iR = qR.find((RR => RR.urls.length === JR.length && RR.urls.every(((RR, GR) => RR === JR[GR]))));
+      if (iR) return iR.built;
+      const fR = {
+        urls: [...JR],
+        built: GR()
       };
-      return LW.push(wW), wW.built.catch((() => {
-        LW.splice(LW.indexOf(wW), 1)
-      })), wW.built
+      return qR.push(fR), fR.built.catch((() => {
+        qR.splice(qR.indexOf(fR), 1)
+      })), fR.built
     }
   },
-  5713: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => xW,
-      i: () => cW,
-      m: () => AW,
-      o: () => wW,
-      p: () => lW
+  5836: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      f: () => wR,
+      g: () => iR,
+      i: () => eR,
+      j: () => fR,
+      k: () => rR
     });
-    var mW = OW(5721),
-      EW = OW(5725);
-    const NW = !1,
-      PW = mW.h.map((WW => {
-        const iW = [];
-        for (let NW = 1; NW <= WW.reach; NW++) iW.push(EW.j[(0, mW.d)(WW.source, NW)].id);
-        const OW = "water" === WW.family;
+    var yR = GR(5839),
+      tR = GR(5844);
+    const uR = !1,
+      ZR = yR.j.map((RR => {
+        const JR = [];
+        for (let uR = 1; uR <= RR.reach; uR++) JR.push(tR.l[(0, yR.h)(RR.source, uR)].id);
+        const GR = "water" === RR.family;
         return Object.freeze({
-          name: WW.kind,
-          family: WW.family,
-          reach: WW.reach,
-          stepTicks: OW ? 5 : 10,
-          slopeDistance: OW ? 4 : 2,
-          sourceId: EW.j[WW.source].id,
-          fallingId: EW.j[(0, mW.b)(WW.source)].id,
-          flowingIds: Object.freeze(iW),
-          makesSources: OW,
-          stillId: EW.j[WW.still].id
+          name: RR.kind,
+          family: RR.family,
+          reach: RR.reach,
+          stepTicks: GR ? 5 : 10,
+          slopeDistance: GR ? 4 : 2,
+          sourceId: tR.l[RR.source].id,
+          fallingId: tR.l[(0, yR.d)(RR.source)].id,
+          flowingIds: Object.freeze(JR),
+          makesSources: GR,
+          stillId: tR.l[RR.still].id
         })
       })),
-      LW = new Map;
-    for (const bW of PW) LW.set(bW.sourceId, Object.freeze({
-      kind: bW,
+      qR = new Map;
+    for (const aR of ZR) qR.set(aR.sourceId, Object.freeze({
+      kind: aR,
       state: "source",
       distance: 0
-    })), LW.set(bW.fallingId, Object.freeze({
-      kind: bW,
+    })), qR.set(aR.fallingId, Object.freeze({
+      kind: aR,
       state: "falling",
       distance: 0
-    })), bW.flowingIds.forEach(((WW, iW) => {
-      LW.set(WW, Object.freeze({
-        kind: bW,
+    })), aR.flowingIds.forEach(((RR, JR) => {
+      qR.set(RR, Object.freeze({
+        kind: aR,
         state: "flowing",
-        distance: iW + 1
+        distance: JR + 1
       }))
     }));
 
-    function cW(WW) {
-      return PW.find((iW => iW.name === WW))
+    function iR(RR) {
+      return ZR.find((JR => JR.name === RR))
     }
 
-    function wW(WW) {
-      return null === WW ? void 0 : LW.get(WW)
+    function fR(RR) {
+      return null === RR ? void 0 : qR.get(RR)
     }
-    const tW = new Uint8Array(65536);
-    for (const [bW, jW] of LW) tW[bW] = "source" === jW.state ? 1 : 2;
-    const ZW = new Map;
-    for (const bW of PW) ZW.set(bW.stillId, bW.family);
+    const VR = new Uint8Array(65536);
+    for (const [aR, LR] of qR) VR[aR] = "source" === LR.state ? 1 : 2;
+    const KR = new Map;
+    for (const aR of ZR) KR.set(aR.stillId, aR.family);
 
-    function xW(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = wW(WW)) || void 0 === OW ? void 0 : OW.kind.family) && void 0 !== iW ? iW : lW(WW)
+    function wR(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = fR(RR)) || void 0 === GR ? void 0 : GR.kind.family) && void 0 !== JR ? JR : rR(RR)
     }
 
-    function lW(WW) {
-      var iW;
-      return null === WW ? null : null !== (iW = ZW.get(WW)) && void 0 !== iW ? iW : null
+    function rR(RR) {
+      var JR;
+      return null === RR ? null : null !== (JR = KR.get(RR)) && void 0 !== JR ? JR : null
     }
-    EW.j.Obsidian.id, EW.j["Messy Stone"].id;
+    tR.l.Obsidian.id, tR.l["Messy Stone"].id;
 
-    function AW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {
-        let WW = 0;
-        for (const iW of PW) WW = Math.max(WW, iW.stillId, iW.sourceId, iW.fallingId, ...iW.flowingIds);
-        return WW
+    function eR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {
+        let RR = 0;
+        for (const JR of ZR) RR = Math.max(RR, JR.stillId, JR.sourceId, JR.fallingId, ...JR.flowingIds);
+        return RR
       }() + 1;
-      const iW = new Uint8Array(WW);
-      for (const OW of PW) {
-        const mW = ("water" === OW.family ? 1 : 2) << 4;
-        for (const EW of [OW.stillId, OW.sourceId, OW.fallingId, ...OW.flowingIds]) EW < WW && (iW[EW] = mW)
+      const JR = new Uint8Array(RR);
+      for (const GR of ZR) {
+        const yR = ("water" === GR.family ? 1 : 2) << 4;
+        for (const tR of [GR.stillId, GR.sourceId, GR.fallingId, ...GR.flowingIds]) tR < RR && (JR[tR] = yR)
       }
-      return iW
+      return JR
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,68 +1,68 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  40380: (WW, iW, OW) => {
-    function mW(WW) {
-      return void 0 === WW ? void 0 : [WW[0], WW[1], WW[2]]
+  40429: (RR, JR, GR) => {
+    function yR(RR) {
+      return void 0 === RR ? void 0 : [RR[0], RR[1], RR[2]]
     }
 
-    function EW(WW) {
-      const iW = WW.particles;
+    function tR(RR) {
+      const JR = RR.particles;
       return {
         opts: {
-          texture: iW.texture,
-          aZ: iW.aZ,
-          minLifeTime: iW.minLifeTime,
-          maxLifeTime: iW.maxLifeTime,
-          minSize: iW.minSize,
-          maxSize: iW.maxSize,
-          minEmitPower: iW.minEmitPower,
-          maxEmitPower: iW.maxEmitPower,
-          emitRate: iW.emitRate,
-          gravity: mW(iW.gravity),
-          dir1: mW(iW.dir1),
-          dir2: mW(iW.dir2),
-          colorGradients: iW.colorGradients,
-          blendMode: iW.blendMode
+          texture: JR.texture,
+          hK: JR.hK,
+          minLifeTime: JR.minLifeTime,
+          maxLifeTime: JR.maxLifeTime,
+          minSize: JR.minSize,
+          maxSize: JR.maxSize,
+          minEmitPower: JR.minEmitPower,
+          maxEmitPower: JR.maxEmitPower,
+          emitRate: JR.emitRate,
+          gravity: yR(JR.gravity),
+          dir1: yR(JR.dir1),
+          dir2: yR(JR.dir2),
+          colorGradients: JR.colorGradients,
+          blendMode: JR.blendMode
         },
-        half: [iW.width / 2, iW.height / 2, iW.depth / 2]
+        half: [JR.width / 2, JR.height / 2, JR.depth / 2]
       }
     }
-    OW.d(iW, {
-      d: () => EW
+    GR.d(JR, {
+      c: () => tR
     })
   },
-  40337: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      g: () => wW,
-      h: () => cW,
-      i: () => PW
+  40393: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      d: () => fR,
+      e: () => iR,
+      i: () => ZR
     });
-    var mW = OW(192);
-    const EW = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      NW = "PetRoot";
-    let PW = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      LW = EW;
+    var yR = GR(216);
+    const tR = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      uR = "PetRoot";
+    let ZR = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      qR = tR;
     new Map, new Map;
 
-    function cW(WW) {
-      var iW;
-      return null !== (iW = (0, mW.c)(PW, WW)) && void 0 !== iW ? iW : null
+    function iR(RR) {
+      var JR;
+      return null !== (JR = (0, yR.b)(ZR, RR)) && void 0 !== JR ? JR : null
     }
 
-    function wW(WW) {
-      var iW;
-      return null !== (iW = (0, mW.c)(LW, WW)) && void 0 !== iW ? iW : null
+    function fR(RR) {
+      var JR;
+      return null !== (JR = (0, yR.b)(qR, RR)) && void 0 !== JR ? JR : null
     }
   },
-  40384: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW,
-      f: () => EW,
-      j: () => NW
+  40432: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      c: () => tR,
+      g: () => uR
     });
-    class mW {
+    class yR {
       constructor() {
         this.pose = {
           pos: [0, 0, 0],
@@ -70,355 +70,355 @@ export const modules = {
           mode: "flying",
           seated: !1,
           clip: void 0
-        }, this.Sj = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+        }, this.BL = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
       }
-      step(WW) {
-        var iW;
+      step(RR) {
+        var JR;
         const {
-          feet: OW,
-          heading: mW,
-          tuning: PW
-        } = WW, LW = Math.min(Math.max(WW.dt, 0), .1), {
-          pose: cW,
-          Sj: wW,
-          target: tW
+          feet: GR,
+          heading: yR,
+          tuning: ZR
+        } = RR, qR = Math.min(Math.max(RR.dt, 0), .1), {
+          pose: iR,
+          BL: fR,
+          target: VR
         } = this;
-        if (this.started && LW > 0) {
-          const WW = Math.hypot(OW[0] - this.lastFeet[0], OW[1] - this.lastFeet[1], OW[2] - this.lastFeet[2]);
-          this.speed += (WW / LW - this.speed) * Math.min(LW / .15, 1)
+        if (this.started && qR > 0) {
+          const RR = Math.hypot(GR[0] - this.lastFeet[0], GR[1] - this.lastFeet[1], GR[2] - this.lastFeet[2]);
+          this.speed += (RR / qR - this.speed) * Math.min(qR / .15, 1)
         }
-        this.lastFeet[0] = OW[0], this.lastFeet[1] = OW[1], this.lastFeet[2] = OW[2], this.stillS = this.speed > .3 ? 0 : this.stillS + LW;
-        const ZW = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === ZW && "perched" === cW.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += LW, cW.mode = ZW;
-        const xW = Math.sin(mW),
-          lW = Math.cos(mW);
-        "perched" === ZW ? (NW(tW, OW, PW.perchOffset, xW, lW), tW[1] += WW.headTopY - OW[1]) : (NW(tW, OW, PW.followOffset, xW, lW), tW[1] += EW(PW, WW.timeS));
+        this.lastFeet[0] = GR[0], this.lastFeet[1] = GR[1], this.lastFeet[2] = GR[2], this.stillS = this.speed > .3 ? 0 : this.stillS + qR;
+        const KR = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === KR && "perched" === iR.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += qR, iR.mode = KR;
+        const wR = Math.sin(yR),
+          rR = Math.cos(yR);
+        "perched" === KR ? (uR(VR, GR, ZR.perchOffset, wR, rR), VR[1] += RR.headTopY - GR[1]) : (uR(VR, GR, ZR.followOffset, wR, rR), VR[1] += tR(ZR, RR.timeS));
         const {
-          pos: AW
-        } = cW, bW = Math.hypot(tW[0] - AW[0], tW[1] - AW[1], tW[2] - AW[2]);
-        if (!this.started || bW > 8 || "perched" === ZW && (this.perchLocked || bW < .05)) this.perchLocked = this.started && "perched" === ZW, AW[0] = tW[0], AW[1] = tW[1], AW[2] = tW[2], wW[0] = wW[1] = wW[2] = 0;
+          pos: eR
+        } = iR, aR = Math.hypot(VR[0] - eR[0], VR[1] - eR[1], VR[2] - eR[2]);
+        if (!this.started || aR > 8 || "perched" === KR && (this.perchLocked || aR < .05)) this.perchLocked = this.started && "perched" === KR, eR[0] = VR[0], eR[1] = VR[1], eR[2] = VR[2], fR[0] = fR[1] = fR[2] = 0;
         else {
-          const WW = PW.followStiffness;
-          for (let iW = 0; iW < 3; iW++) wW[iW] += (WW * WW * (tW[iW] - AW[iW]) - 2 * WW * wW[iW]) * LW, AW[iW] += wW[iW] * LW
+          const RR = ZR.followStiffness;
+          for (let JR = 0; JR < 3; JR++) fR[JR] += (RR * RR * (VR[JR] - eR[JR]) - 2 * RR * fR[JR]) * qR, eR[JR] += fR[JR] * qR
         }
-        const jW = mW + PW.yawOffset;
-        var UW;
-        return this.started ? cW.yaw += ((UW = jW - cW.yaw) - 2 * Math.PI * Math.round(UW / (2 * Math.PI))) * Math.min(8 * LW, 1) : cW.yaw = jW, this.started = !0, cW.seated = "perched" === ZW && this.perchLocked, cW.clip = null === (iW = PW.clips) || void 0 === iW ? void 0 : iW[this.bO(ZW)], cW
+        const LR = yR + ZR.yawOffset;
+        var nR;
+        return this.started ? iR.yaw += ((nR = LR - iR.yaw) - 2 * Math.PI * Math.round(nR / (2 * Math.PI))) * Math.min(8 * qR, 1) : iR.yaw = LR, this.started = !0, iR.seated = "perched" === KR && this.perchLocked, iR.clip = null === (JR = ZR.clips) || void 0 === JR ? void 0 : JR[this.rG(KR)], iR
       }
       reset() {
         this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
       }
-      bO(WW) {
-        return "perched" === WW ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      rG(RR) {
+        return "perched" === RR ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
       }
     }
 
-    function EW(WW, iW) {
-      return WW.bobAmplitude * Math.sin(2 * Math.PI * WW.bobHz * iW)
+    function tR(RR, JR) {
+      return RR.bobAmplitude * Math.sin(2 * Math.PI * RR.bobHz * JR)
     }
 
-    function NW(WW, iW, OW, mW, EW) {
-      const [NW, PW, LW] = OW;
-      WW[0] = iW[0] + NW * EW + LW * mW, WW[1] = iW[1] + PW, WW[2] = iW[2] - NW * mW + LW * EW
+    function uR(RR, JR, GR, yR, tR) {
+      const [uR, ZR, qR] = GR;
+      RR[0] = JR[0] + uR * tR + qR * yR, RR[1] = JR[1] + ZR, RR[2] = JR[2] - uR * yR + qR * tR
     }
   },
-  5599: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => eW,
-      g: () => dW
+  5728: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => DR,
+      f: () => NR
     });
-    var mW = OW(5605),
-      EW = OW(327);
-    const NW = 120,
-      PW = 260,
-      LW = 1.15,
-      cW = 1.2,
-      wW = 2,
-      tW = 1.08,
-      ZW = .8,
-      xW = .95,
-      lW = 8,
-      AW = "[\"')\\]\u300d\u300f\uff09]*",
-      bW = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${AW}$`),
-      jW = new RegExp(`[?\uff1f]${AW}$`),
-      UW = new RegExp(`[!\uff01]${AW}$`),
-      kW = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      sW = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      MW = new RegExp(`[${sW}]`),
-      KW = new RegExp(`[${sW}]|[^${sW}]+`, "g"),
-      SW = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var yR = GR(5733),
+      tR = GR(359);
+    const uR = 120,
+      ZR = 260,
+      qR = 1.15,
+      iR = 1.2,
+      fR = 2,
+      VR = 1.08,
+      KR = .8,
+      wR = .95,
+      rR = 8,
+      eR = "[\"')\\]\u300d\u300f\uff09]*",
+      aR = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${eR}$`),
+      LR = new RegExp(`[?\uff1f]${eR}$`),
+      nR = new RegExp(`[!\uff01]${eR}$`),
+      UR = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      WR = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      AR = new RegExp(`[${WR}]`),
+      CR = new RegExp(`[${WR}]|[^${WR}]+`, "g"),
+      XR = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function YW(WW) {
-      let iW = 2166136261;
-      for (let OW = 0; OW < WW.length; OW++) iW ^= WW.charCodeAt(OW), iW = Math.imul(iW, 16777619);
-      return (iW >>> 0) / 4294967295 * 2 - 1
+    function MR(RR) {
+      let JR = 2166136261;
+      for (let GR = 0; GR < RR.length; GR++) JR ^= RR.charCodeAt(GR), JR = Math.imul(JR, 16777619);
+      return (JR >>> 0) / 4294967295 * 2 - 1
     }
 
-    function yW(WW) {
-      var iW;
-      if (MW.test(WW)) return 1;
-      const OW = WW.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        mW = OW.replace(/[^0-9]/g, "");
-      if (mW.length > 0 && !/\p{L}/u.test(OW)) return Math.min(mW.length, 4);
-      const EW = null !== (iW = OW.match(SW)) && void 0 !== iW ? iW : [];
-      if (0 === EW.length) {
-        var NW, PW;
-        const WW = null !== (NW = null === (PW = OW.match(/\p{L}/gu)) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0;
-        return 0 === WW ? 0 : Math.min(Math.max(1, Math.round(WW / 2.5)), lW)
+    function BR(RR) {
+      var JR;
+      if (AR.test(RR)) return 1;
+      const GR = RR.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        yR = GR.replace(/[^0-9]/g, "");
+      if (yR.length > 0 && !/\p{L}/u.test(GR)) return Math.min(yR.length, 4);
+      const tR = null !== (JR = GR.match(XR)) && void 0 !== JR ? JR : [];
+      if (0 === tR.length) {
+        var uR, ZR;
+        const RR = null !== (uR = null === (ZR = GR.match(/\p{L}/gu)) || void 0 === ZR ? void 0 : ZR.length) && void 0 !== uR ? uR : 0;
+        return 0 === RR ? 0 : Math.min(Math.max(1, Math.round(RR / 2.5)), rR)
       }
-      const LW = OW.replace(/[^\p{L}]/gu, ""),
-        cW = EW.length > 1 && "e" === EW.at(-1) && LW.endsWith("e") && !LW.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(WW.replace(/[^\p{L}]/gu, ""));
-      return Math.min(EW.length - (cW ? 1 : 0), lW)
+      const qR = GR.replace(/[^\p{L}]/gu, ""),
+        iR = tR.length > 1 && "e" === tR.at(-1) && qR.endsWith("e") && !qR.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(RR.replace(/[^\p{L}]/gu, ""));
+      return Math.min(tR.length - (iR ? 1 : 0), rR)
     }
 
-    function TW(WW) {
-      return WW.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function lR(RR) {
+      return RR.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function JW(WW) {
-      const iW = WW.replace(/[^\p{L}]/gu, "");
-      return iW.length >= 2 && iW === iW.toUpperCase() && iW !== iW.toLowerCase()
+    function pR(RR) {
+      const JR = RR.replace(/[^\p{L}]/gu, "");
+      return JR.length >= 2 && JR === JR.toUpperCase() && JR !== JR.toLowerCase()
     }
 
-    function hW(WW, iW) {
-      var OW;
-      const lW = iW && (0, mW.h)(iW),
-        AW = null !== (OW = null === lW || void 0 === lW ? void 0 : lW.syllableMs) && void 0 !== OW ? OW : mW.d,
-        sW = function(WW) {
-          const iW = [];
-          for (const mW of (0, EW.kc)(WW))
-            if ("string" === typeof mW)
-              for (const WW of mW.split(/(\s+)/)) {
-                if ("" === WW) continue;
-                if (/^\s+$/.test(WW)) {
-                  iW.push({
+    function gR(RR, JR) {
+      var GR;
+      const rR = JR && (0, yR.i)(JR),
+        eR = null !== (GR = null === rR || void 0 === rR ? void 0 : rR.syllableMs) && void 0 !== GR ? GR : yR.b,
+        WR = function(RR) {
+          const JR = [];
+          for (const yR of (0, tR.dc)(RR))
+            if ("string" === typeof yR)
+              for (const RR of yR.split(/(\s+)/)) {
+                if ("" === RR) continue;
+                if (/^\s+$/.test(RR)) {
+                  JR.push({
                     kind: "space",
-                    text: WW
+                    text: RR
                   });
                   continue
                 }
-                if (!MW.test(WW)) {
-                  iW.push({
+                if (!AR.test(RR)) {
+                  JR.push({
                     kind: "word",
-                    text: WW,
+                    text: RR,
                     delayMs: 0
                   });
                   continue
                 }
-                let mW = !0;
-                for (const EW of null !== (OW = WW.match(KW)) && void 0 !== OW ? OW : []) {
-                  var OW;
-                  const WW = iW.at(-1);
-                  mW || "word" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || MW.test(EW) || /[\p{L}\p{N}]/u.test(EW) ? (mW || iW.push({
+                let yR = !0;
+                for (const tR of null !== (GR = RR.match(CR)) && void 0 !== GR ? GR : []) {
+                  var GR;
+                  const RR = JR.at(-1);
+                  yR || "word" !== (null === RR || void 0 === RR ? void 0 : RR.kind) || AR.test(tR) || /[\p{L}\p{N}]/u.test(tR) ? (yR || JR.push({
                     kind: "space",
                     text: "\u200b"
-                  }), iW.push({
+                  }), JR.push({
                     kind: "word",
-                    text: EW,
+                    text: tR,
                     delayMs: 0
-                  }), mW = !1) : WW.text += EW
+                  }), yR = !1) : RR.text += tR
                 }
-              } else iW.push({
+              } else JR.push({
                 kind: "icon",
-                text: mW.icon,
+                text: yR.icon,
                 delayMs: 0
               });
-          return iW
-        }(WW),
-        SW = [];
-      let hW = [];
-      for (const mW of sW) "space" !== mW.kind && (hW.push(mW), bW.test(mW.text) && (SW.push(hW), hW = []));
-      SW.push(hW);
-      const HW = [];
-      let nW = 0;
-      for (const mW of SW) {
-        var uW, oW;
-        const WW = null !== (uW = null === (oW = mW.at(-1)) || void 0 === oW ? void 0 : oW.text) && void 0 !== uW ? uW : "",
-          iW = jW.test(WW),
-          OW = UW.test(WW),
-          EW = mW.map((WW => "word" === WW.kind ? yW(WW.text) : 1)),
-          sW = EW.findLastIndex((WW => WW > 0));
-        for (const [jW, UW] of mW.entries()) {
-          const WW = "word" === UW.kind,
-            mW = EW[jW];
-          UW.delayMs = nW;
-          for (let EW = 0; lW && EW < mW; EW++) {
+          return JR
+        }(RR),
+        XR = [];
+      let gR = [];
+      for (const yR of WR) "space" !== yR.kind && (gR.push(yR), aR.test(yR.text) && (XR.push(gR), gR = []));
+      XR.push(gR);
+      const bR = [];
+      let vR = 0;
+      for (const yR of XR) {
+        var OR, xR;
+        const RR = null !== (OR = null === (xR = yR.at(-1)) || void 0 === xR ? void 0 : xR.text) && void 0 !== OR ? OR : "",
+          JR = LR.test(RR),
+          GR = nR.test(RR),
+          tR = yR.map((RR => "word" === RR.kind ? BR(RR.text) : 1)),
+          WR = tR.findLastIndex((RR => RR > 0));
+        for (const [LR, nR] of yR.entries()) {
+          const RR = "word" === nR.kind,
+            yR = tR[LR];
+          nR.delayMs = vR;
+          for (let tR = 0; rR && tR < yR; tR++) {
             const {
-              intonation: NW
-            } = lW;
-            let PW = sW > 0 ? -NW.declineSemitones * (jW / sW) : 0;
-            PW += YW(`${TW(UW.text)}|${EW}`) * NW.variationSemitones;
-            const bW = Math.min(1, NW.variationSemitones);
-            let kW = lW.glideSemitones,
-              MW = 1;
-            OW && (PW += NW.exclaimLiftSemitones, MW *= LW), iW && jW === sW && (PW += NW.questionRiseSemitones * (mW > 1 ? .5 + .5 * EW / (mW - 1) : 1), EW === mW - 1 && (kW = Math.abs(kW) + NW.questionRiseSemitones / 2)), WW && JW(UW.text) && (PW += wW * bW, MW *= cW), mW > 1 && 0 === EW && (PW += ZW * bW, MW *= tW), HW.push({
-              atMs: nW + EW * AW,
-              semitones: PW,
-              glideSemitones: kW,
-              durationMs: EW < mW - 1 ? Math.min(lW.durationMs, AW * xW) : lW.durationMs,
-              level: MW
+              intonation: uR
+            } = rR;
+            let ZR = WR > 0 ? -uR.declineSemitones * (LR / WR) : 0;
+            ZR += MR(`${lR(nR.text)}|${tR}`) * uR.variationSemitones;
+            const aR = Math.min(1, uR.variationSemitones);
+            let UR = rR.glideSemitones,
+              AR = 1;
+            GR && (ZR += uR.exclaimLiftSemitones, AR *= qR), JR && LR === WR && (ZR += uR.questionRiseSemitones * (yR > 1 ? .5 + .5 * tR / (yR - 1) : 1), tR === yR - 1 && (UR = Math.abs(UR) + uR.questionRiseSemitones / 2)), RR && pR(nR.text) && (ZR += fR * aR, AR *= iR), yR > 1 && 0 === tR && (ZR += KR * aR, AR *= VR), bR.push({
+              atMs: vR + tR * eR,
+              semitones: ZR,
+              glideSemitones: UR,
+              durationMs: tR < yR - 1 ? Math.min(rR.durationMs, eR * wR) : rR.durationMs,
+              level: AR
             })
           }
-          nW += mW * AW + (bW.test(UW.text) ? PW : kW.test(UW.text) ? NW : 0)
+          vR += yR * eR + (aR.test(nR.text) ? ZR : UR.test(nR.text) ? uR : 0)
         }
       }
       return {
-        pieces: sW.map((WW => "space" === WW.kind ? WW : "icon" === WW.kind ? {
+        pieces: WR.map((RR => "space" === RR.kind ? RR : "icon" === RR.kind ? {
           kind: "icon",
-          icon: WW.text,
-          delayMs: WW.delayMs
+          icon: RR.text,
+          delayMs: RR.delayMs
         } : {
           kind: "word",
-          text: WW.text,
-          delayMs: WW.delayMs
+          text: RR.text,
+          delayMs: RR.delayMs
         })),
-        blips: HW
+        blips: bR
       }
     }
-    var HW = OW(1172),
-      nW = OW(1244),
-      uW = OW(2042);
+    var bR = GR(1270),
+      vR = GR(1343),
+      OR = GR(2137);
 
-    function oW(WW) {
-      if ("string" === typeof WW) return WW;
-      const iW = nW.e.get().getCurrentLanguageCode();
-      return (0, HW.p)(iW, WW.translationKey, (0, HW.o)(WW.params, uW.e.shown))
+    function xR(RR) {
+      if ("string" === typeof RR) return RR;
+      const JR = vR.g.get().getCurrentLanguageCode();
+      return (0, bR.r)(JR, RR.translationKey, (0, bR.o)(RR.params, OR.e.shown))
     }
 
-    function dW(WW) {
-      const iW = void 0 === WW.voice ? null : (0, mW.j)(WW.voice),
-        OW = iW && (0, mW.h)(iW);
+    function NR(RR) {
+      const JR = void 0 === RR.voice ? null : (0, yR.m)(RR.voice),
+        GR = JR && (0, yR.i)(JR);
       return {
-        plan: hW(oW(WW.line), OW),
-        synth: OW
+        plan: gR(xR(RR.line), GR),
+        synth: GR
       }
     }
 
-    function eW(WW) {
-      const iW = [];
-      let OW = [];
-      for (const [EW, NW] of WW.entries()) {
-        var mW;
-        "space" === NW.kind && (" " !== NW.text || "icon" !== (null === (mW = WW[EW + 1]) || void 0 === mW ? void 0 : mW.kind)) ? (OW.length > 0 && iW.push(OW), iW.push([NW]), OW = []) : OW.push(NW)
+    function DR(RR) {
+      const JR = [];
+      let GR = [];
+      for (const [tR, uR] of RR.entries()) {
+        var yR;
+        "space" === uR.kind && (" " !== uR.text || "icon" !== (null === (yR = RR[tR + 1]) || void 0 === yR ? void 0 : yR.kind)) ? (GR.length > 0 && JR.push(GR), JR.push([uR]), GR = []) : GR.push(uR)
       }
-      return OW.length > 0 && iW.push(OW), iW
+      return GR.length > 0 && JR.push(GR), JR
     }
   },
-  5610: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => tW,
-      h: () => ZW
+  5736: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => VR,
+      d: () => KR
     });
-    var mW = OW(5615),
-      EW = OW(25);
-    const NW = .25,
-      PW = .85,
-      LW = .02,
-      cW = .01;
+    var yR = GR(5742),
+      tR = GR(25);
+    const uR = .25,
+      ZR = .85,
+      qR = .02,
+      iR = .01;
 
-    function wW(WW, iW, OW, mW, EW, NW, LW) {
+    function fR(RR, JR, GR, yR, tR, uR, qR) {
       const {
-        waveform: cW,
-        pitchHz: wW,
-        attackMs: tW,
-        releaseMs: ZW,
-        lowpassHz: xW
-      } = OW, lW = EW + mW.durationMs / 1e3, AW = wW * 2 ** (mW.semitones / 12), bW = WW.createOscillator();
-      bW.type = cW, bW.frequency.setValueAtTime(AW, EW), bW.frequency.exponentialRampToValueAtTime(AW * 2 ** (mW.glideSemitones / 12), lW);
-      const jW = EW + Math.min(tW, mW.durationMs) / 1e3,
-        UW = WW.createGain();
-      UW.gain.setValueAtTime(0, EW), UW.gain.linearRampToValueAtTime(NW, jW), UW.gain.linearRampToValueAtTime(NW * PW, Math.max(jW, lW - ZW / 1e3)), UW.gain.linearRampToValueAtTime(0, lW);
-      const kW = [bW];
-      if (null !== xW) {
-        const iW = WW.createBiquadFilter();
-        iW.type = "lowpass", iW.frequency.value = xW, kW.push(iW)
+        waveform: iR,
+        pitchHz: fR,
+        attackMs: VR,
+        releaseMs: KR,
+        lowpassHz: wR
+      } = GR, rR = tR + yR.durationMs / 1e3, eR = fR * 2 ** (yR.semitones / 12), aR = RR.createOscillator();
+      aR.type = iR, aR.frequency.setValueAtTime(eR, tR), aR.frequency.exponentialRampToValueAtTime(eR * 2 ** (yR.glideSemitones / 12), rR);
+      const LR = tR + Math.min(VR, yR.durationMs) / 1e3,
+        nR = RR.createGain();
+      nR.gain.setValueAtTime(0, tR), nR.gain.linearRampToValueAtTime(uR, LR), nR.gain.linearRampToValueAtTime(uR * ZR, Math.max(LR, rR - KR / 1e3)), nR.gain.linearRampToValueAtTime(0, rR);
+      const UR = [aR];
+      if (null !== wR) {
+        const JR = RR.createBiquadFilter();
+        JR.type = "lowpass", JR.frequency.value = wR, UR.push(JR)
       }
-      kW.push(UW, iW);
-      for (let PW = 1; PW < kW.length; PW++) kW[PW - 1].connect(kW[PW]);
-      return bW.onended = () => {
-        for (const WW of kW.slice(0, -1)) WW.disconnect();
-        LW()
-      }, bW.start(EW), bW.stop(lW), bW
+      UR.push(nR, JR);
+      for (let ZR = 1; ZR < UR.length; ZR++) UR[ZR - 1].connect(UR[ZR]);
+      return aR.onended = () => {
+        for (const RR of UR.slice(0, -1)) RR.disconnect();
+        qR()
+      }, aR.start(tR), aR.stop(rR), aR
     }
 
-    function tW(WW, iW, OW, mW, EW, PW) {
-      if (0 === mW.length) return PW(), () => {};
-      const tW = NW * OW.volume * EW,
-        ZW = WW.createGain();
-      ZW.connect(iW);
-      const xW = WW.currentTime + LW,
-        lW = new Set;
-      for (const NW of mW) {
-        const iW = wW(WW, ZW, OW, NW, xW + NW.atMs / 1e3, tW * NW.level, (() => {
-          lW.delete(iW), 0 === lW.size && (ZW.disconnect(), PW())
+    function VR(RR, JR, GR, yR, tR, ZR) {
+      if (0 === yR.length) return ZR(), () => {};
+      const VR = uR * GR.volume * tR,
+        KR = RR.createGain();
+      KR.connect(JR);
+      const wR = RR.currentTime + qR,
+        rR = new Set;
+      for (const uR of yR) {
+        const JR = fR(RR, KR, GR, uR, wR + uR.atMs / 1e3, VR * uR.level, (() => {
+          rR.delete(JR), 0 === rR.size && (KR.disconnect(), ZR())
         }));
-        lW.add(iW)
+        rR.add(JR)
       }
       return () => {
-        const iW = WW.currentTime;
-        ZW.gain.setTargetAtTime(0, iW, cW);
-        for (const WW of lW) try {
-          WW.stop(iW + 5 * cW)
+        const JR = RR.currentTime;
+        KR.gain.setTargetAtTime(0, JR, iR);
+        for (const RR of rR) try {
+          RR.stop(JR + 5 * iR)
         } catch {}
       }
     }
 
-    function ZW(WW, iW) {
-      var OW;
-      const NW = mW.Howler.ctx,
-        PW = mW.Howler.masterGain;
-      if (!NW || !PW || !EW.d.get("soundOnFromAd")) return () => {};
-      const LW = mW.Howler;
-      return null === (OW = LW._autoResume) || void 0 === OW || OW.call(LW), tW(NW, PW, WW, iW, EW.d.get("soundVolume"), (() => {
-        var WW;
-        null === (WW = LW._autoSuspend) || void 0 === WW || WW.call(LW)
+    function KR(RR, JR) {
+      var GR;
+      const uR = yR.Howler.ctx,
+        ZR = yR.Howler.masterGain;
+      if (!uR || !ZR || !tR.d.get("soundOnFromAd")) return () => {};
+      const qR = yR.Howler;
+      return null === (GR = qR._autoResume) || void 0 === GR || GR.call(qR), VR(uR, ZR, RR, JR, tR.d.get("soundVolume"), (() => {
+        var RR;
+        null === (RR = qR._autoSuspend) || void 0 === RR || RR.call(qR)
       }))
     }
   },
-  40366: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      closeClientGame: () => Zi,
-      createDefaultClientPlugins: () => ti
+  40419: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      closeClientGame: () => KJ,
+      createDefaultClientPlugins: () => VJ
     });
-    var mW = OW(344);
+    var yR = GR(377);
 
-    function EW() {
-      let WW;
+    function tR() {
+      let RR;
       return {
-        onCreate(iW) {
-          WW = iW
+        onCreate(JR) {
+          RR = JR
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(iW, OW, EW, NW, PW, LW) {
-          var cW, wW;
-          if ("Iron Chest" !== WW.getMetaInfo(PW).rootName) return;
-          if (!WW.hasEffect(iW, "Thief")) return;
-          const tW = WW.getBlockData(OW, EW, NW);
-          return WW.getPlayerDbId(iW) !== (null === tW || void 0 === tW || null === (cW = tW.persisted) || void 0 === cW || null === (wW = cW.shared) || void 0 === wW ? void 0 : wW.ownerDbId) ? (WW.sendMessage(iW, [{
+        onPlayerAttemptAltAction(JR, GR, tR, uR, ZR, qR) {
+          var iR, fR;
+          if ("Iron Chest" !== RR.getMetaInfo(ZR).rootName) return;
+          if (!RR.hasEffect(JR, "Thief")) return;
+          const VR = RR.getBlockData(GR, tR, uR);
+          return RR.getPlayerDbId(JR) !== (null === VR || void 0 === VR || null === (iR = VR.persisted) || void 0 === iR || null === (fR = iR.shared) || void 0 === fR ? void 0 : fR.ownerDbId) ? (RR.sendMessage(JR, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: mW.M.redUiText
+              color: yR.C.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var NW = OW(2937),
-      PW = OW(1230);
-    const LW = 8.4,
-      cW = 1e-4,
-      wW = .15,
-      tW = .04,
-      ZW = [.12, .04, .12],
-      xW = 26,
-      lW = {
+    var uR = GR(3017),
+      ZR = GR(1336);
+    const qR = 8.4,
+      iR = 1e-4,
+      fR = .15,
+      VR = .04,
+      KR = [.12, .04, .12],
+      wR = 26,
+      rR = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        aZ: 1,
-        minLifeTime: cW,
-        maxLifeTime: cW,
+        hK: 1,
+        minLifeTime: iR,
+        maxLifeTime: iR,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -431,19 +431,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: NW.d.Standard
+        blendMode: uR.c.Standard
       },
-      AW = {
+      eR = {
         texture: "bubble",
         mipmaps: !1,
-        aZ: 96,
+        hK: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: xW,
+        emitRate: wR,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -457,159 +457,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: NW.d.Standard
+        blendMode: uR.c.Standard
       },
-      bW = [0, 0, 0],
-      jW = [0, 0, 0];
+      aR = [0, 0, 0],
+      LR = [0, 0, 0];
 
-    function UW(WW) {
-      const iW = new Map;
-      let OW = null;
+    function nR(RR) {
+      const JR = new Map;
+      let GR = null;
 
-      function mW(WW) {
-        var iW, OW;
-        null === (iW = WW.bubbles) || void 0 === iW || iW.stop(), null === (OW = WW.fish) || void 0 === OW || OW.stop()
+      function yR(RR) {
+        var JR, GR;
+        null === (JR = RR.bubbles) || void 0 === JR || JR.stop(), null === (GR = RR.fish) || void 0 === GR || GR.stop()
       }
 
-      function EW(OW) {
-        if (!OW.readDrawnPosition(WW, jW)) {
-          for (const WW of iW.values()) {
-            var mW;
-            null === (mW = WW.bubbles) || void 0 === mW || mW.setEmitRate(0)
+      function tR(GR) {
+        if (!GR.readDrawnPosition(RR, LR)) {
+          for (const RR of JR.values()) {
+            var yR;
+            null === (yR = RR.bubbles) || void 0 === yR || yR.setEmitRate(0)
           }
           return
         }
-        const EW = performance.now();
-        for (const [WW, PW] of iW) {
-          var NW;
-          if (null === (NW = PW.bubbles) || void 0 === NW || NW.setEmitRate(0), !OW.readDrawnPosition(WW, bW)) continue;
-          if (!((bW[0] - jW[0]) ** 2 + (bW[1] - jW[1]) ** 2 + (bW[2] - jW[2]) ** 2 < 900)) continue;
-          const iW = Math.max(0, PW.biteAt - EW),
-            mW = PW.approachDurationMs > 0 ? Math.min(1, 1 - iW / PW.approachDurationMs) : 1,
-            cW = (PW.approachDurationMs - iW) / 1e3,
-            UW = PW.phase + .25 * Math.sin(1.7 * cW + PW.phase),
-            kW = Math.min(PW.approachDurationMs / 3e3 * 2.8, LW) * (1 - mW) * (1 + .15 * Math.sin(2.1 * cW + PW.phase)),
-            sW = Math.min(1, 4 * (1 - mW)),
-            MW = (.45 * Math.sin(4.1 * cW + PW.phase) + .18 * Math.sin(9.7 * cW + 2 * PW.phase)) * sW,
-            KW = bW[0] + Math.cos(UW) * kW - Math.sin(UW) * MW,
-            SW = Math.ceil(PW.surfaceY),
-            YW = bW[2] + Math.sin(UW) * kW + Math.cos(UW) * MW,
+        const tR = performance.now();
+        for (const [RR, ZR] of JR) {
+          var uR;
+          if (null === (uR = ZR.bubbles) || void 0 === uR || uR.setEmitRate(0), !GR.readDrawnPosition(RR, aR)) continue;
+          if (!((aR[0] - LR[0]) ** 2 + (aR[1] - LR[1]) ** 2 + (aR[2] - LR[2]) ** 2 < 900)) continue;
+          const JR = Math.max(0, ZR.biteAt - tR),
+            yR = ZR.approachDurationMs > 0 ? Math.min(1, 1 - JR / ZR.approachDurationMs) : 1,
+            iR = (ZR.approachDurationMs - JR) / 1e3,
+            nR = ZR.phase + .25 * Math.sin(1.7 * iR + ZR.phase),
+            UR = Math.min(ZR.approachDurationMs / 3e3 * 2.8, qR) * (1 - yR) * (1 + .15 * Math.sin(2.1 * iR + ZR.phase)),
+            WR = Math.min(1, 4 * (1 - yR)),
+            AR = (.45 * Math.sin(4.1 * iR + ZR.phase) + .18 * Math.sin(9.7 * iR + 2 * ZR.phase)) * WR,
+            CR = aR[0] + Math.cos(nR) * UR - Math.sin(nR) * AR,
+            XR = Math.ceil(ZR.surfaceY),
+            MR = aR[2] + Math.sin(nR) * UR + Math.cos(nR) * AR,
             {
-              fishAt: yW,
-              bubblesAt: TW
-            } = PW;
-          yW[0] = TW[0] = KW, yW[1] = SW + wW, TW[1] = SW + tW, yW[2] = TW[2] = YW, PW.fish ??= OW.createParticles(lW, {
-            pos: yW
-          }), PW.fish.moveTo(yW), PW.fish.emit(1), PW.bubbles ??= OW.createParticles(AW, {
-            pos: TW,
-            half: ZW
-          }), PW.bubbles.moveTo(TW), PW.bubbles.setEmitRate(xW + 32 * (.5 + .5 * Math.sin(9 * cW + PW.phase)) ** 4 + 13 * mW)
+              fishAt: BR,
+              bubblesAt: lR
+            } = ZR;
+          BR[0] = lR[0] = CR, BR[1] = XR + fR, lR[1] = XR + VR, BR[2] = lR[2] = MR, ZR.fish ??= GR.createParticles(rR, {
+            pos: BR
+          }), ZR.fish.moveTo(BR), ZR.fish.emit(1), ZR.bubbles ??= GR.createParticles(eR, {
+            pos: lR,
+            half: KR
+          }), ZR.bubbles.moveTo(lR), ZR.bubbles.setEmitRate(wR + 32 * (.5 + .5 * Math.sin(9 * iR + ZR.phase)) ** 4 + 13 * yR)
         }
       }
       return {
-        onCreate(WW) {
-          OW = WW
+        onCreate(RR) {
+          GR = RR
         },
         onAfterRender() {
-          OW && EW(OW)
+          GR && tR(GR)
         },
         onClose() {
-          for (const WW of iW.values()) mW(WW);
-          iW.clear(), OW = null
+          for (const RR of JR.values()) yR(RR);
+          JR.clear(), GR = null
         },
-        onReceivedMessageFromServer(WW, OW) {
-          if (WW !== PW.r) return;
+        onReceivedMessageFromServer(RR, GR) {
+          if (RR !== ZR.B) return;
           const {
-            hookId: EW,
-            waiting: NW
-          } = OW;
-          if (NW) iW.has(EW) || iW.set(EW, {
+            hookId: tR,
+            waiting: uR
+          } = GR;
+          if (uR) JR.has(tR) || JR.set(tR, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + NW.remainingMs,
-            approachDurationMs: NW.durationMs,
-            surfaceY: NW.surfaceY,
+            biteAt: performance.now() + uR.remainingMs,
+            approachDurationMs: uR.durationMs,
+            surfaceY: uR.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const WW = iW.get(EW);
-            WW && mW(WW), iW.delete(EW)
+            const RR = JR.get(tR);
+            RR && yR(RR), JR.delete(tR)
           }
         }
       }
     }
-    var kW = OW(5610),
-      sW = OW(5599);
+    var UR = GR(5736),
+      WR = GR(5728);
 
-    function MW(WW) {
-      let iW, OW = null,
-        mW = null;
-      const EW = () => {
-        var WW;
-        null === (WW = mW) || void 0 === WW || WW(), mW = null
+    function AR(RR) {
+      let JR, GR = null,
+        yR = null;
+      const tR = () => {
+        var RR;
+        null === (RR = yR) || void 0 === RR || RR(), yR = null
       };
       return {
-        onCreate(mW) {
-          iW = mW, OW = iW.getClientOption(WW, "dialogue")
+        onCreate(yR) {
+          JR = yR, GR = JR.getClientOption(RR, "dialogue")
         },
         onAfterRender() {
-          if (!iW) return;
-          const NW = iW.getClientOption(WW, "dialogue");
-          if (NW === OW) return;
-          if (OW = NW, EW(), !NW || !1 === NW.animateIn) return;
+          if (!JR) return;
+          const uR = JR.getClientOption(RR, "dialogue");
+          if (uR === GR) return;
+          if (GR = uR, tR(), !uR || !1 === uR.animateIn) return;
           const {
-            plan: PW,
-            synth: LW
-          } = (0, sW.g)(NW);
-          LW && (mW = (0, kW.h)(LW, PW.blips))
+            plan: ZR,
+            synth: qR
+          } = (0, WR.f)(uR);
+          qR && (yR = (0, UR.d)(qR, ZR.blips))
         },
-        onClose: EW
+        onClose: tR
       }
     }
-    var KW = OW(40371);
-    const SW = [
+    var CR = GR(40422);
+    const XR = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      YW = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      yW = [0, 1, 2, 0, 2, 3];
+      MR = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      BR = [0, 1, 2, 0, 2, 3];
 
-    function TW(WW, iW, OW) {
-      var mW;
-      let [EW, NW, PW] = iW;
-      if (WW.hasPackModel("Furnace")) return null;
-      const LW = ((null !== (mW = WW.getMetaInfo(OW).rot) && void 0 !== mW ? mW : 1) - 1) * Math.PI / 2,
-        cW = Math.PI + LW,
-        wW = Math.cos(cW),
-        tW = Math.sin(cW),
-        ZW = [];
-      for (const [AW, bW] of SW) ZW.push(AW * wW, bW, -AW * tW);
-      const xW = {
-          positions: ZW,
-          indices: yW,
-          uvs: YW
+    function lR(RR, JR, GR) {
+      var yR;
+      let [tR, uR, ZR] = JR;
+      if (RR.hasPackModel("Furnace")) return null;
+      const qR = ((null !== (yR = RR.getMetaInfo(GR).rot) && void 0 !== yR ? yR : 1) - 1) * Math.PI / 2,
+        iR = Math.PI + qR,
+        fR = Math.cos(iR),
+        VR = Math.sin(iR),
+        KR = [];
+      for (const [eR, aR] of XR) KR.push(eR * fR, aR, -eR * VR);
+      const wR = {
+          positions: KR,
+          indices: BR,
+          uvs: MR
         },
-        lW = [EW + .5 + .51 * Math.sin(LW), NW + .375, PW + .5 + .51 * Math.cos(LW)];
-      return WW.createGameMesh(xW, {
+        rR = [tR + .5 + .51 * Math.sin(qR), uR + .375, ZR + .5 + .51 * Math.cos(qR)];
+      return RR.createGameMesh(wR, {
         kind: "furnaceFire"
-      }, lW)
+      }, rR)
     }
 
-    function JW(WW) {
-      return Math.floor(WW / 200) % 3
+    function pR(RR) {
+      return Math.floor(RR / 200) % 3
     }
 
-    function hW(WW, iW, OW) {
-      WW.setGameMesh(iW, {
-        uvOffset: [0, OW / 3]
+    function gR(RR, JR, GR) {
+      RR.setGameMesh(JR, {
+        uvOffset: [0, GR / 3]
       })
     }
-    const HW = [.12, .025, .12],
-      nW = [{
+    const bR = [.12, .025, .12],
+      vR = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -622,7 +622,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: NW.d.Standard,
+          blendMode: uR.c.Standard,
           soft: !0
         },
         perSecond: 7
@@ -639,140 +639,140 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: NW.d.Add,
+          blendMode: uR.c.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class uW {
+    class OR {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(WW, iW) {
-        const OW = WW.getBlockId(iW[0], iW[1], iW[2]);
-        if ("Furnace" !== WW.getMetaInfo(OW).rootName) return;
-        const mW = performance.now();
-        let EW = this.smokes.find((WW => WW.pos[0] === iW[0] && WW.pos[1] === iW[1] && WW.pos[2] === iW[2] && WW.NL === OW));
-        if (EW || (EW = {
-            pos: [iW[0], iW[1], iW[2]],
-            NL: OW,
-            endMs: mW,
+      start(RR, JR) {
+        const GR = RR.getBlockId(JR[0], JR[1], JR[2]);
+        if ("Furnace" !== RR.getMetaInfo(GR).rootName) return;
+        const yR = performance.now();
+        let tR = this.smokes.find((RR => RR.pos[0] === JR[0] && RR.pos[1] === JR[1] && RR.pos[2] === JR[2] && RR.Vq === GR));
+        if (tR || (tR = {
+            pos: [JR[0], JR[1], JR[2]],
+            Vq: GR,
+            endMs: yR,
             lastBurstMs: -1 / 0,
-            pending: new Array(nW.length).fill(0),
-            fire: TW(WW, iW, OW)
-          }, this.smokes.push(EW), null !== EW.fire && (hW(WW, EW.fire, JW(mW)), this.shownFireFrame = -1)), EW.endMs = mW + 6e3, this.smokes.length > 4) {
-          const iW = this.smokes.reduce(((WW, iW) => iW.endMs < WW.endMs ? iW : WW));
-          oW(WW, iW), this.smokes.splice(this.smokes.indexOf(iW), 1)
+            pending: new Array(vR.length).fill(0),
+            fire: lR(RR, JR, GR)
+          }, this.smokes.push(tR), null !== tR.fire && (gR(RR, tR.fire, pR(yR)), this.shownFireFrame = -1)), tR.endMs = yR + 6e3, this.smokes.length > 4) {
+          const JR = this.smokes.reduce(((RR, JR) => JR.endMs < RR.endMs ? JR : RR));
+          xR(RR, JR), this.smokes.splice(this.smokes.indexOf(JR), 1)
         }
-        mW - EW.lastBurstMs >= 300 && (EW.lastBurstMs = mW, nW.forEach(((WW, iW) => {
-          EW.pending[iW] += WW.style.count
+        yR - tR.lastBurstMs >= 300 && (tR.lastBurstMs = yR, vR.forEach(((RR, JR) => {
+          tR.pending[JR] += RR.style.count
         })))
       }
-      onAfterRender(WW, iW) {
+      onAfterRender(RR, JR) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const OW = performance.now();
-        this.smokes = this.smokes.filter((iW => {
-          const [mW, EW, NW] = iW.pos, PW = OW < iW.endMs && WW.getBlockId(mW, EW, NW) === iW.NL;
-          return PW || oW(WW, iW), PW
+        const GR = performance.now();
+        this.smokes = this.smokes.filter((JR => {
+          const [yR, tR, uR] = JR.pos, ZR = GR < JR.endMs && RR.getBlockId(yR, tR, uR) === JR.Vq;
+          return ZR || xR(RR, JR), ZR
         }));
-        const mW = JW(OW);
-        if (mW !== this.shownFireFrame) {
-          this.shownFireFrame = mW;
-          for (const iW of this.smokes) null !== iW.fire && hW(WW, iW.fire, mW)
+        const yR = pR(GR);
+        if (yR !== this.shownFireFrame) {
+          this.shownFireFrame = yR;
+          for (const JR of this.smokes) null !== JR.fire && gR(RR, JR.fire, yR)
         }
-        if (!WW.particlesEnabled()) {
-          for (const WW of this.smokes) WW.pending.fill(0);
+        if (!RR.particlesEnabled()) {
+          for (const RR of this.smokes) RR.pending.fill(0);
           return
         }
-        const EW = Math.min(iW, 250) / 1e3;
-        for (const NW of this.smokes) {
-          const [iW, mW, PW] = NW.pos;
-          if (0 !== WW.getBlockId(iW, mW + 1, PW)) {
-            NW.pending.fill(0);
+        const tR = Math.min(JR, 250) / 1e3;
+        for (const uR of this.smokes) {
+          const [JR, yR, ZR] = uR.pos;
+          if (0 !== RR.getBlockId(JR, yR + 1, ZR)) {
+            uR.pending.fill(0);
             continue
           }
-          const LW = (NW.endMs - OW) / 6e3,
-            cW = this.centre;
-          cW[0] = iW + .5, cW[1] = mW + 1.275, cW[2] = PW + .5, nW.forEach(((iW, OW) => {
-            NW.pending[OW] += iW.perSecond * LW * EW;
-            const mW = Math.floor(NW.pending[OW]);
-            mW > 0 && this.emit(WW, OW, cW, mW) && (NW.pending[OW] -= mW)
+          const qR = (uR.endMs - GR) / 6e3,
+            iR = this.centre;
+          iR[0] = JR + .5, iR[1] = yR + 1.275, iR[2] = ZR + .5, vR.forEach(((JR, GR) => {
+            uR.pending[GR] += JR.perSecond * qR * tR;
+            const yR = Math.floor(uR.pending[GR]);
+            yR > 0 && this.emit(RR, GR, iR, yR) && (uR.pending[GR] -= yR)
           }))
         }
       }
-      dispose(WW) {
-        for (const OW of this.smokes) oW(WW, OW);
+      dispose(RR) {
+        for (const GR of this.smokes) xR(RR, GR);
         this.smokes = [];
-        for (const OW of null !== (iW = this.puffers) && void 0 !== iW ? iW : []) {
-          var iW;
-          OW.dispose()
+        for (const GR of null !== (JR = this.puffers) && void 0 !== JR ? JR : []) {
+          var JR;
+          GR.dispose()
         }
         this.puffers = null
       }
-      emit(WW, iW, OW, mW) {
-        return this.puffers ??= nW.map((WW => {
+      emit(RR, JR, GR, yR) {
+        return this.puffers ??= vR.map((RR => {
           let {
-            style: iW,
-            perSecond: OW
-          } = WW;
-          const mW = (iW.count / .3 + OW) * iW.life[1];
-          return new KW.h(iW, Math.ceil(4 * mW), HW)
-        })), this.puffers[iW].emit(WW, OW, this.renderFrame, mW)
+            style: JR,
+            perSecond: GR
+          } = RR;
+          const yR = (JR.count / .3 + GR) * JR.life[1];
+          return new CR.d(JR, Math.ceil(4 * yR), bR)
+        })), this.puffers[JR].emit(RR, GR, this.renderFrame, yR)
       }
     }
 
-    function oW(WW, iW) {
-      null !== iW.fire && (WW.disposeGameMesh(iW.fire), iW.fire = null)
+    function xR(RR, JR) {
+      null !== JR.fire && (RR.disposeGameMesh(JR.fire), JR.fire = null)
     }
 
-    function dW() {
-      let WW;
-      const iW = new uW;
+    function NR() {
+      let RR;
+      const JR = new OR;
       return {
-        onCreate(iW) {
-          WW = iW
+        onCreate(JR) {
+          RR = JR
         },
-        onReceivedMessageFromServer(OW, mW) {
-          OW === PW.s && iW.start(WW, mW)
+        onReceivedMessageFromServer(GR, yR) {
+          GR === ZR.F && JR.start(RR, yR)
         },
-        onAfterRender(OW) {
-          iW.onAfterRender(WW, OW)
+        onAfterRender(GR) {
+          JR.onAfterRender(RR, GR)
         },
         onClose() {
-          iW.dispose(WW)
+          JR.dispose(RR)
         }
       }
     }
-    var eW = OW(182),
-      vW = OW(40337),
-      gW = OW(40380),
-      DW = OW(40384);
-    class VW {
-      constructor(WW, iW, OW) {
-        this.api = WW, this.wearer = iW, this.name = OW, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new DW.e, this.shown = !1, this.raised = 0
+    var DR = GR(203),
+      HR = GR(40393),
+      oR = GR(40429),
+      cR = GR(40432);
+    class PR {
+      constructor(RR, JR, GR) {
+        this.api = RR, this.wearer = JR, this.name = GR, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new cR.b, this.shown = !1, this.raised = 0
       }
-      update(WW) {
-        var iW;
-        const OW = (0, vW.h)(this.name);
-        if (!OW) return void this.dispose();
-        if (!this.madeFrom || this.madeFrom.model === OW.model && this.madeFrom.scale === OW.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(OW.model, OW.scale), this.madeFrom = OW, !this.model)) return void this.raiseNametag(0);
-        if (!(WW.drawn && !WW.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
-        const mW = this.motion.step({
-          dt: WW.dt,
-          feet: WW.feet,
-          heading: WW.heading,
-          headTopY: WW.headTopY,
-          tuning: OW,
-          timeS: WW.timeS
+      update(RR) {
+        var JR;
+        const GR = (0, HR.e)(this.name);
+        if (!GR) return void this.dispose();
+        if (!this.madeFrom || this.madeFrom.model === GR.model && this.madeFrom.scale === GR.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(GR.model, GR.scale), this.madeFrom = GR, !this.model)) return void this.raiseNametag(0);
+        if (!(RR.drawn && !RR.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
+        const yR = this.motion.step({
+          dt: RR.dt,
+          feet: RR.feet,
+          heading: RR.heading,
+          headTopY: RR.headTopY,
+          tuning: GR,
+          timeS: RR.timeS
         });
-        this.model.setPose(mW.pos, mW.yaw + Math.PI), this.model.setClip(null !== (iW = mW.clip) && void 0 !== iW ? iW : null);
-        const EW = mW.seated ? OW : null;
-        EW !== this.perchedWith && (this.perchedWith = EW, this.model.setPerch(EW && {
-          ZO: this.wearer,
-          offset: EW.perchOffset,
-          yaw: EW.yawOffset
-        })), this.setShown(!0), this.raiseNametag(OW.nametagRaise)
+        this.model.setPose(yR.pos, yR.yaw + Math.PI), this.model.setClip(null !== (JR = yR.clip) && void 0 !== JR ? JR : null);
+        const tR = yR.seated ? GR : null;
+        tR !== this.perchedWith && (this.perchedWith = tR, this.model.setPerch(tR && {
+          fG: this.wearer,
+          offset: tR.perchOffset,
+          yaw: tR.yawOffset
+        })), this.setShown(!0), this.raiseNametag(GR.nametagRaise)
       }
       refreshNametag() {
         0 !== this.raised && this.api.setNametagOffset(this.wearer, this.raised)
@@ -780,66 +780,66 @@ export const modules = {
       dispose() {
         this.freeModel(), this.raiseNametag(0)
       }
-      raiseNametag(WW) {
-        WW !== this.raised && (this.raised = WW, this.api.setNametagOffset(this.wearer, WW))
+      raiseNametag(RR) {
+        RR !== this.raised && (this.raised = RR, this.api.setNametagOffset(this.wearer, RR))
       }
       freeModel() {
-        var WW;
-        null === (WW = this.model) || void 0 === WW || WW.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
+        var RR;
+        null === (RR = this.model) || void 0 === RR || RR.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
       }
-      setShown(WW) {
-        this.model && WW !== this.shown && (this.shown = WW, this.model.setVisible(WW))
+      setShown(RR) {
+        this.model && RR !== this.shown && (this.shown = RR, this.model.setVisible(RR))
       }
     }
-    class pW {
-      constructor(WW, iW) {
-        this.api = WW, this.name = iW, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
+    class IR {
+      constructor(RR, JR) {
+        this.api = RR, this.name = JR, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
       }
-      update(WW) {
-        const iW = (0, vW.g)(this.name);
-        if (iW !== this.madeFrom && this.stop(), !iW) return;
-        const OW = WW.ownFirstPerson ? iW.ownInFirstPerson : WW.drawn;
-        if (OW) {
+      update(RR) {
+        const JR = (0, HR.d)(this.name);
+        if (JR !== this.madeFrom && this.stop(), !JR) return;
+        const GR = RR.ownFirstPerson ? JR.ownInFirstPerson : RR.drawn;
+        if (GR) {
           const {
-            centre: OW
+            centre: GR
           } = this;
-          if ((0, DW.j)(OW, WW.feet, iW.offset, Math.sin(WW.heading), Math.cos(WW.heading)), this.particles) this.particles.moveTo(OW, this.half);
+          if ((0, cR.g)(GR, RR.feet, JR.offset, Math.sin(RR.heading), Math.cos(RR.heading)), this.particles) this.particles.moveTo(GR, this.half);
           else {
-            const WW = (0, gW.d)(iW);
-            this.half = WW.half, this.particles = this.api.createParticles(WW.opts, {
-              pos: OW,
-              half: WW.half
-            }), this.madeFrom = iW, this.emitting = !0
+            const RR = (0, oR.c)(JR);
+            this.half = RR.half, this.particles = this.api.createParticles(RR.opts, {
+              pos: GR,
+              half: RR.half
+            }), this.madeFrom = JR, this.emitting = !0
           }
         }
-        this.particles && OW !== this.emitting && (this.emitting = OW, this.particles.setEmitRate(OW ? iW.particles.emitRate : 0))
+        this.particles && GR !== this.emitting && (this.emitting = GR, this.particles.setEmitRate(GR ? JR.particles.emitRate : 0))
       }
       stop() {
-        var WW;
-        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null, this.madeFrom = null
+        var RR;
+        null === (RR = this.particles) || void 0 === RR || RR.stop(), this.particles = null, this.madeFrom = null
       }
     }
-    const fW = .25,
-      CW = 48,
-      XW = 4,
-      BW = 24,
-      qW = 12,
-      RW = .6,
-      GW = 1 / eW.f.playerEyeToHeightRatio;
+    const mR = .25,
+      zR = 48,
+      SR = 4,
+      jR = 24,
+      dR = 12,
+      ER = .6,
+      YR = 1 / DR.g.playerEyeToHeightRatio;
 
-    function IW(WW, iW, OW) {
-      const mW = WW.filter((WW => WW[iW] <= CW));
-      return mW.sort(((WW, OW) => WW[iW] - OW[iW])), new Set(mW.slice(0, OW).map((WW => WW.id)))
+    function kR(RR, JR, GR) {
+      const yR = RR.filter((RR => RR[JR] <= zR));
+      return yR.sort(((RR, GR) => RR[JR] - GR[JR])), new Set(yR.slice(0, GR).map((RR => RR.id)))
     }
 
-    function aW() {
-      let WW;
-      const iW = new Map;
-      let OW = 0,
-        mW = 0;
-      const EW = [0, 0, 0],
-        NW = {
-          feet: EW,
+    function QR() {
+      let RR;
+      const JR = new Map;
+      let GR = 0,
+        yR = 0;
+      const tR = [0, 0, 0],
+        uR = {
+          feet: tR,
           heading: 0,
           headTopY: 0,
           drawn: !1,
@@ -848,96 +848,96 @@ export const modules = {
           timeS: 0
         };
 
-      function PW(WW) {
-        var iW, OW;
-        null === (iW = WW.pet) || void 0 === iW || iW.dispose(), null === (OW = WW.aura) || void 0 === OW || OW.stop()
+      function ZR(RR) {
+        var JR, GR;
+        null === (JR = RR.pet) || void 0 === JR || JR.dispose(), null === (GR = RR.aura) || void 0 === GR || GR.stop()
       }
 
-      function LW(iW, OW) {
-        var mW, PW;
+      function qR(JR, GR) {
+        var yR, ZR;
         const {
-          id: LW
-        } = iW, cW = WW.readDrawnPosition(LW, EW) ? WW.getDrawnHeading(LW) : null, wW = null === cW ? null : WW.getDrawnEyeHeight(LW);
-        if (null === cW || null === wW) NW.drawn = !1, NW.ownFirstPerson = !1;
+          id: qR
+        } = JR, iR = RR.readDrawnPosition(qR, tR) ? RR.getDrawnHeading(qR) : null, fR = null === iR ? null : RR.getDrawnEyeHeight(qR);
+        if (null === iR || null === fR) uR.drawn = !1, uR.ownFirstPerson = !1;
         else {
-          const iW = OW.cameraPosition;
-          NW.heading = cW, NW.headTopY = EW[1] + wW * GW, NW.drawn = WW.isAlive(LW) && WW.isEntityDrawn(LW), NW.ownFirstPerson = WW.isLocalPlayer(LW) && WW.isAlive(LW) && Math.hypot(iW[0] - EW[0], iW[1] - EW[1] - wW, iW[2] - EW[2]) < RW
+          const JR = GR.cameraPosition;
+          uR.heading = iR, uR.headTopY = tR[1] + fR * YR, uR.drawn = RR.isAlive(qR) && RR.isEntityDrawn(qR), uR.ownFirstPerson = RR.isLocalPlayer(qR) && RR.isAlive(qR) && Math.hypot(JR[0] - tR[0], JR[1] - tR[1] - fR, JR[2] - tR[2]) < ER
         }
-        null === (mW = iW.pet) || void 0 === mW || mW.update(NW), null === (PW = iW.aura) || void 0 === PW || PW.update(NW)
+        null === (yR = JR.pet) || void 0 === yR || yR.update(uR), null === (ZR = JR.aura) || void 0 === ZR || ZR.update(uR)
       }
       return {
-        onCreate(iW) {
-          WW = iW
+        onCreate(JR) {
+          RR = JR
         },
-        onAfterRender(cW, wW) {
-          const tW = cW / 1e3;
-          mW += tW, OW -= tW, OW <= 0 && (OW = fW, function(OW) {
-            const mW = [];
-            for (const PW of WW.getPlayerIds()) {
-              const NW = WW.getPlayerCosmetics(PW),
-                LW = void 0 !== (null === NW || void 0 === NW ? void 0 : NW.pet) && (0, vW.h)(NW.pet) ? NW.pet : null,
-                cW = void 0 !== (null === NW || void 0 === NW ? void 0 : NW.aura) && (0, vW.g)(NW.aura) ? NW.aura : null;
-              if (null === LW && null === cW || !WW.readDrawnPosition(PW, EW)) continue;
-              const wW = Math.hypot(EW[0] - OW[0], EW[1] - OW[1], EW[2] - OW[2]),
-                tW = iW.get(PW);
-              mW.push({
-                id: PW,
-                pet: LW,
-                aura: cW,
-                petDist: null === LW ? 1 / 0 : wW - (null !== tW && void 0 !== tW && tW.pet ? XW : 0),
-                auraDist: null === cW ? 1 / 0 : wW - (null !== tW && void 0 !== tW && tW.aura ? XW : 0)
+        onAfterRender(iR, fR) {
+          const VR = iR / 1e3;
+          yR += VR, GR -= VR, GR <= 0 && (GR = mR, function(GR) {
+            const yR = [];
+            for (const ZR of RR.getPlayerIds()) {
+              const uR = RR.getPlayerCosmetics(ZR),
+                qR = void 0 !== (null === uR || void 0 === uR ? void 0 : uR.pet) && (0, HR.e)(uR.pet) ? uR.pet : null,
+                iR = void 0 !== (null === uR || void 0 === uR ? void 0 : uR.aura) && (0, HR.d)(uR.aura) ? uR.aura : null;
+              if (null === qR && null === iR || !RR.readDrawnPosition(ZR, tR)) continue;
+              const fR = Math.hypot(tR[0] - GR[0], tR[1] - GR[1], tR[2] - GR[2]),
+                VR = JR.get(ZR);
+              yR.push({
+                id: ZR,
+                pet: qR,
+                aura: iR,
+                petDist: null === qR ? 1 / 0 : fR - (null !== VR && void 0 !== VR && VR.pet ? SR : 0),
+                auraDist: null === iR ? 1 / 0 : fR - (null !== VR && void 0 !== VR && VR.aura ? SR : 0)
               })
             }
-            const NW = IW(mW, "petDist", BW),
-              LW = WW.particlesEnabled() ? IW(mW, "auraDist", qW) : new Set,
-              cW = new Set;
+            const uR = kR(yR, "petDist", jR),
+              qR = RR.particlesEnabled() ? kR(yR, "auraDist", dR) : new Set,
+              iR = new Set;
             for (const {
-                id: EW,
-                pet: PW,
-                aura: bW
+                id: tR,
+                pet: ZR,
+                aura: aR
               }
-              of mW) {
-              var wW, tW, ZW;
-              const OW = null !== (wW = iW.get(EW)) && void 0 !== wW ? wW : {
-                  id: EW,
+              of yR) {
+              var fR, VR, KR;
+              const GR = null !== (fR = JR.get(tR)) && void 0 !== fR ? fR : {
+                  id: tR,
                   pet: null,
                   aura: null
                 },
-                mW = NW.has(EW) ? PW : null,
-                jW = LW.has(EW) ? bW : null;
-              var xW, lW, AW;
-              (null === (tW = OW.pet) || void 0 === tW ? void 0 : tW.name) !== mW ? (null === (xW = OW.pet) || void 0 === xW || xW.dispose(), OW.pet = null === mW ? null : new VW(WW, EW, mW)) : null === (lW = OW.pet) || void 0 === lW || lW.refreshNametag(), (null === (ZW = OW.aura) || void 0 === ZW ? void 0 : ZW.name) !== jW && (null === (AW = OW.aura) || void 0 === AW || AW.stop(), OW.aura = null === jW ? null : new pW(WW, jW)), (OW.pet || OW.aura) && (iW.set(EW, OW), cW.add(EW))
+                yR = uR.has(tR) ? ZR : null,
+                LR = qR.has(tR) ? aR : null;
+              var wR, rR, eR;
+              (null === (VR = GR.pet) || void 0 === VR ? void 0 : VR.name) !== yR ? (null === (wR = GR.pet) || void 0 === wR || wR.dispose(), GR.pet = null === yR ? null : new PR(RR, tR, yR)) : null === (rR = GR.pet) || void 0 === rR || rR.refreshNametag(), (null === (KR = GR.aura) || void 0 === KR ? void 0 : KR.name) !== LR && (null === (eR = GR.aura) || void 0 === eR || eR.stop(), GR.aura = null === LR ? null : new IR(RR, LR)), (GR.pet || GR.aura) && (JR.set(tR, GR), iR.add(tR))
             }
-            for (const [WW, EW] of iW) cW.has(WW) || (PW(EW), iW.delete(WW))
-          }(wW.cameraPosition)), NW.dt = tW, NW.timeS = mW;
-          for (const WW of iW.values()) LW(WW, wW)
+            for (const [RR, tR] of JR) iR.has(RR) || (ZR(tR), JR.delete(RR))
+          }(fR.cameraPosition)), uR.dt = VR, uR.timeS = yR;
+          for (const RR of JR.values()) qR(RR, fR)
         },
         onClose() {
-          for (const WW of iW.values()) PW(WW);
-          iW.clear()
+          for (const RR of JR.values()) ZR(RR);
+          JR.clear()
         }
       }
     }
-    var rW = OW(9963);
-    const zW = "skyblockLoot",
-      FW = "autoPickupClick";
-    var QW = OW(1770);
+    var FR = GR(10063);
+    const TR = "skyblockLoot",
+      sR = "autoPickupClick";
+    var hR = GR(1841);
 
-    function Wi(WW, iW) {
+    function RJ(RR, JR) {
       return [{
         timeFraction: 0,
-        minColor: [255 * WW[0], 255 * WW[1], 255 * WW[2], 1],
-        maxColor: [255 * iW[0], 255 * iW[1], 255 * iW[2], 1]
+        minColor: [255 * RR[0], 255 * RR[1], 255 * RR[2], 1],
+        maxColor: [255 * JR[0], 255 * JR[1], 255 * JR[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const ii = [0, 0, 0],
-      Oi = {
+    const JJ = [0, 0, 0],
+      GJ = {
         texture: "glint",
         mipmaps: !1,
-        aZ: 24,
+        hK: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -945,23 +945,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: ii,
-        dir2: ii,
-        blendMode: NW.d.OneOne
+        dir1: JJ,
+        dir2: JJ,
+        blendMode: uR.c.OneOne
       },
-      mi = {
-        ...Oi,
-        colorGradients: Wi([1, .88, .38], [1, .65, .15])
+      yJ = {
+        ...GJ,
+        colorGradients: RJ([1, .88, .38], [1, .65, .15])
       },
-      Ei = {
-        ...Oi,
-        colorGradients: Wi([.55, .95, 1], [.9, 1, 1])
+      tJ = {
+        ...GJ,
+        colorGradients: RJ([.55, .95, 1], [.9, 1, 1])
       },
-      Ni = [.5, .5, .5],
-      Pi = {
+      uJ = [.5, .5, .5],
+      ZJ = {
         texture: "glint",
         mipmaps: !1,
-        aZ: 24,
+        hK: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -969,24 +969,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: Wi([1, .12, .12], [1, .35, .2]),
-        blendMode: NW.d.OneOne
+        colorGradients: RJ([1, .12, .12], [1, .35, .2]),
+        blendMode: uR.c.OneOne
       };
-    class Li {
+    class qJ {
       constructor() {
         this.drops = new Map
       }
-      yZ(WW, iW) {
-        if ("overflowFlash" === iW.kind) {
-          const [OW, mW, EW] = iW.position, NW = WW.createParticles(Pi, {
-            pos: [OW, mW, EW],
-            half: Ni
+      BK(RR, JR) {
+        if ("overflowFlash" === JR.kind) {
+          const [GR, yR, tR] = JR.position, uR = RR.createParticles(ZJ, {
+            pos: [GR, yR, tR],
+            half: uJ
           });
-          return NW.emit(18), void NW.stop()
+          return uR.emit(18), void uR.stop()
         }
-        this.drops.has(iW.itemId) || this.drops.set(iW.itemId, {
-          owner: iW.owner,
-          cosmetic: iW.cosmetic,
+        this.drops.has(JR.itemId) || this.drops.set(JR.itemId, {
+          owner: JR.owner,
+          cosmetic: JR.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -995,168 +995,168 @@ export const modules = {
           particles: null
         })
       }
-      hZ(WW) {
+      gK(RR) {
         if (0 === this.drops.size) return;
-        const iW = performance.now(),
-          OW = WW.getCameraPosition();
-        let mW = 0;
-        for (const NW of this.drops.values()) null !== NW.particles && mW++;
-        for (const [NW, PW] of this.drops) {
-          const LW = WW.getPositionView(NW);
-          if (null === LW) {
-            var EW;
-            if (PW.seen || iW - PW.markedAt > 5e3) null !== PW.particles && mW--, null === (EW = PW.particles) || void 0 === EW || EW.stop(), this.drops.delete(NW);
+        const JR = performance.now(),
+          GR = RR.getCameraPosition();
+        let yR = 0;
+        for (const uR of this.drops.values()) null !== uR.particles && yR++;
+        for (const [uR, ZR] of this.drops) {
+          const qR = RR.getPositionView(uR);
+          if (null === qR) {
+            var tR;
+            if (ZR.seen || JR - ZR.markedAt > 5e3) null !== ZR.particles && yR--, null === (tR = ZR.particles) || void 0 === tR || tR.stop(), this.drops.delete(uR);
             continue
           }
-          PW.cosmetic || !WW.isLocalPlayer(PW.owner) || PW.pickupDelayCleared || (WW.clearPickupDelay(NW), PW.pickupDelayCleared = !0);
-          const cW = PW.lastPosition,
-            wW = PW.seen && (LW[0] - cW[0]) ** 2 + (LW[1] - cW[1]) ** 2 + (LW[2] - cW[2]) ** 2 > 4e-4,
-            tW = (LW[0] - OW[0]) ** 2 + (LW[1] - OW[1]) ** 2 + (LW[2] - OW[2]) ** 2 < 2025;
-          PW.seen = !0, cW[0] = LW[0], cW[1] = LW[1], cW[2] = LW[2], wW && (PW.lastMovingAt = iW), null !== PW.particles && (!tW || iW - PW.lastMovingAt > 500) && (PW.particles.stop(), PW.particles = null, mW--), wW && tW && null === PW.particles && mW < 32 && (PW.particles = WW.createParticles(PW.cosmetic ? Ei : mi, {
-            pos: LW
-          }), mW++), null !== PW.particles && (PW.particles.moveTo(LW), PW.particles.setEmitRate(wW ? 12 : 0)), !wW && null === PW.particles && iW - Math.max(PW.lastMovingAt, PW.markedAt) > 2e3 && this.drops.delete(NW)
+          ZR.cosmetic || !RR.isLocalPlayer(ZR.owner) || ZR.pickupDelayCleared || (RR.clearPickupDelay(uR), ZR.pickupDelayCleared = !0);
+          const iR = ZR.lastPosition,
+            fR = ZR.seen && (qR[0] - iR[0]) ** 2 + (qR[1] - iR[1]) ** 2 + (qR[2] - iR[2]) ** 2 > 4e-4,
+            VR = (qR[0] - GR[0]) ** 2 + (qR[1] - GR[1]) ** 2 + (qR[2] - GR[2]) ** 2 < 2025;
+          ZR.seen = !0, iR[0] = qR[0], iR[1] = qR[1], iR[2] = qR[2], fR && (ZR.lastMovingAt = JR), null !== ZR.particles && (!VR || JR - ZR.lastMovingAt > 500) && (ZR.particles.stop(), ZR.particles = null, yR--), fR && VR && null === ZR.particles && yR < 32 && (ZR.particles = RR.createParticles(ZR.cosmetic ? tJ : yJ, {
+            pos: qR
+          }), yR++), null !== ZR.particles && (ZR.particles.moveTo(qR), ZR.particles.setEmitRate(fR ? 12 : 0)), !fR && null === ZR.particles && JR - Math.max(ZR.lastMovingAt, ZR.markedAt) > 2e3 && this.drops.delete(uR)
         }
       }
       dispose() {
-        for (const iW of this.drops.values()) {
-          var WW;
-          null === (WW = iW.particles) || void 0 === WW || WW.stop()
+        for (const JR of this.drops.values()) {
+          var RR;
+          null === (RR = JR.particles) || void 0 === RR || RR.stop()
         }
         this.drops.clear()
       }
     }
-    const ci = new Set;
+    const iJ = new Set;
 
-    function wi() {
-      let WW;
-      const iW = new Li;
+    function fJ() {
+      let RR;
+      const JR = new qJ;
       return {
-        onCreate(iW) {
-          WW = iW
+        onCreate(JR) {
+          RR = JR
         },
-        onReceivedMessageFromServer(OW, mW) {
-          if (OW === zW) iW.yZ(WW, mW);
-          else if (OW === FW) {
-            const WW = mW,
-              iW = `${WW.id}|${WW.value}`;
-            ci.has(iW) || (ci.add(iW), (0, QW.e)({
-              id: WW.id,
-              value: WW.value
+        onReceivedMessageFromServer(GR, yR) {
+          if (GR === TR) JR.BK(RR, yR);
+          else if (GR === sR) {
+            const RR = yR,
+              JR = `${RR.id}|${RR.value}`;
+            iJ.has(JR) || (iJ.add(JR), (0, hR.c)({
+              id: RR.id,
+              value: RR.value
             }))
           }
         },
-        hZ() {
-          iW.hZ(WW)
+        gK() {
+          JR.gK(RR)
         },
         onClose() {
-          iW.dispose()
+          JR.dispose()
         }
       }
     }
 
-    function ti(WW, iW, OW, mW) {
+    function VJ(RR, JR, GR, yR) {
       return {
-        cosmeticCompanions: aW(),
-        dialogue: MW(mW.localPlayerId),
-        fishing: UW(mW.localPlayerId),
-        furnaceSmoke: dW(),
-        ironChest: EW(),
-        localBlockBroken: (0, rW.b)(),
-        magnetLoot: wi()
+        cosmeticCompanions: QR(),
+        dialogue: AR(yR.localPlayerId),
+        fishing: nR(yR.localPlayerId),
+        furnaceSmoke: NR(),
+        ironChest: tR(),
+        localBlockBroken: (0, FR.c)(),
+        magnetLoot: fJ()
       }
     }
 
-    function Zi(WW, iW) {
-      for (const EW of [WW, ...null !== iW && void 0 !== iW ? iW : []]) try {
-        var OW;
-        null === EW || void 0 === EW || null === (OW = EW.onClose) || void 0 === OW || OW.call(EW)
-      } catch (mW) {
-        console.error("Error in client onClose callback", mW)
+    function KJ(RR, JR) {
+      for (const tR of [RR, ...null !== JR && void 0 !== JR ? JR : []]) try {
+        var GR;
+        null === tR || void 0 === tR || null === (GR = tR.onClose) || void 0 === GR || GR.call(tR)
+      } catch (yR) {
+        console.error("Error in client onClose callback", yR)
       }
     }
   },
-  9963: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW,
-      e: () => EW
+  10063: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => tR
     });
-    var mW = OW(27);
-    const EW = "localBlockBroken";
+    var yR = GR(32);
+    const tR = "localBlockBroken";
 
-    function NW() {
+    function uR() {
       return {
-        onPlayerChangeBlock(WW, iW, OW, NW, PW, LW) {
-          "Air" === LW && mW.l.iZ(EW)
+        onPlayerChangeBlock(RR, JR, GR, uR, ZR, qR) {
+          "Air" === qR && yR.n.JK(tR)
         }
       }
     }
   },
-  40371: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW,
-      h: () => NW
+  40422: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      d: () => uR
     });
-    const mW = 1 / .6,
-      EW = {
+    const yR = 1 / .6,
+      tR = {
         kind: "smokePuff"
       };
-    class NW {
-      constructor(WW, iW, OW) {
-        this.style = WW, this.aZ = iW, this.half = OW, this.particles = null, this.lastFrame = -1
+    class uR {
+      constructor(RR, JR, GR) {
+        this.style = RR, this.hK = JR, this.half = GR, this.particles = null, this.lastFrame = -1
       }
-      emit(WW, iW, OW) {
-        let NW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return OW !== this.lastFrame && (this.lastFrame = OW, this.particles || (this.particles = WW.createParticles(function(WW, iW) {
+      emit(RR, JR, GR) {
+        let uR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return GR !== this.lastFrame && (this.lastFrame = GR, this.particles || (this.particles = RR.createParticles(function(RR, JR) {
           const [
-            [OW, NW, PW],
-            [LW, cW, wW]
-          ] = WW.colours;
+            [GR, uR, ZR],
+            [qR, iR, fR]
+          ] = RR.colours;
           return {
-            texture: WW.soft ? EW : "square_particle",
-            aZ: iW,
-            minLifeTime: WW.life[0] / mW,
-            maxLifeTime: WW.life[1] / mW,
-            minEmitPower: WW.power[0] * mW,
-            maxEmitPower: WW.power[1] * mW,
-            minSize: WW.size[0],
-            maxSize: WW.size[1],
+            texture: RR.soft ? tR : "square_particle",
+            hK: JR,
+            minLifeTime: RR.life[0] / yR,
+            maxLifeTime: RR.life[1] / yR,
+            minEmitPower: RR.power[0] * yR,
+            maxEmitPower: RR.power[1] * yR,
+            minSize: RR.size[0],
+            maxSize: RR.size[1],
             emitRate: 0,
-            gravity: [0, WW.lift * mW * mW, 0],
-            dir1: [-WW.spread, 1, -WW.spread],
-            dir2: [WW.spread, 1, WW.spread],
+            gravity: [0, RR.lift * yR * yR, 0],
+            dir1: [-RR.spread, 1, -RR.spread],
+            dir2: [RR.spread, 1, RR.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [OW, NW, PW, WW.alpha],
-              maxColor: [LW, cW, wW, WW.alpha]
+              minColor: [GR, uR, ZR, RR.alpha],
+              maxColor: [qR, iR, fR, RR.alpha]
             }, {
               timeFraction: 1,
-              minColor: [OW, NW, PW, 0],
-              maxColor: [LW, cW, wW, 0]
+              minColor: [GR, uR, ZR, 0],
+              maxColor: [qR, iR, fR, 0]
             }],
-            blendMode: WW.blendMode
+            blendMode: RR.blendMode
           }
-        }(this.style, this.aZ), {
-          pos: iW,
+        }(this.style, this.hK), {
+          pos: JR,
           half: this.half
-        })), this.particles.moveTo(iW, this.half), this.particles.emit(NW), !0)
+        })), this.particles.moveTo(JR, this.half), this.particles.emit(uR), !0)
       }
       dispose() {
-        var WW;
-        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null
+        var RR;
+        null === (RR = this.particles) || void 0 === RR || RR.stop(), this.particles = null
       }
     }
   },
-  5605: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      e: () => mW,
-      g: () => NW,
-      h: () => cW,
-      j: () => PW
+  5733: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR,
+      e: () => yR,
+      f: () => uR,
+      i: () => iR,
+      m: () => ZR
     });
-    const mW = ["sine", "triangle", "square", "sawtooth"],
-      EW = 55,
-      NW = {
+    const yR = ["sine", "triangle", "square", "sawtooth"],
+      tR = 55,
+      uR = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1295,39 +1295,39 @@ export const modules = {
         }
       };
 
-    function PW(WW) {
-      return "string" !== typeof WW ? WW : Object.hasOwn(NW, WW) ? NW[WW] : null
+    function ZR(RR) {
+      return "string" !== typeof RR ? RR : Object.hasOwn(uR, RR) ? uR[RR] : null
     }
 
-    function LW(WW, iW, OW) {
-      return Math.min(OW, Math.max(iW, WW))
+    function qR(RR, JR, GR) {
+      return Math.min(GR, Math.max(JR, RR))
     }
 
-    function cW(WW) {
-      const iW = LW(WW.durationMs, 10, 500),
-        OW = LW(WW.attackMs, 0, iW),
+    function iR(RR) {
+      const JR = qR(RR.durationMs, 10, 500),
+        GR = qR(RR.attackMs, 0, JR),
         {
-          intonation: EW
-        } = WW;
+          intonation: tR
+        } = RR;
       return {
-        waveform: mW.includes(WW.waveform) ? WW.waveform : "sine",
-        pitchHz: LW(WW.pitchHz, 20, 4e3),
-        glideSemitones: LW(WW.glideSemitones, -24, 24),
-        durationMs: iW,
-        attackMs: OW,
-        releaseMs: LW(WW.releaseMs, 0, iW - OW),
-        lowpassHz: null === WW.lowpassHz ? null : LW(WW.lowpassHz, 20, 2e4),
-        volume: LW(WW.volume, 0, 2),
+        waveform: yR.includes(RR.waveform) ? RR.waveform : "sine",
+        pitchHz: qR(RR.pitchHz, 20, 4e3),
+        glideSemitones: qR(RR.glideSemitones, -24, 24),
+        durationMs: JR,
+        attackMs: GR,
+        releaseMs: qR(RR.releaseMs, 0, JR - GR),
+        lowpassHz: null === RR.lowpassHz ? null : qR(RR.lowpassHz, 20, 2e4),
+        volume: qR(RR.volume, 0, 2),
         intonation: {
-          variationSemitones: LW(EW.variationSemitones, 0, 6),
-          declineSemitones: LW(EW.declineSemitones, 0, 12),
-          questionRiseSemitones: LW(EW.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: LW(EW.exclaimLiftSemitones, 0, 12)
+          variationSemitones: qR(tR.variationSemitones, 0, 6),
+          declineSemitones: qR(tR.declineSemitones, 0, 12),
+          questionRiseSemitones: qR(tR.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: qR(tR.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: LW(WW.syllableMs, 25, 200)
+        syllableMs: qR(RR.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

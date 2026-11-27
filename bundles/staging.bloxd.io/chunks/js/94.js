@@ -1,272 +1,272 @@
 export const id = 94;
 export const ids = [94, 110];
 export const modules = {
-    5590: (WW, iW, OW) => {
-      OW.d(iW, {
-        e: () => jW,
-        h: () => UW
+    5712: (RR, JR, GR) => {
+      GR.d(JR, {
+        b: () => LR,
+        e: () => nR
       });
-      var mW = OW(1089),
-        EW = OW.n(mW),
-        NW = OW(62),
-        PW = OW(1172),
-        LW = OW(5593),
-        cW = OW(2021),
-        wW = OW(3332),
-        tW = OW(5599),
-        ZW = OW(1283);
-      const xW = new WeakMap;
-      let lW = 0;
+      var yR = GR(1163),
+        tR = GR.n(yR),
+        uR = GR(66),
+        ZR = GR(1270),
+        qR = GR(5719),
+        iR = GR(2105),
+        fR = GR(3465),
+        VR = GR(5728),
+        KR = GR(1378);
+      const wR = new WeakMap;
+      let rR = 0;
 
-      function AW(WW) {
-        let iW = xW.get(WW);
-        return void 0 === iW && (iW = lW++, xW.set(WW, iW)), iW
+      function eR(RR) {
+        let JR = wR.get(RR);
+        return void 0 === JR && (JR = rR++, wR.set(RR, JR)), JR
       }
 
-      function bW(WW) {
+      function aR(RR) {
         let {
-          piece: iW
-        } = WW;
-        return "space" === iW.kind ? (0, ZW.jsx)(ZW.Fragment, {
-          children: iW.text
-        }) : (0, ZW.jsx)("span", {
+          piece: JR
+        } = RR;
+        return "space" === JR.kind ? (0, KR.jsx)(KR.Fragment, {
+          children: JR.text
+        }) : (0, KR.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${iW.delayMs}ms`
+            "--word-delay": `${JR.delayMs}ms`
           },
-          children: (0, ZW.jsx)(LW.b, {
-            text: "icon" === iW.kind ? `[[${iW.icon}]]` : iW.text
+          children: (0, KR.jsx)(qR.b, {
+            text: "icon" === JR.kind ? `[[${JR.icon}]]` : JR.text
           })
         })
       }
 
-      function jW(WW) {
+      function LR(RR) {
         let {
-          display: iW
-        } = WW;
+          display: JR
+        } = RR;
         const {
-          selectedLanguage: OW
-        } = (0, PW.B)(), mW = (0, NW.useMemo)((() => (0, tW.e)((0, tW.g)(iW).plan.pieces)), [iW, OW.code]);
-        return (0, ZW.jsxs)("div", {
-          className: EW()("Dialogue", {
-            DialogueAnimateIn: !1 !== iW.animateIn
+          selectedLanguage: GR
+        } = (0, ZR.A)(), yR = (0, uR.useMemo)((() => (0, VR.e)((0, VR.f)(JR).plan.pieces)), [JR, GR.code]);
+        return (0, KR.jsxs)("div", {
+          className: tR()("Dialogue", {
+            DialogueAnimateIn: !1 !== JR.animateIn
           }),
-          children: [iW.speakerName && (0, ZW.jsx)(cW.d, {
-            text: iW.speakerName,
+          children: [JR.speakerName && (0, KR.jsx)(iR.c, {
+            text: JR.speakerName,
             className: "DialogueSpeaker"
-          }), (0, ZW.jsx)("p", {
+          }), (0, KR.jsx)("p", {
             className: "DialogueLine",
-            children: mW.map(((WW, iW) => 1 === WW.length && "space" === WW[0].kind ? WW[0].text : (0, ZW.jsx)("span", {
+            children: yR.map(((RR, JR) => 1 === RR.length && "space" === RR[0].kind ? RR[0].text : (0, KR.jsx)("span", {
               className: "DialogueGlue",
-              children: WW.map(((WW, iW) => (0, ZW.jsx)(bW, {
-                piece: WW
-              }, iW)))
-            }, iW)))
+              children: RR.map(((RR, JR) => (0, KR.jsx)(aR, {
+                piece: RR
+              }, JR)))
+            }, JR)))
           })]
         })
       }
-      const UW = (0, NW.memo)((function() {
-        const WW = (0, wW.e)("dialogue");
-        return (0, ZW.jsx)("div", {
+      const nR = (0, uR.memo)((function() {
+        const RR = (0, fR.f)("dialogue");
+        return (0, KR.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: WW && (0, ZW.jsx)(jW, {
-            display: WW
-          }, AW(WW))
+          children: RR && (0, KR.jsx)(LR, {
+            display: RR
+          }, eR(RR))
         })
       }))
     },
-    5455: (WW, iW, OW) => {
-        OW.r(iW), OW.d(iW, {
-          default: () => OP
+    5603: (RR, JR, GR) => {
+        GR.r(JR), GR.d(JR, {
+          default: () => RZ
         });
-        var mW = OW(62),
-          EW = OW(1089),
-          NW = OW.n(EW),
-          PW = OW(1607),
-          LW = OW(1616),
-          cW = OW(25),
-          wW = OW(80),
-          tW = OW(5460),
-          ZW = OW(5467),
-          xW = OW(5470),
-          lW = OW(5038),
-          AW = OW(1283);
-        const bW = "/textures/docs/icons";
+        var yR = GR(66),
+          tR = GR(1163),
+          uR = GR.n(tR),
+          ZR = GR(1671),
+          qR = GR(1677),
+          iR = GR(25),
+          fR = GR(83),
+          VR = GR(5610),
+          KR = GR(5624),
+          wR = GR(5629),
+          rR = GR(5138),
+          eR = GR(1378);
+        const aR = "/textures/docs/icons";
 
-        function jW(WW) {
+        function LR(RR) {
           let {
-            name: iW,
-            isTinted: OW,
-            className: mW,
-            style: EW
-          } = WW;
-          const PW = `${bW}/${iW}.png`;
-          return OW ? (0, AW.jsxs)("span", {
-            className: NW()("DocsPixelIcon", "Tinted", mW),
+            name: JR,
+            isTinted: GR,
+            className: yR,
+            style: tR
+          } = RR;
+          const ZR = `${aR}/${JR}.png`;
+          return GR ? (0, eR.jsxs)("span", {
+            className: uR()("DocsPixelIcon", "Tinted", yR),
             "aria-hidden": "true",
-            style: EW,
-            children: [(0, AW.jsx)("span", {
+            style: tR,
+            children: [(0, eR.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${PW}")`,
-                WebkitMaskImage: `url("${PW}")`
+                maskImage: `url("${ZR}")`,
+                WebkitMaskImage: `url("${ZR}")`
               }
-            }), (0, AW.jsx)("img", {
-              src: PW,
+            }), (0, eR.jsx)("img", {
+              src: ZR,
               alt: ""
             })]
-          }) : (0, AW.jsx)("img", {
-            className: NW()("DocsPixelIcon", mW),
-            src: PW,
+          }) : (0, eR.jsx)("img", {
+            className: uR()("DocsPixelIcon", yR),
+            src: ZR,
             alt: "",
             "aria-hidden": "true",
-            style: EW
+            style: tR
           })
         }
-        const UW = 1500;
+        const nR = 1500;
 
-        function kW() {
-          const [WW, iW] = (0, mW.useState)(null);
-          (0, mW.useEffect)((() => {
-            if (null === WW) return;
-            const OW = setTimeout((() => {
-              iW(null)
-            }), UW);
+        function UR() {
+          const [RR, JR] = (0, yR.useState)(null);
+          (0, yR.useEffect)((() => {
+            if (null === RR) return;
+            const GR = setTimeout((() => {
+              JR(null)
+            }), nR);
             return () => {
-              clearTimeout(OW)
+              clearTimeout(GR)
             }
-          }), [WW]);
-          return [WW, WW => {
-            (0, lW.b)(WW).then((() => {
-              iW({
-                text: WW,
+          }), [RR]);
+          return [RR, RR => {
+            (0, rR.e)(RR).then((() => {
+              JR({
+                text: RR,
                 failed: !1
               })
-            }), (OW => {
-              console.error("Could not copy to the clipboard", OW), iW({
-                text: WW,
+            }), (GR => {
+              console.error("Could not copy to the clipboard", GR), JR({
+                text: RR,
                 failed: !0
               })
             }))
           }]
         }
 
-        function sW(WW) {
+        function WR(RR) {
           let {
-            text: iW,
-            label: OW,
-            className: mW
-          } = WW;
-          const [EW, PW] = kW(), LW = !1 === (null === EW || void 0 === EW ? void 0 : EW.failed);
-          return (0, AW.jsxs)("button", {
+            text: JR,
+            label: GR,
+            className: yR
+          } = RR;
+          const [tR, ZR] = UR(), qR = !1 === (null === tR || void 0 === tR ? void 0 : tR.failed);
+          return (0, eR.jsxs)("button", {
             type: "button",
-            className: NW()("DocsCopyButton", mW, {
-              Copied: LW
+            className: uR()("DocsCopyButton", yR, {
+              Copied: qR
             }),
             title: "Copy to clipboard",
-            "aria-label": OW ? void 0 : `Copy ${iW}`,
-            onClick: WW => {
-              WW.stopPropagation(), PW(iW)
+            "aria-label": GR ? void 0 : `Copy ${JR}`,
+            onClick: RR => {
+              RR.stopPropagation(), ZR(JR)
             },
-            children: [(0, AW.jsx)(jW, {
-              name: LW ? "check" : "copy"
-            }), OW && (0, AW.jsx)("span", {
-              children: LW ? "Copied" : null !== EW && void 0 !== EW && EW.failed ? "Copy failed" : OW
+            children: [(0, eR.jsx)(LR, {
+              name: qR ? "check" : "copy"
+            }), GR && (0, eR.jsx)("span", {
+              children: qR ? "Copied" : null !== tR && void 0 !== tR && tR.failed ? "Copy failed" : GR
             })]
           })
         }
-        tW.c.registerLanguage("javascript", ZW.e), tW.c.registerLanguage("typescript", xW.b);
-        const MW = {
+        VR.e.registerLanguage("javascript", KR.d), VR.e.registerLanguage("typescript", wR.c);
+        const AR = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          KW = {
+          CR = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          SW = 24;
+          XR = 24;
 
-        function YW(WW) {
+        function MR(RR) {
           let {
-            code: iW,
-            lang: OW,
-            compact: EW = !1
-          } = WW;
-          const PW = (0, mW.useMemo)((() => function(WW, iW) {
-              const OW = MW[iW];
-              return OW ? tW.c.highlight(WW, {
-                language: OW
-              }).value : WW.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(iW, OW)), [iW, OW]),
-            LW = iW.split("\n").length,
-            cW = !EW && LW > SW + 6,
-            [wW, ZW] = (0, mW.useState)(!1),
-            xW = MW[OW];
-          return (0, AW.jsxs)("div", {
-            className: NW()("DocsCodeBlock", {
-              Compact: EW,
-              Collapsed: cW && !wW
+            code: JR,
+            lang: GR,
+            compact: tR = !1
+          } = RR;
+          const ZR = (0, yR.useMemo)((() => function(RR, JR) {
+              const GR = AR[JR];
+              return GR ? VR.e.highlight(RR, {
+                language: GR
+              }).value : RR.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(JR, GR)), [JR, GR]),
+            qR = JR.split("\n").length,
+            iR = !tR && qR > XR + 6,
+            [fR, KR] = (0, yR.useState)(!1),
+            wR = AR[GR];
+          return (0, eR.jsxs)("div", {
+            className: uR()("DocsCodeBlock", {
+              Compact: tR,
+              Collapsed: iR && !fR
             }),
-            children: [!EW && (0, AW.jsxs)("div", {
+            children: [!tR && (0, eR.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, AW.jsx)("span", {
+              children: [(0, eR.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: xW ? KW[xW] : "Text"
-              }), (0, AW.jsx)(sW, {
-                text: iW,
+                children: wR ? CR[wR] : "Text"
+              }), (0, eR.jsx)(WR, {
+                text: JR,
                 label: "Copy"
               })]
-            }), (0, AW.jsx)("pre", {
-              children: (0, AW.jsx)("code", {
+            }), (0, eR.jsx)("pre", {
+              children: (0, eR.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: PW
+                  __html: ZR
                 }
               })
-            }), cW && (0, AW.jsxs)("button", {
+            }), iR && (0, eR.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": wW,
+              "aria-expanded": fR,
               onClick: () => {
-                ZW(!wW)
+                KR(!fR)
               },
-              children: [(0, AW.jsx)(jW, {
-                name: wW ? "chevron-up" : "chevron-down"
-              }), wW ? "Show less" : `Show all ${LW} lines`]
+              children: [(0, eR.jsx)(LR, {
+                name: fR ? "chevron-up" : "chevron-down"
+              }), fR ? "Show less" : `Show all ${qR} lines`]
             })]
           })
         }
-        var yW = OW(5479);
-        var TW = OW(5488);
-        const JW = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var BR = GR(5635);
+        var lR = GR(5637);
+        const pR = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function hW(WW) {
-          const iW = new Map;
-          let OW, mW = [],
-            EW = !1;
-          const NW = () => {
-            OW && iW.set(OW.name, OW.lines.join("\n").trimEnd())
+        function gR(RR) {
+          const JR = new Map;
+          let GR, yR = [],
+            tR = !1;
+          const uR = () => {
+            GR && JR.set(GR.name, GR.lines.join("\n").trimEnd())
           };
-          for (const PW of WW.split("\n")) {
-            const WW = PW.match(JW);
-            EW || PW.startsWith("/*") ? (EW || (NW(), OW = void 0), mW.push(PW), EW = !PW.includes("*/")) : WW ? (NW(), OW = {
-              name: WW[1],
-              lines: [...mW, PW]
-            }, mW = []) : OW && (PW.startsWith(" ") || PW.startsWith("\t") || /^[}\])|]/.test(PW)) ? OW.lines.push(PW) : OW && "" !== PW.trim() && (NW(), OW = void 0)
+          for (const ZR of RR.split("\n")) {
+            const RR = ZR.match(pR);
+            tR || ZR.startsWith("/*") ? (tR || (uR(), GR = void 0), yR.push(ZR), tR = !ZR.includes("*/")) : RR ? (uR(), GR = {
+              name: RR[1],
+              lines: [...yR, ZR]
+            }, yR = []) : GR && (ZR.startsWith(" ") || ZR.startsWith("\t") || /^[}\])|]/.test(ZR)) ? GR.lines.push(ZR) : GR && "" !== ZR.trim() && (uR(), GR = void 0)
           }
-          return NW(), iW
+          return uR(), JR
         }
 
-        function HW(WW) {
-          return "methods" === WW || "callbacks" === WW || "settings" === WW
+        function bR(RR) {
+          return "methods" === RR || "callbacks" === RR || "settings" === RR
         }
-        const nW = {
+        const vR = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (WW, iW) => `api.setClientOption(playerId, "${WW}", ${iW})`
+              setterSnippet: (RR, JR) => `api.setClientOption(playerId, "${RR}", ${JR})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (WW, iW) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${WW}", ${iW})`
+              setterSnippet: (RR, JR) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${RR}", ${JR})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (WW, iW) => `api.setMobSetting(mobId, "${WW}", ${iW})`
+              setterSnippet: (RR, JR) => `api.setMobSetting(mobId, "${RR}", ${JR})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (WW, iW) => `api.setVehicleSetting(vehicleId, "${WW}", ${iW})`
+              setterSnippet: (RR, JR) => `api.setVehicleSetting(vehicleId, "${RR}", ${JR})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          uW = {
+          OR = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function oW(WW) {
-          return WW.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function xR(RR) {
+          return RR.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function dW(WW) {
-          let iW = !1;
-          return WW.split("\n").map((WW => (WW.startsWith("```") && (iW = !iW), !iW && /^#{3,} /.test(WW) ? WW.slice(1) : WW))).join("\n")
+        function NR(RR) {
+          let JR = !1;
+          return RR.split("\n").map((RR => (RR.startsWith("```") && (JR = !JR), !JR && /^#{3,} /.test(RR) ? RR.slice(1) : RR))).join("\n")
         }
 
-        function eW(WW) {
-          return "readme" === WW ? "getting-started" : oW(WW)
+        function DR(RR) {
+          return "readme" === RR ? "getting-started" : xR(RR)
         }
-        const vW = "## Glossary of Referenced Types";
-        const gW = [{
+        const HR = "## Glossary of Referenced Types";
+        const oR = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...TW.b.flatMap((WW => {
-            const iW = {
-              id: WW.id,
-              slug: eW(WW.id),
-              title: WW.title,
-              markdown: WW.content,
-              ...nW[WW.id]
+          }, ...lR.e.flatMap((RR => {
+            const JR = {
+              id: RR.id,
+              slug: DR(RR.id),
+              title: RR.title,
+              markdown: RR.content,
+              ...vR[RR.id]
             };
-            if ("readme" === WW.id) return function(WW) {
-              const iW = WW.markdown.indexOf(vW),
-                OW = WW.markdown.indexOf("\n```", iW),
-                mW = WW.markdown.indexOf("\n```", OW + 1);
-              if (-1 === iW || -1 === OW || -1 === mW) throw new Error(`Getting started has no "${vW}" section with a code block`);
-              const EW = WW.markdown.slice(iW + 31, OW).trim(),
-                NW = [...hW(WW.markdown.slice(WW.markdown.indexOf("\n", OW + 1) + 1, mW))].map((WW => {
-                  let [iW, OW] = WW;
-                  return `## ${iW}\n\n\`\`\`ts\n${OW}\n\`\`\`\n`
+            if ("readme" === RR.id) return function(RR) {
+              const JR = RR.markdown.indexOf(HR),
+                GR = RR.markdown.indexOf("\n```", JR),
+                yR = RR.markdown.indexOf("\n```", GR + 1);
+              if (-1 === JR || -1 === GR || -1 === yR) throw new Error(`Getting started has no "${HR}" section with a code block`);
+              const tR = RR.markdown.slice(JR + 31, GR).trim(),
+                uR = [...gR(RR.markdown.slice(RR.markdown.indexOf("\n", GR + 1) + 1, yR))].map((RR => {
+                  let [JR, GR] = RR;
+                  return `## ${JR}\n\n\`\`\`ts\n${GR}\n\`\`\`\n`
                 })),
-                PW = WW.markdown.slice(WW.markdown.indexOf("\n", mW + 1) + 1);
+                ZR = RR.markdown.slice(RR.markdown.indexOf("\n", yR + 1) + 1);
               return [{
-                ...WW,
-                markdown: `${WW.markdown.slice(0,iW)}${PW}`
+                ...RR,
+                markdown: `${RR.markdown.slice(0,JR)}${ZR}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${EW}\n\n${NW.join("\n")}`
+                markdown: `# Types\n\n${tR}\n\n${uR.join("\n")}`
               }]
-            }(iW);
-            if ("howTo" === WW.id) {
+            }(JR);
+            if ("howTo" === RR.id) {
               const {
-                parent: WW,
-                guides: OW
-              } = function(WW) {
-                const [iW, ...OW] = WW.markdown.split(/^(?=## )/m), mW = [iW], EW = [];
-                for (const PW of OW) {
-                  var NW;
-                  const iW = PW.indexOf("\n"),
-                    OW = PW.slice(3, iW).trim(),
-                    LW = PW.slice(iW + 1);
-                  if (!LW.includes("```")) {
-                    mW.push(PW);
+                parent: RR,
+                guides: GR
+              } = function(RR) {
+                const [JR, ...GR] = RR.markdown.split(/^(?=## )/m), yR = [JR], tR = [];
+                for (const ZR of GR) {
+                  var uR;
+                  const JR = ZR.indexOf("\n"),
+                    GR = ZR.slice(3, JR).trim(),
+                    qR = ZR.slice(JR + 1);
+                  if (!qR.includes("```")) {
+                    yR.push(ZR);
                     continue
                   }
-                  const cW = null !== (NW = uW[OW]) && void 0 !== NW ? NW : {
+                  const iR = null !== (uR = OR[GR]) && void 0 !== uR ? uR : {
                     icon: "lightbulb",
-                    summary: `How to use ${OW.toLowerCase()} in World Code.`
+                    summary: `How to use ${GR.toLowerCase()} in World Code.`
                   };
-                  EW.push({
-                    id: `${WW.id}${OW.split(/[^A-Za-z0-9]+/).map((WW=>WW.charAt(0).toUpperCase()+WW.slice(1))).join("")}`,
-                    slug: `${WW.slug}-${oW(OW)}`,
-                    title: OW,
+                  tR.push({
+                    id: `${RR.id}${GR.split(/[^A-Za-z0-9]+/).map((RR=>RR.charAt(0).toUpperCase()+RR.slice(1))).join("")}`,
+                    slug: `${RR.slug}-${xR(GR)}`,
+                    title: GR,
                     layout: "article",
-                    sourceAnchor: (0, yW.s)(OW),
-                    markdown: `# ${OW}\n\n${dW(LW)}`,
-                    ...cW
+                    sourceAnchor: (0, BR.s)(GR),
+                    markdown: `# ${GR}\n\n${NR(qR)}`,
+                    ...iR
                   })
                 }
                 return {
                   parent: {
-                    ...WW,
-                    markdown: mW.join(""),
-                    childPageIds: EW.map((WW => WW.id))
+                    ...RR,
+                    markdown: yR.join(""),
+                    childPageIds: tR.map((RR => RR.id))
                   },
-                  guides: EW
+                  guides: tR
                 }
-              }(iW);
-              return [WW, ...OW]
+              }(JR);
+              return [RR, ...GR]
             }
-            return [iW]
+            return [JR]
           }))],
-          DW = [{
+          cR = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...gW.filter((WW => void 0 !== WW.sourceAnchor)).map((WW => WW.id))]
+            pageIds: ["howTo", ...oR.filter((RR => void 0 !== RR.sourceAnchor)).map((RR => RR.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function VW(WW) {
-          return gW.find((iW => iW.id === WW))
+        function PR(RR) {
+          return oR.find((JR => JR.id === RR))
         }
-        const pW = new Map;
+        const IR = new Map;
 
-        function fW(WW) {
-          let iW = pW.get(WW.id);
-          return iW || (iW = (0, yW.y)(WW.markdown, "changelog" === WW.layout ? 3 : 2), pW.set(WW.id, iW)), iW
-        }
-
-        function CW(WW, iW) {
-          return fW(WW).sections.some((WW => WW.heading.anchor === iW || WW.blocks.some((WW => "heading" === WW.kind && WW.anchor === iW))))
+        function mR(RR) {
+          let JR = IR.get(RR.id);
+          return JR || (JR = (0, BR.x)(RR.markdown, "changelog" === RR.layout ? 3 : 2), IR.set(RR.id, JR)), JR
         }
 
-        function XW(WW) {
-          const [iW, ...OW] = WW.replace(/^#/, "").split("-"), mW = gW.find((WW => WW.id === iW));
-          if (!mW) return null;
-          const EW = OW.length > 0 ? (0, yW.s)(OW.join("-")) : "";
-          for (const PW of null !== (NW = mW.childPageIds) && void 0 !== NW ? NW : []) {
-            var NW;
-            const WW = VW(PW);
-            if (WW.sourceAnchor === EW) return {
-              page: WW,
+        function zR(RR, JR) {
+          return mR(RR).sections.some((RR => RR.heading.anchor === JR || RR.blocks.some((RR => "heading" === RR.kind && RR.anchor === JR))))
+        }
+
+        function SR(RR) {
+          const [JR, ...GR] = RR.replace(/^#/, "").split("-"), yR = oR.find((RR => RR.id === JR));
+          if (!yR) return null;
+          const tR = GR.length > 0 ? (0, BR.s)(GR.join("-")) : "";
+          for (const ZR of null !== (uR = yR.childPageIds) && void 0 !== uR ? uR : []) {
+            var uR;
+            const RR = PR(ZR);
+            if (RR.sourceAnchor === tR) return {
+              page: RR,
               anchor: ""
             };
-            if (CW(WW, EW)) return {
-              page: WW,
-              anchor: EW
+            if (zR(RR, tR)) return {
+              page: RR,
+              anchor: tR
             }
           }
           return {
-            page: mW,
-            anchor: EW
+            page: yR,
+            anchor: tR
           }
         }
-        const BW = {
+        const jR = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function qW(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const mW = iW.slug ? `${WW}/${iW.slug}` : WW;
-          return OW ? `${mW}#${OW}` : mW
+        function dR(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const yR = JR.slug ? `${RR}/${JR.slug}` : RR;
+          return GR ? `${yR}#${GR}` : yR
         }
-        var RW = OW(5506);
-        const GW = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          IW = new Set(["GameApi", "Console", "_TypeOf"]),
-          aW = 4;
+        var ER = GR(5650);
+        const YR = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          kR = new Set(["GameApi", "Console", "_TypeOf"]),
+          QR = 4;
 
-        function rW(WW) {
-          let iW = WW.length;
-          for (; iW > 0 && "" === WW[iW - 1].trim();) iW--;
-          return WW.slice(0, iW)
+        function FR(RR) {
+          let JR = RR.length;
+          for (; JR > 0 && "" === RR[JR - 1].trim();) JR--;
+          return RR.slice(0, JR)
         }
 
-        function zW(WW) {
-          var iW;
-          const OW = rW(WW);
-          if (null === (iW = OW.at(-1)) || void 0 === iW || !iW.trimEnd().endsWith("*/")) return {
-            lines: OW,
+        function TR(RR) {
+          var JR;
+          const GR = FR(RR);
+          if (null === (JR = GR.at(-1)) || void 0 === JR || !JR.trimEnd().endsWith("*/")) return {
+            lines: GR,
             doc: ""
           };
-          const mW = OW.findLastIndex((WW => WW.startsWith("/**")));
-          return -1 === mW ? {
-            lines: OW,
+          const yR = GR.findLastIndex((RR => RR.startsWith("/**")));
+          return -1 === yR ? {
+            lines: GR,
             doc: ""
           } : {
-            lines: rW(OW.slice(0, mW)),
-            doc: OW.slice(mW).join("\n")
+            lines: FR(GR.slice(0, yR)),
+            doc: GR.slice(yR).join("\n")
           }
         }
 
-        function FW(WW) {
-          var iW;
-          const OW = WW.split("\n"),
-            mW = OW.flatMap(((WW, iW) => GW.test(WW) ? [iW] : []));
-          let EW = zW(OW.slice(0, null !== (iW = mW[0]) && void 0 !== iW ? iW : OW.length)).doc;
-          return mW.map(((WW, iW) => {
-            var NW;
-            const PW = zW(OW.slice(WW, null !== (NW = mW[iW + 1]) && void 0 !== NW ? NW : OW.length)),
-              LW = {
-                name: OW[WW].match(GW)[1],
-                doc: EW,
-                lines: PW.lines
+        function sR(RR) {
+          var JR;
+          const GR = RR.split("\n"),
+            yR = GR.flatMap(((RR, JR) => YR.test(RR) ? [JR] : []));
+          let tR = TR(GR.slice(0, null !== (JR = yR[0]) && void 0 !== JR ? JR : GR.length)).doc;
+          return yR.map(((RR, JR) => {
+            var uR;
+            const ZR = TR(GR.slice(RR, null !== (uR = yR[JR + 1]) && void 0 !== uR ? uR : GR.length)),
+              qR = {
+                name: GR[RR].match(YR)[1],
+                doc: tR,
+                lines: ZR.lines
               };
-            return EW = PW.doc, LW
+            return tR = ZR.doc, qR
           }))
         }
 
-        function QW(WW) {
-          var iW;
-          const OW = WW.match(/^readonly \[([\s\S]*)\]$/);
-          return OW ? null !== (iW = OW[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== iW ? iW : [] : null
+        function hR(RR) {
+          var JR;
+          const GR = RR.match(/^readonly \[([\s\S]*)\]$/);
+          return GR ? null !== (JR = GR[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== JR ? JR : [] : null
         }
 
-        function Wi(WW) {
-          if (!WW.startsWith("{") || !WW.endsWith("}")) return null;
-          const iW = {
+        function RJ(RR) {
+          if (!RR.startsWith("{") || !RR.endsWith("}")) return null;
+          const JR = {
               keys: [],
               values: []
             },
-            OW = WW => {
-              const OW = WW.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              OW && (iW.keys.push(OW[1].startsWith('"') ? OW[1] : `"${OW[1]}"`), iW.values.push(OW[2].trim()))
+            GR = RR => {
+              const GR = RR.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              GR && (JR.keys.push(GR[1].startsWith('"') ? GR[1] : `"${GR[1]}"`), JR.values.push(GR[2].trim()))
             };
-          let mW = 0,
-            EW = "";
-          for (const NW of WW.slice(1, -1)) "{[(".includes(NW) ? mW++ : "}])".includes(NW) && mW--, ";" === NW && 0 === mW ? (OW(EW), EW = "") : EW += NW;
-          return OW(EW), iW
+          let yR = 0,
+            tR = "";
+          for (const uR of RR.slice(1, -1)) "{[(".includes(uR) ? yR++ : "}])".includes(uR) && yR--, ";" === uR && 0 === yR ? (GR(tR), tR = "") : tR += uR;
+          return GR(tR), JR
         }
 
-        function ii(WW) {
-          return WW.length > aW ? `\n\t| ${WW.join("\n\t| ")}` : WW.join(" | ")
+        function JJ(RR) {
+          return RR.length > QR ? `\n\t| ${RR.join("\n\t| ")}` : RR.join(" | ")
         }
 
-        function Oi(WW, iW) {
-          const OW = function(WW, iW) {
-            return WW.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((WW, OW) => {
-              var mW;
-              const EW = null === (mW = iW.get(OW)) || void 0 === mW ? void 0 : mW.object;
-              return EW ? ii(EW.values) : WW
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((WW, OW) => {
-              var mW, EW;
-              const NW = null === (mW = iW.get(OW)) || void 0 === mW || null === (EW = mW.object) || void 0 === EW ? void 0 : EW.values.map(QW);
-              return null !== NW && void 0 !== NW && NW.every((WW => null !== WW)) ? ii([...new Set(NW.flat())]) : WW
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((WW, OW) => {
-              var mW;
-              const EW = null === (mW = iW.get(OW)) || void 0 === mW ? void 0 : mW.members;
-              return EW ? ii(EW) : WW
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((WW, OW) => {
-              var mW;
-              const EW = null === (mW = iW.get(OW)) || void 0 === mW ? void 0 : mW.object;
-              return EW ? ii(EW.keys) : WW
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((WW, OW) => {
-              var mW, EW;
-              return null !== (mW = null === (EW = iW.get(OW)) || void 0 === EW ? void 0 : EW.text) && void 0 !== mW ? mW : WW
+        function GJ(RR, JR) {
+          const GR = function(RR, JR) {
+            return RR.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((RR, GR) => {
+              var yR;
+              const tR = null === (yR = JR.get(GR)) || void 0 === yR ? void 0 : yR.object;
+              return tR ? JJ(tR.values) : RR
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((RR, GR) => {
+              var yR, tR;
+              const uR = null === (yR = JR.get(GR)) || void 0 === yR || null === (tR = yR.object) || void 0 === tR ? void 0 : tR.values.map(hR);
+              return null !== uR && void 0 !== uR && uR.every((RR => null !== RR)) ? JJ([...new Set(uR.flat())]) : RR
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((RR, GR) => {
+              var yR;
+              const tR = null === (yR = JR.get(GR)) || void 0 === yR ? void 0 : yR.members;
+              return tR ? JJ(tR) : RR
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((RR, GR) => {
+              var yR;
+              const tR = null === (yR = JR.get(GR)) || void 0 === yR ? void 0 : yR.object;
+              return tR ? JJ(tR.keys) : RR
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((RR, GR) => {
+              var yR, tR;
+              return null !== (yR = null === (tR = JR.get(GR)) || void 0 === tR ? void 0 : tR.text) && void 0 !== yR ? yR : RR
             }))
-          }(WW.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), iW);
-          return [WW.doc, OW].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(RR.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), JR);
+          return [RR.doc, GR].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function mi(WW) {
-          const iW = FW(WW),
-            OW = function(WW) {
-              const iW = new Map,
-                OW = WW.find((WW => "_TypeOf" === WW.name));
-              let mW = null;
-              const EW = () => {
-                if (mW) {
-                  const WW = mW.lines.join("\n");
-                  iW.set(mW.name, {
-                    text: WW,
-                    members: QW(WW),
-                    object: Wi(WW)
+        function yJ(RR) {
+          const JR = sR(RR),
+            GR = function(RR) {
+              const JR = new Map,
+                GR = RR.find((RR => "_TypeOf" === RR.name));
+              let yR = null;
+              const tR = () => {
+                if (yR) {
+                  const RR = yR.lines.join("\n");
+                  JR.set(yR.name, {
+                    text: RR,
+                    members: hR(RR),
+                    object: RJ(RR)
                   })
                 }
               };
-              for (const NW of OW.lines.slice(1, -1)) {
-                const WW = NW.match(/^\t([\w$]+): (.+)$/);
-                WW ? (EW(), mW = {
-                  name: WW[1],
-                  lines: [WW[2]]
-                }) : mW && mW.lines.push(NW.replace(/^\t/, ""))
+              for (const uR of GR.lines.slice(1, -1)) {
+                const RR = uR.match(/^\t([\w$]+): (.+)$/);
+                RR ? (tR(), yR = {
+                  name: RR[1],
+                  lines: [RR[2]]
+                }) : yR && yR.lines.push(uR.replace(/^\t/, ""))
               }
-              return EW(), iW
-            }(iW),
-            mW = new Map;
-          for (const EW of iW) IW.has(EW.name) || mW.has(EW.name) || mW.set(EW.name, Oi(EW, OW));
-          return mW
+              return tR(), JR
+            }(JR),
+            yR = new Map;
+          for (const tR of JR) kR.has(tR.name) || yR.has(tR.name) || yR.set(tR.name, GJ(tR, GR));
+          return yR
         }
-        let Ei, Ni, Pi;
+        let tJ, uJ, ZJ;
 
-        function Li() {
-          return Ni ??= function(WW) {
-            const iW = FW(WW).find((WW => "GameApi" === WW.name)),
-              OW = new Map,
-              mW = iW.lines;
-            for (let NW = 0; NW < mW.length; NW++) {
-              var EW;
-              if (!mW[NW].trimStart().startsWith("/**")) continue;
-              const WW = NW;
-              for (; NW < mW.length && !mW[NW].includes("*/");) NW++;
-              const iW = null === (EW = mW[NW + 1]) || void 0 === EW ? void 0 : EW.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!iW) continue;
-              let PW = null;
-              const LW = [];
-              let cW = "description",
-                wW = !1;
-              for (const OW of mW.slice(WW, NW + 1).join("\n").split("\n").map((WW => WW.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const WW = OW.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                WW ? (PW = WW[1].trim(), cW = "deprecation") : OW.startsWith("@") ? (cW = "otherTag", wW = !0) : "" === OW.trim() ? wW || (cW = "description", LW.push(OW)) : "deprecation" !== cW || /^[A-Z]/.test(OW.trim()) ? "otherTag" !== cW && (cW = "description", LW.push(OW)) : PW = `${PW} ${OW.trim()}`.trim()
+        function qJ() {
+          return uJ ??= function(RR) {
+            const JR = sR(RR).find((RR => "GameApi" === RR.name)),
+              GR = new Map,
+              yR = JR.lines;
+            for (let uR = 0; uR < yR.length; uR++) {
+              var tR;
+              if (!yR[uR].trimStart().startsWith("/**")) continue;
+              const RR = uR;
+              for (; uR < yR.length && !yR[uR].includes("*/");) uR++;
+              const JR = null === (tR = yR[uR + 1]) || void 0 === tR ? void 0 : tR.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!JR) continue;
+              let ZR = null;
+              const qR = [];
+              let iR = "description",
+                fR = !1;
+              for (const GR of yR.slice(RR, uR + 1).join("\n").split("\n").map((RR => RR.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const RR = GR.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                RR ? (ZR = RR[1].trim(), iR = "deprecation") : GR.startsWith("@") ? (iR = "otherTag", fR = !0) : "" === GR.trim() ? fR || (iR = "description", qR.push(GR)) : "deprecation" !== iR || /^[A-Z]/.test(GR.trim()) ? "otherTag" !== iR && (iR = "description", qR.push(GR)) : ZR = `${ZR} ${GR.trim()}`.trim()
               }
-              OW.set(iW[1], {
-                deprecation: PW,
-                description: LW.join("\n").trim()
+              GR.set(JR[1], {
+                deprecation: ZR,
+                description: qR.join("\n").trim()
               })
             }
-            return OW
-          }(RW.default), Ni
+            return GR
+          }(ER.default), uJ
         }
 
-        function ci() {
-          if (!Pi) {
-            Pi = new Map;
-            for (const WW of gW) {
-              const iW = (0, yW.v)(fW(WW)).flatMap((WW => WW.blocks));
-              for (const WW of (0, yW.j)(iW))
-                if ("ts" === WW.lang || "typescript" === WW.lang)
-                  for (const [iW, OW] of hW(WW.code)) Pi.set(iW, OW)
+        function iJ() {
+          if (!ZJ) {
+            ZJ = new Map;
+            for (const RR of oR) {
+              const JR = (0, BR.v)(mR(RR)).flatMap((RR => RR.blocks));
+              for (const RR of (0, BR.l)(JR))
+                if ("ts" === RR.lang || "typescript" === RR.lang)
+                  for (const [JR, GR] of gR(RR.code)) ZJ.set(JR, GR)
             }
-            for (const [WW, iW] of(Ei ??= mi(RW.default), Ei)) Pi.has(WW) || Pi.set(WW, iW)
+            for (const [RR, JR] of(tJ ??= yJ(ER.default), tJ)) ZJ.has(RR) || ZJ.set(RR, JR)
           }
-          return Pi
+          return ZJ
         }
-        const wi = {
+        const fJ = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let ti;
+        let VJ;
 
-        function Zi() {
-          if (!ti) {
-            ti = new Map;
-            for (const WW of gW)
-              if (HW(WW.layout))
-                for (const iW of fW(WW).sections) ti.has(iW.heading.text) || ti.set(iW.heading.text, {
-                  pageId: WW.id,
-                  anchor: iW.heading.anchor
+        function KJ() {
+          if (!VJ) {
+            VJ = new Map;
+            for (const RR of oR)
+              if (bR(RR.layout))
+                for (const JR of mR(RR).sections) VJ.has(JR.heading.text) || VJ.set(JR.heading.text, {
+                  pageId: RR.id,
+                  anchor: JR.heading.anchor
                 })
           }
-          return ti
+          return VJ
         }
 
-        function xi(WW) {
-          const iW = WW.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return iW ? Zi().get(iW[1]) : void 0
+        function wJ(RR) {
+          const JR = RR.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return JR ? KJ().get(JR[1]) : void 0
         }
-        const li = (0, mW.createContext)("/docs"),
-          Ai = (0, mW.createContext)(null),
-          bi = (0, mW.createContext)(!1),
-          ji = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const rJ = (0, yR.createContext)("/docs"),
+          eJ = (0, yR.createContext)(null),
+          aJ = (0, yR.createContext)(!1),
+          LJ = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function Ui(WW) {
-          const iW = WW.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return iW ? iW[1] : null
+        function nJ(RR) {
+          const JR = RR.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return JR ? JR[1] : null
         }
 
-        function ki(WW) {
+        function UJ(RR) {
           let {
-            colour: iW
-          } = WW;
-          return (0, AW.jsx)("span", {
+            colour: JR
+          } = RR;
+          return (0, eR.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: iW
+              background: JR
             },
             "aria-hidden": "true"
           })
         }
 
-        function si(WW) {
-          const iW = [];
-          let OW = 0;
-          for (const mW of WW.matchAll(ji)) iW.push(WW.slice(OW, mW.index), (0, AW.jsx)(ki, {
-            colour: mW[0]
-          }), mW[0]), OW = mW.index + mW[0].length;
-          return iW.push(WW.slice(OW)), iW
+        function WJ(RR) {
+          const JR = [];
+          let GR = 0;
+          for (const yR of RR.matchAll(LJ)) JR.push(RR.slice(GR, yR.index), (0, eR.jsx)(UJ, {
+            colour: yR[0]
+          }), yR[0]), GR = yR.index + yR[0].length;
+          return JR.push(RR.slice(GR)), JR
         }
 
-        function Mi(WW) {
+        function AJ(RR) {
           let {
-            href: iW,
-            children: OW
-          } = WW;
-          const EW = (0, mW.useContext)(li);
-          if (iW.startsWith("#")) {
-            const WW = XW(iW);
-            if (WW) return (0, AW.jsx)(PW.b, {
-              to: qW(EW, WW.page, WW.anchor),
-              children: (0, AW.jsx)(bi.Provider, {
+            href: JR,
+            children: GR
+          } = RR;
+          const tR = (0, yR.useContext)(rJ);
+          if (JR.startsWith("#")) {
+            const RR = SR(JR);
+            if (RR) return (0, eR.jsx)(ZR.b, {
+              to: dR(tR, RR.page, RR.anchor),
+              children: (0, eR.jsx)(aJ.Provider, {
                 value: !0,
-                children: OW
+                children: GR
               })
             })
           }
-          return (0, AW.jsx)("a", {
-            href: iW,
+          return (0, eR.jsx)("a", {
+            href: JR,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, AW.jsx)(bi.Provider, {
+            children: (0, eR.jsx)(aJ.Provider, {
               value: !0,
-              children: OW
+              children: GR
             })
           })
         }
 
-        function Ki(WW) {
+        function CJ(RR) {
           let {
-            code: iW
-          } = WW;
-          const OW = (0, mW.useContext)(li);
-          if ((0, mW.useContext)(bi)) return (0, AW.jsx)("code", {
+            code: JR
+          } = RR;
+          const GR = (0, yR.useContext)(rJ);
+          if ((0, yR.useContext)(aJ)) return (0, eR.jsx)("code", {
             className: "DocsInlineCode",
-            children: iW
+            children: JR
           });
-          if (ci().has(iW)) return (0, AW.jsx)(Ti, {
-            type: iW
+          if (iJ().has(JR)) return (0, eR.jsx)(lJ, {
+            type: JR
           });
-          const EW = xi(iW);
-          if (EW) return (0, AW.jsx)(PW.b, {
+          const tR = wJ(JR);
+          if (tR) return (0, eR.jsx)(ZR.b, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: qW(OW, VW(EW.pageId), EW.anchor),
-            children: iW
+            to: dR(GR, PR(tR.pageId), tR.anchor),
+            children: JR
           });
-          const NW = Ui(iW);
-          return (0, AW.jsxs)("code", {
+          const uR = nJ(JR);
+          return (0, eR.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [NW && (0, AW.jsx)(ki, {
-              colour: NW
-            }), iW]
+            children: [uR && (0, eR.jsx)(UJ, {
+              colour: uR
+            }), JR]
           })
         }
 
-        function Si(WW) {
+        function XJ(RR) {
           let {
-            text: iW
-          } = WW;
-          const OW = [];
-          let EW = 0;
-          for (const mW of iW.matchAll(yW.e)) {
-            mW.index > EW && OW.push(...si(iW.slice(EW, mW.index)));
-            const [, WW, NW, PW, LW, cW] = mW;
-            WW ? OW.push((0, AW.jsx)(Ki, {
-              code: (0, yW.l)(WW, NW)
-            })) : PW ? OW.push((0, AW.jsx)("strong", {
-              children: (0, AW.jsx)(Si, {
-                text: PW
+            text: JR
+          } = RR;
+          const GR = [];
+          let tR = 0;
+          for (const yR of JR.matchAll(BR.e)) {
+            yR.index > tR && GR.push(...WJ(JR.slice(tR, yR.index)));
+            const [, RR, uR, ZR, qR, iR] = yR;
+            RR ? GR.push((0, eR.jsx)(CJ, {
+              code: (0, BR.p)(RR, uR)
+            })) : ZR ? GR.push((0, eR.jsx)("strong", {
+              children: (0, eR.jsx)(XJ, {
+                text: ZR
               })
-            })) : OW.push((0, AW.jsx)(Mi, {
-              href: cW,
-              children: (0, AW.jsx)(Si, {
-                text: LW
+            })) : GR.push((0, eR.jsx)(AJ, {
+              href: iR,
+              children: (0, eR.jsx)(XJ, {
+                text: qR
               })
-            })), EW = mW.index + mW[0].length
+            })), tR = yR.index + yR[0].length
           }
-          return EW < iW.length && OW.push(...si(iW.slice(EW))), (0, AW.jsx)(AW.Fragment, {
-            children: OW.map(((WW, iW) => (0, AW.jsx)(mW.Fragment, {
-              children: WW
-            }, iW)))
+          return tR < JR.length && GR.push(...WJ(JR.slice(tR))), (0, eR.jsx)(eR.Fragment, {
+            children: GR.map(((RR, JR) => (0, eR.jsx)(yR.Fragment, {
+              children: RR
+            }, JR)))
           })
         }
-        const Yi = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          yi = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const MJ = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          BJ = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function Ti(WW) {
+        function lJ(RR) {
           let {
-            type: iW
-          } = WW;
-          const OW = ci(),
-            EW = [];
-          for (const mW of iW.trim().matchAll(Yi)) {
-            const [WW, iW, NW, PW, LW] = mW;
-            iW ? EW.push((0, AW.jsx)("span", {
+            type: JR
+          } = RR;
+          const GR = iJ(),
+            tR = [];
+          for (const yR of JR.trim().matchAll(MJ)) {
+            const [RR, JR, uR, ZR, qR] = yR;
+            JR ? tR.push((0, eR.jsx)("span", {
               className: "DocsTypeString",
-              children: WW
-            })) : NW && OW.has(NW) ? EW.push((0, AW.jsx)(oi, {
-              name: NW,
-              definition: OW.get(NW)
-            })) : NW ? EW.push((0, AW.jsx)("span", {
-              className: yi.has(NW) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: WW
-            })) : PW ? EW.push((0, AW.jsx)("span", {
+              children: RR
+            })) : uR && GR.has(uR) ? tR.push((0, eR.jsx)(OJ, {
+              name: uR,
+              definition: GR.get(uR)
+            })) : uR ? tR.push((0, eR.jsx)("span", {
+              className: BJ.has(uR) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: RR
+            })) : ZR ? tR.push((0, eR.jsx)("span", {
               className: "DocsTypeNumber",
-              children: WW
-            })) : LW ? EW.push(" ") : EW.push((0, AW.jsx)("span", {
+              children: RR
+            })) : qR ? tR.push(" ") : tR.push((0, eR.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: WW
+              children: RR
             }))
           }
-          return (0, AW.jsx)("code", {
+          return (0, eR.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: EW.map(((WW, iW) => (0, AW.jsx)(mW.Fragment, {
-              children: WW
-            }, iW)))
+            children: tR.map(((RR, JR) => (0, eR.jsx)(yR.Fragment, {
+              children: RR
+            }, JR)))
           })
         }
-        const Ji = 480,
-          Hi = 6,
-          ni = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let ui = 0;
+        const pJ = 480,
+          gJ = 6,
+          bJ = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let vJ = 0;
 
-        function oi(WW) {
+        function OJ(RR) {
           let {
-            name: iW,
-            definition: OW
-          } = WW;
-          const EW = (0, mW.useContext)(li),
-            NW = wi[iW],
-            LW = (0, mW.useRef)(null),
-            cW = (0, mW.useRef)(null),
-            tW = (0, mW.useRef)(null),
-            [ZW, xW] = (0, mW.useState)(!1),
-            [lW, bW] = (0, mW.useState)(null),
-            UW = (0, mW.useRef)(),
-            kW = (0, mW.useContext)(Ai),
-            [sW] = (0, mW.useState)((() => "DocsTypePopover-" + ui++)),
-            MW = () => {
-              clearTimeout(UW.current), xW(!0)
+            name: JR,
+            definition: GR
+          } = RR;
+          const tR = (0, yR.useContext)(rJ),
+            uR = fJ[JR],
+            qR = (0, yR.useRef)(null),
+            iR = (0, yR.useRef)(null),
+            VR = (0, yR.useRef)(null),
+            [KR, wR] = (0, yR.useState)(!1),
+            [rR, aR] = (0, yR.useState)(null),
+            nR = (0, yR.useRef)(),
+            UR = (0, yR.useContext)(eJ),
+            [WR] = (0, yR.useState)((() => "DocsTypePopover-" + vJ++)),
+            AR = () => {
+              clearTimeout(nR.current), wR(!0)
             },
-            KW = () => {
-              clearTimeout(UW.current), UW.current = setTimeout((() => {
-                xW(!1)
+            CR = () => {
+              clearTimeout(nR.current), nR.current = setTimeout((() => {
+                wR(!1)
               }), 120)
             };
-          return (0, mW.useEffect)((() => {
-            if (!ZW) return;
-            const WW = WW => {
-              if ("Escape" === WW.key) {
-                var iW, OW;
-                if (null !== (iW = cW.current) && void 0 !== iW && iW.contains(document.activeElement)) null === (OW = LW.current) || void 0 === OW || OW.focus();
-                xW(!1)
+          return (0, yR.useEffect)((() => {
+            if (!KR) return;
+            const RR = RR => {
+              if ("Escape" === RR.key) {
+                var JR, GR;
+                if (null !== (JR = iR.current) && void 0 !== JR && JR.contains(document.activeElement)) null === (GR = qR.current) || void 0 === GR || GR.focus();
+                wR(!1)
               }
             };
-            return document.addEventListener("keydown", WW), () => {
-              document.removeEventListener("keydown", WW)
+            return document.addEventListener("keydown", RR), () => {
+              document.removeEventListener("keydown", RR)
             }
-          }), [ZW]), (0, mW.useEffect)((() => () => {
-            clearTimeout(UW.current)
-          }), []), (0, mW.useLayoutEffect)((() => {
-            if (!ZW || !LW.current || !cW.current) return void bW(null);
-            const WW = LW.current.getBoundingClientRect(),
-              iW = cW.current.offsetHeight,
-              OW = Math.min(Ji, window.innerWidth - 32),
-              mW = Math.min(Math.max(16, WW.left), window.innerWidth - OW - 16),
-              EW = WW.bottom + Hi + iW < window.innerHeight;
-            bW({
-              left: mW,
-              top: EW ? WW.bottom + Hi : Math.max(16, WW.top - Hi - iW)
+          }), [KR]), (0, yR.useEffect)((() => () => {
+            clearTimeout(nR.current)
+          }), []), (0, yR.useLayoutEffect)((() => {
+            if (!KR || !qR.current || !iR.current) return void aR(null);
+            const RR = qR.current.getBoundingClientRect(),
+              JR = iR.current.offsetHeight,
+              GR = Math.min(pJ, window.innerWidth - 32),
+              yR = Math.min(Math.max(16, RR.left), window.innerWidth - GR - 16),
+              tR = RR.bottom + gJ + JR < window.innerHeight;
+            aR({
+              left: yR,
+              top: tR ? RR.bottom + gJ : Math.max(16, RR.top - gJ - JR)
             })
-          }), [ZW]), (0, AW.jsxs)(AW.Fragment, {
-            children: [(0, AW.jsx)("button", {
+          }), [KR]), (0, eR.jsxs)(eR.Fragment, {
+            children: [(0, eR.jsx)("button", {
               type: "button",
-              ref: LW,
+              ref: qR,
               className: "DocsTypeLink",
-              "aria-expanded": ZW,
-              "aria-describedby": ZW ? sW : void 0,
-              onMouseEnter: MW,
-              onMouseLeave: KW,
-              onFocus: MW,
-              onBlur: KW,
-              onKeyDown: WW => {
-                "Tab" === WW.key && !WW.shiftKey && tW.current && (WW.preventDefault(), tW.current.focus())
+              "aria-expanded": KR,
+              "aria-describedby": KR ? WR : void 0,
+              onMouseEnter: AR,
+              onMouseLeave: CR,
+              onFocus: AR,
+              onBlur: CR,
+              onKeyDown: RR => {
+                "Tab" === RR.key && !RR.shiftKey && VR.current && (RR.preventDefault(), VR.current.focus())
               },
-              onClick: MW,
-              children: iW
-            }), ZW && (0, wW.createPortal)((0, AW.jsxs)("span", {
-              ref: cW,
-              id: sW,
+              onClick: AR,
+              children: JR
+            }), KR && (0, fR.createPortal)((0, eR.jsxs)("span", {
+              ref: iR,
+              id: WR,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: lW ? {
-                left: lW.left,
-                top: lW.top,
-                maxWidth: Ji
+              style: rR ? {
+                left: rR.left,
+                top: rR.top,
+                maxWidth: pJ
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: MW,
-              onMouseLeave: KW,
-              onFocus: MW,
-              onBlur: KW,
-              children: [(0, AW.jsxs)("span", {
+              onMouseEnter: AR,
+              onMouseLeave: CR,
+              onFocus: AR,
+              onBlur: CR,
+              children: [(0, eR.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, AW.jsx)("span", {
+                children: [(0, eR.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: iW
-                }), NW && (0, AW.jsxs)(PW.b, {
-                  ref: tW,
+                  children: JR
+                }), uR && (0, eR.jsxs)(ZR.b, {
+                  ref: VR,
                   className: "DocsTypePopoverLink",
-                  to: qW(EW, VW(NW)),
+                  to: dR(tR, PR(uR)),
                   onClick: () => {
-                    xW(!1)
+                    wR(!1)
                   },
-                  onKeyDown: WW => {
-                    if ("Tab" === WW.key) {
-                      var iW;
-                      if (WW.preventDefault(), WW.shiftKey || !LW.current || ! function(WW, iW) {
-                          const OW = [...document.querySelectorAll(ni)],
-                            mW = OW.slice(OW.indexOf(WW) + 1).find((WW => WW.getClientRects().length > 0 && !(null !== iW && void 0 !== iW && iW.contains(WW))));
-                          return null === mW || void 0 === mW || mW.focus(), void 0 !== mW
-                        }(LW.current, cW.current)) null === (iW = LW.current) || void 0 === iW || iW.focus();
-                      WW.shiftKey || xW(!1)
+                  onKeyDown: RR => {
+                    if ("Tab" === RR.key) {
+                      var JR;
+                      if (RR.preventDefault(), RR.shiftKey || !qR.current || ! function(RR, JR) {
+                          const GR = [...document.querySelectorAll(bJ)],
+                            yR = GR.slice(GR.indexOf(RR) + 1).find((RR => RR.getClientRects().length > 0 && !(null !== JR && void 0 !== JR && JR.contains(RR))));
+                          return null === yR || void 0 === yR || yR.focus(), void 0 !== yR
+                        }(qR.current, iR.current)) null === (JR = qR.current) || void 0 === JR || JR.focus();
+                      RR.shiftKey || wR(!1)
                     }
                   },
-                  children: [VW(NW).title, (0, AW.jsx)(jW, {
+                  children: [PR(uR).title, (0, eR.jsx)(LR, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, AW.jsx)(YW, {
+              }), (0, eR.jsx)(MR, {
                 lang: "ts",
-                code: OW,
+                code: GR,
                 compact: !0
               })]
-            }), null !== kW && void 0 !== kW ? kW : document.body)]
+            }), null !== UR && void 0 !== UR ? UR : document.body)]
           })
         }
-        var di = OW(182),
-          ei = OW(5510),
-          vi = OW(5517),
-          gi = OW(5525);
-        const Di = {
+        var xJ = GR(203),
+          NJ = GR(5653),
+          DJ = GR(5656),
+          HJ = GR(5658);
+        const oJ = {
           progressBar: {
-            MN: 30,
-            KN: .075,
-            SN: 5,
-            YN: !1,
+            pu: 30,
+            gu: .075,
+            bu: 5,
+            vu: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            yN: "fa-solid fa-computer-mouse",
+            Ou: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            JN: 3e3,
+            Du: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            hN: !0,
+            Hu: !0,
             scale: 3,
             rotation: 15,
-            HN: !1
+            ou: !1
           },
           gravityBar: {
-            MN: 30,
-            uN: .25,
-            oN: 3,
-            dN: .8,
+            pu: 30,
+            Pu: .25,
+            Iu: 3,
+            mu: .8,
             gravity: 1,
-            eN: 1.5,
-            vN: 8,
-            gN: 4,
-            YN: !1,
+            zu: 1.5,
+            Su: 8,
+            ju: 4,
+            vu: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            VN: .15,
+            Eu: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            fN: 5,
-            CN: 1200,
-            XN: .15,
-            BN: 3,
+            ku: 5,
+            Qu: 1200,
+            Fu: .15,
+            Tu: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var Vi = OW(327),
-          fi = OW(2095);
+        var cJ = GR(359),
+          PJ = GR(2202);
 
-        function Ci(WW) {
-          return WW.startsWith("fa-")
+        function IJ(RR) {
+          return RR.startsWith("fa-")
         }
-        const Xi = {
+        const mJ = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Bi = {
+          zJ = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function qi(WW) {
-          return "string" === typeof WW ? "text" : "entityName" in WW || "translationKey" in WW ? "other" : (0, Vi.Cb)(WW) ? "progressBar" : (0, Vi.yb)(WW) ? "keyBinding" : "icon" in WW ? "icon" : "str" in WW && "string" === typeof WW.str ? "text" : "other"
+        function SJ(RR) {
+          return "string" === typeof RR ? "text" : "entityName" in RR || "translationKey" in RR ? "other" : (0, cJ.sb)(RR) ? "progressBar" : (0, cJ.rb)(RR) ? "keyBinding" : "icon" in RR ? "icon" : "str" in RR && "string" === typeof RR.str ? "text" : "other"
         }
-        const Ri = [{
+        const jJ = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Gi = {
+          dJ = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...Ri],
+            }, ...jJ],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: fi.i
+                options: PJ.h
               },
               isRequired: !0
-            }, ...Ri],
+            }, ...jJ],
             other: []
           };
 
-        function Ii(WW) {
-          return "string" === typeof WW ? {
-            str: WW
-          } : WW
+        function EJ(RR) {
+          return "string" === typeof RR ? {
+            str: RR
+          } : RR
         }
 
-        function ai(WW, iW) {
-          let OW = Ii(WW);
-          for (const mW of iW) OW = OW && "object" === typeof OW ? OW[mW] : void 0;
-          return OW
+        function YJ(RR, JR) {
+          let GR = EJ(RR);
+          for (const yR of JR) GR = GR && "object" === typeof GR ? GR[yR] : void 0;
+          return GR
         }
 
-        function ri(WW, iW, OW) {
-          const mW = (WW, EW) => {
-            var NW;
-            const PW = iW[EW],
-              LW = {
-                ...WW
+        function kJ(RR, JR, GR) {
+          const yR = (RR, tR) => {
+            var uR;
+            const ZR = JR[tR],
+              qR = {
+                ...RR
               };
-            if (EW === iW.length - 1) return void 0 === OW ? delete LW[PW] : LW[PW] = OW, LW;
-            const cW = mW(null !== (NW = WW[PW]) && void 0 !== NW ? NW : {}, EW + 1);
-            return 0 === Object.keys(cW).length ? delete LW[PW] : LW[PW] = cW, LW
+            if (tR === JR.length - 1) return void 0 === GR ? delete qR[ZR] : qR[ZR] = GR, qR;
+            const iR = yR(null !== (uR = RR[ZR]) && void 0 !== uR ? uR : {}, tR + 1);
+            return 0 === Object.keys(iR).length ? delete qR[ZR] : qR[ZR] = iR, qR
           };
-          return function(WW) {
-            const iW = Object.keys(WW);
-            return "string" === typeof WW.str && 1 === iW.length ? WW.str : WW
-          }(mW(Ii(WW), 0))
+          return function(RR) {
+            const JR = Object.keys(RR);
+            return "string" === typeof RR.str && 1 === JR.length ? RR.str : RR
+          }(yR(EJ(RR), 0))
         }
 
-        function zi(WW, iW) {
-          const OW = qi(WW),
-            mW = Gi[OW].find((WW => WW.path.join(".") === iW.join("."))),
-            EW = null !== mW && void 0 !== mW && mW.isRequired && "other" !== OW ? ai(Bi[OW], iW) : void 0;
-          return ri(WW, iW, EW)
+        function QJ(RR, JR) {
+          const GR = SJ(RR),
+            yR = dJ[GR].find((RR => RR.path.join(".") === JR.join("."))),
+            tR = null !== yR && void 0 !== yR && yR.isRequired && "other" !== GR ? YJ(zJ[GR], JR) : void 0;
+          return kJ(RR, JR, tR)
         }
 
-        function Fi(WW) {
-          switch (qi(WW)) {
+        function FJ(RR) {
+          switch (SJ(RR)) {
             case "text":
-              return String(ai(WW, ["str"]));
+              return String(YJ(RR, ["str"]));
             case "icon":
-              return String(ai(WW, ["icon"]));
+              return String(YJ(RR, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(ai(WW,["progress"])))}%`;
+              return `${Math.round(100*Number(YJ(RR,["progress"])))}%`;
             case "keyBinding":
-              return String(ai(WW, ["action"]));
+              return String(YJ(RR, ["action"]));
             case "other":
-              return JSON.stringify(WW)
+              return JSON.stringify(RR)
           }
         }
-        const Qi = /^[A-Za-z_$][\w$]*$/;
+        const TJ = /^[A-Za-z_$][\w$]*$/;
 
-        function WO(WW) {
-          if (Array.isArray(WW)) return `[${WW.map(WO).join(", ")}]`;
-          if (WW && "object" === typeof WW) {
-            const iW = Object.entries(WW).map((WW => {
-              let [iW, OW] = WW;
-              return `${Qi.test(iW)?iW:JSON.stringify(iW)}: ${WO(OW)}`
+        function sJ(RR) {
+          if (Array.isArray(RR)) return `[${RR.map(sJ).join(", ")}]`;
+          if (RR && "object" === typeof RR) {
+            const JR = Object.entries(RR).map((RR => {
+              let [JR, GR] = RR;
+              return `${TJ.test(JR)?JR:JSON.stringify(JR)}: ${sJ(GR)}`
             }));
-            return 0 === iW.length ? "{}" : `{ ${iW.join(", ")} }`
+            return 0 === JR.length ? "{}" : `{ ${JR.join(", ")} }`
           }
-          return JSON.stringify(WW)
+          return JSON.stringify(RR)
         }
 
-        function iO(WW) {
-          const iW = WW.map(WO),
-            OW = `[${iW.join(", ")}]`;
-          return OW.length <= 60 ? OW : `[\n${iW.map((WW=>`    ${WW},`)).join("\n")}\n]`
+        function hJ(RR) {
+          const JR = RR.map(sJ),
+            GR = `[${JR.join(", ")}]`;
+          return GR.length <= 60 ? GR : `[\n${JR.map((RR=>`    ${RR},`)).join("\n")}\n]`
         }
-        const OO = {
+        const RG = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function mO(WW) {
-          let iW = "";
-          for (let EW = 0; EW < WW.length; EW++) {
-            const NW = WW[EW];
-            if ("\\" === NW) {
-              var OW;
-              const mW = null !== (OW = WW[EW + 1]) && void 0 !== OW ? OW : "";
-              iW += "'" === mW ? "'" : NW + mW, EW++
-            } else if ('"' === NW) iW += '\\"';
+        function JG(RR) {
+          let JR = "";
+          for (let tR = 0; tR < RR.length; tR++) {
+            const uR = RR[tR];
+            if ("\\" === uR) {
+              var GR;
+              const yR = null !== (GR = RR[tR + 1]) && void 0 !== GR ? GR : "";
+              JR += "'" === yR ? "'" : uR + yR, tR++
+            } else if ('"' === uR) JR += '\\"';
             else {
-              var mW;
-              iW += null !== (mW = OO[NW]) && void 0 !== mW ? mW : NW
+              var yR;
+              JR += null !== (yR = RG[uR]) && void 0 !== yR ? yR : uR
             }
           }
-          return `"${iW}"`
+          return `"${JR}"`
         }
 
-        function EO(WW) {
-          if ("string" === typeof WW) return !0;
-          if (!WW || "object" !== typeof WW || Array.isArray(WW)) return !1;
-          const iW = WW;
-          return "ProgressBar" === iW.type ? "number" === typeof iW.progress : "StyledKeyBinding" === iW.type ? fi.i.includes(iW.action) : "string" === typeof iW.icon || "string" === typeof iW.str || "string" === typeof iW.entityName || "string" === typeof iW.translationKey
+        function GG(RR) {
+          if ("string" === typeof RR) return !0;
+          if (!RR || "object" !== typeof RR || Array.isArray(RR)) return !1;
+          const JR = RR;
+          return "ProgressBar" === JR.type ? "number" === typeof JR.progress : "StyledKeyBinding" === JR.type ? PJ.h.includes(JR.action) : "string" === typeof JR.icon || "string" === typeof JR.str || "string" === typeof JR.entityName || "string" === typeof JR.translationKey
         }
 
-        function NO(WW) {
-          let iW;
+        function yG(RR) {
+          let JR;
           try {
-            iW = function(WW) {
-              let iW = "",
-                OW = "",
-                mW = 0;
-              const EW = () => {
-                iW += OW.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), OW = ""
+            JR = function(RR) {
+              let JR = "",
+                GR = "",
+                yR = 0;
+              const tR = () => {
+                JR += GR.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), GR = ""
               };
-              for (; mW < WW.length;) {
-                const NW = WW.slice(mW).search(/["'`]|\/\//);
-                if (-1 === NW) {
-                  OW += WW.slice(mW);
+              for (; yR < RR.length;) {
+                const uR = RR.slice(yR).search(/["'`]|\/\//);
+                if (-1 === uR) {
+                  GR += RR.slice(yR);
                   break
                 }
-                OW += WW.slice(mW, mW + NW);
-                const PW = mW + NW,
-                  LW = WW[PW];
-                if ("/" === LW) {
-                  const iW = WW.indexOf("\n", PW);
-                  mW = -1 === iW ? WW.length : iW;
+                GR += RR.slice(yR, yR + uR);
+                const ZR = yR + uR,
+                  qR = RR[ZR];
+                if ("/" === qR) {
+                  const JR = RR.indexOf("\n", ZR);
+                  yR = -1 === JR ? RR.length : JR;
                   continue
                 }
-                if (EW(), "`" === LW) throw new Error("Use quotes rather than template strings.");
-                let cW = PW + 1;
-                for (; cW < WW.length && WW[cW] !== LW;) cW += "\\" === WW[cW] ? 2 : 1;
-                if (cW >= WW.length) throw new Error("A string is missing its closing quote.");
-                const wW = WW.slice(PW + 1, cW);
-                iW += mO(wW), mW = cW + 1
+                if (tR(), "`" === qR) throw new Error("Use quotes rather than template strings.");
+                let iR = ZR + 1;
+                for (; iR < RR.length && RR[iR] !== qR;) iR += "\\" === RR[iR] ? 2 : 1;
+                if (iR >= RR.length) throw new Error("A string is missing its closing quote.");
+                const fR = RR.slice(ZR + 1, iR);
+                JR += JG(fR), yR = iR + 1
               }
-              return EW(), JSON.parse(iW)
-            }(WW.trim())
-          } catch (mW) {
+              return tR(), JSON.parse(JR)
+            }(RR.trim())
+          } catch (yR) {
             return {
               parts: null,
-              error: mW instanceof SyntaxError ? "This isn't a valid array yet." : mW.message
+              error: yR instanceof SyntaxError ? "This isn't a valid array yet." : yR.message
             }
           }
-          if (!Array.isArray(iW)) return {
+          if (!Array.isArray(JR)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const OW = iW.findIndex((WW => !EO(WW)));
-          return -1 !== OW ? {
+          const GR = JR.findIndex((RR => !GG(RR)));
+          return -1 !== GR ? {
             parts: null,
-            error: `Part ${OW+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${GR+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: iW,
+            parts: JR,
             error: null
           }
         }
-        const PO = 1 / di.f.clientTicksPerSecond,
-          LO = 700,
-          cO = {
+        const tG = 1 / xJ.g.clientTicksPerSecond,
+          uG = 700,
+          ZG = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          wO = {
-            progressBar: Di.progressBar.yN,
-            timedClick: Di.timedClick.icon,
-            gravityBar: Di.gravityBar.icon,
-            precisionBar: Di.precisionBar.icon,
-            rhythmClick: Di.rhythmClick.icon
+          qG = {
+            progressBar: oJ.progressBar.Ou,
+            timedClick: oJ.timedClick.icon,
+            gravityBar: oJ.gravityBar.icon,
+            precisionBar: oJ.precisionBar.icon,
+            rhythmClick: oJ.rhythmClick.icon
           };
 
-        function tO(WW) {
+        function iG(RR) {
           let {
-            type: iW
-          } = WW;
-          const [OW, EW] = (0, mW.useState)("ready"), [PW, LW] = (0, mW.useState)(1), [cW, wW] = (0, mW.useState)(!0), tW = (0, mW.useRef)(null), ZW = (0, mW.useRef)(null), xW = (0, mW.useRef)(null), lW = (0, mW.useRef)(new Set), bW = (0, mW.useRef)(!1), UW = wO[iW], kW = (0, mW.useMemo)((() => ({
+            type: JR
+          } = RR;
+          const [GR, tR] = (0, yR.useState)("ready"), [ZR, qR] = (0, yR.useState)(1), [iR, fR] = (0, yR.useState)(!0), VR = (0, yR.useRef)(null), KR = (0, yR.useRef)(null), wR = (0, yR.useRef)(null), rR = (0, yR.useRef)(new Set), aR = (0, yR.useRef)(!1), nR = qG[JR], UR = (0, yR.useMemo)((() => ({
             getState: () => {
-              var WW, iW;
-              return null !== (WW = null === (iW = xW.current) || void 0 === iW ? void 0 : iW.getState()) && void 0 !== WW ? WW : cO
+              var RR, JR;
+              return null !== (RR = null === (JR = wR.current) || void 0 === JR ? void 0 : JR.getState()) && void 0 !== RR ? RR : ZG
             },
-            onFrame: WW => (lW.current.add(WW), () => {
-              lW.current.delete(WW)
+            onFrame: RR => (rR.current.add(RR), () => {
+              rR.current.delete(RR)
             })
           })), []);
-          (0, mW.useEffect)((() => {
-            const WW = tW.current,
-              iW = ZW.current;
-            if (!WW || !iW) return;
-            const OW = new ResizeObserver((() => {
-              LW(WW.clientWidth / Math.max(1, iW.offsetWidth))
+          (0, yR.useEffect)((() => {
+            const RR = VR.current,
+              JR = KR.current;
+            if (!RR || !JR) return;
+            const GR = new ResizeObserver((() => {
+              qR(RR.clientWidth / Math.max(1, JR.offsetWidth))
             }));
-            return OW.observe(WW), () => {
-              OW.disconnect()
+            return GR.observe(RR), () => {
+              GR.disconnect()
             }
-          }), []), (0, mW.useEffect)((() => {
-            var WW;
-            if ("playing" !== OW) return;
-            let mW = !1;
-            const NW = new gi.f[iW](Di[iW], (WW => {
-              mW = !0, wW(!1), EW(WW ? "succeeded" : "failed")
+          }), []), (0, yR.useEffect)((() => {
+            var RR;
+            if ("playing" !== GR) return;
+            let yR = !1;
+            const uR = new HJ.g[JR](oJ[JR], (RR => {
+              yR = !0, fR(!1), tR(RR ? "succeeded" : "failed")
             }), (() => {}));
-            xW.current = NW;
-            let PW = 0,
-              LW = performance.now(),
-              cW = requestAnimationFrame((function WW(iW) {
-                for (PW += Math.min(.25, (iW - LW) / 1e3), LW = iW; PW >= PO && !mW;) PW -= PO, NW.handleTick(PO);
-                for (const OW of lW.current) OW();
-                mW || (cW = requestAnimationFrame(WW))
+            wR.current = uR;
+            let ZR = 0,
+              qR = performance.now(),
+              iR = requestAnimationFrame((function RR(JR) {
+                for (ZR += Math.min(.25, (JR - qR) / 1e3), qR = JR; ZR >= tG && !yR;) ZR -= tG, uR.handleTick(tG);
+                for (const GR of rR.current) GR();
+                yR || (iR = requestAnimationFrame(RR))
               }));
-            return null === (WW = tW.current) || void 0 === WW || WW.focus({
+            return null === (RR = VR.current) || void 0 === RR || RR.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(cW), NW.tearDown(), xW.current = null, bW.current = !1
+              cancelAnimationFrame(iR), uR.tearDown(), wR.current = null, aR.current = !1
             }
-          }), [OW, iW]), (0, mW.useEffect)((() => {
-            if (cW) return;
-            const WW = setTimeout((() => {
-              wW(!0)
-            }), LO);
+          }), [GR, JR]), (0, yR.useEffect)((() => {
+            if (iR) return;
+            const RR = setTimeout((() => {
+              fR(!0)
+            }), uG);
             return () => {
-              clearTimeout(WW)
+              clearTimeout(RR)
             }
-          }), [cW]);
-          const sW = WW => {
-            var iW;
-            "playing" === OW && bW.current !== WW && (bW.current = WW, null === (iW = xW.current) || void 0 === iW || iW.handleMouseInput(WW))
+          }), [iR]);
+          const WR = RR => {
+            var JR;
+            "playing" === GR && aR.current !== RR && (aR.current = RR, null === (JR = wR.current) || void 0 === JR || JR.handleMouseInput(RR))
           };
-          return (0, AW.jsxs)("div", {
+          return (0, eR.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, AW.jsxs)("div", {
-              ref: tW,
-              className: NW()("DocsQteStage", {
-                Playing: "playing" === OW
+            children: [(0, eR.jsxs)("div", {
+              ref: VR,
+              className: uR()("DocsQteStage", {
+                Playing: "playing" === GR
               }),
-              tabIndex: "playing" === OW ? 0 : -1,
-              role: "playing" === OW ? "button" : void 0,
-              "aria-label": "playing" === OW ? `${iW} quick time event: click or press Space` : void 0,
-              onPointerDown: WW => {
-                0 === WW.button && sW(!0)
+              tabIndex: "playing" === GR ? 0 : -1,
+              role: "playing" === GR ? "button" : void 0,
+              "aria-label": "playing" === GR ? `${JR} quick time event: click or press Space` : void 0,
+              onPointerDown: RR => {
+                0 === RR.button && WR(!0)
               },
               onPointerUp: () => {
-                sW(!1)
+                WR(!1)
               },
               onPointerLeave: () => {
-                sW(!1)
+                WR(!1)
               },
               onPointerCancel: () => {
-                sW(!1)
+                WR(!1)
               },
-              onKeyDown: WW => {
-                "playing" !== OW || " " !== WW.key && "Enter" !== WW.key || (WW.preventDefault(), sW(!0))
+              onKeyDown: RR => {
+                "playing" !== GR || " " !== RR.key && "Enter" !== RR.key || (RR.preventDefault(), WR(!0))
               },
-              onKeyUp: WW => {
-                "playing" !== OW || " " !== WW.key && "Enter" !== WW.key || sW(!1)
+              onKeyUp: RR => {
+                "playing" !== GR || " " !== RR.key && "Enter" !== RR.key || WR(!1)
               },
-              children: [(0, AW.jsx)("div", {
-                ref: ZW,
+              children: [(0, eR.jsx)("div", {
+                ref: KR,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${PW})`
+                  transform: `scale(${ZR})`
                 },
-                children: "playing" === OW && (0, AW.jsx)(vi.e.Provider, {
-                  value: kW,
-                  children: (0, AW.jsx)(ei.e, {
+                children: "playing" === GR && (0, eR.jsx)(DJ.e.Provider, {
+                  value: UR,
+                  children: (0, eR.jsx)(NJ.d, {
                     qte: {
-                      type: iW,
-                      parameters: Di[iW]
+                      type: JR,
+                      parameters: oJ[JR]
                     }
                   })
                 })
-              }), "playing" !== OW && (0, AW.jsxs)("div", {
+              }), "playing" !== GR && (0, eR.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== OW && (0, AW.jsxs)("div", {
-                  className: NW()("DocsQteResult", "succeeded" === OW ? "Succeeded" : "Failed"),
-                  children: [(0, AW.jsx)(jW, {
-                    name: "succeeded" === OW ? "check" : "cross",
+                children: ["ready" !== GR && (0, eR.jsxs)("div", {
+                  className: uR()("DocsQteResult", "succeeded" === GR ? "Succeeded" : "Failed"),
+                  children: [(0, eR.jsx)(LR, {
+                    name: "succeeded" === GR ? "check" : "cross",
                     isTinted: !0
-                  }), (0, AW.jsx)("span", {
-                    children: "succeeded" === OW ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, eR.jsx)("span", {
+                    children: "succeeded" === GR ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, AW.jsxs)("button", {
+                }), (0, eR.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !cW,
+                  disabled: !iR,
                   onClick: () => {
-                    EW("playing")
+                    tR("playing")
                   },
-                  children: [(0, AW.jsx)(jW, {
-                    name: "ready" === OW ? "play" : "replay"
-                  }), (0, AW.jsx)("span", {
-                    children: "ready" === OW ? `Try ${iW}` : "Play again"
+                  children: [(0, eR.jsx)(LR, {
+                    name: "ready" === GR ? "play" : "replay"
+                  }), (0, eR.jsx)("span", {
+                    children: "ready" === GR ? `Try ${JR}` : "Play again"
                   })]
                 })]
               })]
-            }), UW && !Ci(UW) && (0, AW.jsxs)("p", {
+            }), nR && !IJ(nR) && (0, eR.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, AW.jsx)("code", {
-                children: UW
+              children: ["The ", (0, eR.jsx)("code", {
+                children: nR
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function ZO(WW) {
+        function fG(RR) {
           let {
-            level: iW,
-            text: OW,
-            anchor: mW,
-            className: EW
-          } = WW;
-          const PW = `h${Math.min(iW,6)}`;
-          return (0, AW.jsxs)(PW, {
-                id: mW,
-                className: NW()("DocsHeading", EW),
-                children: [(0, AW.jsx)(Si, {
-                      text: OW
-                    }), (0, AW.jsx)("a", {
+            level: JR,
+            text: GR,
+            anchor: yR,
+            className: tR
+          } = RR;
+          const ZR = `h${Math.min(JR,6)}`;
+          return (0, eR.jsxs)(ZR, {
+                id: yR,
+                className: uR()("DocsHeading", tR),
+                children: [(0, eR.jsx)(XJ, {
+                      text: GR
+                    }), (0, eR.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${mW}`,
-                        "aria-label": `Link to ${OW.replace(/`/g,"")}`,children:"#"})]})}function xO(WW){let{items:iW,ordered:OW}=WW;const mW=OW?"ol":"ul";return(0,AW.jsx)(mW,{className:"DocsList",children:iW.map(((WW,iW)=>(0,AW.jsxs)("li",{children:[(0,AW.jsx)(Si,{text:WW.text}),WW.children.length>0&&(0,AW.jsx)(xO,{items:WW.children,ordered:OW})]},iW)))})}function lO(WW){const iW=WW[0],OW="paragraph"===(null===iW||void 0===iW?void 0:iW.kind)?iW.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(OW)?"warning":/^\*\*(tip|prefer)/.test(OW)?"tip":"note"}function AO(WW){let{block:iW}=WW;switch(iW.kind){case"heading":return(0,AW.jsx)(ZO,{level:iW.level,text:iW.text,anchor:iW.anchor});case"paragraph":return(0,AW.jsx)("p",{children:(0,AW.jsx)(Si,{text:iW.text})});case"code":{const WW="ts"===iW.lang?function(WW){const iW=WW.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return iW&&Object.hasOwn(Di,iW[1])?iW[1]:null}(iW.code):null;return(0,AW.jsxs)(AW.Fragment,{children:[(0,AW.jsx)(YW,{code:iW.code,lang:iW.lang}),WW&&(0,AW.jsx)(tO,{type:WW})]})}case"table":return(0,AW.jsx)("div",{className:"DocsTableScroll",children:(0,AW.jsxs)("table",{className:"DocsTable",children:[(0,AW.jsx)("thead",{children:(0,AW.jsx)("tr",{children:iW.header.map(((WW,iW)=>(0,AW.jsx)("th",{children:(0,AW.jsx)(Si,{text:WW})},iW)))})}),(0,AW.jsx)("tbody",{children:iW.rows.map(((WW,iW)=>(0,AW.jsx)("tr",{children:WW.map(((WW,iW)=>(0,AW.jsx)("td",{children:(0,AW.jsx)(Si,{text:WW})},iW)))},iW)))})]})});case"list":return(0,AW.jsx)(xO,{items:iW.items,ordered:iW.ordered});case"quote":return(0,AW.jsx)("aside",{className:NW()("DocsCallout",lO(iW.blocks)),children:(0,AW.jsx)(bO,{blocks:iW.blocks})});case"rule":return(0,AW.jsx)("hr",{className:"DocsRule"})}}function bO(WW){let{blocks:iW}=WW;return(0,AW.jsx)(AW.Fragment,{children:iW.map(((WW,iW)=>(0,AW.jsx)(AO,{block:WW},iW)))})}var jO=OW(5495),UO=OW(5504);function kO(WW){return"blocks"===WW||"items"===WW}const sO=new Map;function MO(WW){let iW=sO.get(WW);return iW||(iW=function(WW){const iW={entries:[],legend:[],notes:[],examples:[]};let OW=!1;for(const NW of WW.split(/\r?\n/).slice(1)){if(NW.startsWith("#")){const WW=NW.replace(/^# ?/,""),mW=WW.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);mW?iW.legend.push({code:mW[1],meaning:mW[2],usage:mW[3].trim()}):/^Examples:/.test(WW.trim())?OW=!0:OW&&WW.trim()?iW.examples.push(WW.trim()):WW.trim()&&!/^\s/.test(WW)&&iW.notes.push(WW.trim());continue}const WW=NW.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var mW,EW;WW&&iW.entries.push({name:WW[1],variants:null!==(mW=null===(EW=WW[2])||void 0===EW?void 0:EW.split(","))&&void 0!==mW?mW:[]})}return iW}("blocks"===WW?jO:UO),sO.set(WW,iW)),iW}function KO(WW){let{className:iW,value:OW,placeholder:mW,label:EW,onChange:NW,count:PW,children:LW}=WW;return(0,AW.jsxs)("div",{className:iW,children:[(0,AW.jsx)(jW,{name:"magnifying-glass"}),(0,AW.jsx)("input",{type:"search",value:OW,placeholder:mW,"aria-label":EW,onChange:WW=>{NW(WW.target.value)}}),LW,PW&&(0,AW.jsxs)("span",{className:"DocsFilterCount",children:[PW.visible," of ",PW.total]})]})}var SO=OW(1391);function YO(WW){const iW=WW.trim().match(/^(` {
+                        href: `#${yR}`,
+                        "aria-label": `Link to ${GR.replace(/`/g,"")}`,children:"#"})]})}function VG(RR){let{items:JR,ordered:GR}=RR;const yR=GR?"ol":"ul";return(0,eR.jsx)(yR,{className:"DocsList",children:JR.map(((RR,JR)=>(0,eR.jsxs)("li",{children:[(0,eR.jsx)(XJ,{text:RR.text}),RR.children.length>0&&(0,eR.jsx)(VG,{items:RR.children,ordered:GR})]},JR)))})}function KG(RR){const JR=RR[0],GR="paragraph"===(null===JR||void 0===JR?void 0:JR.kind)?JR.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(GR)?"warning":/^\*\*(tip|prefer)/.test(GR)?"tip":"note"}function wG(RR){let{block:JR}=RR;switch(JR.kind){case"heading":return(0,eR.jsx)(fG,{level:JR.level,text:JR.text,anchor:JR.anchor});case"paragraph":return(0,eR.jsx)("p",{children:(0,eR.jsx)(XJ,{text:JR.text})});case"code":{const RR="ts"===JR.lang?function(RR){const JR=RR.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return JR&&Object.hasOwn(oJ,JR[1])?JR[1]:null}(JR.code):null;return(0,eR.jsxs)(eR.Fragment,{children:[(0,eR.jsx)(MR,{code:JR.code,lang:JR.lang}),RR&&(0,eR.jsx)(iG,{type:RR})]})}case"table":return(0,eR.jsx)("div",{className:"DocsTableScroll",children:(0,eR.jsxs)("table",{className:"DocsTable",children:[(0,eR.jsx)("thead",{children:(0,eR.jsx)("tr",{children:JR.header.map(((RR,JR)=>(0,eR.jsx)("th",{children:(0,eR.jsx)(XJ,{text:RR})},JR)))})}),(0,eR.jsx)("tbody",{children:JR.rows.map(((RR,JR)=>(0,eR.jsx)("tr",{children:RR.map(((RR,JR)=>(0,eR.jsx)("td",{children:(0,eR.jsx)(XJ,{text:RR})},JR)))},JR)))})]})});case"list":return(0,eR.jsx)(VG,{items:JR.items,ordered:JR.ordered});case"quote":return(0,eR.jsx)("aside",{className:uR()("DocsCallout",KG(JR.blocks)),children:(0,eR.jsx)(rG,{blocks:JR.blocks})});case"rule":return(0,eR.jsx)("hr",{className:"DocsRule"})}}function rG(RR){let{blocks:JR}=RR;return(0,eR.jsx)(eR.Fragment,{children:JR.map(((RR,JR)=>(0,eR.jsx)(wG,{block:RR},JR)))})}var eG=GR(5641),aG=GR(5645);function LG(RR){return"blocks"===RR||"items"===RR}const nG=new Map;function UG(RR){let JR=nG.get(RR);return JR||(JR=function(RR){const JR={entries:[],legend:[],notes:[],examples:[]};let GR=!1;for(const uR of RR.split(/\r?\n/).slice(1)){if(uR.startsWith("#")){const RR=uR.replace(/^# ?/,""),yR=RR.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);yR?JR.legend.push({code:yR[1],meaning:yR[2],usage:yR[3].trim()}):/^Examples:/.test(RR.trim())?GR=!0:GR&&RR.trim()?JR.examples.push(RR.trim()):RR.trim()&&!/^\s/.test(RR)&&JR.notes.push(RR.trim());continue}const RR=uR.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var yR,tR;RR&&JR.entries.push({name:RR[1],variants:null!==(yR=null===(tR=RR[2])||void 0===tR?void 0:tR.split(","))&&void 0!==yR?yR:[]})}return JR}("blocks"===RR?eG:aG),nG.set(RR,JR)),JR}function WG(RR){let{className:JR,value:GR,placeholder:yR,label:tR,onChange:uR,count:ZR,children:qR}=RR;return(0,eR.jsxs)("div",{className:JR,children:[(0,eR.jsx)(LR,{name:"magnifying-glass"}),(0,eR.jsx)("input",{type:"search",value:GR,placeholder:yR,"aria-label":tR,onChange:RR=>{uR(RR.target.value)}}),qR,ZR&&(0,eR.jsxs)("span",{className:"DocsFilterCount",children:[ZR.visible," of ",ZR.total]})]})}var AG=GR(1468);function CG(RR){const JR=RR.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return iW?iW[2]:null}function yO(WW){return"paragraph"===WW.kind&&""===WW.text.trim()}function TO(WW){const iW={name:WW.heading.text,description:[],params:[],returns:null};let OW="description";for(const EW of WW.blocks)if(!yO(EW))if("heading"===EW.kind&&/^Parameters:?$/.test(EW.text))OW="params";else if("heading"===EW.kind&&/^Returns:?$/.test(EW.text))OW="returns",iW.returns={type:"",description:[]};else if("params"!==OW||"table"!==EW.kind){if("returns"===OW&&"paragraph"===EW.kind&&""===iW.returns.type){const WW=YO(EW.text);if(null!==WW){iW.returns.type=WW.replaceAll("\\|","|");continue}}"returns"===OW?iW.returns.description.push(EW):iW.description.push(EW)}else for(const[WW,OW,NW]of EW.rows){var mW;iW.params.push({name:WW,type:null!==(mW=YO(OW))&&void 0!==mW?mW:OW,description:null!==NW&&void 0!==NW?NW:""})}return iW}const JO=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function hO(WW){return WW.filter((WW=>!yO(WW)))}const HO=/^[\w][\w .'&!:()-]*$/,nO=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function uO(WW){var iW;if("code"===WW.kind&&"text"===WW.lang){const iW=WW.code.split("\n").map((WW=>WW.trim())).filter(Boolean);return iW.length>0&&iW.every((WW=>HO.test(WW)))?iW.map((WW=>({name:WW}))):null}return"paragraph"===WW.kind&&nO.test(WW.text.trim())?[...WW.text.matchAll(/`([ ^ `]+)` / g)].flatMap((WW => WW[1].split(/,\s*/).map((WW => ({
-                              name: WW.trim()
-                            }))))): "table" === WW.kind && null !== (iW = WW.header[0]) && void 0 !== iW && iW.startsWith("Song") ? WW.rows.map((WW => {
-                              let [iW, OW] = WW;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return JR?JR[2]:null}function XG(RR){return"paragraph"===RR.kind&&""===RR.text.trim()}function MG(RR){const JR={name:RR.heading.text,description:[],params:[],returns:null};let GR="description";for(const tR of RR.blocks)if(!XG(tR))if("heading"===tR.kind&&/^Parameters:?$/.test(tR.text))GR="params";else if("heading"===tR.kind&&/^Returns:?$/.test(tR.text))GR="returns",JR.returns={type:"",description:[]};else if("params"!==GR||"table"!==tR.kind){if("returns"===GR&&"paragraph"===tR.kind&&""===JR.returns.type){const RR=CG(tR.text);if(null!==RR){JR.returns.type=RR.replaceAll("\\|","|");continue}}"returns"===GR?JR.returns.description.push(tR):JR.description.push(tR)}else for(const[RR,GR,uR]of tR.rows){var yR;JR.params.push({name:RR,type:null!==(yR=CG(GR))&&void 0!==yR?yR:GR,description:null!==uR&&void 0!==uR?uR:""})}return JR}const BG=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function lG(RR){return RR.filter((RR=>!XG(RR)))}const pG=/^[\w][\w .'&!:()-]*$/,gG=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function bG(RR){var JR;if("code"===RR.kind&&"text"===RR.lang){const JR=RR.code.split("\n").map((RR=>RR.trim())).filter(Boolean);return JR.length>0&&JR.every((RR=>pG.test(RR)))?JR.map((RR=>({name:RR}))):null}return"paragraph"===RR.kind&&gG.test(RR.text.trim())?[...RR.text.matchAll(/`([ ^ `]+)` / g)].flatMap((RR => RR[1].split(/,\s*/).map((RR => ({
+                              name: RR.trim()
+                            }))))): "table" === RR.kind && null !== (JR = RR.header[0]) && void 0 !== JR && JR.startsWith("Song") ? RR.rows.map((RR => {
+                              let [JR, GR] = RR;
                               return {
-                                name: iW.replace(/`/g, ""),
-                                caption: OW
+                                name: JR.replace(/`/g, ""),
+                                caption: GR
                               }
                             })) : null
                           }
 
-                          function oO(WW) {
-                            const iW = [];
-                            for (const OW of WW) {
-                              const WW = uO(OW),
-                                mW = iW.at(-1),
-                                EW = "table" === OW.kind;
-                              WW ? "names" === (null === mW || void 0 === mW ? void 0 : mW.kind) && mW.isSongs === EW ? mW.names.push(...WW) : iW.push({
+                          function vG(RR) {
+                            const JR = [];
+                            for (const GR of RR) {
+                              const RR = bG(GR),
+                                yR = JR.at(-1),
+                                tR = "table" === GR.kind;
+                              RR ? "names" === (null === yR || void 0 === yR ? void 0 : yR.kind) && yR.isSongs === tR ? yR.names.push(...RR) : JR.push({
                                 kind: "names",
-                                names: WW,
-                                isSongs: EW
-                              }) : iW.push({
+                                names: RR,
+                                isSongs: tR
+                              }) : JR.push({
                                 kind: "block",
-                                block: OW
+                                block: GR
                               })
                             }
-                            return iW
+                            return JR
                           }
-                          const dO = {
+                          const OG = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function eO(WW, iW) {
-                            return `${dO[WW]}-${(0,yW.s)(iW)}`
+                          function xG(RR, JR) {
+                            return `${OG[RR]}-${(0,BR.s)(JR)}`
                           }
-                          const vO = new WeakMap;
+                          const NG = new WeakMap;
 
-                          function gO(WW, iW, OW) {
-                            let mW = vO.get(iW);
-                            if (!mW) {
-                              mW = new Map;
-                              const OW = new Set;
-                              for (const EW of (0, yW.v)(iW)) {
-                                const iW = oO(hO(EW.blocks)).map((iW => {
-                                  if ("block" === iW.kind) return iW;
+                          function DG(RR, JR, GR) {
+                            let yR = NG.get(JR);
+                            if (!yR) {
+                              yR = new Map;
+                              const GR = new Set;
+                              for (const tR of (0, BR.v)(JR)) {
+                                const JR = vG(lG(tR.blocks)).map((JR => {
+                                  if ("block" === JR.kind) return JR;
                                   return {
                                     kind: "names",
-                                    names: iW.names.map((iW => {
-                                      var mW, NW;
-                                      const PW = eO(WW, iW.name);
-                                      let LW = PW;
-                                      for (let WW = 2; OW.has(LW); WW++) LW = `${PW}-${WW}`;
-                                      return OW.add(LW), {
-                                        ...iW,
-                                        anchor: LW,
-                                        heading: null !== (mW = null === (NW = EW.heading) || void 0 === NW ? void 0 : NW.text) && void 0 !== mW ? mW : ""
+                                    names: JR.names.map((JR => {
+                                      var yR, uR;
+                                      const ZR = xG(RR, JR.name);
+                                      let qR = ZR;
+                                      for (let RR = 2; GR.has(qR); RR++) qR = `${ZR}-${RR}`;
+                                      return GR.add(qR), {
+                                        ...JR,
+                                        anchor: qR,
+                                        heading: null !== (yR = null === (uR = tR.heading) || void 0 === uR ? void 0 : uR.text) && void 0 !== yR ? yR : ""
                                       }
                                     })),
-                                    isSongs: iW.isSongs
+                                    isSongs: JR.isSongs
                                   }
                                 }));
-                                mW.set(EW.blocks, iW)
+                                yR.set(tR.blocks, JR)
                               }
-                              vO.set(iW, mW)
+                              NG.set(JR, yR)
                             }
-                            const EW = mW.get(OW);
-                            if (!EW) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return EW
+                            const tR = yR.get(GR);
+                            if (!tR) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return tR
                           }
-                          const DO = "/textures/docs/skinPreviews",
-                            VO = [{
+                          const HG = "/textures/docs/skinPreviews",
+                            oG = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var pO = OW(2918),
-                            fO = OW(2937);
+                          var cG = GR(2997),
+                            PG = GR(3017);
 
-                          function CO(WW) {
-                            return Object.hasOwn(pO.e, WW) ? pO.e[WW] : null
+                          function IG(RR) {
+                            return Object.hasOwn(cG.h, RR) ? cG.h[RR] : null
                           }
-                          const XO = {
+                          const mG = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: fO.d.Standard
+                            blendMode: PG.c.Standard
                           };
 
-                          function BO(WW, iW, OW) {
-                            return iW + (OW - iW) * WW()
+                          function zG(RR, JR, GR) {
+                            return JR + (GR - JR) * RR()
                           }
 
-                          function qO(WW, iW, OW) {
-                            return WW + (iW - WW) * OW
+                          function SG(RR, JR, GR) {
+                            return RR + (JR - RR) * GR
                           }
 
-                          function RO(WW) {
-                            return WW.length > 0 && "timeFraction" in WW[0]
+                          function jG(RR) {
+                            return RR.length > 0 && "timeFraction" in RR[0]
                           }
 
-                          function GO(WW, iW) {
-                            if (0 === WW.colorGradients.length) return [{
+                          function dG(RR, JR) {
+                            if (0 === RR.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!RO(WW.colorGradients)) {
-                              const OW = WW.colorGradients,
+                            if (!jG(RR.colorGradients)) {
+                              const GR = RR.colorGradients,
                                 {
-                                  color: mW
-                                } = OW[Math.floor(iW() * OW.length) % OW.length];
+                                  color: yR
+                                } = GR[Math.floor(JR() * GR.length) % GR.length];
                               return [{
                                 at: 0,
-                                colour: [mW[0] / 255, mW[1] / 255, mW[2] / 255, 1]
+                                colour: [yR[0] / 255, yR[1] / 255, yR[2] / 255, 1]
                               }]
                             }
-                            return [...WW.colorGradients].sort(((WW, iW) => WW.timeFraction - iW.timeFraction)).map((WW => {
-                              var OW, mW, EW;
-                              const NW = WW.minColor,
-                                PW = null !== (OW = WW.maxColor) && void 0 !== OW ? OW : NW,
-                                LW = iW(),
-                                cW = [qO(NW[0], PW[0], LW) / 255, qO(NW[1], PW[1], LW) / 255, qO(NW[2], PW[2], LW) / 255, qO(null !== (mW = NW[3]) && void 0 !== mW ? mW : 1, null !== (EW = PW[3]) && void 0 !== EW ? EW : 1, LW)];
+                            return [...RR.colorGradients].sort(((RR, JR) => RR.timeFraction - JR.timeFraction)).map((RR => {
+                              var GR, yR, tR;
+                              const uR = RR.minColor,
+                                ZR = null !== (GR = RR.maxColor) && void 0 !== GR ? GR : uR,
+                                qR = JR(),
+                                iR = [SG(uR[0], ZR[0], qR) / 255, SG(uR[1], ZR[1], qR) / 255, SG(uR[2], ZR[2], qR) / 255, SG(null !== (yR = uR[3]) && void 0 !== yR ? yR : 1, null !== (tR = ZR[3]) && void 0 !== tR ? tR : 1, qR)];
                               return {
-                                at: WW.timeFraction,
-                                colour: cW
+                                at: RR.timeFraction,
+                                colour: iR
                               }
                             }))
                           }
 
-                          function IO(WW, iW, OW, mW) {
-                            const EW = BO(mW, WW.minEmitPower, WW.maxEmitPower),
-                              NW = iW => BO(mW, Math.min(WW.dir1[iW], WW.dir2[iW]), Math.max(WW.dir1[iW], WW.dir2[iW])) * EW,
-                              PW = [...WW.velocityGradients].sort(((WW, iW) => WW.timeFraction - iW.timeFraction)).map((WW => ({
-                                at: WW.timeFraction,
-                                factor: BO(mW, WW.factor, WW.factor2)
+                          function EG(RR, JR, GR, yR) {
+                            const tR = zG(yR, RR.minEmitPower, RR.maxEmitPower),
+                              uR = JR => zG(yR, Math.min(RR.dir1[JR], RR.dir2[JR]), Math.max(RR.dir1[JR], RR.dir2[JR])) * tR,
+                              ZR = [...RR.velocityGradients].sort(((RR, JR) => RR.timeFraction - JR.timeFraction)).map((RR => ({
+                                at: RR.timeFraction,
+                                factor: zG(yR, RR.factor, RR.factor2)
                               })));
                             return {
-                              pos: [BO(mW, iW[0], OW[0]), BO(mW, iW[1], OW[1]), BO(mW, iW[2], OW[2])],
-                              dir: [NW(0), NW(1), NW(2)],
+                              pos: [zG(yR, JR[0], GR[0]), zG(yR, JR[1], GR[1]), zG(yR, JR[2], GR[2])],
+                              dir: [uR(0), uR(1), uR(2)],
                               age: 0,
-                              life: BO(mW, WW.minLifeTime, WW.maxLifeTime),
-                              size: BO(mW, WW.minSize, WW.maxSize),
-                              colours: GO(WW, mW),
-                              velocityFactors: PW
+                              life: zG(yR, RR.minLifeTime, RR.maxLifeTime),
+                              size: zG(yR, RR.minSize, RR.maxSize),
+                              colours: dG(RR, yR),
+                              velocityFactors: ZR
                             }
                           }
 
-                          function aO(WW, iW, OW, mW) {
-                            if (iW < WW[0].at) return OW(Math.min(1, WW.length - 1));
-                            for (let EW = 0; EW < WW.length - 1; EW++)
-                              if (iW <= WW[EW + 1].at) {
-                                const NW = WW[EW + 1].at - WW[EW].at;
-                                return mW(OW(EW), OW(EW + 1), NW > 0 ? (iW - WW[EW].at) / NW : 1)
-                              } return OW(WW.length - 1)
+                          function YG(RR, JR, GR, yR) {
+                            if (JR < RR[0].at) return GR(Math.min(1, RR.length - 1));
+                            for (let tR = 0; tR < RR.length - 1; tR++)
+                              if (JR <= RR[tR + 1].at) {
+                                const uR = RR[tR + 1].at - RR[tR].at;
+                                return yR(GR(tR), GR(tR + 1), uR > 0 ? (JR - RR[tR].at) / uR : 1)
+                              } return GR(RR.length - 1)
                           }
 
-                          function rO(WW) {
-                            return aO(WW.colours, WW.age / WW.life, (iW => WW.colours[iW].colour), ((WW, iW, OW) => [qO(WW[0], iW[0], OW), qO(WW[1], iW[1], OW), qO(WW[2], iW[2], OW), qO(WW[3], iW[3], OW)]))
+                          function kG(RR) {
+                            return YG(RR.colours, RR.age / RR.life, (JR => RR.colours[JR].colour), ((RR, JR, GR) => [SG(RR[0], JR[0], GR), SG(RR[1], JR[1], GR), SG(RR[2], JR[2], GR), SG(RR[3], JR[3], GR)]))
                           }
 
-                          function zO(WW, iW, OW) {
-                            if (WW.age += OW, WW.age >= WW.life) return !1;
-                            const mW = function(WW) {
-                              return 0 === WW.velocityFactors.length ? 1 : aO(WW.velocityFactors, WW.age / WW.life, (iW => WW.velocityFactors[iW].factor), qO)
-                            }(WW) * OW;
-                            for (let NW = 0; NW < 3; NW++) {
-                              var EW;
-                              WW.pos[NW] += WW.dir[NW] * mW, WW.dir[NW] += (null !== (EW = iW[NW]) && void 0 !== EW ? EW : 0) * OW
+                          function QG(RR, JR, GR) {
+                            if (RR.age += GR, RR.age >= RR.life) return !1;
+                            const yR = function(RR) {
+                              return 0 === RR.velocityFactors.length ? 1 : YG(RR.velocityFactors, RR.age / RR.life, (JR => RR.velocityFactors[JR].factor), SG)
+                            }(RR) * GR;
+                            for (let uR = 0; uR < 3; uR++) {
+                              var tR;
+                              RR.pos[uR] += RR.dir[uR] * yR, RR.dir[uR] += (null !== (tR = JR[uR]) && void 0 !== tR ? tR : 0) * GR
                             }
                             return !0
                           }
 
-                          function FO(WW) {
-                            return String(Math.round(1e6 * WW) / 1e6)
+                          function FG(RR) {
+                            return String(Math.round(1e6 * RR) / 1e6)
                           }
 
-                          function QO(WW) {
-                            return `[${WW.map(FO).join(", ")}]`
+                          function TG(RR) {
+                            return `[${RR.map(FG).join(", ")}]`
                           }
 
-                          function Wm(WW, iW) {
-                            const OW = `${iW}    `;
-                            return `[\n${(RO(WW)?WW.map((WW=>{const iW=[`${OW}    timeFraction: ${FO(WW.timeFraction)},`,`${OW}    minColor: ${QO(WW.minColor)},`];return WW.maxColor&&iW.push(`${OW}    maxColor: ${QO(WW.maxColor)},`),`${OW}{\n${iW.join("\n")}\n${OW}},`})):WW.map((WW=>`
+                          function sG(RR, JR) {
+                            const GR = `${JR}    `;
+                            return `[\n${(jG(RR)?RR.map((RR=>{const JR=[`${GR}    timeFraction: ${FG(RR.timeFraction)},`,`${GR}    minColor: ${TG(RR.minColor)},`];return RR.maxColor&&JR.push(`${GR}    maxColor: ${TG(RR.maxColor)},`),`${GR}{\n${JR.join("\n")}\n${GR}},`})):RR.map((RR=>`
                             $ {
-                              OW
+                              GR
                             } {
                               color: $ {
-                                QO(WW.color)
+                                TG(RR.color)
                               }
-                            }, `))).join("\n")}\n${iW}]`
+                            }, `))).join("\n")}\n${JR}]`
                           }
-                          const im = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            Om = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const mm = .6;
+                          const hG = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            Ry = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const Jy = .6;
 
-                          function Em(WW, iW) {
-                            return `${iW?"song":"sound"}:${WW}`
+                          function Gy(RR, JR) {
+                            return `${JR?"song":"sound"}:${RR}`
                           }
-                          let Nm = {
+                          let yy = {
                               track: null,
-                              volume: mm
+                              volume: Jy
                             },
-                            Pm = null,
-                            Lm = 0,
-                            cm = 0;
-                          const wm = new Set;
+                            ty = null,
+                            uy = 0,
+                            Zy = 0;
+                          const qy = new Set;
 
-                          function tm(WW) {
-                            Nm = {
-                              ...Nm,
-                              ...WW
-                            }, wm.forEach((WW => {
-                              WW()
+                          function iy(RR) {
+                            yy = {
+                              ...yy,
+                              ...RR
+                            }, qy.forEach((RR => {
+                              RR()
                             }))
                           }
 
-                          function Zm(WW) {
-                            Nm.track && tm({
+                          function fy(RR) {
+                            yy.track && iy({
                               track: {
-                                ...Nm.track,
-                                ...WW
+                                ...yy.track,
+                                ...RR
                               }
                             })
                           }
 
-                          function xm(WW) {
-                            const [iW, OW] = (0, mW.useState)((() => WW(Nm))), EW = (0, mW.useRef)(WW);
-                            return EW.current = WW, (0, mW.useEffect)((() => {
-                              const WW = () => {
-                                OW((() => EW.current(Nm)))
+                          function Vy(RR) {
+                            const [JR, GR] = (0, yR.useState)((() => RR(yy))), tR = (0, yR.useRef)(RR);
+                            return tR.current = RR, (0, yR.useEffect)((() => {
+                              const RR = () => {
+                                GR((() => tR.current(yy)))
                               };
-                              return wm.add(WW), WW(), () => {
-                                wm.delete(WW)
+                              return qy.add(RR), RR(), () => {
+                                qy.delete(RR)
                               }
-                            }), []), iW
+                            }), []), JR
                           }
 
-                          function lm() {
-                            Lm++;
-                            const WW = Pm;
-                            Pm = null, null === WW || void 0 === WW || WW.stop()
+                          function Ky() {
+                            uy++;
+                            const RR = ty;
+                            ty = null, null === RR || void 0 === RR || RR.stop()
                           }
 
-                          function Am(WW, iW) {
-                            let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            lm();
-                            const EW = Lm,
+                          function wy(RR, JR) {
+                            let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            Ky();
+                            const tR = uy,
                               {
-                                track: NW
-                              } = Nm,
-                              PW = NW && NW.name === WW && NW.isSong === iW ? NW.duration : 0;
-                            cm = mW, tm({
+                                track: uR
+                              } = yy,
+                              ZR = uR && uR.name === RR && uR.isSong === JR ? uR.duration : 0;
+                            Zy = yR, iy({
                               track: {
-                                name: WW,
-                                isSong: iW,
+                                name: RR,
+                                isSong: JR,
                                 status: "loading",
-                                duration: PW
+                                duration: ZR
                               }
-                            }), Promise.all([OW.e(252), OW.e(284)]).then((() => OW(41336))).then((OW => {
+                            }), Promise.all([GR.e(252), GR.e(284)]).then((() => GR(41339))).then((GR => {
                               let {
-                                playDocsSound: NW
-                              } = OW;
-                              EW === Lm && (Pm = NW(WW, iW, Nm.volume, mW, {
-                                onPlay: WW => {
-                                  EW === Lm && Zm({
+                                playDocsSound: uR
+                              } = GR;
+                              tR === uy && (ty = uR(RR, JR, yy.volume, yR, {
+                                onPlay: RR => {
+                                  tR === uy && fy({
                                     status: "playing",
-                                    duration: WW
+                                    duration: RR
                                   })
                                 },
-                                onEnd: WW => {
-                                  var iW, OW;
-                                  EW === Lm && (Pm = null, WW ? tm({
+                                onEnd: RR => {
+                                  var JR, GR;
+                                  tR === uy && (ty = null, RR ? iy({
                                     track: null
-                                  }) : (cm = null !== (iW = null === (OW = Nm.track) || void 0 === OW ? void 0 : OW.duration) && void 0 !== iW ? iW : 0, Zm({
+                                  }) : (Zy = null !== (JR = null === (GR = yy.track) || void 0 === GR ? void 0 : GR.duration) && void 0 !== JR ? JR : 0, fy({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((iW => {
-                              console.error(`Could not play docs sound ${WW}`, iW), EW === Lm && tm({
+                            })).catch((JR => {
+                              console.error(`Could not play docs sound ${RR}`, JR), tR === uy && iy({
                                 track: null
                               })
                             }))
                           }
 
-                          function bm() {
+                          function ry() {
                             const {
-                              track: WW
-                            } = Nm;
-                            if (!WW) return;
-                            if ("playing" === WW.status && Pm) return cm = Pm.Vk(), Pm.pause(), void Zm({
+                              track: RR
+                            } = yy;
+                            if (!RR) return;
+                            if ("playing" === RR.status && ty) return Zy = ty.vW(), ty.pause(), void fy({
                               status: "paused"
                             });
-                            if ("loading" === WW.status) return lm(), void Zm({
+                            if ("loading" === RR.status) return Ky(), void fy({
                               status: "paused"
                             });
-                            if (Pm) return void Pm.resume();
-                            const iW = WW.duration > 0 && cm >= WW.duration - .05;
-                            Am(WW.name, WW.isSong, iW ? 0 : cm)
+                            if (ty) return void ty.resume();
+                            const JR = RR.duration > 0 && Zy >= RR.duration - .05;
+                            wy(RR.name, RR.isSong, JR ? 0 : Zy)
                           }
 
-                          function jm() {
-                            var WW;
-                            return Pm && "playing" === (null === (WW = Nm.track) || void 0 === WW ? void 0 : WW.status) ? Pm.Vk() : cm
+                          function ey() {
+                            var RR;
+                            return ty && "playing" === (null === (RR = yy.track) || void 0 === RR ? void 0 : RR.status) ? ty.vW() : Zy
                           }
 
-                          function Um(WW) {
-                            var iW;
-                            null === (iW = Pm) || void 0 === iW || iW.setVolume(WW), tm({
-                              volume: WW
+                          function ay(RR) {
+                            var JR;
+                            null === (JR = ty) || void 0 === JR || JR.setVolume(RR), iy({
+                              volume: RR
                             })
                           }
 
-                          function km() {
-                            lm(), cm = 0, tm({
+                          function Ly() {
+                            Ky(), Zy = 0, iy({
                               track: null
                             })
                           }
-                          const sm = (0, mW.createContext)(null);
-                          let Mm = null;
+                          const ny = (0, yR.createContext)(null);
+                          let Uy = null;
 
-                          function Km() {
-                            const [WW, iW] = (0, mW.useState)(null);
-                            return (0, mW.useEffect)((() => {
-                              let WW = !1;
-                              return Mm ??= Promise.all([OW.e(85), OW.e(89), OW.e(86), OW.e(87), OW.e(88), OW.e(124), OW.e(36), OW.e(258)]).then((() => OW(41327))), Mm.then((OW => {
-                                WW || iW(OW)
-                              }), (WW => {
-                                console.error("Could not load the docs gallery's textures", WW), Mm = null
+                          function Wy() {
+                            const [RR, JR] = (0, yR.useState)(null);
+                            return (0, yR.useEffect)((() => {
+                              let RR = !1;
+                              return Uy ??= Promise.all([GR.e(85), GR.e(89), GR.e(86), GR.e(87), GR.e(88), GR.e(124), GR.e(36), GR.e(258)]).then((() => GR(41331))), Uy.then((GR => {
+                                RR || JR(GR)
+                              }), (RR => {
+                                console.error("Could not load the docs gallery's textures", RR), Uy = null
                               })), () => {
-                                WW = !0
+                                RR = !0
                               }
-                            }), []), WW
+                            }), []), RR
                           }
-                          const Sm = 24,
-                            Ym = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const Ay = 24,
+                            Cy = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function ym(WW, iW) {
-                            const OW = "skins" === WW ? function(WW, iW) {
-                              const OW = VO.find((iW => WW.startsWith(iW.heading)));
-                              return OW ? function(WW, iW) {
-                                return `${WW}-${iW}`
-                              }(OW.prefix, iW) : null
-                            }(iW.heading, iW.name) : null;
-                            return null === OW ? null : `${DO}/${OW}.webp`
+                          function Xy(RR, JR) {
+                            const GR = "skins" === RR ? function(RR, JR) {
+                              const GR = oG.find((JR => RR.startsWith(JR.heading)));
+                              return GR ? function(RR, JR) {
+                                return `${RR}-${JR}`
+                              }(GR.prefix, JR) : null
+                            }(JR.heading, JR.name) : null;
+                            return null === GR ? null : `${HG}/${GR}.webp`
                           }
 
-                          function Tm(WW) {
+                          function My(RR) {
                             let {
-                              kind: iW,
-                              entry: OW,
-                              assets: EW,
-                              renderedUrl: PW
-                            } = WW;
+                              kind: JR,
+                              entry: GR,
+                              assets: tR,
+                              renderedUrl: ZR
+                            } = RR;
                             const {
-                              name: LW
-                            } = OW, [cW, wW] = (0, mW.useState)(!1);
-                            if ("icons" === iW && Ci(LW)) return (0, AW.jsx)(SO.c, {
+                              name: qR
+                            } = GR, [iR, fR] = (0, yR.useState)(!1);
+                            if ("icons" === JR && IJ(qR)) return (0, eR.jsx)(AG.d, {
                               className: "DocsTileIcon",
-                              name: LW
+                              name: qR
                             });
-                            let tW = null;
-                            var ZW;
-                            if ("icons" === iW) tW = null !== (ZW = null === EW || void 0 === EW ? void 0 : EW.getIngameIconUrl(LW)) && void 0 !== ZW ? ZW : null;
-                            else if ("particles" === iW) {
-                              var xW, lW, bW;
-                              tW = null !== (xW = null === EW || void 0 === EW ? void 0 : EW.getParticleTextureUrl(null !== (lW = null === (bW = CO(LW)) || void 0 === bW ? void 0 : bW.texture) && void 0 !== lW ? lW : LW)) && void 0 !== xW ? xW : null
-                            } else "skins" === iW && (tW = null !== PW && void 0 !== PW ? PW : Ym.test(LW) ? `/textures/charSkins/previews/${LW}_preview.png` : null);
-                            return !tW || cW ? (0, AW.jsx)(jW, {
+                            let VR = null;
+                            var KR;
+                            if ("icons" === JR) VR = null !== (KR = null === tR || void 0 === tR ? void 0 : tR.getIngameIconUrl(qR)) && void 0 !== KR ? KR : null;
+                            else if ("particles" === JR) {
+                              var wR, rR, aR;
+                              VR = null !== (wR = null === tR || void 0 === tR ? void 0 : tR.getParticleTextureUrl(null !== (rR = null === (aR = IG(qR)) || void 0 === aR ? void 0 : aR.texture) && void 0 !== rR ? rR : qR)) && void 0 !== wR ? wR : null
+                            } else "skins" === JR && (VR = null !== ZR && void 0 !== ZR ? ZR : Cy.test(qR) ? `/textures/charSkins/previews/${qR}_preview.png` : null);
+                            return !VR || iR ? (0, eR.jsx)(LR, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === iW ? "person" : "image"
-                            }) : (0, AW.jsx)("img", {
-                              className: NW()("DocsTileImage", {
-                                Pixelated: "skins" !== iW
+                              name: "skins" === JR ? "person" : "image"
+                            }) : (0, eR.jsx)("img", {
+                              className: uR()("DocsTileImage", {
+                                Pixelated: "skins" !== JR
                               }),
-                              src: tW,
-                              srcSet: tW === PW ? `${tW} 2x` : void 0,
+                              src: VR,
+                              srcSet: VR === ZR ? `${VR} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${tW}`), wW(!0)
+                                console.warn(`Docs gallery: could not load ${VR}`), fR(!0)
                               }
                             })
                           }
 
-                          function Jm(WW) {
+                          function By(RR) {
                             let {
-                              entry: iW,
-                              isSong: OW
-                            } = WW;
-                            const mW = xm((WW => {
+                              entry: JR,
+                              isSong: GR
+                            } = RR;
+                            const yR = Vy((RR => {
                                 let {
-                                  track: mW
-                                } = WW;
-                                return (null === mW || void 0 === mW ? void 0 : mW.name) === iW.name && mW.isSong === OW ? mW.status : null
+                                  track: yR
+                                } = RR;
+                                return (null === yR || void 0 === yR ? void 0 : yR.name) === JR.name && yR.isSong === GR ? yR.status : null
                               })),
-                              EW = null !== mW && "paused" !== mW;
-                            return (0, AW.jsxs)("button", {
+                              tR = null !== yR && "paused" !== yR;
+                            return (0, eR.jsxs)("button", {
                               type: "button",
-                              id: iW.anchor,
-                              className: NW()("DocsSoundTile", {
-                                Playing: EW
+                              id: JR.anchor,
+                              className: uR()("DocsSoundTile", {
+                                Playing: tR
                               }),
-                              "data-docs-track": Em(iW.name, OW),
-                              "aria-label": EW ? `Pause ${iW.name}` : `Play ${iW.name}`,
+                              "data-docs-track": Gy(JR.name, GR),
+                              "aria-label": tR ? `Pause ${JR.name}` : `Play ${JR.name}`,
                               onClick: () => {
-                                null !== mW ? bm() : Am(iW.name, OW)
+                                null !== yR ? ry() : wy(JR.name, GR)
                               },
-                              children: [(0, AW.jsx)("span", {
+                              children: [(0, eR.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, AW.jsx)(jW, {
-                                  name: EW ? "pause" : "play"
+                                children: (0, eR.jsx)(LR, {
+                                  name: tR ? "pause" : "play"
                                 })
-                              }), (0, AW.jsx)("code", {
+                              }), (0, eR.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: iW.name
-                              }), iW.caption && (0, AW.jsx)("span", {
+                                children: JR.name
+                              }), JR.caption && (0, eR.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: iW.caption
+                                children: JR.caption
                               })]
                             })
                           }
 
-                          function hm(WW) {
+                          function ly(RR) {
                             let {
-                              kind: iW,
-                              names: OW,
-                              isSongs: EW
-                            } = WW;
-                            const PW = Km(),
-                              [LW, cW] = kW(),
-                              wW = !1 === (null === LW || void 0 === LW ? void 0 : LW.failed) ? LW.text : null,
-                              tW = (0, mW.useContext)(sm),
-                              [ZW, xW] = (0, mW.useState)(""),
-                              lW = ZW.trim().toLowerCase(),
-                              bW = lW ? OW.filter((WW => WW.name.toLowerCase().includes(lW))) : OW;
-                            return (0, AW.jsxs)("div", {
+                              kind: JR,
+                              names: GR,
+                              isSongs: tR
+                            } = RR;
+                            const ZR = Wy(),
+                              [qR, iR] = UR(),
+                              fR = !1 === (null === qR || void 0 === qR ? void 0 : qR.failed) ? qR.text : null,
+                              VR = (0, yR.useContext)(ny),
+                              [KR, wR] = (0, yR.useState)(""),
+                              rR = KR.trim().toLowerCase(),
+                              aR = rR ? GR.filter((RR => RR.name.toLowerCase().includes(rR))) : GR;
+                            return (0, eR.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [OW.length > Sm && (0, AW.jsx)(KO, {
+                              children: [GR.length > Ay && (0, eR.jsx)(WG, {
                                 className: "DocsGalleryFilter",
-                                value: ZW,
-                                placeholder: `Filter ${OW.length} names\u2026`,
+                                value: KR,
+                                placeholder: `Filter ${GR.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: xW,
-                                count: lW ? {
-                                  visible: bW.length,
-                                  total: OW.length
+                                onChange: wR,
+                                count: rR ? {
+                                  visible: aR.length,
+                                  total: GR.length
                                 } : null
-                              }), (0, AW.jsx)("div", {
-                                className: NW()("DocsGalleryGrid", `Kind-${iW}`, {
-                                  Songs: EW
+                              }), (0, eR.jsx)("div", {
+                                className: uR()("DocsGalleryGrid", `Kind-${JR}`, {
+                                  Songs: tR
                                 }),
-                                children: bW.map((WW => {
-                                  if ("sounds" === iW) return (0, AW.jsx)(Jm, {
-                                    entry: WW,
-                                    isSong: EW
-                                  }, WW.anchor);
-                                  if (tW && "particles" === iW && CO(WW.name)) return (0, AW.jsxs)("button", {
+                                children: aR.map((RR => {
+                                  if ("sounds" === JR) return (0, eR.jsx)(By, {
+                                    entry: RR,
+                                    isSong: tR
+                                  }, RR.anchor);
+                                  if (VR && "particles" === JR && IG(RR.name)) return (0, eR.jsxs)("button", {
                                     type: "button",
-                                    id: WW.anchor,
-                                    className: NW()("DocsTile Previewable", {
-                                      Copied: wW === WW.name
+                                    id: RR.anchor,
+                                    className: uR()("DocsTile Previewable", {
+                                      Copied: fR === RR.name
                                     }),
-                                    title: `Play "${WW.name}" in the playground and copy its name`,
+                                    title: `Play "${RR.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      tW(WW.name), cW(WW.name)
+                                      VR(RR.name), iR(RR.name)
                                     },
-                                    children: [(0, AW.jsxs)("span", {
+                                    children: [(0, eR.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, AW.jsx)(Tm, {
-                                        kind: iW,
-                                        entry: WW,
-                                        assets: PW,
+                                      children: [(0, eR.jsx)(My, {
+                                        kind: JR,
+                                        entry: RR,
+                                        assets: ZR,
                                         renderedUrl: null
-                                      }), (0, AW.jsx)("span", {
+                                      }), (0, eR.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, AW.jsx)(jW, {
+                                        children: (0, eR.jsx)(LR, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, AW.jsx)("span", {
+                                    }), (0, eR.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: wW === WW.name ? "Copied!" : WW.name
+                                      children: fR === RR.name ? "Copied!" : RR.name
                                     })]
-                                  }, WW.anchor);
-                                  const OW = ym(iW, WW);
-                                  return (0, AW.jsxs)("button", {
+                                  }, RR.anchor);
+                                  const GR = Xy(JR, RR);
+                                  return (0, eR.jsxs)("button", {
                                     type: "button",
-                                    id: WW.anchor,
-                                    className: NW()("DocsTile", {
-                                      Copied: wW === WW.name
+                                    id: RR.anchor,
+                                    className: uR()("DocsTile", {
+                                      Copied: fR === RR.name
                                     }),
-                                    title: `Copy "${WW.name}"`,
+                                    title: `Copy "${RR.name}"`,
                                     onClick: () => {
-                                      cW(WW.name)
+                                      iR(RR.name)
                                     },
-                                    children: [(0, AW.jsx)("span", {
-                                      className: NW()("DocsTilePreview", {
-                                        Rendered: null !== OW
+                                    children: [(0, eR.jsx)("span", {
+                                      className: uR()("DocsTilePreview", {
+                                        Rendered: null !== GR
                                       }),
-                                      children: (0, AW.jsx)(Tm, {
-                                        kind: iW,
-                                        entry: WW,
-                                        assets: PW,
-                                        renderedUrl: OW
+                                      children: (0, eR.jsx)(My, {
+                                        kind: JR,
+                                        entry: RR,
+                                        assets: ZR,
+                                        renderedUrl: GR
                                       })
-                                    }), (0, AW.jsx)("span", {
+                                    }), (0, eR.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: wW === WW.name ? "Copied!" : WW.name
+                                      children: fR === RR.name ? "Copied!" : RR.name
                                     })]
-                                  }, WW.anchor)
+                                  }, RR.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function Hm(WW) {
+                          function py(RR) {
                             let {
-                              kind: iW,
-                              content: OW,
-                              blocks: mW
-                            } = WW;
-                            return (0, AW.jsx)(AW.Fragment, {
-                              children: gO(iW, OW, mW).map(((WW, OW) => "block" === WW.kind ? (0, AW.jsx)(AO, {
-                                block: WW.block
-                              }, OW) : (0, AW.jsx)(hm, {
-                                kind: iW,
-                                names: WW.names,
-                                isSongs: WW.isSongs
-                              }, OW)))
+                              kind: JR,
+                              content: GR,
+                              blocks: yR
+                            } = RR;
+                            return (0, eR.jsx)(eR.Fragment, {
+                              children: DG(JR, GR, yR).map(((RR, GR) => "block" === RR.kind ? (0, eR.jsx)(wG, {
+                                block: RR.block
+                              }, GR) : (0, eR.jsx)(ly, {
+                                kind: JR,
+                                names: RR.names,
+                                isSongs: RR.isSongs
+                              }, GR)))
                             })
                           }
-                          const nm = [{
+                          const gy = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function um(WW) {
+                          function by(RR) {
                             let {
-                              cards: iW = nm,
-                              label: OW = "Start here"
-                            } = WW;
-                            const EW = (0, mW.useContext)(li);
-                            return (0, AW.jsx)("nav", {
+                              cards: JR = gy,
+                              label: GR = "Start here"
+                            } = RR;
+                            const tR = (0, yR.useContext)(rJ);
+                            return (0, eR.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": OW,
-                              children: iW.map((WW => {
+                              "aria-label": GR,
+                              children: JR.map((RR => {
                                 let {
-                                  pageId: iW,
-                                  countNoun: OW
-                                } = WW;
-                                const mW = VW(iW);
-                                return (0, AW.jsxs)(PW.b, {
-                                  to: qW(EW, mW),
+                                  pageId: JR,
+                                  countNoun: GR
+                                } = RR;
+                                const yR = PR(JR);
+                                return (0, eR.jsxs)(ZR.b, {
+                                  to: dR(tR, yR),
                                   className: "DocsLandingCard",
-                                  children: [(0, AW.jsx)("span", {
+                                  children: [(0, eR.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, AW.jsx)(jW, {
-                                      name: mW.icon
+                                    children: (0, eR.jsx)(LR, {
+                                      name: yR.icon
                                     })
-                                  }), (0, AW.jsx)("span", {
+                                  }), (0, eR.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: mW.title
-                                  }), (0, AW.jsx)("span", {
+                                    children: yR.title
+                                  }), (0, eR.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: mW.summary
-                                  }), OW && (0, AW.jsxs)("span", {
+                                    children: yR.summary
+                                  }), GR && (0, eR.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [fW(mW).sections.length, " ", OW]
+                                    children: [mR(yR).sections.length, " ", GR]
                                   })]
-                                }, iW)
+                                }, JR)
                               }))
                             })
                           }
-                          const om = 240;
+                          const vy = 240;
 
-                          function dm(WW) {
+                          function Oy(RR) {
                             let {
-                              faces: iW
-                            } = WW;
-                            return (0, AW.jsxs)("span", {
+                              faces: JR
+                            } = RR;
+                            return (0, eR.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, AW.jsx)("span", {
+                              children: [(0, eR.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${iW.top}")`
+                                  backgroundImage: `url("${JR.top}")`
                                 }
-                              }), (0, AW.jsx)("span", {
+                              }), (0, eR.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${iW.left}")`
+                                  backgroundImage: `url("${JR.left}")`
                                 }
-                              }), (0, AW.jsx)("span", {
+                              }), (0, eR.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${iW.right}")`
+                                  backgroundImage: `url("${JR.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function em(WW) {
+                          function xy(RR) {
                             let {
-                              src: iW
-                            } = WW;
-                            const [OW, EW] = (0, mW.useState)(!1);
-                            return OW ? null : (0, AW.jsx)("img", {
-                              src: iW,
+                              src: JR
+                            } = RR;
+                            const [GR, tR] = (0, yR.useState)(!1);
+                            return GR ? null : (0, eR.jsx)("img", {
+                              src: JR,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${iW}`), EW(!0)
+                                console.warn(`Docs catalogue: could not load ${JR}`), tR(!0)
                               }
                             })
                           }
 
-                          function gm(WW) {
+                          function Ny(RR) {
                             let {
-                              kind: iW
-                            } = WW;
-                            const OW = MO(iW),
-                              EW = Km(),
-                              PW = (0, LW.u)(),
-                              [cW, wW] = (0, mW.useState)(""),
-                              [tW, ZW] = (0, mW.useState)(null),
-                              [xW, lW] = (0, mW.useState)(om),
-                              [bW, UW] = (0, mW.useState)(null),
-                              kW = (0, mW.useRef)(null),
-                              MW = cW.trim().toLowerCase();
-                            (0, mW.useEffect)((() => {
-                              const WW = (0, yW.o)(PW.hash),
-                                mW = OW.entries.find((OW => eO(iW, OW.name) === WW));
-                              if (mW) kW.current = mW.name, wW(mW.name), ZW(null), UW(mW.name);
-                              else if (null !== kW.current) {
-                                const WW = kW.current;
-                                kW.current = null, wW((iW => iW === WW ? "" : iW)), UW(null)
+                              kind: JR
+                            } = RR;
+                            const GR = UG(JR),
+                              tR = Wy(),
+                              ZR = (0, qR.r)(),
+                              [iR, fR] = (0, yR.useState)(""),
+                              [VR, KR] = (0, yR.useState)(null),
+                              [wR, rR] = (0, yR.useState)(vy),
+                              [aR, nR] = (0, yR.useState)(null),
+                              UR = (0, yR.useRef)(null),
+                              AR = iR.trim().toLowerCase();
+                            (0, yR.useEffect)((() => {
+                              const RR = (0, BR.r)(ZR.hash),
+                                yR = GR.entries.find((GR => xG(JR, GR.name) === RR));
+                              if (yR) UR.current = yR.name, fR(yR.name), KR(null), nR(yR.name);
+                              else if (null !== UR.current) {
+                                const RR = UR.current;
+                                UR.current = null, fR((JR => JR === RR ? "" : JR)), nR(null)
                               }
-                            }), [OW, iW, PW.hash, PW.key]), (0, mW.useEffect)((() => {
-                              var WW;
-                              null !== bW && (null === (WW = document.getElementById(eO(iW, bW))) || void 0 === WW || WW.scrollIntoView({
+                            }), [GR, JR, ZR.hash, ZR.key]), (0, yR.useEffect)((() => {
+                              var RR;
+                              null !== aR && (null === (RR = document.getElementById(xG(JR, aR))) || void 0 === RR || RR.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [iW, bW]);
-                            const KW = OW.entries.filter((WW => (!MW || WW.name.toLowerCase().includes(MW)) && (!tW || WW.variants.includes(tW))));
-                            return (0, AW.jsxs)("div", {
+                            }), [JR, aR]);
+                            const CR = GR.entries.filter((RR => (!AR || RR.name.toLowerCase().includes(AR)) && (!VR || RR.variants.includes(VR))));
+                            return (0, eR.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [OW.notes.length > 0 && (0, AW.jsx)("div", {
+                              children: [GR.notes.length > 0 && (0, eR.jsx)("div", {
                                 className: "DocsProse",
-                                children: OW.notes.map((WW => (0, AW.jsx)("p", {
-                                  children: WW
-                                }, WW)))
-                              }), OW.legend.length > 0 && (0, AW.jsx)("div", {
+                                children: GR.notes.map((RR => (0, eR.jsx)("p", {
+                                  children: RR
+                                }, RR)))
+                              }), GR.legend.length > 0 && (0, eR.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, AW.jsxs)("table", {
+                                children: (0, eR.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, AW.jsx)("thead", {
-                                    children: (0, AW.jsxs)("tr", {
-                                      children: [(0, AW.jsx)("th", {
+                                  children: [(0, eR.jsx)("thead", {
+                                    children: (0, eR.jsxs)("tr", {
+                                      children: [(0, eR.jsx)("th", {
                                         children: "Code"
-                                      }), (0, AW.jsx)("th", {
+                                      }), (0, eR.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, AW.jsx)("th", {
+                                      }), (0, eR.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, AW.jsx)("tbody", {
-                                    children: OW.legend.map((WW => (0, AW.jsxs)("tr", {
-                                      children: [(0, AW.jsx)("td", {
-                                        children: (0, AW.jsx)("button", {
+                                  }), (0, eR.jsx)("tbody", {
+                                    children: GR.legend.map((RR => (0, eR.jsxs)("tr", {
+                                      children: [(0, eR.jsx)("td", {
+                                        children: (0, eR.jsx)("button", {
                                           type: "button",
-                                          className: NW()("DocsVariantChip", {
-                                            Active: tW === WW.code
+                                          className: uR()("DocsVariantChip", {
+                                            Active: VR === RR.code
                                           }),
-                                          "aria-pressed": tW === WW.code,
-                                          title: `Show only ${iW} with ${WW.meaning} variants`,
+                                          "aria-pressed": VR === RR.code,
+                                          title: `Show only ${JR} with ${RR.meaning} variants`,
                                           onClick: () => {
-                                            ZW(tW === WW.code ? null : WW.code)
+                                            KR(VR === RR.code ? null : RR.code)
                                           },
-                                          children: WW.code
+                                          children: RR.code
                                         })
-                                      }), (0, AW.jsx)("td", {
-                                        children: WW.meaning
-                                      }), (0, AW.jsx)("td", {
-                                        children: (0, AW.jsx)("code", {
+                                      }), (0, eR.jsx)("td", {
+                                        children: RR.meaning
+                                      }), (0, eR.jsx)("td", {
+                                        children: (0, eR.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: WW.usage
+                                          children: RR.usage
                                         })
                                       })]
-                                    }, WW.code)))
+                                    }, RR.code)))
                                   })]
                                 })
-                              }), OW.examples.length > 0 && (0, AW.jsx)(YW, {
+                              }), GR.examples.length > 0 && (0, eR.jsx)(MR, {
                                 lang: "text",
-                                code: OW.examples.join("\n")
-                              }), (0, AW.jsx)(KO, {
+                                code: GR.examples.join("\n")
+                              }), (0, eR.jsx)(WG, {
                                 className: "DocsFilterBar",
-                                value: cW,
-                                placeholder: `Search ${OW.entries.length} ${iW}\u2026`,
-                                label: `Search ${iW}`,
-                                onChange: WW => {
-                                  wW(WW), lW(om)
+                                value: iR,
+                                placeholder: `Search ${GR.entries.length} ${JR}\u2026`,
+                                label: `Search ${JR}`,
+                                onChange: RR => {
+                                  fR(RR), rR(vy)
                                 },
-                                count: MW || tW ? {
-                                  visible: KW.length,
-                                  total: OW.entries.length
+                                count: AR || VR ? {
+                                  visible: CR.length,
+                                  total: GR.entries.length
                                 } : null,
-                                children: tW && (0, AW.jsxs)("button", {
+                                children: VR && (0, eR.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    ZW(null)
+                                    KR(null)
                                   },
-                                  children: [tW, " ", (0, AW.jsx)(jW, {
+                                  children: [VR, " ", (0, eR.jsx)(LR, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, AW.jsx)("div", {
+                              }), (0, eR.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: KW.slice(0, xW).map((WW => {
-                                  const OW = "blocks" === iW ? null === EW || void 0 === EW ? void 0 : EW.getBlockFaces(WW.name) : null,
-                                    mW = EW && !OW ? EW.getItemTextureUrl(WW.name) : null;
-                                  return (0, AW.jsxs)("div", {
-                                    id: eO(iW, WW.name),
-                                    className: NW()("DocsCatalogueTile", {
-                                      Linked: WW.name === bW
+                                children: CR.slice(0, wR).map((RR => {
+                                  const GR = "blocks" === JR ? null === tR || void 0 === tR ? void 0 : tR.getBlockFaces(RR.name) : null,
+                                    yR = tR && !GR ? tR.getItemTextureUrl(RR.name) : null;
+                                  return (0, eR.jsxs)("div", {
+                                    id: xG(JR, RR.name),
+                                    className: uR()("DocsCatalogueTile", {
+                                      Linked: RR.name === aR
                                     }),
-                                    children: [(0, AW.jsxs)("span", {
+                                    children: [(0, eR.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [OW && (0, AW.jsx)(dm, {
-                                        faces: OW
-                                      }), mW && (0, AW.jsx)(em, {
-                                        src: mW
+                                      children: [GR && (0, eR.jsx)(Oy, {
+                                        faces: GR
+                                      }), yR && (0, eR.jsx)(xy, {
+                                        src: yR
                                       })]
-                                    }), (0, AW.jsx)("span", {
+                                    }), (0, eR.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: WW.name
-                                    }), WW.variants.length > 0 && (0, AW.jsx)("span", {
+                                      children: RR.name
+                                    }), RR.variants.length > 0 && (0, eR.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: WW.variants.map((WW => (0, AW.jsx)("span", {
-                                        children: WW
-                                      }, WW)))
-                                    }), (0, AW.jsx)(sW, {
-                                      text: WW.name,
+                                      children: RR.variants.map((RR => (0, eR.jsx)("span", {
+                                        children: RR
+                                      }, RR)))
+                                    }), (0, eR.jsx)(WR, {
+                                      text: RR.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, WW.name)
+                                  }, RR.name)
                                 }))
-                              }), KW.length > xW && (0, AW.jsxs)("button", {
+                              }), CR.length > wR && (0, eR.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  lW(KW.length)
+                                  rR(CR.length)
                                 },
-                                children: ["Show all ", KW.length]
-                              }), 0 === KW.length && (0, AW.jsxs)("p", {
+                                children: ["Show all ", CR.length]
+                              }), 0 === CR.length && (0, eR.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", iW, " match."]
+                                children: ["No ", JR, " match."]
                               })]
                             })
                           }
-                          var Dm = OW(5582),
-                            Vm = OW(1685);
-                          const pm = .95 * Dm.c;
+                          var Dy = GR(5707),
+                            Hy = GR(1746);
+                          const oy = .95 * Dy.d;
 
-                          function fm(WW) {
-                            return /^\s*```/.test(WW)
+                          function cy(RR) {
+                            return /^\s*```/.test(RR)
                           }
 
-                          function Cm(WW, iW) {
-                            const OW = [
+                          function Py(RR, JR) {
+                            const GR = [
                               []
                             ];
-                            let mW = !1;
-                            for (const EW of WW.split("\n")) !mW && iW(EW) && OW.at(-1).length > 0 && OW.push([]), fm(EW) && (mW = !mW), OW.at(-1).push(EW);
-                            return OW.map((WW => WW.join("\n").trim())).filter(Boolean)
+                            let yR = !1;
+                            for (const tR of RR.split("\n")) !yR && JR(tR) && GR.at(-1).length > 0 && GR.push([]), cy(tR) && (yR = !yR), GR.at(-1).push(tR);
+                            return GR.map((RR => RR.join("\n").trim())).filter(Boolean)
                           }
 
-                          function Xm(WW, iW) {
-                            const OW = `${"#".repeat(iW)} `,
-                              mW = [];
-                            let EW = !1;
-                            for (const NW of WW.split("\n")) fm(NW) ? EW = !EW : !EW && NW.startsWith(OW) && mW.push(NW.slice(OW.length).trim());
-                            return mW
+                          function Iy(RR, JR) {
+                            const GR = `${"#".repeat(JR)} `,
+                              yR = [];
+                            let tR = !1;
+                            for (const uR of RR.split("\n")) cy(uR) ? tR = !tR : !tR && uR.startsWith(GR) && yR.push(uR.slice(GR.length).trim());
+                            return yR
                           }
 
-                          function Bm(WW) {
-                            return WW.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function my(RR) {
+                            return RR.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class qm {
-                            constructor(WW, iW) {
-                              this.origin = iW, this.pages = void 0, this.partPaths = new Map;
-                              const OW = WW.map((WW => {
-                                const iW = iW => this.resolveLinks(WW, iW).length,
-                                  OW = function(WW, iW) {
-                                    const OW = WW.map((WW => iW(WW.markdown) + 2)),
-                                      mW = OW.reduce(((WW, iW) => WW + iW), 0),
-                                      EW = mW / Math.ceil(mW / pm),
-                                      NW = [];
-                                    let PW = 0;
-                                    return WW.forEach(((WW, iW) => {
-                                      const mW = OW[iW];
-                                      (0 === NW.length || PW + mW > pm || PW + mW / 2 > EW) && (NW.push([]), PW = 0), NW.at(-1).push(WW), PW += mW
-                                    })), NW
-                                  }(function(WW, iW) {
-                                    return Cm(WW, (WW => WW.startsWith("## "))).flatMap((WW => {
-                                      var OW;
-                                      const mW = null !== (OW = Xm(WW, 2)[0]) && void 0 !== OW ? OW : "";
-                                      if (iW(WW) <= pm) return [{
-                                        markdown: WW,
-                                        section: mW
+                          class zy {
+                            constructor(RR, JR) {
+                              this.origin = JR, this.pages = void 0, this.partPaths = new Map;
+                              const GR = RR.map((RR => {
+                                const JR = JR => this.resolveLinks(RR, JR).length,
+                                  GR = function(RR, JR) {
+                                    const GR = RR.map((RR => JR(RR.markdown) + 2)),
+                                      yR = GR.reduce(((RR, JR) => RR + JR), 0),
+                                      tR = yR / Math.ceil(yR / oy),
+                                      uR = [];
+                                    let ZR = 0;
+                                    return RR.forEach(((RR, JR) => {
+                                      const yR = GR[JR];
+                                      (0 === uR.length || ZR + yR > oy || ZR + yR / 2 > tR) && (uR.push([]), ZR = 0), uR.at(-1).push(RR), ZR += yR
+                                    })), uR
+                                  }(function(RR, JR) {
+                                    return Py(RR, (RR => RR.startsWith("## "))).flatMap((RR => {
+                                      var GR;
+                                      const yR = null !== (GR = Iy(RR, 2)[0]) && void 0 !== GR ? GR : "";
+                                      if (JR(RR) <= oy) return [{
+                                        markdown: RR,
+                                        section: yR
                                       }];
-                                      let EW = !1,
-                                        NW = "";
-                                      return Cm(WW, (WW => {
-                                        const iW = EW && "" !== WW.trim();
-                                        return EW = "" === WW.trim(), iW
-                                      })).map((WW => {
-                                        var iW;
-                                        const OW = Xm(WW, 3),
-                                          EW = WW.startsWith("### ") ? OW[0] : NW;
-                                        return NW = null !== (iW = OW.at(-1)) && void 0 !== iW ? iW : NW, {
-                                          markdown: WW,
-                                          section: mW || EW
+                                      let tR = !1,
+                                        uR = "";
+                                      return Py(RR, (RR => {
+                                        const JR = tR && "" !== RR.trim();
+                                        return tR = "" === RR.trim(), JR
+                                      })).map((RR => {
+                                        var JR;
+                                        const GR = Iy(RR, 3),
+                                          tR = RR.startsWith("### ") ? GR[0] : uR;
+                                        return uR = null !== (JR = GR.at(-1)) && void 0 !== JR ? JR : uR, {
+                                          markdown: RR,
+                                          section: yR || tR
                                         }
                                       }))
                                     }))
-                                  }(Bm(WW), iW), iW);
+                                  }(my(RR), JR), JR);
                                 return {
-                                  page: WW,
-                                  groups: OW.length > 1 ? OW : []
+                                  page: RR,
+                                  groups: GR.length > 1 ? GR : []
                                 }
                               }));
                               for (const {
-                                  page: mW,
-                                  groups: EW
+                                  page: yR,
+                                  groups: tR
                                 }
-                                of OW) EW.forEach(((WW, iW) => {
-                                const OW = (0, Dm.D)(mW.slug, iW);
-                                for (const EW of WW.flatMap((WW => [...Xm(WW.markdown, 2), ...Xm(WW.markdown, 3)]))) {
-                                  const WW = `${mW.id}#${(0,yW.s)(EW)}`;
-                                  this.partPaths.has(WW) || this.partPaths.set(WW, OW)
+                                of GR) tR.forEach(((RR, JR) => {
+                                const GR = (0, Dy.q)(yR.slug, JR);
+                                for (const tR of RR.flatMap((RR => [...Iy(RR.markdown, 2), ...Iy(RR.markdown, 3)]))) {
+                                  const RR = `${yR.id}#${(0,BR.s)(tR)}`;
+                                  this.partPaths.has(RR) || this.partPaths.set(RR, GR)
                                 }
                               }));
-                              this.pages = OW.map((WW => {
+                              this.pages = GR.map((RR => {
                                 let {
-                                  page: iW,
-                                  groups: OW
-                                } = WW;
+                                  page: JR,
+                                  groups: GR
+                                } = RR;
                                 return {
-                                  page: iW,
-                                  path: (0, Dm.A)(iW.slug),
-                                  markdown: `# ${iW.title}\n\n${this.resolveLinks(iW,Bm(iW))}\n`,
-                                  parts: OW.map(((WW, mW) => this.renderPart(iW, WW, mW, OW.length)))
+                                  page: JR,
+                                  path: (0, Dy.o)(JR.slug),
+                                  markdown: `# ${JR.title}\n\n${this.resolveLinks(JR,my(JR))}\n`,
+                                  parts: GR.map(((RR, yR) => this.renderPart(JR, RR, yR, GR.length)))
                                 }
                               }))
                             }
-                            url(WW) {
-                              return `${this.origin}${WW}`
+                            url(RR) {
+                              return `${this.origin}${RR}`
                             }
-                            getPage(WW) {
-                              return this.pages.find((iW => iW.page.id === WW))
+                            getPage(RR) {
+                              return this.pages.find((JR => JR.page.id === RR))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((WW => (WW.parts.length > 0 ? WW.parts : [{
-                                path: WW.path,
+                              return this.pages.flatMap((RR => (RR.parts.length > 0 ? RR.parts : [{
+                                path: RR.path,
                                 label: "",
-                                markdown: WW.markdown
-                              }]).filter((WW => WW.markdown.length > Dm.c))))
+                                markdown: RR.markdown
+                              }]).filter((RR => RR.markdown.length > Dy.d))))
                             }
-                            markdownUrl(WW, iW) {
-                              const OW = iW && this.partPaths.get(`${WW.id}#${iW}`) || (0, Dm.A)(WW.slug);
-                              return this.url(iW ? `${OW}#${iW}` : OW)
+                            markdownUrl(RR, JR) {
+                              const GR = JR && this.partPaths.get(`${RR.id}#${JR}`) || (0, Dy.o)(RR.slug);
+                              return this.url(JR ? `${GR}#${JR}` : GR)
                             }
-                            resolveLinks(WW, iW) {
-                              return iW.replace(/\]\((#[^)]+)\)/g, ((iW, OW) => {
-                                var mW;
-                                const EW = null !== (mW = XW(OW)) && void 0 !== mW ? mW : this.samePageTarget(WW, OW);
-                                return EW ? `](${this.markdownUrl(EW.page,EW.anchor)})` : iW
+                            resolveLinks(RR, JR) {
+                              return JR.replace(/\]\((#[^)]+)\)/g, ((JR, GR) => {
+                                var yR;
+                                const tR = null !== (yR = SR(GR)) && void 0 !== yR ? yR : this.samePageTarget(RR, GR);
+                                return tR ? `](${this.markdownUrl(tR.page,tR.anchor)})` : JR
                               }))
                             }
-                            samePageTarget(WW, iW) {
-                              const OW = (0, yW.s)(iW.slice(1));
-                              return CW(WW, OW) ? {
-                                page: WW,
-                                anchor: OW
+                            samePageTarget(RR, JR) {
+                              const GR = (0, BR.s)(JR.slice(1));
+                              return zR(RR, GR) ? {
+                                page: RR,
+                                anchor: GR
                               } : null
                             }
-                            renderPart(WW, iW, OW, mW) {
-                              const EW = function(WW) {
-                                  const iW = WW.map((WW => WW.section)).filter(Boolean);
-                                  if (0 === iW.length) return "";
-                                  const OW = iW[0],
-                                    mW = iW.at(-1);
-                                  return OW === mW ? OW : `${OW} to ${mW}`
-                                }(iW),
-                                NW = iW.map((WW => WW.markdown)).join("\n\n"),
-                                PW = EW ? `It covers ${EW}. ` : "",
-                                LW = `Part ${OW+1} of ${mW} of [${WW.title}](${this.url((0,Dm.A)(WW.slug))}). ${PW}[llms.txt](${this.url(Dm.k)}) lists every part.`;
+                            renderPart(RR, JR, GR, yR) {
+                              const tR = function(RR) {
+                                  const JR = RR.map((RR => RR.section)).filter(Boolean);
+                                  if (0 === JR.length) return "";
+                                  const GR = JR[0],
+                                    yR = JR.at(-1);
+                                  return GR === yR ? GR : `${GR} to ${yR}`
+                                }(JR),
+                                uR = JR.map((RR => RR.markdown)).join("\n\n"),
+                                ZR = tR ? `It covers ${tR}. ` : "",
+                                qR = `Part ${GR+1} of ${yR} of [${RR.title}](${this.url((0,Dy.o)(RR.slug))}). ${ZR}[llms.txt](${this.url(Dy.i)}) lists every part.`;
                               return {
-                                path: (0, Dm.D)(WW.slug, OW),
-                                label: EW,
-                                markdown: `# ${WW.title}, part ${OW+1} of ${mW}\n\n${LW}\n\n${this.resolveLinks(WW,NW)}\n`
+                                path: (0, Dy.q)(RR.slug, GR),
+                                label: tR,
+                                markdown: `# ${RR.title}, part ${GR+1} of ${yR}\n\n${qR}\n\n${this.resolveLinks(RR,uR)}\n`
                               }
                             }
-                            llmsTxt(WW) {
-                              const iW = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Rm(Dm.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const OW of DW) {
-                                iW.push("", `## ${OW.title}`, "");
-                                for (const WW of OW.pageIds) {
-                                  const OW = this.getPage(WW),
+                            llmsTxt(RR) {
+                              const JR = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Sy(Dy.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const GR of cR) {
+                                JR.push("", `## ${GR.title}`, "");
+                                for (const RR of GR.pageIds) {
+                                  const GR = this.getPage(RR),
                                     {
-                                      page: mW,
-                                      parts: EW
-                                    } = OW,
-                                    NW = `About ${Rm(OW.markdown.length)} tokens${EW.length>0?`, in ${EW.length} parts:`:"."}`;
-                                  iW.push(`- [${mW.title}](${this.url(OW.path)}): ${mW.summary} ${NW}`), EW.forEach(((WW, OW) => {
-                                    iW.push(`  - [Part ${OW+1}${WW.label?`: ${WW.label}`:""}](${this.url(WW.path)})`)
+                                      page: yR,
+                                      parts: tR
+                                    } = GR,
+                                    uR = `About ${Sy(GR.markdown.length)} tokens${tR.length>0?`, in ${tR.length} parts:`:"."}`;
+                                  JR.push(`- [${yR.title}](${this.url(GR.path)}): ${yR.summary} ${uR}`), tR.forEach(((RR, GR) => {
+                                    JR.push(`  - [Part ${GR+1}${RR.label?`: ${RR.label}`:""}](${this.url(RR.path)})`)
                                   }))
                                 }
                               }
-                              return iW.push("", "## Optional", "", `- [Every page in one file](${this.url(Dm.g)}): About ${Rm(WW.length)} tokens, for a model with a large context window.`, ""), iW.join("\n")
+                              return JR.push("", "## Optional", "", `- [Every page in one file](${this.url(Dy.g)}): About ${Sy(RR.length)} tokens, for a model with a large context window.`, ""), JR.join("\n")
                             }
                             llmsFullTxt() {
-                              return DW.flatMap((WW => WW.pageIds.map((WW => this.getPage(WW).markdown)))).join("\n---\n\n")
+                              return cR.flatMap((RR => RR.pageIds.map((RR => this.getPage(RR).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const WW = this.llmsFullTxt(),
-                                iW = this.llmsTxt(WW),
-                                OW = new Map([
-                                  [Dm.s, iW],
-                                  [Dm.k, iW],
-                                  [Dm.g, WW]
+                              const RR = this.llmsFullTxt(),
+                                JR = this.llmsTxt(RR),
+                                GR = new Map([
+                                  [Dy.m, JR],
+                                  [Dy.i, JR],
+                                  [Dy.g, RR]
                                 ]);
-                              for (const mW of this.pages) {
-                                OW.set(mW.path, mW.markdown);
-                                for (const WW of mW.parts) OW.set(WW.path, WW.markdown)
+                              for (const yR of this.pages) {
+                                GR.set(yR.path, yR.markdown);
+                                for (const RR of yR.parts) GR.set(RR.path, RR.markdown)
                               }
-                              return OW
+                              return GR
                             }
                           }
 
-                          function Rm(WW) {
-                            return `${Math.max(1,Math.round(WW/4e3))}K`
+                          function Sy(RR) {
+                            return `${Math.max(1,Math.round(RR/4e3))}K`
                           }
-                          let Gm = null;
+                          let jy = null;
 
-                          function Im() {
-                            return Gm ??= new qm(gW, Vm.d), Gm
+                          function dy() {
+                            return jy ??= new zy(oR, Hy.c), jy
                           }
-                          var am = OW(5587);
-                          const rm = [am.f, am.k];
+                          var Ey = GR(5710);
+                          const Yy = [Ey.d, Ey.m];
 
-                          function zm(WW) {
-                            return Im().getPage(WW.id).parts.length > 0 ? `Read ${Dm.o}, then the parts of the Bloxd Code API's ${WW.title} page it lists, so I can ask questions about it.` : `Read ${Vm.d}${(0,Dm.A)(WW.slug)} so I can ask questions about it. ${am.i}`
+                          function ky(RR) {
+                            return dy().getPage(RR.id).parts.length > 0 ? `Read ${Dy.l}, then the parts of the Bloxd Code API's ${RR.title} page it lists, so I can ask questions about it.` : `Read ${Hy.c}${(0,Dy.o)(RR.slug)} so I can ask questions about it. ${Ey.j}`
                           }
 
-                          function Fm(WW) {
+                          function Qy(RR) {
                             let {
-                              page: iW
-                            } = WW;
-                            const [OW, mW] = kW();
-                            return (0, AW.jsxs)("div", {
+                              page: JR
+                            } = RR;
+                            const [GR, yR] = UR();
+                            return (0, eR.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, AW.jsxs)("button", {
+                              children: [(0, eR.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  mW(Im().getPage(iW.id).markdown)
+                                  yR(dy().getPage(JR.id).markdown)
                                 },
-                                children: [(0, AW.jsx)(jW, {
-                                  name: !1 === (null === OW || void 0 === OW ? void 0 : OW.failed) ? "check" : "copy"
-                                }), (0, AW.jsx)("span", {
-                                  children: OW ? OW.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, eR.jsx)(LR, {
+                                  name: !1 === (null === GR || void 0 === GR ? void 0 : GR.failed) ? "check" : "copy"
+                                }), (0, eR.jsx)("span", {
+                                  children: GR ? GR.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), rm.map((WW => (0, AW.jsxs)("a", {
+                              }), Yy.map((RR => (0, eR.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, am.e)(WW, zm(iW)),
+                                href: (0, Ey.b)(RR, ky(JR)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, AW.jsx)(jW, {
+                                children: [(0, eR.jsx)(LR, {
                                   name: "external-link"
-                                }), (0, AW.jsxs)("span", {
-                                  children: ["Open in ", WW.name]
+                                }), (0, eR.jsxs)("span", {
+                                  children: ["Open in ", RR.name]
                                 })]
-                              }, WW.name)))]
+                              }, RR.name)))]
                             })
                           }
 
-                          function Qm(WW) {
-                            return `#${[0,1,2].map((iW=>Math.round(Math.min(255,Math.max(0,WW[iW]))).toString(16).padStart(2,"0"))).join("")}`
+                          function Fy(RR) {
+                            return `#${[0,1,2].map((JR=>Math.round(Math.min(255,Math.max(0,RR[JR]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function WE(WW) {
-                            return [parseInt(WW.slice(1, 3), 16), parseInt(WW.slice(3, 5), 16), parseInt(WW.slice(5, 7), 16)]
+                          function Ty(RR) {
+                            return [parseInt(RR.slice(1, 3), 16), parseInt(RR.slice(3, 5), 16), parseInt(RR.slice(5, 7), 16)]
                           }
 
-                          function iE(WW) {
+                          function sy(RR) {
                             let {
-                              label: iW,
-                              min: OW,
-                              max: mW,
-                              step: EW,
-                              low: NW,
-                              high: PW,
-                              onChange: LW
-                            } = WW;
-                            return (0, AW.jsxs)("div", {
+                              label: JR,
+                              min: GR,
+                              max: yR,
+                              step: tR,
+                              low: uR,
+                              high: ZR,
+                              onChange: qR
+                            } = RR;
+                            return (0, eR.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, AW.jsxs)("div", {
+                              children: [(0, eR.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, AW.jsx)("span", {
-                                  children: iW
-                                }), (0, AW.jsx)("span", {
+                                children: [(0, eR.jsx)("span", {
+                                  children: JR
+                                }), (0, eR.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: NW === PW ? NW : `${NW}\u2013${PW}`
+                                  children: uR === ZR ? uR : `${uR}\u2013${ZR}`
                                 })]
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, AW.jsx)("input", {
+                                children: [(0, eR.jsx)("input", {
                                   type: "range",
-                                  min: OW,
-                                  max: mW,
-                                  step: EW,
-                                  value: Math.min(mW, NW),
-                                  "aria-label": `Minimum ${iW.toLowerCase()}`,
-                                  onChange: WW => {
-                                    const iW = Number(WW.target.value);
-                                    LW(iW, Math.max(iW, PW))
+                                  min: GR,
+                                  max: yR,
+                                  step: tR,
+                                  value: Math.min(yR, uR),
+                                  "aria-label": `Minimum ${JR.toLowerCase()}`,
+                                  onChange: RR => {
+                                    const JR = Number(RR.target.value);
+                                    qR(JR, Math.max(JR, ZR))
                                   }
-                                }), (0, AW.jsx)("input", {
+                                }), (0, eR.jsx)("input", {
                                   type: "range",
-                                  min: OW,
-                                  max: mW,
-                                  step: EW,
-                                  value: Math.min(mW, PW),
-                                  "aria-label": `Maximum ${iW.toLowerCase()}`,
-                                  onChange: WW => {
-                                    const iW = Number(WW.target.value);
-                                    LW(Math.min(iW, NW), iW)
+                                  min: GR,
+                                  max: yR,
+                                  step: tR,
+                                  value: Math.min(yR, ZR),
+                                  "aria-label": `Maximum ${JR.toLowerCase()}`,
+                                  onChange: RR => {
+                                    const JR = Number(RR.target.value);
+                                    qR(Math.min(JR, uR), JR)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function OE(WW) {
+                          function hy(RR) {
                             let {
-                              label: iW,
-                              min: OW,
-                              max: mW,
-                              step: EW,
-                              value: NW,
-                              onChange: PW,
-                              format: LW = String
-                            } = WW;
-                            return (0, AW.jsxs)("div", {
+                              label: JR,
+                              min: GR,
+                              max: yR,
+                              step: tR,
+                              value: uR,
+                              onChange: ZR,
+                              format: qR = String
+                            } = RR;
+                            return (0, eR.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, AW.jsxs)("div", {
+                              children: [(0, eR.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, AW.jsx)("span", {
-                                  children: iW
-                                }), (0, AW.jsx)("span", {
+                                children: [(0, eR.jsx)("span", {
+                                  children: JR
+                                }), (0, eR.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: LW(NW)
+                                  children: qR(uR)
                                 })]
-                              }), (0, AW.jsx)("input", {
+                              }), (0, eR.jsx)("input", {
                                 type: "range",
-                                min: OW,
-                                max: mW,
-                                step: EW,
-                                value: Math.min(mW, Math.max(OW, NW)),
-                                "aria-label": iW,
-                                onChange: WW => {
-                                  PW(Number(WW.target.value))
+                                min: GR,
+                                max: yR,
+                                step: tR,
+                                value: Math.min(yR, Math.max(GR, uR)),
+                                "aria-label": JR,
+                                onChange: RR => {
+                                  ZR(Number(RR.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function mE(WW) {
+                          function Rt(RR) {
                             let {
-                              opts: iW,
-                              onChange: OW
-                            } = WW;
-                            const mW = iW.colorGradients;
-                            if (!RO(mW)) return (0, AW.jsxs)("div", {
+                              opts: JR,
+                              onChange: GR
+                            } = RR;
+                            const yR = JR.colorGradients;
+                            if (!jG(yR)) return (0, eR.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, AW.jsx)("div", {
+                              children: [(0, eR.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, AW.jsx)("span", {
+                                children: (0, eR.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, AW.jsx)("div", {
+                              }), (0, eR.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: mW.map(((WW, iW) => (0, AW.jsx)("input", {
+                                children: yR.map(((RR, JR) => (0, eR.jsx)("input", {
                                   type: "color",
-                                  value: Qm(WW.color),
-                                  "aria-label": `Colour ${iW+1}`,
-                                  onChange: WW => {
-                                    const EW = [...mW];
-                                    EW[iW] = {
-                                      color: WE(WW.target.value)
-                                    }, OW(EW)
+                                  value: Fy(RR.color),
+                                  "aria-label": `Colour ${JR+1}`,
+                                  onChange: RR => {
+                                    const tR = [...yR];
+                                    tR[JR] = {
+                                      color: Ty(RR.target.value)
+                                    }, GR(tR)
                                   }
-                                }, iW)))
+                                }, JR)))
                               })]
                             });
-                            const EW = (WW, iW) => {
-                              const EW = [...mW];
-                              EW[WW] = iW, OW(EW)
+                            const tR = (RR, JR) => {
+                              const tR = [...yR];
+                              tR[RR] = JR, GR(tR)
                             };
-                            return (0, AW.jsxs)("div", {
+                            return (0, eR.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, AW.jsxs)("div", {
+                              children: [(0, eR.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, AW.jsx)("span", {
+                                children: [(0, eR.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, AW.jsx)("span", {
+                                }), (0, eR.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), mW.map(((WW, iW) => {
-                                var OW;
-                                const mW = null !== (OW = WW.maxColor) && void 0 !== OW ? OW : WW.minColor;
-                                return (0, AW.jsxs)("div", {
+                              }), yR.map(((RR, JR) => {
+                                var GR;
+                                const yR = null !== (GR = RR.maxColor) && void 0 !== GR ? GR : RR.minColor;
+                                return (0, eR.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, AW.jsxs)("span", {
+                                  children: [(0, eR.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * WW.timeFraction), "%"]
-                                  }), (0, AW.jsx)("span", {
+                                    children: [Math.round(100 * RR.timeFraction), "%"]
+                                  }), (0, eR.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${Qm(WW.minColor)}, ${Qm(mW)})`
+                                      background: `linear-gradient(90deg, ${Fy(RR.minColor)}, ${Fy(yR)})`
                                     }
-                                  }), (0, AW.jsx)("input", {
+                                  }), (0, eR.jsx)("input", {
                                     type: "color",
-                                    value: Qm(WW.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*WW.timeFraction)}%`,
-                                    onChange: OW => {
-                                      EW(iW, {
-                                        ...WW,
-                                        minColor: [...WE(OW.target.value), WW.minColor[3]]
+                                    value: Fy(RR.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*RR.timeFraction)}%`,
+                                    onChange: GR => {
+                                      tR(JR, {
+                                        ...RR,
+                                        minColor: [...Ty(GR.target.value), RR.minColor[3]]
                                       })
                                     }
-                                  }), (0, AW.jsx)("input", {
+                                  }), (0, eR.jsx)("input", {
                                     type: "color",
-                                    value: Qm(mW),
-                                    "aria-label": `Maximum colour at ${Math.round(100*WW.timeFraction)}%`,
-                                    onChange: OW => {
-                                      EW(iW, {
-                                        ...WW,
-                                        maxColor: [...WE(OW.target.value), mW[3]]
+                                    value: Fy(yR),
+                                    "aria-label": `Maximum colour at ${Math.round(100*RR.timeFraction)}%`,
+                                    onChange: GR => {
+                                      tR(JR, {
+                                        ...RR,
+                                        maxColor: [...Ty(GR.target.value), yR[3]]
                                       })
                                     }
                                   })]
-                                }, iW)
+                                }, JR)
                               }))]
                             })
                           }
-                          const EE = [-.5, -.5, -.5],
-                            NE = [.5, .5, .5],
-                            PE = [0, 1, 2, 3, 4, 5, 6, 7].map((WW => [1 & WW ? NE[0] : EE[0], 2 & WW ? NE[1] : EE[1], 4 & WW ? NE[2] : EE[2]]));class LE {
+                          const Jt = [-.5, -.5, -.5],
+                            Gt = [.5, .5, .5],
+                            yt = [0, 1, 2, 3, 4, 5, 6, 7].map((RR => [1 & RR ? Gt[0] : Jt[0], 2 & RR ? Gt[1] : Jt[1], 4 & RR ? Gt[2] : Jt[2]]));class tt {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(WW, iW, OW, mW) {
-                              const EW = Math.round(31 * iW),
-                                NW = Math.round(31 * OW),
-                                PW = Math.round(31 * mW),
-                                LW = `${EW}|${NW}|${PW}`;
-                              let cW = this.tints.get(WW);
-                              (!cW || cW.size > 2e3) && (cW = new Map, this.tints.set(WW, cW));
-                              let wW = cW.get(LW);
-                              if (wW) return wW;
-                              wW = document.createElement("canvas"), wW.width = WW.naturalWidth || 16, wW.height = WW.naturalHeight || 16;
-                              const tW = wW.getContext("2d");
-                              return tW ? (tW.imageSmoothingEnabled = !1, tW.drawImage(WW, 0, 0, wW.width, wW.height), tW.globalCompositeOperation = "multiply", tW.fillStyle = `rgb(${EW/31*255}, ${NW/31*255}, ${PW/31*255})`, tW.fillRect(0, 0, wW.width, wW.height), tW.globalCompositeOperation = "destination-in", tW.drawImage(WW, 0, 0, wW.width, wW.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), cW.set(LW, wW), wW
+                            get(RR, JR, GR, yR) {
+                              const tR = Math.round(31 * JR),
+                                uR = Math.round(31 * GR),
+                                ZR = Math.round(31 * yR),
+                                qR = `${tR}|${uR}|${ZR}`;
+                              let iR = this.tints.get(RR);
+                              (!iR || iR.size > 2e3) && (iR = new Map, this.tints.set(RR, iR));
+                              let fR = iR.get(qR);
+                              if (fR) return fR;
+                              fR = document.createElement("canvas"), fR.width = RR.naturalWidth || 16, fR.height = RR.naturalHeight || 16;
+                              const VR = fR.getContext("2d");
+                              return VR ? (VR.imageSmoothingEnabled = !1, VR.drawImage(RR, 0, 0, fR.width, fR.height), VR.globalCompositeOperation = "multiply", VR.fillStyle = `rgb(${tR/31*255}, ${uR/31*255}, ${ZR/31*255})`, VR.fillRect(0, 0, fR.width, fR.height), VR.globalCompositeOperation = "destination-in", VR.drawImage(RR, 0, 0, fR.width, fR.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), iR.set(qR, fR), fR
                             }
                           }
 
-                          function cE(WW) {
+                          function ut(RR) {
                             let {
-                              opts: iW,
-                              textureUrl: OW,
-                              burst: EW,
-                              paused: NW
-                            } = WW;
-                            const PW = (0, mW.useRef)(null),
-                              LW = (0, mW.useRef)(iW);
-                            LW.current = iW;
-                            const cW = (0, mW.useRef)(NW);
-                            cW.current = NW;
-                            const wW = (0, mW.useRef)(null),
-                              tW = (0, mW.useRef)(null),
-                              ZW = (0, mW.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(WW) {
-                                let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const OW = [-.5, -.5, -.5],
-                                  mW = [.5, .5, .5];
-                                let EW = .5;
-                                for (let NW = 0; NW < 40; NW++) {
-                                  const NW = IO(WW, OW, mW, iW),
-                                    PW = Math.max(NW.life / 30, .001);
-                                  for (; zO(NW, WW.gravity, PW);) EW = Math.max(EW, Math.hypot(NW.pos[0], NW.pos[1], NW.pos[2]) + NW.size / 2)
+                              opts: JR,
+                              textureUrl: GR,
+                              burst: tR,
+                              paused: uR
+                            } = RR;
+                            const ZR = (0, yR.useRef)(null),
+                              qR = (0, yR.useRef)(JR);
+                            qR.current = JR;
+                            const iR = (0, yR.useRef)(uR);
+                            iR.current = uR;
+                            const fR = (0, yR.useRef)(null),
+                              VR = (0, yR.useRef)(null),
+                              KR = (0, yR.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(RR) {
+                                let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const GR = [-.5, -.5, -.5],
+                                  yR = [.5, .5, .5];
+                                let tR = .5;
+                                for (let uR = 0; uR < 40; uR++) {
+                                  const uR = EG(RR, GR, yR, JR),
+                                    ZR = Math.max(uR.life / 30, .001);
+                                  for (; QG(uR, RR.gravity, ZR);) tR = Math.max(tR, Math.hypot(uR.pos[0], uR.pos[1], uR.pos[2]) + uR.size / 2)
                                 }
-                                return EW
-                              }(iW)))), [iW]),
-                              xW = (0, mW.useRef)(ZW);
-                            return xW.current = ZW, (0, mW.useEffect)((() => {
-                              if (wW.current = null, !OW) return;
-                              const WW = new Image;
-                              let iW = !1;
-                              return WW.onload = () => {
-                                iW || (wW.current = WW)
-                              }, WW.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${OW}`)
-                              }, WW.src = OW, () => {
-                                iW = !0
+                                return tR
+                              }(JR)))), [JR]),
+                              wR = (0, yR.useRef)(KR);
+                            return wR.current = KR, (0, yR.useEffect)((() => {
+                              if (fR.current = null, !GR) return;
+                              const RR = new Image;
+                              let JR = !1;
+                              return RR.onload = () => {
+                                JR || (fR.current = RR)
+                              }, RR.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${GR}`)
+                              }, RR.src = GR, () => {
+                                JR = !0
                               }
-                            }), [OW]), (0, mW.useEffect)((() => {
-                              var WW;
-                              null === (WW = tW.current) || void 0 === WW || WW.call(tW)
-                            }), [iW, EW]), (0, mW.useEffect)((() => {
-                              const WW = PW.current,
-                                iW = null === WW || void 0 === WW ? void 0 : WW.getContext("2d");
-                              if (!WW || !iW) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const OW = new LE;
-                              let mW = [],
-                                EW = 0,
-                                NW = -.7,
-                                ZW = xW.current,
-                                lW = performance.now(),
-                                AW = 0,
-                                bW = !0,
-                                jW = null;
-                              const UW = () => {
-                                const WW = LW.current,
-                                  iW = Math.min(400, Math.max(0, Math.ceil(WW.manualEmitCount)));
-                                mW = [];
-                                for (let OW = 0; OW < iW; OW++) mW.push(IO(WW, EE, NE, Math.random));
-                                EW = 0
+                            }), [GR]), (0, yR.useEffect)((() => {
+                              var RR;
+                              null === (RR = VR.current) || void 0 === RR || RR.call(VR)
+                            }), [JR, tR]), (0, yR.useEffect)((() => {
+                              const RR = ZR.current,
+                                JR = null === RR || void 0 === RR ? void 0 : RR.getContext("2d");
+                              if (!RR || !JR) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const GR = new tt;
+                              let yR = [],
+                                tR = 0,
+                                uR = -.7,
+                                KR = wR.current,
+                                rR = performance.now(),
+                                eR = 0,
+                                aR = !0,
+                                LR = null;
+                              const nR = () => {
+                                const RR = qR.current,
+                                  JR = Math.min(400, Math.max(0, Math.ceil(RR.manualEmitCount)));
+                                yR = [];
+                                for (let GR = 0; GR < JR; GR++) yR.push(EG(RR, Jt, Gt, Math.random));
+                                tR = 0
                               };
-                              tW.current = UW, UW();
-                              const kW = PW => {
-                                AW = requestAnimationFrame(kW);
-                                const tW = Math.min(.05, (PW - lW) / 1e3);
-                                if (lW = PW, !bW) return;
-                                const sW = window.devicePixelRatio || 1,
-                                  MW = Math.round(WW.clientWidth * sW),
-                                  KW = Math.round(WW.clientHeight * sW);
-                                if (0 === MW || 0 === KW) return;
-                                WW.width === MW && WW.height === KW || (WW.width = MW, WW.height = KW);
-                                const SW = LW.current;
-                                null === jW && (NW += .18 * tW), ZW += (xW.current - ZW) * Math.min(1, 4 * tW);
-                                const YW = .6 * tW;
-                                mW = mW.filter((WW => zO(WW, SW.gravity, YW))), 0 !== mW.length || cW.current || (EW += tW, EW > .6 && UW());
-                                const yW = function(WW, iW, OW, mW) {
-                                  const EW = 3.2 * mW,
-                                    NW = .44 * Math.min(WW, iW) * EW / mW,
-                                    PW = Math.cos(OW),
-                                    LW = Math.sin(OW),
-                                    cW = Math.cos(.42),
-                                    wW = Math.sin(.42);
-                                  return (OW, mW, tW) => {
-                                    const ZW = OW * LW + tW * PW,
-                                      xW = EW - (mW * wW + ZW * cW);
-                                    if (xW < .05) return null;
-                                    const lW = NW / xW;
+                              VR.current = nR, nR();
+                              const UR = ZR => {
+                                eR = requestAnimationFrame(UR);
+                                const VR = Math.min(.05, (ZR - rR) / 1e3);
+                                if (rR = ZR, !aR) return;
+                                const WR = window.devicePixelRatio || 1,
+                                  AR = Math.round(RR.clientWidth * WR),
+                                  CR = Math.round(RR.clientHeight * WR);
+                                if (0 === AR || 0 === CR) return;
+                                RR.width === AR && RR.height === CR || (RR.width = AR, RR.height = CR);
+                                const XR = qR.current;
+                                null === LR && (uR += .18 * VR), KR += (wR.current - KR) * Math.min(1, 4 * VR);
+                                const MR = .6 * VR;
+                                yR = yR.filter((RR => QG(RR, XR.gravity, MR))), 0 !== yR.length || iR.current || (tR += VR, tR > .6 && nR());
+                                const BR = function(RR, JR, GR, yR) {
+                                  const tR = 3.2 * yR,
+                                    uR = .44 * Math.min(RR, JR) * tR / yR,
+                                    ZR = Math.cos(GR),
+                                    qR = Math.sin(GR),
+                                    iR = Math.cos(.42),
+                                    fR = Math.sin(.42);
+                                  return (GR, yR, VR) => {
+                                    const KR = GR * qR + VR * ZR,
+                                      wR = tR - (yR * fR + KR * iR);
+                                    if (wR < .05) return null;
+                                    const rR = uR / wR;
                                     return {
-                                      x: WW / 2 + (OW * PW - tW * LW) * lW,
-                                      y: iW / 2 - (mW * cW - ZW * wW) * lW,
-                                      scale: lW,
-                                      depth: xW
+                                      x: RR / 2 + (GR * ZR - VR * qR) * rR,
+                                      y: JR / 2 - (yR * iR - KR * fR) * rR,
+                                      scale: rR,
+                                      depth: wR
                                     }
                                   }
-                                }(MW, KW, NW, ZW);
-                                ! function(WW, iW, OW, mW, EW) {
-                                  const NW = WW.createLinearGradient(0, 0, 0, OW);
-                                  NW.addColorStop(0, "#23262d"), NW.addColorStop(1, "#16181c"), WW.globalCompositeOperation = "source-over", WW.globalAlpha = 1, WW.fillStyle = NW, WW.fillRect(0, 0, iW, OW);
-                                  const PW = (iW, OW) => {
-                                      const EW = mW(iW[0], iW[1], iW[2]),
-                                        NW = mW(OW[0], OW[1], OW[2]);
-                                      EW && NW && (WW.beginPath(), WW.moveTo(EW.x, EW.y), WW.lineTo(NW.x, NW.y), WW.stroke())
+                                }(AR, CR, uR, KR);
+                                ! function(RR, JR, GR, yR, tR) {
+                                  const uR = RR.createLinearGradient(0, 0, 0, GR);
+                                  uR.addColorStop(0, "#23262d"), uR.addColorStop(1, "#16181c"), RR.globalCompositeOperation = "source-over", RR.globalAlpha = 1, RR.fillStyle = uR, RR.fillRect(0, 0, JR, GR);
+                                  const ZR = (JR, GR) => {
+                                      const tR = yR(JR[0], JR[1], JR[2]),
+                                        uR = yR(GR[0], GR[1], GR[2]);
+                                      tR && uR && (RR.beginPath(), RR.moveTo(tR.x, tR.y), RR.lineTo(uR.x, uR.y), RR.stroke())
                                     },
-                                    LW = Math.ceil(EW) + 1,
-                                    cW = EE[1];
-                                  WW.lineWidth = 1, WW.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let wW = -LW; wW <= LW; wW++) PW([wW + .5, cW, .5 - LW], [wW + .5, cW, LW + .5]), PW([.5 - LW, cW, wW + .5], [LW + .5, cW, wW + .5]);
-                                  WW.strokeStyle = "rgba(255, 255, 255, 0.28)", WW.setLineDash([4, 4]);
-                                  for (const wW of PE)
-                                    for (const WW of PE) {
-                                      const iW = [0, 1, 2].filter((iW => wW[iW] !== WW[iW]));
-                                      1 === iW.length && wW[iW[0]] < WW[iW[0]] && PW(wW, WW)
+                                    qR = Math.ceil(tR) + 1,
+                                    iR = Jt[1];
+                                  RR.lineWidth = 1, RR.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let fR = -qR; fR <= qR; fR++) ZR([fR + .5, iR, .5 - qR], [fR + .5, iR, qR + .5]), ZR([.5 - qR, iR, fR + .5], [qR + .5, iR, fR + .5]);
+                                  RR.strokeStyle = "rgba(255, 255, 255, 0.28)", RR.setLineDash([4, 4]);
+                                  for (const fR of yt)
+                                    for (const RR of yt) {
+                                      const JR = [0, 1, 2].filter((JR => fR[JR] !== RR[JR]));
+                                      1 === JR.length && fR[JR[0]] < RR[JR[0]] && ZR(fR, RR)
                                     }
-                                  WW.setLineDash([])
-                                }(iW, MW, KW, yW, ZW);
-                                const TW = wW.current,
-                                  JW = mW.map((WW => ({
-                                    particle: WW,
-                                    at: yW(WW.pos[0], WW.pos[1], WW.pos[2])
-                                  }))).filter((WW => null !== WW.at)).sort(((WW, iW) => iW.at.depth - WW.at.depth));
-                                iW.imageSmoothingEnabled = !1;
-                                for (const WW of function(WW) {
-                                    switch (WW) {
-                                      case fO.d.OneOne:
+                                  RR.setLineDash([])
+                                }(JR, AR, CR, BR, KR);
+                                const lR = fR.current,
+                                  pR = yR.map((RR => ({
+                                    particle: RR,
+                                    at: BR(RR.pos[0], RR.pos[1], RR.pos[2])
+                                  }))).filter((RR => null !== RR.at)).sort(((RR, JR) => JR.at.depth - RR.at.depth));
+                                JR.imageSmoothingEnabled = !1;
+                                for (const RR of function(RR) {
+                                    switch (RR) {
+                                      case PG.c.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case fO.d.Add:
+                                      case PG.c.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case fO.d.Multiply:
+                                      case PG.c.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case fO.d.MultiplyAdd:
+                                      case PG.c.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(SW.blendMode)) {
-                                  iW.globalCompositeOperation = WW.operation;
+                                  }(XR.blendMode)) {
+                                  JR.globalCompositeOperation = RR.operation;
                                   for (const {
-                                      particle: mW,
-                                      at: EW
+                                      particle: yR,
+                                      at: tR
                                     }
-                                    of JW) {
-                                    const [NW, PW, LW, cW] = rO(mW), wW = Math.max(1, mW.size * EW.scale);
-                                    iW.globalAlpha = WW.usesAlpha ? Math.min(1, Math.max(0, cW)) : 1, TW ? iW.drawImage(OW.get(TW, NW, PW, LW), EW.x - wW / 2, EW.y - wW / 2, wW, wW) : (iW.fillStyle = `rgb(${255*NW}, ${255*PW}, ${255*LW})`, iW.fillRect(EW.x - wW / 2, EW.y - wW / 2, wW, wW))
+                                    of pR) {
+                                    const [uR, ZR, qR, iR] = kG(yR), fR = Math.max(1, yR.size * tR.scale);
+                                    JR.globalAlpha = RR.usesAlpha ? Math.min(1, Math.max(0, iR)) : 1, lR ? JR.drawImage(GR.get(lR, uR, ZR, qR), tR.x - fR / 2, tR.y - fR / 2, fR, fR) : (JR.fillStyle = `rgb(${255*uR}, ${255*ZR}, ${255*qR})`, JR.fillRect(tR.x - fR / 2, tR.y - fR / 2, fR, fR))
                                   }
                                 }
-                                iW.globalCompositeOperation = "source-over", iW.globalAlpha = 1
+                                JR.globalCompositeOperation = "source-over", JR.globalAlpha = 1
                               };
-                              AW = requestAnimationFrame(kW);
-                              const sW = new IntersectionObserver((WW => {
-                                let [iW] = WW;
-                                bW = iW.isIntersecting
+                              eR = requestAnimationFrame(UR);
+                              const WR = new IntersectionObserver((RR => {
+                                let [JR] = RR;
+                                aR = JR.isIntersecting
                               }));
-                              sW.observe(WW);
-                              const MW = iW => {
-                                  jW = iW.clientX, WW.setPointerCapture(iW.pointerId)
+                              WR.observe(RR);
+                              const AR = JR => {
+                                  LR = JR.clientX, RR.setPointerCapture(JR.pointerId)
                                 },
-                                KW = WW => {
-                                  null !== jW && (NW += .01 * (WW.clientX - jW), jW = WW.clientX)
+                                CR = RR => {
+                                  null !== LR && (uR += .01 * (RR.clientX - LR), LR = RR.clientX)
                                 },
-                                SW = () => {
-                                  jW = null
+                                XR = () => {
+                                  LR = null
                                 };
-                              return WW.addEventListener("pointerdown", MW), WW.addEventListener("pointermove", KW), WW.addEventListener("pointerup", SW), WW.addEventListener("pointercancel", SW), () => {
-                                cancelAnimationFrame(AW), sW.disconnect(), tW.current = null, WW.removeEventListener("pointerdown", MW), WW.removeEventListener("pointermove", KW), WW.removeEventListener("pointerup", SW), WW.removeEventListener("pointercancel", SW)
+                              return RR.addEventListener("pointerdown", AR), RR.addEventListener("pointermove", CR), RR.addEventListener("pointerup", XR), RR.addEventListener("pointercancel", XR), () => {
+                                cancelAnimationFrame(eR), WR.disconnect(), VR.current = null, RR.removeEventListener("pointerdown", AR), RR.removeEventListener("pointermove", CR), RR.removeEventListener("pointerup", XR), RR.removeEventListener("pointercancel", XR)
                               }
-                            }), []), (0, AW.jsx)("canvas", {
-                              ref: PW,
+                            }), []), (0, eR.jsx)("canvas", {
+                              ref: ZR,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${iW.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${JR.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const wE = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            tE = [{
-                              mode: fO.d.OneOne,
+                          const Zt = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            qt = [{
+                              mode: PG.c.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: fO.d.Standard,
+                              mode: PG.c.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: fO.d.Add,
+                              mode: PG.c.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: fO.d.Multiply,
+                              mode: PG.c.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: fO.d.MultiplyAdd,
+                              mode: PG.c.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            ZE = (0, mW.forwardRef)((function(WW, iW) {
-                              var OW, EW;
+                            it = (0, yR.forwardRef)((function(RR, JR) {
+                              var GR, tR;
                               let {
-                                textures: PW
-                              } = WW;
-                              const LW = Km(),
-                                cW = (0, mW.useRef)(null),
-                                [wW, tW] = (0, mW.useState)(XO),
-                                [ZW, xW] = (0, mW.useState)("example"),
-                                [lW, bW] = (0, mW.useState)(0),
-                                [UW, kW] = (0, mW.useState)(!1),
-                                MW = WW => {
-                                  const iW = "example" === WW ? XO : CO(WW);
-                                  iW && (tW(iW), xW(WW))
+                                textures: ZR
+                              } = RR;
+                              const qR = Wy(),
+                                iR = (0, yR.useRef)(null),
+                                [fR, VR] = (0, yR.useState)(mG),
+                                [KR, wR] = (0, yR.useState)("example"),
+                                [rR, aR] = (0, yR.useState)(0),
+                                [nR, UR] = (0, yR.useState)(!1),
+                                AR = RR => {
+                                  const JR = "example" === RR ? mG : IG(RR);
+                                  JR && (VR(JR), wR(RR))
                                 };
-                              (0, mW.useImperativeHandle)(iW, (() => ({
-                                preview: WW => {
-                                  var iW;
-                                  MW(WW), null === (iW = cW.current) || void 0 === iW || iW.scrollIntoView({
+                              (0, yR.useImperativeHandle)(JR, (() => ({
+                                preview: RR => {
+                                  var JR;
+                                  AR(RR), null === (JR = iR.current) || void 0 === JR || JR.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const KW = WW => {
-                                  tW({
-                                    ...wW,
-                                    ...WW
-                                  }), xW(null)
+                              const CR = RR => {
+                                  VR({
+                                    ...fR,
+                                    ...RR
+                                  }), wR(null)
                                 },
-                                SW = function(WW, iW) {
-                                  if (null !== iW) return `${im}    presetId: "${iW}",\n${Om}\n})`;
-                                  const OW = WW.velocityGradients.map((WW => `        {\n            timeFraction: ${FO(WW.timeFraction)},\n            factor: ${FO(WW.factor)},\n            factor2: ${FO(WW.factor2)},\n        },`)),
-                                    mW = [`    dir1: ${QO(WW.dir1)},`, `    dir2: ${QO(WW.dir2)},`, Om, `    texture: "${WW.texture}",`, `    minLifeTime: ${FO(WW.minLifeTime)},`, `    maxLifeTime: ${FO(WW.maxLifeTime)},`, `    minEmitPower: ${FO(WW.minEmitPower)},`, `    maxEmitPower: ${FO(WW.maxEmitPower)},`, `    minSize: ${FO(WW.minSize)},`, `    maxSize: ${FO(WW.maxSize)},`, `    manualEmitCount: ${FO(WW.manualEmitCount)},`, `    gravity: ${QO(WW.gravity)},`, `    colorGradients: ${Wm(WW.colorGradients,"    ")},`, `    velocityGradients: ${OW.length>0?`[\n${OW.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${FO(WW.blendMode)},`];
-                                  return void 0 !== WW.hideDist && mW.push(`    hideDist: ${FO(WW.hideDist)},`), `${im}${mW.join("\n")}\n})`
-                                }(wW, null === ZW || "example" === ZW ? null : ZW),
-                                yW = PW.includes(wW.texture) ? PW : [...PW, wW.texture];
-                              return (0, AW.jsxs)("section", {
-                                ref: cW,
+                                XR = function(RR, JR) {
+                                  if (null !== JR) return `${hG}    presetId: "${JR}",\n${Ry}\n})`;
+                                  const GR = RR.velocityGradients.map((RR => `        {\n            timeFraction: ${FG(RR.timeFraction)},\n            factor: ${FG(RR.factor)},\n            factor2: ${FG(RR.factor2)},\n        },`)),
+                                    yR = [`    dir1: ${TG(RR.dir1)},`, `    dir2: ${TG(RR.dir2)},`, Ry, `    texture: "${RR.texture}",`, `    minLifeTime: ${FG(RR.minLifeTime)},`, `    maxLifeTime: ${FG(RR.maxLifeTime)},`, `    minEmitPower: ${FG(RR.minEmitPower)},`, `    maxEmitPower: ${FG(RR.maxEmitPower)},`, `    minSize: ${FG(RR.minSize)},`, `    maxSize: ${FG(RR.maxSize)},`, `    manualEmitCount: ${FG(RR.manualEmitCount)},`, `    gravity: ${TG(RR.gravity)},`, `    colorGradients: ${sG(RR.colorGradients,"    ")},`, `    velocityGradients: ${GR.length>0?`[\n${GR.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${FG(RR.blendMode)},`];
+                                  return void 0 !== RR.hideDist && yR.push(`    hideDist: ${FG(RR.hideDist)},`), `${hG}${yR.join("\n")}\n})`
+                                }(fR, null === KR || "example" === KR ? null : KR),
+                                BR = ZR.includes(fR.texture) ? ZR : [...ZR, fR.texture];
+                              return (0, eR.jsxs)("section", {
+                                ref: iR,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, AW.jsxs)("header", {
+                                children: [(0, eR.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, AW.jsxs)("div", {
-                                    children: [(0, AW.jsx)("div", {
+                                  children: [(0, eR.jsxs)("div", {
+                                    children: [(0, eR.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, AW.jsx)("div", {
+                                    }), (0, eR.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, AW.jsx)(sW, {
-                                    text: SW,
+                                  }), (0, eR.jsx)(WR, {
+                                    text: XR,
                                     label: "Copy code"
                                   })]
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, AW.jsx)("button", {
+                                  children: [(0, eR.jsx)("button", {
                                     type: "button",
-                                    className: NW()("DocsVariantChip", {
-                                      Active: "example" === ZW
+                                    className: uR()("DocsVariantChip", {
+                                      Active: "example" === KR
                                     }),
                                     onClick: () => {
-                                      MW("example")
+                                      AR("example")
                                     },
                                     children: "Example"
-                                  }), wE.filter((WW => null !== CO(WW))).map((WW => (0, AW.jsx)("button", {
+                                  }), Zt.filter((RR => null !== IG(RR))).map((RR => (0, eR.jsx)("button", {
                                     type: "button",
-                                    className: NW()("DocsVariantChip", {
-                                      Active: ZW === WW
+                                    className: uR()("DocsVariantChip", {
+                                      Active: KR === RR
                                     }),
                                     onClick: () => {
-                                      MW(WW)
+                                      AR(RR)
                                     },
-                                    children: WW
-                                  }, WW))), (0, AW.jsxs)("select", {
+                                    children: RR
+                                  }, RR))), (0, eR.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== ZW && void 0 !== ZW ? ZW : "custom",
+                                    value: null !== KR && void 0 !== KR ? KR : "custom",
                                     "aria-label": "Preset",
-                                    onChange: WW => {
-                                      MW(WW.target.value)
+                                    onChange: RR => {
+                                      AR(RR.target.value)
                                     },
-                                    children: [(0, AW.jsx)("option", {
+                                    children: [(0, eR.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === ZW && (0, AW.jsx)("option", {
+                                    }), null === KR && (0, eR.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), pO.c.map((WW => (0, AW.jsx)("option", {
-                                      value: WW,
-                                      children: WW
-                                    }, WW)))]
+                                    }), cG.d.map((RR => (0, eR.jsx)("option", {
+                                      value: RR,
+                                      children: RR
+                                    }, RR)))]
                                   })]
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, AW.jsxs)("div", {
+                                  children: [(0, eR.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, AW.jsx)(cE, {
-                                      opts: wW,
-                                      textureUrl: null !== (OW = null === LW || void 0 === LW ? void 0 : LW.getParticleTextureUrl(wW.texture)) && void 0 !== OW ? OW : null,
-                                      burst: lW,
-                                      paused: UW
-                                    }), (0, AW.jsxs)("div", {
+                                    children: [(0, eR.jsx)(ut, {
+                                      opts: fR,
+                                      textureUrl: null !== (GR = null === qR || void 0 === qR ? void 0 : qR.getParticleTextureUrl(fR.texture)) && void 0 !== GR ? GR : null,
+                                      burst: rR,
+                                      paused: nR
+                                    }), (0, eR.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, AW.jsxs)("button", {
+                                      children: [(0, eR.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          bW(lW + 1)
+                                          aR(rR + 1)
                                         },
-                                        children: [(0, AW.jsx)(jW, {
+                                        children: [(0, eR.jsx)(LR, {
                                           name: "replay"
-                                        }), (0, AW.jsx)("span", {
+                                        }), (0, eR.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, AW.jsxs)("button", {
+                                      }), (0, eR.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": UW,
+                                        "aria-pressed": nR,
                                         onClick: () => {
-                                          kW(!UW)
+                                          UR(!nR)
                                         },
-                                        children: [(0, AW.jsx)(jW, {
-                                          name: UW ? "play" : "pause"
-                                        }), (0, AW.jsx)("span", {
-                                          children: UW ? "Loop" : "Stop looping"
+                                        children: [(0, eR.jsx)(LR, {
+                                          name: nR ? "play" : "pause"
+                                        }), (0, eR.jsx)("span", {
+                                          children: nR ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, AW.jsxs)("div", {
+                                  }), (0, eR.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, AW.jsxs)("div", {
+                                    children: [(0, eR.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, AW.jsxs)("div", {
+                                      children: [(0, eR.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, AW.jsx)("span", {
+                                        children: [(0, eR.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, AW.jsx)("code", {
+                                        }), (0, eR.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: wW.texture
+                                          children: fR.texture
                                         })]
-                                      }), (0, AW.jsx)("div", {
+                                      }), (0, eR.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: yW.map((WW => {
-                                          var iW;
-                                          const OW = null !== (iW = null === LW || void 0 === LW ? void 0 : LW.getParticleTextureUrl(WW)) && void 0 !== iW ? iW : null;
-                                          return (0, AW.jsx)("button", {
+                                        children: BR.map((RR => {
+                                          var JR;
+                                          const GR = null !== (JR = null === qR || void 0 === qR ? void 0 : qR.getParticleTextureUrl(RR)) && void 0 !== JR ? JR : null;
+                                          return (0, eR.jsx)("button", {
                                             type: "button",
-                                            className: NW()("DocsParticleTexture", {
-                                              Active: wW.texture === WW
+                                            className: uR()("DocsParticleTexture", {
+                                              Active: fR.texture === RR
                                             }),
-                                            title: WW,
-                                            "aria-label": WW,
-                                            "aria-pressed": wW.texture === WW,
+                                            title: RR,
+                                            "aria-label": RR,
+                                            "aria-pressed": fR.texture === RR,
                                             onClick: () => {
-                                              KW({
-                                                texture: WW
+                                              CR({
+                                                texture: RR
                                               })
                                             },
-                                            children: OW ? (0, AW.jsx)("img", {
-                                              src: OW,
+                                            children: GR ? (0, eR.jsx)("img", {
+                                              src: GR,
                                               alt: ""
-                                            }) : (0, AW.jsx)(jW, {
+                                            }) : (0, eR.jsx)(LR, {
                                               name: "image"
                                             })
-                                          }, WW)
+                                          }, RR)
                                         }))
                                       })]
-                                    }), (0, AW.jsx)(OE, {
+                                    }), (0, eR.jsx)(hy, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: wW.manualEmitCount,
-                                      onChange: WW => {
-                                        KW({
-                                          manualEmitCount: WW
+                                      value: fR.manualEmitCount,
+                                      onChange: RR => {
+                                        CR({
+                                          manualEmitCount: RR
                                         })
                                       }
-                                    }), (0, AW.jsx)(iE, {
+                                    }), (0, eR.jsx)(sy, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: wW.minLifeTime,
-                                      high: wW.maxLifeTime,
-                                      onChange: (WW, iW) => {
-                                        KW({
-                                          minLifeTime: WW,
-                                          maxLifeTime: iW
+                                      low: fR.minLifeTime,
+                                      high: fR.maxLifeTime,
+                                      onChange: (RR, JR) => {
+                                        CR({
+                                          minLifeTime: RR,
+                                          maxLifeTime: JR
                                         })
                                       }
-                                    }), (0, AW.jsx)(iE, {
+                                    }), (0, eR.jsx)(sy, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: wW.minEmitPower,
-                                      high: wW.maxEmitPower,
-                                      onChange: (WW, iW) => {
-                                        KW({
-                                          minEmitPower: WW,
-                                          maxEmitPower: iW
+                                      low: fR.minEmitPower,
+                                      high: fR.maxEmitPower,
+                                      onChange: (RR, JR) => {
+                                        CR({
+                                          minEmitPower: RR,
+                                          maxEmitPower: JR
                                         })
                                       }
-                                    }), (0, AW.jsx)(iE, {
+                                    }), (0, eR.jsx)(sy, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: wW.minSize,
-                                      high: wW.maxSize,
-                                      onChange: (WW, iW) => {
-                                        KW({
-                                          minSize: WW,
-                                          maxSize: iW
+                                      low: fR.minSize,
+                                      high: fR.maxSize,
+                                      onChange: (RR, JR) => {
+                                        CR({
+                                          minSize: RR,
+                                          maxSize: JR
                                         })
                                       }
-                                    }), (0, AW.jsx)(OE, {
+                                    }), (0, eR.jsx)(hy, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (EW = wW.gravity[1]) && void 0 !== EW ? EW : 0,
-                                      onChange: WW => {
-                                        var iW, OW;
-                                        KW({
-                                          gravity: [null !== (iW = wW.gravity[0]) && void 0 !== iW ? iW : 0, WW, null !== (OW = wW.gravity[2]) && void 0 !== OW ? OW : 0]
+                                      value: null !== (tR = fR.gravity[1]) && void 0 !== tR ? tR : 0,
+                                      onChange: RR => {
+                                        var JR, GR;
+                                        CR({
+                                          gravity: [null !== (JR = fR.gravity[0]) && void 0 !== JR ? JR : 0, RR, null !== (GR = fR.gravity[2]) && void 0 !== GR ? GR : 0]
                                         })
                                       }
-                                    }), (0, AW.jsxs)("div", {
+                                    }), (0, eR.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, AW.jsx)("div", {
+                                      children: [(0, eR.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, AW.jsx)("span", {
+                                        children: (0, eR.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, AW.jsx)("select", {
+                                      }), (0, eR.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: wW.blendMode,
+                                        value: fR.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: WW => {
-                                          KW({
-                                            blendMode: Number(WW.target.value)
+                                        onChange: RR => {
+                                          CR({
+                                            blendMode: Number(RR.target.value)
                                           })
                                         },
-                                        children: tE.map((WW => {
+                                        children: qt.map((RR => {
                                           let {
-                                            mode: iW,
-                                            label: OW
-                                          } = WW;
-                                          return (0, AW.jsx)("option", {
-                                            value: iW,
-                                            children: OW
-                                          }, iW)
+                                            mode: JR,
+                                            label: GR
+                                          } = RR;
+                                          return (0, eR.jsx)("option", {
+                                            value: JR,
+                                            children: GR
+                                          }, JR)
                                         }))
                                       })]
-                                    }), (0, AW.jsx)(mE, {
-                                      opts: wW,
-                                      onChange: WW => {
-                                        KW({
-                                          colorGradients: WW
+                                    }), (0, eR.jsx)(Rt, {
+                                      opts: fR,
+                                      onChange: RR => {
+                                        CR({
+                                          colorGradients: RR
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, AW.jsx)(YW, {
-                                  code: SW,
+                                }), (0, eR.jsx)(MR, {
+                                  code: XR,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var xE = OW(5185),
-                            lE = OW(2021);
+                          var ft = GR(5281),
+                            Vt = GR(2105);
 
-                          function AE(WW, iW) {
-                            return WW ? xE.c.includes(iW) ? WW.getIngameIconUrl(iW) : WW.getItemIconUrl(iW) : null
+                          function Kt(RR, JR) {
+                            return RR ? ft.c.includes(JR) ? RR.getIngameIconUrl(JR) : RR.getItemIconUrl(JR) : null
                           }
 
-                          function bE(WW) {
-                            var iW, OW, mW;
+                          function wt(RR) {
+                            var JR, GR, yR;
                             let {
-                              part: EW,
-                              assets: PW
-                            } = WW;
-                            const LW = AE(PW, EW.icon),
-                              cW = null !== (iW = null === (OW = EW.style) || void 0 === OW ? void 0 : OW.fontSize) && void 0 !== iW ? iW : "1.8em",
-                              wW = (0, Vi.cc)(EW.style);
-                            return (0, AW.jsxs)("span", {
-                              className: NW()("DocsBloxdTextIcon", {
-                                Missing: !LW
+                              part: tR,
+                              assets: ZR
+                            } = RR;
+                            const qR = Kt(ZR, tR.icon),
+                              iR = null !== (JR = null === (GR = tR.style) || void 0 === GR ? void 0 : GR.fontSize) && void 0 !== JR ? JR : "1.8em",
+                              fR = (0, cJ.Zb)(tR.style);
+                            return (0, eR.jsxs)("span", {
+                              className: uR()("DocsBloxdTextIcon", {
+                                Missing: !qR
                               }),
                               style: {
-                                width: cW,
-                                height: cW,
-                                opacity: null === (mW = EW.style) || void 0 === mW ? void 0 : mW.opacity
+                                width: iR,
+                                height: iR,
+                                opacity: null === (yR = tR.style) || void 0 === yR ? void 0 : yR.opacity
                               },
-                              title: LW ? void 0 : "No Bloxd icon, item or block has this name",
-                              children: [LW && wW && (0, AW.jsx)("span", {
+                              title: qR ? void 0 : "No Bloxd icon, item or block has this name",
+                              children: [qR && fR && (0, eR.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: wW,
-                                  maskImage: `url("${LW}")`,
-                                  WebkitMaskImage: `url("${LW}")`
+                                  background: fR,
+                                  maskImage: `url("${qR}")`,
+                                  WebkitMaskImage: `url("${qR}")`
                                 }
-                              }), LW ? (0, AW.jsx)("img", {
-                                src: LW,
+                              }), qR ? (0, eR.jsx)("img", {
+                                src: qR,
                                 alt: "",
-                                className: NW()({
-                                  Tinted: wW
+                                className: uR()({
+                                  Tinted: fR
                                 })
-                              }) : (0, AW.jsx)(jW, {
+                              }) : (0, eR.jsx)(LR, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function jE(WW) {
+                          function rt(RR) {
                             let {
-                              parts: iW,
-                              className: OW
-                            } = WW;
-                            const mW = Km(),
-                              EW = [];
-                            let PW = [];
-                            const LW = WW => {
-                              PW.length > 0 && (EW.push((0, AW.jsx)(lE.d, {
-                                text: PW
-                              }, `run-${WW}`)), PW = [])
+                              parts: JR,
+                              className: GR
+                            } = RR;
+                            const yR = Wy(),
+                              tR = [];
+                            let ZR = [];
+                            const qR = RR => {
+                              ZR.length > 0 && (tR.push((0, eR.jsx)(Vt.c, {
+                                text: ZR
+                              }, `run-${RR}`)), ZR = [])
                             };
-                            return iW.forEach(((WW, iW) => {
-                              "icon" !== qi(WW) || Ci(WW.icon) ? PW.push(WW) : (LW(iW), EW.push((0, AW.jsx)(bE, {
-                                part: WW,
-                                assets: mW
-                              }, `icon-${iW}`)))
-                            })), LW(iW.length), (0, AW.jsx)("div", {
-                              className: NW()("DocsStyledTextPreview", OW),
-                              children: EW
+                            return JR.forEach(((RR, JR) => {
+                              "icon" !== SJ(RR) || IJ(RR.icon) ? ZR.push(RR) : (qR(JR), tR.push((0, eR.jsx)(wt, {
+                                part: RR,
+                                assets: yR
+                              }, `icon-${JR}`)))
+                            })), qR(JR.length), (0, eR.jsx)("div", {
+                              className: uR()("DocsStyledTextPreview", GR),
+                              children: tR
                             })
                           }
-                          const UE = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let kE = null;
+                          const et = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Lt = null;
 
-                          function sE(WW) {
-                            if (kE ??= document.createElement("canvas").getContext("2d"), !kE) return "#000000";
-                            kE.fillStyle = "#000000", kE.fillStyle = WW;
-                            const iW = kE.fillStyle;
-                            return iW.startsWith("#") ? iW : "#000000"
+                          function nt(RR) {
+                            if (Lt ??= document.createElement("canvas").getContext("2d"), !Lt) return "#000000";
+                            Lt.fillStyle = "#000000", Lt.fillStyle = RR;
+                            const JR = Lt.fillStyle;
+                            return JR.startsWith("#") ? JR : "#000000"
                           }
 
-                          function ME(WW) {
+                          function Ut(RR) {
                             let {
-                              value: iW,
-                              label: OW,
-                              onChange: mW
-                            } = WW;
-                            return (0, AW.jsxs)("span", {
+                              value: JR,
+                              label: GR,
+                              onChange: yR
+                            } = RR;
+                            return (0, eR.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, AW.jsx)("input", {
+                              children: [(0, eR.jsx)("input", {
                                 type: "color",
-                                value: sE(iW),
-                                "aria-label": `${OW} picker`,
-                                onChange: WW => {
-                                  mW(WW.target.value)
+                                value: nt(JR),
+                                "aria-label": `${GR} picker`,
+                                onChange: RR => {
+                                  yR(RR.target.value)
                                 }
-                              }), (0, AW.jsx)("input", {
+                              }), (0, eR.jsx)("input", {
                                 type: "text",
-                                value: iW,
+                                value: JR,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": OW,
+                                "aria-label": GR,
                                 spellCheck: !1,
-                                onChange: WW => {
-                                  mW(WW.target.value)
+                                onChange: RR => {
+                                  yR(RR.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function KE(WW) {
+                          function Wt(RR) {
                             let {
-                              value: iW,
-                              fontAwesomeIcons: OW,
-                              onChange: EW
-                            } = WW;
-                            const PW = Km(),
-                              [LW, cW] = (0, mW.useState)(Ci(iW) ? "fontAwesome" : "bloxd"),
-                              [wW, tW] = (0, mW.useState)(""),
-                              ZW = wW.trim().toLowerCase(),
-                              xW = "bloxd" === LW ? xE.c : OW,
-                              lW = ZW ? xW.filter((WW => WW.toLowerCase().includes(ZW))) : xW;
-                            return (0, AW.jsxs)("div", {
+                              value: JR,
+                              fontAwesomeIcons: GR,
+                              onChange: tR
+                            } = RR;
+                            const ZR = Wy(),
+                              [qR, iR] = (0, yR.useState)(IJ(JR) ? "fontAwesome" : "bloxd"),
+                              [fR, VR] = (0, yR.useState)(""),
+                              KR = fR.trim().toLowerCase(),
+                              wR = "bloxd" === qR ? ft.c : GR,
+                              rR = KR ? wR.filter((RR => RR.toLowerCase().includes(KR))) : wR;
+                            return (0, eR.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, AW.jsx)("input", {
+                              children: [(0, eR.jsx)("input", {
                                 type: "text",
-                                value: iW,
+                                value: JR,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: WW => {
-                                  EW(WW.target.value)
+                                onChange: RR => {
+                                  tR(RR.target.value)
                                 }
-                              }), (0, AW.jsx)("p", {
+                              }), (0, eR.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((WW => (0, AW.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((RR => (0, eR.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": LW === WW,
-                                    className: NW()("DocsVariantChip", {
-                                      Active: LW === WW
+                                    "aria-selected": qR === RR,
+                                    className: uR()("DocsVariantChip", {
+                                      Active: qR === RR
                                     }),
                                     onClick: () => {
-                                      cW(WW)
+                                      iR(RR)
                                     },
-                                    children: "bloxd" === WW ? `Bloxd icons (${xE.c.length})` : `Font Awesome (${OW.length})`
-                                  }, WW))), (0, AW.jsx)("input", {
+                                    children: "bloxd" === RR ? `Bloxd icons (${ft.c.length})` : `Font Awesome (${GR.length})`
+                                  }, RR))), (0, eR.jsx)("input", {
                                     type: "search",
-                                    value: wW,
+                                    value: fR,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: WW => {
-                                      tW(WW.target.value)
+                                    onChange: RR => {
+                                      VR(RR.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [lW.map((WW => {
-                                  const OW = "bloxd" === LW ? AE(PW, WW) : null;
-                                  return (0, AW.jsx)("button", {
+                                children: [rR.map((RR => {
+                                  const GR = "bloxd" === qR ? Kt(ZR, RR) : null;
+                                  return (0, eR.jsx)("button", {
                                     type: "button",
-                                    title: WW,
-                                    "aria-label": WW,
-                                    "aria-pressed": WW === iW,
-                                    className: NW()("DocsIconPickerOption", {
-                                      Active: WW === iW
+                                    title: RR,
+                                    "aria-label": RR,
+                                    "aria-pressed": RR === JR,
+                                    className: uR()("DocsIconPickerOption", {
+                                      Active: RR === JR
                                     }),
                                     onClick: () => {
-                                      EW(WW)
+                                      tR(RR)
                                     },
-                                    children: "fontAwesome" === LW ? (0, AW.jsx)(SO.c, {
-                                      name: WW
-                                    }) : OW ? (0, AW.jsx)("img", {
-                                      src: OW,
+                                    children: "fontAwesome" === qR ? (0, eR.jsx)(AG.d, {
+                                      name: RR
+                                    }) : GR ? (0, eR.jsx)("img", {
+                                      src: GR,
                                       alt: ""
-                                    }) : (0, AW.jsx)(jW, {
+                                    }) : (0, eR.jsx)(LR, {
                                       name: "image"
                                     })
-                                  }, WW)
-                                })), 0 === lW.length && (0, AW.jsxs)("p", {
+                                  }, RR)
+                                })), 0 === rR.length && (0, eR.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", wW, "\u201d."]
+                                  children: ["No icons match \u201c", fR, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function SE(WW) {
+                          function At(RR) {
                             let {
-                              property: iW,
-                              value: OW,
-                              fontAwesomeIcons: mW,
-                              onChange: EW
-                            } = WW;
+                              property: JR,
+                              value: GR,
+                              fontAwesomeIcons: yR,
+                              onChange: tR
+                            } = RR;
                             const {
-                              field: NW,
-                              label: PW
-                            } = iW, LW = WW => "" !== WW || iW.isRequired ? WW : void 0;
-                            switch (NW.kind) {
+                              field: uR,
+                              label: ZR
+                            } = JR, qR = RR => "" !== RR || JR.isRequired ? RR : void 0;
+                            switch (uR.kind) {
                               case "text":
-                                return NW.multiline ? (0, AW.jsx)("textarea", {
-                                  value: String(null !== OW && void 0 !== OW ? OW : ""),
+                                return uR.multiline ? (0, eR.jsx)("textarea", {
+                                  value: String(null !== GR && void 0 !== GR ? GR : ""),
                                   rows: 2,
-                                  "aria-label": PW,
-                                  onChange: WW => {
-                                    EW(WW.target.value)
+                                  "aria-label": ZR,
+                                  onChange: RR => {
+                                    tR(RR.target.value)
                                   }
-                                }) : (0, AW.jsx)("input", {
+                                }) : (0, eR.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== OW && void 0 !== OW ? OW : ""),
-                                  "aria-label": PW,
-                                  onChange: WW => {
-                                    EW(LW(WW.target.value))
+                                  value: String(null !== GR && void 0 !== GR ? GR : ""),
+                                  "aria-label": ZR,
+                                  onChange: RR => {
+                                    tR(qR(RR.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, AW.jsx)("input", {
+                                return (0, eR.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== OW && void 0 !== OW ? OW : ""),
-                                  placeholder: iW.defaultText,
+                                  value: String(null !== GR && void 0 !== GR ? GR : ""),
+                                  placeholder: JR.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": PW,
+                                  "aria-label": ZR,
                                   spellCheck: !1,
-                                  onChange: WW => {
-                                    EW(LW(WW.target.value.trim()))
+                                  onChange: RR => {
+                                    tR(qR(RR.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, AW.jsx)(ME, {
-                                  value: String(null !== OW && void 0 !== OW ? OW : ""),
-                                  label: PW,
-                                  onChange: WW => {
-                                    EW(LW(WW))
+                                return (0, eR.jsx)(Ut, {
+                                  value: String(null !== GR && void 0 !== GR ? GR : ""),
+                                  label: ZR,
+                                  onChange: RR => {
+                                    tR(qR(RR))
                                   }
                                 });
                               case "colours": {
-                                const WW = Array.isArray(OW) ? OW : [],
-                                  iW = WW => {
-                                    EW(WW.length > 0 ? WW : void 0)
+                                const RR = Array.isArray(GR) ? GR : [],
+                                  JR = RR => {
+                                    tR(RR.length > 0 ? RR : void 0)
                                   };
-                                return (0, AW.jsxs)("div", {
+                                return (0, eR.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [WW.map(((OW, mW) => (0, AW.jsxs)("span", {
+                                  children: [RR.map(((GR, yR) => (0, eR.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, AW.jsx)(ME, {
-                                      value: OW,
-                                      label: `${PW} ${mW+1}`,
-                                      onChange: OW => {
-                                        iW(WW.map(((WW, iW) => iW === mW ? OW : WW)))
+                                    children: [(0, eR.jsx)(Ut, {
+                                      value: GR,
+                                      label: `${ZR} ${yR+1}`,
+                                      onChange: GR => {
+                                        JR(RR.map(((RR, JR) => JR === yR ? GR : RR)))
                                       }
-                                    }), (0, AW.jsx)("button", {
+                                    }), (0, eR.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${mW+1}`,
+                                      "aria-label": `Remove colour ${yR+1}`,
                                       onClick: () => {
-                                        iW(WW.filter(((WW, iW) => iW !== mW)))
+                                        JR(RR.filter(((RR, JR) => JR !== yR)))
                                       },
-                                      children: (0, AW.jsx)(jW, {
+                                      children: (0, eR.jsx)(LR, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, mW))), (0, AW.jsxs)("button", {
+                                  }, yR))), (0, eR.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var OW;
-                                      iW([...WW, null !== (OW = WW.at(-1)) && void 0 !== OW ? OW : "#ffffff"])
+                                      var GR;
+                                      JR([...RR, null !== (GR = RR.at(-1)) && void 0 !== GR ? GR : "#ffffff"])
                                     },
-                                    children: [(0, AW.jsx)(jW, {
+                                    children: [(0, eR.jsx)(LR, {
                                       name: "plus"
-                                    }), 0 === WW.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === RR.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var cW;
-                                const WW = "number" === typeof OW ? OW : Number(null !== (cW = iW.defaultText) && void 0 !== cW ? cW : 0);
-                                return (0, AW.jsxs)("span", {
+                                var iR;
+                                const RR = "number" === typeof GR ? GR : Number(null !== (iR = JR.defaultText) && void 0 !== iR ? iR : 0);
+                                return (0, eR.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, AW.jsx)("input", {
+                                  children: [(0, eR.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: WW,
-                                    "aria-label": PW,
-                                    onChange: WW => {
-                                      EW(Number(WW.target.value))
+                                    value: RR,
+                                    "aria-label": ZR,
+                                    onChange: RR => {
+                                      tR(Number(RR.target.value))
                                     }
-                                  }), (0, AW.jsx)("output", {
-                                    children: WW.toFixed(2)
+                                  }), (0, eR.jsx)("output", {
+                                    children: RR.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, AW.jsxs)("select", {
-                                  value: String(null !== OW && void 0 !== OW ? OW : ""),
-                                  "aria-label": PW,
-                                  onChange: WW => {
-                                    EW(LW(WW.target.value))
+                                return (0, eR.jsxs)("select", {
+                                  value: String(null !== GR && void 0 !== GR ? GR : ""),
+                                  "aria-label": ZR,
+                                  onChange: RR => {
+                                    tR(qR(RR.target.value))
                                   },
-                                  children: [!iW.isRequired && (0, AW.jsxs)("option", {
+                                  children: [!JR.isRequired && (0, eR.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", iW.defaultText, ")"]
-                                  }), NW.options.map((WW => (0, AW.jsx)("option", {
-                                    value: WW,
-                                    children: WW
-                                  }, WW)))]
+                                    children: ["Default (", JR.defaultText, ")"]
+                                  }), uR.options.map((RR => (0, eR.jsx)("option", {
+                                    value: RR,
+                                    children: RR
+                                  }, RR)))]
                                 });
                               case "icon":
-                                return (0, AW.jsx)(KE, {
-                                  value: String(null !== OW && void 0 !== OW ? OW : ""),
-                                  fontAwesomeIcons: mW,
-                                  onChange: EW
+                                return (0, eR.jsx)(Wt, {
+                                  value: String(null !== GR && void 0 !== GR ? GR : ""),
+                                  fontAwesomeIcons: yR,
+                                  onChange: tR
                                 })
                             }
                           }
 
-                          function YE(WW) {
-                            let iW;
+                          function Ct(RR) {
+                            let JR;
                             try {
-                              iW = JSON.parse(WW)
-                            } catch (OW) {
+                              JR = JSON.parse(RR)
+                            } catch (GR) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${OW.message}`
+                                error: `Not valid JSON yet: ${GR.message}`
                               }
                             }
-                            return EO(iW) ? {
-                              part: iW,
+                            return GG(JR) ? {
+                              part: JR,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function yE(WW) {
+                          function Xt(RR) {
                             let {
-                              parts: iW,
-                              index: OW,
-                              fontAwesomeIcons: EW,
-                              onChange: NW,
-                              mH: PW,
-                              onClose: LW
-                            } = WW;
-                            const cW = (0, mW.useContext)(Ai),
-                              tW = (0, mW.useRef)(null),
-                              ZW = iW[OW],
-                              xW = qi(ZW),
-                              [lW, bW] = (0, mW.useState)((() => JSON.stringify(ZW, null, 2))),
-                              UW = (0, mW.useMemo)((() => "other" === xW ? YE(lW).error : null), [xW, lW]);
-                            (0, mW.useEffect)((() => {
-                              var WW;
-                              null === (WW = tW.current) || void 0 === WW || WW.focus()
+                              parts: JR,
+                              index: GR,
+                              fontAwesomeIcons: tR,
+                              onChange: uR,
+                              eD: ZR,
+                              onClose: qR
+                            } = RR;
+                            const iR = (0, yR.useContext)(eJ),
+                              VR = (0, yR.useRef)(null),
+                              KR = JR[GR],
+                              wR = SJ(KR),
+                              [rR, aR] = (0, yR.useState)((() => JSON.stringify(KR, null, 2))),
+                              nR = (0, yR.useMemo)((() => "other" === wR ? Ct(rR).error : null), [wR, rR]);
+                            (0, yR.useEffect)((() => {
+                              var RR;
+                              null === (RR = VR.current) || void 0 === RR || RR.focus()
                             }), []);
-                            const kW = (0, AW.jsx)("div", {
+                            const UR = (0, eR.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: WW => {
-                                WW.target === WW.currentTarget && LW()
+                              onMouseDown: RR => {
+                                RR.target === RR.currentTarget && qR()
                               },
-                              children: (0, AW.jsxs)("div", {
-                                ref: tW,
+                              children: (0, eR.jsxs)("div", {
+                                ref: VR,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${OW+1}: ${Xi[xW]}`,
+                                "aria-label": `Edit part ${GR+1}: ${mJ[wR]}`,
                                 tabIndex: -1,
-                                onKeyDown: WW => {
-                                  "Escape" === WW.key ? (WW.stopPropagation(), LW()) : "Tab" === WW.key && tW.current && function(WW, iW) {
-                                    const OW = Array.from(WW.querySelectorAll(ni)),
-                                      mW = OW[0],
-                                      EW = OW.at(-1);
-                                    if (!mW || !EW) return;
-                                    const NW = document.activeElement;
-                                    !iW.shiftKey || NW !== mW && NW !== WW ? iW.shiftKey || NW !== EW || (iW.preventDefault(), mW.focus()) : (iW.preventDefault(), EW.focus())
-                                  }(tW.current, WW)
+                                onKeyDown: RR => {
+                                  "Escape" === RR.key ? (RR.stopPropagation(), qR()) : "Tab" === RR.key && VR.current && function(RR, JR) {
+                                    const GR = Array.from(RR.querySelectorAll(bJ)),
+                                      yR = GR[0],
+                                      tR = GR.at(-1);
+                                    if (!yR || !tR) return;
+                                    const uR = document.activeElement;
+                                    !JR.shiftKey || uR !== yR && uR !== RR ? JR.shiftKey || uR !== tR || (JR.preventDefault(), yR.focus()) : (JR.preventDefault(), tR.focus())
+                                  }(VR.current, RR)
                                 },
-                                children: [(0, AW.jsxs)("header", {
+                                children: [(0, eR.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, AW.jsxs)("div", {
-                                    children: [(0, AW.jsxs)("div", {
+                                  children: [(0, eR.jsxs)("div", {
+                                    children: [(0, eR.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", OW + 1]
-                                    }), (0, AW.jsx)("div", {
+                                      children: ["Part ", GR + 1]
+                                    }), (0, eR.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: Xi[xW]
+                                      children: mJ[wR]
                                     })]
-                                  }), (0, AW.jsx)("button", {
+                                  }), (0, eR.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: LW,
-                                    children: (0, AW.jsx)(jW, {
+                                    onClick: qR,
+                                    children: (0, eR.jsx)(LR, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, AW.jsx)(jE, {
-                                  parts: iW,
+                                }), (0, eR.jsx)(rt, {
+                                  parts: JR,
                                   className: "DocsTextDialogPreview"
-                                }), (0, AW.jsx)("div", {
+                                }), (0, eR.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === xW ? (0, AW.jsxs)("label", {
+                                  children: "other" === wR ? (0, eR.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, AW.jsx)("span", {
+                                    children: [(0, eR.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, AW.jsx)("textarea", {
+                                    }), (0, eR.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: lW,
+                                      value: rR,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: WW => {
-                                        bW(WW.target.value);
-                                        const iW = YE(WW.target.value);
-                                        null !== iW.part && NW(iW.part)
+                                      onChange: RR => {
+                                        aR(RR.target.value);
+                                        const JR = Ct(RR.target.value);
+                                        null !== JR.part && uR(JR.part)
                                       }
-                                    }), UW && (0, AW.jsx)("span", {
+                                    }), nR && (0, eR.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: UW
+                                      children: nR
                                     })]
-                                  }) : Gi[xW].map((WW => {
-                                    const iW = ai(ZW, WW.path),
-                                      OW = WW.isRequired ? JSON.stringify(zi(ZW, WW.path)) === JSON.stringify(ZW) : void 0 === iW;
-                                    return (0, AW.jsxs)("div", {
+                                  }) : dJ[wR].map((RR => {
+                                    const JR = YJ(KR, RR.path),
+                                      GR = RR.isRequired ? JSON.stringify(QJ(KR, RR.path)) === JSON.stringify(KR) : void 0 === JR;
+                                    return (0, eR.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, AW.jsxs)("div", {
+                                      children: [(0, eR.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, AW.jsx)("span", {
-                                          children: WW.label
-                                        }), (0, AW.jsxs)("button", {
+                                        children: [(0, eR.jsx)("span", {
+                                          children: RR.label
+                                        }), (0, eR.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: OW,
-                                          "aria-label": `Reset ${WW.label.toLowerCase()} to default`,
+                                          disabled: GR,
+                                          "aria-label": `Reset ${RR.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            NW(zi(ZW, WW.path))
+                                            uR(QJ(KR, RR.path))
                                           },
-                                          children: [(0, AW.jsx)(jW, {
+                                          children: [(0, eR.jsx)(LR, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, AW.jsx)(SE, {
-                                        property: WW,
-                                        value: iW,
-                                        fontAwesomeIcons: EW,
-                                        onChange: iW => {
-                                          NW(ri(ZW, WW.path, iW))
+                                      }), (0, eR.jsx)(At, {
+                                        property: RR,
+                                        value: JR,
+                                        fontAwesomeIcons: tR,
+                                        onChange: JR => {
+                                          uR(kJ(KR, RR.path, JR))
                                         }
-                                      }), !WW.isRequired && (0, AW.jsxs)("span", {
+                                      }), !RR.isRequired && (0, eR.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", WW.defaultText]
+                                        children: ["Default: ", RR.defaultText]
                                       })]
-                                    }, WW.path.join("."))
+                                    }, RR.path.join("."))
                                   }))
-                                }), (0, AW.jsxs)("footer", {
+                                }), (0, eR.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, AW.jsxs)("button", {
+                                  children: [(0, eR.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: PW,
-                                    children: [(0, AW.jsx)(jW, {
+                                    onClick: ZR,
+                                    children: [(0, eR.jsx)(LR, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, AW.jsx)("button", {
+                                  }), (0, eR.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: LW,
+                                    onClick: qR,
                                     children: "Done"
                                   })]
-                                }), (0, AW.jsx)("datalist", {
+                                }), (0, eR.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: UE.map((WW => (0, AW.jsx)("option", {
-                                    value: WW
-                                  }, WW)))
+                                  children: et.map((RR => (0, eR.jsx)("option", {
+                                    value: RR
+                                  }, RR)))
                                 })]
                               })
                             });
-                            return cW ? (0, wW.createPortal)(kW, cW) : kW
+                            return iR ? (0, fR.createPortal)(UR, iR) : UR
                           }
-                          const TE = [{
+                          const Mt = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            JE = Object.keys(Bi);
+                            Bt = Object.keys(zJ);
 
-                          function hE(WW) {
+                          function lt(RR) {
                             let {
-                              fontAwesomeIcons: iW
-                            } = WW;
-                            const [OW, EW] = (0, mW.useState)(TE[0].parts), [PW, LW] = (0, mW.useState)((() => iO(TE[0].parts))), [cW, wW] = (0, mW.useState)(null), [tW, ZW] = (0, mW.useState)(!1), [xW, lW] = (0, mW.useState)(null), [bW, UW] = (0, mW.useState)(!1), [kW, sW] = (0, mW.useState)(null), MW = (0, mW.useRef)(null), KW = iO(OW);
-                            (0, mW.useLayoutEffect)((() => {
-                              var WW;
-                              if (!kW) return;
-                              const iW = WW => {
-                                  var iW;
-                                  return null === (iW = MW.current) || void 0 === iW ? void 0 : iW.querySelector(`[data-focus-key="${WW}"]`)
+                              fontAwesomeIcons: JR
+                            } = RR;
+                            const [GR, tR] = (0, yR.useState)(Mt[0].parts), [ZR, qR] = (0, yR.useState)((() => hJ(Mt[0].parts))), [iR, fR] = (0, yR.useState)(null), [VR, KR] = (0, yR.useState)(!1), [wR, rR] = (0, yR.useState)(null), [aR, nR] = (0, yR.useState)(!1), [UR, WR] = (0, yR.useState)(null), AR = (0, yR.useRef)(null), CR = hJ(GR);
+                            (0, yR.useLayoutEffect)((() => {
+                              var RR;
+                              if (!UR) return;
+                              const JR = RR => {
+                                  var JR;
+                                  return null === (JR = AR.current) || void 0 === JR ? void 0 : JR.querySelector(`[data-focus-key="${RR}"]`)
                                 },
-                                OW = iW(kW.key);
-                              null === (WW = OW && !OW.disabled ? OW : iW(kW.fallback)) || void 0 === WW || WW.focus(), sW(null)
-                            }), [kW]);
-                            const SW = WW => {
-                                EW(WW), LW(iO(WW)), wW(null)
+                                GR = JR(UR.key);
+                              null === (RR = GR && !GR.disabled ? GR : JR(UR.fallback)) || void 0 === RR || RR.focus(), WR(null)
+                            }), [UR]);
+                            const XR = RR => {
+                                tR(RR), qR(hJ(RR)), fR(null)
                               },
-                              yW = WW => {
-                                SW(OW.filter(((iW, OW) => OW !== WW))), sW({
-                                  key: `edit-${Math.min(WW,OW.length-2)}`,
+                              BR = RR => {
+                                XR(GR.filter(((JR, GR) => GR !== RR))), WR({
+                                  key: `edit-${Math.min(RR,GR.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              TW = (WW, iW) => {
-                                const mW = [...OW],
-                                  [EW] = mW.splice(WW, 1);
-                                mW.splice(WW + iW, 0, EW), SW(mW);
-                                sW({
-                                  key: `${iW<0?"up":"down"}-${WW+iW}`,
-                                  fallback: `edit-${WW+iW}`
+                              lR = (RR, JR) => {
+                                const yR = [...GR],
+                                  [tR] = yR.splice(RR, 1);
+                                yR.splice(RR + JR, 0, tR), XR(yR);
+                                WR({
+                                  key: `${JR<0?"up":"down"}-${RR+JR}`,
+                                  fallback: `edit-${RR+JR}`
                                 })
                               };
-                            return (0, AW.jsxs)("section", {
-                              ref: MW,
+                            return (0, eR.jsxs)("section", {
+                              ref: AR,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, AW.jsx)("header", {
+                              children: [(0, eR.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, AW.jsxs)("div", {
-                                  children: [(0, AW.jsx)("div", {
+                                children: (0, eR.jsxs)("div", {
+                                  children: [(0, eR.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, AW.jsx)("div", {
+                                  }), (0, eR.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, AW.jsx)("div", {
+                              }), (0, eR.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: TE.map((WW => (0, AW.jsx)("button", {
+                                children: Mt.map((RR => (0, eR.jsx)("button", {
                                   type: "button",
-                                  className: NW()("DocsVariantChip", {
-                                    Active: KW === iO(WW.parts)
+                                  className: uR()("DocsVariantChip", {
+                                    Active: CR === hJ(RR.parts)
                                   }),
                                   onClick: () => {
-                                    SW(WW.parts)
+                                    XR(RR.parts)
                                   },
-                                  children: WW.label
-                                }, WW.label)))
-                              }), (0, AW.jsx)(jE, {
-                                parts: OW,
+                                  children: RR.label
+                                }, RR.label)))
+                              }), (0, eR.jsx)(rt, {
+                                parts: GR,
                                 className: "DocsTextEditorPreview"
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, AW.jsxs)("div", {
+                                children: [(0, eR.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, AW.jsx)("div", {
+                                  children: [(0, eR.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, AW.jsxs)("ol", {
+                                  }), (0, eR.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [OW.map(((WW, iW) => {
-                                      const mW = qi(WW);
-                                      return (0, AW.jsxs)("li", {
+                                    children: [GR.map(((RR, JR) => {
+                                      const yR = SJ(RR);
+                                      return (0, eR.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, AW.jsxs)("button", {
+                                        children: [(0, eR.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${iW}`,
-                                          "aria-label": `Edit part ${iW+1}, ${Xi[mW]}`,
+                                          "data-focus-key": `edit-${JR}`,
+                                          "aria-label": `Edit part ${JR+1}, ${mJ[yR]}`,
                                           onClick: () => {
-                                            lW(iW)
+                                            rR(JR)
                                           },
-                                          children: [(0, AW.jsx)("span", {
+                                          children: [(0, eR.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: Xi[mW]
-                                          }), (0, AW.jsx)(jE, {
-                                            parts: [WW],
+                                            children: mJ[yR]
+                                          }), (0, eR.jsx)(rt, {
+                                            parts: [RR],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== mW && (0, AW.jsx)("code", {
+                                          }), "text" !== yR && (0, eR.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Fi(WW)
+                                            children: FJ(RR)
                                           })]
-                                        }), (0, AW.jsxs)("span", {
+                                        }), (0, eR.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, AW.jsx)("button", {
+                                          children: [(0, eR.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${iW+1} up`,
-                                            "data-focus-key": `up-${iW}`,
-                                            disabled: 0 === iW,
+                                            "aria-label": `Move part ${JR+1} up`,
+                                            "data-focus-key": `up-${JR}`,
+                                            disabled: 0 === JR,
                                             onClick: () => {
-                                              TW(iW, -1)
+                                              lR(JR, -1)
                                             },
-                                            children: (0, AW.jsx)(jW, {
+                                            children: (0, eR.jsx)(LR, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, AW.jsx)("button", {
+                                          }), (0, eR.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${iW+1} down`,
-                                            "data-focus-key": `down-${iW}`,
-                                            disabled: iW === OW.length - 1,
+                                            "aria-label": `Move part ${JR+1} down`,
+                                            "data-focus-key": `down-${JR}`,
+                                            disabled: JR === GR.length - 1,
                                             onClick: () => {
-                                              TW(iW, 1)
+                                              lR(JR, 1)
                                             },
-                                            children: (0, AW.jsx)(jW, {
+                                            children: (0, eR.jsx)(LR, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, AW.jsx)("button", {
+                                          }), (0, eR.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${iW+1}`,
+                                            "aria-label": `Remove part ${JR+1}`,
                                             onClick: () => {
-                                              yW(iW)
+                                              BR(JR)
                                             },
-                                            children: (0, AW.jsx)(jW, {
+                                            children: (0, eR.jsx)(LR, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, iW)
-                                    })), 0 === OW.length && (0, AW.jsx)("li", {
+                                      }, JR)
+                                    })), 0 === GR.length && (0, eR.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, AW.jsxs)("div", {
+                                  }), (0, eR.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: WW => {
-                                      "Escape" === WW.key && bW && (WW.stopPropagation(), UW(!1), sW({
+                                    onKeyDown: RR => {
+                                      "Escape" === RR.key && aR && (RR.stopPropagation(), nR(!1), WR({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, AW.jsxs)("button", {
+                                    children: [(0, eR.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": bW,
+                                      "aria-expanded": aR,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        UW(!bW)
+                                        nR(!aR)
                                       },
-                                      children: [(0, AW.jsx)(jW, {
+                                      children: [(0, eR.jsx)(LR, {
                                         name: "plus"
-                                      }), "Add a part", (0, AW.jsx)(jW, {
-                                        name: bW ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, eR.jsx)(LR, {
+                                        name: aR ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), bW && (0, AW.jsx)("ul", {
+                                    }), aR && (0, eR.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: JE.map((WW => (0, AW.jsx)("li", {
-                                        children: (0, AW.jsx)("button", {
+                                      children: Bt.map((RR => (0, eR.jsx)("li", {
+                                        children: (0, eR.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (WW => {
-                                              SW([...OW, Bi[WW]]), UW(!1), lW(OW.length)
-                                            })(WW)
+                                            (RR => {
+                                              XR([...GR, zJ[RR]]), nR(!1), rR(GR.length)
+                                            })(RR)
                                           },
-                                          children: Xi[WW]
+                                          children: mJ[RR]
                                         })
-                                      }, WW)))
+                                      }, RR)))
                                     })]
                                   })]
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, AW.jsxs)("div", {
+                                  children: [(0, eR.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, AW.jsxs)("button", {
+                                    children: ["Code", (0, eR.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": tW,
+                                      "aria-pressed": VR,
                                       onClick: () => {
-                                        ZW(!tW)
+                                        KR(!VR)
                                       },
-                                      children: [(0, AW.jsx)(jW, {
-                                        name: tW ? "check" : "pencil"
-                                      }), tW ? "Done" : "Edit"]
+                                      children: [(0, eR.jsx)(LR, {
+                                        name: VR ? "check" : "pencil"
+                                      }), VR ? "Done" : "Edit"]
                                     })]
-                                  }), tW ? (0, AW.jsxs)(AW.Fragment, {
-                                    children: [(0, AW.jsx)("textarea", {
+                                  }), VR ? (0, eR.jsxs)(eR.Fragment, {
+                                    children: [(0, eR.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: PW,
+                                      value: ZR,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: WW => {
-                                        LW(WW.target.value);
-                                        const iW = NO(WW.target.value);
-                                        wW(iW.error), iW.parts && EW(iW.parts)
+                                      onChange: RR => {
+                                        qR(RR.target.value);
+                                        const JR = yG(RR.target.value);
+                                        fR(JR.error), JR.parts && tR(JR.parts)
                                       }
-                                    }), cW && (0, AW.jsx)("p", {
+                                    }), iR && (0, eR.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: cW
+                                      children: iR
                                     })]
-                                  }) : (0, AW.jsx)(YW, {
+                                  }) : (0, eR.jsx)(MR, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${KW})`
+                                    code: `api.sendMessage(playerId, ${CR})`
                                   })]
                                 })]
-                              }), null !== xW && xW < OW.length && (0, AW.jsx)(yE, {
-                                parts: OW,
-                                index: xW,
-                                fontAwesomeIcons: iW,
-                                onChange: WW => {
-                                  ((WW, iW) => {
-                                    SW(OW.map(((OW, mW) => mW === WW ? iW : OW)))
-                                  })(xW, WW)
+                              }), null !== wR && wR < GR.length && (0, eR.jsx)(Xt, {
+                                parts: GR,
+                                index: wR,
+                                fontAwesomeIcons: JR,
+                                onChange: RR => {
+                                  ((RR, JR) => {
+                                    XR(GR.map(((GR, yR) => yR === RR ? JR : GR)))
+                                  })(wR, RR)
                                 },
-                                mH: () => {
-                                  yW(xW), lW(null)
+                                eD: () => {
+                                  BR(wR), rR(null)
                                 },
                                 onClose: () => {
-                                  lW(null), sW({
-                                    key: `edit-${xW}`,
+                                  rR(null), WR({
+                                    key: `edit-${wR}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var HE = OW(5605),
-                            nE = OW(5590),
-                            uE = OW(5599),
-                            oE = OW(5610);
-                          const dE = 40,
-                            eE = 800,
-                            vE = 150,
-                            gE = 8e3,
-                            DE = 2e3;
+                          var pt = GR(5733),
+                            gt = GR(5712),
+                            bt = GR(5728),
+                            vt = GR(5736);
+                          const Ot = 40,
+                            xt = 800,
+                            Nt = 150,
+                            Dt = 8e3,
+                            Ht = 2e3;
 
-                          function VE(WW, iW) {
-                            return 12 * Math.log2(iW / WW)
+                          function ot(RR, JR) {
+                            return 12 * Math.log2(JR / RR)
                           }
 
-                          function pE(WW, iW) {
-                            return Math.round(WW * 2 ** (iW / 12) * 10) / 10
+                          function ct(RR, JR) {
+                            return Math.round(RR * 2 ** (JR / 12) * 10) / 10
                           }
 
-                          function fE(WW) {
-                            return `${WW} ms`
+                          function Pt(RR) {
+                            return `${RR} ms`
                           }
 
-                          function CE(WW) {
-                            return `${WW} st`
+                          function It(RR) {
+                            return `${RR} st`
                           }
-                          const XE = [{
+                          const mt = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function BE(WW) {
+                          function zt(RR) {
                             let {
-                              synth: iW,
-                              onChange: OW
-                            } = WW;
-                            const mW = (0, HE.h)(iW);
-                            return (0, AW.jsxs)("div", {
+                              synth: JR,
+                              onChange: GR
+                            } = RR;
+                            const yR = (0, pt.i)(JR);
+                            return (0, eR.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, AW.jsxs)("div", {
+                              children: [(0, eR.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, AW.jsx)("div", {
+                                children: [(0, eR.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, AW.jsx)("div", {
+                                  children: [(0, eR.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, AW.jsx)("span", {
+                                    children: (0, eR.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, AW.jsx)("div", {
+                                  }), (0, eR.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: HE.e.map((WW => (0, AW.jsx)("button", {
+                                    children: pt.e.map((RR => (0, eR.jsx)("button", {
                                       type: "button",
-                                      className: NW()("DocsVariantChip", {
-                                        Active: iW.waveform === WW
+                                      className: uR()("DocsVariantChip", {
+                                        Active: JR.waveform === RR
                                       }),
-                                      "aria-pressed": iW.waveform === WW,
+                                      "aria-pressed": JR.waveform === RR,
                                       onClick: () => {
-                                        OW({
-                                          waveform: WW
+                                        GR({
+                                          waveform: RR
                                         })
                                       },
-                                      children: WW
-                                    }, WW)))
+                                      children: RR
+                                    }, RR)))
                                   })]
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: VE(dE, eE),
+                                  max: ot(Ot, xt),
                                   step: .1,
-                                  value: VE(dE, iW.pitchHz),
-                                  format: () => `${iW.pitchHz} Hz`,
-                                  onChange: WW => {
-                                    OW({
-                                      pitchHz: pE(dE, WW)
+                                  value: ot(Ot, JR.pitchHz),
+                                  format: () => `${JR.pitchHz} Hz`,
+                                  onChange: RR => {
+                                    GR({
+                                      pitchHz: ct(Ot, RR)
                                     })
                                   }
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: iW.syllableMs,
-                                  format: fE,
-                                  onChange: WW => {
-                                    OW({
-                                      syllableMs: WW
+                                  value: JR.syllableMs,
+                                  format: Pt,
+                                  onChange: RR => {
+                                    GR({
+                                      syllableMs: RR
                                     })
                                   }
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: iW.volume,
-                                  onChange: WW => {
-                                    OW({
-                                      volume: WW
+                                  value: JR.volume,
+                                  onChange: RR => {
+                                    GR({
+                                      volume: RR
                                     })
                                   }
                                 })]
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, AW.jsx)("div", {
+                                children: [(0, eR.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: iW.durationMs,
-                                  format: fE,
-                                  onChange: WW => {
-                                    OW({
-                                      durationMs: WW
+                                  value: JR.durationMs,
+                                  format: Pt,
+                                  onChange: RR => {
+                                    GR({
+                                      durationMs: RR
                                     })
                                   }
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: mW.durationMs,
+                                  max: yR.durationMs,
                                   step: 1,
-                                  value: mW.attackMs,
-                                  format: fE,
-                                  onChange: WW => {
-                                    OW({
-                                      attackMs: WW
+                                  value: yR.attackMs,
+                                  format: Pt,
+                                  onChange: RR => {
+                                    GR({
+                                      attackMs: RR
                                     })
                                   }
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: mW.durationMs - mW.attackMs,
+                                  max: yR.durationMs - yR.attackMs,
                                   step: 1,
-                                  value: mW.releaseMs,
-                                  format: fE,
-                                  onChange: WW => {
-                                    OW({
-                                      releaseMs: WW
+                                  value: yR.releaseMs,
+                                  format: Pt,
+                                  onChange: RR => {
+                                    GR({
+                                      releaseMs: RR
                                     })
                                   }
-                                }), (0, AW.jsx)(OE, {
+                                }), (0, eR.jsx)(hy, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: iW.glideSemitones,
-                                  format: CE,
-                                  onChange: WW => {
-                                    OW({
-                                      glideSemitones: WW
+                                  value: JR.glideSemitones,
+                                  format: It,
+                                  onChange: RR => {
+                                    GR({
+                                      glideSemitones: RR
                                     })
                                   }
-                                }), (0, AW.jsxs)("label", {
+                                }), (0, eR.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, AW.jsx)("input", {
+                                  children: [(0, eR.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== iW.lowpassHz,
-                                    onChange: WW => {
-                                      OW({
-                                        lowpassHz: WW.target.checked ? DE : null
+                                    checked: null !== JR.lowpassHz,
+                                    onChange: RR => {
+                                      GR({
+                                        lowpassHz: RR.target.checked ? Ht : null
                                       })
                                     }
-                                  }), (0, AW.jsx)("span", {
+                                  }), (0, eR.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== iW.lowpassHz && (0, AW.jsx)(OE, {
+                                }), null !== JR.lowpassHz && (0, eR.jsx)(hy, {
                                   label: "Filter",
                                   min: 0,
-                                  max: VE(vE, gE),
+                                  max: ot(Nt, Dt),
                                   step: .1,
-                                  value: VE(vE, iW.lowpassHz),
-                                  format: () => `${iW.lowpassHz} Hz`,
-                                  onChange: WW => {
-                                    OW({
-                                      lowpassHz: pE(vE, WW)
+                                  value: ot(Nt, JR.lowpassHz),
+                                  format: () => `${JR.lowpassHz} Hz`,
+                                  onChange: RR => {
+                                    GR({
+                                      lowpassHz: ct(Nt, RR)
                                     })
                                   }
                                 })]
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, AW.jsx)("div", {
+                                children: [(0, eR.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), XE.map((WW => {
+                                }), mt.map((RR => {
                                   let {
-                                    key: mW,
-                                    label: EW,
-                                    max: NW
-                                  } = WW;
-                                  return (0, AW.jsx)(OE, {
-                                    label: EW,
+                                    key: yR,
+                                    label: tR,
+                                    max: uR
+                                  } = RR;
+                                  return (0, eR.jsx)(hy, {
+                                    label: tR,
                                     min: 0,
-                                    max: NW,
+                                    max: uR,
                                     step: .1,
-                                    value: iW.intonation[mW],
-                                    format: CE,
-                                    onChange: WW => {
-                                      OW({
+                                    value: JR.intonation[yR],
+                                    format: It,
+                                    onChange: RR => {
+                                      GR({
                                         intonation: {
-                                          ...iW.intonation,
-                                          [mW]: WW
+                                          ...JR.intonation,
+                                          [yR]: RR
                                         }
                                       })
                                     }
-                                  }, mW)
+                                  }, yR)
                                 }))]
                               })]
                             })
                           }
-                          const qE = Object.keys(HE.g),
-                            RE = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const St = Object.keys(pt.f),
+                            jt = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function GE(WW) {
-                            var iW;
-                            const OW = JSON.stringify((0, HE.h)(WW));
-                            return null !== (iW = qE.find((WW => JSON.stringify((0, HE.h)(HE.g[WW])) === OW))) && void 0 !== iW ? iW : null
+                          function dt(RR) {
+                            var JR;
+                            const GR = JSON.stringify((0, pt.i)(RR));
+                            return null !== (JR = St.find((RR => JSON.stringify((0, pt.i)(pt.f[RR])) === GR))) && void 0 !== JR ? JR : null
                           }
 
-                          function IE(WW) {
-                            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof WW || null === WW) return JSON.stringify(WW);
-                            return `{\n${Object.entries(WW).map((WW=>{let[OW,mW]=WW;return`${iW}    ${OW}: ${IE(mW,`${iW}    `)},`})).join("\n")}\n${iW}}`
+                          function Et(RR) {
+                            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof RR || null === RR) return JSON.stringify(RR);
+                            return `{\n${Object.entries(RR).map((RR=>{let[GR,yR]=RR;return`${JR}    ${GR}: ${Et(yR,`${JR}    `)},`})).join("\n")}\n${JR}}`
                           }
 
-                          function aE(WW, iW, OW) {
-                            const mW = GE(WW),
-                              EW = [`    line: ${JSON.stringify(iW)},`];
-                            return OW && EW.push(`    speakerName: ${JSON.stringify(OW)},`), EW.push("    voice,"), `const voice = ${mW?JSON.stringify(mW):IE((0,HE.h)(WW))}\n\napi.setClientOption(playerId, "dialogue", {\n${EW.join("\n")}\n})`
+                          function Yt(RR, JR, GR) {
+                            const yR = dt(RR),
+                              tR = [`    line: ${JSON.stringify(JR)},`];
+                            return GR && tR.push(`    speakerName: ${JSON.stringify(GR)},`), tR.push("    voice,"), `const voice = ${yR?JSON.stringify(yR):Et((0,pt.i)(RR))}\n\napi.setClientOption(playerId, "dialogue", {\n${tR.join("\n")}\n})`
                           }
-                          const rE = 400,
-                            zE = 90;
-                          let FE = null;
+                          const kt = 400,
+                            Qt = 90;
+                          let Ft = null;
 
-                          function QE(WW, iW, OW) {
-                            return FE ??= new AudioContext, FE.resume(), (0, oE.e)(FE, FE.destination, WW, iW, OW, (() => {}))
+                          function Tt(RR, JR, GR) {
+                            return Ft ??= new AudioContext, Ft.resume(), (0, vt.c)(Ft, Ft.destination, RR, JR, GR, (() => {}))
                           }
 
-                          function WN() {
-                            const [WW, iW] = (0, mW.useState)(HE.g.regular), [OW, EW] = (0, mW.useState)(RE[0]), [PW, LW] = (0, mW.useState)("Innkeeper"), [cW, wW] = (0, mW.useState)(0), tW = xm((WW => WW.volume)), ZW = (0, mW.useRef)(null), xW = (0, mW.useRef)(0), lW = (0, mW.useRef)(0), bW = () => {
-                              var WW;
-                              null === (WW = ZW.current) || void 0 === WW || WW.call(ZW), ZW.current = null
+                          function st() {
+                            const [RR, JR] = (0, yR.useState)(pt.f.regular), [GR, tR] = (0, yR.useState)(jt[0]), [ZR, qR] = (0, yR.useState)("Innkeeper"), [iR, fR] = (0, yR.useState)(0), VR = Vy((RR => RR.volume)), KR = (0, yR.useRef)(null), wR = (0, yR.useRef)(0), rR = (0, yR.useRef)(0), aR = () => {
+                              var RR;
+                              null === (RR = KR.current) || void 0 === RR || RR.call(KR), KR.current = null
                             };
-                            (0, mW.useEffect)((() => () => {
-                              var WW;
-                              null === (WW = ZW.current) || void 0 === WW || WW.call(ZW), window.clearTimeout(xW.current)
+                            (0, yR.useEffect)((() => () => {
+                              var RR;
+                              null === (RR = KR.current) || void 0 === RR || RR.call(KR), window.clearTimeout(wR.current)
                             }), []);
-                            const UW = (0, mW.useMemo)((() => ({
-                                line: OW,
-                                speakerName: PW || void 0,
-                                voice: WW
-                              })), [OW, PW, WW]),
-                              kW = (0, mW.useRef)(UW);
-                            kW.current = UW;
-                            const MW = GE(WW),
-                              KW = WW => {
-                                window.clearTimeout(xW.current), bW();
+                            const nR = (0, yR.useMemo)((() => ({
+                                line: GR,
+                                speakerName: ZR || void 0,
+                                voice: RR
+                              })), [GR, ZR, RR]),
+                              UR = (0, yR.useRef)(nR);
+                            UR.current = nR;
+                            const AR = dt(RR),
+                              CR = RR => {
+                                window.clearTimeout(wR.current), aR();
                                 const {
-                                  plan: iW,
-                                  synth: OW
-                                } = (0, uE.g)(WW);
-                                OW && (ZW.current = QE(OW, iW.blips, tW)), wW((WW => WW + 1))
+                                  plan: JR,
+                                  synth: GR
+                                } = (0, bt.f)(RR);
+                                GR && (KR.current = Tt(GR, JR.blips, VR)), fR((RR => RR + 1))
                               },
-                              SW = aE(WW, OW, PW);
-                            return (0, AW.jsxs)("section", {
+                              XR = Yt(RR, GR, ZR);
+                            return (0, eR.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, AW.jsxs)("header", {
+                              children: [(0, eR.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, AW.jsxs)("div", {
-                                  children: [(0, AW.jsx)("div", {
+                                children: [(0, eR.jsxs)("div", {
+                                  children: [(0, eR.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, AW.jsx)("div", {
+                                  }), (0, eR.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, AW.jsx)(sW, {
-                                  text: SW,
+                                }), (0, eR.jsx)(WR, {
+                                  text: XR,
                                   label: "Copy code"
                                 })]
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [qE.map((WW => (0, AW.jsx)("button", {
+                                children: [St.map((RR => (0, eR.jsx)("button", {
                                   type: "button",
-                                  className: NW()("DocsVariantChip", {
-                                    Active: MW === WW
+                                  className: uR()("DocsVariantChip", {
+                                    Active: AR === RR
                                   }),
-                                  "aria-pressed": MW === WW,
+                                  "aria-pressed": AR === RR,
                                   onClick: () => {
-                                    (WW => {
-                                      const OW = HE.g[WW];
-                                      iW(OW), KW({
-                                        ...UW,
-                                        voice: OW
+                                    (RR => {
+                                      const GR = pt.f[RR];
+                                      JR(GR), CR({
+                                        ...nR,
+                                        voice: GR
                                       })
-                                    })(WW)
+                                    })(RR)
                                   },
-                                  children: WW
-                                }, WW))), !MW && (0, AW.jsx)("span", {
+                                  children: RR
+                                }, RR))), !AR && (0, eR.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, AW.jsxs)("div", {
+                              }), (0, eR.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, AW.jsxs)("div", {
+                                children: [(0, eR.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, AW.jsx)("div", {
+                                  children: [(0, eR.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, AW.jsx)(nE.e, {
-                                      display: UW
-                                    }, cW)
-                                  }), (0, AW.jsxs)("form", {
+                                    children: (0, eR.jsx)(gt.b, {
+                                      display: nR
+                                    }, iR)
+                                  }), (0, eR.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: WW => {
-                                      WW.preventDefault(), KW(UW)
+                                    onSubmit: RR => {
+                                      RR.preventDefault(), CR(nR)
                                     },
-                                    children: [(0, AW.jsx)("input", {
-                                      value: OW,
+                                    children: [(0, eR.jsx)("input", {
+                                      value: GR,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: WW => {
-                                        EW(WW.target.value)
+                                      onChange: RR => {
+                                        tR(RR.target.value)
                                       }
-                                    }), (0, AW.jsxs)("button", {
+                                    }), (0, eR.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, AW.jsx)(jW, {
+                                      children: [(0, eR.jsx)(LR, {
                                         name: "play"
-                                      }), (0, AW.jsx)("span", {
+                                      }), (0, eR.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, AW.jsx)("div", {
+                                  }), (0, eR.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: RE.map((WW => (0, AW.jsx)("button", {
+                                    children: jt.map((RR => (0, eR.jsx)("button", {
                                       type: "button",
-                                      className: NW()("DocsVariantChip", {
-                                        Active: OW === WW
+                                      className: uR()("DocsVariantChip", {
+                                        Active: GR === RR
                                       }),
                                       onClick: () => {
-                                        var iW;
-                                        EW(iW = WW), KW({
-                                          ...UW,
-                                          line: iW
+                                        var JR;
+                                        tR(JR = RR), CR({
+                                          ...nR,
+                                          line: JR
                                         })
                                       },
-                                      children: WW
-                                    }, WW)))
-                                  }), (0, AW.jsxs)("label", {
+                                      children: RR
+                                    }, RR)))
+                                  }), (0, eR.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, AW.jsx)("span", {
+                                    children: [(0, eR.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, AW.jsx)("input", {
-                                      value: PW,
+                                    }), (0, eR.jsx)("input", {
+                                      value: ZR,
                                       placeholder: "No name",
-                                      onChange: WW => {
-                                        LW(WW.target.value)
+                                      onChange: RR => {
+                                        qR(RR.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, AW.jsx)(BE, {
-                                  synth: WW,
-                                  onChange: OW => {
-                                    const mW = {
-                                      ...WW,
-                                      ...OW
+                                }), (0, eR.jsx)(zt, {
+                                  synth: RR,
+                                  onChange: GR => {
+                                    const yR = {
+                                      ...RR,
+                                      ...GR
                                     };
-                                    iW(mW);
-                                    const EW = {
-                                        ...UW,
-                                        voice: mW
+                                    JR(yR);
+                                    const tR = {
+                                        ...nR,
+                                        voice: yR
                                       },
-                                      NW = performance.now();
-                                    if (NW - lW.current >= zE) {
-                                      lW.current = NW, bW();
-                                      const WW = (0, uE.g)(EW).plan.blips[0];
-                                      WW && (ZW.current = QE((0, HE.h)(mW), [{
-                                        ...WW,
+                                      uR = performance.now();
+                                    if (uR - rR.current >= Qt) {
+                                      rR.current = uR, aR();
+                                      const RR = (0, bt.f)(tR).plan.blips[0];
+                                      RR && (KR.current = Tt((0, pt.i)(yR), [{
+                                        ...RR,
                                         atMs: 0
-                                      }], tW))
+                                      }], VR))
                                     }
-                                    window.clearTimeout(xW.current), xW.current = window.setTimeout((() => {
-                                      KW(kW.current)
-                                    }), rE)
+                                    window.clearTimeout(wR.current), wR.current = window.setTimeout((() => {
+                                      CR(UR.current)
+                                    }), kt)
                                   }
                                 })]
-                              }), (0, AW.jsx)(YW, {
-                                code: SW,
+                              }), (0, eR.jsx)(MR, {
+                                code: XR,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var iN = OW(5622);
-                          const ON = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            mN = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            EN = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${mN}`, "g"), iN.k],
+                          var ht = GR(5751);
+                          const Ru = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            Ju = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            Gu = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Ju}`, "g"), ht.n],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, iN.k]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, ht.n]
                             ];
 
-                          function NN(WW) {
-                            return `${WW.pageId}#${WW.anchor}`
+                          function yu(RR) {
+                            return `${RR.pageId}#${RR.anchor}`
                           }
-                          let PN, LN, cN;
+                          let tu, uu, Zu;
 
-                          function wN(WW) {
-                            const iW = (0, yW.i)(WW),
-                              OW = new Set;
-                            for (const [, , mW] of iW.matchAll(yW.d)) {
-                              const WW = mW.startsWith("#") ? XW(mW) : null,
-                                iW = WW ? NN({
-                                  pageId: WW.page.id,
-                                  anchor: WW.anchor
+                          function qu(RR) {
+                            const JR = (0, BR.i)(RR),
+                              GR = new Set;
+                            for (const [, , yR] of JR.matchAll(BR.d)) {
+                              const RR = yR.startsWith("#") ? SR(yR) : null,
+                                JR = RR ? yu({
+                                  pageId: RR.page.id,
+                                  anchor: RR.anchor
                                 }) : null;
-                              null !== iW && (PN || (PN = new Set(gW.flatMap((WW => HW(WW.layout) ? fW(WW).sections.map((iW => NN({
-                                pageId: WW.id,
-                                anchor: iW.heading.anchor
-                              }))) : [])))), PN).has(iW) && OW.add(iW)
+                              null !== JR && (tu || (tu = new Set(oR.flatMap((RR => bR(RR.layout) ? mR(RR).sections.map((JR => yu({
+                                pageId: RR.id,
+                                anchor: JR.heading.anchor
+                              }))) : [])))), tu).has(JR) && GR.add(JR)
                             }
-                            for (const [, , mW] of iW.matchAll(ON)) {
-                              const WW = xi(mW);
-                              WW && OW.add(NN(WW))
+                            for (const [, , yR] of JR.matchAll(Ru)) {
+                              const RR = wJ(yR);
+                              RR && GR.add(yu(RR))
                             }
-                            return OW
+                            return GR
                           }
 
-                          function tN(WW, iW) {
-                            const OW = new Set,
-                              mW = function(WW) {
-                                return WW.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(WW);
-                            for (const [, EW] of mW.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) OW.add(EW);
-                            for (const [EW, NW] of EN)
-                              for (const [, WW] of(0, iN.e)(mW, EW, NW)) iW.has(WW) && OW.add(WW);
-                            return OW
+                          function iu(RR, JR) {
+                            const GR = new Set,
+                              yR = function(RR) {
+                                return RR.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(RR);
+                            for (const [, tR] of yR.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) GR.add(tR);
+                            for (const [tR, uR] of Gu)
+                              for (const [, RR] of(0, ht.d)(yR, tR, uR)) JR.has(RR) && GR.add(RR);
+                            return GR
                           }
 
-                          function ZN(WW, iW, OW, mW) {
-                            const EW = WW.get(iW);
-                            EW ? !mW && EW.some((WW => WW.pageId === OW.pageId)) || EW.push(OW) : WW.set(iW, [OW])
+                          function fu(RR, JR, GR, yR) {
+                            const tR = RR.get(JR);
+                            tR ? !yR && tR.some((RR => RR.pageId === GR.pageId)) || tR.push(GR) : RR.set(JR, [GR])
                           }
-                          const xN = /^[A-Za-z_$][\w$]*$/;
+                          const Vu = /^[A-Za-z_$][\w$]*$/;
 
-                          function lN(WW) {
-                            return xN.test(WW.name) ? WW.name : "options"
-                          }
-
-                          function AN(WW, iW) {
-                            const OW = WW.params.map(lN).join(", ");
-                            return iW ? `${WW.name} = (${OW}) => {\n\t\n}` : `api.${WW.name}(${OW})`
+                          function Ku(RR) {
+                            return Vu.test(RR.name) ? RR.name : "options"
                           }
 
-                          function bN(WW) {
+                          function wu(RR, JR) {
+                            const GR = RR.params.map(Ku).join(", ");
+                            return JR ? `${RR.name} = (${GR}) => {\n\t\n}` : `api.${RR.name}(${GR})`
+                          }
+
+                          function ru(RR) {
                             let {
-                              method: iW,
-                              isCallback: OW
-                            } = WW;
-                            return (0, AW.jsxs)("div", {
+                              method: JR,
+                              isCallback: GR
+                            } = RR;
+                            return (0, eR.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, AW.jsxs)("span", {
+                              children: [(0, eR.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [OW ? (0, AW.jsxs)(AW.Fragment, {
-                                  children: [(0, AW.jsx)("span", {
+                                children: [GR ? (0, eR.jsxs)(eR.Fragment, {
+                                  children: [(0, eR.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: iW.name
-                                  }), (0, AW.jsx)("span", {
+                                    children: JR.name
+                                  }), (0, eR.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, AW.jsxs)(AW.Fragment, {
-                                  children: [(0, AW.jsx)("span", {
+                                }) : (0, eR.jsxs)(eR.Fragment, {
+                                  children: [(0, eR.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, AW.jsx)("span", {
+                                  }), (0, eR.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: iW.name
-                                  }), (0, AW.jsx)("span", {
+                                    children: JR.name
+                                  }), (0, eR.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), iW.params.map(((WW, OW) => (0, AW.jsxs)(mW.Fragment, {
-                                  children: [OW > 0 && (0, AW.jsx)("span", {
+                                }), JR.params.map(((RR, GR) => (0, eR.jsxs)(yR.Fragment, {
+                                  children: [GR > 0 && (0, eR.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, AW.jsx)("a", {
+                                  }), (0, eR.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${iW.name}-${lN(WW)}`,
-                                    children: WW.name
+                                    href: `#${JR.name}-${Ku(RR)}`,
+                                    children: RR.name
                                   })]
-                                }, WW.name))), (0, AW.jsx)("span", {
+                                }, RR.name))), (0, eR.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: OW ? ") => " : ")"
-                                }), OW && !iW.returns && (0, AW.jsx)("span", {
+                                  children: GR ? ") => " : ")"
+                                }), GR && !JR.returns && (0, eR.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), iW.returns && iW.returns.type && (0, AW.jsxs)("span", {
+                              }), JR.returns && JR.returns.type && (0, eR.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!OW && (0, AW.jsx)("span", {
+                                children: [!GR && (0, eR.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, AW.jsx)(Ti, {
-                                  type: iW.returns.type
+                                }), (0, eR.jsx)(lJ, {
+                                  type: JR.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function jN(WW) {
+                          function eu(RR) {
                             let {
-                              title: iW,
-                              references: OW
-                            } = WW;
-                            const EW = (0, mW.useContext)(li);
-                            return (0, AW.jsxs)("div", {
+                              title: JR,
+                              references: GR
+                            } = RR;
+                            const tR = (0, yR.useContext)(rJ);
+                            return (0, eR.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, AW.jsx)("span", {
+                              children: [(0, eR.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: iW
-                              }), OW.map((WW => (0, AW.jsx)(PW.b, {
-                                to: qW(EW, VW(WW.pageId), WW.anchor),
-                                children: WW.label
-                              }, `${WW.pageId}#${WW.anchor}`)))]
+                                children: JR
+                              }), GR.map((RR => (0, eR.jsx)(ZR.b, {
+                                to: dR(tR, PR(RR.pageId), RR.anchor),
+                                children: RR.label
+                              }, `${RR.pageId}#${RR.anchor}`)))]
                             })
                           }
 
-                          function UN(WW) {
-                            var iW, OW;
+                          function au(RR) {
+                            var JR, GR;
                             let {
-                              pageId: mW,
-                              anchor: EW
-                            } = WW;
-                            const NW = NN({
-                                pageId: mW,
-                                anchor: EW
+                              pageId: yR,
+                              anchor: tR
+                            } = RR;
+                            const uR = yu({
+                                pageId: yR,
+                                anchor: tR
                               }),
-                              PW = null !== (iW = function() {
-                                if (!cN) {
-                                  cN = new Map;
-                                  const mW = new Set(gW.filter((WW => "callbacks" === WW.layout)).flatMap((WW => fW(WW).sections.map((WW => WW.heading.text)))));
-                                  for (const EW of gW)
-                                    if ("article" === EW.layout || "snippets" === EW.layout)
-                                      for (const NW of (0, yW.v)(fW(EW)))
+                              ZR = null !== (JR = function() {
+                                if (!Zu) {
+                                  Zu = new Map;
+                                  const yR = new Set(oR.filter((RR => "callbacks" === RR.layout)).flatMap((RR => mR(RR).sections.map((RR => RR.heading.text)))));
+                                  for (const tR of oR)
+                                    if ("article" === tR.layout || "snippets" === tR.layout)
+                                      for (const uR of (0, BR.v)(mR(tR)))
                                         for (const {
-                                            code: PW
+                                            code: ZR
                                           }
-                                          of(0, yW.j)(NW.blocks))
-                                          for (const LW of tN(PW, mW)) {
-                                            const mW = Zi().get(LW);
-                                            if (mW) {
-                                              var WW, iW, OW;
-                                              const PW = {
-                                                pageId: EW.id,
-                                                anchor: null !== (WW = null === (iW = NW.heading) || void 0 === iW ? void 0 : iW.anchor) && void 0 !== WW ? WW : "",
-                                                label: null !== (OW = EW.navTitle) && void 0 !== OW ? OW : EW.title
+                                          of(0, BR.l)(uR.blocks))
+                                          for (const qR of iu(ZR, yR)) {
+                                            const yR = KJ().get(qR);
+                                            if (yR) {
+                                              var RR, JR, GR;
+                                              const ZR = {
+                                                pageId: tR.id,
+                                                anchor: null !== (RR = null === (JR = uR.heading) || void 0 === JR ? void 0 : JR.anchor) && void 0 !== RR ? RR : "",
+                                                label: null !== (GR = tR.navTitle) && void 0 !== GR ? GR : tR.title
                                               };
-                                              ZN(cN, NN(mW), PW, !1)
+                                              fu(Zu, yu(yR), ZR, !1)
                                             }
                                           }
                                 }
-                                return cN
-                              }().get(NW)) && void 0 !== iW ? iW : [],
-                              LW = null !== (OW = function() {
-                                if (!LN) {
-                                  LN = new Map;
-                                  const WW = VW("changelog");
-                                  for (const iW of fW(WW).sections) {
-                                    const OW = new Set(iW.blocks.flatMap((WW => [...wN(WW)])));
-                                    for (const mW of OW) {
-                                      const OW = {
-                                        pageId: WW.id,
-                                        anchor: iW.heading.anchor,
-                                        label: iW.heading.text
+                                return Zu
+                              }().get(uR)) && void 0 !== JR ? JR : [],
+                              qR = null !== (GR = function() {
+                                if (!uu) {
+                                  uu = new Map;
+                                  const RR = PR("changelog");
+                                  for (const JR of mR(RR).sections) {
+                                    const GR = new Set(JR.blocks.flatMap((RR => [...qu(RR)])));
+                                    for (const yR of GR) {
+                                      const GR = {
+                                        pageId: RR.id,
+                                        anchor: JR.heading.anchor,
+                                        label: JR.heading.text
                                       };
-                                      ZN(LN, mW, OW, !0)
+                                      fu(uu, yR, GR, !0)
                                     }
                                   }
                                 }
-                                return LN
-                              }().get(NW)) && void 0 !== OW ? OW : [];
-                            return 0 === PW.length && 0 === LW.length ? null : (0, AW.jsxs)("footer", {
+                                return uu
+                              }().get(uR)) && void 0 !== GR ? GR : [];
+                            return 0 === ZR.length && 0 === qR.length ? null : (0, eR.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [PW.length > 0 && (0, AW.jsx)(jN, {
+                              children: [ZR.length > 0 && (0, eR.jsx)(eu, {
                                 title: "Used in",
-                                references: PW
-                              }), LW.length > 0 && (0, AW.jsx)(jN, {
+                                references: ZR
+                              }), qR.length > 0 && (0, eR.jsx)(eu, {
                                 title: "Changelog",
-                                references: LW
+                                references: qR
                               })]
                             })
                           }
 
-                          function kN(WW) {
+                          function Lu(RR) {
                             let {
-                              method: iW,
-                              pageId: OW,
-                              anchor: mW,
-                              isCallback: EW
-                            } = WW;
-                            const NW = EW ? void 0 : Li().get(iW.name),
-                              PW = iW.description.length > 0 || null === NW || void 0 === NW || !NW.description ? iW.description : (0, yW.B)(NW.description);
-                            return (0, AW.jsxs)("article", {
+                              method: JR,
+                              pageId: GR,
+                              anchor: yR,
+                              isCallback: tR
+                            } = RR;
+                            const uR = tR ? void 0 : qJ().get(JR.name),
+                              ZR = JR.description.length > 0 || null === uR || void 0 === uR || !uR.description ? JR.description : (0, BR.A)(uR.description);
+                            return (0, eR.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, AW.jsxs)("header", {
+                              children: [(0, eR.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, AW.jsx)(ZO, {
+                                children: [(0, eR.jsx)(fG, {
                                   level: 2,
-                                  text: iW.name,
-                                  anchor: mW,
+                                  text: JR.name,
+                                  anchor: yR,
                                   className: "DocsCardTitle"
-                                }), (0, AW.jsx)(sW, {
-                                  text: AN(iW, EW),
-                                  label: EW ? "Copy handler" : "Copy call",
+                                }), (0, eR.jsx)(WR, {
+                                  text: wu(JR, tR),
+                                  label: tR ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, AW.jsx)(bN, {
-                                method: iW,
-                                isCallback: EW
-                              }), NW && null !== NW.deprecation && (0, AW.jsxs)("aside", {
+                              }), (0, eR.jsx)(ru, {
+                                method: JR,
+                                isCallback: tR
+                              }), uR && null !== uR.deprecation && (0, eR.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, AW.jsx)("strong", {
+                                children: [(0, eR.jsx)("strong", {
                                   children: "Deprecated"
-                                }), NW.deprecation && (0, AW.jsxs)(AW.Fragment, {
-                                  children: [": ", (0, AW.jsx)(Si, {
-                                    text: (LW = NW.deprecation, (0, iN.q)(LW, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, iN.j)("`\\w"), (WW => {
-                                      let [iW] = WW;
-                                      return Zi().has(iW) ? `\`${iW}\`` : iW
+                                }), uR.deprecation && (0, eR.jsxs)(eR.Fragment, {
+                                  children: [": ", (0, eR.jsx)(XJ, {
+                                    text: (qR = uR.deprecation, (0, ht.s)(qR, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, ht.k)("`\\w"), (RR => {
+                                      let [JR] = RR;
+                                      return KJ().has(JR) ? `\`${JR}\`` : JR
                                     })))
                                   })]
                                 })]
-                              }), PW.length > 0 && (0, AW.jsx)("div", {
+                              }), ZR.length > 0 && (0, eR.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, AW.jsx)(bO, {
-                                  blocks: PW
+                                children: (0, eR.jsx)(rG, {
+                                  blocks: ZR
                                 })
-                              }), iW.params.length > 0 && (0, AW.jsxs)("section", {
+                              }), JR.params.length > 0 && (0, eR.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, AW.jsx)("h3", {
+                                children: [(0, eR.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, AW.jsx)("dl", {
+                                }), (0, eR.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: iW.params.map((WW => (0, AW.jsxs)("div", {
-                                    id: `${iW.name}-${lN(WW)}`,
+                                  children: JR.params.map((RR => (0, eR.jsxs)("div", {
+                                    id: `${JR.name}-${Ku(RR)}`,
                                     className: "DocsParam",
-                                    children: [(0, AW.jsxs)("dt", {
-                                      children: [(0, AW.jsx)("code", {
+                                    children: [(0, eR.jsxs)("dt", {
+                                      children: [(0, eR.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: WW.name
-                                      }), (0, AW.jsx)(Ti, {
-                                        type: WW.type
+                                        children: RR.name
+                                      }), (0, eR.jsx)(lJ, {
+                                        type: RR.type
                                       })]
-                                    }), WW.description && (0, AW.jsx)("dd", {
-                                      children: (0, AW.jsx)(Si, {
-                                        text: WW.description
+                                    }), RR.description && (0, eR.jsx)("dd", {
+                                      children: (0, eR.jsx)(XJ, {
+                                        text: RR.description
                                       })
                                     })]
-                                  }, WW.name)))
+                                  }, RR.name)))
                                 })]
-                              }), iW.returns && (iW.returns.type || iW.returns.description.length > 0) && (0, AW.jsxs)("section", {
+                              }), JR.returns && (JR.returns.type || JR.returns.description.length > 0) && (0, eR.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, AW.jsx)("h3", {
+                                children: [(0, eR.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [iW.returns.type && (0, AW.jsx)(Ti, {
-                                    type: iW.returns.type
-                                  }), iW.returns.description.length > 0 && (0, AW.jsx)("div", {
+                                  children: [JR.returns.type && (0, eR.jsx)(lJ, {
+                                    type: JR.returns.type
+                                  }), JR.returns.description.length > 0 && (0, eR.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, AW.jsx)(bO, {
-                                      blocks: iW.returns.description
+                                    children: (0, eR.jsx)(rG, {
+                                      blocks: JR.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, AW.jsx)(UN, {
-                                pageId: OW,
-                                anchor: mW
+                              }), (0, eR.jsx)(au, {
+                                pageId: GR,
+                                anchor: yR
                               })]
                             });
-                            var LW
+                            var qR
                           }
 
-                          function sN(WW) {
-                            var iW;
-                            return null !== WW.defaultValue && "undefined" !== WW.defaultValue ? WW.defaultValue : null !== (iW = WW.example) && void 0 !== iW ? iW : "value"
+                          function nu(RR) {
+                            var JR;
+                            return null !== RR.defaultValue && "undefined" !== RR.defaultValue ? RR.defaultValue : null !== (JR = RR.example) && void 0 !== JR ? JR : "value"
                           }
 
-                          function MN(WW) {
+                          function Uu(RR) {
                             let {
-                              setting: iW,
-                              pageId: OW,
-                              anchor: mW,
-                              setterSnippet: EW
-                            } = WW;
-                            const NW = null === iW.defaultValue ? null : Ui(iW.defaultValue);
-                            return (0, AW.jsxs)("article", {
+                              setting: JR,
+                              pageId: GR,
+                              anchor: yR,
+                              setterSnippet: tR
+                            } = RR;
+                            const uR = null === JR.defaultValue ? null : nJ(JR.defaultValue);
+                            return (0, eR.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, AW.jsxs)("header", {
+                              children: [(0, eR.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, AW.jsx)(ZO, {
+                                children: [(0, eR.jsx)(fG, {
                                   level: 2,
-                                  text: iW.name,
-                                  anchor: mW,
+                                  text: JR.name,
+                                  anchor: yR,
                                   className: "DocsCardTitle"
-                                }), (0, AW.jsx)(sW, {
-                                  text: EW(iW.name, sN(iW)),
+                                }), (0, eR.jsx)(WR, {
+                                  text: tR(JR.name, nu(JR)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, AW.jsxs)("dl", {
+                              }), (0, eR.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, AW.jsxs)("div", {
-                                  children: [(0, AW.jsx)("dt", {
+                                children: [(0, eR.jsxs)("div", {
+                                  children: [(0, eR.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, AW.jsx)("dd", {
-                                    children: (0, AW.jsx)(Ti, {
-                                      type: iW.type
+                                  }), (0, eR.jsx)("dd", {
+                                    children: (0, eR.jsx)(lJ, {
+                                      type: JR.type
                                     })
                                   })]
-                                }), null !== iW.defaultValue && (0, AW.jsxs)("div", {
-                                  children: [(0, AW.jsx)("dt", {
+                                }), null !== JR.defaultValue && (0, eR.jsxs)("div", {
+                                  children: [(0, eR.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, AW.jsx)("dd", {
-                                    children: (0, AW.jsxs)("code", {
+                                  }), (0, eR.jsx)("dd", {
+                                    children: (0, eR.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [NW && (0, AW.jsx)(ki, {
-                                        colour: NW
-                                      }), iW.defaultValue]
+                                      children: [uR && (0, eR.jsx)(UJ, {
+                                        colour: uR
+                                      }), JR.defaultValue]
                                     })
                                   })]
-                                }), null !== iW.example && (0, AW.jsxs)("div", {
-                                  children: [(0, AW.jsx)("dt", {
+                                }), null !== JR.example && (0, eR.jsxs)("div", {
+                                  children: [(0, eR.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, AW.jsx)("dd", {
-                                    children: (0, AW.jsx)("code", {
+                                  }), (0, eR.jsx)("dd", {
+                                    children: (0, eR.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: iW.example
+                                      children: JR.example
                                     })
                                   })]
                                 })]
-                              }), iW.description.length > 0 && (0, AW.jsx)("div", {
+                              }), JR.description.length > 0 && (0, eR.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, AW.jsx)(bO, {
-                                  blocks: iW.description
+                                children: (0, eR.jsx)(rG, {
+                                  blocks: JR.description
                                 })
-                              }), (0, AW.jsx)(UN, {
-                                pageId: OW,
-                                anchor: mW
+                              }), (0, eR.jsx)(au, {
+                                pageId: GR,
+                                anchor: yR
                               })]
                             })
                           }
 
-                          function KN(WW) {
+                          function Wu(RR) {
                             let {
-                              section: iW
-                            } = WW;
-                            return (0, AW.jsxs)("article", {
+                              section: JR
+                            } = RR;
+                            return (0, eR.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, AW.jsx)(ZO, {
+                              children: [(0, eR.jsx)(fG, {
                                 level: 2,
-                                text: iW.heading.text,
-                                anchor: iW.heading.anchor,
+                                text: JR.heading.text,
+                                anchor: JR.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, AW.jsx)("div", {
+                              }), (0, eR.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, AW.jsx)(bO, {
-                                  blocks: iW.blocks
+                                children: (0, eR.jsx)(rG, {
+                                  blocks: JR.blocks
                                 })
                               })]
                             })
                           }
 
-                          function SN(WW) {
+                          function Au(RR) {
                             let {
-                              section: iW
-                            } = WW;
-                            return (0, AW.jsxs)("section", {
+                              section: JR
+                            } = RR;
+                            return (0, eR.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, AW.jsx)(ZO, {
-                                level: iW.heading.level,
-                                text: iW.heading.text,
-                                anchor: iW.heading.anchor
-                              }), (0, AW.jsx)(bO, {
-                                blocks: iW.blocks
+                              children: [(0, eR.jsx)(fG, {
+                                level: JR.heading.level,
+                                text: JR.heading.text,
+                                anchor: JR.heading.anchor
+                              }), (0, eR.jsx)(rG, {
+                                blocks: JR.blocks
                               })]
                             })
                           }
-                          const YN = {
+                          const Cu = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function yN(WW) {
+                          function Xu(RR) {
                             let {
-                              page: iW,
-                              section: OW
-                            } = WW;
-                            if ("methods" === iW.layout || "callbacks" === iW.layout) return (0, AW.jsx)(kN, {
-                              method: TO(OW),
-                              pageId: iW.id,
-                              anchor: OW.heading.anchor,
-                              isCallback: "callbacks" === iW.layout
+                              page: JR,
+                              section: GR
+                            } = RR;
+                            if ("methods" === JR.layout || "callbacks" === JR.layout) return (0, eR.jsx)(Lu, {
+                              method: MG(GR),
+                              pageId: JR.id,
+                              anchor: GR.heading.anchor,
+                              isCallback: "callbacks" === JR.layout
                             });
-                            if ("settings" === iW.layout) {
-                              const WW = function(WW) {
-                                const iW = {
-                                  name: WW.heading.text,
+                            if ("settings" === JR.layout) {
+                              const RR = function(RR) {
+                                const JR = {
+                                  name: RR.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const mW of WW.blocks) {
-                                  var OW;
-                                  if (yO(mW)) continue;
-                                  const WW = "paragraph" === mW.kind ? mW.text.match(JO) : null;
-                                  if (!WW) {
-                                    iW.description.push(mW);
+                                for (const yR of RR.blocks) {
+                                  var GR;
+                                  if (XG(yR)) continue;
+                                  const RR = "paragraph" === yR.kind ? yR.text.match(BG) : null;
+                                  if (!RR) {
+                                    JR.description.push(yR);
                                     continue
                                   }
-                                  const EW = null !== (OW = YO(WW[2])) && void 0 !== OW ? OW : WW[2];
-                                  "Type" === WW[1] ? iW.type = EW : "Default" === WW[1] ? iW.defaultValue = EW : "" !== EW && (iW.example = EW)
+                                  const tR = null !== (GR = CG(RR[2])) && void 0 !== GR ? GR : RR[2];
+                                  "Type" === RR[1] ? JR.type = tR : "Default" === RR[1] ? JR.defaultValue = tR : "" !== tR && (JR.example = tR)
                                 }
-                                return iW.type ? iW : null
-                              }(OW);
-                              if (WW) return (0, AW.jsx)(MN, {
-                                setting: WW,
-                                pageId: iW.id,
-                                anchor: OW.heading.anchor,
-                                setterSnippet: iW.setterSnippet
+                                return JR.type ? JR : null
+                              }(GR);
+                              if (RR) return (0, eR.jsx)(Uu, {
+                                setting: RR,
+                                pageId: JR.id,
+                                anchor: GR.heading.anchor,
+                                setterSnippet: JR.setterSnippet
                               })
                             }
-                            return "snippets" === iW.layout ? (0, AW.jsx)(KN, {
-                              section: OW
-                            }) : "changelog" === iW.layout ? (0, AW.jsxs)("section", {
+                            return "snippets" === JR.layout ? (0, eR.jsx)(Wu, {
+                              section: GR
+                            }) : "changelog" === JR.layout ? (0, eR.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, AW.jsx)("div", {
+                              children: [(0, eR.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, AW.jsx)(ZO, {
+                                children: (0, eR.jsx)(fG, {
                                   level: 2,
-                                  text: OW.heading.text,
-                                  anchor: OW.heading.anchor
+                                  text: GR.heading.text,
+                                  anchor: GR.heading.anchor
                                 })
-                              }), (0, AW.jsx)("div", {
+                              }), (0, eR.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, AW.jsx)(bO, {
-                                  blocks: hO(OW.blocks)
+                                children: (0, eR.jsx)(rG, {
+                                  blocks: lG(GR.blocks)
                                 })
                               })]
-                            }) : iW.gallery ? (0, AW.jsxs)("section", {
+                            }) : JR.gallery ? (0, eR.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, AW.jsx)(ZO, {
-                                level: OW.heading.level,
-                                text: OW.heading.text,
-                                anchor: OW.heading.anchor
-                              }), (0, AW.jsx)(Hm, {
-                                kind: iW.gallery,
-                                content: fW(iW),
-                                blocks: OW.blocks
+                              children: [(0, eR.jsx)(fG, {
+                                level: GR.heading.level,
+                                text: GR.heading.text,
+                                anchor: GR.heading.anchor
+                              }), (0, eR.jsx)(py, {
+                                kind: JR.gallery,
+                                content: mR(JR),
+                                blocks: GR.blocks
                               })]
-                            }) : (0, AW.jsx)(SN, {
-                              section: OW
+                            }) : (0, eR.jsx)(Au, {
+                              section: GR
                             })
                           }
 
-                          function TN(WW) {
+                          function Mu(RR) {
                             let {
-                              page: iW,
-                              onTocChange: OW
-                            } = WW;
-                            const EW = fW(iW),
-                              [NW, PW] = (0, mW.useState)(""),
-                              LW = "article" !== iW.layout,
-                              cW = kO(iW.gallery) ? iW.gallery : null,
-                              wW = null !== cW,
-                              tW = NW.trim().toLowerCase(),
-                              ZW = (0, mW.useRef)(null),
-                              xW = (0, mW.useCallback)((WW => {
-                                var iW;
-                                null === (iW = ZW.current) || void 0 === iW || iW.preview(WW)
+                              page: JR,
+                              onTocChange: GR
+                            } = RR;
+                            const tR = mR(JR),
+                              [uR, ZR] = (0, yR.useState)(""),
+                              qR = "article" !== JR.layout,
+                              iR = LG(JR.gallery) ? JR.gallery : null,
+                              fR = null !== iR,
+                              VR = uR.trim().toLowerCase(),
+                              KR = (0, yR.useRef)(null),
+                              wR = (0, yR.useCallback)((RR => {
+                                var JR;
+                                null === (JR = KR.current) || void 0 === JR || JR.preview(RR)
                               }), []),
-                              lW = (0, mW.useMemo)((() => {
-                                if (!iW.hasParticlePlayground) return [];
-                                const WW = oO(EW.intro).find((WW => "names" === WW.kind && !WW.names.some((WW => null !== CO(WW.name)))));
-                                return "names" === (null === WW || void 0 === WW ? void 0 : WW.kind) ? WW.names.map((WW => WW.name)) : []
-                              }), [iW, EW]),
-                              bW = (0, mW.useMemo)((() => {
-                                if (!iW.hasTextPlayground) return [];
-                                const WW = EW.sections.flatMap((WW => WW.blocks.flatMap((WW => {
-                                  var iW;
-                                  return (null !== (iW = uO(WW)) && void 0 !== iW ? iW : []).flatMap((WW => Ci(WW.name) ? [WW.name] : []))
+                              rR = (0, yR.useMemo)((() => {
+                                if (!JR.hasParticlePlayground) return [];
+                                const RR = vG(tR.intro).find((RR => "names" === RR.kind && !RR.names.some((RR => null !== IG(RR.name)))));
+                                return "names" === (null === RR || void 0 === RR ? void 0 : RR.kind) ? RR.names.map((RR => RR.name)) : []
+                              }), [JR, tR]),
+                              aR = (0, yR.useMemo)((() => {
+                                if (!JR.hasTextPlayground) return [];
+                                const RR = tR.sections.flatMap((RR => RR.blocks.flatMap((RR => {
+                                  var JR;
+                                  return (null !== (JR = bG(RR)) && void 0 !== JR ? JR : []).flatMap((RR => IJ(RR.name) ? [RR.name] : []))
                                 }))));
-                                return [...new Set(WW)]
-                              }), [iW, EW]),
-                              jW = (0, mW.useMemo)((() => tW ? EW.sections.filter((WW => function(WW, iW) {
-                                return !!WW.heading.text.toLowerCase().includes(iW) || WW.blocks.some((WW => (0, yW.i)(WW).toLowerCase().includes(iW)))
-                              }(WW, tW))) : EW.sections), [EW, tW]),
-                              UW = (0, mW.useMemo)((() => function(WW, iW) {
-                                return "article" !== WW.layout ? iW.map((WW => ({
-                                  anchor: WW.heading.anchor,
-                                  text: WW.heading.text,
+                                return [...new Set(RR)]
+                              }), [JR, tR]),
+                              LR = (0, yR.useMemo)((() => VR ? tR.sections.filter((RR => function(RR, JR) {
+                                return !!RR.heading.text.toLowerCase().includes(JR) || RR.blocks.some((RR => (0, BR.i)(RR).toLowerCase().includes(JR)))
+                              }(RR, VR))) : tR.sections), [tR, VR]),
+                              nR = (0, yR.useMemo)((() => function(RR, JR) {
+                                return "article" !== RR.layout ? JR.map((RR => ({
+                                  anchor: RR.heading.anchor,
+                                  text: RR.heading.text,
                                   level: 2
-                                }))) : iW.flatMap((WW => {
-                                  const iW = WW.blocks.flatMap((WW => "heading" === WW.kind && 3 === WW.level ? [{
-                                    anchor: WW.anchor,
-                                    text: WW.text,
+                                }))) : JR.flatMap((RR => {
+                                  const JR = RR.blocks.flatMap((RR => "heading" === RR.kind && 3 === RR.level ? [{
+                                    anchor: RR.anchor,
+                                    text: RR.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: WW.heading.anchor,
-                                    text: WW.heading.text,
+                                    anchor: RR.heading.anchor,
+                                    text: RR.heading.text,
                                     level: 2
-                                  }, ...iW]
+                                  }, ...JR]
                                 }))
-                              }(iW, jW)), [iW, jW]);
-                            return (0, mW.useEffect)((() => {
-                              OW(UW)
-                            }), [UW, OW]), (0, AW.jsxs)("article", {
+                              }(JR, LR)), [JR, LR]);
+                            return (0, yR.useEffect)((() => {
+                              GR(nR)
+                            }), [nR, GR]), (0, eR.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, AW.jsxs)("header", {
+                              children: [(0, eR.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, AW.jsx)("h1", {
+                                children: [(0, eR.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: EW.title || iW.title
-                                }), (0, AW.jsx)("p", {
+                                  children: tR.title || JR.title
+                                }), (0, eR.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: iW.summary
-                                }), (0, AW.jsx)(Fm, {
-                                  page: iW
-                                }), LW && (0, AW.jsx)("div", {
+                                  children: JR.summary
+                                }), (0, eR.jsx)(Qy, {
+                                  page: JR
+                                }), qR && (0, eR.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, AW.jsxs)("span", {
-                                    children: [(0, AW.jsx)("strong", {
-                                      children: EW.sections.length
-                                    }), " ", YN[iW.layout]]
+                                  children: (0, eR.jsxs)("span", {
+                                    children: [(0, eR.jsx)("strong", {
+                                      children: tR.sections.length
+                                    }), " ", Cu[JR.layout]]
                                   })
                                 })]
-                              }), "" === iW.slug && (0, AW.jsx)(um, {}), cW && (0, AW.jsx)(gm, {
-                                kind: cW
-                              }, cW), iW.hasParticlePlayground && (0, AW.jsx)(ZE, {
-                                ref: ZW,
-                                textures: lW
-                              }), !wW && EW.intro.length > 0 && (0, AW.jsx)("div", {
+                              }), "" === JR.slug && (0, eR.jsx)(by, {}), iR && (0, eR.jsx)(Ny, {
+                                kind: iR
+                              }, iR), JR.hasParticlePlayground && (0, eR.jsx)(it, {
+                                ref: KR,
+                                textures: rR
+                              }), !fR && tR.intro.length > 0 && (0, eR.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: iW.gallery ? (0, AW.jsx)(sm.Provider, {
-                                  value: iW.hasParticlePlayground ? xW : null,
-                                  children: (0, AW.jsx)(Hm, {
-                                    kind: iW.gallery,
-                                    content: EW,
-                                    blocks: EW.intro
+                                children: JR.gallery ? (0, eR.jsx)(ny.Provider, {
+                                  value: JR.hasParticlePlayground ? wR : null,
+                                  children: (0, eR.jsx)(py, {
+                                    kind: JR.gallery,
+                                    content: tR,
+                                    blocks: tR.intro
                                   })
-                                }) : (0, AW.jsx)(bO, {
-                                  blocks: hO(EW.intro)
+                                }) : (0, eR.jsx)(rG, {
+                                  blocks: lG(tR.intro)
                                 })
-                              }), iW.hasTextPlayground && (0, AW.jsx)(hE, {
-                                fontAwesomeIcons: bW
-                              }), iW.hasVoicePlayground && (0, AW.jsx)(WN, {}), iW.childPageIds && (0, AW.jsx)(um, {
-                                cards: iW.childPageIds.map((WW => ({
-                                  pageId: WW
+                              }), JR.hasTextPlayground && (0, eR.jsx)(lt, {
+                                fontAwesomeIcons: aR
+                              }), JR.hasVoicePlayground && (0, eR.jsx)(st, {}), JR.childPageIds && (0, eR.jsx)(by, {
+                                cards: JR.childPageIds.map((RR => ({
+                                  pageId: RR
                                 }))),
-                                label: iW.title
-                              }), LW && (0, AW.jsx)(KO, {
+                                label: JR.title
+                              }), qR && (0, eR.jsx)(WG, {
                                 className: "DocsFilterBar",
-                                value: NW,
-                                placeholder: `Filter ${EW.sections.length} ${YN[iW.layout]}\u2026`,
-                                label: `Filter ${YN[iW.layout]}`,
-                                onChange: PW,
-                                count: tW ? {
-                                  visible: jW.length,
-                                  total: EW.sections.length
+                                value: uR,
+                                placeholder: `Filter ${tR.sections.length} ${Cu[JR.layout]}\u2026`,
+                                label: `Filter ${Cu[JR.layout]}`,
+                                onChange: ZR,
+                                count: VR ? {
+                                  visible: LR.length,
+                                  total: tR.sections.length
                                 } : null
-                              }), !wW && (0, AW.jsxs)("div", {
-                                className: `DocsSections Layout-${iW.layout}`,
-                                children: [jW.map((WW => (0, AW.jsx)(yN, {
-                                  page: iW,
-                                  section: WW
-                                }, WW.heading.anchor))), 0 === jW.length && (0, AW.jsxs)("p", {
+                              }), !fR && (0, eR.jsxs)("div", {
+                                className: `DocsSections Layout-${JR.layout}`,
+                                children: [LR.map((RR => (0, eR.jsx)(Xu, {
+                                  page: JR,
+                                  section: RR
+                                }, RR.heading.anchor))), 0 === LR.length && (0, eR.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", YN[iW.layout], " match \u201c", NW, "\u201d."]
+                                  children: ["No ", Cu[JR.layout], " match \u201c", uR, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const JN = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const Bu = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function hN(WW) {
+                          function lu(RR) {
                             let {
-                              entry: iW,
-                              isActive: OW,
-                              onNavigate: mW,
-                              label: EW,
-                              children: PW
-                            } = WW;
-                            return (0, AW.jsx)("a", {
-                              href: `#${iW.anchor}`,
-                              "aria-label": EW,
-                              className: NW()(`Level${iW.level}`, {
-                                Active: OW
+                              entry: JR,
+                              isActive: GR,
+                              onNavigate: yR,
+                              label: tR,
+                              children: ZR
+                            } = RR;
+                            return (0, eR.jsx)("a", {
+                              href: `#${JR.anchor}`,
+                              "aria-label": tR,
+                              className: uR()(`Level${JR.level}`, {
+                                Active: GR
                               }),
-                              "aria-current": OW ? "location" : void 0,
-                              onClick: WW => {
-                                WW.preventDefault(), mW(iW.anchor)
+                              "aria-current": GR ? "location" : void 0,
+                              onClick: RR => {
+                                RR.preventDefault(), yR(JR.anchor)
                               },
-                              children: PW
+                              children: ZR
                             })
                           }
 
-                          function HN(WW) {
+                          function pu(RR) {
                             let {
-                              toc: iW,
-                              activeAnchor: OW,
-                              onNavigate: EW
-                            } = WW;
-                            const PW = Math.max(0, iW.findIndex((WW => WW.anchor === OW))),
-                              LW = (0, mW.useRef)(null),
-                              cW = (0, mW.useRef)(!1);
-                            (0, mW.useEffect)((() => {
-                              var WW, OW;
-                              const mW = null === (WW = LW.current) || void 0 === WW ? void 0 : WW.closest(".DocsToc"),
-                                EW = null === (OW = LW.current) || void 0 === OW ? void 0 : OW.querySelector(".DocsTimelineNotch.Active");
-                              if (!mW || !EW) return;
-                              let NW = 0;
-                              if (PW === iW.length - 1) NW = mW.scrollHeight;
-                              else if (PW > 0) {
-                                const WW = mW.getBoundingClientRect(),
-                                  iW = EW.getBoundingClientRect();
-                                NW = mW.scrollTop + iW.top + iW.height / 2 - (WW.top + mW.clientHeight / 2)
+                              toc: JR,
+                              activeAnchor: GR,
+                              onNavigate: tR
+                            } = RR;
+                            const ZR = Math.max(0, JR.findIndex((RR => RR.anchor === GR))),
+                              qR = (0, yR.useRef)(null),
+                              iR = (0, yR.useRef)(!1);
+                            (0, yR.useEffect)((() => {
+                              var RR, GR;
+                              const yR = null === (RR = qR.current) || void 0 === RR ? void 0 : RR.closest(".DocsToc"),
+                                tR = null === (GR = qR.current) || void 0 === GR ? void 0 : GR.querySelector(".DocsTimelineNotch.Active");
+                              if (!yR || !tR) return;
+                              let uR = 0;
+                              if (ZR === JR.length - 1) uR = yR.scrollHeight;
+                              else if (ZR > 0) {
+                                const RR = yR.getBoundingClientRect(),
+                                  JR = tR.getBoundingClientRect();
+                                uR = yR.scrollTop + JR.top + JR.height / 2 - (RR.top + yR.clientHeight / 2)
                               }
-                              mW.scrollTo({
-                                top: NW,
-                                behavior: cW.current ? "smooth" : "auto"
-                              }), cW.current = !0
-                            }), [PW, iW.length]);
-                            const wW = [];
-                            return iW.forEach(((WW, iW) => {
-                              var OW, mW, EW;
-                              const NW = function(WW) {
-                                  const iW = WW.trim().match(JN);
-                                  return iW ? {
-                                    day: iW[1],
-                                    month: `${iW[2]} ${iW[3]}`
+                              yR.scrollTo({
+                                top: uR,
+                                behavior: iR.current ? "smooth" : "auto"
+                              }), iR.current = !0
+                            }), [ZR, JR.length]);
+                            const fR = [];
+                            return JR.forEach(((RR, JR) => {
+                              var GR, yR, tR;
+                              const uR = function(RR) {
+                                  const JR = RR.trim().match(Bu);
+                                  return JR ? {
+                                    day: JR[1],
+                                    month: `${JR[2]} ${JR[3]}`
                                   } : null
-                                }(WW.text),
-                                PW = null !== (OW = null === NW || void 0 === NW ? void 0 : NW.month) && void 0 !== OW ? OW : null;
-                              null !== PW && (null === (mW = wW.at(-1)) || void 0 === mW ? void 0 : mW.month) === PW || wW.push({
-                                month: PW,
+                                }(RR.text),
+                                ZR = null !== (GR = null === uR || void 0 === uR ? void 0 : uR.month) && void 0 !== GR ? GR : null;
+                              null !== ZR && (null === (yR = fR.at(-1)) || void 0 === yR ? void 0 : yR.month) === ZR || fR.push({
+                                month: ZR,
                                 entries: []
-                              }), wW.at(-1).entries.push({
-                                entry: WW,
-                                day: null !== (EW = null === NW || void 0 === NW ? void 0 : NW.day) && void 0 !== EW ? EW : null,
-                                index: iW
+                              }), fR.at(-1).entries.push({
+                                entry: RR,
+                                day: null !== (tR = null === uR || void 0 === uR ? void 0 : uR.day) && void 0 !== tR ? tR : null,
+                                index: JR
                               })
-                            })), (0, AW.jsx)("ol", {
-                              ref: LW,
+                            })), (0, eR.jsx)("ol", {
+                              ref: qR,
                               className: "DocsTimeline",
-                              children: wW.map((WW => {
+                              children: fR.map((RR => {
                                 let {
-                                  month: iW,
-                                  entries: OW
-                                } = WW;
-                                return (0, AW.jsxs)("li", {
+                                  month: JR,
+                                  entries: GR
+                                } = RR;
+                                return (0, eR.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [iW && (0, AW.jsx)("span", {
+                                  children: [JR && (0, eR.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: iW
-                                  }), (0, AW.jsx)("ol", {
-                                    children: OW.map((WW => {
+                                    children: JR
+                                  }), (0, eR.jsx)("ol", {
+                                    children: GR.map((RR => {
                                       let {
-                                        entry: iW,
-                                        day: OW,
-                                        index: mW
-                                      } = WW;
-                                      return (0, AW.jsx)("li", {
-                                        className: NW()("DocsTimelineNotch", {
-                                          Passed: mW < PW,
-                                          Active: mW === PW
+                                        entry: JR,
+                                        day: GR,
+                                        index: yR
+                                      } = RR;
+                                      return (0, eR.jsx)("li", {
+                                        className: uR()("DocsTimelineNotch", {
+                                          Passed: yR < ZR,
+                                          Active: yR === ZR
                                         }),
-                                        children: (0, AW.jsx)(hN, {
-                                          entry: iW,
-                                          isActive: mW === PW,
-                                          onNavigate: EW,
-                                          label: iW.text,
-                                          children: (0, AW.jsx)("span", {
+                                        children: (0, eR.jsx)(lu, {
+                                          entry: JR,
+                                          isActive: yR === ZR,
+                                          onNavigate: tR,
+                                          label: JR.text,
+                                          children: (0, eR.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== OW && void 0 !== OW ? OW : iW.text
+                                            children: null !== GR && void 0 !== GR ? GR : JR.text
                                           })
                                         })
-                                      }, iW.anchor)
+                                      }, JR.anchor)
                                     }))
                                   })]
-                                }, OW[0].entry.anchor)
+                                }, GR[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function nN(WW) {
+                          function gu(RR) {
                             let {
-                              isChangelog: iW,
-                              toc: OW,
-                              activeAnchor: mW,
-                              onNavigate: EW
-                            } = WW;
-                            return 0 === OW.length ? null : (0, AW.jsxs)(AW.Fragment, {
-                              children: [(0, AW.jsx)("div", {
+                              isChangelog: JR,
+                              toc: GR,
+                              activeAnchor: yR,
+                              onNavigate: tR
+                            } = RR;
+                            return 0 === GR.length ? null : (0, eR.jsxs)(eR.Fragment, {
+                              children: [(0, eR.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: iW ? "Updates" : "On this page"
-                              }), iW ? (0, AW.jsx)(HN, {
-                                toc: OW,
-                                activeAnchor: mW,
-                                onNavigate: EW
-                              }) : (0, AW.jsx)("ul", {
-                                children: OW.map((WW => (0, AW.jsx)("li", {
-                                  children: (0, AW.jsx)(hN, {
-                                    entry: WW,
-                                    isActive: WW.anchor === mW,
-                                    onNavigate: EW,
-                                    children: WW.text.replace(/`/g, "")
+                                children: JR ? "Updates" : "On this page"
+                              }), JR ? (0, eR.jsx)(pu, {
+                                toc: GR,
+                                activeAnchor: yR,
+                                onNavigate: tR
+                              }) : (0, eR.jsx)("ul", {
+                                children: GR.map((RR => (0, eR.jsx)("li", {
+                                  children: (0, eR.jsx)(lu, {
+                                    entry: RR,
+                                    isActive: RR.anchor === yR,
+                                    onNavigate: tR,
+                                    children: RR.text.replace(/`/g, "")
                                   })
-                                }, WW.anchor)))
+                                }, RR.anchor)))
                               })]
                             })
                           }
-                          const uN = {
+                          const bu = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            oN = {
+                            vu = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            dN = 20,
-                            eN = 10,
-                            vN = 40,
-                            gN = 120;
-                          let DN;
+                            Ou = 20,
+                            xu = 10,
+                            Nu = 40,
+                            Du = 120;
+                          let Hu;
 
-                          function VN(WW) {
-                            const iW = WW.gallery;
-                            if (!iW) return [];
-                            if (kO(iW)) return function(WW) {
-                              return MO(WW).entries.map((WW => WW.name))
-                            }(iW).map((OW => ({
-                              page: WW,
-                              anchor: eO(iW, OW),
-                              title: OW,
-                              kind: oN[iW],
+                          function ou(RR) {
+                            const JR = RR.gallery;
+                            if (!JR) return [];
+                            if (LG(JR)) return function(RR) {
+                              return UG(RR).entries.map((RR => RR.name))
+                            }(JR).map((GR => ({
+                              page: RR,
+                              anchor: xG(JR, GR),
+                              title: GR,
+                              kind: vu[JR],
                               text: "",
-                              listedUnder: WW.title
+                              listedUnder: RR.title
                             })));
-                            const OW = fW(WW);
-                            return (0, yW.v)(OW).flatMap((mW => {
-                              const EW = mW.heading ? `${WW.title} \u203a ${mW.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : WW.title;
-                              return gO(iW, OW, mW.blocks).flatMap((OW => "names" !== OW.kind ? [] : OW.names.map((mW => {
-                                const NW = OW.isSongs ? "Song" : oN[iW];
+                            const GR = mR(RR);
+                            return (0, BR.v)(GR).flatMap((yR => {
+                              const tR = yR.heading ? `${RR.title} \u203a ${yR.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : RR.title;
+                              return DG(JR, GR, yR.blocks).flatMap((GR => "names" !== GR.kind ? [] : GR.names.map((yR => {
+                                const uR = GR.isSongs ? "Song" : vu[JR];
                                 return {
-                                  page: WW,
-                                  anchor: mW.anchor,
-                                  title: mW.name,
-                                  kind: NW,
+                                  page: RR,
+                                  anchor: yR.anchor,
+                                  title: yR.name,
+                                  kind: uR,
                                   text: "",
-                                  listedUnder: EW
+                                  listedUnder: tR
                                 }
                               }))))
                             }))
                           }
 
-                          function pN(WW, iW, OW) {
-                            const mW = WW.title.toLowerCase();
-                            let EW = 0;
-                            if (mW === iW) EW = 100;
-                            else if (mW.startsWith(iW)) EW = 80;
-                            else if (mW.includes(iW)) EW = 60;
-                            else if (OW.every((WW => mW.includes(WW)))) EW = 45;
+                          function cu(RR, JR, GR) {
+                            const yR = RR.title.toLowerCase();
+                            let tR = 0;
+                            if (yR === JR) tR = 100;
+                            else if (yR.startsWith(JR)) tR = 80;
+                            else if (yR.includes(JR)) tR = 60;
+                            else if (GR.every((RR => yR.includes(RR)))) tR = 45;
                             else {
-                              if (!WW.text.toLowerCase().includes(iW)) return 0;
-                              EW = 20
+                              if (!RR.text.toLowerCase().includes(JR)) return 0;
+                              tR = 20
                             }
-                            return EW - Math.min(mW.length / 10, 9) + ("Page" === WW.kind ? 8 : "Method" === WW.kind ? 3 : 0) - (WW.listedUnder ? dN : 0)
+                            return tR - Math.min(yR.length / 10, 9) + ("Page" === RR.kind ? 8 : "Method" === RR.kind ? 3 : 0) - (RR.listedUnder ? Ou : 0)
                           }
 
-                          function fN(WW, iW) {
-                            const OW = WW.toLowerCase().indexOf(iW),
-                              mW = Math.max(0, OW - gN / 3);
-                            return `${mW>0?"\u2026":""}${WW.slice(mW,mW+gN)}${mW+gN<WW.length?"\u2026":""}`
+                          function Pu(RR, JR) {
+                            const GR = RR.toLowerCase().indexOf(JR),
+                              yR = Math.max(0, GR - Du / 3);
+                            return `${yR>0?"\u2026":""}${RR.slice(yR,yR+Du)}${yR+Du<RR.length?"\u2026":""}`
                           }
 
-                          function CN(WW) {
+                          function Iu(RR) {
                             let {
-                              text: iW,
-                              query: OW
-                            } = WW;
-                            const mW = OW ? iW.toLowerCase().indexOf(OW) : -1;
-                            return -1 === mW ? (0, AW.jsx)(AW.Fragment, {
-                              children: iW
-                            }) : (0, AW.jsxs)(AW.Fragment, {
-                              children: [iW.slice(0, mW), (0, AW.jsx)("mark", {
-                                children: iW.slice(mW, mW + OW.length)
-                              }), iW.slice(mW + OW.length)]
+                              text: JR,
+                              query: GR
+                            } = RR;
+                            const yR = GR ? JR.toLowerCase().indexOf(GR) : -1;
+                            return -1 === yR ? (0, eR.jsx)(eR.Fragment, {
+                              children: JR
+                            }) : (0, eR.jsxs)(eR.Fragment, {
+                              children: [JR.slice(0, yR), (0, eR.jsx)("mark", {
+                                children: JR.slice(yR, yR + GR.length)
+                              }), JR.slice(yR + GR.length)]
                             })
                           }
 
-                          function XN(WW) {
+                          function mu(RR) {
                             let {
-                              basePath: iW,
-                              onClose: OW
-                            } = WW;
-                            const EW = (0, LW.w)(),
-                              [PW, cW] = (0, mW.useState)(""),
-                              [wW, tW] = (0, mW.useState)(0),
-                              ZW = (0, mW.useRef)(null),
-                              xW = (0, mW.useRef)(null),
-                              lW = PW.trim().toLowerCase(),
-                              bW = (0, mW.useMemo)((() => {
-                                const WW = (DN || (DN = gW.flatMap((WW => {
-                                  const iW = fW(WW);
+                              basePath: JR,
+                              onClose: GR
+                            } = RR;
+                            const tR = (0, qR.v)(),
+                              [ZR, iR] = (0, yR.useState)(""),
+                              [fR, VR] = (0, yR.useState)(0),
+                              KR = (0, yR.useRef)(null),
+                              wR = (0, yR.useRef)(null),
+                              rR = ZR.trim().toLowerCase(),
+                              aR = (0, yR.useMemo)((() => {
+                                const RR = (Hu || (Hu = oR.flatMap((RR => {
+                                  const JR = mR(RR);
                                   return [{
-                                    page: WW,
+                                    page: RR,
                                     anchor: "",
-                                    title: WW.title,
+                                    title: RR.title,
                                     kind: "Page",
-                                    text: WW.summary
-                                  }, ...iW.sections.flatMap((iW => {
-                                    const OW = iW.blocks.filter((WW => "paragraph" === WW.kind)).map(yW.i).join(" ").replace(/[`*]/g, ""),
-                                      mW = {
-                                        page: WW,
-                                        anchor: iW.heading.anchor,
-                                        title: iW.heading.text.replace(/`/g, ""),
-                                        kind: uN[WW.layout],
-                                        text: OW
+                                    text: RR.summary
+                                  }, ...JR.sections.flatMap((JR => {
+                                    const GR = JR.blocks.filter((RR => "paragraph" === RR.kind)).map(BR.i).join(" ").replace(/[`*]/g, ""),
+                                      yR = {
+                                        page: RR,
+                                        anchor: JR.heading.anchor,
+                                        title: JR.heading.text.replace(/`/g, ""),
+                                        kind: bu[RR.layout],
+                                        text: GR
                                       },
-                                      EW = iW.blocks.flatMap((iW => "article" === WW.layout && "heading" === iW.kind && 3 === iW.level ? [{
-                                        page: WW,
-                                        anchor: iW.anchor,
-                                        title: iW.text.replace(/`/g, ""),
+                                      tR = JR.blocks.flatMap((JR => "article" === RR.layout && "heading" === JR.kind && 3 === JR.level ? [{
+                                        page: RR,
+                                        anchor: JR.anchor,
+                                        title: JR.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: mW.title
+                                        text: yR.title
                                       }] : []));
-                                    return [mW, ...EW]
-                                  })), ...VN(WW)]
-                                }))), DN);
-                                if (!lW) return WW.filter((WW => "Page" === WW.kind));
-                                const iW = lW.split(/\s+/);
-                                let OW = 0;
-                                return WW.map((WW => ({
-                                  entry: WW,
-                                  score: pN(WW, lW, iW)
-                                }))).filter((WW => WW.score > 0)).sort(((WW, iW) => iW.score - WW.score)).filter((WW => !WW.entry.listedUnder || (OW++, OW <= eN))).slice(0, vN).map((WW => WW.entry))
-                              }), [lW]);
-                            (0, mW.useEffect)((() => {
-                              tW(0)
-                            }), [lW]), (0, mW.useEffect)((() => {
-                              const WW = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [yR, ...tR]
+                                  })), ...ou(RR)]
+                                }))), Hu);
+                                if (!rR) return RR.filter((RR => "Page" === RR.kind));
+                                const JR = rR.split(/\s+/);
+                                let GR = 0;
+                                return RR.map((RR => ({
+                                  entry: RR,
+                                  score: cu(RR, rR, JR)
+                                }))).filter((RR => RR.score > 0)).sort(((RR, JR) => JR.score - RR.score)).filter((RR => !RR.entry.listedUnder || (GR++, GR <= xu))).slice(0, Nu).map((RR => RR.entry))
+                              }), [rR]);
+                            (0, yR.useEffect)((() => {
+                              VR(0)
+                            }), [rR]), (0, yR.useEffect)((() => {
+                              const RR = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === WW || void 0 === WW || WW.focus()
+                                null === RR || void 0 === RR || RR.focus()
                               }
-                            }), []), (0, mW.useEffect)((() => {
-                              var WW, iW;
-                              null === (WW = ZW.current) || void 0 === WW || null === (iW = WW.querySelector(".Active")) || void 0 === iW || iW.scrollIntoView({
+                            }), []), (0, yR.useEffect)((() => {
+                              var RR, JR;
+                              null === (RR = KR.current) || void 0 === RR || null === (JR = RR.querySelector(".Active")) || void 0 === JR || JR.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [wW]);
-                            const UW = WW => {
-                              EW(qW(iW, WW.page, WW.anchor)), OW()
+                            }), [fR]);
+                            const nR = RR => {
+                              tR(dR(JR, RR.page, RR.anchor)), GR()
                             };
-                            return (0, AW.jsx)("div", {
+                            return (0, eR.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: WW => {
-                                WW.target === WW.currentTarget && OW()
+                              onMouseDown: RR => {
+                                RR.target === RR.currentTarget && GR()
                               },
-                              children: (0, AW.jsxs)("div", {
+                              children: (0, eR.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: WW => {
-                                  WW.target !== xW.current && WW.preventDefault()
+                                onMouseDown: RR => {
+                                  RR.target !== wR.current && RR.preventDefault()
                                 },
-                                onKeyDown: WW => {
-                                  if ("Escape" === WW.key) OW();
-                                  else if ("Tab" === WW.key) {
-                                    var iW;
-                                    WW.preventDefault(), null === (iW = xW.current) || void 0 === iW || iW.focus()
+                                onKeyDown: RR => {
+                                  if ("Escape" === RR.key) GR();
+                                  else if ("Tab" === RR.key) {
+                                    var JR;
+                                    RR.preventDefault(), null === (JR = wR.current) || void 0 === JR || JR.focus()
                                   }
                                 },
-                                children: [(0, AW.jsxs)("div", {
+                                children: [(0, eR.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, AW.jsx)(jW, {
+                                  children: [(0, eR.jsx)(LR, {
                                     name: "magnifying-glass"
-                                  }), (0, AW.jsx)("input", {
-                                    ref: xW,
+                                  }), (0, eR.jsx)("input", {
+                                    ref: wR,
                                     autoFocus: !0,
-                                    value: PW,
+                                    value: ZR,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": bW.length > 0 ? `DocsSearchResult-${wW}` : void 0,
-                                    onChange: WW => {
-                                      cW(WW.target.value)
+                                    "aria-activedescendant": aR.length > 0 ? `DocsSearchResult-${fR}` : void 0,
+                                    onChange: RR => {
+                                      iR(RR.target.value)
                                     },
-                                    onKeyDown: WW => {
-                                      if ("ArrowDown" === WW.key || "ArrowUp" === WW.key) {
-                                        WW.preventDefault();
-                                        const iW = "ArrowDown" === WW.key ? 1 : -1;
-                                        tW((wW + iW + bW.length) % Math.max(bW.length, 1))
-                                      } else "Enter" === WW.key && bW[wW] && UW(bW[wW])
+                                    onKeyDown: RR => {
+                                      if ("ArrowDown" === RR.key || "ArrowUp" === RR.key) {
+                                        RR.preventDefault();
+                                        const JR = "ArrowDown" === RR.key ? 1 : -1;
+                                        VR((fR + JR + aR.length) % Math.max(aR.length, 1))
+                                      } else "Enter" === RR.key && aR[fR] && nR(aR[fR])
                                     }
-                                  }), (0, AW.jsx)("kbd", {
+                                  }), (0, eR.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, AW.jsxs)("ul", {
+                                }), (0, eR.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: ZW,
+                                  ref: KR,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!lW && (0, AW.jsx)("li", {
+                                  children: [!rR && (0, eR.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), bW.map(((WW, iW) => {
-                                    var OW;
-                                    return (0, AW.jsxs)("li", {
-                                      id: `DocsSearchResult-${iW}`,
+                                  }), aR.map(((RR, JR) => {
+                                    var GR;
+                                    return (0, eR.jsxs)("li", {
+                                      id: `DocsSearchResult-${JR}`,
                                       role: "option",
-                                      "aria-selected": iW === wW,
-                                      className: NW()("DocsSearchResult", {
-                                        Active: iW === wW
+                                      "aria-selected": JR === fR,
+                                      className: uR()("DocsSearchResult", {
+                                        Active: JR === fR
                                       }),
                                       onMouseMove: () => {
-                                        tW(iW)
+                                        VR(JR)
                                       },
                                       onClick: () => {
-                                        UW(WW)
+                                        nR(RR)
                                       },
-                                      children: [(0, AW.jsx)(jW, {
-                                        name: WW.page.icon
-                                      }), (0, AW.jsxs)("div", {
+                                      children: [(0, eR.jsx)(LR, {
+                                        name: RR.page.icon
+                                      }), (0, eR.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, AW.jsx)("div", {
+                                        children: [(0, eR.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, AW.jsx)(CN, {
-                                            text: WW.title,
-                                            query: lW
+                                          children: (0, eR.jsx)(Iu, {
+                                            text: RR.title,
+                                            query: rR
                                           })
-                                        }), WW.text && (0, AW.jsx)("div", {
+                                        }), RR.text && (0, eR.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, AW.jsx)(CN, {
-                                            text: fN(WW.text, lW),
-                                            query: lW
+                                          children: (0, eR.jsx)(Iu, {
+                                            text: Pu(RR.text, rR),
+                                            query: rR
                                           })
                                         })]
-                                      }), (0, AW.jsx)("span", {
+                                      }), (0, eR.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === WW.kind ? "Page" : null !== (OW = WW.listedUnder) && void 0 !== OW ? OW : `${WW.kind} \xb7 ${WW.page.title}`
+                                        children: "Page" === RR.kind ? "Page" : null !== (GR = RR.listedUnder) && void 0 !== GR ? GR : `${RR.kind} \xb7 ${RR.page.title}`
                                       })]
-                                    }, `${WW.page.id}#${WW.anchor}`)
-                                  })), lW && 0 === bW.length && (0, AW.jsxs)("li", {
+                                    }, `${RR.page.id}#${RR.anchor}`)
+                                  })), rR && 0 === aR.length && (0, eR.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", PW, "\u201d."]
+                                    children: ["Nothing matches \u201c", ZR, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function BN(WW, iW) {
-                            if (iW < 10) return `${WW.toFixed(1)}s`;
-                            const OW = Math.floor(WW);
-                            return `${Math.floor(OW/60)}:${String(OW%60).padStart(2,"0")}`
+                          function zu(RR, JR) {
+                            if (JR < 10) return `${RR.toFixed(1)}s`;
+                            const GR = Math.floor(RR);
+                            return `${Math.floor(GR/60)}:${String(GR%60).padStart(2,"0")}`
                           }
 
-                          function qN() {
-                            const WW = xm((WW => WW.track)),
-                              iW = xm((WW => WW.volume)),
-                              [OW, EW] = (0, mW.useState)(0),
-                              PW = (0, mW.useRef)(mm);
-                            if ((0, mW.useEffect)((() => {
-                                if (!WW) return;
-                                if (EW(jm()), "playing" !== WW.status) return;
-                                let iW = 0;
-                                const OW = () => {
-                                  EW(jm()), iW = requestAnimationFrame(OW)
+                          function Su() {
+                            const RR = Vy((RR => RR.track)),
+                              JR = Vy((RR => RR.volume)),
+                              [GR, tR] = (0, yR.useState)(0),
+                              ZR = (0, yR.useRef)(Jy);
+                            if ((0, yR.useEffect)((() => {
+                                if (!RR) return;
+                                if (tR(ey()), "playing" !== RR.status) return;
+                                let JR = 0;
+                                const GR = () => {
+                                  tR(ey()), JR = requestAnimationFrame(GR)
                                 };
-                                return iW = requestAnimationFrame(OW), () => {
-                                  cancelAnimationFrame(iW)
+                                return JR = requestAnimationFrame(GR), () => {
+                                  cancelAnimationFrame(JR)
                                 }
-                              }), [WW]), !WW) return null;
-                            const LW = "paused" !== WW.status,
-                              cW = Math.min(OW, WW.duration);
-                            return (0, AW.jsx)("div", {
+                              }), [RR]), !RR) return null;
+                            const qR = "paused" !== RR.status,
+                              iR = Math.min(GR, RR.duration);
+                            return (0, eR.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, AW.jsxs)("section", {
+                              children: (0, eR.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, AW.jsx)("button", {
+                                children: [(0, eR.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": LW ? `Pause ${WW.name}` : `Play ${WW.name}`,
-                                  onClick: bm,
-                                  children: (0, AW.jsx)(jW, {
-                                    name: LW ? "pause" : "play"
+                                  "aria-label": qR ? `Pause ${RR.name}` : `Play ${RR.name}`,
+                                  onClick: ry,
+                                  children: (0, eR.jsx)(LR, {
+                                    name: qR ? "pause" : "play"
                                   })
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, AW.jsxs)("div", {
+                                  children: [(0, eR.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, AW.jsx)("code", {
-                                      children: WW.name
-                                    }), (0, AW.jsx)("span", {
-                                      children: WW.isSong ? "Song" : "Sound"
+                                    children: [(0, eR.jsx)("code", {
+                                      children: RR.name
+                                    }), (0, eR.jsx)("span", {
+                                      children: RR.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, AW.jsxs)("div", {
+                                  }), (0, eR.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, AW.jsx)("span", {
-                                      children: BN(cW, WW.duration)
-                                    }), (0, AW.jsx)("input", {
+                                    children: [(0, eR.jsx)("span", {
+                                      children: zu(iR, RR.duration)
+                                    }), (0, eR.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: WW.duration || 1,
+                                      max: RR.duration || 1,
                                       step: .01,
-                                      value: cW,
-                                      disabled: 0 === WW.duration,
+                                      value: iR,
+                                      disabled: 0 === RR.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${BN(cW,WW.duration)} of ${BN(WW.duration,WW.duration)}`,
-                                      onChange: WW => {
-                                        const iW = Number(WW.target.value);
-                                        ! function(WW) {
-                                          var iW;
-                                          cm = WW, null === (iW = Pm) || void 0 === iW || iW.seek(WW)
-                                        }(iW), EW(iW)
+                                      "aria-valuetext": `${zu(iR,RR.duration)} of ${zu(RR.duration,RR.duration)}`,
+                                      onChange: RR => {
+                                        const JR = Number(RR.target.value);
+                                        ! function(RR) {
+                                          var JR;
+                                          Zy = RR, null === (JR = ty) || void 0 === JR || JR.seek(RR)
+                                        }(JR), tR(JR)
                                       }
-                                    }), (0, AW.jsx)("span", {
-                                      children: WW.duration > 0 ? BN(WW.duration, WW.duration) : "\u2013"
+                                    }), (0, eR.jsx)("span", {
+                                      children: RR.duration > 0 ? zu(RR.duration, RR.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, AW.jsxs)("div", {
+                                }), (0, eR.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, AW.jsx)("button", {
+                                  children: [(0, eR.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === iW ? "Unmute" : "Mute",
+                                    "aria-label": 0 === JR ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === iW ? Um(PW.current) : (PW.current = iW, Um(0))
+                                      0 === JR ? ay(ZR.current) : (ZR.current = JR, ay(0))
                                     },
-                                    children: (0, AW.jsx)(jW, {
+                                    children: (0, eR.jsx)(LR, {
                                       name: "volume",
-                                      className: NW()({
-                                        Muted: 0 === iW
+                                      className: uR()({
+                                        Muted: 0 === JR
                                       })
                                     })
-                                  }), (0, AW.jsx)("input", {
+                                  }), (0, eR.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: iW,
+                                    value: JR,
                                     "aria-label": "Volume",
-                                    onChange: WW => {
-                                      Um(Number(WW.target.value))
+                                    onChange: RR => {
+                                      ay(Number(RR.target.value))
                                     }
                                   })]
-                                }), (0, AW.jsx)("button", {
+                                }), (0, eR.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var iW;
-                                    null === (iW = document.querySelector(`[data-docs-track="${CSS.escape(Em(WW.name,WW.isSong))}"]`)) || void 0 === iW || iW.focus(), km()
+                                    var JR;
+                                    null === (JR = document.querySelector(`[data-docs-track="${CSS.escape(Gy(RR.name,RR.isSong))}"]`)) || void 0 === JR || JR.focus(), Ly()
                                   },
-                                  children: (0, AW.jsx)(jW, {
+                                  children: (0, eR.jsx)(LR, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var RN = OW(39);
-                          const GN = "docsTheme",
-                            IN = window.matchMedia("(prefers-color-scheme: light)");
+                          var ju = GR(46);
+                          const du = "docsTheme",
+                            Eu = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function aN(WW) {
+                          function Yu(RR) {
                             let {
-                              theme: iW,
-                              onChange: OW
-                            } = WW;
-                            const mW = "dark" === iW ? "light" : "dark";
-                            return (0, AW.jsx)("button", {
+                              theme: JR,
+                              onChange: GR
+                            } = RR;
+                            const yR = "dark" === JR ? "light" : "dark";
+                            return (0, eR.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${mW} theme`,
-                              title: `Switch to ${mW} theme`,
+                              "aria-label": `Switch to ${yR} theme`,
+                              title: `Switch to ${yR} theme`,
                               onClick: () => {
-                                OW(mW)
+                                GR(yR)
                               },
-                              children: (0, AW.jsx)(jW, {
-                                name: "dark" === iW ? "moon" : "sun"
+                              children: (0, eR.jsx)(LR, {
+                                name: "dark" === JR ? "moon" : "sun"
                               })
                             })
                           }
-                          const rN = "https://github.com/Bloxdy/code-api",
-                            zN = "https://discord.gg/playbloxd",
-                            FN = 180,
-                            QN = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const ku = "https://github.com/Bloxdy/code-api",
+                            Qu = "https://discord.gg/playbloxd",
+                            Fu = 180,
+                            Tu = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function WP(WW) {
+                          function su(RR) {
                             let {
-                              basePath: iW,
-                              activePageId: OW,
-                              onNavigate: mW
-                            } = WW;
-                            return (0, AW.jsx)("nav", {
+                              basePath: JR,
+                              activePageId: GR,
+                              onNavigate: yR
+                            } = RR;
+                            return (0, eR.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: DW.map((WW => (0, AW.jsxs)("div", {
+                              children: cR.map((RR => (0, eR.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, AW.jsx)("div", {
+                                children: [(0, eR.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: WW.title
-                                }), WW.pageIds.map((WW => {
-                                  var EW;
-                                  const LW = VW(WW);
-                                  return (0, AW.jsxs)(PW.b, {
-                                    to: qW(iW, LW),
-                                    className: NW()("DocsNavLink", {
-                                      Active: LW.id === OW
+                                  children: RR.title
+                                }), RR.pageIds.map((RR => {
+                                  var tR;
+                                  const qR = PR(RR);
+                                  return (0, eR.jsxs)(ZR.b, {
+                                    to: dR(JR, qR),
+                                    className: uR()("DocsNavLink", {
+                                      Active: qR.id === GR
                                     }),
-                                    "aria-current": LW.id === OW ? "page" : void 0,
-                                    onClick: mW,
-                                    children: [(0, AW.jsx)(jW, {
-                                      name: LW.icon
-                                    }), (0, AW.jsx)("span", {
-                                      children: null !== (EW = LW.navTitle) && void 0 !== EW ? EW : LW.title
+                                    "aria-current": qR.id === GR ? "page" : void 0,
+                                    onClick: yR,
+                                    children: [(0, eR.jsx)(LR, {
+                                      name: qR.icon
+                                    }), (0, eR.jsx)("span", {
+                                      children: null !== (tR = qR.navTitle) && void 0 !== tR ? tR : qR.title
                                     })]
-                                  }, LW.id)
+                                  }, qR.id)
                                 }))]
-                              }, WW.title)))
+                              }, RR.title)))
                             })
                           }
 
-                          function iP(WW) {
+                          function hu(RR) {
                             let {
-                              basePath: iW,
-                              pageId: OW
-                            } = WW;
-                            const mW = DW.flatMap((WW => WW.pageIds)),
-                              EW = mW.indexOf(OW),
-                              NW = EW > 0 ? VW(mW[EW - 1]) : null,
-                              LW = EW < mW.length - 1 ? VW(mW[EW + 1]) : null;
-                            return (0, AW.jsxs)("nav", {
+                              basePath: JR,
+                              pageId: GR
+                            } = RR;
+                            const yR = cR.flatMap((RR => RR.pageIds)),
+                              tR = yR.indexOf(GR),
+                              uR = tR > 0 ? PR(yR[tR - 1]) : null,
+                              qR = tR < yR.length - 1 ? PR(yR[tR + 1]) : null;
+                            return (0, eR.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [NW ? (0, AW.jsxs)(PW.b, {
+                              children: [uR ? (0, eR.jsxs)(ZR.b, {
                                 className: "DocsPagerLink Previous",
-                                to: qW(iW, NW),
-                                children: [(0, AW.jsx)("span", {
+                                to: dR(JR, uR),
+                                children: [(0, eR.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, AW.jsx)("span", {
+                                }), (0, eR.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: NW.title
+                                  children: uR.title
                                 })]
-                              }) : (0, AW.jsx)("span", {}), LW && (0, AW.jsxs)(PW.b, {
+                              }) : (0, eR.jsx)("span", {}), qR && (0, eR.jsxs)(ZR.b, {
                                 className: "DocsPagerLink Next",
-                                to: qW(iW, LW),
-                                children: [(0, AW.jsx)("span", {
+                                to: dR(JR, qR),
+                                children: [(0, eR.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, AW.jsx)("span", {
+                                }), (0, eR.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: LW.title
+                                  children: qR.title
                                 })]
                               })]
                             })
                           }
 
-                          function OP(WW) {
+                          function RZ(RR) {
                             let {
-                              basePath: iW,
-                              embedded: OW = !1
-                            } = WW;
+                              basePath: JR,
+                              embedded: GR = !1
+                            } = RR;
                             const {
-                              pageSlug: EW = ""
-                            } = (0, LW.z)(), wW = (0, LW.u)(), tW = (0, LW.w)(), ZW = (xW = EW, gW.find((WW => WW.slug === xW)));
-                            var xW;
-                            const [lW, bW] = function() {
-                              const [WW, iW] = (0, mW.useState)((() => {
-                                const WW = RN.i.getItem(GN);
-                                return "dark" === WW || "light" === WW ? WW : null
-                              })), [OW, EW] = (0, mW.useState)(IN.matches ? "light" : "dark");
-                              return (0, mW.useEffect)((() => {
-                                const WW = () => {
-                                  EW(IN.matches ? "light" : "dark")
+                              pageSlug: tR = ""
+                            } = (0, qR.x)(), fR = (0, qR.r)(), VR = (0, qR.v)(), KR = (wR = tR, oR.find((RR => RR.slug === wR)));
+                            var wR;
+                            const [rR, aR] = function() {
+                              const [RR, JR] = (0, yR.useState)((() => {
+                                const RR = ju.i.getItem(du);
+                                return "dark" === RR || "light" === RR ? RR : null
+                              })), [GR, tR] = (0, yR.useState)(Eu.matches ? "light" : "dark");
+                              return (0, yR.useEffect)((() => {
+                                const RR = () => {
+                                  tR(Eu.matches ? "light" : "dark")
                                 };
-                                return IN.addEventListener("change", WW), () => {
-                                  IN.removeEventListener("change", WW)
+                                return Eu.addEventListener("change", RR), () => {
+                                  Eu.removeEventListener("change", RR)
                                 }
-                              }), []), [null !== WW && void 0 !== WW ? WW : OW, WW => {
-                                RN.i.setItem(GN, WW), iW(WW)
+                              }), []), [null !== RR && void 0 !== RR ? RR : GR, RR => {
+                                ju.i.setItem(du, RR), JR(RR)
                               }]
-                            }(), [UW, kW] = (0, mW.useState)(null), [sW, MW] = (0, mW.useState)(!1), [KW, SW] = (0, mW.useState)(!1), [YW, TW] = (0, mW.useState)([]), JW = function(WW, iW) {
-                              const [OW, EW] = (0, mW.useState)("");
-                              return (0, mW.useEffect)((() => {
-                                if (!iW) return;
-                                let OW = 0;
-                                const mW = () => {
-                                    var mW, NW;
-                                    OW = 0;
-                                    const PW = iW.getBoundingClientRect().top + FN;
-                                    let LW = null !== (mW = null === (NW = WW[0]) || void 0 === NW ? void 0 : NW.anchor) && void 0 !== mW ? mW : "";
-                                    for (const iW of WW) {
-                                      const WW = document.getElementById(iW.anchor);
-                                      WW && WW.getBoundingClientRect().top <= PW && (LW = iW.anchor)
+                            }(), [nR, UR] = (0, yR.useState)(null), [WR, AR] = (0, yR.useState)(!1), [CR, XR] = (0, yR.useState)(!1), [MR, lR] = (0, yR.useState)([]), pR = function(RR, JR) {
+                              const [GR, tR] = (0, yR.useState)("");
+                              return (0, yR.useEffect)((() => {
+                                if (!JR) return;
+                                let GR = 0;
+                                const yR = () => {
+                                    var yR, uR;
+                                    GR = 0;
+                                    const ZR = JR.getBoundingClientRect().top + Fu;
+                                    let qR = null !== (yR = null === (uR = RR[0]) || void 0 === uR ? void 0 : uR.anchor) && void 0 !== yR ? yR : "";
+                                    for (const JR of RR) {
+                                      const RR = document.getElementById(JR.anchor);
+                                      RR && RR.getBoundingClientRect().top <= ZR && (qR = JR.anchor)
                                     }
-                                    iW.scrollTop + iW.clientHeight >= iW.scrollHeight - 2 && iW.scrollTop > 0 && WW.length > 0 && (LW = WW[WW.length - 1].anchor), EW(LW)
+                                    JR.scrollTop + JR.clientHeight >= JR.scrollHeight - 2 && JR.scrollTop > 0 && RR.length > 0 && (qR = RR[RR.length - 1].anchor), tR(qR)
                                   },
-                                  NW = () => {
-                                    OW || (OW = requestAnimationFrame(mW))
+                                  uR = () => {
+                                    GR || (GR = requestAnimationFrame(yR))
                                   };
-                                return mW(), iW.addEventListener("scroll", NW, {
+                                return yR(), JR.addEventListener("scroll", uR, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(OW), iW.removeEventListener("scroll", NW)
+                                  cancelAnimationFrame(GR), JR.removeEventListener("scroll", uR)
                                 }
-                              }), [WW, iW]), OW
-                            }(YW, UW), hW = "" === EW && wW.hash ? function(WW) {
-                              const iW = (0, yW.o)(WW);
-                              if (CW(VW("welcome"), iW)) return null;
-                              const OW = Object.hasOwn(BW, iW) ? BW[iW] : null;
-                              if (OW) return {
-                                page: VW(OW.pageId),
-                                anchor: OW.anchor
+                              }), [RR, JR]), GR
+                            }(MR, nR), gR = "" === tR && fR.hash ? function(RR) {
+                              const JR = (0, BR.r)(RR);
+                              if (zR(PR("welcome"), JR)) return null;
+                              const GR = Object.hasOwn(jR, JR) ? jR[JR] : null;
+                              if (GR) return {
+                                page: PR(GR.pageId),
+                                anchor: GR.anchor
                               };
-                              const mW = VW("readme");
-                              return CW(mW, iW) ? {
-                                page: mW,
-                                anchor: iW
-                              } : XW(`#${iW}`)
-                            }(wW.hash) : null;
-                            (0, mW.useEffect)((() => (cW.d.set({
+                              const yR = PR("readme");
+                              return zR(yR, JR) ? {
+                                page: yR,
+                                anchor: JR
+                              } : SR(`#${JR}`)
+                            }(fR.hash) : null;
+                            (0, yR.useEffect)((() => (iR.d.set({
                               musicOnFromPage: !1
                             }), () => {
-                              cW.d.set({
+                              iR.d.set({
                                 musicOnFromPage: !0
-                              }), km()
-                            })), []), (0, mW.useEffect)((() => {
-                              const WW = WW => {
-                                const iW = WW.target;
-                                if (iW.closest(".DocsTextDialog")) return;
-                                const OW = iW.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(iW.tagName);
-                                "k" === WW.key && (WW.metaKey || WW.ctrlKey) || "/" === WW.key && !OW ? (WW.preventDefault(), SW(!0)) : "Escape" === WW.key && MW(!1)
+                              }), Ly()
+                            })), []), (0, yR.useEffect)((() => {
+                              const RR = RR => {
+                                const JR = RR.target;
+                                if (JR.closest(".DocsTextDialog")) return;
+                                const GR = JR.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(JR.tagName);
+                                "k" === RR.key && (RR.metaKey || RR.ctrlKey) || "/" === RR.key && !GR ? (RR.preventDefault(), XR(!0)) : "Escape" === RR.key && AR(!1)
                               };
-                              return window.addEventListener("keydown", WW), () => {
-                                window.removeEventListener("keydown", WW)
+                              return window.addEventListener("keydown", RR), () => {
+                                window.removeEventListener("keydown", RR)
                               }
                             }), []);
-                            const HW = (0, mW.useRef)(null);
-                            (0, mW.useLayoutEffect)((() => {
-                              var WW, iW;
-                              if (!UW) return;
-                              const OW = HW.current === wW.pathname;
-                              HW.current = wW.pathname;
-                              const mW = (0, yW.o)(wW.hash),
-                                EW = mW ? document.getElementById(mW) : null;
-                              if (null === (WW = UW.querySelector(".DocsTargeted")) || void 0 === WW || WW.classList.remove("DocsTargeted"), null === EW || void 0 === EW || null === (iW = EW.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === iW || iW.classList.add("DocsTargeted"), EW) {
-                                var NW;
-                                const WW = EW.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (NW = EW.closest(".DocsChangelogEntry")) && void 0 !== NW ? NW : EW).scrollIntoView({
-                                  block: WW ? "center" : "start",
-                                  behavior: OW ? "smooth" : "auto"
+                            const bR = (0, yR.useRef)(null);
+                            (0, yR.useLayoutEffect)((() => {
+                              var RR, JR;
+                              if (!nR) return;
+                              const GR = bR.current === fR.pathname;
+                              bR.current = fR.pathname;
+                              const yR = (0, BR.r)(fR.hash),
+                                tR = yR ? document.getElementById(yR) : null;
+                              if (null === (RR = nR.querySelector(".DocsTargeted")) || void 0 === RR || RR.classList.remove("DocsTargeted"), null === tR || void 0 === tR || null === (JR = tR.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === JR || JR.classList.add("DocsTargeted"), tR) {
+                                var uR;
+                                const RR = tR.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (uR = tR.closest(".DocsChangelogEntry")) && void 0 !== uR ? uR : tR).scrollIntoView({
+                                  block: RR ? "center" : "start",
+                                  behavior: GR ? "smooth" : "auto"
                                 })
-                              } else OW || UW.scrollTo({
+                              } else GR || nR.scrollTo({
                                 top: 0
                               })
-                            }), [UW, wW.pathname, wW.hash, wW.key]);
-                            const nW = (0, mW.useCallback)((() => {
-                                MW(!1)
+                            }), [nR, fR.pathname, fR.hash, fR.key]);
+                            const vR = (0, yR.useCallback)((() => {
+                                AR(!1)
                               }), []),
-                              uW = (0, mW.useCallback)((WW => {
-                                tW({
-                                  hash: WW
+                              OR = (0, yR.useCallback)((RR => {
+                                VR({
+                                  hash: RR
                                 })
-                              }), [tW]);
-                            if (hW) return (0, AW.jsx)(LW.d, {
+                              }), [VR]);
+                            if (gR) return (0, eR.jsx)(qR.d, {
                               replace: !0,
-                              to: qW(iW, hW.page, hW.anchor)
+                              to: dR(JR, gR.page, gR.anchor)
                             });
-                            if (!ZW) return (0, AW.jsx)(LW.d, {
+                            if (!KR) return (0, eR.jsx)(qR.d, {
                               replace: !0,
-                              to: iW
+                              to: JR
                             });
-                            const oW = OW ? "div" : "main";
-                            return (0, AW.jsx)(li.Provider, {
-                              value: iW,
-                              children: (0, AW.jsx)(Ai.Provider, {
-                                value: UW,
-                                children: (0, AW.jsxs)("div", {
-                                  ref: kW,
-                                  className: NW()("DocsSite", {
-                                    Embedded: OW,
-                                    NavOpen: sW
+                            const xR = GR ? "div" : "main";
+                            return (0, eR.jsx)(rJ.Provider, {
+                              value: JR,
+                              children: (0, eR.jsx)(eJ.Provider, {
+                                value: nR,
+                                children: (0, eR.jsxs)("div", {
+                                  ref: UR,
+                                  className: uR()("DocsSite", {
+                                    Embedded: GR,
+                                    NavOpen: WR
                                   }),
-                                  "data-theme": lW,
-                                  children: [(0, AW.jsxs)("header", {
+                                  "data-theme": rR,
+                                  children: [(0, eR.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, AW.jsx)("button", {
+                                    children: [(0, eR.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": sW ? "Close menu" : "Open menu",
-                                      "aria-expanded": sW,
+                                      "aria-label": WR ? "Close menu" : "Open menu",
+                                      "aria-expanded": WR,
                                       onClick: () => {
-                                        MW(!sW)
+                                        AR(!WR)
                                       },
-                                      children: (0, AW.jsx)(jW, {
-                                        name: sW ? "cross" : "menu"
+                                      children: (0, eR.jsx)(LR, {
+                                        name: WR ? "cross" : "menu"
                                       })
-                                    }), (0, AW.jsxs)(PW.b, {
-                                      to: iW,
+                                    }), (0, eR.jsxs)(ZR.b, {
+                                      to: JR,
                                       className: "DocsBrand",
-                                      children: [(0, AW.jsx)("img", {
+                                      children: [(0, eR.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, AW.jsx)("span", {
+                                      }), (0, eR.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, AW.jsx)("span", {
+                                      }), (0, eR.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, AW.jsxs)("button", {
+                                    }), (0, eR.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        SW(!0)
+                                        XR(!0)
                                       },
-                                      children: [(0, AW.jsx)(jW, {
+                                      children: [(0, eR.jsx)(LR, {
                                         name: "magnifying-glass"
-                                      }), (0, AW.jsx)("span", {
+                                      }), (0, eR.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, AW.jsxs)("kbd", {
-                                        children: [QN ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, eR.jsxs)("kbd", {
+                                        children: [Tu ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, AW.jsxs)("div", {
+                                    }), (0, eR.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, AW.jsxs)("a", {
-                                        href: zN,
+                                      children: [(0, eR.jsxs)("a", {
+                                        href: Qu,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, AW.jsx)(jW, {
+                                        children: [(0, eR.jsx)(LR, {
                                           name: "discord"
-                                        }), (0, AW.jsx)("span", {
+                                        }), (0, eR.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, AW.jsxs)("a", {
-                                        href: rN,
+                                      }), (0, eR.jsxs)("a", {
+                                        href: ku,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, AW.jsx)(jW, {
+                                        children: [(0, eR.jsx)(LR, {
                                           name: "external-link"
-                                        }), (0, AW.jsx)("span", {
+                                        }), (0, eR.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !OW && (0, AW.jsxs)(PW.b, {
+                                      }), !GR && (0, eR.jsxs)(ZR.b, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, AW.jsx)(jW, {
+                                        children: [(0, eR.jsx)(LR, {
                                           name: "play"
-                                        }), (0, AW.jsx)("span", {
+                                        }), (0, eR.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, AW.jsx)(aN, {
-                                        theme: lW,
-                                        onChange: bW
+                                      }), (0, eR.jsx)(Yu, {
+                                        theme: rR,
+                                        onChange: aR
                                       })]
                                     })]
-                                  }), (0, AW.jsxs)("div", {
+                                  }), (0, eR.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, AW.jsx)("aside", {
+                                    children: [(0, eR.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, AW.jsx)(WP, {
-                                        basePath: iW,
-                                        activePageId: ZW.id,
-                                        onNavigate: nW
+                                      children: (0, eR.jsx)(su, {
+                                        basePath: JR,
+                                        activePageId: KR.id,
+                                        onNavigate: vR
                                       })
-                                    }), (0, AW.jsx)("div", {
+                                    }), (0, eR.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: nW
-                                    }), (0, AW.jsxs)(oW, {
+                                      onClick: vR
+                                    }), (0, eR.jsxs)(xR, {
                                       className: "DocsMain",
-                                      children: [(0, AW.jsx)(TN, {
-                                        page: ZW,
-                                        onTocChange: TW
-                                      }, ZW.id), (0, AW.jsx)(iP, {
-                                        basePath: iW,
-                                        pageId: ZW.id
+                                      children: [(0, eR.jsx)(Mu, {
+                                        page: KR,
+                                        onTocChange: lR
+                                      }, KR.id), (0, eR.jsx)(hu, {
+                                        basePath: JR,
+                                        pageId: KR.id
                                       })]
-                                    }), (0, AW.jsx)("aside", {
-                                      className: NW()("DocsToc", {
-                                        Timeline: "changelog" === ZW.layout
+                                    }), (0, eR.jsx)("aside", {
+                                      className: uR()("DocsToc", {
+                                        Timeline: "changelog" === KR.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, AW.jsx)(nN, {
-                                        isChangelog: "changelog" === ZW.layout,
-                                        toc: YW,
-                                        activeAnchor: JW,
-                                        onNavigate: uW
+                                      children: (0, eR.jsx)(gu, {
+                                        isChangelog: "changelog" === KR.layout,
+                                        toc: MR,
+                                        activeAnchor: pR,
+                                        onNavigate: OR
                                       })
                                     })]
-                                  }), (0, AW.jsx)(qN, {}), KW && (0, AW.jsx)(XN, {
-                                    basePath: iW,
+                                  }), (0, eR.jsx)(Su, {}), CR && (0, eR.jsx)(mu, {
+                                    basePath: JR,
                                     onClose: () => {
-                                      SW(!1)
+                                      XR(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 5479: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            B: () => xW,
-                            d: () => mW,
-                            e: () => PW,
-                            i: () => jW,
-                            j: () => bW,
-                            l: () => LW,
-                            o: () => EW,
-                            s: () => NW,
-                            v: () => AW,
-                            y: () => lW
+                        }, 5635: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            A: () => wR,
+                            d: () => yR,
+                            e: () => ZR,
+                            i: () => LR,
+                            l: () => aR,
+                            p: () => qR,
+                            r: () => tR,
+                            s: () => uR,
+                            v: () => eR,
+                            x: () => rR
                           });
-                          const mW = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const yR = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function EW(WW) {
+                          function tR(RR) {
                             try {
-                              return decodeURIComponent(WW.slice(1))
+                              return decodeURIComponent(RR.slice(1))
                             } catch {
-                              return WW.slice(1)
+                              return RR.slice(1)
                             }
                           }
 
-                          function NW(WW) {
-                            return WW.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function uR(RR) {
+                            return RR.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const PW = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${mW.source}`, "g");
+                          const ZR = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${yR.source}`, "g");
 
-                          function LW(WW, iW) {
-                            return 2 === WW.length ? iW.replace(/^ (.*) $/, "$1") : iW
-                          }
-
-                          function cW(WW) {
-                            return "" === WW.trim()
+                          function qR(RR, JR) {
+                            return 2 === RR.length ? JR.replace(/^ (.*) $/, "$1") : JR
                           }
 
-                          function wW(WW) {
-                            const iW = [];
-                            for (const OW of WW.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) iW.length > 0 && iW[iW.length - 1].endsWith("\\") ? iW[iW.length - 1] += `|${OW}` : iW.push(OW);
-                            return iW.map((WW => WW.trim().replaceAll("\\|", "|")))
+                          function iR(RR) {
+                            return "" === RR.trim()
                           }
-                          const tW = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function ZW(WW) {
-                            const iW = [],
-                              OW = [{
+                          function fR(RR) {
+                            const JR = [];
+                            for (const GR of RR.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) JR.length > 0 && JR[JR.length - 1].endsWith("\\") ? JR[JR.length - 1] += `|${GR}` : JR.push(GR);
+                            return JR.map((RR => RR.trim().replaceAll("\\|", "|")))
+                          }
+                          const VR = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function KR(RR) {
+                            const JR = [],
+                              GR = [{
                                 indent: -1,
-                                items: iW
+                                items: JR
                               }];
-                            let mW = null;
-                            for (const EW of WW) {
-                              const WW = EW.match(tW);
-                              if (!WW) {
-                                mW && (mW.text += ` ${EW.trim()}`);
+                            let yR = null;
+                            for (const tR of RR) {
+                              const RR = tR.match(VR);
+                              if (!RR) {
+                                yR && (yR.text += ` ${tR.trim()}`);
                                 continue
                               }
-                              const iW = WW[1].replace(/\t/g, "  ").length;
-                              for (; iW <= OW[OW.length - 1].indent;) OW.pop();
-                              mW = {
-                                text: WW[3].trim(),
+                              const JR = RR[1].replace(/\t/g, "  ").length;
+                              for (; JR <= GR[GR.length - 1].indent;) GR.pop();
+                              yR = {
+                                text: RR[3].trim(),
                                 children: []
-                              }, OW[OW.length - 1].items.push(mW), OW.push({
-                                indent: iW,
-                                items: mW.children
+                              }, GR[GR.length - 1].items.push(yR), GR.push({
+                                indent: JR,
+                                items: yR.children
                               })
                             }
-                            return iW
+                            return JR
                           }
 
-                          function xW(WW) {
-                            const iW = WW.replace(/\r\n/g, "\n").split("\n"),
-                              OW = [];
-                            let mW = 0;
-                            for (; mW < iW.length;) {
-                              const WW = iW[mW];
-                              if (cW(WW)) {
-                                mW++;
+                          function wR(RR) {
+                            const JR = RR.replace(/\r\n/g, "\n").split("\n"),
+                              GR = [];
+                            let yR = 0;
+                            for (; yR < JR.length;) {
+                              const RR = JR[yR];
+                              if (iR(RR)) {
+                                yR++;
                                 continue
                               }
-                              const EW = WW.match(/^\s*```\s*(\w*)\s*$/);
-                              if (EW) {
-                                const WW = [];
-                                for (mW++; mW < iW.length && !/^\s*```\s*$/.test(iW[mW]);) WW.push(iW[mW]), mW++;
-                                mW++, OW.push({
+                              const tR = RR.match(/^\s*```\s*(\w*)\s*$/);
+                              if (tR) {
+                                const RR = [];
+                                for (yR++; yR < JR.length && !/^\s*```\s*$/.test(JR[yR]);) RR.push(JR[yR]), yR++;
+                                yR++, GR.push({
                                   kind: "code",
-                                  lang: EW[1] || "text",
-                                  code: WW.join("\n").replace(/\s+$/, "")
+                                  lang: tR[1] || "text",
+                                  code: RR.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const PW = WW.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (PW) {
-                                const WW = PW[2].trim();
-                                OW.push({
+                              const ZR = RR.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (ZR) {
+                                const RR = ZR[2].trim();
+                                GR.push({
                                   kind: "heading",
-                                  level: PW[1].length,
-                                  text: WW,
-                                  anchor: NW(WW)
-                                }), mW++;
+                                  level: ZR[1].length,
+                                  text: RR,
+                                  anchor: uR(RR)
+                                }), yR++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(WW)) {
-                                OW.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(RR)) {
+                                GR.push({
                                   kind: "rule"
-                                }), mW++;
+                                }), yR++;
                                 continue
                               }
-                              if (WW.trim().startsWith("|") && mW + 1 < iW.length && /^\s*\|[\s:|-]+\|\s*$/.test(iW[mW + 1])) {
-                                const EW = wW(WW),
-                                  NW = [];
-                                for (mW += 2; mW < iW.length && iW[mW].trim().startsWith("|");) NW.push(wW(iW[mW])), mW++;
-                                OW.push({
+                              if (RR.trim().startsWith("|") && yR + 1 < JR.length && /^\s*\|[\s:|-]+\|\s*$/.test(JR[yR + 1])) {
+                                const tR = fR(RR),
+                                  uR = [];
+                                for (yR += 2; yR < JR.length && JR[yR].trim().startsWith("|");) uR.push(fR(JR[yR])), yR++;
+                                GR.push({
                                   kind: "table",
-                                  header: EW,
-                                  rows: NW
+                                  header: tR,
+                                  rows: uR
                                 });
                                 continue
                               }
-                              if (WW.startsWith(">")) {
-                                const WW = [];
-                                for (; mW < iW.length && iW[mW].startsWith(">");) WW.push(iW[mW].replace(/^>\s?/, "")), mW++;
-                                OW.push({
+                              if (RR.startsWith(">")) {
+                                const RR = [];
+                                for (; yR < JR.length && JR[yR].startsWith(">");) RR.push(JR[yR].replace(/^>\s?/, "")), yR++;
+                                GR.push({
                                   kind: "quote",
-                                  blocks: xW(WW.join("\n"))
+                                  blocks: wR(RR.join("\n"))
                                 });
                                 continue
                               }
-                              if (tW.test(WW)) {
-                                const EW = [],
-                                  NW = /^\s*\d+\./.test(WW);
-                                for (; mW < iW.length && !cW(iW[mW]) && (tW.test(iW[mW]) || /^\s+\S/.test(iW[mW]));) EW.push(iW[mW]), mW++;
-                                OW.push({
+                              if (VR.test(RR)) {
+                                const tR = [],
+                                  uR = /^\s*\d+\./.test(RR);
+                                for (; yR < JR.length && !iR(JR[yR]) && (VR.test(JR[yR]) || /^\s+\S/.test(JR[yR]));) tR.push(JR[yR]), yR++;
+                                GR.push({
                                   kind: "list",
-                                  ordered: NW,
-                                  items: ZW(EW)
+                                  ordered: uR,
+                                  items: KR(tR)
                                 });
                                 continue
                               }
-                              const LW = [];
-                              for (; mW < iW.length && !cW(iW[mW]) && !/^\s*```/.test(iW[mW]) && !/^#{1,6}\s/.test(iW[mW]) && !iW[mW].startsWith(">") && !tW.test(iW[mW]) && (!iW[mW].trim().startsWith("|") || 0 !== LW.length);) LW.push(iW[mW].trim()), mW++;
-                              0 === LW.length && (LW.push(iW[mW].trim()), mW++), OW.push({
+                              const qR = [];
+                              for (; yR < JR.length && !iR(JR[yR]) && !/^\s*```/.test(JR[yR]) && !/^#{1,6}\s/.test(JR[yR]) && !JR[yR].startsWith(">") && !VR.test(JR[yR]) && (!JR[yR].trim().startsWith("|") || 0 !== qR.length);) qR.push(JR[yR].trim()), yR++;
+                              0 === qR.length && (qR.push(JR[yR].trim()), yR++), GR.push({
                                 kind: "paragraph",
-                                text: LW.join(" ")
+                                text: qR.join(" ")
                               })
                             }
-                            return OW
+                            return GR
                           }
 
-                          function lW(WW) {
-                            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const OW = xW(WW);
-                            let mW = "";
-                            const EW = [],
-                              NW = [],
-                              PW = new Map;
-                            for (const wW of OW) {
-                              if ("heading" === wW.kind) {
-                                var LW;
-                                const WW = (null !== (LW = PW.get(wW.anchor)) && void 0 !== LW ? LW : 0) + 1;
-                                PW.set(wW.anchor, WW), WW > 1 && (wW.anchor = `${wW.anchor}-${WW}`)
+                          function rR(RR) {
+                            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const GR = wR(RR);
+                            let yR = "";
+                            const tR = [],
+                              uR = [],
+                              ZR = new Map;
+                            for (const fR of GR) {
+                              if ("heading" === fR.kind) {
+                                var qR;
+                                const RR = (null !== (qR = ZR.get(fR.anchor)) && void 0 !== qR ? qR : 0) + 1;
+                                ZR.set(fR.anchor, RR), RR > 1 && (fR.anchor = `${fR.anchor}-${RR}`)
                               }
-                              if ("heading" === wW.kind && 1 === wW.level && !mW) {
-                                mW = wW.text;
+                              if ("heading" === fR.kind && 1 === fR.level && !yR) {
+                                yR = fR.text;
                                 continue
                               }
-                              if ("heading" === wW.kind && wW.level <= iW) {
-                                NW.push({
-                                  heading: wW,
+                              if ("heading" === fR.kind && fR.level <= JR) {
+                                uR.push({
+                                  heading: fR,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const WW = NW.at(-1);
-                              WW ? WW.blocks.push(wW) : EW.push(wW)
+                              const RR = uR.at(-1);
+                              RR ? RR.blocks.push(fR) : tR.push(fR)
                             }
-                            const cW = WW => {
+                            const iR = RR => {
                               for (;
-                                "rule" === (null === (iW = WW.at(-1)) || void 0 === iW ? void 0 : iW.kind);) {
-                                var iW;
-                                WW.pop()
+                                "rule" === (null === (JR = RR.at(-1)) || void 0 === JR ? void 0 : JR.kind);) {
+                                var JR;
+                                RR.pop()
                               }
                             };
-                            cW(EW);
-                            for (const wW of NW) cW(wW.blocks);
+                            iR(tR);
+                            for (const fR of uR) iR(fR.blocks);
                             return {
-                              title: mW,
-                              intro: EW,
-                              sections: NW
+                              title: yR,
+                              intro: tR,
+                              sections: uR
                             }
                           }
 
-                          function AW(WW) {
+                          function eR(RR) {
                             return [{
                               heading: null,
-                              blocks: WW.intro
-                            }, ...WW.sections.map((WW => ({
-                              heading: WW.heading,
-                              blocks: WW.blocks
+                              blocks: RR.intro
+                            }, ...RR.sections.map((RR => ({
+                              heading: RR.heading,
+                              blocks: RR.blocks
                             })))]
                           }
 
-                          function bW(WW) {
-                            return WW.flatMap((WW => "code" === WW.kind ? [WW] : "quote" === WW.kind ? bW(WW.blocks) : []))
+                          function aR(RR) {
+                            return RR.flatMap((RR => "code" === RR.kind ? [RR] : "quote" === RR.kind ? aR(RR.blocks) : []))
                           }
 
-                          function jW(WW) {
-                            switch (WW.kind) {
+                          function LR(RR) {
+                            switch (RR.kind) {
                               case "heading":
                               case "paragraph":
-                                return WW.text;
+                                return RR.text;
                               case "code":
-                                return WW.code;
+                                return RR.code;
                               case "table":
-                                return [WW.header, ...WW.rows].map((WW => WW.join(" "))).join(" ");
+                                return [RR.header, ...RR.rows].map((RR => RR.join(" "))).join(" ");
                               case "list": {
-                                const iW = WW => WW.map((WW => `${WW.text} ${iW(WW.children)}`)).join(" ");
-                                return iW(WW.items)
+                                const JR = RR => RR.map((RR => `${RR.text} ${JR(RR.children)}`)).join(" ");
+                                return JR(RR.items)
                               }
                               case "quote":
-                                return WW.blocks.map(jW).join(" ");
+                                return RR.blocks.map(LR).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5593: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            b: () => LW
+                        }, 5719: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            b: () => qR
                           });
-                          var mW = OW(62),
-                            EW = OW(327),
-                            NW = OW(2032),
-                            PW = OW(1283);
+                          var yR = GR(66),
+                            tR = GR(359),
+                            uR = GR(2123),
+                            ZR = GR(1378);
 
-                          function LW(WW) {
+                          function qR(RR) {
                             let {
-                              text: iW
-                            } = WW;
-                            const OW = [];
-                            let LW = "";
-                            return (0, EW.kc)(iW).forEach(((WW, iW) => {
-                              if ("string" === typeof WW || !(0, NW.d)(WW.icon)) return void(LW += "string" === typeof WW ? WW : WW.icon);
-                              const EW = Math.max(0, LW.trimEnd().search(/\S{1,12}$/));
-                              OW.push((0, PW.jsxs)(mW.Fragment, {
-                                children: [LW.slice(0, EW), (0, PW.jsxs)("span", {
+                              text: JR
+                            } = RR;
+                            const GR = [];
+                            let qR = "";
+                            return (0, tR.dc)(JR).forEach(((RR, JR) => {
+                              if ("string" === typeof RR || !(0, uR.c)(RR.icon)) return void(qR += "string" === typeof RR ? RR : RR.icon);
+                              const tR = Math.max(0, qR.trimEnd().search(/\S{1,12}$/));
+                              GR.push((0, ZR.jsxs)(yR.Fragment, {
+                                children: [qR.slice(0, tR), (0, ZR.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [LW.slice(EW), (0, PW.jsx)("span", {
+                                  children: [qR.slice(tR), (0, ZR.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": WW.icon,
-                                    children: (0, PW.jsx)(NW.b, {
-                                      itemName: WW.icon,
+                                    "aria-label": RR.icon,
+                                    children: (0, ZR.jsx)(uR.b, {
+                                      itemName: RR.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, iW)), LW = ""
-                            })), OW.push(LW), (0, PW.jsx)(PW.Fragment, {
-                              children: OW
+                              }, JR)), qR = ""
+                            })), GR.push(qR), (0, ZR.jsx)(ZR.Fragment, {
+                              children: GR
                             })
                           }
-                        }, 5510: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            h: () => kW,
-                            e: () => UW
+                        }, 5653: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            g: () => UR,
+                            d: () => nR
                           });
-                          var mW = OW(62),
-                            EW = OW(1526),
-                            NW = OW(2021),
-                            PW = OW(5517),
-                            LW = OW(1283);
-                          const cW = (0, mW.memo)((function(WW) {
+                          var yR = GR(66),
+                            tR = GR(1581),
+                            uR = GR(2105),
+                            ZR = GR(5656),
+                            qR = GR(1378);
+                          const iR = (0, yR.memo)((function(RR) {
                             let {
-                              initialParameters: iW
-                            } = WW;
-                            const OW = (0, mW.useRef)(null),
-                              EW = (0, mW.useRef)(null),
-                              cW = (0, mW.useRef)(0),
-                              wW = (0, mW.useRef)(null),
-                              tW = iW.description,
-                              ZW = iW.yN,
+                              initialParameters: JR
+                            } = RR;
+                            const GR = (0, yR.useRef)(null),
+                              tR = (0, yR.useRef)(null),
+                              iR = (0, yR.useRef)(0),
+                              fR = (0, yR.useRef)(null),
+                              VR = JR.description,
+                              KR = JR.Ou,
                               {
-                                scale: xW,
-                                rotation: lW
-                              } = null !== iW && void 0 !== iW ? iW : {},
-                              AW = (0, PW.f)();
-                            return (0, mW.useEffect)((() => {
-                              const WW = AW.onFrame((() => {
-                                const WW = AW.getState();
-                                if (!WW.isActive || !OW.current || !EW.current) return;
-                                const iW = WW.state;
-                                if (OW.current.value = iW.progress, iW.clickCount > cW.current) {
-                                  cW.current = iW.clickCount;
-                                  const WW = EW.current;
-                                  WW.classList.add("pulse"), wW.current = setTimeout((() => {
-                                    WW.classList.remove("pulse")
+                                scale: wR,
+                                rotation: rR
+                              } = null !== JR && void 0 !== JR ? JR : {},
+                              eR = (0, ZR.g)();
+                            return (0, yR.useEffect)((() => {
+                              const RR = eR.onFrame((() => {
+                                const RR = eR.getState();
+                                if (!RR.isActive || !GR.current || !tR.current) return;
+                                const JR = RR.state;
+                                if (GR.current.value = JR.progress, JR.clickCount > iR.current) {
+                                  iR.current = JR.clickCount;
+                                  const RR = tR.current;
+                                  RR.classList.add("pulse"), fR.current = setTimeout((() => {
+                                    RR.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(wW.current), WW()
+                                clearTimeout(fR.current), RR()
                               }
-                            }), [AW]), (0, LW.jsx)(LW.Fragment, {
-                              children: (0, LW.jsxs)("div", {
+                            }), [eR]), (0, qR.jsx)(qR.Fragment, {
+                              children: (0, qR.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== xW && {
-                                    "--scale": xW
+                                  ...null !== wR && {
+                                    "--scale": wR
                                   },
-                                  ...null !== lW && {
-                                    "--rotation": `${lW}deg`
+                                  ...null !== rR && {
+                                    "--rotation": `${rR}deg`
                                   }
                                 },
-                                children: [(0, LW.jsx)("progress", {
+                                children: [(0, qR.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: OW
-                                }), (0, LW.jsx)("span", {
+                                  ref: GR
+                                }), (0, qR.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: EW,
-                                  children: (0, LW.jsx)(NW.d, {
+                                  ref: tR,
+                                  children: (0, qR.jsx)(uR.c, {
                                     text: [{
-                                      icon: ZW
+                                      icon: KR
                                     }]
                                   })
-                                }), (0, LW.jsx)("div", {
+                                }), (0, qR.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, LW.jsx)(NW.d, {
-                                    text: tW
+                                  children: (0, qR.jsx)(uR.c, {
+                                    text: VR
                                   })
                                 })]
                               })
                             })
                           }));
-                          var wW = OW(1089),
-                            tW = OW.n(wW);
-                          const ZW = 2 * Math.PI * 90,
-                            xW = (0, mW.memo)((function(WW) {
+                          var fR = GR(1163),
+                            VR = GR.n(fR);
+                          const KR = 2 * Math.PI * 90,
+                            wR = (0, yR.memo)((function(RR) {
                               let {
-                                initialParameters: iW
-                              } = WW;
-                              const OW = (0, mW.useRef)(null),
-                                EW = (0, mW.useRef)(null),
-                                cW = (0, mW.useRef)(null),
-                                wW = iW.label,
-                                xW = iW.icon,
-                                lW = iW.hN,
+                                initialParameters: JR
+                              } = RR;
+                              const GR = (0, yR.useRef)(null),
+                                tR = (0, yR.useRef)(null),
+                                iR = (0, yR.useRef)(null),
+                                fR = JR.label,
+                                wR = JR.icon,
+                                rR = JR.Hu,
                                 {
-                                  scale: AW,
-                                  rotation: bW,
-                                  HN: jW
-                                } = null !== iW && void 0 !== iW ? iW : {},
-                                UW = (0, PW.f)();
-                              return (0, mW.useEffect)((() => {
-                                const WW = UW.onFrame((() => {
-                                  var WW, iW;
-                                  const mW = UW.getState();
-                                  if (!mW.isActive || !EW.current) return;
-                                  const NW = mW.state,
-                                    PW = null !== (WW = NW.timeRemaining) && void 0 !== WW ? WW : 0,
-                                    LW = null !== (iW = NW.JN) && void 0 !== iW ? iW : 1,
-                                    wW = ZW * (1 - PW / LW);
-                                  EW.current.style.strokeDashoffset = `${wW}`, OW.current && (OW.current.style.opacity = PW > 0 ? "1" : "0"), cW.current && lW && (cW.current.textContent = `${(PW/1e3).toFixed(1)}s`)
+                                  scale: eR,
+                                  rotation: aR,
+                                  ou: LR
+                                } = null !== JR && void 0 !== JR ? JR : {},
+                                nR = (0, ZR.g)();
+                              return (0, yR.useEffect)((() => {
+                                const RR = nR.onFrame((() => {
+                                  var RR, JR;
+                                  const yR = nR.getState();
+                                  if (!yR.isActive || !tR.current) return;
+                                  const uR = yR.state,
+                                    ZR = null !== (RR = uR.timeRemaining) && void 0 !== RR ? RR : 0,
+                                    qR = null !== (JR = uR.Du) && void 0 !== JR ? JR : 1,
+                                    fR = KR * (1 - ZR / qR);
+                                  tR.current.style.strokeDashoffset = `${fR}`, GR.current && (GR.current.style.opacity = ZR > 0 ? "1" : "0"), iR.current && rR && (iR.current.textContent = `${(ZR/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  WW()
+                                  RR()
                                 }
-                              }), [UW, lW]), (0, LW.jsxs)("div", {
+                              }), [nR, rR]), (0, qR.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: OW,
+                                ref: GR,
                                 style: {
-                                  ...null !== AW && {
-                                    "--scale": AW
+                                  ...null !== eR && {
+                                    "--scale": eR
                                   },
-                                  ...null !== bW && {
-                                    "--rotation": `${bW}deg`
+                                  ...null !== aR && {
+                                    "--rotation": `${aR}deg`
                                   }
                                 },
-                                children: [(0, LW.jsxs)("div", {
+                                children: [(0, qR.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, LW.jsxs)("svg", {
+                                  children: [(0, qR.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, LW.jsx)("circle", {
+                                    children: [(0, qR.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, LW.jsx)("circle", {
+                                    }), (0, qR.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: ZW,
-                                      ref: EW
+                                      strokeDasharray: KR,
+                                      ref: tR
                                     })]
-                                  }), (0, LW.jsx)("div", {
+                                  }), (0, qR.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, LW.jsx)(NW.d, {
+                                    children: (0, qR.jsx)(uR.c, {
                                       text: [{
-                                        icon: xW
+                                        icon: wR
                                       }],
-                                      className: tW()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: jW
+                                      className: VR()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: LR
                                       })
                                     })
                                   })]
-                                }), (0, LW.jsxs)("div", {
+                                }), (0, qR.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, LW.jsx)(NW.d, {
-                                    text: wW,
+                                  children: [(0, qR.jsx)(uR.c, {
+                                    text: fR,
                                     className: "QTETimedClickLabelText"
-                                  }), lW && (0, LW.jsx)("span", {
+                                  }), rR && (0, qR.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: cW
+                                    ref: iR
                                   })]
                                 })]
                               })
                             })),
-                            lW = (0, mW.memo)((function(WW) {
+                            rR = (0, yR.memo)((function(RR) {
                               let {
-                                initialParameters: iW
-                              } = WW;
-                              const OW = (0, mW.useRef)(null),
-                                EW = (0, mW.useRef)(null),
-                                cW = (0, mW.useRef)(null),
-                                wW = (0, mW.useRef)(!1),
-                                tW = iW.description,
-                                ZW = null === iW || void 0 === iW ? void 0 : iW.icon,
-                                xW = (0, PW.f)();
-                              return (0, mW.useEffect)((() => {
-                                const WW = xW.onFrame((() => {
-                                  const WW = xW.getState();
-                                  if (!WW.isActive) return;
-                                  const iW = WW.state;
-                                  if (OW.current) {
-                                    const WW = 100 * (iW.catchZonePosition - iW.uN / 2);
-                                    OW.current.style.left = `${WW}%`, OW.current.style.width = 100 * iW.uN + "%", iW.isCatching !== wW.current && (wW.current = iW.isCatching, iW.isCatching ? OW.current.classList.add("catching") : OW.current.classList.remove("catching"))
+                                initialParameters: JR
+                              } = RR;
+                              const GR = (0, yR.useRef)(null),
+                                tR = (0, yR.useRef)(null),
+                                iR = (0, yR.useRef)(null),
+                                fR = (0, yR.useRef)(!1),
+                                VR = JR.description,
+                                KR = null === JR || void 0 === JR ? void 0 : JR.icon,
+                                wR = (0, ZR.g)();
+                              return (0, yR.useEffect)((() => {
+                                const RR = wR.onFrame((() => {
+                                  const RR = wR.getState();
+                                  if (!RR.isActive) return;
+                                  const JR = RR.state;
+                                  if (GR.current) {
+                                    const RR = 100 * (JR.catchZonePosition - JR.Pu / 2);
+                                    GR.current.style.left = `${RR}%`, GR.current.style.width = 100 * JR.Pu + "%", JR.isCatching !== fR.current && (fR.current = JR.isCatching, JR.isCatching ? GR.current.classList.add("catching") : GR.current.classList.remove("catching"))
                                   }
-                                  EW.current && (EW.current.style.left = 100 * iW.moverPosition + "%"), cW.current && (cW.current.value = iW.progress)
+                                  tR.current && (tR.current.style.left = 100 * JR.moverPosition + "%"), iR.current && (iR.current.value = JR.progress)
                                 }));
                                 return () => {
-                                  WW()
+                                  RR()
                                 }
-                              }), [xW]), (0, LW.jsxs)("div", {
+                              }), [wR]), (0, qR.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, LW.jsx)("div", {
+                                children: [(0, qR.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, LW.jsx)(NW.d, {
-                                    text: tW
+                                  children: (0, qR.jsx)(uR.c, {
+                                    text: VR
                                   })
-                                }), (0, LW.jsx)("progress", {
+                                }), (0, qR.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: cW
-                                }), (0, LW.jsxs)("div", {
+                                  ref: iR
+                                }), (0, qR.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, LW.jsx)("div", {
+                                  children: [(0, qR.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: OW
-                                  }), (0, LW.jsx)("div", {
+                                    ref: GR
+                                  }), (0, qR.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: EW,
-                                    children: (0, LW.jsx)("span", {
-                                      children: ZW && (0, LW.jsx)(NW.d, {
+                                    ref: tR,
+                                    children: (0, qR.jsx)("span", {
+                                      children: KR && (0, qR.jsx)(uR.c, {
                                         text: [{
-                                          icon: ZW,
+                                          icon: KR,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var AW = OW(643);
-                          const bW = (0, mW.memo)((function(WW) {
+                          var eR = GR(679);
+                          const aR = (0, yR.memo)((function(RR) {
                               let {
-                                initialParameters: iW
-                              } = WW;
-                              const OW = (0, mW.useRef)(null),
-                                EW = iW.label,
-                                cW = iW.VN,
+                                initialParameters: JR
+                              } = RR;
+                              const GR = (0, yR.useRef)(null),
+                                tR = JR.label,
+                                iR = JR.Eu,
                                 {
-                                  icon: wW,
-                                  scale: tW,
-                                  rotation: ZW
-                                } = null !== iW && void 0 !== iW ? iW : {},
-                                xW = 100 * (.5 - cW / 2),
-                                lW = 100 * cW,
-                                bW = (0, PW.f)();
-                              return (0, mW.useEffect)((() => {
-                                const WW = bW.onFrame((() => {
-                                  const WW = bW.getState();
-                                  if (!WW.isActive || !OW.current) return;
-                                  const iW = WW.state;
-                                  OW.current.style.left = 100 * iW.markerPosition + "%"
+                                  icon: fR,
+                                  scale: VR,
+                                  rotation: KR
+                                } = null !== JR && void 0 !== JR ? JR : {},
+                                wR = 100 * (.5 - iR / 2),
+                                rR = 100 * iR,
+                                aR = (0, ZR.g)();
+                              return (0, yR.useEffect)((() => {
+                                const RR = aR.onFrame((() => {
+                                  const RR = aR.getState();
+                                  if (!RR.isActive || !GR.current) return;
+                                  const JR = RR.state;
+                                  GR.current.style.left = 100 * JR.markerPosition + "%"
                                 }));
                                 return () => {
-                                  WW()
+                                  RR()
                                 }
-                              }), [bW]), (0, LW.jsxs)("div", {
+                              }), [aR]), (0, qR.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, AW.K)(tW) && {
-                                    "--scale": tW
+                                  ...!(0, eR.I)(VR) && {
+                                    "--scale": VR
                                   },
-                                  ...!(0, AW.K)(ZW) && {
-                                    "--rotation": `${ZW}deg`
+                                  ...!(0, eR.I)(KR) && {
+                                    "--rotation": `${KR}deg`
                                   }
                                 },
-                                children: [wW && (0, LW.jsx)(NW.d, {
+                                children: [fR && (0, qR.jsx)(uR.c, {
                                   text: [{
-                                    icon: wW
+                                    icon: fR
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, LW.jsxs)("div", {
+                                }), (0, qR.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, LW.jsx)("div", {
+                                  children: [(0, qR.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${xW}%`,
-                                      width: `${lW}%`
+                                      left: `${wR}%`,
+                                      width: `${rR}%`
                                     }
-                                  }), (0, LW.jsx)("div", {
+                                  }), (0, qR.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: OW
+                                    ref: GR
                                   })]
-                                }), (0, LW.jsx)("div", {
+                                }), (0, qR.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, LW.jsx)(NW.d, {
-                                    text: EW
+                                  children: (0, qR.jsx)(uR.c, {
+                                    text: tR
                                   })
                                 })]
                               })
                             })),
-                            jW = (0, mW.memo)((function(WW) {
+                            LR = (0, yR.memo)((function(RR) {
                               let {
-                                initialParameters: iW
-                              } = WW;
-                              const OW = (0, mW.useRef)(null),
-                                [EW, cW] = (0, mW.useState)((() => new Array(iW.fN).fill("pending"))),
-                                [wW, tW] = (0, mW.useState)((() => {
-                                  const WW = iW.BN;
-                                  return (0, AW.K)(WW) || WW <= 0 ? [] : new Array(WW).fill("pending")
+                                initialParameters: JR
+                              } = RR;
+                              const GR = (0, yR.useRef)(null),
+                                [tR, iR] = (0, yR.useState)((() => new Array(JR.ku).fill("pending"))),
+                                [fR, VR] = (0, yR.useState)((() => {
+                                  const RR = JR.Tu;
+                                  return (0, eR.I)(RR) || RR <= 0 ? [] : new Array(RR).fill("pending")
                                 })),
-                                ZW = iW.label,
+                                KR = JR.label,
                                 {
-                                  icon: xW
-                                } = iW,
-                                lW = (0, mW.useRef)(0),
-                                bW = (0, mW.useRef)(0),
-                                jW = (0, mW.useRef)([]),
-                                UW = (0, PW.f)();
-                              return (0, mW.useEffect)((() => {
-                                const WW = UW.onFrame((() => {
-                                  const WW = UW.getState();
-                                  if (!WW.isActive || !OW.current) return;
-                                  const iW = WW.state,
-                                    mW = 30 + 60 * iW.outerCircleProgress;
-                                  if (OW.current.setAttribute("r", String(mW)), !0 === iW.lastClickResult && iW.successes > lW.current) {
-                                    OW.current.classList.remove("QTERhythmClickOuterCircle--miss"), OW.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const WW = setTimeout((() => {
-                                      var WW;
-                                      null === (WW = OW.current) || void 0 === WW || WW.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: wR
+                                } = JR,
+                                rR = (0, yR.useRef)(0),
+                                aR = (0, yR.useRef)(0),
+                                LR = (0, yR.useRef)([]),
+                                nR = (0, ZR.g)();
+                              return (0, yR.useEffect)((() => {
+                                const RR = nR.onFrame((() => {
+                                  const RR = nR.getState();
+                                  if (!RR.isActive || !GR.current) return;
+                                  const JR = RR.state,
+                                    yR = 30 + 60 * JR.outerCircleProgress;
+                                  if (GR.current.setAttribute("r", String(yR)), !0 === JR.lastClickResult && JR.successes > rR.current) {
+                                    GR.current.classList.remove("QTERhythmClickOuterCircle--miss"), GR.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const RR = setTimeout((() => {
+                                      var RR;
+                                      null === (RR = GR.current) || void 0 === RR || RR.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    jW.current.push(WW)
-                                  } else if (!1 === iW.lastClickResult && iW.misses > bW.current) {
-                                    OW.current.classList.remove("QTERhythmClickOuterCircle--hit"), OW.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const WW = setTimeout((() => {
-                                      var WW;
-                                      null === (WW = OW.current) || void 0 === WW || WW.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    LR.current.push(RR)
+                                  } else if (!1 === JR.lastClickResult && JR.misses > aR.current) {
+                                    GR.current.classList.remove("QTERhythmClickOuterCircle--hit"), GR.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const RR = setTimeout((() => {
+                                      var RR;
+                                      null === (RR = GR.current) || void 0 === RR || RR.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    jW.current.push(WW)
+                                    LR.current.push(RR)
                                   }
-                                  iW.successes === lW.current && iW.misses === bW.current || (lW.current = iW.successes, bW.current = iW.misses, cW((WW => {
-                                    const OW = [...WW];
-                                    for (let mW = 0; mW < iW.fN; mW++) OW[mW] = mW < iW.successes ? "success" : "pending";
-                                    return OW
-                                  })), tW((WW => {
-                                    if (0 === WW.length) return WW;
-                                    const OW = [...WW];
-                                    for (let mW = 0; mW < OW.length; mW++) OW[mW] = mW < iW.misses ? "miss" : "pending";
-                                    return OW
+                                  JR.successes === rR.current && JR.misses === aR.current || (rR.current = JR.successes, aR.current = JR.misses, iR((RR => {
+                                    const GR = [...RR];
+                                    for (let yR = 0; yR < JR.ku; yR++) GR[yR] = yR < JR.successes ? "success" : "pending";
+                                    return GR
+                                  })), VR((RR => {
+                                    if (0 === RR.length) return RR;
+                                    const GR = [...RR];
+                                    for (let yR = 0; yR < GR.length; yR++) GR[yR] = yR < JR.misses ? "miss" : "pending";
+                                    return GR
                                   })))
                                 }));
                                 return () => {
-                                  WW();
-                                  for (const WW of jW.current) clearTimeout(WW);
-                                  jW.current = []
+                                  RR();
+                                  for (const RR of LR.current) clearTimeout(RR);
+                                  LR.current = []
                                 }
-                              }), [UW]), (0, LW.jsxs)("div", {
+                              }), [nR]), (0, qR.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, LW.jsx)("div", {
+                                children: [(0, qR.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: EW.map(((WW, iW) => (0, LW.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === WW ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, iW)))
-                                }), (0, LW.jsxs)("div", {
+                                  children: tR.map(((RR, JR) => (0, qR.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === RR ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, JR)))
+                                }), (0, qR.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, LW.jsxs)("svg", {
+                                  children: [(0, qR.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, LW.jsx)("circle", {
+                                    children: [(0, qR.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, LW.jsx)("circle", {
+                                    }), (0, qR.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: OW
+                                      ref: GR
                                     })]
-                                  }), xW && (0, LW.jsx)("div", {
+                                  }), wR && (0, qR.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, LW.jsx)(NW.d, {
+                                    children: (0, qR.jsx)(uR.c, {
                                       text: [{
-                                        icon: xW
+                                        icon: wR
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), wW.length > 0 && (0, LW.jsx)("div", {
+                                }), fR.length > 0 && (0, qR.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: wW.map(((WW, iW) => (0, LW.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === WW ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, iW)))
-                                }), (0, LW.jsx)("div", {
+                                  children: fR.map(((RR, JR) => (0, qR.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === RR ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, JR)))
+                                }), (0, qR.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, LW.jsx)(NW.d, {
-                                    text: ZW
+                                  children: (0, qR.jsx)(uR.c, {
+                                    text: KR
                                   })
                                 })]
                               })
                             }));
 
-                          function UW(WW) {
+                          function nR(RR) {
                             let {
-                              qte: iW
-                            } = WW;
-                            switch (iW.type) {
+                              qte: JR
+                            } = RR;
+                            switch (JR.type) {
                               case "progressBar":
-                                return (0, LW.jsx)(cW, {
-                                  initialParameters: iW.parameters
+                                return (0, qR.jsx)(iR, {
+                                  initialParameters: JR.parameters
                                 });
                               case "timedClick":
-                                return (0, LW.jsx)(xW, {
-                                  initialParameters: iW.parameters
+                                return (0, qR.jsx)(wR, {
+                                  initialParameters: JR.parameters
                                 });
                               case "gravityBar":
-                                return (0, LW.jsx)(lW, {
-                                  initialParameters: iW.parameters
+                                return (0, qR.jsx)(rR, {
+                                  initialParameters: JR.parameters
                                 });
                               case "precisionBar":
-                                return (0, LW.jsx)(bW, {
-                                  initialParameters: iW.parameters
+                                return (0, qR.jsx)(aR, {
+                                  initialParameters: JR.parameters
                                 });
                               case "rhythmClick":
-                                return (0, LW.jsx)(jW, {
-                                  initialParameters: iW.parameters
+                                return (0, qR.jsx)(LR, {
+                                  initialParameters: JR.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const kW = (0, mW.memo)((function() {
-                            const [WW, iW] = (0, mW.useState)({
+                          const UR = (0, yR.memo)((function() {
+                            const [RR, JR] = (0, yR.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, EW.e)("qteStateUpdated", (WW => {
-                              iW(WW)
-                            })), WW.isActive && WW.type ? (0, LW.jsx)("div", {
+                            return (0, tR.f)("qteStateUpdated", (RR => {
+                              JR(RR)
+                            })), RR.isActive && RR.type ? (0, qR.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, LW.jsx)(UW, {
-                                qte: WW
+                              children: (0, qR.jsx)(nR, {
+                                qte: RR
                               })
                             }) : null
                           }))
-                        }, 5517: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            e: () => LW,
-                            f: () => cW
+                        }, 5656: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            e: () => qR,
+                            g: () => iR
                           });
-                          var mW = OW(62),
-                            EW = OW(1301),
-                            NW = OW(5525);
-                          const PW = {
-                              getState: () => NW.d.getCurrentState(),
-                              onFrame: EW.q
+                          var yR = GR(66),
+                            tR = GR(1397),
+                            uR = GR(5658);
+                          const ZR = {
+                              getState: () => uR.d.getCurrentState(),
+                              onFrame: tR.B
                             },
-                            LW = (0, mW.createContext)(PW);
+                            qR = (0, yR.createContext)(ZR);
 
-                          function cW() {
-                            return (0, mW.useContext)(LW)
+                          function iR() {
+                            return (0, yR.useContext)(qR)
                           }
-                        }, 5599: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            e: () => eW,
-                            g: () => dW
+                        }, 5728: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            e: () => DR,
+                            f: () => NR
                           });
-                          var mW = OW(5605),
-                            EW = OW(327);
-                          const NW = 120,
-                            PW = 260,
-                            LW = 1.15,
-                            cW = 1.2,
-                            wW = 2,
-                            tW = 1.08,
-                            ZW = .8,
-                            xW = .95,
-                            lW = 8,
-                            AW = "[\"')\\]\u300d\u300f\uff09]*",
-                            bW = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${AW}$`),
-                            jW = new RegExp(`[?\uff1f]${AW}$`),
-                            UW = new RegExp(`[!\uff01]${AW}$`),
-                            kW = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            sW = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            MW = new RegExp(`[${sW}]`),
-                            KW = new RegExp(`[${sW}]|[^${sW}]+`, "g"),
-                            SW = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var yR = GR(5733),
+                            tR = GR(359);
+                          const uR = 120,
+                            ZR = 260,
+                            qR = 1.15,
+                            iR = 1.2,
+                            fR = 2,
+                            VR = 1.08,
+                            KR = .8,
+                            wR = .95,
+                            rR = 8,
+                            eR = "[\"')\\]\u300d\u300f\uff09]*",
+                            aR = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${eR}$`),
+                            LR = new RegExp(`[?\uff1f]${eR}$`),
+                            nR = new RegExp(`[!\uff01]${eR}$`),
+                            UR = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            WR = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            AR = new RegExp(`[${WR}]`),
+                            CR = new RegExp(`[${WR}]|[^${WR}]+`, "g"),
+                            XR = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function YW(WW) {
-                            let iW = 2166136261;
-                            for (let OW = 0; OW < WW.length; OW++) iW ^= WW.charCodeAt(OW), iW = Math.imul(iW, 16777619);
-                            return (iW >>> 0) / 4294967295 * 2 - 1
+                          function MR(RR) {
+                            let JR = 2166136261;
+                            for (let GR = 0; GR < RR.length; GR++) JR ^= RR.charCodeAt(GR), JR = Math.imul(JR, 16777619);
+                            return (JR >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function yW(WW) {
-                            var iW;
-                            if (MW.test(WW)) return 1;
-                            const OW = WW.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              mW = OW.replace(/[^0-9]/g, "");
-                            if (mW.length > 0 && !/\p{L}/u.test(OW)) return Math.min(mW.length, 4);
-                            const EW = null !== (iW = OW.match(SW)) && void 0 !== iW ? iW : [];
-                            if (0 === EW.length) {
-                              var NW, PW;
-                              const WW = null !== (NW = null === (PW = OW.match(/\p{L}/gu)) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0;
-                              return 0 === WW ? 0 : Math.min(Math.max(1, Math.round(WW / 2.5)), lW)
+                          function BR(RR) {
+                            var JR;
+                            if (AR.test(RR)) return 1;
+                            const GR = RR.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              yR = GR.replace(/[^0-9]/g, "");
+                            if (yR.length > 0 && !/\p{L}/u.test(GR)) return Math.min(yR.length, 4);
+                            const tR = null !== (JR = GR.match(XR)) && void 0 !== JR ? JR : [];
+                            if (0 === tR.length) {
+                              var uR, ZR;
+                              const RR = null !== (uR = null === (ZR = GR.match(/\p{L}/gu)) || void 0 === ZR ? void 0 : ZR.length) && void 0 !== uR ? uR : 0;
+                              return 0 === RR ? 0 : Math.min(Math.max(1, Math.round(RR / 2.5)), rR)
                             }
-                            const LW = OW.replace(/[^\p{L}]/gu, ""),
-                              cW = EW.length > 1 && "e" === EW.at(-1) && LW.endsWith("e") && !LW.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(WW.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(EW.length - (cW ? 1 : 0), lW)
+                            const qR = GR.replace(/[^\p{L}]/gu, ""),
+                              iR = tR.length > 1 && "e" === tR.at(-1) && qR.endsWith("e") && !qR.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(RR.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(tR.length - (iR ? 1 : 0), rR)
                           }
 
-                          function TW(WW) {
-                            return WW.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function lR(RR) {
+                            return RR.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function JW(WW) {
-                            const iW = WW.replace(/[^\p{L}]/gu, "");
-                            return iW.length >= 2 && iW === iW.toUpperCase() && iW !== iW.toLowerCase()
+                          function pR(RR) {
+                            const JR = RR.replace(/[^\p{L}]/gu, "");
+                            return JR.length >= 2 && JR === JR.toUpperCase() && JR !== JR.toLowerCase()
                           }
 
-                          function hW(WW, iW) {
-                            var OW;
-                            const lW = iW && (0, mW.h)(iW),
-                              AW = null !== (OW = null === lW || void 0 === lW ? void 0 : lW.syllableMs) && void 0 !== OW ? OW : mW.d,
-                              sW = function(WW) {
-                                const iW = [];
-                                for (const mW of (0, EW.kc)(WW))
-                                  if ("string" === typeof mW)
-                                    for (const WW of mW.split(/(\s+)/)) {
-                                      if ("" === WW) continue;
-                                      if (/^\s+$/.test(WW)) {
-                                        iW.push({
+                          function gR(RR, JR) {
+                            var GR;
+                            const rR = JR && (0, yR.i)(JR),
+                              eR = null !== (GR = null === rR || void 0 === rR ? void 0 : rR.syllableMs) && void 0 !== GR ? GR : yR.b,
+                              WR = function(RR) {
+                                const JR = [];
+                                for (const yR of (0, tR.dc)(RR))
+                                  if ("string" === typeof yR)
+                                    for (const RR of yR.split(/(\s+)/)) {
+                                      if ("" === RR) continue;
+                                      if (/^\s+$/.test(RR)) {
+                                        JR.push({
                                           kind: "space",
-                                          text: WW
+                                          text: RR
                                         });
                                         continue
                                       }
-                                      if (!MW.test(WW)) {
-                                        iW.push({
+                                      if (!AR.test(RR)) {
+                                        JR.push({
                                           kind: "word",
-                                          text: WW,
+                                          text: RR,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let mW = !0;
-                                      for (const EW of null !== (OW = WW.match(KW)) && void 0 !== OW ? OW : []) {
-                                        var OW;
-                                        const WW = iW.at(-1);
-                                        mW || "word" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || MW.test(EW) || /[\p{L}\p{N}]/u.test(EW) ? (mW || iW.push({
+                                      let yR = !0;
+                                      for (const tR of null !== (GR = RR.match(CR)) && void 0 !== GR ? GR : []) {
+                                        var GR;
+                                        const RR = JR.at(-1);
+                                        yR || "word" !== (null === RR || void 0 === RR ? void 0 : RR.kind) || AR.test(tR) || /[\p{L}\p{N}]/u.test(tR) ? (yR || JR.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), iW.push({
+                                        }), JR.push({
                                           kind: "word",
-                                          text: EW,
+                                          text: tR,
                                           delayMs: 0
-                                        }), mW = !1) : WW.text += EW
+                                        }), yR = !1) : RR.text += tR
                                       }
-                                    } else iW.push({
+                                    } else JR.push({
                                       kind: "icon",
-                                      text: mW.icon,
+                                      text: yR.icon,
                                       delayMs: 0
                                     });
-                                return iW
-                              }(WW),
-                              SW = [];
-                            let hW = [];
-                            for (const mW of sW) "space" !== mW.kind && (hW.push(mW), bW.test(mW.text) && (SW.push(hW), hW = []));
-                            SW.push(hW);
-                            const HW = [];
-                            let nW = 0;
-                            for (const mW of SW) {
-                              var uW, oW;
-                              const WW = null !== (uW = null === (oW = mW.at(-1)) || void 0 === oW ? void 0 : oW.text) && void 0 !== uW ? uW : "",
-                                iW = jW.test(WW),
-                                OW = UW.test(WW),
-                                EW = mW.map((WW => "word" === WW.kind ? yW(WW.text) : 1)),
-                                sW = EW.findLastIndex((WW => WW > 0));
-                              for (const [jW, UW] of mW.entries()) {
-                                const WW = "word" === UW.kind,
-                                  mW = EW[jW];
-                                UW.delayMs = nW;
-                                for (let EW = 0; lW && EW < mW; EW++) {
+                                return JR
+                              }(RR),
+                              XR = [];
+                            let gR = [];
+                            for (const yR of WR) "space" !== yR.kind && (gR.push(yR), aR.test(yR.text) && (XR.push(gR), gR = []));
+                            XR.push(gR);
+                            const bR = [];
+                            let vR = 0;
+                            for (const yR of XR) {
+                              var OR, xR;
+                              const RR = null !== (OR = null === (xR = yR.at(-1)) || void 0 === xR ? void 0 : xR.text) && void 0 !== OR ? OR : "",
+                                JR = LR.test(RR),
+                                GR = nR.test(RR),
+                                tR = yR.map((RR => "word" === RR.kind ? BR(RR.text) : 1)),
+                                WR = tR.findLastIndex((RR => RR > 0));
+                              for (const [LR, nR] of yR.entries()) {
+                                const RR = "word" === nR.kind,
+                                  yR = tR[LR];
+                                nR.delayMs = vR;
+                                for (let tR = 0; rR && tR < yR; tR++) {
                                   const {
-                                    intonation: NW
-                                  } = lW;
-                                  let PW = sW > 0 ? -NW.declineSemitones * (jW / sW) : 0;
-                                  PW += YW(`${TW(UW.text)}|${EW}`) * NW.variationSemitones;
-                                  const bW = Math.min(1, NW.variationSemitones);
-                                  let kW = lW.glideSemitones,
-                                    MW = 1;
-                                  OW && (PW += NW.exclaimLiftSemitones, MW *= LW), iW && jW === sW && (PW += NW.questionRiseSemitones * (mW > 1 ? .5 + .5 * EW / (mW - 1) : 1), EW === mW - 1 && (kW = Math.abs(kW) + NW.questionRiseSemitones / 2)), WW && JW(UW.text) && (PW += wW * bW, MW *= cW), mW > 1 && 0 === EW && (PW += ZW * bW, MW *= tW), HW.push({
-                                    atMs: nW + EW * AW,
-                                    semitones: PW,
-                                    glideSemitones: kW,
-                                    durationMs: EW < mW - 1 ? Math.min(lW.durationMs, AW * xW) : lW.durationMs,
-                                    level: MW
+                                    intonation: uR
+                                  } = rR;
+                                  let ZR = WR > 0 ? -uR.declineSemitones * (LR / WR) : 0;
+                                  ZR += MR(`${lR(nR.text)}|${tR}`) * uR.variationSemitones;
+                                  const aR = Math.min(1, uR.variationSemitones);
+                                  let UR = rR.glideSemitones,
+                                    AR = 1;
+                                  GR && (ZR += uR.exclaimLiftSemitones, AR *= qR), JR && LR === WR && (ZR += uR.questionRiseSemitones * (yR > 1 ? .5 + .5 * tR / (yR - 1) : 1), tR === yR - 1 && (UR = Math.abs(UR) + uR.questionRiseSemitones / 2)), RR && pR(nR.text) && (ZR += fR * aR, AR *= iR), yR > 1 && 0 === tR && (ZR += KR * aR, AR *= VR), bR.push({
+                                    atMs: vR + tR * eR,
+                                    semitones: ZR,
+                                    glideSemitones: UR,
+                                    durationMs: tR < yR - 1 ? Math.min(rR.durationMs, eR * wR) : rR.durationMs,
+                                    level: AR
                                   })
                                 }
-                                nW += mW * AW + (bW.test(UW.text) ? PW : kW.test(UW.text) ? NW : 0)
+                                vR += yR * eR + (aR.test(nR.text) ? ZR : UR.test(nR.text) ? uR : 0)
                               }
                             }
                             return {
-                              pieces: sW.map((WW => "space" === WW.kind ? WW : "icon" === WW.kind ? {
+                              pieces: WR.map((RR => "space" === RR.kind ? RR : "icon" === RR.kind ? {
                                 kind: "icon",
-                                icon: WW.text,
-                                delayMs: WW.delayMs
+                                icon: RR.text,
+                                delayMs: RR.delayMs
                               } : {
                                 kind: "word",
-                                text: WW.text,
-                                delayMs: WW.delayMs
+                                text: RR.text,
+                                delayMs: RR.delayMs
                               })),
-                              blips: HW
+                              blips: bR
                             }
                           }
-                          var HW = OW(1172),
-                            nW = OW(1244),
-                            uW = OW(2042);
+                          var bR = GR(1270),
+                            vR = GR(1343),
+                            OR = GR(2137);
 
-                          function oW(WW) {
-                            if ("string" === typeof WW) return WW;
-                            const iW = nW.e.get().getCurrentLanguageCode();
-                            return (0, HW.p)(iW, WW.translationKey, (0, HW.o)(WW.params, uW.e.shown))
+                          function xR(RR) {
+                            if ("string" === typeof RR) return RR;
+                            const JR = vR.g.get().getCurrentLanguageCode();
+                            return (0, bR.r)(JR, RR.translationKey, (0, bR.o)(RR.params, OR.e.shown))
                           }
 
-                          function dW(WW) {
-                            const iW = void 0 === WW.voice ? null : (0, mW.j)(WW.voice),
-                              OW = iW && (0, mW.h)(iW);
+                          function NR(RR) {
+                            const JR = void 0 === RR.voice ? null : (0, yR.m)(RR.voice),
+                              GR = JR && (0, yR.i)(JR);
                             return {
-                              plan: hW(oW(WW.line), OW),
-                              synth: OW
+                              plan: gR(xR(RR.line), GR),
+                              synth: GR
                             }
                           }
 
-                          function eW(WW) {
-                            const iW = [];
-                            let OW = [];
-                            for (const [EW, NW] of WW.entries()) {
-                              var mW;
-                              "space" === NW.kind && (" " !== NW.text || "icon" !== (null === (mW = WW[EW + 1]) || void 0 === mW ? void 0 : mW.kind)) ? (OW.length > 0 && iW.push(OW), iW.push([NW]), OW = []) : OW.push(NW)
+                          function DR(RR) {
+                            const JR = [];
+                            let GR = [];
+                            for (const [tR, uR] of RR.entries()) {
+                              var yR;
+                              "space" === uR.kind && (" " !== uR.text || "icon" !== (null === (yR = RR[tR + 1]) || void 0 === yR ? void 0 : yR.kind)) ? (GR.length > 0 && JR.push(GR), JR.push([uR]), GR = []) : GR.push(uR)
                             }
-                            return OW.length > 0 && iW.push(OW), iW
+                            return GR.length > 0 && JR.push(GR), JR
                           }
-                        }, 5610: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            e: () => tW,
-                            h: () => ZW
+                        }, 5736: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            c: () => VR,
+                            d: () => KR
                           });
-                          var mW = OW(5615),
-                            EW = OW(25);
-                          const NW = .25,
-                            PW = .85,
-                            LW = .02,
-                            cW = .01;
+                          var yR = GR(5742),
+                            tR = GR(25);
+                          const uR = .25,
+                            ZR = .85,
+                            qR = .02,
+                            iR = .01;
 
-                          function wW(WW, iW, OW, mW, EW, NW, LW) {
+                          function fR(RR, JR, GR, yR, tR, uR, qR) {
                             const {
-                              waveform: cW,
-                              pitchHz: wW,
-                              attackMs: tW,
-                              releaseMs: ZW,
-                              lowpassHz: xW
-                            } = OW, lW = EW + mW.durationMs / 1e3, AW = wW * 2 ** (mW.semitones / 12), bW = WW.createOscillator();
-                            bW.type = cW, bW.frequency.setValueAtTime(AW, EW), bW.frequency.exponentialRampToValueAtTime(AW * 2 ** (mW.glideSemitones / 12), lW);
-                            const jW = EW + Math.min(tW, mW.durationMs) / 1e3,
-                              UW = WW.createGain();
-                            UW.gain.setValueAtTime(0, EW), UW.gain.linearRampToValueAtTime(NW, jW), UW.gain.linearRampToValueAtTime(NW * PW, Math.max(jW, lW - ZW / 1e3)), UW.gain.linearRampToValueAtTime(0, lW);
-                            const kW = [bW];
-                            if (null !== xW) {
-                              const iW = WW.createBiquadFilter();
-                              iW.type = "lowpass", iW.frequency.value = xW, kW.push(iW)
+                              waveform: iR,
+                              pitchHz: fR,
+                              attackMs: VR,
+                              releaseMs: KR,
+                              lowpassHz: wR
+                            } = GR, rR = tR + yR.durationMs / 1e3, eR = fR * 2 ** (yR.semitones / 12), aR = RR.createOscillator();
+                            aR.type = iR, aR.frequency.setValueAtTime(eR, tR), aR.frequency.exponentialRampToValueAtTime(eR * 2 ** (yR.glideSemitones / 12), rR);
+                            const LR = tR + Math.min(VR, yR.durationMs) / 1e3,
+                              nR = RR.createGain();
+                            nR.gain.setValueAtTime(0, tR), nR.gain.linearRampToValueAtTime(uR, LR), nR.gain.linearRampToValueAtTime(uR * ZR, Math.max(LR, rR - KR / 1e3)), nR.gain.linearRampToValueAtTime(0, rR);
+                            const UR = [aR];
+                            if (null !== wR) {
+                              const JR = RR.createBiquadFilter();
+                              JR.type = "lowpass", JR.frequency.value = wR, UR.push(JR)
                             }
-                            kW.push(UW, iW);
-                            for (let PW = 1; PW < kW.length; PW++) kW[PW - 1].connect(kW[PW]);
-                            return bW.onended = () => {
-                              for (const WW of kW.slice(0, -1)) WW.disconnect();
-                              LW()
-                            }, bW.start(EW), bW.stop(lW), bW
+                            UR.push(nR, JR);
+                            for (let ZR = 1; ZR < UR.length; ZR++) UR[ZR - 1].connect(UR[ZR]);
+                            return aR.onended = () => {
+                              for (const RR of UR.slice(0, -1)) RR.disconnect();
+                              qR()
+                            }, aR.start(tR), aR.stop(rR), aR
                           }
 
-                          function tW(WW, iW, OW, mW, EW, PW) {
-                            if (0 === mW.length) return PW(), () => {};
-                            const tW = NW * OW.volume * EW,
-                              ZW = WW.createGain();
-                            ZW.connect(iW);
-                            const xW = WW.currentTime + LW,
-                              lW = new Set;
-                            for (const NW of mW) {
-                              const iW = wW(WW, ZW, OW, NW, xW + NW.atMs / 1e3, tW * NW.level, (() => {
-                                lW.delete(iW), 0 === lW.size && (ZW.disconnect(), PW())
+                          function VR(RR, JR, GR, yR, tR, ZR) {
+                            if (0 === yR.length) return ZR(), () => {};
+                            const VR = uR * GR.volume * tR,
+                              KR = RR.createGain();
+                            KR.connect(JR);
+                            const wR = RR.currentTime + qR,
+                              rR = new Set;
+                            for (const uR of yR) {
+                              const JR = fR(RR, KR, GR, uR, wR + uR.atMs / 1e3, VR * uR.level, (() => {
+                                rR.delete(JR), 0 === rR.size && (KR.disconnect(), ZR())
                               }));
-                              lW.add(iW)
+                              rR.add(JR)
                             }
                             return () => {
-                              const iW = WW.currentTime;
-                              ZW.gain.setTargetAtTime(0, iW, cW);
-                              for (const WW of lW) try {
-                                WW.stop(iW + 5 * cW)
+                              const JR = RR.currentTime;
+                              KR.gain.setTargetAtTime(0, JR, iR);
+                              for (const RR of rR) try {
+                                RR.stop(JR + 5 * iR)
                               } catch {}
                             }
                           }
 
-                          function ZW(WW, iW) {
-                            var OW;
-                            const NW = mW.Howler.ctx,
-                              PW = mW.Howler.masterGain;
-                            if (!NW || !PW || !EW.d.get("soundOnFromAd")) return () => {};
-                            const LW = mW.Howler;
-                            return null === (OW = LW._autoResume) || void 0 === OW || OW.call(LW), tW(NW, PW, WW, iW, EW.d.get("soundVolume"), (() => {
-                              var WW;
-                              null === (WW = LW._autoSuspend) || void 0 === WW || WW.call(LW)
+                          function KR(RR, JR) {
+                            var GR;
+                            const uR = yR.Howler.ctx,
+                              ZR = yR.Howler.masterGain;
+                            if (!uR || !ZR || !tR.d.get("soundOnFromAd")) return () => {};
+                            const qR = yR.Howler;
+                            return null === (GR = qR._autoResume) || void 0 === GR || GR.call(qR), VR(uR, ZR, RR, JR, tR.d.get("soundVolume"), (() => {
+                              var RR;
+                              null === (RR = qR._autoSuspend) || void 0 === RR || RR.call(qR)
                             }))
                           }
-                        }, 5587: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            e: () => LW,
-                            f: () => EW,
-                            h: () => cW,
-                            i: () => PW,
-                            k: () => NW
+                        }, 5710: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            b: () => qR,
+                            d: () => tR,
+                            g: () => iR,
+                            j: () => ZR,
+                            m: () => uR
                           });
-                          var mW = OW(5582);
-                          const EW = {
+                          var yR = GR(5707);
+                          const tR = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            NW = {
+                            uR = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            PW = `${mW.o} lists every page of the Bloxd Code API docs.`;
+                            ZR = `${yR.l} lists every page of the Bloxd Code API docs.`;
 
-                          function LW(WW, iW) {
-                            return `${WW.url}${encodeURIComponent(iW.toWellFormed())}`
+                          function qR(RR, JR) {
+                            return `${RR.url}${encodeURIComponent(JR.toWellFormed())}`
                           }
 
-                          function cW(WW) {
-                            const iW = LW(EW, WW);
-                            return iW.length <= 3e4 ? {
-                              url: iW,
+                          function iR(RR) {
+                            const JR = qR(tR, RR);
+                            return JR.length <= 3e4 ? {
+                              url: JR,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(EW.url).origin,
+                              url: new URL(tR.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5615: (WW, iW, OW) => {
-                          OW.r(iW), OW.d(iW, {
-                            Howl: () => EW.Howl,
-                            Howler: () => EW.Howler,
-                            musicOutput: () => jW,
-                            readyAudioContext: () => UW
+                        }, 5742: (RR, JR, GR) => {
+                          GR.r(JR), GR.d(JR, {
+                            Howl: () => tR.Howl,
+                            Howler: () => tR.Howler,
+                            musicOutput: () => LR,
+                            readyAudioContext: () => nR
                           });
-                          var mW, EW = OW(5618),
-                            NW = OW(4653),
-                            PW = OW(5356);
-                          const LW = EW.Howler;
+                          var yR, tR = GR(5744),
+                            uR = GR(4757),
+                            ZR = GR(5456);
+                          const qR = tR.Howler;
 
-                          function cW() {
-                            var WW, iW;
-                            if (LW.ctx || !LW.usingWebAudio || "undefined" === typeof AudioContext || !(0, PW.k)()) return;
-                            const OW = navigator.audioSession;
-                            let mW;
-                            "auto" === (null === OW || void 0 === OW ? void 0 : OW.type) && (OW.type = "ambient");
+                          function iR() {
+                            var RR, JR;
+                            if (qR.ctx || !qR.usingWebAudio || "undefined" === typeof AudioContext || !(0, ZR.h)()) return;
+                            const GR = navigator.audioSession;
+                            let yR;
+                            "auto" === (null === GR || void 0 === GR ? void 0 : GR.type) && (GR.type = "ambient");
                             try {
-                              mW = new AudioContext({
+                              yR = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const EW = mW.createGain();
-                            EW.gain.setValueAtTime(LW._muted ? 0 : null !== (WW = LW._volume) && void 0 !== WW ? WW : 1, mW.currentTime), EW.connect(mW.destination), LW.ctx = mW, LW.masterGain = EW, null === (iW = LW._setup) || void 0 === iW || iW.call(LW)
+                            const tR = yR.createGain();
+                            tR.gain.setValueAtTime(qR._muted ? 0 : null !== (RR = qR._volume) && void 0 !== RR ? RR : 1, yR.currentTime), tR.connect(yR.destination), qR.ctx = yR, qR.masterGain = tR, null === (JR = qR._setup) || void 0 === JR || JR.call(qR)
                           }
-                          LW._mobileUnloaded = !0;
-                          const wW = LW.volume.bind(EW.Howler);
-                          LW.volume = function() {
-                            return cW(), wW(...arguments)
+                          qR._mobileUnloaded = !0;
+                          const fR = qR.volume.bind(tR.Howler);
+                          qR.volume = function() {
+                            return iR(), fR(...arguments)
                           };
-                          const tW = LW.mute.bind(EW.Howler);
-                          LW.mute = WW => (cW(), tW(WW));
-                          const ZW = EW.Howl.prototype,
-                            xW = ZW.init;
+                          const VR = qR.mute.bind(tR.Howler);
+                          qR.mute = RR => (iR(), VR(RR));
+                          const KR = tR.Howl.prototype,
+                            wR = KR.init;
 
-                          function lW() {
-                            for (; LW._html5AudioPool.length < LW.html5PoolSize;) {
-                              const WW = new Audio;
-                              WW._unlocked = !0, LW._releaseHtml5Audio(WW)
+                          function rR() {
+                            for (; qR._html5AudioPool.length < qR.html5PoolSize;) {
+                              const RR = new Audio;
+                              RR._unlocked = !0, qR._releaseHtml5Audio(RR)
                             }
-                            for (const iW of LW._howls)
-                              if (!iW._webAudio)
-                                for (const OW of iW._getSoundIds()) {
-                                  var WW;
-                                  const mW = null === (WW = iW._soundById(OW)) || void 0 === WW ? void 0 : WW._node;
-                                  mW && !mW._unlocked && (mW._unlocked = !0, mW.load())
+                            for (const JR of qR._howls)
+                              if (!JR._webAudio)
+                                for (const GR of JR._getSoundIds()) {
+                                  var RR;
+                                  const yR = null === (RR = JR._soundById(GR)) || void 0 === RR ? void 0 : RR._node;
+                                  yR && !yR._unlocked && (yR._unlocked = !0, yR.load())
                                 }
                           }
-                          ZW.init = function(WW) {
-                            return cW(), xW.call(this, WW)
-                          }, (0, PW.k)() && (LW._unlockAudio = () => {
-                            const WW = LW.ctx;
-                            if (LW._audioUnlocked || !WW) return;
-                            LW.autoUnlock = !1;
-                            const iW = WW.createBuffer(1, 1, 22050);
-                            LW._scratchBuffer = iW;
-                            const OW = new AbortController;
-                            let mW = "afterPaint";
-                            const EW = () => {
-                                var mW;
-                                if (LW._audioUnlocked) return;
-                                null === (mW = LW._autoResume) || void 0 === mW || mW.call(LW);
-                                const EW = WW.createBufferSource();
-                                EW.buffer = iW, EW.connect(WW.destination), EW.start(0), WW.resume().catch((() => {})), EW.onended = () => {
-                                  EW.disconnect(0), LW._audioUnlocked = !0, OW.abort();
-                                  for (const WW of LW._howls) WW._emit("unlock")
+                          KR.init = function(RR) {
+                            return iR(), wR.call(this, RR)
+                          }, (0, ZR.h)() && (qR._unlockAudio = () => {
+                            const RR = qR.ctx;
+                            if (qR._audioUnlocked || !RR) return;
+                            qR.autoUnlock = !1;
+                            const JR = RR.createBuffer(1, 1, 22050);
+                            qR._scratchBuffer = JR;
+                            const GR = new AbortController;
+                            let yR = "afterPaint";
+                            const tR = () => {
+                                var yR;
+                                if (qR._audioUnlocked) return;
+                                null === (yR = qR._autoResume) || void 0 === yR || yR.call(qR);
+                                const tR = RR.createBufferSource();
+                                tR.buffer = JR, tR.connect(RR.destination), tR.start(0), RR.resume().catch((() => {})), tR.onended = () => {
+                                  tR.disconnect(0), qR._audioUnlocked = !0, GR.abort();
+                                  for (const RR of qR._howls) RR._emit("unlock")
                                 }
                               },
-                              cW = () => {
-                                lW(), EW()
+                              iR = () => {
+                                rR(), tR()
                               },
-                              wW = iW => {
-                                if (lW(), "inTap" === mW) {
-                                  if ("running" === WW.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), EW()
-                                } else "afterPaint" === mW && (mW = "queued", (0, NW.b)(iW.timeStamp, (() => {
-                                  mW = "inTap", EW()
+                              fR = JR => {
+                                if (rR(), "inTap" === yR) {
+                                  if ("running" === RR.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), tR()
+                                } else "afterPaint" === yR && (yR = "queued", (0, uR.d)(JR.timeStamp, (() => {
+                                  yR = "inTap", tR()
                                 })))
                               };
-                            for (const NW of ["touchstart", "touchend"]) document.addEventListener(NW, cW, {
+                            for (const uR of ["touchstart", "touchend"]) document.addEventListener(uR, iR, {
                               capture: !0,
-                              signal: OW.signal
+                              signal: GR.signal
                             });
-                            for (const NW of PW.d) document.addEventListener(NW, wW, {
+                            for (const uR of ZR.b) document.addEventListener(uR, fR, {
                               capture: !0,
-                              signal: OW.signal
+                              signal: GR.signal
                             })
                           });
-                          let AW = 0;
-                          const bW = null === (mW = LW._autoSuspend) || void 0 === mW ? void 0 : mW.bind(EW.Howler);
+                          let eR = 0;
+                          const aR = null === (yR = qR._autoSuspend) || void 0 === yR ? void 0 : yR.bind(tR.Howler);
 
-                          function jW() {
-                            UW();
+                          function LR() {
+                            nR();
                             const {
-                              ctx: WW,
-                              masterGain: iW
-                            } = LW;
-                            return WW && iW ? {
-                              ctx: WW,
-                              destination: iW,
-                              holdAwake: WW => {
-                                var iW, OW;
-                                (AW += WW ? 1 : -1, WW) ? null === (iW = LW._autoResume) || void 0 === iW || iW.call(LW): null === (OW = LW._autoSuspend) || void 0 === OW || OW.call(LW)
+                              ctx: RR,
+                              masterGain: JR
+                            } = qR;
+                            return RR && JR ? {
+                              ctx: RR,
+                              destination: JR,
+                              holdAwake: RR => {
+                                var JR, GR;
+                                (eR += RR ? 1 : -1, RR) ? null === (JR = qR._autoResume) || void 0 === JR || JR.call(qR): null === (GR = qR._autoSuspend) || void 0 === GR || GR.call(qR)
                               },
                               wake: () => {
-                                var iW;
-                                "running" !== WW.state && (null === (iW = LW._autoResume) || void 0 === iW || iW.call(LW), WW.resume().catch((() => {})))
+                                var JR;
+                                "running" !== RR.state && (null === (JR = qR._autoResume) || void 0 === JR || JR.call(qR), RR.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function UW() {
-                            var WW;
-                            (LW.volume(), LW.ctx && LW.autoUnlock) && (null === (WW = LW._unlockAudio) || void 0 === WW || WW.call(LW))
+                          function nR() {
+                            var RR;
+                            (qR.volume(), qR.ctx && qR.autoUnlock) && (null === (RR = qR._unlockAudio) || void 0 === RR || RR.call(qR))
                           }
-                          bW && (LW._autoSuspend = () => AW > 0 ? EW.Howler : bW())
-                        }, 5622: (WW, iW, OW) => {
-                          function mW(WW) {
+                          aR && (qR._autoSuspend = () => eR > 0 ? tR.Howler : aR())
+                        }, 5751: (RR, JR, GR) => {
+                          function yR(RR) {
                             return {
-                              notAfter: WW
+                              notAfter: RR
                             }
                           }
-                          OW.d(iW, {
-                            c: () => cW,
-                            e: () => wW,
-                            f: () => LW,
-                            j: () => mW,
-                            k: () => EW,
-                            n: () => NW,
-                            o: () => PW,
-                            q: () => tW,
-                            r: () => ZW
+                          GR.d(JR, {
+                            c: () => iR,
+                            d: () => fR,
+                            g: () => qR,
+                            k: () => yR,
+                            n: () => tR,
+                            p: () => uR,
+                            r: () => ZR,
+                            s: () => VR,
+                            v: () => KR
                           });
-                          const EW = mW("\\w$."),
-                            NW = mW("\\w.,");
+                          const tR = yR("\\w$."),
+                            uR = yR("\\w.,");
 
-                          function PW(WW) {
-                            return iW => cW(iW, WW)
+                          function ZR(RR) {
+                            return JR => iR(JR, RR)
                           }
 
-                          function LW(WW) {
-                            return iW => !WW.test(iW.input.slice(0, iW.index))
+                          function qR(RR) {
+                            return JR => !RR.test(JR.input.slice(0, JR.index))
                           }
 
-                          function cW(WW, iW) {
-                            return WW.index > 0 && new RegExp(`[${iW}]`).test(WW.input[WW.index - 1])
+                          function iR(RR, JR) {
+                            return RR.index > 0 && new RegExp(`[${JR}]`).test(RR.input[RR.index - 1])
                           }
 
-                          function wW(WW, iW, OW) {
-                            return function(WW) {
-                              return void 0 !== WW && "function" !== typeof WW
-                            }(OW) ? function(WW, iW, OW) {
-                              const mW = iW.flags.replace(/[gy]/g, ""),
-                                EW = new RegExp(`[^${OW}](?:${iW.source})`, `${mW}g`),
-                                NW = [],
-                                PW = OW => {
-                                  const mW = OW.index + OW[0].length;
-                                  return ("" === OW[0] ? xW(WW, iW, mW) : mW) - 1
+                          function fR(RR, JR, GR) {
+                            return function(RR) {
+                              return void 0 !== RR && "function" !== typeof RR
+                            }(GR) ? function(RR, JR, GR) {
+                              const yR = JR.flags.replace(/[gy]/g, ""),
+                                tR = new RegExp(`[^${GR}](?:${JR.source})`, `${yR}g`),
+                                uR = [],
+                                ZR = GR => {
+                                  const yR = GR.index + GR[0].length;
+                                  return ("" === GR[0] ? wR(RR, JR, yR) : yR) - 1
                                 },
-                                LW = new RegExp(`(?:${iW.source})`, `${mW}y`).exec(WW);
-                              if (LW) {
-                                if (NW.push(LW), !iW.global) return NW;
-                                EW.lastIndex = PW(LW)
+                                qR = new RegExp(`(?:${JR.source})`, `${yR}y`).exec(RR);
+                              if (qR) {
+                                if (uR.push(qR), !JR.global) return uR;
+                                tR.lastIndex = ZR(qR)
                               }
-                              for (let cW = EW.exec(WW); cW; cW = EW.exec(WW)) {
-                                const OW = xW(WW, iW, cW.index) - cW.index;
-                                if (cW[0] = cW[0].slice(OW), cW.index += OW, NW.push(cW), !iW.global) break;
-                                EW.lastIndex = PW(cW)
+                              for (let iR = tR.exec(RR); iR; iR = tR.exec(RR)) {
+                                const GR = wR(RR, JR, iR.index) - iR.index;
+                                if (iR[0] = iR[0].slice(GR), iR.index += GR, uR.push(iR), !JR.global) break;
+                                tR.lastIndex = ZR(iR)
                               }
-                              return NW
-                            }(WW, iW, OW.notAfter) : function(WW, iW, OW) {
-                              const mW = new RegExp(iW.source, `${iW.flags.replace(/[gy]/g,"")}g`),
-                                EW = [];
-                              for (let NW = mW.exec(WW); NW; NW = mW.exec(WW))
-                                if (!OW || OW(NW)) {
-                                  if (EW.push(NW), !iW.global) break;
-                                  "" === NW[0] && (mW.lastIndex = xW(WW, iW, mW.lastIndex))
-                                } else mW.lastIndex = xW(WW, iW, NW.index);
-                              return EW
-                            }(WW, iW, OW)
+                              return uR
+                            }(RR, JR, GR.notAfter) : function(RR, JR, GR) {
+                              const yR = new RegExp(JR.source, `${JR.flags.replace(/[gy]/g,"")}g`),
+                                tR = [];
+                              for (let uR = yR.exec(RR); uR; uR = yR.exec(RR))
+                                if (!GR || GR(uR)) {
+                                  if (tR.push(uR), !JR.global) break;
+                                  "" === uR[0] && (yR.lastIndex = wR(RR, JR, yR.lastIndex))
+                                } else yR.lastIndex = wR(RR, JR, uR.index);
+                              return tR
+                            }(RR, JR, GR)
                           }
 
-                          function tW(WW, iW, OW, mW) {
-                            let EW = "",
-                              NW = 0;
-                            for (const PW of wW(WW, iW, OW)) EW += WW.slice(NW, PW.index) + mW(PW), NW = PW.index + PW[0].length;
-                            return EW + WW.slice(NW)
+                          function VR(RR, JR, GR, yR) {
+                            let tR = "",
+                              uR = 0;
+                            for (const ZR of fR(RR, JR, GR)) tR += RR.slice(uR, ZR.index) + yR(ZR), uR = ZR.index + ZR[0].length;
+                            return tR + RR.slice(uR)
                           }
 
-                          function ZW(WW, iW, OW) {
-                            const mW = [];
-                            let EW = 0;
-                            for (const NW of wW(WW, iW, OW)) mW.push(WW.slice(EW, NW.index)), EW = NW.index + NW[0].length;
-                            return [...mW, WW.slice(EW)]
+                          function KR(RR, JR, GR) {
+                            const yR = [];
+                            let tR = 0;
+                            for (const uR of fR(RR, JR, GR)) yR.push(RR.slice(tR, uR.index)), tR = uR.index + uR[0].length;
+                            return [...yR, RR.slice(tR)]
                           }
 
-                          function xW(WW, iW, OW) {
-                            var mW;
-                            return OW + (iW.unicode && (null !== (mW = WW.codePointAt(OW)) && void 0 !== mW ? mW : 0) > 65535 ? 2 : 1)
+                          function wR(RR, JR, GR) {
+                            var yR;
+                            return GR + (JR.unicode && (null !== (yR = RR.codePointAt(GR)) && void 0 !== yR ? yR : 0) > 65535 ? 2 : 1)
                           }
-                        }, 5582: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            A: () => tW,
-                            D: () => ZW,
-                            G: () => bW,
-                            I: () => lW,
-                            c: () => EW,
-                            g: () => cW,
-                            k: () => NW,
-                            o: () => PW,
-                            s: () => LW,
-                            w: () => jW
+                        }, 5707: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            d: () => tR,
+                            g: () => iR,
+                            i: () => uR,
+                            l: () => ZR,
+                            m: () => qR,
+                            n: () => LR,
+                            o: () => VR,
+                            q: () => KR,
+                            s: () => aR,
+                            t: () => rR
                           });
-                          var mW = OW(1685);
-                          const EW = 24e3,
-                            NW = "/docs/llms.txt",
-                            PW = `${mW.d}${NW}`,
-                            LW = "/llms.txt",
-                            cW = "/docs/llms-full.txt";
+                          var yR = GR(1746);
+                          const tR = 24e3,
+                            uR = "/docs/llms.txt",
+                            ZR = `${yR.c}${uR}`,
+                            qR = "/llms.txt",
+                            iR = "/docs/llms-full.txt";
 
-                          function wW(WW) {
-                            return WW || "index"
+                          function fR(RR) {
+                            return RR || "index"
                           }
 
-                          function tW(WW) {
-                            return `/docs/${wW(WW)}.md`
+                          function VR(RR) {
+                            return `/docs/${fR(RR)}.md`
                           }
 
-                          function ZW(WW, iW) {
-                            return `/docs/${wW(WW)}/${iW+1}.md`
+                          function KR(RR, JR) {
+                            return `/docs/${fR(RR)}/${JR+1}.md`
                           }
-                          const xW = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const wR = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function lW(WW) {
-                            const iW = xW.exec(WW);
-                            return null === iW ? null : {
-                              name: iW[1],
-                              part: void 0 === iW[2] ? null : Number(iW[2])
+                          function rR(RR) {
+                            const JR = wR.exec(RR);
+                            return null === JR ? null : {
+                              name: JR[1],
+                              part: void 0 === JR[2] ? null : Number(JR[2])
                             }
                           }
-                          const AW = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const eR = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function bW(WW) {
-                            const iW = AW.exec(WW);
-                            if (null === iW) return null;
-                            const [, OW = "", mW] = iW;
-                            return void 0 === mW ? tW(OW) : ZW(OW, Number(mW) - 1)
+                          function aR(RR) {
+                            const JR = eR.exec(RR);
+                            if (null === JR) return null;
+                            const [, GR = "", yR] = JR;
+                            return void 0 === yR ? VR(GR) : KR(GR, Number(yR) - 1)
                           }
 
-                          function jW(WW) {
-                            return `/docsHtml/${wW(WW)}.html`
+                          function LR(RR) {
+                            return `/docsHtml/${fR(RR)}.html`
                           }
-                        }, 5605: (WW, iW, OW) => {
-                          OW.d(iW, {
-                            d: () => EW,
-                            e: () => mW,
-                            g: () => NW,
-                            h: () => cW,
-                            j: () => PW
+                        }, 5733: (RR, JR, GR) => {
+                          GR.d(JR, {
+                            b: () => tR,
+                            e: () => yR,
+                            f: () => uR,
+                            i: () => iR,
+                            m: () => ZR
                           });
-                          const mW = ["sine", "triangle", "square", "sawtooth"],
-                            EW = 55,
-                            NW = {
+                          const yR = ["sine", "triangle", "square", "sawtooth"],
+                            tR = 55,
+                            uR = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function PW(WW) {
-                            return "string" !== typeof WW ? WW : Object.hasOwn(NW, WW) ? NW[WW] : null
+                          function ZR(RR) {
+                            return "string" !== typeof RR ? RR : Object.hasOwn(uR, RR) ? uR[RR] : null
                           }
 
-                          function LW(WW, iW, OW) {
-                            return Math.min(OW, Math.max(iW, WW))
+                          function qR(RR, JR, GR) {
+                            return Math.min(GR, Math.max(JR, RR))
                           }
 
-                          function cW(WW) {
-                            const iW = LW(WW.durationMs, 10, 500),
-                              OW = LW(WW.attackMs, 0, iW),
+                          function iR(RR) {
+                            const JR = qR(RR.durationMs, 10, 500),
+                              GR = qR(RR.attackMs, 0, JR),
                               {
-                                intonation: EW
-                              } = WW;
+                                intonation: tR
+                              } = RR;
                             return {
-                              waveform: mW.includes(WW.waveform) ? WW.waveform : "sine",
-                              pitchHz: LW(WW.pitchHz, 20, 4e3),
-                              glideSemitones: LW(WW.glideSemitones, -24, 24),
-                              durationMs: iW,
-                              attackMs: OW,
-                              releaseMs: LW(WW.releaseMs, 0, iW - OW),
-                              lowpassHz: null === WW.lowpassHz ? null : LW(WW.lowpassHz, 20, 2e4),
-                              volume: LW(WW.volume, 0, 2),
+                              waveform: yR.includes(RR.waveform) ? RR.waveform : "sine",
+                              pitchHz: qR(RR.pitchHz, 20, 4e3),
+                              glideSemitones: qR(RR.glideSemitones, -24, 24),
+                              durationMs: JR,
+                              attackMs: GR,
+                              releaseMs: qR(RR.releaseMs, 0, JR - GR),
+                              lowpassHz: null === RR.lowpassHz ? null : qR(RR.lowpassHz, 20, 2e4),
+                              volume: qR(RR.volume, 0, 2),
                               intonation: {
-                                variationSemitones: LW(EW.variationSemitones, 0, 6),
-                                declineSemitones: LW(EW.declineSemitones, 0, 12),
-                                questionRiseSemitones: LW(EW.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: LW(EW.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: qR(tR.variationSemitones, 0, 6),
+                                declineSemitones: qR(tR.declineSemitones, 0, 12),
+                                questionRiseSemitones: qR(tR.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: qR(tR.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: LW(WW.syllableMs, 25, 200)
+                              syllableMs: qR(RR.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const WW in modules) Object.freeze(modules[WW]);
+                      for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,209 +1,209 @@
 export const id = 275;
 export const ids = [275];
 export const modules = {
-  53479: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      PostMatchPodium: () => kW
+  53297: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      PostMatchPodium: () => UR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(35264),
-      LW = OW(53483),
-      cW = OW(53489),
-      wW = OW(2075),
-      tW = OW(2021),
-      ZW = OW(1172),
-      xW = OW(37872),
-      lW = OW(1283);
-    const AW = [1, 0, 2],
-      bW = [.26, .17, .1],
-      jW = [.78, .7, .7];
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(35193),
+      qR = GR(53299),
+      iR = GR(53305),
+      fR = GR(2173),
+      VR = GR(2105),
+      KR = GR(1270),
+      wR = GR(37803),
+      rR = GR(1378);
+    const eR = [1, 0, 2],
+      aR = [.26, .17, .1],
+      LR = [.78, .7, .7];
 
-    function UW(WW) {
-      return PW.f.openMobLineup(WW)
+    function nR(RR) {
+      return ZR.g.openMobLineup(RR)
     }
-    const kW = (0, mW.memo)((function(WW) {
+    const UR = (0, yR.memo)((function(RR) {
       let {
-        view: iW
-      } = WW;
-      const OW = (0, wW.g)("players"),
-        EW = (0, mW.useRef)(null),
-        NW = AW.filter((WW => WW < iW.podium.length)),
-        PW = (0, mW.useMemo)((() => NW.map((WW => {
-          const mW = iW.podium[WW];
+        view: JR
+      } = RR;
+      const GR = (0, fR.i)("players"),
+        tR = (0, yR.useRef)(null),
+        uR = eR.filter((RR => RR < JR.podium.length)),
+        ZR = (0, yR.useMemo)((() => uR.map((RR => {
+          const yR = JR.podium[RR];
           return {
-            cosmetics: (0, xW.w)(mW, OW.byId),
-            size: jW[WW],
-            nS: null,
-            animation: LW.h,
-            lift: bW[WW]
+            cosmetics: (0, wR.u)(yR, GR.byId),
+            size: LR[RR],
+            gC: null,
+            animation: qR.g,
+            lift: aR[RR]
           }
-        }))), [iW.wZ]),
-        tW = (0, mW.useMemo)((() => ({
-          figures: PW,
-          shown: PW.map((() => !0))
-        })), [PW]);
-      return (0, cW.c)(EW, UW, tW), (0, lW.jsxs)("div", {
+        }))), [JR.fK]),
+        VR = (0, yR.useMemo)((() => ({
+          figures: ZR,
+          shown: ZR.map((() => !0))
+        })), [ZR]);
+      return (0, iR.d)(tR, nR, VR), (0, rR.jsxs)("div", {
         className: "PostMatchPodium",
         style: {
-          "--columns": NW.length
+          "--columns": uR.length
         },
-        children: [(0, lW.jsx)("div", {
+        children: [(0, rR.jsx)("div", {
           className: "PostMatchPodiumFigures MobPreview",
-          ref: EW
-        }), (0, lW.jsx)("div", {
+          ref: tR
+        }), (0, rR.jsx)("div", {
           className: "PostMatchPodiumSteps",
-          children: NW.map((WW => (0, lW.jsx)(sW, {
-            view: iW,
-            row: iW.podium[WW],
-            place: WW
-          }, WW)))
+          children: uR.map((RR => (0, rR.jsx)(WR, {
+            view: JR,
+            row: JR.podium[RR],
+            place: RR
+          }, RR)))
         })]
       })
     }));
 
-    function sW(WW) {
-      var iW;
+    function WR(RR) {
+      var JR;
       let {
-        view: OW,
-        row: mW,
-        place: EW
-      } = WW;
+        view: GR,
+        row: yR,
+        place: tR
+      } = RR;
       const {
-        t: PW
-      } = (0, ZW.B)(), LW = (0, xW.s)(OW, mW);
-      return (0, lW.jsx)("div", {
-        className: NW()("PostMatchPodiumStep", `Place-${EW+1}`, {
-          IsLocal: mW.isLocal
+        t: ZR
+      } = (0, KR.A)(), qR = (0, wR.n)(GR, yR);
+      return (0, rR.jsx)("div", {
+        className: uR()("PostMatchPodiumStep", `Place-${tR+1}`, {
+          IsLocal: yR.isLocal
         }),
         style: {
-          "--stepHeight": .151 + bW[EW],
-          "--teamColour": null !== (iW = mW.colour) && void 0 !== iW ? iW : void 0
+          "--stepHeight": .151 + aR[tR],
+          "--teamColour": null !== (JR = yR.colour) && void 0 !== JR ? JR : void 0
         },
-        children: (0, lW.jsxs)("div", {
+        children: (0, rR.jsxs)("div", {
           className: "PostMatchPodiumBlock",
-          children: [(0, lW.jsx)("span", {
+          children: [(0, rR.jsx)("span", {
             className: "PostMatchPodiumPlace FullyFancyText",
-            children: EW + 1
-          }), (0, lW.jsx)("span", {
+            children: tR + 1
+          }), (0, rR.jsx)("span", {
             className: "PostMatchPodiumName SmallTextBold",
-            children: mW.name
-          }), (mW.isMvp || mW.isSvp) && (0, lW.jsx)("span", {
-            className: NW()("PostMatchTag", mW.isMvp ? "Tag-mvp" : "Tag-svp"),
-            children: PW(mW.isMvp ? "postMatch:mvp" : "postMatch:svp")
-          }), null !== LW && (0, lW.jsxs)("span", {
+            children: yR.name
+          }), (yR.isMvp || yR.isSvp) && (0, rR.jsx)("span", {
+            className: uR()("PostMatchTag", yR.isMvp ? "Tag-mvp" : "Tag-svp"),
+            children: ZR(yR.isMvp ? "postMatch:mvp" : "postMatch:svp")
+          }), null !== qR && (0, rR.jsxs)("span", {
             className: "PostMatchPodiumStat SmallTextBold",
-            children: [(0, lW.jsx)("b", {
-              children: LW.value
-            }), " ", (0, lW.jsx)(tW.d, {
-              text: LW.label
+            children: [(0, rR.jsx)("b", {
+              children: qR.value
+            }), " ", (0, rR.jsx)(VR.c, {
+              text: qR.label
             })]
           })]
         })
       })
     }
   },
-  53489: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  53305: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR
     });
-    var mW = OW(62),
-      EW = OW(3809);
+    var yR = GR(66),
+      tR = GR(3909);
 
-    function NW(WW, iW, OW) {
-      const NW = (0, mW.useRef)(null),
+    function uR(RR, JR, GR) {
+      const uR = (0, yR.useRef)(null),
         {
-          width: PW,
-          height: LW
-        } = (0, EW.d)(WW);
-      (0, mW.useEffect)((() => {
-        const OW = iW(WW.current);
-        return NW.current = OW, () => {
-          OW.close(), NW.current = null
+          width: ZR,
+          height: qR
+        } = (0, tR.b)(RR);
+      (0, yR.useEffect)((() => {
+        const GR = JR(RR.current);
+        return uR.current = GR, () => {
+          GR.close(), uR.current = null
         }
-      }), [WW, iW]), (0, mW.useEffect)((() => {
-        PW <= 0 || LW <= 0 || NW.current.resize(PW, LW)
-      }), [PW, LW]), (0, mW.useEffect)((() => {
-        NW.current.show(OW)
-      }), [OW])
+      }), [RR, JR]), (0, yR.useEffect)((() => {
+        ZR <= 0 || qR <= 0 || uR.current.resize(ZR, qR)
+      }), [ZR, qR]), (0, yR.useEffect)((() => {
+        uR.current.show(GR)
+      }), [GR])
     }
   },
-  53483: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => xW,
-      d: () => ZW,
-      h: () => cW
+  53299: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => wR,
+      e: () => KR,
+      g: () => iR
     });
-    var mW = OW(38320),
-      EW = OW(39881);
+    var yR = GR(38275),
+      tR = GR(39862);
 
-    function NW(WW, iW) {
-      let [OW, mW, EW] = WW;
-      return [0, .5, 1].map((WW => ({
-        timeFraction: WW,
+    function uR(RR, JR) {
+      let [GR, yR, tR] = RR;
+      return [0, .5, 1].map((RR => ({
+        timeFraction: RR,
         rotation: {
-          YO: "catmull-rom-spline",
-          point: [OW, mW, EW + (.5 === WW ? iW : 0)]
+          CG: "catmull-rom-spline",
+          point: [GR, yR, tR + (.5 === RR ? JR : 0)]
         }
       })))
     }
 
-    function PW(WW, iW, OW) {
+    function ZR(RR, JR, GR) {
       return {
-        kO: 3200,
+        LG: 3200,
         loop: !0,
-        MO: {
+        UG: {
           Root: {
-            timeline: [0, .5, 1].map((WW => ({
-              timeFraction: WW,
+            timeline: [0, .5, 1].map((RR => ({
+              timeFraction: RR,
               position: {
-                YO: "catmull-rom-spline",
-                point: [0, .5 === WW ? .18 : 0, 0]
+                CG: "catmull-rom-spline",
+                point: [0, .5 === RR ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((WW => ({
-              timeFraction: WW,
+            timeline: [0, .25, .75, 1].map((RR => ({
+              timeFraction: RR,
               rotation: {
-                YO: "catmull-rom-spline",
-                point: [0, .25 === WW ? .12 : .75 === WW ? -.12 : 0, 0]
+                CG: "catmull-rom-spline",
+                point: [0, .25 === RR ? .12 : .75 === RR ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: NW(WW, OW)
+            timeline: uR(RR, GR)
           },
           ArmRightMesh: {
-            timeline: NW(iW, -OW)
+            timeline: uR(JR, -GR)
           }
         }
       }
     }
-    const LW = PW([0, 0, 0], [0, 0, 0], .07),
-      cW = (0, EW.e)((0, mW.h)(LW), "mobIdle"),
-      wW = PW([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      tW = PW([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      ZW = (0, EW.e)((0, mW.h)(wW), "gunReady"),
-      xW = (0, EW.e)((0, mW.h)(tW), "gunAimed")
+    const qR = ZR([0, 0, 0], [0, 0, 0], .07),
+      iR = (0, tR.c)((0, yR.h)(qR), "mobIdle"),
+      fR = ZR([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      VR = ZR([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      KR = (0, tR.c)((0, yR.h)(fR), "gunReady"),
+      wR = (0, tR.c)((0, yR.h)(VR), "gunAimed")
   },
-  39881: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      h: () => NW
+  39862: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      f: () => uR
     });
-    const mW = new WeakMap;
+    const yR = new WeakMap;
 
-    function EW(WW, iW) {
-      return mW.set(WW, iW), WW
+    function tR(RR, JR) {
+      return yR.set(RR, JR), RR
     }
 
-    function NW(WW) {
-      var iW;
-      return null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : null
+    function uR(RR) {
+      var JR;
+      return null !== (JR = yR.get(RR)) && void 0 !== JR ? JR : null
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

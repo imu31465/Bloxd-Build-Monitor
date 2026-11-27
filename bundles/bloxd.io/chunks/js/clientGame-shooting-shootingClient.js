@@ -1,349 +1,349 @@
 export const id = 29;
 export const ids = [29];
 export const modules = {
-  37868: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => jW,
-      h: () => UW,
-      l: () => xW,
-      o: () => ZW
+  37796: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => LR,
+      d: () => nR,
+      g: () => wR,
+      j: () => KR
     });
-    var mW = OW(35220),
-      EW = OW(3361),
-      NW = OW(3368),
-      PW = OW(9954),
-      LW = OW(1526),
-      cW = OW(62),
-      wW = OW(80),
-      tW = OW(1283);
+    var yR = GR(35140),
+      tR = GR(3494),
+      uR = GR(3498),
+      ZR = GR(10048),
+      qR = GR(1581),
+      iR = GR(66),
+      fR = GR(83),
+      VR = GR(1378);
 
-    function ZW() {
-      var WW;
-      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
-        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
+    function KR() {
+      var RR;
+      return (0, qR.h)(tR.e, (0, tR.r)()), (0, VR.jsx)(VR.Fragment, {
+        children: null === (RR = (0, tR.r)()) || void 0 === RR ? void 0 : RR.content
       })
     }
 
-    function xW(WW) {
-      var iW;
+    function wR(RR) {
+      var JR;
       let {
-        show: OW
-      } = WW;
-      (0, LW.g)(EW.g, (0, EW.F)());
-      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
-      return (0, cW.useEffect)((() => {
-        var WW;
-        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
-      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
-        showing: OW,
+        show: GR
+      } = RR;
+      (0, qR.h)(tR.e, (0, tR.r)());
+      const fR = null === (JR = (0, tR.r)()) || void 0 === JR ? void 0 : JR.menu;
+      return (0, iR.useEffect)((() => {
+        var RR;
+        GR || (null === fR || void 0 === fR || null === (RR = fR.onClose) || void 0 === RR || RR.call(fR), (0, uR.m)())
+      }), [GR, fR]), (0, iR.useEffect)((() => GR ? (0, ZR.e)(uR.q, uR.e) : void 0), [GR]), (0, VR.jsx)(yR.b, {
+        showing: GR,
         globallyUniqueKey: "clientGameMenu",
-        children: null === wW || void 0 === wW ? void 0 : wW.content
+        children: null === fR || void 0 === fR ? void 0 : fR.content
       })
     }
-    const lW = new Map,
-      AW = new Set;
+    const rR = new Map,
+      eR = new Set;
 
-    function bW(WW, iW) {
-      iW ? lW.set(WW, iW) : lW.delete(WW);
-      for (const OW of AW) OW()
+    function aR(RR, JR) {
+      JR ? rR.set(RR, JR) : rR.delete(RR);
+      for (const GR of eR) GR()
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        placement: iW = "bottom"
-      } = WW;
-      const OW = (0, cW.useRef)(null);
-      return (0, cW.useLayoutEffect)((() => {
-        const WW = OW.current;
-        return bW(iW, WW), () => {
-          lW.get(iW) === WW && bW(iW, null)
+        placement: JR = "bottom"
+      } = RR;
+      const GR = (0, iR.useRef)(null);
+      return (0, iR.useLayoutEffect)((() => {
+        const RR = GR.current;
+        return aR(JR, RR), () => {
+          rR.get(JR) === RR && aR(JR, null)
         }
-      }), [iW]), (0, tW.jsx)("div", {
-        ref: OW,
-        id: `clientGameHud-${iW}`,
+      }), [JR]), (0, VR.jsx)("div", {
+        ref: GR,
+        id: `clientGameHud-${JR}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function UW(WW) {
+    function nR(RR) {
       let {
-        children: iW,
-        placement: OW = "bottom"
-      } = WW;
-      const [mW, EW] = (0, cW.useState)((() => {
-        var WW;
-        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
+        children: JR,
+        placement: GR = "bottom"
+      } = RR;
+      const [yR, tR] = (0, iR.useState)((() => {
+        var RR;
+        return null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null
       }));
-      return (0, cW.useEffect)((() => {
-        const WW = () => {
-          var WW;
-          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
+      return (0, iR.useEffect)((() => {
+        const RR = () => {
+          var RR;
+          tR(null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null)
         };
-        return AW.add(WW), WW(), () => {
-          AW.delete(WW)
+        return eR.add(RR), RR(), () => {
+          eR.delete(RR)
         }
-      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
+      }), [GR]), yR ? (0, fR.createPortal)(JR, yR) : null
     }
   },
-  5668: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => xW
+  5792: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => wR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1391),
-      PW = OW(1383),
-      LW = OW(4746),
-      cW = OW(136),
-      wW = OW(4787),
-      tW = OW(4776),
-      ZW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1468),
+      ZR = GR(1465),
+      qR = GR(4850),
+      iR = GR(134),
+      fR = GR(4889),
+      VR = GR(4881),
+      KR = GR(1378);
 
-    function xW(WW) {
+    function wR(RR) {
       let {
-        game: iW
-      } = WW;
-      const OW = (0, cW.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        mW = (0, wW.f)(iW, OW),
-        xW = (0, LW.f)(mW),
-        lW = void 0 !== xW.blurhash;
-      return (0, ZW.jsxs)("div", {
+        game: JR
+      } = RR;
+      const GR = (0, iR.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        yR = (0, fR.d)(JR, GR),
+        wR = (0, qR.h)(yR),
+        rR = void 0 !== wR.blurhash;
+      return (0, KR.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [xW.isLoading && !lW && (0, ZW.jsx)(PW.d, {
+        children: [wR.isLoading && !rR && (0, KR.jsx)(ZR.d, {
           loaderType: "Secondary"
-        }), !xW.failed && (null !== xW.src || lW) && (0, ZW.jsx)("div", {
-          className: EW()("SchematicImage", tW.j, {
-            SchematicImageFadeIn: xW.fadeIn && !lW
+        }), !wR.failed && (null !== wR.src || rR) && (0, KR.jsx)("div", {
+          className: tR()("SchematicImage", VR.f, {
+            SchematicImageFadeIn: wR.fadeIn && !rR
           }),
-          style: (0, tW.f)(xW),
-          children: (0, ZW.jsx)(tW.b, {
-            image: xW
+          style: (0, VR.c)(wR),
+          children: (0, KR.jsx)(VR.b, {
+            image: wR
           })
-        }), xW.failed && (0, ZW.jsx)("div", {
+        }), wR.failed && (0, KR.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, ZW.jsx)(NW.c, {
+          children: (0, KR.jsx)(uR.d, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  35220: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  35140: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(5243),
-      EW = OW(5251);
+    var yR = GR(5343),
+      tR = GR(5347);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        children: iW,
-        showing: OW,
-        globallyUniqueKey: NW,
-        alwaysMountChildren: PW = !1,
-        doGameplayStartStopOnShow: LW = !0,
-        keepsMovement: cW = !1
-      } = WW;
-      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
+        children: JR,
+        showing: GR,
+        globallyUniqueKey: uR,
+        alwaysMountChildren: ZR = !1,
+        doGameplayStartStopOnShow: qR = !0,
+        keepsMovement: iR = !1
+      } = RR;
+      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
     }
   },
-  5673: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW
+  5798: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1378);
 
-    function LW(WW) {
+    function qR(RR) {
       let {
-        columns: iW,
-        rows: OW,
-        getRowKey: EW,
-        renderRow: LW,
-        className: cW
-      } = WW;
-      return (0, PW.jsxs)("table", {
-        className: NW()("Table", cW),
-        children: [(0, PW.jsx)("thead", {
-          children: (0, PW.jsx)("tr", {
-            children: iW.map((WW => (0, PW.jsx)("th", {
-              children: WW.header
-            }, WW.key)))
+        columns: JR,
+        rows: GR,
+        getRowKey: tR,
+        renderRow: qR,
+        className: iR
+      } = RR;
+      return (0, ZR.jsxs)("table", {
+        className: uR()("Table", iR),
+        children: [(0, ZR.jsx)("thead", {
+          children: (0, ZR.jsx)("tr", {
+            children: JR.map((RR => (0, ZR.jsx)("th", {
+              children: RR.header
+            }, RR.key)))
           })
-        }), (0, PW.jsx)("tbody", {
-          children: OW.map(((WW, iW) => (0, PW.jsx)(mW.Fragment, {
-            children: LW(WW, iW)
-          }, EW(WW))))
+        }), (0, ZR.jsx)("tbody", {
+          children: GR.map(((RR, JR) => (0, ZR.jsx)(yR.Fragment, {
+            children: qR(RR, JR)
+          }, tR(RR))))
         })]
       })
     }
   },
-  37919: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      e: () => cW,
-      h: () => wW,
-      i: () => tW,
-      j: () => AW
+  37849: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      e: () => iR,
+      i: () => fR,
+      k: () => VR,
+      l: () => eR
     });
-    var mW = OW(62),
-      EW = OW(4275),
-      NW = OW(3457),
-      PW = OW(27);
-    const LW = 8,
-      cW = "InGameHeaderContainer",
-      wW = "TopRightElements";
+    var yR = GR(66),
+      tR = GR(4352),
+      uR = GR(3593),
+      ZR = GR(32);
+    const qR = 8,
+      iR = "InGameHeaderContainer",
+      fR = "TopRightElements";
 
-    function tW(WW) {
-      const [iW] = (0, EW.d)(), [OW, NW] = (0, mW.useState)(!1);
-      return (0, mW.useLayoutEffect)((() => {
-        if (!WW) return;
-        const iW = document.querySelector(`.${cW}`),
-          OW = document.querySelector(`.${wW}`),
-          mW = () => {
-            const mW = WW.getBoundingClientRect(),
-              EW = iW ? iW.getBoundingClientRect().right : 0,
-              PW = OW ? OW.getBoundingClientRect().left : window.innerWidth,
-              cW = mW.left < EW + LW,
-              wW = mW.right > PW - LW;
-            NW(cW || wW)
+    function VR(RR) {
+      const [JR] = (0, tR.e)(), [GR, uR] = (0, yR.useState)(!1);
+      return (0, yR.useLayoutEffect)((() => {
+        if (!RR) return;
+        const JR = document.querySelector(`.${iR}`),
+          GR = document.querySelector(`.${fR}`),
+          yR = () => {
+            const yR = RR.getBoundingClientRect(),
+              tR = JR ? JR.getBoundingClientRect().right : 0,
+              ZR = GR ? GR.getBoundingClientRect().left : window.innerWidth,
+              iR = yR.left < tR + qR,
+              fR = yR.right > ZR - qR;
+            uR(iR || fR)
           };
-        mW();
-        const EW = new ResizeObserver(mW);
-        return EW.observe(WW), iW && EW.observe(iW), OW && EW.observe(OW), () => {
-          EW.disconnect()
+        yR();
+        const tR = new ResizeObserver(yR);
+        return tR.observe(RR), JR && tR.observe(JR), GR && tR.observe(GR), () => {
+          tR.disconnect()
         }
-      }), [WW, iW]), OW
+      }), [RR, JR]), GR
     }
-    const ZW = `.InGameUi .${cW}`,
-      xW = [ZW, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
-      lW = 1e3;
+    const KR = `.InGameUi .${iR}`,
+      wR = [KR, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      rR = 1e3;
 
-    function AW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW,
-        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const [EW, cW] = (0, mW.useState)(null);
-      return (0, mW.useLayoutEffect)((() => {
-        if (!WW) return;
-        const mW = new ResizeObserver((() => {
-          wW()
+    function eR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR,
+        GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [tR, iR] = (0, yR.useState)(null);
+      return (0, yR.useLayoutEffect)((() => {
+        if (!RR) return;
+        const yR = new ResizeObserver((() => {
+          fR()
         }));
-        mW.observe(WW), iW && iW !== WW && mW.observe(iW);
-        let EW = [];
+        yR.observe(RR), JR && JR !== RR && yR.observe(JR);
+        let tR = [];
 
-        function wW() {
-          var NW, PW, wW;
-          const tW = WW.getBoundingClientRect(),
-            lW = function() {
-              const WW = xW.map((WW => document.querySelector(WW))).filter((WW => null !== WW));
-              for (const iW of WW) EW.includes(iW) || mW.observe(iW);
-              for (const iW of EW) WW.includes(iW) || mW.unobserve(iW);
-              return EW = WW, WW
+        function fR() {
+          var uR, ZR, fR;
+          const VR = RR.getBoundingClientRect(),
+            rR = function() {
+              const RR = wR.map((RR => document.querySelector(RR))).filter((RR => null !== RR));
+              for (const JR of RR) tR.includes(JR) || yR.observe(JR);
+              for (const JR of tR) RR.includes(JR) || yR.unobserve(JR);
+              return tR = RR, RR
             }(),
-            AW = lW.filter((WW => {
-              const iW = WW.getBoundingClientRect();
-              return iW.width > 0 && iW.height > 0 && tW.left < iW.right + LW && tW.right > iW.left - LW
+            eR = rR.filter((RR => {
+              const JR = RR.getBoundingClientRect();
+              return JR.width > 0 && JR.height > 0 && VR.left < JR.right + qR && VR.right > JR.left - qR
             }));
-          if (0 === AW.length && !OW) return void cW(null);
-          const bW = lW.find((WW => WW.matches(ZW))),
-            jW = Math.max(null !== (NW = null === bW || void 0 === bW ? void 0 : bW.getBoundingClientRect().bottom) && void 0 !== NW ? NW : 0, ...AW.map((WW => WW.getBoundingClientRect().bottom))),
-            UW = null !== (PW = null === iW || void 0 === iW || null === (wW = iW.offsetParent) || void 0 === wW ? void 0 : wW.getBoundingClientRect().top) && void 0 !== PW ? PW : 0;
-          cW(Math.ceil(jW + LW / 2) - Math.round(UW))
+          if (0 === eR.length && !GR) return void iR(null);
+          const aR = rR.find((RR => RR.matches(KR))),
+            LR = Math.max(null !== (uR = null === aR || void 0 === aR ? void 0 : aR.getBoundingClientRect().bottom) && void 0 !== uR ? uR : 0, ...eR.map((RR => RR.getBoundingClientRect().bottom))),
+            nR = null !== (ZR = null === JR || void 0 === JR || null === (fR = JR.offsetParent) || void 0 === fR ? void 0 : fR.getBoundingClientRect().top) && void 0 !== ZR ? ZR : 0;
+          iR(Math.ceil(LR + qR / 2) - Math.round(nR))
         }
-        const tW = setInterval(wW, lW);
-        wW(), window.addEventListener("resize", wW);
-        const AW = (0, PW.n)(NW.d, wW);
+        const VR = setInterval(fR, rR);
+        fR(), window.addEventListener("resize", fR);
+        const eR = (0, ZR.q)(uR.h, fR);
         return () => {
-          mW.disconnect(), clearInterval(tW), window.removeEventListener("resize", wW), AW()
+          yR.disconnect(), clearInterval(VR), window.removeEventListener("resize", fR), eR()
         }
-      }), [WW, iW, OW]), EW
+      }), [RR, JR, GR]), tR
     }
   },
-  37888: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      e: () => EW,
-      f: () => NW
+  37810: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => ZR,
+      g: () => tR,
+      j: () => uR
     });
-    var mW = OW(62);
+    var yR = GR(66);
 
-    function EW(WW) {
-      return LW(WW, cW)
+    function tR(RR) {
+      return qR(RR, iR)
     }
 
-    function NW(WW) {
-      return LW(WW, wW)
+    function uR(RR) {
+      return qR(RR, fR)
     }
 
-    function PW(WW) {
-      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
+    function ZR(RR) {
+      return `${Math.floor(RR/60)}:${String(RR%60).padStart(2,"0")}`
     }
 
-    function LW(WW, iW) {
-      const [, OW] = (0, mW.useState)(null);
-      return (0, mW.useEffect)((() => {
-        if (0 === WW) return;
-        const mW = window.setInterval((() => {
-          const mW = iW(WW);
-          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
-            endsAt: WW,
-            value: mW
+    function qR(RR, JR) {
+      const [, GR] = (0, yR.useState)(null);
+      return (0, yR.useEffect)((() => {
+        if (0 === RR) return;
+        const yR = window.setInterval((() => {
+          const yR = JR(RR);
+          GR((JR => (null === JR || void 0 === JR ? void 0 : JR.endsAt) === RR && JR.value === yR ? JR : {
+            endsAt: RR,
+            value: yR
           }))
         }), 250);
         return () => {
-          window.clearInterval(mW)
+          window.clearInterval(yR)
         }
-      }), [WW, iW]), iW(WW)
+      }), [RR, JR]), JR(RR)
     }
 
-    function cW(WW) {
-      return (WW - performance.now()) / 1e3
+    function iR(RR) {
+      return (RR - performance.now()) / 1e3
     }
 
-    function wW(WW) {
-      return Math.max(0, Math.ceil(cW(WW)))
+    function fR(RR) {
+      return Math.max(0, Math.ceil(iR(RR)))
     }
   },
-  9954: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => EW
+  10048: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => tR
     });
-    let mW = null;
-    const EW = function(WW) {
-        const iW = {
-          cycle: WW,
+    let yR = null;
+    const tR = function(RR) {
+        const JR = {
+          cycle: RR,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return mW = iW, () => {
-          mW === iW && (mW = null)
+        return yR = JR, () => {
+          yR === JR && (yR = null)
         }
       },
-      NW = () => {
-        var WW;
-        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
+      uR = () => {
+        var RR;
+        return null !== (RR = yR) && void 0 !== RR && RR.canCycle() ? yR.cycle : null
       }
   },
-  39775: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW
+  39767: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR
     });
-    const mW = 4,
-      EW = 12e3,
-      NW = 1e3;
-    class PW {
+    const yR = 4,
+      tR = 12e3,
+      uR = 1e3;
+    class ZR {
       constructor() {
         let {
-          limit: WW = mW,
-          windowMs: iW = EW,
-          spacingMs: OW = NW,
-          now: PW = Date.now
+          limit: RR = yR,
+          windowMs: JR = tR,
+          spacingMs: GR = uR,
+          now: ZR = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = WW, this.windowMs = iW, this.spacingMs = OW, this.now = PW
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = RR, this.windowMs = JR, this.spacingMs = GR, this.now = ZR
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -352,87 +352,87 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const WW of this.priority) WW.flush();
+        for (const RR of this.priority) RR.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const WW = this.now();
-        this.sent.push(WW), this.lastSentAt = WW, this.schedule(), this.notify()
+        const RR = this.now();
+        this.sent.push(RR), this.lastSentAt = RR, this.schedule(), this.notify()
       }
-      addPriority(WW) {
-        return this.priority.add(WW), () => {
-          this.priority.delete(WW)
+      addPriority(RR) {
+        return this.priority.add(RR), () => {
+          this.priority.delete(RR)
         }
       }
-      subscribe(WW) {
-        return this.listeners.add(WW), () => {
-          this.listeners.delete(WW)
+      subscribe(RR) {
+        return this.listeners.add(RR), () => {
+          this.listeners.delete(RR)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const WW of this.priority)
-          if (WW.waiting()) return !0;
+        for (const RR of this.priority)
+          if (RR.waiting()) return !0;
         return !1
       }
       prune() {
-        const WW = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= WW;) this.sent.shift()
+        const RR = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= RR;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const WW = this.now(),
-          iW = this.lastSentAt + this.spacingMs,
-          OW = Math.min(iW > WW ? iW : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        OW !== 1 / 0 && (this.timer = setTimeout((() => {
+        const RR = this.now(),
+          JR = this.lastSentAt + this.spacingMs,
+          GR = Math.min(JR > RR ? JR : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        GR !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, OW - WW)))
+        }), Math.max(0, GR - RR)))
       }
       notify() {
-        for (const WW of this.listeners) WW()
+        for (const RR of this.listeners) RR()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  37783: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => cW,
-      g: () => tW,
-      k: () => PW,
-      o: () => ZW,
-      r: () => LW
+  37712: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR,
+      g: () => VR,
+      i: () => ZR,
+      l: () => KR,
+      m: () => qR
     });
-    var mW = OW(27),
-      EW = OW(1351);
-    let NW = null;
+    var yR = GR(32),
+      tR = GR(1449);
+    let uR = null;
 
-    function PW() {
-      return (0, EW.f)() ? null : NW
+    function ZR() {
+      return (0, tR.g)() ? null : uR
     }
 
-    function LW(WW) {
-      return NW = WW, () => {
-        NW === WW && (NW = null)
+    function qR(RR) {
+      return uR = RR, () => {
+        uR === RR && (uR = null)
       }
     }
-    const cW = "clientGameHeldItemLabelChanged";
-    let wW = null;
+    const iR = "clientGameHeldItemLabelChanged";
+    let fR = null;
 
-    function tW() {
-      return (0, EW.f)() ? null : wW
+    function VR() {
+      return (0, tR.g)() ? null : fR
     }
 
-    function ZW(WW) {
-      return wW = WW, mW.l.iZ(cW), () => {
-        wW === WW && (wW = null, mW.l.iZ(cW))
+    function KR(RR) {
+      return fR = RR, yR.n.JK(iR), () => {
+        fR === RR && (fR = null, yR.n.JK(iR))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,39 +1,39 @@
 export const id = 264;
 export const ids = [264];
 export const modules = {
-  38372: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => ZW,
-      d: () => xW,
-      f: () => bW,
-      j: () => lW
+  38331: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => KR,
+      e: () => wR,
+      g: () => aR,
+      j: () => rR
     });
-    var mW = OW(38253),
-      EW = OW(38249),
-      NW = OW(38285),
-      PW = OW(38299);
+    var yR = GR(38217),
+      tR = GR(38213),
+      uR = GR(38239),
+      ZR = GR(38253);
 
-    function LW(WW) {
-      return Math.pow(WW, EW.i)
+    function qR(RR) {
+      return Math.pow(RR, tR.i)
     }
 
-    function cW(WW) {
-      return WW <= .04045 ? .0773993808 * WW : Math.pow(.947867299 * (WW + .055), 2.4)
+    function iR(RR) {
+      return RR <= .04045 ? .0773993808 * RR : Math.pow(.947867299 * (RR + .055), 2.4)
     }
 
-    function wW(WW) {
-      return Math.pow(WW, EW.h)
+    function fR(RR) {
+      return Math.pow(RR, tR.e)
     }
 
-    function tW(WW) {
-      return WW <= .0031308 ? 12.92 * WW : 1.055 * Math.pow(WW, .41666) - .055
+    function VR(RR) {
+      return RR <= .0031308 ? 12.92 * RR : 1.055 * Math.pow(RR, .41666) - .055
     }
-    class ZW {
+    class KR {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = WW, this.g = iW, this.b = OW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = RR, this.g = JR, this.b = GR
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let WW = 255 * this.r | 0;
-        return WW = 397 * WW ^ 255 * this.g, WW = 397 * WW ^ 255 * this.b, WW
+        let RR = 255 * this.r | 0;
+        return RR = 397 * RR ^ 255 * this.g, RR = 397 * RR ^ 255 * this.b, RR
       }
-      toArray(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return WW[iW] = this.r, WW[iW + 1] = this.g, WW[iW + 2] = this.b, this
+      toArray(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return RR[JR] = this.r, RR[JR + 1] = this.g, RR[JR + 2] = this.b, this
       }
-      mZ(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return ZW.FromArrayToRef(WW, iW, this), this
+      yK(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return KR.FromArrayToRef(RR, JR, this), this
       }
       toColor4() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new xW(this.r, this.g, this.b, WW)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new wR(this.r, this.g, this.b, RR)
       }
-      wEW() {
+      QtR() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(WW) {
-        return new ZW(this.r * WW.r, this.g * WW.g, this.b * WW.b)
+      multiply(RR) {
+        return new KR(this.r * RR.r, this.g * RR.g, this.b * RR.b)
       }
-      multiplyToRef(WW, iW) {
-        return iW.r = this.r * WW.r, iW.g = this.g * WW.g, iW.b = this.b * WW.b, iW
+      multiplyToRef(RR, JR) {
+        return JR.r = this.r * RR.r, JR.g = this.g * RR.g, JR.b = this.b * RR.b, JR
       }
-      multiplyInPlace(WW) {
-        return this.r *= WW.r, this.g *= WW.g, this.b *= WW.b, this
+      multiplyInPlace(RR) {
+        return this.r *= RR.r, this.g *= RR.g, this.b *= RR.b, this
       }
-      multiplyByFloats(WW, iW, OW) {
-        return new ZW(this.r * WW, this.g * iW, this.b * OW)
+      multiplyByFloats(RR, JR, GR) {
+        return new KR(this.r * RR, this.g * JR, this.b * GR)
       }
-      divide(WW) {
+      divide(RR) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(WW, iW) {
+      divideToRef(RR, JR) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(WW) {
+      divideInPlace(RR) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(WW) {
-        return this.minimizeInPlaceFromFloats(WW.r, WW.g, WW.b)
+      minimizeInPlace(RR) {
+        return this.minimizeInPlaceFromFloats(RR.r, RR.g, RR.b)
       }
-      maximizeInPlace(WW) {
-        return this.maximizeInPlaceFromFloats(WW.r, WW.g, WW.b)
+      maximizeInPlace(RR) {
+        return this.maximizeInPlaceFromFloats(RR.r, RR.g, RR.b)
       }
-      minimizeInPlaceFromFloats(WW, iW, OW) {
-        return this.r = Math.min(WW, this.r), this.g = Math.min(iW, this.g), this.b = Math.min(OW, this.b), this
+      minimizeInPlaceFromFloats(RR, JR, GR) {
+        return this.r = Math.min(RR, this.r), this.g = Math.min(JR, this.g), this.b = Math.min(GR, this.b), this
       }
-      maximizeInPlaceFromFloats(WW, iW, OW) {
-        return this.r = Math.max(WW, this.r), this.g = Math.max(iW, this.g), this.b = Math.max(OW, this.b), this
+      maximizeInPlaceFromFloats(RR, JR, GR) {
+        return this.r = Math.max(RR, this.r), this.g = Math.max(JR, this.g), this.b = Math.max(GR, this.b), this
       }
-      floorToRef(WW) {
+      floorToRef(RR) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(WW) {
+      fractToRef(RR) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(WW) {
-        return WW && this.r === WW.r && this.g === WW.g && this.b === WW.b
+      equals(RR) {
+        return RR && this.r === RR.r && this.g === RR.g && this.b === RR.b
       }
-      equalsFloats(WW, iW, OW) {
-        return this.jLW(WW, iW, OW)
+      equalsFloats(RR, JR, GR) {
+        return this.JiR(RR, JR, GR)
       }
-      jLW(WW, iW, OW) {
-        return this.r === WW && this.g === iW && this.b === OW
+      JiR(RR, JR, GR) {
+        return this.r === RR && this.g === JR && this.b === GR
       }
-      equalsWithEpsilon(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW.e;
-        return (0, NW.WithinEpsilon)(this.r, WW.r, iW) && (0, NW.WithinEpsilon)(this.g, WW.g, iW) && (0, NW.WithinEpsilon)(this.b, WW.b, iW)
+      equalsWithEpsilon(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tR.c;
+        return (0, uR.WithinEpsilon)(this.r, RR.r, JR) && (0, uR.WithinEpsilon)(this.g, RR.g, JR) && (0, uR.WithinEpsilon)(this.b, RR.b, JR)
       }
-      Lj() {
+      Re() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(WW) {
+      negateToRef(RR) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(WW) {
-        return new ZW(this.r * WW, this.g * WW, this.b * WW)
+      scale(RR) {
+        return new KR(this.r * RR, this.g * RR, this.b * RR)
       }
-      scaleInPlace(WW) {
-        return this.r *= WW, this.g *= WW, this.b *= WW, this
+      scaleInPlace(RR) {
+        return this.r *= RR, this.g *= RR, this.b *= RR, this
       }
-      scaleToRef(WW, iW) {
-        return iW.r = this.r * WW, iW.g = this.g * WW, iW.b = this.b * WW, iW
+      scaleToRef(RR, JR) {
+        return JR.r = this.r * RR, JR.g = this.g * RR, JR.b = this.b * RR, JR
       }
-      scaleAndAddToRef(WW, iW) {
-        return iW.r += this.r * WW, iW.g += this.g * WW, iW.b += this.b * WW, iW
+      scaleAndAddToRef(RR, JR) {
+        return JR.r += this.r * RR, JR.g += this.g * RR, JR.b += this.b * RR, JR
       }
       clampToRef() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          OW = arguments.length > 2 ? arguments[2] : void 0;
-        return OW.r = (0, NW.Clamp)(this.r, WW, iW), OW.g = (0, NW.Clamp)(this.g, WW, iW), OW.b = (0, NW.Clamp)(this.b, WW, iW), OW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          GR = arguments.length > 2 ? arguments[2] : void 0;
+        return GR.r = (0, uR.Clamp)(this.r, RR, JR), GR.g = (0, uR.Clamp)(this.g, RR, JR), GR.b = (0, uR.Clamp)(this.b, RR, JR), GR
       }
-      add(WW) {
-        return new ZW(this.r + WW.r, this.g + WW.g, this.b + WW.b)
+      add(RR) {
+        return new KR(this.r + RR.r, this.g + RR.g, this.b + RR.b)
       }
-      addInPlace(WW) {
-        return this.r += WW.r, this.g += WW.g, this.b += WW.b, this
+      addInPlace(RR) {
+        return this.r += RR.r, this.g += RR.g, this.b += RR.b, this
       }
-      addInPlaceFromFloats(WW, iW, OW) {
-        return this.r += WW, this.g += iW, this.b += OW, this
+      addInPlaceFromFloats(RR, JR, GR) {
+        return this.r += RR, this.g += JR, this.b += GR, this
       }
-      addToRef(WW, iW) {
-        return iW.r = this.r + WW.r, iW.g = this.g + WW.g, iW.b = this.b + WW.b, iW
+      addToRef(RR, JR) {
+        return JR.r = this.r + RR.r, JR.g = this.g + RR.g, JR.b = this.b + RR.b, JR
       }
-      subtract(WW) {
-        return new ZW(this.r - WW.r, this.g - WW.g, this.b - WW.b)
+      subtract(RR) {
+        return new KR(this.r - RR.r, this.g - RR.g, this.b - RR.b)
       }
-      subtractToRef(WW, iW) {
-        return iW.r = this.r - WW.r, iW.g = this.g - WW.g, iW.b = this.b - WW.b, iW
+      subtractToRef(RR, JR) {
+        return JR.r = this.r - RR.r, JR.g = this.g - RR.g, JR.b = this.b - RR.b, JR
       }
-      yEW(WW) {
-        return this.r -= WW.r, this.g -= WW.g, this.b -= WW.b, this
+      VuR(RR) {
+        return this.r -= RR.r, this.g -= RR.g, this.b -= RR.b, this
       }
-      subtractFromFloats(WW, iW, OW) {
-        return new ZW(this.r - WW, this.g - iW, this.b - OW)
+      subtractFromFloats(RR, JR, GR) {
+        return new KR(this.r - RR, this.g - JR, this.b - GR)
       }
-      subtractFromFloatsToRef(WW, iW, OW, mW) {
-        return mW.r = this.r - WW, mW.g = this.g - iW, mW.b = this.b - OW, mW
+      subtractFromFloatsToRef(RR, JR, GR, yR) {
+        return yR.r = this.r - RR, yR.g = this.g - JR, yR.b = this.b - GR, yR
       }
       clone() {
-        return new ZW(this.r, this.g, this.b)
+        return new KR(this.r, this.g, this.b)
       }
-      HJ(WW) {
-        return this.r = WW.r, this.g = WW.g, this.b = WW.b, this
+      vN(RR) {
+        return this.r = RR.r, this.g = RR.g, this.b = RR.b, this
       }
-      yWW(WW, iW, OW) {
-        return this.r = WW, this.g = iW, this.b = OW, this
+      VJR(RR, JR, GR) {
+        return this.r = RR, this.g = JR, this.b = GR, this
       }
-      set(WW, iW, OW) {
-        return this.yWW(WW, iW, OW)
+      set(RR, JR, GR) {
+        return this.VJR(RR, JR, GR)
       }
-      Z5(WW) {
-        return this.r = this.g = this.b = WW, this
+      NRR(RR) {
+        return this.r = this.g = this.b = RR, this
       }
       toHexString() {
-        const WW = Math.round(255 * this.r),
-          iW = Math.round(255 * this.g),
-          OW = Math.round(255 * this.b);
-        return "#" + (0, NW.ToHex)(WW) + (0, NW.ToHex)(iW) + (0, NW.ToHex)(OW)
+        const RR = Math.round(255 * this.r),
+          JR = Math.round(255 * this.g),
+          GR = Math.round(255 * this.b);
+        return "#" + (0, uR.ToHex)(RR) + (0, uR.ToHex)(JR) + (0, uR.ToHex)(GR)
       }
-      fromHexString(WW) {
-        return "#" !== WW.substring(0, 1) || 7 !== WW.length || (this.r = parseInt(WW.substring(1, 3), 16) / 255, this.g = parseInt(WW.substring(3, 5), 16) / 255, this.b = parseInt(WW.substring(5, 7), 16) / 255), this
+      fromHexString(RR) {
+        return "#" !== RR.substring(0, 1) || 7 !== RR.length || (this.r = parseInt(RR.substring(1, 3), 16) / 255, this.g = parseInt(RR.substring(3, 5), 16) / 255, this.b = parseInt(RR.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new ZW)
+        return this.toHSVToRef(new KR)
       }
-      toHSVToRef(WW) {
-        const iW = this.r,
-          OW = this.g,
-          mW = this.b,
-          EW = Math.max(iW, OW, mW),
-          NW = Math.min(iW, OW, mW);
-        let PW = 0,
-          LW = 0;
-        const cW = EW,
-          wW = EW - NW;
-        return 0 !== EW && (LW = wW / EW), EW != NW && (EW == iW ? (PW = (OW - mW) / wW, OW < mW && (PW += 6)) : EW == OW ? PW = (mW - iW) / wW + 2 : EW == mW && (PW = (iW - OW) / wW + 4), PW *= 60), WW.r = PW, WW.g = LW, WW.b = cW, WW
+      toHSVToRef(RR) {
+        const JR = this.r,
+          GR = this.g,
+          yR = this.b,
+          tR = Math.max(JR, GR, yR),
+          uR = Math.min(JR, GR, yR);
+        let ZR = 0,
+          qR = 0;
+        const iR = tR,
+          fR = tR - uR;
+        return 0 !== tR && (qR = fR / tR), tR != uR && (tR == JR ? (ZR = (GR - yR) / fR, GR < yR && (ZR += 6)) : tR == GR ? ZR = (yR - JR) / fR + 2 : tR == yR && (ZR = (JR - GR) / fR + 4), ZR *= 60), RR.r = ZR, RR.g = qR, RR.b = iR, RR
       }
       toLinearSpace() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = new ZW;
-        return this.toLinearSpaceToRef(iW, WW), iW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = new KR;
+        return this.toLinearSpaceToRef(JR, RR), JR
       }
-      toLinearSpaceToRef(WW) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = cW(this.r), WW.g = cW(this.g), WW.b = cW(this.b)) : (WW.r = LW(this.r), WW.g = LW(this.g), WW.b = LW(this.b)), this
+      toLinearSpaceToRef(RR) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (RR.r = iR(this.r), RR.g = iR(this.g), RR.b = iR(this.b)) : (RR.r = qR(this.r), RR.g = qR(this.g), RR.b = qR(this.b)), this
       }
       toGammaSpace() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = new ZW;
-        return this.toGammaSpaceToRef(iW, WW), iW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = new KR;
+        return this.toGammaSpaceToRef(JR, RR), JR
       }
-      toGammaSpaceToRef(WW) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = tW(this.r), WW.g = tW(this.g), WW.b = tW(this.b)) : (WW.r = wW(this.r), WW.g = wW(this.g), WW.b = wW(this.b)), this
+      toGammaSpaceToRef(RR) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (RR.r = VR(this.r), RR.g = VR(this.g), RR.b = VR(this.b)) : (RR.r = fR(this.r), RR.g = fR(this.g), RR.b = fR(this.b)), this
       }
-      static HSVtoRGBToRef(WW, iW, OW, mW) {
-        const EW = OW * iW,
-          NW = WW / 60,
-          PW = EW * (1 - Math.abs(NW % 2 - 1));
-        let LW = 0,
-          cW = 0,
-          wW = 0;
-        NW >= 0 && NW <= 1 ? (LW = EW, cW = PW) : NW >= 1 && NW <= 2 ? (LW = PW, cW = EW) : NW >= 2 && NW <= 3 ? (cW = EW, wW = PW) : NW >= 3 && NW <= 4 ? (cW = PW, wW = EW) : NW >= 4 && NW <= 5 ? (LW = PW, wW = EW) : NW >= 5 && NW <= 6 && (LW = EW, wW = PW);
-        const tW = OW - EW;
-        return mW.r = LW + tW, mW.g = cW + tW, mW.b = wW + tW, mW
+      static HSVtoRGBToRef(RR, JR, GR, yR) {
+        const tR = GR * JR,
+          uR = RR / 60,
+          ZR = tR * (1 - Math.abs(uR % 2 - 1));
+        let qR = 0,
+          iR = 0,
+          fR = 0;
+        uR >= 0 && uR <= 1 ? (qR = tR, iR = ZR) : uR >= 1 && uR <= 2 ? (qR = ZR, iR = tR) : uR >= 2 && uR <= 3 ? (iR = tR, fR = ZR) : uR >= 3 && uR <= 4 ? (iR = ZR, fR = tR) : uR >= 4 && uR <= 5 ? (qR = ZR, fR = tR) : uR >= 5 && uR <= 6 && (qR = tR, fR = ZR);
+        const VR = GR - tR;
+        return yR.r = qR + VR, yR.g = iR + VR, yR.b = fR + VR, yR
       }
-      static FromHSV(WW, iW, OW) {
-        const mW = new ZW(0, 0, 0);
-        return ZW.HSVtoRGBToRef(WW, iW, OW, mW), mW
+      static FromHSV(RR, JR, GR) {
+        const yR = new KR(0, 0, 0);
+        return KR.HSVtoRGBToRef(RR, JR, GR, yR), yR
       }
-      static FromHexString(WW) {
-        return new ZW(0, 0, 0).fromHexString(WW)
+      static FromHexString(RR) {
+        return new KR(0, 0, 0).fromHexString(RR)
       }
-      static FromArray(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new ZW(WW[iW], WW[iW + 1], WW[iW + 2])
+      static FromArray(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new KR(RR[JR], RR[JR + 1], RR[JR + 2])
       }
-      static FromArrayToRef(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          OW = arguments.length > 2 ? arguments[2] : void 0;
-        OW.r = WW[iW], OW.g = WW[iW + 1], OW.b = WW[iW + 2]
+      static FromArrayToRef(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          GR = arguments.length > 2 ? arguments[2] : void 0;
+        GR.r = RR[JR], GR.g = RR[JR + 1], GR.b = RR[JR + 2]
       }
-      static FromInts(WW, iW, OW) {
-        return new ZW(WW / 255, iW / 255, OW / 255)
+      static FromInts(RR, JR, GR) {
+        return new KR(RR / 255, JR / 255, GR / 255)
       }
-      static Lerp(WW, iW, OW) {
-        const mW = new ZW(0, 0, 0);
-        return ZW.LerpToRef(WW, iW, OW, mW), mW
+      static Lerp(RR, JR, GR) {
+        const yR = new KR(0, 0, 0);
+        return KR.LerpToRef(RR, JR, GR, yR), yR
       }
-      static LerpToRef(WW, iW, OW, mW) {
-        mW.r = WW.r + (iW.r - WW.r) * OW, mW.g = WW.g + (iW.g - WW.g) * OW, mW.b = WW.b + (iW.b - WW.b) * OW
+      static LerpToRef(RR, JR, GR, yR) {
+        yR.r = RR.r + (JR.r - RR.r) * GR, yR.g = RR.g + (JR.g - RR.g) * GR, yR.b = RR.b + (JR.b - RR.b) * GR
       }
-      static Hermite(WW, iW, OW, mW, EW) {
-        const NW = EW * EW,
-          PW = EW * NW,
-          LW = 2 * PW - 3 * NW + 1,
-          cW = -2 * PW + 3 * NW,
-          wW = PW - 2 * NW + EW,
-          tW = PW - NW,
-          xW = WW.r * LW + OW.r * cW + iW.r * wW + mW.r * tW,
-          lW = WW.g * LW + OW.g * cW + iW.g * wW + mW.g * tW,
-          AW = WW.b * LW + OW.b * cW + iW.b * wW + mW.b * tW;
-        return new ZW(xW, lW, AW)
+      static Hermite(RR, JR, GR, yR, tR) {
+        const uR = tR * tR,
+          ZR = tR * uR,
+          qR = 2 * ZR - 3 * uR + 1,
+          iR = -2 * ZR + 3 * uR,
+          fR = ZR - 2 * uR + tR,
+          VR = ZR - uR,
+          wR = RR.r * qR + GR.r * iR + JR.r * fR + yR.r * VR,
+          rR = RR.g * qR + GR.g * iR + JR.g * fR + yR.g * VR,
+          eR = RR.b * qR + GR.b * iR + JR.b * fR + yR.b * VR;
+        return new KR(wR, rR, eR)
       }
-      static Hermite1stDerivative(WW, iW, OW, mW, EW) {
-        const NW = ZW.Black();
-        return this.Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW), NW
+      static Hermite1stDerivative(RR, JR, GR, yR, tR) {
+        const uR = KR.Black();
+        return this.Hermite1stDerivativeToRef(RR, JR, GR, yR, tR, uR), uR
       }
-      static Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW) {
-        const PW = EW * EW;
-        NW.r = 6 * (PW - EW) * WW.r + (3 * PW - 4 * EW + 1) * iW.r + 6 * (-PW + EW) * OW.r + (3 * PW - 2 * EW) * mW.r, NW.g = 6 * (PW - EW) * WW.g + (3 * PW - 4 * EW + 1) * iW.g + 6 * (-PW + EW) * OW.g + (3 * PW - 2 * EW) * mW.g, NW.b = 6 * (PW - EW) * WW.b + (3 * PW - 4 * EW + 1) * iW.b + 6 * (-PW + EW) * OW.b + (3 * PW - 2 * EW) * mW.b
+      static Hermite1stDerivativeToRef(RR, JR, GR, yR, tR, uR) {
+        const ZR = tR * tR;
+        uR.r = 6 * (ZR - tR) * RR.r + (3 * ZR - 4 * tR + 1) * JR.r + 6 * (-ZR + tR) * GR.r + (3 * ZR - 2 * tR) * yR.r, uR.g = 6 * (ZR - tR) * RR.g + (3 * ZR - 4 * tR + 1) * JR.g + 6 * (-ZR + tR) * GR.g + (3 * ZR - 2 * tR) * yR.g, uR.b = 6 * (ZR - tR) * RR.b + (3 * ZR - 4 * tR + 1) * JR.b + 6 * (-ZR + tR) * GR.b + (3 * ZR - 2 * tR) * yR.b
       }
       static Red() {
-        return new ZW(1, 0, 0)
+        return new KR(1, 0, 0)
       }
       static Green() {
-        return new ZW(0, 1, 0)
+        return new KR(0, 1, 0)
       }
       static Blue() {
-        return new ZW(0, 0, 1)
+        return new KR(0, 0, 1)
       }
       static Black() {
-        return new ZW(0, 0, 0)
+        return new KR(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return ZW._BlackReadOnly
+        return KR._BlackReadOnly
       }
       static White() {
-        return new ZW(1, 1, 1)
+        return new KR(1, 1, 1)
       }
       static Purple() {
-        return new ZW(.5, 0, .5)
+        return new KR(.5, 0, .5)
       }
       static Magenta() {
-        return new ZW(1, 0, 1)
+        return new KR(1, 0, 1)
       }
       static Yellow() {
-        return new ZW(1, 1, 0)
+        return new KR(1, 1, 0)
       }
       static Gray() {
-        return new ZW(.5, .5, .5)
+        return new KR(.5, .5, .5)
       }
       static Teal() {
-        return new ZW(0, 1, 1)
+        return new KR(0, 1, 1)
       }
       static Random() {
-        return new ZW(Math.random(), Math.random(), Math.random())
+        return new KR(Math.random(), Math.random(), Math.random())
       }
     }
-    ZW._V8PerformanceHack = new ZW(.5, .5, .5), ZW._BlackReadOnly = ZW.Black();
-    class xW {
+    KR._V8PerformanceHack = new KR(.5, .5, .5), KR._BlackReadOnly = KR.Black();
+    class wR {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = WW, this.g = iW, this.b = OW, this.a = mW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = RR, this.g = JR, this.b = GR, this.a = yR
       }
-      wEW() {
+      QtR() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return WW[iW] = this.r, WW[iW + 1] = this.g, WW[iW + 2] = this.b, WW[iW + 3] = this.a, this
+      toArray(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return RR[JR] = this.r, RR[JR + 1] = this.g, RR[JR + 2] = this.b, RR[JR + 3] = this.a, this
       }
-      mZ(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = WW[iW], this.g = WW[iW + 1], this.b = WW[iW + 2], this.a = WW[iW + 3], this
+      yK(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = RR[JR], this.g = RR[JR + 1], this.b = RR[JR + 2], this.a = RR[JR + 3], this
       }
-      equals(WW) {
-        return WW && this.r === WW.r && this.g === WW.g && this.b === WW.b && this.a === WW.a
+      equals(RR) {
+        return RR && this.r === RR.r && this.g === RR.g && this.b === RR.b && this.a === RR.a
       }
-      add(WW) {
-        return new xW(this.r + WW.r, this.g + WW.g, this.b + WW.b, this.a + WW.a)
+      add(RR) {
+        return new wR(this.r + RR.r, this.g + RR.g, this.b + RR.b, this.a + RR.a)
       }
-      addToRef(WW, iW) {
-        return iW.r = this.r + WW.r, iW.g = this.g + WW.g, iW.b = this.b + WW.b, iW.a = this.a + WW.a, iW
+      addToRef(RR, JR) {
+        return JR.r = this.r + RR.r, JR.g = this.g + RR.g, JR.b = this.b + RR.b, JR.a = this.a + RR.a, JR
       }
-      addInPlace(WW) {
-        return this.r += WW.r, this.g += WW.g, this.b += WW.b, this.a += WW.a, this
+      addInPlace(RR) {
+        return this.r += RR.r, this.g += RR.g, this.b += RR.b, this.a += RR.a, this
       }
-      addInPlaceFromFloats(WW, iW, OW, mW) {
-        return this.r += WW, this.g += iW, this.b += OW, this.a += mW, this
+      addInPlaceFromFloats(RR, JR, GR, yR) {
+        return this.r += RR, this.g += JR, this.b += GR, this.a += yR, this
       }
-      subtract(WW) {
-        return new xW(this.r - WW.r, this.g - WW.g, this.b - WW.b, this.a - WW.a)
+      subtract(RR) {
+        return new wR(this.r - RR.r, this.g - RR.g, this.b - RR.b, this.a - RR.a)
       }
-      subtractToRef(WW, iW) {
-        return iW.r = this.r - WW.r, iW.g = this.g - WW.g, iW.b = this.b - WW.b, iW.a = this.a - WW.a, iW
+      subtractToRef(RR, JR) {
+        return JR.r = this.r - RR.r, JR.g = this.g - RR.g, JR.b = this.b - RR.b, JR.a = this.a - RR.a, JR
       }
-      yEW(WW) {
-        return this.r -= WW.r, this.g -= WW.g, this.b -= WW.b, this.a -= WW.a, this
+      VuR(RR) {
+        return this.r -= RR.r, this.g -= RR.g, this.b -= RR.b, this.a -= RR.a, this
       }
-      subtractFromFloats(WW, iW, OW, mW) {
-        return new xW(this.r - WW, this.g - iW, this.b - OW, this.a - mW)
+      subtractFromFloats(RR, JR, GR, yR) {
+        return new wR(this.r - RR, this.g - JR, this.b - GR, this.a - yR)
       }
-      subtractFromFloatsToRef(WW, iW, OW, mW, EW) {
-        return EW.r = this.r - WW, EW.g = this.g - iW, EW.b = this.b - OW, EW.a = this.a - mW, EW
+      subtractFromFloatsToRef(RR, JR, GR, yR, tR) {
+        return tR.r = this.r - RR, tR.g = this.g - JR, tR.b = this.b - GR, tR.a = this.a - yR, tR
       }
-      scale(WW) {
-        return new xW(this.r * WW, this.g * WW, this.b * WW, this.a * WW)
+      scale(RR) {
+        return new wR(this.r * RR, this.g * RR, this.b * RR, this.a * RR)
       }
-      scaleInPlace(WW) {
-        return this.r *= WW, this.g *= WW, this.b *= WW, this.a *= WW, this
+      scaleInPlace(RR) {
+        return this.r *= RR, this.g *= RR, this.b *= RR, this.a *= RR, this
       }
-      scaleToRef(WW, iW) {
-        return iW.r = this.r * WW, iW.g = this.g * WW, iW.b = this.b * WW, iW.a = this.a * WW, iW
+      scaleToRef(RR, JR) {
+        return JR.r = this.r * RR, JR.g = this.g * RR, JR.b = this.b * RR, JR.a = this.a * RR, JR
       }
-      scaleAndAddToRef(WW, iW) {
-        return iW.r += this.r * WW, iW.g += this.g * WW, iW.b += this.b * WW, iW.a += this.a * WW, iW
+      scaleAndAddToRef(RR, JR) {
+        return JR.r += this.r * RR, JR.g += this.g * RR, JR.b += this.b * RR, JR.a += this.a * RR, JR
       }
       clampToRef() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          OW = arguments.length > 2 ? arguments[2] : void 0;
-        return OW.r = (0, NW.Clamp)(this.r, WW, iW), OW.g = (0, NW.Clamp)(this.g, WW, iW), OW.b = (0, NW.Clamp)(this.b, WW, iW), OW.a = (0, NW.Clamp)(this.a, WW, iW), OW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          GR = arguments.length > 2 ? arguments[2] : void 0;
+        return GR.r = (0, uR.Clamp)(this.r, RR, JR), GR.g = (0, uR.Clamp)(this.g, RR, JR), GR.b = (0, uR.Clamp)(this.b, RR, JR), GR.a = (0, uR.Clamp)(this.a, RR, JR), GR
       }
-      multiply(WW) {
-        return new xW(this.r * WW.r, this.g * WW.g, this.b * WW.b, this.a * WW.a)
+      multiply(RR) {
+        return new wR(this.r * RR.r, this.g * RR.g, this.b * RR.b, this.a * RR.a)
       }
-      multiplyToRef(WW, iW) {
-        return iW.r = this.r * WW.r, iW.g = this.g * WW.g, iW.b = this.b * WW.b, iW.a = this.a * WW.a, iW
+      multiplyToRef(RR, JR) {
+        return JR.r = this.r * RR.r, JR.g = this.g * RR.g, JR.b = this.b * RR.b, JR.a = this.a * RR.a, JR
       }
-      multiplyInPlace(WW) {
-        return this.r *= WW.r, this.g *= WW.g, this.b *= WW.b, this.a *= WW.a, this
+      multiplyInPlace(RR) {
+        return this.r *= RR.r, this.g *= RR.g, this.b *= RR.b, this.a *= RR.a, this
       }
-      multiplyByFloats(WW, iW, OW, mW) {
-        return new xW(this.r * WW, this.g * iW, this.b * OW, this.a * mW)
+      multiplyByFloats(RR, JR, GR, yR) {
+        return new wR(this.r * RR, this.g * JR, this.b * GR, this.a * yR)
       }
-      divide(WW) {
+      divide(RR) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(WW, iW) {
+      divideToRef(RR, JR) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(WW) {
+      divideInPlace(RR) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(WW) {
-        return this.r = Math.min(this.r, WW.r), this.g = Math.min(this.g, WW.g), this.b = Math.min(this.b, WW.b), this.a = Math.min(this.a, WW.a), this
+      minimizeInPlace(RR) {
+        return this.r = Math.min(this.r, RR.r), this.g = Math.min(this.g, RR.g), this.b = Math.min(this.b, RR.b), this.a = Math.min(this.a, RR.a), this
       }
-      maximizeInPlace(WW) {
-        return this.r = Math.max(this.r, WW.r), this.g = Math.max(this.g, WW.g), this.b = Math.max(this.b, WW.b), this.a = Math.max(this.a, WW.a), this
+      maximizeInPlace(RR) {
+        return this.r = Math.max(this.r, RR.r), this.g = Math.max(this.g, RR.g), this.b = Math.max(this.b, RR.b), this.a = Math.max(this.a, RR.a), this
       }
-      minimizeInPlaceFromFloats(WW, iW, OW, mW) {
-        return this.r = Math.min(WW, this.r), this.g = Math.min(iW, this.g), this.b = Math.min(OW, this.b), this.a = Math.min(mW, this.a), this
+      minimizeInPlaceFromFloats(RR, JR, GR, yR) {
+        return this.r = Math.min(RR, this.r), this.g = Math.min(JR, this.g), this.b = Math.min(GR, this.b), this.a = Math.min(yR, this.a), this
       }
-      maximizeInPlaceFromFloats(WW, iW, OW, mW) {
-        return this.r = Math.max(WW, this.r), this.g = Math.max(iW, this.g), this.b = Math.max(OW, this.b), this.a = Math.max(mW, this.a), this
+      maximizeInPlaceFromFloats(RR, JR, GR, yR) {
+        return this.r = Math.max(RR, this.r), this.g = Math.max(JR, this.g), this.b = Math.max(GR, this.b), this.a = Math.max(yR, this.a), this
       }
-      floorToRef(WW) {
+      floorToRef(RR) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(WW) {
+      fractToRef(RR) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      Lj() {
+      Re() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(WW) {
+      negateToRef(RR) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW.e;
-        return (0, NW.WithinEpsilon)(this.r, WW.r, iW) && (0, NW.WithinEpsilon)(this.g, WW.g, iW) && (0, NW.WithinEpsilon)(this.b, WW.b, iW) && (0, NW.WithinEpsilon)(this.a, WW.a, iW)
+      equalsWithEpsilon(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tR.c;
+        return (0, uR.WithinEpsilon)(this.r, RR.r, JR) && (0, uR.WithinEpsilon)(this.g, RR.g, JR) && (0, uR.WithinEpsilon)(this.b, RR.b, JR) && (0, uR.WithinEpsilon)(this.a, RR.a, JR)
       }
-      jLW(WW, iW, OW, mW) {
-        return this.r === WW && this.g === iW && this.b === OW && this.a === mW
+      JiR(RR, JR, GR, yR) {
+        return this.r === RR && this.g === JR && this.b === GR && this.a === yR
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let WW = 255 * this.r | 0;
-        return WW = 397 * WW ^ 255 * this.g, WW = 397 * WW ^ 255 * this.b, WW = 397 * WW ^ 255 * this.a, WW
+        let RR = 255 * this.r | 0;
+        return RR = 397 * RR ^ 255 * this.g, RR = 397 * RR ^ 255 * this.b, RR = 397 * RR ^ 255 * this.a, RR
       }
       clone() {
-        return (new xW).HJ(this)
+        return (new wR).vN(this)
       }
-      HJ(WW) {
-        return this.r = WW.r, this.g = WW.g, this.b = WW.b, this.a = WW.a, this
+      vN(RR) {
+        return this.r = RR.r, this.g = RR.g, this.b = RR.b, this.a = RR.a, this
       }
-      yWW(WW, iW, OW, mW) {
-        return this.r = WW, this.g = iW, this.b = OW, this.a = mW, this
+      VJR(RR, JR, GR, yR) {
+        return this.r = RR, this.g = JR, this.b = GR, this.a = yR, this
       }
-      set(WW, iW, OW, mW) {
-        return this.yWW(WW, iW, OW, mW)
+      set(RR, JR, GR, yR) {
+        return this.VJR(RR, JR, GR, yR)
       }
-      Z5(WW) {
-        return this.r = this.g = this.b = this.a = WW, this
+      NRR(RR) {
+        return this.r = this.g = this.b = this.a = RR, this
       }
       toHexString() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = Math.round(255 * this.r),
-          OW = Math.round(255 * this.g),
-          mW = Math.round(255 * this.b);
-        if (WW) return "#" + (0, NW.ToHex)(iW) + (0, NW.ToHex)(OW) + (0, NW.ToHex)(mW);
-        const EW = Math.round(255 * this.a);
-        return "#" + (0, NW.ToHex)(iW) + (0, NW.ToHex)(OW) + (0, NW.ToHex)(mW) + (0, NW.ToHex)(EW)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = Math.round(255 * this.r),
+          GR = Math.round(255 * this.g),
+          yR = Math.round(255 * this.b);
+        if (RR) return "#" + (0, uR.ToHex)(JR) + (0, uR.ToHex)(GR) + (0, uR.ToHex)(yR);
+        const tR = Math.round(255 * this.a);
+        return "#" + (0, uR.ToHex)(JR) + (0, uR.ToHex)(GR) + (0, uR.ToHex)(yR) + (0, uR.ToHex)(tR)
       }
-      fromHexString(WW) {
-        return "#" !== WW.substring(0, 1) || 9 !== WW.length && 7 !== WW.length || (this.r = parseInt(WW.substring(1, 3), 16) / 255, this.g = parseInt(WW.substring(3, 5), 16) / 255, this.b = parseInt(WW.substring(5, 7), 16) / 255, 9 === WW.length && (this.a = parseInt(WW.substring(7, 9), 16) / 255)), this
+      fromHexString(RR) {
+        return "#" !== RR.substring(0, 1) || 9 !== RR.length && 7 !== RR.length || (this.r = parseInt(RR.substring(1, 3), 16) / 255, this.g = parseInt(RR.substring(3, 5), 16) / 255, this.b = parseInt(RR.substring(5, 7), 16) / 255, 9 === RR.length && (this.a = parseInt(RR.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = new xW;
-        return this.toLinearSpaceToRef(iW, WW), iW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = new wR;
+        return this.toLinearSpaceToRef(JR, RR), JR
       }
-      toLinearSpaceToRef(WW) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = cW(this.r), WW.g = cW(this.g), WW.b = cW(this.b)) : (WW.r = LW(this.r), WW.g = LW(this.g), WW.b = LW(this.b)), WW.a = this.a, this
+      toLinearSpaceToRef(RR) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (RR.r = iR(this.r), RR.g = iR(this.g), RR.b = iR(this.b)) : (RR.r = qR(this.r), RR.g = qR(this.g), RR.b = qR(this.b)), RR.a = this.a, this
       }
       toGammaSpace() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = new xW;
-        return this.toGammaSpaceToRef(iW, WW), iW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = new wR;
+        return this.toGammaSpaceToRef(JR, RR), JR
       }
-      toGammaSpaceToRef(WW) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = tW(this.r), WW.g = tW(this.g), WW.b = tW(this.b)) : (WW.r = wW(this.r), WW.g = wW(this.g), WW.b = wW(this.b)), WW.a = this.a, this
+      toGammaSpaceToRef(RR) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (RR.r = VR(this.r), RR.g = VR(this.g), RR.b = VR(this.b)) : (RR.r = fR(this.r), RR.g = fR(this.g), RR.b = fR(this.b)), RR.a = this.a, this
       }
-      static FromHexString(WW) {
-        return "#" !== WW.substring(0, 1) || 9 !== WW.length && 7 !== WW.length ? new xW(0, 0, 0, 0) : new xW(0, 0, 0, 1).fromHexString(WW)
+      static FromHexString(RR) {
+        return "#" !== RR.substring(0, 1) || 9 !== RR.length && 7 !== RR.length ? new wR(0, 0, 0, 0) : new wR(0, 0, 0, 1).fromHexString(RR)
       }
-      static Lerp(WW, iW, OW) {
-        return xW.LerpToRef(WW, iW, OW, new xW)
+      static Lerp(RR, JR, GR) {
+        return wR.LerpToRef(RR, JR, GR, new wR)
       }
-      static LerpToRef(WW, iW, OW, mW) {
-        return mW.r = WW.r + (iW.r - WW.r) * OW, mW.g = WW.g + (iW.g - WW.g) * OW, mW.b = WW.b + (iW.b - WW.b) * OW, mW.a = WW.a + (iW.a - WW.a) * OW, mW
+      static LerpToRef(RR, JR, GR, yR) {
+        return yR.r = RR.r + (JR.r - RR.r) * GR, yR.g = RR.g + (JR.g - RR.g) * GR, yR.b = RR.b + (JR.b - RR.b) * GR, yR.a = RR.a + (JR.a - RR.a) * GR, yR
       }
-      static Hermite(WW, iW, OW, mW, EW) {
-        const NW = EW * EW,
-          PW = EW * NW,
-          LW = 2 * PW - 3 * NW + 1,
-          cW = -2 * PW + 3 * NW,
-          wW = PW - 2 * NW + EW,
-          tW = PW - NW,
-          ZW = WW.r * LW + OW.r * cW + iW.r * wW + mW.r * tW,
-          lW = WW.g * LW + OW.g * cW + iW.g * wW + mW.g * tW,
-          AW = WW.b * LW + OW.b * cW + iW.b * wW + mW.b * tW,
-          bW = WW.a * LW + OW.a * cW + iW.a * wW + mW.a * tW;
-        return new xW(ZW, lW, AW, bW)
+      static Hermite(RR, JR, GR, yR, tR) {
+        const uR = tR * tR,
+          ZR = tR * uR,
+          qR = 2 * ZR - 3 * uR + 1,
+          iR = -2 * ZR + 3 * uR,
+          fR = ZR - 2 * uR + tR,
+          VR = ZR - uR,
+          KR = RR.r * qR + GR.r * iR + JR.r * fR + yR.r * VR,
+          rR = RR.g * qR + GR.g * iR + JR.g * fR + yR.g * VR,
+          eR = RR.b * qR + GR.b * iR + JR.b * fR + yR.b * VR,
+          aR = RR.a * qR + GR.a * iR + JR.a * fR + yR.a * VR;
+        return new wR(KR, rR, eR, aR)
       }
-      static Hermite1stDerivative(WW, iW, OW, mW, EW) {
-        const NW = new xW;
-        return this.Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW), NW
+      static Hermite1stDerivative(RR, JR, GR, yR, tR) {
+        const uR = new wR;
+        return this.Hermite1stDerivativeToRef(RR, JR, GR, yR, tR, uR), uR
       }
-      static Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW) {
-        const PW = EW * EW;
-        NW.r = 6 * (PW - EW) * WW.r + (3 * PW - 4 * EW + 1) * iW.r + 6 * (-PW + EW) * OW.r + (3 * PW - 2 * EW) * mW.r, NW.g = 6 * (PW - EW) * WW.g + (3 * PW - 4 * EW + 1) * iW.g + 6 * (-PW + EW) * OW.g + (3 * PW - 2 * EW) * mW.g, NW.b = 6 * (PW - EW) * WW.b + (3 * PW - 4 * EW + 1) * iW.b + 6 * (-PW + EW) * OW.b + (3 * PW - 2 * EW) * mW.b, NW.a = 6 * (PW - EW) * WW.a + (3 * PW - 4 * EW + 1) * iW.a + 6 * (-PW + EW) * OW.a + (3 * PW - 2 * EW) * mW.a
+      static Hermite1stDerivativeToRef(RR, JR, GR, yR, tR, uR) {
+        const ZR = tR * tR;
+        uR.r = 6 * (ZR - tR) * RR.r + (3 * ZR - 4 * tR + 1) * JR.r + 6 * (-ZR + tR) * GR.r + (3 * ZR - 2 * tR) * yR.r, uR.g = 6 * (ZR - tR) * RR.g + (3 * ZR - 4 * tR + 1) * JR.g + 6 * (-ZR + tR) * GR.g + (3 * ZR - 2 * tR) * yR.g, uR.b = 6 * (ZR - tR) * RR.b + (3 * ZR - 4 * tR + 1) * JR.b + 6 * (-ZR + tR) * GR.b + (3 * ZR - 2 * tR) * yR.b, uR.a = 6 * (ZR - tR) * RR.a + (3 * ZR - 4 * tR + 1) * JR.a + 6 * (-ZR + tR) * GR.a + (3 * ZR - 2 * tR) * yR.a
       }
-      static FromColor3(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new xW(WW.r, WW.g, WW.b, iW)
+      static FromColor3(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new wR(RR.r, RR.g, RR.b, JR)
       }
-      static FromArray(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new xW(WW[iW], WW[iW + 1], WW[iW + 2], WW[iW + 3])
+      static FromArray(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new wR(RR[JR], RR[JR + 1], RR[JR + 2], RR[JR + 3])
       }
-      static FromArrayToRef(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          OW = arguments.length > 2 ? arguments[2] : void 0;
-        OW.r = WW[iW], OW.g = WW[iW + 1], OW.b = WW[iW + 2], OW.a = WW[iW + 3]
+      static FromArrayToRef(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          GR = arguments.length > 2 ? arguments[2] : void 0;
+        GR.r = RR[JR], GR.g = RR[JR + 1], GR.b = RR[JR + 2], GR.a = RR[JR + 3]
       }
-      static FromInts(WW, iW, OW, mW) {
-        return new xW(WW / 255, iW / 255, OW / 255, mW / 255)
+      static FromInts(RR, JR, GR, yR) {
+        return new wR(RR / 255, JR / 255, GR / 255, yR / 255)
       }
-      static CheckColors4(WW, iW) {
-        if (WW.length === 3 * iW) {
-          const iW = [];
-          for (let OW = 0; OW < WW.length; OW += 3) {
-            const mW = OW / 3 * 4;
-            iW[mW] = WW[OW], iW[mW + 1] = WW[OW + 1], iW[mW + 2] = WW[OW + 2], iW[mW + 3] = 1
+      static CheckColors4(RR, JR) {
+        if (RR.length === 3 * JR) {
+          const JR = [];
+          for (let GR = 0; GR < RR.length; GR += 3) {
+            const yR = GR / 3 * 4;
+            JR[yR] = RR[GR], JR[yR + 1] = RR[GR + 1], JR[yR + 2] = RR[GR + 2], JR[yR + 3] = 1
           }
-          return iW
+          return JR
         }
-        return WW
+        return RR
       }
     }
-    xW._V8PerformanceHack = new xW(.5, .5, .5, .5);
-    class lW {}
-    lW.Color3 = (0, mW.c)(3, ZW.Black), lW.Color4 = (0, mW.c)(3, (() => new xW(0, 0, 0, 0)));
-    let AW = !1;
+    wR._V8PerformanceHack = new wR(.5, .5, .5, .5);
+    class rR {}
+    rR.Color3 = (0, yR.c)(3, KR.Black), rR.Color4 = (0, yR.c)(3, (() => new wR(0, 0, 0, 0)));
+    let eR = !1;
 
-    function bW() {
-      AW || (AW = !0, Object.defineProperties(ZW.prototype, {
+    function aR() {
+      eR || (eR = !0, Object.defineProperties(KR.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(xW.prototype, {
+      }), Object.defineProperties(wR.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, PW.h)("BABYLON.Color3", ZW), (0, PW.h)("BABYLON.Color4", xW))
+      }), (0, ZR.f)("BABYLON.Color3", KR), (0, ZR.f)("BABYLON.Color4", wR))
     }
   },
-  38249: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      h: () => mW,
-      i: () => EW
+  38213: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => yR,
+      i: () => tR
     });
-    const mW = 1 / 2.2,
-      EW = 2.2;
+    const yR = 1 / 2.2,
+      tR = 2.2;
     Math.sqrt(5);
-    let NW = .001
+    let uR = .001
   },
-  38285: (WW, iW, OW) => {
-    function mW(WW) {
-      return parseInt(WW.toString().replace(/\W/g, ""))
+  38239: (RR, JR, GR) => {
+    function yR(RR) {
+      return parseInt(RR.toString().replace(/\W/g, ""))
     }
 
-    function EW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(WW - iW) <= OW
+    function tR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(RR - JR) <= GR
     }
 
-    function NW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return WW < iW - mW || WW > OW + mW
+    function uR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return RR < JR - yR || RR > GR + yR
     }
 
-    function PW(WW, iW) {
-      return WW === iW ? WW : Math.random() * (iW - WW) + WW
+    function ZR(RR, JR) {
+      return RR === JR ? RR : Math.random() * (JR - RR) + RR
     }
 
-    function LW(WW, iW, OW) {
-      return WW + (iW - WW) * OW
+    function qR(RR, JR, GR) {
+      return RR + (JR - RR) * GR
     }
 
-    function cW(WW, iW, OW) {
-      let mW = jW(iW - WW, 360);
-      return mW > 180 && (mW -= 360), WW + mW * xW(OW)
+    function iR(RR, JR, GR) {
+      let yR = LR(JR - RR, 360);
+      return yR > 180 && (yR -= 360), RR + yR * wR(GR)
     }
 
-    function wW(WW, iW, OW) {
-      let mW;
-      return mW = WW != iW ? xW((OW - WW) / (iW - WW)) : 0, mW
+    function fR(RR, JR, GR) {
+      let yR;
+      return yR = RR != JR ? wR((GR - RR) / (JR - RR)) : 0, yR
     }
 
-    function tW(WW, iW, OW, mW, EW) {
-      const NW = EW * EW,
-        PW = EW * NW;
-      return WW * (2 * PW - 3 * NW + 1) + OW * (-2 * PW + 3 * NW) + iW * (PW - 2 * NW + EW) + mW * (PW - NW)
+    function VR(RR, JR, GR, yR, tR) {
+      const uR = tR * tR,
+        ZR = tR * uR;
+      return RR * (2 * ZR - 3 * uR + 1) + GR * (-2 * ZR + 3 * uR) + JR * (ZR - 2 * uR + tR) + yR * (ZR - uR)
     }
 
-    function ZW(WW, iW, OW, mW, EW) {
-      const NW = EW * EW;
-      return 6 * (NW - EW) * WW + (3 * NW - 4 * EW + 1) * iW + 6 * (-NW + EW) * OW + (3 * NW - 2 * EW) * mW
+    function KR(RR, JR, GR, yR, tR) {
+      const uR = tR * tR;
+      return 6 * (uR - tR) * RR + (3 * uR - 4 * tR + 1) * JR + 6 * (-uR + tR) * GR + (3 * uR - 2 * tR) * yR
     }
 
-    function xW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(OW, Math.max(iW, WW))
+    function wR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(GR, Math.max(JR, RR))
     }
 
-    function lW(WW) {
-      return WW -= 2 * Math.PI * Math.floor((WW + Math.PI) / (2 * Math.PI))
+    function rR(RR) {
+      return RR -= 2 * Math.PI * Math.floor((RR + Math.PI) / (2 * Math.PI))
     }
 
-    function AW(WW) {
-      const iW = WW.toString(16);
-      return WW <= 15 ? ("0" + iW).toUpperCase() : iW.toUpperCase()
+    function eR(RR) {
+      const JR = RR.toString(16);
+      return RR <= 15 ? ("0" + JR).toUpperCase() : JR.toUpperCase()
     }
 
-    function bW(WW) {
-      if (Math.log2) return Math.floor(Math.log2(WW));
-      if (WW < 0) return NaN;
-      if (0 === WW) return -1 / 0;
-      let iW = 0;
-      if (WW < 1) {
-        for (; WW < 1;) iW++, WW *= 2;
-        iW = -iW
-      } else if (WW > 1)
-        for (; WW > 1;) iW++, WW = Math.floor(WW / 2);
-      return iW
+    function aR(RR) {
+      if (Math.log2) return Math.floor(Math.log2(RR));
+      if (RR < 0) return NaN;
+      if (0 === RR) return -1 / 0;
+      let JR = 0;
+      if (RR < 1) {
+        for (; RR < 1;) JR++, RR *= 2;
+        JR = -JR
+      } else if (RR > 1)
+        for (; RR > 1;) JR++, RR = Math.floor(RR / 2);
+      return JR
     }
 
-    function jW(WW, iW) {
-      return WW - Math.floor(WW / iW) * iW
+    function LR(RR, JR) {
+      return RR - Math.floor(RR / JR) * JR
     }
 
-    function UW(WW, iW, OW) {
-      return (WW - iW) / (OW - iW)
+    function nR(RR, JR, GR) {
+      return (RR - JR) / (GR - JR)
     }
 
-    function kW(WW, iW, OW) {
-      return WW * (OW - iW) + iW
+    function UR(RR, JR, GR) {
+      return RR * (GR - JR) + JR
     }
 
-    function sW(WW, iW) {
-      let OW = jW(iW - WW, 360);
-      return OW > 180 && (OW -= 360), OW
+    function WR(RR, JR) {
+      let GR = LR(JR - RR, 360);
+      return GR > 180 && (GR -= 360), GR
     }
 
-    function MW(WW, iW) {
-      const OW = jW(WW, 2 * iW);
-      return iW - Math.abs(OW - iW)
+    function AR(RR, JR) {
+      const GR = LR(RR, 2 * JR);
+      return JR - Math.abs(GR - JR)
     }
 
-    function KW(WW, iW, OW) {
-      let mW = xW(OW);
-      return mW = -2 * mW * mW * mW + 3 * mW * mW, iW * mW + WW * (1 - mW)
+    function CR(RR, JR, GR) {
+      let yR = wR(GR);
+      return yR = -2 * yR * yR * yR + 3 * yR * yR, JR * yR + RR * (1 - yR)
     }
 
-    function SW(WW, iW, OW) {
-      let mW;
-      return mW = Math.abs(iW - WW) <= OW ? iW : WW + Math.sign(iW - WW) * OW, mW
+    function XR(RR, JR, GR) {
+      let yR;
+      return yR = Math.abs(JR - RR) <= GR ? JR : RR + Math.sign(JR - RR) * GR, yR
     }
 
-    function YW(WW, iW, OW) {
-      const mW = sW(WW, iW);
-      let EW;
-      return EW = -OW < mW && mW < OW ? iW : SW(WW, iW = WW + mW, OW), EW
+    function MR(RR, JR, GR) {
+      const yR = WR(RR, JR);
+      let tR;
+      return tR = -GR < yR && yR < GR ? JR : XR(RR, JR = RR + yR, GR), tR
     }
 
-    function yW(WW, iW, OW) {
-      return (WW - iW) / (OW - iW)
+    function BR(RR, JR, GR) {
+      return (RR - JR) / (GR - JR)
     }
 
-    function TW(WW, iW, OW) {
-      return (OW - iW) * WW + iW
+    function lR(RR, JR, GR) {
+      return (GR - JR) * RR + JR
     }
 
-    function JW(WW, iW) {
-      const OW = WW % iW;
-      return 0 === OW ? iW : JW(iW, OW)
+    function pR(RR, JR) {
+      const GR = RR % JR;
+      return 0 === GR ? JR : pR(JR, GR)
     }
-    OW.r(iW), OW.d(iW, {
-      Clamp: () => xW,
-      DeltaAngle: () => sW,
-      Denormalize: () => kW,
-      ExtractAsInt: () => mW,
-      Hermite: () => tW,
-      Hermite1stDerivative: () => ZW,
-      HighestCommonFactor: () => JW,
-      ILog2: () => bW,
-      InverseLerp: () => wW,
-      Lerp: () => LW,
-      LerpAngle: () => cW,
-      MoveTowards: () => SW,
-      MoveTowardsAngle: () => YW,
-      Normalize: () => UW,
-      NormalizeRadians: () => lW,
-      OutsideRange: () => NW,
-      PercentToRange: () => TW,
-      PingPong: () => MW,
-      RandomRange: () => PW,
-      RangeToPercent: () => yW,
-      Repeat: () => jW,
-      SmoothStep: () => KW,
-      ToHex: () => AW,
-      WithinEpsilon: () => EW
+    GR.r(JR), GR.d(JR, {
+      Clamp: () => wR,
+      DeltaAngle: () => WR,
+      Denormalize: () => UR,
+      ExtractAsInt: () => yR,
+      Hermite: () => VR,
+      Hermite1stDerivative: () => KR,
+      HighestCommonFactor: () => pR,
+      ILog2: () => aR,
+      InverseLerp: () => fR,
+      Lerp: () => qR,
+      LerpAngle: () => iR,
+      MoveTowards: () => XR,
+      MoveTowardsAngle: () => MR,
+      Normalize: () => nR,
+      NormalizeRadians: () => rR,
+      OutsideRange: () => uR,
+      PercentToRange: () => lR,
+      PingPong: () => AR,
+      RandomRange: () => ZR,
+      RangeToPercent: () => BR,
+      Repeat: () => LR,
+      SmoothStep: () => CR,
+      ToHex: () => eR,
+      WithinEpsilon: () => tR
     })
   },
-  38253: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      const OW = [];
-      for (let mW = 0; mW < WW; ++mW) OW.push(iW());
-      return OW
+  38217: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      const GR = [];
+      for (let yR = 0; yR < RR; ++yR) GR.push(JR());
+      return GR
     }
 
-    function EW(WW, iW) {
-      return mW(WW, iW)
+    function tR(RR, JR) {
+      return yR(RR, JR)
     }
-    OW.d(iW, {
-      c: () => mW,
-      f: () => EW,
-      j: () => PW
+    GR.d(JR, {
+      c: () => yR,
+      g: () => tR,
+      i: () => ZR
     });
-    const NW = ["push", "splice", "pop", "shift", "unshift"];
+    const uR = ["push", "splice", "pop", "shift", "unshift"];
 
-    function PW(WW, iW) {
-      const OW = NW.map((OW => function(WW, iW, OW) {
-        const mW = WW[iW];
-        if ("function" !== typeof mW) return null;
-        const EW = function() {
-          const mW = WW.length,
-            NW = EW.previous.apply(WW, arguments);
-          return OW(iW, mW), NW
+    function ZR(RR, JR) {
+      const GR = uR.map((GR => function(RR, JR, GR) {
+        const yR = RR[JR];
+        if ("function" !== typeof yR) return null;
+        const tR = function() {
+          const yR = RR.length,
+            uR = tR.previous.apply(RR, arguments);
+          return GR(JR, yR), uR
         };
-        return mW.next = EW, EW.previous = mW, WW[iW] = EW, () => {
-          const OW = EW.previous;
-          if (!OW) return;
-          const mW = EW.next;
-          mW ? (OW.next = mW, mW.previous = OW) : (OW.next = void 0, WW[iW] = OW), EW.next = void 0, EW.previous = void 0
+        return yR.next = tR, tR.previous = yR, RR[JR] = tR, () => {
+          const GR = tR.previous;
+          if (!GR) return;
+          const yR = tR.next;
+          yR ? (GR.next = yR, yR.previous = GR) : (GR.next = void 0, RR[JR] = GR), tR.next = void 0, tR.previous = void 0
         }
-      }(WW, OW, iW)));
+      }(RR, GR, JR)));
       return () => {
-        for (const WW of OW) WW?.()
+        for (const RR of GR) RR?.()
       }
     }
   },
-  38299: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      h: () => EW
+  38253: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      f: () => tR
     });
-    const mW = {};
+    const yR = {};
 
-    function EW(WW, iW) {
-      mW[WW] = iW
+    function tR(RR, JR) {
+      yR[RR] = JR
     }
 
-    function NW(WW) {
-      return mW[WW]
+    function uR(RR) {
+      return yR[RR]
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

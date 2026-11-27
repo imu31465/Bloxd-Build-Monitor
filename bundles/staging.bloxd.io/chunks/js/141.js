@@ -1,44 +1,44 @@
-/*! For license information please see 1yqdn.141.a07f42d0.chunk.js.LICENSE.txt */
+/*! For license information please see 4udp6d.141.6a7a95ee.chunk.js.LICENSE.txt */
 export const id = 141;
 export const ids = [141];
 export const modules = {
-  7416: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      Graph: () => fW,
-      debug: () => oO,
-      default: () => eO,
-      graphlib: () => NW,
-      layout: () => bO,
-      util: () => dO,
-      version: () => Ni
+  7550: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      Graph: () => mR,
+      debug: () => vG,
+      default: () => xG,
+      graphlib: () => uR,
+      layout: () => rG,
+      util: () => OG,
+      version: () => uJ
     });
-    var mW = Object.defineProperty,
-      EW = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? mW(WW, iW, {
+    var yR = Object.defineProperty,
+      tR = (RR, JR, GR) => ((RR, JR, GR) => JR in RR ? yR(RR, JR, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: OW
-      }) : WW[iW] = OW)(WW, "symbol" != typeof iW ? iW + "" : iW, OW),
-      NW = {};
-    ((WW, iW) => {
-      for (var OW in iW) mW(WW, OW, {
-        get: iW[OW],
+        value: GR
+      }) : RR[JR] = GR)(RR, "symbol" != typeof JR ? JR + "" : JR, GR),
+      uR = {};
+    ((RR, JR) => {
+      for (var GR in JR) yR(RR, GR, {
+        get: JR[GR],
         enumerable: !0
       })
-    })(NW, {
-      Graph: () => fW,
-      alg: () => UW
+    })(uR, {
+      Graph: () => mR,
+      alg: () => nR
     });
-    var PW = Object.defineProperty,
-      LW = (WW, iW) => {
-        for (var OW in iW) PW(WW, OW, {
-          get: iW[OW],
+    var ZR = Object.defineProperty,
+      qR = (RR, JR) => {
+        for (var GR in JR) ZR(RR, GR, {
+          get: JR[GR],
           enumerable: !0
         })
       },
-      cW = class {
-        constructor(WW) {
-          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, WW && (this._isDirected = !("directed" in WW) || WW.directed, this._isMultigraph = "multigraph" in WW && WW.multigraph, this._isCompound = "compound" in WW && WW.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
+      iR = class {
+        constructor(RR) {
+          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, RR && (this._isDirected = !("directed" in RR) || RR.directed, this._isMultigraph = "multigraph" in RR && RR.multigraph, this._isCompound = "compound" in RR && RR.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
         }
         isDirected() {
           return this._isDirected
@@ -49,14 +49,14 @@ export const modules = {
         isCompound() {
           return this._isCompound
         }
-        setGraph(WW) {
-          return this._label = WW, this
+        setGraph(RR) {
+          return this._label = RR, this
         }
         graph() {
           return this._label
         }
-        setDefaultNodeLabel(WW) {
-          return this._defaultNodeLabelFn = "function" != typeof WW ? () => WW : WW, this
+        setDefaultNodeLabel(RR) {
+          return this._defaultNodeLabelFn = "function" != typeof RR ? () => RR : RR, this
         }
         nodeCount() {
           return this._nodeCount
@@ -65,105 +65,105 @@ export const modules = {
           return Object.keys(this._nodes)
         }
         sources() {
-          return this.nodes().filter((WW => 0 === Object.keys(this._in[WW]).length))
+          return this.nodes().filter((RR => 0 === Object.keys(this._in[RR]).length))
         }
         sinks() {
-          return this.nodes().filter((WW => 0 === Object.keys(this._out[WW]).length))
+          return this.nodes().filter((RR => 0 === Object.keys(this._out[RR]).length))
         }
-        setNodes(WW, iW) {
-          return WW.forEach((WW => {
-            void 0 !== iW ? this.setNode(WW, iW) : this.setNode(WW)
+        setNodes(RR, JR) {
+          return RR.forEach((RR => {
+            void 0 !== JR ? this.setNode(RR, JR) : this.setNode(RR)
           })), this
         }
-        setNode(WW, iW) {
-          return WW in this._nodes ? (arguments.length > 1 && (this._nodes[WW] = iW), this) : (this._nodes[WW] = arguments.length > 1 ? iW : this._defaultNodeLabelFn(WW), this._isCompound && (this._parent[WW] = "\0", this._children[WW] = {}, this._children["\0"][WW] = !0), this._in[WW] = {}, this._preds[WW] = {}, this._out[WW] = {}, this._sucs[WW] = {}, ++this._nodeCount, this)
+        setNode(RR, JR) {
+          return RR in this._nodes ? (arguments.length > 1 && (this._nodes[RR] = JR), this) : (this._nodes[RR] = arguments.length > 1 ? JR : this._defaultNodeLabelFn(RR), this._isCompound && (this._parent[RR] = "\0", this._children[RR] = {}, this._children["\0"][RR] = !0), this._in[RR] = {}, this._preds[RR] = {}, this._out[RR] = {}, this._sucs[RR] = {}, ++this._nodeCount, this)
         }
-        node(WW) {
-          return this._nodes[WW]
+        node(RR) {
+          return this._nodes[RR]
         }
-        hasNode(WW) {
-          return WW in this._nodes
+        hasNode(RR) {
+          return RR in this._nodes
         }
-        removeNode(WW) {
-          if (WW in this._nodes) {
-            let iW = WW => this.removeEdge(this._edgeObjs[WW]);
-            delete this._nodes[WW], this._isCompound && (this._removeFromParentsChildList(WW), delete this._parent[WW], this.children(WW).forEach((WW => {
-              this.setParent(WW)
-            })), delete this._children[WW]), Object.keys(this._in[WW]).forEach(iW), delete this._in[WW], delete this._preds[WW], Object.keys(this._out[WW]).forEach(iW), delete this._out[WW], delete this._sucs[WW], --this._nodeCount
+        removeNode(RR) {
+          if (RR in this._nodes) {
+            let JR = RR => this.removeEdge(this._edgeObjs[RR]);
+            delete this._nodes[RR], this._isCompound && (this._removeFromParentsChildList(RR), delete this._parent[RR], this.children(RR).forEach((RR => {
+              this.setParent(RR)
+            })), delete this._children[RR]), Object.keys(this._in[RR]).forEach(JR), delete this._in[RR], delete this._preds[RR], Object.keys(this._out[RR]).forEach(JR), delete this._out[RR], delete this._sucs[RR], --this._nodeCount
           }
           return this
         }
-        setParent(WW, iW) {
+        setParent(RR, JR) {
           if (!this._isCompound) throw new Error("Cannot set parent in a non-compound graph");
-          if (void 0 === iW) iW = "\0";
+          if (void 0 === JR) JR = "\0";
           else {
-            for (let OW = iW += ""; void 0 !== OW; OW = this.parent(OW))
-              if (OW === WW) throw new Error("Setting " + iW + " as parent of " + WW + " would create a cycle");
-            this.setNode(iW)
+            for (let GR = JR += ""; void 0 !== GR; GR = this.parent(GR))
+              if (GR === RR) throw new Error("Setting " + JR + " as parent of " + RR + " would create a cycle");
+            this.setNode(JR)
           }
-          return this.setNode(WW), this._removeFromParentsChildList(WW), this._parent[WW] = iW, this._children[iW][WW] = !0, this
+          return this.setNode(RR), this._removeFromParentsChildList(RR), this._parent[RR] = JR, this._children[JR][RR] = !0, this
         }
-        parent(WW) {
+        parent(RR) {
           if (this._isCompound) {
-            let iW = this._parent[WW];
-            if ("\0" !== iW) return iW
+            let JR = this._parent[RR];
+            if ("\0" !== JR) return JR
           }
         }
         children() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
           if (this._isCompound) {
-            let iW = this._children[WW];
-            if (iW) return Object.keys(iW)
+            let JR = this._children[RR];
+            if (JR) return Object.keys(JR)
           } else {
-            if ("\0" === WW) return this.nodes();
-            if (this.hasNode(WW)) return []
+            if ("\0" === RR) return this.nodes();
+            if (this.hasNode(RR)) return []
           }
           return []
         }
-        predecessors(WW) {
-          let iW = this._preds[WW];
-          if (iW) return Object.keys(iW)
+        predecessors(RR) {
+          let JR = this._preds[RR];
+          if (JR) return Object.keys(JR)
         }
-        successors(WW) {
-          let iW = this._sucs[WW];
-          if (iW) return Object.keys(iW)
+        successors(RR) {
+          let JR = this._sucs[RR];
+          if (JR) return Object.keys(JR)
         }
-        neighbors(WW) {
-          let iW = this.predecessors(WW);
-          if (iW) {
-            let OW = new Set(iW),
-              mW = this.successors(WW);
-            if (mW)
-              for (let WW of mW) OW.add(WW);
-            return Array.from(OW.values())
+        neighbors(RR) {
+          let JR = this.predecessors(RR);
+          if (JR) {
+            let GR = new Set(JR),
+              yR = this.successors(RR);
+            if (yR)
+              for (let RR of yR) GR.add(RR);
+            return Array.from(GR.values())
           }
         }
-        isLeaf(WW) {
-          var iW;
-          let OW;
-          return OW = this.isDirected() ? this.successors(WW) : this.neighbors(WW), 0 === (null != (iW = null == OW ? void 0 : OW.length) ? iW : 0)
+        isLeaf(RR) {
+          var JR;
+          let GR;
+          return GR = this.isDirected() ? this.successors(RR) : this.neighbors(RR), 0 === (null != (JR = null == GR ? void 0 : GR.length) ? JR : 0)
         }
-        filterNodes(WW) {
-          let iW = new this.constructor({
+        filterNodes(RR) {
+          let JR = new this.constructor({
             directed: this._isDirected,
             multigraph: this._isMultigraph,
             compound: this._isCompound
           });
-          iW.setGraph(this.graph()), Object.entries(this._nodes).forEach((OW => {
-            let [mW, EW] = OW;
-            WW(mW) && iW.setNode(mW, EW)
-          })), Object.values(this._edgeObjs).forEach((WW => {
-            iW.hasNode(WW.v) && iW.hasNode(WW.w) && iW.setEdge(WW, this.edge(WW))
+          JR.setGraph(this.graph()), Object.entries(this._nodes).forEach((GR => {
+            let [yR, tR] = GR;
+            RR(yR) && JR.setNode(yR, tR)
+          })), Object.values(this._edgeObjs).forEach((RR => {
+            JR.hasNode(RR.v) && JR.hasNode(RR.w) && JR.setEdge(RR, this.edge(RR))
           }));
-          let OW = {},
-            mW = WW => {
-              let EW = this.parent(WW);
-              return !EW || iW.hasNode(EW) ? (OW[WW] = EW, EW) : EW in OW ? OW[EW] : mW(EW)
+          let GR = {},
+            yR = RR => {
+              let tR = this.parent(RR);
+              return !tR || JR.hasNode(tR) ? (GR[RR] = tR, tR) : tR in GR ? GR[tR] : yR(tR)
             };
-          return this._isCompound && iW.nodes().forEach((WW => iW.setParent(WW, mW(WW)))), iW
+          return this._isCompound && JR.nodes().forEach((RR => JR.setParent(RR, yR(RR)))), JR
         }
-        setDefaultEdgeLabel(WW) {
-          return this._defaultEdgeLabelFn = "function" != typeof WW ? () => WW : WW, this
+        setDefaultEdgeLabel(RR) {
+          return this._defaultEdgeLabelFn = "function" != typeof RR ? () => RR : RR, this
         }
         edgeCount() {
           return this._edgeCount
@@ -171,226 +171,226 @@ export const modules = {
         edges() {
           return Object.values(this._edgeObjs)
         }
-        setPath(WW, iW) {
-          return WW.reduce(((WW, OW) => (void 0 !== iW ? this.setEdge(WW, OW, iW) : this.setEdge(WW, OW), OW))), this
+        setPath(RR, JR) {
+          return RR.reduce(((RR, GR) => (void 0 !== JR ? this.setEdge(RR, GR, JR) : this.setEdge(RR, GR), GR))), this
         }
-        setEdge(WW, iW, OW, mW) {
-          let EW, NW, PW, LW, cW = !1;
-          "object" == typeof WW && null !== WW && "v" in WW ? (EW = WW.v, NW = WW.w, PW = WW.name, 2 === arguments.length && (LW = iW, cW = !0)) : (EW = WW, NW = iW, PW = mW, arguments.length > 2 && (LW = OW, cW = !0)), EW = "" + EW, NW = "" + NW, void 0 !== PW && (PW = "" + PW);
-          let tW = ZW(this._isDirected, EW, NW, PW);
-          if (tW in this._edgeLabels) return cW && (this._edgeLabels[tW] = LW), this;
-          if (void 0 !== PW && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
-          this.setNode(EW), this.setNode(NW), this._edgeLabels[tW] = cW ? LW : this._defaultEdgeLabelFn(EW, NW, PW);
-          let xW = function(WW, iW, OW, mW) {
-            let EW = "" + iW,
-              NW = "" + OW;
-            if (!WW && EW > NW) {
-              let WW = EW;
-              EW = NW, NW = WW
+        setEdge(RR, JR, GR, yR) {
+          let tR, uR, ZR, qR, iR = !1;
+          "object" == typeof RR && null !== RR && "v" in RR ? (tR = RR.v, uR = RR.w, ZR = RR.name, 2 === arguments.length && (qR = JR, iR = !0)) : (tR = RR, uR = JR, ZR = yR, arguments.length > 2 && (qR = GR, iR = !0)), tR = "" + tR, uR = "" + uR, void 0 !== ZR && (ZR = "" + ZR);
+          let VR = KR(this._isDirected, tR, uR, ZR);
+          if (VR in this._edgeLabels) return iR && (this._edgeLabels[VR] = qR), this;
+          if (void 0 !== ZR && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
+          this.setNode(tR), this.setNode(uR), this._edgeLabels[VR] = iR ? qR : this._defaultEdgeLabelFn(tR, uR, ZR);
+          let wR = function(RR, JR, GR, yR) {
+            let tR = "" + JR,
+              uR = "" + GR;
+            if (!RR && tR > uR) {
+              let RR = tR;
+              tR = uR, uR = RR
             }
-            let PW = {
-              v: EW,
-              w: NW
+            let ZR = {
+              v: tR,
+              w: uR
             };
-            return mW && (PW.name = mW), PW
-          }(this._isDirected, EW, NW, PW);
-          return EW = xW.v, NW = xW.w, Object.freeze(xW), this._edgeObjs[tW] = xW, wW(this._preds[NW], EW), wW(this._sucs[EW], NW), this._in[NW][tW] = xW, this._out[EW][tW] = xW, this._edgeCount++, this
+            return yR && (ZR.name = yR), ZR
+          }(this._isDirected, tR, uR, ZR);
+          return tR = wR.v, uR = wR.w, Object.freeze(wR), this._edgeObjs[VR] = wR, fR(this._preds[uR], tR), fR(this._sucs[tR], uR), this._in[uR][VR] = wR, this._out[tR][VR] = wR, this._edgeCount++, this
         }
-        edge(WW, iW, OW) {
-          let mW = 1 === arguments.length ? xW(this._isDirected, WW) : ZW(this._isDirected, WW, iW, OW);
-          return this._edgeLabels[mW]
+        edge(RR, JR, GR) {
+          let yR = 1 === arguments.length ? wR(this._isDirected, RR) : KR(this._isDirected, RR, JR, GR);
+          return this._edgeLabels[yR]
         }
-        edgeAsObj(WW, iW, OW) {
-          let mW = 1 === arguments.length ? this.edge(WW) : this.edge(WW, iW, OW);
-          return "object" != typeof mW || null === mW ? {
-            label: mW
-          } : mW
+        edgeAsObj(RR, JR, GR) {
+          let yR = 1 === arguments.length ? this.edge(RR) : this.edge(RR, JR, GR);
+          return "object" != typeof yR || null === yR ? {
+            label: yR
+          } : yR
         }
-        hasEdge(WW, iW, OW) {
-          return (1 === arguments.length ? xW(this._isDirected, WW) : ZW(this._isDirected, WW, iW, OW)) in this._edgeLabels
+        hasEdge(RR, JR, GR) {
+          return (1 === arguments.length ? wR(this._isDirected, RR) : KR(this._isDirected, RR, JR, GR)) in this._edgeLabels
         }
-        removeEdge(WW, iW, OW) {
-          let mW = 1 === arguments.length ? xW(this._isDirected, WW) : ZW(this._isDirected, WW, iW, OW),
-            EW = this._edgeObjs[mW];
-          if (EW) {
-            let WW = EW.v,
-              iW = EW.w;
-            delete this._edgeLabels[mW], delete this._edgeObjs[mW], tW(this._preds[iW], WW), tW(this._sucs[WW], iW), delete this._in[iW][mW], delete this._out[WW][mW], this._edgeCount--
+        removeEdge(RR, JR, GR) {
+          let yR = 1 === arguments.length ? wR(this._isDirected, RR) : KR(this._isDirected, RR, JR, GR),
+            tR = this._edgeObjs[yR];
+          if (tR) {
+            let RR = tR.v,
+              JR = tR.w;
+            delete this._edgeLabels[yR], delete this._edgeObjs[yR], VR(this._preds[JR], RR), VR(this._sucs[RR], JR), delete this._in[JR][yR], delete this._out[RR][yR], this._edgeCount--
           }
           return this
         }
-        inEdges(WW, iW) {
-          return this.isDirected() ? this.filterEdges(this._in[WW], WW, iW) : this.nodeEdges(WW, iW)
+        inEdges(RR, JR) {
+          return this.isDirected() ? this.filterEdges(this._in[RR], RR, JR) : this.nodeEdges(RR, JR)
         }
-        outEdges(WW, iW) {
-          return this.isDirected() ? this.filterEdges(this._out[WW], WW, iW) : this.nodeEdges(WW, iW)
+        outEdges(RR, JR) {
+          return this.isDirected() ? this.filterEdges(this._out[RR], RR, JR) : this.nodeEdges(RR, JR)
         }
-        nodeEdges(WW, iW) {
-          if (WW in this._nodes) return this.filterEdges({
-            ...this._in[WW],
-            ...this._out[WW]
-          }, WW, iW)
+        nodeEdges(RR, JR) {
+          if (RR in this._nodes) return this.filterEdges({
+            ...this._in[RR],
+            ...this._out[RR]
+          }, RR, JR)
         }
-        _removeFromParentsChildList(WW) {
-          delete this._children[this._parent[WW]][WW]
+        _removeFromParentsChildList(RR) {
+          delete this._children[this._parent[RR]][RR]
         }
-        filterEdges(WW, iW, OW) {
-          if (!WW) return;
-          let mW = Object.values(WW);
-          return OW ? mW.filter((WW => WW.v === iW && WW.w === OW || WW.v === OW && WW.w === iW)) : mW
+        filterEdges(RR, JR, GR) {
+          if (!RR) return;
+          let yR = Object.values(RR);
+          return GR ? yR.filter((RR => RR.v === JR && RR.w === GR || RR.v === GR && RR.w === JR)) : yR
         }
       };
 
-    function wW(WW, iW) {
-      WW[iW] ? WW[iW]++ : WW[iW] = 1
+    function fR(RR, JR) {
+      RR[JR] ? RR[JR]++ : RR[JR] = 1
     }
 
-    function tW(WW, iW) {
-      void 0 !== WW[iW] && !--WW[iW] && delete WW[iW]
+    function VR(RR, JR) {
+      void 0 !== RR[JR] && !--RR[JR] && delete RR[JR]
     }
 
-    function ZW(WW, iW, OW, mW) {
-      let EW = "" + iW,
-        NW = "" + OW;
-      if (!WW && EW > NW) {
-        let WW = EW;
-        EW = NW, NW = WW
+    function KR(RR, JR, GR, yR) {
+      let tR = "" + JR,
+        uR = "" + GR;
+      if (!RR && tR > uR) {
+        let RR = tR;
+        tR = uR, uR = RR
       }
-      return EW + "\x01" + NW + "\x01" + (void 0 === mW ? "\0" : mW)
+      return tR + "\x01" + uR + "\x01" + (void 0 === yR ? "\0" : yR)
     }
 
-    function xW(WW, iW) {
-      return ZW(WW, iW.v, iW.w, iW.name)
+    function wR(RR, JR) {
+      return KR(RR, JR.v, JR.w, JR.name)
     }
 
-    function lW(WW) {
-      let iW = {
+    function rR(RR) {
+      let JR = {
           options: {
-            directed: WW.isDirected(),
-            multigraph: WW.isMultigraph(),
-            compound: WW.isCompound()
+            directed: RR.isDirected(),
+            multigraph: RR.isMultigraph(),
+            compound: RR.isCompound()
           },
-          nodes: AW(WW),
-          edges: bW(WW)
+          nodes: eR(RR),
+          edges: aR(RR)
         },
-        OW = WW.graph();
-      return void 0 !== OW && (iW.value = structuredClone(OW)), iW
+        GR = RR.graph();
+      return void 0 !== GR && (JR.value = structuredClone(GR)), JR
     }
 
-    function AW(WW) {
-      return WW.nodes().map((iW => {
-        let OW = WW.node(iW),
-          mW = WW.parent(iW),
-          EW = {
-            v: iW
+    function eR(RR) {
+      return RR.nodes().map((JR => {
+        let GR = RR.node(JR),
+          yR = RR.parent(JR),
+          tR = {
+            v: JR
           };
-        return void 0 !== OW && (EW.value = OW), void 0 !== mW && (EW.parent = mW), EW
+        return void 0 !== GR && (tR.value = GR), void 0 !== yR && (tR.parent = yR), tR
       }))
     }
 
-    function bW(WW) {
-      return WW.edges().map((iW => {
-        let OW = WW.edge(iW),
-          mW = {
-            v: iW.v,
-            w: iW.w
+    function aR(RR) {
+      return RR.edges().map((JR => {
+        let GR = RR.edge(JR),
+          yR = {
+            v: JR.v,
+            w: JR.w
           };
-        return void 0 !== iW.name && (mW.name = iW.name), void 0 !== OW && (mW.value = OW), mW
+        return void 0 !== JR.name && (yR.name = JR.name), void 0 !== GR && (yR.value = GR), yR
       }))
     }
 
-    function jW(WW) {
-      let iW = new cW(WW.options);
-      return void 0 !== WW.value && iW.setGraph(WW.value), WW.nodes.forEach((WW => {
-        iW.setNode(WW.v, WW.value), WW.parent && iW.setParent(WW.v, WW.parent)
-      })), WW.edges.forEach((WW => {
-        iW.setEdge({
-          v: WW.v,
-          w: WW.w,
-          name: WW.name
-        }, WW.value)
-      })), iW
+    function LR(RR) {
+      let JR = new iR(RR.options);
+      return void 0 !== RR.value && JR.setGraph(RR.value), RR.nodes.forEach((RR => {
+        JR.setNode(RR.v, RR.value), RR.parent && JR.setParent(RR.v, RR.parent)
+      })), RR.edges.forEach((RR => {
+        JR.setEdge({
+          v: RR.v,
+          w: RR.w,
+          name: RR.name
+        }, RR.value)
+      })), JR
     }
-    LW({}, {
-      read: () => jW,
-      write: () => lW
+    qR({}, {
+      read: () => LR,
+      write: () => rR
     });
-    var UW = {};
-    LW(UW, {
-      CycleException: () => nW,
-      bellmanFord: () => sW,
-      components: () => MW,
-      dijkstra: () => YW,
-      dijkstraAll: () => yW,
-      findCycles: () => JW,
-      floydWarshall: () => HW,
-      isAcyclic: () => oW,
-      postorder: () => gW,
-      preorder: () => DW,
-      prim: () => VW,
-      shortestPaths: () => pW,
-      tarjan: () => TW,
-      topsort: () => uW
+    var nR = {};
+    qR(nR, {
+      CycleException: () => vR,
+      bellmanFord: () => WR,
+      components: () => AR,
+      dijkstra: () => MR,
+      dijkstraAll: () => BR,
+      findCycles: () => pR,
+      floydWarshall: () => bR,
+      isAcyclic: () => xR,
+      postorder: () => oR,
+      preorder: () => cR,
+      prim: () => PR,
+      shortestPaths: () => IR,
+      tarjan: () => lR,
+      topsort: () => OR
     });
-    var kW = () => 1;
+    var UR = () => 1;
 
-    function sW(WW, iW, OW, mW) {
-      return function(WW, iW, OW, mW) {
-        let EW, NW = {},
-          PW = 0,
-          LW = WW.nodes(),
-          cW = function(WW) {
-            let iW = NW[WW.v],
-              mW = NW[WW.w];
-            if (!iW || !mW) return;
-            let PW = OW(WW);
-            iW.distance + PW < mW.distance && (NW[WW.w] = {
-              distance: iW.distance + PW,
-              predecessor: WW.v
-            }, EW = !0)
+    function WR(RR, JR, GR, yR) {
+      return function(RR, JR, GR, yR) {
+        let tR, uR = {},
+          ZR = 0,
+          qR = RR.nodes(),
+          iR = function(RR) {
+            let JR = uR[RR.v],
+              yR = uR[RR.w];
+            if (!JR || !yR) return;
+            let ZR = GR(RR);
+            JR.distance + ZR < yR.distance && (uR[RR.w] = {
+              distance: JR.distance + ZR,
+              predecessor: RR.v
+            }, tR = !0)
           },
-          wW = function() {
-            LW.forEach((function(WW) {
-              mW(WW).forEach((function(iW) {
-                let OW = iW.v === WW ? iW.v : iW.w,
-                  mW = OW === iW.v ? iW.w : iW.v;
-                cW({
-                  v: OW,
-                  w: mW
+          fR = function() {
+            qR.forEach((function(RR) {
+              yR(RR).forEach((function(JR) {
+                let GR = JR.v === RR ? JR.v : JR.w,
+                  yR = GR === JR.v ? JR.w : JR.v;
+                iR({
+                  v: GR,
+                  w: yR
                 })
               }))
             }))
           };
-        LW.forEach((function(WW) {
-          let OW = WW === iW ? 0 : Number.POSITIVE_INFINITY;
-          NW[WW] = {
-            distance: OW,
+        qR.forEach((function(RR) {
+          let GR = RR === JR ? 0 : Number.POSITIVE_INFINITY;
+          uR[RR] = {
+            distance: GR,
             predecessor: ""
           }
         }));
-        let tW = LW.length;
-        for (let ZW = 1; ZW < tW && (EW = !1, PW++, wW(), EW); ZW++);
-        if (PW === tW - 1 && (EW = !1, wW(), EW)) throw new Error("The graph contains a negative weight cycle");
-        return NW
-      }(WW, String(iW), OW || kW, mW || function(iW) {
-        var OW;
-        return null != (OW = WW.outEdges(iW)) ? OW : []
+        let VR = qR.length;
+        for (let KR = 1; KR < VR && (tR = !1, ZR++, fR(), tR); KR++);
+        if (ZR === VR - 1 && (tR = !1, fR(), tR)) throw new Error("The graph contains a negative weight cycle");
+        return uR
+      }(RR, String(JR), GR || UR, yR || function(JR) {
+        var GR;
+        return null != (GR = RR.outEdges(JR)) ? GR : []
       })
     }
 
-    function MW(WW) {
-      let iW, OW = {},
-        mW = [];
+    function AR(RR) {
+      let JR, GR = {},
+        yR = [];
 
-      function EW(mW) {
-        var NW, PW;
-        mW in OW || (OW[mW] = !0, iW.push(mW), null == (NW = WW.successors(mW)) || NW.forEach(EW), null == (PW = WW.predecessors(mW)) || PW.forEach(EW))
+      function tR(yR) {
+        var uR, ZR;
+        yR in GR || (GR[yR] = !0, JR.push(yR), null == (uR = RR.successors(yR)) || uR.forEach(tR), null == (ZR = RR.predecessors(yR)) || ZR.forEach(tR))
       }
-      return WW.nodes().forEach((function(WW) {
-        iW = [], EW(WW), iW.length && mW.push(iW)
-      })), mW
+      return RR.nodes().forEach((function(RR) {
+        JR = [], tR(RR), JR.length && yR.push(JR)
+      })), yR
     }
-    var KW = class {
+    var CR = class {
         constructor() {
           this._arr = [], this._keyIndices = {}
         }
@@ -398,1915 +398,1915 @@ export const modules = {
           return this._arr.length
         }
         keys() {
-          return this._arr.map((WW => WW.key))
+          return this._arr.map((RR => RR.key))
         }
-        has(WW) {
-          return WW in this._keyIndices
+        has(RR) {
+          return RR in this._keyIndices
         }
-        priority(WW) {
-          let iW = this._keyIndices[WW];
-          if (void 0 !== iW) return this._arr[iW].priority
+        priority(RR) {
+          let JR = this._keyIndices[RR];
+          if (void 0 !== JR) return this._arr[JR].priority
         }
         min() {
           if (0 === this.size()) throw new Error("Queue underflow");
           return this._arr[0].key
         }
-        add(WW, iW) {
-          let OW = this._keyIndices,
-            mW = String(WW);
-          if (!(mW in OW)) {
-            let WW = this._arr,
-              EW = WW.length;
-            return OW[mW] = EW, WW.push({
-              key: mW,
-              priority: iW
-            }), this._decrease(EW), !0
+        add(RR, JR) {
+          let GR = this._keyIndices,
+            yR = String(RR);
+          if (!(yR in GR)) {
+            let RR = this._arr,
+              tR = RR.length;
+            return GR[yR] = tR, RR.push({
+              key: yR,
+              priority: JR
+            }), this._decrease(tR), !0
           }
           return !1
         }
         removeMin() {
           if (0 === this.size()) throw new Error("Queue underflow");
           this._swap(0, this._arr.length - 1);
-          let WW = this._arr.pop();
-          return delete this._keyIndices[WW.key], this._heapify(0), WW.key
+          let RR = this._arr.pop();
+          return delete this._keyIndices[RR.key], this._heapify(0), RR.key
         }
-        decrease(WW, iW) {
-          let OW = this._keyIndices[WW];
-          if (void 0 === OW) throw new Error(`Key not found: ${WW}`);
-          let mW = this._arr[OW].priority;
-          if (iW > mW) throw new Error(`New priority is greater than current priority. Key: ${WW} Old: ${mW} New: ${iW}`);
-          this._arr[OW].priority = iW, this._decrease(OW)
+        decrease(RR, JR) {
+          let GR = this._keyIndices[RR];
+          if (void 0 === GR) throw new Error(`Key not found: ${RR}`);
+          let yR = this._arr[GR].priority;
+          if (JR > yR) throw new Error(`New priority is greater than current priority. Key: ${RR} Old: ${yR} New: ${JR}`);
+          this._arr[GR].priority = JR, this._decrease(GR)
         }
-        _heapify(WW) {
-          let iW = this._arr,
-            OW = 2 * WW,
-            mW = OW + 1,
-            EW = WW;
-          OW < iW.length && (EW = iW[OW].priority < iW[EW].priority ? OW : EW, mW < iW.length && (EW = iW[mW].priority < iW[EW].priority ? mW : EW), EW !== WW && (this._swap(WW, EW), this._heapify(EW)))
+        _heapify(RR) {
+          let JR = this._arr,
+            GR = 2 * RR,
+            yR = GR + 1,
+            tR = RR;
+          GR < JR.length && (tR = JR[GR].priority < JR[tR].priority ? GR : tR, yR < JR.length && (tR = JR[yR].priority < JR[tR].priority ? yR : tR), tR !== RR && (this._swap(RR, tR), this._heapify(tR)))
         }
-        _decrease(WW) {
-          let iW, OW = this._arr,
-            mW = OW[WW].priority;
-          for (; 0 !== WW && (iW = WW >> 1, !(OW[iW].priority < mW));) this._swap(WW, iW), WW = iW
+        _decrease(RR) {
+          let JR, GR = this._arr,
+            yR = GR[RR].priority;
+          for (; 0 !== RR && (JR = RR >> 1, !(GR[JR].priority < yR));) this._swap(RR, JR), RR = JR
         }
-        _swap(WW, iW) {
-          let OW = this._arr,
-            mW = this._keyIndices,
-            EW = OW[WW],
-            NW = OW[iW];
-          OW[WW] = NW, OW[iW] = EW, mW[NW.key] = WW, mW[EW.key] = iW
+        _swap(RR, JR) {
+          let GR = this._arr,
+            yR = this._keyIndices,
+            tR = GR[RR],
+            uR = GR[JR];
+          GR[RR] = uR, GR[JR] = tR, yR[uR.key] = RR, yR[tR.key] = JR
         }
       },
-      SW = () => 1;
+      XR = () => 1;
 
-    function YW(WW, iW, OW, mW) {
-      return function(WW, iW, OW, mW) {
-        let EW, NW, PW = {},
-          LW = new KW,
-          cW = function(WW) {
-            let iW = WW.v !== EW ? WW.v : WW.w,
-              mW = PW[iW];
-            if (!mW) return;
-            let cW = OW(WW),
-              wW = NW.distance + cW;
-            if (cW < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + WW + " Weight: " + cW);
-            wW < mW.distance && (mW.distance = wW, mW.predecessor = EW, LW.decrease(iW, wW))
+    function MR(RR, JR, GR, yR) {
+      return function(RR, JR, GR, yR) {
+        let tR, uR, ZR = {},
+          qR = new CR,
+          iR = function(RR) {
+            let JR = RR.v !== tR ? RR.v : RR.w,
+              yR = ZR[JR];
+            if (!yR) return;
+            let iR = GR(RR),
+              fR = uR.distance + iR;
+            if (iR < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + RR + " Weight: " + iR);
+            fR < yR.distance && (yR.distance = fR, yR.predecessor = tR, qR.decrease(JR, fR))
           };
-        for (WW.nodes().forEach((function(WW) {
-            let OW = WW === iW ? 0 : Number.POSITIVE_INFINITY;
-            PW[WW] = {
-              distance: OW,
+        for (RR.nodes().forEach((function(RR) {
+            let GR = RR === JR ? 0 : Number.POSITIVE_INFINITY;
+            ZR[RR] = {
+              distance: GR,
               predecessor: ""
-            }, LW.add(WW, OW)
-          })); LW.size() > 0;) {
-          EW = LW.removeMin();
-          let WW = PW[EW];
-          if (!WW || WW.distance === Number.POSITIVE_INFINITY) break;
-          NW = WW, mW(EW).forEach(cW)
+            }, qR.add(RR, GR)
+          })); qR.size() > 0;) {
+          tR = qR.removeMin();
+          let RR = ZR[tR];
+          if (!RR || RR.distance === Number.POSITIVE_INFINITY) break;
+          uR = RR, yR(tR).forEach(iR)
         }
-        return PW
-      }(WW, String(iW), OW || SW, mW || function(iW) {
-        var OW;
-        return null != (OW = WW.outEdges(iW)) ? OW : []
+        return ZR
+      }(RR, String(JR), GR || XR, yR || function(JR) {
+        var GR;
+        return null != (GR = RR.outEdges(JR)) ? GR : []
       })
     }
 
-    function yW(WW, iW, OW) {
-      return WW.nodes().reduce((function(mW, EW) {
-        return mW[EW] = YW(WW, EW, iW, OW), mW
+    function BR(RR, JR, GR) {
+      return RR.nodes().reduce((function(yR, tR) {
+        return yR[tR] = MR(RR, tR, JR, GR), yR
       }), {})
     }
 
-    function TW(WW) {
-      let iW = 0,
-        OW = [],
-        mW = {},
-        EW = [];
+    function lR(RR) {
+      let JR = 0,
+        GR = [],
+        yR = {},
+        tR = [];
 
-      function NW(PW) {
-        var LW;
-        let cW = mW[PW] = {
+      function uR(ZR) {
+        var qR;
+        let iR = yR[ZR] = {
           onStack: !0,
-          lowlink: iW,
-          index: iW++
+          lowlink: JR,
+          index: JR++
         };
-        if (OW.push(PW), null == (LW = WW.successors(PW)) || LW.forEach((function(WW) {
-            if (WW in mW) {
-              let iW = mW[WW];
-              null != iW && iW.onStack && (cW.lowlink = Math.min(cW.lowlink, iW.index))
+        if (GR.push(ZR), null == (qR = RR.successors(ZR)) || qR.forEach((function(RR) {
+            if (RR in yR) {
+              let JR = yR[RR];
+              null != JR && JR.onStack && (iR.lowlink = Math.min(iR.lowlink, JR.index))
             } else {
-              NW(WW);
-              let iW = mW[WW];
-              iW && (cW.lowlink = Math.min(cW.lowlink, iW.lowlink))
+              uR(RR);
+              let JR = yR[RR];
+              JR && (iR.lowlink = Math.min(iR.lowlink, JR.lowlink))
             }
-          })), cW.lowlink === cW.index) {
-          let WW, iW = [];
+          })), iR.lowlink === iR.index) {
+          let RR, JR = [];
           do {
-            WW = OW.pop();
-            let EW = mW[WW];
-            EW && (EW.onStack = !1), iW.push(WW)
-          } while (PW !== WW);
-          EW.push(iW)
+            RR = GR.pop();
+            let tR = yR[RR];
+            tR && (tR.onStack = !1), JR.push(RR)
+          } while (ZR !== RR);
+          tR.push(JR)
         }
       }
-      return WW.nodes().forEach((function(WW) {
-        WW in mW || NW(WW)
-      })), EW
+      return RR.nodes().forEach((function(RR) {
+        RR in yR || uR(RR)
+      })), tR
     }
 
-    function JW(WW) {
-      return TW(WW).filter((function(iW) {
-        var OW;
-        let mW = iW[0];
-        return !!mW && (iW.length > 1 || 1 === iW.length && (null != (OW = WW.outEdges(mW, mW)) ? OW : []).length > 0)
+    function pR(RR) {
+      return lR(RR).filter((function(JR) {
+        var GR;
+        let yR = JR[0];
+        return !!yR && (JR.length > 1 || 1 === JR.length && (null != (GR = RR.outEdges(yR, yR)) ? GR : []).length > 0)
       }))
     }
-    var hW = () => 1;
+    var gR = () => 1;
 
-    function HW(WW, iW, OW) {
-      return function(WW, iW, OW) {
-        let mW = {},
-          EW = WW.nodes();
-        return EW.forEach((function(WW) {
-          let NW = {};
-          mW[WW] = NW, NW[WW] = {
+    function bR(RR, JR, GR) {
+      return function(RR, JR, GR) {
+        let yR = {},
+          tR = RR.nodes();
+        return tR.forEach((function(RR) {
+          let uR = {};
+          yR[RR] = uR, uR[RR] = {
             distance: 0,
             predecessor: ""
-          }, EW.forEach((function(iW) {
-            WW !== iW && (NW[iW] = {
+          }, tR.forEach((function(JR) {
+            RR !== JR && (uR[JR] = {
               distance: Number.POSITIVE_INFINITY,
               predecessor: ""
             })
-          })), OW(WW).forEach((function(OW) {
-            let mW = OW.v === WW ? OW.w : OW.v,
-              EW = iW(OW);
-            NW[mW] = {
-              distance: EW,
-              predecessor: WW
+          })), GR(RR).forEach((function(GR) {
+            let yR = GR.v === RR ? GR.w : GR.v,
+              tR = JR(GR);
+            uR[yR] = {
+              distance: tR,
+              predecessor: RR
             }
           }))
-        })), EW.forEach((function(WW) {
-          let iW = mW[WW];
-          iW && EW.forEach((function(OW) {
-            let NW = mW[OW];
-            NW && EW.forEach((function(OW) {
-              let mW = NW[WW],
-                EW = iW[OW],
-                PW = NW[OW];
-              if (mW && EW && PW) {
-                let WW = mW.distance + EW.distance;
-                WW < PW.distance && (PW.distance = WW, PW.predecessor = EW.predecessor)
+        })), tR.forEach((function(RR) {
+          let JR = yR[RR];
+          JR && tR.forEach((function(GR) {
+            let uR = yR[GR];
+            uR && tR.forEach((function(GR) {
+              let yR = uR[RR],
+                tR = JR[GR],
+                ZR = uR[GR];
+              if (yR && tR && ZR) {
+                let RR = yR.distance + tR.distance;
+                RR < ZR.distance && (ZR.distance = RR, ZR.predecessor = tR.predecessor)
               }
             }))
           }))
-        })), mW
-      }(WW, iW || hW, OW || function(iW) {
-        var OW;
-        return null != (OW = WW.outEdges(iW)) ? OW : []
+        })), yR
+      }(RR, JR || gR, GR || function(JR) {
+        var GR;
+        return null != (GR = RR.outEdges(JR)) ? GR : []
       })
     }
-    var nW = class extends Error {
-      constructor(WW) {
-        super(WW), this.name = "CycleException"
+    var vR = class extends Error {
+      constructor(RR) {
+        super(RR), this.name = "CycleException"
       }
     };
 
-    function uW(WW) {
-      let iW = {},
-        OW = {},
-        mW = [];
-      if (WW.sinks().forEach((function EW(NW) {
-          var PW;
-          if (NW in OW) throw new nW;
-          NW in iW || (OW[NW] = !0, iW[NW] = !0, null == (PW = WW.predecessors(NW)) || PW.forEach(EW), delete OW[NW], mW.push(NW))
-        })), Object.keys(iW).length !== WW.nodeCount()) throw new nW;
-      return mW
+    function OR(RR) {
+      let JR = {},
+        GR = {},
+        yR = [];
+      if (RR.sinks().forEach((function tR(uR) {
+          var ZR;
+          if (uR in GR) throw new vR;
+          uR in JR || (GR[uR] = !0, JR[uR] = !0, null == (ZR = RR.predecessors(uR)) || ZR.forEach(tR), delete GR[uR], yR.push(uR))
+        })), Object.keys(JR).length !== RR.nodeCount()) throw new vR;
+      return yR
     }
 
-    function oW(WW) {
+    function xR(RR) {
       try {
-        uW(WW)
-      } catch (iW) {
-        if (iW instanceof nW) return !1;
-        throw iW
+        OR(RR)
+      } catch (JR) {
+        if (JR instanceof vR) return !1;
+        throw JR
       }
       return !0
     }
 
-    function dW(WW, iW, OW, mW, EW) {
-      Array.isArray(iW) || (iW = [iW]);
-      let NW = iW => {
-          var OW;
-          return null != (OW = WW.isDirected() ? WW.successors(iW) : WW.neighbors(iW)) ? OW : []
+    function NR(RR, JR, GR, yR, tR) {
+      Array.isArray(JR) || (JR = [JR]);
+      let uR = JR => {
+          var GR;
+          return null != (GR = RR.isDirected() ? RR.successors(JR) : RR.neighbors(JR)) ? GR : []
         },
-        PW = {};
-      return iW.forEach((function(iW) {
-        if (!WW.hasNode(iW)) throw new Error("Graph does not have node: " + iW);
-        EW = eW(WW, iW, "post" === OW, PW, NW, mW, EW)
-      })), EW
+        ZR = {};
+      return JR.forEach((function(JR) {
+        if (!RR.hasNode(JR)) throw new Error("Graph does not have node: " + JR);
+        tR = DR(RR, JR, "post" === GR, ZR, uR, yR, tR)
+      })), tR
     }
 
-    function eW(WW, iW, OW, mW, EW, NW, PW) {
-      return iW in mW || (mW[iW] = !0, OW || (PW = NW(PW, iW)), EW(iW).forEach((function(iW) {
-        PW = eW(WW, iW, OW, mW, EW, NW, PW)
-      })), OW && (PW = NW(PW, iW))), PW
+    function DR(RR, JR, GR, yR, tR, uR, ZR) {
+      return JR in yR || (yR[JR] = !0, GR || (ZR = uR(ZR, JR)), tR(JR).forEach((function(JR) {
+        ZR = DR(RR, JR, GR, yR, tR, uR, ZR)
+      })), GR && (ZR = uR(ZR, JR))), ZR
     }
 
-    function vW(WW, iW, OW) {
-      return dW(WW, iW, OW, (function(WW, iW) {
-        return WW.push(iW), WW
+    function HR(RR, JR, GR) {
+      return NR(RR, JR, GR, (function(RR, JR) {
+        return RR.push(JR), RR
       }), [])
     }
 
-    function gW(WW, iW) {
-      return vW(WW, iW, "post")
+    function oR(RR, JR) {
+      return HR(RR, JR, "post")
     }
 
-    function DW(WW, iW) {
-      return vW(WW, iW, "pre")
+    function cR(RR, JR) {
+      return HR(RR, JR, "pre")
     }
 
-    function VW(WW, iW) {
-      var OW;
-      let mW, EW = new cW,
-        NW = {},
-        PW = new KW;
+    function PR(RR, JR) {
+      var GR;
+      let yR, tR = new iR,
+        uR = {},
+        ZR = new CR;
 
-      function LW(WW) {
-        let OW = WW.v === mW ? WW.w : WW.v,
-          EW = PW.priority(OW);
-        if (void 0 !== EW) {
-          let LW = iW(WW);
-          LW < EW && (NW[OW] = mW, PW.decrease(OW, LW))
+      function qR(RR) {
+        let GR = RR.v === yR ? RR.w : RR.v,
+          tR = ZR.priority(GR);
+        if (void 0 !== tR) {
+          let qR = JR(RR);
+          qR < tR && (uR[GR] = yR, ZR.decrease(GR, qR))
         }
       }
-      if (0 === WW.nodeCount()) return EW;
-      WW.nodes().forEach((function(WW) {
-        PW.add(WW, Number.POSITIVE_INFINITY), EW.setNode(WW)
+      if (0 === RR.nodeCount()) return tR;
+      RR.nodes().forEach((function(RR) {
+        ZR.add(RR, Number.POSITIVE_INFINITY), tR.setNode(RR)
       }));
-      let wW = WW.nodes()[0];
-      void 0 !== wW && PW.decrease(wW, 0);
-      let tW = !1;
-      for (; PW.size() > 0;) {
-        if (mW = PW.removeMin(), mW in NW) EW.setEdge(mW, NW[mW]);
+      let fR = RR.nodes()[0];
+      void 0 !== fR && ZR.decrease(fR, 0);
+      let VR = !1;
+      for (; ZR.size() > 0;) {
+        if (yR = ZR.removeMin(), yR in uR) tR.setEdge(yR, uR[yR]);
         else {
-          if (tW) throw new Error("Input graph is not connected: " + WW);
-          tW = !0
+          if (VR) throw new Error("Input graph is not connected: " + RR);
+          VR = !0
         }
-        null == (OW = WW.nodeEdges(mW)) || OW.forEach(LW)
+        null == (GR = RR.nodeEdges(yR)) || GR.forEach(qR)
       }
-      return EW
+      return tR
     }
 
-    function pW(WW, iW, OW, mW) {
-      return function(WW, iW, OW, mW) {
-        if (void 0 === OW) return YW(WW, iW, OW, mW);
-        let EW = !1,
-          NW = WW.nodes();
-        for (let PW = 0; PW < NW.length; PW++) {
-          let LW = NW[PW];
-          if (void 0 === LW) continue;
-          let cW = mW(LW);
-          for (let WW = 0; WW < cW.length; WW++) {
-            let iW = cW[WW];
-            if (!iW) continue;
-            let mW = iW.v === LW ? iW.v : iW.w;
-            OW({
-              v: mW,
-              w: mW === iW.v ? iW.w : iW.v
-            }) < 0 && (EW = !0)
+    function IR(RR, JR, GR, yR) {
+      return function(RR, JR, GR, yR) {
+        if (void 0 === GR) return MR(RR, JR, GR, yR);
+        let tR = !1,
+          uR = RR.nodes();
+        for (let ZR = 0; ZR < uR.length; ZR++) {
+          let qR = uR[ZR];
+          if (void 0 === qR) continue;
+          let iR = yR(qR);
+          for (let RR = 0; RR < iR.length; RR++) {
+            let JR = iR[RR];
+            if (!JR) continue;
+            let yR = JR.v === qR ? JR.v : JR.w;
+            GR({
+              v: yR,
+              w: yR === JR.v ? JR.w : JR.v
+            }) < 0 && (tR = !0)
           }
-          if (EW) return sW(WW, iW, OW, mW)
+          if (tR) return WR(RR, JR, GR, yR)
         }
-        return YW(WW, iW, OW, mW)
-      }(WW, iW, OW, null != mW ? mW : iW => {
-        var OW;
-        return null != (OW = WW.outEdges(iW)) ? OW : []
+        return MR(RR, JR, GR, yR)
+      }(RR, JR, GR, null != yR ? yR : JR => {
+        var GR;
+        return null != (GR = RR.outEdges(JR)) ? GR : []
       })
     }
-    var fW = cW;
+    var mR = iR;
 
-    function CW(WW, iW, OW, mW) {
-      let EW = mW;
-      for (; WW.hasNode(EW);) EW = QW(mW);
-      return OW.dummy = iW, WW.setNode(EW, OW), EW
+    function zR(RR, JR, GR, yR) {
+      let tR = yR;
+      for (; RR.hasNode(tR);) tR = hR(yR);
+      return GR.dummy = JR, RR.setNode(tR, GR), tR
     }
 
-    function XW(WW) {
-      let iW = new fW({
-        multigraph: WW.isMultigraph()
-      }).setGraph(WW.graph());
-      return WW.nodes().forEach((OW => {
-        WW.children(OW).length || iW.setNode(OW, WW.node(OW))
-      })), WW.edges().forEach((OW => {
-        iW.setEdge(OW, WW.edge(OW))
-      })), iW
+    function SR(RR) {
+      let JR = new mR({
+        multigraph: RR.isMultigraph()
+      }).setGraph(RR.graph());
+      return RR.nodes().forEach((GR => {
+        RR.children(GR).length || JR.setNode(GR, RR.node(GR))
+      })), RR.edges().forEach((GR => {
+        JR.setEdge(GR, RR.edge(GR))
+      })), JR
     }
 
-    function BW(WW, iW) {
-      let OW, mW, EW = WW.x,
-        NW = WW.y,
-        PW = iW.x - EW,
-        LW = iW.y - NW,
-        cW = WW.width / 2,
-        wW = WW.height / 2;
-      if (!PW && !LW) throw new Error("Not possible to find intersection inside of the rectangle");
-      return Math.abs(LW) * cW > Math.abs(PW) * wW ? (LW < 0 && (wW = -wW), OW = wW * PW / LW, mW = wW) : (PW < 0 && (cW = -cW), OW = cW, mW = cW * LW / PW), {
-        x: EW + OW,
-        y: NW + mW
+    function jR(RR, JR) {
+      let GR, yR, tR = RR.x,
+        uR = RR.y,
+        ZR = JR.x - tR,
+        qR = JR.y - uR,
+        iR = RR.width / 2,
+        fR = RR.height / 2;
+      if (!ZR && !qR) throw new Error("Not possible to find intersection inside of the rectangle");
+      return Math.abs(qR) * iR > Math.abs(ZR) * fR ? (qR < 0 && (fR = -fR), GR = fR * ZR / qR, yR = fR) : (ZR < 0 && (iR = -iR), GR = iR, yR = iR * qR / ZR), {
+        x: tR + GR,
+        y: uR + yR
       }
     }
 
-    function qW(WW) {
-      let iW = Wi(aW(WW) + 1).map((() => []));
-      return WW.nodes().forEach((OW => {
-        let mW = WW.node(OW),
-          EW = mW.rank;
-        void 0 !== EW && (iW[EW] || (iW[EW] = []), iW[EW][mW.order] = OW)
-      })), iW
+    function dR(RR) {
+      let JR = RJ(QR(RR) + 1).map((() => []));
+      return RR.nodes().forEach((GR => {
+        let yR = RR.node(GR),
+          tR = yR.rank;
+        void 0 !== tR && (JR[tR] || (JR[tR] = []), JR[tR][yR.order] = GR)
+      })), JR
     }
 
-    function RW(WW, iW, OW, mW) {
-      let EW = {
+    function ER(RR, JR, GR, yR) {
+      let tR = {
         width: 0,
         height: 0
       };
-      return arguments.length >= 4 && (EW.rank = OW, EW.order = mW), CW(WW, "border", EW, iW)
+      return arguments.length >= 4 && (tR.rank = GR, tR.order = yR), zR(RR, "border", tR, JR)
     }
-    var GW = 65535;
+    var YR = 65535;
 
-    function IW(WW, iW) {
-      if (iW.length > GW) {
-        let OW = function(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GW,
-            OW = [];
-          for (let mW = 0; mW < WW.length; mW += iW) {
-            let EW = WW.slice(mW, mW + iW);
-            OW.push(EW)
+    function kR(RR, JR) {
+      if (JR.length > YR) {
+        let GR = function(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YR,
+            GR = [];
+          for (let yR = 0; yR < RR.length; yR += JR) {
+            let tR = RR.slice(yR, yR + JR);
+            GR.push(tR)
           }
-          return OW
-        }(iW);
-        return WW(...OW.map((iW => WW(...iW))))
+          return GR
+        }(JR);
+        return RR(...GR.map((JR => RR(...JR))))
       }
-      return WW(...iW)
+      return RR(...JR)
     }
 
-    function aW(WW) {
-      let iW = WW.nodes().map((iW => {
-        let OW = WW.node(iW).rank;
-        return void 0 === OW ? Number.MIN_VALUE : OW
+    function QR(RR) {
+      let JR = RR.nodes().map((JR => {
+        let GR = RR.node(JR).rank;
+        return void 0 === GR ? Number.MIN_VALUE : GR
       }));
-      return IW(Math.max, iW)
+      return kR(Math.max, JR)
     }
 
-    function rW(WW, iW) {
-      let OW = Date.now();
+    function FR(RR, JR) {
+      let GR = Date.now();
       try {
-        return iW()
+        return JR()
       } finally {
-        console.log(WW + " time: " + (Date.now() - OW) + "ms")
+        console.log(RR + " time: " + (Date.now() - GR) + "ms")
       }
     }
 
-    function zW(WW, iW) {
-      return iW()
+    function TR(RR, JR) {
+      return JR()
     }
-    var FW = 0;
+    var sR = 0;
 
-    function QW(WW) {
-      return WW + "" + ++FW
-    }
-
-    function Wi(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      null == iW && (iW = WW, WW = 0);
-      let mW = WW => WW < iW;
-      OW < 0 && (mW = WW => iW < WW);
-      let EW = [];
-      for (let NW = WW; mW(NW); NW += OW) EW.push(NW);
-      return EW
+    function hR(RR) {
+      return RR + "" + ++sR
     }
 
-    function ii(WW, iW) {
-      let OW = {};
-      for (let mW of iW) void 0 !== WW[mW] && (OW[mW] = WW[mW]);
-      return OW
+    function RJ(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      null == JR && (JR = RR, RR = 0);
+      let yR = RR => RR < JR;
+      GR < 0 && (yR = RR => JR < RR);
+      let tR = [];
+      for (let uR = RR; yR(uR); uR += GR) tR.push(uR);
+      return tR
     }
 
-    function Oi(WW, iW) {
-      let OW;
-      return OW = "string" == typeof iW ? WW => WW[iW] : iW, Object.entries(WW).reduce(((WW, iW) => {
-        let [mW, EW] = iW;
-        return WW[mW] = OW(EW, mW), WW
+    function JJ(RR, JR) {
+      let GR = {};
+      for (let yR of JR) void 0 !== RR[yR] && (GR[yR] = RR[yR]);
+      return GR
+    }
+
+    function GJ(RR, JR) {
+      let GR;
+      return GR = "string" == typeof JR ? RR => RR[JR] : JR, Object.entries(RR).reduce(((RR, JR) => {
+        let [yR, tR] = JR;
+        return RR[yR] = GR(tR, yR), RR
       }), {})
     }
-    var mi = "\0";
+    var yJ = "\0";
 
-    function Ei(WW, iW, OW) {
-      var mW, EW, NW, PW, LW, cW;
-      if (!(WW && iW && OW && "edge" === iW.dummy && "edge" === OW.dummy && iW.edgeObj && OW.edgeObj && WW[iW.edgeObj.v] && WW[OW.edgeObj.v] && WW[iW.edgeObj.w] && WW[OW.edgeObj.w])) return 0;
-      let wW = !0;
-      iW.edgeObj.w === OW.edgeObj.w && (wW = !1);
-      let tW = wW ? null != (EW = null == (mW = WW[iW.edgeObj.v]) ? void 0 : mW.rank) ? EW : NaN : null != (PW = null == (NW = WW[iW.edgeObj.w]) ? void 0 : NW.rank) ? PW : NaN,
-        ZW = Object.entries(WW).find((WW => {
-          var OW, mW;
-          return (null == (OW = WW[1].edgeObj) ? void 0 : OW.v) === iW.edgeObj.v && (null == (mW = WW[1].edgeObj) ? void 0 : mW.w) === iW.edgeObj.w && WW[1].rank === tW
+    function tJ(RR, JR, GR) {
+      var yR, tR, uR, ZR, qR, iR;
+      if (!(RR && JR && GR && "edge" === JR.dummy && "edge" === GR.dummy && JR.edgeObj && GR.edgeObj && RR[JR.edgeObj.v] && RR[GR.edgeObj.v] && RR[JR.edgeObj.w] && RR[GR.edgeObj.w])) return 0;
+      let fR = !0;
+      JR.edgeObj.w === GR.edgeObj.w && (fR = !1);
+      let VR = fR ? null != (tR = null == (yR = RR[JR.edgeObj.v]) ? void 0 : yR.rank) ? tR : NaN : null != (ZR = null == (uR = RR[JR.edgeObj.w]) ? void 0 : uR.rank) ? ZR : NaN,
+        KR = Object.entries(RR).find((RR => {
+          var GR, yR;
+          return (null == (GR = RR[1].edgeObj) ? void 0 : GR.v) === JR.edgeObj.v && (null == (yR = RR[1].edgeObj) ? void 0 : yR.w) === JR.edgeObj.w && RR[1].rank === VR
         })),
-        xW = Object.entries(WW).find((WW => {
-          var iW, mW;
-          return (null == (iW = WW[1].edgeObj) ? void 0 : iW.v) === OW.edgeObj.v && (null == (mW = WW[1].edgeObj) ? void 0 : mW.w) === OW.edgeObj.w && WW[1].rank === tW
+        wR = Object.entries(RR).find((RR => {
+          var JR, yR;
+          return (null == (JR = RR[1].edgeObj) ? void 0 : JR.v) === GR.edgeObj.v && (null == (yR = RR[1].edgeObj) ? void 0 : yR.w) === GR.edgeObj.w && RR[1].rank === VR
         }));
-      if (!ZW || !xW) return 0;
-      let lW = null != (LW = ZW[1].order) ? LW : NaN,
-        AW = null != (cW = xW[1].order) ? cW : NaN;
-      return isNaN(lW - AW) ? 0 : lW - AW
+      if (!KR || !wR) return 0;
+      let rR = null != (qR = KR[1].order) ? qR : NaN,
+        eR = null != (iR = wR[1].order) ? iR : NaN;
+      return isNaN(rR - eR) ? 0 : rR - eR
     }
-    var Ni = "3.1.1";
+    var uJ = "3.1.1";
 
-    function Pi(WW) {
-      WW._prev._next = WW._next, WW._next._prev = WW._prev, delete WW._next, delete WW._prev
+    function ZJ(RR) {
+      RR._prev._next = RR._next, RR._next._prev = RR._prev, delete RR._next, delete RR._prev
     }
 
-    function Li(WW, iW) {
-      if ("_next" !== WW && "_prev" !== WW) return iW
+    function qJ(RR, JR) {
+      if ("_next" !== RR && "_prev" !== RR) return JR
     }
-    var ci = class {
+    var iJ = class {
         constructor() {
-          EW(this, "_sentinel");
-          let WW = {};
-          WW._next = WW._prev = WW, this._sentinel = WW
+          tR(this, "_sentinel");
+          let RR = {};
+          RR._next = RR._prev = RR, this._sentinel = RR
         }
         dequeue() {
-          let WW = this._sentinel,
-            iW = WW._prev;
-          if (iW !== WW) return Pi(iW), iW
+          let RR = this._sentinel,
+            JR = RR._prev;
+          if (JR !== RR) return ZJ(JR), JR
         }
-        enqueue(WW) {
-          let iW = this._sentinel;
-          WW._prev && WW._next && Pi(WW), WW._next = iW._next, iW._next._prev = WW, iW._next = WW, WW._prev = iW
+        enqueue(RR) {
+          let JR = this._sentinel;
+          RR._prev && RR._next && ZJ(RR), RR._next = JR._next, JR._next._prev = RR, JR._next = RR, RR._prev = JR
         }
         toString() {
-          let WW = [],
-            iW = this._sentinel,
-            OW = iW._prev;
-          for (; OW !== iW;) WW.push(JSON.stringify(OW, Li)), OW = OW._prev;
-          return "[" + WW.join(", ") + "]"
+          let RR = [],
+            JR = this._sentinel,
+            GR = JR._prev;
+          for (; GR !== JR;) RR.push(JSON.stringify(GR, qJ)), GR = GR._prev;
+          return "[" + RR.join(", ") + "]"
         }
       },
-      wi = () => 1;
+      fJ = () => 1;
 
-    function ti(WW, iW) {
-      if (WW.nodeCount() <= 1) return [];
-      let OW = function(WW, iW) {
-        let OW = new fW,
-          mW = 0,
-          EW = 0;
-        WW.nodes().forEach((WW => {
-          OW.setNode(WW, {
-            v: WW,
+    function VJ(RR, JR) {
+      if (RR.nodeCount() <= 1) return [];
+      let GR = function(RR, JR) {
+        let GR = new mR,
+          yR = 0,
+          tR = 0;
+        RR.nodes().forEach((RR => {
+          GR.setNode(RR, {
+            v: RR,
             in: 0,
             out: 0
           })
-        })), WW.edges().forEach((WW => {
-          let NW = OW.edge(WW.v, WW.w) || 0,
-            PW = iW(WW),
-            LW = NW + PW;
-          OW.setEdge(WW.v, WW.w, LW);
-          let cW = OW.node(WW.v),
-            wW = OW.node(WW.w);
-          EW = Math.max(EW, cW.out += PW), mW = Math.max(mW, wW.in += PW)
+        })), RR.edges().forEach((RR => {
+          let uR = GR.edge(RR.v, RR.w) || 0,
+            ZR = JR(RR),
+            qR = uR + ZR;
+          GR.setEdge(RR.v, RR.w, qR);
+          let iR = GR.node(RR.v),
+            fR = GR.node(RR.w);
+          tR = Math.max(tR, iR.out += ZR), yR = Math.max(yR, fR.in += ZR)
         }));
-        let NW = function(WW) {
-            let iW = [];
-            for (let OW = 0; OW < WW; OW++) iW.push(OW);
-            return iW
-          }(EW + mW + 3).map((() => new ci)),
-          PW = mW + 1;
-        return OW.nodes().forEach((WW => {
-          xi(NW, PW, OW.node(WW))
+        let uR = function(RR) {
+            let JR = [];
+            for (let GR = 0; GR < RR; GR++) JR.push(GR);
+            return JR
+          }(tR + yR + 3).map((() => new iJ)),
+          ZR = yR + 1;
+        return GR.nodes().forEach((RR => {
+          wJ(uR, ZR, GR.node(RR))
         })), {
-          graph: OW,
-          buckets: NW,
-          zeroIdx: PW
+          graph: GR,
+          buckets: uR,
+          zeroIdx: ZR
         }
-      }(WW, iW || wi);
-      return function(WW, iW, OW) {
-        var mW;
-        let EW, NW = [],
-          PW = iW[iW.length - 1],
-          LW = iW[0];
-        for (; WW.nodeCount();) {
-          for (; EW = LW.dequeue();) Zi(WW, iW, OW, EW);
-          for (; EW = PW.dequeue();) Zi(WW, iW, OW, EW);
-          if (WW.nodeCount())
-            for (let PW = iW.length - 2; PW > 0; --PW)
-              if (EW = null == (mW = iW[PW]) ? void 0 : mW.dequeue(), EW) {
-                NW = NW.concat(Zi(WW, iW, OW, EW, !0) || []);
+      }(RR, JR || fJ);
+      return function(RR, JR, GR) {
+        var yR;
+        let tR, uR = [],
+          ZR = JR[JR.length - 1],
+          qR = JR[0];
+        for (; RR.nodeCount();) {
+          for (; tR = qR.dequeue();) KJ(RR, JR, GR, tR);
+          for (; tR = ZR.dequeue();) KJ(RR, JR, GR, tR);
+          if (RR.nodeCount())
+            for (let ZR = JR.length - 2; ZR > 0; --ZR)
+              if (tR = null == (yR = JR[ZR]) ? void 0 : yR.dequeue(), tR) {
+                uR = uR.concat(KJ(RR, JR, GR, tR, !0) || []);
                 break
               }
         }
-        return NW
-      }(OW.graph, OW.buckets, OW.zeroIdx).flatMap((iW => WW.outEdges(iW.v, iW.w) || []))
+        return uR
+      }(GR.graph, GR.buckets, GR.zeroIdx).flatMap((JR => RR.outEdges(JR.v, JR.w) || []))
     }
 
-    function Zi(WW, iW, OW, mW, EW) {
-      let NW = [],
-        PW = EW ? NW : void 0;
-      return (WW.inEdges(mW.v) || []).forEach((mW => {
-        let PW = WW.edge(mW),
-          LW = WW.node(mW.v);
-        EW && NW.push({
-          v: mW.v,
-          w: mW.w
-        }), LW.out -= PW, xi(iW, OW, LW)
-      })), (WW.outEdges(mW.v) || []).forEach((mW => {
-        let EW = WW.edge(mW),
-          NW = mW.w,
-          PW = WW.node(NW);
-        PW.in -= EW, xi(iW, OW, PW)
-      })), WW.removeNode(mW.v), PW
+    function KJ(RR, JR, GR, yR, tR) {
+      let uR = [],
+        ZR = tR ? uR : void 0;
+      return (RR.inEdges(yR.v) || []).forEach((yR => {
+        let ZR = RR.edge(yR),
+          qR = RR.node(yR.v);
+        tR && uR.push({
+          v: yR.v,
+          w: yR.w
+        }), qR.out -= ZR, wJ(JR, GR, qR)
+      })), (RR.outEdges(yR.v) || []).forEach((yR => {
+        let tR = RR.edge(yR),
+          uR = yR.w,
+          ZR = RR.node(uR);
+        ZR.in -= tR, wJ(JR, GR, ZR)
+      })), RR.removeNode(yR.v), ZR
     }
 
-    function xi(WW, iW, OW) {
-      var mW, EW, NW;
-      OW.out ? OW.in ? null == (NW = WW[OW.out - OW.in + iW]) || NW.enqueue(OW) : null == (EW = WW[WW.length - 1]) || EW.enqueue(OW) : null == (mW = WW[0]) || mW.enqueue(OW)
+    function wJ(RR, JR, GR) {
+      var yR, tR, uR;
+      GR.out ? GR.in ? null == (uR = RR[GR.out - GR.in + JR]) || uR.enqueue(GR) : null == (tR = RR[RR.length - 1]) || tR.enqueue(GR) : null == (yR = RR[0]) || yR.enqueue(GR)
     }
 
-    function li(WW, iW) {
-      var OW;
-      ("greedy" === WW.graph().acyclicer ? ti(WW, (OW = WW, WW => OW.edge(WW).weight)) : function(WW, iW) {
-        let OW = [],
-          mW = {},
-          EW = {};
+    function rJ(RR, JR) {
+      var GR;
+      ("greedy" === RR.graph().acyclicer ? VJ(RR, (GR = RR, RR => GR.edge(RR).weight)) : function(RR, JR) {
+        let GR = [],
+          yR = {},
+          tR = {};
 
-        function NW(iW) {
-          Object.hasOwn(EW, iW) || (EW[iW] = !0, mW[iW] = !0, WW.outEdges(iW).forEach((WW => {
-            Object.hasOwn(mW, WW.w) ? OW.push(WW) : NW(WW.w)
-          })), delete mW[iW])
+        function uR(JR) {
+          Object.hasOwn(tR, JR) || (tR[JR] = !0, yR[JR] = !0, RR.outEdges(JR).forEach((RR => {
+            Object.hasOwn(yR, RR.w) ? GR.push(RR) : uR(RR.w)
+          })), delete yR[JR])
         }
 
-        function PW(NW) {
-          var LW;
-          Object.hasOwn(EW, NW) || (EW[NW] = !0, mW[NW] = !0, null == (LW = WW.outEdges(NW)) || LW.forEach((EW => {
-            var LW, cW;
-            Object.hasOwn(mW, EW.w) || (null == (LW = iW.node(NW)) ? void 0 : LW.rank) > (null == (cW = iW.node(EW.w)) ? void 0 : cW.rank) && function(WW, iW, OW) {
-              let mW = new Set;
+        function ZR(uR) {
+          var qR;
+          Object.hasOwn(tR, uR) || (tR[uR] = !0, yR[uR] = !0, null == (qR = RR.outEdges(uR)) || qR.forEach((tR => {
+            var qR, iR;
+            Object.hasOwn(yR, tR.w) || (null == (qR = JR.node(uR)) ? void 0 : qR.rank) > (null == (iR = JR.node(tR.w)) ? void 0 : iR.rank) && function(RR, JR, GR) {
+              let yR = new Set;
 
-              function EW(iW) {
-                var NW;
-                if (WW.sources().includes(iW)) return !0;
-                mW.add(iW);
-                for (let PW of null != (NW = WW.inEdges(iW)) ? NW : [])
-                  if ((PW.v !== OW.v || PW.w !== OW.w) && !mW.has(PW.v) && EW(PW.v)) return !0;
+              function tR(JR) {
+                var uR;
+                if (RR.sources().includes(JR)) return !0;
+                yR.add(JR);
+                for (let ZR of null != (uR = RR.inEdges(JR)) ? uR : [])
+                  if ((ZR.v !== GR.v || ZR.w !== GR.w) && !yR.has(ZR.v) && tR(ZR.v)) return !0;
                 return !1
               }
-              return EW(iW)
-            }(WW, EW.w, EW) ? OW.push(EW) : PW(EW.w)
-          })), delete mW[NW])
+              return tR(JR)
+            }(RR, tR.w, tR) ? GR.push(tR) : ZR(tR.w)
+          })), delete yR[uR])
         }
-        let LW = NW;
-        return iW && "function" == typeof iW.node && (LW = PW), WW.sources().forEach(LW), WW.nodes().forEach(LW), OW
-      }(WW, null != iW ? iW : null)).forEach((iW => {
-        let OW = WW.edge(iW);
-        WW.removeEdge(iW), OW.forwardName = iW.name, OW.reversed = !0, WW.setEdge(iW.w, iW.v, OW, QW("rev"))
+        let qR = uR;
+        return JR && "function" == typeof JR.node && (qR = ZR), RR.sources().forEach(qR), RR.nodes().forEach(qR), GR
+      }(RR, null != JR ? JR : null)).forEach((JR => {
+        let GR = RR.edge(JR);
+        RR.removeEdge(JR), GR.forwardName = JR.name, GR.reversed = !0, RR.setEdge(JR.w, JR.v, GR, hR("rev"))
       }))
     }
 
-    function Ai(WW) {
-      WW.graph().dummyChains = [], WW.edges().forEach((iW => function(WW, iW) {
-        let OW, mW, EW, NW = iW.v,
-          PW = WW.node(NW).rank,
-          LW = iW.w,
-          cW = WW.node(LW).rank,
-          wW = iW.name,
-          tW = WW.edge(iW),
-          ZW = tW.labelRank;
-        if (cW === PW + 1) return;
-        for (WW.removeEdge(iW), EW = 0, ++PW; PW < cW; ++EW, ++PW) tW.points = [], mW = {
+    function eJ(RR) {
+      RR.graph().dummyChains = [], RR.edges().forEach((JR => function(RR, JR) {
+        let GR, yR, tR, uR = JR.v,
+          ZR = RR.node(uR).rank,
+          qR = JR.w,
+          iR = RR.node(qR).rank,
+          fR = JR.name,
+          VR = RR.edge(JR),
+          KR = VR.labelRank;
+        if (iR === ZR + 1) return;
+        for (RR.removeEdge(JR), tR = 0, ++ZR; ZR < iR; ++tR, ++ZR) VR.points = [], yR = {
           width: 0,
           height: 0,
-          edgeLabel: tW,
-          edgeObj: iW,
-          rank: PW
-        }, OW = CW(WW, "edge", mW, "_d"), PW === ZW && (mW.width = tW.width, mW.height = tW.height, mW.dummy = "edge-label", mW.labelpos = tW.labelpos), WW.setEdge(NW, OW, {
-          weight: tW.weight
-        }, wW), 0 === EW && WW.graph().dummyChains.push(OW), NW = OW;
-        WW.setEdge(NW, LW, {
-          weight: tW.weight
-        }, wW)
-      }(WW, iW)))
+          edgeLabel: VR,
+          edgeObj: JR,
+          rank: ZR
+        }, GR = zR(RR, "edge", yR, "_d"), ZR === KR && (yR.width = VR.width, yR.height = VR.height, yR.dummy = "edge-label", yR.labelpos = VR.labelpos), RR.setEdge(uR, GR, {
+          weight: VR.weight
+        }, fR), 0 === tR && RR.graph().dummyChains.push(GR), uR = GR;
+        RR.setEdge(uR, qR, {
+          weight: VR.weight
+        }, fR)
+      }(RR, JR)))
     }
 
-    function bi(WW) {
-      let iW = {};
-      WW.sources().forEach((function OW(mW) {
-        let EW = WW.node(mW);
-        if (Object.hasOwn(iW, mW)) return EW.rank;
-        iW[mW] = !0;
-        let NW = WW.outEdges(mW),
-          PW = NW ? NW.map((iW => null == iW ? Number.POSITIVE_INFINITY : OW(iW.w) - WW.edge(iW).minlen)) : [],
-          LW = IW(Math.min, PW);
-        return LW === Number.POSITIVE_INFINITY && (LW = 0), EW.rank = LW
+    function aJ(RR) {
+      let JR = {};
+      RR.sources().forEach((function GR(yR) {
+        let tR = RR.node(yR);
+        if (Object.hasOwn(JR, yR)) return tR.rank;
+        JR[yR] = !0;
+        let uR = RR.outEdges(yR),
+          ZR = uR ? uR.map((JR => null == JR ? Number.POSITIVE_INFINITY : GR(JR.w) - RR.edge(JR).minlen)) : [],
+          qR = kR(Math.min, ZR);
+        return qR === Number.POSITIVE_INFINITY && (qR = 0), tR.rank = qR
       }))
     }
 
-    function ji(WW, iW) {
-      return WW.node(iW.w).rank - WW.node(iW.v).rank - WW.edge(iW).minlen
+    function LJ(RR, JR) {
+      return RR.node(JR.w).rank - RR.node(JR.v).rank - RR.edge(JR).minlen
     }
-    var Ui = function(WW) {
-      let iW = new fW({
+    var nJ = function(RR) {
+      let JR = new mR({
           directed: !1
         }),
-        OW = WW.nodes();
-      if (0 === OW.length) throw new Error("Graph must have at least one node");
-      let mW, EW, NW = OW[0],
-        PW = WW.nodeCount();
-      for (iW.setNode(NW, {}); ki(iW, WW) < PW && (mW = si(iW, WW), mW);) EW = iW.hasNode(mW.v) ? ji(WW, mW) : -ji(WW, mW), Mi(iW, WW, EW);
-      return iW
+        GR = RR.nodes();
+      if (0 === GR.length) throw new Error("Graph must have at least one node");
+      let yR, tR, uR = GR[0],
+        ZR = RR.nodeCount();
+      for (JR.setNode(uR, {}); UJ(JR, RR) < ZR && (yR = WJ(JR, RR), yR);) tR = JR.hasNode(yR.v) ? LJ(RR, yR) : -LJ(RR, yR), AJ(JR, RR, tR);
+      return JR
     };
 
-    function ki(WW, iW) {
-      return WW.nodes().forEach((function OW(mW) {
-        let EW = iW.nodeEdges(mW);
-        EW && EW.forEach((EW => {
-          let NW = EW.v,
-            PW = mW === NW ? EW.w : NW;
-          !WW.hasNode(PW) && !ji(iW, EW) && (WW.setNode(PW, {}), WW.setEdge(mW, PW, {}), OW(PW))
+    function UJ(RR, JR) {
+      return RR.nodes().forEach((function GR(yR) {
+        let tR = JR.nodeEdges(yR);
+        tR && tR.forEach((tR => {
+          let uR = tR.v,
+            ZR = yR === uR ? tR.w : uR;
+          !RR.hasNode(ZR) && !LJ(JR, tR) && (RR.setNode(ZR, {}), RR.setEdge(yR, ZR, {}), GR(ZR))
         }))
-      })), WW.nodeCount()
+      })), RR.nodeCount()
     }
 
-    function si(WW, iW) {
-      return iW.edges().reduce(((OW, mW) => {
-        let EW = Number.POSITIVE_INFINITY;
-        return WW.hasNode(mW.v) !== WW.hasNode(mW.w) && (EW = ji(iW, mW)), EW < OW[0] ? [EW, mW] : OW
+    function WJ(RR, JR) {
+      return JR.edges().reduce(((GR, yR) => {
+        let tR = Number.POSITIVE_INFINITY;
+        return RR.hasNode(yR.v) !== RR.hasNode(yR.w) && (tR = LJ(JR, yR)), tR < GR[0] ? [tR, yR] : GR
       }), [Number.POSITIVE_INFINITY, null])[1]
     }
 
-    function Mi(WW, iW, OW) {
-      WW.nodes().forEach((WW => iW.node(WW).rank += OW))
+    function AJ(RR, JR, GR) {
+      RR.nodes().forEach((RR => JR.node(RR).rank += GR))
     }
     var {
-      preorder: Ki,
-      postorder: Si
-    } = UW, Yi = yi;
+      preorder: CJ,
+      postorder: XJ
+    } = nR, MJ = BJ;
 
-    function yi(WW) {
-      WW = function(WW) {
-        let iW = (new fW).setGraph(WW.graph());
-        return WW.nodes().forEach((OW => iW.setNode(OW, WW.node(OW)))), WW.edges().forEach((OW => {
-          let mW = iW.edge(OW.v, OW.w) || {
+    function BJ(RR) {
+      RR = function(RR) {
+        let JR = (new mR).setGraph(RR.graph());
+        return RR.nodes().forEach((GR => JR.setNode(GR, RR.node(GR)))), RR.edges().forEach((GR => {
+          let yR = JR.edge(GR.v, GR.w) || {
               weight: 0,
               minlen: 1
             },
-            EW = WW.edge(OW);
-          iW.setEdge(OW.v, OW.w, {
-            weight: mW.weight + EW.weight,
-            minlen: Math.max(mW.minlen, EW.minlen)
+            tR = RR.edge(GR);
+          JR.setEdge(GR.v, GR.w, {
+            weight: yR.weight + tR.weight,
+            minlen: Math.max(yR.minlen, tR.minlen)
           })
-        })), iW
-      }(WW), bi(WW);
-      let iW, OW, mW = Ui(WW);
-      for (Hi(mW), Ti(mW, WW); iW = ui(mW);) OW = oi(mW, WW, iW), di(mW, WW, iW, OW)
+        })), JR
+      }(RR), aJ(RR);
+      let JR, GR, yR = nJ(RR);
+      for (gJ(yR), lJ(yR, RR); JR = vJ(yR);) GR = OJ(yR, RR, JR), xJ(yR, RR, JR, GR)
     }
 
-    function Ti(WW, iW) {
-      let OW = Si(WW, WW.nodes());
-      OW = OW.slice(0, OW.length - 1), OW.forEach((OW => function(WW, iW, OW) {
-        let mW = WW.node(OW).parent,
-          EW = WW.edge(OW, mW);
-        EW.cutvalue = Ji(WW, iW, OW)
-      }(WW, iW, OW)))
+    function lJ(RR, JR) {
+      let GR = XJ(RR, RR.nodes());
+      GR = GR.slice(0, GR.length - 1), GR.forEach((GR => function(RR, JR, GR) {
+        let yR = RR.node(GR).parent,
+          tR = RR.edge(GR, yR);
+        tR.cutvalue = pJ(RR, JR, GR)
+      }(RR, JR, GR)))
     }
 
-    function Ji(WW, iW, OW) {
-      let mW = WW.node(OW).parent,
-        EW = !0,
-        NW = iW.edge(OW, mW),
-        PW = 0;
-      NW || (EW = !1, NW = iW.edge(mW, OW)), PW = NW.weight;
-      let LW = iW.nodeEdges(OW);
-      return LW && LW.forEach((NW => {
-        let LW = NW.v === OW,
-          cW = LW ? NW.w : NW.v;
-        if (cW !== mW) {
-          let mW = LW === EW,
-            wW = iW.edge(NW).weight;
-          if (PW += mW ? wW : -wW, function(WW, iW, OW) {
-              return WW.hasEdge(iW, OW)
-            }(WW, OW, cW)) {
-            let iW = WW.edge(OW, cW).cutvalue;
-            PW += mW ? -iW : iW
+    function pJ(RR, JR, GR) {
+      let yR = RR.node(GR).parent,
+        tR = !0,
+        uR = JR.edge(GR, yR),
+        ZR = 0;
+      uR || (tR = !1, uR = JR.edge(yR, GR)), ZR = uR.weight;
+      let qR = JR.nodeEdges(GR);
+      return qR && qR.forEach((uR => {
+        let qR = uR.v === GR,
+          iR = qR ? uR.w : uR.v;
+        if (iR !== yR) {
+          let yR = qR === tR,
+            fR = JR.edge(uR).weight;
+          if (ZR += yR ? fR : -fR, function(RR, JR, GR) {
+              return RR.hasEdge(JR, GR)
+            }(RR, GR, iR)) {
+            let JR = RR.edge(GR, iR).cutvalue;
+            ZR += yR ? -JR : JR
           }
         }
-      })), PW
+      })), ZR
     }
 
-    function Hi(WW, iW) {
-      arguments.length < 2 && (iW = WW.nodes()[0]), ni(WW, {}, 1, iW)
+    function gJ(RR, JR) {
+      arguments.length < 2 && (JR = RR.nodes()[0]), bJ(RR, {}, 1, JR)
     }
 
-    function ni(WW, iW, OW, mW, EW) {
-      let NW = OW,
-        PW = WW.node(mW);
-      iW[mW] = !0;
-      let LW = WW.neighbors(mW);
-      return LW && LW.forEach((EW => {
-        Object.hasOwn(iW, EW) || (OW = ni(WW, iW, OW, EW, mW))
-      })), PW.low = NW, PW.lim = OW++, EW ? PW.parent = EW : delete PW.parent, OW
+    function bJ(RR, JR, GR, yR, tR) {
+      let uR = GR,
+        ZR = RR.node(yR);
+      JR[yR] = !0;
+      let qR = RR.neighbors(yR);
+      return qR && qR.forEach((tR => {
+        Object.hasOwn(JR, tR) || (GR = bJ(RR, JR, GR, tR, yR))
+      })), ZR.low = uR, ZR.lim = GR++, tR ? ZR.parent = tR : delete ZR.parent, GR
     }
 
-    function ui(WW) {
-      return WW.edges().find((iW => WW.edge(iW).cutvalue < 0))
+    function vJ(RR) {
+      return RR.edges().find((JR => RR.edge(JR).cutvalue < 0))
     }
 
-    function oi(WW, iW, OW) {
-      let mW = OW.v,
-        EW = OW.w;
-      iW.hasEdge(mW, EW) || (mW = OW.w, EW = OW.v);
-      let NW = WW.node(mW),
-        PW = WW.node(EW),
-        LW = NW,
-        cW = !1;
-      return NW.lim > PW.lim && (LW = PW, cW = !0), iW.edges().filter((iW => cW === ei(WW, WW.node(iW.v), LW) && cW !== ei(WW, WW.node(iW.w), LW))).reduce(((WW, OW) => ji(iW, OW) < ji(iW, WW) ? OW : WW))
+    function OJ(RR, JR, GR) {
+      let yR = GR.v,
+        tR = GR.w;
+      JR.hasEdge(yR, tR) || (yR = GR.w, tR = GR.v);
+      let uR = RR.node(yR),
+        ZR = RR.node(tR),
+        qR = uR,
+        iR = !1;
+      return uR.lim > ZR.lim && (qR = ZR, iR = !0), JR.edges().filter((JR => iR === NJ(RR, RR.node(JR.v), qR) && iR !== NJ(RR, RR.node(JR.w), qR))).reduce(((RR, GR) => LJ(JR, GR) < LJ(JR, RR) ? GR : RR))
     }
 
-    function di(WW, iW, OW, mW) {
-      let EW = OW.v,
-        NW = OW.w;
-      WW.removeEdge(EW, NW), WW.setEdge(mW.v, mW.w, {}), Hi(WW), Ti(WW, iW),
-        function(WW, iW) {
-          let OW = WW.nodes().find((iW => !WW.node(iW).parent));
-          if (!OW) return;
-          let mW = Ki(WW, [OW]);
-          mW = mW.slice(1), mW.forEach((OW => {
-            let mW = WW.node(OW).parent,
-              EW = iW.edge(OW, mW),
-              NW = !1;
-            EW || (EW = iW.edge(mW, OW), NW = !0), iW.node(OW).rank = iW.node(mW).rank + (NW ? EW.minlen : -EW.minlen)
+    function xJ(RR, JR, GR, yR) {
+      let tR = GR.v,
+        uR = GR.w;
+      RR.removeEdge(tR, uR), RR.setEdge(yR.v, yR.w, {}), gJ(RR), lJ(RR, JR),
+        function(RR, JR) {
+          let GR = RR.nodes().find((JR => !RR.node(JR).parent));
+          if (!GR) return;
+          let yR = CJ(RR, [GR]);
+          yR = yR.slice(1), yR.forEach((GR => {
+            let yR = RR.node(GR).parent,
+              tR = JR.edge(GR, yR),
+              uR = !1;
+            tR || (tR = JR.edge(yR, GR), uR = !0), JR.node(GR).rank = JR.node(yR).rank + (uR ? tR.minlen : -tR.minlen)
           }))
-        }(WW, iW)
+        }(RR, JR)
     }
 
-    function ei(WW, iW, OW) {
-      return OW.low <= iW.lim && iW.lim <= OW.lim
+    function NJ(RR, JR, GR) {
+      return GR.low <= JR.lim && JR.lim <= GR.lim
     }
-    yi.initLowLimValues = Hi, yi.initCutValues = Ti, yi.calcCutValue = Ji, yi.leaveEdge = ui, yi.enterEdge = oi, yi.exchangeEdges = di;
-    var vi = function(WW) {
-      let iW = WW.graph().ranker;
-      if ("function" == typeof iW) return iW(WW);
-      switch (iW) {
+    BJ.initLowLimValues = gJ, BJ.initCutValues = lJ, BJ.calcCutValue = pJ, BJ.leaveEdge = vJ, BJ.enterEdge = OJ, BJ.exchangeEdges = xJ;
+    var DJ = function(RR) {
+      let JR = RR.graph().ranker;
+      if ("function" == typeof JR) return JR(RR);
+      switch (JR) {
         case "network-simplex":
         default:
-          Di(WW);
+          oJ(RR);
           break;
         case "tight-tree":
-          ! function(WW) {
-            bi(WW), Ui(WW)
-          }(WW);
+          ! function(RR) {
+            aJ(RR), nJ(RR)
+          }(RR);
           break;
         case "longest-path":
-          gi(WW);
+          HJ(RR);
         case "none":
       }
     };
-    var gi = bi;
+    var HJ = aJ;
 
-    function Di(WW) {
-      Yi(WW)
+    function oJ(RR) {
+      MJ(RR)
     }
-    var Vi = function(WW) {
-      let iW = function(WW) {
-          let iW = {},
-            OW = 0;
+    var cJ = function(RR) {
+      let JR = function(RR) {
+          let JR = {},
+            GR = 0;
 
-          function mW(EW) {
-            let NW = OW;
-            WW.children(EW).forEach(mW), iW[EW] = {
-              low: NW,
-              lim: OW++
+          function yR(tR) {
+            let uR = GR;
+            RR.children(tR).forEach(yR), JR[tR] = {
+              low: uR,
+              lim: GR++
             }
           }
-          return WW.children(mi).forEach(mW), iW
-        }(WW),
-        OW = WW.graph();
-      if (!Array.isArray(OW.dummyChains)) return;
-      OW.dummyChains.forEach((OW => {
-        let mW = WW.node(OW),
-          EW = mW.edgeObj,
-          NW = function(WW, iW, OW, mW) {
-            let EW, NW = [],
-              PW = [],
-              LW = Math.min(iW[OW].low, iW[mW].low),
-              cW = Math.max(iW[OW].lim, iW[mW].lim);
-            EW = OW;
+          return RR.children(yJ).forEach(yR), JR
+        }(RR),
+        GR = RR.graph();
+      if (!Array.isArray(GR.dummyChains)) return;
+      GR.dummyChains.forEach((GR => {
+        let yR = RR.node(GR),
+          tR = yR.edgeObj,
+          uR = function(RR, JR, GR, yR) {
+            let tR, uR = [],
+              ZR = [],
+              qR = Math.min(JR[GR].low, JR[yR].low),
+              iR = Math.max(JR[GR].lim, JR[yR].lim);
+            tR = GR;
             do {
-              EW = WW.parent(EW), NW.push(EW)
-            } while (EW && (iW[EW].low > LW || cW > iW[EW].lim));
-            let wW = EW,
-              tW = mW;
+              tR = RR.parent(tR), uR.push(tR)
+            } while (tR && (JR[tR].low > qR || iR > JR[tR].lim));
+            let fR = tR,
+              VR = yR;
             for (;
-              (tW = WW.parent(tW)) !== wW;) PW.push(tW);
+              (VR = RR.parent(VR)) !== fR;) ZR.push(VR);
             return {
-              path: NW.concat(PW.reverse()),
-              lca: wW
+              path: uR.concat(ZR.reverse()),
+              lca: fR
             }
-          }(WW, iW, EW.v, EW.w),
-          PW = NW.path,
-          LW = NW.lca,
-          cW = 0,
-          wW = PW[cW],
-          tW = !0;
-        for (; OW !== EW.w;) {
-          if (mW = WW.node(OW), tW) {
+          }(RR, JR, tR.v, tR.w),
+          ZR = uR.path,
+          qR = uR.lca,
+          iR = 0,
+          fR = ZR[iR],
+          VR = !0;
+        for (; GR !== tR.w;) {
+          if (yR = RR.node(GR), VR) {
             for (;
-              (wW = PW[cW]) !== LW && WW.node(wW).maxRank < mW.rank;) cW++;
-            wW === LW && (tW = !1)
+              (fR = ZR[iR]) !== qR && RR.node(fR).maxRank < yR.rank;) iR++;
+            fR === qR && (VR = !1)
           }
-          if (!tW) {
-            for (; cW < PW.length - 1 && WW.node(PW[cW + 1]).minRank <= mW.rank;) cW++;
-            wW = PW[cW]
+          if (!VR) {
+            for (; iR < ZR.length - 1 && RR.node(ZR[iR + 1]).minRank <= yR.rank;) iR++;
+            fR = ZR[iR]
           }
-          void 0 !== wW && WW.setParent(OW, wW), OW = WW.successors(OW)[0]
+          void 0 !== fR && RR.setParent(GR, fR), GR = RR.successors(GR)[0]
         }
       }))
     };
 
-    function fi(WW) {
-      let iW = CW(WW, "root", {}, "_root"),
-        OW = function(WW) {
-          let iW = {};
+    function PJ(RR) {
+      let JR = zR(RR, "root", {}, "_root"),
+        GR = function(RR) {
+          let JR = {};
 
-          function OW(mW, EW) {
-            let NW = WW.children(mW);
-            NW && NW.length && NW.forEach((WW => OW(WW, EW + 1))), iW[mW] = EW
+          function GR(yR, tR) {
+            let uR = RR.children(yR);
+            uR && uR.length && uR.forEach((RR => GR(RR, tR + 1))), JR[yR] = tR
           }
-          return WW.children(mi).forEach((WW => OW(WW, 1))), iW
-        }(WW),
-        mW = Object.values(OW),
-        EW = IW(Math.max, mW) - 1,
-        NW = 2 * EW + 1;
-      WW.graph().nestingRoot = iW, WW.edges().forEach((iW => WW.edge(iW).minlen *= NW));
-      let PW = function(WW) {
-        return WW.edges().reduce(((iW, OW) => iW + WW.edge(OW).weight), 0)
-      }(WW) + 1;
-      WW.children(mi).forEach((mW => {
-        Ci(WW, iW, NW, PW, EW, OW, mW)
-      })), WW.graph().nodeRankFactor = NW
+          return RR.children(yJ).forEach((RR => GR(RR, 1))), JR
+        }(RR),
+        yR = Object.values(GR),
+        tR = kR(Math.max, yR) - 1,
+        uR = 2 * tR + 1;
+      RR.graph().nestingRoot = JR, RR.edges().forEach((JR => RR.edge(JR).minlen *= uR));
+      let ZR = function(RR) {
+        return RR.edges().reduce(((JR, GR) => JR + RR.edge(GR).weight), 0)
+      }(RR) + 1;
+      RR.children(yJ).forEach((yR => {
+        IJ(RR, JR, uR, ZR, tR, GR, yR)
+      })), RR.graph().nodeRankFactor = uR
     }
 
-    function Ci(WW, iW, OW, mW, EW, NW, PW) {
-      var LW;
-      let cW = WW.children(PW);
-      if (!cW.length) return void(PW !== iW && WW.setEdge(iW, PW, {
+    function IJ(RR, JR, GR, yR, tR, uR, ZR) {
+      var qR;
+      let iR = RR.children(ZR);
+      if (!iR.length) return void(ZR !== JR && RR.setEdge(JR, ZR, {
         weight: 0,
-        minlen: OW
+        minlen: GR
       }));
-      let wW = RW(WW, "_bt"),
-        tW = RW(WW, "_bb"),
-        ZW = WW.node(PW);
-      WW.setParent(wW, PW), ZW.borderTop = wW, WW.setParent(tW, PW), ZW.borderBottom = tW, cW.forEach((LW => {
-        var cW;
-        Ci(WW, iW, OW, mW, EW, NW, LW);
-        let ZW = WW.node(LW),
-          xW = ZW.borderTop ? ZW.borderTop : LW,
-          lW = ZW.borderBottom ? ZW.borderBottom : LW,
-          AW = ZW.borderTop ? mW : 2 * mW,
-          bW = xW !== lW ? 1 : EW - (null != (cW = NW[PW]) ? cW : 0) + 1;
-        WW.setEdge(wW, xW, {
-          weight: AW,
-          minlen: bW,
+      let fR = ER(RR, "_bt"),
+        VR = ER(RR, "_bb"),
+        KR = RR.node(ZR);
+      RR.setParent(fR, ZR), KR.borderTop = fR, RR.setParent(VR, ZR), KR.borderBottom = VR, iR.forEach((qR => {
+        var iR;
+        IJ(RR, JR, GR, yR, tR, uR, qR);
+        let KR = RR.node(qR),
+          wR = KR.borderTop ? KR.borderTop : qR,
+          rR = KR.borderBottom ? KR.borderBottom : qR,
+          eR = KR.borderTop ? yR : 2 * yR,
+          aR = wR !== rR ? 1 : tR - (null != (iR = uR[ZR]) ? iR : 0) + 1;
+        RR.setEdge(fR, wR, {
+          weight: eR,
+          minlen: aR,
           nestingEdge: !0
-        }), WW.setEdge(lW, tW, {
-          weight: AW,
-          minlen: bW,
+        }), RR.setEdge(rR, VR, {
+          weight: eR,
+          minlen: aR,
           nestingEdge: !0
         })
-      })), WW.parent(PW) || WW.setEdge(iW, wW, {
+      })), RR.parent(ZR) || RR.setEdge(JR, fR, {
         weight: 0,
-        minlen: EW + (null != (LW = NW[PW]) ? LW : 0)
+        minlen: tR + (null != (qR = uR[ZR]) ? qR : 0)
       })
     }
-    var Xi = function(WW) {
-      WW.children(mi).forEach((function iW(OW) {
-        let mW = WW.children(OW),
-          EW = WW.node(OW);
-        if (mW.length && mW.forEach(iW), EW && Object.hasOwn(EW, "minRank")) {
-          EW.borderLeft = [], EW.borderRight = [];
-          for (let iW = EW.minRank, mW = EW.maxRank + 1; iW < mW; ++iW) Bi(WW, "borderLeft", "_bl", OW, EW, iW), Bi(WW, "borderRight", "_br", OW, EW, iW)
+    var mJ = function(RR) {
+      RR.children(yJ).forEach((function JR(GR) {
+        let yR = RR.children(GR),
+          tR = RR.node(GR);
+        if (yR.length && yR.forEach(JR), tR && Object.hasOwn(tR, "minRank")) {
+          tR.borderLeft = [], tR.borderRight = [];
+          for (let JR = tR.minRank, yR = tR.maxRank + 1; JR < yR; ++JR) zJ(RR, "borderLeft", "_bl", GR, tR, JR), zJ(RR, "borderRight", "_br", GR, tR, JR)
         }
       }))
     };
 
-    function Bi(WW, iW, OW, mW, EW, NW) {
-      let PW = {
+    function zJ(RR, JR, GR, yR, tR, uR) {
+      let ZR = {
           width: 0,
           height: 0,
-          rank: NW,
-          borderType: iW
+          rank: uR,
+          borderType: JR
         },
-        LW = EW[iW][NW - 1],
-        cW = CW(WW, "border", PW, OW);
-      EW[iW][NW] = cW, WW.setParent(cW, mW), LW && WW.setEdge(LW, cW, {
+        qR = tR[JR][uR - 1],
+        iR = zR(RR, "border", ZR, GR);
+      tR[JR][uR] = iR, RR.setParent(iR, yR), qR && RR.setEdge(qR, iR, {
         weight: 1
       })
     }
 
-    function qi(WW) {
-      var iW;
-      let OW = null == (iW = WW.graph().rankdir) ? void 0 : iW.toLowerCase();
-      ("bt" === OW || "rl" === OW) && function(WW) {
-        WW.nodes().forEach((iW => Ii(WW.node(iW)))), WW.edges().forEach((iW => {
-          var OW;
-          let mW = WW.edge(iW);
-          null == (OW = mW.points) || OW.forEach(Ii), Object.hasOwn(mW, "y") && Ii(mW)
+    function SJ(RR) {
+      var JR;
+      let GR = null == (JR = RR.graph().rankdir) ? void 0 : JR.toLowerCase();
+      ("bt" === GR || "rl" === GR) && function(RR) {
+        RR.nodes().forEach((JR => EJ(RR.node(JR)))), RR.edges().forEach((JR => {
+          var GR;
+          let yR = RR.edge(JR);
+          null == (GR = yR.points) || GR.forEach(EJ), Object.hasOwn(yR, "y") && EJ(yR)
         }))
-      }(WW), ("lr" === OW || "rl" === OW) && (function(WW) {
-        WW.nodes().forEach((iW => ai(WW.node(iW)))), WW.edges().forEach((iW => {
-          var OW;
-          let mW = WW.edge(iW);
-          null == (OW = mW.points) || OW.forEach(ai), Object.hasOwn(mW, "x") && ai(mW)
+      }(RR), ("lr" === GR || "rl" === GR) && (function(RR) {
+        RR.nodes().forEach((JR => YJ(RR.node(JR)))), RR.edges().forEach((JR => {
+          var GR;
+          let yR = RR.edge(JR);
+          null == (GR = yR.points) || GR.forEach(YJ), Object.hasOwn(yR, "x") && YJ(yR)
         }))
-      }(WW), Ri(WW))
+      }(RR), jJ(RR))
     }
 
-    function Ri(WW) {
-      WW.nodes().forEach((iW => Gi(WW.node(iW)))), WW.edges().forEach((iW => Gi(WW.edge(iW))))
+    function jJ(RR) {
+      RR.nodes().forEach((JR => dJ(RR.node(JR)))), RR.edges().forEach((JR => dJ(RR.edge(JR))))
     }
 
-    function Gi(WW) {
-      let iW = WW.width;
-      WW.width = WW.height, WW.height = iW
+    function dJ(RR) {
+      let JR = RR.width;
+      RR.width = RR.height, RR.height = JR
     }
 
-    function Ii(WW) {
-      WW.y = -WW.y
+    function EJ(RR) {
+      RR.y = -RR.y
     }
 
-    function ai(WW) {
-      let iW = WW.x;
-      WW.x = WW.y, WW.y = iW
+    function YJ(RR) {
+      let JR = RR.x;
+      RR.x = RR.y, RR.y = JR
     }
 
-    function ri(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        OW = {},
-        mW = WW.nodes().filter((iW => !WW.children(iW).length)),
-        EW = mW.map((iW => WW.node(iW).rank)),
-        NW = Wi(IW(Math.max, EW) + 1).map((() => []));
-      return mW.sort(((iW, OW) => WW.node(iW).rank - WW.node(OW).rank)).forEach((function mW(EW) {
-        if (OW[EW]) return;
-        OW[EW] = !0;
-        let PW = WW.node(EW);
-        NW[PW.rank].push(EW);
-        let LW = WW.successors(EW);
-        LW && [...LW].sort(((OW, mW) => function(OW, mW) {
-          let EW = WW.node(OW),
-            NW = WW.node(mW);
-          return Ei(iW, EW, NW)
-        }(OW, mW))).forEach(mW)
-      })), NW
+    function kJ(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        GR = {},
+        yR = RR.nodes().filter((JR => !RR.children(JR).length)),
+        tR = yR.map((JR => RR.node(JR).rank)),
+        uR = RJ(kR(Math.max, tR) + 1).map((() => []));
+      return yR.sort(((JR, GR) => RR.node(JR).rank - RR.node(GR).rank)).forEach((function yR(tR) {
+        if (GR[tR]) return;
+        GR[tR] = !0;
+        let ZR = RR.node(tR);
+        uR[ZR.rank].push(tR);
+        let qR = RR.successors(tR);
+        qR && [...qR].sort(((GR, yR) => function(GR, yR) {
+          let tR = RR.node(GR),
+            uR = RR.node(yR);
+          return tJ(JR, tR, uR)
+        }(GR, yR))).forEach(yR)
+      })), uR
     }
 
-    function zi(WW, iW) {
-      let OW = 0;
-      for (let mW = 1; mW < iW.length; ++mW) OW += Fi(WW, iW[mW - 1], iW[mW]);
-      return OW
+    function QJ(RR, JR) {
+      let GR = 0;
+      for (let yR = 1; yR < JR.length; ++yR) GR += FJ(RR, JR[yR - 1], JR[yR]);
+      return GR
     }
 
-    function Fi(WW, iW, OW) {
-      let mW = function(WW, iW) {
-          return WW.reduce(((WW, OW, mW) => (WW[OW] = iW[mW], WW)), {})
-        }(OW, OW.map(((WW, iW) => iW))),
-        EW = iW.flatMap((iW => {
-          let OW = WW.outEdges(iW);
-          return OW ? OW.map((iW => ({
-            pos: mW[iW.w],
-            weight: WW.edge(iW).weight
-          }))).sort(((WW, iW) => WW.pos - iW.pos)) : []
+    function FJ(RR, JR, GR) {
+      let yR = function(RR, JR) {
+          return RR.reduce(((RR, GR, yR) => (RR[GR] = JR[yR], RR)), {})
+        }(GR, GR.map(((RR, JR) => JR))),
+        tR = JR.flatMap((JR => {
+          let GR = RR.outEdges(JR);
+          return GR ? GR.map((JR => ({
+            pos: yR[JR.w],
+            weight: RR.edge(JR).weight
+          }))).sort(((RR, JR) => RR.pos - JR.pos)) : []
         })),
-        NW = 1;
-      for (; NW < OW.length;) NW <<= 1;
-      let PW = 2 * NW - 1;
-      NW -= 1;
-      let LW = new Array(PW).fill(0),
-        cW = 0;
-      return EW.forEach((WW => {
-        let iW = WW.pos + NW;
-        LW[iW] += WW.weight;
-        let OW = 0;
-        for (; iW > 0;) iW % 2 && (OW += LW[iW + 1]), iW = iW - 1 >> 1, LW[iW] += WW.weight;
-        cW += WW.weight * OW
-      })), cW
+        uR = 1;
+      for (; uR < GR.length;) uR <<= 1;
+      let ZR = 2 * uR - 1;
+      uR -= 1;
+      let qR = new Array(ZR).fill(0),
+        iR = 0;
+      return tR.forEach((RR => {
+        let JR = RR.pos + uR;
+        qR[JR] += RR.weight;
+        let GR = 0;
+        for (; JR > 0;) JR % 2 && (GR += qR[JR + 1]), JR = JR - 1 >> 1, qR[JR] += RR.weight;
+        iR += RR.weight * GR
+      })), iR
     }
 
-    function Qi(WW, iW) {
-      let OW = {};
-      return WW.forEach(((WW, iW) => {
-          let mW = {
+    function TJ(RR, JR) {
+      let GR = {};
+      return RR.forEach(((RR, JR) => {
+          let yR = {
             indegree: 0,
             in: [],
             out: [],
-            vs: [WW.v],
-            i: iW
+            vs: [RR.v],
+            i: JR
           };
-          void 0 !== WW.barycenter && (mW.barycenter = WW.barycenter, mW.weight = WW.weight), OW[WW.v] = mW
-        })), iW.edges().forEach((WW => {
-          let iW = OW[WW.v],
-            mW = OW[WW.w];
-          void 0 !== iW && void 0 !== mW && (mW.indegree++, iW.out.push(mW))
+          void 0 !== RR.barycenter && (yR.barycenter = RR.barycenter, yR.weight = RR.weight), GR[RR.v] = yR
+        })), JR.edges().forEach((RR => {
+          let JR = GR[RR.v],
+            yR = GR[RR.w];
+          void 0 !== JR && void 0 !== yR && (yR.indegree++, JR.out.push(yR))
         })),
-        function(WW) {
-          let iW = [];
+        function(RR) {
+          let JR = [];
 
-          function OW(WW) {
-            return iW => {
-              iW.merged || (void 0 === iW.barycenter || void 0 === WW.barycenter || iW.barycenter >= WW.barycenter) && function(WW, iW) {
-                let OW = 0,
-                  mW = 0;
-                WW.weight && (OW += WW.barycenter * WW.weight, mW += WW.weight), iW.weight && (OW += iW.barycenter * iW.weight, mW += iW.weight), WW.vs = iW.vs.concat(WW.vs), WW.barycenter = OW / mW, WW.weight = mW, WW.i = Math.min(iW.i, WW.i), iW.merged = !0
-              }(WW, iW)
+          function GR(RR) {
+            return JR => {
+              JR.merged || (void 0 === JR.barycenter || void 0 === RR.barycenter || JR.barycenter >= RR.barycenter) && function(RR, JR) {
+                let GR = 0,
+                  yR = 0;
+                RR.weight && (GR += RR.barycenter * RR.weight, yR += RR.weight), JR.weight && (GR += JR.barycenter * JR.weight, yR += JR.weight), RR.vs = JR.vs.concat(RR.vs), RR.barycenter = GR / yR, RR.weight = yR, RR.i = Math.min(JR.i, RR.i), JR.merged = !0
+              }(RR, JR)
             }
           }
 
-          function mW(iW) {
-            return OW => {
-              OW.in.push(iW), 0 === --OW.indegree && WW.push(OW)
+          function yR(JR) {
+            return GR => {
+              GR.in.push(JR), 0 === --GR.indegree && RR.push(GR)
             }
           }
-          for (; WW.length;) {
-            let EW = WW.pop();
-            iW.push(EW), EW.in.reverse().forEach(OW(EW)), EW.out.forEach(mW(EW))
+          for (; RR.length;) {
+            let tR = RR.pop();
+            JR.push(tR), tR.in.reverse().forEach(GR(tR)), tR.out.forEach(yR(tR))
           }
-          return iW.filter((WW => !WW.merged)).map((WW => ii(WW, ["vs", "i", "barycenter", "weight"])))
-        }(Object.values(OW).filter((WW => !WW.indegree)))
+          return JR.filter((RR => !RR.merged)).map((RR => JJ(RR, ["vs", "i", "barycenter", "weight"])))
+        }(Object.values(GR).filter((RR => !RR.indegree)))
     }
 
-    function WO(WW, iW, OW, mW, EW) {
-      let NW = {},
-        PW = null,
-        LW = null,
-        cW = EW;
-      "boolean" == typeof iW ? (cW = iW, NW = {}) : iW && (NW = iW, PW = null != OW ? OW : null, LW = null != mW ? mW : null);
-      let wW = function(WW, iW) {
-          let OW = {
+    function sJ(RR, JR, GR, yR, tR) {
+      let uR = {},
+        ZR = null,
+        qR = null,
+        iR = tR;
+      "boolean" == typeof JR ? (iR = JR, uR = {}) : JR && (uR = JR, ZR = null != GR ? GR : null, qR = null != yR ? yR : null);
+      let fR = function(RR, JR) {
+          let GR = {
             lhs: [],
             rhs: []
           };
-          return WW.forEach((WW => {
-            iW(WW) ? OW.lhs.push(WW) : OW.rhs.push(WW)
-          })), OW
-        }(WW, (WW => Object.hasOwn(WW, "barycenter"))),
-        tW = wW.lhs,
-        ZW = wW.rhs.sort(((WW, iW) => iW.i - WW.i)),
-        xW = [],
-        lW = 0,
-        AW = 0,
-        bW = 0;
-      tW.sort(function(WW, iW, OW) {
-        return (mW, EW) => {
-          if (mW.barycenter < EW.barycenter) return -1;
-          if (mW.barycenter > EW.barycenter) return 1;
-          if (WW && ("string" == typeof mW.vs[0] || "string" == typeof EW.vs[0])) {
-            let OW = WW.node(mW.vs[0]),
-              NW = WW.node(EW.vs[0]),
-              PW = Ei(iW, OW, NW);
-            if (0 !== PW) return PW
+          return RR.forEach((RR => {
+            JR(RR) ? GR.lhs.push(RR) : GR.rhs.push(RR)
+          })), GR
+        }(RR, (RR => Object.hasOwn(RR, "barycenter"))),
+        VR = fR.lhs,
+        KR = fR.rhs.sort(((RR, JR) => JR.i - RR.i)),
+        wR = [],
+        rR = 0,
+        eR = 0,
+        aR = 0;
+      VR.sort(function(RR, JR, GR) {
+        return (yR, tR) => {
+          if (yR.barycenter < tR.barycenter) return -1;
+          if (yR.barycenter > tR.barycenter) return 1;
+          if (RR && ("string" == typeof yR.vs[0] || "string" == typeof tR.vs[0])) {
+            let GR = RR.node(yR.vs[0]),
+              uR = RR.node(tR.vs[0]),
+              ZR = tJ(JR, GR, uR);
+            if (0 !== ZR) return ZR
           }
-          return OW ? EW.i - mW.i : mW.i - EW.i
+          return GR ? tR.i - yR.i : yR.i - tR.i
         }
-      }(LW, PW, !!cW));
-      for (let [UW, kW] of Object.entries(NW)) {
-        let WW = tW.findIndex((WW => WW.vs[0] === UW));
-        tW.splice(WW + 1, 0, kW)
+      }(qR, ZR, !!iR));
+      for (let [nR, UR] of Object.entries(uR)) {
+        let RR = VR.findIndex((RR => RR.vs[0] === nR));
+        VR.splice(RR + 1, 0, UR)
       }
-      bW = iO(xW, ZW, bW), tW.forEach((WW => {
-        bW += WW.vs.length, xW.push(WW.vs), lW += WW.barycenter * WW.weight, AW += WW.weight, bW = iO(xW, ZW, bW)
+      aR = hJ(wR, KR, aR), VR.forEach((RR => {
+        aR += RR.vs.length, wR.push(RR.vs), rR += RR.barycenter * RR.weight, eR += RR.weight, aR = hJ(wR, KR, aR)
       }));
-      let jW = {
-        vs: xW.flat(1)
+      let LR = {
+        vs: wR.flat(1)
       };
-      return AW && (jW.barycenter = lW / AW, jW.weight = AW), jW
+      return eR && (LR.barycenter = rR / eR, LR.weight = eR), LR
     }
 
-    function iO(WW, iW, OW) {
-      let mW;
-      for (; iW.length && (mW = iW[iW.length - 1]).i <= OW;) iW.pop(), WW.push(mW.vs), OW++;
-      return OW
+    function hJ(RR, JR, GR) {
+      let yR;
+      for (; JR.length && (yR = JR[JR.length - 1]).i <= GR;) JR.pop(), RR.push(yR.vs), GR++;
+      return GR
     }
 
-    function OO(WW, iW, OW, mW, EW) {
-      var NW, PW, LW, cW, wW, tW, ZW, xW, lW, AW, bW;
-      let jW = null,
-        UW = EW;
-      "boolean" == typeof mW ? (UW = mW, jW = null) : void 0 !== mW && (jW = mW);
-      let kW = WW.children(iW),
-        sW = WW.node(iW),
-        MW = sW ? sW.borderLeft : void 0,
-        KW = sW ? sW.borderRight : void 0,
-        SW = {};
-      MW && (kW = kW.filter((WW => WW !== MW && WW !== KW)));
-      let YW = function(WW) {
-        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((iW => {
-          let OW = WW.inEdges(iW);
-          if (!OW || !OW.length) return {
-            v: iW
+    function RG(RR, JR, GR, yR, tR) {
+      var uR, ZR, qR, iR, fR, VR, KR, wR, rR, eR, aR;
+      let LR = null,
+        nR = tR;
+      "boolean" == typeof yR ? (nR = yR, LR = null) : void 0 !== yR && (LR = yR);
+      let UR = RR.children(JR),
+        WR = RR.node(JR),
+        AR = WR ? WR.borderLeft : void 0,
+        CR = WR ? WR.borderRight : void 0,
+        XR = {};
+      AR && (UR = UR.filter((RR => RR !== AR && RR !== CR)));
+      let MR = function(RR) {
+        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((JR => {
+          let GR = RR.inEdges(JR);
+          if (!GR || !GR.length) return {
+            v: JR
           };
           {
-            let mW = OW.reduce(((iW, OW) => {
-              let mW = WW.edge(OW),
-                EW = WW.node(OW.v);
+            let yR = GR.reduce(((JR, GR) => {
+              let yR = RR.edge(GR),
+                tR = RR.node(GR.v);
               return {
-                sum: iW.sum + mW.weight * EW.order,
-                weight: iW.weight + mW.weight
+                sum: JR.sum + yR.weight * tR.order,
+                weight: JR.weight + yR.weight
               }
             }), {
               sum: 0,
               weight: 0
             });
             return {
-              v: iW,
-              barycenter: mW.sum / mW.weight,
-              weight: mW.weight
+              v: JR,
+              barycenter: yR.sum / yR.weight,
+              weight: yR.weight
             }
           }
         }))
-      }(WW, kW);
-      YW.forEach((iW => {
-        if (WW.children(iW.v).length) {
+      }(RR, UR);
+      MR.forEach((JR => {
+        if (RR.children(JR.v).length) {
           let {
-            result: mW
-          } = OO(WW, iW.v, OW, jW, UW);
-          SW[iW.v] = mW, Object.hasOwn(mW, "barycenter") && function(WW, iW) {
-            void 0 !== WW.barycenter ? (WW.barycenter = (WW.barycenter * WW.weight + iW.barycenter * iW.weight) / (WW.weight + iW.weight), WW.weight += iW.weight) : (WW.barycenter = iW.barycenter, WW.weight = iW.weight)
-          }(iW, mW)
+            result: yR
+          } = RG(RR, JR.v, GR, LR, nR);
+          XR[JR.v] = yR, Object.hasOwn(yR, "barycenter") && function(RR, JR) {
+            void 0 !== RR.barycenter ? (RR.barycenter = (RR.barycenter * RR.weight + JR.barycenter * JR.weight) / (RR.weight + JR.weight), RR.weight += JR.weight) : (RR.barycenter = JR.barycenter, RR.weight = JR.weight)
+          }(JR, yR)
         }
       }));
-      let yW = Qi(YW, OW);
-      ! function(WW, iW) {
-        WW.forEach((WW => {
-          WW.vs = WW.vs.flatMap((WW => iW[WW] ? iW[WW].vs : WW))
+      let BR = TJ(MR, GR);
+      ! function(RR, JR) {
+        RR.forEach((RR => {
+          RR.vs = RR.vs.flatMap((RR => JR[RR] ? JR[RR].vs : RR))
         }))
-      }(yW, SW);
-      let TW = {},
-        JW = !1;
-      for (let HW = 0; HW < yW.length; HW++)
-        for (let iW = HW + 1; iW < yW.length; iW++)
-          if (yW[HW] && yW[iW] && null != (NW = yW[HW]) && NW.barycenter && null != (PW = yW[iW]) && PW.barycenter && (null == (LW = yW[HW]) ? void 0 : LW.barycenter) === yW[iW].barycenter) {
-            let OW = null != (wW = null == (cW = yW[HW]) ? void 0 : cW.vs[0]) ? wW : "",
-              mW = null != (ZW = null == (tW = yW[iW]) ? void 0 : tW.vs[0]) ? ZW : "",
-              EW = WW.node(OW),
-              NW = WW.node(mW);
-            if ("edge" === EW.dummy && "edge" === NW.dummy && (null == (xW = EW.edgeObj) ? void 0 : xW.v) === (null == (lW = NW.edgeObj) ? void 0 : lW.v) && (null == (AW = EW.edgeObj) ? void 0 : AW.w) === (null == (bW = NW.edgeObj) ? void 0 : bW.w)) {
-              if (EW.edgeLabel.reversed) {
-                TW[mW] = yW[HW], yW.splice(HW, 1), HW--;
+      }(BR, XR);
+      let lR = {},
+        pR = !1;
+      for (let bR = 0; bR < BR.length; bR++)
+        for (let JR = bR + 1; JR < BR.length; JR++)
+          if (BR[bR] && BR[JR] && null != (uR = BR[bR]) && uR.barycenter && null != (ZR = BR[JR]) && ZR.barycenter && (null == (qR = BR[bR]) ? void 0 : qR.barycenter) === BR[JR].barycenter) {
+            let GR = null != (fR = null == (iR = BR[bR]) ? void 0 : iR.vs[0]) ? fR : "",
+              yR = null != (KR = null == (VR = BR[JR]) ? void 0 : VR.vs[0]) ? KR : "",
+              tR = RR.node(GR),
+              uR = RR.node(yR);
+            if ("edge" === tR.dummy && "edge" === uR.dummy && (null == (wR = tR.edgeObj) ? void 0 : wR.v) === (null == (rR = uR.edgeObj) ? void 0 : rR.v) && (null == (eR = tR.edgeObj) ? void 0 : eR.w) === (null == (aR = uR.edgeObj) ? void 0 : aR.w)) {
+              if (tR.edgeLabel.reversed) {
+                lR[yR] = BR[bR], BR.splice(bR, 1), bR--;
                 break
               }
-              TW[OW] = yW[iW], yW.splice(iW, 1), iW--
-            } else JW = !0
-          } let hW = WO(yW, TW, jW, WW, UW);
-      if (MW && KW) {
-        hW.vs = [MW, hW.vs, KW].flat(1);
-        let iW = WW.predecessors(MW);
-        if (iW && iW.length) {
-          let OW = WW.node(iW[0]),
-            mW = WW.predecessors(KW),
-            EW = WW.node(mW[0]);
-          Object.hasOwn(hW, "barycenter") || (hW.barycenter = 0, hW.weight = 0), hW.barycenter = (hW.barycenter * hW.weight + OW.order + EW.order) / (hW.weight + 2), hW.weight += 2
+              lR[GR] = BR[JR], BR.splice(JR, 1), JR--
+            } else pR = !0
+          } let gR = sJ(BR, lR, LR, RR, nR);
+      if (AR && CR) {
+        gR.vs = [AR, gR.vs, CR].flat(1);
+        let JR = RR.predecessors(AR);
+        if (JR && JR.length) {
+          let GR = RR.node(JR[0]),
+            yR = RR.predecessors(CR),
+            tR = RR.node(yR[0]);
+          Object.hasOwn(gR, "barycenter") || (gR.barycenter = 0, gR.weight = 0), gR.barycenter = (gR.barycenter * gR.weight + GR.order + tR.order) / (gR.weight + 2), gR.weight += 2
         }
       }
-      return Object.defineProperty(hW, "result", {
-        value: hW,
+      return Object.defineProperty(gR, "result", {
+        value: gR,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Object.defineProperty(hW, "usedBias", {
-        value: JW,
+      }), Object.defineProperty(gR, "usedBias", {
+        value: pR,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), hW
+      }), gR
     }
 
-    function mO(WW, iW, OW, mW) {
-      mW || (mW = WW.nodes());
-      let EW = function(WW) {
-          let iW;
-          for (; WW.hasNode(iW = QW("_root")););
-          return iW
-        }(WW),
-        NW = new fW({
+    function JG(RR, JR, GR, yR) {
+      yR || (yR = RR.nodes());
+      let tR = function(RR) {
+          let JR;
+          for (; RR.hasNode(JR = hR("_root")););
+          return JR
+        }(RR),
+        uR = new mR({
           compound: !0
         }).setGraph({
-          root: EW
-        }).setDefaultNodeLabel((iW => WW.node(iW)));
-      return mW.forEach((mW => {
-        let PW = WW.node(mW),
-          LW = WW.parent(mW);
-        if (PW.rank === iW || PW.minRank <= iW && iW <= PW.maxRank) {
-          NW.setNode(mW), NW.setParent(mW, LW || EW);
-          let cW = WW[OW](mW);
-          cW && cW.forEach((iW => {
-            let OW = iW.v === mW ? iW.w : iW.v,
-              EW = NW.edge(OW, mW),
-              PW = void 0 !== EW ? EW.weight : 0;
-            NW.setEdge(OW, mW, {
-              weight: WW.edge(iW).weight + PW
+          root: tR
+        }).setDefaultNodeLabel((JR => RR.node(JR)));
+      return yR.forEach((yR => {
+        let ZR = RR.node(yR),
+          qR = RR.parent(yR);
+        if (ZR.rank === JR || ZR.minRank <= JR && JR <= ZR.maxRank) {
+          uR.setNode(yR), uR.setParent(yR, qR || tR);
+          let iR = RR[GR](yR);
+          iR && iR.forEach((JR => {
+            let GR = JR.v === yR ? JR.w : JR.v,
+              tR = uR.edge(GR, yR),
+              ZR = void 0 !== tR ? tR.weight : 0;
+            uR.setEdge(GR, yR, {
+              weight: RR.edge(JR).weight + ZR
             })
-          })), Object.hasOwn(PW, "minRank") && NW.setNode(mW, {
-            borderLeft: PW.borderLeft[iW],
-            borderRight: PW.borderRight[iW]
+          })), Object.hasOwn(ZR, "minRank") && uR.setNode(yR, {
+            borderLeft: ZR.borderLeft[JR],
+            borderRight: ZR.borderRight[JR]
           })
         }
-      })), NW
+      })), uR
     }
 
-    function EO(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      if ("function" == typeof iW.customOrder) return void iW.customOrder(WW, EO);
-      let mW = aW(WW),
-        EW = NO(WW, Wi(1, mW + 1), "inEdges"),
-        NW = NO(WW, Wi(mW - 1, -1, -1), "outEdges"),
-        PW = ri(WW, OW);
-      if (LO(WW, PW), iW.disableOptimalOrderHeuristic) return;
-      let LW, cW = Number.POSITIVE_INFINITY,
-        wW = iW.constraints || [];
-      for (let tW = 0, ZW = 0; ZW < 4; ++tW, ++ZW) {
-        PO(tW % 2 ? EW : NW, tW % 4 >= 2, wW, OW), PW = qW(WW);
-        let iW = zi(WW, PW);
-        iW < cW ? (ZW = 0, LW = Object.assign({}, PW), cW = iW) : iW === cW && (LW = structuredClone(PW))
+    function GG(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      if ("function" == typeof JR.customOrder) return void JR.customOrder(RR, GG);
+      let yR = QR(RR),
+        tR = yG(RR, RJ(1, yR + 1), "inEdges"),
+        uR = yG(RR, RJ(yR - 1, -1, -1), "outEdges"),
+        ZR = kJ(RR, GR);
+      if (uG(RR, ZR), JR.disableOptimalOrderHeuristic) return;
+      let qR, iR = Number.POSITIVE_INFINITY,
+        fR = JR.constraints || [];
+      for (let VR = 0, KR = 0; KR < 4; ++VR, ++KR) {
+        tG(VR % 2 ? tR : uR, VR % 4 >= 2, fR, GR), ZR = dR(RR);
+        let JR = QJ(RR, ZR);
+        JR < iR ? (KR = 0, qR = Object.assign({}, ZR), iR = JR) : JR === iR && (qR = structuredClone(ZR))
       }
-      LO(WW, LW)
+      uG(RR, qR)
     }
 
-    function NO(WW, iW, OW) {
-      let mW = new Map,
-        EW = (WW, iW) => {
-          mW.has(WW) || mW.set(WW, []), mW.get(WW).push(iW)
+    function yG(RR, JR, GR) {
+      let yR = new Map,
+        tR = (RR, JR) => {
+          yR.has(RR) || yR.set(RR, []), yR.get(RR).push(JR)
         };
-      for (let NW of WW.nodes()) {
-        let iW = WW.node(NW);
-        if ("number" == typeof iW.rank && EW(iW.rank, NW), "number" == typeof iW.minRank && "number" == typeof iW.maxRank)
-          for (let WW = iW.minRank; WW <= iW.maxRank; WW++) WW !== iW.rank && EW(WW, NW)
+      for (let uR of RR.nodes()) {
+        let JR = RR.node(uR);
+        if ("number" == typeof JR.rank && tR(JR.rank, uR), "number" == typeof JR.minRank && "number" == typeof JR.maxRank)
+          for (let RR = JR.minRank; RR <= JR.maxRank; RR++) RR !== JR.rank && tR(RR, uR)
       }
-      return iW.map((function(iW) {
-        return mO(WW, iW, OW, mW.get(iW) || [])
+      return JR.map((function(JR) {
+        return JG(RR, JR, GR, yR.get(JR) || [])
       }))
     }
 
-    function PO(WW, iW, OW, mW) {
-      let EW = !0,
-        NW = new fW;
-      WW.forEach((function(WW) {
-        OW.forEach((WW => NW.setEdge(WW.left, WW.right)));
-        let PW = WW.graph().root,
+    function tG(RR, JR, GR, yR) {
+      let tR = !0,
+        uR = new mR;
+      RR.forEach((function(RR) {
+        GR.forEach((RR => uR.setEdge(RR.left, RR.right)));
+        let ZR = RR.graph().root,
           {
-            result: LW,
-            usedBias: cW
-          } = OO(WW, PW, NW, mW, EW);
-        iW && cW && (EW = !EW), LW.vs.forEach(((iW, OW) => WW.node(iW).order = OW)),
-          function(WW, iW, OW) {
-            let mW, EW = {};
-            OW.forEach((OW => {
-              let NW, PW, LW = WW.parent(OW);
-              for (; LW;) {
-                if (NW = WW.parent(LW), NW ? (PW = EW[NW], EW[NW] = LW) : (PW = mW, mW = LW), PW && PW !== LW) return void iW.setEdge(PW, LW);
-                LW = NW
+            result: qR,
+            usedBias: iR
+          } = RG(RR, ZR, uR, yR, tR);
+        JR && iR && (tR = !tR), qR.vs.forEach(((JR, GR) => RR.node(JR).order = GR)),
+          function(RR, JR, GR) {
+            let yR, tR = {};
+            GR.forEach((GR => {
+              let uR, ZR, qR = RR.parent(GR);
+              for (; qR;) {
+                if (uR = RR.parent(qR), uR ? (ZR = tR[uR], tR[uR] = qR) : (ZR = yR, yR = qR), ZR && ZR !== qR) return void JR.setEdge(ZR, qR);
+                qR = uR
               }
             }))
-          }(WW, NW, LW.vs)
+          }(RR, uR, qR.vs)
       }))
     }
 
-    function LO(WW, iW) {
-      Object.values(iW).forEach((iW => iW.forEach(((iW, OW) => WW.node(iW).order = OW))))
+    function uG(RR, JR) {
+      Object.values(JR).forEach((JR => JR.forEach(((JR, GR) => RR.node(JR).order = GR))))
     }
 
-    function cO(WW, iW, OW) {
-      if (iW > OW) {
-        let WW = iW;
-        iW = OW, OW = WW
+    function ZG(RR, JR, GR) {
+      if (JR > GR) {
+        let RR = JR;
+        JR = GR, GR = RR
       }
-      let mW = WW[iW];
-      mW || (WW[iW] = mW = {}), mW[OW] = !0
+      let yR = RR[JR];
+      yR || (RR[JR] = yR = {}), yR[GR] = !0
     }
 
-    function wO(WW, iW, OW) {
-      if (iW > OW) {
-        let WW = iW;
-        iW = OW, OW = WW
+    function qG(RR, JR, GR) {
+      if (JR > GR) {
+        let RR = JR;
+        JR = GR, GR = RR
       }
-      let mW = WW[iW];
-      return void 0 !== mW && Object.hasOwn(mW, OW)
+      let yR = RR[JR];
+      return void 0 !== yR && Object.hasOwn(yR, GR)
     }
 
-    function tO(WW, iW, OW, mW) {
-      let EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        NW = {},
-        PW = function(WW, iW, OW, mW) {
-          let EW = new fW,
-            NW = WW.graph(),
-            PW = function(WW, iW, OW) {
-              return (mW, EW, NW) => {
-                let PW, LW = mW.node(EW),
-                  cW = mW.node(NW),
-                  wW = 0;
-                if (wW += LW.width / 2, Object.hasOwn(LW, "labelpos")) switch (LW.labelpos.toLowerCase()) {
+    function iG(RR, JR, GR, yR) {
+      let tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        uR = {},
+        ZR = function(RR, JR, GR, yR) {
+          let tR = new mR,
+            uR = RR.graph(),
+            ZR = function(RR, JR, GR) {
+              return (yR, tR, uR) => {
+                let ZR, qR = yR.node(tR),
+                  iR = yR.node(uR),
+                  fR = 0;
+                if (fR += qR.width / 2, Object.hasOwn(qR, "labelpos")) switch (qR.labelpos.toLowerCase()) {
                   case "l":
-                    PW = -LW.width / 2;
+                    ZR = -qR.width / 2;
                     break;
                   case "r":
-                    PW = LW.width / 2
+                    ZR = qR.width / 2
                 }
-                if (PW && (wW += OW ? PW : -PW), PW = void 0, wW += (LW.dummy ? iW : WW) / 2, wW += (cW.dummy ? iW : WW) / 2, wW += cW.width / 2, Object.hasOwn(cW, "labelpos")) switch (cW.labelpos.toLowerCase()) {
+                if (ZR && (fR += GR ? ZR : -ZR), ZR = void 0, fR += (qR.dummy ? JR : RR) / 2, fR += (iR.dummy ? JR : RR) / 2, fR += iR.width / 2, Object.hasOwn(iR, "labelpos")) switch (iR.labelpos.toLowerCase()) {
                   case "l":
-                    PW = cW.width / 2;
+                    ZR = iR.width / 2;
                     break;
                   case "r":
-                    PW = -cW.width / 2
+                    ZR = -iR.width / 2
                 }
-                return PW && (wW += OW ? PW : -PW), wW
+                return ZR && (fR += GR ? ZR : -ZR), fR
               }
-            }(NW.nodesep, NW.edgesep, mW);
-          return iW.forEach((iW => {
-            let mW;
-            iW.forEach((iW => {
-              let NW = OW[iW];
-              if (void 0 !== NW) {
-                if (EW.setNode(NW), void 0 !== mW) {
-                  let LW = OW[mW];
-                  if (void 0 !== LW) {
-                    let OW = EW.edge(LW, NW);
-                    EW.setEdge(LW, NW, Math.max(PW(WW, iW, mW), OW || 0))
+            }(uR.nodesep, uR.edgesep, yR);
+          return JR.forEach((JR => {
+            let yR;
+            JR.forEach((JR => {
+              let uR = GR[JR];
+              if (void 0 !== uR) {
+                if (tR.setNode(uR), void 0 !== yR) {
+                  let qR = GR[yR];
+                  if (void 0 !== qR) {
+                    let GR = tR.edge(qR, uR);
+                    tR.setEdge(qR, uR, Math.max(ZR(RR, JR, yR), GR || 0))
                   }
                 }
-                mW = iW
+                yR = JR
               }
             }))
-          })), EW
-        }(WW, iW, OW, EW),
-        LW = EW ? "borderLeft" : "borderRight";
+          })), tR
+        }(RR, JR, GR, tR),
+        qR = tR ? "borderLeft" : "borderRight";
 
-      function cW(WW, iW) {
-        let OW = PW.nodes().slice(),
-          mW = {},
-          EW = OW.pop();
-        for (; EW;) {
-          if (mW[EW]) WW(EW);
+      function iR(RR, JR) {
+        let GR = ZR.nodes().slice(),
+          yR = {},
+          tR = GR.pop();
+        for (; tR;) {
+          if (yR[tR]) RR(tR);
           else {
-            mW[EW] = !0, OW.push(EW);
-            for (let WW of iW(EW)) OW.push(WW)
+            yR[tR] = !0, GR.push(tR);
+            for (let RR of JR(tR)) GR.push(RR)
           }
-          EW = OW.pop()
+          tR = GR.pop()
         }
       }
-      return cW((function(WW) {
-        let iW = PW.inEdges(WW);
-        NW[WW] = iW ? iW.reduce(((WW, iW) => {
-          var OW;
-          let mW = null != (OW = NW[iW.v]) ? OW : 0,
-            EW = PW.edge(iW);
-          return Math.max(WW, mW + (void 0 !== EW ? EW : 0))
+      return iR((function(RR) {
+        let JR = ZR.inEdges(RR);
+        uR[RR] = JR ? JR.reduce(((RR, JR) => {
+          var GR;
+          let yR = null != (GR = uR[JR.v]) ? GR : 0,
+            tR = ZR.edge(JR);
+          return Math.max(RR, yR + (void 0 !== tR ? tR : 0))
         }), 0) : 0
-      }), (function(WW) {
-        return PW.predecessors(WW) || []
-      })), cW((function(iW) {
-        let OW = PW.outEdges(iW),
-          mW = Number.POSITIVE_INFINITY;
-        OW && (mW = OW.reduce(((WW, iW) => {
-          let OW = NW[iW.w],
-            mW = PW.edge(iW);
-          return Math.min(WW, (void 0 !== OW ? OW : 0) - (void 0 !== mW ? mW : 0))
+      }), (function(RR) {
+        return ZR.predecessors(RR) || []
+      })), iR((function(JR) {
+        let GR = ZR.outEdges(JR),
+          yR = Number.POSITIVE_INFINITY;
+        GR && (yR = GR.reduce(((RR, JR) => {
+          let GR = uR[JR.w],
+            yR = ZR.edge(JR);
+          return Math.min(RR, (void 0 !== GR ? GR : 0) - (void 0 !== yR ? yR : 0))
         }), Number.POSITIVE_INFINITY));
-        let EW = WW.node(iW);
-        mW !== Number.POSITIVE_INFINITY && EW.borderType !== LW && (NW[iW] = Math.max(void 0 !== NW[iW] ? NW[iW] : 0, mW))
-      }), (function(WW) {
-        return PW.successors(WW) || []
-      })), Object.keys(mW).forEach((WW => {
-        var iW;
-        let mW = OW[WW];
-        void 0 !== mW && (NW[WW] = null != (iW = NW[mW]) ? iW : 0)
-      })), NW
+        let tR = RR.node(JR);
+        yR !== Number.POSITIVE_INFINITY && tR.borderType !== qR && (uR[JR] = Math.max(void 0 !== uR[JR] ? uR[JR] : 0, yR))
+      }), (function(RR) {
+        return ZR.successors(RR) || []
+      })), Object.keys(yR).forEach((RR => {
+        var JR;
+        let yR = GR[RR];
+        void 0 !== yR && (uR[RR] = null != (JR = uR[yR]) ? JR : 0)
+      })), uR
     }
 
-    function ZO(WW, iW) {
-      let OW, mW = qW(WW),
-        EW = Object.assign(function(WW, iW) {
-          let OW = {};
-          return iW.length && iW.reduce((function(iW, mW) {
-            let EW = 0,
-              NW = 0,
-              PW = iW.length,
-              LW = mW[mW.length - 1];
-            return mW.forEach(((iW, cW) => {
-              let wW = function(WW, iW) {
-                  if (WW.node(iW).dummy) {
-                    let OW = WW.predecessors(iW);
-                    if (OW) return OW.find((iW => WW.node(iW).dummy))
+    function fG(RR, JR) {
+      let GR, yR = dR(RR),
+        tR = Object.assign(function(RR, JR) {
+          let GR = {};
+          return JR.length && JR.reduce((function(JR, yR) {
+            let tR = 0,
+              uR = 0,
+              ZR = JR.length,
+              qR = yR[yR.length - 1];
+            return yR.forEach(((JR, iR) => {
+              let fR = function(RR, JR) {
+                  if (RR.node(JR).dummy) {
+                    let GR = RR.predecessors(JR);
+                    if (GR) return GR.find((JR => RR.node(JR).dummy))
                   }
-                }(WW, iW),
-                tW = wW ? WW.node(wW).order : PW;
-              (wW || iW === LW) && (mW.slice(NW, cW + 1).forEach((iW => {
-                let mW = WW.predecessors(iW);
-                mW && mW.forEach((mW => {
-                  let NW = WW.node(mW),
-                    PW = NW.order;
-                  (PW < EW || tW < PW) && (!NW.dummy || !WW.node(iW).dummy) && cO(OW, mW, iW)
+                }(RR, JR),
+                VR = fR ? RR.node(fR).order : ZR;
+              (fR || JR === qR) && (yR.slice(uR, iR + 1).forEach((JR => {
+                let yR = RR.predecessors(JR);
+                yR && yR.forEach((yR => {
+                  let uR = RR.node(yR),
+                    ZR = uR.order;
+                  (ZR < tR || VR < ZR) && (!uR.dummy || !RR.node(JR).dummy) && ZG(GR, yR, JR)
                 }))
-              })), NW = cW + 1, EW = tW)
-            })), mW
-          })), OW
-        }(WW, mW), function(WW, iW) {
-          let OW = {};
+              })), uR = iR + 1, tR = VR)
+            })), yR
+          })), GR
+        }(RR, yR), function(RR, JR) {
+          let GR = {};
 
-          function mW(iW, mW, EW, NW, PW) {
-            Wi(mW, EW).forEach((mW => {
-              let EW = iW[mW];
-              if (void 0 !== EW && WW.node(EW).dummy) {
-                let iW = WW.predecessors(EW);
-                iW && iW.forEach((iW => {
-                  if (void 0 === iW) return;
-                  let mW = WW.node(iW);
-                  mW.dummy && (mW.order < NW || mW.order > PW) && cO(OW, iW, EW)
+          function yR(JR, yR, tR, uR, ZR) {
+            RJ(yR, tR).forEach((yR => {
+              let tR = JR[yR];
+              if (void 0 !== tR && RR.node(tR).dummy) {
+                let JR = RR.predecessors(tR);
+                JR && JR.forEach((JR => {
+                  if (void 0 === JR) return;
+                  let yR = RR.node(JR);
+                  yR.dummy && (yR.order < uR || yR.order > ZR) && ZG(GR, JR, tR)
                 }))
               }
             }))
           }
-          return iW.length && iW.reduce((function(iW, OW) {
-            let EW = -1,
-              NW = -1,
-              PW = 0;
-            return OW.forEach(((LW, cW) => {
-              if ("border" === WW.node(LW).dummy) {
-                let iW = WW.predecessors(LW);
-                if (iW && iW.length) {
-                  let LW = iW[0];
-                  if (void 0 === LW) return;
-                  NW = WW.node(LW).order, mW(OW, PW, cW, EW, NW), PW = cW, EW = NW
+          return JR.length && JR.reduce((function(JR, GR) {
+            let tR = -1,
+              uR = -1,
+              ZR = 0;
+            return GR.forEach(((qR, iR) => {
+              if ("border" === RR.node(qR).dummy) {
+                let JR = RR.predecessors(qR);
+                if (JR && JR.length) {
+                  let qR = JR[0];
+                  if (void 0 === qR) return;
+                  uR = RR.node(qR).order, yR(GR, ZR, iR, tR, uR), ZR = iR, tR = uR
                 }
               }
-              mW(OW, PW, OW.length, NW, iW.length)
-            })), OW
-          })), OW
-        }(WW, mW)),
-        NW = {};
-      ["u", "d"].forEach((PW => {
-        OW = "u" === PW ? mW : Object.values(mW).reverse(), ["l", "r"].forEach((mW => {
-          "r" === mW && (OW = OW.map((WW => Object.values(WW).reverse())));
-          let LW = function(WW, iW, OW, mW, EW) {
-              let NW = {},
-                PW = {},
-                LW = {};
-              return iW.forEach((WW => {
-                WW.forEach(((WW, iW) => {
-                  NW[WW] = WW, PW[WW] = WW, LW[WW] = iW
+              yR(GR, ZR, GR.length, uR, JR.length)
+            })), GR
+          })), GR
+        }(RR, yR)),
+        uR = {};
+      ["u", "d"].forEach((ZR => {
+        GR = "u" === ZR ? yR : Object.values(yR).reverse(), ["l", "r"].forEach((yR => {
+          "r" === yR && (GR = GR.map((RR => Object.values(RR).reverse())));
+          let qR = function(RR, JR, GR, yR, tR) {
+              let uR = {},
+                ZR = {},
+                qR = {};
+              return JR.forEach((RR => {
+                RR.forEach(((RR, JR) => {
+                  uR[RR] = RR, ZR[RR] = RR, qR[RR] = JR
                 }))
-              })), iW.forEach((iW => {
-                let cW = -1,
-                  wW = -1,
-                  tW = !1,
-                  ZW = iW,
-                  xW = iW.findIndex((iW => (null == EW ? void 0 : EW.includes(iW)) || xO(iW, WW, EW)));
-                xW > 0 && (ZW = [iW[xW], ...iW.slice(0, xW), ...iW.slice(xW + 1)], tW = !0), ZW.forEach((iW => {
-                  var ZW;
-                  let xW = mW(iW);
-                  if (xW && xW.length) {
-                    null != EW && EW.includes(iW) && (xW = xW.filter((iW => xO(iW, WW, EW))));
-                    let mW = xW.sort(((WW, iW) => {
-                        let OW = LW[WW],
-                          mW = LW[iW];
-                        return (void 0 !== OW ? OW : 0) - (void 0 !== mW ? mW : 0)
+              })), JR.forEach((JR => {
+                let iR = -1,
+                  fR = -1,
+                  VR = !1,
+                  KR = JR,
+                  wR = JR.findIndex((JR => (null == tR ? void 0 : tR.includes(JR)) || VG(JR, RR, tR)));
+                wR > 0 && (KR = [JR[wR], ...JR.slice(0, wR), ...JR.slice(wR + 1)], VR = !0), KR.forEach((JR => {
+                  var KR;
+                  let wR = yR(JR);
+                  if (wR && wR.length) {
+                    null != tR && tR.includes(JR) && (wR = wR.filter((JR => VG(JR, RR, tR))));
+                    let yR = wR.sort(((RR, JR) => {
+                        let GR = qR[RR],
+                          yR = qR[JR];
+                        return (void 0 !== GR ? GR : 0) - (void 0 !== yR ? yR : 0)
                       })),
-                      lW = (mW.length - 1) / 2;
-                    for (let WW = Math.floor(lW), EW = Math.ceil(lW); WW <= EW; ++WW) {
-                      let EW = mW[WW];
-                      if (void 0 === EW) continue;
-                      let xW = LW[EW];
-                      if (void 0 !== xW && PW[iW] === iW && cW < xW && LW[EW] !== wW && !wO(OW, iW, EW)) {
-                        let WW = NW[EW];
-                        void 0 !== WW && (PW[EW] = iW, PW[iW] = NW[iW] = WW, cW = xW, tW && (cW = -1, wW = null != (ZW = LW[EW]) ? ZW : -1, tW = !1))
+                      rR = (yR.length - 1) / 2;
+                    for (let RR = Math.floor(rR), tR = Math.ceil(rR); RR <= tR; ++RR) {
+                      let tR = yR[RR];
+                      if (void 0 === tR) continue;
+                      let wR = qR[tR];
+                      if (void 0 !== wR && ZR[JR] === JR && iR < wR && qR[tR] !== fR && !qG(GR, JR, tR)) {
+                        let RR = uR[tR];
+                        void 0 !== RR && (ZR[tR] = JR, ZR[JR] = uR[JR] = RR, iR = wR, VR && (iR = -1, fR = null != (KR = qR[tR]) ? KR : -1, VR = !1))
                       }
                     }
                   }
                 }))
               })), {
-                root: NW,
-                align: PW
+                root: uR,
+                align: ZR
               }
-            }(WW, OW, EW, (iW => ("u" === PW ? WW.predecessors(iW) : WW.successors(iW)) || []), iW),
-            cW = tO(WW, OW, LW.root, LW.align, "r" === mW);
-          "r" === mW && (cW = Oi(cW, (WW => -WW))), NW[PW + mW] = cW
+            }(RR, GR, tR, (JR => ("u" === ZR ? RR.predecessors(JR) : RR.successors(JR)) || []), JR),
+            iR = iG(RR, GR, qR.root, qR.align, "r" === yR);
+          "r" === yR && (iR = GJ(iR, (RR => -RR))), uR[ZR + yR] = iR
         }))
       }));
-      let PW = function(WW, iW) {
-        return Object.values(iW).reduce(((iW, OW) => {
-          let mW = Number.NEGATIVE_INFINITY,
-            EW = Number.POSITIVE_INFINITY;
-          Object.entries(OW).forEach((iW => {
-            let [OW, NW] = iW, PW = function(WW, iW) {
-              return WW.node(iW).width
-            }(WW, OW) / 2;
-            mW = Math.max(NW + PW, mW), EW = Math.min(NW - PW, EW)
+      let ZR = function(RR, JR) {
+        return Object.values(JR).reduce(((JR, GR) => {
+          let yR = Number.NEGATIVE_INFINITY,
+            tR = Number.POSITIVE_INFINITY;
+          Object.entries(GR).forEach((JR => {
+            let [GR, uR] = JR, ZR = function(RR, JR) {
+              return RR.node(JR).width
+            }(RR, GR) / 2;
+            yR = Math.max(uR + ZR, yR), tR = Math.min(uR - ZR, tR)
           }));
-          let NW = mW - EW;
-          return NW < iW[0] && (iW = [NW, OW]), iW
+          let uR = yR - tR;
+          return uR < JR[0] && (JR = [uR, GR]), JR
         }), [Number.POSITIVE_INFINITY, null])[1]
-      }(WW, NW);
-      return function(WW, iW) {
-          let OW = Object.values(iW),
-            mW = IW(Math.min, OW),
-            EW = IW(Math.max, OW);
-          ["u", "d"].forEach((OW => {
-            ["l", "r"].forEach((NW => {
-              let PW = OW + NW,
-                LW = WW[PW];
-              if (!LW || LW === iW) return;
-              let cW = Object.values(LW),
-                wW = mW - IW(Math.min, cW);
-              "l" !== NW && (wW = EW - IW(Math.max, cW)), wW && (WW[PW] = Oi(LW, (WW => WW + wW)))
+      }(RR, uR);
+      return function(RR, JR) {
+          let GR = Object.values(JR),
+            yR = kR(Math.min, GR),
+            tR = kR(Math.max, GR);
+          ["u", "d"].forEach((GR => {
+            ["l", "r"].forEach((uR => {
+              let ZR = GR + uR,
+                qR = RR[ZR];
+              if (!qR || qR === JR) return;
+              let iR = Object.values(qR),
+                fR = yR - kR(Math.min, iR);
+              "l" !== uR && (fR = tR - kR(Math.max, iR)), fR && (RR[ZR] = GJ(qR, (RR => RR + fR)))
             }))
           }))
-        }(NW, PW),
-        function(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            OW = WW.ul;
-          return OW ? Oi(OW, ((OW, mW) => {
-            var EW, NW;
-            if (iW) {
-              let OW = iW.toLowerCase(),
-                EW = WW[OW];
-              if (EW && void 0 !== EW[mW]) return EW[mW]
+        }(uR, ZR),
+        function(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            GR = RR.ul;
+          return GR ? GJ(GR, ((GR, yR) => {
+            var tR, uR;
+            if (JR) {
+              let GR = JR.toLowerCase(),
+                tR = RR[GR];
+              if (tR && void 0 !== tR[yR]) return tR[yR]
             }
-            let PW = Object.values(WW).map((WW => {
-              let iW = WW[mW];
-              return void 0 !== iW ? iW : 0
-            })).sort(((WW, iW) => WW - iW));
-            return ((null != (EW = PW[1]) ? EW : 0) + (null != (NW = PW[2]) ? NW : 0)) / 2
+            let ZR = Object.values(RR).map((RR => {
+              let JR = RR[yR];
+              return void 0 !== JR ? JR : 0
+            })).sort(((RR, JR) => RR - JR));
+            return ((null != (tR = ZR[1]) ? tR : 0) + (null != (uR = ZR[2]) ? uR : 0)) / 2
           })) : {}
-        }(NW, WW.graph().align)
+        }(uR, RR.graph().align)
     }
 
-    function xO(WW, iW, OW) {
-      var mW;
-      if (!OW) return !1;
-      let EW = null == (mW = iW.node(WW)) ? void 0 : mW.edgeObj;
-      if (!EW || iW.node(WW).edgeLabel.reversed) return !1;
-      let NW = OW.indexOf(null == EW ? void 0 : EW.v),
-        PW = OW.indexOf(null == EW ? void 0 : EW.w);
-      return -1 !== NW && -1 !== PW && NW === (PW + 1) % OW.length || NW === (PW - 1) % OW.length
+    function VG(RR, JR, GR) {
+      var yR;
+      if (!GR) return !1;
+      let tR = null == (yR = JR.node(RR)) ? void 0 : yR.edgeObj;
+      if (!tR || JR.node(RR).edgeLabel.reversed) return !1;
+      let uR = GR.indexOf(null == tR ? void 0 : tR.v),
+        ZR = GR.indexOf(null == tR ? void 0 : tR.w);
+      return -1 !== uR && -1 !== ZR && uR === (ZR + 1) % GR.length || uR === (ZR - 1) % GR.length
     }
 
-    function lO(WW, iW) {
-      (function(WW) {
-        let iW = qW(WW),
-          OW = WW.graph(),
-          mW = OW.ranksep,
-          EW = OW.rankalign,
-          NW = 0;
-        iW.forEach((iW => {
-          let OW = iW.reduce(((iW, OW) => {
-            var mW;
-            let EW = null != (mW = WW.node(OW).height) ? mW : 0;
-            return iW > EW ? iW : EW
+    function KG(RR, JR) {
+      (function(RR) {
+        let JR = dR(RR),
+          GR = RR.graph(),
+          yR = GR.ranksep,
+          tR = GR.rankalign,
+          uR = 0;
+        JR.forEach((JR => {
+          let GR = JR.reduce(((JR, GR) => {
+            var yR;
+            let tR = null != (yR = RR.node(GR).height) ? yR : 0;
+            return JR > tR ? JR : tR
           }), 0);
-          iW.forEach((iW => {
-            let mW = WW.node(iW);
-            mW.y = "top" === EW ? NW + mW.height / 2 : "bottom" === EW ? NW + OW - mW.height / 2 : NW + OW / 2
-          })), NW += OW + mW
+          JR.forEach((JR => {
+            let yR = RR.node(JR);
+            yR.y = "top" === tR ? uR + yR.height / 2 : "bottom" === tR ? uR + GR - yR.height / 2 : uR + GR / 2
+          })), uR += GR + yR
         }))
-      })(WW = XW(WW)), Object.entries(ZO(WW, iW)).forEach((iW => {
-        let [OW, mW] = iW;
-        return WW.node(OW).x = mW
+      })(RR = SR(RR)), Object.entries(fG(RR, JR)).forEach((JR => {
+        let [GR, yR] = JR;
+        return RR.node(GR).x = yR
       }))
     }
-    var AO = new WeakMap;
+    var wG = new WeakMap;
 
-    function bO(WW) {
-      return UO(WW, zW, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), WW
+    function rG(RR) {
+      return aG(RR, TR, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), RR
     }
 
-    function jO(WW, iW, OW) {
-      let mW = iW;
-      for (; void 0 !== mW;) {
-        let iW = WW.parent(mW);
-        if (iW === OW) return mW;
-        mW = iW
+    function eG(RR, JR, GR) {
+      let yR = JR;
+      for (; void 0 !== yR;) {
+        let JR = RR.parent(yR);
+        if (JR === GR) return yR;
+        yR = JR
       }
     }
 
-    function UO(WW, iW, OW) {
-      var mW;
-      let EW = WW.nodes().filter((iW => WW.children(iW).length)),
-        NW = {};
-      EW.forEach((mW => {
-        let EW = WW.node(mW);
-        if (EW && EW.rankdir) {
-          let PW = new fW({
+    function aG(RR, JR, GR) {
+      var yR;
+      let tR = RR.nodes().filter((JR => RR.children(JR).length)),
+        uR = {};
+      tR.forEach((yR => {
+        let tR = RR.node(yR);
+        if (tR && tR.rankdir) {
+          let ZR = new mR({
             multigraph: !0,
             compound: !0
           });
-          PW.setGraph({
-            rankdir: EW.rankdir
+          ZR.setGraph({
+            rankdir: tR.rankdir
           });
-          let LW = WW.children(mW);
-          LW.forEach((iW => {
-            let OW = {
-              ...WW.node(iW)
+          let qR = RR.children(yR);
+          qR.forEach((JR => {
+            let GR = {
+              ...RR.node(JR)
             };
-            PW.setNode(iW, OW);
-            let EW = WW.parent(iW);
-            EW && EW !== mW && LW.includes(EW) && PW.setParent(iW, EW)
+            ZR.setNode(JR, GR);
+            let tR = RR.parent(JR);
+            tR && tR !== yR && qR.includes(tR) && ZR.setParent(JR, tR)
           }));
-          let cW = new Set;
-          WW.edges().forEach((iW => {
-            let OW = jO(WW, iW.v, mW),
-              EW = jO(WW, iW.w, mW);
-            if (OW && EW && OW !== EW) {
-              let mW = `${OW}\0${EW}`;
-              cW.has(mW) || (cW.add(mW), PW.setEdge(OW, EW, {
-                ...WW.edge(iW)
+          let iR = new Set;
+          RR.edges().forEach((JR => {
+            let GR = eG(RR, JR.v, yR),
+              tR = eG(RR, JR.w, yR);
+            if (GR && tR && GR !== tR) {
+              let yR = `${GR}\0${tR}`;
+              iR.has(yR) || (iR.add(yR), ZR.setEdge(GR, tR, {
+                ...RR.edge(JR)
               }))
             }
-          })), UO(PW, iW, OW);
-          let wW = HO(PW);
-          kO(wW, iW, OW, null), sO(PW, wW);
-          let tW = 1 / 0,
-            ZW = 1 / 0,
-            xW = -1 / 0,
-            lW = -1 / 0;
-          PW.nodes().forEach((WW => {
-            if (WW === mW) return;
-            let iW = PW.node(WW);
-            iW && "number" == typeof iW.x && "number" == typeof iW.y && "number" == typeof iW.width && "number" == typeof iW.height && (tW = Math.min(tW, iW.x - iW.width / 2), xW = Math.max(xW, iW.x + iW.width / 2), ZW = Math.min(ZW, iW.y - iW.height / 2), lW = Math.max(lW, iW.y + iW.height / 2))
-          })), (!isFinite(tW) || !isFinite(ZW) || !isFinite(xW) || !isFinite(lW)) && (tW = ZW = 0, xW = lW = 0);
-          let AW = xW - tW,
-            bW = lW - ZW;
-          NW[mW] = {
-            minX: tW,
-            Am: ZW,
-            maxX: xW,
-            bm: lW,
-            width: AW,
-            height: bW,
-            offsetX: tW,
-            offsetY: ZW
-          }, EW._dagreClusterSubgraph = PW
+          })), aG(ZR, JR, GR);
+          let fR = pG(ZR);
+          LG(fR, JR, GR, null), nG(ZR, fR);
+          let VR = 1 / 0,
+            KR = 1 / 0,
+            wR = -1 / 0,
+            rR = -1 / 0;
+          ZR.nodes().forEach((RR => {
+            if (RR === yR) return;
+            let JR = ZR.node(RR);
+            JR && "number" == typeof JR.x && "number" == typeof JR.y && "number" == typeof JR.width && "number" == typeof JR.height && (VR = Math.min(VR, JR.x - JR.width / 2), wR = Math.max(wR, JR.x + JR.width / 2), KR = Math.min(KR, JR.y - JR.height / 2), rR = Math.max(rR, JR.y + JR.height / 2))
+          })), (!isFinite(VR) || !isFinite(KR) || !isFinite(wR) || !isFinite(rR)) && (VR = KR = 0, wR = rR = 0);
+          let eR = wR - VR,
+            aR = rR - KR;
+          uR[yR] = {
+            minX: VR,
+            wy: KR,
+            maxX: wR,
+            ey: rR,
+            width: eR,
+            height: aR,
+            offsetX: VR,
+            offsetY: KR
+          }, tR._dagreClusterSubgraph = ZR
         }
       }));
-      let PW = [],
-        LW = new Map;
-      EW.forEach((iW => {
-        let OW = WW.node(iW);
-        OW && OW.rankdir && NW[iW] && LW.set(iW, (WW.children(iW) || []).filter((WW => WW !== iW)))
+      let ZR = [],
+        qR = new Map;
+      tR.forEach((JR => {
+        let GR = RR.node(JR);
+        GR && GR.rankdir && uR[JR] && qR.set(JR, (RR.children(JR) || []).filter((RR => RR !== JR)))
       }));
-      let cW = new Set([...LW.values()].flat()),
-        wW = new Map;
-      LW.forEach(((iW, OW) => {
-        cW.has(OW) || wW.set(OW, (iW => {
-          let OW = [],
-            mW = (WW.children(iW) || []).filter((WW => WW !== iW));
-          for (; mW.length > 0;) {
-            let iW = mW.shift();
-            OW.push(iW), (WW.children(iW) || []).filter((WW => WW !== iW)).forEach((WW => mW.push(WW)))
+      let iR = new Set([...qR.values()].flat()),
+        fR = new Map;
+      qR.forEach(((JR, GR) => {
+        iR.has(GR) || fR.set(GR, (JR => {
+          let GR = [],
+            yR = (RR.children(JR) || []).filter((RR => RR !== JR));
+          for (; yR.length > 0;) {
+            let JR = yR.shift();
+            GR.push(JR), (RR.children(JR) || []).filter((RR => RR !== JR)).forEach((RR => yR.push(RR)))
           }
-          return OW
-        })(OW))
+          return GR
+        })(GR))
       }));
-      let tW = new Set([...wW.values()].flat()),
-        ZW = WW => {
-          for (let [iW, OW] of wW)
-            if (OW.includes(WW)) return iW;
-          return WW
+      let VR = new Set([...fR.values()].flat()),
+        KR = RR => {
+          for (let [JR, GR] of fR)
+            if (GR.includes(RR)) return JR;
+          return RR
         },
-        xW = [];
-      WW.edges().forEach((iW => {
-        (tW.has(iW.v) || tW.has(iW.w)) && xW.push({
-          edge: iW,
-          label: WW.edge(iW)
+        wR = [];
+      RR.edges().forEach((JR => {
+        (VR.has(JR.v) || VR.has(JR.w)) && wR.push({
+          edge: JR,
+          label: RR.edge(JR)
         })
       }));
-      let lW = new Map;
-      tW.forEach((iW => {
-        let OW = WW.parent(iW);
-        lW.set(iW, "string" == typeof OW ? OW : void 0)
-      })), wW.forEach(((iW, OW) => {
-        let mW = WW.node(OW),
-          EW = [];
-        iW.forEach((iW => {
-          let OW = WW.node(iW);
-          OW && (EW.push({
-            id: iW,
-            node: OW,
-            parent: lW.get(iW)
-          }), WW.removeNode(iW))
+      let rR = new Map;
+      VR.forEach((JR => {
+        let GR = RR.parent(JR);
+        rR.set(JR, "string" == typeof GR ? GR : void 0)
+      })), fR.forEach(((JR, GR) => {
+        let yR = RR.node(GR),
+          tR = [];
+        JR.forEach((JR => {
+          let GR = RR.node(JR);
+          GR && (tR.push({
+            id: JR,
+            node: GR,
+            parent: rR.get(JR)
+          }), RR.removeNode(JR))
         }));
-        let LW = xW.filter((WW => {
+        let qR = wR.filter((RR => {
             let {
-              edge: OW
-            } = WW;
-            return iW.includes(OW.v) || iW.includes(OW.w)
+              edge: GR
+            } = RR;
+            return JR.includes(GR.v) || JR.includes(GR.w)
           })),
-          cW = NW[OW];
-        mW && (PW.push({
-          clusterId: OW,
-          subgraph: mW._dagreClusterSubgraph,
-          bounds: cW,
-          children: iW,
-          removedNodes: EW,
-          removedEdges: LW
-        }), mW.width = cW.width, mW.height = cW.height)
+          iR = uR[GR];
+        yR && (ZR.push({
+          clusterId: GR,
+          subgraph: yR._dagreClusterSubgraph,
+          bounds: iR,
+          children: JR,
+          removedNodes: tR,
+          removedEdges: qR
+        }), yR.width = iR.width, yR.height = iR.height)
       }));
-      let AW = new Set;
-      xW.forEach((iW => {
+      let eR = new Set;
+      wR.forEach((JR => {
         let {
-          edge: OW,
-          label: mW
-        } = iW, EW = ZW(OW.v), NW = ZW(OW.w);
-        if (EW !== NW && WW.hasNode(EW) && WW.hasNode(NW)) {
-          let iW = `${EW}\0${NW}`;
-          AW.has(iW) || (AW.add(iW), WW.setEdge(EW, NW, {
-            ...mW,
+          edge: GR,
+          label: yR
+        } = JR, tR = KR(GR.v), uR = KR(GR.w);
+        if (tR !== uR && RR.hasNode(tR) && RR.hasNode(uR)) {
+          let JR = `${tR}\0${uR}`;
+          eR.has(JR) || (eR.add(JR), RR.setEdge(tR, uR, {
+            ...yR,
             width: 0,
             height: 0
           }))
         }
       }));
-      let bW = HO(WW),
-        jW = kO(bW, iW, OW, null != (mW = AO.get(WW)) ? mW : null);
-      AO.set(WW, jW), sO(WW, bW), AW.forEach((iW => {
-        let OW = iW.indexOf("\0"),
-          mW = iW.slice(0, OW),
-          EW = iW.slice(OW + 1);
-        WW.hasEdge(mW, EW) && WW.removeEdge(mW, EW)
-      })), PW.forEach((iW => {
+      let aR = pG(RR),
+        LR = LG(aR, JR, GR, null != (yR = wG.get(RR)) ? yR : null);
+      wG.set(RR, LR), nG(RR, aR), eR.forEach((JR => {
+        let GR = JR.indexOf("\0"),
+          yR = JR.slice(0, GR),
+          tR = JR.slice(GR + 1);
+        RR.hasEdge(yR, tR) && RR.removeEdge(yR, tR)
+      })), ZR.forEach((JR => {
         let {
-          clusterId: OW,
-          subgraph: mW,
-          bounds: EW,
-          removedNodes: NW,
-          removedEdges: PW
-        } = iW;
-        var LW, cW;
-        let wW = WW.node(OW),
-          tW = null != (LW = null == wW ? void 0 : wW.x) ? LW : 0,
-          ZW = null != (cW = null == wW ? void 0 : wW.y) ? cW : 0,
-          xW = (EW.minX + EW.maxX) / 2,
-          lW = (EW.Am + EW.bm) / 2;
-        NW.forEach((iW => {
+          clusterId: GR,
+          subgraph: yR,
+          bounds: tR,
+          removedNodes: uR,
+          removedEdges: ZR
+        } = JR;
+        var qR, iR;
+        let fR = RR.node(GR),
+          VR = null != (qR = null == fR ? void 0 : fR.x) ? qR : 0,
+          KR = null != (iR = null == fR ? void 0 : fR.y) ? iR : 0,
+          wR = (tR.minX + tR.maxX) / 2,
+          rR = (tR.wy + tR.ey) / 2;
+        uR.forEach((JR => {
           let {
-            id: OW,
-            node: mW,
-            parent: EW
-          } = iW;
-          WW.setNode(OW, mW), void 0 !== EW && WW.setParent(OW, EW)
-        })), PW.forEach((iW => {
+            id: GR,
+            node: yR,
+            parent: tR
+          } = JR;
+          RR.setNode(GR, yR), void 0 !== tR && RR.setParent(GR, tR)
+        })), ZR.forEach((JR => {
           let {
-            edge: OW,
-            label: mW
-          } = iW;
-          WW.setEdge(OW, mW)
-        })), mW.nodes().forEach((iW => {
-          if (iW === OW) return;
-          let EW = mW.node(iW),
-            NW = WW.node(iW);
-          NW && EW && "number" == typeof EW.x && "number" == typeof EW.y && (NW.x = tW + (EW.x - xW), NW.y = ZW + (EW.y - lW))
-        })), delete wW._dagreClusterSubgraph
-      })), EW.forEach((iW => {
-        var OW, mW;
-        let EW = WW.node(iW),
-          PW = NW[iW];
-        if (EW && EW.rankdir && EW._dagreClusterSubgraph && PW) {
-          let NW = EW._dagreClusterSubgraph,
-            LW = null != (OW = EW.x) ? OW : 0,
-            cW = null != (mW = EW.y) ? mW : 0,
-            wW = (PW.minX + PW.maxX) / 2,
-            tW = (PW.Am + PW.bm) / 2;
-          NW.nodes().forEach((OW => {
-            if (OW === iW) return;
-            let mW = NW.node(OW),
-              EW = WW.node(OW);
-            if (EW && mW && "number" == typeof mW.x && "number" == typeof mW.y) {
-              let WW = mW.x - wW,
-                iW = mW.y - tW;
-              EW.x = LW + WW, EW.y = cW + iW
+            edge: GR,
+            label: yR
+          } = JR;
+          RR.setEdge(GR, yR)
+        })), yR.nodes().forEach((JR => {
+          if (JR === GR) return;
+          let tR = yR.node(JR),
+            uR = RR.node(JR);
+          uR && tR && "number" == typeof tR.x && "number" == typeof tR.y && (uR.x = VR + (tR.x - wR), uR.y = KR + (tR.y - rR))
+        })), delete fR._dagreClusterSubgraph
+      })), tR.forEach((JR => {
+        var GR, yR;
+        let tR = RR.node(JR),
+          ZR = uR[JR];
+        if (tR && tR.rankdir && tR._dagreClusterSubgraph && ZR) {
+          let uR = tR._dagreClusterSubgraph,
+            qR = null != (GR = tR.x) ? GR : 0,
+            iR = null != (yR = tR.y) ? yR : 0,
+            fR = (ZR.minX + ZR.maxX) / 2,
+            VR = (ZR.wy + ZR.ey) / 2;
+          uR.nodes().forEach((GR => {
+            if (GR === JR) return;
+            let yR = uR.node(GR),
+              tR = RR.node(GR);
+            if (tR && yR && "number" == typeof yR.x && "number" == typeof yR.y) {
+              let RR = yR.x - fR,
+                JR = yR.y - VR;
+              tR.x = qR + RR, tR.y = iR + JR
             }
-          })), delete EW._dagreClusterSubgraph
+          })), delete tR._dagreClusterSubgraph
         }
       }))
     }
 
-    function kO(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      var EW, NW;
-      let PW = !1 !== (null == OW ? void 0 : OW.useDynamic),
-        LW = PW && null != (EW = null == mW ? void 0 : mW.graph) ? EW : null,
-        cW = PW && null != (NW = null == mW ? void 0 : mW.rawNodes) ? NW : null;
-      iW("    makeSpaceForEdgeLabels", (() => function(WW) {
-        let iW = WW.graph();
-        iW.ranksep /= 2, WW.edges().forEach((OW => {
-          var mW;
-          let EW = WW.edge(OW);
-          EW.minlen *= 2, "c" !== (null != (mW = EW.labelpos) ? mW : "r").toLowerCase() && ("TB" === iW.rankdir || "BT" === iW.rankdir ? EW.width += EW.labeloffset : EW.height += EW.labeloffset)
+    function LG(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      var tR, uR;
+      let ZR = !1 !== (null == GR ? void 0 : GR.useDynamic),
+        qR = ZR && null != (tR = null == yR ? void 0 : yR.graph) ? tR : null,
+        iR = ZR && null != (uR = null == yR ? void 0 : yR.rawNodes) ? uR : null;
+      JR("    makeSpaceForEdgeLabels", (() => function(RR) {
+        let JR = RR.graph();
+        JR.ranksep /= 2, RR.edges().forEach((GR => {
+          var yR;
+          let tR = RR.edge(GR);
+          tR.minlen *= 2, "c" !== (null != (yR = tR.labelpos) ? yR : "r").toLowerCase() && ("TB" === JR.rankdir || "BT" === JR.rankdir ? tR.width += tR.labeloffset : tR.height += tR.labeloffset)
         }))
-      }(WW))), iW("    removeSelfEdges", (() => function(WW) {
-        WW.edges().forEach((iW => {
-          if (iW.v === iW.w) {
-            let OW = WW.node(iW.v);
-            OW.selfEdges || (OW.selfEdges = []), OW.selfEdges.push({
-              e: iW,
-              label: WW.edge(iW)
-            }), WW.removeEdge(iW)
+      }(RR))), JR("    removeSelfEdges", (() => function(RR) {
+        RR.edges().forEach((JR => {
+          if (JR.v === JR.w) {
+            let GR = RR.node(JR.v);
+            GR.selfEdges || (GR.selfEdges = []), GR.selfEdges.push({
+              e: JR,
+              label: RR.edge(JR)
+            }), RR.removeEdge(JR)
           }
         }))
-      }(WW))), iW("    acyclic", (() => li(WW, LW))), iW("    nestingGraph.run", (() => fi(WW))), iW("    rank", (() => vi(XW(WW)))), iW("    injectEdgeLabelProxies", (() => function(WW) {
-        WW.edges().forEach((iW => {
-          let OW = WW.edge(iW);
-          if (OW.width && OW.height) {
-            let OW = WW.node(iW.v),
-              mW = {
-                rank: (WW.node(iW.w).rank - OW.rank) / 2 + OW.rank,
-                e: iW
+      }(RR))), JR("    acyclic", (() => rJ(RR, qR))), JR("    nestingGraph.run", (() => PJ(RR))), JR("    rank", (() => DJ(SR(RR)))), JR("    injectEdgeLabelProxies", (() => function(RR) {
+        RR.edges().forEach((JR => {
+          let GR = RR.edge(JR);
+          if (GR.width && GR.height) {
+            let GR = RR.node(JR.v),
+              yR = {
+                rank: (RR.node(JR.w).rank - GR.rank) / 2 + GR.rank,
+                e: JR
               };
-            CW(WW, "edge-proxy", mW, "_ep")
+            zR(RR, "edge-proxy", yR, "_ep")
           }
         }))
-      }(WW))), iW("    removeEmptyRanks", (() => function(WW) {
-        let iW = WW.nodes().map((iW => WW.node(iW).rank)).filter((WW => void 0 !== WW)),
-          OW = IW(Math.min, iW),
-          mW = [];
-        WW.nodes().forEach((iW => {
-          let EW = WW.node(iW).rank - OW;
-          mW[EW] || (mW[EW] = []), mW[EW].push(iW)
+      }(RR))), JR("    removeEmptyRanks", (() => function(RR) {
+        let JR = RR.nodes().map((JR => RR.node(JR).rank)).filter((RR => void 0 !== RR)),
+          GR = kR(Math.min, JR),
+          yR = [];
+        RR.nodes().forEach((JR => {
+          let tR = RR.node(JR).rank - GR;
+          yR[tR] || (yR[tR] = []), yR[tR].push(JR)
         }));
-        let EW = 0,
-          NW = WW.graph().nodeRankFactor;
-        Array.from(mW).forEach(((iW, OW) => {
-          void 0 === iW && OW % NW !== 0 ? --EW : void 0 !== iW && EW && iW.forEach((iW => WW.node(iW).rank += EW))
+        let tR = 0,
+          uR = RR.graph().nodeRankFactor;
+        Array.from(yR).forEach(((JR, GR) => {
+          void 0 === JR && GR % uR !== 0 ? --tR : void 0 !== JR && tR && JR.forEach((JR => RR.node(JR).rank += tR))
         }))
-      }(WW))), iW("    nestingGraph.cleanup", (() => function(WW) {
-        let iW = WW.graph();
-        WW.removeNode(iW.nestingRoot), delete iW.nestingRoot, WW.edges().forEach((iW => {
-          WW.edge(iW).nestingEdge && WW.removeEdge(iW)
+      }(RR))), JR("    nestingGraph.cleanup", (() => function(RR) {
+        let JR = RR.graph();
+        RR.removeNode(JR.nestingRoot), delete JR.nestingRoot, RR.edges().forEach((JR => {
+          RR.edge(JR).nestingEdge && RR.removeEdge(JR)
         }))
-      }(WW))), iW("    normalizeRanks", (() => function(WW) {
-        let iW = WW.nodes().map((iW => {
-            let OW = WW.node(iW).rank;
-            return void 0 === OW ? Number.MAX_VALUE : OW
+      }(RR))), JR("    normalizeRanks", (() => function(RR) {
+        let JR = RR.nodes().map((JR => {
+            let GR = RR.node(JR).rank;
+            return void 0 === GR ? Number.MAX_VALUE : GR
           })),
-          OW = IW(Math.min, iW);
-        WW.nodes().forEach((iW => {
-          let mW = WW.node(iW);
-          Object.hasOwn(mW, "rank") && (mW.rank -= OW)
+          GR = kR(Math.min, JR);
+        RR.nodes().forEach((JR => {
+          let yR = RR.node(JR);
+          Object.hasOwn(yR, "rank") && (yR.rank -= GR)
         }))
-      }(WW))), iW("    assignRankMinMax", (() => function(WW) {
-        let iW = 0;
-        WW.nodes().forEach((OW => {
-          let mW = WW.node(OW);
-          mW.borderTop && (mW.minRank = WW.node(mW.borderTop).rank, mW.maxRank = WW.node(mW.borderBottom).rank, iW = Math.max(iW, mW.maxRank))
-        })), WW.graph().maxRank = iW
-      }(WW))), iW("    removeEdgeLabelProxies", (() => function(WW) {
-        WW.nodes().forEach((iW => {
-          let OW = WW.node(iW);
-          if ("edge-proxy" === OW.dummy) {
-            let mW = OW;
-            WW.edge(mW.e).labelRank = OW.rank, WW.removeNode(iW)
+      }(RR))), JR("    assignRankMinMax", (() => function(RR) {
+        let JR = 0;
+        RR.nodes().forEach((GR => {
+          let yR = RR.node(GR);
+          yR.borderTop && (yR.minRank = RR.node(yR.borderTop).rank, yR.maxRank = RR.node(yR.borderBottom).rank, JR = Math.max(JR, yR.maxRank))
+        })), RR.graph().maxRank = JR
+      }(RR))), JR("    removeEdgeLabelProxies", (() => function(RR) {
+        RR.nodes().forEach((JR => {
+          let GR = RR.node(JR);
+          if ("edge-proxy" === GR.dummy) {
+            let yR = GR;
+            RR.edge(yR.e).labelRank = GR.rank, RR.removeNode(JR)
           }
         }))
-      }(WW))), iW("    normalize.run", (() => Ai(WW))), iW("    parentDummyChains", (() => Vi(WW))), iW("    addBorderSegments", (() => Xi(WW))), iW("    order", (() => EO(WW, OW, cW))), iW("    insertSelfEdges", (() => function(WW) {
-        qW(WW).forEach((iW => {
-          let OW = 0;
-          iW.forEach(((iW, mW) => {
-            let EW = WW.node(iW);
-            "number" != typeof EW.rank && (EW.rank = 0), EW.order = mW + OW, (EW.selfEdges || []).forEach((iW => {
-              CW(WW, "selfedge", {
-                width: iW.label.width,
-                height: iW.label.height,
-                rank: EW.rank,
-                order: mW + ++OW,
-                e: iW.e,
-                edgeLabel: iW.label
-              }, "_se"), (!Array.isArray(iW.label.points) || 7 !== iW.label.points.length) && (iW.label.points = [{
+      }(RR))), JR("    normalize.run", (() => eJ(RR))), JR("    parentDummyChains", (() => cJ(RR))), JR("    addBorderSegments", (() => mJ(RR))), JR("    order", (() => GG(RR, GR, iR))), JR("    insertSelfEdges", (() => function(RR) {
+        dR(RR).forEach((JR => {
+          let GR = 0;
+          JR.forEach(((JR, yR) => {
+            let tR = RR.node(JR);
+            "number" != typeof tR.rank && (tR.rank = 0), tR.order = yR + GR, (tR.selfEdges || []).forEach((JR => {
+              zR(RR, "selfedge", {
+                width: JR.label.width,
+                height: JR.label.height,
+                rank: tR.rank,
+                order: yR + ++GR,
+                e: JR.e,
+                edgeLabel: JR.label
+              }, "_se"), (!Array.isArray(JR.label.points) || 7 !== JR.label.points.length) && (JR.label.points = [{
                 x: 0,
                 y: -10
               }, {
@@ -2328,199 +2328,199 @@ export const modules = {
                 x: 0,
                 y: 0
               }])
-            })), delete EW.selfEdges
+            })), delete tR.selfEdges
           }))
         }))
-      }(WW))), iW("    adjustCoordinateSystem", (() => function(WW) {
-        var iW;
-        let OW = null == (iW = WW.graph().rankdir) ? void 0 : iW.toLowerCase();
-        ("lr" === OW || "rl" === OW) && Ri(WW)
-      }(WW))), iW("    position", (() => lO(WW, OW.corePath))), iW("    positionSelfEdges", (() => function(WW) {
-        WW.nodes().forEach((iW => {
-          let OW = WW.node(iW),
-            mW = WW => "number" == typeof WW && isFinite(WW);
-          if ("selfedge" === OW.dummy) {
-            let EW = OW,
-              NW = WW.node(EW.e.v),
-              PW = mW(null == NW ? void 0 : NW.x) ? NW.x : 0,
-              LW = mW(null == NW ? void 0 : NW.y) ? NW.y : 0,
-              cW = mW(null == NW ? void 0 : NW.width) ? NW.width : 0,
-              wW = mW(null == NW ? void 0 : NW.height) ? NW.height : 0,
-              tW = mW(OW.x) ? OW.x : PW,
-              ZW = mW(OW.y) ? OW.y : LW,
-              xW = cW / 2,
-              lW = wW / 2;
-            EW.edgeLabel.points = [{
-              x: tW + xW,
-              y: ZW - lW
+      }(RR))), JR("    adjustCoordinateSystem", (() => function(RR) {
+        var JR;
+        let GR = null == (JR = RR.graph().rankdir) ? void 0 : JR.toLowerCase();
+        ("lr" === GR || "rl" === GR) && jJ(RR)
+      }(RR))), JR("    position", (() => KG(RR, GR.corePath))), JR("    positionSelfEdges", (() => function(RR) {
+        RR.nodes().forEach((JR => {
+          let GR = RR.node(JR),
+            yR = RR => "number" == typeof RR && isFinite(RR);
+          if ("selfedge" === GR.dummy) {
+            let tR = GR,
+              uR = RR.node(tR.e.v),
+              ZR = yR(null == uR ? void 0 : uR.x) ? uR.x : 0,
+              qR = yR(null == uR ? void 0 : uR.y) ? uR.y : 0,
+              iR = yR(null == uR ? void 0 : uR.width) ? uR.width : 0,
+              fR = yR(null == uR ? void 0 : uR.height) ? uR.height : 0,
+              VR = yR(GR.x) ? GR.x : ZR,
+              KR = yR(GR.y) ? GR.y : qR,
+              wR = iR / 2,
+              rR = fR / 2;
+            tR.edgeLabel.points = [{
+              x: VR + wR,
+              y: KR - rR
             }, {
-              x: tW + xW,
-              y: ZW - lW
+              x: VR + wR,
+              y: KR - rR
             }, {
-              x: tW,
-              y: ZW
+              x: VR,
+              y: KR
             }, {
-              x: tW - xW,
-              y: ZW + lW
+              x: VR - wR,
+              y: KR + rR
             }, {
-              x: tW - xW,
-              y: ZW + lW
+              x: VR - wR,
+              y: KR + rR
             }, {
-              x: tW,
-              y: ZW
+              x: VR,
+              y: KR
             }, {
-              x: tW,
-              y: ZW
-            }], EW.edgeLabel.x = tW, EW.edgeLabel.y = ZW, WW.setEdge(EW.e, EW.edgeLabel), WW.removeNode(iW)
-          } else OW && Array.isArray(OW.selfEdges) && OW.selfEdges.forEach((WW => {
-            if (!Array.isArray(WW.label.points) || 7 !== WW.label.points.length) {
-              let iW = mW(OW.x) ? OW.x : 0,
-                EW = mW(OW.y) ? OW.y : 0,
-                NW = (mW(OW.width) ? OW.width : 0) / 2,
-                PW = (mW(OW.height) ? OW.height : 0) / 2;
-              WW.label.points = [{
-                x: iW + NW,
-                y: EW - PW
+              x: VR,
+              y: KR
+            }], tR.edgeLabel.x = VR, tR.edgeLabel.y = KR, RR.setEdge(tR.e, tR.edgeLabel), RR.removeNode(JR)
+          } else GR && Array.isArray(GR.selfEdges) && GR.selfEdges.forEach((RR => {
+            if (!Array.isArray(RR.label.points) || 7 !== RR.label.points.length) {
+              let JR = yR(GR.x) ? GR.x : 0,
+                tR = yR(GR.y) ? GR.y : 0,
+                uR = (yR(GR.width) ? GR.width : 0) / 2,
+                ZR = (yR(GR.height) ? GR.height : 0) / 2;
+              RR.label.points = [{
+                x: JR + uR,
+                y: tR - ZR
               }, {
-                x: iW + NW,
-                y: EW - PW
+                x: JR + uR,
+                y: tR - ZR
               }, {
-                x: iW,
-                y: EW
+                x: JR,
+                y: tR
               }, {
-                x: iW - NW,
-                y: EW + PW
+                x: JR - uR,
+                y: tR + ZR
               }, {
-                x: iW - NW,
-                y: EW + PW
+                x: JR - uR,
+                y: tR + ZR
               }, {
-                x: iW,
-                y: EW
+                x: JR,
+                y: tR
               }, {
-                x: iW,
-                y: EW
+                x: JR,
+                y: tR
               }]
             }
           }))
         }))
-      }(WW)));
-      let wW = JSON.parse(JSON.stringify(WW._nodes));
-      return iW("    removeBorderNodes", (() => function(WW) {
-        WW.nodes().forEach((iW => {
-          if (WW.children(iW).length) {
-            let OW = WW.node(iW),
-              mW = WW.node(OW.borderTop),
-              EW = WW.node(OW.borderBottom),
-              NW = WW.node(OW.borderLeft[OW.borderLeft.length - 1]),
-              PW = WW.node(OW.borderRight[OW.borderRight.length - 1]);
-            OW.width = Math.abs(PW.x - NW.x), OW.height = Math.abs(EW.y - mW.y), OW.x = NW.x + OW.width / 2, OW.y = mW.y + OW.height / 2
+      }(RR)));
+      let fR = JSON.parse(JSON.stringify(RR._nodes));
+      return JR("    removeBorderNodes", (() => function(RR) {
+        RR.nodes().forEach((JR => {
+          if (RR.children(JR).length) {
+            let GR = RR.node(JR),
+              yR = RR.node(GR.borderTop),
+              tR = RR.node(GR.borderBottom),
+              uR = RR.node(GR.borderLeft[GR.borderLeft.length - 1]),
+              ZR = RR.node(GR.borderRight[GR.borderRight.length - 1]);
+            GR.width = Math.abs(ZR.x - uR.x), GR.height = Math.abs(tR.y - yR.y), GR.x = uR.x + GR.width / 2, GR.y = yR.y + GR.height / 2
           }
-        })), WW.nodes().forEach((iW => {
-          "border" === WW.node(iW).dummy && WW.removeNode(iW)
+        })), RR.nodes().forEach((JR => {
+          "border" === RR.node(JR).dummy && RR.removeNode(JR)
         }))
-      }(WW))), iW("    normalize.undo", (() => function(WW) {
-        WW.graph().dummyChains.forEach((iW => {
-          let OW, mW = WW.node(iW),
-            EW = mW.edgeLabel;
-          for (WW.setEdge(mW.edgeObj, EW); mW.dummy;) OW = WW.successors(iW)[0], WW.removeNode(iW), EW.points.push({
-            x: mW.x,
-            y: mW.y
-          }), "edge-label" === mW.dummy && (EW.x = mW.x, EW.y = mW.y, EW.width = mW.width, EW.height = mW.height), iW = OW, mW = WW.node(iW)
+      }(RR))), JR("    normalize.undo", (() => function(RR) {
+        RR.graph().dummyChains.forEach((JR => {
+          let GR, yR = RR.node(JR),
+            tR = yR.edgeLabel;
+          for (RR.setEdge(yR.edgeObj, tR); yR.dummy;) GR = RR.successors(JR)[0], RR.removeNode(JR), tR.points.push({
+            x: yR.x,
+            y: yR.y
+          }), "edge-label" === yR.dummy && (tR.x = yR.x, tR.y = yR.y, tR.width = yR.width, tR.height = yR.height), JR = GR, yR = RR.node(JR)
         }))
-      }(WW))), iW("    fixupEdgeLabelCoords", (() => function(WW) {
-        WW.edges().forEach((iW => {
-          let OW = WW.edge(iW);
-          if (Object.hasOwn(OW, "x")) switch (("l" === OW.labelpos || "r" === OW.labelpos) && (OW.width -= OW.labeloffset), OW.labelpos) {
+      }(RR))), JR("    fixupEdgeLabelCoords", (() => function(RR) {
+        RR.edges().forEach((JR => {
+          let GR = RR.edge(JR);
+          if (Object.hasOwn(GR, "x")) switch (("l" === GR.labelpos || "r" === GR.labelpos) && (GR.width -= GR.labeloffset), GR.labelpos) {
             case "l":
-              OW.x -= OW.width / 2 + OW.labeloffset;
+              GR.x -= GR.width / 2 + GR.labeloffset;
               break;
             case "r":
-              OW.x += OW.width / 2 + OW.labeloffset
+              GR.x += GR.width / 2 + GR.labeloffset
           }
         }))
-      }(WW))), iW("    undoCoordinateSystem", (() => qi(WW))), iW("    translateGraph", (() => function(WW) {
-        let iW = Number.POSITIVE_INFINITY,
-          OW = 0,
-          mW = Number.POSITIVE_INFINITY,
-          EW = 0,
-          NW = WW.graph(),
-          PW = NW.marginx || 0,
-          LW = NW.marginy || 0;
+      }(RR))), JR("    undoCoordinateSystem", (() => SJ(RR))), JR("    translateGraph", (() => function(RR) {
+        let JR = Number.POSITIVE_INFINITY,
+          GR = 0,
+          yR = Number.POSITIVE_INFINITY,
+          tR = 0,
+          uR = RR.graph(),
+          ZR = uR.marginx || 0,
+          qR = uR.marginy || 0;
 
-        function cW(WW) {
-          let NW = WW.x,
-            PW = WW.y,
-            LW = WW.width,
-            cW = WW.height;
-          iW = Math.min(iW, NW - LW / 2), OW = Math.max(OW, NW + LW / 2), mW = Math.min(mW, PW - cW / 2), EW = Math.max(EW, PW + cW / 2)
+        function iR(RR) {
+          let uR = RR.x,
+            ZR = RR.y,
+            qR = RR.width,
+            iR = RR.height;
+          JR = Math.min(JR, uR - qR / 2), GR = Math.max(GR, uR + qR / 2), yR = Math.min(yR, ZR - iR / 2), tR = Math.max(tR, ZR + iR / 2)
         }
-        WW.nodes().forEach((iW => cW(WW.node(iW)))), WW.edges().forEach((iW => {
-          let OW = WW.edge(iW);
-          Object.hasOwn(OW, "x") && cW(OW)
-        })), iW -= PW, mW -= LW, WW.nodes().forEach((OW => {
-          let EW = WW.node(OW);
-          EW.x -= iW, EW.y -= mW
-        })), WW.edges().forEach((OW => {
-          let EW = WW.edge(OW);
-          EW.points.forEach((WW => {
-            WW.x -= iW, WW.y -= mW
-          })), Object.hasOwn(EW, "x") && (EW.x -= iW), Object.hasOwn(EW, "y") && (EW.y -= mW)
-        })), NW.width = OW - iW + PW, NW.height = EW - mW + LW
-      }(WW))), iW("    assignNodeIntersects", (() => function(WW) {
-        WW.edges().forEach((iW => {
-          if (iW.v === iW.w) return;
-          let OW, mW, EW = WW.edge(iW),
-            NW = WW.node(iW.v),
-            PW = WW.node(iW.w);
-          EW.points ? (OW = EW.points[0], mW = EW.points[EW.points.length - 1]) : (EW.points = [], OW = PW, mW = NW), EW.points.unshift(BW(NW, OW)), EW.points.push(BW(PW, mW))
+        RR.nodes().forEach((JR => iR(RR.node(JR)))), RR.edges().forEach((JR => {
+          let GR = RR.edge(JR);
+          Object.hasOwn(GR, "x") && iR(GR)
+        })), JR -= ZR, yR -= qR, RR.nodes().forEach((GR => {
+          let tR = RR.node(GR);
+          tR.x -= JR, tR.y -= yR
+        })), RR.edges().forEach((GR => {
+          let tR = RR.edge(GR);
+          tR.points.forEach((RR => {
+            RR.x -= JR, RR.y -= yR
+          })), Object.hasOwn(tR, "x") && (tR.x -= JR), Object.hasOwn(tR, "y") && (tR.y -= yR)
+        })), uR.width = GR - JR + ZR, uR.height = tR - yR + qR
+      }(RR))), JR("    assignNodeIntersects", (() => function(RR) {
+        RR.edges().forEach((JR => {
+          if (JR.v === JR.w) return;
+          let GR, yR, tR = RR.edge(JR),
+            uR = RR.node(JR.v),
+            ZR = RR.node(JR.w);
+          tR.points ? (GR = tR.points[0], yR = tR.points[tR.points.length - 1]) : (tR.points = [], GR = ZR, yR = uR), tR.points.unshift(jR(uR, GR)), tR.points.push(jR(ZR, yR))
         }))
-      }(WW))), iW("    reversePoints", (() => function(WW) {
-        WW.edges().forEach((iW => {
-          let OW = WW.edge(iW);
-          OW.reversed && OW.points.reverse()
+      }(RR))), JR("    reversePoints", (() => function(RR) {
+        RR.edges().forEach((JR => {
+          let GR = RR.edge(JR);
+          GR.reversed && GR.points.reverse()
         }))
-      }(WW))), iW("    acyclic.undo", (() => function(WW) {
-        WW.edges().forEach((iW => {
-          let OW = WW.edge(iW);
-          if (OW.reversed) {
-            WW.removeEdge(iW);
-            let mW = OW.forwardName;
-            delete OW.reversed, delete OW.forwardName, WW.setEdge(iW.w, iW.v, OW, mW)
+      }(RR))), JR("    acyclic.undo", (() => function(RR) {
+        RR.edges().forEach((JR => {
+          let GR = RR.edge(JR);
+          if (GR.reversed) {
+            RR.removeEdge(JR);
+            let yR = GR.forwardName;
+            delete GR.reversed, delete GR.forwardName, RR.setEdge(JR.w, JR.v, GR, yR)
           }
         }))
-      }(WW))), {
-        graph: WW,
-        rawNodes: wW
+      }(RR))), {
+        graph: RR,
+        rawNodes: fR
       }
     }
 
-    function sO(WW, iW) {
-      WW.nodes().forEach((OW => {
-        let mW = WW.node(OW),
-          EW = iW.node(OW);
-        mW && (mW.x = EW.x, mW.y = EW.y, mW.order = EW.order, mW.rank = EW.rank, iW.children(OW).length && (mW.width = EW.width, mW.height = EW.height))
-      })), WW.edges().forEach((OW => {
-        let mW = WW.edge(OW),
-          EW = iW.edge(OW);
-        mW.points = EW.points, Object.hasOwn(EW, "x") && (mW.x = EW.x, mW.y = EW.y)
-      })), WW.graph().width = iW.graph().width, WW.graph().height = iW.graph().height
+    function nG(RR, JR) {
+      RR.nodes().forEach((GR => {
+        let yR = RR.node(GR),
+          tR = JR.node(GR);
+        yR && (yR.x = tR.x, yR.y = tR.y, yR.order = tR.order, yR.rank = tR.rank, JR.children(GR).length && (yR.width = tR.width, yR.height = tR.height))
+      })), RR.edges().forEach((GR => {
+        let yR = RR.edge(GR),
+          tR = JR.edge(GR);
+        yR.points = tR.points, Object.hasOwn(tR, "x") && (yR.x = tR.x, yR.y = tR.y)
+      })), RR.graph().width = JR.graph().width, RR.graph().height = JR.graph().height
     }
-    var MO = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
-      KO = {
+    var UG = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
+      WG = {
         ranksep: 50,
         edgesep: 20,
         nodesep: 50,
         rankdir: "TB",
         rankalign: "center"
       },
-      SO = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
-      YO = ["width", "height", "rank"],
-      yO = {
+      AG = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
+      CG = ["width", "height", "rank"],
+      XG = {
         width: 0,
         height: 0
       },
-      TO = ["minlen", "weight", "width", "height", "labeloffset"],
-      JO = {
+      MG = ["minlen", "weight", "width", "height", "labeloffset"],
+      BG = {
         minlen: 1,
         weight: 1,
         width: 0,
@@ -2528,73 +2528,73 @@ export const modules = {
         labeloffset: 10,
         labelpos: "r"
       },
-      hO = ["labelpos"];
+      lG = ["labelpos"];
 
-    function HO(WW) {
-      let iW = new fW({
+    function pG(RR) {
+      let JR = new mR({
           multigraph: !0,
           compound: !0
         }),
-        OW = uO(WW.graph());
-      return iW.setGraph(Object.assign({}, KO, nO(OW, MO), ii(OW, SO))), WW.nodes().forEach((OW => {
-        let mW = nO(uO(WW.node(OW)), YO);
-        Object.keys(yO).forEach((WW => {
-          void 0 === mW[WW] && (mW[WW] = yO[WW])
-        })), iW.setNode(OW, mW);
-        let EW = WW.parent(OW);
-        void 0 !== EW && iW.setParent(OW, EW)
-      })), WW.edges().forEach((OW => {
-        let mW = uO(WW.edge(OW));
-        iW.setEdge(OW, Object.assign({}, JO, nO(mW, TO), ii(mW, hO)))
-      })), iW
+        GR = bG(RR.graph());
+      return JR.setGraph(Object.assign({}, WG, gG(GR, UG), JJ(GR, AG))), RR.nodes().forEach((GR => {
+        let yR = gG(bG(RR.node(GR)), CG);
+        Object.keys(XG).forEach((RR => {
+          void 0 === yR[RR] && (yR[RR] = XG[RR])
+        })), JR.setNode(GR, yR);
+        let tR = RR.parent(GR);
+        void 0 !== tR && JR.setParent(GR, tR)
+      })), RR.edges().forEach((GR => {
+        let yR = bG(RR.edge(GR));
+        JR.setEdge(GR, Object.assign({}, BG, gG(yR, MG), JJ(yR, lG)))
+      })), JR
     }
 
-    function nO(WW, iW) {
-      return Oi(ii(WW, iW), Number)
+    function gG(RR, JR) {
+      return GJ(JJ(RR, JR), Number)
     }
 
-    function uO(WW) {
-      let iW = {};
-      return WW && Object.entries(WW).forEach((WW => {
-        let [OW, mW] = WW;
-        "string" == typeof OW && (OW = OW.toLowerCase()), iW[OW] = mW
-      })), iW
+    function bG(RR) {
+      let JR = {};
+      return RR && Object.entries(RR).forEach((RR => {
+        let [GR, yR] = RR;
+        "string" == typeof GR && (GR = GR.toLowerCase()), JR[GR] = yR
+      })), JR
     }
 
-    function oO(WW) {
-      let iW = qW(WW),
-        OW = new fW({
+    function vG(RR) {
+      let JR = dR(RR),
+        GR = new mR({
           compound: !0,
           multigraph: !0
         }).setGraph({});
-      return WW.nodes().forEach((iW => {
-        OW.setNode(iW, {
-          label: iW
-        }), OW.setParent(iW, "layer" + WW.node(iW).rank)
-      })), WW.edges().forEach((WW => OW.setEdge(WW.v, WW.w, {}, WW.name))), iW.forEach(((WW, iW) => {
-        let mW = "layer" + iW;
-        OW.setNode(mW, {
+      return RR.nodes().forEach((JR => {
+        GR.setNode(JR, {
+          label: JR
+        }), GR.setParent(JR, "layer" + RR.node(JR).rank)
+      })), RR.edges().forEach((RR => GR.setEdge(RR.v, RR.w, {}, RR.name))), JR.forEach(((RR, JR) => {
+        let yR = "layer" + JR;
+        GR.setNode(yR, {
           rank: "same"
-        }), WW.reduce(((WW, iW) => (OW.setEdge(WW, iW, {
+        }), RR.reduce(((RR, JR) => (GR.setEdge(RR, JR, {
           style: "invis"
-        }), iW)))
-      })), OW
+        }), JR)))
+      })), GR
     }
-    var dO = {
-        time: rW,
-        notime: zW
+    var OG = {
+        time: FR,
+        notime: TR
       },
-      eO = {
-        graphlib: NW,
-        version: Ni,
-        layout: bO,
-        debug: oO,
+      xG = {
+        graphlib: uR,
+        version: uJ,
+        layout: rG,
+        debug: vG,
         util: {
-          time: rW,
-          notime: zW
+          time: FR,
+          notime: TR
         }
       }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

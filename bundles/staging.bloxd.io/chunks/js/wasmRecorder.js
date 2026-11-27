@@ -1,380 +1,380 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  64608: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/bloxd_wasm_recorder_bg.788d36c063f4a2e0f1bf.wasm"
+  64343: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/bloxd_wasm_recorder_bg.abf0a8c8735d5f103ccc.wasm"
   },
-  64604: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      BloxdRecorderWasmError: () => eW,
-      RECORDER_MODULE_ID: () => dW,
-      loadRecorderModule: () => DW,
-      markRecorderTrapped: () => pW,
-      prefetchRecorderModule: () => VW,
-      recorderMemoryBytes: () => CW,
-      unloadRecorderModule: () => fW
+  64335: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      BloxdRecorderWasmError: () => DR,
+      RECORDER_MODULE_ID: () => NR,
+      loadRecorderModule: () => cR,
+      markRecorderTrapped: () => IR,
+      prefetchRecorderModule: () => PR,
+      recorderMemoryBytes: () => zR,
+      unloadRecorderModule: () => mR
     });
-    var mW = {};
-    OW.r(mW), OW.d(mW, {
-      qNW: () => EW,
-      ULW: () => nW,
-      sw: () => NW,
-      default: () => HW,
-      initSync: () => hW,
-      qt: () => PW,
-      XNW: () => LW,
-      vNW: () => cW
+    var yR = {};
+    GR.r(yR), GR.d(yR, {
+      vZR: () => tR,
+      GiR: () => vR,
+      HK: () => uR,
+      default: () => bR,
+      initSync: () => gR,
+      oK: () => ZR,
+      gZR: () => qR,
+      AZR: () => iR
     });
-    class EW {
+    class tR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, tW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, VR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        yW.i7Qy(WW, 0)
+        const RR = this.__destroy_into_raw();
+        BR.IZKb(RR, 0)
       }
       busy() {
-        return 0 !== yW.SAq4(this.__wbg_ptr)
+        return 0 !== BR.a9dM(this.__wbg_ptr)
       }
-      command(WW, iW) {
-        return 0 !== yW.uxzH(this.__wbg_ptr, WW, iW)
+      command(RR, JR) {
+        return 0 !== BR.YUzY(this.__wbg_ptr, RR, JR)
       }
-      gNW(WW) {
-        return yW.HCCN(this.__wbg_ptr, WW) >>> 0
+      CZR(RR) {
+        return BR.rwOF(this.__wbg_ptr, RR) >>> 0
       }
-      eNW() {
-        yW.DWhD(this.__wbg_ptr)
+      WZR() {
+        BR.ySGR(this.__wbg_ptr)
       }
-      dNW() {
-        return yW.vHXD(this.__wbg_ptr) >>> 0
+      UZR() {
+        return BR.iSsS(this.__wbg_ptr) >>> 0
       }
-      oNW() {
-        return yW.xVVr(this.__wbg_ptr)
+      nZR() {
+        return BR.cQto(this.__wbg_ptr)
       }
-      pNW() {
-        return yW.xiXn(this.__wbg_ptr) >>> 0
+      BZR() {
+        return BR.BetY(this.__wbg_ptr) >>> 0
       }
-      fNW() {
-        return yW.oMtD(this.__wbg_ptr) >>> 0
+      lZR() {
+        return BR.WysN(this.__wbg_ptr) >>> 0
       }
-      feed(WW) {
-        return yW.wdyh(this.__wbg_ptr, WW) >>> 0
+      feed(RR) {
+        return BR.stUw(this.__wbg_ptr, RR) >>> 0
       }
       constructor() {
-        const WW = yW.o8P3();
-        return this.__wbg_ptr = WW, tW.register(this, this.__wbg_ptr, this), this
+        const RR = BR.qVlU();
+        return this.__wbg_ptr = RR, VR.register(this, this.__wbg_ptr, this), this
       }
-      VNW() {
-        return yW.RJLn(this.__wbg_ptr) >>> 0
+      MZR() {
+        return BR.STlR(this.__wbg_ptr) >>> 0
       }
-      kLW() {
-        return yW.WxFx(this.__wbg_ptr) >>> 0
+      yiR() {
+        return BR.RyNC(this.__wbg_ptr) >>> 0
       }
-      uNW(WW, iW, OW) {
-        return 0 !== yW.I9Os(this.__wbg_ptr, WW, iW, OW)
+      LZR(RR, JR, GR) {
+        return 0 !== BR.qCeT(this.__wbg_ptr, RR, JR, GR)
       }
-      stage(WW) {
-        return yW.HDs9(this.__wbg_ptr, WW) >>> 0
+      stage(RR) {
+        return BR.j3gb(this.__wbg_ptr, RR) >>> 0
       }
       step() {
-        return yW.Ljd3(this.__wbg_ptr) >>> 0
+        return BR.sxJx(this.__wbg_ptr) >>> 0
       }
     }
 
-    function NW(WW, iW) {
-      const OW = function(WW, iW, OW) {
-          if (void 0 === OW) {
-            const OW = KW.encode(WW),
-              mW = iW(OW.length, 1) >>> 0;
-            return AW().subarray(mW, mW + OW.length).set(OW), TW = OW.length, mW
+    function uR(RR, JR) {
+      const GR = function(RR, JR, GR) {
+          if (void 0 === GR) {
+            const GR = CR.encode(RR),
+              yR = JR(GR.length, 1) >>> 0;
+            return eR().subarray(yR, yR + GR.length).set(GR), lR = GR.length, yR
           }
-          let mW = WW.length,
-            EW = iW(mW, 1) >>> 0;
-          const NW = AW();
-          let PW = 0;
-          for (; PW < mW; PW++) {
-            const iW = WW.charCodeAt(PW);
-            if (iW > 127) break;
-            NW[EW + PW] = iW
+          let yR = RR.length,
+            tR = JR(yR, 1) >>> 0;
+          const uR = eR();
+          let ZR = 0;
+          for (; ZR < yR; ZR++) {
+            const JR = RR.charCodeAt(ZR);
+            if (JR > 127) break;
+            uR[tR + ZR] = JR
           }
-          if (PW !== mW) {
-            0 !== PW && (WW = WW.slice(PW)), EW = OW(EW, mW, mW = PW + 3 * WW.length, 1) >>> 0;
-            const iW = AW().subarray(EW + PW, EW + mW);
-            PW += KW.encodeInto(WW, iW).written, EW = OW(EW, mW, PW, 1) >>> 0
+          if (ZR !== yR) {
+            0 !== ZR && (RR = RR.slice(ZR)), tR = GR(tR, yR, yR = ZR + 3 * RR.length, 1) >>> 0;
+            const JR = eR().subarray(tR + ZR, tR + yR);
+            ZR += CR.encodeInto(RR, JR).written, tR = GR(tR, yR, ZR, 1) >>> 0
           }
-          return TW = PW, EW
-        }(WW, yW.Ow0e, yW.ykdI),
-        mW = TW,
-        EW = yW.I8BX(OW, mW, iW);
-      if (EW[1]) throw UW(EW[0])
+          return lR = ZR, tR
+        }(RR, BR.mp7v, BR.hl4r),
+        yR = lR,
+        tR = BR.XH8V(GR, yR, JR);
+      if (tR[1]) throw nR(tR[0])
     }
 
-    function PW() {
-      yW.PjIl()
+    function ZR() {
+      BR.AWWD()
     }
 
-    function LW() {
-      return yW.XtSw() >>> 0
+    function qR() {
+      return BR.E6nY() >>> 0
     }
 
-    function cW() {
-      return UW(yW.hbyo())
+    function iR() {
+      return nR(BR.iNPq())
     }
 
-    function wW() {
+    function fR() {
       return {
         __proto__: null,
-        Ii6k: {
+        pT7H: {
           __proto__: null,
-          mohC: function(WW, iW) {
-            return ZW(Error(xW(WW, iW)))
+          C16B: function(RR, JR) {
+            return KR(Error(wR(RR, JR)))
           },
-          wxt1: function() {
-            return ZW(yW.memory)
+          S7th: function() {
+            return KR(BR.memory)
           },
-          OWIB: function(WW, iW) {
-            throw new Error(xW(WW, iW))
+          OcIc: function(RR, JR) {
+            throw new Error(wR(RR, JR))
           },
-          h4hS: function(WW, iW) {
-            console.error(xW(WW, iW))
+          pe2e: function(RR, JR) {
+            console.error(wR(RR, JR))
           },
-          A2q5: function() {
+          jDhP: function() {
             return performance.now()
           }
         }
       }
     }
-    Symbol.dispose && (EW.prototype[Symbol.dispose] = EW.prototype.free);
-    const tW = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (tR.prototype[Symbol.dispose] = tR.prototype.free);
+    const VR = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((WW => yW?.__wbg_recordermodule_free(WW, 1)));
+    } : new FinalizationRegistry((RR => BR?.__wbg_recordermodule_free(RR, 1)));
 
-    function ZW(WW) {
-      jW === bW.length && bW.push(bW.length + 1);
-      const iW = jW;
-      return jW = bW[iW], bW[iW] = WW, iW
+    function KR(RR) {
+      LR === aR.length && aR.push(aR.length + 1);
+      const JR = LR;
+      return LR = aR[JR], aR[JR] = RR, JR
     }
 
-    function xW(WW, iW) {
-      return function(WW, iW) {
-        MW += iW, MW >= sW && (kW = new TextDecoder("utf-8", {
+    function wR(RR, JR) {
+      return function(RR, JR) {
+        AR += JR, AR >= WR && (UR = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), kW.decode(), MW = iW);
-        return kW.decode(AW().subarray(WW, WW + iW))
-      }(WW >>> 0, iW)
+        }), UR.decode(), AR = JR);
+        return UR.decode(eR().subarray(RR, RR + JR))
+      }(RR >>> 0, JR)
     }
-    let lW = null;
+    let rR = null;
 
-    function AW() {
-      return null !== lW && 0 !== lW.byteLength || (lW = new Uint8Array(yW.memory.buffer)), lW
+    function eR() {
+      return null !== rR && 0 !== rR.byteLength || (rR = new Uint8Array(BR.memory.buffer)), rR
     }
-    let bW = new Array(1024).fill(void 0);
-    bW.push(void 0, null, !0, !1);
-    let jW = bW.length;
+    let aR = new Array(1024).fill(void 0);
+    aR.push(void 0, null, !0, !1);
+    let LR = aR.length;
 
-    function UW(WW) {
-      const iW = function(WW) {
-        return bW[WW]
-      }(WW);
-      return function(WW) {
-        WW < 1028 || (bW[WW] = jW, jW = WW)
-      }(WW), iW
+    function nR(RR) {
+      const JR = function(RR) {
+        return aR[RR]
+      }(RR);
+      return function(RR) {
+        RR < 1028 || (aR[RR] = LR, LR = RR)
+      }(RR), JR
     }
-    let kW = new TextDecoder("utf-8", {
+    let UR = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    kW.decode();
-    const sW = 2146435072;
-    let MW = 0;
-    const KW = new TextEncoder;
-    "encodeInto" in KW || (KW.encodeInto = function(WW, iW) {
-      const OW = KW.encode(WW);
-      return iW.set(OW), {
-        read: WW.length,
-        written: OW.length
+    UR.decode();
+    const WR = 2146435072;
+    let AR = 0;
+    const CR = new TextEncoder;
+    "encodeInto" in CR || (CR.encodeInto = function(RR, JR) {
+      const GR = CR.encode(RR);
+      return JR.set(GR), {
+        read: RR.length,
+        written: GR.length
       }
     });
-    let SW, YW, yW, TW = 0;
+    let XR, MR, BR, lR = 0;
 
-    function JW(WW, iW) {
-      return YW = WW, yW = WW.exports, SW = iW, lW = null, yW.VOkx(), yW
+    function pR(RR, JR) {
+      return MR = RR, BR = RR.exports, XR = JR, rR = null, BR.YhGr(), BR
     }
 
-    function hW(WW) {
-      if (void 0 !== yW) return yW;
-      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
-        module: WW
-      } = WW) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const iW = wW();
-      WW instanceof WebAssembly.Module || (WW = new WebAssembly.Module(WW));
-      return JW(new WebAssembly.Instance(WW, iW), WW)
+    function gR(RR) {
+      if (void 0 !== BR) return BR;
+      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
+        module: RR
+      } = RR) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const JR = fR();
+      RR instanceof WebAssembly.Module || (RR = new WebAssembly.Module(RR));
+      return pR(new WebAssembly.Instance(RR, JR), RR)
     }
-    async function HW(WW) {
-      if (void 0 !== yW) return yW;
-      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
-        module_or_path: WW
-      } = WW) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const iW = wW();
-      ("string" === typeof WW || "function" === typeof Request && WW instanceof Request || "function" === typeof URL && WW instanceof URL) && (WW = fetch(WW));
+    async function bR(RR) {
+      if (void 0 !== BR) return BR;
+      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
+        module_or_path: RR
+      } = RR) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const JR = fR();
+      ("string" === typeof RR || "function" === typeof Request && RR instanceof Request || "function" === typeof URL && RR instanceof URL) && (RR = fetch(RR));
       const {
-        instance: OW,
-        module: mW
-      } = await async function(WW, iW) {
-        if ("function" === typeof Response && WW instanceof Response) {
-          if (!WW.ok) throw new Error(`failed to fetch Wasm: ${WW.status} ${WW.statusText} fetching '${WW.url}'`);
+        instance: GR,
+        module: yR
+      } = await async function(RR, JR) {
+        if ("function" === typeof Response && RR instanceof Response) {
+          if (!RR.ok) throw new Error(`failed to fetch Wasm: ${RR.status} ${RR.statusText} fetching '${RR.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(WW, iW)
-          } catch (OW) {
-            if (! function(WW) {
-                switch (WW) {
+            return await WebAssembly.instantiateStreaming(RR, JR)
+          } catch (GR) {
+            if (! function(RR) {
+                switch (RR) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(WW.type) || "application/wasm" === WW.headers.get("Content-Type")) throw OW;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", OW)
+              }(RR.type) || "application/wasm" === RR.headers.get("Content-Type")) throw GR;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", GR)
           }
-          const mW = await WW.arrayBuffer();
-          return await WebAssembly.instantiate(mW, iW)
+          const yR = await RR.arrayBuffer();
+          return await WebAssembly.instantiate(yR, JR)
         } {
-          const OW = await WebAssembly.instantiate(WW, iW);
-          return OW instanceof WebAssembly.Instance ? {
-            instance: OW,
-            module: WW
-          } : OW
+          const GR = await WebAssembly.instantiate(RR, JR);
+          return GR instanceof WebAssembly.Instance ? {
+            instance: GR,
+            module: RR
+          } : GR
         }
-      }(await WW, iW);
-      return JW(OW, mW)
+      }(await RR, JR);
+      return pR(GR, yR)
     }
 
-    function nW() {
-      yW = void 0, YW = void 0, lW = null, bW = new Array(1024).fill(void 0), bW.push(void 0, null, !0, !1), jW = bW.length
+    function vR() {
+      BR = void 0, MR = void 0, rR = null, aR = new Array(1024).fill(void 0), aR.push(void 0, null, !0, !1), LR = aR.length
     }
-    var uW = OW(2388),
-      oW = OW(7625);
-    const dW = 2;
-    class eW extends Error {
+    var OR = GR(2457),
+      xR = GR(7762);
+    const NR = 2;
+    class DR extends Error {
       stage;
-      constructor(WW, iW) {
-        super((0, uW.A)(WW, iW), {
-          cause: iW
-        }), this.name = "BloxdRecorderWasmError", this.stage = WW
+      constructor(RR, JR) {
+        super((0, OR.z)(RR, JR), {
+          cause: JR
+        }), this.name = "BloxdRecorderWasmError", this.stage = RR
       }
     }
-    let vW = null;
-    const gW = function(WW) {
-      let iW = null,
-        OW = null,
-        mW = null,
-        EW = null;
-      const NW = async () => {
-        let OW = null;
+    let HR = null;
+    const oR = function(RR) {
+      let JR = null,
+        GR = null,
+        yR = null,
+        tR = null;
+      const uR = async () => {
+        let GR = null;
         try {
-          return OW = iW ??= (0, uW.B)(WW.url(), (0, oW.c)(WW.name)), await OW
-        } catch (mW) {
-          throw iW === OW && (iW = null), WW.error((0, uW.E)(mW), mW)
+          return GR = JR ??= (0, OR.A)(RR.url(), (0, xR.c)(RR.name)), await GR
+        } catch (yR) {
+          throw JR === GR && (JR = null), RR.error((0, OR.E)(yR), yR)
         }
       };
       return {
         load: () => {
-          if (EW) return Promise.reject(EW);
-          if (OW) return OW;
-          const iW = (async () => {
-            const iW = await NW();
+          if (tR) return Promise.reject(tR);
+          if (GR) return GR;
+          const JR = (async () => {
+            const JR = await uR();
             try {
-              await WW.init(iW)
-            } catch (OW) {
-              throw WW.error("instantiate", OW)
+              await RR.init(JR)
+            } catch (GR) {
+              throw RR.error("instantiate", GR)
             }
-            return WW.bindings
+            return RR.bindings
           })();
-          OW = iW, mW = iW;
-          const PW = () => {
-            mW === iW && (mW = null)
+          GR = JR, yR = JR;
+          const ZR = () => {
+            yR === JR && (yR = null)
           };
-          return iW.then(PW, (() => {
-            PW(), OW === iW && (OW = null)
-          })), iW
+          return JR.then(ZR, (() => {
+            ZR(), GR === JR && (GR = null)
+          })), JR
         },
         prefetch: async () => {
-          EW || OW || await NW()
+          tR || GR || await uR()
         },
-        markTrapped: iW => (EW ??= WW.error("call", iW), EW),
+        markTrapped: JR => (tR ??= RR.error("call", JR), tR),
         unload: () => {
-          EW || !WW.reset || mW || (WW.reset(), OW = null)
+          tR || !RR.reset || yR || (RR.reset(), GR = null)
         }
       }
     }({
       name: "bloxd_wasm_recorder",
-      url: () => new OW.U(OW(64608)),
-      init: async WW => {
-        await HW({
-          module_or_path: WW
-        }), vW = cW()
+      url: () => new GR.U(GR(64343)),
+      init: async RR => {
+        await bR({
+          module_or_path: RR
+        }), HR = iR()
       },
-      bindings: mW,
-      error: (WW, iW) => new eW(WW, iW),
+      bindings: yR,
+      error: (RR, JR) => new DR(RR, JR),
       reset: () => {
-        nW(), vW = null
+        vR(), HR = null
       }
     });
 
-    function DW() {
-      return gW.load()
+    function cR() {
+      return oR.load()
     }
 
-    function VW() {
-      return gW.prefetch()
+    function PR() {
+      return oR.prefetch()
     }
 
-    function pW(WW) {
-      return gW.markTrapped(WW)
+    function IR(RR) {
+      return oR.markTrapped(RR)
     }
 
-    function fW() {
-      gW.unload()
+    function mR() {
+      oR.unload()
     }
 
-    function CW() {
-      return vW?.buffer.byteLength ?? 0
+    function zR() {
+      return HR?.buffer.byteLength ?? 0
     }
   },
-  7625: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW
+  7762: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR
     });
-    var mW = OW(2388);
-    const EW = {
-      bloxd_wasm: () => "102e63c69ba1846a7ef3e4f3119d9407d849792a77d386b77d132cbd19000baf",
-      bloxd_wasm_client: () => "828553d657b63b8b78489e1c312c1521bbff4059679c6442f668bd5b77b44d26",
-      bloxd_wasm_workers: () => "c3e0f9c9d3450b1b58eeeabddc49241fbc8ffeffe05a0e2cd8e7c4d8847442a4",
-      bloxd_wasm_models: () => "77704cdcef014d8f1aa72c519a652297b25e80d6cafc34478014bd291b97f37e",
-      bloxd_wasm_webgpu: () => "603e3bc645f5c3d0c95d7f24327b193ab3d090814bbdb68c6ad2438495025f9d",
-      bloxd_wasm_webgl: () => "8157beb90345cb7dcaa6d28e4816f7951234731f38d297579b1de22172034862",
-      bloxd_wasm_webgl1: () => "ac00e7c2f783046413779c397bcab25db7aaf3ceb5743e39ab05f2fc699b197b",
-      bloxd_wasm_replay: () => "a585d75239773f442a258771a295653a54d6e99e4b872f0a2a4512a7fceaca4a",
-      bloxd_wasm_recorder: () => "1c3da6ac9b656d482455def4919768325136d09e94b6b18afdb7ecc55287a265",
-      bloxd_wasm_anim: () => "95aba8d7de72cdcce081f679def0f8248e845944fba77b065315103503401e53",
-      bloxd_wasm_textures: () => "378f24688349d1dc6f860f72e8fafaf79ead5d9fccc14eb96ca959801b415d82",
-      bloxd_wasm_shader_pack: () => "fa64ff9ddba4399ee91af4ff8bb1c0cc63df7e9ee2ebb4a275be7918ce6cdefd"
+    var yR = GR(2457);
+    const tR = {
+      bloxd_wasm: () => "31dc7d689c00e0ba537ee7f626a34d0004a848135d46f08eb518035abee4bd78",
+      bloxd_wasm_client: () => "3b6f626c672c16835e48be6eda2b8710ce7ef029c244b4a5763ca9c72afd1b15",
+      bloxd_wasm_workers: () => "57abc294db658237bc7d99b35bd3f29743c220eedebc8ac3f7feffe93ef605d9",
+      bloxd_wasm_models: () => "91848043cbb1596bc2da50dc271a4cd1d5748938f8eaa4bb6e2a97c3115313e3",
+      bloxd_wasm_webgpu: () => "f945f7dfcd84e1c2443e02ed24bd7fc26f3a25462a20b367dbcf6b52367ae837",
+      bloxd_wasm_webgl: () => "9fbafd6231ee584775c304827d74014f8c15cff0854a0975bc3b6d00259cb13b",
+      bloxd_wasm_webgl1: () => "23c52ed9fe5a4512122e2f73d5ee88fdaeeb108903994541446badd1fee1bb4c",
+      bloxd_wasm_replay: () => "972e1c6128c0d1cd8598ec680bedb57345cf87b953e82efa23119df1c888426d",
+      bloxd_wasm_recorder: () => "c168224dbeb3a34221482e3a0ad41a3c0ebe14db31539da9b26d296033e9fb3d",
+      bloxd_wasm_anim: () => "3cc08cf0d193225c4efab3299a0dd42815a95a9b8b44e2d5957de0a151ae7db3",
+      bloxd_wasm_textures: () => "78779f7faa55b7ab66454ef9cac79a3b6156f91b60fc795d24d615f3dca40e19",
+      bloxd_wasm_shader_pack: () => "2aca035dd9675be55a94be3cc38a846b93983e04d5e35b062d6e7f0e268c5303"
     };
-    var NW = OW(5427);
+    var uR = GR(5554);
 
-    function PW(WW) {
-      const iW = Object.prototype.hasOwnProperty.call(EW, WW) ? EW[WW]() : void 0;
-      if (void 0 !== iW) return {
-        sha256: iW,
-        onMismatch: NW.y
+    function ZR(RR) {
+      const JR = Object.prototype.hasOwnProperty.call(tR, RR) ? tR[RR]() : void 0;
+      if (void 0 !== JR) return {
+        sha256: JR,
+        onMismatch: uR.E
       };
-      throw new mW.k(`${WW} has no release digest, so this build refuses it`)
+      throw new yR.g(`${RR} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

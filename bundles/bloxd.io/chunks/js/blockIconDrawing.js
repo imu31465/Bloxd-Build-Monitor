@@ -1,497 +1,497 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  37628: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      drawBlockIcon: () => kW,
-      drawBlockIconUrl: () => sW,
-      getDrawnBlockIcon: () => UW,
-      resetBlockIconDrawingForTests: () => AW
+  37543: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      drawBlockIcon: () => UR,
+      drawBlockIconUrl: () => WR,
+      getDrawnBlockIcon: () => nR,
+      resetBlockIconDrawingForTests: () => eR
     });
-    var mW = OW(37636);
-    const EW = {
+    var yR = GR(37549);
+    const tR = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      NW = {
+      uR = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      PW = {
+      ZR = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const LW = 1e-6;
+    const qR = 1e-6;
 
-    function cW(WW, iW, OW, mW) {
+    function iR(RR, JR, GR, yR) {
       let {
-        origin: EW,
-        across: NW,
-        down: PW,
-        texture: cW,
-        rect: [wW, tW, ZW, xW],
-        shade: lW
-      } = mW;
-      const AW = NW.x * PW.y - NW.y * PW.x;
-      if (Math.abs(AW) < 1e-9) return;
-      const bW = [EW.x, EW.x + NW.x, EW.x + PW.x, EW.x + NW.x + PW.x],
-        jW = [EW.y, EW.y + NW.y, EW.y + PW.y, EW.y + NW.y + PW.y],
-        UW = Math.max(0, Math.floor(Math.min(...bW))),
-        kW = Math.min(OW - 1, Math.ceil(Math.max(...bW))),
-        sW = Math.max(0, Math.floor(Math.min(...jW))),
-        MW = Math.min(OW - 1, Math.ceil(Math.max(...jW)));
-      for (let KW = sW; KW <= MW; KW++)
-        for (let mW = UW; mW <= kW; mW++) {
-          const bW = mW + .5 - EW.x,
-            jW = KW + .5 - EW.y,
-            UW = (bW * PW.y - jW * PW.x) / AW,
-            kW = (NW.x * jW - NW.y * bW) / AW;
-          if (UW < -LW || UW > 1 + LW || kW < -LW || kW > 1 + LW) continue;
-          const sW = KW * OW + mW;
-          iW[sW] = 1;
-          const MW = wW + Math.min(Math.max(UW, 0), 1) * (ZW - wW),
-            SW = tW + Math.min(Math.max(kW, 0), 1) * (xW - tW),
-            YW = Math.min(cW.width - 1, Math.floor(MW * cW.width)),
-            yW = 4 * (Math.min(cW.height - 1, Math.floor(SW * cW.height)) * cW.width + YW),
-            TW = cW.pixels[yW + 3] / 255;
-          if (0 === TW) continue;
-          const JW = 4 * sW,
-            hW = WW[JW + 3] / 255 * (1 - TW),
-            HW = TW + hW;
-          for (let iW = 0; iW < 3; iW++) WW[JW + iW] = (cW.pixels[yW + iW] * lW * TW + WW[JW + iW] * hW) / HW;
-          WW[JW + 3] = 255 * HW
+        origin: tR,
+        across: uR,
+        down: ZR,
+        texture: iR,
+        rect: [fR, VR, KR, wR],
+        shade: rR
+      } = yR;
+      const eR = uR.x * ZR.y - uR.y * ZR.x;
+      if (Math.abs(eR) < 1e-9) return;
+      const aR = [tR.x, tR.x + uR.x, tR.x + ZR.x, tR.x + uR.x + ZR.x],
+        LR = [tR.y, tR.y + uR.y, tR.y + ZR.y, tR.y + uR.y + ZR.y],
+        nR = Math.max(0, Math.floor(Math.min(...aR))),
+        UR = Math.min(GR - 1, Math.ceil(Math.max(...aR))),
+        WR = Math.max(0, Math.floor(Math.min(...LR))),
+        AR = Math.min(GR - 1, Math.ceil(Math.max(...LR)));
+      for (let CR = WR; CR <= AR; CR++)
+        for (let yR = nR; yR <= UR; yR++) {
+          const aR = yR + .5 - tR.x,
+            LR = CR + .5 - tR.y,
+            nR = (aR * ZR.y - LR * ZR.x) / eR,
+            UR = (uR.x * LR - uR.y * aR) / eR;
+          if (nR < -qR || nR > 1 + qR || UR < -qR || UR > 1 + qR) continue;
+          const WR = CR * GR + yR;
+          JR[WR] = 1;
+          const AR = fR + Math.min(Math.max(nR, 0), 1) * (KR - fR),
+            XR = VR + Math.min(Math.max(UR, 0), 1) * (wR - VR),
+            MR = Math.min(iR.width - 1, Math.floor(AR * iR.width)),
+            BR = 4 * (Math.min(iR.height - 1, Math.floor(XR * iR.height)) * iR.width + MR),
+            lR = iR.pixels[BR + 3] / 255;
+          if (0 === lR) continue;
+          const pR = 4 * WR,
+            gR = RR[pR + 3] / 255 * (1 - lR),
+            bR = lR + gR;
+          for (let JR = 0; JR < 3; JR++) RR[pR + JR] = (iR.pixels[BR + JR] * rR * lR + RR[pR + JR] * gR) / bR;
+          RR[pR + 3] = 255 * bR
         }
     }
-    var wW = OW(37640);
-    const tW = new Map,
-      ZW = new Map,
-      xW = new Map,
-      lW = new Map;
+    var fR = GR(37558);
+    const VR = new Map,
+      KR = new Map,
+      wR = new Map,
+      rR = new Map;
 
-    function AW() {
-      tW.clear(), ZW.clear(), xW.clear(), lW.clear()
+    function eR() {
+      VR.clear(), KR.clear(), wR.clear(), rR.clear()
     }
 
-    function bW(WW, iW, OW) {
-      return `${iW}|${OW}|${WW}`
+    function aR(RR, JR, GR) {
+      return `${JR}|${GR}|${RR}`
     }
 
-    function jW(WW, iW, OW) {
-      let mW = WW.get(iW);
-      return void 0 === mW && (mW = OW().catch((OW => {
-        throw WW.delete(iW), OW
-      })), WW.set(iW, mW)), mW
+    function LR(RR, JR, GR) {
+      let yR = RR.get(JR);
+      return void 0 === yR && (yR = GR().catch((GR => {
+        throw RR.delete(JR), GR
+      })), RR.set(JR, yR)), yR
     }
 
-    function UW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return ZW.get(bW(WW, iW, OW))
+    function nR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return KR.get(aR(RR, JR, GR))
     }
 
-    function kW(WW, iW, OW, mW) {
-      const EW = bW(WW, iW, OW);
-      return jW(tW, EW, (async () => {
-        const NW = await MW(mW(WW), iW, OW);
-        return ZW.set(EW, NW), NW
+    function UR(RR, JR, GR, yR) {
+      const tR = aR(RR, JR, GR);
+      return LR(VR, tR, (async () => {
+        const uR = await AR(yR(RR), JR, GR);
+        return KR.set(tR, uR), uR
       }))
     }
 
-    function sW(WW, iW, OW, mW) {
-      return jW(xW, bW(WW, iW, OW), (async () => {
-        var EW;
-        const NW = mW(WW);
-        return null !== (EW = await (0, wW.b)(NW, iW, OW)) && void 0 !== EW ? EW : (await MW(NW, iW, OW)).toDataURL()
+    function WR(RR, JR, GR, yR) {
+      return LR(wR, aR(RR, JR, GR), (async () => {
+        var tR;
+        const uR = yR(RR);
+        return null !== (tR = await (0, fR.e)(uR, JR, GR)) && void 0 !== tR ? tR : (await AR(uR, JR, GR)).toDataURL()
       }))
     }
-    async function MW(WW, iW, OW) {
+    async function AR(RR, JR, GR) {
       let {
-        top: LW,
-        left: wW,
-        right: tW,
-        itemType: ZW
-      } = WW;
-      const [xW, lW, AW] = await Promise.all([KW(LW), KW(wW), KW(tW)]), bW = function(WW, iW, OW, EW) {
-        const NW = (0, mW.i)(OW, EW),
-          PW = NW * mW.c.across,
-          LW = NW * mW.c.down,
-          wW = NW * mW.c.up,
-          tW = Math.max(...iW.boxes.map((WW => WW[4]))),
-          ZW = OW / 2,
-          xW = LW + (OW - LW - LW - tW * wW) / 2,
-          lW = (WW, iW, OW) => ({
-            x: ZW + (WW - OW) * PW,
-            y: xW - LW + (WW + OW) * LW + (tW - iW) * wW
+        top: qR,
+        left: fR,
+        right: VR,
+        itemType: KR
+      } = RR;
+      const [wR, rR, eR] = await Promise.all([CR(qR), CR(fR), CR(VR)]), aR = function(RR, JR, GR, tR) {
+        const uR = (0, yR.i)(GR, tR),
+          ZR = uR * yR.c.across,
+          qR = uR * yR.c.down,
+          fR = uR * yR.c.up,
+          VR = Math.max(...JR.boxes.map((RR => RR[4]))),
+          KR = GR / 2,
+          wR = qR + (GR - qR - qR - VR * fR) / 2,
+          rR = (RR, JR, GR) => ({
+            x: KR + (RR - GR) * ZR,
+            y: wR - qR + (RR + GR) * qR + (VR - JR) * fR
           }),
-          AW = (WW, OW, mW, EW, NW, PW) => ({
-            origin: WW,
+          eR = (RR, GR, yR, tR, uR, ZR) => ({
+            origin: RR,
             across: {
-              x: OW.x - WW.x,
-              y: OW.y - WW.y
+              x: GR.x - RR.x,
+              y: GR.y - RR.y
             },
             down: {
-              x: mW.x - WW.x,
-              y: mW.y - WW.y
+              x: yR.x - RR.x,
+              y: yR.y - RR.y
             },
-            texture: EW,
-            rect: iW.cropFaces ? NW : [0, 0, 1, 1],
-            shade: PW
+            texture: tR,
+            rect: JR.cropFaces ? uR : [0, 0, 1, 1],
+            shade: ZR
           }),
-          bW = new Uint8ClampedArray(OW * OW * 4),
-          jW = new Uint8Array(OW * OW),
-          UW = mW.f;
-        for (const [mW, kW, sW, MW, KW, SW] of iW.boxes) {
-          const iW = AW(lW(MW, KW, SW), lW(MW, KW, sW), lW(MW, kW, SW), WW.right, [1 - SW, 1 - KW, 1 - sW, 1 - kW], UW.right),
-            EW = AW(lW(mW, KW, SW), lW(MW, KW, SW), lW(mW, kW, SW), WW.left, [mW, 1 - KW, MW, 1 - kW], UW.left),
-            NW = AW(lW(mW, KW, sW), lW(MW, KW, sW), lW(mW, KW, SW), WW.top, [mW, sW, MW, SW], UW.top);
-          for (const WW of [iW, EW, NW]) cW(bW, jW, OW, WW)
+          aR = new Uint8ClampedArray(GR * GR * 4),
+          LR = new Uint8Array(GR * GR),
+          nR = yR.g;
+        for (const [yR, UR, WR, AR, CR, XR] of JR.boxes) {
+          const JR = eR(rR(AR, CR, XR), rR(AR, CR, WR), rR(AR, UR, XR), RR.right, [1 - XR, 1 - CR, 1 - WR, 1 - UR], nR.right),
+            tR = eR(rR(yR, CR, XR), rR(AR, CR, XR), rR(yR, UR, XR), RR.left, [yR, 1 - CR, AR, 1 - UR], nR.left),
+            uR = eR(rR(yR, CR, WR), rR(AR, CR, WR), rR(yR, CR, XR), RR.top, [yR, WR, AR, XR], nR.top);
+          for (const RR of [JR, tR, uR]) iR(aR, LR, GR, RR)
         }
-        return (0, mW.k)(bW, OW, EW, (WW => 1 === jW[WW])), bW
+        return (0, yR.m)(aR, GR, tR, (RR => 1 === LR[RR])), aR
       }({
-        top: xW,
-        left: lW,
-        right: AW
-      }, function(WW) {
-        return "SlabBlock" === WW ? NW : "StairsBlock" === WW ? PW : EW
-      }(ZW), iW, OW), jW = document.createElement("canvas");
-      jW.width = iW, jW.height = iW;
-      const UW = jW.getContext("2d");
-      if (!UW) throw new Error("Failed to get 2D context");
-      return UW.putImageData(new ImageData(bW, iW, iW), 0, 0), jW
+        top: wR,
+        left: rR,
+        right: eR
+      }, function(RR) {
+        return "SlabBlock" === RR ? uR : "StairsBlock" === RR ? ZR : tR
+      }(KR), JR, GR), LR = document.createElement("canvas");
+      LR.width = JR, LR.height = JR;
+      const nR = LR.getContext("2d");
+      if (!nR) throw new Error("Failed to get 2D context");
+      return nR.putImageData(new ImageData(aR, JR, JR), 0, 0), LR
     }
 
-    function KW(WW) {
-      return jW(lW, WW, (async () => {
-        const iW = await (0, wW.g)(WW),
-          OW = document.createElement("canvas");
-        OW.width = iW.width, OW.height = iW.height;
-        const mW = OW.getContext("2d");
-        if (!mW) throw new Error("Failed to get 2D context");
-        return mW.drawImage(iW, 0, 0), {
-          width: iW.width,
-          height: iW.height,
-          pixels: mW.getImageData(0, 0, iW.width, iW.height).data
+    function CR(RR) {
+      return LR(rR, RR, (async () => {
+        const JR = await (0, fR.o)(RR),
+          GR = document.createElement("canvas");
+        GR.width = JR.width, GR.height = JR.height;
+        const yR = GR.getContext("2d");
+        if (!yR) throw new Error("Failed to get 2D context");
+        return yR.drawImage(JR, 0, 0), {
+          width: JR.width,
+          height: JR.height,
+          pixels: yR.getImageData(0, 0, JR.width, JR.height).data
         }
       }))
     }
   },
-  37640: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => hW,
-      c: () => HW,
-      f: () => KW,
-      g: () => sW,
-      h: () => SW
+  37558: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => gR,
+      i: () => bR,
+      m: () => CR,
+      o: () => WR,
+      r: () => XR
     });
-    var mW = OW(259),
-      EW = OW(100);
-    const NW = new(OW(37646).e)(new URL(OW.p + OW.u(3), OW.b), {
+    var yR = GR(289),
+      tR = GR(103);
+    const uR = new(GR(37561).b)(new URL(GR.p + GR.u(3), GR.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var PW = OW(1755),
-      LW = OW(2289);
-    const cW = 1e4,
-      wW = 3e4;
-    let tW = null,
-      ZW = null,
-      xW = null,
-      lW = !1,
-      AW = 0;
-    const bW = new Map;
-    let jW = null;
-    const UW = new Map,
-      kW = new Map;
+    var ZR = GR(1825),
+      qR = GR(2366);
+    const iR = 1e4,
+      fR = 3e4;
+    let VR = null,
+      KR = null,
+      wR = null,
+      rR = !1,
+      eR = 0;
+    const aR = new Map;
+    let LR = null;
+    const nR = new Map,
+      UR = new Map;
 
-    function sW(WW) {
-      const iW = new Promise(((iW, OW) => {
-        const mW = new Image;
-        mW.crossOrigin = "anonymous", mW.fetchPriority = "high", mW.onload = () => {
-          iW(mW)
-        }, mW.onerror = () => {
-          OW(new Error(`A block icon's texture did not load: ${WW.slice(0,100)}`))
-        }, mW.src = WW
+    function WR(RR) {
+      const JR = new Promise(((JR, GR) => {
+        const yR = new Image;
+        yR.crossOrigin = "anonymous", yR.fetchPriority = "high", yR.onload = () => {
+          JR(yR)
+        }, yR.onerror = () => {
+          GR(new Error(`A block icon's texture did not load: ${RR.slice(0,100)}`))
+        }, yR.src = RR
       }));
-      return (0, LW.f)(iW)
+      return (0, qR.h)(JR)
     }
 
-    function MW(WW) {
-      var iW, OW;
-      lW || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${WW}`), lW = !0, null === (iW = tW) || void 0 === iW || iW.terminate(), tW = null, ZW = null, UW.clear(), kW.clear();
-      for (const mW of bW.values()) mW(null);
-      bW.clear(), null === (OW = jW) || void 0 === OW || OW()
+    function AR(RR) {
+      var JR, GR;
+      rR || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${RR}`), rR = !0, null === (JR = VR) || void 0 === JR || JR.terminate(), VR = null, KR = null, nR.clear(), UR.clear();
+      for (const yR of aR.values()) yR(null);
+      aR.clear(), null === (GR = LR) || void 0 === GR || GR()
     }
 
-    function KW() {
-      return null !== ZW
+    function CR() {
+      return null !== KR
     }
 
-    function SW() {
-      return xW ??= async function() {
+    function XR() {
+      return wR ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === mW.d.ios_icon_worker_v1 && (0, EW.isWebKit)()) return;
+        if ("page" === yR.c.ios_icon_worker_v1 && (0, tR.isWebKit)()) return;
         try {
-          tW = await async function() {
-            return await NW.ready(), NW.start()
+          VR = await async function() {
+            return await uR.ready(), uR.start()
           }()
-        } catch (LW) {
-          return void MW(`did not start (${String(LW)})`)
+        } catch (qR) {
+          return void AR(`did not start (${String(qR)})`)
         }
-        let WW = () => {};
-        const iW = new Promise((iW => {
-          WW = iW
+        let RR = () => {};
+        const JR = new Promise((JR => {
+          RR = JR
         }));
-        tW.onmessage = iW => {
+        VR.onmessage = JR => {
           let {
-            data: OW
-          } = iW;
-          if ("started" === OW.type) ZW = tW, WW();
-          else if ("failed" === OW.type) MW(`failed a draw (${OW.message})`);
+            data: GR
+          } = JR;
+          if ("started" === GR.type) KR = VR, RR();
+          else if ("failed" === GR.type) AR(`failed a draw (${GR.message})`);
           else {
-            var mW, EW;
-            null === (mW = bW.get(OW.id)) || void 0 === mW || mW(OW.url), bW.delete(OW.id), null === (EW = jW) || void 0 === EW || EW()
+            var yR, tR;
+            null === (yR = aR.get(GR.id)) || void 0 === yR || yR(GR.url), aR.delete(GR.id), null === (tR = LR) || void 0 === tR || tR()
           }
-        }, tW.onerror = iW => {
-          iW.preventDefault(), MW(`stopped (${iW.message||"its script did not load or run"})`), WW()
+        }, VR.onerror = JR => {
+          JR.preventDefault(), AR(`stopped (${JR.message||"its script did not load or run"})`), RR()
         };
-        const OW = `did not start in ${wW/1e3} s`;
-        await (0, PW.o)(iW, wW, OW).catch((() => {
-          MW(OW)
+        const GR = `did not start in ${fR/1e3} s`;
+        await (0, ZR.k)(JR, fR, GR).catch((() => {
+          AR(GR)
         }))
-      }(), xW
+      }(), wR
     }
 
-    function YW() {
-      if (null !== jW || 0 === bW.size) return;
-      const WW = new Promise((WW => {
-          jW = WW
+    function MR() {
+      if (null !== LR || 0 === aR.size) return;
+      const RR = new Promise((RR => {
+          LR = RR
         })),
-        iW = `did not answer in ${cW/1e3} s`;
-      (0, PW.o)(WW, cW, iW).then((() => {
-        jW = null, YW()
+        JR = `did not answer in ${iR/1e3} s`;
+      (0, ZR.k)(RR, iR, JR).then((() => {
+        LR = null, MR()
       }), (() => {
-        jW = null, MW(iW)
+        LR = null, AR(JR)
       }))
     }
 
-    function yW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      WW.postMessage(iW, OW)
+    function BR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      RR.postMessage(JR, GR)
     }
 
-    function TW(WW, iW, OW, mW) {
-      let EW = iW.get(OW);
-      return void 0 === EW && (EW = mW().then((async iW => {
+    function lR(RR, JR, GR, yR) {
+      let tR = JR.get(GR);
+      return void 0 === tR && (tR = yR().then((async JR => {
         let {
-          image: OW,
-          request: mW
-        } = iW;
+          image: GR,
+          request: yR
+        } = JR;
         try {
-          const iW = await createImageBitmap(OW);
-          yW(WW, mW(iW), [iW])
-        } catch (EW) {
-          MW(`could not take an image (${String(EW)})`)
+          const JR = await createImageBitmap(GR);
+          BR(RR, yR(JR), [JR])
+        } catch (tR) {
+          AR(`could not take an image (${String(tR)})`)
         }
-      })), EW.catch((() => {
-        iW.get(OW) === EW && iW.delete(OW)
-      })), iW.set(OW, EW)), EW
+      })), tR.catch((() => {
+        JR.get(GR) === tR && JR.delete(GR)
+      })), JR.set(GR, tR)), tR
     }
-    async function JW(WW, iW) {
-      SW();
-      const OW = ZW;
-      if (null === OW) return null;
-      if (await WW(OW), ZW !== OW) return null;
-      const mW = ++AW;
-      return new Promise((WW => {
-        bW.set(mW, WW), yW(OW, iW(mW)), YW()
+    async function pR(RR, JR) {
+      XR();
+      const GR = KR;
+      if (null === GR) return null;
+      if (await RR(GR), KR !== GR) return null;
+      const yR = ++eR;
+      return new Promise((RR => {
+        aR.set(yR, RR), BR(GR, JR(yR)), MR()
       }))
     }
 
-    function hW(WW, iW, OW) {
-      return JW((iW => Promise.all([WW.top, WW.left, WW.right].map((WW => function(WW, iW) {
-        return TW(WW, UW, iW, (async () => ({
-          image: await sW(iW),
-          request: WW => ({
+    function gR(RR, JR, GR) {
+      return pR((JR => Promise.all([RR.top, RR.left, RR.right].map((RR => function(RR, JR) {
+        return lR(RR, nR, JR, (async () => ({
+          image: await WR(JR),
+          request: RR => ({
             type: "texture",
-            url: iW,
-            bitmap: WW
+            url: JR,
+            bitmap: RR
           })
         })))
-      }(iW, WW))))), (mW => ({
+      }(JR, RR))))), (yR => ({
         type: "draw",
-        id: mW,
-        ...WW,
-        size: iW,
-        outlineWidth: OW
+        id: yR,
+        ...RR,
+        size: JR,
+        outlineWidth: GR
       })))
     }
 
-    function HW(WW, iW, OW, mW) {
-      return JW((OW => function(WW, iW, OW) {
-        return TW(WW, kW, iW, (async () => {
+    function bR(RR, JR, GR, yR) {
+      return pR((GR => function(RR, JR, GR) {
+        return lR(RR, UR, JR, (async () => {
           const {
-            texture: WW,
-            ...mW
-          } = await OW();
+            texture: RR,
+            ...yR
+          } = await GR();
           return {
-            image: await sW(WW),
-            request: WW => ({
+            image: await WR(RR),
+            request: RR => ({
               type: "model",
-              name: iW,
-              bitmap: WW,
-              geometry: mW
+              name: JR,
+              bitmap: RR,
+              geometry: yR
             })
           }
         }))
-      }(OW, WW, iW)), (iW => ({
+      }(GR, RR, JR)), (JR => ({
         type: "drawModel",
-        id: iW,
-        name: WW,
-        size: OW,
-        outlineWidth: mW
+        id: JR,
+        name: RR,
+        size: GR,
+        outlineWidth: yR
       })))
     }
   },
-  37636: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW,
-      f: () => cW,
-      i: () => PW,
-      k: () => xW,
-      n: () => wW
+  37549: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR,
+      g: () => iR,
+      i: () => ZR,
+      m: () => wR,
+      n: () => fR
     });
-    const mW = {
+    const yR = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      EW = .6,
-      NW = {
-        width: 2 * mW.across,
-        height: 2 * mW.down + mW.up
+      tR = .6,
+      uR = {
+        width: 2 * yR.across,
+        height: 2 * yR.down + yR.up
       };
 
-    function PW(WW, iW) {
-      const OW = iW > 0 ? iW + 1 : 0,
-        PW = WW * EW - iW / mW.across;
-      return Math.max(0, Math.min(PW, (WW - 2 * OW) / NW.height))
+    function ZR(RR, JR) {
+      const GR = JR > 0 ? JR + 1 : 0,
+        ZR = RR * tR - JR / yR.across;
+      return Math.max(0, Math.min(ZR, (RR - 2 * GR) / uR.height))
     }
-    const LW = [15, 15, 15],
-      cW = {
+    const qR = [15, 15, 15],
+      iR = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function wW(WW, iW, OW, mW) {
+    function fR(RR, JR, GR, yR) {
       const {
-        vertices: EW,
-        uvs: LW,
-        indices: cW,
-        shades: wW
-      } = WW, tW = function(WW, iW) {
-        const OW = PW(WW, iW),
-          mW = NW.width * OW,
-          EW = NW.height * OW;
+        vertices: tR,
+        uvs: qR,
+        indices: iR,
+        shades: fR
+      } = RR, VR = function(RR, JR) {
+        const GR = ZR(RR, JR),
+          yR = uR.width * GR,
+          tR = uR.height * GR;
         return {
-          left: (WW - mW) / 2,
-          top: (WW - EW) / 2,
-          width: mW,
-          height: EW
+          left: (RR - yR) / 2,
+          top: (RR - tR) / 2,
+          width: yR,
+          height: tR
         }
-      }(OW, mW), ZW = new Float32Array(EW.length);
-      for (let NW = 0; NW < EW.length; NW += 3) ZW[NW] = tW.left + EW[NW] * tW.width, ZW[NW + 1] = tW.top + EW[NW + 1] * tW.height, ZW[NW + 2] = EW[NW + 2];
-      const lW = new Float32Array(OW * OW).fill(-1 / 0),
-        AW = new Uint8ClampedArray(OW * OW * 4),
-        bW = 255 * WW.alphaCutoff;
-      for (let NW = 0; NW < cW.length; NW += 3) {
-        const [WW, mW, EW] = [cW[NW], cW[NW + 1], cW[NW + 2]], [PW, tW, xW] = [3 * WW, 3 * mW, 3 * EW], [jW, UW, kW, sW, MW, KW] = [ZW[PW], ZW[PW + 1], ZW[tW], ZW[tW + 1], ZW[xW], ZW[xW + 1]], SW = (kW - jW) * (KW - UW) - (MW - jW) * (sW - UW);
-        if (Math.abs(SW) < 1e-9) continue;
-        const YW = wW[NW / 3],
-          [yW, TW, JW, hW, HW, nW] = [LW[2 * WW], LW[2 * WW + 1], LW[2 * mW], LW[2 * mW + 1], LW[2 * EW], LW[2 * EW + 1]],
-          uW = Math.max(0, Math.floor(Math.min(jW, kW, MW))),
-          oW = Math.min(OW - 1, Math.ceil(Math.max(jW, kW, MW))),
-          dW = Math.max(0, Math.floor(Math.min(UW, sW, KW))),
-          eW = Math.min(OW - 1, Math.ceil(Math.max(UW, sW, KW)));
-        for (let NW = dW; NW <= eW; NW++)
-          for (let WW = uW; WW <= oW; WW++) {
-            const [mW, EW] = [WW + .5, NW + .5], LW = ((mW - jW) * (KW - UW) - (MW - jW) * (EW - UW)) / SW, cW = ((kW - jW) * (EW - UW) - (mW - jW) * (sW - UW)) / SW, wW = 1 - LW - cW;
-            if (wW < 0 || LW < 0 || cW < 0) continue;
-            const uW = wW * ZW[PW + 2] + LW * ZW[tW + 2] + cW * ZW[xW + 2],
-              oW = NW * OW + WW;
-            if (uW <= lW[oW]) continue;
-            const dW = Math.max(0, Math.min(iW.width - 1, Math.floor((wW * yW + LW * JW + cW * HW) * iW.width))),
-              eW = 4 * (Math.max(0, Math.min(iW.height - 1, Math.floor((wW * TW + LW * hW + cW * nW) * iW.height))) * iW.width + dW);
-            iW.pixels[eW + 3] < bW || (lW[oW] = uW, AW[4 * oW] = iW.pixels[eW] * YW, AW[4 * oW + 1] = iW.pixels[eW + 1] * YW, AW[4 * oW + 2] = iW.pixels[eW + 2] * YW, AW[4 * oW + 3] = 255)
+      }(GR, yR), KR = new Float32Array(tR.length);
+      for (let uR = 0; uR < tR.length; uR += 3) KR[uR] = VR.left + tR[uR] * VR.width, KR[uR + 1] = VR.top + tR[uR + 1] * VR.height, KR[uR + 2] = tR[uR + 2];
+      const rR = new Float32Array(GR * GR).fill(-1 / 0),
+        eR = new Uint8ClampedArray(GR * GR * 4),
+        aR = 255 * RR.alphaCutoff;
+      for (let uR = 0; uR < iR.length; uR += 3) {
+        const [RR, yR, tR] = [iR[uR], iR[uR + 1], iR[uR + 2]], [ZR, VR, wR] = [3 * RR, 3 * yR, 3 * tR], [LR, nR, UR, WR, AR, CR] = [KR[ZR], KR[ZR + 1], KR[VR], KR[VR + 1], KR[wR], KR[wR + 1]], XR = (UR - LR) * (CR - nR) - (AR - LR) * (WR - nR);
+        if (Math.abs(XR) < 1e-9) continue;
+        const MR = fR[uR / 3],
+          [BR, lR, pR, gR, bR, vR] = [qR[2 * RR], qR[2 * RR + 1], qR[2 * yR], qR[2 * yR + 1], qR[2 * tR], qR[2 * tR + 1]],
+          OR = Math.max(0, Math.floor(Math.min(LR, UR, AR))),
+          xR = Math.min(GR - 1, Math.ceil(Math.max(LR, UR, AR))),
+          NR = Math.max(0, Math.floor(Math.min(nR, WR, CR))),
+          DR = Math.min(GR - 1, Math.ceil(Math.max(nR, WR, CR)));
+        for (let uR = NR; uR <= DR; uR++)
+          for (let RR = OR; RR <= xR; RR++) {
+            const [yR, tR] = [RR + .5, uR + .5], qR = ((yR - LR) * (CR - nR) - (AR - LR) * (tR - nR)) / XR, iR = ((UR - LR) * (tR - nR) - (yR - LR) * (WR - nR)) / XR, fR = 1 - qR - iR;
+            if (fR < 0 || qR < 0 || iR < 0) continue;
+            const OR = fR * KR[ZR + 2] + qR * KR[VR + 2] + iR * KR[wR + 2],
+              xR = uR * GR + RR;
+            if (OR <= rR[xR]) continue;
+            const NR = Math.max(0, Math.min(JR.width - 1, Math.floor((fR * BR + qR * pR + iR * bR) * JR.width))),
+              DR = 4 * (Math.max(0, Math.min(JR.height - 1, Math.floor((fR * lR + qR * gR + iR * vR) * JR.height))) * JR.width + NR);
+            JR.pixels[DR + 3] < aR || (rR[xR] = OR, eR[4 * xR] = JR.pixels[DR] * MR, eR[4 * xR + 1] = JR.pixels[DR + 1] * MR, eR[4 * xR + 2] = JR.pixels[DR + 2] * MR, eR[4 * xR + 3] = 255)
           }
       }
-      return xW(AW, OW, mW), AW
+      return wR(eR, GR, yR), eR
     }
-    let tW = NaN,
-      ZW = new Int32Array(0);
+    let VR = NaN,
+      KR = new Int32Array(0);
 
-    function xW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iW => 0 !== WW[4 * iW + 3];
-      const EW = new Uint8Array(iW * iW);
-      for (let LW = 0; LW < iW * iW; LW++) EW[LW] = mW(LW) ? 1 : 0;
-      const NW = (WW, OW) => WW >= 0 && OW >= 0 && WW < iW && OW < iW && 0 === EW[OW * iW + WW],
-        PW = new Float32Array(iW * iW).fill(1 / 0),
-        cW = function(WW) {
-          if (WW !== tW) {
-            const iW = Math.ceil(WW + 1),
-              OW = [];
-            for (let mW = -iW; mW <= iW; mW++)
-              for (let EW = -iW; EW <= iW; EW++) {
-                const iW = EW * EW + mW * mW;
-                iW > 0 && iW < (WW + 1) ** 2 && OW.push(EW, mW, iW)
+    function wR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JR => 0 !== RR[4 * JR + 3];
+      const tR = new Uint8Array(JR * JR);
+      for (let qR = 0; qR < JR * JR; qR++) tR[qR] = yR(qR) ? 1 : 0;
+      const uR = (RR, GR) => RR >= 0 && GR >= 0 && RR < JR && GR < JR && 0 === tR[GR * JR + RR],
+        ZR = new Float32Array(JR * JR).fill(1 / 0),
+        iR = function(RR) {
+          if (RR !== VR) {
+            const JR = Math.ceil(RR + 1),
+              GR = [];
+            for (let yR = -JR; yR <= JR; yR++)
+              for (let tR = -JR; tR <= JR; tR++) {
+                const JR = tR * tR + yR * yR;
+                JR > 0 && JR < (RR + 1) ** 2 && GR.push(tR, yR, JR)
               }
-            tW = WW, ZW = Int32Array.from(OW)
+            VR = RR, KR = Int32Array.from(GR)
           }
-          return ZW
-        }(OW);
-      for (let LW = 0; LW < iW; LW++)
-        for (let WW = 0; WW < iW; WW++) {
-          if (1 === EW[LW * iW + WW] && (NW(WW - 1, LW) || NW(WW + 1, LW) || NW(WW, LW - 1) || NW(WW, LW + 1)))
-            for (let OW = 0; OW < cW.length; OW += 3) {
-              const mW = WW + cW[OW],
-                EW = LW + cW[OW + 1];
-              if (mW >= 0 && EW >= 0 && mW < iW && EW < iW) {
-                const WW = EW * iW + mW;
-                PW[WW] = Math.min(PW[WW], cW[OW + 2])
+          return KR
+        }(GR);
+      for (let qR = 0; qR < JR; qR++)
+        for (let RR = 0; RR < JR; RR++) {
+          if (1 === tR[qR * JR + RR] && (uR(RR - 1, qR) || uR(RR + 1, qR) || uR(RR, qR - 1) || uR(RR, qR + 1)))
+            for (let GR = 0; GR < iR.length; GR += 3) {
+              const yR = RR + iR[GR],
+                tR = qR + iR[GR + 1];
+              if (yR >= 0 && tR >= 0 && yR < JR && tR < JR) {
+                const RR = tR * JR + yR;
+                ZR[RR] = Math.min(ZR[RR], iR[GR + 2])
               }
             }
         }
-      for (let wW = 0; wW < iW * iW; wW++) 1 !== EW[wW] && PW[wW] !== 1 / 0 && (WW.set(LW, 4 * wW), WW[4 * wW + 3] = Math.round(255 * Math.min(1, OW + 1 - Math.sqrt(PW[wW]))))
+      for (let fR = 0; fR < JR * JR; fR++) 1 !== tR[fR] && ZR[fR] !== 1 / 0 && (RR.set(qR, 4 * fR), RR[4 * fR + 3] = Math.round(255 * Math.min(1, GR + 1 - Math.sqrt(ZR[fR]))))
     }
   },
-  37646: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW
+  37561: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR
     });
-    const mW = {
-      wait: function(WW) {
-        return new Promise((iW => {
-          setTimeout(iW, WW)
+    const yR = {
+      wait: function(RR) {
+        return new Promise((JR => {
+          setTimeout(JR, RR)
         }))
       },
       stallMs: 2e4
     };
-    class EW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mW;
-        this.url = WW, this.options = iW, this.timing = OW, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = WW
+    class tR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yR;
+        this.url = RR, this.options = JR, this.timing = GR, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = RR
       }
       ready() {
         if (null === this.fetched) {
-          const WW = new AbortController;
-          this.fetchAbort = WW, this.fetched = this.fetchWithRetries(WW.signal).then((iW => (this.fetchAbort === WW && (this.fetchAbort = null), iW)))
+          const RR = new AbortController;
+          this.fetchAbort = RR, this.fetched = this.fetchWithRetries(RR.signal).then((JR => (this.fetchAbort === RR && (this.fetchAbort = null), JR)))
         }
         return this.fetched
       }
@@ -507,51 +507,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(WW) {
-        for (let iW = 0;; iW++) {
-          const OW = new URL(this.url);
-          if (iW > 0 && OW.searchParams.set("cache-bust", `${Date.now()}-${iW}`), await this.fetchWhole(OW, WW)) return this.scriptUrl = OW, !0;
-          if (iW >= 3 || WW.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** iW), WW.aborted) return !1
+      async fetchWithRetries(RR) {
+        for (let JR = 0;; JR++) {
+          const GR = new URL(this.url);
+          if (JR > 0 && GR.searchParams.set("cache-bust", `${Date.now()}-${JR}`), await this.fetchWhole(GR, RR)) return this.scriptUrl = GR, !0;
+          if (JR >= 3 || RR.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** JR), RR.aborted) return !1
         }
       }
-      async fetchWhole(WW, iW) {
-        const OW = new AbortController;
-        let mW;
-        const EW = () => {
-            clearTimeout(mW), mW = setTimeout((() => {
-              OW.abort()
+      async fetchWhole(RR, JR) {
+        const GR = new AbortController;
+        let yR;
+        const tR = () => {
+            clearTimeout(yR), yR = setTimeout((() => {
+              GR.abort()
             }), this.timing.stallMs)
           },
-          NW = () => {
-            OW.abort()
+          uR = () => {
+            GR.abort()
           };
-        iW.addEventListener("abort", NW, {
+        JR.addEventListener("abort", uR, {
           once: !0
-        }), EW();
+        }), tR();
         try {
-          var PW;
-          const iW = await fetch(WW, {
-            signal: OW.signal
+          var ZR;
+          const JR = await fetch(RR, {
+            signal: GR.signal
           });
-          if (!iW.ok) return !1;
-          const mW = null === (PW = iW.body) || void 0 === PW ? void 0 : PW.getReader();
-          if (!mW) return !1;
+          if (!JR.ok) return !1;
+          const yR = null === (ZR = JR.body) || void 0 === ZR ? void 0 : ZR.getReader();
+          if (!yR) return !1;
           for (;;) {
             const {
-              done: WW
-            } = await mW.read();
-            if (WW) return !0;
-            EW()
+              done: RR
+            } = await yR.read();
+            if (RR) return !0;
+            tR()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(mW), iW.removeEventListener("abort", NW)
+          clearTimeout(yR), JR.removeEventListener("abort", uR)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

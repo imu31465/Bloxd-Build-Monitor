@@ -1,156 +1,156 @@
-/*! For license information please see 1yqdn.301.00b8a7e0.chunk.js.LICENSE.txt */
+/*! For license information please see 4udp6d.301.49e19703.chunk.js.LICENSE.txt */
 export const id = 301;
 export const ids = [301];
 export const modules = {
-  42009: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => uP,
-      h: () => oP,
-      k: () => tc
+  42028: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => bZ,
+      g: () => vZ,
+      k: () => ii
     });
-    var mW, EW = Object.defineProperty,
-      NW = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? EW(WW, iW, {
+    var yR, tR = Object.defineProperty,
+      uR = (RR, JR, GR) => ((RR, JR, GR) => JR in RR ? tR(RR, JR, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: OW
-      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW),
-      PW = Object.defineProperty,
-      LW = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? PW(WW, iW, {
+        value: GR
+      }) : RR[JR] = GR)(RR, "symbol" !== typeof JR ? JR + "" : JR, GR),
+      ZR = Object.defineProperty,
+      qR = (RR, JR, GR) => ((RR, JR, GR) => JR in RR ? ZR(RR, JR, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: OW
-      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW),
-      cW = (WW => (WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW))(cW || {});
-    const wW = {
+        value: GR
+      }) : RR[JR] = GR)(RR, "symbol" !== typeof JR ? JR + "" : JR, GR),
+      iR = (RR => (RR[RR.Document = 0] = "Document", RR[RR.DocumentType = 1] = "DocumentType", RR[RR.Element = 2] = "Element", RR[RR.Text = 3] = "Text", RR[RR.CDATA = 4] = "CDATA", RR[RR.Comment = 5] = "Comment", RR))(iR || {});
+    const fR = {
         Node: ["childNodes", "parentNode", "parentElement", "textContent", "ownerDocument", "firstChild", "lastChild", "nextSibling", "previousSibling"],
         ShadowRoot: ["host", "styleSheets"],
         Element: ["shadowRoot", "querySelector", "querySelectorAll"],
         MutationObserver: []
       },
-      tW = {
+      VR = {
         Node: ["contains", "getRootNode"],
         ShadowRoot: ["getSelection"],
         Element: [],
         MutationObserver: ["constructor"]
       },
-      ZW = {},
-      xW = {};
+      KR = {},
+      wR = {};
 
-    function lW(WW) {
-      if (ZW[WW]) return ZW[WW];
-      const iW = globalThis[WW],
-        OW = iW.prototype,
-        mW = WW in wW ? wW[WW] : void 0,
-        EW = Boolean(mW && mW.every((WW => {
-          var iW, mW;
-          return Boolean(null == (mW = null == (iW = Object.getOwnPropertyDescriptor(OW, WW)) ? void 0 : iW.get) ? void 0 : mW.toString().includes("[native code]"))
+    function rR(RR) {
+      if (KR[RR]) return KR[RR];
+      const JR = globalThis[RR],
+        GR = JR.prototype,
+        yR = RR in fR ? fR[RR] : void 0,
+        tR = Boolean(yR && yR.every((RR => {
+          var JR, yR;
+          return Boolean(null == (yR = null == (JR = Object.getOwnPropertyDescriptor(GR, RR)) ? void 0 : JR.get) ? void 0 : yR.toString().includes("[native code]"))
         }))),
-        NW = WW in tW ? tW[WW] : void 0,
-        PW = Boolean(NW && NW.every((WW => {
-          var iW;
-          return "function" === typeof OW[WW] && (null == (iW = OW[WW]) ? void 0 : iW.toString().includes("[native code]"))
+        uR = RR in VR ? VR[RR] : void 0,
+        ZR = Boolean(uR && uR.every((RR => {
+          var JR;
+          return "function" === typeof GR[RR] && (null == (JR = GR[RR]) ? void 0 : JR.toString().includes("[native code]"))
         })));
-      if (EW && PW && !globalThis.Zone) return ZW[WW] = iW.prototype, iW.prototype;
+      if (tR && ZR && !globalThis.Zone) return KR[RR] = JR.prototype, JR.prototype;
       try {
-        const mW = document.createElement("iframe");
-        mW.style.display = "none", document.body.appendChild(mW);
-        const EW = mW.contentWindow;
-        if (!EW) return iW.prototype;
-        const NW = EW[WW].prototype;
-        if (!NW) return mW.remove(), OW;
-        const PW = navigator.userAgent;
-        return PW.includes("Safari") && !PW.includes("Chrome") ? (mW.classList.add("rr-block"), mW.setAttribute("__rrwebUntaintedMutationObserver", ""), xW[WW] = () => mW.remove()) : mW.remove(), ZW[WW] = NW
+        const yR = document.createElement("iframe");
+        yR.style.display = "none", document.body.appendChild(yR);
+        const tR = yR.contentWindow;
+        if (!tR) return JR.prototype;
+        const uR = tR[RR].prototype;
+        if (!uR) return yR.remove(), GR;
+        const ZR = navigator.userAgent;
+        return ZR.includes("Safari") && !ZR.includes("Chrome") ? (yR.classList.add("rr-block"), yR.setAttribute("__rrwebUntaintedMutationObserver", ""), wR[RR] = () => yR.remove()) : yR.remove(), KR[RR] = uR
       } catch {
-        return OW
+        return GR
       }
     }
-    const AW = {};
+    const eR = {};
 
-    function bW(WW, iW, OW) {
-      var mW, EW;
-      const NW = null == (mW = AW[WW]) ? void 0 : mW[OW];
-      if (NW) return NW.call(iW);
-      const PW = lW(WW),
-        LW = null == (EW = Object.getOwnPropertyDescriptor(PW, OW)) ? void 0 : EW.get;
-      return LW ? ((AW[WW] || (AW[WW] = {}))[OW] = LW, LW.call(iW)) : iW[OW]
+    function aR(RR, JR, GR) {
+      var yR, tR;
+      const uR = null == (yR = eR[RR]) ? void 0 : yR[GR];
+      if (uR) return uR.call(JR);
+      const ZR = rR(RR),
+        qR = null == (tR = Object.getOwnPropertyDescriptor(ZR, GR)) ? void 0 : tR.get;
+      return qR ? ((eR[RR] || (eR[RR] = {}))[GR] = qR, qR.call(JR)) : JR[GR]
     }
-    const jW = {};
+    const LR = {};
 
-    function UW(WW, iW, OW) {
-      const mW = `${WW}.${String(OW)}`;
-      if (jW[mW]) return jW[mW].bind(iW);
-      const EW = lW(WW)[OW];
-      return "function" !== typeof EW ? iW[OW] : (jW[mW] = EW, EW.bind(iW))
+    function nR(RR, JR, GR) {
+      const yR = `${RR}.${String(GR)}`;
+      if (LR[yR]) return LR[yR].bind(JR);
+      const tR = rR(RR)[GR];
+      return "function" !== typeof tR ? JR[GR] : (LR[yR] = tR, tR.bind(JR))
     }
-    let kW = Date.now;
-    /[1-9][0-9]{12}/.test(Date.now().toString()) || (kW = () => (new Date).getTime());
-    const sW = {
-      ownerDocument: function(WW) {
-        return bW("Node", WW, "ownerDocument")
+    let UR = Date.now;
+    /[1-9][0-9]{12}/.test(Date.now().toString()) || (UR = () => (new Date).getTime());
+    const WR = {
+      ownerDocument: function(RR) {
+        return aR("Node", RR, "ownerDocument")
       },
-      childNodes: function(WW) {
-        return bW("Node", WW, "childNodes")
+      childNodes: function(RR) {
+        return aR("Node", RR, "childNodes")
       },
-      parentNode: function(WW) {
-        return bW("Node", WW, "parentNode")
+      parentNode: function(RR) {
+        return aR("Node", RR, "parentNode")
       },
-      parentElement: function(WW) {
-        return bW("Node", WW, "parentElement")
+      parentElement: function(RR) {
+        return aR("Node", RR, "parentElement")
       },
-      textContent: function(WW) {
-        return bW("Node", WW, "textContent")
+      textContent: function(RR) {
+        return aR("Node", RR, "textContent")
       },
-      firstChild: function(WW) {
-        return bW("Node", WW, "firstChild")
+      firstChild: function(RR) {
+        return aR("Node", RR, "firstChild")
       },
-      lastChild: function(WW) {
-        return bW("Node", WW, "lastChild")
+      lastChild: function(RR) {
+        return aR("Node", RR, "lastChild")
       },
-      nextSibling: function(WW) {
-        return bW("Node", WW, "nextSibling")
+      nextSibling: function(RR) {
+        return aR("Node", RR, "nextSibling")
       },
-      previousSibling: function(WW) {
-        return bW("Node", WW, "previousSibling")
+      previousSibling: function(RR) {
+        return aR("Node", RR, "previousSibling")
       },
-      contains: function(WW, iW) {
-        return UW("Node", WW, "contains")(iW)
+      contains: function(RR, JR) {
+        return nR("Node", RR, "contains")(JR)
       },
-      getRootNode: function(WW) {
-        return UW("Node", WW, "getRootNode")()
+      getRootNode: function(RR) {
+        return nR("Node", RR, "getRootNode")()
       },
-      host: function(WW) {
-        return WW && "host" in WW ? bW("ShadowRoot", WW, "host") : null
+      host: function(RR) {
+        return RR && "host" in RR ? aR("ShadowRoot", RR, "host") : null
       },
-      styleSheets: function(WW) {
-        return WW.styleSheets
+      styleSheets: function(RR) {
+        return RR.styleSheets
       },
-      shadowRoot: function(WW) {
-        return WW && "shadowRoot" in WW ? bW("Element", WW, "shadowRoot") : null
+      shadowRoot: function(RR) {
+        return RR && "shadowRoot" in RR ? aR("Element", RR, "shadowRoot") : null
       },
-      querySelector: function(WW, iW) {
-        return bW("Element", WW, "querySelector")(iW)
+      querySelector: function(RR, JR) {
+        return aR("Element", RR, "querySelector")(JR)
       },
-      querySelectorAll: function(WW, iW) {
-        return bW("Element", WW, "querySelectorAll")(iW)
+      querySelectorAll: function(RR, JR) {
+        return aR("Element", RR, "querySelectorAll")(JR)
       },
-      nowTimestamp: kW,
+      nowTimestamp: UR,
       mutationObserverCtor: function() {
-        return [lW("MutationObserver").constructor, xW.MutationObserver ?? (() => {})]
+        return [rR("MutationObserver").constructor, wR.MutationObserver ?? (() => {})]
       },
-      patch: function(WW, iW, OW) {
+      patch: function(RR, JR, GR) {
         try {
-          if (!(iW in WW)) return () => {};
-          const mW = WW[iW],
-            EW = OW(mW);
-          return "function" === typeof EW && (EW.prototype = EW.prototype || {}, Object.defineProperties(EW, {
+          if (!(JR in RR)) return () => {};
+          const yR = RR[JR],
+            tR = GR(yR);
+          return "function" === typeof tR && (tR.prototype = tR.prototype || {}, Object.defineProperties(tR, {
             __rrweb_original__: {
               enumerable: !1,
-              value: mW
+              value: yR
             }
-          })), WW[iW] = EW, () => {
-            WW[iW] = mW
+          })), RR[JR] = tR, () => {
+            RR[JR] = yR
           }
         } catch {
           return () => {}
@@ -158,548 +158,548 @@ export const modules = {
       }
     };
 
-    function MW(WW) {
-      return WW.nodeType === WW.ELEMENT_NODE
+    function AR(RR) {
+      return RR.nodeType === RR.ELEMENT_NODE
     }
 
-    function KW(WW) {
-      const iW = WW && "host" in WW && "mode" in WW && sW.host(WW) || null;
-      return Boolean(iW && "shadowRoot" in iW && sW.shadowRoot(iW) === WW)
+    function CR(RR) {
+      const JR = RR && "host" in RR && "mode" in RR && WR.host(RR) || null;
+      return Boolean(JR && "shadowRoot" in JR && WR.shadowRoot(JR) === RR)
     }
 
-    function SW(WW) {
-      return "[object ShadowRoot]" === Object.prototype.toString.call(WW)
+    function XR(RR) {
+      return "[object ShadowRoot]" === Object.prototype.toString.call(RR)
     }
 
-    function YW(WW) {
+    function MR(RR) {
       try {
-        const OW = WW.rules || WW.cssRules;
-        if (!OW) return null;
-        let mW = WW.href;
-        !mW && WW.ownerNode && (mW = WW.ownerNode.baseURI);
-        const EW = Array.from(OW, (WW => yW(WW, mW))).join("");
-        return (iW = EW).includes(" background-clip: text;") && !iW.includes(" -webkit-background-clip: text;") && (iW = iW.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), iW
-      } catch (OW) {
+        const GR = RR.rules || RR.cssRules;
+        if (!GR) return null;
+        let yR = RR.href;
+        !yR && RR.ownerNode && (yR = RR.ownerNode.baseURI);
+        const tR = Array.from(GR, (RR => BR(RR, yR))).join("");
+        return (JR = tR).includes(" background-clip: text;") && !JR.includes(" -webkit-background-clip: text;") && (JR = JR.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), JR
+      } catch (GR) {
         return null
       }
-      var iW
+      var JR
     }
 
-    function yW(WW, iW) {
-      if (function(WW) {
-          return "styleSheet" in WW
-        }(WW)) {
-        let iW;
+    function BR(RR, JR) {
+      if (function(RR) {
+          return "styleSheet" in RR
+        }(RR)) {
+        let JR;
         try {
-          iW = YW(WW.styleSheet) || function(WW) {
+          JR = MR(RR.styleSheet) || function(RR) {
             const {
-              cssText: iW
-            } = WW;
-            if (iW.split('"').length < 3) return iW;
-            const OW = ["@import", `url(${JSON.stringify(WW.href)})`];
-            return "" === WW.layerName ? OW.push("layer") : WW.layerName && OW.push(`layer(${WW.layerName})`), WW.supportsText && OW.push(`supports(${WW.supportsText})`), WW.media.length && OW.push(WW.media.mediaText), OW.join(" ") + ";"
-          }(WW)
-        } catch (OW) {
-          iW = WW.cssText
+              cssText: JR
+            } = RR;
+            if (JR.split('"').length < 3) return JR;
+            const GR = ["@import", `url(${JSON.stringify(RR.href)})`];
+            return "" === RR.layerName ? GR.push("layer") : RR.layerName && GR.push(`layer(${RR.layerName})`), RR.supportsText && GR.push(`supports(${RR.supportsText})`), RR.media.length && GR.push(RR.media.mediaText), GR.join(" ") + ";"
+          }(RR)
+        } catch (GR) {
+          JR = RR.cssText
         }
-        return WW.styleSheet.href ? DW(iW, WW.styleSheet.href) : iW
+        return RR.styleSheet.href ? cR(JR, RR.styleSheet.href) : JR
       } {
-        let OW = WW.cssText;
-        return function(WW) {
-          return "selectorText" in WW
-        }(WW) && WW.selectorText.includes(":") && (OW = function(WW) {
-          const iW = /(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm;
-          return WW.replace(iW, "$1\\$2")
-        }(OW)), iW ? DW(OW, iW) : OW
+        let GR = RR.cssText;
+        return function(RR) {
+          return "selectorText" in RR
+        }(RR) && RR.selectorText.includes(":") && (GR = function(RR) {
+          const JR = /(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm;
+          return RR.replace(JR, "$1\\$2")
+        }(GR)), JR ? cR(GR, JR) : GR
       }
     }
-    class TW {
+    class lR {
       constructor() {
-        LW(this, "idNodeMap", new Map), LW(this, "nodeMetaMap", new WeakMap)
+        qR(this, "idNodeMap", new Map), qR(this, "nodeMetaMap", new WeakMap)
       }
-      getId(WW) {
-        var iW;
-        if (!WW) return -1;
-        return (null == (iW = this.getMeta(WW)) ? void 0 : iW.id) ?? -1
+      getId(RR) {
+        var JR;
+        if (!RR) return -1;
+        return (null == (JR = this.getMeta(RR)) ? void 0 : JR.id) ?? -1
       }
-      AmW(WW) {
-        return this.idNodeMap.get(WW) || null
+      JtR(RR) {
+        return this.idNodeMap.get(RR) || null
       }
       getIds() {
         return Array.from(this.idNodeMap.keys())
       }
-      getMeta(WW) {
-        return this.nodeMetaMap.get(WW) || null
+      getMeta(RR) {
+        return this.nodeMetaMap.get(RR) || null
       }
-      removeNodeFromMap(WW) {
-        const iW = this.getId(WW);
-        this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW)))
+      removeNodeFromMap(RR) {
+        const JR = this.getId(RR);
+        this.idNodeMap.delete(JR), RR.childNodes && RR.childNodes.forEach((RR => this.removeNodeFromMap(RR)))
       }
-      has(WW) {
-        return this.idNodeMap.has(WW)
+      has(RR) {
+        return this.idNodeMap.has(RR)
       }
-      hasNode(WW) {
-        return this.nodeMetaMap.has(WW)
+      hasNode(RR) {
+        return this.nodeMetaMap.has(RR)
       }
-      add(WW, iW) {
-        const OW = iW.id;
-        this.idNodeMap.set(OW, WW), this.nodeMetaMap.set(WW, iW)
+      add(RR, JR) {
+        const GR = JR.id;
+        this.idNodeMap.set(GR, RR), this.nodeMetaMap.set(RR, JR)
       }
-      replace(WW, iW) {
-        const OW = this.AmW(WW);
-        if (OW) {
-          const WW = this.nodeMetaMap.get(OW);
-          WW && this.nodeMetaMap.set(iW, WW)
+      replace(RR, JR) {
+        const GR = this.JtR(RR);
+        if (GR) {
+          const RR = this.nodeMetaMap.get(GR);
+          RR && this.nodeMetaMap.set(JR, RR)
         }
-        this.idNodeMap.set(WW, iW)
+        this.idNodeMap.set(RR, JR)
       }
       reset() {
         this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
       }
     }
 
-    function JW() {
-      return new TW
+    function pR() {
+      return new lR
     }
 
-    function hW(WW) {
+    function gR(RR) {
       let {
-        element: iW,
-        maskInputOptions: OW,
-        tagName: mW,
-        type: EW,
-        value: NW,
-        maskInputFn: PW
-      } = WW, LW = NW || "";
-      const cW = EW && HW(EW);
-      return (OW[mW.toLowerCase()] || cW && OW[cW]) && (LW = PW ? PW(LW, iW) : "*".repeat(LW.length)), LW
+        element: JR,
+        maskInputOptions: GR,
+        tagName: yR,
+        type: tR,
+        value: uR,
+        maskInputFn: ZR
+      } = RR, qR = uR || "";
+      const iR = tR && bR(tR);
+      return (GR[yR.toLowerCase()] || iR && GR[iR]) && (qR = ZR ? ZR(qR, JR) : "*".repeat(qR.length)), qR
     }
 
-    function HW(WW) {
-      return WW.toLowerCase()
+    function bR(RR) {
+      return RR.toLowerCase()
     }
-    const nW = "__rrweb_original__";
+    const vR = "__rrweb_original__";
 
-    function uW(WW) {
-      const iW = WW.type;
-      return WW.hasAttribute("data-rr-is-password") ? "password" : iW ? HW(iW) : null
+    function OR(RR) {
+      const JR = RR.type;
+      return RR.hasAttribute("data-rr-is-password") ? "password" : JR ? bR(JR) : null
     }
 
-    function oW(WW, iW) {
-      let OW;
+    function xR(RR, JR) {
+      let GR;
       try {
-        OW = new URL(WW, iW ?? window.location.href)
-      } catch (EW) {
+        GR = new URL(RR, JR ?? window.location.href)
+      } catch (tR) {
         return null
       }
-      const mW = OW.pathname.match(/\.([0-9a-z]+)(?:$)/i);
-      return (null == mW ? void 0 : mW[1]) ?? null
+      const yR = GR.pathname.match(/\.([0-9a-z]+)(?:$)/i);
+      return (null == yR ? void 0 : yR[1]) ?? null
     }
-    const dW = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
-      eW = /^(?:[a-z+]+:)?\/\//i,
-      vW = /^www\..*/i,
-      gW = /^(data:)([^,]*),(.*)/i;
+    const NR = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+      DR = /^(?:[a-z+]+:)?\/\//i,
+      HR = /^www\..*/i,
+      oR = /^(data:)([^,]*),(.*)/i;
 
-    function DW(WW, iW) {
-      return (WW || "").replace(dW, ((WW, OW, mW, EW, NW, PW) => {
-        const LW = mW || NW || PW,
-          cW = OW || EW || "";
-        if (!LW) return WW;
-        if (eW.test(LW) || vW.test(LW)) return `url(${cW}${LW}${cW})`;
-        if (gW.test(LW)) return `url(${cW}${LW}${cW})`;
-        if ("/" === LW[0]) return `url(${cW}${function(WW){let iW="";return iW=WW.indexOf("//")>-1?WW.split("/").slice(0,3).join("/"):WW.split("/")[0],iW=iW.split("?")[0],iW}(iW)+LW}${cW})`;
-        const wW = LW.split("#")[0],
-          tW = LW.substring(wW.length),
-          ZW = iW.split("#")[0].split("/"),
-          xW = wW.split("/");
-        ZW.pop();
-        for (const iW of xW) "." !== iW && (".." === iW ? ZW.pop() : ZW.push(iW));
-        return `url(${cW}${ZW.join("/")}${tW}${cW})`
+    function cR(RR, JR) {
+      return (RR || "").replace(NR, ((RR, GR, yR, tR, uR, ZR) => {
+        const qR = yR || uR || ZR,
+          iR = GR || tR || "";
+        if (!qR) return RR;
+        if (DR.test(qR) || HR.test(qR)) return `url(${iR}${qR}${iR})`;
+        if (oR.test(qR)) return `url(${iR}${qR}${iR})`;
+        if ("/" === qR[0]) return `url(${iR}${function(RR){let JR="";return JR=RR.indexOf("//")>-1?RR.split("/").slice(0,3).join("/"):RR.split("/")[0],JR=JR.split("?")[0],JR}(JR)+qR}${iR})`;
+        const fR = qR.split("#")[0],
+          VR = qR.substring(fR.length),
+          KR = JR.split("#")[0].split("/"),
+          wR = fR.split("/");
+        KR.pop();
+        for (const JR of wR) "." !== JR && (".." === JR ? KR.pop() : KR.push(JR));
+        return `url(${iR}${KR.join("/")}${VR}${iR})`
       }))
     }
-    const VW = "(?:/\\*[^*]*\\*/)|[\\s;]",
-      pW = new RegExp(`${VW}|\\b(0)px?`, "g"),
-      fW = new RegExp(VW, "g");
+    const PR = "(?:/\\*[^*]*\\*/)|[\\s;]",
+      IR = new RegExp(`${PR}|\\b(0)px?`, "g"),
+      mR = new RegExp(PR, "g");
 
-    function CW(WW) {
-      return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? WW.replace(fW, "") : WW.replace(pW, "$1")
+    function zR(RR) {
+      return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? RR.replace(mR, "") : RR.replace(IR, "$1")
     }
 
-    function XW(WW, iW) {
-      return function(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const mW = Array.from(iW.childNodes),
-          EW = [];
-        let NW = 0;
-        if (mW.length > 1 && WW && "string" === typeof WW) {
-          let iW = CW(WW, OW);
-          const PW = iW.length / WW.length;
-          for (let LW = 1; LW < mW.length; LW++)
-            if (mW[LW].textContent && "string" === typeof mW[LW].textContent) {
-              const cW = CW(mW[LW].textContent, OW),
-                wW = 100;
-              let tW = 3;
-              for (; tW < cW.length && (cW[tW].match(/[a-zA-Z0-9]/) || -1 !== cW.indexOf(cW.substring(0, tW), 1)); tW++);
-              for (; tW < cW.length; tW++) {
-                let ZW = cW.substring(0, tW),
-                  xW = iW.split(ZW),
-                  lW = -1;
-                if (2 === xW.length) lW = xW[0].length;
-                else if (xW.length > 2 && "" === xW[0] && "" !== mW[LW - 1].textContent) lW = iW.indexOf(ZW, 1);
-                else if (1 === xW.length) {
-                  if (ZW = ZW.substring(0, ZW.length - 1), xW = iW.split(ZW), xW.length <= 1) return EW.push(WW), EW;
-                  tW = wW + 1
-                } else tW === cW.length - 1 && (lW = iW.indexOf(ZW));
-                if (xW.length >= 2 && tW > wW) {
-                  const WW = mW[LW - 1].textContent;
-                  if (WW && "string" === typeof WW) {
-                    const OW = CW(WW).length;
-                    lW = iW.indexOf(ZW, OW)
-                  } - 1 === lW && (lW = xW[0].length)
+    function SR(RR, JR) {
+      return function(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const yR = Array.from(JR.childNodes),
+          tR = [];
+        let uR = 0;
+        if (yR.length > 1 && RR && "string" === typeof RR) {
+          let JR = zR(RR, GR);
+          const ZR = JR.length / RR.length;
+          for (let qR = 1; qR < yR.length; qR++)
+            if (yR[qR].textContent && "string" === typeof yR[qR].textContent) {
+              const iR = zR(yR[qR].textContent, GR),
+                fR = 100;
+              let VR = 3;
+              for (; VR < iR.length && (iR[VR].match(/[a-zA-Z0-9]/) || -1 !== iR.indexOf(iR.substring(0, VR), 1)); VR++);
+              for (; VR < iR.length; VR++) {
+                let KR = iR.substring(0, VR),
+                  wR = JR.split(KR),
+                  rR = -1;
+                if (2 === wR.length) rR = wR[0].length;
+                else if (wR.length > 2 && "" === wR[0] && "" !== yR[qR - 1].textContent) rR = JR.indexOf(KR, 1);
+                else if (1 === wR.length) {
+                  if (KR = KR.substring(0, KR.length - 1), wR = JR.split(KR), wR.length <= 1) return tR.push(RR), tR;
+                  VR = fR + 1
+                } else VR === iR.length - 1 && (rR = JR.indexOf(KR));
+                if (wR.length >= 2 && VR > fR) {
+                  const RR = yR[qR - 1].textContent;
+                  if (RR && "string" === typeof RR) {
+                    const GR = zR(RR).length;
+                    rR = JR.indexOf(KR, GR)
+                  } - 1 === rR && (rR = wR[0].length)
                 }
-                if (-1 !== lW) {
-                  let LW = Math.floor(lW / PW);
-                  for (; LW > 0 && LW < WW.length;) {
-                    if (NW += 1, NW > 50 * mW.length) return EW.push(WW), EW;
-                    const cW = CW(WW.substring(0, LW), OW);
-                    if (cW.length === lW) {
-                      EW.push(WW.substring(0, LW)), WW = WW.substring(LW), iW = iW.substring(lW);
+                if (-1 !== rR) {
+                  let qR = Math.floor(rR / ZR);
+                  for (; qR > 0 && qR < RR.length;) {
+                    if (uR += 1, uR > 50 * yR.length) return tR.push(RR), tR;
+                    const iR = zR(RR.substring(0, qR), GR);
+                    if (iR.length === rR) {
+                      tR.push(RR.substring(0, qR)), RR = RR.substring(qR), JR = JR.substring(rR);
                       break
                     }
-                    cW.length < lW ? LW += Math.max(1, Math.floor((lW - cW.length) / PW)) : LW -= Math.max(1, Math.floor((cW.length - lW) * PW))
+                    iR.length < rR ? qR += Math.max(1, Math.floor((rR - iR.length) / ZR)) : qR -= Math.max(1, Math.floor((iR.length - rR) * ZR))
                   }
                   break
                 }
               }
             }
         }
-        return EW.push(WW), EW
-      }(WW, iW).join("/* rr_split */")
+        return tR.push(RR), tR
+      }(RR, JR).join("/* rr_split */")
     }
-    let BW = 1;
-    const qW = new RegExp("[^a-z0-9-_:]");
+    let jR = 1;
+    const dR = new RegExp("[^a-z0-9-_:]");
 
-    function RW() {
-      return BW++
+    function ER() {
+      return jR++
     }
-    let GW, IW;
-    const aW = /^[^ \t\n\r\u000c]+/,
-      rW = /^[, \t\n\r\u000c]+/;
-    const zW = new WeakMap;
+    let YR, kR;
+    const QR = /^[^ \t\n\r\u000c]+/,
+      FR = /^[, \t\n\r\u000c]+/;
+    const TR = new WeakMap;
 
-    function FW(WW, iW) {
-      return iW && "" !== iW.trim() ? Wi(WW, iW) : iW
-    }
-
-    function QW(WW) {
-      return Boolean("svg" === WW.tagName || WW.ownerSVGElement)
+    function sR(RR, JR) {
+      return JR && "" !== JR.trim() ? RJ(RR, JR) : JR
     }
 
-    function Wi(WW, iW) {
-      let OW = zW.get(WW);
-      if (OW || (OW = WW.createElement("a"), zW.set(WW, OW)), iW) {
-        if (iW.startsWith("blob:") || iW.startsWith("data:")) return iW
-      } else iW = "";
-      return OW.setAttribute("href", iW), OW.href
+    function hR(RR) {
+      return Boolean("svg" === RR.tagName || RR.ownerSVGElement)
     }
 
-    function ii(WW, iW, OW, mW) {
-      return mW ? "src" === OW || "href" === OW && ("use" !== iW || "#" !== mW[0]) || "xlink:href" === OW && "#" !== mW[0] || "background" === OW && ["table", "td", "th"].includes(iW) ? FW(WW, mW) : "srcset" === OW ? function(WW, iW) {
-        if ("" === iW.trim()) return iW;
-        let OW = 0;
+    function RJ(RR, JR) {
+      let GR = TR.get(RR);
+      if (GR || (GR = RR.createElement("a"), TR.set(RR, GR)), JR) {
+        if (JR.startsWith("blob:") || JR.startsWith("data:")) return JR
+      } else JR = "";
+      return GR.setAttribute("href", JR), GR.href
+    }
 
-        function mW(WW) {
-          let mW;
-          const EW = WW.exec(iW.substring(OW));
-          return EW ? (mW = EW[0], OW += mW.length, mW) : ""
+    function JJ(RR, JR, GR, yR) {
+      return yR ? "src" === GR || "href" === GR && ("use" !== JR || "#" !== yR[0]) || "xlink:href" === GR && "#" !== yR[0] || "background" === GR && ["table", "td", "th"].includes(JR) ? sR(RR, yR) : "srcset" === GR ? function(RR, JR) {
+        if ("" === JR.trim()) return JR;
+        let GR = 0;
+
+        function yR(RR) {
+          let yR;
+          const tR = RR.exec(JR.substring(GR));
+          return tR ? (yR = tR[0], GR += yR.length, yR) : ""
         }
-        const EW = [];
-        for (; mW(rW), !(OW >= iW.length);) {
-          let NW = mW(aW);
-          if ("," === NW.slice(-1)) NW = FW(WW, NW.substring(0, NW.length - 1)), EW.push(NW);
+        const tR = [];
+        for (; yR(FR), !(GR >= JR.length);) {
+          let uR = yR(QR);
+          if ("," === uR.slice(-1)) uR = sR(RR, uR.substring(0, uR.length - 1)), tR.push(uR);
           else {
-            let mW = "";
-            NW = FW(WW, NW);
-            let PW = !1;
+            let yR = "";
+            uR = sR(RR, uR);
+            let ZR = !1;
             for (;;) {
-              const WW = iW.charAt(OW);
-              if ("" === WW) {
-                EW.push((NW + mW).trim());
+              const RR = JR.charAt(GR);
+              if ("" === RR) {
+                tR.push((uR + yR).trim());
                 break
               }
-              if (PW) ")" === WW && (PW = !1);
+              if (ZR) ")" === RR && (ZR = !1);
               else {
-                if ("," === WW) {
-                  OW += 1, EW.push((NW + mW).trim());
+                if ("," === RR) {
+                  GR += 1, tR.push((uR + yR).trim());
                   break
                 }
-                "(" === WW && (PW = !0)
+                "(" === RR && (ZR = !0)
               }
-              mW += WW, OW += 1
+              yR += RR, GR += 1
             }
           }
         }
-        return EW.join(", ")
-      }(WW, mW) : "style" === OW ? DW(mW, Wi(WW)) : "object" === iW && "data" === OW ? FW(WW, mW) : mW : mW
+        return tR.join(", ")
+      }(RR, yR) : "style" === GR ? cR(yR, RJ(RR)) : "object" === JR && "data" === GR ? sR(RR, yR) : yR : yR
     }
 
-    function Oi(WW, iW, OW) {
-      return ["video", "audio"].includes(WW) && "autoplay" === HW(iW)
+    function GJ(RR, JR, GR) {
+      return ["video", "audio"].includes(RR) && "autoplay" === bR(JR)
     }
 
-    function mi(WW, iW, OW) {
-      if (!WW) return !1;
-      if (WW.nodeType !== WW.ELEMENT_NODE) return !!OW && mi(sW.parentNode(WW), iW, OW);
-      for (let mW = WW.classList.length; mW--;) {
-        const OW = WW.classList[mW];
-        if (iW.test(OW)) return !0
+    function yJ(RR, JR, GR) {
+      if (!RR) return !1;
+      if (RR.nodeType !== RR.ELEMENT_NODE) return !!GR && yJ(WR.parentNode(RR), JR, GR);
+      for (let yR = RR.classList.length; yR--;) {
+        const GR = RR.classList[yR];
+        if (JR.test(GR)) return !0
       }
-      return !!OW && mi(sW.parentNode(WW), iW, OW)
+      return !!GR && yJ(WR.parentNode(RR), JR, GR)
     }
 
-    function Ei(WW, iW, OW, mW) {
-      let EW;
-      if (MW(WW)) {
-        if (EW = WW, !sW.childNodes(EW).length) return !1
+    function tJ(RR, JR, GR, yR) {
+      let tR;
+      if (AR(RR)) {
+        if (tR = RR, !WR.childNodes(tR).length) return !1
       } else {
-        if (null === sW.parentElement(WW)) return !1;
-        EW = sW.parentElement(WW)
+        if (null === WR.parentElement(RR)) return !1;
+        tR = WR.parentElement(RR)
       }
       try {
-        if ("string" === typeof iW) {
-          if (mW) {
-            if (EW.closest(`.${iW}`)) return !0
-          } else if (EW.classList.contains(iW)) return !0
-        } else if (mi(EW, iW, mW)) return !0;
-        if (OW)
-          if (mW) {
-            if (EW.closest(OW)) return !0
-          } else if (EW.matches(OW)) return !0
-      } catch (NW) {}
+        if ("string" === typeof JR) {
+          if (yR) {
+            if (tR.closest(`.${JR}`)) return !0
+          } else if (tR.classList.contains(JR)) return !0
+        } else if (yJ(tR, JR, yR)) return !0;
+        if (GR)
+          if (yR) {
+            if (tR.closest(GR)) return !0
+          } else if (tR.matches(GR)) return !0
+      } catch (uR) {}
       return !1
     }
 
-    function Ni(WW, iW) {
+    function uJ(RR, JR) {
       const {
-        doc: OW,
-        mirror: mW,
-        blockClass: EW,
-        blockSelector: NW,
-        needsMask: PW,
-        inlineStylesheet: LW,
-        maskInputOptions: wW = {},
-        maskTextFn: tW,
-        maskInputFn: ZW,
-        dataURLOptions: xW = {},
-        inlineImages: lW,
-        recordCanvas: AW,
-        keepIframeSrcFn: bW,
-        newlyAddedElement: jW = !1,
-        cssCaptured: UW = !1
-      } = iW, kW = function(WW, iW) {
-        if (!iW.hasNode(WW)) return;
-        const OW = iW.getId(WW);
-        return 1 === OW ? void 0 : OW
-      }(OW, mW);
-      switch (WW.nodeType) {
-        case WW.DOCUMENT_NODE:
-          return "CSS1Compat" !== WW.compatMode ? {
-            type: cW.Document,
+        doc: GR,
+        mirror: yR,
+        blockClass: tR,
+        blockSelector: uR,
+        needsMask: ZR,
+        inlineStylesheet: qR,
+        maskInputOptions: fR = {},
+        maskTextFn: VR,
+        maskInputFn: KR,
+        dataURLOptions: wR = {},
+        inlineImages: rR,
+        recordCanvas: eR,
+        keepIframeSrcFn: aR,
+        newlyAddedElement: LR = !1,
+        cssCaptured: nR = !1
+      } = JR, UR = function(RR, JR) {
+        if (!JR.hasNode(RR)) return;
+        const GR = JR.getId(RR);
+        return 1 === GR ? void 0 : GR
+      }(GR, yR);
+      switch (RR.nodeType) {
+        case RR.DOCUMENT_NODE:
+          return "CSS1Compat" !== RR.compatMode ? {
+            type: iR.Document,
             childNodes: [],
-            compatMode: WW.compatMode
+            compatMode: RR.compatMode
           } : {
-            type: cW.Document,
+            type: iR.Document,
             childNodes: []
           };
-        case WW.DOCUMENT_TYPE_NODE:
+        case RR.DOCUMENT_TYPE_NODE:
           return {
-            type: cW.DocumentType, name: WW.name, publicId: WW.publicId, systemId: WW.systemId, rootId: kW
+            type: iR.DocumentType, name: RR.name, publicId: RR.publicId, systemId: RR.systemId, rootId: UR
           };
-        case WW.ELEMENT_NODE:
-          return function(WW, iW) {
+        case RR.ELEMENT_NODE:
+          return function(RR, JR) {
             const {
-              doc: OW,
-              blockClass: mW,
-              blockSelector: EW,
-              inlineStylesheet: NW,
-              maskInputOptions: PW = {},
-              maskInputFn: LW,
-              dataURLOptions: wW = {},
-              inlineImages: tW,
-              recordCanvas: ZW,
-              keepIframeSrcFn: xW,
-              newlyAddedElement: lW = !1,
-              rootId: AW
-            } = iW, bW = function(WW, iW, OW) {
+              doc: GR,
+              blockClass: yR,
+              blockSelector: tR,
+              inlineStylesheet: uR,
+              maskInputOptions: ZR = {},
+              maskInputFn: qR,
+              dataURLOptions: fR = {},
+              inlineImages: VR,
+              recordCanvas: KR,
+              keepIframeSrcFn: wR,
+              newlyAddedElement: rR = !1,
+              rootId: eR
+            } = JR, aR = function(RR, JR, GR) {
               try {
-                if ("string" === typeof iW) {
-                  if (WW.classList.contains(iW)) return !0
+                if ("string" === typeof JR) {
+                  if (RR.classList.contains(JR)) return !0
                 } else
-                  for (let OW = WW.classList.length; OW--;) {
-                    const mW = WW.classList[OW];
-                    if (iW.test(mW)) return !0
+                  for (let GR = RR.classList.length; GR--;) {
+                    const yR = RR.classList[GR];
+                    if (JR.test(yR)) return !0
                   }
-                if (OW) return WW.matches(OW)
-              } catch (mW) {}
+                if (GR) return RR.matches(GR)
+              } catch (yR) {}
               return !1
-            }(WW, mW, EW), jW = function(WW) {
-              if (WW instanceof HTMLFormElement) return "form";
-              const iW = HW(WW.tagName);
-              return qW.test(iW) ? "div" : iW
-            }(WW);
-            let UW = {};
-            const kW = WW.attributes.length;
-            for (let cW = 0; cW < kW; cW++) {
-              const iW = WW.attributes[cW];
-              Oi(jW, iW.name, iW.value) || (UW[iW.name] = ii(OW, jW, HW(iW.name), iW.value))
+            }(RR, yR, tR), LR = function(RR) {
+              if (RR instanceof HTMLFormElement) return "form";
+              const JR = bR(RR.tagName);
+              return dR.test(JR) ? "div" : JR
+            }(RR);
+            let nR = {};
+            const UR = RR.attributes.length;
+            for (let iR = 0; iR < UR; iR++) {
+              const JR = RR.attributes[iR];
+              GJ(LR, JR.name, JR.value) || (nR[JR.name] = JJ(GR, LR, bR(JR.name), JR.value))
             }
-            if ("link" === jW && NW) {
-              const iW = Array.from(OW.styleSheets).find((iW => iW.href === WW.href));
-              let mW = null;
-              iW && (mW = YW(iW)), mW && (delete UW.rel, delete UW.href, UW._cssText = mW)
+            if ("link" === LR && uR) {
+              const JR = Array.from(GR.styleSheets).find((JR => JR.href === RR.href));
+              let yR = null;
+              JR && (yR = MR(JR)), yR && (delete nR.rel, delete nR.href, nR._cssText = yR)
             }
-            if ("style" === jW && WW.sheet) {
-              let iW = YW(WW.sheet);
-              iW && (WW.childNodes.length > 1 && (iW = XW(iW, WW)), UW._cssText = iW)
+            if ("style" === LR && RR.sheet) {
+              let JR = MR(RR.sheet);
+              JR && (RR.childNodes.length > 1 && (JR = SR(JR, RR)), nR._cssText = JR)
             }
-            if (["input", "textarea", "select"].includes(jW)) {
-              const iW = WW.value,
-                OW = WW.checked;
-              "radio" !== UW.type && "checkbox" !== UW.type && "submit" !== UW.type && "button" !== UW.type && iW ? UW.value = hW({
-                element: WW,
-                type: uW(WW),
-                tagName: jW,
-                value: iW,
-                maskInputOptions: PW,
-                maskInputFn: LW
-              }) : OW && (UW.checked = OW)
+            if (["input", "textarea", "select"].includes(LR)) {
+              const JR = RR.value,
+                GR = RR.checked;
+              "radio" !== nR.type && "checkbox" !== nR.type && "submit" !== nR.type && "button" !== nR.type && JR ? nR.value = gR({
+                element: RR,
+                type: OR(RR),
+                tagName: LR,
+                value: JR,
+                maskInputOptions: ZR,
+                maskInputFn: qR
+              }) : GR && (nR.checked = GR)
             }
-            "option" === jW && (WW.selected && !PW.select ? UW.selected = !0 : delete UW.selected);
-            "dialog" === jW && WW.open && (UW.rr_open_mode = WW.matches("dialog:modal") ? "modal" : "non-modal");
-            if ("canvas" === jW && ZW)
-              if ("2d" === WW.__context)(function(WW) {
-                const iW = WW.getContext("2d");
-                if (!iW) return !0;
-                for (let OW = 0; OW < WW.width; OW += 50)
-                  for (let mW = 0; mW < WW.height; mW += 50) {
-                    const EW = iW.getImageData,
-                      NW = nW in EW ? EW[nW] : EW;
-                    if (new Uint32Array(NW.call(iW, OW, mW, Math.min(50, WW.width - OW), Math.min(50, WW.height - mW)).data.buffer).some((WW => 0 !== WW))) return !1
+            "option" === LR && (RR.selected && !ZR.select ? nR.selected = !0 : delete nR.selected);
+            "dialog" === LR && RR.open && (nR.rr_open_mode = RR.matches("dialog:modal") ? "modal" : "non-modal");
+            if ("canvas" === LR && KR)
+              if ("2d" === RR.__context)(function(RR) {
+                const JR = RR.getContext("2d");
+                if (!JR) return !0;
+                for (let GR = 0; GR < RR.width; GR += 50)
+                  for (let yR = 0; yR < RR.height; yR += 50) {
+                    const tR = JR.getImageData,
+                      uR = vR in tR ? tR[vR] : tR;
+                    if (new Uint32Array(uR.call(JR, GR, yR, Math.min(50, RR.width - GR), Math.min(50, RR.height - yR)).data.buffer).some((RR => 0 !== RR))) return !1
                   }
                 return !0
-              })(WW) || (UW.rr_dataURL = WW.toDataURL(wW.type, wW.quality));
-              else if (!("__context" in WW)) {
-              const iW = WW.toDataURL(wW.type, wW.quality),
-                mW = OW.createElement("canvas");
-              mW.width = WW.width, mW.height = WW.height;
-              iW !== mW.toDataURL(wW.type, wW.quality) && (UW.rr_dataURL = iW)
+              })(RR) || (nR.rr_dataURL = RR.toDataURL(fR.type, fR.quality));
+              else if (!("__context" in RR)) {
+              const JR = RR.toDataURL(fR.type, fR.quality),
+                yR = GR.createElement("canvas");
+              yR.width = RR.width, yR.height = RR.height;
+              JR !== yR.toDataURL(fR.type, fR.quality) && (nR.rr_dataURL = JR)
             }
-            if ("img" === jW && tW) {
-              GW || (GW = OW.createElement("canvas"), IW = GW.getContext("2d"));
-              const iW = WW,
-                mW = iW.currentSrc || iW.getAttribute("src") || "<unknown-src>",
-                EW = iW.crossOrigin,
-                NW = () => {
-                  iW.removeEventListener("load", NW);
+            if ("img" === LR && VR) {
+              YR || (YR = GR.createElement("canvas"), kR = YR.getContext("2d"));
+              const JR = RR,
+                yR = JR.currentSrc || JR.getAttribute("src") || "<unknown-src>",
+                tR = JR.crossOrigin,
+                uR = () => {
+                  JR.removeEventListener("load", uR);
                   try {
-                    GW.width = iW.naturalWidth, GW.height = iW.naturalHeight, IW.drawImage(iW, 0, 0), UW.rr_dataURL = GW.toDataURL(wW.type, wW.quality)
-                  } catch (WW) {
-                    if ("anonymous" !== iW.crossOrigin) return iW.crossOrigin = "anonymous", void(iW.complete && 0 !== iW.naturalWidth ? NW() : iW.addEventListener("load", NW));
-                    console.warn(`Cannot inline img src=${mW}! Error: ${WW}`)
+                    YR.width = JR.naturalWidth, YR.height = JR.naturalHeight, kR.drawImage(JR, 0, 0), nR.rr_dataURL = YR.toDataURL(fR.type, fR.quality)
+                  } catch (RR) {
+                    if ("anonymous" !== JR.crossOrigin) return JR.crossOrigin = "anonymous", void(JR.complete && 0 !== JR.naturalWidth ? uR() : JR.addEventListener("load", uR));
+                    console.warn(`Cannot inline img src=${yR}! Error: ${RR}`)
                   }
-                  "anonymous" === iW.crossOrigin && (EW ? UW.crossOrigin = EW : iW.removeAttribute("crossorigin"))
+                  "anonymous" === JR.crossOrigin && (tR ? nR.crossOrigin = tR : JR.removeAttribute("crossorigin"))
                 };
-              iW.complete && 0 !== iW.naturalWidth ? NW() : iW.addEventListener("load", NW)
+              JR.complete && 0 !== JR.naturalWidth ? uR() : JR.addEventListener("load", uR)
             }
-            if (["audio", "video"].includes(jW)) {
-              const iW = UW;
-              iW.rr_mediaState = WW.paused ? "paused" : "played", iW.rr_mediaCurrentTime = WW.currentTime, iW.rr_mediaPlaybackRate = WW.playbackRate, iW.rr_mediaMuted = WW.muted, iW.rr_mediaLoop = WW.loop, iW.rr_mediaVolume = WW.volume
+            if (["audio", "video"].includes(LR)) {
+              const JR = nR;
+              JR.rr_mediaState = RR.paused ? "paused" : "played", JR.rr_mediaCurrentTime = RR.currentTime, JR.rr_mediaPlaybackRate = RR.playbackRate, JR.rr_mediaMuted = RR.muted, JR.rr_mediaLoop = RR.loop, JR.rr_mediaVolume = RR.volume
             }
-            lW || (WW.scrollLeft && (UW.rr_scrollLeft = WW.scrollLeft), WW.scrollTop && (UW.rr_scrollTop = WW.scrollTop));
-            if (bW) {
+            rR || (RR.scrollLeft && (nR.rr_scrollLeft = RR.scrollLeft), RR.scrollTop && (nR.rr_scrollTop = RR.scrollTop));
+            if (aR) {
               const {
-                width: iW,
-                height: OW
-              } = WW.getBoundingClientRect();
-              UW = {
-                class: UW.class,
-                rr_width: `${iW}px`,
-                rr_height: `${OW}px`
+                width: JR,
+                height: GR
+              } = RR.getBoundingClientRect();
+              nR = {
+                class: nR.class,
+                rr_width: `${JR}px`,
+                rr_height: `${GR}px`
               }
             }
-            "iframe" !== jW || xW(UW.src) || (WW.contentDocument || (UW.rr_src = UW.src), delete UW.src);
-            let sW;
+            "iframe" !== LR || wR(nR.src) || (RR.contentDocument || (nR.rr_src = nR.src), delete nR.src);
+            let WR;
             try {
-              customElements.get(jW) && (sW = !0)
-            } catch (MW) {}
+              customElements.get(LR) && (WR = !0)
+            } catch (AR) {}
             return {
-              type: cW.Element,
-              tagName: jW,
-              attributes: UW,
+              type: iR.Element,
+              tagName: LR,
+              attributes: nR,
               childNodes: [],
-              isSVG: QW(WW) || void 0,
-              needBlock: bW,
-              rootId: AW,
-              isCustom: sW
+              isSVG: hR(RR) || void 0,
+              needBlock: aR,
+              rootId: eR,
+              isCustom: WR
             }
-          }(WW, {
-            doc: OW,
-            blockClass: EW,
-            blockSelector: NW,
-            inlineStylesheet: LW,
-            maskInputOptions: wW,
-            maskInputFn: ZW,
-            dataURLOptions: xW,
-            inlineImages: lW,
-            recordCanvas: AW,
-            keepIframeSrcFn: bW,
-            newlyAddedElement: jW,
-            rootId: kW
+          }(RR, {
+            doc: GR,
+            blockClass: tR,
+            blockSelector: uR,
+            inlineStylesheet: qR,
+            maskInputOptions: fR,
+            maskInputFn: KR,
+            dataURLOptions: wR,
+            inlineImages: rR,
+            recordCanvas: eR,
+            keepIframeSrcFn: aR,
+            newlyAddedElement: LR,
+            rootId: UR
           });
-        case WW.TEXT_NODE:
-          return function(WW, iW) {
+        case RR.TEXT_NODE:
+          return function(RR, JR) {
             const {
-              needsMask: OW,
-              maskTextFn: mW,
-              rootId: EW,
-              cssCaptured: NW
-            } = iW, PW = sW.parentNode(WW), LW = PW && PW.tagName;
-            let wW = "";
-            const tW = "STYLE" === LW || void 0,
-              ZW = "SCRIPT" === LW || void 0;
-            ZW ? wW = "SCRIPT_PLACEHOLDER" : NW || (wW = sW.textContent(WW), tW && wW && (wW = DW(wW, Wi(iW.doc))));
-            !tW && !ZW && wW && OW && (wW = mW ? mW(wW, sW.parentElement(WW)) : wW.replace(/[\S]/g, "*"));
+              needsMask: GR,
+              maskTextFn: yR,
+              rootId: tR,
+              cssCaptured: uR
+            } = JR, ZR = WR.parentNode(RR), qR = ZR && ZR.tagName;
+            let fR = "";
+            const VR = "STYLE" === qR || void 0,
+              KR = "SCRIPT" === qR || void 0;
+            KR ? fR = "SCRIPT_PLACEHOLDER" : uR || (fR = WR.textContent(RR), VR && fR && (fR = cR(fR, RJ(JR.doc))));
+            !VR && !KR && fR && GR && (fR = yR ? yR(fR, WR.parentElement(RR)) : fR.replace(/[\S]/g, "*"));
             return {
-              type: cW.Text,
-              textContent: wW || "",
-              rootId: EW
+              type: iR.Text,
+              textContent: fR || "",
+              rootId: tR
             }
-          }(WW, {
-            doc: OW,
-            needsMask: PW,
-            maskTextFn: tW,
-            rootId: kW,
-            cssCaptured: UW
+          }(RR, {
+            doc: GR,
+            needsMask: ZR,
+            maskTextFn: VR,
+            rootId: UR,
+            cssCaptured: nR
           });
-        case WW.CDATA_SECTION_NODE:
+        case RR.CDATA_SECTION_NODE:
           return {
-            type: cW.CDATA, textContent: "", rootId: kW
+            type: iR.CDATA, textContent: "", rootId: UR
           };
-        case WW.COMMENT_NODE:
+        case RR.COMMENT_NODE:
           return {
-            type: cW.Comment, textContent: sW.textContent(WW) || "", rootId: kW
+            type: iR.Comment, textContent: WR.textContent(RR) || "", rootId: UR
           };
         default:
           return !1
       }
     }
 
-    function Pi(WW) {
-      return void 0 === WW || null === WW ? "" : WW.toLowerCase()
+    function ZJ(RR) {
+      return void 0 === RR || null === RR ? "" : RR.toLowerCase()
     }
 
-    function Li(WW) {
-      return !0 === WW || "all" === WW ? {
+    function qJ(RR) {
+      return !0 === RR || "all" === RR ? {
         script: !0,
         comment: !0,
         headFavicon: !0,
@@ -708,383 +708,383 @@ export const modules = {
         headMetaRobots: !0,
         headMetaHttpEquiv: !0,
         headMetaVerification: !0,
-        headMetaAuthorship: "all" === WW,
-        headMetaDescKeywords: "all" === WW,
-        headTitleMutations: "all" === WW
-      } : WW || {}
+        headMetaAuthorship: "all" === RR,
+        headMetaDescKeywords: "all" === RR,
+        headTitleMutations: "all" === RR
+      } : RR || {}
     }
 
-    function ci(WW, iW) {
+    function iJ(RR, JR) {
       const {
-        doc: OW,
-        mirror: mW,
-        blockClass: EW,
-        blockSelector: NW,
-        maskTextClass: PW,
-        maskTextSelector: LW,
-        skipChild: wW = !1,
-        inlineStylesheet: tW = !0,
-        maskInputOptions: ZW = {},
-        maskTextFn: xW,
-        maskInputFn: lW,
-        slimDOMOptions: AW,
-        dataURLOptions: bW = {},
-        inlineImages: jW = !1,
-        recordCanvas: UW = !1,
-        onSerialize: kW,
-        onIframeLoad: YW,
-        iframeLoadTimeout: yW = 5e3,
-        onStylesheetLoad: TW,
-        stylesheetLoadTimeout: JW = 5e3,
-        keepIframeSrcFn: hW = () => !1,
-        newlyAddedElement: HW = !1,
-        cssCaptured: nW = !1
-      } = iW;
+        doc: GR,
+        mirror: yR,
+        blockClass: tR,
+        blockSelector: uR,
+        maskTextClass: ZR,
+        maskTextSelector: qR,
+        skipChild: fR = !1,
+        inlineStylesheet: VR = !0,
+        maskInputOptions: KR = {},
+        maskTextFn: wR,
+        maskInputFn: rR,
+        slimDOMOptions: eR,
+        dataURLOptions: aR = {},
+        inlineImages: LR = !1,
+        recordCanvas: nR = !1,
+        onSerialize: UR,
+        onIframeLoad: MR,
+        iframeLoadTimeout: BR = 5e3,
+        onStylesheetLoad: lR,
+        stylesheetLoadTimeout: pR = 5e3,
+        keepIframeSrcFn: gR = () => !1,
+        newlyAddedElement: bR = !1,
+        cssCaptured: vR = !1
+      } = JR;
       let {
-        needsMask: uW
-      } = iW, {
-        preserveWhiteSpace: dW = !0
-      } = iW;
-      if (!uW) {
-        uW = Ei(WW, PW, LW, void 0 === uW)
+        needsMask: OR
+      } = JR, {
+        preserveWhiteSpace: NR = !0
+      } = JR;
+      if (!OR) {
+        OR = tJ(RR, ZR, qR, void 0 === OR)
       }
-      const eW = Ni(WW, {
-        doc: OW,
-        mirror: mW,
-        blockClass: EW,
-        blockSelector: NW,
-        needsMask: uW,
-        inlineStylesheet: tW,
-        maskInputOptions: ZW,
-        maskTextFn: xW,
-        maskInputFn: lW,
-        dataURLOptions: bW,
-        inlineImages: jW,
-        recordCanvas: UW,
-        keepIframeSrcFn: hW,
-        newlyAddedElement: HW,
-        cssCaptured: nW
+      const DR = uJ(RR, {
+        doc: GR,
+        mirror: yR,
+        blockClass: tR,
+        blockSelector: uR,
+        needsMask: OR,
+        inlineStylesheet: VR,
+        maskInputOptions: KR,
+        maskTextFn: wR,
+        maskInputFn: rR,
+        dataURLOptions: aR,
+        inlineImages: LR,
+        recordCanvas: nR,
+        keepIframeSrcFn: gR,
+        newlyAddedElement: bR,
+        cssCaptured: vR
       });
-      if (!eW) return console.warn(WW, "not serialized"), null;
-      let vW;
-      vW = mW.hasNode(WW) ? mW.getId(WW) : function(WW, iW) {
-        if (iW.comment && WW.type === cW.Comment) return !0;
-        if (WW.type === cW.Element) {
-          if (iW.script && ("script" === WW.tagName || "link" === WW.tagName && ("preload" === WW.attributes.rel && "script" === WW.attributes.as || "modulepreload" === WW.attributes.rel) || "link" === WW.tagName && "prefetch" === WW.attributes.rel && "string" === typeof WW.attributes.href && "js" === oW(WW.attributes.href))) return !0;
-          if (iW.headFavicon && ("link" === WW.tagName && "shortcut icon" === WW.attributes.rel || "meta" === WW.tagName && (Pi(WW.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === Pi(WW.attributes.name) || "icon" === Pi(WW.attributes.rel) || "apple-touch-icon" === Pi(WW.attributes.rel) || "shortcut icon" === Pi(WW.attributes.rel)))) return !0;
-          if ("meta" === WW.tagName) {
-            if (iW.headMetaDescKeywords && Pi(WW.attributes.name).match(/^description|keywords$/)) return !0;
-            if (iW.headMetaSocial && (Pi(WW.attributes.property).match(/^(og|twitter|fb):/) || Pi(WW.attributes.name).match(/^(og|twitter):/) || "pinterest" === Pi(WW.attributes.name))) return !0;
-            if (iW.headMetaRobots && ("robots" === Pi(WW.attributes.name) || "googlebot" === Pi(WW.attributes.name) || "bingbot" === Pi(WW.attributes.name))) return !0;
-            if (iW.headMetaHttpEquiv && void 0 !== WW.attributes["http-equiv"]) return !0;
-            if (iW.headMetaAuthorship && ("author" === Pi(WW.attributes.name) || "generator" === Pi(WW.attributes.name) || "framework" === Pi(WW.attributes.name) || "publisher" === Pi(WW.attributes.name) || "progid" === Pi(WW.attributes.name) || Pi(WW.attributes.property).match(/^article:/) || Pi(WW.attributes.property).match(/^product:/))) return !0;
-            if (iW.headMetaVerification && ("google-site-verification" === Pi(WW.attributes.name) || "yandex-verification" === Pi(WW.attributes.name) || "csrf-token" === Pi(WW.attributes.name) || "p:domain_verify" === Pi(WW.attributes.name) || "verify-v1" === Pi(WW.attributes.name) || "verification" === Pi(WW.attributes.name) || "shopify-checkout-api-token" === Pi(WW.attributes.name))) return !0
+      if (!DR) return console.warn(RR, "not serialized"), null;
+      let HR;
+      HR = yR.hasNode(RR) ? yR.getId(RR) : function(RR, JR) {
+        if (JR.comment && RR.type === iR.Comment) return !0;
+        if (RR.type === iR.Element) {
+          if (JR.script && ("script" === RR.tagName || "link" === RR.tagName && ("preload" === RR.attributes.rel && "script" === RR.attributes.as || "modulepreload" === RR.attributes.rel) || "link" === RR.tagName && "prefetch" === RR.attributes.rel && "string" === typeof RR.attributes.href && "js" === xR(RR.attributes.href))) return !0;
+          if (JR.headFavicon && ("link" === RR.tagName && "shortcut icon" === RR.attributes.rel || "meta" === RR.tagName && (ZJ(RR.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === ZJ(RR.attributes.name) || "icon" === ZJ(RR.attributes.rel) || "apple-touch-icon" === ZJ(RR.attributes.rel) || "shortcut icon" === ZJ(RR.attributes.rel)))) return !0;
+          if ("meta" === RR.tagName) {
+            if (JR.headMetaDescKeywords && ZJ(RR.attributes.name).match(/^description|keywords$/)) return !0;
+            if (JR.headMetaSocial && (ZJ(RR.attributes.property).match(/^(og|twitter|fb):/) || ZJ(RR.attributes.name).match(/^(og|twitter):/) || "pinterest" === ZJ(RR.attributes.name))) return !0;
+            if (JR.headMetaRobots && ("robots" === ZJ(RR.attributes.name) || "googlebot" === ZJ(RR.attributes.name) || "bingbot" === ZJ(RR.attributes.name))) return !0;
+            if (JR.headMetaHttpEquiv && void 0 !== RR.attributes["http-equiv"]) return !0;
+            if (JR.headMetaAuthorship && ("author" === ZJ(RR.attributes.name) || "generator" === ZJ(RR.attributes.name) || "framework" === ZJ(RR.attributes.name) || "publisher" === ZJ(RR.attributes.name) || "progid" === ZJ(RR.attributes.name) || ZJ(RR.attributes.property).match(/^article:/) || ZJ(RR.attributes.property).match(/^product:/))) return !0;
+            if (JR.headMetaVerification && ("google-site-verification" === ZJ(RR.attributes.name) || "yandex-verification" === ZJ(RR.attributes.name) || "csrf-token" === ZJ(RR.attributes.name) || "p:domain_verify" === ZJ(RR.attributes.name) || "verify-v1" === ZJ(RR.attributes.name) || "verification" === ZJ(RR.attributes.name) || "shopify-checkout-api-token" === ZJ(RR.attributes.name))) return !0
           }
         }
         return !1
-      }(eW, AW) || !dW && eW.type === cW.Text && !eW.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : RW();
-      const gW = Object.assign(eW, {
-        id: vW
+      }(DR, eR) || !NR && DR.type === iR.Text && !DR.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : ER();
+      const oR = Object.assign(DR, {
+        id: HR
       });
-      if (mW.add(WW, gW), -2 === vW) return null;
-      kW && kW(WW);
-      let DW = !wW;
-      if (gW.type === cW.Element) {
-        DW = DW && !gW.needBlock, delete gW.needBlock;
-        const iW = sW.shadowRoot(WW);
-        iW && SW(iW) && (gW.isShadowHost = !0)
+      if (yR.add(RR, oR), -2 === HR) return null;
+      UR && UR(RR);
+      let cR = !fR;
+      if (oR.type === iR.Element) {
+        cR = cR && !oR.needBlock, delete oR.needBlock;
+        const JR = WR.shadowRoot(RR);
+        JR && XR(JR) && (oR.isShadowHost = !0)
       }
-      if ((gW.type === cW.Document || gW.type === cW.Element) && DW) {
-        AW.headWhitespace && gW.type === cW.Element && "head" === gW.tagName && (dW = !1);
-        const iW = {
-          doc: OW,
-          mirror: mW,
-          blockClass: EW,
-          blockSelector: NW,
-          needsMask: uW,
-          maskTextClass: PW,
-          maskTextSelector: LW,
-          skipChild: wW,
-          inlineStylesheet: tW,
-          maskInputOptions: ZW,
-          maskTextFn: xW,
-          maskInputFn: lW,
-          slimDOMOptions: AW,
-          dataURLOptions: bW,
-          inlineImages: jW,
-          recordCanvas: UW,
-          preserveWhiteSpace: dW,
-          onSerialize: kW,
-          onIframeLoad: YW,
-          iframeLoadTimeout: yW,
-          onStylesheetLoad: TW,
-          stylesheetLoadTimeout: JW,
-          keepIframeSrcFn: hW,
+      if ((oR.type === iR.Document || oR.type === iR.Element) && cR) {
+        eR.headWhitespace && oR.type === iR.Element && "head" === oR.tagName && (NR = !1);
+        const JR = {
+          doc: GR,
+          mirror: yR,
+          blockClass: tR,
+          blockSelector: uR,
+          needsMask: OR,
+          maskTextClass: ZR,
+          maskTextSelector: qR,
+          skipChild: fR,
+          inlineStylesheet: VR,
+          maskInputOptions: KR,
+          maskTextFn: wR,
+          maskInputFn: rR,
+          slimDOMOptions: eR,
+          dataURLOptions: aR,
+          inlineImages: LR,
+          recordCanvas: nR,
+          preserveWhiteSpace: NR,
+          onSerialize: UR,
+          onIframeLoad: MR,
+          iframeLoadTimeout: BR,
+          onStylesheetLoad: lR,
+          stylesheetLoadTimeout: pR,
+          keepIframeSrcFn: gR,
           cssCaptured: !1
         };
-        if (gW.type === cW.Element && "textarea" === gW.tagName && void 0 !== gW.attributes.value);
+        if (oR.type === iR.Element && "textarea" === oR.tagName && void 0 !== oR.attributes.value);
         else {
-          gW.type === cW.Element && void 0 !== gW.attributes._cssText && "string" === typeof gW.attributes._cssText && (iW.cssCaptured = !0);
-          for (const OW of Array.from(sW.childNodes(WW))) {
-            const WW = ci(OW, iW);
-            WW && gW.childNodes.push(WW)
+          oR.type === iR.Element && void 0 !== oR.attributes._cssText && "string" === typeof oR.attributes._cssText && (JR.cssCaptured = !0);
+          for (const GR of Array.from(WR.childNodes(RR))) {
+            const RR = iJ(GR, JR);
+            RR && oR.childNodes.push(RR)
           }
         }
-        let KW = null;
-        if (MW(WW) && (KW = sW.shadowRoot(WW)))
-          for (const WW of Array.from(sW.childNodes(KW))) {
-            const OW = ci(WW, iW);
-            OW && (SW(KW) && (OW.isShadow = !0), gW.childNodes.push(OW))
+        let CR = null;
+        if (AR(RR) && (CR = WR.shadowRoot(RR)))
+          for (const RR of Array.from(WR.childNodes(CR))) {
+            const GR = iJ(RR, JR);
+            GR && (XR(CR) && (GR.isShadow = !0), oR.childNodes.push(GR))
           }
       }
-      const VW = sW.parentNode(WW);
-      return VW && KW(VW) && SW(VW) && (gW.isShadow = !0), gW.type === cW.Element && "iframe" === gW.tagName && function(WW, iW, OW) {
-        const mW = WW.contentWindow;
-        if (!mW) return;
-        let EW, NW = !1;
+      const PR = WR.parentNode(RR);
+      return PR && CR(PR) && XR(PR) && (oR.isShadow = !0), oR.type === iR.Element && "iframe" === oR.tagName && function(RR, JR, GR) {
+        const yR = RR.contentWindow;
+        if (!yR) return;
+        let tR, uR = !1;
         try {
-          EW = mW.document.readyState
-        } catch (LW) {
+          tR = yR.document.readyState
+        } catch (qR) {
           return
         }
-        if ("complete" !== EW) {
-          const mW = setTimeout((() => {
-            NW || (iW(), NW = !0)
-          }), OW);
-          return void WW.addEventListener("load", (() => {
-            clearTimeout(mW), NW = !0, iW()
+        if ("complete" !== tR) {
+          const yR = setTimeout((() => {
+            uR || (JR(), uR = !0)
+          }), GR);
+          return void RR.addEventListener("load", (() => {
+            clearTimeout(yR), uR = !0, JR()
           }))
         }
-        const PW = "about:blank";
-        if (mW.location.href !== PW || WW.src === PW || "" === WW.src) return setTimeout(iW, 0), WW.addEventListener("load", iW);
-        WW.addEventListener("load", iW)
-      }(WW, (() => {
-        const iW = WW.contentDocument;
-        if (iW && YW) {
-          const OW = ci(iW, {
-            doc: iW,
-            mirror: mW,
-            blockClass: EW,
-            blockSelector: NW,
-            needsMask: uW,
-            maskTextClass: PW,
-            maskTextSelector: LW,
+        const ZR = "about:blank";
+        if (yR.location.href !== ZR || RR.src === ZR || "" === RR.src) return setTimeout(JR, 0), RR.addEventListener("load", JR);
+        RR.addEventListener("load", JR)
+      }(RR, (() => {
+        const JR = RR.contentDocument;
+        if (JR && MR) {
+          const GR = iJ(JR, {
+            doc: JR,
+            mirror: yR,
+            blockClass: tR,
+            blockSelector: uR,
+            needsMask: OR,
+            maskTextClass: ZR,
+            maskTextSelector: qR,
             skipChild: !1,
-            inlineStylesheet: tW,
-            maskInputOptions: ZW,
-            maskTextFn: xW,
-            maskInputFn: lW,
-            slimDOMOptions: AW,
-            dataURLOptions: bW,
-            inlineImages: jW,
-            recordCanvas: UW,
-            preserveWhiteSpace: dW,
-            onSerialize: kW,
-            onIframeLoad: YW,
-            iframeLoadTimeout: yW,
-            onStylesheetLoad: TW,
-            stylesheetLoadTimeout: JW,
-            keepIframeSrcFn: hW
+            inlineStylesheet: VR,
+            maskInputOptions: KR,
+            maskTextFn: wR,
+            maskInputFn: rR,
+            slimDOMOptions: eR,
+            dataURLOptions: aR,
+            inlineImages: LR,
+            recordCanvas: nR,
+            preserveWhiteSpace: NR,
+            onSerialize: UR,
+            onIframeLoad: MR,
+            iframeLoadTimeout: BR,
+            onStylesheetLoad: lR,
+            stylesheetLoadTimeout: pR,
+            keepIframeSrcFn: gR
           });
-          OW && YW(WW, OW)
+          GR && MR(RR, GR)
         }
-      }), yW), gW.type === cW.Element && "link" === gW.tagName && "string" === typeof gW.attributes.rel && ("stylesheet" === gW.attributes.rel || "preload" === gW.attributes.rel && "string" === typeof gW.attributes.href && "css" === oW(gW.attributes.href)) && function(WW, iW, OW) {
-        let mW, EW = !1;
+      }), BR), oR.type === iR.Element && "link" === oR.tagName && "string" === typeof oR.attributes.rel && ("stylesheet" === oR.attributes.rel || "preload" === oR.attributes.rel && "string" === typeof oR.attributes.href && "css" === xR(oR.attributes.href)) && function(RR, JR, GR) {
+        let yR, tR = !1;
         try {
-          mW = WW.sheet
-        } catch (PW) {
+          yR = RR.sheet
+        } catch (ZR) {
           return
         }
-        if (mW) return;
-        const NW = setTimeout((() => {
-          EW || (iW(), EW = !0)
-        }), OW);
-        WW.addEventListener("load", (() => {
-          clearTimeout(NW), EW = !0, iW()
+        if (yR) return;
+        const uR = setTimeout((() => {
+          tR || (JR(), tR = !0)
+        }), GR);
+        RR.addEventListener("load", (() => {
+          clearTimeout(uR), tR = !0, JR()
         }))
-      }(WW, (() => {
-        if (TW) {
-          const iW = ci(WW, {
-            doc: OW,
-            mirror: mW,
-            blockClass: EW,
-            blockSelector: NW,
-            needsMask: uW,
-            maskTextClass: PW,
-            maskTextSelector: LW,
+      }(RR, (() => {
+        if (lR) {
+          const JR = iJ(RR, {
+            doc: GR,
+            mirror: yR,
+            blockClass: tR,
+            blockSelector: uR,
+            needsMask: OR,
+            maskTextClass: ZR,
+            maskTextSelector: qR,
             skipChild: !1,
-            inlineStylesheet: tW,
-            maskInputOptions: ZW,
-            maskTextFn: xW,
-            maskInputFn: lW,
-            slimDOMOptions: AW,
-            dataURLOptions: bW,
-            inlineImages: jW,
-            recordCanvas: UW,
-            preserveWhiteSpace: dW,
-            onSerialize: kW,
-            onIframeLoad: YW,
-            iframeLoadTimeout: yW,
-            onStylesheetLoad: TW,
-            stylesheetLoadTimeout: JW,
-            keepIframeSrcFn: hW
+            inlineStylesheet: VR,
+            maskInputOptions: KR,
+            maskTextFn: wR,
+            maskInputFn: rR,
+            slimDOMOptions: eR,
+            dataURLOptions: aR,
+            inlineImages: LR,
+            recordCanvas: nR,
+            preserveWhiteSpace: NR,
+            onSerialize: UR,
+            onIframeLoad: MR,
+            iframeLoadTimeout: BR,
+            onStylesheetLoad: lR,
+            stylesheetLoadTimeout: pR,
+            keepIframeSrcFn: gR
           });
-          iW && TW(WW, iW)
+          JR && lR(RR, JR)
         }
-      }), JW), gW
+      }), pR), oR
     }
-    const wi = new RegExp(/(max|min)-device-(width|height)/.source, "g"),
-      ti = {
+    const fJ = new RegExp(/(max|min)-device-(width|height)/.source, "g"),
+      VJ = {
         postcssPlugin: "postcss-custom-selectors",
         prepare: () => ({
           postcssPlugin: "postcss-custom-selectors",
-          AtRule: function(WW) {
-            WW.params.match(wi) && (WW.params = WW.params.replace(wi, "$1-$2"))
+          AtRule: function(RR) {
+            RR.params.match(fJ) && (RR.params = RR.params.replace(fJ, "$1-$2"))
           }
         })
       },
-      Zi = {
+      KJ = {
         postcssPlugin: "postcss-hover-classes",
         prepare: function() {
-          const WW = [];
+          const RR = [];
           return {
-            Rule: function(iW) {
-              -1 === WW.indexOf(iW) && (WW.push(iW), iW.selectors.forEach((function(WW) {
-                WW.includes(":hover") && (iW.selector += ",\n" + WW.replace(/:hover/g, ".\\:hover"))
+            Rule: function(JR) {
+              -1 === RR.indexOf(JR) && (RR.push(JR), JR.selectors.forEach((function(RR) {
+                RR.includes(":hover") && (JR.selector += ",\n" + RR.replace(/:hover/g, ".\\:hover"))
               })))
             }
           }
         }
       };
 
-    function xi(WW) {
-      return WW && WW.__esModule && Object.prototype.hasOwnProperty.call(WW, "default") ? WW.default : WW
+    function wJ(RR) {
+      return RR && RR.__esModule && Object.prototype.hasOwnProperty.call(RR, "default") ? RR.default : RR
     }
 
-    function li(WW) {
-      if (WW.__esModule) return WW;
-      var iW = WW.default;
-      if ("function" == typeof iW) {
-        var OW = function WW() {
-          return this instanceof WW ? Reflect.construct(iW, arguments, this.constructor) : iW.apply(this, arguments)
+    function rJ(RR) {
+      if (RR.__esModule) return RR;
+      var JR = RR.default;
+      if ("function" == typeof JR) {
+        var GR = function RR() {
+          return this instanceof RR ? Reflect.construct(JR, arguments, this.constructor) : JR.apply(this, arguments)
         };
-        OW.prototype = iW.prototype
-      } else OW = {};
-      return Object.defineProperty(OW, "__esModule", {
+        GR.prototype = JR.prototype
+      } else GR = {};
+      return Object.defineProperty(GR, "__esModule", {
         value: !0
-      }), Object.keys(WW).forEach((function(iW) {
-        var mW = Object.getOwnPropertyDescriptor(WW, iW);
-        Object.defineProperty(OW, iW, mW.get ? mW : {
+      }), Object.keys(RR).forEach((function(JR) {
+        var yR = Object.getOwnPropertyDescriptor(RR, JR);
+        Object.defineProperty(GR, JR, yR.get ? yR : {
           enumerable: !0,
           get: function() {
-            return WW[iW]
+            return RR[JR]
           }
         })
-      })), OW
+      })), GR
     }
-    var Ai, bi = {
+    var eJ, aJ = {
       exports: {}
     };
 
-    function ji() {
-      if (Ai) return bi.exports;
-      Ai = 1;
-      var WW = String,
-        iW = function() {
+    function LJ() {
+      if (eJ) return aJ.exports;
+      eJ = 1;
+      var RR = String,
+        JR = function() {
           return {
             isColorSupported: !1,
-            reset: WW,
-            bold: WW,
-            dim: WW,
-            italic: WW,
-            underline: WW,
-            inverse: WW,
-            hidden: WW,
-            strikethrough: WW,
-            black: WW,
-            red: WW,
-            green: WW,
-            yellow: WW,
-            blue: WW,
-            magenta: WW,
-            cyan: WW,
-            white: WW,
-            gray: WW,
-            bgBlack: WW,
-            bgRed: WW,
-            bgGreen: WW,
-            bgYellow: WW,
-            bgBlue: WW,
-            bgMagenta: WW,
-            bgCyan: WW,
-            bgWhite: WW
+            reset: RR,
+            bold: RR,
+            dim: RR,
+            italic: RR,
+            underline: RR,
+            inverse: RR,
+            hidden: RR,
+            strikethrough: RR,
+            black: RR,
+            red: RR,
+            green: RR,
+            yellow: RR,
+            blue: RR,
+            magenta: RR,
+            cyan: RR,
+            white: RR,
+            gray: RR,
+            bgBlack: RR,
+            bgRed: RR,
+            bgGreen: RR,
+            bgYellow: RR,
+            bgBlue: RR,
+            bgMagenta: RR,
+            bgCyan: RR,
+            bgWhite: RR
           }
         };
-      return bi.exports = iW(), bi.exports.createColors = iW, bi.exports
+      return aJ.exports = JR(), aJ.exports.createColors = JR, aJ.exports
     }
-    const Ui = li(Object.freeze(Object.defineProperty({
+    const nJ = rJ(Object.freeze(Object.defineProperty({
       __proto__: null,
       default: {}
     }, Symbol.toStringTag, {
       value: "Module"
     })));
-    var ki, si;
+    var UJ, WJ;
 
-    function Mi() {
-      if (si) return ki;
-      si = 1;
-      let WW = ji(),
-        iW = Ui;
-      class OW extends Error {
-        constructor(WW, iW, mW, EW, NW, PW) {
-          super(WW), this.name = "CssSyntaxError", this.reason = WW, NW && (this.file = NW), EW && (this.source = EW), PW && (this.plugin = PW), "undefined" !== typeof iW && "undefined" !== typeof mW && ("number" === typeof iW ? (this.line = iW, this.column = mW) : (this.line = iW.line, this.column = iW.column, this.endLine = mW.line, this.endColumn = mW.column)), this.setMessage(), Error.captureStackTrace && Error.captureStackTrace(this, OW)
+    function AJ() {
+      if (WJ) return UJ;
+      WJ = 1;
+      let RR = LJ(),
+        JR = nJ;
+      class GR extends Error {
+        constructor(RR, JR, yR, tR, uR, ZR) {
+          super(RR), this.name = "CssSyntaxError", this.reason = RR, uR && (this.file = uR), tR && (this.source = tR), ZR && (this.plugin = ZR), "undefined" !== typeof JR && "undefined" !== typeof yR && ("number" === typeof JR ? (this.line = JR, this.column = yR) : (this.line = JR.line, this.column = JR.column, this.endLine = yR.line, this.endColumn = yR.column)), this.setMessage(), Error.captureStackTrace && Error.captureStackTrace(this, GR)
         }
         setMessage() {
           this.message = this.plugin ? this.plugin + ": " : "", this.message += this.file ? this.file : "<css input>", "undefined" !== typeof this.line && (this.message += ":" + this.line + ":" + this.column), this.message += ": " + this.reason
         }
-        showSourceCode(OW) {
+        showSourceCode(GR) {
           if (!this.source) return "";
-          let mW = this.source;
-          null == OW && (OW = WW.isColorSupported), iW && OW && (mW = iW(mW));
-          let EW, NW, PW = mW.split(/\r?\n/),
-            LW = Math.max(this.line - 3, 0),
-            cW = Math.min(this.line + 2, PW.length),
-            wW = String(cW).length;
-          if (OW) {
+          let yR = this.source;
+          null == GR && (GR = RR.isColorSupported), JR && GR && (yR = JR(yR));
+          let tR, uR, ZR = yR.split(/\r?\n/),
+            qR = Math.max(this.line - 3, 0),
+            iR = Math.min(this.line + 2, ZR.length),
+            fR = String(iR).length;
+          if (GR) {
             let {
-              bold: iW,
-              gray: OW,
-              red: mW
-            } = WW.createColors(!0);
-            EW = WW => iW(mW(WW)), NW = WW => OW(WW)
-          } else EW = NW = WW => WW;
-          return PW.slice(LW, cW).map(((WW, iW) => {
-            let OW = LW + 1 + iW,
-              mW = " " + (" " + OW).slice(-wW) + " | ";
-            if (OW === this.line) {
-              let iW = NW(mW.replace(/\d/g, " ")) + WW.slice(0, this.column - 1).replace(/[^\t]/g, " ");
-              return EW(">") + NW(mW) + WW + "\n " + iW + EW("^")
+              bold: JR,
+              gray: GR,
+              red: yR
+            } = RR.createColors(!0);
+            tR = RR => JR(yR(RR)), uR = RR => GR(RR)
+          } else tR = uR = RR => RR;
+          return ZR.slice(qR, iR).map(((RR, JR) => {
+            let GR = qR + 1 + JR,
+              yR = " " + (" " + GR).slice(-fR) + " | ";
+            if (GR === this.line) {
+              let JR = uR(yR.replace(/\d/g, " ")) + RR.slice(0, this.column - 1).replace(/[^\t]/g, " ");
+              return tR(">") + uR(yR) + RR + "\n " + JR + tR("^")
             }
-            return " " + NW(mW) + WW
+            return " " + uR(yR) + RR
           })).join("\n")
         }
         toString() {
-          let WW = this.showSourceCode();
-          return WW && (WW = "\n\n" + WW + "\n"), this.name + ": " + this.message + WW
+          let RR = this.showSourceCode();
+          return RR && (RR = "\n\n" + RR + "\n"), this.name + ": " + this.message + RR
         }
       }
-      return ki = OW, OW.default = OW, ki
+      return UJ = GR, GR.default = GR, UJ
     }
-    var Ki, Si, Yi, yi, Ti, Ji, Hi, ni, ui, oi, di, ei, vi, gi, Di, Vi, fi, Ci, Xi, Bi, qi, Ri, Gi, Ii, ai, ri, zi, Fi, Qi, WO, iO, OO, mO, EO, NO, PO, LO, cO, wO, tO, ZO, xO, lO, AO, bO, jO, UO, kO, sO, MO, KO, SO, YO, yO = {};
+    var CJ, XJ, MJ, BJ, lJ, pJ, gJ, bJ, vJ, OJ, xJ, NJ, DJ, HJ, oJ, cJ, PJ, IJ, mJ, zJ, SJ, jJ, dJ, EJ, YJ, kJ, QJ, FJ, TJ, sJ, hJ, RG, JG, GG, yG, tG, uG, ZG, qG, iG, fG, VG, KG, wG, rG, eG, aG, LG, nG, UG, WG, AG, CG, XG = {};
 
-    function TO() {
-      return Ki || (Ki = 1, yO.isClean = Symbol("isClean"), yO.my = Symbol("my")), yO
+    function MG() {
+      return CJ || (CJ = 1, XG.isClean = Symbol("isClean"), XG.my = Symbol("my")), XG
     }
 
-    function JO() {
-      if (Yi) return Si;
-      Yi = 1;
-      const WW = {
+    function BG() {
+      if (MJ) return XJ;
+      MJ = 1;
+      const RR = {
         after: "\n",
         beforeClose: "\n",
         beforeComment: "\n",
@@ -1098,708 +1098,708 @@ export const modules = {
         indent: "    ",
         semicolon: !1
       };
-      class iW {
-        constructor(WW) {
-          this.builder = WW
+      class JR {
+        constructor(RR) {
+          this.builder = RR
         }
-        atrule(WW, iW) {
-          let OW = "@" + WW.name,
-            mW = WW.params ? this.rawValue(WW, "params") : "";
-          if ("undefined" !== typeof WW.raws.afterName ? OW += WW.raws.afterName : mW && (OW += " "), WW.nodes) this.block(WW, OW + mW);
+        atrule(RR, JR) {
+          let GR = "@" + RR.name,
+            yR = RR.params ? this.rawValue(RR, "params") : "";
+          if ("undefined" !== typeof RR.raws.afterName ? GR += RR.raws.afterName : yR && (GR += " "), RR.nodes) this.block(RR, GR + yR);
           else {
-            let EW = (WW.raws.between || "") + (iW ? ";" : "");
-            this.builder(OW + mW + EW, WW)
+            let tR = (RR.raws.between || "") + (JR ? ";" : "");
+            this.builder(GR + yR + tR, RR)
           }
         }
-        beforeAfter(WW, iW) {
-          let OW;
-          OW = "decl" === WW.type ? this.raw(WW, null, "beforeDecl") : "comment" === WW.type ? this.raw(WW, null, "beforeComment") : "before" === iW ? this.raw(WW, null, "beforeRule") : this.raw(WW, null, "beforeClose");
-          let mW = WW.parent,
-            EW = 0;
-          for (; mW && "root" !== mW.type;) EW += 1, mW = mW.parent;
-          if (OW.includes("\n")) {
-            let iW = this.raw(WW, null, "indent");
-            if (iW.length)
-              for (let WW = 0; WW < EW; WW++) OW += iW
+        beforeAfter(RR, JR) {
+          let GR;
+          GR = "decl" === RR.type ? this.raw(RR, null, "beforeDecl") : "comment" === RR.type ? this.raw(RR, null, "beforeComment") : "before" === JR ? this.raw(RR, null, "beforeRule") : this.raw(RR, null, "beforeClose");
+          let yR = RR.parent,
+            tR = 0;
+          for (; yR && "root" !== yR.type;) tR += 1, yR = yR.parent;
+          if (GR.includes("\n")) {
+            let JR = this.raw(RR, null, "indent");
+            if (JR.length)
+              for (let RR = 0; RR < tR; RR++) GR += JR
           }
-          return OW
+          return GR
         }
-        block(WW, iW) {
-          let OW, mW = this.raw(WW, "between", "beforeOpen");
-          this.builder(iW + mW + "{", WW, "start"), WW.nodes && WW.nodes.length ? (this.body(WW), OW = this.raw(WW, "after")) : OW = this.raw(WW, "after", "emptyBody"), OW && this.builder(OW), this.builder("}", WW, "end")
+        block(RR, JR) {
+          let GR, yR = this.raw(RR, "between", "beforeOpen");
+          this.builder(JR + yR + "{", RR, "start"), RR.nodes && RR.nodes.length ? (this.body(RR), GR = this.raw(RR, "after")) : GR = this.raw(RR, "after", "emptyBody"), GR && this.builder(GR), this.builder("}", RR, "end")
         }
-        body(WW) {
-          let iW = WW.nodes.length - 1;
-          for (; iW > 0 && "comment" === WW.nodes[iW].type;) iW -= 1;
-          let OW = this.raw(WW, "semicolon");
-          for (let mW = 0; mW < WW.nodes.length; mW++) {
-            let EW = WW.nodes[mW],
-              NW = this.raw(EW, "before");
-            NW && this.builder(NW), this.stringify(EW, iW !== mW || OW)
+        body(RR) {
+          let JR = RR.nodes.length - 1;
+          for (; JR > 0 && "comment" === RR.nodes[JR].type;) JR -= 1;
+          let GR = this.raw(RR, "semicolon");
+          for (let yR = 0; yR < RR.nodes.length; yR++) {
+            let tR = RR.nodes[yR],
+              uR = this.raw(tR, "before");
+            uR && this.builder(uR), this.stringify(tR, JR !== yR || GR)
           }
         }
-        comment(WW) {
-          let iW = this.raw(WW, "left", "commentLeft"),
-            OW = this.raw(WW, "right", "commentRight");
-          this.builder("/*" + iW + WW.text + OW + "*/", WW)
+        comment(RR) {
+          let JR = this.raw(RR, "left", "commentLeft"),
+            GR = this.raw(RR, "right", "commentRight");
+          this.builder("/*" + JR + RR.text + GR + "*/", RR)
         }
-        decl(WW, iW) {
-          let OW = this.raw(WW, "between", "colon"),
-            mW = WW.prop + OW + this.rawValue(WW, "value");
-          WW.important && (mW += WW.raws.important || " !important"), iW && (mW += ";"), this.builder(mW, WW)
+        decl(RR, JR) {
+          let GR = this.raw(RR, "between", "colon"),
+            yR = RR.prop + GR + this.rawValue(RR, "value");
+          RR.important && (yR += RR.raws.important || " !important"), JR && (yR += ";"), this.builder(yR, RR)
         }
-        document(WW) {
-          this.body(WW)
+        document(RR) {
+          this.body(RR)
         }
-        raw(iW, OW, mW) {
-          let EW;
-          if (mW || (mW = OW), OW && (EW = iW.raws[OW], "undefined" !== typeof EW)) return EW;
-          let NW = iW.parent;
-          if ("before" === mW) {
-            if (!NW || "root" === NW.type && NW.first === iW) return "";
-            if (NW && "document" === NW.type) return ""
+        raw(JR, GR, yR) {
+          let tR;
+          if (yR || (yR = GR), GR && (tR = JR.raws[GR], "undefined" !== typeof tR)) return tR;
+          let uR = JR.parent;
+          if ("before" === yR) {
+            if (!uR || "root" === uR.type && uR.first === JR) return "";
+            if (uR && "document" === uR.type) return ""
           }
-          if (!NW) return WW[mW];
-          let PW = iW.root();
-          if (PW.rawCache || (PW.rawCache = {}), "undefined" !== typeof PW.rawCache[mW]) return PW.rawCache[mW];
-          if ("before" === mW || "after" === mW) return this.beforeAfter(iW, mW);
+          if (!uR) return RR[yR];
+          let ZR = JR.root();
+          if (ZR.rawCache || (ZR.rawCache = {}), "undefined" !== typeof ZR.rawCache[yR]) return ZR.rawCache[yR];
+          if ("before" === yR || "after" === yR) return this.beforeAfter(JR, yR);
           {
-            let WW = "raw" + ((LW = mW)[0].toUpperCase() + LW.slice(1));
-            this[WW] ? EW = this[WW](PW, iW) : PW.walk((WW => {
-              if (EW = WW.raws[OW], "undefined" !== typeof EW) return !1
+            let RR = "raw" + ((qR = yR)[0].toUpperCase() + qR.slice(1));
+            this[RR] ? tR = this[RR](ZR, JR) : ZR.walk((RR => {
+              if (tR = RR.raws[GR], "undefined" !== typeof tR) return !1
             }))
           }
-          var LW;
-          return "undefined" === typeof EW && (EW = WW[mW]), PW.rawCache[mW] = EW, EW
+          var qR;
+          return "undefined" === typeof tR && (tR = RR[yR]), ZR.rawCache[yR] = tR, tR
         }
-        rawBeforeClose(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if (WW.nodes && WW.nodes.length > 0 && "undefined" !== typeof WW.raws.after) return iW = WW.raws.after, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
-          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        rawBeforeClose(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if (RR.nodes && RR.nodes.length > 0 && "undefined" !== typeof RR.raws.after) return JR = RR.raws.after, JR.includes("\n") && (JR = JR.replace(/[^\n]+$/, "")), !1
+          })), JR && (JR = JR.replace(/\S/g, "")), JR
         }
-        rawBeforeComment(WW, iW) {
-          let OW;
-          return WW.walkComments((WW => {
-            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
-          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeDecl") : OW && (OW = OW.replace(/\S/g, "")), OW
+        rawBeforeComment(RR, JR) {
+          let GR;
+          return RR.walkComments((RR => {
+            if ("undefined" !== typeof RR.raws.before) return GR = RR.raws.before, GR.includes("\n") && (GR = GR.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof GR ? GR = this.raw(JR, null, "beforeDecl") : GR && (GR = GR.replace(/\S/g, "")), GR
         }
-        rawBeforeDecl(WW, iW) {
-          let OW;
-          return WW.walkDecls((WW => {
-            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
-          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeRule") : OW && (OW = OW.replace(/\S/g, "")), OW
+        rawBeforeDecl(RR, JR) {
+          let GR;
+          return RR.walkDecls((RR => {
+            if ("undefined" !== typeof RR.raws.before) return GR = RR.raws.before, GR.includes("\n") && (GR = GR.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof GR ? GR = this.raw(JR, null, "beforeRule") : GR && (GR = GR.replace(/\S/g, "")), GR
         }
-        rawBeforeOpen(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if ("decl" !== WW.type && (iW = WW.raws.between, "undefined" !== typeof iW)) return !1
-          })), iW
+        rawBeforeOpen(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if ("decl" !== RR.type && (JR = RR.raws.between, "undefined" !== typeof JR)) return !1
+          })), JR
         }
-        rawBeforeRule(WW) {
-          let iW;
-          return WW.walk((OW => {
-            if (OW.nodes && (OW.parent !== WW || WW.first !== OW) && "undefined" !== typeof OW.raws.before) return iW = OW.raws.before, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
-          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        rawBeforeRule(RR) {
+          let JR;
+          return RR.walk((GR => {
+            if (GR.nodes && (GR.parent !== RR || RR.first !== GR) && "undefined" !== typeof GR.raws.before) return JR = GR.raws.before, JR.includes("\n") && (JR = JR.replace(/[^\n]+$/, "")), !1
+          })), JR && (JR = JR.replace(/\S/g, "")), JR
         }
-        rawColon(WW) {
-          let iW;
-          return WW.walkDecls((WW => {
-            if ("undefined" !== typeof WW.raws.between) return iW = WW.raws.between.replace(/[^\s:]/g, ""), !1
-          })), iW
+        rawColon(RR) {
+          let JR;
+          return RR.walkDecls((RR => {
+            if ("undefined" !== typeof RR.raws.between) return JR = RR.raws.between.replace(/[^\s:]/g, ""), !1
+          })), JR
         }
-        rawEmptyBody(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if (WW.nodes && 0 === WW.nodes.length && (iW = WW.raws.after, "undefined" !== typeof iW)) return !1
-          })), iW
+        rawEmptyBody(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if (RR.nodes && 0 === RR.nodes.length && (JR = RR.raws.after, "undefined" !== typeof JR)) return !1
+          })), JR
         }
-        rawIndent(WW) {
-          if (WW.raws.indent) return WW.raws.indent;
-          let iW;
-          return WW.walk((OW => {
-            let mW = OW.parent;
-            if (mW && mW !== WW && mW.parent && mW.parent === WW && "undefined" !== typeof OW.raws.before) {
-              let WW = OW.raws.before.split("\n");
-              return iW = WW[WW.length - 1], iW = iW.replace(/\S/g, ""), !1
+        rawIndent(RR) {
+          if (RR.raws.indent) return RR.raws.indent;
+          let JR;
+          return RR.walk((GR => {
+            let yR = GR.parent;
+            if (yR && yR !== RR && yR.parent && yR.parent === RR && "undefined" !== typeof GR.raws.before) {
+              let RR = GR.raws.before.split("\n");
+              return JR = RR[RR.length - 1], JR = JR.replace(/\S/g, ""), !1
             }
-          })), iW
+          })), JR
         }
-        rawSemicolon(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if (WW.nodes && WW.nodes.length && "decl" === WW.last.type && (iW = WW.raws.semicolon, "undefined" !== typeof iW)) return !1
-          })), iW
+        rawSemicolon(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if (RR.nodes && RR.nodes.length && "decl" === RR.last.type && (JR = RR.raws.semicolon, "undefined" !== typeof JR)) return !1
+          })), JR
         }
-        rawValue(WW, iW) {
-          let OW = WW[iW],
-            mW = WW.raws[iW];
-          return mW && mW.value === OW ? mW.raw : OW
+        rawValue(RR, JR) {
+          let GR = RR[JR],
+            yR = RR.raws[JR];
+          return yR && yR.value === GR ? yR.raw : GR
         }
-        root(WW) {
-          this.body(WW), WW.raws.after && this.builder(WW.raws.after)
+        root(RR) {
+          this.body(RR), RR.raws.after && this.builder(RR.raws.after)
         }
-        rule(WW) {
-          this.block(WW, this.rawValue(WW, "selector")), WW.raws.ownSemicolon && this.builder(WW.raws.ownSemicolon, WW, "end")
+        rule(RR) {
+          this.block(RR, this.rawValue(RR, "selector")), RR.raws.ownSemicolon && this.builder(RR.raws.ownSemicolon, RR, "end")
         }
-        stringify(WW, iW) {
-          if (!this[WW.type]) throw new Error("Unknown AST node type " + WW.type + ". Maybe you need to change PostCSS stringifier.");
-          this[WW.type](WW, iW)
+        stringify(RR, JR) {
+          if (!this[RR.type]) throw new Error("Unknown AST node type " + RR.type + ". Maybe you need to change PostCSS stringifier.");
+          this[RR.type](RR, JR)
         }
       }
-      return Si = iW, iW.default = iW, Si
+      return XJ = JR, JR.default = JR, XJ
     }
 
-    function hO() {
-      if (Ti) return yi;
-      Ti = 1;
-      let WW = JO();
+    function lG() {
+      if (lJ) return BJ;
+      lJ = 1;
+      let RR = BG();
 
-      function iW(iW, OW) {
-        new WW(OW).stringify(iW)
+      function JR(JR, GR) {
+        new RR(GR).stringify(JR)
       }
-      return yi = iW, iW.default = iW, yi
+      return BJ = JR, JR.default = JR, BJ
     }
 
-    function HO() {
-      if (Hi) return Ji;
-      Hi = 1;
+    function pG() {
+      if (gJ) return pJ;
+      gJ = 1;
       let {
-        isClean: WW,
-        my: iW
-      } = TO(), OW = Mi(), mW = JO(), EW = hO();
+        isClean: RR,
+        my: JR
+      } = MG(), GR = AJ(), yR = BG(), tR = lG();
 
-      function NW(WW, iW) {
-        let OW = new WW.constructor;
-        for (let mW in WW) {
-          if (!Object.prototype.hasOwnProperty.call(WW, mW)) continue;
-          if ("proxyCache" === mW) continue;
-          let EW = WW[mW],
-            PW = typeof EW;
-          "parent" === mW && "object" === PW ? iW && (OW[mW] = iW) : "source" === mW ? OW[mW] = EW : Array.isArray(EW) ? OW[mW] = EW.map((WW => NW(WW, OW))) : ("object" === PW && null !== EW && (EW = NW(EW)), OW[mW] = EW)
+      function uR(RR, JR) {
+        let GR = new RR.constructor;
+        for (let yR in RR) {
+          if (!Object.prototype.hasOwnProperty.call(RR, yR)) continue;
+          if ("proxyCache" === yR) continue;
+          let tR = RR[yR],
+            ZR = typeof tR;
+          "parent" === yR && "object" === ZR ? JR && (GR[yR] = JR) : "source" === yR ? GR[yR] = tR : Array.isArray(tR) ? GR[yR] = tR.map((RR => uR(RR, GR))) : ("object" === ZR && null !== tR && (tR = uR(tR)), GR[yR] = tR)
         }
-        return OW
+        return GR
       }
-      class PW {
+      class ZR {
         constructor() {
-          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          this.raws = {}, this[WW] = !1, this[iW] = !0;
-          for (let WW in OW)
-            if ("nodes" === WW) {
+          let GR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          this.raws = {}, this[RR] = !1, this[JR] = !0;
+          for (let RR in GR)
+            if ("nodes" === RR) {
               this.nodes = [];
-              for (let iW of OW[WW]) "function" === typeof iW.clone ? this.append(iW.clone()) : this.append(iW)
-            } else this[WW] = OW[WW]
+              for (let JR of GR[RR]) "function" === typeof JR.clone ? this.append(JR.clone()) : this.append(JR)
+            } else this[RR] = GR[RR]
         }
-        addToError(WW) {
-          if (WW.postcssNode = this, WW.stack && this.source && /\n\s{4}at /.test(WW.stack)) {
-            let iW = this.source;
-            WW.stack = WW.stack.replace(/\n\s{4}at /, `$&${iW.input.from}:${iW.start.line}:${iW.start.column}$&`)
+        addToError(RR) {
+          if (RR.postcssNode = this, RR.stack && this.source && /\n\s{4}at /.test(RR.stack)) {
+            let JR = this.source;
+            RR.stack = RR.stack.replace(/\n\s{4}at /, `$&${JR.input.from}:${JR.start.line}:${JR.start.column}$&`)
           }
-          return WW
+          return RR
         }
-        after(WW) {
-          return this.parent.insertAfter(this, WW), this
+        after(RR) {
+          return this.parent.insertAfter(this, RR), this
         }
         assign() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          for (let iW in WW) this[iW] = WW[iW];
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          for (let JR in RR) this[JR] = RR[JR];
           return this
         }
-        before(WW) {
-          return this.parent.insertBefore(this, WW), this
+        before(RR) {
+          return this.parent.insertBefore(this, RR), this
         }
-        cleanRaws(WW) {
-          delete this.raws.before, delete this.raws.after, WW || delete this.raws.between
+        cleanRaws(RR) {
+          delete this.raws.before, delete this.raws.after, RR || delete this.raws.between
         }
         clone() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            iW = NW(this);
-          for (let OW in WW) iW[OW] = WW[OW];
-          return iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            JR = uR(this);
+          for (let GR in RR) JR[GR] = RR[GR];
+          return JR
         }
         cloneAfter() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            iW = this.clone(WW);
-          return this.parent.insertAfter(this, iW), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            JR = this.clone(RR);
+          return this.parent.insertAfter(this, JR), JR
         }
         cloneBefore() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            iW = this.clone(WW);
-          return this.parent.insertBefore(this, iW), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            JR = this.clone(RR);
+          return this.parent.insertBefore(this, JR), JR
         }
-        error(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        error(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
           if (this.source) {
             let {
-              end: OW,
-              start: mW
-            } = this.rangeBy(iW);
-            return this.source.input.error(WW, {
-              column: mW.column,
-              line: mW.line
+              end: GR,
+              start: yR
+            } = this.rangeBy(JR);
+            return this.source.input.error(RR, {
+              column: yR.column,
+              line: yR.line
             }, {
-              column: OW.column,
-              line: OW.line
-            }, iW)
+              column: GR.column,
+              line: GR.line
+            }, JR)
           }
-          return new OW(WW)
+          return new GR(RR)
         }
         getProxyProcessor() {
           return {
-            get: (WW, iW) => "proxyOf" === iW ? WW : "root" === iW ? () => WW.root().toProxy() : WW[iW],
-            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "prop" !== iW && "value" !== iW && "name" !== iW && "params" !== iW && "important" !== iW && "text" !== iW || WW.markDirty()), !0)
+            get: (RR, JR) => "proxyOf" === JR ? RR : "root" === JR ? () => RR.root().toProxy() : RR[JR],
+            set: (RR, JR, GR) => (RR[JR] === GR || (RR[JR] = GR, "prop" !== JR && "value" !== JR && "name" !== JR && "params" !== JR && "important" !== JR && "text" !== JR || RR.markDirty()), !0)
           }
         }
         markDirty() {
-          if (this[WW]) {
-            this[WW] = !1;
-            let iW = this;
-            for (; iW = iW.parent;) iW[WW] = !1
+          if (this[RR]) {
+            this[RR] = !1;
+            let JR = this;
+            for (; JR = JR.parent;) JR[RR] = !1
           }
         }
         next() {
           if (!this.parent) return;
-          let WW = this.parent.index(this);
-          return this.parent.nodes[WW + 1]
+          let RR = this.parent.index(this);
+          return this.parent.nodes[RR + 1]
         }
-        positionBy(WW, iW) {
-          let OW = this.source.start;
-          if (WW.index) OW = this.positionInside(WW.index, iW);
-          else if (WW.word) {
-            let mW = (iW = this.toString()).indexOf(WW.word); - 1 !== mW && (OW = this.positionInside(mW, iW))
+        positionBy(RR, JR) {
+          let GR = this.source.start;
+          if (RR.index) GR = this.positionInside(RR.index, JR);
+          else if (RR.word) {
+            let yR = (JR = this.toString()).indexOf(RR.word); - 1 !== yR && (GR = this.positionInside(yR, JR))
           }
-          return OW
+          return GR
         }
-        positionInside(WW, iW) {
-          let OW = iW || this.toString(),
-            mW = this.source.start.column,
-            EW = this.source.start.line;
-          for (let NW = 0; NW < WW; NW++) "\n" === OW[NW] ? (mW = 1, EW += 1) : mW += 1;
+        positionInside(RR, JR) {
+          let GR = JR || this.toString(),
+            yR = this.source.start.column,
+            tR = this.source.start.line;
+          for (let uR = 0; uR < RR; uR++) "\n" === GR[uR] ? (yR = 1, tR += 1) : yR += 1;
           return {
-            column: mW,
-            line: EW
+            column: yR,
+            line: tR
           }
         }
         prev() {
           if (!this.parent) return;
-          let WW = this.parent.index(this);
-          return this.parent.nodes[WW - 1]
+          let RR = this.parent.index(this);
+          return this.parent.nodes[RR - 1]
         }
-        rangeBy(WW) {
-          let iW = {
+        rangeBy(RR) {
+          let JR = {
               column: this.source.start.column,
               line: this.source.start.line
             },
-            OW = this.source.end ? {
+            GR = this.source.end ? {
               column: this.source.end.column + 1,
               line: this.source.end.line
             } : {
-              column: iW.column + 1,
-              line: iW.line
+              column: JR.column + 1,
+              line: JR.line
             };
-          if (WW.word) {
-            let mW = this.toString(),
-              EW = mW.indexOf(WW.word); - 1 !== EW && (iW = this.positionInside(EW, mW), OW = this.positionInside(EW + WW.word.length, mW))
-          } else WW.start ? iW = {
-            column: WW.start.column,
-            line: WW.start.line
-          } : WW.index && (iW = this.positionInside(WW.index)), WW.end ? OW = {
-            column: WW.end.column,
-            line: WW.end.line
-          } : "number" === typeof WW.endIndex ? OW = this.positionInside(WW.endIndex) : WW.index && (OW = this.positionInside(WW.index + 1));
-          return (OW.line < iW.line || OW.line === iW.line && OW.column <= iW.column) && (OW = {
-            column: iW.column + 1,
-            line: iW.line
+          if (RR.word) {
+            let yR = this.toString(),
+              tR = yR.indexOf(RR.word); - 1 !== tR && (JR = this.positionInside(tR, yR), GR = this.positionInside(tR + RR.word.length, yR))
+          } else RR.start ? JR = {
+            column: RR.start.column,
+            line: RR.start.line
+          } : RR.index && (JR = this.positionInside(RR.index)), RR.end ? GR = {
+            column: RR.end.column,
+            line: RR.end.line
+          } : "number" === typeof RR.endIndex ? GR = this.positionInside(RR.endIndex) : RR.index && (GR = this.positionInside(RR.index + 1));
+          return (GR.line < JR.line || GR.line === JR.line && GR.column <= JR.column) && (GR = {
+            column: JR.column + 1,
+            line: JR.line
           }), {
-            end: OW,
-            start: iW
+            end: GR,
+            start: JR
           }
         }
-        raw(WW, iW) {
-          return (new mW).raw(this, WW, iW)
+        raw(RR, JR) {
+          return (new yR).raw(this, RR, JR)
         }
         remove() {
           return this.parent && this.parent.removeChild(this), this.parent = void 0, this
         }
         replaceWith() {
           if (this.parent) {
-            let mW = this,
-              EW = !1;
-            for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-            for (let WW of iW) WW === this ? EW = !0 : EW ? (this.parent.insertAfter(mW, WW), mW = WW) : this.parent.insertBefore(mW, WW);
-            EW || this.remove()
+            let yR = this,
+              tR = !1;
+            for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+            for (let RR of JR) RR === this ? tR = !0 : tR ? (this.parent.insertAfter(yR, RR), yR = RR) : this.parent.insertBefore(yR, RR);
+            tR || this.remove()
           }
           return this
         }
         root() {
-          let WW = this;
-          for (; WW.parent && "document" !== WW.parent.type;) WW = WW.parent;
-          return WW
+          let RR = this;
+          for (; RR.parent && "document" !== RR.parent.type;) RR = RR.parent;
+          return RR
         }
-        toJSON(WW, iW) {
-          let OW = {},
-            mW = null == iW;
-          iW = iW || new Map;
-          let EW = 0;
-          for (let NW in this) {
-            if (!Object.prototype.hasOwnProperty.call(this, NW)) continue;
-            if ("parent" === NW || "proxyCache" === NW) continue;
-            let WW = this[NW];
-            if (Array.isArray(WW)) OW[NW] = WW.map((WW => "object" === typeof WW && WW.toJSON ? WW.toJSON(null, iW) : WW));
-            else if ("object" === typeof WW && WW.toJSON) OW[NW] = WW.toJSON(null, iW);
-            else if ("source" === NW) {
-              let mW = iW.get(WW.input);
-              null == mW && (mW = EW, iW.set(WW.input, EW), EW++), OW[NW] = {
-                end: WW.end,
-                inputId: mW,
-                start: WW.start
+        toJSON(RR, JR) {
+          let GR = {},
+            yR = null == JR;
+          JR = JR || new Map;
+          let tR = 0;
+          for (let uR in this) {
+            if (!Object.prototype.hasOwnProperty.call(this, uR)) continue;
+            if ("parent" === uR || "proxyCache" === uR) continue;
+            let RR = this[uR];
+            if (Array.isArray(RR)) GR[uR] = RR.map((RR => "object" === typeof RR && RR.toJSON ? RR.toJSON(null, JR) : RR));
+            else if ("object" === typeof RR && RR.toJSON) GR[uR] = RR.toJSON(null, JR);
+            else if ("source" === uR) {
+              let yR = JR.get(RR.input);
+              null == yR && (yR = tR, JR.set(RR.input, tR), tR++), GR[uR] = {
+                end: RR.end,
+                inputId: yR,
+                start: RR.start
               }
-            } else OW[NW] = WW
+            } else GR[uR] = RR
           }
-          return mW && (OW.inputs = [...iW.keys()].map((WW => WW.toJSON()))), OW
+          return yR && (GR.inputs = [...JR.keys()].map((RR => RR.toJSON()))), GR
         }
         toProxy() {
           return this.proxyCache || (this.proxyCache = new Proxy(this, this.getProxyProcessor())), this.proxyCache
         }
         toString() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : EW;
-          WW.stringify && (WW = WW.stringify);
-          let iW = "";
-          return WW(this, (WW => {
-            iW += WW
-          })), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tR;
+          RR.stringify && (RR = RR.stringify);
+          let JR = "";
+          return RR(this, (RR => {
+            JR += RR
+          })), JR
         }
-        warn(WW, iW, OW) {
-          let mW = {
+        warn(RR, JR, GR) {
+          let yR = {
             node: this
           };
-          for (let EW in OW) mW[EW] = OW[EW];
-          return WW.warn(iW, mW)
+          for (let tR in GR) yR[tR] = GR[tR];
+          return RR.warn(JR, yR)
         }
         get proxyOf() {
           return this
         }
       }
-      return Ji = PW, PW.default = PW, Ji
+      return pJ = ZR, ZR.default = ZR, pJ
     }
 
-    function nO() {
-      if (ui) return ni;
-      ui = 1;
-      let WW = HO();
-      class iW extends WW {
-        constructor(WW) {
-          WW && "undefined" !== typeof WW.value && "string" !== typeof WW.value && (WW = {
-            ...WW,
-            value: String(WW.value)
-          }), super(WW), this.type = "decl"
+    function gG() {
+      if (vJ) return bJ;
+      vJ = 1;
+      let RR = pG();
+      class JR extends RR {
+        constructor(RR) {
+          RR && "undefined" !== typeof RR.value && "string" !== typeof RR.value && (RR = {
+            ...RR,
+            value: String(RR.value)
+          }), super(RR), this.type = "decl"
         }
         get variable() {
           return this.prop.startsWith("--") || "$" === this.prop[0]
         }
       }
-      return ni = iW, iW.default = iW, ni
+      return bJ = JR, JR.default = JR, bJ
     }
 
-    function uO() {
-      if (di) return oi;
-      di = 1;
-      return oi = {
+    function bG() {
+      if (xJ) return OJ;
+      xJ = 1;
+      return OJ = {
         nanoid: function() {
-          let WW = "",
-            iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 21;
-          for (; iW--;) WW += "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict" [64 * Math.random() | 0];
-          return WW
+          let RR = "",
+            JR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 21;
+          for (; JR--;) RR += "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict" [64 * Math.random() | 0];
+          return RR
         },
-        customAlphabet: function(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 21;
+        customAlphabet: function(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 21;
           return function() {
-            let OW = "",
-              mW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iW;
-            for (; mW--;) OW += WW[Math.random() * WW.length | 0];
-            return OW
+            let GR = "",
+              yR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JR;
+            for (; yR--;) GR += RR[Math.random() * RR.length | 0];
+            return GR
           }
         }
-      }, oi
+      }, OJ
     }
 
-    function oO() {
-      if (vi) return ei;
-      vi = 1;
+    function vG() {
+      if (DJ) return NJ;
+      DJ = 1;
       let {
-        SourceMapConsumer: WW,
-        SourceMapGenerator: iW
-      } = Ui, {
-        existsSync: OW,
-        readFileSync: mW
-      } = Ui, {
-        dirname: EW,
-        join: NW
-      } = Ui;
-      class PW {
-        constructor(WW, iW) {
-          if (!1 === iW.map) return;
-          this.loadAnnotation(WW), this.inline = this.startWith(this.annotation, "data:");
-          let OW = iW.map ? iW.map.prev : void 0,
-            mW = this.loadMap(iW.from, OW);
-          !this.mapFile && iW.from && (this.mapFile = iW.from), this.mapFile && (this.root = EW(this.mapFile)), mW && (this.text = mW)
+        SourceMapConsumer: RR,
+        SourceMapGenerator: JR
+      } = nJ, {
+        existsSync: GR,
+        readFileSync: yR
+      } = nJ, {
+        dirname: tR,
+        join: uR
+      } = nJ;
+      class ZR {
+        constructor(RR, JR) {
+          if (!1 === JR.map) return;
+          this.loadAnnotation(RR), this.inline = this.startWith(this.annotation, "data:");
+          let GR = JR.map ? JR.map.prev : void 0,
+            yR = this.loadMap(JR.from, GR);
+          !this.mapFile && JR.from && (this.mapFile = JR.from), this.mapFile && (this.root = tR(this.mapFile)), yR && (this.text = yR)
         }
         consumer() {
-          return this.consumerCache || (this.consumerCache = new WW(this.text)), this.consumerCache
+          return this.consumerCache || (this.consumerCache = new RR(this.text)), this.consumerCache
         }
-        decodeInline(WW) {
-          if (/^data:application\/json;charset=utf-?8,/.test(WW) || /^data:application\/json,/.test(WW)) return decodeURIComponent(WW.substr(RegExp.lastMatch.length));
-          if (/^data:application\/json;charset=utf-?8;base64,/.test(WW) || /^data:application\/json;base64,/.test(WW)) return iW = WW.substr(RegExp.lastMatch.length), Buffer ? Buffer.from(iW, "base64").toString() : window.atob(iW);
-          var iW;
-          let OW = WW.match(/data:application\/json;([^,]+),/)[1];
-          throw new Error("Unsupported source map encoding " + OW)
+        decodeInline(RR) {
+          if (/^data:application\/json;charset=utf-?8,/.test(RR) || /^data:application\/json,/.test(RR)) return decodeURIComponent(RR.substr(RegExp.lastMatch.length));
+          if (/^data:application\/json;charset=utf-?8;base64,/.test(RR) || /^data:application\/json;base64,/.test(RR)) return JR = RR.substr(RegExp.lastMatch.length), Buffer ? Buffer.from(JR, "base64").toString() : window.atob(JR);
+          var JR;
+          let GR = RR.match(/data:application\/json;([^,]+),/)[1];
+          throw new Error("Unsupported source map encoding " + GR)
         }
-        getAnnotationURL(WW) {
-          return WW.replace(/^\/\*\s*# sourceMappingURL=/, "").trim()
+        getAnnotationURL(RR) {
+          return RR.replace(/^\/\*\s*# sourceMappingURL=/, "").trim()
         }
-        isMap(WW) {
-          return "object" === typeof WW && ("string" === typeof WW.mappings || "string" === typeof WW._mappings || Array.isArray(WW.sections))
+        isMap(RR) {
+          return "object" === typeof RR && ("string" === typeof RR.mappings || "string" === typeof RR._mappings || Array.isArray(RR.sections))
         }
-        loadAnnotation(WW) {
-          let iW = WW.match(/\/\*\s*# sourceMappingURL=/gm);
-          if (!iW) return;
-          let OW = WW.lastIndexOf(iW.pop()),
-            mW = WW.indexOf("*/", OW);
-          OW > -1 && mW > -1 && (this.annotation = this.getAnnotationURL(WW.substring(OW, mW)))
+        loadAnnotation(RR) {
+          let JR = RR.match(/\/\*\s*# sourceMappingURL=/gm);
+          if (!JR) return;
+          let GR = RR.lastIndexOf(JR.pop()),
+            yR = RR.indexOf("*/", GR);
+          GR > -1 && yR > -1 && (this.annotation = this.getAnnotationURL(RR.substring(GR, yR)))
         }
-        loadFile(WW) {
-          if (this.root = EW(WW), OW(WW)) return this.mapFile = WW, mW(WW, "utf-8").toString().trim()
+        loadFile(RR) {
+          if (this.root = tR(RR), GR(RR)) return this.mapFile = RR, yR(RR, "utf-8").toString().trim()
         }
-        loadMap(OW, mW) {
-          if (!1 === mW) return !1;
-          if (mW) {
-            if ("string" === typeof mW) return mW;
-            if ("function" !== typeof mW) {
-              if (mW instanceof WW) return iW.fromSourceMap(mW).toString();
-              if (mW instanceof iW) return mW.toString();
-              if (this.isMap(mW)) return JSON.stringify(mW);
-              throw new Error("Unsupported previous source map format: " + mW.toString())
+        loadMap(GR, yR) {
+          if (!1 === yR) return !1;
+          if (yR) {
+            if ("string" === typeof yR) return yR;
+            if ("function" !== typeof yR) {
+              if (yR instanceof RR) return JR.fromSourceMap(yR).toString();
+              if (yR instanceof JR) return yR.toString();
+              if (this.isMap(yR)) return JSON.stringify(yR);
+              throw new Error("Unsupported previous source map format: " + yR.toString())
             } {
-              let WW = mW(OW);
-              if (WW) {
-                let iW = this.loadFile(WW);
-                if (!iW) throw new Error("Unable to load previous source map: " + WW.toString());
-                return iW
+              let RR = yR(GR);
+              if (RR) {
+                let JR = this.loadFile(RR);
+                if (!JR) throw new Error("Unable to load previous source map: " + RR.toString());
+                return JR
               }
             }
           } else {
             if (this.inline) return this.decodeInline(this.annotation);
             if (this.annotation) {
-              let WW = this.annotation;
-              return OW && (WW = NW(EW(OW), WW)), this.loadFile(WW)
+              let RR = this.annotation;
+              return GR && (RR = uR(tR(GR), RR)), this.loadFile(RR)
             }
           }
         }
-        startWith(WW, iW) {
-          return !!WW && WW.substr(0, iW.length) === iW
+        startWith(RR, JR) {
+          return !!RR && RR.substr(0, JR.length) === JR
         }
         withContent() {
           return !!(this.consumer().sourcesContent && this.consumer().sourcesContent.length > 0)
         }
       }
-      return ei = PW, PW.default = PW, ei
+      return NJ = ZR, ZR.default = ZR, NJ
     }
 
-    function dO() {
-      if (Di) return gi;
-      Di = 1;
+    function OG() {
+      if (oJ) return HJ;
+      oJ = 1;
       let {
-        SourceMapConsumer: WW,
-        SourceMapGenerator: iW
-      } = Ui, {
-        fileURLToPath: OW,
-        pathToFileURL: mW
-      } = Ui, {
-        isAbsolute: EW,
-        resolve: NW
-      } = Ui, {
-        nanoid: PW
-      } = uO(), LW = Ui, cW = Mi(), wW = oO(), tW = Symbol("fromOffsetCache"), ZW = Boolean(WW && iW), xW = Boolean(NW && EW);
-      class lW {
-        constructor(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null === WW || "undefined" === typeof WW || "object" === typeof WW && !WW.toString) throw new Error(`PostCSS received ${WW} instead of CSS string`);
-          if (this.css = WW.toString(), "\ufeff" === this.css[0] || "\ufffe" === this.css[0] ? (this.hasBOM = !0, this.css = this.css.slice(1)) : this.hasBOM = !1, iW.from && (!xW || /^\w+:\/\//.test(iW.from) || EW(iW.from) ? this.file = iW.from : this.file = NW(iW.from)), xW && ZW) {
-            let WW = new wW(this.css, iW);
-            if (WW.text) {
-              this.map = WW;
-              let iW = WW.consumer().file;
-              !this.file && iW && (this.file = this.mapResolve(iW))
+        SourceMapConsumer: RR,
+        SourceMapGenerator: JR
+      } = nJ, {
+        fileURLToPath: GR,
+        pathToFileURL: yR
+      } = nJ, {
+        isAbsolute: tR,
+        resolve: uR
+      } = nJ, {
+        nanoid: ZR
+      } = bG(), qR = nJ, iR = AJ(), fR = vG(), VR = Symbol("fromOffsetCache"), KR = Boolean(RR && JR), wR = Boolean(uR && tR);
+      class rR {
+        constructor(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (null === RR || "undefined" === typeof RR || "object" === typeof RR && !RR.toString) throw new Error(`PostCSS received ${RR} instead of CSS string`);
+          if (this.css = RR.toString(), "\ufeff" === this.css[0] || "\ufffe" === this.css[0] ? (this.hasBOM = !0, this.css = this.css.slice(1)) : this.hasBOM = !1, JR.from && (!wR || /^\w+:\/\//.test(JR.from) || tR(JR.from) ? this.file = JR.from : this.file = uR(JR.from)), wR && KR) {
+            let RR = new fR(this.css, JR);
+            if (RR.text) {
+              this.map = RR;
+              let JR = RR.consumer().file;
+              !this.file && JR && (this.file = this.mapResolve(JR))
             }
           }
-          this.file || (this.id = "<input css " + PW(6) + ">"), this.map && (this.map.file = this.from)
+          this.file || (this.id = "<input css " + ZR(6) + ">"), this.map && (this.map.file = this.from)
         }
-        error(WW, iW, OW) {
-          let EW, NW, PW, LW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-          if (iW && "object" === typeof iW) {
-            let WW = iW,
-              mW = OW;
-            if ("number" === typeof WW.offset) {
-              let mW = this.fromOffset(WW.offset);
-              iW = mW.line, OW = mW.col
-            } else iW = WW.line, OW = WW.column;
-            if ("number" === typeof mW.offset) {
-              let WW = this.fromOffset(mW.offset);
-              NW = WW.line, PW = WW.col
-            } else NW = mW.line, PW = mW.column
-          } else if (!OW) {
-            let WW = this.fromOffset(iW);
-            iW = WW.line, OW = WW.col
+        error(RR, JR, GR) {
+          let tR, uR, ZR, qR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+          if (JR && "object" === typeof JR) {
+            let RR = JR,
+              yR = GR;
+            if ("number" === typeof RR.offset) {
+              let yR = this.fromOffset(RR.offset);
+              JR = yR.line, GR = yR.col
+            } else JR = RR.line, GR = RR.column;
+            if ("number" === typeof yR.offset) {
+              let RR = this.fromOffset(yR.offset);
+              uR = RR.line, ZR = RR.col
+            } else uR = yR.line, ZR = yR.column
+          } else if (!GR) {
+            let RR = this.fromOffset(JR);
+            JR = RR.line, GR = RR.col
           }
-          let wW = this.origin(iW, OW, NW, PW);
-          return EW = wW ? new cW(WW, void 0 === wW.endLine ? wW.line : {
-            column: wW.column,
-            line: wW.line
-          }, void 0 === wW.endLine ? wW.column : {
-            column: wW.endColumn,
-            line: wW.endLine
-          }, wW.source, wW.file, LW.plugin) : new cW(WW, void 0 === NW ? iW : {
-            column: OW,
-            line: iW
-          }, void 0 === NW ? OW : {
-            column: PW,
-            line: NW
-          }, this.css, this.file, LW.plugin), EW.input = {
-            column: OW,
-            endColumn: PW,
-            endLine: NW,
-            line: iW,
+          let fR = this.origin(JR, GR, uR, ZR);
+          return tR = fR ? new iR(RR, void 0 === fR.endLine ? fR.line : {
+            column: fR.column,
+            line: fR.line
+          }, void 0 === fR.endLine ? fR.column : {
+            column: fR.endColumn,
+            line: fR.endLine
+          }, fR.source, fR.file, qR.plugin) : new iR(RR, void 0 === uR ? JR : {
+            column: GR,
+            line: JR
+          }, void 0 === uR ? GR : {
+            column: ZR,
+            line: uR
+          }, this.css, this.file, qR.plugin), tR.input = {
+            column: GR,
+            endColumn: ZR,
+            endLine: uR,
+            line: JR,
             source: this.css
-          }, this.file && (mW && (EW.input.url = mW(this.file).toString()), EW.input.file = this.file), EW
+          }, this.file && (yR && (tR.input.url = yR(this.file).toString()), tR.input.file = this.file), tR
         }
-        fromOffset(WW) {
-          let iW, OW;
-          if (this[tW]) OW = this[tW];
+        fromOffset(RR) {
+          let JR, GR;
+          if (this[VR]) GR = this[VR];
           else {
-            let WW = this.css.split("\n");
-            OW = new Array(WW.length);
-            let iW = 0;
-            for (let mW = 0, EW = WW.length; mW < EW; mW++) OW[mW] = iW, iW += WW[mW].length + 1;
-            this[tW] = OW
+            let RR = this.css.split("\n");
+            GR = new Array(RR.length);
+            let JR = 0;
+            for (let yR = 0, tR = RR.length; yR < tR; yR++) GR[yR] = JR, JR += RR[yR].length + 1;
+            this[VR] = GR
           }
-          iW = OW[OW.length - 1];
-          let mW = 0;
-          if (WW >= iW) mW = OW.length - 1;
+          JR = GR[GR.length - 1];
+          let yR = 0;
+          if (RR >= JR) yR = GR.length - 1;
           else {
-            let iW, EW = OW.length - 2;
-            for (; mW < EW;)
-              if (iW = mW + (EW - mW >> 1), WW < OW[iW]) EW = iW - 1;
+            let JR, tR = GR.length - 2;
+            for (; yR < tR;)
+              if (JR = yR + (tR - yR >> 1), RR < GR[JR]) tR = JR - 1;
               else {
-                if (!(WW >= OW[iW + 1])) {
-                  mW = iW;
+                if (!(RR >= GR[JR + 1])) {
+                  yR = JR;
                   break
                 }
-                mW = iW + 1
+                yR = JR + 1
               }
           }
           return {
-            col: WW - OW[mW] + 1,
-            line: mW + 1
+            col: RR - GR[yR] + 1,
+            line: yR + 1
           }
         }
-        mapResolve(WW) {
-          return /^\w+:\/\//.test(WW) ? WW : NW(this.map.consumer().sourceRoot || this.map.root || ".", WW)
+        mapResolve(RR) {
+          return /^\w+:\/\//.test(RR) ? RR : uR(this.map.consumer().sourceRoot || this.map.root || ".", RR)
         }
-        origin(WW, iW, NW, PW) {
+        origin(RR, JR, uR, ZR) {
           if (!this.map) return !1;
-          let LW, cW, wW = this.map.consumer(),
-            tW = wW.originalPositionFor({
-              column: iW,
-              line: WW
+          let qR, iR, fR = this.map.consumer(),
+            VR = fR.originalPositionFor({
+              column: JR,
+              line: RR
             });
-          if (!tW.source) return !1;
-          "number" === typeof NW && (LW = wW.originalPositionFor({
-            column: PW,
-            line: NW
-          })), cW = EW(tW.source) ? mW(tW.source) : new URL(tW.source, this.map.consumer().sourceRoot || mW(this.map.mapFile));
-          let ZW = {
-            column: tW.column,
-            endColumn: LW && LW.column,
-            endLine: LW && LW.line,
-            line: tW.line,
-            url: cW.toString()
+          if (!VR.source) return !1;
+          "number" === typeof uR && (qR = fR.originalPositionFor({
+            column: ZR,
+            line: uR
+          })), iR = tR(VR.source) ? yR(VR.source) : new URL(VR.source, this.map.consumer().sourceRoot || yR(this.map.mapFile));
+          let KR = {
+            column: VR.column,
+            endColumn: qR && qR.column,
+            endLine: qR && qR.line,
+            line: VR.line,
+            url: iR.toString()
           };
-          if ("file:" === cW.protocol) {
-            if (!OW) throw new Error("file: protocol is not available in this PostCSS build");
-            ZW.file = OW(cW)
+          if ("file:" === iR.protocol) {
+            if (!GR) throw new Error("file: protocol is not available in this PostCSS build");
+            KR.file = GR(iR)
           }
-          let xW = wW.sourceContentFor(tW.source);
-          return xW && (ZW.source = xW), ZW
+          let wR = fR.sourceContentFor(VR.source);
+          return wR && (KR.source = wR), KR
         }
         toJSON() {
-          let WW = {};
-          for (let iW of ["hasBOM", "css", "file", "id"]) null != this[iW] && (WW[iW] = this[iW]);
-          return this.map && (WW.map = {
+          let RR = {};
+          for (let JR of ["hasBOM", "css", "file", "id"]) null != this[JR] && (RR[JR] = this[JR]);
+          return this.map && (RR.map = {
             ...this.map
-          }, WW.map.consumerCache && (WW.map.consumerCache = void 0)), WW
+          }, RR.map.consumerCache && (RR.map.consumerCache = void 0)), RR
         }
         get from() {
           return this.file || this.id
         }
       }
-      return gi = lW, lW.default = lW, LW && LW.registerInput && LW.registerInput(lW), gi
+      return HJ = rR, rR.default = rR, qR && qR.registerInput && qR.registerInput(rR), HJ
     }
 
-    function eO() {
-      if (fi) return Vi;
-      fi = 1;
+    function xG() {
+      if (PJ) return cJ;
+      PJ = 1;
       let {
-        SourceMapConsumer: WW,
-        SourceMapGenerator: iW
-      } = Ui, {
-        dirname: OW,
-        relative: mW,
-        resolve: EW,
-        sep: NW
-      } = Ui, {
-        pathToFileURL: PW
-      } = Ui, LW = dO(), cW = Boolean(WW && iW), wW = Boolean(OW && EW && mW && NW);
-      return Vi = class {
-        constructor(WW, iW, OW, mW) {
-          this.stringify = WW, this.mapOpts = OW.map || {}, this.root = iW, this.opts = OW, this.css = mW, this.originalCSS = mW, this.usesFileUrls = !this.mapOpts.from && this.mapOpts.absolute, this.memoizedFileURLs = new Map, this.memoizedPaths = new Map, this.memoizedURLs = new Map
+        SourceMapConsumer: RR,
+        SourceMapGenerator: JR
+      } = nJ, {
+        dirname: GR,
+        relative: yR,
+        resolve: tR,
+        sep: uR
+      } = nJ, {
+        pathToFileURL: ZR
+      } = nJ, qR = OG(), iR = Boolean(RR && JR), fR = Boolean(GR && tR && yR && uR);
+      return cJ = class {
+        constructor(RR, JR, GR, yR) {
+          this.stringify = RR, this.mapOpts = GR.map || {}, this.root = JR, this.opts = GR, this.css = yR, this.originalCSS = yR, this.usesFileUrls = !this.mapOpts.from && this.mapOpts.absolute, this.memoizedFileURLs = new Map, this.memoizedPaths = new Map, this.memoizedURLs = new Map
         }
         addAnnotation() {
-          let WW;
-          WW = this.isInline() ? "data:application/json;base64," + this.toBase64(this.map.toString()) : "string" === typeof this.mapOpts.annotation ? this.mapOpts.annotation : "function" === typeof this.mapOpts.annotation ? this.mapOpts.annotation(this.opts.to, this.root) : this.outputFile() + ".map";
-          let iW = "\n";
-          this.css.includes("\r\n") && (iW = "\r\n"), this.css += iW + "/*# sourceMappingURL=" + WW + " */"
+          let RR;
+          RR = this.isInline() ? "data:application/json;base64," + this.toBase64(this.map.toString()) : "string" === typeof this.mapOpts.annotation ? this.mapOpts.annotation : "function" === typeof this.mapOpts.annotation ? this.mapOpts.annotation(this.opts.to, this.root) : this.outputFile() + ".map";
+          let JR = "\n";
+          this.css.includes("\r\n") && (JR = "\r\n"), this.css += JR + "/*# sourceMappingURL=" + RR + " */"
         }
         applyPrevMaps() {
-          for (let iW of this.previous()) {
-            let mW, EW = this.toUrl(this.path(iW.file)),
-              NW = iW.root || OW(iW.file);
-            !1 === this.mapOpts.sourcesContent ? (mW = new WW(iW.text), mW.sourcesContent && (mW.sourcesContent = null)) : mW = iW.consumer(), this.map.applySourceMap(mW, EW, this.toUrl(this.path(NW)))
+          for (let JR of this.previous()) {
+            let yR, tR = this.toUrl(this.path(JR.file)),
+              uR = JR.root || GR(JR.file);
+            !1 === this.mapOpts.sourcesContent ? (yR = new RR(JR.text), yR.sourcesContent && (yR.sourcesContent = null)) : yR = JR.consumer(), this.map.applySourceMap(yR, tR, this.toUrl(this.path(uR)))
           }
         }
         clearAnnotation() {
           if (!1 !== this.mapOpts.annotation)
             if (this.root) {
-              let WW;
-              for (let iW = this.root.nodes.length - 1; iW >= 0; iW--) WW = this.root.nodes[iW], "comment" === WW.type && 0 === WW.text.indexOf("# sourceMappingURL=") && this.root.removeChild(iW)
+              let RR;
+              for (let JR = this.root.nodes.length - 1; JR >= 0; JR--) RR = this.root.nodes[JR], "comment" === RR.type && 0 === RR.text.indexOf("# sourceMappingURL=") && this.root.removeChild(JR)
             } else this.css && (this.css = this.css.replace(/\n*?\/\*#[\S\s]*?\*\/$/gm, ""))
         }
         generate() {
-          if (this.clearAnnotation(), wW && cW && this.isMap()) return this.generateMap();
+          if (this.clearAnnotation(), fR && iR && this.isMap()) return this.generateMap();
           {
-            let WW = "";
-            return this.stringify(this.root, (iW => {
-              WW += iW
-            })), [WW]
+            let RR = "";
+            return this.stringify(this.root, (JR => {
+              RR += JR
+            })), [RR]
           }
         }
         generateMap() {
           if (this.root) this.generateString();
           else if (1 === this.previous().length) {
-            let WW = this.previous()[0].consumer();
-            WW.file = this.outputFile(), this.map = iW.fromSourceMap(WW, {
+            let RR = this.previous()[0].consumer();
+            RR.file = this.outputFile(), this.map = JR.fromSourceMap(RR, {
               ignoreInvalidMapping: !0
             })
-          } else this.map = new iW({
+          } else this.map = new JR({
             file: this.outputFile(),
             ignoreInvalidMapping: !0
           }), this.map.addMapping({
@@ -1816,14 +1816,14 @@ export const modules = {
           return this.isSourcesContent() && this.setSourcesContent(), this.root && this.previous().length > 0 && this.applyPrevMaps(), this.isAnnotation() && this.addAnnotation(), this.isInline() ? [this.css] : [this.css, this.map]
         }
         generateString() {
-          this.css = "", this.map = new iW({
+          this.css = "", this.map = new JR({
             file: this.outputFile(),
             ignoreInvalidMapping: !0
           });
-          let WW, OW, mW = 1,
-            EW = 1,
-            NW = "<no source>",
-            PW = {
+          let RR, GR, yR = 1,
+            tR = 1,
+            uR = "<no source>",
+            ZR = {
               generated: {
                 column: 0,
                 line: 0
@@ -1834,281 +1834,281 @@ export const modules = {
               },
               source: ""
             };
-          this.stringify(this.root, ((iW, LW, cW) => {
-            if (this.css += iW, LW && "end" !== cW && (PW.generated.line = mW, PW.generated.column = EW - 1, LW.source && LW.source.start ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.start.line, PW.original.column = LW.source.start.column - 1, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, this.map.addMapping(PW))), WW = iW.match(/\n/g), WW ? (mW += WW.length, OW = iW.lastIndexOf("\n"), EW = iW.length - OW) : EW += iW.length, LW && "start" !== cW) {
-              let WW = LW.parent || {
+          this.stringify(this.root, ((JR, qR, iR) => {
+            if (this.css += JR, qR && "end" !== iR && (ZR.generated.line = yR, ZR.generated.column = tR - 1, qR.source && qR.source.start ? (ZR.source = this.sourcePath(qR), ZR.original.line = qR.source.start.line, ZR.original.column = qR.source.start.column - 1, this.map.addMapping(ZR)) : (ZR.source = uR, ZR.original.line = 1, ZR.original.column = 0, this.map.addMapping(ZR))), RR = JR.match(/\n/g), RR ? (yR += RR.length, GR = JR.lastIndexOf("\n"), tR = JR.length - GR) : tR += JR.length, qR && "start" !== iR) {
+              let RR = qR.parent || {
                 raws: {}
               };
-              ("decl" === LW.type || "atrule" === LW.type && !LW.nodes) && LW === WW.last && !WW.raws.semicolon || (LW.source && LW.source.end ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.end.line, PW.original.column = LW.source.end.column - 1, PW.generated.line = mW, PW.generated.column = EW - 2, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, PW.generated.line = mW, PW.generated.column = EW - 1, this.map.addMapping(PW)))
+              ("decl" === qR.type || "atrule" === qR.type && !qR.nodes) && qR === RR.last && !RR.raws.semicolon || (qR.source && qR.source.end ? (ZR.source = this.sourcePath(qR), ZR.original.line = qR.source.end.line, ZR.original.column = qR.source.end.column - 1, ZR.generated.line = yR, ZR.generated.column = tR - 2, this.map.addMapping(ZR)) : (ZR.source = uR, ZR.original.line = 1, ZR.original.column = 0, ZR.generated.line = yR, ZR.generated.column = tR - 1, this.map.addMapping(ZR)))
             }
           }))
         }
         isAnnotation() {
-          return !!this.isInline() || ("undefined" !== typeof this.mapOpts.annotation ? this.mapOpts.annotation : !this.previous().length || this.previous().some((WW => WW.annotation)))
+          return !!this.isInline() || ("undefined" !== typeof this.mapOpts.annotation ? this.mapOpts.annotation : !this.previous().length || this.previous().some((RR => RR.annotation)))
         }
         isInline() {
           if ("undefined" !== typeof this.mapOpts.inline) return this.mapOpts.inline;
-          let WW = this.mapOpts.annotation;
-          return ("undefined" === typeof WW || !0 === WW) && (!this.previous().length || this.previous().some((WW => WW.inline)))
+          let RR = this.mapOpts.annotation;
+          return ("undefined" === typeof RR || !0 === RR) && (!this.previous().length || this.previous().some((RR => RR.inline)))
         }
         isMap() {
           return "undefined" !== typeof this.opts.map ? !!this.opts.map : this.previous().length > 0
         }
         isSourcesContent() {
-          return "undefined" !== typeof this.mapOpts.sourcesContent ? this.mapOpts.sourcesContent : !this.previous().length || this.previous().some((WW => WW.withContent()))
+          return "undefined" !== typeof this.mapOpts.sourcesContent ? this.mapOpts.sourcesContent : !this.previous().length || this.previous().some((RR => RR.withContent()))
         }
         outputFile() {
           return this.opts.to ? this.path(this.opts.to) : this.opts.from ? this.path(this.opts.from) : "to.css"
         }
-        path(WW) {
-          if (this.mapOpts.absolute) return WW;
-          if (60 === WW.charCodeAt(0)) return WW;
-          if (/^\w+:\/\//.test(WW)) return WW;
-          let iW = this.memoizedPaths.get(WW);
-          if (iW) return iW;
-          let NW = this.opts.to ? OW(this.opts.to) : ".";
-          "string" === typeof this.mapOpts.annotation && (NW = OW(EW(NW, this.mapOpts.annotation)));
-          let PW = mW(NW, WW);
-          return this.memoizedPaths.set(WW, PW), PW
+        path(RR) {
+          if (this.mapOpts.absolute) return RR;
+          if (60 === RR.charCodeAt(0)) return RR;
+          if (/^\w+:\/\//.test(RR)) return RR;
+          let JR = this.memoizedPaths.get(RR);
+          if (JR) return JR;
+          let uR = this.opts.to ? GR(this.opts.to) : ".";
+          "string" === typeof this.mapOpts.annotation && (uR = GR(tR(uR, this.mapOpts.annotation)));
+          let ZR = yR(uR, RR);
+          return this.memoizedPaths.set(RR, ZR), ZR
         }
         previous() {
           if (!this.previousMaps)
-            if (this.previousMaps = [], this.root) this.root.walk((WW => {
-              if (WW.source && WW.source.input.map) {
-                let iW = WW.source.input.map;
-                this.previousMaps.includes(iW) || this.previousMaps.push(iW)
+            if (this.previousMaps = [], this.root) this.root.walk((RR => {
+              if (RR.source && RR.source.input.map) {
+                let JR = RR.source.input.map;
+                this.previousMaps.includes(JR) || this.previousMaps.push(JR)
               }
             }));
             else {
-              let WW = new LW(this.originalCSS, this.opts);
-              WW.map && this.previousMaps.push(WW.map)
+              let RR = new qR(this.originalCSS, this.opts);
+              RR.map && this.previousMaps.push(RR.map)
             } return this.previousMaps
         }
         setSourcesContent() {
-          let WW = {};
-          if (this.root) this.root.walk((iW => {
-            if (iW.source) {
-              let OW = iW.source.input.from;
-              if (OW && !WW[OW]) {
-                WW[OW] = !0;
-                let mW = this.usesFileUrls ? this.toFileUrl(OW) : this.toUrl(this.path(OW));
-                this.map.setSourceContent(mW, iW.source.input.css)
+          let RR = {};
+          if (this.root) this.root.walk((JR => {
+            if (JR.source) {
+              let GR = JR.source.input.from;
+              if (GR && !RR[GR]) {
+                RR[GR] = !0;
+                let yR = this.usesFileUrls ? this.toFileUrl(GR) : this.toUrl(this.path(GR));
+                this.map.setSourceContent(yR, JR.source.input.css)
               }
             }
           }));
           else if (this.css) {
-            let WW = this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>";
-            this.map.setSourceContent(WW, this.css)
+            let RR = this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>";
+            this.map.setSourceContent(RR, this.css)
           }
         }
-        sourcePath(WW) {
-          return this.mapOpts.from ? this.toUrl(this.mapOpts.from) : this.usesFileUrls ? this.toFileUrl(WW.source.input.from) : this.toUrl(this.path(WW.source.input.from))
+        sourcePath(RR) {
+          return this.mapOpts.from ? this.toUrl(this.mapOpts.from) : this.usesFileUrls ? this.toFileUrl(RR.source.input.from) : this.toUrl(this.path(RR.source.input.from))
         }
-        toBase64(WW) {
-          return Buffer ? Buffer.from(WW).toString("base64") : window.btoa(unescape(encodeURIComponent(WW)))
+        toBase64(RR) {
+          return Buffer ? Buffer.from(RR).toString("base64") : window.btoa(unescape(encodeURIComponent(RR)))
         }
-        toFileUrl(WW) {
-          let iW = this.memoizedFileURLs.get(WW);
-          if (iW) return iW;
-          if (PW) {
-            let iW = PW(WW).toString();
-            return this.memoizedFileURLs.set(WW, iW), iW
+        toFileUrl(RR) {
+          let JR = this.memoizedFileURLs.get(RR);
+          if (JR) return JR;
+          if (ZR) {
+            let JR = ZR(RR).toString();
+            return this.memoizedFileURLs.set(RR, JR), JR
           }
           throw new Error("`map.absolute` option is not available in this PostCSS build")
         }
-        toUrl(WW) {
-          let iW = this.memoizedURLs.get(WW);
-          if (iW) return iW;
-          "\\" === NW && (WW = WW.replace(/\\/g, "/"));
-          let OW = encodeURI(WW).replace(/[#?]/g, encodeURIComponent);
-          return this.memoizedURLs.set(WW, OW), OW
+        toUrl(RR) {
+          let JR = this.memoizedURLs.get(RR);
+          if (JR) return JR;
+          "\\" === uR && (RR = RR.replace(/\\/g, "/"));
+          let GR = encodeURI(RR).replace(/[#?]/g, encodeURIComponent);
+          return this.memoizedURLs.set(RR, GR), GR
         }
       }
     }
 
-    function vO() {
-      if (Xi) return Ci;
-      Xi = 1;
-      let WW = HO();
-      class iW extends WW {
-        constructor(WW) {
-          super(WW), this.type = "comment"
+    function NG() {
+      if (mJ) return IJ;
+      mJ = 1;
+      let RR = pG();
+      class JR extends RR {
+        constructor(RR) {
+          super(RR), this.type = "comment"
         }
       }
-      return Ci = iW, iW.default = iW, Ci
+      return IJ = JR, JR.default = JR, IJ
     }
 
-    function gO() {
-      if (qi) return Bi;
-      qi = 1;
-      let WW, iW, OW, mW, {
-          isClean: EW,
-          my: NW
-        } = TO(),
-        PW = nO(),
-        LW = vO(),
-        cW = HO();
+    function DG() {
+      if (SJ) return zJ;
+      SJ = 1;
+      let RR, JR, GR, yR, {
+          isClean: tR,
+          my: uR
+        } = MG(),
+        ZR = gG(),
+        qR = NG(),
+        iR = pG();
 
-      function wW(WW) {
-        return WW.map((WW => (WW.nodes && (WW.nodes = wW(WW.nodes)), delete WW.source, WW)))
+      function fR(RR) {
+        return RR.map((RR => (RR.nodes && (RR.nodes = fR(RR.nodes)), delete RR.source, RR)))
       }
 
-      function tW(WW) {
-        if (WW[EW] = !1, WW.proxyOf.nodes)
-          for (let iW of WW.proxyOf.nodes) tW(iW)
+      function VR(RR) {
+        if (RR[tR] = !1, RR.proxyOf.nodes)
+          for (let JR of RR.proxyOf.nodes) VR(JR)
       }
-      class ZW extends cW {
+      class KR extends iR {
         append() {
-          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-          for (let mW of iW) {
-            let WW = this.normalize(mW, this.last);
-            for (let iW of WW) this.proxyOf.nodes.push(iW)
+          for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+          for (let yR of JR) {
+            let RR = this.normalize(yR, this.last);
+            for (let JR of RR) this.proxyOf.nodes.push(JR)
           }
           return this.markDirty(), this
         }
-        cleanRaws(WW) {
-          if (super.cleanRaws(WW), this.nodes)
-            for (let iW of this.nodes) iW.cleanRaws(WW)
+        cleanRaws(RR) {
+          if (super.cleanRaws(RR), this.nodes)
+            for (let JR of this.nodes) JR.cleanRaws(RR)
         }
-        each(WW) {
+        each(RR) {
           if (!this.proxyOf.nodes) return;
-          let iW, OW, mW = this.getIterator();
-          for (; this.indexes[mW] < this.proxyOf.nodes.length && (iW = this.indexes[mW], OW = WW(this.proxyOf.nodes[iW], iW), !1 !== OW);) this.indexes[mW] += 1;
-          return delete this.indexes[mW], OW
+          let JR, GR, yR = this.getIterator();
+          for (; this.indexes[yR] < this.proxyOf.nodes.length && (JR = this.indexes[yR], GR = RR(this.proxyOf.nodes[JR], JR), !1 !== GR);) this.indexes[yR] += 1;
+          return delete this.indexes[yR], GR
         }
-        every(WW) {
-          return this.nodes.every(WW)
+        every(RR) {
+          return this.nodes.every(RR)
         }
         getIterator() {
           this.lastEach || (this.lastEach = 0), this.indexes || (this.indexes = {}), this.lastEach += 1;
-          let WW = this.lastEach;
-          return this.indexes[WW] = 0, WW
+          let RR = this.lastEach;
+          return this.indexes[RR] = 0, RR
         }
         getProxyProcessor() {
           return {
-            get: (WW, iW) => "proxyOf" === iW ? WW : WW[iW] ? "each" === iW || "string" === typeof iW && iW.startsWith("walk") ? function() {
-              for (var OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
-              return WW[iW](...mW.map((WW => "function" === typeof WW ? (iW, OW) => WW(iW.toProxy(), OW) : WW)))
-            } : "every" === iW || "some" === iW ? OW => WW[iW]((function(WW) {
-              for (var iW = arguments.length, mW = new Array(iW > 1 ? iW - 1 : 0), EW = 1; EW < iW; EW++) mW[EW - 1] = arguments[EW];
-              return OW(WW.toProxy(), ...mW)
-            })) : "root" === iW ? () => WW.root().toProxy() : "nodes" === iW ? WW.nodes.map((WW => WW.toProxy())) : "first" === iW || "last" === iW ? WW[iW].toProxy() : WW[iW] : WW[iW],
-            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "name" !== iW && "params" !== iW && "selector" !== iW || WW.markDirty()), !0)
+            get: (RR, JR) => "proxyOf" === JR ? RR : RR[JR] ? "each" === JR || "string" === typeof JR && JR.startsWith("walk") ? function() {
+              for (var GR = arguments.length, yR = new Array(GR), tR = 0; tR < GR; tR++) yR[tR] = arguments[tR];
+              return RR[JR](...yR.map((RR => "function" === typeof RR ? (JR, GR) => RR(JR.toProxy(), GR) : RR)))
+            } : "every" === JR || "some" === JR ? GR => RR[JR]((function(RR) {
+              for (var JR = arguments.length, yR = new Array(JR > 1 ? JR - 1 : 0), tR = 1; tR < JR; tR++) yR[tR - 1] = arguments[tR];
+              return GR(RR.toProxy(), ...yR)
+            })) : "root" === JR ? () => RR.root().toProxy() : "nodes" === JR ? RR.nodes.map((RR => RR.toProxy())) : "first" === JR || "last" === JR ? RR[JR].toProxy() : RR[JR] : RR[JR],
+            set: (RR, JR, GR) => (RR[JR] === GR || (RR[JR] = GR, "name" !== JR && "params" !== JR && "selector" !== JR || RR.markDirty()), !0)
           }
         }
-        index(WW) {
-          return "number" === typeof WW ? WW : (WW.proxyOf && (WW = WW.proxyOf), this.proxyOf.nodes.indexOf(WW))
+        index(RR) {
+          return "number" === typeof RR ? RR : (RR.proxyOf && (RR = RR.proxyOf), this.proxyOf.nodes.indexOf(RR))
         }
-        insertAfter(WW, iW) {
-          let OW, mW = this.index(WW),
-            EW = this.normalize(iW, this.proxyOf.nodes[mW]).reverse();
-          mW = this.index(WW);
-          for (let NW of EW) this.proxyOf.nodes.splice(mW + 1, 0, NW);
-          for (let NW in this.indexes) OW = this.indexes[NW], mW < OW && (this.indexes[NW] = OW + EW.length);
+        insertAfter(RR, JR) {
+          let GR, yR = this.index(RR),
+            tR = this.normalize(JR, this.proxyOf.nodes[yR]).reverse();
+          yR = this.index(RR);
+          for (let uR of tR) this.proxyOf.nodes.splice(yR + 1, 0, uR);
+          for (let uR in this.indexes) GR = this.indexes[uR], yR < GR && (this.indexes[uR] = GR + tR.length);
           return this.markDirty(), this
         }
-        insertBefore(WW, iW) {
-          let OW, mW = this.index(WW),
-            EW = 0 === mW && "prepend",
-            NW = this.normalize(iW, this.proxyOf.nodes[mW], EW).reverse();
-          mW = this.index(WW);
-          for (let PW of NW) this.proxyOf.nodes.splice(mW, 0, PW);
-          for (let PW in this.indexes) OW = this.indexes[PW], mW <= OW && (this.indexes[PW] = OW + NW.length);
+        insertBefore(RR, JR) {
+          let GR, yR = this.index(RR),
+            tR = 0 === yR && "prepend",
+            uR = this.normalize(JR, this.proxyOf.nodes[yR], tR).reverse();
+          yR = this.index(RR);
+          for (let ZR of uR) this.proxyOf.nodes.splice(yR, 0, ZR);
+          for (let ZR in this.indexes) GR = this.indexes[ZR], yR <= GR && (this.indexes[ZR] = GR + uR.length);
           return this.markDirty(), this
         }
-        normalize(mW, cW) {
-          if ("string" === typeof mW) mW = wW(WW(mW).nodes);
-          else if ("undefined" === typeof mW) mW = [];
-          else if (Array.isArray(mW)) {
-            mW = mW.slice(0);
-            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
-          } else if ("root" === mW.type && "document" !== this.type) {
-            mW = mW.nodes.slice(0);
-            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
-          } else if (mW.type) mW = [mW];
-          else if (mW.prop) {
-            if ("undefined" === typeof mW.value) throw new Error("Value field is missed in node creation");
-            "string" !== typeof mW.value && (mW.value = String(mW.value)), mW = [new PW(mW)]
-          } else if (mW.selector) mW = [new iW(mW)];
-          else if (mW.name) mW = [new OW(mW)];
+        normalize(yR, iR) {
+          if ("string" === typeof yR) yR = fR(RR(yR).nodes);
+          else if ("undefined" === typeof yR) yR = [];
+          else if (Array.isArray(yR)) {
+            yR = yR.slice(0);
+            for (let RR of yR) RR.parent && RR.parent.removeChild(RR, "ignore")
+          } else if ("root" === yR.type && "document" !== this.type) {
+            yR = yR.nodes.slice(0);
+            for (let RR of yR) RR.parent && RR.parent.removeChild(RR, "ignore")
+          } else if (yR.type) yR = [yR];
+          else if (yR.prop) {
+            if ("undefined" === typeof yR.value) throw new Error("Value field is missed in node creation");
+            "string" !== typeof yR.value && (yR.value = String(yR.value)), yR = [new ZR(yR)]
+          } else if (yR.selector) yR = [new JR(yR)];
+          else if (yR.name) yR = [new GR(yR)];
           else {
-            if (!mW.text) throw new Error("Unknown node type in node creation");
-            mW = [new LW(mW)]
+            if (!yR.text) throw new Error("Unknown node type in node creation");
+            yR = [new qR(yR)]
           }
-          return mW.map((WW => (WW[NW] || ZW.rebuild(WW), (WW = WW.proxyOf).parent && WW.parent.removeChild(WW), WW[EW] && tW(WW), "undefined" === typeof WW.raws.before && cW && "undefined" !== typeof cW.raws.before && (WW.raws.before = cW.raws.before.replace(/\S/g, "")), WW.parent = this.proxyOf, WW)))
+          return yR.map((RR => (RR[uR] || KR.rebuild(RR), (RR = RR.proxyOf).parent && RR.parent.removeChild(RR), RR[tR] && VR(RR), "undefined" === typeof RR.raws.before && iR && "undefined" !== typeof iR.raws.before && (RR.raws.before = iR.raws.before.replace(/\S/g, "")), RR.parent = this.proxyOf, RR)))
         }
         prepend() {
-          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-          iW = iW.reverse();
-          for (let mW of iW) {
-            let WW = this.normalize(mW, this.first, "prepend").reverse();
-            for (let iW of WW) this.proxyOf.nodes.unshift(iW);
-            for (let iW in this.indexes) this.indexes[iW] = this.indexes[iW] + WW.length
+          for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+          JR = JR.reverse();
+          for (let yR of JR) {
+            let RR = this.normalize(yR, this.first, "prepend").reverse();
+            for (let JR of RR) this.proxyOf.nodes.unshift(JR);
+            for (let JR in this.indexes) this.indexes[JR] = this.indexes[JR] + RR.length
           }
           return this.markDirty(), this
         }
-        push(WW) {
-          return WW.parent = this, this.proxyOf.nodes.push(WW), this
+        push(RR) {
+          return RR.parent = this, this.proxyOf.nodes.push(RR), this
         }
         removeAll() {
-          for (let WW of this.proxyOf.nodes) WW.parent = void 0;
+          for (let RR of this.proxyOf.nodes) RR.parent = void 0;
           return this.proxyOf.nodes = [], this.markDirty(), this
         }
-        removeChild(WW) {
-          let iW;
-          WW = this.index(WW), this.proxyOf.nodes[WW].parent = void 0, this.proxyOf.nodes.splice(WW, 1);
-          for (let OW in this.indexes) iW = this.indexes[OW], iW >= WW && (this.indexes[OW] = iW - 1);
+        removeChild(RR) {
+          let JR;
+          RR = this.index(RR), this.proxyOf.nodes[RR].parent = void 0, this.proxyOf.nodes.splice(RR, 1);
+          for (let GR in this.indexes) JR = this.indexes[GR], JR >= RR && (this.indexes[GR] = JR - 1);
           return this.markDirty(), this
         }
-        replaceValues(WW, iW, OW) {
-          return OW || (OW = iW, iW = {}), this.walkDecls((mW => {
-            iW.props && !iW.props.includes(mW.prop) || iW.fast && !mW.value.includes(iW.fast) || (mW.value = mW.value.replace(WW, OW))
+        replaceValues(RR, JR, GR) {
+          return GR || (GR = JR, JR = {}), this.walkDecls((yR => {
+            JR.props && !JR.props.includes(yR.prop) || JR.fast && !yR.value.includes(JR.fast) || (yR.value = yR.value.replace(RR, GR))
           })), this.markDirty(), this
         }
-        some(WW) {
-          return this.nodes.some(WW)
+        some(RR) {
+          return this.nodes.some(RR)
         }
-        walk(WW) {
-          return this.each(((iW, OW) => {
-            let mW;
+        walk(RR) {
+          return this.each(((JR, GR) => {
+            let yR;
             try {
-              mW = WW(iW, OW)
-            } catch (EW) {
-              throw iW.addToError(EW)
+              yR = RR(JR, GR)
+            } catch (tR) {
+              throw JR.addToError(tR)
             }
-            return !1 !== mW && iW.walk && (mW = iW.walk(WW)), mW
+            return !1 !== yR && JR.walk && (yR = JR.walk(RR)), yR
           }))
         }
-        walkAtRules(WW, iW) {
-          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
-            if ("atrule" === OW.type && WW.test(OW.name)) return iW(OW, mW)
-          })) : this.walk(((OW, mW) => {
-            if ("atrule" === OW.type && OW.name === WW) return iW(OW, mW)
-          })) : (iW = WW, this.walk(((WW, OW) => {
-            if ("atrule" === WW.type) return iW(WW, OW)
+        walkAtRules(RR, JR) {
+          return JR ? RR instanceof RegExp ? this.walk(((GR, yR) => {
+            if ("atrule" === GR.type && RR.test(GR.name)) return JR(GR, yR)
+          })) : this.walk(((GR, yR) => {
+            if ("atrule" === GR.type && GR.name === RR) return JR(GR, yR)
+          })) : (JR = RR, this.walk(((RR, GR) => {
+            if ("atrule" === RR.type) return JR(RR, GR)
           })))
         }
-        walkComments(WW) {
-          return this.walk(((iW, OW) => {
-            if ("comment" === iW.type) return WW(iW, OW)
+        walkComments(RR) {
+          return this.walk(((JR, GR) => {
+            if ("comment" === JR.type) return RR(JR, GR)
           }))
         }
-        walkDecls(WW, iW) {
-          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
-            if ("decl" === OW.type && WW.test(OW.prop)) return iW(OW, mW)
-          })) : this.walk(((OW, mW) => {
-            if ("decl" === OW.type && OW.prop === WW) return iW(OW, mW)
-          })) : (iW = WW, this.walk(((WW, OW) => {
-            if ("decl" === WW.type) return iW(WW, OW)
+        walkDecls(RR, JR) {
+          return JR ? RR instanceof RegExp ? this.walk(((GR, yR) => {
+            if ("decl" === GR.type && RR.test(GR.prop)) return JR(GR, yR)
+          })) : this.walk(((GR, yR) => {
+            if ("decl" === GR.type && GR.prop === RR) return JR(GR, yR)
+          })) : (JR = RR, this.walk(((RR, GR) => {
+            if ("decl" === RR.type) return JR(RR, GR)
           })))
         }
-        walkRules(WW, iW) {
-          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
-            if ("rule" === OW.type && WW.test(OW.selector)) return iW(OW, mW)
-          })) : this.walk(((OW, mW) => {
-            if ("rule" === OW.type && OW.selector === WW) return iW(OW, mW)
-          })) : (iW = WW, this.walk(((WW, OW) => {
-            if ("rule" === WW.type) return iW(WW, OW)
+        walkRules(RR, JR) {
+          return JR ? RR instanceof RegExp ? this.walk(((GR, yR) => {
+            if ("rule" === GR.type && RR.test(GR.selector)) return JR(GR, yR)
+          })) : this.walk(((GR, yR) => {
+            if ("rule" === GR.type && GR.selector === RR) return JR(GR, yR)
+          })) : (JR = RR, this.walk(((RR, GR) => {
+            if ("rule" === RR.type) return JR(RR, GR)
           })))
         }
         get first() {
@@ -2118,64 +2118,64 @@ export const modules = {
           if (this.proxyOf.nodes) return this.proxyOf.nodes[this.proxyOf.nodes.length - 1]
         }
       }
-      return ZW.registerParse = iW => {
-        WW = iW
-      }, ZW.registerRule = WW => {
-        iW = WW
-      }, ZW.registerAtRule = WW => {
-        OW = WW
-      }, ZW.registerRoot = WW => {
-        mW = WW
-      }, Bi = ZW, ZW.default = ZW, ZW.rebuild = WW => {
-        "atrule" === WW.type ? Object.setPrototypeOf(WW, OW.prototype) : "rule" === WW.type ? Object.setPrototypeOf(WW, iW.prototype) : "decl" === WW.type ? Object.setPrototypeOf(WW, PW.prototype) : "comment" === WW.type ? Object.setPrototypeOf(WW, LW.prototype) : "root" === WW.type && Object.setPrototypeOf(WW, mW.prototype), WW[NW] = !0, WW.nodes && WW.nodes.forEach((WW => {
-          ZW.rebuild(WW)
+      return KR.registerParse = JR => {
+        RR = JR
+      }, KR.registerRule = RR => {
+        JR = RR
+      }, KR.registerAtRule = RR => {
+        GR = RR
+      }, KR.registerRoot = RR => {
+        yR = RR
+      }, zJ = KR, KR.default = KR, KR.rebuild = RR => {
+        "atrule" === RR.type ? Object.setPrototypeOf(RR, GR.prototype) : "rule" === RR.type ? Object.setPrototypeOf(RR, JR.prototype) : "decl" === RR.type ? Object.setPrototypeOf(RR, ZR.prototype) : "comment" === RR.type ? Object.setPrototypeOf(RR, qR.prototype) : "root" === RR.type && Object.setPrototypeOf(RR, yR.prototype), RR[uR] = !0, RR.nodes && RR.nodes.forEach((RR => {
+          KR.rebuild(RR)
         }))
-      }, Bi
+      }, zJ
     }
 
-    function DO() {
-      if (Gi) return Ri;
-      Gi = 1;
-      let WW, iW, OW = gO();
-      class mW extends OW {
-        constructor(WW) {
+    function HG() {
+      if (dJ) return jJ;
+      dJ = 1;
+      let RR, JR, GR = DG();
+      class yR extends GR {
+        constructor(RR) {
           super({
             type: "document",
-            ...WW
+            ...RR
           }), this.nodes || (this.nodes = [])
         }
         toResult() {
-          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return new WW(new iW, this, OW).stringify()
+          let GR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new RR(new JR, this, GR).stringify()
         }
       }
-      return mW.registerLazyResult = iW => {
-        WW = iW
-      }, mW.registerProcessor = WW => {
-        iW = WW
-      }, Ri = mW, mW.default = mW, Ri
+      return yR.registerLazyResult = JR => {
+        RR = JR
+      }, yR.registerProcessor = RR => {
+        JR = RR
+      }, jJ = yR, yR.default = yR, jJ
     }
 
-    function VO() {
-      if (ai) return Ii;
-      ai = 1;
-      let WW = {};
-      return Ii = function(iW) {
-        WW[iW] || (WW[iW] = !0, "undefined" !== typeof console && console.warn && console.warn(iW))
+    function oG() {
+      if (YJ) return EJ;
+      YJ = 1;
+      let RR = {};
+      return EJ = function(JR) {
+        RR[JR] || (RR[JR] = !0, "undefined" !== typeof console && console.warn && console.warn(JR))
       }
     }
 
-    function pO() {
-      if (zi) return ri;
-      zi = 1;
-      class WW {
-        constructor(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (this.type = "warning", this.text = WW, iW.node && iW.node.source) {
-            let WW = iW.node.rangeBy(iW);
-            this.line = WW.start.line, this.column = WW.start.column, this.endLine = WW.end.line, this.endColumn = WW.end.column
+    function cG() {
+      if (QJ) return kJ;
+      QJ = 1;
+      class RR {
+        constructor(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (this.type = "warning", this.text = RR, JR.node && JR.node.source) {
+            let RR = JR.node.rangeBy(JR);
+            this.line = RR.start.line, this.column = RR.start.column, this.endLine = RR.end.line, this.endColumn = RR.end.column
           }
-          for (let OW in iW) this[OW] = iW[OW]
+          for (let GR in JR) this[GR] = JR[GR]
         }
         toString() {
           return this.node ? this.node.error(this.text, {
@@ -2185,43 +2185,43 @@ export const modules = {
           }).message : this.plugin ? this.plugin + ": " + this.text : this.text
         }
       }
-      return ri = WW, WW.default = WW, ri
+      return kJ = RR, RR.default = RR, kJ
     }
 
-    function fO() {
-      if (Qi) return Fi;
-      Qi = 1;
-      let WW = pO();
-      class iW {
-        constructor(WW, iW, OW) {
-          this.processor = WW, this.messages = [], this.root = iW, this.opts = OW, this.css = void 0, this.map = void 0
+    function PG() {
+      if (TJ) return FJ;
+      TJ = 1;
+      let RR = cG();
+      class JR {
+        constructor(RR, JR, GR) {
+          this.processor = RR, this.messages = [], this.root = JR, this.opts = GR, this.css = void 0, this.map = void 0
         }
         toString() {
           return this.css
         }
-        warn(iW) {
-          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          OW.plugin || this.lastPlugin && this.lastPlugin.postcssPlugin && (OW.plugin = this.lastPlugin.postcssPlugin);
-          let mW = new WW(iW, OW);
-          return this.messages.push(mW), mW
+        warn(JR) {
+          let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          GR.plugin || this.lastPlugin && this.lastPlugin.postcssPlugin && (GR.plugin = this.lastPlugin.postcssPlugin);
+          let yR = new RR(JR, GR);
+          return this.messages.push(yR), yR
         }
         warnings() {
-          return this.messages.filter((WW => "warning" === WW.type))
+          return this.messages.filter((RR => "warning" === RR.type))
         }
         get content() {
           return this.css
         }
       }
-      return Fi = iW, iW.default = iW, Fi
+      return FJ = JR, JR.default = JR, FJ
     }
 
-    function CO() {
-      if (mO) return OO;
-      mO = 1;
-      let WW = gO();
-      class iW extends WW {
-        constructor(WW) {
-          super(WW), this.type = "atrule"
+    function IG() {
+      if (JG) return RG;
+      JG = 1;
+      let RR = DG();
+      class JR extends RR {
+        constructor(RR) {
+          super(RR), this.type = "atrule"
         }
         append() {
           return this.proxyOf.nodes || (this.nodes = []), super.append(...arguments)
@@ -2230,224 +2230,224 @@ export const modules = {
           return this.proxyOf.nodes || (this.nodes = []), super.prepend(...arguments)
         }
       }
-      return OO = iW, iW.default = iW, WW.registerAtRule(iW), OO
+      return RG = JR, JR.default = JR, RR.registerAtRule(JR), RG
     }
 
-    function XO() {
-      if (NO) return EO;
-      NO = 1;
-      let WW, iW, OW = gO();
-      class mW extends OW {
-        constructor(WW) {
-          super(WW), this.type = "root", this.nodes || (this.nodes = [])
+    function mG() {
+      if (yG) return GG;
+      yG = 1;
+      let RR, JR, GR = DG();
+      class yR extends GR {
+        constructor(RR) {
+          super(RR), this.type = "root", this.nodes || (this.nodes = [])
         }
-        normalize(WW, iW, OW) {
-          let mW = super.normalize(WW);
-          if (iW)
-            if ("prepend" === OW) this.nodes.length > 1 ? iW.raws.before = this.nodes[1].raws.before : delete iW.raws.before;
-            else if (this.first !== iW)
-            for (let EW of mW) EW.raws.before = iW.raws.before;
-          return mW
+        normalize(RR, JR, GR) {
+          let yR = super.normalize(RR);
+          if (JR)
+            if ("prepend" === GR) this.nodes.length > 1 ? JR.raws.before = this.nodes[1].raws.before : delete JR.raws.before;
+            else if (this.first !== JR)
+            for (let tR of yR) tR.raws.before = JR.raws.before;
+          return yR
         }
-        removeChild(WW, iW) {
-          let OW = this.index(WW);
-          return !iW && 0 === OW && this.nodes.length > 1 && (this.nodes[1].raws.before = this.nodes[OW].raws.before), super.removeChild(WW)
+        removeChild(RR, JR) {
+          let GR = this.index(RR);
+          return !JR && 0 === GR && this.nodes.length > 1 && (this.nodes[1].raws.before = this.nodes[GR].raws.before), super.removeChild(RR)
         }
         toResult() {
-          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return new WW(new iW, this, OW).stringify()
+          let GR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new RR(new JR, this, GR).stringify()
         }
       }
-      return mW.registerLazyResult = iW => {
-        WW = iW
-      }, mW.registerProcessor = WW => {
-        iW = WW
-      }, EO = mW, mW.default = mW, OW.registerRoot(mW), EO
+      return yR.registerLazyResult = JR => {
+        RR = JR
+      }, yR.registerProcessor = RR => {
+        JR = RR
+      }, GG = yR, yR.default = yR, GR.registerRoot(yR), GG
     }
 
-    function BO() {
-      if (LO) return PO;
-      LO = 1;
-      let WW = {
-        comma: iW => WW.split(iW, [","], !0),
-        space: iW => WW.split(iW, [" ", "\n", "\t"]),
-        split(WW, iW, OW) {
-          let mW = [],
-            EW = "",
-            NW = !1,
-            PW = 0,
-            LW = !1,
-            cW = "",
-            wW = !1;
-          for (let tW of WW) wW ? wW = !1 : "\\" === tW ? wW = !0 : LW ? tW === cW && (LW = !1) : '"' === tW || "'" === tW ? (LW = !0, cW = tW) : "(" === tW ? PW += 1 : ")" === tW ? PW > 0 && (PW -= 1) : 0 === PW && iW.includes(tW) && (NW = !0), NW ? ("" !== EW && mW.push(EW.trim()), EW = "", NW = !1) : EW += tW;
-          return (OW || "" !== EW) && mW.push(EW.trim()), mW
+    function zG() {
+      if (uG) return tG;
+      uG = 1;
+      let RR = {
+        comma: JR => RR.split(JR, [","], !0),
+        space: JR => RR.split(JR, [" ", "\n", "\t"]),
+        split(RR, JR, GR) {
+          let yR = [],
+            tR = "",
+            uR = !1,
+            ZR = 0,
+            qR = !1,
+            iR = "",
+            fR = !1;
+          for (let VR of RR) fR ? fR = !1 : "\\" === VR ? fR = !0 : qR ? VR === iR && (qR = !1) : '"' === VR || "'" === VR ? (qR = !0, iR = VR) : "(" === VR ? ZR += 1 : ")" === VR ? ZR > 0 && (ZR -= 1) : 0 === ZR && JR.includes(VR) && (uR = !0), uR ? ("" !== tR && yR.push(tR.trim()), tR = "", uR = !1) : tR += VR;
+          return (GR || "" !== tR) && yR.push(tR.trim()), yR
         }
       };
-      return PO = WW, WW.default = WW, PO
+      return tG = RR, RR.default = RR, tG
     }
 
-    function qO() {
-      if (wO) return cO;
-      wO = 1;
-      let WW = gO(),
-        iW = BO();
-      class OW extends WW {
-        constructor(WW) {
-          super(WW), this.type = "rule", this.nodes || (this.nodes = [])
+    function SG() {
+      if (qG) return ZG;
+      qG = 1;
+      let RR = DG(),
+        JR = zG();
+      class GR extends RR {
+        constructor(RR) {
+          super(RR), this.type = "rule", this.nodes || (this.nodes = [])
         }
         get selectors() {
-          return iW.comma(this.selector)
+          return JR.comma(this.selector)
         }
-        set selectors(WW) {
-          let iW = this.selector ? this.selector.match(/,\s*/) : null,
-            OW = iW ? iW[0] : "," + this.raw("between", "beforeOpen");
-          this.selector = WW.join(OW)
+        set selectors(RR) {
+          let JR = this.selector ? this.selector.match(/,\s*/) : null,
+            GR = JR ? JR[0] : "," + this.raw("between", "beforeOpen");
+          this.selector = RR.join(GR)
         }
       }
-      return cO = OW, OW.default = OW, WW.registerRule(OW), cO
+      return ZG = GR, GR.default = GR, RR.registerRule(GR), ZG
     }
 
-    function RO() {
-      if (ZO) return tO;
-      ZO = 1;
-      let WW = nO(),
-        iW = function() {
-          if (iO) return WO;
-          iO = 1;
-          const WW = "'".charCodeAt(0),
-            iW = '"'.charCodeAt(0),
-            OW = "\\".charCodeAt(0),
-            mW = "/".charCodeAt(0),
-            EW = "\n".charCodeAt(0),
-            NW = " ".charCodeAt(0),
-            PW = "\f".charCodeAt(0),
-            LW = "\t".charCodeAt(0),
-            cW = "\r".charCodeAt(0),
-            wW = "[".charCodeAt(0),
-            tW = "]".charCodeAt(0),
-            ZW = "(".charCodeAt(0),
-            xW = ")".charCodeAt(0),
-            lW = "{".charCodeAt(0),
-            AW = "}".charCodeAt(0),
-            bW = ";".charCodeAt(0),
-            jW = "*".charCodeAt(0),
-            UW = ":".charCodeAt(0),
-            kW = "@".charCodeAt(0),
-            sW = /[\t\n\f\r "#'()/;[\\\]{}]/g,
-            MW = /[\t\n\f\r !"#'():;@[\\\]{}]|\/(?=\*)/g,
-            KW = /.[\r\n"'(/\\]/,
-            SW = /[\da-f]/i;
-          return WO = function(YW) {
-            let yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-              gW = YW.css.valueOf(),
-              DW = vW.ignoreErrors,
-              VW = gW.length,
-              pW = 0,
-              fW = [],
-              CW = [];
+    function jG() {
+      if (fG) return iG;
+      fG = 1;
+      let RR = gG(),
+        JR = function() {
+          if (hJ) return sJ;
+          hJ = 1;
+          const RR = "'".charCodeAt(0),
+            JR = '"'.charCodeAt(0),
+            GR = "\\".charCodeAt(0),
+            yR = "/".charCodeAt(0),
+            tR = "\n".charCodeAt(0),
+            uR = " ".charCodeAt(0),
+            ZR = "\f".charCodeAt(0),
+            qR = "\t".charCodeAt(0),
+            iR = "\r".charCodeAt(0),
+            fR = "[".charCodeAt(0),
+            VR = "]".charCodeAt(0),
+            KR = "(".charCodeAt(0),
+            wR = ")".charCodeAt(0),
+            rR = "{".charCodeAt(0),
+            eR = "}".charCodeAt(0),
+            aR = ";".charCodeAt(0),
+            LR = "*".charCodeAt(0),
+            nR = ":".charCodeAt(0),
+            UR = "@".charCodeAt(0),
+            WR = /[\t\n\f\r "#'()/;[\\\]{}]/g,
+            AR = /[\t\n\f\r !"#'():;@[\\\]{}]|\/(?=\*)/g,
+            CR = /.[\r\n"'(/\\]/,
+            XR = /[\da-f]/i;
+          return sJ = function(MR) {
+            let BR, lR, pR, gR, bR, vR, OR, xR, NR, DR, HR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+              oR = MR.css.valueOf(),
+              cR = HR.ignoreErrors,
+              PR = oR.length,
+              IR = 0,
+              mR = [],
+              zR = [];
 
-            function XW(WW) {
-              throw YW.error("Unclosed " + WW, pW)
+            function SR(RR) {
+              throw MR.error("Unclosed " + RR, IR)
             }
             return {
-              back: function(WW) {
-                CW.push(WW)
+              back: function(RR) {
+                zR.push(RR)
               },
               endOfFile: function() {
-                return 0 === CW.length && pW >= VW
+                return 0 === zR.length && IR >= PR
               },
-              nextToken: function(YW) {
-                if (CW.length) return CW.pop();
-                if (pW >= VW) return;
-                let vW = !!YW && YW.ignoreUnclosed;
-                switch (yW = gW.charCodeAt(pW), yW) {
-                  case EW:
-                  case NW:
-                  case LW:
-                  case cW:
-                  case PW:
-                    TW = pW;
+              nextToken: function(MR) {
+                if (zR.length) return zR.pop();
+                if (IR >= PR) return;
+                let HR = !!MR && MR.ignoreUnclosed;
+                switch (BR = oR.charCodeAt(IR), BR) {
+                  case tR:
+                  case uR:
+                  case qR:
+                  case iR:
+                  case ZR:
+                    lR = IR;
                     do {
-                      TW += 1, yW = gW.charCodeAt(TW)
-                    } while (yW === NW || yW === EW || yW === LW || yW === cW || yW === PW);
-                    eW = ["space", gW.slice(pW, TW)], pW = TW - 1;
+                      lR += 1, BR = oR.charCodeAt(lR)
+                    } while (BR === uR || BR === tR || BR === qR || BR === iR || BR === ZR);
+                    DR = ["space", oR.slice(IR, lR)], IR = lR - 1;
                     break;
-                  case wW:
-                  case tW:
-                  case lW:
-                  case AW:
-                  case UW:
-                  case bW:
-                  case xW: {
-                    let WW = String.fromCharCode(yW);
-                    eW = [WW, WW, pW];
+                  case fR:
+                  case VR:
+                  case rR:
+                  case eR:
+                  case nR:
+                  case aR:
+                  case wR: {
+                    let RR = String.fromCharCode(BR);
+                    DR = [RR, RR, IR];
                     break
                   }
-                  case ZW:
-                    if (oW = fW.length ? fW.pop()[1] : "", dW = gW.charCodeAt(pW + 1), "url" === oW && dW !== WW && dW !== iW && dW !== NW && dW !== EW && dW !== LW && dW !== PW && dW !== cW) {
-                      TW = pW;
+                  case KR:
+                    if (xR = mR.length ? mR.pop()[1] : "", NR = oR.charCodeAt(IR + 1), "url" === xR && NR !== RR && NR !== JR && NR !== uR && NR !== tR && NR !== qR && NR !== ZR && NR !== iR) {
+                      lR = IR;
                       do {
-                        if (nW = !1, TW = gW.indexOf(")", TW + 1), -1 === TW) {
-                          if (DW || vW) {
-                            TW = pW;
+                        if (vR = !1, lR = oR.indexOf(")", lR + 1), -1 === lR) {
+                          if (cR || HR) {
+                            lR = IR;
                             break
                           }
-                          XW("bracket")
+                          SR("bracket")
                         }
-                        for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
-                      } while (nW);
-                      eW = ["brackets", gW.slice(pW, TW + 1), pW, TW], pW = TW
-                    } else TW = gW.indexOf(")", pW + 1), hW = gW.slice(pW, TW + 1), -1 === TW || KW.test(hW) ? eW = ["(", "(", pW] : (eW = ["brackets", hW, pW, TW], pW = TW);
+                        for (OR = lR; oR.charCodeAt(OR - 1) === GR;) OR -= 1, vR = !vR
+                      } while (vR);
+                      DR = ["brackets", oR.slice(IR, lR + 1), IR, lR], IR = lR
+                    } else lR = oR.indexOf(")", IR + 1), gR = oR.slice(IR, lR + 1), -1 === lR || CR.test(gR) ? DR = ["(", "(", IR] : (DR = ["brackets", gR, IR, lR], IR = lR);
                     break;
-                  case WW:
-                  case iW:
-                    JW = yW === WW ? "'" : '"', TW = pW;
+                  case RR:
+                  case JR:
+                    pR = BR === RR ? "'" : '"', lR = IR;
                     do {
-                      if (nW = !1, TW = gW.indexOf(JW, TW + 1), -1 === TW) {
-                        if (DW || vW) {
-                          TW = pW + 1;
+                      if (vR = !1, lR = oR.indexOf(pR, lR + 1), -1 === lR) {
+                        if (cR || HR) {
+                          lR = IR + 1;
                           break
                         }
-                        XW("string")
+                        SR("string")
                       }
-                      for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
-                    } while (nW);
-                    eW = ["string", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                      for (OR = lR; oR.charCodeAt(OR - 1) === GR;) OR -= 1, vR = !vR
+                    } while (vR);
+                    DR = ["string", oR.slice(IR, lR + 1), IR, lR], IR = lR;
                     break;
-                  case kW:
-                    sW.lastIndex = pW + 1, sW.test(gW), TW = 0 === sW.lastIndex ? gW.length - 1 : sW.lastIndex - 2, eW = ["at-word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                  case UR:
+                    WR.lastIndex = IR + 1, WR.test(oR), lR = 0 === WR.lastIndex ? oR.length - 1 : WR.lastIndex - 2, DR = ["at-word", oR.slice(IR, lR + 1), IR, lR], IR = lR;
                     break;
-                  case OW:
-                    for (TW = pW, HW = !0; gW.charCodeAt(TW + 1) === OW;) TW += 1, HW = !HW;
-                    if (yW = gW.charCodeAt(TW + 1), HW && yW !== mW && yW !== NW && yW !== EW && yW !== LW && yW !== cW && yW !== PW && (TW += 1, SW.test(gW.charAt(TW)))) {
-                      for (; SW.test(gW.charAt(TW + 1));) TW += 1;
-                      gW.charCodeAt(TW + 1) === NW && (TW += 1)
+                  case GR:
+                    for (lR = IR, bR = !0; oR.charCodeAt(lR + 1) === GR;) lR += 1, bR = !bR;
+                    if (BR = oR.charCodeAt(lR + 1), bR && BR !== yR && BR !== uR && BR !== tR && BR !== qR && BR !== iR && BR !== ZR && (lR += 1, XR.test(oR.charAt(lR)))) {
+                      for (; XR.test(oR.charAt(lR + 1));) lR += 1;
+                      oR.charCodeAt(lR + 1) === uR && (lR += 1)
                     }
-                    eW = ["word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    DR = ["word", oR.slice(IR, lR + 1), IR, lR], IR = lR;
                     break;
                   default:
-                    yW === mW && gW.charCodeAt(pW + 1) === jW ? (TW = gW.indexOf("*/", pW + 2) + 1, 0 === TW && (DW || vW ? TW = gW.length : XW("comment")), eW = ["comment", gW.slice(pW, TW + 1), pW, TW], pW = TW) : (MW.lastIndex = pW + 1, MW.test(gW), TW = 0 === MW.lastIndex ? gW.length - 1 : MW.lastIndex - 2, eW = ["word", gW.slice(pW, TW + 1), pW, TW], fW.push(eW), pW = TW)
+                    BR === yR && oR.charCodeAt(IR + 1) === LR ? (lR = oR.indexOf("*/", IR + 2) + 1, 0 === lR && (cR || HR ? lR = oR.length : SR("comment")), DR = ["comment", oR.slice(IR, lR + 1), IR, lR], IR = lR) : (AR.lastIndex = IR + 1, AR.test(oR), lR = 0 === AR.lastIndex ? oR.length - 1 : AR.lastIndex - 2, DR = ["word", oR.slice(IR, lR + 1), IR, lR], mR.push(DR), IR = lR)
                 }
-                return pW++, eW
+                return IR++, DR
               },
               position: function() {
-                return pW
+                return IR
               }
             }
-          }, WO
+          }, sJ
         }(),
-        OW = vO(),
-        mW = CO(),
-        EW = XO(),
-        NW = qO();
-      const PW = {
+        GR = NG(),
+        yR = IG(),
+        tR = mG(),
+        uR = SG();
+      const ZR = {
         empty: !0,
         space: !0
       };
-      return tO = class {
-        constructor(WW) {
-          this.input = WW, this.root = new EW, this.current = this.root, this.spaces = "", this.semicolon = !1, this.createTokenizer(), this.root.source = {
-            input: WW,
+      return iG = class {
+        constructor(RR) {
+          this.input = RR, this.root = new tR, this.current = this.root, this.spaces = "", this.semicolon = !1, this.createTokenizer(), this.root.source = {
+            input: RR,
             start: {
               column: 1,
               line: 1,
@@ -2455,321 +2455,321 @@ export const modules = {
             }
           }
         }
-        atrule(WW) {
-          let iW, OW, EW, NW = new mW;
-          NW.name = WW[1].slice(1), "" === NW.name && this.unnamedAtrule(NW, WW), this.init(NW, WW[2]);
-          let PW = !1,
-            LW = !1,
-            cW = [],
-            wW = [];
+        atrule(RR) {
+          let JR, GR, tR, uR = new yR;
+          uR.name = RR[1].slice(1), "" === uR.name && this.unnamedAtrule(uR, RR), this.init(uR, RR[2]);
+          let ZR = !1,
+            qR = !1,
+            iR = [],
+            fR = [];
           for (; !this.tokenizer.endOfFile();) {
-            if (iW = (WW = this.tokenizer.nextToken())[0], "(" === iW || "[" === iW ? wW.push("(" === iW ? ")" : "]") : "{" === iW && wW.length > 0 ? wW.push("}") : iW === wW[wW.length - 1] && wW.pop(), 0 === wW.length) {
-              if (";" === iW) {
-                NW.source.end = this.Vk(WW[2]), NW.source.end.offset++, this.semicolon = !0;
+            if (JR = (RR = this.tokenizer.nextToken())[0], "(" === JR || "[" === JR ? fR.push("(" === JR ? ")" : "]") : "{" === JR && fR.length > 0 ? fR.push("}") : JR === fR[fR.length - 1] && fR.pop(), 0 === fR.length) {
+              if (";" === JR) {
+                uR.source.end = this.vW(RR[2]), uR.source.end.offset++, this.semicolon = !0;
                 break
               }
-              if ("{" === iW) {
-                LW = !0;
+              if ("{" === JR) {
+                qR = !0;
                 break
               }
-              if ("}" === iW) {
-                if (cW.length > 0) {
-                  for (EW = cW.length - 1, OW = cW[EW]; OW && "space" === OW[0];) OW = cW[--EW];
-                  OW && (NW.source.end = this.Vk(OW[3] || OW[2]), NW.source.end.offset++)
+              if ("}" === JR) {
+                if (iR.length > 0) {
+                  for (tR = iR.length - 1, GR = iR[tR]; GR && "space" === GR[0];) GR = iR[--tR];
+                  GR && (uR.source.end = this.vW(GR[3] || GR[2]), uR.source.end.offset++)
                 }
-                this.end(WW);
+                this.end(RR);
                 break
               }
-              cW.push(WW)
-            } else cW.push(WW);
+              iR.push(RR)
+            } else iR.push(RR);
             if (this.tokenizer.endOfFile()) {
-              PW = !0;
+              ZR = !0;
               break
             }
           }
-          NW.raws.between = this.spacesAndCommentsFromEnd(cW), cW.length ? (NW.raws.afterName = this.spacesAndCommentsFromStart(cW), this.raw(NW, "params", cW), PW && (WW = cW[cW.length - 1], NW.source.end = this.Vk(WW[3] || WW[2]), NW.source.end.offset++, this.spaces = NW.raws.between, NW.raws.between = "")) : (NW.raws.afterName = "", NW.params = ""), LW && (NW.nodes = [], this.current = NW)
+          uR.raws.between = this.spacesAndCommentsFromEnd(iR), iR.length ? (uR.raws.afterName = this.spacesAndCommentsFromStart(iR), this.raw(uR, "params", iR), ZR && (RR = iR[iR.length - 1], uR.source.end = this.vW(RR[3] || RR[2]), uR.source.end.offset++, this.spaces = uR.raws.between, uR.raws.between = "")) : (uR.raws.afterName = "", uR.params = ""), qR && (uR.nodes = [], this.current = uR)
         }
-        checkMissedSemicolon(WW) {
-          let iW = this.colon(WW);
-          if (!1 === iW) return;
-          let OW, mW = 0;
-          for (let EW = iW - 1; EW >= 0 && (OW = WW[EW], "space" === OW[0] || (mW += 1, 2 !== mW)); EW--);
-          throw this.input.error("Missed semicolon", "word" === OW[0] ? OW[3] + 1 : OW[2])
+        checkMissedSemicolon(RR) {
+          let JR = this.colon(RR);
+          if (!1 === JR) return;
+          let GR, yR = 0;
+          for (let tR = JR - 1; tR >= 0 && (GR = RR[tR], "space" === GR[0] || (yR += 1, 2 !== yR)); tR--);
+          throw this.input.error("Missed semicolon", "word" === GR[0] ? GR[3] + 1 : GR[2])
         }
-        colon(WW) {
-          let iW, OW, mW, EW = 0;
-          for (let [NW, PW] of WW.entries()) {
-            if (iW = PW, OW = iW[0], "(" === OW && (EW += 1), ")" === OW && (EW -= 1), 0 === EW && ":" === OW) {
-              if (mW) {
-                if ("word" === mW[0] && "progid" === mW[1]) continue;
-                return NW
+        colon(RR) {
+          let JR, GR, yR, tR = 0;
+          for (let [uR, ZR] of RR.entries()) {
+            if (JR = ZR, GR = JR[0], "(" === GR && (tR += 1), ")" === GR && (tR -= 1), 0 === tR && ":" === GR) {
+              if (yR) {
+                if ("word" === yR[0] && "progid" === yR[1]) continue;
+                return uR
               }
-              this.doubleColon(iW)
+              this.doubleColon(JR)
             }
-            mW = iW
+            yR = JR
           }
           return !1
         }
-        comment(WW) {
-          let iW = new OW;
-          this.init(iW, WW[2]), iW.source.end = this.Vk(WW[3] || WW[2]), iW.source.end.offset++;
-          let mW = WW[1].slice(2, -2);
-          if (/^\s*$/.test(mW)) iW.text = "", iW.raws.left = mW, iW.raws.right = "";
+        comment(RR) {
+          let JR = new GR;
+          this.init(JR, RR[2]), JR.source.end = this.vW(RR[3] || RR[2]), JR.source.end.offset++;
+          let yR = RR[1].slice(2, -2);
+          if (/^\s*$/.test(yR)) JR.text = "", JR.raws.left = yR, JR.raws.right = "";
           else {
-            let WW = mW.match(/^(\s*)([^]*\S)(\s*)$/);
-            iW.text = WW[2], iW.raws.left = WW[1], iW.raws.right = WW[3]
+            let RR = yR.match(/^(\s*)([^]*\S)(\s*)$/);
+            JR.text = RR[2], JR.raws.left = RR[1], JR.raws.right = RR[3]
           }
         }
         createTokenizer() {
-          this.tokenizer = iW(this.input)
+          this.tokenizer = JR(this.input)
         }
-        decl(iW, OW) {
-          let mW = new WW;
-          this.init(mW, iW[0][2]);
-          let EW, NW = iW[iW.length - 1];
-          for (";" === NW[0] && (this.semicolon = !0, iW.pop()), mW.source.end = this.Vk(NW[3] || NW[2] || function(WW) {
-              for (let iW = WW.length - 1; iW >= 0; iW--) {
-                let OW = WW[iW],
-                  mW = OW[3] || OW[2];
-                if (mW) return mW
+        decl(JR, GR) {
+          let yR = new RR;
+          this.init(yR, JR[0][2]);
+          let tR, uR = JR[JR.length - 1];
+          for (";" === uR[0] && (this.semicolon = !0, JR.pop()), yR.source.end = this.vW(uR[3] || uR[2] || function(RR) {
+              for (let JR = RR.length - 1; JR >= 0; JR--) {
+                let GR = RR[JR],
+                  yR = GR[3] || GR[2];
+                if (yR) return yR
               }
-            }(iW)), mW.source.end.offset++;
-            "word" !== iW[0][0];) 1 === iW.length && this.unknownWord(iW), mW.raws.before += iW.shift()[1];
-          for (mW.source.start = this.Vk(iW[0][2]), mW.prop = ""; iW.length;) {
-            let WW = iW[0][0];
-            if (":" === WW || "space" === WW || "comment" === WW) break;
-            mW.prop += iW.shift()[1]
+            }(JR)), yR.source.end.offset++;
+            "word" !== JR[0][0];) 1 === JR.length && this.unknownWord(JR), yR.raws.before += JR.shift()[1];
+          for (yR.source.start = this.vW(JR[0][2]), yR.prop = ""; JR.length;) {
+            let RR = JR[0][0];
+            if (":" === RR || "space" === RR || "comment" === RR) break;
+            yR.prop += JR.shift()[1]
           }
-          for (mW.raws.between = ""; iW.length;) {
-            if (EW = iW.shift(), ":" === EW[0]) {
-              mW.raws.between += EW[1];
+          for (yR.raws.between = ""; JR.length;) {
+            if (tR = JR.shift(), ":" === tR[0]) {
+              yR.raws.between += tR[1];
               break
             }
-            "word" === EW[0] && /\w/.test(EW[1]) && this.unknownWord([EW]), mW.raws.between += EW[1]
+            "word" === tR[0] && /\w/.test(tR[1]) && this.unknownWord([tR]), yR.raws.between += tR[1]
           }
-          "_" !== mW.prop[0] && "*" !== mW.prop[0] || (mW.raws.before += mW.prop[0], mW.prop = mW.prop.slice(1));
-          let PW, LW = [];
-          for (; iW.length && (PW = iW[0][0], "space" === PW || "comment" === PW);) LW.push(iW.shift());
-          this.precheckMissedSemicolon(iW);
-          for (let WW = iW.length - 1; WW >= 0; WW--) {
-            if (EW = iW[WW], "!important" === EW[1].toLowerCase()) {
-              mW.important = !0;
-              let OW = this.stringFrom(iW, WW);
-              OW = this.spacesFromEnd(iW) + OW, " !important" !== OW && (mW.raws.important = OW);
+          "_" !== yR.prop[0] && "*" !== yR.prop[0] || (yR.raws.before += yR.prop[0], yR.prop = yR.prop.slice(1));
+          let ZR, qR = [];
+          for (; JR.length && (ZR = JR[0][0], "space" === ZR || "comment" === ZR);) qR.push(JR.shift());
+          this.precheckMissedSemicolon(JR);
+          for (let RR = JR.length - 1; RR >= 0; RR--) {
+            if (tR = JR[RR], "!important" === tR[1].toLowerCase()) {
+              yR.important = !0;
+              let GR = this.stringFrom(JR, RR);
+              GR = this.spacesFromEnd(JR) + GR, " !important" !== GR && (yR.raws.important = GR);
               break
             }
-            if ("important" === EW[1].toLowerCase()) {
-              let OW = iW.slice(0),
-                EW = "";
-              for (let iW = WW; iW > 0; iW--) {
-                let WW = OW[iW][0];
-                if (0 === EW.trim().indexOf("!") && "space" !== WW) break;
-                EW = OW.pop()[1] + EW
+            if ("important" === tR[1].toLowerCase()) {
+              let GR = JR.slice(0),
+                tR = "";
+              for (let JR = RR; JR > 0; JR--) {
+                let RR = GR[JR][0];
+                if (0 === tR.trim().indexOf("!") && "space" !== RR) break;
+                tR = GR.pop()[1] + tR
               }
-              0 === EW.trim().indexOf("!") && (mW.important = !0, mW.raws.important = EW, iW = OW)
+              0 === tR.trim().indexOf("!") && (yR.important = !0, yR.raws.important = tR, JR = GR)
             }
-            if ("space" !== EW[0] && "comment" !== EW[0]) break
+            if ("space" !== tR[0] && "comment" !== tR[0]) break
           }
-          iW.some((WW => "space" !== WW[0] && "comment" !== WW[0])) && (mW.raws.between += LW.map((WW => WW[1])).join(""), LW = []), this.raw(mW, "value", LW.concat(iW), OW), mW.value.includes(":") && !OW && this.checkMissedSemicolon(iW)
+          JR.some((RR => "space" !== RR[0] && "comment" !== RR[0])) && (yR.raws.between += qR.map((RR => RR[1])).join(""), qR = []), this.raw(yR, "value", qR.concat(JR), GR), yR.value.includes(":") && !GR && this.checkMissedSemicolon(JR)
         }
-        doubleColon(WW) {
+        doubleColon(RR) {
           throw this.input.error("Double colon", {
-            offset: WW[2]
+            offset: RR[2]
           }, {
-            offset: WW[2] + WW[1].length
+            offset: RR[2] + RR[1].length
           })
         }
-        emptyRule(WW) {
-          let iW = new NW;
-          this.init(iW, WW[2]), iW.selector = "", iW.raws.between = "", this.current = iW
+        emptyRule(RR) {
+          let JR = new uR;
+          this.init(JR, RR[2]), JR.selector = "", JR.raws.between = "", this.current = JR
         }
-        end(WW) {
-          this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.semicolon = !1, this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.spaces = "", this.current.parent ? (this.current.source.end = this.Vk(WW[2]), this.current.source.end.offset++, this.current = this.current.parent) : this.unexpectedClose(WW)
+        end(RR) {
+          this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.semicolon = !1, this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.spaces = "", this.current.parent ? (this.current.source.end = this.vW(RR[2]), this.current.source.end.offset++, this.current = this.current.parent) : this.unexpectedClose(RR)
         }
         endFile() {
-          this.current.parent && this.unclosedBlock(), this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.root.source.end = this.Vk(this.tokenizer.position())
+          this.current.parent && this.unclosedBlock(), this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.root.source.end = this.vW(this.tokenizer.position())
         }
-        freeSemicolon(WW) {
-          if (this.spaces += WW[1], this.current.nodes) {
-            let WW = this.current.nodes[this.current.nodes.length - 1];
-            WW && "rule" === WW.type && !WW.raws.ownSemicolon && (WW.raws.ownSemicolon = this.spaces, this.spaces = "")
+        freeSemicolon(RR) {
+          if (this.spaces += RR[1], this.current.nodes) {
+            let RR = this.current.nodes[this.current.nodes.length - 1];
+            RR && "rule" === RR.type && !RR.raws.ownSemicolon && (RR.raws.ownSemicolon = this.spaces, this.spaces = "")
           }
         }
-        Vk(WW) {
-          let iW = this.input.fromOffset(WW);
+        vW(RR) {
+          let JR = this.input.fromOffset(RR);
           return {
-            column: iW.col,
-            line: iW.line,
-            offset: WW
+            column: JR.col,
+            line: JR.line,
+            offset: RR
           }
         }
-        init(WW, iW) {
-          this.current.push(WW), WW.source = {
+        init(RR, JR) {
+          this.current.push(RR), RR.source = {
             input: this.input,
-            start: this.Vk(iW)
-          }, WW.raws.before = this.spaces, this.spaces = "", "comment" !== WW.type && (this.semicolon = !1)
+            start: this.vW(JR)
+          }, RR.raws.before = this.spaces, this.spaces = "", "comment" !== RR.type && (this.semicolon = !1)
         }
-        other(WW) {
-          let iW = !1,
-            OW = null,
-            mW = !1,
-            EW = null,
-            NW = [],
-            PW = WW[1].startsWith("--"),
-            LW = [],
-            cW = WW;
-          for (; cW;) {
-            if (OW = cW[0], LW.push(cW), "(" === OW || "[" === OW) EW || (EW = cW), NW.push("(" === OW ? ")" : "]");
-            else if (PW && mW && "{" === OW) EW || (EW = cW), NW.push("}");
-            else if (0 === NW.length) {
-              if (";" === OW) {
-                if (mW) return void this.decl(LW, PW);
+        other(RR) {
+          let JR = !1,
+            GR = null,
+            yR = !1,
+            tR = null,
+            uR = [],
+            ZR = RR[1].startsWith("--"),
+            qR = [],
+            iR = RR;
+          for (; iR;) {
+            if (GR = iR[0], qR.push(iR), "(" === GR || "[" === GR) tR || (tR = iR), uR.push("(" === GR ? ")" : "]");
+            else if (ZR && yR && "{" === GR) tR || (tR = iR), uR.push("}");
+            else if (0 === uR.length) {
+              if (";" === GR) {
+                if (yR) return void this.decl(qR, ZR);
                 break
               }
-              if ("{" === OW) return void this.rule(LW);
-              if ("}" === OW) {
-                this.tokenizer.back(LW.pop()), iW = !0;
+              if ("{" === GR) return void this.rule(qR);
+              if ("}" === GR) {
+                this.tokenizer.back(qR.pop()), JR = !0;
                 break
               }
-              ":" === OW && (mW = !0)
-            } else OW === NW[NW.length - 1] && (NW.pop(), 0 === NW.length && (EW = null));
-            cW = this.tokenizer.nextToken()
+              ":" === GR && (yR = !0)
+            } else GR === uR[uR.length - 1] && (uR.pop(), 0 === uR.length && (tR = null));
+            iR = this.tokenizer.nextToken()
           }
-          if (this.tokenizer.endOfFile() && (iW = !0), NW.length > 0 && this.unclosedBracket(EW), iW && mW) {
-            if (!PW)
-              for (; LW.length && (cW = LW[LW.length - 1][0], "space" === cW || "comment" === cW);) this.tokenizer.back(LW.pop());
-            this.decl(LW, PW)
-          } else this.unknownWord(LW)
+          if (this.tokenizer.endOfFile() && (JR = !0), uR.length > 0 && this.unclosedBracket(tR), JR && yR) {
+            if (!ZR)
+              for (; qR.length && (iR = qR[qR.length - 1][0], "space" === iR || "comment" === iR);) this.tokenizer.back(qR.pop());
+            this.decl(qR, ZR)
+          } else this.unknownWord(qR)
         }
         parse() {
-          let WW;
-          for (; !this.tokenizer.endOfFile();) switch (WW = this.tokenizer.nextToken(), WW[0]) {
+          let RR;
+          for (; !this.tokenizer.endOfFile();) switch (RR = this.tokenizer.nextToken(), RR[0]) {
             case "space":
-              this.spaces += WW[1];
+              this.spaces += RR[1];
               break;
             case ";":
-              this.freeSemicolon(WW);
+              this.freeSemicolon(RR);
               break;
             case "}":
-              this.end(WW);
+              this.end(RR);
               break;
             case "comment":
-              this.comment(WW);
+              this.comment(RR);
               break;
             case "at-word":
-              this.atrule(WW);
+              this.atrule(RR);
               break;
             case "{":
-              this.emptyRule(WW);
+              this.emptyRule(RR);
               break;
             default:
-              this.other(WW)
+              this.other(RR)
           }
           this.endFile()
         }
         precheckMissedSemicolon() {}
-        raw(WW, iW, OW, mW) {
-          let EW, NW, LW, cW, wW = OW.length,
-            tW = "",
-            ZW = !0;
-          for (let xW = 0; xW < wW; xW += 1) EW = OW[xW], NW = EW[0], "space" !== NW || xW !== wW - 1 || mW ? "comment" === NW ? (cW = OW[xW - 1] ? OW[xW - 1][0] : "empty", LW = OW[xW + 1] ? OW[xW + 1][0] : "empty", PW[cW] || PW[LW] || "," === tW.slice(-1) ? ZW = !1 : tW += EW[1]) : tW += EW[1] : ZW = !1;
-          if (!ZW) {
-            let mW = OW.reduce(((WW, iW) => WW + iW[1]), "");
-            WW.raws[iW] = {
-              raw: mW,
-              value: tW
+        raw(RR, JR, GR, yR) {
+          let tR, uR, qR, iR, fR = GR.length,
+            VR = "",
+            KR = !0;
+          for (let wR = 0; wR < fR; wR += 1) tR = GR[wR], uR = tR[0], "space" !== uR || wR !== fR - 1 || yR ? "comment" === uR ? (iR = GR[wR - 1] ? GR[wR - 1][0] : "empty", qR = GR[wR + 1] ? GR[wR + 1][0] : "empty", ZR[iR] || ZR[qR] || "," === VR.slice(-1) ? KR = !1 : VR += tR[1]) : VR += tR[1] : KR = !1;
+          if (!KR) {
+            let yR = GR.reduce(((RR, JR) => RR + JR[1]), "");
+            RR.raws[JR] = {
+              raw: yR,
+              value: VR
             }
           }
-          WW[iW] = tW
+          RR[JR] = VR
         }
-        rule(WW) {
-          WW.pop();
-          let iW = new NW;
-          this.init(iW, WW[0][2]), iW.raws.between = this.spacesAndCommentsFromEnd(WW), this.raw(iW, "selector", WW), this.current = iW
+        rule(RR) {
+          RR.pop();
+          let JR = new uR;
+          this.init(JR, RR[0][2]), JR.raws.between = this.spacesAndCommentsFromEnd(RR), this.raw(JR, "selector", RR), this.current = JR
         }
-        spacesAndCommentsFromEnd(WW) {
-          let iW, OW = "";
-          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW || "comment" === iW);) OW = WW.pop()[1] + OW;
-          return OW
+        spacesAndCommentsFromEnd(RR) {
+          let JR, GR = "";
+          for (; RR.length && (JR = RR[RR.length - 1][0], "space" === JR || "comment" === JR);) GR = RR.pop()[1] + GR;
+          return GR
         }
-        spacesAndCommentsFromStart(WW) {
-          let iW, OW = "";
-          for (; WW.length && (iW = WW[0][0], "space" === iW || "comment" === iW);) OW += WW.shift()[1];
-          return OW
+        spacesAndCommentsFromStart(RR) {
+          let JR, GR = "";
+          for (; RR.length && (JR = RR[0][0], "space" === JR || "comment" === JR);) GR += RR.shift()[1];
+          return GR
         }
-        spacesFromEnd(WW) {
-          let iW, OW = "";
-          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW);) OW = WW.pop()[1] + OW;
-          return OW
+        spacesFromEnd(RR) {
+          let JR, GR = "";
+          for (; RR.length && (JR = RR[RR.length - 1][0], "space" === JR);) GR = RR.pop()[1] + GR;
+          return GR
         }
-        stringFrom(WW, iW) {
-          let OW = "";
-          for (let mW = iW; mW < WW.length; mW++) OW += WW[mW][1];
-          return WW.splice(iW, WW.length - iW), OW
+        stringFrom(RR, JR) {
+          let GR = "";
+          for (let yR = JR; yR < RR.length; yR++) GR += RR[yR][1];
+          return RR.splice(JR, RR.length - JR), GR
         }
         unclosedBlock() {
-          let WW = this.current.source.start;
-          throw this.input.error("Unclosed block", WW.line, WW.column)
+          let RR = this.current.source.start;
+          throw this.input.error("Unclosed block", RR.line, RR.column)
         }
-        unclosedBracket(WW) {
+        unclosedBracket(RR) {
           throw this.input.error("Unclosed bracket", {
-            offset: WW[2]
+            offset: RR[2]
           }, {
-            offset: WW[2] + 1
+            offset: RR[2] + 1
           })
         }
-        unexpectedClose(WW) {
+        unexpectedClose(RR) {
           throw this.input.error("Unexpected }", {
-            offset: WW[2]
+            offset: RR[2]
           }, {
-            offset: WW[2] + 1
+            offset: RR[2] + 1
           })
         }
-        unknownWord(WW) {
+        unknownWord(RR) {
           throw this.input.error("Unknown word", {
-            offset: WW[0][2]
+            offset: RR[0][2]
           }, {
-            offset: WW[0][2] + WW[0][1].length
+            offset: RR[0][2] + RR[0][1].length
           })
         }
-        unnamedAtrule(WW, iW) {
+        unnamedAtrule(RR, JR) {
           throw this.input.error("At-rule without name", {
-            offset: iW[2]
+            offset: JR[2]
           }, {
-            offset: iW[2] + iW[1].length
+            offset: JR[2] + JR[1].length
           })
         }
       }
     }
 
-    function GO() {
-      if (lO) return xO;
-      lO = 1;
-      let WW = gO(),
-        iW = RO(),
-        OW = dO();
+    function dG() {
+      if (KG) return VG;
+      KG = 1;
+      let RR = DG(),
+        JR = jG(),
+        GR = OG();
 
-      function mW(WW, mW) {
-        let EW = new OW(WW, mW),
-          NW = new iW(EW);
+      function yR(RR, yR) {
+        let tR = new GR(RR, yR),
+          uR = new JR(tR);
         try {
-          NW.parse()
-        } catch (PW) {
-          throw PW
+          uR.parse()
+        } catch (ZR) {
+          throw ZR
         }
-        return NW.root
+        return uR.root
       }
-      return xO = mW, mW.default = mW, WW.registerParse(mW), xO
+      return VG = yR, yR.default = yR, RR.registerParse(yR), VG
     }
 
-    function IO() {
-      if (bO) return AO;
-      bO = 1;
+    function EG() {
+      if (rG) return wG;
+      rG = 1;
       let {
-        isClean: WW,
-        my: iW
-      } = TO(), OW = eO(), mW = hO(), EW = gO(), NW = DO(), PW = (VO(), fO()), LW = GO(), cW = XO();
-      const wW = {
+        isClean: RR,
+        my: JR
+      } = MG(), GR = xG(), yR = lG(), tR = DG(), uR = HG(), ZR = (oG(), PG()), qR = dG(), iR = mG();
+      const fR = {
           atrule: "AtRule",
           comment: "Comment",
           decl: "Declaration",
@@ -2777,7 +2777,7 @@ export const modules = {
           root: "Root",
           rule: "Rule"
         },
-        tW = {
+        VR = {
           AtRule: !0,
           AtRuleExit: !0,
           Comment: !0,
@@ -2795,240 +2795,240 @@ export const modules = {
           Rule: !0,
           RuleExit: !0
         },
-        ZW = {
+        KR = {
           Once: !0,
           postcssPlugin: !0,
           prepare: !0
         };
 
-      function xW(WW) {
-        return "object" === typeof WW && "function" === typeof WW.then
+      function wR(RR) {
+        return "object" === typeof RR && "function" === typeof RR.then
       }
 
-      function lW(WW) {
-        let iW = !1,
-          OW = wW[WW.type];
-        return "decl" === WW.type ? iW = WW.prop.toLowerCase() : "atrule" === WW.type && (iW = WW.name.toLowerCase()), iW && WW.append ? [OW, OW + "-" + iW, 0, OW + "Exit", OW + "Exit-" + iW] : iW ? [OW, OW + "-" + iW, OW + "Exit", OW + "Exit-" + iW] : WW.append ? [OW, 0, OW + "Exit"] : [OW, OW + "Exit"]
+      function rR(RR) {
+        let JR = !1,
+          GR = fR[RR.type];
+        return "decl" === RR.type ? JR = RR.prop.toLowerCase() : "atrule" === RR.type && (JR = RR.name.toLowerCase()), JR && RR.append ? [GR, GR + "-" + JR, 0, GR + "Exit", GR + "Exit-" + JR] : JR ? [GR, GR + "-" + JR, GR + "Exit", GR + "Exit-" + JR] : RR.append ? [GR, 0, GR + "Exit"] : [GR, GR + "Exit"]
       }
 
-      function AW(WW) {
-        let iW;
-        return iW = "document" === WW.type ? ["Document", 0, "DocumentExit"] : "root" === WW.type ? ["Root", 0, "RootExit"] : lW(WW), {
+      function eR(RR) {
+        let JR;
+        return JR = "document" === RR.type ? ["Document", 0, "DocumentExit"] : "root" === RR.type ? ["Root", 0, "RootExit"] : rR(RR), {
           eventIndex: 0,
-          events: iW,
+          events: JR,
           iterator: 0,
-          node: WW,
+          node: RR,
           visitorIndex: 0,
           visitors: []
         }
       }
 
-      function bW(iW) {
-        return iW[WW] = !1, iW.nodes && iW.nodes.forEach((WW => bW(WW))), iW
+      function aR(JR) {
+        return JR[RR] = !1, JR.nodes && JR.nodes.forEach((RR => aR(RR))), JR
       }
-      let jW = {};
-      class UW {
-        constructor(WW, OW, mW) {
-          let NW;
-          if (this.stringified = !1, this.processed = !1, "object" !== typeof OW || null === OW || "root" !== OW.type && "document" !== OW.type)
-            if (OW instanceof UW || OW instanceof PW) NW = bW(OW.root), OW.map && ("undefined" === typeof mW.map && (mW.map = {}), mW.map.inline || (mW.map.inline = !1), mW.map.prev = OW.map);
+      let LR = {};
+      class nR {
+        constructor(RR, GR, yR) {
+          let uR;
+          if (this.stringified = !1, this.processed = !1, "object" !== typeof GR || null === GR || "root" !== GR.type && "document" !== GR.type)
+            if (GR instanceof nR || GR instanceof ZR) uR = aR(GR.root), GR.map && ("undefined" === typeof yR.map && (yR.map = {}), yR.map.inline || (yR.map.inline = !1), yR.map.prev = GR.map);
             else {
-              let WW = LW;
-              mW.syntax && (WW = mW.syntax.parse), mW.parser && (WW = mW.parser), WW.parse && (WW = WW.parse);
+              let RR = qR;
+              yR.syntax && (RR = yR.syntax.parse), yR.parser && (RR = yR.parser), RR.parse && (RR = RR.parse);
               try {
-                NW = WW(OW, mW)
-              } catch (cW) {
-                this.processed = !0, this.error = cW
+                uR = RR(GR, yR)
+              } catch (iR) {
+                this.processed = !0, this.error = iR
               }
-              NW && !NW[iW] && EW.rebuild(NW)
+              uR && !uR[JR] && tR.rebuild(uR)
             }
-          else NW = bW(OW);
-          this.result = new PW(WW, NW, mW), this.helpers = {
-            ...jW,
-            postcss: jW,
+          else uR = aR(GR);
+          this.result = new ZR(RR, uR, yR), this.helpers = {
+            ...LR,
+            postcss: LR,
             result: this.result
-          }, this.plugins = this.processor.plugins.map((WW => "object" === typeof WW && WW.prepare ? {
-            ...WW,
-            ...WW.prepare(this.result)
-          } : WW))
+          }, this.plugins = this.processor.plugins.map((RR => "object" === typeof RR && RR.prepare ? {
+            ...RR,
+            ...RR.prepare(this.result)
+          } : RR))
         }
         async () {
           return this.error ? Promise.reject(this.error) : this.processed ? Promise.resolve(this.result) : (this.processing || (this.processing = this.runAsync()), this.processing)
-        } catch (WW) {
-          return this.async().catch(WW)
-        } finally(WW) {
-          return this.async().then(WW, WW)
+        } catch (RR) {
+          return this.async().catch(RR)
+        } finally(RR) {
+          return this.async().then(RR, RR)
         }
         getAsyncError() {
           throw new Error("Use process(css).then(cb) to work with async plugins")
         }
-        handleError(WW, iW) {
-          let OW = this.result.lastPlugin;
+        handleError(RR, JR) {
+          let GR = this.result.lastPlugin;
           try {
-            iW && iW.addToError(WW), this.error = WW, "CssSyntaxError" !== WW.name || WW.plugin ? OW.postcssVersion : (WW.plugin = OW.postcssPlugin, WW.setMessage())
-          } catch (mW) {
-            console && console.error && console.error(mW)
+            JR && JR.addToError(RR), this.error = RR, "CssSyntaxError" !== RR.name || RR.plugin ? GR.postcssVersion : (RR.plugin = GR.postcssPlugin, RR.setMessage())
+          } catch (yR) {
+            console && console.error && console.error(yR)
           }
-          return WW
+          return RR
         }
         prepareVisitors() {
           this.listeners = {};
-          let WW = (WW, iW, OW) => {
-            this.listeners[iW] || (this.listeners[iW] = []), this.listeners[iW].push([WW, OW])
+          let RR = (RR, JR, GR) => {
+            this.listeners[JR] || (this.listeners[JR] = []), this.listeners[JR].push([RR, GR])
           };
-          for (let iW of this.plugins)
-            if ("object" === typeof iW)
-              for (let OW in iW) {
-                if (!tW[OW] && /^[A-Z]/.test(OW)) throw new Error(`Unknown event ${OW} in ${iW.postcssPlugin}. Try to update PostCSS (${this.processor.version} now).`);
-                if (!ZW[OW])
-                  if ("object" === typeof iW[OW])
-                    for (let mW in iW[OW]) WW(iW, "*" === mW ? OW : OW + "-" + mW.toLowerCase(), iW[OW][mW]);
-                  else "function" === typeof iW[OW] && WW(iW, OW, iW[OW])
+          for (let JR of this.plugins)
+            if ("object" === typeof JR)
+              for (let GR in JR) {
+                if (!VR[GR] && /^[A-Z]/.test(GR)) throw new Error(`Unknown event ${GR} in ${JR.postcssPlugin}. Try to update PostCSS (${this.processor.version} now).`);
+                if (!KR[GR])
+                  if ("object" === typeof JR[GR])
+                    for (let yR in JR[GR]) RR(JR, "*" === yR ? GR : GR + "-" + yR.toLowerCase(), JR[GR][yR]);
+                  else "function" === typeof JR[GR] && RR(JR, GR, JR[GR])
               }
           this.hasListener = Object.keys(this.listeners).length > 0
         }
         async runAsync() {
           this.plugin = 0;
-          for (let WW = 0; WW < this.plugins.length; WW++) {
-            let OW = this.plugins[WW],
-              mW = this.runOnRoot(OW);
-            if (xW(mW)) try {
-              await mW
-            } catch (iW) {
-              throw this.handleError(iW)
+          for (let RR = 0; RR < this.plugins.length; RR++) {
+            let GR = this.plugins[RR],
+              yR = this.runOnRoot(GR);
+            if (wR(yR)) try {
+              await yR
+            } catch (JR) {
+              throw this.handleError(JR)
             }
           }
           if (this.prepareVisitors(), this.hasListener) {
-            let iW = this.result.root;
-            for (; !iW[WW];) {
-              iW[WW] = !0;
-              let mW = [AW(iW)];
-              for (; mW.length > 0;) {
-                let WW = this.visitTick(mW);
-                if (xW(WW)) try {
-                  await WW
-                } catch (OW) {
-                  let WW = mW[mW.length - 1].node;
-                  throw this.handleError(OW, WW)
+            let JR = this.result.root;
+            for (; !JR[RR];) {
+              JR[RR] = !0;
+              let yR = [eR(JR)];
+              for (; yR.length > 0;) {
+                let RR = this.visitTick(yR);
+                if (wR(RR)) try {
+                  await RR
+                } catch (GR) {
+                  let RR = yR[yR.length - 1].node;
+                  throw this.handleError(GR, RR)
                 }
               }
             }
             if (this.listeners.OnceExit)
-              for (let [WW, mW] of this.listeners.OnceExit) {
-                this.result.lastPlugin = WW;
+              for (let [RR, yR] of this.listeners.OnceExit) {
+                this.result.lastPlugin = RR;
                 try {
-                  if ("document" === iW.type) {
-                    let WW = iW.nodes.map((WW => mW(WW, this.helpers)));
-                    await Promise.all(WW)
-                  } else await mW(iW, this.helpers)
-                } catch (OW) {
-                  throw this.handleError(OW)
+                  if ("document" === JR.type) {
+                    let RR = JR.nodes.map((RR => yR(RR, this.helpers)));
+                    await Promise.all(RR)
+                  } else await yR(JR, this.helpers)
+                } catch (GR) {
+                  throw this.handleError(GR)
                 }
               }
           }
           return this.processed = !0, this.stringify()
         }
-        runOnRoot(WW) {
-          this.result.lastPlugin = WW;
+        runOnRoot(RR) {
+          this.result.lastPlugin = RR;
           try {
-            if ("object" === typeof WW && WW.Once) {
+            if ("object" === typeof RR && RR.Once) {
               if ("document" === this.result.root.type) {
-                let iW = this.result.root.nodes.map((iW => WW.Once(iW, this.helpers)));
-                return xW(iW[0]) ? Promise.all(iW) : iW
+                let JR = this.result.root.nodes.map((JR => RR.Once(JR, this.helpers)));
+                return wR(JR[0]) ? Promise.all(JR) : JR
               }
-              return WW.Once(this.result.root, this.helpers)
+              return RR.Once(this.result.root, this.helpers)
             }
-            if ("function" === typeof WW) return WW(this.result.root, this.result)
-          } catch (iW) {
-            throw this.handleError(iW)
+            if ("function" === typeof RR) return RR(this.result.root, this.result)
+          } catch (JR) {
+            throw this.handleError(JR)
           }
         }
         stringify() {
           if (this.error) throw this.error;
           if (this.stringified) return this.result;
           this.stringified = !0, this.sync();
-          let WW = this.result.opts,
-            iW = mW;
-          WW.syntax && (iW = WW.syntax.stringify), WW.stringifier && (iW = WW.stringifier), iW.stringify && (iW = iW.stringify);
-          let EW = new OW(iW, this.result.root, this.result.opts).generate();
-          return this.result.css = EW[0], this.result.map = EW[1], this.result
+          let RR = this.result.opts,
+            JR = yR;
+          RR.syntax && (JR = RR.syntax.stringify), RR.stringifier && (JR = RR.stringifier), JR.stringify && (JR = JR.stringify);
+          let tR = new GR(JR, this.result.root, this.result.opts).generate();
+          return this.result.css = tR[0], this.result.map = tR[1], this.result
         }
         sync() {
           if (this.error) throw this.error;
           if (this.processed) return this.result;
           if (this.processed = !0, this.processing) throw this.getAsyncError();
-          for (let WW of this.plugins) {
-            if (xW(this.runOnRoot(WW))) throw this.getAsyncError()
+          for (let RR of this.plugins) {
+            if (wR(this.runOnRoot(RR))) throw this.getAsyncError()
           }
           if (this.prepareVisitors(), this.hasListener) {
-            let iW = this.result.root;
-            for (; !iW[WW];) iW[WW] = !0, this.walkSync(iW);
+            let JR = this.result.root;
+            for (; !JR[RR];) JR[RR] = !0, this.walkSync(JR);
             if (this.listeners.OnceExit)
-              if ("document" === iW.type)
-                for (let WW of iW.nodes) this.visitSync(this.listeners.OnceExit, WW);
-              else this.visitSync(this.listeners.OnceExit, iW)
+              if ("document" === JR.type)
+                for (let RR of JR.nodes) this.visitSync(this.listeners.OnceExit, RR);
+              else this.visitSync(this.listeners.OnceExit, JR)
           }
           return this.result
         }
-        then(WW, iW) {
-          return this.async().then(WW, iW)
+        then(RR, JR) {
+          return this.async().then(RR, JR)
         }
         toString() {
           return this.css
         }
-        visitSync(WW, iW) {
-          for (let [mW, EW] of WW) {
-            let WW;
-            this.result.lastPlugin = mW;
+        visitSync(RR, JR) {
+          for (let [yR, tR] of RR) {
+            let RR;
+            this.result.lastPlugin = yR;
             try {
-              WW = EW(iW, this.helpers)
-            } catch (OW) {
-              throw this.handleError(OW, iW.proxyOf)
+              RR = tR(JR, this.helpers)
+            } catch (GR) {
+              throw this.handleError(GR, JR.proxyOf)
             }
-            if ("root" !== iW.type && "document" !== iW.type && !iW.parent) return !0;
-            if (xW(WW)) throw this.getAsyncError()
+            if ("root" !== JR.type && "document" !== JR.type && !JR.parent) return !0;
+            if (wR(RR)) throw this.getAsyncError()
           }
         }
-        visitTick(iW) {
-          let OW = iW[iW.length - 1],
+        visitTick(JR) {
+          let GR = JR[JR.length - 1],
             {
-              node: mW,
-              visitors: EW
-            } = OW;
-          if ("root" !== mW.type && "document" !== mW.type && !mW.parent) return void iW.pop();
-          if (EW.length > 0 && OW.visitorIndex < EW.length) {
-            let [WW, iW] = EW[OW.visitorIndex];
-            OW.visitorIndex += 1, OW.visitorIndex === EW.length && (OW.visitors = [], OW.visitorIndex = 0), this.result.lastPlugin = WW;
+              node: yR,
+              visitors: tR
+            } = GR;
+          if ("root" !== yR.type && "document" !== yR.type && !yR.parent) return void JR.pop();
+          if (tR.length > 0 && GR.visitorIndex < tR.length) {
+            let [RR, JR] = tR[GR.visitorIndex];
+            GR.visitorIndex += 1, GR.visitorIndex === tR.length && (GR.visitors = [], GR.visitorIndex = 0), this.result.lastPlugin = RR;
             try {
-              return iW(mW.toProxy(), this.helpers)
-            } catch (PW) {
-              throw this.handleError(PW, mW)
+              return JR(yR.toProxy(), this.helpers)
+            } catch (ZR) {
+              throw this.handleError(ZR, yR)
             }
           }
-          if (0 !== OW.iterator) {
-            let EW, NW = OW.iterator;
-            for (; EW = mW.nodes[mW.indexes[NW]];)
-              if (mW.indexes[NW] += 1, !EW[WW]) return EW[WW] = !0, void iW.push(AW(EW));
-            OW.iterator = 0, delete mW.indexes[NW]
+          if (0 !== GR.iterator) {
+            let tR, uR = GR.iterator;
+            for (; tR = yR.nodes[yR.indexes[uR]];)
+              if (yR.indexes[uR] += 1, !tR[RR]) return tR[RR] = !0, void JR.push(eR(tR));
+            GR.iterator = 0, delete yR.indexes[uR]
           }
-          let NW = OW.events;
-          for (; OW.eventIndex < NW.length;) {
-            let iW = NW[OW.eventIndex];
-            if (OW.eventIndex += 1, 0 === iW) return void(mW.nodes && mW.nodes.length && (mW[WW] = !0, OW.iterator = mW.getIterator()));
-            if (this.listeners[iW]) return void(OW.visitors = this.listeners[iW])
+          let uR = GR.events;
+          for (; GR.eventIndex < uR.length;) {
+            let JR = uR[GR.eventIndex];
+            if (GR.eventIndex += 1, 0 === JR) return void(yR.nodes && yR.nodes.length && (yR[RR] = !0, GR.iterator = yR.getIterator()));
+            if (this.listeners[JR]) return void(GR.visitors = this.listeners[JR])
           }
-          iW.pop()
+          JR.pop()
         }
-        walkSync(iW) {
-          iW[WW] = !0;
-          let OW = lW(iW);
-          for (let mW of OW)
-            if (0 === mW) iW.nodes && iW.each((iW => {
-              iW[WW] || this.walkSync(iW)
+        walkSync(JR) {
+          JR[RR] = !0;
+          let GR = rR(JR);
+          for (let yR of GR)
+            if (0 === yR) JR.nodes && JR.each((JR => {
+              JR[RR] || this.walkSync(JR)
             }));
             else {
-              let WW = this.listeners[mW];
-              if (WW && this.visitSync(WW, iW.toProxy())) return
+              let RR = this.listeners[yR];
+              if (RR && this.visitSync(RR, JR.toProxy())) return
             }
         }
         warnings() {
@@ -3059,50 +3059,50 @@ export const modules = {
           return "LazyResult"
         }
       }
-      return UW.registerPostcss = WW => {
-        jW = WW
-      }, AO = UW, UW.default = UW, cW.registerLazyResult(UW), NW.registerLazyResult(UW), AO
+      return nR.registerPostcss = RR => {
+        LR = RR
+      }, wG = nR, nR.default = nR, iR.registerLazyResult(nR), uR.registerLazyResult(nR), wG
     }
 
-    function aO() {
-      if (sO) return kO;
-      sO = 1;
-      let WW = function() {
-          if (UO) return jO;
-          UO = 1;
-          let WW = eO(),
-            iW = hO(),
-            OW = (VO(), GO());
-          const mW = fO();
-          class EW {
-            constructor(OW, EW, NW) {
-              let PW;
-              EW = EW.toString(), this.stringified = !1, this._processor = OW, this._css = EW, this._opts = NW, this._map = void 0;
-              let LW = iW;
-              this.result = new mW(this._processor, PW, this._opts), this.result.css = EW;
-              let cW = this;
+    function YG() {
+      if (nG) return LG;
+      nG = 1;
+      let RR = function() {
+          if (aG) return eG;
+          aG = 1;
+          let RR = xG(),
+            JR = lG(),
+            GR = (oG(), dG());
+          const yR = PG();
+          class tR {
+            constructor(GR, tR, uR) {
+              let ZR;
+              tR = tR.toString(), this.stringified = !1, this._processor = GR, this._css = tR, this._opts = uR, this._map = void 0;
+              let qR = JR;
+              this.result = new yR(this._processor, ZR, this._opts), this.result.css = tR;
+              let iR = this;
               Object.defineProperty(this.result, "root", {
-                get: () => cW.root
+                get: () => iR.root
               });
-              let wW = new WW(LW, PW, this._opts, EW);
-              if (wW.isMap()) {
-                let [WW, iW] = wW.generate();
-                WW && (this.result.css = WW), iW && (this.result.map = iW)
-              } else wW.clearAnnotation(), this.result.css = wW.css
+              let fR = new RR(qR, ZR, this._opts, tR);
+              if (fR.isMap()) {
+                let [RR, JR] = fR.generate();
+                RR && (this.result.css = RR), JR && (this.result.map = JR)
+              } else fR.clearAnnotation(), this.result.css = fR.css
             }
             async () {
               return this.error ? Promise.reject(this.error) : Promise.resolve(this.result)
-            } catch (WW) {
-              return this.async().catch(WW)
-            } finally(WW) {
-              return this.async().then(WW, WW)
+            } catch (RR) {
+              return this.async().catch(RR)
+            } finally(RR) {
+              return this.async().then(RR, RR)
             }
             sync() {
               if (this.error) throw this.error;
               return this.result
             }
-            then(WW, iW) {
-              return this.async().then(WW, iW)
+            then(RR, JR) {
+              return this.async().then(RR, JR)
             }
             toString() {
               return this._css
@@ -3130,126 +3130,126 @@ export const modules = {
             }
             get root() {
               if (this._root) return this._root;
-              let WW, iW = OW;
+              let RR, JR = GR;
               try {
-                WW = iW(this._css, this._opts)
-              } catch (mW) {
-                this.error = mW
+                RR = JR(this._css, this._opts)
+              } catch (yR) {
+                this.error = yR
               }
               if (this.error) throw this.error;
-              return this._root = WW, WW
+              return this._root = RR, RR
             }
             get[Symbol.toStringTag]() {
               return "NoWorkResult"
             }
           }
-          return jO = EW, EW.default = EW, jO
+          return eG = tR, tR.default = tR, eG
         }(),
-        iW = IO(),
-        OW = DO(),
-        mW = XO();
-      class EW {
+        JR = EG(),
+        GR = HG(),
+        yR = mG();
+      class tR {
         constructor() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-          this.version = "8.4.38", this.plugins = this.normalize(WW)
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+          this.version = "8.4.38", this.plugins = this.normalize(RR)
         }
-        normalize(WW) {
-          let iW = [];
-          for (let OW of WW)
-            if (!0 === OW.postcss ? OW = OW() : OW.postcss && (OW = OW.postcss), "object" === typeof OW && Array.isArray(OW.plugins)) iW = iW.concat(OW.plugins);
-            else if ("object" === typeof OW && OW.postcssPlugin) iW.push(OW);
-          else if ("function" === typeof OW) iW.push(OW);
+        normalize(RR) {
+          let JR = [];
+          for (let GR of RR)
+            if (!0 === GR.postcss ? GR = GR() : GR.postcss && (GR = GR.postcss), "object" === typeof GR && Array.isArray(GR.plugins)) JR = JR.concat(GR.plugins);
+            else if ("object" === typeof GR && GR.postcssPlugin) JR.push(GR);
+          else if ("function" === typeof GR) JR.push(GR);
           else {
-            if ("object" !== typeof OW || !OW.parse && !OW.stringify) throw new Error(OW + " is not a PostCSS plugin")
+            if ("object" !== typeof GR || !GR.parse && !GR.stringify) throw new Error(GR + " is not a PostCSS plugin")
           }
-          return iW
+          return JR
         }
-        process(OW) {
-          let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return this.plugins.length || mW.parser || mW.stringifier || mW.syntax ? new iW(this, OW, mW) : new WW(this, OW, mW)
+        process(GR) {
+          let yR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return this.plugins.length || yR.parser || yR.stringifier || yR.syntax ? new JR(this, GR, yR) : new RR(this, GR, yR)
         }
-        use(WW) {
-          return this.plugins = this.plugins.concat(this.normalize([WW])), this
+        use(RR) {
+          return this.plugins = this.plugins.concat(this.normalize([RR])), this
         }
       }
-      return kO = EW, EW.default = EW, mW.registerProcessor(EW), OW.registerProcessor(EW), kO
+      return LG = tR, tR.default = tR, yR.registerProcessor(tR), GR.registerProcessor(tR), LG
     }
-    const rO = xi(function() {
-      if (YO) return SO;
-      YO = 1;
-      let WW = Mi(),
-        iW = nO(),
-        OW = IO(),
-        mW = gO(),
-        EW = aO(),
-        NW = hO(),
-        PW = function() {
-          if (KO) return MO;
-          KO = 1;
-          let WW = nO(),
-            iW = oO(),
-            OW = vO(),
-            mW = CO(),
-            EW = dO(),
-            NW = XO(),
-            PW = qO();
+    const kG = wJ(function() {
+      if (CG) return AG;
+      CG = 1;
+      let RR = AJ(),
+        JR = gG(),
+        GR = EG(),
+        yR = DG(),
+        tR = YG(),
+        uR = lG(),
+        ZR = function() {
+          if (WG) return UG;
+          WG = 1;
+          let RR = gG(),
+            JR = vG(),
+            GR = NG(),
+            yR = IG(),
+            tR = OG(),
+            uR = mG(),
+            ZR = SG();
 
-          function LW(cW, wW) {
-            if (Array.isArray(cW)) return cW.map((WW => LW(WW)));
+          function qR(iR, fR) {
+            if (Array.isArray(iR)) return iR.map((RR => qR(RR)));
             let {
-              inputs: tW,
-              ...ZW
-            } = cW;
-            if (tW) {
-              wW = [];
-              for (let WW of tW) {
-                let OW = {
-                  ...WW,
-                  __proto__: EW.prototype
+              inputs: VR,
+              ...KR
+            } = iR;
+            if (VR) {
+              fR = [];
+              for (let RR of VR) {
+                let GR = {
+                  ...RR,
+                  __proto__: tR.prototype
                 };
-                OW.map && (OW.map = {
-                  ...OW.map,
-                  __proto__: iW.prototype
-                }), wW.push(OW)
+                GR.map && (GR.map = {
+                  ...GR.map,
+                  __proto__: JR.prototype
+                }), fR.push(GR)
               }
             }
-            if (ZW.nodes && (ZW.nodes = cW.nodes.map((WW => LW(WW, wW)))), ZW.source) {
+            if (KR.nodes && (KR.nodes = iR.nodes.map((RR => qR(RR, fR)))), KR.source) {
               let {
-                inputId: WW,
-                ...iW
-              } = ZW.source;
-              ZW.source = iW, null != WW && (ZW.source.input = wW[WW])
+                inputId: RR,
+                ...JR
+              } = KR.source;
+              KR.source = JR, null != RR && (KR.source.input = fR[RR])
             }
-            if ("root" === ZW.type) return new NW(ZW);
-            if ("decl" === ZW.type) return new WW(ZW);
-            if ("rule" === ZW.type) return new PW(ZW);
-            if ("comment" === ZW.type) return new OW(ZW);
-            if ("atrule" === ZW.type) return new mW(ZW);
-            throw new Error("Unknown node type: " + cW.type)
+            if ("root" === KR.type) return new uR(KR);
+            if ("decl" === KR.type) return new RR(KR);
+            if ("rule" === KR.type) return new ZR(KR);
+            if ("comment" === KR.type) return new GR(KR);
+            if ("atrule" === KR.type) return new yR(KR);
+            throw new Error("Unknown node type: " + iR.type)
           }
-          return MO = LW, LW.default = LW, MO
+          return UG = qR, qR.default = qR, UG
         }(),
-        LW = DO(),
-        cW = pO(),
-        wW = vO(),
-        tW = CO(),
-        ZW = fO(),
-        xW = dO(),
-        lW = GO(),
-        AW = BO(),
-        bW = qO(),
-        jW = XO(),
-        UW = HO();
+        qR = HG(),
+        iR = cG(),
+        fR = NG(),
+        VR = IG(),
+        KR = PG(),
+        wR = OG(),
+        rR = dG(),
+        eR = zG(),
+        aR = SG(),
+        LR = mG(),
+        nR = pG();
 
-      function kW() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        return 1 === iW.length && Array.isArray(iW[0]) && (iW = iW[0]), new EW(iW)
+      function UR() {
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        return 1 === JR.length && Array.isArray(JR[0]) && (JR = JR[0]), new tR(JR)
       }
-      return kW.plugin = function(WW, iW) {
-        let OW, mW = !1;
+      return UR.plugin = function(RR, JR) {
+        let GR, yR = !1;
 
-        function NW() {
-          console && console.warn && !mW && (mW = !0, console.warn(WW + ": postcss.plugin was deprecated. Migration guide:\nhttps://evilmartians.com/chronicles/postcss-8-plugin-migration"), {
+        function uR() {
+          console && console.warn && !yR && (yR = !0, console.warn(RR + ": postcss.plugin was deprecated. Migration guide:\nhttps://evilmartians.com/chronicles/postcss-8-plugin-migration"), {
             NODE_ENV: "production",
             PUBLIC_URL: "",
             WDS_SOCKET_HOST: void 0,
@@ -3265,19 +3265,19 @@ export const modules = {
             WDS_SOCKET_PORT: void 0,
             FAST_REFRESH: !0,
             REACT_APP_DEV_URLS: "false"
-          }.LANG.startsWith("cn") && console.warn(WW + ": \u91cc\u9762 postcss.plugin \u88ab\u5f03\u7528. \u8fc1\u79fb\u6307\u5357:\nhttps://www.w3ctech.com/topic/2226"));
-          let OW = iW(...arguments);
-          return OW.postcssPlugin = WW, OW.postcssVersion = (new EW).version, OW
+          }.LANG.startsWith("cn") && console.warn(RR + ": \u91cc\u9762 postcss.plugin \u88ab\u5f03\u7528. \u8fc1\u79fb\u6307\u5357:\nhttps://www.w3ctech.com/topic/2226"));
+          let GR = JR(...arguments);
+          return GR.postcssPlugin = RR, GR.postcssVersion = (new tR).version, GR
         }
-        return Object.defineProperty(NW, "postcss", {
-          get: () => (OW || (OW = NW()), OW)
-        }), NW.process = function(WW, iW, OW) {
-          return kW([NW(OW)]).process(WW, iW)
-        }, NW
-      }, kW.stringify = NW, kW.parse = lW, kW.fromJSON = PW, kW.list = AW, kW.comment = WW => new wW(WW), kW.atRule = WW => new tW(WW), kW.decl = WW => new iW(WW), kW.rule = WW => new bW(WW), kW.root = WW => new jW(WW), kW.document = WW => new LW(WW), kW.CssSyntaxError = WW, kW.Declaration = iW, kW.yV = mW, kW.Processor = EW, kW.Document = LW, kW.Comment = wW, kW.Warning = cW, kW.AtRule = tW, kW.Result = ZW, kW.Input = xW, kW.Rule = bW, kW.Root = jW, kW.Node = UW, OW.registerPostcss(kW), SO = kW, kW.default = kW, SO
+        return Object.defineProperty(uR, "postcss", {
+          get: () => (GR || (GR = uR()), GR)
+        }), uR.process = function(RR, JR, GR) {
+          return UR([uR(GR)]).process(RR, JR)
+        }, uR
+      }, UR.stringify = uR, UR.parse = rR, UR.fromJSON = ZR, UR.list = eR, UR.comment = RR => new fR(RR), UR.atRule = RR => new VR(RR), UR.decl = RR => new JR(RR), UR.rule = RR => new aR(RR), UR.root = RR => new LR(RR), UR.document = RR => new qR(RR), UR.CssSyntaxError = RR, UR.Declaration = JR, UR.qS = yR, UR.Processor = tR, UR.Document = qR, UR.Comment = fR, UR.Warning = iR, UR.AtRule = VR, UR.Result = KR, UR.Input = wR, UR.Rule = aR, UR.Root = LR, UR.Node = nR, GR.registerPostcss(UR), AG = UR, UR.default = UR, AG
     }());
-    rO.stringify, rO.fromJSON, rO.plugin, rO.parse, rO.list, rO.document, rO.comment, rO.atRule, rO.rule, rO.decl, rO.root, rO.CssSyntaxError, rO.Declaration, rO.yV, rO.Processor, rO.Document, rO.Comment, rO.Warning, rO.AtRule, rO.Result, rO.Input, rO.Rule, rO.Root, rO.Node;
-    const zO = {
+    kG.stringify, kG.fromJSON, kG.plugin, kG.parse, kG.list, kG.document, kG.comment, kG.atRule, kG.rule, kG.decl, kG.root, kG.CssSyntaxError, kG.Declaration, kG.qS, kG.Processor, kG.Document, kG.Comment, kG.Warning, kG.AtRule, kG.Result, kG.Input, kG.Rule, kG.Root, kG.Node;
+    const QG = {
       script: "noscript",
       altglyph: "altGlyph",
       altglyphdef: "altGlyphDef",
@@ -3317,435 +3317,435 @@ export const modules = {
       radialgradient: "radialGradient"
     };
 
-    function FO(WW, iW) {
-      const OW = null == iW ? void 0 : iW.stylesWithHoverClass.get(WW);
-      if (OW) return OW;
-      let mW = WW;
+    function FG(RR, JR) {
+      const GR = null == JR ? void 0 : JR.stylesWithHoverClass.get(RR);
+      if (GR) return GR;
+      let yR = RR;
       try {
-        mW = rO([ti, Zi]).process(WW).css
-      } catch (EW) {
-        console.warn("Failed to adapt css for replay", EW)
+        yR = kG([VJ, KJ]).process(RR).css
+      } catch (tR) {
+        console.warn("Failed to adapt css for replay", tR)
       }
-      return null == iW || iW.stylesWithHoverClass.set(WW, mW), mW
+      return null == JR || JR.stylesWithHoverClass.set(RR, yR), yR
     }
 
-    function QO() {
+    function TG() {
       return {
         stylesWithHoverClass: new Map
       }
     }
-    const Wm = "rrweb-snapshot.createSandboxedIframe() requires root to be connected to a document before creating a sandboxed iframe.",
-      im = new WeakSet;
+    const sG = "rrweb-snapshot.createSandboxedIframe() requires root to be connected to a document before creating a sandboxed iframe.",
+      hG = new WeakSet;
 
-    function Om(WW) {
-      if (WW.UNSAFE_allowUnprotectedRebuild) return;
-      const iW = WW.doc.defaultView;
-      if (iW && (!im.has(WW.doc) || ! function(WW) {
-          if (!WW || "IFRAME" !== WW.tagName) return !1;
-          if (!("sandbox" in WW)) return !1;
-          const iW = Array.from(WW.sandbox);
-          return 1 === iW.length && "allow-same-origin" === iW[0]
-        }(iW.frameElement))) throw new Error("rrweb-snapshot.rebuild() cannot rebuild into an unprotected browser document. Use rebuildIntoSandboxedIframe() or set UNSAFE_allowUnprotectedRebuild: true only when you accept the script-execution risk.")
+    function Ry(RR) {
+      if (RR.UNSAFE_allowUnprotectedRebuild) return;
+      const JR = RR.doc.defaultView;
+      if (JR && (!hG.has(RR.doc) || ! function(RR) {
+          if (!RR || "IFRAME" !== RR.tagName) return !1;
+          if (!("sandbox" in RR)) return !1;
+          const JR = Array.from(RR.sandbox);
+          return 1 === JR.length && "allow-same-origin" === JR[0]
+        }(JR.frameElement))) throw new Error("rrweb-snapshot.rebuild() cannot rebuild into an unprotected browser document. Use rebuildIntoSandboxedIframe() or set UNSAFE_allowUnprotectedRebuild: true only when you accept the script-execution risk.")
     }
 
-    function mm(WW, iW, OW, mW) {
+    function Jy(RR, JR, GR, yR) {
       const {
-        doc: EW,
-        hackCss: NW,
-        cache: PW
-      } = mW;
-      WW.childNodes.length ? function(WW, iW, OW, mW) {
-        const EW = [];
-        for (const tW of WW.childNodes) tW.type === cW.Text && EW.push(tW);
-        const NW = iW.split("/* rr_split */");
-        for (; NW.length > 1 && NW.length > EW.length;) NW.splice(-2, 2, NW.slice(-2).join(""));
-        let PW = "";
-        OW && (PW = FO(NW.join(""), mW));
-        let LW = 0,
-          wW = -1;
-        for (let cW = 0; cW < EW.length && cW !== NW.length; cW++) {
-          const WW = EW[cW];
-          let iW = NW[cW];
-          const mW = cW < NW.length - 1 ? NW[cW + 1] : null;
-          if (OW && mW) {
-            let WW = LW,
-              OW = mW.length;
-            OW = Math.min(OW, 30);
-            let EW = !1;
-            for (; OW > 2; OW--) {
-              const iW = mW.substring(0, OW),
-                NW = PW.substring(LW).indexOf(iW);
-              if (EW = -1 !== NW, EW) {
-                WW += NW;
+        doc: tR,
+        hackCss: uR,
+        cache: ZR
+      } = yR;
+      RR.childNodes.length ? function(RR, JR, GR, yR) {
+        const tR = [];
+        for (const VR of RR.childNodes) VR.type === iR.Text && tR.push(VR);
+        const uR = JR.split("/* rr_split */");
+        for (; uR.length > 1 && uR.length > tR.length;) uR.splice(-2, 2, uR.slice(-2).join(""));
+        let ZR = "";
+        GR && (ZR = FG(uR.join(""), yR));
+        let qR = 0,
+          fR = -1;
+        for (let iR = 0; iR < tR.length && iR !== uR.length; iR++) {
+          const RR = tR[iR];
+          let JR = uR[iR];
+          const yR = iR < uR.length - 1 ? uR[iR + 1] : null;
+          if (GR && yR) {
+            let RR = qR,
+              GR = yR.length;
+            GR = Math.min(GR, 30);
+            let tR = !1;
+            for (; GR > 2; GR--) {
+              const JR = yR.substring(0, GR),
+                uR = ZR.substring(qR).indexOf(JR);
+              if (tR = -1 !== uR, tR) {
+                RR += uR;
                 break
               }
             }
-            EW || (WW += iW.length), iW = PW.substring(LW, WW), LW = WW
-          } else OW && (iW = PW.substring(LW)); - 1 !== wW && (iW = iW.substring(wW)), mW && (-1 !== wW || iW.endsWith("0p") && mW.startsWith("x")) && (wW = mW.indexOf("}"), -1 !== wW && (wW += 1, iW += mW.substring(0, wW))), WW.textContent = iW
+            tR || (RR += JR.length), JR = ZR.substring(qR, RR), qR = RR
+          } else GR && (JR = ZR.substring(qR)); - 1 !== fR && (JR = JR.substring(fR)), yR && (-1 !== fR || JR.endsWith("0p") && yR.startsWith("x")) && (fR = yR.indexOf("}"), -1 !== fR && (fR += 1, JR += yR.substring(0, fR))), RR.textContent = JR
         }
-      }(WW, OW, NW, PW) : (NW && (OW = FO(OW, PW)), iW.appendChild(EW.createTextNode(OW)))
+      }(RR, GR, uR, ZR) : (uR && (GR = FG(GR, ZR)), JR.appendChild(tR.createTextNode(GR)))
     }
 
-    function Em(WW, iW) {
-      var OW;
+    function Gy(RR, JR) {
+      var GR;
       const {
-        doc: mW,
-        hackCss: EW,
-        cache: NW
-      } = iW;
-      switch (WW.type) {
-        case cW.Document:
-          return mW.implementation.createDocument(null, "", null);
-        case cW.DocumentType:
-          return mW.implementation.createDocumentType(WW.name || "html", WW.publicId, WW.systemId);
-        case cW.Element: {
-          const EW = function(WW) {
-            let iW = zO[WW.tagName] ? zO[WW.tagName] : WW.tagName;
-            return "link" === iW && WW.attributes._cssText && (iW = "style"), iW
-          }(WW);
-          let NW;
-          WW.isSVG ? NW = mW.createElementNS("http://www.w3.org/2000/svg", EW) : (WW.isCustom && (null == (OW = mW.defaultView) ? void 0 : OW.customElements) && !mW.defaultView.customElements.get(WW.tagName) && mW.defaultView.customElements.define(WW.tagName, class extends mW.defaultView.HTMLElement {}), NW = mW.createElement(EW));
-          const LW = {};
-          for (const OW in WW.attributes) {
-            if (!Object.prototype.hasOwnProperty.call(WW.attributes, OW)) continue;
-            let cW = WW.attributes[OW];
-            if (("option" !== EW || "selected" !== OW || !1 !== cW) && null !== cW)
-              if (!0 === cW && (cW = ""), OW.startsWith("rr_")) LW[OW] = cW;
+        doc: yR,
+        hackCss: tR,
+        cache: uR
+      } = JR;
+      switch (RR.type) {
+        case iR.Document:
+          return yR.implementation.createDocument(null, "", null);
+        case iR.DocumentType:
+          return yR.implementation.createDocumentType(RR.name || "html", RR.publicId, RR.systemId);
+        case iR.Element: {
+          const tR = function(RR) {
+            let JR = QG[RR.tagName] ? QG[RR.tagName] : RR.tagName;
+            return "link" === JR && RR.attributes._cssText && (JR = "style"), JR
+          }(RR);
+          let uR;
+          RR.isSVG ? uR = yR.createElementNS("http://www.w3.org/2000/svg", tR) : (RR.isCustom && (null == (GR = yR.defaultView) ? void 0 : GR.customElements) && !yR.defaultView.customElements.get(RR.tagName) && yR.defaultView.customElements.define(RR.tagName, class extends yR.defaultView.HTMLElement {}), uR = yR.createElement(tR));
+          const qR = {};
+          for (const GR in RR.attributes) {
+            if (!Object.prototype.hasOwnProperty.call(RR.attributes, GR)) continue;
+            let iR = RR.attributes[GR];
+            if (("option" !== tR || "selected" !== GR || !1 !== iR) && null !== iR)
+              if (!0 === iR && (iR = ""), GR.startsWith("rr_")) qR[GR] = iR;
               else {
-                if ("string" !== typeof cW);
+                if ("string" !== typeof iR);
                 else {
-                  if ("style" === EW && "_cssText" === OW) {
-                    mm(WW, NW, cW, iW);
+                  if ("style" === tR && "_cssText" === GR) {
+                    Jy(RR, uR, iR, JR);
                     continue
                   }
-                  if ("textarea" === EW && "value" === OW) {
-                    NW.appendChild(mW.createTextNode(cW)), WW.childNodes = [];
+                  if ("textarea" === tR && "value" === GR) {
+                    uR.appendChild(yR.createTextNode(iR)), RR.childNodes = [];
                     continue
                   }
                 }
                 try {
-                  if (WW.isSVG && "xlink:href" === OW) NW.setAttributeNS("http://www.w3.org/1999/xlink", OW, cW.toString());
-                  else if ("onload" === OW || "onclick" === OW || "onmouse" === OW.substring(0, 7)) NW.setAttribute("_" + OW, cW.toString());
+                  if (RR.isSVG && "xlink:href" === GR) uR.setAttributeNS("http://www.w3.org/1999/xlink", GR, iR.toString());
+                  else if ("onload" === GR || "onclick" === GR || "onmouse" === GR.substring(0, 7)) uR.setAttribute("_" + GR, iR.toString());
                   else {
-                    if ("meta" === EW && "Content-Security-Policy" === WW.attributes["http-equiv"] && "content" === OW) {
-                      NW.setAttribute("csp-content", cW.toString());
+                    if ("meta" === tR && "Content-Security-Policy" === RR.attributes["http-equiv"] && "content" === GR) {
+                      uR.setAttribute("csp-content", iR.toString());
                       continue
                     }
-                    "link" === EW && ("preload" === WW.attributes.rel && "script" === WW.attributes.as || "modulepreload" === WW.attributes.rel) || "link" === EW && "prefetch" === WW.attributes.rel && "string" === typeof WW.attributes.href && "js" === oW(WW.attributes.href) || ("img" === EW && WW.attributes.srcset && WW.attributes.rr_dataURL ? NW.setAttribute("rrweb-original-srcset", WW.attributes.srcset) : NW.setAttribute(OW, cW.toString()))
+                    "link" === tR && ("preload" === RR.attributes.rel && "script" === RR.attributes.as || "modulepreload" === RR.attributes.rel) || "link" === tR && "prefetch" === RR.attributes.rel && "string" === typeof RR.attributes.href && "js" === xR(RR.attributes.href) || ("img" === tR && RR.attributes.srcset && RR.attributes.rr_dataURL ? uR.setAttribute("rrweb-original-srcset", RR.attributes.srcset) : uR.setAttribute(GR, iR.toString()))
                   }
-                } catch (PW) {}
+                } catch (ZR) {}
               }
           }
-          for (const iW in LW) {
-            const OW = LW[iW];
-            if ("canvas" === EW && "rr_dataURL" === iW) {
-              const WW = mW.createElement("img");
-              WW.onload = () => {
-                const iW = NW.getContext("2d");
-                iW && iW.drawImage(WW, 0, 0, WW.width, WW.height)
-              }, WW.src = OW.toString(), NW.RRNodeType && (NW.rr_dataURL = OW.toString())
-            } else if ("img" === EW && "rr_dataURL" === iW) {
-              const iW = NW;
-              iW.currentSrc.startsWith("data:") || (iW.setAttribute("rrweb-original-src", WW.attributes.src), iW.src = OW.toString())
+          for (const JR in qR) {
+            const GR = qR[JR];
+            if ("canvas" === tR && "rr_dataURL" === JR) {
+              const RR = yR.createElement("img");
+              RR.onload = () => {
+                const JR = uR.getContext("2d");
+                JR && JR.drawImage(RR, 0, 0, RR.width, RR.height)
+              }, RR.src = GR.toString(), uR.RRNodeType && (uR.rr_dataURL = GR.toString())
+            } else if ("img" === tR && "rr_dataURL" === JR) {
+              const JR = uR;
+              JR.currentSrc.startsWith("data:") || (JR.setAttribute("rrweb-original-src", RR.attributes.src), JR.src = GR.toString())
             }
-            if ("rr_width" === iW) NW.style.setProperty("width", OW.toString());
-            else if ("rr_height" === iW) NW.style.setProperty("height", OW.toString());
-            else if ("rr_mediaCurrentTime" === iW && "number" === typeof OW) NW.currentTime = OW;
-            else if ("rr_mediaState" === iW) switch (OW) {
+            if ("rr_width" === JR) uR.style.setProperty("width", GR.toString());
+            else if ("rr_height" === JR) uR.style.setProperty("height", GR.toString());
+            else if ("rr_mediaCurrentTime" === JR && "number" === typeof GR) uR.currentTime = GR;
+            else if ("rr_mediaState" === JR) switch (GR) {
               case "played":
-                NW.play().catch((WW => console.warn("media playback error", WW)));
+                uR.play().catch((RR => console.warn("media playback error", RR)));
                 break;
               case "paused":
-                NW.pause()
-            } else "rr_mediaPlaybackRate" === iW && "number" === typeof OW ? NW.playbackRate = OW : "rr_mediaMuted" === iW && "boolean" === typeof OW ? NW.muted = OW : "rr_mediaLoop" === iW && "boolean" === typeof OW ? NW.loop = OW : "rr_mediaVolume" === iW && "number" === typeof OW ? NW.volume = OW : "rr_open_mode" === iW && NW.setAttribute("rr_open_mode", OW)
+                uR.pause()
+            } else "rr_mediaPlaybackRate" === JR && "number" === typeof GR ? uR.playbackRate = GR : "rr_mediaMuted" === JR && "boolean" === typeof GR ? uR.muted = GR : "rr_mediaLoop" === JR && "boolean" === typeof GR ? uR.loop = GR : "rr_mediaVolume" === JR && "number" === typeof GR ? uR.volume = GR : "rr_open_mode" === JR && uR.setAttribute("rr_open_mode", GR)
           }
-          if (WW.isShadowHost)
-            if (NW.shadowRoot)
-              for (; NW.shadowRoot.firstChild;) NW.shadowRoot.removeChild(NW.shadowRoot.firstChild);
-            else NW.attachShadow({
+          if (RR.isShadowHost)
+            if (uR.shadowRoot)
+              for (; uR.shadowRoot.firstChild;) uR.shadowRoot.removeChild(uR.shadowRoot.firstChild);
+            else uR.attachShadow({
               mode: "open"
             });
-          return "input" !== EW && "textarea" !== EW || NW.setAttribute("autocomplete", "off"), NW
+          return "input" !== tR && "textarea" !== tR || uR.setAttribute("autocomplete", "off"), uR
         }
-        case cW.Text:
-          return WW.isStyle && EW ? mW.createTextNode(FO(WW.textContent, NW)) : mW.createTextNode(WW.textContent);
-        case cW.CDATA:
-          return mW.createCDATASection(WW.textContent);
-        case cW.Comment:
-          return mW.createComment(WW.textContent);
+        case iR.Text:
+          return RR.isStyle && tR ? yR.createTextNode(FG(RR.textContent, uR)) : yR.createTextNode(RR.textContent);
+        case iR.CDATA:
+          return yR.createCDATASection(RR.textContent);
+        case iR.Comment:
+          return yR.createComment(RR.textContent);
         default:
           return null
       }
     }
 
-    function Nm(WW, iW) {
+    function yy(RR, JR) {
       const {
-        doc: OW,
-        mirror: mW,
-        skipChild: EW = !1,
-        hackCss: NW = !0,
-        afterAppend: PW,
-        cache: LW
-      } = iW;
-      if (mW.has(WW.id)) {
-        const iW = mW.AmW(WW.id),
-          OW = mW.getMeta(iW);
-        if (tW = WW, (wW = OW) && tW && wW.type === tW.type && (wW.type === cW.Document ? wW.compatMode === tW.compatMode : wW.type === cW.DocumentType ? wW.name === tW.name && wW.publicId === tW.publicId && wW.systemId === tW.systemId : wW.type === cW.Comment || wW.type === cW.Text || wW.type === cW.CDATA ? wW.textContent === tW.textContent : wW.type === cW.Element && wW.tagName === tW.tagName && JSON.stringify(wW.attributes) === JSON.stringify(tW.attributes) && wW.isSVG === tW.isSVG && wW.needBlock === tW.needBlock)) return mW.AmW(WW.id)
+        doc: GR,
+        mirror: yR,
+        skipChild: tR = !1,
+        hackCss: uR = !0,
+        afterAppend: ZR,
+        cache: qR
+      } = JR;
+      if (yR.has(RR.id)) {
+        const JR = yR.JtR(RR.id),
+          GR = yR.getMeta(JR);
+        if (VR = RR, (fR = GR) && VR && fR.type === VR.type && (fR.type === iR.Document ? fR.compatMode === VR.compatMode : fR.type === iR.DocumentType ? fR.name === VR.name && fR.publicId === VR.publicId && fR.systemId === VR.systemId : fR.type === iR.Comment || fR.type === iR.Text || fR.type === iR.CDATA ? fR.textContent === VR.textContent : fR.type === iR.Element && fR.tagName === VR.tagName && JSON.stringify(fR.attributes) === JSON.stringify(VR.attributes) && fR.isSVG === VR.isSVG && fR.needBlock === VR.needBlock)) return yR.JtR(RR.id)
       }
-      var wW, tW;
-      let ZW = Em(WW, {
-        doc: OW,
-        hackCss: NW,
-        cache: LW
+      var fR, VR;
+      let KR = Gy(RR, {
+        doc: GR,
+        hackCss: uR,
+        cache: qR
       });
-      if (!ZW) return null;
-      if (WW.rootId && mW.AmW(WW.rootId) !== OW && mW.replace(WW.rootId, OW), WW.type === cW.Document && (OW.close(), OW.open(), "BackCompat" === WW.compatMode && WW.childNodes && WW.childNodes[0].type !== cW.DocumentType && (WW.childNodes[0].type === cW.Element && "xmlns" in WW.childNodes[0].attributes && "http://www.w3.org/1999/xhtml" === WW.childNodes[0].attributes.xmlns ? OW.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">') : OW.write('<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "">')), ZW = OW), mW.add(ZW, WW), (WW.type === cW.Document || WW.type === cW.Element) && !EW)
-        for (const xW of WW.childNodes) {
-          const iW = Nm(xW, {
-            doc: OW,
-            mirror: mW,
+      if (!KR) return null;
+      if (RR.rootId && yR.JtR(RR.rootId) !== GR && yR.replace(RR.rootId, GR), RR.type === iR.Document && (GR.close(), GR.open(), "BackCompat" === RR.compatMode && RR.childNodes && RR.childNodes[0].type !== iR.DocumentType && (RR.childNodes[0].type === iR.Element && "xmlns" in RR.childNodes[0].attributes && "http://www.w3.org/1999/xhtml" === RR.childNodes[0].attributes.xmlns ? GR.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">') : GR.write('<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "">')), KR = GR), yR.add(KR, RR), (RR.type === iR.Document || RR.type === iR.Element) && !tR)
+        for (const wR of RR.childNodes) {
+          const JR = yy(wR, {
+            doc: GR,
+            mirror: yR,
             skipChild: !1,
-            hackCss: NW,
-            afterAppend: PW,
-            cache: LW
+            hackCss: uR,
+            afterAppend: ZR,
+            cache: qR
           });
-          if (iW) {
-            if (xW.isShadow && MW(ZW) && ZW.shadowRoot) ZW.shadowRoot.appendChild(iW);
-            else if (WW.type === cW.Document && xW.type == cW.Element) {
-              const WW = iW;
-              let OW = null;
-              WW.childNodes.forEach((WW => {
-                "BODY" === WW.nodeName && (OW = WW)
-              })), OW ? (WW.removeChild(OW), ZW.appendChild(iW), WW.appendChild(OW)) : ZW.appendChild(iW)
-            } else ZW.appendChild(iW);
-            PW && PW(iW, xW.id)
-          } else console.warn("Failed to rebuild", xW)
+          if (JR) {
+            if (wR.isShadow && AR(KR) && KR.shadowRoot) KR.shadowRoot.appendChild(JR);
+            else if (RR.type === iR.Document && wR.type == iR.Element) {
+              const RR = JR;
+              let GR = null;
+              RR.childNodes.forEach((RR => {
+                "BODY" === RR.nodeName && (GR = RR)
+              })), GR ? (RR.removeChild(GR), KR.appendChild(JR), RR.appendChild(GR)) : KR.appendChild(JR)
+            } else KR.appendChild(JR);
+            ZR && ZR(JR, wR.id)
+          } else console.warn("Failed to rebuild", wR)
         }
-      return ZW
+      return KR
     }
 
-    function Pm(WW, iW) {
-      Om(iW);
+    function ty(RR, JR) {
+      Ry(JR);
       const {
-        doc: OW,
-        onVisit: mW,
-        hackCss: EW = !0,
-        afterAppend: NW,
-        cache: PW,
-        mirror: LW = new TW
-      } = iW, wW = Nm(WW, {
-        doc: OW,
-        mirror: LW,
+        doc: GR,
+        onVisit: yR,
+        hackCss: tR = !0,
+        afterAppend: uR,
+        cache: ZR,
+        mirror: qR = new lR
+      } = JR, fR = yy(RR, {
+        doc: GR,
+        mirror: qR,
         skipChild: !1,
-        hackCss: EW,
-        afterAppend: NW,
-        cache: PW
+        hackCss: tR,
+        afterAppend: uR,
+        cache: ZR
       });
-      return function(WW, iW) {
-        for (const mW of WW.getIds()) WW.has(mW) && (OW = WW.AmW(mW), iW(OW));
-        var OW
-      }(LW, (WW => {
-        mW && mW(WW),
-          function(WW, iW) {
-            const OW = iW.getMeta(WW);
-            if ((null == OW ? void 0 : OW.type) !== cW.Element) return;
-            const mW = WW;
-            for (const EW in OW.attributes) {
-              if (!Object.prototype.hasOwnProperty.call(OW.attributes, EW) || !EW.startsWith("rr_")) continue;
-              const WW = OW.attributes[EW];
-              "rr_scrollLeft" === EW && (mW.scrollLeft = WW), "rr_scrollTop" === EW && (mW.scrollTop = WW)
+      return function(RR, JR) {
+        for (const yR of RR.getIds()) RR.has(yR) && (GR = RR.JtR(yR), JR(GR));
+        var GR
+      }(qR, (RR => {
+        yR && yR(RR),
+          function(RR, JR) {
+            const GR = JR.getMeta(RR);
+            if ((null == GR ? void 0 : GR.type) !== iR.Element) return;
+            const yR = RR;
+            for (const tR in GR.attributes) {
+              if (!Object.prototype.hasOwnProperty.call(GR.attributes, tR) || !tR.startsWith("rr_")) continue;
+              const RR = GR.attributes[tR];
+              "rr_scrollLeft" === tR && (yR.scrollLeft = RR), "rr_scrollTop" === tR && (yR.scrollTop = RR)
             }
-          }(WW, LW)
-      })), wW
+          }(RR, qR)
+      })), fR
     }
-    var Lm = Object.defineProperty,
-      cm = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? Lm(WW, iW, {
+    var uy = Object.defineProperty,
+      Zy = (RR, JR, GR) => ((RR, JR, GR) => JR in RR ? uy(RR, JR, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: OW
-      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW),
-      wm = Object.defineProperty,
-      tm = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? wm(WW, iW, {
+        value: GR
+      }) : RR[JR] = GR)(RR, "symbol" !== typeof JR ? JR + "" : JR, GR),
+      qy = Object.defineProperty,
+      iy = (RR, JR, GR) => ((RR, JR, GR) => JR in RR ? qy(RR, JR, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: OW
-      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW);
+        value: GR
+      }) : RR[JR] = GR)(RR, "symbol" !== typeof JR ? JR + "" : JR, GR);
     Date.now().toString();
-    let Zm = class {
+    let fy = class {
       constructor() {
-        tm(this, "idNodeMap", new Map), tm(this, "nodeMetaMap", new WeakMap)
+        iy(this, "idNodeMap", new Map), iy(this, "nodeMetaMap", new WeakMap)
       }
-      getId(WW) {
-        var iW;
-        if (!WW) return -1;
-        return (null == (iW = this.getMeta(WW)) ? void 0 : iW.id) ?? -1
+      getId(RR) {
+        var JR;
+        if (!RR) return -1;
+        return (null == (JR = this.getMeta(RR)) ? void 0 : JR.id) ?? -1
       }
-      AmW(WW) {
-        return this.idNodeMap.get(WW) || null
+      JtR(RR) {
+        return this.idNodeMap.get(RR) || null
       }
       getIds() {
         return Array.from(this.idNodeMap.keys())
       }
-      getMeta(WW) {
-        return this.nodeMetaMap.get(WW) || null
+      getMeta(RR) {
+        return this.nodeMetaMap.get(RR) || null
       }
-      removeNodeFromMap(WW) {
-        const iW = this.getId(WW);
-        this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW)))
+      removeNodeFromMap(RR) {
+        const JR = this.getId(RR);
+        this.idNodeMap.delete(JR), RR.childNodes && RR.childNodes.forEach((RR => this.removeNodeFromMap(RR)))
       }
-      has(WW) {
-        return this.idNodeMap.has(WW)
+      has(RR) {
+        return this.idNodeMap.has(RR)
       }
-      hasNode(WW) {
-        return this.nodeMetaMap.has(WW)
+      hasNode(RR) {
+        return this.nodeMetaMap.has(RR)
       }
-      add(WW, iW) {
-        const OW = iW.id;
-        this.idNodeMap.set(OW, WW), this.nodeMetaMap.set(WW, iW)
+      add(RR, JR) {
+        const GR = JR.id;
+        this.idNodeMap.set(GR, RR), this.nodeMetaMap.set(RR, JR)
       }
-      replace(WW, iW) {
-        const OW = this.AmW(WW);
-        if (OW) {
-          const WW = this.nodeMetaMap.get(OW);
-          WW && this.nodeMetaMap.set(iW, WW)
+      replace(RR, JR) {
+        const GR = this.JtR(RR);
+        if (GR) {
+          const RR = this.nodeMetaMap.get(GR);
+          RR && this.nodeMetaMap.set(JR, RR)
         }
-        this.idNodeMap.set(WW, iW)
+        this.idNodeMap.set(RR, JR)
       }
       reset() {
         this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
       }
     };
 
-    function xm(WW) {
-      return WW && WW.__esModule && Object.prototype.hasOwnProperty.call(WW, "default") ? WW.default : WW
+    function Vy(RR) {
+      return RR && RR.__esModule && Object.prototype.hasOwnProperty.call(RR, "default") ? RR.default : RR
     }
 
-    function lm(WW) {
-      if (WW.__esModule) return WW;
-      var iW = WW.default;
-      if ("function" == typeof iW) {
-        var OW = function WW() {
-          return this instanceof WW ? Reflect.construct(iW, arguments, this.constructor) : iW.apply(this, arguments)
+    function Ky(RR) {
+      if (RR.__esModule) return RR;
+      var JR = RR.default;
+      if ("function" == typeof JR) {
+        var GR = function RR() {
+          return this instanceof RR ? Reflect.construct(JR, arguments, this.constructor) : JR.apply(this, arguments)
         };
-        OW.prototype = iW.prototype
-      } else OW = {};
-      return Object.defineProperty(OW, "__esModule", {
+        GR.prototype = JR.prototype
+      } else GR = {};
+      return Object.defineProperty(GR, "__esModule", {
         value: !0
-      }), Object.keys(WW).forEach((function(iW) {
-        var mW = Object.getOwnPropertyDescriptor(WW, iW);
-        Object.defineProperty(OW, iW, mW.get ? mW : {
+      }), Object.keys(RR).forEach((function(JR) {
+        var yR = Object.getOwnPropertyDescriptor(RR, JR);
+        Object.defineProperty(GR, JR, yR.get ? yR : {
           enumerable: !0,
           get: function() {
-            return WW[iW]
+            return RR[JR]
           }
         })
-      })), OW
+      })), GR
     }
-    var Am, bm = {
+    var wy, ry = {
       exports: {}
     };
 
-    function jm() {
-      if (Am) return bm.exports;
-      Am = 1;
-      var WW = String,
-        iW = function() {
+    function ey() {
+      if (wy) return ry.exports;
+      wy = 1;
+      var RR = String,
+        JR = function() {
           return {
             isColorSupported: !1,
-            reset: WW,
-            bold: WW,
-            dim: WW,
-            italic: WW,
-            underline: WW,
-            inverse: WW,
-            hidden: WW,
-            strikethrough: WW,
-            black: WW,
-            red: WW,
-            green: WW,
-            yellow: WW,
-            blue: WW,
-            magenta: WW,
-            cyan: WW,
-            white: WW,
-            gray: WW,
-            bgBlack: WW,
-            bgRed: WW,
-            bgGreen: WW,
-            bgYellow: WW,
-            bgBlue: WW,
-            bgMagenta: WW,
-            bgCyan: WW,
-            bgWhite: WW
+            reset: RR,
+            bold: RR,
+            dim: RR,
+            italic: RR,
+            underline: RR,
+            inverse: RR,
+            hidden: RR,
+            strikethrough: RR,
+            black: RR,
+            red: RR,
+            green: RR,
+            yellow: RR,
+            blue: RR,
+            magenta: RR,
+            cyan: RR,
+            white: RR,
+            gray: RR,
+            bgBlack: RR,
+            bgRed: RR,
+            bgGreen: RR,
+            bgYellow: RR,
+            bgBlue: RR,
+            bgMagenta: RR,
+            bgCyan: RR,
+            bgWhite: RR
           }
         };
-      return bm.exports = iW(), bm.exports.createColors = iW, bm.exports
+      return ry.exports = JR(), ry.exports.createColors = JR, ry.exports
     }
-    const Um = lm(Object.freeze(Object.defineProperty({
+    const ay = Ky(Object.freeze(Object.defineProperty({
       __proto__: null,
       default: {}
     }, Symbol.toStringTag, {
       value: "Module"
     })));
-    var km, sm;
+    var Ly, ny;
 
-    function Mm() {
-      if (sm) return km;
-      sm = 1;
-      let WW = jm(),
-        iW = Um;
-      class OW extends Error {
-        constructor(WW, iW, mW, EW, NW, PW) {
-          super(WW), this.name = "CssSyntaxError", this.reason = WW, NW && (this.file = NW), EW && (this.source = EW), PW && (this.plugin = PW), "undefined" !== typeof iW && "undefined" !== typeof mW && ("number" === typeof iW ? (this.line = iW, this.column = mW) : (this.line = iW.line, this.column = iW.column, this.endLine = mW.line, this.endColumn = mW.column)), this.setMessage(), Error.captureStackTrace && Error.captureStackTrace(this, OW)
+    function Uy() {
+      if (ny) return Ly;
+      ny = 1;
+      let RR = ey(),
+        JR = ay;
+      class GR extends Error {
+        constructor(RR, JR, yR, tR, uR, ZR) {
+          super(RR), this.name = "CssSyntaxError", this.reason = RR, uR && (this.file = uR), tR && (this.source = tR), ZR && (this.plugin = ZR), "undefined" !== typeof JR && "undefined" !== typeof yR && ("number" === typeof JR ? (this.line = JR, this.column = yR) : (this.line = JR.line, this.column = JR.column, this.endLine = yR.line, this.endColumn = yR.column)), this.setMessage(), Error.captureStackTrace && Error.captureStackTrace(this, GR)
         }
         setMessage() {
           this.message = this.plugin ? this.plugin + ": " : "", this.message += this.file ? this.file : "<css input>", "undefined" !== typeof this.line && (this.message += ":" + this.line + ":" + this.column), this.message += ": " + this.reason
         }
-        showSourceCode(OW) {
+        showSourceCode(GR) {
           if (!this.source) return "";
-          let mW = this.source;
-          null == OW && (OW = WW.isColorSupported), iW && OW && (mW = iW(mW));
-          let EW, NW, PW = mW.split(/\r?\n/),
-            LW = Math.max(this.line - 3, 0),
-            cW = Math.min(this.line + 2, PW.length),
-            wW = String(cW).length;
-          if (OW) {
+          let yR = this.source;
+          null == GR && (GR = RR.isColorSupported), JR && GR && (yR = JR(yR));
+          let tR, uR, ZR = yR.split(/\r?\n/),
+            qR = Math.max(this.line - 3, 0),
+            iR = Math.min(this.line + 2, ZR.length),
+            fR = String(iR).length;
+          if (GR) {
             let {
-              bold: iW,
-              gray: OW,
-              red: mW
-            } = WW.createColors(!0);
-            EW = WW => iW(mW(WW)), NW = WW => OW(WW)
-          } else EW = NW = WW => WW;
-          return PW.slice(LW, cW).map(((WW, iW) => {
-            let OW = LW + 1 + iW,
-              mW = " " + (" " + OW).slice(-wW) + " | ";
-            if (OW === this.line) {
-              let iW = NW(mW.replace(/\d/g, " ")) + WW.slice(0, this.column - 1).replace(/[^\t]/g, " ");
-              return EW(">") + NW(mW) + WW + "\n " + iW + EW("^")
+              bold: JR,
+              gray: GR,
+              red: yR
+            } = RR.createColors(!0);
+            tR = RR => JR(yR(RR)), uR = RR => GR(RR)
+          } else tR = uR = RR => RR;
+          return ZR.slice(qR, iR).map(((RR, JR) => {
+            let GR = qR + 1 + JR,
+              yR = " " + (" " + GR).slice(-fR) + " | ";
+            if (GR === this.line) {
+              let JR = uR(yR.replace(/\d/g, " ")) + RR.slice(0, this.column - 1).replace(/[^\t]/g, " ");
+              return tR(">") + uR(yR) + RR + "\n " + JR + tR("^")
             }
-            return " " + NW(mW) + WW
+            return " " + uR(yR) + RR
           })).join("\n")
         }
         toString() {
-          let WW = this.showSourceCode();
-          return WW && (WW = "\n\n" + WW + "\n"), this.name + ": " + this.message + WW
+          let RR = this.showSourceCode();
+          return RR && (RR = "\n\n" + RR + "\n"), this.name + ": " + this.message + RR
         }
       }
-      return km = OW, OW.default = OW, km
+      return Ly = GR, GR.default = GR, Ly
     }
-    var Km, Sm, Ym, ym, Tm, Jm, hm, Hm, nm, um, om, dm, em, gm, Dm, Vm, pm, fm, Cm, Xm, Bm, qm, Rm, Gm, Im, am, rm, zm, Fm, Qm, WE, iE, OE, mE, EE, NE, PE, LE, cE, wE, tE, ZE, xE, lE, AE, bE, jE, UE, kE, sE, ME, KE, SE, YE = {};
+    var Wy, Ay, Cy, Xy, My, By, ly, py, gy, by, vy, Oy, xy, Ny, Dy, Hy, oy, cy, Py, Iy, my, zy, Sy, jy, dy, Ey, Yy, ky, Qy, Fy, Ty, sy, hy, Rt, Jt, Gt, yt, tt, ut, Zt, qt, it, ft, Vt, Kt, wt, rt, et, Lt, nt, Ut, Wt, At, Ct = {};
 
-    function yE() {
-      return Km || (Km = 1, YE.isClean = Symbol("isClean"), YE.my = Symbol("my")), YE
+    function Xt() {
+      return Wy || (Wy = 1, Ct.isClean = Symbol("isClean"), Ct.my = Symbol("my")), Ct
     }
 
-    function TE() {
-      if (Ym) return Sm;
-      Ym = 1;
-      const WW = {
+    function Mt() {
+      if (Cy) return Ay;
+      Cy = 1;
+      const RR = {
         after: "\n",
         beforeClose: "\n",
         beforeComment: "\n",
@@ -3759,708 +3759,708 @@ export const modules = {
         indent: "    ",
         semicolon: !1
       };
-      class iW {
-        constructor(WW) {
-          this.builder = WW
+      class JR {
+        constructor(RR) {
+          this.builder = RR
         }
-        atrule(WW, iW) {
-          let OW = "@" + WW.name,
-            mW = WW.params ? this.rawValue(WW, "params") : "";
-          if ("undefined" !== typeof WW.raws.afterName ? OW += WW.raws.afterName : mW && (OW += " "), WW.nodes) this.block(WW, OW + mW);
+        atrule(RR, JR) {
+          let GR = "@" + RR.name,
+            yR = RR.params ? this.rawValue(RR, "params") : "";
+          if ("undefined" !== typeof RR.raws.afterName ? GR += RR.raws.afterName : yR && (GR += " "), RR.nodes) this.block(RR, GR + yR);
           else {
-            let EW = (WW.raws.between || "") + (iW ? ";" : "");
-            this.builder(OW + mW + EW, WW)
+            let tR = (RR.raws.between || "") + (JR ? ";" : "");
+            this.builder(GR + yR + tR, RR)
           }
         }
-        beforeAfter(WW, iW) {
-          let OW;
-          OW = "decl" === WW.type ? this.raw(WW, null, "beforeDecl") : "comment" === WW.type ? this.raw(WW, null, "beforeComment") : "before" === iW ? this.raw(WW, null, "beforeRule") : this.raw(WW, null, "beforeClose");
-          let mW = WW.parent,
-            EW = 0;
-          for (; mW && "root" !== mW.type;) EW += 1, mW = mW.parent;
-          if (OW.includes("\n")) {
-            let iW = this.raw(WW, null, "indent");
-            if (iW.length)
-              for (let WW = 0; WW < EW; WW++) OW += iW
+        beforeAfter(RR, JR) {
+          let GR;
+          GR = "decl" === RR.type ? this.raw(RR, null, "beforeDecl") : "comment" === RR.type ? this.raw(RR, null, "beforeComment") : "before" === JR ? this.raw(RR, null, "beforeRule") : this.raw(RR, null, "beforeClose");
+          let yR = RR.parent,
+            tR = 0;
+          for (; yR && "root" !== yR.type;) tR += 1, yR = yR.parent;
+          if (GR.includes("\n")) {
+            let JR = this.raw(RR, null, "indent");
+            if (JR.length)
+              for (let RR = 0; RR < tR; RR++) GR += JR
           }
-          return OW
+          return GR
         }
-        block(WW, iW) {
-          let OW, mW = this.raw(WW, "between", "beforeOpen");
-          this.builder(iW + mW + "{", WW, "start"), WW.nodes && WW.nodes.length ? (this.body(WW), OW = this.raw(WW, "after")) : OW = this.raw(WW, "after", "emptyBody"), OW && this.builder(OW), this.builder("}", WW, "end")
+        block(RR, JR) {
+          let GR, yR = this.raw(RR, "between", "beforeOpen");
+          this.builder(JR + yR + "{", RR, "start"), RR.nodes && RR.nodes.length ? (this.body(RR), GR = this.raw(RR, "after")) : GR = this.raw(RR, "after", "emptyBody"), GR && this.builder(GR), this.builder("}", RR, "end")
         }
-        body(WW) {
-          let iW = WW.nodes.length - 1;
-          for (; iW > 0 && "comment" === WW.nodes[iW].type;) iW -= 1;
-          let OW = this.raw(WW, "semicolon");
-          for (let mW = 0; mW < WW.nodes.length; mW++) {
-            let EW = WW.nodes[mW],
-              NW = this.raw(EW, "before");
-            NW && this.builder(NW), this.stringify(EW, iW !== mW || OW)
+        body(RR) {
+          let JR = RR.nodes.length - 1;
+          for (; JR > 0 && "comment" === RR.nodes[JR].type;) JR -= 1;
+          let GR = this.raw(RR, "semicolon");
+          for (let yR = 0; yR < RR.nodes.length; yR++) {
+            let tR = RR.nodes[yR],
+              uR = this.raw(tR, "before");
+            uR && this.builder(uR), this.stringify(tR, JR !== yR || GR)
           }
         }
-        comment(WW) {
-          let iW = this.raw(WW, "left", "commentLeft"),
-            OW = this.raw(WW, "right", "commentRight");
-          this.builder("/*" + iW + WW.text + OW + "*/", WW)
+        comment(RR) {
+          let JR = this.raw(RR, "left", "commentLeft"),
+            GR = this.raw(RR, "right", "commentRight");
+          this.builder("/*" + JR + RR.text + GR + "*/", RR)
         }
-        decl(WW, iW) {
-          let OW = this.raw(WW, "between", "colon"),
-            mW = WW.prop + OW + this.rawValue(WW, "value");
-          WW.important && (mW += WW.raws.important || " !important"), iW && (mW += ";"), this.builder(mW, WW)
+        decl(RR, JR) {
+          let GR = this.raw(RR, "between", "colon"),
+            yR = RR.prop + GR + this.rawValue(RR, "value");
+          RR.important && (yR += RR.raws.important || " !important"), JR && (yR += ";"), this.builder(yR, RR)
         }
-        document(WW) {
-          this.body(WW)
+        document(RR) {
+          this.body(RR)
         }
-        raw(iW, OW, mW) {
-          let EW;
-          if (mW || (mW = OW), OW && (EW = iW.raws[OW], "undefined" !== typeof EW)) return EW;
-          let NW = iW.parent;
-          if ("before" === mW) {
-            if (!NW || "root" === NW.type && NW.first === iW) return "";
-            if (NW && "document" === NW.type) return ""
+        raw(JR, GR, yR) {
+          let tR;
+          if (yR || (yR = GR), GR && (tR = JR.raws[GR], "undefined" !== typeof tR)) return tR;
+          let uR = JR.parent;
+          if ("before" === yR) {
+            if (!uR || "root" === uR.type && uR.first === JR) return "";
+            if (uR && "document" === uR.type) return ""
           }
-          if (!NW) return WW[mW];
-          let PW = iW.root();
-          if (PW.rawCache || (PW.rawCache = {}), "undefined" !== typeof PW.rawCache[mW]) return PW.rawCache[mW];
-          if ("before" === mW || "after" === mW) return this.beforeAfter(iW, mW);
+          if (!uR) return RR[yR];
+          let ZR = JR.root();
+          if (ZR.rawCache || (ZR.rawCache = {}), "undefined" !== typeof ZR.rawCache[yR]) return ZR.rawCache[yR];
+          if ("before" === yR || "after" === yR) return this.beforeAfter(JR, yR);
           {
-            let WW = "raw" + ((LW = mW)[0].toUpperCase() + LW.slice(1));
-            this[WW] ? EW = this[WW](PW, iW) : PW.walk((WW => {
-              if (EW = WW.raws[OW], "undefined" !== typeof EW) return !1
+            let RR = "raw" + ((qR = yR)[0].toUpperCase() + qR.slice(1));
+            this[RR] ? tR = this[RR](ZR, JR) : ZR.walk((RR => {
+              if (tR = RR.raws[GR], "undefined" !== typeof tR) return !1
             }))
           }
-          var LW;
-          return "undefined" === typeof EW && (EW = WW[mW]), PW.rawCache[mW] = EW, EW
+          var qR;
+          return "undefined" === typeof tR && (tR = RR[yR]), ZR.rawCache[yR] = tR, tR
         }
-        rawBeforeClose(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if (WW.nodes && WW.nodes.length > 0 && "undefined" !== typeof WW.raws.after) return iW = WW.raws.after, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
-          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        rawBeforeClose(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if (RR.nodes && RR.nodes.length > 0 && "undefined" !== typeof RR.raws.after) return JR = RR.raws.after, JR.includes("\n") && (JR = JR.replace(/[^\n]+$/, "")), !1
+          })), JR && (JR = JR.replace(/\S/g, "")), JR
         }
-        rawBeforeComment(WW, iW) {
-          let OW;
-          return WW.walkComments((WW => {
-            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
-          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeDecl") : OW && (OW = OW.replace(/\S/g, "")), OW
+        rawBeforeComment(RR, JR) {
+          let GR;
+          return RR.walkComments((RR => {
+            if ("undefined" !== typeof RR.raws.before) return GR = RR.raws.before, GR.includes("\n") && (GR = GR.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof GR ? GR = this.raw(JR, null, "beforeDecl") : GR && (GR = GR.replace(/\S/g, "")), GR
         }
-        rawBeforeDecl(WW, iW) {
-          let OW;
-          return WW.walkDecls((WW => {
-            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
-          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeRule") : OW && (OW = OW.replace(/\S/g, "")), OW
+        rawBeforeDecl(RR, JR) {
+          let GR;
+          return RR.walkDecls((RR => {
+            if ("undefined" !== typeof RR.raws.before) return GR = RR.raws.before, GR.includes("\n") && (GR = GR.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof GR ? GR = this.raw(JR, null, "beforeRule") : GR && (GR = GR.replace(/\S/g, "")), GR
         }
-        rawBeforeOpen(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if ("decl" !== WW.type && (iW = WW.raws.between, "undefined" !== typeof iW)) return !1
-          })), iW
+        rawBeforeOpen(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if ("decl" !== RR.type && (JR = RR.raws.between, "undefined" !== typeof JR)) return !1
+          })), JR
         }
-        rawBeforeRule(WW) {
-          let iW;
-          return WW.walk((OW => {
-            if (OW.nodes && (OW.parent !== WW || WW.first !== OW) && "undefined" !== typeof OW.raws.before) return iW = OW.raws.before, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
-          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        rawBeforeRule(RR) {
+          let JR;
+          return RR.walk((GR => {
+            if (GR.nodes && (GR.parent !== RR || RR.first !== GR) && "undefined" !== typeof GR.raws.before) return JR = GR.raws.before, JR.includes("\n") && (JR = JR.replace(/[^\n]+$/, "")), !1
+          })), JR && (JR = JR.replace(/\S/g, "")), JR
         }
-        rawColon(WW) {
-          let iW;
-          return WW.walkDecls((WW => {
-            if ("undefined" !== typeof WW.raws.between) return iW = WW.raws.between.replace(/[^\s:]/g, ""), !1
-          })), iW
+        rawColon(RR) {
+          let JR;
+          return RR.walkDecls((RR => {
+            if ("undefined" !== typeof RR.raws.between) return JR = RR.raws.between.replace(/[^\s:]/g, ""), !1
+          })), JR
         }
-        rawEmptyBody(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if (WW.nodes && 0 === WW.nodes.length && (iW = WW.raws.after, "undefined" !== typeof iW)) return !1
-          })), iW
+        rawEmptyBody(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if (RR.nodes && 0 === RR.nodes.length && (JR = RR.raws.after, "undefined" !== typeof JR)) return !1
+          })), JR
         }
-        rawIndent(WW) {
-          if (WW.raws.indent) return WW.raws.indent;
-          let iW;
-          return WW.walk((OW => {
-            let mW = OW.parent;
-            if (mW && mW !== WW && mW.parent && mW.parent === WW && "undefined" !== typeof OW.raws.before) {
-              let WW = OW.raws.before.split("\n");
-              return iW = WW[WW.length - 1], iW = iW.replace(/\S/g, ""), !1
+        rawIndent(RR) {
+          if (RR.raws.indent) return RR.raws.indent;
+          let JR;
+          return RR.walk((GR => {
+            let yR = GR.parent;
+            if (yR && yR !== RR && yR.parent && yR.parent === RR && "undefined" !== typeof GR.raws.before) {
+              let RR = GR.raws.before.split("\n");
+              return JR = RR[RR.length - 1], JR = JR.replace(/\S/g, ""), !1
             }
-          })), iW
+          })), JR
         }
-        rawSemicolon(WW) {
-          let iW;
-          return WW.walk((WW => {
-            if (WW.nodes && WW.nodes.length && "decl" === WW.last.type && (iW = WW.raws.semicolon, "undefined" !== typeof iW)) return !1
-          })), iW
+        rawSemicolon(RR) {
+          let JR;
+          return RR.walk((RR => {
+            if (RR.nodes && RR.nodes.length && "decl" === RR.last.type && (JR = RR.raws.semicolon, "undefined" !== typeof JR)) return !1
+          })), JR
         }
-        rawValue(WW, iW) {
-          let OW = WW[iW],
-            mW = WW.raws[iW];
-          return mW && mW.value === OW ? mW.raw : OW
+        rawValue(RR, JR) {
+          let GR = RR[JR],
+            yR = RR.raws[JR];
+          return yR && yR.value === GR ? yR.raw : GR
         }
-        root(WW) {
-          this.body(WW), WW.raws.after && this.builder(WW.raws.after)
+        root(RR) {
+          this.body(RR), RR.raws.after && this.builder(RR.raws.after)
         }
-        rule(WW) {
-          this.block(WW, this.rawValue(WW, "selector")), WW.raws.ownSemicolon && this.builder(WW.raws.ownSemicolon, WW, "end")
+        rule(RR) {
+          this.block(RR, this.rawValue(RR, "selector")), RR.raws.ownSemicolon && this.builder(RR.raws.ownSemicolon, RR, "end")
         }
-        stringify(WW, iW) {
-          if (!this[WW.type]) throw new Error("Unknown AST node type " + WW.type + ". Maybe you need to change PostCSS stringifier.");
-          this[WW.type](WW, iW)
+        stringify(RR, JR) {
+          if (!this[RR.type]) throw new Error("Unknown AST node type " + RR.type + ". Maybe you need to change PostCSS stringifier.");
+          this[RR.type](RR, JR)
         }
       }
-      return Sm = iW, iW.default = iW, Sm
+      return Ay = JR, JR.default = JR, Ay
     }
 
-    function JE() {
-      if (Tm) return ym;
-      Tm = 1;
-      let WW = TE();
+    function Bt() {
+      if (My) return Xy;
+      My = 1;
+      let RR = Mt();
 
-      function iW(iW, OW) {
-        new WW(OW).stringify(iW)
+      function JR(JR, GR) {
+        new RR(GR).stringify(JR)
       }
-      return ym = iW, iW.default = iW, ym
+      return Xy = JR, JR.default = JR, Xy
     }
 
-    function hE() {
-      if (hm) return Jm;
-      hm = 1;
+    function lt() {
+      if (ly) return By;
+      ly = 1;
       let {
-        isClean: WW,
-        my: iW
-      } = yE(), OW = Mm(), mW = TE(), EW = JE();
+        isClean: RR,
+        my: JR
+      } = Xt(), GR = Uy(), yR = Mt(), tR = Bt();
 
-      function NW(WW, iW) {
-        let OW = new WW.constructor;
-        for (let mW in WW) {
-          if (!Object.prototype.hasOwnProperty.call(WW, mW)) continue;
-          if ("proxyCache" === mW) continue;
-          let EW = WW[mW],
-            PW = typeof EW;
-          "parent" === mW && "object" === PW ? iW && (OW[mW] = iW) : "source" === mW ? OW[mW] = EW : Array.isArray(EW) ? OW[mW] = EW.map((WW => NW(WW, OW))) : ("object" === PW && null !== EW && (EW = NW(EW)), OW[mW] = EW)
+      function uR(RR, JR) {
+        let GR = new RR.constructor;
+        for (let yR in RR) {
+          if (!Object.prototype.hasOwnProperty.call(RR, yR)) continue;
+          if ("proxyCache" === yR) continue;
+          let tR = RR[yR],
+            ZR = typeof tR;
+          "parent" === yR && "object" === ZR ? JR && (GR[yR] = JR) : "source" === yR ? GR[yR] = tR : Array.isArray(tR) ? GR[yR] = tR.map((RR => uR(RR, GR))) : ("object" === ZR && null !== tR && (tR = uR(tR)), GR[yR] = tR)
         }
-        return OW
+        return GR
       }
-      class PW {
+      class ZR {
         constructor() {
-          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          this.raws = {}, this[WW] = !1, this[iW] = !0;
-          for (let WW in OW)
-            if ("nodes" === WW) {
+          let GR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          this.raws = {}, this[RR] = !1, this[JR] = !0;
+          for (let RR in GR)
+            if ("nodes" === RR) {
               this.nodes = [];
-              for (let iW of OW[WW]) "function" === typeof iW.clone ? this.append(iW.clone()) : this.append(iW)
-            } else this[WW] = OW[WW]
+              for (let JR of GR[RR]) "function" === typeof JR.clone ? this.append(JR.clone()) : this.append(JR)
+            } else this[RR] = GR[RR]
         }
-        addToError(WW) {
-          if (WW.postcssNode = this, WW.stack && this.source && /\n\s{4}at /.test(WW.stack)) {
-            let iW = this.source;
-            WW.stack = WW.stack.replace(/\n\s{4}at /, `$&${iW.input.from}:${iW.start.line}:${iW.start.column}$&`)
+        addToError(RR) {
+          if (RR.postcssNode = this, RR.stack && this.source && /\n\s{4}at /.test(RR.stack)) {
+            let JR = this.source;
+            RR.stack = RR.stack.replace(/\n\s{4}at /, `$&${JR.input.from}:${JR.start.line}:${JR.start.column}$&`)
           }
-          return WW
+          return RR
         }
-        after(WW) {
-          return this.parent.insertAfter(this, WW), this
+        after(RR) {
+          return this.parent.insertAfter(this, RR), this
         }
         assign() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          for (let iW in WW) this[iW] = WW[iW];
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          for (let JR in RR) this[JR] = RR[JR];
           return this
         }
-        before(WW) {
-          return this.parent.insertBefore(this, WW), this
+        before(RR) {
+          return this.parent.insertBefore(this, RR), this
         }
-        cleanRaws(WW) {
-          delete this.raws.before, delete this.raws.after, WW || delete this.raws.between
+        cleanRaws(RR) {
+          delete this.raws.before, delete this.raws.after, RR || delete this.raws.between
         }
         clone() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            iW = NW(this);
-          for (let OW in WW) iW[OW] = WW[OW];
-          return iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            JR = uR(this);
+          for (let GR in RR) JR[GR] = RR[GR];
+          return JR
         }
         cloneAfter() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            iW = this.clone(WW);
-          return this.parent.insertAfter(this, iW), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            JR = this.clone(RR);
+          return this.parent.insertAfter(this, JR), JR
         }
         cloneBefore() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            iW = this.clone(WW);
-          return this.parent.insertBefore(this, iW), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            JR = this.clone(RR);
+          return this.parent.insertBefore(this, JR), JR
         }
-        error(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        error(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
           if (this.source) {
             let {
-              end: OW,
-              start: mW
-            } = this.rangeBy(iW);
-            return this.source.input.error(WW, {
-              column: mW.column,
-              line: mW.line
+              end: GR,
+              start: yR
+            } = this.rangeBy(JR);
+            return this.source.input.error(RR, {
+              column: yR.column,
+              line: yR.line
             }, {
-              column: OW.column,
-              line: OW.line
-            }, iW)
+              column: GR.column,
+              line: GR.line
+            }, JR)
           }
-          return new OW(WW)
+          return new GR(RR)
         }
         getProxyProcessor() {
           return {
-            get: (WW, iW) => "proxyOf" === iW ? WW : "root" === iW ? () => WW.root().toProxy() : WW[iW],
-            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "prop" !== iW && "value" !== iW && "name" !== iW && "params" !== iW && "important" !== iW && "text" !== iW || WW.markDirty()), !0)
+            get: (RR, JR) => "proxyOf" === JR ? RR : "root" === JR ? () => RR.root().toProxy() : RR[JR],
+            set: (RR, JR, GR) => (RR[JR] === GR || (RR[JR] = GR, "prop" !== JR && "value" !== JR && "name" !== JR && "params" !== JR && "important" !== JR && "text" !== JR || RR.markDirty()), !0)
           }
         }
         markDirty() {
-          if (this[WW]) {
-            this[WW] = !1;
-            let iW = this;
-            for (; iW = iW.parent;) iW[WW] = !1
+          if (this[RR]) {
+            this[RR] = !1;
+            let JR = this;
+            for (; JR = JR.parent;) JR[RR] = !1
           }
         }
         next() {
           if (!this.parent) return;
-          let WW = this.parent.index(this);
-          return this.parent.nodes[WW + 1]
+          let RR = this.parent.index(this);
+          return this.parent.nodes[RR + 1]
         }
-        positionBy(WW, iW) {
-          let OW = this.source.start;
-          if (WW.index) OW = this.positionInside(WW.index, iW);
-          else if (WW.word) {
-            let mW = (iW = this.toString()).indexOf(WW.word); - 1 !== mW && (OW = this.positionInside(mW, iW))
+        positionBy(RR, JR) {
+          let GR = this.source.start;
+          if (RR.index) GR = this.positionInside(RR.index, JR);
+          else if (RR.word) {
+            let yR = (JR = this.toString()).indexOf(RR.word); - 1 !== yR && (GR = this.positionInside(yR, JR))
           }
-          return OW
+          return GR
         }
-        positionInside(WW, iW) {
-          let OW = iW || this.toString(),
-            mW = this.source.start.column,
-            EW = this.source.start.line;
-          for (let NW = 0; NW < WW; NW++) "\n" === OW[NW] ? (mW = 1, EW += 1) : mW += 1;
+        positionInside(RR, JR) {
+          let GR = JR || this.toString(),
+            yR = this.source.start.column,
+            tR = this.source.start.line;
+          for (let uR = 0; uR < RR; uR++) "\n" === GR[uR] ? (yR = 1, tR += 1) : yR += 1;
           return {
-            column: mW,
-            line: EW
+            column: yR,
+            line: tR
           }
         }
         prev() {
           if (!this.parent) return;
-          let WW = this.parent.index(this);
-          return this.parent.nodes[WW - 1]
+          let RR = this.parent.index(this);
+          return this.parent.nodes[RR - 1]
         }
-        rangeBy(WW) {
-          let iW = {
+        rangeBy(RR) {
+          let JR = {
               column: this.source.start.column,
               line: this.source.start.line
             },
-            OW = this.source.end ? {
+            GR = this.source.end ? {
               column: this.source.end.column + 1,
               line: this.source.end.line
             } : {
-              column: iW.column + 1,
-              line: iW.line
+              column: JR.column + 1,
+              line: JR.line
             };
-          if (WW.word) {
-            let mW = this.toString(),
-              EW = mW.indexOf(WW.word); - 1 !== EW && (iW = this.positionInside(EW, mW), OW = this.positionInside(EW + WW.word.length, mW))
-          } else WW.start ? iW = {
-            column: WW.start.column,
-            line: WW.start.line
-          } : WW.index && (iW = this.positionInside(WW.index)), WW.end ? OW = {
-            column: WW.end.column,
-            line: WW.end.line
-          } : "number" === typeof WW.endIndex ? OW = this.positionInside(WW.endIndex) : WW.index && (OW = this.positionInside(WW.index + 1));
-          return (OW.line < iW.line || OW.line === iW.line && OW.column <= iW.column) && (OW = {
-            column: iW.column + 1,
-            line: iW.line
+          if (RR.word) {
+            let yR = this.toString(),
+              tR = yR.indexOf(RR.word); - 1 !== tR && (JR = this.positionInside(tR, yR), GR = this.positionInside(tR + RR.word.length, yR))
+          } else RR.start ? JR = {
+            column: RR.start.column,
+            line: RR.start.line
+          } : RR.index && (JR = this.positionInside(RR.index)), RR.end ? GR = {
+            column: RR.end.column,
+            line: RR.end.line
+          } : "number" === typeof RR.endIndex ? GR = this.positionInside(RR.endIndex) : RR.index && (GR = this.positionInside(RR.index + 1));
+          return (GR.line < JR.line || GR.line === JR.line && GR.column <= JR.column) && (GR = {
+            column: JR.column + 1,
+            line: JR.line
           }), {
-            end: OW,
-            start: iW
+            end: GR,
+            start: JR
           }
         }
-        raw(WW, iW) {
-          return (new mW).raw(this, WW, iW)
+        raw(RR, JR) {
+          return (new yR).raw(this, RR, JR)
         }
         remove() {
           return this.parent && this.parent.removeChild(this), this.parent = void 0, this
         }
         replaceWith() {
           if (this.parent) {
-            let mW = this,
-              EW = !1;
-            for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-            for (let WW of iW) WW === this ? EW = !0 : EW ? (this.parent.insertAfter(mW, WW), mW = WW) : this.parent.insertBefore(mW, WW);
-            EW || this.remove()
+            let yR = this,
+              tR = !1;
+            for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+            for (let RR of JR) RR === this ? tR = !0 : tR ? (this.parent.insertAfter(yR, RR), yR = RR) : this.parent.insertBefore(yR, RR);
+            tR || this.remove()
           }
           return this
         }
         root() {
-          let WW = this;
-          for (; WW.parent && "document" !== WW.parent.type;) WW = WW.parent;
-          return WW
+          let RR = this;
+          for (; RR.parent && "document" !== RR.parent.type;) RR = RR.parent;
+          return RR
         }
-        toJSON(WW, iW) {
-          let OW = {},
-            mW = null == iW;
-          iW = iW || new Map;
-          let EW = 0;
-          for (let NW in this) {
-            if (!Object.prototype.hasOwnProperty.call(this, NW)) continue;
-            if ("parent" === NW || "proxyCache" === NW) continue;
-            let WW = this[NW];
-            if (Array.isArray(WW)) OW[NW] = WW.map((WW => "object" === typeof WW && WW.toJSON ? WW.toJSON(null, iW) : WW));
-            else if ("object" === typeof WW && WW.toJSON) OW[NW] = WW.toJSON(null, iW);
-            else if ("source" === NW) {
-              let mW = iW.get(WW.input);
-              null == mW && (mW = EW, iW.set(WW.input, EW), EW++), OW[NW] = {
-                end: WW.end,
-                inputId: mW,
-                start: WW.start
+        toJSON(RR, JR) {
+          let GR = {},
+            yR = null == JR;
+          JR = JR || new Map;
+          let tR = 0;
+          for (let uR in this) {
+            if (!Object.prototype.hasOwnProperty.call(this, uR)) continue;
+            if ("parent" === uR || "proxyCache" === uR) continue;
+            let RR = this[uR];
+            if (Array.isArray(RR)) GR[uR] = RR.map((RR => "object" === typeof RR && RR.toJSON ? RR.toJSON(null, JR) : RR));
+            else if ("object" === typeof RR && RR.toJSON) GR[uR] = RR.toJSON(null, JR);
+            else if ("source" === uR) {
+              let yR = JR.get(RR.input);
+              null == yR && (yR = tR, JR.set(RR.input, tR), tR++), GR[uR] = {
+                end: RR.end,
+                inputId: yR,
+                start: RR.start
               }
-            } else OW[NW] = WW
+            } else GR[uR] = RR
           }
-          return mW && (OW.inputs = [...iW.keys()].map((WW => WW.toJSON()))), OW
+          return yR && (GR.inputs = [...JR.keys()].map((RR => RR.toJSON()))), GR
         }
         toProxy() {
           return this.proxyCache || (this.proxyCache = new Proxy(this, this.getProxyProcessor())), this.proxyCache
         }
         toString() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : EW;
-          WW.stringify && (WW = WW.stringify);
-          let iW = "";
-          return WW(this, (WW => {
-            iW += WW
-          })), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tR;
+          RR.stringify && (RR = RR.stringify);
+          let JR = "";
+          return RR(this, (RR => {
+            JR += RR
+          })), JR
         }
-        warn(WW, iW, OW) {
-          let mW = {
+        warn(RR, JR, GR) {
+          let yR = {
             node: this
           };
-          for (let EW in OW) mW[EW] = OW[EW];
-          return WW.warn(iW, mW)
+          for (let tR in GR) yR[tR] = GR[tR];
+          return RR.warn(JR, yR)
         }
         get proxyOf() {
           return this
         }
       }
-      return Jm = PW, PW.default = PW, Jm
+      return By = ZR, ZR.default = ZR, By
     }
 
-    function HE() {
-      if (nm) return Hm;
-      nm = 1;
-      let WW = hE();
-      class iW extends WW {
-        constructor(WW) {
-          WW && "undefined" !== typeof WW.value && "string" !== typeof WW.value && (WW = {
-            ...WW,
-            value: String(WW.value)
-          }), super(WW), this.type = "decl"
+    function pt() {
+      if (gy) return py;
+      gy = 1;
+      let RR = lt();
+      class JR extends RR {
+        constructor(RR) {
+          RR && "undefined" !== typeof RR.value && "string" !== typeof RR.value && (RR = {
+            ...RR,
+            value: String(RR.value)
+          }), super(RR), this.type = "decl"
         }
         get variable() {
           return this.prop.startsWith("--") || "$" === this.prop[0]
         }
       }
-      return Hm = iW, iW.default = iW, Hm
+      return py = JR, JR.default = JR, py
     }
 
-    function nE() {
-      if (om) return um;
-      om = 1;
-      return um = {
+    function gt() {
+      if (vy) return by;
+      vy = 1;
+      return by = {
         nanoid: function() {
-          let WW = "",
-            iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 21;
-          for (; iW--;) WW += "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict" [64 * Math.random() | 0];
-          return WW
+          let RR = "",
+            JR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 21;
+          for (; JR--;) RR += "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict" [64 * Math.random() | 0];
+          return RR
         },
-        customAlphabet: function(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 21;
+        customAlphabet: function(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 21;
           return function() {
-            let OW = "",
-              mW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iW;
-            for (; mW--;) OW += WW[Math.random() * WW.length | 0];
-            return OW
+            let GR = "",
+              yR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JR;
+            for (; yR--;) GR += RR[Math.random() * RR.length | 0];
+            return GR
           }
         }
-      }, um
+      }, by
     }
 
-    function uE() {
-      if (em) return dm;
-      em = 1;
+    function bt() {
+      if (xy) return Oy;
+      xy = 1;
       let {
-        SourceMapConsumer: WW,
-        SourceMapGenerator: iW
-      } = Um, {
-        existsSync: OW,
-        readFileSync: mW
-      } = Um, {
-        dirname: EW,
-        join: NW
-      } = Um;
-      class PW {
-        constructor(WW, iW) {
-          if (!1 === iW.map) return;
-          this.loadAnnotation(WW), this.inline = this.startWith(this.annotation, "data:");
-          let OW = iW.map ? iW.map.prev : void 0,
-            mW = this.loadMap(iW.from, OW);
-          !this.mapFile && iW.from && (this.mapFile = iW.from), this.mapFile && (this.root = EW(this.mapFile)), mW && (this.text = mW)
+        SourceMapConsumer: RR,
+        SourceMapGenerator: JR
+      } = ay, {
+        existsSync: GR,
+        readFileSync: yR
+      } = ay, {
+        dirname: tR,
+        join: uR
+      } = ay;
+      class ZR {
+        constructor(RR, JR) {
+          if (!1 === JR.map) return;
+          this.loadAnnotation(RR), this.inline = this.startWith(this.annotation, "data:");
+          let GR = JR.map ? JR.map.prev : void 0,
+            yR = this.loadMap(JR.from, GR);
+          !this.mapFile && JR.from && (this.mapFile = JR.from), this.mapFile && (this.root = tR(this.mapFile)), yR && (this.text = yR)
         }
         consumer() {
-          return this.consumerCache || (this.consumerCache = new WW(this.text)), this.consumerCache
+          return this.consumerCache || (this.consumerCache = new RR(this.text)), this.consumerCache
         }
-        decodeInline(WW) {
-          if (/^data:application\/json;charset=utf-?8,/.test(WW) || /^data:application\/json,/.test(WW)) return decodeURIComponent(WW.substr(RegExp.lastMatch.length));
-          if (/^data:application\/json;charset=utf-?8;base64,/.test(WW) || /^data:application\/json;base64,/.test(WW)) return iW = WW.substr(RegExp.lastMatch.length), Buffer ? Buffer.from(iW, "base64").toString() : window.atob(iW);
-          var iW;
-          let OW = WW.match(/data:application\/json;([^,]+),/)[1];
-          throw new Error("Unsupported source map encoding " + OW)
+        decodeInline(RR) {
+          if (/^data:application\/json;charset=utf-?8,/.test(RR) || /^data:application\/json,/.test(RR)) return decodeURIComponent(RR.substr(RegExp.lastMatch.length));
+          if (/^data:application\/json;charset=utf-?8;base64,/.test(RR) || /^data:application\/json;base64,/.test(RR)) return JR = RR.substr(RegExp.lastMatch.length), Buffer ? Buffer.from(JR, "base64").toString() : window.atob(JR);
+          var JR;
+          let GR = RR.match(/data:application\/json;([^,]+),/)[1];
+          throw new Error("Unsupported source map encoding " + GR)
         }
-        getAnnotationURL(WW) {
-          return WW.replace(/^\/\*\s*# sourceMappingURL=/, "").trim()
+        getAnnotationURL(RR) {
+          return RR.replace(/^\/\*\s*# sourceMappingURL=/, "").trim()
         }
-        isMap(WW) {
-          return "object" === typeof WW && ("string" === typeof WW.mappings || "string" === typeof WW._mappings || Array.isArray(WW.sections))
+        isMap(RR) {
+          return "object" === typeof RR && ("string" === typeof RR.mappings || "string" === typeof RR._mappings || Array.isArray(RR.sections))
         }
-        loadAnnotation(WW) {
-          let iW = WW.match(/\/\*\s*# sourceMappingURL=/gm);
-          if (!iW) return;
-          let OW = WW.lastIndexOf(iW.pop()),
-            mW = WW.indexOf("*/", OW);
-          OW > -1 && mW > -1 && (this.annotation = this.getAnnotationURL(WW.substring(OW, mW)))
+        loadAnnotation(RR) {
+          let JR = RR.match(/\/\*\s*# sourceMappingURL=/gm);
+          if (!JR) return;
+          let GR = RR.lastIndexOf(JR.pop()),
+            yR = RR.indexOf("*/", GR);
+          GR > -1 && yR > -1 && (this.annotation = this.getAnnotationURL(RR.substring(GR, yR)))
         }
-        loadFile(WW) {
-          if (this.root = EW(WW), OW(WW)) return this.mapFile = WW, mW(WW, "utf-8").toString().trim()
+        loadFile(RR) {
+          if (this.root = tR(RR), GR(RR)) return this.mapFile = RR, yR(RR, "utf-8").toString().trim()
         }
-        loadMap(OW, mW) {
-          if (!1 === mW) return !1;
-          if (mW) {
-            if ("string" === typeof mW) return mW;
-            if ("function" !== typeof mW) {
-              if (mW instanceof WW) return iW.fromSourceMap(mW).toString();
-              if (mW instanceof iW) return mW.toString();
-              if (this.isMap(mW)) return JSON.stringify(mW);
-              throw new Error("Unsupported previous source map format: " + mW.toString())
+        loadMap(GR, yR) {
+          if (!1 === yR) return !1;
+          if (yR) {
+            if ("string" === typeof yR) return yR;
+            if ("function" !== typeof yR) {
+              if (yR instanceof RR) return JR.fromSourceMap(yR).toString();
+              if (yR instanceof JR) return yR.toString();
+              if (this.isMap(yR)) return JSON.stringify(yR);
+              throw new Error("Unsupported previous source map format: " + yR.toString())
             } {
-              let WW = mW(OW);
-              if (WW) {
-                let iW = this.loadFile(WW);
-                if (!iW) throw new Error("Unable to load previous source map: " + WW.toString());
-                return iW
+              let RR = yR(GR);
+              if (RR) {
+                let JR = this.loadFile(RR);
+                if (!JR) throw new Error("Unable to load previous source map: " + RR.toString());
+                return JR
               }
             }
           } else {
             if (this.inline) return this.decodeInline(this.annotation);
             if (this.annotation) {
-              let WW = this.annotation;
-              return OW && (WW = NW(EW(OW), WW)), this.loadFile(WW)
+              let RR = this.annotation;
+              return GR && (RR = uR(tR(GR), RR)), this.loadFile(RR)
             }
           }
         }
-        startWith(WW, iW) {
-          return !!WW && WW.substr(0, iW.length) === iW
+        startWith(RR, JR) {
+          return !!RR && RR.substr(0, JR.length) === JR
         }
         withContent() {
           return !!(this.consumer().sourcesContent && this.consumer().sourcesContent.length > 0)
         }
       }
-      return dm = PW, PW.default = PW, dm
+      return Oy = ZR, ZR.default = ZR, Oy
     }
 
-    function oE() {
-      if (Dm) return gm;
-      Dm = 1;
+    function vt() {
+      if (Dy) return Ny;
+      Dy = 1;
       let {
-        SourceMapConsumer: WW,
-        SourceMapGenerator: iW
-      } = Um, {
-        fileURLToPath: OW,
-        pathToFileURL: mW
-      } = Um, {
-        isAbsolute: EW,
-        resolve: NW
-      } = Um, {
-        nanoid: PW
-      } = nE(), LW = Um, cW = Mm(), wW = uE(), tW = Symbol("fromOffsetCache"), ZW = Boolean(WW && iW), xW = Boolean(NW && EW);
-      class lW {
-        constructor(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null === WW || "undefined" === typeof WW || "object" === typeof WW && !WW.toString) throw new Error(`PostCSS received ${WW} instead of CSS string`);
-          if (this.css = WW.toString(), "\ufeff" === this.css[0] || "\ufffe" === this.css[0] ? (this.hasBOM = !0, this.css = this.css.slice(1)) : this.hasBOM = !1, iW.from && (!xW || /^\w+:\/\//.test(iW.from) || EW(iW.from) ? this.file = iW.from : this.file = NW(iW.from)), xW && ZW) {
-            let WW = new wW(this.css, iW);
-            if (WW.text) {
-              this.map = WW;
-              let iW = WW.consumer().file;
-              !this.file && iW && (this.file = this.mapResolve(iW))
+        SourceMapConsumer: RR,
+        SourceMapGenerator: JR
+      } = ay, {
+        fileURLToPath: GR,
+        pathToFileURL: yR
+      } = ay, {
+        isAbsolute: tR,
+        resolve: uR
+      } = ay, {
+        nanoid: ZR
+      } = gt(), qR = ay, iR = Uy(), fR = bt(), VR = Symbol("fromOffsetCache"), KR = Boolean(RR && JR), wR = Boolean(uR && tR);
+      class rR {
+        constructor(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (null === RR || "undefined" === typeof RR || "object" === typeof RR && !RR.toString) throw new Error(`PostCSS received ${RR} instead of CSS string`);
+          if (this.css = RR.toString(), "\ufeff" === this.css[0] || "\ufffe" === this.css[0] ? (this.hasBOM = !0, this.css = this.css.slice(1)) : this.hasBOM = !1, JR.from && (!wR || /^\w+:\/\//.test(JR.from) || tR(JR.from) ? this.file = JR.from : this.file = uR(JR.from)), wR && KR) {
+            let RR = new fR(this.css, JR);
+            if (RR.text) {
+              this.map = RR;
+              let JR = RR.consumer().file;
+              !this.file && JR && (this.file = this.mapResolve(JR))
             }
           }
-          this.file || (this.id = "<input css " + PW(6) + ">"), this.map && (this.map.file = this.from)
+          this.file || (this.id = "<input css " + ZR(6) + ">"), this.map && (this.map.file = this.from)
         }
-        error(WW, iW, OW) {
-          let EW, NW, PW, LW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-          if (iW && "object" === typeof iW) {
-            let WW = iW,
-              mW = OW;
-            if ("number" === typeof WW.offset) {
-              let mW = this.fromOffset(WW.offset);
-              iW = mW.line, OW = mW.col
-            } else iW = WW.line, OW = WW.column;
-            if ("number" === typeof mW.offset) {
-              let WW = this.fromOffset(mW.offset);
-              NW = WW.line, PW = WW.col
-            } else NW = mW.line, PW = mW.column
-          } else if (!OW) {
-            let WW = this.fromOffset(iW);
-            iW = WW.line, OW = WW.col
+        error(RR, JR, GR) {
+          let tR, uR, ZR, qR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+          if (JR && "object" === typeof JR) {
+            let RR = JR,
+              yR = GR;
+            if ("number" === typeof RR.offset) {
+              let yR = this.fromOffset(RR.offset);
+              JR = yR.line, GR = yR.col
+            } else JR = RR.line, GR = RR.column;
+            if ("number" === typeof yR.offset) {
+              let RR = this.fromOffset(yR.offset);
+              uR = RR.line, ZR = RR.col
+            } else uR = yR.line, ZR = yR.column
+          } else if (!GR) {
+            let RR = this.fromOffset(JR);
+            JR = RR.line, GR = RR.col
           }
-          let wW = this.origin(iW, OW, NW, PW);
-          return EW = wW ? new cW(WW, void 0 === wW.endLine ? wW.line : {
-            column: wW.column,
-            line: wW.line
-          }, void 0 === wW.endLine ? wW.column : {
-            column: wW.endColumn,
-            line: wW.endLine
-          }, wW.source, wW.file, LW.plugin) : new cW(WW, void 0 === NW ? iW : {
-            column: OW,
-            line: iW
-          }, void 0 === NW ? OW : {
-            column: PW,
-            line: NW
-          }, this.css, this.file, LW.plugin), EW.input = {
-            column: OW,
-            endColumn: PW,
-            endLine: NW,
-            line: iW,
+          let fR = this.origin(JR, GR, uR, ZR);
+          return tR = fR ? new iR(RR, void 0 === fR.endLine ? fR.line : {
+            column: fR.column,
+            line: fR.line
+          }, void 0 === fR.endLine ? fR.column : {
+            column: fR.endColumn,
+            line: fR.endLine
+          }, fR.source, fR.file, qR.plugin) : new iR(RR, void 0 === uR ? JR : {
+            column: GR,
+            line: JR
+          }, void 0 === uR ? GR : {
+            column: ZR,
+            line: uR
+          }, this.css, this.file, qR.plugin), tR.input = {
+            column: GR,
+            endColumn: ZR,
+            endLine: uR,
+            line: JR,
             source: this.css
-          }, this.file && (mW && (EW.input.url = mW(this.file).toString()), EW.input.file = this.file), EW
+          }, this.file && (yR && (tR.input.url = yR(this.file).toString()), tR.input.file = this.file), tR
         }
-        fromOffset(WW) {
-          let iW, OW;
-          if (this[tW]) OW = this[tW];
+        fromOffset(RR) {
+          let JR, GR;
+          if (this[VR]) GR = this[VR];
           else {
-            let WW = this.css.split("\n");
-            OW = new Array(WW.length);
-            let iW = 0;
-            for (let mW = 0, EW = WW.length; mW < EW; mW++) OW[mW] = iW, iW += WW[mW].length + 1;
-            this[tW] = OW
+            let RR = this.css.split("\n");
+            GR = new Array(RR.length);
+            let JR = 0;
+            for (let yR = 0, tR = RR.length; yR < tR; yR++) GR[yR] = JR, JR += RR[yR].length + 1;
+            this[VR] = GR
           }
-          iW = OW[OW.length - 1];
-          let mW = 0;
-          if (WW >= iW) mW = OW.length - 1;
+          JR = GR[GR.length - 1];
+          let yR = 0;
+          if (RR >= JR) yR = GR.length - 1;
           else {
-            let iW, EW = OW.length - 2;
-            for (; mW < EW;)
-              if (iW = mW + (EW - mW >> 1), WW < OW[iW]) EW = iW - 1;
+            let JR, tR = GR.length - 2;
+            for (; yR < tR;)
+              if (JR = yR + (tR - yR >> 1), RR < GR[JR]) tR = JR - 1;
               else {
-                if (!(WW >= OW[iW + 1])) {
-                  mW = iW;
+                if (!(RR >= GR[JR + 1])) {
+                  yR = JR;
                   break
                 }
-                mW = iW + 1
+                yR = JR + 1
               }
           }
           return {
-            col: WW - OW[mW] + 1,
-            line: mW + 1
+            col: RR - GR[yR] + 1,
+            line: yR + 1
           }
         }
-        mapResolve(WW) {
-          return /^\w+:\/\//.test(WW) ? WW : NW(this.map.consumer().sourceRoot || this.map.root || ".", WW)
+        mapResolve(RR) {
+          return /^\w+:\/\//.test(RR) ? RR : uR(this.map.consumer().sourceRoot || this.map.root || ".", RR)
         }
-        origin(WW, iW, NW, PW) {
+        origin(RR, JR, uR, ZR) {
           if (!this.map) return !1;
-          let LW, cW, wW = this.map.consumer(),
-            tW = wW.originalPositionFor({
-              column: iW,
-              line: WW
+          let qR, iR, fR = this.map.consumer(),
+            VR = fR.originalPositionFor({
+              column: JR,
+              line: RR
             });
-          if (!tW.source) return !1;
-          "number" === typeof NW && (LW = wW.originalPositionFor({
-            column: PW,
-            line: NW
-          })), cW = EW(tW.source) ? mW(tW.source) : new URL(tW.source, this.map.consumer().sourceRoot || mW(this.map.mapFile));
-          let ZW = {
-            column: tW.column,
-            endColumn: LW && LW.column,
-            endLine: LW && LW.line,
-            line: tW.line,
-            url: cW.toString()
+          if (!VR.source) return !1;
+          "number" === typeof uR && (qR = fR.originalPositionFor({
+            column: ZR,
+            line: uR
+          })), iR = tR(VR.source) ? yR(VR.source) : new URL(VR.source, this.map.consumer().sourceRoot || yR(this.map.mapFile));
+          let KR = {
+            column: VR.column,
+            endColumn: qR && qR.column,
+            endLine: qR && qR.line,
+            line: VR.line,
+            url: iR.toString()
           };
-          if ("file:" === cW.protocol) {
-            if (!OW) throw new Error("file: protocol is not available in this PostCSS build");
-            ZW.file = OW(cW)
+          if ("file:" === iR.protocol) {
+            if (!GR) throw new Error("file: protocol is not available in this PostCSS build");
+            KR.file = GR(iR)
           }
-          let xW = wW.sourceContentFor(tW.source);
-          return xW && (ZW.source = xW), ZW
+          let wR = fR.sourceContentFor(VR.source);
+          return wR && (KR.source = wR), KR
         }
         toJSON() {
-          let WW = {};
-          for (let iW of ["hasBOM", "css", "file", "id"]) null != this[iW] && (WW[iW] = this[iW]);
-          return this.map && (WW.map = {
+          let RR = {};
+          for (let JR of ["hasBOM", "css", "file", "id"]) null != this[JR] && (RR[JR] = this[JR]);
+          return this.map && (RR.map = {
             ...this.map
-          }, WW.map.consumerCache && (WW.map.consumerCache = void 0)), WW
+          }, RR.map.consumerCache && (RR.map.consumerCache = void 0)), RR
         }
         get from() {
           return this.file || this.id
         }
       }
-      return gm = lW, lW.default = lW, LW && LW.registerInput && LW.registerInput(lW), gm
+      return Ny = rR, rR.default = rR, qR && qR.registerInput && qR.registerInput(rR), Ny
     }
 
-    function dE() {
-      if (pm) return Vm;
-      pm = 1;
+    function Ot() {
+      if (oy) return Hy;
+      oy = 1;
       let {
-        SourceMapConsumer: WW,
-        SourceMapGenerator: iW
-      } = Um, {
-        dirname: OW,
-        relative: mW,
-        resolve: EW,
-        sep: NW
-      } = Um, {
-        pathToFileURL: PW
-      } = Um, LW = oE(), cW = Boolean(WW && iW), wW = Boolean(OW && EW && mW && NW);
-      return Vm = class {
-        constructor(WW, iW, OW, mW) {
-          this.stringify = WW, this.mapOpts = OW.map || {}, this.root = iW, this.opts = OW, this.css = mW, this.originalCSS = mW, this.usesFileUrls = !this.mapOpts.from && this.mapOpts.absolute, this.memoizedFileURLs = new Map, this.memoizedPaths = new Map, this.memoizedURLs = new Map
+        SourceMapConsumer: RR,
+        SourceMapGenerator: JR
+      } = ay, {
+        dirname: GR,
+        relative: yR,
+        resolve: tR,
+        sep: uR
+      } = ay, {
+        pathToFileURL: ZR
+      } = ay, qR = vt(), iR = Boolean(RR && JR), fR = Boolean(GR && tR && yR && uR);
+      return Hy = class {
+        constructor(RR, JR, GR, yR) {
+          this.stringify = RR, this.mapOpts = GR.map || {}, this.root = JR, this.opts = GR, this.css = yR, this.originalCSS = yR, this.usesFileUrls = !this.mapOpts.from && this.mapOpts.absolute, this.memoizedFileURLs = new Map, this.memoizedPaths = new Map, this.memoizedURLs = new Map
         }
         addAnnotation() {
-          let WW;
-          WW = this.isInline() ? "data:application/json;base64," + this.toBase64(this.map.toString()) : "string" === typeof this.mapOpts.annotation ? this.mapOpts.annotation : "function" === typeof this.mapOpts.annotation ? this.mapOpts.annotation(this.opts.to, this.root) : this.outputFile() + ".map";
-          let iW = "\n";
-          this.css.includes("\r\n") && (iW = "\r\n"), this.css += iW + "/*# sourceMappingURL=" + WW + " */"
+          let RR;
+          RR = this.isInline() ? "data:application/json;base64," + this.toBase64(this.map.toString()) : "string" === typeof this.mapOpts.annotation ? this.mapOpts.annotation : "function" === typeof this.mapOpts.annotation ? this.mapOpts.annotation(this.opts.to, this.root) : this.outputFile() + ".map";
+          let JR = "\n";
+          this.css.includes("\r\n") && (JR = "\r\n"), this.css += JR + "/*# sourceMappingURL=" + RR + " */"
         }
         applyPrevMaps() {
-          for (let iW of this.previous()) {
-            let mW, EW = this.toUrl(this.path(iW.file)),
-              NW = iW.root || OW(iW.file);
-            !1 === this.mapOpts.sourcesContent ? (mW = new WW(iW.text), mW.sourcesContent && (mW.sourcesContent = null)) : mW = iW.consumer(), this.map.applySourceMap(mW, EW, this.toUrl(this.path(NW)))
+          for (let JR of this.previous()) {
+            let yR, tR = this.toUrl(this.path(JR.file)),
+              uR = JR.root || GR(JR.file);
+            !1 === this.mapOpts.sourcesContent ? (yR = new RR(JR.text), yR.sourcesContent && (yR.sourcesContent = null)) : yR = JR.consumer(), this.map.applySourceMap(yR, tR, this.toUrl(this.path(uR)))
           }
         }
         clearAnnotation() {
           if (!1 !== this.mapOpts.annotation)
             if (this.root) {
-              let WW;
-              for (let iW = this.root.nodes.length - 1; iW >= 0; iW--) WW = this.root.nodes[iW], "comment" === WW.type && 0 === WW.text.indexOf("# sourceMappingURL=") && this.root.removeChild(iW)
+              let RR;
+              for (let JR = this.root.nodes.length - 1; JR >= 0; JR--) RR = this.root.nodes[JR], "comment" === RR.type && 0 === RR.text.indexOf("# sourceMappingURL=") && this.root.removeChild(JR)
             } else this.css && (this.css = this.css.replace(/\n*?\/\*#[\S\s]*?\*\/$/gm, ""))
         }
         generate() {
-          if (this.clearAnnotation(), wW && cW && this.isMap()) return this.generateMap();
+          if (this.clearAnnotation(), fR && iR && this.isMap()) return this.generateMap();
           {
-            let WW = "";
-            return this.stringify(this.root, (iW => {
-              WW += iW
-            })), [WW]
+            let RR = "";
+            return this.stringify(this.root, (JR => {
+              RR += JR
+            })), [RR]
           }
         }
         generateMap() {
           if (this.root) this.generateString();
           else if (1 === this.previous().length) {
-            let WW = this.previous()[0].consumer();
-            WW.file = this.outputFile(), this.map = iW.fromSourceMap(WW, {
+            let RR = this.previous()[0].consumer();
+            RR.file = this.outputFile(), this.map = JR.fromSourceMap(RR, {
               ignoreInvalidMapping: !0
             })
-          } else this.map = new iW({
+          } else this.map = new JR({
             file: this.outputFile(),
             ignoreInvalidMapping: !0
           }), this.map.addMapping({
@@ -4477,14 +4477,14 @@ export const modules = {
           return this.isSourcesContent() && this.setSourcesContent(), this.root && this.previous().length > 0 && this.applyPrevMaps(), this.isAnnotation() && this.addAnnotation(), this.isInline() ? [this.css] : [this.css, this.map]
         }
         generateString() {
-          this.css = "", this.map = new iW({
+          this.css = "", this.map = new JR({
             file: this.outputFile(),
             ignoreInvalidMapping: !0
           });
-          let WW, OW, mW = 1,
-            EW = 1,
-            NW = "<no source>",
-            PW = {
+          let RR, GR, yR = 1,
+            tR = 1,
+            uR = "<no source>",
+            ZR = {
               generated: {
                 column: 0,
                 line: 0
@@ -4495,281 +4495,281 @@ export const modules = {
               },
               source: ""
             };
-          this.stringify(this.root, ((iW, LW, cW) => {
-            if (this.css += iW, LW && "end" !== cW && (PW.generated.line = mW, PW.generated.column = EW - 1, LW.source && LW.source.start ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.start.line, PW.original.column = LW.source.start.column - 1, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, this.map.addMapping(PW))), WW = iW.match(/\n/g), WW ? (mW += WW.length, OW = iW.lastIndexOf("\n"), EW = iW.length - OW) : EW += iW.length, LW && "start" !== cW) {
-              let WW = LW.parent || {
+          this.stringify(this.root, ((JR, qR, iR) => {
+            if (this.css += JR, qR && "end" !== iR && (ZR.generated.line = yR, ZR.generated.column = tR - 1, qR.source && qR.source.start ? (ZR.source = this.sourcePath(qR), ZR.original.line = qR.source.start.line, ZR.original.column = qR.source.start.column - 1, this.map.addMapping(ZR)) : (ZR.source = uR, ZR.original.line = 1, ZR.original.column = 0, this.map.addMapping(ZR))), RR = JR.match(/\n/g), RR ? (yR += RR.length, GR = JR.lastIndexOf("\n"), tR = JR.length - GR) : tR += JR.length, qR && "start" !== iR) {
+              let RR = qR.parent || {
                 raws: {}
               };
-              ("decl" === LW.type || "atrule" === LW.type && !LW.nodes) && LW === WW.last && !WW.raws.semicolon || (LW.source && LW.source.end ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.end.line, PW.original.column = LW.source.end.column - 1, PW.generated.line = mW, PW.generated.column = EW - 2, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, PW.generated.line = mW, PW.generated.column = EW - 1, this.map.addMapping(PW)))
+              ("decl" === qR.type || "atrule" === qR.type && !qR.nodes) && qR === RR.last && !RR.raws.semicolon || (qR.source && qR.source.end ? (ZR.source = this.sourcePath(qR), ZR.original.line = qR.source.end.line, ZR.original.column = qR.source.end.column - 1, ZR.generated.line = yR, ZR.generated.column = tR - 2, this.map.addMapping(ZR)) : (ZR.source = uR, ZR.original.line = 1, ZR.original.column = 0, ZR.generated.line = yR, ZR.generated.column = tR - 1, this.map.addMapping(ZR)))
             }
           }))
         }
         isAnnotation() {
-          return !!this.isInline() || ("undefined" !== typeof this.mapOpts.annotation ? this.mapOpts.annotation : !this.previous().length || this.previous().some((WW => WW.annotation)))
+          return !!this.isInline() || ("undefined" !== typeof this.mapOpts.annotation ? this.mapOpts.annotation : !this.previous().length || this.previous().some((RR => RR.annotation)))
         }
         isInline() {
           if ("undefined" !== typeof this.mapOpts.inline) return this.mapOpts.inline;
-          let WW = this.mapOpts.annotation;
-          return ("undefined" === typeof WW || !0 === WW) && (!this.previous().length || this.previous().some((WW => WW.inline)))
+          let RR = this.mapOpts.annotation;
+          return ("undefined" === typeof RR || !0 === RR) && (!this.previous().length || this.previous().some((RR => RR.inline)))
         }
         isMap() {
           return "undefined" !== typeof this.opts.map ? !!this.opts.map : this.previous().length > 0
         }
         isSourcesContent() {
-          return "undefined" !== typeof this.mapOpts.sourcesContent ? this.mapOpts.sourcesContent : !this.previous().length || this.previous().some((WW => WW.withContent()))
+          return "undefined" !== typeof this.mapOpts.sourcesContent ? this.mapOpts.sourcesContent : !this.previous().length || this.previous().some((RR => RR.withContent()))
         }
         outputFile() {
           return this.opts.to ? this.path(this.opts.to) : this.opts.from ? this.path(this.opts.from) : "to.css"
         }
-        path(WW) {
-          if (this.mapOpts.absolute) return WW;
-          if (60 === WW.charCodeAt(0)) return WW;
-          if (/^\w+:\/\//.test(WW)) return WW;
-          let iW = this.memoizedPaths.get(WW);
-          if (iW) return iW;
-          let NW = this.opts.to ? OW(this.opts.to) : ".";
-          "string" === typeof this.mapOpts.annotation && (NW = OW(EW(NW, this.mapOpts.annotation)));
-          let PW = mW(NW, WW);
-          return this.memoizedPaths.set(WW, PW), PW
+        path(RR) {
+          if (this.mapOpts.absolute) return RR;
+          if (60 === RR.charCodeAt(0)) return RR;
+          if (/^\w+:\/\//.test(RR)) return RR;
+          let JR = this.memoizedPaths.get(RR);
+          if (JR) return JR;
+          let uR = this.opts.to ? GR(this.opts.to) : ".";
+          "string" === typeof this.mapOpts.annotation && (uR = GR(tR(uR, this.mapOpts.annotation)));
+          let ZR = yR(uR, RR);
+          return this.memoizedPaths.set(RR, ZR), ZR
         }
         previous() {
           if (!this.previousMaps)
-            if (this.previousMaps = [], this.root) this.root.walk((WW => {
-              if (WW.source && WW.source.input.map) {
-                let iW = WW.source.input.map;
-                this.previousMaps.includes(iW) || this.previousMaps.push(iW)
+            if (this.previousMaps = [], this.root) this.root.walk((RR => {
+              if (RR.source && RR.source.input.map) {
+                let JR = RR.source.input.map;
+                this.previousMaps.includes(JR) || this.previousMaps.push(JR)
               }
             }));
             else {
-              let WW = new LW(this.originalCSS, this.opts);
-              WW.map && this.previousMaps.push(WW.map)
+              let RR = new qR(this.originalCSS, this.opts);
+              RR.map && this.previousMaps.push(RR.map)
             } return this.previousMaps
         }
         setSourcesContent() {
-          let WW = {};
-          if (this.root) this.root.walk((iW => {
-            if (iW.source) {
-              let OW = iW.source.input.from;
-              if (OW && !WW[OW]) {
-                WW[OW] = !0;
-                let mW = this.usesFileUrls ? this.toFileUrl(OW) : this.toUrl(this.path(OW));
-                this.map.setSourceContent(mW, iW.source.input.css)
+          let RR = {};
+          if (this.root) this.root.walk((JR => {
+            if (JR.source) {
+              let GR = JR.source.input.from;
+              if (GR && !RR[GR]) {
+                RR[GR] = !0;
+                let yR = this.usesFileUrls ? this.toFileUrl(GR) : this.toUrl(this.path(GR));
+                this.map.setSourceContent(yR, JR.source.input.css)
               }
             }
           }));
           else if (this.css) {
-            let WW = this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>";
-            this.map.setSourceContent(WW, this.css)
+            let RR = this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>";
+            this.map.setSourceContent(RR, this.css)
           }
         }
-        sourcePath(WW) {
-          return this.mapOpts.from ? this.toUrl(this.mapOpts.from) : this.usesFileUrls ? this.toFileUrl(WW.source.input.from) : this.toUrl(this.path(WW.source.input.from))
+        sourcePath(RR) {
+          return this.mapOpts.from ? this.toUrl(this.mapOpts.from) : this.usesFileUrls ? this.toFileUrl(RR.source.input.from) : this.toUrl(this.path(RR.source.input.from))
         }
-        toBase64(WW) {
-          return Buffer ? Buffer.from(WW).toString("base64") : window.btoa(unescape(encodeURIComponent(WW)))
+        toBase64(RR) {
+          return Buffer ? Buffer.from(RR).toString("base64") : window.btoa(unescape(encodeURIComponent(RR)))
         }
-        toFileUrl(WW) {
-          let iW = this.memoizedFileURLs.get(WW);
-          if (iW) return iW;
-          if (PW) {
-            let iW = PW(WW).toString();
-            return this.memoizedFileURLs.set(WW, iW), iW
+        toFileUrl(RR) {
+          let JR = this.memoizedFileURLs.get(RR);
+          if (JR) return JR;
+          if (ZR) {
+            let JR = ZR(RR).toString();
+            return this.memoizedFileURLs.set(RR, JR), JR
           }
           throw new Error("`map.absolute` option is not available in this PostCSS build")
         }
-        toUrl(WW) {
-          let iW = this.memoizedURLs.get(WW);
-          if (iW) return iW;
-          "\\" === NW && (WW = WW.replace(/\\/g, "/"));
-          let OW = encodeURI(WW).replace(/[#?]/g, encodeURIComponent);
-          return this.memoizedURLs.set(WW, OW), OW
+        toUrl(RR) {
+          let JR = this.memoizedURLs.get(RR);
+          if (JR) return JR;
+          "\\" === uR && (RR = RR.replace(/\\/g, "/"));
+          let GR = encodeURI(RR).replace(/[#?]/g, encodeURIComponent);
+          return this.memoizedURLs.set(RR, GR), GR
         }
       }
     }
 
-    function eE() {
-      if (Cm) return fm;
-      Cm = 1;
-      let WW = hE();
-      class iW extends WW {
-        constructor(WW) {
-          super(WW), this.type = "comment"
+    function xt() {
+      if (Py) return cy;
+      Py = 1;
+      let RR = lt();
+      class JR extends RR {
+        constructor(RR) {
+          super(RR), this.type = "comment"
         }
       }
-      return fm = iW, iW.default = iW, fm
+      return cy = JR, JR.default = JR, cy
     }
 
-    function vE() {
-      if (Bm) return Xm;
-      Bm = 1;
-      let WW, iW, OW, mW, {
-          isClean: EW,
-          my: NW
-        } = yE(),
-        PW = HE(),
-        LW = eE(),
-        cW = hE();
+    function Nt() {
+      if (my) return Iy;
+      my = 1;
+      let RR, JR, GR, yR, {
+          isClean: tR,
+          my: uR
+        } = Xt(),
+        ZR = pt(),
+        qR = xt(),
+        iR = lt();
 
-      function wW(WW) {
-        return WW.map((WW => (WW.nodes && (WW.nodes = wW(WW.nodes)), delete WW.source, WW)))
+      function fR(RR) {
+        return RR.map((RR => (RR.nodes && (RR.nodes = fR(RR.nodes)), delete RR.source, RR)))
       }
 
-      function tW(WW) {
-        if (WW[EW] = !1, WW.proxyOf.nodes)
-          for (let iW of WW.proxyOf.nodes) tW(iW)
+      function VR(RR) {
+        if (RR[tR] = !1, RR.proxyOf.nodes)
+          for (let JR of RR.proxyOf.nodes) VR(JR)
       }
-      class ZW extends cW {
+      class KR extends iR {
         append() {
-          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-          for (let mW of iW) {
-            let WW = this.normalize(mW, this.last);
-            for (let iW of WW) this.proxyOf.nodes.push(iW)
+          for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+          for (let yR of JR) {
+            let RR = this.normalize(yR, this.last);
+            for (let JR of RR) this.proxyOf.nodes.push(JR)
           }
           return this.markDirty(), this
         }
-        cleanRaws(WW) {
-          if (super.cleanRaws(WW), this.nodes)
-            for (let iW of this.nodes) iW.cleanRaws(WW)
+        cleanRaws(RR) {
+          if (super.cleanRaws(RR), this.nodes)
+            for (let JR of this.nodes) JR.cleanRaws(RR)
         }
-        each(WW) {
+        each(RR) {
           if (!this.proxyOf.nodes) return;
-          let iW, OW, mW = this.getIterator();
-          for (; this.indexes[mW] < this.proxyOf.nodes.length && (iW = this.indexes[mW], OW = WW(this.proxyOf.nodes[iW], iW), !1 !== OW);) this.indexes[mW] += 1;
-          return delete this.indexes[mW], OW
+          let JR, GR, yR = this.getIterator();
+          for (; this.indexes[yR] < this.proxyOf.nodes.length && (JR = this.indexes[yR], GR = RR(this.proxyOf.nodes[JR], JR), !1 !== GR);) this.indexes[yR] += 1;
+          return delete this.indexes[yR], GR
         }
-        every(WW) {
-          return this.nodes.every(WW)
+        every(RR) {
+          return this.nodes.every(RR)
         }
         getIterator() {
           this.lastEach || (this.lastEach = 0), this.indexes || (this.indexes = {}), this.lastEach += 1;
-          let WW = this.lastEach;
-          return this.indexes[WW] = 0, WW
+          let RR = this.lastEach;
+          return this.indexes[RR] = 0, RR
         }
         getProxyProcessor() {
           return {
-            get: (WW, iW) => "proxyOf" === iW ? WW : WW[iW] ? "each" === iW || "string" === typeof iW && iW.startsWith("walk") ? function() {
-              for (var OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
-              return WW[iW](...mW.map((WW => "function" === typeof WW ? (iW, OW) => WW(iW.toProxy(), OW) : WW)))
-            } : "every" === iW || "some" === iW ? OW => WW[iW]((function(WW) {
-              for (var iW = arguments.length, mW = new Array(iW > 1 ? iW - 1 : 0), EW = 1; EW < iW; EW++) mW[EW - 1] = arguments[EW];
-              return OW(WW.toProxy(), ...mW)
-            })) : "root" === iW ? () => WW.root().toProxy() : "nodes" === iW ? WW.nodes.map((WW => WW.toProxy())) : "first" === iW || "last" === iW ? WW[iW].toProxy() : WW[iW] : WW[iW],
-            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "name" !== iW && "params" !== iW && "selector" !== iW || WW.markDirty()), !0)
+            get: (RR, JR) => "proxyOf" === JR ? RR : RR[JR] ? "each" === JR || "string" === typeof JR && JR.startsWith("walk") ? function() {
+              for (var GR = arguments.length, yR = new Array(GR), tR = 0; tR < GR; tR++) yR[tR] = arguments[tR];
+              return RR[JR](...yR.map((RR => "function" === typeof RR ? (JR, GR) => RR(JR.toProxy(), GR) : RR)))
+            } : "every" === JR || "some" === JR ? GR => RR[JR]((function(RR) {
+              for (var JR = arguments.length, yR = new Array(JR > 1 ? JR - 1 : 0), tR = 1; tR < JR; tR++) yR[tR - 1] = arguments[tR];
+              return GR(RR.toProxy(), ...yR)
+            })) : "root" === JR ? () => RR.root().toProxy() : "nodes" === JR ? RR.nodes.map((RR => RR.toProxy())) : "first" === JR || "last" === JR ? RR[JR].toProxy() : RR[JR] : RR[JR],
+            set: (RR, JR, GR) => (RR[JR] === GR || (RR[JR] = GR, "name" !== JR && "params" !== JR && "selector" !== JR || RR.markDirty()), !0)
           }
         }
-        index(WW) {
-          return "number" === typeof WW ? WW : (WW.proxyOf && (WW = WW.proxyOf), this.proxyOf.nodes.indexOf(WW))
+        index(RR) {
+          return "number" === typeof RR ? RR : (RR.proxyOf && (RR = RR.proxyOf), this.proxyOf.nodes.indexOf(RR))
         }
-        insertAfter(WW, iW) {
-          let OW, mW = this.index(WW),
-            EW = this.normalize(iW, this.proxyOf.nodes[mW]).reverse();
-          mW = this.index(WW);
-          for (let NW of EW) this.proxyOf.nodes.splice(mW + 1, 0, NW);
-          for (let NW in this.indexes) OW = this.indexes[NW], mW < OW && (this.indexes[NW] = OW + EW.length);
+        insertAfter(RR, JR) {
+          let GR, yR = this.index(RR),
+            tR = this.normalize(JR, this.proxyOf.nodes[yR]).reverse();
+          yR = this.index(RR);
+          for (let uR of tR) this.proxyOf.nodes.splice(yR + 1, 0, uR);
+          for (let uR in this.indexes) GR = this.indexes[uR], yR < GR && (this.indexes[uR] = GR + tR.length);
           return this.markDirty(), this
         }
-        insertBefore(WW, iW) {
-          let OW, mW = this.index(WW),
-            EW = 0 === mW && "prepend",
-            NW = this.normalize(iW, this.proxyOf.nodes[mW], EW).reverse();
-          mW = this.index(WW);
-          for (let PW of NW) this.proxyOf.nodes.splice(mW, 0, PW);
-          for (let PW in this.indexes) OW = this.indexes[PW], mW <= OW && (this.indexes[PW] = OW + NW.length);
+        insertBefore(RR, JR) {
+          let GR, yR = this.index(RR),
+            tR = 0 === yR && "prepend",
+            uR = this.normalize(JR, this.proxyOf.nodes[yR], tR).reverse();
+          yR = this.index(RR);
+          for (let ZR of uR) this.proxyOf.nodes.splice(yR, 0, ZR);
+          for (let ZR in this.indexes) GR = this.indexes[ZR], yR <= GR && (this.indexes[ZR] = GR + uR.length);
           return this.markDirty(), this
         }
-        normalize(mW, cW) {
-          if ("string" === typeof mW) mW = wW(WW(mW).nodes);
-          else if ("undefined" === typeof mW) mW = [];
-          else if (Array.isArray(mW)) {
-            mW = mW.slice(0);
-            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
-          } else if ("root" === mW.type && "document" !== this.type) {
-            mW = mW.nodes.slice(0);
-            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
-          } else if (mW.type) mW = [mW];
-          else if (mW.prop) {
-            if ("undefined" === typeof mW.value) throw new Error("Value field is missed in node creation");
-            "string" !== typeof mW.value && (mW.value = String(mW.value)), mW = [new PW(mW)]
-          } else if (mW.selector) mW = [new iW(mW)];
-          else if (mW.name) mW = [new OW(mW)];
+        normalize(yR, iR) {
+          if ("string" === typeof yR) yR = fR(RR(yR).nodes);
+          else if ("undefined" === typeof yR) yR = [];
+          else if (Array.isArray(yR)) {
+            yR = yR.slice(0);
+            for (let RR of yR) RR.parent && RR.parent.removeChild(RR, "ignore")
+          } else if ("root" === yR.type && "document" !== this.type) {
+            yR = yR.nodes.slice(0);
+            for (let RR of yR) RR.parent && RR.parent.removeChild(RR, "ignore")
+          } else if (yR.type) yR = [yR];
+          else if (yR.prop) {
+            if ("undefined" === typeof yR.value) throw new Error("Value field is missed in node creation");
+            "string" !== typeof yR.value && (yR.value = String(yR.value)), yR = [new ZR(yR)]
+          } else if (yR.selector) yR = [new JR(yR)];
+          else if (yR.name) yR = [new GR(yR)];
           else {
-            if (!mW.text) throw new Error("Unknown node type in node creation");
-            mW = [new LW(mW)]
+            if (!yR.text) throw new Error("Unknown node type in node creation");
+            yR = [new qR(yR)]
           }
-          return mW.map((WW => (WW[NW] || ZW.rebuild(WW), (WW = WW.proxyOf).parent && WW.parent.removeChild(WW), WW[EW] && tW(WW), "undefined" === typeof WW.raws.before && cW && "undefined" !== typeof cW.raws.before && (WW.raws.before = cW.raws.before.replace(/\S/g, "")), WW.parent = this.proxyOf, WW)))
+          return yR.map((RR => (RR[uR] || KR.rebuild(RR), (RR = RR.proxyOf).parent && RR.parent.removeChild(RR), RR[tR] && VR(RR), "undefined" === typeof RR.raws.before && iR && "undefined" !== typeof iR.raws.before && (RR.raws.before = iR.raws.before.replace(/\S/g, "")), RR.parent = this.proxyOf, RR)))
         }
         prepend() {
-          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-          iW = iW.reverse();
-          for (let mW of iW) {
-            let WW = this.normalize(mW, this.first, "prepend").reverse();
-            for (let iW of WW) this.proxyOf.nodes.unshift(iW);
-            for (let iW in this.indexes) this.indexes[iW] = this.indexes[iW] + WW.length
+          for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+          JR = JR.reverse();
+          for (let yR of JR) {
+            let RR = this.normalize(yR, this.first, "prepend").reverse();
+            for (let JR of RR) this.proxyOf.nodes.unshift(JR);
+            for (let JR in this.indexes) this.indexes[JR] = this.indexes[JR] + RR.length
           }
           return this.markDirty(), this
         }
-        push(WW) {
-          return WW.parent = this, this.proxyOf.nodes.push(WW), this
+        push(RR) {
+          return RR.parent = this, this.proxyOf.nodes.push(RR), this
         }
         removeAll() {
-          for (let WW of this.proxyOf.nodes) WW.parent = void 0;
+          for (let RR of this.proxyOf.nodes) RR.parent = void 0;
           return this.proxyOf.nodes = [], this.markDirty(), this
         }
-        removeChild(WW) {
-          let iW;
-          WW = this.index(WW), this.proxyOf.nodes[WW].parent = void 0, this.proxyOf.nodes.splice(WW, 1);
-          for (let OW in this.indexes) iW = this.indexes[OW], iW >= WW && (this.indexes[OW] = iW - 1);
+        removeChild(RR) {
+          let JR;
+          RR = this.index(RR), this.proxyOf.nodes[RR].parent = void 0, this.proxyOf.nodes.splice(RR, 1);
+          for (let GR in this.indexes) JR = this.indexes[GR], JR >= RR && (this.indexes[GR] = JR - 1);
           return this.markDirty(), this
         }
-        replaceValues(WW, iW, OW) {
-          return OW || (OW = iW, iW = {}), this.walkDecls((mW => {
-            iW.props && !iW.props.includes(mW.prop) || iW.fast && !mW.value.includes(iW.fast) || (mW.value = mW.value.replace(WW, OW))
+        replaceValues(RR, JR, GR) {
+          return GR || (GR = JR, JR = {}), this.walkDecls((yR => {
+            JR.props && !JR.props.includes(yR.prop) || JR.fast && !yR.value.includes(JR.fast) || (yR.value = yR.value.replace(RR, GR))
           })), this.markDirty(), this
         }
-        some(WW) {
-          return this.nodes.some(WW)
+        some(RR) {
+          return this.nodes.some(RR)
         }
-        walk(WW) {
-          return this.each(((iW, OW) => {
-            let mW;
+        walk(RR) {
+          return this.each(((JR, GR) => {
+            let yR;
             try {
-              mW = WW(iW, OW)
-            } catch (EW) {
-              throw iW.addToError(EW)
+              yR = RR(JR, GR)
+            } catch (tR) {
+              throw JR.addToError(tR)
             }
-            return !1 !== mW && iW.walk && (mW = iW.walk(WW)), mW
+            return !1 !== yR && JR.walk && (yR = JR.walk(RR)), yR
           }))
         }
-        walkAtRules(WW, iW) {
-          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
-            if ("atrule" === OW.type && WW.test(OW.name)) return iW(OW, mW)
-          })) : this.walk(((OW, mW) => {
-            if ("atrule" === OW.type && OW.name === WW) return iW(OW, mW)
-          })) : (iW = WW, this.walk(((WW, OW) => {
-            if ("atrule" === WW.type) return iW(WW, OW)
+        walkAtRules(RR, JR) {
+          return JR ? RR instanceof RegExp ? this.walk(((GR, yR) => {
+            if ("atrule" === GR.type && RR.test(GR.name)) return JR(GR, yR)
+          })) : this.walk(((GR, yR) => {
+            if ("atrule" === GR.type && GR.name === RR) return JR(GR, yR)
+          })) : (JR = RR, this.walk(((RR, GR) => {
+            if ("atrule" === RR.type) return JR(RR, GR)
           })))
         }
-        walkComments(WW) {
-          return this.walk(((iW, OW) => {
-            if ("comment" === iW.type) return WW(iW, OW)
+        walkComments(RR) {
+          return this.walk(((JR, GR) => {
+            if ("comment" === JR.type) return RR(JR, GR)
           }))
         }
-        walkDecls(WW, iW) {
-          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
-            if ("decl" === OW.type && WW.test(OW.prop)) return iW(OW, mW)
-          })) : this.walk(((OW, mW) => {
-            if ("decl" === OW.type && OW.prop === WW) return iW(OW, mW)
-          })) : (iW = WW, this.walk(((WW, OW) => {
-            if ("decl" === WW.type) return iW(WW, OW)
+        walkDecls(RR, JR) {
+          return JR ? RR instanceof RegExp ? this.walk(((GR, yR) => {
+            if ("decl" === GR.type && RR.test(GR.prop)) return JR(GR, yR)
+          })) : this.walk(((GR, yR) => {
+            if ("decl" === GR.type && GR.prop === RR) return JR(GR, yR)
+          })) : (JR = RR, this.walk(((RR, GR) => {
+            if ("decl" === RR.type) return JR(RR, GR)
           })))
         }
-        walkRules(WW, iW) {
-          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
-            if ("rule" === OW.type && WW.test(OW.selector)) return iW(OW, mW)
-          })) : this.walk(((OW, mW) => {
-            if ("rule" === OW.type && OW.selector === WW) return iW(OW, mW)
-          })) : (iW = WW, this.walk(((WW, OW) => {
-            if ("rule" === WW.type) return iW(WW, OW)
+        walkRules(RR, JR) {
+          return JR ? RR instanceof RegExp ? this.walk(((GR, yR) => {
+            if ("rule" === GR.type && RR.test(GR.selector)) return JR(GR, yR)
+          })) : this.walk(((GR, yR) => {
+            if ("rule" === GR.type && GR.selector === RR) return JR(GR, yR)
+          })) : (JR = RR, this.walk(((RR, GR) => {
+            if ("rule" === RR.type) return JR(RR, GR)
           })))
         }
         get first() {
@@ -4779,64 +4779,64 @@ export const modules = {
           if (this.proxyOf.nodes) return this.proxyOf.nodes[this.proxyOf.nodes.length - 1]
         }
       }
-      return ZW.registerParse = iW => {
-        WW = iW
-      }, ZW.registerRule = WW => {
-        iW = WW
-      }, ZW.registerAtRule = WW => {
-        OW = WW
-      }, ZW.registerRoot = WW => {
-        mW = WW
-      }, Xm = ZW, ZW.default = ZW, ZW.rebuild = WW => {
-        "atrule" === WW.type ? Object.setPrototypeOf(WW, OW.prototype) : "rule" === WW.type ? Object.setPrototypeOf(WW, iW.prototype) : "decl" === WW.type ? Object.setPrototypeOf(WW, PW.prototype) : "comment" === WW.type ? Object.setPrototypeOf(WW, LW.prototype) : "root" === WW.type && Object.setPrototypeOf(WW, mW.prototype), WW[NW] = !0, WW.nodes && WW.nodes.forEach((WW => {
-          ZW.rebuild(WW)
+      return KR.registerParse = JR => {
+        RR = JR
+      }, KR.registerRule = RR => {
+        JR = RR
+      }, KR.registerAtRule = RR => {
+        GR = RR
+      }, KR.registerRoot = RR => {
+        yR = RR
+      }, Iy = KR, KR.default = KR, KR.rebuild = RR => {
+        "atrule" === RR.type ? Object.setPrototypeOf(RR, GR.prototype) : "rule" === RR.type ? Object.setPrototypeOf(RR, JR.prototype) : "decl" === RR.type ? Object.setPrototypeOf(RR, ZR.prototype) : "comment" === RR.type ? Object.setPrototypeOf(RR, qR.prototype) : "root" === RR.type && Object.setPrototypeOf(RR, yR.prototype), RR[uR] = !0, RR.nodes && RR.nodes.forEach((RR => {
+          KR.rebuild(RR)
         }))
-      }, Xm
+      }, Iy
     }
 
-    function gE() {
-      if (Rm) return qm;
-      Rm = 1;
-      let WW, iW, OW = vE();
-      class mW extends OW {
-        constructor(WW) {
+    function Dt() {
+      if (Sy) return zy;
+      Sy = 1;
+      let RR, JR, GR = Nt();
+      class yR extends GR {
+        constructor(RR) {
           super({
             type: "document",
-            ...WW
+            ...RR
           }), this.nodes || (this.nodes = [])
         }
         toResult() {
-          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return new WW(new iW, this, OW).stringify()
+          let GR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new RR(new JR, this, GR).stringify()
         }
       }
-      return mW.registerLazyResult = iW => {
-        WW = iW
-      }, mW.registerProcessor = WW => {
-        iW = WW
-      }, qm = mW, mW.default = mW, qm
+      return yR.registerLazyResult = JR => {
+        RR = JR
+      }, yR.registerProcessor = RR => {
+        JR = RR
+      }, zy = yR, yR.default = yR, zy
     }
 
-    function DE() {
-      if (Im) return Gm;
-      Im = 1;
-      let WW = {};
-      return Gm = function(iW) {
-        WW[iW] || (WW[iW] = !0, "undefined" !== typeof console && console.warn && console.warn(iW))
+    function Ht() {
+      if (dy) return jy;
+      dy = 1;
+      let RR = {};
+      return jy = function(JR) {
+        RR[JR] || (RR[JR] = !0, "undefined" !== typeof console && console.warn && console.warn(JR))
       }
     }
 
-    function VE() {
-      if (rm) return am;
-      rm = 1;
-      class WW {
-        constructor(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (this.type = "warning", this.text = WW, iW.node && iW.node.source) {
-            let WW = iW.node.rangeBy(iW);
-            this.line = WW.start.line, this.column = WW.start.column, this.endLine = WW.end.line, this.endColumn = WW.end.column
+    function ot() {
+      if (Yy) return Ey;
+      Yy = 1;
+      class RR {
+        constructor(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (this.type = "warning", this.text = RR, JR.node && JR.node.source) {
+            let RR = JR.node.rangeBy(JR);
+            this.line = RR.start.line, this.column = RR.start.column, this.endLine = RR.end.line, this.endColumn = RR.end.column
           }
-          for (let OW in iW) this[OW] = iW[OW]
+          for (let GR in JR) this[GR] = JR[GR]
         }
         toString() {
           return this.node ? this.node.error(this.text, {
@@ -4846,43 +4846,43 @@ export const modules = {
           }).message : this.plugin ? this.plugin + ": " + this.text : this.text
         }
       }
-      return am = WW, WW.default = WW, am
+      return Ey = RR, RR.default = RR, Ey
     }
 
-    function pE() {
-      if (Fm) return zm;
-      Fm = 1;
-      let WW = VE();
-      class iW {
-        constructor(WW, iW, OW) {
-          this.processor = WW, this.messages = [], this.root = iW, this.opts = OW, this.css = void 0, this.map = void 0
+    function ct() {
+      if (Qy) return ky;
+      Qy = 1;
+      let RR = ot();
+      class JR {
+        constructor(RR, JR, GR) {
+          this.processor = RR, this.messages = [], this.root = JR, this.opts = GR, this.css = void 0, this.map = void 0
         }
         toString() {
           return this.css
         }
-        warn(iW) {
-          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          OW.plugin || this.lastPlugin && this.lastPlugin.postcssPlugin && (OW.plugin = this.lastPlugin.postcssPlugin);
-          let mW = new WW(iW, OW);
-          return this.messages.push(mW), mW
+        warn(JR) {
+          let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          GR.plugin || this.lastPlugin && this.lastPlugin.postcssPlugin && (GR.plugin = this.lastPlugin.postcssPlugin);
+          let yR = new RR(JR, GR);
+          return this.messages.push(yR), yR
         }
         warnings() {
-          return this.messages.filter((WW => "warning" === WW.type))
+          return this.messages.filter((RR => "warning" === RR.type))
         }
         get content() {
           return this.css
         }
       }
-      return zm = iW, iW.default = iW, zm
+      return ky = JR, JR.default = JR, ky
     }
 
-    function fE() {
-      if (OE) return iE;
-      OE = 1;
-      let WW = vE();
-      class iW extends WW {
-        constructor(WW) {
-          super(WW), this.type = "atrule"
+    function Pt() {
+      if (hy) return sy;
+      hy = 1;
+      let RR = Nt();
+      class JR extends RR {
+        constructor(RR) {
+          super(RR), this.type = "atrule"
         }
         append() {
           return this.proxyOf.nodes || (this.nodes = []), super.append(...arguments)
@@ -4891,224 +4891,224 @@ export const modules = {
           return this.proxyOf.nodes || (this.nodes = []), super.prepend(...arguments)
         }
       }
-      return iE = iW, iW.default = iW, WW.registerAtRule(iW), iE
+      return sy = JR, JR.default = JR, RR.registerAtRule(JR), sy
     }
 
-    function CE() {
-      if (EE) return mE;
-      EE = 1;
-      let WW, iW, OW = vE();
-      class mW extends OW {
-        constructor(WW) {
-          super(WW), this.type = "root", this.nodes || (this.nodes = [])
+    function It() {
+      if (Jt) return Rt;
+      Jt = 1;
+      let RR, JR, GR = Nt();
+      class yR extends GR {
+        constructor(RR) {
+          super(RR), this.type = "root", this.nodes || (this.nodes = [])
         }
-        normalize(WW, iW, OW) {
-          let mW = super.normalize(WW);
-          if (iW)
-            if ("prepend" === OW) this.nodes.length > 1 ? iW.raws.before = this.nodes[1].raws.before : delete iW.raws.before;
-            else if (this.first !== iW)
-            for (let EW of mW) EW.raws.before = iW.raws.before;
-          return mW
+        normalize(RR, JR, GR) {
+          let yR = super.normalize(RR);
+          if (JR)
+            if ("prepend" === GR) this.nodes.length > 1 ? JR.raws.before = this.nodes[1].raws.before : delete JR.raws.before;
+            else if (this.first !== JR)
+            for (let tR of yR) tR.raws.before = JR.raws.before;
+          return yR
         }
-        removeChild(WW, iW) {
-          let OW = this.index(WW);
-          return !iW && 0 === OW && this.nodes.length > 1 && (this.nodes[1].raws.before = this.nodes[OW].raws.before), super.removeChild(WW)
+        removeChild(RR, JR) {
+          let GR = this.index(RR);
+          return !JR && 0 === GR && this.nodes.length > 1 && (this.nodes[1].raws.before = this.nodes[GR].raws.before), super.removeChild(RR)
         }
         toResult() {
-          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return new WW(new iW, this, OW).stringify()
+          let GR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new RR(new JR, this, GR).stringify()
         }
       }
-      return mW.registerLazyResult = iW => {
-        WW = iW
-      }, mW.registerProcessor = WW => {
-        iW = WW
-      }, mE = mW, mW.default = mW, OW.registerRoot(mW), mE
+      return yR.registerLazyResult = JR => {
+        RR = JR
+      }, yR.registerProcessor = RR => {
+        JR = RR
+      }, Rt = yR, yR.default = yR, GR.registerRoot(yR), Rt
     }
 
-    function XE() {
-      if (PE) return NE;
-      PE = 1;
-      let WW = {
-        comma: iW => WW.split(iW, [","], !0),
-        space: iW => WW.split(iW, [" ", "\n", "\t"]),
-        split(WW, iW, OW) {
-          let mW = [],
-            EW = "",
-            NW = !1,
-            PW = 0,
-            LW = !1,
-            cW = "",
-            wW = !1;
-          for (let tW of WW) wW ? wW = !1 : "\\" === tW ? wW = !0 : LW ? tW === cW && (LW = !1) : '"' === tW || "'" === tW ? (LW = !0, cW = tW) : "(" === tW ? PW += 1 : ")" === tW ? PW > 0 && (PW -= 1) : 0 === PW && iW.includes(tW) && (NW = !0), NW ? ("" !== EW && mW.push(EW.trim()), EW = "", NW = !1) : EW += tW;
-          return (OW || "" !== EW) && mW.push(EW.trim()), mW
+    function mt() {
+      if (yt) return Gt;
+      yt = 1;
+      let RR = {
+        comma: JR => RR.split(JR, [","], !0),
+        space: JR => RR.split(JR, [" ", "\n", "\t"]),
+        split(RR, JR, GR) {
+          let yR = [],
+            tR = "",
+            uR = !1,
+            ZR = 0,
+            qR = !1,
+            iR = "",
+            fR = !1;
+          for (let VR of RR) fR ? fR = !1 : "\\" === VR ? fR = !0 : qR ? VR === iR && (qR = !1) : '"' === VR || "'" === VR ? (qR = !0, iR = VR) : "(" === VR ? ZR += 1 : ")" === VR ? ZR > 0 && (ZR -= 1) : 0 === ZR && JR.includes(VR) && (uR = !0), uR ? ("" !== tR && yR.push(tR.trim()), tR = "", uR = !1) : tR += VR;
+          return (GR || "" !== tR) && yR.push(tR.trim()), yR
         }
       };
-      return NE = WW, WW.default = WW, NE
+      return Gt = RR, RR.default = RR, Gt
     }
 
-    function BE() {
-      if (cE) return LE;
-      cE = 1;
-      let WW = vE(),
-        iW = XE();
-      class OW extends WW {
-        constructor(WW) {
-          super(WW), this.type = "rule", this.nodes || (this.nodes = [])
+    function zt() {
+      if (ut) return tt;
+      ut = 1;
+      let RR = Nt(),
+        JR = mt();
+      class GR extends RR {
+        constructor(RR) {
+          super(RR), this.type = "rule", this.nodes || (this.nodes = [])
         }
         get selectors() {
-          return iW.comma(this.selector)
+          return JR.comma(this.selector)
         }
-        set selectors(WW) {
-          let iW = this.selector ? this.selector.match(/,\s*/) : null,
-            OW = iW ? iW[0] : "," + this.raw("between", "beforeOpen");
-          this.selector = WW.join(OW)
+        set selectors(RR) {
+          let JR = this.selector ? this.selector.match(/,\s*/) : null,
+            GR = JR ? JR[0] : "," + this.raw("between", "beforeOpen");
+          this.selector = RR.join(GR)
         }
       }
-      return LE = OW, OW.default = OW, WW.registerRule(OW), LE
+      return tt = GR, GR.default = GR, RR.registerRule(GR), tt
     }
 
-    function qE() {
-      if (tE) return wE;
-      tE = 1;
-      let WW = HE(),
-        iW = function() {
-          if (WE) return Qm;
-          WE = 1;
-          const WW = "'".charCodeAt(0),
-            iW = '"'.charCodeAt(0),
-            OW = "\\".charCodeAt(0),
-            mW = "/".charCodeAt(0),
-            EW = "\n".charCodeAt(0),
-            NW = " ".charCodeAt(0),
-            PW = "\f".charCodeAt(0),
-            LW = "\t".charCodeAt(0),
-            cW = "\r".charCodeAt(0),
-            wW = "[".charCodeAt(0),
-            tW = "]".charCodeAt(0),
-            ZW = "(".charCodeAt(0),
-            xW = ")".charCodeAt(0),
-            lW = "{".charCodeAt(0),
-            AW = "}".charCodeAt(0),
-            bW = ";".charCodeAt(0),
-            jW = "*".charCodeAt(0),
-            UW = ":".charCodeAt(0),
-            kW = "@".charCodeAt(0),
-            sW = /[\t\n\f\r "#'()/;[\\\]{}]/g,
-            MW = /[\t\n\f\r !"#'():;@[\\\]{}]|\/(?=\*)/g,
-            KW = /.[\r\n"'(/\\]/,
-            SW = /[\da-f]/i;
-          return Qm = function(YW) {
-            let yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-              gW = YW.css.valueOf(),
-              DW = vW.ignoreErrors,
-              VW = gW.length,
-              pW = 0,
-              fW = [],
-              CW = [];
+    function St() {
+      if (qt) return Zt;
+      qt = 1;
+      let RR = pt(),
+        JR = function() {
+          if (Ty) return Fy;
+          Ty = 1;
+          const RR = "'".charCodeAt(0),
+            JR = '"'.charCodeAt(0),
+            GR = "\\".charCodeAt(0),
+            yR = "/".charCodeAt(0),
+            tR = "\n".charCodeAt(0),
+            uR = " ".charCodeAt(0),
+            ZR = "\f".charCodeAt(0),
+            qR = "\t".charCodeAt(0),
+            iR = "\r".charCodeAt(0),
+            fR = "[".charCodeAt(0),
+            VR = "]".charCodeAt(0),
+            KR = "(".charCodeAt(0),
+            wR = ")".charCodeAt(0),
+            rR = "{".charCodeAt(0),
+            eR = "}".charCodeAt(0),
+            aR = ";".charCodeAt(0),
+            LR = "*".charCodeAt(0),
+            nR = ":".charCodeAt(0),
+            UR = "@".charCodeAt(0),
+            WR = /[\t\n\f\r "#'()/;[\\\]{}]/g,
+            AR = /[\t\n\f\r !"#'():;@[\\\]{}]|\/(?=\*)/g,
+            CR = /.[\r\n"'(/\\]/,
+            XR = /[\da-f]/i;
+          return Fy = function(MR) {
+            let BR, lR, pR, gR, bR, vR, OR, xR, NR, DR, HR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+              oR = MR.css.valueOf(),
+              cR = HR.ignoreErrors,
+              PR = oR.length,
+              IR = 0,
+              mR = [],
+              zR = [];
 
-            function XW(WW) {
-              throw YW.error("Unclosed " + WW, pW)
+            function SR(RR) {
+              throw MR.error("Unclosed " + RR, IR)
             }
             return {
-              back: function(WW) {
-                CW.push(WW)
+              back: function(RR) {
+                zR.push(RR)
               },
               endOfFile: function() {
-                return 0 === CW.length && pW >= VW
+                return 0 === zR.length && IR >= PR
               },
-              nextToken: function(YW) {
-                if (CW.length) return CW.pop();
-                if (pW >= VW) return;
-                let vW = !!YW && YW.ignoreUnclosed;
-                switch (yW = gW.charCodeAt(pW), yW) {
-                  case EW:
-                  case NW:
-                  case LW:
-                  case cW:
-                  case PW:
-                    TW = pW;
+              nextToken: function(MR) {
+                if (zR.length) return zR.pop();
+                if (IR >= PR) return;
+                let HR = !!MR && MR.ignoreUnclosed;
+                switch (BR = oR.charCodeAt(IR), BR) {
+                  case tR:
+                  case uR:
+                  case qR:
+                  case iR:
+                  case ZR:
+                    lR = IR;
                     do {
-                      TW += 1, yW = gW.charCodeAt(TW)
-                    } while (yW === NW || yW === EW || yW === LW || yW === cW || yW === PW);
-                    eW = ["space", gW.slice(pW, TW)], pW = TW - 1;
+                      lR += 1, BR = oR.charCodeAt(lR)
+                    } while (BR === uR || BR === tR || BR === qR || BR === iR || BR === ZR);
+                    DR = ["space", oR.slice(IR, lR)], IR = lR - 1;
                     break;
-                  case wW:
-                  case tW:
-                  case lW:
-                  case AW:
-                  case UW:
-                  case bW:
-                  case xW: {
-                    let WW = String.fromCharCode(yW);
-                    eW = [WW, WW, pW];
+                  case fR:
+                  case VR:
+                  case rR:
+                  case eR:
+                  case nR:
+                  case aR:
+                  case wR: {
+                    let RR = String.fromCharCode(BR);
+                    DR = [RR, RR, IR];
                     break
                   }
-                  case ZW:
-                    if (oW = fW.length ? fW.pop()[1] : "", dW = gW.charCodeAt(pW + 1), "url" === oW && dW !== WW && dW !== iW && dW !== NW && dW !== EW && dW !== LW && dW !== PW && dW !== cW) {
-                      TW = pW;
+                  case KR:
+                    if (xR = mR.length ? mR.pop()[1] : "", NR = oR.charCodeAt(IR + 1), "url" === xR && NR !== RR && NR !== JR && NR !== uR && NR !== tR && NR !== qR && NR !== ZR && NR !== iR) {
+                      lR = IR;
                       do {
-                        if (nW = !1, TW = gW.indexOf(")", TW + 1), -1 === TW) {
-                          if (DW || vW) {
-                            TW = pW;
+                        if (vR = !1, lR = oR.indexOf(")", lR + 1), -1 === lR) {
+                          if (cR || HR) {
+                            lR = IR;
                             break
                           }
-                          XW("bracket")
+                          SR("bracket")
                         }
-                        for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
-                      } while (nW);
-                      eW = ["brackets", gW.slice(pW, TW + 1), pW, TW], pW = TW
-                    } else TW = gW.indexOf(")", pW + 1), hW = gW.slice(pW, TW + 1), -1 === TW || KW.test(hW) ? eW = ["(", "(", pW] : (eW = ["brackets", hW, pW, TW], pW = TW);
+                        for (OR = lR; oR.charCodeAt(OR - 1) === GR;) OR -= 1, vR = !vR
+                      } while (vR);
+                      DR = ["brackets", oR.slice(IR, lR + 1), IR, lR], IR = lR
+                    } else lR = oR.indexOf(")", IR + 1), gR = oR.slice(IR, lR + 1), -1 === lR || CR.test(gR) ? DR = ["(", "(", IR] : (DR = ["brackets", gR, IR, lR], IR = lR);
                     break;
-                  case WW:
-                  case iW:
-                    JW = yW === WW ? "'" : '"', TW = pW;
+                  case RR:
+                  case JR:
+                    pR = BR === RR ? "'" : '"', lR = IR;
                     do {
-                      if (nW = !1, TW = gW.indexOf(JW, TW + 1), -1 === TW) {
-                        if (DW || vW) {
-                          TW = pW + 1;
+                      if (vR = !1, lR = oR.indexOf(pR, lR + 1), -1 === lR) {
+                        if (cR || HR) {
+                          lR = IR + 1;
                           break
                         }
-                        XW("string")
+                        SR("string")
                       }
-                      for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
-                    } while (nW);
-                    eW = ["string", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                      for (OR = lR; oR.charCodeAt(OR - 1) === GR;) OR -= 1, vR = !vR
+                    } while (vR);
+                    DR = ["string", oR.slice(IR, lR + 1), IR, lR], IR = lR;
                     break;
-                  case kW:
-                    sW.lastIndex = pW + 1, sW.test(gW), TW = 0 === sW.lastIndex ? gW.length - 1 : sW.lastIndex - 2, eW = ["at-word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                  case UR:
+                    WR.lastIndex = IR + 1, WR.test(oR), lR = 0 === WR.lastIndex ? oR.length - 1 : WR.lastIndex - 2, DR = ["at-word", oR.slice(IR, lR + 1), IR, lR], IR = lR;
                     break;
-                  case OW:
-                    for (TW = pW, HW = !0; gW.charCodeAt(TW + 1) === OW;) TW += 1, HW = !HW;
-                    if (yW = gW.charCodeAt(TW + 1), HW && yW !== mW && yW !== NW && yW !== EW && yW !== LW && yW !== cW && yW !== PW && (TW += 1, SW.test(gW.charAt(TW)))) {
-                      for (; SW.test(gW.charAt(TW + 1));) TW += 1;
-                      gW.charCodeAt(TW + 1) === NW && (TW += 1)
+                  case GR:
+                    for (lR = IR, bR = !0; oR.charCodeAt(lR + 1) === GR;) lR += 1, bR = !bR;
+                    if (BR = oR.charCodeAt(lR + 1), bR && BR !== yR && BR !== uR && BR !== tR && BR !== qR && BR !== iR && BR !== ZR && (lR += 1, XR.test(oR.charAt(lR)))) {
+                      for (; XR.test(oR.charAt(lR + 1));) lR += 1;
+                      oR.charCodeAt(lR + 1) === uR && (lR += 1)
                     }
-                    eW = ["word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    DR = ["word", oR.slice(IR, lR + 1), IR, lR], IR = lR;
                     break;
                   default:
-                    yW === mW && gW.charCodeAt(pW + 1) === jW ? (TW = gW.indexOf("*/", pW + 2) + 1, 0 === TW && (DW || vW ? TW = gW.length : XW("comment")), eW = ["comment", gW.slice(pW, TW + 1), pW, TW], pW = TW) : (MW.lastIndex = pW + 1, MW.test(gW), TW = 0 === MW.lastIndex ? gW.length - 1 : MW.lastIndex - 2, eW = ["word", gW.slice(pW, TW + 1), pW, TW], fW.push(eW), pW = TW)
+                    BR === yR && oR.charCodeAt(IR + 1) === LR ? (lR = oR.indexOf("*/", IR + 2) + 1, 0 === lR && (cR || HR ? lR = oR.length : SR("comment")), DR = ["comment", oR.slice(IR, lR + 1), IR, lR], IR = lR) : (AR.lastIndex = IR + 1, AR.test(oR), lR = 0 === AR.lastIndex ? oR.length - 1 : AR.lastIndex - 2, DR = ["word", oR.slice(IR, lR + 1), IR, lR], mR.push(DR), IR = lR)
                 }
-                return pW++, eW
+                return IR++, DR
               },
               position: function() {
-                return pW
+                return IR
               }
             }
-          }, Qm
+          }, Fy
         }(),
-        OW = eE(),
-        mW = fE(),
-        EW = CE(),
-        NW = BE();
-      const PW = {
+        GR = xt(),
+        yR = Pt(),
+        tR = It(),
+        uR = zt();
+      const ZR = {
         empty: !0,
         space: !0
       };
-      return wE = class {
-        constructor(WW) {
-          this.input = WW, this.root = new EW, this.current = this.root, this.spaces = "", this.semicolon = !1, this.createTokenizer(), this.root.source = {
-            input: WW,
+      return Zt = class {
+        constructor(RR) {
+          this.input = RR, this.root = new tR, this.current = this.root, this.spaces = "", this.semicolon = !1, this.createTokenizer(), this.root.source = {
+            input: RR,
             start: {
               column: 1,
               line: 1,
@@ -5116,321 +5116,321 @@ export const modules = {
             }
           }
         }
-        atrule(WW) {
-          let iW, OW, EW, NW = new mW;
-          NW.name = WW[1].slice(1), "" === NW.name && this.unnamedAtrule(NW, WW), this.init(NW, WW[2]);
-          let PW = !1,
-            LW = !1,
-            cW = [],
-            wW = [];
+        atrule(RR) {
+          let JR, GR, tR, uR = new yR;
+          uR.name = RR[1].slice(1), "" === uR.name && this.unnamedAtrule(uR, RR), this.init(uR, RR[2]);
+          let ZR = !1,
+            qR = !1,
+            iR = [],
+            fR = [];
           for (; !this.tokenizer.endOfFile();) {
-            if (iW = (WW = this.tokenizer.nextToken())[0], "(" === iW || "[" === iW ? wW.push("(" === iW ? ")" : "]") : "{" === iW && wW.length > 0 ? wW.push("}") : iW === wW[wW.length - 1] && wW.pop(), 0 === wW.length) {
-              if (";" === iW) {
-                NW.source.end = this.Vk(WW[2]), NW.source.end.offset++, this.semicolon = !0;
+            if (JR = (RR = this.tokenizer.nextToken())[0], "(" === JR || "[" === JR ? fR.push("(" === JR ? ")" : "]") : "{" === JR && fR.length > 0 ? fR.push("}") : JR === fR[fR.length - 1] && fR.pop(), 0 === fR.length) {
+              if (";" === JR) {
+                uR.source.end = this.vW(RR[2]), uR.source.end.offset++, this.semicolon = !0;
                 break
               }
-              if ("{" === iW) {
-                LW = !0;
+              if ("{" === JR) {
+                qR = !0;
                 break
               }
-              if ("}" === iW) {
-                if (cW.length > 0) {
-                  for (EW = cW.length - 1, OW = cW[EW]; OW && "space" === OW[0];) OW = cW[--EW];
-                  OW && (NW.source.end = this.Vk(OW[3] || OW[2]), NW.source.end.offset++)
+              if ("}" === JR) {
+                if (iR.length > 0) {
+                  for (tR = iR.length - 1, GR = iR[tR]; GR && "space" === GR[0];) GR = iR[--tR];
+                  GR && (uR.source.end = this.vW(GR[3] || GR[2]), uR.source.end.offset++)
                 }
-                this.end(WW);
+                this.end(RR);
                 break
               }
-              cW.push(WW)
-            } else cW.push(WW);
+              iR.push(RR)
+            } else iR.push(RR);
             if (this.tokenizer.endOfFile()) {
-              PW = !0;
+              ZR = !0;
               break
             }
           }
-          NW.raws.between = this.spacesAndCommentsFromEnd(cW), cW.length ? (NW.raws.afterName = this.spacesAndCommentsFromStart(cW), this.raw(NW, "params", cW), PW && (WW = cW[cW.length - 1], NW.source.end = this.Vk(WW[3] || WW[2]), NW.source.end.offset++, this.spaces = NW.raws.between, NW.raws.between = "")) : (NW.raws.afterName = "", NW.params = ""), LW && (NW.nodes = [], this.current = NW)
+          uR.raws.between = this.spacesAndCommentsFromEnd(iR), iR.length ? (uR.raws.afterName = this.spacesAndCommentsFromStart(iR), this.raw(uR, "params", iR), ZR && (RR = iR[iR.length - 1], uR.source.end = this.vW(RR[3] || RR[2]), uR.source.end.offset++, this.spaces = uR.raws.between, uR.raws.between = "")) : (uR.raws.afterName = "", uR.params = ""), qR && (uR.nodes = [], this.current = uR)
         }
-        checkMissedSemicolon(WW) {
-          let iW = this.colon(WW);
-          if (!1 === iW) return;
-          let OW, mW = 0;
-          for (let EW = iW - 1; EW >= 0 && (OW = WW[EW], "space" === OW[0] || (mW += 1, 2 !== mW)); EW--);
-          throw this.input.error("Missed semicolon", "word" === OW[0] ? OW[3] + 1 : OW[2])
+        checkMissedSemicolon(RR) {
+          let JR = this.colon(RR);
+          if (!1 === JR) return;
+          let GR, yR = 0;
+          for (let tR = JR - 1; tR >= 0 && (GR = RR[tR], "space" === GR[0] || (yR += 1, 2 !== yR)); tR--);
+          throw this.input.error("Missed semicolon", "word" === GR[0] ? GR[3] + 1 : GR[2])
         }
-        colon(WW) {
-          let iW, OW, mW, EW = 0;
-          for (let [NW, PW] of WW.entries()) {
-            if (iW = PW, OW = iW[0], "(" === OW && (EW += 1), ")" === OW && (EW -= 1), 0 === EW && ":" === OW) {
-              if (mW) {
-                if ("word" === mW[0] && "progid" === mW[1]) continue;
-                return NW
+        colon(RR) {
+          let JR, GR, yR, tR = 0;
+          for (let [uR, ZR] of RR.entries()) {
+            if (JR = ZR, GR = JR[0], "(" === GR && (tR += 1), ")" === GR && (tR -= 1), 0 === tR && ":" === GR) {
+              if (yR) {
+                if ("word" === yR[0] && "progid" === yR[1]) continue;
+                return uR
               }
-              this.doubleColon(iW)
+              this.doubleColon(JR)
             }
-            mW = iW
+            yR = JR
           }
           return !1
         }
-        comment(WW) {
-          let iW = new OW;
-          this.init(iW, WW[2]), iW.source.end = this.Vk(WW[3] || WW[2]), iW.source.end.offset++;
-          let mW = WW[1].slice(2, -2);
-          if (/^\s*$/.test(mW)) iW.text = "", iW.raws.left = mW, iW.raws.right = "";
+        comment(RR) {
+          let JR = new GR;
+          this.init(JR, RR[2]), JR.source.end = this.vW(RR[3] || RR[2]), JR.source.end.offset++;
+          let yR = RR[1].slice(2, -2);
+          if (/^\s*$/.test(yR)) JR.text = "", JR.raws.left = yR, JR.raws.right = "";
           else {
-            let WW = mW.match(/^(\s*)([^]*\S)(\s*)$/);
-            iW.text = WW[2], iW.raws.left = WW[1], iW.raws.right = WW[3]
+            let RR = yR.match(/^(\s*)([^]*\S)(\s*)$/);
+            JR.text = RR[2], JR.raws.left = RR[1], JR.raws.right = RR[3]
           }
         }
         createTokenizer() {
-          this.tokenizer = iW(this.input)
+          this.tokenizer = JR(this.input)
         }
-        decl(iW, OW) {
-          let mW = new WW;
-          this.init(mW, iW[0][2]);
-          let EW, NW = iW[iW.length - 1];
-          for (";" === NW[0] && (this.semicolon = !0, iW.pop()), mW.source.end = this.Vk(NW[3] || NW[2] || function(WW) {
-              for (let iW = WW.length - 1; iW >= 0; iW--) {
-                let OW = WW[iW],
-                  mW = OW[3] || OW[2];
-                if (mW) return mW
+        decl(JR, GR) {
+          let yR = new RR;
+          this.init(yR, JR[0][2]);
+          let tR, uR = JR[JR.length - 1];
+          for (";" === uR[0] && (this.semicolon = !0, JR.pop()), yR.source.end = this.vW(uR[3] || uR[2] || function(RR) {
+              for (let JR = RR.length - 1; JR >= 0; JR--) {
+                let GR = RR[JR],
+                  yR = GR[3] || GR[2];
+                if (yR) return yR
               }
-            }(iW)), mW.source.end.offset++;
-            "word" !== iW[0][0];) 1 === iW.length && this.unknownWord(iW), mW.raws.before += iW.shift()[1];
-          for (mW.source.start = this.Vk(iW[0][2]), mW.prop = ""; iW.length;) {
-            let WW = iW[0][0];
-            if (":" === WW || "space" === WW || "comment" === WW) break;
-            mW.prop += iW.shift()[1]
+            }(JR)), yR.source.end.offset++;
+            "word" !== JR[0][0];) 1 === JR.length && this.unknownWord(JR), yR.raws.before += JR.shift()[1];
+          for (yR.source.start = this.vW(JR[0][2]), yR.prop = ""; JR.length;) {
+            let RR = JR[0][0];
+            if (":" === RR || "space" === RR || "comment" === RR) break;
+            yR.prop += JR.shift()[1]
           }
-          for (mW.raws.between = ""; iW.length;) {
-            if (EW = iW.shift(), ":" === EW[0]) {
-              mW.raws.between += EW[1];
+          for (yR.raws.between = ""; JR.length;) {
+            if (tR = JR.shift(), ":" === tR[0]) {
+              yR.raws.between += tR[1];
               break
             }
-            "word" === EW[0] && /\w/.test(EW[1]) && this.unknownWord([EW]), mW.raws.between += EW[1]
+            "word" === tR[0] && /\w/.test(tR[1]) && this.unknownWord([tR]), yR.raws.between += tR[1]
           }
-          "_" !== mW.prop[0] && "*" !== mW.prop[0] || (mW.raws.before += mW.prop[0], mW.prop = mW.prop.slice(1));
-          let PW, LW = [];
-          for (; iW.length && (PW = iW[0][0], "space" === PW || "comment" === PW);) LW.push(iW.shift());
-          this.precheckMissedSemicolon(iW);
-          for (let WW = iW.length - 1; WW >= 0; WW--) {
-            if (EW = iW[WW], "!important" === EW[1].toLowerCase()) {
-              mW.important = !0;
-              let OW = this.stringFrom(iW, WW);
-              OW = this.spacesFromEnd(iW) + OW, " !important" !== OW && (mW.raws.important = OW);
+          "_" !== yR.prop[0] && "*" !== yR.prop[0] || (yR.raws.before += yR.prop[0], yR.prop = yR.prop.slice(1));
+          let ZR, qR = [];
+          for (; JR.length && (ZR = JR[0][0], "space" === ZR || "comment" === ZR);) qR.push(JR.shift());
+          this.precheckMissedSemicolon(JR);
+          for (let RR = JR.length - 1; RR >= 0; RR--) {
+            if (tR = JR[RR], "!important" === tR[1].toLowerCase()) {
+              yR.important = !0;
+              let GR = this.stringFrom(JR, RR);
+              GR = this.spacesFromEnd(JR) + GR, " !important" !== GR && (yR.raws.important = GR);
               break
             }
-            if ("important" === EW[1].toLowerCase()) {
-              let OW = iW.slice(0),
-                EW = "";
-              for (let iW = WW; iW > 0; iW--) {
-                let WW = OW[iW][0];
-                if (0 === EW.trim().indexOf("!") && "space" !== WW) break;
-                EW = OW.pop()[1] + EW
+            if ("important" === tR[1].toLowerCase()) {
+              let GR = JR.slice(0),
+                tR = "";
+              for (let JR = RR; JR > 0; JR--) {
+                let RR = GR[JR][0];
+                if (0 === tR.trim().indexOf("!") && "space" !== RR) break;
+                tR = GR.pop()[1] + tR
               }
-              0 === EW.trim().indexOf("!") && (mW.important = !0, mW.raws.important = EW, iW = OW)
+              0 === tR.trim().indexOf("!") && (yR.important = !0, yR.raws.important = tR, JR = GR)
             }
-            if ("space" !== EW[0] && "comment" !== EW[0]) break
+            if ("space" !== tR[0] && "comment" !== tR[0]) break
           }
-          iW.some((WW => "space" !== WW[0] && "comment" !== WW[0])) && (mW.raws.between += LW.map((WW => WW[1])).join(""), LW = []), this.raw(mW, "value", LW.concat(iW), OW), mW.value.includes(":") && !OW && this.checkMissedSemicolon(iW)
+          JR.some((RR => "space" !== RR[0] && "comment" !== RR[0])) && (yR.raws.between += qR.map((RR => RR[1])).join(""), qR = []), this.raw(yR, "value", qR.concat(JR), GR), yR.value.includes(":") && !GR && this.checkMissedSemicolon(JR)
         }
-        doubleColon(WW) {
+        doubleColon(RR) {
           throw this.input.error("Double colon", {
-            offset: WW[2]
+            offset: RR[2]
           }, {
-            offset: WW[2] + WW[1].length
+            offset: RR[2] + RR[1].length
           })
         }
-        emptyRule(WW) {
-          let iW = new NW;
-          this.init(iW, WW[2]), iW.selector = "", iW.raws.between = "", this.current = iW
+        emptyRule(RR) {
+          let JR = new uR;
+          this.init(JR, RR[2]), JR.selector = "", JR.raws.between = "", this.current = JR
         }
-        end(WW) {
-          this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.semicolon = !1, this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.spaces = "", this.current.parent ? (this.current.source.end = this.Vk(WW[2]), this.current.source.end.offset++, this.current = this.current.parent) : this.unexpectedClose(WW)
+        end(RR) {
+          this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.semicolon = !1, this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.spaces = "", this.current.parent ? (this.current.source.end = this.vW(RR[2]), this.current.source.end.offset++, this.current = this.current.parent) : this.unexpectedClose(RR)
         }
         endFile() {
-          this.current.parent && this.unclosedBlock(), this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.root.source.end = this.Vk(this.tokenizer.position())
+          this.current.parent && this.unclosedBlock(), this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.root.source.end = this.vW(this.tokenizer.position())
         }
-        freeSemicolon(WW) {
-          if (this.spaces += WW[1], this.current.nodes) {
-            let WW = this.current.nodes[this.current.nodes.length - 1];
-            WW && "rule" === WW.type && !WW.raws.ownSemicolon && (WW.raws.ownSemicolon = this.spaces, this.spaces = "")
+        freeSemicolon(RR) {
+          if (this.spaces += RR[1], this.current.nodes) {
+            let RR = this.current.nodes[this.current.nodes.length - 1];
+            RR && "rule" === RR.type && !RR.raws.ownSemicolon && (RR.raws.ownSemicolon = this.spaces, this.spaces = "")
           }
         }
-        Vk(WW) {
-          let iW = this.input.fromOffset(WW);
+        vW(RR) {
+          let JR = this.input.fromOffset(RR);
           return {
-            column: iW.col,
-            line: iW.line,
-            offset: WW
+            column: JR.col,
+            line: JR.line,
+            offset: RR
           }
         }
-        init(WW, iW) {
-          this.current.push(WW), WW.source = {
+        init(RR, JR) {
+          this.current.push(RR), RR.source = {
             input: this.input,
-            start: this.Vk(iW)
-          }, WW.raws.before = this.spaces, this.spaces = "", "comment" !== WW.type && (this.semicolon = !1)
+            start: this.vW(JR)
+          }, RR.raws.before = this.spaces, this.spaces = "", "comment" !== RR.type && (this.semicolon = !1)
         }
-        other(WW) {
-          let iW = !1,
-            OW = null,
-            mW = !1,
-            EW = null,
-            NW = [],
-            PW = WW[1].startsWith("--"),
-            LW = [],
-            cW = WW;
-          for (; cW;) {
-            if (OW = cW[0], LW.push(cW), "(" === OW || "[" === OW) EW || (EW = cW), NW.push("(" === OW ? ")" : "]");
-            else if (PW && mW && "{" === OW) EW || (EW = cW), NW.push("}");
-            else if (0 === NW.length) {
-              if (";" === OW) {
-                if (mW) return void this.decl(LW, PW);
+        other(RR) {
+          let JR = !1,
+            GR = null,
+            yR = !1,
+            tR = null,
+            uR = [],
+            ZR = RR[1].startsWith("--"),
+            qR = [],
+            iR = RR;
+          for (; iR;) {
+            if (GR = iR[0], qR.push(iR), "(" === GR || "[" === GR) tR || (tR = iR), uR.push("(" === GR ? ")" : "]");
+            else if (ZR && yR && "{" === GR) tR || (tR = iR), uR.push("}");
+            else if (0 === uR.length) {
+              if (";" === GR) {
+                if (yR) return void this.decl(qR, ZR);
                 break
               }
-              if ("{" === OW) return void this.rule(LW);
-              if ("}" === OW) {
-                this.tokenizer.back(LW.pop()), iW = !0;
+              if ("{" === GR) return void this.rule(qR);
+              if ("}" === GR) {
+                this.tokenizer.back(qR.pop()), JR = !0;
                 break
               }
-              ":" === OW && (mW = !0)
-            } else OW === NW[NW.length - 1] && (NW.pop(), 0 === NW.length && (EW = null));
-            cW = this.tokenizer.nextToken()
+              ":" === GR && (yR = !0)
+            } else GR === uR[uR.length - 1] && (uR.pop(), 0 === uR.length && (tR = null));
+            iR = this.tokenizer.nextToken()
           }
-          if (this.tokenizer.endOfFile() && (iW = !0), NW.length > 0 && this.unclosedBracket(EW), iW && mW) {
-            if (!PW)
-              for (; LW.length && (cW = LW[LW.length - 1][0], "space" === cW || "comment" === cW);) this.tokenizer.back(LW.pop());
-            this.decl(LW, PW)
-          } else this.unknownWord(LW)
+          if (this.tokenizer.endOfFile() && (JR = !0), uR.length > 0 && this.unclosedBracket(tR), JR && yR) {
+            if (!ZR)
+              for (; qR.length && (iR = qR[qR.length - 1][0], "space" === iR || "comment" === iR);) this.tokenizer.back(qR.pop());
+            this.decl(qR, ZR)
+          } else this.unknownWord(qR)
         }
         parse() {
-          let WW;
-          for (; !this.tokenizer.endOfFile();) switch (WW = this.tokenizer.nextToken(), WW[0]) {
+          let RR;
+          for (; !this.tokenizer.endOfFile();) switch (RR = this.tokenizer.nextToken(), RR[0]) {
             case "space":
-              this.spaces += WW[1];
+              this.spaces += RR[1];
               break;
             case ";":
-              this.freeSemicolon(WW);
+              this.freeSemicolon(RR);
               break;
             case "}":
-              this.end(WW);
+              this.end(RR);
               break;
             case "comment":
-              this.comment(WW);
+              this.comment(RR);
               break;
             case "at-word":
-              this.atrule(WW);
+              this.atrule(RR);
               break;
             case "{":
-              this.emptyRule(WW);
+              this.emptyRule(RR);
               break;
             default:
-              this.other(WW)
+              this.other(RR)
           }
           this.endFile()
         }
         precheckMissedSemicolon() {}
-        raw(WW, iW, OW, mW) {
-          let EW, NW, LW, cW, wW = OW.length,
-            tW = "",
-            ZW = !0;
-          for (let xW = 0; xW < wW; xW += 1) EW = OW[xW], NW = EW[0], "space" !== NW || xW !== wW - 1 || mW ? "comment" === NW ? (cW = OW[xW - 1] ? OW[xW - 1][0] : "empty", LW = OW[xW + 1] ? OW[xW + 1][0] : "empty", PW[cW] || PW[LW] || "," === tW.slice(-1) ? ZW = !1 : tW += EW[1]) : tW += EW[1] : ZW = !1;
-          if (!ZW) {
-            let mW = OW.reduce(((WW, iW) => WW + iW[1]), "");
-            WW.raws[iW] = {
-              raw: mW,
-              value: tW
+        raw(RR, JR, GR, yR) {
+          let tR, uR, qR, iR, fR = GR.length,
+            VR = "",
+            KR = !0;
+          for (let wR = 0; wR < fR; wR += 1) tR = GR[wR], uR = tR[0], "space" !== uR || wR !== fR - 1 || yR ? "comment" === uR ? (iR = GR[wR - 1] ? GR[wR - 1][0] : "empty", qR = GR[wR + 1] ? GR[wR + 1][0] : "empty", ZR[iR] || ZR[qR] || "," === VR.slice(-1) ? KR = !1 : VR += tR[1]) : VR += tR[1] : KR = !1;
+          if (!KR) {
+            let yR = GR.reduce(((RR, JR) => RR + JR[1]), "");
+            RR.raws[JR] = {
+              raw: yR,
+              value: VR
             }
           }
-          WW[iW] = tW
+          RR[JR] = VR
         }
-        rule(WW) {
-          WW.pop();
-          let iW = new NW;
-          this.init(iW, WW[0][2]), iW.raws.between = this.spacesAndCommentsFromEnd(WW), this.raw(iW, "selector", WW), this.current = iW
+        rule(RR) {
+          RR.pop();
+          let JR = new uR;
+          this.init(JR, RR[0][2]), JR.raws.between = this.spacesAndCommentsFromEnd(RR), this.raw(JR, "selector", RR), this.current = JR
         }
-        spacesAndCommentsFromEnd(WW) {
-          let iW, OW = "";
-          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW || "comment" === iW);) OW = WW.pop()[1] + OW;
-          return OW
+        spacesAndCommentsFromEnd(RR) {
+          let JR, GR = "";
+          for (; RR.length && (JR = RR[RR.length - 1][0], "space" === JR || "comment" === JR);) GR = RR.pop()[1] + GR;
+          return GR
         }
-        spacesAndCommentsFromStart(WW) {
-          let iW, OW = "";
-          for (; WW.length && (iW = WW[0][0], "space" === iW || "comment" === iW);) OW += WW.shift()[1];
-          return OW
+        spacesAndCommentsFromStart(RR) {
+          let JR, GR = "";
+          for (; RR.length && (JR = RR[0][0], "space" === JR || "comment" === JR);) GR += RR.shift()[1];
+          return GR
         }
-        spacesFromEnd(WW) {
-          let iW, OW = "";
-          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW);) OW = WW.pop()[1] + OW;
-          return OW
+        spacesFromEnd(RR) {
+          let JR, GR = "";
+          for (; RR.length && (JR = RR[RR.length - 1][0], "space" === JR);) GR = RR.pop()[1] + GR;
+          return GR
         }
-        stringFrom(WW, iW) {
-          let OW = "";
-          for (let mW = iW; mW < WW.length; mW++) OW += WW[mW][1];
-          return WW.splice(iW, WW.length - iW), OW
+        stringFrom(RR, JR) {
+          let GR = "";
+          for (let yR = JR; yR < RR.length; yR++) GR += RR[yR][1];
+          return RR.splice(JR, RR.length - JR), GR
         }
         unclosedBlock() {
-          let WW = this.current.source.start;
-          throw this.input.error("Unclosed block", WW.line, WW.column)
+          let RR = this.current.source.start;
+          throw this.input.error("Unclosed block", RR.line, RR.column)
         }
-        unclosedBracket(WW) {
+        unclosedBracket(RR) {
           throw this.input.error("Unclosed bracket", {
-            offset: WW[2]
+            offset: RR[2]
           }, {
-            offset: WW[2] + 1
+            offset: RR[2] + 1
           })
         }
-        unexpectedClose(WW) {
+        unexpectedClose(RR) {
           throw this.input.error("Unexpected }", {
-            offset: WW[2]
+            offset: RR[2]
           }, {
-            offset: WW[2] + 1
+            offset: RR[2] + 1
           })
         }
-        unknownWord(WW) {
+        unknownWord(RR) {
           throw this.input.error("Unknown word", {
-            offset: WW[0][2]
+            offset: RR[0][2]
           }, {
-            offset: WW[0][2] + WW[0][1].length
+            offset: RR[0][2] + RR[0][1].length
           })
         }
-        unnamedAtrule(WW, iW) {
+        unnamedAtrule(RR, JR) {
           throw this.input.error("At-rule without name", {
-            offset: iW[2]
+            offset: JR[2]
           }, {
-            offset: iW[2] + iW[1].length
+            offset: JR[2] + JR[1].length
           })
         }
       }
     }
 
-    function RE() {
-      if (xE) return ZE;
-      xE = 1;
-      let WW = vE(),
-        iW = qE(),
-        OW = oE();
+    function jt() {
+      if (ft) return it;
+      ft = 1;
+      let RR = Nt(),
+        JR = St(),
+        GR = vt();
 
-      function mW(WW, mW) {
-        let EW = new OW(WW, mW),
-          NW = new iW(EW);
+      function yR(RR, yR) {
+        let tR = new GR(RR, yR),
+          uR = new JR(tR);
         try {
-          NW.parse()
-        } catch (PW) {
-          throw PW
+          uR.parse()
+        } catch (ZR) {
+          throw ZR
         }
-        return NW.root
+        return uR.root
       }
-      return ZE = mW, mW.default = mW, WW.registerParse(mW), ZE
+      return it = yR, yR.default = yR, RR.registerParse(yR), it
     }
 
-    function GE() {
-      if (AE) return lE;
-      AE = 1;
+    function dt() {
+      if (Kt) return Vt;
+      Kt = 1;
       let {
-        isClean: WW,
-        my: iW
-      } = yE(), OW = dE(), mW = JE(), EW = vE(), NW = gE(), PW = (DE(), pE()), LW = RE(), cW = CE();
-      const wW = {
+        isClean: RR,
+        my: JR
+      } = Xt(), GR = Ot(), yR = Bt(), tR = Nt(), uR = Dt(), ZR = (Ht(), ct()), qR = jt(), iR = It();
+      const fR = {
           atrule: "AtRule",
           comment: "Comment",
           decl: "Declaration",
@@ -5438,7 +5438,7 @@ export const modules = {
           root: "Root",
           rule: "Rule"
         },
-        tW = {
+        VR = {
           AtRule: !0,
           AtRuleExit: !0,
           Comment: !0,
@@ -5456,240 +5456,240 @@ export const modules = {
           Rule: !0,
           RuleExit: !0
         },
-        ZW = {
+        KR = {
           Once: !0,
           postcssPlugin: !0,
           prepare: !0
         };
 
-      function xW(WW) {
-        return "object" === typeof WW && "function" === typeof WW.then
+      function wR(RR) {
+        return "object" === typeof RR && "function" === typeof RR.then
       }
 
-      function lW(WW) {
-        let iW = !1,
-          OW = wW[WW.type];
-        return "decl" === WW.type ? iW = WW.prop.toLowerCase() : "atrule" === WW.type && (iW = WW.name.toLowerCase()), iW && WW.append ? [OW, OW + "-" + iW, 0, OW + "Exit", OW + "Exit-" + iW] : iW ? [OW, OW + "-" + iW, OW + "Exit", OW + "Exit-" + iW] : WW.append ? [OW, 0, OW + "Exit"] : [OW, OW + "Exit"]
+      function rR(RR) {
+        let JR = !1,
+          GR = fR[RR.type];
+        return "decl" === RR.type ? JR = RR.prop.toLowerCase() : "atrule" === RR.type && (JR = RR.name.toLowerCase()), JR && RR.append ? [GR, GR + "-" + JR, 0, GR + "Exit", GR + "Exit-" + JR] : JR ? [GR, GR + "-" + JR, GR + "Exit", GR + "Exit-" + JR] : RR.append ? [GR, 0, GR + "Exit"] : [GR, GR + "Exit"]
       }
 
-      function AW(WW) {
-        let iW;
-        return iW = "document" === WW.type ? ["Document", 0, "DocumentExit"] : "root" === WW.type ? ["Root", 0, "RootExit"] : lW(WW), {
+      function eR(RR) {
+        let JR;
+        return JR = "document" === RR.type ? ["Document", 0, "DocumentExit"] : "root" === RR.type ? ["Root", 0, "RootExit"] : rR(RR), {
           eventIndex: 0,
-          events: iW,
+          events: JR,
           iterator: 0,
-          node: WW,
+          node: RR,
           visitorIndex: 0,
           visitors: []
         }
       }
 
-      function bW(iW) {
-        return iW[WW] = !1, iW.nodes && iW.nodes.forEach((WW => bW(WW))), iW
+      function aR(JR) {
+        return JR[RR] = !1, JR.nodes && JR.nodes.forEach((RR => aR(RR))), JR
       }
-      let jW = {};
-      class UW {
-        constructor(WW, OW, mW) {
-          let NW;
-          if (this.stringified = !1, this.processed = !1, "object" !== typeof OW || null === OW || "root" !== OW.type && "document" !== OW.type)
-            if (OW instanceof UW || OW instanceof PW) NW = bW(OW.root), OW.map && ("undefined" === typeof mW.map && (mW.map = {}), mW.map.inline || (mW.map.inline = !1), mW.map.prev = OW.map);
+      let LR = {};
+      class nR {
+        constructor(RR, GR, yR) {
+          let uR;
+          if (this.stringified = !1, this.processed = !1, "object" !== typeof GR || null === GR || "root" !== GR.type && "document" !== GR.type)
+            if (GR instanceof nR || GR instanceof ZR) uR = aR(GR.root), GR.map && ("undefined" === typeof yR.map && (yR.map = {}), yR.map.inline || (yR.map.inline = !1), yR.map.prev = GR.map);
             else {
-              let WW = LW;
-              mW.syntax && (WW = mW.syntax.parse), mW.parser && (WW = mW.parser), WW.parse && (WW = WW.parse);
+              let RR = qR;
+              yR.syntax && (RR = yR.syntax.parse), yR.parser && (RR = yR.parser), RR.parse && (RR = RR.parse);
               try {
-                NW = WW(OW, mW)
-              } catch (cW) {
-                this.processed = !0, this.error = cW
+                uR = RR(GR, yR)
+              } catch (iR) {
+                this.processed = !0, this.error = iR
               }
-              NW && !NW[iW] && EW.rebuild(NW)
+              uR && !uR[JR] && tR.rebuild(uR)
             }
-          else NW = bW(OW);
-          this.result = new PW(WW, NW, mW), this.helpers = {
-            ...jW,
-            postcss: jW,
+          else uR = aR(GR);
+          this.result = new ZR(RR, uR, yR), this.helpers = {
+            ...LR,
+            postcss: LR,
             result: this.result
-          }, this.plugins = this.processor.plugins.map((WW => "object" === typeof WW && WW.prepare ? {
-            ...WW,
-            ...WW.prepare(this.result)
-          } : WW))
+          }, this.plugins = this.processor.plugins.map((RR => "object" === typeof RR && RR.prepare ? {
+            ...RR,
+            ...RR.prepare(this.result)
+          } : RR))
         }
         async () {
           return this.error ? Promise.reject(this.error) : this.processed ? Promise.resolve(this.result) : (this.processing || (this.processing = this.runAsync()), this.processing)
-        } catch (WW) {
-          return this.async().catch(WW)
-        } finally(WW) {
-          return this.async().then(WW, WW)
+        } catch (RR) {
+          return this.async().catch(RR)
+        } finally(RR) {
+          return this.async().then(RR, RR)
         }
         getAsyncError() {
           throw new Error("Use process(css).then(cb) to work with async plugins")
         }
-        handleError(WW, iW) {
-          let OW = this.result.lastPlugin;
+        handleError(RR, JR) {
+          let GR = this.result.lastPlugin;
           try {
-            iW && iW.addToError(WW), this.error = WW, "CssSyntaxError" !== WW.name || WW.plugin ? OW.postcssVersion : (WW.plugin = OW.postcssPlugin, WW.setMessage())
-          } catch (mW) {
-            console && console.error && console.error(mW)
+            JR && JR.addToError(RR), this.error = RR, "CssSyntaxError" !== RR.name || RR.plugin ? GR.postcssVersion : (RR.plugin = GR.postcssPlugin, RR.setMessage())
+          } catch (yR) {
+            console && console.error && console.error(yR)
           }
-          return WW
+          return RR
         }
         prepareVisitors() {
           this.listeners = {};
-          let WW = (WW, iW, OW) => {
-            this.listeners[iW] || (this.listeners[iW] = []), this.listeners[iW].push([WW, OW])
+          let RR = (RR, JR, GR) => {
+            this.listeners[JR] || (this.listeners[JR] = []), this.listeners[JR].push([RR, GR])
           };
-          for (let iW of this.plugins)
-            if ("object" === typeof iW)
-              for (let OW in iW) {
-                if (!tW[OW] && /^[A-Z]/.test(OW)) throw new Error(`Unknown event ${OW} in ${iW.postcssPlugin}. Try to update PostCSS (${this.processor.version} now).`);
-                if (!ZW[OW])
-                  if ("object" === typeof iW[OW])
-                    for (let mW in iW[OW]) WW(iW, "*" === mW ? OW : OW + "-" + mW.toLowerCase(), iW[OW][mW]);
-                  else "function" === typeof iW[OW] && WW(iW, OW, iW[OW])
+          for (let JR of this.plugins)
+            if ("object" === typeof JR)
+              for (let GR in JR) {
+                if (!VR[GR] && /^[A-Z]/.test(GR)) throw new Error(`Unknown event ${GR} in ${JR.postcssPlugin}. Try to update PostCSS (${this.processor.version} now).`);
+                if (!KR[GR])
+                  if ("object" === typeof JR[GR])
+                    for (let yR in JR[GR]) RR(JR, "*" === yR ? GR : GR + "-" + yR.toLowerCase(), JR[GR][yR]);
+                  else "function" === typeof JR[GR] && RR(JR, GR, JR[GR])
               }
           this.hasListener = Object.keys(this.listeners).length > 0
         }
         async runAsync() {
           this.plugin = 0;
-          for (let WW = 0; WW < this.plugins.length; WW++) {
-            let OW = this.plugins[WW],
-              mW = this.runOnRoot(OW);
-            if (xW(mW)) try {
-              await mW
-            } catch (iW) {
-              throw this.handleError(iW)
+          for (let RR = 0; RR < this.plugins.length; RR++) {
+            let GR = this.plugins[RR],
+              yR = this.runOnRoot(GR);
+            if (wR(yR)) try {
+              await yR
+            } catch (JR) {
+              throw this.handleError(JR)
             }
           }
           if (this.prepareVisitors(), this.hasListener) {
-            let iW = this.result.root;
-            for (; !iW[WW];) {
-              iW[WW] = !0;
-              let mW = [AW(iW)];
-              for (; mW.length > 0;) {
-                let WW = this.visitTick(mW);
-                if (xW(WW)) try {
-                  await WW
-                } catch (OW) {
-                  let WW = mW[mW.length - 1].node;
-                  throw this.handleError(OW, WW)
+            let JR = this.result.root;
+            for (; !JR[RR];) {
+              JR[RR] = !0;
+              let yR = [eR(JR)];
+              for (; yR.length > 0;) {
+                let RR = this.visitTick(yR);
+                if (wR(RR)) try {
+                  await RR
+                } catch (GR) {
+                  let RR = yR[yR.length - 1].node;
+                  throw this.handleError(GR, RR)
                 }
               }
             }
             if (this.listeners.OnceExit)
-              for (let [WW, mW] of this.listeners.OnceExit) {
-                this.result.lastPlugin = WW;
+              for (let [RR, yR] of this.listeners.OnceExit) {
+                this.result.lastPlugin = RR;
                 try {
-                  if ("document" === iW.type) {
-                    let WW = iW.nodes.map((WW => mW(WW, this.helpers)));
-                    await Promise.all(WW)
-                  } else await mW(iW, this.helpers)
-                } catch (OW) {
-                  throw this.handleError(OW)
+                  if ("document" === JR.type) {
+                    let RR = JR.nodes.map((RR => yR(RR, this.helpers)));
+                    await Promise.all(RR)
+                  } else await yR(JR, this.helpers)
+                } catch (GR) {
+                  throw this.handleError(GR)
                 }
               }
           }
           return this.processed = !0, this.stringify()
         }
-        runOnRoot(WW) {
-          this.result.lastPlugin = WW;
+        runOnRoot(RR) {
+          this.result.lastPlugin = RR;
           try {
-            if ("object" === typeof WW && WW.Once) {
+            if ("object" === typeof RR && RR.Once) {
               if ("document" === this.result.root.type) {
-                let iW = this.result.root.nodes.map((iW => WW.Once(iW, this.helpers)));
-                return xW(iW[0]) ? Promise.all(iW) : iW
+                let JR = this.result.root.nodes.map((JR => RR.Once(JR, this.helpers)));
+                return wR(JR[0]) ? Promise.all(JR) : JR
               }
-              return WW.Once(this.result.root, this.helpers)
+              return RR.Once(this.result.root, this.helpers)
             }
-            if ("function" === typeof WW) return WW(this.result.root, this.result)
-          } catch (iW) {
-            throw this.handleError(iW)
+            if ("function" === typeof RR) return RR(this.result.root, this.result)
+          } catch (JR) {
+            throw this.handleError(JR)
           }
         }
         stringify() {
           if (this.error) throw this.error;
           if (this.stringified) return this.result;
           this.stringified = !0, this.sync();
-          let WW = this.result.opts,
-            iW = mW;
-          WW.syntax && (iW = WW.syntax.stringify), WW.stringifier && (iW = WW.stringifier), iW.stringify && (iW = iW.stringify);
-          let EW = new OW(iW, this.result.root, this.result.opts).generate();
-          return this.result.css = EW[0], this.result.map = EW[1], this.result
+          let RR = this.result.opts,
+            JR = yR;
+          RR.syntax && (JR = RR.syntax.stringify), RR.stringifier && (JR = RR.stringifier), JR.stringify && (JR = JR.stringify);
+          let tR = new GR(JR, this.result.root, this.result.opts).generate();
+          return this.result.css = tR[0], this.result.map = tR[1], this.result
         }
         sync() {
           if (this.error) throw this.error;
           if (this.processed) return this.result;
           if (this.processed = !0, this.processing) throw this.getAsyncError();
-          for (let WW of this.plugins) {
-            if (xW(this.runOnRoot(WW))) throw this.getAsyncError()
+          for (let RR of this.plugins) {
+            if (wR(this.runOnRoot(RR))) throw this.getAsyncError()
           }
           if (this.prepareVisitors(), this.hasListener) {
-            let iW = this.result.root;
-            for (; !iW[WW];) iW[WW] = !0, this.walkSync(iW);
+            let JR = this.result.root;
+            for (; !JR[RR];) JR[RR] = !0, this.walkSync(JR);
             if (this.listeners.OnceExit)
-              if ("document" === iW.type)
-                for (let WW of iW.nodes) this.visitSync(this.listeners.OnceExit, WW);
-              else this.visitSync(this.listeners.OnceExit, iW)
+              if ("document" === JR.type)
+                for (let RR of JR.nodes) this.visitSync(this.listeners.OnceExit, RR);
+              else this.visitSync(this.listeners.OnceExit, JR)
           }
           return this.result
         }
-        then(WW, iW) {
-          return this.async().then(WW, iW)
+        then(RR, JR) {
+          return this.async().then(RR, JR)
         }
         toString() {
           return this.css
         }
-        visitSync(WW, iW) {
-          for (let [mW, EW] of WW) {
-            let WW;
-            this.result.lastPlugin = mW;
+        visitSync(RR, JR) {
+          for (let [yR, tR] of RR) {
+            let RR;
+            this.result.lastPlugin = yR;
             try {
-              WW = EW(iW, this.helpers)
-            } catch (OW) {
-              throw this.handleError(OW, iW.proxyOf)
+              RR = tR(JR, this.helpers)
+            } catch (GR) {
+              throw this.handleError(GR, JR.proxyOf)
             }
-            if ("root" !== iW.type && "document" !== iW.type && !iW.parent) return !0;
-            if (xW(WW)) throw this.getAsyncError()
+            if ("root" !== JR.type && "document" !== JR.type && !JR.parent) return !0;
+            if (wR(RR)) throw this.getAsyncError()
           }
         }
-        visitTick(iW) {
-          let OW = iW[iW.length - 1],
+        visitTick(JR) {
+          let GR = JR[JR.length - 1],
             {
-              node: mW,
-              visitors: EW
-            } = OW;
-          if ("root" !== mW.type && "document" !== mW.type && !mW.parent) return void iW.pop();
-          if (EW.length > 0 && OW.visitorIndex < EW.length) {
-            let [WW, iW] = EW[OW.visitorIndex];
-            OW.visitorIndex += 1, OW.visitorIndex === EW.length && (OW.visitors = [], OW.visitorIndex = 0), this.result.lastPlugin = WW;
+              node: yR,
+              visitors: tR
+            } = GR;
+          if ("root" !== yR.type && "document" !== yR.type && !yR.parent) return void JR.pop();
+          if (tR.length > 0 && GR.visitorIndex < tR.length) {
+            let [RR, JR] = tR[GR.visitorIndex];
+            GR.visitorIndex += 1, GR.visitorIndex === tR.length && (GR.visitors = [], GR.visitorIndex = 0), this.result.lastPlugin = RR;
             try {
-              return iW(mW.toProxy(), this.helpers)
-            } catch (PW) {
-              throw this.handleError(PW, mW)
+              return JR(yR.toProxy(), this.helpers)
+            } catch (ZR) {
+              throw this.handleError(ZR, yR)
             }
           }
-          if (0 !== OW.iterator) {
-            let EW, NW = OW.iterator;
-            for (; EW = mW.nodes[mW.indexes[NW]];)
-              if (mW.indexes[NW] += 1, !EW[WW]) return EW[WW] = !0, void iW.push(AW(EW));
-            OW.iterator = 0, delete mW.indexes[NW]
+          if (0 !== GR.iterator) {
+            let tR, uR = GR.iterator;
+            for (; tR = yR.nodes[yR.indexes[uR]];)
+              if (yR.indexes[uR] += 1, !tR[RR]) return tR[RR] = !0, void JR.push(eR(tR));
+            GR.iterator = 0, delete yR.indexes[uR]
           }
-          let NW = OW.events;
-          for (; OW.eventIndex < NW.length;) {
-            let iW = NW[OW.eventIndex];
-            if (OW.eventIndex += 1, 0 === iW) return void(mW.nodes && mW.nodes.length && (mW[WW] = !0, OW.iterator = mW.getIterator()));
-            if (this.listeners[iW]) return void(OW.visitors = this.listeners[iW])
+          let uR = GR.events;
+          for (; GR.eventIndex < uR.length;) {
+            let JR = uR[GR.eventIndex];
+            if (GR.eventIndex += 1, 0 === JR) return void(yR.nodes && yR.nodes.length && (yR[RR] = !0, GR.iterator = yR.getIterator()));
+            if (this.listeners[JR]) return void(GR.visitors = this.listeners[JR])
           }
-          iW.pop()
+          JR.pop()
         }
-        walkSync(iW) {
-          iW[WW] = !0;
-          let OW = lW(iW);
-          for (let mW of OW)
-            if (0 === mW) iW.nodes && iW.each((iW => {
-              iW[WW] || this.walkSync(iW)
+        walkSync(JR) {
+          JR[RR] = !0;
+          let GR = rR(JR);
+          for (let yR of GR)
+            if (0 === yR) JR.nodes && JR.each((JR => {
+              JR[RR] || this.walkSync(JR)
             }));
             else {
-              let WW = this.listeners[mW];
-              if (WW && this.visitSync(WW, iW.toProxy())) return
+              let RR = this.listeners[yR];
+              if (RR && this.visitSync(RR, JR.toProxy())) return
             }
         }
         warnings() {
@@ -5720,50 +5720,50 @@ export const modules = {
           return "LazyResult"
         }
       }
-      return UW.registerPostcss = WW => {
-        jW = WW
-      }, lE = UW, UW.default = UW, cW.registerLazyResult(UW), NW.registerLazyResult(UW), lE
+      return nR.registerPostcss = RR => {
+        LR = RR
+      }, Vt = nR, nR.default = nR, iR.registerLazyResult(nR), uR.registerLazyResult(nR), Vt
     }
 
-    function IE() {
-      if (kE) return UE;
-      kE = 1;
-      let WW = function() {
-          if (jE) return bE;
-          jE = 1;
-          let WW = dE(),
-            iW = JE(),
-            OW = (DE(), RE());
-          const mW = pE();
-          class EW {
-            constructor(OW, EW, NW) {
-              let PW;
-              EW = EW.toString(), this.stringified = !1, this._processor = OW, this._css = EW, this._opts = NW, this._map = void 0;
-              let LW = iW;
-              this.result = new mW(this._processor, PW, this._opts), this.result.css = EW;
-              let cW = this;
+    function Et() {
+      if (Lt) return et;
+      Lt = 1;
+      let RR = function() {
+          if (rt) return wt;
+          rt = 1;
+          let RR = Ot(),
+            JR = Bt(),
+            GR = (Ht(), jt());
+          const yR = ct();
+          class tR {
+            constructor(GR, tR, uR) {
+              let ZR;
+              tR = tR.toString(), this.stringified = !1, this._processor = GR, this._css = tR, this._opts = uR, this._map = void 0;
+              let qR = JR;
+              this.result = new yR(this._processor, ZR, this._opts), this.result.css = tR;
+              let iR = this;
               Object.defineProperty(this.result, "root", {
-                get: () => cW.root
+                get: () => iR.root
               });
-              let wW = new WW(LW, PW, this._opts, EW);
-              if (wW.isMap()) {
-                let [WW, iW] = wW.generate();
-                WW && (this.result.css = WW), iW && (this.result.map = iW)
-              } else wW.clearAnnotation(), this.result.css = wW.css
+              let fR = new RR(qR, ZR, this._opts, tR);
+              if (fR.isMap()) {
+                let [RR, JR] = fR.generate();
+                RR && (this.result.css = RR), JR && (this.result.map = JR)
+              } else fR.clearAnnotation(), this.result.css = fR.css
             }
             async () {
               return this.error ? Promise.reject(this.error) : Promise.resolve(this.result)
-            } catch (WW) {
-              return this.async().catch(WW)
-            } finally(WW) {
-              return this.async().then(WW, WW)
+            } catch (RR) {
+              return this.async().catch(RR)
+            } finally(RR) {
+              return this.async().then(RR, RR)
             }
             sync() {
               if (this.error) throw this.error;
               return this.result
             }
-            then(WW, iW) {
-              return this.async().then(WW, iW)
+            then(RR, JR) {
+              return this.async().then(RR, JR)
             }
             toString() {
               return this._css
@@ -5791,126 +5791,126 @@ export const modules = {
             }
             get root() {
               if (this._root) return this._root;
-              let WW, iW = OW;
+              let RR, JR = GR;
               try {
-                WW = iW(this._css, this._opts)
-              } catch (mW) {
-                this.error = mW
+                RR = JR(this._css, this._opts)
+              } catch (yR) {
+                this.error = yR
               }
               if (this.error) throw this.error;
-              return this._root = WW, WW
+              return this._root = RR, RR
             }
             get[Symbol.toStringTag]() {
               return "NoWorkResult"
             }
           }
-          return bE = EW, EW.default = EW, bE
+          return wt = tR, tR.default = tR, wt
         }(),
-        iW = GE(),
-        OW = gE(),
-        mW = CE();
-      class EW {
+        JR = dt(),
+        GR = Dt(),
+        yR = It();
+      class tR {
         constructor() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-          this.version = "8.4.38", this.plugins = this.normalize(WW)
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+          this.version = "8.4.38", this.plugins = this.normalize(RR)
         }
-        normalize(WW) {
-          let iW = [];
-          for (let OW of WW)
-            if (!0 === OW.postcss ? OW = OW() : OW.postcss && (OW = OW.postcss), "object" === typeof OW && Array.isArray(OW.plugins)) iW = iW.concat(OW.plugins);
-            else if ("object" === typeof OW && OW.postcssPlugin) iW.push(OW);
-          else if ("function" === typeof OW) iW.push(OW);
+        normalize(RR) {
+          let JR = [];
+          for (let GR of RR)
+            if (!0 === GR.postcss ? GR = GR() : GR.postcss && (GR = GR.postcss), "object" === typeof GR && Array.isArray(GR.plugins)) JR = JR.concat(GR.plugins);
+            else if ("object" === typeof GR && GR.postcssPlugin) JR.push(GR);
+          else if ("function" === typeof GR) JR.push(GR);
           else {
-            if ("object" !== typeof OW || !OW.parse && !OW.stringify) throw new Error(OW + " is not a PostCSS plugin")
+            if ("object" !== typeof GR || !GR.parse && !GR.stringify) throw new Error(GR + " is not a PostCSS plugin")
           }
-          return iW
+          return JR
         }
-        process(OW) {
-          let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return this.plugins.length || mW.parser || mW.stringifier || mW.syntax ? new iW(this, OW, mW) : new WW(this, OW, mW)
+        process(GR) {
+          let yR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return this.plugins.length || yR.parser || yR.stringifier || yR.syntax ? new JR(this, GR, yR) : new RR(this, GR, yR)
         }
-        use(WW) {
-          return this.plugins = this.plugins.concat(this.normalize([WW])), this
+        use(RR) {
+          return this.plugins = this.plugins.concat(this.normalize([RR])), this
         }
       }
-      return UE = EW, EW.default = EW, mW.registerProcessor(EW), OW.registerProcessor(EW), UE
+      return et = tR, tR.default = tR, yR.registerProcessor(tR), GR.registerProcessor(tR), et
     }
-    const aE = xm(function() {
-      if (SE) return KE;
-      SE = 1;
-      let WW = Mm(),
-        iW = HE(),
-        OW = GE(),
-        mW = vE(),
-        EW = IE(),
-        NW = JE(),
-        PW = function() {
-          if (ME) return sE;
-          ME = 1;
-          let WW = HE(),
-            iW = uE(),
-            OW = eE(),
-            mW = fE(),
-            EW = oE(),
-            NW = CE(),
-            PW = BE();
+    const Yt = Vy(function() {
+      if (At) return Wt;
+      At = 1;
+      let RR = Uy(),
+        JR = pt(),
+        GR = dt(),
+        yR = Nt(),
+        tR = Et(),
+        uR = Bt(),
+        ZR = function() {
+          if (Ut) return nt;
+          Ut = 1;
+          let RR = pt(),
+            JR = bt(),
+            GR = xt(),
+            yR = Pt(),
+            tR = vt(),
+            uR = It(),
+            ZR = zt();
 
-          function LW(cW, wW) {
-            if (Array.isArray(cW)) return cW.map((WW => LW(WW)));
+          function qR(iR, fR) {
+            if (Array.isArray(iR)) return iR.map((RR => qR(RR)));
             let {
-              inputs: tW,
-              ...ZW
-            } = cW;
-            if (tW) {
-              wW = [];
-              for (let WW of tW) {
-                let OW = {
-                  ...WW,
-                  __proto__: EW.prototype
+              inputs: VR,
+              ...KR
+            } = iR;
+            if (VR) {
+              fR = [];
+              for (let RR of VR) {
+                let GR = {
+                  ...RR,
+                  __proto__: tR.prototype
                 };
-                OW.map && (OW.map = {
-                  ...OW.map,
-                  __proto__: iW.prototype
-                }), wW.push(OW)
+                GR.map && (GR.map = {
+                  ...GR.map,
+                  __proto__: JR.prototype
+                }), fR.push(GR)
               }
             }
-            if (ZW.nodes && (ZW.nodes = cW.nodes.map((WW => LW(WW, wW)))), ZW.source) {
+            if (KR.nodes && (KR.nodes = iR.nodes.map((RR => qR(RR, fR)))), KR.source) {
               let {
-                inputId: WW,
-                ...iW
-              } = ZW.source;
-              ZW.source = iW, null != WW && (ZW.source.input = wW[WW])
+                inputId: RR,
+                ...JR
+              } = KR.source;
+              KR.source = JR, null != RR && (KR.source.input = fR[RR])
             }
-            if ("root" === ZW.type) return new NW(ZW);
-            if ("decl" === ZW.type) return new WW(ZW);
-            if ("rule" === ZW.type) return new PW(ZW);
-            if ("comment" === ZW.type) return new OW(ZW);
-            if ("atrule" === ZW.type) return new mW(ZW);
-            throw new Error("Unknown node type: " + cW.type)
+            if ("root" === KR.type) return new uR(KR);
+            if ("decl" === KR.type) return new RR(KR);
+            if ("rule" === KR.type) return new ZR(KR);
+            if ("comment" === KR.type) return new GR(KR);
+            if ("atrule" === KR.type) return new yR(KR);
+            throw new Error("Unknown node type: " + iR.type)
           }
-          return sE = LW, LW.default = LW, sE
+          return nt = qR, qR.default = qR, nt
         }(),
-        LW = gE(),
-        cW = VE(),
-        wW = eE(),
-        tW = fE(),
-        ZW = pE(),
-        xW = oE(),
-        lW = RE(),
-        AW = XE(),
-        bW = BE(),
-        jW = CE(),
-        UW = hE();
+        qR = Dt(),
+        iR = ot(),
+        fR = xt(),
+        VR = Pt(),
+        KR = ct(),
+        wR = vt(),
+        rR = jt(),
+        eR = mt(),
+        aR = zt(),
+        LR = It(),
+        nR = lt();
 
-      function kW() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        return 1 === iW.length && Array.isArray(iW[0]) && (iW = iW[0]), new EW(iW)
+      function UR() {
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        return 1 === JR.length && Array.isArray(JR[0]) && (JR = JR[0]), new tR(JR)
       }
-      return kW.plugin = function(WW, iW) {
-        let OW, mW = !1;
+      return UR.plugin = function(RR, JR) {
+        let GR, yR = !1;
 
-        function NW() {
-          console && console.warn && !mW && (mW = !0, console.warn(WW + ": postcss.plugin was deprecated. Migration guide:\nhttps://evilmartians.com/chronicles/postcss-8-plugin-migration"), {
+        function uR() {
+          console && console.warn && !yR && (yR = !0, console.warn(RR + ": postcss.plugin was deprecated. Migration guide:\nhttps://evilmartians.com/chronicles/postcss-8-plugin-migration"), {
             NODE_ENV: "production",
             PUBLIC_URL: "",
             WDS_SOCKET_HOST: void 0,
@@ -5926,83 +5926,83 @@ export const modules = {
             WDS_SOCKET_PORT: void 0,
             FAST_REFRESH: !0,
             REACT_APP_DEV_URLS: "false"
-          }.LANG.startsWith("cn") && console.warn(WW + ": \u91cc\u9762 postcss.plugin \u88ab\u5f03\u7528. \u8fc1\u79fb\u6307\u5357:\nhttps://www.w3ctech.com/topic/2226"));
-          let OW = iW(...arguments);
-          return OW.postcssPlugin = WW, OW.postcssVersion = (new EW).version, OW
+          }.LANG.startsWith("cn") && console.warn(RR + ": \u91cc\u9762 postcss.plugin \u88ab\u5f03\u7528. \u8fc1\u79fb\u6307\u5357:\nhttps://www.w3ctech.com/topic/2226"));
+          let GR = JR(...arguments);
+          return GR.postcssPlugin = RR, GR.postcssVersion = (new tR).version, GR
         }
-        return Object.defineProperty(NW, "postcss", {
-          get: () => (OW || (OW = NW()), OW)
-        }), NW.process = function(WW, iW, OW) {
-          return kW([NW(OW)]).process(WW, iW)
-        }, NW
-      }, kW.stringify = NW, kW.parse = lW, kW.fromJSON = PW, kW.list = AW, kW.comment = WW => new wW(WW), kW.atRule = WW => new tW(WW), kW.decl = WW => new iW(WW), kW.rule = WW => new bW(WW), kW.root = WW => new jW(WW), kW.document = WW => new LW(WW), kW.CssSyntaxError = WW, kW.Declaration = iW, kW.yV = mW, kW.Processor = EW, kW.Document = LW, kW.Comment = wW, kW.Warning = cW, kW.AtRule = tW, kW.Result = ZW, kW.Input = xW, kW.Rule = bW, kW.Root = jW, kW.Node = UW, OW.registerPostcss(kW), KE = kW, kW.default = kW, KE
+        return Object.defineProperty(uR, "postcss", {
+          get: () => (GR || (GR = uR()), GR)
+        }), uR.process = function(RR, JR, GR) {
+          return UR([uR(GR)]).process(RR, JR)
+        }, uR
+      }, UR.stringify = uR, UR.parse = rR, UR.fromJSON = ZR, UR.list = eR, UR.comment = RR => new fR(RR), UR.atRule = RR => new VR(RR), UR.decl = RR => new JR(RR), UR.rule = RR => new aR(RR), UR.root = RR => new LR(RR), UR.document = RR => new qR(RR), UR.CssSyntaxError = RR, UR.Declaration = JR, UR.qS = yR, UR.Processor = tR, UR.Document = qR, UR.Comment = fR, UR.Warning = iR, UR.AtRule = VR, UR.Result = KR, UR.Input = wR, UR.Rule = aR, UR.Root = LR, UR.Node = nR, GR.registerPostcss(UR), Wt = UR, UR.default = UR, Wt
     }());
-    aE.stringify, aE.fromJSON, aE.plugin, aE.parse, aE.list, aE.document, aE.comment, aE.atRule, aE.rule, aE.decl, aE.root, aE.CssSyntaxError, aE.Declaration, aE.yV, aE.Processor, aE.Document, aE.Comment, aE.Warning, aE.AtRule, aE.Result, aE.Input, aE.Rule, aE.Root, aE.Node;
-    var rE = (WW => (WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW))(rE || {});
+    Yt.stringify, Yt.fromJSON, Yt.plugin, Yt.parse, Yt.list, Yt.document, Yt.comment, Yt.atRule, Yt.rule, Yt.decl, Yt.root, Yt.CssSyntaxError, Yt.Declaration, Yt.qS, Yt.Processor, Yt.Document, Yt.Comment, Yt.Warning, Yt.AtRule, Yt.Result, Yt.Input, Yt.Rule, Yt.Root, Yt.Node;
+    var kt = (RR => (RR[RR.Document = 0] = "Document", RR[RR.DocumentType = 1] = "DocumentType", RR[RR.Element = 2] = "Element", RR[RR.Text = 3] = "Text", RR[RR.CDATA = 4] = "CDATA", RR[RR.Comment = 5] = "Comment", RR))(kt || {});
 
-    function zE(WW) {
-      const iW = [];
-      for (const OW in WW) {
-        const mW = WW[OW];
-        if ("string" !== typeof mW) continue;
-        const EW = ON(OW);
-        iW.push(`${EW}: ${mW};`)
+    function Qt(RR) {
+      const JR = [];
+      for (const GR in RR) {
+        const yR = RR[GR];
+        if ("string" !== typeof yR) continue;
+        const tR = Ru(GR);
+        JR.push(`${tR}: ${yR};`)
       }
-      return iW.join(" ")
+      return JR.join(" ")
     }
-    const FE = /-([a-z])/g,
-      QE = /^--[a-zA-Z0-9-]+$/,
-      WN = WW => QE.test(WW) ? WW : WW.replace(FE, ((WW, iW) => iW ? iW.toUpperCase() : "")),
-      iN = /\B([A-Z])/g,
-      ON = WW => WW.replace(iN, "-$1").toLowerCase();
-    class mN {
+    const Ft = /-([a-z])/g,
+      Tt = /^--[a-zA-Z0-9-]+$/,
+      st = RR => Tt.test(RR) ? RR : RR.replace(Ft, ((RR, JR) => JR ? JR.toUpperCase() : "")),
+      ht = /\B([A-Z])/g,
+      Ru = RR => RR.replace(ht, "-$1").toLowerCase();
+    class Ju {
       constructor() {
-        cm(this, "parentElement", null), cm(this, "parentNode", null), cm(this, "ownerDocument"), cm(this, "firstChild", null), cm(this, "lastChild", null), cm(this, "previousSibling", null), cm(this, "nextSibling", null), cm(this, "ELEMENT_NODE", 1), cm(this, "TEXT_NODE", 3), cm(this, "nodeType"), cm(this, "nodeName"), cm(this, "RRNodeType")
+        Zy(this, "parentElement", null), Zy(this, "parentNode", null), Zy(this, "ownerDocument"), Zy(this, "firstChild", null), Zy(this, "lastChild", null), Zy(this, "previousSibling", null), Zy(this, "nextSibling", null), Zy(this, "ELEMENT_NODE", 1), Zy(this, "TEXT_NODE", 3), Zy(this, "nodeType"), Zy(this, "nodeName"), Zy(this, "RRNodeType")
       }
       get childNodes() {
-        const WW = [];
-        let iW = this.firstChild;
-        for (; iW;) WW.push(iW), iW = iW.nextSibling;
-        return WW
+        const RR = [];
+        let JR = this.firstChild;
+        for (; JR;) RR.push(JR), JR = JR.nextSibling;
+        return RR
       }
-      contains(WW) {
-        if (!(WW instanceof mN)) return !1;
-        if (WW.ownerDocument !== this.ownerDocument) return !1;
-        if (WW === this) return !0;
-        for (; WW.parentNode;) {
-          if (WW.parentNode === this) return !0;
-          WW = WW.parentNode
+      contains(RR) {
+        if (!(RR instanceof Ju)) return !1;
+        if (RR.ownerDocument !== this.ownerDocument) return !1;
+        if (RR === this) return !0;
+        for (; RR.parentNode;) {
+          if (RR.parentNode === this) return !0;
+          RR = RR.parentNode
         }
         return !1
       }
-      appendChild(WW) {
+      appendChild(RR) {
         throw new Error("RRDomException: Failed to execute 'appendChild' on 'RRNode': This RRNode type does not support this method.")
       }
-      insertBefore(WW, iW) {
+      insertBefore(RR, JR) {
         throw new Error("RRDomException: Failed to execute 'insertBefore' on 'RRNode': This RRNode type does not support this method.")
       }
-      removeChild(WW) {
+      removeChild(RR) {
         throw new Error("RRDomException: Failed to execute 'removeChild' on 'RRNode': This RRNode type does not support this method.")
       }
       toString() {
         return "RRNode"
       }
     }
-    class EN extends mN {
+    class Gu extends Ju {
       constructor() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        super(iW), cm(this, "nodeType", 9), cm(this, "nodeName", "#document"), cm(this, "compatMode", "CSS1Compat"), cm(this, "RRNodeType", rE.Document), cm(this, "textContent", null), this.ownerDocument = this
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        super(JR), Zy(this, "nodeType", 9), Zy(this, "nodeName", "#document"), Zy(this, "compatMode", "CSS1Compat"), Zy(this, "RRNodeType", kt.Document), Zy(this, "textContent", null), this.ownerDocument = this
       }
       get documentElement() {
-        return this.childNodes.find((WW => WW.RRNodeType === rE.Element && "HTML" === WW.tagName)) || null
+        return this.childNodes.find((RR => RR.RRNodeType === kt.Element && "HTML" === RR.tagName)) || null
       }
       get body() {
-        var WW;
-        return (null == (WW = this.documentElement) ? void 0 : WW.childNodes.find((WW => WW.RRNodeType === rE.Element && "BODY" === WW.tagName))) || null
+        var RR;
+        return (null == (RR = this.documentElement) ? void 0 : RR.childNodes.find((RR => RR.RRNodeType === kt.Element && "BODY" === RR.tagName))) || null
       }
       get head() {
-        var WW;
-        return (null == (WW = this.documentElement) ? void 0 : WW.childNodes.find((WW => WW.RRNodeType === rE.Element && "HEAD" === WW.tagName))) || null
+        var RR;
+        return (null == (RR = this.documentElement) ? void 0 : RR.childNodes.find((RR => RR.RRNodeType === kt.Element && "HEAD" === RR.tagName))) || null
       }
       get implementation() {
         return this
@@ -6010,84 +6010,84 @@ export const modules = {
       get firstElementChild() {
         return this.documentElement
       }
-      appendChild(WW) {
-        const iW = WW.RRNodeType;
-        if ((iW === rE.Element || iW === rE.DocumentType) && this.childNodes.some((WW => WW.RRNodeType === iW))) throw new Error(`RRDomException: Failed to execute 'appendChild' on 'RRNode': Only one ${iW===rE.Element?"RRElement":"RRDoctype"} on RRDocument allowed.`);
-        const OW = lN(this, WW);
-        return OW.parentElement = null, OW
+      appendChild(RR) {
+        const JR = RR.RRNodeType;
+        if ((JR === kt.Element || JR === kt.DocumentType) && this.childNodes.some((RR => RR.RRNodeType === JR))) throw new Error(`RRDomException: Failed to execute 'appendChild' on 'RRNode': Only one ${JR===kt.Element?"RRElement":"RRDoctype"} on RRDocument allowed.`);
+        const GR = Ku(this, RR);
+        return GR.parentElement = null, GR
       }
-      insertBefore(WW, iW) {
-        const OW = WW.RRNodeType;
-        if ((OW === rE.Element || OW === rE.DocumentType) && this.childNodes.some((WW => WW.RRNodeType === OW))) throw new Error(`RRDomException: Failed to execute 'insertBefore' on 'RRNode': Only one ${OW===rE.Element?"RRElement":"RRDoctype"} on RRDocument allowed.`);
-        const mW = AN(this, WW, iW);
-        return mW.parentElement = null, mW
+      insertBefore(RR, JR) {
+        const GR = RR.RRNodeType;
+        if ((GR === kt.Element || GR === kt.DocumentType) && this.childNodes.some((RR => RR.RRNodeType === GR))) throw new Error(`RRDomException: Failed to execute 'insertBefore' on 'RRNode': Only one ${GR===kt.Element?"RRElement":"RRDoctype"} on RRDocument allowed.`);
+        const yR = wu(this, RR, JR);
+        return yR.parentElement = null, yR
       }
-      removeChild(WW) {
-        return bN(this, WW)
+      removeChild(RR) {
+        return ru(this, RR)
       }
       open() {
         this.firstChild = null, this.lastChild = null
       }
       close() {}
-      write(WW) {
-        let iW;
-        if ('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">' === WW ? iW = "-//W3C//DTD XHTML 1.0 Transitional//EN" : '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "">' === WW && (iW = "-//W3C//DTD HTML 4.0 Transitional//EN"), iW) {
-          const WW = this.createDocumentType("html", iW, "");
-          this.open(), this.appendChild(WW)
+      write(RR) {
+        let JR;
+        if ('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">' === RR ? JR = "-//W3C//DTD XHTML 1.0 Transitional//EN" : '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "">' === RR && (JR = "-//W3C//DTD HTML 4.0 Transitional//EN"), JR) {
+          const RR = this.createDocumentType("html", JR, "");
+          this.open(), this.appendChild(RR)
         }
       }
-      createDocument(WW, iW, OW) {
-        return new EN
+      createDocument(RR, JR, GR) {
+        return new Gu
       }
-      createDocumentType(WW, iW, OW) {
-        const mW = new NN(WW, iW, OW);
-        return mW.ownerDocument = this, mW
+      createDocumentType(RR, JR, GR) {
+        const yR = new yu(RR, JR, GR);
+        return yR.ownerDocument = this, yR
       }
-      createElement(WW) {
-        const iW = new PN(WW);
-        return iW.ownerDocument = this, iW
+      createElement(RR) {
+        const JR = new tu(RR);
+        return JR.ownerDocument = this, JR
       }
-      createElementNS(WW, iW) {
-        return this.createElement(iW)
+      createElementNS(RR, JR) {
+        return this.createElement(JR)
       }
-      createTextNode(WW) {
-        const iW = new wN(WW);
-        return iW.ownerDocument = this, iW
+      createTextNode(RR) {
+        const JR = new qu(RR);
+        return JR.ownerDocument = this, JR
       }
-      createComment(WW) {
-        const iW = new tN(WW);
-        return iW.ownerDocument = this, iW
+      createComment(RR) {
+        const JR = new iu(RR);
+        return JR.ownerDocument = this, JR
       }
-      createCDATASection(WW) {
-        const iW = new ZN(WW);
-        return iW.ownerDocument = this, iW
+      createCDATASection(RR) {
+        const JR = new fu(RR);
+        return JR.ownerDocument = this, JR
       }
       toString() {
         return "RRDocument"
       }
     }
-    class NN extends mN {
-      constructor(WW, iW, OW) {
-        super(), cm(this, "nodeType", 10), cm(this, "RRNodeType", rE.DocumentType), cm(this, "name"), cm(this, "publicId"), cm(this, "systemId"), cm(this, "textContent", null), this.name = WW, this.publicId = iW, this.systemId = OW, this.nodeName = WW
+    class yu extends Ju {
+      constructor(RR, JR, GR) {
+        super(), Zy(this, "nodeType", 10), Zy(this, "RRNodeType", kt.DocumentType), Zy(this, "name"), Zy(this, "publicId"), Zy(this, "systemId"), Zy(this, "textContent", null), this.name = RR, this.publicId = JR, this.systemId = GR, this.nodeName = RR
       }
       toString() {
         return "RRDocumentType"
       }
     }
-    class PN extends mN {
-      constructor(WW) {
-        super(), cm(this, "nodeType", 1), cm(this, "RRNodeType", rE.Element), cm(this, "tagName"), cm(this, "attributes", {}), cm(this, "shadowRoot", null), cm(this, "scrollLeft"), cm(this, "scrollTop"), this.tagName = WW.toUpperCase(), this.nodeName = WW.toUpperCase()
+    class tu extends Ju {
+      constructor(RR) {
+        super(), Zy(this, "nodeType", 1), Zy(this, "RRNodeType", kt.Element), Zy(this, "tagName"), Zy(this, "attributes", {}), Zy(this, "shadowRoot", null), Zy(this, "scrollLeft"), Zy(this, "scrollTop"), this.tagName = RR.toUpperCase(), this.nodeName = RR.toUpperCase()
       }
       get textContent() {
-        let WW = "";
-        return this.childNodes.forEach((iW => WW += iW.textContent)), WW
+        let RR = "";
+        return this.childNodes.forEach((JR => RR += JR.textContent)), RR
       }
-      set textContent(WW) {
-        this.firstChild = null, this.lastChild = null, this.appendChild(this.ownerDocument.createTextNode(WW))
+      set textContent(RR) {
+        this.firstChild = null, this.lastChild = null, this.appendChild(this.ownerDocument.createTextNode(RR))
       }
       get classList() {
-        return new xN(this.attributes.class, (WW => {
-          this.attributes.class = WW
+        return new Vu(this.attributes.class, (RR => {
+          this.attributes.class = RR
         }))
       }
       get id() {
@@ -6097,67 +6097,67 @@ export const modules = {
         return this.attributes.class || ""
       }
       get style() {
-        const WW = this.attributes.style ? function(WW) {
-            const iW = {},
-              OW = /:(.+)/;
-            return WW.replace(/\/\*.*?\*\//g, "").split(/;(?![^(]*\))/g).forEach((function(WW) {
-              if (WW) {
-                const mW = WW.split(OW);
-                mW.length > 1 && (iW[WN(mW[0].trim())] = mW[1].trim())
+        const RR = this.attributes.style ? function(RR) {
+            const JR = {},
+              GR = /:(.+)/;
+            return RR.replace(/\/\*.*?\*\//g, "").split(/;(?![^(]*\))/g).forEach((function(RR) {
+              if (RR) {
+                const yR = RR.split(GR);
+                yR.length > 1 && (JR[st(yR[0].trim())] = yR[1].trim())
               }
-            })), iW
+            })), JR
           }(this.attributes.style) : {},
-          iW = /\B([A-Z])/g;
-        return WW.setProperty = (OW, mW, EW) => {
-          if (iW.test(OW)) return;
-          const NW = WN(OW);
-          mW ? WW[NW] = mW : delete WW[NW], "important" === EW && (WW[NW] += " !important"), this.attributes.style = zE(WW)
-        }, WW.removeProperty = OW => {
-          if (iW.test(OW)) return "";
-          const mW = WN(OW),
-            EW = WW[mW] || "";
-          return delete WW[mW], this.attributes.style = zE(WW), EW
-        }, WW
+          JR = /\B([A-Z])/g;
+        return RR.setProperty = (GR, yR, tR) => {
+          if (JR.test(GR)) return;
+          const uR = st(GR);
+          yR ? RR[uR] = yR : delete RR[uR], "important" === tR && (RR[uR] += " !important"), this.attributes.style = Qt(RR)
+        }, RR.removeProperty = GR => {
+          if (JR.test(GR)) return "";
+          const yR = st(GR),
+            tR = RR[yR] || "";
+          return delete RR[yR], this.attributes.style = Qt(RR), tR
+        }, RR
       }
-      getAttribute(WW) {
-        return void 0 === this.attributes[WW] ? null : this.attributes[WW]
+      getAttribute(RR) {
+        return void 0 === this.attributes[RR] ? null : this.attributes[RR]
       }
-      setAttribute(WW, iW) {
-        this.attributes[WW] = iW
+      setAttribute(RR, JR) {
+        this.attributes[RR] = JR
       }
-      setAttributeNS(WW, iW, OW) {
-        this.setAttribute(iW, OW)
+      setAttributeNS(RR, JR, GR) {
+        this.setAttribute(JR, GR)
       }
-      removeAttribute(WW) {
-        delete this.attributes[WW]
+      removeAttribute(RR) {
+        delete this.attributes[RR]
       }
-      appendChild(WW) {
-        return lN(this, WW)
+      appendChild(RR) {
+        return Ku(this, RR)
       }
-      insertBefore(WW, iW) {
-        return AN(this, WW, iW)
+      insertBefore(RR, JR) {
+        return wu(this, RR, JR)
       }
-      removeChild(WW) {
-        return bN(this, WW)
+      removeChild(RR) {
+        return ru(this, RR)
       }
-      attachShadow(WW) {
-        const iW = this.ownerDocument.createElement("SHADOWROOT");
-        return this.shadowRoot = iW, iW
+      attachShadow(RR) {
+        const JR = this.ownerDocument.createElement("SHADOWROOT");
+        return this.shadowRoot = JR, JR
       }
-      dispatchEvent(WW) {
+      dispatchEvent(RR) {
         return !0
       }
       toString() {
-        let WW = "";
-        for (const iW in this.attributes) WW += `${iW}="${this.attributes[iW]}" `;
-        return `${this.tagName} ${WW}`
+        let RR = "";
+        for (const JR in this.attributes) RR += `${JR}="${this.attributes[JR]}" `;
+        return `${this.tagName} ${RR}`
       }
     }
-    class LN extends PN {
+    class uu extends tu {
       constructor() {
-        super(...arguments), cm(this, "currentTime"), cm(this, "volume"), cm(this, "paused"), cm(this, "muted"), cm(this, "playbackRate"), cm(this, "loop")
+        super(...arguments), Zy(this, "currentTime"), Zy(this, "volume"), Zy(this, "paused"), Zy(this, "muted"), Zy(this, "playbackRate"), Zy(this, "loop")
       }
-      attachShadow(WW) {
+      attachShadow(RR) {
         throw new Error("RRDomException: Failed to execute 'attachShadow' on 'RRElement': This RRElement does not support attachShadow")
       }
       play() {
@@ -6167,9 +6167,9 @@ export const modules = {
         this.paused = !0
       }
     }
-    class cN extends PN {
+    class Zu extends tu {
       constructor() {
-        super(...arguments), cm(this, "tagName", "DIALOG"), cm(this, "nodeName", "DIALOG")
+        super(...arguments), Zy(this, "tagName", "DIALOG"), Zy(this, "nodeName", "DIALOG")
       }
       get isModal() {
         return "modal" === this.getAttribute("rr_open_mode")
@@ -6187,90 +6187,90 @@ export const modules = {
         this.setAttribute("open", ""), this.setAttribute("rr_open_mode", "modal")
       }
     }
-    class wN extends mN {
-      constructor(WW) {
-        super(), cm(this, "nodeType", 3), cm(this, "nodeName", "#text"), cm(this, "RRNodeType", rE.Text), cm(this, "data"), this.data = WW
+    class qu extends Ju {
+      constructor(RR) {
+        super(), Zy(this, "nodeType", 3), Zy(this, "nodeName", "#text"), Zy(this, "RRNodeType", kt.Text), Zy(this, "data"), this.data = RR
       }
       get textContent() {
         return this.data
       }
-      set textContent(WW) {
-        this.data = WW
+      set textContent(RR) {
+        this.data = RR
       }
       toString() {
         return `RRText text=${JSON.stringify(this.data)}`
       }
     }
-    class tN extends mN {
-      constructor(WW) {
-        super(), cm(this, "nodeType", 8), cm(this, "nodeName", "#comment"), cm(this, "RRNodeType", rE.Comment), cm(this, "data"), this.data = WW
+    class iu extends Ju {
+      constructor(RR) {
+        super(), Zy(this, "nodeType", 8), Zy(this, "nodeName", "#comment"), Zy(this, "RRNodeType", kt.Comment), Zy(this, "data"), this.data = RR
       }
       get textContent() {
         return this.data
       }
-      set textContent(WW) {
-        this.data = WW
+      set textContent(RR) {
+        this.data = RR
       }
       toString() {
         return `RRComment text=${JSON.stringify(this.data)}`
       }
     }
-    class ZN extends mN {
-      constructor(WW) {
-        super(), cm(this, "nodeName", "#cdata-section"), cm(this, "nodeType", 4), cm(this, "RRNodeType", rE.CDATA), cm(this, "data"), this.data = WW
+    class fu extends Ju {
+      constructor(RR) {
+        super(), Zy(this, "nodeName", "#cdata-section"), Zy(this, "nodeType", 4), Zy(this, "RRNodeType", kt.CDATA), Zy(this, "data"), this.data = RR
       }
       get textContent() {
         return this.data
       }
-      set textContent(WW) {
-        this.data = WW
+      set textContent(RR) {
+        this.data = RR
       }
       toString() {
         return `RRCDATASection data=${JSON.stringify(this.data)}`
       }
     }
-    class xN {
-      constructor(WW, iW) {
-        var OW = this;
-        if (cm(this, "onChange"), cm(this, "classes", []), cm(this, "add", (function() {
-            for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
-            for (const EW of iW) {
-              const WW = String(EW);
-              OW.classes.indexOf(WW) >= 0 || OW.classes.push(WW)
+    class Vu {
+      constructor(RR, JR) {
+        var GR = this;
+        if (Zy(this, "onChange"), Zy(this, "classes", []), Zy(this, "add", (function() {
+            for (var RR = arguments.length, JR = new Array(RR), yR = 0; yR < RR; yR++) JR[yR] = arguments[yR];
+            for (const tR of JR) {
+              const RR = String(tR);
+              GR.classes.indexOf(RR) >= 0 || GR.classes.push(RR)
             }
-            OW.onChange && OW.onChange(OW.classes.join(" "))
-          })), cm(this, "remove", (function() {
-            for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
-            OW.classes = OW.classes.filter((WW => -1 === iW.indexOf(WW))), OW.onChange && OW.onChange(OW.classes.join(" "))
-          })), WW) {
-          const iW = WW.trim().split(/\s+/);
-          this.classes.push(...iW)
+            GR.onChange && GR.onChange(GR.classes.join(" "))
+          })), Zy(this, "remove", (function() {
+            for (var RR = arguments.length, JR = new Array(RR), yR = 0; yR < RR; yR++) JR[yR] = arguments[yR];
+            GR.classes = GR.classes.filter((RR => -1 === JR.indexOf(RR))), GR.onChange && GR.onChange(GR.classes.join(" "))
+          })), RR) {
+          const JR = RR.trim().split(/\s+/);
+          this.classes.push(...JR)
         }
-        this.onChange = iW
+        this.onChange = JR
       }
     }
 
-    function lN(WW, iW) {
-      return iW.parentNode && iW.parentNode.removeChild(iW), WW.lastChild ? (WW.lastChild.nextSibling = iW, iW.previousSibling = WW.lastChild) : (WW.firstChild = iW, iW.previousSibling = null), WW.lastChild = iW, iW.nextSibling = null, iW.parentNode = WW, iW.parentElement = WW, iW.ownerDocument = WW.ownerDocument, iW
+    function Ku(RR, JR) {
+      return JR.parentNode && JR.parentNode.removeChild(JR), RR.lastChild ? (RR.lastChild.nextSibling = JR, JR.previousSibling = RR.lastChild) : (RR.firstChild = JR, JR.previousSibling = null), RR.lastChild = JR, JR.nextSibling = null, JR.parentNode = RR, JR.parentElement = RR, JR.ownerDocument = RR.ownerDocument, JR
     }
 
-    function AN(WW, iW, OW) {
-      if (!OW) return lN(WW, iW);
-      if (OW.parentNode !== WW) throw new Error("Failed to execute 'insertBefore' on 'RRNode': The RRNode before which the new node is to be inserted is not a child of this RRNode.");
-      return iW === OW || (iW.parentNode && iW.parentNode.removeChild(iW), iW.previousSibling = OW.previousSibling, OW.previousSibling = iW, iW.nextSibling = OW, iW.previousSibling ? iW.previousSibling.nextSibling = iW : WW.firstChild = iW, iW.parentElement = WW, iW.parentNode = WW, iW.ownerDocument = WW.ownerDocument), iW
+    function wu(RR, JR, GR) {
+      if (!GR) return Ku(RR, JR);
+      if (GR.parentNode !== RR) throw new Error("Failed to execute 'insertBefore' on 'RRNode': The RRNode before which the new node is to be inserted is not a child of this RRNode.");
+      return JR === GR || (JR.parentNode && JR.parentNode.removeChild(JR), JR.previousSibling = GR.previousSibling, GR.previousSibling = JR, JR.nextSibling = GR, JR.previousSibling ? JR.previousSibling.nextSibling = JR : RR.firstChild = JR, JR.parentElement = RR, JR.parentNode = RR, JR.ownerDocument = RR.ownerDocument), JR
     }
 
-    function bN(WW, iW) {
-      if (iW.parentNode !== WW) throw new Error("Failed to execute 'removeChild' on 'RRNode': The RRNode to be removed is not a child of this RRNode.");
-      return iW.previousSibling ? iW.previousSibling.nextSibling = iW.nextSibling : WW.firstChild = iW.nextSibling, iW.nextSibling ? iW.nextSibling.previousSibling = iW.previousSibling : WW.lastChild = iW.previousSibling, iW.previousSibling = null, iW.nextSibling = null, iW.parentElement = null, iW.parentNode = null, iW
+    function ru(RR, JR) {
+      if (JR.parentNode !== RR) throw new Error("Failed to execute 'removeChild' on 'RRNode': The RRNode to be removed is not a child of this RRNode.");
+      return JR.previousSibling ? JR.previousSibling.nextSibling = JR.nextSibling : RR.firstChild = JR.nextSibling, JR.nextSibling ? JR.nextSibling.previousSibling = JR.previousSibling : RR.lastChild = JR.previousSibling, JR.previousSibling = null, JR.nextSibling = null, JR.parentElement = null, JR.parentNode = null, JR
     }
-    var jN = (WW => (WW[WW.PLACEHOLDER = 0] = "PLACEHOLDER", WW[WW.ELEMENT_NODE = 1] = "ELEMENT_NODE", WW[WW.ATTRIBUTE_NODE = 2] = "ATTRIBUTE_NODE", WW[WW.TEXT_NODE = 3] = "TEXT_NODE", WW[WW.CDATA_SECTION_NODE = 4] = "CDATA_SECTION_NODE", WW[WW.ENTITY_REFERENCE_NODE = 5] = "ENTITY_REFERENCE_NODE", WW[WW.ENTITY_NODE = 6] = "ENTITY_NODE", WW[WW.PROCESSING_INSTRUCTION_NODE = 7] = "PROCESSING_INSTRUCTION_NODE", WW[WW.COMMENT_NODE = 8] = "COMMENT_NODE", WW[WW.DOCUMENT_NODE = 9] = "DOCUMENT_NODE", WW[WW.DOCUMENT_TYPE_NODE = 10] = "DOCUMENT_TYPE_NODE", WW[WW.DOCUMENT_FRAGMENT_NODE = 11] = "DOCUMENT_FRAGMENT_NODE", WW))(jN || {});
-    const UN = {
+    var eu = (RR => (RR[RR.PLACEHOLDER = 0] = "PLACEHOLDER", RR[RR.ELEMENT_NODE = 1] = "ELEMENT_NODE", RR[RR.ATTRIBUTE_NODE = 2] = "ATTRIBUTE_NODE", RR[RR.TEXT_NODE = 3] = "TEXT_NODE", RR[RR.CDATA_SECTION_NODE = 4] = "CDATA_SECTION_NODE", RR[RR.ENTITY_REFERENCE_NODE = 5] = "ENTITY_REFERENCE_NODE", RR[RR.ENTITY_NODE = 6] = "ENTITY_NODE", RR[RR.PROCESSING_INSTRUCTION_NODE = 7] = "PROCESSING_INSTRUCTION_NODE", RR[RR.COMMENT_NODE = 8] = "COMMENT_NODE", RR[RR.DOCUMENT_NODE = 9] = "DOCUMENT_NODE", RR[RR.DOCUMENT_TYPE_NODE = 10] = "DOCUMENT_TYPE_NODE", RR[RR.DOCUMENT_FRAGMENT_NODE = 11] = "DOCUMENT_FRAGMENT_NODE", RR))(eu || {});
+    const au = {
         svg: "http://www.w3.org/2000/svg",
         "xlink:href": "http://www.w3.org/1999/xlink",
         xmlns: "http://www.w3.org/2000/xmlns/"
       },
-      kN = {
+      Lu = {
         altglyph: "altGlyph",
         altglyphdef: "altGlyphDef",
         altglyphitem: "altGlyphItem",
@@ -6308,314 +6308,314 @@ export const modules = {
         lineargradient: "linearGradient",
         radialgradient: "radialGradient"
       };
-    let sN = null;
+    let nu = null;
 
-    function MN(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iW.mirror || iW.ownerDocument.mirror;
-      WW = function(WW, iW, OW, mW) {
-          var EW;
-          OW.afterAppend && !sN && (sN = new WeakSet, setTimeout((() => {
-            sN = null
+    function Uu(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JR.mirror || JR.ownerDocument.mirror;
+      RR = function(RR, JR, GR, yR) {
+          var tR;
+          GR.afterAppend && !nu && (nu = new WeakSet, setTimeout((() => {
+            nu = null
           }), 0));
-          if (!YN(WW, iW)) {
-            const NW = SN(iW, OW.mirror, mW);
-            null == (EW = WW.parentNode) || EW.replaceChild(NW, WW), WW = NW
+          if (!Cu(RR, JR)) {
+            const uR = Au(JR, GR.mirror, yR);
+            null == (tR = RR.parentNode) || tR.replaceChild(uR, RR), RR = uR
           }
-          switch (iW.RRNodeType) {
-            case rE.Document:
-              if (!yN(WW, iW, OW.mirror, mW)) {
-                const EW = mW.getMeta(iW);
-                EW && (OW.mirror.removeNodeFromMap(WW), WW.close(), WW.open(), OW.mirror.add(WW, EW), null == sN || sN.add(WW))
+          switch (JR.RRNodeType) {
+            case kt.Document:
+              if (!Xu(RR, JR, GR.mirror, yR)) {
+                const tR = yR.getMeta(JR);
+                tR && (GR.mirror.removeNodeFromMap(RR), RR.close(), RR.open(), GR.mirror.add(RR, tR), null == nu || nu.add(RR))
               }
               break;
-            case rE.Element: {
-              const EW = WW,
-                NW = iW;
-              switch (NW.tagName) {
+            case kt.Element: {
+              const tR = RR,
+                uR = JR;
+              switch (uR.tagName) {
                 case "IFRAME": {
-                  const EW = WW.contentDocument;
-                  if (!EW) break;
-                  MN(EW, iW.contentDocument, OW, mW);
+                  const tR = RR.contentDocument;
+                  if (!tR) break;
+                  Uu(tR, JR.contentDocument, GR, yR);
                   break
                 }
               }
-              NW.shadowRoot && (EW.shadowRoot || EW.attachShadow({
+              uR.shadowRoot && (tR.shadowRoot || tR.attachShadow({
                   mode: "open"
-                }), KN(EW.shadowRoot, NW.shadowRoot, OW, mW)),
-                function(WW, iW, OW) {
-                  const mW = WW.attributes,
-                    EW = iW.attributes;
-                  for (const PW in EW) {
-                    const mW = EW[PW],
-                      LW = OW.getMeta(iW);
-                    if ((null == LW ? void 0 : LW.isSVG) && UN[PW]) WW.setAttributeNS(UN[PW], PW, mW);
-                    else if ("CANVAS" === iW.tagName && "rr_dataURL" === PW) {
-                      const iW = document.createElement("img");
-                      iW.src = mW, iW.onload = () => {
-                        const OW = WW.getContext("2d");
-                        OW && OW.drawImage(iW, 0, 0, iW.width, iW.height)
+                }), Wu(tR.shadowRoot, uR.shadowRoot, GR, yR)),
+                function(RR, JR, GR) {
+                  const yR = RR.attributes,
+                    tR = JR.attributes;
+                  for (const ZR in tR) {
+                    const yR = tR[ZR],
+                      qR = GR.getMeta(JR);
+                    if ((null == qR ? void 0 : qR.isSVG) && au[ZR]) RR.setAttributeNS(au[ZR], ZR, yR);
+                    else if ("CANVAS" === JR.tagName && "rr_dataURL" === ZR) {
+                      const JR = document.createElement("img");
+                      JR.src = yR, JR.onload = () => {
+                        const GR = RR.getContext("2d");
+                        GR && GR.drawImage(JR, 0, 0, JR.width, JR.height)
                       }
                     } else {
-                      if ("IFRAME" === iW.tagName && "srcdoc" === PW) continue;
+                      if ("IFRAME" === JR.tagName && "srcdoc" === ZR) continue;
                       try {
-                        WW.setAttribute(PW, mW)
-                      } catch (NW) {
-                        console.warn(NW)
+                        RR.setAttribute(ZR, yR)
+                      } catch (uR) {
+                        console.warn(uR)
                       }
                     }
                   }
                   for (const {
-                      name: PW
+                      name: ZR
                     }
-                    of Array.from(mW)) PW in EW || WW.removeAttribute(PW);
-                  iW.scrollLeft && (WW.scrollLeft = iW.scrollLeft), iW.scrollTop && (WW.scrollTop = iW.scrollTop)
-                }(EW, NW, mW);
+                    of Array.from(yR)) ZR in tR || RR.removeAttribute(ZR);
+                  JR.scrollLeft && (RR.scrollLeft = JR.scrollLeft), JR.scrollTop && (RR.scrollTop = JR.scrollTop)
+                }(tR, uR, yR);
               break
             }
           }
-          return WW
-        }(WW, iW, OW, mW), KN(WW, iW, OW, mW),
-        function(WW, iW, OW) {
-          var mW;
-          switch (iW.RRNodeType) {
-            case rE.Document: {
-              const WW = iW.scrollData;
-              WW && OW.applyScroll(WW, !0);
+          return RR
+        }(RR, JR, GR, yR), Wu(RR, JR, GR, yR),
+        function(RR, JR, GR) {
+          var yR;
+          switch (JR.RRNodeType) {
+            case kt.Document: {
+              const RR = JR.scrollData;
+              RR && GR.applyScroll(RR, !0);
               break
             }
-            case rE.Element: {
-              const mW = WW,
-                NW = iW;
-              switch (NW.scrollData && OW.applyScroll(NW.scrollData, !0), NW.inputData && OW.applyInput(NW.inputData), NW.tagName) {
+            case kt.Element: {
+              const yR = RR,
+                uR = JR;
+              switch (uR.scrollData && GR.applyScroll(uR.scrollData, !0), uR.inputData && GR.applyInput(uR.inputData), uR.tagName) {
                 case "AUDIO":
                 case "VIDEO": {
-                  const iW = WW,
-                    OW = NW;
-                  void 0 !== OW.paused && (OW.paused ? iW.pause() : iW.play()), void 0 !== OW.muted && (iW.muted = OW.muted), void 0 !== OW.volume && (iW.volume = OW.volume), void 0 !== OW.currentTime && (iW.currentTime = OW.currentTime), void 0 !== OW.playbackRate && (iW.playbackRate = OW.playbackRate), void 0 !== OW.loop && (iW.loop = OW.loop);
+                  const JR = RR,
+                    GR = uR;
+                  void 0 !== GR.paused && (GR.paused ? JR.pause() : JR.play()), void 0 !== GR.muted && (JR.muted = GR.muted), void 0 !== GR.volume && (JR.volume = GR.volume), void 0 !== GR.currentTime && (JR.currentTime = GR.currentTime), void 0 !== GR.playbackRate && (JR.playbackRate = GR.playbackRate), void 0 !== GR.loop && (JR.loop = GR.loop);
                   break
                 }
                 case "CANVAS": {
-                  const EW = iW;
-                  if (null !== EW.rr_dataURL) {
-                    const WW = document.createElement("img");
-                    WW.onload = () => {
-                      const iW = mW.getContext("2d");
-                      iW && iW.drawImage(WW, 0, 0, WW.width, WW.height)
-                    }, WW.src = EW.rr_dataURL
+                  const tR = JR;
+                  if (null !== tR.rr_dataURL) {
+                    const RR = document.createElement("img");
+                    RR.onload = () => {
+                      const JR = yR.getContext("2d");
+                      JR && JR.drawImage(RR, 0, 0, RR.width, RR.height)
+                    }, RR.src = tR.rr_dataURL
                   }
-                  EW.canvasMutations.forEach((iW => OW.applyCanvas(iW.event, iW.mutation, WW)));
+                  tR.canvasMutations.forEach((JR => GR.applyCanvas(JR.event, JR.mutation, RR)));
                   break
                 }
                 case "STYLE": {
-                  const WW = mW.sheet;
-                  WW && iW.rules.forEach((iW => OW.applyStyleSheetMutation(iW, WW)));
+                  const RR = yR.sheet;
+                  RR && JR.rules.forEach((JR => GR.applyStyleSheetMutation(JR, RR)));
                   break
                 }
                 case "DIALOG": {
-                  const WW = mW,
-                    iW = NW,
-                    OW = WW.open,
-                    PW = WW.matches("dialog:modal"),
-                    LW = iW.open,
-                    cW = iW.isModal,
-                    wW = PW !== cW,
-                    tW = OW !== LW;
-                  if ((wW || OW && tW) && WW.close(), LW && (tW || wW)) try {
-                    cW ? WW.showModal() : WW.show()
-                  } catch (EW) {
-                    console.warn(EW)
+                  const RR = yR,
+                    JR = uR,
+                    GR = RR.open,
+                    ZR = RR.matches("dialog:modal"),
+                    qR = JR.open,
+                    iR = JR.isModal,
+                    fR = ZR !== iR,
+                    VR = GR !== qR;
+                  if ((fR || GR && VR) && RR.close(), qR && (VR || fR)) try {
+                    iR ? RR.showModal() : RR.show()
+                  } catch (tR) {
+                    console.warn(tR)
                   }
                   break
                 }
               }
               break
             }
-            case rE.Text:
-            case rE.Comment:
-            case rE.CDATA:
-              WW.textContent !== iW.data && (WW.textContent = iW.data)
-          }(null == sN ? void 0 : sN.has(WW)) && (sN.delete(WW), null == (mW = OW.afterAppend) || mW.call(OW, WW, OW.mirror.getId(WW)))
-        }(WW, iW, OW)
+            case kt.Text:
+            case kt.Comment:
+            case kt.CDATA:
+              RR.textContent !== JR.data && (RR.textContent = JR.data)
+          }(null == nu ? void 0 : nu.has(RR)) && (nu.delete(RR), null == (yR = GR.afterAppend) || yR.call(GR, RR, GR.mirror.getId(RR)))
+        }(RR, JR, GR)
     }
 
-    function KN(WW, iW, OW, mW) {
-      const EW = Array.from(WW.childNodes),
-        NW = iW.childNodes;
-      if (0 === EW.length && 0 === NW.length) return;
-      let PW, LW, cW = 0,
-        wW = EW.length - 1,
-        tW = 0,
-        ZW = NW.length - 1,
-        xW = EW[cW],
-        lW = EW[wW],
-        AW = NW[tW],
-        bW = NW[ZW];
-      for (; cW <= wW && tW <= ZW;)
-        if (void 0 === xW) xW = EW[++cW];
-        else if (void 0 === lW) lW = EW[--wW];
-      else if (yN(xW, AW, OW.mirror, mW)) xW = EW[++cW], AW = NW[++tW];
-      else if (yN(lW, bW, OW.mirror, mW)) lW = EW[--wW], bW = NW[--ZW];
-      else if (yN(xW, bW, OW.mirror, mW)) {
+    function Wu(RR, JR, GR, yR) {
+      const tR = Array.from(RR.childNodes),
+        uR = JR.childNodes;
+      if (0 === tR.length && 0 === uR.length) return;
+      let ZR, qR, iR = 0,
+        fR = tR.length - 1,
+        VR = 0,
+        KR = uR.length - 1,
+        wR = tR[iR],
+        rR = tR[fR],
+        eR = uR[VR],
+        aR = uR[KR];
+      for (; iR <= fR && VR <= KR;)
+        if (void 0 === wR) wR = tR[++iR];
+        else if (void 0 === rR) rR = tR[--fR];
+      else if (Xu(wR, eR, GR.mirror, yR)) wR = tR[++iR], eR = uR[++VR];
+      else if (Xu(rR, aR, GR.mirror, yR)) rR = tR[--fR], aR = uR[--KR];
+      else if (Xu(wR, aR, GR.mirror, yR)) {
         try {
-          WW.insertBefore(xW, lW.nextSibling)
-        } catch (kW) {
-          console.warn(kW)
+          RR.insertBefore(wR, rR.nextSibling)
+        } catch (UR) {
+          console.warn(UR)
         }
-        xW = EW[++cW], bW = NW[--ZW]
-      } else if (yN(lW, AW, OW.mirror, mW)) {
+        wR = tR[++iR], aR = uR[--KR]
+      } else if (Xu(rR, eR, GR.mirror, yR)) {
         try {
-          WW.insertBefore(lW, xW)
-        } catch (kW) {
-          console.warn(kW)
+          RR.insertBefore(rR, wR)
+        } catch (UR) {
+          console.warn(UR)
         }
-        lW = EW[--wW], AW = NW[++tW]
+        rR = tR[--fR], eR = uR[++VR]
       } else {
-        if (!PW) {
-          PW = {};
-          for (let WW = cW; WW <= wW; WW++) {
-            const iW = EW[WW];
-            iW && OW.mirror.hasNode(iW) && (PW[OW.mirror.getId(iW)] = WW)
+        if (!ZR) {
+          ZR = {};
+          for (let RR = iR; RR <= fR; RR++) {
+            const JR = tR[RR];
+            JR && GR.mirror.hasNode(JR) && (ZR[GR.mirror.getId(JR)] = RR)
           }
         }
-        LW = PW[mW.getId(AW)];
-        const iW = EW[LW];
-        if (void 0 !== LW && iW && yN(iW, AW, OW.mirror, mW)) {
+        qR = ZR[yR.getId(eR)];
+        const JR = tR[qR];
+        if (void 0 !== qR && JR && Xu(JR, eR, GR.mirror, yR)) {
           try {
-            WW.insertBefore(iW, xW)
-          } catch (kW) {
-            console.warn(kW)
+            RR.insertBefore(JR, wR)
+          } catch (UR) {
+            console.warn(UR)
           }
-          EW[LW] = void 0
+          tR[qR] = void 0
         } else {
-          const iW = SN(AW, OW.mirror, mW);
-          "#document" === WW.nodeName && xW && (iW.nodeType === iW.DOCUMENT_TYPE_NODE && xW.nodeType === xW.DOCUMENT_TYPE_NODE || iW.nodeType === iW.ELEMENT_NODE && xW.nodeType === xW.ELEMENT_NODE) && (WW.removeChild(xW), OW.mirror.removeNodeFromMap(xW), xW = EW[++cW]);
+          const JR = Au(eR, GR.mirror, yR);
+          "#document" === RR.nodeName && wR && (JR.nodeType === JR.DOCUMENT_TYPE_NODE && wR.nodeType === wR.DOCUMENT_TYPE_NODE || JR.nodeType === JR.ELEMENT_NODE && wR.nodeType === wR.ELEMENT_NODE) && (RR.removeChild(wR), GR.mirror.removeNodeFromMap(wR), wR = tR[++iR]);
           try {
-            WW.insertBefore(iW, xW || null)
-          } catch (kW) {
-            console.warn(kW)
+            RR.insertBefore(JR, wR || null)
+          } catch (UR) {
+            console.warn(UR)
           }
         }
-        AW = NW[++tW]
+        eR = uR[++VR]
       }
-      if (cW > wW) {
-        const iW = NW[ZW + 1];
-        let EW = null;
-        for (iW && (EW = OW.mirror.AmW(mW.getId(iW))); tW <= ZW; ++tW) {
-          const iW = SN(NW[tW], OW.mirror, mW);
+      if (iR > fR) {
+        const JR = uR[KR + 1];
+        let tR = null;
+        for (JR && (tR = GR.mirror.JtR(yR.getId(JR))); VR <= KR; ++VR) {
+          const JR = Au(uR[VR], GR.mirror, yR);
           try {
-            WW.insertBefore(iW, EW)
-          } catch (kW) {
-            console.warn(kW)
+            RR.insertBefore(JR, tR)
+          } catch (UR) {
+            console.warn(UR)
           }
         }
-      } else if (tW > ZW)
-        for (; cW <= wW; cW++) {
-          const iW = EW[cW];
-          if (iW && iW.parentNode === WW) try {
-            WW.removeChild(iW), OW.mirror.removeNodeFromMap(iW)
-          } catch (kW) {
-            console.warn(kW)
+      } else if (VR > KR)
+        for (; iR <= fR; iR++) {
+          const JR = tR[iR];
+          if (JR && JR.parentNode === RR) try {
+            RR.removeChild(JR), GR.mirror.removeNodeFromMap(JR)
+          } catch (UR) {
+            console.warn(UR)
           }
         }
-      let jW = WW.firstChild,
-        UW = iW.firstChild;
-      for (; null !== jW && null !== UW;) MN(jW, UW, OW, mW), jW = jW.nextSibling, UW = UW.nextSibling
+      let LR = RR.firstChild,
+        nR = JR.firstChild;
+      for (; null !== LR && null !== nR;) Uu(LR, nR, GR, yR), LR = LR.nextSibling, nR = nR.nextSibling
     }
 
-    function SN(WW, iW, OW) {
-      const mW = OW.getId(WW),
-        EW = OW.getMeta(WW);
-      let NW = null;
-      if (mW > -1 && (NW = iW.AmW(mW)), null !== NW && YN(NW, WW)) return NW;
-      switch (WW.RRNodeType) {
-        case rE.Document:
-          NW = new Document;
+    function Au(RR, JR, GR) {
+      const yR = GR.getId(RR),
+        tR = GR.getMeta(RR);
+      let uR = null;
+      if (yR > -1 && (uR = JR.JtR(yR)), null !== uR && Cu(uR, RR)) return uR;
+      switch (RR.RRNodeType) {
+        case kt.Document:
+          uR = new Document;
           break;
-        case rE.DocumentType:
-          NW = document.implementation.createDocumentType(WW.name, WW.publicId, WW.systemId);
+        case kt.DocumentType:
+          uR = document.implementation.createDocumentType(RR.name, RR.publicId, RR.systemId);
           break;
-        case rE.Element: {
-          let iW = WW.tagName.toLowerCase();
-          iW = kN[iW] || iW, NW = EW && "isSVG" in EW && (null == EW ? void 0 : EW.isSVG) ? document.createElementNS(UN.svg, iW) : document.createElement(WW.tagName);
+        case kt.Element: {
+          let JR = RR.tagName.toLowerCase();
+          JR = Lu[JR] || JR, uR = tR && "isSVG" in tR && (null == tR ? void 0 : tR.isSVG) ? document.createElementNS(au.svg, JR) : document.createElement(RR.tagName);
           break
         }
-        case rE.Text:
-          NW = document.createTextNode(WW.data);
+        case kt.Text:
+          uR = document.createTextNode(RR.data);
           break;
-        case rE.Comment:
-          NW = document.createComment(WW.data);
+        case kt.Comment:
+          uR = document.createComment(RR.data);
           break;
-        case rE.CDATA:
-          NW = document.createCDATASection(WW.data)
+        case kt.CDATA:
+          uR = document.createCDATASection(RR.data)
       }
-      EW && iW.add(NW, {
-        ...EW
+      tR && JR.add(uR, {
+        ...tR
       });
       try {
-        null == sN || sN.add(NW)
-      } catch (PW) {}
-      return NW
+        null == nu || nu.add(uR)
+      } catch (ZR) {}
+      return uR
     }
 
-    function YN(WW, iW) {
-      return WW.nodeType === iW.nodeType && (WW.nodeType !== WW.ELEMENT_NODE || WW.tagName.toUpperCase() === iW.tagName)
+    function Cu(RR, JR) {
+      return RR.nodeType === JR.nodeType && (RR.nodeType !== RR.ELEMENT_NODE || RR.tagName.toUpperCase() === JR.tagName)
     }
 
-    function yN(WW, iW, OW, mW) {
-      const EW = OW.getId(WW),
-        NW = mW.getId(iW);
-      return -1 !== EW && EW === NW && YN(WW, iW)
+    function Xu(RR, JR, GR, yR) {
+      const tR = GR.getId(RR),
+        uR = yR.getId(JR);
+      return -1 !== tR && tR === uR && Cu(RR, JR)
     }
-    class TN extends EN {
-      constructor(WW) {
-        super(), cm(this, "UNSERIALIZED_STARTING_ID", -2), cm(this, "_unserializedId", this.UNSERIALIZED_STARTING_ID), cm(this, "mirror", new pN), cm(this, "scrollData", null), WW && (this.mirror = WW)
+    class Mu extends Gu {
+      constructor(RR) {
+        super(), Zy(this, "UNSERIALIZED_STARTING_ID", -2), Zy(this, "_unserializedId", this.UNSERIALIZED_STARTING_ID), Zy(this, "mirror", new cu), Zy(this, "scrollData", null), RR && (this.mirror = RR)
       }
       get unserializedId() {
         return this._unserializedId--
       }
-      createDocument(WW, iW, OW) {
-        return new TN
+      createDocument(RR, JR, GR) {
+        return new Mu
       }
-      createDocumentType(WW, iW, OW) {
-        const mW = new JN(WW, iW, OW);
-        return mW.ownerDocument = this, mW
+      createDocumentType(RR, JR, GR) {
+        const yR = new Bu(RR, JR, GR);
+        return yR.ownerDocument = this, yR
       }
-      createElement(WW) {
-        const iW = WW.toUpperCase();
-        let OW;
-        switch (iW) {
+      createElement(RR) {
+        const JR = RR.toUpperCase();
+        let GR;
+        switch (JR) {
           case "AUDIO":
           case "VIDEO":
-            OW = new HN(iW);
+            GR = new pu(JR);
             break;
           case "IFRAME":
-            OW = new dN(iW, this.mirror);
+            GR = new Ou(JR, this.mirror);
             break;
           case "CANVAS":
-            OW = new uN(iW);
+            GR = new bu(JR);
             break;
           case "STYLE":
-            OW = new oN(iW);
+            GR = new vu(JR);
             break;
           case "DIALOG":
-            OW = new nN(iW);
+            GR = new gu(JR);
             break;
           default:
-            OW = new hN(iW)
+            GR = new lu(JR)
         }
-        return OW.ownerDocument = this, OW
+        return GR.ownerDocument = this, GR
       }
-      createComment(WW) {
-        const iW = new vN(WW);
-        return iW.ownerDocument = this, iW
+      createComment(RR) {
+        const JR = new Nu(RR);
+        return JR.ownerDocument = this, JR
       }
-      createCDATASection(WW) {
-        const iW = new gN(WW);
-        return iW.ownerDocument = this, iW
+      createCDATASection(RR) {
+        const JR = new Du(RR);
+        return JR.ownerDocument = this, JR
       }
-      createTextNode(WW) {
-        const iW = new eN(WW);
-        return iW.ownerDocument = this, iW
+      createTextNode(RR) {
+        const JR = new xu(RR);
+        return JR.ownerDocument = this, JR
       }
       destroyTree() {
         this.firstChild = null, this.lastChild = null, this.mirror.reset()
@@ -6624,538 +6624,538 @@ export const modules = {
         super.open(), this._unserializedId = this.UNSERIALIZED_STARTING_ID
       }
     }
-    const JN = NN;
-    class hN extends PN {
+    const Bu = yu;
+    class lu extends tu {
       constructor() {
-        super(...arguments), cm(this, "inputData", null), cm(this, "scrollData", null)
+        super(...arguments), Zy(this, "inputData", null), Zy(this, "scrollData", null)
       }
     }
-    class HN extends LN {}
-    class nN extends cN {}
-    class uN extends hN {
+    class pu extends uu {}
+    class gu extends Zu {}
+    class bu extends lu {
       constructor() {
-        super(...arguments), cm(this, "rr_dataURL", null), cm(this, "canvasMutations", [])
+        super(...arguments), Zy(this, "rr_dataURL", null), Zy(this, "canvasMutations", [])
       }
       getContext() {
         return null
       }
     }
-    class oN extends hN {
+    class vu extends lu {
       constructor() {
-        super(...arguments), cm(this, "rules", [])
+        super(...arguments), Zy(this, "rules", [])
       }
     }
-    class dN extends hN {
-      constructor(WW, iW) {
-        super(WW), cm(this, "contentDocument", new TN), this.contentDocument.mirror = iW
+    class Ou extends lu {
+      constructor(RR, JR) {
+        super(RR), Zy(this, "contentDocument", new Mu), this.contentDocument.mirror = JR
       }
     }
-    const eN = wN,
-      vN = tN,
-      gN = ZN;
+    const xu = qu,
+      Nu = iu,
+      Du = fu;
 
-    function DN(WW, iW, OW, mW) {
-      let EW;
-      switch (WW.nodeType) {
-        case jN.DOCUMENT_NODE:
-          mW && "IFRAME" === mW.nodeName ? EW = mW.contentDocument : (EW = iW, EW.compatMode = WW.compatMode);
+    function Hu(RR, JR, GR, yR) {
+      let tR;
+      switch (RR.nodeType) {
+        case eu.DOCUMENT_NODE:
+          yR && "IFRAME" === yR.nodeName ? tR = yR.contentDocument : (tR = JR, tR.compatMode = RR.compatMode);
           break;
-        case jN.DOCUMENT_TYPE_NODE: {
-          const OW = WW;
-          EW = iW.createDocumentType(OW.name, OW.publicId, OW.systemId);
+        case eu.DOCUMENT_TYPE_NODE: {
+          const GR = RR;
+          tR = JR.createDocumentType(GR.name, GR.publicId, GR.systemId);
           break
         }
-        case jN.ELEMENT_NODE: {
-          const OW = WW,
-            mW = (NW = OW) instanceof HTMLFormElement ? "FORM" : NW.tagName.toUpperCase();
-          EW = iW.createElement(mW);
-          const PW = EW;
+        case eu.ELEMENT_NODE: {
+          const GR = RR,
+            yR = (uR = GR) instanceof HTMLFormElement ? "FORM" : uR.tagName.toUpperCase();
+          tR = JR.createElement(yR);
+          const ZR = tR;
           for (const {
-              name: WW,
-              value: iW
+              name: RR,
+              value: JR
             }
-            of Array.from(OW.attributes)) PW.attributes[WW] = iW;
-          OW.scrollLeft && (PW.scrollLeft = OW.scrollLeft), OW.scrollTop && (PW.scrollTop = OW.scrollTop);
+            of Array.from(GR.attributes)) ZR.attributes[RR] = JR;
+          GR.scrollLeft && (ZR.scrollLeft = GR.scrollLeft), GR.scrollTop && (ZR.scrollTop = GR.scrollTop);
           break
         }
-        case jN.TEXT_NODE:
-          EW = iW.createTextNode(WW.textContent || "");
+        case eu.TEXT_NODE:
+          tR = JR.createTextNode(RR.textContent || "");
           break;
-        case jN.CDATA_SECTION_NODE:
-          EW = iW.createCDATASection(WW.data);
+        case eu.CDATA_SECTION_NODE:
+          tR = JR.createCDATASection(RR.data);
           break;
-        case jN.COMMENT_NODE:
-          EW = iW.createComment(WW.textContent || "");
+        case eu.COMMENT_NODE:
+          tR = JR.createComment(RR.textContent || "");
           break;
-        case jN.DOCUMENT_FRAGMENT_NODE:
-          EW = mW.attachShadow({
+        case eu.DOCUMENT_FRAGMENT_NODE:
+          tR = yR.attachShadow({
             mode: "open"
           });
           break;
         default:
           return null
       }
-      var NW;
-      let PW = OW.getMeta(WW);
-      return iW instanceof TN && (PW || (PW = fN(EW, iW.unserializedId), OW.add(WW, PW)), iW.mirror.add(EW, {
-        ...PW
-      })), EW
+      var uR;
+      let ZR = GR.getMeta(RR);
+      return JR instanceof Mu && (ZR || (ZR = Pu(tR, JR.unserializedId), GR.add(RR, ZR)), JR.mirror.add(tR, {
+        ...ZR
+      })), tR
     }
 
-    function VN(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Zm,
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new TN;
-      return function WW(mW, EW) {
-        const NW = DN(mW, OW, iW, EW);
-        if (null !== NW)
-          if ("IFRAME" !== (null == EW ? void 0 : EW.nodeName) && mW.nodeType !== jN.DOCUMENT_FRAGMENT_NODE && (null == EW || EW.appendChild(NW), NW.parentNode = EW, NW.parentElement = EW), "IFRAME" === mW.nodeName) {
-            const iW = mW.contentDocument;
-            iW && WW(iW, NW)
-          } else mW.nodeType !== jN.DOCUMENT_NODE && mW.nodeType !== jN.ELEMENT_NODE && mW.nodeType !== jN.DOCUMENT_FRAGMENT_NODE || (mW.nodeType === jN.ELEMENT_NODE && mW.shadowRoot && WW(mW.shadowRoot, NW), mW.childNodes.forEach((iW => WW(iW, NW))))
-      }(WW, null), OW
+    function ou(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new fy,
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Mu;
+      return function RR(yR, tR) {
+        const uR = Hu(yR, GR, JR, tR);
+        if (null !== uR)
+          if ("IFRAME" !== (null == tR ? void 0 : tR.nodeName) && yR.nodeType !== eu.DOCUMENT_FRAGMENT_NODE && (null == tR || tR.appendChild(uR), uR.parentNode = tR, uR.parentElement = tR), "IFRAME" === yR.nodeName) {
+            const JR = yR.contentDocument;
+            JR && RR(JR, uR)
+          } else yR.nodeType !== eu.DOCUMENT_NODE && yR.nodeType !== eu.ELEMENT_NODE && yR.nodeType !== eu.DOCUMENT_FRAGMENT_NODE || (yR.nodeType === eu.ELEMENT_NODE && yR.shadowRoot && RR(yR.shadowRoot, uR), yR.childNodes.forEach((JR => RR(JR, uR))))
+      }(RR, null), GR
     }
-    class pN {
+    class cu {
       constructor() {
-        cm(this, "idNodeMap", new Map), cm(this, "nodeMetaMap", new WeakMap)
+        Zy(this, "idNodeMap", new Map), Zy(this, "nodeMetaMap", new WeakMap)
       }
-      getId(WW) {
-        var iW;
-        if (!WW) return -1;
-        return (null == (iW = this.getMeta(WW)) ? void 0 : iW.id) ?? -1
+      getId(RR) {
+        var JR;
+        if (!RR) return -1;
+        return (null == (JR = this.getMeta(RR)) ? void 0 : JR.id) ?? -1
       }
-      AmW(WW) {
-        return this.idNodeMap.get(WW) || null
+      JtR(RR) {
+        return this.idNodeMap.get(RR) || null
       }
       getIds() {
         return Array.from(this.idNodeMap.keys())
       }
-      getMeta(WW) {
-        return this.nodeMetaMap.get(WW) || null
+      getMeta(RR) {
+        return this.nodeMetaMap.get(RR) || null
       }
-      removeNodeFromMap(WW) {
-        const iW = this.getId(WW);
-        this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW)))
+      removeNodeFromMap(RR) {
+        const JR = this.getId(RR);
+        this.idNodeMap.delete(JR), RR.childNodes && RR.childNodes.forEach((RR => this.removeNodeFromMap(RR)))
       }
-      has(WW) {
-        return this.idNodeMap.has(WW)
+      has(RR) {
+        return this.idNodeMap.has(RR)
       }
-      hasNode(WW) {
-        return this.nodeMetaMap.has(WW)
+      hasNode(RR) {
+        return this.nodeMetaMap.has(RR)
       }
-      add(WW, iW) {
-        const OW = iW.id;
-        this.idNodeMap.set(OW, WW), this.nodeMetaMap.set(WW, iW)
+      add(RR, JR) {
+        const GR = JR.id;
+        this.idNodeMap.set(GR, RR), this.nodeMetaMap.set(RR, JR)
       }
-      replace(WW, iW) {
-        const OW = this.AmW(WW);
-        if (OW) {
-          const WW = this.nodeMetaMap.get(OW);
-          WW && this.nodeMetaMap.set(iW, WW)
+      replace(RR, JR) {
+        const GR = this.JtR(RR);
+        if (GR) {
+          const RR = this.nodeMetaMap.get(GR);
+          RR && this.nodeMetaMap.set(JR, RR)
         }
-        this.idNodeMap.set(WW, iW)
+        this.idNodeMap.set(RR, JR)
       }
       reset() {
         this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
       }
     }
 
-    function fN(WW, iW) {
-      switch (WW.RRNodeType) {
-        case rE.Document:
+    function Pu(RR, JR) {
+      switch (RR.RRNodeType) {
+        case kt.Document:
           return {
-            id: iW, type: WW.RRNodeType, childNodes: []
+            id: JR, type: RR.RRNodeType, childNodes: []
           };
-        case rE.DocumentType: {
-          const OW = WW;
+        case kt.DocumentType: {
+          const GR = RR;
           return {
-            id: iW,
-            type: WW.RRNodeType,
-            name: OW.name,
-            publicId: OW.publicId,
-            systemId: OW.systemId
+            id: JR,
+            type: RR.RRNodeType,
+            name: GR.name,
+            publicId: GR.publicId,
+            systemId: GR.systemId
           }
         }
-        case rE.Element:
+        case kt.Element:
           return {
-            id: iW, type: WW.RRNodeType, tagName: WW.tagName.toLowerCase(), attributes: {}, childNodes: []
+            id: JR, type: RR.RRNodeType, tagName: RR.tagName.toLowerCase(), attributes: {}, childNodes: []
           };
-        case rE.Text:
-        case rE.Comment:
+        case kt.Text:
+        case kt.Comment:
           return {
-            id: iW, type: WW.RRNodeType, textContent: WW.textContent || ""
+            id: JR, type: RR.RRNodeType, textContent: RR.textContent || ""
           };
-        case rE.CDATA:
+        case kt.CDATA:
           return {
-            id: iW, type: WW.RRNodeType, textContent: ""
+            id: JR, type: RR.RRNodeType, textContent: ""
           }
       }
     }
-    const CN = {
+    const Iu = {
         Node: ["childNodes", "parentNode", "parentElement", "textContent", "ownerDocument", "firstChild", "lastChild", "nextSibling", "previousSibling"],
         ShadowRoot: ["host", "styleSheets"],
         Element: ["shadowRoot", "querySelector", "querySelectorAll"],
         MutationObserver: []
       },
-      XN = {
+      mu = {
         Node: ["contains", "getRootNode"],
         ShadowRoot: ["getSelection"],
         Element: [],
         MutationObserver: ["constructor"]
       },
-      BN = {},
-      qN = {};
+      zu = {},
+      Su = {};
 
-    function RN(WW) {
-      if (BN[WW]) return BN[WW];
-      const iW = globalThis[WW],
-        OW = iW.prototype,
-        mW = WW in CN ? CN[WW] : void 0,
-        EW = Boolean(mW && mW.every((WW => {
-          var iW, mW;
-          return Boolean(null == (mW = null == (iW = Object.getOwnPropertyDescriptor(OW, WW)) ? void 0 : iW.get) ? void 0 : mW.toString().includes("[native code]"))
+    function ju(RR) {
+      if (zu[RR]) return zu[RR];
+      const JR = globalThis[RR],
+        GR = JR.prototype,
+        yR = RR in Iu ? Iu[RR] : void 0,
+        tR = Boolean(yR && yR.every((RR => {
+          var JR, yR;
+          return Boolean(null == (yR = null == (JR = Object.getOwnPropertyDescriptor(GR, RR)) ? void 0 : JR.get) ? void 0 : yR.toString().includes("[native code]"))
         }))),
-        NW = WW in XN ? XN[WW] : void 0,
-        PW = Boolean(NW && NW.every((WW => {
-          var iW;
-          return "function" === typeof OW[WW] && (null == (iW = OW[WW]) ? void 0 : iW.toString().includes("[native code]"))
+        uR = RR in mu ? mu[RR] : void 0,
+        ZR = Boolean(uR && uR.every((RR => {
+          var JR;
+          return "function" === typeof GR[RR] && (null == (JR = GR[RR]) ? void 0 : JR.toString().includes("[native code]"))
         })));
-      if (EW && PW && !globalThis.Zone) return BN[WW] = iW.prototype, iW.prototype;
+      if (tR && ZR && !globalThis.Zone) return zu[RR] = JR.prototype, JR.prototype;
       try {
-        const mW = document.createElement("iframe");
-        mW.style.display = "none", document.body.appendChild(mW);
-        const EW = mW.contentWindow;
-        if (!EW) return iW.prototype;
-        const NW = EW[WW].prototype;
-        if (!NW) return mW.remove(), OW;
-        const PW = navigator.userAgent;
-        return PW.includes("Safari") && !PW.includes("Chrome") ? (mW.classList.add("rr-block"), mW.setAttribute("__rrwebUntaintedMutationObserver", ""), qN[WW] = () => mW.remove()) : mW.remove(), BN[WW] = NW
+        const yR = document.createElement("iframe");
+        yR.style.display = "none", document.body.appendChild(yR);
+        const tR = yR.contentWindow;
+        if (!tR) return JR.prototype;
+        const uR = tR[RR].prototype;
+        if (!uR) return yR.remove(), GR;
+        const ZR = navigator.userAgent;
+        return ZR.includes("Safari") && !ZR.includes("Chrome") ? (yR.classList.add("rr-block"), yR.setAttribute("__rrwebUntaintedMutationObserver", ""), Su[RR] = () => yR.remove()) : yR.remove(), zu[RR] = uR
       } catch {
-        return OW
+        return GR
       }
     }
-    const GN = {};
+    const du = {};
 
-    function IN(WW, iW, OW) {
-      var mW, EW;
-      const NW = null == (mW = GN[WW]) ? void 0 : mW[OW];
-      if (NW) return NW.call(iW);
-      const PW = RN(WW),
-        LW = null == (EW = Object.getOwnPropertyDescriptor(PW, OW)) ? void 0 : EW.get;
-      return LW ? ((GN[WW] || (GN[WW] = {}))[OW] = LW, LW.call(iW)) : iW[OW]
+    function Eu(RR, JR, GR) {
+      var yR, tR;
+      const uR = null == (yR = du[RR]) ? void 0 : yR[GR];
+      if (uR) return uR.call(JR);
+      const ZR = ju(RR),
+        qR = null == (tR = Object.getOwnPropertyDescriptor(ZR, GR)) ? void 0 : tR.get;
+      return qR ? ((du[RR] || (du[RR] = {}))[GR] = qR, qR.call(JR)) : JR[GR]
     }
-    const aN = {};
+    const Yu = {};
 
-    function rN(WW, iW, OW) {
-      const mW = `${WW}.${String(OW)}`;
-      if (aN[mW]) return aN[mW].bind(iW);
-      const EW = RN(WW)[OW];
-      return "function" !== typeof EW ? iW[OW] : (aN[mW] = EW, EW.bind(iW))
+    function ku(RR, JR, GR) {
+      const yR = `${RR}.${String(GR)}`;
+      if (Yu[yR]) return Yu[yR].bind(JR);
+      const tR = ju(RR)[GR];
+      return "function" !== typeof tR ? JR[GR] : (Yu[yR] = tR, tR.bind(JR))
     }
 
-    function zN() {
-      return [RN("MutationObserver").constructor, qN.MutationObserver ?? (() => {})]
+    function Qu() {
+      return [ju("MutationObserver").constructor, Su.MutationObserver ?? (() => {})]
     }
-    let FN = Date.now;
+    let Fu = Date.now;
 
-    function QN(WW, iW, OW) {
+    function Tu(RR, JR, GR) {
       try {
-        if (!(iW in WW)) return () => {};
-        const mW = WW[iW],
-          EW = OW(mW);
-        return "function" === typeof EW && (EW.prototype = EW.prototype || {}, Object.defineProperties(EW, {
+        if (!(JR in RR)) return () => {};
+        const yR = RR[JR],
+          tR = GR(yR);
+        return "function" === typeof tR && (tR.prototype = tR.prototype || {}, Object.defineProperties(tR, {
           __rrweb_original__: {
             enumerable: !1,
-            value: mW
+            value: yR
           }
-        })), WW[iW] = EW, () => {
-          WW[iW] = mW
+        })), RR[JR] = tR, () => {
+          RR[JR] = yR
         }
       } catch {
         return () => {}
       }
     }
-    /[1-9][0-9]{12}/.test(Date.now().toString()) || (FN = () => (new Date).getTime());
-    const WP = {
-      ownerDocument: function(WW) {
-        return IN("Node", WW, "ownerDocument")
+    /[1-9][0-9]{12}/.test(Date.now().toString()) || (Fu = () => (new Date).getTime());
+    const su = {
+      ownerDocument: function(RR) {
+        return Eu("Node", RR, "ownerDocument")
       },
-      childNodes: function(WW) {
-        return IN("Node", WW, "childNodes")
+      childNodes: function(RR) {
+        return Eu("Node", RR, "childNodes")
       },
-      parentNode: function(WW) {
-        return IN("Node", WW, "parentNode")
+      parentNode: function(RR) {
+        return Eu("Node", RR, "parentNode")
       },
-      parentElement: function(WW) {
-        return IN("Node", WW, "parentElement")
+      parentElement: function(RR) {
+        return Eu("Node", RR, "parentElement")
       },
-      textContent: function(WW) {
-        return IN("Node", WW, "textContent")
+      textContent: function(RR) {
+        return Eu("Node", RR, "textContent")
       },
-      firstChild: function(WW) {
-        return IN("Node", WW, "firstChild")
+      firstChild: function(RR) {
+        return Eu("Node", RR, "firstChild")
       },
-      lastChild: function(WW) {
-        return IN("Node", WW, "lastChild")
+      lastChild: function(RR) {
+        return Eu("Node", RR, "lastChild")
       },
-      nextSibling: function(WW) {
-        return IN("Node", WW, "nextSibling")
+      nextSibling: function(RR) {
+        return Eu("Node", RR, "nextSibling")
       },
-      previousSibling: function(WW) {
-        return IN("Node", WW, "previousSibling")
+      previousSibling: function(RR) {
+        return Eu("Node", RR, "previousSibling")
       },
-      contains: function(WW, iW) {
-        return rN("Node", WW, "contains")(iW)
+      contains: function(RR, JR) {
+        return ku("Node", RR, "contains")(JR)
       },
-      getRootNode: function(WW) {
-        return rN("Node", WW, "getRootNode")()
+      getRootNode: function(RR) {
+        return ku("Node", RR, "getRootNode")()
       },
-      host: function(WW) {
-        return WW && "host" in WW ? IN("ShadowRoot", WW, "host") : null
+      host: function(RR) {
+        return RR && "host" in RR ? Eu("ShadowRoot", RR, "host") : null
       },
-      styleSheets: function(WW) {
-        return WW.styleSheets
+      styleSheets: function(RR) {
+        return RR.styleSheets
       },
-      shadowRoot: function(WW) {
-        return WW && "shadowRoot" in WW ? IN("Element", WW, "shadowRoot") : null
+      shadowRoot: function(RR) {
+        return RR && "shadowRoot" in RR ? Eu("Element", RR, "shadowRoot") : null
       },
-      querySelector: function(WW, iW) {
-        return IN("Element", WW, "querySelector")(iW)
+      querySelector: function(RR, JR) {
+        return Eu("Element", RR, "querySelector")(JR)
       },
-      querySelectorAll: function(WW, iW) {
-        return IN("Element", WW, "querySelectorAll")(iW)
+      querySelectorAll: function(RR, JR) {
+        return Eu("Element", RR, "querySelectorAll")(JR)
       },
-      nowTimestamp: FN,
-      mutationObserverCtor: zN,
-      patch: QN
+      nowTimestamp: Fu,
+      mutationObserverCtor: Qu,
+      patch: Tu
     };
 
-    function iP(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
-      const mW = {
+    function hu(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
+      const yR = {
         capture: !0,
         passive: !0
       };
-      return OW.addEventListener(WW, iW, mW), () => OW.removeEventListener(WW, iW, mW)
+      return GR.addEventListener(RR, JR, yR), () => GR.removeEventListener(RR, JR, yR)
     }
-    const OP = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
-    let mP = {
+    const RZ = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
+    let JZ = {
       map: {},
-      getId: () => (console.error(OP), -1),
-      AmW: () => (console.error(OP), null),
+      getId: () => (console.error(RZ), -1),
+      JtR: () => (console.error(RZ), null),
       removeNodeFromMap() {
-        console.error(OP)
+        console.error(RZ)
       },
-      has: () => (console.error(OP), !1),
+      has: () => (console.error(RZ), !1),
       reset() {
-        console.error(OP)
+        console.error(RZ)
       }
     };
 
-    function EP(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        mW = null,
-        EW = 0;
+    function GZ(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        yR = null,
+        tR = 0;
       return function() {
-        for (var NW = arguments.length, PW = new Array(NW), LW = 0; LW < NW; LW++) PW[LW] = arguments[LW];
-        const cW = Date.now();
-        EW || !1 !== OW.leading || (EW = cW);
-        const wW = iW - (cW - EW),
-          tW = this;
-        wW <= 0 || wW > iW ? (mW && (clearTimeout(mW), mW = null), EW = cW, WW.apply(tW, PW)) : mW || !1 === OW.trailing || (mW = setTimeout((() => {
-          EW = !1 === OW.leading ? 0 : Date.now(), mW = null, WW.apply(tW, PW)
-        }), wW))
+        for (var uR = arguments.length, ZR = new Array(uR), qR = 0; qR < uR; qR++) ZR[qR] = arguments[qR];
+        const iR = Date.now();
+        tR || !1 !== GR.leading || (tR = iR);
+        const fR = JR - (iR - tR),
+          VR = this;
+        fR <= 0 || fR > JR ? (yR && (clearTimeout(yR), yR = null), tR = iR, RR.apply(VR, ZR)) : yR || !1 === GR.trailing || (yR = setTimeout((() => {
+          tR = !1 === GR.leading ? 0 : Date.now(), yR = null, RR.apply(VR, ZR)
+        }), fR))
       }
     }
 
-    function NP(WW, iW, OW, mW) {
-      let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
-      const NW = EW.Object.getOwnPropertyDescriptor(WW, iW);
-      return EW.Object.defineProperty(WW, iW, mW ? OW : {
-        set(WW) {
+    function yZ(RR, JR, GR, yR) {
+      let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
+      const uR = tR.Object.getOwnPropertyDescriptor(RR, JR);
+      return tR.Object.defineProperty(RR, JR, yR ? GR : {
+        set(RR) {
           setTimeout((() => {
-            OW.set.call(this, WW)
-          }), 0), NW && NW.set && NW.set.call(this, WW)
+            GR.set.call(this, RR)
+          }), 0), uR && uR.set && uR.set.call(this, RR)
         }
-      }), () => NP(WW, iW, NW || {}, !0)
+      }), () => yZ(RR, JR, uR || {}, !0)
     }
 
-    function PP(WW) {
-      var iW, OW, mW, EW;
-      const NW = WW.document;
+    function tZ(RR) {
+      var JR, GR, yR, tR;
+      const uR = RR.document;
       return {
-        left: NW.scrollingElement ? NW.scrollingElement.scrollLeft : void 0 !== WW.pageXOffset ? WW.pageXOffset : NW.documentElement.scrollLeft || (null == NW ? void 0 : NW.body) && (null == (iW = WP.parentElement(NW.body)) ? void 0 : iW.scrollLeft) || (null == (OW = null == NW ? void 0 : NW.body) ? void 0 : OW.scrollLeft) || 0,
-        top: NW.scrollingElement ? NW.scrollingElement.scrollTop : void 0 !== WW.pageYOffset ? WW.pageYOffset : (null == NW ? void 0 : NW.documentElement.scrollTop) || (null == NW ? void 0 : NW.body) && (null == (mW = WP.parentElement(NW.body)) ? void 0 : mW.scrollTop) || (null == (EW = null == NW ? void 0 : NW.body) ? void 0 : EW.scrollTop) || 0
+        left: uR.scrollingElement ? uR.scrollingElement.scrollLeft : void 0 !== RR.pageXOffset ? RR.pageXOffset : uR.documentElement.scrollLeft || (null == uR ? void 0 : uR.body) && (null == (JR = su.parentElement(uR.body)) ? void 0 : JR.scrollLeft) || (null == (GR = null == uR ? void 0 : uR.body) ? void 0 : GR.scrollLeft) || 0,
+        top: uR.scrollingElement ? uR.scrollingElement.scrollTop : void 0 !== RR.pageYOffset ? RR.pageYOffset : (null == uR ? void 0 : uR.documentElement.scrollTop) || (null == uR ? void 0 : uR.body) && (null == (yR = su.parentElement(uR.body)) ? void 0 : yR.scrollTop) || (null == (tR = null == uR ? void 0 : uR.body) ? void 0 : tR.scrollTop) || 0
       }
     }
 
-    function LP() {
+    function uZ() {
       return window.innerHeight || document.documentElement && document.documentElement.clientHeight || document.body && document.body.clientHeight
     }
 
-    function cP() {
+    function ZZ() {
       return window.innerWidth || document.documentElement && document.documentElement.clientWidth || document.body && document.body.clientWidth
     }
 
-    function wP(WW) {
-      if (!WW) return null;
-      return WW.nodeType === WW.ELEMENT_NODE ? WW : WP.parentElement(WW)
+    function qZ(RR) {
+      if (!RR) return null;
+      return RR.nodeType === RR.ELEMENT_NODE ? RR : su.parentElement(RR)
     }
 
-    function tP(WW, iW, OW, mW) {
-      if (!WW) return !1;
-      const EW = wP(WW);
-      if (!EW) return !1;
+    function iZ(RR, JR, GR, yR) {
+      if (!RR) return !1;
+      const tR = qZ(RR);
+      if (!tR) return !1;
       try {
-        if ("string" === typeof iW) {
-          if (EW.classList.contains(iW)) return !0;
-          if (mW && null !== EW.closest("." + iW)) return !0
-        } else if (mi(EW, iW, mW)) return !0
-      } catch (NW) {}
-      if (OW) {
-        if (EW.matches(OW)) return !0;
-        if (mW && null !== EW.closest(OW)) return !0
+        if ("string" === typeof JR) {
+          if (tR.classList.contains(JR)) return !0;
+          if (yR && null !== tR.closest("." + JR)) return !0
+        } else if (yJ(tR, JR, yR)) return !0
+      } catch (uR) {}
+      if (GR) {
+        if (tR.matches(GR)) return !0;
+        if (yR && null !== tR.closest(GR)) return !0
       }
       return !1
     }
 
-    function ZP(WW, iW) {
-      return -1 !== iW.getId(WW)
+    function fZ(RR, JR) {
+      return -1 !== JR.getId(RR)
     }
 
-    function xP(WW, iW, OW) {
-      return !("TITLE" !== WW.tagName || !OW.headTitleMutations) || -2 === iW.getId(WW)
+    function VZ(RR, JR, GR) {
+      return !("TITLE" !== RR.tagName || !GR.headTitleMutations) || -2 === JR.getId(RR)
     }
 
-    function lP(WW, iW) {
-      if (KW(WW)) return !1;
-      const OW = iW.getId(WW);
-      if (!iW.has(OW)) return !0;
-      const mW = WP.parentNode(WW);
-      return (!mW || mW.nodeType !== WW.DOCUMENT_NODE) && (!mW || lP(mW, iW))
+    function KZ(RR, JR) {
+      if (CR(RR)) return !1;
+      const GR = JR.getId(RR);
+      if (!JR.has(GR)) return !0;
+      const yR = su.parentNode(RR);
+      return (!yR || yR.nodeType !== RR.DOCUMENT_NODE) && (!yR || KZ(yR, JR))
     }
 
-    function AP(WW) {
-      return Boolean(WW.changedTouches)
+    function wZ(RR) {
+      return Boolean(RR.changedTouches)
     }
 
-    function bP() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
-      "NodeList" in WW && !WW.NodeList.prototype.forEach && (WW.NodeList.prototype.forEach = Array.prototype.forEach), "DOMTokenList" in WW && !WW.DOMTokenList.prototype.forEach && (WW.DOMTokenList.prototype.forEach = Array.prototype.forEach)
+    function rZ() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
+      "NodeList" in RR && !RR.NodeList.prototype.forEach && (RR.NodeList.prototype.forEach = Array.prototype.forEach), "DOMTokenList" in RR && !RR.DOMTokenList.prototype.forEach && (RR.DOMTokenList.prototype.forEach = Array.prototype.forEach)
     }
 
-    function jP(WW) {
-      const iW = {},
-        OW = (WW, OW) => {
-          const mW = {
-            value: WW,
-            parent: OW,
+    function eZ(RR) {
+      const JR = {},
+        GR = (RR, GR) => {
+          const yR = {
+            value: RR,
+            parent: GR,
             children: []
           };
-          return iW[WW.node.id] = mW, mW
+          return JR[RR.node.id] = yR, yR
         },
-        mW = [];
-      for (const EW of WW) {
+        yR = [];
+      for (const tR of RR) {
         const {
-          nextId: WW,
-          parentId: NW
-        } = EW;
-        if (WW && WW in iW) {
-          const NW = iW[WW];
-          if (NW.parent) {
-            const WW = NW.parent.children.indexOf(NW);
-            NW.parent.children.splice(WW, 0, OW(EW, NW.parent))
+          nextId: RR,
+          parentId: uR
+        } = tR;
+        if (RR && RR in JR) {
+          const uR = JR[RR];
+          if (uR.parent) {
+            const RR = uR.parent.children.indexOf(uR);
+            uR.parent.children.splice(RR, 0, GR(tR, uR.parent))
           } else {
-            const WW = mW.indexOf(NW);
-            mW.splice(WW, 0, OW(EW, null))
+            const RR = yR.indexOf(uR);
+            yR.splice(RR, 0, GR(tR, null))
           }
-        } else if (NW in iW) {
-          const WW = iW[NW];
-          WW.children.push(OW(EW, WW))
-        } else mW.push(OW(EW, null))
+        } else if (uR in JR) {
+          const RR = JR[uR];
+          RR.children.push(GR(tR, RR))
+        } else yR.push(GR(tR, null))
       }
-      return mW
+      return yR
     }
 
-    function UP(WW, iW) {
-      iW(WW.value);
-      for (let OW = WW.children.length - 1; OW >= 0; OW--) UP(WW.children[OW], iW)
+    function aZ(RR, JR) {
+      JR(RR.value);
+      for (let GR = RR.children.length - 1; GR >= 0; GR--) aZ(RR.children[GR], JR)
     }
 
-    function kP(WW, iW) {
-      return Boolean("IFRAME" === WW.nodeName && iW.getMeta(WW))
+    function LZ(RR, JR) {
+      return Boolean("IFRAME" === RR.nodeName && JR.getMeta(RR))
     }
 
-    function sP(WW, iW) {
-      return Boolean("LINK" === WW.nodeName && WW.nodeType === WW.ELEMENT_NODE && WW.getAttribute && "stylesheet" === WW.getAttribute("rel") && iW.getMeta(WW))
+    function nZ(RR, JR) {
+      return Boolean("LINK" === RR.nodeName && RR.nodeType === RR.ELEMENT_NODE && RR.getAttribute && "stylesheet" === RR.getAttribute("rel") && JR.getMeta(RR))
     }
 
-    function MP(WW, iW) {
-      var OW, mW;
-      const EW = null == (mW = null == (OW = WW.ownerDocument) ? void 0 : OW.defaultView) ? void 0 : mW.frameElement;
-      if (!EW || EW === iW) return {
+    function UZ(RR, JR) {
+      var GR, yR;
+      const tR = null == (yR = null == (GR = RR.ownerDocument) ? void 0 : GR.defaultView) ? void 0 : yR.frameElement;
+      if (!tR || tR === JR) return {
         x: 0,
         y: 0,
         relativeScale: 1,
         absoluteScale: 1
       };
-      const NW = EW.getBoundingClientRect(),
-        PW = MP(EW, iW),
-        LW = NW.height / EW.clientHeight;
+      const uR = tR.getBoundingClientRect(),
+        ZR = UZ(tR, JR),
+        qR = uR.height / tR.clientHeight;
       return {
-        x: NW.x * PW.relativeScale + PW.x,
-        y: NW.y * PW.relativeScale + PW.y,
-        relativeScale: LW,
-        absoluteScale: PW.absoluteScale * LW
+        x: uR.x * ZR.relativeScale + ZR.x,
+        y: uR.y * ZR.relativeScale + ZR.y,
+        relativeScale: qR,
+        absoluteScale: ZR.absoluteScale * qR
       }
     }
 
-    function KP(WW) {
-      return !!WW && (WW instanceof mN && "shadowRoot" in WW ? Boolean(WW.shadowRoot) : Boolean(WP.shadowRoot(WW)))
+    function WZ(RR) {
+      return !!RR && (RR instanceof Ju && "shadowRoot" in RR ? Boolean(RR.shadowRoot) : Boolean(su.shadowRoot(RR)))
     }
 
-    function SP(WW, iW) {
-      const OW = null == WW ? void 0 : WW[iW[0]];
-      return OW ? 1 === iW.length ? OW : SP(OW.cssRules, iW.slice(1)) : null
+    function AZ(RR, JR) {
+      const GR = null == RR ? void 0 : RR[JR[0]];
+      return GR ? 1 === JR.length ? GR : AZ(GR.cssRules, JR.slice(1)) : null
     }
 
-    function YP(WW) {
-      const iW = [...WW],
-        OW = iW.pop();
+    function CZ(RR) {
+      const JR = [...RR],
+        GR = JR.pop();
       return {
-        positions: iW,
-        index: OW
+        positions: JR,
+        index: GR
       }
     }
 
-    function yP(WW) {
-      const iW = new Set,
-        OW = [];
-      for (let mW = WW.length; mW--;) {
-        const EW = WW[mW];
-        iW.has(EW.id) || (OW.push(EW), iW.add(EW.id))
+    function XZ(RR) {
+      const JR = new Set,
+        GR = [];
+      for (let yR = RR.length; yR--;) {
+        const tR = RR[yR];
+        JR.has(tR.id) || (GR.push(tR), JR.add(tR.id))
       }
-      return OW
+      return GR
     }
-    "undefined" !== typeof window && window.Proxy && window.Reflect && (mP = new Proxy(mP, {
-      get: (WW, iW, OW) => ("map" === iW && console.error(OP), Reflect.get(WW, iW, OW))
+    "undefined" !== typeof window && window.Proxy && window.Reflect && (JZ = new Proxy(JZ, {
+      get: (RR, JR, GR) => ("map" === JR && console.error(RZ), Reflect.get(RR, JR, GR))
     }));
-    class TP {
+    class MZ {
       constructor() {
-        NW(this, "id", 1), NW(this, "styleIDMap", new WeakMap), NW(this, "idStyleMap", new Map)
+        uR(this, "id", 1), uR(this, "styleIDMap", new WeakMap), uR(this, "idStyleMap", new Map)
       }
-      getId(WW) {
-        return this.styleIDMap.get(WW) ?? -1
+      getId(RR) {
+        return this.styleIDMap.get(RR) ?? -1
       }
-      has(WW) {
-        return this.styleIDMap.has(WW)
+      has(RR) {
+        return this.styleIDMap.has(RR)
       }
-      add(WW, iW) {
-        if (this.has(WW)) return this.getId(WW);
-        let OW;
-        return OW = void 0 === iW ? this.id++ : iW, this.styleIDMap.set(WW, OW), this.idStyleMap.set(OW, WW), OW
+      add(RR, JR) {
+        if (this.has(RR)) return this.getId(RR);
+        let GR;
+        return GR = void 0 === JR ? this.id++ : JR, this.styleIDMap.set(RR, GR), this.idStyleMap.set(GR, RR), GR
       }
-      getStyle(WW) {
-        return this.idStyleMap.get(WW) || null
+      getStyle(RR) {
+        return this.idStyleMap.get(RR) || null
       }
       reset() {
         this.styleIDMap = new WeakMap, this.idStyleMap = new Map, this.id = 1
@@ -7165,96 +7165,96 @@ export const modules = {
       }
     }
 
-    function JP(WW) {
-      var iW;
-      let OW = null;
-      return "getRootNode" in WW && (null == (iW = WP.getRootNode(WW)) ? void 0 : iW.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && WP.host(WP.getRootNode(WW)) && (OW = WP.host(WP.getRootNode(WW))), OW
+    function BZ(RR) {
+      var JR;
+      let GR = null;
+      return "getRootNode" in RR && (null == (JR = su.getRootNode(RR)) ? void 0 : JR.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && su.host(su.getRootNode(RR)) && (GR = su.host(su.getRootNode(RR))), GR
     }
 
-    function hP(WW) {
-      let iW, OW = WW;
-      for (; iW = JP(OW);) OW = iW;
-      return OW
+    function lZ(RR) {
+      let JR, GR = RR;
+      for (; JR = BZ(GR);) GR = JR;
+      return GR
     }
 
-    function HP(WW) {
-      const iW = WP.ownerDocument(WW);
-      if (!iW) return !1;
-      const OW = hP(WW);
-      return WP.contains(iW, OW)
+    function pZ(RR) {
+      const JR = su.ownerDocument(RR);
+      if (!JR) return !1;
+      const GR = lZ(RR);
+      return su.contains(JR, GR)
     }
 
-    function nP(WW) {
-      const iW = WP.ownerDocument(WW);
-      return !!iW && (WP.contains(iW, WW) || HP(WW))
+    function gZ(RR) {
+      const JR = su.ownerDocument(RR);
+      return !!JR && (su.contains(JR, RR) || pZ(RR))
     }
     Symbol.toStringTag;
-    var uP = (WW => (WW[WW.DomContentLoaded = 0] = "DomContentLoaded", WW[WW.Load = 1] = "Load", WW[WW.FullSnapshot = 2] = "FullSnapshot", WW[WW.IncrementalSnapshot = 3] = "IncrementalSnapshot", WW[WW.Meta = 4] = "Meta", WW[WW.Custom = 5] = "Custom", WW[WW.Plugin = 6] = "Plugin", WW[WW.Asset = 7] = "Asset", WW))(uP || {}),
-      oP = (WW => (WW[WW.Mutation = 0] = "Mutation", WW[WW.MouseMove = 1] = "MouseMove", WW[WW.MouseInteraction = 2] = "MouseInteraction", WW[WW.Scroll = 3] = "Scroll", WW[WW.ViewportResize = 4] = "ViewportResize", WW[WW.Input = 5] = "Input", WW[WW.TouchMove = 6] = "TouchMove", WW[WW.MediaInteraction = 7] = "MediaInteraction", WW[WW.StyleSheetRule = 8] = "StyleSheetRule", WW[WW.CanvasMutation = 9] = "CanvasMutation", WW[WW.Font = 10] = "Font", WW[WW.Log = 11] = "Log", WW[WW.Drag = 12] = "Drag", WW[WW.StyleDeclaration = 13] = "StyleDeclaration", WW[WW.Selection = 14] = "Selection", WW[WW.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", WW[WW.CustomElement = 16] = "CustomElement", WW))(oP || {}),
-      dP = (WW => (WW[WW.MouseUp = 0] = "MouseUp", WW[WW.MouseDown = 1] = "MouseDown", WW[WW.Click = 2] = "Click", WW[WW.ContextMenu = 3] = "ContextMenu", WW[WW.DblClick = 4] = "DblClick", WW[WW.Focus = 5] = "Focus", WW[WW.Blur = 6] = "Blur", WW[WW.TouchStart = 7] = "TouchStart", WW[WW.TouchMove_Departed = 8] = "TouchMove_Departed", WW[WW.TouchEnd = 9] = "TouchEnd", WW[WW.TouchCancel = 10] = "TouchCancel", WW))(dP || {}),
-      eP = (WW => (WW[WW.Mouse = 0] = "Mouse", WW[WW.Pen = 1] = "Pen", WW[WW.Touch = 2] = "Touch", WW))(eP || {}),
-      vP = (WW => (WW[WW["2D"] = 0] = "2D", WW[WW.WebGL = 1] = "WebGL", WW[WW.WebGL2 = 2] = "WebGL2", WW))(vP || {}),
-      gP = (WW => (WW[WW.Play = 0] = "Play", WW[WW.Pause = 1] = "Pause", WW[WW.Seeked = 2] = "Seeked", WW[WW.VolumeChange = 3] = "VolumeChange", WW[WW.RateChange = 4] = "RateChange", WW))(gP || {}),
-      DP = (WW => (WW.Start = "start", WW.Pause = "pause", WW.Resume = "resume", WW.Resize = "resize", WW.Finish = "finish", WW.FullsnapshotRebuilded = "fullsnapshot-rebuilded", WW.LoadStylesheetStart = "load-stylesheet-start", WW.LoadStylesheetEnd = "load-stylesheet-end", WW.SkipStart = "skip-start", WW.SkipEnd = "skip-end", WW.MouseInteraction = "mouse-interaction", WW.EventCast = "event-cast", WW.CustomEvent = "custom-event", WW.Flush = "flush", WW.StateChange = "state-change", WW.PlayBack = "play-back", WW.Destroy = "destroy", WW))(DP || {}),
-      VP = (WW => (WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW))(VP || {});
-    const pP = (WW, iW) => `${WW}@${iW}`;
-    class fP {
+    var bZ = (RR => (RR[RR.DomContentLoaded = 0] = "DomContentLoaded", RR[RR.Load = 1] = "Load", RR[RR.FullSnapshot = 2] = "FullSnapshot", RR[RR.IncrementalSnapshot = 3] = "IncrementalSnapshot", RR[RR.Meta = 4] = "Meta", RR[RR.Custom = 5] = "Custom", RR[RR.Plugin = 6] = "Plugin", RR[RR.Asset = 7] = "Asset", RR))(bZ || {}),
+      vZ = (RR => (RR[RR.Mutation = 0] = "Mutation", RR[RR.MouseMove = 1] = "MouseMove", RR[RR.MouseInteraction = 2] = "MouseInteraction", RR[RR.Scroll = 3] = "Scroll", RR[RR.ViewportResize = 4] = "ViewportResize", RR[RR.Input = 5] = "Input", RR[RR.TouchMove = 6] = "TouchMove", RR[RR.MediaInteraction = 7] = "MediaInteraction", RR[RR.StyleSheetRule = 8] = "StyleSheetRule", RR[RR.CanvasMutation = 9] = "CanvasMutation", RR[RR.Font = 10] = "Font", RR[RR.Log = 11] = "Log", RR[RR.Drag = 12] = "Drag", RR[RR.StyleDeclaration = 13] = "StyleDeclaration", RR[RR.Selection = 14] = "Selection", RR[RR.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", RR[RR.CustomElement = 16] = "CustomElement", RR))(vZ || {}),
+      OZ = (RR => (RR[RR.MouseUp = 0] = "MouseUp", RR[RR.MouseDown = 1] = "MouseDown", RR[RR.Click = 2] = "Click", RR[RR.ContextMenu = 3] = "ContextMenu", RR[RR.DblClick = 4] = "DblClick", RR[RR.Focus = 5] = "Focus", RR[RR.Blur = 6] = "Blur", RR[RR.TouchStart = 7] = "TouchStart", RR[RR.TouchMove_Departed = 8] = "TouchMove_Departed", RR[RR.TouchEnd = 9] = "TouchEnd", RR[RR.TouchCancel = 10] = "TouchCancel", RR))(OZ || {}),
+      xZ = (RR => (RR[RR.Mouse = 0] = "Mouse", RR[RR.Pen = 1] = "Pen", RR[RR.Touch = 2] = "Touch", RR))(xZ || {}),
+      NZ = (RR => (RR[RR["2D"] = 0] = "2D", RR[RR.WebGL = 1] = "WebGL", RR[RR.WebGL2 = 2] = "WebGL2", RR))(NZ || {}),
+      DZ = (RR => (RR[RR.Play = 0] = "Play", RR[RR.Pause = 1] = "Pause", RR[RR.Seeked = 2] = "Seeked", RR[RR.VolumeChange = 3] = "VolumeChange", RR[RR.RateChange = 4] = "RateChange", RR))(DZ || {}),
+      HZ = (RR => (RR.Start = "start", RR.Pause = "pause", RR.Resume = "resume", RR.Resize = "resize", RR.Finish = "finish", RR.FullsnapshotRebuilded = "fullsnapshot-rebuilded", RR.LoadStylesheetStart = "load-stylesheet-start", RR.LoadStylesheetEnd = "load-stylesheet-end", RR.SkipStart = "skip-start", RR.SkipEnd = "skip-end", RR.MouseInteraction = "mouse-interaction", RR.EventCast = "event-cast", RR.CustomEvent = "custom-event", RR.Flush = "flush", RR.StateChange = "state-change", RR.PlayBack = "play-back", RR.Destroy = "destroy", RR))(HZ || {}),
+      oZ = (RR => (RR[RR.Document = 0] = "Document", RR[RR.DocumentType = 1] = "DocumentType", RR[RR.Element = 2] = "Element", RR[RR.Text = 3] = "Text", RR[RR.CDATA = 4] = "CDATA", RR[RR.Comment = 5] = "Comment", RR))(oZ || {});
+    const cZ = (RR, JR) => `${RR}@${JR}`;
+    class PZ {
       constructor() {
-        NW(this, "frozen", !1), NW(this, "locked", !1), NW(this, "texts", []), NW(this, "attributes", []), NW(this, "attributeMap", new WeakMap), NW(this, "removes", []), NW(this, "mapRemoves", []), NW(this, "movedMap", {}), NW(this, "addedSet", new Set), NW(this, "movedSet", new Set), NW(this, "droppedSet", new Set), NW(this, "removesSubTreeCache", new Set), NW(this, "mutationCb"), NW(this, "blockClass"), NW(this, "blockSelector"), NW(this, "maskTextClass"), NW(this, "maskTextSelector"), NW(this, "inlineStylesheet"), NW(this, "maskInputOptions"), NW(this, "maskTextFn"), NW(this, "maskInputFn"), NW(this, "keepIframeSrcFn"), NW(this, "recordCanvas"), NW(this, "inlineImages"), NW(this, "slimDOMOptions"), NW(this, "dataURLOptions"), NW(this, "doc"), NW(this, "mirror"), NW(this, "iframeManager"), NW(this, "stylesheetManager"), NW(this, "shadowDomManager"), NW(this, "canvasManager"), NW(this, "processedNodeManager"), NW(this, "unattachedDoc"), NW(this, "processMutations", (WW => {
-          WW.forEach(this.processMutation), this.emit()
-        })), NW(this, "emit", (() => {
+        uR(this, "frozen", !1), uR(this, "locked", !1), uR(this, "texts", []), uR(this, "attributes", []), uR(this, "attributeMap", new WeakMap), uR(this, "removes", []), uR(this, "mapRemoves", []), uR(this, "movedMap", {}), uR(this, "addedSet", new Set), uR(this, "movedSet", new Set), uR(this, "droppedSet", new Set), uR(this, "removesSubTreeCache", new Set), uR(this, "mutationCb"), uR(this, "blockClass"), uR(this, "blockSelector"), uR(this, "maskTextClass"), uR(this, "maskTextSelector"), uR(this, "inlineStylesheet"), uR(this, "maskInputOptions"), uR(this, "maskTextFn"), uR(this, "maskInputFn"), uR(this, "keepIframeSrcFn"), uR(this, "recordCanvas"), uR(this, "inlineImages"), uR(this, "slimDOMOptions"), uR(this, "dataURLOptions"), uR(this, "doc"), uR(this, "mirror"), uR(this, "iframeManager"), uR(this, "stylesheetManager"), uR(this, "shadowDomManager"), uR(this, "canvasManager"), uR(this, "processedNodeManager"), uR(this, "unattachedDoc"), uR(this, "processMutations", (RR => {
+          RR.forEach(this.processMutation), this.emit()
+        })), uR(this, "emit", (() => {
           if (this.frozen || this.locked) return;
-          const WW = [],
-            iW = new Set;
+          const RR = [],
+            JR = new Set;
           for (; this.mapRemoves.length;) this.mirror.removeNodeFromMap(this.mapRemoves.shift());
-          for (const ZW of this.movedSet) {
-            const WW = WP.parentNode(ZW);
-            this.removesSubTreeCache.has(WW) && !this.movedSet.has(WW) || this.addedSet.add(ZW)
+          for (const KR of this.movedSet) {
+            const RR = su.parentNode(KR);
+            this.removesSubTreeCache.has(RR) && !this.movedSet.has(RR) || this.addedSet.add(KR)
           }
-          let OW = null,
-            mW = null,
-            EW = -1,
-            NW = null,
-            PW = !1;
-          const LW = new Set,
-            cW = this.addedSet.values();
-          let wW = cW.next();
+          let GR = null,
+            yR = null,
+            tR = -1,
+            uR = null,
+            ZR = !1;
+          const qR = new Set,
+            iR = this.addedSet.values();
+          let fR = iR.next();
           for (; this.addedSet.size;) {
-            if (null !== OW && this.addedSet.has(WP.previousSibling(OW))) NW = OW, OW = WP.previousSibling(OW);
+            if (null !== GR && this.addedSet.has(su.previousSibling(GR))) uR = GR, GR = su.previousSibling(GR);
             else {
-              for (this.addedSet.has(wW.value) || (wW = cW.next()), OW = wW.value; mW = WP.parentNode(OW), this.addedSet.has(mW);) OW = mW;
-              if (LW.has(mW)) mW = null;
-              else if (mW) {
-                if (nP(mW) ? (PW = XP(this.droppedSet, mW) || this.removesSubTreeCache.has(mW), PW && XP(this.movedSet, OW) && (PW = !1)) : PW = !0, this.addedSet.has(WP.lastChild(mW))) OW = WP.lastChild(mW), NW = null;
+              for (this.addedSet.has(fR.value) || (fR = iR.next()), GR = fR.value; yR = su.parentNode(GR), this.addedSet.has(yR);) GR = yR;
+              if (qR.has(yR)) yR = null;
+              else if (yR) {
+                if (gZ(yR) ? (ZR = mZ(this.droppedSet, yR) || this.removesSubTreeCache.has(yR), ZR && mZ(this.movedSet, GR) && (ZR = !1)) : ZR = !0, this.addedSet.has(su.lastChild(yR))) GR = su.lastChild(yR), uR = null;
                 else
-                  for (; NW = WP.nextSibling(OW), this.addedSet.has(NW);) OW = NW;
-                if (EW = KW(mW) ? this.mirror.getId(JP(OW)) : this.mirror.getId(mW), -1 === EW && mW.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                  const WW = WP.host(mW);
-                  EW = this.mirror.getId(WW)
+                  for (; uR = su.nextSibling(GR), this.addedSet.has(uR);) GR = uR;
+                if (tR = CR(yR) ? this.mirror.getId(BZ(GR)) : this.mirror.getId(yR), -1 === tR && yR.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+                  const RR = su.host(yR);
+                  tR = this.mirror.getId(RR)
                 }
               }
             }
-            if (this.addedSet.delete(OW), !mW || -1 === EW) {
-              LW.add(OW);
+            if (this.addedSet.delete(GR), !yR || -1 === tR) {
+              qR.add(GR);
               continue
             }
-            if (PW) {
-              this.droppedSet.add(OW);
+            if (ZR) {
+              this.droppedSet.add(GR);
               continue
             }
-            let tW = !1;
-            if (OW.nodeType === Node.TEXT_NODE) {
-              const WW = mW.tagName;
-              if ("TEXTAREA" === WW) continue;
-              "STYLE" === WW && iW.has(EW) && (tW = !0)
+            let VR = !1;
+            if (GR.nodeType === Node.TEXT_NODE) {
+              const RR = yR.tagName;
+              if ("TEXTAREA" === RR) continue;
+              "STYLE" === RR && JR.has(tR) && (VR = !0)
             }
-            let ZW = NW ? this.mirror.getId(NW) : null;
-            for (; - 2 === ZW;) NW = NW && WP.nextSibling(NW), ZW = NW && this.mirror.getId(NW);
-            if (-1 === ZW) {
-              console.warn("Couldn't record new node. Couldn't find mirror id for nextSibling:", NW), OW = null;
+            let KR = uR ? this.mirror.getId(uR) : null;
+            for (; - 2 === KR;) uR = uR && su.nextSibling(uR), KR = uR && this.mirror.getId(uR);
+            if (-1 === KR) {
+              console.warn("Couldn't record new node. Couldn't find mirror id for nextSibling:", uR), GR = null;
               continue
             }
-            const xW = ci(OW, {
+            const wR = iJ(GR, {
               doc: this.doc,
               mirror: this.mirror,
               blockClass: this.blockClass,
@@ -7271,158 +7271,158 @@ export const modules = {
               dataURLOptions: this.dataURLOptions,
               recordCanvas: this.recordCanvas,
               inlineImages: this.inlineImages,
-              onSerialize: WW => {
-                kP(WW, this.mirror) && this.iframeManager.addIframe(WW), sP(WW, this.mirror) && this.stylesheetManager.trackLinkElement(WW), KP(OW) && this.shadowDomManager.addShadowRoot(WP.shadowRoot(OW), this.doc)
+              onSerialize: RR => {
+                LZ(RR, this.mirror) && this.iframeManager.addIframe(RR), nZ(RR, this.mirror) && this.stylesheetManager.trackLinkElement(RR), WZ(GR) && this.shadowDomManager.addShadowRoot(su.shadowRoot(GR), this.doc)
               },
-              onIframeLoad: (WW, iW) => {
-                this.iframeManager.attachIframe(WW, iW), this.shadowDomManager.observeAttachShadow(WW)
+              onIframeLoad: (RR, JR) => {
+                this.iframeManager.attachIframe(RR, JR), this.shadowDomManager.observeAttachShadow(RR)
               },
-              onStylesheetLoad: (WW, iW) => {
-                this.stylesheetManager.attachLinkElement(WW, iW)
+              onStylesheetLoad: (RR, JR) => {
+                this.stylesheetManager.attachLinkElement(RR, JR)
               },
-              cssCaptured: tW
+              cssCaptured: VR
             });
-            xW && (WW.push({
-              parentId: EW,
-              nextId: ZW,
-              node: xW
-            }), iW.add(xW.id))
+            wR && (RR.push({
+              parentId: tR,
+              nextId: KR,
+              node: wR
+            }), JR.add(wR.id))
           }
-          const tW = {
-            texts: this.texts.map((WW => {
-              const iW = WW.node,
-                OW = WP.parentNode(iW);
-              return OW && "TEXTAREA" === OW.tagName && this.genTextAreaValueMutation(OW), {
-                id: this.mirror.getId(iW),
-                value: WW.value
+          const VR = {
+            texts: this.texts.map((RR => {
+              const JR = RR.node,
+                GR = su.parentNode(JR);
+              return GR && "TEXTAREA" === GR.tagName && this.genTextAreaValueMutation(GR), {
+                id: this.mirror.getId(JR),
+                value: RR.value
               }
-            })).filter((WW => !iW.has(WW.id))).filter((WW => this.mirror.has(WW.id))),
-            attributes: this.attributes.map((WW => {
+            })).filter((RR => !JR.has(RR.id))).filter((RR => this.mirror.has(RR.id))),
+            attributes: this.attributes.map((RR => {
               const {
-                attributes: iW
-              } = WW;
-              if ("string" === typeof iW.style) {
-                const OW = JSON.stringify(WW.styleDiff),
-                  mW = JSON.stringify(WW._unchangedStyles);
-                OW.length < iW.style.length && (OW + mW).split("var(").length === iW.style.split("var(").length && (iW.style = WW.styleDiff)
+                attributes: JR
+              } = RR;
+              if ("string" === typeof JR.style) {
+                const GR = JSON.stringify(RR.styleDiff),
+                  yR = JSON.stringify(RR._unchangedStyles);
+                GR.length < JR.style.length && (GR + yR).split("var(").length === JR.style.split("var(").length && (JR.style = RR.styleDiff)
               }
               return {
-                id: this.mirror.getId(WW.node),
-                attributes: iW
+                id: this.mirror.getId(RR.node),
+                attributes: JR
               }
-            })).filter((WW => !iW.has(WW.id))).filter((WW => this.mirror.has(WW.id))),
+            })).filter((RR => !JR.has(RR.id))).filter((RR => this.mirror.has(RR.id))),
             removes: this.removes,
-            adds: WW
+            adds: RR
           };
-          (tW.texts.length || tW.attributes.length || tW.removes.length || tW.adds.length) && (this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, this.mutationCb(tW))
-        })), NW(this, "genTextAreaValueMutation", (WW => {
-          let iW = this.attributeMap.get(WW);
-          iW || (iW = {
-            node: WW,
+          (VR.texts.length || VR.attributes.length || VR.removes.length || VR.adds.length) && (this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, this.mutationCb(VR))
+        })), uR(this, "genTextAreaValueMutation", (RR => {
+          let JR = this.attributeMap.get(RR);
+          JR || (JR = {
+            node: RR,
             attributes: {},
             styleDiff: {},
             _unchangedStyles: {}
-          }, this.attributes.push(iW), this.attributeMap.set(WW, iW));
-          const OW = Array.from(WP.childNodes(WW), (WW => WP.textContent(WW) || "")).join("");
-          iW.attributes.value = hW({
-            element: WW,
+          }, this.attributes.push(JR), this.attributeMap.set(RR, JR));
+          const GR = Array.from(su.childNodes(RR), (RR => su.textContent(RR) || "")).join("");
+          JR.attributes.value = gR({
+            element: RR,
             maskInputOptions: this.maskInputOptions,
-            tagName: WW.tagName,
-            type: uW(WW),
-            value: OW,
+            tagName: RR.tagName,
+            type: OR(RR),
+            value: GR,
             maskInputFn: this.maskInputFn
           })
-        })), NW(this, "processMutation", (WW => {
-          if (!xP(WW.target, this.mirror, this.slimDOMOptions)) switch (WW.type) {
+        })), uR(this, "processMutation", (RR => {
+          if (!VZ(RR.target, this.mirror, this.slimDOMOptions)) switch (RR.type) {
             case "characterData": {
-              const iW = WP.textContent(WW.target);
-              tP(WW.target, this.blockClass, this.blockSelector, !1) || iW === WW.oldValue || this.texts.push({
-                value: Ei(WW.target, this.maskTextClass, this.maskTextSelector, !0) && iW ? this.maskTextFn ? this.maskTextFn(iW, wP(WW.target)) : iW.replace(/[\S]/g, "*") : iW,
-                node: WW.target
+              const JR = su.textContent(RR.target);
+              iZ(RR.target, this.blockClass, this.blockSelector, !1) || JR === RR.oldValue || this.texts.push({
+                value: tJ(RR.target, this.maskTextClass, this.maskTextSelector, !0) && JR ? this.maskTextFn ? this.maskTextFn(JR, qZ(RR.target)) : JR.replace(/[\S]/g, "*") : JR,
+                node: RR.target
               });
               break
             }
             case "attributes": {
-              const OW = WW.target,
-                mW = HW(OW.tagName);
-              let EW = WW.attributeName,
-                NW = WW.target.getAttribute(EW);
-              if ("value" === EW) {
-                const WW = uW(OW);
-                NW = hW({
-                  element: OW,
+              const GR = RR.target,
+                yR = bR(GR.tagName);
+              let tR = RR.attributeName,
+                uR = RR.target.getAttribute(tR);
+              if ("value" === tR) {
+                const RR = OR(GR);
+                uR = gR({
+                  element: GR,
                   maskInputOptions: this.maskInputOptions,
-                  tagName: OW.tagName,
-                  type: WW,
-                  value: NW,
+                  tagName: GR.tagName,
+                  type: RR,
+                  value: uR,
                   maskInputFn: this.maskInputFn
                 })
               }
-              if (tP(WW.target, this.blockClass, this.blockSelector, !1) || NW === WW.oldValue) return;
-              let PW = this.attributeMap.get(WW.target);
-              if ("iframe" === mW && "src" === EW && !this.keepIframeSrcFn(NW)) {
-                if (OW.contentDocument) return;
-                EW = "rr_src"
+              if (iZ(RR.target, this.blockClass, this.blockSelector, !1) || uR === RR.oldValue) return;
+              let ZR = this.attributeMap.get(RR.target);
+              if ("iframe" === yR && "src" === tR && !this.keepIframeSrcFn(uR)) {
+                if (GR.contentDocument) return;
+                tR = "rr_src"
               }
-              if (PW || (PW = {
-                  node: WW.target,
+              if (ZR || (ZR = {
+                  node: RR.target,
                   attributes: {},
                   styleDiff: {},
                   _unchangedStyles: {}
-                }, this.attributes.push(PW), this.attributeMap.set(WW.target, PW)), "type" === EW && "input" === mW && "password" === (WW.oldValue || "").toLowerCase() && OW.setAttribute("data-rr-is-password", "true"), !Oi(mW, EW))
-                if (PW.attributes[EW] = ii(this.doc, mW, HW(EW), NW), "style" === EW) {
+                }, this.attributes.push(ZR), this.attributeMap.set(RR.target, ZR)), "type" === tR && "input" === yR && "password" === (RR.oldValue || "").toLowerCase() && GR.setAttribute("data-rr-is-password", "true"), !GJ(yR, tR))
+                if (ZR.attributes[tR] = JJ(this.doc, yR, bR(tR), uR), "style" === tR) {
                   if (!this.unattachedDoc) try {
                     this.unattachedDoc = document.implementation.createHTMLDocument()
-                  } catch (iW) {
+                  } catch (JR) {
                     this.unattachedDoc = this.doc
                   }
-                  const mW = this.unattachedDoc.createElement("span");
-                  WW.oldValue && mW.setAttribute("style", WW.oldValue);
-                  for (const WW of Array.from(OW.style)) {
-                    const iW = OW.style.getPropertyValue(WW),
-                      EW = OW.style.getPropertyPriority(WW);
-                    iW !== mW.style.getPropertyValue(WW) || EW !== mW.style.getPropertyPriority(WW) ? PW.styleDiff[WW] = "" === EW ? iW : [iW, EW] : PW._unchangedStyles[WW] = [iW, EW]
+                  const yR = this.unattachedDoc.createElement("span");
+                  RR.oldValue && yR.setAttribute("style", RR.oldValue);
+                  for (const RR of Array.from(GR.style)) {
+                    const JR = GR.style.getPropertyValue(RR),
+                      tR = GR.style.getPropertyPriority(RR);
+                    JR !== yR.style.getPropertyValue(RR) || tR !== yR.style.getPropertyPriority(RR) ? ZR.styleDiff[RR] = "" === tR ? JR : [JR, tR] : ZR._unchangedStyles[RR] = [JR, tR]
                   }
-                  for (const WW of Array.from(mW.style)) "" === OW.style.getPropertyValue(WW) && (PW.styleDiff[WW] = !1)
-                } else "open" === EW && "DIALOG" === OW.tagName && (OW.matches("dialog:modal") ? PW.attributes.rr_open_mode = "modal" : PW.attributes.rr_open_mode = "non-modal");
+                  for (const RR of Array.from(yR.style)) "" === GR.style.getPropertyValue(RR) && (ZR.styleDiff[RR] = !1)
+                } else "open" === tR && "DIALOG" === GR.tagName && (GR.matches("dialog:modal") ? ZR.attributes.rr_open_mode = "modal" : ZR.attributes.rr_open_mode = "non-modal");
               break
             }
             case "childList":
-              if (tP(WW.target, this.blockClass, this.blockSelector, !0)) return;
-              if ("TEXTAREA" === WW.target.tagName) return void this.genTextAreaValueMutation(WW.target);
-              WW.addedNodes.forEach((iW => this.genAdds(iW, WW.target))), WW.removedNodes.forEach((iW => {
-                const OW = this.mirror.getId(iW),
-                  mW = KW(WW.target) ? this.mirror.getId(WP.host(WW.target)) : this.mirror.getId(WW.target);
-                tP(WW.target, this.blockClass, this.blockSelector, !1) || xP(iW, this.mirror, this.slimDOMOptions) || !ZP(iW, this.mirror) || (this.addedSet.has(iW) ? (CP(this.addedSet, iW), this.droppedSet.add(iW)) : this.addedSet.has(WW.target) && -1 === OW || lP(WW.target, this.mirror) || (this.movedSet.has(iW) && this.movedMap[pP(OW, mW)] ? CP(this.movedSet, iW) : (this.removes.push({
-                  parentId: mW,
-                  id: OW,
-                  isShadow: !(!KW(WW.target) || !SW(WW.target)) || void 0
-                }), function(WW, iW) {
-                  const OW = [WW];
-                  for (; OW.length;) {
-                    const WW = OW.pop();
-                    iW.has(WW) || (iW.add(WW), WP.childNodes(WW).forEach((WW => OW.push(WW))))
+              if (iZ(RR.target, this.blockClass, this.blockSelector, !0)) return;
+              if ("TEXTAREA" === RR.target.tagName) return void this.genTextAreaValueMutation(RR.target);
+              RR.addedNodes.forEach((JR => this.genAdds(JR, RR.target))), RR.removedNodes.forEach((JR => {
+                const GR = this.mirror.getId(JR),
+                  yR = CR(RR.target) ? this.mirror.getId(su.host(RR.target)) : this.mirror.getId(RR.target);
+                iZ(RR.target, this.blockClass, this.blockSelector, !1) || VZ(JR, this.mirror, this.slimDOMOptions) || !fZ(JR, this.mirror) || (this.addedSet.has(JR) ? (IZ(this.addedSet, JR), this.droppedSet.add(JR)) : this.addedSet.has(RR.target) && -1 === GR || KZ(RR.target, this.mirror) || (this.movedSet.has(JR) && this.movedMap[cZ(GR, yR)] ? IZ(this.movedSet, JR) : (this.removes.push({
+                  parentId: yR,
+                  id: GR,
+                  isShadow: !(!CR(RR.target) || !XR(RR.target)) || void 0
+                }), function(RR, JR) {
+                  const GR = [RR];
+                  for (; GR.length;) {
+                    const RR = GR.pop();
+                    JR.has(RR) || (JR.add(RR), su.childNodes(RR).forEach((RR => GR.push(RR))))
                   }
-                }(iW, this.removesSubTreeCache))), this.mapRemoves.push(iW))
+                }(JR, this.removesSubTreeCache))), this.mapRemoves.push(JR))
               }))
           }
-        })), NW(this, "genAdds", ((WW, iW) => {
-          if (!this.processedNodeManager.inOtherBuffer(WW, this) && !this.addedSet.has(WW) && !this.movedSet.has(WW)) {
-            if (this.mirror.hasNode(WW)) {
-              if (xP(WW, this.mirror, this.slimDOMOptions)) return;
-              this.movedSet.add(WW);
-              let OW = null;
-              iW && this.mirror.hasNode(iW) && (OW = this.mirror.getId(iW)), OW && -1 !== OW && (this.movedMap[pP(this.mirror.getId(WW), OW)] = !0)
-            } else this.addedSet.add(WW), this.droppedSet.delete(WW);
-            tP(WW, this.blockClass, this.blockSelector, !1) || (WP.childNodes(WW).forEach((WW => this.genAdds(WW))), KP(WW) && WP.childNodes(WP.shadowRoot(WW)).forEach((iW => {
-              this.processedNodeManager.add(iW, this), this.genAdds(iW, WW)
+        })), uR(this, "genAdds", ((RR, JR) => {
+          if (!this.processedNodeManager.inOtherBuffer(RR, this) && !this.addedSet.has(RR) && !this.movedSet.has(RR)) {
+            if (this.mirror.hasNode(RR)) {
+              if (VZ(RR, this.mirror, this.slimDOMOptions)) return;
+              this.movedSet.add(RR);
+              let GR = null;
+              JR && this.mirror.hasNode(JR) && (GR = this.mirror.getId(JR)), GR && -1 !== GR && (this.movedMap[cZ(this.mirror.getId(RR), GR)] = !0)
+            } else this.addedSet.add(RR), this.droppedSet.delete(RR);
+            iZ(RR, this.blockClass, this.blockSelector, !1) || (su.childNodes(RR).forEach((RR => this.genAdds(RR))), WZ(RR) && su.childNodes(su.shadowRoot(RR)).forEach((JR => {
+              this.processedNodeManager.add(JR, this), this.genAdds(JR, RR)
             })))
           }
         }))
       }
-      init(WW) {
-        ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "keepIframeSrcFn", "recordCanvas", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((iW => {
-          this[iW] = WW[iW]
+      init(RR) {
+        ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "keepIframeSrcFn", "recordCanvas", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((JR => {
+          this[JR] = RR[JR]
         }))
       }
       freeze() {
@@ -7445,809 +7445,809 @@ export const modules = {
       }
     }
 
-    function CP(WW, iW) {
-      WW.delete(iW), WP.childNodes(iW).forEach((iW => CP(WW, iW)))
+    function IZ(RR, JR) {
+      RR.delete(JR), su.childNodes(JR).forEach((JR => IZ(RR, JR)))
     }
 
-    function XP(WW, iW) {
-      return 0 !== WW.size && BP(WW, iW)
+    function mZ(RR, JR) {
+      return 0 !== RR.size && zZ(RR, JR)
     }
 
-    function BP(WW, iW) {
-      if (WW.has(iW)) return !0;
-      const OW = WP.parentNode(iW);
-      return !!OW && BP(WW, OW)
+    function zZ(RR, JR) {
+      if (RR.has(JR)) return !0;
+      const GR = su.parentNode(JR);
+      return !!GR && zZ(RR, GR)
     }
-    let qP;
-    const RP = WW => {
-        if (!qP) return WW;
+    let SZ;
+    const jZ = RR => {
+        if (!SZ) return RR;
         return function() {
           try {
-            return WW(...arguments)
-          } catch (iW) {
-            if (qP && !0 === qP(iW)) return;
-            throw iW
+            return RR(...arguments)
+          } catch (JR) {
+            if (SZ && !0 === SZ(JR)) return;
+            throw JR
           }
         }
       },
-      GP = [];
+      dZ = [];
 
-    function IP(WW) {
+    function EZ(RR) {
       try {
-        if ("composedPath" in WW) {
-          const iW = WW.composedPath();
-          if (iW.length) return iW[0]
-        } else if ("path" in WW && WW.path.length) return WW.path[0]
+        if ("composedPath" in RR) {
+          const JR = RR.composedPath();
+          if (JR.length) return JR[0]
+        } else if ("path" in RR && RR.path.length) return RR.path[0]
       } catch {}
-      return WW && WW.target
+      return RR && RR.target
     }
 
-    function aP(WW, iW) {
-      const OW = new fP;
-      GP.push(OW), OW.init(WW);
-      const [mW, EW] = zN(), NW = new mW(RP(OW.processMutations.bind(OW)));
-      return NW.observe(iW, {
+    function YZ(RR, JR) {
+      const GR = new PZ;
+      dZ.push(GR), GR.init(RR);
+      const [yR, tR] = Qu(), uR = new yR(jZ(GR.processMutations.bind(GR)));
+      return uR.observe(JR, {
         attributes: !0,
         attributeOldValue: !0,
         characterData: !0,
         characterDataOldValue: !0,
         childList: !0,
         subtree: !0
-      }), [NW, EW]
+      }), [uR, tR]
     }
 
-    function rP(WW) {
+    function kZ(RR) {
       let {
-        mouseInteractionCb: iW,
-        doc: OW,
-        mirror: mW,
-        blockClass: EW,
-        blockSelector: NW,
-        sampling: PW
-      } = WW;
-      if (!1 === PW.mouseInteraction) return () => {};
-      const LW = !0 === PW.mouseInteraction || void 0 === PW.mouseInteraction ? {} : PW.mouseInteraction,
-        cW = [];
-      let wW = null;
-      return Object.keys(dP).filter((WW => Number.isNaN(Number(WW)) && !WW.endsWith("_Departed") && !1 !== LW[WW])).forEach((WW => {
-        let PW = HW(WW);
-        const LW = (WW => OW => {
-          const PW = IP(OW);
-          if (tP(PW, EW, NW, !0)) return;
-          let LW = null,
-            cW = WW;
-          if ("pointerType" in OW) {
-            switch (OW.pointerType) {
+        mouseInteractionCb: JR,
+        doc: GR,
+        mirror: yR,
+        blockClass: tR,
+        blockSelector: uR,
+        sampling: ZR
+      } = RR;
+      if (!1 === ZR.mouseInteraction) return () => {};
+      const qR = !0 === ZR.mouseInteraction || void 0 === ZR.mouseInteraction ? {} : ZR.mouseInteraction,
+        iR = [];
+      let fR = null;
+      return Object.keys(OZ).filter((RR => Number.isNaN(Number(RR)) && !RR.endsWith("_Departed") && !1 !== qR[RR])).forEach((RR => {
+        let ZR = bR(RR);
+        const qR = (RR => GR => {
+          const ZR = EZ(GR);
+          if (iZ(ZR, tR, uR, !0)) return;
+          let qR = null,
+            iR = RR;
+          if ("pointerType" in GR) {
+            switch (GR.pointerType) {
               case "mouse":
-                LW = eP.Mouse;
+                qR = xZ.Mouse;
                 break;
               case "touch":
-                LW = eP.Touch;
+                qR = xZ.Touch;
                 break;
               case "pen":
-                LW = eP.Pen
+                qR = xZ.Pen
             }
-            LW === eP.Touch ? dP[WW] === dP.MouseDown ? cW = "TouchStart" : dP[WW] === dP.MouseUp && (cW = "TouchEnd") : eP.Pen
-          } else AP(OW) && (LW = eP.Touch);
-          null !== LW ? (wW = LW, (cW.startsWith("Touch") && LW === eP.Touch || cW.startsWith("Mouse") && LW === eP.Mouse) && (LW = null)) : dP[WW] === dP.Click && (LW = wW, wW = null);
-          const tW = AP(OW) ? OW.changedTouches[0] : OW;
-          if (!tW) return;
-          const ZW = mW.getId(PW),
+            qR === xZ.Touch ? OZ[RR] === OZ.MouseDown ? iR = "TouchStart" : OZ[RR] === OZ.MouseUp && (iR = "TouchEnd") : xZ.Pen
+          } else wZ(GR) && (qR = xZ.Touch);
+          null !== qR ? (fR = qR, (iR.startsWith("Touch") && qR === xZ.Touch || iR.startsWith("Mouse") && qR === xZ.Mouse) && (qR = null)) : OZ[RR] === OZ.Click && (qR = fR, fR = null);
+          const VR = wZ(GR) ? GR.changedTouches[0] : GR;
+          if (!VR) return;
+          const KR = yR.getId(ZR),
             {
-              clientX: xW,
-              clientY: lW
-            } = tW;
-          RP(iW)({
-            type: dP[cW],
-            id: ZW,
-            x: xW,
-            y: lW,
-            ...null !== LW && {
-              pointerType: LW
+              clientX: wR,
+              clientY: rR
+            } = VR;
+          jZ(JR)({
+            type: OZ[iR],
+            id: KR,
+            x: wR,
+            y: rR,
+            ...null !== qR && {
+              pointerType: qR
             }
           })
-        })(WW);
-        if (window.PointerEvent) switch (dP[WW]) {
-          case dP.MouseDown:
-          case dP.MouseUp:
-            PW = PW.replace("mouse", "pointer");
+        })(RR);
+        if (window.PointerEvent) switch (OZ[RR]) {
+          case OZ.MouseDown:
+          case OZ.MouseUp:
+            ZR = ZR.replace("mouse", "pointer");
             break;
-          case dP.TouchStart:
-          case dP.TouchEnd:
+          case OZ.TouchStart:
+          case OZ.TouchEnd:
             return
         }
-        cW.push(iP(PW, LW, OW))
-      })), RP((() => {
-        cW.forEach((WW => WW()))
+        iR.push(hu(ZR, qR, GR))
+      })), jZ((() => {
+        iR.forEach((RR => RR()))
       }))
     }
 
-    function zP(WW) {
+    function QZ(RR) {
       let {
-        scrollCb: iW,
-        doc: OW,
-        mirror: mW,
-        blockClass: EW,
-        blockSelector: NW,
-        sampling: PW
-      } = WW;
-      const LW = RP(EP(RP((WW => {
-        const PW = IP(WW);
-        if (!PW || tP(PW, EW, NW, !0)) return;
-        const LW = mW.getId(PW);
-        if (PW === OW && OW.defaultView) {
-          const WW = PP(OW.defaultView);
-          iW({
-            id: LW,
-            x: WW.left,
-            y: WW.top
+        scrollCb: JR,
+        doc: GR,
+        mirror: yR,
+        blockClass: tR,
+        blockSelector: uR,
+        sampling: ZR
+      } = RR;
+      const qR = jZ(GZ(jZ((RR => {
+        const ZR = EZ(RR);
+        if (!ZR || iZ(ZR, tR, uR, !0)) return;
+        const qR = yR.getId(ZR);
+        if (ZR === GR && GR.defaultView) {
+          const RR = tZ(GR.defaultView);
+          JR({
+            id: qR,
+            x: RR.left,
+            y: RR.top
           })
-        } else iW({
-          id: LW,
-          x: PW.scrollLeft,
-          y: PW.scrollTop
+        } else JR({
+          id: qR,
+          x: ZR.scrollLeft,
+          y: ZR.scrollTop
         })
-      })), PW.scroll || 100));
-      return iP("scroll", LW, OW)
+      })), ZR.scroll || 100));
+      return hu("scroll", qR, GR)
     }
-    const FP = ["INPUT", "TEXTAREA", "SELECT"],
-      QP = new WeakMap;
+    const FZ = ["INPUT", "TEXTAREA", "SELECT"],
+      TZ = new WeakMap;
 
-    function WL(WW) {
-      return function WW(iW, OW) {
-        if (EL("CSSGroupingRule") && iW.parentRule instanceof CSSGroupingRule || EL("CSSMediaRule") && iW.parentRule instanceof CSSMediaRule || EL("CSSSupportsRule") && iW.parentRule instanceof CSSSupportsRule || EL("CSSConditionRule") && iW.parentRule instanceof CSSConditionRule) {
-          const mW = Array.from(iW.parentRule.cssRules).indexOf(iW);
-          return OW.unshift(mW), WW(iW.parentRule, OW)
+    function sZ(RR) {
+      return function RR(JR, GR) {
+        if (Gq("CSSGroupingRule") && JR.parentRule instanceof CSSGroupingRule || Gq("CSSMediaRule") && JR.parentRule instanceof CSSMediaRule || Gq("CSSSupportsRule") && JR.parentRule instanceof CSSSupportsRule || Gq("CSSConditionRule") && JR.parentRule instanceof CSSConditionRule) {
+          const yR = Array.from(JR.parentRule.cssRules).indexOf(JR);
+          return GR.unshift(yR), RR(JR.parentRule, GR)
         }
-        if (iW.parentStyleSheet) {
-          const WW = Array.from(iW.parentStyleSheet.cssRules).indexOf(iW);
-          OW.unshift(WW)
+        if (JR.parentStyleSheet) {
+          const RR = Array.from(JR.parentStyleSheet.cssRules).indexOf(JR);
+          GR.unshift(RR)
         }
-        return OW
-      }(WW, [])
+        return GR
+      }(RR, [])
     }
 
-    function iL(WW, iW, OW) {
-      let mW, EW;
-      return WW ? (WW.ownerNode ? mW = iW.getId(WW.ownerNode) : EW = OW.getId(WW), {
-        styleId: EW,
-        id: mW
+    function hZ(RR, JR, GR) {
+      let yR, tR;
+      return RR ? (RR.ownerNode ? yR = JR.getId(RR.ownerNode) : tR = GR.getId(RR), {
+        styleId: tR,
+        id: yR
       }) : {}
     }
 
-    function OL(WW, iW) {
+    function Rq(RR, JR) {
       let {
-        mirror: OW,
-        stylesheetManager: mW
-      } = WW;
-      var EW, NW, PW;
-      let LW = null;
-      LW = "#document" === iW.nodeName ? OW.getId(iW) : OW.getId(WP.host(iW));
-      const cW = "#document" === iW.nodeName ? null == (EW = iW.defaultView) ? void 0 : EW.Document : null == (PW = null == (NW = iW.ownerDocument) ? void 0 : NW.defaultView) ? void 0 : PW.ShadowRoot,
-        wW = (null == cW ? void 0 : cW.prototype) ? Object.getOwnPropertyDescriptor(null == cW ? void 0 : cW.prototype, "adoptedStyleSheets") : void 0;
-      return null !== LW && -1 !== LW && cW && wW ? (Object.defineProperty(iW, "adoptedStyleSheets", {
-        configurable: wW.configurable,
-        enumerable: wW.enumerable,
+        mirror: GR,
+        stylesheetManager: yR
+      } = RR;
+      var tR, uR, ZR;
+      let qR = null;
+      qR = "#document" === JR.nodeName ? GR.getId(JR) : GR.getId(su.host(JR));
+      const iR = "#document" === JR.nodeName ? null == (tR = JR.defaultView) ? void 0 : tR.Document : null == (ZR = null == (uR = JR.ownerDocument) ? void 0 : uR.defaultView) ? void 0 : ZR.ShadowRoot,
+        fR = (null == iR ? void 0 : iR.prototype) ? Object.getOwnPropertyDescriptor(null == iR ? void 0 : iR.prototype, "adoptedStyleSheets") : void 0;
+      return null !== qR && -1 !== qR && iR && fR ? (Object.defineProperty(JR, "adoptedStyleSheets", {
+        configurable: fR.configurable,
+        enumerable: fR.enumerable,
         get() {
-          var WW;
-          return null == (WW = wW.get) ? void 0 : WW.call(this)
+          var RR;
+          return null == (RR = fR.get) ? void 0 : RR.call(this)
         },
-        set(WW) {
-          var iW;
-          const OW = null == (iW = wW.set) ? void 0 : iW.call(this, WW);
-          if (null !== LW && -1 !== LW) try {
-            mW.adoptStyleSheets(WW, LW)
-          } catch (EW) {}
-          return OW
+        set(RR) {
+          var JR;
+          const GR = null == (JR = fR.set) ? void 0 : JR.call(this, RR);
+          if (null !== qR && -1 !== qR) try {
+            yR.adoptStyleSheets(RR, qR)
+          } catch (tR) {}
+          return GR
         }
-      }), RP((() => {
-        Object.defineProperty(iW, "adoptedStyleSheets", {
-          configurable: wW.configurable,
-          enumerable: wW.enumerable,
-          get: wW.get,
-          set: wW.set
+      }), jZ((() => {
+        Object.defineProperty(JR, "adoptedStyleSheets", {
+          configurable: fR.configurable,
+          enumerable: fR.enumerable,
+          get: fR.get,
+          set: fR.set
         })
       }))) : () => {}
     }
 
-    function mL(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const OW = WW.doc.defaultView;
-      if (!OW) return () => {};
-      let mW;
-      ! function(WW, iW) {
+    function Jq(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const GR = RR.doc.defaultView;
+      if (!GR) return () => {};
+      let yR;
+      ! function(RR, JR) {
         const {
-          mutationCb: OW,
-          mousemoveCb: mW,
-          mouseInteractionCb: EW,
-          scrollCb: NW,
-          viewportResizeCb: PW,
-          inputCb: LW,
-          mediaInteractionCb: cW,
-          styleSheetRuleCb: wW,
-          styleDeclarationCb: tW,
-          canvasMutationCb: ZW,
-          fontCb: xW,
-          selectionCb: lW,
-          customElementCb: AW
-        } = WW;
-        WW.mutationCb = function() {
-          iW.mutation && iW.mutation(...arguments), OW(...arguments)
-        }, WW.mousemoveCb = function() {
-          iW.mousemove && iW.mousemove(...arguments), mW(...arguments)
-        }, WW.mouseInteractionCb = function() {
-          iW.mouseInteraction && iW.mouseInteraction(...arguments), EW(...arguments)
-        }, WW.scrollCb = function() {
-          iW.scroll && iW.scroll(...arguments), NW(...arguments)
-        }, WW.viewportResizeCb = function() {
-          iW.viewportResize && iW.viewportResize(...arguments), PW(...arguments)
-        }, WW.inputCb = function() {
-          iW.input && iW.input(...arguments), LW(...arguments)
-        }, WW.mediaInteractionCb = function() {
-          iW.mediaInteaction && iW.mediaInteaction(...arguments), cW(...arguments)
-        }, WW.styleSheetRuleCb = function() {
-          iW.styleSheetRule && iW.styleSheetRule(...arguments), wW(...arguments)
-        }, WW.styleDeclarationCb = function() {
-          iW.styleDeclaration && iW.styleDeclaration(...arguments), tW(...arguments)
-        }, WW.canvasMutationCb = function() {
-          iW.canvasMutation && iW.canvasMutation(...arguments), ZW(...arguments)
-        }, WW.fontCb = function() {
-          iW.font && iW.font(...arguments), xW(...arguments)
-        }, WW.selectionCb = function() {
-          iW.selection && iW.selection(...arguments), lW(...arguments)
-        }, WW.customElementCb = function() {
-          iW.customElement && iW.customElement(...arguments), AW(...arguments)
+          mutationCb: GR,
+          mousemoveCb: yR,
+          mouseInteractionCb: tR,
+          scrollCb: uR,
+          viewportResizeCb: ZR,
+          inputCb: qR,
+          mediaInteractionCb: iR,
+          styleSheetRuleCb: fR,
+          styleDeclarationCb: VR,
+          canvasMutationCb: KR,
+          fontCb: wR,
+          selectionCb: rR,
+          customElementCb: eR
+        } = RR;
+        RR.mutationCb = function() {
+          JR.mutation && JR.mutation(...arguments), GR(...arguments)
+        }, RR.mousemoveCb = function() {
+          JR.mousemove && JR.mousemove(...arguments), yR(...arguments)
+        }, RR.mouseInteractionCb = function() {
+          JR.mouseInteraction && JR.mouseInteraction(...arguments), tR(...arguments)
+        }, RR.scrollCb = function() {
+          JR.scroll && JR.scroll(...arguments), uR(...arguments)
+        }, RR.viewportResizeCb = function() {
+          JR.viewportResize && JR.viewportResize(...arguments), ZR(...arguments)
+        }, RR.inputCb = function() {
+          JR.input && JR.input(...arguments), qR(...arguments)
+        }, RR.mediaInteractionCb = function() {
+          JR.mediaInteaction && JR.mediaInteaction(...arguments), iR(...arguments)
+        }, RR.styleSheetRuleCb = function() {
+          JR.styleSheetRule && JR.styleSheetRule(...arguments), fR(...arguments)
+        }, RR.styleDeclarationCb = function() {
+          JR.styleDeclaration && JR.styleDeclaration(...arguments), VR(...arguments)
+        }, RR.canvasMutationCb = function() {
+          JR.canvasMutation && JR.canvasMutation(...arguments), KR(...arguments)
+        }, RR.fontCb = function() {
+          JR.font && JR.font(...arguments), wR(...arguments)
+        }, RR.selectionCb = function() {
+          JR.selection && JR.selection(...arguments), rR(...arguments)
+        }, RR.customElementCb = function() {
+          JR.customElement && JR.customElement(...arguments), eR(...arguments)
         }
-      }(WW, iW);
-      let EW = () => {};
-      WW.recordDOM && ([mW, EW] = aP(WW, WW.doc));
-      const NW = function(WW) {
+      }(RR, JR);
+      let tR = () => {};
+      RR.recordDOM && ([yR, tR] = YZ(RR, RR.doc));
+      const uR = function(RR) {
           let {
-            mousemoveCb: iW,
-            sampling: OW,
-            doc: mW,
-            mirror: EW
-          } = WW;
-          if (!1 === OW.mousemove) return () => {};
-          const NW = "number" === typeof OW.mousemove ? OW.mousemove : 50,
-            PW = "number" === typeof OW.mousemoveCallback ? OW.mousemoveCallback : 500;
-          let LW, cW = [];
-          const wW = EP(RP((WW => {
-              const OW = Date.now() - LW;
-              iW(cW.map((WW => (WW.timeOffset -= OW, WW))), WW), cW = [], LW = null
-            })), PW),
-            tW = RP(EP(RP((WW => {
-              const iW = IP(WW),
+            mousemoveCb: JR,
+            sampling: GR,
+            doc: yR,
+            mirror: tR
+          } = RR;
+          if (!1 === GR.mousemove) return () => {};
+          const uR = "number" === typeof GR.mousemove ? GR.mousemove : 50,
+            ZR = "number" === typeof GR.mousemoveCallback ? GR.mousemoveCallback : 500;
+          let qR, iR = [];
+          const fR = GZ(jZ((RR => {
+              const GR = Date.now() - qR;
+              JR(iR.map((RR => (RR.timeOffset -= GR, RR))), RR), iR = [], qR = null
+            })), ZR),
+            VR = jZ(GZ(jZ((RR => {
+              const JR = EZ(RR),
                 {
-                  clientX: OW,
-                  clientY: mW
-                } = AP(WW) ? WW.changedTouches[0] : WW;
-              LW || (LW = FN()), cW.push({
-                x: OW,
-                y: mW,
-                id: EW.getId(iW),
-                timeOffset: FN() - LW
-              }), wW("undefined" !== typeof DragEvent && WW instanceof DragEvent ? oP.Drag : WW instanceof MouseEvent ? oP.MouseMove : oP.TouchMove)
-            })), NW, {
+                  clientX: GR,
+                  clientY: yR
+                } = wZ(RR) ? RR.changedTouches[0] : RR;
+              qR || (qR = Fu()), iR.push({
+                x: GR,
+                y: yR,
+                id: tR.getId(JR),
+                timeOffset: Fu() - qR
+              }), fR("undefined" !== typeof DragEvent && RR instanceof DragEvent ? vZ.Drag : RR instanceof MouseEvent ? vZ.MouseMove : vZ.TouchMove)
+            })), uR, {
               trailing: !1
             })),
-            ZW = [iP("mousemove", tW, mW), iP("touchmove", tW, mW), iP("drag", tW, mW)];
-          return RP((() => {
-            ZW.forEach((WW => WW()))
+            KR = [hu("mousemove", VR, yR), hu("touchmove", VR, yR), hu("drag", VR, yR)];
+          return jZ((() => {
+            KR.forEach((RR => RR()))
           }))
-        }(WW),
-        PW = rP(WW),
-        LW = zP(WW),
-        cW = function(WW, iW) {
+        }(RR),
+        ZR = kZ(RR),
+        qR = QZ(RR),
+        iR = function(RR, JR) {
           let {
-            viewportResizeCb: OW
-          } = WW, {
-            win: mW
-          } = iW, EW = -1, NW = -1;
-          return iP("resize", RP(EP(RP((() => {
-            const WW = LP(),
-              iW = cP();
-            EW === WW && NW === iW || (OW({
-              width: Number(iW),
-              height: Number(WW)
-            }), EW = WW, NW = iW)
-          })), 200)), mW)
-        }(WW, {
-          win: OW
+            viewportResizeCb: GR
+          } = RR, {
+            win: yR
+          } = JR, tR = -1, uR = -1;
+          return hu("resize", jZ(GZ(jZ((() => {
+            const RR = uZ(),
+              JR = ZZ();
+            tR === RR && uR === JR || (GR({
+              width: Number(JR),
+              height: Number(RR)
+            }), tR = RR, uR = JR)
+          })), 200)), yR)
+        }(RR, {
+          win: GR
         }),
-        wW = function(WW) {
+        fR = function(RR) {
           let {
-            inputCb: iW,
-            doc: OW,
-            mirror: mW,
-            blockClass: EW,
-            blockSelector: NW,
-            ignoreClass: PW,
-            ignoreSelector: LW,
-            maskInputOptions: cW,
-            maskInputFn: wW,
-            sampling: tW,
-            userTriggeredOnInput: ZW
-          } = WW;
+            inputCb: JR,
+            doc: GR,
+            mirror: yR,
+            blockClass: tR,
+            blockSelector: uR,
+            ignoreClass: ZR,
+            ignoreSelector: qR,
+            maskInputOptions: iR,
+            maskInputFn: fR,
+            sampling: VR,
+            userTriggeredOnInput: KR
+          } = RR;
 
-          function xW(WW) {
-            let iW = IP(WW);
-            const mW = WW.isTrusted,
-              tW = iW && iW.tagName;
-            if (iW && "OPTION" === tW && (iW = WP.parentElement(iW)), !iW || !tW || FP.indexOf(tW) < 0 || tP(iW, EW, NW, !0)) return;
-            if (iW.classList.contains(PW) || LW && iW.matches(LW)) return;
-            let xW = iW.value,
-              AW = !1;
-            const bW = uW(iW) || "";
-            "radio" === bW || "checkbox" === bW ? AW = iW.checked : (cW[tW.toLowerCase()] || cW[bW]) && (xW = hW({
-              element: iW,
-              maskInputOptions: cW,
-              tagName: tW,
-              type: bW,
-              value: xW,
-              maskInputFn: wW
-            })), lW(iW, ZW ? {
-              text: xW,
-              isChecked: AW,
-              userTriggered: mW
+          function wR(RR) {
+            let JR = EZ(RR);
+            const yR = RR.isTrusted,
+              VR = JR && JR.tagName;
+            if (JR && "OPTION" === VR && (JR = su.parentElement(JR)), !JR || !VR || FZ.indexOf(VR) < 0 || iZ(JR, tR, uR, !0)) return;
+            if (JR.classList.contains(ZR) || qR && JR.matches(qR)) return;
+            let wR = JR.value,
+              eR = !1;
+            const aR = OR(JR) || "";
+            "radio" === aR || "checkbox" === aR ? eR = JR.checked : (iR[VR.toLowerCase()] || iR[aR]) && (wR = gR({
+              element: JR,
+              maskInputOptions: iR,
+              tagName: VR,
+              type: aR,
+              value: wR,
+              maskInputFn: fR
+            })), rR(JR, KR ? {
+              text: wR,
+              isChecked: eR,
+              userTriggered: yR
             } : {
-              text: xW,
-              isChecked: AW
+              text: wR,
+              isChecked: eR
             });
-            const jW = iW.name;
-            "radio" === bW && jW && AW && OW.querySelectorAll(`input[type="radio"][name="${jW}"]`).forEach((WW => {
-              if (WW !== iW) {
-                const iW = WW.value;
-                lW(WW, ZW ? {
-                  text: iW,
-                  isChecked: !AW,
+            const LR = JR.name;
+            "radio" === aR && LR && eR && GR.querySelectorAll(`input[type="radio"][name="${LR}"]`).forEach((RR => {
+              if (RR !== JR) {
+                const JR = RR.value;
+                rR(RR, KR ? {
+                  text: JR,
+                  isChecked: !eR,
                   userTriggered: !1
                 } : {
-                  text: iW,
-                  isChecked: !AW
+                  text: JR,
+                  isChecked: !eR
                 })
               }
             }))
           }
 
-          function lW(WW, OW) {
-            const EW = QP.get(WW);
-            if (!EW || EW.text !== OW.text || EW.isChecked !== OW.isChecked) {
-              QP.set(WW, OW);
-              const EW = mW.getId(WW);
-              RP(iW)({
-                ...OW,
-                id: EW
+          function rR(RR, GR) {
+            const tR = TZ.get(RR);
+            if (!tR || tR.text !== GR.text || tR.isChecked !== GR.isChecked) {
+              TZ.set(RR, GR);
+              const tR = yR.getId(RR);
+              jZ(JR)({
+                ...GR,
+                id: tR
               })
             }
           }
-          const AW = ("last" === tW.input ? ["change"] : ["input", "change"]).map((WW => iP(WW, RP(xW), OW))),
-            bW = OW.defaultView;
-          if (!bW) return () => {
-            AW.forEach((WW => WW()))
+          const eR = ("last" === VR.input ? ["change"] : ["input", "change"]).map((RR => hu(RR, jZ(wR), GR))),
+            aR = GR.defaultView;
+          if (!aR) return () => {
+            eR.forEach((RR => RR()))
           };
-          const jW = bW.Object.getOwnPropertyDescriptor(bW.HTMLInputElement.prototype, "value"),
-            UW = [
-              [bW.HTMLInputElement.prototype, "value"],
-              [bW.HTMLInputElement.prototype, "checked"],
-              [bW.HTMLSelectElement.prototype, "value"],
-              [bW.HTMLTextAreaElement.prototype, "value"],
-              [bW.HTMLSelectElement.prototype, "selectedIndex"],
-              [bW.HTMLOptionElement.prototype, "selected"]
+          const LR = aR.Object.getOwnPropertyDescriptor(aR.HTMLInputElement.prototype, "value"),
+            nR = [
+              [aR.HTMLInputElement.prototype, "value"],
+              [aR.HTMLInputElement.prototype, "checked"],
+              [aR.HTMLSelectElement.prototype, "value"],
+              [aR.HTMLTextAreaElement.prototype, "value"],
+              [aR.HTMLSelectElement.prototype, "selectedIndex"],
+              [aR.HTMLOptionElement.prototype, "selected"]
             ];
-          return jW && jW.set && AW.push(...UW.map((WW => NP(WW[0], WW[1], {
+          return LR && LR.set && eR.push(...nR.map((RR => yZ(RR[0], RR[1], {
             set() {
-              RP(xW)({
+              jZ(wR)({
                 target: this,
                 isTrusted: !1
               })
             }
-          }, !1, bW)))), RP((() => {
-            AW.forEach((WW => WW()))
+          }, !1, aR)))), jZ((() => {
+            eR.forEach((RR => RR()))
           }))
-        }(WW),
-        tW = function(WW) {
+        }(RR),
+        VR = function(RR) {
           let {
-            mediaInteractionCb: iW,
-            blockClass: OW,
-            blockSelector: mW,
-            mirror: EW,
-            sampling: NW,
-            doc: PW
-          } = WW;
-          const LW = RP((WW => EP(RP((NW => {
-              const PW = IP(NW);
-              if (!PW || tP(PW, OW, mW, !0)) return;
+            mediaInteractionCb: JR,
+            blockClass: GR,
+            blockSelector: yR,
+            mirror: tR,
+            sampling: uR,
+            doc: ZR
+          } = RR;
+          const qR = jZ((RR => GZ(jZ((uR => {
+              const ZR = EZ(uR);
+              if (!ZR || iZ(ZR, GR, yR, !0)) return;
               const {
-                currentTime: LW,
-                volume: cW,
-                muted: wW,
-                playbackRate: tW,
-                loop: ZW
-              } = PW;
-              iW({
-                type: WW,
-                id: EW.getId(PW),
-                currentTime: LW,
-                volume: cW,
-                muted: wW,
-                playbackRate: tW,
-                loop: ZW
+                currentTime: qR,
+                volume: iR,
+                muted: fR,
+                playbackRate: VR,
+                loop: KR
+              } = ZR;
+              JR({
+                type: RR,
+                id: tR.getId(ZR),
+                currentTime: qR,
+                volume: iR,
+                muted: fR,
+                playbackRate: VR,
+                loop: KR
               })
-            })), NW.media || 500))),
-            cW = [iP("play", LW(gP.Play), PW), iP("pause", LW(gP.Pause), PW), iP("seeked", LW(gP.Seeked), PW), iP("volumechange", LW(gP.VolumeChange), PW), iP("ratechange", LW(gP.RateChange), PW)];
-          return RP((() => {
-            cW.forEach((WW => WW()))
+            })), uR.media || 500))),
+            iR = [hu("play", qR(DZ.Play), ZR), hu("pause", qR(DZ.Pause), ZR), hu("seeked", qR(DZ.Seeked), ZR), hu("volumechange", qR(DZ.VolumeChange), ZR), hu("ratechange", qR(DZ.RateChange), ZR)];
+          return jZ((() => {
+            iR.forEach((RR => RR()))
           }))
-        }(WW);
-      let ZW = () => {},
-        xW = () => {},
-        lW = () => {},
-        AW = () => {};
-      WW.recordDOM && (ZW = function(WW, iW) {
+        }(RR);
+      let KR = () => {},
+        wR = () => {},
+        rR = () => {},
+        eR = () => {};
+      RR.recordDOM && (KR = function(RR, JR) {
         let {
-          styleSheetRuleCb: OW,
-          mirror: mW,
-          stylesheetManager: EW
-        } = WW, {
-          win: NW
-        } = iW;
-        if (!NW.CSSStyleSheet || !NW.CSSStyleSheet.prototype) return () => {};
-        const PW = NW.CSSStyleSheet.prototype.insertRule;
-        NW.CSSStyleSheet.prototype.insertRule = new Proxy(PW, {
-          apply: RP(((WW, iW, NW) => {
-            const [PW, LW] = NW, {
-              id: cW,
-              styleId: wW
-            } = iL(iW, mW, EW.styleMirror);
-            return (cW && -1 !== cW || wW && -1 !== wW) && OW({
-              id: cW,
-              styleId: wW,
+          styleSheetRuleCb: GR,
+          mirror: yR,
+          stylesheetManager: tR
+        } = RR, {
+          win: uR
+        } = JR;
+        if (!uR.CSSStyleSheet || !uR.CSSStyleSheet.prototype) return () => {};
+        const ZR = uR.CSSStyleSheet.prototype.insertRule;
+        uR.CSSStyleSheet.prototype.insertRule = new Proxy(ZR, {
+          apply: jZ(((RR, JR, uR) => {
+            const [ZR, qR] = uR, {
+              id: iR,
+              styleId: fR
+            } = hZ(JR, yR, tR.styleMirror);
+            return (iR && -1 !== iR || fR && -1 !== fR) && GR({
+              id: iR,
+              styleId: fR,
               adds: [{
-                rule: PW,
-                index: LW
+                rule: ZR,
+                index: qR
               }]
-            }), WW.apply(iW, NW)
+            }), RR.apply(JR, uR)
           }))
-        }), NW.CSSStyleSheet.prototype.addRule = function(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
-          const mW = `${WW} { ${iW} }`;
-          return NW.CSSStyleSheet.prototype.insertRule.apply(this, [mW, OW])
+        }), uR.CSSStyleSheet.prototype.addRule = function(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
+          const yR = `${RR} { ${JR} }`;
+          return uR.CSSStyleSheet.prototype.insertRule.apply(this, [yR, GR])
         };
-        const LW = NW.CSSStyleSheet.prototype.deleteRule;
-        let cW, wW;
-        NW.CSSStyleSheet.prototype.deleteRule = new Proxy(LW, {
-          apply: RP(((WW, iW, NW) => {
-            const [PW] = NW, {
-              id: LW,
-              styleId: cW
-            } = iL(iW, mW, EW.styleMirror);
-            return (LW && -1 !== LW || cW && -1 !== cW) && OW({
-              id: LW,
-              styleId: cW,
+        const qR = uR.CSSStyleSheet.prototype.deleteRule;
+        let iR, fR;
+        uR.CSSStyleSheet.prototype.deleteRule = new Proxy(qR, {
+          apply: jZ(((RR, JR, uR) => {
+            const [ZR] = uR, {
+              id: qR,
+              styleId: iR
+            } = hZ(JR, yR, tR.styleMirror);
+            return (qR && -1 !== qR || iR && -1 !== iR) && GR({
+              id: qR,
+              styleId: iR,
               removes: [{
-                index: PW
+                index: ZR
               }]
-            }), WW.apply(iW, NW)
+            }), RR.apply(JR, uR)
           }))
-        }), NW.CSSStyleSheet.prototype.removeRule = function(WW) {
-          return NW.CSSStyleSheet.prototype.deleteRule.apply(this, [WW])
-        }, NW.CSSStyleSheet.prototype.replace && (cW = NW.CSSStyleSheet.prototype.replace, NW.CSSStyleSheet.prototype.replace = new Proxy(cW, {
-          apply: RP(((WW, iW, NW) => {
-            const [PW] = NW, {
-              id: LW,
-              styleId: cW
-            } = iL(iW, mW, EW.styleMirror);
-            return (LW && -1 !== LW || cW && -1 !== cW) && OW({
-              id: LW,
-              styleId: cW,
-              replace: PW
-            }), WW.apply(iW, NW)
+        }), uR.CSSStyleSheet.prototype.removeRule = function(RR) {
+          return uR.CSSStyleSheet.prototype.deleteRule.apply(this, [RR])
+        }, uR.CSSStyleSheet.prototype.replace && (iR = uR.CSSStyleSheet.prototype.replace, uR.CSSStyleSheet.prototype.replace = new Proxy(iR, {
+          apply: jZ(((RR, JR, uR) => {
+            const [ZR] = uR, {
+              id: qR,
+              styleId: iR
+            } = hZ(JR, yR, tR.styleMirror);
+            return (qR && -1 !== qR || iR && -1 !== iR) && GR({
+              id: qR,
+              styleId: iR,
+              replace: ZR
+            }), RR.apply(JR, uR)
           }))
-        })), NW.CSSStyleSheet.prototype.replaceSync && (wW = NW.CSSStyleSheet.prototype.replaceSync, NW.CSSStyleSheet.prototype.replaceSync = new Proxy(wW, {
-          apply: RP(((WW, iW, NW) => {
-            const [PW] = NW, {
-              id: LW,
-              styleId: cW
-            } = iL(iW, mW, EW.styleMirror);
-            return (LW && -1 !== LW || cW && -1 !== cW) && OW({
-              id: LW,
-              styleId: cW,
-              replaceSync: PW
-            }), WW.apply(iW, NW)
+        })), uR.CSSStyleSheet.prototype.replaceSync && (fR = uR.CSSStyleSheet.prototype.replaceSync, uR.CSSStyleSheet.prototype.replaceSync = new Proxy(fR, {
+          apply: jZ(((RR, JR, uR) => {
+            const [ZR] = uR, {
+              id: qR,
+              styleId: iR
+            } = hZ(JR, yR, tR.styleMirror);
+            return (qR && -1 !== qR || iR && -1 !== iR) && GR({
+              id: qR,
+              styleId: iR,
+              replaceSync: ZR
+            }), RR.apply(JR, uR)
           }))
         }));
-        const tW = {};
-        NL("CSSGroupingRule") ? tW.CSSGroupingRule = NW.CSSGroupingRule : (NL("CSSMediaRule") && (tW.CSSMediaRule = NW.CSSMediaRule), NL("CSSConditionRule") && (tW.CSSConditionRule = NW.CSSConditionRule), NL("CSSSupportsRule") && (tW.CSSSupportsRule = NW.CSSSupportsRule));
-        const ZW = {};
-        return Object.entries(tW).forEach((WW => {
-          let [iW, NW] = WW;
-          ZW[iW] = {
-            insertRule: NW.prototype.insertRule,
-            deleteRule: NW.prototype.deleteRule
-          }, NW.prototype.insertRule = new Proxy(ZW[iW].insertRule, {
-            apply: RP(((WW, iW, NW) => {
-              const [PW, LW] = NW, {
-                id: cW,
-                styleId: wW
-              } = iL(iW.parentStyleSheet, mW, EW.styleMirror);
-              return (cW && -1 !== cW || wW && -1 !== wW) && OW({
-                id: cW,
-                styleId: wW,
+        const VR = {};
+        yq("CSSGroupingRule") ? VR.CSSGroupingRule = uR.CSSGroupingRule : (yq("CSSMediaRule") && (VR.CSSMediaRule = uR.CSSMediaRule), yq("CSSConditionRule") && (VR.CSSConditionRule = uR.CSSConditionRule), yq("CSSSupportsRule") && (VR.CSSSupportsRule = uR.CSSSupportsRule));
+        const KR = {};
+        return Object.entries(VR).forEach((RR => {
+          let [JR, uR] = RR;
+          KR[JR] = {
+            insertRule: uR.prototype.insertRule,
+            deleteRule: uR.prototype.deleteRule
+          }, uR.prototype.insertRule = new Proxy(KR[JR].insertRule, {
+            apply: jZ(((RR, JR, uR) => {
+              const [ZR, qR] = uR, {
+                id: iR,
+                styleId: fR
+              } = hZ(JR.parentStyleSheet, yR, tR.styleMirror);
+              return (iR && -1 !== iR || fR && -1 !== fR) && GR({
+                id: iR,
+                styleId: fR,
                 adds: [{
-                  rule: PW,
-                  index: [...WL(iW), LW || 0]
+                  rule: ZR,
+                  index: [...sZ(JR), qR || 0]
                 }]
-              }), WW.apply(iW, NW)
+              }), RR.apply(JR, uR)
             }))
-          }), NW.prototype.deleteRule = new Proxy(ZW[iW].deleteRule, {
-            apply: RP(((WW, iW, NW) => {
-              const [PW] = NW, {
-                id: LW,
-                styleId: cW
-              } = iL(iW.parentStyleSheet, mW, EW.styleMirror);
-              return (LW && -1 !== LW || cW && -1 !== cW) && OW({
-                id: LW,
-                styleId: cW,
+          }), uR.prototype.deleteRule = new Proxy(KR[JR].deleteRule, {
+            apply: jZ(((RR, JR, uR) => {
+              const [ZR] = uR, {
+                id: qR,
+                styleId: iR
+              } = hZ(JR.parentStyleSheet, yR, tR.styleMirror);
+              return (qR && -1 !== qR || iR && -1 !== iR) && GR({
+                id: qR,
+                styleId: iR,
                 removes: [{
-                  index: [...WL(iW), PW]
+                  index: [...sZ(JR), ZR]
                 }]
-              }), WW.apply(iW, NW)
+              }), RR.apply(JR, uR)
             }))
           })
-        })), RP((() => {
-          NW.CSSStyleSheet.prototype.insertRule = PW, NW.CSSStyleSheet.prototype.deleteRule = LW, cW && (NW.CSSStyleSheet.prototype.replace = cW), wW && (NW.CSSStyleSheet.prototype.replaceSync = wW), Object.entries(tW).forEach((WW => {
-            let [iW, OW] = WW;
-            OW.prototype.insertRule = ZW[iW].insertRule, OW.prototype.deleteRule = ZW[iW].deleteRule
+        })), jZ((() => {
+          uR.CSSStyleSheet.prototype.insertRule = ZR, uR.CSSStyleSheet.prototype.deleteRule = qR, iR && (uR.CSSStyleSheet.prototype.replace = iR), fR && (uR.CSSStyleSheet.prototype.replaceSync = fR), Object.entries(VR).forEach((RR => {
+            let [JR, GR] = RR;
+            GR.prototype.insertRule = KR[JR].insertRule, GR.prototype.deleteRule = KR[JR].deleteRule
           }))
         }))
-      }(WW, {
-        win: OW
-      }), xW = OL(WW, WW.doc), lW = function(WW, iW) {
+      }(RR, {
+        win: GR
+      }), wR = Rq(RR, RR.doc), rR = function(RR, JR) {
         let {
-          styleDeclarationCb: OW,
-          mirror: mW,
-          ignoreCSSAttributes: EW,
-          stylesheetManager: NW
-        } = WW, {
-          win: PW
-        } = iW;
-        const LW = PW.CSSStyleDeclaration.prototype.setProperty;
-        PW.CSSStyleDeclaration.prototype.setProperty = new Proxy(LW, {
-          apply: RP(((WW, iW, PW) => {
-            var cW;
-            const [wW, tW, ZW] = PW;
-            if (EW.has(wW)) return LW.apply(iW, [wW, tW, ZW]);
+          styleDeclarationCb: GR,
+          mirror: yR,
+          ignoreCSSAttributes: tR,
+          stylesheetManager: uR
+        } = RR, {
+          win: ZR
+        } = JR;
+        const qR = ZR.CSSStyleDeclaration.prototype.setProperty;
+        ZR.CSSStyleDeclaration.prototype.setProperty = new Proxy(qR, {
+          apply: jZ(((RR, JR, ZR) => {
+            var iR;
+            const [fR, VR, KR] = ZR;
+            if (tR.has(fR)) return qR.apply(JR, [fR, VR, KR]);
             const {
-              id: xW,
-              styleId: lW
-            } = iL(null == (cW = iW.parentRule) ? void 0 : cW.parentStyleSheet, mW, NW.styleMirror);
-            return (xW && -1 !== xW || lW && -1 !== lW) && OW({
-              id: xW,
-              styleId: lW,
+              id: wR,
+              styleId: rR
+            } = hZ(null == (iR = JR.parentRule) ? void 0 : iR.parentStyleSheet, yR, uR.styleMirror);
+            return (wR && -1 !== wR || rR && -1 !== rR) && GR({
+              id: wR,
+              styleId: rR,
               set: {
-                property: wW,
-                value: tW,
-                priority: ZW
+                property: fR,
+                value: VR,
+                priority: KR
               },
-              index: WL(iW.parentRule)
-            }), WW.apply(iW, PW)
+              index: sZ(JR.parentRule)
+            }), RR.apply(JR, ZR)
           }))
         });
-        const cW = PW.CSSStyleDeclaration.prototype.removeProperty;
-        return PW.CSSStyleDeclaration.prototype.removeProperty = new Proxy(cW, {
-          apply: RP(((WW, iW, PW) => {
-            var LW;
-            const [wW] = PW;
-            if (EW.has(wW)) return cW.apply(iW, [wW]);
+        const iR = ZR.CSSStyleDeclaration.prototype.removeProperty;
+        return ZR.CSSStyleDeclaration.prototype.removeProperty = new Proxy(iR, {
+          apply: jZ(((RR, JR, ZR) => {
+            var qR;
+            const [fR] = ZR;
+            if (tR.has(fR)) return iR.apply(JR, [fR]);
             const {
-              id: tW,
-              styleId: ZW
-            } = iL(null == (LW = iW.parentRule) ? void 0 : LW.parentStyleSheet, mW, NW.styleMirror);
-            return (tW && -1 !== tW || ZW && -1 !== ZW) && OW({
-              id: tW,
-              styleId: ZW,
+              id: VR,
+              styleId: KR
+            } = hZ(null == (qR = JR.parentRule) ? void 0 : qR.parentStyleSheet, yR, uR.styleMirror);
+            return (VR && -1 !== VR || KR && -1 !== KR) && GR({
+              id: VR,
+              styleId: KR,
               remove: {
-                property: wW
+                property: fR
               },
-              index: WL(iW.parentRule)
-            }), WW.apply(iW, PW)
+              index: sZ(JR.parentRule)
+            }), RR.apply(JR, ZR)
           }))
-        }), RP((() => {
-          PW.CSSStyleDeclaration.prototype.setProperty = LW, PW.CSSStyleDeclaration.prototype.removeProperty = cW
+        }), jZ((() => {
+          ZR.CSSStyleDeclaration.prototype.setProperty = qR, ZR.CSSStyleDeclaration.prototype.removeProperty = iR
         }))
-      }(WW, {
-        win: OW
-      }), WW.collectFonts && (AW = function(WW) {
+      }(RR, {
+        win: GR
+      }), RR.collectFonts && (eR = function(RR) {
         let {
-          fontCb: iW,
-          doc: OW
-        } = WW;
-        const mW = OW.defaultView;
-        if (!mW) return () => {};
-        const EW = [],
-          NW = new WeakMap,
-          PW = mW.FontFace;
-        mW.FontFace = function(WW, iW, OW) {
-          const mW = new PW(WW, iW, OW);
-          return NW.set(mW, {
-            family: WW,
-            buffer: "string" !== typeof iW,
-            descriptors: OW,
-            fontSource: "string" === typeof iW ? iW : JSON.stringify(Array.from(new Uint8Array(iW)))
-          }), mW
+          fontCb: JR,
+          doc: GR
+        } = RR;
+        const yR = GR.defaultView;
+        if (!yR) return () => {};
+        const tR = [],
+          uR = new WeakMap,
+          ZR = yR.FontFace;
+        yR.FontFace = function(RR, JR, GR) {
+          const yR = new ZR(RR, JR, GR);
+          return uR.set(yR, {
+            family: RR,
+            buffer: "string" !== typeof JR,
+            descriptors: GR,
+            fontSource: "string" === typeof JR ? JR : JSON.stringify(Array.from(new Uint8Array(JR)))
+          }), yR
         };
-        const LW = QN(OW.fonts, "add", (function(WW) {
-          return function(OW) {
-            return setTimeout(RP((() => {
-              const WW = NW.get(OW);
-              WW && (iW(WW), NW.delete(OW))
-            })), 0), WW.apply(this, [OW])
+        const qR = Tu(GR.fonts, "add", (function(RR) {
+          return function(GR) {
+            return setTimeout(jZ((() => {
+              const RR = uR.get(GR);
+              RR && (JR(RR), uR.delete(GR))
+            })), 0), RR.apply(this, [GR])
           }
         }));
-        return EW.push((() => {
-          mW.FontFace = PW
-        })), EW.push(LW), RP((() => {
-          EW.forEach((WW => WW()))
+        return tR.push((() => {
+          yR.FontFace = ZR
+        })), tR.push(qR), jZ((() => {
+          tR.forEach((RR => RR()))
         }))
-      }(WW)));
-      const bW = function(WW) {
+      }(RR)));
+      const aR = function(RR) {
           const {
-            doc: iW,
-            mirror: OW,
-            blockClass: mW,
-            blockSelector: EW,
-            selectionCb: NW
-          } = WW;
-          let PW = !0;
-          const LW = RP((() => {
-            const WW = iW.getSelection();
-            if (!WW || PW && (null == WW ? void 0 : WW.isCollapsed)) return;
-            PW = WW.isCollapsed || !1;
-            const LW = [],
-              cW = WW.rangeCount || 0;
-            for (let iW = 0; iW < cW; iW++) {
-              const NW = WW.getRangeAt(iW),
+            doc: JR,
+            mirror: GR,
+            blockClass: yR,
+            blockSelector: tR,
+            selectionCb: uR
+          } = RR;
+          let ZR = !0;
+          const qR = jZ((() => {
+            const RR = JR.getSelection();
+            if (!RR || ZR && (null == RR ? void 0 : RR.isCollapsed)) return;
+            ZR = RR.isCollapsed || !1;
+            const qR = [],
+              iR = RR.rangeCount || 0;
+            for (let JR = 0; JR < iR; JR++) {
+              const uR = RR.getRangeAt(JR),
                 {
-                  startContainer: PW,
-                  startOffset: cW,
-                  endContainer: wW,
-                  endOffset: tW
-                } = NW;
-              tP(PW, mW, EW, !0) || tP(wW, mW, EW, !0) || LW.push({
-                start: OW.getId(PW),
-                startOffset: cW,
-                end: OW.getId(wW),
-                endOffset: tW
+                  startContainer: ZR,
+                  startOffset: iR,
+                  endContainer: fR,
+                  endOffset: VR
+                } = uR;
+              iZ(ZR, yR, tR, !0) || iZ(fR, yR, tR, !0) || qR.push({
+                start: GR.getId(ZR),
+                startOffset: iR,
+                end: GR.getId(fR),
+                endOffset: VR
               })
             }
-            NW({
-              kj: LW
+            uR({
+              WL: qR
             })
           }));
-          return LW(), iP("selectionchange", LW)
-        }(WW),
-        jW = function(WW) {
+          return qR(), hu("selectionchange", qR)
+        }(RR),
+        LR = function(RR) {
           let {
-            doc: iW,
-            customElementCb: OW
-          } = WW;
-          const mW = iW.defaultView;
-          return mW && mW.customElements ? QN(mW.customElements, "define", (function(WW) {
-            return function(iW, mW, EW) {
+            doc: JR,
+            customElementCb: GR
+          } = RR;
+          const yR = JR.defaultView;
+          return yR && yR.customElements ? Tu(yR.customElements, "define", (function(RR) {
+            return function(JR, yR, tR) {
               try {
-                OW({
+                GR({
                   define: {
-                    name: iW
+                    name: JR
                   }
                 })
-              } catch (NW) {
-                console.warn(`Custom element callback failed for ${iW}`)
+              } catch (uR) {
+                console.warn(`Custom element callback failed for ${JR}`)
               }
-              return WW.apply(this, [iW, mW, EW])
+              return RR.apply(this, [JR, yR, tR])
             }
           })) : () => {}
-        }(WW),
-        UW = [];
-      for (const kW of WW.plugins) UW.push(kW.observer(kW.callback, OW, kW.options));
-      return RP((() => {
-        GP.forEach((WW => WW.reset())), null == mW || mW.disconnect(), EW(), NW(), PW(), LW(), cW(), wW(), tW(), ZW(), xW(), lW(), AW(), bW(), jW(), UW.forEach((WW => WW()))
+        }(RR),
+        nR = [];
+      for (const UR of RR.plugins) nR.push(UR.observer(UR.callback, GR, UR.options));
+      return jZ((() => {
+        dZ.forEach((RR => RR.reset())), null == yR || yR.disconnect(), tR(), uR(), ZR(), qR(), iR(), fR(), VR(), KR(), wR(), rR(), eR(), aR(), LR(), nR.forEach((RR => RR()))
       }))
     }
 
-    function EL(WW) {
-      return "undefined" !== typeof window[WW]
+    function Gq(RR) {
+      return "undefined" !== typeof window[RR]
     }
 
-    function NL(WW) {
-      return Boolean("undefined" !== typeof window[WW] && window[WW].prototype && "insertRule" in window[WW].prototype && "deleteRule" in window[WW].prototype)
+    function yq(RR) {
+      return Boolean("undefined" !== typeof window[RR] && window[RR].prototype && "insertRule" in window[RR].prototype && "deleteRule" in window[RR].prototype)
     }
-    class PL {
-      constructor(WW) {
-        NW(this, "iframeIdToRemoteIdMap", new WeakMap), NW(this, "iframeRemoteIdToIdMap", new WeakMap), this.generateIdFn = WW
+    class tq {
+      constructor(RR) {
+        uR(this, "iframeIdToRemoteIdMap", new WeakMap), uR(this, "iframeRemoteIdToIdMap", new WeakMap), this.generateIdFn = RR
       }
-      getId(WW, iW, OW, mW) {
-        const EW = OW || this.getIdToRemoteIdMap(WW),
-          NW = mW || this.getRemoteIdToIdMap(WW);
-        let PW = EW.get(iW);
-        return PW || (PW = this.generateIdFn(), EW.set(iW, PW), NW.set(PW, iW)), PW
+      getId(RR, JR, GR, yR) {
+        const tR = GR || this.getIdToRemoteIdMap(RR),
+          uR = yR || this.getRemoteIdToIdMap(RR);
+        let ZR = tR.get(JR);
+        return ZR || (ZR = this.generateIdFn(), tR.set(JR, ZR), uR.set(ZR, JR)), ZR
       }
-      getIds(WW, iW) {
-        const OW = this.getIdToRemoteIdMap(WW),
-          mW = this.getRemoteIdToIdMap(WW);
-        return iW.map((iW => this.getId(WW, iW, OW, mW)))
+      getIds(RR, JR) {
+        const GR = this.getIdToRemoteIdMap(RR),
+          yR = this.getRemoteIdToIdMap(RR);
+        return JR.map((JR => this.getId(RR, JR, GR, yR)))
       }
-      getRemoteId(WW, iW, OW) {
-        const mW = OW || this.getRemoteIdToIdMap(WW);
-        if ("number" !== typeof iW) return iW;
-        const EW = mW.get(iW);
-        return EW || -1
+      getRemoteId(RR, JR, GR) {
+        const yR = GR || this.getRemoteIdToIdMap(RR);
+        if ("number" !== typeof JR) return JR;
+        const tR = yR.get(JR);
+        return tR || -1
       }
-      getRemoteIds(WW, iW) {
-        const OW = this.getRemoteIdToIdMap(WW);
-        return iW.map((iW => this.getRemoteId(WW, iW, OW)))
+      getRemoteIds(RR, JR) {
+        const GR = this.getRemoteIdToIdMap(RR);
+        return JR.map((JR => this.getRemoteId(RR, JR, GR)))
       }
-      reset(WW) {
-        if (!WW) return this.iframeIdToRemoteIdMap = new WeakMap, void(this.iframeRemoteIdToIdMap = new WeakMap);
-        this.iframeIdToRemoteIdMap.delete(WW), this.iframeRemoteIdToIdMap.delete(WW)
+      reset(RR) {
+        if (!RR) return this.iframeIdToRemoteIdMap = new WeakMap, void(this.iframeRemoteIdToIdMap = new WeakMap);
+        this.iframeIdToRemoteIdMap.delete(RR), this.iframeRemoteIdToIdMap.delete(RR)
       }
-      getIdToRemoteIdMap(WW) {
-        let iW = this.iframeIdToRemoteIdMap.get(WW);
-        return iW || (iW = new Map, this.iframeIdToRemoteIdMap.set(WW, iW)), iW
+      getIdToRemoteIdMap(RR) {
+        let JR = this.iframeIdToRemoteIdMap.get(RR);
+        return JR || (JR = new Map, this.iframeIdToRemoteIdMap.set(RR, JR)), JR
       }
-      getRemoteIdToIdMap(WW) {
-        let iW = this.iframeRemoteIdToIdMap.get(WW);
-        return iW || (iW = new Map, this.iframeRemoteIdToIdMap.set(WW, iW)), iW
+      getRemoteIdToIdMap(RR) {
+        let JR = this.iframeRemoteIdToIdMap.get(RR);
+        return JR || (JR = new Map, this.iframeRemoteIdToIdMap.set(RR, JR)), JR
       }
     }
-    class LL {
-      constructor(WW) {
-        NW(this, "iframes", new WeakMap), NW(this, "crossOriginIframeMap", new WeakMap), NW(this, "crossOriginIframeMirror", new PL(RW)), NW(this, "crossOriginIframeStyleMirror"), NW(this, "crossOriginIframeRootIdMap", new WeakMap), NW(this, "mirror"), NW(this, "mutationCb"), NW(this, "wrappedEmit"), NW(this, "loadListener"), NW(this, "stylesheetManager"), NW(this, "recordCrossOriginIframes"), this.mutationCb = WW.mutationCb, this.wrappedEmit = WW.wrappedEmit, this.stylesheetManager = WW.stylesheetManager, this.recordCrossOriginIframes = WW.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new PL(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = WW.mirror, this.recordCrossOriginIframes && window.addEventListener("message", this.handleMessage.bind(this))
+    class uq {
+      constructor(RR) {
+        uR(this, "iframes", new WeakMap), uR(this, "crossOriginIframeMap", new WeakMap), uR(this, "crossOriginIframeMirror", new tq(ER)), uR(this, "crossOriginIframeStyleMirror"), uR(this, "crossOriginIframeRootIdMap", new WeakMap), uR(this, "mirror"), uR(this, "mutationCb"), uR(this, "wrappedEmit"), uR(this, "loadListener"), uR(this, "stylesheetManager"), uR(this, "recordCrossOriginIframes"), this.mutationCb = RR.mutationCb, this.wrappedEmit = RR.wrappedEmit, this.stylesheetManager = RR.stylesheetManager, this.recordCrossOriginIframes = RR.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new tq(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = RR.mirror, this.recordCrossOriginIframes && window.addEventListener("message", this.handleMessage.bind(this))
       }
-      addIframe(WW) {
-        this.iframes.set(WW, !0), WW.contentWindow && this.crossOriginIframeMap.set(WW.contentWindow, WW)
+      addIframe(RR) {
+        this.iframes.set(RR, !0), RR.contentWindow && this.crossOriginIframeMap.set(RR.contentWindow, RR)
       }
-      addLoadListener(WW) {
-        this.loadListener = WW
+      addLoadListener(RR) {
+        this.loadListener = RR
       }
-      attachIframe(WW, iW) {
-        var OW, mW;
+      attachIframe(RR, JR) {
+        var GR, yR;
         this.mutationCb({
           adds: [{
-            parentId: this.mirror.getId(WW),
+            parentId: this.mirror.getId(RR),
             nextId: null,
-            node: iW
+            node: JR
           }],
           removes: [],
           texts: [],
           attributes: [],
           isAttachIframe: !0
-        }), this.recordCrossOriginIframes && (null == (OW = WW.contentWindow) || OW.addEventListener("message", this.handleMessage.bind(this))), null == (mW = this.loadListener) || mW.call(this, WW), WW.contentDocument && WW.contentDocument.adoptedStyleSheets && WW.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(WW.contentDocument.adoptedStyleSheets, this.mirror.getId(WW.contentDocument))
+        }), this.recordCrossOriginIframes && (null == (GR = RR.contentWindow) || GR.addEventListener("message", this.handleMessage.bind(this))), null == (yR = this.loadListener) || yR.call(this, RR), RR.contentDocument && RR.contentDocument.adoptedStyleSheets && RR.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(RR.contentDocument.adoptedStyleSheets, this.mirror.getId(RR.contentDocument))
       }
-      handleMessage(WW) {
-        const iW = WW;
-        if ("rrweb" !== iW.data.type || iW.origin !== iW.data.origin) return;
-        if (!WW.source) return;
-        const OW = this.crossOriginIframeMap.get(WW.source);
-        if (!OW) return;
-        const mW = this.transformCrossOriginEvent(OW, iW.data.event);
-        mW && this.wrappedEmit(mW, iW.data.isCheckout)
+      handleMessage(RR) {
+        const JR = RR;
+        if ("rrweb" !== JR.data.type || JR.origin !== JR.data.origin) return;
+        if (!RR.source) return;
+        const GR = this.crossOriginIframeMap.get(RR.source);
+        if (!GR) return;
+        const yR = this.transformCrossOriginEvent(GR, JR.data.event);
+        yR && this.wrappedEmit(yR, JR.data.isCheckout)
       }
-      transformCrossOriginEvent(WW, iW) {
-        var OW;
-        switch (iW.type) {
-          case uP.FullSnapshot: {
-            this.crossOriginIframeMirror.reset(WW), this.crossOriginIframeStyleMirror.reset(WW), this.replaceIdOnNode(iW.data.node, WW);
-            const OW = iW.data.node.id;
-            return this.crossOriginIframeRootIdMap.set(WW, OW), this.patchRootIdOnNode(iW.data.node, OW), {
-              timestamp: iW.timestamp,
-              type: uP.IncrementalSnapshot,
+      transformCrossOriginEvent(RR, JR) {
+        var GR;
+        switch (JR.type) {
+          case bZ.FullSnapshot: {
+            this.crossOriginIframeMirror.reset(RR), this.crossOriginIframeStyleMirror.reset(RR), this.replaceIdOnNode(JR.data.node, RR);
+            const GR = JR.data.node.id;
+            return this.crossOriginIframeRootIdMap.set(RR, GR), this.patchRootIdOnNode(JR.data.node, GR), {
+              timestamp: JR.timestamp,
+              type: bZ.IncrementalSnapshot,
               data: {
-                source: oP.Mutation,
+                source: vZ.Mutation,
                 adds: [{
-                  parentId: this.mirror.getId(WW),
+                  parentId: this.mirror.getId(RR),
                   nextId: null,
-                  node: iW.data.node
+                  node: JR.data.node
                 }],
                 removes: [],
                 texts: [],
@@ -8256,315 +8256,315 @@ export const modules = {
               }
             }
           }
-          case uP.Meta:
-          case uP.Load:
-          case uP.DomContentLoaded:
+          case bZ.Meta:
+          case bZ.Load:
+          case bZ.DomContentLoaded:
             return !1;
-          case uP.Plugin:
-            return iW;
-          case uP.Custom:
-            return this.replaceIds(iW.data.payload, WW, ["id", "parentId", "previousId", "nextId"]), iW;
-          case uP.IncrementalSnapshot:
-            switch (iW.data.source) {
-              case oP.Mutation:
-                return iW.data.adds.forEach((iW => {
-                  this.replaceIds(iW, WW, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(iW.node, WW);
-                  const OW = this.crossOriginIframeRootIdMap.get(WW);
-                  OW && this.patchRootIdOnNode(iW.node, OW)
-                })), iW.data.removes.forEach((iW => {
-                  this.replaceIds(iW, WW, ["parentId", "id"])
-                })), iW.data.attributes.forEach((iW => {
-                  this.replaceIds(iW, WW, ["id"])
-                })), iW.data.texts.forEach((iW => {
-                  this.replaceIds(iW, WW, ["id"])
-                })), iW;
-              case oP.Drag:
-              case oP.TouchMove:
-              case oP.MouseMove:
-                return iW.data.positions.forEach((iW => {
-                  this.replaceIds(iW, WW, ["id"])
-                })), iW;
-              case oP.ViewportResize:
+          case bZ.Plugin:
+            return JR;
+          case bZ.Custom:
+            return this.replaceIds(JR.data.payload, RR, ["id", "parentId", "previousId", "nextId"]), JR;
+          case bZ.IncrementalSnapshot:
+            switch (JR.data.source) {
+              case vZ.Mutation:
+                return JR.data.adds.forEach((JR => {
+                  this.replaceIds(JR, RR, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(JR.node, RR);
+                  const GR = this.crossOriginIframeRootIdMap.get(RR);
+                  GR && this.patchRootIdOnNode(JR.node, GR)
+                })), JR.data.removes.forEach((JR => {
+                  this.replaceIds(JR, RR, ["parentId", "id"])
+                })), JR.data.attributes.forEach((JR => {
+                  this.replaceIds(JR, RR, ["id"])
+                })), JR.data.texts.forEach((JR => {
+                  this.replaceIds(JR, RR, ["id"])
+                })), JR;
+              case vZ.Drag:
+              case vZ.TouchMove:
+              case vZ.MouseMove:
+                return JR.data.positions.forEach((JR => {
+                  this.replaceIds(JR, RR, ["id"])
+                })), JR;
+              case vZ.ViewportResize:
                 return !1;
-              case oP.MediaInteraction:
-              case oP.MouseInteraction:
-              case oP.Scroll:
-              case oP.CanvasMutation:
-              case oP.Input:
-                return this.replaceIds(iW.data, WW, ["id"]), iW;
-              case oP.StyleSheetRule:
-              case oP.StyleDeclaration:
-                return this.replaceIds(iW.data, WW, ["id"]), this.replaceStyleIds(iW.data, WW, ["styleId"]), iW;
-              case oP.Font:
-                return iW;
-              case oP.Selection:
-                return iW.data.kj.forEach((iW => {
-                  this.replaceIds(iW, WW, ["start", "end"])
-                })), iW;
-              case oP.AdoptedStyleSheet:
-                return this.replaceIds(iW.data, WW, ["id"]), this.replaceStyleIds(iW.data, WW, ["styleIds"]), null == (OW = iW.data.styles) || OW.forEach((iW => {
-                  this.replaceStyleIds(iW, WW, ["styleId"])
-                })), iW
+              case vZ.MediaInteraction:
+              case vZ.MouseInteraction:
+              case vZ.Scroll:
+              case vZ.CanvasMutation:
+              case vZ.Input:
+                return this.replaceIds(JR.data, RR, ["id"]), JR;
+              case vZ.StyleSheetRule:
+              case vZ.StyleDeclaration:
+                return this.replaceIds(JR.data, RR, ["id"]), this.replaceStyleIds(JR.data, RR, ["styleId"]), JR;
+              case vZ.Font:
+                return JR;
+              case vZ.Selection:
+                return JR.data.WL.forEach((JR => {
+                  this.replaceIds(JR, RR, ["start", "end"])
+                })), JR;
+              case vZ.AdoptedStyleSheet:
+                return this.replaceIds(JR.data, RR, ["id"]), this.replaceStyleIds(JR.data, RR, ["styleIds"]), null == (GR = JR.data.styles) || GR.forEach((JR => {
+                  this.replaceStyleIds(JR, RR, ["styleId"])
+                })), JR
             }
         }
         return !1
       }
-      replace(WW, iW, OW, mW) {
-        for (const EW of mW)(Array.isArray(iW[EW]) || "number" === typeof iW[EW]) && (Array.isArray(iW[EW]) ? iW[EW] = WW.getIds(OW, iW[EW]) : iW[EW] = WW.getId(OW, iW[EW]));
-        return iW
+      replace(RR, JR, GR, yR) {
+        for (const tR of yR)(Array.isArray(JR[tR]) || "number" === typeof JR[tR]) && (Array.isArray(JR[tR]) ? JR[tR] = RR.getIds(GR, JR[tR]) : JR[tR] = RR.getId(GR, JR[tR]));
+        return JR
       }
-      replaceIds(WW, iW, OW) {
-        return this.replace(this.crossOriginIframeMirror, WW, iW, OW)
+      replaceIds(RR, JR, GR) {
+        return this.replace(this.crossOriginIframeMirror, RR, JR, GR)
       }
-      replaceStyleIds(WW, iW, OW) {
-        return this.replace(this.crossOriginIframeStyleMirror, WW, iW, OW)
+      replaceStyleIds(RR, JR, GR) {
+        return this.replace(this.crossOriginIframeStyleMirror, RR, JR, GR)
       }
-      replaceIdOnNode(WW, iW) {
-        this.replaceIds(WW, iW, ["id", "rootId"]), "childNodes" in WW && WW.childNodes.forEach((WW => {
-          this.replaceIdOnNode(WW, iW)
+      replaceIdOnNode(RR, JR) {
+        this.replaceIds(RR, JR, ["id", "rootId"]), "childNodes" in RR && RR.childNodes.forEach((RR => {
+          this.replaceIdOnNode(RR, JR)
         }))
       }
-      patchRootIdOnNode(WW, iW) {
-        WW.type === VP.Document || WW.rootId || (WW.rootId = iW), "childNodes" in WW && WW.childNodes.forEach((WW => {
-          this.patchRootIdOnNode(WW, iW)
+      patchRootIdOnNode(RR, JR) {
+        RR.type === oZ.Document || RR.rootId || (RR.rootId = JR), "childNodes" in RR && RR.childNodes.forEach((RR => {
+          this.patchRootIdOnNode(RR, JR)
         }))
       }
     }
-    class cL {
-      constructor(WW) {
-        NW(this, "shadowDoms", new WeakSet), NW(this, "mutationCb"), NW(this, "scrollCb"), NW(this, "bypassOptions"), NW(this, "mirror"), NW(this, "restoreHandlers", []), this.mutationCb = WW.mutationCb, this.scrollCb = WW.scrollCb, this.bypassOptions = WW.bypassOptions, this.mirror = WW.mirror, this.init()
+    class Zq {
+      constructor(RR) {
+        uR(this, "shadowDoms", new WeakSet), uR(this, "mutationCb"), uR(this, "scrollCb"), uR(this, "bypassOptions"), uR(this, "mirror"), uR(this, "restoreHandlers", []), this.mutationCb = RR.mutationCb, this.scrollCb = RR.scrollCb, this.bypassOptions = RR.bypassOptions, this.mirror = RR.mirror, this.init()
       }
       init() {
         this.reset(), this.patchAttachShadow(Element, document)
       }
-      addShadowRoot(WW, iW) {
-        if (!SW(WW)) return;
-        if (this.shadowDoms.has(WW)) return;
-        this.shadowDoms.add(WW);
-        const [OW] = aP({
+      addShadowRoot(RR, JR) {
+        if (!XR(RR)) return;
+        if (this.shadowDoms.has(RR)) return;
+        this.shadowDoms.add(RR);
+        const [GR] = YZ({
           ...this.bypassOptions,
-          doc: iW,
+          doc: JR,
           mutationCb: this.mutationCb,
           mirror: this.mirror,
           shadowDomManager: this
-        }, WW);
-        this.restoreHandlers.push((() => OW.disconnect())), this.restoreHandlers.push(zP({
+        }, RR);
+        this.restoreHandlers.push((() => GR.disconnect())), this.restoreHandlers.push(QZ({
           ...this.bypassOptions,
           scrollCb: this.scrollCb,
-          doc: WW,
+          doc: RR,
           mirror: this.mirror
         })), setTimeout((() => {
-          WW.adoptedStyleSheets && WW.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(WW.adoptedStyleSheets, this.mirror.getId(WP.host(WW))), this.restoreHandlers.push(OL({
+          RR.adoptedStyleSheets && RR.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(RR.adoptedStyleSheets, this.mirror.getId(su.host(RR))), this.restoreHandlers.push(Rq({
             mirror: this.mirror,
             stylesheetManager: this.bypassOptions.stylesheetManager
-          }, WW))
+          }, RR))
         }), 0)
       }
-      observeAttachShadow(WW) {
-        WW.contentWindow && WW.contentDocument && this.patchAttachShadow(WW.contentWindow.Element, WW.contentDocument)
+      observeAttachShadow(RR) {
+        RR.contentWindow && RR.contentDocument && this.patchAttachShadow(RR.contentWindow.Element, RR.contentDocument)
       }
-      patchAttachShadow(WW, iW) {
-        const OW = this;
-        this.restoreHandlers.push(QN(WW.prototype, "attachShadow", (function(WW) {
-          return function(mW) {
-            const EW = WW.call(this, mW),
-              NW = WP.shadowRoot(this);
-            return NW && nP(this) && OW.addShadowRoot(NW, iW), EW
+      patchAttachShadow(RR, JR) {
+        const GR = this;
+        this.restoreHandlers.push(Tu(RR.prototype, "attachShadow", (function(RR) {
+          return function(yR) {
+            const tR = RR.call(this, yR),
+              uR = su.shadowRoot(this);
+            return uR && gZ(this) && GR.addShadowRoot(uR, JR), tR
           }
         })))
       }
       reset() {
-        this.restoreHandlers.forEach((WW => {
+        this.restoreHandlers.forEach((RR => {
           try {
-            WW()
-          } catch (iW) {}
+            RR()
+          } catch (JR) {}
         })), this.restoreHandlers = [], this.shadowDoms = new WeakSet
       }
     }
-    for (var wL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", tL = "undefined" === typeof Uint8Array ? [] : new Uint8Array(256), ZL = 0; ZL < 64; ZL++) tL[wL.charCodeAt(ZL)] = ZL;
-    const xL = new Map;
-    const lL = (WW, iW, OW) => {
-      if (!WW || !jL(WW, iW) && "object" !== typeof WW) return;
-      const mW = function(WW, iW) {
-        let OW = xL.get(WW);
-        return OW || (OW = new Map, xL.set(WW, OW)), OW.has(iW) || OW.set(iW, []), OW.get(iW)
-      }(OW, WW.constructor.name);
-      let EW = mW.indexOf(WW);
-      return -1 === EW && (EW = mW.length, mW.push(WW)), EW
+    for (var qq = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", iq = "undefined" === typeof Uint8Array ? [] : new Uint8Array(256), fq = 0; fq < 64; fq++) iq[qq.charCodeAt(fq)] = fq;
+    const Vq = new Map;
+    const Kq = (RR, JR, GR) => {
+      if (!RR || !eq(RR, JR) && "object" !== typeof RR) return;
+      const yR = function(RR, JR) {
+        let GR = Vq.get(RR);
+        return GR || (GR = new Map, Vq.set(RR, GR)), GR.has(JR) || GR.set(JR, []), GR.get(JR)
+      }(GR, RR.constructor.name);
+      let tR = yR.indexOf(RR);
+      return -1 === tR && (tR = yR.length, yR.push(RR)), tR
     };
 
-    function AL(WW, iW, OW) {
-      if (WW instanceof Array) return WW.map((WW => AL(WW, iW, OW)));
-      if (null === WW) return WW;
-      if (WW instanceof Float32Array || WW instanceof Float64Array || WW instanceof Int32Array || WW instanceof Uint32Array || WW instanceof Uint8Array || WW instanceof Uint16Array || WW instanceof Int16Array || WW instanceof Int8Array || WW instanceof Uint8ClampedArray) {
+    function wq(RR, JR, GR) {
+      if (RR instanceof Array) return RR.map((RR => wq(RR, JR, GR)));
+      if (null === RR) return RR;
+      if (RR instanceof Float32Array || RR instanceof Float64Array || RR instanceof Int32Array || RR instanceof Uint32Array || RR instanceof Uint8Array || RR instanceof Uint16Array || RR instanceof Int16Array || RR instanceof Int8Array || RR instanceof Uint8ClampedArray) {
         return {
-          rr_type: WW.constructor.name,
-          args: [Object.values(WW)]
+          rr_type: RR.constructor.name,
+          args: [Object.values(RR)]
         }
       }
-      if (WW instanceof ArrayBuffer) {
+      if (RR instanceof ArrayBuffer) {
         return {
-          rr_type: WW.constructor.name,
-          base64: function(WW) {
-            var iW, OW = new Uint8Array(WW),
-              mW = OW.length,
-              EW = "";
-            for (iW = 0; iW < mW; iW += 3) EW += wL[OW[iW] >> 2], EW += wL[(3 & OW[iW]) << 4 | OW[iW + 1] >> 4], EW += wL[(15 & OW[iW + 1]) << 2 | OW[iW + 2] >> 6], EW += wL[63 & OW[iW + 2]];
-            return mW % 3 === 2 ? EW = EW.substring(0, EW.length - 1) + "=" : mW % 3 === 1 && (EW = EW.substring(0, EW.length - 2) + "=="), EW
-          }(WW)
+          rr_type: RR.constructor.name,
+          base64: function(RR) {
+            var JR, GR = new Uint8Array(RR),
+              yR = GR.length,
+              tR = "";
+            for (JR = 0; JR < yR; JR += 3) tR += qq[GR[JR] >> 2], tR += qq[(3 & GR[JR]) << 4 | GR[JR + 1] >> 4], tR += qq[(15 & GR[JR + 1]) << 2 | GR[JR + 2] >> 6], tR += qq[63 & GR[JR + 2]];
+            return yR % 3 === 2 ? tR = tR.substring(0, tR.length - 1) + "=" : yR % 3 === 1 && (tR = tR.substring(0, tR.length - 2) + "=="), tR
+          }(RR)
         }
       }
-      if (WW instanceof DataView) {
+      if (RR instanceof DataView) {
         return {
-          rr_type: WW.constructor.name,
-          args: [AL(WW.buffer, iW, OW), WW.byteOffset, WW.byteLength]
+          rr_type: RR.constructor.name,
+          args: [wq(RR.buffer, JR, GR), RR.byteOffset, RR.byteLength]
         }
       }
-      if (WW instanceof HTMLImageElement) {
-        const iW = WW.constructor.name,
+      if (RR instanceof HTMLImageElement) {
+        const JR = RR.constructor.name,
           {
-            src: OW
-          } = WW;
+            src: GR
+          } = RR;
         return {
-          rr_type: iW,
-          src: OW
+          rr_type: JR,
+          src: GR
         }
       }
-      if (WW instanceof HTMLCanvasElement) {
+      if (RR instanceof HTMLCanvasElement) {
         return {
           rr_type: "HTMLImageElement",
-          src: WW.toDataURL()
+          src: RR.toDataURL()
         }
       }
-      if (WW instanceof ImageData) {
+      if (RR instanceof ImageData) {
         return {
-          rr_type: WW.constructor.name,
-          args: [AL(WW.data, iW, OW), WW.width, WW.height]
+          rr_type: RR.constructor.name,
+          args: [wq(RR.data, JR, GR), RR.width, RR.height]
         }
       }
-      if (jL(WW, iW) || "object" === typeof WW) {
+      if (eq(RR, JR) || "object" === typeof RR) {
         return {
-          rr_type: WW.constructor.name,
-          index: lL(WW, iW, OW)
+          rr_type: RR.constructor.name,
+          index: Kq(RR, JR, GR)
         }
       }
-      return WW
+      return RR
     }
-    const bL = (WW, iW, OW) => WW.map((WW => AL(WW, iW, OW))),
-      jL = (WW, iW) => {
-        const OW = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((WW => "function" === typeof iW[WW]));
-        return Boolean(OW.find((OW => WW instanceof iW[OW])))
+    const rq = (RR, JR, GR) => RR.map((RR => wq(RR, JR, GR))),
+      eq = (RR, JR) => {
+        const GR = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((RR => "function" === typeof JR[RR]));
+        return Boolean(GR.find((GR => RR instanceof JR[GR])))
       };
 
-    function UL(WW, iW, OW, mW) {
-      const EW = [];
+    function aq(RR, JR, GR, yR) {
+      const tR = [];
       try {
-        const NW = QN(WW.HTMLCanvasElement.prototype, "getContext", (function(WW) {
-          return function(EW) {
-            for (var NW = arguments.length, PW = new Array(NW > 1 ? NW - 1 : 0), LW = 1; LW < NW; LW++) PW[LW - 1] = arguments[LW];
-            if (!tP(this, iW, OW, !0)) {
-              const WW = function(WW) {
-                return "experimental-webgl" === WW ? "webgl" : WW
-              }(EW);
-              if ("__context" in this || (this.__context = WW), mW && ["webgl", "webgl2"].includes(WW))
-                if (PW[0] && "object" === typeof PW[0]) {
-                  const WW = PW[0];
-                  WW.preserveDrawingBuffer || (WW.preserveDrawingBuffer = !0)
-                } else PW.splice(0, 1, {
+        const uR = Tu(RR.HTMLCanvasElement.prototype, "getContext", (function(RR) {
+          return function(tR) {
+            for (var uR = arguments.length, ZR = new Array(uR > 1 ? uR - 1 : 0), qR = 1; qR < uR; qR++) ZR[qR - 1] = arguments[qR];
+            if (!iZ(this, JR, GR, !0)) {
+              const RR = function(RR) {
+                return "experimental-webgl" === RR ? "webgl" : RR
+              }(tR);
+              if ("__context" in this || (this.__context = RR), yR && ["webgl", "webgl2"].includes(RR))
+                if (ZR[0] && "object" === typeof ZR[0]) {
+                  const RR = ZR[0];
+                  RR.preserveDrawingBuffer || (RR.preserveDrawingBuffer = !0)
+                } else ZR.splice(0, 1, {
                   preserveDrawingBuffer: !0
                 })
             }
-            return WW.apply(this, [EW, ...PW])
+            return RR.apply(this, [tR, ...ZR])
           }
         }));
-        EW.push(NW)
+        tR.push(uR)
       } catch {
         console.error("failed to patch HTMLCanvasElement.prototype.getContext")
       }
       return () => {
-        EW.forEach((WW => WW()))
+        tR.forEach((RR => RR()))
       }
     }
 
-    function kL(WW, iW, OW, mW, EW, NW) {
-      const PW = [],
-        LW = Object.getOwnPropertyNames(WW);
-      for (const cW of LW)
-        if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(cW)) try {
-          if ("function" !== typeof WW[cW]) continue;
-          const LW = QN(WW, cW, (function(WW) {
+    function Lq(RR, JR, GR, yR, tR, uR) {
+      const ZR = [],
+        qR = Object.getOwnPropertyNames(RR);
+      for (const iR of qR)
+        if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(iR)) try {
+          if ("function" !== typeof RR[iR]) continue;
+          const qR = Tu(RR, iR, (function(RR) {
             return function() {
-              for (var PW = arguments.length, LW = new Array(PW), wW = 0; wW < PW; wW++) LW[wW] = arguments[wW];
-              const tW = WW.apply(this, LW);
-              if (lL(tW, NW, this), "tagName" in this.canvas && !tP(this.canvas, mW, EW, !0)) {
-                const WW = bL(LW, NW, this),
-                  mW = {
-                    type: iW,
-                    property: cW,
-                    args: WW
+              for (var ZR = arguments.length, qR = new Array(ZR), fR = 0; fR < ZR; fR++) qR[fR] = arguments[fR];
+              const VR = RR.apply(this, qR);
+              if (Kq(VR, uR, this), "tagName" in this.canvas && !iZ(this.canvas, yR, tR, !0)) {
+                const RR = rq(qR, uR, this),
+                  yR = {
+                    type: JR,
+                    property: iR,
+                    args: RR
                   };
-                OW(this.canvas, mW)
+                GR(this.canvas, yR)
               }
-              return tW
+              return VR
             }
           }));
-          PW.push(LW)
+          ZR.push(qR)
         } catch {
-          const mW = NP(WW, cW, {
-            set(WW) {
-              OW(this.canvas, {
-                type: iW,
-                property: cW,
-                args: [WW],
+          const yR = yZ(RR, iR, {
+            set(RR) {
+              GR(this.canvas, {
+                type: JR,
+                property: iR,
+                args: [RR],
                 setter: !0
               })
             }
           });
-          PW.push(mW)
+          ZR.push(yR)
         }
-      return PW
+      return ZR
     }
-    const sL = '(function() {\n  "use strict";\n  var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n  var lookup = typeof Uint8Array === "undefined" ? [] : new Uint8Array(256);\n  for (var i = 0; i < chars.length; i++) {\n    lookup[chars.charCodeAt(i)] = i;\n  }\n  var encode = function(arraybuffer) {\n    var bytes = new Uint8Array(arraybuffer), i2, len = bytes.length, base64 = "";\n    for (i2 = 0; i2 < len; i2 += 3) {\n      base64 += chars[bytes[i2] >> 2];\n      base64 += chars[(bytes[i2] & 3) << 4 | bytes[i2 + 1] >> 4];\n      base64 += chars[(bytes[i2 + 1] & 15) << 2 | bytes[i2 + 2] >> 6];\n      base64 += chars[bytes[i2 + 2] & 63];\n    }\n    if (len % 3 === 2) {\n      base64 = base64.substring(0, base64.length - 1) + "=";\n    } else if (len % 3 === 1) {\n      base64 = base64.substring(0, base64.length - 2) + "==";\n    }\n    return base64;\n  };\n  const lastBlobMap = /* @__PURE__ */ new Map();\n  const transparentBlobMap = /* @__PURE__ */ new Map();\n  async function getTransparentBlobFor(width, height, dataURLOptions) {\n    const id = `${width}-${height}`;\n    if ("OffscreenCanvas" in globalThis) {\n      if (transparentBlobMap.has(id)) return transparentBlobMap.get(id);\n      const offscreen = new OffscreenCanvas(width, height);\n      offscreen.getContext("2d");\n      const blob = await offscreen.convertToBlob(dataURLOptions);\n      const arrayBuffer = await blob.arrayBuffer();\n      const base64 = encode(arrayBuffer);\n      transparentBlobMap.set(id, base64);\n      return base64;\n    } else {\n      return "";\n    }\n  }\n  const worker = self;\n  worker.onmessage = async function(e) {\n    if ("OffscreenCanvas" in globalThis) {\n      const { id, bitmap, width, height, dataURLOptions } = e.data;\n      const transparentBase64 = getTransparentBlobFor(\n        width,\n        height,\n        dataURLOptions\n      );\n      const offscreen = new OffscreenCanvas(width, height);\n      const ctx = offscreen.getContext("2d");\n      ctx.drawImage(bitmap, 0, 0);\n      bitmap.close();\n      const blob = await offscreen.convertToBlob(dataURLOptions);\n      const type = blob.type;\n      const arrayBuffer = await blob.arrayBuffer();\n      const base64 = encode(arrayBuffer);\n      if (!lastBlobMap.has(id) && await transparentBase64 === base64) {\n        lastBlobMap.set(id, base64);\n        return worker.postMessage({ id });\n      }\n      if (lastBlobMap.get(id) === base64) return worker.postMessage({ id });\n      worker.postMessage({\n        id,\n        type,\n        base64,\n        width,\n        height\n      });\n      lastBlobMap.set(id, base64);\n    } else {\n      return worker.postMessage({ id: e.data.id });\n    }\n  };\n})();\n//# sourceMappingURL=image-bitmap-data-url-worker-IJpC7g_b.js.map\n',
-      ML = "undefined" !== typeof self && self.Blob && new Blob([sL], {
+    const nq = '(function() {\n  "use strict";\n  var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n  var lookup = typeof Uint8Array === "undefined" ? [] : new Uint8Array(256);\n  for (var i = 0; i < chars.length; i++) {\n    lookup[chars.charCodeAt(i)] = i;\n  }\n  var encode = function(arraybuffer) {\n    var bytes = new Uint8Array(arraybuffer), i2, len = bytes.length, base64 = "";\n    for (i2 = 0; i2 < len; i2 += 3) {\n      base64 += chars[bytes[i2] >> 2];\n      base64 += chars[(bytes[i2] & 3) << 4 | bytes[i2 + 1] >> 4];\n      base64 += chars[(bytes[i2 + 1] & 15) << 2 | bytes[i2 + 2] >> 6];\n      base64 += chars[bytes[i2 + 2] & 63];\n    }\n    if (len % 3 === 2) {\n      base64 = base64.substring(0, base64.length - 1) + "=";\n    } else if (len % 3 === 1) {\n      base64 = base64.substring(0, base64.length - 2) + "==";\n    }\n    return base64;\n  };\n  const lastBlobMap = /* @__PURE__ */ new Map();\n  const transparentBlobMap = /* @__PURE__ */ new Map();\n  async function getTransparentBlobFor(width, height, dataURLOptions) {\n    const id = `${width}-${height}`;\n    if ("OffscreenCanvas" in globalThis) {\n      if (transparentBlobMap.has(id)) return transparentBlobMap.get(id);\n      const offscreen = new OffscreenCanvas(width, height);\n      offscreen.getContext("2d");\n      const blob = await offscreen.convertToBlob(dataURLOptions);\n      const arrayBuffer = await blob.arrayBuffer();\n      const base64 = encode(arrayBuffer);\n      transparentBlobMap.set(id, base64);\n      return base64;\n    } else {\n      return "";\n    }\n  }\n  const worker = self;\n  worker.onmessage = async function(e) {\n    if ("OffscreenCanvas" in globalThis) {\n      const { id, bitmap, width, height, dataURLOptions } = e.data;\n      const transparentBase64 = getTransparentBlobFor(\n        width,\n        height,\n        dataURLOptions\n      );\n      const offscreen = new OffscreenCanvas(width, height);\n      const ctx = offscreen.getContext("2d");\n      ctx.drawImage(bitmap, 0, 0);\n      bitmap.close();\n      const blob = await offscreen.convertToBlob(dataURLOptions);\n      const type = blob.type;\n      const arrayBuffer = await blob.arrayBuffer();\n      const base64 = encode(arrayBuffer);\n      if (!lastBlobMap.has(id) && await transparentBase64 === base64) {\n        lastBlobMap.set(id, base64);\n        return worker.postMessage({ id });\n      }\n      if (lastBlobMap.get(id) === base64) return worker.postMessage({ id });\n      worker.postMessage({\n        id,\n        type,\n        base64,\n        width,\n        height\n      });\n      lastBlobMap.set(id, base64);\n    } else {\n      return worker.postMessage({ id: e.data.id });\n    }\n  };\n})();\n//# sourceMappingURL=image-bitmap-data-url-worker-IJpC7g_b.js.map\n',
+      Uq = "undefined" !== typeof self && self.Blob && new Blob([nq], {
         type: "text/javascript;charset=utf-8"
       });
 
-    function KL(WW) {
-      let iW;
+    function Wq(RR) {
+      let JR;
       try {
-        if (iW = ML && (self.URL || self.webkitURL).createObjectURL(ML), !iW) throw "";
-        const OW = new Worker(iW, {
-          name: null == WW ? void 0 : WW.name
+        if (JR = Uq && (self.URL || self.webkitURL).createObjectURL(Uq), !JR) throw "";
+        const GR = new Worker(JR, {
+          name: null == RR ? void 0 : RR.name
         });
-        return OW.addEventListener("error", (() => {
-          (self.URL || self.webkitURL).revokeObjectURL(iW)
-        })), OW
-      } catch (OW) {
-        return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(sL), {
-          name: null == WW ? void 0 : WW.name
+        return GR.addEventListener("error", (() => {
+          (self.URL || self.webkitURL).revokeObjectURL(JR)
+        })), GR
+      } catch (GR) {
+        return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(nq), {
+          name: null == RR ? void 0 : RR.name
         })
       } finally {
-        iW && (self.URL || self.webkitURL).revokeObjectURL(iW)
+        JR && (self.URL || self.webkitURL).revokeObjectURL(JR)
       }
     }
-    class SL {
-      constructor(WW) {
-        NW(this, "pendingCanvasMutations", new Map), NW(this, "rafStamps", {
+    class Aq {
+      constructor(RR) {
+        uR(this, "pendingCanvasMutations", new Map), uR(this, "rafStamps", {
           latestId: 0,
           invokeId: null
-        }), NW(this, "mirror"), NW(this, "mutationCb"), NW(this, "resetObservers"), NW(this, "frozen", !1), NW(this, "locked", !1), NW(this, "processMutation", ((WW, iW) => {
-          !(this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId) && this.rafStamps.invokeId || (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(WW) || this.pendingCanvasMutations.set(WW, []), this.pendingCanvasMutations.get(WW).push(iW)
+        }), uR(this, "mirror"), uR(this, "mutationCb"), uR(this, "resetObservers"), uR(this, "frozen", !1), uR(this, "locked", !1), uR(this, "processMutation", ((RR, JR) => {
+          !(this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId) && this.rafStamps.invokeId || (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(RR) || this.pendingCanvasMutations.set(RR, []), this.pendingCanvasMutations.get(RR).push(JR)
         }));
         const {
-          sampling: iW = "all",
-          win: OW,
-          blockClass: mW,
-          blockSelector: EW,
-          recordCanvas: PW,
-          dataURLOptions: LW
-        } = WW;
-        this.mutationCb = WW.mutationCb, this.mirror = WW.mirror, PW && "all" === iW && this.initCanvasMutationObserver(OW, mW, EW), PW && "number" === typeof iW && this.initCanvasFPSObserver(iW, OW, mW, EW, {
-          dataURLOptions: LW
+          sampling: JR = "all",
+          win: GR,
+          blockClass: yR,
+          blockSelector: tR,
+          recordCanvas: ZR,
+          dataURLOptions: qR
+        } = RR;
+        this.mutationCb = RR.mutationCb, this.mirror = RR.mirror, ZR && "all" === JR && this.initCanvasMutationObserver(GR, yR, tR), ZR && "number" === typeof JR && this.initCanvasFPSObserver(JR, GR, yR, tR, {
+          dataURLOptions: qR
         })
       }
       reset() {
@@ -8582,27 +8582,27 @@ export const modules = {
       unlock() {
         this.locked = !1
       }
-      initCanvasFPSObserver(WW, iW, OW, mW, EW) {
-        const NW = UL(iW, OW, mW, !0),
-          PW = new Map,
-          LW = new KL;
-        LW.onmessage = WW => {
+      initCanvasFPSObserver(RR, JR, GR, yR, tR) {
+        const uR = aq(JR, GR, yR, !0),
+          ZR = new Map,
+          qR = new Wq;
+        qR.onmessage = RR => {
           const {
-            id: iW
-          } = WW.data;
-          if (PW.set(iW, !1), !("base64" in WW.data)) return;
+            id: JR
+          } = RR.data;
+          if (ZR.set(JR, !1), !("base64" in RR.data)) return;
           const {
-            base64: OW,
-            type: mW,
-            width: EW,
-            height: NW
-          } = WW.data;
+            base64: GR,
+            type: yR,
+            width: tR,
+            height: uR
+          } = RR.data;
           this.mutationCb({
-            id: iW,
-            type: vP["2D"],
+            id: JR,
+            type: NZ["2D"],
             commands: [{
               property: "clearRect",
-              args: [0, 0, EW, NW]
+              args: [0, 0, tR, uR]
             }, {
               property: "drawImage",
               args: [{
@@ -8611,245 +8611,245 @@ export const modules = {
                   rr_type: "Blob",
                   data: [{
                     rr_type: "ArrayBuffer",
-                    base64: OW
+                    base64: GR
                   }],
-                  type: mW
+                  type: yR
                 }]
               }, 0, 0]
             }]
           })
         };
-        const cW = 1e3 / WW;
-        let wW, tW = 0;
-        const ZW = WW => {
-          tW && WW - tW < cW || (tW = WW, (() => {
-            const WW = [];
-            return iW.document.querySelectorAll("canvas").forEach((iW => {
-              tP(iW, OW, mW, !0) || WW.push(iW)
-            })), WW
-          })().forEach((async WW => {
-            var iW;
-            const OW = this.mirror.getId(WW);
-            if (PW.get(OW)) return;
-            if (0 === WW.width || 0 === WW.height) return;
-            if (PW.set(OW, !0), ["webgl", "webgl2"].includes(WW.__context)) {
-              const OW = WW.getContext(WW.__context);
-              !1 === (null == (iW = null == OW ? void 0 : OW.getContextAttributes()) ? void 0 : iW.preserveDrawingBuffer) && OW.clear(OW.COLOR_BUFFER_BIT)
+        const iR = 1e3 / RR;
+        let fR, VR = 0;
+        const KR = RR => {
+          VR && RR - VR < iR || (VR = RR, (() => {
+            const RR = [];
+            return JR.document.querySelectorAll("canvas").forEach((JR => {
+              iZ(JR, GR, yR, !0) || RR.push(JR)
+            })), RR
+          })().forEach((async RR => {
+            var JR;
+            const GR = this.mirror.getId(RR);
+            if (ZR.get(GR)) return;
+            if (0 === RR.width || 0 === RR.height) return;
+            if (ZR.set(GR, !0), ["webgl", "webgl2"].includes(RR.__context)) {
+              const GR = RR.getContext(RR.__context);
+              !1 === (null == (JR = null == GR ? void 0 : GR.getContextAttributes()) ? void 0 : JR.preserveDrawingBuffer) && GR.clear(GR.COLOR_BUFFER_BIT)
             }
-            const mW = await createImageBitmap(WW);
-            LW.postMessage({
-              id: OW,
-              bitmap: mW,
-              width: WW.width,
-              height: WW.height,
-              dataURLOptions: EW.dataURLOptions
-            }, [mW])
-          }))), wW = requestAnimationFrame(ZW)
+            const yR = await createImageBitmap(RR);
+            qR.postMessage({
+              id: GR,
+              bitmap: yR,
+              width: RR.width,
+              height: RR.height,
+              dataURLOptions: tR.dataURLOptions
+            }, [yR])
+          }))), fR = requestAnimationFrame(KR)
         };
-        wW = requestAnimationFrame(ZW), this.resetObservers = () => {
-          NW(), cancelAnimationFrame(wW)
+        fR = requestAnimationFrame(KR), this.resetObservers = () => {
+          uR(), cancelAnimationFrame(fR)
         }
       }
-      initCanvasMutationObserver(WW, iW, OW) {
+      initCanvasMutationObserver(RR, JR, GR) {
         this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher();
-        const mW = UL(WW, iW, OW, !1),
-          EW = function(WW, iW, OW, mW) {
-            const EW = [],
-              NW = Object.getOwnPropertyNames(iW.CanvasRenderingContext2D.prototype);
-            for (const PW of NW) try {
-              if ("function" !== typeof iW.CanvasRenderingContext2D.prototype[PW]) continue;
-              const NW = QN(iW.CanvasRenderingContext2D.prototype, PW, (function(EW) {
+        const yR = aq(RR, JR, GR, !1),
+          tR = function(RR, JR, GR, yR) {
+            const tR = [],
+              uR = Object.getOwnPropertyNames(JR.CanvasRenderingContext2D.prototype);
+            for (const ZR of uR) try {
+              if ("function" !== typeof JR.CanvasRenderingContext2D.prototype[ZR]) continue;
+              const uR = Tu(JR.CanvasRenderingContext2D.prototype, ZR, (function(tR) {
                 return function() {
-                  for (var NW = arguments.length, LW = new Array(NW), cW = 0; cW < NW; cW++) LW[cW] = arguments[cW];
-                  return tP(this.canvas, OW, mW, !0) || setTimeout((() => {
-                    const OW = bL(LW, iW, this);
-                    WW(this.canvas, {
-                      type: vP["2D"],
-                      property: PW,
-                      args: OW
+                  for (var uR = arguments.length, qR = new Array(uR), iR = 0; iR < uR; iR++) qR[iR] = arguments[iR];
+                  return iZ(this.canvas, GR, yR, !0) || setTimeout((() => {
+                    const GR = rq(qR, JR, this);
+                    RR(this.canvas, {
+                      type: NZ["2D"],
+                      property: ZR,
+                      args: GR
                     })
-                  }), 0), EW.apply(this, LW)
+                  }), 0), tR.apply(this, qR)
                 }
               }));
-              EW.push(NW)
+              tR.push(uR)
             } catch {
-              const OW = NP(iW.CanvasRenderingContext2D.prototype, PW, {
-                set(iW) {
-                  WW(this.canvas, {
-                    type: vP["2D"],
-                    property: PW,
-                    args: [iW],
+              const GR = yZ(JR.CanvasRenderingContext2D.prototype, ZR, {
+                set(JR) {
+                  RR(this.canvas, {
+                    type: NZ["2D"],
+                    property: ZR,
+                    args: [JR],
                     setter: !0
                   })
                 }
               });
-              EW.push(OW)
+              tR.push(GR)
             }
             return () => {
-              EW.forEach((WW => WW()))
+              tR.forEach((RR => RR()))
             }
-          }(this.processMutation.bind(this), WW, iW, OW),
-          NW = function(WW, iW, OW, mW) {
-            const EW = [];
-            return "undefined" !== typeof iW.WebGLRenderingContext && EW.push(...kL(iW.WebGLRenderingContext.prototype, vP.WebGL, WW, OW, mW, iW)), "undefined" !== typeof iW.WebGL2RenderingContext && EW.push(...kL(iW.WebGL2RenderingContext.prototype, vP.WebGL2, WW, OW, mW, iW)), () => {
-              EW.forEach((WW => WW()))
+          }(this.processMutation.bind(this), RR, JR, GR),
+          uR = function(RR, JR, GR, yR) {
+            const tR = [];
+            return "undefined" !== typeof JR.WebGLRenderingContext && tR.push(...Lq(JR.WebGLRenderingContext.prototype, NZ.WebGL, RR, GR, yR, JR)), "undefined" !== typeof JR.WebGL2RenderingContext && tR.push(...Lq(JR.WebGL2RenderingContext.prototype, NZ.WebGL2, RR, GR, yR, JR)), () => {
+              tR.forEach((RR => RR()))
             }
-          }(this.processMutation.bind(this), WW, iW, OW);
+          }(this.processMutation.bind(this), RR, JR, GR);
         this.resetObservers = () => {
-          mW(), EW(), NW()
+          yR(), tR(), uR()
         }
       }
       startPendingCanvasMutationFlusher() {
         requestAnimationFrame((() => this.flushPendingCanvasMutations()))
       }
       startRAFTimestamping() {
-        const WW = iW => {
-          this.rafStamps.latestId = iW, requestAnimationFrame(WW)
+        const RR = JR => {
+          this.rafStamps.latestId = JR, requestAnimationFrame(RR)
         };
-        requestAnimationFrame(WW)
+        requestAnimationFrame(RR)
       }
       flushPendingCanvasMutations() {
-        this.pendingCanvasMutations.forEach(((WW, iW) => {
-          const OW = this.mirror.getId(iW);
-          this.flushPendingCanvasMutationFor(iW, OW)
+        this.pendingCanvasMutations.forEach(((RR, JR) => {
+          const GR = this.mirror.getId(JR);
+          this.flushPendingCanvasMutationFor(JR, GR)
         })), requestAnimationFrame((() => this.flushPendingCanvasMutations()))
       }
-      flushPendingCanvasMutationFor(WW, iW) {
+      flushPendingCanvasMutationFor(RR, JR) {
         if (this.frozen || this.locked) return;
-        const OW = this.pendingCanvasMutations.get(WW);
-        if (!OW || -1 === iW) return;
-        const mW = OW.map((WW => {
+        const GR = this.pendingCanvasMutations.get(RR);
+        if (!GR || -1 === JR) return;
+        const yR = GR.map((RR => {
             const {
-              type: iW,
-              ...OW
-            } = WW;
-            return OW
+              type: JR,
+              ...GR
+            } = RR;
+            return GR
           })),
           {
-            type: EW
-          } = OW[0];
+            type: tR
+          } = GR[0];
         this.mutationCb({
-          id: iW,
-          type: EW,
-          commands: mW
-        }), this.pendingCanvasMutations.delete(WW)
+          id: JR,
+          type: tR,
+          commands: yR
+        }), this.pendingCanvasMutations.delete(RR)
       }
     }
-    class YL {
-      constructor(WW) {
-        NW(this, "trackedLinkElements", new WeakSet), NW(this, "mutationCb"), NW(this, "adoptedStyleSheetCb"), NW(this, "styleMirror", new TP), this.mutationCb = WW.mutationCb, this.adoptedStyleSheetCb = WW.adoptedStyleSheetCb
+    class Cq {
+      constructor(RR) {
+        uR(this, "trackedLinkElements", new WeakSet), uR(this, "mutationCb"), uR(this, "adoptedStyleSheetCb"), uR(this, "styleMirror", new MZ), this.mutationCb = RR.mutationCb, this.adoptedStyleSheetCb = RR.adoptedStyleSheetCb
       }
-      attachLinkElement(WW, iW) {
-        "_cssText" in iW.attributes && this.mutationCb({
+      attachLinkElement(RR, JR) {
+        "_cssText" in JR.attributes && this.mutationCb({
           adds: [],
           removes: [],
           texts: [],
           attributes: [{
-            id: iW.id,
-            attributes: iW.attributes
+            id: JR.id,
+            attributes: JR.attributes
           }]
-        }), this.trackLinkElement(WW)
+        }), this.trackLinkElement(RR)
       }
-      trackLinkElement(WW) {
-        this.trackedLinkElements.has(WW) || (this.trackedLinkElements.add(WW), this.trackStylesheetInLinkElement(WW))
+      trackLinkElement(RR) {
+        this.trackedLinkElements.has(RR) || (this.trackedLinkElements.add(RR), this.trackStylesheetInLinkElement(RR))
       }
-      adoptStyleSheets(WW, iW) {
-        if (0 === WW.length) return;
-        const OW = {
-            id: iW,
+      adoptStyleSheets(RR, JR) {
+        if (0 === RR.length) return;
+        const GR = {
+            id: JR,
             styleIds: []
           },
-          mW = [];
-        for (const EW of WW) {
-          let WW;
-          this.styleMirror.has(EW) ? WW = this.styleMirror.getId(EW) : (WW = this.styleMirror.add(EW), mW.push({
-            styleId: WW,
-            rules: Array.from(EW.rules || CSSRule, ((WW, iW) => ({
-              rule: yW(WW, EW.href),
-              index: iW
+          yR = [];
+        for (const tR of RR) {
+          let RR;
+          this.styleMirror.has(tR) ? RR = this.styleMirror.getId(tR) : (RR = this.styleMirror.add(tR), yR.push({
+            styleId: RR,
+            rules: Array.from(tR.rules || CSSRule, ((RR, JR) => ({
+              rule: BR(RR, tR.href),
+              index: JR
             })))
-          })), OW.styleIds.push(WW)
+          })), GR.styleIds.push(RR)
         }
-        mW.length > 0 && (OW.styles = mW), this.adoptedStyleSheetCb(OW)
+        yR.length > 0 && (GR.styles = yR), this.adoptedStyleSheetCb(GR)
       }
       reset() {
         this.styleMirror.reset(), this.trackedLinkElements = new WeakSet
       }
-      trackStylesheetInLinkElement(WW) {}
+      trackStylesheetInLinkElement(RR) {}
     }
-    class yL {
+    class Xq {
       constructor() {
-        NW(this, "nodeMap", new WeakMap), NW(this, "active", !1)
+        uR(this, "nodeMap", new WeakMap), uR(this, "active", !1)
       }
-      inOtherBuffer(WW, iW) {
-        const OW = this.nodeMap.get(WW);
-        return OW && Array.from(OW).some((WW => WW !== iW))
+      inOtherBuffer(RR, JR) {
+        const GR = this.nodeMap.get(RR);
+        return GR && Array.from(GR).some((RR => RR !== JR))
       }
-      add(WW, iW) {
+      add(RR, JR) {
         this.active || (this.active = !0, requestAnimationFrame((() => {
           this.nodeMap = new WeakMap, this.active = !1
-        }))), this.nodeMap.set(WW, (this.nodeMap.get(WW) || new Set).add(iW))
+        }))), this.nodeMap.set(RR, (this.nodeMap.get(RR) || new Set).add(JR))
       }
       destroy() {}
     }
-    let TL, JL, hL, HL = !1;
+    let Mq, Bq, lq, pq = !1;
     try {
-      if (2 !== Array.from([1], (WW => 2 * WW))[0]) {
-        const WW = document.createElement("iframe");
-        document.body.appendChild(WW), Array.from = (null == (mW = WW.contentWindow) ? void 0 : mW.Array.from) || Array.from, document.body.removeChild(WW)
+      if (2 !== Array.from([1], (RR => 2 * RR))[0]) {
+        const RR = document.createElement("iframe");
+        document.body.appendChild(RR), Array.from = (null == (yR = RR.contentWindow) ? void 0 : yR.Array.from) || Array.from, document.body.removeChild(RR)
       }
-    } catch (Ac) {
-      console.debug("Unable to override Array.from", Ac)
+    } catch (wi) {
+      console.debug("Unable to override Array.from", wi)
     }
-    const nL = JW();
+    const gq = pR();
 
-    function uL() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    function bq() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       const {
-        emit: iW,
-        checkoutEveryNms: OW,
-        checkoutEveryNth: mW,
-        blockClass: EW = "rr-block",
-        blockSelector: NW = null,
-        ignoreClass: PW = "rr-ignore",
-        ignoreSelector: LW = null,
-        maskTextClass: cW = "rr-mask",
-        maskTextSelector: wW = null,
-        inlineStylesheet: tW = !0,
-        maskAllInputs: ZW,
-        maskInputOptions: xW,
-        slimDOMOptions: lW,
-        maskInputFn: AW,
-        maskTextFn: bW,
-        hooks: jW,
-        packFn: UW,
-        sampling: kW = {},
-        dataURLOptions: sW = {},
-        mousemoveWait: MW,
-        recordDOM: KW = !0,
-        recordCanvas: SW = !1,
-        recordCrossOriginIframes: YW = !1,
-        recordAfter: yW = ("DOMContentLoaded" === WW.recordAfter ? WW.recordAfter : "load"),
-        userTriggeredOnInput: JW = !1,
-        collectFonts: hW = !1,
-        inlineImages: HW = !1,
-        plugins: nW,
-        keepIframeSrcFn: uW = () => !1,
-        ignoreCSSAttributes: oW = new Set([]),
-        errorHandler: dW
-      } = WW;
-      qP = dW;
-      const eW = !YW || window.parent === window;
-      let vW = !1;
-      if (!eW) try {
-        window.parent.document && (vW = !1)
-      } catch (aW) {
-        vW = !0
+        emit: JR,
+        checkoutEveryNms: GR,
+        checkoutEveryNth: yR,
+        blockClass: tR = "rr-block",
+        blockSelector: uR = null,
+        ignoreClass: ZR = "rr-ignore",
+        ignoreSelector: qR = null,
+        maskTextClass: iR = "rr-mask",
+        maskTextSelector: fR = null,
+        inlineStylesheet: VR = !0,
+        maskAllInputs: KR,
+        maskInputOptions: wR,
+        slimDOMOptions: rR,
+        maskInputFn: eR,
+        maskTextFn: aR,
+        hooks: LR,
+        packFn: nR,
+        sampling: UR = {},
+        dataURLOptions: WR = {},
+        mousemoveWait: AR,
+        recordDOM: CR = !0,
+        recordCanvas: XR = !1,
+        recordCrossOriginIframes: MR = !1,
+        recordAfter: BR = ("DOMContentLoaded" === RR.recordAfter ? RR.recordAfter : "load"),
+        userTriggeredOnInput: pR = !1,
+        collectFonts: gR = !1,
+        inlineImages: bR = !1,
+        plugins: vR,
+        keepIframeSrcFn: OR = () => !1,
+        ignoreCSSAttributes: xR = new Set([]),
+        errorHandler: NR
+      } = RR;
+      SZ = NR;
+      const DR = !MR || window.parent === window;
+      let HR = !1;
+      if (!DR) try {
+        window.parent.document && (HR = !1)
+      } catch (QR) {
+        HR = !0
       }
-      if (eW && !iW) throw new Error("emit function is required");
-      if (!eW && !vW) return () => {};
-      void 0 !== MW && void 0 === kW.mousemove && (kW.mousemove = MW), nL.reset();
-      const gW = !0 === ZW ? {
+      if (DR && !JR) throw new Error("emit function is required");
+      if (!DR && !HR) return () => {};
+      void 0 !== AR && void 0 === UR.mousemove && (UR.mousemove = AR), gq.reset();
+      const oR = !0 === KR ? {
           color: !0,
           date: !0,
           "datetime-local": !0,
@@ -8866,164 +8866,164 @@ export const modules = {
           textarea: !0,
           select: !0,
           password: !0
-        } : void 0 !== xW ? xW : {
+        } : void 0 !== wR ? wR : {
           password: !0
         },
-        DW = Li(lW);
-      let VW;
-      bP();
-      let pW = 0;
-      const fW = WW => {
-        for (const iW of nW || []) iW.eventProcessor && (WW = iW.eventProcessor(WW));
-        return UW && !vW && (WW = UW(WW)), WW
+        cR = qJ(rR);
+      let PR;
+      rZ();
+      let IR = 0;
+      const mR = RR => {
+        for (const JR of vR || []) JR.eventProcessor && (RR = JR.eventProcessor(RR));
+        return nR && !HR && (RR = nR(RR)), RR
       };
-      TL = (WW, EW) => {
-        var NW;
-        const PW = WW;
-        if (PW.timestamp = FN(), !(null == (NW = GP[0]) ? void 0 : NW.isFrozen()) || PW.type === uP.FullSnapshot || PW.type === uP.IncrementalSnapshot && PW.data.source === oP.Mutation || GP.forEach((WW => WW.unfreeze())), eW) null == iW || iW(fW(PW), EW);
-        else if (vW) {
-          const WW = {
+      Mq = (RR, tR) => {
+        var uR;
+        const ZR = RR;
+        if (ZR.timestamp = Fu(), !(null == (uR = dZ[0]) ? void 0 : uR.isFrozen()) || ZR.type === bZ.FullSnapshot || ZR.type === bZ.IncrementalSnapshot && ZR.data.source === vZ.Mutation || dZ.forEach((RR => RR.unfreeze())), DR) null == JR || JR(mR(ZR), tR);
+        else if (HR) {
+          const RR = {
             type: "rrweb",
-            event: fW(PW),
+            event: mR(ZR),
             origin: window.location.origin,
-            isCheckout: EW
+            isCheckout: tR
           };
-          window.parent.postMessage(WW, "*")
+          window.parent.postMessage(RR, "*")
         }
-        if (PW.type === uP.FullSnapshot) VW = PW, pW = 0;
-        else if (PW.type === uP.IncrementalSnapshot) {
-          if (PW.data.source === oP.Mutation && PW.data.isAttachIframe) return;
-          pW++;
-          const WW = mW && pW >= mW,
-            iW = OW && PW.timestamp - VW.timestamp > OW;
-          (WW || iW) && JL(!0)
+        if (ZR.type === bZ.FullSnapshot) PR = ZR, IR = 0;
+        else if (ZR.type === bZ.IncrementalSnapshot) {
+          if (ZR.data.source === vZ.Mutation && ZR.data.isAttachIframe) return;
+          IR++;
+          const RR = yR && IR >= yR,
+            JR = GR && ZR.timestamp - PR.timestamp > GR;
+          (RR || JR) && Bq(!0)
         }
       };
-      const CW = WW => {
-          TL({
-            type: uP.IncrementalSnapshot,
+      const zR = RR => {
+          Mq({
+            type: bZ.IncrementalSnapshot,
             data: {
-              source: oP.Mutation,
-              ...WW
+              source: vZ.Mutation,
+              ...RR
             }
           })
         },
-        XW = WW => TL({
-          type: uP.IncrementalSnapshot,
+        SR = RR => Mq({
+          type: bZ.IncrementalSnapshot,
           data: {
-            source: oP.Scroll,
-            ...WW
+            source: vZ.Scroll,
+            ...RR
           }
         }),
-        BW = WW => TL({
-          type: uP.IncrementalSnapshot,
+        jR = RR => Mq({
+          type: bZ.IncrementalSnapshot,
           data: {
-            source: oP.CanvasMutation,
-            ...WW
+            source: vZ.CanvasMutation,
+            ...RR
           }
         }),
-        qW = new YL({
-          mutationCb: CW,
-          adoptedStyleSheetCb: WW => TL({
-            type: uP.IncrementalSnapshot,
+        dR = new Cq({
+          mutationCb: zR,
+          adoptedStyleSheetCb: RR => Mq({
+            type: bZ.IncrementalSnapshot,
             data: {
-              source: oP.AdoptedStyleSheet,
-              ...WW
+              source: vZ.AdoptedStyleSheet,
+              ...RR
             }
           })
         }),
-        RW = new LL({
-          mirror: nL,
-          mutationCb: CW,
-          stylesheetManager: qW,
-          recordCrossOriginIframes: YW,
-          wrappedEmit: TL
+        ER = new uq({
+          mirror: gq,
+          mutationCb: zR,
+          stylesheetManager: dR,
+          recordCrossOriginIframes: MR,
+          wrappedEmit: Mq
         });
-      for (const TW of nW || []) TW.getMirror && TW.getMirror({
-        nodeMirror: nL,
-        crossOriginIframeMirror: RW.crossOriginIframeMirror,
-        crossOriginIframeStyleMirror: RW.crossOriginIframeStyleMirror
+      for (const lR of vR || []) lR.getMirror && lR.getMirror({
+        nodeMirror: gq,
+        crossOriginIframeMirror: ER.crossOriginIframeMirror,
+        crossOriginIframeStyleMirror: ER.crossOriginIframeStyleMirror
       });
-      const GW = new yL;
-      hL = new SL({
-        recordCanvas: SW,
-        mutationCb: BW,
+      const YR = new Xq;
+      lq = new Aq({
+        recordCanvas: XR,
+        mutationCb: jR,
         win: window,
-        blockClass: EW,
-        blockSelector: NW,
-        mirror: nL,
-        sampling: kW.canvas,
-        dataURLOptions: sW
+        blockClass: tR,
+        blockSelector: uR,
+        mirror: gq,
+        sampling: UR.canvas,
+        dataURLOptions: WR
       });
-      const IW = new cL({
-        mutationCb: CW,
-        scrollCb: XW,
+      const kR = new Zq({
+        mutationCb: zR,
+        scrollCb: SR,
         bypassOptions: {
-          blockClass: EW,
-          blockSelector: NW,
-          maskTextClass: cW,
-          maskTextSelector: wW,
-          inlineStylesheet: tW,
-          maskInputOptions: gW,
-          dataURLOptions: sW,
-          maskTextFn: bW,
-          maskInputFn: AW,
-          recordCanvas: SW,
-          inlineImages: HW,
-          sampling: kW,
-          slimDOMOptions: DW,
-          iframeManager: RW,
-          stylesheetManager: qW,
-          canvasManager: hL,
-          keepIframeSrcFn: uW,
-          processedNodeManager: GW
+          blockClass: tR,
+          blockSelector: uR,
+          maskTextClass: iR,
+          maskTextSelector: fR,
+          inlineStylesheet: VR,
+          maskInputOptions: oR,
+          dataURLOptions: WR,
+          maskTextFn: aR,
+          maskInputFn: eR,
+          recordCanvas: XR,
+          inlineImages: bR,
+          sampling: UR,
+          slimDOMOptions: cR,
+          iframeManager: ER,
+          stylesheetManager: dR,
+          canvasManager: lq,
+          keepIframeSrcFn: OR,
+          processedNodeManager: YR
         },
-        mirror: nL
+        mirror: gq
       });
-      JL = function() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!KW) return;
-        TL({
-          type: uP.Meta,
+      Bq = function() {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (!CR) return;
+        Mq({
+          type: bZ.Meta,
           data: {
             href: window.location.href,
-            width: cP(),
-            height: LP()
+            width: ZZ(),
+            height: uZ()
           }
-        }, WW), qW.reset(), IW.init(), GP.forEach((WW => WW.lock()));
-        const iW = function(WW, iW) {
+        }, RR), dR.reset(), kR.init(), dZ.forEach((RR => RR.lock()));
+        const JR = function(RR, JR) {
           const {
-            mirror: OW = new TW,
-            blockClass: mW = "rr-block",
-            blockSelector: EW = null,
-            maskTextClass: NW = "rr-mask",
-            maskTextSelector: PW = null,
-            inlineStylesheet: LW = !0,
-            inlineImages: cW = !1,
-            recordCanvas: wW = !1,
-            maskAllInputs: tW = !1,
-            maskTextFn: ZW,
-            maskInputFn: xW,
-            slimDOM: lW = !1,
-            dataURLOptions: AW,
-            preserveWhiteSpace: bW,
-            onSerialize: jW,
-            onIframeLoad: UW,
-            iframeLoadTimeout: kW,
-            onStylesheetLoad: sW,
-            stylesheetLoadTimeout: MW,
-            keepIframeSrcFn: KW = () => !1
-          } = iW;
-          return ci(WW, {
-            doc: WW,
-            mirror: OW,
-            blockClass: mW,
-            blockSelector: EW,
-            maskTextClass: NW,
-            maskTextSelector: PW,
+            mirror: GR = new lR,
+            blockClass: yR = "rr-block",
+            blockSelector: tR = null,
+            maskTextClass: uR = "rr-mask",
+            maskTextSelector: ZR = null,
+            inlineStylesheet: qR = !0,
+            inlineImages: iR = !1,
+            recordCanvas: fR = !1,
+            maskAllInputs: VR = !1,
+            maskTextFn: KR,
+            maskInputFn: wR,
+            slimDOM: rR = !1,
+            dataURLOptions: eR,
+            preserveWhiteSpace: aR,
+            onSerialize: LR,
+            onIframeLoad: nR,
+            iframeLoadTimeout: UR,
+            onStylesheetLoad: WR,
+            stylesheetLoadTimeout: AR,
+            keepIframeSrcFn: CR = () => !1
+          } = JR;
+          return iJ(RR, {
+            doc: RR,
+            mirror: GR,
+            blockClass: yR,
+            blockSelector: tR,
+            maskTextClass: uR,
+            maskTextSelector: ZR,
             skipChild: !1,
-            inlineStylesheet: LW,
-            maskInputOptions: !0 === tW ? {
+            inlineStylesheet: qR,
+            maskInputOptions: !0 === VR ? {
               color: !0,
               date: !0,
               "datetime-local": !0,
@@ -9040,340 +9040,340 @@ export const modules = {
               textarea: !0,
               select: !0,
               password: !0
-            } : !1 === tW ? {
+            } : !1 === VR ? {
               password: !0
-            } : tW,
-            maskTextFn: ZW,
-            maskInputFn: xW,
-            slimDOMOptions: Li(lW),
-            dataURLOptions: AW,
-            inlineImages: cW,
-            recordCanvas: wW,
-            preserveWhiteSpace: bW,
-            onSerialize: jW,
-            onIframeLoad: UW,
-            iframeLoadTimeout: kW,
-            onStylesheetLoad: sW,
-            stylesheetLoadTimeout: MW,
-            keepIframeSrcFn: KW,
+            } : VR,
+            maskTextFn: KR,
+            maskInputFn: wR,
+            slimDOMOptions: qJ(rR),
+            dataURLOptions: eR,
+            inlineImages: iR,
+            recordCanvas: fR,
+            preserveWhiteSpace: aR,
+            onSerialize: LR,
+            onIframeLoad: nR,
+            iframeLoadTimeout: UR,
+            onStylesheetLoad: WR,
+            stylesheetLoadTimeout: AR,
+            keepIframeSrcFn: CR,
             newlyAddedElement: !1
           })
         }(document, {
-          mirror: nL,
-          blockClass: EW,
-          blockSelector: NW,
-          maskTextClass: cW,
-          maskTextSelector: wW,
-          inlineStylesheet: tW,
-          maskAllInputs: gW,
-          maskTextFn: bW,
-          maskInputFn: AW,
-          slimDOM: DW,
-          dataURLOptions: sW,
-          recordCanvas: SW,
-          inlineImages: HW,
-          onSerialize: WW => {
-            kP(WW, nL) && RW.addIframe(WW), sP(WW, nL) && qW.trackLinkElement(WW), KP(WW) && IW.addShadowRoot(WP.shadowRoot(WW), document)
+          mirror: gq,
+          blockClass: tR,
+          blockSelector: uR,
+          maskTextClass: iR,
+          maskTextSelector: fR,
+          inlineStylesheet: VR,
+          maskAllInputs: oR,
+          maskTextFn: aR,
+          maskInputFn: eR,
+          slimDOM: cR,
+          dataURLOptions: WR,
+          recordCanvas: XR,
+          inlineImages: bR,
+          onSerialize: RR => {
+            LZ(RR, gq) && ER.addIframe(RR), nZ(RR, gq) && dR.trackLinkElement(RR), WZ(RR) && kR.addShadowRoot(su.shadowRoot(RR), document)
           },
-          onIframeLoad: (WW, iW) => {
-            RW.attachIframe(WW, iW), IW.observeAttachShadow(WW)
+          onIframeLoad: (RR, JR) => {
+            ER.attachIframe(RR, JR), kR.observeAttachShadow(RR)
           },
-          onStylesheetLoad: (WW, iW) => {
-            qW.attachLinkElement(WW, iW)
+          onStylesheetLoad: (RR, JR) => {
+            dR.attachLinkElement(RR, JR)
           },
-          keepIframeSrcFn: uW
+          keepIframeSrcFn: OR
         });
-        if (!iW) return console.warn("Failed to snapshot the document");
-        TL({
-          type: uP.FullSnapshot,
+        if (!JR) return console.warn("Failed to snapshot the document");
+        Mq({
+          type: bZ.FullSnapshot,
           data: {
-            node: iW,
-            initialOffset: PP(window)
+            node: JR,
+            initialOffset: tZ(window)
           }
-        }, WW), GP.forEach((WW => WW.unlock())), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && qW.adoptStyleSheets(document.adoptedStyleSheets, nL.getId(document))
+        }, RR), dZ.forEach((RR => RR.unlock())), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && dR.adoptStyleSheets(document.adoptedStyleSheets, gq.getId(document))
       };
       try {
-        const WW = [],
-          iW = WW => {
-            var iW;
-            return RP(mL)({
-              mutationCb: CW,
-              mousemoveCb: (WW, iW) => TL({
-                type: uP.IncrementalSnapshot,
+        const RR = [],
+          JR = RR => {
+            var JR;
+            return jZ(Jq)({
+              mutationCb: zR,
+              mousemoveCb: (RR, JR) => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: iW,
-                  positions: WW
+                  source: JR,
+                  positions: RR
                 }
               }),
-              mouseInteractionCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              mouseInteractionCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.MouseInteraction,
-                  ...WW
+                  source: vZ.MouseInteraction,
+                  ...RR
                 }
               }),
-              scrollCb: XW,
-              viewportResizeCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              scrollCb: SR,
+              viewportResizeCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.ViewportResize,
-                  ...WW
+                  source: vZ.ViewportResize,
+                  ...RR
                 }
               }),
-              inputCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              inputCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.Input,
-                  ...WW
+                  source: vZ.Input,
+                  ...RR
                 }
               }),
-              mediaInteractionCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              mediaInteractionCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.MediaInteraction,
-                  ...WW
+                  source: vZ.MediaInteraction,
+                  ...RR
                 }
               }),
-              styleSheetRuleCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              styleSheetRuleCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.StyleSheetRule,
-                  ...WW
+                  source: vZ.StyleSheetRule,
+                  ...RR
                 }
               }),
-              styleDeclarationCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              styleDeclarationCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.StyleDeclaration,
-                  ...WW
+                  source: vZ.StyleDeclaration,
+                  ...RR
                 }
               }),
-              canvasMutationCb: BW,
-              fontCb: WW => TL({
-                type: uP.IncrementalSnapshot,
+              canvasMutationCb: jR,
+              fontCb: RR => Mq({
+                type: bZ.IncrementalSnapshot,
                 data: {
-                  source: oP.Font,
-                  ...WW
+                  source: vZ.Font,
+                  ...RR
                 }
               }),
-              selectionCb: WW => {
-                TL({
-                  type: uP.IncrementalSnapshot,
+              selectionCb: RR => {
+                Mq({
+                  type: bZ.IncrementalSnapshot,
                   data: {
-                    source: oP.Selection,
-                    ...WW
+                    source: vZ.Selection,
+                    ...RR
                   }
                 })
               },
-              customElementCb: WW => {
-                TL({
-                  type: uP.IncrementalSnapshot,
+              customElementCb: RR => {
+                Mq({
+                  type: bZ.IncrementalSnapshot,
                   data: {
-                    source: oP.CustomElement,
-                    ...WW
+                    source: vZ.CustomElement,
+                    ...RR
                   }
                 })
               },
-              blockClass: EW,
-              ignoreClass: PW,
-              ignoreSelector: LW,
-              maskTextClass: cW,
-              maskTextSelector: wW,
-              maskInputOptions: gW,
-              inlineStylesheet: tW,
-              sampling: kW,
-              recordDOM: KW,
-              recordCanvas: SW,
-              inlineImages: HW,
-              userTriggeredOnInput: JW,
-              collectFonts: hW,
-              doc: WW,
-              maskInputFn: AW,
-              maskTextFn: bW,
-              keepIframeSrcFn: uW,
-              blockSelector: NW,
-              slimDOMOptions: DW,
-              dataURLOptions: sW,
-              mirror: nL,
-              iframeManager: RW,
-              stylesheetManager: qW,
-              shadowDomManager: IW,
-              processedNodeManager: GW,
-              canvasManager: hL,
-              ignoreCSSAttributes: oW,
-              plugins: (null == (iW = null == nW ? void 0 : nW.filter((WW => WW.observer))) ? void 0 : iW.map((WW => ({
-                observer: WW.observer,
-                options: WW.options,
-                callback: iW => TL({
-                  type: uP.Plugin,
+              blockClass: tR,
+              ignoreClass: ZR,
+              ignoreSelector: qR,
+              maskTextClass: iR,
+              maskTextSelector: fR,
+              maskInputOptions: oR,
+              inlineStylesheet: VR,
+              sampling: UR,
+              recordDOM: CR,
+              recordCanvas: XR,
+              inlineImages: bR,
+              userTriggeredOnInput: pR,
+              collectFonts: gR,
+              doc: RR,
+              maskInputFn: eR,
+              maskTextFn: aR,
+              keepIframeSrcFn: OR,
+              blockSelector: uR,
+              slimDOMOptions: cR,
+              dataURLOptions: WR,
+              mirror: gq,
+              iframeManager: ER,
+              stylesheetManager: dR,
+              shadowDomManager: kR,
+              processedNodeManager: YR,
+              canvasManager: lq,
+              ignoreCSSAttributes: xR,
+              plugins: (null == (JR = null == vR ? void 0 : vR.filter((RR => RR.observer))) ? void 0 : JR.map((RR => ({
+                observer: RR.observer,
+                options: RR.options,
+                callback: JR => Mq({
+                  type: bZ.Plugin,
                   data: {
-                    plugin: WW.name,
-                    payload: iW
+                    plugin: RR.name,
+                    payload: JR
                   }
                 })
               })))) || []
-            }, jW)
+            }, LR)
           };
-        RW.addLoadListener((OW => {
+        ER.addLoadListener((GR => {
           try {
-            WW.push(iW(OW.contentDocument))
-          } catch (mW) {
-            console.warn(mW)
+            RR.push(JR(GR.contentDocument))
+          } catch (yR) {
+            console.warn(yR)
           }
         }));
-        const OW = () => {
-          JL(), WW.push(iW(document)), HL = !0
+        const GR = () => {
+          Bq(), RR.push(JR(document)), pq = !0
         };
-        return ["interactive", "complete"].includes(document.readyState) ? OW() : (WW.push(iP("DOMContentLoaded", (() => {
-          TL({
-            type: uP.DomContentLoaded,
+        return ["interactive", "complete"].includes(document.readyState) ? GR() : (RR.push(hu("DOMContentLoaded", (() => {
+          Mq({
+            type: bZ.DomContentLoaded,
             data: {}
-          }), "DOMContentLoaded" === yW && OW()
-        }))), WW.push(iP("load", (() => {
-          TL({
-            type: uP.Load,
+          }), "DOMContentLoaded" === BR && GR()
+        }))), RR.push(hu("load", (() => {
+          Mq({
+            type: bZ.Load,
             data: {}
-          }), "load" === yW && OW()
+          }), "load" === BR && GR()
         }), window))), () => {
-          WW.forEach((WW => {
+          RR.forEach((RR => {
             try {
-              WW()
-            } catch (iW) {
-              String(iW).toLowerCase().includes("cross-origin") || console.warn(iW)
+              RR()
+            } catch (JR) {
+              String(JR).toLowerCase().includes("cross-origin") || console.warn(JR)
             }
-          })), GW.destroy(), HL = !1, qP = void 0
+          })), YR.destroy(), pq = !1, SZ = void 0
         }
-      } catch (rW) {
-        console.warn(rW)
+      } catch (FR) {
+        console.warn(FR)
       }
     }
 
-    function oL() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
-        iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : document;
-      if ("scrollBehavior" in iW.documentElement.style && !0 !== WW.__forceSmoothScrollPolyfill__) return;
-      const OW = WW.HTMLElement || WW.Element,
-        mW = {
-          scroll: WW.scroll || WW.scrollTo,
-          scrollBy: WW.scrollBy,
-          elementScroll: OW.prototype.scroll || LW,
-          scrollIntoView: OW.prototype.scrollIntoView
+    function vq() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
+        JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : document;
+      if ("scrollBehavior" in JR.documentElement.style && !0 !== RR.__forceSmoothScrollPolyfill__) return;
+      const GR = RR.HTMLElement || RR.Element,
+        yR = {
+          scroll: RR.scroll || RR.scrollTo,
+          scrollBy: RR.scrollBy,
+          elementScroll: GR.prototype.scroll || qR,
+          scrollIntoView: GR.prototype.scrollIntoView
         },
-        EW = WW.performance && WW.performance.now ? WW.performance.now.bind(WW.performance) : Date.now;
-      const NW = (PW = WW.navigator.userAgent, new RegExp(["MSIE ", "Trident/", "Edge/"].join("|")).test(PW) ? 1 : 0);
-      var PW;
+        tR = RR.performance && RR.performance.now ? RR.performance.now.bind(RR.performance) : Date.now;
+      const uR = (ZR = RR.navigator.userAgent, new RegExp(["MSIE ", "Trident/", "Edge/"].join("|")).test(ZR) ? 1 : 0);
+      var ZR;
 
-      function LW(WW, iW) {
-        this.scrollLeft = WW, this.scrollTop = iW
+      function qR(RR, JR) {
+        this.scrollLeft = RR, this.scrollTop = JR
       }
 
-      function cW(WW) {
-        if (null === WW || "object" !== typeof WW || void 0 === WW.behavior || "auto" === WW.behavior || "instant" === WW.behavior) return !0;
-        if ("object" === typeof WW && "smooth" === WW.behavior) return !1;
-        throw new TypeError("behavior member of ScrollOptions " + WW.behavior + " is not a valid value for enumeration ScrollBehavior.")
+      function iR(RR) {
+        if (null === RR || "object" !== typeof RR || void 0 === RR.behavior || "auto" === RR.behavior || "instant" === RR.behavior) return !0;
+        if ("object" === typeof RR && "smooth" === RR.behavior) return !1;
+        throw new TypeError("behavior member of ScrollOptions " + RR.behavior + " is not a valid value for enumeration ScrollBehavior.")
       }
 
-      function wW(WW, iW) {
-        return "Y" === iW ? WW.clientHeight + NW < WW.scrollHeight : "X" === iW ? WW.clientWidth + NW < WW.scrollWidth : void 0
+      function fR(RR, JR) {
+        return "Y" === JR ? RR.clientHeight + uR < RR.scrollHeight : "X" === JR ? RR.clientWidth + uR < RR.scrollWidth : void 0
       }
 
-      function tW(iW, OW) {
-        const mW = WW.getComputedStyle(iW, null)["overflow" + OW];
-        return "auto" === mW || "scroll" === mW
+      function VR(JR, GR) {
+        const yR = RR.getComputedStyle(JR, null)["overflow" + GR];
+        return "auto" === yR || "scroll" === yR
       }
 
-      function ZW(WW) {
-        const iW = wW(WW, "Y") && tW(WW, "Y"),
-          OW = wW(WW, "X") && tW(WW, "X");
-        return iW || OW
+      function KR(RR) {
+        const JR = fR(RR, "Y") && VR(RR, "Y"),
+          GR = fR(RR, "X") && VR(RR, "X");
+        return JR || GR
       }
 
-      function xW(iW) {
-        let OW, mW, NW, PW = (EW() - iW.startTime) / 468;
-        var LW;
-        PW = PW > 1 ? 1 : PW, LW = PW, OW = .5 * (1 - Math.cos(Math.PI * LW)), mW = iW.startX + (iW.x - iW.startX) * OW, NW = iW.startY + (iW.y - iW.startY) * OW, iW.method.call(iW.scrollable, mW, NW), mW === iW.x && NW === iW.y || WW.requestAnimationFrame(xW.bind(WW, iW))
+      function wR(JR) {
+        let GR, yR, uR, ZR = (tR() - JR.startTime) / 468;
+        var qR;
+        ZR = ZR > 1 ? 1 : ZR, qR = ZR, GR = .5 * (1 - Math.cos(Math.PI * qR)), yR = JR.startX + (JR.x - JR.startX) * GR, uR = JR.startY + (JR.y - JR.startY) * GR, JR.method.call(JR.scrollable, yR, uR), yR === JR.x && uR === JR.y || RR.requestAnimationFrame(wR.bind(RR, JR))
       }
 
-      function lW(OW, NW, PW) {
-        let cW, wW, tW, ZW;
-        const lW = EW();
-        OW === iW.body ? (cW = WW, wW = WW.scrollX || WW.pageXOffset, tW = WW.scrollY || WW.pageYOffset, ZW = mW.scroll) : (cW = OW, wW = OW.scrollLeft, tW = OW.scrollTop, ZW = LW), xW({
-          scrollable: cW,
-          method: ZW,
-          startTime: lW,
-          startX: wW,
-          startY: tW,
-          x: NW,
-          y: PW
+      function rR(GR, uR, ZR) {
+        let iR, fR, VR, KR;
+        const rR = tR();
+        GR === JR.body ? (iR = RR, fR = RR.scrollX || RR.pageXOffset, VR = RR.scrollY || RR.pageYOffset, KR = yR.scroll) : (iR = GR, fR = GR.scrollLeft, VR = GR.scrollTop, KR = qR), wR({
+          scrollable: iR,
+          method: KR,
+          startTime: rR,
+          startX: fR,
+          startY: VR,
+          x: uR,
+          y: ZR
         })
       }
-      WW.scroll = WW.scrollTo = function() {
-        void 0 !== arguments[0] && (!0 !== cW(arguments[0]) ? lW.call(WW, iW.body, void 0 !== arguments[0].left ? ~~arguments[0].left : WW.scrollX || WW.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : WW.scrollY || WW.pageYOffset) : mW.scroll.call(WW, void 0 !== arguments[0].left ? arguments[0].left : "object" !== typeof arguments[0] ? arguments[0] : WW.scrollX || WW.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : WW.scrollY || WW.pageYOffset))
-      }, WW.scrollBy = function() {
-        void 0 !== arguments[0] && (cW(arguments[0]) ? mW.scrollBy.call(WW, void 0 !== arguments[0].left ? arguments[0].left : "object" !== typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : lW.call(WW, iW.body, ~~arguments[0].left + (WW.scrollX || WW.pageXOffset), ~~arguments[0].top + (WW.scrollY || WW.pageYOffset)))
-      }, OW.prototype.scroll = OW.prototype.scrollTo = function() {
+      RR.scroll = RR.scrollTo = function() {
+        void 0 !== arguments[0] && (!0 !== iR(arguments[0]) ? rR.call(RR, JR.body, void 0 !== arguments[0].left ? ~~arguments[0].left : RR.scrollX || RR.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : RR.scrollY || RR.pageYOffset) : yR.scroll.call(RR, void 0 !== arguments[0].left ? arguments[0].left : "object" !== typeof arguments[0] ? arguments[0] : RR.scrollX || RR.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : RR.scrollY || RR.pageYOffset))
+      }, RR.scrollBy = function() {
+        void 0 !== arguments[0] && (iR(arguments[0]) ? yR.scrollBy.call(RR, void 0 !== arguments[0].left ? arguments[0].left : "object" !== typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : rR.call(RR, JR.body, ~~arguments[0].left + (RR.scrollX || RR.pageXOffset), ~~arguments[0].top + (RR.scrollY || RR.pageYOffset)))
+      }, GR.prototype.scroll = GR.prototype.scrollTo = function() {
         if (void 0 === arguments[0]) return;
-        if (!0 === cW(arguments[0])) {
+        if (!0 === iR(arguments[0])) {
           if ("number" === typeof arguments[0] && void 0 === arguments[1]) throw new SyntaxError("Value could not be converted");
-          return void mW.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left : "object" !== typeof arguments[0] ? ~~arguments[0] : this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top : void 0 !== arguments[1] ? ~~arguments[1] : this.scrollTop)
+          return void yR.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left : "object" !== typeof arguments[0] ? ~~arguments[0] : this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top : void 0 !== arguments[1] ? ~~arguments[1] : this.scrollTop)
         }
-        const WW = arguments[0].left,
-          iW = arguments[0].top;
-        lW.call(this, this, "undefined" === typeof WW ? this.scrollLeft : ~~WW, "undefined" === typeof iW ? this.scrollTop : ~~iW)
-      }, OW.prototype.scrollBy = function() {
-        void 0 !== arguments[0] && (!0 !== cW(arguments[0]) ? this.scroll({
+        const RR = arguments[0].left,
+          JR = arguments[0].top;
+        rR.call(this, this, "undefined" === typeof RR ? this.scrollLeft : ~~RR, "undefined" === typeof JR ? this.scrollTop : ~~JR)
+      }, GR.prototype.scrollBy = function() {
+        void 0 !== arguments[0] && (!0 !== iR(arguments[0]) ? this.scroll({
           left: ~~arguments[0].left + this.scrollLeft,
           top: ~~arguments[0].top + this.scrollTop,
           behavior: arguments[0].behavior
-        }) : mW.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left + this.scrollLeft : ~~arguments[0] + this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top + this.scrollTop : ~~arguments[1] + this.scrollTop))
-      }, OW.prototype.scrollIntoView = function() {
-        if (!0 === cW(arguments[0])) return void mW.scrollIntoView.call(this, void 0 === arguments[0] || arguments[0]);
-        const OW = function(WW) {
-            for (; WW !== iW.body && !1 === ZW(WW);) WW = WW.parentNode || WW.host;
-            return WW
+        }) : yR.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left + this.scrollLeft : ~~arguments[0] + this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top + this.scrollTop : ~~arguments[1] + this.scrollTop))
+      }, GR.prototype.scrollIntoView = function() {
+        if (!0 === iR(arguments[0])) return void yR.scrollIntoView.call(this, void 0 === arguments[0] || arguments[0]);
+        const GR = function(RR) {
+            for (; RR !== JR.body && !1 === KR(RR);) RR = RR.parentNode || RR.host;
+            return RR
           }(this),
-          EW = OW.getBoundingClientRect(),
-          NW = this.getBoundingClientRect();
-        OW !== iW.body ? (lW.call(this, OW, OW.scrollLeft + NW.left - EW.left, OW.scrollTop + NW.top - EW.top), "fixed" !== WW.getComputedStyle(OW).position && WW.scrollBy({
-          left: EW.left,
-          top: EW.top,
+          tR = GR.getBoundingClientRect(),
+          uR = this.getBoundingClientRect();
+        GR !== JR.body ? (rR.call(this, GR, GR.scrollLeft + uR.left - tR.left, GR.scrollTop + uR.top - tR.top), "fixed" !== RR.getComputedStyle(GR).position && RR.scrollBy({
+          left: tR.left,
+          top: tR.top,
           behavior: "smooth"
-        })) : WW.scrollBy({
-          left: NW.left,
-          top: NW.top,
+        })) : RR.scrollBy({
+          left: uR.left,
+          top: uR.top,
           behavior: "smooth"
         })
       }
     }
-    uL.addCustomEvent = (WW, iW) => {
-      if (!HL) throw new Error("please add custom event after start recording");
-      TL({
-        type: uP.Custom,
+    bq.addCustomEvent = (RR, JR) => {
+      if (!pq) throw new Error("please add custom event after start recording");
+      Mq({
+        type: bZ.Custom,
         data: {
-          tag: WW,
-          payload: iW
+          tag: RR,
+          payload: JR
         }
       })
-    }, uL.freezePage = () => {
-      GP.forEach((WW => WW.freeze()))
-    }, uL.takeFullSnapshot = WW => {
-      if (!HL) throw new Error("please take full snapshot after start recording");
-      JL(WW)
-    }, uL.mirror = nL;
-    class dL {
+    }, bq.freezePage = () => {
+      dZ.forEach((RR => RR.freeze()))
+    }, bq.takeFullSnapshot = RR => {
+      if (!pq) throw new Error("please take full snapshot after start recording");
+      Bq(RR)
+    }, bq.mirror = gq;
+    class Oq {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          iW = arguments.length > 1 ? arguments[1] : void 0;
-        NW(this, "timeOffset", 0), NW(this, "speed"), NW(this, "actions"), NW(this, "raf", null), NW(this, "lastTimestamp"), this.actions = WW, this.speed = iW.speed
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          JR = arguments.length > 1 ? arguments[1] : void 0;
+        uR(this, "timeOffset", 0), uR(this, "speed"), uR(this, "actions"), uR(this, "raf", null), uR(this, "lastTimestamp"), this.actions = RR, this.speed = JR.speed
       }
-      addAction(WW) {
-        const iW = !0 === this.raf;
-        if (!this.actions.length || this.actions[this.actions.length - 1].delay <= WW.delay) this.actions.push(WW);
+      addAction(RR) {
+        const JR = !0 === this.raf;
+        if (!this.actions.length || this.actions[this.actions.length - 1].delay <= RR.delay) this.actions.push(RR);
         else {
-          const iW = this.findActionIndex(WW);
-          this.actions.splice(iW, 0, WW)
+          const JR = this.findActionIndex(RR);
+          this.actions.splice(JR, 0, RR)
         }
-        iW && (this.raf = requestAnimationFrame(this.rafCheck.bind(this)))
+        JR && (this.raf = requestAnimationFrame(this.rafCheck.bind(this)))
       }
       start() {
         this.timeOffset = 0, this.lastTimestamp = performance.now(), this.raf = requestAnimationFrame(this.rafCheck.bind(this))
@@ -9382,287 +9382,287 @@ export const modules = {
         !0 === this.raf && this.rafCheck()
       }
       rafCheck() {
-        const WW = performance.now();
-        for (this.timeOffset += (WW - this.lastTimestamp) * this.speed, this.lastTimestamp = WW; this.actions.length;) {
-          const WW = this.actions[0];
-          if (!(this.timeOffset >= WW.delay)) break;
-          this.actions.shift(), WW.doAction()
+        const RR = performance.now();
+        for (this.timeOffset += (RR - this.lastTimestamp) * this.speed, this.lastTimestamp = RR; this.actions.length;) {
+          const RR = this.actions[0];
+          if (!(this.timeOffset >= RR.delay)) break;
+          this.actions.shift(), RR.doAction()
         }
         this.actions.length > 0 ? this.raf = requestAnimationFrame(this.rafCheck.bind(this)) : this.raf = !0
       }
       clear() {
         this.raf && (!0 !== this.raf && cancelAnimationFrame(this.raf), this.raf = null), this.actions.length = 0
       }
-      setSpeed(WW) {
-        this.speed = WW
+      setSpeed(RR) {
+        this.speed = RR
       }
       isActive() {
         return null !== this.raf
       }
-      findActionIndex(WW) {
-        let iW = 0,
-          OW = this.actions.length - 1;
-        for (; iW <= OW;) {
-          const mW = Math.floor((iW + OW) / 2);
-          if (this.actions[mW].delay < WW.delay) iW = mW + 1;
+      findActionIndex(RR) {
+        let JR = 0,
+          GR = this.actions.length - 1;
+        for (; JR <= GR;) {
+          const yR = Math.floor((JR + GR) / 2);
+          if (this.actions[yR].delay < RR.delay) JR = yR + 1;
           else {
-            if (!(this.actions[mW].delay > WW.delay)) return mW + 1;
-            OW = mW - 1
+            if (!(this.actions[yR].delay > RR.delay)) return yR + 1;
+            GR = yR - 1
           }
         }
-        return iW
+        return JR
       }
     }
 
-    function eL(WW, iW) {
-      if (WW.type === uP.IncrementalSnapshot && WW.data.source === oP.MouseMove && WW.data.positions && WW.data.positions.length) {
-        const OW = WW.data.positions[0].timeOffset,
-          mW = WW.timestamp + OW;
-        return WW.delay = mW - iW, mW - iW
+    function xq(RR, JR) {
+      if (RR.type === bZ.IncrementalSnapshot && RR.data.source === vZ.MouseMove && RR.data.positions && RR.data.positions.length) {
+        const GR = RR.data.positions[0].timeOffset,
+          yR = RR.timestamp + GR;
+        return RR.delay = yR - JR, yR - JR
       }
-      return WW.delay = WW.timestamp - iW, WW.delay
+      return RR.delay = RR.timestamp - JR, RR.delay
     }
 
-    function vL(WW, iW) {
-      var OW = "function" == typeof Symbol && WW[Symbol.iterator];
-      if (!OW) return WW;
-      var mW, EW, NW = OW.call(WW),
-        PW = [];
+    function Nq(RR, JR) {
+      var GR = "function" == typeof Symbol && RR[Symbol.iterator];
+      if (!GR) return RR;
+      var yR, tR, uR = GR.call(RR),
+        ZR = [];
       try {
         for (;
-          (void 0 === iW || iW-- > 0) && !(mW = NW.next()).done;) PW.push(mW.value)
-      } catch (LW) {
-        EW = {
-          error: LW
+          (void 0 === JR || JR-- > 0) && !(yR = uR.next()).done;) ZR.push(yR.value)
+      } catch (qR) {
+        tR = {
+          error: qR
         }
       } finally {
         try {
-          mW && !mW.done && (OW = NW.return) && OW.call(NW)
+          yR && !yR.done && (GR = uR.return) && GR.call(uR)
         } finally {
-          if (EW) throw EW.error
+          if (tR) throw tR.error
         }
       }
-      return PW
+      return ZR
     }
-    var gL, DL;
-    (DL = gL || (gL = {}))[DL.NotStarted = 0] = "NotStarted", DL[DL.Running = 1] = "Running", DL[DL.Stopped = 2] = "Stopped";
-    var VL = {
+    var Dq, Hq;
+    (Hq = Dq || (Dq = {}))[Hq.NotStarted = 0] = "NotStarted", Hq[Hq.Running = 1] = "Running", Hq[Hq.Stopped = 2] = "Stopped";
+    var oq = {
       type: "xstate.init"
     };
 
-    function pL(WW) {
-      return void 0 === WW ? [] : [].concat(WW)
+    function cq(RR) {
+      return void 0 === RR ? [] : [].concat(RR)
     }
 
-    function fL(WW) {
+    function Pq(RR) {
       return {
         type: "xstate.assign",
-        assignment: WW
+        assignment: RR
       }
     }
 
-    function CL(WW, iW) {
-      return "string" == typeof(WW = "string" == typeof WW && iW && iW[WW] ? iW[WW] : WW) ? {
-        type: WW
-      } : "function" == typeof WW ? {
-        type: WW.name,
-        exec: WW
-      } : WW
+    function Iq(RR, JR) {
+      return "string" == typeof(RR = "string" == typeof RR && JR && JR[RR] ? JR[RR] : RR) ? {
+        type: RR
+      } : "function" == typeof RR ? {
+        type: RR.name,
+        exec: RR
+      } : RR
     }
 
-    function XL(WW) {
-      return function(iW) {
-        return WW === iW
+    function mq(RR) {
+      return function(JR) {
+        return RR === JR
       }
     }
 
-    function BL(WW) {
-      return "string" == typeof WW ? {
-        type: WW
-      } : WW
+    function zq(RR) {
+      return "string" == typeof RR ? {
+        type: RR
+      } : RR
     }
 
-    function qL(WW, iW) {
+    function Sq(RR, JR) {
       return {
-        value: WW,
-        context: iW,
+        value: RR,
+        context: JR,
         actions: [],
         changed: !1,
-        matches: XL(WW)
+        matches: mq(RR)
       }
     }
 
-    function RL(WW, iW, OW) {
-      var mW = iW,
-        EW = !1;
-      return [WW.filter((function(WW) {
-        if ("xstate.assign" === WW.type) {
-          EW = !0;
-          var iW = Object.assign({}, mW);
-          return "function" == typeof WW.assignment ? iW = WW.assignment(mW, OW) : Object.keys(WW.assignment).forEach((function(EW) {
-            iW[EW] = "function" == typeof WW.assignment[EW] ? WW.assignment[EW](mW, OW) : WW.assignment[EW]
-          })), mW = iW, !1
+    function jq(RR, JR, GR) {
+      var yR = JR,
+        tR = !1;
+      return [RR.filter((function(RR) {
+        if ("xstate.assign" === RR.type) {
+          tR = !0;
+          var JR = Object.assign({}, yR);
+          return "function" == typeof RR.assignment ? JR = RR.assignment(yR, GR) : Object.keys(RR.assignment).forEach((function(tR) {
+            JR[tR] = "function" == typeof RR.assignment[tR] ? RR.assignment[tR](yR, GR) : RR.assignment[tR]
+          })), yR = JR, !1
         }
         return !0
-      })), mW, EW]
+      })), yR, tR]
     }
 
-    function GL(WW, iW) {
-      void 0 === iW && (iW = {});
-      var OW = vL(RL(pL(WW.states[WW.initial].entry).map((function(WW) {
-          return CL(WW, iW.actions)
-        })), WW.context, VL), 2),
-        mW = OW[0],
-        EW = OW[1],
-        NW = {
-          config: WW,
-          _options: iW,
+    function dq(RR, JR) {
+      void 0 === JR && (JR = {});
+      var GR = Nq(jq(cq(RR.states[RR.initial].entry).map((function(RR) {
+          return Iq(RR, JR.actions)
+        })), RR.context, oq), 2),
+        yR = GR[0],
+        tR = GR[1],
+        uR = {
+          config: RR,
+          _options: JR,
           initialState: {
-            value: WW.initial,
-            actions: mW,
-            context: EW,
-            matches: XL(WW.initial)
+            value: RR.initial,
+            actions: yR,
+            context: tR,
+            matches: mq(RR.initial)
           },
-          transition: function(iW, OW) {
-            var mW, EW, PW = "string" == typeof iW ? {
-                value: iW,
-                context: WW.context
-              } : iW,
-              LW = PW.value,
-              cW = PW.context,
-              wW = BL(OW),
-              tW = WW.states[LW];
-            if (tW.on) {
-              var ZW = pL(tW.on[wW.type]);
+          transition: function(JR, GR) {
+            var yR, tR, ZR = "string" == typeof JR ? {
+                value: JR,
+                context: RR.context
+              } : JR,
+              qR = ZR.value,
+              iR = ZR.context,
+              fR = zq(GR),
+              VR = RR.states[qR];
+            if (VR.on) {
+              var KR = cq(VR.on[fR.type]);
               try {
-                for (var xW = function(WW) {
-                    var iW = "function" == typeof Symbol && Symbol.iterator,
-                      OW = iW && WW[iW],
-                      mW = 0;
-                    if (OW) return OW.call(WW);
-                    if (WW && "number" == typeof WW.length) return {
+                for (var wR = function(RR) {
+                    var JR = "function" == typeof Symbol && Symbol.iterator,
+                      GR = JR && RR[JR],
+                      yR = 0;
+                    if (GR) return GR.call(RR);
+                    if (RR && "number" == typeof RR.length) return {
                       next: function() {
-                        return WW && mW >= WW.length && (WW = void 0), {
-                          value: WW && WW[mW++],
-                          done: !WW
+                        return RR && yR >= RR.length && (RR = void 0), {
+                          value: RR && RR[yR++],
+                          done: !RR
                         }
                       }
                     };
-                    throw new TypeError(iW ? "Object is not iterable." : "Symbol.iterator is not defined.")
-                  }(ZW), lW = xW.next(); !lW.done; lW = xW.next()) {
-                  var AW = lW.value;
-                  if (void 0 === AW) return qL(LW, cW);
-                  var bW = "string" == typeof AW ? {
-                      target: AW
-                    } : AW,
-                    jW = bW.target,
-                    UW = bW.actions,
-                    kW = void 0 === UW ? [] : UW,
-                    sW = bW.cond,
-                    MW = void 0 === sW ? function() {
+                    throw new TypeError(JR ? "Object is not iterable." : "Symbol.iterator is not defined.")
+                  }(KR), rR = wR.next(); !rR.done; rR = wR.next()) {
+                  var eR = rR.value;
+                  if (void 0 === eR) return Sq(qR, iR);
+                  var aR = "string" == typeof eR ? {
+                      target: eR
+                    } : eR,
+                    LR = aR.target,
+                    nR = aR.actions,
+                    UR = void 0 === nR ? [] : nR,
+                    WR = aR.cond,
+                    AR = void 0 === WR ? function() {
                       return !0
-                    } : sW,
-                    KW = void 0 === jW,
-                    SW = null != jW ? jW : LW,
-                    YW = WW.states[SW];
-                  if (MW(cW, wW)) {
-                    var yW = vL(RL((KW ? pL(kW) : [].concat(tW.exit, kW, YW.entry).filter((function(WW) {
-                        return WW
-                      }))).map((function(WW) {
-                        return CL(WW, NW._options.actions)
-                      })), cW, wW), 3),
-                      TW = yW[0],
-                      JW = yW[1],
-                      hW = yW[2],
-                      HW = null != jW ? jW : LW;
+                    } : WR,
+                    CR = void 0 === LR,
+                    XR = null != LR ? LR : qR,
+                    MR = RR.states[XR];
+                  if (AR(iR, fR)) {
+                    var BR = Nq(jq((CR ? cq(UR) : [].concat(VR.exit, UR, MR.entry).filter((function(RR) {
+                        return RR
+                      }))).map((function(RR) {
+                        return Iq(RR, uR._options.actions)
+                      })), iR, fR), 3),
+                      lR = BR[0],
+                      pR = BR[1],
+                      gR = BR[2],
+                      bR = null != LR ? LR : qR;
                     return {
-                      value: HW,
-                      context: JW,
-                      actions: TW,
-                      changed: jW !== LW || TW.length > 0 || hW,
-                      matches: XL(HW)
+                      value: bR,
+                      context: pR,
+                      actions: lR,
+                      changed: LR !== qR || lR.length > 0 || gR,
+                      matches: mq(bR)
                     }
                   }
                 }
-              } catch (DL) {
-                mW = {
-                  error: DL
+              } catch (Hq) {
+                yR = {
+                  error: Hq
                 }
               } finally {
                 try {
-                  lW && !lW.done && (EW = xW.return) && EW.call(xW)
+                  rR && !rR.done && (tR = wR.return) && tR.call(wR)
                 } finally {
-                  if (mW) throw mW.error
+                  if (yR) throw yR.error
                 }
               }
             }
-            return qL(LW, cW)
+            return Sq(qR, iR)
           }
         };
-      return NW
+      return uR
     }
-    var IL = function(WW, iW) {
-      return WW.actions.forEach((function(OW) {
-        var mW = OW.exec;
-        return mW && mW(WW.context, iW)
+    var Eq = function(RR, JR) {
+      return RR.actions.forEach((function(GR) {
+        var yR = GR.exec;
+        return yR && yR(RR.context, JR)
       }))
     };
 
-    function aL(WW) {
-      var iW = WW.initialState,
-        OW = gL.NotStarted,
-        mW = new Set,
-        EW = {
-          _machine: WW,
-          send: function(EW) {
-            OW === gL.Running && (iW = WW.transition(iW, EW), IL(iW, BL(EW)), mW.forEach((function(WW) {
-              return WW(iW)
+    function Yq(RR) {
+      var JR = RR.initialState,
+        GR = Dq.NotStarted,
+        yR = new Set,
+        tR = {
+          _machine: RR,
+          send: function(tR) {
+            GR === Dq.Running && (JR = RR.transition(JR, tR), Eq(JR, zq(tR)), yR.forEach((function(RR) {
+              return RR(JR)
             })))
           },
-          subscribe: function(WW) {
-            return mW.add(WW), WW(iW), {
+          subscribe: function(RR) {
+            return yR.add(RR), RR(JR), {
               unsubscribe: function() {
-                return mW.delete(WW)
+                return yR.delete(RR)
               }
             }
           },
-          start: function(mW) {
-            if (mW) {
-              var NW = "object" == typeof mW ? mW : {
-                context: WW.config.context,
-                value: mW
+          start: function(yR) {
+            if (yR) {
+              var uR = "object" == typeof yR ? yR : {
+                context: RR.config.context,
+                value: yR
               };
-              iW = {
-                value: NW.value,
+              JR = {
+                value: uR.value,
                 actions: [],
-                context: NW.context,
-                matches: XL(NW.value)
+                context: uR.context,
+                matches: mq(uR.value)
               }
             }
-            return OW = gL.Running, IL(iW, VL), EW
+            return GR = Dq.Running, Eq(JR, oq), tR
           },
           stop: function() {
-            return OW = gL.Stopped, mW.clear(), EW
+            return GR = Dq.Stopped, yR.clear(), tR
           },
           get state() {
-            return iW
+            return JR
           },
           get status() {
-            return OW
+            return GR
           }
         };
-      return EW
+      return tR
     }
 
-    function rL(WW, iW) {
+    function kq(RR, JR) {
       let {
-        getCastFn: OW,
-        applyEventsSynchronously: mW,
-        emitter: EW
-      } = iW;
-      return aL(GL({
+        getCastFn: GR,
+        applyEventsSynchronously: yR,
+        emitter: tR
+      } = JR;
+      return Yq(dq({
         id: "player",
-        context: WW,
+        context: RR,
         initial: "paused",
         states: {
           playing: {
@@ -9720,260 +9720,260 @@ export const modules = {
         }
       }, {
         actions: {
-          castEvent: fL({
-            lastPlayedEvent: (WW, iW) => "CAST_EVENT" === iW.type ? iW.payload.event : WW.lastPlayedEvent
+          castEvent: Pq({
+            lastPlayedEvent: (RR, JR) => "CAST_EVENT" === JR.type ? JR.payload.event : RR.lastPlayedEvent
           }),
-          recordTimeOffset: fL(((WW, iW) => {
-            let OW = WW.timeOffset;
-            return "payload" in iW && "timeOffset" in iW.payload && (OW = iW.payload.timeOffset), {
-              ...WW,
-              timeOffset: OW,
-              baselineTime: WW.events[0].timestamp + OW
+          recordTimeOffset: Pq(((RR, JR) => {
+            let GR = RR.timeOffset;
+            return "payload" in JR && "timeOffset" in JR.payload && (GR = JR.payload.timeOffset), {
+              ...RR,
+              timeOffset: GR,
+              baselineTime: RR.events[0].timestamp + GR
             }
           })),
-          play(WW) {
-            var iW;
+          play(RR) {
+            var JR;
             const {
-              timer: NW,
-              events: PW,
-              baselineTime: LW,
-              lastPlayedEvent: cW
-            } = WW;
-            NW.clear();
-            for (const OW of PW) eL(OW, LW);
-            const wW = function(WW, iW) {
-              for (let OW = WW.length - 1; OW >= 0; OW--) {
-                const mW = WW[OW];
-                if (mW.type === uP.Meta && mW.timestamp <= iW) return WW.slice(OW)
+              timer: uR,
+              events: ZR,
+              baselineTime: qR,
+              lastPlayedEvent: iR
+            } = RR;
+            uR.clear();
+            for (const GR of ZR) xq(GR, qR);
+            const fR = function(RR, JR) {
+              for (let GR = RR.length - 1; GR >= 0; GR--) {
+                const yR = RR[GR];
+                if (yR.type === bZ.Meta && yR.timestamp <= JR) return RR.slice(GR)
               }
-              return WW
-            }(PW, LW);
-            let tW = null == cW ? void 0 : cW.timestamp;
-            (null == cW ? void 0 : cW.type) === uP.IncrementalSnapshot && cW.data.source === oP.MouseMove && (tW = cW.timestamp + (null == (iW = cW.data.positions[0]) ? void 0 : iW.timeOffset)), LW < (tW || 0) && EW.emit(DP.PlayBack);
-            const ZW = new Array;
-            for (const mW of wW)
-              if (!(tW && tW < LW && (mW.timestamp <= tW || mW === cW)))
-                if (mW.timestamp < LW) ZW.push(mW);
+              return RR
+            }(ZR, qR);
+            let VR = null == iR ? void 0 : iR.timestamp;
+            (null == iR ? void 0 : iR.type) === bZ.IncrementalSnapshot && iR.data.source === vZ.MouseMove && (VR = iR.timestamp + (null == (JR = iR.data.positions[0]) ? void 0 : JR.timeOffset)), qR < (VR || 0) && tR.emit(HZ.PlayBack);
+            const KR = new Array;
+            for (const yR of fR)
+              if (!(VR && VR < qR && (yR.timestamp <= VR || yR === iR)))
+                if (yR.timestamp < qR) KR.push(yR);
                 else {
-                  const WW = OW(mW, !1);
-                  NW.addAction({
+                  const RR = GR(yR, !1);
+                  uR.addAction({
                     doAction: () => {
-                      WW()
+                      RR()
                     },
-                    delay: mW.delay
+                    delay: yR.delay
                   })
-                } mW(ZW), EW.emit(DP.Flush), NW.start()
+                } yR(KR), tR.emit(HZ.Flush), uR.start()
           },
-          pause(WW) {
-            WW.timer.clear()
+          pause(RR) {
+            RR.timer.clear()
           },
-          resetLastPlayedEvent: fL((WW => ({
-            ...WW,
+          resetLastPlayedEvent: Pq((RR => ({
+            ...RR,
             lastPlayedEvent: null
           }))),
-          startLive: fL({
-            baselineTime: (WW, iW) => (WW.timer.start(), "TO_LIVE" === iW.type && iW.payload.baselineTime ? iW.payload.baselineTime : Date.now())
+          startLive: Pq({
+            baselineTime: (RR, JR) => (RR.timer.start(), "TO_LIVE" === JR.type && JR.payload.baselineTime ? JR.payload.baselineTime : Date.now())
           }),
-          addEvent: fL(((WW, iW) => {
+          addEvent: Pq(((RR, JR) => {
             const {
-              baselineTime: mW,
-              timer: EW,
-              events: NW
-            } = WW;
-            if ("ADD_EVENT" === iW.type) {
+              baselineTime: yR,
+              timer: tR,
+              events: uR
+            } = RR;
+            if ("ADD_EVENT" === JR.type) {
               const {
-                event: WW
-              } = iW.payload;
-              eL(WW, mW);
-              let PW = NW.length - 1;
-              if (!NW[PW] || NW[PW].timestamp <= WW.timestamp) NW.push(WW);
+                event: RR
+              } = JR.payload;
+              xq(RR, yR);
+              let ZR = uR.length - 1;
+              if (!uR[ZR] || uR[ZR].timestamp <= RR.timestamp) uR.push(RR);
               else {
-                let iW = -1,
-                  OW = 0;
-                for (; OW <= PW;) {
-                  const iW = Math.floor((OW + PW) / 2);
-                  NW[iW].timestamp <= WW.timestamp ? OW = iW + 1 : PW = iW - 1
-                } - 1 === iW && (iW = OW), NW.splice(iW, 0, WW)
+                let JR = -1,
+                  GR = 0;
+                for (; GR <= ZR;) {
+                  const JR = Math.floor((GR + ZR) / 2);
+                  uR[JR].timestamp <= RR.timestamp ? GR = JR + 1 : ZR = JR - 1
+                } - 1 === JR && (JR = GR), uR.splice(JR, 0, RR)
               }
-              const LW = WW.timestamp < mW,
-                cW = OW(WW, LW);
-              LW ? cW() : EW.isActive() && EW.addAction({
+              const qR = RR.timestamp < yR,
+                iR = GR(RR, qR);
+              qR ? iR() : tR.isActive() && tR.addAction({
                 doAction: () => {
-                  cW()
+                  iR()
                 },
-                delay: WW.delay
+                delay: RR.delay
               })
             }
             return {
-              ...WW,
-              events: NW
+              ...RR,
+              events: uR
             }
           }))
         }
       }))
     }
-    const zL = new Map;
+    const Qq = new Map;
 
-    function FL(WW, iW) {
-      let OW = zL.get(WW);
-      return OW || (OW = new Map, zL.set(WW, OW)), OW.has(iW) || OW.set(iW, []), OW.get(iW)
+    function Fq(RR, JR) {
+      let GR = Qq.get(RR);
+      return GR || (GR = new Map, Qq.set(RR, GR)), GR.has(JR) || GR.set(JR, []), GR.get(JR)
     }
 
-    function QL(WW, iW, OW) {
-      return async mW => {
-        if (mW && "object" === typeof mW && "rr_type" in mW) {
-          if (OW && (OW.isUnchanged = !1), "ImageBitmap" === mW.rr_type && "args" in mW) {
-            const EW = await QL(WW, iW, OW)(mW.args);
-            return await createImageBitmap.apply(null, EW)
+    function Tq(RR, JR, GR) {
+      return async yR => {
+        if (yR && "object" === typeof yR && "rr_type" in yR) {
+          if (GR && (GR.isUnchanged = !1), "ImageBitmap" === yR.rr_type && "args" in yR) {
+            const tR = await Tq(RR, JR, GR)(yR.args);
+            return await createImageBitmap.apply(null, tR)
           }
-          if ("index" in mW) {
-            if (OW || null === iW) return mW;
+          if ("index" in yR) {
+            if (GR || null === JR) return yR;
             const {
-              rr_type: WW,
-              index: EW
-            } = mW;
-            return FL(iW, WW)[EW]
+              rr_type: RR,
+              index: tR
+            } = yR;
+            return Fq(JR, RR)[tR]
           }
-          if ("args" in mW) {
+          if ("args" in yR) {
             const {
-              rr_type: EW,
-              args: NW
-            } = mW;
-            return new(0, window[EW])(...await Promise.all(NW.map(QL(WW, iW, OW))))
+              rr_type: tR,
+              args: uR
+            } = yR;
+            return new(0, window[tR])(...await Promise.all(uR.map(Tq(RR, JR, GR))))
           }
-          if ("base64" in mW) return function(WW) {
-            var iW, OW, mW, EW, NW, PW = .75 * WW.length,
-              LW = WW.length,
-              cW = 0;
-            "=" === WW[WW.length - 1] && (PW--, "=" === WW[WW.length - 2] && PW--);
-            var wW = new ArrayBuffer(PW),
-              tW = new Uint8Array(wW);
-            for (iW = 0; iW < LW; iW += 4) OW = tL[WW.charCodeAt(iW)], mW = tL[WW.charCodeAt(iW + 1)], EW = tL[WW.charCodeAt(iW + 2)], NW = tL[WW.charCodeAt(iW + 3)], tW[cW++] = OW << 2 | mW >> 4, tW[cW++] = (15 & mW) << 4 | EW >> 2, tW[cW++] = (3 & EW) << 6 | 63 & NW;
-            return wW
-          }(mW.base64);
-          if ("src" in mW) {
-            const iW = WW.get(mW.src);
-            if (iW) return iW;
+          if ("base64" in yR) return function(RR) {
+            var JR, GR, yR, tR, uR, ZR = .75 * RR.length,
+              qR = RR.length,
+              iR = 0;
+            "=" === RR[RR.length - 1] && (ZR--, "=" === RR[RR.length - 2] && ZR--);
+            var fR = new ArrayBuffer(ZR),
+              VR = new Uint8Array(fR);
+            for (JR = 0; JR < qR; JR += 4) GR = iq[RR.charCodeAt(JR)], yR = iq[RR.charCodeAt(JR + 1)], tR = iq[RR.charCodeAt(JR + 2)], uR = iq[RR.charCodeAt(JR + 3)], VR[iR++] = GR << 2 | yR >> 4, VR[iR++] = (15 & yR) << 4 | tR >> 2, VR[iR++] = (3 & tR) << 6 | 63 & uR;
+            return fR
+          }(yR.base64);
+          if ("src" in yR) {
+            const JR = RR.get(yR.src);
+            if (JR) return JR;
             {
-              const iW = new Image;
-              return iW.src = mW.src, WW.set(mW.src, iW), iW
+              const JR = new Image;
+              return JR.src = yR.src, RR.set(yR.src, JR), JR
             }
           }
-          if ("data" in mW && "Blob" === mW.rr_type) {
-            const EW = await Promise.all(mW.data.map(QL(WW, iW, OW)));
-            return new Blob(EW, {
-              type: mW.type
+          if ("data" in yR && "Blob" === yR.rr_type) {
+            const tR = await Promise.all(yR.data.map(Tq(RR, JR, GR)));
+            return new Blob(tR, {
+              type: yR.type
             })
           }
-        } else if (Array.isArray(mW)) {
-          return await Promise.all(mW.map(QL(WW, iW, OW)))
+        } else if (Array.isArray(yR)) {
+          return await Promise.all(yR.map(Tq(RR, JR, GR)))
         }
-        return mW
+        return yR
       }
     }
-    const Wc = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject"];
-    async function ic(WW) {
+    const sq = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject"];
+    async function hq(RR) {
       let {
-        mutation: iW,
-        target: OW,
-        type: mW,
-        imageMap: EW,
-        errorHandler: NW
-      } = WW;
+        mutation: JR,
+        target: GR,
+        type: yR,
+        imageMap: tR,
+        errorHandler: uR
+      } = RR;
       try {
-        const WW = function(WW, iW) {
+        const RR = function(RR, JR) {
           try {
-            return iW === vP.WebGL ? WW.getContext("webgl") || WW.getContext("experimental-webgl") : WW.getContext("webgl2")
-          } catch (OW) {
+            return JR === NZ.WebGL ? RR.getContext("webgl") || RR.getContext("experimental-webgl") : RR.getContext("webgl2")
+          } catch (GR) {
             return null
           }
-        }(OW, mW);
-        if (!WW) return;
-        if (iW.setter) return void(WW[iW.property] = iW.args[0]);
-        const NW = WW[iW.property],
-          PW = await Promise.all(iW.args.map(QL(EW, WW)));
-        ! function(WW, iW) {
-          if (!(null == iW ? void 0 : iW.constructor)) return;
+        }(GR, yR);
+        if (!RR) return;
+        if (JR.setter) return void(RR[JR.property] = JR.args[0]);
+        const uR = RR[JR.property],
+          ZR = await Promise.all(JR.args.map(Tq(tR, RR)));
+        ! function(RR, JR) {
+          if (!(null == JR ? void 0 : JR.constructor)) return;
           const {
-            name: OW
-          } = iW.constructor;
-          if (!Wc.includes(OW)) return;
-          const mW = FL(WW, OW);
-          mW.includes(iW) || mW.push(iW)
-        }(WW, NW.apply(WW, PW))
-      } catch (PW) {
-        NW(iW, PW)
+            name: GR
+          } = JR.constructor;
+          if (!sq.includes(GR)) return;
+          const yR = Fq(RR, GR);
+          yR.includes(JR) || yR.push(JR)
+        }(RR, uR.apply(RR, ZR))
+      } catch (ZR) {
+        uR(JR, ZR)
       }
     }
-    async function Oc(WW) {
+    async function Ri(RR) {
       let {
-        event: iW,
-        mutation: OW,
-        target: mW,
-        imageMap: EW,
-        canvasEventMap: NW,
-        errorHandler: PW
-      } = WW;
+        event: JR,
+        mutation: GR,
+        target: yR,
+        imageMap: tR,
+        canvasEventMap: uR,
+        errorHandler: ZR
+      } = RR;
       try {
-        const WW = NW.get(iW) || OW,
-          LW = "commands" in WW ? WW.commands : [WW];
-        if ([vP.WebGL, vP.WebGL2].includes(OW.type)) {
-          for (let WW = 0; WW < LW.length; WW++) {
-            const iW = LW[WW];
-            await ic({
-              mutation: iW,
-              type: OW.type,
-              target: mW,
-              imageMap: EW,
-              errorHandler: PW
+        const RR = uR.get(JR) || GR,
+          qR = "commands" in RR ? RR.commands : [RR];
+        if ([NZ.WebGL, NZ.WebGL2].includes(GR.type)) {
+          for (let RR = 0; RR < qR.length; RR++) {
+            const JR = qR[RR];
+            await hq({
+              mutation: JR,
+              type: GR.type,
+              target: yR,
+              imageMap: tR,
+              errorHandler: ZR
             })
           }
           return
         }
-        await async function(WW) {
+        await async function(RR) {
           let {
-            event: iW,
-            mutations: OW,
-            target: mW,
-            imageMap: EW,
-            errorHandler: NW
-          } = WW;
-          const PW = mW.getContext("2d");
-          if (!PW) return void NW(OW[0], new Error("Canvas context is null"));
-          const LW = OW.map((async WW => Promise.all(WW.args.map(QL(EW, PW)))));
-          (await Promise.all(LW)).forEach(((WW, mW) => {
-            const LW = OW[mW];
+            event: JR,
+            mutations: GR,
+            target: yR,
+            imageMap: tR,
+            errorHandler: uR
+          } = RR;
+          const ZR = yR.getContext("2d");
+          if (!ZR) return void uR(GR[0], new Error("Canvas context is null"));
+          const qR = GR.map((async RR => Promise.all(RR.args.map(Tq(tR, ZR)))));
+          (await Promise.all(qR)).forEach(((RR, yR) => {
+            const qR = GR[yR];
             try {
-              if (LW.setter) return void(PW[LW.property] = LW.args[0]);
-              const OW = PW[LW.property];
-              "drawImage" === LW.property && "string" === typeof LW.args[0] ? (EW.get(iW), OW.apply(PW, LW.args)) : OW.apply(PW, WW)
-            } catch (cW) {
-              NW(LW, cW)
+              if (qR.setter) return void(ZR[qR.property] = qR.args[0]);
+              const GR = ZR[qR.property];
+              "drawImage" === qR.property && "string" === typeof qR.args[0] ? (tR.get(JR), GR.apply(ZR, qR.args)) : GR.apply(ZR, RR)
+            } catch (iR) {
+              uR(qR, iR)
             }
           }))
         }({
-          event: iW,
-          mutations: LW,
-          target: mW,
-          imageMap: EW,
-          errorHandler: PW
+          event: JR,
+          mutations: qR,
+          target: yR,
+          imageMap: tR,
+          errorHandler: ZR
         })
-      } catch (LW) {
-        PW(OW, LW)
+      } catch (qR) {
+        ZR(GR, qR)
       }
     }
-    class mc {
-      constructor(WW) {
-        NW(this, "mediaMap", new Map), NW(this, "warn"), NW(this, "service"), NW(this, "speedService"), NW(this, "emitter"), NW(this, "getCurrentTime"), NW(this, "metadataCallbackMap", new Map), this.warn = WW.warn, this.service = WW.service, this.speedService = WW.speedService, this.emitter = WW.emitter, this.getCurrentTime = WW.getCurrentTime, this.emitter.on(DP.Start, this.start.bind(this)), this.emitter.on(DP.SkipStart, this.start.bind(this)), this.emitter.on(DP.Pause, this.pause.bind(this)), this.emitter.on(DP.Finish, this.pause.bind(this)), this.speedService.subscribe((() => {
+    class Ji {
+      constructor(RR) {
+        uR(this, "mediaMap", new Map), uR(this, "warn"), uR(this, "service"), uR(this, "speedService"), uR(this, "emitter"), uR(this, "getCurrentTime"), uR(this, "metadataCallbackMap", new Map), this.warn = RR.warn, this.service = RR.service, this.speedService = RR.speedService, this.emitter = RR.emitter, this.getCurrentTime = RR.getCurrentTime, this.emitter.on(HZ.Start, this.start.bind(this)), this.emitter.on(HZ.SkipStart, this.start.bind(this)), this.emitter.on(HZ.Pause, this.pause.bind(this)), this.emitter.on(HZ.Finish, this.pause.bind(this)), this.speedService.subscribe((() => {
           this.syncAllMediaElements()
         }))
       }
       syncAllMediaElements() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           pause: !1
         };
-        this.mediaMap.forEach(((iW, OW) => {
-          this.syncTargetWithState(OW), WW.pause && OW.pause()
+        this.mediaMap.forEach(((JR, GR) => {
+          this.syncTargetWithState(GR), RR.pause && GR.pause()
         }))
       }
       start() {
@@ -9984,264 +9984,264 @@ export const modules = {
           pause: !0
         })
       }
-      seekTo(WW) {
+      seekTo(RR) {
         let {
-          time: iW,
-          target: OW,
-          mediaState: mW
-        } = WW;
-        if (mW.isPlaying) {
-          const WW = (iW - mW.lastInteractionTimeOffset) / 1e3 * mW.playbackRate,
-            EW = "duration" in OW && OW.duration;
-          if (Number.isNaN(EW)) return void this.waitForMetadata(OW);
-          let NW = mW.currentTimeAtLastInteraction + WW;
-          OW.loop && !1 !== EW && (NW %= EW), OW.currentTime = NW
-        } else OW.pause(), OW.currentTime = mW.currentTimeAtLastInteraction
+          time: JR,
+          target: GR,
+          mediaState: yR
+        } = RR;
+        if (yR.isPlaying) {
+          const RR = (JR - yR.lastInteractionTimeOffset) / 1e3 * yR.playbackRate,
+            tR = "duration" in GR && GR.duration;
+          if (Number.isNaN(tR)) return void this.waitForMetadata(GR);
+          let uR = yR.currentTimeAtLastInteraction + RR;
+          GR.loop && !1 !== tR && (uR %= tR), GR.currentTime = uR
+        } else GR.pause(), GR.currentTime = yR.currentTimeAtLastInteraction
       }
-      waitForMetadata(WW) {
-        if (this.metadataCallbackMap.has(WW)) return;
-        if (!("addEventListener" in WW)) return;
-        const iW = () => {
-          this.metadataCallbackMap.delete(WW);
-          const iW = this.mediaMap.get(WW);
-          iW && this.seekTo({
+      waitForMetadata(RR) {
+        if (this.metadataCallbackMap.has(RR)) return;
+        if (!("addEventListener" in RR)) return;
+        const JR = () => {
+          this.metadataCallbackMap.delete(RR);
+          const JR = this.mediaMap.get(RR);
+          JR && this.seekTo({
             time: this.getCurrentTime(),
-            target: WW,
-            mediaState: iW
+            target: RR,
+            mediaState: JR
           })
         };
-        this.metadataCallbackMap.set(WW, iW), WW.addEventListener("loadedmetadata", iW, {
+        this.metadataCallbackMap.set(RR, JR), RR.addEventListener("loadedmetadata", JR, {
           once: !0
         })
       }
-      getMediaStateFromMutation(WW) {
+      getMediaStateFromMutation(RR) {
         let {
-          target: iW,
-          timeOffset: OW,
-          mutation: mW
-        } = WW;
-        const EW = this.mediaMap.get(iW),
+          target: JR,
+          timeOffset: GR,
+          mutation: yR
+        } = RR;
+        const tR = this.mediaMap.get(JR),
           {
-            type: NW,
-            playbackRate: PW,
-            currentTime: LW,
-            muted: cW,
-            volume: wW,
-            loop: tW
-          } = mW;
+            type: uR,
+            playbackRate: ZR,
+            currentTime: qR,
+            muted: iR,
+            volume: fR,
+            loop: VR
+          } = yR;
         return {
-          isPlaying: NW === gP.Play || NW !== gP.Pause && ((null == EW ? void 0 : EW.isPlaying) || null !== iW.getAttribute("autoplay")),
-          currentTimeAtLastInteraction: LW ?? (null == EW ? void 0 : EW.currentTimeAtLastInteraction) ?? 0,
-          lastInteractionTimeOffset: OW,
-          playbackRate: PW ?? (null == EW ? void 0 : EW.playbackRate) ?? 1,
-          volume: wW ?? (null == EW ? void 0 : EW.volume) ?? 1,
-          muted: cW ?? (null == EW ? void 0 : EW.muted) ?? null === iW.getAttribute("muted"),
-          loop: tW ?? (null == EW ? void 0 : EW.loop) ?? null === iW.getAttribute("loop")
+          isPlaying: uR === DZ.Play || uR !== DZ.Pause && ((null == tR ? void 0 : tR.isPlaying) || null !== JR.getAttribute("autoplay")),
+          currentTimeAtLastInteraction: qR ?? (null == tR ? void 0 : tR.currentTimeAtLastInteraction) ?? 0,
+          lastInteractionTimeOffset: GR,
+          playbackRate: ZR ?? (null == tR ? void 0 : tR.playbackRate) ?? 1,
+          volume: fR ?? (null == tR ? void 0 : tR.volume) ?? 1,
+          muted: iR ?? (null == tR ? void 0 : tR.muted) ?? null === JR.getAttribute("muted"),
+          loop: VR ?? (null == tR ? void 0 : tR.loop) ?? null === JR.getAttribute("loop")
         }
       }
-      syncTargetWithState(WW) {
-        const iW = this.mediaMap.get(WW);
-        if (!iW) return;
+      syncTargetWithState(RR) {
+        const JR = this.mediaMap.get(RR);
+        if (!JR) return;
         const {
-          muted: OW,
-          loop: mW,
-          volume: EW,
-          isPlaying: NW
-        } = iW, PW = this.service.state.matches("paused"), LW = iW.playbackRate * this.speedService.state.context.timer.speed;
+          muted: GR,
+          loop: yR,
+          volume: tR,
+          isPlaying: uR
+        } = JR, ZR = this.service.state.matches("paused"), qR = JR.playbackRate * this.speedService.state.context.timer.speed;
         try {
           this.seekTo({
             time: this.getCurrentTime(),
-            target: WW,
-            mediaState: iW
-          }), WW.volume !== EW && (WW.volume = EW), WW.muted = OW, WW.loop = mW, WW.playbackRate !== LW && (WW.playbackRate = LW), NW && !PW ? WW.play() : WW.pause()
-        } catch (cW) {
-          this.warn(`Failed to replay media interactions: ${cW.message||cW}`)
+            target: RR,
+            mediaState: JR
+          }), RR.volume !== tR && (RR.volume = tR), RR.muted = GR, RR.loop = yR, RR.playbackRate !== qR && (RR.playbackRate = qR), uR && !ZR ? RR.play() : RR.pause()
+        } catch (iR) {
+          this.warn(`Failed to replay media interactions: ${iR.message||iR}`)
         }
       }
-      addMediaElements(WW, iW, OW) {
-        if (!["AUDIO", "VIDEO"].includes(WW.nodeName)) return;
-        const mW = WW,
-          EW = OW.getMeta(mW);
-        if (!EW || !("attributes" in EW)) return;
-        const NW = this.service.state.matches("paused"),
-          PW = EW.attributes;
-        let LW = !1;
-        LW = PW.rr_mediaState ? "played" === PW.rr_mediaState : null !== mW.getAttribute("autoplay"), LW && NW && mW.pause();
-        let cW = 1;
-        "number" === typeof PW.rr_mediaPlaybackRate && (cW = PW.rr_mediaPlaybackRate);
-        let wW = !1;
-        wW = "boolean" === typeof PW.rr_mediaMuted ? PW.rr_mediaMuted : null !== mW.getAttribute("muted");
-        let tW = !1;
-        tW = "boolean" === typeof PW.rr_mediaLoop ? PW.rr_mediaLoop : null !== mW.getAttribute("loop");
-        let ZW = 1;
-        "number" === typeof PW.rr_mediaVolume && (ZW = PW.rr_mediaVolume);
-        let xW = 0;
-        "number" === typeof PW.rr_mediaCurrentTime && (xW = PW.rr_mediaCurrentTime), this.mediaMap.set(mW, {
-          isPlaying: LW,
-          currentTimeAtLastInteraction: xW,
-          lastInteractionTimeOffset: iW,
-          playbackRate: cW,
-          volume: ZW,
-          muted: wW,
-          loop: tW
-        }), this.syncTargetWithState(mW)
+      addMediaElements(RR, JR, GR) {
+        if (!["AUDIO", "VIDEO"].includes(RR.nodeName)) return;
+        const yR = RR,
+          tR = GR.getMeta(yR);
+        if (!tR || !("attributes" in tR)) return;
+        const uR = this.service.state.matches("paused"),
+          ZR = tR.attributes;
+        let qR = !1;
+        qR = ZR.rr_mediaState ? "played" === ZR.rr_mediaState : null !== yR.getAttribute("autoplay"), qR && uR && yR.pause();
+        let iR = 1;
+        "number" === typeof ZR.rr_mediaPlaybackRate && (iR = ZR.rr_mediaPlaybackRate);
+        let fR = !1;
+        fR = "boolean" === typeof ZR.rr_mediaMuted ? ZR.rr_mediaMuted : null !== yR.getAttribute("muted");
+        let VR = !1;
+        VR = "boolean" === typeof ZR.rr_mediaLoop ? ZR.rr_mediaLoop : null !== yR.getAttribute("loop");
+        let KR = 1;
+        "number" === typeof ZR.rr_mediaVolume && (KR = ZR.rr_mediaVolume);
+        let wR = 0;
+        "number" === typeof ZR.rr_mediaCurrentTime && (wR = ZR.rr_mediaCurrentTime), this.mediaMap.set(yR, {
+          isPlaying: qR,
+          currentTimeAtLastInteraction: wR,
+          lastInteractionTimeOffset: JR,
+          playbackRate: iR,
+          volume: KR,
+          muted: fR,
+          loop: VR
+        }), this.syncTargetWithState(yR)
       }
-      mediaMutation(WW) {
+      mediaMutation(RR) {
         let {
-          target: iW,
-          timeOffset: OW,
-          mutation: mW
-        } = WW;
-        this.mediaMap.set(iW, this.getMediaStateFromMutation({
-          target: iW,
-          timeOffset: OW,
-          mutation: mW
-        })), this.syncTargetWithState(iW)
+          target: JR,
+          timeOffset: GR,
+          mutation: yR
+        } = RR;
+        this.mediaMap.set(JR, this.getMediaStateFromMutation({
+          target: JR,
+          timeOffset: GR,
+          mutation: yR
+        })), this.syncTargetWithState(JR)
       }
-      isSupportedMediaElement(WW) {
-        return ["AUDIO", "VIDEO"].includes(WW.nodeName)
+      isSupportedMediaElement(RR) {
+        return ["AUDIO", "VIDEO"].includes(RR.nodeName)
       }
       reset() {
         this.mediaMap.clear()
       }
     }
 
-    function Ec(WW, iW) {
-      if ("DIALOG" !== WW.nodeName || WW instanceof mN) return;
-      const OW = WW,
-        mW = OW.open,
-        EW = mW && OW.matches("dialog:modal"),
-        NW = OW.getAttribute("rr_open_mode"),
-        PW = "string" === typeof(null == iW ? void 0 : iW.attributes.open) || "string" === typeof OW.getAttribute("open"),
-        LW = "modal" === NW;
-      mW && !(EW && "non-modal" === NW || !EW && LW) || (OW.isConnected ? (mW && OW.close(), PW && (LW ? OW.showModal() : OW.show())) : console.warn("dialog is not attached to the dom", OW))
+    function Gi(RR, JR) {
+      if ("DIALOG" !== RR.nodeName || RR instanceof Ju) return;
+      const GR = RR,
+        yR = GR.open,
+        tR = yR && GR.matches("dialog:modal"),
+        uR = GR.getAttribute("rr_open_mode"),
+        ZR = "string" === typeof(null == JR ? void 0 : JR.attributes.open) || "string" === typeof GR.getAttribute("open"),
+        qR = "modal" === uR;
+      yR && !(tR && "non-modal" === uR || !tR && qR) || (GR.isConnected ? (yR && GR.close(), ZR && (qR ? GR.showModal() : GR.show())) : console.warn("dialog is not attached to the dom", GR))
     }
 
-    function Nc(WW, iW) {
-      if ("DIALOG" !== WW.nodeName || WW instanceof mN) return;
-      const OW = WW;
-      OW.isConnected ? null === iW.attributes.open && (OW.removeAttribute("open"), OW.removeAttribute("rr_open_mode")) : console.warn("dialog is not attached to the dom", OW)
+    function yi(RR, JR) {
+      if ("DIALOG" !== RR.nodeName || RR instanceof Ju) return;
+      const GR = RR;
+      GR.isConnected ? null === JR.attributes.open && (GR.removeAttribute("open"), GR.removeAttribute("rr_open_mode")) : console.warn("dialog is not attached to the dom", GR)
     }
-    const Pc = function(WW) {
+    const ti = function(RR) {
         return {
-          all: WW = WW || new Map,
-          on: function(iW, OW) {
-            var mW = WW.get(iW);
-            mW ? mW.push(OW) : WW.set(iW, [OW])
+          all: RR = RR || new Map,
+          on: function(JR, GR) {
+            var yR = RR.get(JR);
+            yR ? yR.push(GR) : RR.set(JR, [GR])
           },
-          off: function(iW, OW) {
-            var mW = WW.get(iW);
-            mW && (OW ? mW.splice(mW.indexOf(OW) >>> 0, 1) : WW.set(iW, []))
+          off: function(JR, GR) {
+            var yR = RR.get(JR);
+            yR && (GR ? yR.splice(yR.indexOf(GR) >>> 0, 1) : RR.set(JR, []))
           },
-          emit: function(iW, OW) {
-            var mW = WW.get(iW);
-            mW && mW.slice().map((function(WW) {
-              WW(OW)
-            })), (mW = WW.get("*")) && mW.slice().map((function(WW) {
-              WW(iW, OW)
+          emit: function(JR, GR) {
+            var yR = RR.get(JR);
+            yR && yR.slice().map((function(RR) {
+              RR(GR)
+            })), (yR = RR.get("*")) && yR.slice().map((function(RR) {
+              RR(JR, GR)
             }))
           }
         }
       },
-      Lc = "[replayer]",
-      cc = {
+      ui = "[replayer]",
+      Zi = {
         duration: 500,
         lineCap: "round",
         lineWidth: 3,
         strokeStyle: "red"
       };
 
-    function wc(WW) {
-      return WW.type == uP.IncrementalSnapshot && (WW.data.source == oP.TouchMove || WW.data.source == oP.MouseInteraction && WW.data.type == dP.TouchStart)
+    function qi(RR) {
+      return RR.type == bZ.IncrementalSnapshot && (RR.data.source == vZ.TouchMove || RR.data.source == vZ.MouseInteraction && RR.data.type == OZ.TouchStart)
     }
-    class tc {
-      constructor(WW, iW) {
-        var OW = this;
-        if (NW(this, "wrapper"), NW(this, "iframe"), NW(this, "UNSAFE_replayCanvas", !1), NW(this, "service"), NW(this, "speedService"), NW(this, "config"), NW(this, "usingVirtualDom", !1), NW(this, "virtualDom", new TN), NW(this, "mouse"), NW(this, "mouseTail", null), NW(this, "tailPositions", []), NW(this, "emitter", Pc()), NW(this, "nextUserInteractionEvent"), NW(this, "legacy_missingNodeRetryMap", {}), NW(this, "cache", QO()), NW(this, "imageMap", new Map), NW(this, "canvasEventMap", new Map), NW(this, "mirror", JW()), NW(this, "styleMirror", new TP), NW(this, "mediaManager"), NW(this, "firstFullSnapshot", null), NW(this, "newDocumentQueue", []), NW(this, "mousePos", null), NW(this, "touchActive", null), NW(this, "lastMouseDownEvent", null), NW(this, "lastHoveredRootNode"), NW(this, "lastSelectionData", null), NW(this, "constructedStyleMutations", []), NW(this, "adoptedStyleSheets", []), NW(this, "handleResize", (WW => {
+    class ii {
+      constructor(RR, JR) {
+        var GR = this;
+        if (uR(this, "wrapper"), uR(this, "iframe"), uR(this, "UNSAFE_replayCanvas", !1), uR(this, "service"), uR(this, "speedService"), uR(this, "config"), uR(this, "usingVirtualDom", !1), uR(this, "virtualDom", new Mu), uR(this, "mouse"), uR(this, "mouseTail", null), uR(this, "tailPositions", []), uR(this, "emitter", ti()), uR(this, "nextUserInteractionEvent"), uR(this, "legacy_missingNodeRetryMap", {}), uR(this, "cache", TG()), uR(this, "imageMap", new Map), uR(this, "canvasEventMap", new Map), uR(this, "mirror", pR()), uR(this, "styleMirror", new MZ), uR(this, "mediaManager"), uR(this, "firstFullSnapshot", null), uR(this, "newDocumentQueue", []), uR(this, "mousePos", null), uR(this, "touchActive", null), uR(this, "lastMouseDownEvent", null), uR(this, "lastHoveredRootNode"), uR(this, "lastSelectionData", null), uR(this, "constructedStyleMutations", []), uR(this, "adoptedStyleSheets", []), uR(this, "handleResize", (RR => {
             this.iframe.style.display = "inherit";
-            for (const iW of [this.mouseTail, this.iframe]) iW && (iW.setAttribute("width", String(WW.width)), iW.setAttribute("height", String(WW.height)))
-          })), NW(this, "applyEventsSynchronously", (WW => {
-            for (const iW of WW) {
-              switch (iW.type) {
-                case uP.DomContentLoaded:
-                case uP.Load:
+            for (const JR of [this.mouseTail, this.iframe]) JR && (JR.setAttribute("width", String(RR.width)), JR.setAttribute("height", String(RR.height)))
+          })), uR(this, "applyEventsSynchronously", (RR => {
+            for (const JR of RR) {
+              switch (JR.type) {
+                case bZ.DomContentLoaded:
+                case bZ.Load:
                   continue;
-                case uP.FullSnapshot:
-                case uP.Meta:
-                case uP.Plugin:
-                case uP.IncrementalSnapshot:
+                case bZ.FullSnapshot:
+                case bZ.Meta:
+                case bZ.Plugin:
+                case bZ.IncrementalSnapshot:
               }
-              this.getCastFn(iW, !0)()
+              this.getCastFn(JR, !0)()
             }
-          })), NW(this, "getCastFn", (function(WW) {
-            let iW, mW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            switch (WW.type) {
-              case uP.DomContentLoaded:
-              case uP.Load:
+          })), uR(this, "getCastFn", (function(RR) {
+            let JR, yR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            switch (RR.type) {
+              case bZ.DomContentLoaded:
+              case bZ.Load:
                 break;
-              case uP.Custom:
-                iW = () => {
-                  OW.emitter.emit(DP.CustomEvent, WW)
+              case bZ.Custom:
+                JR = () => {
+                  GR.emitter.emit(HZ.CustomEvent, RR)
                 };
                 break;
-              case uP.Meta:
-                iW = () => OW.emitter.emit(DP.Resize, {
-                  width: WW.data.width,
-                  height: WW.data.height
+              case bZ.Meta:
+                JR = () => GR.emitter.emit(HZ.Resize, {
+                  width: RR.data.width,
+                  height: RR.data.height
                 });
                 break;
-              case uP.FullSnapshot:
-                iW = () => {
-                  var iW;
-                  if (OW.firstFullSnapshot) {
-                    if (OW.firstFullSnapshot === WW) return void(OW.firstFullSnapshot = !0)
-                  } else OW.firstFullSnapshot = !0;
-                  OW.mediaManager.reset(), OW.styleMirror.reset(), OW.rebuildFullSnapshot(WW, mW), null == (iW = OW.iframe.contentWindow) || iW.scrollTo(WW.data.initialOffset)
+              case bZ.FullSnapshot:
+                JR = () => {
+                  var JR;
+                  if (GR.firstFullSnapshot) {
+                    if (GR.firstFullSnapshot === RR) return void(GR.firstFullSnapshot = !0)
+                  } else GR.firstFullSnapshot = !0;
+                  GR.mediaManager.reset(), GR.styleMirror.reset(), GR.rebuildFullSnapshot(RR, yR), null == (JR = GR.iframe.contentWindow) || JR.scrollTo(RR.data.initialOffset)
                 };
                 break;
-              case uP.IncrementalSnapshot:
-                iW = () => {
-                  if (OW.applyIncremental(WW, mW), !mW && (WW === OW.nextUserInteractionEvent && (OW.nextUserInteractionEvent = null, OW.backToNormal()), OW.config.skipInactive && !OW.nextUserInteractionEvent)) {
-                    for (const iW of OW.service.state.context.events)
-                      if (!(iW.timestamp <= WW.timestamp) && OW.isUserInteraction(iW)) {
-                        iW.delay - WW.delay > OW.config.inactivePeriodThreshold * OW.speedService.state.context.timer.speed && (OW.nextUserInteractionEvent = iW);
+              case bZ.IncrementalSnapshot:
+                JR = () => {
+                  if (GR.applyIncremental(RR, yR), !yR && (RR === GR.nextUserInteractionEvent && (GR.nextUserInteractionEvent = null, GR.backToNormal()), GR.config.skipInactive && !GR.nextUserInteractionEvent)) {
+                    for (const JR of GR.service.state.context.events)
+                      if (!(JR.timestamp <= RR.timestamp) && GR.isUserInteraction(JR)) {
+                        JR.delay - RR.delay > GR.config.inactivePeriodThreshold * GR.speedService.state.context.timer.speed && (GR.nextUserInteractionEvent = JR);
                         break
-                      } if (OW.nextUserInteractionEvent) {
-                      const iW = OW.nextUserInteractionEvent.delay - WW.delay,
-                        mW = {
-                          speed: Math.min(Math.round(iW / 5e3), OW.config.maxSpeed)
+                      } if (GR.nextUserInteractionEvent) {
+                      const JR = GR.nextUserInteractionEvent.delay - RR.delay,
+                        yR = {
+                          speed: Math.min(Math.round(JR / 5e3), GR.config.maxSpeed)
                         };
-                      OW.speedService.send({
+                      GR.speedService.send({
                         type: "FAST_FORWARD",
-                        payload: mW
-                      }), OW.emitter.emit(DP.SkipStart, mW)
+                        payload: yR
+                      }), GR.emitter.emit(HZ.SkipStart, yR)
                     }
                   }
                 }
             }
             return () => {
-              iW && iW();
-              for (const iW of OW.config.plugins || []) iW.handler && iW.handler(WW, mW, {
-                replayer: OW
+              JR && JR();
+              for (const JR of GR.config.plugins || []) JR.handler && JR.handler(RR, yR, {
+                replayer: GR
               });
-              OW.service.send({
+              GR.service.send({
                 type: "CAST_EVENT",
                 payload: {
-                  event: WW
+                  event: RR
                 }
               });
-              const EW = OW.service.state.context.events.length - 1;
-              if (!OW.config.liveMode && WW === OW.service.state.context.events[EW]) {
-                const iW = () => {
-                  EW < OW.service.state.context.events.length - 1 || (OW.backToNormal(), OW.service.send("END"), OW.emitter.emit(DP.Finish))
+              const tR = GR.service.state.context.events.length - 1;
+              if (!GR.config.liveMode && RR === GR.service.state.context.events[tR]) {
+                const JR = () => {
+                  tR < GR.service.state.context.events.length - 1 || (GR.backToNormal(), GR.service.send("END"), GR.emitter.emit(HZ.Finish))
                 };
-                let mW = 50;
-                WW.type === uP.IncrementalSnapshot && WW.data.source === oP.MouseMove && WW.data.positions.length && (mW += Math.max(0, -WW.data.positions[0].timeOffset)), setTimeout(iW, mW)
+                let yR = 50;
+                RR.type === bZ.IncrementalSnapshot && RR.data.source === vZ.MouseMove && RR.data.positions.length && (yR += Math.max(0, -RR.data.positions[0].timeOffset)), setTimeout(JR, yR)
               }
-              OW.emitter.emit(DP.EventCast, WW)
+              GR.emitter.emit(HZ.EventCast, RR)
             }
-          })), !(null == iW ? void 0 : iW.liveMode) && WW.length < 2) throw new Error("Replayer need at least 2 events.");
-        const mW = {
+          })), !(null == JR ? void 0 : JR.liveMode) && RR.length < 2) throw new Error("Replayer need at least 2 events.");
+        const yR = {
           speed: 1,
           maxSpeed: 360,
           root: document.body,
@@ -10256,23 +10256,23 @@ export const modules = {
           triggerFocus: !0,
           UNSAFE_replayCanvas: !1,
           pauseAnimation: !0,
-          mouseTail: cc,
+          mouseTail: Zi,
           useVirtualDom: !0,
           logger: console
         };
-        this.config = Object.assign({}, mW, iW), this.handleResize = this.handleResize.bind(this), this.getCastFn = this.getCastFn.bind(this), this.applyEventsSynchronously = this.applyEventsSynchronously.bind(this), this.emitter.on(DP.Resize, this.handleResize), this.setupDom();
-        for (const NW of this.config.plugins || []) NW.getMirror && NW.getMirror({
+        this.config = Object.assign({}, yR, JR), this.handleResize = this.handleResize.bind(this), this.getCastFn = this.getCastFn.bind(this), this.applyEventsSynchronously = this.applyEventsSynchronously.bind(this), this.emitter.on(HZ.Resize, this.handleResize), this.setupDom();
+        for (const uR of this.config.plugins || []) uR.getMirror && uR.getMirror({
           nodeMirror: this.mirror
         });
-        this.emitter.on(DP.Flush, (() => {
+        this.emitter.on(HZ.Flush, (() => {
           if (this.usingVirtualDom) {
-            const OW = {
+            const GR = {
               mirror: this.mirror,
-              applyCanvas: (WW, iW, OW) => {
-                Oc({
-                  event: WW,
-                  mutation: iW,
-                  target: OW,
+              applyCanvas: (RR, JR, GR) => {
+                Ri({
+                  event: RR,
+                  mutation: JR,
+                  target: GR,
                   imageMap: this.imageMap,
                   canvasEventMap: this.canvasEventMap,
                   errorHandler: this.warnCanvasMutationFailed.bind(this)
@@ -10280,49 +10280,49 @@ export const modules = {
               },
               applyInput: this.applyInput.bind(this),
               applyScroll: this.applyScroll.bind(this),
-              applyStyleSheetMutation: (WW, iW) => {
-                WW.source === oP.StyleSheetRule ? this.applyStyleSheetRule(WW, iW) : WW.source === oP.StyleDeclaration && this.applyStyleDeclaration(WW, iW)
+              applyStyleSheetMutation: (RR, JR) => {
+                RR.source === vZ.StyleSheetRule ? this.applyStyleSheetRule(RR, JR) : RR.source === vZ.StyleDeclaration && this.applyStyleDeclaration(RR, JR)
               },
-              afterAppend: (WW, iW) => {
-                for (const OW of this.config.plugins || []) OW.onBuild && OW.onBuild(WW, {
-                  id: iW,
+              afterAppend: (RR, JR) => {
+                for (const GR of this.config.plugins || []) GR.onBuild && GR.onBuild(RR, {
+                  id: JR,
                   replayer: this
                 })
               }
             };
             if (this.iframe.contentDocument) try {
-              MN(this.iframe.contentDocument, this.virtualDom, OW, this.virtualDom.mirror)
-            } catch (WW) {
-              this.warn(WW)
+              Uu(this.iframe.contentDocument, this.virtualDom, GR, this.virtualDom.mirror)
+            } catch (RR) {
+              this.warn(RR)
             }
             if (this.virtualDom.destroyTree(), this.usingVirtualDom = !1, Object.keys(this.legacy_missingNodeRetryMap).length)
-              for (const WW in this.legacy_missingNodeRetryMap) try {
-                const iW = this.legacy_missingNodeRetryMap[WW],
-                  mW = SN(iW.node, this.mirror, this.virtualDom.mirror);
-                MN(mW, iW.node, OW, this.virtualDom.mirror), iW.node = mW
-              } catch (iW) {
-                this.warn(iW)
+              for (const RR in this.legacy_missingNodeRetryMap) try {
+                const JR = this.legacy_missingNodeRetryMap[RR],
+                  yR = Au(JR.node, this.mirror, this.virtualDom.mirror);
+                Uu(yR, JR.node, GR, this.virtualDom.mirror), JR.node = yR
+              } catch (JR) {
+                this.warn(JR)
               }
-            this.constructedStyleMutations.forEach((WW => {
-              this.applyStyleSheetMutation(WW)
-            })), this.constructedStyleMutations = [], this.adoptedStyleSheets.forEach((WW => {
-              this.applyAdoptedStyleSheet(WW)
+            this.constructedStyleMutations.forEach((RR => {
+              this.applyStyleSheetMutation(RR)
+            })), this.constructedStyleMutations = [], this.adoptedStyleSheets.forEach((RR => {
+              this.applyAdoptedStyleSheet(RR)
             })), this.adoptedStyleSheets = []
           }
           if (this.mousePos && (this.moveAndHover(this.mousePos.x, this.mousePos.y, this.mousePos.id, !0, this.mousePos.debugData), this.mousePos = null), !0 === this.touchActive ? this.mouse.classList.add("touch-active") : !1 === this.touchActive && this.mouse.classList.remove("touch-active"), this.touchActive = null, this.lastMouseDownEvent) {
-            const [WW, iW] = this.lastMouseDownEvent;
-            WW.dispatchEvent(iW)
+            const [RR, JR] = this.lastMouseDownEvent;
+            RR.dispatchEvent(JR)
           }
           this.lastMouseDownEvent = null, this.lastSelectionData && (this.applySelection(this.lastSelectionData), this.lastSelectionData = null)
-        })), this.emitter.on(DP.PlayBack, (() => {
+        })), this.emitter.on(HZ.PlayBack, (() => {
           this.firstFullSnapshot = null, this.mirror.reset(), this.styleMirror.reset(), this.mediaManager.reset()
         }));
-        const EW = new dL([], {
+        const tR = new Oq([], {
           speed: this.config.speed
         });
-        this.service = rL({
-          events: WW.map((WW => iW && iW.unpackFn ? iW.unpackFn(WW) : WW)).sort(((WW, iW) => WW.timestamp - iW.timestamp)),
-          timer: EW,
+        this.service = kq({
+          events: RR.map((RR => JR && JR.unpackFn ? JR.unpackFn(RR) : RR)).sort(((RR, JR) => RR.timestamp - JR.timestamp)),
+          timer: tR,
           timeOffset: 0,
           baselineTime: 0,
           lastPlayedEvent: null
@@ -10330,15 +10330,15 @@ export const modules = {
           getCastFn: this.getCastFn,
           applyEventsSynchronously: this.applyEventsSynchronously,
           emitter: this.emitter
-        }), this.service.start(), this.service.subscribe((WW => {
-          this.emitter.emit(DP.StateChange, {
-            player: WW
+        }), this.service.start(), this.service.subscribe((RR => {
+          this.emitter.emit(HZ.StateChange, {
+            player: RR
           })
-        })), this.speedService = aL(GL({
+        })), this.speedService = Yq(dq({
           id: "speed",
           context: {
             normalSpeed: -1,
-            timer: EW
+            timer: tR
           },
           initial: "normal",
           states: {
@@ -10369,72 +10369,72 @@ export const modules = {
           }
         }, {
           actions: {
-            setSpeed: (WW, iW) => {
-              "payload" in iW && WW.timer.setSpeed(iW.payload.speed)
+            setSpeed: (RR, JR) => {
+              "payload" in JR && RR.timer.setSpeed(JR.payload.speed)
             },
-            recordSpeed: fL({
-              normalSpeed: WW => WW.timer.speed
+            recordSpeed: Pq({
+              normalSpeed: RR => RR.timer.speed
             }),
-            restoreSpeed: WW => {
-              WW.timer.setSpeed(WW.normalSpeed)
+            restoreSpeed: RR => {
+              RR.timer.setSpeed(RR.normalSpeed)
             }
           }
-        })), this.speedService.start(), this.speedService.subscribe((WW => {
-          this.emitter.emit(DP.StateChange, {
-            speed: WW
+        })), this.speedService.start(), this.speedService.subscribe((RR => {
+          this.emitter.emit(HZ.StateChange, {
+            speed: RR
           })
-        })), this.mediaManager = new mc({
+        })), this.mediaManager = new Ji({
           warn: this.warn.bind(this),
           service: this.service,
           speedService: this.speedService,
           emitter: this.emitter,
           getCurrentTime: this.getCurrentTime.bind(this)
         });
-        const PW = this.service.state.context.events.find((WW => WW.type === uP.Meta)),
-          LW = this.service.state.context.events.find((WW => WW.type === uP.FullSnapshot));
-        if (PW) {
+        const ZR = this.service.state.context.events.find((RR => RR.type === bZ.Meta)),
+          qR = this.service.state.context.events.find((RR => RR.type === bZ.FullSnapshot));
+        if (ZR) {
           const {
-            width: WW,
-            height: iW
-          } = PW.data;
+            width: RR,
+            height: JR
+          } = ZR.data;
           setTimeout((() => {
-            this.emitter.emit(DP.Resize, {
-              width: WW,
-              height: iW
+            this.emitter.emit(HZ.Resize, {
+              width: RR,
+              height: JR
             })
           }), 0)
         }
-        LW && setTimeout((() => {
-          var WW;
-          this.firstFullSnapshot || (this.firstFullSnapshot = LW, this.rebuildFullSnapshot(LW), null == (WW = this.iframe.contentWindow) || WW.scrollTo(LW.data.initialOffset))
-        }), 1), this.service.state.context.events.find(wc) && this.mouse.classList.add("touch-device")
+        qR && setTimeout((() => {
+          var RR;
+          this.firstFullSnapshot || (this.firstFullSnapshot = qR, this.rebuildFullSnapshot(qR), null == (RR = this.iframe.contentWindow) || RR.scrollTo(qR.data.initialOffset))
+        }), 1), this.service.state.context.events.find(qi) && this.mouse.classList.add("touch-device")
       }
       get timer() {
         return this.service.state.context.timer
       }
-      on(WW, iW) {
-        return this.emitter.on(WW, iW), this
+      on(RR, JR) {
+        return this.emitter.on(RR, JR), this
       }
-      off(WW, iW) {
-        return this.emitter.off(WW, iW), this
+      off(RR, JR) {
+        return this.emitter.off(RR, JR), this
       }
-      setConfig(WW) {
-        Object.keys(WW).forEach((iW => {
-          WW[iW], this.config[iW] = WW[iW]
-        })), this.config.skipInactive || this.backToNormal(), "undefined" !== typeof WW.speed && this.speedService.send({
+      setConfig(RR) {
+        Object.keys(RR).forEach((JR => {
+          RR[JR], this.config[JR] = RR[JR]
+        })), this.config.skipInactive || this.backToNormal(), "undefined" !== typeof RR.speed && this.speedService.send({
           type: "SET_SPEED",
           payload: {
-            speed: WW.speed
+            speed: RR.speed
           }
-        }), "undefined" !== typeof WW.mouseTail && (!1 === WW.mouseTail ? this.mouseTail && (this.mouseTail.style.display = "none") : (this.mouseTail || (this.mouseTail = document.createElement("canvas"), this.mouseTail.width = Number.parseFloat(this.iframe.width), this.mouseTail.height = Number.parseFloat(this.iframe.height), this.mouseTail.classList.add("replayer-mouse-tail"), this.wrapper.insertBefore(this.mouseTail, this.iframe)), this.mouseTail.style.display = "inherit"))
+        }), "undefined" !== typeof RR.mouseTail && (!1 === RR.mouseTail ? this.mouseTail && (this.mouseTail.style.display = "none") : (this.mouseTail || (this.mouseTail = document.createElement("canvas"), this.mouseTail.width = Number.parseFloat(this.iframe.width), this.mouseTail.height = Number.parseFloat(this.iframe.height), this.mouseTail.classList.add("replayer-mouse-tail"), this.wrapper.insertBefore(this.mouseTail, this.iframe)), this.mouseTail.style.display = "inherit"))
       }
       getMetaData() {
-        const WW = this.service.state.context.events[0],
-          iW = this.service.state.context.events[this.service.state.context.events.length - 1];
+        const RR = this.service.state.context.events[0],
+          JR = this.service.state.context.events[this.service.state.context.events.length - 1];
         return {
-          startTime: WW.timestamp,
-          endTime: iW.timestamp,
-          totalTime: iW.timestamp - WW.timestamp
+          startTime: RR.timestamp,
+          endTime: JR.timestamp,
+          totalTime: JR.timestamp - RR.timestamp
         }
       }
       getCurrentTime() {
@@ -10442,55 +10442,55 @@ export const modules = {
       }
       getTimeOffset() {
         const {
-          baselineTime: WW,
-          events: iW
+          baselineTime: RR,
+          events: JR
         } = this.service.state.context;
-        return WW - iW[0].timestamp
+        return RR - JR[0].timestamp
       }
       getMirror() {
         return this.mirror
       }
       play() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        var iW, OW;
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        var JR, GR;
         this.service.state.matches("paused") || this.service.send({
           type: "PAUSE"
         }), this.service.send({
           type: "PLAY",
           payload: {
-            timeOffset: WW
+            timeOffset: RR
           }
-        }), null == (OW = null == (iW = this.iframe.contentDocument) ? void 0 : iW.getElementsByTagName("html")[0]) || OW.classList.remove("rrweb-paused"), this.emitter.emit(DP.Start)
+        }), null == (GR = null == (JR = this.iframe.contentDocument) ? void 0 : JR.getElementsByTagName("html")[0]) || GR.classList.remove("rrweb-paused"), this.emitter.emit(HZ.Start)
       }
-      pause(WW) {
-        var iW, OW;
-        void 0 === WW && this.service.state.matches("playing") && this.service.send({
+      pause(RR) {
+        var JR, GR;
+        void 0 === RR && this.service.state.matches("playing") && this.service.send({
           type: "PAUSE"
-        }), "number" === typeof WW && (this.play(WW), this.service.send({
+        }), "number" === typeof RR && (this.play(RR), this.service.send({
           type: "PAUSE"
-        })), null == (OW = null == (iW = this.iframe.contentDocument) ? void 0 : iW.getElementsByTagName("html")[0]) || OW.classList.add("rrweb-paused"), this.emitter.emit(DP.Pause)
+        })), null == (GR = null == (JR = this.iframe.contentDocument) ? void 0 : JR.getElementsByTagName("html")[0]) || GR.classList.add("rrweb-paused"), this.emitter.emit(HZ.Pause)
       }
       resume() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        this.warn("The 'resume' was deprecated in 1.0. Please use 'play' method which has the same interface."), this.play(WW), this.emitter.emit(DP.Resume)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        this.warn("The 'resume' was deprecated in 1.0. Please use 'play' method which has the same interface."), this.play(RR), this.emitter.emit(HZ.Resume)
       }
       destroy() {
-        this.pause(), this.mirror.reset(), this.styleMirror.reset(), this.mediaManager.reset(), this.config.root.removeChild(this.wrapper), this.emitter.emit(DP.Destroy)
+        this.pause(), this.mirror.reset(), this.styleMirror.reset(), this.mediaManager.reset(), this.config.root.removeChild(this.wrapper), this.emitter.emit(HZ.Destroy)
       }
-      startLive(WW) {
+      startLive(RR) {
         this.service.send({
           type: "TO_LIVE",
           payload: {
-            baselineTime: WW
+            baselineTime: RR
           }
         })
       }
-      addEvent(WW) {
-        const iW = this.config.unpackFn ? this.config.unpackFn(WW) : WW;
-        wc(iW) && this.mouse.classList.add("touch-device"), Promise.resolve().then((() => this.service.send({
+      addEvent(RR) {
+        const JR = this.config.unpackFn ? this.config.unpackFn(RR) : RR;
+        qi(JR) && this.mouse.classList.add("touch-device"), Promise.resolve().then((() => this.service.send({
           type: "ADD_EVENT",
           payload: {
-            event: iW
+            event: JR
           }
         })))
       }
@@ -10501,752 +10501,752 @@ export const modules = {
         this.iframe.setAttribute("scrolling", "no"), this.iframe.style.pointerEvents = "none"
       }
       resetCache() {
-        this.cache = QO()
+        this.cache = TG()
       }
       setupDom() {
-        this.wrapper = document.createElement("div"), this.wrapper.classList.add("replayer-wrapper"), this.config.root.appendChild(this.wrapper), this.mouse = document.createElement("div"), this.mouse.classList.add("replayer-mouse"), this.wrapper.appendChild(this.mouse), !1 !== this.config.mouseTail && (this.mouseTail = document.createElement("canvas"), this.mouseTail.classList.add("replayer-mouse-tail"), this.mouseTail.style.display = "inherit", this.wrapper.appendChild(this.mouseTail)), this.config.UNSAFE_replayCanvas ? (this.iframe = document.createElement("iframe"), this.iframe.setAttribute("sandbox", "allow-same-origin allow-scripts"), this.wrapper.appendChild(this.iframe), this.UNSAFE_replayCanvas = !0) : (this.iframe = function(WW) {
-          var iW;
-          if (!WW.root.isConnected) throw new Error(Wm);
-          const OW = WW.root.ownerDocument.createElement("iframe");
-          for (const [EW, NW] of Object.entries(WW.iframeAttributes || {})) "sandbox" !== EW && OW.setAttribute(EW, NW);
-          OW.setAttribute("sandbox", "allow-same-origin"), WW.root.appendChild(OW);
-          const mW = OW.contentDocument;
-          if (!mW || !OW.contentWindow) throw null == (iW = OW.parentNode) || iW.removeChild(OW), new Error(Wm);
-          return im.add(mW), OW
+        this.wrapper = document.createElement("div"), this.wrapper.classList.add("replayer-wrapper"), this.config.root.appendChild(this.wrapper), this.mouse = document.createElement("div"), this.mouse.classList.add("replayer-mouse"), this.wrapper.appendChild(this.mouse), !1 !== this.config.mouseTail && (this.mouseTail = document.createElement("canvas"), this.mouseTail.classList.add("replayer-mouse-tail"), this.mouseTail.style.display = "inherit", this.wrapper.appendChild(this.mouseTail)), this.config.UNSAFE_replayCanvas ? (this.iframe = document.createElement("iframe"), this.iframe.setAttribute("sandbox", "allow-same-origin allow-scripts"), this.wrapper.appendChild(this.iframe), this.UNSAFE_replayCanvas = !0) : (this.iframe = function(RR) {
+          var JR;
+          if (!RR.root.isConnected) throw new Error(sG);
+          const GR = RR.root.ownerDocument.createElement("iframe");
+          for (const [tR, uR] of Object.entries(RR.iframeAttributes || {})) "sandbox" !== tR && GR.setAttribute(tR, uR);
+          GR.setAttribute("sandbox", "allow-same-origin"), RR.root.appendChild(GR);
+          const yR = GR.contentDocument;
+          if (!yR || !GR.contentWindow) throw null == (JR = GR.parentNode) || JR.removeChild(GR), new Error(sG);
+          return hG.add(yR), GR
         }({
           root: this.wrapper
-        }), this.UNSAFE_replayCanvas = !1), this.iframe.style.display = "none", this.disableInteract(), this.iframe.contentWindow && this.iframe.contentDocument && (oL(this.iframe.contentWindow, this.iframe.contentDocument), bP(this.iframe.contentWindow))
+        }), this.UNSAFE_replayCanvas = !1), this.iframe.style.display = "none", this.disableInteract(), this.iframe.contentWindow && this.iframe.contentDocument && (vq(this.iframe.contentWindow, this.iframe.contentDocument), rZ(this.iframe.contentWindow))
       }
-      rebuildFullSnapshot(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      rebuildFullSnapshot(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (!this.iframe.contentDocument) return this.warn("Looks like your replayer has been destroyed.");
         Object.keys(this.legacy_missingNodeRetryMap).length && this.warn("Found unresolved missing node map", this.legacy_missingNodeRetryMap), this.legacy_missingNodeRetryMap = {};
-        const OW = [],
-          mW = new Set,
-          EW = (iW, EW) => {
-            if ("DIALOG" === iW.nodeName && mW.add(iW), this.collectIframeAndAttachDocument(OW, iW), this.mediaManager.isSupportedMediaElement(iW)) {
+        const GR = [],
+          yR = new Set,
+          tR = (JR, tR) => {
+            if ("DIALOG" === JR.nodeName && yR.add(JR), this.collectIframeAndAttachDocument(GR, JR), this.mediaManager.isSupportedMediaElement(JR)) {
               const {
-                events: OW
+                events: GR
               } = this.service.state.context;
-              this.mediaManager.addMediaElements(iW, WW.timestamp - OW[0].timestamp, this.mirror)
+              this.mediaManager.addMediaElements(JR, RR.timestamp - GR[0].timestamp, this.mirror)
             }
-            for (const WW of this.config.plugins || []) WW.onBuild && WW.onBuild(iW, {
-              id: EW,
+            for (const RR of this.config.plugins || []) RR.onBuild && RR.onBuild(JR, {
+              id: tR,
               replayer: this
             })
           };
-        this.usingVirtualDom && (this.virtualDom.destroyTree(), this.usingVirtualDom = !1), this.mirror.reset(), Pm(WW.data.node, {
+        this.usingVirtualDom && (this.virtualDom.destroyTree(), this.usingVirtualDom = !1), this.mirror.reset(), ty(RR.data.node, {
           doc: this.iframe.contentDocument,
-          afterAppend: EW,
+          afterAppend: tR,
           cache: this.cache,
           mirror: this.mirror,
           UNSAFE_allowUnprotectedRebuild: this.UNSAFE_replayCanvas
-        }), EW(this.iframe.contentDocument, WW.data.node.id);
+        }), tR(this.iframe.contentDocument, RR.data.node.id);
         for (const {
-            mutationInQueue: LW,
-            builtNode: cW
+            mutationInQueue: qR,
+            builtNode: iR
           }
-          of OW) this.attachDocumentToIframe(LW, cW), this.newDocumentQueue = this.newDocumentQueue.filter((WW => WW !== LW));
+          of GR) this.attachDocumentToIframe(qR, iR), this.newDocumentQueue = this.newDocumentQueue.filter((RR => RR !== qR));
         const {
-          documentElement: NW,
-          head: PW
+          documentElement: uR,
+          head: ZR
         } = this.iframe.contentDocument;
-        this.insertStyleRules(NW, PW), mW.forEach((WW => Ec(WW))), this.service.state.matches("playing") || this.iframe.contentDocument.getElementsByTagName("html")[0].classList.add("rrweb-paused"), this.emitter.emit(DP.FullsnapshotRebuilded, WW), iW || this.waitForStylesheetLoad(), this.config.UNSAFE_replayCanvas && this.preloadAllImages()
+        this.insertStyleRules(uR, ZR), yR.forEach((RR => Gi(RR))), this.service.state.matches("playing") || this.iframe.contentDocument.getElementsByTagName("html")[0].classList.add("rrweb-paused"), this.emitter.emit(HZ.FullsnapshotRebuilded, RR), JR || this.waitForStylesheetLoad(), this.config.UNSAFE_replayCanvas && this.preloadAllImages()
       }
-      insertStyleRules(WW, iW) {
-        var OW;
-        const mW = (EW = this.config.blockClass, [`.${EW} { background: currentColor }`, "noscript { display: none !important; }"]).concat(this.config.insertStyleRules);
-        var EW;
-        if (this.config.pauseAnimation && mW.push("html.rrweb-paused *, html.rrweb-paused *:before, html.rrweb-paused *:after { animation-play-state: paused !important; }"), mW.length)
+      insertStyleRules(RR, JR) {
+        var GR;
+        const yR = (tR = this.config.blockClass, [`.${tR} { background: currentColor }`, "noscript { display: none !important; }"]).concat(this.config.insertStyleRules);
+        var tR;
+        if (this.config.pauseAnimation && yR.push("html.rrweb-paused *, html.rrweb-paused *:before, html.rrweb-paused *:after { animation-play-state: paused !important; }"), yR.length)
           if (this.usingVirtualDom) {
-            const OW = this.virtualDom.createElement("style");
-            this.virtualDom.mirror.add(OW, fN(OW, this.virtualDom.unserializedId)), WW.insertBefore(OW, iW), OW.rules.push({
-              source: oP.StyleSheetRule,
-              adds: mW.map(((WW, iW) => ({
-                rule: WW,
-                index: iW
+            const GR = this.virtualDom.createElement("style");
+            this.virtualDom.mirror.add(GR, Pu(GR, this.virtualDom.unserializedId)), RR.insertBefore(GR, JR), GR.rules.push({
+              source: vZ.StyleSheetRule,
+              adds: yR.map(((RR, JR) => ({
+                rule: RR,
+                index: JR
               })))
             })
           } else {
-            const EW = document.createElement("style");
-            WW.insertBefore(EW, iW);
-            for (let WW = 0; WW < mW.length; WW++) null == (OW = EW.sheet) || OW.insertRule(mW[WW], WW)
+            const tR = document.createElement("style");
+            RR.insertBefore(tR, JR);
+            for (let RR = 0; RR < yR.length; RR++) null == (GR = tR.sheet) || GR.insertRule(yR[RR], RR)
           }
       }
-      attachDocumentToIframe(WW, iW) {
-        const OW = this.usingVirtualDom ? this.virtualDom.mirror : this.mirror,
-          mW = [],
-          EW = new Set,
-          NW = (WW, NW) => {
-            "DIALOG" === WW.nodeName && EW.add(WW), this.collectIframeAndAttachDocument(mW, WW);
-            const PW = OW.getMeta(WW);
-            if ((null == PW ? void 0 : PW.type) === VP.Element && "HTML" === (null == PW ? void 0 : PW.tagName.toUpperCase())) {
+      attachDocumentToIframe(RR, JR) {
+        const GR = this.usingVirtualDom ? this.virtualDom.mirror : this.mirror,
+          yR = [],
+          tR = new Set,
+          uR = (RR, uR) => {
+            "DIALOG" === RR.nodeName && tR.add(RR), this.collectIframeAndAttachDocument(yR, RR);
+            const ZR = GR.getMeta(RR);
+            if ((null == ZR ? void 0 : ZR.type) === oZ.Element && "HTML" === (null == ZR ? void 0 : ZR.tagName.toUpperCase())) {
               const {
-                documentElement: WW,
-                head: OW
-              } = iW.contentDocument;
-              this.insertStyleRules(WW, OW)
+                documentElement: RR,
+                head: GR
+              } = JR.contentDocument;
+              this.insertStyleRules(RR, GR)
             }
             if (!this.usingVirtualDom)
-              for (const iW of this.config.plugins || []) iW.onBuild && iW.onBuild(WW, {
-                id: NW,
+              for (const JR of this.config.plugins || []) JR.onBuild && JR.onBuild(RR, {
+                id: uR,
                 replayer: this
               })
           };
-        Nm(WW.node, {
-          doc: iW.contentDocument,
-          mirror: OW,
+        yy(RR.node, {
+          doc: JR.contentDocument,
+          mirror: GR,
           hackCss: !0,
           skipChild: !1,
-          afterAppend: NW,
+          afterAppend: uR,
           cache: this.cache
-        }), NW(iW.contentDocument, WW.node.id);
+        }), uR(JR.contentDocument, RR.node.id);
         for (const {
-            mutationInQueue: PW,
-            builtNode: LW
+            mutationInQueue: ZR,
+            builtNode: qR
           }
-          of mW) this.attachDocumentToIframe(PW, LW), this.newDocumentQueue = this.newDocumentQueue.filter((WW => WW !== PW));
-        EW.forEach((WW => Ec(WW)))
+          of yR) this.attachDocumentToIframe(ZR, qR), this.newDocumentQueue = this.newDocumentQueue.filter((RR => RR !== ZR));
+        tR.forEach((RR => Gi(RR)))
       }
-      collectIframeAndAttachDocument(WW, iW) {
-        if (kP(iW, this.mirror)) {
-          const OW = this.newDocumentQueue.find((WW => WW.parentId === this.mirror.getId(iW)));
-          OW && WW.push({
-            mutationInQueue: OW,
-            builtNode: iW
+      collectIframeAndAttachDocument(RR, JR) {
+        if (LZ(JR, this.mirror)) {
+          const GR = this.newDocumentQueue.find((RR => RR.parentId === this.mirror.getId(JR)));
+          GR && RR.push({
+            mutationInQueue: GR,
+            builtNode: JR
           })
         }
       }
       waitForStylesheetLoad() {
-        var WW;
-        const iW = null == (WW = this.iframe.contentDocument) ? void 0 : WW.head;
-        if (iW) {
-          const WW = new Set;
-          let OW, mW = this.service.state;
-          const EW = () => {
-            mW = this.service.state
+        var RR;
+        const JR = null == (RR = this.iframe.contentDocument) ? void 0 : RR.head;
+        if (JR) {
+          const RR = new Set;
+          let GR, yR = this.service.state;
+          const tR = () => {
+            yR = this.service.state
           };
-          this.emitter.on(DP.Start, EW), this.emitter.on(DP.Pause, EW);
-          const NW = () => {
-            this.emitter.off(DP.Start, EW), this.emitter.off(DP.Pause, EW)
+          this.emitter.on(HZ.Start, tR), this.emitter.on(HZ.Pause, tR);
+          const uR = () => {
+            this.emitter.off(HZ.Start, tR), this.emitter.off(HZ.Pause, tR)
           };
-          iW.querySelectorAll('link[rel="stylesheet"]').forEach((iW => {
-            iW.sheet || (WW.add(iW), iW.addEventListener("load", (() => {
-              WW.delete(iW), 0 === WW.size && -1 !== OW && (mW.matches("playing") && this.play(this.getCurrentTime()), this.emitter.emit(DP.LoadStylesheetEnd), OW && clearTimeout(OW), NW())
+          JR.querySelectorAll('link[rel="stylesheet"]').forEach((JR => {
+            JR.sheet || (RR.add(JR), JR.addEventListener("load", (() => {
+              RR.delete(JR), 0 === RR.size && -1 !== GR && (yR.matches("playing") && this.play(this.getCurrentTime()), this.emitter.emit(HZ.LoadStylesheetEnd), GR && clearTimeout(GR), uR())
             })))
-          })), WW.size > 0 && (this.service.send({
+          })), RR.size > 0 && (this.service.send({
             type: "PAUSE"
-          }), this.emitter.emit(DP.LoadStylesheetStart), OW = setTimeout((() => {
-            mW.matches("playing") && this.play(this.getCurrentTime()), OW = -1, NW()
+          }), this.emitter.emit(HZ.LoadStylesheetStart), GR = setTimeout((() => {
+            yR.matches("playing") && this.play(this.getCurrentTime()), GR = -1, uR()
           }), this.config.loadTimeout))
         }
       }
       async preloadAllImages() {
-        const WW = [];
-        for (const iW of this.service.state.context.events)
-          if (iW.type === uP.IncrementalSnapshot && iW.data.source === oP.CanvasMutation) {
-            WW.push(this.deserializeAndPreloadCanvasEvents(iW.data, iW));
-            ("commands" in iW.data ? iW.data.commands : [iW.data]).forEach((WW => {
-              this.preloadImages(WW, iW)
+        const RR = [];
+        for (const JR of this.service.state.context.events)
+          if (JR.type === bZ.IncrementalSnapshot && JR.data.source === vZ.CanvasMutation) {
+            RR.push(this.deserializeAndPreloadCanvasEvents(JR.data, JR));
+            ("commands" in JR.data ? JR.data.commands : [JR.data]).forEach((RR => {
+              this.preloadImages(RR, JR)
             }))
-          } return Promise.all(WW)
+          } return Promise.all(RR)
       }
-      preloadImages(WW, iW) {
-        if ("drawImage" === WW.property && "string" === typeof WW.args[0] && !this.imageMap.has(iW)) {
-          const WW = document.createElement("canvas"),
-            iW = WW.getContext("2d"),
-            OW = null == iW ? void 0 : iW.createImageData(WW.width, WW.height);
-          null == iW || iW.putImageData(OW, 0, 0)
+      preloadImages(RR, JR) {
+        if ("drawImage" === RR.property && "string" === typeof RR.args[0] && !this.imageMap.has(JR)) {
+          const RR = document.createElement("canvas"),
+            JR = RR.getContext("2d"),
+            GR = null == JR ? void 0 : JR.createImageData(RR.width, RR.height);
+          null == JR || JR.putImageData(GR, 0, 0)
         }
       }
-      async deserializeAndPreloadCanvasEvents(WW, iW) {
-        if (!this.canvasEventMap.has(iW)) {
-          const OW = {
+      async deserializeAndPreloadCanvasEvents(RR, JR) {
+        if (!this.canvasEventMap.has(JR)) {
+          const GR = {
             isUnchanged: !0
           };
-          if ("commands" in WW) {
-            const mW = await Promise.all(WW.commands.map((async WW => {
-              const iW = await Promise.all(WW.args.map(QL(this.imageMap, null, OW)));
+          if ("commands" in RR) {
+            const yR = await Promise.all(RR.commands.map((async RR => {
+              const JR = await Promise.all(RR.args.map(Tq(this.imageMap, null, GR)));
               return {
-                ...WW,
-                args: iW
+                ...RR,
+                args: JR
               }
             })));
-            !1 === OW.isUnchanged && this.canvasEventMap.set(iW, {
-              ...WW,
-              commands: mW
+            !1 === GR.isUnchanged && this.canvasEventMap.set(JR, {
+              ...RR,
+              commands: yR
             })
           } else {
-            const mW = await Promise.all(WW.args.map(QL(this.imageMap, null, OW)));
-            !1 === OW.isUnchanged && this.canvasEventMap.set(iW, {
-              ...WW,
-              args: mW
+            const yR = await Promise.all(RR.args.map(Tq(this.imageMap, null, GR)));
+            !1 === GR.isUnchanged && this.canvasEventMap.set(JR, {
+              ...RR,
+              args: yR
             })
           }
         }
       }
-      applyIncremental(WW, iW) {
-        var OW, mW, EW;
+      applyIncremental(RR, JR) {
+        var GR, yR, tR;
         const {
-          data: NW
-        } = WW;
-        switch (NW.source) {
-          case oP.Mutation:
+          data: uR
+        } = RR;
+        switch (uR.source) {
+          case vZ.Mutation:
             try {
-              this.applyMutation(NW, iW)
-            } catch (PW) {
-              this.warn(`Exception in mutation ${PW.message||PW}`, NW)
+              this.applyMutation(uR, JR)
+            } catch (ZR) {
+              this.warn(`Exception in mutation ${ZR.message||ZR}`, uR)
             }
             break;
-          case oP.Drag:
-          case oP.TouchMove:
-          case oP.MouseMove:
-            if (iW) {
-              const WW = NW.positions[NW.positions.length - 1];
+          case vZ.Drag:
+          case vZ.TouchMove:
+          case vZ.MouseMove:
+            if (JR) {
+              const RR = uR.positions[uR.positions.length - 1];
               this.mousePos = {
-                x: WW.x,
-                y: WW.y,
-                id: WW.id,
-                debugData: NW
+                x: RR.x,
+                y: RR.y,
+                id: RR.id,
+                debugData: uR
               }
-            } else NW.positions.forEach((OW => {
-              const mW = {
+            } else uR.positions.forEach((GR => {
+              const yR = {
                 doAction: () => {
-                  this.moveAndHover(OW.x, OW.y, OW.id, iW, NW)
+                  this.moveAndHover(GR.x, GR.y, GR.id, JR, uR)
                 },
-                delay: OW.timeOffset + WW.timestamp - this.service.state.context.baselineTime
+                delay: GR.timeOffset + RR.timestamp - this.service.state.context.baselineTime
               };
-              this.timer.addAction(mW)
+              this.timer.addAction(yR)
             })), this.timer.addAction({
               doAction() {},
-              delay: WW.delay - (null == (OW = NW.positions[0]) ? void 0 : OW.timeOffset)
+              delay: RR.delay - (null == (GR = uR.positions[0]) ? void 0 : GR.timeOffset)
             });
             break;
-          case oP.MouseInteraction: {
-            if (-1 === NW.id) break;
-            const WW = new Event(HW(dP[NW.type])),
-              OW = this.mirror.AmW(NW.id);
-            if (!OW) return this.debugNodeNotFound(NW, NW.id);
-            this.emitter.emit(DP.MouseInteraction, {
-              type: NW.type,
-              target: OW
+          case vZ.MouseInteraction: {
+            if (-1 === uR.id) break;
+            const RR = new Event(bR(OZ[uR.type])),
+              GR = this.mirror.JtR(uR.id);
+            if (!GR) return this.debugNodeNotFound(uR, uR.id);
+            this.emitter.emit(HZ.MouseInteraction, {
+              type: uR.type,
+              target: GR
             });
             const {
-              triggerFocus: mW
+              triggerFocus: yR
             } = this.config;
-            switch (NW.type) {
-              case dP.Blur:
-                "blur" in OW && OW.blur();
+            switch (uR.type) {
+              case OZ.Blur:
+                "blur" in GR && GR.blur();
                 break;
-              case dP.Focus:
-                mW && OW.focus && OW.focus({
+              case OZ.Focus:
+                yR && GR.focus && GR.focus({
                   preventScroll: !0
                 });
                 break;
-              case dP.Click:
-              case dP.TouchStart:
-              case dP.TouchEnd:
-              case dP.MouseDown:
-              case dP.MouseUp:
-                iW ? (NW.type === dP.TouchStart ? this.touchActive = !0 : NW.type === dP.TouchEnd && (this.touchActive = !1), NW.type === dP.MouseDown ? this.lastMouseDownEvent = [OW, WW] : NW.type === dP.MouseUp && (this.lastMouseDownEvent = null), this.mousePos = {
-                  x: NW.x || 0,
-                  y: NW.y || 0,
-                  id: NW.id,
-                  debugData: NW
-                }) : (NW.type === dP.TouchStart && (this.tailPositions.length = 0), this.moveAndHover(NW.x || 0, NW.y || 0, NW.id, iW, NW), NW.type === dP.Click ? (this.mouse.classList.remove("active"), this.mouse.offsetWidth, this.mouse.classList.add("active")) : NW.type === dP.TouchStart ? (this.mouse.offsetWidth, this.mouse.classList.add("touch-active")) : NW.type === dP.TouchEnd ? this.mouse.classList.remove("touch-active") : OW.dispatchEvent(WW));
+              case OZ.Click:
+              case OZ.TouchStart:
+              case OZ.TouchEnd:
+              case OZ.MouseDown:
+              case OZ.MouseUp:
+                JR ? (uR.type === OZ.TouchStart ? this.touchActive = !0 : uR.type === OZ.TouchEnd && (this.touchActive = !1), uR.type === OZ.MouseDown ? this.lastMouseDownEvent = [GR, RR] : uR.type === OZ.MouseUp && (this.lastMouseDownEvent = null), this.mousePos = {
+                  x: uR.x || 0,
+                  y: uR.y || 0,
+                  id: uR.id,
+                  debugData: uR
+                }) : (uR.type === OZ.TouchStart && (this.tailPositions.length = 0), this.moveAndHover(uR.x || 0, uR.y || 0, uR.id, JR, uR), uR.type === OZ.Click ? (this.mouse.classList.remove("active"), this.mouse.offsetWidth, this.mouse.classList.add("active")) : uR.type === OZ.TouchStart ? (this.mouse.offsetWidth, this.mouse.classList.add("touch-active")) : uR.type === OZ.TouchEnd ? this.mouse.classList.remove("touch-active") : GR.dispatchEvent(RR));
                 break;
-              case dP.TouchCancel:
-                iW ? this.touchActive = !1 : this.mouse.classList.remove("touch-active");
+              case OZ.TouchCancel:
+                JR ? this.touchActive = !1 : this.mouse.classList.remove("touch-active");
                 break;
               default:
-                OW.dispatchEvent(WW)
+                GR.dispatchEvent(RR)
             }
             break
           }
-          case oP.Scroll:
-            if (-1 === NW.id) break;
+          case vZ.Scroll:
+            if (-1 === uR.id) break;
             if (this.usingVirtualDom) {
-              const WW = this.virtualDom.mirror.AmW(NW.id);
-              if (!WW) return this.debugNodeNotFound(NW, NW.id);
-              WW.scrollData = NW;
+              const RR = this.virtualDom.mirror.JtR(uR.id);
+              if (!RR) return this.debugNodeNotFound(uR, uR.id);
+              RR.scrollData = uR;
               break
             }
-            this.applyScroll(NW, iW);
+            this.applyScroll(uR, JR);
             break;
-          case oP.ViewportResize:
-            this.emitter.emit(DP.Resize, {
-              width: NW.width,
-              height: NW.height
+          case vZ.ViewportResize:
+            this.emitter.emit(HZ.Resize, {
+              width: uR.width,
+              height: uR.height
             });
             break;
-          case oP.Input:
-            if (-1 === NW.id) break;
+          case vZ.Input:
+            if (-1 === uR.id) break;
             if (this.usingVirtualDom) {
-              const WW = this.virtualDom.mirror.AmW(NW.id);
-              if (!WW) return this.debugNodeNotFound(NW, NW.id);
-              WW.inputData = NW;
+              const RR = this.virtualDom.mirror.JtR(uR.id);
+              if (!RR) return this.debugNodeNotFound(uR, uR.id);
+              RR.inputData = uR;
               break
             }
-            this.applyInput(NW);
+            this.applyInput(uR);
             break;
-          case oP.MediaInteraction: {
-            const iW = this.usingVirtualDom ? this.virtualDom.mirror.AmW(NW.id) : this.mirror.AmW(NW.id);
-            if (!iW) return this.debugNodeNotFound(NW, NW.id);
-            const OW = iW,
+          case vZ.MediaInteraction: {
+            const JR = this.usingVirtualDom ? this.virtualDom.mirror.JtR(uR.id) : this.mirror.JtR(uR.id);
+            if (!JR) return this.debugNodeNotFound(uR, uR.id);
+            const GR = JR,
               {
-                events: mW
+                events: yR
               } = this.service.state.context;
             this.mediaManager.mediaMutation({
-              target: OW,
-              timeOffset: WW.timestamp - mW[0].timestamp,
-              mutation: NW
+              target: GR,
+              timeOffset: RR.timestamp - yR[0].timestamp,
+              mutation: uR
             });
             break
           }
-          case oP.StyleSheetRule:
-          case oP.StyleDeclaration:
-            this.usingVirtualDom ? NW.styleId ? this.constructedStyleMutations.push(NW) : NW.id && (null == (mW = this.virtualDom.mirror.AmW(NW.id)) || mW.rules.push(NW)) : this.applyStyleSheetMutation(NW);
+          case vZ.StyleSheetRule:
+          case vZ.StyleDeclaration:
+            this.usingVirtualDom ? uR.styleId ? this.constructedStyleMutations.push(uR) : uR.id && (null == (yR = this.virtualDom.mirror.JtR(uR.id)) || yR.rules.push(uR)) : this.applyStyleSheetMutation(uR);
             break;
-          case oP.CanvasMutation:
+          case vZ.CanvasMutation:
             if (!this.config.UNSAFE_replayCanvas) return;
             if (this.usingVirtualDom) {
-              const iW = this.virtualDom.mirror.AmW(NW.id);
-              if (!iW) return this.debugNodeNotFound(NW, NW.id);
-              iW.canvasMutations.push({
-                event: WW,
-                mutation: NW
+              const JR = this.virtualDom.mirror.JtR(uR.id);
+              if (!JR) return this.debugNodeNotFound(uR, uR.id);
+              JR.canvasMutations.push({
+                event: RR,
+                mutation: uR
               })
             } else {
-              const iW = this.mirror.AmW(NW.id);
-              if (!iW) return this.debugNodeNotFound(NW, NW.id);
-              Oc({
-                event: WW,
-                mutation: NW,
-                target: iW,
+              const JR = this.mirror.JtR(uR.id);
+              if (!JR) return this.debugNodeNotFound(uR, uR.id);
+              Ri({
+                event: RR,
+                mutation: uR,
+                target: JR,
                 imageMap: this.imageMap,
                 canvasEventMap: this.canvasEventMap,
                 errorHandler: this.warnCanvasMutationFailed.bind(this)
               })
             }
             break;
-          case oP.Font:
+          case vZ.Font:
             try {
-              const WW = new FontFace(NW.family, NW.buffer ? new Uint8Array(JSON.parse(NW.fontSource)) : NW.fontSource, NW.descriptors);
-              null == (EW = this.iframe.contentDocument) || EW.fonts.add(WW)
-            } catch (PW) {
-              this.warn(PW)
+              const RR = new FontFace(uR.family, uR.buffer ? new Uint8Array(JSON.parse(uR.fontSource)) : uR.fontSource, uR.descriptors);
+              null == (tR = this.iframe.contentDocument) || tR.fonts.add(RR)
+            } catch (ZR) {
+              this.warn(ZR)
             }
             break;
-          case oP.Selection:
-            if (iW) {
-              this.lastSelectionData = NW;
+          case vZ.Selection:
+            if (JR) {
+              this.lastSelectionData = uR;
               break
             }
-            this.applySelection(NW);
+            this.applySelection(uR);
             break;
-          case oP.AdoptedStyleSheet:
-            this.usingVirtualDom ? this.adoptedStyleSheets.push(NW) : this.applyAdoptedStyleSheet(NW)
+          case vZ.AdoptedStyleSheet:
+            this.usingVirtualDom ? this.adoptedStyleSheets.push(uR) : this.applyAdoptedStyleSheet(uR)
         }
       }
-      applyMutation(WW, iW) {
-        if (this.config.useVirtualDom && !this.usingVirtualDom && iW && (this.usingVirtualDom = !0, VN(this.iframe.contentDocument, this.mirror, this.virtualDom), Object.keys(this.legacy_missingNodeRetryMap).length))
-          for (const cW in this.legacy_missingNodeRetryMap) try {
-            const WW = this.legacy_missingNodeRetryMap[cW],
-              iW = DN(WW.node, this.virtualDom, this.mirror);
-            iW && (WW.node = iW)
-          } catch (LW) {
-            this.warn(LW)
+      applyMutation(RR, JR) {
+        if (this.config.useVirtualDom && !this.usingVirtualDom && JR && (this.usingVirtualDom = !0, ou(this.iframe.contentDocument, this.mirror, this.virtualDom), Object.keys(this.legacy_missingNodeRetryMap).length))
+          for (const iR in this.legacy_missingNodeRetryMap) try {
+            const RR = this.legacy_missingNodeRetryMap[iR],
+              JR = Hu(RR.node, this.virtualDom, this.mirror);
+            JR && (RR.node = JR)
+          } catch (qR) {
+            this.warn(qR)
           }
-        const OW = this.usingVirtualDom ? this.virtualDom.mirror : this.mirror;
-        WW.removes = WW.removes.filter((iW => !!OW.AmW(iW.id) || (this.warnNodeNotFound(WW, iW.id), !1))), WW.removes.forEach((iW => {
-          var mW;
-          const EW = OW.AmW(iW.id);
-          if (!EW) return;
-          let NW = OW.AmW(iW.parentId);
-          if (!NW) return this.warnNodeNotFound(WW, iW.parentId);
-          if (iW.isShadow && KP(NW) && (NW = NW.shadowRoot), OW.removeNodeFromMap(EW), NW) try {
-            NW.removeChild(EW), this.usingVirtualDom && "#text" === EW.nodeName && "STYLE" === NW.nodeName && (null == (mW = NW.rules) ? void 0 : mW.length) > 0 && (NW.rules = [])
-          } catch (LW) {
-            if (!(LW instanceof DOMException)) throw LW;
-            this.warn("parent could not remove child in mutation", NW, EW, WW)
+        const GR = this.usingVirtualDom ? this.virtualDom.mirror : this.mirror;
+        RR.removes = RR.removes.filter((JR => !!GR.JtR(JR.id) || (this.warnNodeNotFound(RR, JR.id), !1))), RR.removes.forEach((JR => {
+          var yR;
+          const tR = GR.JtR(JR.id);
+          if (!tR) return;
+          let uR = GR.JtR(JR.parentId);
+          if (!uR) return this.warnNodeNotFound(RR, JR.parentId);
+          if (JR.isShadow && WZ(uR) && (uR = uR.shadowRoot), GR.removeNodeFromMap(tR), uR) try {
+            uR.removeChild(tR), this.usingVirtualDom && "#text" === tR.nodeName && "STYLE" === uR.nodeName && (null == (yR = uR.rules) ? void 0 : yR.length) > 0 && (uR.rules = [])
+          } catch (qR) {
+            if (!(qR instanceof DOMException)) throw qR;
+            this.warn("parent could not remove child in mutation", uR, tR, RR)
           }
         }));
-        const mW = {
+        const yR = {
             ...this.legacy_missingNodeRetryMap
           },
-          EW = [],
-          NW = WW => {
-            var iW, NW;
+          tR = [],
+          uR = RR => {
+            var JR, uR;
             if (!this.iframe.contentDocument) return this.warn("Looks like your replayer has been destroyed.");
-            let PW = OW.AmW(WW.parentId);
-            if (!PW) return WW.node.type === VP.Document ? this.newDocumentQueue.push(WW) : EW.push(WW);
-            WW.node.isShadow && (KP(PW) || PW.attachShadow({
+            let ZR = GR.JtR(RR.parentId);
+            if (!ZR) return RR.node.type === oZ.Document ? this.newDocumentQueue.push(RR) : tR.push(RR);
+            RR.node.isShadow && (WZ(ZR) || ZR.attachShadow({
               mode: "open"
-            }), PW = PW.shadowRoot);
-            let LW = null,
-              cW = null;
-            if (WW.previousId && (LW = OW.AmW(WW.previousId)), WW.nextId && (cW = OW.AmW(WW.nextId)), (WW => {
-                let iW = null;
-                return WW.nextId && (iW = OW.AmW(WW.nextId)), null !== WW.nextId && void 0 !== WW.nextId && -1 !== WW.nextId && !iW
-              })(WW)) return EW.push(WW);
-            if (WW.node.rootId && !OW.AmW(WW.node.rootId)) return;
-            const wW = WW.node.rootId ? OW.AmW(WW.node.rootId) : this.usingVirtualDom ? this.virtualDom : this.iframe.contentDocument;
-            if (kP(PW, OW)) return void this.attachDocumentToIframe(WW, PW);
-            const tW = (WW, iW) => {
+            }), ZR = ZR.shadowRoot);
+            let qR = null,
+              iR = null;
+            if (RR.previousId && (qR = GR.JtR(RR.previousId)), RR.nextId && (iR = GR.JtR(RR.nextId)), (RR => {
+                let JR = null;
+                return RR.nextId && (JR = GR.JtR(RR.nextId)), null !== RR.nextId && void 0 !== RR.nextId && -1 !== RR.nextId && !JR
+              })(RR)) return tR.push(RR);
+            if (RR.node.rootId && !GR.JtR(RR.node.rootId)) return;
+            const fR = RR.node.rootId ? GR.JtR(RR.node.rootId) : this.usingVirtualDom ? this.virtualDom : this.iframe.contentDocument;
+            if (LZ(ZR, GR)) return void this.attachDocumentToIframe(RR, ZR);
+            const VR = (RR, JR) => {
                 if (!this.usingVirtualDom) {
-                  Ec(WW);
-                  for (const OW of this.config.plugins || []) OW.onBuild && OW.onBuild(WW, {
-                    id: iW,
+                  Gi(RR);
+                  for (const GR of this.config.plugins || []) GR.onBuild && GR.onBuild(RR, {
+                    id: JR,
                     replayer: this
                   })
                 }
               },
-              ZW = Nm(WW.node, {
-                doc: wW,
-                mirror: OW,
+              KR = yy(RR.node, {
+                doc: fR,
+                mirror: GR,
                 skipChild: !0,
                 hackCss: !0,
                 cache: this.cache,
-                afterAppend: tW
+                afterAppend: VR
               });
-            if (-1 === WW.previousId || -1 === WW.nextId) return void(mW[WW.node.id] = {
-              node: ZW,
-              mutation: WW
+            if (-1 === RR.previousId || -1 === RR.nextId) return void(yR[RR.node.id] = {
+              node: KR,
+              mutation: RR
             });
-            const xW = OW.getMeta(PW);
-            if (xW && xW.type === VP.Element && WW.node.type === VP.Text) {
-              const WW = Array.isArray(PW.childNodes) ? PW.childNodes : Array.from(PW.childNodes);
-              if ("textarea" === xW.tagName)
-                for (const iW of WW) iW.nodeType === PW.TEXT_NODE && PW.removeChild(iW);
-              else if ("style" === xW.tagName && 1 === WW.length)
-                for (const iW of WW) iW.nodeType !== PW.TEXT_NODE || OW.hasNode(iW) || (ZW.textContent = iW.textContent, PW.removeChild(iW))
-            } else if ((null == xW ? void 0 : xW.type) === VP.Document) {
-              const OW = PW;
-              WW.node.type === VP.DocumentType && (null == (iW = OW.childNodes[0]) ? void 0 : iW.nodeType) === Node.DOCUMENT_TYPE_NODE && OW.removeChild(OW.childNodes[0]), "HTML" === ZW.nodeName && OW.documentElement && OW.removeChild(OW.documentElement)
+            const wR = GR.getMeta(ZR);
+            if (wR && wR.type === oZ.Element && RR.node.type === oZ.Text) {
+              const RR = Array.isArray(ZR.childNodes) ? ZR.childNodes : Array.from(ZR.childNodes);
+              if ("textarea" === wR.tagName)
+                for (const JR of RR) JR.nodeType === ZR.TEXT_NODE && ZR.removeChild(JR);
+              else if ("style" === wR.tagName && 1 === RR.length)
+                for (const JR of RR) JR.nodeType !== ZR.TEXT_NODE || GR.hasNode(JR) || (KR.textContent = JR.textContent, ZR.removeChild(JR))
+            } else if ((null == wR ? void 0 : wR.type) === oZ.Document) {
+              const GR = ZR;
+              RR.node.type === oZ.DocumentType && (null == (JR = GR.childNodes[0]) ? void 0 : JR.nodeType) === Node.DOCUMENT_TYPE_NODE && GR.removeChild(GR.childNodes[0]), "HTML" === KR.nodeName && GR.documentElement && GR.removeChild(GR.documentElement)
             }
-            if (LW && LW.nextSibling && LW.nextSibling.parentNode ? PW.insertBefore(ZW, LW.nextSibling) : cW && cW.parentNode ? PW.contains(cW) ? PW.insertBefore(ZW, cW) : PW.insertBefore(ZW, null) : PW.appendChild(ZW), tW(ZW, WW.node.id), this.usingVirtualDom && "#text" === ZW.nodeName && "STYLE" === PW.nodeName && (null == (NW = PW.rules) ? void 0 : NW.length) > 0 && (PW.rules = []), kP(ZW, this.mirror)) {
-              const WW = this.mirror.getId(ZW),
-                iW = this.newDocumentQueue.find((iW => iW.parentId === WW));
-              iW && (this.attachDocumentToIframe(iW, ZW), this.newDocumentQueue = this.newDocumentQueue.filter((WW => WW !== iW)))
-            }(WW.previousId || WW.nextId) && this.legacy_resolveMissingNode(mW, PW, ZW, WW)
+            if (qR && qR.nextSibling && qR.nextSibling.parentNode ? ZR.insertBefore(KR, qR.nextSibling) : iR && iR.parentNode ? ZR.contains(iR) ? ZR.insertBefore(KR, iR) : ZR.insertBefore(KR, null) : ZR.appendChild(KR), VR(KR, RR.node.id), this.usingVirtualDom && "#text" === KR.nodeName && "STYLE" === ZR.nodeName && (null == (uR = ZR.rules) ? void 0 : uR.length) > 0 && (ZR.rules = []), LZ(KR, this.mirror)) {
+              const RR = this.mirror.getId(KR),
+                JR = this.newDocumentQueue.find((JR => JR.parentId === RR));
+              JR && (this.attachDocumentToIframe(JR, KR), this.newDocumentQueue = this.newDocumentQueue.filter((RR => RR !== JR)))
+            }(RR.previousId || RR.nextId) && this.legacy_resolveMissingNode(yR, ZR, KR, RR)
           };
-        WW.adds.forEach((WW => {
-          NW(WW)
+        RR.adds.forEach((RR => {
+          uR(RR)
         }));
-        const PW = Date.now();
-        for (; EW.length;) {
-          const WW = jP(EW);
-          if (EW.length = 0, Date.now() - PW > 500) {
-            this.warn("Timeout in the loop, please check the resolve tree data:", WW);
+        const ZR = Date.now();
+        for (; tR.length;) {
+          const RR = eZ(tR);
+          if (tR.length = 0, Date.now() - ZR > 500) {
+            this.warn("Timeout in the loop, please check the resolve tree data:", RR);
             break
           }
-          for (const iW of WW) {
-            OW.AmW(iW.value.parentId) ? UP(iW, (WW => {
-              NW(WW)
-            })) : this.debug("Drop resolve tree since there is no parent for the root node.", iW)
+          for (const JR of RR) {
+            GR.JtR(JR.value.parentId) ? aZ(JR, (RR => {
+              uR(RR)
+            })) : this.debug("Drop resolve tree since there is no parent for the root node.", JR)
           }
         }
-        Object.keys(mW).length && Object.assign(this.legacy_missingNodeRetryMap, mW), yP(WW.texts).forEach((iW => {
-          var mW;
-          const EW = OW.AmW(iW.id);
-          if (!EW) {
-            if (WW.removes.find((WW => WW.id === iW.id))) return;
-            return this.warnNodeNotFound(WW, iW.id)
+        Object.keys(yR).length && Object.assign(this.legacy_missingNodeRetryMap, yR), XZ(RR.texts).forEach((JR => {
+          var yR;
+          const tR = GR.JtR(JR.id);
+          if (!tR) {
+            if (RR.removes.find((RR => RR.id === JR.id))) return;
+            return this.warnNodeNotFound(RR, JR.id)
           }
-          const NW = EW.parentElement;
-          if (iW.value && NW && "STYLE" === NW.tagName ? EW.textContent = FO(iW.value, this.cache) : EW.textContent = iW.value, this.usingVirtualDom) {
-            const WW = EW.parentNode;
-            (null == (mW = null == WW ? void 0 : WW.rules) ? void 0 : mW.length) > 0 && (WW.rules = [])
+          const uR = tR.parentElement;
+          if (JR.value && uR && "STYLE" === uR.tagName ? tR.textContent = FG(JR.value, this.cache) : tR.textContent = JR.value, this.usingVirtualDom) {
+            const RR = tR.parentNode;
+            (null == (yR = null == RR ? void 0 : RR.rules) ? void 0 : yR.length) > 0 && (RR.rules = [])
           }
-        })), WW.attributes.forEach((iW => {
-          var mW;
-          const EW = OW.AmW(iW.id);
-          if (!EW) {
-            if (WW.removes.find((WW => WW.id === iW.id))) return;
-            return this.warnNodeNotFound(WW, iW.id)
+        })), RR.attributes.forEach((JR => {
+          var yR;
+          const tR = GR.JtR(JR.id);
+          if (!tR) {
+            if (RR.removes.find((RR => RR.id === JR.id))) return;
+            return this.warnNodeNotFound(RR, JR.id)
           }
-          for (const WW in iW.attributes)
-            if ("string" === typeof WW) {
-              const PW = iW.attributes[WW];
-              if (null === PW) EW.removeAttribute(WW), "open" === WW && Nc(EW, iW);
-              else if ("string" === typeof PW) try {
-                if ("_cssText" === WW && ("LINK" === EW.nodeName || "STYLE" === EW.nodeName)) try {
-                  const WW = OW.getMeta(EW),
-                    mW = Nm({
-                      ...WW,
+          for (const RR in JR.attributes)
+            if ("string" === typeof RR) {
+              const ZR = JR.attributes[RR];
+              if (null === ZR) tR.removeAttribute(RR), "open" === RR && yi(tR, JR);
+              else if ("string" === typeof ZR) try {
+                if ("_cssText" === RR && ("LINK" === tR.nodeName || "STYLE" === tR.nodeName)) try {
+                  const RR = GR.getMeta(tR),
+                    yR = yy({
+                      ...RR,
                       attributes: {
-                        ...WW.attributes,
-                        ...iW.attributes
+                        ...RR.attributes,
+                        ...JR.attributes
                       }
                     }, {
-                      doc: EW.ownerDocument,
-                      mirror: OW,
+                      doc: tR.ownerDocument,
+                      mirror: GR,
                       skipChild: !0,
                       hackCss: !0,
                       cache: this.cache
                     });
-                  Object.assign(WW.attributes, iW.attributes);
-                  const NW = EW.nextSibling,
-                    PW = EW.parentNode;
-                  if (mW && PW) {
-                    PW.removeChild(EW), PW.insertBefore(mW, NW), OW.replace(iW.id, mW);
+                  Object.assign(RR.attributes, JR.attributes);
+                  const uR = tR.nextSibling,
+                    ZR = tR.parentNode;
+                  if (yR && ZR) {
+                    ZR.removeChild(tR), ZR.insertBefore(yR, uR), GR.replace(JR.id, yR);
                     break
                   }
-                } catch (NW) {}
-                if ("value" === WW && "TEXTAREA" === EW.nodeName) {
-                  const WW = EW;
-                  WW.childNodes.forEach((iW => WW.removeChild(iW)));
-                  const iW = null == (mW = EW.ownerDocument) ? void 0 : mW.createTextNode(PW);
-                  iW && WW.appendChild(iW)
-                } else EW.setAttribute(WW, PW);
-                "rr_open_mode" === WW && "DIALOG" === EW.nodeName && Ec(EW, iW)
-              } catch (LW) {
-                this.warn("An error occurred may due to the checkout feature.", LW)
-              } else if ("style" === WW) {
-                const WW = PW,
-                  iW = EW;
-                for (const OW in WW)
-                  if (!1 === WW[OW]) iW.style.removeProperty(OW);
-                  else if (WW[OW] instanceof Array) {
-                  const mW = WW[OW];
-                  iW.style.setProperty(OW, mW[0], mW[1])
+                } catch (uR) {}
+                if ("value" === RR && "TEXTAREA" === tR.nodeName) {
+                  const RR = tR;
+                  RR.childNodes.forEach((JR => RR.removeChild(JR)));
+                  const JR = null == (yR = tR.ownerDocument) ? void 0 : yR.createTextNode(ZR);
+                  JR && RR.appendChild(JR)
+                } else tR.setAttribute(RR, ZR);
+                "rr_open_mode" === RR && "DIALOG" === tR.nodeName && Gi(tR, JR)
+              } catch (qR) {
+                this.warn("An error occurred may due to the checkout feature.", qR)
+              } else if ("style" === RR) {
+                const RR = ZR,
+                  JR = tR;
+                for (const GR in RR)
+                  if (!1 === RR[GR]) JR.style.removeProperty(GR);
+                  else if (RR[GR] instanceof Array) {
+                  const yR = RR[GR];
+                  JR.style.setProperty(GR, yR[0], yR[1])
                 } else {
-                  const mW = WW[OW];
-                  iW.style.setProperty(OW, mW)
+                  const yR = RR[GR];
+                  JR.style.setProperty(GR, yR)
                 }
               }
             }
         }))
       }
-      applyScroll(WW, iW) {
-        var OW, mW;
-        const EW = this.mirror.AmW(WW.id);
-        if (!EW) return this.debugNodeNotFound(WW, WW.id);
-        const NW = this.mirror.getMeta(EW);
-        if (EW === this.iframe.contentDocument) null == (OW = this.iframe.contentWindow) || OW.scrollTo({
-          top: WW.y,
-          left: WW.x,
-          behavior: iW ? "auto" : "smooth"
+      applyScroll(RR, JR) {
+        var GR, yR;
+        const tR = this.mirror.JtR(RR.id);
+        if (!tR) return this.debugNodeNotFound(RR, RR.id);
+        const uR = this.mirror.getMeta(tR);
+        if (tR === this.iframe.contentDocument) null == (GR = this.iframe.contentWindow) || GR.scrollTo({
+          top: RR.y,
+          left: RR.x,
+          behavior: JR ? "auto" : "smooth"
         });
-        else if ((null == NW ? void 0 : NW.type) === VP.Document) null == (mW = EW.defaultView) || mW.scrollTo({
-          top: WW.y,
-          left: WW.x,
-          behavior: iW ? "auto" : "smooth"
+        else if ((null == uR ? void 0 : uR.type) === oZ.Document) null == (yR = tR.defaultView) || yR.scrollTo({
+          top: RR.y,
+          left: RR.x,
+          behavior: JR ? "auto" : "smooth"
         });
         else try {
-          EW.scrollTo({
-            top: WW.y,
-            left: WW.x,
-            behavior: iW ? "auto" : "smooth"
+          tR.scrollTo({
+            top: RR.y,
+            left: RR.x,
+            behavior: JR ? "auto" : "smooth"
           })
-        } catch (PW) {}
+        } catch (ZR) {}
       }
-      applyInput(WW) {
-        const iW = this.mirror.AmW(WW.id);
-        if (!iW) return this.debugNodeNotFound(WW, WW.id);
+      applyInput(RR) {
+        const JR = this.mirror.JtR(RR.id);
+        if (!JR) return this.debugNodeNotFound(RR, RR.id);
         try {
-          iW.checked = WW.isChecked, iW.value = WW.text
-        } catch (OW) {}
+          JR.checked = RR.isChecked, JR.value = RR.text
+        } catch (GR) {}
       }
-      applySelection(WW) {
+      applySelection(RR) {
         try {
-          const iW = new Set,
-            OW = WW.kj.map((WW => {
+          const JR = new Set,
+            GR = RR.WL.map((RR => {
               let {
-                start: OW,
-                startOffset: mW,
-                end: EW,
-                endOffset: NW
-              } = WW;
-              const PW = this.mirror.AmW(OW),
-                LW = this.mirror.AmW(EW);
-              if (!PW || !LW) return;
-              const cW = new Range;
-              cW.setStart(PW, mW), cW.setEnd(LW, NW);
-              const wW = PW.ownerDocument,
-                tW = null == wW ? void 0 : wW.getSelection();
-              return tW && iW.add(tW), {
-                range: cW,
-                selection: tW
+                start: GR,
+                startOffset: yR,
+                end: tR,
+                endOffset: uR
+              } = RR;
+              const ZR = this.mirror.JtR(GR),
+                qR = this.mirror.JtR(tR);
+              if (!ZR || !qR) return;
+              const iR = new Range;
+              iR.setStart(ZR, yR), iR.setEnd(qR, uR);
+              const fR = ZR.ownerDocument,
+                VR = null == fR ? void 0 : fR.getSelection();
+              return VR && JR.add(VR), {
+                range: iR,
+                selection: VR
               }
             }));
-          iW.forEach((WW => WW.removeAllRanges())), OW.forEach((WW => {
-            var iW;
-            return WW && (null == (iW = WW.selection) ? void 0 : iW.addRange(WW.range))
+          JR.forEach((RR => RR.removeAllRanges())), GR.forEach((RR => {
+            var JR;
+            return RR && (null == (JR = RR.selection) ? void 0 : JR.addRange(RR.range))
           }))
-        } catch (iW) {}
+        } catch (JR) {}
       }
-      applyStyleSheetMutation(WW) {
-        var iW;
-        let OW = null;
-        WW.styleId ? OW = this.styleMirror.getStyle(WW.styleId) : WW.id && (OW = (null == (iW = this.mirror.AmW(WW.id)) ? void 0 : iW.sheet) || null), OW && (WW.source === oP.StyleSheetRule ? this.applyStyleSheetRule(WW, OW) : WW.source === oP.StyleDeclaration && this.applyStyleDeclaration(WW, OW))
+      applyStyleSheetMutation(RR) {
+        var JR;
+        let GR = null;
+        RR.styleId ? GR = this.styleMirror.getStyle(RR.styleId) : RR.id && (GR = (null == (JR = this.mirror.JtR(RR.id)) ? void 0 : JR.sheet) || null), GR && (RR.source === vZ.StyleSheetRule ? this.applyStyleSheetRule(RR, GR) : RR.source === vZ.StyleDeclaration && this.applyStyleDeclaration(RR, GR))
       }
-      applyStyleSheetRule(WW, iW) {
-        var OW, mW, EW, NW;
-        if (null == (OW = WW.adds) || OW.forEach((WW => {
+      applyStyleSheetRule(RR, JR) {
+        var GR, yR, tR, uR;
+        if (null == (GR = RR.adds) || GR.forEach((RR => {
             let {
-              rule: OW,
-              index: mW
-            } = WW;
+              rule: GR,
+              index: yR
+            } = RR;
             try {
-              if (Array.isArray(mW)) {
+              if (Array.isArray(yR)) {
                 const {
-                  positions: WW,
-                  index: EW
-                } = YP(mW), NW = SP(iW.cssRules, WW);
-                null == NW || NW.insertRule(OW, EW)
+                  positions: RR,
+                  index: tR
+                } = CZ(yR), uR = AZ(JR.cssRules, RR);
+                null == uR || uR.insertRule(GR, tR)
               } else {
-                const WW = void 0 === mW ? void 0 : Math.min(mW, iW.cssRules.length);
-                null == iW || iW.insertRule(OW, WW)
+                const RR = void 0 === yR ? void 0 : Math.min(yR, JR.cssRules.length);
+                null == JR || JR.insertRule(GR, RR)
               }
-            } catch (EW) {}
-          })), null == (mW = WW.removes) || mW.forEach((WW => {
+            } catch (tR) {}
+          })), null == (yR = RR.removes) || yR.forEach((RR => {
             let {
-              index: OW
-            } = WW;
+              index: GR
+            } = RR;
             try {
-              if (Array.isArray(OW)) {
+              if (Array.isArray(GR)) {
                 const {
-                  positions: WW,
-                  index: mW
-                } = YP(OW), EW = SP(iW.cssRules, WW);
-                null == EW || EW.deleteRule(mW || 0)
-              } else null == iW || iW.deleteRule(OW)
-            } catch (mW) {}
-          })), "string" === typeof WW.replace) try {
-          null == (EW = iW.replace) || EW.call(iW, WW.replace)
-        } catch (PW) {}
-        if ("string" === typeof WW.replaceSync) try {
-          null == (NW = iW.replaceSync) || NW.call(iW, WW.replaceSync)
-        } catch (PW) {}
+                  positions: RR,
+                  index: yR
+                } = CZ(GR), tR = AZ(JR.cssRules, RR);
+                null == tR || tR.deleteRule(yR || 0)
+              } else null == JR || JR.deleteRule(GR)
+            } catch (yR) {}
+          })), "string" === typeof RR.replace) try {
+          null == (tR = JR.replace) || tR.call(JR, RR.replace)
+        } catch (ZR) {}
+        if ("string" === typeof RR.replaceSync) try {
+          null == (uR = JR.replaceSync) || uR.call(JR, RR.replaceSync)
+        } catch (ZR) {}
       }
-      applyStyleDeclaration(WW, iW) {
-        if (WW.set) {
-          const OW = SP(iW.rules, WW.index);
-          (null == OW ? void 0 : OW.style) && OW.style.setProperty(WW.set.property, WW.set.value, WW.set.priority)
+      applyStyleDeclaration(RR, JR) {
+        if (RR.set) {
+          const GR = AZ(JR.rules, RR.index);
+          (null == GR ? void 0 : GR.style) && GR.style.setProperty(RR.set.property, RR.set.value, RR.set.priority)
         }
-        if (WW.remove) {
-          const OW = SP(iW.rules, WW.index);
-          (null == OW ? void 0 : OW.style) && OW.style.removeProperty(WW.remove.property)
+        if (RR.remove) {
+          const GR = AZ(JR.rules, RR.index);
+          (null == GR ? void 0 : GR.style) && GR.style.removeProperty(RR.remove.property)
         }
       }
-      applyAdoptedStyleSheet(WW) {
-        var iW;
-        const OW = this.mirror.AmW(WW.id);
-        if (!OW) return;
-        null == (iW = WW.styles) || iW.forEach((WW => {
-          var iW;
-          let mW = null,
-            EW = null;
-          if (KP(OW) ? EW = (null == (iW = OW.ownerDocument) ? void 0 : iW.defaultView) || null : "#document" === OW.nodeName && (EW = OW.defaultView), EW) try {
-            mW = new EW.CSSStyleSheet, this.styleMirror.add(mW, WW.styleId), this.applyStyleSheetRule({
-              source: oP.StyleSheetRule,
-              adds: WW.rules
-            }, mW)
-          } catch (NW) {}
+      applyAdoptedStyleSheet(RR) {
+        var JR;
+        const GR = this.mirror.JtR(RR.id);
+        if (!GR) return;
+        null == (JR = RR.styles) || JR.forEach((RR => {
+          var JR;
+          let yR = null,
+            tR = null;
+          if (WZ(GR) ? tR = (null == (JR = GR.ownerDocument) ? void 0 : JR.defaultView) || null : "#document" === GR.nodeName && (tR = GR.defaultView), tR) try {
+            yR = new tR.CSSStyleSheet, this.styleMirror.add(yR, RR.styleId), this.applyStyleSheetRule({
+              source: vZ.StyleSheetRule,
+              adds: RR.rules
+            }, yR)
+          } catch (uR) {}
         }));
-        let mW = 0;
-        const EW = (WW, iW) => {
-          const OW = iW.map((WW => this.styleMirror.getStyle(WW))).filter((WW => null !== WW));
-          KP(WW) ? WW.shadowRoot.adoptedStyleSheets = OW : "#document" === WW.nodeName && (WW.adoptedStyleSheets = OW), OW.length !== iW.length && mW < 10 && (setTimeout((() => EW(WW, iW)), 0 + 100 * mW), mW++)
+        let yR = 0;
+        const tR = (RR, JR) => {
+          const GR = JR.map((RR => this.styleMirror.getStyle(RR))).filter((RR => null !== RR));
+          WZ(RR) ? RR.shadowRoot.adoptedStyleSheets = GR : "#document" === RR.nodeName && (RR.adoptedStyleSheets = GR), GR.length !== JR.length && yR < 10 && (setTimeout((() => tR(RR, JR)), 0 + 100 * yR), yR++)
         };
-        EW(OW, WW.styleIds)
+        tR(GR, RR.styleIds)
       }
-      legacy_resolveMissingNode(WW, iW, OW, mW) {
+      legacy_resolveMissingNode(RR, JR, GR, yR) {
         const {
-          previousId: EW,
-          nextId: NW
-        } = mW, PW = EW && WW[EW], LW = NW && WW[NW];
-        if (PW) {
+          previousId: tR,
+          nextId: uR
+        } = yR, ZR = tR && RR[tR], qR = uR && RR[uR];
+        if (ZR) {
           const {
-            node: mW,
-            mutation: EW
-          } = PW;
-          iW.insertBefore(mW, OW), delete WW[EW.node.id], delete this.legacy_missingNodeRetryMap[EW.node.id], (EW.previousId || EW.nextId) && this.legacy_resolveMissingNode(WW, iW, mW, EW)
+            node: yR,
+            mutation: tR
+          } = ZR;
+          JR.insertBefore(yR, GR), delete RR[tR.node.id], delete this.legacy_missingNodeRetryMap[tR.node.id], (tR.previousId || tR.nextId) && this.legacy_resolveMissingNode(RR, JR, yR, tR)
         }
-        if (LW) {
+        if (qR) {
           const {
-            node: mW,
-            mutation: EW
-          } = LW;
-          iW.insertBefore(mW, OW.nextSibling), delete WW[EW.node.id], delete this.legacy_missingNodeRetryMap[EW.node.id], (EW.previousId || EW.nextId) && this.legacy_resolveMissingNode(WW, iW, mW, EW)
+            node: yR,
+            mutation: tR
+          } = qR;
+          JR.insertBefore(yR, GR.nextSibling), delete RR[tR.node.id], delete this.legacy_missingNodeRetryMap[tR.node.id], (tR.previousId || tR.nextId) && this.legacy_resolveMissingNode(RR, JR, yR, tR)
         }
       }
-      moveAndHover(WW, iW, OW, mW, EW) {
-        const NW = this.mirror.AmW(OW);
-        if (!NW) return this.debugNodeNotFound(EW, OW);
-        const PW = MP(NW, this.iframe),
-          LW = WW * PW.absoluteScale + PW.x,
-          cW = iW * PW.absoluteScale + PW.y;
-        this.mouse.style.left = `${LW}px`, this.mouse.style.top = `${cW}px`, mW || this.drawMouseTail({
-          x: LW,
-          y: cW
-        }), this.hoverElements(NW)
+      moveAndHover(RR, JR, GR, yR, tR) {
+        const uR = this.mirror.JtR(GR);
+        if (!uR) return this.debugNodeNotFound(tR, GR);
+        const ZR = UZ(uR, this.iframe),
+          qR = RR * ZR.absoluteScale + ZR.x,
+          iR = JR * ZR.absoluteScale + ZR.y;
+        this.mouse.style.left = `${qR}px`, this.mouse.style.top = `${iR}px`, yR || this.drawMouseTail({
+          x: qR,
+          y: iR
+        }), this.hoverElements(uR)
       }
-      drawMouseTail(WW) {
+      drawMouseTail(RR) {
         if (!this.mouseTail) return;
         const {
-          lineCap: iW,
-          lineWidth: OW,
-          strokeStyle: mW,
-          duration: EW
-        } = !0 === this.config.mouseTail ? cc : Object.assign({}, cc, this.config.mouseTail), NW = () => {
+          lineCap: JR,
+          lineWidth: GR,
+          strokeStyle: yR,
+          duration: tR
+        } = !0 === this.config.mouseTail ? Zi : Object.assign({}, Zi, this.config.mouseTail), uR = () => {
           if (!this.mouseTail) return;
-          const WW = this.mouseTail.getContext("2d");
-          WW && this.tailPositions.length && (WW.clearRect(0, 0, this.mouseTail.width, this.mouseTail.height), WW.beginPath(), WW.lineWidth = OW, WW.lineCap = iW, WW.strokeStyle = mW, WW.moveTo(this.tailPositions[0].x, this.tailPositions[0].y), this.tailPositions.forEach((iW => WW.lineTo(iW.x, iW.y))), WW.stroke())
+          const RR = this.mouseTail.getContext("2d");
+          RR && this.tailPositions.length && (RR.clearRect(0, 0, this.mouseTail.width, this.mouseTail.height), RR.beginPath(), RR.lineWidth = GR, RR.lineCap = JR, RR.strokeStyle = yR, RR.moveTo(this.tailPositions[0].x, this.tailPositions[0].y), this.tailPositions.forEach((JR => RR.lineTo(JR.x, JR.y))), RR.stroke())
         };
-        this.tailPositions.push(WW), NW(), setTimeout((() => {
-          this.tailPositions = this.tailPositions.filter((iW => iW !== WW)), NW()
-        }), EW / this.speedService.state.context.timer.speed)
+        this.tailPositions.push(RR), uR(), setTimeout((() => {
+          this.tailPositions = this.tailPositions.filter((JR => JR !== RR)), uR()
+        }), tR / this.speedService.state.context.timer.speed)
       }
-      hoverElements(WW) {
-        var iW;
-        null == (iW = this.lastHoveredRootNode || this.iframe.contentDocument) || iW.querySelectorAll(".\\:hover").forEach((WW => {
-          WW.classList.remove(":hover")
-        })), this.lastHoveredRootNode = WW.getRootNode();
-        let OW = WW;
-        for (; OW;) OW.classList && OW.classList.add(":hover"), OW = OW.parentElement
+      hoverElements(RR) {
+        var JR;
+        null == (JR = this.lastHoveredRootNode || this.iframe.contentDocument) || JR.querySelectorAll(".\\:hover").forEach((RR => {
+          RR.classList.remove(":hover")
+        })), this.lastHoveredRootNode = RR.getRootNode();
+        let GR = RR;
+        for (; GR;) GR.classList && GR.classList.add(":hover"), GR = GR.parentElement
       }
-      isUserInteraction(WW) {
-        return WW.type === uP.IncrementalSnapshot && (WW.data.source > oP.Mutation && WW.data.source <= oP.Input)
+      isUserInteraction(RR) {
+        return RR.type === bZ.IncrementalSnapshot && (RR.data.source > vZ.Mutation && RR.data.source <= vZ.Input)
       }
       backToNormal() {
         this.nextUserInteractionEvent = null, this.speedService.state.matches("normal") || (this.speedService.send({
           type: "BACK_TO_NORMAL"
-        }), this.emitter.emit(DP.SkipEnd, {
+        }), this.emitter.emit(HZ.SkipEnd, {
           speed: this.speedService.state.context.normalSpeed
         }))
       }
-      warnNodeNotFound(WW, iW) {
-        this.warn(`Node with id '${iW}' not found. `, WW)
+      warnNodeNotFound(RR, JR) {
+        this.warn(`Node with id '${JR}' not found. `, RR)
       }
-      warnCanvasMutationFailed(WW, iW) {
-        this.warn("Has error on canvas update", iW, "canvas mutation:", WW)
+      warnCanvasMutationFailed(RR, JR) {
+        this.warn("Has error on canvas update", JR, "canvas mutation:", RR)
       }
-      debugNodeNotFound(WW, iW) {
-        this.debug(`Node with id '${iW}' not found. `, WW)
+      debugNodeNotFound(RR, JR) {
+        this.debug(`Node with id '${JR}' not found. `, RR)
       }
       warn() {
         if (this.config.showWarning) {
-          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-          this.config.logger.warn(Lc, ...iW)
+          for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+          this.config.logger.warn(ui, ...JR)
         }
       }
       debug() {
         if (this.config.showDebug) {
-          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-          this.config.logger.log(Lc, ...iW)
+          for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+          this.config.logger.log(ui, ...JR)
         }
       }
     }
     const {
-      addCustomEvent: Zc
-    } = uL, {
-      freezePage: xc
-    } = uL, {
-      takeFullSnapshot: lc
-    } = uL
+      addCustomEvent: fi
+    } = bq, {
+      freezePage: Vi
+    } = bq, {
+      takeFullSnapshot: Ki
+    } = bq
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

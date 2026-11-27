@@ -1,238 +1,238 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  5910: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => AW,
-      h: () => MW,
-      k: () => bW,
-      n: () => sW
+  6037: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => eR,
+      g: () => AR,
+      i: () => aR,
+      m: () => WR
     });
-    var mW = OW(62),
-      EW = OW(5919),
-      NW = OW(5041),
-      PW = OW(1434),
-      LW = OW(4171),
-      cW = OW(1089),
-      wW = OW.n(cW),
-      tW = OW(1422),
-      ZW = OW(1856),
-      xW = OW(5940),
-      lW = OW(1283);
+    var yR = GR(66),
+      tR = GR(6041),
+      uR = GR(5141),
+      ZR = GR(1501),
+      qR = GR(4250),
+      iR = GR(1163),
+      fR = GR.n(iR),
+      VR = GR(1493),
+      KR = GR(1943),
+      wR = GR(6063),
+      rR = GR(1378);
 
-    function AW(WW) {
+    function eR(RR) {
       let {
-        label: iW,
-        onClick: OW,
-        checked: mW,
-        circleInfoText: EW,
-        className: LW,
-        disabled: cW,
-        note: tW
-      } = WW;
-      return (0, lW.jsxs)("div", {
-        "aria-disabled": cW || void 0,
+        label: JR,
+        onClick: GR,
+        checked: yR,
+        circleInfoText: tR,
+        className: qR,
+        disabled: iR,
+        note: VR
+      } = RR;
+      return (0, rR.jsxs)("div", {
+        "aria-disabled": iR || void 0,
         "data-pad-focusable": !0,
-        className: wW()("SettingBox CheckboxContainer", {
-          [LW]: LW,
-          SettingBoxDisabled: cW
+        className: fR()("SettingBox CheckboxContainer", {
+          [qR]: qR,
+          SettingBoxDisabled: iR
         }),
         onClick: () => {
-          cW || OW(!mW)
+          iR || GR(!yR)
         },
-        children: [(0, lW.jsxs)("div", {
+        children: [(0, rR.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, lW.jsx)("label", {
+          children: [(0, rR.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, lW.jsx)(NW.e, {
+            children: (0, rR.jsx)(uR.d, {
               className: "SettingsCheckbox",
-              checked: mW,
-              disabled: cW,
+              checked: yR,
+              disabled: iR,
               onChange: () => {}
             })
-          }), (0, lW.jsxs)("div", {
+          }), (0, rR.jsxs)("div", {
             className: "CheckboxText",
-            children: [iW, EW && (0, lW.jsx)("span", {
-              onClick: WW => WW.stopPropagation(),
-              children: (0, lW.jsx)(PW.d, {
+            children: [JR, tR && (0, rR.jsx)("span", {
+              onClick: RR => RR.stopPropagation(),
+              children: (0, rR.jsx)(ZR.e, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: EW
+                hoverInfo: tR
               })
             })]
           })]
-        }), tW && (0, lW.jsx)("div", {
+        }), VR && (0, rR.jsx)("div", {
           className: "SettingNote",
-          children: tW
+          children: VR
         })]
       })
     }
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        name: iW,
-        onChange: OW,
-        min: EW,
-        max: NW,
-        step: LW,
-        initValue: cW,
-        circleInfoText: tW,
-        format: ZW,
-        className: xW,
-        padStep: AW,
-        disabled: bW = !1,
-        selectableMax: jW,
-        cappedNote: UW,
-        note: sW,
-        onChangeComplete: MW
-      } = WW;
-      const [KW, SW] = (0, mW.useState)(cW), YW = (0, mW.useRef)(cW);
-      (0, mW.useEffect)((() => {
-        YW.current = cW, SW(cW)
-      }), [cW]);
-      const yW = void 0 !== jW && jW < NW,
-        TW = yW ? {
-          "--slider-selectable": (jW - EW) / (NW - EW)
+        name: JR,
+        onChange: GR,
+        min: tR,
+        max: uR,
+        step: qR,
+        initValue: iR,
+        circleInfoText: VR,
+        format: KR,
+        className: wR,
+        padStep: eR,
+        disabled: aR = !1,
+        selectableMax: LR,
+        cappedNote: nR,
+        note: WR,
+        onChangeComplete: AR
+      } = RR;
+      const [CR, XR] = (0, yR.useState)(iR), MR = (0, yR.useRef)(iR);
+      (0, yR.useEffect)((() => {
+        MR.current = iR, XR(iR)
+      }), [iR]);
+      const BR = void 0 !== LR && LR < uR,
+        lR = BR ? {
+          "--slider-selectable": (LR - tR) / (uR - tR)
         } : void 0,
-        JW = yW && UW ? UW : sW;
-      return (0, lW.jsxs)("div", {
-        className: wW()("SettingBox SettingsSliderDiv", {
-          [xW]: xW,
-          SettingBoxDisabled: bW,
-          SliderCapped: yW
+        pR = BR && nR ? nR : WR;
+      return (0, rR.jsxs)("div", {
+        className: fR()("SettingBox SettingsSliderDiv", {
+          [wR]: wR,
+          SettingBoxDisabled: aR,
+          SliderCapped: BR
         }),
-        style: TW,
-        children: [(0, lW.jsxs)("div", {
+        style: lR,
+        children: [(0, rR.jsxs)("div", {
           className: "SliderText",
-          children: [`${iW}: ${ZW?ZW(KW):KW}`, tW && (0, lW.jsx)(PW.d, {
+          children: [`${JR}: ${KR?KR(CR):CR}`, VR && (0, rR.jsx)(ZR.e, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: tW
+            hoverInfo: VR
           })]
-        }), (0, lW.jsx)("div", {
+        }), (0, rR.jsx)("div", {
           className: "SliderDiv",
-          children: (0, lW.jsx)(kW, {
-            value: KW,
-            min: EW,
-            max: NW,
-            step: LW,
-            onChange: WW => {
-              if (yW && WW >= jW && KW === jW) return;
-              const iW = yW ? Math.min(WW, jW) : WW;
-              YW.current = iW, SW(iW), OW(iW)
+          children: (0, rR.jsx)(UR, {
+            value: CR,
+            min: tR,
+            max: uR,
+            step: qR,
+            onChange: RR => {
+              if (BR && RR >= LR && CR === LR) return;
+              const JR = BR ? Math.min(RR, LR) : RR;
+              MR.current = JR, XR(JR), GR(JR)
             },
-            onChangeComplete: MW && (() => {
-              MW(YW.current)
+            onChangeComplete: AR && (() => {
+              AR(MR.current)
             }),
-            format: ZW,
-            padStep: AW,
-            disabled: bW
+            format: KR,
+            padStep: eR,
+            disabled: aR
           })
-        }), JW && (0, lW.jsx)("div", {
+        }), pR && (0, rR.jsx)("div", {
           className: "SettingNote",
-          children: JW
+          children: pR
         })]
       })
     }
-    const jW = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const LR = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function UW(WW) {
-      var iW;
-      return (null !== (iW = String(WW).split(".")[1]) && void 0 !== iW ? iW : "").length
+    function nR(RR) {
+      var JR;
+      return (null !== (JR = String(RR).split(".")[1]) && void 0 !== JR ? JR : "").length
     }
 
-    function kW(WW) {
+    function UR(RR) {
       let {
-        value: iW,
-        min: OW,
-        max: NW,
-        step: PW,
-        onChange: LW,
-        orientation: cW,
-        reverse: wW,
-        setIsChanging: tW,
-        tooltip: ZW,
-        labels: AW,
-        handleLabel: bW,
-        format: kW,
-        onChangeStart: sW,
-        onChangeComplete: MW,
-        padStep: KW,
-        disabled: SW = !1
-      } = WW;
-      const YW = (0, mW.useRef)(null),
-        yW = (0, mW.useRef)(null);
-      (0, mW.useLayoutEffect)((() => {
-        var WW, iW, OW;
-        const mW = null !== (WW = null === (iW = YW.current) || void 0 === iW ? void 0 : iW.querySelector(".rangeslider")) && void 0 !== WW ? WW : null;
-        null === mW || void 0 === mW || mW.setAttribute("data-pad-slider", ""), null === mW || void 0 === mW || mW.setAttribute("data-pad-focusable", ""), null === mW || void 0 === mW || null === (OW = mW.querySelector(".rangeslider__handle")) || void 0 === OW || OW.setAttribute("data-pad-slider-handle", ""), yW.current = mW
-      }), []), (0, mW.useLayoutEffect)((() => {
-        var WW, iW;
-        SW ? null === (WW = yW.current) || void 0 === WW || WW.setAttribute("aria-disabled", "true") : null === (iW = yW.current) || void 0 === iW || iW.removeAttribute("aria-disabled")
-      }), [SW]);
-      const TW = Math.max(UW(PW), UW(OW)),
-        JW = WW => {
-          if (WW >= NW) return NW;
-          if (WW <= OW) return OW;
-          const iW = Number((Math.round((WW - OW) / PW) * PW + OW).toFixed(TW));
-          return Math.min(NW, Math.max(OW, iW))
+        value: JR,
+        min: GR,
+        max: uR,
+        step: ZR,
+        onChange: qR,
+        orientation: iR,
+        reverse: fR,
+        setIsChanging: VR,
+        tooltip: KR,
+        labels: eR,
+        handleLabel: aR,
+        format: UR,
+        onChangeStart: WR,
+        onChangeComplete: AR,
+        padStep: CR,
+        disabled: XR = !1
+      } = RR;
+      const MR = (0, yR.useRef)(null),
+        BR = (0, yR.useRef)(null);
+      (0, yR.useLayoutEffect)((() => {
+        var RR, JR, GR;
+        const yR = null !== (RR = null === (JR = MR.current) || void 0 === JR ? void 0 : JR.querySelector(".rangeslider")) && void 0 !== RR ? RR : null;
+        null === yR || void 0 === yR || yR.setAttribute("data-pad-slider", ""), null === yR || void 0 === yR || yR.setAttribute("data-pad-focusable", ""), null === yR || void 0 === yR || null === (GR = yR.querySelector(".rangeslider__handle")) || void 0 === GR || GR.setAttribute("data-pad-slider-handle", ""), BR.current = yR
+      }), []), (0, yR.useLayoutEffect)((() => {
+        var RR, JR;
+        XR ? null === (RR = BR.current) || void 0 === RR || RR.setAttribute("aria-disabled", "true") : null === (JR = BR.current) || void 0 === JR || JR.removeAttribute("aria-disabled")
+      }), [XR]);
+      const lR = Math.max(nR(ZR), nR(GR)),
+        pR = RR => {
+          if (RR >= uR) return uR;
+          if (RR <= GR) return GR;
+          const JR = Number((Math.round((RR - GR) / ZR) * ZR + GR).toFixed(lR));
+          return Math.min(uR, Math.max(GR, JR))
         },
-        hW = (0, mW.useRef)(MW);
-      hW.current = MW, (0, mW.useEffect)((() => {
-        const WW = YW.current;
-        if (!WW) return;
-        const iW = WW => {
-          var iW;
-          jW.has(WW.key) && (null === (iW = hW.current) || void 0 === iW || iW.call(hW))
+        gR = (0, yR.useRef)(AR);
+      gR.current = AR, (0, yR.useEffect)((() => {
+        const RR = MR.current;
+        if (!RR) return;
+        const JR = RR => {
+          var JR;
+          LR.has(RR.key) && (null === (JR = gR.current) || void 0 === JR || JR.call(gR))
         };
-        return WW.addEventListener("keyup", iW), () => {
-          WW.removeEventListener("keyup", iW)
+        return RR.addEventListener("keyup", JR), () => {
+          RR.removeEventListener("keyup", JR)
         }
       }), []);
-      const HW = (0, mW.useRef)(!1);
-      return (0, xW.d)(yW, {
-        adjust: WW => {
-          if (SW) return;
-          const mW = null !== KW && void 0 !== KW ? KW : Math.max(PW, Math.round((NW - OW) / 20 / PW) * PW),
-            EW = JW(iW + WW * mW * (wW ? -1 : 1));
-          EW !== iW && (null === sW || void 0 === sW || sW(), LW(EW), null === MW || void 0 === MW || MW())
+      const bR = (0, yR.useRef)(!1);
+      return (0, wR.i)(BR, {
+        adjust: RR => {
+          if (XR) return;
+          const yR = null !== CR && void 0 !== CR ? CR : Math.max(ZR, Math.round((uR - GR) / 20 / ZR) * ZR),
+            tR = pR(JR + RR * yR * (fR ? -1 : 1));
+          tR !== JR && (null === WR || void 0 === WR || WR(), qR(tR), null === AR || void 0 === AR || AR())
         },
-        setFraction: WW => {
-          if (SW) return;
-          const mW = JW(OW + (wW ? 1 - WW : WW) * (NW - OW));
-          mW !== iW && (HW.current || (HW.current = !0, null === sW || void 0 === sW || sW()), LW(mW))
+        setFraction: RR => {
+          if (XR) return;
+          const yR = pR(GR + (fR ? 1 - RR : RR) * (uR - GR));
+          yR !== JR && (bR.current || (bR.current = !0, null === WR || void 0 === WR || WR()), qR(yR))
         },
         endDrag: () => {
-          HW.current && (HW.current = !1, null === MW || void 0 === MW || MW())
+          bR.current && (bR.current = !1, null === AR || void 0 === AR || AR())
         }
-      }), (0, lW.jsx)("div", {
-        ref: YW,
+      }), (0, rR.jsx)("div", {
+        ref: MR,
         style: {
           display: "contents"
         },
-        children: (0, lW.jsx)(EW.c, {
-          value: iW,
-          min: OW,
-          max: NW,
-          step: PW,
-          onChange: WW => {
-            LW(JW(WW))
+        children: (0, rR.jsx)(tR.b, {
+          value: JR,
+          min: GR,
+          max: uR,
+          step: ZR,
+          onChange: RR => {
+            qR(pR(RR))
           },
-          orientation: cW,
-          reverse: wW,
-          tooltip: ZW,
-          labels: AW,
-          handleLabel: bW,
-          format: kW,
+          orientation: iR,
+          reverse: fR,
+          tooltip: KR,
+          labels: eR,
+          handleLabel: aR,
+          format: UR,
           onChangeStart: () => {
-            null === sW || void 0 === sW || sW(), null === tW || void 0 === tW || tW(!0)
+            null === WR || void 0 === WR || WR(), null === VR || void 0 === VR || VR(!0)
           },
           onChangeComplete: () => {
-            null === tW || void 0 === tW || tW(!1), null === MW || void 0 === MW || MW()
+            null === VR || void 0 === VR || VR(!1), null === AR || void 0 === AR || AR()
           }
         })
       })
     }
-    async function sW() {
-      const WW = tW.NotificationProvider.showPromptPopup({
+    async function WR() {
+      const RR = VR.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -240,456 +240,456 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await WW.getResult() && (0, ZW.reloadBloxd)()
+      !0 === await RR.getResult() && (0, KR.reloadBloxd)()
     }
 
-    function MW(WW) {
+    function AR(RR) {
       let {
-        label: iW,
-        options: OW,
-        value: mW,
-        onChange: EW,
-        circleInfoText: NW
-      } = WW;
-      return (0, lW.jsxs)("div", {
+        label: JR,
+        options: GR,
+        value: yR,
+        onChange: tR,
+        circleInfoText: uR
+      } = RR;
+      return (0, rR.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, lW.jsxs)("div", {
+        children: [(0, rR.jsxs)("div", {
           className: "SliderText",
-          children: [iW, NW && (0, lW.jsx)(PW.d, {
+          children: [JR, uR && (0, rR.jsx)(ZR.e, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: NW
+            hoverInfo: uR
           })]
-        }), (0, lW.jsx)(LW.c, {
-          ariaLabel: iW,
-          options: OW,
-          value: mW,
-          onChange: EW
+        }), (0, rR.jsx)(qR.c, {
+          ariaLabel: JR,
+          options: GR,
+          value: yR,
+          onChange: tR
         })]
       })
     }
   },
-  7666: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => zW
+  7808: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => TR
     });
-    var mW = OW(62),
-      EW = OW(1616),
-      NW = OW(7570),
-      PW = OW(1217),
-      LW = OW(344),
-      cW = OW(1642),
-      wW = OW(1383),
-      tW = OW(1605),
-      ZW = OW(1532),
-      xW = OW(1434),
-      lW = OW(1713),
-      AW = OW(3610),
-      bW = OW(3744),
-      jW = OW(5261),
-      UW = OW(1107),
-      kW = OW(1584),
-      sW = OW(100),
-      MW = OW(1172);
-    const KW = OW.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var SW = OW(1089),
-      YW = OW.n(SW),
-      yW = OW(1391),
-      TW = OW(1422),
-      JW = OW(7567),
-      hW = OW(1283);
-    const HW = (0, mW.lazy)((() => Promise.all([OW.e(128), OW.e(91), OW.e(157), OW.e(156), OW.e(135), OW.e(715)]).then((() => OW(7600))).then((WW => ({
-      default: WW.ShaderPackPublishForm
+    var yR = GR(66),
+      tR = GR(1677),
+      uR = GR(7702),
+      ZR = GR(1317),
+      qR = GR(377),
+      iR = GR(1701),
+      fR = GR(1465),
+      VR = GR(1663),
+      KR = GR(1590),
+      wR = GR(1501),
+      rR = GR(1778),
+      eR = GR(3713),
+      aR = GR(3848),
+      LR = GR(5361),
+      nR = GR(1196),
+      UR = GR(1647),
+      WR = GR(103),
+      AR = GR(1270);
+    const CR = GR.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var XR = GR(1163),
+      MR = GR.n(XR),
+      BR = GR(1468),
+      lR = GR(1493),
+      pR = GR(7697),
+      gR = GR(1378);
+    const bR = (0, yR.lazy)((() => Promise.all([GR.e(128), GR.e(91), GR.e(157), GR.e(156), GR.e(135), GR.e(715)]).then((() => GR(7736))).then((RR => ({
+      default: RR.ShaderPackPublishForm
     })))));
 
-    function nW(WW) {
+    function vR(RR) {
       let {
-        details: iW,
-        owner: OW,
-        onChanged: EW
-      } = WW;
+        details: JR,
+        owner: GR,
+        onChanged: tR
+      } = RR;
       const {
-        t: PW
-      } = (0, MW.B)(), LW = (0, tW.useNavigatePreserveSearch)(), {
-        userContext: cW
-      } = (0, UW.e)(), [xW, lW] = (0, mW.useState)(!1), [AW, bW] = (0, mW.useState)(null), [jW, sW] = (0, mW.useState)(!1), {
-        packId: KW,
-        name: SW,
-        description: nW,
-        live: uW
-      } = iW;
-      async function oW(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW;
-        lW(!0), bW(null);
+        t: ZR
+      } = (0, AR.A)(), qR = (0, VR.useNavigatePreserveSearch)(), {
+        userContext: iR
+      } = (0, nR.d)(), [wR, rR] = (0, yR.useState)(!1), [eR, aR] = (0, yR.useState)(null), [LR, WR] = (0, yR.useState)(!1), {
+        packId: CR,
+        name: XR,
+        description: vR,
+        live: OR
+      } = JR;
+      async function xR(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tR;
+        rR(!0), aR(null);
         try {
-          await WW(), iW()
-        } catch (OW) {
-          console.error("Failed to change a shader pack", OW), bW((0, JW.y)(OW, PW, "shaderPackListing:ownerActionFailed"))
+          await RR(), JR()
+        } catch (GR) {
+          console.error("Failed to change a shader pack", GR), aR((0, pR.F)(GR, ZR, "shaderPackListing:ownerActionFailed"))
         } finally {
-          lW(!1)
+          rR(!1)
         }
       }
-      const dW = (0, JW.q)(cW);
-      return (0, hW.jsxs)("section", {
+      const NR = (0, pR.x)(iR);
+      return (0, gR.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, hW.jsx)("h2", {
+        children: [(0, gR.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: PW("general:manage")
-        }), (0, JW._)(OW, !(null === uW || void 0 === uW || !uW.renderId), Date.now(), PW).map((WW => (0, hW.jsxs)("div", {
-          className: YW()("ShaderPackOwnerNotice", {
-            Warning: "warning" === WW.tone
+          children: ZR("general:manage")
+        }), (0, pR._)(GR, !(null === OR || void 0 === OR || !OR.renderId), Date.now(), ZR).map((RR => (0, gR.jsxs)("div", {
+          className: MR()("ShaderPackOwnerNotice", {
+            Warning: "warning" === RR.tone
           }),
-          children: [(0, hW.jsx)(yW.c, {
-            name: "warning" === WW.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, hW.jsxs)("div", {
-            children: [WW.text, WW.detail && (0, hW.jsx)("pre", {
+          children: [(0, gR.jsx)(BR.d, {
+            name: "warning" === RR.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, gR.jsxs)("div", {
+            children: [RR.text, RR.detail && (0, gR.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: WW.detail
+              children: RR.detail
             })]
           })]
-        }, WW.text))), iW.ban && (0, hW.jsxs)("div", {
+        }, RR.text))), JR.ban && (0, gR.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, hW.jsx)(yW.c, {
+          children: [(0, gR.jsx)(BR.d, {
             name: "ban"
-          }), (0, hW.jsxs)("div", {
-            children: ["Banned by ", iW.ban.byName, " on ", new Date(iW.ban.at).toLocaleString()]
+          }), (0, gR.jsxs)("div", {
+            children: ["Banned by ", JR.ban.byName, " on ", new Date(JR.ban.at).toLocaleString()]
           })]
-        }), AW && (0, hW.jsx)("div", {
+        }), eR && (0, gR.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: AW
-        }), (0, hW.jsxs)("div", {
+          children: eR
+        }), (0, gR.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, hW.jsxs)(ZW.Z, {
-            disabled: xW,
+          children: [(0, gR.jsxs)(KR.U, {
+            disabled: wR,
             onClick: () => {
               !async function() {
-                const WW = await TW.NotificationProvider.showInputPopup({
+                const RR = await lR.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: SW,
-                  maxLength: NW.x,
+                  initialValue: XR,
+                  maxLength: uR.w,
                   submitText: "general:save",
-                  validate: WW => WW.trim().length < NW.B ? PW("shaderPackListing:nameTooShort", {
-                    min: String(NW.B)
+                  validate: RR => RR.trim().length < uR.z ? ZR("shaderPackListing:nameTooShort", {
+                    min: String(uR.z)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== WW && "submit" === (null === WW || void 0 === WW ? void 0 : WW.type) && WW.value.trim() !== SW && await oW((() => kW.e.updateShaderPack(cW, {
-                  packId: KW,
-                  name: WW.value.trim()
+                "notificationTornDown" !== RR && "submit" === (null === RR || void 0 === RR ? void 0 : RR.type) && RR.value.trim() !== XR && await xR((() => UR.c.updateShaderPack(iR, {
+                  packId: CR,
+                  name: RR.value.trim()
                 })))
               }()
             },
-            children: [(0, hW.jsx)(yW.c, {
+            children: [(0, gR.jsx)(BR.d, {
               name: "pen"
-            }), " ", PW("shaderPackListing:rename")]
-          }), (0, hW.jsxs)(ZW.Z, {
-            disabled: xW,
+            }), " ", ZR("shaderPackListing:rename")]
+          }), (0, gR.jsxs)(KR.U, {
+            disabled: wR,
             onClick: () => {
               !async function() {
-                const WW = await TW.NotificationProvider.showInputPopup({
+                const RR = await lR.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: nW,
-                  maxLength: NW.j,
+                  initialValue: vR,
+                  maxLength: uR.q,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== WW && "submit" === (null === WW || void 0 === WW ? void 0 : WW.type) && WW.value.trim() !== nW && await oW((() => kW.e.updateShaderPack(cW, {
-                  packId: KW,
-                  description: WW.value.trim()
+                "notificationTornDown" !== RR && "submit" === (null === RR || void 0 === RR ? void 0 : RR.type) && RR.value.trim() !== vR && await xR((() => UR.c.updateShaderPack(iR, {
+                  packId: CR,
+                  description: RR.value.trim()
                 })))
               }()
             },
-            children: [(0, hW.jsx)(yW.c, {
+            children: [(0, gR.jsx)(BR.d, {
               name: "file-lines"
-            }), " ", PW("shaderPackListing:editDescription")]
-          }), (0, hW.jsxs)(ZW.Z, {
-            disabled: xW || OW.isBanned && !OW.listed,
+            }), " ", ZR("shaderPackListing:editDescription")]
+          }), (0, gR.jsxs)(KR.U, {
+            disabled: wR || GR.isBanned && !GR.listed,
             onClick: () => {
-              oW((() => kW.e.updateShaderPack(cW, {
-                packId: KW,
-                listed: !OW.listed
+              xR((() => UR.c.updateShaderPack(iR, {
+                packId: CR,
+                listed: !GR.listed
               })))
             },
-            children: [(0, hW.jsx)(yW.c, {
-              name: OW.listed ? "eye-slash" : "eye"
-            }), " ", PW(OW.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !OW.isBanned && (0, hW.jsxs)(ZW.f, {
-            disabled: xW,
+            children: [(0, gR.jsx)(BR.d, {
+              name: GR.listed ? "eye-slash" : "eye"
+            }), " ", ZR(GR.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !GR.isBanned && (0, gR.jsxs)(KR.g, {
+            disabled: wR,
             onClick: () => {
-              sW(!jW)
+              WR(!LR)
             },
-            children: [(0, hW.jsx)(yW.c, {
+            children: [(0, gR.jsx)(BR.d, {
               name: "upload"
-            }), " ", PW("shaderPackListing:uploadVersion")]
-          }), (0, hW.jsxs)(ZW.S, {
-            disabled: xW || OW.isBanned,
+            }), " ", ZR("shaderPackListing:uploadVersion")]
+          }), (0, gR.jsxs)(KR.O, {
+            disabled: wR || GR.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await TW.NotificationProvider.showPromptPopup({
+                !0 === await lR.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await oW((() => kW.e.deleteShaderPack(cW, KW)), (() => {
-                  LW(`${JW.W}?section=mine`, {
+                }).getResult() && await xR((() => UR.c.deleteShaderPack(iR, CR)), (() => {
+                  qR(`${pR.Z}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, hW.jsx)(yW.c, {
+            children: [(0, gR.jsx)(BR.d, {
               name: "trash-can"
-            }), " ", PW("general:delete")]
-          }), dW && (0, hW.jsxs)(ZW.S, {
-            disabled: xW,
+            }), " ", ZR("general:delete")]
+          }), NR && (0, gR.jsxs)(KR.O, {
+            disabled: wR,
             onClick: () => {
-              oW((() => kW.e.setShaderPackBanned(cW, KW, !OW.isBanned)))
+              xR((() => UR.c.setShaderPackBanned(iR, CR, !GR.isBanned)))
             },
-            children: [(0, hW.jsx)(yW.c, {
-              name: OW.isBanned ? "circle-check" : "ban"
-            }), " ", OW.isBanned ? "Unban" : "Ban"]
+            children: [(0, gR.jsx)(BR.d, {
+              name: GR.isBanned ? "circle-check" : "ban"
+            }), " ", GR.isBanned ? "Unban" : "Ban"]
           })]
-        }), jW && (0, hW.jsx)(mW.Suspense, {
-          fallback: (0, hW.jsx)(wW.d, {}),
-          children: (0, hW.jsx)(HW, {
+        }), LR && (0, gR.jsx)(yR.Suspense, {
+          fallback: (0, gR.jsx)(fR.d, {}),
+          children: (0, gR.jsx)(bR, {
             existing: {
-              packId: KW,
-              name: SW,
-              description: nW
+              packId: CR,
+              name: XR,
+              description: vR
             },
             onPublished: () => {
-              sW(!1), EW()
+              WR(!1), tR()
             }
           })
         })]
       })
     }
-    var uW = OW(80),
-      oW = OW(2012),
-      dW = OW(1269),
-      eW = OW(5940),
-      vW = OW(1185),
-      gW = OW(7577),
-      DW = OW(7574),
-      VW = OW(7591);
+    var OR = GR(83),
+      xR = GR(2102),
+      NR = GR(1366),
+      DR = GR(6063),
+      HR = GR(1282),
+      oR = GR(7714),
+      cR = GR(7709),
+      PR = GR(7725);
 
-    function pW(WW) {
+    function IR(RR) {
       let {
-        item: iW
-      } = WW;
+        item: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, MW.B)(), [EW] = (0, gW.f)(), [PW, LW] = (0, mW.useState)(EW), [cW, wW] = (0, mW.useState)(!1), [tW, ZW] = (0, mW.useState)(!1), {
-        s3Url: xW
-      } = vW.clientSideServerUrls, {
-        width: lW,
-        height: AW
-      } = NW.n.large, bW = (0, NW.q)(xW, iW, PW, "large"), {
-        renderVersion: jW
-      } = iW;
-      return (0, hW.jsxs)("div", {
+        t: GR
+      } = (0, AR.A)(), [tR] = (0, oR.h)(), [ZR, qR] = (0, yR.useState)(tR), [iR, fR] = (0, yR.useState)(!1), [VR, KR] = (0, yR.useState)(!1), {
+        s3Url: wR
+      } = HR.clientSideServerUrls, {
+        width: rR,
+        height: eR
+      } = uR.s.large, aR = (0, uR.u)(wR, JR, ZR, "large"), {
+        renderVersion: LR
+      } = JR;
+      return (0, gR.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, hW.jsx)(VW.c, {
-          selected: PW,
-          onSelect: WW => {
-            LW(WW), wW(!1)
+        children: [(0, gR.jsx)(PR.e, {
+          selected: ZR,
+          onSelect: RR => {
+            qR(RR), fR(!1)
           },
-          imageUrl: WW => (0, NW.q)(xW, iW, WW, "thumb")
-        }), (0, hW.jsxs)("div", {
+          imageUrl: RR => (0, uR.u)(wR, JR, RR, "thumb")
+        }), (0, gR.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!cW && (0, hW.jsxs)("button", {
+          children: [!iR && (0, gR.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === jW ? void 0 : OW("shaderPackListing:fullSize"),
-            disabled: null === jW,
+            title: null === LR ? void 0 : GR("shaderPackListing:fullSize"),
+            disabled: null === LR,
             onClick: () => {
-              ZW(!0)
+              KR(!0)
             },
-            children: [(0, hW.jsx)("img", {
-              src: bW,
-              width: lW,
-              height: AW,
-              alt: OW(JW.fb[PW]),
+            children: [(0, gR.jsx)("img", {
+              src: aR,
+              width: rR,
+              height: eR,
+              alt: GR(pR.hb[ZR]),
               draggable: !1
-            }), (0, hW.jsx)(DW.c, {
-              item: iW
+            }), (0, gR.jsx)(cR.d, {
+              item: JR
             })]
-          }), !cW && null !== jW && (0, hW.jsxs)(BW, {
+          }), !iR && null !== LR && (0, gR.jsxs)(jR, {
             side: "Right",
             onClick: () => {
-              wW(!0)
+              fR(!0)
             },
-            children: [(0, hW.jsx)(yW.c, {
+            children: [(0, gR.jsx)(BR.d, {
               name: "arrows-left-right"
-            }), " ", OW("shaderPackListing:compare")]
-          }), cW && null !== jW && (0, hW.jsx)(XW, {
-            item: iW,
-            packUrl: bW,
-            baselineUrl: (0, NW.i)(xW, jW, PW, "large")
-          }), cW && (0, hW.jsx)(BW, {
+            }), " ", GR("shaderPackListing:compare")]
+          }), iR && null !== LR && (0, gR.jsx)(SR, {
+            item: JR,
+            packUrl: aR,
+            baselineUrl: (0, uR.p)(wR, LR, ZR, "large")
+          }), iR && (0, gR.jsx)(jR, {
             side: "Left",
             onClick: () => {
-              wW(!1)
+              fR(!1)
             },
-            children: OW("shaderPackListing:withPack")
-          }), cW && (0, hW.jsx)(BW, {
+            children: GR("shaderPackListing:withPack")
+          }), iR && (0, gR.jsx)(jR, {
             side: "Right",
             onClick: () => {
-              wW(!1)
+              fR(!1)
             },
-            children: OW("shaderPackListing:withoutPack")
+            children: GR("shaderPackListing:withoutPack")
           })]
-        }), tW && (0, hW.jsx)(fW, {
-          fullUrl: (0, NW.q)(xW, iW, PW, "full"),
-          largeUrl: bW,
-          alt: OW(JW.fb[PW]),
+        }), VR && (0, gR.jsx)(mR, {
+          fullUrl: (0, uR.u)(wR, JR, ZR, "full"),
+          largeUrl: aR,
+          alt: GR(pR.hb[ZR]),
           onClose: () => {
-            ZW(!1)
+            KR(!1)
           }
         })]
       })
     }
 
-    function fW(WW) {
+    function mR(RR) {
       let {
-        fullUrl: iW,
-        largeUrl: OW,
-        alt: EW,
-        onClose: NW
-      } = WW;
-      const PW = (0, mW.useRef)(null);
-      return (0, dW.r)("popup", PW, NW), (0, mW.useEffect)((() => {
-        function WW(WW) {
-          "Escape" === WW.key && (WW.stopPropagation(), NW())
+        fullUrl: JR,
+        largeUrl: GR,
+        alt: tR,
+        onClose: uR
+      } = RR;
+      const ZR = (0, yR.useRef)(null);
+      return (0, NR.u)("popup", ZR, uR), (0, yR.useEffect)((() => {
+        function RR(RR) {
+          "Escape" === RR.key && (RR.stopPropagation(), uR())
         }
-        return window.addEventListener("keydown", WW, !0), () => {
-          window.removeEventListener("keydown", WW, !0)
+        return window.addEventListener("keydown", RR, !0), () => {
+          window.removeEventListener("keydown", RR, !0)
         }
-      }), [NW]), (0, uW.createPortal)((0, hW.jsxs)("div", {
-        ref: PW,
+      }), [uR]), (0, OR.createPortal)((0, gR.jsxs)("div", {
+        ref: ZR,
         className: "ShaderPackFullSize",
-        onClick: NW,
-        children: [(0, hW.jsx)("img", {
+        onClick: uR,
+        children: [(0, gR.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: iW,
-          alt: EW,
+          src: JR,
+          alt: tR,
           draggable: !1,
           style: {
-            backgroundImage: `url(${OW})`
+            backgroundImage: `url(${GR})`
           }
-        }), (0, hW.jsx)(ZW.l, {
+        }), (0, gR.jsx)(KR.l, {
           className: "ShaderPackFullSizeClose",
-          onClick: NW
+          onClick: uR
         })]
       }), document.body)
     }
-    const CW = 5;
+    const zR = 5;
 
-    function XW(WW) {
+    function SR(RR) {
       let {
-        item: iW,
-        packUrl: OW,
-        baselineUrl: EW
-      } = WW;
+        item: JR,
+        packUrl: GR,
+        baselineUrl: tR
+      } = RR;
       const {
-        t: PW
-      } = (0, MW.B)(), [LW, cW] = (0, mW.useState)(50), wW = (0, mW.useRef)(!1), tW = (0, mW.useRef)(null), {
-        width: ZW,
-        height: xW
-      } = NW.n.large;
+        t: ZR
+      } = (0, AR.A)(), [qR, iR] = (0, yR.useState)(50), fR = (0, yR.useRef)(!1), VR = (0, yR.useRef)(null), {
+        width: KR,
+        height: wR
+      } = uR.s.large;
 
-      function lW(WW) {
-        cW((iW => (0, oW.f)(iW + WW, 0, 100)))
+      function rR(RR) {
+        iR((JR => (0, xR.e)(JR + RR, 0, 100)))
       }
 
-      function AW(WW) {
-        const iW = WW.currentTarget.getBoundingClientRect();
-        cW((0, oW.f)((WW.clientX - iW.left) / iW.width * 100, 0, 100))
+      function eR(RR) {
+        const JR = RR.currentTarget.getBoundingClientRect();
+        iR((0, xR.e)((RR.clientX - JR.left) / JR.width * 100, 0, 100))
       }
-      return (0, eW.d)(tW, {
-        adjust: WW => {
-          lW(WW * CW)
+      return (0, DR.i)(VR, {
+        adjust: RR => {
+          rR(RR * zR)
         },
-        setFraction: WW => {
-          cW(100 * WW)
+        setFraction: RR => {
+          iR(100 * RR)
         },
         endDrag: () => {}
-      }), (0, hW.jsxs)("div", {
-        ref: tW,
+      }), (0, gR.jsxs)("div", {
+        ref: VR,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": PW("shaderPackListing:compare"),
+        "aria-label": ZR("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(LW),
+        "aria-valuenow": Math.round(qR),
         style: {
-          "--split": `${LW}%`
+          "--split": `${qR}%`
         },
-        onKeyDown: function(WW) {
-          const iW = "ArrowLeft" === WW.key ? -CW : "ArrowRight" === WW.key ? CW : 0;
-          0 !== iW && (WW.preventDefault(), lW(iW))
+        onKeyDown: function(RR) {
+          const JR = "ArrowLeft" === RR.key ? -zR : "ArrowRight" === RR.key ? zR : 0;
+          0 !== JR && (RR.preventDefault(), rR(JR))
         },
-        onPointerDown: WW => {
-          wW.current = !0, WW.currentTarget.setPointerCapture(WW.pointerId), AW(WW)
+        onPointerDown: RR => {
+          fR.current = !0, RR.currentTarget.setPointerCapture(RR.pointerId), eR(RR)
         },
-        onPointerMove: WW => {
-          wW.current && AW(WW)
+        onPointerMove: RR => {
+          fR.current && eR(RR)
         },
         onPointerUp: () => {
-          wW.current = !1
+          fR.current = !1
         },
         onPointerCancel: () => {
-          wW.current = !1
+          fR.current = !1
         },
-        children: [(0, hW.jsx)("img", {
+        children: [(0, gR.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: EW,
-          width: ZW,
-          height: xW,
+          src: tR,
+          width: KR,
+          height: wR,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${OW})`
+            backgroundImage: `url(${GR})`
           }
-        }), (0, hW.jsx)("div", {
+        }), (0, gR.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, hW.jsx)("img", {
+        }), (0, gR.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: OW,
-          width: ZW,
-          height: xW,
+          src: GR,
+          width: KR,
+          height: wR,
           alt: "",
           draggable: !1
-        }), (0, hW.jsx)(DW.c, {
-          item: iW,
+        }), (0, gR.jsx)(cR.d, {
+          item: JR,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function BW(WW) {
+    function jR(RR) {
       let {
-        side: iW,
-        onClick: OW,
-        children: mW
-      } = WW;
-      return (0, hW.jsx)("button", {
+        side: JR,
+        onClick: GR,
+        children: yR
+      } = RR;
+      return (0, gR.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${iW}`,
-        onClick: OW,
-        children: (0, hW.jsx)("span", {
+        className: `ShaderPackStageButton ${JR}`,
+        onClick: GR,
+        children: (0, gR.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: mW
+          children: yR
         })
       })
     }
-    var qW = OW(5910),
-      RW = OW(315),
-      GW = OW(7659);
-    const IW = {
+    var dR = GR(6037),
+      ER = GR(342),
+      YR = GR(7802);
+    const kR = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -698,349 +698,349 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function aW(WW) {
+    function QR(RR) {
       const {
-        userContext: iW
-      } = (0, UW.e)(), [EW, NW] = (0, mW.useState)(null), [PW, LW] = (0, mW.useState)(!1), [cW, wW] = (0, mW.useState)(!1), [tW, ZW] = (0, mW.useState)(null), xW = null === WW || void 0 === WW ? void 0 : WW.packId, lW = null === WW || void 0 === WW ? void 0 : WW.sourceHash;
-      return (0, mW.useEffect)((() => {
-        if (LW(!1), ZW(null), void 0 === xW) return;
-        let WW = !1;
-        return Promise.all([(0, sW.hasUsableWebGpuAdapter)(), (0, GW.g)()]).then((iW => {
-          let [OW, mW] = iW;
-          var EW;
-          WW || (NW(OW), LW((null === mW || void 0 === mW || null === (EW = mW.listing) || void 0 === EW ? void 0 : EW.packId) === xW && mW.listing.sourceHash === lW))
-        })).catch((iW => {
-          console.error("Failed to check whether this shader pack can be used", iW), WW || NW(!1)
+        userContext: JR
+      } = (0, nR.d)(), [tR, uR] = (0, yR.useState)(null), [ZR, qR] = (0, yR.useState)(!1), [iR, fR] = (0, yR.useState)(!1), [VR, KR] = (0, yR.useState)(null), wR = null === RR || void 0 === RR ? void 0 : RR.packId, rR = null === RR || void 0 === RR ? void 0 : RR.sourceHash;
+      return (0, yR.useEffect)((() => {
+        if (qR(!1), KR(null), void 0 === wR) return;
+        let RR = !1;
+        return Promise.all([(0, WR.hasUsableWebGpuAdapter)(), (0, YR.d)()]).then((JR => {
+          let [GR, yR] = JR;
+          var tR;
+          RR || (uR(GR), qR((null === yR || void 0 === yR || null === (tR = yR.listing) || void 0 === tR ? void 0 : tR.packId) === wR && yR.listing.sourceHash === rR))
+        })).catch((JR => {
+          console.error("Failed to check whether this shader pack can be used", JR), RR || uR(!1)
         })), () => {
-          WW = !0
+          RR = !0
         }
-      }), [xW, lW]), {
-        webGpuUsable: EW,
-        inUse: PW,
-        busy: cW,
-        errorKey: tW,
+      }), [wR, rR]), {
+        webGpuUsable: tR,
+        inUse: ZR,
+        busy: iR,
+        errorKey: VR,
         use: () => {
-          null !== WW && async function(WW) {
-            wW(!0), ZW(null);
+          null !== RR && async function(RR) {
+            fR(!0), KR(null);
             try {
               const {
-                installListedShaderPack: mW
-              } = await Promise.all([OW.e(91), OW.e(157), OW.e(136)]).then((() => OW(42022))), EW = await mW({
-                packId: WW.packId,
-                sourceHash: WW.sourceHash,
-                name: WW.name,
-                ownerName: WW.ownerName,
-                description: WW.description
+                installListedShaderPack: yR
+              } = await Promise.all([GR.e(91), GR.e(157), GR.e(136)]).then((() => GR(42033))), tR = await yR({
+                packId: RR.packId,
+                sourceHash: RR.sourceHash,
+                name: RR.name,
+                ownerName: RR.ownerName,
+                description: RR.description
               });
-              if ("failed" === EW.kind) return void ZW(IW[EW.reason]);
-              LW(!0), kW.e.recordShaderPackDownload(iW, WW.packId).catch((WW => {
-                console.error("Failed to count a shader pack's download", WW)
-              })), (0, qW.n)()
-            } catch (mW) {
-              console.error("Failed to use the shader pack", mW), ZW("shaderPack:unexpectedError")
+              if ("failed" === tR.kind) return void KR(kR[tR.reason]);
+              qR(!0), UR.c.recordShaderPackDownload(JR, RR.packId).catch((RR => {
+                console.error("Failed to count a shader pack's download", RR)
+              })), (0, dR.m)()
+            } catch (yR) {
+              console.error("Failed to use the shader pack", yR), KR("shaderPack:unexpectedError")
             } finally {
-              wW(!1)
+              fR(!1)
             }
-          }(WW)
+          }(RR)
         }
       }
     }
 
-    function rW(WW) {
+    function FR(RR) {
       let {
-        packUse: iW
-      } = WW;
+        packUse: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, MW.B)(), {
-        webGpuUsable: mW,
-        inUse: EW,
-        busy: NW,
-        errorKey: PW,
-        use: LW
-      } = iW;
-      return (0, hW.jsxs)("div", {
+        t: GR
+      } = (0, AR.A)(), {
+        webGpuUsable: yR,
+        inUse: tR,
+        busy: uR,
+        errorKey: ZR,
+        use: qR
+      } = JR;
+      return (0, gR.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, hW.jsxs)(ZW.n, {
-          disabled: !0 !== mW || EW,
-          loading: NW,
-          onClick: LW,
-          children: [(0, hW.jsx)(yW.c, {
-            name: EW ? "check" : "download"
-          }), " ", OW(EW ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === mW && (0, hW.jsx)("div", {
+        children: [(0, gR.jsxs)(KR.n, {
+          disabled: !0 !== yR || tR,
+          loading: uR,
+          onClick: qR,
+          children: [(0, gR.jsx)(BR.d, {
+            name: tR ? "check" : "download"
+          }), " ", GR(tR ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === yR && (0, gR.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: OW((0, RW.l)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), PW && (0, hW.jsx)("div", {
+          children: GR((0, ER.j)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), ZR && (0, gR.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: OW(PW)
+          children: GR(ZR)
         })]
       })
     }
 
-    function zW() {
-      var WW;
+    function TR() {
+      var RR;
       const {
-        t: iW
-      } = (0, MW.B)(), OW = (0, tW.useNavigatePreserveSearch)(), {
-        packId: NW
-      } = (0, EW.z)(), {
-        userContext: PW,
-        isUserContextUpdating: LW
-      } = (0, UW.e)(), [xW, AW] = (0, mW.useState)(null), [bW, sW] = (0, mW.useState)(null), [KW, SW] = (0, mW.useState)(0), YW = (0, mW.useRef)(0);
+        t: JR
+      } = (0, AR.A)(), GR = (0, VR.useNavigatePreserveSearch)(), {
+        packId: uR
+      } = (0, tR.x)(), {
+        userContext: ZR,
+        isUserContextUpdating: qR
+      } = (0, nR.d)(), [wR, eR] = (0, yR.useState)(null), [aR, WR] = (0, yR.useState)(null), [CR, XR] = (0, yR.useState)(0), MR = (0, yR.useRef)(0);
 
-      function yW() {
-        var WW;
-        null !== (WW = (0, tW.getPreviousLocation)()) && void 0 !== WW && WW.startsWith(JW.W) ? OW(-1) : OW(JW.W)
-      }(0, jW.c)(yW), (0, gW.b)(), (0, mW.useEffect)((() => {
-        if (LW || void 0 === NW) return;
-        const WW = ++YW.current;
-        sW(null), kW.e.getShaderPack(PW, NW).then((iW => {
-          YW.current === WW && AW(iW)
-        })).catch((iW => {
-          YW.current === WW && (console.error("Failed to get the shader pack", iW), AW(null), sW({
-            error: iW
+      function BR() {
+        var RR;
+        null !== (RR = (0, VR.getPreviousLocation)()) && void 0 !== RR && RR.startsWith(pR.Z) ? GR(-1) : GR(pR.Z)
+      }(0, LR.c)(BR), (0, oR.d)(), (0, yR.useEffect)((() => {
+        if (qR || void 0 === uR) return;
+        const RR = ++MR.current;
+        WR(null), UR.c.getShaderPack(ZR, uR).then((JR => {
+          MR.current === RR && eR(JR)
+        })).catch((JR => {
+          MR.current === RR && (console.error("Failed to get the shader pack", JR), eR(null), WR({
+            error: JR
           }))
         }))
-      }), [NW, PW, LW, KW]);
-      const TW = () => {
-          SW((WW => WW + 1))
+      }), [uR, ZR, qR, CR]);
+      const lR = () => {
+          XR((RR => RR + 1))
         },
-        HW = (null === xW || void 0 === xW ? void 0 : xW.packId) === NW ? xW : null,
-        uW = (0, gW.j)(),
-        oW = aW(null !== (WW = null === HW || void 0 === HW ? void 0 : HW.live) && void 0 !== WW ? WW : null),
-        dW = null !== HW && void 0 !== HW && HW.live ? (0, hW.jsx)(FW, {
-          item: HW.live,
-          favourites: uW,
-          packUse: oW
+        bR = (null === wR || void 0 === wR ? void 0 : wR.packId) === uR ? wR : null,
+        OR = (0, oR.k)(),
+        xR = QR(null !== (RR = null === bR || void 0 === bR ? void 0 : bR.live) && void 0 !== RR ? RR : null),
+        NR = null !== bR && void 0 !== bR && bR.live ? (0, gR.jsx)(sR, {
+          item: bR.live,
+          favourites: OR,
+          packUse: xR
         }) : null;
-      return (0, hW.jsxs)("article", {
+      return (0, gR.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [null !== HW && (0, hW.jsx)(lW.c, {
-          meta: (0, cW.ab)(HW.name)
-        }), (0, hW.jsx)(ZW.b, {
-          onClick: yW,
-          children: iW("shaderPackListing:backToPacks")
-        }), null === HW && null === bW && (0, hW.jsx)("div", {
+        children: [null !== bR && (0, gR.jsx)(rR.b, {
+          meta: (0, iR.bb)(bR.name)
+        }), (0, gR.jsx)(KR.d, {
+          onClick: BR,
+          children: JR("shaderPackListing:backToPacks")
+        }), null === bR && null === aR && (0, gR.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, hW.jsx)(wW.d, {})
-        }), null !== bW && (0, hW.jsxs)("div", {
+          children: (0, gR.jsx)(fR.d, {})
+        }), null !== aR && (0, gR.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, JW.y)(bW.error, iW, "shaderPackListing:loadPackFailed"), (0, hW.jsx)(ZW.f, {
-            onClick: TW,
-            children: iW("general:tryAgain")
+          children: [(0, pR.F)(aR.error, JR, "shaderPackListing:loadPackFailed"), (0, gR.jsx)(KR.g, {
+            onClick: lR,
+            children: JR("general:tryAgain")
           })]
-        }), null !== HW && null === bW && (0, hW.jsxs)("div", {
+        }), null !== bR && null === aR && (0, gR.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, hW.jsxs)("header", {
+          children: [(0, gR.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, hW.jsx)("h1", {
+            children: [(0, gR.jsx)("h1", {
               className: "FullyFancyText",
-              children: HW.name
-            }), dW]
-          }), HW.live && (0, hW.jsx)(pW, {
-            item: HW.live
-          }), HW.live && (0, hW.jsx)(QW, {
-            item: HW.live,
-            ownerPreview: HW.ownerPreview,
-            bloxdhubSlug: HW.bloxdhubSlug,
-            actions: dW
-          }), HW.owner && (0, hW.jsx)(nW, {
-            details: HW,
-            owner: HW.owner,
-            onChanged: TW
+              children: bR.name
+            }), NR]
+          }), bR.live && (0, gR.jsx)(IR, {
+            item: bR.live
+          }), bR.live && (0, gR.jsx)(hR, {
+            item: bR.live,
+            ownerPreview: bR.ownerPreview,
+            bloxdhubSlug: bR.bloxdhubSlug,
+            actions: NR
+          }), bR.owner && (0, gR.jsx)(vR, {
+            details: bR,
+            owner: bR.owner,
+            onChanged: lR
           })]
         })]
       })
     }
 
-    function FW(WW) {
+    function sR(RR) {
       let {
-        item: iW,
-        favourites: OW,
-        packUse: mW
-      } = WW;
-      const EW = OW.isFavourite(iW.packId);
-      return (0, hW.jsxs)("div", {
+        item: JR,
+        favourites: GR,
+        packUse: yR
+      } = RR;
+      const tR = GR.isFavourite(JR.packId);
+      return (0, gR.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [sW.featureFlags.settings.canUseShaderPacks && (0, hW.jsx)(rW, {
-          packUse: mW
-        }), (0, hW.jsx)(ZW.y, {
+        children: [WR.featureFlags.settings.canUseShaderPacks && (0, gR.jsx)(FR, {
+          packUse: yR
+        }), (0, gR.jsx)(KR.y, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            OW.toggle(iW.packId)
+            GR.toggle(JR.packId)
           },
-          isLiked: !0 === EW,
-          isLoading: null === EW
+          isLiked: !0 === tR,
+          isLoading: null === tR
         })]
       })
     }
 
-    function QW(WW) {
+    function hR(RR) {
       let {
-        item: iW,
-        ownerPreview: OW,
-        bloxdhubSlug: mW,
-        actions: EW
-      } = WW;
+        item: JR,
+        ownerPreview: GR,
+        bloxdhubSlug: yR,
+        actions: tR
+      } = RR;
       const {
-        t: LW
-      } = (0, MW.B)(), cW = (0, bW.p)(), wW = null === mW ? null : (0, NW.d)(mW);
-      return (0, hW.jsxs)("div", {
+        t: qR
+      } = (0, AR.A)(), iR = (0, aR.q)(), fR = null === yR ? null : (0, uR.e)(yR);
+      return (0, gR.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [iW.description && (0, hW.jsx)("p", {
+        children: [JR.description && (0, gR.jsx)("p", {
           className: "ShaderPackDescription",
-          children: iW.description
-        }), (0, hW.jsxs)("div", {
+          children: JR.description
+        }), (0, gR.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== OW || null !== wW) && (0, hW.jsx)("div", {
+          children: [(null !== GR || null !== fR) && (0, gR.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== OW ? (0, hW.jsxs)(hW.Fragment, {
-              children: [(0, hW.jsx)(AW.g, {
-                playerSocialPreview: OW,
+            children: null !== GR ? (0, gR.jsxs)(gR.Fragment, {
+              children: [(0, gR.jsx)(eR.h, {
+                playerSocialPreview: GR,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== wW && (0, hW.jsx)("a", {
+              }), null !== fR && (0, gR.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: wW,
+                href: fR,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, hW.jsx)("img", {
-                  src: KW,
-                  alt: NW.c
+                children: (0, gR.jsx)("img", {
+                  src: CR,
+                  alt: uR.d
                 })
               })]
-            }) : (0, hW.jsxs)("a", {
+            }) : (0, gR.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: wW,
+              href: fR,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [NW.c, (0, hW.jsx)("img", {
-                src: KW,
+              children: [uR.d, (0, gR.jsx)("img", {
+                src: CR,
                 alt: ""
               })]
             })
-          }), JW.B.filter((WW => iW.features.includes(WW))).map((WW => (0, hW.jsx)(tW.LinkPreserveSearch, {
+          }), pR.I.filter((RR => JR.features.includes(RR))).map((RR => (0, gR.jsx)(VR.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, JW.M)(WW),
-            children: LW(JW.N[WW])
-          }, WW)))]
-        }), EW, (0, hW.jsxs)("dl", {
+            to: (0, pR.R)(RR),
+            children: qR(pR.T[RR])
+          }, RR)))]
+        }), tR, (0, gR.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, hW.jsxs)("div", {
-            children: [(0, hW.jsx)("dt", {
-              children: LW("shaderPackListing:downloads")
-            }), (0, hW.jsx)("dd", {
-              children: (0, PW.V)(iW.downloads)
+          children: [(0, gR.jsxs)("div", {
+            children: [(0, gR.jsx)("dt", {
+              children: qR("shaderPackListing:downloads")
+            }), (0, gR.jsx)("dd", {
+              children: (0, ZR.J)(JR.downloads)
             })]
-          }), (0, hW.jsx)(Wi, {
-            label: LW("shaderPackListing:updated"),
-            time: iW.listedUpdatedAt,
-            now: cW
-          }), (0, hW.jsx)(Wi, {
-            label: LW("shaderPackListing:created"),
-            time: iW.publishedAt,
-            now: cW
-          }), null !== iW.gpuCost && (0, hW.jsxs)("div", {
-            children: [(0, hW.jsx)("dt", {
-              children: LW("shaderPackListing:lag")
-            }), (0, hW.jsx)("dd", {
-              children: LW("shaderPackListing:lagPercent", {
-                percent: String((0, JW.S)(iW.gpuCost))
+          }), (0, gR.jsx)(RJ, {
+            label: qR("shaderPackListing:updated"),
+            time: JR.listedUpdatedAt,
+            now: iR
+          }), (0, gR.jsx)(RJ, {
+            label: qR("shaderPackListing:created"),
+            time: JR.publishedAt,
+            now: iR
+          }), null !== JR.gpuCost && (0, gR.jsxs)("div", {
+            children: [(0, gR.jsx)("dt", {
+              children: qR("shaderPackListing:lag")
+            }), (0, gR.jsx)("dd", {
+              children: qR("shaderPackListing:lagPercent", {
+                percent: String((0, pR.W)(JR.gpuCost))
               })
             })]
-          }), (0, hW.jsxs)("div", {
-            children: [(0, hW.jsx)("dt", {
-              children: LW("shaderPackListing:size")
-            }), (0, hW.jsx)("dd", {
-              children: LW("shaderPackListing:sizeValue", {
-                kilobytes: String((0, JW.Q)(iW.sourceBytes))
+          }), (0, gR.jsxs)("div", {
+            children: [(0, gR.jsx)("dt", {
+              children: qR("shaderPackListing:size")
+            }), (0, gR.jsx)("dd", {
+              children: qR("shaderPackListing:sizeValue", {
+                kilobytes: String((0, pR.V)(JR.sourceBytes))
               })
             })]
-          }), (0, hW.jsxs)("div", {
-            children: [(0, hW.jsx)("dt", {
-              children: LW("shaderPackListing:files")
-            }), (0, hW.jsx)("dd", {
-              children: iW.fileCount
+          }), (0, gR.jsxs)("div", {
+            children: [(0, gR.jsx)("dt", {
+              children: qR("shaderPackListing:files")
+            }), (0, gR.jsx)("dd", {
+              children: JR.fileCount
             })]
           })]
         })]
       })
     }
 
-    function Wi(WW) {
+    function RJ(RR) {
       let {
-        label: iW,
-        time: OW,
-        now: mW
-      } = WW;
+        label: JR,
+        time: GR,
+        now: yR
+      } = RR;
       const {
-        t: EW,
-        selectedLanguage: NW
-      } = (0, MW.B)(), PW = new Date(OW);
-      let cW = PW.toLocaleDateString();
-      if (mW - OW <= 30 * LW.k) {
-        const WW = (0, MW.k)(NW.code, "shaderPackListing:timeAgo");
-        cW = EW("shaderPackListing:timeAgo", {
-          time: (0, LW.$)(WW, OW, mW)
+        t: tR,
+        selectedLanguage: uR
+      } = (0, AR.A)(), ZR = new Date(GR);
+      let iR = ZR.toLocaleDateString();
+      if (yR - GR <= 30 * qR.i) {
+        const RR = (0, AR.n)(uR.code, "shaderPackListing:timeAgo");
+        iR = tR("shaderPackListing:timeAgo", {
+          time: (0, qR.Z)(RR, GR, yR)
         })
       }
-      return (0, hW.jsx)(xW.f, {
-        tooltipInner: PW.toLocaleString(),
-        children: (0, hW.jsxs)("div", {
-          children: [(0, hW.jsx)("dt", {
-            children: iW
-          }), (0, hW.jsx)("dd", {
-            children: cW
+      return (0, gR.jsx)(wR.h, {
+        tooltipInner: ZR.toLocaleString(),
+        children: (0, gR.jsxs)("div", {
+          children: [(0, gR.jsx)("dt", {
+            children: JR
+          }), (0, gR.jsx)("dd", {
+            children: iR
           })]
         })
       })
     }
   },
-  5940: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW,
-      d: () => PW
+  6063: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      i: () => ZR
     });
-    var mW = OW(62);
-    const EW = new WeakMap,
-      NW = WW => {
-        var iW;
-        const OW = WW.closest("[data-pad-slider]");
-        return OW && null !== (iW = EW.get(OW)) && void 0 !== iW ? iW : null
+    var yR = GR(66);
+    const tR = new WeakMap,
+      uR = RR => {
+        var JR;
+        const GR = RR.closest("[data-pad-slider]");
+        return GR && null !== (JR = tR.get(GR)) && void 0 !== JR ? JR : null
       },
-      PW = (WW, iW) => {
-        const OW = (0, mW.useRef)(iW);
-        OW.current = iW, (0, mW.useEffect)((() => {
-          if (WW.current) return ((WW, iW) => (EW.set(WW, iW), () => {
-            EW.get(WW) === iW && EW.delete(WW)
-          }))(WW.current, {
-            adjust: WW => {
-              OW.current.adjust(WW)
+      ZR = (RR, JR) => {
+        const GR = (0, yR.useRef)(JR);
+        GR.current = JR, (0, yR.useEffect)((() => {
+          if (RR.current) return ((RR, JR) => (tR.set(RR, JR), () => {
+            tR.get(RR) === JR && tR.delete(RR)
+          }))(RR.current, {
+            adjust: RR => {
+              GR.current.adjust(RR)
             },
-            setFraction: WW => {
-              OW.current.setFraction(WW)
+            setFraction: RR => {
+              GR.current.setFraction(RR)
             },
             endDrag: () => {
-              OW.current.endDrag()
+              GR.current.endDrag()
             }
           })
-        }), [WW])
+        }), [RR])
       }
   },
-  7659: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      g: () => NW
+  7802: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      d: () => uR
     });
-    var mW = OW(39);
-    const EW = "shaderPack";
-    async function NW() {
-      var WW;
-      let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (WW = await mW.f.getItem(EW, iW)) && void 0 !== WW ? WW : null
+    var yR = GR(46);
+    const tR = "shaderPack";
+    async function uR() {
+      var RR;
+      let JR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (RR = await yR.g.getItem(tR, JR)) && void 0 !== RR ? RR : null
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

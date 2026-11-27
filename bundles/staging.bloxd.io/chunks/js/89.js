@@ -1,18 +1,18 @@
 export const id = 89;
 export const ids = [89];
 export const modules = {
-  38210: (WW, iW, OW) => {
-    if (OW.d(iW, {
-        b: () => cW,
-        e: () => EW,
-        i: () => PW,
-        j: () => NW,
-        m: () => KW,
-        n: () => UW
-      }), 47 == OW.j) var mW = OW(38214);
-    const EW = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      NW = ["Blade", "Guard", "Handle"],
-      PW = {
+  38172: (RR, JR, GR) => {
+    if (GR.d(JR, {
+        e: () => iR,
+        g: () => tR,
+        h: () => ZR,
+        i: () => uR,
+        m: () => CR,
+        p: () => nR
+      }), 47 == GR.j) var yR = GR(38176);
+    const tR = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      uR = ["Blade", "Guard", "Handle"],
+      ZR = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      LW = 4,
-      cW = "Coal",
-      wW = {
+      qR = 4,
+      iR = "Coal",
+      fR = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      tW = 1.15,
-      ZW = 1.35,
-      xW = .06,
-      lW = {
+      VR = 1.15,
+      KR = 1.35,
+      wR = .06,
+      rR = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: WW => `${yW(.06*WW)} less damage taken`
+          describe: RR => `${BR(.06*RR)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: WW => `Mobs you slay drop ${Math.round(4*WW)}+ extra coins`
+          describe: RR => `Mobs you slay drop ${Math.round(4*RR)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: WW => `${yW(.12*WW)} chance to strike for +60% damage`
+          describe: RR => `${BR(.12*RR)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: WW => `+${yW(.2*WW)} damage to bosses`
+          describe: RR => `+${BR(.2*RR)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: WW => `${yW(.15*WW)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: RR => `${BR(.15*RR)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: WW => `Heal ${yW(.06*WW)} of the damage you deal`
+          describe: RR => `Heal ${BR(.06*RR)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: WW => `${yW(.1*WW)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: RR => `${BR(.1*RR)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      AW = {
+      eR = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      bW = 47 == OW.j ? mW.c : null,
-      jW = "skyblock:forged:";
+      aR = 47 == GR.j ? yR.e : null,
+      LR = "skyblock:forged:";
 
-    function UW(WW, iW) {
-      return `${WW} ${iW}`
+    function nR(RR, JR) {
+      return `${RR} ${JR}`
     }
-    EW.flatMap((WW => NW.map((iW => UW(WW, iW)))));
+    tR.flatMap((RR => uR.map((JR => nR(RR, JR)))));
 
-    function kW(WW) {
+    function UR(RR) {
       let {
-        blade: iW,
-        guard: OW,
-        handle: mW
-      } = WW;
-      return `${jW}${iW.toLowerCase()}-${OW.toLowerCase()}-${mW.toLowerCase()}`
+        blade: JR,
+        guard: GR,
+        handle: yR
+      } = RR;
+      return `${LR}${JR.toLowerCase()}-${GR.toLowerCase()}-${yR.toLowerCase()}`
     }
 
-    function sW(WW) {
-      if (! function(WW) {
-          return "string" === typeof WW && WW.startsWith(jW)
-        }(WW)) return null;
-      const iW = WW.slice(jW.length).split("-").map((WW => EW.find((iW => iW.toLowerCase() === WW))));
-      return 3 !== iW.length || iW.includes(void 0) ? null : {
-        blade: iW[0],
-        guard: iW[1],
-        handle: iW[2]
+    function WR(RR) {
+      if (! function(RR) {
+          return "string" === typeof RR && RR.startsWith(LR)
+        }(RR)) return null;
+      const JR = RR.slice(LR.length).split("-").map((RR => tR.find((JR => JR.toLowerCase() === RR))));
+      return 3 !== JR.length || JR.includes(void 0) ? null : {
+        blade: JR[0],
+        guard: JR[1],
+        handle: JR[2]
       }
     }
-    const MW = new Map;
+    const AR = new Map;
 
-    function KW(WW) {
-      var iW;
-      let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bW;
-      const mW = "string" === typeof WW ? sW(WW) : WW;
-      if (null === mW) return null;
-      const EW = kW(mW),
-        cW = OW === bW ? MW.get(EW) : void 0;
-      if (void 0 !== cW) return cW;
-      const jW = function(WW, iW) {
-        var OW, mW, EW, cW, bW, jW, UW, sW, MW;
+    function CR(RR) {
+      var JR;
+      let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aR;
+      const yR = "string" === typeof RR ? WR(RR) : RR;
+      if (null === yR) return null;
+      const tR = UR(yR),
+        iR = GR === aR ? AR.get(tR) : void 0;
+      if (void 0 !== iR) return iR;
+      const LR = function(RR, JR) {
+        var GR, yR, tR, iR, aR, LR, nR, WR, AR;
         const {
-          blade: KW,
-          guard: JW,
-          handle: hW
-        } = WW, HW = PW, nW = KW === JW && JW === hW, uW = YW((1 + HW[KW].bladeDamage) * (nW ? 1 + xW : 1)), oW = null !== (OW = iW.damageMultiplier) && void 0 !== OW ? OW : uW, dW = null !== (mW = iW.cooldownMultiplier) && void 0 !== mW ? mW : HW[hW].handleCooldown, eW = null !== (EW = iW.knockbackMultiplier) && void 0 !== EW ? EW : YW(1 + HW[hW].handleKnockback), vW = null !== (cW = iW.reachBonus) && void 0 !== cW ? cW : HW[hW].handleReach, gW = null !== (bW = iW.damageReduction) && void 0 !== bW ? bW : HW[JW].guardReduction, DW = null !== (jW = iW.traits) && void 0 !== jW ? jW : function(WW) {
-          const iW = {},
-            OW = {};
-          for (const LW of NW) {
-            var mW, EW;
-            const NW = PW[SW(WW, LW)].trait;
-            null !== NW && (iW[NW] = (null !== (mW = iW[NW]) && void 0 !== mW ? mW : 0) + wW[LW], OW[NW] = (null !== (EW = OW[NW]) && void 0 !== EW ? EW : 0) + 1)
+          blade: CR,
+          guard: pR,
+          handle: gR
+        } = RR, bR = ZR, vR = CR === pR && pR === gR, OR = MR((1 + bR[CR].bladeDamage) * (vR ? 1 + wR : 1)), xR = null !== (GR = JR.damageMultiplier) && void 0 !== GR ? GR : OR, NR = null !== (yR = JR.cooldownMultiplier) && void 0 !== yR ? yR : bR[gR].handleCooldown, DR = null !== (tR = JR.knockbackMultiplier) && void 0 !== tR ? tR : MR(1 + bR[gR].handleKnockback), HR = null !== (iR = JR.reachBonus) && void 0 !== iR ? iR : bR[gR].handleReach, oR = null !== (aR = JR.damageReduction) && void 0 !== aR ? aR : bR[pR].guardReduction, cR = null !== (LR = JR.traits) && void 0 !== LR ? LR : function(RR) {
+          const JR = {},
+            GR = {};
+          for (const qR of uR) {
+            var yR, tR;
+            const uR = ZR[XR(RR, qR)].trait;
+            null !== uR && (JR[uR] = (null !== (yR = JR[uR]) && void 0 !== yR ? yR : 0) + fR[qR], GR[uR] = (null !== (tR = GR[uR]) && void 0 !== tR ? tR : 0) + 1)
           }
-          for (const NW of Object.keys(iW)) {
-            const WW = 3 === OW[NW] ? ZW : 2 === OW[NW] ? tW : 1;
-            iW[NW] = YW(iW[NW] * WW)
+          for (const uR of Object.keys(JR)) {
+            const RR = 3 === GR[uR] ? KR : 2 === GR[uR] ? VR : 1;
+            JR[uR] = MR(JR[uR] * RR)
           }
-          return iW
-        }(WW), VW = null !== (UW = iW.ability) && void 0 !== UW ? UW : null, pW = void 0 !== iW.name, fW = null !== (sW = iW.name) && void 0 !== sW ? sW : nW ? `Pure ${KW} Sword` : `${HW[JW].epithet} ${KW} Sword`, CW = null !== (MW = iW.lore) && void 0 !== MW ? MW : `Forged by the Forge Mother from a ${KW.toLowerCase()} blade, ${JW.toLowerCase()} guard and ${hW.toLowerCase()} handle.`, XW = function(WW) {
+          return JR
+        }(RR), PR = null !== (nR = JR.ability) && void 0 !== nR ? nR : null, IR = void 0 !== JR.name, mR = null !== (WR = JR.name) && void 0 !== WR ? WR : vR ? `Pure ${CR} Sword` : `${bR[pR].epithet} ${CR} Sword`, zR = null !== (AR = JR.lore) && void 0 !== AR ? AR : `Forged by the Forge Mother from a ${CR.toLowerCase()} blade, ${pR.toLowerCase()} guard and ${gR.toLowerCase()} handle.`, SR = function(RR) {
           let {
-            blade: iW,
-            guard: OW,
-            handle: mW
-          } = WW;
-          const EW = PW;
-          return LW * (EW[iW].value + EW[OW].value + EW[mW].value)
-        }(WW), BW = HW[KW].value + HW[JW].value + HW[hW].value, qW = pW ? "Tier 5" : BW <= 4 ? "Tier 1" : BW <= 8 ? "Tier 2" : BW <= 14 ? "Tier 3" : BW <= 22 ? "Tier 4" : "Tier 5", RW = [];
-        1 !== oW && RW.push(`${TW(oW-1)} damage`);
-        1 !== dW && RW.push(`${yW(1/dW-1)} faster strikes`);
-        1 !== eW && RW.push(`${TW(eW-1)} knockback`);
-        vW > 0 && RW.push(`+${vW} reach`);
-        gW > 0 && RW.push(`${yW(gW)} less damage taken while held`);
-        const GW = [];
-        for (const NW of Object.keys(DW)) GW.push(`${lW[NW].name}: ${lW[NW].describe(DW[NW])}`);
-        null !== VW && GW.push(`${AW[VW].name}: ${AW[VW].description}`);
-        return RW.push(...GW), {
-          id: kW(WW),
-          parts: WW,
-          baseSword: HW[KW].baseSword,
-          displayName: fW,
-          lore: CW,
-          properties: RW,
-          effects: GW,
-          named: pW,
-          damageMultiplier: oW,
-          cooldownMultiplier: dW,
-          knockbackMultiplier: eW,
-          reachBonus: vW,
-          damageReduction: gW,
-          traits: DW,
-          ability: VW,
-          coalCost: XW,
-          enchantmentTier: qW,
-          powerMultiplier: YW(oW / dW)
+            blade: JR,
+            guard: GR,
+            handle: yR
+          } = RR;
+          const tR = ZR;
+          return qR * (tR[JR].value + tR[GR].value + tR[yR].value)
+        }(RR), jR = bR[CR].value + bR[pR].value + bR[gR].value, dR = IR ? "Tier 5" : jR <= 4 ? "Tier 1" : jR <= 8 ? "Tier 2" : jR <= 14 ? "Tier 3" : jR <= 22 ? "Tier 4" : "Tier 5", ER = [];
+        1 !== xR && ER.push(`${lR(xR-1)} damage`);
+        1 !== NR && ER.push(`${BR(1/NR-1)} faster strikes`);
+        1 !== DR && ER.push(`${lR(DR-1)} knockback`);
+        HR > 0 && ER.push(`+${HR} reach`);
+        oR > 0 && ER.push(`${BR(oR)} less damage taken while held`);
+        const YR = [];
+        for (const uR of Object.keys(cR)) YR.push(`${rR[uR].name}: ${rR[uR].describe(cR[uR])}`);
+        null !== PR && YR.push(`${eR[PR].name}: ${eR[PR].description}`);
+        return ER.push(...YR), {
+          id: UR(RR),
+          parts: RR,
+          baseSword: bR[CR].baseSword,
+          displayName: mR,
+          lore: zR,
+          properties: ER,
+          effects: YR,
+          named: IR,
+          damageMultiplier: xR,
+          cooldownMultiplier: NR,
+          knockbackMultiplier: DR,
+          reachBonus: HR,
+          damageReduction: oR,
+          traits: cR,
+          ability: PR,
+          coalCost: SR,
+          enchantmentTier: dR,
+          powerMultiplier: MR(xR / NR)
         }
-      }(mW, null !== (iW = OW[EW]) && void 0 !== iW ? iW : {});
-      return OW === bW && MW.set(EW, jW), jW
+      }(yR, null !== (JR = GR[tR]) && void 0 !== JR ? JR : {});
+      return GR === aR && AR.set(tR, LR), LR
     }
 
-    function SW(WW, iW) {
-      return "Blade" === iW ? WW.blade : "Guard" === iW ? WW.guard : WW.handle
+    function XR(RR, JR) {
+      return "Blade" === JR ? RR.blade : "Guard" === JR ? RR.guard : RR.handle
     }
 
-    function YW(WW) {
-      return Math.round(100 * WW) / 100
+    function MR(RR) {
+      return Math.round(100 * RR) / 100
     }
 
-    function yW(WW) {
-      return `${Math.round(100*WW)}%`
+    function BR(RR) {
+      return `${Math.round(100*RR)}%`
     }
 
-    function TW(WW) {
-      return `${WW>=0?"+":""}${yW(WW)}`
+    function lR(RR) {
+      return `${RR>=0?"+":""}${BR(RR)}`
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

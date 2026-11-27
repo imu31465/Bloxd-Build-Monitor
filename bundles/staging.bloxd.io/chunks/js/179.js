@@ -1,335 +1,335 @@
 export const id = 179;
 export const ids = [179];
 export const modules = {
-  10104: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => LW
+  10227: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR
     });
-    var mW = OW(25),
-      EW = OW(1172),
-      NW = OW(5910),
-      PW = OW(1283);
+    var yR = GR(25),
+      tR = GR(1270),
+      uR = GR(6037),
+      ZR = GR(1378);
 
-    function LW(WW) {
+    function qR(RR) {
       let {
-        note: iW
-      } = WW;
+        note: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, EW.B)(), {
-        clientEscMenuOptions: LW
-      } = (0, mW.p)(["clientEscMenuOptions"]);
-      return (0, PW.jsx)(NW.e, {
-        label: OW("touchSettings:actionButtons"),
-        checked: LW.touchActionButtons,
-        onClick: WW => {
-          mW.d.setClientEscMenuOptions({
-            touchActionButtons: WW
+        t: GR
+      } = (0, tR.A)(), {
+        clientEscMenuOptions: qR
+      } = (0, yR.o)(["clientEscMenuOptions"]);
+      return (0, ZR.jsx)(uR.e, {
+        label: GR("touchSettings:actionButtons"),
+        checked: qR.touchActionButtons,
+        onClick: RR => {
+          yR.d.setClientEscMenuOptions({
+            touchActionButtons: RR
           })
         },
-        circleInfoText: OW("touchSettings:actionButtonsInfo"),
-        note: iW
+        circleInfoText: GR("touchSettings:actionButtonsInfo"),
+        note: JR
       })
     }
   },
-  10092: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => BO,
-      h: () => XO
+  10215: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => zG,
+      f: () => mG
     });
-    var mW = OW(1172),
-      EW = OW(62),
-      NW = OW(2085),
-      PW = OW(2095),
-      LW = OW(1089),
-      cW = OW.n(LW),
-      wW = OW(1532),
-      tW = OW(25),
-      ZW = OW(100),
-      xW = OW(117),
-      lW = OW(5910),
-      AW = OW(3332),
-      bW = OW(259),
-      jW = OW(2099),
-      UW = OW(2108),
-      kW = OW(10101),
-      sW = OW(10104),
-      MW = OW(327),
-      KW = OW(1283);
-    const SW = {
+    var yR = GR(1270),
+      tR = GR(66),
+      uR = GR(2194),
+      ZR = GR(2202),
+      qR = GR(1163),
+      iR = GR.n(qR),
+      fR = GR(1590),
+      VR = GR(25),
+      KR = GR(103),
+      wR = GR(116),
+      rR = GR(6037),
+      eR = GR(3465),
+      aR = GR(289),
+      LR = GR(2206),
+      nR = GR(2211),
+      UR = GR(10223),
+      WR = GR(10227),
+      AR = GR(359),
+      CR = GR(1378);
+    const XR = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var YW = OW(1556),
-      yW = OW(10106),
-      TW = OW(3383),
-      JW = OW(3448);
-    var hW = OW(10114);
-    var HW = OW(1422),
-      nW = OW(10122),
-      uW = OW(1479),
-      oW = OW(1391),
-      dW = OW(10125);
+    var MR = GR(1618),
+      BR = GR(10234),
+      lR = GR(3505),
+      pR = GR(3584);
+    var gR = GR(10238);
+    var bR = GR(1493),
+      vR = GR(10241),
+      OR = GR(1547),
+      xR = GR(1468),
+      NR = GR(10244);
 
-    function eW(WW) {
+    function DR(RR) {
       let {
-        className: iW,
-        keepPlace: OW
-      } = WW;
-      return OW ? (0, KW.jsx)("div", {
-        className: cW()(iW, "Placeholder")
+        className: JR,
+        keepPlace: GR
+      } = RR;
+      return GR ? (0, CR.jsx)("div", {
+        className: iR()(JR, "Placeholder")
       }) : null
     }
 
-    function vW(WW) {
+    function HR(RR) {
       let {
-        id: iW,
-        elements: OW,
-        actionButtons: EW,
-        keyNames: NW,
-        className: PW,
-        keepPlace: LW,
-        onHidden: cW
-      } = WW;
+        id: JR,
+        elements: GR,
+        actionButtons: tR,
+        keyNames: uR,
+        className: ZR,
+        keepPlace: qR,
+        onHidden: iR
+      } = RR;
       const {
-        t: tW
-      } = (0, mW.B)();
-      if (!dW.i[iW].hide) return (0, KW.jsx)(eW, {
-        className: PW,
-        keepPlace: LW
+        t: VR
+      } = (0, yR.A)();
+      if (!NR.i[JR].hide) return (0, CR.jsx)(DR, {
+        className: ZR,
+        keepPlace: qR
       });
-      const ZW = (0, TW.w)(OW, iW);
-      return (0, KW.jsx)(wW.Z, {
-        className: PW,
-        ariaLabel: tW(ZW ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: (0, dW.y)(iW, EW, tW, NW)
+      const KR = (0, lR.u)(GR, JR);
+      return (0, CR.jsx)(fR.U, {
+        className: ZR,
+        ariaLabel: VR(KR ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: (0, NR.z)(JR, tR, VR, uR)
         }),
-        pressed: !ZW,
+        pressed: !KR,
         onClick: () => {
-          cW(iW, !ZW)
+          iR(JR, !KR)
         },
-        children: (0, KW.jsx)(oW.c, {
-          name: ZW ? "eye-slash" : "eye"
+        children: (0, CR.jsx)(xR.d, {
+          name: KR ? "eye-slash" : "eye"
         })
       })
     }
 
-    function gW(WW) {
+    function oR(RR) {
       let {
-        id: iW,
-        elements: OW,
-        actionButtons: EW,
-        keyNames: NW,
-        className: PW,
-        keepPlace: LW,
-        onlyWhenMoved: cW,
-        locked: tW,
-        onReset: ZW
-      } = WW;
+        id: JR,
+        elements: GR,
+        actionButtons: tR,
+        keyNames: uR,
+        className: ZR,
+        keepPlace: qR,
+        onlyWhenMoved: iR,
+        locked: VR,
+        onReset: KR
+      } = RR;
       const {
-        t: xW
-      } = (0, mW.B)(), lW = dW.i[iW], AW = (0, TW.S)(OW[iW]);
-      return !lW.move && !lW.scale || cW && AW ? (0, KW.jsx)(eW, {
-        className: PW,
-        keepPlace: LW
-      }) : (0, KW.jsx)(wW.Z, {
-        className: PW,
-        disabled: AW || tW,
-        ariaLabel: xW("hudLayout:resetElement", {
-          name: (0, dW.y)(iW, EW, xW, NW)
+        t: wR
+      } = (0, yR.A)(), rR = NR.i[JR], eR = (0, lR.K)(GR[JR]);
+      return !rR.move && !rR.scale || iR && eR ? (0, CR.jsx)(DR, {
+        className: ZR,
+        keepPlace: qR
+      }) : (0, CR.jsx)(fR.U, {
+        className: ZR,
+        disabled: eR || VR,
+        ariaLabel: wR("hudLayout:resetElement", {
+          name: (0, NR.z)(JR, tR, wR, uR)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: iW
+          value: JR
         },
-        onClick: WW => {
-          cW && fW(WW.currentTarget), ZW(iW)
+        onClick: RR => {
+          iR && mR(RR.currentTarget), KR(JR)
         },
-        children: (0, KW.jsx)(oW.c, {
+        children: (0, CR.jsx)(xR.d, {
           name: "rotate-left"
         })
       })
     }
 
-    function DW(WW) {
+    function cR(RR) {
       let {
-        id: iW,
-        actionButtons: OW,
-        keyNames: EW,
-        className: NW,
-        keepPlace: PW,
-        locked: LW,
-        lockable: cW,
-        onLocked: tW
-      } = WW;
+        id: JR,
+        actionButtons: GR,
+        keyNames: tR,
+        className: uR,
+        keepPlace: ZR,
+        locked: qR,
+        lockable: iR,
+        onLocked: VR
+      } = RR;
       const {
-        t: ZW
-      } = (0, mW.B)();
-      return cW || LW ? (0, KW.jsx)(wW.Z, {
-        className: NW,
-        ariaLabel: ZW(LW ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: (0, dW.y)(iW, OW, ZW, EW)
+        t: KR
+      } = (0, yR.A)();
+      return iR || qR ? (0, CR.jsx)(fR.U, {
+        className: uR,
+        ariaLabel: KR(qR ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: (0, NR.z)(JR, GR, KR, tR)
         }),
-        pressed: LW,
-        active: LW,
+        pressed: qR,
+        active: qR,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${LW?"unlock":"lock"}:${iW}`
+          value: `${qR?"unlock":"lock"}:${JR}`
         },
         onClick: () => {
-          tW(iW, !LW)
+          VR(JR, !qR)
         },
-        children: (0, KW.jsx)(oW.c, {
-          name: LW ? "lock" : "lock-open"
+        children: (0, CR.jsx)(xR.d, {
+          name: qR ? "lock" : "lock-open"
         })
-      }) : (0, KW.jsx)(eW, {
-        className: NW,
-        keepPlace: PW
+      }) : (0, CR.jsx)(DR, {
+        className: uR,
+        keepPlace: ZR
       })
     }
 
-    function VW(WW) {
+    function PR(RR) {
       let {
-        className: iW,
-        open: OW,
-        name: EW,
-        onToggle: NW
-      } = WW;
+        className: JR,
+        open: GR,
+        name: tR,
+        onToggle: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, mW.B)();
-      return (0, KW.jsx)(wW.Z, {
-        className: iW,
-        ariaLabel: PW(OW ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: EW
+        t: ZR
+      } = (0, yR.A)();
+      return (0, CR.jsx)(fR.U, {
+        className: JR,
+        ariaLabel: ZR(GR ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: tR
         }),
-        pressed: OW,
+        pressed: GR,
         analyticsClick: {
           id: "hud_layout.children",
-          value: OW ? "close" : "open"
+          value: GR ? "close" : "open"
         },
         onClick: () => {
-          NW(!OW)
+          uR(!GR)
         },
-        children: (0, KW.jsx)(oW.c, {
-          name: OW ? "angle-up" : "angle-down"
+        children: (0, CR.jsx)(xR.d, {
+          name: GR ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function pW(WW, iW) {
-      var OW;
-      WW.contains(document.activeElement) && iW.focus({
+    function IR(RR, JR) {
+      var GR;
+      RR.contains(document.activeElement) && JR.focus({
         preventScroll: !0
-      }), null === (OW = (0, uW.h)()) || void 0 === OW || OW.handOverPadFocus(WW, iW)
+      }), null === (GR = (0, OR.g)()) || void 0 === GR || GR.handOverPadFocus(RR, JR)
     }
 
-    function fW(WW) {
-      const iW = WW.closest("[data-hud-row]"),
-        OW = null === iW || void 0 === iW ? void 0 : iW.querySelector(".HudElementRowName");
-      return !(!iW || !OW) && (pW(iW, OW), !0)
+    function mR(RR) {
+      const JR = RR.closest("[data-hud-row]"),
+        GR = null === JR || void 0 === JR ? void 0 : JR.querySelector(".HudElementRowName");
+      return !(!JR || !GR) && (IR(JR, GR), !0)
     }
-    const CW = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const zR = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function XW(WW, iW) {
-      return "joystick" === WW && !iW
+    function SR(RR, JR) {
+      return "joystick" === RR && !JR
     }
 
-    function BW() {
+    function jR() {
       const {
-        t: WW
-      } = (0, mW.B)();
-      return (0, KW.jsx)(wW.Z, {
+        t: RR
+      } = (0, yR.A)();
+      return (0, CR.jsx)(fR.U, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: WW => {
-          const iW = WW.currentTarget;
-          if (!fW(iW)) {
-            const WW = function(WW) {
-              var iW, OW;
-              const mW = [WW.previousElementSibling, WW.nextElementSibling].find((WW => WW instanceof HTMLElement && WW.matches(CW)));
-              return null !== (iW = null !== mW && void 0 !== mW ? mW : null === (OW = WW.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === OW ? void 0 : OW.querySelector(`:is(${CW}):not(.HudFixJoystickButton)`)) && void 0 !== iW ? iW : null
-            }(iW);
-            WW && pW(iW, WW)
+        onClick: RR => {
+          const JR = RR.currentTarget;
+          if (!mR(JR)) {
+            const RR = function(RR) {
+              var JR, GR;
+              const yR = [RR.previousElementSibling, RR.nextElementSibling].find((RR => RR instanceof HTMLElement && RR.matches(zR)));
+              return null !== (JR = null !== yR && void 0 !== yR ? yR : null === (GR = RR.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === GR ? void 0 : GR.querySelector(`:is(${zR}):not(.HudFixJoystickButton)`)) && void 0 !== JR ? JR : null
+            }(JR);
+            RR && IR(JR, RR)
           }
-          tW.d.setClientEscMenuOptions({
+          VR.d.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: WW("hudLayout:fixJoystick")
+        children: RR("hudLayout:fixJoystick")
       })
     }
-    var qW = OW(80),
-      RW = OW(1269),
-      GW = OW(4275),
-      IW = OW(3809),
-      aW = OW(10128),
-      rW = OW(10134),
-      zW = OW(3439),
-      FW = OW(3457),
-      QW = OW(4337),
-      Wi = OW(344),
-      ii = OW(10142);
-    const Oi = WW => ({
-      [dW.g]: WW
+    var dR = GR(83),
+      ER = GR(1366),
+      YR = GR(4352),
+      kR = GR(3909),
+      QR = GR(10247),
+      FR = GR(10253),
+      TR = GR(3573),
+      sR = GR(3593),
+      hR = GR(4422),
+      RJ = GR(377),
+      JJ = GR(10260);
+    const GJ = RR => ({
+      [NR.e]: RR
     });
 
-    function mi(WW) {
+    function yJ(RR) {
       let {
-        id: iW,
-        slot: OW,
-        icon: mW,
-        label: NW,
-        hidden: PW,
-        className: LW,
-        face: wW
-      } = WW;
-      const tW = (0, EW.useRef)(null);
-      return (0, EW.useLayoutEffect)((() => {
-        wW && tW.current && (0, ii.l)(tW.current, wW)
-      }), [wW]), (0, KW.jsxs)("div", {
-        className: cW()("TouchKeyHit", `TouchSlot${OW}`, LW, {
-          HudPreviewGhost: PW.has(iW)
+        id: JR,
+        slot: GR,
+        icon: yR,
+        label: uR,
+        hidden: ZR,
+        className: qR,
+        face: fR
+      } = RR;
+      const VR = (0, tR.useRef)(null);
+      return (0, tR.useLayoutEffect)((() => {
+        fR && VR.current && (0, JJ.p)(VR.current, fR)
+      }), [fR]), (0, CR.jsxs)("div", {
+        className: iR()("TouchKeyHit", `TouchSlot${GR}`, qR, {
+          HudPreviewGhost: ZR.has(JR)
         }),
-        ...Oi(iW),
-        children: [wW && (0, KW.jsx)("div", {
-          ref: tW,
-          className: cW()("TouchKey", {
-            Labelled: wW.classList.contains("Labelled")
+        ...GJ(JR),
+        children: [fR && (0, CR.jsx)("div", {
+          ref: VR,
+          className: iR()("TouchKey", {
+            Labelled: fR.classList.contains("Labelled")
           })
-        }), !wW && (0, KW.jsxs)("div", {
-          className: cW()("TouchKey", {
-            Labelled: void 0 !== NW
+        }), !fR && (0, CR.jsxs)("div", {
+          className: iR()("TouchKey", {
+            Labelled: void 0 !== uR
           }),
-          children: [mW && (0, KW.jsx)(oW.c, {
-            name: mW
-          }), void 0 !== NW && (0, KW.jsx)("span", {
+          children: [yR && (0, CR.jsx)(xR.d, {
+            name: yR
+          }), void 0 !== uR && (0, CR.jsx)("span", {
             className: "TouchKeyLabel",
-            children: NW
+            children: uR
           })]
         })]
       })
     }
 
-    function Ei(WW) {
+    function tJ(RR) {
       let {
-        item: iW,
-        selected: OW
-      } = WW;
-      const mW = (0, EW.useRef)(null);
-      return (0, EW.useLayoutEffect)((() => {
-        mW.current && (0, ii.l)(mW.current, iW)
-      }), [iW]), (0, KW.jsx)("div", {
-        ref: mW,
-        className: cW()("InvenItem", {
-          Selected: OW
+        item: JR,
+        selected: GR
+      } = RR;
+      const yR = (0, tR.useRef)(null);
+      return (0, tR.useLayoutEffect)((() => {
+        yR.current && (0, JJ.p)(yR.current, JR)
+      }), [JR]), (0, CR.jsx)("div", {
+        ref: yR,
+        className: iR()("InvenItem", {
+          Selected: GR
         })
       })
     }
-    const Ni = {
+    const uJ = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -338,173 +338,173 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      Pi = WW => void 0 === WW ? {} : {
+      ZJ = RR => void 0 === RR ? {} : {
         style: {
-          "--parked": WW
+          "--parked": RR
         }
       };
 
-    function Li(WW) {
+    function qJ(RR) {
       let {
-        id: iW,
-        hidden: OW,
-        parked: mW,
-        unslotted: EW = !1
-      } = WW;
-      return (0, KW.jsx)("div", {
-        className: cW()("TopRightIcon", FW.k[iW], {
-          HudPreviewGhost: OW.has(iW),
-          [zW.d]: void 0 !== mW,
-          [zW.e]: EW
+        id: JR,
+        hidden: GR,
+        parked: yR,
+        unslotted: tR = !1
+      } = RR;
+      return (0, CR.jsx)("div", {
+        className: iR()("TopRightIcon", sR.p[JR], {
+          HudPreviewGhost: GR.has(JR),
+          [TR.e]: void 0 !== yR,
+          [TR.h]: tR
         }),
-        ...Pi(mW),
-        children: (0, KW.jsx)("div", {
+        ...ZJ(yR),
+        children: (0, CR.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...Oi(iW),
-          children: (0, KW.jsx)("div", {
+          ...GJ(JR),
+          children: (0, CR.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, KW.jsx)(oW.c, {
-              name: Ni[iW]
+            children: (0, CR.jsx)(xR.d, {
+              name: uJ[JR]
             })
           })
         })
       })
     }
 
-    function ci(WW) {
+    function iJ(RR) {
       let {
-        portraitPhone: iW,
-        icons: OW,
-        pinnedIcons: mW,
-        hidden: NW,
-        moved: PW,
-        trayState: LW
-      } = WW;
-      const wW = iW ? (0, zW.C)(OW) : [],
-        tW = OW.filter((WW => "settings" === WW)),
-        ZW = OW.filter((WW => "settings" !== WW && !wW.includes(WW))).reverse(),
-        xW = wW.length > 0 && "gone" === LW,
-        lW = [...tW, ...xW ? ["tray"] : [], ...ZW].filter((WW => "tray" === WW || NW.has(WW) && !PW.has(WW))),
-        AW = WW => {
-          const iW = lW.indexOf(WW);
-          return iW < 0 ? void 0 : iW
+        portraitPhone: JR,
+        icons: GR,
+        pinnedIcons: yR,
+        hidden: uR,
+        moved: ZR,
+        trayState: qR
+      } = RR;
+      const fR = JR ? (0, TR.L)(GR) : [],
+        VR = GR.filter((RR => "settings" === RR)),
+        KR = GR.filter((RR => "settings" !== RR && !fR.includes(RR))).reverse(),
+        wR = fR.length > 0 && "gone" === qR,
+        rR = [...VR, ...wR ? ["tray"] : [], ...KR].filter((RR => "tray" === RR || uR.has(RR) && !ZR.has(RR))),
+        eR = RR => {
+          const JR = rR.indexOf(RR);
+          return JR < 0 ? void 0 : JR
         },
-        bW = (WW, iW) => (0, KW.jsx)(Li, {
-          id: WW,
-          hidden: NW,
-          parked: iW ? AW(WW) : void 0,
-          unslotted: iW && NW.has(WW) && PW.has(WW)
-        }, WW);
-      return (0, KW.jsxs)("div", {
-        className: cW()("TopRightIcons TouchInGame", {
-          Column: iW
+        aR = (RR, JR) => (0, CR.jsx)(qJ, {
+          id: RR,
+          hidden: uR,
+          parked: JR ? eR(RR) : void 0,
+          unslotted: JR && uR.has(RR) && ZR.has(RR)
+        }, RR);
+      return (0, CR.jsxs)("div", {
+        className: iR()("TopRightIcons TouchInGame", {
+          Column: JR
         }),
-        children: [tW.map((WW => bW(WW, !0))), wW.length > 0 && (0, KW.jsxs)("div", {
-          className: cW()("TopRightIcon TopRightTrayToggle Open", {
-            [zW.d]: xW
+        children: [VR.map((RR => aR(RR, !0))), fR.length > 0 && (0, CR.jsxs)("div", {
+          className: iR()("TopRightIcon TopRightTrayToggle Open", {
+            [TR.e]: wR
           }),
-          ...Pi(AW("tray")),
-          children: [(0, KW.jsx)("div", {
-            className: cW()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== LW
+          ...ZJ(eR("tray")),
+          children: [(0, CR.jsx)("div", {
+            className: iR()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== qR
             }),
-            children: (0, KW.jsx)("div", {
+            children: (0, CR.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, KW.jsx)(oW.c, {
+              children: (0, CR.jsx)(xR.d, {
                 name: "ellipsis"
               })
             })
-          }), (0, KW.jsx)("div", {
+          }), (0, CR.jsx)("div", {
             className: "TopRightTray",
-            children: wW.map((WW => bW(WW, !1)))
+            children: fR.map((RR => aR(RR, !1)))
           })]
-        }), ZW.map((WW => (0, KW.jsxs)(EW.Fragment, {
-          children: ["perspective" === WW && null !== mW.rightOfCamera && (0, KW.jsx)(wi, {
-            icon: mW.rightOfCamera
-          }), bW(WW, !0)]
-        }, WW))), null !== mW.leftEnd && (0, KW.jsx)(wi, {
-          icon: mW.leftEnd
+        }), KR.map((RR => (0, CR.jsxs)(tR.Fragment, {
+          children: ["perspective" === RR && null !== yR.rightOfCamera && (0, CR.jsx)(fJ, {
+            icon: yR.rightOfCamera
+          }), aR(RR, !0)]
+        }, RR))), null !== yR.leftEnd && (0, CR.jsx)(fJ, {
+          icon: yR.leftEnd
         })]
       })
     }
 
-    function wi(WW) {
+    function fJ(RR) {
       let {
-        icon: iW
-      } = WW;
-      return (0, KW.jsx)("div", {
+        icon: JR
+      } = RR;
+      return (0, CR.jsx)("div", {
         className: "TopRightIcon",
-        children: (0, KW.jsx)("div", {
+        children: (0, CR.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, KW.jsx)("div", {
+          children: (0, CR.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, KW.jsx)(oW.c, {
-              name: iW
+            children: (0, CR.jsx)(xR.d, {
+              name: JR
             })
           })
         })
       })
     }
 
-    function ti(WW) {
+    function VJ(RR) {
       let {
-        next: iW,
-        hidden: OW
-      } = WW;
-      return (0, KW.jsx)("div", {
-        className: cW()("HotBarArrow", iW ? "Next" : "Previous", {
-          HudPreviewGhost: OW
+        next: JR,
+        hidden: GR
+      } = RR;
+      return (0, CR.jsx)("div", {
+        className: iR()("HotBarArrow", JR ? "Next" : "Previous", {
+          HudPreviewGhost: GR
         }),
-        ...Oi("arrows"),
-        children: (0, KW.jsx)("div", {
+        ...GJ("arrows"),
+        children: (0, CR.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, KW.jsx)("div", {
+          children: (0, CR.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, KW.jsx)(oW.c, {
-              name: iW ? "caret-right" : "caret-left"
+            children: (0, CR.jsx)(xR.d, {
+              name: JR ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function Zi() {
-      return (0, KW.jsx)("div", {
+    function KJ() {
+      return (0, CR.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, KW.jsx)("div", {
+        children: (0, CR.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, KW.jsx)("div", {
+          children: (0, CR.jsx)("div", {
             className: "SocialBar",
-            children: (0, KW.jsx)("div", {
+            children: (0, CR.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, KW.jsx)("div", {
+              children: (0, CR.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, KW.jsxs)("div", {
+                children: (0, CR.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, KW.jsxs)("div", {
+                  children: [(0, CR.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, KW.jsx)("div", {
+                    children: [(0, CR.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, KW.jsx)("div", {
+                    }), (0, CR.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, KW.jsx)(oW.c, {
+                      children: (0, CR.jsx)(xR.d, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, KW.jsx)("div", {
+                  }), (0, CR.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, KW.jsx)("div", {
+                    children: (0, CR.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, KW.jsxs)("div", {
+                  }), (0, CR.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, KW.jsx)("div", {
+                    children: [(0, CR.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, KW.jsx)("div", {
+                    }), (0, CR.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, KW.jsx)(oW.c, {
+                      children: (0, CR.jsx)(xR.d, {
                         name: "user"
                       })
                     })]
@@ -516,7 +516,7 @@ export const modules = {
         })
       })
     }
-    const xi = [{
+    const wJ = [{
       icon: "person-running",
       labelKey: "hudLayout:previewEffectSpeed",
       level: 2,
@@ -533,59 +533,59 @@ export const modules = {
       leftMs: null
     }];
 
-    function li(WW) {
+    function rJ(RR) {
       let {
-        ghost: iW
-      } = WW;
+        ghost: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, mW.B)();
-      return (0, KW.jsx)("div", {
-        className: cW()("EffectInfosWrapper", {
-          HudPreviewGhost: iW
+        t: GR
+      } = (0, yR.A)();
+      return (0, CR.jsx)("div", {
+        className: iR()("EffectInfosWrapper", {
+          HudPreviewGhost: JR
         }),
-        ...Oi("effects"),
-        children: xi.map((WW => {
+        ...GJ("effects"),
+        children: wJ.map((RR => {
           let {
-            icon: iW,
-            labelKey: mW,
-            level: EW,
-            leftMs: NW
-          } = WW;
-          return (0, KW.jsxs)("div", {
+            icon: JR,
+            labelKey: yR,
+            level: tR,
+            leftMs: uR
+          } = RR;
+          return (0, CR.jsxs)("div", {
             className: "EffectInfo",
-            children: [(0, KW.jsx)("span", {
+            children: [(0, CR.jsx)("span", {
               className: "EffectInfoIcon HudPreviewEffectIcon",
-              children: (0, KW.jsx)(oW.c, {
-                name: iW
+              children: (0, CR.jsx)(xR.d, {
+                name: JR
               })
-            }), (0, KW.jsxs)("div", {
-              className: cW()("EffectInfoRightSide", {
-                Untimed: null === NW
+            }), (0, CR.jsxs)("div", {
+              className: iR()("EffectInfoRightSide", {
+                Untimed: null === uR
               }),
-              children: [(0, KW.jsxs)("div", {
+              children: [(0, CR.jsxs)("div", {
                 className: "EffectInfoNameWrapper",
-                children: [(0, KW.jsx)("div", {
+                children: [(0, CR.jsx)("div", {
                   className: "EffectInfoName SmallTextBold",
-                  children: OW(mW)
-                }), EW > 1 && (0, KW.jsx)("div", {
+                  children: GR(yR)
+                }), tR > 1 && (0, CR.jsx)("div", {
                   className: "EffectInfoName SmallTextBold",
-                  children: (0, Wi.V)(EW)
+                  children: (0, RJ.J)(tR)
                 })]
-              }), null !== NW && (0, KW.jsx)("div", {
+              }), null !== uR && (0, CR.jsx)("div", {
                 className: "EffectInfoDuration SmallTextLight",
-                children: (0, Wi.db)(NW)
+                children: (0, RJ._)(uR)
               })]
             })]
-          }, mW)
+          }, yR)
         }))
       })
     }
-    const Ai = {
+    const eJ = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      bi = {
+      aJ = {
         P: {
           icon: "crosshairs",
           labelKey: "touchKeys:scope"
@@ -595,8 +595,8 @@ export const modules = {
           labelKey: "touchKeys:fly"
         }
       },
-      ji = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      Ui = {
+      LJ = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      nJ = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -604,83 +604,83 @@ export const modules = {
         5: "cookie"
       };
 
-    function ki(WW) {
+    function UJ(RR) {
       let {
-        presence: iW,
-        portraitPhone: OW,
-        hidden: EW,
-        actionButtons: NW,
-        joystickFixed: PW,
-        keysAbove: LW,
-        auraBar: wW,
-        trayState: tW,
-        moved: xW
-      } = WW;
+        presence: JR,
+        portraitPhone: GR,
+        hidden: tR,
+        actionButtons: uR,
+        joystickFixed: ZR,
+        keysAbove: qR,
+        auraBar: fR,
+        trayState: VR,
+        moved: wR
+      } = RR;
       const {
-        t: lW
-      } = (0, mW.B)(), {
-        faces: AW,
-        items: bW
-      } = iW, jW = WW => ({
-        HudPreviewGhost: (0, dW.K)(WW).some((WW => EW.has(WW)))
+        t: rR
+      } = (0, yR.A)(), {
+        faces: eR,
+        items: aR
+      } = JR, LR = RR => ({
+        HudPreviewGhost: (0, NR.J)(RR).some((RR => tR.has(RR)))
       });
-      return (0, KW.jsxs)("div", {
+      return (0, CR.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, KW.jsxs)("div", {
+          children: (0, CR.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, KW.jsx)("div", {
+            children: [(0, CR.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, KW.jsx)("div", {
+            }), (0, CR.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, KW.jsx)("div", {
+            }), (0, CR.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: lW("hudLayout:previewGameName")
+              children: rR("hudLayout:previewGameName")
             })]
           })
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, KW.jsx)("div", {
+          children: (0, CR.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, KW.jsxs)("div", {
+            children: (0, CR.jsxs)("div", {
               className: "Chat",
-              children: [(0, KW.jsx)("div", {
+              children: [(0, CR.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [lW("hudLayout:previewChatLine"), lW("hudLayout:previewChatJoined", {
+                children: [rR("hudLayout:previewChatLine"), rR("hudLayout:previewChatJoined", {
                   name: "Arthur"
-                }), lW("hudLayout:previewChatJoined", {
+                }), rR("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((WW => (0, KW.jsx)("div", {
+                })].map((RR => (0, CR.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, KW.jsx)("div", {
+                  children: (0, CR.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, KW.jsx)("div", {
+                    children: (0, CR.jsx)("div", {
                       className: "IndividualText",
-                      children: WW
+                      children: RR
                     })
                   })
-                }, WW)))
-              }), (0, KW.jsxs)("div", {
+                }, RR)))
+              }), (0, CR.jsxs)("div", {
                 className: "ChatIcons",
-                children: [(0, KW.jsx)("button", {
+                children: [(0, CR.jsx)("button", {
                   type: "button",
                   tabIndex: -1,
-                  className: cW()("ChatIconWrapper SmallTextLight", jW("chat")),
-                  ...Oi("chat"),
-                  children: (0, KW.jsx)(oW.c, {
+                  className: iR()("ChatIconWrapper SmallTextLight", LR("chat")),
+                  ...GJ("chat"),
+                  children: (0, CR.jsx)(xR.d, {
                     name: "comment-dots",
                     className: "ChatIcon"
                   })
-                }), (0, KW.jsx)("div", {
+                }), (0, CR.jsx)("div", {
                   className: "QuickChat",
-                  children: (0, KW.jsx)("button", {
+                  children: (0, CR.jsx)("button", {
                     type: "button",
                     tabIndex: -1,
-                    className: cW()("QuickChatIconWrapper SmallTextLight", jW("quickChat")),
-                    ...Oi("quickChat"),
-                    children: (0, KW.jsx)(oW.c, {
+                    className: iR()("QuickChatIconWrapper SmallTextLight", LR("quickChat")),
+                    ...GJ("quickChat"),
+                    children: (0, CR.jsx)(xR.d, {
                       name: "comment-smile",
                       className: "QuickChatIcon"
                     })
@@ -689,263 +689,263 @@ export const modules = {
               })]
             })
           })
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, KW.jsxs)("div", {
+          children: (0, CR.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, KW.jsx)("div", {
+            children: [(0, CR.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, KW.jsx)("div", {
+              children: (0, CR.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...Oi("menu"),
-                children: (0, KW.jsx)(ci, {
-                  portraitPhone: OW,
-                  icons: iW.rowIcons,
-                  pinnedIcons: iW.pinnedIcons,
-                  hidden: EW,
-                  trayState: tW,
-                  moved: xW
+                ...GJ("menu"),
+                children: (0, CR.jsx)(iJ, {
+                  portraitPhone: GR,
+                  icons: JR.rowIcons,
+                  pinnedIcons: JR.pinnedIcons,
+                  hidden: tR,
+                  trayState: VR,
+                  moved: wR
                 })
               })
-            }), ZW.featureFlags.useSocialFeatures && (0, KW.jsx)("div", {
+            }), KR.featureFlags.useSocialFeatures && (0, CR.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, KW.jsx)(Zi, {})
+              children: (0, CR.jsx)(KJ, {})
             })]
           })
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, KW.jsxs)("div", {
+          children: (0, CR.jsxs)("div", {
             className: "TouchInteractKey",
-            ...Oi("interact"),
-            children: [(0, KW.jsx)("div", {
+            ...GJ("interact"),
+            children: [(0, CR.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, KW.jsx)(oW.c, {
+              children: (0, CR.jsx)(xR.d, {
                 name: "hand-back-point-up"
               })
-            }), (0, KW.jsx)("div", {
-              children: lW("hudLayout:previewInteract")
+            }), (0, CR.jsx)("div", {
+              children: rR("hudLayout:previewInteract")
             })]
           })
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "BottomCentre",
-          children: (0, KW.jsxs)("div", {
+          children: (0, CR.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, KW.jsx)("div", {
+            children: [(0, CR.jsx)("div", {
               className: "BottomLeftElements Touch",
-              children: (0, KW.jsx)(li, {
-                ghost: EW.has("effects")
+              children: (0, CR.jsx)(rJ, {
+                ghost: tR.has("effects")
               })
-            }), (0, KW.jsxs)("div", {
+            }), (0, CR.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, KW.jsx)("div", {
+              children: [(0, CR.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...Oi("hotbar"),
-                children: (0, KW.jsx)("div", {
+                ...GJ("hotbar"),
+                children: (0, CR.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, KW.jsxs)("div", {
+                  children: (0, CR.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, KW.jsx)("div", {
+                    children: [(0, CR.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, KW.jsxs)("div", {
+                    }), (0, CR.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, KW.jsx)(oW.c, {
+                      children: [(0, CR.jsx)(xR.d, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), wW && (0, KW.jsxs)("div", {
+              }), fR && (0, CR.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, KW.jsxs)("div", {
+                children: [(0, CR.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, KW.jsx)("img", {
+                  children: [(0, CR.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, QW.f)("glint"),
+                    src: (0, hR.e)("glint"),
                     alt: ""
-                  }), (0, KW.jsx)("div", {
+                  }), (0, CR.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, KW.jsx)("div", {
+                }), (0, CR.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, KW.jsx)("div", {
+                  children: (0, CR.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, KW.jsx)("div", {
+              }), (0, CR.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, KW.jsx)("div", {
-                  className: cW()("HotBarContainer Touch", {
-                    KeysAbove: LW
+                children: (0, CR.jsx)("div", {
+                  className: iR()("HotBarContainer Touch", {
+                    KeysAbove: qR
                   }),
-                  children: (0, KW.jsxs)("div", {
+                  children: (0, CR.jsxs)("div", {
                     className: "HotBar",
-                    ...Oi("hotbar"),
-                    children: [(0, KW.jsxs)("div", {
-                      className: cW()("TouchInventoryKeys", {
-                        NoAuraBar: !wW
+                    ...GJ("hotbar"),
+                    children: [(0, CR.jsxs)("div", {
+                      className: iR()("TouchInventoryKeys", {
+                        NoAuraBar: !fR
                       }),
-                      children: [(0, KW.jsx)("div", {
-                        className: cW()("TouchInventoryKey ShopKey", jW("shop"), {
-                          Hidden: !iW.shop
+                      children: [(0, CR.jsx)("div", {
+                        className: iR()("TouchInventoryKey ShopKey", LR("shop"), {
+                          Hidden: !JR.shop
                         }),
-                        ...Oi("shop"),
-                        children: (0, KW.jsx)("div", {
+                        ...GJ("shop"),
+                        children: (0, CR.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, KW.jsx)("div", {
+                          children: (0, CR.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, KW.jsx)(oW.c, {
+                            children: (0, CR.jsx)(xR.d, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, KW.jsx)("div", {
-                        className: cW()("TouchInventoryKey BagKey", jW("bag"), {
-                          Hidden: !iW.bag
+                      }), (0, CR.jsx)("div", {
+                        className: iR()("TouchInventoryKey BagKey", LR("bag"), {
+                          Hidden: !JR.bag
                         }),
-                        ...Oi("bag"),
-                        children: (0, KW.jsx)("div", {
+                        ...GJ("bag"),
+                        children: (0, CR.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, KW.jsx)("div", {
+                          children: (0, CR.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, KW.jsx)(oW.c, {
+                            children: (0, CR.jsx)(xR.d, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, KW.jsx)(ti, {
+                    }), (0, CR.jsx)(VJ, {
                       next: !1,
-                      hidden: EW.has("arrows")
-                    }), (0, KW.jsxs)("div", {
+                      hidden: tR.has("arrows")
+                    }), (0, CR.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== bW && bW.map(((WW, iW) => (0, KW.jsx)(Ei, {
-                        item: WW,
-                        selected: WW.classList.contains("Selected")
-                      }, iW))), null === bW && ji.map((WW => {
-                        const iW = Ui[WW];
-                        return (0, KW.jsx)("div", {
-                          className: cW()("InvenItem", {
-                            Selected: 0 === WW
+                      children: [null !== aR && aR.map(((RR, JR) => (0, CR.jsx)(tJ, {
+                        item: RR,
+                        selected: RR.classList.contains("Selected")
+                      }, JR))), null === aR && LJ.map((RR => {
+                        const JR = nJ[RR];
+                        return (0, CR.jsx)("div", {
+                          className: iR()("InvenItem", {
+                            Selected: 0 === RR
                           }),
-                          children: iW && (0, KW.jsx)("div", {
+                          children: JR && (0, CR.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, KW.jsx)(oW.c, {
-                              name: iW
+                            children: (0, CR.jsx)(xR.d, {
+                              name: JR
                             })
                           })
-                        }, WW)
+                        }, RR)
                       }))]
-                    }), (0, KW.jsx)(ti, {
+                    }), (0, CR.jsx)(VJ, {
                       next: !0,
-                      hidden: EW.has("arrows")
+                      hidden: tR.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, KW.jsx)("div", {
+            }), (0, CR.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, KW.jsxs)("div", {
+              children: (0, CR.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== AW && ii.j.map((WW => {
-                  const iW = AW[WW];
-                  return iW && (0, KW.jsx)(mi, {
-                    id: ii.h[WW],
-                    slot: WW,
-                    face: iW,
-                    className: Ai[WW],
-                    hidden: EW
-                  }, WW)
-                })), (0, ii.s)(iW, NW).map((WW => (0, KW.jsx)(mi, {
-                  id: ii.h[WW],
-                  slot: WW,
-                  icon: bi[WW].icon,
-                  label: lW(bi[WW].labelKey),
+                children: [null !== eR && JJ.j.map((RR => {
+                  const JR = eR[RR];
+                  return JR && (0, CR.jsx)(yJ, {
+                    id: JJ.g[RR],
+                    slot: RR,
+                    face: JR,
+                    className: eJ[RR],
+                    hidden: tR
+                  }, RR)
+                })), (0, JJ.s)(JR, uR).map((RR => (0, CR.jsx)(yJ, {
+                  id: JJ.g[RR],
+                  slot: RR,
+                  icon: aJ[RR].icon,
+                  label: rR(aJ[RR].labelKey),
                   className: "HudPreviewContextSlot",
-                  hidden: EW
-                }, WW))), null === AW && (0, KW.jsxs)(KW.Fragment, {
-                  children: [(0, KW.jsx)(mi, {
+                  hidden: tR
+                }, RR))), null === eR && (0, CR.jsxs)(CR.Fragment, {
+                  children: [(0, CR.jsx)(yJ, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: EW
-                  }), (0, KW.jsx)(mi, {
+                    hidden: tR
+                  }), (0, CR.jsx)(yJ, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: EW
-                  }), NW && (0, KW.jsxs)(KW.Fragment, {
-                    children: [(0, KW.jsx)(mi, {
+                    hidden: tR
+                  }), uR && (0, CR.jsxs)(CR.Fragment, {
+                    children: [(0, CR.jsx)(yJ, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: EW
-                    }), (0, KW.jsx)(mi, {
+                      hidden: tR
+                    }), (0, CR.jsx)(yJ, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: EW
+                      hidden: tR
                     })]
-                  }), (0, ii.k)(NW).map((WW => (0, KW.jsx)(mi, {
-                    id: ii.h[WW],
-                    slot: WW,
-                    icon: bi[WW].icon,
-                    label: lW(bi[WW].labelKey),
-                    hidden: EW
-                  }, WW))), (0, KW.jsx)(mi, {
+                  }), (0, JJ.l)(uR).map((RR => (0, CR.jsx)(yJ, {
+                    id: JJ.g[RR],
+                    slot: RR,
+                    icon: aJ[RR].icon,
+                    label: rR(aJ[RR].labelKey),
+                    hidden: tR
+                  }, RR))), (0, CR.jsx)(yJ, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: EW
-                  }), (0, KW.jsx)(mi, {
+                    hidden: tR
+                  }), (0, CR.jsx)(yJ, {
                     id: "zoom",
                     slot: "Z",
                     icon: "magnifying-glass-plus",
-                    hidden: EW
-                  }), (0, KW.jsx)(mi, {
+                    hidden: tR
+                  }), (0, CR.jsx)(yJ, {
                     id: "drop",
                     slot: "D",
                     icon: "hand-holding-box",
-                    hidden: EW
+                    hidden: tR
                   })]
                 })]
               })
             })]
           })
-        }), (0, KW.jsxs)("div", {
+        }), (0, CR.jsxs)("div", {
           className: "TouchMovementWrapper",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, KW.jsxs)("div", {
-              className: cW()("Joystick Resting HudPreviewJoystick", {
-                Floating: !PW
+            children: (0, CR.jsxs)("div", {
+              className: iR()("Joystick Resting HudPreviewJoystick", {
+                Floating: !ZR
               }),
-              ...Oi("joystick"),
-              children: [(0, KW.jsx)("div", {
+              ...GJ("joystick"),
+              children: [(0, CR.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, KW.jsx)("div", {
+              }), (0, CR.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
-          }), iW.sprint && (0, KW.jsx)("div", {
-            className: cW()("TouchSprintHit", jW("sprint"), {
-              AtHome: !PW
+          }), JR.sprint && (0, CR.jsx)("div", {
+            className: iR()("TouchSprintHit", LR("sprint"), {
+              AtHome: !ZR
             }),
-            ...Oi("sprint"),
-            children: (0, KW.jsx)("div", {
+            ...GJ("sprint"),
+            children: (0, CR.jsx)("div", {
               className: "TouchKey TouchSprintKey Lit",
-              children: (0, KW.jsx)(oW.c, {
+              children: (0, CR.jsx)(xR.d, {
                 name: "person-running"
               })
             })
@@ -954,1050 +954,1050 @@ export const modules = {
       })
     }
 
-    function si() {
-      const [WW, iW] = (0, EW.useState)({}), OW = (0, EW.useCallback)((WW => {
-        iW((iW => [...new Set([...Object.keys(iW), ...Object.keys(WW)])].every((OW => iW[OW] === WW[OW])) ? iW : WW))
+    function WJ() {
+      const [RR, JR] = (0, tR.useState)({}), GR = (0, tR.useCallback)((RR => {
+        JR((JR => [...new Set([...Object.keys(JR), ...Object.keys(RR)])].every((GR => JR[GR] === RR[GR])) ? JR : RR))
       }), []);
-      return [WW, OW]
+      return [RR, GR]
     }
-    const Mi = .05;
+    const AJ = .05;
 
-    function Ki(WW) {
-      var iW;
+    function CJ(RR) {
+      var JR;
       let {
-        selected: OW,
-        layout: EW,
-        actionButtons: NW,
-        keyNames: PW,
-        overlaps: LW,
-        scaleCaps: tW,
-        joystickFixed: ZW,
-        onScale: xW,
-        onHidden: lW,
-        onReset: AW,
-        locked: bW,
-        lockable: jW,
-        onLocked: UW,
-        extra: kW
-      } = WW;
+        selected: GR,
+        layout: tR,
+        actionButtons: uR,
+        keyNames: ZR,
+        overlaps: qR,
+        scaleCaps: VR,
+        joystickFixed: KR,
+        onScale: wR,
+        onHidden: rR,
+        onReset: eR,
+        locked: aR,
+        lockable: LR,
+        onLocked: nR,
+        extra: UR
+      } = RR;
       const {
-        t: sW
-      } = (0, mW.B)(), MW = OW ? dW.i[OW] : null, SW = null !== OW && bW.has(OW), YW = OW ? (0, TW.H)(EW.hudElements, OW)[2] : 1, yW = null !== (iW = OW && tW[OW]) && void 0 !== iW ? iW : TW.h, JW = WW => {
-        OW && xW(OW, Math.min(yW, Math.round(100 * (YW + .1 * WW)) / 100))
+        t: WR
+      } = (0, yR.A)(), AR = GR ? NR.i[GR] : null, XR = null !== GR && aR.has(GR), MR = GR ? (0, lR.G)(tR.hudElements, GR)[2] : 1, BR = null !== (JR = GR && VR[GR]) && void 0 !== JR ? JR : lR.i, pR = RR => {
+        GR && wR(GR, Math.min(BR, Math.round(100 * (MR + .1 * RR)) / 100))
       };
-      return (0, KW.jsxs)(KW.Fragment, {
-        children: [(0, KW.jsxs)("div", {
-          className: cW()("HudQuickName SmallTextBold", {
-            Overlap: LW.length > 0
+      return (0, CR.jsxs)(CR.Fragment, {
+        children: [(0, CR.jsxs)("div", {
+          className: iR()("HudQuickName SmallTextBold", {
+            Overlap: qR.length > 0
           }),
-          children: [LW.length > 0 && (0, KW.jsx)(oW.c, {
+          children: [qR.length > 0 && (0, CR.jsx)(xR.d, {
             name: "triangle-exclamation"
-          }), MW ? (0, dW.y)(MW.id, NW, sW, PW) : sW("hudLayout:fullScreenHint"), LW.length > 0 && (0, KW.jsx)("span", {
+          }), AR ? (0, NR.z)(AR.id, uR, WR, ZR) : WR("hudLayout:fullScreenHint"), qR.length > 0 && (0, CR.jsx)("span", {
             className: "HudQuickOverlap",
-            children: sW("hudLayout:overlapsShort", {
-              names: (0, dW.w)(LW, NW, sW, PW)
+            children: WR("hudLayout:overlapsShort", {
+              names: (0, NR.x)(qR, uR, WR, ZR)
             })
           })]
-        }), (null === MW || void 0 === MW ? void 0 : MW.scale) && (0, KW.jsxs)("div", {
+        }), (null === AR || void 0 === AR ? void 0 : AR.scale) && (0, CR.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, KW.jsx)(wW.Z, {
-            disabled: SW || YW <= TW.j,
-            ariaLabel: sW("hudLayout:smaller"),
+          children: [(0, CR.jsx)(fR.U, {
+            disabled: XR || MR <= lR.m,
+            ariaLabel: WR("hudLayout:smaller"),
             onClick: () => {
-              JW(-1)
+              pR(-1)
             },
-            children: (0, KW.jsx)(oW.c, {
+            children: (0, CR.jsx)(xR.d, {
               name: "minus"
             })
-          }), (0, KW.jsx)("span", {
+          }), (0, CR.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*YW)}%`
-          }), (0, KW.jsx)(wW.Z, {
-            disabled: SW || YW >= yW,
-            ariaLabel: sW("hudLayout:larger"),
+            children: `${Math.round(100*MR)}%`
+          }), (0, CR.jsx)(fR.U, {
+            disabled: XR || MR >= BR,
+            ariaLabel: WR("hudLayout:larger"),
             onClick: () => {
-              JW(1)
+              pR(1)
             },
-            children: (0, KW.jsx)(oW.c, {
+            children: (0, CR.jsx)(xR.d, {
               name: "plus"
             })
           })]
-        }), (MW || kW) && (0, KW.jsxs)("div", {
+        }), (AR || UR) && (0, CR.jsxs)("div", {
           className: "HudQuickActions",
-          children: [MW && (0, KW.jsxs)(KW.Fragment, {
-            children: [(0, KW.jsx)(DW, {
-              id: MW.id,
-              actionButtons: NW,
-              keyNames: PW,
-              locked: SW,
-              lockable: jW(MW.id),
-              onLocked: UW
-            }), (0, KW.jsx)(vW, {
-              id: MW.id,
-              elements: EW.hudElements,
-              actionButtons: NW,
-              keyNames: PW,
-              onHidden: lW
-            }), (0, KW.jsx)(gW, {
-              id: MW.id,
-              elements: EW.hudElements,
-              actionButtons: NW,
-              keyNames: PW,
-              locked: SW,
-              onReset: AW
-            }), XW(MW.id, ZW) && (0, KW.jsx)(BW, {})]
-          }), kW]
+          children: [AR && (0, CR.jsxs)(CR.Fragment, {
+            children: [(0, CR.jsx)(cR, {
+              id: AR.id,
+              actionButtons: uR,
+              keyNames: ZR,
+              locked: XR,
+              lockable: LR(AR.id),
+              onLocked: nR
+            }), (0, CR.jsx)(HR, {
+              id: AR.id,
+              elements: tR.hudElements,
+              actionButtons: uR,
+              keyNames: ZR,
+              onHidden: rR
+            }), (0, CR.jsx)(oR, {
+              id: AR.id,
+              elements: tR.hudElements,
+              actionButtons: uR,
+              keyNames: ZR,
+              locked: XR,
+              onReset: eR
+            }), SR(AR.id, KR) && (0, CR.jsx)(jR, {})]
+          }), UR]
         })]
       })
     }
-    var Si = OW(1095),
-      Yi = OW(5119);
-    const yi = "HudPreviewDoc",
-      Ti = {
+    var XJ = GR(1179),
+      MJ = GR(5215);
+    const BJ = "HudPreviewDoc",
+      lJ = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      Ji = new Set([yi, ...Object.values(Ti)]),
-      Hi = new Set(TW.D.map(FW.w)),
-      ni = new Set(FW.f),
-      ui = 'style, link[rel="stylesheet"]';
+      pJ = new Set([BJ, ...Object.values(lJ)]),
+      gJ = new Set(lR.A.map(sR.C)),
+      bJ = new Set(sR.k),
+      vJ = 'style, link[rel="stylesheet"]';
 
-    function oi(WW, iW, OW, mW) {
-      const EW = new Map,
-        NW = new Set,
-        PW = new URL(WW.baseURI).origin,
-        LW = iW => {
-          var OW;
-          if ("LINK" !== iW.nodeName) return !0;
-          const mW = null === (OW = iW.getAttribute("href")) || void 0 === OW ? void 0 : OW.trim();
-          if (!mW) return !1;
+    function OJ(RR, JR, GR, yR) {
+      const tR = new Map,
+        uR = new Set,
+        ZR = new URL(RR.baseURI).origin,
+        qR = JR => {
+          var GR;
+          if ("LINK" !== JR.nodeName) return !0;
+          const yR = null === (GR = JR.getAttribute("href")) || void 0 === GR ? void 0 : GR.trim();
+          if (!yR) return !1;
           try {
-            return new URL(mW, WW.baseURI).origin === PW
+            return new URL(yR, RR.baseURI).origin === ZR
           } catch {
             return !1
           }
         };
-      let cW = null;
-      const wW = () => {
-          cW !== (0 === NW.size) && (cW = 0 === NW.size, null === mW || void 0 === mW || mW(cW))
+      let iR = null;
+      const fR = () => {
+          iR !== (0 === uR.size) && (iR = 0 === uR.size, null === yR || void 0 === yR || yR(iR))
         },
-        tW = WW => {
-          const iW = WW.cloneNode(!0);
-          if ("LINK" === iW.tagName) {
-            NW.add(iW);
-            const WW = () => {
-              NW.delete(iW), wW()
+        VR = RR => {
+          const JR = RR.cloneNode(!0);
+          if ("LINK" === JR.tagName) {
+            uR.add(JR);
+            const RR = () => {
+              uR.delete(JR), fR()
             };
-            iW.addEventListener("load", WW), iW.addEventListener("error", WW), OW && iW.addEventListener("load", OW)
+            JR.addEventListener("load", RR), JR.addEventListener("error", RR), GR && JR.addEventListener("load", GR)
           }
-          return iW
+          return JR
         },
-        ZW = () => {
-          const mW = function(WW) {
-              const iW = [...WW.body.children].filter((WW => WW.matches(ui)));
-              return [...WW.head.querySelectorAll(ui), ...iW]
-            }(WW).filter(LW),
-            PW = new Set(mW);
-          for (const [WW, iW] of EW) PW.has(WW) || (iW.remove(), EW.delete(WW), NW.delete(iW));
-          let cW = null;
-          for (let WW = mW.length - 1; WW >= 0; WW--) {
-            const NW = mW[WW];
-            let PW = EW.get(NW);
-            PW ? "STYLE" === NW.tagName && PW.textContent !== NW.textContent && (PW.textContent = NW.textContent, null === OW || void 0 === OW || OW()) : (PW = tW(NW), EW.set(NW, PW), iW.head.insertBefore(PW, cW)), cW = PW
+        KR = () => {
+          const yR = function(RR) {
+              const JR = [...RR.body.children].filter((RR => RR.matches(vJ)));
+              return [...RR.head.querySelectorAll(vJ), ...JR]
+            }(RR).filter(qR),
+            ZR = new Set(yR);
+          for (const [RR, JR] of tR) ZR.has(RR) || (JR.remove(), tR.delete(RR), uR.delete(JR));
+          let iR = null;
+          for (let RR = yR.length - 1; RR >= 0; RR--) {
+            const uR = yR[RR];
+            let ZR = tR.get(uR);
+            ZR ? "STYLE" === uR.tagName && ZR.textContent !== uR.textContent && (ZR.textContent = uR.textContent, null === GR || void 0 === GR || GR()) : (ZR = VR(uR), tR.set(uR, ZR), JR.head.insertBefore(ZR, iR)), iR = ZR
           }
-          wW()
+          fR()
         };
-      ZW();
-      const xW = new MutationObserver(ZW);
-      return xW.observe(WW.head, {
+      KR();
+      const wR = new MutationObserver(KR);
+      return wR.observe(RR.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), xW.observe(WW.body, {
+      }), wR.observe(RR.body, {
         childList: !0
       }), () => {
-        xW.disconnect()
+        wR.disconnect()
       }
     }
 
-    function di(WW, iW, OW) {
+    function xJ(RR, JR, GR) {
       let {
-        keysAbove: mW
-      } = OW;
-      const EW = [...WW.documentElement.classList].filter((WW => !Ji.has(WW) && !ni.has(WW))),
-        NW = [...iW.documentElement.classList].filter((WW => ni.has(WW))),
-        PW = [yi, Ti.hotbar, Ti.hasShop, Ti.hasBag];
-      mW && PW.push(Ti.keysAbove), iW.documentElement.className = [...EW, ...PW, ...NW].join(" ")
+        keysAbove: yR
+      } = GR;
+      const tR = [...RR.documentElement.classList].filter((RR => !pJ.has(RR) && !bJ.has(RR))),
+        uR = [...JR.documentElement.classList].filter((RR => bJ.has(RR))),
+        ZR = [BJ, lJ.hotbar, lJ.hasShop, lJ.hasBag];
+      yR && ZR.push(lJ.keysAbove), JR.documentElement.className = [...tR, ...ZR, ...uR].join(" ")
     }
-    const ei = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const NJ = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function vi(WW, iW, OW, mW, EW) {
-      const NW = (0, TW.G)(OW, mW, "joystick"),
-        PW = (0, FW.y)((0, FW.K)(OW, mW, EW), mW),
-        LW = PW.classes.filter((WW => !Hi.has(WW))),
-        cW = iW.documentElement,
-        wW = OW.hudLayouts[mW].hudSafe,
-        tW = (0, FW.D)(wW, window.innerWidth, window.innerHeight, gi(), wW ? (0, FW.N)(iW) : 0);
-      (0, FW.Q)({
-        ...PW,
-        classes: LW
+    function DJ(RR, JR, GR, yR, tR) {
+      const uR = (0, lR.C)(GR, yR, "joystick"),
+        ZR = (0, sR.G)((0, sR.V)(GR, yR, tR), yR),
+        qR = ZR.classes.filter((RR => !gJ.has(RR))),
+        iR = JR.documentElement,
+        fR = GR.hudLayouts[yR].hudSafe,
+        VR = (0, sR.M)(fR, window.innerWidth, window.innerHeight, HJ(), fR ? (0, sR.Y)(JR) : 0);
+      (0, sR.ab)({
+        ...ZR,
+        classes: qR
       }, {
-        vars: cW,
-        safe: cW,
-        classes: cW
-      }), cW.style.setProperty("--preview-joystick-shift-left", `${tW[3]}px`), cW.style.setProperty("--preview-joystick-shift-bottom", `${tW[2]}px`), cW.style.setProperty("--preview-joystick-scale", String(NW[2])), (0, Yi.e)(cW, iW, OW, mW);
-      for (const ZW of ei) cW.style.setProperty(ZW, WW.documentElement.style.getPropertyValue(ZW) || "0px")
+        vars: iR,
+        safe: iR,
+        classes: iR
+      }), iR.style.setProperty("--preview-joystick-shift-left", `${VR[3]}px`), iR.style.setProperty("--preview-joystick-shift-bottom", `${VR[2]}px`), iR.style.setProperty("--preview-joystick-scale", String(uR[2])), (0, MJ.f)(iR, JR, GR, yR);
+      for (const KR of NJ) iR.style.setProperty(KR, RR.documentElement.style.getPropertyValue(KR) || "0px")
     }
 
-    function gi() {
-      return (0, FW.G)(tW.d.get("notchSize"), window.innerWidth, window.innerHeight)
+    function HJ() {
+      return (0, sR.T)(VR.d.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function Di(WW) {
-      return (0, FW.s)(gi(), (0, FW.N)(WW))
+    function oJ(RR) {
+      return (0, sR.A)(HJ(), (0, sR.Y)(RR))
     }
 
-    function Vi(WW, iW, OW) {
-      const mW = WW.documentElement.style,
-        EW = (0, FW.F)(iW),
-        NW = mW.getPropertyValue(EW);
+    function cJ(RR, JR, GR) {
+      const yR = RR.documentElement.style,
+        tR = (0, sR.Q)(JR),
+        uR = yR.getPropertyValue(tR);
       try {
-        return OW((WW => {
-          mW.setProperty(EW, String(WW))
+        return GR((RR => {
+          yR.setProperty(tR, String(RR))
         }))
       } finally {
-        "" === NW ? mW.removeProperty(EW) : mW.setProperty(EW, NW)
+        "" === uR ? yR.removeProperty(tR) : yR.setProperty(tR, uR)
       }
     }
 
-    function fi(WW, iW) {
-      const [OW, mW] = Vi(WW, "hotbar", (iW => {
-        const OW = OW => {
-          var mW, EW;
-          return iW(OW), null !== (mW = null === (EW = WW.querySelector(".HotBarGameItemsContainer")) || void 0 === EW ? void 0 : EW.getBoundingClientRect().width) && void 0 !== mW ? mW : 0
+    function PJ(RR, JR) {
+      const [GR, yR] = cJ(RR, "hotbar", (JR => {
+        const GR = GR => {
+          var yR, tR;
+          return JR(GR), null !== (yR = null === (tR = RR.querySelector(".HotBarGameItemsContainer")) || void 0 === tR ? void 0 : tR.getBoundingClientRect().width) && void 0 !== yR ? yR : 0
         };
-        return [OW(1), OW(TW.h)]
+        return [GR(1), GR(lR.i)]
       }));
-      return OW <= 0 ? TW.h : Math.min(TW.h, Math.max(1, Math.floor(mW / OW / iW + 1e-6) * iW))
+      return GR <= 0 ? lR.i : Math.min(lR.i, Math.max(1, Math.floor(yR / GR / JR + 1e-6) * JR))
     }
-    const Ci = 3,
-      Xi = .5,
-      Bi = WW => WW.right - WW.left;
-    const qi = (WW, iW) => Math.abs((0, aW.d)(WW).x - (0, aW.d)(iW).x) + Math.abs((0, aW.d)(WW).y - (0, aW.d)(iW).y) + Math.abs(Bi(WW) - Bi(iW));
+    const IJ = 3,
+      mJ = .5,
+      zJ = RR => RR.right - RR.left;
+    const SJ = (RR, JR) => Math.abs((0, QR.b)(RR).x - (0, QR.b)(JR).x) + Math.abs((0, QR.b)(RR).y - (0, QR.b)(JR).y) + Math.abs(zJ(RR) - zJ(JR));
 
-    function Ri(WW, iW, OW, mW, EW) {
+    function jJ(RR, JR, GR, yR, tR) {
       let {
-        canKeep: NW = () => !0,
-        passes: PW = Ci,
-        before: LW
+        canKeep: uR = () => !0,
+        passes: ZR = IJ,
+        before: qR
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const cW = iW.hudLayouts[OW].hudLocked.filter(NW);
-      if (0 === cW.length) return iW;
-      const wW = [...dW.c].filter((mW => !cW.includes(mW) && (0, TW.G)(WW, OW, mW).join() === (0, TW.G)(iW, OW, mW).join())),
-        tW = WW => {
-          const iW = (0, aW.E)(wW.flatMap((iW => WW[iW] ? [WW[iW]] : [])));
+      const iR = JR.hudLayouts[GR].hudLocked.filter(uR);
+      if (0 === iR.length) return JR;
+      const fR = [...NR.b].filter((yR => !iR.includes(yR) && (0, lR.C)(RR, GR, yR).join() === (0, lR.C)(JR, GR, yR).join())),
+        VR = RR => {
+          const JR = (0, QR.A)(fR.flatMap((JR => RR[JR] ? [RR[JR]] : [])));
           return {
-            ...WW,
-            cluster: null !== iW && void 0 !== iW ? iW : void 0
+            ...RR,
+            cluster: null !== JR && void 0 !== JR ? JR : void 0
           }
         };
-      let ZW = null;
-      const xW = WW => {
-          ZW = WW;
-          const iW = EW(WW);
-          return iW && {
-            ...iW,
-            boxes: tW(iW.boxes)
+      let KR = null;
+      const wR = RR => {
+          KR = RR;
+          const JR = tR(RR);
+          return JR && {
+            ...JR,
+            boxes: VR(JR.boxes)
           }
         },
-        lW = LW ? {
-          ...LW,
-          boxes: tW(LW.boxes)
-        } : xW(WW),
-        AW = lW && xW(iW);
-      if (!lW || !AW) return iW;
-      const bW = lW.boxes;
-      let jW = AW.boxes;
-      const UW = lW.keysAbove !== AW.keysAbove,
-        kW = UW || Boolean(lW.shopAlone) !== Boolean(AW.shopAlone),
-        sW = new Set(cW.filter((WW => !(0, dW.C)(WW) || !("bag" === WW ? UW : kW))));
-      let MW = iW;
-      for (let YW = 0; YW < PW && sW.size > 0; YW++) {
-        var KW, SW;
-        const WW = new Map;
-        for (const iW of sW) {
-          const EW = bW[iW],
-            NW = jW[iW],
-            PW = EW && NW ? Gi(iW, (0, TW.G)(MW, OW, iW), EW, NW, mW) : null;
-          PW ? WW.set(iW, PW) : sW.delete(iW)
+        rR = qR ? {
+          ...qR,
+          boxes: VR(qR.boxes)
+        } : wR(RR),
+        eR = rR && wR(JR);
+      if (!rR || !eR) return JR;
+      const aR = rR.boxes;
+      let LR = eR.boxes;
+      const nR = rR.keysAbove !== eR.keysAbove,
+        UR = nR || Boolean(rR.shopAlone) !== Boolean(eR.shopAlone),
+        WR = new Set(iR.filter((RR => !(0, NR.C)(RR) || !("bag" === RR ? nR : UR))));
+      let AR = JR;
+      for (let MR = 0; MR < ZR && WR.size > 0; MR++) {
+        var CR, XR;
+        const RR = new Map;
+        for (const JR of WR) {
+          const tR = aR[JR],
+            uR = LR[JR],
+            ZR = tR && uR ? dJ(JR, (0, lR.C)(AR, GR, JR), tR, uR, yR) : null;
+          ZR ? RR.set(JR, ZR) : WR.delete(JR)
         }
-        if (0 === WW.size) break;
-        let EW = MW;
-        for (const [iW, mW] of WW) EW = (0, TW.rb)(EW, OW, iW, mW);
-        const NW = null === (KW = xW(EW)) || void 0 === KW ? void 0 : KW.boxes;
-        if (!NW) return iW;
-        let PW = MW;
-        for (const [iW, mW] of WW) {
-          const WW = NW[iW];
-          WW && qi(bW[iW], WW) < qi(bW[iW], jW[iW]) - Xi ? PW = (0, TW.rb)(PW, OW, iW, mW) : sW.delete(iW)
+        if (0 === RR.size) break;
+        let tR = AR;
+        for (const [JR, yR] of RR) tR = (0, lR.nb)(tR, GR, JR, yR);
+        const uR = null === (CR = wR(tR)) || void 0 === CR ? void 0 : CR.boxes;
+        if (!uR) return JR;
+        let ZR = AR;
+        for (const [JR, yR] of RR) {
+          const RR = uR[JR];
+          RR && SJ(aR[JR], RR) < SJ(aR[JR], LR[JR]) - mJ ? ZR = (0, lR.nb)(ZR, GR, JR, yR) : WR.delete(JR)
         }
-        if (PW === MW) break;
-        const LW = [...WW.keys()].every((WW => sW.has(WW)));
-        MW = LW ? EW : PW;
-        const cW = LW ? NW : null === (SW = xW(MW)) || void 0 === SW ? void 0 : SW.boxes;
-        if (!cW) return iW;
-        jW = cW
+        if (ZR === AR) break;
+        const qR = [...RR.keys()].every((RR => WR.has(RR)));
+        AR = qR ? tR : ZR;
+        const iR = qR ? uR : null === (XR = wR(AR)) || void 0 === XR ? void 0 : XR.boxes;
+        if (!iR) return JR;
+        LR = iR
       }
-      return ZW !== MW && EW(MW), MW
+      return KR !== AR && tR(AR), AR
     }
 
-    function Gi(WW, iW, OW, mW, EW) {
-      let [NW, PW, LW] = iW;
-      const cW = TW.A[WW],
-        wW = {};
-      cW.scale && Bi(mW) > 0 && Math.abs(Bi(OW) - Bi(mW)) > Xi && (wW.scale = Math.max(TW.j, Math.min(TW.h, LW * Bi(OW) / Bi(mW))));
-      const tW = (0, aW.d)(OW).x - (0, aW.d)(mW).x,
-        ZW = (0, aW.d)(OW).y - (0, aW.d)(mW).y;
-      return cW.move && (Math.abs(tW) > Xi || Math.abs(ZW) > Xi) && (wW.dx = NW + tW / EW.width, wW.dy = PW + ZW / EW.height), void 0 === wW.scale && void 0 === wW.dx ? null : wW
+    function dJ(RR, JR, GR, yR, tR) {
+      let [uR, ZR, qR] = JR;
+      const iR = lR.y[RR],
+        fR = {};
+      iR.scale && zJ(yR) > 0 && Math.abs(zJ(GR) - zJ(yR)) > mJ && (fR.scale = Math.max(lR.m, Math.min(lR.i, qR * zJ(GR) / zJ(yR))));
+      const VR = (0, QR.b)(GR).x - (0, QR.b)(yR).x,
+        KR = (0, QR.b)(GR).y - (0, QR.b)(yR).y;
+      return iR.move && (Math.abs(VR) > mJ || Math.abs(KR) > mJ) && (fR.dx = uR + VR / tR.width, fR.dy = ZR + KR / tR.height), void 0 === fR.scale && void 0 === fR.dx ? null : fR
     }
-    let Ii = 0;
+    let EJ = 0;
 
-    function ai() {
-      return Ii > 0
+    function YJ() {
+      return EJ > 0
     }
-    const ri = WW => 0 === WW.dx && 0 === WW.dy,
-      zi = .001,
-      Fi = WW => Math.abs(WW.dx) >= 5e-4 || Math.abs(WW.dy) >= 5e-4 ? WW : {
-        dx: WW.dx,
-        dy: WW.dy < 0 ? -.001 : zi
+    const kJ = RR => 0 === RR.dx && 0 === RR.dy,
+      QJ = .001,
+      FJ = RR => Math.abs(RR.dx) >= 5e-4 || Math.abs(RR.dy) >= 5e-4 ? RR : {
+        dx: RR.dx,
+        dy: RR.dy < 0 ? -.001 : QJ
       };
 
-    function Qi(WW) {
+    function TJ(RR) {
       let {
-        preview: iW,
-        stageRef: OW,
-        ringRef: mW,
-        centreLineRef: NW,
-        snapCentre: PW,
-        ready: LW,
-        measure: cW,
-        k: wW,
-        viewport: tW,
-        boxes: ZW,
-        pieces: xW,
-        selected: lW,
-        insets: AW,
-        layout: bW,
-        canMove: jW,
-        onSelect: UW,
-        onMove: kW
-      } = WW;
-      const sW = (0, EW.useRef)(null),
-        MW = (0, EW.useCallback)((() => null !== sW.current), []),
-        KW = (WW, iW) => {
-          if (!iW) return null;
-          const OW = (0, aW.d)(WW.origin),
-            mW = (0, aW.d)(iW),
-            EW = (WW.to.dx - WW.from.dx) * tW.width,
-            NW = (WW.to.dy - WW.from.dy) * tW.height,
-            PW = iW.right - iW.left,
-            LW = iW.bottom - iW.top;
+        preview: JR,
+        stageRef: GR,
+        ringRef: yR,
+        centreLineRef: uR,
+        snapCentre: ZR,
+        ready: qR,
+        measure: iR,
+        k: fR,
+        viewport: VR,
+        boxes: KR,
+        pieces: wR,
+        selected: rR,
+        insets: eR,
+        layout: aR,
+        canMove: LR,
+        onSelect: nR,
+        onMove: UR
+      } = RR;
+      const WR = (0, tR.useRef)(null),
+        AR = (0, tR.useCallback)((() => null !== WR.current), []),
+        CR = (RR, JR) => {
+          if (!JR) return null;
+          const GR = (0, QR.b)(RR.origin),
+            yR = (0, QR.b)(JR),
+            tR = (RR.to.dx - RR.from.dx) * VR.width,
+            uR = (RR.to.dy - RR.from.dy) * VR.height,
+            ZR = JR.right - JR.left,
+            qR = JR.bottom - JR.top;
           return {
             skew: {
-              x: mW.x - OW.x - EW,
-              y: mW.y - OW.y - NW
+              x: yR.x - GR.x - tR,
+              y: yR.y - GR.y - uR
             },
             box: {
-              left: OW.x - PW / 2,
-              top: OW.y - LW / 2,
-              right: OW.x + PW / 2,
-              bottom: OW.y + LW / 2
+              left: GR.x - ZR / 2,
+              top: GR.y - qR / 2,
+              right: GR.x + ZR / 2,
+              bottom: GR.y + qR / 2
             }
           }
         },
-        SW = (WW, OW) => {
-          var EW;
-          const PW = sW.current;
-          if (!PW || PW.pointerId !== WW.pointerId) return;
-          sW.current = null, null === (EW = NW.current) || void 0 === EW || EW.classList.remove("Shown", "Snapped");
-          const LW = mW.current;
-          if (LW && null !== PW.ringStyle && LW.setAttribute("style", PW.ringStyle), OW && PW.moved) {
-            const WW = ri(PW.to) ? null : cW(PW.id),
-              iW = WW ? (0, aW.D)(WW, (0, aW.z)(tW.width, tW.height, AW)) : {
+        XR = (RR, GR) => {
+          var tR;
+          const ZR = WR.current;
+          if (!ZR || ZR.pointerId !== RR.pointerId) return;
+          WR.current = null, null === (tR = uR.current) || void 0 === tR || tR.classList.remove("Shown", "Snapped");
+          const qR = yR.current;
+          if (qR && null !== ZR.ringStyle && qR.setAttribute("style", ZR.ringStyle), GR && ZR.moved) {
+            const RR = kJ(ZR.to) ? null : iR(ZR.id),
+              JR = RR ? (0, QR.z)(RR, (0, QR.y)(VR.width, VR.height, eR)) : {
                 x: 0,
                 y: 0
               },
-              OW = {
-                dx: PW.to.dx + iW.x / tW.width,
-                dy: PW.to.dy + iW.y / tW.height
+              GR = {
+                dx: ZR.to.dx + JR.x / VR.width,
+                dy: ZR.to.dy + JR.y / VR.height
               },
-              mW = ri(PW.to) ? OW : Fi(OW);
-            kW(PW.id, mW.dx, mW.dy)
-          } else iW(PW.id, null), OW && PW.tapPick && UW(PW.tapPick)
+              yR = kJ(ZR.to) ? GR : FJ(GR);
+            UR(ZR.id, yR.dx, yR.dy)
+          } else JR(ZR.id, null), GR && ZR.tapPick && nR(ZR.tapPick)
         };
       return {
-        busy: MW,
+        busy: AR,
         handlers: {
-          onPointerDown: WW => {
-            var iW;
-            if (!LW || sW.current || !WW.target.closest(".HudPreviewHandle")) return;
-            const mW = OW.current.getBoundingClientRect(),
-              EW = {
-                x: (WW.clientX - mW.left) / wW,
-                y: (WW.clientY - mW.top) / wW
+          onPointerDown: RR => {
+            var JR;
+            if (!qR || WR.current || !RR.target.closest(".HudPreviewHandle")) return;
+            const yR = GR.current.getBoundingClientRect(),
+              tR = {
+                x: (RR.clientX - yR.left) / fR,
+                y: (RR.clientY - yR.top) / fR
               },
-              NW = (0, aW.v)(EW, xW, 40 / wW),
-              PW = null !== lW ? dW.p.get(lW) : void 0,
-              cW = void 0 !== PW && null !== (0, aW.v)(EW, xW.filter((WW => {
+              uR = (0, QR.s)(tR, wR, 40 / fR),
+              ZR = null !== rR ? NR.q.get(rR) : void 0,
+              iR = void 0 !== ZR && null !== (0, QR.s)(tR, wR.filter((RR => {
                 let {
-                  id: iW
-                } = WW;
-                return PW.has(iW)
-              })), 40 / wW),
-              tW = "menu" === lW && void 0 !== ZW.menu && (0, aW.g)(ZW.menu, EW) && ("menu" === NW || null !== NW && (0, zW.t)(NW, bW.hudElements[NW])),
-              AW = cW ? lW : tW ? "menu" : null,
-              kW = null !== AW,
-              MW = null !== AW && void 0 !== AW ? AW : NW;
-            if (!MW) return;
-            if (function(WW) {
-                Ii++;
-                const iW = OW => {
-                  OW.pointerId === WW && (Ii = Math.max(0, Ii - 1), window.removeEventListener("pointerup", iW, !0), window.removeEventListener("pointercancel", iW, !0))
+                  id: JR
+                } = RR;
+                return ZR.has(JR)
+              })), 40 / fR),
+              VR = "menu" === rR && void 0 !== KR.menu && (0, QR.c)(KR.menu, tR) && ("menu" === uR || null !== uR && (0, TR.E)(uR, aR.hudElements[uR])),
+              eR = iR ? rR : VR ? "menu" : null,
+              UR = null !== eR,
+              AR = null !== eR && void 0 !== eR ? eR : uR;
+            if (!AR) return;
+            if (function(RR) {
+                EJ++;
+                const JR = GR => {
+                  GR.pointerId === RR && (EJ = Math.max(0, EJ - 1), window.removeEventListener("pointerup", JR, !0), window.removeEventListener("pointercancel", JR, !0))
                 };
-                window.addEventListener("pointerup", iW, !0), window.addEventListener("pointercancel", iW, !0)
-              }(WW.pointerId), !jW(MW)) return void UW(kW && NW ? NW : MW);
-            UW(MW);
-            const [KW, SW] = null !== (iW = bW.hudElements[MW]) && void 0 !== iW ? iW : [0, 0], YW = {
-              dx: KW,
-              dy: SW
-            }, yW = {
+                window.addEventListener("pointerup", JR, !0), window.addEventListener("pointercancel", JR, !0)
+              }(RR.pointerId), !LR(AR)) return void nR(UR && uR ? uR : AR);
+            nR(AR);
+            const [CR, XR] = null !== (JR = aR.hudElements[AR]) && void 0 !== JR ? JR : [0, 0], MR = {
+              dx: CR,
+              dy: XR
+            }, BR = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: ZW[MW]
+              box: KR[AR]
             };
-            sW.current = {
-              id: MW,
-              pointerId: WW.pointerId,
-              startX: WW.clientX,
-              startY: WW.clientY,
-              origin: ZW[MW],
-              from: YW,
-              to: YW,
+            WR.current = {
+              id: AR,
+              pointerId: RR.pointerId,
+              startX: RR.clientX,
+              startY: RR.clientY,
+              origin: KR[AR],
+              from: MR,
+              to: MR,
               moved: !1,
-              home: ri(YW) ? {
-                centre: (0, aW.d)(ZW[MW]),
-                anchor: yW
+              home: kJ(MR) ? {
+                centre: (0, QR.b)(KR[AR]),
+                anchor: BR
               } : null,
-              away: ri(YW) ? null : yW,
-              anchor: yW,
+              away: kJ(MR) ? null : BR,
+              anchor: BR,
               ringStyle: null,
-              tapPick: kW ? NW : null
-            }, WW.currentTarget.setPointerCapture(WW.pointerId)
+              tapPick: UR ? uR : null
+            }, RR.currentTarget.setPointerCapture(RR.pointerId)
           },
-          onPointerMove: WW => {
-            const OW = sW.current;
-            if (!OW || OW.pointerId !== WW.pointerId) return;
-            const EW = WW.clientX - OW.startX,
-              LW = WW.clientY - OW.startY;
-            if (!OW.moved && Math.hypot(EW, LW) < 5) return;
-            const ZW = !OW.moved;
-            var xW, lW;
-            (OW.moved = !0, ZW) && (OW.ringStyle = null !== (xW = null === (lW = mW.current) || void 0 === lW ? void 0 : lW.getAttribute("style")) && void 0 !== xW ? xW : null);
-            const bW = (0, aW.z)(tW.width, tW.height, AW);
-            if (!OW.home) {
-              var jW;
-              OW.to = {
+          onPointerMove: RR => {
+            const GR = WR.current;
+            if (!GR || GR.pointerId !== RR.pointerId) return;
+            const tR = RR.clientX - GR.startX,
+              qR = RR.clientY - GR.startY;
+            if (!GR.moved && Math.hypot(tR, qR) < 5) return;
+            const KR = !GR.moved;
+            var wR, rR;
+            (GR.moved = !0, KR) && (GR.ringStyle = null !== (wR = null === (rR = yR.current) || void 0 === rR ? void 0 : rR.getAttribute("style")) && void 0 !== wR ? wR : null);
+            const aR = (0, QR.y)(VR.width, VR.height, eR);
+            if (!GR.home) {
+              var LR;
+              GR.to = {
                 dx: 0,
                 dy: 0
-              }, iW(OW.id, OW.to);
-              const WW = cW(OW.id),
-                mW = null !== (jW = KW(OW, WW)) && void 0 !== jW ? jW : {
+              }, JR(GR.id, GR.to);
+              const RR = iR(GR.id),
+                yR = null !== (LR = CR(GR, RR)) && void 0 !== LR ? LR : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: OW.origin
+                  box: GR.origin
                 },
-                EW = (0, aW.d)(OW.origin);
-              OW.home = {
-                centre: WW ? (0, aW.d)(WW) : {
-                  x: EW.x - OW.from.dx * tW.width,
-                  y: EW.y - OW.from.dy * tW.height
+                tR = (0, QR.b)(GR.origin);
+              GR.home = {
+                centre: RR ? (0, QR.b)(RR) : {
+                  x: tR.x - GR.from.dx * VR.width,
+                  y: tR.y - GR.from.dy * VR.height
                 },
-                anchor: mW
+                anchor: yR
               }
             }
-            const UW = OW.home;
-            let kW = !1;
-            const MW = WW => {
-                kW = !1;
-                let mW = (0, aW.n)(WW.box, EW / wW, LW / wW, bW);
-                const NW = tW.width / 2;
-                if (PW && Math.abs((0, aW.d)(OW.origin).x + mW.x - NW) <= 8 / wW) {
-                  const iW = NW - (0, aW.d)(OW.origin).x,
-                    EW = (0, aW.n)(WW.box, iW, mW.y, bW);
-                  kW = Math.abs(EW.x - iW) < .01, kW && (mW = EW)
+            const nR = GR.home;
+            let UR = !1;
+            const AR = RR => {
+                UR = !1;
+                let yR = (0, QR.l)(RR.box, tR / fR, qR / fR, aR);
+                const uR = VR.width / 2;
+                if (ZR && Math.abs((0, QR.b)(GR.origin).x + yR.x - uR) <= 8 / fR) {
+                  const JR = uR - (0, QR.b)(GR.origin).x,
+                    tR = (0, QR.l)(RR.box, JR, yR.y, aR);
+                  UR = Math.abs(tR.x - JR) < .01, UR && (yR = tR)
                 }
-                const cW = (0, aW.u)(OW.from, mW.x - WW.skew.x, mW.y - WW.skew.y, tW.width, tW.height);
-                OW.to = Fi(cW), OW.anchor = WW, iW(OW.id, OW.to)
+                const iR = (0, QR.p)(GR.from, yR.x - RR.skew.x, yR.y - RR.skew.y, VR.width, VR.height);
+                GR.to = FJ(iR), GR.anchor = RR, JR(GR.id, GR.to)
               },
-              SW = (0, aW.n)(UW.anchor.box, EW / wW, LW / wW, bW),
-              YW = NW.current,
-              yW = (0, aW.d)(OW.origin),
-              JW = ((0, TW.X)(OW.id) ? 20 : 6) / wW;
-            if (Math.abs(yW.x + SW.x - UW.centre.x) <= JW && Math.abs(yW.y + SW.y - UW.centre.y) <= JW) OW.to = {
+              XR = (0, QR.l)(nR.anchor.box, tR / fR, qR / fR, aR),
+              MR = uR.current,
+              BR = (0, QR.b)(GR.origin),
+              pR = ((0, lR.S)(GR.id) ? 20 : 6) / fR;
+            if (Math.abs(BR.x + XR.x - nR.centre.x) <= pR && Math.abs(BR.y + XR.y - nR.centre.y) <= pR) GR.to = {
               dx: 0,
               dy: 0
-            }, OW.anchor = UW.anchor, kW = PW && Math.abs(UW.centre.x - tW.width / 2) < 1, iW(OW.id, OW.to);
-            else if (OW.away) MW(OW.away);
+            }, GR.anchor = nR.anchor, UR = ZR && Math.abs(nR.centre.x - VR.width / 2) < 1, JR(GR.id, GR.to);
+            else if (GR.away) AR(GR.away);
             else {
-              var hW;
-              MW(UW.anchor), OW.away = null !== (hW = KW(OW, cW(OW.id))) && void 0 !== hW ? hW : UW.anchor, MW(OW.away)
+              var gR;
+              AR(nR.anchor), GR.away = null !== (gR = CR(GR, iR(GR.id))) && void 0 !== gR ? gR : nR.anchor, AR(GR.away)
             }
-            null === YW || void 0 === YW || YW.classList.add("Shown"), null === YW || void 0 === YW || YW.classList.toggle("Snapped", kW), (WW => {
-              const iW = mW.current;
-              if (iW) {
+            null === MR || void 0 === MR || MR.classList.add("Shown"), null === MR || void 0 === MR || MR.classList.toggle("Snapped", UR), (RR => {
+              const JR = yR.current;
+              if (JR) {
                 const {
-                  skew: OW,
-                  box: mW
-                } = WW.anchor;
-                iW.style.left = mW.left * wW + "px", iW.style.top = mW.top * wW + "px", iW.style.width = (mW.right - mW.left) * wW + "px", iW.style.height = (mW.bottom - mW.top) * wW + "px", iW.style.translate = `${((WW.to.dx-WW.from.dx)*tW.width+OW.x)*wW}px ${((WW.to.dy-WW.from.dy)*tW.height+OW.y)*wW}px`
+                  skew: GR,
+                  box: yR
+                } = RR.anchor;
+                JR.style.left = yR.left * fR + "px", JR.style.top = yR.top * fR + "px", JR.style.width = (yR.right - yR.left) * fR + "px", JR.style.height = (yR.bottom - yR.top) * fR + "px", JR.style.translate = `${((RR.to.dx-RR.from.dx)*VR.width+GR.x)*fR}px ${((RR.to.dy-RR.from.dy)*VR.height+GR.y)*fR}px`
               }
-            })(OW)
+            })(GR)
           },
-          onPointerUp: WW => {
-            SW(WW, !0)
+          onPointerUp: RR => {
+            XR(RR, !0)
           },
-          onPointerCancel: WW => {
-            SW(WW, !1)
+          onPointerCancel: RR => {
+            XR(RR, !1)
           }
         }
       }
     }
-    var WO = OW(10146);
+    var sJ = GR(10262);
 
-    function iO(WW, iW) {
-      return Object.keys(WW).filter((WW => WW !== iW)).map((iW => WW[iW]))
+    function hJ(RR, JR) {
+      return Object.keys(RR).filter((RR => RR !== JR)).map((JR => RR[JR]))
     }
 
-    function OO(WW) {
-      return WW.map((WW => {
+    function RG(RR) {
+      return RR.map((RR => {
         let {
-          id: iW,
-          box: OW
-        } = WW;
-        return `${iW}:${OW.left},${OW.top},${OW.right},${OW.bottom}`
+          id: JR,
+          box: GR
+        } = RR;
+        return `${JR}:${GR.left},${GR.top},${GR.right},${GR.bottom}`
       })).join(";")
     }
 
-    function mO(WW) {
-      const iW = [],
-        OW = iW => (0, TW.X)(iW) && !WW.documentElement.classList.contains((0, FW.A)(iW));
-      for (const LW of WW.querySelectorAll(`[${dW.g}]`)) {
-        const WW = OW(LW.getAttribute(dW.g)) ? LW.querySelector(".ScaleOnHover") : null,
-          mW = (null !== WW && void 0 !== WW ? WW : LW).getBoundingClientRect();
-        (mW.width > 0 || mW.height > 0) && iW.push({
-          id: LW.getAttribute(dW.g),
-          box: (0, aW.j)(mW)
+    function JG(RR) {
+      const JR = [],
+        GR = JR => (0, lR.S)(JR) && !RR.documentElement.classList.contains((0, sR.K)(JR));
+      for (const qR of RR.querySelectorAll(`[${NR.e}]`)) {
+        const RR = GR(qR.getAttribute(NR.e)) ? qR.querySelector(".ScaleOnHover") : null,
+          yR = (null !== RR && void 0 !== RR ? RR : qR).getBoundingClientRect();
+        (yR.width > 0 || yR.height > 0) && JR.push({
+          id: qR.getAttribute(NR.e),
+          box: (0, QR.d)(yR)
         })
       }
-      const mW = WW => (0, aW.E)(iW.filter((iW => {
+      const yR = RR => (0, QR.A)(JR.filter((JR => {
           let {
-            id: OW
-          } = iW;
-          return WW(OW)
-        })).map((WW => {
+            id: GR
+          } = JR;
+          return RR(GR)
+        })).map((RR => {
           let {
-            box: iW
-          } = WW;
-          return iW
+            box: JR
+          } = RR;
+          return JR
         }))),
-        EW = {};
-      for (const LW of new Set(iW.map((WW => WW.id)))) EW[LW] = mW((WW => WW === LW));
-      for (const [LW, cW] of dW.p) {
-        const WW = mW((WW => cW.has(WW)));
-        WW && (EW[LW] = WW)
+        tR = {};
+      for (const qR of new Set(JR.map((RR => RR.id)))) tR[qR] = yR((RR => RR === qR));
+      for (const [qR, iR] of NR.q) {
+        const RR = yR((RR => iR.has(RR)));
+        RR && (tR[qR] = RR)
       }
-      const NW = WW.querySelector(".TouchInventoryKeys"),
-        PW = NW ? (0, aW.j)(NW.getBoundingClientRect()) : null;
+      const uR = RR.querySelector(".TouchInventoryKeys"),
+        ZR = uR ? (0, QR.d)(uR.getBoundingClientRect()) : null;
       return {
-        boxes: EW,
-        pieces: iW,
-        pairHome: PW
+        boxes: tR,
+        pieces: JR,
+        pairHome: ZR
       }
     }
 
-    function EO(WW, iW, OW) {
-      const mW = iW.right - iW.left,
-        EW = iW.bottom - iW.top;
-      return Vi(WW, "cluster", (iW => {
-        const NW = OW => {
-            iW(OW);
-            const mW = [...WW.querySelectorAll(`[${dW.g}]:not(.HudPreviewGhost)`)].filter((WW => dW.c.has(WW.getAttribute(dW.g)))).map((WW => (0, aW.j)(WW.getBoundingClientRect()))),
-              EW = (0, aW.E)(mW);
-            return EW ? {
-              w: EW.right - EW.left,
-              h: EW.bottom - EW.top
+    function GG(RR, JR, GR) {
+      const yR = JR.right - JR.left,
+        tR = JR.bottom - JR.top;
+      return cJ(RR, "cluster", (JR => {
+        const uR = GR => {
+            JR(GR);
+            const yR = [...RR.querySelectorAll(`[${NR.e}]:not(.HudPreviewGhost)`)].filter((RR => NR.b.has(RR.getAttribute(NR.e)))).map((RR => (0, QR.d)(RR.getBoundingClientRect()))),
+              tR = (0, QR.A)(yR);
+            return tR ? {
+              w: tR.right - tR.left,
+              h: tR.bottom - tR.top
             } : null
           },
-          PW = WW => !WW || WW.w <= mW && WW.h <= EW,
-          LW = NW(1),
-          cW = NW(TW.h);
-        if (!LW || PW(cW)) return TW.h;
-        const wW = (WW, iW, OW) => iW > WW ? 1 + (OW - WW) * (TW.h - 1) / (iW - WW) : TW.h;
-        let tW = Math.floor(Math.min(TW.h, wW(LW.w, cW.w, mW), wW(LW.h, cW.h, EW)) / OW + 1e-6) * OW;
-        for (; tW > 1 && !PW(NW(tW));) tW = Math.round(100 * (tW - OW)) / 100;
-        return Math.max(1, tW)
+          ZR = RR => !RR || RR.w <= yR && RR.h <= tR,
+          qR = uR(1),
+          iR = uR(lR.i);
+        if (!qR || ZR(iR)) return lR.i;
+        const fR = (RR, JR, GR) => JR > RR ? 1 + (GR - RR) * (lR.i - 1) / (JR - RR) : lR.i;
+        let VR = Math.floor(Math.min(lR.i, fR(qR.w, iR.w, yR), fR(qR.h, iR.h, tR)) / GR + 1e-6) * GR;
+        for (; VR > 1 && !ZR(uR(VR));) VR = Math.round(100 * (VR - GR)) / 100;
+        return Math.max(1, VR)
       }))
     }
 
-    function NO(WW) {
-      di(document, WW, {
+    function yG(RR) {
+      xJ(document, RR, {
         keysAbove: !1
       });
-      const iW = parseFloat(getComputedStyle(WW.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        OW = Number.isFinite(iW) && iW < 0;
-      return di(document, WW, {
-        keysAbove: OW
-      }), (0, WO.c)(WW), OW
+      const JR = parseFloat(getComputedStyle(RR.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        GR = Number.isFinite(JR) && JR < 0;
+      return xJ(document, RR, {
+        keysAbove: GR
+      }), (0, sJ.e)(RR), GR
     }
 
-    function PO(WW) {
-      const iW = WW.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== iW && "1" === getComputedStyle(iW).getPropertyValue("--touch-shop-above").trim()
+    function tG(RR) {
+      const JR = RR.querySelector(".TouchInventoryKey.ShopKey");
+      return null !== JR && "1" === getComputedStyle(JR).getPropertyValue("--touch-shop-above").trim()
     }
 
-    function LO(WW, iW) {
+    function uG(RR, JR) {
       let {
-        layout: OW,
-        orientation: mW,
-        viewport: NW,
-        replicaKey: PW,
-        joystickFixed: LW,
-        busy: cW
-      } = iW;
-      const [wW, tW] = (0, EW.useState)(null), [ZW, xW] = (0, EW.useState)({
+        layout: GR,
+        orientation: yR,
+        viewport: uR,
+        replicaKey: ZR,
+        joystickFixed: qR,
+        busy: iR
+      } = JR;
+      const [fR, VR] = (0, tR.useState)(null), [KR, wR] = (0, tR.useState)({
         boxes: {},
         pieces: []
-      }), [lW, AW] = (0, EW.useState)({
+      }), [rR, eR] = (0, tR.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [bW, jW] = (0, EW.useState)(!1), [UW, kW] = (0, EW.useState)(!1), [sW, MW] = (0, EW.useState)(!1), KW = (0, EW.useCallback)((WW => {
-        kW(WW), WW && MW(!0)
-      }), []), SW = OW.hudLayouts[mW].hudSafe;
-      (0, EW.useLayoutEffect)((() => {
-        const iW = WW.current.contentDocument;
-        iW.open(), iW.write("<!DOCTYPE html><html><head></head><body></body></html>"), iW.close(), tW(iW)
-      }), [WW]);
-      const YW = (0, EW.useCallback)((() => {
-          wW && ((0, zW.v)(wW), xW(mO(wW)), AW(function(WW, iW) {
-            const OW = Di(WW),
-              [mW, EW, NW, PW] = iW ? (0, FW.v)(iW, window.innerWidth, window.innerHeight, OW) : OW;
+      }), [aR, LR] = (0, tR.useState)(!1), [nR, UR] = (0, tR.useState)(!1), [WR, AR] = (0, tR.useState)(!1), CR = (0, tR.useCallback)((RR => {
+        UR(RR), RR && AR(!0)
+      }), []), XR = GR.hudLayouts[yR].hudSafe;
+      (0, tR.useLayoutEffect)((() => {
+        const JR = RR.current.contentDocument;
+        JR.open(), JR.write("<!DOCTYPE html><html><head></head><body></body></html>"), JR.close(), VR(JR)
+      }), [RR]);
+      const MR = (0, tR.useCallback)((() => {
+          fR && ((0, TR.H)(fR), wR(JG(fR)), eR(function(RR, JR) {
+            const GR = oJ(RR),
+              [yR, tR, uR, ZR] = JR ? (0, sR.B)(JR, window.innerWidth, window.innerHeight, GR) : GR;
             return {
-              top: mW,
-              right: EW,
-              bottom: NW,
-              left: PW
+              top: yR,
+              right: tR,
+              bottom: uR,
+              left: ZR
             }
-          }(wW, SW)))
-        }), [wW, SW]),
-        yW = (0, EW.useCallback)((() => {
-          wW && jW(NO(wW))
-        }), [wW]),
-        TW = (0, EW.useRef)((() => {}));
-      return TW.current = () => {
-        yW(), cW() || YW()
-      }, (0, EW.useLayoutEffect)((() => {
-        if (wW) return oi(document, wW, (() => {
-          TW.current()
-        }), KW)
-      }), [wW, KW]), (0, EW.useLayoutEffect)(yW, [yW, NW]), (0, EW.useLayoutEffect)((() => {
-        wW && (di(document, wW, {
-          keysAbove: bW
-        }), vi(document, wW, OW, mW, LW), yW(), YW())
-      }), [wW, OW, mW, bW, PW, LW, NW, YW, yW]), (0, EW.useEffect)((() => {
-        var WW;
-        if (!wW) return;
-        const iW = new ResizeObserver((() => {
-          cW() || YW()
+          }(fR, XR)))
+        }), [fR, XR]),
+        BR = (0, tR.useCallback)((() => {
+          fR && LR(yG(fR))
+        }), [fR]),
+        lR = (0, tR.useRef)((() => {}));
+      return lR.current = () => {
+        BR(), iR() || MR()
+      }, (0, tR.useLayoutEffect)((() => {
+        if (fR) return OJ(document, fR, (() => {
+          lR.current()
+        }), CR)
+      }), [fR, CR]), (0, tR.useLayoutEffect)(BR, [BR, uR]), (0, tR.useLayoutEffect)((() => {
+        fR && (xJ(document, fR, {
+          keysAbove: aR
+        }), DJ(document, fR, GR, yR, qR), BR(), MR())
+      }), [fR, GR, yR, aR, ZR, qR, uR, MR, BR]), (0, tR.useEffect)((() => {
+        var RR;
+        if (!fR) return;
+        const JR = new ResizeObserver((() => {
+          iR() || MR()
         }));
-        for (const OW of wW.querySelectorAll(`[${dW.g}]`)) iW.observe(OW);
-        return null === (WW = wW.fonts) || void 0 === WW || WW.ready.then(YW), () => {
-          iW.disconnect()
+        for (const GR of fR.querySelectorAll(`[${NR.e}]`)) JR.observe(GR);
+        return null === (RR = fR.fonts) || void 0 === RR || RR.ready.then(MR), () => {
+          JR.disconnect()
         }
-      }), [wW, YW, cW, PW]), {
-        doc: wW,
-        boxes: ZW.boxes,
-        pieces: ZW.pieces,
-        insets: lW,
-        keysAbove: bW,
-        ready: UW,
-        settled: sW
+      }), [fR, MR, iR, ZR]), {
+        doc: fR,
+        boxes: KR.boxes,
+        pieces: KR.pieces,
+        insets: rR,
+        keysAbove: aR,
+        ready: nR,
+        settled: WR
       }
     }
-    const cO = ["Above", "Below", "Left", "Right"];
+    const ZG = ["Above", "Below", "Left", "Right"];
 
-    function wO(WW, iW, OW, mW, EW) {
-      const NW = OW[WW],
-        PW = (NW.left + NW.right) / 2,
-        LW = (NW.top + NW.bottom) / 2,
-        cW = (7.5 * iW.length + 14) / mW,
-        wW = 18 / mW,
-        tW = {
+    function qG(RR, JR, GR, yR, tR) {
+      const uR = GR[RR],
+        ZR = (uR.left + uR.right) / 2,
+        qR = (uR.top + uR.bottom) / 2,
+        iR = (7.5 * JR.length + 14) / yR,
+        fR = 18 / yR,
+        VR = {
           Above: {
-            left: PW - cW / 2,
-            top: NW.top - wW,
-            right: PW + cW / 2,
-            bottom: NW.top
+            left: ZR - iR / 2,
+            top: uR.top - fR,
+            right: ZR + iR / 2,
+            bottom: uR.top
           },
           Below: {
-            left: PW - cW / 2,
-            top: NW.bottom,
-            right: PW + cW / 2,
-            bottom: NW.bottom + wW
+            left: ZR - iR / 2,
+            top: uR.bottom,
+            right: ZR + iR / 2,
+            bottom: uR.bottom + fR
           },
           Left: {
-            left: NW.left - cW,
-            top: LW - wW / 2,
-            right: NW.left,
-            bottom: LW + wW / 2
+            left: uR.left - iR,
+            top: qR - fR / 2,
+            right: uR.left,
+            bottom: qR + fR / 2
           },
           Right: {
-            left: NW.right,
-            top: LW - wW / 2,
-            right: NW.right + cW,
-            bottom: LW + wW / 2
+            left: uR.right,
+            top: qR - fR / 2,
+            right: uR.right + iR,
+            bottom: qR + fR / 2
           }
         },
-        ZW = iO(OW, WW),
-        xW = {
+        KR = hJ(GR, RR),
+        wR = {
           left: 0,
           top: 0,
-          right: EW.width,
-          bottom: EW.height
+          right: tR.width,
+          bottom: tR.height
         };
-      return cO[(0, aW.q)(cO.map((WW => tW[WW])), ZW, {
-        bounds: xW
+      return ZG[(0, QR.o)(ZG.map((RR => VR[RR])), KR, {
+        bounds: wR
       })]
     }
 
-    function tO() {
-      const [WW, iW] = (0, GW.d)();
-      return (0, EW.useMemo)((() => ({
-        width: WW,
-        height: iW
-      })), [WW, iW])
+    function iG() {
+      const [RR, JR] = (0, YR.e)();
+      return (0, tR.useMemo)((() => ({
+        width: RR,
+        height: JR
+      })), [RR, JR])
     }
 
-    function ZO(WW) {
-      var iW;
+    function fG(RR) {
+      var JR;
       const {
-        layout: OW,
-        orientation: NW,
-        selected: PW,
-        onSelect: LW,
-        onMove: wW,
-        canMove: tW,
-        actionButtons: ZW,
-        joystickFixed: xW,
-        presence: lW,
-        keyNames: bW,
-        maxHeight: jW,
-        fill: UW = !1,
-        apiRef: kW
-      } = WW, {
-        t: sW
-      } = (0, mW.B)(), MW = tO(), SW = (null !== (iW = (0, AW.e)("maxAuraLevel")) && void 0 !== iW ? iW : 0) > 0, YW = OW.hudLayouts[NW], yW = (0, EW.useRef)(null), JW = (0, EW.useRef)(null), hW = (0, EW.useRef)(null), HW = (0, EW.useRef)(null), nW = (0, EW.useRef)(null), uW = (0, EW.useRef)(null), eW = (0, IW.d)(yW).width, vW = UW ? 1 : eW > 0 ? (0, aW.x)(eW, MW.width, MW.height, jW) : 0, gW = (0, EW.useRef)((() => !1)), DW = (0, EW.useCallback)((() => gW.current()), []), VW = `${ZW}:${xW}:${SW}`, {
-        doc: pW,
-        boxes: fW,
-        pieces: CW,
-        insets: XW,
-        keysAbove: BW,
-        ready: RW,
-        settled: GW
-      } = LO(hW, {
-        layout: OW,
-        orientation: NW,
-        viewport: MW,
-        replicaKey: VW,
-        joystickFixed: xW,
-        busy: DW
-      }), QW = (0, EW.useCallback)((WW => {
-        pW && vi(document, pW, WW, NW, xW)
-      }), [pW, NW, xW]), Wi = (0, EW.useCallback)((WW => {
-        if (!pW || !GW) return null;
-        QW(WW);
-        const iW = NO(pW),
-          OW = function(WW, iW) {
+        layout: GR,
+        orientation: uR,
+        selected: ZR,
+        onSelect: qR,
+        onMove: fR,
+        canMove: VR,
+        actionButtons: KR,
+        joystickFixed: wR,
+        presence: rR,
+        keyNames: aR,
+        maxHeight: LR,
+        fill: nR = !1,
+        apiRef: UR
+      } = RR, {
+        t: WR
+      } = (0, yR.A)(), AR = iG(), XR = (null !== (JR = (0, eR.f)("maxAuraLevel")) && void 0 !== JR ? JR : 0) > 0, MR = GR.hudLayouts[uR], BR = (0, tR.useRef)(null), pR = (0, tR.useRef)(null), gR = (0, tR.useRef)(null), bR = (0, tR.useRef)(null), vR = (0, tR.useRef)(null), OR = (0, tR.useRef)(null), DR = (0, kR.b)(BR).width, HR = nR ? 1 : DR > 0 ? (0, QR.u)(DR, AR.width, AR.height, LR) : 0, oR = (0, tR.useRef)((() => !1)), cR = (0, tR.useCallback)((() => oR.current()), []), PR = `${KR}:${wR}:${XR}`, {
+        doc: IR,
+        boxes: mR,
+        pieces: zR,
+        insets: SR,
+        keysAbove: jR,
+        ready: ER,
+        settled: YR
+      } = uG(gR, {
+        layout: GR,
+        orientation: uR,
+        viewport: AR,
+        replicaKey: PR,
+        joystickFixed: wR,
+        busy: cR
+      }), hR = (0, tR.useCallback)((RR => {
+        IR && DJ(document, IR, RR, uR, wR)
+      }), [IR, uR, wR]), RJ = (0, tR.useCallback)((RR => {
+        if (!IR || !YR) return null;
+        hR(RR);
+        const JR = yG(IR),
+          GR = function(RR, JR) {
             let {
-              boxes: OW,
-              pieces: mW,
-              pairHome: EW
-            } = WW;
-            const NW = mW.find((WW => dW.l.has(WW.id)));
-            if (!NW || !EW) return OW;
-            const PW = (0, aW.d)(EW),
-              LW = iW(NW.id),
-              cW = Bi(NW.box) / LW / 2,
-              wW = (NW.box.bottom - NW.box.top) / LW / 2;
+              boxes: GR,
+              pieces: yR,
+              pairHome: tR
+            } = RR;
+            const uR = yR.find((RR => NR.p.has(RR.id)));
+            if (!uR || !tR) return GR;
+            const ZR = (0, QR.b)(tR),
+              qR = JR(uR.id),
+              iR = zJ(uR.box) / qR / 2,
+              fR = (uR.box.bottom - uR.box.top) / qR / 2;
             return {
-              ...OW,
+              ...GR,
               inventory: {
-                left: PW.x - cW,
-                top: PW.y - wW,
-                right: PW.x + cW,
-                bottom: PW.y + wW
+                left: ZR.x - iR,
+                top: ZR.y - fR,
+                right: ZR.x + iR,
+                bottom: ZR.y + fR
               }
             }
-          }(mO(pW), (iW => (0, TW.G)(WW, NW, iW)[2]));
+          }(JG(IR), (JR => (0, lR.C)(RR, uR, JR)[2]));
         return {
-          boxes: OW,
-          keysAbove: iW,
-          shopAlone: PO(pW)
+          boxes: GR,
+          keysAbove: JR,
+          shopAlone: tG(IR)
         }
-      }), [pW, GW, QW, NW]), ii = (0, EW.useRef)(null), Oi = (0, EW.useRef)(null), mi = (0, EW.useRef)(OW);
-      mi.current = OW;
-      const Ei = (0, EW.useCallback)((() => {
-        null !== ii.current && (cancelAnimationFrame(ii.current), ii.current = null)
+      }), [IR, YR, hR, uR]), JJ = (0, tR.useRef)(null), GJ = (0, tR.useRef)(null), yJ = (0, tR.useRef)(GR);
+      yJ.current = GR;
+      const tJ = (0, tR.useCallback)((() => {
+        null !== JJ.current && (cancelAnimationFrame(JJ.current), JJ.current = null)
       }), []);
-      (0, EW.useEffect)((() => Ei), [OW, Ei]);
-      const Ni = (0, EW.useRef)(-1 / 0),
+      (0, tR.useEffect)((() => tJ), [GR, tJ]);
+      const uJ = (0, tR.useRef)(-1 / 0),
         {
-          lockable: Pi
-        } = WW,
-        Li = (0, EW.useCallback)((WW => {
-          if (QW(WW), Ni.current = performance.now(), !GW || 0 === OW.hudLayouts[NW].hudLocked.length) return;
-          const iW = OW;
-          Ei(), ii.current = requestAnimationFrame((() => {
-            var OW;
-            if (ii.current = null, mi.current !== iW) return;
-            const mW = (null === (OW = Oi.current) || void 0 === OW ? void 0 : OW.from) === iW ? Oi.current.measured : Wi(iW);
-            mW && (Oi.current = {
-              from: iW,
-              measured: mW
-            }), QW(mW ? Ri(iW, WW, NW, MW, Wi, {
-              canKeep: Pi,
+          lockable: ZJ
+        } = RR,
+        qJ = (0, tR.useCallback)((RR => {
+          if (hR(RR), uJ.current = performance.now(), !YR || 0 === GR.hudLayouts[uR].hudLocked.length) return;
+          const JR = GR;
+          tJ(), JJ.current = requestAnimationFrame((() => {
+            var GR;
+            if (JJ.current = null, yJ.current !== JR) return;
+            const yR = (null === (GR = GJ.current) || void 0 === GR ? void 0 : GR.from) === JR ? GJ.current.measured : RJ(JR);
+            yR && (GJ.current = {
+              from: JR,
+              measured: yR
+            }), hR(yR ? jJ(JR, RR, uR, AR, RJ, {
+              canKeep: ZJ,
               passes: 1,
-              before: mW
-            }) : WW)
+              before: yR
+            }) : RR)
           }))
-        }), [QW, GW, OW, NW, MW, Wi, Pi, Ei]),
-        ci = Qi({
-          preview: (WW, iW) => {
-            iW ? Li((0, TW.rb)(OW, NW, WW, iW)) : (Ei(), QW(OW))
+        }), [hR, YR, GR, uR, AR, RJ, ZJ, tJ]),
+        iJ = TJ({
+          preview: (RR, JR) => {
+            JR ? qJ((0, lR.nb)(GR, uR, RR, JR)) : (tJ(), hR(GR))
           },
-          stageRef: JW,
-          ringRef: HW,
-          centreLineRef: nW,
-          snapCentre: OW.hudSnapCentre,
-          ready: GW,
-          measure: WW => {
-            const iW = pW && RW ? mO(pW).boxes[WW] : void 0;
-            return iW && (0, aW.k)(iW, MW.width, MW.height) ? iW : null
+          stageRef: pR,
+          ringRef: bR,
+          centreLineRef: vR,
+          snapCentre: GR.hudSnapCentre,
+          ready: YR,
+          measure: RR => {
+            const JR = IR && ER ? JG(IR).boxes[RR] : void 0;
+            return JR && (0, QR.f)(JR, AR.width, AR.height) ? JR : null
           },
-          k: vW,
-          viewport: MW,
-          boxes: fW,
-          pieces: CW,
-          selected: PW,
-          insets: XW,
-          layout: YW,
-          canMove: tW,
-          onSelect: LW,
-          onMove: (WW, iW, OW) => {
-            Ei(), wW(WW, iW, OW)
+          k: HR,
+          viewport: AR,
+          boxes: mR,
+          pieces: zR,
+          selected: ZR,
+          insets: SR,
+          layout: MR,
+          canMove: VR,
+          onSelect: qR,
+          onMove: (RR, JR, GR) => {
+            tJ(), fR(RR, JR, GR)
           }
         });
-      (0, EW.useLayoutEffect)((() => {
-        gW.current = ci.busy
-      }), [ci.busy]);
-      const wi = (0, EW.useRef)([]),
-        ti = (0, EW.useRef)(YW.hudElements);
-      (0, EW.useEffect)((() => {
-        for (const EW of Object.keys(YW.hudElements)) {
-          var WW, iW, OW, mW;
-          (null !== (WW = null === (iW = YW.hudElements[EW]) || void 0 === iW ? void 0 : iW[2]) && void 0 !== WW ? WW : 1) > (null !== (OW = null === (mW = ti.current[EW]) || void 0 === mW ? void 0 : mW[2]) && void 0 !== OW ? OW : 1) && tW(EW) && !(0, zW.t)(EW, YW.hudElements[EW]) && wi.current.push(...(0, dW.I)(EW, BW, tW))
+      (0, tR.useLayoutEffect)((() => {
+        oR.current = iJ.busy
+      }), [iJ.busy]);
+      const fJ = (0, tR.useRef)([]),
+        VJ = (0, tR.useRef)(MR.hudElements);
+      (0, tR.useEffect)((() => {
+        for (const tR of Object.keys(MR.hudElements)) {
+          var RR, JR, GR, yR;
+          (null !== (RR = null === (JR = MR.hudElements[tR]) || void 0 === JR ? void 0 : JR[2]) && void 0 !== RR ? RR : 1) > (null !== (GR = null === (yR = VJ.current[tR]) || void 0 === yR ? void 0 : yR[2]) && void 0 !== GR ? GR : 1) && VR(tR) && !(0, TR.E)(tR, MR.hudElements[tR]) && fJ.current.push(...(0, NR.I)(tR, jR, VR))
         }
-        ti.current = YW.hudElements
-      }), [YW.hudElements, tW, BW]), (0, EW.useEffect)((() => {
-        if (!RW) return;
-        const WW = (0, aW.z)(MW.width, MW.height, XW);
-        for (const OW of (0, dW.G)(wi.current.splice(0), fW, WW, tW)) {
-          const mW = fW[OW];
-          if (!mW || ci.busy() || !(0, aW.k)(mW, MW.width, MW.height)) continue;
-          const EW = (0, aW.D)(mW, WW);
-          if (0 !== EW.x || 0 !== EW.y) {
-            var iW;
-            const [WW, mW] = null !== (iW = YW.hudElements[OW]) && void 0 !== iW ? iW : [0, 0];
-            wW(OW, WW + EW.x / MW.width, mW + EW.y / MW.height)
+        VJ.current = MR.hudElements
+      }), [MR.hudElements, VR, jR]), (0, tR.useEffect)((() => {
+        if (!ER) return;
+        const RR = (0, QR.y)(AR.width, AR.height, SR);
+        for (const GR of (0, NR.F)(fJ.current.splice(0), mR, RR, VR)) {
+          const yR = mR[GR];
+          if (!yR || iJ.busy() || !(0, QR.f)(yR, AR.width, AR.height)) continue;
+          const tR = (0, QR.z)(yR, RR);
+          if (0 !== tR.x || 0 !== tR.y) {
+            var JR;
+            const [RR, yR] = null !== (JR = MR.hudElements[GR]) && void 0 !== JR ? JR : [0, 0];
+            fR(GR, RR + tR.x / AR.width, yR + tR.y / AR.height)
           }
         }
-      }), [fW, RW]), (0, EW.useImperativeHandle)(kW, (() => ({
-        setScale: (WW, iW) => {
-          Li((0, TW.rb)(OW, NW, WW, {
-            scale: iW
+      }), [mR, ER]), (0, tR.useImperativeHandle)(UR, (() => ({
+        setScale: (RR, JR) => {
+          qJ((0, lR.nb)(GR, uR, RR, {
+            scale: JR
           }))
         },
-        setKeyStyle: WW => {
-          QW({
-            ...OW,
-            ...WW
+        setKeyStyle: RR => {
+          hR({
+            ...GR,
+            ...RR
           })
         },
-        keepLocks: (WW, iW) => (Ei(), Ri(WW, iW, NW, MW, Wi, {
-          canKeep: Pi
+        keepLocks: (RR, JR) => (tJ(), jJ(RR, JR, uR, AR, RJ, {
+          canKeep: ZJ
         })),
-        setSafe: WW => {
-          const iW = (0, FW.v)(WW, MW.width, MW.height, Di(null !== pW && void 0 !== pW ? pW : document));
-          Li((0, TW.xb)(OW, NW, WW)), uW.current && (uW.current.style.inset = iW.map((WW => WW * vW + "px")).join(" "))
+        setSafe: RR => {
+          const JR = (0, sR.B)(RR, AR.width, AR.height, oJ(null !== IR && void 0 !== IR ? IR : document));
+          qJ((0, lR.ub)(GR, uR, RR)), OR.current && (OR.current.style.inset = JR.map((RR => RR * HR + "px")).join(" "))
         }
-      })), [QW, Li, Wi, Ei, Pi, pW, OW, NW, MW, vW]);
-      const Zi = (0, TW.s)(YW.hudElements),
-        xi = PW ? fW[PW] : void 0,
-        li = PW ? (0, dW.y)(PW, ZW, sW, bW) : "",
-        Ai = (0, Si.g)(MW.width, MW.height),
-        bi = PW ? (0, rW.g)(PW, CW, YW, Ai) : [],
-        ji = new Set((0, zW.q)(YW.hudElements)),
-        Ui = (0, zW.E)(YW, (0, zW.C)(lW.rowIcons)).state,
-        si = bi.join(),
-        Ki = (0, EW.useRef)(WW.onReady);
-      Ki.current = WW.onReady, (0, EW.useEffect)((() => {
-        var WW;
-        null === (WW = Ki.current) || void 0 === WW || WW.call(Ki, GW)
-      }), [GW]);
-      const Yi = (0, EW.useRef)(WW.onMeasured);
-      (0, EW.useLayoutEffect)((() => {
-        Yi.current = WW.onMeasured
+      })), [hR, qJ, RJ, tJ, ZJ, IR, GR, uR, AR, HR]);
+      const KJ = (0, lR.t)(MR.hudElements),
+        wJ = ZR ? mR[ZR] : void 0,
+        rJ = ZR ? (0, NR.z)(ZR, KR, WR, aR) : "",
+        eJ = (0, XJ.d)(AR.width, AR.height),
+        aJ = ZR ? (0, FR.d)(ZR, zR, MR, eJ) : [],
+        LJ = new Set((0, TR.x)(MR.hudElements)),
+        nJ = (0, TR.M)(MR, (0, TR.L)(rR.rowIcons)).state,
+        WJ = aJ.join(),
+        CJ = (0, tR.useRef)(RR.onReady);
+      CJ.current = RR.onReady, (0, tR.useEffect)((() => {
+        var RR;
+        null === (RR = CJ.current) || void 0 === RR || RR.call(CJ, YR)
+      }), [YR]);
+      const MJ = (0, tR.useRef)(RR.onMeasured);
+      (0, tR.useLayoutEffect)((() => {
+        MJ.current = RR.onMeasured
       }));
-      const yi = (0, EW.useRef)({
+      const BJ = (0, tR.useRef)({
           layout: null,
           input: "",
           caps: {}
         }),
-        Ti = [OO(CW), MW.width, MW.height, XW.top, XW.right, XW.bottom, XW.left, RW, VW].join("|");
-      (0, EW.useEffect)((() => {
-        const WW = si ? si.split(",") : [],
-          iW = () => {
-            var iW;
-            null === (iW = Yi.current) || void 0 === iW || iW.call(Yi, fW, WW, yi.current.caps)
+        lJ = [RG(zR), AR.width, AR.height, SR.top, SR.right, SR.bottom, SR.left, ER, PR].join("|");
+      (0, tR.useEffect)((() => {
+        const RR = WJ ? WJ.split(",") : [],
+          JR = () => {
+            var JR;
+            null === (JR = MJ.current) || void 0 === JR || JR.call(MJ, mR, RR, BJ.current.caps)
           };
-        let OW;
-        const mW = () => {
-          const WW = mi.current;
-          if (!pW || WW === yi.current.layout && Ti === yi.current.input) return !1;
-          const EW = Ni.current + 250 - performance.now();
-          return WW === yi.current.layout && (EW > 0 || DW()) ? (OW = setTimeout((() => {
-            mW() && iW()
-          }), Math.max(EW, 62.5)), !1) : (yi.current = {
-            layout: WW,
-            input: Ti,
+        let GR;
+        const yR = () => {
+          const RR = yJ.current;
+          if (!IR || RR === BJ.current.layout && lJ === BJ.current.input) return !1;
+          const tR = uJ.current + 250 - performance.now();
+          return RR === BJ.current.layout && (tR > 0 || cR()) ? (GR = setTimeout((() => {
+            yR() && JR()
+          }), Math.max(tR, 62.5)), !1) : (BJ.current = {
+            layout: RR,
+            input: lJ,
             caps: {
-              hotbar: fi(pW, Mi),
-              cluster: EO(pW, (0, aW.z)(MW.width, MW.height, XW), Mi)
+              hotbar: PJ(IR, AJ),
+              cluster: GG(IR, (0, QR.y)(AR.width, AR.height, SR), AJ)
             }
           }, !0)
         };
-        return mW(), iW(), () => {
-          clearTimeout(OW)
+        return yR(), JR(), () => {
+          clearTimeout(GR)
         }
-      }), [fW, si, pW, MW, XW, Ti, DW]);
-      const Ji = WW => ({
-        left: WW.left * vW,
-        top: WW.top * vW,
-        width: (WW.right - WW.left) * vW,
-        height: (WW.bottom - WW.top) * vW
+      }), [mR, WJ, IR, AR, SR, lJ, cR]);
+      const pJ = RR => ({
+        left: RR.left * HR,
+        top: RR.top * HR,
+        width: (RR.right - RR.left) * HR,
+        height: (RR.bottom - RR.top) * HR
       });
-      return (0, KW.jsx)("div", {
-        ref: yW,
-        className: cW()("HudPreviewBox", {
-          Fill: UW
+      return (0, CR.jsx)("div", {
+        ref: BR,
+        className: iR()("HudPreviewBox", {
+          Fill: nR
         }),
         style: {
-          height: MW.height * vW
+          height: AR.height * HR
         },
-        children: (0, KW.jsxs)("div", {
-          ref: JW,
+        children: (0, CR.jsxs)("div", {
+          ref: pR,
           className: "HudPreviewStage",
           style: {
-            width: MW.width * vW,
-            height: MW.height * vW
+            width: AR.width * HR,
+            height: AR.height * HR
           },
-          children: [(0, KW.jsx)("iframe", {
-            ref: hW,
+          children: [(0, CR.jsx)("iframe", {
+            ref: gR,
             className: "HudPreviewFrame",
-            title: sW("hudLayout:preview"),
+            title: WR("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: MW.width,
-              height: MW.height,
-              transform: `scale(${vW})`
+              width: AR.width,
+              height: AR.height,
+              transform: `scale(${HR})`
             }
-          }), pW && (0, qW.createPortal)((0, KW.jsx)(ki, {
-            presence: lW,
-            portraitPhone: Ai,
-            hidden: Zi,
-            actionButtons: ZW,
-            joystickFixed: xW,
-            keysAbove: BW,
-            auraBar: SW,
-            trayState: Ui,
-            moved: ji
-          }), pW.body), (0, KW.jsxs)("div", {
+          }), IR && (0, dR.createPortal)((0, CR.jsx)(UJ, {
+            presence: rR,
+            portraitPhone: eJ,
+            hidden: KJ,
+            actionButtons: KR,
+            joystickFixed: wR,
+            keysAbove: jR,
+            auraBar: XR,
+            trayState: nJ,
+            moved: LJ
+          }), IR.body), (0, CR.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...ci.handlers,
-            children: [(0, KW.jsx)("div", {
-              ref: uW,
+            ...iJ.handlers,
+            children: [(0, CR.jsx)("div", {
+              ref: OR,
               className: "HudPreviewSafeZone",
               style: {
-                top: XW.top * vW,
-                right: XW.right * vW,
-                bottom: XW.bottom * vW,
-                left: XW.left * vW
+                top: SR.top * HR,
+                right: SR.right * HR,
+                bottom: SR.bottom * HR,
+                left: SR.left * HR
               }
-            }), CW.map(((WW, iW) => {
+            }), zR.map(((RR, JR) => {
               let {
-                id: OW,
-                box: mW
-              } = WW;
-              return (0, KW.jsx)("div", {
+                id: GR,
+                box: yR
+              } = RR;
+              return (0, CR.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: Ji((0, aW.o)(mW, 40 / vW))
-              }, `${OW}:${iW}`)
-            })), YW.hudLocked.map((WW => {
-              const iW = fW[WW];
-              return iW && (0, KW.jsx)("span", {
+                style: pJ((0, QR.n)(yR, 40 / HR))
+              }, `${GR}:${JR}`)
+            })), MR.hudLocked.map((RR => {
+              const JR = mR[RR];
+              return JR && (0, CR.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: iW.right * vW,
-                  top: iW.top * vW
+                  left: JR.right * HR,
+                  top: JR.top * HR
                 },
-                children: (0, KW.jsx)(oW.c, {
+                children: (0, CR.jsx)(xR.d, {
                   name: "lock"
                 })
-              }, WW)
-            })), (0, KW.jsx)("div", {
-              ref: nW,
+              }, RR)
+            })), (0, CR.jsx)("div", {
+              ref: vR,
               className: "HudPreviewCentreLine",
               style: {
-                left: MW.width / 2 * vW
+                left: AR.width / 2 * HR
               }
-            }), PW && xi && (0, KW.jsx)("div", {
-              ref: HW,
-              className: cW()("HudPreviewRing", {
-                Fixed: !tW(PW),
-                Overlap: bi.length > 0
+            }), ZR && wJ && (0, CR.jsx)("div", {
+              ref: bR,
+              className: iR()("HudPreviewRing", {
+                Fixed: !VR(ZR),
+                Overlap: aJ.length > 0
               }),
-              style: Ji(xi),
-              children: (0, KW.jsx)("span", {
-                className: cW()("HudPreviewRingLabel", wO(PW, li, fW, vW, MW)),
-                children: li
+              style: pJ(wJ),
+              children: (0, CR.jsx)("span", {
+                className: iR()("HudPreviewRingLabel", qG(ZR, rJ, mR, HR, AR)),
+                children: rJ
               })
             })]
           })]
@@ -2005,136 +2005,136 @@ export const modules = {
       })
     }
 
-    function xO(WW, iW) {
-      (0, EW.useEffect)((() => {
-        var OW;
-        null === (OW = WW.current) || void 0 === OW || OW.toggleAttribute("inert", iW)
-      }), [WW, iW])
+    function VG(RR, JR) {
+      (0, tR.useEffect)((() => {
+        var GR;
+        null === (GR = RR.current) || void 0 === GR || GR.toggleAttribute("inert", JR)
+      }), [RR, JR])
     }
-    const lO = "hudFullScreen";
+    const KG = "hudFullScreen";
 
-    function AO(WW) {
+    function wG(RR) {
       let {
-        onScale: iW,
-        onHidden: OW,
-        onReset: NW,
-        locked: PW,
-        lockable: LW,
-        onLocked: cW,
-        onClose: tW,
-        ...ZW
-      } = WW;
+        onScale: JR,
+        onHidden: GR,
+        onReset: uR,
+        locked: ZR,
+        lockable: qR,
+        onLocked: iR,
+        onClose: VR,
+        ...KR
+      } = RR;
       const {
-        t: xW
-      } = (0, mW.B)(), lW = (0, EW.useRef)(null);
-      (0, RW.r)("popup", lW, tW),
-      function(WW) {
-        const iW = (0, EW.useRef)(WW);
-        iW.current = WW, (0, EW.useEffect)((() => {
+        t: wR
+      } = (0, yR.A)(), rR = (0, tR.useRef)(null);
+      (0, ER.u)("popup", rR, VR),
+      function(RR) {
+        const JR = (0, tR.useRef)(RR);
+        JR.current = RR, (0, tR.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [lO]: !0
+            [KG]: !0
           }, "");
-          let WW = !1;
-          const OW = () => {
-            WW = !0, iW.current()
+          let RR = !1;
+          const GR = () => {
+            RR = !0, JR.current()
           };
-          return window.addEventListener("popstate", OW), () => {
-            var iW;
-            window.removeEventListener("popstate", OW), !WW && null !== (iW = window.history.state) && void 0 !== iW && iW[lO] && window.history.back()
+          return window.addEventListener("popstate", GR), () => {
+            var JR;
+            window.removeEventListener("popstate", GR), !RR && null !== (JR = window.history.state) && void 0 !== JR && JR[KG] && window.history.back()
           }
         }), [])
-      }(tW), (0, EW.useEffect)((() => {
-        function WW(WW) {
-          "Escape" === WW.key && (WW.stopPropagation(), tW())
+      }(VR), (0, tR.useEffect)((() => {
+        function RR(RR) {
+          "Escape" === RR.key && (RR.stopPropagation(), VR())
         }
-        return window.addEventListener("keydown", WW, !0), () => {
-          window.removeEventListener("keydown", WW, !0)
+        return window.addEventListener("keydown", RR, !0), () => {
+          window.removeEventListener("keydown", RR, !0)
         }
-      }), [tW]);
+      }), [VR]);
       const {
-        selected: AW
-      } = ZW, bW = (0, EW.useRef)(null), jW = (0, EW.useRef)(null), [UW, kW] = (0, EW.useState)(!1);
-      xO(jW, !UW);
-      const [sW, MW] = (0, EW.useState)(null), [SW, YW] = (0, EW.useState)([]), [yW, TW] = si(), JW = (0, EW.useRef)(ZW.selected);
-      JW.current = ZW.selected;
-      const hW = (0, EW.useRef)({}),
-        HW = (0, EW.useCallback)((() => {
-          const WW = bW.current;
-          WW && MW(function(WW, iW, OW) {
-            var mW;
+        selected: eR
+      } = KR, aR = (0, tR.useRef)(null), LR = (0, tR.useRef)(null), [nR, UR] = (0, tR.useState)(!1);
+      VG(LR, !nR);
+      const [WR, AR] = (0, tR.useState)(null), [XR, MR] = (0, tR.useState)([]), [BR, lR] = WJ(), pR = (0, tR.useRef)(KR.selected);
+      pR.current = KR.selected;
+      const gR = (0, tR.useRef)({}),
+        bR = (0, tR.useCallback)((() => {
+          const RR = aR.current;
+          RR && AR(function(RR, JR, GR) {
+            var yR;
             const {
-              innerWidth: EW,
-              innerHeight: NW
-            } = window, PW = WW.offsetWidth, LW = WW.offsetHeight, cW = Math.max(gi()[0], 6), wW = [];
-            for (const xW of [cW, .2 * NW, .5 * NW - LW / 2, .33 * NW])
-              for (const WW of [.5, .3, .7]) wW.push({
-                left: Math.max(0, Math.min(EW - PW - 6, Math.max(6, EW * WW - PW / 2))),
-                top: xW
+              innerWidth: tR,
+              innerHeight: uR
+            } = window, ZR = RR.offsetWidth, qR = RR.offsetHeight, iR = Math.max(HJ()[0], 6), fR = [];
+            for (const wR of [iR, .2 * uR, .5 * uR - qR / 2, .33 * uR])
+              for (const RR of [.5, .3, .7]) fR.push({
+                left: Math.max(0, Math.min(tR - ZR - 6, Math.max(6, tR * RR - ZR / 2))),
+                top: wR
               });
-            const tW = wW.map((WW => ({
-                left: WW.left - 6,
-                top: WW.top - 6,
-                right: WW.left + PW + 6,
-                bottom: WW.top + LW + 6
+            const VR = fR.map((RR => ({
+                left: RR.left - 6,
+                top: RR.top - 6,
+                right: RR.left + ZR + 6,
+                bottom: RR.top + qR + 6
               }))),
-              ZW = iO(iW, OW);
-            return wW[(0, aW.q)(tW, ZW, {
-              avoid: OW && null !== (mW = iW[OW]) && void 0 !== mW ? mW : null
+              KR = hJ(JR, GR);
+            return fR[(0, QR.o)(VR, KR, {
+              avoid: GR && null !== (yR = JR[GR]) && void 0 !== yR ? yR : null
             })]
-          }(WW, hW.current, JW.current))
+          }(RR, gR.current, pR.current))
         }), []),
-        nW = (0, EW.useCallback)(((WW, iW, OW) => {
-          YW(iW), TW(OW), hW.current = WW, HW()
-        }), [HW, TW]);
-      return (0, EW.useLayoutEffect)(HW, [ZW.selected, HW]), (0, qW.createPortal)((0, KW.jsxs)("div", {
-        ref: lW,
+        vR = (0, tR.useCallback)(((RR, JR, GR) => {
+          MR(JR), lR(GR), gR.current = RR, bR()
+        }), [bR, lR]);
+      return (0, tR.useLayoutEffect)(bR, [KR.selected, bR]), (0, dR.createPortal)((0, CR.jsxs)("div", {
+        ref: rR,
         className: "HudFullScreenEditor",
-        children: [(0, KW.jsx)(ZO, {
-          ...ZW,
+        children: [(0, CR.jsx)(fG, {
+          ...KR,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: nW,
-          onReady: kW,
-          lockable: LW
-        }), (0, KW.jsxs)("div", {
-          ref: bW,
+          onMeasured: vR,
+          onReady: UR,
+          lockable: qR
+        }), (0, CR.jsxs)("div", {
+          ref: aR,
           className: "HudFullScreenToolbar",
-          style: null === sW ? void 0 : {
-            left: sW.left,
-            top: sW.top,
+          style: null === WR ? void 0 : {
+            left: WR.left,
+            top: WR.top,
             transform: "none"
           },
-          children: [(0, KW.jsx)("div", {
-            ref: jW,
+          children: [(0, CR.jsx)("div", {
+            ref: LR,
             className: "HudFullScreenControls",
-            children: (0, KW.jsx)(Ki, {
-              selected: AW,
-              layout: ZW.layout.hudLayouts[ZW.orientation],
-              actionButtons: ZW.actionButtons,
-              keyNames: ZW.keyNames,
-              overlaps: SW,
-              scaleCaps: yW,
-              onScale: iW,
-              onHidden: OW,
-              onReset: NW,
-              locked: PW,
-              lockable: LW,
-              onLocked: cW,
-              joystickFixed: ZW.joystickFixed
+            children: (0, CR.jsx)(CJ, {
+              selected: eR,
+              layout: KR.layout.hudLayouts[KR.orientation],
+              actionButtons: KR.actionButtons,
+              keyNames: KR.keyNames,
+              overlaps: XR,
+              scaleCaps: BR,
+              onScale: JR,
+              onHidden: GR,
+              onReset: uR,
+              locked: ZR,
+              lockable: qR,
+              onLocked: iR,
+              joystickFixed: KR.joystickFixed
             })
-          }), (0, KW.jsx)(wW.f, {
+          }), (0, CR.jsx)(fR.g, {
             className: "HudFullScreenDone",
-            onClick: tW,
+            onClick: VR,
             padDefaultFocus: !0,
-            children: xW("hudLayout:done")
+            children: wR("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    var bO = OW(10158);
-    const jO = [{
-      colour: OW(3390).c,
+    var rG = GR(10273);
+    const eG = [{
+      colour: GR(3508).d,
       name: "default"
     }, {
       colour: "#e34f4f",
@@ -2159,339 +2159,339 @@ export const modules = {
       name: "black"
     }];
 
-    function UO(WW) {
+    function aG(RR) {
       let {
-        colour: iW,
-        previewApi: OW
-      } = WW;
+        colour: JR,
+        previewApi: GR
+      } = RR;
       const {
-        t: NW
-      } = (0, mW.B)(), [PW, LW] = (0, EW.useState)(null), cW = (0, EW.useRef)(null), wW = (0, EW.useRef)(), tW = (0, EW.useRef)(!1), ZW = (0, EW.useCallback)((() => {
-        clearTimeout(wW.current), null !== cW.current && ((0, TW.db)(cW.current), cW.current = null)
+        t: uR
+      } = (0, yR.A)(), [ZR, qR] = (0, tR.useState)(null), iR = (0, tR.useRef)(null), fR = (0, tR.useRef)(), VR = (0, tR.useRef)(!1), KR = (0, tR.useCallback)((() => {
+        clearTimeout(fR.current), null !== iR.current && ((0, lR.$)(iR.current), iR.current = null)
       }), []);
-      return (0, EW.useEffect)((() => ZW), [ZW]), (0, KW.jsx)(bO.b, {
-        label: NW("hudLayout:keyColour"),
-        value: null !== PW && void 0 !== PW ? PW : iW,
-        swatches: jO.map((WW => ({
-          colour: WW.colour,
-          label: NW(`hudLayout:keyColour_${WW.name}`)
+      return (0, tR.useEffect)((() => KR), [KR]), (0, CR.jsx)(rG.b, {
+        label: uR("hudLayout:keyColour"),
+        value: null !== ZR && void 0 !== ZR ? ZR : JR,
+        swatches: eG.map((RR => ({
+          colour: RR.colour,
+          label: uR(`hudLayout:keyColour_${RR.name}`)
         }))),
-        customLabel: NW("hudLayout:keyColourCustom"),
-        onChange: WW => {
-          var iW;
-          cW.current = WW, LW(WW), null === (iW = OW.current) || void 0 === iW || iW.setKeyStyle({
-            hudKeyColour: WW
-          }), clearTimeout(wW.current), wW.current = setTimeout((() => {
-            ZW(), LW(null)
-          }), 250), tW.current || (tW.current = !0, (0, YW.reportAnalyticsClick)({
+        customLabel: uR("hudLayout:keyColourCustom"),
+        onChange: RR => {
+          var JR;
+          iR.current = RR, qR(RR), null === (JR = GR.current) || void 0 === JR || JR.setKeyStyle({
+            hudKeyColour: RR
+          }), clearTimeout(fR.current), fR.current = setTimeout((() => {
+            KR(), qR(null)
+          }), 250), VR.current || (VR.current = !0, (0, MR.reportAnalyticsClick)({
             id: "hud_layout.edit",
             value: "colour"
           }))
         }
       })
     }
-    const kO = WW => `${Math.round(100*WW)}%`;
+    const LG = RR => `${Math.round(100*RR)}%`;
 
-    function sO(WW) {
+    function nG(RR) {
       let {
-        info: iW,
-        tuple: OW,
-        props: EW
-      } = WW;
+        info: JR,
+        tuple: GR,
+        props: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, mW.B)();
-      return (0, KW.jsx)(lW.k, {
-        name: NW("hudLayout:size"),
-        min: TW.j,
-        max: TW.h,
-        step: Mi,
-        initValue: OW[2],
-        disabled: EW.locked.has(iW.id),
-        selectableMax: EW.scaleCaps[iW.id],
-        cappedNote: NW("hudLayout:sizeCapped"),
-        format: kO,
-        onChange: WW => {
-          EW.onScalePreview(iW.id, WW)
+        t: uR
+      } = (0, yR.A)();
+      return (0, CR.jsx)(rR.i, {
+        name: uR("hudLayout:size"),
+        min: lR.m,
+        max: lR.i,
+        step: AJ,
+        initValue: GR[2],
+        disabled: tR.locked.has(JR.id),
+        selectableMax: tR.scaleCaps[JR.id],
+        cappedNote: uR("hudLayout:sizeCapped"),
+        format: LG,
+        onChange: RR => {
+          tR.onScalePreview(JR.id, RR)
         },
-        onChangeComplete: WW => {
-          EW.onScale(iW.id, WW)
+        onChangeComplete: RR => {
+          tR.onScale(JR.id, RR)
         }
       })
     }
 
-    function MO(WW) {
+    function UG(RR) {
       const {
-        t: iW
-      } = (0, mW.B)(), {
-        present: OW,
-        elements: NW,
-        selected: PW,
-        onSelect: LW,
-        onHidden: wW,
-        onReset: tW,
-        note: ZW,
-        actionButtons: xW,
-        keyNames: lW,
-        sizeBesidePreview: AW,
-        locked: bW,
-        lockable: jW,
-        onLocked: UW
-      } = WW, {
-        rowIconsOpen: kW,
-        onRowIconsOpen: sW
-      } = WW, MW = (0, EW.useRef)(null), SW = null !== PW && (kW || !(0, TW.X)(PW));
-      return (0, EW.useEffect)((() => {
-        var WW;
-        const iW = PW ? null === (WW = MW.current) || void 0 === WW ? void 0 : WW.querySelector(`[data-hud-row="${PW}"]`) : null;
-        if (!iW) return;
-        const OW = iW.closest(".SettingsMenuRight"),
-          mW = performance.now();
-        let EW = null;
-        const NW = () => {
-            clearInterval(cW), null === OW || void 0 === OW || OW.removeEventListener("scroll", LW)
+        t: JR
+      } = (0, yR.A)(), {
+        present: GR,
+        elements: uR,
+        selected: ZR,
+        onSelect: qR,
+        onHidden: fR,
+        onReset: VR,
+        note: KR,
+        actionButtons: wR,
+        keyNames: rR,
+        sizeBesidePreview: eR,
+        locked: aR,
+        lockable: LR,
+        onLocked: nR
+      } = RR, {
+        rowIconsOpen: UR,
+        onRowIconsOpen: WR
+      } = RR, AR = (0, tR.useRef)(null), XR = null !== ZR && (UR || !(0, lR.S)(ZR));
+      return (0, tR.useEffect)((() => {
+        var RR;
+        const JR = ZR ? null === (RR = AR.current) || void 0 === RR ? void 0 : RR.querySelector(`[data-hud-row="${ZR}"]`) : null;
+        if (!JR) return;
+        const GR = JR.closest(".SettingsMenuRight"),
+          yR = performance.now();
+        let tR = null;
+        const uR = () => {
+            clearInterval(iR), null === GR || void 0 === GR || GR.removeEventListener("scroll", qR)
           },
-          LW = () => {
-            ai() || NW()
+          qR = () => {
+            YJ() || uR()
           },
-          cW = setInterval((() => {
-            const WW = performance.now();
-            WW - mW > 1500 ? NW() : ai() ? EW = null : null === EW ? EW = WW : WW - EW >= 150 && (NW(), function(WW) {
-              var iW;
-              const OW = WW.closest(".SettingsMenuRight"),
-                mW = null === (iW = WW.closest(".HudLayoutSettings")) || void 0 === iW ? void 0 : iW.querySelector(".HudLayoutPreviewBox");
-              if (!OW || !mW) return;
-              const EW = mW.getBoundingClientRect().bottom + 8,
-                NW = OW.getBoundingClientRect().bottom - 8,
-                PW = WW.getBoundingClientRect();
-              PW.top < EW ? OW.scrollBy({
-                top: PW.top - EW,
+          iR = setInterval((() => {
+            const RR = performance.now();
+            RR - yR > 1500 ? uR() : YJ() ? tR = null : null === tR ? tR = RR : RR - tR >= 150 && (uR(), function(RR) {
+              var JR;
+              const GR = RR.closest(".SettingsMenuRight"),
+                yR = null === (JR = RR.closest(".HudLayoutSettings")) || void 0 === JR ? void 0 : JR.querySelector(".HudLayoutPreviewBox");
+              if (!GR || !yR) return;
+              const tR = yR.getBoundingClientRect().bottom + 8,
+                uR = GR.getBoundingClientRect().bottom - 8,
+                ZR = RR.getBoundingClientRect();
+              ZR.top < tR ? GR.scrollBy({
+                top: ZR.top - tR,
                 behavior: "smooth"
-              }) : PW.bottom > NW && OW.scrollBy({
-                top: Math.min(PW.bottom - NW, PW.top - EW),
+              }) : ZR.bottom > uR && GR.scrollBy({
+                top: Math.min(ZR.bottom - uR, ZR.top - tR),
                 behavior: "smooth"
               })
-            }(iW))
+            }(JR))
           }), 50);
-        return null === OW || void 0 === OW || OW.addEventListener("scroll", LW, {
+        return null === GR || void 0 === GR || GR.addEventListener("scroll", qR, {
           passive: !0
-        }), NW
-      }), [PW, SW]), (0, KW.jsx)("div", {
-        ref: MW,
+        }), uR
+      }), [ZR, XR]), (0, CR.jsx)("div", {
+        ref: AR,
         className: "SettingBoxGroup HudElementList",
-        children: dW.j.filter((WW => OW.has(WW.id) && (kW || !(0, TW.X)(WW.id)))).map((OW => {
-          const mW = (0, TW.H)(NW, OW.id),
-            EW = (0, TW.w)(NW, OW.id),
-            MW = OW.id === PW,
-            SW = OW.scale && !AW,
-            YW = ZW(OW.id, MW);
-          return (0, KW.jsxs)("div", {
-            "data-hud-row": OW.id,
-            className: cW()("SettingBox HudElementRow", {
-              Open: MW,
-              Hidden: EW,
-              Child: void 0 !== OW.parent,
-              Grandchild: (0, dW.t)(OW.id).length > 1
+        children: NR.m.filter((RR => GR.has(RR.id) && (UR || !(0, lR.S)(RR.id)))).map((GR => {
+          const yR = (0, lR.G)(uR, GR.id),
+            tR = (0, lR.u)(uR, GR.id),
+            AR = GR.id === ZR,
+            XR = GR.scale && !eR,
+            MR = KR(GR.id, AR);
+          return (0, CR.jsxs)("div", {
+            "data-hud-row": GR.id,
+            className: iR()("SettingBox HudElementRow", {
+              Open: AR,
+              Hidden: tR,
+              Child: void 0 !== GR.parent,
+              Grandchild: (0, NR.u)(GR.id).length > 1
             }),
-            children: [(0, KW.jsxs)("div", {
+            children: [(0, CR.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, KW.jsx)("button", {
+              children: [(0, CR.jsx)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": SW ? MW : void 0,
+                "aria-expanded": XR ? AR : void 0,
                 onClick: () => {
-                  LW(OW.id)
+                  qR(GR.id)
                 },
-                children: (0, KW.jsxs)("span", {
+                children: (0, CR.jsxs)("span", {
                   className: "HudElementRowLabel",
-                  children: [(0, dW.y)(OW.id, xW, iW, lW), OW.scale && 1 !== mW[2] && !(MW && SW) && (0, KW.jsxs)(KW.Fragment, {
-                    children: [" ", (0, KW.jsx)("span", {
+                  children: [(0, NR.z)(GR.id, wR, JR, rR), GR.scale && 1 !== yR[2] && !(AR && XR) && (0, CR.jsxs)(CR.Fragment, {
+                    children: [" ", (0, CR.jsx)("span", {
                       className: "HudElementRowSize",
-                      children: kO(mW[2])
+                      children: LG(yR[2])
                     })]
-                  }), SW && (0, KW.jsxs)(KW.Fragment, {
-                    children: [" ", (0, KW.jsx)("span", {
+                  }), XR && (0, CR.jsxs)(CR.Fragment, {
+                    children: [" ", (0, CR.jsx)("span", {
                       className: "HudElementRowChevron",
                       children: "\u25be"
                     })]
                   })]
                 })
-              }), (0, KW.jsx)(DW, {
+              }), (0, CR.jsx)(cR, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: OW.id,
-                actionButtons: xW,
-                keyNames: lW,
-                locked: bW.has(OW.id),
-                lockable: jW(OW.id),
-                onLocked: UW
-              }), "menu" === OW.id && (0, KW.jsx)(VW, {
+                id: GR.id,
+                actionButtons: wR,
+                keyNames: rR,
+                locked: aR.has(GR.id),
+                lockable: LR(GR.id),
+                onLocked: nR
+              }), "menu" === GR.id && (0, CR.jsx)(PR, {
                 className: "HudElementRowIcon",
-                open: kW,
-                name: (0, dW.y)(OW.id, xW, iW, lW),
-                onToggle: sW
-              }), "menu" !== OW.id && (0, KW.jsx)(vW, {
+                open: UR,
+                name: (0, NR.z)(GR.id, wR, JR, rR),
+                onToggle: WR
+              }), "menu" !== GR.id && (0, CR.jsx)(HR, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: OW.id,
-                elements: NW,
-                actionButtons: xW,
-                keyNames: lW,
-                onHidden: wW
-              }), (0, KW.jsx)(gW, {
+                id: GR.id,
+                elements: uR,
+                actionButtons: wR,
+                keyNames: rR,
+                onHidden: fR
+              }), (0, CR.jsx)(oR, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: bW.has(OW.id),
-                id: OW.id,
-                elements: NW,
-                actionButtons: xW,
-                keyNames: lW,
-                onReset: tW
+                locked: aR.has(GR.id),
+                id: GR.id,
+                elements: uR,
+                actionButtons: wR,
+                keyNames: rR,
+                onReset: VR
               })]
-            }), MW && SW && (0, KW.jsx)(sO, {
-              info: OW,
-              tuple: mW,
-              props: WW
-            }), YW && (0, KW.jsx)("div", {
+            }), AR && XR && (0, CR.jsx)(nG, {
+              info: GR,
+              tuple: yR,
+              props: RR
+            }), MR && (0, CR.jsx)("div", {
               className: "HudElementNote",
-              children: YW
+              children: MR
             })]
-          }, OW.id)
+          }, GR.id)
         }))
       })
     }
 
-    function KO(WW) {
+    function WG(RR) {
       let {
-        preview: iW,
-        quick: OW,
-        onFullScreen: NW,
-        resting: PW,
-        onSidePanel: LW
-      } = WW;
+        preview: JR,
+        quick: GR,
+        onFullScreen: uR,
+        resting: ZR,
+        onSidePanel: qR
+      } = RR;
       const {
-        t: cW
-      } = (0, mW.B)(), tW = tO(), ZW = (0, EW.useRef)(null), {
-        width: xW
-      } = (0, IW.d)(ZW), lW = Math.floor(tW.width * Math.min(1, iW.maxHeight / tW.height)), AW = xW - lW - 12, bW = AW >= 130, jW = xW > 0;
-      (0, EW.useEffect)((() => {
-        jW && LW(bW)
-      }), [jW, bW, LW]);
-      const UW = (0, aW.x)(bW ? lW : xW, tW.width, tW.height, iW.maxHeight),
-        kW = PW ? (0, KW.jsx)("div", {
+        t: iR
+      } = (0, yR.A)(), VR = iG(), KR = (0, tR.useRef)(null), {
+        width: wR
+      } = (0, kR.b)(KR), rR = Math.floor(VR.width * Math.min(1, JR.maxHeight / VR.height)), eR = wR - rR - 12, aR = eR >= 130, LR = wR > 0;
+      (0, tR.useEffect)((() => {
+        LR && qR(aR)
+      }), [LR, aR, qR]);
+      const nR = (0, QR.u)(aR ? rR : wR, VR.width, VR.height, JR.maxHeight),
+        UR = ZR ? (0, CR.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: tW.height * UW
+            height: VR.height * nR
           }
-        }) : (0, KW.jsx)(ZO, {
-          ...iW
+        }) : (0, CR.jsx)(fG, {
+          ...JR
         }),
-        sW = WW => (0, KW.jsxs)(wW.Z, {
+        WR = RR => (0, CR.jsxs)(fR.U, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: cW("hudLayout:fullScreen"),
+          ariaLabel: iR("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: NW,
-          children: [(0, KW.jsx)(oW.c, {
+          onClick: uR,
+          children: [(0, CR.jsx)(xR.d, {
             name: "expand"
-          }), WW && (0, KW.jsx)("span", {
-            children: cW("hudLayout:fullScreen")
+          }), RR && (0, CR.jsx)("span", {
+            children: iR("hudLayout:fullScreen")
           })]
         });
-      return (0, KW.jsxs)("div", {
-        ref: ZW,
+      return (0, CR.jsxs)("div", {
+        ref: KR,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [xW > 0 && bW && (0, KW.jsxs)("div", {
+        children: [wR > 0 && aR && (0, CR.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             style: {
-              width: lW
+              width: rR
             },
-            children: kW
-          }), (0, KW.jsx)("div", {
+            children: UR
+          }), (0, CR.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, KW.jsx)(Ki, {
-              selected: iW.selected,
-              ...OW,
-              joystickFixed: iW.joystickFixed,
-              extra: sW(!iW.selected || AW >= 278)
+            children: (0, CR.jsx)(CJ, {
+              selected: JR.selected,
+              ...GR,
+              joystickFixed: JR.joystickFixed,
+              extra: WR(!JR.selected || eR >= 278)
             })
           })]
-        }), xW > 0 && !bW && (0, KW.jsxs)(KW.Fragment, {
-          children: [kW, (0, KW.jsx)("div", {
+        }), wR > 0 && !aR && (0, CR.jsxs)(CR.Fragment, {
+          children: [UR, (0, CR.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: sW(!1)
+            children: WR(!1)
           })]
         })]
       })
     }
-    var SO = OW(5115),
-      YO = OW(3375),
-      yO = OW(3314);
-    const TO = WW => {
-      const iW = FW.l * ("sides" === WW ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(iW / 2))
+    var AG = GR(5210),
+      CG = GR(3502),
+      XG = GR(3447);
+    const MG = RR => {
+      const JR = sR.t * ("sides" === RR ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(JR / 2))
     };
 
-    function JO(WW, iW, OW) {
-      const [mW, EW, NW, PW] = WW;
-      return "sides" === iW ? [mW, OW, NW, OW] : [OW, EW, OW, PW]
+    function BG(RR, JR, GR) {
+      const [yR, tR, uR, ZR] = RR;
+      return "sides" === JR ? [yR, GR, uR, GR] : [GR, tR, GR, ZR]
     }
-    const hO = [null, null, null, null],
-      HO = WW => `${WW}px`;
+    const lG = [null, null, null, null],
+      pG = RR => `${RR}px`;
 
-    function nO(WW) {
+    function gG(RR) {
       let {
-        safe: iW,
-        onPreview: OW,
-        onCommit: NW
-      } = WW;
+        safe: JR,
+        onPreview: GR,
+        onCommit: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, mW.B)(), LW = (0, FW.v)(null !== iW && void 0 !== iW ? iW : hO, window.innerWidth, window.innerHeight, Di(document).map(Math.round)), cW = (0, EW.useRef)(null !== iW && void 0 !== iW ? iW : hO);
-      cW.current = null !== iW && void 0 !== iW ? iW : hO;
-      const tW = WW => {
-        const iW = Math.min(TO(WW), "sides" === WW ? Math.max(LW[1], LW[3]) : Math.max(LW[0], LW[2]));
-        return (0, KW.jsx)(lW.k, {
-          name: PW("sides" === WW ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: ZR
+      } = (0, yR.A)(), qR = (0, sR.B)(null !== JR && void 0 !== JR ? JR : lG, window.innerWidth, window.innerHeight, oJ(document).map(Math.round)), iR = (0, tR.useRef)(null !== JR && void 0 !== JR ? JR : lG);
+      iR.current = null !== JR && void 0 !== JR ? JR : lG;
+      const VR = RR => {
+        const JR = Math.min(MG(RR), "sides" === RR ? Math.max(qR[1], qR[3]) : Math.max(qR[0], qR[2]));
+        return (0, CR.jsx)(rR.i, {
+          name: ZR("sides" === RR ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: TO(WW),
+          max: MG(RR),
           step: 2,
-          initValue: iW,
-          format: HO,
-          onChange: iW => {
-            OW(JO(cW.current, WW, iW))
+          initValue: JR,
+          format: pG,
+          onChange: JR => {
+            GR(BG(iR.current, RR, JR))
           },
-          onChangeComplete: mW => {
-            if (mW === iW) return void OW(cW.current);
-            const EW = JO(cW.current, WW, mW);
-            cW.current = EW, NW(EW), (0, YW.reportAnalyticsClick)({
+          onChangeComplete: yR => {
+            if (yR === JR) return void GR(iR.current);
+            const tR = BG(iR.current, RR, yR);
+            iR.current = tR, uR(tR), (0, MR.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: WW
+              value: RR
             })
           }
         })
       };
-      return (0, KW.jsxs)("div", {
+      return (0, CR.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, KW.jsx)("div", {
-            children: PW("hudLayout:safeZone")
-          }), (0, KW.jsx)(wW.Z, {
-            active: null === iW,
-            pressed: null === iW,
+          children: [(0, CR.jsx)("div", {
+            children: ZR("hudLayout:safeZone")
+          }), (0, CR.jsx)(fR.U, {
+            active: null === JR,
+            pressed: null === JR,
             onClick: () => {
-              NW(null)
+              uR(null)
             },
-            children: PW("hudLayout:safeZoneAuto")
+            children: ZR("hudLayout:safeZoneAuto")
           })]
-        }), tW("sides"), tW("ends")]
+        }), VR("sides"), VR("ends")]
       })
     }
-    const uO = {
+    const bG = {
       cluster: "hudLayout:clusterNote",
       inventory: "hudLayout:inventoryNote",
       menu: "hudLayout:menuNote",
@@ -2502,864 +2502,864 @@ export const modules = {
       drop: "hudLayout:dropNote"
     };
 
-    function oO() {
+    function vG() {
       const {
-        t: WW
-      } = (0, mW.B)(), iW = (0, TW.qb)(), {
-        clientEscMenuOptions: OW
-      } = (0, tW.p)(["clientEscMenuOptions"]), NW = (0, JW.f)(), PW = iW.hudLayouts[NW], [LW, cW] = (0, EW.useState)(null), {
-        rowIconsOpen: ZW,
-        onRowIconsOpen: xW,
-        select: AW
-      } = function(WW, iW) {
-        const [OW, mW] = (0, EW.useState)((() => TW.L.some((iW => void 0 !== WW.hudElements[iW] || WW.hudLocked.includes(iW))))), NW = (0, EW.useCallback)((WW => {
-          iW(WW), (0, TW.X)(WW) && mW(!0)
-        }), [iW]);
+        t: RR
+      } = (0, yR.A)(), JR = (0, lR.kb)(), {
+        clientEscMenuOptions: GR
+      } = (0, VR.o)(["clientEscMenuOptions"]), uR = (0, pR.h)(), ZR = JR.hudLayouts[uR], [qR, iR] = (0, tR.useState)(null), {
+        rowIconsOpen: KR,
+        onRowIconsOpen: wR,
+        select: eR
+      } = function(RR, JR) {
+        const [GR, yR] = (0, tR.useState)((() => lR.H.some((JR => void 0 !== RR.hudElements[JR] || RR.hudLocked.includes(JR))))), uR = (0, tR.useCallback)((RR => {
+          JR(RR), (0, lR.S)(RR) && yR(!0)
+        }), [JR]);
         return {
-          rowIconsOpen: OW,
-          onRowIconsOpen: mW,
-          select: NW
+          rowIconsOpen: GR,
+          onRowIconsOpen: yR,
+          select: uR
         }
-      }(PW, cW), [bW, jW] = (0, EW.useState)([]), [UW, kW] = (0, EW.useState)(null), [sW, MW] = si(), SW = (0, EW.useCallback)(((WW, iW, OW) => {
-        jW(iW), MW(OW);
-        const mW = Object.keys(WW);
-        kW((WW => (null === WW || void 0 === WW ? void 0 : WW.size) === mW.length && mW.every((iW => WW.has(iW))) ? WW : new Set(mW)))
-      }), [MW]), {
-        gameState: yW
-      } = (0, tW.p)(["gameState"]), hW = (0, YO.m)(), nW = (0, yO.q)(), [uW] = (0, EW.useState)((() => {
-        var WW, iW, OW, mW;
-        return "inGame" === yW ? (0, ii.u)(document, hW, {
-          rightOfCamera: null !== (WW = null === (iW = nW.rightOfCamera) || void 0 === iW ? void 0 : iW.icon) && void 0 !== WW ? WW : null,
-          leftEnd: null !== (OW = null === (mW = nW.leftEnd) || void 0 === mW ? void 0 : mW.icon) && void 0 !== OW ? OW : null
-        }) : ii.e
-      })), oW = (0, EW.useRef)(null), eW = (0, EW.useRef)(null), vW = function(WW) {
-        const [iW, OW] = (0, EW.useState)((() => .4 * window.innerHeight));
-        return (0, EW.useLayoutEffect)((() => {
-          var iW;
-          const mW = null === (iW = WW.current) || void 0 === iW ? void 0 : iW.closest(".SettingsMenuRight");
-          if (!mW) return;
-          const EW = () => {
-            const WW = mW.clientHeight < dO ? .4 : .5;
-            OW(Math.max(80, mW.clientHeight * WW - 24))
+      }(ZR, iR), [aR, LR] = (0, tR.useState)([]), [nR, UR] = (0, tR.useState)(null), [WR, AR] = WJ(), XR = (0, tR.useCallback)(((RR, JR, GR) => {
+        LR(JR), AR(GR);
+        const yR = Object.keys(RR);
+        UR((RR => (null === RR || void 0 === RR ? void 0 : RR.size) === yR.length && yR.every((JR => RR.has(JR))) ? RR : new Set(yR)))
+      }), [AR]), {
+        gameState: BR
+      } = (0, VR.o)(["gameState"]), gR = (0, CG.i)(), vR = (0, XG.m)(), [OR] = (0, tR.useState)((() => {
+        var RR, JR, GR, yR;
+        return "inGame" === BR ? (0, JJ.v)(document, gR, {
+          rightOfCamera: null !== (RR = null === (JR = vR.rightOfCamera) || void 0 === JR ? void 0 : JR.icon) && void 0 !== RR ? RR : null,
+          leftEnd: null !== (GR = null === (yR = vR.leftEnd) || void 0 === yR ? void 0 : yR.icon) && void 0 !== GR ? GR : null
+        }) : JJ.c
+      })), xR = (0, tR.useRef)(null), DR = (0, tR.useRef)(null), HR = function(RR) {
+        const [JR, GR] = (0, tR.useState)((() => .4 * window.innerHeight));
+        return (0, tR.useLayoutEffect)((() => {
+          var JR;
+          const yR = null === (JR = RR.current) || void 0 === JR ? void 0 : JR.closest(".SettingsMenuRight");
+          if (!yR) return;
+          const tR = () => {
+            const RR = yR.clientHeight < OG ? .4 : .5;
+            GR(Math.max(80, yR.clientHeight * RR - 24))
           };
-          EW();
-          const NW = new ResizeObserver(EW);
-          return NW.observe(mW), () => {
-            NW.disconnect()
+          tR();
+          const uR = new ResizeObserver(tR);
+          return uR.observe(yR), () => {
+            uR.disconnect()
           }
-        }), [WW]), iW
-      }(eW), gW = (0, SO.p)(OW.joystickMode), DW = OW.touchActionButtons, VW = (0, EW.useMemo)((() => (0, ii.t)(uW, DW)), [uW, DW]), pW = (0, EW.useMemo)((() => new Set((0, ii.s)(uW, DW).map((WW => ii.h[WW])))), [uW, DW]);
-      (0, EW.useEffect)((() => {
-        (0, YW.reportAnalyticsClick)({
+        }), [RR]), JR
+      }(DR), oR = (0, AG.q)(GR.joystickMode), cR = GR.touchActionButtons, PR = (0, tR.useMemo)((() => (0, JJ.u)(OR, cR)), [OR, cR]), IR = (0, tR.useMemo)((() => new Set((0, JJ.s)(OR, cR).map((RR => JJ.g[RR])))), [OR, cR]);
+      (0, tR.useEffect)((() => {
+        (0, MR.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [fW, CW] = (0, EW.useState)(!1), [qW, RW] = (0, EW.useState)(!1), GW = (0, EW.useRef)(null);
-      xO(GW, !qW);
-      const [IW, aW] = (0, EW.useState)(!1), rW = (0, EW.useCallback)((() => {
-        aW(!1)
-      }), []), FW = (0, EW.useMemo)((() => new Set(PW.hudLocked)), [PW.hudLocked]), QW = WW => {
-        var iW, OW;
-        const mW = (0, TW.o)(),
-          EW = WW(mW);
-        (0, TW.nb)(null !== (iW = null === (OW = oW.current) || void 0 === OW ? void 0 : OW.keepLocks(mW, EW)) && void 0 !== iW ? iW : EW)
-      }, Wi = (WW, iW) => {
-        QW((OW => (0, TW.rb)(OW, NW, WW, iW)))
-      }, Oi = (WW, iW, OW) => {
-        Wi(WW, {
-          dx: iW,
-          dy: OW
-        }), (0, YW.reportAnalyticsClick)({
+      const [mR, zR] = (0, tR.useState)(!1), [dR, ER] = (0, tR.useState)(!1), YR = (0, tR.useRef)(null);
+      VG(YR, !dR);
+      const [kR, QR] = (0, tR.useState)(!1), FR = (0, tR.useCallback)((() => {
+        QR(!1)
+      }), []), sR = (0, tR.useMemo)((() => new Set(ZR.hudLocked)), [ZR.hudLocked]), hR = RR => {
+        var JR, GR;
+        const yR = (0, lR.q)(),
+          tR = RR(yR);
+        (0, lR.gb)(null !== (JR = null === (GR = xR.current) || void 0 === GR ? void 0 : GR.keepLocks(yR, tR)) && void 0 !== JR ? JR : tR)
+      }, RJ = (RR, JR) => {
+        hR((GR => (0, lR.nb)(GR, uR, RR, JR)))
+      }, GJ = (RR, JR, GR) => {
+        RJ(RR, {
+          dx: JR,
+          dy: GR
+        }), (0, MR.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${WW}`
+          value: `move:${RR}`
         })
-      }, mi = (WW, iW) => {
-        QW((OW => (0, TW.ub)(OW, NW, WW, iW)))
-      }, Ei = WW => {
-        const iW = dW.i[WW];
-        return (iW.move || iW.scale) && ("joystick" !== WW || gW) && !(0, zW.t)(WW, PW.hudElements[WW])
-      }, Ni = WW => dW.i[WW].move && ("joystick" !== WW || gW) && !FW.has(WW), Pi = new Set(dW.j.map((WW => WW.id)).filter((WW => {
-        const iW = (0, TW.X)(WW) && !uW.rowIcons.includes(WW) || TW.A[WW].hiddenByDefault && !(0, ii.p)(uW, WW);
-        return null === UW || UW.has(WW) || (0, TW.w)(PW.hudElements, WW) && !iW
-      }))), Li = {
-        present: Pi,
-        actionButtons: DW,
-        keyNames: VW,
-        scaleCaps: sW,
-        sizeBesidePreview: fW,
-        elements: PW.hudElements,
-        selected: LW,
-        onSelect: AW,
-        rowIconsOpen: ZW,
-        onRowIconsOpen: xW,
-        onScalePreview: (WW, iW) => {
-          var OW;
-          null === (OW = oW.current) || void 0 === OW || OW.setScale(WW, iW)
+      }, yJ = (RR, JR) => {
+        hR((GR => (0, lR.rb)(GR, uR, RR, JR)))
+      }, tJ = RR => {
+        const JR = NR.i[RR];
+        return (JR.move || JR.scale) && ("joystick" !== RR || oR) && !(0, TR.E)(RR, ZR.hudElements[RR])
+      }, uJ = RR => NR.i[RR].move && ("joystick" !== RR || oR) && !sR.has(RR), ZJ = new Set(NR.m.map((RR => RR.id)).filter((RR => {
+        const JR = (0, lR.S)(RR) && !OR.rowIcons.includes(RR) || lR.y[RR].hiddenByDefault && !(0, JJ.r)(OR, RR);
+        return null === nR || nR.has(RR) || (0, lR.u)(ZR.hudElements, RR) && !JR
+      }))), qJ = {
+        present: ZJ,
+        actionButtons: cR,
+        keyNames: PR,
+        scaleCaps: WR,
+        sizeBesidePreview: mR,
+        elements: ZR.hudElements,
+        selected: qR,
+        onSelect: eR,
+        rowIconsOpen: KR,
+        onRowIconsOpen: wR,
+        onScalePreview: (RR, JR) => {
+          var GR;
+          null === (GR = xR.current) || void 0 === GR || GR.setScale(RR, JR)
         },
-        onScale: (WW, iW) => {
-          Wi(WW, {
-            scale: iW
-          }), (0, YW.reportAnalyticsClick)({
+        onScale: (RR, JR) => {
+          RJ(RR, {
+            scale: JR
+          }), (0, MR.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${WW}`
+            value: `size:${RR}`
           })
         },
-        onHidden: (WW, iW) => {
-          Wi(WW, {
-            hidden: iW
-          }), (0, YW.reportAnalyticsClick)({
+        onHidden: (RR, JR) => {
+          RJ(RR, {
+            hidden: JR
+          }), (0, MR.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${iW?"hide":"show"}:${WW}`
+            value: `${JR?"hide":"show"}:${RR}`
           })
         },
-        onReset: WW => {
-          Wi(WW, TW.c)
+        onReset: RR => {
+          RJ(RR, lR.d)
         },
-        locked: FW,
-        lockable: Ei,
-        onLocked: mi,
-        note: (iW, OW) => {
-          const mW = OW && bW.length > 0 ? WW("hudLayout:overlapsNote", {
-            names: (0, dW.w)(bW, DW, WW, VW)
+        locked: sR,
+        lockable: tJ,
+        onLocked: yJ,
+        note: (JR, GR) => {
+          const yR = GR && aR.length > 0 ? RR("hudLayout:overlapsNote", {
+            names: (0, NR.x)(aR, cR, RR, PR)
           }) : null;
-          if (OW && XW(iW, gW)) return (0, KW.jsxs)(KW.Fragment, {
-            children: [mW && (0, KW.jsx)("span", {
-              children: mW
-            }), (0, KW.jsx)("span", {
-              children: WW("hudLayout:floatingJoystickNote")
-            }), !fW && (0, KW.jsx)(BW, {})]
+          if (GR && SR(JR, oR)) return (0, CR.jsxs)(CR.Fragment, {
+            children: [yR && (0, CR.jsx)("span", {
+              children: yR
+            }), (0, CR.jsx)("span", {
+              children: RR("hudLayout:floatingJoystickNote")
+            }), !mR && (0, CR.jsx)(jR, {})]
           });
-          if (mW) return mW;
-          const EW = OW && FW.has(iW) ? WW("hudLayout:lockedNote") : null,
-            NW = OW && pW.has(iW) ? WW("hudLayout:contextSlotNote") : null;
-          if (EW || NW) return (0, KW.jsxs)(KW.Fragment, {
-            children: [EW && (0, KW.jsx)("span", {
-              children: EW
-            }), NW && (0, KW.jsx)("span", {
-              children: NW
+          if (yR) return yR;
+          const tR = GR && sR.has(JR) ? RR("hudLayout:lockedNote") : null,
+            uR = GR && IR.has(JR) ? RR("hudLayout:contextSlotNote") : null;
+          if (tR || uR) return (0, CR.jsxs)(CR.Fragment, {
+            children: [tR && (0, CR.jsx)("span", {
+              children: tR
+            }), uR && (0, CR.jsx)("span", {
+              children: uR
             })]
           });
-          if (OW && (0, zW.t)(iW, PW.hudElements[iW]) && Ni(iW)) return WW("hudLayout:rowIconNote");
-          const LW = uO[iW];
-          return OW && LW ? WW(LW) : (0, dW.C)(iW) && (0, TW.w)(PW.hudElements, iW) ? WW("hudLayout:inventoryHiddenNote", {
-            name: (0, dW.y)(iW, DW, WW, VW)
+          if (GR && (0, TR.E)(JR, ZR.hudElements[JR]) && uJ(JR)) return RR("hudLayout:rowIconNote");
+          const qR = bG[JR];
+          return GR && qR ? RR(qR) : (0, NR.C)(JR) && (0, lR.u)(ZR.hudElements, JR) ? RR("hudLayout:inventoryHiddenNote", {
+            name: (0, NR.z)(JR, cR, RR, PR)
           }) : null
         }
       };
-      return (0, KW.jsxs)("div", {
-        ref: eW,
+      return (0, CR.jsxs)("div", {
+        ref: DR,
         className: "HudLayoutSettings",
-        children: [(0, KW.jsxs)("div", {
-          ref: GW,
+        children: [(0, CR.jsxs)("div", {
+          ref: YR,
           className: "HudLayoutBody",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: WW("landscape" === NW ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, KW.jsx)(KO, {
+            children: RR("landscape" === uR ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, CR.jsx)(WG, {
             preview: {
-              layout: iW,
-              orientation: NW,
-              selected: LW,
-              onSelect: AW,
-              onMove: Oi,
-              canMove: Ni,
-              actionButtons: DW,
-              joystickFixed: gW,
-              presence: uW,
-              keyNames: VW,
-              maxHeight: vW,
-              apiRef: oW,
-              onMeasured: SW,
-              onReady: RW,
-              lockable: Ei
+              layout: JR,
+              orientation: uR,
+              selected: qR,
+              onSelect: eR,
+              onMove: GJ,
+              canMove: uJ,
+              actionButtons: cR,
+              joystickFixed: oR,
+              presence: OR,
+              keyNames: PR,
+              maxHeight: HR,
+              apiRef: xR,
+              onMeasured: XR,
+              onReady: ER,
+              lockable: tJ
             },
             quick: {
-              layout: PW,
-              actionButtons: DW,
-              keyNames: VW,
-              scaleCaps: sW,
-              overlaps: bW,
-              onScale: Li.onScale,
-              onHidden: Li.onHidden,
-              onReset: Li.onReset,
-              locked: FW,
-              lockable: Ei,
-              onLocked: mi
+              layout: ZR,
+              actionButtons: cR,
+              keyNames: PR,
+              scaleCaps: WR,
+              overlaps: aR,
+              onScale: qJ.onScale,
+              onHidden: qJ.onHidden,
+              onReset: qJ.onReset,
+              locked: sR,
+              lockable: tJ,
+              onLocked: yJ
             },
             onFullScreen: () => {
-              aW(!0)
+              QR(!0)
             },
-            resting: IW,
-            onSidePanel: CW
-          }), IW && (0, KW.jsx)(AO, {
-            layout: iW,
-            orientation: NW,
-            selected: LW,
-            onSelect: AW,
-            onMove: Oi,
-            canMove: Ni,
-            actionButtons: DW,
-            joystickFixed: gW,
-            presence: uW,
-            keyNames: VW,
-            onScale: Li.onScale,
-            onHidden: Li.onHidden,
-            onReset: Li.onReset,
-            locked: FW,
-            lockable: Ei,
-            onLocked: mi,
-            apiRef: oW,
-            onClose: rW
-          }), (0, KW.jsx)(nO, {
-            safe: PW.hudSafe,
-            onCommit: WW => {
-              QW((iW => (0, TW.xb)(iW, NW, WW)))
+            resting: kR,
+            onSidePanel: zR
+          }), kR && (0, CR.jsx)(wG, {
+            layout: JR,
+            orientation: uR,
+            selected: qR,
+            onSelect: eR,
+            onMove: GJ,
+            canMove: uJ,
+            actionButtons: cR,
+            joystickFixed: oR,
+            presence: OR,
+            keyNames: PR,
+            onScale: qJ.onScale,
+            onHidden: qJ.onHidden,
+            onReset: qJ.onReset,
+            locked: sR,
+            lockable: tJ,
+            onLocked: yJ,
+            apiRef: xR,
+            onClose: FR
+          }), (0, CR.jsx)(gG, {
+            safe: ZR.hudSafe,
+            onCommit: RR => {
+              hR((JR => (0, lR.ub)(JR, uR, RR)))
             },
-            onPreview: WW => {
-              var iW;
-              null === (iW = oW.current) || void 0 === iW || iW.setSafe(WW)
+            onPreview: RR => {
+              var JR;
+              null === (JR = xR.current) || void 0 === JR || JR.setSafe(RR)
             }
-          }), (0, KW.jsx)(lW.e, {
-            label: WW("hudLayout:snapCentre"),
-            checked: iW.hudSnapCentre,
-            onClick: WW => {
-              (0, TW.lb)(WW)
+          }), (0, CR.jsx)(rR.e, {
+            label: RR("hudLayout:snapCentre"),
+            checked: JR.hudSnapCentre,
+            onClick: RR => {
+              (0, lR.cb)(RR)
             },
-            circleInfoText: WW("hudLayout:snapCentreInfo")
-          }), (0, KW.jsx)(MO, {
-            ...Li
-          }), (0, KW.jsx)(lW.h, {
-            label: WW("hudLayout:shape"),
-            options: TW.P.map((iW => ({
-              value: iW,
-              label: WW(`hudLayout:shape_${iW}`)
+            circleInfoText: RR("hudLayout:snapCentreInfo")
+          }), (0, CR.jsx)(UG, {
+            ...qJ
+          }), (0, CR.jsx)(rR.g, {
+            label: RR("hudLayout:shape"),
+            options: lR.I.map((JR => ({
+              value: JR,
+              label: RR(`hudLayout:shape_${JR}`)
             }))),
-            value: iW.hudShape,
-            onChange: WW => {
-              QW((iW => ({
-                ...iW,
-                hudShape: WW
-              }))), (0, YW.reportAnalyticsClick)({
+            value: JR.hudShape,
+            onChange: RR => {
+              hR((JR => ({
+                ...JR,
+                hudShape: RR
+              }))), (0, MR.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: WW
+                value: RR
               })
             }
-          }), (0, KW.jsx)(lW.k, {
-            name: WW("hudLayout:opacity"),
-            min: TW.e,
+          }), (0, CR.jsx)(rR.i, {
+            name: RR("hudLayout:opacity"),
+            min: lR.f,
             max: 1,
             step: .05,
-            initValue: iW.hudKeyOpacity,
-            format: WW => `${Math.round(100*WW)}%`,
-            circleInfoText: WW("hudLayout:opacityInfo"),
-            onChange: WW => {
-              var iW;
-              null === (iW = oW.current) || void 0 === iW || iW.setKeyStyle({
-                hudKeyOpacity: WW
+            initValue: JR.hudKeyOpacity,
+            format: RR => `${Math.round(100*RR)}%`,
+            circleInfoText: RR("hudLayout:opacityInfo"),
+            onChange: RR => {
+              var JR;
+              null === (JR = xR.current) || void 0 === JR || JR.setKeyStyle({
+                hudKeyOpacity: RR
               })
             },
-            onChangeComplete: WW => {
-              (0, TW.hb)(WW), (0, YW.reportAnalyticsClick)({
+            onChangeComplete: RR => {
+              (0, lR.ab)(RR), (0, MR.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
-          }), (0, KW.jsx)(UO, {
-            colour: iW.hudKeyColour,
-            previewApi: oW
+          }), (0, CR.jsx)(aG, {
+            colour: JR.hudKeyColour,
+            previewApi: xR
           })]
-        }), (0, KW.jsx)(wW.O, {
+        }), (0, CR.jsx)(fR.M, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const WW = HW.NotificationProvider.showPromptPopup({
+              const RR = bR.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await WW.getResult() && (0, TW.Z)()
+              !0 === await RR.getResult() && (0, lR.V)()
             }()
           },
-          children: WW("hudLayout:resetAll")
+          children: RR("hudLayout:resetAll")
         })]
       })
     }
-    const dO = 350;
-    const eO = [function() {
+    const OG = 350;
+    const xG = [function() {
       const {
-        t: WW
-      } = (0, mW.B)(), [iW, OW] = (0, EW.useState)(!1), NW = (0, EW.useRef)(null);
-      return (0, EW.useEffect)((() => {
-        var WW;
-        iW && (null === (WW = NW.current) || void 0 === WW || WW.scrollIntoView({
+        t: RR
+      } = (0, yR.A)(), [JR, GR] = (0, tR.useState)(!1), uR = (0, tR.useRef)(null);
+      return (0, tR.useEffect)((() => {
+        var RR;
+        JR && (null === (RR = uR.current) || void 0 === RR || RR.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [iW]), (0, KW.jsxs)("div", {
+      }), [JR]), (0, CR.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, KW.jsx)(nW.e, {
-          ref: NW,
+        children: [(0, CR.jsx)(vR.b, {
+          ref: uR,
           icon: "arrows-up-down-left-right",
-          title: WW("hudLayout:title"),
-          sub: WW("hudLayout:entrySub"),
-          expanded: iW,
+          title: RR("hudLayout:title"),
+          sub: RR("hudLayout:entrySub"),
+          expanded: JR,
           onClick: () => {
-            OW(!iW)
+            GR(!JR)
           }
-        }), iW && (0, KW.jsx)(oO, {})]
+        }), JR && (0, CR.jsx)(vG, {})]
       })
     }, function() {
       const {
-        t: WW
-      } = (0, mW.B)(), {
-        gameState: iW
-      } = (0, tW.p)(["gameState"]), OW = (0, yW.j)((0, AW.e)("runningSpeed"), (0, AW.e)("walkingSpeed")), EW = !(0, TW.w)((0, JW.e)().hudElements, "sprint");
-      return "inGame" !== iW || OW ? (0, KW.jsx)(lW.e, {
-        label: WW("touchSettings:sprintKey"),
-        checked: EW,
-        onClick: WW => {
-          (0, TW.$)("sprint", !WW), (0, YW.reportAnalyticsClick)({
+        t: RR
+      } = (0, yR.A)(), {
+        gameState: JR
+      } = (0, VR.o)(["gameState"]), GR = (0, BR.l)((0, eR.f)("runningSpeed"), (0, eR.f)("walkingSpeed")), tR = !(0, lR.u)((0, pR.e)().hudElements, "sprint");
+      return "inGame" !== JR || GR ? (0, CR.jsx)(rR.e, {
+        label: RR("touchSettings:sprintKey"),
+        checked: tR,
+        onClick: RR => {
+          (0, lR.Z)("sprint", !RR), (0, MR.reportAnalyticsClick)({
             id: "touch_settings.sprint_key",
-            value: WW ? "show" : "hide"
+            value: RR ? "show" : "hide"
           })
         },
-        circleInfoText: WW("touchSettings:sprintKeyInfo")
+        circleInfoText: RR("touchSettings:sprintKeyInfo")
       }) : null
     }, function() {
       const {
-        t: WW
-      } = (0, mW.B)(), {
-        joystickMode: iW,
-        touchSpeedCurve: OW,
-        autorun: EW,
-        jumpLock: NW,
-        touchEdgeGuard: PW
-      } = (0, tW.p)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, KW.jsxs)(KW.Fragment, {
-        children: [(0, KW.jsx)(lW.h, {
-          label: WW("settingsMenu:joystick"),
-          options: MW.Db.map((iW => ({
-            value: iW,
-            label: WW(SW[iW])
+        t: RR
+      } = (0, yR.A)(), {
+        joystickMode: JR,
+        touchSpeedCurve: GR,
+        autorun: tR,
+        jumpLock: uR,
+        touchEdgeGuard: ZR
+      } = (0, VR.o)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, CR.jsxs)(CR.Fragment, {
+        children: [(0, CR.jsx)(rR.g, {
+          label: RR("settingsMenu:joystick"),
+          options: AR.ub.map((JR => ({
+            value: JR,
+            label: RR(XR[JR])
           }))),
-          value: iW,
-          onChange: WW => {
-            tW.d.setClientEscMenuOptions({
-              joystickMode: WW
+          value: JR,
+          onChange: RR => {
+            VR.d.setClientEscMenuOptions({
+              joystickMode: RR
             })
           },
-          circleInfoText: WW("settingsMenu:joystickInfo")
-        }), (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:preciseWalking"),
-          checked: OW,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              touchSpeedCurve: WW
+          circleInfoText: RR("settingsMenu:joystickInfo")
+        }), (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:preciseWalking"),
+          checked: GR,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              touchSpeedCurve: RR
             })
           },
-          circleInfoText: WW("settingsMenu:preciseWalkingInfo")
-        }), (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:autoRun"),
-          checked: EW,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              autorun: WW
+          circleInfoText: RR("settingsMenu:preciseWalkingInfo")
+        }), (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:autoRun"),
+          checked: tR,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              autorun: RR
             })
           },
-          circleInfoText: WW("settingsMenu:autoRunInfo")
-        }), (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:jumpLock"),
-          checked: NW,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              jumpLock: WW
+          circleInfoText: RR("settingsMenu:autoRunInfo")
+        }), (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:jumpLock"),
+          checked: uR,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              jumpLock: RR
             })
           },
-          circleInfoText: WW("settingsMenu:jumpLockInfo")
-        }), (0, KW.jsx)(lW.e, {
-          label: WW("touchSettings:stopAtEdges"),
-          checked: PW,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              touchEdgeGuard: WW
+          circleInfoText: RR("settingsMenu:jumpLockInfo")
+        }), (0, CR.jsx)(rR.e, {
+          label: RR("touchSettings:stopAtEdges"),
+          checked: ZR,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              touchEdgeGuard: RR
             })
           },
-          circleInfoText: WW("touchSettings:stopAtEdgesInfo")
+          circleInfoText: RR("touchSettings:stopAtEdgesInfo")
         })]
       })
     }, function() {
-      return (0, KW.jsx)(sW.c, {})
+      return (0, CR.jsx)(WR.c, {})
     }, function() {
       const {
-        t: WW
-      } = (0, mW.B)(), {
-        clientEscMenuOptions: iW
-      } = (0, tW.p)(["clientEscMenuOptions"]);
-      return (0, hW.c)() ? (0, KW.jsx)(lW.e, {
-        label: WW("settingsMenu:vibration"),
-        checked: iW.vibration,
-        onClick: WW => {
-          tW.d.setClientEscMenuOptions({
-            vibration: WW
+        t: RR
+      } = (0, yR.A)(), {
+        clientEscMenuOptions: JR
+      } = (0, VR.o)(["clientEscMenuOptions"]);
+      return (0, gR.b)() ? (0, CR.jsx)(rR.e, {
+        label: RR("settingsMenu:vibration"),
+        checked: JR.vibration,
+        onClick: RR => {
+          VR.d.setClientEscMenuOptions({
+            vibration: RR
           })
         },
-        circleInfoText: WW("settingsMenu:vibrationInfo")
+        circleInfoText: RR("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function vO() {
-      return (0, KW.jsx)(KW.Fragment, {
-        children: eO.map(((WW, iW) => (0, KW.jsx)(WW, {}, iW)))
+    function NG() {
+      return (0, CR.jsx)(CR.Fragment, {
+        children: xG.map(((RR, JR) => (0, CR.jsx)(RR, {}, JR)))
       })
     }
-    var gO = OW(10020),
-      DO = OW(10011),
-      VO = OW(1782);
+    var DG = GR(10136),
+      HG = GR(10127),
+      oG = GR(1867);
 
-    function pO() {
+    function cG() {
       const {
-        t: WW
-      } = (0, mW.B)(), iW = (0, gO.m)(), OW = DO.f.filter((WW => void 0 !== iW[WW])).length;
-      return (0, KW.jsx)("div", {
+        t: RR
+      } = (0, yR.A)(), JR = (0, DG.r)(), GR = HG.e.filter((RR => void 0 !== JR[RR])).length;
+      return (0, CR.jsx)("div", {
         className: "ControlsContainer QuickChatPhrasesSection",
-        children: (0, KW.jsxs)(BO, {
-          title: WW("quickChat:settingsTitle"),
+        children: (0, CR.jsxs)(zG, {
+          title: RR("quickChat:settingsTitle"),
           defaultOpen: !1,
-          children: [DO.f.map(((WW, OW) => (0, KW.jsx)(fO, {
-            phraseKey: WW,
-            number: OW + 1,
-            custom: iW[WW]
-          }, WW))), OW > 1 && (0, KW.jsx)(wW.O, {
+          children: [HG.e.map(((RR, GR) => (0, CR.jsx)(PG, {
+            phraseKey: RR,
+            number: GR + 1,
+            custom: JR[RR]
+          }, RR))), GR > 1 && (0, CR.jsx)(fR.M, {
             className: "QuickChatPhrasesResetAll",
-            onClick: gO.g,
-            children: WW("quickChat:resetAll")
+            onClick: DG.f,
+            children: RR("quickChat:resetAll")
           })]
         })
       })
     }
 
-    function fO(WW) {
+    function PG(RR) {
       let {
-        phraseKey: iW,
-        number: OW,
-        custom: NW
-      } = WW;
+        phraseKey: JR,
+        number: GR,
+        custom: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, mW.B)(), LW = PW(iW), cW = null !== NW && void 0 !== NW ? NW : LW, tW = (0, EW.useRef)(null);
-      return (0, EW.useEffect)((() => {
-        const WW = tW.current;
+        t: ZR
+      } = (0, yR.A)(), qR = ZR(JR), iR = null !== uR && void 0 !== uR ? uR : qR, VR = (0, tR.useRef)(null);
+      return (0, tR.useEffect)((() => {
+        const RR = VR.current;
         return () => {
-          var OW;
-          WW && (null !== (OW = (0, gO.e)()[iW]) && void 0 !== OW ? OW : LW) === cW && (0, gO.l)(iW, WW.value, LW)
+          var GR;
+          RR && (null !== (GR = (0, DG.d)()[JR]) && void 0 !== GR ? GR : qR) === iR && (0, DG.n)(JR, RR.value, qR)
         }
-      }), [iW, LW, cW]), (0, KW.jsxs)("div", {
+      }), [JR, qR, iR]), (0, CR.jsxs)("div", {
         className: "ControlRow QuickChatPhraseRow",
-        children: [(0, KW.jsx)(VO.b, {
-          domRef: tW,
+        children: [(0, CR.jsx)(oG.b, {
+          domRef: VR,
           className: "QuickChatPhraseInput",
-          defaultValue: cW,
-          maxLength: Wi.Uc,
-          ariaLabel: PW("quickChat:phraseNumber", {
-            number: OW
+          defaultValue: iR,
+          maxLength: RJ.Yc,
+          ariaLabel: ZR("quickChat:phraseNumber", {
+            number: GR
           }),
           onEnter: () => {
-            var WW;
-            null === (WW = tW.current) || void 0 === WW || WW.blur()
+            var RR;
+            null === (RR = VR.current) || void 0 === RR || RR.blur()
           },
           onBlur: () => {
-            var WW;
-            const OW = tW.current;
-            OW && ((0, gO.l)(iW, OW.value, LW), OW.value = null !== (WW = (0, gO.e)()[iW]) && void 0 !== WW ? WW : LW)
+            var RR;
+            const GR = VR.current;
+            GR && ((0, DG.n)(JR, GR.value, qR), GR.value = null !== (RR = (0, DG.d)()[JR]) && void 0 !== RR ? RR : qR)
           }
-        }, cW), (0, KW.jsx)(wW.Z, {
+        }, iR), (0, CR.jsx)(fR.U, {
           className: "QuickChatPhraseReset",
-          disabled: void 0 === NW,
-          ariaLabel: PW("quickChat:resetPhrase", {
-            number: OW
+          disabled: void 0 === uR,
+          ariaLabel: ZR("quickChat:resetPhrase", {
+            number: GR
           }),
           onClick: () => {
-            (0, gO.j)(iW)
+            (0, DG.j)(JR)
           },
-          children: (0, KW.jsx)(oW.c, {
+          children: (0, CR.jsx)(xR.d, {
             name: "rotate-left"
           })
         })]
       })
     }
-    var CO = OW(5049);
+    var IG = GR(5145);
 
-    function XO() {
+    function mG() {
       const {
-        t: WW
-      } = (0, mW.B)(), {
-        isTouchScreen: iW,
-        clientEscMenuOptions: OW,
-        gameState: PW
-      } = (0, tW.p)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), LW = (0, AW.e)("ezBridging"), cW = (0, AW.e)("ezTowering"), jW = "inGame" !== PW || !0 === LW, UW = (0, bW.e)(), sW = null !== UW && ("inGame" !== PW || !0 === cW), [, MW] = (0, EW.useReducer)((WW => WW + 1), 0), SW = (0, kW.d)(), [YW, yW] = (0, EW.useState)(CO.h);
-      return (0, KW.jsxs)("div", {
+        t: RR
+      } = (0, yR.A)(), {
+        isTouchScreen: JR,
+        clientEscMenuOptions: GR,
+        gameState: ZR
+      } = (0, VR.o)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), qR = (0, eR.f)("ezBridging"), iR = (0, eR.f)("ezTowering"), LR = "inGame" !== ZR || !0 === qR, nR = (0, aR.e)(), WR = null !== nR && ("inGame" !== ZR || !0 === iR), [, AR] = (0, tR.useReducer)((RR => RR + 1), 0), XR = (0, UR.f)(), [MR, BR] = (0, tR.useState)(IG.d);
+      return (0, CR.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [SW && (0, KW.jsxs)("div", {
+        children: [XR && (0, CR.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, KW.jsx)("div", {
-            children: WW("controller:settingsControlsNote")
-          }), (0, KW.jsx)(wW.Z, {
+          children: [(0, CR.jsx)("div", {
+            children: RR("controller:settingsControlsNote")
+          }), (0, CR.jsx)(fR.U, {
             onClick: () => {
-              tW.d.set({
+              VR.d.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: WW("controller:settingsOpenController")
+            children: RR("controller:settingsOpenController")
           })]
-        }), (0, ZW.isTouchscreen)() && !(0, ZW.isMobile)() ? (0, KW.jsx)(KW.Fragment, {
-          children: (0, KW.jsx)(lW.e, {
-            label: WW("settingsMenu:useTouchControls"),
-            checked: YW,
-            onClick: WW => {
-              (0, CO.e)(WW), yW(WW)
+        }), (0, KR.isTouchscreen)() && !(0, KR.isMobile)() ? (0, CR.jsx)(CR.Fragment, {
+          children: (0, CR.jsx)(rR.e, {
+            label: RR("settingsMenu:useTouchControls"),
+            checked: MR,
+            onClick: RR => {
+              (0, IG.b)(RR), BR(RR)
             }
           })
-        }) : null, iW && (0, KW.jsx)(vO, {}), (iW || SW) && (0, KW.jsx)(pO, {}), jW && (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:ezBridging"),
-          checked: OW.ezBridging,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              ezBridging: WW
+        }) : null, JR && (0, CR.jsx)(NG, {}), (JR || XR) && (0, CR.jsx)(cG, {}), LR && (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:ezBridging"),
+          checked: GR.ezBridging,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              ezBridging: RR
             })
           },
-          circleInfoText: WW("settingsMenu:ezBridgingInfo")
-        }), sW && (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:ezTowering"),
-          checked: OW.ezTowering,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              ezTowering: WW
+          circleInfoText: RR("settingsMenu:ezBridgingInfo")
+        }), WR && (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:ezTowering"),
+          checked: GR.ezTowering,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              ezTowering: RR
             })
           },
-          circleInfoText: WW("jump" === UW ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:crouchToggle"),
-          checked: OW.crouchIsToggle,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              crouchIsToggle: WW
+          circleInfoText: RR("jump" === nR ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
+        }), (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:crouchToggle"),
+          checked: GR.crouchIsToggle,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              crouchIsToggle: RR
             })
           },
-          circleInfoText: WW("settingsMenu:crouchToggleInfo")
-        }), (0, KW.jsx)(lW.e, {
-          label: WW("settingsMenu:hideUiToggle"),
-          checked: OW.hideUiIsToggle,
-          onClick: WW => {
-            tW.d.setClientEscMenuOptions({
-              hideUiIsToggle: WW
+          circleInfoText: RR("settingsMenu:crouchToggleInfo")
+        }), (0, CR.jsx)(rR.e, {
+          label: RR("settingsMenu:hideUiToggle"),
+          checked: GR.hideUiIsToggle,
+          onClick: RR => {
+            VR.d.setClientEscMenuOptions({
+              hideUiIsToggle: RR
             })
           },
-          circleInfoText: WW("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, xW.d)() && (0, KW.jsx)(lW.k, {
-          name: WW("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: RR("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, wR.c)() && (0, CR.jsx)(rR.i, {
+          name: RR("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: OW.touchscreenSensitivity,
-          onChange: WW => {
-            tW.d.setClientEscMenuOptions({
-              touchscreenSensitivity: WW
+          initValue: GR.touchscreenSensitivity,
+          onChange: RR => {
+            VR.d.setClientEscMenuOptions({
+              touchscreenSensitivity: RR
             })
           }
-        }), !(0, ZW.isMobile)() && (0, KW.jsx)(lW.k, {
-          name: WW("settingsMenu:mouseSensitivity"),
+        }), !(0, KR.isMobile)() && (0, CR.jsx)(rR.i, {
+          name: RR("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: OW.mouseSensitivity,
-          onChange: WW => {
-            tW.d.setClientEscMenuOptions({
-              mouseSensitivity: WW
+          initValue: GR.mouseSensitivity,
+          onChange: RR => {
+            VR.d.setClientEscMenuOptions({
+              mouseSensitivity: RR
             })
           }
-        }), !(0, ZW.isMobile)() && (0, KW.jsxs)("div", {
+        }), !(0, KR.isMobile)() && (0, CR.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "SliderText",
-            children: WW("settingsMenu:keyBindings")
-          }), NW.c.map((iW => (0, KW.jsx)(BO, {
-            title: WW(iW.name.translationKey, iW.name.params),
-            defaultOpen: NW.g.has(iW.id),
-            children: iW.actions.map((WW => (0, KW.jsx)(qO, {
-              noaAction: WW,
-              forceUpdate: MW,
-              clashesWith: iW.clashesWith,
-              showPadGlyph: SW
-            }, WW)))
-          }, iW.name.translationKey))), (0, KW.jsx)(wW.O, {
+            children: RR("settingsMenu:keyBindings")
+          }), uR.e.map((JR => (0, CR.jsx)(zG, {
+            title: RR(JR.name.translationKey, JR.name.params),
+            defaultOpen: uR.g.has(JR.id),
+            children: JR.actions.map((RR => (0, CR.jsx)(SG, {
+              noaAction: RR,
+              forceUpdate: AR,
+              clashesWith: JR.clashesWith,
+              showPadGlyph: XR
+            }, RR)))
+          }, JR.name.translationKey))), (0, CR.jsx)(fR.M, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, NW.I)(), MW()
+              (0, uR.C)(), AR()
             },
-            children: WW("controls:resetBindings")
+            children: RR("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function BO(WW) {
+    function zG(RR) {
       let {
-        title: iW,
-        defaultOpen: OW,
-        children: mW
-      } = WW;
-      const [NW, PW] = (0, EW.useState)(OW);
-      return (0, KW.jsxs)("div", {
-        className: cW()("ControlsSection", {
-          Collapsed: !NW
+        title: JR,
+        defaultOpen: GR,
+        children: yR
+      } = RR;
+      const [uR, ZR] = (0, tR.useState)(GR);
+      return (0, CR.jsxs)("div", {
+        className: iR()("ControlsSection", {
+          Collapsed: !uR
         }),
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            PW(!NW)
+            ZR(!uR)
           },
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: iW
-          }), (0, KW.jsx)("div", {
+            children: JR
+          }), (0, CR.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), NW && (0, KW.jsx)("div", {
+        }), uR && (0, CR.jsx)("div", {
           className: "ControlsSectionRows",
-          children: mW
+          children: yR
         })]
       })
     }
 
-    function qO(WW) {
+    function SG(RR) {
       let {
-        noaAction: iW,
-        forceUpdate: OW,
-        clashesWith: LW,
-        showPadGlyph: tW
-      } = WW;
+        noaAction: JR,
+        forceUpdate: GR,
+        clashesWith: qR,
+        showPadGlyph: VR
+      } = RR;
       const {
-        t: ZW
-      } = (0, mW.B)(), xW = (0, UW.c)(iW), [lW, AW] = (0, EW.useState)(!1), [bW, kW] = (0, EW.useState)("controls:clickToEnterNewBinding"), [sW, MW] = (0, EW.useState)(null), [SW, YW] = (0, EW.useState)(null), yW = (0, EW.useRef)(null);
-      (0, EW.useEffect)((() => {
-        lW && yW.current && yW.current.focus()
-      }), [lW]);
-      const TW = NW.v[iW].filter((WW => PW.h[WW]));
-      let JW = null;
-      const hW = [],
-        HW = LW.flatMap((WW => {
-          var iW, OW;
-          return null !== (iW = null === (OW = NW.c.find((iW => iW.id === WW))) || void 0 === OW ? void 0 : OW.actions) && void 0 !== iW ? iW : []
+        t: KR
+      } = (0, yR.A)(), wR = (0, nR.c)(JR), [rR, eR] = (0, tR.useState)(!1), [aR, UR] = (0, tR.useState)("controls:clickToEnterNewBinding"), [WR, AR] = (0, tR.useState)(null), [XR, MR] = (0, tR.useState)(null), BR = (0, tR.useRef)(null);
+      (0, tR.useEffect)((() => {
+        rR && BR.current && BR.current.focus()
+      }), [rR]);
+      const lR = uR.t[JR].filter((RR => ZR.f[RR]));
+      let pR = null;
+      const gR = [],
+        bR = qR.flatMap((RR => {
+          var JR, GR;
+          return null !== (JR = null === (GR = uR.e.find((JR => JR.id === RR))) || void 0 === GR ? void 0 : GR.actions) && void 0 !== JR ? JR : []
         }));
-      for (const mW of HW) {
-        if (mW === iW) continue;
-        const WW = NW.v[mW];
-        for (const iW of WW) TW.includes(iW) && hW.push(ZW(NW.x[mW].translationKey, NW.x[mW].params))
+      for (const yR of bR) {
+        if (yR === JR) continue;
+        const RR = uR.t[yR];
+        for (const JR of RR) lR.includes(JR) && gR.push(KR(uR.w[yR].translationKey, uR.w[yR].params))
       }
-      hW.length > 0 && (JW = ZW("controls:sharedBindingsWarning") + " ", JW += hW.join(", "));
-      const nW = () => {
-          AW(!1), MW(null), kW("controls:clickToEnterNewBinding"), YW(null)
+      gR.length > 0 && (pR = KR("controls:sharedBindingsWarning") + " ", pR += gR.join(", "));
+      const vR = () => {
+          eR(!1), AR(null), UR("controls:clickToEnterNewBinding"), MR(null)
         },
-        uW = () => "BindingInput_" + iW;
-      return (0, KW.jsxs)("div", {
-        className: cW()("ControlRow", {
-          WarningBorder: null !== JW
+        OR = () => "BindingInput_" + JR;
+      return (0, CR.jsxs)("div", {
+        className: iR()("ControlRow", {
+          WarningBorder: null !== pR
         }),
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, KW.jsxs)("div", {
+          children: [(0, CR.jsxs)("div", {
             className: "ControlName",
-            children: [ZW(NW.x[iW].translationKey, NW.x[iW].params), tW && xW && (0, KW.jsx)(jW.e, {
-              glyph: xW,
+            children: [KR(uR.w[JR].translationKey, uR.w[JR].params), VR && wR && (0, CR.jsx)(LR.e, {
+              glyph: wR,
               className: "ControlPadGlyph"
             })]
-          }), (0, KW.jsxs)("div", {
+          }), (0, CR.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, KW.jsxs)("div", {
+            children: [(0, CR.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [TW.map((WW => (0, KW.jsxs)("div", {
+              children: [lR.map((RR => (0, CR.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, KW.jsx)("div", {
-                  children: (0, NW.m)(WW)
-                }), (0, KW.jsx)("div", {
+                children: [(0, CR.jsx)("div", {
+                  children: (0, uR.m)(RR)
+                }), (0, CR.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const mW = (0, NW.B)(iW, WW);
-                    mW.isError() ? YW(mW.asError().message) : YW(null), OW()
+                    const yR = (0, uR.x)(JR, RR);
+                    yR.isError() ? MR(yR.asError().message) : MR(null), GR()
                   },
                   children: "\xd7"
                 })]
-              }, WW))), !lW && (0, KW.jsx)("div", {
+              }, RR))), !rR && (0, CR.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  AW(!0), YW(null)
+                  eR(!0), MR(null)
                 },
-                children: (0, KW.jsx)("div", {
+                children: (0, CR.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), lW && (0, KW.jsxs)("div", {
+            }), rR && (0, CR.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, KW.jsxs)("div", {
+              children: [(0, CR.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, KW.jsx)("div", {
+                children: [(0, CR.jsx)("div", {
                   className: "InputOverlay",
-                  children: sW ? (0, NW.m)(sW) : (0, KW.jsx)("div", {
+                  children: WR ? (0, uR.m)(WR) : (0, CR.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: ZW(bW)
+                    children: KR(aR)
                   })
-                }), (0, KW.jsx)("input", {
-                  ref: yW,
-                  id: uW(),
+                }), (0, CR.jsx)("input", {
+                  ref: BR,
+                  id: OR(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: WW => {
-                    if ("Escape" === WW.code) return nW(), WW.preventDefault(), void WW.stopPropagation();
-                    const iW = WW.code;
-                    PW.e.includes(iW) ? (YW(null), MW(iW)) : (YW("controls:keyIsReserved"), MW(null)), WW.preventDefault(), WW.stopPropagation()
+                  onKeyDown: RR => {
+                    if ("Escape" === RR.code) return vR(), RR.preventDefault(), void RR.stopPropagation();
+                    const JR = RR.code;
+                    ZR.c.includes(JR) ? (MR(null), AR(JR)) : (MR("controls:keyIsReserved"), AR(null)), RR.preventDefault(), RR.stopPropagation()
                   },
-                  onMouseDown: WW => {
-                    const iW = "Mouse" + (WW.button + 1);
-                    document.activeElement && document.activeElement.id === uW() ? PW.e.includes(iW) ? (YW(null), MW(iW)) : (YW("controls:keyIsReserved"), MW(null)) : kW("controls:enterNewBinding"), WW.stopPropagation()
+                  onMouseDown: RR => {
+                    const JR = "Mouse" + (RR.button + 1);
+                    document.activeElement && document.activeElement.id === OR() ? ZR.c.includes(JR) ? (MR(null), AR(JR)) : (MR("controls:keyIsReserved"), AR(null)) : UR("controls:enterNewBinding"), RR.stopPropagation()
                   },
                   onBlur: () => {
-                    kW("controls:clickToEnterNewBinding")
+                    UR("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, KW.jsx)(wW.f, {
-                onPointerDown: WW => {
-                  WW.preventDefault()
+              }), (0, CR.jsx)(fR.g, {
+                onPointerDown: RR => {
+                  RR.preventDefault()
                 },
                 onClick: () => {
-                  (0, NW.b)(iW, sW), OW(), nW()
+                  (0, uR.d)(JR, WR), GR(), vR()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === sW,
-                children: ZW("general:add")
-              }), (0, KW.jsx)("div", {
+                disabled: null === WR,
+                children: KR("general:add")
+              }), (0, CR.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  nW()
+                  vR()
                 },
                 children: "\xd7"
               })]
-            }), SW && (0, KW.jsx)("div", {
+            }), XR && (0, CR.jsx)("div", {
               className: "ControlBindingError",
-              children: ZW(SW)
+              children: KR(XR)
             })]
           })]
-        }), JW && (0, KW.jsx)("div", {
+        }), pR && (0, CR.jsx)("div", {
           className: "ControlRowWarning",
-          children: JW
+          children: pR
         })]
       })
     }
   },
-  10122: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW
+  10241: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR
     });
-    var mW = OW(62),
-      EW = OW(1391),
-      NW = OW(1283);
-    const PW = (0, mW.forwardRef)((function(WW, iW) {
+    var yR = GR(66),
+      tR = GR(1468),
+      uR = GR(1378);
+    const ZR = (0, yR.forwardRef)((function(RR, JR) {
       let {
-        icon: OW,
-        title: mW,
-        sub: PW,
-        expanded: LW,
-        onClick: cW
-      } = WW;
-      return (0, NW.jsxs)("button", {
-        ref: iW,
+        icon: GR,
+        title: yR,
+        sub: ZR,
+        expanded: qR,
+        onClick: iR
+      } = RR;
+      return (0, uR.jsxs)("button", {
+        ref: JR,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": LW,
-        onClick: cW,
-        children: [(0, NW.jsx)(EW.c, {
-          name: OW,
+        "aria-expanded": qR,
+        onClick: iR,
+        children: [(0, uR.jsx)(tR.d, {
+          name: GR,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, NW.jsxs)("span", {
+        }), (0, uR.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, NW.jsx)("span", {
+          children: [(0, uR.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: mW
-          }), (0, NW.jsx)("span", {
+            children: yR
+          }), (0, uR.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: PW
+            children: ZR
           })]
-        }), (0, NW.jsx)("span", {
+        }), (0, uR.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  10158: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => PW
+  10273: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1378);
 
-    function PW(WW) {
+    function ZR(RR) {
       let {
-        label: iW,
-        value: OW,
-        swatches: mW,
-        customLabel: PW,
-        onChange: LW
-      } = WW;
-      const cW = !mW.some((WW => WW.colour === OW));
-      return (0, NW.jsxs)("div", {
+        label: JR,
+        value: GR,
+        swatches: yR,
+        customLabel: ZR,
+        onChange: qR
+      } = RR;
+      const iR = !yR.some((RR => RR.colour === GR));
+      return (0, uR.jsxs)("div", {
         className: "SettingBox SettingsColourRow",
-        children: [(0, NW.jsx)("div", {
+        children: [(0, uR.jsx)("div", {
           className: "SliderText",
-          children: iW
-        }), (0, NW.jsxs)("div", {
+          children: JR
+        }), (0, uR.jsxs)("div", {
           className: "SettingsSwatches",
           role: "radiogroup",
-          "aria-label": iW,
-          children: [mW.map((WW => (0, NW.jsx)("button", {
+          "aria-label": JR,
+          children: [yR.map((RR => (0, uR.jsx)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": WW.colour === OW,
-            "aria-label": WW.label,
+            "aria-checked": RR.colour === GR,
+            "aria-label": RR.label,
             "data-pad-focusable": !0,
-            className: EW()("SettingsSwatch", {
-              Selected: WW.colour === OW
+            className: tR()("SettingsSwatch", {
+              Selected: RR.colour === GR
             }),
             style: {
-              background: WW.colour
+              background: RR.colour
             },
             onClick: () => {
-              LW(WW.colour)
+              qR(RR.colour)
             }
-          }, WW.colour))), (0, NW.jsx)("label", {
-            className: EW()("SettingsSwatch SettingsSwatchCustom", {
-              Selected: cW
+          }, RR.colour))), (0, uR.jsx)("label", {
+            className: tR()("SettingsSwatch SettingsSwatchCustom", {
+              Selected: iR
             }),
-            style: cW ? {
-              background: OW
+            style: iR ? {
+              background: GR
             } : void 0,
-            title: PW,
+            title: ZR,
             "data-pad-focusable": !0,
-            children: (0, NW.jsx)("input", {
+            children: (0, uR.jsx)("input", {
               type: "color",
-              "aria-label": PW,
-              value: OW,
-              onChange: WW => {
-                LW(WW.target.value)
+              "aria-label": ZR,
+              value: GR,
+              onChange: RR => {
+                qR(RR.target.value)
               }
             })
           })]
@@ -3367,304 +3367,304 @@ export const modules = {
       })
     }
   },
-  9919: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => UW,
-      g: () => jW,
-      i: () => tW,
-      m: () => kW,
-      n: () => sW,
-      o: () => xW
+  10010: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => nR,
+      h: () => LR,
+      k: () => VR,
+      n: () => UR,
+      p: () => WR,
+      s: () => wR
     });
-    var mW = OW(1774),
-      EW = OW(1864);
-    const NW = WW => WW >= 56320 && WW <= 57343,
-      PW = WW => WW >= 55296 && WW <= 56319,
-      LW = (WW, iW) => iW >= 2 && NW(WW.charCodeAt(iW - 1)) && PW(WW.charCodeAt(iW - 2)) ? iW - 2 : Math.max(0, iW - 1),
-      cW = (WW, iW) => {
-        let OW;
-        var mW, EW;
-        return OW = WW.start !== WW.end ? iW < 0 ? WW.start : WW.end : iW < 0 ? LW(WW.value, WW.start) : (mW = WW.value, (EW = WW.start) + 1 < mW.length && PW(mW.charCodeAt(EW)) && NW(mW.charCodeAt(EW + 1)) ? EW + 2 : Math.min(mW.length, EW + 1)), {
-          value: WW.value,
-          start: OW,
-          end: OW
+    var yR = GR(1850),
+      tR = GR(1950);
+    const uR = RR => RR >= 56320 && RR <= 57343,
+      ZR = RR => RR >= 55296 && RR <= 56319,
+      qR = (RR, JR) => JR >= 2 && uR(RR.charCodeAt(JR - 1)) && ZR(RR.charCodeAt(JR - 2)) ? JR - 2 : Math.max(0, JR - 1),
+      iR = (RR, JR) => {
+        let GR;
+        var yR, tR;
+        return GR = RR.start !== RR.end ? JR < 0 ? RR.start : RR.end : JR < 0 ? qR(RR.value, RR.start) : (yR = RR.value, (tR = RR.start) + 1 < yR.length && ZR(yR.charCodeAt(tR)) && uR(yR.charCodeAt(tR + 1)) ? tR + 2 : Math.min(yR.length, tR + 1)), {
+          value: RR.value,
+          start: GR,
+          end: GR
         }
       },
-      wW = ["text", "search", "url", "email", "tel", "password", "number"],
-      tW = WW => !(!(0, EW.b)(WW) || WW.isContentEditable || WW.hasAttribute("data-pad-no-osk")) && (WW instanceof HTMLTextAreaElement || WW instanceof HTMLInputElement && wW.includes(WW.type)),
-      ZW = WW => null !== WW.selectionStart,
-      xW = WW => {
-        var iW, OW;
+      fR = ["text", "search", "url", "email", "tel", "password", "number"],
+      VR = RR => !(!(0, tR.b)(RR) || RR.isContentEditable || RR.hasAttribute("data-pad-no-osk")) && (RR instanceof HTMLTextAreaElement || RR instanceof HTMLInputElement && fR.includes(RR.type)),
+      KR = RR => null !== RR.selectionStart,
+      wR = RR => {
+        var JR, GR;
         const {
-          value: mW
-        } = WW;
+          value: yR
+        } = RR;
         return {
-          value: mW,
-          start: null !== (iW = WW.selectionStart) && void 0 !== iW ? iW : mW.length,
-          end: null !== (OW = WW.selectionEnd) && void 0 !== OW ? OW : mW.length
+          value: yR,
+          start: null !== (JR = RR.selectionStart) && void 0 !== JR ? JR : yR.length,
+          end: null !== (GR = RR.selectionEnd) && void 0 !== GR ? GR : yR.length
         }
       },
-      lW = (WW, iW, OW) => {
-        if (WW.readOnly) return;
-        const EW = WW instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(EW, "value").set.call(WW, iW.value), ZW(WW) && WW.setSelectionRange(iW.start, iW.end), (0, mW.i)(WW, new InputEvent("input", {
+      rR = (RR, JR, GR) => {
+        if (RR.readOnly) return;
+        const tR = RR instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(tR, "value").set.call(RR, JR.value), KR(RR) && RR.setSelectionRange(JR.start, JR.end), (0, yR.g)(RR, new InputEvent("input", {
           bubbles: !0,
-          inputType: OW
+          inputType: GR
         }))
       };
-    let AW = !1;
-    const bW = (WW, iW) => !!document.execCommand(WW, !1, iW) || (AW || (AW = !0, console.warn(`execCommand("${WW}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      jW = (WW, iW) => {
-        bW("insertText", iW) || lW(WW, function(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const mW = WW.value.slice(0, WW.start),
-            EW = WW.value.slice(WW.end);
-          let NW = OW < 0 ? iW.length : Math.max(0, OW - mW.length - EW.length);
-          NW > 0 && NW < iW.length && PW(iW.charCodeAt(NW - 1)) && NW--;
-          const LW = iW.slice(0, NW),
-            cW = mW.length + LW.length;
+    let eR = !1;
+    const aR = (RR, JR) => !!document.execCommand(RR, !1, JR) || (eR || (eR = !0, console.warn(`execCommand("${RR}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      LR = (RR, JR) => {
+        aR("insertText", JR) || rR(RR, function(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const yR = RR.value.slice(0, RR.start),
+            tR = RR.value.slice(RR.end);
+          let uR = GR < 0 ? JR.length : Math.max(0, GR - yR.length - tR.length);
+          uR > 0 && uR < JR.length && ZR(JR.charCodeAt(uR - 1)) && uR--;
+          const qR = JR.slice(0, uR),
+            iR = yR.length + qR.length;
           return {
-            value: mW + LW + EW,
-            start: cW,
-            end: cW
+            value: yR + qR + tR,
+            start: iR,
+            end: iR
           }
-        }(xW(WW), iW, WW.maxLength), "insertText")
+        }(wR(RR), JR, RR.maxLength), "insertText")
       },
-      UW = WW => {
-        bW("delete") || lW(WW, (WW => {
-          const iW = WW.start === WW.end ? LW(WW.value, WW.start) : WW.start;
+      nR = RR => {
+        aR("delete") || rR(RR, (RR => {
+          const JR = RR.start === RR.end ? qR(RR.value, RR.start) : RR.start;
           return {
-            value: WW.value.slice(0, iW) + WW.value.slice(WW.end),
-            start: iW,
-            end: iW
+            value: RR.value.slice(0, JR) + RR.value.slice(RR.end),
+            start: JR,
+            end: JR
           }
-        })(xW(WW)), "deleteContentBackward")
+        })(wR(RR)), "deleteContentBackward")
       },
-      kW = (WW, iW) => {
-        if (!ZW(WW)) return;
-        const OW = cW(xW(WW), iW);
-        WW.setSelectionRange(OW.start, OW.end)
+      UR = (RR, JR) => {
+        if (!KR(RR)) return;
+        const GR = iR(wR(RR), JR);
+        RR.setSelectionRange(GR.start, GR.end)
       },
-      sW = WW => {
-        ZW(WW) && 0 === WW.selectionStart && 0 === WW.selectionEnd && WW.setSelectionRange(WW.value.length, WW.value.length)
+      WR = RR => {
+        KR(RR) && 0 === RR.selectionStart && 0 === RR.selectionEnd && RR.setSelectionRange(RR.value.length, RR.value.length)
       }
   },
-  10066: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => cW
+  10194: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR
     });
-    var mW = OW(25),
-      EW = OW(2276),
-      NW = OW(1422),
-      PW = OW(1459),
-      LW = OW(4963);
-    const cW = async () => {
-      if ((0, PW.k)()) {
-        if (!0 !== await NW.NotificationProvider.showPromptPopup({
+    var yR = GR(25),
+      tR = GR(2358),
+      uR = GR(1493),
+      ZR = GR(1532),
+      qR = GR(5060);
+    const iR = async () => {
+      if ((0, ZR.j)()) {
+        if (!0 !== await uR.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== mW.d.get("gameState")) return
+          }).getResult() || "inGame" !== yR.d.get("gameState")) return
       }
-      const WW = await (0, LW.d)();
-      "stay" !== WW && "inGame" === mW.d.get("gameState") && ("save" === WW && (0, LW.l)(), (0, EW.d)())
+      const RR = await (0, qR.d)();
+      "stay" !== RR && "inGame" === yR.d.get("gameState") && ("save" === RR && (0, qR.k)(), (0, tR.e)())
     }
   },
-  10071: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW,
-      e: () => NW,
-      g: () => PW,
-      i: () => EW,
-      k: () => LW
+  10199: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR,
+      f: () => uR,
+      g: () => ZR,
+      i: () => tR,
+      m: () => qR
     });
-    var mW = OW(2066);
-    const EW = "controllerPadShopOpen",
-      NW = WW => mW.f.includes(WW),
-      PW = WW => Object.values(WW).some((WW => !1 !== WW.canBuy && !WW.isRewardedAd)),
-      LW = (WW, iW, OW) => {
-        var mW, EW, PW, LW;
-        const cW = WW.filter((WW => !NW(WW))),
-          wW = null !== iW && WW.includes(iW) ? iW : null;
-        return null !== wW && !NW(wW) && OW(wW) ? wW : null !== (mW = null !== (EW = null !== (PW = null !== (LW = cW.find(OW)) && void 0 !== LW ? LW : cW[0]) && void 0 !== PW ? PW : wW) && void 0 !== EW ? EW : WW[0]) && void 0 !== mW ? mW : null
+    var yR = GR(2167);
+    const tR = "controllerPadShopOpen",
+      uR = RR => yR.k.includes(RR),
+      ZR = RR => Object.values(RR).some((RR => !1 !== RR.canBuy && !RR.isRewardedAd)),
+      qR = (RR, JR, GR) => {
+        var yR, tR, ZR, qR;
+        const iR = RR.filter((RR => !uR(RR))),
+          fR = null !== JR && RR.includes(JR) ? JR : null;
+        return null !== fR && !uR(fR) && GR(fR) ? fR : null !== (yR = null !== (tR = null !== (ZR = null !== (qR = iR.find(GR)) && void 0 !== qR ? qR : iR[0]) && void 0 !== ZR ? ZR : fR) && void 0 !== tR ? tR : RR[0]) && void 0 !== yR ? yR : null
       },
-      cW = WW => WW.userInput || WW.isRewardedAd || "boolean" === typeof WW.isSelected ? null : JSON.stringify([WW.image, WW.cost, WW.currency, WW.amount, WW.customTitle, WW.buyButtonText, WW.description, WW.canBuy])
+      iR = RR => RR.userInput || RR.isRewardedAd || "boolean" === typeof RR.isSelected ? null : JSON.stringify([RR.image, RR.cost, RR.currency, RR.amount, RR.customTitle, RR.buyButtonText, RR.description, RR.canBuy])
   },
-  10101: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      d: () => tW
+  10223: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => fR,
+      f: () => VR
     });
-    var mW = OW(62),
-      EW = OW(1526),
-      NW = OW(2111),
-      PW = OW(1479),
-      LW = OW(1506),
-      cW = OW(1283);
-    const wW = () => {
-        const WW = (0, PW.y)();
-        if ((0, mW.useEffect)((() => {
-            (0, PW.m)()
-          }), []), !WW) return null;
+    var yR = GR(66),
+      tR = GR(1581),
+      uR = GR(2218),
+      ZR = GR(1547),
+      qR = GR(1562),
+      iR = GR(1378);
+    const fR = () => {
+        const RR = (0, ZR.t)();
+        if ((0, yR.useEffect)((() => {
+            (0, ZR.m)()
+          }), []), !RR) return null;
         const {
-          ControllerCategory: iW
-        } = WW;
-        return (0, cW.jsx)(LW.c, {
-          children: (0, cW.jsx)(iW, {})
+          ControllerCategory: JR
+        } = RR;
+        return (0, iR.jsx)(qR.c, {
+          children: (0, iR.jsx)(JR, {})
         })
       },
-      tW = () => {
-        var WW;
-        const iW = (0, PW.y)(),
-          [, OW] = (0, mW.useReducer)((WW => WW + 1), 0);
-        return (0, EW.e)(NW.b, OW), null !== (WW = null === iW || void 0 === iW ? void 0 : iW.hasActivePad()) && void 0 !== WW && WW
+      VR = () => {
+        var RR;
+        const JR = (0, ZR.t)(),
+          [, GR] = (0, yR.useReducer)((RR => RR + 1), 0);
+        return (0, tR.f)(uR.c, GR), null !== (RR = null === JR || void 0 === JR ? void 0 : JR.hasActivePad()) && void 0 !== RR && RR
       }
   },
-  9910: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => wW,
-      D: () => JW,
-      E: () => SW,
-      H: () => YW,
-      L: () => jW,
-      O: () => cW,
-      R: () => tW,
-      c: () => UW,
-      g: () => TW,
-      j: () => KW,
-      l: () => MW,
-      n: () => AW,
-      r: () => bW,
-      t: () => xW,
-      x: () => lW,
-      z: () => yW
+  9992: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => BR,
+      E: () => fR,
+      G: () => pR,
+      H: () => XR,
+      J: () => MR,
+      L: () => LR,
+      M: () => iR,
+      P: () => VR,
+      e: () => nR,
+      f: () => lR,
+      j: () => CR,
+      n: () => AR,
+      p: () => eR,
+      s: () => aR,
+      u: () => wR,
+      x: () => rR
     });
-    var mW = OW(27),
-      EW = OW(1774),
-      NW = OW(9913),
-      PW = OW(9919),
-      LW = OW(3267);
-    const cW = WW => (0, PW.i)(WW),
-      wW = WW => {
-        const iW = WW.getBoundingClientRect();
+    var yR = GR(32),
+      tR = GR(1850),
+      uR = GR(10001),
+      ZR = GR(10010),
+      qR = GR(3386);
+    const iR = RR => (0, ZR.k)(RR),
+      fR = RR => {
+        const JR = RR.getBoundingClientRect();
         return {
-          x: iW.left + iW.width / 2,
-          y: iW.top + iW.height / 2
+          x: JR.left + JR.width / 2,
+          y: JR.top + JR.height / 2
         }
       },
-      tW = (WW, iW, OW) => ({
+      VR = (RR, JR, GR) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: WW.x,
-        clientY: WW.y,
-        screenX: WW.x,
-        screenY: WW.y,
-        button: iW,
-        buttons: OW,
+        clientX: RR.x,
+        clientY: RR.y,
+        screenX: RR.x,
+        screenY: RR.y,
+        button: JR,
+        buttons: GR,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      ZW = (WW, iW) => {
-        (0, EW.i)(WW, iW)
+      KR = (RR, JR) => {
+        (0, tR.g)(RR, JR)
       },
-      xW = function(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const mW = 0 === OW ? 1 : 2;
-        ZW(WW, new PointerEvent("pointerdown", tW(iW, OW, mW))), ZW(WW, new MouseEvent("mousedown", tW(iW, OW, mW)))
+      wR = function(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const yR = 0 === GR ? 1 : 2;
+        KR(RR, new PointerEvent("pointerdown", VR(JR, GR, yR))), KR(RR, new MouseEvent("mousedown", VR(JR, GR, yR)))
       },
-      lW = function(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        ZW(WW, new PointerEvent("pointerup", tW(iW, OW, 0))), ZW(WW, new MouseEvent("mouseup", tW(iW, OW, 0)))
+      rR = function(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        KR(RR, new PointerEvent("pointerup", VR(JR, GR, 0))), KR(RR, new MouseEvent("mouseup", VR(JR, GR, 0)))
       },
-      AW = function(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        xW(WW, iW, OW), lW(WW, iW, OW), ZW(WW, 0 === OW ? new MouseEvent("click", tW(iW, 0, 0)) : new MouseEvent("contextmenu", tW(iW, 2, 0)))
+      eR = function(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        wR(RR, JR, GR), rR(RR, JR, GR), KR(RR, 0 === GR ? new MouseEvent("click", VR(JR, 0, 0)) : new MouseEvent("contextmenu", VR(JR, 2, 0)))
       },
-      bW = function(WW, iW, OW) {
+      aR = function(RR, JR, GR) {
         let {
-          leaveBelow: mW = null,
-          enterBelow: EW = null
+          leaveBelow: yR = null,
+          enterBelow: tR = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (WW !== iW) {
-          if (null !== WW && void 0 !== WW && WW.isConnected) {
-            const EW = {
-              ...tW(OW, 0, 0),
-              relatedTarget: iW
+        if (RR !== JR) {
+          if (null !== RR && void 0 !== RR && RR.isConnected) {
+            const tR = {
+              ...VR(GR, 0, 0),
+              relatedTarget: JR
             };
-            ZW(WW, new PointerEvent("pointerout", EW)), ZW(WW, new MouseEvent("mouseout", EW));
-            const NW = WW => !!iW && WW.contains(iW) || !!mW && WW.contains(mW);
-            for (let iW = WW; iW && !NW(iW); iW = iW.parentElement) ZW(iW, new PointerEvent("pointerleave", {
-              ...EW,
+            KR(RR, new PointerEvent("pointerout", tR)), KR(RR, new MouseEvent("mouseout", tR));
+            const uR = RR => !!JR && RR.contains(JR) || !!yR && RR.contains(yR);
+            for (let JR = RR; JR && !uR(JR); JR = JR.parentElement) KR(JR, new PointerEvent("pointerleave", {
+              ...tR,
               bubbles: !1
-            })), ZW(iW, new MouseEvent("mouseleave", {
-              ...EW,
+            })), KR(JR, new MouseEvent("mouseleave", {
+              ...tR,
               bubbles: !1
             }))
           }
-          if (iW) {
-            const mW = {
-              ...tW(OW, 0, 0),
-              relatedTarget: WW
+          if (JR) {
+            const yR = {
+              ...VR(GR, 0, 0),
+              relatedTarget: RR
             };
-            ZW(iW, new PointerEvent("pointerover", mW)), ZW(iW, new MouseEvent("mouseover", mW));
-            const NW = [],
-              PW = iW => !(null === WW || void 0 === WW || !WW.isConnected) && iW.contains(WW) || !!EW && iW.contains(EW);
-            for (let WW = iW; WW && !PW(WW); WW = WW.parentElement) NW.push(WW);
-            for (const WW of NW.reverse()) ZW(WW, new PointerEvent("pointerenter", {
-              ...mW,
+            KR(JR, new PointerEvent("pointerover", yR)), KR(JR, new MouseEvent("mouseover", yR));
+            const uR = [],
+              ZR = JR => !(null === RR || void 0 === RR || !RR.isConnected) && JR.contains(RR) || !!tR && JR.contains(tR);
+            for (let RR = JR; RR && !ZR(RR); RR = RR.parentElement) uR.push(RR);
+            for (const RR of uR.reverse()) KR(RR, new PointerEvent("pointerenter", {
+              ...yR,
               bubbles: !1
-            })), ZW(WW, new MouseEvent("mouseenter", {
-              ...mW,
+            })), KR(RR, new MouseEvent("mouseenter", {
+              ...yR,
               bubbles: !1
             }));
-            ZW(iW, new PointerEvent("pointermove", tW(OW, 0, 0))), ZW(iW, new MouseEvent("mousemove", tW(OW, 0, 0)))
+            KR(JR, new PointerEvent("pointermove", VR(GR, 0, 0))), KR(JR, new MouseEvent("mousemove", VR(GR, 0, 0)))
           }
-        } else iW && (ZW(iW, new PointerEvent("pointermove", tW(OW, 0, 0))), ZW(iW, new MouseEvent("mousemove", tW(OW, 0, 0))))
+        } else JR && (KR(JR, new PointerEvent("pointermove", VR(GR, 0, 0))), KR(JR, new MouseEvent("mousemove", VR(GR, 0, 0))))
       },
-      jW = WW => {
-        mW.l.iZ(NW.e, WW)
+      LR = RR => {
+        yR.n.JK(uR.e, RR)
       },
-      UW = WW => {
-        if (cW(WW)) return void jW(WW);
-        const iW = WW.hasAttribute("data-pad-focusable") ? WW.querySelector("a[href]") : null,
-          OW = null !== iW && void 0 !== iW ? iW : WW;
-        AW(OW, wW(OW))
+      nR = RR => {
+        if (iR(RR)) return void LR(RR);
+        const JR = RR.hasAttribute("data-pad-focusable") ? RR.querySelector("a[href]") : null,
+          GR = null !== JR && void 0 !== JR ? JR : RR;
+        eR(GR, fR(GR))
       },
-      kW = ".Dropdown-root.is-open",
-      sW = WW => {
-        const iW = WW.querySelector(".Dropdown-control");
-        return UW(iW), iW
+      UR = ".Dropdown-root.is-open",
+      WR = RR => {
+        const JR = RR.querySelector(".Dropdown-control");
+        return nR(JR), JR
       },
-      MW = WW => {
-        var iW;
-        const OW = null !== (iW = WW.closest(kW)) && void 0 !== iW ? iW : WW.querySelector(kW);
-        return OW ? sW(OW) : null
+      AR = RR => {
+        var JR;
+        const GR = null !== (JR = RR.closest(UR)) && void 0 !== JR ? JR : RR.querySelector(UR);
+        return GR ? WR(GR) : null
       },
-      KW = WW => {
-        for (const iW of document.querySelectorAll(kW)) iW.contains(WW) || sW(iW)
+      CR = RR => {
+        for (const JR of document.querySelectorAll(UR)) JR.contains(RR) || WR(JR)
       },
-      SW = WW => null !== WW.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      YW = WW => {
-        const iW = WW ? document.elementFromPoint(WW.x, WW.y) : null;
-        return !(null === iW || void 0 === iW || !iW.closest("[data-pad-repeat]"))
+      XR = RR => null !== RR.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      MR = RR => {
+        const JR = RR ? document.elementFromPoint(RR.x, RR.y) : null;
+        return !(null === JR || void 0 === JR || !JR.closest("[data-pad-repeat]"))
       },
-      yW = WW => {
-        var iW;
-        return null !== (iW = [...WW.querySelectorAll("[data-pad-back]")].find(LW.p)) && void 0 !== iW ? iW : null
+      BR = RR => {
+        var JR;
+        return null !== (JR = [...RR.querySelectorAll("[data-pad-back]")].find(qR.q)) && void 0 !== JR ? JR : null
       },
-      TW = WW => {
-        const iW = yW(WW);
-        return !!iW && (UW(iW), !0)
+      lR = RR => {
+        const JR = BR(RR);
+        return !!JR && (nR(JR), !0)
       },
-      JW = WW => {
-        var iW, OW, mW, EW;
-        return null !== (iW = null !== (OW = null !== (mW = WW.getAttribute("data-pad-key")) && void 0 !== mW ? mW : WW.getAttribute("href")) && void 0 !== OW ? OW : null === (EW = WW.querySelector("a[href]")) || void 0 === EW ? void 0 : EW.getAttribute("href")) && void 0 !== iW ? iW : null
+      pR = RR => {
+        var JR, GR, yR, tR;
+        return null !== (JR = null !== (GR = null !== (yR = RR.getAttribute("data-pad-key")) && void 0 !== yR ? yR : RR.getAttribute("href")) && void 0 !== GR ? GR : null === (tR = RR.querySelector("a[href]")) || void 0 === tR ? void 0 : tR.getAttribute("href")) && void 0 !== JR ? JR : null
       }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

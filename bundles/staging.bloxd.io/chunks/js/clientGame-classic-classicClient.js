@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12, 13];
 export const modules = {
-  39689: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW
+  39686: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR
     });
-    var mW = OW(39696);
-    const EW = [0, 0, 0];
-    class NW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW;
-        this.pool = WW, this.origin = iW, this.count = 0, this.free = []
+    var yR = GR(39689);
+    const tR = [0, 0, 0];
+    class uR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tR;
+        this.pool = RR, this.origin = JR, this.count = 0, this.free = []
       }
       take() {
-        var WW;
-        const iW = null !== (WW = this.free.pop()) && void 0 !== WW ? WW : this.count++;
-        return iW >= this.pool.aZ && this.pool.grow(Math.max(2 * this.pool.aZ, iW + 1)), this.hide(iW), iW
+        var RR;
+        const JR = null !== (RR = this.free.pop()) && void 0 !== RR ? RR : this.count++;
+        return JR >= this.pool.hK && this.pool.grow(Math.max(2 * this.pool.hK, JR + 1)), this.hide(JR), JR
       }
-      release(WW) {
-        this.hide(WW), this.free.push(WW)
+      release(RR) {
+        this.hide(RR), this.free.push(RR)
       }
-      write(WW, iW, OW, EW) {
+      write(RR, JR, GR, tR) {
         const {
-          records: NW
+          records: uR
         } = this.pool, {
-          origin: PW
-        } = this, LW = WW * mW.b;
-        NW[LW] = iW - PW[0], NW[LW + 1] = OW - PW[1], NW[LW + 2] = EW - PW[2], NW[LW + mW.d] = 0, this.pool.markDirty(WW)
+          origin: ZR
+        } = this, qR = RR * yR.c;
+        uR[qR] = JR - ZR[0], uR[qR + 1] = GR - ZR[1], uR[qR + 2] = tR - ZR[2], uR[qR + yR.f] = 0, this.pool.markDirty(RR)
       }
-      hide(WW) {
-        this.pool.records[WW * mW.b + mW.d] = 1, this.pool.markDirty(WW)
+      hide(RR) {
+        this.pool.records[RR * yR.c + yR.f] = 1, this.pool.markDirty(RR)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,172 +38,172 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class PW {
-      constructor(WW, iW, OW) {
-        this.api = WW, this.model = iW, this.initialCapacity = OW, this.kinds = new Map, this.origin = [0, 0, 0]
+    class ZR {
+      constructor(RR, JR, GR) {
+        this.api = RR, this.model = JR, this.initialCapacity = GR, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(WW) {
-        let iW = this.kinds.get(WW);
-        if (void 0 === iW) {
-          const OW = this.api.createInstancePool({
+      kindOf(RR) {
+        let JR = this.kinds.get(RR);
+        if (void 0 === JR) {
+          const GR = this.api.createInstancePool({
             ...this.model,
-            item: WW
+            item: RR
           }, this.initialCapacity);
-          null === OW || void 0 === OW || OW.setOrigin(this.origin[0], this.origin[1], this.origin[2]), iW = OW && new NW(OW, this.origin), this.kinds.set(WW, iW)
+          null === GR || void 0 === GR || GR.setOrigin(this.origin[0], this.origin[1], this.origin[2]), JR = GR && new uR(GR, this.origin), this.kinds.set(RR, JR)
         }
-        return iW
+        return JR
       }
-      follow(WW) {
+      follow(RR) {
         const {
-          origin: iW
+          origin: JR
         } = this;
-        if (Math.abs(WW[0] - iW[0]) <= 512 && Math.abs(WW[1] - iW[1]) <= 512 && Math.abs(WW[2] - iW[2]) <= 512) return !1;
-        iW[0] = Math.floor(WW[0]), iW[1] = Math.floor(WW[1]), iW[2] = Math.floor(WW[2]);
-        for (const OW of this.kinds.values()) null === OW || void 0 === OW || OW.pool.setOrigin(iW[0], iW[1], iW[2]);
+        if (Math.abs(RR[0] - JR[0]) <= 512 && Math.abs(RR[1] - JR[1]) <= 512 && Math.abs(RR[2] - JR[2]) <= 512) return !1;
+        JR[0] = Math.floor(RR[0]), JR[1] = Math.floor(RR[1]), JR[2] = Math.floor(RR[2]);
+        for (const GR of this.kinds.values()) null === GR || void 0 === GR || GR.pool.setOrigin(JR[0], JR[1], JR[2]);
         return !0
       }
       commit() {
-        for (const WW of this.kinds.values()) null === WW || void 0 === WW || WW.commit()
+        for (const RR of this.kinds.values()) null === RR || void 0 === RR || RR.commit()
       }
       dispose() {
-        for (const WW of this.kinds.values()) null === WW || void 0 === WW || WW.dispose();
+        for (const RR of this.kinds.values()) null === RR || void 0 === RR || RR.dispose();
         this.kinds.clear()
       }
     }
   },
-  40522: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => xW
+  40546: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => wR
     });
-    const mW = "Pipe",
-      EW = "Extractor Pipe",
-      NW = (new Set([mW, EW]), new Set([mW, EW, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var PW = OW(39689);
-    class LW {
-      constructor(WW) {
-        this.api = WW, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new PW.e(WW, {
+    const yR = "Pipe",
+      tR = "Extractor Pipe",
+      uR = (new Set([yR, tR]), new Set([yR, tR, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var ZR = GR(39686);
+    class qR {
+      constructor(RR) {
+        this.api = RR, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new ZR.b(RR, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(WW) {
-        if (WW.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${WW.id} with < 2 waypoints`);
-        const iW = this.kinds.kindOf(WW.itemName);
-        if (!iW) return void(this.unshown.has(WW.itemName) || (this.unshown.add(WW.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${WW.itemName}"`)));
-        this.remove(WW.id);
-        const OW = function(WW) {
-          return (WW.waypoints.length - 1) / 2 * 1e3
-        }(WW);
-        if (Date.now() - WW.startTimeMs > OW + 2e3) return;
-        const mW = iW.take();
-        this.items.set(WW.id, {
-          kind: iW,
-          slot: mW,
-          waypoints: WW.waypoints,
-          startTimeMs: WW.startTimeMs,
-          durationMs: OW
+      onSpawn(RR) {
+        if (RR.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${RR.id} with < 2 waypoints`);
+        const JR = this.kinds.kindOf(RR.itemName);
+        if (!JR) return void(this.unshown.has(RR.itemName) || (this.unshown.add(RR.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${RR.itemName}"`)));
+        this.remove(RR.id);
+        const GR = function(RR) {
+          return (RR.waypoints.length - 1) / 2 * 1e3
+        }(RR);
+        if (Date.now() - RR.startTimeMs > GR + 2e3) return;
+        const yR = JR.take();
+        this.items.set(RR.id, {
+          kind: JR,
+          slot: yR,
+          waypoints: RR.waypoints,
+          startTimeMs: RR.startTimeMs,
+          durationMs: GR
         })
       }
-      onEnd(WW) {
-        this.remove(WW.id)
+      onEnd(RR) {
+        this.remove(RR.id)
       }
-      Hk() {
+      UW() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const WW = Date.now();
+        const RR = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [iW, OW] of this.items) WW - OW.startTimeMs > OW.durationMs + 2e3 ? this.remove(iW) : this.write(OW, WW);
+        for (const [JR, GR] of this.items) RR - GR.startTimeMs > GR.durationMs + 2e3 ? this.remove(JR) : this.write(GR, RR);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(WW) {
-        const iW = this.items.get(WW);
-        iW && (iW.kind.release(iW.slot), this.items.delete(WW))
+      remove(RR) {
+        const JR = this.items.get(RR);
+        JR && (JR.kind.release(JR.slot), this.items.delete(RR))
       }
-      write(WW, iW) {
-        const OW = WW.waypoints.length - 1;
-        let mW = (iW - WW.startTimeMs) / WW.durationMs;
-        mW < 0 ? mW = 0 : mW > 1 && (mW = 1);
-        const EW = mW * OW;
-        let NW = Math.floor(EW);
-        NW >= OW && (NW = OW - 1);
-        const PW = EW - NW,
-          [LW, cW, wW] = WW.waypoints[NW],
-          [tW, ZW, xW] = WW.waypoints[NW + 1];
-        WW.kind.write(WW.slot, LW + (tW - LW) * PW + .5, cW + (ZW - cW) * PW + .5, wW + (xW - wW) * PW + .5)
+      write(RR, JR) {
+        const GR = RR.waypoints.length - 1;
+        let yR = (JR - RR.startTimeMs) / RR.durationMs;
+        yR < 0 ? yR = 0 : yR > 1 && (yR = 1);
+        const tR = yR * GR;
+        let uR = Math.floor(tR);
+        uR >= GR && (uR = GR - 1);
+        const ZR = tR - uR,
+          [qR, iR, fR] = RR.waypoints[uR],
+          [VR, KR, wR] = RR.waypoints[uR + 1];
+        RR.kind.write(RR.slot, qR + (VR - qR) * ZR + .5, iR + (KR - iR) * ZR + .5, fR + (wR - fR) * ZR + .5)
       }
     }
-    const cW = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      wW = new Set(cW);
-    class tW {
+    const iR = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      fR = new Set(iR);
+    class VR {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(WW) {
-        this.api = WW, this.pipeVisualizer = new LW(WW)
+      onCreate(RR) {
+        this.api = RR, this.pipeVisualizer = new qR(RR)
       }
       onClose() {
-        var WW;
-        null === (WW = this.pipeVisualizer) || void 0 === WW || WW.dispose(), this.pipeVisualizer = null
+        var RR;
+        null === (RR = this.pipeVisualizer) || void 0 === RR || RR.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(WW, iW) {
+      onReceivedMessageFromServer(RR, JR) {
         const {
-          pipeVisualizer: OW
+          pipeVisualizer: GR
         } = this;
-        if (OW)
-          if ("pipeItemSpawnBatch" === WW)
-            for (const mW of iW.items) OW.onSpawn(mW);
-          else if ("pipeItemEndBatch" === WW)
-          for (const mW of iW.items) OW.onEnd(mW)
+        if (GR)
+          if ("pipeItemSpawnBatch" === RR)
+            for (const yR of JR.items) GR.onSpawn(yR);
+          else if ("pipeItemEndBatch" === RR)
+          for (const yR of JR.items) GR.onEnd(yR)
       }
-      Hk() {
-        var WW;
-        null === (WW = this.pipeVisualizer) || void 0 === WW || WW.Hk()
+      UW() {
+        var RR;
+        null === (RR = this.pipeVisualizer) || void 0 === RR || RR.UW()
       }
-      onPlayerAttemptAltAction(WW, iW, OW, mW, EW, PW) {
-        var LW;
-        if (!wW.has(this.api.getMetaInfo(EW).rootName)) return;
-        const cW = null === (LW = this.api.kOW(WW)) || void 0 === LW ? void 0 : LW.name;
-        return void 0 !== cW && NW.has(cW) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(RR, JR, GR, yR, tR, ZR) {
+        var qR;
+        if (!fR.has(this.api.getMetaInfo(tR).rootName)) return;
+        const iR = null === (qR = this.api.uyR(RR)) || void 0 === qR ? void 0 : qR.name;
+        return void 0 !== iR && uR.has(iR) ? "preventAction" : void 0
       }
     }
-    var ZW = OW(40525);
-    const xW = function(WW, iW, OW) {
-      if ("smp2" === OW) return (0, ZW.makeSmp2ClientGame)();
-      if ("survivalFactory" !== OW && "survivalFactoryPersistent" !== OW) {
+    var KR = GR(40555);
+    const wR = function(RR, JR, GR) {
+      if ("smp2" === GR) return (0, KR.makeSmp2ClientGame)();
+      if ("survivalFactory" !== GR && "survivalFactoryPersistent" !== GR) {
         return {}
       }
-      const mW = new tW;
+      const yR = new VR;
       return {
-        onCreate: WW => {
-          mW.onCreate(WW)
+        onCreate: RR => {
+          yR.onCreate(RR)
         },
         onClose: () => {
-          mW.onClose()
+          yR.onClose()
         },
-        onReceivedMessageFromServer: (WW, iW) => {
-          mW.onReceivedMessageFromServer(WW, iW)
+        onReceivedMessageFromServer: (RR, JR) => {
+          yR.onReceivedMessageFromServer(RR, JR)
         },
-        hZ: () => {
-          mW.Hk()
+        gK: () => {
+          yR.UW()
         },
-        altVetoBlocks: cW,
-        onPlayerAttemptAltAction: (WW, iW, OW, EW, NW, PW) => mW.onPlayerAttemptAltAction(WW, iW, OW, EW, NW, PW)
+        altVetoBlocks: iR,
+        onPlayerAttemptAltAction: (RR, JR, GR, tR, uR, ZR) => yR.onPlayerAttemptAltAction(RR, JR, GR, tR, uR, ZR)
       }
     }
   },
-  40534: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => PW,
-      g: () => LW
+  40562: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      i: () => ZR,
+      l: () => qR
     });
-    var mW = OW(40542),
-      EW = OW(27);
-    const NW = "smp2OnboardingView",
-      PW = 5e3;
-    class LW {
+    var yR = GR(40564),
+      tR = GR(32);
+    const uR = "smp2OnboardingView",
+      ZR = 5e3;
+    class qR {
       constructor() {
         this.view = {
           path: null,
@@ -213,121 +213,121 @@ export const modules = {
       get() {
         return this.view
       }
-      receivePath(WW) {
-        let [iW, OW, EW] = WW;
-        const NW = mW.g[iW];
-        if (void 0 === NW) return;
+      receivePath(RR) {
+        let [JR, GR, tR] = RR;
+        const uR = yR.e[JR];
+        if (void 0 === uR) return;
         const {
-          title: PW,
-          steps: LW
-        } = mW.e[NW];
-        this.iZ({
+          title: ZR,
+          steps: qR
+        } = yR.c[uR];
+        this.JK({
           ...this.view,
-          path: OW < LW.length ? {
-            title: PW,
-            steps: LW,
-            step: OW,
-            progress: EW
+          path: GR < qR.length ? {
+            title: ZR,
+            steps: qR,
+            step: GR,
+            progress: tR
           } : null
         })
       }
-      receiveReward(WW) {
-        let [iW, OW] = WW;
-        const EW = mW.k[iW];
-        if (void 0 !== EW && !this.seenRewardIds.has(OW)) {
-          var NW;
-          if (this.seenRewardIds.add(OW), this.queued.push({
-              ...EW,
-              id: OW
-            }), null === this.view.reward) this.iZ({
+      receiveReward(RR) {
+        let [JR, GR] = RR;
+        const tR = yR.h[JR];
+        if (void 0 !== tR && !this.seenRewardIds.has(GR)) {
+          var uR;
+          if (this.seenRewardIds.add(GR), this.queued.push({
+              ...tR,
+              id: GR
+            }), null === this.view.reward) this.JK({
             ...this.view,
-            reward: null !== (NW = this.queued.shift()) && void 0 !== NW ? NW : null
+            reward: null !== (uR = this.queued.shift()) && void 0 !== uR ? uR : null
           });
           this.runTimers()
         }
       }
-      setShowing(WW) {
-        this.showing = WW, this.runTimers()
+      setShowing(RR) {
+        this.showing = RR, this.runTimers()
       }
       dispose() {
         this.clearTimers()
       }
       runTimers() {
         this.showing ? this.view.reward && null === this.rewardTimer && (this.rewardTimer = setTimeout((() => {
-          var WW;
-          this.rewardTimer = null, this.iZ({
+          var RR;
+          this.rewardTimer = null, this.JK({
             ...this.view,
-            reward: null !== (WW = this.queued.shift()) && void 0 !== WW ? WW : null
+            reward: null !== (RR = this.queued.shift()) && void 0 !== RR ? RR : null
           }), this.runTimers()
-        }), PW)) : this.clearTimers()
+        }), ZR)) : this.clearTimers()
       }
       clearTimers() {
         null !== this.rewardTimer && (clearTimeout(this.rewardTimer), this.rewardTimer = null)
       }
-      iZ(WW) {
-        this.view = WW, EW.l.iZ(NW, WW)
+      JK(RR) {
+        this.view = RR, tR.n.JK(uR, RR)
       }
     }
   },
-  40525: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      makeSmp2ClientGame: () => ZW
+  40555: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      makeSmp2ClientGame: () => KR
     });
-    var mW = OW(62);
-    const EW = "smp2FirstSpawn",
-      NW = "smp2Path",
-      PW = "smp2Reward";
-    var LW = OW(1770),
-      cW = OW(3637),
-      wW = OW(3361),
-      tW = OW(40534);
+    var yR = GR(66);
+    const tR = "smp2FirstSpawn",
+      uR = "smp2Path",
+      ZR = "smp2Reward";
+    var qR = GR(1841),
+      iR = GR(3731),
+      fR = GR(3494),
+      VR = GR(40562);
 
-    function ZW() {
-      let WW = !1,
-        iW = !1,
-        ZW = "loading",
-        xW = !1;
-      const lW = () => {
-          !WW || iW || xW || "loading" === ZW || (iW = !0, (0, LW.e)({
+    function KR() {
+      let RR = !1,
+        JR = !1,
+        KR = "loading",
+        wR = !1;
+      const rR = () => {
+          !RR || JR || wR || "loading" === KR || (JR = !0, (0, qR.c)({
             id: "smp2.first_spawn",
-            value: ZW
+            value: KR
           }))
         },
-        AW = new tW.g;
-      let bW = null;
+        eR = new VR.l;
+      let aR = null;
       return {
         onCreate: () => {
-          OW.e(182).then((() => OW(53936))).then((WW => {
+          GR.e(182).then((() => GR(53781))).then((RR => {
             let {
-              Smp2OnboardingUi: iW
-            } = WW;
-            xW || (bW = (0, wW.O)((0, mW.createElement)(iW, {
-              store: AW
-            })), ZW = "cards")
-          })).catch((WW => {
-            xW || (ZW = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, cW.e)(WW) ? " (chunk load failed)" : ""), WW))
-          })).finally(lW)
+              Smp2OnboardingUi: JR
+            } = RR;
+            wR || (aR = (0, fR.G)((0, yR.createElement)(JR, {
+              store: eR
+            })), KR = "cards")
+          })).catch((RR => {
+            wR || (KR = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, iR.e)(RR) ? " (chunk load failed)" : ""), RR))
+          })).finally(rR)
         },
         onClose: () => {
-          var WW;
-          "loading" === ZW && (ZW = "no_cards"), lW(), xW = !0, null === (WW = bW) || void 0 === WW || WW(), AW.dispose()
+          var RR;
+          "loading" === KR && (KR = "no_cards"), rR(), wR = !0, null === (RR = aR) || void 0 === RR || RR(), eR.dispose()
         },
-        onReceivedMessageFromServer: (iW, OW) => {
-          iW === EW ? (WW = !0, lW()) : iW === NW ? AW.receivePath(OW) : iW === PW && AW.receiveReward(OW)
+        onReceivedMessageFromServer: (JR, GR) => {
+          JR === tR ? (RR = !0, rR()) : JR === uR ? eR.receivePath(GR) : JR === ZR && eR.receiveReward(GR)
         }
       }
     }
   },
-  40542: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      g: () => mW,
-      k: () => LW,
-      m: () => PW
+  40564: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => yR,
+      h: () => qR,
+      k: () => ZR
     });
-    const mW = ["starter_path", "portal_first"],
-      EW = "Iron Pickaxe",
-      NW = {
+    const yR = ["starter_path", "portal_first"],
+      tR = "Iron Pickaxe",
+      uR = {
         starter_path: {
           title: "Starter Path",
           steps: [{
@@ -377,10 +377,10 @@ export const modules = {
         }
       };
 
-    function PW(WW) {
-      return "logs" === WW.goal ? WW.amount : 1
+    function ZR(RR) {
+      return "logs" === RR.goal ? RR.amount : 1
     }
-    const LW = [{
+    const qR = [{
       title: "Starter Path done!",
       text: "+100 gold. The world is yours.",
       icon: "Gold Coin"
@@ -390,19 +390,19 @@ export const modules = {
       icon: "Wood Pickaxe"
     }, {
       title: "Come back tomorrow",
-      text: `A free ${EW} is waiting for you`,
-      icon: EW
+      text: `A free ${tR} is waiting for you`,
+      icon: tR
     }, {
       title: "Welcome back!",
-      text: `Here's your ${EW}`,
-      icon: EW
+      text: `Here's your ${tR}`,
+      icon: tR
     }, {
       title: "Nice!",
       text: "Keep exploring: the hub's traders buy what you find",
       icon: "Maple Log"
     }];
-    mW.flatMap((WW => [...NW[WW].steps.map((iW => `${WW}:${iW.key}`)), `${WW}:done`]))
+    yR.flatMap((RR => [...uR[RR].steps.map((JR => `${RR}:${JR.key}`)), `${RR}:done`]))
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

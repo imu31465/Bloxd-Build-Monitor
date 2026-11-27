@@ -1,158 +1,158 @@
 export const id = 306;
 export const ids = [306];
 export const modules = {
-  42094: (WW, iW, OW) => {
-    OW.d(iW, {
-      $d: () => Ii,
-      Ac: () => kW,
-      Ad: () => AW,
-      Ae: () => rO,
-      Af: () => FO,
-      Bb: () => pW,
-      Be: () => IO,
-      Bf: () => pO,
-      D: () => Ri,
-      Dc: () => sW,
-      Dd: () => LO,
-      De: () => vO,
-      Eb: () => EO,
-      Ef: () => fO,
-      Fd: () => cO,
-      Fe: () => DO,
-      Ff: () => KO,
-      Gd: () => SW,
-      H: () => qW,
-      Hc: () => ti,
-      Ib: () => mO,
-      Id: () => eW,
-      If: () => UO,
-      J: () => ai,
-      Jc: () => wW,
-      Je: () => gO,
-      Kc: () => Gi,
-      Ke: () => QO,
-      Kf: () => VO,
-      L: () => xW,
-      Le: () => eO,
-      M: () => Ei,
-      Mb: () => li,
-      Md: () => dW,
-      Nd: () => gW,
-      Nf: () => TO,
-      Oc: () => CW,
-      Oe: () => CO,
-      Of: () => SO,
-      P: () => hW,
-      Pd: () => vW,
-      Qb: () => Li,
-      Qc: () => RW,
-      Qe: () => dO,
-      Qf: () => aO,
-      Re: () => qO,
-      S: () => nW,
-      Se: () => BO,
-      Tb: () => EW,
-      Tc: () => ri,
-      Td: () => Ai,
-      Te: () => XO,
-      U: () => HW,
-      Uc: () => mi,
-      Ud: () => cW,
-      Uf: () => MO,
-      Ve: () => Lm,
-      Vf: () => GO,
-      W: () => qi,
-      Wd: () => tW,
-      We: () => JO,
-      Xb: () => UW,
-      Yc: () => Zi,
-      Yf: () => AO,
-      Z: () => lW,
-      Zb: () => ki,
-      Zc: () => JW,
-      Zd: () => ji,
-      Zf: () => jO,
-      _: () => BW,
-      _e: () => uO,
-      ad: () => wi,
-      ae: () => fW,
-      af: () => hO,
-      bc: () => rW,
-      be: () => xi,
-      bf: () => oO,
-      cb: () => cm,
-      cc: () => OO,
-      cd: () => ci,
-      ce: () => zi,
-      de: () => Xi,
-      df: () => nO,
-      e: () => NW,
-      eb: () => iO,
-      fd: () => Oi,
-      fe: () => Wi,
-      g: () => PW,
-      gc: () => uW,
-      gd: () => TW,
-      gf: () => HO,
-      hc: () => FW,
-      hf: () => Pm,
-      ib: () => aW,
-      if: () => im,
-      jd: () => MW,
-      je: () => QW,
-      k: () => YW,
-      kc: () => zW,
-      kd: () => mW,
-      ke: () => XW,
-      le: () => KW,
-      mb: () => Qi,
-      mf: () => mm,
-      n: () => DW,
-      nb: () => WO,
-      nc: () => ii,
-      nd: () => yW,
-      ne: () => ZW,
-      od: () => Pi,
-      oe: () => tO,
-      of: () => Wm,
-      pc: () => bi,
-      q: () => ZO,
-      qb: () => IW,
-      qe: () => Nm,
-      rb: () => Fi,
-      re: () => sO,
-      rf: () => Om,
-      sc: () => GW,
-      sd: () => jW,
-      sf: () => Em,
-      t: () => wO,
-      tb: () => VW,
-      tc: () => oW,
-      tf: () => zO,
-      ue: () => YO,
-      v: () => LW,
-      vb: () => NO,
-      ve: () => RO,
-      vf: () => yO,
-      wc: () => Ni,
-      wd: () => bW,
-      ye: () => bO,
-      z: () => Bi,
-      zb: () => PO,
-      zf: () => kO
+  42106: (RR, JR, GR) => {
+    GR.d(JR, {
+      $: () => QR,
+      $b: () => aJ,
+      $d: () => KR,
+      Ab: () => rJ,
+      Bc: () => pR,
+      Bf: () => LG,
+      C: () => wR,
+      Cb: () => qJ,
+      Cd: () => LJ,
+      Cf: () => FG,
+      De: () => IG,
+      E: () => tJ,
+      Eb: () => tR,
+      Ef: () => cG,
+      Fc: () => fJ,
+      Fe: () => OG,
+      Gb: () => nR,
+      Gd: () => EJ,
+      Hb: () => UJ,
+      Hc: () => iJ,
+      He: () => SG,
+      I: () => gR,
+      Id: () => mR,
+      Ie: () => zG,
+      If: () => PG,
+      Jd: () => wJ,
+      K: () => vR,
+      Kb: () => FR,
+      Kd: () => QJ,
+      Lc: () => GJ,
+      Le: () => mG,
+      Lf: () => WG,
+      M: () => bR,
+      Me: () => uy,
+      Mf: () => aG,
+      Nb: () => RG,
+      Nd: () => mJ,
+      Oc: () => lR,
+      P: () => SJ,
+      Pe: () => BG,
+      Qd: () => RJ,
+      Qe: () => bG,
+      Qf: () => oG,
+      Rb: () => OR,
+      Rc: () => AR,
+      Re: () => lG,
+      S: () => rR,
+      Sd: () => hR,
+      Ub: () => sR,
+      Uc: () => yR,
+      Uf: () => MG,
+      Ve: () => vG,
+      Vf: () => AG,
+      W: () => jR,
+      Wd: () => SR,
+      X: () => Zy,
+      Yb: () => TR,
+      Yc: () => BR,
+      Ye: () => gG,
+      Z: () => hJ,
+      Zd: () => CR,
+      Zf: () => YG,
+      _b: () => JJ,
+      _c: () => ZJ,
+      ac: () => YR,
+      af: () => pG,
+      ag: () => UG,
+      bd: () => LR,
+      be: () => iG,
+      cb: () => TJ,
+      cc: () => xR,
+      cd: () => aR,
+      ce: () => yy,
+      d: () => uR,
+      dc: () => uJ,
+      dd: () => eR,
+      df: () => ty,
+      dg: () => dG,
+      e: () => ZR,
+      fb: () => sJ,
+      fd: () => uG,
+      fg: () => wG,
+      gc: () => UR,
+      gd: () => ZG,
+      ge: () => nG,
+      gf: () => hG,
+      gg: () => eG,
+      h: () => MR,
+      i: () => cR,
+      ie: () => CG,
+      jb: () => kR,
+      jc: () => WR,
+      jd: () => XR,
+      je: () => jG,
+      kb: () => FJ,
+      kf: () => Jy,
+      l: () => fG,
+      lb: () => PR,
+      le: () => rG,
+      md: () => DR,
+      nc: () => VJ,
+      nd: () => NR,
+      ne: () => kG,
+      nf: () => sG,
+      o: () => qG,
+      ob: () => yG,
+      pb: () => tG,
+      pd: () => oR,
+      q: () => qR,
+      qc: () => fR,
+      qd: () => HR,
+      qf: () => Ry,
+      rc: () => dJ,
+      re: () => EG,
+      s: () => zJ,
+      sb: () => IR,
+      sc: () => zR,
+      se: () => NG,
+      tb: () => GG,
+      tc: () => ER,
+      td: () => eJ,
+      te: () => HG,
+      u: () => jJ,
+      uc: () => kJ,
+      uf: () => Gy,
+      vc: () => yJ,
+      wb: () => JG,
+      x: () => dR,
+      xc: () => KJ,
+      xd: () => iR,
+      xe: () => DG,
+      ye: () => TG,
+      yf: () => QG,
+      z: () => YJ,
+      zd: () => VR,
+      ze: () => xG,
+      zf: () => XG
     });
-    const mW = -2147483648,
-      EW = 12,
-      NW = 12,
-      PW = 4095,
-      LW = {
+    const yR = -2147483648,
+      tR = 12,
+      uR = 12,
+      ZR = 4095,
+      qR = {
         Lifeform: 1,
         Throwable: 2,
         Mesh: 3,
         Audio: 4,
         Item: 5
       },
-      cW = {
+      iR = {
         Alive: 1,
         Crouching: 2,
         OnGround: 4,
@@ -173,7 +173,7 @@ export const modules = {
         DropAhead: 131072,
         FreeCamMoves: 262144
       },
-      wW = {
+      fR = {
         None: 0,
         Entity: 1,
         Open: 2,
@@ -185,21 +185,21 @@ export const modules = {
         Feed: 8,
         Ride: 9
       },
-      tW = {
+      VR = {
         Off: 0,
         Key: 1,
         Touch: 2
       },
-      ZW = {
+      KR = {
         Alive: 16
       },
-      xW = 32,
-      lW = {
+      wR = 32,
+      rR = {
         Stored: 1,
         Unloaded: 2,
         ResetAll: 4
       },
-      AW = {
+      eR = {
         opacity: 0,
         zIndex: 1,
         overlayColour: 2,
@@ -230,31 +230,31 @@ export const modules = {
         _protectionEnchantSum: 27,
         _receivingDamageMultiplier: 28
       },
-      bW = 4294967295,
-      jW = 0,
-      UW = 4294967295,
-      kW = 4,
-      sW = 123,
-      MW = -2147483648,
-      KW = {
+      aR = 4294967295,
+      LR = 0,
+      nR = 4294967295,
+      UR = 4,
+      WR = 123,
+      AR = -2147483648,
+      CR = {
         Off: 0,
         All: 1,
         Filter: 2
       },
-      SW = 51,
-      YW = 5,
-      yW = 4294967295,
-      TW = 4294967295,
-      JW = 128,
-      hW = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
-      HW = 16,
-      nW = 255,
-      uW = {
+      XR = 51,
+      MR = 5,
+      BR = 4294967295,
+      lR = 4294967295,
+      pR = 128,
+      gR = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
+      bR = 16,
+      vR = 255,
+      OR = {
         Off: 0,
         On: 1,
         Keep: 2
       },
-      oW = {
+      xR = {
         AltVeto: 1,
         AltAction: 2,
         Click: 3,
@@ -265,21 +265,21 @@ export const modules = {
         Create: 8,
         Director: 11
       },
-      dW = {
+      NR = {
         Hotbar: 256,
         Drop: 257
       },
-      eW = {
+      DR = {
         Down: 1,
         Next: 2,
         Stack: 4,
         Repeat: 8
       },
-      vW = {
+      HR = {
         Rate: 0,
         Gyro: 1
       },
-      gW = {
+      oR = {
         Active: 1,
         JumpHeld: 2,
         JumpPressed: 4,
@@ -290,24 +290,24 @@ export const modules = {
         Peek: 128,
         EndToggle: 256
       },
-      DW = {
+      cR = {
         Prevent: 0,
         Allow: 1,
         PreventPlacement: 2
       },
-      VW = {
+      PR = {
         None: 0,
         Pose: 1,
         FaceMovement: 2,
         FaceCamera: 3,
         FaceCursor: 4
       },
-      pW = {
+      IR = {
         LookPointed: 1,
         Held: 2
       },
-      fW = 3,
-      CW = {
+      mR = 3,
+      zR = {
         Synced: 0,
         ChestOpened: 1,
         ChestClosed: 2,
@@ -318,7 +318,7 @@ export const modules = {
         NumberKey: 7,
         DropRequested: 8
       },
-      XW = {
+      SR = {
         ToggleMenu: 0,
         EditBoard: 1,
         EditCodeBlock: 2,
@@ -339,84 +339,84 @@ export const modules = {
         EmoteWheelClose: 17,
         BlockMined: 18
       },
-      BW = {
+      jR = {
         Alt: 1,
         Up: 2,
         HasPos: 4,
         AttackOnly: 8
       },
-      qW = {
+      dR = {
         Solid: 1,
         Fluid: 2,
         PlaceOver: 4
       },
-      RW = {
+      ER = {
         Stackable: 1
       },
-      GW = {
+      YR = {
         granule: 1,
         wood: 2,
         rock: 3,
         cuttable: 4
       },
-      IW = {
+      kR = {
         Detail: 1,
         RoomForOne: 2
       },
-      aW = {
+      QR = {
         HaveIngredients: 1,
         Listed: 2
       },
-      rW = {
+      FR = {
         HasOpts: 1
       },
-      zW = {
+      TR = {
         Flat: 0,
         Chevrons: 1,
         FurnaceFire: 2,
         FlatOpaque: 3,
         FlatOnTop: 4
       },
-      FW = {
+      sR = {
         Up: 1,
         Down: 2
       },
-      QW = {
+      hR = {
         TwoD: 1,
         Loop: 2
       },
-      Wi = {
+      RJ = {
         StopAfter: 1
       },
-      ii = {
+      JJ = {
         Anchor: 1,
         Visible: 2,
         UvOffset: 4,
         Visibility: 8,
         Scale: 16
       },
-      Oi = {
+      GJ = {
         Pose: 1,
         Visible: 2,
         Clip: 4,
         Perch: 8
       },
-      mi = 255,
-      Ei = 65535,
-      Ni = 255,
-      Pi = 65535,
-      Li = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
-      ci = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
-      wi = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
-      ti = {
+      yJ = 255,
+      tJ = 65535,
+      uJ = 255,
+      ZJ = 65535,
+      qJ = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
+      iJ = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
+      fJ = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
+      VJ = {
         Bytes: 16,
         Hidden: 2147483648,
         Max: 262144
       },
-      Zi = 4294967295,
-      xi = 4294967295,
-      li = 255,
-      Ai = {
+      KJ = 4294967295,
+      wJ = 4294967295,
+      rJ = 255,
+      eJ = {
         PresetNone: 65535,
         HasBox: 1,
         Anchored: 1,
@@ -427,335 +427,335 @@ export const modules = {
         MaxKey: 1073741823,
         MaxLiveKeys: 256
       },
-      bi = {
+      aJ = {
         critical: 123
       },
-      ji = 4294967295,
-      Ui = {
+      LJ = 4294967295,
+      nJ = {
         BYTES: 4,
-        hZ: (WW, iW) => WW.getUint32(iW + 0, !0)
+        gK: (RR, JR) => RR.getUint32(JR + 0, !0)
       },
-      ki = {
+      UJ = {
         BYTES: 12,
-        serverId: (WW, iW) => WW.getInt32(iW + 0, !0),
-        index: (WW, iW) => WW.getUint32(iW + 4, !0),
-        kind: (WW, iW) => WW.getUint16(iW + 8, !0)
+        serverId: (RR, JR) => RR.getInt32(JR + 0, !0),
+        index: (RR, JR) => RR.getUint32(JR + 4, !0),
+        kind: (RR, JR) => RR.getUint16(JR + 8, !0)
       },
-      si = {
+      WJ = {
         BYTES: 20,
-        pos: (WW, iW, OW) => WW.getInt32(iW + 0 + 4 * OW, !0),
-        actual: (WW, iW) => WW.getUint32(iW + 12, !0),
-        dataLen: (WW, iW) => WW.getUint32(iW + 16, !0)
+        pos: (RR, JR, GR) => RR.getInt32(JR + 0 + 4 * GR, !0),
+        actual: (RR, JR) => RR.getUint32(JR + 12, !0),
+        dataLen: (RR, JR) => RR.getUint32(JR + 16, !0)
       },
-      Mi = {
+      AJ = {
         BYTES: 20,
-        what: (WW, iW) => WW.getUint8(iW + 0),
-        value: (WW, iW) => WW.getInt16(iW + 2, !0),
-        pos: (WW, iW, OW) => WW.getInt32(iW + 4 + 4 * OW, !0),
-        block: (WW, iW) => WW.getUint32(iW + 16, !0)
+        what: (RR, JR) => RR.getUint8(JR + 0),
+        value: (RR, JR) => RR.getInt16(JR + 2, !0),
+        pos: (RR, JR, GR) => RR.getInt32(JR + 4 + 4 * GR, !0),
+        block: (RR, JR) => RR.getUint32(JR + 16, !0)
       },
-      Ki = {
+      CJ = {
         BYTES: 4,
-        item: (WW, iW) => WW.getUint16(iW + 0, !0),
-        slot: (WW, iW) => WW.getUint8(iW + 2)
+        item: (RR, JR) => RR.getUint16(JR + 0, !0),
+        slot: (RR, JR) => RR.getUint8(JR + 2)
       },
-      Si = {
+      XJ = {
         BYTES: 16,
-        target: (WW, iW) => WW.getInt32(iW + 0, !0),
-        damage: (WW, iW) => WW.getFloat32(iW + 4, !0),
-        distance: (WW, iW) => WW.getFloat32(iW + 8, !0),
-        crit: (WW, iW) => WW.getUint8(iW + 12)
+        target: (RR, JR) => RR.getInt32(JR + 0, !0),
+        damage: (RR, JR) => RR.getFloat32(JR + 4, !0),
+        distance: (RR, JR) => RR.getFloat32(JR + 8, !0),
+        crit: (RR, JR) => RR.getUint8(JR + 12)
       },
-      Yi = {
+      MJ = {
         BYTES: 4,
-        slot: (WW, iW) => WW.getUint16(iW + 0, !0)
+        slot: (RR, JR) => RR.getUint16(JR + 0, !0)
       },
-      yi = {
+      BJ = {
         BYTES: 20,
-        what: (WW, iW) => WW.getUint8(iW + 0),
-        value: (WW, iW) => WW.getInt16(iW + 2, !0),
-        pos: (WW, iW, OW) => WW.getInt32(iW + 4 + 4 * OW, !0),
-        block: (WW, iW) => WW.getUint32(iW + 16, !0)
+        what: (RR, JR) => RR.getUint8(JR + 0),
+        value: (RR, JR) => RR.getInt16(JR + 2, !0),
+        pos: (RR, JR, GR) => RR.getInt32(JR + 4 + 4 * GR, !0),
+        block: (RR, JR) => RR.getUint32(JR + 16, !0)
       },
-      Ti = {
+      lJ = {
         BYTES: 12,
-        serverId: (WW, iW) => WW.getInt32(iW + 0, !0),
-        index: (WW, iW) => WW.getUint32(iW + 4, !0),
-        what: (WW, iW) => WW.getUint16(iW + 8, !0)
+        serverId: (RR, JR) => RR.getInt32(JR + 0, !0),
+        index: (RR, JR) => RR.getUint32(JR + 4, !0),
+        what: (RR, JR) => RR.getUint16(JR + 8, !0)
       },
-      Ji = {
+      pJ = {
         BYTES: 24,
-        cx: (WW, iW) => WW.getInt32(iW + 0, !0),
-        cy: (WW, iW) => WW.getInt32(iW + 4, !0),
-        cz: (WW, iW) => WW.getInt32(iW + 8, !0),
-        slot: (WW, iW) => WW.getUint32(iW + 12, !0),
-        generation: (WW, iW) => WW.getUint32(iW + 16, !0),
-        flags: (WW, iW) => WW.getUint32(iW + 20, !0)
+        cx: (RR, JR) => RR.getInt32(JR + 0, !0),
+        cy: (RR, JR) => RR.getInt32(JR + 4, !0),
+        cz: (RR, JR) => RR.getInt32(JR + 8, !0),
+        slot: (RR, JR) => RR.getUint32(JR + 12, !0),
+        generation: (RR, JR) => RR.getUint32(JR + 16, !0),
+        flags: (RR, JR) => RR.getUint32(JR + 20, !0)
       },
-      Hi = {
+      gJ = {
         BYTES: 44,
-        pos: (WW, iW, OW) => WW.getFloat64(iW + 0 + 8 * OW, !0),
-        sound: (WW, iW) => WW.getUint16(iW + 24, !0),
-        flags: (WW, iW) => WW.getUint16(iW + 26, !0),
-        handle: (WW, iW) => WW.getUint32(iW + 28, !0),
-        volume: (WW, iW) => WW.getFloat32(iW + 32, !0),
-        rate: (WW, iW) => WW.getFloat32(iW + 36, !0),
-        refDist: (WW, iW) => WW.getFloat32(iW + 40, !0)
+        pos: (RR, JR, GR) => RR.getFloat64(JR + 0 + 8 * GR, !0),
+        sound: (RR, JR) => RR.getUint16(JR + 24, !0),
+        flags: (RR, JR) => RR.getUint16(JR + 26, !0),
+        handle: (RR, JR) => RR.getUint32(JR + 28, !0),
+        volume: (RR, JR) => RR.getFloat32(JR + 32, !0),
+        rate: (RR, JR) => RR.getFloat32(JR + 36, !0),
+        refDist: (RR, JR) => RR.getFloat32(JR + 40, !0)
       },
-      ni = {
+      bJ = {
         BYTES: 28,
-        pos: (WW, iW, OW) => WW.getFloat64(iW + 0 + 8 * OW, !0),
-        handle: (WW, iW) => WW.getUint32(iW + 24, !0)
+        pos: (RR, JR, GR) => RR.getFloat64(JR + 0 + 8 * GR, !0),
+        handle: (RR, JR) => RR.getUint32(JR + 24, !0)
       },
-      ui = {
+      vJ = {
         BYTES: 16,
-        handle: (WW, iW) => WW.getUint32(iW + 0, !0),
-        volume: (WW, iW) => WW.getFloat32(iW + 4, !0),
-        rate: (WW, iW) => WW.getFloat32(iW + 8, !0),
-        refDist: (WW, iW) => WW.getFloat32(iW + 12, !0)
+        handle: (RR, JR) => RR.getUint32(JR + 0, !0),
+        volume: (RR, JR) => RR.getFloat32(JR + 4, !0),
+        rate: (RR, JR) => RR.getFloat32(JR + 8, !0),
+        refDist: (RR, JR) => RR.getFloat32(JR + 12, !0)
       },
-      oi = {
+      OJ = {
         BYTES: 12,
-        handle: (WW, iW) => WW.getUint32(iW + 0, !0),
-        to: (WW, iW) => WW.getFloat32(iW + 4, !0),
-        ms: (WW, iW) => WW.getUint16(iW + 8, !0),
-        flags: (WW, iW) => WW.getUint16(iW + 10, !0)
+        handle: (RR, JR) => RR.getUint32(JR + 0, !0),
+        to: (RR, JR) => RR.getFloat32(JR + 4, !0),
+        ms: (RR, JR) => RR.getUint16(JR + 8, !0),
+        flags: (RR, JR) => RR.getUint16(JR + 10, !0)
       },
-      di = {
+      xJ = {
         BYTES: 4,
-        handle: (WW, iW) => WW.getUint32(iW + 0, !0)
+        handle: (RR, JR) => RR.getUint32(JR + 0, !0)
       },
-      ei = {
+      NJ = {
         BYTES: 8,
-        reason: (WW, iW) => WW.getUint8(iW + 0),
-        code: (WW, iW) => WW.getUint8(iW + 1),
-        version: (WW, iW) => WW.getUint32(iW + 4, !0)
+        reason: (RR, JR) => RR.getUint8(JR + 0),
+        code: (RR, JR) => RR.getUint8(JR + 1),
+        version: (RR, JR) => RR.getUint32(JR + 4, !0)
       },
-      vi = {
+      DJ = {
         BYTES: 4,
-        key: (WW, iW) => WW.getUint8(iW + 0),
-        tag: (WW, iW) => WW.getUint8(iW + 1)
+        key: (RR, JR) => RR.getUint8(JR + 0),
+        tag: (RR, JR) => RR.getUint8(JR + 1)
       },
-      gi = {
+      HJ = {
         BYTES: 16,
-        save: (WW, iW) => WW.getUint32(iW + 0, !0),
-        index: (WW, iW) => WW.getUint32(iW + 4, !0),
-        ptr: (WW, iW) => WW.getUint32(iW + 8, !0),
-        len: (WW, iW) => WW.getUint32(iW + 12, !0)
+        save: (RR, JR) => RR.getUint32(JR + 0, !0),
+        index: (RR, JR) => RR.getUint32(JR + 4, !0),
+        ptr: (RR, JR) => RR.getUint32(JR + 8, !0),
+        len: (RR, JR) => RR.getUint32(JR + 12, !0)
       },
-      Di = {
+      oJ = {
         BYTES: 16,
-        save: (WW, iW) => WW.getUint32(iW + 0, !0),
-        kind: (WW, iW) => WW.getUint8(iW + 4),
-        parts: (WW, iW) => WW.getUint32(iW + 8, !0),
-        bytes: (WW, iW) => WW.getUint32(iW + 12, !0)
+        save: (RR, JR) => RR.getUint32(JR + 0, !0),
+        kind: (RR, JR) => RR.getUint8(JR + 4),
+        parts: (RR, JR) => RR.getUint32(JR + 8, !0),
+        bytes: (RR, JR) => RR.getUint32(JR + 12, !0)
       },
-      Vi = {
+      cJ = {
         BYTES: 4,
-        totalTicks: (WW, iW) => WW.getUint32(iW + 0, !0)
+        totalTicks: (RR, JR) => RR.getUint32(JR + 0, !0)
       },
-      fi = {
+      PJ = {
         BYTES: 24,
-        what: (WW, iW) => WW.getUint8(iW + 0),
-        int: (WW, iW) => WW.getInt32(iW + 4, !0),
-        x: (WW, iW) => WW.getFloat64(iW + 8, !0),
-        y: (WW, iW) => WW.getFloat64(iW + 16, !0)
+        what: (RR, JR) => RR.getUint8(JR + 0),
+        int: (RR, JR) => RR.getInt32(JR + 4, !0),
+        x: (RR, JR) => RR.getFloat64(JR + 8, !0),
+        y: (RR, JR) => RR.getFloat64(JR + 16, !0)
       },
-      Ci = {
+      IJ = {
         BYTES: 8,
-        what: (WW, iW) => WW.getUint8(iW + 0),
-        kind: (WW, iW) => WW.getUint8(iW + 1),
-        save: (WW, iW) => WW.getUint32(iW + 4, !0)
+        what: (RR, JR) => RR.getUint8(JR + 0),
+        kind: (RR, JR) => RR.getUint8(JR + 1),
+        save: (RR, JR) => RR.getUint32(JR + 4, !0)
       },
-      Xi = {
+      mJ = {
         BYTES: 4,
-        tP: (WW, iW) => WW.getUint16(iW + 0, !0)
+        LZ: (RR, JR) => RR.getUint16(JR + 0, !0)
       },
-      Bi = {
+      zJ = {
         BYTES: 360,
-        eye: (WW, iW, OW) => WW.getFloat64(iW + 0 + 8 * OW, !0),
-        localPos: (WW, iW, OW) => WW.getFloat64(iW + 24 + 8 * OW, !0),
-        biW: (WW, iW, OW) => WW.getFloat64(iW + 48 + 8 * OW, !0),
-        viewProj: (WW, iW, OW) => WW.getFloat32(iW + 72 + 4 * OW, !0),
-        origin: (WW, iW, OW) => WW.getInt32(iW + 136 + 4 * OW, !0),
-        heading: (WW, iW) => WW.getFloat32(iW + 148, !0),
-        pitch: (WW, iW) => WW.getFloat32(iW + 152, !0),
-        tanHalfFovX: (WW, iW) => WW.getFloat32(iW + 156, !0),
-        tanHalfFovY: (WW, iW) => WW.getFloat32(iW + 160, !0),
-        viewportCss: (WW, iW, OW) => WW.getFloat32(iW + 164 + 4 * OW, !0),
-        localVel: (WW, iW, OW) => WW.getFloat32(iW + 172 + 4 * OW, !0),
-        actionDir: (WW, iW, OW) => WW.getFloat32(iW + 184 + 4 * OW, !0),
-        localId: (WW, iW) => WW.getInt32(iW + 196, !0),
-        playerFlags: (WW, iW) => WW.getUint32(iW + 200, !0),
-        targetBlock: (WW, iW, OW) => WW.getInt32(iW + 204 + 4 * OW, !0),
-        targetAdjacent: (WW, iW, OW) => WW.getInt32(iW + 216 + 4 * OW, !0),
-        targetBlockId: (WW, iW) => WW.getUint32(iW + 228, !0),
-        targetNormal: (WW, iW, OW) => WW.getInt8(iW + 232 + 1 * OW),
-        targetFlags: (WW, iW) => WW.getUint8(iW + 235),
-        pickedEntity: (WW, iW) => WW.getInt32(iW + 236, !0),
-        breakingPos: (WW, iW, OW) => WW.getInt32(iW + 240 + 4 * OW, !0),
-        breakingProgress: (WW, iW) => WW.getFloat32(iW + 252, !0),
-        nS: (WW, iW) => WW.getUint16(iW + 256, !0),
-        selectedSlot: (WW, iW) => WW.getUint8(iW + 258),
-        heldFlags: (WW, iW) => WW.getUint8(iW + 259),
-        heldAttrVersion: (WW, iW) => WW.getUint32(iW + 260, !0),
-        inventoryVersion: (WW, iW) => WW.getUint32(iW + 264, !0),
-        effectsVersion: (WW, iW) => WW.getUint32(iW + 268, !0),
-        entitiesVersion: (WW, iW) => WW.getUint32(iW + 272, !0),
-        entRenderPtr: (WW, iW) => WW.getUint32(iW + 276, !0),
-        entCapacity: (WW, iW) => WW.getUint32(iW + 280, !0),
-        frameMs: (WW, iW) => WW.getFloat32(iW + 284, !0),
-        fps: (WW, iW) => WW.getFloat32(iW + 288, !0),
-        entVisPtr: (WW, iW) => WW.getUint32(iW + 292, !0),
-        momentumFrac: (WW, iW) => WW.getFloat32(iW + 296, !0),
-        chunkSlotsPtr: (WW, iW) => WW.getUint32(iW + 300, !0),
-        chunkSlotsLen: (WW, iW) => WW.getUint32(iW + 304, !0),
-        walkThroughPtr: (WW, iW) => WW.getUint32(iW + 308, !0),
-        walkThroughLen: (WW, iW) => WW.getUint32(iW + 312, !0),
-        audioViewPtr: (WW, iW) => WW.getUint32(iW + 316, !0),
-        inventoryViewPtr: (WW, iW) => WW.getUint32(iW + 320, !0),
-        eventOverflowGen: (WW, iW) => WW.getUint32(iW + 324, !0),
-        eventOverflowMask: (WW, iW) => WW.getUint32(iW + 328, !0),
-        promptEntity: (WW, iW) => WW.getInt32(iW + 332, !0),
-        replayViewPtr: (WW, iW) => WW.getUint32(iW + 336, !0),
-        slotIcon: (WW, iW) => WW.getUint32(iW + 340, !0),
-        localDeaths: (WW, iW) => WW.getUint32(iW + 344, !0),
-        cameraFar: (WW, iW) => WW.getFloat32(iW + 348, !0),
-        gliderBoostFuel: (WW, iW) => WW.getUint32(iW + 352, !0),
-        interactLabel: (WW, iW) => WW.getUint16(iW + 356, !0),
-        interactIcon: (WW, iW) => WW.getUint16(iW + 358, !0)
+        eye: (RR, JR, GR) => RR.getFloat64(JR + 0 + 8 * GR, !0),
+        localPos: (RR, JR, GR) => RR.getFloat64(JR + 24 + 8 * GR, !0),
+        GGR: (RR, JR, GR) => RR.getFloat64(JR + 48 + 8 * GR, !0),
+        viewProj: (RR, JR, GR) => RR.getFloat32(JR + 72 + 4 * GR, !0),
+        origin: (RR, JR, GR) => RR.getInt32(JR + 136 + 4 * GR, !0),
+        heading: (RR, JR) => RR.getFloat32(JR + 148, !0),
+        pitch: (RR, JR) => RR.getFloat32(JR + 152, !0),
+        tanHalfFovX: (RR, JR) => RR.getFloat32(JR + 156, !0),
+        tanHalfFovY: (RR, JR) => RR.getFloat32(JR + 160, !0),
+        viewportCss: (RR, JR, GR) => RR.getFloat32(JR + 164 + 4 * GR, !0),
+        localVel: (RR, JR, GR) => RR.getFloat32(JR + 172 + 4 * GR, !0),
+        actionDir: (RR, JR, GR) => RR.getFloat32(JR + 184 + 4 * GR, !0),
+        localId: (RR, JR) => RR.getInt32(JR + 196, !0),
+        playerFlags: (RR, JR) => RR.getUint32(JR + 200, !0),
+        targetBlock: (RR, JR, GR) => RR.getInt32(JR + 204 + 4 * GR, !0),
+        targetAdjacent: (RR, JR, GR) => RR.getInt32(JR + 216 + 4 * GR, !0),
+        targetBlockId: (RR, JR) => RR.getUint32(JR + 228, !0),
+        targetNormal: (RR, JR, GR) => RR.getInt8(JR + 232 + 1 * GR),
+        targetFlags: (RR, JR) => RR.getUint8(JR + 235),
+        pickedEntity: (RR, JR) => RR.getInt32(JR + 236, !0),
+        breakingPos: (RR, JR, GR) => RR.getInt32(JR + 240 + 4 * GR, !0),
+        breakingProgress: (RR, JR) => RR.getFloat32(JR + 252, !0),
+        gC: (RR, JR) => RR.getUint16(JR + 256, !0),
+        selectedSlot: (RR, JR) => RR.getUint8(JR + 258),
+        heldFlags: (RR, JR) => RR.getUint8(JR + 259),
+        heldAttrVersion: (RR, JR) => RR.getUint32(JR + 260, !0),
+        inventoryVersion: (RR, JR) => RR.getUint32(JR + 264, !0),
+        effectsVersion: (RR, JR) => RR.getUint32(JR + 268, !0),
+        entitiesVersion: (RR, JR) => RR.getUint32(JR + 272, !0),
+        entRenderPtr: (RR, JR) => RR.getUint32(JR + 276, !0),
+        entCapacity: (RR, JR) => RR.getUint32(JR + 280, !0),
+        frameMs: (RR, JR) => RR.getFloat32(JR + 284, !0),
+        fps: (RR, JR) => RR.getFloat32(JR + 288, !0),
+        entVisPtr: (RR, JR) => RR.getUint32(JR + 292, !0),
+        momentumFrac: (RR, JR) => RR.getFloat32(JR + 296, !0),
+        chunkSlotsPtr: (RR, JR) => RR.getUint32(JR + 300, !0),
+        chunkSlotsLen: (RR, JR) => RR.getUint32(JR + 304, !0),
+        walkThroughPtr: (RR, JR) => RR.getUint32(JR + 308, !0),
+        walkThroughLen: (RR, JR) => RR.getUint32(JR + 312, !0),
+        audioViewPtr: (RR, JR) => RR.getUint32(JR + 316, !0),
+        inventoryViewPtr: (RR, JR) => RR.getUint32(JR + 320, !0),
+        eventOverflowGen: (RR, JR) => RR.getUint32(JR + 324, !0),
+        eventOverflowMask: (RR, JR) => RR.getUint32(JR + 328, !0),
+        promptEntity: (RR, JR) => RR.getInt32(JR + 332, !0),
+        replayViewPtr: (RR, JR) => RR.getUint32(JR + 336, !0),
+        slotIcon: (RR, JR) => RR.getUint32(JR + 340, !0),
+        localDeaths: (RR, JR) => RR.getUint32(JR + 344, !0),
+        cameraFar: (RR, JR) => RR.getFloat32(JR + 348, !0),
+        gliderBoostFuel: (RR, JR) => RR.getUint32(JR + 352, !0),
+        interactLabel: (RR, JR) => RR.getUint16(JR + 356, !0),
+        interactIcon: (RR, JR) => RR.getUint16(JR + 358, !0)
       },
-      qi = {
+      SJ = {
         BYTES: 16,
-        voxelsPtr: (WW, iW) => WW.getUint32(iW + 0, !0),
-        version: (WW, iW) => WW.getUint32(iW + 4, !0),
-        generation: (WW, iW) => WW.getUint32(iW + 8, !0),
-        BL: (WW, iW) => WW.getUint32(iW + 12, !0)
+        voxelsPtr: (RR, JR) => RR.getUint32(JR + 0, !0),
+        version: (RR, JR) => RR.getUint32(JR + 4, !0),
+        generation: (RR, JR) => RR.getUint32(JR + 8, !0),
+        Qq: (RR, JR) => RR.getUint32(JR + 12, !0)
       },
-      Ri = {
+      jJ = {
         BYTES: 56,
-        listener: (WW, iW, OW) => WW.getFloat64(iW + 0 + 8 * OW, !0),
-        forward: (WW, iW, OW) => WW.getFloat32(iW + 24 + 4 * OW, !0),
-        up: (WW, iW, OW) => WW.getFloat32(iW + 36 + 4 * OW, !0),
-        dropped: (WW, iW) => WW.getUint32(iW + 48, !0),
-        unfollowed: (WW, iW) => WW.getUint32(iW + 52, !0)
+        listener: (RR, JR, GR) => RR.getFloat64(JR + 0 + 8 * GR, !0),
+        forward: (RR, JR, GR) => RR.getFloat32(JR + 24 + 4 * GR, !0),
+        up: (RR, JR, GR) => RR.getFloat32(JR + 36 + 4 * GR, !0),
+        dropped: (RR, JR) => RR.getUint32(JR + 48, !0),
+        unfollowed: (RR, JR) => RR.getUint32(JR + 52, !0)
       },
-      Gi = {
+      dJ = {
         BYTES: 8,
-        item: (WW, iW) => WW.getUint16(iW + 0, !0),
-        amount: (WW, iW) => WW.getUint16(iW + 2, !0),
-        attrVersion: (WW, iW) => WW.getUint32(iW + 4, !0)
+        item: (RR, JR) => RR.getUint16(JR + 0, !0),
+        amount: (RR, JR) => RR.getUint16(JR + 2, !0),
+        attrVersion: (RR, JR) => RR.getUint32(JR + 4, !0)
       },
-      Ii = {
+      EJ = {
         BYTES: 76,
-        version: (WW, iW) => WW.getUint32(iW + 0, !0),
-        state: (WW, iW) => WW.getUint8(iW + 4),
-        cameraMode: (WW, iW) => WW.getUint8(iW + 5),
-        hZ: (WW, iW) => WW.getUint32(iW + 8, !0),
-        totalTicks: (WW, iW) => WW.getUint32(iW + 12, !0),
-        speed: (WW, iW) => WW.getFloat32(iW + 16, !0),
-        markIn: (WW, iW) => WW.getUint32(iW + 20, !0),
-        markOut: (WW, iW) => WW.getUint32(iW + 24, !0),
-        editVersion: (WW, iW) => WW.getUint32(iW + 28, !0),
-        drops: (WW, iW, OW) => WW.getUint32(iW + 32 + 4 * OW, !0)
+        version: (RR, JR) => RR.getUint32(JR + 0, !0),
+        state: (RR, JR) => RR.getUint8(JR + 4),
+        cameraMode: (RR, JR) => RR.getUint8(JR + 5),
+        gK: (RR, JR) => RR.getUint32(JR + 8, !0),
+        totalTicks: (RR, JR) => RR.getUint32(JR + 12, !0),
+        speed: (RR, JR) => RR.getFloat32(JR + 16, !0),
+        markIn: (RR, JR) => RR.getUint32(JR + 20, !0),
+        markOut: (RR, JR) => RR.getUint32(JR + 24, !0),
+        editVersion: (RR, JR) => RR.getUint32(JR + 28, !0),
+        drops: (RR, JR, GR) => RR.getUint32(JR + 32 + 4 * GR, !0)
       },
-      ai = {
+      YJ = {
         BYTES: 6,
-        flags: (WW, iW) => WW.getUint8(iW + 0),
-        harvestType: (WW, iW) => WW.getUint8(iW + 1),
-        harvestLevel: (WW, iW) => WW.getUint8(iW + 2),
-        attachedTop: (WW, iW) => WW.getUint16(iW + 4, !0)
+        flags: (RR, JR) => RR.getUint8(JR + 0),
+        harvestType: (RR, JR) => RR.getUint8(JR + 1),
+        harvestLevel: (RR, JR) => RR.getUint8(JR + 2),
+        attachedTop: (RR, JR) => RR.getUint16(JR + 4, !0)
       },
-      ri = {
+      kJ = {
         BYTES: 3,
-        flags: (WW, iW) => WW.getUint8(iW + 0),
-        harvests: (WW, iW) => WW.getUint8(iW + 1),
-        level: (WW, iW) => WW.getUint8(iW + 2)
+        flags: (RR, JR) => RR.getUint8(JR + 0),
+        harvests: (RR, JR) => RR.getUint8(JR + 1),
+        level: (RR, JR) => RR.getUint8(JR + 2)
       },
-      zi = {
+      QJ = {
         BYTES: 12,
-        item: (WW, iW) => WW.getUint32(iW + 0, !0),
-        amount: (WW, iW) => WW.getFloat64(iW + 4, !0)
+        item: (RR, JR) => RR.getUint32(JR + 0, !0),
+        amount: (RR, JR) => RR.getFloat64(JR + 4, !0)
       },
-      Fi = {
+      FJ = {
         BYTES: 16,
-        recipes: (WW, iW) => WW.getUint32(iW + 0, !0),
-        ingredients: (WW, iW) => WW.getUint32(iW + 4, !0),
-        craftAllTimes: (WW, iW) => WW.getUint32(iW + 8, !0),
-        flags: (WW, iW) => WW.getUint32(iW + 12, !0)
+        recipes: (RR, JR) => RR.getUint32(JR + 0, !0),
+        ingredients: (RR, JR) => RR.getUint32(JR + 4, !0),
+        craftAllTimes: (RR, JR) => RR.getUint32(JR + 8, !0),
+        flags: (RR, JR) => RR.getUint32(JR + 12, !0)
       },
-      Qi = {
+      TJ = {
         BYTES: 10,
-        item: (WW, iW) => WW.getUint16(iW + 0, !0),
-        recipe: (WW, iW) => WW.getUint16(iW + 2, !0),
-        produces: (WW, iW) => WW.getUint16(iW + 4, !0),
-        requires: (WW, iW) => WW.getUint16(iW + 6, !0),
-        flags: (WW, iW) => WW.getUint8(iW + 8)
+        item: (RR, JR) => RR.getUint16(JR + 0, !0),
+        recipe: (RR, JR) => RR.getUint16(JR + 2, !0),
+        produces: (RR, JR) => RR.getUint16(JR + 4, !0),
+        requires: (RR, JR) => RR.getUint16(JR + 6, !0),
+        flags: (RR, JR) => RR.getUint8(JR + 8)
       },
-      WO = {
+      sJ = {
         BYTES: 4,
-        amount: (WW, iW) => WW.getUint16(iW + 0, !0),
-        items: (WW, iW) => WW.getUint16(iW + 2, !0)
+        amount: (RR, JR) => RR.getUint16(JR + 0, !0),
+        items: (RR, JR) => RR.getUint16(JR + 2, !0)
       },
-      iO = {
+      hJ = {
         BYTES: 8,
-        amount: (WW, iW) => WW.getUint32(iW + 0, !0),
-        item: (WW, iW) => WW.getUint16(iW + 4, !0),
-        from: (WW, iW) => WW.getUint16(iW + 6, !0)
+        amount: (RR, JR) => RR.getUint32(JR + 0, !0),
+        item: (RR, JR) => RR.getUint16(JR + 4, !0),
+        from: (RR, JR) => RR.getUint16(JR + 6, !0)
       },
-      OO = {
+      RG = {
         BYTES: 16,
-        serverId: (WW, iW) => WW.getInt32(iW + 0, !0),
-        len: (WW, iW) => WW.getUint32(iW + 4, !0),
-        kind: (WW, iW) => WW.getUint16(iW + 8, !0),
-        variation: (WW, iW) => WW.getUint16(iW + 10, !0),
-        pose: (WW, iW) => WW.getUint8(iW + 12),
-        meta: (WW, iW) => WW.getUint8(iW + 13),
-        mesh: (WW, iW) => WW.getUint8(iW + 14),
-        flags: (WW, iW) => WW.getUint8(iW + 15)
+        serverId: (RR, JR) => RR.getInt32(JR + 0, !0),
+        len: (RR, JR) => RR.getUint32(JR + 4, !0),
+        kind: (RR, JR) => RR.getUint16(JR + 8, !0),
+        variation: (RR, JR) => RR.getUint16(JR + 10, !0),
+        pose: (RR, JR) => RR.getUint8(JR + 12),
+        meta: (RR, JR) => RR.getUint8(JR + 13),
+        mesh: (RR, JR) => RR.getUint8(JR + 14),
+        flags: (RR, JR) => RR.getUint8(JR + 15)
       },
-      mO = {
+      JG = {
         BYTES: 56,
-        terrainOpaque: (WW, iW) => WW.getUint32(iW + 0, !0),
-        terrainTransparent: (WW, iW) => WW.getUint32(iW + 4, !0),
-        terrainPack: (WW, iW) => WW.getUint32(iW + 8, !0),
-        earthSky: (WW, iW) => WW.getUint32(iW + 12, !0),
-        skyMeshes: (WW, iW) => WW.getUint32(iW + 16, !0),
-        regular: (WW, iW) => WW.getUint32(iW + 20, !0),
-        thin: (WW, iW) => WW.getUint32(iW + 24, !0),
-        line: (WW, iW) => WW.getUint32(iW + 28, !0),
-        text: (WW, iW) => WW.getUint32(iW + 32, !0),
-        particles: (WW, iW) => WW.getUint32(iW + 36, !0),
-        terrainParts: (WW, iW) => WW.getUint32(iW + 40, !0),
-        terrainCompiling: (WW, iW) => WW.getUint32(iW + 44, !0),
-        ringCopiesMax: (WW, iW) => WW.getUint32(iW + 48, !0),
-        ringBusyWrites: (WW, iW) => WW.getUint32(iW + 52, !0)
+        terrainOpaque: (RR, JR) => RR.getUint32(JR + 0, !0),
+        terrainTransparent: (RR, JR) => RR.getUint32(JR + 4, !0),
+        terrainPack: (RR, JR) => RR.getUint32(JR + 8, !0),
+        earthSky: (RR, JR) => RR.getUint32(JR + 12, !0),
+        skyMeshes: (RR, JR) => RR.getUint32(JR + 16, !0),
+        regular: (RR, JR) => RR.getUint32(JR + 20, !0),
+        thin: (RR, JR) => RR.getUint32(JR + 24, !0),
+        line: (RR, JR) => RR.getUint32(JR + 28, !0),
+        text: (RR, JR) => RR.getUint32(JR + 32, !0),
+        particles: (RR, JR) => RR.getUint32(JR + 36, !0),
+        terrainParts: (RR, JR) => RR.getUint32(JR + 40, !0),
+        terrainCompiling: (RR, JR) => RR.getUint32(JR + 44, !0),
+        ringCopiesMax: (RR, JR) => RR.getUint32(JR + 48, !0),
+        ringBusyWrites: (RR, JR) => RR.getUint32(JR + 52, !0)
       },
-      EO = {
+      GG = {
         BYTES: 16,
-        fov: (WW, iW) => WW.getFloat32(iW + 0, !0),
-        baseFov: (WW, iW) => WW.getFloat32(iW + 4, !0),
-        aspect: (WW, iW) => WW.getFloat32(iW + 8, !0),
-        bodyHeading: (WW, iW) => WW.getFloat32(iW + 12, !0)
+        fov: (RR, JR) => RR.getFloat32(JR + 0, !0),
+        baseFov: (RR, JR) => RR.getFloat32(JR + 4, !0),
+        aspect: (RR, JR) => RR.getFloat32(JR + 8, !0),
+        bodyHeading: (RR, JR) => RR.getFloat32(JR + 12, !0)
       },
-      NO = {
+      yG = {
         BYTES: 32,
-        eye: (WW, iW, OW) => WW.getFloat64(iW + 0 + 8 * OW, !0),
-        heading: (WW, iW) => WW.getFloat32(iW + 24, !0),
-        pitch: (WW, iW) => WW.getFloat32(iW + 28, !0)
+        eye: (RR, JR, GR) => RR.getFloat64(JR + 0 + 8 * GR, !0),
+        heading: (RR, JR) => RR.getFloat32(JR + 24, !0),
+        pitch: (RR, JR) => RR.getFloat32(JR + 28, !0)
       },
-      PO = {
+      tG = {
         BYTES: 48,
-        feet: (WW, iW, OW) => WW.getFloat64(iW + 0 + 8 * OW, !0),
-        eyeHeight: (WW, iW) => WW.getFloat32(iW + 24, !0),
-        heading: (WW, iW) => WW.getFloat32(iW + 28, !0),
-        headingIsDrawn: (WW, iW) => WW.getUint32(iW + 32, !0),
-        pitch: (WW, iW) => WW.getFloat32(iW + 36, !0),
-        lookHeading: (WW, iW) => WW.getFloat32(iW + 40, !0)
+        feet: (RR, JR, GR) => RR.getFloat64(JR + 0 + 8 * GR, !0),
+        eyeHeight: (RR, JR) => RR.getFloat32(JR + 24, !0),
+        heading: (RR, JR) => RR.getFloat32(JR + 28, !0),
+        headingIsDrawn: (RR, JR) => RR.getUint32(JR + 32, !0),
+        pitch: (RR, JR) => RR.getFloat32(JR + 36, !0),
+        lookHeading: (RR, JR) => RR.getFloat32(JR + 40, !0)
       },
-      LO = 32,
-      cO = 63,
-      wO = {
+      uG = 32,
+      ZG = 63,
+      qG = {
         TickEnd: 32,
         EntitySpawned: 33,
         EntityDespawned: 34,
@@ -783,64 +783,64 @@ export const modules = {
         RecorderEvent: 62
       };
 
-    function tO(WW, iW, OW, mW, EW) {
-      var NW, PW, LW, cW, wW, tW, ZW, xW, lW, AW, bW, jW, UW, kW, sW, MW, KW, SW, YW, yW, TW, JW, hW, HW, nW;
-      switch (WW) {
+    function iG(RR, JR, GR, yR, tR) {
+      var uR, ZR, qR, iR, fR, VR, KR, wR, rR, eR, aR, LR, nR, UR, WR, AR, CR, XR, MR, BR, lR, pR, gR, bR, vR;
+      switch (RR) {
         case 32:
-          return 4 === mW && (null === (NW = EW.tickEnd) || void 0 === NW || NW.call(EW, Ui.hZ(iW, OW)), !0);
+          return 4 === yR && (null === (uR = tR.tickEnd) || void 0 === uR || uR.call(tR, nJ.gK(JR, GR)), !0);
         case 33:
-          return 12 === mW && (null === (PW = EW.entitySpawned) || void 0 === PW || PW.call(EW, ki.serverId(iW, OW), ki.index(iW, OW), ki.kind(iW, OW)), !0);
+          return 12 === yR && (null === (ZR = tR.entitySpawned) || void 0 === ZR || ZR.call(tR, UJ.serverId(JR, GR), UJ.index(JR, GR), UJ.kind(JR, GR)), !0);
         case 34:
-          return 12 === mW && (null === (LW = EW.entityDespawned) || void 0 === LW || LW.call(EW, ki.serverId(iW, OW), ki.index(iW, OW), ki.kind(iW, OW)), !0);
+          return 12 === yR && (null === (qR = tR.entityDespawned) || void 0 === qR || qR.call(tR, UJ.serverId(JR, GR), UJ.index(JR, GR), UJ.kind(JR, GR)), !0);
         case 39:
-          return !(mW < 20) && (null === (cW = EW.changeBlockFail) || void 0 === cW || cW.call(EW, si.pos(iW, OW, 0), si.pos(iW, OW, 1), si.pos(iW, OW, 2), si.actual(iW, OW), si.dataLen(iW, OW), OW + 20, mW - 20), !0);
+          return !(yR < 20) && (null === (iR = tR.changeBlockFail) || void 0 === iR || iR.call(tR, WJ.pos(JR, GR, 0), WJ.pos(JR, GR, 1), WJ.pos(JR, GR, 2), WJ.actual(JR, GR), WJ.dataLen(JR, GR), GR + 20, yR - 20), !0);
         case 46:
-          return 0 === mW && (null === (wW = EW.changeBlockFailEnd) || void 0 === wW || wW.call(EW), !0);
+          return 0 === yR && (null === (fR = tR.changeBlockFailEnd) || void 0 === fR || fR.call(tR), !0);
         case 48:
-          return 20 === mW && (null === (tW = EW.inventoryEvent) || void 0 === tW || tW.call(EW, Mi.what(iW, OW), Mi.value(iW, OW), Mi.pos(iW, OW, 0), Mi.pos(iW, OW, 1), Mi.pos(iW, OW, 2), Mi.block(iW, OW)), !0);
+          return 20 === yR && (null === (VR = tR.inventoryEvent) || void 0 === VR || VR.call(tR, AJ.what(JR, GR), AJ.value(JR, GR), AJ.pos(JR, GR, 0), AJ.pos(JR, GR, 1), AJ.pos(JR, GR, 2), AJ.block(JR, GR)), !0);
         case 49:
-          return 4 === mW && (null === (ZW = EW.heldItemChanged) || void 0 === ZW || ZW.call(EW, Ki.item(iW, OW), Ki.slot(iW, OW)), !0);
+          return 4 === yR && (null === (KR = tR.heldItemChanged) || void 0 === KR || KR.call(tR, CJ.item(JR, GR), CJ.slot(JR, GR)), !0);
         case 50:
-          return 16 === mW && (null === (xW = EW.shotDamage) || void 0 === xW || xW.call(EW, Si.target(iW, OW), Si.damage(iW, OW), Si.distance(iW, OW), Si.crit(iW, OW)), !0);
+          return 16 === yR && (null === (wR = tR.shotDamage) || void 0 === wR || wR.call(tR, XJ.target(JR, GR), XJ.damage(JR, GR), XJ.distance(JR, GR), XJ.crit(JR, GR)), !0);
         case 51:
-          return !(mW < 4) && (null === (lW = EW.enchantOffer) || void 0 === lW || lW.call(EW, Yi.slot(iW, OW), OW + 4, mW - 4), !0);
+          return !(yR < 4) && (null === (rR = tR.enchantOffer) || void 0 === rR || rR.call(tR, MJ.slot(JR, GR), GR + 4, yR - 4), !0);
         case 52:
-          return !(mW < 20) && (null === (AW = EW.uiEvent) || void 0 === AW || AW.call(EW, yi.what(iW, OW), yi.value(iW, OW), yi.pos(iW, OW, 0), yi.pos(iW, OW, 1), yi.pos(iW, OW, 2), yi.block(iW, OW), OW + 20, mW - 20), !0);
+          return !(yR < 20) && (null === (eR = tR.uiEvent) || void 0 === eR || eR.call(tR, BJ.what(JR, GR), BJ.value(JR, GR), BJ.pos(JR, GR, 0), BJ.pos(JR, GR, 1), BJ.pos(JR, GR, 2), BJ.block(JR, GR), GR + 20, yR - 20), !0);
         case 53:
-          return 12 === mW && (null === (bW = EW.entityInfoChanged) || void 0 === bW || bW.call(EW, Ti.serverId(iW, OW), Ti.index(iW, OW), Ti.what(iW, OW)), !0);
+          return 12 === yR && (null === (aR = tR.entityInfoChanged) || void 0 === aR || aR.call(tR, lJ.serverId(JR, GR), lJ.index(JR, GR), lJ.what(JR, GR)), !0);
         case 55:
-          return 24 === mW && (null === (jW = EW.chunkSlot) || void 0 === jW || jW.call(EW, Ji.cx(iW, OW), Ji.cy(iW, OW), Ji.cz(iW, OW), Ji.slot(iW, OW), Ji.generation(iW, OW), Ji.flags(iW, OW)), !0);
+          return 24 === yR && (null === (LR = tR.chunkSlot) || void 0 === LR || LR.call(tR, pJ.cx(JR, GR), pJ.cy(JR, GR), pJ.cz(JR, GR), pJ.slot(JR, GR), pJ.generation(JR, GR), pJ.flags(JR, GR)), !0);
         case 40:
-          return 44 === mW && (null === (UW = EW.playSound) || void 0 === UW || UW.call(EW, Hi.pos(iW, OW, 0), Hi.pos(iW, OW, 1), Hi.pos(iW, OW, 2), Hi.sound(iW, OW), Hi.flags(iW, OW), Hi.handle(iW, OW), Hi.volume(iW, OW), Hi.rate(iW, OW), Hi.refDist(iW, OW)), !0);
+          return 44 === yR && (null === (nR = tR.playSound) || void 0 === nR || nR.call(tR, gJ.pos(JR, GR, 0), gJ.pos(JR, GR, 1), gJ.pos(JR, GR, 2), gJ.sound(JR, GR), gJ.flags(JR, GR), gJ.handle(JR, GR), gJ.volume(JR, GR), gJ.rate(JR, GR), gJ.refDist(JR, GR)), !0);
         case 41:
-          return 28 === mW && (null === (kW = EW.soundPos) || void 0 === kW || kW.call(EW, ni.pos(iW, OW, 0), ni.pos(iW, OW, 1), ni.pos(iW, OW, 2), ni.handle(iW, OW)), !0);
+          return 28 === yR && (null === (UR = tR.soundPos) || void 0 === UR || UR.call(tR, bJ.pos(JR, GR, 0), bJ.pos(JR, GR, 1), bJ.pos(JR, GR, 2), bJ.handle(JR, GR)), !0);
         case 42:
-          return 16 === mW && (null === (sW = EW.soundSet) || void 0 === sW || sW.call(EW, ui.handle(iW, OW), ui.volume(iW, OW), ui.rate(iW, OW), ui.refDist(iW, OW)), !0);
+          return 16 === yR && (null === (WR = tR.soundSet) || void 0 === WR || WR.call(tR, vJ.handle(JR, GR), vJ.volume(JR, GR), vJ.rate(JR, GR), vJ.refDist(JR, GR)), !0);
         case 43:
-          return 12 === mW && (null === (MW = EW.soundFade) || void 0 === MW || MW.call(EW, oi.handle(iW, OW), oi.to(iW, OW), oi.ms(iW, OW), oi.flags(iW, OW)), !0);
+          return 12 === yR && (null === (AR = tR.soundFade) || void 0 === AR || AR.call(tR, OJ.handle(JR, GR), OJ.to(JR, GR), OJ.ms(JR, GR), OJ.flags(JR, GR)), !0);
         case 44:
-          return 4 === mW && (null === (KW = EW.soundStop) || void 0 === KW || KW.call(EW, di.handle(iW, OW)), !0);
+          return 4 === yR && (null === (CR = tR.soundStop) || void 0 === CR || CR.call(tR, xJ.handle(JR, GR)), !0);
         case 45:
-          return 0 === mW && (null === (SW = EW.soundReset) || void 0 === SW || SW.call(EW), !0);
+          return 0 === yR && (null === (XR = tR.soundReset) || void 0 === XR || XR.call(tR), !0);
         case 56:
-          return 8 === mW && (null === (YW = EW.replayFailed) || void 0 === YW || YW.call(EW, ei.reason(iW, OW), ei.code(iW, OW), ei.version(iW, OW)), !0);
+          return 8 === yR && (null === (MR = tR.replayFailed) || void 0 === MR || MR.call(tR, NJ.reason(JR, GR), NJ.code(JR, GR), NJ.version(JR, GR)), !0);
         case 57:
-          return !(mW < 4) && (null === (yW = EW.replayOption) || void 0 === yW || yW.call(EW, vi.key(iW, OW), vi.tag(iW, OW), OW + 4, mW - 4), !0);
+          return !(yR < 4) && (null === (BR = tR.replayOption) || void 0 === BR || BR.call(tR, DJ.key(JR, GR), DJ.tag(JR, GR), GR + 4, yR - 4), !0);
         case 58:
-          return 16 === mW && (null === (TW = EW.replayFilePart) || void 0 === TW || TW.call(EW, gi.save(iW, OW), gi.index(iW, OW), gi.ptr(iW, OW), gi.len(iW, OW)), !0);
+          return 16 === yR && (null === (lR = tR.replayFilePart) || void 0 === lR || lR.call(tR, HJ.save(JR, GR), HJ.index(JR, GR), HJ.ptr(JR, GR), HJ.len(JR, GR)), !0);
         case 59:
-          return 16 === mW && (null === (JW = EW.replayFileReady) || void 0 === JW || JW.call(EW, Di.save(iW, OW), Di.kind(iW, OW), Di.parts(iW, OW), Di.bytes(iW, OW)), !0);
+          return 16 === yR && (null === (pR = tR.replayFileReady) || void 0 === pR || pR.call(tR, oJ.save(JR, GR), oJ.kind(JR, GR), oJ.parts(JR, GR), oJ.bytes(JR, GR)), !0);
         case 60:
-          return !(mW < 4) && (null === (hW = EW.replayOpened) || void 0 === hW || hW.call(EW, Vi.totalTicks(iW, OW), OW + 4, mW - 4), !0);
+          return !(yR < 4) && (null === (gR = tR.replayOpened) || void 0 === gR || gR.call(tR, cJ.totalTicks(JR, GR), GR + 4, yR - 4), !0);
         case 61:
-          return !(mW < 24) && (null === (HW = EW.replayUiEvent) || void 0 === HW || HW.call(EW, fi.what(iW, OW), fi.int(iW, OW), fi.x(iW, OW), fi.y(iW, OW), OW + 24, mW - 24), !0);
+          return !(yR < 24) && (null === (bR = tR.replayUiEvent) || void 0 === bR || bR.call(tR, PJ.what(JR, GR), PJ.int(JR, GR), PJ.x(JR, GR), PJ.y(JR, GR), GR + 24, yR - 24), !0);
         case 62:
-          return 8 === mW && (null === (nW = EW.recorderEvent) || void 0 === nW || nW.call(EW, Ci.what(iW, OW), Ci.kind(iW, OW), Ci.save(iW, OW)), !0);
+          return 8 === yR && (null === (vR = tR.recorderEvent) || void 0 === vR || vR.call(tR, IJ.what(JR, GR), IJ.kind(JR, GR), IJ.save(JR, GR)), !0);
         default:
           return !1
       }
     }
-    const ZO = {
+    const fG = {
       SetChunkAddDistance: 2,
       WatchEntityInfo: 66,
       EventResync: 67,
@@ -893,496 +893,496 @@ export const modules = {
       PressCustomButton: 578,
       PadMove: 579
     };
-    let xO = new Uint8Array(0);
+    let VG = new Uint8Array(0);
 
-    function lO(WW) {
-      return xO.buffer !== WW.buffer && (xO = new Uint8Array(WW.buffer)), xO
+    function KG(RR) {
+      return VG.buffer !== RR.buffer && (VG = new Uint8Array(RR.buffer)), VG
     }
 
-    function AO(WW, iW, OW) {
-      const mW = WW.kZ(66, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint8(mW + 0, OW), !0
+    function wG(RR, JR, GR) {
+      const yR = RR.UK(66, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint8(yR + 0, GR), !0
     }
 
-    function bO(WW, iW, OW) {
-      const mW = WW.kZ(67, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function rG(RR, JR, GR) {
+      const yR = RR.UK(67, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function jO(WW, iW, OW) {
-      const mW = WW.kZ(68, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint8(mW + 0, OW), !0
+    function eG(RR, JR, GR) {
+      const yR = RR.UK(68, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint8(yR + 0, GR), !0
     }
 
-    function UO(WW, iW, OW, mW) {
-      const EW = WW.kZ(69, iW, 4 + mW.length);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setUint8(EW + 0, OW), lO(NW).set(mW, NW.byteOffset + EW + 4), !0
+    function aG(RR, JR, GR, yR) {
+      const tR = RR.UK(69, JR, 4 + yR.length);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setUint8(tR + 0, GR), KG(uR).set(yR, uR.byteOffset + tR + 4), !0
     }
 
-    function kO(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(128, iW, 4 + EW.length);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      return PW.setUint8(NW + 0, OW), PW.setUint16(NW + 2, mW, !0), lO(PW).set(EW, PW.byteOffset + NW + 4), !0
+    function LG(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(128, JR, 4 + tR.length);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      return ZR.setUint8(uR + 0, GR), ZR.setUint16(uR + 2, yR, !0), KG(ZR).set(tR, ZR.byteOffset + uR + 4), !0
     }
 
-    function sO(WW, iW, OW) {
-      const mW = WW.kZ(131, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setInt32(mW + 0, OW, !0), !0
+    function nG(RR, JR, GR) {
+      const yR = RR.UK(131, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setInt32(yR + 0, GR, !0), !0
     }
 
-    function MO(WW, iW, OW) {
-      const mW = WW.kZ(132, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function UG(RR, JR, GR) {
+      const yR = RR.UK(132, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function KO(WW, iW, OW) {
-      const mW = WW.kZ(133, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function WG(RR, JR, GR) {
+      const yR = RR.UK(133, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function SO(WW, iW, OW) {
-      const mW = WW.kZ(144, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint8(mW + 0, OW), !0
+    function AG(RR, JR, GR) {
+      const yR = RR.UK(144, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint8(yR + 0, GR), !0
     }
 
-    function YO(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(145, iW, 12);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      return PW.setInt32(NW + 0, OW, !0), PW.setInt32(NW + 4, mW, !0), PW.setInt32(NW + 8, EW, !0), !0
+    function CG(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(145, JR, 12);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      return ZR.setInt32(uR + 0, GR, !0), ZR.setInt32(uR + 4, yR, !0), ZR.setInt32(uR + 8, tR, !0), !0
     }
 
-    function yO(WW, iW, OW, mW) {
-      const EW = WW.kZ(256, iW, 4 + mW.length);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setUint16(EW + 0, OW, !0), lO(NW).set(mW, NW.byteOffset + EW + 4), !0
+    function XG(RR, JR, GR, yR) {
+      const tR = RR.UK(256, JR, 4 + yR.length);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setUint16(tR + 0, GR, !0), KG(uR).set(yR, uR.byteOffset + tR + 4), !0
     }
 
-    function TO(WW, iW, OW) {
-      const mW = WW.kZ(258, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint8(mW + 0, OW), !0
+    function MG(RR, JR, GR) {
+      const yR = RR.UK(258, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint8(yR + 0, GR), !0
     }
 
-    function JO(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-      const wW = WW.kZ(320, iW, 48 + cW.length);
-      if (wW < 0) return !1;
-      const tW = WW.view;
-      tW.setUint32(wW + 0, OW, !0), tW.setUint16(wW + 4, mW, !0), tW.setUint16(wW + 6, EW, !0), tW.setUint32(wW + 8, NW, !0);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat64(wW + 12 + 8 * ZW, PW[ZW], !0);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat32(wW + 36 + 4 * ZW, LW[ZW], !0);
-      return lO(tW).set(cW, tW.byteOffset + wW + 48), !0
+    function BG(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+      const fR = RR.UK(320, JR, 48 + iR.length);
+      if (fR < 0) return !1;
+      const VR = RR.view;
+      VR.setUint32(fR + 0, GR, !0), VR.setUint16(fR + 4, yR, !0), VR.setUint16(fR + 6, tR, !0), VR.setUint32(fR + 8, uR, !0);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat64(fR + 12 + 8 * KR, ZR[KR], !0);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat32(fR + 36 + 4 * KR, qR[KR], !0);
+      return KG(VR).set(iR, VR.byteOffset + fR + 48), !0
     }
 
-    function hO(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-      const wW = WW.kZ(321, iW, 48 + cW.length);
-      if (wW < 0) return !1;
-      const tW = WW.view;
-      tW.setUint32(wW + 0, OW, !0), tW.setInt32(wW + 4, mW, !0), tW.setUint16(wW + 8, EW, !0), tW.setUint16(wW + 10, NW, !0);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat64(wW + 12 + 8 * ZW, PW[ZW], !0);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat32(wW + 36 + 4 * ZW, LW[ZW], !0);
-      return lO(tW).set(cW, tW.byteOffset + wW + 48), !0
+    function lG(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+      const fR = RR.UK(321, JR, 48 + iR.length);
+      if (fR < 0) return !1;
+      const VR = RR.view;
+      VR.setUint32(fR + 0, GR, !0), VR.setInt32(fR + 4, yR, !0), VR.setUint16(fR + 8, tR, !0), VR.setUint16(fR + 10, uR, !0);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat64(fR + 12 + 8 * KR, ZR[KR], !0);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat32(fR + 36 + 4 * KR, qR[KR], !0);
+      return KG(VR).set(iR, VR.byteOffset + fR + 48), !0
     }
 
-    function HO(WW, iW, OW, mW, EW, NW, PW) {
-      const LW = WW.kZ(322, iW, 44 + PW.length);
-      if (LW < 0) return !1;
-      const cW = WW.view;
-      cW.setUint32(LW + 0, OW, !0), cW.setUint32(LW + 4, mW, !0);
-      for (let wW = 0; wW < 3; wW++) cW.setFloat64(LW + 8 + 8 * wW, EW[wW], !0);
-      for (let wW = 0; wW < 3; wW++) cW.setFloat32(LW + 32 + 4 * wW, NW[wW], !0);
-      return lO(cW).set(PW, cW.byteOffset + LW + 44), !0
+    function pG(RR, JR, GR, yR, tR, uR, ZR) {
+      const qR = RR.UK(322, JR, 44 + ZR.length);
+      if (qR < 0) return !1;
+      const iR = RR.view;
+      iR.setUint32(qR + 0, GR, !0), iR.setUint32(qR + 4, yR, !0);
+      for (let fR = 0; fR < 3; fR++) iR.setFloat64(qR + 8 + 8 * fR, tR[fR], !0);
+      for (let fR = 0; fR < 3; fR++) iR.setFloat32(qR + 32 + 4 * fR, uR[fR], !0);
+      return KG(iR).set(ZR, iR.byteOffset + qR + 44), !0
     }
 
-    function nO(WW, iW, OW) {
-      const mW = WW.kZ(323, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function gG(RR, JR, GR) {
+      const yR = RR.UK(323, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function uO(WW, iW, OW, mW, EW, NW) {
-      const PW = WW.kZ(324, iW, 32 + NW.length);
-      if (PW < 0) return !1;
-      const LW = WW.view;
-      LW.setUint32(PW + 0, OW, !0), LW.setUint32(PW + 4, mW, !0);
-      for (let cW = 0; cW < 3; cW++) LW.setFloat64(PW + 8 + 8 * cW, EW[cW], !0);
-      return lO(LW).set(NW, LW.byteOffset + PW + 32), !0
+    function bG(RR, JR, GR, yR, tR, uR) {
+      const ZR = RR.UK(324, JR, 32 + uR.length);
+      if (ZR < 0) return !1;
+      const qR = RR.view;
+      qR.setUint32(ZR + 0, GR, !0), qR.setUint32(ZR + 4, yR, !0);
+      for (let iR = 0; iR < 3; iR++) qR.setFloat64(ZR + 8 + 8 * iR, tR[iR], !0);
+      return KG(qR).set(uR, qR.byteOffset + ZR + 32), !0
     }
 
-    function oO(WW, iW) {
-      return !(WW.kZ(325, iW, 0) < 0)
+    function vG(RR, JR) {
+      return !(RR.UK(325, JR, 0) < 0)
     }
 
-    function dO(WW, iW, OW, mW, EW, NW) {
-      const PW = WW.kZ(384, iW, 16);
-      if (PW < 0) return !1;
-      const LW = WW.view;
-      return LW.setUint32(PW + 0, OW, !0), LW.setUint32(PW + 4, mW, !0), LW.setFloat32(PW + 8, EW, !0), LW.setFloat32(PW + 12, NW, !0), !0
+    function OG(RR, JR, GR, yR, tR, uR) {
+      const ZR = RR.UK(384, JR, 16);
+      if (ZR < 0) return !1;
+      const qR = RR.view;
+      return qR.setUint32(ZR + 0, GR, !0), qR.setUint32(ZR + 4, yR, !0), qR.setFloat32(ZR + 8, tR, !0), qR.setFloat32(ZR + 12, uR, !0), !0
     }
 
-    function eO(WW, iW, OW, mW, EW, NW, PW) {
-      const LW = WW.kZ(385, iW, 36 + PW.length);
-      if (LW < 0) return !1;
-      const cW = WW.view;
-      cW.setUint32(LW + 0, OW, !0), cW.setUint32(LW + 4, mW, !0);
-      for (let wW = 0; wW < 3; wW++) cW.setFloat64(LW + 8 + 8 * wW, EW[wW], !0);
-      return cW.setUint32(LW + 32, NW, !0), lO(cW).set(PW, cW.byteOffset + LW + 36), !0
+    function xG(RR, JR, GR, yR, tR, uR, ZR) {
+      const qR = RR.UK(385, JR, 36 + ZR.length);
+      if (qR < 0) return !1;
+      const iR = RR.view;
+      iR.setUint32(qR + 0, GR, !0), iR.setUint32(qR + 4, yR, !0);
+      for (let fR = 0; fR < 3; fR++) iR.setFloat64(qR + 8 + 8 * fR, tR[fR], !0);
+      return iR.setUint32(qR + 32, uR, !0), KG(iR).set(ZR, iR.byteOffset + qR + 36), !0
     }
 
-    function vO(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-      const wW = WW.kZ(386, iW, 56 + cW.length);
-      if (wW < 0) return !1;
-      const tW = WW.view;
-      tW.setUint32(wW + 0, OW, !0), tW.setUint8(wW + 4, mW);
-      for (let ZW = 0; ZW < 4; ZW++) tW.setFloat32(wW + 8 + 4 * ZW, EW[ZW], !0);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat64(wW + 24 + 8 * ZW, NW[ZW], !0);
-      return tW.setUint32(wW + 48, PW, !0), tW.setUint32(wW + 52, LW, !0), lO(tW).set(cW, tW.byteOffset + wW + 56), !0
+    function NG(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+      const fR = RR.UK(386, JR, 56 + iR.length);
+      if (fR < 0) return !1;
+      const VR = RR.view;
+      VR.setUint32(fR + 0, GR, !0), VR.setUint8(fR + 4, yR);
+      for (let KR = 0; KR < 4; KR++) VR.setFloat32(fR + 8 + 4 * KR, tR[KR], !0);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat64(fR + 24 + 8 * KR, uR[KR], !0);
+      return VR.setUint32(fR + 48, ZR, !0), VR.setUint32(fR + 52, qR, !0), KG(VR).set(iR, VR.byteOffset + fR + 56), !0
     }
 
-    function gO(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-      const wW = WW.kZ(387, iW, 56);
-      if (wW < 0) return !1;
-      const tW = WW.view;
-      tW.setUint32(wW + 0, OW, !0), tW.setUint16(wW + 4, mW, !0), tW.setUint8(wW + 6, EW);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat64(wW + 8 + 8 * ZW, NW[ZW], !0);
-      for (let ZW = 0; ZW < 2; ZW++) tW.setFloat32(wW + 32 + 4 * ZW, PW[ZW], !0);
-      tW.setFloat32(wW + 40, LW, !0);
-      for (let ZW = 0; ZW < 3; ZW++) tW.setFloat32(wW + 44 + 4 * ZW, cW[ZW], !0);
+    function DG(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+      const fR = RR.UK(387, JR, 56);
+      if (fR < 0) return !1;
+      const VR = RR.view;
+      VR.setUint32(fR + 0, GR, !0), VR.setUint16(fR + 4, yR, !0), VR.setUint8(fR + 6, tR);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat64(fR + 8 + 8 * KR, uR[KR], !0);
+      for (let KR = 0; KR < 2; KR++) VR.setFloat32(fR + 32 + 4 * KR, ZR[KR], !0);
+      VR.setFloat32(fR + 40, qR, !0);
+      for (let KR = 0; KR < 3; KR++) VR.setFloat32(fR + 44 + 4 * KR, iR[KR], !0);
       return !0
     }
 
-    function DO(WW, iW, OW) {
-      const mW = WW.kZ(388, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function HG(RR, JR, GR) {
+      const yR = RR.UK(388, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function VO(WW, iW, OW, mW) {
-      const EW = WW.kZ(389, iW, 8);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setInt32(EW + 0, OW, !0), NW.setFloat32(EW + 4, mW, !0), !0
+    function oG(RR, JR, GR, yR) {
+      const tR = RR.UK(389, JR, 8);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setInt32(tR + 0, GR, !0), uR.setFloat32(tR + 4, yR, !0), !0
     }
 
-    function pO(WW, iW, OW, mW) {
-      const EW = WW.kZ(390, iW, 8);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setInt32(EW + 0, OW, !0), NW.setFloat32(EW + 4, mW, !0), !0
+    function cG(RR, JR, GR, yR) {
+      const tR = RR.UK(390, JR, 8);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setInt32(tR + 0, GR, !0), uR.setFloat32(tR + 4, yR, !0), !0
     }
 
-    function fO(WW, iW, OW, mW, EW, NW) {
-      const PW = WW.kZ(391, iW, 12);
-      if (PW < 0) return !1;
-      const LW = WW.view;
-      return LW.setFloat32(PW + 0, OW, !0), LW.setFloat32(PW + 4, mW, !0), LW.setUint8(PW + 8, EW), LW.setUint8(PW + 9, NW), !0
+    function PG(RR, JR, GR, yR, tR, uR) {
+      const ZR = RR.UK(391, JR, 12);
+      if (ZR < 0) return !1;
+      const qR = RR.view;
+      return qR.setFloat32(ZR + 0, GR, !0), qR.setFloat32(ZR + 4, yR, !0), qR.setUint8(ZR + 8, tR), qR.setUint8(ZR + 9, uR), !0
     }
 
-    function CO(WW, iW, OW) {
-      const mW = WW.kZ(392, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function IG(RR, JR, GR) {
+      const yR = RR.UK(392, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function XO(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(393, iW, 12);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      return PW.setUint32(NW + 0, OW, !0), PW.setUint16(NW + 4, mW, !0), PW.setFloat32(NW + 8, EW, !0), !0
+    function mG(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(393, JR, 12);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      return ZR.setUint32(uR + 0, GR, !0), ZR.setUint16(uR + 4, yR, !0), ZR.setFloat32(uR + 8, tR, !0), !0
     }
 
-    function BO(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW) {
-      const xW = WW.kZ(394, iW, 56 + ZW.length);
-      if (xW < 0) return !1;
-      const lW = WW.view;
-      lW.setUint32(xW + 0, OW, !0), lW.setUint16(xW + 4, mW, !0), lW.setUint8(xW + 6, EW), lW.setUint8(xW + 7, NW);
-      for (let AW = 0; AW < 3; AW++) lW.setFloat64(xW + 8 + 8 * AW, PW[AW], !0);
-      lW.setFloat32(xW + 32, LW, !0), lW.setInt32(xW + 36, cW, !0);
-      for (let AW = 0; AW < 3; AW++) lW.setFloat32(xW + 40 + 4 * AW, wW[AW], !0);
-      return lW.setFloat32(xW + 52, tW, !0), lO(lW).set(ZW, lW.byteOffset + xW + 56), !0
+    function zG(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR, VR, KR) {
+      const wR = RR.UK(394, JR, 56 + KR.length);
+      if (wR < 0) return !1;
+      const rR = RR.view;
+      rR.setUint32(wR + 0, GR, !0), rR.setUint16(wR + 4, yR, !0), rR.setUint8(wR + 6, tR), rR.setUint8(wR + 7, uR);
+      for (let eR = 0; eR < 3; eR++) rR.setFloat64(wR + 8 + 8 * eR, ZR[eR], !0);
+      rR.setFloat32(wR + 32, qR, !0), rR.setInt32(wR + 36, iR, !0);
+      for (let eR = 0; eR < 3; eR++) rR.setFloat32(wR + 40 + 4 * eR, fR[eR], !0);
+      return rR.setFloat32(wR + 52, VR, !0), KG(rR).set(KR, rR.byteOffset + wR + 56), !0
     }
 
-    function qO(WW, iW, OW) {
-      const mW = WW.kZ(398, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setUint32(mW + 0, OW, !0), !0
+    function SG(RR, JR, GR) {
+      const yR = RR.UK(398, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setUint32(yR + 0, GR, !0), !0
     }
 
-    function RO(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(399, iW, 12);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      return PW.setUint32(NW + 0, OW, !0), PW.setUint32(NW + 4, mW, !0), PW.setFloat32(NW + 8, EW, !0), !0
+    function jG(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(399, JR, 12);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      return ZR.setUint32(uR + 0, GR, !0), ZR.setUint32(uR + 4, yR, !0), ZR.setFloat32(uR + 8, tR, !0), !0
     }
 
-    function GO(WW, iW, OW) {
-      const mW = WW.kZ(448, iW, 4);
-      if (mW < 0) return !1;
-      return WW.view.setFloat32(mW + 0, OW, !0), !0
+    function dG(RR, JR, GR) {
+      const yR = RR.UK(448, JR, 4);
+      if (yR < 0) return !1;
+      return RR.view.setFloat32(yR + 0, GR, !0), !0
     }
 
-    function IO(WW, iW, OW, mW) {
-      const EW = WW.kZ(450, iW, 12);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      for (let PW = 0; PW < 2; PW++) NW.setFloat32(EW + 0 + 4 * PW, OW[PW], !0);
-      return NW.setUint8(EW + 8, mW), !0
+    function EG(RR, JR, GR, yR) {
+      const tR = RR.UK(450, JR, 12);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      for (let ZR = 0; ZR < 2; ZR++) uR.setFloat32(tR + 0 + 4 * ZR, GR[ZR], !0);
+      return uR.setUint8(tR + 8, yR), !0
     }
 
-    function aO(WW, iW, OW, mW) {
-      const EW = WW.kZ(452, iW, 8);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setFloat32(EW + 0, OW, !0), NW.setUint8(EW + 4, mW), !0
+    function YG(RR, JR, GR, yR) {
+      const tR = RR.UK(452, JR, 8);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setFloat32(tR + 0, GR, !0), uR.setUint8(tR + 4, yR), !0
     }
 
-    function rO(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(454, iW, 4);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      return PW.setUint8(NW + 0, OW), PW.setUint8(NW + 1, mW), PW.setUint8(NW + 2, EW), !0
+    function kG(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(454, JR, 4);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      return ZR.setUint8(uR + 0, GR), ZR.setUint8(uR + 1, yR), ZR.setUint8(uR + 2, tR), !0
     }
 
-    function zO(WW, iW, OW, mW) {
-      const EW = WW.kZ(455, iW, 40);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      for (let PW = 0; PW < 9; PW++) NW.setInt32(EW + 0 + 4 * PW, OW[PW], !0);
-      return NW.setUint32(EW + 36, mW, !0), !0
+    function QG(RR, JR, GR, yR) {
+      const tR = RR.UK(455, JR, 40);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      for (let ZR = 0; ZR < 9; ZR++) uR.setInt32(tR + 0 + 4 * ZR, GR[ZR], !0);
+      return uR.setUint32(tR + 36, yR, !0), !0
     }
 
-    function FO(WW, iW, OW, mW) {
-      const EW = WW.kZ(456, iW, 8);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setFloat32(EW + 0, OW, !0), NW.setUint8(EW + 4, mW), !0
+    function FG(RR, JR, GR, yR) {
+      const tR = RR.UK(456, JR, 8);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setFloat32(tR + 0, GR, !0), uR.setUint8(tR + 4, yR), !0
     }
 
-    function QO(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(457, iW, 16);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      for (let LW = 0; LW < 3; LW++) PW.setInt32(NW + 0 + 4 * LW, OW[LW], !0);
-      for (let LW = 0; LW < 3; LW++) PW.setInt8(NW + 12 + 1 * LW, mW[LW]);
-      return PW.setUint8(NW + 15, EW), !0
+    function TG(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(457, JR, 16);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      for (let qR = 0; qR < 3; qR++) ZR.setInt32(uR + 0 + 4 * qR, GR[qR], !0);
+      for (let qR = 0; qR < 3; qR++) ZR.setInt8(uR + 12 + 1 * qR, yR[qR]);
+      return ZR.setUint8(uR + 15, tR), !0
     }
 
-    function Wm(WW, iW, OW, mW) {
-      const EW = WW.kZ(530, iW, 4 + mW.length);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setUint8(EW + 0, OW), lO(NW).set(mW, NW.byteOffset + EW + 4), !0
+    function sG(RR, JR, GR, yR) {
+      const tR = RR.UK(530, JR, 4 + yR.length);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setUint8(tR + 0, GR), KG(uR).set(yR, uR.byteOffset + tR + 4), !0
     }
 
-    function im(WW, iW, OW, mW, EW, NW) {
-      const PW = WW.kZ(531, iW, 12 + NW.length);
-      if (PW < 0) return !1;
-      const LW = WW.view;
-      return LW.setFloat32(PW + 0, OW, !0), LW.setFloat32(PW + 4, mW, !0), LW.setUint32(PW + 8, EW, !0), lO(LW).set(NW, LW.byteOffset + PW + 12), !0
+    function hG(RR, JR, GR, yR, tR, uR) {
+      const ZR = RR.UK(531, JR, 12 + uR.length);
+      if (ZR < 0) return !1;
+      const qR = RR.view;
+      return qR.setFloat32(ZR + 0, GR, !0), qR.setFloat32(ZR + 4, yR, !0), qR.setUint32(ZR + 8, tR, !0), KG(qR).set(uR, qR.byteOffset + ZR + 12), !0
     }
 
-    function Om(WW, iW, OW, mW, EW, NW) {
-      const PW = WW.kZ(532, iW, 12 + NW.length);
-      if (PW < 0) return !1;
-      const LW = WW.view;
-      return LW.setInt32(PW + 0, OW, !0), LW.setInt32(PW + 4, mW, !0), LW.setUint32(PW + 8, EW, !0), lO(LW).set(NW, LW.byteOffset + PW + 12), !0
+    function Ry(RR, JR, GR, yR, tR, uR) {
+      const ZR = RR.UK(532, JR, 12 + uR.length);
+      if (ZR < 0) return !1;
+      const qR = RR.view;
+      return qR.setInt32(ZR + 0, GR, !0), qR.setInt32(ZR + 4, yR, !0), qR.setUint32(ZR + 8, tR, !0), KG(qR).set(uR, qR.byteOffset + ZR + 12), !0
     }
 
-    function mm(WW, iW, OW, mW, EW) {
-      const NW = WW.kZ(533, iW, 8 + EW.length);
-      if (NW < 0) return !1;
-      const PW = WW.view;
-      return PW.setInt32(NW + 0, OW, !0), PW.setInt32(NW + 4, mW, !0), lO(PW).set(EW, PW.byteOffset + NW + 8), !0
+    function Jy(RR, JR, GR, yR, tR) {
+      const uR = RR.UK(533, JR, 8 + tR.length);
+      if (uR < 0) return !1;
+      const ZR = RR.view;
+      return ZR.setInt32(uR + 0, GR, !0), ZR.setInt32(uR + 4, yR, !0), KG(ZR).set(tR, ZR.byteOffset + uR + 8), !0
     }
 
-    function Em(WW, iW) {
-      return !(WW.kZ(576, iW, 0) < 0)
+    function Gy(RR, JR) {
+      return !(RR.UK(576, JR, 0) < 0)
     }
 
-    function Nm(WW, iW, OW, mW, EW, NW) {
-      const PW = WW.kZ(577, iW, 36 + NW.length);
-      if (PW < 0) return !1;
-      const LW = WW.view;
-      LW.setUint8(PW + 0, OW);
-      for (let cW = 0; cW < 16; cW++) LW.setUint8(PW + 4 + 1 * cW, mW[cW]);
-      for (let cW = 0; cW < 16; cW++) LW.setUint8(PW + 20 + 1 * cW, EW[cW]);
-      return lO(LW).set(NW, LW.byteOffset + PW + 36), !0
+    function yy(RR, JR, GR, yR, tR, uR) {
+      const ZR = RR.UK(577, JR, 36 + uR.length);
+      if (ZR < 0) return !1;
+      const qR = RR.view;
+      qR.setUint8(ZR + 0, GR);
+      for (let iR = 0; iR < 16; iR++) qR.setUint8(ZR + 4 + 1 * iR, yR[iR]);
+      for (let iR = 0; iR < 16; iR++) qR.setUint8(ZR + 20 + 1 * iR, tR[iR]);
+      return KG(qR).set(uR, qR.byteOffset + ZR + 36), !0
     }
 
-    function Pm(WW, iW, OW, mW) {
-      const EW = WW.kZ(578, iW, 4 + mW.length);
-      if (EW < 0) return !1;
-      const NW = WW.view;
-      return NW.setUint8(EW + 0, OW), lO(NW).set(mW, NW.byteOffset + EW + 4), !0
+    function ty(RR, JR, GR, yR) {
+      const tR = RR.UK(578, JR, 4 + yR.length);
+      if (tR < 0) return !1;
+      const uR = RR.view;
+      return uR.setUint8(tR + 0, GR), KG(uR).set(yR, uR.byteOffset + tR + 4), !0
     }
 
-    function Lm(WW, iW, OW, mW, EW, NW, PW, LW) {
-      const cW = WW.kZ(579, iW, 36);
-      if (cW < 0) return !1;
-      const wW = WW.view;
-      return wW.setFloat64(cW + 0, OW, !0), wW.setFloat64(cW + 8, mW, !0), wW.setFloat64(cW + 16, EW, !0), wW.setFloat64(cW + 24, NW, !0), wW.setUint16(cW + 32, PW, !0), wW.setUint8(cW + 34, LW), !0
+    function uy(RR, JR, GR, yR, tR, uR, ZR, qR) {
+      const iR = RR.UK(579, JR, 36);
+      if (iR < 0) return !1;
+      const fR = RR.view;
+      return fR.setFloat64(iR + 0, GR, !0), fR.setFloat64(iR + 8, yR, !0), fR.setFloat64(iR + 16, tR, !0), fR.setFloat64(iR + 24, uR, !0), fR.setUint16(iR + 32, ZR, !0), fR.setUint8(iR + 34, qR), !0
     }
-    class cm {
-      constructor(WW, iW) {
-        this.core = WW, this.afterCall = iW
+    class Zy {
+      constructor(RR, JR) {
+        this.core = RR, this.afterCall = JR
       }
-      canModify(WW, iW, OW) {
-        const mW = this.core.bPW(WW, iW, OW);
-        return this.afterCall(), mW
+      canModify(RR, JR, GR) {
+        const yR = this.core.JqR(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      terrainBlocked(WW, iW, OW, mW, EW) {
-        const NW = this.core.wLW(WW, iW, OW, mW, EW);
-        return this.afterCall(), NW
+      terrainBlocked(RR, JR, GR, yR, tR) {
+        const uR = this.core.kqR(RR, JR, GR, yR, tR);
+        return this.afterCall(), uR
       }
-      xH(WW, iW, OW, mW) {
-        const EW = this.core.Jl(WW, iW, OW, mW);
-        return this.afterCall(), EW
+      lD(RR, JR, GR, yR) {
+        const tR = this.core.Mr(RR, JR, GR, yR);
+        return this.afterCall(), tR
       }
-      blockData(WW, iW, OW) {
-        const mW = this.core.lPW(WW, iW, OW);
-        return this.afterCall(), mW
+      blockData(RR, JR, GR) {
+        const yR = this.core.hZR(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      cameraSweep(WW, iW, OW, mW, EW, NW, PW) {
-        const LW = this.core.jNW(WW, iW, OW, mW, EW, NW, PW);
-        return this.afterCall(), LW
+      cameraSweep(RR, JR, GR, yR, tR, uR, ZR) {
+        const qR = this.core.GZR(RR, JR, GR, yR, tR, uR, ZR);
+        return this.afterCall(), qR
       }
-      hasServerTarget(WW) {
-        const iW = this.core.nPW(WW);
-        return this.afterCall(), iW
+      hasServerTarget(RR) {
+        const JR = this.core.eqR(RR);
+        return this.afterCall(), JR
       }
-      entityInteractable(WW) {
-        const iW = this.core.YPW(WW);
-        return this.afterCall(), iW
+      entityInteractable(RR) {
+        const JR = this.core.iqR(RR);
+        return this.afterCall(), JR
       }
-      entityCrouching(WW) {
-        const iW = this.core.SPW(WW);
-        return this.afterCall(), iW
+      entityCrouching(RR) {
+        const JR = this.core.qqR(RR);
+        return this.afterCall(), JR
       }
-      entityDrawn(WW) {
-        const iW = this.core.KNW(WW);
-        return this.afterCall(), iW
+      entityDrawn(RR) {
+        const JR = this.core.qZR(RR);
+        return this.afterCall(), JR
       }
-      predictServerPosition(WW, iW, OW, mW) {
-        const EW = this.core.XPW(WW, iW, OW, mW);
-        return this.afterCall(), EW
+      predictServerPosition(RR, JR, GR, yR) {
+        const tR = this.core.lqR(RR, JR, GR, yR);
+        return this.afterCall(), tR
       }
-      setOtherEntitySetting(WW, iW, OW) {
-        const mW = this.core.MNW(WW, iW, OW);
-        return this.afterCall(), mW
+      setOtherEntitySetting(RR, JR, GR) {
+        const yR = this.core.ZZR(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      entityInfoBatch(WW) {
-        const iW = this.core.yNW(WW);
-        return this.afterCall(), iW
+      entityInfoBatch(RR) {
+        const JR = this.core.VZR(RR);
+        return this.afterCall(), JR
       }
-      entityName(WW) {
-        const iW = this.core.yPW(WW);
-        return this.afterCall(), iW
+      entityName(RR) {
+        const JR = this.core.fqR(RR);
+        return this.afterCall(), JR
       }
-      hasEffect(WW, iW) {
-        const OW = this.core.HPW(WW, iW);
-        return this.afterCall(), OW
+      hasEffect(RR, JR) {
+        const GR = this.core.rqR(RR, JR);
+        return this.afterCall(), GR
       }
       scratchPtr() {
-        const WW = this.core.xNW();
-        return this.afterCall(), WW
+        const RR = this.core.suR();
+        return this.afterCall(), RR
       }
-      invSwap(WW, iW) {
-        const OW = this.core.DPW(WW, iW);
-        return this.afterCall(), OW
+      invSwap(RR, JR) {
+        const GR = this.core.AqR(RR, JR);
+        return this.afterCall(), GR
       }
-      invMove(WW, iW, OW) {
-        const mW = this.core.dPW(WW, iW, OW);
-        return this.afterCall(), mW
+      invMove(RR, JR, GR) {
+        const yR = this.core.nqR(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      invQuickMove(WW, iW, OW, mW) {
-        const EW = this.core.ePW(WW, iW, OW, mW);
-        return this.afterCall(), EW
+      invQuickMove(RR, JR, GR, yR) {
+        const tR = this.core.UqR(RR, JR, GR, yR);
+        return this.afterCall(), tR
       }
-      invRemove(WW, iW, OW) {
-        const mW = this.core.vPW(WW, iW, OW);
-        return this.afterCall(), mW
+      invRemove(RR, JR, GR) {
+        const yR = this.core.WqR(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      invEnchant(WW, iW, OW, mW, EW) {
-        const NW = this.core.oPW(WW, iW, OW, mW, EW);
-        return this.afterCall(), NW
+      invEnchant(RR, JR, GR, yR, tR) {
+        const uR = this.core.LqR(RR, JR, GR, yR, tR);
+        return this.afterCall(), uR
       }
-      craft(WW, iW, OW) {
-        const mW = this.core.craft(WW, iW, OW);
-        return this.afterCall(), mW
+      craft(RR, JR, GR) {
+        const yR = this.core.craft(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      salvage(WW, iW, OW) {
-        const mW = this.core.salvage(WW, iW, OW);
-        return this.afterCall(), mW
+      salvage(RR, JR, GR) {
+        const yR = this.core.salvage(RR, JR, GR);
+        return this.afterCall(), yR
       }
-      selectSlot(WW) {
-        const iW = this.core.IPW(WW);
-        return this.afterCall(), iW
+      selectSlot(RR) {
+        const JR = this.core.xqR(RR);
+        return this.afterCall(), JR
       }
       closeChest() {
-        const WW = this.core.jPW();
-        return this.afterCall(), WW
+        const RR = this.core.GqR();
+        return this.afterCall(), RR
       }
-      itemAttributesBatch(WW) {
-        const iW = this.core.YNW(WW);
-        return this.afterCall(), iW
+      itemAttributesBatch(RR) {
+        const JR = this.core.fZR(RR);
+        return this.afterCall(), JR
       }
       itemNames() {
-        const WW = this.core.vJ();
-        return this.afterCall(), WW
+        const RR = this.core.zN();
+        return this.afterCall(), RR
       }
       blockProps() {
-        const WW = this.core.APW();
-        return this.afterCall(), WW
+        const RR = this.core.RqR();
+        return this.afterCall(), RR
       }
       itemProps() {
-        const WW = this.core.VPW();
-        return this.afterCall(), WW
+        const RR = this.core.CqR();
+        return this.afterCall(), RR
       }
-      salvageRecipe(WW) {
-        const iW = this.core.JNW(WW);
-        return this.afterCall(), iW
+      salvageRecipe(RR) {
+        const JR = this.core.wZR(RR);
+        return this.afterCall(), JR
       }
-      craftingView(WW, iW, OW) {
-        const mW = this.core.SNW(WW, iW, OW);
-        return this.afterCall(), mW
+      craftingView(RR, JR, GR) {
+        const yR = this.core.iZR(RR, JR, GR);
+        return this.afterCall(), yR
       }
       directorView() {
-        const WW = this.core.ANW();
-        return this.afterCall(), WW
+        const RR = this.core.RZR();
+        return this.afterCall(), RR
       }
       directorDefaultPose() {
-        const WW = this.core.UNW();
-        return this.afterCall(), WW
+        const RR = this.core.yZR();
+        return this.afterCall(), RR
       }
-      directorEntity(WW) {
-        const iW = this.core.bNW(WW);
-        return this.afterCall(), iW
+      directorEntity(RR) {
+        const JR = this.core.JZR(RR);
+        return this.afterCall(), JR
       }
-      directorPose(WW, iW, OW, mW, EW, NW) {
-        const PW = this.core.kNW(WW, iW, OW, mW, EW, NW);
-        return this.afterCall(), PW
+      directorPose(RR, JR, GR, yR, tR, uR) {
+        const ZR = this.core.tZR(RR, JR, GR, yR, tR, uR);
+        return this.afterCall(), ZR
       }
-      passTimings(WW) {
-        const iW = this.core.CPW(WW);
-        return this.afterCall(), iW
+      passTimings(RR) {
+        const JR = this.core.BqR(RR);
+        return this.afterCall(), JR
       }
       drawCensus() {
-        const WW = this.core.MPW();
-        return this.afterCall(), WW
+        const RR = this.core.ZqR();
+        return this.afterCall(), RR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,351 +1,351 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  5590: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => jW,
-      h: () => UW
+  5712: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => LR,
+      e: () => nR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(62),
-      PW = OW(1172),
-      LW = OW(5593),
-      cW = OW(2021),
-      wW = OW(3332),
-      tW = OW(5599),
-      ZW = OW(1283);
-    const xW = new WeakMap;
-    let lW = 0;
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(66),
+      ZR = GR(1270),
+      qR = GR(5719),
+      iR = GR(2105),
+      fR = GR(3465),
+      VR = GR(5728),
+      KR = GR(1378);
+    const wR = new WeakMap;
+    let rR = 0;
 
-    function AW(WW) {
-      let iW = xW.get(WW);
-      return void 0 === iW && (iW = lW++, xW.set(WW, iW)), iW
+    function eR(RR) {
+      let JR = wR.get(RR);
+      return void 0 === JR && (JR = rR++, wR.set(RR, JR)), JR
     }
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        piece: iW
-      } = WW;
-      return "space" === iW.kind ? (0, ZW.jsx)(ZW.Fragment, {
-        children: iW.text
-      }) : (0, ZW.jsx)("span", {
+        piece: JR
+      } = RR;
+      return "space" === JR.kind ? (0, KR.jsx)(KR.Fragment, {
+        children: JR.text
+      }) : (0, KR.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${iW.delayMs}ms`
+          "--word-delay": `${JR.delayMs}ms`
         },
-        children: (0, ZW.jsx)(LW.b, {
-          text: "icon" === iW.kind ? `[[${iW.icon}]]` : iW.text
+        children: (0, KR.jsx)(qR.b, {
+          text: "icon" === JR.kind ? `[[${JR.icon}]]` : JR.text
         })
       })
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        display: iW
-      } = WW;
+        display: JR
+      } = RR;
       const {
-        selectedLanguage: OW
-      } = (0, PW.B)(), mW = (0, NW.useMemo)((() => (0, tW.e)((0, tW.g)(iW).plan.pieces)), [iW, OW.code]);
-      return (0, ZW.jsxs)("div", {
-        className: EW()("Dialogue", {
-          DialogueAnimateIn: !1 !== iW.animateIn
+        selectedLanguage: GR
+      } = (0, ZR.A)(), yR = (0, uR.useMemo)((() => (0, VR.e)((0, VR.f)(JR).plan.pieces)), [JR, GR.code]);
+      return (0, KR.jsxs)("div", {
+        className: tR()("Dialogue", {
+          DialogueAnimateIn: !1 !== JR.animateIn
         }),
-        children: [iW.speakerName && (0, ZW.jsx)(cW.d, {
-          text: iW.speakerName,
+        children: [JR.speakerName && (0, KR.jsx)(iR.c, {
+          text: JR.speakerName,
           className: "DialogueSpeaker"
-        }), (0, ZW.jsx)("p", {
+        }), (0, KR.jsx)("p", {
           className: "DialogueLine",
-          children: mW.map(((WW, iW) => 1 === WW.length && "space" === WW[0].kind ? WW[0].text : (0, ZW.jsx)("span", {
+          children: yR.map(((RR, JR) => 1 === RR.length && "space" === RR[0].kind ? RR[0].text : (0, KR.jsx)("span", {
             className: "DialogueGlue",
-            children: WW.map(((WW, iW) => (0, ZW.jsx)(bW, {
-              piece: WW
-            }, iW)))
-          }, iW)))
+            children: RR.map(((RR, JR) => (0, KR.jsx)(aR, {
+              piece: RR
+            }, JR)))
+          }, JR)))
         })]
       })
     }
-    const UW = (0, NW.memo)((function() {
-      const WW = (0, wW.e)("dialogue");
-      return (0, ZW.jsx)("div", {
+    const nR = (0, uR.memo)((function() {
+      const RR = (0, fR.f)("dialogue");
+      return (0, KR.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: WW && (0, ZW.jsx)(jW, {
-          display: WW
-        }, AW(WW))
+        children: RR && (0, KR.jsx)(LR, {
+          display: RR
+        }, eR(RR))
       })
     }))
   },
-  5593: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW
+  5719: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR
     });
-    var mW = OW(62),
-      EW = OW(327),
-      NW = OW(2032),
-      PW = OW(1283);
+    var yR = GR(66),
+      tR = GR(359),
+      uR = GR(2123),
+      ZR = GR(1378);
 
-    function LW(WW) {
+    function qR(RR) {
       let {
-        text: iW
-      } = WW;
-      const OW = [];
-      let LW = "";
-      return (0, EW.kc)(iW).forEach(((WW, iW) => {
-        if ("string" === typeof WW || !(0, NW.d)(WW.icon)) return void(LW += "string" === typeof WW ? WW : WW.icon);
-        const EW = Math.max(0, LW.trimEnd().search(/\S{1,12}$/));
-        OW.push((0, PW.jsxs)(mW.Fragment, {
-          children: [LW.slice(0, EW), (0, PW.jsxs)("span", {
+        text: JR
+      } = RR;
+      const GR = [];
+      let qR = "";
+      return (0, tR.dc)(JR).forEach(((RR, JR) => {
+        if ("string" === typeof RR || !(0, uR.c)(RR.icon)) return void(qR += "string" === typeof RR ? RR : RR.icon);
+        const tR = Math.max(0, qR.trimEnd().search(/\S{1,12}$/));
+        GR.push((0, ZR.jsxs)(yR.Fragment, {
+          children: [qR.slice(0, tR), (0, ZR.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [LW.slice(EW), (0, PW.jsx)("span", {
+            children: [qR.slice(tR), (0, ZR.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": WW.icon,
-              children: (0, PW.jsx)(NW.b, {
-                itemName: WW.icon,
+              "aria-label": RR.icon,
+              children: (0, ZR.jsx)(uR.b, {
+                itemName: RR.icon,
                 amount: 0
               })
             })]
           })]
-        }, iW)), LW = ""
-      })), OW.push(LW), (0, PW.jsx)(PW.Fragment, {
-        children: OW
+        }, JR)), qR = ""
+      })), GR.push(qR), (0, ZR.jsx)(ZR.Fragment, {
+        children: GR
       })
     }
   },
-  5599: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => eW,
-      g: () => dW
+  5728: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => DR,
+      f: () => NR
     });
-    var mW = OW(5605),
-      EW = OW(327);
-    const NW = 120,
-      PW = 260,
-      LW = 1.15,
-      cW = 1.2,
-      wW = 2,
-      tW = 1.08,
-      ZW = .8,
-      xW = .95,
-      lW = 8,
-      AW = "[\"')\\]\u300d\u300f\uff09]*",
-      bW = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${AW}$`),
-      jW = new RegExp(`[?\uff1f]${AW}$`),
-      UW = new RegExp(`[!\uff01]${AW}$`),
-      kW = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      sW = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      MW = new RegExp(`[${sW}]`),
-      KW = new RegExp(`[${sW}]|[^${sW}]+`, "g"),
-      SW = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var yR = GR(5733),
+      tR = GR(359);
+    const uR = 120,
+      ZR = 260,
+      qR = 1.15,
+      iR = 1.2,
+      fR = 2,
+      VR = 1.08,
+      KR = .8,
+      wR = .95,
+      rR = 8,
+      eR = "[\"')\\]\u300d\u300f\uff09]*",
+      aR = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${eR}$`),
+      LR = new RegExp(`[?\uff1f]${eR}$`),
+      nR = new RegExp(`[!\uff01]${eR}$`),
+      UR = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      WR = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      AR = new RegExp(`[${WR}]`),
+      CR = new RegExp(`[${WR}]|[^${WR}]+`, "g"),
+      XR = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function YW(WW) {
-      let iW = 2166136261;
-      for (let OW = 0; OW < WW.length; OW++) iW ^= WW.charCodeAt(OW), iW = Math.imul(iW, 16777619);
-      return (iW >>> 0) / 4294967295 * 2 - 1
+    function MR(RR) {
+      let JR = 2166136261;
+      for (let GR = 0; GR < RR.length; GR++) JR ^= RR.charCodeAt(GR), JR = Math.imul(JR, 16777619);
+      return (JR >>> 0) / 4294967295 * 2 - 1
     }
 
-    function yW(WW) {
-      var iW;
-      if (MW.test(WW)) return 1;
-      const OW = WW.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        mW = OW.replace(/[^0-9]/g, "");
-      if (mW.length > 0 && !/\p{L}/u.test(OW)) return Math.min(mW.length, 4);
-      const EW = null !== (iW = OW.match(SW)) && void 0 !== iW ? iW : [];
-      if (0 === EW.length) {
-        var NW, PW;
-        const WW = null !== (NW = null === (PW = OW.match(/\p{L}/gu)) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0;
-        return 0 === WW ? 0 : Math.min(Math.max(1, Math.round(WW / 2.5)), lW)
+    function BR(RR) {
+      var JR;
+      if (AR.test(RR)) return 1;
+      const GR = RR.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        yR = GR.replace(/[^0-9]/g, "");
+      if (yR.length > 0 && !/\p{L}/u.test(GR)) return Math.min(yR.length, 4);
+      const tR = null !== (JR = GR.match(XR)) && void 0 !== JR ? JR : [];
+      if (0 === tR.length) {
+        var uR, ZR;
+        const RR = null !== (uR = null === (ZR = GR.match(/\p{L}/gu)) || void 0 === ZR ? void 0 : ZR.length) && void 0 !== uR ? uR : 0;
+        return 0 === RR ? 0 : Math.min(Math.max(1, Math.round(RR / 2.5)), rR)
       }
-      const LW = OW.replace(/[^\p{L}]/gu, ""),
-        cW = EW.length > 1 && "e" === EW.at(-1) && LW.endsWith("e") && !LW.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(WW.replace(/[^\p{L}]/gu, ""));
-      return Math.min(EW.length - (cW ? 1 : 0), lW)
+      const qR = GR.replace(/[^\p{L}]/gu, ""),
+        iR = tR.length > 1 && "e" === tR.at(-1) && qR.endsWith("e") && !qR.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(RR.replace(/[^\p{L}]/gu, ""));
+      return Math.min(tR.length - (iR ? 1 : 0), rR)
     }
 
-    function TW(WW) {
-      return WW.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function lR(RR) {
+      return RR.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function JW(WW) {
-      const iW = WW.replace(/[^\p{L}]/gu, "");
-      return iW.length >= 2 && iW === iW.toUpperCase() && iW !== iW.toLowerCase()
+    function pR(RR) {
+      const JR = RR.replace(/[^\p{L}]/gu, "");
+      return JR.length >= 2 && JR === JR.toUpperCase() && JR !== JR.toLowerCase()
     }
 
-    function hW(WW, iW) {
-      var OW;
-      const lW = iW && (0, mW.h)(iW),
-        AW = null !== (OW = null === lW || void 0 === lW ? void 0 : lW.syllableMs) && void 0 !== OW ? OW : mW.d,
-        sW = function(WW) {
-          const iW = [];
-          for (const mW of (0, EW.kc)(WW))
-            if ("string" === typeof mW)
-              for (const WW of mW.split(/(\s+)/)) {
-                if ("" === WW) continue;
-                if (/^\s+$/.test(WW)) {
-                  iW.push({
+    function gR(RR, JR) {
+      var GR;
+      const rR = JR && (0, yR.i)(JR),
+        eR = null !== (GR = null === rR || void 0 === rR ? void 0 : rR.syllableMs) && void 0 !== GR ? GR : yR.b,
+        WR = function(RR) {
+          const JR = [];
+          for (const yR of (0, tR.dc)(RR))
+            if ("string" === typeof yR)
+              for (const RR of yR.split(/(\s+)/)) {
+                if ("" === RR) continue;
+                if (/^\s+$/.test(RR)) {
+                  JR.push({
                     kind: "space",
-                    text: WW
+                    text: RR
                   });
                   continue
                 }
-                if (!MW.test(WW)) {
-                  iW.push({
+                if (!AR.test(RR)) {
+                  JR.push({
                     kind: "word",
-                    text: WW,
+                    text: RR,
                     delayMs: 0
                   });
                   continue
                 }
-                let mW = !0;
-                for (const EW of null !== (OW = WW.match(KW)) && void 0 !== OW ? OW : []) {
-                  var OW;
-                  const WW = iW.at(-1);
-                  mW || "word" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || MW.test(EW) || /[\p{L}\p{N}]/u.test(EW) ? (mW || iW.push({
+                let yR = !0;
+                for (const tR of null !== (GR = RR.match(CR)) && void 0 !== GR ? GR : []) {
+                  var GR;
+                  const RR = JR.at(-1);
+                  yR || "word" !== (null === RR || void 0 === RR ? void 0 : RR.kind) || AR.test(tR) || /[\p{L}\p{N}]/u.test(tR) ? (yR || JR.push({
                     kind: "space",
                     text: "\u200b"
-                  }), iW.push({
+                  }), JR.push({
                     kind: "word",
-                    text: EW,
+                    text: tR,
                     delayMs: 0
-                  }), mW = !1) : WW.text += EW
+                  }), yR = !1) : RR.text += tR
                 }
-              } else iW.push({
+              } else JR.push({
                 kind: "icon",
-                text: mW.icon,
+                text: yR.icon,
                 delayMs: 0
               });
-          return iW
-        }(WW),
-        SW = [];
-      let hW = [];
-      for (const mW of sW) "space" !== mW.kind && (hW.push(mW), bW.test(mW.text) && (SW.push(hW), hW = []));
-      SW.push(hW);
-      const HW = [];
-      let nW = 0;
-      for (const mW of SW) {
-        var uW, oW;
-        const WW = null !== (uW = null === (oW = mW.at(-1)) || void 0 === oW ? void 0 : oW.text) && void 0 !== uW ? uW : "",
-          iW = jW.test(WW),
-          OW = UW.test(WW),
-          EW = mW.map((WW => "word" === WW.kind ? yW(WW.text) : 1)),
-          sW = EW.findLastIndex((WW => WW > 0));
-        for (const [jW, UW] of mW.entries()) {
-          const WW = "word" === UW.kind,
-            mW = EW[jW];
-          UW.delayMs = nW;
-          for (let EW = 0; lW && EW < mW; EW++) {
+          return JR
+        }(RR),
+        XR = [];
+      let gR = [];
+      for (const yR of WR) "space" !== yR.kind && (gR.push(yR), aR.test(yR.text) && (XR.push(gR), gR = []));
+      XR.push(gR);
+      const bR = [];
+      let vR = 0;
+      for (const yR of XR) {
+        var OR, xR;
+        const RR = null !== (OR = null === (xR = yR.at(-1)) || void 0 === xR ? void 0 : xR.text) && void 0 !== OR ? OR : "",
+          JR = LR.test(RR),
+          GR = nR.test(RR),
+          tR = yR.map((RR => "word" === RR.kind ? BR(RR.text) : 1)),
+          WR = tR.findLastIndex((RR => RR > 0));
+        for (const [LR, nR] of yR.entries()) {
+          const RR = "word" === nR.kind,
+            yR = tR[LR];
+          nR.delayMs = vR;
+          for (let tR = 0; rR && tR < yR; tR++) {
             const {
-              intonation: NW
-            } = lW;
-            let PW = sW > 0 ? -NW.declineSemitones * (jW / sW) : 0;
-            PW += YW(`${TW(UW.text)}|${EW}`) * NW.variationSemitones;
-            const bW = Math.min(1, NW.variationSemitones);
-            let kW = lW.glideSemitones,
-              MW = 1;
-            OW && (PW += NW.exclaimLiftSemitones, MW *= LW), iW && jW === sW && (PW += NW.questionRiseSemitones * (mW > 1 ? .5 + .5 * EW / (mW - 1) : 1), EW === mW - 1 && (kW = Math.abs(kW) + NW.questionRiseSemitones / 2)), WW && JW(UW.text) && (PW += wW * bW, MW *= cW), mW > 1 && 0 === EW && (PW += ZW * bW, MW *= tW), HW.push({
-              atMs: nW + EW * AW,
-              semitones: PW,
-              glideSemitones: kW,
-              durationMs: EW < mW - 1 ? Math.min(lW.durationMs, AW * xW) : lW.durationMs,
-              level: MW
+              intonation: uR
+            } = rR;
+            let ZR = WR > 0 ? -uR.declineSemitones * (LR / WR) : 0;
+            ZR += MR(`${lR(nR.text)}|${tR}`) * uR.variationSemitones;
+            const aR = Math.min(1, uR.variationSemitones);
+            let UR = rR.glideSemitones,
+              AR = 1;
+            GR && (ZR += uR.exclaimLiftSemitones, AR *= qR), JR && LR === WR && (ZR += uR.questionRiseSemitones * (yR > 1 ? .5 + .5 * tR / (yR - 1) : 1), tR === yR - 1 && (UR = Math.abs(UR) + uR.questionRiseSemitones / 2)), RR && pR(nR.text) && (ZR += fR * aR, AR *= iR), yR > 1 && 0 === tR && (ZR += KR * aR, AR *= VR), bR.push({
+              atMs: vR + tR * eR,
+              semitones: ZR,
+              glideSemitones: UR,
+              durationMs: tR < yR - 1 ? Math.min(rR.durationMs, eR * wR) : rR.durationMs,
+              level: AR
             })
           }
-          nW += mW * AW + (bW.test(UW.text) ? PW : kW.test(UW.text) ? NW : 0)
+          vR += yR * eR + (aR.test(nR.text) ? ZR : UR.test(nR.text) ? uR : 0)
         }
       }
       return {
-        pieces: sW.map((WW => "space" === WW.kind ? WW : "icon" === WW.kind ? {
+        pieces: WR.map((RR => "space" === RR.kind ? RR : "icon" === RR.kind ? {
           kind: "icon",
-          icon: WW.text,
-          delayMs: WW.delayMs
+          icon: RR.text,
+          delayMs: RR.delayMs
         } : {
           kind: "word",
-          text: WW.text,
-          delayMs: WW.delayMs
+          text: RR.text,
+          delayMs: RR.delayMs
         })),
-        blips: HW
+        blips: bR
       }
     }
-    var HW = OW(1172),
-      nW = OW(1244),
-      uW = OW(2042);
+    var bR = GR(1270),
+      vR = GR(1343),
+      OR = GR(2137);
 
-    function oW(WW) {
-      if ("string" === typeof WW) return WW;
-      const iW = nW.e.get().getCurrentLanguageCode();
-      return (0, HW.p)(iW, WW.translationKey, (0, HW.o)(WW.params, uW.e.shown))
+    function xR(RR) {
+      if ("string" === typeof RR) return RR;
+      const JR = vR.g.get().getCurrentLanguageCode();
+      return (0, bR.r)(JR, RR.translationKey, (0, bR.o)(RR.params, OR.e.shown))
     }
 
-    function dW(WW) {
-      const iW = void 0 === WW.voice ? null : (0, mW.j)(WW.voice),
-        OW = iW && (0, mW.h)(iW);
+    function NR(RR) {
+      const JR = void 0 === RR.voice ? null : (0, yR.m)(RR.voice),
+        GR = JR && (0, yR.i)(JR);
       return {
-        plan: hW(oW(WW.line), OW),
-        synth: OW
+        plan: gR(xR(RR.line), GR),
+        synth: GR
       }
     }
 
-    function eW(WW) {
-      const iW = [];
-      let OW = [];
-      for (const [EW, NW] of WW.entries()) {
-        var mW;
-        "space" === NW.kind && (" " !== NW.text || "icon" !== (null === (mW = WW[EW + 1]) || void 0 === mW ? void 0 : mW.kind)) ? (OW.length > 0 && iW.push(OW), iW.push([NW]), OW = []) : OW.push(NW)
+    function DR(RR) {
+      const JR = [];
+      let GR = [];
+      for (const [tR, uR] of RR.entries()) {
+        var yR;
+        "space" === uR.kind && (" " !== uR.text || "icon" !== (null === (yR = RR[tR + 1]) || void 0 === yR ? void 0 : yR.kind)) ? (GR.length > 0 && JR.push(GR), JR.push([uR]), GR = []) : GR.push(uR)
       }
-      return OW.length > 0 && iW.push(OW), iW
+      return GR.length > 0 && JR.push(GR), JR
     }
   },
-  39701: (WW, iW, OW) => {
-    function mW(WW, iW, OW) {
-      const mW = new Set,
-        EW = new ResizeObserver(OW),
-        NW = () => {
-          const iW = new Set(document.querySelectorAll(WW));
-          let NW = !1;
-          for (const WW of mW) iW.has(WW) || (EW.unobserve(WW), mW.delete(WW), NW = !0);
-          for (const WW of iW) mW.has(WW) || (EW.observe(WW), PW.observe(WW, {
+  39691: (RR, JR, GR) => {
+    function yR(RR, JR, GR) {
+      const yR = new Set,
+        tR = new ResizeObserver(GR),
+        uR = () => {
+          const JR = new Set(document.querySelectorAll(RR));
+          let uR = !1;
+          for (const RR of yR) JR.has(RR) || (tR.unobserve(RR), yR.delete(RR), uR = !0);
+          for (const RR of JR) yR.has(RR) || (tR.observe(RR), ZR.observe(RR, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), mW.add(WW));
-          NW && OW()
+          }), yR.add(RR));
+          uR && GR()
         },
-        PW = new MutationObserver((iW => {
-          iW.some((WW => "attributes" === WW.type)) && OW(), iW.some((iW => function(WW, iW, OW) {
-            if ("childList" !== WW.type) return !1;
-            for (const mW of WW.addedNodes)
-              if (mW instanceof Element && (mW.matches(iW) || mW.querySelector(iW))) return !0;
-            for (const mW of WW.removedNodes)
-              if (mW instanceof Element)
-                for (const WW of OW)
-                  if (mW.contains(WW)) return !0;
+        ZR = new MutationObserver((JR => {
+          JR.some((RR => "attributes" === RR.type)) && GR(), JR.some((JR => function(RR, JR, GR) {
+            if ("childList" !== RR.type) return !1;
+            for (const yR of RR.addedNodes)
+              if (yR instanceof Element && (yR.matches(JR) || yR.querySelector(JR))) return !0;
+            for (const yR of RR.removedNodes)
+              if (yR instanceof Element)
+                for (const RR of GR)
+                  if (yR.contains(RR)) return !0;
             return !1
-          }(iW, WW, mW))) && NW()
+          }(JR, RR, yR))) && uR()
         }));
-      PW.observe(document.body, {
+      ZR.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const LW of iW) EW.observe(LW);
-      return window.addEventListener("resize", OW), NW(), OW(), () => {
-        EW.disconnect(), PW.disconnect(), window.removeEventListener("resize", OW)
+      for (const qR of JR) tR.observe(qR);
+      return window.addEventListener("resize", GR), uR(), GR(), () => {
+        tR.disconnect(), ZR.disconnect(), window.removeEventListener("resize", GR)
       }
     }
-    OW.d(iW, {
-      d: () => mW
+    GR.d(JR, {
+      c: () => yR
     })
   },
-  10114: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => LW,
-      g: () => cW
+  10238: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      e: () => iR
     });
-    var mW = OW(25),
-      EW = OW(1351),
-      NW = OW(100);
-    const PW = {
+    var yR = GR(25),
+      tR = GR(1449),
+      uR = GR(103);
+    const ZR = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -388,41 +388,41 @@ export const modules = {
       }
     };
 
-    function LW() {
-      return (0, NW.isMobile)() && "function" === typeof navigator.vibrate
+    function qR() {
+      return (0, uR.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const cW = new class {
-      constructor(WW) {
-        this.deps = WW, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const iR = new class {
+      constructor(RR) {
+        this.deps = RR, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(WW, iW) {
-        var OW;
+      play(RR, JR) {
+        var GR;
         if (!this.deps.enabled()) return;
-        const mW = PW[WW],
-          EW = null !== iW && void 0 !== iW ? iW : mW.pattern;
-        if (null === EW) return void console.warn("No vibration pattern for", WW);
-        const NW = this.deps.now();
-        NW - this.lastAnyAt < 40 && mW.priority < this.playingPriority || NW - (null !== (OW = this.lastAt.get(WW)) && void 0 !== OW ? OW : -1 / 0) < mW.minGapMs || NW < this.playingUntil && mW.priority < this.playingPriority || (this.lastAt.set(WW, NW), this.lastAnyAt = NW, this.playingUntil = NW + EW.reduce(((WW, iW) => WW + iW), 0), this.playingPriority = mW.priority, this.deps.vibrate(EW))
+        const yR = ZR[RR],
+          tR = null !== JR && void 0 !== JR ? JR : yR.pattern;
+        if (null === tR) return void console.warn("No vibration pattern for", RR);
+        const uR = this.deps.now();
+        uR - this.lastAnyAt < 40 && yR.priority < this.playingPriority || uR - (null !== (GR = this.lastAt.get(RR)) && void 0 !== GR ? GR : -1 / 0) < yR.minGapMs || uR < this.playingUntil && yR.priority < this.playingPriority || (this.lastAt.set(RR, uR), this.lastAnyAt = uR, this.playingUntil = uR + tR.reduce(((RR, JR) => RR + JR), 0), this.playingPriority = yR.priority, this.deps.vibrate(tR))
       }
     }({
-      vibrate: WW => {
-        navigator.vibrate([...WW])
+      vibrate: RR => {
+        navigator.vibrate([...RR])
       },
       now: () => performance.now(),
-      enabled: () => LW() && mW.d.get("isTouchScreen") && mW.d.get("clientEscMenuOptions").vibration && !(0, EW.f)()
+      enabled: () => qR() && yR.d.get("isTouchScreen") && yR.d.get("clientEscMenuOptions").vibration && !(0, tR.g)()
     })
   },
-  5605: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      e: () => mW,
-      g: () => NW,
-      h: () => cW,
-      j: () => PW
+  5733: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR,
+      e: () => yR,
+      f: () => uR,
+      i: () => iR,
+      m: () => ZR
     });
-    const mW = ["sine", "triangle", "square", "sawtooth"],
-      EW = 55,
-      NW = {
+    const yR = ["sine", "triangle", "square", "sawtooth"],
+      tR = 55,
+      uR = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -561,39 +561,39 @@ export const modules = {
         }
       };
 
-    function PW(WW) {
-      return "string" !== typeof WW ? WW : Object.hasOwn(NW, WW) ? NW[WW] : null
+    function ZR(RR) {
+      return "string" !== typeof RR ? RR : Object.hasOwn(uR, RR) ? uR[RR] : null
     }
 
-    function LW(WW, iW, OW) {
-      return Math.min(OW, Math.max(iW, WW))
+    function qR(RR, JR, GR) {
+      return Math.min(GR, Math.max(JR, RR))
     }
 
-    function cW(WW) {
-      const iW = LW(WW.durationMs, 10, 500),
-        OW = LW(WW.attackMs, 0, iW),
+    function iR(RR) {
+      const JR = qR(RR.durationMs, 10, 500),
+        GR = qR(RR.attackMs, 0, JR),
         {
-          intonation: EW
-        } = WW;
+          intonation: tR
+        } = RR;
       return {
-        waveform: mW.includes(WW.waveform) ? WW.waveform : "sine",
-        pitchHz: LW(WW.pitchHz, 20, 4e3),
-        glideSemitones: LW(WW.glideSemitones, -24, 24),
-        durationMs: iW,
-        attackMs: OW,
-        releaseMs: LW(WW.releaseMs, 0, iW - OW),
-        lowpassHz: null === WW.lowpassHz ? null : LW(WW.lowpassHz, 20, 2e4),
-        volume: LW(WW.volume, 0, 2),
+        waveform: yR.includes(RR.waveform) ? RR.waveform : "sine",
+        pitchHz: qR(RR.pitchHz, 20, 4e3),
+        glideSemitones: qR(RR.glideSemitones, -24, 24),
+        durationMs: JR,
+        attackMs: GR,
+        releaseMs: qR(RR.releaseMs, 0, JR - GR),
+        lowpassHz: null === RR.lowpassHz ? null : qR(RR.lowpassHz, 20, 2e4),
+        volume: qR(RR.volume, 0, 2),
         intonation: {
-          variationSemitones: LW(EW.variationSemitones, 0, 6),
-          declineSemitones: LW(EW.declineSemitones, 0, 12),
-          questionRiseSemitones: LW(EW.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: LW(EW.exclaimLiftSemitones, 0, 12)
+          variationSemitones: qR(tR.variationSemitones, 0, 6),
+          declineSemitones: qR(tR.declineSemitones, 0, 12),
+          questionRiseSemitones: qR(tR.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: qR(tR.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: LW(WW.syllableMs, 25, 200)
+        syllableMs: qR(RR.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  54791: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/bloxd_wasm_anim_bg.39cfafebdd7463cb374f.wasm"
+  54636: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/bloxd_wasm_anim_bg.7b09b851f17c0f78c272.wasm"
   },
-  54787: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      BloxdAnimWasmError: () => vW,
-      compileAnimationPackInWasm: () => pW
+  54630: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      BloxdAnimWasmError: () => HR,
+      compileAnimationPackInWasm: () => IR
     });
-    var mW = {};
+    var yR = {};
 
-    function EW(WW, iW, OW, mW, EW, NW) {
-      const PW = kW(WW, hW.VnNx),
-        LW = HW,
-        cW = kW(iW, hW.VnNx),
-        wW = HW,
-        tW = kW(OW, hW.VnNx),
-        ZW = HW,
-        xW = kW(mW, hW.VnNx),
-        AW = HW,
-        bW = kW(EW, hW.VnNx),
-        jW = HW;
-      var sW = UW(NW) ? 0 : function(WW, iW) {
-          const OW = iW(1 * WW.length, 1) >>> 0;
-          return lW().set(WW, OW / 1), HW = WW.length, OW
-        }(NW, hW.VnNx),
-        KW = HW;
-      const SW = hW.Ncmb(PW, LW, cW, wW, tW, ZW, xW, AW, bW, jW, sW, KW);
-      if (SW[3]) throw MW(SW[2]);
-      var YW, yW, TW = (YW = SW[0], yW = SW[1], YW >>>= 0, lW().subarray(YW / 1, YW / 1 + yW)).slice();
-      return hW.AlF0(SW[0], 1 * SW[1], 1), TW
+    function tR(RR, JR, GR, yR, tR, uR) {
+      const ZR = UR(RR, gR.GX6w),
+        qR = bR,
+        iR = UR(JR, gR.GX6w),
+        fR = bR,
+        VR = UR(GR, gR.GX6w),
+        KR = bR,
+        wR = UR(yR, gR.GX6w),
+        eR = bR,
+        aR = UR(tR, gR.GX6w),
+        LR = bR;
+      var WR = nR(uR) ? 0 : function(RR, JR) {
+          const GR = JR(1 * RR.length, 1) >>> 0;
+          return rR().set(RR, GR / 1), bR = RR.length, GR
+        }(uR, gR.GX6w),
+        CR = bR;
+      const XR = gR.XnOo(ZR, qR, iR, fR, VR, KR, wR, eR, aR, LR, WR, CR);
+      if (XR[3]) throw AR(XR[2]);
+      var MR, BR, lR = (MR = XR[0], BR = XR[1], MR >>>= 0, rR().subarray(MR / 1, MR / 1 + BR)).slice();
+      return gR.bmS1(XR[0], 1 * XR[1], 1), lR
     }
 
-    function NW(WW, iW) {
-      const OW = sW(WW, hW.VnNx, hW.Rmm1),
-        mW = HW,
-        EW = hW.JLiP(OW, mW, iW);
-      if (EW[1]) throw MW(EW[0])
+    function uR(RR, JR) {
+      const GR = WR(RR, gR.GX6w, gR.xyL8),
+        yR = bR,
+        tR = gR.fMGE(GR, yR, JR);
+      if (tR[1]) throw AR(tR[0])
     }
 
-    function PW() {
-      hW.xFkT()
+    function ZR() {
+      gR.JyP9()
     }
 
-    function LW() {
+    function qR() {
       return {
         __proto__: null,
-        rthQ: {
+        Zpv2: {
           __proto__: null,
-          Mjwu: function(WW, iW) {
-            return cW(Error(ZW(WW, iW)))
+          qfgc: function(RR, JR) {
+            return iR(Error(KR(RR, JR)))
           },
-          dZ7X: function(WW, iW) {
-            const OW = AW(iW),
-              mW = "string" === typeof OW ? OW : void 0;
-            var EW = UW(mW) ? 0 : sW(mW, hW.VnNx, hW.Rmm1),
-              NW = HW;
-            tW().setInt32(WW + 4, NW, !0), tW().setInt32(WW + 0, EW, !0)
+          ub6D: function(RR, JR) {
+            const GR = eR(JR),
+              yR = "string" === typeof GR ? GR : void 0;
+            var tR = nR(yR) ? 0 : WR(yR, gR.GX6w, gR.xyL8),
+              uR = bR;
+            VR().setInt32(RR + 4, uR, !0), VR().setInt32(RR + 0, tR, !0)
           },
-          v1Mk: function(WW, iW) {
-            throw new Error(ZW(WW, iW))
+          WsDp: function(RR, JR) {
+            throw new Error(KR(RR, JR))
           },
-          iaoL: function(WW, iW) {
-            console.error(ZW(WW, iW))
+          ZqWV: function(RR, JR) {
+            console.error(KR(RR, JR))
           },
-          lgNX: function(WW) {
-            MW(WW)
+          o2ot: function(RR) {
+            AR(RR)
           }
         }
       }
     }
 
-    function cW(WW) {
-      jW === bW.length && bW.push(bW.length + 1);
-      const iW = jW;
-      return jW = bW[iW], bW[iW] = WW, iW
+    function iR(RR) {
+      LR === aR.length && aR.push(aR.length + 1);
+      const JR = LR;
+      return LR = aR[JR], aR[JR] = RR, JR
     }
-    OW.r(mW), OW.d(mW, {
-      lLW: () => EW,
-      sw: () => NW,
-      default: () => oW,
-      initSync: () => uW,
-      qt: () => PW
+    GR.r(yR), GR.d(yR, {
+      sqR: () => tR,
+      HK: () => uR,
+      default: () => xR,
+      initSync: () => OR,
+      oK: () => ZR
     });
-    let wW = null;
+    let fR = null;
 
-    function tW() {
-      return null !== wW && wW.buffer === hW.memory.buffer || (wW = new DataView(hW.memory.buffer)), wW
+    function VR() {
+      return null !== fR && fR.buffer === gR.memory.buffer || (fR = new DataView(gR.memory.buffer)), fR
     }
 
-    function ZW(WW, iW) {
-      return function(WW, iW) {
-        YW += iW, YW >= SW && (KW = new TextDecoder("utf-8", {
+    function KR(RR, JR) {
+      return function(RR, JR) {
+        MR += JR, MR >= XR && (CR = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), KW.decode(), YW = iW);
-        return KW.decode(lW().subarray(WW, WW + iW))
-      }(WW >>> 0, iW)
+        }), CR.decode(), MR = JR);
+        return CR.decode(rR().subarray(RR, RR + JR))
+      }(RR >>> 0, JR)
     }
-    let xW = null;
+    let wR = null;
 
-    function lW() {
-      return null !== xW && 0 !== xW.byteLength || (xW = new Uint8Array(hW.memory.buffer)), xW
-    }
-
-    function AW(WW) {
-      return bW[WW]
-    }
-    let bW = new Array(1024).fill(void 0);
-    bW.push(void 0, null, !0, !1);
-    let jW = bW.length;
-
-    function UW(WW) {
-      return void 0 === WW || null === WW
+    function rR() {
+      return null !== wR && 0 !== wR.byteLength || (wR = new Uint8Array(gR.memory.buffer)), wR
     }
 
-    function kW(WW, iW) {
-      const OW = iW(4 * WW.length, 4) >>> 0,
-        mW = tW();
-      for (let EW = 0; EW < WW.length; EW++) mW.setUint32(OW + 4 * EW, cW(WW[EW]), !0);
-      return HW = WW.length, OW
+    function eR(RR) {
+      return aR[RR]
+    }
+    let aR = new Array(1024).fill(void 0);
+    aR.push(void 0, null, !0, !1);
+    let LR = aR.length;
+
+    function nR(RR) {
+      return void 0 === RR || null === RR
     }
 
-    function sW(WW, iW, OW) {
-      if (void 0 === OW) {
-        const OW = yW.encode(WW),
-          mW = iW(OW.length, 1) >>> 0;
-        return lW().subarray(mW, mW + OW.length).set(OW), HW = OW.length, mW
+    function UR(RR, JR) {
+      const GR = JR(4 * RR.length, 4) >>> 0,
+        yR = VR();
+      for (let tR = 0; tR < RR.length; tR++) yR.setUint32(GR + 4 * tR, iR(RR[tR]), !0);
+      return bR = RR.length, GR
+    }
+
+    function WR(RR, JR, GR) {
+      if (void 0 === GR) {
+        const GR = BR.encode(RR),
+          yR = JR(GR.length, 1) >>> 0;
+        return rR().subarray(yR, yR + GR.length).set(GR), bR = GR.length, yR
       }
-      let mW = WW.length,
-        EW = iW(mW, 1) >>> 0;
-      const NW = lW();
-      let PW = 0;
-      for (; PW < mW; PW++) {
-        const iW = WW.charCodeAt(PW);
-        if (iW > 127) break;
-        NW[EW + PW] = iW
+      let yR = RR.length,
+        tR = JR(yR, 1) >>> 0;
+      const uR = rR();
+      let ZR = 0;
+      for (; ZR < yR; ZR++) {
+        const JR = RR.charCodeAt(ZR);
+        if (JR > 127) break;
+        uR[tR + ZR] = JR
       }
-      if (PW !== mW) {
-        0 !== PW && (WW = WW.slice(PW)), EW = OW(EW, mW, mW = PW + 3 * WW.length, 1) >>> 0;
-        const iW = lW().subarray(EW + PW, EW + mW);
-        PW += yW.encodeInto(WW, iW).written, EW = OW(EW, mW, PW, 1) >>> 0
+      if (ZR !== yR) {
+        0 !== ZR && (RR = RR.slice(ZR)), tR = GR(tR, yR, yR = ZR + 3 * RR.length, 1) >>> 0;
+        const JR = rR().subarray(tR + ZR, tR + yR);
+        ZR += BR.encodeInto(RR, JR).written, tR = GR(tR, yR, ZR, 1) >>> 0
       }
-      return HW = PW, EW
+      return bR = ZR, tR
     }
 
-    function MW(WW) {
-      const iW = AW(WW);
-      return function(WW) {
-        WW < 1028 || (bW[WW] = jW, jW = WW)
-      }(WW), iW
+    function AR(RR) {
+      const JR = eR(RR);
+      return function(RR) {
+        RR < 1028 || (aR[RR] = LR, LR = RR)
+      }(RR), JR
     }
-    let KW = new TextDecoder("utf-8", {
+    let CR = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    KW.decode();
-    const SW = 2146435072;
-    let YW = 0;
-    const yW = new TextEncoder;
-    "encodeInto" in yW || (yW.encodeInto = function(WW, iW) {
-      const OW = yW.encode(WW);
-      return iW.set(OW), {
-        read: WW.length,
-        written: OW.length
+    CR.decode();
+    const XR = 2146435072;
+    let MR = 0;
+    const BR = new TextEncoder;
+    "encodeInto" in BR || (BR.encodeInto = function(RR, JR) {
+      const GR = BR.encode(RR);
+      return JR.set(GR), {
+        read: RR.length,
+        written: GR.length
       }
     });
-    let TW, JW, hW, HW = 0;
+    let lR, pR, gR, bR = 0;
 
-    function nW(WW, iW) {
-      return JW = WW, hW = WW.exports, TW = iW, wW = null, xW = null, hW.zNwJ(), hW
+    function vR(RR, JR) {
+      return pR = RR, gR = RR.exports, lR = JR, fR = null, wR = null, gR.ipM6(), gR
     }
 
-    function uW(WW) {
-      if (void 0 !== hW) return hW;
-      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
-        module: WW
-      } = WW) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const iW = LW();
-      WW instanceof WebAssembly.Module || (WW = new WebAssembly.Module(WW));
-      return nW(new WebAssembly.Instance(WW, iW), WW)
+    function OR(RR) {
+      if (void 0 !== gR) return gR;
+      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
+        module: RR
+      } = RR) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const JR = qR();
+      RR instanceof WebAssembly.Module || (RR = new WebAssembly.Module(RR));
+      return vR(new WebAssembly.Instance(RR, JR), RR)
     }
-    async function oW(WW) {
-      if (void 0 !== hW) return hW;
-      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
-        module_or_path: WW
-      } = WW) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const iW = LW();
-      ("string" === typeof WW || "function" === typeof Request && WW instanceof Request || "function" === typeof URL && WW instanceof URL) && (WW = fetch(WW));
+    async function xR(RR) {
+      if (void 0 !== gR) return gR;
+      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
+        module_or_path: RR
+      } = RR) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const JR = qR();
+      ("string" === typeof RR || "function" === typeof Request && RR instanceof Request || "function" === typeof URL && RR instanceof URL) && (RR = fetch(RR));
       const {
-        instance: OW,
-        module: mW
-      } = await async function(WW, iW) {
-        if ("function" === typeof Response && WW instanceof Response) {
-          if (!WW.ok) throw new Error(`failed to fetch Wasm: ${WW.status} ${WW.statusText} fetching '${WW.url}'`);
+        instance: GR,
+        module: yR
+      } = await async function(RR, JR) {
+        if ("function" === typeof Response && RR instanceof Response) {
+          if (!RR.ok) throw new Error(`failed to fetch Wasm: ${RR.status} ${RR.statusText} fetching '${RR.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(WW, iW)
-          } catch (OW) {
-            if (! function(WW) {
-                switch (WW) {
+            return await WebAssembly.instantiateStreaming(RR, JR)
+          } catch (GR) {
+            if (! function(RR) {
+                switch (RR) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(WW.type) || "application/wasm" === WW.headers.get("Content-Type")) throw OW;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", OW)
+              }(RR.type) || "application/wasm" === RR.headers.get("Content-Type")) throw GR;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", GR)
           }
-          const mW = await WW.arrayBuffer();
-          return await WebAssembly.instantiate(mW, iW)
+          const yR = await RR.arrayBuffer();
+          return await WebAssembly.instantiate(yR, JR)
         } {
-          const OW = await WebAssembly.instantiate(WW, iW);
-          return OW instanceof WebAssembly.Instance ? {
-            instance: OW,
-            module: WW
-          } : OW
+          const GR = await WebAssembly.instantiate(RR, JR);
+          return GR instanceof WebAssembly.Instance ? {
+            instance: GR,
+            module: RR
+          } : GR
         }
-      }(await WW, iW);
-      return nW(OW, mW)
+      }(await RR, JR);
+      return vR(GR, yR)
     }
-    var dW = OW(2388),
-      eW = OW(7625);
-    class vW extends Error {
+    var NR = GR(2457),
+      DR = GR(7762);
+    class HR extends Error {
       stage;
-      constructor(WW, iW) {
-        super((0, dW.A)(WW, iW), {
-          cause: iW
-        }), this.name = "BloxdAnimWasmError", this.stage = WW
+      constructor(RR, JR) {
+        super((0, NR.z)(RR, JR), {
+          cause: JR
+        }), this.name = "BloxdAnimWasmError", this.stage = RR
       }
     }
-    let gW = null,
-      DW = null;
+    let oR = null,
+      cR = null;
 
-    function VW() {
-      if (DW) throw DW
+    function PR() {
+      if (cR) throw cR
     }
-    async function pW(WW, iW, EW) {
-      VW();
-      const NW = await (gW ??= (async () => {
-        let WW;
+    async function IR(RR, JR, tR) {
+      PR();
+      const uR = await (oR ??= (async () => {
+        let RR;
         try {
-          WW = await (0, dW.B)(new OW.U(OW(54791)), (0, eW.c)("bloxd_wasm_anim"))
-        } catch (iW) {
-          throw new vW((0, dW.E)(iW), iW)
+          RR = await (0, NR.A)(new GR.U(GR(54636)), (0, DR.c)("bloxd_wasm_anim"))
+        } catch (JR) {
+          throw new HR((0, NR.E)(JR), JR)
         }
         try {
-          await oW({
-            module_or_path: WW
+          await xR({
+            module_or_path: RR
           })
-        } catch (iW) {
-          throw new vW("instantiate", iW)
+        } catch (JR) {
+          throw new HR("instantiate", JR)
         }
-        return mW
-      })(), gW.catch((() => {
-        gW = null
-      })), gW);
-      VW();
+        return yR
+      })(), oR.catch((() => {
+        oR = null
+      })), oR);
+      PR();
       try {
-        return NW.lLW(Object.entries(WW).flat(), [...iW.mobTypes], [...iW.vehicleTypes], [...iW.mobAiStates], [...iW.playerPoses], "builtIns" in EW ? EW.builtIns : void 0)
-      } catch (PW) {
-        const WW = new vW("call", PW);
-        throw PW instanceof WebAssembly.RuntimeError && (DW = WW), WW
+        return uR.sqR(Object.entries(RR).flat(), [...JR.mobTypes], [...JR.vehicleTypes], [...JR.mobAiStates], [...JR.playerPoses], "builtIns" in tR ? tR.builtIns : void 0)
+      } catch (ZR) {
+        const RR = new HR("call", ZR);
+        throw ZR instanceof WebAssembly.RuntimeError && (cR = RR), RR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

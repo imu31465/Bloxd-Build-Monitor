@@ -1,26 +1,26 @@
 export const id = 115;
 export const ids = [115];
 export const modules = {
-  5651: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => MW
+  5769: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => AR
     });
-    var mW = OW(1616),
-      EW = OW(62),
-      NW = OW(1172),
-      PW = OW(1107),
-      LW = OW(1095),
-      cW = OW(2192),
-      wW = OW(1605),
-      tW = OW(1383),
-      ZW = OW(1091),
-      xW = OW(25),
-      lW = OW(1532),
-      AW = OW(1391),
-      bW = OW(3591),
-      jW = OW(1638),
-      UW = OW(1283);
-    const kW = [{
+    var yR = GR(1677),
+      tR = GR(66),
+      uR = GR(1270),
+      ZR = GR(1196),
+      qR = GR(1179),
+      iR = GR(2292),
+      fR = GR(1663),
+      VR = GR(1465),
+      KR = GR(1172),
+      wR = GR(25),
+      rR = GR(1590),
+      eR = GR(1468),
+      aR = GR(3696),
+      LR = GR(1695),
+      nR = GR(1378);
+    const UR = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      sW = {
+      WR = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function MW() {
+    function AR() {
       const {
-        t: WW
-      } = (0, NW.B)(), iW = (0, wW.useNavigatePreserveSearch)(), OW = (0, mW.u)(), {
-        isUserContextUpdating: MW
-      } = (0, PW.e)(), KW = (0, cW.e)(), SW = (0, LW.h)(), YW = (yW = OW.pathname).startsWith(jW.z) ? null : yW.startsWith(sW.docs) ? "docs" : yW.startsWith(sW.leaderboard) ? "leaderboard" : "myGames";
-      var yW;
-      const TW = function(WW) {
-        if (!WW.startsWith(jW.z)) return {
+        t: RR
+      } = (0, uR.A)(), JR = (0, fR.useNavigatePreserveSearch)(), GR = (0, yR.r)(), {
+        isUserContextUpdating: AR
+      } = (0, ZR.d)(), CR = (0, iR.b)(), XR = (0, qR.h)(), MR = (BR = GR.pathname).startsWith(LR.t) ? null : BR.startsWith(WR.docs) ? "docs" : BR.startsWith(WR.leaderboard) ? "leaderboard" : "myGames";
+      var BR;
+      const lR = function(RR) {
+        if (!RR.startsWith(LR.t)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const iW = (0, wW.getPreviousLocation)();
+        const JR = (0, fR.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== iW && iW.startsWith(sW.myGames) ? -1 : sW.myGames
+          to: null !== JR && JR.startsWith(WR.myGames) ? -1 : WR.myGames
         }
-      }(OW.pathname);
-      return (0, EW.useEffect)((() => {
-        xW.d.set({
+      }(GR.pathname);
+      return (0, tR.useEffect)((() => {
+        wR.d.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, UW.jsxs)("div", {
+      }), []), (0, nR.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [KW && (0, UW.jsx)("aside", {
+        children: [CR && (0, nR.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, UW.jsx)(bW.b, {})
-        }), (0, UW.jsxs)("div", {
+          children: (0, nR.jsx)(aR.e, {})
+        }), (0, nR.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, UW.jsxs)("div", {
+          children: [(0, nR.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, UW.jsx)(ZW.d, {
+            children: [(0, nR.jsx)(KR.b, {
               show: !0,
-              socialBarIsDocked: KW
-            }), (0, UW.jsxs)("nav", {
+              socialBarIsDocked: CR
+            }), (0, nR.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, UW.jsx)(lW.b, {
-                icon: TW.icon,
+              children: [(0, nR.jsx)(rR.d, {
+                icon: lR.icon,
                 onClick: () => {
-                  iW(TW.to)
+                  JR(lR.to)
                 },
-                children: WW(TW.title)
-              }), (0, UW.jsx)("div", {
+                children: RR(lR.title)
+              }), (0, nR.jsx)("div", {
                 className: "StudioNavTabs",
-                children: kW.map((OW => (0, UW.jsxs)(lW.Z, {
-                  active: YW === OW.id,
-                  href: sW[OW.id],
+                children: UR.map((GR => (0, nR.jsxs)(rR.U, {
+                  active: MR === GR.id,
+                  href: WR[GR.id],
                   onClick: () => {
-                    iW(sW[OW.id])
+                    JR(WR[GR.id])
                   },
-                  children: [(0, UW.jsx)(AW.c, {
-                    name: OW.icon
-                  }), !SW && WW(OW.title)]
-                }, OW.id)))
+                  children: [(0, nR.jsx)(eR.d, {
+                    name: GR.icon
+                  }), !XR && RR(GR.title)]
+                }, GR.id)))
               })]
             })]
-          }), (0, UW.jsxs)("main", {
+          }), (0, nR.jsxs)("main", {
             className: "StudioBottom",
-            children: [MW && (0, UW.jsx)("div", {
+            children: [AR && (0, nR.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, UW.jsx)(tW.d, {})
-            }), !MW && (0, UW.jsx)("div", {
+              children: (0, nR.jsx)(VR.d, {})
+            }), !AR && (0, nR.jsx)("div", {
               className: "StudioContent",
-              children: (0, UW.jsx)(mW.g, {})
+              children: (0, nR.jsx)(yR.e, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

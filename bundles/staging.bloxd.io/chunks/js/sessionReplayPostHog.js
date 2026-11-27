@@ -1,161 +1,161 @@
 export const id = 62;
 export const ids = [62];
 export const modules = {
-  41104: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      ReplayPostHog: () => OO
+  41091: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      ReplayPostHog: () => RG
     });
-    var mW = OW(4605),
-      EW = OW(41109),
-      NW = OW(41091);
-    const PW = new Set(["partycode", "lobby", "vm", "invite", "invitecode", "code", "token", "access_token", "id_token", "refresh_token", "auth", "key", "state", "ticket", "jointicket", "secret", "password", "sig", "signature"]),
-      LW = new Set(["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "bfcid", "irclid", "_kx", "_gl", "yclid", "srsltid", "mc_eid", "s_kwcid", "ef_id", "_hsenc", "mkt_tok"]),
-      cW = "redacted",
-      wW = /([?&#])([^=&#?\s"']+)=([^&#?\s"'<>\\]*)/g,
-      tW = /(\/play\/[^/?#\s"'<>\\]+\/)[^/?#\s"'<>\\]+/gi,
-      ZW = /\/play\//i,
-      xW = /lobby|party/i;
+    var yR = GR(4700),
+      tR = GR(41097),
+      uR = GR(41079);
+    const ZR = new Set(["partycode", "lobby", "vm", "invite", "invitecode", "code", "token", "access_token", "id_token", "refresh_token", "auth", "key", "state", "ticket", "jointicket", "secret", "password", "sig", "signature"]),
+      qR = new Set(["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "bfcid", "irclid", "_kx", "_gl", "yclid", "srsltid", "mc_eid", "s_kwcid", "ef_id", "_hsenc", "mkt_tok"]),
+      iR = "redacted",
+      fR = /([?&#])([^=&#?\s"']+)=([^&#?\s"'<>\\]*)/g,
+      VR = /(\/play\/[^/?#\s"'<>\\]+\/)[^/?#\s"'<>\\]+/gi,
+      KR = /\/play\//i,
+      wR = /lobby|party/i;
 
-    function lW(WW) {
+    function rR(RR) {
       try {
-        return decodeURIComponent(WW)
+        return decodeURIComponent(RR)
       } catch {
         return null
       }
     }
 
-    function AW(WW) {
-      const iW = WW.includes("%") ? lW(WW) : null;
-      if (null === iW || iW === WW) return WW;
-      let OW = bW(`?${iW}`).slice(1);
-      return OW === iW && (OW = AW(iW)), OW === iW ? WW : encodeURIComponent(OW)
+    function eR(RR) {
+      const JR = RR.includes("%") ? rR(RR) : null;
+      if (null === JR || JR === RR) return RR;
+      let GR = aR(`?${JR}`).slice(1);
+      return GR === JR && (GR = eR(JR)), GR === JR ? RR : encodeURIComponent(GR)
     }
 
-    function bW(WW) {
-      return WW.includes("=") || ZW.test(WW) ? WW.replace(wW, ((WW, iW, OW, mW) => {
-        var EW;
-        const NW = (null !== (EW = lW(OW)) && void 0 !== EW ? EW : OW).toLowerCase();
-        if (PW.has(NW)) return `${iW}${OW}=${cW}`;
-        if (LW.has(NW) && "" !== mW) return `${iW}${OW}=<masked>`;
-        const wW = AW(mW);
-        return wW === mW ? WW : `${iW}${OW}=${wW}`
-      })).replace(tW, `$1${cW}`) : WW
+    function aR(RR) {
+      return RR.includes("=") || KR.test(RR) ? RR.replace(fR, ((RR, JR, GR, yR) => {
+        var tR;
+        const uR = (null !== (tR = rR(GR)) && void 0 !== tR ? tR : GR).toLowerCase();
+        if (ZR.has(uR)) return `${JR}${GR}=${iR}`;
+        if (qR.has(uR) && "" !== yR) return `${JR}${GR}=<masked>`;
+        const fR = eR(yR);
+        return fR === yR ? RR : `${JR}${GR}=${fR}`
+      })).replace(VR, `$1${iR}`) : RR
     }
-    const jW = new Set(["href", "src", "srcset", "action", "formaction", "poster", "xlink:href"]);
+    const LR = new Set(["href", "src", "srcset", "action", "formaction", "poster", "xlink:href"]);
 
-    function UW(WW, iW) {
-      return jW.has(WW.toLowerCase()) ? bW(iW) : iW
-    }
-
-    function kW(WW) {
-      return xW.test(WW) ? cW : bW(WW)
+    function nR(RR, JR) {
+      return LR.has(RR.toLowerCase()) ? aR(JR) : JR
     }
 
-    function sW(WW) {
-      if (WW)
-        for (const [iW, OW] of Object.entries(WW)) "string" === typeof OW && (WW[iW] = bW(OW))
+    function UR(RR) {
+      return wR.test(RR) ? iR : aR(RR)
     }
 
-    function MW(WW) {
-      var iW;
-      Array.isArray(WW.payload) && (WW.payload = (iW = WW.payload).some((WW => "string" === typeof WW && xW.test(WW))) ? [JSON.stringify(cW)] : iW.map((WW => "string" === typeof WW ? bW(WW) : WW))), Array.isArray(WW.trace) && (WW.trace = WW.trace.map((WW => "string" === typeof WW ? bW(WW) : WW)))
+    function WR(RR) {
+      if (RR)
+        for (const [JR, GR] of Object.entries(RR)) "string" === typeof GR && (RR[JR] = aR(GR))
     }
 
-    function KW(WW) {
-      if (null === WW) return null;
-      const iW = WW.properties.$snapshot_data;
-      return sW(WW.properties), sW(WW.properties.$set), sW(WW.properties.$set_once), sW(WW.$set), sW(WW.$set_once),
-        function(WW) {
-          if (Array.isArray(WW))
-            for (const iW of WW) {
-              const WW = null === iW || void 0 === iW ? void 0 : iW.data;
-              if (!WW || "object" !== typeof WW) continue;
-              "string" === typeof WW.href && (WW.href = bW(WW.href));
-              const OW = WW.payload;
-              OW && "object" === typeof OW && (iW.type === mW.c.Plugin && "string" === typeof WW.plugin && WW.plugin.includes("console") ? MW(OW) : sW(OW))
+    function AR(RR) {
+      var JR;
+      Array.isArray(RR.payload) && (RR.payload = (JR = RR.payload).some((RR => "string" === typeof RR && wR.test(RR))) ? [JSON.stringify(iR)] : JR.map((RR => "string" === typeof RR ? aR(RR) : RR))), Array.isArray(RR.trace) && (RR.trace = RR.trace.map((RR => "string" === typeof RR ? aR(RR) : RR)))
+    }
+
+    function CR(RR) {
+      if (null === RR) return null;
+      const JR = RR.properties.$snapshot_data;
+      return WR(RR.properties), WR(RR.properties.$set), WR(RR.properties.$set_once), WR(RR.$set), WR(RR.$set_once),
+        function(RR) {
+          if (Array.isArray(RR))
+            for (const JR of RR) {
+              const RR = null === JR || void 0 === JR ? void 0 : JR.data;
+              if (!RR || "object" !== typeof RR) continue;
+              "string" === typeof RR.href && (RR.href = aR(RR.href));
+              const GR = RR.payload;
+              GR && "object" === typeof GR && (JR.type === yR.d.Plugin && "string" === typeof RR.plugin && RR.plugin.includes("console") ? AR(GR) : WR(GR))
             }
-        }(iW), WW
+        }(JR), RR
     }
-    const SW = new Set(["class", "id", "rel", "type", "role", "tabindex", "width", "height", "dir", "lang", "disabled", "hidden", "checked", "selected", "readonly", "draggable", "media", "charset", "crossorigin", "aria-hidden", "aria-expanded", "aria-selected", "aria-pressed", "aria-checked", "aria-disabled", "xmlns", "viewbox", "d", "fill", "stroke", "stroke-width", "transform", "x", "y", "cx", "cy", "r", "points", "x1", "y1", "x2", "y2", "rx", "ry", "opacity", "fill-rule", "clip-rule", "stroke-linecap", "stroke-linejoin", "preserveaspectratio", "xmlns:xlink", "colspan", "rowspan"]),
-      YW = new Set(["_csstext", "rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]),
-      yW = new Set(["data-pad-key", "data-pad-repeat"]),
-      TW = new Set(["href", "src", "srcset", "xlink:href"]),
-      JW = new Set(["title", "$title", "message", "detail", "game_display_name"]),
-      hW = "img, picture, video";
+    const XR = new Set(["class", "id", "rel", "type", "role", "tabindex", "width", "height", "dir", "lang", "disabled", "hidden", "checked", "selected", "readonly", "draggable", "media", "charset", "crossorigin", "aria-hidden", "aria-expanded", "aria-selected", "aria-pressed", "aria-checked", "aria-disabled", "xmlns", "viewbox", "d", "fill", "stroke", "stroke-width", "transform", "x", "y", "cx", "cy", "r", "points", "x1", "y1", "x2", "y2", "rx", "ry", "opacity", "fill-rule", "clip-rule", "stroke-linecap", "stroke-linejoin", "preserveaspectratio", "xmlns:xlink", "colspan", "rowspan"]),
+      MR = new Set(["_csstext", "rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]),
+      BR = new Set(["data-pad-key", "data-pad-repeat"]),
+      lR = new Set(["href", "src", "srcset", "xlink:href"]),
+      pR = new Set(["title", "$title", "message", "detail", "game_display_name"]),
+      gR = "img, picture, video";
 
-    function HW(WW, iW, OW) {
-      const mW = WW.toLowerCase();
-      return "style" === mW ? iW.replace(/url\((?:"[^"]*"|'[^']*'|[^)]*)\)/gi, "none") : TW.has(mW) && "A" !== OW.tagName ? UW(WW, iW) : SW.has(mW) || YW.has(mW) || mW.startsWith("data-pad-") && !yW.has(mW) ? iW : iW.replace(/\S/g, "*")
+    function bR(RR, JR, GR) {
+      const yR = RR.toLowerCase();
+      return "style" === yR ? JR.replace(/url\((?:"[^"]*"|'[^']*'|[^)]*)\)/gi, "none") : lR.has(yR) && "A" !== GR.tagName ? nR(RR, JR) : XR.has(yR) || MR.has(yR) || yR.startsWith("data-pad-") && !BR.has(yR) ? JR : JR.replace(/\S/g, "*")
     }
 
-    function nW(WW) {
-      if (!/^(https?:\/\/|\/)/i.test(WW)) return WW;
-      let iW;
+    function vR(RR) {
+      if (!/^(https?:\/\/|\/)/i.test(RR)) return RR;
+      let JR;
       try {
-        iW = new URL(WW, "https://bloxd.invalid")
+        JR = new URL(RR, "https://bloxd.invalid")
       } catch {
-        return WW
+        return RR
       }
-      const [OW = "", ...mW] = iW.pathname.split("/").slice(1), EW = `/${OW}${mW.some((WW=>""!==WW))?"/*":""}`;
-      return WW.startsWith("/") ? EW : `${iW.origin}${EW}`
+      const [GR = "", ...yR] = JR.pathname.split("/").slice(1), tR = `/${GR}${yR.some((RR=>""!==RR))?"/*":""}`;
+      return RR.startsWith("/") ? tR : `${JR.origin}${tR}`
     }
 
-    function uW(WW) {
-      if (WW)
-        for (const [iW, OW] of Object.entries(WW)) JW.has(iW) ? delete WW[iW] : "string" === typeof OW && (WW[iW] = nW(OW))
+    function OR(RR) {
+      if (RR)
+        for (const [JR, GR] of Object.entries(RR)) pR.has(JR) ? delete RR[JR] : "string" === typeof GR && (RR[JR] = vR(GR))
     }
 
-    function oW(WW) {
-      ! function(WW) {
-        if (Array.isArray(WW))
-          for (const iW of WW) {
-            const WW = null === iW || void 0 === iW ? void 0 : iW.data;
-            WW && "object" === typeof WW && ("string" === typeof WW.href && (WW.href = nW(WW.href)), WW.payload && "object" === typeof WW.payload && uW(WW.payload))
+    function xR(RR) {
+      ! function(RR) {
+        if (Array.isArray(RR))
+          for (const JR of RR) {
+            const RR = null === JR || void 0 === JR ? void 0 : JR.data;
+            RR && "object" === typeof RR && ("string" === typeof RR.href && (RR.href = vR(RR.href)), RR.payload && "object" === typeof RR.payload && OR(RR.payload))
           }
-      }(WW.properties.$snapshot_data), uW(WW.properties), "$screen" === WW.event && String(WW.properties.$screen_name).startsWith("custom: ") && (WW.properties.$screen_name = `custom: ${String(WW.properties.game_analytics_id)}`), uW(WW.properties.$set), uW(WW.properties.$set_once), uW(WW.$set), uW(WW.$set_once)
+      }(RR.properties.$snapshot_data), OR(RR.properties), "$screen" === RR.event && String(RR.properties.$screen_name).startsWith("custom: ") && (RR.properties.$screen_name = `custom: ${String(RR.properties.game_analytics_id)}`), OR(RR.properties.$set), OR(RR.properties.$set_once), OR(RR.$set), OR(RR.$set_once)
     }
-    const dW = mW.i.map((WW => `.${WW}`)).join(", "),
-      eW = ["iframe", "script", 'link:not([rel~="stylesheet"])', ".AdBannerContainer > [id]", "#GenericVideoInner", "ins.adsbygoogle", '[id^="google_ads_"]'],
-      vW = [".PadKeyboardPreviewText", ".PadKeyboardPhraseRow"].join(", ");
+    const NR = yR.i.map((RR => `.${RR}`)).join(", "),
+      DR = ["iframe", "script", 'link:not([rel~="stylesheet"])', ".AdBannerContainer > [id]", "#GenericVideoInner", "ins.adsbygoogle", '[id^="google_ads_"]'],
+      HR = [".PadKeyboardPreviewText", ".PadKeyboardPhraseRow"].join(", ");
 
-    function gW(WW, iW) {
-      return null !== iW && void 0 !== iW && iW.closest(dW) ? WW : WW.replace(/\S/g, "*")
+    function oR(RR, JR) {
+      return null !== JR && void 0 !== JR && JR.closest(NR) ? RR : RR.replace(/\S/g, "*")
     }
 
-    function DW(WW) {
-      const iW = function(WW) {
-        return WW.anonymised ? {
+    function cR(RR) {
+      const JR = function(RR) {
+        return RR.anonymised ? {
           enable_recording_console_log: !1,
           session_recording: {
-            blockSelector: [...eW, hW].join(", "),
+            blockSelector: [...DR, gR].join(", "),
             maskTextSelector: "*",
-            maskTextFn: WW.showsChat ? gW : null,
-            maskAttributeFn: HW
+            maskTextFn: RR.showsChat ? oR : null,
+            maskAttributeFn: bR
           }
         } : {
           enable_recording_console_log: !0,
           session_recording: {
-            blockSelector: [...eW, (iW = WW.ownOrigins, `img[src^="http"]${iW.map((WW=>`:not([src^="${WW}/"])`)).join("")}`)].join(", "),
-            maskTextSelector: WW.showsChat ? vW : `${vW}, ${dW}`,
-            maskAttributeFn: UW
+            blockSelector: [...DR, (JR = RR.ownOrigins, `img[src^="http"]${JR.map((RR=>`:not([src^="${RR}/"])`)).join("")}`)].join(", "),
+            maskTextSelector: RR.showsChat ? HR : `${HR}, ${NR}`,
+            maskAttributeFn: nR
           }
         };
-        var iW
-      }(WW);
+        var JR
+      }(RR);
       return {
-        api_host: WW.apiHost,
+        api_host: RR.apiHost,
         persistence: "memory",
         bootstrap: {
-          distinctID: WW.recordingId,
+          distinctID: RR.recordingId,
           isIdentifiedID: !1,
-          sessionID: WW.recordingId
+          sessionID: RR.recordingId
         },
         person_profiles: "always",
         mask_personal_data_properties: !0,
-        custom_personal_data_properties: [...LW],
+        custom_personal_data_properties: [...qR],
         session_idle_timeout_seconds: 36e3,
         disable_external_dependency_loading: !0,
-        opt_out_useragent_filter: WW.allowAutomatedBrowsers,
+        opt_out_useragent_filter: RR.allowAutomatedBrowsers,
         capture_pageview: !0,
         capture_pageleave: !0,
         autocapture: !1,
@@ -170,25 +170,25 @@ export const modules = {
         disable_web_experiments: !0,
         advanced_disable_feature_flags: !0,
         advanced_disable_flags: !0,
-        enable_recording_console_log: iW.enable_recording_console_log,
-        before_send: iW => {
-          const OW = KW(iW);
-          return null === OW || (WW.anonymised && oW(OW), "$snapshot" === OW.event ? function(WW, iW) {
+        enable_recording_console_log: JR.enable_recording_console_log,
+        before_send: JR => {
+          const GR = CR(JR);
+          return null === GR || (RR.anonymised && xR(GR), "$snapshot" === GR.event ? function(RR, JR) {
             const {
-              $snapshot_data: OW,
-              $window_id: mW
-            } = WW.properties;
+              $snapshot_data: GR,
+              $window_id: yR
+            } = RR.properties;
             try {
-              iW({
-                windowId: mW,
-                events: OW
+              JR({
+                windowId: yR,
+                events: GR
               })
-            } catch (EW) {
-              console.error("Session replay couldn't take a page recording batch.", EW)
+            } catch (tR) {
+              console.error("Session replay couldn't take a page recording batch.", tR)
             }
-          }(OW, WW.onDomBatch) : WW.onTimelineEvent(OW)), null
+          }(GR, RR.onDomBatch) : RR.onTimelineEvent(GR)), null
         },
-        disable_session_recording: !WW.recordDom,
+        disable_session_recording: !RR.recordDom,
         session_recording: {
           captureCanvas: {
             recordCanvas: !1
@@ -204,165 +204,165 @@ export const modules = {
           full_snapshot_interval_millis: 9e5,
           session_idle_threshold_ms: 18e5,
           sampleRate: 1,
-          ...iW.session_recording
+          ...JR.session_recording
         }
       }
     }
 
-    function VW() {
+    function PR() {
       return window.__PosthogExtensions__
     }
-    var pW = OW(649),
-      fW = OW(136);
+    var IR = GR(688),
+      mR = GR(134);
 
-    function CW() {
-      var WW;
-      const iW = navigator,
-        OW = new Date;
+    function zR() {
+      var RR;
+      const JR = navigator,
+        GR = new Date;
       return {
-        local_hour: OW.getHours(),
-        local_weekday: OW.getDay(),
-        ...iW.hardwareConcurrency ? {
-          cpu_cores: iW.hardwareConcurrency
+        local_hour: GR.getHours(),
+        local_weekday: GR.getDay(),
+        ...JR.hardwareConcurrency ? {
+          cpu_cores: JR.hardwareConcurrency
         } : {},
-        ...iW.deviceMemory ? {
-          device_memory_gb: iW.deviceMemory
+        ...JR.deviceMemory ? {
+          device_memory_gb: JR.deviceMemory
         } : {},
-        ...null !== (WW = iW.connection) && void 0 !== WW && WW.effectiveType ? {
-          network_type: iW.connection.effectiveType
+        ...null !== (RR = JR.connection) && void 0 !== RR && RR.effectiveType ? {
+          network_type: JR.connection.effectiveType
         } : {}
       }
     }
 
-    function XW(WW) {
-      var iW;
-      const OW = WW.tags;
+    function SR(RR) {
+      var JR;
+      const GR = RR.tags;
       return {
-        panel_entry_reason: null !== (iW = OW.recording_reason) && void 0 !== iW ? iW : "unknown",
+        panel_entry_reason: null !== (JR = GR.recording_reason) && void 0 !== JR ? JR : "unknown",
         panel_entry_date: (new Date).toISOString().slice(0, 10),
-        ...void 0 === OW.sample_rate ? {} : {
-          panel_entry_sample_rate: OW.sample_rate
+        ...void 0 === GR.sample_rate ? {} : {
+          panel_entry_sample_rate: GR.sample_rate
         }
       }
     }
 
-    function BW(WW, iW) {
+    function jR(RR, JR) {
       return {
-        recording_id: WW.recordingId,
-        recording_scopes: WW.scopes.join(","),
-        dom_recorded: iW
+        recording_id: RR.recordingId,
+        recording_scopes: RR.scopes.join(","),
+        dom_recorded: JR
       }
     }
 
-    function qW(WW, iW) {
-      const OW = {};
-      for (const [mW, EW] of Object.entries(iW)) OW[`${WW}${mW}`] = EW;
-      return OW
+    function dR(RR, JR) {
+      const GR = {};
+      for (const [yR, tR] of Object.entries(JR)) GR[`${RR}${yR}`] = tR;
+      return GR
     }
-    class RW {
-      constructor(WW) {
-        this.options = WW, this.buckets = new Map, this.lastEvictionMs = -1 / 0
+    class ER {
+      constructor(RR) {
+        this.options = RR, this.buckets = new Map, this.lastEvictionMs = -1 / 0
       }
-      allow(WW, iW) {
-        this.evictExpired(WW, iW);
-        let OW = this.buckets.get(WW);
-        var mW, EW;
-        (void 0 === OW || iW - OW.startMs >= this.options.windowMs) && (OW = {
-          startMs: iW,
+      allow(RR, JR) {
+        this.evictExpired(RR, JR);
+        let GR = this.buckets.get(RR);
+        var yR, tR;
+        (void 0 === GR || JR - GR.startMs >= this.options.windowMs) && (GR = {
+          startMs: JR,
           count: 0,
-          suppressed: null !== (mW = null === (EW = OW) || void 0 === EW ? void 0 : EW.suppressed) && void 0 !== mW ? mW : 0
-        }, this.buckets.set(WW, OW));
-        if (OW.count >= this.options.maxPerWindow) return OW.suppressed++, null;
-        OW.count++;
-        const NW = OW.suppressed;
-        return OW.suppressed = 0, NW
+          suppressed: null !== (yR = null === (tR = GR) || void 0 === tR ? void 0 : tR.suppressed) && void 0 !== yR ? yR : 0
+        }, this.buckets.set(RR, GR));
+        if (GR.count >= this.options.maxPerWindow) return GR.suppressed++, null;
+        GR.count++;
+        const uR = GR.suppressed;
+        return GR.suppressed = 0, uR
       }
-      evictExpired(WW, iW) {
-        if (!(iW - this.lastEvictionMs < this.options.windowMs)) {
-          this.lastEvictionMs = iW;
-          for (const [OW, mW] of this.buckets) {
-            const EW = (iW - mW.startMs) / this.options.windowMs;
-            OW !== WW && EW >= (0 === mW.suppressed ? 1 : 10) && this.buckets.delete(OW)
+      evictExpired(RR, JR) {
+        if (!(JR - this.lastEvictionMs < this.options.windowMs)) {
+          this.lastEvictionMs = JR;
+          for (const [GR, yR] of this.buckets) {
+            const tR = (JR - yR.startMs) / this.options.windowMs;
+            GR !== RR && tR >= (0 === yR.suppressed ? 1 : 10) && this.buckets.delete(GR)
           }
         }
       }
     }
 
-    function GW(WW, iW, OW) {
-      const mW = new URL(WW);
-      return mW.pathname = `${mW.pathname.replace(/\/+$/,"")}/replay/${encodeURIComponent(iW)}`, mW.searchParams.set("timestamp", String(Math.round(OW - 5e3))), mW.toString()
+    function YR(RR, JR, GR) {
+      const yR = new URL(RR);
+      return yR.pathname = `${yR.pathname.replace(/\/+$/,"")}/replay/${encodeURIComponent(JR)}`, yR.searchParams.set("timestamp", String(Math.round(GR - 5e3))), yR.toString()
     }
-    class IW {
-      constructor(WW) {
-        this.options = WW, this.throttle = new RW({
+    class kR {
+      constructor(RR) {
+        this.options = RR, this.throttle = new ER({
           maxPerWindow: 3,
           windowMs: 6e4
         })
       }
-      annotate(WW, iW) {
-        const OW = Date.now(),
-          mW = this.throttle.allow("logged", OW);
-        var EW;
-        null !== mW && this.options.captureError(WW.message || WW.name, {
-          error_name: WW.name || null,
-          error_fingerprint: null !== (EW = iW.fingerprint) && void 0 !== EW ? EW : null,
-          suppressed_since_last: mW
+      annotate(RR, JR) {
+        const GR = Date.now(),
+          yR = this.throttle.allow("logged", GR);
+        var tR;
+        null !== yR && this.options.captureError(RR.message || RR.name, {
+          error_name: RR.name || null,
+          error_fingerprint: null !== (tR = JR.fingerprint) && void 0 !== tR ? tR : null,
+          suppressed_since_last: yR
         });
         return {
           replay_recording_id: this.options.recordingId,
           ...this.options.domRecorded ? {
-            replay_url: GW(this.options.dashboardHost, this.options.getSessionId(), OW)
+            replay_url: YR(this.options.dashboardHost, this.options.getSessionId(), GR)
           } : {}
         }
       }
     }
 
-    function aW(WW) {
-      return WW < 50 ? "<50" : WW < 100 ? "50-100" : WW < 200 ? "100-200" : WW < 400 ? "200-400" : "400+"
+    function QR(RR) {
+      return RR < 50 ? "<50" : RR < 100 ? "50-100" : RR < 200 ? "100-200" : RR < 400 ? "200-400" : "400+"
     }
-    class rW {
+    class FR {
       constructor() {
         this.gamesJoined = [], this.flags = new Set, this.firstGame = null, this.fpsTags = null, this.maxHitchMs = 0, this.pingSumMs = 0, this.pingSamples = 0, this.maxPingMs = 0, this.unboundKeyPresses = new Map
       }
-      gameJoined(WW, iW) {
-        this.gamesJoined.includes(WW) || this.gamesJoined.push(WW), null === this.firstGame && (this.firstGame = {
-          joinedAtMs: iW,
+      gameJoined(RR, JR) {
+        this.gamesJoined.includes(RR) || this.gamesJoined.push(RR), null === this.firstGame && (this.firstGame = {
+          joinedAtMs: JR,
           leftAtMs: null
         })
       }
-      gameLeft(WW) {
-        null !== this.firstGame && null === this.firstGame.leftAtMs && (this.firstGame.leftAtMs = WW)
+      gameLeft(RR) {
+        null !== this.firstGame && null === this.firstGame.leftAtMs && (this.firstGame.leftAtMs = RR)
       }
-      setFlag(WW) {
-        return !this.flags.has(WW) && (this.flags.add(WW), !0)
+      setFlag(RR) {
+        return !this.flags.has(RR) && (this.flags.add(RR), !0)
       }
-      setFpsTags(WW) {
-        this.fpsTags = WW
+      setFpsTags(RR) {
+        this.fpsTags = RR
       }
-      addHitch(WW) {
-        return !(WW <= this.maxHitchMs) && (this.maxHitchMs = WW, !0)
+      addHitch(RR) {
+        return !(RR <= this.maxHitchMs) && (this.maxHitchMs = RR, !0)
       }
-      addPingSample(WW) {
-        const iW = this.pingTags();
-        this.pingSumMs += WW, this.pingSamples++, this.maxPingMs = Math.max(this.maxPingMs, WW);
-        const OW = this.pingTags();
-        return (null === iW || void 0 === iW ? void 0 : iW.ping_avg_bucket) !== (null === OW || void 0 === OW ? void 0 : OW.ping_avg_bucket) || (null === iW || void 0 === iW ? void 0 : iW.ping_max_bucket) !== (null === OW || void 0 === OW ? void 0 : OW.ping_max_bucket)
+      addPingSample(RR) {
+        const JR = this.pingTags();
+        this.pingSumMs += RR, this.pingSamples++, this.maxPingMs = Math.max(this.maxPingMs, RR);
+        const GR = this.pingTags();
+        return (null === JR || void 0 === JR ? void 0 : JR.ping_avg_bucket) !== (null === GR || void 0 === GR ? void 0 : GR.ping_avg_bucket) || (null === JR || void 0 === JR ? void 0 : JR.ping_max_bucket) !== (null === GR || void 0 === GR ? void 0 : GR.ping_max_bucket)
       }
-      addUnboundKeyPresses(WW) {
-        for (const [OW, mW] of WW) {
-          var iW;
-          this.unboundKeyPresses.set(OW, (null !== (iW = this.unboundKeyPresses.get(OW)) && void 0 !== iW ? iW : 0) + mW)
+      addUnboundKeyPresses(RR) {
+        for (const [GR, yR] of RR) {
+          var JR;
+          this.unboundKeyPresses.set(GR, (null !== (JR = this.unboundKeyPresses.get(GR)) && void 0 !== JR ? JR : 0) + yR)
         }
       }
       toProperties() {
-        var WW;
-        let iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        var RR;
+        let JR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         return {
           ...{
-            first_game: null !== (WW = this.gamesJoined[0]) && void 0 !== WW ? WW : "",
+            first_game: null !== (RR = this.gamesJoined[0]) && void 0 !== RR ? RR : "",
             games_joined: this.gamesJoined.join(","),
             games_joined_count: this.gamesJoined.length,
-            quick_quit: this.isQuickQuit(iW),
+            quick_quit: this.isQuickQuit(JR),
             had_error: this.flags.has("had_error"),
             disconnected: this.flags.has("disconnected"),
             purchase_intent: this.flags.has("purchase_intent"),
@@ -375,144 +375,144 @@ export const modules = {
         }
       }
       unboundKeyTags() {
-        let WW = 0,
-          iW = "",
-          OW = 0;
-        for (const [mW, EW] of this.unboundKeyPresses) WW += EW, (EW > OW || EW === OW && mW < iW) && (iW = mW, OW = EW);
+        let RR = 0,
+          JR = "",
+          GR = 0;
+        for (const [yR, tR] of this.unboundKeyPresses) RR += tR, (tR > GR || tR === GR && yR < JR) && (JR = yR, GR = tR);
         return {
-          unbound_key_presses: WW,
-          top_unbound_key: iW
+          unbound_key_presses: RR,
+          top_unbound_key: JR
         }
       }
       pingTags() {
         return 0 === this.pingSamples ? null : {
-          ping_avg_bucket: aW(this.pingSumMs / this.pingSamples),
-          ping_max_bucket: aW(this.maxPingMs)
+          ping_avg_bucket: QR(this.pingSumMs / this.pingSamples),
+          ping_max_bucket: QR(this.maxPingMs)
         }
       }
-      isQuickQuit(WW) {
-        var iW;
+      isQuickQuit(RR) {
+        var JR;
         if (null === this.firstGame) return !1;
-        const OW = null !== (iW = this.firstGame.leftAtMs) && void 0 !== iW ? iW : WW;
-        return null !== OW && OW - this.firstGame.joinedAtMs < mW.n
+        const GR = null !== (JR = this.firstGame.leftAtMs) && void 0 !== JR ? JR : RR;
+        return null !== GR && GR - this.firstGame.joinedAtMs < yR.p
       }
     }
-    var zW = OW(1217),
-      FW = OW(1061),
-      QW = OW(344),
-      Wi = OW(1065),
-      ii = OW(1052),
-      Oi = OW(3822),
-      mi = OW(25),
-      Ei = OW(2037),
-      Ni = OW(27),
-      Pi = OW(1351),
-      Li = OW(1301),
-      ci = OW(1593),
-      wi = OW(2306),
-      ti = OW(1729),
-      Zi = OW(41082),
-      xi = OW(100),
-      li = OW(41073),
-      Ai = OW(1319);
-    class bi {
-      constructor(WW, iW, OW) {
-        this.replay = WW, this.quitContext = iW, this.flows = OW, this.errorThrottle = new RW({
+    var TR = GR(1317),
+      sR = GR(1136),
+      hR = GR(377),
+      RJ = GR(1141),
+      JJ = GR(1127),
+      GJ = GR(3918),
+      yJ = GR(25),
+      tJ = GR(2134),
+      uJ = GR(32),
+      ZJ = GR(1449),
+      qJ = GR(1397),
+      iJ = GR(1655),
+      fJ = GR(2380),
+      VJ = GR(1800),
+      KJ = GR(41066),
+      wJ = GR(103),
+      rJ = GR(41062),
+      eJ = GR(1419);
+    class aJ {
+      constructor(RR, JR, GR) {
+        this.replay = RR, this.quitContext = JR, this.flows = GR, this.errorThrottle = new ER({
           maxPerWindow: 3,
           windowMs: 6e4
-        }), this.hitchThrottle = new RW({
+        }), this.hitchThrottle = new ER({
           maxPerWindow: 5,
           windowMs: 6e4
         }), this.attachedToRender = !1
       }
       start() {
-        window.addEventListener("error", (WW => {
-            const iW = WW.error;
-            this.captureError("error", WW.message, WW.filename ? `${WW.filename}:${WW.lineno}:${WW.colno}` : null, iW instanceof Error ? iW.name : null, (0, li.c)(WW))
-          })), window.addEventListener("unhandledrejection", (WW => {
-            const iW = WW.reason;
-            this.captureError("unhandled_rejection", iW instanceof Error ? iW.message : String(iW), null, iW instanceof Error ? iW.name : null, (0, li.c)(WW))
-          })), Ni.l.subscribe("unrecoverableError", (WW => {
-            this.captureError("unrecoverable", WW, null, null, !0)
+        window.addEventListener("error", (RR => {
+            const JR = RR.error;
+            this.captureError("error", RR.message, RR.filename ? `${RR.filename}:${RR.lineno}:${RR.colno}` : null, JR instanceof Error ? JR.name : null, (0, rJ.c)(RR))
+          })), window.addEventListener("unhandledrejection", (RR => {
+            const JR = RR.reason;
+            this.captureError("unhandled_rejection", JR instanceof Error ? JR.message : String(JR), null, JR instanceof Error ? JR.name : null, (0, rJ.c)(RR))
+          })), uJ.n.subscribe("unrecoverableError", (RR => {
+            this.captureError("unrecoverable", RR, null, null, !0)
           })),
-          function(WW) {
-            var iW, OW;
-            if ("undefined" === typeof PerformanceObserver || null === (iW = null === (OW = PerformanceObserver.supportedEntryTypes) || void 0 === OW ? void 0 : OW.includes("long-animation-frame")) || void 0 === iW || !iW) return;
-            let mW = null;
-            new PerformanceObserver((iW => {
-              for (const NW of iW.getEntries()) {
-                var OW, EW;
-                const iW = NW,
-                  PW = !(null !== mW && iW.startTime - mW.endMs < 50) || iW.duration >= 3 * (null !== (OW = null === (EW = mW) || void 0 === EW ? void 0 : EW.durationMs) && void 0 !== OW ? OW : 0);
-                mW = {
-                  endMs: iW.startTime + iW.duration,
-                  durationMs: iW.duration
-                }, !document.hidden && iW.duration >= 100 && PW && WW({
-                  frameMs: iW.duration,
-                  mainThreadMs: (0, Ai.l)(iW)
+          function(RR) {
+            var JR, GR;
+            if ("undefined" === typeof PerformanceObserver || null === (JR = null === (GR = PerformanceObserver.supportedEntryTypes) || void 0 === GR ? void 0 : GR.includes("long-animation-frame")) || void 0 === JR || !JR) return;
+            let yR = null;
+            new PerformanceObserver((JR => {
+              for (const uR of JR.getEntries()) {
+                var GR, tR;
+                const JR = uR,
+                  ZR = !(null !== yR && JR.startTime - yR.endMs < 50) || JR.duration >= 3 * (null !== (GR = null === (tR = yR) || void 0 === tR ? void 0 : tR.durationMs) && void 0 !== GR ? GR : 0);
+                yR = {
+                  endMs: JR.startTime + JR.duration,
+                  durationMs: JR.duration
+                }, !document.hidden && JR.duration >= 100 && ZR && RR({
+                  frameMs: JR.duration,
+                  mainThreadMs: (0, eJ.j)(JR)
                 })
               }
             })).observe({
               type: "long-animation-frame"
             })
-          }((WW => {
-            this.onFrameHitch(WW)
+          }((RR => {
+            this.onFrameHitch(RR)
           }))
       }
       attachToRender() {
         if (this.attachedToRender) return;
-        const WW = (0, Li.y)().gameRender();
-        null !== WW && (this.attachedToRender = !0, this.replay.setSessionProperties(Object.fromEntries([
-          ["renderer", WW.renderer],
-          ["gpu_vendor", (0, xi.getGpuVendor)()]
-        ])), WW.canvas.addEventListener("webglcontextlost", (() => {
+        const RR = (0, qJ.J)().gameRender();
+        null !== RR && (this.attachedToRender = !0, this.replay.setSessionProperties(Object.fromEntries([
+          ["renderer", RR.renderer],
+          ["gpu_vendor", (0, wJ.getGpuVendor)()]
+        ])), RR.canvas.addEventListener("webglcontextlost", (() => {
           this.replay.setFlag("had_error"), this.replay.capture("webgl_context_lost")
-        })), WW.canvas.addEventListener("webglcontextrestored", (() => {
+        })), RR.canvas.addEventListener("webglcontextrestored", (() => {
           this.replay.capture("webgl_context_restored")
         })))
       }
-      captureError(WW, iW, OW, EW, NW) {
-        const PW = kW(iW).slice(0, 300);
-        NW && null !== this.flows.stay && this.quitContext.noteError(performance.now());
-        const LW = this.errorThrottle.allow(`${WW}:${PW}`, Date.now());
-        null !== LW && (this.replay.captureClientError(WW, PW, {
-          source: OW,
-          error_name: EW,
-          suppressed_since_last: LW
-        }), this.replay.addReplayMarker(mW.l.error, {
-          kind: WW,
-          message: PW
+      captureError(RR, JR, GR, tR, uR) {
+        const ZR = UR(JR).slice(0, 300);
+        uR && null !== this.flows.stay && this.quitContext.noteError(performance.now());
+        const qR = this.errorThrottle.allow(`${RR}:${ZR}`, Date.now());
+        null !== qR && (this.replay.captureClientError(RR, ZR, {
+          source: GR,
+          error_name: tR,
+          suppressed_since_last: qR
+        }), this.replay.addReplayMarker(yR.l.error, {
+          kind: RR,
+          message: ZR
         }))
       }
-      onFrameHitch(WW) {
+      onFrameHitch(RR) {
         let {
-          frameMs: iW,
-          mainThreadMs: OW
-        } = WW;
-        const mW = this.flows.stay;
-        if (null === mW || null === mW.playableAtMs || performance.now() - mW.playableAtMs < 2e3) return;
-        (0, ti.l)() || this.quitContext.noteHitch(performance.now()), this.replay.addHitch(Math.round(iW));
-        const EW = this.hitchThrottle.allow("frame_hitch", Date.now());
-        null !== EW && this.replay.capture("frame_hitch", {
-          Mc: Math.round(iW),
-          main_thread_ms: Math.round(OW),
-          game_name_with_variation: mW.name,
-          suppressed_since_last: EW
+          frameMs: JR,
+          mainThreadMs: GR
+        } = RR;
+        const yR = this.flows.stay;
+        if (null === yR || null === yR.playableAtMs || performance.now() - yR.playableAtMs < 2e3) return;
+        (0, VJ.o)() || this.quitContext.noteHitch(performance.now()), this.replay.addHitch(Math.round(JR));
+        const tR = this.hitchThrottle.allow("frame_hitch", Date.now());
+        null !== tR && this.replay.capture("frame_hitch", {
+          Bi: Math.round(JR),
+          main_thread_ms: Math.round(GR),
+          game_name_with_variation: yR.name,
+          suppressed_since_last: tR
         })
       }
     }
-    var ji = OW(7493),
-      Ui = OW(327);
-    class ki {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.steps = WW, this.furthestIndex = -1, this.heldIndex = -1, this.gateIndex = void 0, this.gateIndex = null === iW ? 1 / 0 : WW.indexOf(iW)
+    var LJ = GR(7630),
+      nJ = GR(359);
+    class UJ {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.steps = RR, this.furthestIndex = -1, this.heldIndex = -1, this.gateIndex = void 0, this.gateIndex = null === JR ? 1 / 0 : RR.indexOf(JR)
       }
-      reach(WW) {
-        const iW = this.steps.indexOf(WW);
-        if (iW > this.gateIndex && this.furthestIndex < this.gateIndex) return this.heldIndex = Math.max(this.heldIndex, iW), null;
-        const OW = iW === this.gateIndex ? Math.max(iW, this.heldIndex) : iW;
-        return OW <= this.furthestIndex ? null : (this.furthestIndex = OW, OW)
+      reach(RR) {
+        const JR = this.steps.indexOf(RR);
+        if (JR > this.gateIndex && this.furthestIndex < this.gateIndex) return this.heldIndex = Math.max(this.heldIndex, JR), null;
+        const GR = JR === this.gateIndex ? Math.max(JR, this.heldIndex) : JR;
+        return GR <= this.furthestIndex ? null : (this.furthestIndex = GR, GR)
       }
       get furthest() {
         return -1 === this.furthestIndex ? null : this.steps[this.furthestIndex]
@@ -521,7 +521,7 @@ export const modules = {
         return this.furthestIndex
       }
     }
-    const si = {
+    const WJ = {
       unbound_key_burst: {
         count: 4,
         windowMs: 5e3
@@ -539,123 +539,123 @@ export const modules = {
         windowMs: 1e4
       }
     };
-    class Mi {
-      constructor(WW) {
-        this.threshold = WW, this.times = [], this.armed = !0, this.lastAtMs = -1 / 0
+    class AJ {
+      constructor(RR) {
+        this.threshold = RR, this.times = [], this.armed = !0, this.lastAtMs = -1 / 0
       }
-      note(WW) {
+      note(RR) {
         const {
-          count: iW,
-          windowMs: OW
+          count: JR,
+          windowMs: GR
         } = this.threshold;
-        if (!this.armed && WW - this.lastAtMs >= OW && (this.armed = !0), this.lastAtMs = WW, !this.armed) return !1;
-        for (this.times.push(WW); this.times.length > 0 && WW - this.times[0] >= OW;) this.times.shift();
-        return !(this.times.length < iW) && (this.times.length = 0, this.armed = !1, !0)
+        if (!this.armed && RR - this.lastAtMs >= GR && (this.armed = !0), this.lastAtMs = RR, !this.armed) return !1;
+        for (this.times.push(RR); this.times.length > 0 && RR - this.times[0] >= GR;) this.times.shift();
+        return !(this.times.length < JR) && (this.times.length = 0, this.armed = !1, !0)
       }
     }
-    class Ki {
-      constructor(WW) {
-        this.onSignal = WW, this.bursts = new Map, this.seen = [], this.signalCount = 0, this.idleCounted = !1;
-        for (const [iW, OW] of Object.entries(si)) this.bursts.set(iW, new Mi(OW))
+    class CJ {
+      constructor(RR) {
+        this.onSignal = RR, this.bursts = new Map, this.seen = [], this.signalCount = 0, this.idleCounted = !1;
+        for (const [JR, GR] of Object.entries(WJ)) this.bursts.set(JR, new AJ(GR))
       }
-      note(WW, iW) {
-        if (this.bursts.get(WW).note(iW)) {
+      note(RR, JR) {
+        if (this.bursts.get(RR).note(JR)) {
           const {
-            count: iW,
-            windowMs: OW
-          } = si[WW];
-          this.signal(WW, iW, OW)
+            count: JR,
+            windowMs: GR
+          } = WJ[RR];
+          this.signal(RR, JR, GR)
         }
       }
-      checkIdle(WW) {
+      checkIdle(RR) {
         let {
-          nowMs: iW,
-          lastInputAtMs: OW,
-          pointerLocked: mW,
-          playable: EW,
-          visible: NW
-        } = WW;
-        iW - (null !== OW && void 0 !== OW ? OW : 0) < 3e4 ? this.idleCounted = !1 : !this.idleCounted && mW && EW && NW && (this.idleCounted = !0, this.signal("idle_pointer_locked", 1, 3e4))
+          nowMs: JR,
+          lastInputAtMs: GR,
+          pointerLocked: yR,
+          playable: tR,
+          visible: uR
+        } = RR;
+        JR - (null !== GR && void 0 !== GR ? GR : 0) < 3e4 ? this.idleCounted = !1 : !this.idleCounted && yR && tR && uR && (this.idleCounted = !0, this.signal("idle_pointer_locked", 1, 3e4))
       }
       tags() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = WW && !this.seen.includes("rage_quit") ? [...this.seen, "rage_quit"] : this.seen;
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = RR && !this.seen.includes("rage_quit") ? [...this.seen, "rage_quit"] : this.seen;
         return {
-          frustration_score: this.signalCount + (WW ? 1 : 0),
-          frustration_signals: iW.join(",")
+          frustration_score: this.signalCount + (RR ? 1 : 0),
+          frustration_signals: JR.join(",")
         }
       }
-      signal(WW, iW, OW) {
-        this.signalCount++, this.seen.includes(WW) || this.seen.push(WW), this.onSignal(WW, iW, OW)
+      signal(RR, JR, GR) {
+        this.signalCount++, this.seen.includes(RR) || this.seen.push(RR), this.onSignal(RR, JR, GR)
       }
     }
-    const Si = ji.j.indexOf("first_input"),
-      Yi = ji.j.indexOf("first_move"),
-      yi = {
+    const XJ = LJ.g.indexOf("first_input"),
+      MJ = LJ.g.indexOf("first_move"),
+      BJ = {
         keyboardMouse: "keyboard",
         touch: "touch",
         gamepad: "pad"
       };
-    class Ti {
-      constructor(WW, iW, OW) {
-        this.replay = WW, this.quitContext = iW, this.deps = OW, this.ladder = new ki(ji.e, "first_move"), this.frustration = void 0, this.frustrationThrottle = new RW({
+    class lJ {
+      constructor(RR, JR, GR) {
+        this.replay = RR, this.quitContext = JR, this.deps = GR, this.ladder = new UJ(LJ.b, "first_move"), this.frustration = void 0, this.frustrationThrottle = new ER({
           maxPerWindow: 5,
           windowMs: 6e4
-        }), this.activations = new Set, this.currentStay = null, this.moveSubscriptions = [], this.everPlayable = !1, this.everPointerLocked = !1, this.pointerUnlockedAtMs = -1 / 0, this.everythingMenu = null, this.lastGameName = null, this.unsentStepMarkers = [], this.frustration = new Ki(((WW, iW, OW) => {
-          this.onFrustration(WW, iW, OW)
-        })), iW.setFlowProperties((WW => this.quitProperties(WW)))
+        }), this.activations = new Set, this.currentStay = null, this.moveSubscriptions = [], this.everPlayable = !1, this.everPointerLocked = !1, this.pointerUnlockedAtMs = -1 / 0, this.everythingMenu = null, this.lastGameName = null, this.unsentStepMarkers = [], this.frustration = new CJ(((RR, JR, GR) => {
+          this.onFrustration(RR, JR, GR)
+        })), JR.setFlowProperties((RR => this.quitProperties(RR)))
       }
       get stay() {
         return this.currentStay
       }
       start() {
-        var WW;
-        this.reachStep("page_loaded"), Ni.l.subscribe("sessionReplayStayOpened", (WW => {
-          this.resendStay(WW)
-        })), Ni.l.subscribe("pointerLockUpdate", (WW => {
-          this.pointerLockChanged(WW)
-        })), Ni.l.subscribe("localBlockMined", (() => {
+        var RR;
+        this.reachStep("page_loaded"), uJ.n.subscribe("sessionReplayStayOpened", (RR => {
+          this.resendStay(RR)
+        })), uJ.n.subscribe("pointerLockUpdate", (RR => {
+          this.pointerLockChanged(RR)
+        })), uJ.n.subscribe("localBlockMined", (() => {
           this.blockBroken()
-        })), Ni.l.subscribe("blockChangeRefused", (() => {
+        })), uJ.n.subscribe("blockChangeRefused", (() => {
           this.noteFrustration("block_change_refused")
-        })), Ni.l.subscribe("controlsTutorialShown", (WW => {
-          this.controlsTutorialShown(WW)
-        })), Ni.l.subscribe("showShopTouchTutorial", (WW => {
-          !1 !== WW && this.controlsTutorialShown("shop")
-        })), Ni.l.subscribe("appManagerUpdated|openInGameMenuName", (WW => {
-          this.inGameMenuChanged(WW)
-        })), Ni.l.subscribe("appManagerUpdated|openEverythingMenuName", (WW => {
-          this.everythingMenuChanged(WW)
+        })), uJ.n.subscribe("controlsTutorialShown", (RR => {
+          this.controlsTutorialShown(RR)
+        })), uJ.n.subscribe("showShopTouchTutorial", (RR => {
+          !1 !== RR && this.controlsTutorialShown("shop")
+        })), uJ.n.subscribe("appManagerUpdated|openInGameMenuName", (RR => {
+          this.inGameMenuChanged(RR)
+        })), uJ.n.subscribe("appManagerUpdated|openEverythingMenuName", (RR => {
+          this.everythingMenuChanged(RR)
         })), document.addEventListener("pointerlockerror", (() => {
           this.pointerLockFailed()
-        })), null === (WW = (0, Zi.e)()) || void 0 === WW || WW.onUnboundKey((() => {
+        })), null === (RR = (0, KJ.e)()) || void 0 === RR || RR.onUnboundKey((() => {
           this.unboundKeyPressed()
         }))
       }
       gameLoading() {
         this.reachStep("game_loading")
       }
-      gameJoined(WW, iW, OW) {
-        const mW = OW && iW === this.lastGameName;
-        this.lastGameName = iW, this.stopWatchingMoves();
-        const EW = {
-          name: iW,
+      gameJoined(RR, JR, GR) {
+        const yR = GR && JR === this.lastGameName;
+        this.lastGameName = JR, this.stopWatchingMoves();
+        const tR = {
+          name: JR,
           joinedAtMs: Date.now(),
           playableAtMs: null,
           visiblePlayedMs: 0,
           deaths: 0,
-          ladder: new ki(ji.j, "first_move"),
+          ladder: new UJ(LJ.g, "first_move"),
           unboundKeyPresses: 0
         };
-        return this.currentStay = EW, this.reachStayStep("joined"), WW >= 2 && !mW && this.reachStep("second_game"), EW
+        return this.currentStay = tR, this.reachStayStep("joined"), RR >= 2 && !yR && this.reachStep("second_game"), tR
       }
       gamePlayable() {
-        const WW = this.currentStay;
-        null !== WW && (WW.playableAtMs = this.deps.now(), this.everPlayable = !0, this.reachStep("game_playable"), this.reachStayStep("game_playable"), this.deps.isPointerLocked() && this.pointerLocked(), this.watchMoves())
+        const RR = this.currentStay;
+        null !== RR && (RR.playableAtMs = this.deps.now(), this.everPlayable = !0, this.reachStep("game_playable"), this.reachStayStep("game_playable"), this.deps.isPointerLocked() && this.pointerLocked(), this.watchMoves())
       }
       input() {
-        const WW = this.currentStay;
-        null === WW || null === WW.playableAtMs || WW.ladder.furthestStepIndex >= Si || (this.reachStep("first_input"), this.reachStayStep("first_input"))
+        const RR = this.currentStay;
+        null === RR || null === RR.playableAtMs || RR.ladder.furthestStepIndex >= XJ || (this.reachStep("first_input"), this.reachStayStep("first_input"))
       }
       played60s() {
         this.reachStep("played_60s"), this.reachStayStep("played_60s")
@@ -663,11 +663,11 @@ export const modules = {
       gameLeft() {
         this.stopWatchingMoves(), this.currentStay = null
       }
-      hZ() {
-        var WW, iW, OW;
+      gK() {
+        var RR, JR, GR;
         this.sendStepMarkers(), this.frustration.checkIdle({
           nowMs: this.deps.now(),
-          lastInputAtMs: Math.max(null !== (WW = this.quitContext.getLastInputAtMs()) && void 0 !== WW ? WW : 0, null !== (iW = null === (OW = this.currentStay) || void 0 === OW ? void 0 : OW.playableAtMs) && void 0 !== iW ? iW : 0),
+          lastInputAtMs: Math.max(null !== (RR = this.quitContext.getLastInputAtMs()) && void 0 !== RR ? RR : 0, null !== (JR = null === (GR = this.currentStay) || void 0 === GR ? void 0 : GR.playableAtMs) && void 0 !== JR ? JR : 0),
           pointerLocked: this.deps.isPointerLocked() && "gamepad" !== this.deps.getInputDevice(),
           playable: this.isPlayable(),
           visible: this.deps.isPageVisible()
@@ -681,43 +681,43 @@ export const modules = {
       }
       moved() {
         this.stopWatchingMoves(), this.activate("first_move", {
-          input: yi[this.deps.getInputDevice()]
+          input: BJ[this.deps.getInputDevice()]
         }), this.reachStep("first_move"), this.reachStayStep("first_move")
       }
       blockBroken() {
         this.isPlayable() && (this.activate("first_block_broken"), this.reachStep("first_block"), this.reachStayStep("first_block"))
       }
-      inGameMenuChanged(WW) {
-        null !== WW && this.menuOpened(WW, "inventory" === WW ? "first_inventory_open" : null)
+      inGameMenuChanged(RR) {
+        null !== RR && this.menuOpened(RR, "inventory" === RR ? "first_inventory_open" : null)
       }
-      everythingMenuChanged(WW) {
-        const iW = null === this.everythingMenu;
-        this.everythingMenu = WW, null !== WW && (this.menuOpened(WW, WW === Ui.m.SETTINGS ? "first_settings_open" : null), WW === Ui.m.SETTINGS && iW && null !== this.currentStay && this.noteFrustration("menu_toggling"))
+      everythingMenuChanged(RR) {
+        const JR = null === this.everythingMenu;
+        this.everythingMenu = RR, null !== RR && (this.menuOpened(RR, RR === nJ.o.SETTINGS ? "first_settings_open" : null), RR === nJ.o.SETTINGS && JR && null !== this.currentStay && this.noteFrustration("menu_toggling"))
       }
-      pointerLockChanged(WW) {
-        WW ? this.pointerLocked() : this.pointerUnlockedAtMs = this.deps.now()
+      pointerLockChanged(RR) {
+        RR ? this.pointerLocked() : this.pointerUnlockedAtMs = this.deps.now()
       }
-      controlsTutorialShown(WW) {
-        const iW = `controls_tutorial_${WW}`;
-        this.activations.has(iW) || (this.activations.add(iW), this.replay.capture("controls_tutorial_shown", {
-          tutorial: WW,
+      controlsTutorialShown(RR) {
+        const JR = `controls_tutorial_${RR}`;
+        this.activations.has(JR) || (this.activations.add(JR), this.replay.capture("controls_tutorial_shown", {
+          tutorial: RR,
           ...this.timing()
         }))
       }
       unboundKeyPressed() {
         this.noteFrustration("unbound_key_burst");
-        const WW = this.currentStay;
-        null !== WW && WW.unboundKeyPresses < ji.n && (WW.unboundKeyPresses++, this.deps.publishStayProgress({
-          unboundKeyPresses: WW.unboundKeyPresses
+        const RR = this.currentStay;
+        null !== RR && RR.unboundKeyPresses < LJ.i && (RR.unboundKeyPresses++, this.deps.publishStayProgress({
+          unboundKeyPresses: RR.unboundKeyPresses
         }))
       }
-      noteFrustration(WW) {
-        this.frustration.note(WW, this.deps.now())
+      noteFrustration(RR) {
+        this.frustration.note(RR, this.deps.now())
       }
-      quitProperties(WW) {
+      quitProperties(RR) {
         return {
           ...this.ladderTags(),
-          ...this.frustration.tags(WW),
+          ...this.frustration.tags(RR),
           never_pointer_locked: this.everPlayable && !this.everPointerLocked && !this.deps.isTouchScreen() && "gamepad" !== this.deps.getInputDevice()
         }
       }
@@ -725,94 +725,94 @@ export const modules = {
         return null !== this.currentStay && null !== this.currentStay.playableAtMs
       }
       ladderTags() {
-        var WW;
+        var RR;
         return {
-          furthest_step: null !== (WW = this.ladder.furthest) && void 0 !== WW ? WW : "",
+          furthest_step: null !== (RR = this.ladder.furthest) && void 0 !== RR ? RR : "",
           furthest_step_index: this.ladder.furthestStepIndex
         }
       }
-      reachStep(WW) {
-        null !== this.ladder.reach(WW) && (this.replay.setSessionProperties(this.ladderTags(), !1), this.unsentStepMarkers.push(ji.e.indexOf(WW)), this.sendStepMarkers())
+      reachStep(RR) {
+        null !== this.ladder.reach(RR) && (this.replay.setSessionProperties(this.ladderTags(), !1), this.unsentStepMarkers.push(LJ.b.indexOf(RR)), this.sendStepMarkers())
       }
       sendStepMarkers() {
-        for (; this.unsentStepMarkers.length > 0 && this.replay.addReplayMarker(mW.l.step, {
+        for (; this.unsentStepMarkers.length > 0 && this.replay.addReplayMarker(yR.l.step, {
             step: this.unsentStepMarkers[0]
           }, !0);) this.unsentStepMarkers.shift()
       }
-      resendStay(WW) {
-        const iW = this.currentStay;
-        var OW;
-        null !== iW && iW.name === WW && this.deps.publishStayProgress({
-          furthestStep: null !== (OW = iW.ladder.furthest) && void 0 !== OW ? OW : void 0,
-          unboundKeyPresses: iW.unboundKeyPresses
+      resendStay(RR) {
+        const JR = this.currentStay;
+        var GR;
+        null !== JR && JR.name === RR && this.deps.publishStayProgress({
+          furthestStep: null !== (GR = JR.ladder.furthest) && void 0 !== GR ? GR : void 0,
+          unboundKeyPresses: JR.unboundKeyPresses
         })
       }
-      reachStayStep(WW) {
-        var iW;
-        const OW = null === (iW = this.currentStay) || void 0 === iW ? void 0 : iW.ladder;
-        void 0 !== OW && null !== OW.reach(WW) && this.deps.publishStayProgress({
-          furthestStep: OW.furthest
+      reachStayStep(RR) {
+        var JR;
+        const GR = null === (JR = this.currentStay) || void 0 === JR ? void 0 : JR.ladder;
+        void 0 !== GR && null !== GR.reach(RR) && this.deps.publishStayProgress({
+          furthestStep: GR.furthest
         })
       }
-      menuOpened(WW, iW) {
+      menuOpened(RR, JR) {
         this.replay.capture("menu_opened", {
-          menu: WW
-        }), null !== iW && this.activate(iW)
+          menu: RR
+        }), null !== JR && this.activate(JR)
       }
-      activate(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.activations.has(WW) || (this.activations.add(WW), this.replay.capture(WW, {
-          ...iW,
+      activate(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.activations.has(RR) || (this.activations.add(RR), this.replay.capture(RR, {
+          ...JR,
           ...this.timing()
         }))
       }
       timing() {
-        var WW, iW;
-        const OW = this.deps.now(),
-          mW = null !== (WW = null === (iW = this.currentStay) || void 0 === iW ? void 0 : iW.playableAtMs) && void 0 !== WW ? WW : null;
+        var RR, JR;
+        const GR = this.deps.now(),
+          yR = null !== (RR = null === (JR = this.currentStay) || void 0 === JR ? void 0 : JR.playableAtMs) && void 0 !== RR ? RR : null;
         return {
-          ms_since_page_load: Math.round(OW),
-          ms_since_playable: null === mW ? null : Math.round(OW - mW)
+          ms_since_page_load: Math.round(GR),
+          ms_since_playable: null === yR ? null : Math.round(GR - yR)
         }
       }
-      onFrustration(WW, iW, OW) {
-        this.replay.setSessionProperties(this.frustration.tags(), !1), this.replay.addReplayMarker(mW.l.frustration, {
-          signal: ji.h.indexOf(WW)
+      onFrustration(RR, JR, GR) {
+        this.replay.setSessionProperties(this.frustration.tags(), !1), this.replay.addReplayMarker(yR.l.frustration, {
+          signal: LJ.d.indexOf(RR)
         });
-        const EW = this.frustrationThrottle.allow(WW, Date.now());
-        null !== EW && this.replay.capture("frustration_signal", {
-          signal: WW,
-          count: iW,
-          window_ms: OW,
-          suppressed_since_last: EW
+        const tR = this.frustrationThrottle.allow(RR, Date.now());
+        null !== tR && this.replay.capture("frustration_signal", {
+          signal: RR,
+          count: JR,
+          window_ms: GR,
+          suppressed_since_last: tR
         })
       }
       watchMoves() {
-        var WW, iW;
-        if (0 === this.moveSubscriptions.length && (null !== (WW = null === (iW = this.currentStay) || void 0 === iW ? void 0 : iW.ladder.furthestStepIndex) && void 0 !== WW ? WW : 1 / 0) < Yi) {
-          const WW = () => {
+        var RR, JR;
+        if (0 === this.moveSubscriptions.length && (null !== (RR = null === (JR = this.currentStay) || void 0 === JR ? void 0 : JR.ladder.furthestStepIndex) && void 0 !== RR ? RR : 1 / 0) < MJ) {
+          const RR = () => {
             this.moved()
           };
-          this.moveSubscriptions = [Ni.l.subscribe("usedKeyboard", WW), Ni.l.subscribe("stickMoved", WW)]
+          this.moveSubscriptions = [uJ.n.subscribe("usedKeyboard", RR), uJ.n.subscribe("stickMoved", RR)]
         }
       }
       stopWatchingMoves() {
-        for (const WW of this.moveSubscriptions) Ni.l.unsubscribe(WW);
+        for (const RR of this.moveSubscriptions) uJ.n.unsubscribe(RR);
         this.moveSubscriptions = []
       }
     }
-    const Ji = ["quit_after_hitch", "quit_after_death", "quit_during_load", "quit_in_menu", "quit_idle", "quit_after_ad"],
-      Hi = ["quit_during_load", "quit_after_ad", "quit_after_death", "quit_after_hitch", "quit_idle", "quit_in_menu"];
+    const pJ = ["quit_after_hitch", "quit_after_death", "quit_during_load", "quit_in_menu", "quit_idle", "quit_after_ad"],
+      gJ = ["quit_during_load", "quit_after_ad", "quit_after_death", "quit_after_hitch", "quit_idle", "quit_in_menu"];
 
-    function ni(WW) {
-      var iW;
-      return null !== (iW = Hi.find((iW => WW.includes(iW)))) && void 0 !== iW ? iW : "none"
+    function bJ(RR) {
+      var JR;
+      return null !== (JR = gJ.find((JR => RR.includes(JR)))) && void 0 !== JR ? JR : "none"
     }
 
-    function ui(WW, iW, OW) {
-      return null !== WW && iW - WW < OW
+    function vJ(RR, JR, GR) {
+      return null !== RR && JR - RR < GR
     }
-    class oi {
+    class OJ {
       constructor() {
         this.history = {
           lastHitchAtMs: null,
@@ -823,20 +823,20 @@ export const modules = {
           adPlaying: !1
         }, this.lastLoadStep = null, this.flowProperties = () => ({})
       }
-      setFlowProperties(WW) {
-        this.flowProperties = WW
+      setFlowProperties(RR) {
+        this.flowProperties = RR
       }
-      noteInput(WW) {
-        this.history.lastInputAtMs = WW
+      noteInput(RR) {
+        this.history.lastInputAtMs = RR
       }
-      noteHitch(WW) {
-        this.history.lastHitchAtMs = WW
+      noteHitch(RR) {
+        this.history.lastHitchAtMs = RR
       }
-      noteDeath(WW) {
-        this.history.lastDeathAtMs = WW
+      noteDeath(RR) {
+        this.history.lastDeathAtMs = RR
       }
-      noteError(WW) {
-        this.history.lastErrorAtMs = WW
+      noteError(RR) {
+        this.history.lastErrorAtMs = RR
       }
       getLastInputAtMs() {
         return this.history.lastInputAtMs
@@ -847,46 +847,46 @@ export const modules = {
       noteAdStarted() {
         this.history.adPlaying = !0
       }
-      noteAdFinished(WW) {
-        this.history.adPlaying = !1, this.history.lastAdFinishedAtMs = WW
+      noteAdFinished(RR) {
+        this.history.adPlaying = !1, this.history.lastAdFinishedAtMs = RR
       }
-      noteLoadStep(WW) {
-        this.lastLoadStep = WW
+      noteLoadStep(RR) {
+        this.lastLoadStep = RR
       }
       getLastLoadStep() {
         return this.lastLoadStep
       }
-      quit(WW) {
-        const iW = function(WW, iW) {
-            var OW, mW;
-            const EW = [];
-            return ui(iW.lastHitchAtMs, WW.nowMs, 15e3) && EW.push("quit_after_hitch"), ui(iW.lastDeathAtMs, WW.nowMs, 15e3) && EW.push("quit_after_death"), WW.loading ? EW.push("quit_during_load") : "page" !== WW.quitFrom || WW.inGame && !WW.menuOpen || EW.push("quit_in_menu"), ui(null !== (OW = iW.lastInputAtMs) && void 0 !== OW ? OW : 0, WW.nowMs, 6e4) || EW.push("quit_idle"), (!0 === iW.adPlaying || ui(null !== (mW = iW.lastAdFinishedAtMs) && void 0 !== mW ? mW : null, WW.nowMs, 3e4)) && EW.push("quit_after_ad"), EW
-          }(WW, this.history),
-          OW = function(WW, iW) {
-            var OW;
-            return ui(iW.lastDeathAtMs, WW, 1e4) || ui(null !== (OW = iW.lastErrorAtMs) && void 0 !== OW ? OW : null, WW, 1e4)
-          }(WW.nowMs, this.history),
-          mW = {
-            quit_from: WW.quitFrom,
-            in_game: WW.inGame,
-            quit_reasons: iW.join(","),
-            quit_reason: ni(iW),
-            rage_quit: OW,
-            ...this.flowProperties(OW)
+      quit(RR) {
+        const JR = function(RR, JR) {
+            var GR, yR;
+            const tR = [];
+            return vJ(JR.lastHitchAtMs, RR.nowMs, 15e3) && tR.push("quit_after_hitch"), vJ(JR.lastDeathAtMs, RR.nowMs, 15e3) && tR.push("quit_after_death"), RR.loading ? tR.push("quit_during_load") : "page" !== RR.quitFrom || RR.inGame && !RR.menuOpen || tR.push("quit_in_menu"), vJ(null !== (GR = JR.lastInputAtMs) && void 0 !== GR ? GR : 0, RR.nowMs, 6e4) || tR.push("quit_idle"), (!0 === JR.adPlaying || vJ(null !== (yR = JR.lastAdFinishedAtMs) && void 0 !== yR ? yR : null, RR.nowMs, 3e4)) && tR.push("quit_after_ad"), tR
+          }(RR, this.history),
+          GR = function(RR, JR) {
+            var GR;
+            return vJ(JR.lastDeathAtMs, RR, 1e4) || vJ(null !== (GR = JR.lastErrorAtMs) && void 0 !== GR ? GR : null, RR, 1e4)
+          }(RR.nowMs, this.history),
+          yR = {
+            quit_from: RR.quitFrom,
+            in_game: RR.inGame,
+            quit_reasons: JR.join(","),
+            quit_reason: bJ(JR),
+            rage_quit: GR,
+            ...this.flowProperties(GR)
           };
-        var EW;
-        iW.includes("quit_during_load") && (mW.last_load_step = null !== (EW = this.lastLoadStep) && void 0 !== EW ? EW : "none");
-        null !== WW.gameName && (mW.game_name_with_variation = WW.gameName, mW.game_name = (0, QW.Tb)(WW.gameName));
-        for (const NW of Ji) mW[NW] = iW.includes(NW);
+        var tR;
+        JR.includes("quit_during_load") && (yR.last_load_step = null !== (tR = this.lastLoadStep) && void 0 !== tR ? tR : "none");
+        null !== RR.gameName && (yR.game_name_with_variation = RR.gameName, yR.game_name = (0, hR.Sb)(RR.gameName));
+        for (const uR of pJ) yR[uR] = JR.includes(uR);
         return {
-          reasons: iW,
-          properties: mW
+          reasons: JR,
+          properties: yR
         }
       }
     }
-    class di {
-      constructor(WW) {
-        this.deps = WW, this.quitContext = new oi, this.loading = !1, this.inGame = !1, this.switching = !1, this.nextLeaveIsNotAQuit = !1, this.pendingQuit = null, this.exited = !1
+    class xJ {
+      constructor(RR) {
+        this.deps = RR, this.quitContext = new OJ, this.loading = !1, this.inGame = !1, this.switching = !1, this.nextLeaveIsNotAQuit = !1, this.pendingQuit = null, this.exited = !1
       }
       joinStarted() {
         this.loading = !0, this.nextLeaveIsNotAQuit = !1, this.inGame && (this.switching = !0), this.resolvePendingQuitAsSwitch()
@@ -897,36 +897,36 @@ export const modules = {
       gamePlayable() {
         this.loading = !1
       }
-      joinFailed(WW) {
-        this.loading = !1, this.nextLeaveIsNotAQuit = this.inGame, this.deps.capture("join_failed", WW)
+      joinFailed(RR) {
+        this.loading = !1, this.nextLeaveIsNotAQuit = this.inGame, this.deps.capture("join_failed", RR)
       }
       disconnected() {
         this.nextLeaveIsNotAQuit = !0
       }
-      kickedForAfk(WW) {
+      kickedForAfk(RR) {
         this.nextLeaveIsNotAQuit = !0, this.deps.capture("kicked_afk", {
-          game_name_with_variation: WW
+          game_name_with_variation: RR
         })
       }
-      gameLeft(WW) {
-        const iW = this.nextLeaveIsNotAQuit || this.deps.isJoinAbandoned(),
-          OW = this.switching,
-          mW = this.loading;
-        if (this.nextLeaveIsNotAQuit = !1, this.switching = !1, this.inGame = !1, null === WW) return;
-        if (OW || (this.loading = !1), iW) return void this.quitContext.forgetGame();
-        const EW = this.quitContext.quit({
+      gameLeft(RR) {
+        const JR = this.nextLeaveIsNotAQuit || this.deps.isJoinAbandoned(),
+          GR = this.switching,
+          yR = this.loading;
+        if (this.nextLeaveIsNotAQuit = !1, this.switching = !1, this.inGame = !1, null === RR) return;
+        if (GR || (this.loading = !1), JR) return void this.quitContext.forgetGame();
+        const tR = this.quitContext.quit({
           quitFrom: "game",
-          gameName: WW,
+          gameName: RR,
           nowMs: this.deps.now(),
           inGame: !0,
-          loading: mW,
+          loading: yR,
           menuOpen: !1
         });
-        this.quitContext.forgetGame(), OW ? this.captureSwitch(EW) : this.startPendingQuit(EW)
+        this.quitContext.forgetGame(), GR ? this.captureSwitch(tR) : this.startPendingQuit(tR)
       }
-      gameReplayOpened(WW) {
-        this.nextLeaveIsNotAQuit = !0, this.gameLeft(WW), this.deps.capture("game_replay_opened", {
-          from_game_name_with_variation: WW
+      gameReplayOpened(RR) {
+        this.nextLeaveIsNotAQuit = !0, this.gameLeft(RR), this.deps.capture("game_replay_opened", {
+          from_game_name_with_variation: RR
         })
       }
       playPageLeft() {
@@ -939,12 +939,12 @@ export const modules = {
           menuOpen: !1
         })))
       }
-      pageHidden(WW) {
+      pageHidden(RR) {
         if (this.exited) return;
         this.exited = !0;
-        const iW = this.pendingQuit;
-        null !== iW && (clearTimeout(iW.timer), this.pendingQuit = null, this.deps.onGameQuit(iW.quit), this.deps.captureOnExit("quit_context", iW.quit.properties, iW.atEpochMs));
-        const OW = {
+        const JR = this.pendingQuit;
+        null !== JR && (clearTimeout(JR.timer), this.pendingQuit = null, this.deps.onGameQuit(JR.quit), this.deps.captureOnExit("quit_context", JR.quit.properties, JR.atEpochMs));
+        const GR = {
             quitFrom: "page",
             gameName: null,
             nowMs: this.deps.now(),
@@ -952,115 +952,115 @@ export const modules = {
             loading: this.loading,
             menuOpen: this.deps.isMenuOpen()
           },
-          mW = this.quitContext.quit(OW);
-        this.inGame && this.deps.onGameQuit(mW), this.deps.captureOnExit("quit_context", {
-          ...WW,
-          ...mW.properties
+          yR = this.quitContext.quit(GR);
+        this.inGame && this.deps.onGameQuit(yR), this.deps.captureOnExit("quit_context", {
+          ...RR,
+          ...yR.properties
         })
       }
       pageRestored() {
         this.exited = !1, this.deps.capture("page_restored", {})
       }
-      startPendingQuit(WW) {
+      startPendingQuit(RR) {
         this.resolvePendingQuitAsSwitch();
-        const iW = {
-          quit: WW,
+        const JR = {
+          quit: RR,
           atEpochMs: Date.now(),
           timer: setTimeout((() => {
-            this.pendingQuit === iW && (this.pendingQuit = null, this.deps.onGameQuit(WW), this.deps.capture("quit_context", WW.properties, iW.atEpochMs))
+            this.pendingQuit === JR && (this.pendingQuit = null, this.deps.onGameQuit(RR), this.deps.capture("quit_context", RR.properties, JR.atEpochMs))
           }), 1e4)
         };
-        this.pendingQuit = iW
+        this.pendingQuit = JR
       }
       resolvePendingQuitAsSwitch() {
-        const WW = this.pendingQuit;
-        null !== WW && (clearTimeout(WW.timer), this.pendingQuit = null, "string" === typeof WW.quit.properties.game_name_with_variation && this.captureSwitch(WW.quit))
+        const RR = this.pendingQuit;
+        null !== RR && (clearTimeout(RR.timer), this.pendingQuit = null, "string" === typeof RR.quit.properties.game_name_with_variation && this.captureSwitch(RR.quit))
       }
-      captureSwitch(WW) {
+      captureSwitch(RR) {
         this.deps.capture("game_switched", {
-          from_game_name_with_variation: WW.properties.game_name_with_variation,
-          from_game_name: WW.properties.game_name,
-          after_death: WW.reasons.includes("quit_after_death"),
-          after_hitch: WW.reasons.includes("quit_after_hitch")
+          from_game_name_with_variation: RR.properties.game_name_with_variation,
+          from_game_name: RR.properties.game_name,
+          after_death: RR.reasons.includes("quit_after_death"),
+          after_hitch: RR.reasons.includes("quit_after_hitch")
         })
       }
     }
-    var ei = OW(7502);
-    class vi {
-      constructor(WW) {
-        this.replay = WW, this.pointerLockThrottle = new RW({
+    var NJ = GR(7640);
+    class DJ {
+      constructor(RR) {
+        this.replay = RR, this.pointerLockThrottle = new ER({
           maxPerWindow: 10,
           windowMs: 6e4
         }), this.counts = new Map, this.game = null, this.timer = null
       }
-      start(WW) {
-        WW.onUnboundKey((WW => {
-          this.onUnboundKey(WW)
-        })), WW.onPointerLock((WW => {
-          const iW = this.pointerLockThrottle.allow("pointer_lock_changed", Date.now());
-          null !== iW && this.replay.capture("pointer_lock_changed", {
-            locked: WW,
-            in_game: "inGame" === mi.d.get("gameState"),
-            menu_open: (0, ti.l)(),
-            suppressed_since_last: iW
+      start(RR) {
+        RR.onUnboundKey((RR => {
+          this.onUnboundKey(RR)
+        })), RR.onPointerLock((RR => {
+          const JR = this.pointerLockThrottle.allow("pointer_lock_changed", Date.now());
+          null !== JR && this.replay.capture("pointer_lock_changed", {
+            locked: RR,
+            in_game: "inGame" === yJ.d.get("gameState"),
+            menu_open: (0, VJ.o)(),
+            suppressed_since_last: JR
           })
-        })), Ni.l.subscribe("leaveGame", (() => {
+        })), uJ.n.subscribe("leaveGame", (() => {
           this.flush(!1)
         })), document.addEventListener("visibilitychange", (() => {
           document.hidden && this.flush(!0)
         }))
       }
-      onUnboundKey(WW) {
-        var iW, OW;
-        const mW = (0, Pi.d)().gameNameWithVariation;
-        mW !== this.game && (this.flush(!1), this.game = mW);
-        const EW = null !== (iW = (0, ei.g)(WW)) && void 0 !== iW ? iW : WW;
-        this.counts.set(EW, (null !== (OW = this.counts.get(EW)) && void 0 !== OW ? OW : 0) + 1), this.timer ??= setTimeout((() => {
+      onUnboundKey(RR) {
+        var JR, GR;
+        const yR = (0, ZJ.d)().gameNameWithVariation;
+        yR !== this.game && (this.flush(!1), this.game = yR);
+        const tR = null !== (JR = (0, NJ.i)(RR)) && void 0 !== JR ? JR : RR;
+        this.counts.set(tR, (null !== (GR = this.counts.get(tR)) && void 0 !== GR ? GR : 0) + 1), this.timer ??= setTimeout((() => {
           this.flush(!1)
         }), 1e4 - Date.now() % 1e4)
       }
-      flush(WW) {
+      flush(RR) {
         if (null !== this.timer && (clearTimeout(this.timer), this.timer = null), 0 === this.counts.size) return;
-        const iW = (OW = this.counts, [...OW].sort(((WW, iW) => iW[1] - WW[1] || (WW[0] < iW[0] ? -1 : 1))));
-        var OW;
-        let mW = 0;
-        for (const [, NW] of iW) mW += NW;
-        const EW = {
-          key_counts: Object.fromEntries(iW),
-          keys: iW.map((WW => {
-            let [iW] = WW;
-            return iW
+        const JR = (GR = this.counts, [...GR].sort(((RR, JR) => JR[1] - RR[1] || (RR[0] < JR[0] ? -1 : 1))));
+        var GR;
+        let yR = 0;
+        for (const [, uR] of JR) yR += uR;
+        const tR = {
+          key_counts: Object.fromEntries(JR),
+          keys: JR.map((RR => {
+            let [JR] = RR;
+            return JR
           })).join(","),
-          top_key: iW[0][0],
-          presses: mW,
-          game_name: null === this.game ? null : (0, QW.Tb)(this.game),
+          top_key: JR[0][0],
+          presses: yR,
+          game_name: null === this.game ? null : (0, hR.Sb)(this.game),
           game_name_with_variation: this.game
         };
-        this.replay.addUnboundKeyPresses(this.counts), this.counts.clear(), WW ? this.replay.captureOnExit("unbound_keys", EW) : this.replay.capture("unbound_keys", EW)
+        this.replay.addUnboundKeyPresses(this.counts), this.counts.clear(), RR ? this.replay.captureOnExit("unbound_keys", tR) : this.replay.capture("unbound_keys", tR)
       }
     }
-    var gi = OW(154);
+    var HJ = GR(163);
 
-    function Di(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = gi.k[WW]) || void 0 === OW ? void 0 : OW.toLowerCase()) && void 0 !== iW ? iW : String(WW)
+    function oJ(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = HJ.j[RR]) || void 0 === GR ? void 0 : GR.toLowerCase()) && void 0 !== JR ? JR : String(RR)
     }
-    class Vi {
-      constructor(WW, iW) {
-        this.replay = WW, this.quitContext = iW, this.startedAtMs = null, this.steps = new Map, this.firstGamePlayable = !1
+    class cJ {
+      constructor(RR, JR) {
+        this.replay = RR, this.quitContext = JR, this.startedAtMs = null, this.steps = new Map, this.firstGamePlayable = !1
       }
       started() {
         this.startedAtMs = Date.now()
       }
-      stepCompleted(WW) {
-        if (this.steps.has(WW)) return;
-        const iW = performance.now();
-        this.steps.set(WW, iW);
-        const OW = Di(WW);
-        this.quitContext.noteLoadStep(OW), this.firstGamePlayable || this.replay.capture("game_load_step", {
-          load_step: OW,
-          step_number: WW,
-          ms_since_page_load: Math.round(iW),
+      stepCompleted(RR) {
+        if (this.steps.has(RR)) return;
+        const JR = performance.now();
+        this.steps.set(RR, JR);
+        const GR = oJ(RR);
+        this.quitContext.noteLoadStep(GR), this.firstGamePlayable || this.replay.capture("game_load_step", {
+          load_step: GR,
+          step_number: RR,
+          ms_since_page_load: Math.round(JR),
           ms_since_load_start: null === this.startedAtMs ? null : Date.now() - this.startedAtMs
         })
       }
@@ -1071,151 +1071,151 @@ export const modules = {
         this.startedAtMs = null
       }
       playable() {
-        let WW = null,
-          iW = null;
-        for (const [mW, EW] of [...this.steps].sort(((WW, iW) => WW[1] - iW[1]))) null !== iW && (null === WW || EW - iW > WW.ms) && (WW = {
-          step: mW,
-          ms: EW - iW
-        }), iW = EW;
-        const OW = null === this.startedAtMs ? null : Date.now() - this.startedAtMs;
+        let RR = null,
+          JR = null;
+        for (const [yR, tR] of [...this.steps].sort(((RR, JR) => RR[1] - JR[1]))) null !== JR && (null === RR || tR - JR > RR.ms) && (RR = {
+          step: yR,
+          ms: tR - JR
+        }), JR = tR;
+        const GR = null === this.startedAtMs ? null : Date.now() - this.startedAtMs;
         return this.firstGamePlayable = !0, this.ended(), {
-          load_ms: OW,
-          slowest_load_step: null === WW ? null : Di(WW.step),
-          slowest_load_step_ms: null === WW ? null : Math.round(WW.ms)
+          load_ms: GR,
+          slowest_load_step: null === RR ? null : oJ(RR.step),
+          slowest_load_step_ms: null === RR ? null : Math.round(RR.ms)
         }
       }
       resetSteps() {
         this.steps.clear(), this.quitContext.noteLoadStep(null)
       }
     }
-    const fi = ["keydown", "pointerdown", "touchstart"];
-    class Ci {
-      constructor(WW) {
-        this.replay = WW, this.firstInGameInputSent = !1
+    const PJ = ["keydown", "pointerdown", "touchstart"];
+    class IJ {
+      constructor(RR) {
+        this.replay = RR, this.firstInGameInputSent = !1
       }
       startFirstInputWatch() {
         setTimeout((() => {
-          ! function(WW) {
-            var iW;
-            let OW = !1;
-            const mW = (iW, mW, EW) => {
-              OW || (OW = !0, WW(iW, mW, EW))
+          ! function(RR) {
+            var JR;
+            let GR = !1;
+            const yR = (JR, yR, tR) => {
+              GR || (GR = !0, RR(JR, yR, tR))
             };
-            if ("undefined" !== typeof PerformanceObserver && null !== (iW = PerformanceObserver.supportedEntryTypes) && void 0 !== iW && iW.includes("first-input")) {
-              const WW = new PerformanceObserver((iW => {
-                const [OW] = iW.getEntries();
-                WW.disconnect(), mW(OW.name, OW.startTime, !0)
+            if ("undefined" !== typeof PerformanceObserver && null !== (JR = PerformanceObserver.supportedEntryTypes) && void 0 !== JR && JR.includes("first-input")) {
+              const RR = new PerformanceObserver((JR => {
+                const [GR] = JR.getEntries();
+                RR.disconnect(), yR(GR.name, GR.startTime, !0)
               }));
-              return void WW.observe({
+              return void RR.observe({
                 type: "first-input",
                 buffered: !0
               })
             }
-            const EW = new AbortController,
-              NW = WW => {
-                EW.abort(), mW(WW.type, WW.timeStamp, !1)
+            const tR = new AbortController,
+              uR = RR => {
+                tR.abort(), yR(RR.type, RR.timeStamp, !1)
               };
-            for (const PW of fi) window.addEventListener(PW, NW, {
+            for (const ZR of PJ) window.addEventListener(ZR, uR, {
               capture: !0,
               passive: !0,
-              signal: EW.signal
+              signal: tR.signal
             })
-          }(((WW, iW, OW) => {
+          }(((RR, JR, GR) => {
             this.replay.capture("first_input", Object.fromEntries([
-              ["input_type", WW],
-              ["ms_since_page_load", Math.round(iW)],
-              ["buffered", OW]
+              ["input_type", RR],
+              ["ms_since_page_load", Math.round(JR)],
+              ["buffered", GR]
             ]))
           }))
         }), 100)
       }
-      onFirstInGameInput(WW, iW) {
+      onFirstInGameInput(RR, JR) {
         this.firstInGameInputSent = !0, this.replay.capture("first_ingame_input", Object.fromEntries([
-          ["input_type", WW],
-          ["ms_since_playable", Math.round(performance.now() - iW)],
+          ["input_type", RR],
+          ["ms_since_playable", Math.round(performance.now() - JR)],
           ["ms_since_page_load", Math.round(performance.now())]
         ]))
       }
       capturePageLoadTiming() {
-        const WW = performance.getEntriesByType("navigation")[0],
-          iW = performance.getEntriesByName("first-contentful-paint")[0];
+        const RR = performance.getEntriesByType("navigation")[0],
+          JR = performance.getEntriesByName("first-contentful-paint")[0];
         this.replay.capture("page_load_timing", {
-          ttfb_ms: WW ? Math.round(WW.responseStart) : null,
-          first_contentful_paint_ms: iW ? Math.round(iW.startTime) : null,
-          dom_content_loaded_ms: WW ? Math.round(WW.domContentLoadedEventEnd) : null,
-          load_ms: WW ? Math.round(WW.loadEventEnd) : null,
-          transfer_kb: WW ? Math.round(WW.transferSize / 1024) : null,
+          ttfb_ms: RR ? Math.round(RR.responseStart) : null,
+          first_contentful_paint_ms: JR ? Math.round(JR.startTime) : null,
+          dom_content_loaded_ms: RR ? Math.round(RR.domContentLoadedEventEnd) : null,
+          load_ms: RR ? Math.round(RR.loadEventEnd) : null,
+          transfer_kb: RR ? Math.round(RR.transferSize / 1024) : null,
           recording_started_ms: Math.round(performance.now())
         })
       }
     }
-    class Xi {
-      constructor(WW, iW) {
-        this.replay = WW, this.quitContext = iW, this.settings = mi.d.get("clientEscMenuOptions"), this.pendingSettings = {}, this.settingsTimer = null, this.adRequest = null, this.playingAd = null
+    class mJ {
+      constructor(RR, JR) {
+        this.replay = RR, this.quitContext = JR, this.settings = yJ.d.get("clientEscMenuOptions"), this.pendingSettings = {}, this.settingsTimer = null, this.adRequest = null, this.playingAd = null
       }
       start() {
-        Ni.l.subscribe("purchaseStarted", (WW => {
+        uJ.n.subscribe("purchaseStarted", (RR => {
           let {
-            product: iW
-          } = WW;
+            product: JR
+          } = RR;
           this.replay.setFlag("purchase_intent"), this.replay.capture("purchase_started", {
-            product: iW
+            product: JR
           })
-        })), Ni.l.subscribe("purchaseEnded", (WW => {
+        })), uJ.n.subscribe("purchaseEnded", (RR => {
           let {
-            outcome: iW
-          } = WW;
+            outcome: JR
+          } = RR;
           this.replay.capture("purchase_ended", {
-            outcome: iW
+            outcome: JR
           })
-        })), Ni.l.subscribe("adRequested", (WW => {
+        })), uJ.n.subscribe("adRequested", (RR => {
           let {
-            adKind: iW,
-            provider: OW
-          } = WW;
+            adKind: JR,
+            provider: GR
+          } = RR;
           this.adRequest = {
-            adKind: iW,
-            provider: OW,
+            adKind: JR,
+            provider: GR,
             atMs: performance.now()
           }
-        })), Ni.l.subscribe("appManagerUpdated|soundOnFromAd", (WW => {
-          WW && null !== this.playingAd ? this.onAdFinished() : WW || null !== this.playingAd || this.onAdStarted()
-        })), Ni.l.subscribe("appManagerUpdated|clientEscMenuOptions", (WW => {
-          mi.d.isApplyingDefaults ? this.settings = WW : this.onSettingsChanged(WW)
+        })), uJ.n.subscribe("appManagerUpdated|soundOnFromAd", (RR => {
+          RR && null !== this.playingAd ? this.onAdFinished() : RR || null !== this.playingAd || this.onAdStarted()
+        })), uJ.n.subscribe("appManagerUpdated|clientEscMenuOptions", (RR => {
+          yJ.d.isApplyingDefaults ? this.settings = RR : this.onSettingsChanged(RR)
         }))
       }
       onAdStarted() {
-        var WW, iW;
-        const OW = performance.now(),
-          mW = null !== this.adRequest && OW - this.adRequest.atMs < 6e4 ? this.adRequest : null;
+        var RR, JR;
+        const GR = performance.now(),
+          yR = null !== this.adRequest && GR - this.adRequest.atMs < 6e4 ? this.adRequest : null;
         this.adRequest = null, this.playingAd = {
-          ad_kind: null !== (WW = null === mW || void 0 === mW ? void 0 : mW.adKind) && void 0 !== WW ? WW : "unknown",
-          provider: null !== (iW = null === mW || void 0 === mW ? void 0 : mW.provider) && void 0 !== iW ? iW : null,
-          startedAtMs: OW
-        }, this.replay.setFlag("ad_shown"), this.quitContext.noteAdStarted(), this.replay.capture("ad_started", this.adProperties(this.playingAd, OW))
+          ad_kind: null !== (RR = null === yR || void 0 === yR ? void 0 : yR.adKind) && void 0 !== RR ? RR : "unknown",
+          provider: null !== (JR = null === yR || void 0 === yR ? void 0 : yR.provider) && void 0 !== JR ? JR : null,
+          startedAtMs: GR
+        }, this.replay.setFlag("ad_shown"), this.quitContext.noteAdStarted(), this.replay.capture("ad_started", this.adProperties(this.playingAd, GR))
       }
       onAdFinished() {
-        const WW = performance.now(),
-          iW = this.playingAd;
-        this.playingAd = null, this.quitContext.noteAdFinished(WW), this.replay.capture("ad_finished", {
-          ...this.adProperties(iW, WW),
-          ad_ms: Math.round(WW - iW.startedAtMs)
+        const RR = performance.now(),
+          JR = this.playingAd;
+        this.playingAd = null, this.quitContext.noteAdFinished(RR), this.replay.capture("ad_finished", {
+          ...this.adProperties(JR, RR),
+          ad_ms: Math.round(RR - JR.startedAtMs)
         })
       }
-      adProperties(WW, iW) {
+      adProperties(RR, JR) {
         return {
-          ad_kind: WW.ad_kind,
-          provider: WW.provider,
-          minutes_since_page_load: Math.floor(iW / 6e4),
-          in_game: "inGame" === mi.d.get("gameState")
+          ad_kind: RR.ad_kind,
+          provider: RR.provider,
+          minutes_since_page_load: Math.floor(JR / 6e4),
+          in_game: "inGame" === yJ.d.get("gameState")
         }
       }
-      onSettingsChanged(WW) {
-        Object.assign(this.pendingSettings, function(WW, iW) {
-          const OW = {};
-          for (const mW of Object.keys(iW)) WW[mW] !== iW[mW] && (OW[mW] = iW[mW]);
-          return OW
-        }(this.settings, WW)), this.settings = WW, null !== this.settingsTimer && clearTimeout(this.settingsTimer), this.settingsTimer = setTimeout((() => {
+      onSettingsChanged(RR) {
+        Object.assign(this.pendingSettings, function(RR, JR) {
+          const GR = {};
+          for (const yR of Object.keys(JR)) RR[yR] !== JR[yR] && (GR[yR] = JR[yR]);
+          return GR
+        }(this.settings, RR)), this.settings = RR, null !== this.settingsTimer && clearTimeout(this.settingsTimer), this.settingsTimer = setTimeout((() => {
           this.settingsTimer = null, Object.keys(this.pendingSettings).length > 0 && (this.replay.capture("settings_changed", {
             changed_settings: Object.keys(this.pendingSettings),
             values: this.pendingSettings
@@ -1224,257 +1224,257 @@ export const modules = {
       }
     }
 
-    function Bi(WW) {
-      switch ((0, zW.A)(WW)) {
-        case FW.b.DISCORD_GUILD:
+    function zJ(RR) {
+      switch ((0, TR.q)(RR)) {
+        case sR.e.DISCORD_GUILD:
           return "discord_guild";
-        case FW.b.DISCORD_DM:
+        case sR.e.DISCORD_DM:
           return "discord_dm";
         default:
-          return (0, zW.R)(WW) ? "public" : "private"
+          return (0, TR.E)(RR) ? "public" : "private"
       }
     }
-    class qi {
-      constructor(WW) {
-        this.replay = WW, this.framesThisTick = 0, this.lastTickMs = performance.now(), this.ticks = 0, this.gamesJoined = 0, this.pageEvents = void 0, this.flows = void 0, this.health = void 0, this.leaves = void 0, this.joinLoad = void 0, this.unsubscribeDeaths = () => {}, this.inputSinceActiveMarker = !1, this.firstMinutePlayedSent = !1, this.pageEvents = new Ci(WW), this.leaves = new di({
-          capture: (iW, OW, mW) => {
-            void 0 === mW ? WW.capture(iW, OW) : WW.captureAt(iW, OW, mW)
+    class SJ {
+      constructor(RR) {
+        this.replay = RR, this.framesThisTick = 0, this.lastTickMs = performance.now(), this.ticks = 0, this.gamesJoined = 0, this.pageEvents = void 0, this.flows = void 0, this.health = void 0, this.leaves = void 0, this.joinLoad = void 0, this.unsubscribeDeaths = () => {}, this.inputSinceActiveMarker = !1, this.firstMinutePlayedSent = !1, this.pageEvents = new IJ(RR), this.leaves = new xJ({
+          capture: (JR, GR, yR) => {
+            void 0 === yR ? RR.capture(JR, GR) : RR.captureAt(JR, GR, yR)
           },
-          captureOnExit: (iW, OW, mW) => {
-            WW.captureOnExit(iW, OW, mW)
+          captureOnExit: (JR, GR, yR) => {
+            RR.captureOnExit(JR, GR, yR)
           },
-          onGameQuit: WW => {
+          onGameQuit: RR => {
             let {
-              reasons: iW,
-              properties: OW
-            } = WW;
-            const mW = OW.game_name_with_variation;
-            Ni.l.iZ("sessionReplayGameQuit", {
-              reasons: iW,
-              gameName: "string" === typeof mW ? mW : null
+              reasons: JR,
+              properties: GR
+            } = RR;
+            const yR = GR.game_name_with_variation;
+            uJ.n.JK("sessionReplayGameQuit", {
+              reasons: JR,
+              gameName: "string" === typeof yR ? yR : null
             })
           },
-          isMenuOpen: ti.l,
-          isJoinAbandoned: wi.f,
+          isMenuOpen: VJ.o,
+          isJoinAbandoned: fJ.f,
           now: () => performance.now()
-        }), this.joinLoad = new Vi(WW, this.leaves.quitContext), this.flows = function(WW, iW) {
-          return new Ti(WW, iW, {
+        }), this.joinLoad = new cJ(RR, this.leaves.quitContext), this.flows = function(RR, JR) {
+          return new lJ(RR, JR, {
             now: () => performance.now(),
-            isTouchScreen: () => mi.d.get("isTouchScreen"),
-            getInputDevice: () => mi.d.get("activeInputDevice"),
+            isTouchScreen: () => yJ.d.get("isTouchScreen"),
+            getInputDevice: () => yJ.d.get("activeInputDevice"),
             isPointerLocked: () => null !== document.pointerLockElement,
             isPageVisible: () => !document.hidden,
-            publishStayProgress: WW => {
-              Ni.l.iZ("sessionReplayStayProgress", WW)
+            publishStayProgress: RR => {
+              uJ.n.JK("sessionReplayStayProgress", RR)
             }
           })
-        }(WW, this.leaves.quitContext), this.health = new bi(WW, this.leaves.quitContext, this.flows)
+        }(RR, this.leaves.quitContext), this.health = new aJ(RR, this.leaves.quitContext, this.flows)
       }
       start() {
-        const WW = (0, Zi.e)(),
-          iW = new vi(this.replay);
-        null !== WW && iW.start(WW), this.pageEvents.capturePageLoadTiming(), this.flows.start();
-        const OW = mi.d.get("gameState");
-        "inGame" === OW ? this.joinConnectedGame() : "loadingScreen" !== OW && "findingLobby" !== OW || this.leaves.joinStarted(), this.subscribeToGameFlow(), new Xi(this.replay, this.leaves.quitContext).start(), this.health.start(), this.trackInput(), this.pageEvents.startFirstInputWatch(), (0, Li.r)((() => {
+        const RR = (0, KJ.e)(),
+          JR = new DJ(this.replay);
+        null !== RR && JR.start(RR), this.pageEvents.capturePageLoadTiming(), this.flows.start();
+        const GR = yJ.d.get("gameState");
+        "inGame" === GR ? this.joinConnectedGame() : "loadingScreen" !== GR && "findingLobby" !== GR || this.leaves.joinStarted(), this.subscribeToGameFlow(), new mJ(this.replay, this.leaves.quitContext).start(), this.health.start(), this.trackInput(), this.pageEvents.startFirstInputWatch(), (0, qJ.D)((() => {
           this.framesThisTick++
         })), setInterval((() => {
-          this.Hk()
+          this.UW()
         }), 1e3), window.addEventListener("pagehide", (() => {
-          iW.flush(!0), this.leaves.pageHidden(this.replay.finalTags())
-        })), window.addEventListener("pageshow", (WW => {
-          WW.persisted && this.leaves.pageRestored()
+          JR.flush(!0), this.leaves.pageHidden(this.replay.finalTags())
+        })), window.addEventListener("pageshow", (RR => {
+          RR.persisted && this.leaves.pageRestored()
         }))
       }
       trackInput() {
-        const WW = WW => {
-          var iW, OW;
-          this.inputSinceActiveMarker = !0, this.leaves.quitContext.noteInput(WW.timeStamp), this.flows.input();
-          const mW = null !== (iW = null === (OW = this.flows.stay) || void 0 === OW ? void 0 : OW.playableAtMs) && void 0 !== iW ? iW : null;
-          this.pageEvents.firstInGameInputSent || null === mW || this.pageEvents.onFirstInGameInput(WW.type, mW)
+        const RR = RR => {
+          var JR, GR;
+          this.inputSinceActiveMarker = !0, this.leaves.quitContext.noteInput(RR.timeStamp), this.flows.input();
+          const yR = null !== (JR = null === (GR = this.flows.stay) || void 0 === GR ? void 0 : GR.playableAtMs) && void 0 !== JR ? JR : null;
+          this.pageEvents.firstInGameInputSent || null === yR || this.pageEvents.onFirstInGameInput(RR.type, yR)
         };
-        for (const iW of ["keydown", "pointerdown", "pointermove", "wheel"]) window.addEventListener(iW, WW, {
+        for (const JR of ["keydown", "pointerdown", "pointermove", "wheel"]) window.addEventListener(JR, RR, {
           capture: !0,
           passive: !0
         })
       }
       subscribeToGameFlow() {
-        Ni.l.subscribe("joinedGame", (WW => {
+        uJ.n.subscribe("joinedGame", (RR => {
           let {
-            gameNameWithVariation: iW,
-            lobbyName: OW
-          } = WW;
-          (0, wi.f)() || this.onJoinedGame(iW, OW)
-        })), Ni.l.subscribe("leaveGame", (() => {
-          var WW, iW;
-          const OW = null !== (WW = null === (iW = this.flows.stay) || void 0 === iW ? void 0 : iW.name) && void 0 !== WW ? WW : null;
-          this.onLeftGame(), this.leaves.gameLeft(OW)
-        })), Ni.l.subscribe("replayViewer|replayLoaded", (() => {
-          const WW = this.flows.stay;
-          null !== WW && (this.onLeftGame(), this.leaves.gameReplayOpened(WW.name))
-        })), Ni.l.subscribe("matchmakeAndPlayStepCompleted", (WW => {
+            gameNameWithVariation: JR,
+            lobbyName: GR
+          } = RR;
+          (0, fJ.f)() || this.onJoinedGame(JR, GR)
+        })), uJ.n.subscribe("leaveGame", (() => {
+          var RR, JR;
+          const GR = null !== (RR = null === (JR = this.flows.stay) || void 0 === JR ? void 0 : JR.name) && void 0 !== RR ? RR : null;
+          this.onLeftGame(), this.leaves.gameLeft(GR)
+        })), uJ.n.subscribe("replayViewer|replayLoaded", (() => {
+          const RR = this.flows.stay;
+          null !== RR && (this.onLeftGame(), this.leaves.gameReplayOpened(RR.name))
+        })), uJ.n.subscribe("matchmakeAndPlayStepCompleted", (RR => {
           let {
-            step: iW
-          } = WW;
-          this.joinLoad.stepCompleted(iW)
-        })), Ni.l.subscribe("leftPlayPage", (() => {
+            step: JR
+          } = RR;
+          this.joinLoad.stepCompleted(JR)
+        })), uJ.n.subscribe("leftPlayPage", (() => {
           this.leaves.playPageLeft(), this.joinLoad.ended()
-        })), Ni.l.subscribe("joinFailed", (WW => {
+        })), uJ.n.subscribe("joinFailed", (RR => {
           let {
-            step: iW,
-            severity: OW
-          } = WW;
+            step: JR,
+            severity: GR
+          } = RR;
           this.leaves.joinFailed({
-            step: iW,
-            severity: OW,
-            game_name_with_variation: (0, Pi.d)().requestedGameNameWithVariation,
+            step: JR,
+            severity: GR,
+            game_name_with_variation: (0, ZJ.d)().requestedGameNameWithVariation,
             last_load_step: this.leaves.quitContext.getLastLoadStep()
           }), this.joinLoad.ended()
-        })), Ni.l.subscribe("kickedForAfk", (() => {
-          var WW, iW;
-          this.leaves.kickedForAfk(null !== (WW = null === (iW = this.flows.stay) || void 0 === iW ? void 0 : iW.name) && void 0 !== WW ? WW : null)
-        })), Ni.l.subscribe("unwantedLeftGame", (WW => {
+        })), uJ.n.subscribe("kickedForAfk", (() => {
+          var RR, JR;
+          this.leaves.kickedForAfk(null !== (RR = null === (JR = this.flows.stay) || void 0 === JR ? void 0 : JR.name) && void 0 !== RR ? RR : null)
+        })), uJ.n.subscribe("unwantedLeftGame", (RR => {
           this.leaves.disconnected(), this.replay.setFlag("disconnected"), this.replay.capture("disconnected", {
-            reason: WW.reason,
-            can_reconnect: WW.canReconnect,
-            automatically_reconnect: WW.automaticallyReconnect,
-            requires_refresh: WW.requiresRefresh
+            reason: RR.reason,
+            can_reconnect: RR.canReconnect,
+            automatically_reconnect: RR.automaticallyReconnect,
+            requires_refresh: RR.requiresRefresh
           })
-        })), Ni.l.subscribe("appManagerUpdated|gameState", (WW => {
-          "loadingScreen" === WW ? this.leaves.joinStarted() : "findingLobby" === WW ? (this.leaves.joinStarted(), this.joinLoad.started(), this.replay.capture("game_loading_started", {
-            entry_source: mi.d.get("gameEntrySource")
-          }), this.flows.gameLoading()) : "inGame" === WW ? this.onPlayable() : "landingPage" === WW && (this.replay.capture("homepage_viewed"), this.replay.capture("$screen", {
+        })), uJ.n.subscribe("appManagerUpdated|gameState", (RR => {
+          "loadingScreen" === RR ? this.leaves.joinStarted() : "findingLobby" === RR ? (this.leaves.joinStarted(), this.joinLoad.started(), this.replay.capture("game_loading_started", {
+            entry_source: yJ.d.get("gameEntrySource")
+          }), this.flows.gameLoading()) : "inGame" === RR ? this.onPlayable() : "landingPage" === RR && (this.replay.capture("homepage_viewed"), this.replay.capture("$screen", {
             $screen_name: "homepage"
           }))
-        })), Ni.l.subscribe("appManagerUpdated|gameEntrySource", (WW => {
-          "autoReconnect" !== WW && "manualReconnect" !== WW || this.replay.capture("reconnect_attempted", {
-            automatic: "autoReconnect" === WW
+        })), uJ.n.subscribe("appManagerUpdated|gameEntrySource", (RR => {
+          "autoReconnect" !== RR && "manualReconnect" !== RR || this.replay.capture("reconnect_attempted", {
+            automatic: "autoReconnect" === RR
           })
-        })), Ni.l.subscribe("sessionReplayPlayerKill", (WW => {
+        })), uJ.n.subscribe("sessionReplayPlayerKill", (RR => {
           let {
-            killstreak: iW
-          } = WW;
+            killstreak: JR
+          } = RR;
           this.replay.capture("player_kill", {
-            killstreak: iW
+            killstreak: JR
           })
         }))
       }
       onPlayable() {
-        (0, wi.f)() || (0, Pi.f)() || (null === this.flows.stay && this.joinConnectedGame(), this.replay.capture("game_playable", {
+        (0, fJ.f)() || (0, ZJ.g)() || (null === this.flows.stay && this.joinConnectedGame(), this.replay.capture("game_playable", {
           ms_since_page_load: Math.round(performance.now()),
           ...this.joinLoad.playable()
         }), this.leaves.gamePlayable(), this.flows.gamePlayable())
       }
       joinConnectedGame() {
-        if ((0, Pi.f)()) return;
+        if ((0, ZJ.g)()) return;
         const {
-          gameNameWithVariation: WW,
-          lobbyName: iW
-        } = (0, Pi.d)();
-        null !== WW && null !== iW ? this.onJoinedGame(WW, iW) : console.warn("Session replay found a game playable with no game joined; not labelling it")
+          gameNameWithVariation: RR,
+          lobbyName: JR
+        } = (0, ZJ.d)();
+        null !== RR && null !== JR ? this.onJoinedGame(RR, JR) : console.warn("Session replay found a game playable with no game joined; not labelling it")
       }
-      onJoinedGame(WW, iW) {
+      onJoinedGame(RR, JR) {
         this.replay.takeFullSnapshot();
-        const OW = (0, zW.R)(iW),
-          mW = mi.d.get("gameEntrySource");
-        this.gamesJoined++, this.leaves.gameJoined(), this.flows.gameJoined(this.gamesJoined, WW, "autoReconnect" === mW || "manualReconnect" === mW), "inGame" === mi.d.get("gameState") && this.flows.gamePlayable();
-        const EW = ci.clientSidePartyStateManager.getPartyInformation(),
-          NW = {
-            game_name: (0, QW.Tb)(WW),
-            game_name_with_variation: WW,
+        const GR = (0, TR.E)(JR),
+          yR = yJ.d.get("gameEntrySource");
+        this.gamesJoined++, this.leaves.gameJoined(), this.flows.gameJoined(this.gamesJoined, RR, "autoReconnect" === yR || "manualReconnect" === yR), "inGame" === yJ.d.get("gameState") && this.flows.gamePlayable();
+        const tR = iJ.clientSidePartyStateManager.getPartyInformation(),
+          uR = {
+            game_name: (0, hR.Sb)(RR),
+            game_name_with_variation: RR,
             game_number: this.gamesJoined,
-            game_analytics_id: (0, Wi.e)(WW, OW),
-            is_custom_game: (0, ii.i)(WW),
-            lobby_type: Bi(iW),
-            in_party: null !== EW,
-            party_size: null === EW ? 0 : EW.memberSocialPreviews.length + 1
+            game_analytics_id: (0, RJ.e)(RR, GR),
+            is_custom_game: (0, JJ.n)(RR),
+            lobby_type: zJ(JR),
+            in_party: null !== tR,
+            party_size: null === tR ? 0 : tR.memberSocialPreviews.length + 1
           };
-        this.replay.gameJoined(WW, NW), this.replay.capture("game_joined", {
-          ...NW,
-          entry_source: mW
+        this.replay.gameJoined(RR, uR), this.replay.capture("game_joined", {
+          ...uR,
+          entry_source: yR
         }), this.replay.capture("$screen", {
-          $screen_name: NW.is_custom_game ? `custom: ${NW.game_analytics_id}` : NW.game_name
-        }), this.subscribeToDeaths(WW)
+          $screen_name: uR.is_custom_game ? `custom: ${uR.game_analytics_id}` : uR.game_name
+        }), this.subscribeToDeaths(RR)
       }
       onLeftGame() {
         this.joinLoad.forgetStart();
-        const WW = this.flows.stay;
-        null !== WW && (this.replay.capture("game_left", {
-          game_name_with_variation: WW.name,
-          duration_ms: Date.now() - WW.joinedAtMs
+        const RR = this.flows.stay;
+        null !== RR && (this.replay.capture("game_left", {
+          game_name_with_variation: RR.name,
+          duration_ms: Date.now() - RR.joinedAtMs
         }), this.flows.gameLeft(), this.replay.gameLeft(), this.unsubscribeDeaths(), this.unsubscribeDeaths = () => {})
       }
-      subscribeToDeaths(WW) {
+      subscribeToDeaths(RR) {
         this.unsubscribeDeaths();
-        let iW = !0;
-        this.unsubscribeDeaths = Ei.gameBridge.subscribe("localPlayerAliveSet", (OW => {
-          const EW = iW && !OW;
-          if (iW = OW, EW) {
+        let JR = !0;
+        this.unsubscribeDeaths = tJ.gameBridge.subscribe("localPlayerAliveSet", (GR => {
+          const tR = JR && !GR;
+          if (JR = GR, tR) {
             this.leaves.quitContext.noteDeath(performance.now());
-            const [iW, OW, EW] = Ei.gameBridge.lookup("localPos", null), NW = {
-              x: Math.round(iW),
-              y: Math.round(OW),
-              z: Math.round(EW)
-            }, PW = this.flows.stay, LW = null === PW ? {} : {
-              death_number: ++PW.deaths,
-              seconds_since_join: Math.round((Date.now() - PW.joinedAtMs) / 1e3)
+            const [JR, GR, tR] = tJ.gameBridge.lookup("localPos", null), uR = {
+              x: Math.round(JR),
+              y: Math.round(GR),
+              z: Math.round(tR)
+            }, ZR = this.flows.stay, qR = null === ZR ? {} : {
+              death_number: ++ZR.deaths,
+              seconds_since_join: Math.round((Date.now() - ZR.joinedAtMs) / 1e3)
             };
             this.replay.capture("player_died", {
-              ...NW,
-              game_name_with_variation: WW,
-              ...LW
-            }), this.replay.addReplayMarker(mW.l.death, NW)
+              ...uR,
+              game_name_with_variation: RR,
+              ...qR
+            }), this.replay.addReplayMarker(yR.l.death, uR)
           }
         }))
       }
-      Hk() {
+      UW() {
         this.health.attachToRender();
-        const WW = performance.now(),
-          iW = WW - this.lastTickMs,
-          OW = iW <= 5e3,
-          EW = this.flows.stay;
-        if (null !== EW && null !== EW.playableAtMs && !document.hidden && OW && EW.visiblePlayedMs < 6e4 && (EW.visiblePlayedMs += iW, EW.visiblePlayedMs >= 6e4)) {
-          const iW = Math.round(WW);
+        const RR = performance.now(),
+          JR = RR - this.lastTickMs,
+          GR = JR <= 5e3,
+          tR = this.flows.stay;
+        if (null !== tR && null !== tR.playableAtMs && !document.hidden && GR && tR.visiblePlayedMs < 6e4 && (tR.visiblePlayedMs += JR, tR.visiblePlayedMs >= 6e4)) {
+          const JR = Math.round(RR);
           this.replay.capture("game_played_60s", {
-            game_name_with_variation: EW.name,
-            ms_since_page_load: iW,
+            game_name_with_variation: tR.name,
+            ms_since_page_load: JR,
             ...this.firstMinutePlayedSent ? {} : {
-              ttff_ms: iW
+              ttff_ms: JR
             }
           }), this.firstMinutePlayedSent = !0, this.flows.played60s()
         }
-        this.flows.hZ();
-        const NW = null !== this.flows.stay && !document.hidden;
-        this.replay.addFpsSample(NW && OW && this.framesThisTick > 0 ? 1e3 * this.framesThisTick / iW : null);
-        const PW = NW ? Oi.b.getLastColyseusPingMs() : null;
-        null !== PW && this.replay.addPingSample(PW), this.framesThisTick = 0, this.lastTickMs = WW, this.ticks++, this.ticks % 2 === 0 && (NW && this.inputSinceActiveMarker && this.replay.addReplayMarker(mW.l.active), this.inputSinceActiveMarker = !1), this.replay.markClockIfDue(this.ticks, 30)
+        this.flows.gK();
+        const uR = null !== this.flows.stay && !document.hidden;
+        this.replay.addFpsSample(uR && GR && this.framesThisTick > 0 ? 1e3 * this.framesThisTick / JR : null);
+        const ZR = uR ? GJ.c.getLastColyseusPingMs() : null;
+        null !== ZR && this.replay.addPingSample(ZR), this.framesThisTick = 0, this.lastTickMs = RR, this.ticks++, this.ticks % 2 === 0 && (uR && this.inputSinceActiveMarker && this.replay.addReplayMarker(yR.l.active), this.inputSinceActiveMarker = !1), this.replay.markClockIfDue(this.ticks, 30)
       }
     }
-    var Ri = OW(1194),
-      Gi = OW(1185),
-      Ii = OW(41035);
+    var jJ = GR(1295),
+      dJ = GR(1282),
+      EJ = GR(41038);
 
-    function ai(WW) {
-      return WW.length + 64
+    function YJ(RR) {
+      return RR.length + 64
     }
-    async function ri() {
+    async function kJ() {
       return new Response("{}")
     }
 
-    function zi(WW, iW, OW) {
-      return Ii.f.fetch(WW, {
+    function QJ(RR, JR, GR) {
+      return EJ.i.fetch(RR, {
         method: "POST",
         headers: {
           "Content-Type": "text/plain"
         },
-        body: iW,
-        signal: (0, Ri.t)(3e4)
-      }, OW)
+        body: JR,
+        signal: (0, jJ.t)(3e4)
+      }, GR)
     }
-    class Fi {
-      constructor(WW) {
-        var iW, OW, mW;
-        let EW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.uploadToken = WW, this.url = void 0, this.post = void 0, this.isHidden = void 0, this.queue = [], this.retries = [], this.refusedTokens = new Set, this.overflowWarned = !1, this.unloading = !1, this.sendScheduled = !1, this.url = null !== (iW = EW.url) && void 0 !== iW ? iW : `${Gi.clientSideServerUrls.indexUrl}/index/replay/timeline`, this.post = null !== (OW = EW.post) && void 0 !== OW ? OW : zi, this.isHidden = null !== (mW = EW.isHidden) && void 0 !== mW ? mW : () => "hidden" === document.visibilityState
+    class FJ {
+      constructor(RR) {
+        var JR, GR, yR;
+        let tR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.uploadToken = RR, this.url = void 0, this.post = void 0, this.isHidden = void 0, this.queue = [], this.retries = [], this.refusedTokens = new Set, this.overflowWarned = !1, this.unloading = !1, this.sendScheduled = !1, this.url = null !== (JR = tR.url) && void 0 !== JR ? JR : `${dJ.clientSideServerUrls.indexUrl}/index/replay/timeline`, this.post = null !== (GR = tR.post) && void 0 !== GR ? GR : QJ, this.isHidden = null !== (yR = tR.isHidden) && void 0 !== yR ? yR : () => "hidden" === document.visibilityState
       }
       start() {
         setInterval((() => {
@@ -1487,30 +1487,30 @@ export const modules = {
           this.unloading = !1
         }))
       }
-      add(WW) {
+      add(RR) {
         if (this.refusedTokens.has(this.uploadToken)) return;
-        const iW = function(WW) {
-            const iW = {
-              ...WW.properties
+        const JR = function(RR) {
+            const JR = {
+              ...RR.properties
             };
-            return void 0 !== WW.$set && (iW.$set = {
-              ...WW.properties.$set,
-              ...WW.$set
-            }), void 0 !== WW.$set_once && (iW.$set_once = {
-              ...WW.$set_once,
-              ...WW.properties.$set_once
-            }), void 0 !== WW.$unset && (iW.$unset = WW.$unset), {
-              uuid: WW.uuid,
-              event: WW.event,
-              timestampMs: WW.timestamp.getTime(),
-              properties: JSON.stringify(iW)
+            return void 0 !== RR.$set && (JR.$set = {
+              ...RR.properties.$set,
+              ...RR.$set
+            }), void 0 !== RR.$set_once && (JR.$set_once = {
+              ...RR.$set_once,
+              ...RR.properties.$set_once
+            }), void 0 !== RR.$unset && (JR.$unset = RR.$unset), {
+              uuid: RR.uuid,
+              event: RR.event,
+              timestampMs: RR.timestamp.getTime(),
+              properties: JSON.stringify(JR)
             }
-          }(WW),
-          OW = (0, Ii.i)(JSON.stringify(iW));
-        iW.properties.length > 32768 || iW.event.length > 64 || ai(this.uploadToken) + OW > 102400 ? console.warn(`Session replay timeline event ${iW.event.slice(0,64)} is too large for index-server; dropped.`) : (this.queue.push({
+          }(RR),
+          GR = (0, EJ.j)(JSON.stringify(JR));
+        JR.properties.length > 32768 || JR.event.length > 64 || YJ(this.uploadToken) + GR > 102400 ? console.warn(`Session replay timeline event ${JR.event.slice(0,64)} is too large for index-server; dropped.`) : (this.queue.push({
           uploadToken: this.uploadToken,
-          event: iW,
-          bytes: OW,
+          event: JR,
+          bytes: GR,
           attempts: 0
         }), this.trimToCap(), this.queue.length >= 50 ? this.sendQueued() : (this.unloading || this.isHidden()) && this.sendSoon())
       }
@@ -1520,73 +1520,73 @@ export const modules = {
         })))
       }
       flush() {
-        this.retries.length > 0 && (this.queue = [...this.retries, ...this.queue].sort(((WW, iW) => WW.event.timestampMs - iW.event.timestampMs)), this.retries = []), this.sendQueued()
+        this.retries.length > 0 && (this.queue = [...this.retries, ...this.queue].sort(((RR, JR) => RR.event.timestampMs - JR.event.timestampMs)), this.retries = []), this.sendQueued()
       }
       sendQueued() {
         for (; this.queue.length > 0;) {
-          const WW = this.takeBatch();
-          this.refusedTokens.has(WW.uploadToken) || this.send(WW)
+          const RR = this.takeBatch();
+          this.refusedTokens.has(RR.uploadToken) || this.send(RR)
         }
       }
       trimToCap() {
-        let WW = this.retries.length + this.queue.length - 1e3;
-        if (WW <= 0) return void(this.overflowWarned = !1);
-        const iW = Math.min(WW, this.retries.length);
-        this.retries.splice(0, iW), WW -= iW, this.queue.splice(0, WW), this.overflowWarned || (this.overflowWarned = !0, console.warn("Session replay timeline queue is full; dropping its oldest events until it drains."))
+        let RR = this.retries.length + this.queue.length - 1e3;
+        if (RR <= 0) return void(this.overflowWarned = !1);
+        const JR = Math.min(RR, this.retries.length);
+        this.retries.splice(0, JR), RR -= JR, this.queue.splice(0, RR), this.overflowWarned || (this.overflowWarned = !0, console.warn("Session replay timeline queue is full; dropping its oldest events until it drains."))
       }
       takeBatch() {
-        const WW = this.queue.shift(),
-          iW = [WW];
-        let OW = ai(WW.uploadToken) + WW.bytes;
-        for (; this.queue.length > 0 && iW.length < 100 && this.queue[0].uploadToken === WW.uploadToken && OW + this.queue[0].bytes <= 32768;) {
-          const WW = this.queue.shift();
-          iW.push(WW), OW += WW.bytes
+        const RR = this.queue.shift(),
+          JR = [RR];
+        let GR = YJ(RR.uploadToken) + RR.bytes;
+        for (; this.queue.length > 0 && JR.length < 100 && this.queue[0].uploadToken === RR.uploadToken && GR + this.queue[0].bytes <= 32768;) {
+          const RR = this.queue.shift();
+          JR.push(RR), GR += RR.bytes
         }
         return {
-          uploadToken: WW.uploadToken,
-          events: iW
+          uploadToken: RR.uploadToken,
+          events: JR
         }
       }
-      async send(WW) {
-        const iW = await this.sendOnce(WW);
-        if ("refused" === iW && this.refusedTokens.add(WW.uploadToken), "retryLater" !== iW) return;
-        const OW = WW.events.filter((WW => ++WW.attempts < 3));
-        OW.length < WW.events.length && console.error(`Session replay timeline: dropped ${WW.events.length-OW.length} events after 3 attempts.`), this.retries.push(...OW), this.trimToCap()
+      async send(RR) {
+        const JR = await this.sendOnce(RR);
+        if ("refused" === JR && this.refusedTokens.add(RR.uploadToken), "retryLater" !== JR) return;
+        const GR = RR.events.filter((RR => ++RR.attempts < 3));
+        GR.length < RR.events.length && console.error(`Session replay timeline: dropped ${RR.events.length-GR.length} events after 3 attempts.`), this.retries.push(...GR), this.trimToCap()
       }
-      async sendOnce(WW) {
-        const iW = {
-            uploadToken: WW.uploadToken,
+      async sendOnce(RR) {
+        const JR = {
+            uploadToken: RR.uploadToken,
             sentAtMs: Date.now(),
-            events: WW.events.map((WW => WW.event))
+            events: RR.events.map((RR => RR.event))
           },
-          OW = JSON.stringify(iW);
-        let mW, EW = null;
+          GR = JSON.stringify(JR);
+        let yR, tR = null;
         try {
-          mW = await this.post(this.url, OW, (0, Ii.i)(OW)), mW.ok && (EW = await mW.json())
-        } catch (NW) {
-          return console.warn("Session replay timeline upload failed.", NW), "retryLater"
+          yR = await this.post(this.url, GR, (0, EJ.j)(GR)), yR.ok && (tR = await yR.json())
+        } catch (uR) {
+          return console.warn("Session replay timeline upload failed.", uR), "retryLater"
         }
-        return null === EW ? 408 === mW.status || 429 === mW.status || mW.status >= 500 ? "retryLater" : (console.error(`Session replay timeline upload failed with ${mW.status}; dropped ${WW.events.length} events.`), "dropped") : "rejected" in EW ? EW.retryable ? "retryLater" : (console.warn(`Session replay timeline refused: ${EW.reason}; dropping this recording's events.`), "refused") : "sent"
+        return null === tR ? 408 === yR.status || 429 === yR.status || yR.status >= 500 ? "retryLater" : (console.error(`Session replay timeline upload failed with ${yR.status}; dropped ${RR.events.length} events.`), "dropped") : "rejected" in tR ? tR.retryable ? "retryLater" : (console.warn(`Session replay timeline refused: ${tR.reason}; dropping this recording's events.`), "refused") : "sent"
       }
     }
-    var Qi = OW(41052),
-      WO = OW(5386),
-      iO = OW(1303);
-    class OO {
-      constructor(WW) {
-        var iW;
-        this.tags = new rW, this.fpsMonitor = void 0, this.errorLogLink = void 0, this.lastTagsJson = "", this.clockMarked = !1, this.personUpdateTimer = null, this.expectedSessionId = "", this.recorderPatched = !1, this.gameContextKeys = [], this.firstGameJoined = !1, this.timeline = void 0, this.onDomBatch = void 0;
+    var TJ = GR(41049),
+      sJ = GR(5492),
+      hJ = GR(1406);
+    class RG {
+      constructor(RR) {
+        var JR;
+        this.tags = new FR, this.fpsMonitor = void 0, this.errorLogLink = void 0, this.lastTagsJson = "", this.clockMarked = !1, this.personUpdateTimer = null, this.expectedSessionId = "", this.recorderPatched = !1, this.gameContextKeys = [], this.firstGameJoined = !1, this.timeline = void 0, this.onDomBatch = void 0;
         const {
-          recording: OW
-        } = WW;
-        this.onDomBatch = WW.onDomBatch;
-        const PW = null !== WW.onDomBatch;
-        PW && this.patchRecorder(), this.timeline = new Fi(OW.uploadToken, WW.dryRun ? {
-            post: ri
+          recording: GR
+        } = RR;
+        this.onDomBatch = RR.onDomBatch;
+        const ZR = null !== RR.onDomBatch;
+        ZR && this.patchRecorder(), this.timeline = new FJ(GR.uploadToken, RR.dryRun ? {
+            post: kJ
           } : {}), this.timeline.start(),
-          function(WW) {
-            const iW = {
-                supportedCompression: [EW.c.GZipJS],
+          function(RR) {
+            const JR = {
+                supportedCompression: [tR.c.GZipJS],
                 hasFeatureFlags: !1,
                 sessionRecording: {
                   endpoint: "/s/"
@@ -1596,288 +1596,288 @@ export const modules = {
                 toolbarVersion: "toolbar",
                 isAuthenticated: !1
               },
-              OW = window;
-            OW._POSTHOG_REMOTE_CONFIG = {
-              ...OW._POSTHOG_REMOTE_CONFIG,
-              [WW]: {
-                config: iW
+              GR = window;
+            GR._POSTHOG_REMOTE_CONFIG = {
+              ...GR._POSTHOG_REMOTE_CONFIG,
+              [RR]: {
+                config: JR
               }
             }
-          }(WW.posthog.projectApiKey), EW.g.init(WW.posthog.projectApiKey, DW({
-            apiHost: WW.posthog.apiHost,
-            recordingId: OW.recordingId,
-            recordDom: PW,
-            ownOrigins: [window.location.origin, new URL(Gi.clientSideServerUrls.s3Url, window.location.href).origin],
-            anonymised: OW.anonymised,
-            showsChat: (0, mW.s)(OW),
-            allowAutomatedBrowsers: (0, WO.d)((0, WO.g)(), !1),
-            onTimelineEvent: WW => {
-              this.timeline.add(WW), "$pageview" === WW.event && WW.properties.$current_url && this.addReplayMarker("$pageview", {
-                href: WW.properties.$current_url
+          }(RR.posthog.projectApiKey), tR.f.init(RR.posthog.projectApiKey, cR({
+            apiHost: RR.posthog.apiHost,
+            recordingId: GR.recordingId,
+            recordDom: ZR,
+            ownOrigins: [window.location.origin, new URL(dJ.clientSideServerUrls.s3Url, window.location.href).origin],
+            anonymised: GR.anonymised,
+            showsChat: (0, yR.y)(GR),
+            allowAutomatedBrowsers: (0, sJ.c)((0, sJ.i)(), !1),
+            onTimelineEvent: RR => {
+              this.timeline.add(RR), "$pageview" === RR.event && RR.properties.$current_url && this.addReplayMarker("$pageview", {
+                href: RR.properties.$current_url
               })
             },
-            onDomBatch: WW => {
-              this.takeDomBatch(WW)
+            onDomBatch: RR => {
+              this.takeDomBatch(RR)
             }
-          })), PW && EW.g.startSessionRecording({
+          })), ZR && tR.f.startSessionRecording({
             sampling: !0
-          }), this.expectedSessionId = OW.recordingId, EW.g.onSessionId((WW => {
-            WW !== this.expectedSessionId && console.warn(`Session replay: PostHog session ${WW} differs from recording ${this.expectedSessionId}; events carry recording_id.`)
+          }), this.expectedSessionId = GR.recordingId, tR.f.onSessionId((RR => {
+            RR !== this.expectedSessionId && console.warn(`Session replay: PostHog session ${RR} differs from recording ${this.expectedSessionId}; events carry recording_id.`)
           })),
-          function(WW, iW) {
+          function(RR, JR) {
             const {
-              recording: OW
-            } = WW, mW = {
-              ...OW.tags,
-              site_used: fW.siteUsed,
-              subsite_used: null !== fW.subsiteUsed && void 0 !== fW.subsiteUsed ? fW.subsiteUsed : "",
-              is_iframed: fW.isIframed,
+              recording: GR
+            } = RR, yR = {
+              ...GR.tags,
+              site_used: mR.siteUsed,
+              subsite_used: null !== mR.subsiteUsed && void 0 !== mR.subsiteUsed ? mR.subsiteUsed : "",
+              is_iframed: mR.isIframed,
               entry_path: location.pathname,
-              ...CW(),
-              ...BW(OW, iW),
-              client_build: pW.d
+              ...zR(),
+              ...jR(GR, JR),
+              client_build: IR.d
             };
-            EW.g.register(mW), null !== WW.videoStatus && EW.g.register({
-              replay_video_status: WW.videoStatus
-            }), EW.g.setPersonProperties(mW, {
-              ...qW("initial_", mW),
-              ...XW(OW)
+            tR.f.register(yR), null !== RR.videoStatus && tR.f.register({
+              replay_video_status: RR.videoStatus
+            }), tR.f.setPersonProperties(yR, {
+              ...dR("initial_", yR),
+              ...SR(GR)
             })
-          }(WW, PW), this.fpsMonitor = new NW.b({
-            onEpisodeStarted: WW => {
+          }(RR, ZR), this.fpsMonitor = new uR.b({
+            onEpisodeStarted: RR => {
               this.capture("low_fps_started", {
-                avg_fps: Math.round(WW)
-              }), Ni.l.iZ("sessionReplayLowFps", {
+                avg_fps: Math.round(RR)
+              }), uJ.n.JK("sessionReplayLowFps", {
                 low: !0
               })
             },
-            onEpisodeEnded: WW => {
+            onEpisodeEnded: RR => {
               this.capture("low_fps_episode", {
-                duration_ms: WW.durationMs,
-                min_fps: WW.minFps,
-                avg_fps: WW.avgFps
-              }), Ni.l.iZ("sessionReplayLowFps", {
+                duration_ms: RR.durationMs,
+                min_fps: RR.minFps,
+                avg_fps: RR.avgFps
+              }), uJ.n.JK("sessionReplayLowFps", {
                 low: !1
               })
             }
-          }), this.errorLogLink = new IW({
-            dashboardHost: null !== (iW = WW.posthog.dashboardHost) && void 0 !== iW ? iW : WW.posthog.apiHost,
-            recordingId: OW.recordingId,
-            getSessionId: () => EW.g.get_session_id(),
-            domRecorded: PW,
-            captureError: (WW, iW) => {
-              this.captureClientError("logged", WW, iW)
+          }), this.errorLogLink = new kR({
+            dashboardHost: null !== (JR = RR.posthog.dashboardHost) && void 0 !== JR ? JR : RR.posthog.apiHost,
+            recordingId: GR.recordingId,
+            getSessionId: () => tR.f.get_session_id(),
+            domRecorded: ZR,
+            captureError: (RR, JR) => {
+              this.captureClientError("logged", RR, JR)
             }
-          }), (0, iO.annotateLoggedErrors)(((WW, iW) => this.errorLogLink.annotate(WW, iW))), new qi(this).start()
+          }), (0, hJ.annotateLoggedErrors)(((RR, JR) => this.errorLogLink.annotate(RR, JR))), new SJ(this).start()
       }
-      capture(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        EW.g.capture(WW, iW)
+      capture(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        tR.f.capture(RR, JR)
       }
-      captureAt(WW, iW, OW) {
-        EW.g.capture(WW, iW, {
-          timestamp: new Date(OW)
+      captureAt(RR, JR, GR) {
+        tR.f.capture(RR, JR, {
+          timestamp: new Date(GR)
         })
       }
-      captureOnExit(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-        EW.g.capture(WW, iW, {
-          timestamp: new Date(OW)
+      captureOnExit(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
+        tR.f.capture(RR, JR, {
+          timestamp: new Date(GR)
         })
       }
-      captureClientError(WW, iW, OW) {
+      captureClientError(RR, JR, GR) {
         this.setFlag("had_error"), this.capture("client_error", {
-          kind: WW,
-          message: kW(iW).slice(0, 300),
+          kind: RR,
+          message: UR(JR).slice(0, 300),
           source: null,
           error_name: null,
-          ...OW
+          ...GR
         })
       }
       takeFullSnapshot() {
         if (this.tryFullSnapshot()) return;
-        const WW = performance.now() + 1500,
-          iW = setInterval((() => {
-            (this.tryFullSnapshot() || performance.now() >= WW) && clearInterval(iW)
+        const RR = performance.now() + 1500,
+          JR = setInterval((() => {
+            (this.tryFullSnapshot() || performance.now() >= RR) && clearInterval(JR)
           }), 100)
       }
-      setVideoStatus(WW, iW) {
-        EW.g.register({
-          replay_video_status: WW
+      setVideoStatus(RR, JR) {
+        tR.f.register({
+          replay_video_status: RR
         });
-        const OW = "stopped_cellular" === WW ? "cellular" : "stopped_error" === WW ? "error" : null;
-        null !== OW && (this.capture("replay_video_stopped", {
-          reason: OW,
-          detail: null === iW ? null : kW(iW).slice(0, 300)
+        const GR = "stopped_cellular" === RR ? "cellular" : "stopped_error" === RR ? "error" : null;
+        null !== GR && (this.capture("replay_video_stopped", {
+          reason: GR,
+          detail: null === JR ? null : UR(JR).slice(0, 300)
         }), this.addReplayMarker("replay_video_stopped", {
-          reason: OW
+          reason: GR
         }))
       }
       stopDomRecording() {
-        EW.g.stopSessionRecording(), EW.g.register({
+        tR.f.stopSessionRecording(), tR.f.register({
           dom_recorded: !1
         })
       }
       optOut() {
-        this.stopDomRecording(), EW.g.set_config({
+        this.stopDomRecording(), tR.f.set_config({
           before_send: () => null
         })
       }
-      takeDomBatch(WW) {
-        null !== this.onDomBatch ? this.onDomBatch(WW) : console.warn("Session replay: posthog-js recorded the page of an events-only recording; dropped it")
+      takeDomBatch(RR) {
+        null !== this.onDomBatch ? this.onDomBatch(RR) : console.warn("Session replay: posthog-js recorded the page of an events-only recording; dropped it")
       }
       tryFullSnapshot() {
-        var WW;
-        return !(null === (WW = EW.g.sessionRecording) || void 0 === WW || !WW.started) && (VW().rrweb.record.takeFullSnapshot(), !0)
+        var RR;
+        return !(null === (RR = tR.f.sessionRecording) || void 0 === RR || !RR.started) && (PR().rrweb.record.takeFullSnapshot(), !0)
       }
       patchRecorder() {
         this.recorderPatched || (this.recorderPatched = !0, function() {
-          const WW = VW().rrwebPlugins,
-            iW = WW.getRecordConsolePlugin;
-          WW.getRecordConsolePlugin = () => iW({
+          const RR = PR().rrwebPlugins,
+            JR = RR.getRecordConsolePlugin;
+          RR.getRecordConsolePlugin = () => JR({
             level: ["warn", "error", "assert"]
           })
         }(), this.markClockOnFullSnapshots())
       }
       markClockOnFullSnapshots() {
-        const WW = VW().rrweb.record,
-          iW = WW.takeFullSnapshot;
-        WW.takeFullSnapshot = WW => {
-          iW(WW), this.markClock()
+        const RR = PR().rrweb.record,
+          JR = RR.takeFullSnapshot;
+        RR.takeFullSnapshot = RR => {
+          JR(RR), this.markClock()
         }
       }
       markClock() {
-        this.clockMarked = this.addReplayMarker(mW.l.clock, {
-          epochMs: (0, Qi.e)(),
+        this.clockMarked = this.addReplayMarker(yR.l.clock, {
+          epochMs: (0, TJ.c)(),
           perfNowMs: performance.now()
         }) || this.clockMarked
       }
-      markClockIfDue(WW, iW) {
-        this.clockMarked && WW % iW !== 0 || this.markClock()
+      markClockIfDue(RR, JR) {
+        this.clockMarked && RR % JR !== 0 || this.markClock()
       }
-      addReplayMarker(WW) {
-        var iW, OW;
-        let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return (!(arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) || EW.g.sessionRecordingStarted()) && null !== (iW = null === (OW = EW.g.sessionRecording) || void 0 === OW ? void 0 : OW.tryAddCustomEvent(WW, mW)) && void 0 !== iW && iW
+      addReplayMarker(RR) {
+        var JR, GR;
+        let yR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return (!(arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) || tR.f.sessionRecordingStarted()) && null !== (JR = null === (GR = tR.f.sessionRecording) || void 0 === GR ? void 0 : GR.tryAddCustomEvent(RR, yR)) && void 0 !== JR && JR
       }
-      gameJoined(WW, iW) {
-        this.unregisterGameContext(), this.gameContextKeys = Object.keys(iW), EW.g.register(iW), this.firstGameJoined || (this.firstGameJoined = !0, EW.g.setPersonProperties(void 0, {
-          first_game_ever: iW.game_name,
-          first_game_ever_with_variation: iW.game_name_with_variation,
-          first_game_ever_analytics_id: iW.game_analytics_id
-        })), this.tags.gameJoined(WW, Date.now()), this.updateTags()
+      gameJoined(RR, JR) {
+        this.unregisterGameContext(), this.gameContextKeys = Object.keys(JR), tR.f.register(JR), this.firstGameJoined || (this.firstGameJoined = !0, tR.f.setPersonProperties(void 0, {
+          first_game_ever: JR.game_name,
+          first_game_ever_with_variation: JR.game_name_with_variation,
+          first_game_ever_analytics_id: JR.game_analytics_id
+        })), this.tags.gameJoined(RR, Date.now()), this.updateTags()
       }
       gameLeft() {
         this.unregisterGameContext(), this.tags.gameLeft(Date.now()), this.fpsMonitor.endEpisode(Date.now()), this.updateTags()
       }
-      setFlag(WW) {
-        this.tags.setFlag(WW) && this.updateTags()
+      setFlag(RR) {
+        this.tags.setFlag(RR) && this.updateTags()
       }
-      addHitch(WW) {
-        this.tags.addHitch(WW) && this.updateTags()
+      addHitch(RR) {
+        this.tags.addHitch(RR) && this.updateTags()
       }
-      setSessionProperties(WW) {
-        let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        EW.g.register(WW), iW && EW.g.setPersonProperties(WW)
+      setSessionProperties(RR) {
+        let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        tR.f.register(RR), JR && tR.f.setPersonProperties(RR)
       }
-      addPingSample(WW) {
-        this.tags.addPingSample(WW) && this.updateTags()
+      addPingSample(RR) {
+        this.tags.addPingSample(RR) && this.updateTags()
       }
-      addFpsSample(WW) {
-        this.fpsMonitor.addSample(WW, Date.now());
-        const iW = this.fpsMonitor.getTags();
-        null !== iW && (this.tags.setFpsTags(iW), this.updateTags())
+      addFpsSample(RR) {
+        this.fpsMonitor.addSample(RR, Date.now());
+        const JR = this.fpsMonitor.getTags();
+        null !== JR && (this.tags.setFpsTags(JR), this.updateTags())
       }
-      addUnboundKeyPresses(WW) {
-        this.tags.addUnboundKeyPresses(WW), this.updateTags()
+      addUnboundKeyPresses(RR) {
+        this.tags.addUnboundKeyPresses(RR), this.updateTags()
       }
       finalTags() {
         return this.fpsMonitor.endEpisode(Date.now()), this.tags.toProperties(Date.now())
       }
       updateTags() {
-        const WW = this.tags.toProperties(),
-          iW = JSON.stringify(WW);
-        iW !== this.lastTagsJson && (this.lastTagsJson = iW, EW.g.register(WW), null === this.personUpdateTimer && (this.personUpdateTimer = setTimeout((() => {
-          this.personUpdateTimer = null, EW.g.setPersonProperties(this.tags.toProperties())
+        const RR = this.tags.toProperties(),
+          JR = JSON.stringify(RR);
+        JR !== this.lastTagsJson && (this.lastTagsJson = JR, tR.f.register(RR), null === this.personUpdateTimer && (this.personUpdateTimer = setTimeout((() => {
+          this.personUpdateTimer = null, tR.f.setPersonProperties(this.tags.toProperties())
         }), 0)))
       }
       unregisterGameContext() {
-        for (const WW of this.gameContextKeys) EW.g.unregister(WW);
+        for (const RR of this.gameContextKeys) tR.f.unregister(RR);
         this.gameContextKeys = []
       }
     }
   },
-  41052: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW
+  41049: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR
     });
-    const mW = 20;
-    let EW = Date.now() - performance.now();
+    const yR = 20;
+    let tR = Date.now() - performance.now();
 
-    function NW() {
-      const WW = performance.now(),
-        iW = Date.now();
-      return Math.abs(iW - (WW + EW)) > mW && (EW = iW - WW), WW + EW
+    function uR() {
+      const RR = performance.now(),
+        JR = Date.now();
+      return Math.abs(JR - (RR + tR)) > yR && (tR = JR - RR), RR + tR
     }
   },
-  41035: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW,
-      f: () => NW,
-      i: () => EW
+  41038: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR,
+      i: () => uR,
+      j: () => tR
     });
-    const mW = 32768;
+    const yR = 32768;
 
-    function EW(WW) {
-      return (new TextEncoder).encode(WW).byteLength
+    function tR(RR) {
+      return (new TextEncoder).encode(RR).byteLength
     }
-    const NW = new class {
+    const uR = new class {
       constructor() {
         this.inFlightBytes = 0, this.inFlightLabels = new Map
       }
-      async fetch(WW, iW, OW, mW) {
-        if (this.inFlightBytes + OW > 49152) return await fetch(WW, iW);
-        this.inFlightBytes += OW, this.countLabel(mW, 1);
-        const EW = () => {
-          this.inFlightBytes -= OW, this.countLabel(mW, -1)
+      async fetch(RR, JR, GR, yR) {
+        if (this.inFlightBytes + GR > 49152) return await fetch(RR, JR);
+        this.inFlightBytes += GR, this.countLabel(yR, 1);
+        const tR = () => {
+          this.inFlightBytes -= GR, this.countLabel(yR, -1)
         };
-        let NW;
+        let uR;
         try {
-          NW = await fetch(WW, {
-            ...iW,
+          uR = await fetch(RR, {
+            ...JR,
             keepalive: !0
           })
-        } catch (LW) {
-          var PW;
-          if (EW(), null !== (PW = iW.signal) && void 0 !== PW && PW.aborted) throw LW;
-          return console.info("Session replay keepalive request failed; retrying without keepalive.", LW), await fetch(WW, iW)
+        } catch (qR) {
+          var ZR;
+          if (tR(), null !== (ZR = JR.signal) && void 0 !== ZR && ZR.aborted) throw qR;
+          return console.info("Session replay keepalive request failed; retrying without keepalive.", qR), await fetch(RR, JR)
         }
-        return EW(), NW
+        return tR(), uR
       }
-      isInFlight(WW) {
-        var iW;
-        return (null !== (iW = this.inFlightLabels.get(WW)) && void 0 !== iW ? iW : 0) > 0
+      isInFlight(RR) {
+        var JR;
+        return (null !== (JR = this.inFlightLabels.get(RR)) && void 0 !== JR ? JR : 0) > 0
       }
-      sendBeacon(WW, iW) {
-        const OW = EW(iW);
-        return !(this.inFlightBytes + OW > 57344) && this.beaconSent(navigator.sendBeacon(WW, new Blob([iW], {
+      sendBeacon(RR, JR) {
+        const GR = tR(JR);
+        return !(this.inFlightBytes + GR > 57344) && this.beaconSent(navigator.sendBeacon(RR, new Blob([JR], {
           type: "text/plain"
-        })), OW)
+        })), GR)
       }
-      sendUploadBeacon(WW, iW, OW) {
-        return !(this.inFlightBytes + OW > 40960) && this.beaconSent(navigator.sendBeacon(WW, iW), OW)
+      sendUploadBeacon(RR, JR, GR) {
+        return !(this.inFlightBytes + GR > 40960) && this.beaconSent(navigator.sendBeacon(RR, JR), GR)
       }
-      countLabel(WW, iW) {
-        var OW;
-        void 0 !== WW && this.inFlightLabels.set(WW, (null !== (OW = this.inFlightLabels.get(WW)) && void 0 !== OW ? OW : 0) + iW)
+      countLabel(RR, JR) {
+        var GR;
+        void 0 !== RR && this.inFlightLabels.set(RR, (null !== (GR = this.inFlightLabels.get(RR)) && void 0 !== GR ? GR : 0) + JR)
       }
-      beaconSent(WW, iW) {
-        return WW && (this.inFlightBytes += iW, setTimeout((() => {
-          this.inFlightBytes -= iW
-        }), 1e4)), WW
+      beaconSent(RR, JR) {
+        return RR && (this.inFlightBytes += JR, setTimeout((() => {
+          this.inFlightBytes -= JR
+        }), 1e4)), RR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

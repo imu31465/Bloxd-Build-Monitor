@@ -1,343 +1,343 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  40980: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW,
-      e: () => EW
+  40983: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      e: () => tR
     });
-    const mW = "The world isn't loaded, so no blocks can be seen.",
-      EW = "The world isn't loaded, so nothing in it can be seen."
+    const yR = "The world isn't loaded, so no blocks can be seen.",
+      tR = "The world isn't loaded, so nothing in it can be seen."
   },
-  40305: (WW, iW, OW) => {
-    function mW(WW) {
-      return !(!WW.lobbyLeaderboardInfo && !WW.lobbyManage)
+  40356: (RR, JR, GR) => {
+    function yR(RR) {
+      return !(!RR.lobbyLeaderboardInfo && !RR.lobbyManage)
     }
-    OW.d(iW, {
-      d: () => mW
+    GR.d(JR, {
+      b: () => yR
     })
   },
-  37968: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW,
-      c: () => mW
+  37914: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR,
+      f: () => yR
     });
-    const mW = 3,
-      EW = {
+    const yR = 3,
+      tR = {
         recording: !1,
         clipping: !1,
         hasClipBuffer: !1,
         seconds: 0
       }
   },
-  37970: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      f: () => EW
+  37923: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR,
+      f: () => tR
     });
-    let mW = () => null;
+    let yR = () => null;
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW(WW, iW) {
-      return mW(WW, iW)
+    function uR(RR, JR) {
+      return yR(RR, JR)
     }
   },
-  42118: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => bW,
-      g: () => sW,
-      k: () => kW,
-      m: () => jW
+  42130: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => aR,
+      f: () => WR,
+      j: () => UR,
+      m: () => LR
     });
-    var mW = OW(27),
-      EW = OW(42125),
-      NW = OW(42109),
-      PW = OW(42131),
-      LW = OW(42116),
-      cW = OW(42134),
-      wW = OW(42149);
+    var yR = GR(32),
+      tR = GR(42132),
+      uR = GR(42118),
+      ZR = GR(42137),
+      qR = GR(42126),
+      iR = GR(42145),
+      fR = GR(42164);
 
-    function tW(WW) {
-      var iW, OW;
-      const mW = (0, NW.f)();
-      return mW ? null === (iW = (0, EW.d)(mW.api, WW[0], WW[1], WW[2])) || void 0 === iW || null === (OW = iW.persisted) || void 0 === OW ? void 0 : OW.shared : void 0
+    function VR(RR) {
+      var JR, GR;
+      const yR = (0, uR.l)();
+      return yR ? null === (JR = (0, tR.e)(yR.api, RR[0], RR[1], RR[2])) || void 0 === JR || null === (GR = JR.persisted) || void 0 === GR ? void 0 : GR.shared : void 0
     }
 
-    function ZW(WW) {
-      return `${WW[0]},${WW[1]},${WW[2]}`
+    function KR(RR) {
+      return `${RR[0]},${RR[1]},${RR[2]}`
     }
-    const xW = new Map;
-    let lW = null,
-      AW = 0;
+    const wR = new Map;
+    let rR = null,
+      eR = 0;
 
-    function bW() {
-      return AW
+    function aR() {
+      return eR
     }
 
-    function jW(WW) {
-      const iW = null !== lW && lW.key === ZW(WW.pos) ? lW.type : null;
-      if (null === iW) return WW;
-      let OW = null;
-      if ("Iron" === iW) {
+    function LR(RR) {
+      const JR = null !== rR && rR.key === KR(RR.pos) ? rR.type : null;
+      if (null === JR) return RR;
+      let GR = null;
+      if ("Iron" === JR) {
         const {
-          cachedPasskey: iW,
-          ...mW
-        } = UW(WW.pos);
-        OW = {
-          rL: null !== iW && void 0 !== iW ? iW : [0, 0, 0, 0],
-          ...mW
+          cachedPasskey: JR,
+          ...yR
+        } = nR(RR.pos);
+        GR = {
+          Ji: null !== JR && void 0 !== JR ? JR : [0, 0, 0, 0],
+          ...yR
         }
       }
       return {
-        ...WW,
-        type: iW,
-        ironChest: OW
+        ...RR,
+        type: JR,
+        ironChest: GR
       }
     }
 
-    function UW(WW) {
-      const iW = tW(WW),
-        OW = null === iW || void 0 === iW ? void 0 : iW.ownerDbId,
-        mW = function(WW) {
-          var iW;
-          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tW(WW);
-          const mW = ZW(WW),
-            EW = xW.get(mW);
-          return EW ? EW.lastOpened < (null !== (iW = null === OW || void 0 === OW ? void 0 : OW.passkeyLastUpdated) && void 0 !== iW ? iW : 0) ? (xW.delete(mW), null) : [...EW.rL] : null
-        }(WW, iW);
-      return void 0 === OW ? {
-        cachedPasskey: mW
+    function nR(RR) {
+      const JR = VR(RR),
+        GR = null === JR || void 0 === JR ? void 0 : JR.ownerDbId,
+        yR = function(RR) {
+          var JR;
+          let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VR(RR);
+          const yR = KR(RR),
+            tR = wR.get(yR);
+          return tR ? tR.lastOpened < (null !== (JR = null === GR || void 0 === GR ? void 0 : GR.passkeyLastUpdated) && void 0 !== JR ? JR : 0) ? (wR.delete(yR), null) : [...tR.Ji] : null
+        }(RR, JR);
+      return void 0 === GR ? {
+        cachedPasskey: yR
       } : {
-        ownerDbId: OW,
-        cachedPasskey: mW
+        ownerDbId: GR,
+        cachedPasskey: yR
       }
-    }(0, wW.j)(PW.b, (WW => {
-      const iW = (0, cW.g)(PW.b, WW);
-      if (!(0, cW.d)(iW) || iW.qE) return;
-      if (AW++, !iW.VE || null === iW.CE) return void(lW = null);
-      const OW = ZW(iW.CE);
-      lW = {
-        key: OW,
-        type: iW.fE
-      }, null !== iW.XE && xW.set(OW, {
-        rL: [...iW.XE],
+    }(0, fR.l)(ZR.b, (RR => {
+      const JR = (0, iR.i)(ZR.b, RR);
+      if (!(0, iR.e)(JR) || JR.st) return;
+      if (eR++, !JR.Yt || null === JR.Ft) return void(rR = null);
+      const GR = KR(JR.Ft);
+      rR = {
+        key: GR,
+        type: JR.Qt
+      }, null !== JR.Tt && wR.set(GR, {
+        Ji: [...JR.Tt],
         lastOpened: Date.now()
       })
-    })), (0, wW.e)((() => {
-      xW.clear(), lW = null, AW++
-    })), (0, wW.i)((() => {
-      null !== lW && (lW = null, AW++, mW.l.iZ("chestToggleFromServer", !1, !0))
+    })), (0, fR.f)((() => {
+      wR.clear(), rR = null, eR++
+    })), (0, fR.i)((() => {
+      null !== rR && (rR = null, eR++, yR.n.JK("chestToggleFromServer", !1, !0))
     }));
-    const kW = {
+    const UR = {
         boardEditRequested: {
-          watch: WW => (0, mW.n)("EditBoard", (iW => {
+          watch: RR => (0, yR.q)("EditBoard", (JR => {
             let {
-              pos: OW
-            } = iW;
-            if (null === OW) return void WW(null);
-            const mW = (0, NW.f)(),
-              EW = (0, NW.p)();
-            mW && EW && WW(EW.readBoardToEdit(mW.api, mW.chunks, OW))
+              pos: GR
+            } = JR;
+            if (null === GR) return void RR(null);
+            const yR = (0, uR.l)(),
+              tR = (0, uR.u)();
+            yR && tR && RR(tR.readBoardToEdit(yR.api, yR.chunks, GR))
           }))
         },
         ironChestOpenRequested: {
-          watch: WW => (0, mW.n)("OpenIronChest", (iW => {
+          watch: RR => (0, yR.q)("OpenIronChest", (JR => {
             let {
-              pos: OW
-            } = iW;
-            WW(function(WW) {
+              pos: GR
+            } = JR;
+            RR(function(RR) {
               return {
-                pos: WW,
-                ...UW(WW)
+                pos: RR,
+                ...nR(RR)
               }
-            }(OW))
+            }(GR))
           }))
         }
       },
-      sW = {
-        writeOnBoard(WW) {
-          var iW;
+      WR = {
+        writeOnBoard(RR) {
+          var JR;
           let {
-            pos: OW,
-            text: mW,
-            Oc: EW,
-            textSize: PW
-          } = WW;
-          null === (iW = (0, NW.f)()) || void 0 === iW || iW.send(LW.e.UpdateBoard, (0, LW.Y)({
-            QL: OW,
-            Wc: mW,
-            Oc: EW,
-            mc: PW
+            pos: GR,
+            text: yR,
+            Zi: tR,
+            textSize: ZR
+          } = RR;
+          null === (JR = (0, uR.l)()) || void 0 === JR || JR.send(qR.d.UpdateBoard, (0, qR.Y)({
+            ti: GR,
+            ui: yR,
+            Zi: tR,
+            qi: ZR
           }))
         },
-        writeBook(WW) {
-          var iW;
+        writeBook(RR) {
+          var JR;
           let {
-            pages: OW,
-            title: mW,
-            published: EW
-          } = WW;
-          null === (iW = (0, NW.f)()) || void 0 === iW || iW.send(LW.e.UpdateBook, (0, LW.$)({
-            Ut: OW,
-            kt: mW,
-            st: EW
+            pages: GR,
+            title: yR,
+            published: tR
+          } = RR;
+          null === (JR = (0, uR.l)()) || void 0 === JR || JR.send(qR.d.UpdateBook, (0, qR.Z)({
+            CV: GR,
+            XV: yR,
+            MV: tR
           }))
         },
-        writeNameTag(WW) {
-          var iW;
-          null === (iW = (0, NW.f)()) || void 0 === iW || iW.send(LW.e.UpdateNameTag, WW)
+        writeNameTag(RR) {
+          var JR;
+          null === (JR = (0, uR.l)()) || void 0 === JR || JR.send(qR.d.UpdateNameTag, RR)
         },
-        setCustomLobbyBlock(WW) {
+        setCustomLobbyBlock(RR) {
           let {
-            pos: iW,
-            blockName: OW
-          } = WW;
-          const mW = (0, NW.p)(),
-            EW = (0, NW.f)();
-          mW && EW && EW.send(LW.e.SetCustomLobbyBlock, (0, LW.N)({
-            NL: mW.blockIdOf(OW),
-            EL: iW
+            pos: JR,
+            blockName: GR
+          } = RR;
+          const yR = (0, uR.u)(),
+            tR = (0, uR.l)();
+          yR && tR && tR.send(qR.d.SetCustomLobbyBlock, (0, qR.N)({
+            Vq: yR.blockIdOf(GR),
+            fq: JR
           }))
         }
       }
   },
-  42174: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => cW,
-      g: () => PW,
-      k: () => LW
+  42185: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR,
+      e: () => ZR,
+      g: () => qR
     });
-    var mW = OW(42094),
-      EW = OW(5533),
-      NW = OW(42109);
+    var yR = GR(42106),
+      tR = GR(5665),
+      uR = GR(42118);
 
-    function PW() {
-      var WW;
-      const iW = null === (WW = (0, NW.f)()) || void 0 === WW ? void 0 : WW.api.localId;
-      return void 0 === iW || iW === mW.kd ? null : String(iW)
+    function ZR() {
+      var RR;
+      const JR = null === (RR = (0, uR.l)()) || void 0 === RR ? void 0 : RR.api.localId;
+      return void 0 === JR || JR === yR.Uc ? null : String(JR)
     }
 
-    function LW(WW) {
-      const iW = (0, NW.f)();
-      if (null !== iW) return WW(iW);
-      let OW = null;
-      const mW = (0, EW.v)((() => {
-        const iW = (0, NW.f)();
-        null !== iW && null === OW && (mW(), OW = WW(iW))
+    function qR(RR) {
+      const JR = (0, uR.l)();
+      if (null !== JR) return RR(JR);
+      let GR = null;
+      const yR = (0, tR.n)((() => {
+        const JR = (0, uR.l)();
+        null !== JR && null === GR && (yR(), GR = RR(JR))
       }));
       return () => {
-        var WW;
-        mW(), null === (WW = OW) || void 0 === WW || WW()
+        var RR;
+        yR(), null === (RR = GR) || void 0 === RR || RR()
       }
     }
 
-    function cW(WW, iW, OW) {
+    function iR(RR, JR, GR) {
       return {
         current: () => {
-          const OW = (0, NW.f)();
-          return null === OW ? iW : WW(OW)()
+          const GR = (0, uR.l)();
+          return null === GR ? JR : RR(GR)()
         },
-        watch: iW => LW((mW => {
-          const EW = WW(mW);
-          let NW = EW();
-          return iW(NW), OW((() => {
-            const WW = EW();
-            WW !== NW && (NW = WW, iW(WW))
+        watch: JR => qR((yR => {
+          const tR = RR(yR);
+          let uR = tR();
+          return JR(uR), GR((() => {
+            const RR = tR();
+            RR !== uR && (uR = RR, JR(RR))
           }))
         }))
       }
     }
   },
-  42165: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW
+  42177: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR
     });
-    var mW = OW(42109),
-      EW = OW(42174),
-      NW = OW(42176);
+    var yR = GR(42118),
+      tR = GR(42185),
+      uR = GR(42188);
 
-    function PW() {
-      var WW, iW;
-      return null !== (WW = null === (iW = (0, mW.f)()) || void 0 === iW ? void 0 : iW.itemBridgeSources) && void 0 !== WW ? WW : NW.c
+    function ZR() {
+      var RR, JR;
+      return null !== (RR = null === (JR = (0, yR.l)()) || void 0 === JR ? void 0 : JR.itemBridgeSources) && void 0 !== RR ? RR : uR.c
     }
 
-    function LW(WW) {
+    function qR(RR) {
       return {
-        current: () => PW().states[WW].current(),
-        watch: iW => (0, EW.k)((OW => {
-          const mW = OW.itemBridgeSources.states[WW];
-          return iW(mW.current()), mW.watch(iW)
+        current: () => ZR().states[RR].current(),
+        watch: JR => (0, tR.g)((GR => {
+          const yR = GR.itemBridgeSources.states[RR];
+          return JR(yR.current()), yR.watch(JR)
         }))
       }
     }
 
-    function cW(WW) {
+    function iR(RR) {
       return {
-        watch: iW => (0, EW.k)((OW => OW.itemBridgeSources.events[WW].watch(iW)))
+        watch: JR => (0, tR.g)((GR => GR.itemBridgeSources.events[RR].watch(JR)))
       }
     }
-    const wW = {
+    const fR = {
       states: {
-        inventory: LW("inventory"),
-        hotbar: LW("hotbar"),
-        crafting: LW("crafting"),
-        heldItemAim: LW("heldItemAim")
+        inventory: qR("inventory"),
+        hotbar: qR("hotbar"),
+        crafting: qR("crafting"),
+        heldItemAim: qR("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: cW("hotbarSlotRequested"),
-        hotbarScrolled: cW("hotbarScrolled"),
-        numberKeyPressed: cW("numberKeyPressed"),
-        inventoryDropRequested: cW("inventoryDropRequested"),
-        chestToggled: cW("chestToggled"),
-        chestRefreshed: cW("chestRefreshed"),
-        inventorySynced: cW("inventorySynced"),
-        enchantingTableOpened: cW("enchantingTableOpened")
+        hotbarSlotRequested: iR("hotbarSlotRequested"),
+        hotbarScrolled: iR("hotbarScrolled"),
+        numberKeyPressed: iR("numberKeyPressed"),
+        inventoryDropRequested: iR("inventoryDropRequested"),
+        chestToggled: iR("chestToggled"),
+        chestRefreshed: iR("chestRefreshed"),
+        inventorySynced: iR("inventorySynced"),
+        enchantingTableOpened: iR("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: WW => PW().commands.selectHotbarSlot(WW),
-        removeInventoryItem: WW => PW().commands.removeInventoryItem(WW),
-        swapInventorySlots: WW => PW().commands.swapInventorySlots(WW),
-        moveInventoryItem: WW => PW().commands.moveInventoryItem(WW),
-        quickMoveInventoryItem: WW => PW().commands.quickMoveInventoryItem(WW),
-        closeChest: WW => PW().commands.closeChest(WW),
-        focusCrafting: WW => PW().commands.focusCrafting(WW),
-        craftRecipe: WW => PW().commands.craftRecipe(WW),
-        salvageItem: WW => PW().commands.salvageItem(WW),
-        enchantItem: WW => PW().commands.enchantItem(WW)
+        selectHotbarSlot: RR => ZR().commands.selectHotbarSlot(RR),
+        removeInventoryItem: RR => ZR().commands.removeInventoryItem(RR),
+        swapInventorySlots: RR => ZR().commands.swapInventorySlots(RR),
+        moveInventoryItem: RR => ZR().commands.moveInventoryItem(RR),
+        quickMoveInventoryItem: RR => ZR().commands.quickMoveInventoryItem(RR),
+        closeChest: RR => ZR().commands.closeChest(RR),
+        focusCrafting: RR => ZR().commands.focusCrafting(RR),
+        craftRecipe: RR => ZR().commands.craftRecipe(RR),
+        salvageItem: RR => ZR().commands.salvageItem(RR),
+        enchantItem: RR => ZR().commands.enchantItem(RR)
       },
       queries: {
-        enchantingOffer: WW => PW().queries.enchantingOffer(WW)
+        enchantingOffer: RR => ZR().queries.enchantingOffer(RR)
       }
     }
   },
-  42176: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW
+  42188: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR
     });
-    var mW = OW(40980),
-      EW = OW(37968);
+    var yR = GR(40983),
+      tR = GR(37914);
 
-    function NW(WW) {
+    function uR(RR) {
       return {
-        current: () => WW,
+        current: () => RR,
         watch: () => () => {}
       }
     }
 
-    function PW() {}
-    const LW = Object.freeze([0, 0, 0]),
-      cW = {
+    function ZR() {}
+    const qR = Object.freeze([0, 0, 0]),
+      iR = {
         states: {
-          health: NW({
+          health: uR({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: NW({
+          inventory: uR({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -345,58 +345,58 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: NW({
+          hotbar: uR({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: NW({
+          stationItems: uR({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: NW({}),
-          creativeVisibility: NW({
+          itemInfo: uR({}),
+          creativeVisibility: uR({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: NW(null),
-          heldItemAim: NW({
+          aura: uR(null),
+          heldItemAim: uR({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: NW(!1),
-          gliderBoostFuel: NW(0),
-          flight: NW({
+          crouching: uR(!1),
+          gliderBoostFuel: uR(0),
+          flight: uR({
             canFly: !1,
             flying: !1
           }),
-          crafting: NW({
+          crafting: uR({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: NW({
+          players: uR({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: NW({}),
-          fullInventory: NW(!1),
-          crosshairTarget: NW({
+          lobbyLeaderboardRows: uR({}),
+          fullInventory: uR(!1),
+          crosshairTarget: uR({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: NW(!0),
-          freeCamera: NW({
+          localPlayerAlive: uR(!0),
+          freeCamera: uR({
             allowed: !1,
             movesFly: !1
           }),
-          replay: NW(null),
-          replayEdits: NW(null),
-          replayRecorder: NW(EW.b),
-          replayVideoExporting: NW(!1)
+          replay: uR(null),
+          replayEdits: uR(null),
+          replayRecorder: uR(tR.b),
+          replayVideoExporting: uR(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -461,87 +461,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: PW,
+          selectHotbarSlot: ZR,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: PW,
-          setInventoryOpen: PW,
-          changeIronChestPasskey: PW,
-          dragReplayCamera: PW,
-          applyTemporaryThirdPerson: PW,
-          holdEmoteWheel: PW,
-          recordFlyingMiddleText: PW,
-          focusCrafting: PW,
+          closeChest: ZR,
+          setInventoryOpen: ZR,
+          changeIronChestPasskey: ZR,
+          dragReplayCamera: ZR,
+          applyTemporaryThirdPerson: ZR,
+          holdEmoteWheel: ZR,
+          recordFlyingMiddleText: ZR,
+          focusCrafting: ZR,
           craftRecipe: () => ({
-            lL: 0,
-            WZ: null,
+            Uq: 0,
+            RK: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: PW,
-          setShopOpen: PW,
-          buyShopItem: PW,
-          lobbyManage: PW,
+          enchantItem: ZR,
+          setShopOpen: ZR,
+          buyShopItem: ZR,
+          lobbyManage: ZR,
           sendChatMessage: () => !1,
-          ignorePlayer: PW,
-          reportPlayer: PW,
-          reportWorldCodeChat: PW,
-          requestDiscordReportKey: PW,
-          reportLobbyOrGame: PW,
-          playEmote: PW,
-          updateMyCosmetic: PW,
-          writeOnBoard: PW,
-          writeBook: PW,
-          writeNameTag: PW,
-          setCustomLobbyBlock: PW,
-          openIronChest: PW,
-          sendCodeCollab: PW,
-          clickCodeBlock: PW,
-          bindCustomButtonKeys: PW,
-          pressCustomButton: PW,
-          moveReplayFreecam: PW,
-          holdReplayFreecamVertical: PW,
-          respawn: PW,
-          wakeUp: PW,
-          requestLeaderboard: PW,
-          completeTask: PW,
-          setServerCookie: PW,
-          answerUiRequest: PW,
-          chooseRewardedAd: PW,
-          setCameraZoom: PW,
-          setFreeCameraMovesFly: PW,
-          setBlockHighlight: PW,
-          setCrosshairInteractPrompt: PW,
-          setLookSensitivity: PW,
-          replayAction: PW,
-          setReplayPlaying: PW,
-          seekReplay: PW,
-          setReplayCameraMode: PW,
-          syncReplayCameraMode: PW,
-          setReplayCameraKeyframe: PW,
-          moveReplayCameraKeyframe: PW,
-          deleteReplayCameraKeyframes: PW,
-          setReplayPlaybackMark: PW,
+          ignorePlayer: ZR,
+          reportPlayer: ZR,
+          reportWorldCodeChat: ZR,
+          requestDiscordReportKey: ZR,
+          reportLobbyOrGame: ZR,
+          playEmote: ZR,
+          updateMyCosmetic: ZR,
+          writeOnBoard: ZR,
+          writeBook: ZR,
+          writeNameTag: ZR,
+          setCustomLobbyBlock: ZR,
+          openIronChest: ZR,
+          sendCodeCollab: ZR,
+          clickCodeBlock: ZR,
+          bindCustomButtonKeys: ZR,
+          pressCustomButton: ZR,
+          moveReplayFreecam: ZR,
+          holdReplayFreecamVertical: ZR,
+          respawn: ZR,
+          wakeUp: ZR,
+          requestLeaderboard: ZR,
+          completeTask: ZR,
+          setServerCookie: ZR,
+          answerUiRequest: ZR,
+          chooseRewardedAd: ZR,
+          setCameraZoom: ZR,
+          setFreeCameraMovesFly: ZR,
+          setBlockHighlight: ZR,
+          setCrosshairInteractPrompt: ZR,
+          setLookSensitivity: ZR,
+          replayAction: ZR,
+          setReplayPlaying: ZR,
+          seekReplay: ZR,
+          setReplayCameraMode: ZR,
+          syncReplayCameraMode: ZR,
+          setReplayCameraKeyframe: ZR,
+          moveReplayCameraKeyframe: ZR,
+          deleteReplayCameraKeyframes: ZR,
+          setReplayPlaybackMark: ZR,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: PW,
-          exportReplayVideo: PW,
-          toggleRecording: PW,
-          saveClip: PW,
-          setRecorderPrefs: PW,
-          setReplayViewerOpen: PW
+          holdReplayForShaderPackFailure: ZR,
+          exportReplayVideo: ZR,
+          toggleRecording: ZR,
+          saveClip: ZR,
+          setRecorderPrefs: ZR,
+          setReplayViewerOpen: ZR
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => mW.c,
-          worldCodeAiGameState: () => mW.e
+          worldCodeAiChunk: () => yR.b,
+          worldCodeAiGameState: () => yR.e
         },
         lookups: {
-          localPos: () => LW,
+          localPos: () => qR,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -559,316 +559,316 @@ export const modules = {
         }
       }
   },
-  42103: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => TW,
-      d: () => yW,
-      e: () => JW,
-      f: () => YW,
-      h: () => KW
+  42114: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => lR,
+      e: () => BR,
+      i: () => pR,
+      l: () => MR,
+      p: () => CR
     });
-    var mW = OW(40469),
-      EW = OW(1217),
-      NW = OW(2061),
-      PW = OW(2072),
-      LW = OW(4454),
-      cW = OW(37970),
-      wW = OW(1351),
-      tW = OW(42109),
-      ZW = OW(5575),
-      xW = OW(3305),
-      lW = OW(42116),
-      AW = OW(42118),
-      bW = OW(42165);
-    let jW = null;
+    var yR = GR(40522),
+      tR = GR(1317),
+      uR = GR(2163),
+      ZR = GR(2170),
+      qR = GR(4555),
+      iR = GR(37923),
+      fR = GR(1449),
+      VR = GR(42118),
+      KR = GR(5699),
+      wR = GR(3428),
+      rR = GR(42126),
+      eR = GR(42130),
+      aR = GR(42177);
+    let LR = null;
 
-    function UW(WW) {
-      const iW = new Map,
-        OW = OW => {
-          if ("string" !== typeof OW) return;
-          let mW = iW.get(OW);
-          return void 0 === mW && (mW = WW(OW), void 0 !== mW && iW.set(OW, mW)), mW
+    function nR(RR) {
+      const JR = new Map,
+        GR = GR => {
+          if ("string" !== typeof GR) return;
+          let yR = JR.get(GR);
+          return void 0 === yR && (yR = RR(GR), void 0 !== yR && JR.set(GR, yR)), yR
         };
       return new Proxy({}, {
-        get: (WW, iW) => OW(iW),
-        has: (WW, iW) => void 0 !== OW(iW)
+        get: (RR, JR) => GR(JR),
+        has: (RR, JR) => void 0 !== GR(JR)
       })
     }
 
-    function kW(WW) {
-      const iW = (0, LW.b)(WW);
-      return void 0 !== iW && (0, LW.d)(iW) === WW
+    function UR(RR) {
+      const JR = (0, qR.b)(RR);
+      return void 0 !== JR && (0, qR.c)(JR) === RR
     }
 
-    function sW(WW) {
-      var iW;
-      const OW = null === (iW = (0, tW.f)()) || void 0 === iW ? void 0 : iW.tables;
-      if (void 0 === OW || !kW(WW)) return;
-      const mW = {
-          displayName: OW.getDisplayName(WW)
+    function WR(RR) {
+      var JR;
+      const GR = null === (JR = (0, VR.l)()) || void 0 === JR ? void 0 : JR.tables;
+      if (void 0 === GR || !UR(RR)) return;
+      const yR = {
+          displayName: GR.getDisplayName(RR)
         },
-        EW = OW.getItemStat(WW, "description");
-      void 0 !== EW && null !== EW && (mW.description = EW);
+        tR = GR.getItemStat(RR, "description");
+      void 0 !== tR && null !== tR && (yR.description = tR);
       const {
-        rootName: NW
-      } = OW.getMetaInfo(WW);
-      NW !== WW && (mW.rootName = NW);
-      const PW = OW.getItemStat(WW, "armourReduction");
-      return void 0 !== PW && null !== PW && (mW.armourReduction = PW), mW
-    }(0, tW.t)((WW => {
-      jW = WW
+        rootName: uR
+      } = GR.getMetaInfo(RR);
+      uR !== RR && (yR.rootName = uR);
+      const ZR = GR.getItemStat(RR, "armourReduction");
+      return void 0 !== ZR && null !== ZR && (yR.armourReduction = ZR), yR
+    }(0, VR.y)((RR => {
+      LR = RR
     }));
-    const MW = (0, PW.k)("DisplayName", "Description");
+    const AR = (0, ZR.i)("DisplayName", "Description");
 
-    function KW() {
-      return Boolean(NW.d.get("useInventory") && NW.d.get("useFullInventory"))
+    function CR() {
+      return Boolean(uR.c.get("useInventory") && uR.c.get("useFullInventory"))
     }
-    let SW = null;
-    const YW = {
+    let XR = null;
+    const MR = {
         inventory: function() {
-          const WW = bW.c.states.inventory;
-          let iW = null;
-          const OW = WW => {
-            var OW;
-            return null === WW.chest ? WW : ((null === (OW = iW) || void 0 === OW ? void 0 : OW.from) === WW && iW.chestVersion === (0, AW.e)() || (iW = {
-              from: WW,
-              chestVersion: (0, AW.e)(),
+          const RR = aR.e.states.inventory;
+          let JR = null;
+          const GR = RR => {
+            var GR;
+            return null === RR.chest ? RR : ((null === (GR = JR) || void 0 === GR ? void 0 : GR.from) === RR && JR.chestVersion === (0, eR.c)() || (JR = {
+              from: RR,
+              chestVersion: (0, eR.c)(),
               view: {
-                ...WW,
-                chest: (0, AW.m)(WW.chest)
+                ...RR,
+                chest: (0, eR.m)(RR.chest)
               }
-            }), iW.view)
+            }), JR.view)
           };
           return {
-            current: () => OW(WW.current()),
-            watch: iW => WW.watch((WW => {
-              iW(OW(WW))
+            current: () => GR(RR.current()),
+            watch: JR => RR.watch((RR => {
+              JR(GR(RR))
             }))
           }
         }(),
-        crafting: bW.c.states.crafting,
+        crafting: aR.e.states.crafting,
         stationItems: {
           current() {
-            var WW;
-            return (null === (WW = SW) || void 0 === WW ? void 0 : WW.namesVersion) !== (0, LW.f)() && (SW = {
-              namesVersion: (0, LW.f)(),
+            var RR;
+            return (null === (RR = XR) || void 0 === RR ? void 0 : RR.namesVersion) !== (0, qR.f)() && (XR = {
+              namesVersion: (0, qR.f)(),
               items: {
-                enchantable: UW((WW => {
-                  const iW = (0, LW.b)(WW);
-                  return void 0 !== iW && null !== jW && jW.enchantmentPerksOf(iW).length > 0 || void 0
+                enchantable: nR((RR => {
+                  const JR = (0, qR.b)(RR);
+                  return void 0 !== JR && null !== LR && LR.enchantmentPerksOf(JR).length > 0 || void 0
                 })),
-                salvageable: UW((WW => !(!kW(WW) || null === (0, cW.e)(WW)) || void 0))
+                salvageable: nR((RR => !(!UR(RR) || null === (0, iR.b)(RR)) || void 0))
               }
-            }), SW.items
+            }), XR.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let WW = null;
-          const iW = () => {
-            var iW;
-            return (null === (iW = WW) || void 0 === iW ? void 0 : iW.namesVersion) !== (0, LW.f)() && (WW = {
-              namesVersion: (0, LW.f)(),
-              infos: UW(sW)
-            }), WW.infos
+          let RR = null;
+          const JR = () => {
+            var JR;
+            return (null === (JR = RR) || void 0 === JR ? void 0 : JR.namesVersion) !== (0, qR.f)() && (RR = {
+              namesVersion: (0, qR.f)(),
+              infos: nR(WR)
+            }), RR.infos
           };
           return {
-            current: iW,
-            watch: OW => (0, PW.w)((mW => {
-              mW.some(MW) && (WW = null, OW(iW()))
+            current: JR,
+            watch: GR => (0, ZR.p)((yR => {
+              yR.some(AR) && (RR = null, GR(JR()))
             }))
           }
         }(),
-        creativeVisibility: (0, PW.r)((function() {
-          const WW = {};
-          for (const EW of null !== (iW = null === (OW = jW) || void 0 === OW ? void 0 : OW.creativeItemIds()) && void 0 !== iW ? iW : []) {
-            var iW, OW, PW, cW;
-            const wW = (0, LW.d)(EW);
-            if (void 0 === wW) continue;
-            const tW = null !== (PW = NW.d.get((0, mW.h)(wW, "showInCreativeInven"))) && void 0 !== PW ? PW : null === (cW = jW) || void 0 === cW ? void 0 : cW.showInCreativeInvenOf(EW);
-            "boolean" === typeof tW && (WW[wW] = tW)
+        creativeVisibility: (0, ZR.l)((function() {
+          const RR = {};
+          for (const tR of null !== (JR = null === (GR = LR) || void 0 === GR ? void 0 : GR.creativeItemIds()) && void 0 !== JR ? JR : []) {
+            var JR, GR, ZR, iR;
+            const fR = (0, qR.c)(tR);
+            if (void 0 === fR) continue;
+            const VR = null !== (ZR = uR.c.get((0, yR.d)(fR, "showInCreativeInven"))) && void 0 !== ZR ? ZR : null === (iR = LR) || void 0 === iR ? void 0 : iR.showInCreativeInvenOf(tR);
+            "boolean" === typeof VR && (RR[fR] = VR)
           }
           return {
-            publicLobby: (0, EW.R)((0, wW.d)().lobbyName),
-            shownInGame: WW
+            publicLobby: (0, tR.E)((0, fR.d)().lobbyName),
+            shownInGame: RR
           }
-        }), ["connectedGameChanged"], (0, PW.k)("ShowInCreativeInven")),
-        fullInventory: (0, PW.r)(KW, [], (0, PW.o)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, ZR.i)("ShowInCreativeInven")),
+        fullInventory: (0, ZR.l)(CR, [], (0, ZR.j)("useInventory", "useFullInventory"))
       },
-      yW = {
-        inventoryDropRequested: bW.c.events.inventoryDropRequested,
-        chestToggled: bW.c.events.chestToggled,
-        chestRefreshed: bW.c.events.chestRefreshed,
-        inventorySynced: bW.c.events.inventorySynced,
-        enchantingTableOpened: bW.c.events.enchantingTableOpened
+      BR = {
+        inventoryDropRequested: aR.e.events.inventoryDropRequested,
+        chestToggled: aR.e.events.chestToggled,
+        chestRefreshed: aR.e.events.chestRefreshed,
+        inventorySynced: aR.e.events.inventorySynced,
+        enchantingTableOpened: aR.e.events.enchantingTableOpened
       },
-      TW = {
-        removeInventoryItem: bW.c.commands.removeInventoryItem,
-        swapInventorySlots: bW.c.commands.swapInventorySlots,
-        moveInventoryItem: bW.c.commands.moveInventoryItem,
-        quickMoveInventoryItem: bW.c.commands.quickMoveInventoryItem,
-        closeChest: bW.c.commands.closeChest,
-        setInventoryOpen(WW) {
-          (0, ZW.j)(xW.y.InventoryOpen, WW ? xW.y.InventoryOpen : 0)
+      lR = {
+        removeInventoryItem: aR.e.commands.removeInventoryItem,
+        swapInventorySlots: aR.e.commands.swapInventorySlots,
+        moveInventoryItem: aR.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: aR.e.commands.quickMoveInventoryItem,
+        closeChest: aR.e.commands.closeChest,
+        setInventoryOpen(RR) {
+          (0, KR.i)(wR.C.InventoryOpen, RR ? wR.C.InventoryOpen : 0)
         },
-        focusCrafting: bW.c.commands.focusCrafting,
-        craftRecipe: bW.c.commands.craftRecipe,
-        salvageItem: bW.c.commands.salvageItem,
-        enchantItem: bW.c.commands.enchantItem,
-        changeIronChestPasskey(WW) {
-          var iW;
+        focusCrafting: aR.e.commands.focusCrafting,
+        craftRecipe: aR.e.commands.craftRecipe,
+        salvageItem: aR.e.commands.salvageItem,
+        enchantItem: aR.e.commands.enchantItem,
+        changeIronChestPasskey(RR) {
+          var JR;
           let {
-            pos: OW,
-            rL: mW
-          } = WW;
-          null === (iW = (0, tW.f)()) || void 0 === iW || iW.send(lW.e.ChangeIronChestPasskey, (0, lW.m)({
-            CE: OW,
-            rL: mW
+            pos: GR,
+            Ji: yR
+          } = RR;
+          null === (JR = (0, VR.l)()) || void 0 === JR || JR.send(rR.d.ChangeIronChestPasskey, (0, rR.k)({
+            Ft: GR,
+            Ji: yR
           }))
         },
-        openIronChest(WW) {
-          var iW;
+        openIronChest(RR) {
+          var JR;
           let {
-            pos: OW,
-            rL: mW
-          } = WW;
-          null === (iW = (0, tW.f)()) || void 0 === iW || iW.send(lW.e.OpenIronChest, (0, lW.G)({
-            CE: OW,
-            rL: mW
+            pos: GR,
+            Ji: yR
+          } = RR;
+          null === (JR = (0, VR.l)()) || void 0 === JR || JR.send(rR.d.OpenIronChest, (0, rR.F)({
+            Ft: GR,
+            Ji: yR
           }))
         }
       },
-      JW = {
-        enchantingOffer: bW.c.queries.enchantingOffer
+      pR = {
+        enchantingOffer: aR.e.queries.enchantingOffer
       }
   },
-  42158: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW,
-      g: () => tW,
-      j: () => PW,
-      m: () => EW,
-      n: () => LW,
-      p: () => wW
+  42170: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR,
+      f: () => VR,
+      h: () => ZR,
+      i: () => tR,
+      j: () => qR,
+      l: () => fR
     });
-    class mW extends Error {
+    class yR extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function EW(WW) {
-      return WW instanceof RangeError && /call stack/i.test(WW.message) || WW instanceof Error && "InternalError" === WW.name && /recursion/i.test(WW.message)
+    function tR(RR) {
+      return RR instanceof RangeError && /call stack/i.test(RR.message) || RR instanceof Error && "InternalError" === RR.name && /recursion/i.test(RR.message)
     }
-    const NW = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const uR = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function PW(WW) {
-      var iW;
-      return WW instanceof WebAssembly.RuntimeError || WW instanceof mW || EW(WW) && NW.test(null !== (iW = WW.stack) && void 0 !== iW ? iW : "")
-    }
-
-    function LW(WW, iW) {
-      if (PW(WW)) throw WW;
-      console.error(iW, WW)
+    function ZR(RR) {
+      var JR;
+      return RR instanceof WebAssembly.RuntimeError || RR instanceof yR || tR(RR) && uR.test(null !== (JR = RR.stack) && void 0 !== JR ? JR : "")
     }
 
-    function cW(WW, iW, OW, EW, NW) {
-      if (iW % EW !== 0 || iW + OW > WW.byteLength) throw new mW(`${NW}: ${OW} bytes at ${iW}, ${EW}-aligned, outside ${WW.byteLength} bytes of memory`)
+    function qR(RR, JR) {
+      if (ZR(RR)) throw RR;
+      console.error(JR, RR)
     }
 
-    function wW(WW, iW, OW, mW, EW) {
-      return 0 === OW ? null : (cW(iW, OW, mW * WW.BYTES_PER_ELEMENT, WW.BYTES_PER_ELEMENT, EW), new WW(iW, OW, mW))
+    function iR(RR, JR, GR, tR, uR) {
+      if (JR % tR !== 0 || JR + GR > RR.byteLength) throw new yR(`${uR}: ${GR} bytes at ${JR}, ${tR}-aligned, outside ${RR.byteLength} bytes of memory`)
     }
 
-    function tW(WW, iW, OW, mW, EW) {
-      return 0 === iW ? null : (cW(WW, iW, OW, mW, EW), new DataView(WW, iW, OW))
+    function fR(RR, JR, GR, yR, tR) {
+      return 0 === GR ? null : (iR(JR, GR, yR * RR.BYTES_PER_ELEMENT, RR.BYTES_PER_ELEMENT, tR), new RR(JR, GR, yR))
+    }
+
+    function VR(RR, JR, GR, yR, tR) {
+      return 0 === JR ? null : (iR(RR, JR, GR, yR, tR), new DataView(RR, JR, GR))
     }
   },
-  42109: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW,
-      e: () => UW,
-      f: () => bW,
-      h: () => jW,
-      l: () => xW,
-      o: () => lW,
-      p: () => tW,
-      t: () => ZW,
-      x: () => AW
+  42118: (RR, JR, GR) => {
+    GR.d(JR, {
+      C: () => eR,
+      e: () => yR,
+      i: () => nR,
+      l: () => aR,
+      m: () => LR,
+      p: () => wR,
+      s: () => rR,
+      u: () => VR,
+      y: () => KR
     });
-    class mW extends Error {
-      constructor(WW) {
-        super(`the join's code did not load: ${WW instanceof Error?WW.message:String(WW)}`, {
-          cause: WW
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === WW || void 0 === WW ? void 0 : WW.request
+    class yR extends Error {
+      constructor(RR) {
+        super(`the join's code did not load: ${RR instanceof Error?RR.message:String(RR)}`, {
+          cause: RR
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === RR || void 0 === RR ? void 0 : RR.request
       }
     }
-    let EW = null,
-      NW = null,
-      PW = null;
-    const LW = [];
-    let cW = null;
+    let tR = null,
+      uR = null,
+      ZR = null;
+    const qR = [];
+    let iR = null;
 
-    function wW(WW, iW) {
+    function fR(RR, JR) {
       try {
-        WW(iW)
-      } catch (OW) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", OW)
+        RR(JR)
+      } catch (GR) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", GR)
       }
     }
 
-    function tW() {
-      return cW
+    function VR() {
+      return iR
     }
 
-    function ZW(WW) {
-      LW.push(WW), null !== cW && wW(WW, cW)
+    function KR(RR) {
+      qR.push(RR), null !== iR && fR(RR, iR)
     }
 
-    function xW(WW) {
-      return EW ??= Promise.all([OW.e(85), OW.e(113), OW.e(88), OW.e(177), OW.e(91), OW.e(224), OW.e(252), OW.e(112), OW.e(142), OW.e(245), OW.e(244), OW.e(306), OW.e(243), OW.e(222), OW.e(50), OW.e(223), OW.e(127), OW.e(214), OW.e(280), OW.e(143), OW.e(103), OW.e(69)]).then((() => OW(54728))).then((iW => {
-        iW.loadAudio(WW), cW = iW;
-        for (const WW of LW) wW(WW, iW);
-        return iW
-      })).catch((WW => {
-        throw EW = null, WW
-      })), EW
+    function wR(RR) {
+      return tR ??= Promise.all([GR.e(85), GR.e(113), GR.e(88), GR.e(177), GR.e(91), GR.e(224), GR.e(252), GR.e(112), GR.e(142), GR.e(245), GR.e(244), GR.e(306), GR.e(243), GR.e(222), GR.e(50), GR.e(223), GR.e(127), GR.e(214), GR.e(280), GR.e(143), GR.e(103), GR.e(69)]).then((() => GR(54578))).then((JR => {
+        JR.loadAudio(RR), iR = JR;
+        for (const RR of qR) fR(RR, JR);
+        return JR
+      })).catch((RR => {
+        throw tR = null, RR
+      })), tR
     }
-    async function lW(WW, iW) {
+    async function rR(RR, JR) {
       try {
-        const OW = await xW(WW);
-        await OW.loadClientGame(iW)
-      } catch (OW) {
-        throw new mW(OW)
+        const GR = await wR(RR);
+        await GR.loadClientGame(JR)
+      } catch (GR) {
+        throw new yR(GR)
       }
     }
 
-    function AW(WW, iW) {
-      NW = {
-        running: WW,
-        shell: iW
+    function eR(RR, JR) {
+      uR = {
+        running: RR,
+        shell: JR
       }
     }
 
-    function bW() {
-      return PW
+    function aR() {
+      return ZR
     }
-    async function jW(WW) {
-      const iW = NW;
-      if ((null === iW || void 0 === iW ? void 0 : iW.running) !== WW) throw new Error("the core's session has ended");
-      const OW = await xW(iW.shell.audio).catch((WW => {
-        throw new mW(WW)
+    async function LR(RR) {
+      const JR = uR;
+      if ((null === JR || void 0 === JR ? void 0 : JR.running) !== RR) throw new Error("the core's session has ended");
+      const GR = await wR(JR.shell.audio).catch((RR => {
+        throw new yR(RR)
       }));
-      if (null !== PW) return PW;
-      if (NW !== iW || WW.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (PW = OW.startGameHost(WW, iW.shell), null === PW) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return PW
+      if (null !== ZR) return ZR;
+      if (uR !== JR || RR.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (ZR = GR.startGameHost(RR, JR.shell), null === ZR) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return ZR
     }
 
-    function UW() {
-      null !== PW && (null !== cW ? cW.endGameHost(PW) : PW.closeGame()), PW = null, NW = null
+    function nR() {
+      null !== ZR && (null !== iR ? iR.endGameHost(ZR) : ZR.closeGame()), ZR = null, uR = null
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,13 +1,13 @@
 export const id = 171;
 export const ids = [171];
 export const modules = {
-  7737: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      CoolMathGamesSdkAdaptor: () => NW
+  7873: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      CoolMathGamesSdkAdaptor: () => uR
     });
-    var mW = OW(1343),
-      EW = OW(1162);
-    class NW extends mW.c {
+    var yR = GR(1447),
+      tR = GR(1258);
+    class uR extends yR.d {
       constructor() {
         super(), this.name = "coolmathgames", this.adBreakStartCallback = () => {
           console.error("adBreakStartCallback not set")
@@ -17,22 +17,22 @@ export const modules = {
       }
       doAdBreakStart() {
         this.adBreakStartCallback();
-        const WW = document.getElementsByClassName("ads-popup");
-        for (const iW of WW) iW instanceof HTMLElement && (iW.style.position = "fixed")
+        const RR = document.getElementsByClassName("ads-popup");
+        for (const JR of RR) JR instanceof HTMLElement && (JR.style.position = "fixed")
       }
       doAdBreakComplete() {
         this.adBreakCompleteCallback()
       }
       static async setup() {
-        return await (0, EW.d)("https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"), await (0, EW.d)("https://www.coolmathgames.com/sites/default/files/cmg-ads.js"), new NW
+        return await (0, tR.c)("https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"), await (0, tR.c)("https://www.coolmathgames.com/sites/default/files/cmg-ads.js"), new uR
       }
-      playVideoAd(WW, iW) {
+      playVideoAd(RR, JR) {
         this.adBreakStartCallback = () => {
           console.log("CoolMathGames adBreak Started"), window.adStartSoPause(null, {
             preventMovement: !0
           })
         }, this.adBreakCompleteCallback = () => {
-          console.log("CoolMathGames adBreak Complete"), window.adCompleteSoResume(), WW()
+          console.log("CoolMathGames adBreak Complete"), window.adCompleteSoResume(), RR()
         }, window.hasOwnProperty("cmgAdBreak") && window.cmgAdBreak()
       }
       onGameplayStart() {
@@ -55,4 +55,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

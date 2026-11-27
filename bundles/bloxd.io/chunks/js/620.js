@@ -1,80 +1,80 @@
 export const id = 620;
 export const ids = [620];
 export const modules = {
-  53667: (WW, iW, OW) => {
-    OW.d(iW, {
-      ensureLocalBloxdTypes: () => UW
+  53508: (RR, JR, GR) => {
+    GR.d(JR, {
+      ensureLocalBloxdTypes: () => nR
     });
-    var mW = OW(5506),
-      EW = OW(53577),
-      NW = OW(53569),
-      PW = OW(38001),
-      LW = OW(38010),
-      cW = OW(38018);
-    const wW = JSON.stringify({
+    var yR = GR(5650),
+      tR = GR(53388),
+      uR = GR(53382),
+      ZR = GR(37967),
+      qR = GR(37976),
+      iR = GR(37988);
+    const fR = JSON.stringify({
       name: "@bloxd",
       types: "index.d.ts"
     }, null, "\t") + "\n";
 
-    function tW(WW) {
-      return WW.replace(/^\//, "")
+    function VR(RR) {
+      return RR.replace(/^\//, "")
     }
 
-    function ZW(WW) {
-      return tW((0, LW.v)(WW.name, "")).replace(/\/$/, "")
+    function KR(RR) {
+      return VR((0, qR.w)(RR.name, "")).replace(/\/$/, "")
     }
 
-    function xW(WW) {
-      return WW.typesVfsPath.slice(WW.typesVfsPath.lastIndexOf("/") + 1)
+    function wR(RR) {
+      return RR.typesVfsPath.slice(RR.typesVfsPath.lastIndexOf("/") + 1)
     }
 
-    function lW(WW) {
+    function rR(RR) {
       return JSON.stringify({
-        name: WW.specifier,
-        types: xW(WW)
+        name: RR.specifier,
+        types: wR(RR)
       }, null, "\t") + "\n"
     }
-    async function AW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-      const OW = [];
-      for await (const [mW, EW] of WW.entries()) {
-        const WW = iW ? `${iW}/${mW}` : mW;
-        "directory" !== EW.kind ? OW.push(WW) : OW.push(...await AW(EW, WW))
+    async function eR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const GR = [];
+      for await (const [yR, tR] of RR.entries()) {
+        const RR = JR ? `${JR}/${yR}` : yR;
+        "directory" !== tR.kind ? GR.push(RR) : GR.push(...await eR(tR, RR))
       }
-      return OW
+      return GR
     }
-    async function bW(WW, iW, OW) {
-      const mW = ZW(iW),
-        EW = await (0, cW.i)(WW, mW);
-      if (!EW) return;
-      const NW = new Set([xW(iW), "package.json"]);
-      if (OW)
-        for (const cW of Object.keys(iW.files)) NW.add(cW);
-      const PW = await AW(EW),
-        LW = new Set;
-      for (const ZW of PW) {
-        if (NW.has(ZW)) continue;
-        await (0, cW.C)(WW, `${mW}/${ZW}`);
-        const iW = ZW.split("/");
-        for (let WW = 1; WW < iW.length; WW++) LW.add(iW.slice(0, WW).join("/"))
+    async function aR(RR, JR, GR) {
+      const yR = KR(JR),
+        tR = await (0, iR.l)(RR, yR);
+      if (!tR) return;
+      const uR = new Set([wR(JR), "package.json"]);
+      if (GR)
+        for (const iR of Object.keys(JR.files)) uR.add(iR);
+      const ZR = await eR(tR),
+        qR = new Set;
+      for (const KR of ZR) {
+        if (uR.has(KR)) continue;
+        await (0, iR.E)(RR, `${yR}/${KR}`);
+        const JR = KR.split("/");
+        for (let RR = 1; RR < JR.length; RR++) qR.add(JR.slice(0, RR).join("/"))
       }
-      const wW = [...LW].sort(((WW, iW) => iW.split("/").length - WW.split("/").length));
-      for (const ZW of wW) try {
-        await (0, cW.C)(WW, `${mW}/${ZW}`)
-      } catch (tW) {
-        if (tW instanceof DOMException && "InvalidModificationError" === tW.name) continue;
-        throw tW
+      const fR = [...qR].sort(((RR, JR) => JR.split("/").length - RR.split("/").length));
+      for (const KR of fR) try {
+        await (0, iR.E)(RR, `${yR}/${KR}`)
+      } catch (VR) {
+        if (VR instanceof DOMException && "InvalidModificationError" === VR.name) continue;
+        throw VR
       }
     }
 
-    function jW(WW) {
-      const iW = {
+    function LR(RR) {
+      const JR = {
         "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
       };
-      for (const mW of Object.values(PW.e)) iW[mW.specifier] = [`.${mW.typesVfsPath}`];
-      const OW = [];
-      for (const mW of WW)
-        for (const WW of Object.keys(mW.files)) OW.push(tW((0, LW.v)(mW.name, WW)));
+      for (const yR of Object.values(ZR.i)) JR[yR.specifier] = [`.${yR.typesVfsPath}`];
+      const GR = [];
+      for (const yR of RR)
+        for (const RR of Object.keys(yR.files)) GR.push(VR((0, qR.w)(yR.name, RR)));
       return JSON.stringify({
         compilerOptions: {
           allowJs: !0,
@@ -87,26 +87,26 @@ export const modules = {
           noLib: !0,
           skipLibCheck: !0,
           baseUrl: ".",
-          paths: iW
+          paths: JR
         },
         include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
-        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...OW]
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...GR]
       }, null, "\t") + "\n"
     }
-    async function UW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-      const OW = new Set(iW.map((WW => WW.name))),
-        xW = Object.values(PW.e).flatMap((iW => {
-          const mW = tW(iW.typesVfsPath),
-            EW = `${ZW(iW)}/package.json`;
-          return [...OW.has(iW.name) ? Object.entries(iW.files).map((OW => {
-            let [mW, EW] = OW;
-            return (0, cW.K)(WW, tW((0, LW.v)(iW.name, mW)), EW)
-          })) : [], (0, cW.K)(WW, mW, iW.types), (0, cW.K)(WW, EW, lW(iW))]
+    async function nR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const GR = new Set(JR.map((RR => RR.name))),
+        wR = Object.values(ZR.i).flatMap((JR => {
+          const yR = VR(JR.typesVfsPath),
+            tR = `${KR(JR)}/package.json`;
+          return [...GR.has(JR.name) ? Object.entries(JR.files).map((GR => {
+            let [yR, tR] = GR;
+            return (0, iR.N)(RR, VR((0, qR.w)(JR.name, yR)), tR)
+          })) : [], (0, iR.N)(RR, yR, JR.types), (0, iR.N)(RR, tR, rR(JR))]
         }));
-      await Promise.all([(0, cW.K)(WW, "node_modules/@bloxd/index.d.ts", mW.default), (0, cW.K)(WW, "node_modules/@bloxd/globals.d.ts", NW.e), (0, cW.K)(WW, "node_modules/@bloxd/lib.d.ts", EW.e), (0, cW.K)(WW, "node_modules/@bloxd/package.json", wW), (0, cW.K)(WW, "tsconfig.json", jW(iW)), ...xW]), await Promise.all(Object.values(PW.e).map((iW => bW(WW, iW, OW.has(iW.name)))))
+      await Promise.all([(0, iR.N)(RR, "node_modules/@bloxd/index.d.ts", yR.default), (0, iR.N)(RR, "node_modules/@bloxd/globals.d.ts", uR.d), (0, iR.N)(RR, "node_modules/@bloxd/lib.d.ts", tR.b), (0, iR.N)(RR, "node_modules/@bloxd/package.json", fR), (0, iR.N)(RR, "tsconfig.json", LR(JR)), ...wR]), await Promise.all(Object.values(ZR.i).map((JR => aR(RR, JR, GR.has(JR.name)))))
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

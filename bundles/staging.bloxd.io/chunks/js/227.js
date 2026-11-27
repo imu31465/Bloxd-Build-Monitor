@@ -1,263 +1,263 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  37547: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      GiftOpening: () => Ni
+  37457: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      GiftOpening: () => uJ
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1172),
-      LW = OW(25),
-      cW = OW(1556),
-      wW = OW(35264),
-      tW = OW(5238),
-      ZW = OW(1532),
-      xW = OW(1391),
-      lW = OW(3291),
-      AW = OW(3627),
-      bW = OW(3247),
-      jW = OW(1107),
-      UW = OW(4311),
-      kW = OW(1283);
-    const sW = {
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1270),
+      qR = GR(25),
+      iR = GR(1618),
+      fR = GR(35193),
+      VR = GR(5338),
+      KR = GR(1590),
+      wR = GR(1468),
+      rR = GR(3413),
+      eR = GR(3724),
+      aR = GR(3361),
+      LR = GR(1196),
+      nR = GR(4394),
+      UR = GR(1378);
+    const WR = {
       festive: "\ud83c\udf84 \u26c4 \ud83c\udf81",
       sweater: "\u2744"
     };
 
-    function MW(WW) {
+    function AR(RR) {
       let {
-        wrap: iW,
-        className: OW,
-        rootRef: mW,
-        bodyRef: EW,
-        lidRef: PW,
-        seamRef: LW
-      } = WW;
-      const cW = sW[iW];
-      return (0, kW.jsxs)("div", {
-        className: NW()("GiftBox", `GiftBoxWrap_${iW}`, OW),
-        ref: mW,
-        children: [(0, kW.jsx)("div", {
+        wrap: JR,
+        className: GR,
+        rootRef: yR,
+        bodyRef: tR,
+        lidRef: ZR,
+        seamRef: qR
+      } = RR;
+      const iR = WR[JR];
+      return (0, UR.jsxs)("div", {
+        className: uR()("GiftBox", `GiftBoxWrap_${JR}`, GR),
+        ref: yR,
+        children: [(0, UR.jsx)("div", {
           className: "GiftBoxPlinth"
-        }), (0, kW.jsxs)("div", {
+        }), (0, UR.jsxs)("div", {
           className: "GiftBoxBody",
-          ref: EW,
-          children: [(0, kW.jsxs)("div", {
+          ref: tR,
+          children: [(0, UR.jsxs)("div", {
             className: "GiftBoxCube",
-            children: [(0, kW.jsxs)("div", {
+            children: [(0, UR.jsxs)("div", {
               className: "GiftBoxFace GiftBoxFront",
-              children: [cW && (0, kW.jsx)("span", {
+              children: [iR && (0, UR.jsx)("span", {
                 className: "GiftBoxPrint",
-                children: cW
-              }), "blocks" === iW && (0, kW.jsxs)("svg", {
+                children: iR
+              }), "blocks" === JR && (0, UR.jsxs)("svg", {
                 className: "GiftBoxCracks",
                 viewBox: "0 0 100 80",
                 "aria-hidden": !0,
-                children: [(0, kW.jsx)("polyline", {
+                children: [(0, UR.jsx)("polyline", {
                   points: "50,0 44,18 56,30 47,48 58,62 52,80"
-                }), (0, kW.jsx)("polyline", {
+                }), (0, UR.jsx)("polyline", {
                   points: "44,18 24,26 14,44"
-                }), (0, kW.jsx)("polyline", {
+                }), (0, UR.jsx)("polyline", {
                   points: "56,30 78,36 90,58"
                 })]
               })]
-            }), (0, kW.jsx)("div", {
+            }), (0, UR.jsx)("div", {
               className: "GiftBoxFace GiftBoxSide"
-            }), (0, kW.jsxs)("div", {
+            }), (0, UR.jsxs)("div", {
               className: "GiftBoxLid",
-              ref: PW,
-              children: [(0, kW.jsx)("div", {
+              ref: ZR,
+              children: [(0, UR.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidFront"
-              }), (0, kW.jsx)("div", {
+              }), (0, UR.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidSide"
-              }), (0, kW.jsx)("div", {
+              }), (0, UR.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidTop"
-              }), (0, kW.jsxs)("div", {
+              }), (0, UR.jsxs)("div", {
                 className: "GiftBoxBow",
-                children: [(0, kW.jsx)("div", {
+                children: [(0, UR.jsx)("div", {
                   className: "GiftBoxBowLoop GiftBoxBowLeft"
-                }), (0, kW.jsx)("div", {
+                }), (0, UR.jsx)("div", {
                   className: "GiftBoxBowLoop GiftBoxBowRight"
-                }), (0, kW.jsx)("div", {
+                }), (0, UR.jsx)("div", {
                   className: "GiftBoxBowKnot"
                 })]
               })]
             })]
-          }), (0, kW.jsx)("div", {
+          }), (0, UR.jsx)("div", {
             className: "GiftBoxSeam",
-            ref: LW
+            ref: qR
           })]
         })]
       })
     }
-    var KW = OW(5014),
-      SW = OW(4194),
-      YW = OW(2985);
+    var CR = GR(5112),
+      XR = GR(4276),
+      MR = GR(3062);
 
-    function yW(WW, iW) {
-      const [OW] = iW.cosmeticPacks;
-      return void 0 !== OW ? (0, YW.g)(OW) : iW.superDays > 0 ? WW("paymentHistory:superRankDays", {
-        count: iW.superDays
-      }) : iW.hyperDays > 0 ? WW("paymentHistory:hyperRankDays", {
-        count: iW.hyperDays
-      }) : WW("paymentHistory:premiumCurrency", {
-        count: iW.premiumCurrency
+    function BR(RR, JR) {
+      const [GR] = JR.cosmeticPacks;
+      return void 0 !== GR ? (0, MR.j)(GR) : JR.superDays > 0 ? RR("paymentHistory:superRankDays", {
+        count: JR.superDays
+      }) : JR.hyperDays > 0 ? RR("paymentHistory:hyperRankDays", {
+        count: JR.hyperDays
+      }) : RR("paymentHistory:premiumCurrency", {
+        count: JR.premiumCurrency
       })
     }
 
-    function TW(WW) {
-      var iW, OW;
+    function lR(RR) {
+      var JR, GR;
       const {
-        t: mW
-      } = (0, PW.B)(), EW = SW.g.find((iW => iW.id === WW.message));
+        t: yR
+      } = (0, ZR.A)(), tR = XR.h.find((JR => JR.id === RR.message));
       return {
-        message: void 0 === EW ? null : mW(EW.key, {
-          name: WW.recipientName,
-          level: null !== (iW = WW.senderLevel) && void 0 !== iW ? iW : 1,
-          tier: null !== (OW = WW.tierLabel) && void 0 !== OW ? OW : ""
+        message: void 0 === tR ? null : yR(tR.key, {
+          name: RR.recipientName,
+          level: null !== (JR = RR.senderLevel) && void 0 !== JR ? JR : 1,
+          tier: null !== (GR = RR.tierLabel) && void 0 !== GR ? GR : ""
         }),
-        level: null === WW.senderLevel || "levelFlex" === (null === EW || void 0 === EW ? void 0 : EW.kind) ? null : mW("giftOpening:gifterLevel", {
-          level: WW.senderLevel
+        level: null === RR.senderLevel || "levelFlex" === (null === tR || void 0 === tR ? void 0 : tR.kind) ? null : yR("giftOpening:gifterLevel", {
+          level: RR.senderLevel
         })
       }
     }
 
-    function JW(WW) {
+    function pR(RR) {
       let {
-        gift: iW,
-        shown: OW
-      } = WW;
+        gift: JR,
+        shown: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)(), {
-        message: EW,
-        level: LW
-      } = TW(iW);
-      return (0, kW.jsxs)("div", {
-        className: NW()("GiftOpeningCard", {
-          GiftOpeningCardShown: OW
+        t: yR
+      } = (0, ZR.A)(), {
+        message: tR,
+        level: qR
+      } = lR(JR);
+      return (0, UR.jsxs)("div", {
+        className: uR()("GiftOpeningCard", {
+          GiftOpeningCardShown: GR
         }),
-        children: [(0, kW.jsx)("div", {
+        children: [(0, UR.jsx)("div", {
           className: "GiftOpeningItem SmallTextBold",
-          children: yW(mW, iW.items)
-        }), null !== EW && (0, kW.jsx)("div", {
+          children: BR(yR, JR.items)
+        }), null !== tR && (0, UR.jsx)("div", {
           className: "GiftOpeningCardMessage SmallTextLight",
-          children: EW
-        }), (0, kW.jsxs)("div", {
+          children: tR
+        }), (0, UR.jsxs)("div", {
           className: "GiftOpeningFrom SmallTextLight",
-          children: [iW.senderName, null !== LW && ` \xb7 ${LW}`]
+          children: [JR.senderName, null !== qR && ` \xb7 ${qR}`]
         })]
       })
     }
 
-    function hW(WW) {
+    function gR(RR) {
       let {
-        gift: iW
-      } = WW;
+        gift: JR
+      } = RR;
       const {
-        message: OW,
-        level: mW
-      } = TW(iW);
-      return (0, kW.jsxs)(kW.Fragment, {
-        children: [null !== OW && (0, kW.jsx)("div", {
+        message: GR,
+        level: yR
+      } = lR(JR);
+      return (0, UR.jsxs)(UR.Fragment, {
+        children: [null !== GR && (0, UR.jsx)("div", {
           className: "GiftOpeningIntroMessage SmallTextLight",
-          children: `"${OW}"`
-        }), null !== mW && (0, kW.jsx)("div", {
+          children: `"${GR}"`
+        }), null !== yR && (0, UR.jsx)("div", {
           className: "GiftOpeningIntroLevel SmallTextBold",
-          children: mW
+          children: yR
         })]
       })
     }
 
-    function HW(WW) {
+    function bR(RR) {
       let {
-        gift: iW,
-        preview: OW,
-        analyticsValue: mW,
-        onReplay: EW,
-        onClose: NW
-      } = WW;
+        gift: JR,
+        preview: GR,
+        analyticsValue: yR,
+        onReplay: tR,
+        onClose: uR
+      } = RR;
       const {
-        t: wW
-      } = (0, PW.B)(), {
-        gameState: tW
-      } = (0, LW.p)(["gameState"]), lW = !OW && iW.items.cosmeticPacks.length > 0 && !(0, LW.e)(tW);
-      return (0, kW.jsxs)("div", {
+        t: fR
+      } = (0, ZR.A)(), {
+        gameState: VR
+      } = (0, qR.o)(["gameState"]), rR = !GR && JR.items.cosmeticPacks.length > 0 && !(0, qR.h)(VR);
+      return (0, UR.jsxs)("div", {
         className: "GiftOpeningButtons",
-        children: [OW && (0, kW.jsxs)(ZW.f, {
+        children: [GR && (0, UR.jsxs)(KR.g, {
           className: "GiftOpeningButton",
           touchPressOn: "pointerup",
-          onClick: EW,
-          children: [(0, kW.jsx)(xW.c, {
+          onClick: tR,
+          children: [(0, UR.jsx)(wR.d, {
             name: "rotate-right"
-          }), " ", wW("giftOpening:replay")]
-        }), lW && (0, kW.jsx)(ZW.f, {
+          }), " ", fR("giftOpening:replay")]
+        }), rR && (0, UR.jsx)(KR.g, {
           className: "GiftOpeningButton",
           padDefaultFocus: !0,
           touchPressOn: "pointerup",
           onClick: () => {
-            (0, cW.reportAnalyticsClick)({
+            (0, iR.reportAnalyticsClick)({
               id: "gift.open_customise",
-              value: mW
-            }), (0, YW.k)(), NW()
+              value: yR
+            }), (0, MR.o)(), uR()
           },
-          children: wW("general:customize")
-        }), (0, kW.jsx)(ZW.f, {
+          children: fR("general:customize")
+        }), (0, UR.jsx)(KR.g, {
           className: "GiftOpeningButton",
-          padDefaultFocus: !lW,
+          padDefaultFocus: !rR,
           touchPressOn: "pointerup",
-          onClick: NW,
-          children: wW(OW ? "giftOpening:back" : "giftOpening:done")
+          onClick: uR,
+          children: fR(GR ? "giftOpening:back" : "giftOpening:done")
         })]
       })
     }
-    var nW = OW(37555);
-    const uW = {
+    var vR = GR(37466);
+    const OR = {
         1: "harp_pling",
         2: "exp_levelup",
         3: "trumpetFlare"
       },
-      oW = {
+      xR = {
         wobble: "chestClose",
         pop: "chestOpen",
         sparkle: "exp_collect"
       },
-      dW = {
+      NR = {
         wobble: .55,
         pop: .8,
         sparkle: .4,
         sting: .7
       };
 
-    function eW(WW, iW) {
-      return "sting" === WW ? uW[iW] : oW[WW]
+    function DR(RR, JR) {
+      return "sting" === RR ? OR[JR] : xR[RR]
     }
 
-    function vW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+    function HR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
       try {
-        nW.c.play(eW(WW, iW), dW[WW]).rate(Math.pow(2, 2 * OW / 12))
-      } catch (mW) {
-        console.warn("[gift-opening] a sound failed to play", mW)
+        vR.d.play(DR(RR, JR), NR[RR]).rate(Math.pow(2, 2 * GR / 12))
+      } catch (yR) {
+        console.warn("[gift-opening] a sound failed to play", yR)
       }
     }
-    const gW = "cubic-bezier(0.22, 1, 0.36, 1)";
-    class DW {
-      constructor(WW, iW) {
-        this.parts = WW, this.options = iW, this.phase = "arrive", this.timers = [], this.animations = [], this.opened = !1, this.popped = !1
+    const oR = "cubic-bezier(0.22, 1, 0.36, 1)";
+    class cR {
+      constructor(RR, JR) {
+        this.parts = RR, this.options = JR, this.phase = "arrive", this.timers = [], this.animations = [], this.opened = !1, this.popped = !1
       }
-      setPhase(WW) {
-        this.phase = WW, this.options.onPhase(WW)
+      setPhase(RR) {
+        this.phase = RR, this.options.onPhase(RR)
       }
-      at(WW, iW) {
-        this.timers.push(setTimeout(iW, WW))
+      at(RR, JR) {
+        this.timers.push(setTimeout(JR, RR))
       }
-      animate(WW, iW, OW) {
-        this.animations.push(WW.animate(iW, {
+      animate(RR, JR, GR) {
+        this.animations.push(RR.animate(JR, {
           fill: "forwards",
-          ...OW
+          ...GR
         }))
       }
       markOpened() {
@@ -265,9 +265,9 @@ export const modules = {
       }
       arrive() {
         const {
-          timeline: WW,
-          reducedMotion: iW
-        } = this.options, OW = iW ? [{
+          timeline: RR,
+          reducedMotion: JR
+        } = this.options, GR = JR ? [{
           opacity: 0
         }, {
           opacity: 1
@@ -285,10 +285,10 @@ export const modules = {
         }, {
           transform: "none"
         }];
-        this.animate(this.parts.body, OW, {
-          duration: iW ? 200 : WW.arriveMs,
+        this.animate(this.parts.body, GR, {
+          duration: JR ? 200 : RR.arriveMs,
           fill: "none"
-        }), this.at(iW ? 200 : WW.arriveMs, (() => {
+        }), this.at(JR ? 200 : RR.arriveMs, (() => {
           this.setPhase("wait")
         }))
       }
@@ -318,105 +318,105 @@ export const modules = {
           transform: "none"
         }], {
           duration: 300
-        }), vW("sting", this.options.tier), this.at(300, (() => {
+        }), HR("sting", this.options.tier), this.at(300, (() => {
           this.setPhase("done")
         }))
       }
       charge() {
         const {
-          timeline: WW,
-          tier: iW,
-          fx: OW
+          timeline: RR,
+          tier: JR,
+          fx: GR
         } = this.options;
         this.setPhase("charge");
-        const mW = WW.wobbles,
-          EW = WW.burstAt,
-          NW = (WW.chargeMs - 80) / mW.length,
-          PW = [{
+        const yR = RR.wobbles,
+          tR = RR.burstAt,
+          uR = (RR.chargeMs - 80) / yR.length,
+          ZR = [{
             transform: "none",
             offset: 0
           }, {
             transform: "scale(1.06, 0.92)",
-            offset: 80 / EW
+            offset: 80 / tR
           }];
-        mW.forEach(((WW, OW) => {
-          const mW = 80 + OW * NW;
-          PW.push({
-            transform: `rotate(${WW}deg) translateX(${.3*WW}px)`,
-            offset: (mW + .3 * NW) / EW
-          }), PW.push({
-            transform: `rotate(${-WW}deg) translateX(${.3*-WW}px)`,
-            offset: (mW + .75 * NW) / EW
-          }), this.at(mW, (() => {
-            vW("wobble", iW, OW)
+        yR.forEach(((RR, GR) => {
+          const yR = 80 + GR * uR;
+          ZR.push({
+            transform: `rotate(${RR}deg) translateX(${.3*RR}px)`,
+            offset: (yR + .3 * uR) / tR
+          }), ZR.push({
+            transform: `rotate(${-RR}deg) translateX(${.3*-RR}px)`,
+            offset: (yR + .75 * uR) / tR
+          }), this.at(yR, (() => {
+            HR("wobble", JR, GR)
           }))
-        })), PW.push({
+        })), ZR.push({
           transform: "rotate(0deg)",
-          offset: WW.chargeMs / EW
-        }), PW.push({
+          offset: RR.chargeMs / tR
+        }), ZR.push({
           transform: "scale(1.12, 0.84)",
-          offset: (WW.chargeMs + 40) / EW
-        }), PW.push({
+          offset: (RR.chargeMs + 40) / tR
+        }), ZR.push({
           transform: "scale(1.12, 0.84)",
           offset: 1
-        }), this.animate(this.parts.body, PW, {
-          duration: EW
+        }), this.animate(this.parts.body, ZR, {
+          duration: tR
         });
-        const LW = [{
+        const qR = [{
           opacity: 0,
           transform: "translate(-50%, -50%) scale(0.6)"
         }];
-        mW.forEach(((WW, iW) => {
-          const OW = (iW + 1) / (mW.length + .5);
-          LW.push({
-            opacity: OW,
-            transform: `translate(-50%, -50%) scale(${.7+.5*OW})`,
-            offset: (80 + (iW + 1) * NW) / EW
+        yR.forEach(((RR, JR) => {
+          const GR = (JR + 1) / (yR.length + .5);
+          qR.push({
+            opacity: GR,
+            transform: `translate(-50%, -50%) scale(${.7+.5*GR})`,
+            offset: (80 + (JR + 1) * uR) / tR
           })
-        })), LW.push({
+        })), qR.push({
           opacity: 1,
           transform: "translate(-50%, -50%) scale(1.3)"
-        }), this.animate(this.parts.seam, LW, {
-          duration: EW,
+        }), this.animate(this.parts.seam, qR, {
+          duration: tR,
           easing: "linear"
         });
-        const cW = this.parts.box.querySelector(".GiftBoxCracks");
-        cW && this.animate(cW, [{
+        const iR = this.parts.box.querySelector(".GiftBoxCracks");
+        iR && this.animate(iR, [{
           opacity: 0
         }, {
           opacity: 1
         }], {
-          duration: EW,
+          duration: tR,
           easing: "steps(3, end)"
         });
         const {
-          x: wW,
-          y: tW
+          x: fR,
+          y: VR
         } = this.boxCentre();
-        null === OW || void 0 === OW || OW.charge(wW, tW, WW.chargeMs), this.at(EW, (() => {
-          this.burst(EW)
+        null === GR || void 0 === GR || GR.charge(fR, VR, RR.chargeMs), this.at(tR, (() => {
+          this.burst(tR)
         }))
       }
       boxCentre() {
-        const WW = this.parts.box.getBoundingClientRect();
+        const RR = this.parts.box.getBoundingClientRect();
         return {
-          x: WW.left + WW.width / 2,
-          y: WW.top + .45 * WW.height,
-          floorY: WW.bottom
+          x: RR.left + RR.width / 2,
+          y: RR.top + .45 * RR.height,
+          floorY: RR.bottom
         }
       }
-      burst(WW) {
+      burst(RR) {
         const {
-          timeline: iW,
-          tier: OW,
-          fx: mW
+          timeline: JR,
+          tier: GR,
+          fx: yR
         } = this.options;
         if (this.popped) return;
         this.popped = !0, this.markOpened();
-        const EW = iW => Math.max(0, iW - WW),
-          NW = {
+        const tR = JR => Math.max(0, JR - RR),
+          uR = {
             duration: 620,
-            easing: gW
+            easing: oR
           };
         this.animate(this.parts.lid, [{
           transform: "translateY(-0.36em)"
@@ -425,15 +425,15 @@ export const modules = {
           offset: .55
         }, {
           transform: "translate(0.6em, -3.2em) rotateZ(40deg) rotateX(40deg)"
-        }], NW);
-        for (const wW of this.parts.lid.querySelectorAll(":scope > *")) this.animate(wW, [{
+        }], uR);
+        for (const fR of this.parts.lid.querySelectorAll(":scope > *")) this.animate(fR, [{
           opacity: 1
         }, {
           opacity: 1,
           offset: .55
         }, {
           opacity: 0
-        }], NW);
+        }], uR);
         if (this.animate(this.parts.body, [{
             transform: "scale(1.12, 0.84)"
           }, {
@@ -452,11 +452,11 @@ export const modules = {
             transform: "translate(-50%, -50%) scale(3)"
           }], {
             duration: 380,
-            easing: gW
-          }), iW.flashAlpha > 0 && this.animate(this.parts.flash, [{
+            easing: oR
+          }), JR.flashAlpha > 0 && this.animate(this.parts.flash, [{
             opacity: 0
           }, {
-            opacity: iW.flashAlpha,
+            opacity: JR.flashAlpha,
             offset: .2
           }, {
             opacity: 0
@@ -471,7 +471,7 @@ export const modules = {
             transform: "translate(-50%, -50%) scale(3.6)"
           }], {
             duration: 520,
-            easing: gW
+            easing: oR
           }), this.animate(this.parts.beam, [{
             opacity: 0,
             transform: "translateX(-50%) scaleY(0)"
@@ -484,17 +484,17 @@ export const modules = {
             transform: "translateX(-50%) scaleY(1) scaleX(0.3)"
           }], {
             duration: 900,
-            easing: gW
-          }), iW.kickPx > 0) {
-          const WW = iW.kickPx;
+            easing: oR
+          }), JR.kickPx > 0) {
+          const RR = JR.kickPx;
           this.animate(this.parts.shake, [{
             transform: "none"
           }, {
-            transform: `translate(${WW}px, ${-WW}px)`
+            transform: `translate(${RR}px, ${-RR}px)`
           }, {
-            transform: `translate(${.7*-WW}px, ${.5*WW}px)`
+            transform: `translate(${.7*-RR}px, ${.5*RR}px)`
           }, {
-            transform: `translate(${.4*WW}px, ${.3*WW}px)`
+            transform: `translate(${.4*RR}px, ${.3*RR}px)`
           }, {
             transform: "none"
           }], {
@@ -503,25 +503,25 @@ export const modules = {
             fill: "none"
           })
         }
-        vW("pop", OW), vW("sparkle", OW, 2);
+        HR("pop", GR), HR("sparkle", GR, 2);
         const {
-          x: PW,
-          y: LW,
-          floorY: cW
+          x: ZR,
+          y: qR,
+          floorY: iR
         } = this.boxCentre();
-        null === mW || void 0 === mW || mW.burst(PW, LW, iW.burstParticles, cW), this.at(EW(iW.revealAt), (() => {
+        null === yR || void 0 === yR || yR.burst(ZR, qR, JR.burstParticles, iR), this.at(tR(JR.revealAt), (() => {
           this.reveal()
-        })), this.at(EW(iW.cardAt), (() => {
+        })), this.at(tR(JR.cardAt), (() => {
           this.setPhase("card")
-        })), this.at(EW(iW.buttonsAt), (() => {
+        })), this.at(tR(JR.buttonsAt), (() => {
           this.setPhase("done")
         }))
       }
       reveal() {
         const {
-          timeline: WW,
-          tier: iW,
-          fx: OW
+          timeline: RR,
+          tier: JR,
+          fx: GR
         } = this.options;
         this.setPhase("reveal"), this.animate(this.parts.character, [{
           opacity: 0,
@@ -535,7 +535,7 @@ export const modules = {
           transform: "none"
         }], {
           duration: 520,
-          easing: gW
+          easing: oR
         }), this.animate(this.parts.body, [{
           opacity: 1,
           transform: "none"
@@ -546,30 +546,30 @@ export const modules = {
           duration: 420,
           delay: 120,
           easing: "ease-in"
-        }), vW("sting", iW), null === OW || void 0 === OW || OW.linger(this.boxCentre().x, WW.buttonsAt - WW.revealAt + 1500, WW.rain)
+        }), HR("sting", JR), null === GR || void 0 === GR || GR.linger(this.boxCentre().x, RR.buttonsAt - RR.revealAt + 1500, RR.rain)
       }
       skip() {
-        var WW;
-        (this.clearTimers(), this.cancelAnimations(), this.popped) || (null === (WW = this.options.fx) || void 0 === WW || WW.clear());
+        var RR;
+        (this.clearTimers(), this.cancelAnimations(), this.popped) || (null === (RR = this.options.fx) || void 0 === RR || RR.clear());
         this.markOpened(), this.parts.body.style.opacity = "0", this.parts.character.style.opacity = "1", this.parts.character.style.transform = "none", this.setPhase("done")
       }
       cancelAnimations() {
-        for (const WW of this.animations) WW.cancel();
+        for (const RR of this.animations) RR.cancel();
         this.animations = []
       }
       clearTimers() {
-        for (const WW of this.timers) clearTimeout(WW);
+        for (const RR of this.timers) clearTimeout(RR);
         this.timers = []
       }
       dispose() {
         this.clearTimers(), this.cancelAnimations(), this.parts.body.style.removeProperty("opacity"), this.parts.character.style.removeProperty("opacity"), this.parts.character.style.removeProperty("transform")
       }
     }
-    const VW = {
+    const PR = {
       2: 500,
       3: 1200
     };
-    const pW = {
+    const IR = {
       1: {
         arriveMs: 450,
         wobbles: [5, 9],
@@ -611,80 +611,80 @@ export const modules = {
       }
     };
 
-    function fW(WW) {
-      const iW = pW[WW];
+    function mR(RR) {
+      const JR = IR[RR];
       return {
-        ...iW,
-        burstAt: iW.chargeMs + iW.hitStopMs
+        ...JR,
+        burstAt: JR.chargeMs + JR.hitStopMs
       }
     }
-    const CW = {
+    const zR = {
       1: "#5ab8ff",
       2: "#b673ff",
       3: "#ffc83d"
     };
 
-    function XW(WW, iW, OW) {
-      const mW = document.createElement("canvas"),
-        EW = Math.ceil(WW * iW);
-      mW.width = EW, mW.height = EW;
-      const NW = mW.getContext("2d");
-      return NW && OW(NW, EW), {
-        image: mW
+    function SR(RR, JR, GR) {
+      const yR = document.createElement("canvas"),
+        tR = Math.ceil(RR * JR);
+      yR.width = tR, yR.height = tR;
+      const uR = yR.getContext("2d");
+      return uR && GR(uR, tR), {
+        image: yR
       }
     }
 
-    function BW(WW, iW) {
-      return XW(16, iW, ((iW, OW) => {
-        iW.fillStyle = WW, iW.fillRect(.3 * OW, 0, .4 * OW, OW)
+    function jR(RR, JR) {
+      return SR(16, JR, ((JR, GR) => {
+        JR.fillStyle = RR, JR.fillRect(.3 * GR, 0, .4 * GR, GR)
       }))
     }
 
-    function qW(WW, iW, OW) {
-      return XW(14, OW, ((OW, mW) => {
-        OW.fillStyle = iW, OW.fillRect(0, 0, mW, mW), OW.fillStyle = WW, OW.fillRect(0, 0, mW, .35 * mW)
+    function dR(RR, JR, GR) {
+      return SR(14, GR, ((GR, yR) => {
+        GR.fillStyle = JR, GR.fillRect(0, 0, yR, yR), GR.fillStyle = RR, GR.fillRect(0, 0, yR, .35 * yR)
       }))
     }
 
-    function RW(WW, iW) {
-      return XW(18, iW, ((iW, OW) => {
-        iW.fillStyle = WW, iW.beginPath(), iW.moveTo(OW / 2, 0), iW.lineTo(.85 * OW, .55 * OW), iW.lineTo(OW / 2, OW), iW.lineTo(.2 * OW, .45 * OW), iW.closePath(), iW.fill(), iW.fillStyle = "rgba(255,255,255,0.55)", iW.beginPath(), iW.moveTo(OW / 2, 0), iW.lineTo(.6 * OW, .5 * OW), iW.lineTo(.2 * OW, .45 * OW), iW.closePath(), iW.fill()
+    function ER(RR, JR) {
+      return SR(18, JR, ((JR, GR) => {
+        JR.fillStyle = RR, JR.beginPath(), JR.moveTo(GR / 2, 0), JR.lineTo(.85 * GR, .55 * GR), JR.lineTo(GR / 2, GR), JR.lineTo(.2 * GR, .45 * GR), JR.closePath(), JR.fill(), JR.fillStyle = "rgba(255,255,255,0.55)", JR.beginPath(), JR.moveTo(GR / 2, 0), JR.lineTo(.6 * GR, .5 * GR), JR.lineTo(.2 * GR, .45 * GR), JR.closePath(), JR.fill()
       }))
     }
 
-    function GW(WW, iW) {
-      return XW(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20, iW, ((iW, OW) => {
-        const mW = OW / 2;
-        iW.fillStyle = WW, iW.beginPath();
-        for (let WW = 0; WW < 10; WW++) {
-          const OW = WW % 2 === 0 ? mW : .45 * mW,
-            EW = -Math.PI / 2 + WW * Math.PI / 5;
-          iW.lineTo(mW + Math.cos(EW) * OW, mW + Math.sin(EW) * OW)
+    function YR(RR, JR) {
+      return SR(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20, JR, ((JR, GR) => {
+        const yR = GR / 2;
+        JR.fillStyle = RR, JR.beginPath();
+        for (let RR = 0; RR < 10; RR++) {
+          const GR = RR % 2 === 0 ? yR : .45 * yR,
+            tR = -Math.PI / 2 + RR * Math.PI / 5;
+          JR.lineTo(yR + Math.cos(tR) * GR, yR + Math.sin(tR) * GR)
         }
-        iW.closePath(), iW.fill()
+        JR.closePath(), JR.fill()
       }))
     }
 
-    function IW(WW, iW) {
-      return XW(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24, iW, ((iW, OW) => {
-        const mW = iW.createRadialGradient(OW / 2, OW / 2, 0, OW / 2, OW / 2, OW / 2);
-        mW.addColorStop(0, "rgba(255,255,255,1)"), mW.addColorStop(.25, WW), mW.addColorStop(1, "rgba(0,0,0,0)"), iW.fillStyle = mW, iW.fillRect(0, 0, OW, OW)
+    function kR(RR, JR) {
+      return SR(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24, JR, ((JR, GR) => {
+        const yR = JR.createRadialGradient(GR / 2, GR / 2, 0, GR / 2, GR / 2, GR / 2);
+        yR.addColorStop(0, "rgba(255,255,255,1)"), yR.addColorStop(.25, RR), yR.addColorStop(1, "rgba(0,0,0,0)"), JR.fillStyle = yR, JR.fillRect(0, 0, GR, GR)
       }))
     }
-    const aW = {
-      classic: WW => [BW("#e63946", WW), BW("#ffffff", WW), BW("#ffd166", WW), BW("#2a9d8f", WW), GW("#ffd166", WW, 14)],
-      blocks: WW => [qW("#6abe30", "#8a5a33", WW), qW("#8a5a33", "#6d4426", WW), qW("#9da3a6", "#7b8083", WW), qW("#7ff3f0", "#3fb7c0", WW)],
-      gems: WW => [RW("#b673ff", WW), RW("#ff7ad9", WW), RW("#6fe0ff", WW), RW("#ffffff", WW)],
-      stars: WW => [GW("#fff6b0", WW), GW("#ffffff", WW, 14), GW("#9fd0ff", WW, 12), IW("#9fd0ff", WW, 16)],
-      legend: WW => [BW("#ffc83d", WW), BW("#ff5d8f", WW), BW("#5ab8ff", WW), BW("#7cf29a", WW), GW("#ffc83d", WW), GW("#fff4c2", WW, 14)],
-      sweater: WW => [IW("#ffffff", WW, 18), IW("#dff3ff", WW, 12), GW("#ffffff", WW, 12)],
-      festive: WW => ["\ud83c\udf84", "\u26c4", "\ud83c\udf81", "\u2744\ufe0f", "\u2b50"].map((iW => function(WW, iW) {
-        return XW(26, iW, ((iW, OW) => {
-          iW.font = `${Math.round(.8*OW)}px sans-serif`, iW.textAlign = "center", iW.textBaseline = "middle", iW.fillText(WW, OW / 2, OW / 2 + .05 * OW)
+    const QR = {
+      classic: RR => [jR("#e63946", RR), jR("#ffffff", RR), jR("#ffd166", RR), jR("#2a9d8f", RR), YR("#ffd166", RR, 14)],
+      blocks: RR => [dR("#6abe30", "#8a5a33", RR), dR("#8a5a33", "#6d4426", RR), dR("#9da3a6", "#7b8083", RR), dR("#7ff3f0", "#3fb7c0", RR)],
+      gems: RR => [ER("#b673ff", RR), ER("#ff7ad9", RR), ER("#6fe0ff", RR), ER("#ffffff", RR)],
+      stars: RR => [YR("#fff6b0", RR), YR("#ffffff", RR, 14), YR("#9fd0ff", RR, 12), kR("#9fd0ff", RR, 16)],
+      legend: RR => [jR("#ffc83d", RR), jR("#ff5d8f", RR), jR("#5ab8ff", RR), jR("#7cf29a", RR), YR("#ffc83d", RR), YR("#fff4c2", RR, 14)],
+      sweater: RR => [kR("#ffffff", RR, 18), kR("#dff3ff", RR, 12), YR("#ffffff", RR, 12)],
+      festive: RR => ["\ud83c\udf84", "\u26c4", "\ud83c\udf81", "\u2744\ufe0f", "\u2b50"].map((JR => function(RR, JR) {
+        return SR(26, JR, ((JR, GR) => {
+          JR.font = `${Math.round(.8*GR)}px sans-serif`, JR.textAlign = "center", JR.textBaseline = "middle", JR.fillText(RR, GR / 2, GR / 2 + .05 * GR)
         }))
-      }(iW, WW)))
+      }(JR, RR)))
     };
-    const rW = {
+    const FR = {
       classic: {
         gravity: 1e3,
         speed: [380, 760],
@@ -743,579 +743,579 @@ export const modules = {
       }
     };
 
-    function zW(WW) {
-      let [iW, OW] = WW;
-      return iW + Math.random() * (OW - iW)
+    function TR(RR) {
+      let [JR, GR] = RR;
+      return JR + Math.random() * (GR - JR)
     }
 
-    function FW(WW) {
-      return WW[Math.floor(Math.random() * WW.length)]
+    function sR(RR) {
+      return RR[Math.floor(Math.random() * RR.length)]
     }
-    class QW {
-      constructor(WW, iW) {
-        var OW, mW, EW;
-        this.canvas = WW, this.options = iW, this.context = void 0, this.sprites = void 0, this.particles = [], this.scale = void 0, this.frame = 0, this.lastAt = 0, this.embersUntil = 0, this.embersX = 0, this.rainUntil = 0, this.spawnCarry = 0, this.stopped = !1, this.frameMs = [], this.hZ = WW => {
-          const iW = Math.min(WW - this.lastAt, 50);
-          this.lastAt = WW, this.spawnLingering(iW), this.step(iW), this.draw();
-          const OW = WW < this.embersUntil || WW < this.rainUntil;
-          this.frame = this.particles.length > 0 || OW ? requestAnimationFrame(this.hZ) : 0, 0 === this.frame && (this.canvas.style.visibility = "hidden")
-        }, this.context = WW.getContext("2d"), this.scale = Math.min(window.devicePixelRatio || 1, iW.phone ? 1.5 : 2), this.sprites = (OW = iW.wrap, mW = CW[iW.tier], EW = this.scale, {
-          burst: aW[OW](EW),
-          spark: IW(mW, EW),
-          rain: [GW("#ffc83d", EW, 16), BW("#ffc83d", EW), BW("#fff1b8", EW)]
+    class hR {
+      constructor(RR, JR) {
+        var GR, yR, tR;
+        this.canvas = RR, this.options = JR, this.context = void 0, this.sprites = void 0, this.particles = [], this.scale = void 0, this.frame = 0, this.lastAt = 0, this.embersUntil = 0, this.embersX = 0, this.rainUntil = 0, this.spawnCarry = 0, this.stopped = !1, this.frameMs = [], this.gK = RR => {
+          const JR = Math.min(RR - this.lastAt, 50);
+          this.lastAt = RR, this.spawnLingering(JR), this.step(JR), this.draw();
+          const GR = RR < this.embersUntil || RR < this.rainUntil;
+          this.frame = this.particles.length > 0 || GR ? requestAnimationFrame(this.gK) : 0, 0 === this.frame && (this.canvas.style.visibility = "hidden")
+        }, this.context = RR.getContext("2d"), this.scale = Math.min(window.devicePixelRatio || 1, JR.phone ? 1.5 : 2), this.sprites = (GR = JR.wrap, yR = zR[JR.tier], tR = this.scale, {
+          burst: QR[GR](tR),
+          spark: kR(yR, tR),
+          rain: [YR("#ffc83d", tR, 16), jR("#ffc83d", tR), jR("#fff1b8", tR)]
         }), this.resize()
       }
       resize() {
         const {
-          clientWidth: WW,
-          clientHeight: iW
+          clientWidth: RR,
+          clientHeight: JR
         } = this.canvas;
-        this.canvas.width = Math.round(WW * this.scale), this.canvas.height = Math.round(iW * this.scale)
+        this.canvas.width = Math.round(RR * this.scale), this.canvas.height = Math.round(JR * this.scale)
       }
-      count(WW) {
-        return Math.round(this.options.phone ? WW / 2 : WW)
+      count(RR) {
+        return Math.round(this.options.phone ? RR / 2 : RR)
       }
-      add(WW) {
+      add(RR) {
         this.particles.push({
           motion: "fall",
-          vx: 0,
-          WH: 0,
+          KD: 0,
+          vy: 0,
           gravity: 0,
           drag: 0,
           rotation: Math.random() * Math.PI * 2,
           spin: 0,
           flutterSpeed: 0,
-          fromX: WW.x,
-          fromY: WW.y,
-          toX: WW.x,
-          toY: WW.y,
+          fromX: RR.x,
+          fromY: RR.y,
+          toX: RR.x,
+          toY: RR.y,
           floorY: 1 / 0,
           additive: !1,
-          ...WW,
+          ...RR,
           flutter: Math.random() * Math.PI * 2,
           ageMs: 0
         }), this.wake()
       }
-      charge(WW, iW, OW) {
-        for (let mW = 0; mW < this.count(18 + 8 * this.options.tier); mW++) {
-          const mW = Math.random() * Math.PI * 2,
-            EW = zW([120, 240]);
+      charge(RR, JR, GR) {
+        for (let yR = 0; yR < this.count(18 + 8 * this.options.tier); yR++) {
+          const yR = Math.random() * Math.PI * 2,
+            tR = TR([120, 240]);
           this.add({
             sprite: this.sprites.spark,
             motion: "converge",
-            x: WW,
-            y: iW,
-            fromX: WW + Math.cos(mW) * EW,
-            fromY: iW + Math.sin(mW) * EW,
-            size: zW([.5, 1]),
-            lifeMs: OW * zW([.55, 1]),
+            x: RR,
+            y: JR,
+            fromX: RR + Math.cos(yR) * tR,
+            fromY: JR + Math.sin(yR) * tR,
+            size: TR([.5, 1]),
+            lifeMs: GR * TR([.55, 1]),
             additive: !0
           })
         }
       }
-      burst(WW, iW, OW, mW) {
-        const EW = rW[this.options.wrap];
-        for (let NW = 0; NW < this.count(OW); NW++) {
-          const OW = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.5,
-            NW = zW(EW.speed);
+      burst(RR, JR, GR, yR) {
+        const tR = FR[this.options.wrap];
+        for (let uR = 0; uR < this.count(GR); uR++) {
+          const GR = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.5,
+            uR = TR(tR.speed);
           this.add({
-            sprite: FW(this.sprites.burst),
-            x: WW + 30 * (Math.random() - .5),
-            y: iW,
-            vx: Math.cos(OW) * NW,
-            WH: Math.sin(OW) * NW,
-            gravity: EW.gravity,
-            drag: EW.drag,
+            sprite: sR(this.sprites.burst),
+            x: RR + 30 * (Math.random() - .5),
+            y: JR,
+            KD: Math.cos(GR) * uR,
+            vy: Math.sin(GR) * uR,
+            gravity: tR.gravity,
+            drag: tR.drag,
             spin: 14 * (Math.random() - .5),
-            flutterSpeed: EW.flutter ? zW([8, 16]) : 0,
-            size: zW([.7, 1.15]),
-            lifeMs: zW(EW.lifeMs),
-            floorY: EW.bounce ? mW : 1 / 0
+            flutterSpeed: tR.flutter ? TR([8, 16]) : 0,
+            size: TR([.7, 1.15]),
+            lifeMs: TR(tR.lifeMs),
+            floorY: tR.bounce ? yR : 1 / 0
           })
         }
-        for (let NW = 0; NW < this.count(16 + 8 * this.options.tier); NW++) {
-          const OW = Math.random() * Math.PI * 2,
-            mW = zW([300, 900]);
+        for (let uR = 0; uR < this.count(16 + 8 * this.options.tier); uR++) {
+          const GR = Math.random() * Math.PI * 2,
+            yR = TR([300, 900]);
           this.add({
             sprite: this.sprites.spark,
-            x: WW,
-            y: iW,
-            vx: Math.cos(OW) * mW,
-            WH: Math.sin(OW) * mW,
+            x: RR,
+            y: JR,
+            KD: Math.cos(GR) * yR,
+            vy: Math.sin(GR) * yR,
             gravity: 200,
             drag: .05,
-            size: zW([.4, .9]),
-            lifeMs: zW([350, 700]),
+            size: TR([.4, .9]),
+            lifeMs: TR([350, 700]),
             additive: !0
           })
         }
       }
-      linger(WW, iW, OW) {
-        const mW = performance.now();
-        this.embersX = WW, this.embersUntil = mW + iW, this.rainUntil = OW ? mW + Math.min(iW, 1800) : 0, this.wake()
+      linger(RR, JR, GR) {
+        const yR = performance.now();
+        this.embersX = RR, this.embersUntil = yR + JR, this.rainUntil = GR ? yR + Math.min(JR, 1800) : 0, this.wake()
       }
-      spawnLingering(WW) {
+      spawnLingering(RR) {
         const {
-          clientWidth: iW,
-          clientHeight: OW
-        } = this.canvas, mW = performance.now(), EW = (mW < this.embersUntil ? this.count(14) : 0) + (mW < this.rainUntil ? this.count(50) : 0);
-        for (this.spawnCarry += EW * WW / 1e3; this.spawnCarry >= 1;) this.spawnCarry--, mW < this.rainUntil && Math.random() < .75 ? this.add({
-          sprite: FW(this.sprites.rain),
-          x: Math.random() * iW,
+          clientWidth: JR,
+          clientHeight: GR
+        } = this.canvas, yR = performance.now(), tR = (yR < this.embersUntil ? this.count(14) : 0) + (yR < this.rainUntil ? this.count(50) : 0);
+        for (this.spawnCarry += tR * RR / 1e3; this.spawnCarry >= 1;) this.spawnCarry--, yR < this.rainUntil && Math.random() < .75 ? this.add({
+          sprite: sR(this.sprites.rain),
+          x: Math.random() * JR,
           y: -20,
-          vx: 60 * (Math.random() - .5),
-          WH: zW([160, 320]),
+          KD: 60 * (Math.random() - .5),
+          vy: TR([160, 320]),
           gravity: 500,
           drag: .2,
           spin: 8 * (Math.random() - .5),
-          flutterSpeed: zW([6, 12]),
-          size: zW([.6, 1]),
+          flutterSpeed: TR([6, 12]),
+          size: TR([.6, 1]),
           lifeMs: 2200
         }) : this.add({
           sprite: this.sprites.spark,
           motion: "float",
-          x: this.embersX + (Math.random() - .5) * Math.min(iW, 420),
-          y: OW * zW([.55, .8]),
-          vx: 20 * (Math.random() - .5),
-          WH: -zW([30, 70]),
+          x: this.embersX + (Math.random() - .5) * Math.min(JR, 420),
+          y: GR * TR([.55, .8]),
+          KD: 20 * (Math.random() - .5),
+          vy: -TR([30, 70]),
           drag: .6,
-          size: zW([.3, .6]),
-          lifeMs: zW([1200, 2e3]),
+          size: TR([.3, .6]),
+          lifeMs: TR([1200, 2e3]),
           additive: !0
         })
       }
       clear() {
-        var WW;
-        this.particles.length = 0, this.embersUntil = 0, this.rainUntil = 0, null === (WW = this.context) || void 0 === WW || WW.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        var RR;
+        this.particles.length = 0, this.embersUntil = 0, this.rainUntil = 0, null === (RR = this.context) || void 0 === RR || RR.clearRect(0, 0, this.canvas.width, this.canvas.height)
       }
       stop() {
         this.stopped = !0, cancelAnimationFrame(this.frame), this.frame = 0, this.clear(), this.canvas.style.visibility = "hidden"
       }
       wake() {
-        0 !== this.frame || this.stopped || (this.lastAt = performance.now(), this.frame = requestAnimationFrame(this.hZ), this.canvas.style.visibility = "visible")
+        0 !== this.frame || this.stopped || (this.lastAt = performance.now(), this.frame = requestAnimationFrame(this.gK), this.canvas.style.visibility = "visible")
       }
-      step(WW) {
-        const iW = WW / 1e3;
-        let OW = 0;
-        for (const mW of this.particles)
-          if (mW.ageMs += WW, !(mW.ageMs >= mW.lifeMs)) {
-            if ("converge" === mW.motion) {
-              const WW = mW.ageMs / mW.lifeMs,
-                iW = WW * WW * WW;
-              mW.x = mW.fromX + (mW.toX - mW.fromX) * iW, mW.y = mW.fromY + (mW.toY - mW.fromY) * iW
+      step(RR) {
+        const JR = RR / 1e3;
+        let GR = 0;
+        for (const yR of this.particles)
+          if (yR.ageMs += RR, !(yR.ageMs >= yR.lifeMs)) {
+            if ("converge" === yR.motion) {
+              const RR = yR.ageMs / yR.lifeMs,
+                JR = RR * RR * RR;
+              yR.x = yR.fromX + (yR.toX - yR.fromX) * JR, yR.y = yR.fromY + (yR.toY - yR.fromY) * JR
             } else {
-              const WW = Math.pow(1 - mW.drag, iW);
-              mW.vx *= WW, mW.WH = mW.WH * WW + mW.gravity * iW, mW.x += mW.vx * iW, mW.y += mW.WH * iW, mW.y > mW.floorY && mW.WH > 0 && (mW.y = mW.floorY, mW.WH *= -.35, mW.vx *= .6, mW.floorY = 1 / 0)
+              const RR = Math.pow(1 - yR.drag, JR);
+              yR.KD *= RR, yR.vy = yR.vy * RR + yR.gravity * JR, yR.x += yR.KD * JR, yR.y += yR.vy * JR, yR.y > yR.floorY && yR.vy > 0 && (yR.y = yR.floorY, yR.vy *= -.35, yR.KD *= .6, yR.floorY = 1 / 0)
             }
-            mW.rotation += mW.spin * iW, mW.flutter += mW.flutterSpeed * iW, this.particles[OW++] = mW
-          } this.particles.length = OW
+            yR.rotation += yR.spin * JR, yR.flutter += yR.flutterSpeed * JR, this.particles[GR++] = yR
+          } this.particles.length = GR
       }
       draw() {
-        const WW = this.context;
-        if (WW) {
-          WW.setTransform(1, 0, 0, 1, 0, 0), WW.clearRect(0, 0, this.canvas.width, this.canvas.height);
-          for (const iW of this.particles) {
-            const OW = iW.ageMs / iW.lifeMs,
-              mW = "converge" === iW.motion ? .35 + .65 * OW : Math.min(1, 4 * (1 - OW)),
-              EW = iW.size,
-              NW = Math.cos(iW.rotation) * EW,
-              PW = Math.sin(iW.rotation) * EW,
-              LW = 0 === iW.flutterSpeed ? 1 : Math.cos(iW.flutter);
-            WW.globalAlpha = mW, WW.globalCompositeOperation = iW.additive ? "lighter" : "source-over", WW.setTransform(NW * LW, PW * LW, -PW, NW, iW.x * this.scale, iW.y * this.scale);
+        const RR = this.context;
+        if (RR) {
+          RR.setTransform(1, 0, 0, 1, 0, 0), RR.clearRect(0, 0, this.canvas.width, this.canvas.height);
+          for (const JR of this.particles) {
+            const GR = JR.ageMs / JR.lifeMs,
+              yR = "converge" === JR.motion ? .35 + .65 * GR : Math.min(1, 4 * (1 - GR)),
+              tR = JR.size,
+              uR = Math.cos(JR.rotation) * tR,
+              ZR = Math.sin(JR.rotation) * tR,
+              qR = 0 === JR.flutterSpeed ? 1 : Math.cos(JR.flutter);
+            RR.globalAlpha = yR, RR.globalCompositeOperation = JR.additive ? "lighter" : "source-over", RR.setTransform(uR * qR, ZR * qR, -ZR, uR, JR.x * this.scale, JR.y * this.scale);
             const {
-              image: cW
-            } = iW.sprite;
-            WW.drawImage(cW, -cW.width / 2, -cW.height / 2)
+              image: iR
+            } = JR.sprite;
+            RR.drawImage(iR, -iR.width / 2, -iR.height / 2)
           }
-          WW.globalAlpha = 1, WW.globalCompositeOperation = "source-over"
+          RR.globalAlpha = 1, RR.globalCompositeOperation = "source-over"
         }
       }
     }
-    var Wi = OW(3224),
-      ii = OW(1653),
-      Oi = OW(1659),
-      mi = OW(3184);
-    const Ei = 5e3;
+    var RJ = GR(3333),
+      JJ = GR(1716),
+      GJ = GR(1718),
+      yJ = GR(3283);
+    const tJ = 5e3;
 
-    function Ni(WW) {
+    function uJ(RR) {
       let {
-        request: iW
-      } = WW;
+        request: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), {
-        userContext: EW
-      } = (0, jW.e)(), {
-        gift: sW,
-        preview: YW
-      } = iW, {
-        isTouchScreen: yW
-      } = (0, LW.p)(["isTouchScreen"]), TW = function(WW) {
-        var iW;
-        const OW = SW.i.find((iW => iW.id === WW));
-        return null !== (iW = null === OW || void 0 === OW ? void 0 : OW.id) && void 0 !== iW ? iW : "classic"
-      }(sW.wrap), uW = (oW = sW.gems) >= VW[3] ? 3 : oW >= VW[2] ? 2 : 1;
-      var oW;
-      const dW = `${TW}:t${uW}`,
-        [vW] = (0, mW.useState)((() => function(WW, iW) {
-          const [OW] = WW.cosmeticPacks;
-          let mW = null;
-          if ((0, Wi.f)(WW) ? mW = "rank" : void 0 === OW && WW.premiumCurrency > 0 && (mW = "gems"), void 0 === OW) return {
-            cosmetics: iW,
-            badge: mW
+        t: GR
+      } = (0, ZR.A)(), {
+        userContext: tR
+      } = (0, LR.d)(), {
+        gift: WR,
+        preview: MR
+      } = JR, {
+        isTouchScreen: BR
+      } = (0, qR.o)(["isTouchScreen"]), lR = function(RR) {
+        var JR;
+        const GR = XR.k.find((JR => JR.id === RR));
+        return null !== (JR = null === GR || void 0 === GR ? void 0 : GR.id) && void 0 !== JR ? JR : "classic"
+      }(WR.wrap), OR = (xR = WR.gems) >= PR[3] ? 3 : xR >= PR[2] ? 2 : 1;
+      var xR;
+      const NR = `${lR}:t${OR}`,
+        [HR] = (0, yR.useState)((() => function(RR, JR) {
+          const [GR] = RR.cosmeticPacks;
+          let yR = null;
+          if ((0, RJ.g)(RR) ? yR = "rank" : void 0 === GR && RR.premiumCurrency > 0 && (yR = "gems"), void 0 === GR) return {
+            cosmetics: JR,
+            badge: yR
           };
-          const EW = (0, ii.g)(OW),
-            NW = void 0 === EW ? void 0 : Oi.e[EW];
-          if (void 0 !== NW) return {
-            cosmetics: NW.cosmetics,
-            badge: mW
+          const tR = (0, JJ.c)(GR),
+            uR = void 0 === tR ? void 0 : GJ.b[tR];
+          if (void 0 !== uR) return {
+            cosmetics: uR.cosmetics,
+            badge: yR
           };
-          const PW = {
-              ...iW
+          const ZR = {
+              ...JR
             },
-            LW = new Set;
-          for (const cW of (0, mi.k)(OW)) {
-            const [WW, iW] = cW.split("|");
-            LW.has(WW) || (LW.add(WW), PW[WW] = iW)
+            qR = new Set;
+          for (const iR of (0, yJ.h)(GR)) {
+            const [RR, JR] = iR.split("|");
+            qR.has(RR) || (qR.add(RR), ZR[RR] = JR)
           }
           return {
-            cosmetics: PW,
-            badge: mW
+            cosmetics: ZR,
+            badge: yR
           }
-        }(sW.items, {
-          ...EW.getPlayerCosmetics()
+        }(WR.items, {
+          ...tR.getPlayerCosmetics()
         }))),
-        [gW, pW] = (0, mW.useState)("arrive"),
-        [XW, BW] = (0, mW.useState)(0),
-        [qW, RW] = (0, mW.useState)(!1),
-        [GW, IW] = (0, mW.useState)(!1),
-        [aW, rW] = (0, mW.useState)(!1),
-        zW = (0, mW.useRef)(null),
-        FW = (0, mW.useRef)(null),
-        Ni = {
-          box: (0, mW.useRef)(null),
-          body: (0, mW.useRef)(null),
-          lid: (0, mW.useRef)(null),
-          seam: (0, mW.useRef)(null),
-          character: (0, mW.useRef)(null),
-          ring: (0, mW.useRef)(null),
-          beam: (0, mW.useRef)(null),
-          flash: (0, mW.useRef)(null),
-          shake: (0, mW.useRef)(null),
-          canvas: (0, mW.useRef)(null)
+        [oR, IR] = (0, yR.useState)("arrive"),
+        [SR, jR] = (0, yR.useState)(0),
+        [dR, ER] = (0, yR.useState)(!1),
+        [YR, kR] = (0, yR.useState)(!1),
+        [QR, FR] = (0, yR.useState)(!1),
+        TR = (0, yR.useRef)(null),
+        sR = (0, yR.useRef)(null),
+        uJ = {
+          box: (0, yR.useRef)(null),
+          body: (0, yR.useRef)(null),
+          lid: (0, yR.useRef)(null),
+          seam: (0, yR.useRef)(null),
+          character: (0, yR.useRef)(null),
+          ring: (0, yR.useRef)(null),
+          beam: (0, yR.useRef)(null),
+          flash: (0, yR.useRef)(null),
+          shake: (0, yR.useRef)(null),
+          canvas: (0, yR.useRef)(null)
         };
-      (0, UW.h)("paused"), (0, mW.useEffect)((() => {
-        const WW = setTimeout((() => {
-          rW(!0)
-        }), Ei);
+      (0, nR.f)("paused"), (0, yR.useEffect)((() => {
+        const RR = setTimeout((() => {
+          FR(!0)
+        }), tJ);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), []), (0, mW.useEffect)((() => {
-        const WW = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-          OW = Ni.canvas.current,
-          mW = OW && !WW ? new QW(OW, {
-            wrap: TW,
-            tier: uW,
-            phone: yW
+      }), []), (0, yR.useEffect)((() => {
+        const RR = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+          GR = uJ.canvas.current,
+          yR = GR && !RR ? new hR(GR, {
+            wrap: lR,
+            tier: OR,
+            phone: BR
           }) : null,
-          EW = () => {
-            null === mW || void 0 === mW || mW.resize()
+          tR = () => {
+            null === yR || void 0 === yR || yR.resize()
           };
-        window.addEventListener("resize", EW),
-          function(WW) {
-            for (const iW of ["wobble", "pop", "sparkle", "sting"]) nW.c.preload(eW(iW, WW))
-          }(uW), pW("arrive");
-        const NW = new DW({
-          box: Ni.box.current,
-          body: Ni.body.current,
-          lid: Ni.lid.current,
-          seam: Ni.seam.current,
-          character: Ni.character.current,
-          ring: Ni.ring.current,
-          beam: Ni.beam.current,
-          flash: Ni.flash.current,
-          shake: Ni.shake.current
+        window.addEventListener("resize", tR),
+          function(RR) {
+            for (const JR of ["wobble", "pop", "sparkle", "sting"]) vR.d.preload(DR(JR, RR))
+          }(OR), IR("arrive");
+        const uR = new cR({
+          box: uJ.box.current,
+          body: uJ.body.current,
+          lid: uJ.lid.current,
+          seam: uJ.seam.current,
+          character: uJ.character.current,
+          ring: uJ.ring.current,
+          beam: uJ.beam.current,
+          flash: uJ.flash.current,
+          shake: uJ.shake.current
         }, {
-          tier: uW,
-          timeline: fW(uW),
-          reducedMotion: WW,
-          fx: mW,
-          onPhase: pW,
+          tier: OR,
+          timeline: mR(OR),
+          reducedMotion: RR,
+          fx: yR,
+          onPhase: IR,
           onOpened: () => {
-            var WW;
-            YW || ((0, cW.reportAnalyticsClick)({
+            var RR;
+            MR || ((0, iR.reportAnalyticsClick)({
               id: "gift.open_anim",
-              value: dW
-            }), null === (WW = iW.onOpened) || void 0 === WW || WW.call(iW))
+              value: NR
+            }), null === (RR = JR.onOpened) || void 0 === RR || RR.call(JR))
           }
         });
-        return FW.current = NW, NW.arrive(), () => {
-          window.removeEventListener("resize", EW), NW.dispose(), mW && (! function(WW) {
-            if (WW.frameMs.length < 10) return;
-            const iW = [...WW.frameMs].sort(((WW, iW) => WW - iW)),
-              OW = {
-                frames: iW.length,
-                medianFps: Math.round(1e3 / Math.max(iW[Math.floor(iW.length / 2)], 1)),
-                p95FrameMs: Math.round(iW[Math.floor(.95 * iW.length)])
+        return sR.current = uR, uR.arrive(), () => {
+          window.removeEventListener("resize", tR), uR.dispose(), yR && (! function(RR) {
+            if (RR.frameMs.length < 10) return;
+            const JR = [...RR.frameMs].sort(((RR, JR) => RR - JR)),
+              GR = {
+                frames: JR.length,
+                medianFps: Math.round(1e3 / Math.max(JR[Math.floor(JR.length / 2)], 1)),
+                p95FrameMs: Math.round(JR[Math.floor(.95 * JR.length)])
               };
-            window.giftOpeningFrames = OW, console.info("[gift-opening] frames", OW)
-          }(mW), mW.stop())
+            window.giftOpeningFrames = GR, console.info("[gift-opening] frames", GR)
+          }(yR), yR.stop())
         }
-      }), [XW]);
-      const Pi = () => {
-          (0, KW.d)(iW)
+      }), [SR]);
+      const ZJ = () => {
+          (0, CR.c)(JR)
         },
-        Li = () => {
-          var WW;
-          YW || (0, cW.reportAnalyticsClick)({
+        qJ = () => {
+          var RR;
+          MR || (0, iR.reportAnalyticsClick)({
             id: "gift.open_skip",
-            value: `${dW}:${gW}`
-          }), null === (WW = FW.current) || void 0 === WW || WW.skip()
+            value: `${NR}:${oR}`
+          }), null === (RR = sR.current) || void 0 === RR || RR.skip()
         },
-        ci = qW || GW || aW,
-        wi = "arrive" === gW || "wait" === gW || "charge" === gW,
-        ti = "charge" === gW || "reveal" === gW || "card" === gW || "wait" === gW && ci,
-        Zi = {
-          "--gift-tier": CW[uW]
+        iJ = dR || YR || QR,
+        fJ = "arrive" === oR || "wait" === oR || "charge" === oR,
+        VJ = "charge" === oR || "reveal" === oR || "card" === oR || "wait" === oR && iJ,
+        KJ = {
+          "--gift-tier": zR[OR]
         };
-      return (0, kW.jsx)(tW.b, {
+      return (0, UR.jsx)(VR.e, {
         className: "GiftOpeningScreen",
-        close: "done" === gW ? Pi : ti ? Li : () => {},
+        close: "done" === oR ? ZJ : VJ ? qJ : () => {},
         togglePointerLock: !0,
         forcePointerUnlock: !0,
         globallyUniqueKey: "giftOpening",
         closeOnPressBackground: !1,
-        children: (0, kW.jsxs)("div", {
-          className: NW()("GiftOpening", `GiftOpeningTier${uW}`, `GiftOpeningPhase_${gW}`, {
-            GiftOpeningDrawn: qW
+        children: (0, UR.jsxs)("div", {
+          className: uR()("GiftOpening", `GiftOpeningTier${OR}`, `GiftOpeningPhase_${oR}`, {
+            GiftOpeningDrawn: dR
           }),
-          style: Zi,
-          ref: Ni.shake,
-          children: [(0, kW.jsx)("div", {
+          style: KJ,
+          ref: uJ.shake,
+          children: [(0, UR.jsx)("div", {
             className: "GiftOpeningBackdrop"
-          }), (0, kW.jsx)("div", {
+          }), (0, UR.jsx)("div", {
             className: "GiftOpeningRays"
-          }), (0, kW.jsxs)("div", {
+          }), (0, UR.jsxs)("div", {
             className: "GiftOpeningStage",
-            children: [(0, kW.jsx)("div", {
+            children: [(0, UR.jsx)("div", {
               className: "GiftOpeningBeam",
-              ref: Ni.beam
-            }), (0, kW.jsxs)("div", {
+              ref: uJ.beam
+            }), (0, UR.jsxs)("div", {
               className: "GiftOpeningCharacter",
-              ref: Ni.character,
-              children: [(0, kW.jsx)(mW.Suspense, {
+              ref: uJ.character,
+              children: [(0, UR.jsx)(yR.Suspense, {
                 fallback: null,
-                children: (0, kW.jsx)(AW.e, {
-                  ref: zW,
+                children: (0, UR.jsx)(eR.e, {
+                  ref: TR,
                   framing: "store",
                   owner: "other",
-                  turntableFromYaw: wi ? null : wW.d.store.yaw,
+                  turntableFromYaw: fJ ? null : fR.d.store.yaw,
                   onNoWebGl: () => {
-                    IW(!0)
+                    kR(!0)
                   },
                   onReady: () => {
-                    var WW, iW;
-                    null === (WW = zW.current) || void 0 === WW || WW.resetCamera(), null === (iW = zW.current) || void 0 === iW || iW.setAllCosmetics(vW.cosmetics)
+                    var RR, JR;
+                    null === (RR = TR.current) || void 0 === RR || RR.resetCamera(), null === (JR = TR.current) || void 0 === JR || JR.setAllCosmetics(HR.cosmetics)
                   },
                   onDrawn: () => {
-                    RW(!0)
+                    ER(!0)
                   }
                 })
-              }), (GW || !wi && !qW) && (0, kW.jsx)("div", {
+              }), (YR || !fJ && !dR) && (0, UR.jsx)("div", {
                 className: "GiftOpeningHead",
-                children: (0, kW.jsx)(bW.e, {
-                  cosmetics: vW.cosmetics
+                children: (0, UR.jsx)(aR.c, {
+                  cosmetics: HR.cosmetics
                 })
-              }), vW.badge && (0, kW.jsx)("div", {
+              }), HR.badge && (0, UR.jsx)("div", {
                 className: "GiftOpeningBadge",
-                children: "gems" === vW.badge ? (0, kW.jsx)(lW.g, {}) : (0, kW.jsx)(xW.c, {
+                children: "gems" === HR.badge ? (0, UR.jsx)(rR.f, {}) : (0, UR.jsx)(wR.d, {
                   name: "bolt"
                 })
               })]
-            }), (0, kW.jsx)(MW, {
-              wrap: TW,
-              className: NW()("GiftOpeningBox", {
-                GiftOpeningBoxIdle: "wait" === gW
+            }), (0, UR.jsx)(AR, {
+              wrap: lR,
+              className: uR()("GiftOpeningBox", {
+                GiftOpeningBoxIdle: "wait" === oR
               }),
-              rootRef: Ni.box,
-              bodyRef: Ni.body,
-              lidRef: Ni.lid,
-              seamRef: Ni.seam
-            }), (0, kW.jsx)("div", {
+              rootRef: uJ.box,
+              bodyRef: uJ.body,
+              lidRef: uJ.lid,
+              seamRef: uJ.seam
+            }), (0, UR.jsx)("div", {
               className: "GiftOpeningRing",
-              ref: Ni.ring
+              ref: uJ.ring
             })]
-          }), (0, kW.jsx)("canvas", {
+          }), (0, UR.jsx)("canvas", {
             className: "GiftOpeningFx",
-            ref: Ni.canvas
-          }), (0, kW.jsx)("div", {
+            ref: uJ.canvas
+          }), (0, UR.jsx)("div", {
             className: "GiftOpeningFlash",
-            ref: Ni.flash
-          }), wi && (0, kW.jsxs)("div", {
+            ref: uJ.flash
+          }), fJ && (0, UR.jsxs)("div", {
             className: "GiftOpeningTitle",
-            children: [(0, kW.jsx)("div", {
+            children: [(0, UR.jsx)("div", {
               className: "SmallTextBold",
-              children: OW("giftOpening:sentYou", {
-                name: sW.senderName
+              children: GR("giftOpening:sentYou", {
+                name: WR.senderName
               })
-            }), (0, kW.jsx)(hW, {
-              gift: sW
+            }), (0, UR.jsx)(gR, {
+              gift: WR
             })]
-          }), "wait" === gW && ci && (0, kW.jsx)("div", {
+          }), "wait" === oR && iJ && (0, UR.jsx)("div", {
             className: "GiftOpeningHint SmallTextBold",
-            children: OW("giftOpening:tapToOpen")
-          }), (0, kW.jsx)(JW, {
-            gift: sW,
-            shown: "card" === gW || "done" === gW
-          }), "done" !== gW && (0, kW.jsx)("button", {
+            children: GR("giftOpening:tapToOpen")
+          }), (0, UR.jsx)(pR, {
+            gift: WR,
+            shown: "card" === oR || "done" === oR
+          }), "done" !== oR && (0, UR.jsx)("button", {
             type: "button",
             className: "GiftOpeningTap",
             "data-pad-default-focus": !0,
-            "aria-label": OW("giftOpening:tapToOpen"),
+            "aria-label": GR("giftOpening:tapToOpen"),
             onClick: () => {
-              var WW;
-              ("wait" !== gW || ci) && (null === (WW = FW.current) || void 0 === WW || WW.tap())
+              var RR;
+              ("wait" !== oR || iJ) && (null === (RR = sR.current) || void 0 === RR || RR.tap())
             }
-          }), ti && (0, kW.jsxs)(ZW.h, {
+          }), VJ && (0, UR.jsxs)(KR.i, {
             className: "GiftOpeningSkip",
-            onClick: Li,
-            children: [OW("giftOpening:skip"), " ", (0, kW.jsx)(xW.c, {
+            onClick: qJ,
+            children: [GR("giftOpening:skip"), " ", (0, UR.jsx)(wR.d, {
               name: "arrow-right"
             })]
-          }), "done" === gW && (0, kW.jsx)(HW, {
-            gift: sW,
-            preview: YW,
-            analyticsValue: dW,
+          }), "done" === oR && (0, UR.jsx)(bR, {
+            gift: WR,
+            preview: MR,
+            analyticsValue: NR,
             onReplay: () => {
-              BW(XW + 1)
+              jR(SR + 1)
             },
-            onClose: Pi
+            onClose: ZJ
           })]
         })
       })
     }
   },
-  35270: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      e: () => EW,
-      f: () => ZW
+  35195: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      i: () => tR,
+      l: () => KR
     });
-    var mW = OW(1659);
+    var yR = GR(1718);
 
-    function EW(WW) {
-      var iW;
+    function tR(RR) {
+      var JR;
       return {
-        ...LW.store,
-        yaw: LW.store.yaw + (null !== (iW = mW.e[WW].previewYaw) && void 0 !== iW ? iW : 0)
+        ...qR.store,
+        yaw: qR.store.yaw + (null !== (JR = yR.b[RR].previewYaw) && void 0 !== JR ? JR : 0)
       }
     }
-    const NW = {
+    const uR = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      PW = {
-        ...NW,
+      ZR = {
+        ...uR,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      LW = {
-        player: NW,
-        store: PW,
+      qR = {
+        player: uR,
+        store: ZR,
         showcase: {
-          ...PW,
+          ...ZR,
           target: [0, 1.9, 0]
         }
       };
 
-    function cW(WW, iW) {
-      WW instanceof Promise ? WW.then(iW).catch((WW => {
-        console.error("Couldn't open the preview", WW)
-      })) : iW(WW)
+    function iR(RR, JR) {
+      RR instanceof Promise ? RR.then(JR).catch((RR => {
+        console.error("Couldn't open the preview", RR)
+      })) : JR(RR)
     }
-    class wW {
-      constructor(WW) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, cW(WW, (WW => {
-          this.closed ? WW.close() : (this.opened = WW, null !== this.size && WW.resize(this.size.width, this.size.height), null !== this.view && WW.show(this.view))
+    class fR {
+      constructor(RR) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, iR(RR, (RR => {
+          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height), null !== this.view && RR.show(this.view))
         }))
       }
-      show(WW) {
-        var iW;
-        this.view = WW, null === (iW = this.opened) || void 0 === iW || iW.show(WW)
+      show(RR) {
+        var JR;
+        this.view = RR, null === (JR = this.opened) || void 0 === JR || JR.show(RR)
       }
-      resize(WW, iW) {
-        var OW;
+      resize(RR, JR) {
+        var GR;
         this.size = {
-          width: WW,
-          height: iW
-        }, null === (OW = this.opened) || void 0 === OW || OW.resize(WW, iW)
+          width: RR,
+          height: JR
+        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.opened) || void 0 === WW || WW.close(), this.opened = null
+        var RR;
+        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
       }
     }
-    class tW {
-      constructor(WW) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(WW).then((WW => WW.ready)), cW(WW, (WW => {
-          this.closed ? WW.close() : (this.opened = WW, null !== this.size && WW.resize(this.size.width, this.size.height))
+    class VR {
+      constructor(RR) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(RR).then((RR => RR.ready)), iR(RR, (RR => {
+          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.opened) || void 0 === iW ? void 0 : iW.isReady()) && void 0 !== WW && WW
+        var RR, JR;
+        return null !== (RR = null === (JR = this.opened) || void 0 === JR ? void 0 : JR.isReady()) && void 0 !== RR && RR
       }
-      setCosmetic(WW, iW) {
-        var OW;
-        null === (OW = this.opened) || void 0 === OW || OW.setCosmetic(WW, iW)
+      setCosmetic(RR, JR) {
+        var GR;
+        null === (GR = this.opened) || void 0 === GR || GR.setCosmetic(RR, JR)
       }
-      setNametag(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.setNametag(WW)
+      setNametag(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.setNametag(RR)
       }
-      playEmote(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.playEmote(WW)
+      playEmote(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.playEmote(RR)
       }
-      setOrbit(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.setOrbit(WW)
+      setOrbit(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.setOrbit(RR)
       }
       resetCamera() {
-        var WW;
-        null === (WW = this.opened) || void 0 === WW || WW.resetCamera()
+        var RR;
+        null === (RR = this.opened) || void 0 === RR || RR.resetCamera()
       }
-      async untilDrawn(WW) {
-        var iW;
-        await this.ready, await (null === (iW = this.opened) || void 0 === iW ? void 0 : iW.untilDrawn(WW))
+      async untilDrawn(RR) {
+        var JR;
+        await this.ready, await (null === (JR = this.opened) || void 0 === JR ? void 0 : JR.untilDrawn(RR))
       }
-      resize(WW, iW) {
-        var OW;
+      resize(RR, JR) {
+        var GR;
         this.size = {
-          width: WW,
-          height: iW
-        }, null === (OW = this.opened) || void 0 === OW || OW.resize(WW, iW)
+          width: RR,
+          height: JR
+        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.opened) || void 0 === WW || WW.close(), this.opened = null
+        var RR;
+        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
       }
     }
-    const ZW = new class {
+    const KR = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(WW) {
-        this.host = WW
+      setHost(RR) {
+        this.host = RR
       }
-      setDefaultHost(WW) {
-        this.makeDefault = WW
+      setDefaultHost(RR) {
+        this.makeDefault = RR
       }
       current() {
         if (null === this.host) {
@@ -1324,187 +1324,187 @@ export const modules = {
         }
         return this.host
       }
-      openMob(WW) {
-        return new wW(this.current().openMob(WW))
+      openMob(RR) {
+        return new fR(this.current().openMob(RR))
       }
-      openPet(WW) {
-        return new wW(this.current().openPet(WW))
+      openPet(RR) {
+        return new fR(this.current().openPet(RR))
       }
-      openMobLineup(WW) {
-        return new wW(this.current().openMobLineup(WW))
+      openMobLineup(RR) {
+        return new fR(this.current().openMobLineup(RR))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(WW, iW) {
-        return new tW(this.current().openCharacter(WW, iW))
+      openCharacter(RR, JR) {
+        return new VR(this.current().openCharacter(RR, JR))
       }
     }
   },
-  35264: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW.d,
-      e: () => mW.e,
-      f: () => mW.f
+  35193: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR.e,
+      e: () => yR.i,
+      g: () => yR.l
     });
-    var mW = OW(35270);
-    class EW {
-      constructor(WW) {
-        this.load = WW, this.loaded = null, this.loading = null
+    var yR = GR(35195);
+    class tR {
+      constructor(RR) {
+        this.load = RR, this.loaded = null, this.loading = null
       }
-      run(WW) {
-        return null !== this.loaded ? WW(this.loaded) : (this.loading ??= this.load().then((WW => (this.loaded = WW, WW)), (WW => {
-          throw this.loading = null, WW
-        })), this.loading.then(WW))
+      run(RR) {
+        return null !== this.loaded ? RR(this.loaded) : (this.loading ??= this.load().then((RR => (this.loaded = RR, RR)), (RR => {
+          throw this.loading = null, RR
+        })), this.loading.then(RR))
       }
     }
-    class NW {
+    class uR {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new EW((() => Promise.all([OW.e(85), OW.e(264), OW.e(263), OW.e(289), OW.e(113), OW.e(290), OW.e(89), OW.e(86), OW.e(287), OW.e(87), OW.e(88), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(311), OW.e(260), OW.e(278), OW.e(292), OW.e(295), OW.e(91), OW.e(252), OW.e(266), OW.e(112), OW.e(124), OW.e(257), OW.e(142), OW.e(90), OW.e(122), OW.e(310)]).then((() => OW(42563))))), this.characterScene = new EW((() => Promise.all([OW.e(85), OW.e(264), OW.e(263), OW.e(289), OW.e(113), OW.e(290), OW.e(89), OW.e(86), OW.e(287), OW.e(87), OW.e(88), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(311), OW.e(177), OW.e(260), OW.e(278), OW.e(292), OW.e(295), OW.e(91), OW.e(224), OW.e(252), OW.e(266), OW.e(112), OW.e(124), OW.e(257), OW.e(142), OW.e(90), OW.e(122), OW.e(279), OW.e(184)]).then((() => OW(42656)))))
+        this.sharesCharacter = !0, this.mobScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(310)]).then((() => GR(42616))))), this.characterScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(177), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(224), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(279), GR.e(184)]).then((() => GR(42729)))))
       }
-      openMob(WW) {
-        return this.mobScene.run((iW => iW.openMobPreview(WW)))
+      openMob(RR) {
+        return this.mobScene.run((JR => JR.openMobPreview(RR)))
       }
-      openPet(WW) {
-        return this.mobScene.run((iW => iW.openPetPreview(WW)))
+      openPet(RR) {
+        return this.mobScene.run((JR => JR.openPetPreview(RR)))
       }
-      openMobLineup(WW) {
-        return this.mobScene.run((iW => iW.openMobLineupPreview(WW)))
+      openMobLineup(RR) {
+        return this.mobScene.run((JR => JR.openMobLineupPreview(RR)))
       }
-      openCharacter(WW, iW) {
-        return this.characterScene.run((OW => OW.openCharacterPreview(WW, iW)))
+      openCharacter(RR, JR) {
+        return this.characterScene.run((GR => GR.openCharacterPreview(RR, JR)))
       }
     }
-    mW.f.setDefaultHost((() => new NW))
+    yR.l.setDefaultHost((() => new uR))
   },
-  37575: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW,
-      d: () => cW,
-      g: () => PW
+  37494: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      h: () => iR,
+      l: () => ZR
     });
-    var mW = OW(643),
-      EW = OW(2365);
+    var yR = GR(679),
+      tR = GR(2435);
 
-    function NW(WW) {
-      return WW === (0, EW.h)().Av ? (0, EW.h)().Dv : WW
+    function uR(RR) {
+      return RR === (0, tR.i)().UH ? (0, tR.i)().WH : RR
     }
 
-    function PW(WW) {
-      return !(0, mW.K)(WW) && NW(WW) === (0, EW.h)().Dv
+    function ZR(RR) {
+      return !(0, yR.I)(RR) && uR(RR) === (0, tR.i)().WH
     }
-    const LW = "gravity";
+    const qR = "gravity";
 
-    function cW() {
-      return (0, EW.h)().physics[LW][1]
+    function iR() {
+      return (0, tR.i)().physics[qR][1]
     }
   },
-  37555: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => yW
+  37466: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => BR
     });
-    var mW = OW(37559),
-      EW = OW(182),
-      NW = OW(5615),
-      PW = OW(37563),
-      LW = OW(37569),
-      cW = OW(37626),
-      wW = OW(37575),
-      tW = OW(352),
-      ZW = OW.n(tW),
-      xW = OW(2365),
-      lW = OW(37618),
-      AW = OW(27),
-      bW = OW(25),
-      jW = OW(37583),
-      UW = OW(37588),
-      kW = OW(37590),
-      sW = OW(37597),
-      MW = OW(37609);
-    const KW = new Set(["note"]);
-    const SW = {
-      stop: () => SW,
-      fade: () => SW,
-      rate: () => SW,
+    var yR = GR(37470),
+      tR = GR(203),
+      uR = GR(5742),
+      ZR = GR(37479),
+      qR = GR(37485),
+      iR = GR(37537),
+      fR = GR(37494),
+      VR = GR(385),
+      KR = GR.n(VR),
+      wR = GR(2435),
+      rR = GR(37534),
+      eR = GR(32),
+      aR = GR(25),
+      LR = GR(37498),
+      nR = GR(37507),
+      UR = GR(37516),
+      WR = GR(37518),
+      AR = GR(37528);
+    const CR = new Set(["note"]);
+    const XR = {
+      stop: () => XR,
+      fade: () => XR,
+      rate: () => XR,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => SW,
-      setPannerAttr: () => SW,
-      setPosition: () => SW
+      setRelativeVolume: () => XR,
+      setPannerAttr: () => XR,
+      setPosition: () => XR
     };
-    class YW {
-      constructor(WW) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new cW.j, this._howl = (0, LW.countDecodesAs)(new NW.Howl({
-          src: [...(0, mW.u)(WW).src],
+    class MR {
+      constructor(RR) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new iR.k, this._howl = (0, qR.countDecodesAs)(new uR.Howl({
+          src: [...(0, yR.v)(RR).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = this._howl.play(PW.d);
-        WW && this._howl.loop(!0, iW);
-        let OW = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), iW);
-        const mW = {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = this._howl.play(ZR.d);
+        RR && this._howl.loop(!0, JR);
+        let GR = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), JR);
+        const yR = {
           stop: () => {
-            var WW;
-            return null === (WW = this.liveHowl()) || void 0 === WW || WW.stop(iW), mW
+            var RR;
+            return null === (RR = this.liveHowl()) || void 0 === RR || RR.stop(JR), yR
           },
-          fade: (WW, OW, EW) => {
-            var NW;
-            return null === (NW = this.liveHowl()) || void 0 === NW || NW.fade(WW, OW, EW, iW), mW
+          fade: (RR, GR, tR) => {
+            var uR;
+            return null === (uR = this.liveHowl()) || void 0 === uR || uR.fade(RR, GR, tR, JR), yR
           },
-          rate: WW => {
-            var OW;
-            return null === (OW = this.liveHowl()) || void 0 === OW || OW.rate(WW, iW), mW
+          rate: RR => {
+            var GR;
+            return null === (GR = this.liveHowl()) || void 0 === GR || GR.rate(RR, JR), yR
           },
-          stopsAtOnce: () => this._howl.playing(iW) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(JR) && !this._howl._playLock,
           isAlive: () => {
-            const WW = this._howl._soundById(iW);
-            return !this._loadFailed && !!WW && !WW._ended
+            const RR = this._howl._soundById(JR);
+            return !this._loadFailed && !!RR && !RR._ended
           },
-          getDurationMs: () => this._howl._soundById(iW) ? 1e3 * this._howl.duration(iW) / this._howl.rate(iW) : 0,
-          getVolume: () => OW * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => OW,
-          setRelativeVolume: WW => {
-            var EW;
-            if (WW > 1) throw new Error("Volume should be <= 1");
-            return OW = bW.d.get("soundOnFromAd") ? WW : 0, null === (EW = this.liveHowl()) || void 0 === EW || EW.volume(Math.min(1, OW * this._volumeMultiplier.getTotalMultipliedVal()), iW), mW
+          getDurationMs: () => this._howl._soundById(JR) ? 1e3 * this._howl.duration(JR) / this._howl.rate(JR) : 0,
+          getVolume: () => GR * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => GR,
+          setRelativeVolume: RR => {
+            var tR;
+            if (RR > 1) throw new Error("Volume should be <= 1");
+            return GR = aR.d.get("soundOnFromAd") ? RR : 0, null === (tR = this.liveHowl()) || void 0 === tR || tR.volume(Math.min(1, GR * this._volumeMultiplier.getTotalMultipliedVal()), JR), yR
           },
-          setPannerAttr: WW => {
+          setPannerAttr: RR => {
             let {
-              coneInnerAngle: OW,
-              coneOuterAngle: EW = 360,
-              coneOuterGain: NW,
-              distanceModel: PW,
-              maxDistance: LW,
-              panningModel: cW,
-              refDistance: wW,
-              rolloffFactor: tW
-            } = WW;
+              coneInnerAngle: GR,
+              coneOuterAngle: tR = 360,
+              coneOuterGain: uR,
+              distanceModel: ZR,
+              maxDistance: qR,
+              panningModel: iR,
+              refDistance: fR,
+              rolloffFactor: VR
+            } = RR;
             return this._setPannerAttr({
-              id: iW,
-              coneInnerAngle: OW,
-              coneOuterAngle: EW,
-              coneOuterGain: NW,
-              distanceModel: PW,
-              maxDistance: LW,
-              panningModel: cW,
-              refDistance: wW,
-              rolloffFactor: tW
-            }), mW
+              id: JR,
+              coneInnerAngle: GR,
+              coneOuterAngle: tR,
+              coneOuterGain: uR,
+              distanceModel: ZR,
+              maxDistance: qR,
+              panningModel: iR,
+              refDistance: fR,
+              rolloffFactor: VR
+            }), yR
           },
-          setPosition: WW => {
-            var OW;
-            return null === (OW = this.liveHowl()) || void 0 === OW || OW.pos(WW[2], WW[1], WW[0], iW), mW
+          setPosition: RR => {
+            var GR;
+            return null === (GR = this.liveHowl()) || void 0 === GR || GR.pos(RR[2], RR[1], RR[0], JR), yR
           }
         };
-        return mW
+        return yR
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -1513,143 +1513,143 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, PW.f)(this._howl, (() => {
+        (0, ZR.e)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(WW) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", WW), this._howl.volume(WW)
+      setGlobalVolume(RR) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", RR), this._howl.volume(RR)
       }
-      _setPannerAttr(WW) {
+      _setPannerAttr(RR) {
         let {
-          id: iW,
-          coneInnerAngle: OW = 360,
-          coneOuterAngle: mW = 360,
-          coneOuterGain: EW = 0,
-          distanceModel: NW = "inverse",
-          maxDistance: PW = 1e3,
-          panningModel: LW = "HRTF",
-          refDistance: cW = lW.g,
-          rolloffFactor: wW = 1
-        } = WW;
-        const tW = this.liveHowl();
-        if (null === tW) return;
-        tW.pannerAttr({
-          coneOuterAngle: mW
-        }, iW);
-        const ZW = {
-          coneInnerAngle: OW,
-          coneOuterAngle: mW,
-          coneOuterGain: EW,
-          distanceModel: NW,
-          maxDistance: PW,
-          panningModel: LW,
-          refDistance: cW,
-          rolloffFactor: wW
+          id: JR,
+          coneInnerAngle: GR = 360,
+          coneOuterAngle: yR = 360,
+          coneOuterGain: tR = 0,
+          distanceModel: uR = "inverse",
+          maxDistance: ZR = 1e3,
+          panningModel: qR = "HRTF",
+          refDistance: iR = rR.f,
+          rolloffFactor: fR = 1
+        } = RR;
+        const VR = this.liveHowl();
+        if (null === VR) return;
+        VR.pannerAttr({
+          coneOuterAngle: yR
+        }, JR);
+        const KR = {
+          coneInnerAngle: GR,
+          coneOuterAngle: yR,
+          coneOuterGain: tR,
+          distanceModel: uR,
+          maxDistance: ZR,
+          panningModel: qR,
+          refDistance: iR,
+          rolloffFactor: fR
         };
-        tW.pannerAttr(ZW, iW)
+        VR.pannerAttr(KR, JR)
       }
     }
-    const yW = new class {
+    const BR = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new jW.c, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, AW.l.subscribe("appManagerUpdated|soundVolume", (WW => {
-          const iW = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const OW of iW) OW.setGlobalVolume(WW)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new LR.b, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, eR.n.subscribe("appManagerUpdated|soundVolume", (RR => {
+          const JR = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const GR of JR) GR.setGlobalVolume(RR)
         }))
       }
-      play(WW, iW) {
-        var OW;
-        let NW, PW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (OW = (0, xW.h)()) || void 0 === OW ? void 0 : OW.Dv,
-          LW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : lW.f,
-          cW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : lW.g,
-          tW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var AW;
-        (0, xW.h)() ? NW = !!Array.isArray(PW) || (0, wW.b)(PW) !== (null === (AW = (0, xW.h)()) || void 0 === AW ? void 0 : AW.Dv): NW = !1;
-        const bW = (0, mW.n)(WW),
-          UW = this.loadSound(NW ? this.spatialSounds : this.stereoSounds, WW);
-        if (!NW) {
-          const WW = UW.play(tW);
-          return WW.setRelativeVolume(iW), WW
+      play(RR, JR) {
+        var GR;
+        let uR, ZR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (GR = (0, wR.i)()) || void 0 === GR ? void 0 : GR.WH,
+          qR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rR.d,
+          iR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : rR.f,
+          VR = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var eR;
+        (0, wR.i)() ? uR = !!Array.isArray(ZR) || (0, fR.d)(ZR) !== (null === (eR = (0, wR.i)()) || void 0 === eR ? void 0 : eR.WH): uR = !1;
+        const aR = (0, yR.m)(RR),
+          nR = this.loadSound(uR ? this.spatialSounds : this.stereoSounds, RR);
+        if (!uR) {
+          const RR = nR.play(VR);
+          return RR.setRelativeVolume(JR), RR
         }
-        const kW = (0, xW.h)(),
-          sW = Array.isArray(PW) ? PW : kW.EY.Vk(PW),
-          YW = kW.EY.Vk(kW.Dv);
-        if (!sW || ZW().sqrDist(sW, YW) > LW * LW) return SW;
-        let yW;
-        if (!tW) {
+        const UR = (0, wR.i)(),
+          WR = Array.isArray(ZR) ? ZR : UR.zC.vW(ZR),
+          MR = UR.zC.vW(UR.WH);
+        if (!WR || KR().sqrDist(WR, MR) > qR * qR) return XR;
+        let BR;
+        if (!VR) {
           if (!this.spatialVoices.admit({
-              group: KW.has(bW) ? null : (0, jW.f)(WW),
-              loudness: (0, jW.d)(iW, ZW().TP(sW, YW), cW),
+              group: CR.has(aR) ? null : (0, LR.f)(RR),
+              loudness: (0, LR.e)(JR, KR().xZ(WR, MR), iR),
               startMs: performance.now(),
               getDurationMs: () => {
-                var WW, iW;
-                return null !== (WW = null === (iW = yW) || void 0 === iW ? void 0 : iW.getDurationMs()) && void 0 !== WW ? WW : 0
+                var RR, JR;
+                return null !== (RR = null === (JR = BR) || void 0 === JR ? void 0 : JR.getDurationMs()) && void 0 !== RR ? RR : 0
               },
               isAlive: () => {
-                var WW, iW;
-                return null !== (WW = null === (iW = yW) || void 0 === iW ? void 0 : iW.isAlive()) && void 0 !== WW && WW
+                var RR, JR;
+                return null !== (RR = null === (JR = BR) || void 0 === JR ? void 0 : JR.isAlive()) && void 0 !== RR && RR
               },
               canStop: () => {
-                var WW, iW;
-                return null !== (WW = null === (iW = yW) || void 0 === iW ? void 0 : iW.stopsAtOnce()) && void 0 !== WW && WW
+                var RR, JR;
+                return null !== (RR = null === (JR = BR) || void 0 === JR ? void 0 : JR.stopsAtOnce()) && void 0 !== RR && RR
               },
               stop: () => {
-                var WW;
-                null === (WW = yW) || void 0 === WW || WW.stop()
+                var RR;
+                null === (RR = BR) || void 0 === RR || RR.stop()
               }
-            })) return SW
+            })) return XR
         }
-        return yW = UW.play(tW), yW.setRelativeVolume(iW), yW.setPannerAttr({
-          refDistance: cW
-        }), yW.setPosition([sW[0], sW[1] + EW.f.ZU * EW.f.playerEyeToHeightRatio, sW[2]]), !tW && (0, MW.h)() && (0, MW.e)(bW, WW, sW[0] - YW[0], sW[2] - YW[2]), yW
+        return BR = nR.play(VR), BR.setRelativeVolume(JR), BR.setPannerAttr({
+          refDistance: iR
+        }), BR.setPosition([WR[0], WR[1] + tR.g.Kn * tR.g.playerEyeToHeightRatio, WR[2]]), !VR && (0, AR.k)() && (0, AR.h)(aR, RR, WR[0] - MR[0], WR[2] - MR[2]), BR
       }
-      preload(WW) {
-        const iW = (0, mW.s)(WW) ? [WW] : (0, mW.x)(WW);
-        if (0 === iW.length) throw new Error(`Invalid sound name ${WW} (no sound has it or starts with it)`);
-        for (const OW of iW) this.loadSound(this.stereoSounds, OW)
+      preload(RR) {
+        const JR = (0, yR.q)(RR) ? [RR] : (0, yR.x)(RR);
+        if (0 === JR.length) throw new Error(`Invalid sound name ${RR} (no sound has it or starts with it)`);
+        for (const GR of JR) this.loadSound(this.stereoSounds, GR)
       }
-      preloadAtIdle(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sW.c;
-        const OW = WW.filter((WW => !this.idlePreloads.has(WW)));
-        for (const EW of OW) this.idlePreloads.add(EW);
-        const mW = this.idlePreloadGeneration;
-        (0, kW.c)(OW, {
-          ...iW,
-          uW: () => mW !== this.idlePreloadGeneration,
-          fetchFile: WW => {
-            this.idlePreloads.delete(WW);
+      preloadAtIdle(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WR.c;
+        const GR = RR.filter((RR => !this.idlePreloads.has(RR)));
+        for (const tR of GR) this.idlePreloads.add(tR);
+        const yR = this.idlePreloadGeneration;
+        (0, UR.c)(GR, {
+          ...JR,
+          xR: () => yR !== this.idlePreloadGeneration,
+          fetchFile: RR => {
+            this.idlePreloads.delete(RR);
             try {
-              return this.preload(WW), Promise.resolve()
-            } catch (iW) {
-              return Promise.reject(iW)
+              return this.preload(RR), Promise.resolve()
+            } catch (JR) {
+              return Promise.reject(JR)
             }
           }
         })
       }
-      loadSound(WW, iW) {
-        const OW = WW[iW];
-        if (OW) return OW;
-        const EW = this.makeSound(WW, iW);
-        for (const PW of null !== (NW = (0, mW.t)(iW)) && void 0 !== NW ? NW : []) {
-          var NW;
-          WW[PW] || this.makeSound(WW, PW)
+      loadSound(RR, JR) {
+        const GR = RR[JR];
+        if (GR) return GR;
+        const tR = this.makeSound(RR, JR);
+        for (const ZR of null !== (uR = (0, yR.t)(JR)) && void 0 !== uR ? uR : []) {
+          var uR;
+          RR[ZR] || this.makeSound(RR, ZR)
         }
-        return EW
+        return tR
       }
-      makeSound(WW, iW) {
-        (0, sW.e)(iW);
-        const OW = new YW(iW);
-        return OW.setGlobalVolume(bW.d.get("soundVolume")), WW[iW] = OW, OW
+      makeSound(RR, JR) {
+        (0, WR.e)(JR);
+        const GR = new MR(JR);
+        return GR.setGlobalVolume(aR.d.get("soundVolume")), RR[JR] = GR, GR
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const WW of [this.stereoSounds, this.spatialSounds])
-          for (const [iW, OW] of Object.entries(WW)) !UW.e.has((0, mW.n)(iW)) && OW.loaded() && (OW.unloadOnceIdle(), delete WW[iW])
+        for (const RR of [this.stereoSounds, this.spatialSounds])
+          for (const [JR, GR] of Object.entries(RR)) !nR.e.has((0, yR.m)(JR)) && GR.loaded() && (GR.unloadOnceIdle(), delete RR[JR])
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

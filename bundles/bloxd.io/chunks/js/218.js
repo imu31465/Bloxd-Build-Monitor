@@ -1,39 +1,39 @@
 export const id = 218;
 export const ids = [218];
 export const modules = {
-  35078: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      CAPPED_COUNTS_VISIT_CAP: () => NW,
-      reportCappedWasmFailure: () => cW,
-      reportUncappedWasmFailure: () => LW,
-      reportWasmCrash: () => EW,
-      reportWasmFailure: () => PW
+  34980: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      CAPPED_COUNTS_VISIT_CAP: () => uR,
+      reportCappedWasmFailure: () => iR,
+      reportUncappedWasmFailure: () => qR,
+      reportWasmCrash: () => tR,
+      reportWasmFailure: () => ZR
     });
-    var mW = OW(1888);
+    var yR = GR(1972);
 
-    function EW(WW) {
-      (0, mW.reportClientError)("wasm_load", WW.message, WW.code)
+    function tR(RR) {
+      (0, yR.reportClientError)("wasm_load", RR.message, RR.code)
     }
-    const NW = mW.MAX_ERRORS_PER_VISIT - 4;
+    const uR = yR.MAX_ERRORS_PER_VISIT - 4;
 
-    function PW(WW, iW, OW, EW) {
-      (0, mW.reportClientError)(WW, iW, OW, !1, mW.MAX_ERRORS_PER_VISIT, {
-        context: EW
+    function ZR(RR, JR, GR, tR) {
+      (0, yR.reportClientError)(RR, JR, GR, !1, yR.MAX_ERRORS_PER_VISIT, {
+        context: tR
       })
     }
 
-    function LW(WW, iW, OW, EW) {
-      (0, mW.reportClientError)(WW, iW, OW, !1, 1 / 0, {
-        context: EW
+    function qR(RR, JR, GR, tR) {
+      (0, yR.reportClientError)(RR, JR, GR, !1, 1 / 0, {
+        context: tR
       })
     }
 
-    function cW(WW, iW, OW, EW) {
-      (0, mW.reportClientError)(WW, iW, OW, !1, NW, {
-        context: EW
+    function iR(RR, JR, GR, tR) {
+      (0, yR.reportClientError)(RR, JR, GR, !1, uR, {
+        context: tR
       })
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

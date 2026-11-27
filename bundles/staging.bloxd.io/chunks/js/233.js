@@ -1,14 +1,14 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  35324: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => oW,
-      h: () => uW,
-      l: () => nW
+  35244: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => xR,
+      f: () => OR,
+      i: () => vR
     });
-    var mW = OW(35330);
-    const EW = {
+    var yR = GR(35252);
+    const tR = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      NW = {
+      uR = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,471 +28,471 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      PW = 1048576,
-      LW = "is not a binary glTF 2.0 file",
-      cW = "loads data from outside the file",
-      wW = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      tW = {
+      ZR = 1048576,
+      qR = "is not a binary glTF 2.0 file",
+      iR = "loads data from outside the file",
+      fR = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      VR = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      ZW = {
+      KR = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      xW = {
+      wR = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: ZW,
-        TEXCOORD_2: ZW,
-        TEXCOORD_3: ZW,
-        TEXCOORD_4: ZW,
-        TEXCOORD_5: ZW
+        TEXCOORD_1: KR,
+        TEXCOORD_2: KR,
+        TEXCOORD_3: KR,
+        TEXCOORD_4: KR,
+        TEXCOORD_5: KR
       },
-      lW = new Set(mW.i.map((WW => {
-        let [iW] = WW;
-        return iW
+      rR = new Set(yR.e.map((RR => {
+        let [JR] = RR;
+        return JR
       }))),
-      AW = {
+      eR = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      bW = 5126;
+      aR = 5126;
 
-    function jW(WW) {
-      return WW.toLocaleString("en-US")
+    function LR(RR) {
+      return RR.toLocaleString("en-US")
     }
 
-    function UW(WW, iW, OW) {
-      return WW > iW ? `has ${jW(WW)} ${OW} (the limit is ${jW(iW)})` : null
+    function nR(RR, JR, GR) {
+      return RR > JR ? `has ${LR(RR)} ${GR} (the limit is ${LR(JR)})` : null
     }
 
-    function kW(WW, iW) {
-      return Number.isInteger(WW) && WW >= 0 && WW < (null !== iW && void 0 !== iW ? iW : 0)
+    function UR(RR, JR) {
+      return Number.isInteger(RR) && RR >= 0 && RR < (null !== JR && void 0 !== JR ? JR : 0)
     }
 
-    function sW(WW) {
-      return Number.isInteger(WW) && WW >= 0
+    function WR(RR) {
+      return Number.isInteger(RR) && RR >= 0
     }
 
-    function MW(WW, iW) {
-      return void 0 !== WW && (!Array.isArray(WW) || WW.length > iW)
+    function AR(RR, JR) {
+      return void 0 !== RR && (!Array.isArray(RR) || RR.length > JR)
     }
 
-    function KW(WW, iW) {
-      return "object" === typeof WW && null !== WW && Object.keys(WW).length > iW
+    function CR(RR, JR) {
+      return "object" === typeof RR && null !== RR && Object.keys(RR).length > JR
     }
 
-    function SW(WW) {
-      var iW;
-      return `${WW.normalized?"normalized ":""}${null!==(iW=mW.e[WW.componentType])&&void 0!==iW?iW:WW.componentType} ${WW.type}`
+    function XR(RR) {
+      var JR;
+      return `${RR.normalized?"normalized ":""}${null!==(JR=yR.d[RR.componentType])&&void 0!==JR?JR:RR.componentType} ${RR.type}`
     }
 
-    function YW(WW) {
-      const iW = iW => {
-        var OW;
-        return null !== (OW = WW[iW]) && void 0 !== OW ? OW : -1
+    function MR(RR) {
+      const JR = JR => {
+        var GR;
+        return null !== (GR = RR[JR]) && void 0 !== GR ? GR : -1
       };
-      return 255 === iW(0) && 216 === iW(1) ? "JPEG" : 82 === iW(0) && 73 === iW(1) && 87 === iW(8) && 69 === iW(9) ? "WebP" : 171 === iW(0) && 75 === iW(1) && 84 === iW(2) && 88 === iW(3) ? "KTX2" : "non-PNG"
+      return 255 === JR(0) && 216 === JR(1) ? "JPEG" : 82 === JR(0) && 73 === JR(1) && 87 === JR(8) && 69 === JR(9) ? "WebP" : 171 === JR(0) && 75 === JR(1) && 84 === JR(2) && 88 === JR(3) ? "KTX2" : "non-PNG"
     }
 
-    function yW(WW) {
-      return WW.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((iW, OW) => WW[OW] === iW)) && 73 === WW[12] && 72 === WW[13] && 68 === WW[14] && 82 === WW[15]
+    function BR(RR) {
+      return RR.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((JR, GR) => RR[GR] === JR)) && 73 === RR[12] && 72 === RR[13] && 68 === RR[14] && 82 === RR[15]
     }
 
-    function TW(WW) {
-      return /^[aeiou]/i.test(WW) ? `an ${WW}` : `a ${WW}`
+    function lR(RR) {
+      return /^[aeiou]/i.test(RR) ? `an ${RR}` : `a ${RR}`
     }
 
-    function JW(WW) {
-      const iW = WW.byteStride;
-      return void 0 === iW || Number.isInteger(iW) && iW >= 4 && iW <= 252 && iW % 4 === 0
+    function pR(RR) {
+      const JR = RR.byteStride;
+      return void 0 === JR || Number.isInteger(JR) && JR >= 4 && JR <= 252 && JR % 4 === 0
     }
 
-    function hW(WW, iW, OW) {
-      var mW, EW;
-      const NW = null === (mW = WW.bufferViews) || void 0 === mW ? void 0 : mW[OW];
-      if (!NW || !iW || 0 !== NW.buffer) return null;
-      const PW = null !== (EW = NW.byteOffset) && void 0 !== EW ? EW : 0;
-      return !sW(PW) || !sW(NW.byteLength) || PW + NW.byteLength > iW.byteLength ? null : iW.subarray(PW, PW + NW.byteLength)
+    function gR(RR, JR, GR) {
+      var yR, tR;
+      const uR = null === (yR = RR.bufferViews) || void 0 === yR ? void 0 : yR[GR];
+      if (!uR || !JR || 0 !== uR.buffer) return null;
+      const ZR = null !== (tR = uR.byteOffset) && void 0 !== tR ? tR : 0;
+      return !WR(ZR) || !WR(uR.byteLength) || ZR + uR.byteLength > JR.byteLength ? null : JR.subarray(ZR, ZR + uR.byteLength)
     }
 
-    function HW(WW, iW) {
-      var OW, EW, NW;
-      const PW = mW.o[iW.type],
-        LW = mW.c[iW.componentType];
-      if (!PW || !LW || !Number.isInteger(iW.count) || iW.count < 0) return !1;
-      if (void 0 === iW.bufferView) return !0;
-      const cW = null === (OW = WW.bufferViews) || void 0 === OW ? void 0 : OW[iW.bufferView],
-        wW = null !== (EW = iW.byteOffset) && void 0 !== EW ? EW : 0;
-      if (!cW || !sW(wW) || wW % LW !== 0) return !1;
-      const tW = PW * LW,
-        ZW = null !== (NW = cW.byteStride) && void 0 !== NW ? NW : tW;
-      if (ZW < tW) return !1;
-      return (0 === iW.count ? 0 : wW + ZW * (iW.count - 1) + tW) <= cW.byteLength
+    function bR(RR, JR) {
+      var GR, tR, uR;
+      const ZR = yR.n[JR.type],
+        qR = yR.b[JR.componentType];
+      if (!ZR || !qR || !Number.isInteger(JR.count) || JR.count < 0) return !1;
+      if (void 0 === JR.bufferView) return !0;
+      const iR = null === (GR = RR.bufferViews) || void 0 === GR ? void 0 : GR[JR.bufferView],
+        fR = null !== (tR = JR.byteOffset) && void 0 !== tR ? tR : 0;
+      if (!iR || !WR(fR) || fR % qR !== 0) return !1;
+      const VR = ZR * qR,
+        KR = null !== (uR = iR.byteStride) && void 0 !== uR ? uR : VR;
+      if (KR < VR) return !1;
+      return (0 === JR.count ? 0 : fR + KR * (JR.count - 1) + VR) <= iR.byteLength
     }
 
-    function nW(WW) {
-      return WW > EW.fileBytes ? `is ${(WW/PW).toFixed(1)} MiB (the limit is ${EW.fileBytes/PW} MiB)` : null
+    function vR(RR) {
+      return RR > tR.fileBytes ? `is ${(RR/ZR).toFixed(1)} MiB (the limit is ${tR.fileBytes/ZR} MiB)` : null
     }
 
-    function uW(WW, iW) {
+    function OR(RR, JR) {
       try {
-        return function(WW, iW) {
-          var OW, PW, ZW, jW, sW, nW, uW, oW, dW, eW, vW, gW, DW, VW, pW, fW, CW;
-          const XW = Array.isArray(WW.extensionsUsed) && WW.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(WW, iW) {
-              var OW, mW;
+        return function(RR, JR) {
+          var GR, ZR, KR, LR, WR, vR, OR, xR, NR, DR, HR, oR, cR, PR, IR, mR, zR;
+          const SR = Array.isArray(RR.extensionsUsed) && RR.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(RR, JR) {
+              var GR, yR;
               const {
-                items: EW,
-                perFile: PW,
-                surfaces: LW,
-                few: cW,
-                bounds: wW,
-                attributeMembers: tW
-              } = NW;
-              if (MW(WW.extensionsRequired, cW) || MW(WW.animations, 1 / 0) || MW(WW.skins, 1 / 0)) return !0;
-              if (null !== (OW = WW.animations) && void 0 !== OW && OW.length || null !== (mW = WW.skins) && void 0 !== mW && mW.length) return !1;
+                items: tR,
+                perFile: ZR,
+                surfaces: qR,
+                few: iR,
+                bounds: fR,
+                attributeMembers: VR
+              } = uR;
+              if (AR(RR.extensionsRequired, iR) || AR(RR.animations, 1 / 0) || AR(RR.skins, 1 / 0)) return !0;
+              if (null !== (GR = RR.animations) && void 0 !== GR && GR.length || null !== (yR = RR.skins) && void 0 !== yR && yR.length) return !1;
               if ([
-                  [WW.buffers, cW],
-                  [WW.scenes, cW],
-                  [WW.bufferViews, EW],
-                  [WW.accessors, EW],
-                  [WW.nodes, EW],
-                  [WW.meshes, EW],
-                  [WW.materials, LW],
-                  [WW.textures, LW],
-                  [WW.samplers, LW],
-                  [WW.images, LW]
-                ].some((WW => {
-                  let [iW, OW] = WW;
-                  return MW(iW, OW)
+                  [RR.buffers, iR],
+                  [RR.scenes, iR],
+                  [RR.bufferViews, tR],
+                  [RR.accessors, tR],
+                  [RR.nodes, tR],
+                  [RR.meshes, tR],
+                  [RR.materials, qR],
+                  [RR.textures, qR],
+                  [RR.samplers, qR],
+                  [RR.images, qR]
+                ].some((RR => {
+                  let [JR, GR] = RR;
+                  return AR(JR, GR)
                 }))) return !0;
-              for (const NW of null !== (ZW = WW.accessors) && void 0 !== ZW ? ZW : []) {
-                var ZW, xW, lW;
-                if (Number.isInteger(NW.count) && (!Number.isSafeInteger(NW.count) || Object.is(NW.count, -0)) || MW(null !== (xW = NW.min) && void 0 !== xW ? xW : void 0, wW) || MW(null !== (lW = NW.max) && void 0 !== lW ? lW : void 0, wW)) return !0
+              for (const uR of null !== (KR = RR.accessors) && void 0 !== KR ? KR : []) {
+                var KR, wR, rR;
+                if (Number.isInteger(uR.count) && (!Number.isSafeInteger(uR.count) || Object.is(uR.count, -0)) || AR(null !== (wR = uR.min) && void 0 !== wR ? wR : void 0, fR) || AR(null !== (rR = uR.max) && void 0 !== rR ? rR : void 0, fR)) return !0
               }
-              for (const NW of null !== (AW = WW.scenes) && void 0 !== AW ? AW : []) {
-                var AW;
-                if (MW(NW.nodes, EW)) return !0
+              for (const uR of null !== (eR = RR.scenes) && void 0 !== eR ? eR : []) {
+                var eR;
+                if (AR(uR.nodes, tR)) return !0
               }
-              let bW = 0;
-              for (const NW of null !== (jW = WW.nodes) && void 0 !== jW ? jW : []) {
-                var jW, UW, kW;
-                if (MW(NW.children, PW)) return !0;
-                bW += null !== (UW = null === (kW = NW.children) || void 0 === kW ? void 0 : kW.length) && void 0 !== UW ? UW : 0
+              let aR = 0;
+              for (const uR of null !== (LR = RR.nodes) && void 0 !== LR ? LR : []) {
+                var LR, nR, UR;
+                if (AR(uR.children, ZR)) return !0;
+                aR += null !== (nR = null === (UR = uR.children) || void 0 === UR ? void 0 : UR.length) && void 0 !== nR ? nR : 0
               }
-              if (bW > PW) return !0;
-              let sW = 0;
-              for (const NW of null !== (SW = WW.meshes) && void 0 !== SW ? SW : []) {
-                var SW;
-                if (!Array.isArray(NW.primitives)) return !0;
-                if (sW += NW.primitives.length, sW > PW) return !0;
-                for (const WW of NW.primitives) {
-                  var YW;
-                  const OW = iW ? null === (YW = WW.extensions) || void 0 === YW ? void 0 : YW.KHR_draco_mesh_compression : void 0;
-                  if (KW(WW.attributes, tW) || KW(null === OW || void 0 === OW ? void 0 : OW.attributes, tW)) return !0
+              if (aR > ZR) return !0;
+              let WR = 0;
+              for (const uR of null !== (XR = RR.meshes) && void 0 !== XR ? XR : []) {
+                var XR;
+                if (!Array.isArray(uR.primitives)) return !0;
+                if (WR += uR.primitives.length, WR > ZR) return !0;
+                for (const RR of uR.primitives) {
+                  var MR;
+                  const GR = JR ? null === (MR = RR.extensions) || void 0 === MR ? void 0 : MR.KHR_draco_mesh_compression : void 0;
+                  if (CR(RR.attributes, VR) || CR(null === GR || void 0 === GR ? void 0 : GR.attributes, VR)) return !0
                 }
               }
               return !1
-            }(WW, XW)) return LW;
-          const BW = null === (OW = WW.asset) || void 0 === OW ? void 0 : OW.version;
-          if ("string" !== typeof BW || !/^2\.\d+/.test(BW)) return `uses glTF version ${null!==BW&&void 0!==BW?BW:"(none)"}`;
-          const qW = null === (PW = WW.asset) || void 0 === PW ? void 0 : PW.minVersion;
-          if (void 0 !== qW && "2.0" !== qW) return `uses glTF version ${qW}`;
-          for (const mW of null !== (RW = WW.extensionsRequired) && void 0 !== RW ? RW : []) {
-            var RW;
-            if (!wW.has(mW)) return `requires the glTF extension ${mW}`
+            }(RR, SR)) return qR;
+          const jR = null === (GR = RR.asset) || void 0 === GR ? void 0 : GR.version;
+          if ("string" !== typeof jR || !/^2\.\d+/.test(jR)) return `uses glTF version ${null!==jR&&void 0!==jR?jR:"(none)"}`;
+          const dR = null === (ZR = RR.asset) || void 0 === ZR ? void 0 : ZR.minVersion;
+          if (void 0 !== dR && "2.0" !== dR) return `uses glTF version ${dR}`;
+          for (const yR of null !== (ER = RR.extensionsRequired) && void 0 !== ER ? ER : []) {
+            var ER;
+            if (!fR.has(yR)) return `requires the glTF extension ${yR}`
           }
-          if (null !== (ZW = WW.animations) && void 0 !== ZW && ZW.length) return "has animations";
-          if (null !== (jW = WW.skins) && void 0 !== jW && jW.length) return "uses skins";
-          const GW = null !== (sW = WW.buffers) && void 0 !== sW ? sW : [];
-          for (const [mW, EW] of GW.entries()) {
-            if (void 0 !== EW.uri) return cW;
-            if (mW > 0 || !iW) return LW
+          if (null !== (KR = RR.animations) && void 0 !== KR && KR.length) return "has animations";
+          if (null !== (LR = RR.skins) && void 0 !== LR && LR.length) return "uses skins";
+          const YR = null !== (WR = RR.buffers) && void 0 !== WR ? WR : [];
+          for (const [yR, tR] of YR.entries()) {
+            if (void 0 !== tR.uri) return iR;
+            if (yR > 0 || !JR) return qR
           }
-          for (const [mW, EW] of(null !== (IW = WW.bufferViews) && void 0 !== IW ? IW : []).entries()) {
-            var IW;
-            if (!hW(WW, iW, mW) || !JW(EW)) return LW
+          for (const [yR, tR] of(null !== (kR = RR.bufferViews) && void 0 !== kR ? kR : []).entries()) {
+            var kR;
+            if (!gR(RR, JR, yR) || !pR(tR)) return qR
           }
-          const aW = null !== (nW = WW.accessors) && void 0 !== nW ? nW : [];
-          for (const mW of aW) {
-            if (void 0 !== mW.sparse) return "uses sparse accessors";
-            const iW = Number.isInteger(mW.count) ? UW(mW.count, EW.accessorElements, "elements in an accessor") : null;
-            if (iW) return iW;
-            if (!HW(WW, mW)) return LW
+          const QR = null !== (vR = RR.accessors) && void 0 !== vR ? vR : [];
+          for (const yR of QR) {
+            if (void 0 !== yR.sparse) return "uses sparse accessors";
+            const JR = Number.isInteger(yR.count) ? nR(yR.count, tR.accessorElements, "elements in an accessor") : null;
+            if (JR) return JR;
+            if (!bR(RR, yR)) return qR
           }
-          const rW = null !== (uW = WW.scenes) && void 0 !== uW ? uW : [];
-          if (1 !== rW.length) return `has ${rW.length} scenes`;
-          const zW = (0, mW.v)(WW);
-          if (void 0 !== zW && 0 !== zW) return LW;
-          const FW = null !== (oW = WW.nodes) && void 0 !== oW ? oW : [],
-            QW = null !== (dW = WW.meshes) && void 0 !== dW ? dW : [],
-            Wi = null !== (eW = WW.materials) && void 0 !== eW ? eW : [],
-            ii = null !== (vW = WW.textures) && void 0 !== vW ? vW : [],
-            Oi = null !== (gW = WW.images) && void 0 !== gW ? gW : [],
-            mi = null !== (DW = null !== (VW = null !== (pW = UW(FW.length, EW.nodes, "nodes")) && void 0 !== pW ? pW : UW(QW.length, EW.meshes, "meshes")) && void 0 !== VW ? VW : UW(Wi.length, EW.materials, "materials")) && void 0 !== DW ? DW : UW(Oi.length, EW.images, "images");
-          if (mi) return mi;
-          const Ei = new Set;
-          for (const mW of FW)
-            for (const WW of null !== (Ni = mW.children) && void 0 !== Ni ? Ni : []) {
-              var Ni;
-              if (!kW(WW, FW.length) || Ei.has(WW)) return LW;
-              Ei.add(WW)
+          const FR = null !== (OR = RR.scenes) && void 0 !== OR ? OR : [];
+          if (1 !== FR.length) return `has ${FR.length} scenes`;
+          const TR = (0, yR.u)(RR);
+          if (void 0 !== TR && 0 !== TR) return qR;
+          const sR = null !== (xR = RR.nodes) && void 0 !== xR ? xR : [],
+            hR = null !== (NR = RR.meshes) && void 0 !== NR ? NR : [],
+            RJ = null !== (DR = RR.materials) && void 0 !== DR ? DR : [],
+            JJ = null !== (HR = RR.textures) && void 0 !== HR ? HR : [],
+            GJ = null !== (oR = RR.images) && void 0 !== oR ? oR : [],
+            yJ = null !== (cR = null !== (PR = null !== (IR = nR(sR.length, tR.nodes, "nodes")) && void 0 !== IR ? IR : nR(hR.length, tR.meshes, "meshes")) && void 0 !== PR ? PR : nR(RJ.length, tR.materials, "materials")) && void 0 !== cR ? cR : nR(GJ.length, tR.images, "images");
+          if (yJ) return yJ;
+          const tJ = new Set;
+          for (const yR of sR)
+            for (const RR of null !== (uJ = yR.children) && void 0 !== uJ ? uJ : []) {
+              var uJ;
+              if (!UR(RR, sR.length) || tJ.has(RR)) return qR;
+              tJ.add(RR)
             }
-          const Pi = new Set,
-            Li = WW => {
-              var iW;
-              return !Pi.has(WW) && (Pi.add(WW), (null !== (iW = FW[WW].children) && void 0 !== iW ? iW : []).every(Li))
+          const ZJ = new Set,
+            qJ = RR => {
+              var JR;
+              return !ZJ.has(RR) && (ZJ.add(RR), (null !== (JR = sR[RR].children) && void 0 !== JR ? JR : []).every(qJ))
             };
-          for (const mW of null !== (ci = rW[0].nodes) && void 0 !== ci ? ci : []) {
-            var ci;
-            if (!kW(mW, FW.length) || Ei.has(mW) || !Li(mW)) return LW
+          for (const yR of null !== (iJ = FR[0].nodes) && void 0 !== iJ ? iJ : []) {
+            var iJ;
+            if (!UR(yR, sR.length) || tJ.has(yR) || !qJ(yR)) return qR
           }
-          for (const mW of FW) {
-            if (void 0 !== mW.matrix) return "uses node matrices";
-            if (void 0 !== mW.skin) return "uses skins";
-            if (void 0 !== mW.weights) return "uses morph targets";
-            if (void 0 !== mW.mesh && !kW(mW.mesh, QW.length)) return LW;
-            const WW = [
-              [mW.translation, 3],
-              [mW.rotation, 4],
-              [mW.scale, 3]
+          for (const yR of sR) {
+            if (void 0 !== yR.matrix) return "uses node matrices";
+            if (void 0 !== yR.skin) return "uses skins";
+            if (void 0 !== yR.weights) return "uses morph targets";
+            if (void 0 !== yR.mesh && !UR(yR.mesh, hR.length)) return qR;
+            const RR = [
+              [yR.translation, 3],
+              [yR.rotation, 4],
+              [yR.scale, 3]
             ];
-            for (const [iW, OW] of WW)
-              if (void 0 !== iW && (!Array.isArray(iW) || iW.length !== OW || !iW.every((WW => Number.isFinite(WW))))) return LW
+            for (const [JR, GR] of RR)
+              if (void 0 !== JR && (!Array.isArray(JR) || JR.length !== GR || !JR.every((RR => Number.isFinite(RR))))) return qR
           }
-          let wi = -1,
-            ti = 0,
-            Zi = 0,
-            xi = null;
-          for (const EW of QW) {
-            if (void 0 !== EW.weights) return "uses morph targets";
-            if (0 === EW.primitives.length) return LW;
-            for (const OW of EW.primitives) {
-              var li, Ai;
-              const EW = null !== (li = OW.mode) && void 0 !== li ? li : 4;
-              var bi;
-              if (4 !== EW && 0 !== EW) return `uses ${null!==(bi=AW[EW])&&void 0!==bi?bi:`mode ${EW}`} primitives`;
-              if (void 0 !== OW.targets) return "uses morph targets";
-              if (void 0 !== OW.material && !kW(OW.material, Wi.length)) return LW;
-              const NW = XW ? null === (Ai = OW.extensions) || void 0 === Ai ? void 0 : Ai.KHR_draco_mesh_compression : void 0;
-              if (NW) {
-                if (4 !== EW) return "uses Draco-compressed points";
-                if (!hW(WW, iW, NW.bufferView) || "object" !== typeof NW.attributes) return LW
+          let fJ = -1,
+            VJ = 0,
+            KJ = 0,
+            wJ = null;
+          for (const tR of hR) {
+            if (void 0 !== tR.weights) return "uses morph targets";
+            if (0 === tR.primitives.length) return qR;
+            for (const GR of tR.primitives) {
+              var rJ, eJ;
+              const tR = null !== (rJ = GR.mode) && void 0 !== rJ ? rJ : 4;
+              var aJ;
+              if (4 !== tR && 0 !== tR) return `uses ${null!==(aJ=eR[tR])&&void 0!==aJ?aJ:`mode ${tR}`} primitives`;
+              if (void 0 !== GR.targets) return "uses morph targets";
+              if (void 0 !== GR.material && !UR(GR.material, RJ.length)) return qR;
+              const uR = SR ? null === (eJ = GR.extensions) || void 0 === eJ ? void 0 : eJ.KHR_draco_mesh_compression : void 0;
+              if (uR) {
+                if (4 !== tR) return "uses Draco-compressed points";
+                if (!gR(RR, JR, uR.bufferView) || "object" !== typeof uR.attributes) return qR
               }
-              const PW = OW.attributes;
-              if ("object" !== typeof PW || null === PW) return LW;
-              if (void 0 === PW.POSITION) return "has a primitive with no positions";
-              if (!kW(PW.POSITION, aW.length)) return LW;
-              const cW = aW[PW.POSITION].count;
-              for (const [WW, iW] of Object.entries(PW)) {
-                if (!kW(iW, aW.length)) return LW;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(WW)) return "uses skins";
-                const OW = aW[iW],
-                  mW = tW[WW];
-                if (mW && (OW.componentType !== bW || OW.normalized || OW.type !== mW)) return `stores ${WW} as ${SW(OW)}`;
-                const EW = xW[WW];
-                if (EW && (OW.type !== EW.type || !EW.componentTypes.includes(OW.componentType) || OW.componentType === bW === !!OW.normalized)) return `stores ${WW} as ${SW(OW)}`;
-                if (lW.has(WW) && OW.count !== cW) return "has vertex attributes of different lengths"
+              const ZR = GR.attributes;
+              if ("object" !== typeof ZR || null === ZR) return qR;
+              if (void 0 === ZR.POSITION) return "has a primitive with no positions";
+              if (!UR(ZR.POSITION, QR.length)) return qR;
+              const iR = QR[ZR.POSITION].count;
+              for (const [RR, JR] of Object.entries(ZR)) {
+                if (!UR(JR, QR.length)) return qR;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(RR)) return "uses skins";
+                const GR = QR[JR],
+                  yR = VR[RR];
+                if (yR && (GR.componentType !== aR || GR.normalized || GR.type !== yR)) return `stores ${RR} as ${XR(GR)}`;
+                const tR = wR[RR];
+                if (tR && (GR.type !== tR.type || !tR.componentTypes.includes(GR.componentType) || GR.componentType === aR === !!GR.normalized)) return `stores ${RR} as ${XR(GR)}`;
+                if (rR.has(RR) && GR.count !== iR) return "has vertex attributes of different lengths"
               }
-              if (NW) {
-                if (void 0 === OW.indices) return LW;
-                for (const iW in NW.attributes)
-                  if (lW.has(iW) && void 0 === PW[iW]) return LW;
-                if (void 0 === NW.attributes.POSITION) return LW;
-                const WW = kW(OW.indices, aW.length) ? aW[OW.indices].count : -1;
-                if (0 === WW) return LW;
-                if (-1 === wi) wi = NW.bufferView, ti = cW, Zi = WW;
+              if (uR) {
+                if (void 0 === GR.indices) return qR;
+                for (const JR in uR.attributes)
+                  if (rR.has(JR) && void 0 === ZR[JR]) return qR;
+                if (void 0 === uR.attributes.POSITION) return qR;
+                const RR = UR(GR.indices, QR.length) ? QR[GR.indices].count : -1;
+                if (0 === RR) return qR;
+                if (-1 === fJ) fJ = uR.bufferView, VJ = iR, KJ = RR;
                 else {
-                  xi ??= new Map([
-                    [wi, [ti, Zi]]
+                  wJ ??= new Map([
+                    [fJ, [VJ, KJ]]
                   ]);
-                  const iW = xi.get(NW.bufferView);
-                  if (iW && (iW[0] !== cW || iW[1] !== WW)) return LW;
-                  xi.set(NW.bufferView, null !== iW && void 0 !== iW ? iW : [cW, WW])
+                  const JR = wJ.get(uR.bufferView);
+                  if (JR && (JR[0] !== iR || JR[1] !== RR)) return qR;
+                  wJ.set(uR.bufferView, null !== JR && void 0 !== JR ? JR : [iR, RR])
                 }
               }
-              let wW = cW;
-              if (void 0 !== OW.indices) {
-                if (!kW(OW.indices, aW.length)) return LW;
-                const WW = aW[OW.indices];
-                if ("SCALAR" !== WW.type) return LW;
-                if (5121 === WW.componentType) return "uses 8-bit indices";
-                var ji;
-                if (5123 !== WW.componentType && 5125 !== WW.componentType) return `stores indices as ${null!==(ji=mW.e[WW.componentType])&&void 0!==ji?ji:WW.componentType}`;
-                if (!NW && void 0 === WW.bufferView) return LW;
-                wW = WW.count
+              let fR = iR;
+              if (void 0 !== GR.indices) {
+                if (!UR(GR.indices, QR.length)) return qR;
+                const RR = QR[GR.indices];
+                if ("SCALAR" !== RR.type) return qR;
+                if (5121 === RR.componentType) return "uses 8-bit indices";
+                var LJ;
+                if (5123 !== RR.componentType && 5125 !== RR.componentType) return `stores indices as ${null!==(LJ=yR.d[RR.componentType])&&void 0!==LJ?LJ:RR.componentType}`;
+                if (!uR && void 0 === RR.bufferView) return qR;
+                fR = RR.count
               }
-              if (4 === EW && wW % 3 !== 0) return LW
+              if (4 === tR && fR % 3 !== 0) return qR
             }
           }
-          let Ui = 0,
-            ki = 0,
-            si = 0;
-          for (let mW = 0; mW < FW.length; mW++) {
-            const WW = FW[mW].mesh;
-            if (void 0 !== WW && Pi.has(mW))
-              for (const iW of QW[WW].primitives) si++, Ui += aW[iW.attributes.POSITION].count, void 0 !== iW.indices && (ki += aW[iW.indices].count)
+          let nJ = 0,
+            UJ = 0,
+            WJ = 0;
+          for (let yR = 0; yR < sR.length; yR++) {
+            const RR = sR[yR].mesh;
+            if (void 0 !== RR && ZJ.has(yR))
+              for (const JR of hR[RR].primitives) WJ++, nJ += QR[JR.attributes.POSITION].count, void 0 !== JR.indices && (UJ += QR[JR.indices].count)
           }
-          const Mi = null !== (fW = null !== (CW = UW(Ui, EW.vertices, "vertices")) && void 0 !== CW ? CW : UW(ki, EW.indices, "indices")) && void 0 !== fW ? fW : UW(si, EW.primitives, "primitives");
-          if (Mi) return Mi;
-          for (const mW of Wi) {
-            var Ki, Si;
-            if (void 0 !== mW.emissiveTexture) return "uses an emissive texture";
-            const iW = null !== (Ki = mW.alphaMode) && void 0 !== Ki ? Ki : "OPAQUE";
-            if ("OPAQUE" !== iW && "MASK" !== iW && "BLEND" !== iW) return LW;
-            const OW = null === (Si = mW.pbrMetallicRoughness) || void 0 === Si ? void 0 : Si.baseColorTexture;
-            if (OW) {
-              var Yi, yi, Ti, Ji, Hi;
-              const iW = null !== (Yi = WW.extensionsUsed) && void 0 !== Yi && Yi.includes("KHR_texture_transform") ? null === (yi = OW.extensions) || void 0 === yi ? void 0 : yi.KHR_texture_transform : void 0;
-              if (0 !== (null !== (Ti = OW.texCoord) && void 0 !== Ti ? Ti : 0) || 0 !== (null !== (Ji = null === iW || void 0 === iW ? void 0 : iW.texCoord) && void 0 !== Ji ? Ji : 0)) return "uses a second UV set";
-              const mW = ii[OW.index];
-              if (!mW || !kW(mW.source, Oi.length) || void 0 !== mW.sampler && !kW(mW.sampler, null === (Hi = WW.samplers) || void 0 === Hi ? void 0 : Hi.length)) return LW
+          const AJ = null !== (mR = null !== (zR = nR(nJ, tR.vertices, "vertices")) && void 0 !== zR ? zR : nR(UJ, tR.indices, "indices")) && void 0 !== mR ? mR : nR(WJ, tR.primitives, "primitives");
+          if (AJ) return AJ;
+          for (const yR of RJ) {
+            var CJ, XJ;
+            if (void 0 !== yR.emissiveTexture) return "uses an emissive texture";
+            const JR = null !== (CJ = yR.alphaMode) && void 0 !== CJ ? CJ : "OPAQUE";
+            if ("OPAQUE" !== JR && "MASK" !== JR && "BLEND" !== JR) return qR;
+            const GR = null === (XJ = yR.pbrMetallicRoughness) || void 0 === XJ ? void 0 : XJ.baseColorTexture;
+            if (GR) {
+              var MJ, BJ, lJ, pJ, gJ;
+              const JR = null !== (MJ = RR.extensionsUsed) && void 0 !== MJ && MJ.includes("KHR_texture_transform") ? null === (BJ = GR.extensions) || void 0 === BJ ? void 0 : BJ.KHR_texture_transform : void 0;
+              if (0 !== (null !== (lJ = GR.texCoord) && void 0 !== lJ ? lJ : 0) || 0 !== (null !== (pJ = null === JR || void 0 === JR ? void 0 : JR.texCoord) && void 0 !== pJ ? pJ : 0)) return "uses a second UV set";
+              const yR = JJ[GR.index];
+              if (!yR || !UR(yR.source, GJ.length) || void 0 !== yR.sampler && !UR(yR.sampler, null === (gJ = RR.samplers) || void 0 === gJ ? void 0 : gJ.length)) return qR
             }
           }
-          for (const mW of Oi) {
-            if (void 0 !== mW.uri) return cW;
-            if (void 0 === mW.bufferView) return LW;
-            const OW = hW(WW, iW, mW.bufferView);
-            if (!OW) return LW;
-            if ("image/png" !== mW.mimeType) {
-              var ni, ui, oi;
-              return `has ${TW(null!==(ni=null!==(ui={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(oi=mW.mimeType)&&void 0!==oi?oi:""])&&void 0!==ui?ui:mW.mimeType)&&void 0!==ni?ni:"untyped")} image`
+          for (const yR of GJ) {
+            if (void 0 !== yR.uri) return iR;
+            if (void 0 === yR.bufferView) return qR;
+            const GR = gR(RR, JR, yR.bufferView);
+            if (!GR) return qR;
+            if ("image/png" !== yR.mimeType) {
+              var bJ, vJ, OJ;
+              return `has ${lR(null!==(bJ=null!==(vJ={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(OJ=yR.mimeType)&&void 0!==OJ?OJ:""])&&void 0!==vJ?vJ:yR.mimeType)&&void 0!==bJ?bJ:"untyped")} image`
             }
-            if (!yW(OW)) return `has ${TW(YW(OW))} image`;
-            const NW = new DataView(OW.buffer, OW.byteOffset, OW.byteLength),
-              PW = NW.getUint32(16),
-              wW = NW.getUint32(20);
-            if (PW > EW.imageSide || wW > EW.imageSide) return `has a ${PW} \xd7 ${wW} image (the limit is ${EW.imageSide})`
+            if (!BR(GR)) return `has ${lR(MR(GR))} image`;
+            const uR = new DataView(GR.buffer, GR.byteOffset, GR.byteLength),
+              ZR = uR.getUint32(16),
+              fR = uR.getUint32(20);
+            if (ZR > tR.imageSide || fR > tR.imageSide) return `has a ${ZR} \xd7 ${fR} image (the limit is ${tR.imageSide})`
           }
           return null
-        }(WW, iW)
+        }(RR, JR)
       } catch {
-        return LW
+        return qR
       }
     }
 
-    function oW(WW) {
-      const iW = nW(WW.byteLength);
-      if (iW) return iW;
+    function xR(RR) {
+      const JR = vR(RR.byteLength);
+      if (JR) return JR;
       try {
         const {
-          json: iW,
-          bin: OW
-        } = (0, mW.y)(WW);
-        return uW(iW, OW)
-      } catch (OW) {
-        if (OW instanceof mW.n) return OW.reason;
-        throw OW
+          json: JR,
+          bin: GR
+        } = (0, yR.y)(RR);
+        return OR(JR, GR)
+      } catch (GR) {
+        if (GR instanceof yR.l) return GR.reason;
+        throw GR
       }
     }
   },
-  35330: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW,
-      e: () => lW,
-      i: () => jW,
-      l: () => PW,
-      n: () => NW,
-      o: () => bW,
-      r: () => ZW,
-      t: () => xW,
-      v: () => LW,
-      y: () => tW
+  35252: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => eR,
+      d: () => rR,
+      e: () => LR,
+      i: () => ZR,
+      l: () => uR,
+      n: () => aR,
+      p: () => KR,
+      s: () => wR,
+      u: () => qR,
+      y: () => VR
     });
-    const mW = 1179937895,
-      EW = 1313821514;
-    class NW extends Error {
-      constructor(WW) {
-        super(`GLB refused: it ${WW}`), this.reason = WW, this.name = "GlbRefused"
+    const yR = 1179937895,
+      tR = 1313821514;
+    class uR extends Error {
+      constructor(RR) {
+        super(`GLB refused: it ${RR}`), this.reason = RR, this.name = "GlbRefused"
       }
     }
-    class PW extends Error {
-      constructor(WW) {
-        super(WW), this.name = "GlbError"
+    class ZR extends Error {
+      constructor(RR) {
+        super(RR), this.name = "GlbError"
       }
     }
 
-    function LW(WW) {
-      return Reflect.get(WW, "scene")
+    function qR(RR) {
+      return Reflect.get(RR, "scene")
     }
-    const cW = 5130562,
-      wW = "is not a binary glTF 2.0 file";
+    const iR = 5130562,
+      fR = "is not a binary glTF 2.0 file";
 
-    function tW(WW) {
-      var iW;
-      const OW = WW instanceof Uint8Array ? WW : new Uint8Array(WW),
-        PW = function(WW) {
-          const iW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength);
-          if (WW.byteLength < 20 || iW.getUint32(0, !0) !== mW || 2 !== iW.getUint32(4, !0)) return null;
-          const OW = Math.min(iW.getUint32(8, !0), WW.byteLength),
-            NW = iW.getUint32(12, !0);
-          if (iW.getUint32(16, !0) !== EW || 20 + NW > OW) return null;
-          let PW;
+    function VR(RR) {
+      var JR;
+      const GR = RR instanceof Uint8Array ? RR : new Uint8Array(RR),
+        ZR = function(RR) {
+          const JR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength);
+          if (RR.byteLength < 20 || JR.getUint32(0, !0) !== yR || 2 !== JR.getUint32(4, !0)) return null;
+          const GR = Math.min(JR.getUint32(8, !0), RR.byteLength),
+            uR = JR.getUint32(12, !0);
+          if (JR.getUint32(16, !0) !== tR || 20 + uR > GR) return null;
+          let ZR;
           try {
-            PW = JSON.parse((new TextDecoder).decode(WW.subarray(20, 20 + NW)))
+            ZR = JSON.parse((new TextDecoder).decode(RR.subarray(20, 20 + uR)))
           } catch {
             return null
           }
-          return "object" === typeof PW && null !== PW ? {
-            json: PW,
-            jsonEnd: 20 + NW,
-            length: OW
+          return "object" === typeof ZR && null !== ZR ? {
+            json: ZR,
+            jsonEnd: 20 + uR,
+            length: GR
           } : null
-        }(OW);
-      if (null === PW) throw new NW(wW);
-      const LW = PW.json,
+        }(GR);
+      if (null === ZR) throw new uR(fR);
+      const qR = ZR.json,
         {
-          jsonEnd: tW,
-          length: ZW
-        } = PW,
-        xW = new DataView(OW.buffer, OW.byteOffset, OW.byteLength);
-      let lW = -1,
-        AW = 0;
-      for (let mW = tW; mW < ZW;) {
-        if (mW + 8 > ZW) throw new NW(wW);
-        const WW = xW.getUint32(mW, !0),
-          iW = xW.getUint32(mW + 4, !0);
-        if (mW + 8 + WW > ZW || iW === EW || iW === cW && -1 !== lW) throw new NW(wW);
-        iW === cW && (lW = mW + 8, AW = WW), mW += 8 + WW
+          jsonEnd: VR,
+          length: KR
+        } = ZR,
+        wR = new DataView(GR.buffer, GR.byteOffset, GR.byteLength);
+      let rR = -1,
+        eR = 0;
+      for (let yR = VR; yR < KR;) {
+        if (yR + 8 > KR) throw new uR(fR);
+        const RR = wR.getUint32(yR, !0),
+          JR = wR.getUint32(yR + 4, !0);
+        if (yR + 8 + RR > KR || JR === tR || JR === iR && -1 !== rR) throw new uR(fR);
+        JR === iR && (rR = yR + 8, eR = RR), yR += 8 + RR
       }
-      let bW = null;
-      const jW = null === (iW = LW.buffers) || void 0 === iW ? void 0 : iW[0];
-      if (-1 !== lW && jW && void 0 === jW.uri) {
-        if (!(jW.byteLength >= 0) || jW.byteLength > AW) throw new NW(wW);
-        bW = new Uint8Array(OW.buffer, OW.byteOffset + lW, jW.byteLength)
+      let aR = null;
+      const LR = null === (JR = qR.buffers) || void 0 === JR ? void 0 : JR[0];
+      if (-1 !== rR && LR && void 0 === LR.uri) {
+        if (!(LR.byteLength >= 0) || LR.byteLength > eR) throw new uR(fR);
+        aR = new Uint8Array(GR.buffer, GR.byteOffset + rR, LR.byteLength)
       }
       return {
-        json: LW,
-        bin: bW,
-        fileBytes: OW.byteLength
+        json: qR,
+        bin: aR,
+        fileBytes: GR.byteLength
       }
     }
 
-    function ZW(WW) {
-      const iW = WW.slice(WW.indexOf(",") + 1),
-        OW = Uint8Array.fromBase64;
-      if (OW) return OW(iW).buffer;
-      const mW = atob(iW),
-        EW = new Uint8Array(mW.length);
-      for (let NW = 0; NW < mW.length; NW++) EW[NW] = mW.charCodeAt(NW);
-      return EW.buffer
+    function KR(RR) {
+      const JR = RR.slice(RR.indexOf(",") + 1),
+        GR = Uint8Array.fromBase64;
+      if (GR) return GR(JR).buffer;
+      const yR = atob(JR),
+        tR = new Uint8Array(yR.length);
+      for (let uR = 0; uR < yR.length; uR++) tR[uR] = yR.charCodeAt(uR);
+      return tR.buffer
     }
-    async function xW(WW) {
-      if (WW.startsWith("data:")) return ZW(WW);
-      const iW = await fetch(WW);
-      if (!iW.ok) throw new PW(`fetching ${WW} failed: ${iW.status} ${iW.statusText}`);
-      return await iW.arrayBuffer()
+    async function wR(RR) {
+      if (RR.startsWith("data:")) return KR(RR);
+      const JR = await fetch(RR);
+      if (!JR.ok) throw new ZR(`fetching ${RR} failed: ${JR.status} ${JR.statusText}`);
+      return await JR.arrayBuffer()
     }
-    const lW = {
+    const rR = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -500,7 +500,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      AW = {
+      eR = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -508,7 +508,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      bW = {
+      aR = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -517,7 +517,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      jW = [
+      LR = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -532,4 +532,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

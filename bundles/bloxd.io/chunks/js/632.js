@@ -1,176 +1,176 @@
 export const id = 632;
 export const ids = [632];
 export const modules = {
-  54033: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      _TGATextureLoader: () => LW
+  53891: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      _TGATextureLoader: () => qR
     });
-    var mW = OW(39911);
+    var yR = GR(39914);
 
-    function EW(WW) {
-      let iW = 0;
+    function tR(RR) {
+      let JR = 0;
       return {
-        id_length: WW[iW++],
-        colormap_type: WW[iW++],
-        image_type: WW[iW++],
-        colormap_index: WW[iW++] | WW[iW++] << 8,
-        colormap_length: WW[iW++] | WW[iW++] << 8,
-        colormap_size: WW[iW++],
-        origin: [WW[iW++] | WW[iW++] << 8, WW[iW++] | WW[iW++] << 8],
-        width: WW[iW++] | WW[iW++] << 8,
-        height: WW[iW++] | WW[iW++] << 8,
-        pixel_size: WW[iW++],
-        flags: WW[17]
+        id_length: RR[JR++],
+        colormap_type: RR[JR++],
+        image_type: RR[JR++],
+        colormap_index: RR[JR++] | RR[JR++] << 8,
+        colormap_length: RR[JR++] | RR[JR++] << 8,
+        colormap_size: RR[JR++],
+        origin: [RR[JR++] | RR[JR++] << 8, RR[JR++] | RR[JR++] << 8],
+        width: RR[JR++] | RR[JR++] << 8,
+        height: RR[JR++] | RR[JR++] << 8,
+        pixel_size: RR[JR++],
+        flags: RR[17]
       }
     }
 
-    function NW(WW, iW) {
-      if (iW.length < 19) return void mW.b.Error("Unable to load TGA file - Not enough data to contain header");
-      let OW = 18;
-      const NW = EW(iW);
-      if (NW.id_length + OW > iW.length) return void mW.b.Error("Unable to load TGA file - Not enough data");
-      OW += NW.id_length;
-      let LW, cW = !1,
-        wW = !1,
-        tW = !1;
-      switch (NW.image_type) {
+    function uR(RR, JR) {
+      if (JR.length < 19) return void yR.c.Error("Unable to load TGA file - Not enough data to contain header");
+      let GR = 18;
+      const uR = tR(JR);
+      if (uR.id_length + GR > JR.length) return void yR.c.Error("Unable to load TGA file - Not enough data");
+      GR += uR.id_length;
+      let qR, iR = !1,
+        fR = !1,
+        VR = !1;
+      switch (uR.image_type) {
         case 9:
-          cW = !0;
+          iR = !0;
         case 1:
-          wW = !0;
+          fR = !0;
           break;
         case 10:
-          cW = !0;
+          iR = !0;
         case 2:
           break;
         case 11:
-          cW = !0;
+          iR = !0;
         case 3:
-          tW = !0
+          VR = !0
       }
-      const ZW = NW.pixel_size >> 3,
-        xW = NW.width * NW.height * ZW;
-      let lW, AW, bW, jW, UW, kW, sW;
-      if (wW && (lW = iW.subarray(OW, OW += NW.colormap_length * (NW.colormap_size >> 3))), cW) {
-        let WW, mW, EW;
-        LW = new Uint8Array(xW);
-        let NW = 0;
-        const PW = new Uint8Array(ZW);
-        for (; OW < xW && NW < xW;)
-          if (WW = iW[OW++], mW = 1 + (127 & WW), 128 & WW) {
-            for (EW = 0; EW < ZW; ++EW) PW[EW] = iW[OW++];
-            for (EW = 0; EW < mW; ++EW) LW.set(PW, NW + EW * ZW);
-            NW += ZW * mW
+      const KR = uR.pixel_size >> 3,
+        wR = uR.width * uR.height * KR;
+      let rR, eR, aR, LR, nR, UR, WR;
+      if (fR && (rR = JR.subarray(GR, GR += uR.colormap_length * (uR.colormap_size >> 3))), iR) {
+        let RR, yR, tR;
+        qR = new Uint8Array(wR);
+        let uR = 0;
+        const ZR = new Uint8Array(KR);
+        for (; GR < wR && uR < wR;)
+          if (RR = JR[GR++], yR = 1 + (127 & RR), 128 & RR) {
+            for (tR = 0; tR < KR; ++tR) ZR[tR] = JR[GR++];
+            for (tR = 0; tR < yR; ++tR) qR.set(ZR, uR + tR * KR);
+            uR += KR * yR
           } else {
-            for (mW *= ZW, EW = 0; EW < mW; ++EW) LW[NW + EW] = iW[OW++];
-            NW += mW
+            for (yR *= KR, tR = 0; tR < yR; ++tR) qR[uR + tR] = JR[GR++];
+            uR += yR
           }
-      } else LW = iW.subarray(OW, OW + (wW ? NW.width * NW.height : xW));
-      switch ((48 & NW.flags) >> 4) {
+      } else qR = JR.subarray(GR, GR + (fR ? uR.width * uR.height : wR));
+      switch ((48 & uR.flags) >> 4) {
         default:
         case 2:
-          AW = 0, jW = 1, sW = NW.width, bW = 0, UW = 1, kW = NW.height;
+          eR = 0, LR = 1, WR = uR.width, aR = 0, nR = 1, UR = uR.height;
           break;
         case 0:
-          AW = 0, jW = 1, sW = NW.width, bW = NW.height - 1, UW = -1, kW = -1;
+          eR = 0, LR = 1, WR = uR.width, aR = uR.height - 1, nR = -1, UR = -1;
           break;
         case 3:
-          AW = NW.width - 1, jW = -1, sW = -1, bW = 0, UW = 1, kW = NW.height;
+          eR = uR.width - 1, LR = -1, WR = -1, aR = 0, nR = 1, UR = uR.height;
           break;
         case 1:
-          AW = NW.width - 1, jW = -1, sW = -1, bW = NW.height - 1, UW = -1, kW = -1
+          eR = uR.width - 1, LR = -1, WR = -1, aR = uR.height - 1, nR = -1, UR = -1
       }
-      const MW = "_getImageData" + (tW ? "Grey" : "") + NW.pixel_size + "bits",
-        KW = PW[MW](NW, lW, LW, bW, UW, kW, AW, jW, sW);
-      WW.VA()._uploadDataToTextureDirectly(WW, KW)
+      const AR = "_getImageData" + (VR ? "Grey" : "") + uR.pixel_size + "bits",
+        CR = ZR[AR](uR, rR, qR, aR, nR, UR, eR, LR, WR);
+      RR.ke()._uploadDataToTextureDirectly(RR, CR)
     }
-    const PW = {
-      GetTGAHeader: EW,
-      UploadContent: NW,
-      _getImageData8bits: function(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        const wW = OW,
-          tW = iW,
-          ZW = WW.width,
-          xW = WW.height;
-        let lW, AW, bW, jW = 0;
-        const UW = new Uint8Array(ZW * xW * 4);
-        for (bW = mW; bW !== NW; bW += EW)
-          for (AW = PW; AW !== cW; AW += LW, jW++) lW = wW[jW], UW[4 * (AW + ZW * bW) + 3] = 255, UW[4 * (AW + ZW * bW) + 2] = tW[3 * lW + 0], UW[4 * (AW + ZW * bW) + 1] = tW[3 * lW + 1], UW[4 * (AW + ZW * bW) + 0] = tW[3 * lW + 2];
-        return UW
+    const ZR = {
+      GetTGAHeader: tR,
+      UploadContent: uR,
+      _getImageData8bits: function(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        const fR = GR,
+          VR = JR,
+          KR = RR.width,
+          wR = RR.height;
+        let rR, eR, aR, LR = 0;
+        const nR = new Uint8Array(KR * wR * 4);
+        for (aR = yR; aR !== uR; aR += tR)
+          for (eR = ZR; eR !== iR; eR += qR, LR++) rR = fR[LR], nR[4 * (eR + KR * aR) + 3] = 255, nR[4 * (eR + KR * aR) + 2] = VR[3 * rR + 0], nR[4 * (eR + KR * aR) + 1] = VR[3 * rR + 1], nR[4 * (eR + KR * aR) + 0] = VR[3 * rR + 2];
+        return nR
       },
-      _getImageData16bits: function(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        const wW = OW,
-          tW = WW.width,
-          ZW = WW.height;
-        let xW, lW, AW, bW = 0;
-        const jW = new Uint8Array(tW * ZW * 4);
-        for (AW = mW; AW !== NW; AW += EW)
-          for (lW = PW; lW !== cW; lW += LW, bW += 2) {
-            xW = wW[bW + 0] + (wW[bW + 1] << 8);
-            const WW = 255 * ((31744 & xW) >> 10) / 31 | 0,
-              iW = 255 * ((992 & xW) >> 5) / 31 | 0,
-              OW = 255 * (31 & xW) / 31 | 0;
-            jW[4 * (lW + tW * AW) + 0] = WW, jW[4 * (lW + tW * AW) + 1] = iW, jW[4 * (lW + tW * AW) + 2] = OW, jW[4 * (lW + tW * AW) + 3] = 32768 & xW ? 0 : 255
+      _getImageData16bits: function(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        const fR = GR,
+          VR = RR.width,
+          KR = RR.height;
+        let wR, rR, eR, aR = 0;
+        const LR = new Uint8Array(VR * KR * 4);
+        for (eR = yR; eR !== uR; eR += tR)
+          for (rR = ZR; rR !== iR; rR += qR, aR += 2) {
+            wR = fR[aR + 0] + (fR[aR + 1] << 8);
+            const RR = 255 * ((31744 & wR) >> 10) / 31 | 0,
+              JR = 255 * ((992 & wR) >> 5) / 31 | 0,
+              GR = 255 * (31 & wR) / 31 | 0;
+            LR[4 * (rR + VR * eR) + 0] = RR, LR[4 * (rR + VR * eR) + 1] = JR, LR[4 * (rR + VR * eR) + 2] = GR, LR[4 * (rR + VR * eR) + 3] = 32768 & wR ? 0 : 255
           }
-        return jW
+        return LR
       },
-      _getImageData24bits: function(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        const wW = OW,
-          tW = WW.width,
-          ZW = WW.height;
-        let xW, lW, AW = 0;
-        const bW = new Uint8Array(tW * ZW * 4);
-        for (lW = mW; lW !== NW; lW += EW)
-          for (xW = PW; xW !== cW; xW += LW, AW += 3) bW[4 * (xW + tW * lW) + 3] = 255, bW[4 * (xW + tW * lW) + 2] = wW[AW + 0], bW[4 * (xW + tW * lW) + 1] = wW[AW + 1], bW[4 * (xW + tW * lW) + 0] = wW[AW + 2];
-        return bW
+      _getImageData24bits: function(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        const fR = GR,
+          VR = RR.width,
+          KR = RR.height;
+        let wR, rR, eR = 0;
+        const aR = new Uint8Array(VR * KR * 4);
+        for (rR = yR; rR !== uR; rR += tR)
+          for (wR = ZR; wR !== iR; wR += qR, eR += 3) aR[4 * (wR + VR * rR) + 3] = 255, aR[4 * (wR + VR * rR) + 2] = fR[eR + 0], aR[4 * (wR + VR * rR) + 1] = fR[eR + 1], aR[4 * (wR + VR * rR) + 0] = fR[eR + 2];
+        return aR
       },
-      _getImageData32bits: function(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        const wW = OW,
-          tW = WW.width,
-          ZW = WW.height;
-        let xW, lW, AW = 0;
-        const bW = new Uint8Array(tW * ZW * 4);
-        for (lW = mW; lW !== NW; lW += EW)
-          for (xW = PW; xW !== cW; xW += LW, AW += 4) bW[4 * (xW + tW * lW) + 2] = wW[AW + 0], bW[4 * (xW + tW * lW) + 1] = wW[AW + 1], bW[4 * (xW + tW * lW) + 0] = wW[AW + 2], bW[4 * (xW + tW * lW) + 3] = wW[AW + 3];
-        return bW
+      _getImageData32bits: function(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        const fR = GR,
+          VR = RR.width,
+          KR = RR.height;
+        let wR, rR, eR = 0;
+        const aR = new Uint8Array(VR * KR * 4);
+        for (rR = yR; rR !== uR; rR += tR)
+          for (wR = ZR; wR !== iR; wR += qR, eR += 4) aR[4 * (wR + VR * rR) + 2] = fR[eR + 0], aR[4 * (wR + VR * rR) + 1] = fR[eR + 1], aR[4 * (wR + VR * rR) + 0] = fR[eR + 2], aR[4 * (wR + VR * rR) + 3] = fR[eR + 3];
+        return aR
       },
-      _getImageDataGrey8bits: function(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        const wW = OW,
-          tW = WW.width,
-          ZW = WW.height;
-        let xW, lW, AW, bW = 0;
-        const jW = new Uint8Array(tW * ZW * 4);
-        for (AW = mW; AW !== NW; AW += EW)
-          for (lW = PW; lW !== cW; lW += LW, bW++) xW = wW[bW], jW[4 * (lW + tW * AW) + 0] = xW, jW[4 * (lW + tW * AW) + 1] = xW, jW[4 * (lW + tW * AW) + 2] = xW, jW[4 * (lW + tW * AW) + 3] = 255;
-        return jW
+      _getImageDataGrey8bits: function(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        const fR = GR,
+          VR = RR.width,
+          KR = RR.height;
+        let wR, rR, eR, aR = 0;
+        const LR = new Uint8Array(VR * KR * 4);
+        for (eR = yR; eR !== uR; eR += tR)
+          for (rR = ZR; rR !== iR; rR += qR, aR++) wR = fR[aR], LR[4 * (rR + VR * eR) + 0] = wR, LR[4 * (rR + VR * eR) + 1] = wR, LR[4 * (rR + VR * eR) + 2] = wR, LR[4 * (rR + VR * eR) + 3] = 255;
+        return LR
       },
-      _getImageDataGrey16bits: function(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        const wW = OW,
-          tW = WW.width,
-          ZW = WW.height;
-        let xW, lW, AW = 0;
-        const bW = new Uint8Array(tW * ZW * 4);
-        for (lW = mW; lW !== NW; lW += EW)
-          for (xW = PW; xW !== cW; xW += LW, AW += 2) bW[4 * (xW + tW * lW) + 0] = wW[AW + 0], bW[4 * (xW + tW * lW) + 1] = wW[AW + 0], bW[4 * (xW + tW * lW) + 2] = wW[AW + 0], bW[4 * (xW + tW * lW) + 3] = wW[AW + 1];
-        return bW
+      _getImageDataGrey16bits: function(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        const fR = GR,
+          VR = RR.width,
+          KR = RR.height;
+        let wR, rR, eR = 0;
+        const aR = new Uint8Array(VR * KR * 4);
+        for (rR = yR; rR !== uR; rR += tR)
+          for (wR = ZR; wR !== iR; wR += qR, eR += 2) aR[4 * (wR + VR * rR) + 0] = fR[eR + 0], aR[4 * (wR + VR * rR) + 1] = fR[eR + 0], aR[4 * (wR + VR * rR) + 2] = fR[eR + 0], aR[4 * (wR + VR * rR) + 3] = fR[eR + 1];
+        return aR
       }
     };
-    class LW {
+    class qR {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".env not supported in Cube."
       }
-      loadData(WW, iW, OW) {
-        const mW = new Uint8Array(WW.buffer, WW.byteOffset, WW.byteLength),
-          PW = EW(mW);
-        OW(PW.width, PW.height, iW.generateMipMaps, !1, (() => {
-          NW(iW, mW)
+      loadData(RR, JR, GR) {
+        const yR = new Uint8Array(RR.buffer, RR.byteOffset, RR.byteLength),
+          ZR = tR(yR);
+        GR(ZR.width, ZR.height, JR.generateMipMaps, !1, (() => {
+          uR(JR, yR)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

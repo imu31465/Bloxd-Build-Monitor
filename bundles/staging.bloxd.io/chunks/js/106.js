@@ -1,60 +1,60 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  5551: (WW, iW, OW) => {
-    OW.d(iW, {
-      $b: () => qW,
-      Bb: () => eW,
-      C: () => SW,
-      D: () => PW,
-      Db: () => RW,
-      Eb: () => BW,
-      H: () => LW,
-      Hb: () => fW,
-      Jb: () => vW,
-      K: () => mW,
-      M: () => NW,
-      N: () => MW,
-      Nb: () => VW,
-      Ob: () => gW,
-      Qb: () => jW,
-      R: () => FW,
-      Rb: () => HW,
-      T: () => ZW,
-      U: () => xW,
-      Ub: () => hW,
-      V: () => tW,
-      Y: () => wW,
-      Yb: () => DW,
-      ab: () => KW,
-      c: () => kW,
-      cb: () => cW,
-      dc: () => pW,
-      e: () => UW,
-      gb: () => bW,
-      gc: () => CW,
-      h: () => rW,
-      ic: () => XW,
-      k: () => sW,
-      kb: () => AW,
-      kc: () => TW,
-      lc: () => JW,
-      nb: () => nW,
-      nc: () => GW,
-      o: () => aW,
-      pb: () => oW,
-      q: () => lW,
-      rc: () => EW,
-      tb: () => dW,
-      u: () => yW,
-      uc: () => zW,
-      x: () => IW,
-      xb: () => uW,
-      z: () => YW
+  5685: (RR, JR, GR) => {
+    GR.d(JR, {
+      Ab: () => OR,
+      Bb: () => DR,
+      C: () => ZR,
+      Db: () => ER,
+      E: () => qR,
+      Eb: () => jR,
+      H: () => yR,
+      Hb: () => mR,
+      Ib: () => HR,
+      Kb: () => PR,
+      L: () => uR,
+      Mb: () => oR,
+      N: () => AR,
+      Pb: () => LR,
+      Q: () => sR,
+      T: () => KR,
+      Tb: () => bR,
+      U: () => wR,
+      Wb: () => gR,
+      Y: () => VR,
+      Yb: () => cR,
+      ab: () => fR,
+      ac: () => dR,
+      b: () => UR,
+      bc: () => IR,
+      e: () => nR,
+      eb: () => CR,
+      ec: () => zR,
+      hb: () => iR,
+      hc: () => SR,
+      i: () => FR,
+      ic: () => lR,
+      lb: () => aR,
+      lc: () => pR,
+      m: () => WR,
+      nb: () => eR,
+      nc: () => YR,
+      oc: () => tR,
+      p: () => QR,
+      qb: () => vR,
+      sc: () => TR,
+      t: () => rR,
+      tb: () => xR,
+      u: () => BR,
+      v: () => kR,
+      w: () => MR,
+      wb: () => NR,
+      z: () => XR
     });
-    const mW = 32,
-      EW = 33.333333333333336,
-      NW = {
+    const yR = 32,
+      tR = 33.333333333333336,
+      uR = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -88,36 +88,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      PW = {
+      ZR = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      LW = {
+      qR = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      cW = {
+      iR = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      wW = {
+      fR = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      tW = {
+      VR = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      ZW = 14,
-      xW = {
+      KR = 14,
+      wR = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -133,14 +133,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      lW = {
+      rR = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      AW = 8,
-      bW = 1,
-      jW = {
+      eR = 8,
+      aR = 1,
+      LR = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -149,16 +149,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      UW = 6,
-      kW = 1,
-      sW = {
+      nR = 6,
+      UR = 1,
+      WR = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      MW = {
+      AR = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -186,12 +186,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      KW = {
+      CR = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      SW = {
+      XR = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -245,7 +245,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      YW = {
+      MR = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -255,10 +255,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      yW = 4,
-      TW = 4,
-      JW = 65535,
-      hW = {
+      BR = 4,
+      lR = 4,
+      pR = 65535,
+      gR = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -271,7 +271,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      HW = {
+      bR = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -279,12 +279,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      nW = 88,
-      uW = 0,
-      oW = 24,
-      dW = 48,
-      eW = 80,
-      vW = {
+      vR = 88,
+      OR = 0,
+      xR = 24,
+      NR = 48,
+      DR = 80,
+      HR = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -295,18 +295,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      gW = {
+      oR = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      DW = {
+      cR = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      VW = {
+      PR = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -324,34 +324,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      pW = {
+      IR = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      fW = 65535,
-      CW = {
+      mR = 65535,
+      zR = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      XW = {
+      SR = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      BW = 2,
-      qW = {
+      jR = 2,
+      dR = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      RW = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      GW = {
+      ER = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      YR = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -365,7 +365,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      IW = {
+      kR = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -392,7 +392,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      aW = {
+      QR = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -550,8 +550,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      rW = 8,
-      zW = {
+      FR = 8,
+      TR = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -577,8 +577,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      FW = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      sR = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

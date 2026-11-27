@@ -1,68 +1,68 @@
 export const id = 669;
 export const ids = [669];
 export const modules = {
-  54711: (WW, iW, OW) => {
-    function mW(WW) {
-      return Math.floor(WW / 8)
+  54557: (RR, JR, GR) => {
+    function yR(RR) {
+      return Math.floor(RR / 8)
     }
 
-    function EW(WW) {
-      return 1 << WW % 8
+    function tR(RR) {
+      return 1 << RR % 8
     }
-    OW.d(iW, {
-      OptimizeIndices: () => PW
+    GR.d(JR, {
+      OptimizeIndices: () => ZR
     });
-    class NW {
-      constructor(WW) {
-        this.size = WW, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class uR {
+      constructor(RR) {
+        this.size = RR, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(WW) {
-        if (WW >= this.size) throw new RangeError("Bit index out of range");
-        const iW = mW(WW),
-          OW = EW(WW);
-        return 0 !== (this._byteArray[iW] & OW)
+      get(RR) {
+        if (RR >= this.size) throw new RangeError("Bit index out of range");
+        const JR = yR(RR),
+          GR = tR(RR);
+        return 0 !== (this._byteArray[JR] & GR)
       }
-      set(WW, iW) {
-        if (WW >= this.size) throw new RangeError("Bit index out of range");
-        const OW = mW(WW),
-          NW = EW(WW);
-        iW ? this._byteArray[OW] |= NW : this._byteArray[OW] &= ~NW
+      set(RR, JR) {
+        if (RR >= this.size) throw new RangeError("Bit index out of range");
+        const GR = yR(RR),
+          uR = tR(RR);
+        JR ? this._byteArray[GR] |= uR : this._byteArray[GR] &= ~uR
       }
     }
 
-    function PW(WW) {
-      const iW = [],
-        OW = WW.length / 3;
-      for (let NW = 0; NW < OW; NW++) iW.push([WW[3 * NW], WW[3 * NW + 1], WW[3 * NW + 2]]);
-      const mW = new Map;
-      for (let NW = 0; NW < iW.length; NW++) {
-        const WW = iW[NW];
-        for (const iW of WW) {
-          let WW = mW.get(iW);
-          WW || mW.set(iW, WW = []), WW.push(NW)
+    function ZR(RR) {
+      const JR = [],
+        GR = RR.length / 3;
+      for (let uR = 0; uR < GR; uR++) JR.push([RR[3 * uR], RR[3 * uR + 1], RR[3 * uR + 2]]);
+      const yR = new Map;
+      for (let uR = 0; uR < JR.length; uR++) {
+        const RR = JR[uR];
+        for (const JR of RR) {
+          let RR = yR.get(JR);
+          RR || yR.set(JR, RR = []), RR.push(uR)
         }
       }
-      const EW = new NW(OW),
-        PW = [],
-        LW = WW => {
-          const OW = [WW];
-          for (; OW.length > 0;) {
-            const WW = OW.pop();
-            if (!EW.get(WW)) {
-              EW.set(WW, !0), PW.push(iW[WW]);
-              for (const NW of iW[WW]) {
-                const WW = mW.get(NW);
-                if (!WW) return;
-                for (const iW of WW) EW.get(iW) || OW.push(iW)
+      const tR = new uR(GR),
+        ZR = [],
+        qR = RR => {
+          const GR = [RR];
+          for (; GR.length > 0;) {
+            const RR = GR.pop();
+            if (!tR.get(RR)) {
+              tR.set(RR, !0), ZR.push(JR[RR]);
+              for (const uR of JR[RR]) {
+                const RR = yR.get(uR);
+                if (!RR) return;
+                for (const JR of RR) tR.get(JR) || GR.push(JR)
               }
             }
           }
         };
-      for (let NW = 0; NW < OW; NW++) EW.get(NW) || LW(NW);
-      let cW = 0;
-      for (const NW of PW) WW[cW++] = NW[0], WW[cW++] = NW[1], WW[cW++] = NW[2]
+      for (let uR = 0; uR < GR; uR++) tR.get(uR) || qR(uR);
+      let iR = 0;
+      for (const uR of ZR) RR[iR++] = uR[0], RR[iR++] = uR[1], RR[iR++] = uR[2]
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

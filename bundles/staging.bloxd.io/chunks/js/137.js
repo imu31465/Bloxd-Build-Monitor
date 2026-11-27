@@ -1,106 +1,106 @@
 export const id = 137;
 export const ids = [137, 139, 159, 160];
 export const modules = {
-  5961: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW.l,
-      c: () => EW,
-      g: () => mW.r
+  6080: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR.f,
+      g: () => tR,
+      i: () => yR.o
     });
-    var mW = OW(5970);
-    const EW = [!1, !0].flatMap((WW => ["terrain", "liquid", "model"].map((iW => ({
-      strict: WW,
-      program: iW
+    var yR = GR(6084);
+    const tR = [!1, !0].flatMap((RR => ["terrain", "liquid", "model"].map((JR => ({
+      strict: RR,
+      program: JR
     })))))
   },
-  7656: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      forgetShaderPackActiveHint: () => HW,
-      isOtherApiVersion: () => yW,
-      isShaderPackActive: () => MW,
-      isShaderPackChangePending: () => YW,
-      markShaderPackChangePending: () => SW,
-      pageShaderPackValidationVersion: () => TW,
-      reconcileStoredShaderPackHint: () => hW,
-      removeShaderPack: () => sW,
-      replaceShaderPack: () => jW,
-      saveShaderPack: () => bW,
-      shaderPackNeedsCheck: () => JW,
-      storedPackOutcome: () => KW,
-      storedShaderPackFiles: () => xW,
-      toStoredShaderPack: () => ZW
+  7800: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      forgetShaderPackActiveHint: () => bR,
+      isOtherApiVersion: () => BR,
+      isShaderPackActive: () => AR,
+      isShaderPackChangePending: () => MR,
+      markShaderPackChangePending: () => XR,
+      pageShaderPackValidationVersion: () => lR,
+      reconcileStoredShaderPackHint: () => gR,
+      removeShaderPack: () => WR,
+      replaceShaderPack: () => LR,
+      saveShaderPack: () => aR,
+      shaderPackNeedsCheck: () => pR,
+      storedPackOutcome: () => CR,
+      storedShaderPackFiles: () => wR,
+      toStoredShaderPack: () => KR
     });
-    var mW = OW(5970),
-      EW = OW(5961),
-      NW = OW(39),
-      PW = OW(4666),
-      LW = OW(7659),
-      cW = OW(7637);
-    const wW = "shaderPackChangePending";
-    let tW = null;
+    var yR = GR(6084),
+      tR = GR(6080),
+      uR = GR(46),
+      ZR = GR(4776),
+      qR = GR(7802),
+      iR = GR(7773);
+    const fR = "shaderPackChangePending";
+    let VR = null;
 
-    function ZW(WW, iW, OW) {
+    function KR(RR, JR, GR) {
       return {
-        manifest: WW.manifest,
-        files: (0, mW.A)(WW.files),
-        validation: iW,
-        ...OW && {
-          listing: OW
+        manifest: RR.manifest,
+        files: (0, yR.x)(RR.files),
+        validation: JR,
+        ...GR && {
+          listing: GR
         }
       }
     }
 
-    function xW(WW) {
-      return Object.keys(WW.files).map((iW => ({
-        path: iW,
-        source: WW.files[iW]
+    function wR(RR) {
+      return Object.keys(RR.files).map((JR => ({
+        path: JR,
+        source: RR.files[JR]
       })))
     }
-    let lW = Promise.resolve();
+    let rR = Promise.resolve();
 
-    function AW(WW) {
-      const iW = lW.then(WW);
-      return lW = iW.catch((() => {})), iW
-    }
-
-    function bW(WW, iW) {
-      return AW((() => UW(WW, iW)))
+    function eR(RR) {
+      const JR = rR.then(RR);
+      return rR = JR.catch((() => {})), JR
     }
 
-    function jW(WW, iW, OW) {
-      return AW((async () => JSON.stringify(await (0, LW.g)()) === JSON.stringify(WW) && (null === iW ? (await kW(), !0) : UW(iW, OW))))
-    }
-    async function UW(WW, iW) {
-      const OW = await NW.f.setItem(LW.c, WW);
-      return OW && nW(WW, iW), OW
-    }
-    async function kW() {
-      await NW.f.removeItem(LW.c), NW.i.removeItem(PW.b)
+    function aR(RR, JR) {
+      return eR((() => nR(RR, JR)))
     }
 
-    function sW() {
-      return AW(kW)
+    function LR(RR, JR, GR) {
+      return eR((async () => JSON.stringify(await (0, qR.d)()) === JSON.stringify(RR) && (null === JR ? (await UR(), !0) : nR(JR, GR))))
+    }
+    async function nR(RR, JR) {
+      const GR = await uR.g.setItem(qR.c, RR);
+      return GR && vR(RR, JR), GR
+    }
+    async function UR() {
+      await uR.g.removeItem(qR.c), uR.i.removeItem(ZR.e)
     }
 
-    function MW(WW, iW) {
-      return "active" === KW(WW, iW).kind
+    function WR() {
+      return eR(UR)
     }
 
-    function KW(WW, iW) {
-      var OW;
-      return null === WW ? {
+    function AR(RR, JR) {
+      return "active" === CR(RR, JR).kind
+    }
+
+    function CR(RR, JR) {
+      var GR;
+      return null === RR ? {
         kind: "none",
         reason: "nothingStored"
-      } : yW(WW) ? {
+      } : BR(RR) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.ok) || WW.validation.fromRecheck ? null === iW ? {
+      } : !1 !== (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.ok) || RR.validation.fromRecheck ? null === JR ? {
         kind: "none",
         reason: "noCompiler"
-      } : JW(WW, iW) ? {
+      } : pR(RR, JR) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : WW.validation.ok ? {
+      } : RR.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -111,263 +111,263 @@ export const modules = {
       }
     }
 
-    function SW() {
-      NW.j.setItem(wW, performance.timeOrigin)
+    function XR() {
+      uR.k.setItem(fR, performance.timeOrigin)
     }
 
-    function YW() {
-      return NW.j.getItem(wW) === performance.timeOrigin
+    function MR() {
+      return uR.k.getItem(fR) === performance.timeOrigin
     }
 
-    function yW(WW) {
-      return !(0, EW.g)(WW.manifest.apiVersion)
+    function BR(RR) {
+      return !(0, tR.i)(RR.manifest.apiVersion)
     }
 
-    function TW(WW) {
-      return tW ??= WW.IH((0, cW.shaderPackTextures)()), tW
+    function lR(RR) {
+      return VR ??= RR.iH((0, iR.shaderPackTextures)()), VR
     }
 
-    function JW(WW, iW) {
-      var OW;
-      return (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.headerVersion) !== TW(iW)
+    function pR(RR, JR) {
+      var GR;
+      return (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.headerVersion) !== lR(JR)
     }
 
-    function hW(WW) {
-      return AW((async () => {
-        nW(await (0, LW.g)(!0), WW)
+    function gR(RR) {
+      return eR((async () => {
+        vR(await (0, qR.d)(!0), RR)
       }))
     }
 
-    function HW() {
-      return AW((async () => {
-        NW.i.removeItem(PW.b)
+    function bR() {
+      return eR((async () => {
+        uR.i.removeItem(ZR.e)
       }))
     }
 
-    function nW(WW, iW) {
-      MW(WW, iW) ? NW.i.setItem(PW.b, !0) : NW.i.removeItem(PW.b)
+    function vR(RR, JR) {
+      AR(RR, JR) ? uR.i.setItem(ZR.e, !0) : uR.i.removeItem(ZR.e)
     }
   },
-  7659: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      g: () => NW
+  7802: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      d: () => uR
     });
-    var mW = OW(39);
-    const EW = "shaderPack";
-    async function NW() {
-      var WW;
-      let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (WW = await mW.f.getItem(EW, iW)) && void 0 !== WW ? WW : null
+    var yR = GR(46);
+    const tR = "shaderPack";
+    async function uR() {
+      var RR;
+      let JR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (RR = await yR.g.getItem(tR, JR)) && void 0 !== RR ? RR : null
     }
   },
-  7637: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      loadShaderPackTextures: () => PW,
-      shaderPackTextures: () => LW
+  7773: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      loadShaderPackTextures: () => ZR,
+      shaderPackTextures: () => qR
     });
-    var mW = OW(5970);
-    let EW = null,
-      NW = null;
+    var yR = GR(6084);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return NW ??= Promise.all([OW.e(85), OW.e(126)]).then((() => OW(42015))).then((WW => {
+    function ZR() {
+      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: iW,
-          textureNameToIndex: OW,
-          textureAnimationData: NW
-        } = WW;
-        return EW ??= (0, mW.o)(OW, NW, iW), EW
-      })), NW
+          FORMER_BLOCK_IMAGE_NAMES: JR,
+          textureNameToIndex: GR,
+          textureAnimationData: uR
+        } = RR;
+        return tR ??= (0, yR.j)(GR, uR, JR), tR
+      })), uR
     }
 
-    function LW() {
-      if (null === EW) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return EW
+    function qR() {
+      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return tR
     }
   },
-  5970: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => tW,
-      D: () => xW,
-      e: () => LW,
-      i: () => PW,
-      l: () => mW,
-      o: () => bW,
-      p: () => ZW,
-      r: () => EW,
-      v: () => NW,
-      x: () => wW
+  6084: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      e: () => ZR,
+      f: () => yR,
+      j: () => aR,
+      l: () => KR,
+      o: () => tR,
+      r: () => uR,
+      t: () => fR,
+      x: () => VR,
+      z: () => wR
     });
-    const mW = 5;
+    const yR = 5;
 
-    function EW(WW) {
-      return WW === mW
+    function tR(RR) {
+      return RR === yR
     }
 
-    function NW(WW) {
-      return [...WW.features]
+    function uR(RR) {
+      return [...RR.features]
     }
-    const PW = 262144,
-      LW = 256,
-      cW = 256;
+    const ZR = 262144,
+      qR = 256,
+      iR = 256;
 
-    function wW(WW) {
-      if ("object" !== typeof WW || null === WW || Array.isArray(WW)) return "The pack has no files.";
-      const iW = [];
-      for (const [OW, mW] of Object.entries(WW)) {
-        if ("string" !== typeof mW) return `${OW} isn't text.`;
-        iW.push({
-          path: OW,
-          source: mW
+    function fR(RR) {
+      if ("object" !== typeof RR || null === RR || Array.isArray(RR)) return "The pack has no files.";
+      const JR = [];
+      for (const [GR, yR] of Object.entries(RR)) {
+        if ("string" !== typeof yR) return `${GR} isn't text.`;
+        JR.push({
+          path: GR,
+          source: yR
         })
       }
-      return iW.sort(((WW, iW) => ZW(WW.path, iW.path))),
-        function(WW) {
-          if (0 === WW.length) return "The pack has no .wgsl files.";
-          if (WW.length > LW) return `The pack has more than ${LW} .wgsl files.`;
-          const iW = new Set;
+      return JR.sort(((RR, JR) => KR(RR.path, JR.path))),
+        function(RR) {
+          if (0 === RR.length) return "The pack has no .wgsl files.";
+          if (RR.length > qR) return `The pack has more than ${qR} .wgsl files.`;
+          const JR = new Set;
           for (const {
-              path: OW
+              path: GR
             }
-            of WW) {
-            const WW = lW(OW);
-            if (null !== WW) return WW;
-            if (iW.has(OW)) return `The pack has two files at ${OW}.`;
-            iW.add(OW)
+            of RR) {
+            const RR = rR(GR);
+            if (null !== RR) return RR;
+            if (JR.has(GR)) return `The pack has two files at ${GR}.`;
+            JR.add(GR)
           }
-          return xW(WW) > PW ? `The pack's .wgsl files are over ${PW/1024} KB in total.` : null
-        }(iW) ?? iW
+          return wR(RR) > ZR ? `The pack's .wgsl files are over ${ZR/1024} KB in total.` : null
+        }(JR) ?? JR
     }
 
-    function tW(WW) {
-      const iW = {};
-      for (const OW of WW) iW[OW.path] = OW.source;
-      return iW
+    function VR(RR) {
+      const JR = {};
+      for (const GR of RR) JR[GR.path] = GR.source;
+      return JR
     }
 
-    function ZW(WW, iW) {
-      return WW < iW ? -1 : WW > iW ? 1 : 0
+    function KR(RR, JR) {
+      return RR < JR ? -1 : RR > JR ? 1 : 0
     }
 
-    function xW(WW) {
-      const iW = new TextEncoder;
-      let OW = 0;
+    function wR(RR) {
+      const JR = new TextEncoder;
+      let GR = 0;
       for (const {
-          source: mW
+          source: yR
         }
-        of WW) OW += iW.encode(mW).byteLength;
-      return OW
+        of RR) GR += JR.encode(yR).byteLength;
+      return GR
     }
 
-    function lW(WW) {
-      if (!WW.toLowerCase().endsWith(".wgsl")) return `${WW} isn't a .wgsl file.`;
-      if (WW.length > cW) return `A file path is over ${cW} characters.`;
-      if (WW.includes("\\") || /[\u0000-\u001f]/.test(WW)) return `${WW} isn't a valid file path.`;
-      return WW.split("/").some((WW => "" === WW || "." === WW || ".." === WW)) ? `${WW} isn't a valid file path.` : null
+    function rR(RR) {
+      if (!RR.toLowerCase().endsWith(".wgsl")) return `${RR} isn't a .wgsl file.`;
+      if (RR.length > iR) return `A file path is over ${iR} characters.`;
+      if (RR.includes("\\") || /[\u0000-\u001f]/.test(RR)) return `${RR} isn't a valid file path.`;
+      return RR.split("/").some((RR => "" === RR || "." === RR || ".." === RR)) ? `${RR} isn't a valid file path.` : null
     }
-    const AW = /^(.*)\[rot\[([1-4])$/;
+    const eR = /^(.*)\[rot\[([1-4])$/;
 
-    function bW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const mW = new Map;
-      iW.forEach(((WW, iW) => {
+    function aR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const yR = new Map;
+      JR.forEach(((RR, JR) => {
         let {
-          numAnimStates: OW,
-          animStartIdx: EW
-        } = WW;
-        for (let NW = 1; NW < OW; NW++) mW.set(EW + NW - 1, iW)
+          numAnimStates: GR,
+          animStartIdx: tR
+        } = RR;
+        for (let uR = 1; uR < GR; uR++) yR.set(tR + uR - 1, JR)
       }));
-      const EW = Object.entries(WW),
-        NW = new Map;
-      for (const [bW, jW] of EW) {
-        const WW = AW.exec(bW);
-        "1" === WW?.[2] && NW.set(WW[1], jW + 1)
+      const tR = Object.entries(RR),
+        uR = new Map;
+      for (const [aR, LR] of tR) {
+        const RR = eR.exec(aR);
+        "1" === RR?.[2] && uR.set(RR[1], LR + 1)
       }
-      const PW = WW => {
-          const iW = AW.exec(WW);
-          return iW && NW.has(iW[1]) ? {
-            root: iW[1],
-            rotation: Number(iW[2]) - 1
+      const ZR = RR => {
+          const JR = eR.exec(RR);
+          return JR && uR.has(JR[1]) ? {
+            root: JR[1],
+            rotation: Number(JR[2]) - 1
           } : null
         },
-        LW = new Set(EW.map((WW => {
-          let [iW] = WW;
-          return PW(iW)?.root ?? iW
+        qR = new Set(tR.map((RR => {
+          let [JR] = RR;
+          return ZR(JR)?.root ?? JR
         }))),
-        cW = (WW, OW) => {
-          const mW = WW.replace(/_?0$/, "");
-          return (iW[OW]?.numAnimStates ?? 0) > 1 && !LW.has(mW) ? mW : WW
+        iR = (RR, GR) => {
+          const yR = RR.replace(/_?0$/, "");
+          return (JR[GR]?.numAnimStates ?? 0) > 1 && !qR.has(yR) ? yR : RR
         },
-        wW = new Map;
-      for (const [AW, bW] of EW) wW.set(bW, cW(PW(AW)?.root ?? AW, bW));
-      const tW = EW.reduce(((WW, iW) => {
-          let [, OW] = iW;
-          return Math.max(WW, OW + 1)
+        fR = new Map;
+      for (const [eR, aR] of tR) fR.set(aR, iR(ZR(eR)?.root ?? eR, aR));
+      const VR = tR.reduce(((RR, JR) => {
+          let [, GR] = JR;
+          return Math.max(RR, GR + 1)
         }), 0),
-        ZW = Array.from({
-          length: tW
-        }, ((WW, iW) => ({
-          id: iW + 1,
+        KR = Array.from({
+          length: VR
+        }, ((RR, JR) => ({
+          id: JR + 1,
           rotation: 0
         }))),
-        xW = new Map,
-        lW = new Map;
-      for (const [AW, bW] of EW) {
-        const WW = PW(AW),
-          iW = mW.get(bW);
-        if (void 0 !== iW) {
-          const OW = wW.get(iW);
-          lW.set(AW, {
-            name: AW,
-            texture: OW,
+        wR = new Map,
+        rR = new Map;
+      for (const [eR, aR] of tR) {
+        const RR = ZR(eR),
+          JR = yR.get(aR);
+        if (void 0 !== JR) {
+          const GR = fR.get(JR);
+          rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "frame"
-          }), WW && !lW.has(WW.root) && lW.set(WW.root, {
-            name: WW.root,
-            texture: OW,
+          }), RR && !rR.has(RR.root) && rR.set(RR.root, {
+            name: RR.root,
+            texture: GR,
             kind: "frame"
           });
           continue
         }
-        const OW = wW.get(bW),
-          EW = WW?.root ?? AW;
-        if (OW !== EW && lW.set(EW, {
-            name: EW,
-            texture: OW,
+        const GR = fR.get(aR),
+          tR = RR?.root ?? eR;
+        if (GR !== tR && rR.set(tR, {
+            name: tR,
+            texture: GR,
             kind: "frame"
-          }), WW) {
-          const iW = NW.get(WW.root);
-          ZW[bW] = {
-            id: iW,
-            rotation: WW.rotation
-          }, xW.set(OW, iW), lW.set(AW, {
-            name: AW,
-            texture: OW,
+          }), RR) {
+          const JR = uR.get(RR.root);
+          KR[aR] = {
+            id: JR,
+            rotation: RR.rotation
+          }, wR.set(GR, JR), rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "rotation"
           })
-        } else xW.set(OW, bW + 1)
+        } else wR.set(GR, aR + 1)
       }
-      for (const AW of xW.keys()) lW.delete(AW);
-      for (const [AW, bW] of OW) {
-        const WW = xW.get(bW);
-        void 0 === WW || xW.has(AW) || (xW.set(AW, WW), lW.delete(AW))
+      for (const eR of wR.keys()) rR.delete(eR);
+      for (const [eR, aR] of GR) {
+        const RR = wR.get(aR);
+        void 0 === RR || wR.has(eR) || (wR.set(eR, RR), rR.delete(eR))
       }
       return {
-        named: [...xW].sort(((WW, iW) => {
-          let [OW] = WW, [mW] = iW;
-          return OW < mW ? -1 : OW > mW ? 1 : 0
-        })).map((WW => {
-          let [iW, OW] = WW;
+        named: [...wR].sort(((RR, JR) => {
+          let [GR] = RR, [yR] = JR;
+          return GR < yR ? -1 : GR > yR ? 1 : 0
+        })).map((RR => {
+          let [JR, GR] = RR;
           return {
-            name: iW,
-            id: OW
+            name: JR,
+            id: GR
           }
         })),
-        aliases: [...lW.values()],
-        layers: ZW
+        aliases: [...rR.values()],
+        layers: KR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

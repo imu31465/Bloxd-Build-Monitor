@@ -1,243 +1,243 @@
 export const id = 144;
 export const ids = [144, 714];
 export const modules = {
-  37468: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => Di
+  37382: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => oJ
     });
-    var mW = OW(327),
-      EW = OW(4746),
-      NW = OW(4787),
-      PW = OW(4779),
-      LW = OW(4776),
-      cW = OW(1172),
-      wW = OW(39),
-      tW = OW(1856),
-      ZW = OW(1434),
-      xW = OW(1532),
-      lW = OW(1089),
-      AW = OW.n(lW),
-      bW = OW(1782),
-      jW = OW(62),
-      UW = OW(80),
-      kW = OW(3245),
-      sW = OW(1365),
-      MW = OW(1713),
-      KW = OW(1107),
-      SW = OW(4619),
-      YW = OW(5261),
-      yW = OW(3582),
-      TW = OW(2021),
-      JW = OW(4738),
-      hW = OW(1873),
-      HW = OW(1584),
-      nW = OW(2991),
-      uW = OW(1383),
-      oW = OW(3610),
-      dW = OW(4171),
-      eW = OW(1283);
-    const vW = 15e3,
-      gW = 2500;
+    var yR = GR(359),
+      tR = GR(4850),
+      uR = GR(4889),
+      ZR = GR(4884),
+      qR = GR(4881),
+      iR = GR(1270),
+      fR = GR(46),
+      VR = GR(1943),
+      KR = GR(1501),
+      wR = GR(1590),
+      rR = GR(1163),
+      eR = GR.n(rR),
+      aR = GR(1867),
+      LR = GR(66),
+      nR = GR(83),
+      UR = GR(3357),
+      WR = GR(1459),
+      AR = GR(1778),
+      CR = GR(1196),
+      XR = GR(4724),
+      MR = GR(5361),
+      BR = GR(3690),
+      lR = GR(2105),
+      pR = GR(4841),
+      gR = GR(1956),
+      bR = GR(1647),
+      vR = GR(3071),
+      OR = GR(1465),
+      xR = GR(3713),
+      NR = GR(4250),
+      DR = GR(1378);
+    const HR = 15e3,
+      oR = 2500;
 
-    function DW(WW) {
-      var iW;
+    function cR(RR) {
+      var JR;
       let {
-        eventName: OW
-      } = WW;
+        eventName: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, cW.B)(), EW = hW.d[OW], [NW, PW] = (0, jW.useState)((() => Date.now() >= EW.endsAt.getTime())), [LW, wW] = (0, jW.useState)("overall"), tW = function(WW, iW) {
+        t: yR
+      } = (0, iR.A)(), tR = gR.g[GR], [uR, ZR] = (0, LR.useState)((() => Date.now() >= tR.endsAt.getTime())), [qR, fR] = (0, LR.useState)("overall"), VR = function(RR, JR) {
         const {
-          userContext: OW,
-          isUserContextUpdating: mW
-        } = (0, KW.e)(), EW = `${WW}:${iW}`, [NW, PW] = (0, jW.useState)({
-          requestKey: EW,
+          userContext: GR,
+          isUserContextUpdating: yR
+        } = (0, CR.d)(), tR = `${RR}:${JR}`, [uR, ZR] = (0, LR.useState)({
+          requestKey: tR,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, jW.useEffect)((() => {
-          if (mW) return;
-          let NW, LW = !1;
-          const cW = async () => {
+        return (0, LR.useEffect)((() => {
+          if (yR) return;
+          let uR, qR = !1;
+          const iR = async () => {
             if ("visible" === document.visibilityState) try {
-              const mW = await HW.e.getGameEventLeaderboard(OW, {
-                event: WW,
-                scope: iW
+              const yR = await bR.c.getGameEventLeaderboard(GR, {
+                event: RR,
+                scope: JR
               });
-              LW || PW({
-                requestKey: EW,
+              qR || ZR({
+                requestKey: tR,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: mW
+                  leaderboard: yR
                 }
               })
             } catch {
-              LW || PW((WW => WW.requestKey === EW && "loaded" === WW.leaderboard.status ? WW : {
-                requestKey: EW,
+              qR || ZR((RR => RR.requestKey === tR && "loaded" === RR.leaderboard.status ? RR : {
+                requestKey: tR,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            LW || (NW = setTimeout(cW, vW))
+            qR || (uR = setTimeout(iR, HR))
           };
-          return cW(), () => {
-            LW = !0, clearTimeout(NW)
+          return iR(), () => {
+            qR = !0, clearTimeout(uR)
           }
-        }), [WW, iW, EW, OW, mW]), NW.requestKey === EW ? NW.leaderboard : {
+        }), [RR, JR, tR, GR, yR]), uR.requestKey === tR ? uR.leaderboard : {
           status: "loading"
         }
-      }(OW, LW), ZW = function(WW) {
-        const iW = (0, jW.useRef)(null),
-          OW = (0, jW.useRef)(0),
-          mW = (0, jW.useRef)(),
-          [EW, NW] = (0, jW.useState)({});
-        return (0, jW.useEffect)((() => {
-          const EW = null === WW || void 0 === WW ? void 0 : WW.entries;
-          if (!EW) return;
-          const PW = new Map(EW.map((WW => [WW.player.name, WW.value]))),
-            LW = iW.current;
-          if (iW.current = PW, null === LW) return;
-          const cW = {};
-          for (const [WW, iW] of PW) {
-            const mW = LW.get(WW);
-            void 0 !== mW && iW > mW && (cW[WW] = {
-              amount: iW - mW,
-              key: OW.current++
+      }(GR, qR), KR = function(RR) {
+        const JR = (0, LR.useRef)(null),
+          GR = (0, LR.useRef)(0),
+          yR = (0, LR.useRef)(),
+          [tR, uR] = (0, LR.useState)({});
+        return (0, LR.useEffect)((() => {
+          const tR = null === RR || void 0 === RR ? void 0 : RR.entries;
+          if (!tR) return;
+          const ZR = new Map(tR.map((RR => [RR.player.name, RR.value]))),
+            qR = JR.current;
+          if (JR.current = ZR, null === qR) return;
+          const iR = {};
+          for (const [RR, JR] of ZR) {
+            const yR = qR.get(RR);
+            void 0 !== yR && JR > yR && (iR[RR] = {
+              amount: JR - yR,
+              key: GR.current++
             })
           }
-          0 !== Object.keys(cW).length && (NW(cW), clearTimeout(mW.current), mW.current = setTimeout((() => {
-            NW({})
-          }), gW))
-        }), [WW]), (0, jW.useEffect)((() => () => {
-          clearTimeout(mW.current)
-        }), []), EW
-      }("loaded" === tW.status ? tW.leaderboard : null), xW = function(WW) {
-        const [iW, OW] = (0, jW.useState)(null), mW = "loaded" === WW.status ? WW.leaderboard.goalProgress : void 0;
-        return (0, jW.useEffect)((() => {
-          mW && OW(mW)
-        }), [mW]), iW
-      }(tW), lW = nW.d[`profileEffect_${EW.prizePack}`];
-      if (NW) return null;
-      const bW = "loaded" === tW.status ? tW.leaderboard : null,
-        UW = null !== (iW = null === bW || void 0 === bW ? void 0 : bW.entries) && void 0 !== iW ? iW : null,
-        kW = null !== bW && void 0 !== bW && bW.own && null !== UW && !UW.some((WW => WW.isOwn)) ? bW.own : null;
-      return (0, eW.jsx)("section", {
+          0 !== Object.keys(iR).length && (uR(iR), clearTimeout(yR.current), yR.current = setTimeout((() => {
+            uR({})
+          }), oR))
+        }), [RR]), (0, LR.useEffect)((() => () => {
+          clearTimeout(yR.current)
+        }), []), tR
+      }("loaded" === VR.status ? VR.leaderboard : null), wR = function(RR) {
+        const [JR, GR] = (0, LR.useState)(null), yR = "loaded" === RR.status ? RR.leaderboard.goalProgress : void 0;
+        return (0, LR.useEffect)((() => {
+          yR && GR(yR)
+        }), [yR]), JR
+      }(VR), rR = vR.f[`profileEffect_${tR.prizePack}`];
+      if (uR) return null;
+      const aR = "loaded" === VR.status ? VR.leaderboard : null,
+        nR = null !== (JR = null === aR || void 0 === aR ? void 0 : aR.entries) && void 0 !== JR ? JR : null,
+        UR = null !== aR && void 0 !== aR && aR.own && null !== nR && !nR.some((RR => RR.isOwn)) ? aR.own : null;
+      return (0, DR.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, eW.jsxs)("div", {
+        children: (0, DR.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, eW.jsxs)("div", {
+          children: [(0, DR.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, eW.jsxs)("div", {
+            children: [(0, DR.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, eW.jsxs)("span", {
+              children: [(0, DR.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, eW.jsx)("span", {
+                children: [(0, DR.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), mW("gameEvents:live")]
-              }), (0, eW.jsxs)("span", {
+                }), yR("gameEvents:live")]
+              }), (0, DR.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [mW("gameEvents:endsIn"), (0, eW.jsx)(yW.c, {
-                  toTime: EW.endsAt,
+                children: [yR("gameEvents:endsIn"), (0, DR.jsx)(BR.d, {
+                  toTime: tR.endsAt,
                   onReachEndOfCountdown: () => {
-                    PW(!0)
+                    ZR(!0)
                   }
                 })]
               })]
-            }), (0, eW.jsx)("h2", {
+            }), (0, DR.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: mW(EW.titleKey)
-            }), (0, eW.jsxs)("div", {
+              children: yR(tR.titleKey)
+            }), (0, DR.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, eW.jsxs)("div", {
+              children: [(0, DR.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [lW && (0, eW.jsx)("div", {
+                children: [rR && (0, DR.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, eW.jsx)(lW, {})
-                }), (0, eW.jsxs)("div", {
+                  children: (0, DR.jsx)(rR, {})
+                }), (0, DR.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, eW.jsx)("div", {
+                  children: [(0, DR.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: mW("gameEvents:prize")
-                  }), (0, eW.jsx)("div", {
+                    children: yR("gameEvents:prize")
+                  }), (0, DR.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: mW(EW.prizeNameKey)
+                    children: yR(tR.prizeNameKey)
                   })]
                 })]
-              }), (0, eW.jsx)(VW, {
-                event: EW,
-                progress: xW
+              }), (0, DR.jsx)(PR, {
+                event: tR,
+                progress: wR
               })]
             })]
-          }), (0, eW.jsxs)("div", {
+          }), (0, DR.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, eW.jsxs)("div", {
+            children: [(0, DR.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, eW.jsx)("h3", {
+              children: [(0, DR.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: mW(EW.leaderboard.titleKey)
-              }), (0, eW.jsx)(dW.c, {
-                ariaLabel: mW("gameEvents:leaderboardScope"),
-                options: hW.c.map((WW => ({
-                  value: WW,
-                  label: mW(`gameEvents:${WW}Scope`)
+                children: yR(tR.leaderboard.titleKey)
+              }), (0, DR.jsx)(NR.c, {
+                ariaLabel: yR("gameEvents:leaderboardScope"),
+                options: gR.c.map((RR => ({
+                  value: RR,
+                  label: yR(`gameEvents:${RR}Scope`)
                 }))),
-                value: LW,
-                onChange: wW
+                value: qR,
+                onChange: fR
               })]
-            }), "loading" === tW.status && (0, eW.jsx)("div", {
+            }), "loading" === VR.status && (0, DR.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, eW.jsx)(uW.d, {})
-            }), ("unavailable" === tW.status || "loaded" === tW.status && null === UW) && (0, eW.jsx)("div", {
+              children: (0, DR.jsx)(OR.d, {})
+            }), ("unavailable" === VR.status || "loaded" === VR.status && null === nR) && (0, DR.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: mW("gameEvents:leaderboardUnavailable")
-            }), null !== UW && 0 === UW.length && (0, eW.jsx)("div", {
+              children: yR("gameEvents:leaderboardUnavailable")
+            }), null !== nR && 0 === nR.length && (0, DR.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: mW("friends" === LW ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== UW && UW.length > 0 && (0, eW.jsx)("ol", {
+              children: yR("friends" === qR ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== nR && nR.length > 0 && (0, DR.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: UW.map((WW => {
-                const iW = ZW[WW.player.name];
-                return (0, eW.jsxs)("li", {
-                  className: AW()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: WW.isOwn,
-                    GameEventPanelRowTop: WW.rank <= 3
+              children: nR.map((RR => {
+                const JR = KR[RR.player.name];
+                return (0, DR.jsxs)("li", {
+                  className: eR()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: RR.isOwn,
+                    GameEventPanelRowTop: RR.rank <= 3
                   }),
-                  children: [(0, eW.jsxs)("span", {
+                  children: [(0, DR.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", WW.rank]
-                  }), (0, eW.jsx)("div", {
+                    children: ["#", RR.rank]
+                  }), (0, DR.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, eW.jsx)(oW.g, {
+                    children: (0, DR.jsx)(xR.h, {
                       playerSocialPreview: {
-                        ...WW.player,
+                        ...RR.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== iW && (0, eW.jsxs)("span", {
+                  }), void 0 !== JR && (0, DR.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", iW.amount.toLocaleString()]
-                  }, iW.key), (0, eW.jsx)("span", {
+                    children: ["+", JR.amount.toLocaleString()]
+                  }, JR.key), (0, DR.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: WW.value.toLocaleString()
+                    children: RR.value.toLocaleString()
                   })]
-                }, WW.player.name)
+                }, RR.player.name)
               }))
-            }), kW && (0, eW.jsxs)("div", {
+            }), UR && (0, DR.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, eW.jsxs)("span", {
+              children: [(0, DR.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", kW.rank.toLocaleString()]
-              }), (0, eW.jsx)("span", {
+                children: ["#", UR.rank.toLocaleString()]
+              }), (0, DR.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: mW("gameEvents:yourPlace")
-              }), (0, eW.jsx)("span", {
+                children: yR("gameEvents:yourPlace")
+              }), (0, DR.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: kW.value.toLocaleString()
+                children: UR.value.toLocaleString()
               })]
             })]
           })]
@@ -245,356 +245,356 @@ export const modules = {
       })
     }
 
-    function VW(WW) {
+    function PR(RR) {
       let {
-        event: iW,
-        progress: OW
-      } = WW;
+        event: JR,
+        progress: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, cW.B)(), EW = null !== OW && iW.prizeGoals.some(((WW, iW) => OW[iW] >= WW.target));
-      return (0, eW.jsxs)("div", {
+        t: yR
+      } = (0, iR.A)(), tR = null !== GR && JR.prizeGoals.some(((RR, JR) => GR[JR] >= RR.target));
+      return (0, DR.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, eW.jsx)("div", {
+        children: [(0, DR.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: mW(EW ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, eW.jsx)("div", {
+          children: yR(tR ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, DR.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: iW.prizeGoals.map(((WW, iW) => {
-            const EW = null === OW ? null : Math.min(OW[iW], WW.target);
-            return (0, eW.jsxs)(jW.Fragment, {
-              children: [iW > 0 && (0, eW.jsx)("div", {
+          children: JR.prizeGoals.map(((RR, JR) => {
+            const tR = null === GR ? null : Math.min(GR[JR], RR.target);
+            return (0, DR.jsxs)(LR.Fragment, {
+              children: [JR > 0 && (0, DR.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: mW("gameEvents:goalsOr")
-              }), (0, eW.jsxs)("div", {
-                className: AW()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: EW === WW.target
+                children: yR("gameEvents:goalsOr")
+              }), (0, DR.jsxs)("div", {
+                className: eR()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: tR === RR.target
                 }),
-                children: [(0, eW.jsx)("span", {
+                children: [(0, DR.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: mW(WW.labelKey)
-                }), (0, eW.jsxs)("div", {
+                  children: yR(RR.labelKey)
+                }), (0, DR.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, eW.jsx)("div", {
+                  children: [(0, DR.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== EW && void 0 !== EW ? EW : 0) / WW.target * 100 + "%"
+                      width: (null !== tR && void 0 !== tR ? tR : 0) / RR.target * 100 + "%"
                     }
-                  }), null !== EW && (0, eW.jsxs)("span", {
+                  }), null !== tR && (0, DR.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [EW.toLocaleString(), " / ", WW.target.toLocaleString()]
+                    children: [tR.toLocaleString(), " / ", RR.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, WW.board)
+            }, RR.board)
           }))
         })]
       })
     }
-    var pW = OW(1642),
-      fW = OW(1697),
-      CW = OW(1078),
-      XW = OW(754),
-      BW = OW(4718);
+    var IR = GR(1701),
+      mR = GR(1757),
+      zR = GR(1149),
+      SR = GR(810),
+      jR = GR(4824);
 
-    function qW(WW) {
+    function dR(RR) {
       let {
-        gameNameWithVariation: iW
-      } = WW;
-      const OW = (0, pW.B)(iW),
-        [mW, EW] = (0, jW.useState)(null);
-      if ((0, jW.useEffect)((() => {
-          if (!OW) return;
-          let WW = !0;
-          return (0, fW.g)(OW).then((iW => {
-            WW && EW(iW)
-          })).catch((WW => {
-            console.error(`Failed to load the page copy for ${OW.name}`, WW)
+        gameNameWithVariation: JR
+      } = RR;
+      const GR = (0, IR.E)(JR),
+        [yR, tR] = (0, LR.useState)(null);
+      if ((0, LR.useEffect)((() => {
+          if (!GR) return;
+          let RR = !0;
+          return (0, mR.i)(GR).then((JR => {
+            RR && tR(JR)
+          })).catch((RR => {
+            console.error(`Failed to load the page copy for ${GR.name}`, RR)
           })), () => {
-            WW = !1
+            RR = !1
           }
-        }), [OW]), !OW || !mW || mW.name !== OW.name) return null;
-      const NW = (0, fW.d)(mW),
-        PW = new Set((0, CW.c)((0, XW.p)()).map((WW => (0, pW.u)(WW)))),
-        LW = mW.similarGames.filter((WW => PW.has((0, pW.u)(WW))));
-      return (0, eW.jsx)("div", {
+        }), [GR]), !GR || !yR || yR.name !== GR.name) return null;
+      const uR = (0, mR.h)(yR),
+        ZR = new Set((0, zR.d)((0, SR.j)()).map((RR => (0, IR.v)(RR)))),
+        qR = yR.similarGames.filter((RR => ZR.has((0, IR.v)(RR))));
+      return (0, DR.jsx)("div", {
         className: "GamePageContent",
-        children: (0, eW.jsxs)("div", {
+        children: (0, DR.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, eW.jsxs)("section", {
+          children: [(0, DR.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, eW.jsx)("h2", {
-              children: NW.whatIs
-            }), mW.whatIs.map((WW => (0, eW.jsx)("p", {
-              children: WW
-            }, WW)))]
-          }), (0, eW.jsxs)("section", {
+            children: [(0, DR.jsx)("h2", {
+              children: uR.whatIs
+            }), yR.whatIs.map((RR => (0, DR.jsx)("p", {
+              children: RR
+            }, RR)))]
+          }), (0, DR.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, eW.jsx)("h2", {
-              children: NW.howToPlay
-            }), mW.howToPlay.map((WW => (0, eW.jsx)("p", {
-              children: WW
-            }, WW)))]
-          }), (0, eW.jsxs)("section", {
+            children: [(0, DR.jsx)("h2", {
+              children: uR.howToPlay
+            }), yR.howToPlay.map((RR => (0, DR.jsx)("p", {
+              children: RR
+            }, RR)))]
+          }), (0, DR.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, eW.jsx)("h2", {
-              children: NW.features
-            }), (0, eW.jsx)("ul", {
-              children: mW.features.map((WW => (0, eW.jsx)("li", {
-                children: WW
-              }, WW)))
+            children: [(0, DR.jsx)("h2", {
+              children: uR.features
+            }), (0, DR.jsx)("ul", {
+              children: yR.features.map((RR => (0, DR.jsx)("li", {
+                children: RR
+              }, RR)))
             })]
-          }), (0, eW.jsxs)("aside", {
+          }), (0, DR.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, eW.jsx)("h2", {
-              children: NW.tips
-            }), (0, eW.jsx)("ul", {
-              children: mW.tips.map((WW => (0, eW.jsx)("li", {
-                children: WW
-              }, WW)))
+            children: [(0, DR.jsx)("h2", {
+              children: uR.tips
+            }), (0, DR.jsx)("ul", {
+              children: yR.tips.map((RR => (0, DR.jsx)("li", {
+                children: RR
+              }, RR)))
             })]
-          }), (0, eW.jsxs)("section", {
+          }), (0, DR.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, eW.jsx)("h2", {
-              children: NW.faq
-            }), mW.faq.map((WW => {
+            children: [(0, DR.jsx)("h2", {
+              children: uR.faq
+            }), yR.faq.map((RR => {
               let {
-                question: iW,
-                answer: OW
-              } = WW;
-              return (0, eW.jsxs)("div", {
+                question: JR,
+                answer: GR
+              } = RR;
+              return (0, DR.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, eW.jsx)("h3", {
-                  children: iW
-                }), (0, eW.jsx)("p", {
-                  children: OW
+                children: [(0, DR.jsx)("h3", {
+                  children: JR
+                }), (0, DR.jsx)("p", {
+                  children: GR
                 })]
-              }, iW)
+              }, JR)
             }))]
-          }), LW.length > 0 && (0, eW.jsxs)("nav", {
+          }), qR.length > 0 && (0, DR.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, eW.jsx)("h2", {
-              children: NW.similarGames
-            }), (0, eW.jsx)("ul", {
+            children: [(0, DR.jsx)("h2", {
+              children: uR.similarGames
+            }), (0, DR.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: LW.map((WW => (0, eW.jsx)("li", {
-                children: (0, eW.jsx)(BW.d, {
+              children: qR.map((RR => (0, DR.jsx)("li", {
+                children: (0, DR.jsx)(jR.i, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: WW
+                    gameNameWithVariation: RR
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, WW)))
+              }, RR)))
             })]
           })]
         })
       })
     }
-    var RW = OW(1391),
-      GW = OW(100),
-      IW = OW(1111),
-      aW = OW(35272),
-      rW = OW(1747),
-      zW = OW(1616),
-      FW = OW(1605),
-      QW = OW(1707),
-      Wi = OW(1544),
-      ii = OW(1422),
-      Oi = OW(37474),
-      mi = OW(1223),
-      Ei = OW(1052),
-      Ni = OW(344),
-      Pi = OW(1065),
-      Li = OW(1638),
-      ci = OW(10206),
-      wi = OW(25),
-      ti = OW(3488),
-      Zi = OW(805),
-      xi = OW(1217),
-      li = OW(7485),
-      Ai = OW(4723);
+    var ER = GR(1468),
+      YR = GR(103),
+      kR = GR(1201),
+      QR = GR(35204),
+      FR = GR(1814),
+      TR = GR(1677),
+      sR = GR(1663),
+      hR = GR(1771),
+      RJ = GR(1597),
+      JJ = GR(1493),
+      GJ = GR(37389),
+      yJ = GR(1328),
+      tJ = GR(1127),
+      uJ = GR(377),
+      ZJ = GR(1141),
+      qJ = GR(1695),
+      iJ = GR(10315),
+      fJ = GR(25),
+      VJ = GR(3611),
+      KJ = GR(858),
+      wJ = GR(1317),
+      rJ = GR(7622),
+      eJ = GR(4829);
 
-    function bi(WW) {
+    function aJ(RR) {
       let {
-        preview: iW,
-        isBroken: OW
-      } = WW;
-      const mW = null === iW ? null : (0, NW.f)(iW, "small"),
-        PW = (0, EW.f)(null !== mW && void 0 !== mW ? mW : NW.t);
-      return null === iW ? (0, eW.jsx)("div", {
-        className: AW()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: OW
+        preview: JR,
+        isBroken: GR
+      } = RR;
+      const yR = null === JR ? null : (0, uR.d)(JR, "small"),
+        ZR = (0, tR.h)(null !== yR && void 0 !== yR ? yR : uR.p);
+      return null === JR ? (0, DR.jsx)("div", {
+        className: eR()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: GR
         }),
-        children: (0, eW.jsx)(RW.c, {
-          name: OW ? "triangle-exclamation" : "star"
+        children: (0, DR.jsx)(ER.d, {
+          name: GR ? "triangle-exclamation" : "star"
         })
-      }) : (0, eW.jsx)("div", {
-        className: AW()("FeaturedGamesPopupSlotThumbnail", LW.j),
-        style: (0, LW.f)(PW),
+      }) : (0, DR.jsx)("div", {
+        className: eR()("FeaturedGamesPopupSlotThumbnail", qR.f),
+        style: (0, qR.c)(ZR),
         role: "img",
-        "aria-label": iW.name,
-        children: (0, eW.jsx)(LW.b, {
-          image: PW
+        "aria-label": JR.name,
+        children: (0, DR.jsx)(qR.b, {
+          image: ZR
         })
       })
     }
 
-    function ji(WW) {
+    function LJ(RR) {
       let {
-        schematicId: iW,
-        gameName: OW
-      } = WW;
+        schematicId: JR,
+        gameName: GR
+      } = RR;
       const {
-        userContext: EW
-      } = (0, KW.e)(), NW = (0, Ai.c)(), [PW, LW] = (0, jW.useState)(null), [cW, wW] = (0, jW.useState)(null), [tW, ZW] = (0, jW.useState)(!1), lW = (0, jW.useCallback)((() => {
-        wW(null), HW.e.getFeaturedGames(EW).then((WW => {
-          NW.current && LW(WW.slots)
-        })).catch((WW => {
-          console.error("Failed to get featured games", WW), NW.current && wW("Failed to load featured games")
+        userContext: tR
+      } = (0, CR.d)(), uR = (0, eJ.d)(), [ZR, qR] = (0, LR.useState)(null), [iR, fR] = (0, LR.useState)(null), [VR, KR] = (0, LR.useState)(!1), rR = (0, LR.useCallback)((() => {
+        fR(null), bR.c.getFeaturedGames(tR).then((RR => {
+          uR.current && qR(RR.slots)
+        })).catch((RR => {
+          console.error("Failed to get featured games", RR), uR.current && fR("Failed to load featured games")
         }))
-      }), [EW, NW]);
-      (0, jW.useEffect)((() => {
-        lW()
-      }), [lW]);
-      const AW = (WW, iW) => {
-        tW || (ZW(!0), HW.e.setFeaturedGame(EW, WW, iW).then((() => {
-          NW.current && lW()
-        })).catch((WW => {
-          console.error("Failed to set featured game", WW), NW.current && wW("Failed to update the featured slot")
+      }), [tR, uR]);
+      (0, LR.useEffect)((() => {
+        rR()
+      }), [rR]);
+      const eR = (RR, JR) => {
+        VR || (KR(!0), bR.c.setFeaturedGame(tR, RR, JR).then((() => {
+          uR.current && rR()
+        })).catch((RR => {
+          console.error("Failed to set featured game", RR), uR.current && fR("Failed to update the featured slot")
         })).finally((() => {
-          NW.current && ZW(!1)
+          uR.current && KR(!1)
         })))
       };
-      return (0, eW.jsxs)("div", {
+      return (0, DR.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, eW.jsx)("h1", {
+        children: [(0, DR.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !PW && !cW && (0, eW.jsx)("div", {
+        }), !ZR && !iR && (0, DR.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, eW.jsx)(uW.d, {})
-        }), cW && (0, eW.jsx)("div", {
+          children: (0, DR.jsx)(OR.d, {})
+        }), iR && (0, DR.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: cW
-        }), PW && (0, eW.jsxs)(eW.Fragment, {
-          children: [(0, eW.jsx)("div", {
+          children: iR
+        }), ZR && (0, DR.jsxs)(DR.Fragment, {
+          children: [(0, DR.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: PW.map((WW => {
-              const OW = WW.schematicId === iW,
-                EW = null === WW.schematicId,
+            children: ZR.map((RR => {
+              const GR = RR.schematicId === JR,
+                tR = null === RR.schematicId,
                 {
-                  categoryGroup: NW
-                } = mW.H[WW.slotId];
-              return (0, eW.jsxs)("div", {
+                  categoryGroup: uR
+                } = yR.O[RR.slotId];
+              return (0, DR.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, eW.jsx)(bi, {
-                  preview: WW.preview,
-                  isBroken: !EW
-                }), (0, eW.jsxs)("div", {
+                children: [(0, DR.jsx)(aJ, {
+                  preview: RR.preview,
+                  isBroken: !tR
+                }), (0, DR.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, eW.jsxs)("div", {
+                  children: [(0, DR.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, mW.nb)(NW), " \xb7 position", " ", (0, mW.L)(WW.slotId, mW.Vb) + 1, " of", " ", (0, mW.Sb)(NW, mW.Vb)]
-                  }), EW && (0, eW.jsx)("div", {
+                    children: [(0, yR.jb)(uR), " \xb7 position", " ", (0, yR.Q)(RR.slotId, yR.Jb) + 1, " of", " ", (0, yR.Hb)(uR, yR.Jb)]
+                  }), tR && (0, DR.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !EW && null !== WW.preview && (0, eW.jsx)("div", {
+                  }), !tR && null !== RR.preview && (0, DR.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: WW.preview.name
-                  }), !EW && null === WW.preview && (0, eW.jsxs)("div", {
+                    children: RR.preview.name
+                  }), !tR && null === RR.preview && (0, DR.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, eW.jsx)(RW.c, {
+                    children: [(0, DR.jsx)(ER.d, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, eW.jsxs)("div", {
+                }), (0, DR.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [EW && (0, eW.jsxs)(xW.s, {
+                  children: [tR && (0, DR.jsxs)(wR.r, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      AW(WW.slotId, iW)
+                      eR(RR.slotId, JR)
                     },
-                    disabled: tW,
-                    children: [(0, eW.jsx)(RW.c, {
+                    disabled: VR,
+                    children: [(0, DR.jsx)(ER.d, {
                       name: "star"
                     }), " Feature here"]
-                  }), !EW && !OW && (0, eW.jsxs)(xW.Z, {
+                  }), !tR && !GR && (0, DR.jsxs)(wR.U, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      AW(WW.slotId, iW)
+                      eR(RR.slotId, JR)
                     },
-                    disabled: tW,
-                    children: [(0, eW.jsx)(RW.c, {
+                    disabled: VR,
+                    children: [(0, DR.jsx)(ER.d, {
                       name: "star"
                     }), " Replace"]
-                  }), !EW && (0, eW.jsxs)(xW.O, {
+                  }), !tR && (0, DR.jsxs)(wR.M, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      AW(WW.slotId, null)
+                      eR(RR.slotId, null)
                     },
-                    disabled: tW,
-                    children: [(0, eW.jsx)(RW.c, {
+                    disabled: VR,
+                    children: [(0, DR.jsx)(ER.d, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, WW.slotId)
+              }, RR.slotId)
             }))
-          }), (0, eW.jsx)("p", {
+          }), (0, DR.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var Ui = OW(5413),
-      ki = OW(5291),
-      si = OW(4653);
-    const Mi = 8,
-      Ki = 12;
+    var nJ = GR(5531),
+      UJ = GR(5400),
+      WJ = GR(4757);
+    const AJ = 8,
+      CJ = 12;
 
-    function Si(WW) {
+    function XJ(RR) {
       let {
-        customLobbies: iW,
-        favouriteLobbies: OW,
-        toggleLikeLobby: mW,
-        showReport: EW
-      } = WW;
-      const [NW, PW] = (0, jW.useState)(Mi);
-      return (0, jW.useEffect)((() => {
-        if (NW >= iW.length) return;
-        let WW = !0;
-        return (0, si.c)().then((() => {
-          WW && PW(NW + Ki)
+        customLobbies: JR,
+        favouriteLobbies: GR,
+        toggleLikeLobby: yR,
+        showReport: tR
+      } = RR;
+      const [uR, ZR] = (0, LR.useState)(AJ);
+      return (0, LR.useEffect)((() => {
+        if (uR >= JR.length) return;
+        let RR = !0;
+        return (0, WJ.h)().then((() => {
+          RR && ZR(uR + CJ)
         })), () => {
-          WW = !1
+          RR = !1
         }
-      }), [NW, iW.length]), (0, eW.jsx)(eW.Fragment, {
-        children: iW.slice(0, NW).map((WW => (0, eW.jsx)(ki.f, {
-          customLobby: WW,
-          favouriteLobbies: OW,
-          toggleLikeLobby: mW,
-          showReport: EW
-        }, WW.name)))
+      }), [uR, JR.length]), (0, DR.jsx)(DR.Fragment, {
+        children: JR.slice(0, uR).map((RR => (0, DR.jsx)(UJ.d, {
+          customLobby: RR,
+          favouriteLobbies: GR,
+          toggleLikeLobby: yR,
+          showReport: tR
+        }, RR.name)))
       })
     }
-    var Yi = OW(5299),
-      yi = OW(5310),
-      Ti = OW(5274),
-      Ji = OW(4811),
-      Hi = OW(5368),
-      ni = OW(10176),
-      ui = OW(195);
-    const oi = {
-      skyblock: [OW(37503).d]
+    var MJ = GR(5405),
+      BJ = GR(5420),
+      lJ = GR(5378),
+      pJ = GR(4921),
+      gJ = GR(5467),
+      bJ = GR(10291),
+      vJ = GR(224);
+    const OJ = {
+      skyblock: [GR(37415).d]
     };
-    var di = OW(643);
-    const ei = {
+    var xJ = GR(679);
+    const NJ = {
       listedVariations: null,
-      backgroundImage: NW.t,
+      backgroundImage: uR.p,
       badges: [],
       category: null,
       title: null,
@@ -610,377 +610,377 @@ export const modules = {
       countdownInformation: null
     };
 
-    function vi(WW, iW) {
-      const OW = Zi.g[WW.schematicId];
+    function DJ(RR, JR) {
+      const GR = KJ.d[RR.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, NW.f)(WW, "large"),
+        backgroundImage: (0, uR.d)(RR, "large"),
         badges: [],
-        category: WW.gameCategory,
-        title: void 0 !== (null === OW || void 0 === OW ? void 0 : OW.title) ? iW(OW.title) : WW.name,
+        category: RR.gameCategory,
+        title: void 0 !== (null === GR || void 0 === GR ? void 0 : GR.title) ? JR(GR.title) : RR.name,
         variationTitle: null,
-        description: void 0 !== (null === OW || void 0 === OW ? void 0 : OW.description) ? iW(OW.description) : WW.description,
-        ownerSocialPreviewWithoutLocation: "owner" in WW ? WW.owner : null,
-        ccu: WW.ccu,
-        favourites: WW.favourites,
+        description: void 0 !== (null === GR || void 0 === GR ? void 0 : GR.description) ? JR(GR.description) : RR.description,
+        ownerSocialPreviewWithoutLocation: "owner" in RR ? RR.owner : null,
+        ccu: RR.ccu,
+        favourites: RR.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in WW ? WW.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in RR ? RR.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function gi(WW) {
-      var iW, OW, mW;
-      return null !== (iW = null !== (OW = (0, ui.h)() ? function(WW) {
-        for (const [iW, OW] of Object.entries(oi)) {
-          const mW = [iW, ...OW.map((WW => (0, Ni.Pb)(iW, WW)))];
-          if (mW.includes(WW)) return mW
+    function HJ(RR) {
+      var JR, GR, yR;
+      return null !== (JR = null !== (GR = (0, vJ.k)() ? function(RR) {
+        for (const [JR, GR] of Object.entries(OJ)) {
+          const yR = [JR, ...GR.map((RR => (0, uJ.Qb)(JR, RR)))];
+          if (yR.includes(RR)) return yR
         }
         return null
-      }(WW) : null) && void 0 !== OW ? OW : null === (mW = Zi.d[WW]) || void 0 === mW ? void 0 : mW.listedVariations) && void 0 !== iW ? iW : null
+      }(RR) : null) && void 0 !== GR ? GR : null === (yR = KJ.b[RR]) || void 0 === yR ? void 0 : yR.listedVariations) && void 0 !== JR ? JR : null
     }
 
-    function Di() {
+    function oJ() {
       const {
-        gameNameWithVariation: WW
-      } = (0, zW.z)();
-      if ((0, jW.useEffect)(Ji.n, []), WW && (0, mi.r)(WW)) return (0, eW.jsx)(Vi, {
-        urlId: WW
-      }, WW);
-      const iW = WW && (0, Ei.i)(WW) ? WW : "firstParty";
-      return (0, eW.jsx)(Ci, {}, iW)
+        gameNameWithVariation: RR
+      } = (0, TR.x)();
+      if ((0, LR.useEffect)(pJ.t, []), RR && (0, yJ.l)(RR)) return (0, DR.jsx)(cJ, {
+        urlId: RR
+      }, RR);
+      const JR = RR && (0, tJ.n)(RR) ? RR : "firstParty";
+      return (0, DR.jsx)(IJ, {}, JR)
     }
 
-    function Vi(WW) {
+    function cJ(RR) {
       let {
-        urlId: iW
-      } = WW;
+        urlId: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, cW.B)(), {
-        userContext: mW,
-        isUserContextUpdating: EW
-      } = (0, KW.e)(), NW = (0, jW.useMemo)((() => (0, rW.i)(iW)), [iW]);
-      (0, jW.useMemo)((() => {
-        if (null === NW) return;
-        const WW = IW.userContextManager.peekCurrentUserContext();
-        (null !== WW ? HW.e.getGame(WW, NW.schematicId) : IW.userContextManager.getCurrentUserContext().then((WW => HW.e.getGame(WW, NW.schematicId)))).catch((WW => {
-          null === (0, HW.g)(WW) && console.error(`Failed to get the custom game ${NW.schematicId}`, WW), (0, rW.f)(iW)
+        t: GR
+      } = (0, iR.A)(), {
+        userContext: yR,
+        isUserContextUpdating: tR
+      } = (0, CR.d)(), uR = (0, LR.useMemo)((() => (0, FR.h)(JR)), [JR]);
+      (0, LR.useMemo)((() => {
+        if (null === uR) return;
+        const RR = kR.userContextManager.peekCurrentUserContext();
+        (null !== RR ? bR.c.getGame(RR, uR.schematicId) : kR.userContextManager.getCurrentUserContext().then((RR => bR.c.getGame(RR, uR.schematicId)))).catch((RR => {
+          null === (0, bR.k)(RR) && console.error(`Failed to get the custom game ${uR.schematicId}`, RR), (0, FR.e)(JR)
         }))
-      }), [NW, iW]);
-      const [PW, LW] = (0, jW.useState)(null), wW = (0, aW.c)();
-      (0, jW.useEffect)((() => {
-        if (null !== NW || EW) return;
-        let WW = !0;
-        return HW.e.getGameByUrlId(mW, iW).then((mW => {
-          WW && (mW.takenDown ? fi(OW, mW) : LW({
-            urlId: iW,
-            game: mW
+      }), [uR, JR]);
+      const [ZR, qR] = (0, LR.useState)(null), fR = (0, QR.e)();
+      (0, LR.useEffect)((() => {
+        if (null !== uR || tR) return;
+        let RR = !0;
+        return bR.c.getGameByUrlId(yR, JR).then((yR => {
+          RR && (yR.takenDown ? PJ(GR, yR) : qR({
+            urlId: JR,
+            game: yR
           }))
-        })).catch((mW => {
-          const EW = null !== (0, HW.g)(mW);
-          EW || console.error(`Failed to find the custom game with urlId ${iW}`, mW), WW && (EW ? fi(OW, null) : (0, FW.navigateToHomePage)())
+        })).catch((yR => {
+          const tR = null !== (0, bR.k)(yR);
+          tR || console.error(`Failed to find the custom game with urlId ${JR}`, yR), RR && (tR ? PJ(GR, null) : (0, sR.navigateToHomePage)())
         })), () => {
-          WW = !1
+          RR = !1
         }
-      }), [iW, NW, EW, mW, OW]);
-      const tW = null !== NW && void 0 !== NW ? NW : (null === PW || void 0 === PW ? void 0 : PW.urlId) === iW ? PW.game : null;
-      return null === tW ? (0, eW.jsx)(uW.d, {}) : wW ? (0, eW.jsx)(Ci, {
-        gameNameWithVariation: (0, Ei.r)(tW.schematicId),
-        knownCustomGame: tW
-      }, tW.schematicId) : null
+      }), [JR, uR, tR, yR, GR]);
+      const VR = null !== uR && void 0 !== uR ? uR : (null === ZR || void 0 === ZR ? void 0 : ZR.urlId) === JR ? ZR.game : null;
+      return null === VR ? (0, DR.jsx)(OR.d, {}) : fR ? (0, DR.jsx)(IJ, {
+        gameNameWithVariation: (0, tJ.w)(VR.schematicId),
+        knownCustomGame: VR
+      }, VR.schematicId) : null
     }
 
-    function fi(WW, iW) {
-      (0, FW.navigateToHomePage)(), (0, ni.c)(WW, iW)
+    function PJ(RR, JR) {
+      (0, sR.navigateToHomePage)(), (0, bJ.i)(RR, JR)
     }
 
-    function Ci(WW) {
-      var iW, OW, PW, lW, hW, nW, uW, dW;
+    function IJ(RR) {
+      var JR, GR, ZR, rR, gR, vR, OR, NR;
       let {
-        gameNameWithVariation: vW,
-        knownCustomGame: gW = null
-      } = WW;
+        gameNameWithVariation: HR,
+        knownCustomGame: oR = null
+      } = RR;
       const {
-        t: VW
-      } = (0, cW.B)();
-      (0, ti.j)();
-      const fW = (0, ti.m)(),
+        t: PR
+      } = (0, iR.A)();
+      (0, VJ.i)();
+      const mR = (0, VJ.l)(),
         {
-          userContext: CW,
-          isUserContextUpdating: XW
-        } = (0, KW.e)(),
-        BW = (0, Ti.h)(),
-        IW = (0, FW.useNavigatePreserveSearch)(),
-        aW = (0, zW.z)(),
-        rW = (0, jW.useMemo)((() => vW ? {
-          gameNameWithVariation: vW
-        } : aW), [vW, aW]),
-        Wi = (0, ci.e)(rW),
-        mi = (0, jW.useMemo)((() => {
-          const WW = function(WW) {
-            var iW, OW;
-            const mW = gi(WW);
-            if (!mW || 0 === mW.length || mW.includes(WW)) return WW;
-            const EW = wW.i.getItem((0, kW.l)(WW));
-            if (EW && mW.includes(EW)) return EW;
-            return null !== (iW = null === (OW = Zi.d[WW]) || void 0 === OW ? void 0 : OW.defaultListedVariation) && void 0 !== iW ? iW : mW[0]
-          }(Wi.gameNameWithVariation);
-          return WW === Wi.gameNameWithVariation ? Wi : {
-            ...Wi,
-            gameNameWithVariation: WW
+          userContext: zR,
+          isUserContextUpdating: SR
+        } = (0, CR.d)(),
+        jR = (0, lJ.f)(),
+        kR = (0, sR.useNavigatePreserveSearch)(),
+        QR = (0, TR.x)(),
+        FR = (0, LR.useMemo)((() => HR ? {
+          gameNameWithVariation: HR
+        } : QR), [HR, QR]),
+        RJ = (0, iJ.b)(FR),
+        yJ = (0, LR.useMemo)((() => {
+          const RR = function(RR) {
+            var JR, GR;
+            const yR = HJ(RR);
+            if (!yR || 0 === yR.length || yR.includes(RR)) return RR;
+            const tR = fR.i.getItem((0, UR.i)(RR));
+            if (tR && yR.includes(tR)) return tR;
+            return null !== (JR = null === (GR = KJ.b[RR]) || void 0 === GR ? void 0 : GR.defaultListedVariation) && void 0 !== JR ? JR : yR[0]
+          }(RJ.gameNameWithVariation);
+          return RR === RJ.gameNameWithVariation ? RJ : {
+            ...RJ,
+            gameNameWithVariation: RR
           }
-        }), [Wi]);
-      (0, jW.useEffect)((() => {
-        const WW = Wi.gameNameWithVariation;
-        mi.gameNameWithVariation !== WW && WW !== (0, Ni.Tb)(WW) && IW((0, pW.w)(mi.gameNameWithVariation), {
+        }), [RJ]);
+      (0, LR.useEffect)((() => {
+        const RR = RJ.gameNameWithVariation;
+        yJ.gameNameWithVariation !== RR && RR !== (0, uJ.Sb)(RR) && kR((0, IR.z)(yJ.gameNameWithVariation), {
           replace: !0
         })
-      }), [mi.gameNameWithVariation, Wi.gameNameWithVariation, IW]);
-      const [Ai, bi] = (0, jW.useState)(""), si = jW.useRef(null), [Mi, Ki] = (0, jW.useState)(), Ji = (0, Ei.i)(mi.gameNameWithVariation), ni = (0, jW.useMemo)((() => Ji ? null : function(WW, iW, OW) {
-        var mW, EW;
-        const PW = Zi.d[WW];
-        return (0, di.K)(PW) ? null : {
-          listedVariations: gi(WW),
-          backgroundImage: (0, NW.n)(WW, (0, NW.c)(PW)),
-          badges: (0, tW.filterBadges)(PW.badges),
-          category: PW.type,
-          title: OW(PW.title),
-          variationTitle: PW.variationTitle ? OW(PW.variationTitle) : null,
-          description: OW(PW.description),
+      }), [yJ.gameNameWithVariation, RJ.gameNameWithVariation, kR]);
+      const [eJ, aJ] = (0, LR.useState)(""), WJ = LR.useRef(null), [AJ, CJ] = (0, LR.useState)(), pJ = (0, tJ.n)(yJ.gameNameWithVariation), bJ = (0, LR.useMemo)((() => pJ ? null : function(RR, JR, GR) {
+        var yR, tR;
+        const ZR = KJ.b[RR];
+        return (0, xJ.I)(ZR) ? null : {
+          listedVariations: HJ(RR),
+          backgroundImage: (0, uR.l)(RR, (0, uR.b)(ZR)),
+          badges: (0, VR.filterBadges)(ZR.badges),
+          category: ZR.type,
+          title: GR(ZR.title),
+          variationTitle: ZR.variationTitle ? GR(ZR.variationTitle) : null,
+          description: GR(ZR.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== iW ? null !== (mW = iW[WW]) && void 0 !== mW ? mW : 0 : null,
+          ccu: null !== JR ? null !== (yR = JR[RR]) && void 0 !== yR ? yR : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: PW.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: PW.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (EW = PW.canCreateCustomLobbies) || void 0 === EW || EW,
-          countdownInformation: (0, kW.k)(WW)
+          useRejoinLastLobbyButton: ZR.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: ZR.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (tR = ZR.canCreateCustomLobbies) || void 0 === tR || tR,
+          countdownInformation: (0, UR.g)(RR)
         }
-      }(mi.gameNameWithVariation, fW, VW)), [Ji, mi.gameNameWithVariation, fW, VW]), [ui, oi] = (0, jW.useState)(!1), [Di, Vi] = (0, jW.useState)(null), [Ci, Bi] = (0, jW.useState)((() => gW ? vi(gW, VW) : ei)), qi = null !== ni && void 0 !== ni ? ni : Ci, [Ri] = (0, jW.useState)(qi === ei), Gi = (0, EW.f)(qi.backgroundImage, {
+      }(yJ.gameNameWithVariation, mR, PR)), [pJ, yJ.gameNameWithVariation, mR, PR]), [vJ, OJ] = (0, LR.useState)(!1), [oJ, cJ] = (0, LR.useState)(null), [IJ, zJ] = (0, LR.useState)((() => oR ? DJ(oR, PR) : NJ)), SJ = null !== bJ && void 0 !== bJ ? bJ : IJ, [jJ] = (0, LR.useState)(SJ === NJ), dJ = (0, tR.h)(SJ.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: Ii,
-        recentlyPlayedCustomLobbies: ai
-      } = (0, jW.useMemo)((() => function(WW, iW, OW, mW) {
-        var EW;
-        const NW = WW => {
-            const OW = (0, Ei.n)(WW),
-              mW = iW.find((iW => "custom" === iW.type ? iW.schematicId === OW : iW.gameNameWithVariation === WW));
-            return mW ? [...mW.recentLobbies] : []
+        recentlyPlayedPublicLobbies: EJ,
+        recentlyPlayedCustomLobbies: YJ
+      } = (0, LR.useMemo)((() => function(RR, JR, GR, yR) {
+        var tR;
+        const uR = RR => {
+            const GR = (0, tJ.s)(RR),
+              yR = JR.find((JR => "custom" === JR.type ? JR.schematicId === GR : JR.gameNameWithVariation === RR));
+            return yR ? [...yR.recentLobbies] : []
           },
-          PW = (0, tW.getRecentGameNameWithVariationLobbiesKey)(WW),
-          LW = null !== (EW = wW.i.getItem(PW)) && void 0 !== EW ? EW : [],
-          cW = [...NW(WW), ...LW],
-          ZW = [];
-        for (const wW of cW)(0, xi.R)(wW) && !ZW.includes(wW) && ZW.push(wW);
-        let xW = cW;
-        if (OW) {
-          const WW = NW("classic_worlds"),
-            iW = cW.filter((iW => !WW.includes(iW)));
-          xW = [...WW, ...iW]
+          ZR = (0, VR.getRecentGameNameWithVariationLobbiesKey)(RR),
+          qR = null !== (tR = fR.i.getItem(ZR)) && void 0 !== tR ? tR : [],
+          iR = [...uR(RR), ...qR],
+          KR = [];
+        for (const fR of iR)(0, wJ.E)(fR) && !KR.includes(fR) && KR.push(fR);
+        let wR = iR;
+        if (GR) {
+          const RR = uR("classic_worlds"),
+            JR = iR.filter((JR => !RR.includes(JR)));
+          wR = [...RR, ...JR]
         }
-        const lW = [],
-          AW = !1 === mW ? [] : xW;
-        for (const wW of AW)(0, xi.R)(wW) || lW.includes(wW) || lW.push(wW);
+        const rR = [],
+          eR = !1 === yR ? [] : wR;
+        for (const fR of eR)(0, wJ.E)(fR) || rR.includes(fR) || rR.push(fR);
         return {
-          recentlyPlayedPublicLobbies: ZW,
-          recentlyPlayedCustomLobbies: lW
+          recentlyPlayedPublicLobbies: KR,
+          recentlyPlayedCustomLobbies: rR
         }
-      }(mi.gameNameWithVariation, BW, qi.showWorldsInsteadOfCustomLobbies, qi.canCreateCustomLobbies)), [mi.gameNameWithVariation, BW, qi.showWorldsInsteadOfCustomLobbies, qi.canCreateCustomLobbies]), [ri, zi] = (0, jW.useState)(!0), [Fi, Qi] = (0, jW.useState)([]), [WO, iO] = (0, jW.useState)(null), [OO, mO] = (0, jW.useState)("explore"), EO = (0, jW.useRef)(!1), NO = (0, jW.useCallback)((WW => {
-        (0, UW.unstable_batchedUpdates)((() => {
-          Ki(WW), Bi((iW => ({
-            ...vi(WW, VW),
-            isFavourite: iW.isFavourite
+      }(yJ.gameNameWithVariation, jR, SJ.showWorldsInsteadOfCustomLobbies, SJ.canCreateCustomLobbies)), [yJ.gameNameWithVariation, jR, SJ.showWorldsInsteadOfCustomLobbies, SJ.canCreateCustomLobbies]), [kJ, QJ] = (0, LR.useState)(!0), [FJ, TJ] = (0, LR.useState)([]), [sJ, hJ] = (0, LR.useState)(null), [RG, JG] = (0, LR.useState)("explore"), GG = (0, LR.useRef)(!1), yG = (0, LR.useCallback)((RR => {
+        (0, nR.unstable_batchedUpdates)((() => {
+          CJ(RR), zJ((JR => ({
+            ...DJ(RR, PR),
+            isFavourite: JR.isFavourite
           })))
         }))
-      }), [VW]);
-      (0, jW.useEffect)((() => {
-        null === wi.d.get("gameEntrySource") && (0, wi.l)("gameInformationPageDirect")
+      }), [PR]);
+      (0, LR.useEffect)((() => {
+        null === fJ.d.get("gameEntrySource") && (0, fJ.k)("gameInformationPageDirect")
       }), []);
-      const PO = (0, jW.useRef)(null);
-      (0, jW.useEffect)((() => {
-        const WW = WW => {
-            PO.current = WW.target instanceof Element ? WW.target.closest("a, button") : null
+      const tG = (0, LR.useRef)(null);
+      (0, LR.useEffect)((() => {
+        const RR = RR => {
+            tG.current = RR.target instanceof Element ? RR.target.closest("a, button") : null
           },
-          iW = WW => {
-            "Tab" === WW.key && (PO.current = null)
+          JR = RR => {
+            "Tab" === RR.key && (tG.current = null)
           };
-        return document.addEventListener("pointerdown", WW, !0), document.addEventListener("keydown", iW, !0), () => {
-          document.removeEventListener("pointerdown", WW, !0), document.removeEventListener("keydown", iW, !0)
+        return document.addEventListener("pointerdown", RR, !0), document.addEventListener("keydown", JR, !0), () => {
+          document.removeEventListener("pointerdown", RR, !0), document.removeEventListener("keydown", JR, !0)
         }
-      }), []), (0, SW.c)("Enter", (WW => {
-        const iW = WW.target instanceof Element ? WW.target : null;
-        if (WW.defaultPrevented || null !== iW && void 0 !== iW && iW.closest("input, textarea, select")) return;
-        const OW = null === iW || void 0 === iW ? void 0 : iW.closest("a, button");
-        OW && OW !== PO.current || (WW.preventDefault(), bO())
-      })), (0, YW.c)(FW.navigateToHomePage);
-      const LO = Ii.length > 0 || ai.length > 0,
-        cO = !qi.useRejoinLastLobbyButton || 0 === Ii.length,
-        wO = Ji && null === qi.ownerSocialPreviewWithoutLocation,
-        tO = CW.getPlayerName() === (null === Mi || void 0 === Mi || null === (iW = Mi.owner) || void 0 === iW ? void 0 : iW.name),
-        ZO = null !== (OW = null === (PW = qi.badges.find((WW => "event" === WW.type))) || void 0 === PW ? void 0 : PW.event) && void 0 !== OW ? OW : null,
-        xO = cO ? xW.n : xW.f,
-        lO = (0, eW.jsx)(ZW.f, {
-          tooltipInner: (0, eW.jsx)("div", {
-            children: VW("homePage:quickPlayInfo")
+      }), []), (0, XR.e)("Enter", (RR => {
+        const JR = RR.target instanceof Element ? RR.target : null;
+        if (RR.defaultPrevented || null !== JR && void 0 !== JR && JR.closest("input, textarea, select")) return;
+        const GR = null === JR || void 0 === JR ? void 0 : JR.closest("a, button");
+        GR && GR !== tG.current || (RR.preventDefault(), rG())
+      })), (0, MR.c)(sR.navigateToHomePage);
+      const uG = EJ.length > 0 || YJ.length > 0,
+        ZG = !SJ.useRejoinLastLobbyButton || 0 === EJ.length,
+        qG = pJ && null === SJ.ownerSocialPreviewWithoutLocation,
+        iG = zR.getPlayerName() === (null === AJ || void 0 === AJ || null === (JR = AJ.owner) || void 0 === JR ? void 0 : JR.name),
+        fG = null !== (GR = null === (ZR = SJ.badges.find((RR => "event" === RR.type))) || void 0 === ZR ? void 0 : ZR.event) && void 0 !== GR ? GR : null,
+        VG = ZG ? wR.n : wR.g,
+        KG = (0, DR.jsx)(KR.h, {
+          tooltipInner: (0, DR.jsx)("div", {
+            children: PR("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, eW.jsx)(xO, {
+          children: (0, DR.jsx)(VG, {
             className: "GameInformationButton",
-            padDefaultFocus: cO,
+            padDefaultFocus: ZG,
             showPress: !0,
             onClick: () => {
-              bO()
+              rG()
             },
-            children: (0, eW.jsxs)("div", {
+            children: (0, DR.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [cO && (0, eW.jsxs)(eW.Fragment, {
-                children: [(0, eW.jsx)(RW.c, {
+              children: [ZG && (0, DR.jsxs)(DR.Fragment, {
+                children: [(0, DR.jsx)(ER.d, {
                   name: "play"
                 }), " "]
-              }), VW("homePage:quickPlay")]
+              }), PR("homePage:quickPlay")]
             })
           })
         });
-      (0, jW.useEffect)((() => {
-        if (!Ji || XW) return;
-        let WW = !0;
-        const iW = (0, Ei.n)(mi.gameNameWithVariation);
-        return HW.e.getGame(CW, iW).then((iW => {
-          WW && (iW.takenDown ? Vi({
-            ownGame: iW
-          }) : NO(iW))
-        })).catch((iW => {
-          const OW = null !== (0, HW.g)(iW);
-          OW || console.error("Failed to get Custom Game information", iW), WW && (OW ? Vi({
+      (0, LR.useEffect)((() => {
+        if (!pJ || SR) return;
+        let RR = !0;
+        const JR = (0, tJ.s)(yJ.gameNameWithVariation);
+        return bR.c.getGame(zR, JR).then((JR => {
+          RR && (JR.takenDown ? cJ({
+            ownGame: JR
+          }) : yG(JR))
+        })).catch((JR => {
+          const GR = null !== (0, bR.k)(JR);
+          GR || console.error("Failed to get Custom Game information", JR), RR && (GR ? cJ({
             ownGame: null
-          }) : (0, FW.navigateToHomePage)())
-        })), HW.e.getFavouriteGames(CW).then((OW => {
-          WW && Bi((WW => ({
-            ...WW,
-            isFavourite: OW.includes(iW)
+          }) : (0, sR.navigateToHomePage)())
+        })), bR.c.getFavouriteGames(zR).then((GR => {
+          RR && zJ((RR => ({
+            ...RR,
+            isFavourite: GR.includes(JR)
           })))
-        })).catch((iW => {
-          console.error("Failed to get favourite games", iW), WW && oi(!0)
+        })).catch((JR => {
+          console.error("Failed to get favourite games", JR), RR && OJ(!0)
         })), () => {
-          WW = !1
+          RR = !1
         }
-      }), [Ji, XW, mi.gameNameWithVariation, NO, CW]), (0, jW.useEffect)((() => {
-        null !== Di && fi(VW, Di.ownGame)
-      }), [Di, VW]);
-      const AO = !Ji && null === ni;
+      }), [pJ, SR, yJ.gameNameWithVariation, yG, zR]), (0, LR.useEffect)((() => {
+        null !== oJ && PJ(PR, oJ.ownGame)
+      }), [oJ, PR]);
+      const wG = !pJ && null === bJ;
 
-      function bO(WW) {
-        (0, Hi.g)(), IW((0, sW.e)(mi.gameNameWithVariation, WW))
-      }(0, jW.useEffect)((() => {
-        AO && (0, FW.navigateToHomePage)()
-      }), [AO]), (0, jW.useEffect)((() => {
-        if (!1 === qi.canCreateCustomLobbies) return;
-        let WW = !0;
-        return null !== qi.showWorldsInsteadOfCustomLobbies && !1 === XW && (zi(!0), HW.e.getFavouriteLobbies(CW).then((WW => {
-          iO(WW)
-        })), HW.e.getOpenCustomLobbies(CW, {
-          gameNameWithVariation: qi.showWorldsInsteadOfCustomLobbies ? "classic" : mi.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === OO,
-          onlyFavouriteLobbies: "favourite" === OO
-        }).then((iW => {
-          WW && (0, UW.unstable_batchedUpdates)((() => {
-            Qi(iW), zi(!1)
+      function rG(RR) {
+        (0, gJ.h)(), kR((0, WR.e)(yJ.gameNameWithVariation, RR))
+      }(0, LR.useEffect)((() => {
+        wG && (0, sR.navigateToHomePage)()
+      }), [wG]), (0, LR.useEffect)((() => {
+        if (!1 === SJ.canCreateCustomLobbies) return;
+        let RR = !0;
+        return null !== SJ.showWorldsInsteadOfCustomLobbies && !1 === SR && (QJ(!0), bR.c.getFavouriteLobbies(zR).then((RR => {
+          hJ(RR)
+        })), bR.c.getOpenCustomLobbies(zR, {
+          gameNameWithVariation: SJ.showWorldsInsteadOfCustomLobbies ? "classic" : yJ.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === RG,
+          onlyFavouriteLobbies: "favourite" === RG
+        }).then((JR => {
+          RR && (0, nR.unstable_batchedUpdates)((() => {
+            TJ(JR), QJ(!1)
           }))
-        })).catch((iW => {
-          console.error("Failed to get open custom lobbies", iW), WW && zi(!1)
+        })).catch((JR => {
+          console.error("Failed to get open custom lobbies", JR), RR && QJ(!1)
         }))), () => {
-          WW = !1
+          RR = !1
         }
-      }), [XW, mi, OO, qi.showWorldsInsteadOfCustomLobbies, qi.canCreateCustomLobbies, CW]);
-      const jO = (0, jW.useCallback)((async WW => {
+      }), [SR, yJ, RG, SJ.showWorldsInsteadOfCustomLobbies, SJ.canCreateCustomLobbies, zR]);
+      const eG = (0, LR.useCallback)((async RR => {
           try {
-            if (!WO) return;
-            WO.includes(WW) ? (HW.e.unfavouriteLobby(CW, WW), iO(WO.filter((iW => iW !== WW)))) : (HW.e.favouriteLobby(CW, WW).catch((WW => {
-              console.error("Failed to favourite lobby", WW)
-            })), iO([...WO, WW]))
-          } catch (iW) {
-            console.error("Failed to like lobby", iW)
+            if (!sJ) return;
+            sJ.includes(RR) ? (bR.c.unfavouriteLobby(zR, RR), hJ(sJ.filter((JR => JR !== RR)))) : (bR.c.favouriteLobby(zR, RR).catch((RR => {
+              console.error("Failed to favourite lobby", RR)
+            })), hJ([...sJ, RR]))
+          } catch (JR) {
+            console.error("Failed to like lobby", JR)
           }
-        }), [CW, WO]),
-        UO = (null === Mi || void 0 === Mi ? void 0 : Mi.schematicId) === (0, Ei.n)(Wi.gameNameWithVariation) ? Mi : null,
-        kO = UO && (0, pW.D)(Wi.gameNameWithVariation, (WW => VW(WW)), UO);
-      (0, QW.f)(UO && (0, pW.w)(Wi.gameNameWithVariation, UO));
-      const sO = GW.featureFlags.canUseCustomLobbies && !0 === qi.canCreateCustomLobbies,
-        MO = (0, eW.jsx)("div", {
+        }), [zR, sJ]),
+        aG = (null === AJ || void 0 === AJ ? void 0 : AJ.schematicId) === (0, tJ.s)(RJ.gameNameWithVariation) ? AJ : null,
+        LG = aG && (0, IR.G)(RJ.gameNameWithVariation, (RR => PR(RR)), aG);
+      (0, hR.i)(aG && (0, IR.z)(RJ.gameNameWithVariation, aG));
+      const nG = YR.featureFlags.canUseCustomLobbies && !0 === SJ.canCreateCustomLobbies,
+        UG = (0, DR.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, eW.jsx)(qW, {
-            gameNameWithVariation: mi.gameNameWithVariation
+          children: (0, DR.jsx)(dR, {
+            gameNameWithVariation: yJ.gameNameWithVariation
           })
         });
-      return (0, eW.jsx)(eW.Fragment, {
-        children: (0, eW.jsxs)("article", {
-          className: AW()("GameInformation", {
-            GameInformationFadeIn: Ri,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (lW = qi.countdownInformation) || void 0 === lW ? void 0 : lW.type)
+      return (0, DR.jsx)(DR.Fragment, {
+        children: (0, DR.jsxs)("article", {
+          className: eR()("GameInformation", {
+            GameInformationFadeIn: jJ,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (rR = SJ.countdownInformation) || void 0 === rR ? void 0 : rR.type)
           }),
-          children: [kO && (0, eW.jsx)(MW.c, {
-            meta: kO
-          }), (0, eW.jsxs)("div", {
+          children: [LG && (0, DR.jsx)(AR.b, {
+            meta: LG
+          }), (0, DR.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, eW.jsxs)("div", {
+            children: [(0, DR.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, eW.jsxs)("div", {
+              children: [(0, DR.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, eW.jsx)("div", {
+                children: [(0, DR.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, eW.jsx)("div", {
-                  className: AW()("GameInformationTopBackgroundImage", LW.j),
-                  style: (0, LW.f)(Gi),
-                  children: (0, eW.jsx)(LW.b, {
-                    image: Gi
+                }), (0, DR.jsx)("div", {
+                  className: eR()("GameInformationTopBackgroundImage", qR.f),
+                  style: (0, qR.c)(dJ),
+                  children: (0, DR.jsx)(qR.b, {
+                    image: dJ
                   })
                 })]
-              }), (0, eW.jsxs)("div", {
+              }), (0, DR.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, eW.jsx)(Ui.d, {}), (0, eW.jsxs)("div", {
+                children: [(0, DR.jsx)(nJ.c, {}), (0, DR.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, eW.jsxs)("div", {
+                  children: [(0, DR.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, eW.jsxs)("div", {
-                      className: AW()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: wO
+                    children: [(0, DR.jsxs)("div", {
+                      className: eR()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: qG
                       }),
-                      children: [qi.badges.map((WW => (0, eW.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${WW.type}`,
-                        children: (0, eW.jsx)(JW.c, {
-                          badge: WW
+                      children: [SJ.badges.map((RR => (0, DR.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${RR.type}`,
+                        children: (0, DR.jsx)(pR.d, {
+                          badge: RR
                         })
-                      }, WW.type))), Ji && (0, eW.jsx)("div", {
+                      }, RR.type))), pJ && (0, DR.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, eW.jsx)(TW.d, {
-                          text: (0, mW.fb)({
+                        children: (0, DR.jsx)(lR.c, {
+                          text: (0, yR.db)({
                             type: "playerCrafted"
                           })
                         })
-                      }), qi.category && (0, eW.jsx)("div", {
+                      }), SJ.category && (0, DR.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, eW.jsx)(TW.d, {
+                        children: (0, DR.jsx)(lR.c, {
                           text: [{
-                            str: (0, mW.gb)(qi.category).toUpperCase()
+                            str: (0, yR.eb)(SJ.category).toUpperCase()
                           }]
                         })
-                      }), null !== qi.ccu && (0, eW.jsxs)("div", {
+                      }), null !== SJ.ccu && (0, DR.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, eW.jsx)(RW.c, {
+                        children: [(0, DR.jsx)(ER.d, {
                           name: "user"
-                        }), (0, xi.V)(qi.ccu), " online"]
-                      }), null !== qi.ownerSocialPreviewWithoutLocation && (0, eW.jsxs)("div", {
+                        }), (0, wJ.J)(SJ.ccu), " online"]
+                      }), null !== SJ.ownerSocialPreviewWithoutLocation && (0, DR.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, eW.jsx)("span", {
+                        children: [(0, DR.jsx)("span", {
                           children: "Made by"
-                        }), (0, eW.jsx)(oW.g, {
+                        }), (0, DR.jsx)(xR.h, {
                           playerSocialPreview: {
-                            ...qi.ownerSocialPreviewWithoutLocation,
+                            ...SJ.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -988,402 +988,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), wO && (0, eW.jsxs)("div", {
+                      }), qG && (0, DR.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, eW.jsx)("span", {
+                        children: [(0, DR.jsx)("span", {
                           children: "Made by"
-                        }), (0, eW.jsx)("div", {
+                        }), (0, DR.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== qi.favourites && (null !== qi.isFavourite || Ji && !ui) && (0, eW.jsx)(xW.y, {
+                      }), null !== SJ.favourites && (null !== SJ.isFavourite || pJ && !vJ) && (0, DR.jsx)(wR.y, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== EO.current && (EO.current = !0, null !== qi.isFavourite)) {
-                              const WW = (0, Ei.n)(mi.gameNameWithVariation);
-                              let iW;
-                              qi.isFavourite ? (iW = -1, HW.e.unfavouriteGame(CW, WW).catch((WW => {
-                                console.error("Failed to get unfavourite game", WW)
+                            if (!0 !== GG.current && (GG.current = !0, null !== SJ.isFavourite)) {
+                              const RR = (0, tJ.s)(yJ.gameNameWithVariation);
+                              let JR;
+                              SJ.isFavourite ? (JR = -1, bR.c.unfavouriteGame(zR, RR).catch((RR => {
+                                console.error("Failed to get unfavourite game", RR)
                               })).finally((() => {
-                                EO.current = !1
-                              }))) : (iW = 1, HW.e.favouriteGame(CW, WW).catch((WW => {
-                                console.error("Failed to get favourite game", WW)
+                                GG.current = !1
+                              }))) : (JR = 1, bR.c.favouriteGame(zR, RR).catch((RR => {
+                                console.error("Failed to get favourite game", RR)
                               })).finally((() => {
-                                EO.current = !1
-                              }))), Bi((WW => ({
-                                ...WW,
-                                isFavourite: !WW.isFavourite
-                              }))), Bi((WW => ({
-                                ...WW,
-                                favourites: WW.favourites + iW
+                                GG.current = !1
+                              }))), zJ((RR => ({
+                                ...RR,
+                                isFavourite: !RR.isFavourite
+                              }))), zJ((RR => ({
+                                ...RR,
+                                favourites: RR.favourites + JR
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (hW = qi.isFavourite) && void 0 !== hW && hW,
-                        disabled: null === qi.isFavourite,
-                        className: AW()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === qi.isFavourite
+                        isLiked: null !== (gR = SJ.isFavourite) && void 0 !== gR && gR,
+                        disabled: null === SJ.isFavourite,
+                        className: eR()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === SJ.isFavourite
                         })
-                      }, null === qi.isFavourite ? "pending" : "known"), Ji && !wO && GW.featureFlags.useSocialFeatures && !tO && (0, eW.jsx)(Yi.b, {
+                      }, null === SJ.isFavourite ? "pending" : "known"), pJ && !qG && YR.featureFlags.useSocialFeatures && !iG && (0, DR.jsx)(MJ.c, {
                         targetType: "customGame",
-                        targetId: (0, Ei.n)(mi.gameNameWithVariation),
+                        targetId: (0, tJ.s)(yJ.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (CW.playerHasRank("developer") || CW.playerHasRank("admin") && tO) && (0, eW.jsxs)(xW.n, {
+                      }), (zR.playerHasRank("developer") || zR.playerHasRank("admin") && iG) && (0, DR.jsxs)(wR.n, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          IW((0, Li.v)((0, Pi.e)(mi.gameNameWithVariation, !0)))
+                          kR((0, qJ.p)((0, ZJ.e)(yJ.gameNameWithVariation, !0)))
                         },
-                        children: [(0, eW.jsx)(RW.c, {
+                        children: [(0, DR.jsx)(ER.d, {
                           name: "star-christmas"
-                        }), " ", VW("studio:viewInStudio")]
-                      }), Ji && CW.playerHasRank("developer") && (0, eW.jsxs)(xW.f, {
+                        }), " ", PR("studio:viewInStudio")]
+                      }), pJ && zR.playerHasRank("developer") && (0, DR.jsxs)(wR.g, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, li.c)({
-                            schematicId: (0, Ei.n)(mi.gameNameWithVariation),
+                          (0, rJ.e)({
+                            schematicId: (0, tJ.s)(yJ.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, eW.jsx)(RW.c, {
+                        children: [(0, DR.jsx)(ER.d, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), Ji && CW.playerHasRank("developer") && (0, eW.jsxs)(xW.f, {
+                      }), pJ && zR.playerHasRank("developer") && (0, DR.jsxs)(wR.g, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          ii.NotificationProvider.showCustomPopup({
-                            body: () => (0, eW.jsx)(ji, {
-                              schematicId: (0, Ei.n)(mi.gameNameWithVariation),
-                              gameName: qi.title
+                          JJ.NotificationProvider.showCustomPopup({
+                            body: () => (0, DR.jsx)(LJ, {
+                              schematicId: (0, tJ.s)(yJ.gameNameWithVariation),
+                              gameName: SJ.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, eW.jsx)(RW.c, {
+                        children: [(0, DR.jsx)(ER.d, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (nW = qi.countdownInformation) || void 0 === nW ? void 0 : nW.type) && (0, eW.jsxs)("div", {
+                      }), "updateCountdown" === (null === (vR = SJ.countdownInformation) || void 0 === vR ? void 0 : vR.type) && (0, DR.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, eW.jsxs)("div", {
+                        children: [(0, DR.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, eW.jsx)(yW.c, {
-                            toTime: qi.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, DR.jsx)(BR.d, {
+                            toTime: SJ.countdownInformation.countdownToTime
                           })]
-                        }), (0, eW.jsx)("div", {
+                        }), (0, DR.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: qi.countdownInformation.previewText
+                          children: SJ.countdownInformation.previewText
                         })]
                       })]
-                    }, wO ? "pending" : "shown"), (0, eW.jsxs)("header", {
+                    }, qG ? "pending" : "shown"), (0, DR.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, eW.jsx)("div", {
+                      children: [(0, DR.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, eW.jsxs)("h1", {
+                        children: (0, DR.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [qi.title, " ", qi.variationTitle && (null === (uW = Zi.d[mi.gameNameWithVariation]) || void 0 === uW ? void 0 : uW.variationThumbnailUseBigRatio) && (0, eW.jsx)("span", {
+                          children: [SJ.title, " ", SJ.variationTitle && (null === (OR = KJ.b[yJ.gameNameWithVariation]) || void 0 === OR ? void 0 : OR.variationThumbnailUseBigRatio) && (0, DR.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: qi.variationTitle
+                            children: SJ.variationTitle
                           })]
                         })
-                      }), qi.listedVariations && qi.listedVariations.length > 1 && (0, eW.jsx)("div", {
-                        className: AW()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (dW = Zi.d[mi.gameNameWithVariation]) || void 0 === dW ? void 0 : dW.variationThumbnailUseBigRatio
+                      }), SJ.listedVariations && SJ.listedVariations.length > 1 && (0, DR.jsx)("div", {
+                        className: eR()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (NR = KJ.b[yJ.gameNameWithVariation]) || void 0 === NR ? void 0 : NR.variationThumbnailUseBigRatio
                         }),
-                        children: qi.listedVariations.map((WW => {
-                          var iW, OW;
-                          return (0, eW.jsxs)(Xi, {
-                            variation: WW,
-                            isSelected: mi.gameNameWithVariation === WW,
-                            children: [null !== fW && (0, eW.jsx)("div", {
+                        children: SJ.listedVariations.map((RR => {
+                          var JR, GR;
+                          return (0, DR.jsxs)(mJ, {
+                            variation: RR,
+                            isSelected: yJ.gameNameWithVariation === RR,
+                            children: [null !== mR && (0, DR.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, eW.jsxs)("div", {
+                              children: (0, DR.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, eW.jsx)(RW.c, {
+                                children: [(0, DR.jsx)(ER.d, {
                                   name: "user"
-                                }), " ", (0, xi.V)(null !== (iW = fW[WW]) && void 0 !== iW ? iW : 0)]
+                                }), " ", (0, wJ.J)(null !== (JR = mR[RR]) && void 0 !== JR ? JR : 0)]
                               })
-                            }), (0, eW.jsx)("div", {
+                            }), (0, DR.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: VW(null !== (OW = Zi.d[WW].variationTitle) && void 0 !== OW ? OW : Zi.d[WW].title)
-                            }), (0, eW.jsx)("div", {
+                              children: PR(null !== (GR = KJ.b[RR].variationTitle) && void 0 !== GR ? GR : KJ.b[RR].title)
+                            }), (0, DR.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, tW.filterBadges)(Zi.d[WW].badges).map((WW => (0, eW.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + WW.type,
-                                children: (0, eW.jsx)("div", {
+                              children: (0, VR.filterBadges)(KJ.b[RR].badges).map((RR => (0, DR.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + RR.type,
+                                children: (0, DR.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, eW.jsx)(JW.c, {
-                                    badge: WW
+                                  children: (0, DR.jsx)(pR.d, {
+                                    badge: RR
                                   })
                                 })
-                              }, WW.type)))
+                              }, RR.type)))
                             })]
-                          }, WW)
+                          }, RR)
                         }))
                       })]
-                    }), qi.description && (0, eW.jsx)("p", {
+                    }), SJ.description && (0, DR.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: qi.description
+                      children: SJ.description
                     })]
-                  }), (0, eW.jsxs)("div", {
+                  }), (0, DR.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, eW.jsxs)("div", {
+                    children: [(0, DR.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!cO && (0, eW.jsx)(ZW.f, {
-                        tooltipInner: (0, eW.jsx)("div", {
-                          children: VW("homePage:rejoinLobbyNumberInfo")
+                      children: [!ZG && (0, DR.jsx)(KR.h, {
+                        tooltipInner: (0, DR.jsx)("div", {
+                          children: PR("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, eW.jsx)(xW.n, {
+                        children: (0, DR.jsx)(wR.n, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            bO(Ii[0])
+                            rG(EJ[0])
                           },
-                          children: (0, eW.jsxs)("div", {
+                          children: (0, DR.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, eW.jsx)(RW.c, {
+                            children: [(0, DR.jsx)(ER.d, {
                               name: "play"
-                            }), " ", VW("homePage:rejoinLobbyNumber", {
-                              number: Ii[0]
+                            }), " ", PR("homePage:rejoinLobbyNumber", {
+                              number: EJ[0]
                             })]
                           })
                         })
-                      }), cO && lO]
-                    }), (0, eW.jsxs)("div", {
+                      }), ZG && KG]
+                    }), (0, DR.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!cO && lO, (0, eW.jsxs)("div", {
+                      children: [!ZG && KG, (0, DR.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, eW.jsx)(RW.c, {
+                        children: [(0, DR.jsx)(ER.d, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, eW.jsx)(bW.b, {
+                        }), (0, DR.jsx)(aR.b, {
                           className: "JoinLobbyInput",
-                          placeholderText: VW("homePage:lobbyName"),
-                          maxLength: xi.T,
-                          domRef: si,
-                          onValueChange: WW => {
-                            WW = (0, xi.Cb)(WW), bi(WW)
+                          placeholderText: PR("homePage:lobbyName"),
+                          maxLength: wJ.I,
+                          domRef: WJ,
+                          onValueChange: RR => {
+                            RR = (0, wJ.hb)(RR), aJ(RR)
                           },
                           onEnter: () => {
-                            0 === Ai.length ? bO(Ii[0]) : bO(Ai)
+                            0 === eJ.length ? rG(EJ[0]) : rG(eJ)
                           }
-                        }), (0, eW.jsx)(xW.f, {
+                        }), (0, DR.jsx)(wR.g, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === Ai.length ? bO(Ii[0]) : bO(Ai)
+                            0 === eJ.length ? rG(EJ[0]) : rG(eJ)
                           },
-                          children: VW("general:join")
+                          children: PR("general:join")
                         })]
                       })]
-                    }), (0, eW.jsxs)("section", {
-                      className: AW()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !LO
+                    }), (0, DR.jsxs)("section", {
+                      className: eR()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !uG
                       }),
-                      children: [(0, eW.jsx)("div", {
+                      children: [(0, DR.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, eW.jsxs)("div", {
+                        children: (0, DR.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, eW.jsx)(RW.c, {
+                          children: [(0, DR.jsx)(ER.d, {
                             name: "clock-rotate-left"
-                          }), LO && (0, eW.jsx)("h2", {
+                          }), uG && (0, DR.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: VW("homePage:recentlyPlayedLobbies")
+                            children: PR("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, eW.jsx)(yi.e, {
-                        lobbyGroups: [Ii, ai],
-                        onLobbyClick: WW => {
-                          bO(WW)
+                      }), (0, DR.jsx)(BJ.e, {
+                        lobbyGroups: [EJ, YJ],
+                        onLobbyClick: RR => {
+                          rG(RR)
                         },
-                        keyPrefix: mi.gameNameWithVariation
+                        keyPrefix: yJ.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== ZO && (0, eW.jsx)(DW, {
-                eventName: ZO
+              }), null !== fG && (0, DR.jsx)(cR, {
+                eventName: fG
               })]
-            }), sO && (0, eW.jsx)("div", {
+            }), nG && (0, DR.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, eW.jsxs)("section", {
+              children: (0, DR.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, eW.jsxs)("div", {
-                  className: AW()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === qi.showWorldsInsteadOfCustomLobbies
+                children: [(0, DR.jsxs)("div", {
+                  className: eR()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === SJ.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === qi.showWorldsInsteadOfCustomLobbies && (0, eW.jsxs)("h2", {
+                  children: [!0 === SJ.showWorldsInsteadOfCustomLobbies && (0, DR.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, eW.jsx)(RW.c, {
+                    children: [(0, DR.jsx)(ER.d, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, eW.jsxs)("div", {
+                    }), (0, DR.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, eW.jsx)("div", {
+                      children: [(0, DR.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), VW("game:worlds")]
+                      }), PR("game:worlds")]
                     })]
-                  }), !1 === qi.showWorldsInsteadOfCustomLobbies && (0, eW.jsxs)("h2", {
+                  }), !1 === SJ.showWorldsInsteadOfCustomLobbies && (0, DR.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, eW.jsx)(RW.c, {
+                    children: [(0, DR.jsx)(ER.d, {
                       name: "joystick"
-                    }), (0, eW.jsxs)("div", {
+                    }), (0, DR.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, eW.jsx)("div", {
+                      children: [(0, DR.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), VW("homePage:customLobbies")]
+                      }), PR("homePage:customLobbies")]
                     })]
-                  }), (0, eW.jsx)(xW.Z, {
+                  }), (0, DR.jsx)(wR.U, {
                     onClick: () => {
-                      mO("explore")
+                      JG("explore")
                     },
-                    active: "explore" === OO,
-                    children: VW("general:explore")
-                  }), (0, eW.jsx)(xW.Z, {
+                    active: "explore" === RG,
+                    children: PR("general:explore")
+                  }), (0, DR.jsx)(wR.U, {
                     onClick: () => {
-                      mO("favourite")
+                      JG("favourite")
                     },
-                    active: "favourite" === OO,
-                    children: VW("homePage:favouriteLobbies")
-                  }), (0, eW.jsx)(xW.Z, {
+                    active: "favourite" === RG,
+                    children: PR("homePage:favouriteLobbies")
+                  }), (0, DR.jsx)(wR.U, {
                     onClick: () => {
-                      mO("owned")
+                      JG("owned")
                     },
-                    active: "owned" === OO,
-                    children: VW("homePage:ownedLobbies")
+                    active: "owned" === RG,
+                    children: PR("homePage:ownedLobbies")
                   })]
-                }), (0, eW.jsxs)("div", {
+                }), (0, DR.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, eW.jsxs)("div", {
+                  children: [(0, DR.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, eW.jsx)(ki.d, {
+                    children: [(0, DR.jsx)(UJ.c, {
                       label: "Create",
                       onClick: () => {
-                        ii.NotificationProvider.showCustomPopup({
-                          body: WW => (0, eW.jsx)(Oi.CreateCustomLobby, {
-                            gameNameWithVariation: mi.gameNameWithVariation,
-                            close: WW
+                        JJ.NotificationProvider.showCustomPopup({
+                          body: RR => (0, DR.jsx)(GJ.CreateCustomLobby, {
+                            gameNameWithVariation: yJ.gameNameWithVariation,
+                            close: RR
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === ri && (0, eW.jsx)(ki.j, {}), !1 === ri && (0, eW.jsx)(Si, {
-                      customLobbies: Fi,
-                      favouriteLobbies: WO,
-                      toggleLikeLobby: jO,
-                      showReport: GW.featureFlags.useSocialFeatures && "owned" !== OO
+                    }), !0 === kJ && (0, DR.jsx)(UJ.g, {}), !1 === kJ && (0, DR.jsx)(XJ, {
+                      customLobbies: FJ,
+                      favouriteLobbies: sJ,
+                      toggleLikeLobby: eG,
+                      showReport: YR.featureFlags.useSocialFeatures && "owned" !== RG
                     })]
-                  }), MO]
+                  }), UG]
                 })]
               })
             })]
-          }), !sO && MO]
+          }), !nG && UG]
         })
       })
     }
 
-    function Xi(WW) {
+    function mJ(RR) {
       let {
-        variation: iW,
-        isSelected: OW,
-        children: mW
-      } = WW;
-      const cW = Zi.d[iW],
-        tW = (0, NW.n)(iW, (0, NW.p)(cW)),
-        ZW = (0, EW.f)(tW),
-        xW = (0, PW.d)([(0, NW.j)(iW, (0, NW.c)(cW))]);
-      return (0, eW.jsxs)(FW.LinkPreserveSearch, {
-        to: (0, pW.w)(iW),
+        variation: JR,
+        isSelected: GR,
+        children: yR
+      } = RR;
+      const iR = KJ.b[JR],
+        VR = (0, uR.l)(JR, (0, uR.o)(iR)),
+        KR = (0, tR.h)(VR),
+        wR = (0, ZR.f)([(0, uR.h)(JR, (0, uR.b)(iR))]);
+      return (0, DR.jsxs)(sR.LinkPreserveSearch, {
+        to: (0, IR.z)(JR),
         replace: !0,
-        className: AW()("GameInformationVariation", LW.j, {
-          SelectedGameInformationVariation: OW
+        className: eR()("GameInformationVariation", qR.f, {
+          SelectedGameInformationVariation: GR
         }),
-        onClick: WW => {
-          if (!(0, Wi.d)(WW)) return;
-          const OW = (0, kW.l)(iW);
-          wW.i.setItem(OW, iW)
+        onClick: RR => {
+          if (!(0, RJ.e)(RR)) return;
+          const GR = (0, UR.i)(JR);
+          fR.i.setItem(GR, JR)
         },
-        onMouseEnter: xW.start,
-        onMouseLeave: xW.cancel,
-        onFocus: xW.start,
-        onBlur: xW.cancel,
-        style: (0, LW.f)(ZW),
-        children: [(0, eW.jsx)(LW.b, {
-          image: ZW
-        }), mW]
+        onMouseEnter: wR.start,
+        onMouseLeave: wR.cancel,
+        onFocus: wR.start,
+        onBlur: wR.cancel,
+        style: (0, qR.c)(KR),
+        children: [(0, DR.jsx)(qR.b, {
+          image: KR
+        }), yR]
       })
     }
   },
-  7485: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => kW
+  7622: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => UR
     });
-    var mW = OW(62),
-      EW = OW(1532),
-      NW = OW(1584),
-      PW = OW(4723),
-      LW = OW(1107),
-      cW = OW(1383),
-      wW = OW(1434),
-      tW = OW(1391),
-      ZW = OW(1089),
-      xW = OW.n(ZW),
-      lW = OW(7482),
-      AW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1590),
+      uR = GR(1647),
+      ZR = GR(4829),
+      qR = GR(1196),
+      iR = GR(1465),
+      fR = GR(1501),
+      VR = GR(1468),
+      KR = GR(1163),
+      wR = GR.n(KR),
+      rR = GR(7615),
+      eR = GR(1378);
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        info: iW,
-        className: OW
-      } = WW;
+        info: JR,
+        className: GR
+      } = RR;
       const {
-        statusText: mW,
-        rowText: EW
-      } = (0, lW.h)();
-      return (0, AW.jsxs)("div", {
-        className: xW()("GameApprovalInfoDetails", OW),
-        children: [(0, AW.jsxs)("div", {
-          className: xW()("GameApprovalInfoSummary", iW.overallPassed ? "Passed" : "Failed"),
-          children: [(0, AW.jsx)(tW.c, {
-            name: iW.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, AW.jsx)("span", {
-            children: mW(iW.status)
+        statusText: yR,
+        rowText: tR
+      } = (0, rR.f)();
+      return (0, eR.jsxs)("div", {
+        className: wR()("GameApprovalInfoDetails", GR),
+        children: [(0, eR.jsxs)("div", {
+          className: wR()("GameApprovalInfoSummary", JR.overallPassed ? "Passed" : "Failed"),
+          children: [(0, eR.jsx)(VR.d, {
+            name: JR.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, eR.jsx)("span", {
+            children: yR(JR.status)
           })]
-        }), iW.rows.length > 0 && (0, AW.jsx)("div", {
+        }), JR.rows.length > 0 && (0, eR.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: iW.rows.map((WW => {
+          children: JR.rows.map((RR => {
             const {
-              label: iW,
-              value: OW
-            } = EW(WW);
-            return (0, AW.jsxs)("div", {
-              className: xW()("GameApprovalInfoRow", WW.passed ? "Passed" : "Failed"),
-              children: [(0, AW.jsx)(tW.c, {
-                name: WW.passed ? "check" : "xmark"
-              }), (0, AW.jsxs)("div", {
+              label: JR,
+              value: GR
+            } = tR(RR);
+            return (0, eR.jsxs)("div", {
+              className: wR()("GameApprovalInfoRow", RR.passed ? "Passed" : "Failed"),
+              children: [(0, eR.jsx)(VR.d, {
+                name: RR.passed ? "check" : "xmark"
+              }), (0, eR.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, AW.jsx)("div", {
+                children: [(0, eR.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: iW
-                }), null !== OW && (0, AW.jsx)("div", {
+                  children: JR
+                }), null !== GR && (0, eR.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: OW
+                  children: GR
                 })]
               })]
-            }, WW.kind)
+            }, RR.kind)
           }))
         })]
       })
     }
-    var jW = OW(1172),
-      UW = OW(1422);
+    var LR = GR(1270),
+      nR = GR(1493);
 
-    function kW(WW) {
-      UW.NotificationProvider.showCustomPopup({
-        body: () => (0, AW.jsx)(sW, {
-          ...WW
+    function UR(RR) {
+      nR.NotificationProvider.showCustomPopup({
+        body: () => (0, eR.jsx)(WR, {
+          ...RR
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1391,92 +1391,92 @@ export const modules = {
       })
     }
 
-    function sW(WW) {
+    function WR(RR) {
       let {
-        schematicId: iW,
-        canOverride: OW,
-        onApprovalChanged: ZW
-      } = WW;
+        schematicId: JR,
+        canOverride: GR,
+        onApprovalChanged: KR
+      } = RR;
       const {
-        t: xW
-      } = (0, jW.B)(), {
-        userContext: lW
-      } = (0, LW.e)(), UW = (0, PW.c)(), [kW, sW] = (0, mW.useState)(null), [MW, KW] = (0, mW.useState)(null), [SW, YW] = (0, mW.useState)(!1), yW = (0, mW.useCallback)((() => {
-        KW(null), NW.e.getGameApprovalInfo(lW, iW).then((WW => {
-          UW.current && sW(WW)
-        })).catch((WW => {
-          console.error("Failed to get game approval info", WW), UW.current && KW(xW("studio:approvalLoadFailed"))
+        t: wR
+      } = (0, LR.A)(), {
+        userContext: rR
+      } = (0, qR.d)(), nR = (0, ZR.d)(), [UR, WR] = (0, yR.useState)(null), [AR, CR] = (0, yR.useState)(null), [XR, MR] = (0, yR.useState)(!1), BR = (0, yR.useCallback)((() => {
+        CR(null), uR.c.getGameApprovalInfo(rR, JR).then((RR => {
+          nR.current && WR(RR)
+        })).catch((RR => {
+          console.error("Failed to get game approval info", RR), nR.current && CR(wR("studio:approvalLoadFailed"))
         }))
-      }), [lW, iW, UW, xW]);
-      (0, mW.useEffect)((() => {
-        yW()
-      }), [yW]);
-      const TW = WW => {
-        SW || (YW(!0), NW.e.setGameApproval(lW, iW, WW).then((() => {
-          null === ZW || void 0 === ZW || ZW(), UW.current && yW()
-        })).catch((WW => {
-          console.error("Failed to set game approval", WW)
+      }), [rR, JR, nR, wR]);
+      (0, yR.useEffect)((() => {
+        BR()
+      }), [BR]);
+      const lR = RR => {
+        XR || (MR(!0), uR.c.setGameApproval(rR, JR, RR).then((() => {
+          null === KR || void 0 === KR || KR(), nR.current && BR()
+        })).catch((RR => {
+          console.error("Failed to set game approval", RR)
         })).finally((() => {
-          UW.current && YW(!1)
+          nR.current && MR(!1)
         })))
       };
-      return (0, AW.jsxs)("div", {
+      return (0, eR.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, AW.jsx)("h1", {
+        children: [(0, eR.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: xW("studio:approvalTitle")
-        }), !kW && !MW && (0, AW.jsx)("div", {
+          children: wR("studio:approvalTitle")
+        }), !UR && !AR && (0, eR.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, AW.jsx)(cW.d, {})
-        }), MW && (0, AW.jsx)("div", {
+          children: (0, eR.jsx)(iR.d, {})
+        }), AR && (0, eR.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: MW
-        }), kW && (0, AW.jsxs)(AW.Fragment, {
-          children: [(0, AW.jsx)(bW, {
-            info: kW
-          }), OW && (0, AW.jsxs)("div", {
+          children: AR
+        }), UR && (0, eR.jsxs)(eR.Fragment, {
+          children: [(0, eR.jsx)(aR, {
+            info: UR
+          }), GR && (0, eR.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== kW.manualOverride && (0, AW.jsx)(wW.f, {
-              tooltipInner: (0, AW.jsx)("div", {
-                children: xW("studio:approvalApproveTooltip")
+            children: [!0 !== UR.manualOverride && (0, eR.jsx)(fR.h, {
+              tooltipInner: (0, eR.jsx)("div", {
+                children: wR("studio:approvalApproveTooltip")
               }),
-              children: (0, AW.jsxs)(EW.n, {
+              children: (0, eR.jsxs)(tR.n, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  TW(!0)
+                  lR(!0)
                 },
-                disabled: SW,
-                children: [(0, AW.jsx)(tW.c, {
+                disabled: XR,
+                children: [(0, eR.jsx)(VR.d, {
                   name: "check"
-                }), " ", xW("studio:approvalApprove")]
+                }), " ", wR("studio:approvalApprove")]
               })
-            }), !1 !== kW.manualOverride && (0, AW.jsx)(wW.f, {
-              tooltipInner: (0, AW.jsx)("div", {
-                children: xW("studio:approvalDenyTooltip")
+            }), !1 !== UR.manualOverride && (0, eR.jsx)(fR.h, {
+              tooltipInner: (0, eR.jsx)("div", {
+                children: wR("studio:approvalDenyTooltip")
               }),
-              children: (0, AW.jsxs)(EW.O, {
+              children: (0, eR.jsxs)(tR.M, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  TW(!1)
+                  lR(!1)
                 },
-                disabled: SW,
-                children: [(0, AW.jsx)(tW.c, {
+                disabled: XR,
+                children: [(0, eR.jsx)(VR.d, {
                   name: "xmark"
-                }), " ", xW("studio:approvalDeny")]
+                }), " ", wR("studio:approvalDeny")]
               })
-            }), null !== kW.manualOverride && (0, AW.jsx)(wW.f, {
-              tooltipInner: (0, AW.jsx)("div", {
-                children: xW("studio:approvalClearOverrideTooltip")
+            }), null !== UR.manualOverride && (0, eR.jsx)(fR.h, {
+              tooltipInner: (0, eR.jsx)("div", {
+                children: wR("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, AW.jsxs)(EW.f, {
+              children: (0, eR.jsxs)(tR.g, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  TW(null)
+                  lR(null)
                 },
-                disabled: SW,
-                children: [(0, AW.jsx)(tW.c, {
+                disabled: XR,
+                children: [(0, eR.jsx)(VR.d, {
                   name: "arrows-rotate"
-                }), " ", xW("studio:approvalClearOverride")]
+                }), " ", wR("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1484,14 +1484,14 @@ export const modules = {
       })
     }
   },
-  7482: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      h: () => PW
+  7615: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      f: () => ZR
     });
-    var mW = OW(344),
-      EW = OW(1172);
-    const NW = {
+    var yR = GR(377),
+      tR = GR(1270);
+    const uR = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1500,60 +1500,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function PW() {
+    function ZR() {
       const {
-        t: WW,
-        selectedLanguage: iW
-      } = (0, EW.B)();
+        t: RR,
+        selectedLanguage: JR
+      } = (0, tR.A)();
       return {
-        statusText: iW => WW(NW[iW]),
-        rowText: OW => {
-          const NW = (WW, OW) => (0, mW.$)((0, EW.k)(iW.code, WW), 0, OW),
-            PW = (iW, OW) => null === OW ? iW : WW("studio:approvalWithMinDays", {
-              value: iW,
-              days: OW
+        statusText: JR => RR(uR[JR]),
+        rowText: GR => {
+          const uR = (RR, GR) => (0, yR.Z)((0, tR.n)(JR.code, RR), 0, GR),
+            ZR = (JR, GR) => null === GR ? JR : RR("studio:approvalWithMinDays", {
+              value: JR,
+              days: GR
             });
-          switch (OW.kind) {
+          switch (GR.kind) {
             case "ownerAccountAge": {
-              const iW = OW.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const JR = GR.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: WW("studio:approvalAccountAgeLabel"),
-                value: PW(WW(iW, {
-                  age: NW(iW, OW.accountAgeMs)
-                }), OW.minAccountAgeDays)
+                label: RR("studio:approvalAccountAgeLabel"),
+                value: ZR(RR(JR, {
+                  age: uR(JR, GR.accountAgeMs)
+                }), GR.minAccountAgeDays)
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: WW("studio:approvalSinceUnbannedLabel"), value: PW(NW("studio:approvalSinceUnbannedLabel", OW.sinceMs), OW.minDays)
+                label: RR("studio:approvalSinceUnbannedLabel"), value: ZR(uR("studio:approvalSinceUnbannedLabel", GR.sinceMs), GR.minDays)
               };
             case "reportHold": {
               const {
-                detail: iW
-              } = OW;
-              if (null === iW) return {
-                label: WW("studio:approvalUnderInvestigation"),
+                detail: JR
+              } = GR;
+              if (null === JR) return {
+                label: RR("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const mW = iW.weightedReporters.toFixed(1),
-                EW = iW.threshold.toFixed(1),
-                PW = WW("studio:approvalReportHoldLabel", {
-                  hours: iW.windowHours
+              const yR = JR.weightedReporters.toFixed(1),
+                tR = JR.threshold.toFixed(1),
+                ZR = RR("studio:approvalReportHoldLabel", {
+                  hours: JR.windowHours
                 });
-              if (null === iW.heldUntil) return {
-                label: PW,
-                value: WW("studio:approvalReportHoldValue", {
-                  weightedReporters: mW,
-                  threshold: EW
+              if (null === JR.heldUntil) return {
+                label: ZR,
+                value: RR("studio:approvalReportHoldValue", {
+                  weightedReporters: yR,
+                  threshold: tR
                 })
               };
-              const LW = "studio:approvalReportHoldValueHeld";
+              const qR = "studio:approvalReportHoldValueHeld";
               return {
-                label: PW,
-                value: WW(LW, {
-                  weightedReporters: mW,
-                  threshold: EW,
-                  time: NW(LW, iW.heldUntil - Date.now())
+                label: ZR,
+                value: RR(qR, {
+                  weightedReporters: yR,
+                  threshold: tR,
+                  time: uR(qR, JR.heldUntil - Date.now())
                 })
               }
             }
@@ -1562,189 +1562,189 @@ export const modules = {
       }
     }
 
-    function LW(WW) {
-      return null === WW.manualOverride && WW.rows.some((WW => "reportHold" === WW.kind && !WW.passed))
+    function qR(RR) {
+      return null === RR.manualOverride && RR.rows.some((RR => "reportHold" === RR.kind && !RR.passed))
     }
   },
-  35272: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  35204: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(62),
-      EW = OW(4653);
+    var yR = GR(66),
+      tR = GR(4757);
 
-    function NW() {
-      const [WW, iW] = (0, mW.useState)(!1);
-      return (0, mW.useLayoutEffect)((() => {
-        let WW = !0;
-        return (0, EW.c)().then((() => {
-          WW && iW(!0)
+    function uR() {
+      const [RR, JR] = (0, yR.useState)(!1);
+      return (0, yR.useLayoutEffect)((() => {
+        let RR = !0;
+        return (0, tR.h)().then((() => {
+          RR && JR(!0)
         })), () => {
-          WW = !1
+          RR = !1
         }
-      }), []), WW
+      }), []), RR
     }
   },
-  10176: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => jW,
-      c: () => UW
+  10291: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => LR,
+      i: () => nR
     });
-    var mW = OW(154),
-      EW = OW(182),
-      NW = OW(1052),
-      PW = OW(1065),
-      LW = OW(1217),
-      cW = OW(2037),
-      wW = OW(3245),
-      tW = OW(1584),
-      ZW = OW(1422),
-      xW = OW(1111),
-      lW = OW(10181),
-      AW = OW(1605),
-      bW = OW(1638);
+    var yR = GR(163),
+      tR = GR(203),
+      uR = GR(1127),
+      ZR = GR(1141),
+      qR = GR(1317),
+      iR = GR(2134),
+      fR = GR(3357),
+      VR = GR(1647),
+      KR = GR(1493),
+      wR = GR(1201),
+      rR = GR(10298),
+      eR = GR(1663),
+      aR = GR(1695);
 
-    function jW(WW, iW) {
-      const OW = !0 === iW.debugResult.gameRefused,
-        NW = OW || iW.code === mW.k.REQUEST_TO_MATCHMAKING ? (0, lW.h)(iW.message) : null;
-      if (null !== NW) return KW(WW, WW((0, lW.n)(NW)), WW(lW.k[NW])), !0;
-      if (OW) return async function(WW) {
+    function LR(RR, JR) {
+      const GR = !0 === JR.debugResult.gameRefused,
+        uR = GR || JR.code === yR.j.REQUEST_TO_MATCHMAKING ? (0, rR.k)(JR.message) : null;
+      if (null !== uR) return CR(RR, RR((0, rR.p)(uR)), RR(rR.n[uR])), !0;
+      if (GR) return async function(RR) {
         const {
-          gameNameWithVariation: iW,
-          lobbyName: OW,
-          shownLobbyName: mW
-        } = cW.gameBridge.latest("connectedGame"), EW = "classic" === iW && (0, LW.M)(OW) ? mW : await (0, wW.i)(WW, iW, OW);
-        return "" !== EW ? WW("general:cantJoinGame", {
-          game: EW
-        }) : WW("general:cantJoinThisGame")
-      }(WW).then((OW => {
-        KW(WW, OW, iW.message)
+          gameNameWithVariation: JR,
+          lobbyName: GR,
+          shownLobbyName: yR
+        } = iR.gameBridge.latest("connectedGame"), tR = "classic" === JR && (0, qR.A)(GR) ? yR : await (0, fR.d)(RR, JR, GR);
+        return "" !== tR ? RR("general:cantJoinGame", {
+          game: tR
+        }) : RR("general:cantJoinThisGame")
+      }(RR).then((GR => {
+        CR(RR, GR, JR.message)
       })), !0;
       const {
-        joinFailure: PW
-      } = iW.debugResult, tW = "refused" === (null === PW || void 0 === PW ? void 0 : PW.at) ? PW.code : null;
-      return tW === EW.e.schematicNotPublished.code ? (async function(WW, iW) {
-        const OW = kW(),
-          mW = await MW(OW);
-        if (null === mW || mW.gamePublished) return void KW(WW, WW("general:cantJoinThisGame"), iW);
-        await sW(WW, "rocket-launch", WW("studio:gameNotPublishedTitle", {
-          game: mW.name
-        }), WW("studio:publishInStudio"), OW)
-      }(WW, iW.message), !0) : (tW === EW.e.schematicBanned.code || tW === EW.e.customGameTakenDown.code) && (MW(kW()).then((iW => {
-        UW(WW, iW)
+        joinFailure: ZR
+      } = JR.debugResult, VR = "refused" === (null === ZR || void 0 === ZR ? void 0 : ZR.at) ? ZR.code : null;
+      return VR === tR.e.schematicNotPublished.code ? (async function(RR, JR) {
+        const GR = UR(),
+          yR = await AR(GR);
+        if (null === yR || yR.gamePublished) return void CR(RR, RR("general:cantJoinThisGame"), JR);
+        await WR(RR, "rocket-launch", RR("studio:gameNotPublishedTitle", {
+          game: yR.name
+        }), RR("studio:publishInStudio"), GR)
+      }(RR, JR.message), !0) : (VR === tR.e.schematicBanned.code || VR === tR.e.customGameTakenDown.code) && (AR(UR()).then((JR => {
+        nR(RR, JR)
       })), !0)
     }
 
-    function UW(WW, iW) {
-      !0 !== (null === iW || void 0 === iW ? void 0 : iW.takenDown) ? KW(WW, WW("general:cantJoinThisGame"), EW.e.customGameTakenDown.text) : sW(WW, "lock", WW("studio:gameTakenDownTitle", {
-        game: iW.name
-      }), WW("studio:viewInStudio"), iW.schematicId)
+    function nR(RR, JR) {
+      !0 !== (null === JR || void 0 === JR ? void 0 : JR.takenDown) ? CR(RR, RR("general:cantJoinThisGame"), tR.e.customGameTakenDown.text) : WR(RR, "lock", RR("studio:gameTakenDownTitle", {
+        game: JR.name
+      }), RR("studio:viewInStudio"), JR.schematicId)
     }
 
-    function kW() {
-      return (0, NW.n)(cW.gameBridge.latest("connectedGame").gameNameWithVariation)
+    function UR() {
+      return (0, uR.s)(iR.gameBridge.latest("connectedGame").gameNameWithVariation)
     }
-    async function sW(WW, iW, OW, mW, EW) {
-      !0 === await ZW.NotificationProvider.showPromptPopup({
-        icon: iW,
-        title: OW,
-        confirmText: mW,
-        cancelText: WW("general:cancel")
-      }).getResult() && (0, AW.navigatePreserveSearch)((0, bW.v)((0, PW.d)(EW), "manage"))
+    async function WR(RR, JR, GR, yR, tR) {
+      !0 === await KR.NotificationProvider.showPromptPopup({
+        icon: JR,
+        title: GR,
+        confirmText: yR,
+        cancelText: RR("general:cancel")
+      }).getResult() && (0, eR.navigatePreserveSearch)((0, aR.p)((0, ZR.d)(tR), "manage"))
     }
-    async function MW(WW) {
+    async function AR(RR) {
       try {
-        return await tW.e.getGame(await xW.userContextManager.getCurrentUserContext(), WW, !0)
-      } catch (iW) {
-        return (0, tW.f)(iW) || console.error(`Failed to get game ${WW}`, iW), null
+        return await VR.c.getGame(await wR.userContextManager.getCurrentUserContext(), RR, !0)
+      } catch (JR) {
+        return (0, VR.g)(JR) || console.error(`Failed to get game ${RR}`, JR), null
       }
     }
 
-    function KW(WW, iW, OW) {
-      ZW.NotificationProvider.showPromptPopup({
+    function CR(RR, JR, GR) {
+      KR.NotificationProvider.showPromptPopup({
         icon: "lock",
-        title: iW,
-        subtitle: OW,
-        confirmText: WW("general:ok"),
+        title: JR,
+        subtitle: GR,
+        confirmText: RR("general:ok"),
         cancelText: ""
       })
     }
   },
-  10206: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW
+  10315: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR
     });
-    var mW = OW(1365),
-      EW = OW(1217),
-      NW = OW(643);
+    var yR = GR(1459),
+      tR = GR(1317),
+      uR = GR(679);
 
-    function PW(WW) {
-      return WW = function(WW, iW) {
-        var OW;
-        const mW = new URLSearchParams(iW),
-          EW = mW.get("lobby"),
-          NW = mW.get("vm"),
-          PW = null !== (OW = EW) && void 0 !== OW ? OW : WW.lobbyName,
-          LW = null !== NW && void 0 !== NW ? NW : WW.directJoinVmUrl;
-        if (PW === WW.lobbyName && LW === WW.directJoinVmUrl) return WW;
+    function ZR(RR) {
+      return RR = function(RR, JR) {
+        var GR;
+        const yR = new URLSearchParams(JR),
+          tR = yR.get("lobby"),
+          uR = yR.get("vm"),
+          ZR = null !== (GR = tR) && void 0 !== GR ? GR : RR.lobbyName,
+          qR = null !== uR && void 0 !== uR ? uR : RR.directJoinVmUrl;
+        if (ZR === RR.lobbyName && qR === RR.directJoinVmUrl) return RR;
         return {
-          ...WW,
-          lobbyName: PW,
-          directJoinVmUrl: LW
+          ...RR,
+          lobbyName: ZR,
+          directJoinVmUrl: qR
         }
-      }(WW, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), WW = function(WW) {
-        if ((0, NW.K)(WW.directJoinVmUrl)) return WW;
-        const iW = (0, EW.fb)(WW.directJoinVmUrl);
-        null === iW && (WW.directJoinVmUrl = void 0);
-        return WW
-      }(WW = function(WW) {
-        if ((0, NW.K)(WW.gameNameWithVariation)) return WW;
-        return WW.gameNameWithVariation = (0, mW.h)(WW.gameNameWithVariation), WW
-      }(WW))
+      }(RR, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), RR = function(RR) {
+        if ((0, uR.I)(RR.directJoinVmUrl)) return RR;
+        const JR = (0, tR.S)(RR.directJoinVmUrl);
+        null === JR && (RR.directJoinVmUrl = void 0);
+        return RR
+      }(RR = function(RR) {
+        if ((0, uR.I)(RR.gameNameWithVariation)) return RR;
+        return RR.gameNameWithVariation = (0, yR.j)(RR.gameNameWithVariation), RR
+      }(RR))
     }
   },
-  10181: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => PW,
-      h: () => LW,
-      k: () => wW,
-      n: () => cW
+  10298: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      h: () => ZR,
+      k: () => qR,
+      n: () => fR,
+      p: () => iR
     });
-    var mW = OW(182),
-      EW = OW(5318);
+    var yR = GR(203),
+      tR = GR(5425);
 
-    function NW(WW) {
-      return PW(WW) === mW.e.gameOrPluginOnPlayerAuthRejected.code
+    function uR(RR) {
+      return ZR(RR) === yR.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function PW(WW) {
-      return "object" === typeof WW && null !== WW ? WW.code : void 0
+    function ZR(RR) {
+      return "object" === typeof RR && null !== RR ? RR.code : void 0
     }
 
-    function LW(WW) {
-      var iW;
-      return null !== (iW = Object.keys(EW.d).find((iW => EW.d[iW] === WW))) && void 0 !== iW ? iW : null
+    function qR(RR) {
+      var JR;
+      return null !== (JR = Object.keys(tR.d).find((JR => tR.d[JR] === RR))) && void 0 !== JR ? JR : null
     }
 
-    function cW(WW) {
-      return "notWhitelisted" === WW ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function iR(RR) {
+      return "notWhitelisted" === RR ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const wW = {
+    const fR = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  37503: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      e: () => mW
+  37415: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      g: () => yR
     });
-    const mW = "skyblockSkills",
-      EW = "skills_test_gym"
+    const yR = "skyblockSkills",
+      tR = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

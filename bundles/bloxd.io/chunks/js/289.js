@@ -1,83 +1,83 @@
 export const id = 289;
 export const ids = [289];
 export const modules = {
-  41582: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => xW,
-      e: () => ZW,
-      f: () => cW,
-      g: () => lW,
-      j: () => wW,
-      k: () => LW,
-      l: () => tW
+  41586: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => wR,
+      c: () => KR,
+      e: () => iR,
+      f: () => rR,
+      h: () => fR,
+      k: () => qR,
+      l: () => VR
     });
-    var mW = OW(39911),
-      EW = OW(41586);
+    var yR = GR(39914),
+      tR = GR(41594);
 
-    function NW(WW, iW, OW, mW) {
-      switch (iW) {
+    function uR(RR, JR, GR, yR) {
+      switch (JR) {
         case 5120: {
-          let iW = WW.getInt8(OW);
-          return mW && (iW = Math.max(iW / 127, -1)), iW
+          let JR = RR.getInt8(GR);
+          return yR && (JR = Math.max(JR / 127, -1)), JR
         }
         case 5121: {
-          let iW = WW.getUint8(OW);
-          return mW && (iW /= 255), iW
+          let JR = RR.getUint8(GR);
+          return yR && (JR /= 255), JR
         }
         case 5122: {
-          let iW = WW.getInt16(OW, !0);
-          return mW && (iW = Math.max(iW / 32767, -1)), iW
+          let JR = RR.getInt16(GR, !0);
+          return yR && (JR = Math.max(JR / 32767, -1)), JR
         }
         case 5123: {
-          let iW = WW.getUint16(OW, !0);
-          return mW && (iW /= 65535), iW
+          let JR = RR.getUint16(GR, !0);
+          return yR && (JR /= 65535), JR
         }
         case 5131:
-          return (0, EW.d)(WW.getUint16(OW, !0));
+          return (0, tR.e)(RR.getUint16(GR, !0));
         case 5124:
-          return WW.getInt32(OW, !0);
+          return RR.getInt32(GR, !0);
         case 5125:
-          return WW.getUint32(OW, !0);
+          return RR.getUint32(GR, !0);
         case 5126:
-          return WW.getFloat32(OW, !0);
+          return RR.getFloat32(GR, !0);
         default:
-          throw new Error(`Invalid component type ${iW}`)
+          throw new Error(`Invalid component type ${JR}`)
       }
     }
 
-    function PW(WW, iW, OW, mW, NW) {
-      switch (iW) {
+    function ZR(RR, JR, GR, yR, uR) {
+      switch (JR) {
         case 5120:
-          mW && (NW = Math.round(127 * NW)), WW.setInt8(OW, NW);
+          yR && (uR = Math.round(127 * uR)), RR.setInt8(GR, uR);
           break;
         case 5121:
-          mW && (NW = Math.round(255 * NW)), WW.setUint8(OW, NW);
+          yR && (uR = Math.round(255 * uR)), RR.setUint8(GR, uR);
           break;
         case 5122:
-          mW && (NW = Math.round(32767 * NW)), WW.setInt16(OW, NW, !0);
+          yR && (uR = Math.round(32767 * uR)), RR.setInt16(GR, uR, !0);
           break;
         case 5123:
-          mW && (NW = Math.round(65535 * NW)), WW.setUint16(OW, NW, !0);
+          yR && (uR = Math.round(65535 * uR)), RR.setUint16(GR, uR, !0);
           break;
         case 5131:
-          WW.setUint16(OW, (0, EW.k)(NW), !0);
+          RR.setUint16(GR, (0, tR.i)(uR), !0);
           break;
         case 5124:
-          WW.setInt32(OW, NW, !0);
+          RR.setInt32(GR, uR, !0);
           break;
         case 5125:
-          WW.setUint32(OW, NW, !0);
+          RR.setUint32(GR, uR, !0);
           break;
         case 5126:
-          WW.setFloat32(OW, NW, !0);
+          RR.setFloat32(GR, uR, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${iW}`)
+          throw new Error(`Invalid component type ${JR}`)
       }
     }
 
-    function LW(WW) {
-      switch (WW) {
+    function qR(RR) {
+      switch (RR) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${WW}'`)
+          throw new Error(`Invalid type '${RR}'`)
       }
     }
 
-    function cW(WW, iW, OW, mW, EW, cW, wW, tW) {
-      const ZW = new Array(mW),
-        xW = new Array(mW);
-      if (WW instanceof Array) {
-        let EW = iW / 4;
-        const NW = OW / 4;
-        for (let iW = 0; iW < cW; iW += mW) {
-          for (let iW = 0; iW < mW; iW++) ZW[iW] = xW[iW] = WW[EW + iW];
-          tW(xW, iW);
-          for (let iW = 0; iW < mW; iW++) ZW[iW] !== xW[iW] && (WW[EW + iW] = xW[iW]);
-          EW += NW
+    function iR(RR, JR, GR, yR, tR, iR, fR, VR) {
+      const KR = new Array(yR),
+        wR = new Array(yR);
+      if (RR instanceof Array) {
+        let tR = JR / 4;
+        const uR = GR / 4;
+        for (let JR = 0; JR < iR; JR += yR) {
+          for (let JR = 0; JR < yR; JR++) KR[JR] = wR[JR] = RR[tR + JR];
+          VR(wR, JR);
+          for (let JR = 0; JR < yR; JR++) KR[JR] !== wR[JR] && (RR[tR + JR] = wR[JR]);
+          tR += uR
         }
       } else {
-        const lW = ArrayBuffer.isView(WW) ? new DataView(WW.buffer, WW.byteOffset, WW.byteLength) : new DataView(WW),
-          AW = LW(EW);
-        for (let WW = 0; WW < cW; WW += mW) {
-          for (let WW = 0, OW = iW; WW < mW; WW++, OW += AW) ZW[WW] = xW[WW] = NW(lW, EW, OW, wW);
-          tW(xW, WW);
-          for (let WW = 0, OW = iW; WW < mW; WW++, OW += AW) ZW[WW] !== xW[WW] && PW(lW, EW, OW, wW, xW[WW]);
-          iW += OW
+        const rR = ArrayBuffer.isView(RR) ? new DataView(RR.buffer, RR.byteOffset, RR.byteLength) : new DataView(RR),
+          eR = qR(tR);
+        for (let RR = 0; RR < iR; RR += yR) {
+          for (let RR = 0, GR = JR; RR < yR; RR++, GR += eR) KR[RR] = wR[RR] = uR(rR, tR, GR, fR);
+          VR(wR, RR);
+          for (let RR = 0, GR = JR; RR < yR; RR++, GR += eR) KR[RR] !== wR[RR] && ZR(rR, tR, GR, fR, wR[RR]);
+          JR += GR
         }
       }
     }
 
-    function wW(WW, iW, OW, EW, NW, PW, wW, tW) {
-      const ZW = iW * LW(OW),
-        xW = wW * iW;
-      if (5126 !== OW || NW !== ZW) {
-        const mW = new Float32Array(xW);
-        return cW(WW, EW, NW, iW, OW, xW, PW, ((WW, OW) => {
-          for (let EW = 0; EW < iW; EW++) mW[OW + EW] = WW[EW]
-        })), mW
+    function fR(RR, JR, GR, tR, uR, ZR, fR, VR) {
+      const KR = JR * qR(GR),
+        wR = fR * JR;
+      if (5126 !== GR || uR !== KR) {
+        const yR = new Float32Array(wR);
+        return iR(RR, tR, uR, JR, GR, wR, ZR, ((RR, GR) => {
+          for (let tR = 0; tR < JR; tR++) yR[GR + tR] = RR[tR]
+        })), yR
       }
-      if (!(WW instanceof Array || WW instanceof Float32Array) || 0 !== EW || WW.length !== xW) {
-        if (WW instanceof Array) {
-          const iW = EW / 4;
-          return WW.slice(iW, iW + xW)
+      if (!(RR instanceof Array || RR instanceof Float32Array) || 0 !== tR || RR.length !== wR) {
+        if (RR instanceof Array) {
+          const JR = tR / 4;
+          return RR.slice(JR, JR + wR)
         }
-        if (ArrayBuffer.isView(WW)) {
-          const iW = WW.byteOffset + EW;
-          return 0 !== (3 & iW) && (mW.b.Warn("Float array must be aligned to 4-bytes border"), tW = !0), tW ? new Float32Array(WW.buffer.slice(iW, iW + xW * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(WW.buffer, iW, xW)
+        if (ArrayBuffer.isView(RR)) {
+          const JR = RR.byteOffset + tR;
+          return 0 !== (3 & JR) && (yR.c.Warn("Float array must be aligned to 4-bytes border"), VR = !0), VR ? new Float32Array(RR.buffer.slice(JR, JR + wR * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(RR.buffer, JR, wR)
         }
-        return new Float32Array(WW, EW, xW)
+        return new Float32Array(RR, tR, wR)
       }
-      return tW ? WW.slice() : WW
+      return VR ? RR.slice() : RR
     }
 
-    function tW(WW, iW, OW, EW, NW, PW, wW) {
-      const tW = LW(OW),
-        ZW = function(WW) {
-          switch (WW) {
+    function VR(RR, JR, GR, tR, uR, ZR, fR) {
+      const VR = qR(GR),
+        KR = function(RR) {
+          switch (RR) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${WW}'`)
+              throw new Error(`Invalid component type '${RR}'`)
           }
-        }(OW),
-        xW = PW * iW;
-      if (Array.isArray(WW)) {
-        if (0 !== (3 & EW) || 0 !== (3 & NW)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const mW = EW / 4,
-          LW = NW / 4;
-        if (mW + (PW - 1) * LW + iW > WW.length) throw new Error("Last accessed index is out of bounds.");
-        if (LW < iW) throw new Error("Data stride cannot be smaller than the component size.");
-        if (LW !== iW) {
-          const mW = new ZW(xW);
-          return cW(WW, EW, NW, iW, OW, xW, !1, ((WW, OW) => {
-            for (let EW = 0; EW < iW; EW++) mW[OW + EW] = WW[EW]
-          })), mW
+        }(GR),
+        wR = ZR * JR;
+      if (Array.isArray(RR)) {
+        if (0 !== (3 & tR) || 0 !== (3 & uR)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const yR = tR / 4,
+          qR = uR / 4;
+        if (yR + (ZR - 1) * qR + JR > RR.length) throw new Error("Last accessed index is out of bounds.");
+        if (qR < JR) throw new Error("Data stride cannot be smaller than the component size.");
+        if (qR !== JR) {
+          const yR = new KR(wR);
+          return iR(RR, tR, uR, JR, GR, wR, !1, ((RR, GR) => {
+            for (let tR = 0; tR < JR; tR++) yR[GR + tR] = RR[tR]
+          })), yR
         }
-        return new ZW(WW.slice(mW, mW + xW))
+        return new KR(RR.slice(yR, yR + wR))
       }
-      let lW, AW = EW;
-      ArrayBuffer.isView(WW) ? (lW = WW.buffer, AW += WW.byteOffset) : lW = WW;
-      if (AW + (PW - 1) * NW + iW * tW > lW.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const bW = iW * tW;
-      if (NW < bW) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (NW !== bW) {
-        const WW = new ZW(xW),
-          OW = new Uint8Array(lW, AW),
-          mW = new Uint8Array(WW.buffer),
-          EW = iW * tW;
-        for (let iW = 0, LW = 0, cW = 0; iW < PW; iW++, LW += NW, cW += EW) mW.set(OW.subarray(LW, LW + EW), cW);
-        return WW
+      let rR, eR = tR;
+      ArrayBuffer.isView(RR) ? (rR = RR.buffer, eR += RR.byteOffset) : rR = RR;
+      if (eR + (ZR - 1) * uR + JR * VR > rR.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const aR = JR * VR;
+      if (uR < aR) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (uR !== aR) {
+        const RR = new KR(wR),
+          GR = new Uint8Array(rR, eR),
+          yR = new Uint8Array(RR.buffer),
+          tR = JR * VR;
+        for (let JR = 0, qR = 0, iR = 0; JR < ZR; JR++, qR += uR, iR += tR) yR.set(GR.subarray(qR, qR + tR), iR);
+        return RR
       }
-      return 1 !== tW && 0 !== (AW & tW - 1) && (mW.b.Warn("Array must be aligned to border of element size. Data will be copied."), wW = !0), wW ? new ZW(lW.slice(AW, AW + xW * tW)) : new ZW(lW, AW, xW)
+      return 1 !== VR && 0 !== (eR & VR - 1) && (yR.c.Warn("Array must be aligned to border of element size. Data will be copied."), fR = !0), fR ? new KR(rR.slice(eR, eR + wR * VR)) : new KR(rR, eR, wR)
     }
 
-    function ZW(WW, iW, OW, EW, NW, PW, wW, tW) {
-      const ZW = iW * LW(OW),
-        xW = wW * iW;
-      if (tW.length !== xW) throw new Error("Output length is not valid");
-      if (5126 === OW && NW === ZW)
-        if (WW instanceof Array) {
-          const iW = EW / 4;
-          tW.set(WW, iW)
-        } else if (ArrayBuffer.isView(WW)) {
-        const iW = WW.byteOffset + EW;
-        if (0 !== (3 & iW)) return mW.b.Warn("Float array must be aligned to 4-bytes border"), void tW.set(new Float32Array(WW.buffer.slice(iW, iW + xW * Float32Array.BYTES_PER_ELEMENT)));
-        const OW = new Float32Array(WW.buffer, iW, xW);
-        tW.set(OW)
+    function KR(RR, JR, GR, tR, uR, ZR, fR, VR) {
+      const KR = JR * qR(GR),
+        wR = fR * JR;
+      if (VR.length !== wR) throw new Error("Output length is not valid");
+      if (5126 === GR && uR === KR)
+        if (RR instanceof Array) {
+          const JR = tR / 4;
+          VR.set(RR, JR)
+        } else if (ArrayBuffer.isView(RR)) {
+        const JR = RR.byteOffset + tR;
+        if (0 !== (3 & JR)) return yR.c.Warn("Float array must be aligned to 4-bytes border"), void VR.set(new Float32Array(RR.buffer.slice(JR, JR + wR * Float32Array.BYTES_PER_ELEMENT)));
+        const GR = new Float32Array(RR.buffer, JR, wR);
+        VR.set(GR)
       } else {
-        const iW = new Float32Array(WW, EW, xW);
-        tW.set(iW)
-      } else cW(WW, EW, NW, iW, OW, xW, PW, ((WW, OW) => {
-        for (let mW = 0; mW < iW; mW++) tW[OW + mW] = WW[mW]
+        const JR = new Float32Array(RR, tR, wR);
+        VR.set(JR)
+      } else iR(RR, tR, uR, JR, GR, wR, ZR, ((RR, GR) => {
+        for (let yR = 0; yR < JR; yR++) VR[GR + yR] = RR[yR]
       }))
     }
 
-    function xW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(WW)) {
-        for (let EW = 0; EW < iW; EW++)
-          if (WW[OW + EW] - mW > 65535) return !0;
+    function wR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(RR)) {
+        for (let tR = 0; tR < JR; tR++)
+          if (RR[GR + tR] - yR > 65535) return !0;
         return !1
       }
-      return 4 === WW.BYTES_PER_ELEMENT
+      return 4 === RR.BYTES_PER_ELEMENT
     }
 
-    function lW(WW) {
-      const iW = WW.buffer;
-      if (iW instanceof ArrayBuffer) return WW;
-      const OW = new ArrayBuffer(WW.byteLength);
-      return new Uint8Array(OW).set(new Uint8Array(iW, WW.byteOffset, WW.byteLength)), OW
+    function rR(RR) {
+      const JR = RR.buffer;
+      if (JR instanceof ArrayBuffer) return RR;
+      const GR = new ArrayBuffer(RR.byteLength);
+      return new Uint8Array(GR).set(new Uint8Array(JR, RR.byteOffset, RR.byteLength)), GR
     }
   },
-  41418: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => yW,
-      c: () => SW,
-      i: () => YW,
-      e: () => oW,
-      j: () => dW
+  41410: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => BR,
+      h: () => XR,
+      m: () => MR,
+      j: () => xR,
+      q: () => NR
     });
-    class mW {
+    class yR {
       constructor() {
         this.children = []
       }
-      isValid(WW) {
+      isValid(RR) {
         return !0
       }
-      process(WW, iW, OW) {
-        let mW = "";
+      process(RR, JR, GR) {
+        let yR = "";
         if (this.line) {
-          let OW = this.line;
-          const EW = iW.processor;
-          if (EW) {
-            EW.lineProcessor && (OW = EW.lineProcessor(OW, iW.isFragment, iW.processingContext));
-            const mW = iW.processor?.attributeKeywordName ?? "attribute",
-              NW = iW.isFragment && iW.processor?.varyingFragmentKeywordName ? iW.processor?.varyingFragmentKeywordName : !iW.isFragment && iW.processor?.varyingVertexKeywordName ? iW.processor?.varyingVertexKeywordName : "varying";
-            if (!iW.isFragment && EW.attributeProcessor && this.line.startsWith(mW)) OW = EW.attributeProcessor(this.line, WW, iW.processingContext);
-            else if (EW.varyingProcessor && (EW.varyingCheck?.(this.line, iW.isFragment) || !EW.varyingCheck && this.line.startsWith(NW))) OW = EW.varyingProcessor(this.line, iW.isFragment, WW, iW.processingContext);
-            else if (EW.uniformProcessor && EW.uniformRegexp && EW.uniformRegexp.test(this.line)) iW.lookForClosingBracketForUniformBuffer || (OW = EW.uniformProcessor(this.line, iW.isFragment, WW, iW.processingContext));
-            else if (EW.uniformBufferProcessor && EW.uniformBufferRegexp && EW.uniformBufferRegexp.test(this.line)) iW.lookForClosingBracketForUniformBuffer || (OW = EW.uniformBufferProcessor(this.line, iW.isFragment, iW.processingContext), iW.lookForClosingBracketForUniformBuffer = !0);
-            else if (EW.textureProcessor && EW.textureRegexp && EW.textureRegexp.test(this.line)) OW = EW.textureProcessor(this.line, iW.isFragment, WW, iW.processingContext);
-            else if ((EW.uniformProcessor || EW.uniformBufferProcessor) && this.line.startsWith("uniform") && !iW.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? EW.uniformProcessor && (OW = EW.uniformProcessor(this.line, iW.isFragment, WW, iW.processingContext)) : EW.uniformBufferProcessor && (OW = EW.uniformBufferProcessor(this.line, iW.isFragment, iW.processingContext), iW.lookForClosingBracketForUniformBuffer = !0)
+          let GR = this.line;
+          const tR = JR.processor;
+          if (tR) {
+            tR.lineProcessor && (GR = tR.lineProcessor(GR, JR.isFragment, JR.processingContext));
+            const yR = JR.processor?.attributeKeywordName ?? "attribute",
+              uR = JR.isFragment && JR.processor?.varyingFragmentKeywordName ? JR.processor?.varyingFragmentKeywordName : !JR.isFragment && JR.processor?.varyingVertexKeywordName ? JR.processor?.varyingVertexKeywordName : "varying";
+            if (!JR.isFragment && tR.attributeProcessor && this.line.startsWith(yR)) GR = tR.attributeProcessor(this.line, RR, JR.processingContext);
+            else if (tR.varyingProcessor && (tR.varyingCheck?.(this.line, JR.isFragment) || !tR.varyingCheck && this.line.startsWith(uR))) GR = tR.varyingProcessor(this.line, JR.isFragment, RR, JR.processingContext);
+            else if (tR.uniformProcessor && tR.uniformRegexp && tR.uniformRegexp.test(this.line)) JR.lookForClosingBracketForUniformBuffer || (GR = tR.uniformProcessor(this.line, JR.isFragment, RR, JR.processingContext));
+            else if (tR.uniformBufferProcessor && tR.uniformBufferRegexp && tR.uniformBufferRegexp.test(this.line)) JR.lookForClosingBracketForUniformBuffer || (GR = tR.uniformBufferProcessor(this.line, JR.isFragment, JR.processingContext), JR.lookForClosingBracketForUniformBuffer = !0);
+            else if (tR.textureProcessor && tR.textureRegexp && tR.textureRegexp.test(this.line)) GR = tR.textureProcessor(this.line, JR.isFragment, RR, JR.processingContext);
+            else if ((tR.uniformProcessor || tR.uniformBufferProcessor) && this.line.startsWith("uniform") && !JR.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? tR.uniformProcessor && (GR = tR.uniformProcessor(this.line, JR.isFragment, RR, JR.processingContext)) : tR.uniformBufferProcessor && (GR = tR.uniformBufferProcessor(this.line, JR.isFragment, JR.processingContext), JR.lookForClosingBracketForUniformBuffer = !0)
             }
-            iW.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (iW.lookForClosingBracketForUniformBuffer = !1, EW.endOfUniformBufferProcessor && (OW = EW.endOfUniformBufferProcessor(this.line, iW.isFragment, iW.processingContext)))
+            JR.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (JR.lookForClosingBracketForUniformBuffer = !1, tR.endOfUniformBufferProcessor && (GR = tR.endOfUniformBufferProcessor(this.line, JR.isFragment, JR.processingContext)))
           }
-          mW += OW + "\n"
+          yR += GR + "\n"
         }
-        for (const EW of this.children) mW += EW.process(WW, iW, OW);
-        return this.additionalDefineKey && (WW[this.additionalDefineKey] = this.additionalDefineValue || "true", OW[this.additionalDefineKey] = WW[this.additionalDefineKey]), mW
+        for (const tR of this.children) yR += tR.process(RR, JR, GR);
+        return this.additionalDefineKey && (RR[this.additionalDefineKey] = this.additionalDefineValue || "true", GR[this.additionalDefineKey] = RR[this.additionalDefineKey]), yR
       }
     }
-    class EW {
+    class tR {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(WW) {
+      set lines(RR) {
         this._lines.length = 0;
-        for (const iW of WW) {
-          if (!iW || "\r" === iW) continue;
-          if ("#" === iW[0]) {
-            this._lines.push(iW);
+        for (const JR of RR) {
+          if (!JR || "\r" === JR) continue;
+          if ("#" === JR[0]) {
+            this._lines.push(JR);
             continue
           }
-          const WW = iW.trim();
-          if (!WW) continue;
-          if (WW.startsWith("//")) {
-            this._lines.push(iW);
+          const RR = JR.trim();
+          if (!RR) continue;
+          if (RR.startsWith("//")) {
+            this._lines.push(JR);
             continue
           }
-          const OW = WW.indexOf(";");
-          if (-1 === OW) this._lines.push(WW);
-          else if (OW === WW.length - 1) WW.length > 1 && this._lines.push(WW);
+          const GR = RR.indexOf(";");
+          if (-1 === GR) this._lines.push(RR);
+          else if (GR === RR.length - 1) RR.length > 1 && this._lines.push(RR);
           else {
-            const WW = iW.split(";");
-            for (let iW = 0; iW < WW.length; iW++) {
-              let OW = WW[iW];
-              OW && (OW = OW.trim(), OW && this._lines.push(OW + (iW !== WW.length - 1 ? ";" : "")))
+            const RR = JR.split(";");
+            for (let JR = 0; JR < RR.length; JR++) {
+              let GR = RR[JR];
+              GR && (GR = GR.trim(), GR && this._lines.push(GR + (JR !== RR.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class NW extends mW {
-      process(WW, iW, OW) {
-        for (let mW = 0; mW < this.children.length; mW++) {
-          const EW = this.children[mW];
-          if (EW.isValid(WW)) return EW.process(WW, iW, OW)
+    class uR extends yR {
+      process(RR, JR, GR) {
+        for (let yR = 0; yR < this.children.length; yR++) {
+          const tR = this.children[yR];
+          if (tR.isValid(RR)) return tR.process(RR, JR, GR)
         }
         return ""
       }
     }
-    class PW extends mW {
-      isValid(WW) {
-        return this.testExpression.isTrue(WW)
+    class ZR extends yR {
+      isValid(RR) {
+        return this.testExpression.isTrue(RR)
       }
     }
-    class LW {
-      isTrue(WW) {
+    class qR {
+      isTrue(RR) {
         return !0
       }
-      static postfixToInfix(WW) {
-        const iW = [];
-        for (const OW of WW)
-          if (void 0 === LW._OperatorPriority[OW]) iW.push(OW);
+      static postfixToInfix(RR) {
+        const JR = [];
+        for (const GR of RR)
+          if (void 0 === qR._OperatorPriority[GR]) JR.push(GR);
           else {
-            const WW = iW[iW.length - 1],
-              mW = iW[iW.length - 2];
-            iW.length -= 2, iW.push(`(${mW}${OW}${WW})`)
-          } return iW[iW.length - 1]
+            const RR = JR[JR.length - 1],
+              yR = JR[JR.length - 2];
+            JR.length -= 2, JR.push(`(${yR}${GR}${RR})`)
+          } return JR[JR.length - 1]
       }
-      static infixToPostfix(WW) {
-        const iW = LW._InfixToPostfixCache.get(WW);
-        if (iW) return iW.accessTime = Date.now(), iW.result;
-        if (!WW.includes("&&") && !WW.includes("||") && !WW.includes(")") && !WW.includes("(")) return [WW];
-        const OW = [];
-        let mW = -1;
-        const EW = () => {
-            tW = tW.trim(), "" !== tW && (OW.push(tW), tW = "")
+      static infixToPostfix(RR) {
+        const JR = qR._InfixToPostfixCache.get(RR);
+        if (JR) return JR.accessTime = Date.now(), JR.result;
+        if (!RR.includes("&&") && !RR.includes("||") && !RR.includes(")") && !RR.includes("(")) return [RR];
+        const GR = [];
+        let yR = -1;
+        const tR = () => {
+            VR = VR.trim(), "" !== VR && (GR.push(VR), VR = "")
           },
-          NW = WW => {
-            mW < LW._Stack.length - 1 && (LW._Stack[++mW] = WW)
+          uR = RR => {
+            yR < qR._Stack.length - 1 && (qR._Stack[++yR] = RR)
           },
-          PW = () => LW._Stack[mW],
-          cW = () => -1 === mW ? "!!INVALID EXPRESSION!!" : LW._Stack[mW--];
-        let wW = 0,
-          tW = "";
-        for (; wW < WW.length;) {
-          const iW = WW.charAt(wW),
-            ZW = wW < WW.length - 1 ? WW.substring(wW, 2 + wW) : "";
-          if ("(" === iW) tW = "", NW(iW);
-          else if (")" === iW) {
-            for (EW(); - 1 !== mW && "(" !== PW();) OW.push(cW());
-            cW()
-          } else if (LW._OperatorPriority[ZW] > 1) {
-            for (EW(); - 1 !== mW && LW._OperatorPriority[PW()] >= LW._OperatorPriority[ZW];) OW.push(cW());
-            NW(ZW), wW++
-          } else tW += iW;
-          wW++
+          ZR = () => qR._Stack[yR],
+          iR = () => -1 === yR ? "!!INVALID EXPRESSION!!" : qR._Stack[yR--];
+        let fR = 0,
+          VR = "";
+        for (; fR < RR.length;) {
+          const JR = RR.charAt(fR),
+            KR = fR < RR.length - 1 ? RR.substring(fR, 2 + fR) : "";
+          if ("(" === JR) VR = "", uR(JR);
+          else if (")" === JR) {
+            for (tR(); - 1 !== yR && "(" !== ZR();) GR.push(iR());
+            iR()
+          } else if (qR._OperatorPriority[KR] > 1) {
+            for (tR(); - 1 !== yR && qR._OperatorPriority[ZR()] >= qR._OperatorPriority[KR];) GR.push(iR());
+            uR(KR), fR++
+          } else VR += JR;
+          fR++
         }
-        for (EW(); - 1 !== mW;) "(" === PW() ? cW() : OW.push(cW());
-        return LW._InfixToPostfixCache.size >= LW.InfixToPostfixCacheLimitSize && LW.ClearCache(), LW._InfixToPostfixCache.set(WW, {
-          result: OW,
+        for (tR(); - 1 !== yR;) "(" === ZR() ? iR() : GR.push(iR());
+        return qR._InfixToPostfixCache.size >= qR.InfixToPostfixCacheLimitSize && qR.ClearCache(), qR._InfixToPostfixCache.set(RR, {
+          result: GR,
           accessTime: Date.now()
-        }), OW
+        }), GR
       }
       static ClearCache() {
-        const WW = Array.from(LW._InfixToPostfixCache.entries()).sort(((WW, iW) => WW[1].accessTime - iW[1].accessTime));
-        for (let iW = 0; iW < LW.InfixToPostfixCacheCleanupSize; iW++) LW._InfixToPostfixCache.delete(WW[iW][0])
+        const RR = Array.from(qR._InfixToPostfixCache.entries()).sort(((RR, JR) => RR[1].accessTime - JR[1].accessTime));
+        for (let JR = 0; JR < qR.InfixToPostfixCacheCleanupSize; JR++) qR._InfixToPostfixCache.delete(RR[JR][0])
       }
     }
-    LW.InfixToPostfixCacheLimitSize = 5e4, LW.InfixToPostfixCacheCleanupSize = 25e3, LW._InfixToPostfixCache = new Map, LW._OperatorPriority = {
+    qR.InfixToPostfixCacheLimitSize = 5e4, qR.InfixToPostfixCacheCleanupSize = 25e3, qR._InfixToPostfixCache = new Map, qR._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, LW._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class cW extends LW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = WW, this.not = iW
+    }, qR._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class iR extends qR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = RR, this.not = JR
       }
-      isTrue(WW) {
-        let iW = void 0 !== WW[this.define];
-        return this.not && (iW = !iW), iW
-      }
-    }
-    class wW extends LW {
-      isTrue(WW) {
-        return this.leftOperand.isTrue(WW) || this.rightOperand.isTrue(WW)
+      isTrue(RR) {
+        let JR = void 0 !== RR[this.define];
+        return this.not && (JR = !JR), JR
       }
     }
-    class tW extends LW {
-      isTrue(WW) {
-        return this.leftOperand.isTrue(WW) && this.rightOperand.isTrue(WW)
+    class fR extends qR {
+      isTrue(RR) {
+        return this.leftOperand.isTrue(RR) || this.rightOperand.isTrue(RR)
       }
     }
-    class ZW extends LW {
-      constructor(WW, iW, OW) {
-        super(), this.define = WW, this.operand = iW, this.testValue = OW
+    class VR extends qR {
+      isTrue(RR) {
+        return this.leftOperand.isTrue(RR) && this.rightOperand.isTrue(RR)
+      }
+    }
+    class KR extends qR {
+      constructor(RR, JR, GR) {
+        super(), this.define = RR, this.operand = JR, this.testValue = GR
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(WW) {
-        let iW = !1;
-        const OW = parseInt(void 0 != WW[this.define] ? WW[this.define] : this.define),
-          mW = parseInt(void 0 != WW[this.testValue] ? WW[this.testValue] : this.testValue);
-        if (isNaN(OW) || isNaN(mW)) return !1;
+      isTrue(RR) {
+        let JR = !1;
+        const GR = parseInt(void 0 != RR[this.define] ? RR[this.define] : this.define),
+          yR = parseInt(void 0 != RR[this.testValue] ? RR[this.testValue] : this.testValue);
+        if (isNaN(GR) || isNaN(yR)) return !1;
         switch (this.operand) {
           case ">":
-            iW = OW > mW;
+            JR = GR > yR;
             break;
           case "<":
-            iW = OW < mW;
+            JR = GR < yR;
             break;
           case "<=":
-            iW = OW <= mW;
+            JR = GR <= yR;
             break;
           case ">=":
-            iW = OW >= mW;
+            JR = GR >= yR;
             break;
           case "==":
-            iW = OW === mW;
+            JR = GR === yR;
             break;
           case "!=":
-            iW = OW !== mW
+            JR = GR !== yR
         }
-        return iW
+        return JR
       }
     }
-    var xW = OW(41415),
-      lW = OW(41412);
-    const AW = /defined\s*?\((.+?)\)/g,
-      bW = /defined\s*?\[(.+?)\]/g,
-      jW = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      UW = /__decl__/,
-      kW = /light\{X\}.(\w*)/g,
-      sW = /\{X\}/g,
-      MW = [],
-      KW = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var wR = GR(41407),
+      rR = GR(41399);
+    const eR = /defined\s*?\((.+?)\)/g,
+      aR = /defined\s*?\[(.+?)\]/g,
+      LR = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      nR = /__decl__/,
+      UR = /light\{X\}.(\w*)/g,
+      WR = /\{X\}/g,
+      AR = [],
+      CR = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function SW(WW) {
-      WW.processor && WW.processor.initializeShaders && WW.processor.initializeShaders(WW.processingContext)
+    function XR(RR) {
+      RR.processor && RR.processor.initializeShaders && RR.processor.initializeShaders(RR.processingContext)
     }
 
-    function YW(WW, iW, OW, mW) {
-      iW.processor?.preProcessShaderCode && (WW = iW.processor.preProcessShaderCode(WW, iW.isFragment)), oW(WW, iW, (WW => {
-        iW.processCodeAfterIncludes && (WW = iW.processCodeAfterIncludes(iW.isFragment ? "fragment" : "vertex", WW, iW.defines));
-        const EW = function(WW, iW, OW) {
-          let mW = function(WW, iW) {
-            if (iW.processor?.noPrecision) return WW;
-            const OW = iW.shouldUseHighPrecisionShader; - 1 === WW.indexOf("precision highp float") ? WW = OW ? "precision highp float;\n" + WW : "precision mediump float;\n" + WW : OW || (WW = WW.replace("precision highp float", "precision mediump float"));
-            return WW
-          }(WW, iW);
-          if (!iW.processor) return mW;
-          if (0 === iW.processor.shaderLanguage && -1 !== mW.indexOf("#version 3") && (mW = mW.replace("#version 300 es", ""), !iW.processor.parseGLES3)) return mW;
-          const EW = iW.defines,
-            NW = uW(iW, OW);
-          iW.processor.preProcessor && (mW = iW.processor.preProcessor(mW, EW, NW, iW.isFragment, iW.processingContext));
-          const PW = {};
-          mW = nW(mW, NW, iW, PW), iW.processor.postProcessor && (mW = iW.processor.postProcessor(mW, EW, iW.isFragment, iW.processingContext, OW ? {
-            drawBuffersExtensionDisabled: !OW.getCaps().drawBuffersExtension
-          } : {}, NW, PW));
-          OW?._features.needShaderCodeInlining && (mW = OW.inlineShaderCode(mW));
-          return mW
-        }(WW, iW, mW);
-        OW(EW, WW)
+    function MR(RR, JR, GR, yR) {
+      JR.processor?.preProcessShaderCode && (RR = JR.processor.preProcessShaderCode(RR, JR.isFragment)), xR(RR, JR, (RR => {
+        JR.processCodeAfterIncludes && (RR = JR.processCodeAfterIncludes(JR.isFragment ? "fragment" : "vertex", RR, JR.defines));
+        const tR = function(RR, JR, GR) {
+          let yR = function(RR, JR) {
+            if (JR.processor?.noPrecision) return RR;
+            const GR = JR.shouldUseHighPrecisionShader; - 1 === RR.indexOf("precision highp float") ? RR = GR ? "precision highp float;\n" + RR : "precision mediump float;\n" + RR : GR || (RR = RR.replace("precision highp float", "precision mediump float"));
+            return RR
+          }(RR, JR);
+          if (!JR.processor) return yR;
+          if (0 === JR.processor.shaderLanguage && -1 !== yR.indexOf("#version 3") && (yR = yR.replace("#version 300 es", ""), !JR.processor.parseGLES3)) return yR;
+          const tR = JR.defines,
+            uR = OR(JR, GR);
+          JR.processor.preProcessor && (yR = JR.processor.preProcessor(yR, tR, uR, JR.isFragment, JR.processingContext));
+          const ZR = {};
+          yR = vR(yR, uR, JR, ZR), JR.processor.postProcessor && (yR = JR.processor.postProcessor(yR, tR, JR.isFragment, JR.processingContext, GR ? {
+            drawBuffersExtensionDisabled: !GR.getCaps().drawBuffersExtension
+          } : {}, uR, ZR));
+          GR?._features.needShaderCodeInlining && (yR = GR.inlineShaderCode(yR));
+          return yR
+        }(RR, JR, yR);
+        GR(tR, RR)
       }))
     }
 
-    function yW(WW, iW, OW) {
-      return OW.processor && OW.processor.finalizeShaders ? OW.processor.finalizeShaders(WW, iW, OW.processingContext) : {
-        vertexCode: WW,
-        fragmentCode: iW
+    function BR(RR, JR, GR) {
+      return GR.processor && GR.processor.finalizeShaders ? GR.processor.finalizeShaders(RR, JR, GR.processingContext) : {
+        vertexCode: RR,
+        fragmentCode: JR
       }
     }
 
-    function TW(WW) {
-      const iW = /defined\((.+)\)/.exec(WW);
-      if (iW && iW.length) return new cW(iW[1].trim(), "!" === WW[0]);
-      const OW = ["==", "!=", ">=", "<=", "<", ">"];
-      let mW = "",
-        EW = 0;
-      for (mW of OW)
-        if (EW = WW.indexOf(mW), EW > -1) break;
-      if (-1 === EW) return new cW(WW);
-      const NW = WW.substring(0, EW).trim(),
-        PW = WW.substring(EW + mW.length).trim();
-      return new ZW(NW, mW, PW)
+    function lR(RR) {
+      const JR = /defined\((.+)\)/.exec(RR);
+      if (JR && JR.length) return new iR(JR[1].trim(), "!" === RR[0]);
+      const GR = ["==", "!=", ">=", "<=", "<", ">"];
+      let yR = "",
+        tR = 0;
+      for (yR of GR)
+        if (tR = RR.indexOf(yR), tR > -1) break;
+      if (-1 === tR) return new iR(RR);
+      const uR = RR.substring(0, tR).trim(),
+        ZR = RR.substring(tR + yR.length).trim();
+      return new KR(uR, yR, ZR)
     }
 
-    function JW(WW, iW) {
-      const OW = new PW,
-        mW = WW.substring(0, iW);
-      let EW = WW.substring(iW);
-      return EW = EW.substring(0, (EW.indexOf("//") + 1 || EW.length + 1) - 1).trim(), OW.testExpression = "#ifdef" === mW ? new cW(EW) : "#ifndef" === mW ? new cW(EW, !0) : function(WW) {
-        WW = WW.replace(AW, "defined[$1]");
-        const iW = LW.infixToPostfix(WW),
-          OW = [];
-        for (const EW of iW)
-          if ("||" !== EW && "&&" !== EW) OW.push(EW);
-          else if (OW.length >= 2) {
-          let WW = OW[OW.length - 1],
-            iW = OW[OW.length - 2];
-          OW.length -= 2;
-          const mW = "&&" == EW ? new tW : new wW;
-          "string" === typeof WW && (WW = WW.replace(bW, "defined($1)")), "string" === typeof iW && (iW = iW.replace(bW, "defined($1)")), mW.leftOperand = "string" === typeof iW ? TW(iW) : iW, mW.rightOperand = "string" === typeof WW ? TW(WW) : WW, OW.push(mW)
+    function pR(RR, JR) {
+      const GR = new ZR,
+        yR = RR.substring(0, JR);
+      let tR = RR.substring(JR);
+      return tR = tR.substring(0, (tR.indexOf("//") + 1 || tR.length + 1) - 1).trim(), GR.testExpression = "#ifdef" === yR ? new iR(tR) : "#ifndef" === yR ? new iR(tR, !0) : function(RR) {
+        RR = RR.replace(eR, "defined[$1]");
+        const JR = qR.infixToPostfix(RR),
+          GR = [];
+        for (const tR of JR)
+          if ("||" !== tR && "&&" !== tR) GR.push(tR);
+          else if (GR.length >= 2) {
+          let RR = GR[GR.length - 1],
+            JR = GR[GR.length - 2];
+          GR.length -= 2;
+          const yR = "&&" == tR ? new VR : new fR;
+          "string" === typeof RR && (RR = RR.replace(aR, "defined($1)")), "string" === typeof JR && (JR = JR.replace(aR, "defined($1)")), yR.leftOperand = "string" === typeof JR ? lR(JR) : JR, yR.rightOperand = "string" === typeof RR ? lR(RR) : RR, GR.push(yR)
         }
-        let mW = OW[OW.length - 1];
-        return "string" === typeof mW && (mW = mW.replace(bW, "defined($1)")), "string" === typeof mW ? TW(mW) : mW
-      }(EW), OW
+        let yR = GR[GR.length - 1];
+        return "string" === typeof yR && (yR = yR.replace(aR, "defined($1)")), "string" === typeof yR ? lR(yR) : yR
+      }(tR), GR
     }
 
-    function hW(WW, iW, OW, EW) {
-      let NW;
-      for (; HW(WW, OW, EW);) {
-        NW = WW.currentLine;
-        const PW = NW.substring(0, 5).toLowerCase();
-        if ("#else" === PW) {
-          const OW = new mW;
-          return iW.children.push(OW), void HW(WW, OW, EW)
+    function gR(RR, JR, GR, tR) {
+      let uR;
+      for (; bR(RR, GR, tR);) {
+        uR = RR.currentLine;
+        const ZR = uR.substring(0, 5).toLowerCase();
+        if ("#else" === ZR) {
+          const GR = new yR;
+          return JR.children.push(GR), void bR(RR, GR, tR)
         }
-        if ("#elif" === PW) {
-          const WW = JW(NW, 5);
-          iW.children.push(WW), OW = WW
+        if ("#elif" === ZR) {
+          const RR = pR(uR, 5);
+          JR.children.push(RR), GR = RR
         }
       }
     }
 
-    function HW(WW, iW, OW) {
-      for (; WW.canRead;) {
-        WW.lineIndex++;
-        const EW = WW.currentLine;
-        if (EW.indexOf("#") >= 0) {
-          const mW = KW.exec(EW);
-          if (mW && mW.length) {
-            switch (mW[0]) {
+    function bR(RR, JR, GR) {
+      for (; RR.canRead;) {
+        RR.lineIndex++;
+        const tR = RR.currentLine;
+        if (tR.indexOf("#") >= 0) {
+          const yR = CR.exec(tR);
+          if (yR && yR.length) {
+            switch (yR[0]) {
               case "#ifdef": {
-                const mW = new NW;
-                iW.children.push(mW);
-                const PW = JW(EW, 6);
-                mW.children.push(PW), hW(WW, mW, PW, OW);
+                const yR = new uR;
+                JR.children.push(yR);
+                const ZR = pR(tR, 6);
+                yR.children.push(ZR), gR(RR, yR, ZR, GR);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const mW = new NW;
-                iW.children.push(mW);
-                const PW = JW(EW, 7);
-                mW.children.push(PW), hW(WW, mW, PW, OW);
+                const yR = new uR;
+                JR.children.push(yR);
+                const ZR = pR(tR, 7);
+                yR.children.push(ZR), gR(RR, yR, ZR, GR);
                 break
               }
               case "#if": {
-                const mW = new NW,
-                  PW = JW(EW, 3);
-                iW.children.push(mW), mW.children.push(PW), hW(WW, mW, PW, OW);
+                const yR = new uR,
+                  ZR = pR(tR, 3);
+                JR.children.push(yR), yR.children.push(ZR), gR(RR, yR, ZR, GR);
                 break
               }
             }
             continue
           }
         }
-        const PW = new mW;
-        if (PW.line = EW, iW.children.push(PW), "#" === EW[0] && "d" === EW[1]) {
-          const WW = EW.replace(";", "").split(" ");
-          PW.additionalDefineKey = WW[1], 3 === WW.length && (PW.additionalDefineValue = WW[2])
+        const ZR = new yR;
+        if (ZR.line = tR, JR.children.push(ZR), "#" === tR[0] && "d" === tR[1]) {
+          const RR = tR.replace(";", "").split(" ");
+          ZR.additionalDefineKey = RR[1], 3 === RR.length && (ZR.additionalDefineValue = RR[2])
         }
       }
       return !1
     }
 
-    function nW(WW, iW, OW, NW) {
-      const PW = new mW,
-        LW = new EW;
-      return LW.lineIndex = -1, LW.lines = WW.split("\n"), HW(LW, PW, NW), PW.process(iW, OW, NW)
+    function vR(RR, JR, GR, uR) {
+      const ZR = new yR,
+        qR = new tR;
+      return qR.lineIndex = -1, qR.lines = RR.split("\n"), bR(qR, ZR, uR), ZR.process(JR, GR, uR)
     }
 
-    function uW(WW, iW) {
-      const OW = WW.defines,
-        mW = {};
-      for (const EW of OW) {
-        const WW = EW.replace("#define", "").replace(";", "").trim().split(" ");
-        mW[WW[0]] = WW.length > 1 ? WW[1] : ""
+    function OR(RR, JR) {
+      const GR = RR.defines,
+        yR = {};
+      for (const tR of GR) {
+        const RR = tR.replace("#define", "").replace(";", "").trim().split(" ");
+        yR[RR[0]] = RR.length > 1 ? RR[1] : ""
       }
-      return 0 === WW.processor?.shaderLanguage && (mW.GL_ES = "true"), mW.__VERSION__ = WW.version, mW[WW.platformName] = "true", (0, lW.k)(mW, iW?.isNDCHalfZRange, iW?.nmW, iW?.useExactSrgbConversions), mW
+      return 0 === RR.processor?.shaderLanguage && (yR.GL_ES = "true"), yR.__VERSION__ = RR.version, yR[RR.platformName] = "true", (0, rR.j)(yR, JR?.isNDCHalfZRange, JR?.LtR, JR?.useExactSrgbConversions), yR
     }
 
-    function oW(WW, iW, OW) {
-      let mW;
-      for (MW.length = 0; null !== (mW = jW.exec(WW));) MW.push(mW);
-      let EW = [WW],
-        NW = !1;
-      for (const LW of MW) {
-        let WW = LW[1];
-        if (-1 !== WW.indexOf("__decl__") && (WW = WW.replace(UW, ""), iW.supportsUniformBuffers && (WW = WW.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), WW += "Declaration"), !iW.includesShadersStore[WW]) {
-          const mW = iW.shadersRepository + "ShadersInclude/" + WW + ".fx";
-          return void dW.loadFile(mW, (mW => {
-            iW.includesShadersStore[WW] = mW, oW(EW.join(""), iW, OW)
+    function xR(RR, JR, GR) {
+      let yR;
+      for (AR.length = 0; null !== (yR = LR.exec(RR));) AR.push(yR);
+      let tR = [RR],
+        uR = !1;
+      for (const qR of AR) {
+        let RR = qR[1];
+        if (-1 !== RR.indexOf("__decl__") && (RR = RR.replace(nR, ""), JR.supportsUniformBuffers && (RR = RR.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), RR += "Declaration"), !JR.includesShadersStore[RR]) {
+          const yR = JR.shadersRepository + "ShadersInclude/" + RR + ".fx";
+          return void NR.loadFile(yR, (yR => {
+            JR.includesShadersStore[RR] = yR, xR(tR.join(""), JR, GR)
           }))
         } {
-          let OW = iW.includesShadersStore[WW];
-          if (LW[2]) {
-            const WW = LW[3].split(",");
-            for (let iW = 0; iW < WW.length; iW += 2) {
-              const mW = new RegExp(WW[iW], "g"),
-                EW = WW[iW + 1];
-              OW = OW.replace(mW, EW)
+          let GR = JR.includesShadersStore[RR];
+          if (qR[2]) {
+            const RR = qR[3].split(",");
+            for (let JR = 0; JR < RR.length; JR += 2) {
+              const yR = new RegExp(RR[JR], "g"),
+                tR = RR[JR + 1];
+              GR = GR.replace(yR, tR)
             }
           }
-          if (LW[4]) {
-            const WW = LW[5];
-            if (-1 !== WW.indexOf("..")) {
-              const mW = WW.split(".."),
-                EW = parseInt(mW[0]);
-              let NW = parseInt(mW[1]),
-                PW = OW.slice(0);
-              OW = "", isNaN(NW) && (NW = iW.indexParameters[mW[1]]);
-              for (let WW = EW; WW < NW; WW++) iW.supportsUniformBuffers || (PW = PW.replace(kW, ((WW, iW) => iW + "{X}"))), OW += PW.replace(sW, WW.toString()) + "\n"
-            } else iW.supportsUniformBuffers || (OW = OW.replace(kW, ((WW, iW) => iW + "{X}"))), OW = OW.replace(sW, WW)
+          if (qR[4]) {
+            const RR = qR[5];
+            if (-1 !== RR.indexOf("..")) {
+              const yR = RR.split(".."),
+                tR = parseInt(yR[0]);
+              let uR = parseInt(yR[1]),
+                ZR = GR.slice(0);
+              GR = "", isNaN(uR) && (uR = JR.indexParameters[yR[1]]);
+              for (let RR = tR; RR < uR; RR++) JR.supportsUniformBuffers || (ZR = ZR.replace(UR, ((RR, JR) => JR + "{X}"))), GR += ZR.replace(WR, RR.toString()) + "\n"
+            } else JR.supportsUniformBuffers || (GR = GR.replace(UR, ((RR, JR) => JR + "{X}"))), GR = GR.replace(WR, RR)
           }
-          const mW = [];
-          for (const WW of EW) {
-            const iW = WW.split(LW[0]);
-            for (let WW = 0; WW < iW.length - 1; WW++) mW.push(iW[WW]), mW.push(OW);
-            mW.push(iW[iW.length - 1])
+          const yR = [];
+          for (const RR of tR) {
+            const JR = RR.split(qR[0]);
+            for (let RR = 0; RR < JR.length - 1; RR++) yR.push(JR[RR]), yR.push(GR);
+            yR.push(JR[JR.length - 1])
           }
-          EW = mW, NW = NW || OW.indexOf("#include<") >= 0 || OW.indexOf("#include <") >= 0
+          tR = yR, uR = uR || GR.indexOf("#include<") >= 0 || GR.indexOf("#include <") >= 0
         }
       }
-      MW.length = 0;
-      const PW = EW.join("");
-      NW ? oW(PW.toString(), iW, OW) : OW(PW)
+      AR.length = 0;
+      const ZR = tR.join("");
+      uR ? xR(ZR.toString(), JR, GR) : GR(ZR)
     }
-    const dW = {
-      loadFile: (WW, iW, OW, mW, EW, NW) => {
-        throw (0, xW.o)("FileTools")
+    const NR = {
+      loadFile: (RR, JR, GR, yR, tR, uR) => {
+        throw (0, wR.j)("FileTools")
       }
     }
   },
-  41412: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      h: () => NW,
-      k: () => LW,
-      l: () => PW,
-      p: () => cW
+  41399: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      f: () => uR,
+      j: () => qR,
+      k: () => ZR,
+      m: () => iR
     });
-    var mW = OW(41415);
-    const EW = {};
+    var yR = GR(41407);
+    const tR = {};
 
-    function NW(WW, iW) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (iW ? iW + "\n" : "") + WW
+    function uR(RR, JR) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (JR ? JR + "\n" : "") + RR
     }
 
-    function PW(WW, iW, OW, NW, PW, LW, cW) {
-      const wW = cW || EW.loadFile;
-      if (!wW) throw (0, mW.o)("FileTools");
-      return wW(WW, iW, OW, NW, PW, LW)
+    function ZR(RR, JR, GR, uR, ZR, qR, iR) {
+      const fR = iR || tR.loadFile;
+      if (!fR) throw (0, yR.j)("FileTools");
+      return fR(RR, JR, GR, uR, ZR, qR)
     }
 
-    function LW(WW, iW, OW, mW) {
-      if (WW) return iW ? WW.IS_NDC_HALF_ZRANGE = "" : delete WW.IS_NDC_HALF_ZRANGE, OW ? WW.USE_REVERSE_DEPTHBUFFER = "" : delete WW.USE_REVERSE_DEPTHBUFFER, void(mW ? WW.USE_EXACT_SRGB_CONVERSIONS = "" : delete WW.USE_EXACT_SRGB_CONVERSIONS);
+    function qR(RR, JR, GR, yR) {
+      if (RR) return JR ? RR.IS_NDC_HALF_ZRANGE = "" : delete RR.IS_NDC_HALF_ZRANGE, GR ? RR.USE_REVERSE_DEPTHBUFFER = "" : delete RR.USE_REVERSE_DEPTHBUFFER, void(yR ? RR.USE_EXACT_SRGB_CONVERSIONS = "" : delete RR.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let WW = "";
-        return iW && (WW += "#define IS_NDC_HALF_ZRANGE"), OW && (WW && (WW += "\n"), WW += "#define USE_REVERSE_DEPTHBUFFER"), mW && (WW && (WW += "\n"), WW += "#define USE_EXACT_SRGB_CONVERSIONS"), WW
+        let RR = "";
+        return JR && (RR += "#define IS_NDC_HALF_ZRANGE"), GR && (RR && (RR += "\n"), RR += "#define USE_REVERSE_DEPTHBUFFER"), yR && (RR && (RR += "\n"), RR += "#define USE_EXACT_SRGB_CONVERSIONS"), RR
       }
     }
 
-    function cW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        mW = arguments.length > 3 ? arguments[3] : void 0;
-      switch (WW) {
+    function iR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        yR = arguments.length > 3 ? arguments[3] : void 0;
+      switch (RR) {
         case 3: {
-          const WW = new Int8Array(iW);
-          return mW && WW.set(new Int8Array(mW)), WW
+          const RR = new Int8Array(JR);
+          return yR && RR.set(new Int8Array(yR)), RR
         }
         case 0: {
-          const WW = new Uint8Array(iW);
-          return mW && WW.set(new Uint8Array(mW)), WW
+          const RR = new Uint8Array(JR);
+          return yR && RR.set(new Uint8Array(yR)), RR
         }
         case 4: {
-          const WW = "number" !== typeof iW ? new Int16Array(iW) : new Int16Array(OW ? iW / 2 : iW);
-          return mW && WW.set(new Int16Array(mW)), WW
+          const RR = "number" !== typeof JR ? new Int16Array(JR) : new Int16Array(GR ? JR / 2 : JR);
+          return yR && RR.set(new Int16Array(yR)), RR
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const WW = "number" !== typeof iW ? new Uint16Array(iW) : new Uint16Array(OW ? iW / 2 : iW);
-          return mW && WW.set(new Uint16Array(mW)), WW
+          const RR = "number" !== typeof JR ? new Uint16Array(JR) : new Uint16Array(GR ? JR / 2 : JR);
+          return yR && RR.set(new Uint16Array(yR)), RR
         }
         case 6: {
-          const WW = "number" !== typeof iW ? new Int32Array(iW) : new Int32Array(OW ? iW / 4 : iW);
-          return mW && WW.set(new Int32Array(mW)), WW
+          const RR = "number" !== typeof JR ? new Int32Array(JR) : new Int32Array(GR ? JR / 4 : JR);
+          return yR && RR.set(new Int32Array(yR)), RR
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const WW = "number" !== typeof iW ? new Uint32Array(iW) : new Uint32Array(OW ? iW / 4 : iW);
-          return mW && WW.set(new Uint32Array(mW)), WW
+          const RR = "number" !== typeof JR ? new Uint32Array(JR) : new Uint32Array(GR ? JR / 4 : JR);
+          return yR && RR.set(new Uint32Array(yR)), RR
         }
         case 1: {
-          const WW = "number" !== typeof iW ? new Float32Array(iW) : new Float32Array(OW ? iW / 4 : iW);
-          return mW && WW.set(new Float32Array(mW)), WW
+          const RR = "number" !== typeof JR ? new Float32Array(JR) : new Float32Array(GR ? JR / 4 : JR);
+          return yR && RR.set(new Float32Array(yR)), RR
         }
       }
-      const EW = new Uint8Array(iW);
-      return mW && EW.set(new Uint8Array(mW)), EW
+      const tR = new Uint8Array(JR);
+      return yR && tR.set(new Uint8Array(yR)), tR
     }
   },
-  41415: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => wW,
-      h: () => tW,
-      k: () => cW,
-      o: () => EW
+  41407: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => fR,
+      e: () => VR,
+      f: () => iR,
+      j: () => tR
     });
-    const mW = {};
+    const yR = {};
 
-    function EW(WW) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !mW[WW]) return mW[WW] = !0, `${WW} needs to be imported before as it contains a side-effect required by your code.`
+    function tR(RR) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !yR[RR]) return yR[RR] = !0, `${RR} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const NW = {};
-    let PW = !1,
-      LW = 0;
+    const uR = {};
+    let ZR = !1,
+      qR = 0;
 
-    function cW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const mW = function() {
-        if ((OW || PW) && 0 === LW) {
-          const OW = `${WW}.${iW}`;
-          NW[OW] || (NW[OW] = !0, console.warn(`[Babylon.js] ${OW}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function iR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const yR = function() {
+        if ((GR || ZR) && 0 === qR) {
+          const GR = `${RR}.${JR}`;
+          uR[GR] || (uR[GR] = !0, console.warn(`[Babylon.js] ${GR}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return mW.__isSideEffectStub = !0, mW
+      return yR.__isSideEffectStub = !0, yR
     }
 
-    function wW(WW) {
-      return !!WW && !WW.__isSideEffectStub
+    function fR(RR) {
+      return !!RR && !RR.__isSideEffectStub
     }
 
-    function tW(WW, iW) {
+    function VR(RR, JR) {
       return {
         get() {},
-        set(WW) {
-          Object.defineProperty(this, iW, {
-            value: WW,
+        set(RR) {
+          Object.defineProperty(this, JR, {
+            value: RR,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  41406: (WW, iW, OW) => {
-    function mW() {
+  41395: (RR, JR, GR) => {
+    function yR() {
       return "undefined" !== typeof window
     }
 
-    function EW() {
+    function tR() {
       return "undefined" !== typeof navigator
     }
 
-    function NW() {
+    function uR() {
       return "undefined" !== typeof document
     }
 
-    function PW(WW) {
-      let iW = "",
-        OW = WW.firstChild;
-      for (; OW;) 3 === OW.nodeType && (iW += OW.textContent), OW = OW.nextSibling;
-      return iW
+    function ZR(RR) {
+      let JR = "",
+        GR = RR.firstChild;
+      for (; GR;) 3 === GR.nodeType && (JR += GR.textContent), GR = GR.nextSibling;
+      return JR
     }
-    OW.d(iW, {
-      c: () => PW,
-      f: () => NW,
-      i: () => EW,
-      j: () => mW
+    GR.d(JR, {
+      d: () => ZR,
+      e: () => uR,
+      i: () => tR,
+      m: () => yR
     })
   },
-  41566: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW,
-      g: () => EW,
-      j: () => NW
+  41573: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR,
+      g: () => tR,
+      i: () => uR
     });
-    class mW extends Error {}
-    mW._setPrototypeOf = Object.setPrototypeOf || ((WW, iW) => (WW.__proto__ = iW, WW));
-    const EW = {
+    class yR extends Error {}
+    yR._setPrototypeOf = Object.setPrototypeOf || ((RR, JR) => (RR.__proto__ = JR, RR));
+    const tR = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class NW extends mW {
-      constructor(WW, iW, OW) {
-        super(WW), this.errorCode = iW, this.innerError = OW, this.name = "RuntimeError", mW._setPrototypeOf(this, NW.prototype)
+    class uR extends yR {
+      constructor(RR, JR, GR) {
+        super(RR), this.errorCode = JR, this.innerError = GR, this.name = "RuntimeError", yR._setPrototypeOf(this, uR.prototype)
       }
     }
   },
-  41558: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => uW,
-      f: () => sW,
-      i: () => JW,
-      l: () => HW,
-      o: () => yW,
-      s: () => SW,
-      v: () => YW,
-      z: () => gW,
-      D: () => TW,
-      H: () => MW
+  41564: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => OR,
+      e: () => WR,
+      h: () => pR,
+      l: () => bR,
+      m: () => BR,
+      q: () => XR,
+      t: () => MR,
+      u: () => oR,
+      y: () => lR,
+      A: () => AR
     });
-    var mW = OW(41564),
-      EW = OW(41406),
-      NW = OW(38276);
-    class PW {}
-    PW.FilesToLoad = {};
-    var LW = OW(41566),
-      cW = OW(41574),
-      wW = OW(38270),
-      tW = OW(41412),
-      ZW = OW(41418),
-      xW = OW(39911),
-      lW = OW(41420),
-      AW = OW(41582);
-    const bW = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class jW extends LW.j {
-      constructor(WW, iW) {
-        super(WW, LW.g.LoadFileError), this.name = "LoadFileError", LW.c._setPrototypeOf(this, jW.prototype), iW instanceof mW.c ? this.request = iW : this.file = iW
+    var yR = GR(41568),
+      tR = GR(41395),
+      uR = GR(38233);
+    class ZR {}
+    ZR.FilesToLoad = {};
+    var qR = GR(41573),
+      iR = GR(41581),
+      fR = GR(38224),
+      VR = GR(41399),
+      KR = GR(41410),
+      wR = GR(39914),
+      rR = GR(41415),
+      eR = GR(41586);
+    const aR = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class LR extends qR.i {
+      constructor(RR, JR) {
+        super(RR, qR.g.LoadFileError), this.name = "LoadFileError", qR.d._setPrototypeOf(this, LR.prototype), JR instanceof yR.c ? this.request = JR : this.file = JR
       }
     }
-    class UW extends LW.j {
-      constructor(WW, iW) {
-        super(WW, LW.g.RequestFileError), this.request = iW, this.name = "RequestFileError", LW.c._setPrototypeOf(this, UW.prototype)
+    class nR extends qR.i {
+      constructor(RR, JR) {
+        super(RR, qR.g.RequestFileError), this.request = JR, this.name = "RequestFileError", qR.d._setPrototypeOf(this, nR.prototype)
       }
     }
-    class kW extends LW.j {
-      constructor(WW, iW) {
-        super(WW, LW.g.ReadFileError), this.file = iW, this.name = "ReadFileError", LW.c._setPrototypeOf(this, kW.prototype)
+    class UR extends qR.i {
+      constructor(RR, JR) {
+        super(RR, qR.g.ReadFileError), this.file = JR, this.name = "ReadFileError", qR.d._setPrototypeOf(this, UR.prototype)
       }
     }
-    const sW = {
+    const WR = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (OW, mW, EW) => 0 !== mW.status || EW >= WW || -1 !== OW.indexOf("file:") ? -1 : Math.pow(2, EW) * iW
+            let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (GR, yR, tR) => 0 !== yR.status || tR >= RR || -1 !== GR.indexOf("file:") ? -1 : Math.pow(2, tR) * JR
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: WW => WW,
+        PreprocessUrl: RR => RR,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: WW => WW,
-        CleanUrl: WW => WW = WW.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: RR => RR,
+        CleanUrl: RR => RR = RR.replace(/#/gm, "%23")
       },
-      MW = (WW, iW) => {
-        if ((!WW || 0 !== WW.indexOf("data:")) && sW.CorsBehavior)
-          if ("string" === typeof sW.CorsBehavior || sW.CorsBehavior instanceof String) iW.crossOrigin = sW.CorsBehavior;
+      AR = (RR, JR) => {
+        if ((!RR || 0 !== RR.indexOf("data:")) && WR.CorsBehavior)
+          if ("string" === typeof WR.CorsBehavior || WR.CorsBehavior instanceof String) JR.crossOrigin = WR.CorsBehavior;
           else {
-            const OW = sW.CorsBehavior(WW);
-            OW && (iW.crossOrigin = OW)
+            const GR = WR.CorsBehavior(RR);
+            GR && (JR.crossOrigin = GR)
           }
       },
-      KW = {
+      CR = {
         getRequiredSize: null
       },
-      SW = function(WW, iW, OW, EW) {
-        let NW, LW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          tW = arguments.length > 5 ? arguments[5] : void 0,
-          ZW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : wW.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !ZW?._features.forceBitmapOverHTMLImageElement) return OW("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (ZW?._features.forceBitmapOverHTMLImageElement && "string" !== typeof WW && "undefined" !== typeof Blob) {
-          let mW;
-          if (WW instanceof Blob) mW = WW;
+      XR = function(RR, JR, GR, tR) {
+        let uR, qR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          VR = arguments.length > 5 ? arguments[5] : void 0,
+          KR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : fR.c.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !KR?._features.forceBitmapOverHTMLImageElement) return GR("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (KR?._features.forceBitmapOverHTMLImageElement && "string" !== typeof RR && "undefined" !== typeof Blob) {
+          let yR;
+          if (RR instanceof Blob) yR = RR;
           else {
-            const iW = WW instanceof ArrayBuffer ? WW : (0, AW.g)(WW);
-            mW = new Blob([iW], {
-              type: LW
+            const JR = RR instanceof ArrayBuffer ? RR : (0, eR.f)(RR);
+            yR = new Blob([JR], {
+              type: qR
             })
           }
-          return ZW.createImageBitmap(mW, {
+          return KR.createImageBitmap(yR, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...tW
-          }).then(iW).catch((iW => {
-            OW && OW("Error while trying to load image: " + WW, iW)
+            ...VR
+          }).then(JR).catch((JR => {
+            GR && GR("Error while trying to load image: " + RR, JR)
           })), null
         }
-        let xW = !1;
-        if (WW instanceof ArrayBuffer || ArrayBuffer.isView(WW))
+        let wR = !1;
+        if (RR instanceof ArrayBuffer || ArrayBuffer.isView(RR))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let iW;
-            iW = WW instanceof ArrayBuffer ? WW : (0, AW.g)(WW), NW = URL.createObjectURL(new Blob([iW], {
-              type: LW
-            })), xW = !0
-          } else NW = `data:${LW};base64,` + (0, cW.h)(WW);
-        else WW instanceof Blob ? (NW = URL.createObjectURL(WW), xW = !0) : (NW = sW.CleanUrl(WW), NW = sW.PreprocessUrl(NW));
-        const lW = iW => {
-          if (OW) {
-            const mW = NW || WW.toString();
-            OW(`Error while trying to load image: ${0===mW.indexOf("http")||mW.length<=128?mW:mW.slice(0,128)+"..."}`, iW)
+            let JR;
+            JR = RR instanceof ArrayBuffer ? RR : (0, eR.f)(RR), uR = URL.createObjectURL(new Blob([JR], {
+              type: qR
+            })), wR = !0
+          } else uR = `data:${qR};base64,` + (0, iR.g)(RR);
+        else RR instanceof Blob ? (uR = URL.createObjectURL(RR), wR = !0) : (uR = WR.CleanUrl(RR), uR = WR.PreprocessUrl(uR));
+        const rR = JR => {
+          if (GR) {
+            const yR = uR || RR.toString();
+            GR(`Error while trying to load image: ${0===yR.indexOf("http")||yR.length<=128?yR:yR.slice(0,128)+"..."}`, JR)
           }
         };
-        if (ZW?._features.forceBitmapOverHTMLImageElement) return yW(NW, (mW => {
-          ZW.createImageBitmap(new Blob([mW], {
-            type: LW
+        if (KR?._features.forceBitmapOverHTMLImageElement) return BR(uR, (yR => {
+          KR.createImageBitmap(new Blob([yR], {
+            type: qR
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...tW
-          }).then((WW => {
-            iW(WW), xW && URL.revokeObjectURL(NW)
-          })).catch((iW => {
-            OW && OW("Error while trying to load image: " + WW, iW)
+            ...VR
+          }).then((RR => {
+            JR(RR), wR && URL.revokeObjectURL(uR)
+          })).catch((JR => {
+            GR && GR("Error while trying to load image: " + RR, JR)
           }))
-        }), void 0, EW || void 0, !0, ((WW, iW) => {
-          lW(iW)
+        }), void 0, tR || void 0, !0, ((RR, JR) => {
+          rR(JR)
         })), null;
-        const bW = new Image;
-        if (KW.getRequiredSize) {
-          const iW = KW.getRequiredSize(WW);
-          iW.width && (bW.width = iW.width), iW.height && (bW.height = iW.height)
+        const aR = new Image;
+        if (CR.getRequiredSize) {
+          const JR = CR.getRequiredSize(RR);
+          JR.width && (aR.width = JR.width), JR.height && (aR.height = JR.height)
         }
-        MW(NW, bW);
-        const jW = [],
-          UW = () => {
-            for (const WW of jW) WW.target.removeEventListener(WW.name, WW.handler);
-            jW.length = 0
+        AR(uR, aR);
+        const LR = [],
+          nR = () => {
+            for (const RR of LR) RR.target.removeEventListener(RR.name, RR.handler);
+            LR.length = 0
           };
-        jW.push({
-          target: bW,
+        LR.push({
+          target: aR,
           name: "load",
           handler: () => {
-            UW(), iW(bW), xW && bW.src && URL.revokeObjectURL(bW.src)
+            nR(), JR(aR), wR && aR.src && URL.revokeObjectURL(aR.src)
           }
-        }), jW.push({
-          target: bW,
+        }), LR.push({
+          target: aR,
           name: "error",
-          handler: WW => {
-            UW(), lW(WW), xW && bW.src && URL.revokeObjectURL(bW.src)
+          handler: RR => {
+            nR(), rR(RR), wR && aR.src && URL.revokeObjectURL(aR.src)
           }
-        }), jW.push({
+        }), LR.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: WW => {
-            if (WW.blockedURI !== bW.src || "wZ" === WW.disposition) return;
-            UW();
-            const iW = new Error(`CSP violation of policy ${WW.effectiveDirective} ${WW.blockedURI}. Current policy is ${WW.originalPolicy}`);
-            wW.d.UseFallbackTexture = !1, lW(iW), xW && bW.src && URL.revokeObjectURL(bW.src), bW.src = ""
+          handler: RR => {
+            if (RR.blockedURI !== aR.src || "fK" === RR.disposition) return;
+            nR();
+            const JR = new Error(`CSP violation of policy ${RR.effectiveDirective} ${RR.blockedURI}. Current policy is ${RR.originalPolicy}`);
+            fR.c.UseFallbackTexture = !1, rR(JR), wR && aR.src && URL.revokeObjectURL(aR.src), aR.src = ""
           }
         }), (() => {
-          for (const WW of jW) WW.target.addEventListener(WW.name, WW.handler)
+          for (const RR of LR) RR.target.addEventListener(RR.name, RR.handler)
         })();
-        const kW = "blob:" === NW.substring(0, 5),
-          SW = "data:" === NW.substring(0, 5),
-          YW = () => {
-            kW || SW || !mW.c.IsCustomRequestAvailable ? bW.src = NW : yW(NW, ((WW, iW, OW) => {
-              const mW = new Blob([WW], {
-                  type: !LW && OW ? OW : LW
+        const UR = "blob:" === uR.substring(0, 5),
+          XR = "data:" === uR.substring(0, 5),
+          MR = () => {
+            UR || XR || !yR.c.IsCustomRequestAvailable ? aR.src = uR : BR(uR, ((RR, JR, GR) => {
+              const yR = new Blob([RR], {
+                  type: !qR && GR ? GR : qR
                 }),
-                EW = URL.createObjectURL(mW);
-              xW = !0, bW.src = EW
-            }), void 0, EW || void 0, !0, ((WW, iW) => {
-              lW(iW)
+                tR = URL.createObjectURL(yR);
+              wR = !0, aR.src = tR
+            }), void 0, tR || void 0, !0, ((RR, JR) => {
+              rR(JR)
             }))
           },
-          TW = () => {
-            EW && EW.loadImage(NW, bW)
+          lR = () => {
+            tR && tR.loadImage(uR, aR)
           };
-        if (!kW && !SW && EW && EW.enableTexturesOffline) EW.open(TW, YW);
+        if (!UR && !XR && tR && tR.enableTexturesOffline) tR.open(lR, MR);
         else {
-          if (-1 !== NW.indexOf("file:")) {
-            const WW = decodeURIComponent(NW.substring(5).toLowerCase());
-            if (PW.FilesToLoad[WW] && "undefined" !== typeof URL) {
+          if (-1 !== uR.indexOf("file:")) {
+            const RR = decodeURIComponent(uR.substring(5).toLowerCase());
+            if (ZR.FilesToLoad[RR] && "undefined" !== typeof URL) {
               try {
-                let iW;
+                let JR;
                 try {
-                  iW = URL.createObjectURL(PW.FilesToLoad[WW])
-                } catch (JW) {
-                  iW = URL.createObjectURL(PW.FilesToLoad[WW])
+                  JR = URL.createObjectURL(ZR.FilesToLoad[RR])
+                } catch (pR) {
+                  JR = URL.createObjectURL(ZR.FilesToLoad[RR])
                 }
-                bW.src = iW, xW = !0
-              } catch (hW) {
-                bW.src = ""
+                aR.src = JR, wR = !0
+              } catch (gR) {
+                aR.src = ""
               }
-              return bW
+              return aR
             }
           }
-          YW()
+          MR()
         }
-        return bW
+        return aR
       },
-      YW = (WW, iW, OW, mW, EW) => {
-        const PW = new FileReader,
-          LW = {
-            onCompleteObservable: new NW.e,
-            abort: () => PW.abort()
+      MR = (RR, JR, GR, yR, tR) => {
+        const ZR = new FileReader,
+          qR = {
+            onCompleteObservable: new uR.b,
+            abort: () => ZR.abort()
           };
-        return PW.onloadend = () => LW.onCompleteObservable.notifyObservers(LW), EW && (PW.onerror = () => {
-          EW(new kW(`Unable to read ${WW.name}`, WW))
-        }), PW.onload = WW => {
-          iW(WW.target.result)
-        }, OW && (PW.onprogress = OW), mW ? PW.readAsArrayBuffer(WW) : PW.readAsText(WW), LW
+        return ZR.onloadend = () => qR.onCompleteObservable.notifyObservers(qR), tR && (ZR.onerror = () => {
+          tR(new UR(`Unable to read ${RR.name}`, RR))
+        }), ZR.onload = RR => {
+          JR(RR.target.result)
+        }, GR && (ZR.onprogress = GR), yR ? ZR.readAsArrayBuffer(RR) : ZR.readAsText(RR), qR
       },
-      yW = (WW, iW, OW, mW, EW, cW, wW) => {
-        if (WW.name) return YW(WW, iW, OW, EW, cW ? WW => {
-          cW(void 0, WW)
+      BR = (RR, JR, GR, yR, tR, iR, fR) => {
+        if (RR.name) return MR(RR, JR, GR, tR, iR ? RR => {
+          iR(void 0, RR)
         } : void 0);
-        const tW = WW;
-        if (-1 !== tW.indexOf("file:")) {
-          let WW = decodeURIComponent(tW.substring(5).toLowerCase());
-          0 === WW.indexOf("./") && (WW = WW.substring(2));
-          const mW = PW.FilesToLoad[WW];
-          if (mW) return YW(mW, iW, OW, EW, cW ? WW => cW(void 0, new jW(WW.message, WW.file)) : void 0)
+        const VR = RR;
+        if (-1 !== VR.indexOf("file:")) {
+          let RR = decodeURIComponent(VR.substring(5).toLowerCase());
+          0 === RR.indexOf("./") && (RR = RR.substring(2));
+          const yR = ZR.FilesToLoad[RR];
+          if (yR) return MR(yR, JR, GR, tR, iR ? RR => iR(void 0, new LR(RR.message, RR.file)) : void 0)
         }
         const {
-          match: ZW,
-          type: AW
-        } = nW(tW);
-        if (ZW) {
-          const WW = {
-            onCompleteObservable: new NW.e,
+          match: KR,
+          type: eR
+        } = vR(VR);
+        if (KR) {
+          const RR = {
+            onCompleteObservable: new uR.b,
             abort: () => () => {}
           };
           try {
-            const WW = EW ? uW(tW) : oW(tW);
-            iW(WW, void 0, AW)
-          } catch (LW) {
-            cW ? cW(void 0, LW) : xW.b.Error(LW.message || "Failed to parse the Data URL")
+            const RR = tR ? OR(VR) : xR(VR);
+            JR(RR, void 0, eR)
+          } catch (qR) {
+            iR ? iR(void 0, qR) : wR.c.Error(qR.message || "Failed to parse the Data URL")
           }
-          return lW.d.SetImmediate((() => {
-            WW.onCompleteObservable.notifyObservers(WW)
-          })), WW
+          return rR.e.SetImmediate((() => {
+            RR.onCompleteObservable.notifyObservers(RR)
+          })), RR
         }
-        return TW(tW, ((WW, OW) => {
-          iW(WW, OW?.responseURL, OW?.getResponseHeader("content-type"))
-        }), OW, mW, EW, cW ? WW => {
-          cW(WW.request, new jW(WW.message, WW.request))
-        } : void 0, wW)
+        return lR(VR, ((RR, GR) => {
+          JR(RR, GR?.responseURL, GR?.getResponseHeader("content-type"))
+        }), GR, yR, tR, iR ? RR => {
+          iR(RR.request, new LR(RR.message, RR.request))
+        } : void 0, fR)
       },
-      TW = (WW, iW, OW, PW, LW, cW, tW) => {
-        null !== PW && (PW ?? (PW = wW.d.LastCreatedScene?.offlineProvider)), WW = sW.CleanUrl(WW), WW = sW.PreprocessUrl(WW);
-        const ZW = sW.BaseUrl + WW;
-        let lW = !1;
-        const AW = {
-            onCompleteObservable: new NW.e,
-            abort: () => lW = !0
+      lR = (RR, JR, GR, ZR, qR, iR, VR) => {
+        null !== ZR && (ZR ?? (ZR = fR.c.LastCreatedScene?.offlineProvider)), RR = WR.CleanUrl(RR), RR = WR.PreprocessUrl(RR);
+        const KR = WR.BaseUrl + RR;
+        let rR = !1;
+        const eR = {
+            onCompleteObservable: new uR.b,
+            abort: () => rR = !0
           },
-          bW = () => {
-            let WW, NW = new mW.c,
-              PW = null;
-            const wW = () => {
-              NW && (OW && NW.removeEventListener("progress", OW), WW && NW.removeEventListener("readystatechange", WW), NW.removeEventListener("loadend", bW))
+          aR = () => {
+            let RR, uR = new yR.c,
+              ZR = null;
+            const fR = () => {
+              uR && (GR && uR.removeEventListener("progress", GR), RR && uR.removeEventListener("readystatechange", RR), uR.removeEventListener("loadend", aR))
             };
-            let bW = () => {
-              wW(), AW.onCompleteObservable.notifyObservers(AW), AW.onCompleteObservable.clear(), OW = void 0, WW = null, bW = null, cW = void 0, tW = void 0, iW = void 0
+            let aR = () => {
+              fR(), eR.onCompleteObservable.notifyObservers(eR), eR.onCompleteObservable.clear(), GR = void 0, RR = null, aR = null, iR = void 0, VR = void 0, JR = void 0
             };
-            AW.abort = () => {
-              lW = !0, bW && bW(), NW && NW.readyState !== (XMLHttpRequest.DONE || 4) && NW.abort(), null !== PW && (clearTimeout(PW), PW = null), NW = null
+            eR.abort = () => {
+              rR = !0, aR && aR(), uR && uR.readyState !== (XMLHttpRequest.DONE || 4) && uR.abort(), null !== ZR && (clearTimeout(ZR), ZR = null), uR = null
             };
-            const jW = WW => {
-                const iW = WW.message || "Unknown error";
-                cW && NW ? cW(new UW(iW, NW)) : xW.b.Error(iW)
+            const LR = RR => {
+                const JR = RR.message || "Unknown error";
+                iR && uR ? iR(new nR(JR, uR)) : wR.c.Error(JR)
               },
-              kW = xW => {
-                if (NW) {
-                  if (NW.open("GET", ZW), tW) try {
-                    tW(NW)
-                  } catch (AW) {
-                    return void jW(AW)
+              UR = wR => {
+                if (uR) {
+                  if (uR.open("GET", KR), VR) try {
+                    VR(uR)
+                  } catch (eR) {
+                    return void LR(eR)
                   }
-                  LW && (NW.responseType = "arraybuffer"), OW && NW.addEventListener("progress", OW), bW && NW.addEventListener("loadend", bW), WW = () => {
-                    if (!lW && NW && NW.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (WW && NW.removeEventListener("readystatechange", WW), NW.status >= 200 && NW.status < 300 || 0 === NW.status && (!(0, EW.j)() || hW())) {
-                        const WW = LW ? NW.response : NW.responseText;
-                        if (null !== WW) {
+                  qR && (uR.responseType = "arraybuffer"), GR && uR.addEventListener("progress", GR), aR && uR.addEventListener("loadend", aR), RR = () => {
+                    if (!rR && uR && uR.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (RR && uR.removeEventListener("readystatechange", RR), uR.status >= 200 && uR.status < 300 || 0 === uR.status && (!(0, tR.m)() || gR())) {
+                        const RR = qR ? uR.response : uR.responseText;
+                        if (null !== RR) {
                           try {
-                            iW && iW(WW, NW)
-                          } catch (AW) {
-                            jW(AW)
+                            JR && JR(RR, uR)
+                          } catch (eR) {
+                            LR(eR)
                           }
                           return
                         }
                       }
-                      const OW = sW.DefaultRetryStrategy;
-                      if (OW) {
-                        const WW = OW(ZW, NW, xW);
-                        if (-1 !== WW) return wW(), NW = new mW.c, void(PW = setTimeout((() => kW(xW + 1)), WW))
+                      const GR = WR.DefaultRetryStrategy;
+                      if (GR) {
+                        const RR = GR(KR, uR, wR);
+                        if (-1 !== RR) return fR(), uR = new yR.c, void(ZR = setTimeout((() => UR(wR + 1)), RR))
                       }
-                      const tW = new UW("Error status: " + NW.status + " " + NW.statusText + " - Unable to load " + ZW, NW);
-                      cW && cW(tW)
+                      const VR = new nR("Error status: " + uR.status + " " + uR.statusText + " - Unable to load " + KR, uR);
+                      iR && iR(VR)
                     }
-                  }, NW.addEventListener("readystatechange", WW), NW.send()
+                  }, uR.addEventListener("readystatechange", RR), uR.send()
                 }
               };
-            kW(0)
+            UR(0)
           };
-        if (PW && PW.enableSceneOffline && !WW.startsWith("blob:")) {
-          const mW = WW => {
-              WW && WW.status > 400 ? cW && cW(WW) : bW()
+        if (ZR && ZR.enableSceneOffline && !RR.startsWith("blob:")) {
+          const yR = RR => {
+              RR && RR.status > 400 ? iR && iR(RR) : aR()
             },
-            EW = () => {
-              PW && PW.loadFile(sW.BaseUrl + WW, (WW => {
-                !lW && iW && iW(WW), AW.onCompleteObservable.notifyObservers(AW)
-              }), OW ? WW => {
-                !lW && OW && OW(WW)
-              } : void 0, mW, LW)
+            tR = () => {
+              ZR && ZR.loadFile(WR.BaseUrl + RR, (RR => {
+                !rR && JR && JR(RR), eR.onCompleteObservable.notifyObservers(eR)
+              }), GR ? RR => {
+                !rR && GR && GR(RR)
+              } : void 0, yR, qR)
             };
-          PW.open(EW, mW)
-        } else bW();
-        return AW
+          ZR.open(tR, yR)
+        } else aR();
+        return eR
       },
-      JW = WW => {
+      pR = RR => {
         const {
-          match: iW,
-          type: OW
-        } = nW(WW);
-        if (iW) return OW || void 0;
-        const mW = WW.lastIndexOf(".");
-        switch (WW.substring(mW + 1).toLowerCase()) {
+          match: JR,
+          type: GR
+        } = vR(RR);
+        if (JR) return GR || void 0;
+        const yR = RR.lastIndexOf(".");
+        switch (RR.substring(yR + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "uH":
+          case "dD":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      hW = () => "undefined" !== typeof location && "file:" === location.protocol,
-      HW = WW => bW.test(WW),
-      nW = WW => {
-        const iW = bW.exec(WW);
-        if (null === iW || 0 === iW.length) return {
+      gR = () => "undefined" !== typeof location && "file:" === location.protocol,
+      bR = RR => aR.test(RR),
+      vR = RR => {
+        const JR = aR.exec(RR);
+        if (null === JR || 0 === JR.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: iW[0].replace("data:", "").replace(";base64,", "")
+          type: JR[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function uW(WW) {
-      return (0, cW.d)(WW.split(",")[1])
+    function OR(RR) {
+      return (0, iR.c)(RR.split(",")[1])
     }
-    const oW = WW => (0, cW.f)(WW.split(",")[1]);
-    let dW;
-    const eW = (WW, iW, OW, mW, EW, NW, PW, LW, cW, wW) => {
-      dW = {
-        DecodeBase64UrlToBinary: WW,
-        DecodeBase64UrlToString: iW,
-        DefaultRetryStrategy: OW.DefaultRetryStrategy,
-        BaseUrl: OW.BaseUrl,
-        CorsBehavior: OW.CorsBehavior,
-        PreprocessUrl: OW.PreprocessUrl,
-        IsBase64DataUrl: mW,
-        IsFileURL: EW,
-        LoadFile: NW,
-        LoadImage: PW,
-        ReadFile: LW,
-        RequestFile: cW,
-        SetCorsBehavior: wW
-      }, Object.defineProperty(dW, "DefaultRetryStrategy", {
+    const xR = RR => (0, iR.f)(RR.split(",")[1]);
+    let NR;
+    const DR = (RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR) => {
+      NR = {
+        DecodeBase64UrlToBinary: RR,
+        DecodeBase64UrlToString: JR,
+        DefaultRetryStrategy: GR.DefaultRetryStrategy,
+        BaseUrl: GR.BaseUrl,
+        CorsBehavior: GR.CorsBehavior,
+        PreprocessUrl: GR.PreprocessUrl,
+        IsBase64DataUrl: yR,
+        IsFileURL: tR,
+        LoadFile: uR,
+        LoadImage: ZR,
+        ReadFile: qR,
+        RequestFile: iR,
+        SetCorsBehavior: fR
+      }, Object.defineProperty(NR, "DefaultRetryStrategy", {
         get: function() {
-          return OW.DefaultRetryStrategy
+          return GR.DefaultRetryStrategy
         },
-        set: function(WW) {
-          OW.DefaultRetryStrategy = WW
+        set: function(RR) {
+          GR.DefaultRetryStrategy = RR
         }
-      }), Object.defineProperty(dW, "BaseUrl", {
+      }), Object.defineProperty(NR, "BaseUrl", {
         get: function() {
-          return OW.BaseUrl
+          return GR.BaseUrl
         },
-        set: function(WW) {
-          OW.BaseUrl = WW
+        set: function(RR) {
+          GR.BaseUrl = RR
         }
-      }), Object.defineProperty(dW, "PreprocessUrl", {
+      }), Object.defineProperty(NR, "PreprocessUrl", {
         get: function() {
-          return OW.PreprocessUrl
+          return GR.PreprocessUrl
         },
-        set: function(WW) {
-          OW.PreprocessUrl = WW
+        set: function(RR) {
+          GR.PreprocessUrl = RR
         }
-      }), Object.defineProperty(dW, "CorsBehavior", {
+      }), Object.defineProperty(NR, "CorsBehavior", {
         get: function() {
-          return OW.CorsBehavior
+          return GR.CorsBehavior
         },
-        set: function(WW) {
-          OW.CorsBehavior = WW
+        set: function(RR) {
+          GR.CorsBehavior = RR
         }
       })
     };
-    let vW = !1;
+    let HR = !1;
 
-    function gW() {
-      vW || (vW = !0, eW(uW, oW, sW, HW, hW, yW, SW, YW, TW, MW), tW.e.loadFile = yW, tW.e.loadImage = SW, ZW.j.loadFile = yW)
+    function oR() {
+      HR || (HR = !0, DR(OR, xR, WR, bR, gR, BR, XR, MR, lR, AR), VR.d.loadFile = BR, VR.d.loadImage = XR, KR.q.loadFile = BR)
     }
   },
-  41586: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      h: () => NW,
-      k: () => PW
+  41594: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      g: () => uR,
+      i: () => ZR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW() {
-      if (mW) return mW;
-      const WW = new ArrayBuffer(4),
-        iW = new Float32Array(WW),
-        OW = new Uint32Array(WW),
-        EW = new Uint32Array(512),
-        NW = new Uint32Array(512);
-      for (let mW = 0; mW < 256; ++mW) {
-        const WW = mW - 127;
-        WW < -24 ? (EW[mW] = 0, EW[256 | mW] = 32768, NW[mW] = 24, NW[256 | mW] = 24) : WW < -14 ? (EW[mW] = 1024 >> -WW - 14, EW[256 | mW] = 1024 >> -WW - 14 | 32768, NW[mW] = -WW - 1, NW[256 | mW] = -WW - 1) : WW <= 15 ? (EW[mW] = WW + 15 << 10, EW[256 | mW] = WW + 15 << 10 | 32768, NW[mW] = 13, NW[256 | mW] = 13) : WW < 128 ? (EW[mW] = 31744, EW[256 | mW] = 64512, NW[mW] = 24, NW[256 | mW] = 24) : (EW[mW] = 31744, EW[256 | mW] = 64512, NW[mW] = 13, NW[256 | mW] = 13)
+    function tR() {
+      if (yR) return yR;
+      const RR = new ArrayBuffer(4),
+        JR = new Float32Array(RR),
+        GR = new Uint32Array(RR),
+        tR = new Uint32Array(512),
+        uR = new Uint32Array(512);
+      for (let yR = 0; yR < 256; ++yR) {
+        const RR = yR - 127;
+        RR < -24 ? (tR[yR] = 0, tR[256 | yR] = 32768, uR[yR] = 24, uR[256 | yR] = 24) : RR < -14 ? (tR[yR] = 1024 >> -RR - 14, tR[256 | yR] = 1024 >> -RR - 14 | 32768, uR[yR] = -RR - 1, uR[256 | yR] = -RR - 1) : RR <= 15 ? (tR[yR] = RR + 15 << 10, tR[256 | yR] = RR + 15 << 10 | 32768, uR[yR] = 13, uR[256 | yR] = 13) : RR < 128 ? (tR[yR] = 31744, tR[256 | yR] = 64512, uR[yR] = 24, uR[256 | yR] = 24) : (tR[yR] = 31744, tR[256 | yR] = 64512, uR[yR] = 13, uR[256 | yR] = 13)
       }
-      const PW = new Uint32Array(2048),
-        LW = new Uint32Array(64),
-        cW = new Uint32Array(64);
-      for (let mW = 1; mW < 1024; ++mW) {
-        let WW = mW << 13,
-          iW = 0;
-        for (; 0 === (8388608 & WW);) WW <<= 1, iW -= 8388608;
-        WW &= -8388609, iW += 947912704, PW[mW] = WW | iW
+      const ZR = new Uint32Array(2048),
+        qR = new Uint32Array(64),
+        iR = new Uint32Array(64);
+      for (let yR = 1; yR < 1024; ++yR) {
+        let RR = yR << 13,
+          JR = 0;
+        for (; 0 === (8388608 & RR);) RR <<= 1, JR -= 8388608;
+        RR &= -8388609, JR += 947912704, ZR[yR] = RR | JR
       }
-      for (let mW = 1024; mW < 2048; ++mW) PW[mW] = 939524096 + (mW - 1024 << 13);
-      for (let mW = 1; mW < 31; ++mW) LW[mW] = mW << 23;
-      LW[31] = 1199570944, LW[32] = 2147483648;
-      for (let mW = 33; mW < 63; ++mW) LW[mW] = 2147483648 + (mW - 32 << 23);
-      LW[63] = 3347054592;
-      for (let mW = 1; mW < 64; ++mW) 32 !== mW && (cW[mW] = 1024);
-      return mW = {
-        floatView: iW,
-        uint32View: OW,
-        baseTable: EW,
-        shiftTable: NW,
-        mantissaTable: PW,
-        exponentTable: LW,
-        offsetTable: cW
-      }, mW
+      for (let yR = 1024; yR < 2048; ++yR) ZR[yR] = 939524096 + (yR - 1024 << 13);
+      for (let yR = 1; yR < 31; ++yR) qR[yR] = yR << 23;
+      qR[31] = 1199570944, qR[32] = 2147483648;
+      for (let yR = 33; yR < 63; ++yR) qR[yR] = 2147483648 + (yR - 32 << 23);
+      qR[63] = 3347054592;
+      for (let yR = 1; yR < 64; ++yR) 32 !== yR && (iR[yR] = 1024);
+      return yR = {
+        floatView: JR,
+        uint32View: GR,
+        baseTable: tR,
+        shiftTable: uR,
+        mantissaTable: ZR,
+        exponentTable: qR,
+        offsetTable: iR
+      }, yR
     }
-    const NW = 65504;
+    const uR = 65504;
 
-    function PW(WW) {
-      const iW = EW();
-      iW.floatView[0] = WW;
-      const OW = iW.uint32View[0],
-        mW = OW >> 23 & 511;
-      return iW.baseTable[mW] + ((8388607 & OW) >> iW.shiftTable[mW])
+    function ZR(RR) {
+      const JR = tR();
+      JR.floatView[0] = RR;
+      const GR = JR.uint32View[0],
+        yR = GR >> 23 & 511;
+      return JR.baseTable[yR] + ((8388607 & GR) >> JR.shiftTable[yR])
     }
 
-    function LW(WW) {
-      const iW = EW();
-      return iW.uint32View[0] = iW.mantissaTable[iW.offsetTable[WW >> 10] + (1023 & WW)] + iW.exponentTable[WW >> 10], iW.floatView[0]
+    function qR(RR) {
+      const JR = tR();
+      return JR.uint32View[0] = JR.mantissaTable[JR.offsetTable[RR >> 10] + (1023 & RR)] + JR.exponentTable[RR >> 10], JR.floatView[0]
     }
   },
-  41574: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      f: () => EW,
-      h: () => mW
+  41581: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      f: () => tR,
+      g: () => yR
     });
-    const mW = WW => {
-        const iW = ArrayBuffer.isView(WW) ? new Uint8Array(WW.buffer, WW.byteOffset, WW.byteLength) : new Uint8Array(WW);
-        return "function" === typeof iW.toBase64 ? iW.toBase64() : function(WW) {
-          const iW = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let OW, mW, EW, NW, PW, LW, cW, wW = "",
-            tW = 0;
-          for (; tW < WW.length;) OW = WW[tW++], mW = tW < WW.length ? WW[tW++] : Number.NaN, EW = tW < WW.length ? WW[tW++] : Number.NaN, NW = OW >> 2, PW = (3 & OW) << 4 | mW >> 4, LW = (15 & mW) << 2 | EW >> 6, cW = 63 & EW, isNaN(mW) ? LW = cW = 64 : isNaN(EW) && (cW = 64), wW += iW.charAt(NW) + iW.charAt(PW) + iW.charAt(LW) + iW.charAt(cW);
-          return wW
-        }(iW)
+    const yR = RR => {
+        const JR = ArrayBuffer.isView(RR) ? new Uint8Array(RR.buffer, RR.byteOffset, RR.byteLength) : new Uint8Array(RR);
+        return "function" === typeof JR.toBase64 ? JR.toBase64() : function(RR) {
+          const JR = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let GR, yR, tR, uR, ZR, qR, iR, fR = "",
+            VR = 0;
+          for (; VR < RR.length;) GR = RR[VR++], yR = VR < RR.length ? RR[VR++] : Number.NaN, tR = VR < RR.length ? RR[VR++] : Number.NaN, uR = GR >> 2, ZR = (3 & GR) << 4 | yR >> 4, qR = (15 & yR) << 2 | tR >> 6, iR = 63 & tR, isNaN(yR) ? qR = iR = 64 : isNaN(tR) && (iR = 64), fR += JR.charAt(uR) + JR.charAt(ZR) + JR.charAt(qR) + JR.charAt(iR);
+          return fR
+        }(JR)
       },
-      EW = WW => atob(WW),
-      NW = WW => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(WW).buffer : function(WW) {
-        const iW = EW(WW),
-          OW = iW.length,
-          mW = new Uint8Array(new ArrayBuffer(OW));
-        for (let EW = 0; EW < OW; EW++) mW[EW] = iW.charCodeAt(EW);
-        return mW.buffer
-      }(WW)
+      tR = RR => atob(RR),
+      uR = RR => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(RR).buffer : function(RR) {
+        const JR = tR(RR),
+          GR = JR.length,
+          yR = new Uint8Array(new ArrayBuffer(GR));
+        for (let tR = 0; tR < GR; tR++) yR[tR] = JR.charCodeAt(tR);
+        return yR.buffer
+      }(RR)
   },
-  41420: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      g: () => PW
+  41415: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      g: () => ZR
     });
-    let mW = [];
-    class EW {
-      static SetImmediate(WW) {
-        0 === mW.length && setTimeout((() => {
-          const WW = mW;
-          mW = [];
-          for (const iW of WW) iW()
-        }), 1), mW.push(WW)
+    let yR = [];
+    class tR {
+      static SetImmediate(RR) {
+        0 === yR.length && setTimeout((() => {
+          const RR = yR;
+          yR = [];
+          for (const JR of RR) JR()
+        }), 1), yR.push(RR)
       }
     }
 
-    function NW(WW, iW, OW) {
+    function uR(RR, JR, GR) {
       try {
-        if (WW()) return iW(), !0
-      } catch (mW) {
-        return OW?.(mW), !0
+        if (RR()) return JR(), !0
+      } catch (yR) {
+        return GR?.(yR), !0
       }
       return !1
     }
-    const PW = function(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        PW = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && NW(WW, iW, OW)) return null;
-      const LW = setInterval((() => {
-        NW(WW, iW, OW) ? clearInterval(LW) : (EW -= mW, EW < 0 && (clearInterval(LW), OW?.(new Error("Operation timed out after maximum retries. " + (PW || "")), !0)))
-      }), mW);
-      return () => clearInterval(LW)
+    const ZR = function(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        ZR = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && uR(RR, JR, GR)) return null;
+      const qR = setInterval((() => {
+        uR(RR, JR, GR) ? clearInterval(qR) : (tR -= yR, tR < 0 && (clearInterval(qR), GR?.(new Error("Operation timed out after maximum retries. " + (ZR || "")), !0)))
+      }), yR);
+      return () => clearInterval(qR)
     }
   },
-  41564: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  41568: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR
     });
-    class mW {
+    class yR {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(mW.CustomRequestHeaders).length > 0 || mW.CustomRequestModifiers.length > 0
+        return Object.keys(yR.CustomRequestHeaders).length > 0 || yR.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(WW) {
-        return WW = (WW = WW.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(RR) {
+        return RR = (RR = RR.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(WW) {
-        return mW.SkipRequestModificationForBabylonCDN && (WW.includes("preview.babylonjs.com") || WW.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(RR) {
+        return yR.SkipRequestModificationForBabylonCDN && (RR.includes("preview.babylonjs.com") || RR.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(WW) {
-        const iW = {
+      static _CollectCustomizations(RR) {
+        const JR = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (mW._ShouldSkipRequestModifications(WW)) return {
-          url: WW,
-          headers: iW
+        if (yR._ShouldSkipRequestModifications(RR)) return {
+          url: RR,
+          headers: JR
         };
-        for (const EW in mW.CustomRequestHeaders) {
-          const WW = mW.CustomRequestHeaders[EW];
-          WW && (iW[EW] = WW)
+        for (const tR in yR.CustomRequestHeaders) {
+          const RR = yR.CustomRequestHeaders[tR];
+          RR && (JR[tR] = RR)
         }
-        const OW = {
-          setRequestHeader: (WW, OW) => {
-            iW[WW] = OW
+        const GR = {
+          setRequestHeader: (RR, GR) => {
+            JR[RR] = GR
           }
         };
-        for (const EW of mW.CustomRequestModifiers) {
-          if (mW._ShouldSkipRequestModifications(WW)) break;
-          const iW = EW(OW, WW);
-          "string" === typeof iW && (WW = iW)
+        for (const tR of yR.CustomRequestModifiers) {
+          if (yR._ShouldSkipRequestModifications(RR)) break;
+          const JR = tR(GR, RR);
+          "string" === typeof JR && (RR = JR)
         }
         return {
-          url: WW,
-          headers: iW
+          url: RR,
+          headers: JR
         }
       }
-      static async FetchAsync(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const OW = iW.method ?? "GET";
+      static async FetchAsync(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const GR = JR.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: EW,
-            headers: NW
-          } = mW._CollectCustomizations(mW._CleanUrl(WW), iW.headers ?? {});
-          return await fetch(EW, {
-            method: OW,
-            headers: NW,
-            body: iW.body ?? void 0
+            url: tR,
+            headers: uR
+          } = yR._CollectCustomizations(yR._CleanUrl(RR), JR.headers ?? {});
+          return await fetch(tR, {
+            method: GR,
+            headers: uR,
+            body: JR.body ?? void 0
           })
         }
-        return await new Promise(((EW, NW) => {
-          const PW = new mW;
-          PW.responseType = "arraybuffer", PW.addEventListener("readystatechange", (() => {
-            if (4 === PW.readyState)
-              if (PW.status >= 200 && PW.status < 300) {
-                const WW = "undefined" !== typeof Headers ? new Headers : void 0,
-                  iW = PW.getResponseHeader("Content-Type");
-                iW && WW && WW.set("Content-Type", iW), "undefined" !== typeof Response ? EW(new Response(PW.response, {
-                  status: PW.status,
-                  statusText: PW.statusText,
-                  headers: WW
-                })) : EW({
+        return await new Promise(((tR, uR) => {
+          const ZR = new yR;
+          ZR.responseType = "arraybuffer", ZR.addEventListener("readystatechange", (() => {
+            if (4 === ZR.readyState)
+              if (ZR.status >= 200 && ZR.status < 300) {
+                const RR = "undefined" !== typeof Headers ? new Headers : void 0,
+                  JR = ZR.getResponseHeader("Content-Type");
+                JR && RR && RR.set("Content-Type", JR), "undefined" !== typeof Response ? tR(new Response(ZR.response, {
+                  status: ZR.status,
+                  statusText: ZR.statusText,
+                  headers: RR
+                })) : tR({
                   ok: !0,
-                  status: PW.status,
-                  statusText: PW.statusText,
+                  status: ZR.status,
+                  statusText: ZR.statusText,
                   headers: {
-                    get: WW => PW.getResponseHeader(WW)
+                    get: RR => ZR.getResponseHeader(RR)
                   },
-                  arrayBuffer: async () => await Promise.resolve(PW.response)
+                  arrayBuffer: async () => await Promise.resolve(ZR.response)
                 })
-              } else NW(new Error(`HTTP ${PW.status} loading '${PW.requestURL}': ${PW.statusText}`))
-          })), PW.open(OW, WW, iW.headers), PW.send(iW.body ?? null)
+              } else uR(new Error(`HTTP ${ZR.status} loading '${ZR.requestURL}': ${ZR.statusText}`))
+          })), ZR.open(GR, RR, JR.headers), ZR.send(JR.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(WW) {
-        this._xhr.onprogress = WW
+      set onprogress(RR) {
+        this._xhr.onprogress = RR
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(WW) {
-        this._xhr.responseType = WW
+      set responseType(RR) {
+        this._xhr.responseType = RR
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(WW) {
-        this._xhr.timeout = WW
+      set timeout(RR) {
+        this._xhr.timeout = RR
       }
-      addEventListener(WW, iW, OW) {
-        this._xhr.addEventListener(WW, iW, OW)
+      addEventListener(RR, JR, GR) {
+        this._xhr.addEventListener(RR, JR, GR)
       }
-      removeEventListener(WW, iW, OW) {
-        this._xhr.removeEventListener(WW, iW, OW)
+      removeEventListener(RR, JR, GR) {
+        this._xhr.removeEventListener(RR, JR, GR)
       }
       abort() {
         this._xhr.abort()
       }
-      send(WW) {
-        this._xhr.send(WW)
+      send(RR) {
+        this._xhr.send(RR)
       }
-      open(WW, iW, OW) {
+      open(RR, JR, GR) {
         const {
-          url: EW,
-          headers: NW
-        } = mW._CollectCustomizations(iW, OW);
-        this._requestURL = mW._CleanUrl(EW), this._xhr.open(WW, this._requestURL, !0);
-        for (const mW in NW) this._xhr.setRequestHeader(mW, NW[mW])
+          url: tR,
+          headers: uR
+        } = yR._CollectCustomizations(JR, GR);
+        this._requestURL = yR._CleanUrl(tR), this._xhr.open(RR, this._requestURL, !0);
+        for (const yR in uR) this._xhr.setRequestHeader(yR, uR[yR])
       }
-      setRequestHeader(WW, iW) {
-        this._xhr.setRequestHeader(WW, iW)
+      setRequestHeader(RR, JR) {
+        this._xhr.setRequestHeader(RR, JR)
       }
-      getResponseHeader(WW) {
-        return this._xhr.getResponseHeader(WW)
+      getResponseHeader(RR) {
+        return this._xhr.getResponseHeader(RR)
       }
     }
-    mW.CustomRequestHeaders = {}, mW.CustomRequestModifiers = new Array, mW.SkipRequestModificationForBabylonCDN = !0
+    yR.CustomRequestHeaders = {}, yR.CustomRequestModifiers = new Array, yR.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

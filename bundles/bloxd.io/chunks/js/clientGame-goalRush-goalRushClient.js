@@ -1,73 +1,73 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  40728: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => EW
+  40737: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => tR
     });
-    const mW = .4,
-      EW = function(WW, iW, OW, EW) {
-        let NW, {
-            localPlayerId: PW
-          } = EW,
-          LW = !1,
-          cW = null,
-          wW = null,
-          tW = null,
-          ZW = 1,
-          xW = null,
-          lW = 0,
-          AW = 0;
+    const yR = .4,
+      tR = function(RR, JR, GR, tR) {
+        let uR, {
+            localPlayerId: ZR
+          } = tR,
+          qR = !1,
+          iR = null,
+          fR = null,
+          VR = null,
+          KR = 1,
+          wR = null,
+          rR = 0,
+          eR = 0;
 
-        function bW() {
-          if (xW) {
-            const WW = xW;
-            WW.fade(WW.getVolume(), 0, 500), setTimeout((() => {
-              WW.stop()
-            }), 500), xW = null
+        function aR() {
+          if (wR) {
+            const RR = wR;
+            RR.fade(RR.getVolume(), 0, 500), setTimeout((() => {
+              RR.stop()
+            }), 500), wR = null
           }
-          AW = 0
+          eR = 0
         }
 
-        function jW(WW) {
-          var iW;
-          if (!cW || LW || null === wW) return void(xW && bW());
-          const OW = Date.now();
-          if (!xW || OW - lW > 54e3) {
-            if (xW) {
-              const WW = xW;
-              WW.fade(WW.getVolume(), 0, 2e3), setTimeout((() => {
-                WW.stop()
+        function LR(RR) {
+          var JR;
+          if (!iR || qR || null === fR) return void(wR && aR());
+          const GR = Date.now();
+          if (!wR || GR - rR > 54e3) {
+            if (wR) {
+              const RR = wR;
+              RR.fade(RR.getVolume(), 0, 2e3), setTimeout((() => {
+                RR.stop()
               }), 2e3)
             }
-            xW = NW.playSound(PW, "crowdAmbience", mW, 1), lW = OW, AW = mW
+            wR = uR.playSound(ZR, "crowdAmbience", yR, 1), rR = GR, eR = yR
           }
-          const EW = function() {
-              if (null === wW || null === tW || !cW) return 0;
-              const WW = NW.getPositionView(cW);
-              if (!WW) return 0;
-              const iW = Math.abs(WW[2] - wW),
-                OW = Math.abs(WW[2] - tW),
-                mW = Math.min(iW, OW);
-              return Math.max(0, 1 - mW / ZW)
+          const tR = function() {
+              if (null === fR || null === VR || !iR) return 0;
+              const RR = uR.getPositionView(iR);
+              if (!RR) return 0;
+              const JR = Math.abs(RR[2] - fR),
+                GR = Math.abs(RR[2] - VR),
+                yR = Math.min(JR, GR);
+              return Math.max(0, 1 - yR / KR)
             }(),
-            jW = WW / 1e3;
-          AW += (mW + .6 * EW - AW) * Math.min(1, 2 * jW), null === (iW = xW) || void 0 === iW || iW.setRelativeVolume(AW)
+            LR = RR / 1e3;
+          eR += (yR + .6 * tR - eR) * Math.min(1, 2 * LR), null === (JR = wR) || void 0 === JR || JR.setRelativeVolume(eR)
         }
         return {
-          onCreate: WW => {
-            NW = WW
+          onCreate: RR => {
+            uR = RR
           },
-          onReceivedMessageFromServer: (WW, iW) => {
-            var OW;
-            "ballState" === WW ? (cW = null !== (OW = iW.eId) && void 0 !== OW ? OW : null, cW || bW()) : "frozen" === WW ? LW = iW.frozen : "pitchInfo" === WW && (wW = iW.goalZRed, tW = iW.goalZBlue, ZW = Math.abs(tW - wW) / 2)
+          onReceivedMessageFromServer: (RR, JR) => {
+            var GR;
+            "ballState" === RR ? (iR = null !== (GR = JR.eId) && void 0 !== GR ? GR : null, iR || aR()) : "frozen" === RR ? qR = JR.frozen : "pitchInfo" === RR && (fR = JR.goalZRed, VR = JR.goalZBlue, KR = Math.abs(VR - fR) / 2)
           },
-          hZ: WW => {
-            jW(WW)
+          gK: RR => {
+            LR(RR)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

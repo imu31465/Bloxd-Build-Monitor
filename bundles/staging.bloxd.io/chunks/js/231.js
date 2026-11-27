@@ -1,192 +1,192 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  35307: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      g: () => NW
+  35236: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      g: () => uR
     });
-    var mW = OW(4431);
+    var yR = GR(4521);
 
-    function EW() {
+    function tR() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const WW = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const RR = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const iW = new BroadcastChannel(mW.m);
-        iW.postMessage({
-          stored: WW
-        }), iW.close()
+        const JR = new BroadcastChannel(yR.j);
+        JR.postMessage({
+          stored: RR
+        }), JR.close()
       } catch {
         return null
       }
-      return WW
+      return RR
     }
 
-    function NW(WW) {
-      const iW = "object" === typeof WW && null !== WW ? WW.stored : null;
-      return "string" === typeof iW ? iW : null
+    function uR(RR) {
+      const JR = "object" === typeof RR && null !== RR ? RR.stored : null;
+      return "string" === typeof JR ? JR : null
     }
   },
-  35303: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => PW,
-      e: () => EW,
-      h: () => NW
+  35230: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => ZR,
+      h: () => tR,
+      k: () => uR
     });
-    var mW = OW(4431);
-    async function EW(WW, iW, OW) {
-      let EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const NW = PW(await WW.getItem(mW.h, iW));
-      if (null === NW || EW()) return null;
-      const LW = await WW.getItem(mW.l, iW);
-      return EW() ? null : (await async function(WW) {
-        await Promise.all([WW.removeItem(mW.h), WW.removeItem(mW.l)])
-      }(WW).catch(OW), {
-        pack: NW,
-        source: "string" === typeof LW ? LW : null
+    var yR = GR(4521);
+    async function tR(RR, JR, GR) {
+      let tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const uR = ZR(await RR.getItem(yR.g, JR));
+      if (null === uR || tR()) return null;
+      const qR = await RR.getItem(yR.i, JR);
+      return tR() ? null : (await async function(RR) {
+        await Promise.all([RR.removeItem(yR.g), RR.removeItem(yR.i)])
+      }(RR).catch(GR), {
+        pack: uR,
+        source: "string" === typeof qR ? qR : null
       })
     }
 
-    function NW(WW) {
-      return (0, mW.t)() ? Promise.resolve(null) : EW(WW, !1, (WW => {
-        console.error("Error removing temporary texture pack: ", WW)
-      }), mW.t)
+    function uR(RR) {
+      return (0, yR.s)() ? Promise.resolve(null) : tR(RR, !1, (RR => {
+        console.error("Error removing temporary texture pack: ", RR)
+      }), yR.s)
     }
 
-    function PW(WW) {
-      if ("object" !== typeof WW || null === WW) return null;
-      const iW = WW.metaData;
-      return "object" !== typeof iW || null === iW || "string" !== typeof iW.id ? null : WW
+    function ZR(RR) {
+      if ("object" !== typeof RR || null === RR) return null;
+      const JR = RR.metaData;
+      return "object" !== typeof JR || null === JR || "string" !== typeof JR.id ? null : RR
     }
   },
-  54820: (WW, iW, OW) => {
-    function mW(WW) {
-      return null === WW.gameSource ? "player" : "customGame"
+  54671: (RR, JR, GR) => {
+    function yR(RR) {
+      return null === RR.gameSource ? "player" : "customGame"
     }
-    OW.d(iW, {
-      b: () => NW,
-      f: () => bW,
-      j: () => AW,
-      k: () => mW
+    GR.d(JR, {
+      c: () => uR,
+      g: () => aR,
+      j: () => eR,
+      m: () => yR
     });
-    const EW = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+    const tR = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
 
-    function NW(WW) {
-      return "" === WW || "string" === typeof WW && EW.test(WW)
+    function uR(RR) {
+      return "" === RR || "string" === typeof RR && tR.test(RR)
     }
 
-    function PW(WW) {
-      return "object" === typeof WW && null !== WW && ("earth" === WW.type || Object.entries(WW).every((WW => {
-        let [iW, OW] = WW;
-        return "type" === iW || NW(OW)
+    function ZR(RR) {
+      return "object" === typeof RR && null !== RR && ("earth" === RR.type || Object.entries(RR).every((RR => {
+        let [JR, GR] = RR;
+        return "type" === JR || uR(GR)
       })))
     }
-    const LW = /(?:src|image|image-set|cross-fade)\(/i,
-      cW = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
-      wW = /url\(/gi,
-      tW = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
-      ZW = new Set([...tW.map((WW => new URL(WW).origin)), "https://fonts.gstatic.com"]),
-      xW = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
+    const qR = /(?:src|image|image-set|cross-fade)\(/i,
+      iR = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      fR = /url\(/gi,
+      VR = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      KR = new Set([...VR.map((RR => new URL(RR).origin)), "https://fonts.gstatic.com"]),
+      wR = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
 
-    function lW(WW) {
-      var iW, OW;
-      if (WW.includes("\\") || LW.test(WW)) return !0;
-      const mW = [...WW.matchAll(cW)];
-      return mW.length !== (null !== (iW = null === (OW = WW.match(wW)) || void 0 === OW ? void 0 : OW.length) && void 0 !== iW ? iW : 0) || !mW.every((WW => {
-        var iW, OW, mW;
+    function rR(RR) {
+      var JR, GR;
+      if (RR.includes("\\") || qR.test(RR)) return !0;
+      const yR = [...RR.matchAll(iR)];
+      return yR.length !== (null !== (JR = null === (GR = RR.match(fR)) || void 0 === GR ? void 0 : GR.length) && void 0 !== JR ? JR : 0) || !yR.every((RR => {
+        var JR, GR, yR;
         let {
-          groups: EW
-        } = WW;
-        return function(WW) {
+          groups: tR
+        } = RR;
+        return function(RR) {
           try {
-            return tW.every((iW => {
-              const OW = new URL(WW, iW);
-              return "data:" === OW.protocol || ZW.has(OW.origin) || xW.has(OW.href)
+            return VR.every((JR => {
+              const GR = new URL(RR, JR);
+              return "data:" === GR.protocol || KR.has(GR.origin) || wR.has(GR.href)
             }))
           } catch {
             return !1
           }
-        }(null !== (iW = null !== (OW = null !== (mW = null === EW || void 0 === EW ? void 0 : EW.doubleQuoted) && void 0 !== mW ? mW : null === EW || void 0 === EW ? void 0 : EW.singleQuoted) && void 0 !== OW ? OW : null === EW || void 0 === EW ? void 0 : EW.unquoted) && void 0 !== iW ? iW : "")
+        }(null !== (JR = null !== (GR = null !== (yR = null === tR || void 0 === tR ? void 0 : tR.doubleQuoted) && void 0 !== yR ? yR : null === tR || void 0 === tR ? void 0 : tR.singleQuoted) && void 0 !== GR ? GR : null === tR || void 0 === tR ? void 0 : tR.unquoted) && void 0 !== JR ? JR : "")
       }))
     }
 
-    function AW(WW) {
-      var iW, OW, mW, EW, LW, cW, wW;
-      const tW = [...Object.values(null !== (iW = WW.textureOverrides) && void 0 !== iW ? iW : {}), ...Object.values(null !== (OW = WW.modelOverrides) && void 0 !== OW ? OW : {})],
-        ZW = [...Object.values(null !== (mW = null === (EW = WW.customCss) || void 0 === EW ? void 0 : EW.fontFaces) && void 0 !== mW ? mW : {}), ...Object.values(null !== (LW = null === (cW = WW.customCss) || void 0 === cW ? void 0 : cW.classStyles) && void 0 !== LW ? LW : {})].flatMap((WW => Object.values(null !== WW && void 0 !== WW ? WW : {})));
-      return !tW.every(NW) || !Object.values(null !== (wW = WW.skyBoxes) && void 0 !== wW ? wW : {}).every(PW) || ZW.some((WW => "string" === typeof WW && lW(WW)))
+    function eR(RR) {
+      var JR, GR, yR, tR, qR, iR, fR;
+      const VR = [...Object.values(null !== (JR = RR.textureOverrides) && void 0 !== JR ? JR : {}), ...Object.values(null !== (GR = RR.modelOverrides) && void 0 !== GR ? GR : {})],
+        KR = [...Object.values(null !== (yR = null === (tR = RR.customCss) || void 0 === tR ? void 0 : tR.fontFaces) && void 0 !== yR ? yR : {}), ...Object.values(null !== (qR = null === (iR = RR.customCss) || void 0 === iR ? void 0 : iR.classStyles) && void 0 !== qR ? qR : {})].flatMap((RR => Object.values(null !== RR && void 0 !== RR ? RR : {})));
+      return !VR.every(uR) || !Object.values(null !== (fR = RR.skyBoxes) && void 0 !== fR ? fR : {}).every(ZR) || KR.some((RR => "string" === typeof RR && rR(RR)))
     }
 
-    function bW(WW, iW) {
-      if (null === WW || "player" === iW || !AW(WW)) return WW;
-      const OW = {
-        ...WW
+    function aR(RR, JR) {
+      if (null === RR || "player" === JR || !eR(RR)) return RR;
+      const GR = {
+        ...RR
       };
-      return WW.textureOverrides && (OW.textureOverrides = UW(WW.textureOverrides, NW, "texture")), WW.modelOverrides && (OW.modelOverrides = UW(WW.modelOverrides, NW, "model")), WW.skyBoxes && (OW.skyBoxes = UW(WW.skyBoxes, PW, "sky")), WW.customCss && (OW.customCss = function(WW) {
-        const iW = WW => UW(WW, (WW => "string" === typeof WW && !lW(WW)), "CSS"),
+      return RR.textureOverrides && (GR.textureOverrides = nR(RR.textureOverrides, uR, "texture")), RR.modelOverrides && (GR.modelOverrides = nR(RR.modelOverrides, uR, "model")), RR.skyBoxes && (GR.skyBoxes = nR(RR.skyBoxes, ZR, "sky")), RR.customCss && (GR.customCss = function(RR) {
+        const JR = RR => nR(RR, (RR => "string" === typeof RR && !rR(RR)), "CSS"),
           {
-            fontFaces: OW,
-            classStyles: mW
-          } = jW(WW) ? WW : {},
-          EW = {};
-        for (const [NW, PW] of Object.entries(jW(mW) ? mW : {})) EW[NW] = iW(PW);
+            fontFaces: GR,
+            classStyles: yR
+          } = LR(RR) ? RR : {},
+          tR = {};
+        for (const [uR, ZR] of Object.entries(LR(yR) ? yR : {})) tR[uR] = JR(ZR);
         return {
-          fontFaces: (Array.isArray(OW) ? OW : []).map(iW),
-          classStyles: EW
+          fontFaces: (Array.isArray(GR) ? GR : []).map(JR),
+          classStyles: tR
         }
-      }(WW.customCss)), OW
+      }(RR.customCss)), GR
     }
 
-    function jW(WW) {
-      return "object" === typeof WW && null !== WW && !Array.isArray(WW)
+    function LR(RR) {
+      return "object" === typeof RR && null !== RR && !Array.isArray(RR)
     }
 
-    function UW(WW, iW, OW) {
-      const mW = Object.entries(jW(WW) ? WW : {}),
-        EW = mW.filter((WW => {
-          let [, OW] = WW;
-          return !iW(OW)
+    function nR(RR, JR, GR) {
+      const yR = Object.entries(LR(RR) ? RR : {}),
+        tR = yR.filter((RR => {
+          let [, GR] = RR;
+          return !JR(GR)
         }));
-      if (EW.length > 0) {
-        const WW = EW.map((WW => {
-          let [iW] = WW;
-          return iW
+      if (tR.length > 0) {
+        const RR = tR.map((RR => {
+          let [JR] = RR;
+          return JR
         }));
-        console.warn(`Ignoring a custom game texture pack's ${OW} files that name another site: ${WW.join(", ")}`)
+        console.warn(`Ignoring a custom game texture pack's ${GR} files that name another site: ${RR.join(", ")}`)
       }
-      return Object.fromEntries(mW.filter((WW => {
-        let [, OW] = WW;
-        return iW(OW)
+      return Object.fromEntries(yR.filter((RR => {
+        let [, GR] = RR;
+        return JR(GR)
       })))
     }
   },
-  54829: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW,
-      g: () => sW,
-      j: () => kW
+  54680: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => eR,
+      d: () => WR,
+      f: () => UR
     });
-    var mW = OW(1052),
-      EW = OW(2300),
-      NW = OW(4426),
-      PW = OW(4431),
-      LW = OW(35307),
-      cW = OW(35303),
-      wW = OW(54820),
-      tW = OW(42482),
-      ZW = OW(42468),
-      xW = OW(5984);
-    const lW = {
+    var yR = GR(1127),
+      tR = GR(2374),
+      uR = GR(4509),
+      ZR = GR(4521),
+      qR = GR(35236),
+      iR = GR(35230),
+      fR = GR(54671),
+      VR = GR(42526),
+      KR = GR(42509),
+      wR = GR(6103);
+    const rR = {
       pack: null,
       gameSource: null
     };
-    class AW {
-      constructor(WW) {
-        this.host = WW, this.ready = void 0, this.state = lW, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.JA = !1, (0, PW.n)(), this.ready = this.readStored()
+    class eR {
+      constructor(RR) {
+        this.host = RR, this.ready = void 0, this.state = rR, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.He = !1, (0, ZR.n)(), this.ready = this.readStored()
       }
-      readyWithin(WW) {
-        return Promise.race([this.ready, new Promise((iW => {
-          setTimeout(iW, WW)
+      readyWithin(RR) {
+        return Promise.race([this.ready, new Promise((JR => {
+          setTimeout(JR, RR)
         }))])
       }
       current() {
@@ -198,102 +198,102 @@ export const modules = {
           gameSource: null
         }
       }
-      onPlayerPackChange(WW) {
-        return this.ownListeners.add(WW), () => {
-          this.ownListeners.delete(WW)
+      onPlayerPackChange(RR) {
+        return this.ownListeners.add(RR), () => {
+          this.ownListeners.delete(RR)
         }
       }
-      isUsingCustomGameTexturePack(WW) {
-        return (0, ZW.f)(this.state, WW)
+      isUsingCustomGameTexturePack(RR) {
+        return (0, KR.h)(this.state, RR)
       }
-      setGamePackConfirm(WW) {
-        this.confirmGamePack = WW
+      setGamePackConfirm(RR) {
+        this.confirmGamePack = RR
       }
-      subscribe(WW) {
-        return this.listeners.set(WW, null), this.ready.then((() => {
-          this.deliver(WW)
+      subscribe(RR) {
+        return this.listeners.set(RR, null), this.ready.then((() => {
+          this.deliver(RR)
         })), () => {
-          this.listeners.delete(WW)
+          this.listeners.delete(RR)
         }
       }
-      async setPlayerPack(WW) {
-        const iW = jW(WW) ? null : WW;
-        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(iW), this.change({
-          pack: iW,
+      async setPlayerPack(RR) {
+        const JR = LR(RR) ? null : RR;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(JR), this.change({
+          pack: JR,
           gameSource: null
         }, !1);
-        const OW = await this.storePlayerPack(iW);
-        return OW && this.announce(), OW
+        const GR = await this.storePlayerPack(JR);
+        return GR && this.announce(), GR
       }
-      async packForGame(WW, iW, OW) {
-        await this.readyWithin(Math.max(0, (null !== OW && void 0 !== OW ? OW : performance.now() + tW.c) - performance.now()));
-        const EW = ++this.picks,
-          NW = (0, mW.i)(WW) ? (0, mW.n)(WW) : null;
-        if (null === NW) return void this.usePlayerPack();
-        let PW;
-        const LW = function(WW) {
-          let iW;
-          const OW = new Promise(((OW, mW) => {
-            iW = setTimeout((() => {
-              mW(new Error(`no answer in ${WW} ms`))
-            }), WW)
+      async packForGame(RR, JR, GR) {
+        await this.readyWithin(Math.max(0, (null !== GR && void 0 !== GR ? GR : performance.now() + VR.b) - performance.now()));
+        const tR = ++this.picks,
+          uR = (0, yR.n)(RR) ? (0, yR.s)(RR) : null;
+        if (null === uR) return void this.usePlayerPack();
+        let ZR;
+        const qR = function(RR) {
+          let JR;
+          const GR = new Promise(((GR, yR) => {
+            JR = setTimeout((() => {
+              yR(new Error(`no answer in ${RR} ms`))
+            }), RR)
           }));
-          return OW.catch((() => {})), {
-            passed: OW,
+          return GR.catch((() => {})), {
+            passed: GR,
             clear: () => {
-              clearTimeout(iW)
+              clearTimeout(JR)
             }
           }
         }(2e4);
         try {
-          const WW = await Promise.race([iW.packKey(NW), LW.passed]);
-          if (null !== WW && this.onGamePack && this.state.gameSource === WW) return;
-          if (null !== WW && WW === this.skippedKey) return void(this.JA || this.picks !== EW || this.usePlayerPack());
-          PW = null === WW ? null : await Promise.race([bW(NW, WW, iW), LW.passed])
-        } catch (ZW) {
-          const WW = !this.JA && this.picks === EW && this.holdsOtherGamePack(NW);
-          return this.host.warn(`the texture pack of ${NW} didn't load: ${WW?"the player's own shows":"the pack in play stays"}`, ZW), void(WW && this.usePlayerPack())
+          const RR = await Promise.race([JR.packKey(uR), qR.passed]);
+          if (null !== RR && this.onGamePack && this.state.gameSource === RR) return;
+          if (null !== RR && RR === this.skippedKey) return void(this.He || this.picks !== tR || this.usePlayerPack());
+          ZR = null === RR ? null : await Promise.race([aR(uR, RR, JR), qR.passed])
+        } catch (KR) {
+          const RR = !this.He && this.picks === tR && this.holdsOtherGamePack(uR);
+          return this.host.warn(`the texture pack of ${uR} didn't load: ${RR?"the player's own shows":"the pack in play stays"}`, KR), void(RR && this.usePlayerPack())
         } finally {
-          LW.clear()
+          qR.clear()
         }
-        if (this.JA || this.picks !== EW) return;
-        null !== PW && (0, wW.j)(PW.pack) && (this.host.warn(`the texture pack of ${NW} names files on other sites: the player's own shows`, null), PW = null);
-        const cW = null === PW || await this.confirmed(PW.pack, NW) ? null : PW.key;
-        this.JA || this.picks !== EW || (null !== cW && (this.skippedKey = cW, PW = null), null === PW ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
-          pack: PW.pack,
-          gameSource: PW.key
+        if (this.He || this.picks !== tR) return;
+        null !== ZR && (0, fR.j)(ZR.pack) && (this.host.warn(`the texture pack of ${uR} names files on other sites: the player's own shows`, null), ZR = null);
+        const iR = null === ZR || await this.confirmed(ZR.pack, uR) ? null : ZR.key;
+        this.He || this.picks !== tR || (null !== iR && (this.skippedKey = iR, ZR = null), null === ZR ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: ZR.pack,
+          gameSource: ZR.key
         }, !0)))
       }
       endGamePack() {
         this.picks++, this.usePlayerPack()
       }
-      holdsOtherGamePack(WW) {
-        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(WW)
+      holdsOtherGamePack(RR) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(RR)
       }
-      async confirmed(WW, iW) {
-        const OW = this.confirmGamePack;
-        if (null === OW) return !0;
+      async confirmed(RR, JR) {
+        const GR = this.confirmGamePack;
+        if (null === GR) return !0;
         try {
-          return await OW(WW, iW)
-        } catch (mW) {
-          return this.host.warn(`the texture pack prompt of ${iW} failed: the pack is skipped`, mW), !1
+          return await GR(RR, JR)
+        } catch (yR) {
+          return this.host.warn(`the texture pack prompt of ${JR} failed: the pack is skipped`, yR), !1
         }
       }
       async readPlayerPack() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        if (null !== WW && this.ownAnnouncements.delete(WW)) return;
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== RR && this.ownAnnouncements.delete(RR)) return;
         await this.ready;
-        const iW = this.ownChanges;
-        let OW;
+        const JR = this.ownChanges;
+        let GR;
         try {
-          OW = await this.host.store.getItem(PW.d, !0)
-        } catch (EW) {
-          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", EW)
+          GR = await this.host.store.getItem(ZR.e, !0)
+        } catch (tR) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", tR)
         }
-        if (this.JA || this.ownChanges !== iW) return;
-        const mW = UW(OW);
-        (0, xW.c)(mW, this.playerPack) || (this.ownChanges++, this.setOwn(mW), this.onGamePack || this.change({
-          pack: mW,
+        if (this.He || this.ownChanges !== JR) return;
+        const yR = nR(GR);
+        (0, wR.d)(yR, this.playerPack) || (this.ownChanges++, this.setOwn(yR), this.onGamePack || this.change({
+          pack: yR,
           gameSource: null
         }, !1))
       }
@@ -301,68 +301,68 @@ export const modules = {
         this.picks++
       }
       dispose() {
-        this.JA = !0, this.listeners.clear()
+        this.He = !0, this.listeners.clear()
       }
       async readStored() {
         const {
-          store: WW,
-          warn: iW
+          store: RR,
+          warn: JR
         } = this.host;
-        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, cW.e)(WW, !0, (WW => {
-          iW("the custom game's texture pack wasn't removed from storage", WW)
-        })).then((WW => {
-          this.takeOneShot(WW)
-        }), (WW => {
-          iW("the custom game's texture pack didn't read: the player's own shows", WW)
-        })), WW.getItem(PW.d, !0).then((WW => {
-          this.takeStoredOwn(WW)
-        }), (WW => {
-          iW("the stored texture pack didn't read: the default pack shows", WW), this.takeStoredOwn(null)
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, iR.h)(RR, !0, (RR => {
+          JR("the custom game's texture pack wasn't removed from storage", RR)
+        })).then((RR => {
+          this.takeOneShot(RR)
+        }), (RR => {
+          JR("the custom game's texture pack didn't read: the player's own shows", RR)
+        })), RR.getItem(ZR.e, !0).then((RR => {
+          this.takeStoredOwn(RR)
+        }), (RR => {
+          JR("the stored texture pack didn't read: the default pack shows", RR), this.takeStoredOwn(null)
         }))]), this.update()
       }
-      takeOneShot(WW) {
-        var iW;
-        null === WW || this.JA || this.changes > 0 || this.picks > 0 || ((0, wW.j)(WW.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
-          pack: WW.pack,
-          gameSource: null !== (iW = WW.source) && void 0 !== iW ? iW : ""
+      takeOneShot(RR) {
+        var JR;
+        null === RR || this.He || this.changes > 0 || this.picks > 0 || ((0, fR.j)(RR.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: RR.pack,
+          gameSource: null !== (JR = RR.source) && void 0 !== JR ? JR : ""
         }))
       }
-      takeStoredOwn(WW) {
-        if (this.playerPicked || this.JA) return;
-        if (this.ownChanges++, this.setOwn(UW(WW)), this.onGamePack) return;
-        const iW = {
+      takeStoredOwn(RR) {
+        if (this.playerPicked || this.He) return;
+        if (this.ownChanges++, this.setOwn(nR(RR)), this.onGamePack) return;
+        const JR = {
           pack: this.playerPack,
           gameSource: null
         };
-        0 === this.changes ? this.state = iW : this.change(iW, !1)
+        0 === this.changes ? this.state = JR : this.change(JR, !1)
       }
       async update() {
-        const WW = this.playerPack,
-          iW = null === WW || void 0 === WW ? void 0 : WW.metaData.id;
-        if (!WW || !iW || !this.host.fetchLatest || iW === EW.d || iW === EW.n.CUSTOM) return;
-        const OW = EW.p[iW];
-        if (void 0 === OW || WW.metaData.version >= OW) return;
-        let mW;
+        const RR = this.playerPack,
+          JR = null === RR || void 0 === RR ? void 0 : RR.metaData.id;
+        if (!RR || !JR || !this.host.fetchLatest || JR === tR.e || JR === tR.q.CUSTOM) return;
+        const GR = tR.t[JR];
+        if (void 0 === GR || RR.metaData.version >= GR) return;
+        let yR;
         try {
-          mW = UW(await this.host.fetchLatest(iW))
-        } catch (NW) {
-          return void this.host.warn(`texture pack ${iW} didn't update to version ${OW}`, NW)
+          yR = nR(await this.host.fetchLatest(JR))
+        } catch (uR) {
+          return void this.host.warn(`texture pack ${JR} didn't update to version ${GR}`, uR)
         }
-        null === mW || this.JA || this.playerPack !== WW || (this.ownChanges++, this.setOwn(mW), this.onGamePack || this.change({
-          pack: mW,
+        null === yR || this.He || this.playerPack !== RR || (this.ownChanges++, this.setOwn(yR), this.onGamePack || this.change({
+          pack: yR,
           gameSource: null
-        }, !1), await this.storePlayerPack(mW) && this.announce())
+        }, !1), await this.storePlayerPack(yR) && this.announce())
       }
       announce() {
-        const WW = (0, LW.c)();
-        null !== WW && this.ownAnnouncements.add(WW)
+        const RR = (0, qR.d)();
+        null !== RR && this.ownAnnouncements.add(RR)
       }
-      setOwn(WW) {
-        this.playerPack = WW;
-        for (const OW of [...this.ownListeners]) try {
-          OW()
-        } catch (iW) {
-          this.host.warn("a texture pack listener threw", iW)
+      setOwn(RR) {
+        this.playerPack = RR;
+        for (const GR of [...this.ownListeners]) try {
+          GR()
+        } catch (JR) {
+          this.host.warn("a texture pack listener threw", JR)
         }
       }
       usePlayerPack() {
@@ -371,72 +371,72 @@ export const modules = {
           gameSource: null
         }, !1)
       }
-      async storePlayerPack(WW) {
+      async storePlayerPack(RR) {
         try {
-          return null === WW ? (await this.host.store.removeItem(PW.d), !0) : await this.host.store.setItem(PW.d, WW)
-        } catch (iW) {
-          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", iW), !1
+          return null === RR ? (await this.host.store.removeItem(ZR.e), !0) : await this.host.store.setItem(ZR.e, RR)
+        } catch (JR) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", JR), !1
         }
       }
-      change(WW, iW) {
-        if (!this.JA) {
-          this.changes++, this.onGamePack = iW, this.state = WW;
-          for (const WW of [...this.listeners.keys()]) this.deliver(WW)
+      change(RR, JR) {
+        if (!this.He) {
+          this.changes++, this.onGamePack = JR, this.state = RR;
+          for (const RR of [...this.listeners.keys()]) this.deliver(RR)
         }
       }
-      deliver(WW) {
-        if (!this.JA && this.listeners.has(WW) && this.listeners.get(WW) !== this.state) {
-          this.listeners.set(WW, this.state);
+      deliver(RR) {
+        if (!this.He && this.listeners.has(RR) && this.listeners.get(RR) !== this.state) {
+          this.listeners.set(RR, this.state);
           try {
-            WW(this.state)
-          } catch (iW) {
-            this.host.warn("a texture pack listener threw", iW)
+            RR(this.state)
+          } catch (JR) {
+            this.host.warn("a texture pack listener threw", JR)
           }
         }
       }
     }
-    async function bW(WW, iW, OW) {
-      const mW = (0, cW.b)(await OW.fetchPack(iW));
-      if (null !== mW) return {
-        pack: mW,
-        key: iW
+    async function aR(RR, JR, GR) {
+      const yR = (0, iR.e)(await GR.fetchPack(JR));
+      if (null !== yR) return {
+        pack: yR,
+        key: JR
       };
-      const EW = await OW.packKey(WW);
-      if (null === EW) return null;
-      const NW = (0, cW.b)(await OW.fetchPack(EW));
-      if (null === NW) throw new Error(`no texture pack at ${EW}`);
+      const tR = await GR.packKey(RR);
+      if (null === tR) return null;
+      const uR = (0, iR.e)(await GR.fetchPack(tR));
+      if (null === uR) throw new Error(`no texture pack at ${tR}`);
       return {
-        pack: NW,
-        key: EW
+        pack: uR,
+        key: tR
       }
     }
 
-    function jW(WW) {
-      return null === WW || WW.metaData.id === EW.d
+    function LR(RR) {
+      return null === RR || RR.metaData.id === tR.e
     }
 
-    function UW(WW) {
-      const iW = (0, cW.b)(WW);
-      return jW(iW) ? null : iW
+    function nR(RR) {
+      const JR = (0, iR.e)(RR);
+      return LR(JR) ? null : JR
     }
-    async function kW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NW.e;
-      if (null === WW.pack) return null;
+    async function UR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uR.b;
+      if (null === RR.pack) return null;
       const {
-        packAssets: mW
-      } = await Promise.all([OW.e(233), OW.e(53)]).then((() => OW(64622)));
-      return mW(WW, iW)
+        packAssets: yR
+      } = await Promise.all([GR.e(233), GR.e(53)]).then((() => GR(64364)));
+      return yR(RR, JR)
     }
 
-    function sW(WW) {
-      const iW = (0, PW.v)();
-      return null === iW ? () => {} : (iW.onmessage = iW => {
-        WW.readPlayerPack((0, LW.g)(iW.data))
+    function WR(RR) {
+      const JR = (0, ZR.v)();
+      return null === JR ? () => {} : (JR.onmessage = JR => {
+        RR.readPlayerPack((0, qR.g)(JR.data))
       }, () => {
-        iW.close()
+        JR.close()
       })
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

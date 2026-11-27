@@ -1,17 +1,17 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  40534: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => PW,
-      g: () => LW
+  40562: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      i: () => ZR,
+      l: () => qR
     });
-    var mW = OW(40542),
-      EW = OW(27);
-    const NW = "smp2OnboardingView",
-      PW = 5e3;
-    class LW {
+    var yR = GR(40564),
+      tR = GR(32);
+    const uR = "smp2OnboardingView",
+      ZR = 5e3;
+    class qR {
       constructor() {
         this.view = {
           path: null,
@@ -21,121 +21,121 @@ export const modules = {
       get() {
         return this.view
       }
-      receivePath(WW) {
-        let [iW, OW, EW] = WW;
-        const NW = mW.g[iW];
-        if (void 0 === NW) return;
+      receivePath(RR) {
+        let [JR, GR, tR] = RR;
+        const uR = yR.e[JR];
+        if (void 0 === uR) return;
         const {
-          title: PW,
-          steps: LW
-        } = mW.e[NW];
-        this.iZ({
+          title: ZR,
+          steps: qR
+        } = yR.c[uR];
+        this.JK({
           ...this.view,
-          path: OW < LW.length ? {
-            title: PW,
-            steps: LW,
-            step: OW,
-            progress: EW
+          path: GR < qR.length ? {
+            title: ZR,
+            steps: qR,
+            step: GR,
+            progress: tR
           } : null
         })
       }
-      receiveReward(WW) {
-        let [iW, OW] = WW;
-        const EW = mW.k[iW];
-        if (void 0 !== EW && !this.seenRewardIds.has(OW)) {
-          var NW;
-          if (this.seenRewardIds.add(OW), this.queued.push({
-              ...EW,
-              id: OW
-            }), null === this.view.reward) this.iZ({
+      receiveReward(RR) {
+        let [JR, GR] = RR;
+        const tR = yR.h[JR];
+        if (void 0 !== tR && !this.seenRewardIds.has(GR)) {
+          var uR;
+          if (this.seenRewardIds.add(GR), this.queued.push({
+              ...tR,
+              id: GR
+            }), null === this.view.reward) this.JK({
             ...this.view,
-            reward: null !== (NW = this.queued.shift()) && void 0 !== NW ? NW : null
+            reward: null !== (uR = this.queued.shift()) && void 0 !== uR ? uR : null
           });
           this.runTimers()
         }
       }
-      setShowing(WW) {
-        this.showing = WW, this.runTimers()
+      setShowing(RR) {
+        this.showing = RR, this.runTimers()
       }
       dispose() {
         this.clearTimers()
       }
       runTimers() {
         this.showing ? this.view.reward && null === this.rewardTimer && (this.rewardTimer = setTimeout((() => {
-          var WW;
-          this.rewardTimer = null, this.iZ({
+          var RR;
+          this.rewardTimer = null, this.JK({
             ...this.view,
-            reward: null !== (WW = this.queued.shift()) && void 0 !== WW ? WW : null
+            reward: null !== (RR = this.queued.shift()) && void 0 !== RR ? RR : null
           }), this.runTimers()
-        }), PW)) : this.clearTimers()
+        }), ZR)) : this.clearTimers()
       }
       clearTimers() {
         null !== this.rewardTimer && (clearTimeout(this.rewardTimer), this.rewardTimer = null)
       }
-      iZ(WW) {
-        this.view = WW, EW.l.iZ(NW, WW)
+      JK(RR) {
+        this.view = RR, tR.n.JK(uR, RR)
       }
     }
   },
-  40525: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      makeSmp2ClientGame: () => ZW
+  40555: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      makeSmp2ClientGame: () => KR
     });
-    var mW = OW(62);
-    const EW = "smp2FirstSpawn",
-      NW = "smp2Path",
-      PW = "smp2Reward";
-    var LW = OW(1770),
-      cW = OW(3637),
-      wW = OW(3361),
-      tW = OW(40534);
+    var yR = GR(66);
+    const tR = "smp2FirstSpawn",
+      uR = "smp2Path",
+      ZR = "smp2Reward";
+    var qR = GR(1841),
+      iR = GR(3731),
+      fR = GR(3494),
+      VR = GR(40562);
 
-    function ZW() {
-      let WW = !1,
-        iW = !1,
-        ZW = "loading",
-        xW = !1;
-      const lW = () => {
-          !WW || iW || xW || "loading" === ZW || (iW = !0, (0, LW.e)({
+    function KR() {
+      let RR = !1,
+        JR = !1,
+        KR = "loading",
+        wR = !1;
+      const rR = () => {
+          !RR || JR || wR || "loading" === KR || (JR = !0, (0, qR.c)({
             id: "smp2.first_spawn",
-            value: ZW
+            value: KR
           }))
         },
-        AW = new tW.g;
-      let bW = null;
+        eR = new VR.l;
+      let aR = null;
       return {
         onCreate: () => {
-          OW.e(182).then((() => OW(53936))).then((WW => {
+          GR.e(182).then((() => GR(53781))).then((RR => {
             let {
-              Smp2OnboardingUi: iW
-            } = WW;
-            xW || (bW = (0, wW.O)((0, mW.createElement)(iW, {
-              store: AW
-            })), ZW = "cards")
-          })).catch((WW => {
-            xW || (ZW = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, cW.e)(WW) ? " (chunk load failed)" : ""), WW))
-          })).finally(lW)
+              Smp2OnboardingUi: JR
+            } = RR;
+            wR || (aR = (0, fR.G)((0, yR.createElement)(JR, {
+              store: eR
+            })), KR = "cards")
+          })).catch((RR => {
+            wR || (KR = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, iR.e)(RR) ? " (chunk load failed)" : ""), RR))
+          })).finally(rR)
         },
         onClose: () => {
-          var WW;
-          "loading" === ZW && (ZW = "no_cards"), lW(), xW = !0, null === (WW = bW) || void 0 === WW || WW(), AW.dispose()
+          var RR;
+          "loading" === KR && (KR = "no_cards"), rR(), wR = !0, null === (RR = aR) || void 0 === RR || RR(), eR.dispose()
         },
-        onReceivedMessageFromServer: (iW, OW) => {
-          iW === EW ? (WW = !0, lW()) : iW === NW ? AW.receivePath(OW) : iW === PW && AW.receiveReward(OW)
+        onReceivedMessageFromServer: (JR, GR) => {
+          JR === tR ? (RR = !0, rR()) : JR === uR ? eR.receivePath(GR) : JR === ZR && eR.receiveReward(GR)
         }
       }
     }
   },
-  40542: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      g: () => mW,
-      k: () => LW,
-      m: () => PW
+  40564: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => yR,
+      h: () => qR,
+      k: () => ZR
     });
-    const mW = ["starter_path", "portal_first"],
-      EW = "Iron Pickaxe",
-      NW = {
+    const yR = ["starter_path", "portal_first"],
+      tR = "Iron Pickaxe",
+      uR = {
         starter_path: {
           title: "Starter Path",
           steps: [{
@@ -185,10 +185,10 @@ export const modules = {
         }
       };
 
-    function PW(WW) {
-      return "logs" === WW.goal ? WW.amount : 1
+    function ZR(RR) {
+      return "logs" === RR.goal ? RR.amount : 1
     }
-    const LW = [{
+    const qR = [{
       title: "Starter Path done!",
       text: "+100 gold. The world is yours.",
       icon: "Gold Coin"
@@ -198,19 +198,19 @@ export const modules = {
       icon: "Wood Pickaxe"
     }, {
       title: "Come back tomorrow",
-      text: `A free ${EW} is waiting for you`,
-      icon: EW
+      text: `A free ${tR} is waiting for you`,
+      icon: tR
     }, {
       title: "Welcome back!",
-      text: `Here's your ${EW}`,
-      icon: EW
+      text: `Here's your ${tR}`,
+      icon: tR
     }, {
       title: "Nice!",
       text: "Keep exploring: the hub's traders buy what you find",
       icon: "Maple Log"
     }];
-    mW.flatMap((WW => [...NW[WW].steps.map((iW => `${WW}:${iW.key}`)), `${WW}:done`]))
+    yR.flatMap((RR => [...uR[RR].steps.map((JR => `${RR}:${JR.key}`)), `${RR}:done`]))
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

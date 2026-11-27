@@ -1,632 +1,632 @@
 export const id = 311;
 export const ids = [311];
 export const modules = {
-  42580: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => sW,
-      g: () => dW,
-      i: () => jW,
-      l: () => UW,
-      o: () => xW,
-      r: () => bW,
-      v: () => AW,
-      y: () => lW
+  42635: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => WR,
+      f: () => NR,
+      h: () => LR,
+      k: () => nR,
+      o: () => wR,
+      q: () => aR,
+      u: () => eR,
+      x: () => rR
     });
-    var mW = OW(38241),
-      EW = OW(38372),
-      NW = OW(38285),
-      PW = OW(42586),
-      LW = OW(41732),
-      cW = OW(41531),
-      wW = OW(41564),
-      tW = OW(41538),
-      ZW = OW(38299);
-    const xW = Object.freeze(new mW.g(0, 0, 0, 0)),
-      lW = Object.freeze(mW.q.Zero()),
-      AW = Object.freeze(mW.m.Zero()),
-      bW = Object.freeze(cW.d.Zero()),
-      jW = Object.freeze(EW.b.Black()),
-      UW = Object.freeze(new EW.d(0, 0, 0, 0)),
-      kW = {
+    var yR = GR(38204),
+      tR = GR(38331),
+      uR = GR(38239),
+      ZR = GR(42641),
+      qR = GR(41741),
+      iR = GR(41534),
+      fR = GR(41568),
+      VR = GR(41542),
+      KR = GR(38253);
+    const wR = Object.freeze(new yR.i(0, 0, 0, 0)),
+      rR = Object.freeze(yR.r.Zero()),
+      eR = Object.freeze(yR.n.Zero()),
+      aR = Object.freeze(iR.b.Zero()),
+      LR = Object.freeze(tR.d.Black()),
+      nR = Object.freeze(new tR.e(0, 0, 0, 0)),
+      UR = {
         key: 0,
         repeatCount: 0,
-        sO: 2
+        nG: 2
       };
-    class sW {
-      static _PrepareAnimation(WW, iW, OW, NW, PW, LW, wW, tW) {
-        let ZW;
-        if (!isNaN(parseFloat(PW)) && isFinite(PW) ? ZW = sW.ANIMATIONTYPE_FLOAT : PW instanceof mW.g ? ZW = sW.ANIMATIONTYPE_QUATERNION : PW instanceof mW.q ? ZW = sW.ANIMATIONTYPE_VECTOR3 : PW instanceof mW.m ? ZW = sW.ANIMATIONTYPE_VECTOR2 : PW instanceof EW.b ? ZW = sW.ANIMATIONTYPE_COLOR3 : PW instanceof EW.d ? ZW = sW.ANIMATIONTYPE_COLOR4 : PW instanceof cW.d && (ZW = sW.ANIMATIONTYPE_SIZE), void 0 == ZW) return null;
-        const xW = new sW(WW, iW, OW, ZW, wW),
-          lW = [{
+    class WR {
+      static _PrepareAnimation(RR, JR, GR, uR, ZR, qR, fR, VR) {
+        let KR;
+        if (!isNaN(parseFloat(ZR)) && isFinite(ZR) ? KR = WR.ANIMATIONTYPE_FLOAT : ZR instanceof yR.i ? KR = WR.ANIMATIONTYPE_QUATERNION : ZR instanceof yR.r ? KR = WR.ANIMATIONTYPE_VECTOR3 : ZR instanceof yR.n ? KR = WR.ANIMATIONTYPE_VECTOR2 : ZR instanceof tR.d ? KR = WR.ANIMATIONTYPE_COLOR3 : ZR instanceof tR.e ? KR = WR.ANIMATIONTYPE_COLOR4 : ZR instanceof iR.b && (KR = WR.ANIMATIONTYPE_SIZE), void 0 == KR) return null;
+        const wR = new WR(RR, JR, GR, KR, fR),
+          rR = [{
             frame: 0,
-            value: PW
+            value: ZR
           }, {
-            frame: NW,
-            value: LW
+            frame: uR,
+            value: qR
           }];
-        return xW.setKeys(lW), void 0 !== tW && xW.setEasingFunction(tW), xW
+        return wR.setKeys(rR), void 0 !== VR && wR.setEasingFunction(VR), wR
       }
       get runtimeAnimations() {
         return this._runtimeAnimations
       }
       get hasRunningRuntimeAnimations() {
-        for (const WW of this._runtimeAnimations)
-          if (!WW.isStopped()) return !0;
+        for (const RR of this._runtimeAnimations)
+          if (!RR.isStopped()) return !0;
         return !1
       }
-      constructor(WW, iW, OW, mW, EW, NW) {
-        this.name = WW, this.targetProperty = iW, this.framePerSecond = OW, this.dataType = mW, this.sO = EW, this.enableBlending = NW, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = iW.split("."), this.dataType = mW, this.sO = void 0 === EW ? sW.ANIMATIONLOOPMODE_CYCLE : EW, this.uniqueId = sW._UniqueIdGenerator++
+      constructor(RR, JR, GR, yR, tR, uR) {
+        this.name = RR, this.targetProperty = JR, this.framePerSecond = GR, this.dataType = yR, this.nG = tR, this.enableBlending = uR, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = JR.split("."), this.dataType = yR, this.nG = void 0 === tR ? WR.ANIMATIONLOOPMODE_CYCLE : tR, this.uniqueId = WR._UniqueIdGenerator++
       }
-      toString(WW) {
-        let iW = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (iW += ", datatype: " + ["Float", "fA", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], iW += ", nKeys: " + (this._keys ? this._keys.length : "none"), iW += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), WW) {
-          iW += ", Ranges: {";
-          let WW = !0;
-          for (const OW in this._ranges) WW || (iW += ", "), WW = !1, iW += OW;
-          iW += "}"
+      toString(RR) {
+        let JR = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (JR += ", datatype: " + ["Float", "Fe", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], JR += ", nKeys: " + (this._keys ? this._keys.length : "none"), JR += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), RR) {
+          JR += ", Ranges: {";
+          let RR = !0;
+          for (const GR in this._ranges) RR || (JR += ", "), RR = !1, JR += GR;
+          JR += "}"
         }
-        return iW
+        return JR
       }
-      addEvent(WW) {
-        this._events.push(WW), this._events.sort(((WW, iW) => WW.frame - iW.frame))
+      addEvent(RR) {
+        this._events.push(RR), this._events.sort(((RR, JR) => RR.frame - JR.frame))
       }
-      removeEvents(WW) {
-        for (let iW = 0; iW < this._events.length; iW++) this._events[iW].frame === WW && (this._events.splice(iW, 1), iW--)
+      removeEvents(RR) {
+        for (let JR = 0; JR < this._events.length; JR++) this._events[JR].frame === RR && (this._events.splice(JR, 1), JR--)
       }
       getEvents() {
         return this._events
       }
-      createRange(WW, iW, OW) {
-        this._ranges[WW] || (this._ranges[WW] = new PW.c(WW, iW, OW))
+      createRange(RR, JR, GR) {
+        this._ranges[RR] || (this._ranges[RR] = new ZR.b(RR, JR, GR))
       }
-      deleteRange(WW) {
-        let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const OW = this._ranges[WW];
-        if (OW) {
-          if (iW) {
-            const WW = OW.from,
-              iW = OW.to;
-            for (let OW = this._keys.length - 1; OW >= 0; OW--) this._keys[OW].frame >= WW && this._keys[OW].frame <= iW && this._keys.splice(OW, 1)
+      deleteRange(RR) {
+        let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const GR = this._ranges[RR];
+        if (GR) {
+          if (JR) {
+            const RR = GR.from,
+              JR = GR.to;
+            for (let GR = this._keys.length - 1; GR >= 0; GR--) this._keys[GR].frame >= RR && this._keys[GR].frame <= JR && this._keys.splice(GR, 1)
           }
-          this._ranges[WW] = null
+          this._ranges[RR] = null
         }
       }
-      getRange(WW) {
-        return this._ranges[WW]
+      getRange(RR) {
+        return this._ranges[RR]
       }
       getKeys() {
         return this._keys
       }
       getHighestFrame() {
-        let WW = 0;
-        for (let iW = 0, OW = this._keys.length; iW < OW; iW++) WW < this._keys[iW].frame && (WW = this._keys[iW].frame);
-        return WW
+        let RR = 0;
+        for (let JR = 0, GR = this._keys.length; JR < GR; JR++) RR < this._keys[JR].frame && (RR = this._keys[JR].frame);
+        return RR
       }
       getEasingFunction() {
         return this._easingFunction
       }
-      setEasingFunction(WW) {
-        this._easingFunction = WW
+      setEasingFunction(RR) {
+        this._easingFunction = RR
       }
-      floatInterpolateFunction(WW, iW, OW) {
-        return (0, NW.Lerp)(WW, iW, OW)
+      floatInterpolateFunction(RR, JR, GR) {
+        return (0, uR.Lerp)(RR, JR, GR)
       }
-      floatInterpolateFunctionWithTangents(WW, iW, OW, mW, EW) {
-        return (0, NW.Hermite)(WW, iW, OW, mW, EW)
+      floatInterpolateFunctionWithTangents(RR, JR, GR, yR, tR) {
+        return (0, uR.Hermite)(RR, JR, GR, yR, tR)
       }
-      quaternionInterpolateFunction(WW, iW, OW) {
-        return mW.g.Slerp(WW, iW, OW)
+      quaternionInterpolateFunction(RR, JR, GR) {
+        return yR.i.Slerp(RR, JR, GR)
       }
-      quaternionInterpolateFunctionWithTangents(WW, iW, OW, EW, NW) {
-        return mW.g.Hermite(WW, iW, OW, EW, NW).normalize()
+      quaternionInterpolateFunctionWithTangents(RR, JR, GR, tR, uR) {
+        return yR.i.Hermite(RR, JR, GR, tR, uR).normalize()
       }
-      vector3InterpolateFunction(WW, iW, OW) {
-        return mW.q.Lerp(WW, iW, OW)
+      vector3InterpolateFunction(RR, JR, GR) {
+        return yR.r.Lerp(RR, JR, GR)
       }
-      vector3InterpolateFunctionWithTangents(WW, iW, OW, EW, NW) {
-        return mW.q.Hermite(WW, iW, OW, EW, NW)
+      vector3InterpolateFunctionWithTangents(RR, JR, GR, tR, uR) {
+        return yR.r.Hermite(RR, JR, GR, tR, uR)
       }
-      vector2InterpolateFunction(WW, iW, OW) {
-        return mW.m.Lerp(WW, iW, OW)
+      vector2InterpolateFunction(RR, JR, GR) {
+        return yR.n.Lerp(RR, JR, GR)
       }
-      vector2InterpolateFunctionWithTangents(WW, iW, OW, EW, NW) {
-        return mW.m.Hermite(WW, iW, OW, EW, NW)
+      vector2InterpolateFunctionWithTangents(RR, JR, GR, tR, uR) {
+        return yR.n.Hermite(RR, JR, GR, tR, uR)
       }
-      sizeInterpolateFunction(WW, iW, OW) {
-        return cW.d.Lerp(WW, iW, OW)
+      sizeInterpolateFunction(RR, JR, GR) {
+        return iR.b.Lerp(RR, JR, GR)
       }
-      color3InterpolateFunction(WW, iW, OW) {
-        return EW.b.Lerp(WW, iW, OW)
+      color3InterpolateFunction(RR, JR, GR) {
+        return tR.d.Lerp(RR, JR, GR)
       }
-      color3InterpolateFunctionWithTangents(WW, iW, OW, mW, NW) {
-        return EW.b.Hermite(WW, iW, OW, mW, NW)
+      color3InterpolateFunctionWithTangents(RR, JR, GR, yR, uR) {
+        return tR.d.Hermite(RR, JR, GR, yR, uR)
       }
-      color4InterpolateFunction(WW, iW, OW) {
-        return EW.d.Lerp(WW, iW, OW)
+      color4InterpolateFunction(RR, JR, GR) {
+        return tR.e.Lerp(RR, JR, GR)
       }
-      color4InterpolateFunctionWithTangents(WW, iW, OW, mW, NW) {
-        return EW.d.Hermite(WW, iW, OW, mW, NW)
+      color4InterpolateFunctionWithTangents(RR, JR, GR, yR, uR) {
+        return tR.e.Hermite(RR, JR, GR, yR, uR)
       }
-      _getKeyValue(WW) {
-        return "function" === typeof WW ? WW() : WW
+      _getKeyValue(RR) {
+        return "function" === typeof RR ? RR() : RR
       }
-      evaluate(WW) {
-        return kW.key = 0, this._interpolate(WW, kW)
+      evaluate(RR) {
+        return UR.key = 0, this._interpolate(RR, UR)
       }
-      _interpolate(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (iW.sO === sW.ANIMATIONLOOPMODE_CONSTANT && iW.repeatCount > 0) return iW.highLimitValue.clone ? iW.highLimitValue.clone() : iW.highLimitValue;
-        const mW = this._keys;
-        let EW;
-        if (this._coreAnimation) EW = this._coreAnimation._key;
+      _interpolate(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (JR.nG === WR.ANIMATIONLOOPMODE_CONSTANT && JR.repeatCount > 0) return JR.highLimitValue.clone ? JR.highLimitValue.clone() : JR.highLimitValue;
+        const yR = this._keys;
+        let tR;
+        if (this._coreAnimation) tR = this._coreAnimation._key;
         else {
-          const NW = mW.length;
-          for (EW = iW.key; EW >= 0 && WW < mW[EW].frame;) --EW;
-          for (; EW + 1 <= NW - 1 && WW >= mW[EW + 1].frame;) ++EW;
-          if (iW.key = EW, EW < 0) return OW ? void 0 : this._getKeyValue(mW[0].value);
-          if (EW + 1 > NW - 1) return OW ? void 0 : this._getKeyValue(mW[NW - 1].value);
-          this._key = EW
+          const uR = yR.length;
+          for (tR = JR.key; tR >= 0 && RR < yR[tR].frame;) --tR;
+          for (; tR + 1 <= uR - 1 && RR >= yR[tR + 1].frame;) ++tR;
+          if (JR.key = tR, tR < 0) return GR ? void 0 : this._getKeyValue(yR[0].value);
+          if (tR + 1 > uR - 1) return GR ? void 0 : this._getKeyValue(yR[uR - 1].value);
+          this._key = tR
         }
-        const NW = mW[EW],
-          PW = mW[EW + 1];
-        if (OW && (WW === NW.frame || WW === PW.frame)) return;
-        const LW = this._getKeyValue(NW.value),
-          cW = this._getKeyValue(PW.value);
-        if (1 === NW.interpolation) return PW.frame > WW ? LW : cW;
-        const wW = void 0 !== NW.outTangent && void 0 !== PW.inTangent,
-          tW = PW.frame - NW.frame;
-        let ZW = (WW - NW.frame) / tW;
-        const kW = NW.easingFunction || this.getEasingFunction();
-        switch (kW && (ZW = kW.ease(ZW)), this.dataType) {
-          case sW.ANIMATIONTYPE_FLOAT: {
-            const WW = wW ? this.floatInterpolateFunctionWithTangents(LW, NW.outTangent * tW, cW, PW.inTangent * tW, ZW) : this.floatInterpolateFunction(LW, cW, ZW);
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return WW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (iW.offsetValue ?? 0) * iW.repeatCount + WW
+        const uR = yR[tR],
+          ZR = yR[tR + 1];
+        if (GR && (RR === uR.frame || RR === ZR.frame)) return;
+        const qR = this._getKeyValue(uR.value),
+          iR = this._getKeyValue(ZR.value);
+        if (1 === uR.interpolation) return ZR.frame > RR ? qR : iR;
+        const fR = void 0 !== uR.outTangent && void 0 !== ZR.inTangent,
+          VR = ZR.frame - uR.frame;
+        let KR = (RR - uR.frame) / VR;
+        const UR = uR.easingFunction || this.getEasingFunction();
+        switch (UR && (KR = UR.ease(KR)), this.dataType) {
+          case WR.ANIMATIONTYPE_FLOAT: {
+            const RR = fR ? this.floatInterpolateFunctionWithTangents(qR, uR.outTangent * VR, iR, ZR.inTangent * VR, KR) : this.floatInterpolateFunction(qR, iR, KR);
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return RR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (JR.offsetValue ?? 0) * JR.repeatCount + RR
             }
             break
           }
-          case sW.ANIMATIONTYPE_QUATERNION: {
-            const WW = wW ? this.quaternionInterpolateFunctionWithTangents(LW, NW.outTangent.scale(tW), cW, PW.inTangent.scale(tW), ZW) : this.quaternionInterpolateFunction(LW, cW, ZW);
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return WW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return WW.addInPlace((iW.offsetValue || xW).scale(iW.repeatCount))
+          case WR.ANIMATIONTYPE_QUATERNION: {
+            const RR = fR ? this.quaternionInterpolateFunctionWithTangents(qR, uR.outTangent.scale(VR), iR, ZR.inTangent.scale(VR), KR) : this.quaternionInterpolateFunction(qR, iR, KR);
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return RR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return RR.addInPlace((JR.offsetValue || wR).scale(JR.repeatCount))
             }
-            return WW
+            return RR
           }
-          case sW.ANIMATIONTYPE_VECTOR3: {
-            const WW = wW ? this.vector3InterpolateFunctionWithTangents(LW, NW.outTangent.scale(tW), cW, PW.inTangent.scale(tW), ZW) : this.vector3InterpolateFunction(LW, cW, ZW);
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return WW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return WW.add((iW.offsetValue || lW).scale(iW.repeatCount))
-            }
-            break
-          }
-          case sW.ANIMATIONTYPE_VECTOR2: {
-            const WW = wW ? this.vector2InterpolateFunctionWithTangents(LW, NW.outTangent.scale(tW), cW, PW.inTangent.scale(tW), ZW) : this.vector2InterpolateFunction(LW, cW, ZW);
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return WW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return WW.add((iW.offsetValue || AW).scale(iW.repeatCount))
+          case WR.ANIMATIONTYPE_VECTOR3: {
+            const RR = fR ? this.vector3InterpolateFunctionWithTangents(qR, uR.outTangent.scale(VR), iR, ZR.inTangent.scale(VR), KR) : this.vector3InterpolateFunction(qR, iR, KR);
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return RR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return RR.add((JR.offsetValue || rR).scale(JR.repeatCount))
             }
             break
           }
-          case sW.ANIMATIONTYPE_SIZE:
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(LW, cW, ZW);
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(LW, cW, ZW).add((iW.offsetValue || bW).scale(iW.repeatCount))
+          case WR.ANIMATIONTYPE_VECTOR2: {
+            const RR = fR ? this.vector2InterpolateFunctionWithTangents(qR, uR.outTangent.scale(VR), iR, ZR.inTangent.scale(VR), KR) : this.vector2InterpolateFunction(qR, iR, KR);
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return RR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return RR.add((JR.offsetValue || eR).scale(JR.repeatCount))
+            }
+            break
+          }
+          case WR.ANIMATIONTYPE_SIZE:
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(qR, iR, KR);
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(qR, iR, KR).add((JR.offsetValue || aR).scale(JR.repeatCount))
             }
             break;
-          case sW.ANIMATIONTYPE_COLOR3: {
-            const WW = wW ? this.color3InterpolateFunctionWithTangents(LW, NW.outTangent.scale(tW), cW, PW.inTangent.scale(tW), ZW) : this.color3InterpolateFunction(LW, cW, ZW);
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return WW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return WW.add((iW.offsetValue || jW).scale(iW.repeatCount))
+          case WR.ANIMATIONTYPE_COLOR3: {
+            const RR = fR ? this.color3InterpolateFunctionWithTangents(qR, uR.outTangent.scale(VR), iR, ZR.inTangent.scale(VR), KR) : this.color3InterpolateFunction(qR, iR, KR);
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return RR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return RR.add((JR.offsetValue || LR).scale(JR.repeatCount))
             }
             break
           }
-          case sW.ANIMATIONTYPE_COLOR4: {
-            const WW = wW ? this.color4InterpolateFunctionWithTangents(LW, NW.outTangent.scale(tW), cW, PW.inTangent.scale(tW), ZW) : this.color4InterpolateFunction(LW, cW, ZW);
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return WW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return WW.add((iW.offsetValue || UW).scale(iW.repeatCount))
+          case WR.ANIMATIONTYPE_COLOR4: {
+            const RR = fR ? this.color4InterpolateFunctionWithTangents(qR, uR.outTangent.scale(VR), iR, ZR.inTangent.scale(VR), KR) : this.color4InterpolateFunction(qR, iR, KR);
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return RR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return RR.add((JR.offsetValue || nR).scale(JR.repeatCount))
             }
             break
           }
-          case sW.ANIMATIONTYPE_MATRIX:
-            switch (iW.sO) {
-              case sW.ANIMATIONLOOPMODE_CYCLE:
-              case sW.ANIMATIONLOOPMODE_CONSTANT:
-              case sW.ANIMATIONLOOPMODE_YOYO:
-                return sW.AllowMatricesInterpolation ? this.matrixInterpolateFunction(LW, cW, ZW, iW.workValue) : LW;
-              case sW.ANIMATIONLOOPMODE_RELATIVE:
-              case sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return LW
+          case WR.ANIMATIONTYPE_MATRIX:
+            switch (JR.nG) {
+              case WR.ANIMATIONLOOPMODE_CYCLE:
+              case WR.ANIMATIONLOOPMODE_CONSTANT:
+              case WR.ANIMATIONLOOPMODE_YOYO:
+                return WR.AllowMatricesInterpolation ? this.matrixInterpolateFunction(qR, iR, KR, JR.workValue) : qR;
+              case WR.ANIMATIONLOOPMODE_RELATIVE:
+              case WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return qR
             }
         }
         return 0
       }
-      matrixInterpolateFunction(WW, iW, OW, EW) {
-        return sW.AllowMatrixDecomposeForInterpolation ? EW ? (mW.d.DecomposeLerpToRef(WW, iW, OW, EW), EW) : mW.d.DecomposeLerp(WW, iW, OW) : EW ? (mW.d.LerpToRef(WW, iW, OW, EW), EW) : mW.d.Lerp(WW, iW, OW)
+      matrixInterpolateFunction(RR, JR, GR, tR) {
+        return WR.AllowMatrixDecomposeForInterpolation ? tR ? (yR.e.DecomposeLerpToRef(RR, JR, GR, tR), tR) : yR.e.DecomposeLerp(RR, JR, GR) : tR ? (yR.e.LerpToRef(RR, JR, GR, tR), tR) : yR.e.Lerp(RR, JR, GR)
       }
       clone() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const iW = new sW(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.sO);
-        if (iW.enableBlending = this.enableBlending, iW.blendingSpeed = this.blendingSpeed, this._keys && iW.setKeys(this._keys, !1, WW), this._ranges) {
-          iW._ranges = {};
-          for (const WW in this._ranges) {
-            const OW = this._ranges[WW];
-            OW && (iW._ranges[WW] = OW.clone())
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const JR = new WR(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.nG);
+        if (JR.enableBlending = this.enableBlending, JR.blendingSpeed = this.blendingSpeed, this._keys && JR.setKeys(this._keys, !1, RR), this._ranges) {
+          JR._ranges = {};
+          for (const RR in this._ranges) {
+            const GR = this._ranges[RR];
+            GR && (JR._ranges[RR] = GR.clone())
           }
         }
-        return iW
+        return JR
       }
-      setKeys(WW) {
-        let iW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = WW;
-        else if (this._keys = WW.slice(0), iW)
-          for (let OW = 0; OW < this._keys.length; OW++) {
-            const WW = this._keys[OW];
-            this._keys[OW] = {
-              frame: WW.frame,
-              value: WW.value.clone ? WW.value.clone() : WW.value,
-              inTangent: WW.inTangent && WW.inTangent.clone ? WW.inTangent.clone() : WW.inTangent,
-              outTangent: WW.outTangent && WW.outTangent.clone ? WW.outTangent.clone() : WW.outTangent,
-              interpolation: WW.interpolation,
-              lockedTangent: WW.lockedTangent,
-              easingFunction: WW.easingFunction
+      setKeys(RR) {
+        let JR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = RR;
+        else if (this._keys = RR.slice(0), JR)
+          for (let GR = 0; GR < this._keys.length; GR++) {
+            const RR = this._keys[GR];
+            this._keys[GR] = {
+              frame: RR.frame,
+              value: RR.value.clone ? RR.value.clone() : RR.value,
+              inTangent: RR.inTangent && RR.inTangent.clone ? RR.inTangent.clone() : RR.inTangent,
+              outTangent: RR.outTangent && RR.outTangent.clone ? RR.outTangent.clone() : RR.outTangent,
+              interpolation: RR.interpolation,
+              lockedTangent: RR.lockedTangent,
+              easingFunction: RR.easingFunction
             }
           }
       }
-      createKeyForFrame(WW) {
-        kW.key = 0;
-        const iW = this._interpolate(WW, kW, !0);
-        if (!iW) return this._keys[kW.key].frame === WW ? kW.key : kW.key + 1;
-        const OW = {
-          frame: WW,
-          value: iW.clone ? iW.clone() : iW
+      createKeyForFrame(RR) {
+        UR.key = 0;
+        const JR = this._interpolate(RR, UR, !0);
+        if (!JR) return this._keys[UR.key].frame === RR ? UR.key : UR.key + 1;
+        const GR = {
+          frame: RR,
+          value: JR.clone ? JR.clone() : JR
         };
-        return this._keys.splice(kW.key + 1, 0, OW), kW.key + 1
+        return this._keys.splice(UR.key + 1, 0, GR), UR.key + 1
       }
       serialize() {
-        const WW = {};
-        WW.name = this.name, WW.property = this.targetProperty, WW.framePerSecond = this.framePerSecond, WW.dataType = this.dataType, WW.loopBehavior = this.sO, WW.enableBlending = this.enableBlending, WW.blendingSpeed = this.blendingSpeed;
-        const iW = this.dataType;
-        WW.keys = [];
-        const OW = this.getKeys();
-        for (let mW = 0; mW < OW.length; mW++) {
-          const EW = OW[mW],
-            NW = {};
-          switch (NW.frame = EW.frame, iW) {
-            case sW.ANIMATIONTYPE_FLOAT:
-              NW.values = [EW.value], void 0 !== EW.inTangent && NW.values.push(EW.inTangent), void 0 !== EW.outTangent && (void 0 === EW.inTangent && NW.values.push(void 0), NW.values.push(EW.outTangent)), void 0 !== EW.interpolation && (void 0 === EW.inTangent && NW.values.push(void 0), void 0 === EW.outTangent && NW.values.push(void 0), NW.values.push(EW.interpolation));
+        const RR = {};
+        RR.name = this.name, RR.property = this.targetProperty, RR.framePerSecond = this.framePerSecond, RR.dataType = this.dataType, RR.loopBehavior = this.nG, RR.enableBlending = this.enableBlending, RR.blendingSpeed = this.blendingSpeed;
+        const JR = this.dataType;
+        RR.keys = [];
+        const GR = this.getKeys();
+        for (let yR = 0; yR < GR.length; yR++) {
+          const tR = GR[yR],
+            uR = {};
+          switch (uR.frame = tR.frame, JR) {
+            case WR.ANIMATIONTYPE_FLOAT:
+              uR.values = [tR.value], void 0 !== tR.inTangent && uR.values.push(tR.inTangent), void 0 !== tR.outTangent && (void 0 === tR.inTangent && uR.values.push(void 0), uR.values.push(tR.outTangent)), void 0 !== tR.interpolation && (void 0 === tR.inTangent && uR.values.push(void 0), void 0 === tR.outTangent && uR.values.push(void 0), uR.values.push(tR.interpolation));
               break;
-            case sW.ANIMATIONTYPE_QUATERNION:
-            case sW.ANIMATIONTYPE_MATRIX:
-            case sW.ANIMATIONTYPE_VECTOR3:
-            case sW.ANIMATIONTYPE_COLOR3:
-            case sW.ANIMATIONTYPE_COLOR4:
-              NW.values = EW.value.wEW(), void 0 != EW.inTangent && NW.values.push(EW.inTangent.wEW()), void 0 != EW.outTangent && (void 0 === EW.inTangent && NW.values.push(void 0), NW.values.push(EW.outTangent.wEW())), void 0 !== EW.interpolation && (void 0 === EW.inTangent && NW.values.push(void 0), void 0 === EW.outTangent && NW.values.push(void 0), NW.values.push(EW.interpolation))
+            case WR.ANIMATIONTYPE_QUATERNION:
+            case WR.ANIMATIONTYPE_MATRIX:
+            case WR.ANIMATIONTYPE_VECTOR3:
+            case WR.ANIMATIONTYPE_COLOR3:
+            case WR.ANIMATIONTYPE_COLOR4:
+              uR.values = tR.value.QtR(), void 0 != tR.inTangent && uR.values.push(tR.inTangent.QtR()), void 0 != tR.outTangent && (void 0 === tR.inTangent && uR.values.push(void 0), uR.values.push(tR.outTangent.QtR())), void 0 !== tR.interpolation && (void 0 === tR.inTangent && uR.values.push(void 0), void 0 === tR.outTangent && uR.values.push(void 0), uR.values.push(tR.interpolation))
           }
-          WW.keys.push(NW)
+          RR.keys.push(uR)
         }
-        WW.kj = [];
-        for (const mW in this._ranges) {
-          const iW = this._ranges[mW];
-          if (!iW) continue;
-          const OW = {};
-          OW.name = mW, OW.from = iW.from, OW.to = iW.to, WW.kj.push(OW)
+        RR.WL = [];
+        for (const yR in this._ranges) {
+          const JR = this._ranges[yR];
+          if (!JR) continue;
+          const GR = {};
+          GR.name = yR, GR.from = JR.from, GR.to = JR.to, RR.WL.push(GR)
         }
-        return WW
+        return RR
       }
-      static _UniversalLerp(WW, iW, OW) {
-        const mW = WW.constructor;
-        return mW.Lerp ? mW.Lerp(WW, iW, OW) : mW.Slerp ? mW.Slerp(WW, iW, OW) : WW.toFixed ? WW * (1 - OW) + OW * iW : iW
+      static _UniversalLerp(RR, JR, GR) {
+        const yR = RR.constructor;
+        return yR.Lerp ? yR.Lerp(RR, JR, GR) : yR.Slerp ? yR.Slerp(RR, JR, GR) : RR.toFixed ? RR * (1 - GR) + GR * JR : JR
       }
     }
 
-    function MW(WW, iW, OW) {
-      let EW;
-      EW = "object" === typeof iW ? iW : {
-        referenceFrame: iW ?? 0,
-        range: OW,
+    function AR(RR, JR, GR) {
+      let tR;
+      tR = "object" === typeof JR ? JR : {
+        referenceFrame: JR ?? 0,
+        range: GR,
         cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
       };
-      let NW = WW;
-      EW.cloneOriginalAnimation && (NW = WW.clone(), NW.name = EW.clonedAnimationName || NW.name);
-      const PW = NW.getKeys();
-      if (!PW.length) return NW;
-      const LW = EW.referenceFrame && EW.referenceFrame >= 0 ? EW.referenceFrame : 0;
-      let cW = 0;
-      const wW = PW[0];
-      let tW = PW.length - 1;
-      const ZW = PW[tW],
-        xW = {
-          referenceValue: wW.value,
-          referencePosition: mW.l.fA[0],
-          referenceQuaternion: mW.l.Quaternion[0],
-          referenceScaling: mW.l.fA[1],
-          keyPosition: mW.l.fA[2],
-          keyQuaternion: mW.l.Quaternion[1],
-          keyScaling: mW.l.fA[3]
+      let uR = RR;
+      tR.cloneOriginalAnimation && (uR = RR.clone(), uR.name = tR.clonedAnimationName || uR.name);
+      const ZR = uR.getKeys();
+      if (!ZR.length) return uR;
+      const qR = tR.referenceFrame && tR.referenceFrame >= 0 ? tR.referenceFrame : 0;
+      let iR = 0;
+      const fR = ZR[0];
+      let VR = ZR.length - 1;
+      const KR = ZR[VR],
+        wR = {
+          referenceValue: fR.value,
+          referencePosition: yR.l.Fe[0],
+          referenceQuaternion: yR.l.Quaternion[0],
+          referenceScaling: yR.l.Fe[1],
+          keyPosition: yR.l.Fe[2],
+          keyQuaternion: yR.l.Quaternion[1],
+          keyScaling: yR.l.Fe[3]
         };
-      let lW = wW.frame,
-        AW = ZW.frame;
-      if (EW.range) {
-        const WW = NW.getRange(EW.range);
-        WW && (lW = WW.from, AW = WW.to)
-      } else lW = EW.fromFrame ?? lW, AW = EW.toFrame ?? AW;
-      lW !== wW.frame && (cW = NW.createKeyForFrame(lW)), AW !== ZW.frame && (tW = NW.createKeyForFrame(AW));
-      const bW = NW.getKeys();
-      if (1 === bW.length) {
-        const WW = NW._getKeyValue(bW[0].value);
-        xW.referenceValue = WW.clone ? WW.clone() : WW
-      } else if (LW <= wW.frame) {
-        const WW = NW._getKeyValue(wW.value);
-        xW.referenceValue = WW.clone ? WW.clone() : WW
-      } else if (LW >= ZW.frame) {
-        const WW = NW._getKeyValue(ZW.value);
-        xW.referenceValue = WW.clone ? WW.clone() : WW
+      let rR = fR.frame,
+        eR = KR.frame;
+      if (tR.range) {
+        const RR = uR.getRange(tR.range);
+        RR && (rR = RR.from, eR = RR.to)
+      } else rR = tR.fromFrame ?? rR, eR = tR.toFrame ?? eR;
+      rR !== fR.frame && (iR = uR.createKeyForFrame(rR)), eR !== KR.frame && (VR = uR.createKeyForFrame(eR));
+      const aR = uR.getKeys();
+      if (1 === aR.length) {
+        const RR = uR._getKeyValue(aR[0].value);
+        wR.referenceValue = RR.clone ? RR.clone() : RR
+      } else if (qR <= fR.frame) {
+        const RR = uR._getKeyValue(fR.value);
+        wR.referenceValue = RR.clone ? RR.clone() : RR
+      } else if (qR >= KR.frame) {
+        const RR = uR._getKeyValue(KR.value);
+        wR.referenceValue = RR.clone ? RR.clone() : RR
       } else {
-        kW.key = 0;
-        const WW = NW._interpolate(LW, kW);
-        xW.referenceValue = WW.clone ? WW.clone() : WW
+        UR.key = 0;
+        const RR = uR._interpolate(qR, UR);
+        wR.referenceValue = RR.clone ? RR.clone() : RR
       }
-      NW.dataType === sW.ANIMATIONTYPE_QUATERNION ? xW.referenceValue.normalize().conjugateInPlace() : NW.dataType === sW.ANIMATIONTYPE_MATRIX && (xW.referenceValue.decompose(xW.referenceScaling, xW.referenceQuaternion, xW.referencePosition), xW.referenceQuaternion.normalize().conjugateInPlace());
-      let jW = Number.MAX_VALUE;
-      const UW = EW.clipKeys ? [] : null;
-      for (let kW = cW; kW <= tW; kW++) {
-        let WW = bW[kW];
-        if ((UW || EW.cloneOriginalAnimation) && (WW = {
-            frame: WW.frame,
-            value: WW.value.clone ? WW.value.clone() : WW.value,
-            inTangent: WW.inTangent,
-            outTangent: WW.outTangent,
-            interpolation: WW.interpolation,
-            lockedTangent: WW.lockedTangent,
-            easingFunction: WW.easingFunction
-          }, UW && (jW === Number.MAX_VALUE && (jW = WW.frame), WW.frame -= jW, UW.push(WW))), !kW || NW.dataType === sW.ANIMATIONTYPE_FLOAT || WW.value !== wW.value) switch (NW.dataType) {
-          case sW.ANIMATIONTYPE_MATRIX:
-            WW.value.decompose(xW.keyScaling, xW.keyQuaternion, xW.keyPosition), xW.keyPosition.yEW(xW.referencePosition), xW.keyScaling.divideInPlace(xW.referenceScaling), xW.referenceQuaternion.multiplyToRef(xW.keyQuaternion, xW.keyQuaternion), mW.d.ComposeToRef(xW.keyScaling, xW.keyQuaternion, xW.keyPosition, WW.value);
+      uR.dataType === WR.ANIMATIONTYPE_QUATERNION ? wR.referenceValue.normalize().conjugateInPlace() : uR.dataType === WR.ANIMATIONTYPE_MATRIX && (wR.referenceValue.decompose(wR.referenceScaling, wR.referenceQuaternion, wR.referencePosition), wR.referenceQuaternion.normalize().conjugateInPlace());
+      let LR = Number.MAX_VALUE;
+      const nR = tR.clipKeys ? [] : null;
+      for (let UR = iR; UR <= VR; UR++) {
+        let RR = aR[UR];
+        if ((nR || tR.cloneOriginalAnimation) && (RR = {
+            frame: RR.frame,
+            value: RR.value.clone ? RR.value.clone() : RR.value,
+            inTangent: RR.inTangent,
+            outTangent: RR.outTangent,
+            interpolation: RR.interpolation,
+            lockedTangent: RR.lockedTangent,
+            easingFunction: RR.easingFunction
+          }, nR && (LR === Number.MAX_VALUE && (LR = RR.frame), RR.frame -= LR, nR.push(RR))), !UR || uR.dataType === WR.ANIMATIONTYPE_FLOAT || RR.value !== fR.value) switch (uR.dataType) {
+          case WR.ANIMATIONTYPE_MATRIX:
+            RR.value.decompose(wR.keyScaling, wR.keyQuaternion, wR.keyPosition), wR.keyPosition.VuR(wR.referencePosition), wR.keyScaling.divideInPlace(wR.referenceScaling), wR.referenceQuaternion.multiplyToRef(wR.keyQuaternion, wR.keyQuaternion), yR.e.ComposeToRef(wR.keyScaling, wR.keyQuaternion, wR.keyPosition, RR.value);
             break;
-          case sW.ANIMATIONTYPE_QUATERNION:
-            xW.referenceValue.multiplyToRef(WW.value, WW.value);
+          case WR.ANIMATIONTYPE_QUATERNION:
+            wR.referenceValue.multiplyToRef(RR.value, RR.value);
             break;
-          case sW.ANIMATIONTYPE_VECTOR2:
-          case sW.ANIMATIONTYPE_VECTOR3:
-          case sW.ANIMATIONTYPE_COLOR3:
-          case sW.ANIMATIONTYPE_COLOR4:
-            WW.value.subtractToRef(xW.referenceValue, WW.value);
+          case WR.ANIMATIONTYPE_VECTOR2:
+          case WR.ANIMATIONTYPE_VECTOR3:
+          case WR.ANIMATIONTYPE_COLOR3:
+          case WR.ANIMATIONTYPE_COLOR4:
+            RR.value.subtractToRef(wR.referenceValue, RR.value);
             break;
-          case sW.ANIMATIONTYPE_SIZE:
-            WW.value.width -= xW.referenceValue.width, WW.value.height -= xW.referenceValue.height;
+          case WR.ANIMATIONTYPE_SIZE:
+            RR.value.width -= wR.referenceValue.width, RR.value.height -= wR.referenceValue.height;
             break;
           default:
-            WW.value -= xW.referenceValue
+            RR.value -= wR.referenceValue
         }
       }
-      return UW && NW.setKeys(UW, !0), NW
+      return nR && uR.setKeys(nR, !0), uR
     }
 
-    function KW(WW, iW, OW, mW) {
-      const EW = new sW(WW + "Animation", WW, OW, iW, sW.ANIMATIONLOOPMODE_CONSTANT);
-      return EW.setEasingFunction(mW), EW
+    function CR(RR, JR, GR, yR) {
+      const tR = new WR(RR + "Animation", RR, GR, JR, WR.ANIMATIONLOOPMODE_CONSTANT);
+      return tR.setEasingFunction(yR), tR
     }
 
-    function SW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW) {
-      const ZW = sW._PrepareAnimation(WW, OW, mW, EW, NW, PW, LW, cW);
-      return ZW ? (iW.bD && (tW = iW.bD()), tW ? tW.beginDirectAnimation(iW, [ZW], 0, EW, ZW.sO !== sW.ANIMATIONLOOPMODE_CONSTANT, 1, wW) : null) : null
+    function XR(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR, VR) {
+      const KR = WR._PrepareAnimation(RR, GR, yR, tR, uR, ZR, qR, iR);
+      return KR ? (JR.jH && (VR = JR.jH()), VR ? VR.beginDirectAnimation(JR, [KR], 0, tR, KR.nG !== WR.ANIMATIONLOOPMODE_CONSTANT, 1, fR) : null) : null
     }
 
-    function YW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW) {
-      const ZW = sW._PrepareAnimation(WW, mW, EW, NW, PW, LW, cW, wW);
-      if (!ZW) return null;
-      return iW.bD().beginDirectHierarchyAnimation(iW, OW, [ZW], 0, NW, 1 === ZW.sO, 1, tW)
+    function MR(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR, VR) {
+      const KR = WR._PrepareAnimation(RR, yR, tR, uR, ZR, qR, iR, fR);
+      if (!KR) return null;
+      return JR.jH().beginDirectHierarchyAnimation(JR, GR, [KR], 0, uR, 1 === KR.nG, 1, VR)
     }
 
-    function yW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW) {
-      const tW = sW._PrepareAnimation(WW, OW, mW, EW, NW, PW, LW, cW);
-      return tW ? (iW.animations.push(tW), iW.bD().beginAnimation(iW, 0, EW, 1 === tW.sO, 1, wW)) : null
+    function BR(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR) {
+      const VR = WR._PrepareAnimation(RR, GR, yR, tR, uR, ZR, qR, iR);
+      return VR ? (JR.animations.push(VR), JR.jH().beginAnimation(JR, 0, tR, 1 === VR.nG, 1, fR)) : null
     }
 
-    function TW(WW, iW, OW, mW, EW, NW, PW) {
-      let LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        cW = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        wW = arguments.length > 9 ? arguments[9] : void 0;
-      if (PW <= 0) return OW[WW] = iW, LW && LW(), null;
-      const tW = EW * (PW / 1e3);
-      NW.setKeys(wW ?? [{
+    function lR(RR, JR, GR, yR, tR, uR, ZR) {
+      let qR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        iR = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        fR = arguments.length > 9 ? arguments[9] : void 0;
+      if (ZR <= 0) return GR[RR] = JR, qR && qR(), null;
+      const VR = tR * (ZR / 1e3);
+      uR.setKeys(fR ?? [{
         frame: 0,
-        value: OW[WW].clone ? OW[WW].clone() : OW[WW]
+        value: GR[RR].clone ? GR[RR].clone() : GR[RR]
       }, {
-        frame: tW,
-        value: iW
-      }]), OW.animations || (OW.animations = []), OW.animations.push(NW);
-      return mW.beginAnimation(OW, 0, tW, !1, 1, LW ?? void 0, void 0, cW)
+        frame: VR,
+        value: JR
+      }]), GR.animations || (GR.animations = []), GR.animations.push(uR);
+      return yR.beginAnimation(GR, 0, VR, !1, 1, qR ?? void 0, void 0, iR)
     }
 
-    function JW(WW, iW) {
-      tW.d.AppendSerializedAnimations(WW, iW)
+    function pR(RR, JR) {
+      VR.c.AppendSerializedAnimations(RR, JR)
     }
 
-    function hW(WW) {
-      const iW = new sW(WW.name, WW.property, WW.framePerSecond, WW.dataType, WW.loopBehavior),
-        OW = WW.dataType,
-        NW = [];
-      let PW, LW;
-      for (WW.enableBlending && (iW.enableBlending = WW.enableBlending), WW.blendingSpeed && (iW.blendingSpeed = WW.blendingSpeed), LW = 0; LW < WW.keys.length; LW++) {
-        const iW = WW.keys[LW];
-        let cW, wW, tW;
-        switch (OW) {
-          case sW.ANIMATIONTYPE_FLOAT:
-            PW = iW.values[0], iW.values.length >= 2 && (cW = iW.values[1]), iW.values.length >= 3 && (wW = iW.values[2]), iW.values.length >= 4 && (tW = iW.values[3]);
+    function gR(RR) {
+      const JR = new WR(RR.name, RR.property, RR.framePerSecond, RR.dataType, RR.loopBehavior),
+        GR = RR.dataType,
+        uR = [];
+      let ZR, qR;
+      for (RR.enableBlending && (JR.enableBlending = RR.enableBlending), RR.blendingSpeed && (JR.blendingSpeed = RR.blendingSpeed), qR = 0; qR < RR.keys.length; qR++) {
+        const JR = RR.keys[qR];
+        let iR, fR, VR;
+        switch (GR) {
+          case WR.ANIMATIONTYPE_FLOAT:
+            ZR = JR.values[0], JR.values.length >= 2 && (iR = JR.values[1]), JR.values.length >= 3 && (fR = JR.values[2]), JR.values.length >= 4 && (VR = JR.values[3]);
             break;
-          case sW.ANIMATIONTYPE_QUATERNION:
-            if (PW = mW.g.FromArray(iW.values), iW.values.length >= 8) {
-              const WW = mW.g.FromArray(iW.values.slice(4, 8));
-              WW.equals(mW.g.Zero()) || (cW = WW)
+          case WR.ANIMATIONTYPE_QUATERNION:
+            if (ZR = yR.i.FromArray(JR.values), JR.values.length >= 8) {
+              const RR = yR.i.FromArray(JR.values.slice(4, 8));
+              RR.equals(yR.i.Zero()) || (iR = RR)
             }
-            if (iW.values.length >= 12) {
-              const WW = mW.g.FromArray(iW.values.slice(8, 12));
-              WW.equals(mW.g.Zero()) || (wW = WW)
+            if (JR.values.length >= 12) {
+              const RR = yR.i.FromArray(JR.values.slice(8, 12));
+              RR.equals(yR.i.Zero()) || (fR = RR)
             }
-            iW.values.length >= 13 && (tW = iW.values[12]);
+            JR.values.length >= 13 && (VR = JR.values[12]);
             break;
-          case sW.ANIMATIONTYPE_MATRIX:
-            PW = mW.d.FromArray(iW.values), iW.values.length >= 17 && (tW = iW.values[16]);
+          case WR.ANIMATIONTYPE_MATRIX:
+            ZR = yR.e.FromArray(JR.values), JR.values.length >= 17 && (VR = JR.values[16]);
             break;
-          case sW.ANIMATIONTYPE_COLOR3:
-            PW = EW.b.FromArray(iW.values), iW.values[3] && (cW = EW.b.FromArray(iW.values[3])), iW.values[4] && (wW = EW.b.FromArray(iW.values[4])), iW.values[5] && (tW = iW.values[5]);
+          case WR.ANIMATIONTYPE_COLOR3:
+            ZR = tR.d.FromArray(JR.values), JR.values[3] && (iR = tR.d.FromArray(JR.values[3])), JR.values[4] && (fR = tR.d.FromArray(JR.values[4])), JR.values[5] && (VR = JR.values[5]);
             break;
-          case sW.ANIMATIONTYPE_COLOR4:
-            PW = EW.d.FromArray(iW.values), iW.values[4] && (cW = EW.d.FromArray(iW.values[4])), iW.values[5] && (wW = EW.d.FromArray(iW.values[5])), iW.values[6] && (tW = iW.values[6]);
+          case WR.ANIMATIONTYPE_COLOR4:
+            ZR = tR.e.FromArray(JR.values), JR.values[4] && (iR = tR.e.FromArray(JR.values[4])), JR.values[5] && (fR = tR.e.FromArray(JR.values[5])), JR.values[6] && (VR = JR.values[6]);
             break;
-          case sW.ANIMATIONTYPE_VECTOR3:
+          case WR.ANIMATIONTYPE_VECTOR3:
           default:
-            PW = mW.q.FromArray(iW.values), iW.values[3] && (cW = mW.q.FromArray(iW.values[3])), iW.values[4] && (wW = mW.q.FromArray(iW.values[4])), iW.values[5] && (tW = iW.values[5])
+            ZR = yR.r.FromArray(JR.values), JR.values[3] && (iR = yR.r.FromArray(JR.values[3])), JR.values[4] && (fR = yR.r.FromArray(JR.values[4])), JR.values[5] && (VR = JR.values[5])
         }
-        const ZW = {};
-        ZW.frame = iW.frame, ZW.value = PW, void 0 != cW && (ZW.inTangent = cW), void 0 != wW && (ZW.outTangent = wW), void 0 != tW && (ZW.interpolation = tW), NW.push(ZW)
+        const KR = {};
+        KR.frame = JR.frame, KR.value = ZR, void 0 != iR && (KR.inTangent = iR), void 0 != fR && (KR.outTangent = fR), void 0 != VR && (KR.interpolation = VR), uR.push(KR)
       }
-      if (iW.setKeys(NW), WW.kj)
-        for (LW = 0; LW < WW.kj.length; LW++) PW = WW.kj[LW], iW.createRange(PW.name, PW.from, PW.to);
-      return iW
+      if (JR.setKeys(uR), RR.WL)
+        for (qR = 0; qR < RR.WL.length; qR++) ZR = RR.WL[qR], JR.createRange(ZR.name, ZR.from, ZR.to);
+      return JR
     }
-    async function HW(WW, iW) {
-      return await new Promise(((OW, mW) => {
-        const EW = new wW.c;
-        EW.addEventListener("readystatechange", (() => {
-          if (4 == EW.readyState)
-            if (200 == EW.status) {
-              let iW = JSON.parse(EW.responseText);
-              if (iW.animations && (iW = iW.animations), iW.length) {
-                const WW = [];
-                for (const OW of iW) WW.push(hW(OW));
-                OW(WW)
+    async function bR(RR, JR) {
+      return await new Promise(((GR, yR) => {
+        const tR = new fR.c;
+        tR.addEventListener("readystatechange", (() => {
+          if (4 == tR.readyState)
+            if (200 == tR.status) {
+              let JR = JSON.parse(tR.responseText);
+              if (JR.animations && (JR = JR.animations), JR.length) {
+                const RR = [];
+                for (const GR of JR) RR.push(gR(GR));
+                GR(RR)
               } else {
-                const mW = hW(iW);
-                WW && (mW.name = WW), OW(mW)
+                const yR = gR(JR);
+                RR && (yR.name = RR), GR(yR)
               }
-            } else mW("Unable to load the animation")
-        })), EW.open("GET", iW), EW.send()
+            } else yR("Unable to load the animation")
+        })), tR.open("GET", JR), tR.send()
       }))
     }
-    async function nW(WW) {
-      const iW = this?.SnippetUrl ?? sW.SnippetUrl;
-      return await new Promise(((OW, mW) => {
-        const EW = new wW.c;
-        EW.addEventListener("readystatechange", (() => {
-          if (4 == EW.readyState)
-            if (200 == EW.status) {
-              const iW = JSON.parse(JSON.parse(EW.responseText).jsonPayload);
-              if (iW.animations) {
-                const mW = JSON.parse(iW.animations),
-                  EW = [];
-                for (const iW of mW.animations) {
-                  const OW = hW(iW);
-                  OW.snippetId = WW, EW.push(OW)
+    async function vR(RR) {
+      const JR = this?.SnippetUrl ?? WR.SnippetUrl;
+      return await new Promise(((GR, yR) => {
+        const tR = new fR.c;
+        tR.addEventListener("readystatechange", (() => {
+          if (4 == tR.readyState)
+            if (200 == tR.status) {
+              const JR = JSON.parse(JSON.parse(tR.responseText).jsonPayload);
+              if (JR.animations) {
+                const yR = JSON.parse(JR.animations),
+                  tR = [];
+                for (const JR of yR.animations) {
+                  const GR = gR(JR);
+                  GR.snippetId = RR, tR.push(GR)
                 }
-                OW(EW)
+                GR(tR)
               } else {
-                const mW = hW(JSON.parse(iW.animation));
-                mW.snippetId = WW, OW(mW)
+                const yR = gR(JSON.parse(JR.animation));
+                yR.snippetId = RR, GR(yR)
               }
-            } else mW("Unable to load the snippet " + WW)
-        })), EW.open("GET", iW + "/" + WW.replace(/#/g, "/")), EW.send()
+            } else yR("Unable to load the snippet " + RR)
+        })), tR.open("GET", JR + "/" + RR.replace(/#/g, "/")), tR.send()
       }))
     }
-    sW._UniqueIdGenerator = 0, sW.AllowMatricesInterpolation = !1, sW.AllowMatrixDecomposeForInterpolation = !0, sW.InheritOriginalValueFromActiveAnimations = !1, sW.SnippetUrl = "https://snippet.babylonjs.com", sW.ANIMATIONTYPE_FLOAT = 0, sW.ANIMATIONTYPE_VECTOR3 = 1, sW.ANIMATIONTYPE_QUATERNION = 2, sW.ANIMATIONTYPE_MATRIX = 3, sW.ANIMATIONTYPE_COLOR3 = 4, sW.ANIMATIONTYPE_COLOR4 = 7, sW.ANIMATIONTYPE_VECTOR2 = 5, sW.ANIMATIONTYPE_SIZE = 6, sW.ANIMATIONLOOPMODE_RELATIVE = 0, sW.ANIMATIONLOOPMODE_CYCLE = 1, sW.ANIMATIONLOOPMODE_CONSTANT = 2, sW.ANIMATIONLOOPMODE_YOYO = 4, sW.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const uW = nW;
-    let oW = !1;
+    WR._UniqueIdGenerator = 0, WR.AllowMatricesInterpolation = !1, WR.AllowMatrixDecomposeForInterpolation = !0, WR.InheritOriginalValueFromActiveAnimations = !1, WR.SnippetUrl = "https://snippet.babylonjs.com", WR.ANIMATIONTYPE_FLOAT = 0, WR.ANIMATIONTYPE_VECTOR3 = 1, WR.ANIMATIONTYPE_QUATERNION = 2, WR.ANIMATIONTYPE_MATRIX = 3, WR.ANIMATIONTYPE_COLOR3 = 4, WR.ANIMATIONTYPE_COLOR4 = 7, WR.ANIMATIONTYPE_VECTOR2 = 5, WR.ANIMATIONTYPE_SIZE = 6, WR.ANIMATIONLOOPMODE_RELATIVE = 0, WR.ANIMATIONLOOPMODE_CYCLE = 1, WR.ANIMATIONLOOPMODE_CONSTANT = 2, WR.ANIMATIONLOOPMODE_YOYO = 4, WR.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const OR = vR;
+    let xR = !1;
 
-    function dW() {
-      oW || (oW = !0, sW.Parse = hW, sW.ParseFromFileAsync = HW, sW.ParseFromSnippetAsync = nW, sW.CreateFromSnippetAsync = uW, sW.CreateAnimation = KW, sW.CreateAndStartAnimation = SW, sW.CreateAndStartHierarchyAnimation = YW, sW.CreateMergeAndStartAnimation = yW, sW.MakeAnimationAdditive = MW, sW.TransitionTo = TW, sW.AppendSerializedAnimations = JW, (0, ZW.h)("BABYLON.Animation", sW), LW.d._AnimationRangeFactory = (WW, iW, OW) => new PW.c(WW, iW, OW))
+    function NR() {
+      xR || (xR = !0, WR.Parse = gR, WR.ParseFromFileAsync = bR, WR.ParseFromSnippetAsync = vR, WR.CreateFromSnippetAsync = OR, WR.CreateAnimation = CR, WR.CreateAndStartAnimation = XR, WR.CreateAndStartHierarchyAnimation = MR, WR.CreateMergeAndStartAnimation = BR, WR.MakeAnimationAdditive = AR, WR.TransitionTo = lR, WR.AppendSerializedAnimations = pR, (0, KR.f)("BABYLON.Animation", WR), qR.d._AnimationRangeFactory = (RR, JR, GR) => new ZR.b(RR, JR, GR))
     }
   },
-  42586: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  42641: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR
     });
-    class mW {
-      constructor(WW, iW, OW) {
-        this.name = WW, this.from = iW, this.to = OW
+    class yR {
+      constructor(RR, JR, GR) {
+        this.name = RR, this.from = JR, this.to = GR
       }
       clone() {
-        return new mW(this.name, this.from, this.to)
+        return new yR(this.name, this.from, this.to)
       }
     }
   },
-  42635: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW.b,
-      g: () => mW.k
+  42711: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR.d,
+      c: () => yR.l
     });
-    var mW = OW(41660);
-    (0, mW.c)()
+    var yR = GR(41663);
+    (0, yR.g)()
   },
-  42616: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW.h
+  42685: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR.f
     });
-    var mW = OW(41992);
-    (0, mW.e)()
+    var yR = GR(42011);
+    (0, yR.b)()
   },
-  42599: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW.e
+  42657: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR.d
     });
-    var mW = OW(41976);
-    (0, mW.i)()
+    var yR = GR(42003);
+    (0, yR.f)()
   },
-  42641: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW.e
+  42714: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR.e
     });
-    var mW = OW(41919);
-    (0, mW.h)()
+    var yR = GR(41941);
+    (0, yR.g)()
   },
-  42588: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW.f
+  42644: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR.d
     });
-    var mW = OW(41948);
-    (0, mW.d)()
+    var yR = GR(41979);
+    (0, yR.c)()
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

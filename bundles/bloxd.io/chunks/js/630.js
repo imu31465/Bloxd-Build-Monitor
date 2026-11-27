@@ -1,176 +1,176 @@
 export const id = 630;
 export const ids = [630];
 export const modules = {
-  54017: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      _HDRTextureLoader: () => tW
+  53869: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      _HDRTextureLoader: () => VR
     });
-    var mW = OW(38241);
-    class EW {
-      static ConvertPanoramaToCubemap(WW, iW, OW, mW) {
-        let EW, NW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          PW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        if (!WW) throw "ConvertPanoramaToCubemap: input cannot be null";
-        if (WW.length != iW * OW * 3) {
-          if (WW.length != iW * OW * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
-          EW = 4
-        } else EW = 3;
+    var yR = GR(38204);
+    class tR {
+      static ConvertPanoramaToCubemap(RR, JR, GR, yR) {
+        let tR, uR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          ZR = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        if (!RR) throw "ConvertPanoramaToCubemap: input cannot be null";
+        if (RR.length != JR * GR * 3) {
+          if (RR.length != JR * GR * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
+          tR = 4
+        } else tR = 3;
         return {
-          front: this.CreateCubemapTexture(mW, this.FACE_FRONT, WW, iW, OW, NW, PW, EW),
-          back: this.CreateCubemapTexture(mW, this.FACE_BACK, WW, iW, OW, NW, PW, EW),
-          left: this.CreateCubemapTexture(mW, this.FACE_LEFT, WW, iW, OW, NW, PW, EW),
-          right: this.CreateCubemapTexture(mW, this.FACE_RIGHT, WW, iW, OW, NW, PW, EW),
-          up: this.CreateCubemapTexture(mW, this.FACE_UP, WW, iW, OW, NW, PW, EW),
-          down: this.CreateCubemapTexture(mW, this.FACE_DOWN, WW, iW, OW, NW, PW, EW),
-          size: mW,
+          front: this.CreateCubemapTexture(yR, this.FACE_FRONT, RR, JR, GR, uR, ZR, tR),
+          back: this.CreateCubemapTexture(yR, this.FACE_BACK, RR, JR, GR, uR, ZR, tR),
+          left: this.CreateCubemapTexture(yR, this.FACE_LEFT, RR, JR, GR, uR, ZR, tR),
+          right: this.CreateCubemapTexture(yR, this.FACE_RIGHT, RR, JR, GR, uR, ZR, tR),
+          up: this.CreateCubemapTexture(yR, this.FACE_UP, RR, JR, GR, uR, ZR, tR),
+          down: this.CreateCubemapTexture(yR, this.FACE_DOWN, RR, JR, GR, uR, ZR, tR),
+          size: yR,
           type: 1,
           format: 4,
           gammaSpace: !1
         }
       }
-      static CreateCubemapTexture(WW, iW, OW, mW, EW, NW, PW, LW) {
-        const cW = new ArrayBuffer(WW * WW * 4 * 3),
-          wW = new Float32Array(cW),
-          tW = NW ? Math.max(1, Math.round(mW / 4 / WW)) : 1,
-          ZW = 1 / tW,
-          xW = ZW * ZW,
-          lW = iW[1].subtract(iW[0]).scale(ZW / WW),
-          AW = iW[3].subtract(iW[2]).scale(ZW / WW),
-          bW = 1 / WW;
-        let jW = 0;
-        for (let UW = 0; UW < WW; UW++)
-          for (let NW = 0; NW < tW; NW++) {
-            let NW = iW[0],
-              cW = iW[2];
-            for (let iW = 0; iW < WW; iW++)
-              for (let ZW = 0; ZW < tW; ZW++) {
-                const tW = cW.subtract(NW).scale(jW).add(NW);
-                tW.normalize();
-                const ZW = this.CalcProjectionSpherical(tW, OW, mW, EW, LW, PW);
-                wW[UW * WW * 3 + 3 * iW + 0] += ZW.r * xW, wW[UW * WW * 3 + 3 * iW + 1] += ZW.g * xW, wW[UW * WW * 3 + 3 * iW + 2] += ZW.b * xW, NW = NW.add(lW), cW = cW.add(AW)
+      static CreateCubemapTexture(RR, JR, GR, yR, tR, uR, ZR, qR) {
+        const iR = new ArrayBuffer(RR * RR * 4 * 3),
+          fR = new Float32Array(iR),
+          VR = uR ? Math.max(1, Math.round(yR / 4 / RR)) : 1,
+          KR = 1 / VR,
+          wR = KR * KR,
+          rR = JR[1].subtract(JR[0]).scale(KR / RR),
+          eR = JR[3].subtract(JR[2]).scale(KR / RR),
+          aR = 1 / RR;
+        let LR = 0;
+        for (let nR = 0; nR < RR; nR++)
+          for (let uR = 0; uR < VR; uR++) {
+            let uR = JR[0],
+              iR = JR[2];
+            for (let JR = 0; JR < RR; JR++)
+              for (let KR = 0; KR < VR; KR++) {
+                const VR = iR.subtract(uR).scale(LR).add(uR);
+                VR.normalize();
+                const KR = this.CalcProjectionSpherical(VR, GR, yR, tR, qR, ZR);
+                fR[nR * RR * 3 + 3 * JR + 0] += KR.r * wR, fR[nR * RR * 3 + 3 * JR + 1] += KR.g * wR, fR[nR * RR * 3 + 3 * JR + 2] += KR.b * wR, uR = uR.add(rR), iR = iR.add(eR)
               }
-            jW += bW * ZW
+            LR += aR * KR
           }
-        return wW
+        return fR
       }
-      static CalcProjectionSpherical(WW, iW, OW, mW, EW, NW) {
-        let PW = Math.atan2(WW.z, WW.x);
-        const LW = Math.acos(WW.y);
-        for (; PW < -Math.PI;) PW += 2 * Math.PI;
-        for (; PW > Math.PI;) PW -= 2 * Math.PI;
-        let cW = PW / Math.PI;
-        const wW = LW / Math.PI;
-        cW = .5 * cW + .5;
-        let tW = Math.round(cW * OW);
-        tW < 0 ? tW = 0 : tW >= OW && (tW = OW - 1);
-        let ZW = Math.round(wW * mW);
-        ZW < 0 ? ZW = 0 : ZW >= mW && (ZW = mW - 1);
-        const xW = NW ? mW - ZW - 1 : ZW;
+      static CalcProjectionSpherical(RR, JR, GR, yR, tR, uR) {
+        let ZR = Math.atan2(RR.z, RR.x);
+        const qR = Math.acos(RR.y);
+        for (; ZR < -Math.PI;) ZR += 2 * Math.PI;
+        for (; ZR > Math.PI;) ZR -= 2 * Math.PI;
+        let iR = ZR / Math.PI;
+        const fR = qR / Math.PI;
+        iR = .5 * iR + .5;
+        let VR = Math.round(iR * GR);
+        VR < 0 ? VR = 0 : VR >= GR && (VR = GR - 1);
+        let KR = Math.round(fR * yR);
+        KR < 0 ? KR = 0 : KR >= yR && (KR = yR - 1);
+        const wR = uR ? yR - KR - 1 : KR;
         return {
-          r: iW[xW * OW * EW + tW * EW + 0],
-          g: iW[xW * OW * EW + tW * EW + 1],
-          b: iW[xW * OW * EW + tW * EW + 2]
+          r: JR[wR * GR * tR + VR * tR + 0],
+          g: JR[wR * GR * tR + VR * tR + 1],
+          b: JR[wR * GR * tR + VR * tR + 2]
         }
       }
     }
 
-    function NW(WW, iW, OW, mW, EW, NW) {
-      EW > 0 ? (EW = function(WW, iW) {
-        return iW > 1023 ? WW * Math.pow(2, 1023) * Math.pow(2, iW - 1023) : iW < -1074 ? WW * Math.pow(2, -1074) * Math.pow(2, iW + 1074) : WW * Math.pow(2, iW)
-      }(1, EW - 136), WW[NW + 0] = iW * EW, WW[NW + 1] = OW * EW, WW[NW + 2] = mW * EW) : (WW[NW + 0] = 0, WW[NW + 1] = 0, WW[NW + 2] = 0)
+    function uR(RR, JR, GR, yR, tR, uR) {
+      tR > 0 ? (tR = function(RR, JR) {
+        return JR > 1023 ? RR * Math.pow(2, 1023) * Math.pow(2, JR - 1023) : JR < -1074 ? RR * Math.pow(2, -1074) * Math.pow(2, JR + 1074) : RR * Math.pow(2, JR)
+      }(1, tR - 136), RR[uR + 0] = JR * tR, RR[uR + 1] = GR * tR, RR[uR + 2] = yR * tR) : (RR[uR + 0] = 0, RR[uR + 1] = 0, RR[uR + 2] = 0)
     }
 
-    function PW(WW, iW) {
-      let OW, mW = "";
-      for (let EW = iW; EW < WW.length - iW && (OW = String.fromCharCode(WW[EW]), "\n" != OW); EW++) mW += OW;
-      return mW
+    function ZR(RR, JR) {
+      let GR, yR = "";
+      for (let tR = JR; tR < RR.length - JR && (GR = String.fromCharCode(RR[tR]), "\n" != GR); tR++) yR += GR;
+      return yR
     }
 
-    function LW(WW) {
-      let iW = PW(WW, 0);
-      if ("#" != iW[0] || "?" != iW[1]) throw "Bad HDR Format.";
-      let OW = !1,
-        mW = !1,
-        EW = 0;
+    function qR(RR) {
+      let JR = ZR(RR, 0);
+      if ("#" != JR[0] || "?" != JR[1]) throw "Bad HDR Format.";
+      let GR = !1,
+        yR = !1,
+        tR = 0;
       do {
-        EW += iW.length + 1, iW = PW(WW, EW), "FORMAT=32-bit_rle_rgbe" == iW ? mW = !0 : 0 == iW.length && (OW = !0)
-      } while (!OW);
-      if (!mW) throw "HDR Bad header format, unsupported FORMAT";
-      EW += iW.length + 1, iW = PW(WW, EW);
-      const NW = /^-Y (.*) \+X (.*)$/g.exec(iW);
-      if (!NW || NW.length < 3) throw "HDR Bad header format, no size";
-      const LW = parseInt(NW[2]),
-        cW = parseInt(NW[1]);
-      if (LW < 8 || LW > 32767) throw "HDR Bad header format, unsupported size";
-      return EW += iW.length + 1, {
-        height: cW,
-        width: LW,
-        dataPosition: EW
+        tR += JR.length + 1, JR = ZR(RR, tR), "FORMAT=32-bit_rle_rgbe" == JR ? yR = !0 : 0 == JR.length && (GR = !0)
+      } while (!GR);
+      if (!yR) throw "HDR Bad header format, unsupported FORMAT";
+      tR += JR.length + 1, JR = ZR(RR, tR);
+      const uR = /^-Y (.*) \+X (.*)$/g.exec(JR);
+      if (!uR || uR.length < 3) throw "HDR Bad header format, no size";
+      const qR = parseInt(uR[2]),
+        iR = parseInt(uR[1]);
+      if (qR < 8 || qR > 32767) throw "HDR Bad header format, unsupported size";
+      return tR += JR.length + 1, {
+        height: iR,
+        width: qR,
+        dataPosition: tR
       }
     }
 
-    function cW(WW, iW) {
-      return function(WW, iW) {
-        let OW = iW.height;
-        const mW = iW.width;
-        let EW, PW, LW, cW, tW, ZW, xW, lW, AW = iW.dataPosition;
-        const bW = new ArrayBuffer(4 * mW),
-          jW = new Uint8Array(bW),
-          UW = new ArrayBuffer(iW.width * iW.height * 4 * 3),
-          kW = new Float32Array(UW);
-        for (; OW > 0;) {
-          if (EW = WW[AW++], PW = WW[AW++], LW = WW[AW++], cW = WW[AW++], 2 != EW || 2 != PW || 128 & LW || iW.width < 8 || iW.width > 32767) return wW(WW, iW);
-          if ((LW << 8 | cW) != mW) throw "HDR Bad header format, wrong scan line width";
-          for (ZW = 0, lW = 0; lW < 4; lW++)
-            for (xW = (lW + 1) * mW; ZW < xW;)
-              if (EW = WW[AW++], PW = WW[AW++], EW > 128) {
-                if (tW = EW - 128, 0 == tW || tW > xW - ZW) throw "HDR Bad Format, bad scanline data (run)";
-                for (; tW-- > 0;) jW[ZW++] = PW
+    function iR(RR, JR) {
+      return function(RR, JR) {
+        let GR = JR.height;
+        const yR = JR.width;
+        let tR, ZR, qR, iR, VR, KR, wR, rR, eR = JR.dataPosition;
+        const aR = new ArrayBuffer(4 * yR),
+          LR = new Uint8Array(aR),
+          nR = new ArrayBuffer(JR.width * JR.height * 4 * 3),
+          UR = new Float32Array(nR);
+        for (; GR > 0;) {
+          if (tR = RR[eR++], ZR = RR[eR++], qR = RR[eR++], iR = RR[eR++], 2 != tR || 2 != ZR || 128 & qR || JR.width < 8 || JR.width > 32767) return fR(RR, JR);
+          if ((qR << 8 | iR) != yR) throw "HDR Bad header format, wrong scan line width";
+          for (KR = 0, rR = 0; rR < 4; rR++)
+            for (wR = (rR + 1) * yR; KR < wR;)
+              if (tR = RR[eR++], ZR = RR[eR++], tR > 128) {
+                if (VR = tR - 128, 0 == VR || VR > wR - KR) throw "HDR Bad Format, bad scanline data (run)";
+                for (; VR-- > 0;) LR[KR++] = ZR
               } else {
-                if (tW = EW, 0 == tW || tW > xW - ZW) throw "HDR Bad Format, bad scanline data (non-run)";
-                if (jW[ZW++] = PW, --tW > 0)
-                  for (let iW = 0; iW < tW; iW++) jW[ZW++] = WW[AW++]
-              } for (lW = 0; lW < mW; lW++) EW = jW[lW], PW = jW[lW + mW], LW = jW[lW + 2 * mW], cW = jW[lW + 3 * mW], NW(kW, EW, PW, LW, cW, (iW.height - OW) * mW * 3 + 3 * lW);
-          OW--
+                if (VR = tR, 0 == VR || VR > wR - KR) throw "HDR Bad Format, bad scanline data (non-run)";
+                if (LR[KR++] = ZR, --VR > 0)
+                  for (let JR = 0; JR < VR; JR++) LR[KR++] = RR[eR++]
+              } for (rR = 0; rR < yR; rR++) tR = LR[rR], ZR = LR[rR + yR], qR = LR[rR + 2 * yR], iR = LR[rR + 3 * yR], uR(UR, tR, ZR, qR, iR, (JR.height - GR) * yR * 3 + 3 * rR);
+          GR--
         }
-        return kW
-      }(WW, iW)
+        return UR
+      }(RR, JR)
     }
 
-    function wW(WW, iW) {
-      let OW = iW.height;
-      const mW = iW.width;
-      let EW, PW, LW, cW, wW, tW = iW.dataPosition;
-      const ZW = new ArrayBuffer(iW.width * iW.height * 4 * 3),
-        xW = new Float32Array(ZW);
-      for (; OW > 0;) {
-        for (wW = 0; wW < iW.width; wW++) EW = WW[tW++], PW = WW[tW++], LW = WW[tW++], cW = WW[tW++], NW(xW, EW, PW, LW, cW, (iW.height - OW) * mW * 3 + 3 * wW);
-        OW--
+    function fR(RR, JR) {
+      let GR = JR.height;
+      const yR = JR.width;
+      let tR, ZR, qR, iR, fR, VR = JR.dataPosition;
+      const KR = new ArrayBuffer(JR.width * JR.height * 4 * 3),
+        wR = new Float32Array(KR);
+      for (; GR > 0;) {
+        for (fR = 0; fR < JR.width; fR++) tR = RR[VR++], ZR = RR[VR++], qR = RR[VR++], iR = RR[VR++], uR(wR, tR, ZR, qR, iR, (JR.height - GR) * yR * 3 + 3 * fR);
+        GR--
       }
-      return xW
+      return wR
     }
-    EW.FACE_LEFT = [new mW.q(-1, -1, -1), new mW.q(1, -1, -1), new mW.q(-1, 1, -1), new mW.q(1, 1, -1)], EW.FACE_RIGHT = [new mW.q(1, -1, 1), new mW.q(-1, -1, 1), new mW.q(1, 1, 1), new mW.q(-1, 1, 1)], EW.FACE_FRONT = [new mW.q(1, -1, -1), new mW.q(1, -1, 1), new mW.q(1, 1, -1), new mW.q(1, 1, 1)], EW.FACE_BACK = [new mW.q(-1, -1, 1), new mW.q(-1, -1, -1), new mW.q(-1, 1, 1), new mW.q(-1, 1, -1)], EW.FACE_DOWN = [new mW.q(1, 1, -1), new mW.q(1, 1, 1), new mW.q(-1, 1, -1), new mW.q(-1, 1, 1)], EW.FACE_UP = [new mW.q(-1, -1, -1), new mW.q(-1, -1, 1), new mW.q(1, -1, -1), new mW.q(1, -1, 1)];
-    class tW {
+    tR.FACE_LEFT = [new yR.r(-1, -1, -1), new yR.r(1, -1, -1), new yR.r(-1, 1, -1), new yR.r(1, 1, -1)], tR.FACE_RIGHT = [new yR.r(1, -1, 1), new yR.r(-1, -1, 1), new yR.r(1, 1, 1), new yR.r(-1, 1, 1)], tR.FACE_FRONT = [new yR.r(1, -1, -1), new yR.r(1, -1, 1), new yR.r(1, 1, -1), new yR.r(1, 1, 1)], tR.FACE_BACK = [new yR.r(-1, -1, 1), new yR.r(-1, -1, -1), new yR.r(-1, 1, 1), new yR.r(-1, 1, -1)], tR.FACE_DOWN = [new yR.r(1, 1, -1), new yR.r(1, 1, 1), new yR.r(-1, 1, -1), new yR.r(-1, 1, 1)], tR.FACE_UP = [new yR.r(-1, -1, -1), new yR.r(-1, -1, 1), new yR.r(1, -1, -1), new yR.r(1, -1, 1)];
+    class VR {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".hdr not supported in Cube."
       }
-      loadData(WW, iW, OW) {
-        const mW = new Uint8Array(WW.buffer, WW.byteOffset, WW.byteLength),
-          EW = LW(mW),
-          NW = cW(mW, EW),
-          PW = EW.width * EW.height,
-          wW = new Float32Array(4 * PW);
-        for (let LW = 0; LW < PW; LW += 1) wW[4 * LW] = NW[3 * LW], wW[4 * LW + 1] = NW[3 * LW + 1], wW[4 * LW + 2] = NW[3 * LW + 2], wW[4 * LW + 3] = 1;
-        OW(EW.width, EW.height, iW.generateMipMaps, !1, (() => {
-          const WW = iW.VA();
-          iW.type = 1, iW.format = 5, iW._gammaSpace = !1, WW._uploadDataToTextureDirectly(iW, wW)
+      loadData(RR, JR, GR) {
+        const yR = new Uint8Array(RR.buffer, RR.byteOffset, RR.byteLength),
+          tR = qR(yR),
+          uR = iR(yR, tR),
+          ZR = tR.width * tR.height,
+          fR = new Float32Array(4 * ZR);
+        for (let qR = 0; qR < ZR; qR += 1) fR[4 * qR] = uR[3 * qR], fR[4 * qR + 1] = uR[3 * qR + 1], fR[4 * qR + 2] = uR[3 * qR + 2], fR[4 * qR + 3] = 1;
+        GR(tR.width, tR.height, JR.generateMipMaps, !1, (() => {
+          const RR = JR.ke();
+          JR.type = 1, JR.format = 5, JR._gammaSpace = !1, RR._uploadDataToTextureDirectly(JR, fR)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

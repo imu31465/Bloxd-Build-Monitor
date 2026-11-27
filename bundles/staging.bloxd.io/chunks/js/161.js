@@ -1,727 +1,727 @@
 export const id = 161;
 export const ids = [161];
 export const modules = {
-  35086: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      c: () => PW
+  34989: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      i: () => ZR
     });
-    var mW = OW(248),
-      EW = OW(131),
-      NW = OW(35089);
+    var yR = GR(279),
+      tR = GR(132),
+      uR = GR(34996);
 
-    function PW() {
-      var WW, iW, OW;
-      return null !== (WW = (0, mW.m)(null !== (iW = null === (OW = (0, EW.j)()) || void 0 === OW ? void 0 : OW.renderer) && void 0 !== iW ? iW : null, (0, EW.f)())) && void 0 !== WW ? WW : "unknown"
+    function ZR() {
+      var RR, JR, GR;
+      return null !== (RR = (0, yR.o)(null !== (JR = null === (GR = (0, tR.o)()) || void 0 === GR ? void 0 : GR.renderer) && void 0 !== JR ? JR : null, (0, tR.k)())) && void 0 !== RR ? RR : "unknown"
     }
 
-    function LW(WW, iW, OW, mW, EW) {
-      const PW = null === iW ? "untimed" : `${Math.round(iW)} ms`;
-      return `frames stalled, ${OW}, gpu ${(0,NW.d)(EW)}, blocking ${PW}, drawn ${Math.round(WW)} ms apart, timers ${mW.timers}, timer gap ${Math.round(mW.longestGapMs)} ms`
+    function qR(RR, JR, GR, yR, tR) {
+      const ZR = null === JR ? "untimed" : `${Math.round(JR)} ms`;
+      return `frames stalled, ${GR}, gpu ${(0,uR.e)(tR)}, blocking ${ZR}, drawn ${Math.round(RR)} ms apart, timers ${yR.timers}, timer gap ${Math.round(yR.longestGapMs)} ms`
     }
   },
-  40267: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW
+  40310: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR
     });
-    var mW = OW(10181),
-      EW = OW(37727),
-      NW = OW(40269);
-    const PW = {
+    var yR = GR(10298),
+      tR = GR(37640),
+      uR = GR(40317);
+    const ZR = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      LW = {
+      qR = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function cW(WW, iW) {
-      if (WW instanceof EW.c) return {
-        at: PW[iW],
+    function iR(RR, JR) {
+      if (RR instanceof tR.g) return {
+        at: ZR[JR],
         code: 0
       };
-      const OW = (0, mW.f)(WW),
-        cW = "number" === typeof OW ? OW : 0;
-      return null !== (0, NW.i)(cW).name ? {
+      const GR = (0, yR.h)(RR),
+        iR = "number" === typeof GR ? GR : 0;
+      return null !== (0, uR.e)(iR).name ? {
         at: "refused",
-        code: cW
+        code: iR
       } : {
-        at: LW[iW],
-        code: cW
+        at: qR[JR],
+        code: iR
       }
     }
   },
-  10181: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => PW,
-      h: () => LW,
-      k: () => wW,
-      n: () => cW
+  10298: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      h: () => ZR,
+      k: () => qR,
+      n: () => fR,
+      p: () => iR
     });
-    var mW = OW(182),
-      EW = OW(5318);
+    var yR = GR(203),
+      tR = GR(5425);
 
-    function NW(WW) {
-      return PW(WW) === mW.e.gameOrPluginOnPlayerAuthRejected.code
+    function uR(RR) {
+      return ZR(RR) === yR.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function PW(WW) {
-      return "object" === typeof WW && null !== WW ? WW.code : void 0
+    function ZR(RR) {
+      return "object" === typeof RR && null !== RR ? RR.code : void 0
     }
 
-    function LW(WW) {
-      var iW;
-      return null !== (iW = Object.keys(EW.d).find((iW => EW.d[iW] === WW))) && void 0 !== iW ? iW : null
+    function qR(RR) {
+      var JR;
+      return null !== (JR = Object.keys(tR.d).find((JR => tR.d[JR] === RR))) && void 0 !== JR ? JR : null
     }
 
-    function cW(WW) {
-      return "notWhitelisted" === WW ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function iR(RR) {
+      return "notWhitelisted" === RR ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const wW = {
+    const fR = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  35089: (WW, iW, OW) => {
-    function mW(WW) {
-      return String(WW).replace(/\d/g, (WW => String.fromCharCode(97 + Number(WW))))
+  34996: (RR, JR, GR) => {
+    function yR(RR) {
+      return String(RR).replace(/\d/g, (RR => String.fromCharCode(97 + Number(RR))))
     }
-    OW.d(iW, {
-      d: () => mW
+    GR.d(JR, {
+      e: () => yR
     })
   },
-  40269: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      i: () => cW,
-      k: () => PW,
-      n: () => EW
+  40317: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => iR,
+      f: () => ZR,
+      h: () => tR
     });
-    var mW = OW(182);
+    var yR = GR(203);
 
-    function EW(WW) {
-      const iW = WW.endsWith(mW.j);
+    function tR(RR) {
+      const JR = RR.endsWith(yR.k);
       return {
-        text: (iW ? WW.slice(0, -mW.j.length) : WW) || null,
-        dropsCache: iW
+        text: (JR ? RR.slice(0, -yR.k.length) : RR) || null,
+        dropsCache: JR
       }
     }
-    const NW = "Either your internet isn't working or this is a bug.";
+    const uR = "Either your internet isn't working or this is a bug.";
 
-    function PW(WW, iW) {
-      const OW = cW(WW);
-      return null !== OW.name && "" === mW.e[OW.name].text && null !== iW ? iW : OW.reason
+    function ZR(RR, JR) {
+      const GR = iR(RR);
+      return null !== GR.name && "" === yR.e[GR.name].text && null !== JR ? JR : GR.reason
     }
-    const LW = "You were removed from the game.";
+    const qR = "You were removed from the game.";
 
-    function cW(WW) {
-      var iW;
-      let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const EW = null !== (iW = Object.keys(mW.e).find((iW => mW.e[iW].code === WW))) && void 0 !== iW ? iW : null;
-      if (null === EW) return {
-        code: WW,
-        name: EW,
-        reason: null !== OW && void 0 !== OW ? OW : `${NW}\nCode: ${WW}`,
+    function iR(RR) {
+      var JR;
+      let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const tR = null !== (JR = Object.keys(yR.e).find((JR => yR.e[JR].code === RR))) && void 0 !== JR ? JR : null;
+      if (null === tR) return {
+        code: RR,
+        name: tR,
+        reason: null !== GR && void 0 !== GR ? GR : `${uR}\nCode: ${RR}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: PW,
-        canReconnect: cW = !1
-      } = mW.e[EW], wW = WW === mW.e.outdatedVersion.code || WW === mW.e.loadRecaptchaError.code;
+        text: ZR,
+        canReconnect: iR = !1
+      } = yR.e[tR], fR = RR === yR.e.outdatedVersion.code || RR === yR.e.loadRecaptchaError.code;
       return {
-        code: WW,
-        name: EW,
-        reason: "" !== PW ? PW : null !== OW && void 0 !== OW ? OW : WW === mW.e.gameOrPluginKick.code ? LW : `Code: ${WW}`,
-        canReconnect: cW,
-        automaticallyReconnect: WW === mW.e.customGameUpdated.code || WW === mW.e.duplicateLobbyNameError.code,
-        requiresRefresh: wW
+        code: RR,
+        name: tR,
+        reason: "" !== ZR ? ZR : null !== GR && void 0 !== GR ? GR : RR === yR.e.gameOrPluginKick.code ? qR : `Code: ${RR}`,
+        canReconnect: iR,
+        automaticallyReconnect: RR === yR.e.customGameUpdated.code || RR === yR.e.duplicateLobbyNameError.code,
+        requiresRefresh: fR
       }
     }
   },
-  42158: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW,
-      g: () => tW,
-      j: () => PW,
-      m: () => EW,
-      n: () => LW,
-      p: () => wW
+  42170: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR,
+      f: () => VR,
+      h: () => ZR,
+      i: () => tR,
+      j: () => qR,
+      l: () => fR
     });
-    class mW extends Error {
+    class yR extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function EW(WW) {
-      return WW instanceof RangeError && /call stack/i.test(WW.message) || WW instanceof Error && "InternalError" === WW.name && /recursion/i.test(WW.message)
+    function tR(RR) {
+      return RR instanceof RangeError && /call stack/i.test(RR.message) || RR instanceof Error && "InternalError" === RR.name && /recursion/i.test(RR.message)
     }
-    const NW = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const uR = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function PW(WW) {
-      var iW;
-      return WW instanceof WebAssembly.RuntimeError || WW instanceof mW || EW(WW) && NW.test(null !== (iW = WW.stack) && void 0 !== iW ? iW : "")
-    }
-
-    function LW(WW, iW) {
-      if (PW(WW)) throw WW;
-      console.error(iW, WW)
+    function ZR(RR) {
+      var JR;
+      return RR instanceof WebAssembly.RuntimeError || RR instanceof yR || tR(RR) && uR.test(null !== (JR = RR.stack) && void 0 !== JR ? JR : "")
     }
 
-    function cW(WW, iW, OW, EW, NW) {
-      if (iW % EW !== 0 || iW + OW > WW.byteLength) throw new mW(`${NW}: ${OW} bytes at ${iW}, ${EW}-aligned, outside ${WW.byteLength} bytes of memory`)
+    function qR(RR, JR) {
+      if (ZR(RR)) throw RR;
+      console.error(JR, RR)
     }
 
-    function wW(WW, iW, OW, mW, EW) {
-      return 0 === OW ? null : (cW(iW, OW, mW * WW.BYTES_PER_ELEMENT, WW.BYTES_PER_ELEMENT, EW), new WW(iW, OW, mW))
+    function iR(RR, JR, GR, tR, uR) {
+      if (JR % tR !== 0 || JR + GR > RR.byteLength) throw new yR(`${uR}: ${GR} bytes at ${JR}, ${tR}-aligned, outside ${RR.byteLength} bytes of memory`)
     }
 
-    function tW(WW, iW, OW, mW, EW) {
-      return 0 === iW ? null : (cW(WW, iW, OW, mW, EW), new DataView(WW, iW, OW))
+    function fR(RR, JR, GR, yR, tR) {
+      return 0 === GR ? null : (iR(JR, GR, yR * RR.BYTES_PER_ELEMENT, RR.BYTES_PER_ELEMENT, tR), new RR(JR, GR, yR))
+    }
+
+    function VR(RR, JR, GR, yR, tR) {
+      return 0 === JR ? null : (iR(RR, JR, GR, yR, tR), new DataView(RR, JR, GR))
     }
   },
-  42216: (WW, iW, OW) => {
-    OW.d(iW, {
-      $: () => vW,
-      B: () => Oi,
-      C: () => rW,
-      E: () => Pi,
-      G: () => Ni,
-      J: () => mi,
-      K: () => ci,
-      M: () => Mi,
-      P: () => Li,
-      Q: () => Ei,
-      U: () => wi,
-      V: () => eW,
-      Z: () => li,
-      _: () => ji,
-      bb: () => gW,
-      d: () => oW,
-      g: () => Ki,
-      h: () => Ti,
-      j: () => bi,
-      n: () => si,
-      r: () => xi,
-      s: () => ki,
-      u: () => Ui,
-      x: () => yi,
-      z: () => Wi
+  42230: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => GJ,
+      B: () => FR,
+      C: () => ZJ,
+      D: () => uJ,
+      G: () => yJ,
+      I: () => iJ,
+      M: () => AJ,
+      N: () => qJ,
+      Q: () => tJ,
+      R: () => fJ,
+      T: () => DR,
+      W: () => rJ,
+      _: () => LJ,
+      ab: () => HR,
+      b: () => xR,
+      cb: () => oR,
+      e: () => CJ,
+      i: () => lJ,
+      j: () => aJ,
+      n: () => WJ,
+      o: () => wJ,
+      s: () => UJ,
+      t: () => nJ,
+      v: () => BJ,
+      y: () => RJ
     });
-    var mW = OW(327),
-      EW = OW(243),
-      NW = OW(248),
-      PW = OW(25),
-      LW = OW(3866),
-      cW = OW(698),
-      wW = OW(5223),
-      tW = OW(3837),
-      ZW = OW(4666),
-      xW = OW(100),
-      lW = OW(136),
-      AW = OW(324),
-      bW = OW(39),
-      jW = OW(315),
-      UW = OW(119),
-      kW = OW(669),
-      sW = OW(299),
-      MW = OW(131),
-      KW = OW(128),
-      SW = OW(5551),
-      YW = OW(42222),
-      yW = OW(1755),
-      TW = OW(42225),
-      JW = OW(42228),
-      hW = OW(35175),
-      HW = OW(42235),
-      nW = OW(42240);
-    const uW = "bloxd-webgpuOffAfterLoss",
-      oW = "context:webgl",
-      dW = "probe:threw";
+    var yR = GR(359),
+      tR = GR(277),
+      uR = GR(279),
+      ZR = GR(25),
+      qR = GR(3960),
+      iR = GR(743),
+      fR = GR(5323),
+      VR = GR(3935),
+      KR = GR(4776),
+      wR = GR(103),
+      rR = GR(134),
+      eR = GR(350),
+      aR = GR(46),
+      LR = GR(342),
+      nR = GR(123),
+      UR = GR(706),
+      WR = GR(327),
+      AR = GR(132),
+      CR = GR(127),
+      XR = GR(5685),
+      MR = GR(42237),
+      BR = GR(1825),
+      lR = GR(42239),
+      pR = GR(42247),
+      gR = GR(35094),
+      bR = GR(42255),
+      vR = GR(42259);
+    const OR = "bloxd-webgpuOffAfterLoss",
+      xR = "context:webgl",
+      NR = "probe:threw";
 
-    function eW(WW) {
-      return WW.includes("Web page caused context loss and was blocked")
+    function DR(RR) {
+      return RR.includes("Web page caused context loss and was blocked")
     }
 
-    function vW() {
-      const WW = document.createElement("canvas");
-      let iW = "";
-      WW.addEventListener("webglcontextcreationerror", (WW => {
-        iW = WW.statusMessage
+    function HR() {
+      const RR = document.createElement("canvas");
+      let JR = "";
+      RR.addEventListener("webglcontextcreationerror", (RR => {
+        JR = RR.statusMessage
       }));
       try {
-        var OW, mW;
-        null === (OW = WW.getContext("webgl")) || void 0 === OW || null === (mW = OW.getExtension("WEBGL_lose_context")) || void 0 === mW || mW.loseContext()
-      } catch (EW) {
-        return String(EW)
+        var GR, yR;
+        null === (GR = RR.getContext("webgl")) || void 0 === GR || null === (yR = GR.getExtension("WEBGL_lose_context")) || void 0 === yR || yR.loseContext()
+      } catch (tR) {
+        return String(tR)
       }
-      return iW
+      return JR
     }
 
-    function gW(WW) {
-      let iW;
+    function oR(RR) {
+      let JR;
       try {
-        iW = WW.getContext("webgl", {
-          powerPreference: MW.b
+        JR = RR.getContext("webgl", {
+          powerPreference: AR.b
         })
       } catch {
-        iW = null
+        JR = null
       }
-      if (null === iW) return null;
-      let OW = null;
+      if (null === JR) return null;
+      let GR = null;
       try {
-        const WW = iW.getParameter(iW.MAX_TEXTURE_SIZE);
-        OW = "number" === typeof WW && WW > 0 ? WW : null
+        const RR = JR.getParameter(JR.MAX_TEXTURE_SIZE);
+        GR = "number" === typeof RR && RR > 0 ? RR : null
       } catch {
-        OW = null
+        GR = null
       }
       try {
-        var mW;
-        null === (mW = iW.getExtension("WEBGL_lose_context")) || void 0 === mW || mW.loseContext()
+        var yR;
+        null === (yR = JR.getExtension("WEBGL_lose_context")) || void 0 === yR || yR.loseContext()
       } catch {}
-      return OW
+      return GR
     }
-    const DW = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
+    const cR = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
 
-    function VW() {
-      return "ios" === (0, xW.getOperatingSystem)() ? "ios" : "other"
+    function PR() {
+      return "ios" === (0, wR.getOperatingSystem)() ? "ios" : "other"
     }
-    const pW = "mali_valhall",
-      fW = new Set(["nvidia_pre_turing"]),
-      CW = new Set(["intel_gen7_8"]),
-      XW = new Set(["powervr_rogue"]);
+    const IR = "mali_valhall",
+      mR = new Set(["nvidia_pre_turing"]),
+      zR = new Set(["intel_gen7_8"]),
+      SR = new Set(["powervr_rogue"]);
 
-    function BW(WW, iW, OW) {
-      return DW.has(WW) ? "android_arm" === WW && iW === pW && "mobileAndroid" !== OW ? "webgpu_default" : "webgl_default" : null
+    function jR(RR, JR, GR) {
+      return cR.has(RR) ? "android_arm" === RR && JR === IR && "mobileAndroid" !== GR ? "webgpu_default" : "webgl_default" : null
     }
 
-    function qW(WW) {
-      return function(WW) {
+    function dR(RR) {
+      return function(RR) {
         try {
-          return WW()
+          return RR()
         } catch {
           return null
         }
       }((() => {
-        var iW, OW, mW, PW;
-        const LW = null !== (iW = null === (OW = WW.info) || void 0 === OW ? void 0 : OW.vendor) && void 0 !== iW ? iW : "";
-        return "windows" === (0, xW.getOperatingSystem)() && "" !== LW && "intel" !== (0, xW.normaliseGpuVendor)(LW) ? null : ((0, xW.seedGpuVendor)(LW), BW((0, EW.i)(), (0, NW.f)(LW, null !== (mW = null === (PW = WW.info) || void 0 === PW ? void 0 : PW.architecture) && void 0 !== mW ? mW : ""), lW.siteUsed))
+        var JR, GR, yR, ZR;
+        const qR = null !== (JR = null === (GR = RR.info) || void 0 === GR ? void 0 : GR.vendor) && void 0 !== JR ? JR : "";
+        return "windows" === (0, wR.getOperatingSystem)() && "" !== qR && "intel" !== (0, wR.normaliseGpuVendor)(qR) ? null : ((0, wR.seedGpuVendor)(qR), jR((0, tR.g)(), (0, uR.h)(qR, null !== (yR = null === (ZR = RR.info) || void 0 === ZR ? void 0 : ZR.architecture) && void 0 !== yR ? yR : ""), rR.siteUsed))
       }))
     }
 
-    function RW() {
-      var WW;
+    function ER() {
+      var RR;
       return {
-        gpu: null !== (WW = navigator.gpu) && void 0 !== WW ? WW : null,
-        webgl2: HW.f,
-        webgl1: () => function(WW) {
-          let iW, OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YW.d;
+        gpu: null !== (RR = navigator.gpu) && void 0 !== RR ? RR : null,
+        webgl2: bR.c,
+        webgl1: () => function(RR) {
+          let JR, GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MR.d;
           try {
-            iW = WW.getContext("webgl")
+            JR = RR.getContext("webgl")
           } catch {
-            iW = null
+            JR = null
           }
-          if (null === iW) return [oW];
-          const mW = [];
+          if (null === JR) return [xR];
+          const yR = [];
           try {
-            for (const EW of OW.extensions) null === iW.getExtension(EW) && mW.push(EW);
-            for (const [EW, NW] of Object.entries(OW.limits)) {
-              const WW = iW[EW],
-                OW = "number" === typeof WW ? iW.getParameter(WW) : null;
-              ("number" !== typeof OW || OW < NW) && mW.push(`limit:${EW}`)
+            for (const tR of GR.extensions) null === JR.getExtension(tR) && yR.push(tR);
+            for (const [tR, uR] of Object.entries(GR.limits)) {
+              const RR = JR[tR],
+                GR = "number" === typeof RR ? JR.getParameter(RR) : null;
+              ("number" !== typeof GR || GR < uR) && yR.push(`limit:${tR}`)
             }
-            const WW = iW.getShaderPrecisionFormat(iW.VERTEX_SHADER, iW.HIGH_FLOAT);
-            (null === WW || WW.precision < OW.vertexHighFloatBits) && mW.push("precision:vertex_high_float")
+            const RR = JR.getShaderPrecisionFormat(JR.VERTEX_SHADER, JR.HIGH_FLOAT);
+            (null === RR || RR.precision < GR.vertexHighFloatBits) && yR.push("precision:vertex_high_float")
           } catch {
-            mW.push(dW)
+            yR.push(NR)
           }
           try {
-            var EW;
-            null === (EW = iW.getExtension("WEBGL_lose_context")) || void 0 === EW || EW.loseContext()
+            var tR;
+            null === (tR = JR.getExtension("WEBGL_lose_context")) || void 0 === tR || tR.loseContext()
           } catch {}
-          return mW
+          return yR
         }(document.createElement("canvas")),
-        webgl1First: () => IW((() => function(WW, iW) {
-          if ("chrome_os" !== WW) return !1;
-          const OW = iW();
-          return null !== OW && XW.has((0, NW.i)(OW.vendor, OW.renderer))
-        }((0, xW.getOperatingSystem)(), MW.w))),
-        offAfterLoss: WW => IW((() => WW ? (0, jW.H)() : PW.d.isWebGpuOffAfterLoss())),
-        fewWasmMemories: sW.e,
-        oldIntelDriver: WW => IW((() => (0, UW.d)(WW))),
-        intelGen9: WW => IW((() => (0, UW.m)(WW))),
-        storeIntelGen9Verdict: WW => {
-          bW.i.setItem(UW.z, WW)
+        webgl1First: () => kR((() => function(RR, JR) {
+          if ("chrome_os" !== RR) return !1;
+          const GR = JR();
+          return null !== GR && SR.has((0, uR.k)(GR.vendor, GR.renderer))
+        }((0, wR.getOperatingSystem)(), AR.B))),
+        offAfterLoss: RR => kR((() => RR ? (0, LR.F)() : ZR.d.isWebGpuOffAfterLoss())),
+        fewWasmMemories: WR.d,
+        oldIntelDriver: RR => kR((() => (0, nR.g)(RR))),
+        intelGen9: RR => kR((() => (0, nR.r)(RR))),
+        storeIntelGen9Verdict: RR => {
+          aR.i.setItem(nR.F, RR)
         },
-        gpuClassWebGlArm: qW,
-        storeGpuClassVerdict: WW => {
-          bW.i.setItem(UW.x, WW)
+        gpuClassWebGlArm: dR,
+        storeGpuClassVerdict: RR => {
+          aR.i.setItem(nR.E, RR)
         },
-        gpuClassOnWebGl: WW => (0, kW.c)(WW),
-        webGlDefaultFamily: WW => CW.has((0, NW.f)(WW.vendor, WW.architecture)),
-        storeWebGlDefaultFamilyVerdict: WW => {
-          bW.i.setItem(UW.F, WW)
+        gpuClassOnWebGl: RR => (0, UR.c)(RR),
+        webGlDefaultFamily: RR => zR.has((0, uR.h)(RR.vendor, RR.architecture)),
+        storeWebGlDefaultFamilyVerdict: RR => {
+          aR.i.setItem(nR.P, RR)
         },
-        override: () => GW(),
-        claimed: () => aW((0, cW.m)()),
+        override: () => YR(),
+        claimed: () => QR((0, iR.j)()),
         webGpuSetting: () => {
-          const WW = bW.i.getItem(mW.pc);
-          return "boolean" === typeof WW ? WW : null
+          const RR = aR.i.getItem(yR.jc);
+          return "boolean" === typeof RR ? RR : null
         },
-        heldBack: () => kW.g,
-        storeHoldbackSpared: WW => {
-          bW.i.setItem(UW.t, WW)
+        heldBack: () => UR.e,
+        storeHoldbackSpared: RR => {
+          aR.i.setItem(nR.A, RR)
         },
-        intelGen9OnWebGl: () => kW.i,
-        kA: () => IW((() => (0, ZW.c)(xW.featureFlags.settings.canUseShaderPacks))),
-        windows: () => IW((() => "windows" === (0, xW.getOperatingSystem)())),
-        defaultCompatibility: hW.c
+        intelGen9OnWebGl: () => UR.f,
+        Be: () => kR((() => (0, KR.h)(wR.featureFlags.settings.canUseShaderPacks))),
+        windows: () => kR((() => "windows" === (0, wR.getOperatingSystem)())),
+        defaultCompatibility: gR.d
       }
     }
 
-    function GW() {
-      let WW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      if ((0, LW.t)("render") && "webgl1" === (0, LW.p)("renderer")) return "webgl1";
-      const iW = [() => new URLSearchParams(window.location.search).get(tW.e), () => bW.i.getItem(tW.h), () => {
-        const iW = localStorage.getItem(uW);
-        return null !== iW && WW && localStorage.removeItem(uW), "1" === iW ? "webgl2" : null
+    function YR() {
+      let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      if ((0, qR.n)("render") && "webgl1" === (0, qR.l)("renderer")) return "webgl1";
+      const JR = [() => new URLSearchParams(window.location.search).get(VR.b), () => aR.i.getItem(VR.e), () => {
+        const JR = localStorage.getItem(OR);
+        return null !== JR && RR && localStorage.removeItem(OR), "1" === JR ? "webgl2" : null
       }];
-      for (const OW of iW) {
-        let WW = null;
+      for (const GR of JR) {
+        let RR = null;
         try {
-          WW = aW(OW())
+          RR = QR(GR())
         } catch {}
-        if (null !== WW) return WW
+        if (null !== RR) return RR
       }
       return null
     }
 
-    function IW(WW) {
+    function kR(RR) {
       try {
-        return WW()
+        return RR()
       } catch {
         return !1
       }
     }
 
-    function aW(WW) {
-      return "lite" === WW ? "webgpu" : "webgl2" === WW || "babylon" === WW ? "webgl" : null
+    function QR(RR) {
+      return "lite" === RR ? "webgpu" : "webgl2" === RR || "babylon" === RR ? "webgl" : null
     }
 
-    function rW(WW) {
-      return "none" === WW || "compatibility_mode" === WW
+    function FR(RR) {
+      return "none" === RR || "compatibility_mode" === RR
     }
-    async function zW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : RW();
-      const iW = await async function(WW) {
-        const iW = QW(WW),
+    async function TR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ER();
+      const JR = await async function(RR) {
+        const JR = hR(RR),
           {
-            source: OW
-          } = iW,
-          mW = !iW.asked,
-          EW = "gpu" in iW && iW.heldBack,
-          PW = function(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            return EW && !rW(WW) ? {
+            source: GR
+          } = JR,
+          yR = !JR.asked,
+          tR = "gpu" in JR && JR.heldBack,
+          ZR = function(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            return tR && !FR(RR) ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: OW
+              source: GR
             } : {
-              reason: WW,
-              adapter: iW,
-              source: OW
+              reason: RR,
+              adapter: JR,
+              source: GR
             }
           };
-        if (!("gpu" in iW)) return PW(iW.refused);
-        let LW;
+        if (!("gpu" in JR)) return ZR(JR.refused);
+        let qR;
         try {
-          LW = await (0, yW.o)((0, KW.i)(iW.gpu, {
-            compatibility: FW(WW, iW)
-          }), Si, `requestAdapter didn't settle in ${Si/1e3} s`)
+          qR = await (0, BR.k)((0, CR.i)(JR.gpu, {
+            compatibility: sR(RR, JR)
+          }), XJ, `requestAdapter didn't settle in ${XJ/1e3} s`)
         } catch {
-          return PW("adapter_error")
+          return ZR("adapter_error")
         }
-        if ("string" === typeof LW) return PW(LW);
+        if ("string" === typeof qR) return ZR(qR);
         const {
-          adapter: cW,
-          compatibility: wW
-        } = LW, tW = (0, KW.b)(cW);
-        if ((0, KW.e)(cW)) return PW("software_adapter", tW);
-        const ZW = WW.windows() && function(WW) {
-          return fW.has((0, NW.f)(WW.vendor, WW.architecture))
-        }(tW);
-        if (WW.storeHoldbackSpared(ZW), EW && !ZW) return PW("webgl_holdback");
-        const xW = WW.intelGen9(cW);
-        WW.storeIntelGen9Verdict(xW);
-        const lW = xW ? null : WW.gpuClassWebGlArm(cW);
-        WW.storeGpuClassVerdict(null !== lW && void 0 !== lW && lW);
-        const AW = WW.webGlDefaultFamily(tW);
-        if (WW.storeWebGlDefaultFamilyVerdict(AW), mW && WW.oldIntelDriver(cW)) return PW("old_intel_driver", tW);
-        if ("default" === OW && xW && WW.intelGen9OnWebGl()) return PW("intel_gen9", tW);
-        if ("default" === OW && null !== lW && WW.gpuClassOnWebGl(lW)) return PW("gpu_class_webgl", tW);
-        if ("default" === OW && AW) return PW("gpu_wasm_arm", tW);
-        return PW(wW ? "compatibility_mode" : "none", tW)
-      }(WW);
-      if (rW(iW.reason)) return {
+          adapter: iR,
+          compatibility: fR
+        } = qR, VR = (0, CR.b)(iR);
+        if ((0, CR.e)(iR)) return ZR("software_adapter", VR);
+        const KR = RR.windows() && function(RR) {
+          return mR.has((0, uR.h)(RR.vendor, RR.architecture))
+        }(VR);
+        if (RR.storeHoldbackSpared(KR), tR && !KR) return ZR("webgl_holdback");
+        const wR = RR.intelGen9(iR);
+        RR.storeIntelGen9Verdict(wR);
+        const rR = wR ? null : RR.gpuClassWebGlArm(iR);
+        RR.storeGpuClassVerdict(null !== rR && void 0 !== rR && rR);
+        const eR = RR.webGlDefaultFamily(VR);
+        if (RR.storeWebGlDefaultFamilyVerdict(eR), yR && RR.oldIntelDriver(iR)) return ZR("old_intel_driver", VR);
+        if ("default" === GR && wR && RR.intelGen9OnWebGl()) return ZR("intel_gen9", VR);
+        if ("default" === GR && null !== rR && RR.gpuClassOnWebGl(rR)) return ZR("gpu_class_webgl", VR);
+        if ("default" === GR && eR) return ZR("gpu_wasm_arm", VR);
+        return ZR(fR ? "compatibility_mode" : "none", VR)
+      }(RR);
+      if (FR(JR.reason)) return {
         backend: "webgpu",
-        ...iW
+        ...JR
       };
-      const OW = "webgl1" === WW.override(),
-        mW = "not_requested" === iW.reason && ("override" === iW.source || "claim" === iW.source),
-        EW = !OW && !mW && WW.webgl1First();
-      if (!OW && !EW && WW.webgl2()) return {
+      const GR = "webgl1" === RR.override(),
+        yR = "not_requested" === JR.reason && ("override" === JR.source || "claim" === JR.source),
+        tR = !GR && !yR && RR.webgl1First();
+      if (!GR && !tR && RR.webgl2()) return {
         backend: "webgl",
-        ...iW
+        ...JR
       };
-      const PW = WW.webgl1();
-      return 0 === PW.length ? {
+      const ZR = RR.webgl1();
+      return 0 === ZR.length ? {
         backend: "webgl1",
-        ...iW
-      } : EW && WW.webgl2() ? {
+        ...JR
+      } : tR && RR.webgl2() ? {
         backend: "webgl",
-        ...iW
+        ...JR
       } : {
-        missing: PW
+        missing: ZR
       }
     }
 
-    function FW(WW, iW) {
+    function sR(RR, JR) {
       let {
-        source: OW,
-        asked: mW
-      } = iW;
-      return mW || "default" === OW ? (0, hW.k)(mW, WW.defaultCompatibility) : void 0
+        source: GR,
+        asked: yR
+      } = JR;
+      return yR || "default" === GR ? (0, gR.i)(yR, RR.defaultCompatibility) : void 0
     }
 
-    function QW(WW) {
-      const iW = WW.override(),
-        OW = WW.webGpuSetting(),
-        mW = null === iW && !0 !== OW && WW.kA(),
-        EW = null !== iW || null !== OW || mW ? null : WW.claimed(),
-        NW = null !== iW ? "override" : !0 === OW ? "setting" : mW ? "pack" : !1 === OW ? "setting" : null !== EW ? "claim" : "default",
-        PW = function(WW) {
-          return "override" === WW || "setting" === WW
-        }(NW);
-      if ("webgl" === iW || "webgl1" === iW || "webgl" === EW || "setting" === NW && !1 === OW) return {
-        source: NW,
-        asked: PW,
+    function hR(RR) {
+      const JR = RR.override(),
+        GR = RR.webGpuSetting(),
+        yR = null === JR && !0 !== GR && RR.Be(),
+        tR = null !== JR || null !== GR || yR ? null : RR.claimed(),
+        uR = null !== JR ? "override" : !0 === GR ? "setting" : yR ? "pack" : !1 === GR ? "setting" : null !== tR ? "claim" : "default",
+        ZR = function(RR) {
+          return "override" === RR || "setting" === RR
+        }(uR);
+      if ("webgl" === JR || "webgl1" === JR || "webgl" === tR || "setting" === uR && !1 === GR) return {
+        source: uR,
+        asked: ZR,
         refused: "not_requested"
       };
-      if (!WW.gpu) return {
-        source: NW,
-        asked: PW,
+      if (!RR.gpu) return {
+        source: uR,
+        asked: ZR,
         refused: "no_webgpu_api"
       };
-      const LW = "default" === NW && WW.heldBack();
-      if (LW && !WW.windows()) return {
-        source: NW,
-        asked: PW,
+      const qR = "default" === uR && RR.heldBack();
+      if (qR && !RR.windows()) return {
+        source: uR,
+        asked: ZR,
         refused: "webgl_holdback"
       };
-      const cW = PW ? null : WW.offAfterLoss("pack" === NW) ? "off_after_loss" : WW.fewWasmMemories() ? "few_wasm_memories" : null;
-      return null !== cW ? {
-        source: NW,
-        asked: PW,
-        refused: LW ? "webgl_holdback" : cW
+      const iR = ZR ? null : RR.offAfterLoss("pack" === uR) ? "off_after_loss" : RR.fewWasmMemories() ? "few_wasm_memories" : null;
+      return null !== iR ? {
+        source: uR,
+        asked: ZR,
+        refused: qR ? "webgl_holdback" : iR
       } : {
-        source: NW,
-        asked: PW,
-        heldBack: LW,
-        gpu: WW.gpu
+        source: uR,
+        asked: ZR,
+        heldBack: qR,
+        gpu: RR.gpu
       }
     }
 
-    function Wi() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
-          ...RW(),
-          override: () => GW(!1)
+    function RJ() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          ...ER(),
+          override: () => YR(!1)
         },
-        iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xW.isWebKit,
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VW;
+        JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wR.isWebKit,
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : PR;
       try {
-        if (!iW()) return !1;
-        const mW = QW(WW);
-        if (!("gpu" in mW) || mW.heldBack) return !1;
-        const EW = "default" === mW.source ? BW(OW(), "apple", lW.siteUsed) : null;
-        return null === EW || !WW.gpuClassOnWebGl(EW)
-      } catch (mW) {
-        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", mW), !1
+        if (!JR()) return !1;
+        const yR = hR(RR);
+        if (!("gpu" in yR) || yR.heldBack) return !1;
+        const tR = "default" === yR.source ? jR(GR(), "apple", rR.siteUsed) : null;
+        return null === tR || !RR.gpuClassOnWebGl(tR)
+      } catch (yR) {
+        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", yR), !1
       }
     }
-    let ii = !1;
-    async function Oi(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RW();
-      if (null === WW) return null;
-      const OW = await zW(iW);
-      return ii = !("missing" in OW) && "webgpu" === OW.backend && "claim" === OW.source, "missing" in OW ? OW : {
-        ...OW,
-        load: WW[OW.backend]
+    let JJ = !1;
+    async function GJ(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ER();
+      if (null === RR) return null;
+      const GR = await TR(JR);
+      return JJ = !("missing" in GR) && "webgpu" === GR.backend && "claim" === GR.source, "missing" in GR ? GR : {
+        ...GR,
+        load: RR[GR.backend]
       }
     }
-    async function mi(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : RW().gpu,
-        mW = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== WW.backend) return !1;
-      const EW = Zi(WW, iW, "indirectDraws", "off", "on");
-      if (null !== EW) return EW;
-      if (null !== WW.adapter && (0, UW.n)(WW.adapter, mW)) return !0;
-      if (null === OW) return !1;
+    async function yJ(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ER().gpu,
+        yR = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== RR.backend) return !1;
+      const tR = KJ(RR, JR, "indirectDraws", "off", "on");
+      if (null !== tR) return tR;
+      if (null !== RR.adapter && (0, nR.s)(RR.adapter, yR)) return !0;
+      if (null === GR) return !1;
       try {
-        var NW;
-        const WW = await (0, yW.o)(OW.requestAdapter({
+        var uR;
+        const RR = await (0, BR.k)(GR.requestAdapter({
           powerPreference: "low-power"
-        }).then((async WW => (null !== WW && await (0, KW.c)(WW), WW))), Si, `the low-power requestAdapter didn't settle in ${Si/1e3} s`);
-        return (0, UW.n)(null !== (NW = null === WW || void 0 === WW ? void 0 : WW.info) && void 0 !== NW ? NW : {}, mW)
-      } catch (PW) {
-        return PW instanceof yW.g
+        }).then((async RR => (null !== RR && await (0, CR.c)(RR), RR))), XJ, `the low-power requestAdapter didn't settle in ${XJ/1e3} s`);
+        return (0, nR.s)(null !== (uR = null === RR || void 0 === RR ? void 0 : RR.info) && void 0 !== uR ? uR : {}, yR)
+      } catch (ZR) {
+        return ZR instanceof BR.g
       }
     }
 
-    function Ei(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, xW.pageOperatingSystem)();
-      if ("webgpu" !== WW.backend) return !1;
-      const EW = Zi(WW, iW, "terrainFetch", "texture", "storage");
-      return null !== EW ? EW : null !== WW.adapter && ((0, UW.i)(WW.adapter, OW) || (0, UW.f)(WW.adapter, mW))
+    function tJ(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, wR.pageOperatingSystem)();
+      if ("webgpu" !== RR.backend) return !1;
+      const tR = KJ(RR, JR, "terrainFetch", "texture", "storage");
+      return null !== tR ? tR : null !== RR.adapter && ((0, nR.m)(RR.adapter, GR) || (0, nR.i)(RR.adapter, yR))
     }
 
-    function Ni(WW, iW) {
-      if ("webgpu" !== WW.backend) return !1;
-      const OW = Zi(WW, iW, "skyOrder", "early", "last");
-      return null !== OW ? OW : null !== WW.adapter && (0, NW.f)(WW.adapter.vendor, WW.adapter.architecture) === pW
+    function uJ(RR, JR) {
+      if ("webgpu" !== RR.backend) return !1;
+      const GR = KJ(RR, JR, "skyOrder", "early", "last");
+      return null !== GR ? GR : null !== RR.adapter && (0, uR.h)(RR.adapter.vendor, RR.adapter.architecture) === IR
     }
 
-    function Pi(WW, iW) {
-      if ("webgpu" !== WW.backend) return !1;
-      const OW = Zi(WW, iW, "uploadCopies", "off", "on");
-      return null !== OW ? OW : null !== WW.adapter && "powervr_rogue" === (0, NW.f)(WW.adapter.vendor, WW.adapter.architecture)
+    function ZJ(RR, JR) {
+      if ("webgpu" !== RR.backend) return !1;
+      const GR = KJ(RR, JR, "uploadCopies", "off", "on");
+      return null !== GR ? GR : null !== RR.adapter && "powervr_rogue" === (0, uR.h)(RR.adapter.vendor, RR.adapter.architecture)
     }
 
-    function Li(WW, iW, OW) {
-      if ("webgpu" !== WW.backend) return !1;
-      const mW = Zi(WW, iW, "sceneDepth", "off", "on");
-      return null !== mW ? mW : null !== WW.adapter && (0, UW.j)(WW.adapter, OW)
+    function qJ(RR, JR, GR) {
+      if ("webgpu" !== RR.backend) return !1;
+      const yR = KJ(RR, JR, "sceneDepth", "off", "on");
+      return null !== yR ? yR : null !== RR.adapter && (0, nR.n)(RR.adapter, GR)
     }
 
-    function ci(WW, iW) {
-      return "webgl" === WW.backend ? Zi(WW, iW, "instancedTerrain", "1", "0") : null
+    function iJ(RR, JR) {
+      return "webgl" === RR.backend ? KJ(RR, JR, "instancedTerrain", "1", "0") : null
     }
 
-    function wi(WW, iW) {
-      return "webgpu" !== WW.backend || iW && (null === WW.adapter || !(0, jW.L)(WW.adapter))
+    function fJ(RR, JR) {
+      return "webgpu" !== RR.backend || JR && (null === RR.adapter || !(0, LR.J)(RR.adapter))
     }
 
-    function ti(WW, iW, OW, mW) {
-      const EW = new URLSearchParams(iW).get(OW),
-        NW = null !== EW && void 0 !== EW ? EW : null === WW ? null : (0, cW.e)(OW);
-      return null !== NW && mW(NW) ? (ii ||= null === EW && "webgpu" === (null === WW || void 0 === WW ? void 0 : WW.backend), NW) : null
+    function VJ(RR, JR, GR, yR) {
+      const tR = new URLSearchParams(JR).get(GR),
+        uR = null !== tR && void 0 !== tR ? tR : null === RR ? null : (0, iR.e)(GR);
+      return null !== uR && yR(uR) ? (JJ ||= null === tR && "webgpu" === (null === RR || void 0 === RR ? void 0 : RR.backend), uR) : null
     }
 
-    function Zi(WW, iW, OW, mW, EW) {
-      const NW = ti(WW, iW, OW, (WW => WW === mW || WW === EW));
-      return null === NW ? null : NW === mW
+    function KJ(RR, JR, GR, yR, tR) {
+      const uR = VJ(RR, JR, GR, (RR => RR === yR || RR === tR));
+      return null === uR ? null : uR === yR
     }
 
-    function xi(WW) {
-      return null !== WW && "missing" in WW
+    function wJ(RR) {
+      return null !== RR && "missing" in RR
     }
 
-    function li(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !ji(),
-        OW = arguments.length > 2 ? arguments[2] : void 0;
-      return iW ? function(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW.d,
-          OW = arguments.length > 2 ? arguments[2] : void 0;
+    function rJ(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !LJ(),
+        GR = arguments.length > 2 ? arguments[2] : void 0;
+      return JR ? function(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR.d,
+          GR = arguments.length > 2 ? arguments[2] : void 0;
         try {
-          const mW = "start_failed" === WW || "pipeline_failed" === WW,
-            EW = (0, nW.k)(WW, OW),
-            NW = iW.turnOffWebGpuAfterDeviceLoss(mW ? "visible" : (0, jW.m)((0, AW.g)()), mW, EW);
-          return ii && (0, cW.u)("webgpuLoss"), iW.isWebGpuOffAfterLoss() && "webgpu" === aW(bW.i.getItem(tW.h)) && bW.i.removeItem(tW.h), (0, LW.t)("webgpuloss") && (0, wW.d)((iW => {
-            var OW;
-            iW.noteWebGpuLoss("wasm", NW ? WW : `${WW}, which storage didn't keep`, null !== (OW = EW.message) && void 0 !== OW ? OW : null)
-          })), NW
+          const yR = "start_failed" === RR || "pipeline_failed" === RR,
+            tR = (0, vR.i)(RR, GR),
+            uR = JR.turnOffWebGpuAfterDeviceLoss(yR ? "visible" : (0, LR.k)((0, eR.f)()), yR, tR);
+          return JJ && (0, iR.t)("webgpuLoss"), JR.isWebGpuOffAfterLoss() && "webgpu" === QR(aR.i.getItem(VR.e)) && aR.i.removeItem(VR.e), (0, qR.n)("webgpuloss") && (0, fR.d)((JR => {
+            var GR;
+            JR.noteWebGpuLoss("wasm", uR ? RR : `${RR}, which storage didn't keep`, null !== (GR = tR.message) && void 0 !== GR ? GR : null)
+          })), uR
         } catch {
           return !1
         }
-      }(WW, PW.d, OW) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+      }(RR, ZR.d, GR) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const Ai = "framePacing";
+    const eJ = "framePacing";
 
-    function bi(WW, iW) {
-      const OW = ti("webgpu" === (null === iW || void 0 === iW ? void 0 : iW.backend) ? iW : null, WW, Ai, (WW => /^\d{1,9}$/.test(WW)));
-      return null === OW ? void 0 : Number(OW)
+    function aJ(RR, JR) {
+      const GR = VJ("webgpu" === (null === JR || void 0 === JR ? void 0 : JR.backend) ? JR : null, RR, eJ, (RR => /^\d{1,9}$/.test(RR)));
+      return null === GR ? void 0 : Number(GR)
     }
 
-    function ji() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function LJ() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === aW(new URLSearchParams(WW).get(tW.e))
+        return "webgpu" === QR(new URLSearchParams(RR).get(VR.b))
       } catch {
         return !1
       }
     }
 
-    function Ui(WW) {
-      return !!ki(WW) || WW instanceof Error && !(WW instanceof WebAssembly.RuntimeError) && WW.message.startsWith(`${SW.o.RenderSurfaceUnusable}:`)
+    function nJ(RR) {
+      return !!UJ(RR) || RR instanceof Error && !(RR instanceof WebAssembly.RuntimeError) && RR.message.startsWith(`${XR.p.RenderSurfaceUnusable}:`)
     }
 
-    function ki(WW) {
+    function UJ(RR) {
       const {
-        name: iW,
-        message: OW
-      } = null !== WW && void 0 !== WW ? WW : {};
-      return "InvalidStateError" === iW && "string" === typeof OW && OW.startsWith("GPUDevice.")
+        name: JR,
+        message: GR
+      } = null !== RR && void 0 !== RR ? RR : {};
+      return "InvalidStateError" === JR && "string" === typeof GR && GR.startsWith("GPUDevice.")
     }
 
-    function si(WW) {
-      const iW = WW;
-      return "function" === typeof iW.OEW && "function" === typeof iW.mEW ? iW : null
+    function WJ(RR) {
+      const JR = RR;
+      return "function" === typeof JR.StR && "function" === typeof JR.jtR ? JR : null
     }
 
-    function Mi(WW) {
-      return "function" === typeof WW.wU ? WW : null
+    function AJ(RR) {
+      return "function" === typeof RR.fn ? RR : null
     }
-    const Ki = "openRenderer";
-    const Si = 5e3,
-      Yi = 15e3;
+    const CJ = "openRenderer";
+    const XJ = 5e3,
+      MJ = 15e3;
 
-    function yi(WW, iW, OW, mW, EW, NW) {
-      return (0, yW.o)(function(WW, iW, OW, mW, EW, NW) {
-        const PW = (0, TW.f)(WW, iW, (() => WW.wU(OW, mW, EW, NW.indirectHangs, NW.storagePullBreaks, NW.splitPassBreaks, NW.earlySky, NW.instancedTerrain, NW.cellLight, NW.framesAhead, NW.webGpuRestores, NW.bufferCopiesCrash))),
+    function BJ(RR, JR, GR, yR, tR, uR) {
+      return (0, BR.k)(function(RR, JR, GR, yR, tR, uR) {
+        const ZR = (0, lR.f)(RR, JR, (() => RR.fn(GR, yR, tR, uR.indirectHangs, uR.storagePullBreaks, uR.splitPassBreaks, uR.earlySky, uR.instancedTerrain, uR.cellLight, uR.framesAhead, uR.webGpuRestores, uR.bufferCopiesCrash))),
           {
-            firstVertex: LW
-          } = NW;
-        return void 0 === LW ? PW : PW.then((WW => ((0, JW.b)(OW, LW), WW)))
-      }(WW, iW, OW, mW, EW, NW), Yi, `${SW.o.RenderSurfaceUnusable}: the renderer didn't open in ${Yi/1e3} s`, Ji)
+            firstVertex: qR
+          } = uR;
+        return void 0 === qR ? ZR : ZR.then((RR => ((0, pR.b)(GR, qR), RR)))
+      }(RR, JR, GR, yR, tR, uR), MJ, `${XR.p.RenderSurfaceUnusable}: the renderer didn't open in ${MJ/1e3} s`, pJ)
     }
-    async function Ti(WW, iW, OW, mW, EW, NW) {
-      if ("function" !== typeof WW.amW) throw new Error("this core has no set_renderer");
-      const PW = await yi(iW, Ki, OW, EW, mW, NW);
+    async function lJ(RR, JR, GR, yR, tR, uR) {
+      if ("function" !== typeof RR.HtR) throw new Error("this core has no set_renderer");
+      const ZR = await BJ(JR, CJ, GR, tR, yR, uR);
       try {
-        WW.amW(PW)
-      } catch (LW) {
-        throw Ji(PW), LW
+        RR.HtR(ZR)
+      } catch (qR) {
+        throw pJ(ZR), qR
       }
     }
 
-    function Ji(WW) {
+    function pJ(RR) {
       try {
-        WW.free()
+        RR.free()
       } catch {}
     }
   },
-  42356: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW
+  42369: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR
     });
-    const mW = {
+    const yR = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -734,294 +734,294 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  42270: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW,
-      d: () => bW,
-      e: () => xW,
-      g: () => ZW
+  42294: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => eR,
+      c: () => aR,
+      f: () => wR,
+      h: () => KR
     });
-    const mW = 2e3,
-      EW = "unavailable";
-    let NW = () => Promise.resolve().then((() => OW(1896))),
-      PW = null,
-      LW = null,
-      cW = wW();
+    const yR = 2e3,
+      tR = "unavailable";
+    let uR = () => Promise.resolve().then((() => GR(1974))),
+      ZR = null,
+      qR = null,
+      iR = fR();
 
-    function wW() {
-      let WW = () => {};
+    function fR() {
+      let RR = () => {};
       return {
-        promise: new Promise((iW => {
-          WW = () => {
-            iW(null)
+        promise: new Promise((JR => {
+          RR = () => {
+            JR(null)
           }
         })),
-        resolve: WW
+        resolve: RR
       }
     }
 
-    function tW() {
-      if (null === PW) {
-        const WW = NW();
-        PW = WW, WW.then((iW => {
-          PW === WW && (LW = iW)
+    function VR() {
+      if (null === ZR) {
+        const RR = uR();
+        ZR = RR, RR.then((JR => {
+          ZR === RR && (qR = JR)
         }), (() => {
-          PW === WW && (PW = null)
+          ZR === RR && (ZR = null)
         }))
       }
-      return PW
+      return ZR
     }
 
-    function ZW() {
-      tW().catch((() => {}))
+    function KR() {
+      VR().catch((() => {}))
     }
 
-    function xW() {
-      cW.resolve()
+    function wR() {
+      iR.resolve()
     }
 
-    function lW(WW, iW, OW, mW) {
-      if (null === WW) return {
-        errorKind: iW,
-        fingerprint: EW,
-        dedupe: `${iW}|${mW}`
+    function rR(RR, JR, GR, yR) {
+      if (null === RR) return {
+        errorKind: JR,
+        fingerprint: tR,
+        dedupe: `${JR}|${yR}`
       };
       const {
-        fingerprint: NW
-      } = WW.clientErrorKey(iW, OW, mW);
+        fingerprint: uR
+      } = RR.clientErrorKey(JR, GR, yR);
       return {
-        errorKind: iW,
-        fingerprint: NW,
-        dedupe: NW
+        errorKind: JR,
+        fingerprint: uR,
+        dedupe: uR
       }
     }
 
-    function AW(WW, iW, OW, mW) {
-      return null === LW ? mW ? (ZW(), lW(null, WW, iW, OW)) : null : lW(LW, WW, iW, OW)
+    function eR(RR, JR, GR, yR) {
+      return null === qR ? yR ? (KR(), rR(null, RR, JR, GR)) : null : rR(qR, RR, JR, GR)
     }
-    async function bW(WW, iW, OW) {
-      let EW;
-      const NW = new Promise((WW => {
-        EW = setTimeout((() => {
-          WW(null)
-        }), mW)
+    async function aR(RR, JR, GR) {
+      let tR;
+      const uR = new Promise((RR => {
+        tR = setTimeout((() => {
+          RR(null)
+        }), yR)
       }));
       try {
-        return lW(await Promise.race([tW(), NW, cW.promise]), WW, iW, OW)
+        return rR(await Promise.race([VR(), uR, iR.promise]), RR, JR, GR)
       } catch {
-        return lW(null, WW, iW, OW)
+        return rR(null, RR, JR, GR)
       } finally {
-        clearTimeout(EW)
+        clearTimeout(tR)
       }
     }
   },
-  42266: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      BUILT_IN_ANIMATIONS_SITE: () => Wi,
-      CAMERA_DIRECTOR_SITE: () => Pi,
-      CORE_ERRORS_SITE: () => BW,
-      EVENT_OVERFLOW_SITE: () => QW,
-      FIRST_VIEW_SITE: () => mi,
-      GraphicsLostError: () => NO,
-      JOIN_SITE: () => RW,
-      LEAVE_SITE: () => GW,
-      MAIN_THREAD_SITE: () => Ei,
-      MODEL_FEED_SITE: () => IW,
-      MODEL_POOL_SITE: () => aW,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => wi,
-      NON_FATAL_REPORTS_PER_SESSION: () => Hi,
-      PREVIEW_ANIMATIONS_SITE: () => FW,
-      RENDER_RELOAD_SITE: () => zW,
-      REQUEST_DEVICE_SITE: () => Ni,
-      TEXTURE_NAMES_SITE: () => rW,
-      TEXTURE_PACK_FEED_SITE: () => ii,
-      TEXTURE_PACK_SWAP_SITE: () => Oi,
-      TurnstilePageError: () => jO,
-      WASM_LOAD_SITE: () => qW,
-      countRenderLost: () => QO,
-      crashError: () => vi,
-      crashReportsSettled: () => Gi,
-      deviceLossFields: () => Fi,
-      deviceLossWords: () => aO,
-      flushCrashReports: () => qi,
-      joinFailureCode: () => UO,
-      loadRecoveryCode: () => tO,
-      lokiTransport: () => xi,
-      modelFailureCode: () => yO,
-      readTrap: () => iO,
-      renderLoss: () => FO,
-      renderReloadMessage: () => rO,
-      reportCameraDirectorFault: () => qO,
-      reportCoreErrors: () => ri,
-      reportCrash: () => gi,
-      reportDataLoadFailure: () => Nm,
-      reportDisconnect: () => SO,
-      reportDroppedRequiredLimits: () => xO,
-      reportEventOverflow: () => oO,
-      reportFirstViewNoTerrain: () => pO,
-      reportFirstViewUnshown: () => fO,
-      reportLightFault: () => vO,
-      reportLoadRecovery: () => ZO,
-      reportLoadReload: () => AO,
-      reportMainStall: () => CO,
-      reportMemoryShed: () => DO,
-      reportModelFailure: () => TO,
-      reportModelPoolFailure: () => JO,
-      reportModelsModuleRetry: () => hO,
-      reportNoBackendRetry: () => cO,
-      reportPageJoinFailure: () => sO,
-      reportReconnectGaveUp: () => YO,
-      reportRenderRecovery: () => Ci,
-      reportRenderReload: () => Om,
-      reportReplayFault: () => BO,
-      reportStaleBuildReload: () => Lm,
-      reportStoppedCore: () => mO,
-      reportTerrainTextureFailure: () => mm,
-      reportTexturePackFeedLoadFailure: () => nO,
-      reportTexturePackKeptOut: () => uO,
-      reportUnstreamedCoreLoad: () => bO,
-      reportUnusedSeat: () => KO,
-      reportWorkerLost: () => dO,
-      reportWorkerStartTimeout: () => XO,
-      reportWorldgenGaveUp: () => gO,
-      reportWorldgenLoadFailure: () => HO,
-      reportWorldgenWorkerLost: () => eO,
-      resetCrashReports: () => Ii,
-      setCrashAdPreload: () => Ki,
-      setCrashBackend: () => Mi,
-      setCrashScreen: () => Ui,
-      setCrashTransport: () => bi,
-      showCrash: () => OO,
-      showJoinFailure: () => kO,
-      showUnsupported: () => PO,
-      unknownSkyWords: () => ai,
-      unsupportedCrashScreen: () => LO,
-      warmCrashCounts: () => Vi
+  42288: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      BUILT_IN_ANIMATIONS_SITE: () => RJ,
+      CAMERA_DIRECTOR_SITE: () => ZJ,
+      CORE_ERRORS_SITE: () => jR,
+      EVENT_OVERFLOW_SITE: () => hR,
+      FIRST_VIEW_SITE: () => yJ,
+      GraphicsLostError: () => yG,
+      JOIN_SITE: () => ER,
+      LEAVE_SITE: () => YR,
+      MAIN_THREAD_SITE: () => tJ,
+      MODEL_FEED_SITE: () => kR,
+      MODEL_POOL_SITE: () => QR,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => fJ,
+      NON_FATAL_REPORTS_PER_SESSION: () => gJ,
+      PREVIEW_ANIMATIONS_SITE: () => sR,
+      RENDER_RELOAD_SITE: () => TR,
+      REQUEST_DEVICE_SITE: () => uJ,
+      TEXTURE_NAMES_SITE: () => FR,
+      TEXTURE_PACK_FEED_SITE: () => JJ,
+      TEXTURE_PACK_SWAP_SITE: () => GJ,
+      TurnstilePageError: () => eG,
+      WASM_LOAD_SITE: () => dR,
+      countRenderLost: () => TG,
+      crashError: () => DJ,
+      crashReportsSettled: () => dJ,
+      deviceLossFields: () => FJ,
+      deviceLossWords: () => YG,
+      flushCrashReports: () => SJ,
+      joinFailureCode: () => aG,
+      loadRecoveryCode: () => iG,
+      lokiTransport: () => wJ,
+      modelFailureCode: () => XG,
+      readTrap: () => hJ,
+      renderLoss: () => FG,
+      renderReloadMessage: () => kG,
+      reportCameraDirectorFault: () => SG,
+      reportCoreErrors: () => kJ,
+      reportCrash: () => HJ,
+      reportDataLoadFailure: () => yy,
+      reportDisconnect: () => AG,
+      reportDroppedRequiredLimits: () => VG,
+      reportEventOverflow: () => vG,
+      reportFirstViewNoTerrain: () => cG,
+      reportFirstViewUnshown: () => PG,
+      reportLightFault: () => NG,
+      reportLoadRecovery: () => fG,
+      reportLoadReload: () => wG,
+      reportMainStall: () => IG,
+      reportMemoryShed: () => HG,
+      reportModelFailure: () => MG,
+      reportModelPoolFailure: () => BG,
+      reportModelsModuleRetry: () => lG,
+      reportNoBackendRetry: () => ZG,
+      reportPageJoinFailure: () => nG,
+      reportReconnectGaveUp: () => CG,
+      reportRenderRecovery: () => IJ,
+      reportRenderReload: () => Ry,
+      reportReplayFault: () => zG,
+      reportStaleBuildReload: () => uy,
+      reportStoppedCore: () => JG,
+      reportTerrainTextureFailure: () => Jy,
+      reportTexturePackFeedLoadFailure: () => gG,
+      reportTexturePackKeptOut: () => bG,
+      reportUnstreamedCoreLoad: () => rG,
+      reportUnusedSeat: () => WG,
+      reportWorkerLost: () => OG,
+      reportWorkerStartTimeout: () => mG,
+      reportWorldgenGaveUp: () => DG,
+      reportWorldgenLoadFailure: () => pG,
+      reportWorldgenWorkerLost: () => xG,
+      resetCrashReports: () => EJ,
+      setCrashAdPreload: () => CJ,
+      setCrashBackend: () => AJ,
+      setCrashScreen: () => nJ,
+      setCrashTransport: () => aJ,
+      showCrash: () => RG,
+      showJoinFailure: () => LG,
+      showUnsupported: () => tG,
+      unknownSkyWords: () => YJ,
+      unsupportedCrashScreen: () => uG,
+      warmCrashCounts: () => cJ
     });
-    var mW = OW(1052),
-      EW = OW(1365),
-      NW = OW(169),
-      PW = OW(1351),
-      LW = OW(1303),
-      cW = OW(248),
-      wW = OW(1904),
-      tW = OW(4981),
-      ZW = OW(42270),
-      xW = OW(5546),
-      lW = OW(42272),
-      AW = OW(35089),
-      bW = OW(2458),
-      jW = OW(35086),
-      UW = OW(5096),
-      kW = OW(136),
-      sW = OW(131),
-      MW = OW(2464),
-      KW = OW(37727),
-      SW = OW(1755),
-      YW = OW(42281),
-      yW = OW(42292),
-      TW = OW(42109),
-      JW = OW(42307),
-      hW = OW(42309),
-      HW = OW(37724),
-      nW = OW(2381),
-      uW = OW(2388),
-      oW = OW(42330),
-      dW = OW(42301),
-      eW = OW(42348),
-      vW = OW(37998),
-      gW = OW(671),
-      DW = OW(4417),
-      VW = OW(37257),
-      pW = OW(42225),
-      fW = OW(37265),
-      CW = OW(42358);
-    const XW = "[bloxd-wasm-client]",
-      BW = "coreErrors",
-      qW = "wasmLoad",
-      RW = "join",
-      GW = "leave",
-      IW = "modelFeed",
-      aW = "modelWorkerPool",
-      rW = "textureNames",
-      zW = "renderReload",
-      FW = "previewAnimations",
-      QW = "eventOverflow",
-      Wi = "builtInAnimations",
-      ii = "texturePackFeed",
-      Oi = "texturePackSwap",
-      mi = "firstView",
-      Ei = "mainThread",
-      Ni = "requestDevice",
-      Pi = "cameraDirector",
-      Li = 300,
-      ci = 64,
-      wi = 8;
-    let ti = 0;
-    const Zi = new Set,
-      xi = (WW, iW) => {
-        const OW = Si[WW.kind],
-          mW = {
-            backend: ki,
-            adPreload: si
+    var yR = GR(1127),
+      tR = GR(1459),
+      uR = GR(182),
+      ZR = GR(1449),
+      qR = GR(1406),
+      iR = GR(279),
+      fR = GR(1976),
+      VR = GR(5081),
+      KR = GR(42294),
+      wR = GR(5676),
+      rR = GR(42300),
+      eR = GR(34996),
+      aR = GR(2513),
+      LR = GR(34989),
+      nR = GR(5201),
+      UR = GR(134),
+      WR = GR(132),
+      AR = GR(2521),
+      CR = GR(37640),
+      XR = GR(1825),
+      MR = GR(42310),
+      BR = GR(42322),
+      lR = GR(42118),
+      pR = GR(42329),
+      gR = GR(42331),
+      bR = GR(37633),
+      vR = GR(2448),
+      OR = GR(2457),
+      xR = GR(42344),
+      NR = GR(42325),
+      DR = GR(42364),
+      HR = GR(37958),
+      oR = GR(709),
+      cR = GR(4498),
+      PR = GR(37169),
+      IR = GR(42239),
+      mR = GR(37183),
+      zR = GR(42374);
+    const SR = "[bloxd-wasm-client]",
+      jR = "coreErrors",
+      dR = "wasmLoad",
+      ER = "join",
+      YR = "leave",
+      kR = "modelFeed",
+      QR = "modelWorkerPool",
+      FR = "textureNames",
+      TR = "renderReload",
+      sR = "previewAnimations",
+      hR = "eventOverflow",
+      RJ = "builtInAnimations",
+      JJ = "texturePackFeed",
+      GJ = "texturePackSwap",
+      yJ = "firstView",
+      tJ = "mainThread",
+      uJ = "requestDevice",
+      ZJ = "cameraDirector",
+      qJ = 300,
+      iJ = 64,
+      fJ = 8;
+    let VJ = 0;
+    const KJ = new Set,
+      wJ = (RR, JR) => {
+        const GR = XJ[RR.kind],
+          yR = {
+            backend: UJ,
+            adPreload: WJ
           };
-        if (null === OW) return void li(WW, iW, mW, null);
-        const EW = (0, ZW.c)(OW, WW.message, WW.code, WW.fatal);
-        null === EW ? Bi("Loki", (async () => {
-          li(WW, iW, mW, await (0, ZW.d)(OW, WW.message, WW.code))
-        })) : li(WW, iW, mW, EW)
+        if (null === GR) return void rJ(RR, JR, yR, null);
+        const tR = (0, KR.b)(GR, RR.message, RR.code, RR.fatal);
+        null === tR ? zJ("Loki", (async () => {
+          rJ(RR, JR, yR, await (0, KR.c)(GR, RR.message, RR.code))
+        })) : rJ(RR, JR, yR, tR)
       };
 
-    function li(WW, iW, OW, mW) {
+    function rJ(RR, JR, GR, yR) {
       let {
-        backend: EW,
-        adPreload: NW
-      } = OW;
+        backend: tR,
+        adPreload: uR
+      } = GR;
       const {
-        kind: PW,
-        code: cW,
-        site: tW,
-        fatal: ZW,
-        details: xW
-      } = WW;
-      if (!ZW)
-        if (null === mW || (0, wW.d)(mW.errorKind) || Zi.has(mW.dedupe)) {
-          if (ti >= wi) return;
-          ti++
-        } else Zi.add(mW.dedupe);
-      const lW = {
-        ...xW,
-        kind: PW,
-        code: cW,
-        site: tW,
-        fatal: String(ZW),
-        backend: EW
+        kind: ZR,
+        code: iR,
+        site: VR,
+        fatal: KR,
+        details: wR
+      } = RR;
+      if (!KR)
+        if (null === yR || (0, fR.b)(yR.errorKind) || KJ.has(yR.dedupe)) {
+          if (VJ >= fJ) return;
+          VJ++
+        } else KJ.add(yR.dedupe);
+      const rR = {
+        ...wR,
+        kind: ZR,
+        code: iR,
+        site: VR,
+        fatal: String(KR),
+        backend: tR
       };
-      NW && (lW.adPreload = "true"), null !== mW && (lW.errorKind = mW.errorKind, lW.fingerprint = mW.fingerprint), iW instanceof Error && "string" === typeof iW.stack && (lW.causeStack = iW.stack.slice(0, 2e3)), (0, LW.ub)(vi(WW, iW), lW)
+      uR && (rR.adPreload = "true"), null !== yR && (rR.errorKind = yR.errorKind, rR.fingerprint = yR.fingerprint), JR instanceof Error && "string" === typeof JR.stack && (rR.causeStack = JR.stack.slice(0, 2e3)), (0, qR.ma)(DJ(RR, JR), rR)
     }
-    let Ai = xi;
+    let eJ = wJ;
 
-    function bi(WW) {
-      const iW = Ai;
-      return Ai = WW, iW
+    function aJ(RR) {
+      const JR = eJ;
+      return eJ = RR, JR
     }
-    let ji = () => {};
+    let LJ = () => {};
 
-    function Ui(WW) {
-      const iW = ji;
-      return ji = WW, iW
+    function nJ(RR) {
+      const JR = LJ;
+      return LJ = RR, JR
     }
-    let ki = "unpicked",
-      si = !1;
+    let UJ = "unpicked",
+      WJ = !1;
 
-    function Mi(WW) {
-      ki = WW
+    function AJ(RR) {
+      UJ = RR
     }
 
-    function Ki(WW) {
-      si = WW
+    function CJ(RR) {
+      WJ = RR
     }
-    const Si = {
+    const XJ = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -1047,7 +1047,7 @@ export const modules = {
         linkCensus: "wasm_load",
         linksReadAfterView: "wasm_load"
       },
-      Yi = {
+      MJ = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -1056,481 +1056,481 @@ export const modules = {
         mainStall: "wasm_load",
         texturePackKeptOut: "texture_pack"
       },
-      yi = new Set(["unstreamedLoad"]),
-      Ti = new Set(["linkCensus", "linksReadAfterView"]);
-    let Ji = !1;
-    const Hi = 20,
-      ni = new Map;
-    let ui = 0,
-      oi = 0;
-    const di = new Set,
-      ei = new Set;
+      BJ = new Set(["unstreamedLoad"]),
+      lJ = new Set(["linkCensus", "linksReadAfterView"]);
+    let pJ = !1;
+    const gJ = 20,
+      bJ = new Map;
+    let vJ = 0,
+      OJ = 0;
+    const xJ = new Set,
+      NJ = new Set;
 
-    function vi(WW, iW) {
-      const OW = Object.assign(new Error(`${WW.code}: ${WW.message}`), {
+    function DJ(RR, JR) {
+      const GR = Object.assign(new Error(`${RR.code}: ${RR.message}`), {
         name: "WasmClientCrash",
-        cause: null !== iW && void 0 !== iW ? iW : void 0
+        cause: null !== JR && void 0 !== JR ? JR : void 0
       });
-      return iW instanceof Error && iW.stack && (OW.stack = iW.stack), OW
+      return JR instanceof Error && JR.stack && (GR.stack = JR.stack), GR
     }
 
-    function gi(WW) {
-      var iW, mW;
+    function HJ(RR) {
+      var JR, yR;
       const {
-        kind: EW,
-        code: NW,
-        site: PW,
-        fatal: LW,
-        message: cW,
-        error: wW
-      } = WW, tW = !1 !== WW.toTransport && !yi.has(EW), ZW = !LW && tW && !Ti.has(EW), xW = {
-        kind: EW,
-        code: NW,
-        site: PW,
-        fatal: LW,
-        message: cW,
-        details: null !== (iW = WW.details) && void 0 !== iW ? iW : {}
-      }, lW = `${NW}@${PW}${void 0===WW.instance?"":`#${WW.instance}`}${LW?"!":""}`, AW = (null !== (mW = ni.get(lW)) && void 0 !== mW ? mW : 0) + 1;
-      if (ni.set(lW, AW), void 0 !== WW.countAs && 1 === AW && fi(WW.countAs), AW > 1 ? 0 === (AW & AW - 1) && Xi((() => {
-          console.warn(`${XW} ${NW} at ${PW} reported ${AW} times`)
-        })) : ZW && ui >= Hi ? Xi((() => {
-          console.warn(`${XW} ${EW} ${NW} at ${PW}: ${cW} (not sent: the session's ${Hi} went)`, xW.details, null !== wW && void 0 !== wW ? wW : "")
-        })) : (ZW && ui++, function(WW, iW, mW, EW) {
-          var NW, PW;
+        kind: tR,
+        code: uR,
+        site: ZR,
+        fatal: qR,
+        message: iR,
+        error: fR
+      } = RR, VR = !1 !== RR.toTransport && !BJ.has(tR), KR = !qR && VR && !lJ.has(tR), wR = {
+        kind: tR,
+        code: uR,
+        site: ZR,
+        fatal: qR,
+        message: iR,
+        details: null !== (JR = RR.details) && void 0 !== JR ? JR : {}
+      }, rR = `${uR}@${ZR}${void 0===RR.instance?"":`#${RR.instance}`}${qR?"!":""}`, eR = (null !== (yR = bJ.get(rR)) && void 0 !== yR ? yR : 0) + 1;
+      if (bJ.set(rR, eR), void 0 !== RR.countAs && 1 === eR && PJ(RR.countAs), eR > 1 ? 0 === (eR & eR - 1) && mJ((() => {
+          console.warn(`${SR} ${uR} at ${ZR} reported ${eR} times`)
+        })) : KR && vJ >= gJ ? mJ((() => {
+          console.warn(`${SR} ${tR} ${uR} at ${ZR}: ${iR} (not sent: the session's ${gJ} went)`, wR.details, null !== fR && void 0 !== fR ? fR : "")
+        })) : (KR && vJ++, function(RR, JR, yR, tR) {
+          var uR, ZR;
           const {
-            kind: LW,
-            code: cW,
-            site: wW,
-            fatal: tW,
-            message: ZW,
-            details: xW
-          } = WW;
-          Xi((() => {
-            (tW ? console.error : console.warn)(`${XW} ${LW} ${cW} at ${wW}: ${ZW}`, xW, null !== iW && void 0 !== iW ? iW : "")
+            kind: qR,
+            code: iR,
+            site: fR,
+            fatal: VR,
+            message: KR,
+            details: wR
+          } = RR;
+          mJ((() => {
+            (VR ? console.error : console.warn)(`${SR} ${qR} ${iR} at ${fR}: ${KR}`, wR, null !== JR && void 0 !== JR ? JR : "")
           }));
-          const lW = Yi[LW],
-            AW = null !== (NW = null !== (PW = Si[LW]) && void 0 !== PW ? PW : lW) && void 0 !== NW ? NW : null;
-          EW || null === AW || Di((async () => {
+          const rR = MJ[qR],
+            eR = null !== (uR = null !== (ZR = XJ[qR]) && void 0 !== ZR ? ZR : rR) && void 0 !== uR ? uR : null;
+          tR || null === eR || oJ((async () => {
             const {
-              reportCappedWasmFailure: iW,
-              reportUncappedWasmFailure: mW,
-              reportWasmFailure: EW
-            } = await OW.e(218).then((() => OW(35078))), NW = Ti.has(LW) ? mW : void 0 === lW ? EW : iW, PW = function(WW) {
+              reportCappedWasmFailure: JR,
+              reportUncappedWasmFailure: yR,
+              reportWasmFailure: tR
+            } = await GR.e(218).then((() => GR(34980))), uR = lJ.has(qR) ? yR : void 0 === rR ? tR : JR, ZR = function(RR) {
               let {
-                kind: iW,
-                site: OW,
-                fatal: mW,
-                details: EW
-              } = WW;
-              if ("crash" !== iW) return;
+                kind: JR,
+                site: GR,
+                fatal: yR,
+                details: tR
+              } = RR;
+              if ("crash" !== JR) return;
               return {
-                ...EW,
-                site: OW,
-                fatal: String(mW)
+                ...tR,
+                site: GR,
+                fatal: String(yR)
               }
-            }(WW);
-            void 0 === PW ? NW(AW, ZW, cW) : NW(AW, ZW, cW, PW)
+            }(RR);
+            void 0 === ZR ? uR(eR, KR, iR) : uR(eR, KR, iR, ZR)
           }));
-          mW && Xi((() => {
-            Ai(WW, iW)
+          yR && mJ((() => {
+            eJ(RR, JR)
           }))
-        }(xW, wW, tW, void 0 !== WW.countAs)), LW) {
-        var bW;
-        const iW = null !== (bW = WW.screen) && void 0 !== bW ? bW : {
-          text: (0, vW.e)(xW, !0),
+        }(wR, fR, VR, void 0 !== RR.countAs)), qR) {
+        var aR;
+        const JR = null !== (aR = RR.screen) && void 0 !== aR ? aR : {
+          text: (0, HR.e)(wR, !0),
           reload: !0,
           stillBlocked: null
         };
-        Xi((() => {
-          ji(iW)
+        mJ((() => {
+          LJ(JR)
         }))
       }
-      return xW
+      return wR
     }
 
-    function Di(WW) {
-      Bi("counts", (async () => {
+    function oJ(RR) {
+      zJ("counts", (async () => {
         const {
-          peekVisitSessionId: iW
-        } = await Promise.resolve().then((() => OW(683)));
-        null !== iW() && (await WW(), Ji = !0)
+          peekVisitSessionId: JR
+        } = await Promise.resolve().then((() => GR(726)));
+        null !== JR() && (await RR(), pJ = !0)
       }))
     }
 
-    function Vi() {
-      Promise.all([Promise.resolve().then((() => OW(683))), OW.e(218).then((() => OW(35078)))]).catch((WW => {
-        console.warn(`${XW} the counts' modules didn't load ahead`, WW)
+    function cJ() {
+      Promise.all([Promise.resolve().then((() => GR(726))), GR.e(218).then((() => GR(34980)))]).catch((RR => {
+        console.warn(`${SR} the counts' modules didn't load ahead`, RR)
       }))
     }
 
-    function fi(WW) {
-      di.has(WW.errorKind) || (di.add(WW.errorKind), Di((async () => {
+    function PJ(RR) {
+      xJ.has(RR.errorKind) || (xJ.add(RR.errorKind), oJ((async () => {
         const {
-          reportClientError: iW
-        } = await Promise.resolve().then((() => OW(1888)));
-        iW(WW.errorKind, WW.error, WW.code, !0, void 0, WW.fields)
+          reportClientError: JR
+        } = await Promise.resolve().then((() => GR(1972)));
+        JR(RR.errorKind, RR.error, RR.code, !0, void 0, RR.fields)
       })))
     }
 
-    function Ci(WW, iW) {
-      Bi("render_lost", (async () => {
+    function IJ(RR, JR) {
+      zJ("render_lost", (async () => {
         const [{
-          reportClientError: mW
+          reportClientError: yR
         }, {
-          CAPPED_COUNTS_VISIT_CAP: EW
-        }] = await Promise.all([Promise.resolve().then((() => OW(1888))), OW.e(218).then((() => OW(35078)))]);
-        mW("render_lost", iW, WW, !0, EW)
+          CAPPED_COUNTS_VISIT_CAP: tR
+        }] = await Promise.all([Promise.resolve().then((() => GR(1972))), GR.e(218).then((() => GR(34980)))]);
+        yR("render_lost", JR, RR, !0, tR)
       }))
     }
 
-    function Xi(WW) {
+    function mJ(RR) {
       try {
-        WW()
-      } catch (iW) {
+        RR()
+      } catch (JR) {
         try {
-          console.warn(`${XW} could not send a report`, iW)
+          console.warn(`${SR} could not send a report`, JR)
         } catch {}
       }
     }
 
-    function Bi(WW, iW) {
+    function zJ(RR, JR) {
       try {
-        const OW = iW().catch((iW => {
-          console.warn(`${XW} could not send the report to ${WW}`, iW)
+        const GR = JR().catch((JR => {
+          console.warn(`${SR} could not send the report to ${RR}`, JR)
         })).finally((() => {
-          ei.delete(OW)
+          NJ.delete(GR)
         }));
-        ei.add(OW)
-      } catch (OW) {
-        console.warn(`${XW} could not send the report to ${WW}`, OW)
+        NJ.add(GR)
+      } catch (GR) {
+        console.warn(`${SR} could not send the report to ${RR}`, GR)
       }
     }
-    async function qi(WW) {
-      let iW;
-      (0, ZW.e)();
-      const OW = new Promise((OW => {
-        iW = setTimeout(OW, WW)
+    async function SJ(RR) {
+      let JR;
+      (0, KR.f)();
+      const GR = new Promise((GR => {
+        JR = setTimeout(GR, RR)
       }));
-      await Promise.race([Ri(), OW]), clearTimeout(iW)
+      await Promise.race([jJ(), GR]), clearTimeout(JR)
     }
-    async function Ri() {
-      if (await Promise.allSettled([...ei]), Ji) try {
+    async function jJ() {
+      if (await Promise.allSettled([...NJ]), pJ) try {
         const {
-          flushClientAnalyticsEvents: WW
-        } = await Promise.resolve().then((() => OW(1576)));
-        await WW()
-      } catch (WW) {
-        console.warn(`${XW} could not send the counts`, WW)
+          flushClientAnalyticsEvents: RR
+        } = await Promise.resolve().then((() => GR(1642)));
+        await RR()
+      } catch (RR) {
+        console.warn(`${SR} could not send the counts`, RR)
       }
     }
-    async function Gi() {
-      for (; ei.size > 0;) await Promise.allSettled([...ei])
+    async function dJ() {
+      for (; NJ.size > 0;) await Promise.allSettled([...NJ])
     }
 
-    function Ii() {
-      ni.clear(), ui = 0, Ji = !1, ti = 0, Zi.clear(), oi = 0, di.clear(), (0, lW.u)()
+    function EJ() {
+      bJ.clear(), vJ = 0, pJ = !1, VJ = 0, KJ.clear(), OJ = 0, xJ.clear(), (0, rR.r)()
     }
 
-    function ai(WW) {
-      const iW = "object" === typeof WW && null !== WW ? WW.type : WW;
-      return "string" !== typeof iW ? "sky not named" : `sky ${JSON.stringify(Array.from(iW).slice(0,ci).join(""))}`
+    function YJ(RR) {
+      const JR = "object" === typeof RR && null !== RR ? RR.type : RR;
+      return "string" !== typeof JR ? "sky not named" : `sky ${JSON.stringify(Array.from(JR).slice(0,iJ).join(""))}`
     }
 
-    function ri(WW, iW, OW, mW) {
-      oi += iW;
+    function kJ(RR, JR, GR, yR) {
+      OJ += JR;
       for (const {
-          code: LW,
-          detail: cW
+          code: qR,
+          detail: iR
         }
-        of WW) {
-        var EW, NW, PW;
-        const WW = (0, xW.de)(LW),
-          iW = (0, lW.i)(LW, cW),
-          wW = iW ? "CORE-RenderLinkPending" : `CORE-${WW}`,
-          tW = (0, lW.b)(LW, cW),
-          ZW = null === mW || void 0 === mW ? void 0 : mW(LW, cW),
-          bW = void 0 !== (null === tW || void 0 === tW ? void 0 : tW.gpuDetails),
-          jW = bW ? null === (EW = (0, sW.t)()) || void 0 === EW ? void 0 : EW.renderer : void 0,
-          UW = bW ? ` ${(0,lW.o)()}` : "",
-          kW = Array.from([jW && `gpu ${(0,AW.d)(jW)}`, ZW].filter(Boolean).join("; ")).slice(0, Li).join(""),
-          MW = `core error ${WW}${null!==(NW=null===tW||void 0===tW?void 0:tW.words)&&void 0!==NW?NW:""}${UW}${kW?`: ${kW}`:""}`,
-          KW = {
-            errorCode: String(LW),
-            detail: String(cW),
-            droppedBefore: String(oi),
-            wasmBuild: OW.wasm,
-            clientVersion: OW.client,
-            ...null === tW || void 0 === tW ? void 0 : tW.gpuDetails,
-            ...Fi(LW, cW)
+        of RR) {
+        var tR, uR, ZR;
+        const RR = (0, wR.ge)(qR),
+          JR = (0, rR.e)(qR, iR),
+          fR = JR ? "CORE-RenderLinkPending" : `CORE-${RR}`,
+          VR = (0, rR.b)(qR, iR),
+          KR = null === yR || void 0 === yR ? void 0 : yR(qR, iR),
+          aR = void 0 !== (null === VR || void 0 === VR ? void 0 : VR.gpuDetails),
+          LR = aR ? null === (tR = (0, WR.y)()) || void 0 === tR ? void 0 : tR.renderer : void 0,
+          nR = aR ? ` ${(0,rR.h)()}` : "",
+          UR = Array.from([LR && `gpu ${(0,eR.e)(LR)}`, KR].filter(Boolean).join("; ")).slice(0, qJ).join(""),
+          AR = `core error ${RR}${null!==(uR=null===VR||void 0===VR?void 0:VR.words)&&void 0!==uR?uR:""}${nR}${UR?`: ${UR}`:""}`,
+          CR = {
+            errorCode: String(qR),
+            detail: String(iR),
+            droppedBefore: String(OJ),
+            wasmBuild: GR.wasm,
+            clientVersion: GR.client,
+            ...null === VR || void 0 === VR ? void 0 : VR.gpuDetails,
+            ...FJ(qR, iR)
           };
-        null !== tW && (0, lW.s)(tW) ? Xi((() => {
-          console.warn(`${XW} coreError ${wW}: ${MW} (not sent: the session's render warnings of its kind went)`, KW)
-        })) : zi(LW) ? Xi((() => {
-          console.warn(`${XW} coreError ${wW}: ${MW} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, KW)
-        })) : gi({
-          kind: iW ? "recovered" : WO(LW, cW),
-          code: wW,
-          site: BW,
+        null !== VR && (0, rR.p)(VR) ? mJ((() => {
+          console.warn(`${SR} coreError ${fR}: ${AR} (not sent: the session's render warnings of its kind went)`, CR)
+        })) : QJ(qR) ? mJ((() => {
+          console.warn(`${SR} coreError ${fR}: ${AR} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, CR)
+        })) : HJ({
+          kind: JR ? "recovered" : sJ(qR, iR),
+          code: fR,
+          site: jR,
           fatal: !1,
-          message: MW,
-          details: KW,
-          instance: null !== (PW = null === tW || void 0 === tW ? void 0 : tW.instance) && void 0 !== PW ? PW : Qi(LW, cW)
+          message: AR,
+          details: CR,
+          instance: null !== (ZR = null === VR || void 0 === VR ? void 0 : VR.instance) && void 0 !== ZR ? ZR : TJ(qR, iR)
         })
       }
     }
 
-    function zi(WW) {
-      if (WW !== xW.D.AudioUnknownSound && WW !== xW.D.PresentationClipUnplayable) return !1;
+    function QJ(RR) {
+      if (RR !== wR.K.AudioUnknownSound && RR !== wR.K.PresentationClipUnplayable) return !1;
       const {
-        gameNameWithVariation: iW,
-        lobbyName: OW
-      } = (0, PW.d)();
-      return null !== iW && (!!(0, mW.i)(iW) || WW === xW.D.AudioUnknownSound && (0, EW.g)(iW, OW))
+        gameNameWithVariation: JR,
+        lobbyName: GR
+      } = (0, ZR.d)();
+      return null !== JR && (!!(0, yR.n)(JR) || RR === wR.K.AudioUnknownSound && (0, tR.i)(JR, GR))
     }
 
-    function Fi(WW, iW) {
-      if (WW !== xW.D.RenderDeviceLost) return;
-      const OW = iW >>> xW.K.LINKS_IN_FLIGHT_SHIFT & xW.K.LINKS_IN_FLIGHT_MAX,
-        mW = iW >>> xW.K.OLDEST_LINK_SHIFT & xW.K.OLDEST_LINK_MAX;
+    function FJ(RR, JR) {
+      if (RR !== wR.K.RenderDeviceLost) return;
+      const GR = JR >>> wR.N.LINKS_IN_FLIGHT_SHIFT & wR.N.LINKS_IN_FLIGHT_MAX,
+        yR = JR >>> wR.N.OLDEST_LINK_SHIFT & wR.N.OLDEST_LINK_MAX;
       return {
-        linksInFlight: String(OW),
-        oldestLinkMs: String(mW * xW.K.OLDEST_LINK_UNIT_MS)
+        linksInFlight: String(GR),
+        oldestLinkMs: String(yR * wR.N.OLDEST_LINK_UNIT_MS)
       }
     }
 
-    function Qi(WW, iW) {
-      return WW === xW.D.RenderDeviceLost && 0 !== (iW & xW.K.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function TJ(RR, JR) {
+      return RR === wR.K.RenderDeviceLost && 0 !== (JR & wR.N.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function WO(WW, iW) {
-      return WW === xW.D.JobsHeapGaveUp ? "meshHeap" : (0, lW.l)(WW, iW) ? "linksReadAfterView" : (0, lW.e)(WW, iW) ? "linkCensus" : "coreError"
+    function sJ(RR, JR) {
+      return RR === wR.K.JobsHeapGaveUp ? "meshHeap" : (0, rR.f)(RR, JR) ? "linksReadAfterView" : (0, rR.c)(RR, JR) ? "linkCensus" : "coreError"
     }
 
-    function iO(WW) {
-      return (0, VW.l)(WW instanceof pW.e ? WW.trap : WW, nW.H, nW.eb)
+    function hJ(RR) {
+      return (0, PR.h)(RR instanceof IR.e ? RR.trap : RR, vR.x, vR.Z)
     }
 
-    function OO(WW, iW, OW) {
-      return EO(WW, iW, OW, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function RG(RR, JR, GR) {
+      return GG(RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function mO(WW, iW, OW) {
-      return EO(WW, iW, OW, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function JG(RR, JR, GR) {
+      return GG(RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function EO(WW, iW, OW, mW, EW) {
+    function GG(RR, JR, GR, yR, tR) {
       let {
-        memoryDetails: NW = {},
-        memoryStep: PW
-      } = mW;
+        memoryDetails: uR = {},
+        memoryStep: ZR
+      } = yR;
       const {
-        code: LW,
-        details: cW,
-        message: wW
-      } = (0, YW.J)(WW, iW), tW = [];
-      Object.assign(cW, (0, fW.e)(WW.error)), null !== OW && (cW.trapKind = OW.kind, null !== OW.panic && (cW.panic = (0, VW.h)(OW.panic)), OW.refusedBytes > 0 && (cW.refusedAllocation = String(OW.refusedBytes)), tW.push((0, VW.o)(OW.kind, OW.refusedBytes))), void 0 !== PW && tW.push(`memory=${PW}`);
-      const ZW = WW.error instanceof NO;
-      return ZW && (0, gW.H)(), gi({
+        code: qR,
+        details: iR,
+        message: fR
+      } = (0, MR.G)(RR, JR), VR = [];
+      Object.assign(iR, (0, mR.h)(RR.error)), null !== GR && (iR.trapKind = GR.kind, null !== GR.panic && (iR.panic = (0, PR.e)(GR.panic)), GR.refusedBytes > 0 && (iR.refusedAllocation = String(GR.refusedBytes)), VR.push((0, PR.k)(GR.kind, GR.refusedBytes))), void 0 !== ZR && VR.push(`memory=${ZR}`);
+      const KR = RR.error instanceof yG;
+      return KR && (0, oR.E)(), HJ({
         kind: "crash",
-        code: LW,
-        site: WW.site,
-        fatal: EW,
-        message: [...tW, wW].join("; "),
+        code: qR,
+        site: RR.site,
+        fatal: tR,
+        message: [...VR, fR].join("; "),
         details: {
-          ...cW,
-          ...NW,
-          ...void 0 === PW ? {} : {
-            memoryStep: PW
+          ...iR,
+          ...uR,
+          ...void 0 === ZR ? {} : {
+            memoryStep: ZR
           }
         },
-        error: WW.error,
-        screen: ZW ? LO("graphicsLost") : void 0
+        error: RR.error,
+        screen: KR ? uG("graphicsLost") : void 0
       })
     }
-    class NO extends Error {}
+    class yG extends Error {}
 
-    function PO(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      return "download" !== WW && (0, gW.H)(), gi({
+    function tG(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      return "download" !== RR && (0, oR.E)(), HJ({
         kind: "unsupported",
-        code: iW,
-        site: qW,
+        code: JR,
+        site: dR,
         fatal: !0,
-        message: OW,
+        message: GR,
         details: {
-          ...mW,
-          cause: WW,
-          status: iW
+          ...yR,
+          cause: RR,
+          status: JR
         },
-        screen: LO(WW)
+        screen: uG(RR)
       })
     }
 
-    function LO(WW) {
-      const iW = (0, NW.t)(kW.siteUsed),
-        OW = (0, vW.m)(WW, iW),
-        mW = "noContext" === WW || "graphicsLost" === WW ? (0, vW.h)(WW, iW) : null;
+    function uG(RR) {
+      const JR = (0, uR.r)(UR.siteUsed),
+        GR = (0, HR.t)(RR, JR),
+        yR = "noContext" === RR || "graphicsLost" === RR ? (0, HR.k)(RR, JR) : null;
       return {
-        text: OW,
-        reload: "general:tryAgain" === OW.confirm,
-        stillBlocked: mW
+        text: GR,
+        reload: "general:tryAgain" === GR.confirm,
+        stillBlocked: yR
       }
     }
 
-    function cO(WW, iW, OW) {
-      return gi({
+    function ZG(RR, JR, GR) {
+      return HJ({
         kind: "recovered",
-        code: "reprobed" === WW ? "no_backend_reprobed" : "no_backend_wasm_reload",
-        site: qW,
+        code: "reprobed" === RR ? "no_backend_reprobed" : "no_backend_wasm_reload",
+        site: dR,
         fatal: !1,
-        message: OW,
+        message: GR,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          decline: iW,
-          step: WW
+          decline: JR,
+          step: RR
         }
       })
     }
-    const wO = 9;
+    const qG = 9;
 
-    function tO(WW) {
-      const iW = "recovered" === WW.outcome ? "recovered" : "gave_up",
-        OW = "load" === WW.step ? `wasm_load_${iW}${WW.oom?"_oom":""}` : `no_context_${iW}`;
-      return "recovered" === WW.outcome ? `${OW}_t${Math.min(WW.tries,wO)}` : "load" === WW.step ? `${OW}_${WW.stage}` : OW
+    function iG(RR) {
+      const JR = "recovered" === RR.outcome ? "recovered" : "gave_up",
+        GR = "load" === RR.step ? `wasm_load_${JR}${RR.oom?"_oom":""}` : `no_context_${JR}`;
+      return "recovered" === RR.outcome ? `${GR}_t${Math.min(RR.tries,qG)}` : "load" === RR.step ? `${GR}_${RR.stage}` : GR
     }
 
-    function ZO(WW) {
+    function fG(RR) {
       const {
-        step: iW,
-        outcome: OW,
-        tries: mW,
-        detail: EW,
-        details: NW = {}
-      } = WW, PW = "load" === WW.step ? {
-        stage: WW.stage,
-        ...WW.oom ? {
+        step: JR,
+        outcome: GR,
+        tries: yR,
+        detail: tR,
+        details: uR = {}
+      } = RR, ZR = "load" === RR.step ? {
+        stage: RR.stage,
+        ...RR.oom ? {
           oom: "true"
         } : {}
       } : {};
-      return gi({
+      return HJ({
         kind: "recovered",
-        code: tO(WW),
-        site: qW,
+        code: iG(RR),
+        site: dR,
         fatal: !1,
-        message: EW,
+        message: tR,
         details: {
-          ...NW,
-          step: iW,
-          outcome: OW,
-          tries: String(mW),
-          ...PW
+          ...uR,
+          step: JR,
+          outcome: GR,
+          tries: String(yR),
+          ...ZR
         }
       })
     }
 
-    function xO(WW) {
-      return gi({
+    function VG(RR) {
+      return HJ({
         kind: "recovered",
         code: "WEBGPU-unknownLimits",
-        site: Ni,
+        site: uJ,
         fatal: !1,
         message: "WebGPU dropped required limits the browser doesn't name",
         details: {
-          limits: WW.join(",")
+          limits: RR.join(",")
         }
       })
     }
-    const lO = "reload=wasm";
+    const KG = "reload=wasm";
 
-    function AO(WW, iW, OW) {
-      return gi({
+    function wG(RR, JR, GR) {
+      return HJ({
         kind: "unsupported",
-        code: iW,
-        site: qW,
+        code: JR,
+        site: dR,
         fatal: !1,
-        message: [lO, OW].join("; "),
+        message: [KG, GR].join("; "),
         details: {
-          cause: WW,
-          status: iW,
+          cause: RR,
+          status: JR,
           fallback: "wasmReload"
         }
       })
     }
 
-    function bO() {
+    function rG() {
       const {
-        code: WW,
-        message: iW
-      } = DW.e;
-      return gi({
+        code: RR,
+        message: JR
+      } = cR.d;
+      return HJ({
         kind: "unstreamedLoad",
-        code: WW,
-        site: qW,
+        code: RR,
+        site: dR,
         fatal: !1,
-        message: iW
+        message: JR
       })
     }
-    class jO extends Error {
+    class eG extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function UO(WW) {
-      return WW instanceof JW.n ? 0 === WW.code ? "JOIN-matchmake" : `JOIN-${WW.code}` : WW instanceof JW.c ? 0 === WW.code ? `JOIN-${WW.stage}` : `JOIN-${WW.stage}-${WW.code}` : WW instanceof TW.b ? "JOIN-gameCode" : WW instanceof jO ? "JOIN-turnstilePage" : WW instanceof JW.z ? "JOIN-trafficCheck" : WW instanceof KW.c ? "JOIN-timeout" : "JOIN-network"
+    function aG(RR) {
+      return RR instanceof pR.m ? 0 === RR.code ? "JOIN-matchmake" : `JOIN-${RR.code}` : RR instanceof pR.b ? 0 === RR.code ? `JOIN-${RR.stage}` : `JOIN-${RR.stage}-${RR.code}` : RR instanceof lR.e ? "JOIN-gameCode" : RR instanceof eG ? "JOIN-turnstilePage" : RR instanceof pR.z ? "JOIN-trafficCheck" : RR instanceof CR.g ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function kO(WW, iW) {
-      const OW = (0, fW.m)(WW),
-        mW = {
-          wasmBuild: iW.wasm,
-          clientVersion: iW.client
+    function LG(RR, JR) {
+      const GR = (0, mR.k)(RR),
+        yR = {
+          wasmBuild: JR.wasm,
+          clientVersion: JR.client
         },
-        EW = WW instanceof jO ? {
-          text: (0, vW.i)(),
+        tR = RR instanceof eG ? {
+          text: (0, HR.n)(),
           reload: !1,
           stillBlocked: null
         } : void 0,
-        NW = (0, hW.e)(WW),
-        PW = "expected" !== NW;
-      return gi({
+        uR = (0, gR.c)(RR),
+        ZR = "expected" !== uR;
+      return HJ({
         kind: "join",
-        code: UO(WW),
-        site: RW,
+        code: aG(RR),
+        site: ER,
         fatal: !0,
-        message: OW,
-        details: mW,
-        error: WW,
-        screen: EW,
-        toTransport: PW,
-        instance: NW
+        message: GR,
+        details: yR,
+        error: RR,
+        screen: tR,
+        toTransport: ZR,
+        instance: uR
       })
     }
 
-    function sO(WW, iW, OW) {
-      var mW;
-      const EW = (0, hW.e)(WW),
-        NW = {
-          cause: (WW instanceof JW.c || WW instanceof JW.n) && null !== (mW = WW.serverText) && void 0 !== mW ? mW : "",
-          sinceJoinStart: (0, MW.e)(OW.sinceJoinStartMs),
-          game: OW.game,
-          ...(0, MW.j)(),
-          wasmBuild: iW.wasm,
-          clientVersion: iW.client
+    function nG(RR, JR, GR) {
+      var yR;
+      const tR = (0, gR.c)(RR),
+        uR = {
+          cause: (RR instanceof pR.b || RR instanceof pR.m) && null !== (yR = RR.serverText) && void 0 !== yR ? yR : "",
+          sinceJoinStart: (0, AR.c)(GR.sinceJoinStartMs),
+          game: GR.game,
+          ...(0, AR.j)(),
+          wasmBuild: JR.wasm,
+          clientVersion: JR.client
         };
-      return gi({
+      return HJ({
         kind: "pageJoin",
-        code: UO(WW),
-        site: RW,
+        code: aG(RR),
+        site: ER,
         fatal: !1,
-        message: (0, fW.m)(WW),
-        details: NW,
-        error: WW,
-        toTransport: "unrecognised" === EW,
-        instance: EW
+        message: (0, mR.k)(RR),
+        details: uR,
+        error: RR,
+        toTransport: "unrecognised" === tR,
+        instance: tR
       })
     }
-    const MO = {
+    const UG = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1549,673 +1549,673 @@ export const modules = {
       }
     };
 
-    function KO(WW, iW) {
+    function WG(RR, JR) {
       let {
-        unused: OW,
-        answered: mW,
-        sH: EW
-      } = WW;
+        unused: GR,
+        answered: yR,
+        mD: tR
+      } = RR;
       const {
-        code: NW,
-        message: PW
-      } = MO[OW], LW = {
-        unused: OW,
-        answered: String(mW),
-        sH: String(EW),
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+        code: uR,
+        message: ZR
+      } = UG[GR], qR = {
+        unused: GR,
+        answered: String(yR),
+        mD: String(tR),
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "seat",
-        code: NW,
-        site: RW,
+        code: uR,
+        site: ER,
         fatal: !1,
-        message: PW,
-        details: LW
+        message: ZR,
+        details: qR
       })
     }
 
-    function SO(WW, iW, OW) {
-      var mW;
-      let EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (mW = WW.name) && void 0 !== mW ? mW : String(WW.code);
-      const NW = {
-          closeCode: String(WW.code),
-          recognised: String(null !== WW.name),
-          closeReason: OW.closeReason,
-          sinceJoined: (0, MW.e)(OW.sinceJoinedMs),
-          game: OW.game,
-          ...(0, MW.j)(),
-          wasmBuild: iW.wasm,
-          clientVersion: iW.client
+    function AG(RR, JR, GR) {
+      var yR;
+      let tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (yR = RR.name) && void 0 !== yR ? yR : String(RR.code);
+      const uR = {
+          closeCode: String(RR.code),
+          recognised: String(null !== RR.name),
+          closeReason: GR.closeReason,
+          sinceJoined: (0, AR.c)(GR.sinceJoinedMs),
+          game: GR.game,
+          ...(0, AR.j)(),
+          wasmBuild: JR.wasm,
+          clientVersion: JR.client
         },
-        PW = null === WW.name && !(0, MW.f)(WW.code);
-      return gi({
+        ZR = null === RR.name && !(0, AR.f)(RR.code);
+      return HJ({
         kind: "disconnect",
-        code: EW,
-        site: GW,
+        code: tR,
+        site: YR,
         fatal: !1,
         message: "Left room",
-        details: NW,
-        toTransport: PW
+        details: uR,
+        toTransport: ZR
       })
     }
 
-    function YO(WW, iW) {
-      const OW = {
-        ...(0, bW.q)(WW),
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+    function CG(RR, JR) {
+      const GR = {
+        ...(0, aR.q)(RR),
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "disconnect",
-        code: `reconnect-${WW.reason}`,
-        site: RW,
+        code: `reconnect-${RR.reason}`,
+        site: ER,
         fatal: !1,
         message: "Reconnect failed",
-        details: OW
+        details: GR
       })
     }
 
-    function yO(WW) {
-      return WW.error instanceof uW.h ? `MODEL-${WW.error.status}` : WW.error instanceof oW.h ? "MODEL-ring" : "MODEL-network"
+    function XG(RR) {
+      return RR.error instanceof OR.f ? `MODEL-${RR.error.status}` : RR.error instanceof xR.h ? "MODEL-ring" : "MODEL-network"
     }
 
-    function TO(WW, iW) {
-      const OW = yO(WW),
-        mW = `model file ${WW.file} ${WW.startup?"(startup) ":""}could not load`,
-        EW = {
-          file: String(WW.file),
-          url: WW.url,
-          wasmBuild: iW.wasm,
-          clientVersion: iW.client
+    function MG(RR, JR) {
+      const GR = XG(RR),
+        yR = `model file ${RR.file} ${RR.startup?"(startup) ":""}could not load`,
+        tR = {
+          file: String(RR.file),
+          url: RR.url,
+          wasmBuild: JR.wasm,
+          clientVersion: JR.client
         };
-      return gi({
-        kind: WW.startup ? "model" : "modelLate",
-        code: OW,
-        site: IW,
-        fatal: WW.startup,
-        message: mW,
-        details: EW,
-        error: WW.error
+      return HJ({
+        kind: RR.startup ? "model" : "modelLate",
+        code: GR,
+        site: kR,
+        fatal: RR.startup,
+        message: yR,
+        details: tR,
+        error: RR.error
       })
     }
 
-    function JO(WW, iW) {
-      const OW = {
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+    function BG(RR, JR) {
+      const GR = {
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: aW,
+        site: QR,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: OW,
-        error: WW
+        details: GR,
+        error: RR
       })
     }
 
-    function hO(WW, iW, OW) {
-      const mW = {
-        delayMs: String(iW),
-        wasmBuild: OW.wasm,
-        clientVersion: OW.client
+    function lG(RR, JR, GR) {
+      const yR = {
+        delayMs: String(JR),
+        wasmBuild: GR.wasm,
+        clientVersion: GR.client
       };
-      WW instanceof uW.h && (mW.status = String(WW.status));
-      return gi({
+      RR instanceof OR.f && (yR.status = String(RR.status));
+      return HJ({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: aW,
+        site: QR,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: mW,
-        error: WW
+        details: yR,
+        error: RR
       })
     }
 
-    function HO(WW, iW) {
-      const OW = {
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+    function pG(RR, JR) {
+      const GR = {
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: YW.F,
+        site: MR.B,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: OW,
-        error: WW
+        details: GR,
+        error: RR
       })
     }
 
-    function nO(WW, iW) {
-      const OW = {
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+    function gG(RR, JR) {
+      const GR = {
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: ii,
+        site: JJ,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: OW,
-        error: WW
+        details: GR,
+        error: RR
       })
     }
 
-    function uO(WW, iW, OW, mW) {
-      const EW = {
-        wasmBuild: mW.wasm,
-        clientVersion: mW.client
+    function bG(RR, JR, GR, yR) {
+      const tR = {
+        wasmBuild: yR.wasm,
+        clientVersion: yR.client
       };
-      return gi({
+      return HJ({
         kind: "texturePackKeptOut",
-        code: (0, tW.e)("wasm", WW, iW),
-        site: Oi,
+        code: (0, VR.g)("wasm", RR, JR),
+        site: GJ,
         fatal: !1,
-        message: iW.detail,
-        details: EW,
-        error: OW
+        message: JR.detail,
+        details: tR,
+        error: GR
       })
     }
 
-    function oO(WW, iW) {
+    function vG(RR, JR) {
       const {
-        frames: OW,
-        acks: mW,
-        mask: EW,
-        outcome: NW
-      } = WW, PW = {
-        frames: String(OW),
-        acks: String(mW),
-        mask: String(EW),
-        outcome: null !== NW && void 0 !== NW ? NW : "resynced",
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+        frames: GR,
+        acks: yR,
+        mask: tR,
+        outcome: uR
+      } = RR, ZR = {
+        frames: String(GR),
+        acks: String(yR),
+        mask: String(tR),
+        outcome: null !== uR && void 0 !== uR ? uR : "resynced",
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "recovered",
-        code: "rejoined" === NW ? "CORE-eventOverflowRejoin" : "failed" === NW ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: QW,
+        code: "rejoined" === uR ? "CORE-eventOverflowRejoin" : "failed" === uR ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: hR,
         fatal: !1,
-        message: `the event buffer refused records in ${OW} frames`,
-        details: PW
+        message: `the event buffer refused records in ${GR} frames`,
+        details: ZR
       })
     }
 
-    function dO(WW, iW, OW) {
-      return gi({
+    function OG(RR, JR, GR) {
+      return HJ({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: WW,
+        site: RR,
         fatal: !1,
-        message: `a ${WW} worker was lost`,
+        message: `a ${RR} worker was lost`,
         details: {
-          reason: iW,
-          wasmBuild: OW.wasm,
-          clientVersion: OW.client
+          reason: JR,
+          wasmBuild: GR.wasm,
+          clientVersion: GR.client
         }
       })
     }
 
-    function eO(WW, iW, OW, mW) {
-      const EW = {
-          reason: WW,
-          pageBuild: mW.build,
-          pageAgeMin: String(Math.floor(mW.ageMs / 6e4)),
-          wasmBuild: OW.wasm,
-          clientVersion: OW.client
+    function xG(RR, JR, GR, yR) {
+      const tR = {
+          reason: RR,
+          pageBuild: yR.build,
+          pageAgeMin: String(Math.floor(yR.ageMs / 6e4)),
+          wasmBuild: GR.wasm,
+          clientVersion: GR.client
         },
-        NW = iW ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
-      return gi({
+        uR = JR ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
+      return HJ({
         kind: "recovered",
         code: "CORE-worldgenWorkerLost",
-        site: YW.F,
+        site: MR.B,
         fatal: !1,
-        message: NW,
-        details: EW
+        message: uR,
+        details: tR
       })
     }
 
-    function vO(WW, iW, OW) {
-      const mW = {
-        wasmBuild: OW.wasm,
-        clientVersion: OW.client
+    function NG(RR, JR, GR) {
+      const yR = {
+        wasmBuild: GR.wasm,
+        clientVersion: GR.client
       };
-      return gi({
+      return HJ({
         kind: "recovered",
-        code: WW,
-        site: YW.q,
+        code: RR,
+        site: MR.p,
         fatal: !1,
-        message: iW,
-        details: mW
+        message: JR,
+        details: yR
       })
     }
 
-    function gO(WW, iW) {
-      const OW = {
-        lastReason: WW,
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+    function DG(RR, JR) {
+      const GR = {
+        lastReason: RR,
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return gi({
+      return HJ({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: YW.F,
+        site: MR.B,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: OW
+        details: GR
       })
     }
 
-    function DO(WW, iW, OW) {
-      return gi({
+    function HG(RR, JR, GR) {
+      return HJ({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: YW.m,
+        site: MR.n,
         fatal: !1,
-        message: `${(0,HW.w)(WW)}: the session shed load`,
+        message: `${(0,bR.D)(RR)}: the session shed load`,
         details: {
-          cause: WW,
-          ...iW,
-          wasmBuild: OW.wasm,
-          clientVersion: OW.client
+          cause: RR,
+          ...JR,
+          wasmBuild: GR.wasm,
+          clientVersion: GR.client
         }
       })
     }
 
-    function VO(WW, iW, OW, mW) {
-      var EW, NW;
+    function oG(RR, JR, GR, yR) {
+      var tR, uR;
       return {
-        game: WW,
-        cause: iW,
-        census: null === OW ? "none" : JSON.stringify(OW),
-        gpu: null !== (EW = null === (NW = (0, sW.t)()) || void 0 === NW ? void 0 : NW.renderer) && void 0 !== EW ? EW : "",
-        browser: (0, lW.o)(),
-        wasmBuild: mW.wasm,
-        clientVersion: mW.client
+        game: RR,
+        cause: JR,
+        census: null === GR ? "none" : JSON.stringify(GR),
+        gpu: null !== (tR = null === (uR = (0, WR.y)()) || void 0 === uR ? void 0 : uR.renderer) && void 0 !== tR ? tR : "",
+        browser: (0, rR.h)(),
+        wasmBuild: yR.wasm,
+        clientVersion: yR.client
       }
     }
 
-    function pO(WW, iW, OW, mW) {
-      const EW = (0, lW.r)(),
-        NW = {
-          ...VO(WW, iW, OW, mW),
-          renderWarned: String(EW)
+    function cG(RR, JR, GR, yR) {
+      const tR = (0, rR.l)(),
+        uR = {
+          ...oG(RR, JR, GR, yR),
+          renderWarned: String(tR)
         },
-        PW = `first view drew no whole terrain in ${dW.f/1e3} s, ${iW}${EW?", render warned":""}`;
-      return gi({
+        ZR = `first view drew no whole terrain in ${NR.f/1e3} s, ${JR}${tR?", render warned":""}`;
+      return HJ({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: mi,
+        site: yJ,
         fatal: !1,
-        message: PW,
-        details: NW
+        message: ZR,
+        details: uR
       })
     }
 
-    function fO(WW, iW, OW, mW, EW) {
-      const NW = {
-          ...VO(WW, OW.cause, mW, EW),
-          waitedMs: String(Math.round(iW.waitedMs)),
-          visibleMs: String(Math.round(iW.visibleMs)),
-          drawnMs: String(Math.round(iW.drawnMs)),
-          frames: String(iW.frames),
-          renderPending: String(OW.renderPending),
-          viewWait: null === OW.wait ? "none" : OW.wait.slice(0, 6).join(",")
+    function PG(RR, JR, GR, yR, tR) {
+      const uR = {
+          ...oG(RR, GR.cause, yR, tR),
+          waitedMs: String(Math.round(JR.waitedMs)),
+          visibleMs: String(Math.round(JR.visibleMs)),
+          drawnMs: String(Math.round(JR.drawnMs)),
+          frames: String(JR.frames),
+          renderPending: String(GR.renderPending),
+          viewWait: null === GR.wait ? "none" : GR.wait.slice(0, 6).join(",")
         },
-        PW = (0, yW.g)(iW, OW);
-      return gi({
+        ZR = (0, BR.g)(JR, GR);
+      return HJ({
         kind: "viewUnshown",
         code: "CORE-firstViewUnshown",
-        site: mi,
+        site: yJ,
         fatal: !1,
-        message: PW,
-        details: NW
+        message: ZR,
+        details: uR
       })
     }
 
-    function CO(WW, iW, OW, mW, EW) {
-      const NW = (0, jW.c)(),
-        PW = (0, jW.b)(WW, iW, OW, mW, NW),
-        LW = {
-          gpuModel: NW,
-          wasmBuild: EW.wasm,
-          clientVersion: EW.client
+    function IG(RR, JR, GR, yR, tR) {
+      const uR = (0, LR.i)(),
+        ZR = (0, LR.e)(RR, JR, GR, yR, uR),
+        qR = {
+          gpuModel: uR,
+          wasmBuild: tR.wasm,
+          clientVersion: tR.client
         };
-      return gi({
+      return HJ({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: Ei,
+        site: tJ,
         fatal: !1,
-        message: PW,
-        details: LW
+        message: ZR,
+        details: qR
       })
     }
 
-    function XO(WW, iW, OW) {
-      return gi({
+    function mG(RR, JR, GR) {
+      return HJ({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: WW,
+        site: RR,
         fatal: !1,
-        message: `a ${WW} worker did not start`,
+        message: `a ${RR} worker did not start`,
         details: {
-          waitedMs: String(Math.round(iW)),
-          wasmBuild: OW.wasm,
-          clientVersion: OW.client
+          waitedMs: String(Math.round(JR)),
+          wasmBuild: GR.wasm,
+          clientVersion: GR.client
         }
       })
     }
 
-    function BO(WW, iW, OW) {
-      return gi({
+    function zG(RR, JR, GR) {
+      return HJ({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: WW,
+        site: RR,
         fatal: !1,
-        message: `the replay's ${WW} failed`,
+        message: `the replay's ${RR} failed`,
         details: {
-          wasmBuild: OW.wasm,
-          clientVersion: OW.client
+          wasmBuild: GR.wasm,
+          clientVersion: GR.client
         },
-        error: iW
+        error: JR
       })
     }
 
-    function qO(WW, iW) {
-      const OW = {
-          wasmBuild: iW.wasm,
-          clientVersion: iW.client
+    function SG(RR, JR) {
+      const GR = {
+          wasmBuild: JR.wasm,
+          clientVersion: JR.client
         },
-        mW = WW instanceof Error ? WW.message : String(WW);
-      return gi({
+        yR = RR instanceof Error ? RR.message : String(RR);
+      return HJ({
         kind: "recovered",
         code: "CORE-cameraDirector",
-        site: Pi,
+        site: ZJ,
         fatal: !1,
         message: "the scripted camera's director threw",
-        details: OW,
-        instance: mW,
-        error: WW
+        details: GR,
+        instance: yR,
+        error: RR
       })
     }
-    const RO = {
+    const jG = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function GO(WW) {
-      if (0 === WW) return "none";
-      const iW = [60, 600, 3600].find((iW => WW < iW));
-      return void 0 === iW ? "ge3600" : `lt${iW}`
+    function dG(RR) {
+      if (0 === RR) return "none";
+      const JR = [60, 600, 3600].find((JR => RR < JR));
+      return void 0 === JR ? "ge3600" : `lt${JR}`
     }
 
-    function IO(WW, iW) {
-      return null === WW ? "unbound" : (0, UW.h)(iW - WW)
+    function EG(RR, JR) {
+      return null === RR ? "unbound" : (0, nR.i)(JR - RR)
     }
 
-    function aO(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
-      return [0 !== (WW & xW.K.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (WW & xW.K.LINKS_RUNNING) ? "links running" : "", `frames ${(0,AW.d)(GO(WW&xW.K.FRAMES))}`, `up ${(0,AW.d)(IO(iW,OW))}`].filter(Boolean).join(", ")
+    function YG(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
+      return [0 !== (RR & wR.N.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (RR & wR.N.LINKS_RUNNING) ? "links running" : "", `frames ${(0,eR.e)(dG(RR&wR.N.FRAMES))}`, `up ${(0,eR.e)(EG(JR,GR))}`].filter(Boolean).join(", ")
     }
 
-    function rO(WW, iW, OW) {
-      const mW = "lost" === iW && void 0 !== OW ? ` (${OW})` : "";
-      return `the ${WW} ${RO[iW]}${mW}`
+    function kG(RR, JR, GR) {
+      const yR = "lost" === JR && void 0 !== GR ? ` (${GR})` : "";
+      return `the ${RR} ${jG[JR]}${yR}`
     }
-    const zO = {
+    const QG = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
 
-    function FO(WW, iW, OW, mW) {
-      var EW;
+    function FG(RR, JR, GR, yR) {
+      var tR;
       let {
-        restoreLost: NW = !1,
-        adapterRemembered: PW = !1
-      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, LW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
-      const cW = null === OW || void 0 === OW ? void 0 : OW.message,
-        wW = "pipeline_failed" === iW ? iW : OW instanceof SW.g ? "timeout" : (0, UW.p)("frames_refused" === iW, "string" === typeof cW ? cW : ""),
-        tW = null === mW.boundAtMs ? "unbound" : `up${(0,UW.e)(LW-mW.boundAtMs)}`,
-        ZW = null === mW.adapter ? "no adapter" : (0, UW.l)(mW.adapter),
-        xW = `${!0===mW.indirectHangs?" ih":""}${!0===mW.restoresSkipped?" nr":""}${NW?" rl":""}${PW?" ar":""}`,
-        lW = `${wW} ${(0,SW.k)()?"hidden":"visible"} ${tW}${xW} ${ZW}`;
-      if ("webgpu" !== WW || "lost" !== iW && "frames_refused" !== iW) return {
-        detail: lW,
+        restoreLost: uR = !1,
+        adapterRemembered: ZR = !1
+      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, qR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
+      const iR = null === GR || void 0 === GR ? void 0 : GR.message,
+        fR = "pipeline_failed" === JR ? JR : GR instanceof XR.g ? "timeout" : (0, nR.r)("frames_refused" === JR, "string" === typeof iR ? iR : ""),
+        VR = null === yR.boundAtMs ? "unbound" : `up${(0,nR.f)(qR-yR.boundAtMs)}`,
+        KR = null === yR.adapter ? "no adapter" : (0, nR.n)(yR.adapter),
+        wR = `${!0===yR.indirectHangs?" ih":""}${!0===yR.restoresSkipped?" nr":""}${uR?" rl":""}${ZR?" ar":""}`,
+        rR = `${fR} ${(0,XR.h)()?"hidden":"visible"} ${VR}${wR} ${KR}`;
+      if ("webgpu" !== RR || "lost" !== JR && "frames_refused" !== JR) return {
+        detail: rR,
         count: void 0
       };
       return {
-        detail: lW,
+        detail: rR,
         count: {
           errorKind: "render_lost",
-          error: new Error(lW),
-          code: (0, UW.y)(wW, null !== (EW = mW.boundAtMs) && void 0 !== EW ? EW : LW, LW).code,
+          error: new Error(rR),
+          code: (0, nR.z)(fR, null !== (tR = yR.boundAtMs) && void 0 !== tR ? tR : qR, qR).code,
           fields: {
-            renderBackend: CW.e.webgpu
+            renderBackend: zR.d.webgpu
           }
         }
       }
     }
 
-    function QO(WW, iW, OW) {
+    function TG(RR, JR, GR) {
       const {
-        count: mW
-      } = FO("webgpu", WW, iW, OW);
-      void 0 !== mW && fi(mW)
+        count: yR
+      } = FG("webgpu", RR, JR, GR);
+      void 0 !== yR && PJ(yR)
     }
-    const Wm = {
+    const sG = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function im(WW) {
-      var iW;
-      return null !== (iW = WW instanceof Error ? WW.reason : void 0) && void 0 !== iW ? iW : ""
+    function hG(RR) {
+      var JR;
+      return null !== (JR = RR instanceof Error ? RR.reason : void 0) && void 0 !== JR ? JR : ""
     }
 
-    function Om(WW, iW, mW) {
-      var EW, NW, PW, LW, wW;
+    function Ry(RR, JR, yR) {
+      var tR, uR, ZR, qR, fR;
       let {
-        from: tW,
-        cause: ZW = "lost",
-        restoreLost: xW = !1,
-        adapterRemembered: bW = !1,
-        error: jW,
-        context: sW = zO,
-        session: MW = Wm
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, KW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
+        from: VR,
+        cause: KR = "lost",
+        restoreLost: wR = !1,
+        adapterRemembered: aR = !1,
+        error: LR,
+        context: WR = QG,
+        session: AR = sG
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, CR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
       const {
-        detail: SW,
-        count: YW
-      } = FO(WW, ZW, jW, sW, {
-        restoreLost: xW,
-        adapterRemembered: bW
-      }, KW), yW = {
-        reloadFrom: null !== tW && void 0 !== tW ? tW : "",
-        losses: String(iW),
-        cause: ZW,
-        detail: SW,
-        vendor: null !== (EW = null === (NW = sW.adapter) || void 0 === NW ? void 0 : NW.vendor) && void 0 !== EW ? EW : "",
-        architecture: null !== (PW = null === (LW = sW.adapter) || void 0 === LW ? void 0 : LW.architecture) && void 0 !== PW ? PW : "",
-        indirectHangs: String(sW.indirectHangs),
-        restoresSkipped: String(sW.restoresSkipped),
-        restoreLost: String(xW),
-        adapterRemembered: String(bW),
-        lossReason: im(jW),
-        samples: String(MW.samples),
-        sunShadows: String(MW.sunShadows),
-        renderDistance: String(MW.renderDistance),
-        gpuFamily: null !== (wW = (0, cW.d)()) && void 0 !== wW ? wW : "",
-        browser: (0, lW.o)(),
-        siteUsed: kW.siteUsed,
-        wasmBuild: mW.wasm,
-        clientVersion: mW.client
-      }, TW = "webgpu" !== WW && void 0 !== tW ? function(WW, iW, OW, mW) {
-        return `: ${WW}, ${iW?"restore lost":"not restored"}, up ${(0,AW.d)(IO(OW,mW))}`
-      }(tW, xW, sW.boundAtMs, KW) : "", JW = `${rO(WW,ZW)}${TW}`, hW = gi({
+        detail: XR,
+        count: MR
+      } = FG(RR, KR, LR, WR, {
+        restoreLost: wR,
+        adapterRemembered: aR
+      }, CR), BR = {
+        reloadFrom: null !== VR && void 0 !== VR ? VR : "",
+        losses: String(JR),
+        cause: KR,
+        detail: XR,
+        vendor: null !== (tR = null === (uR = WR.adapter) || void 0 === uR ? void 0 : uR.vendor) && void 0 !== tR ? tR : "",
+        architecture: null !== (ZR = null === (qR = WR.adapter) || void 0 === qR ? void 0 : qR.architecture) && void 0 !== ZR ? ZR : "",
+        indirectHangs: String(WR.indirectHangs),
+        restoresSkipped: String(WR.restoresSkipped),
+        restoreLost: String(wR),
+        adapterRemembered: String(aR),
+        lossReason: hG(LR),
+        samples: String(AR.samples),
+        sunShadows: String(AR.sunShadows),
+        renderDistance: String(AR.renderDistance),
+        gpuFamily: null !== (fR = (0, iR.d)()) && void 0 !== fR ? fR : "",
+        browser: (0, rR.h)(),
+        siteUsed: UR.siteUsed,
+        wasmBuild: yR.wasm,
+        clientVersion: yR.client
+      }, lR = "webgpu" !== RR && void 0 !== VR ? function(RR, JR, GR, yR) {
+        return `: ${RR}, ${JR?"restore lost":"not restored"}, up ${(0,eR.e)(EG(GR,yR))}`
+      }(VR, wR, WR.boundAtMs, CR) : "", pR = `${kG(RR,KR)}${lR}`, gR = HJ({
         kind: "recovered",
         code: "CORE-renderLost",
-        site: zW,
+        site: TR,
         fatal: !1,
-        message: JW,
-        details: yW,
-        error: jW,
-        countAs: YW
+        message: pR,
+        details: BR,
+        error: LR,
+        countAs: MR
       });
-      return Bi("ga", (async () => {
+      return zJ("ga", (async () => {
         const {
-          logError: iW
-        } = await Promise.resolve().then((() => OW(3960))), mW = `${UW.c["webgpu"===WW?"WebGPU":"WebGL2"]}\n Error: ${SW}`;
-        iW("warning", mW), iW("error", mW)
-      })), hW
+          logError: JR
+        } = await Promise.resolve().then((() => GR(4053))), yR = `${nR.b["webgpu"===RR?"WebGPU":"WebGL2"]}\n Error: ${XR}`;
+        JR("warning", yR), JR("error", yR)
+      })), gR
     }
 
-    function mm(WW, iW) {
-      var OW, mW;
-      const EW = null === WW.name ? "TEXTURE-sources" : null === WW.url ? "TEXTURE-nourl" : WW.error instanceof eW.b ? `TEXTURE-${WW.error.status}` : "TEXTURE-network",
-        NW = null === WW.name ? "terrain textures could not load" : `terrain texture ${WW.name} could not load`,
-        PW = {
-          texture: null !== (OW = WW.name) && void 0 !== OW ? OW : "",
-          url: null !== (mW = WW.url) && void 0 !== mW ? mW : "",
-          wasmBuild: iW.wasm,
-          clientVersion: iW.client
+    function Jy(RR, JR) {
+      var GR, yR;
+      const tR = null === RR.name ? "TEXTURE-sources" : null === RR.url ? "TEXTURE-nourl" : RR.error instanceof DR.e ? `TEXTURE-${RR.error.status}` : "TEXTURE-network",
+        uR = null === RR.name ? "terrain textures could not load" : `terrain texture ${RR.name} could not load`,
+        ZR = {
+          texture: null !== (GR = RR.name) && void 0 !== GR ? GR : "",
+          url: null !== (yR = RR.url) && void 0 !== yR ? yR : "",
+          wasmBuild: JR.wasm,
+          clientVersion: JR.client
         };
-      return gi({
+      return HJ({
         kind: "terrainTexture",
-        code: EW,
-        site: YW.C,
+        code: tR,
+        site: MR.x,
         fatal: !1,
-        message: NW,
-        details: PW,
-        error: WW.error
+        message: uR,
+        details: ZR,
+        error: RR.error
       })
     }
-    const Em = {
+    const Gy = {
       previewAnimations: {
-        site: FW,
+        site: sR,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: Wi,
+        site: RJ,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Nm(WW, iW, OW, mW) {
+    function yy(RR, JR, GR, yR) {
       const {
-        site: EW,
-        prefix: NW,
-        name: PW
-      } = Em[WW], {
-        stage: LW,
-        error: cW
-      } = OW;
-      return gi({
-        kind: WW,
-        code: "decode" === LW ? null === cW ? `${NW}-decode` : `${NW}-trap` : cW instanceof uW.h ? `${NW}-${cW.status}` : `${NW}-network`,
-        site: EW,
+        site: tR,
+        prefix: uR,
+        name: ZR
+      } = Gy[RR], {
+        stage: qR,
+        error: iR
+      } = GR;
+      return HJ({
+        kind: RR,
+        code: "decode" === qR ? null === iR ? `${uR}-decode` : `${uR}-trap` : iR instanceof OR.f ? `${uR}-${iR.status}` : `${uR}-network`,
+        site: tR,
         fatal: !1,
-        message: "decode" === LW ? `${PW} did not decode` : `${PW} could not load`,
+        message: "decode" === qR ? `${ZR} did not decode` : `${ZR} could not load`,
         details: {
-          url: iW,
-          wasmBuild: mW.wasm,
-          clientVersion: mW.client
+          url: JR,
+          wasmBuild: yR.wasm,
+          clientVersion: yR.client
         },
-        error: cW
+        error: iR
       })
     }
-    const Pm = "staleBuild";
+    const ty = "staleBuild";
 
-    function Lm(WW, iW, OW) {
-      const mW = {
-          failedSite: WW.site,
-          url: WW.url,
-          from: WW.from,
-          sameBuild: String(WW.from === iW),
-          reloadMs: String(Math.max(0, Date.now() - WW.at)),
-          wasmBuild: OW.wasm,
-          clientVersion: OW.client
+    function uy(RR, JR, GR) {
+      const yR = {
+          failedSite: RR.site,
+          url: RR.url,
+          from: RR.from,
+          sameBuild: String(RR.from === JR),
+          reloadMs: String(Math.max(0, Date.now() - RR.at)),
+          wasmBuild: GR.wasm,
+          clientVersion: GR.client
         },
-        EW = `reloaded into a newer build after ${WW.site} failed to load: ${WW.error}`;
-      return gi({
+        tR = `reloaded into a newer build after ${RR.site} failed to load: ${RR.error}`;
+      return HJ({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: Pm,
+        site: ty,
         fatal: !1,
-        message: EW,
-        details: mW
+        message: tR,
+        details: yR
       })
     }
   },
-  42301: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      f: () => EW,
-      j: () => PW,
-      m: () => cW
+  42325: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR,
+      f: () => tR,
+      h: () => ZR,
+      l: () => iR
     });
-    var mW = OW(5551);
-    const EW = 3e4,
-      NW = 900;
+    var yR = GR(5685);
+    const tR = 3e4,
+      uR = 900;
 
-    function PW(WW, iW) {
-      const OW = null === WW ? 0 : iW - WW;
-      return OW <= NW ? OW : 0
+    function ZR(RR, JR) {
+      const GR = null === RR ? 0 : JR - RR;
+      return GR <= uR ? GR : 0
     }
-    class LW {
-      constructor(WW) {
-        this.wZ = WW, this.waitedMs = 0, this.lastMs = null
+    class qR {
+      constructor(RR) {
+        this.fK = RR, this.waitedMs = 0, this.lastMs = null
       }
-      frame(WW, iW) {
-        return !!iW || (this.waitedMs += PW(this.lastMs, WW), this.lastMs = WW, !(this.waitedMs < EW) && (this.wZ(), !0))
+      frame(RR, JR) {
+        return !!JR || (this.waitedMs += ZR(this.lastMs, RR), this.lastMs = RR, !(this.waitedMs < tR) && (this.fK(), !0))
       }
     }
 
-    function cW(WW, iW) {
-      return 0 === (WW & mW.Y.ChunkRequested) ? "no_chunk_request" : 0 === (WW & mW.Y.ChunkStored) ? "chunk_not_stored" : 0 === (WW & mW.Y.MeshLanded) ? "not_meshed" : null === iW ? "no_frame_drawn" : 0 === iW.terrainParts ? "no_terrain_parts" : iW.terrainCompiling > 0 ? "terrain_compiling" : iW.terrainOpaque + iW.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
+    function iR(RR, JR) {
+      return 0 === (RR & yR.ab.ChunkRequested) ? "no_chunk_request" : 0 === (RR & yR.ab.ChunkStored) ? "chunk_not_stored" : 0 === (RR & yR.ab.MeshLanded) ? "not_meshed" : null === JR ? "no_frame_drawn" : 0 === JR.terrainParts ? "no_terrain_parts" : JR.terrainCompiling > 0 ? "terrain_compiling" : JR.terrainOpaque + JR.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  42292: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => cW,
-      f: () => PW,
-      g: () => tW
+  42322: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR,
+      e: () => ZR,
+      g: () => VR
     });
-    var mW = OW(172),
-      EW = OW(42301);
-    const NW = ["view", "startup", "skipped"];
+    var yR = GR(188),
+      tR = GR(42325);
+    const uR = ["view", "startup", "skipped"];
 
-    function PW(WW) {
-      return 0 === WW.clientWidth || 0 === WW.clientHeight || 0 === WW.width || 0 === WW.height
+    function ZR(RR) {
+      return 0 === RR.clientWidth || 0 === RR.clientHeight || 0 === RR.width || 0 === RR.height
     }
 
-    function LW(WW) {
-      if (null === WW) return "none";
-      const [iW, OW, mW, EW] = WW, NW = [
-        ["link", iW],
-        ["terrain", OW],
-        ["BL", mW],
-        ["other", EW]
+    function qR(RR) {
+      if (null === RR) return "none";
+      const [JR, GR, yR, tR] = RR, uR = [
+        ["link", JR],
+        ["terrain", GR],
+        ["Qq", yR],
+        ["other", tR]
       ];
-      let PW = "none",
-        LW = 0;
-      for (const [cW, wW] of NW) wW > LW && (PW = cW, LW = wW);
-      return PW
+      let ZR = "none",
+        qR = 0;
+      for (const [iR, fR] of uR) fR > qR && (ZR = iR, qR = fR);
+      return ZR
     }
-    class cW {
-      constructor(WW) {
-        this.gap = WW, this.chunkAtMs = null, this.lastFrameMs = null, this.drawnMs = 0, this.frames = 0, this.visibleFromMs = null, this.undrawn = {
+    class iR {
+      constructor(RR) {
+        this.gap = RR, this.chunkAtMs = null, this.lastFrameMs = null, this.drawnMs = 0, this.frames = 0, this.visibleFromMs = null, this.undrawn = {
           view: 0,
           startup: 0,
           skipped: 0
@@ -2224,156 +2224,156 @@ export const modules = {
       get open() {
         return null !== this.chunkAtMs && !this.over
       }
-      playerChunk(WW, iW) {
-        null !== this.chunkAtMs || this.over || (this.chunkAtMs = WW, iW || this.pageShown(WW))
+      playerChunk(RR, JR) {
+        null !== this.chunkAtMs || this.over || (this.chunkAtMs = RR, JR || this.pageShown(RR))
       }
-      pageShown(WW) {
-        this.open && null === this.visibleFromMs && (this.visibleFromMs = WW, this.gap.restart(WW))
+      pageShown(RR) {
+        this.open && null === this.visibleFromMs && (this.visibleFromMs = RR, this.gap.restart(RR))
       }
-      animationFrame(WW, iW, OW) {
-        !this.open || null === this.visibleFromMs || WW <= this.visibleFromMs || (this.gap.animationFrame(), "paced" === iW ? this.gap.paced() : "skipped" === iW ? this.undrawn.skipped++ : "none" === iW && this.undrawn[OW ? "startup" : "view"]++)
+      animationFrame(RR, JR, GR) {
+        !this.open || null === this.visibleFromMs || RR <= this.visibleFromMs || (this.gap.animationFrame(), "paced" === JR ? this.gap.paced() : "skipped" === JR ? this.undrawn.skipped++ : "none" === JR && this.undrawn[GR ? "startup" : "view"]++)
       }
-      frame(WW) {
-        this.open && (this.drawnMs += (0, EW.j)(this.lastFrameMs, WW), this.lastFrameMs = WW, this.frames++)
+      frame(RR) {
+        this.open && (this.drawnMs += (0, tR.h)(this.lastFrameMs, RR), this.lastFrameMs = RR, this.frames++)
       }
       shown() {
         this.over = !0, this.gap.stop()
       }
-      end(WW, iW) {
+      end(RR, JR) {
         if (null === this.chunkAtMs || this.over) return null;
         this.over = !0;
-        const OW = null === this.visibleFromMs ? null : this.gap.words(!1, iW);
+        const GR = null === this.visibleFromMs ? null : this.gap.words(!1, JR);
         return this.gap.stop(), {
-          end: WW,
-          waitedMs: Math.max(iW - this.chunkAtMs, 0),
-          visibleMs: null === this.visibleFromMs ? 0 : Math.max(iW - this.visibleFromMs, 0),
+          end: RR,
+          waitedMs: Math.max(JR - this.chunkAtMs, 0),
+          visibleMs: null === this.visibleFromMs ? 0 : Math.max(JR - this.visibleFromMs, 0),
           drawnMs: this.drawnMs,
           frames: this.frames,
           undrawn: {
             ...this.undrawn
           },
-          page: OW
+          page: GR
         }
       }
     }
 
-    function wW(WW) {
-      return WW < 5e3 ? "brief" : WW < 15e3 ? "short" : WW < 6e4 ? "long" : "very_long"
+    function fR(RR) {
+      return RR < 5e3 ? "brief" : RR < 15e3 ? "short" : RR < 6e4 ? "long" : "very_long"
     }
 
-    function tW(WW, iW) {
-      var OW, EW;
-      const PW = [...null === WW.page ? [] : WW.page.split(" "), ...NW.filter((iW => WW.undrawn[iW] > 0)).map((WW => `undrawn:${WW}`)), ...iW.canvasEmpty ? ["canvas:empty"] : []],
-        cW = [
-          ["", `first view unshown, ${iW.cause}, ended ${WW.end}`],
-          [", ", 0 === WW.visibleMs ? "visible none" : `visible ${wW(WW.visibleMs)}`],
-          [", ", 0 === WW.frames ? "no frames" : `drew ${wW(WW.drawnMs)}`], ...PW.map(((WW, iW) => [0 === iW ? ", " : " ", WW])), [", ", `waited ${wW(WW.waitedMs)}`],
-          [", ", iW.bound ? "bound" : "unbound"], ...iW.preload ? [
+    function VR(RR, JR) {
+      var GR, tR;
+      const ZR = [...null === RR.page ? [] : RR.page.split(" "), ...uR.filter((JR => RR.undrawn[JR] > 0)).map((RR => `undrawn:${RR}`)), ...JR.canvasEmpty ? ["canvas:empty"] : []],
+        iR = [
+          ["", `first view unshown, ${JR.cause}, ended ${RR.end}`],
+          [", ", 0 === RR.visibleMs ? "visible none" : `visible ${fR(RR.visibleMs)}`],
+          [", ", 0 === RR.frames ? "no frames" : `drew ${fR(RR.drawnMs)}`], ...ZR.map(((RR, JR) => [0 === JR ? ", " : " ", RR])), [", ", `waited ${fR(RR.waitedMs)}`],
+          [", ", JR.bound ? "bound" : "unbound"], ...JR.preload ? [
             [", ", "preload"]
           ] : [],
-          [", ", iW.startupLoaded ? "startup in" : "startup out"],
-          [", ", iW.renderPending > 0 ? "render pending" : "render resolved"],
-          [", ", `lacked ${LW(iW.wait)}${(null!==(OW=null===(EW=iW.wait)||void 0===EW?void 0:EW[4])&&void 0!==OW?OW:0)>0?" gapped":""}`]
+          [", ", JR.startupLoaded ? "startup in" : "startup out"],
+          [", ", JR.renderPending > 0 ? "render pending" : "render resolved"],
+          [", ", `lacked ${qR(JR.wait)}${(null!==(GR=null===(tR=JR.wait)||void 0===tR?void 0:tR[4])&&void 0!==GR?GR:0)>0?" gapped":""}`]
         ];
-      let tW = "";
-      for (const [NW, LW] of cW) {
-        const WW = tW + NW + LW;
-        if (WW.length > mW.bb) break;
-        tW = WW
+      let VR = "";
+      for (const [uR, qR] of iR) {
+        const RR = VR + uR + qR;
+        if (RR.length > yR.gb) break;
+        VR = RR
       }
-      return tW
+      return VR
     }
   },
-  42109: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW,
-      e: () => UW,
-      f: () => bW,
-      h: () => jW,
-      l: () => xW,
-      o: () => lW,
-      p: () => tW,
-      t: () => ZW,
-      x: () => AW
+  42118: (RR, JR, GR) => {
+    GR.d(JR, {
+      C: () => eR,
+      e: () => yR,
+      i: () => nR,
+      l: () => aR,
+      m: () => LR,
+      p: () => wR,
+      s: () => rR,
+      u: () => VR,
+      y: () => KR
     });
-    class mW extends Error {
-      constructor(WW) {
-        super(`the join's code did not load: ${WW instanceof Error?WW.message:String(WW)}`, {
-          cause: WW
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === WW || void 0 === WW ? void 0 : WW.request
+    class yR extends Error {
+      constructor(RR) {
+        super(`the join's code did not load: ${RR instanceof Error?RR.message:String(RR)}`, {
+          cause: RR
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === RR || void 0 === RR ? void 0 : RR.request
       }
     }
-    let EW = null,
-      NW = null,
-      PW = null;
-    const LW = [];
-    let cW = null;
+    let tR = null,
+      uR = null,
+      ZR = null;
+    const qR = [];
+    let iR = null;
 
-    function wW(WW, iW) {
+    function fR(RR, JR) {
       try {
-        WW(iW)
-      } catch (OW) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", OW)
+        RR(JR)
+      } catch (GR) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", GR)
       }
     }
 
-    function tW() {
-      return cW
+    function VR() {
+      return iR
     }
 
-    function ZW(WW) {
-      LW.push(WW), null !== cW && wW(WW, cW)
+    function KR(RR) {
+      qR.push(RR), null !== iR && fR(RR, iR)
     }
 
-    function xW(WW) {
-      return EW ??= Promise.all([OW.e(85), OW.e(113), OW.e(88), OW.e(177), OW.e(91), OW.e(224), OW.e(252), OW.e(112), OW.e(142), OW.e(245), OW.e(244), OW.e(306), OW.e(243), OW.e(222), OW.e(50), OW.e(223), OW.e(127), OW.e(214), OW.e(280), OW.e(143), OW.e(103), OW.e(69)]).then((() => OW(54728))).then((iW => {
-        iW.loadAudio(WW), cW = iW;
-        for (const WW of LW) wW(WW, iW);
-        return iW
-      })).catch((WW => {
-        throw EW = null, WW
-      })), EW
+    function wR(RR) {
+      return tR ??= Promise.all([GR.e(85), GR.e(113), GR.e(88), GR.e(177), GR.e(91), GR.e(224), GR.e(252), GR.e(112), GR.e(142), GR.e(245), GR.e(244), GR.e(306), GR.e(243), GR.e(222), GR.e(50), GR.e(223), GR.e(127), GR.e(214), GR.e(280), GR.e(143), GR.e(103), GR.e(69)]).then((() => GR(54578))).then((JR => {
+        JR.loadAudio(RR), iR = JR;
+        for (const RR of qR) fR(RR, JR);
+        return JR
+      })).catch((RR => {
+        throw tR = null, RR
+      })), tR
     }
-    async function lW(WW, iW) {
+    async function rR(RR, JR) {
       try {
-        const OW = await xW(WW);
-        await OW.loadClientGame(iW)
-      } catch (OW) {
-        throw new mW(OW)
+        const GR = await wR(RR);
+        await GR.loadClientGame(JR)
+      } catch (GR) {
+        throw new yR(GR)
       }
     }
 
-    function AW(WW, iW) {
-      NW = {
-        running: WW,
-        shell: iW
+    function eR(RR, JR) {
+      uR = {
+        running: RR,
+        shell: JR
       }
     }
 
-    function bW() {
-      return PW
+    function aR() {
+      return ZR
     }
-    async function jW(WW) {
-      const iW = NW;
-      if ((null === iW || void 0 === iW ? void 0 : iW.running) !== WW) throw new Error("the core's session has ended");
-      const OW = await xW(iW.shell.audio).catch((WW => {
-        throw new mW(WW)
+    async function LR(RR) {
+      const JR = uR;
+      if ((null === JR || void 0 === JR ? void 0 : JR.running) !== RR) throw new Error("the core's session has ended");
+      const GR = await wR(JR.shell.audio).catch((RR => {
+        throw new yR(RR)
       }));
-      if (null !== PW) return PW;
-      if (NW !== iW || WW.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (PW = OW.startGameHost(WW, iW.shell), null === PW) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return PW
+      if (null !== ZR) return ZR;
+      if (uR !== JR || RR.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (ZR = GR.startGameHost(RR, JR.shell), null === ZR) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return ZR
     }
 
-    function UW() {
-      null !== PW && (null !== cW ? cW.endGameHost(PW) : PW.closeGame()), PW = null, NW = null
+    function nR() {
+      null !== ZR && (null !== iR ? iR.endGameHost(ZR) : ZR.closeGame()), ZR = null, uR = null
     }
   },
-  42222: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW
+  42237: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    const mW = {
+    const yR = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -2386,136 +2386,136 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  42307: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => LW,
-      c: () => wW,
-      e: () => NW,
-      f: () => PW,
-      j: () => EW,
-      n: () => lW,
-      p: () => tW,
-      t: () => cW,
-      v: () => xW,
-      z: () => ZW
+  42329: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => qR,
+      b: () => fR,
+      e: () => uR,
+      f: () => ZR,
+      j: () => tR,
+      m: () => rR,
+      p: () => VR,
+      s: () => iR,
+      v: () => wR,
+      z: () => KR
     });
-    var mW = OW(1930);
-    const EW = new Uint8Array([12]),
-      NW = 2e3,
-      PW = 257;
+    var yR = GR(2007);
+    const tR = new Uint8Array([12]),
+      uR = 2e3,
+      ZR = 257;
 
-    function LW(WW) {
-      const iW = new Uint8Array(4);
-      return new DataView(iW.buffer).setUint32(0, WW, !0), iW
+    function qR(RR) {
+      const JR = new Uint8Array(4);
+      return new DataView(JR.buffer).setUint32(0, RR, !0), JR
     }
-    class cW extends Error {
+    class iR extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class wW extends Error {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        super(WW), this.stage = iW, this.code = OW, this.serverText = mW, this.socketOpened = EW, this.name = "JoinError"
+    class fR extends Error {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        super(RR), this.stage = JR, this.code = GR, this.serverText = yR, this.socketOpened = tR, this.name = "JoinError"
       }
     }
-    class tW extends Error {
-      constructor(WW) {
-        super(WW), this.final = !0, this.name = "ResumeRefusedError"
+    class VR extends Error {
+      constructor(RR) {
+        super(RR), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class ZW extends Error {
-      constructor(WW) {
-        super((0, mW.f)(WW), {
-          cause: WW
+    class KR extends Error {
+      constructor(RR) {
+        super((0, yR.g)(RR), {
+          cause: RR
         }), this.name = "TrafficCheckError"
       }
     }
-    class xW extends Error {
-      constructor(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        super(WW, {
-          cause: OW
-        }), this.networkLost = iW, this.httpStatus = mW, this.name = "SeatRequestError"
+    class wR extends Error {
+      constructor(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        super(RR, {
+          cause: GR
+        }), this.networkLost = JR, this.httpStatus = yR, this.name = "SeatRequestError"
       }
     }
-    class lW extends Error {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(WW), this.code = iW, this.serverText = OW, this.name = "MatchmakeError"
+    class rR extends Error {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(RR), this.code = JR, this.serverText = GR, this.name = "MatchmakeError"
       }
     }
   },
-  42309: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => lW,
-      e: () => xW,
-      f: () => AW
+  42331: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => rR,
+      c: () => wR,
+      g: () => eR
     });
-    var mW = OW(3637),
-      EW = OW(2464),
-      NW = OW(40267),
-      PW = OW(37727),
-      LW = OW(40269),
-      cW = OW(42307),
-      wW = OW(42316);
-    const tW = "seat reservation expired.",
-      ZW = "early_leave";
+    var yR = GR(3731),
+      tR = GR(2521),
+      uR = GR(40310),
+      ZR = GR(37640),
+      qR = GR(40317),
+      iR = GR(42329),
+      fR = GR(42335);
+    const VR = "seat reservation expired.",
+      KR = "early_leave";
 
-    function xW(WW) {
-      if (WW instanceof PW.c) return "expected";
-      if (WW instanceof cW.v) return WW.networkLost ? "expected" : "unrecognised";
-      if (WW instanceof cW.c) {
-        if ("closed" === WW.stage && (0 === WW.code || (0, EW.f)(WW.code))) return "expected";
-        if ("roomError" === WW.stage && (WW.serverText === tW || WW.serverText === ZW)) return "expected"
+    function wR(RR) {
+      if (RR instanceof ZR.g) return "expected";
+      if (RR instanceof iR.v) return RR.networkLost ? "expected" : "unrecognised";
+      if (RR instanceof iR.b) {
+        if ("closed" === RR.stage && (0 === RR.code || (0, tR.f)(RR.code))) return "expected";
+        if ("roomError" === RR.stage && (RR.serverText === VR || RR.serverText === KR)) return "expected"
       }
-      return WW instanceof cW.c || WW instanceof cW.n ? null === (0, LW.i)(WW.code).name ? "unrecognised" : "known" : (0, mW.e)(WW) ? "expected" : WW instanceof cW.z || WW instanceof wW.b ? "known" : "unrecognised"
+      return RR instanceof iR.b || RR instanceof iR.m ? null === (0, qR.e)(RR.code).name ? "unrecognised" : "known" : (0, yR.e)(RR) ? "expected" : RR instanceof iR.z || RR instanceof fR.c ? "known" : "unrecognised"
     }
 
-    function lW(WW) {
-      return WW instanceof PW.c ? "timedOut" : "expected" !== xW(WW) || (0, mW.e)(WW) || WW instanceof cW.c && 1001 === WW.code ? void 0 : "failed"
+    function rR(RR) {
+      return RR instanceof ZR.g ? "timedOut" : "expected" !== wR(RR) || (0, yR.e)(RR) || RR instanceof iR.b && 1001 === RR.code ? void 0 : "failed"
     }
 
-    function AW(WW) {
-      return WW instanceof cW.c && "attach" !== WW.stage ? (0, NW.b)(WW, "closed" !== WW.stage || WW.socketOpened ? "socket" : "socket_unopened") : WW instanceof cW.v ? {
+    function eR(RR) {
+      return RR instanceof iR.b && "attach" !== RR.stage ? (0, uR.c)(RR, "closed" !== RR.stage || RR.socketOpened ? "socket" : "socket_unopened") : RR instanceof iR.v ? {
         at: "seat_lost",
-        code: WW.httpStatus
-      } : WW instanceof cW.n || WW instanceof PW.c ? (0, NW.b)(WW, WW instanceof PW.c ? WW.leg : "seat") : void 0
+        code: RR.httpStatus
+      } : RR instanceof iR.m || RR instanceof ZR.g ? (0, uR.c)(RR, RR instanceof ZR.g ? RR.leg : "seat") : void 0
     }
   },
-  42330: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW,
-      c: () => wW,
-      f: () => lW,
-      h: () => ZW
+  42344: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR,
+      d: () => fR,
+      e: () => rR,
+      h: () => KR
     });
-    var mW = OW(2388),
-      EW = OW(5546),
-      NW = OW(42339),
-      PW = OW(42344),
-      LW = OW(37265);
-    const cW = 395,
-      wW = 2147483648,
-      tW = new Uint8Array(0);
-    class ZW extends Error {
+    var yR = GR(2457),
+      tR = GR(5676),
+      uR = GR(42352),
+      ZR = GR(42357),
+      qR = GR(37183);
+    const iR = 395,
+      fR = 2147483648,
+      VR = new Uint8Array(0);
+    class KR extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class xW extends Error {
+    class wR extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class lW {
-      constructor(WW, iW, OW) {
-        var mW, EW, PW, LW;
-        let cW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = WW, this.build = iW, this.onFailure = OW, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.EZ = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (mW = cW.fetchFile) && void 0 !== mW ? mW : WW => (0, NW.h)(WW), this.onWritten = null !== (EW = cW.onWritten) && void 0 !== EW ? EW : null, this.onTaken = null !== (PW = cW.onTaken) && void 0 !== PW ? PW : null, this.onPackFileFailed = null !== (LW = cW.onPackFileFailed) && void 0 !== LW ? LW : null, this.startupLeft = new Set(WW.startup);
-        for (const NW of WW.startup) this.request(NW)
+    class rR {
+      constructor(RR, JR, GR) {
+        var yR, tR, ZR, qR;
+        let iR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = RR, this.build = JR, this.onFailure = GR, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.tK = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (yR = iR.fetchFile) && void 0 !== yR ? yR : RR => (0, uR.f)(RR), this.onWritten = null !== (tR = iR.onWritten) && void 0 !== tR ? tR : null, this.onTaken = null !== (ZR = iR.onTaken) && void 0 !== ZR ? ZR : null, this.onPackFileFailed = null !== (qR = iR.onPackFileFailed) && void 0 !== qR ? qR : null, this.startupLeft = new Set(RR.startup);
+        for (const uR of RR.startup) this.request(uR)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2535,693 +2535,693 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(WW) {
-        return this.drawn.get(WW)
+      drawnUrl(RR) {
+        return this.drawn.get(RR)
       }
-      request(WW) {
-        const iW = this.pending.get(WW);
-        if (!0 === (null === iW || void 0 === iW ? void 0 : iW.ask)) return;
-        const OW = this.kZ(WW, !0);
-        OW.recheck = void 0 !== iW;
-        const mW = this.drawn.get(WW);
-        if (void 0 !== mW) return OW.BL = !0, OW.recheck = !0, void this.fetch(WW, OW, mW);
-        this.fetchWanted(WW, OW)
+      request(RR) {
+        const JR = this.pending.get(RR);
+        if (!0 === (null === JR || void 0 === JR ? void 0 : JR.ask)) return;
+        const GR = this.UK(RR, !0);
+        GR.recheck = void 0 !== JR;
+        const yR = this.drawn.get(RR);
+        if (void 0 !== yR) return GR.Qq = !0, GR.recheck = !0, void this.fetch(RR, GR, yR);
+        this.fetchWanted(RR, GR)
       }
       async refresh() {
-        const WW = ++this.refreshes,
-          iW = new Set;
-        for (const PW of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const WW of PW) 0 === (WW & NW.d) && iW.add(WW);
-        const OW = [...iW];
-        let mW;
+        const RR = ++this.refreshes,
+          JR = new Set;
+        for (const ZR of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const RR of ZR) 0 === (RR & uR.d) && JR.add(RR);
+        const GR = [...JR];
+        let yR;
         try {
-          mW = await Promise.all(OW.map((WW => this.wanted(WW))))
+          yR = await Promise.all(GR.map((RR => this.wanted(RR))))
         } catch {
           return null
         }
-        if (WW !== this.refreshes) return null;
-        const EW = {
+        if (RR !== this.refreshes) return null;
+        const tR = {
           resent: 0,
           refetched: 0,
-          delivered: OW.filter((WW => this.drawn.has(WW))).length
+          delivered: GR.filter((RR => this.drawn.has(RR))).length
         };
-        return OW.forEach(((WW, iW) => {
+        return GR.forEach(((RR, JR) => {
           const {
-            url: OW,
-            inPlaceOf: NW
-          } = mW[iW], PW = this.pending.get(WW);
-          if (void 0 !== PW) {
-            if (PW.BL || void 0 === PW.url) return void(PW.recheck = !0);
-            if (PW.url === OW) return;
-            EW.refetched++;
-            const iW = this.kZ(WW, PW.ask);
-            return iW.recheck = PW.recheck, void this.fetch(WW, iW, OW, NW)
+            url: GR,
+            inPlaceOf: uR
+          } = yR[JR], ZR = this.pending.get(RR);
+          if (void 0 !== ZR) {
+            if (ZR.Qq || void 0 === ZR.url) return void(ZR.recheck = !0);
+            if (ZR.url === GR) return;
+            tR.refetched++;
+            const JR = this.UK(RR, ZR.ask);
+            return JR.recheck = ZR.recheck, void this.fetch(RR, JR, GR, uR)
           }
-          const LW = this.written.get(WW);
-          void 0 === LW ? this.drawn.get(WW) !== (null !== OW && void 0 !== OW ? OW : void 0) && (EW.resent++, this.fetch(WW, this.kZ(WW, !1), OW, NW)) : LW.url !== (null !== OW && void 0 !== OW ? OW : "") && (LW.attempt.recheck = !0)
-        })), EW
+          const qR = this.written.get(RR);
+          void 0 === qR ? this.drawn.get(RR) !== (null !== GR && void 0 !== GR ? GR : void 0) && (tR.resent++, this.fetch(RR, this.UK(RR, !1), GR, uR)) : qR.url !== (null !== GR && void 0 !== GR ? GR : "") && (qR.attempt.recheck = !0)
+        })), tR
       }
-      taken(WW, iW) {
-        const OW = new Set,
-          mW = new Set;
-        for (const EW of Array.from(iW)) 0 === (EW & wW) ? OW.add(EW) : mW.add((EW & ~wW) >>> 0);
-        for (const [EW, NW] of this.written) NW.seq > WW || (this.written.delete(EW), OW.has(NW.seq) ? this.refusedFile(EW, NW) : this.takenFile(EW, NW, !NW.empty && !mW.has(NW.seq)))
+      taken(RR, JR) {
+        const GR = new Set,
+          yR = new Set;
+        for (const tR of Array.from(JR)) 0 === (tR & fR) ? GR.add(tR) : yR.add((tR & ~fR) >>> 0);
+        for (const [tR, uR] of this.written) uR.seq > RR || (this.written.delete(tR), GR.has(uR.seq) ? this.refusedFile(tR, uR) : this.takenFile(tR, uR, !uR.empty && !yR.has(uR.seq)))
       }
-      takenFile(WW, iW, OW) {
+      takenFile(RR, JR, GR) {
         const {
-          attempt: mW
-        } = iW;
-        if (OW) {
-          var EW;
-          this.drawn.set(WW, iW.url), this.undrawn.delete(WW), void 0 !== mW.inPlaceOf ? this.refusedPack.set(WW, mW.inPlaceOf) : mW.BL || this.refusedPack.delete(WW), null === (EW = this.onTaken) || void 0 === EW || EW.call(this, WW, !0);
-          const OW = this.pending.get(WW);
-          if (!0 === (null === OW || void 0 === OW ? void 0 : OW.BL) && OW.url !== iW.url) {
-            const OW = this.kZ(WW, !0);
-            OW.BL = !0, OW.recheck = !0, this.fetch(WW, OW, iW.url)
+          attempt: yR
+        } = JR;
+        if (GR) {
+          var tR;
+          this.drawn.set(RR, JR.url), this.undrawn.delete(RR), void 0 !== yR.inPlaceOf ? this.refusedPack.set(RR, yR.inPlaceOf) : yR.Qq || this.refusedPack.delete(RR), null === (tR = this.onTaken) || void 0 === tR || tR.call(this, RR, !0);
+          const GR = this.pending.get(RR);
+          if (!0 === (null === GR || void 0 === GR ? void 0 : GR.Qq) && GR.url !== JR.url) {
+            const GR = this.UK(RR, !0);
+            GR.Qq = !0, GR.recheck = !0, this.fetch(RR, GR, JR.url)
           }
         } else {
-          var NW;
-          this.drawn.has(WW) || this.undrawn.add(WW), null === (NW = this.onTaken) || void 0 === NW || NW.call(this, WW, !1)
+          var uR;
+          this.drawn.has(RR) || this.undrawn.add(RR), null === (uR = this.onTaken) || void 0 === uR || uR.call(this, RR, !1)
         }
-        mW.recheck && this.resendIfChanged(WW)
+        yR.recheck && this.resendIfChanged(RR)
       }
-      refusedFile(WW, iW) {
-        var OW, mW;
-        if (null === (OW = this.onTaken) || void 0 === OW || OW.call(this, WW, !1), this.refusedPack.set(WW, iW.url), this.pending.has(WW)) return void(null === (mW = this.onPackFileFailed) || void 0 === mW || mW.call(this, WW, AW(iW.url)));
-        const EW = this.kZ(WW, iW.attempt.ask);
-        EW.recheck = iW.attempt.recheck, this.afterRefusal(WW, EW, iW.url)
+      refusedFile(RR, JR) {
+        var GR, yR;
+        if (null === (GR = this.onTaken) || void 0 === GR || GR.call(this, RR, !1), this.refusedPack.set(RR, JR.url), this.pending.has(RR)) return void(null === (yR = this.onPackFileFailed) || void 0 === yR || yR.call(this, RR, eR(JR.url)));
+        const tR = this.UK(RR, JR.attempt.ask);
+        tR.recheck = JR.attempt.recheck, this.afterRefusal(RR, tR, JR.url)
       }
-      async afterRefusal(WW, iW, OW) {
-        var mW;
-        let EW;
+      async afterRefusal(RR, JR, GR) {
+        var yR;
+        let tR;
         try {
-          EW = await this.wanted(WW)
-        } catch (NW) {
-          return void(this.pending.get(WW) === iW && this.giveUp(WW, iW, OW, NW))
+          tR = await this.wanted(RR)
+        } catch (uR) {
+          return void(this.pending.get(RR) === JR && this.giveUp(RR, JR, GR, uR))
         }
-        this.pending.get(WW) === iW && (EW.inPlaceOf !== OW ? iW.ask || (null !== (mW = EW.url) && void 0 !== mW ? mW : void 0) !== this.drawn.get(WW) ? this.fetch(WW, iW, EW.url, EW.inPlaceOf) : this.pending.delete(WW) : this.fallBack(WW, iW, OW, AW(OW)))
+        this.pending.get(RR) === JR && (tR.inPlaceOf !== GR ? JR.ask || (null !== (yR = tR.url) && void 0 !== yR ? yR : void 0) !== this.drawn.get(RR) ? this.fetch(RR, JR, tR.url, tR.inPlaceOf) : this.pending.delete(RR) : this.fallBack(RR, JR, GR, eR(GR)))
       }
-      kZ(WW, iW) {
-        const OW = {
+      UK(RR, JR) {
+        const GR = {
           url: void 0,
-          ask: iW,
-          BL: !1,
+          ask: JR,
+          Qq: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(WW, OW);
-        for (let mW = this.ready.length - 1; mW >= 0; mW--) this.ready[mW].file === WW && this.ready.splice(mW, 1);
-        return OW
+        this.pending.set(RR, GR);
+        for (let yR = this.ready.length - 1; yR >= 0; yR--) this.ready[yR].file === RR && this.ready.splice(yR, 1);
+        return GR
       }
-      async wanted(WW) {
-        const iW = await this.files.url(WW);
-        return null !== iW && this.refusedPack.get(WW) === iW ? {
-          url: await this.files.shippedUrl(WW),
-          inPlaceOf: iW
+      async wanted(RR) {
+        const JR = await this.files.url(RR);
+        return null !== JR && this.refusedPack.get(RR) === JR ? {
+          url: await this.files.shippedUrl(RR),
+          inPlaceOf: JR
         } : {
-          url: iW,
+          url: JR,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(WW, iW) {
-        const OW = this.files.url(WW);
-        OW instanceof Promise ? OW.then((OW => {
-          this.fetchFound(WW, iW, OW)
-        }), (OW => {
-          this.pending.get(WW) === iW && this.giveUp(WW, iW, "", OW)
-        })) : this.fetchFound(WW, iW, OW)
+      fetchWanted(RR, JR) {
+        const GR = this.files.url(RR);
+        GR instanceof Promise ? GR.then((GR => {
+          this.fetchFound(RR, JR, GR)
+        }), (GR => {
+          this.pending.get(RR) === JR && this.giveUp(RR, JR, "", GR)
+        })) : this.fetchFound(RR, JR, GR)
       }
-      fetchFound(WW, iW, OW) {
-        null !== OW && this.refusedPack.get(WW) === OW ? Promise.resolve(this.files.shippedUrl(WW)).then((mW => {
-          this.fetch(WW, iW, mW, OW)
-        }), (mW => {
-          this.pending.get(WW) === iW && this.giveUp(WW, iW, OW, mW)
-        })) : this.fetch(WW, iW, OW)
+      fetchFound(RR, JR, GR) {
+        null !== GR && this.refusedPack.get(RR) === GR ? Promise.resolve(this.files.shippedUrl(RR)).then((yR => {
+          this.fetch(RR, JR, yR, GR)
+        }), (yR => {
+          this.pending.get(RR) === JR && this.giveUp(RR, JR, GR, yR)
+        })) : this.fetch(RR, JR, GR)
       }
-      fetch(WW, iW, OW, mW) {
-        this.pending.get(WW) === iW && (iW.url = OW, iW.inPlaceOf = mW, null !== OW ? this.load(WW, iW, OW) : this.buildFile(WW, iW, "", tW))
+      fetch(RR, JR, GR, yR) {
+        this.pending.get(RR) === JR && (JR.url = GR, JR.inPlaceOf = yR, null !== GR ? this.load(RR, JR, GR) : this.buildFile(RR, JR, "", VR))
       }
-      load(WW, iW, OW) {
-        const mW = this.EZ.get(WW);
-        (null === mW || void 0 === mW ? void 0 : mW.url) !== OW ? this.fetchFile(OW).then((mW => {
-          var EW, NW;
-          this.pending.get(WW) === iW && (this.keptTotal += mW.byteLength - (null !== (EW = null === (NW = this.EZ.get(WW)) || void 0 === NW ? void 0 : NW.glb.byteLength) && void 0 !== EW ? EW : 0), this.EZ.set(WW, {
-            url: OW,
-            glb: mW
-          }), this.buildFile(WW, iW, OW, mW))
-        }), (mW => {
-          this.pending.get(WW) === iW && this.fallBack(WW, iW, OW, mW)
-        })) : this.buildFile(WW, iW, OW, mW.glb)
+      load(RR, JR, GR) {
+        const yR = this.tK.get(RR);
+        (null === yR || void 0 === yR ? void 0 : yR.url) !== GR ? this.fetchFile(GR).then((yR => {
+          var tR, uR;
+          this.pending.get(RR) === JR && (this.keptTotal += yR.byteLength - (null !== (tR = null === (uR = this.tK.get(RR)) || void 0 === uR ? void 0 : uR.glb.byteLength) && void 0 !== tR ? tR : 0), this.tK.set(RR, {
+            url: GR,
+            glb: yR
+          }), this.buildFile(RR, JR, GR, yR))
+        }), (yR => {
+          this.pending.get(RR) === JR && this.fallBack(RR, JR, GR, yR)
+        })) : this.buildFile(RR, JR, GR, yR.glb)
       }
-      buildFile(WW, iW, OW, mW) {
-        let EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const PW = mW.byteLength > 0 && (0, NW.i)(OW) ? (WW | NW.c) >>> 0 : WW;
-        this.queueRecord(WW, iW, OW, mW, this.build(PW, mW), EW)
+      buildFile(RR, JR, GR, yR) {
+        let tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const ZR = yR.byteLength > 0 && (0, uR.h)(GR) ? (RR | uR.b) >>> 0 : RR;
+        this.queueRecord(RR, JR, GR, yR, this.build(ZR, yR), tR)
       }
-      queueRecord(WW, iW, OW, mW, NW, LW) {
-        NW.then((NW => {
-          if (this.pending.get(WW) !== iW) return;
-          if (EW.o + (0, EW.xe)(NW.byteLength) > EW.Oc) return void this.ringRefused(WW, iW, OW, new ZW(`${bW(OW)}'s record is ${NW.byteLength-PW.b} bytes, past the cmd ring's ${EW.Oc}`), LW);
-          const cW = {
-            file: WW,
-            url: OW,
-            payload: NW,
-            glb: mW,
-            attempt: iW
+      queueRecord(RR, JR, GR, yR, uR, qR) {
+        uR.then((uR => {
+          if (this.pending.get(RR) !== JR) return;
+          if (tR.w + (0, tR.ve)(uR.byteLength) > tR.Nc) return void this.ringRefused(RR, JR, GR, new KR(`${aR(GR)}'s record is ${uR.byteLength-ZR.e} bytes, past the cmd ring's ${tR.Nc}`), qR);
+          const iR = {
+            file: RR,
+            url: GR,
+            payload: uR,
+            glb: yR,
+            attempt: JR
           };
-          LW ? this.ready.unshift(cW) : this.ready.push(cW)
+          qR ? this.ready.unshift(iR) : this.ready.push(iR)
         }))
       }
-      async fallBack(WW, iW, OW, mW) {
-        var EW;
-        let NW = null,
-          PW = mW;
+      async fallBack(RR, JR, GR, yR) {
+        var tR;
+        let uR = null,
+          ZR = yR;
         try {
-          NW = await this.files.shippedUrl(WW)
-        } catch (LW) {
-          PW = LW
+          uR = await this.files.shippedUrl(RR)
+        } catch (qR) {
+          ZR = qR
         }
-        this.pending.get(WW) === iW && (null !== NW && NW !== OW ? (null === (EW = this.onPackFileFailed) || void 0 === EW || EW.call(this, WW, mW), iW.ask || this.drawn.get(WW) !== NW ? (iW.url = NW, iW.inPlaceOf = OW, this.load(WW, iW, NW)) : this.pending.delete(WW)) : this.giveUp(WW, iW, OW, PW))
+        this.pending.get(RR) === JR && (null !== uR && uR !== GR ? (null === (tR = this.onPackFileFailed) || void 0 === tR || tR.call(this, RR, yR), JR.ask || this.drawn.get(RR) !== uR ? (JR.url = uR, JR.inPlaceOf = GR, this.load(RR, JR, uR)) : this.pending.delete(RR)) : this.giveUp(RR, JR, GR, ZR))
       }
-      ringRefused(WW, iW, OW, mW) {
-        let EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, NW.i)(OW) ? this.fallBack(WW, iW, OW, mW): this.giveUp(WW, iW, OW, mW, EW)
+      ringRefused(RR, JR, GR, yR) {
+        let tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, uR.h)(GR) ? this.fallBack(RR, JR, GR, yR): this.giveUp(RR, JR, GR, yR, tR)
       }
-      giveUp(WW, iW, OW, EW) {
-        let NW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(RR, JR, GR, tR) {
+        let uR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: WW,
-          url: bW(OW),
-          error: EW,
-          startup: this.startupLeft.has(WW)
-        }), iW.ask || !this.drawn.has(WW) ? (0, mW.N)(EW) ? this.queueRecord(WW, iW, OW, tW, Promise.resolve((0, PW.i)(WW, (0, LW.m)(EW))), NW) : this.buildFile(WW, iW, OW, tW, NW) : this.pending.delete(WW)
+          file: RR,
+          url: aR(GR),
+          error: tR,
+          startup: this.startupLeft.has(RR)
+        }), JR.ask || !this.drawn.has(RR) ? (0, yR.L)(tR) ? this.queueRecord(RR, JR, GR, VR, Promise.resolve((0, ZR.m)(RR, (0, qR.k)(tR))), uR) : this.buildFile(RR, JR, GR, VR, uR) : this.pending.delete(RR)
       }
-      async resendIfChanged(WW) {
-        var iW;
-        if (0 !== (WW & NW.d)) return;
-        let OW;
+      async resendIfChanged(RR) {
+        var JR;
+        if (0 !== (RR & uR.d)) return;
+        let GR;
         try {
-          OW = await this.wanted(WW)
+          GR = await this.wanted(RR)
         } catch {
           return
-        }(null !== (iW = OW.url) && void 0 !== iW ? iW : void 0) === this.drawn.get(WW) || this.pending.has(WW) || this.written.has(WW) || this.fetch(WW, this.kZ(WW, !1), OW.url, OW.inPlaceOf)
+        }(null !== (JR = GR.url) && void 0 !== JR ? JR : void 0) === this.drawn.get(RR) || this.pending.has(RR) || this.written.has(RR) || this.fetch(RR, this.UK(RR, !1), GR.url, GR.inPlaceOf)
       }
-      drain(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === WW) return;
-        let OW = 0,
-          mW = 0;
-        for (; mW < this.ready.length && OW < 262144;) {
-          const LW = this.ready[mW];
-          if (this.written.has(LW.file)) {
-            mW++;
+      drain(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === RR) return;
+        let GR = 0,
+          yR = 0;
+        for (; yR < this.ready.length && GR < 262144;) {
+          const qR = this.ready[yR];
+          if (this.written.has(qR.file)) {
+            yR++;
             continue
           }
-          const tW = this.nextSeq;
-          new DataView(LW.payload.buffer, LW.payload.byteOffset, LW.payload.byteLength).setUint32(PW.d, tW, !0);
-          const xW = LW.attempt.BL && LW.glb.byteLength > 0 && this.drawn.get(LW.file) === LW.url;
-          if (WW(cW, xW ? 1 : 0, LW.payload)) {
-            if (this.nextSeq = tW >= wW - 1 ? 1 : tW + 1, this.ready.splice(mW, 1), OW += LW.payload.byteLength, this.pending.delete(LW.file), this.startupLeft.delete(LW.file), this.written.set(LW.file, {
-                seq: tW,
-                url: LW.url,
-                empty: 0 === LW.glb.byteLength,
-                attempt: LW.attempt
-              }), LW.glb.byteLength > 0) try {
-              var EW;
-              null === (EW = this.onWritten) || void 0 === EW || EW.call(this, LW.file, LW.glb)
-            } catch (NW) {
-              console.warn("ModelFeed: reading the file's images failed", NW)
+          const VR = this.nextSeq;
+          new DataView(qR.payload.buffer, qR.payload.byteOffset, qR.payload.byteLength).setUint32(ZR.h, VR, !0);
+          const wR = qR.attempt.Qq && qR.glb.byteLength > 0 && this.drawn.get(qR.file) === qR.url;
+          if (RR(iR, wR ? 1 : 0, qR.payload)) {
+            if (this.nextSeq = VR >= fR - 1 ? 1 : VR + 1, this.ready.splice(yR, 1), GR += qR.payload.byteLength, this.pending.delete(qR.file), this.startupLeft.delete(qR.file), this.written.set(qR.file, {
+                seq: VR,
+                url: qR.url,
+                empty: 0 === qR.glb.byteLength,
+                attempt: qR.attempt
+              }), qR.glb.byteLength > 0) try {
+              var tR;
+              null === (tR = this.onWritten) || void 0 === tR || tR.call(this, qR.file, qR.glb)
+            } catch (uR) {
+              console.warn("ModelFeed: reading the file's images failed", uR)
             }
           } else {
-            if (null === iW || 0 === LW.glb.byteLength || iW(LW.payload.byteLength)) return;
-            this.ready.splice(mW, 1);
-            const WW = new ZW(`${bW(LW.url)}'s record is ${LW.payload.byteLength-PW.b} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(LW.file, LW.attempt, LW.url, WW, !0)
+            if (null === JR || 0 === qR.glb.byteLength || JR(qR.payload.byteLength)) return;
+            this.ready.splice(yR, 1);
+            const RR = new KR(`${aR(qR.url)}'s record is ${qR.payload.byteLength-ZR.e} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(qR.file, qR.attempt, qR.url, RR, !0)
           }
         }
       }
     }
 
-    function AW(WW) {
-      return new xW(`presentation refused ${bW(WW)}`)
+    function eR(RR) {
+      return new wR(`presentation refused ${aR(RR)}`)
     }
 
-    function bW(WW) {
-      return WW.startsWith("data:") ? `${WW.slice(0,Math.min(Math.max(WW.indexOf(","),5),64))},...` : WW
+    function aR(RR) {
+      return RR.startsWith("data:") ? `${RR.slice(0,Math.min(Math.max(RR.indexOf(","),5),64))},...` : RR
     }
   },
-  42339: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW,
-      d: () => NW,
-      h: () => tW,
-      i: () => LW,
-      l: () => wW,
-      p: () => cW
+  42352: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      d: () => uR,
+      f: () => VR,
+      h: () => qR,
+      j: () => fR,
+      m: () => iR
     });
-    var mW = OW(2388),
-      EW = OW(4390);
-    const NW = 2147483648,
-      PW = 1073741824;
+    var yR = GR(2457),
+      tR = GR(4479);
+    const uR = 2147483648,
+      ZR = 1073741824;
 
-    function LW(WW) {
-      return WW.startsWith("data:")
+    function qR(RR) {
+      return RR.startsWith("data:")
     }
 
-    function cW(WW) {
+    function iR(RR) {
       let {
-        onTableFailed: iW,
-        packUrl: OW
+        onTableFailed: JR,
+        packUrl: GR
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const mW = wW();
-      mW.catch((WW => {
-        null === iW || void 0 === iW || iW(WW)
+      const yR = fR();
+      yR.catch((RR => {
+        null === JR || void 0 === JR || JR(RR)
       }));
-      const EW = async iW => (await mW).fileUrl((iW & ~NW) >>> 0, WW);
+      const tR = async JR => (await yR).fileUrl((JR & ~uR) >>> 0, RR);
       return {
         startup: [],
-        url: async WW => {
-          if (OW && 0 === (WW & NW)) {
-            const iW = await mW,
-              EW = iW.filePackName(WW),
-              NW = null === EW || "lifeform" === iW.fileSource(WW) ? null : OW(EW);
-            if (null !== NW) return NW
+        url: async RR => {
+          if (GR && 0 === (RR & uR)) {
+            const JR = await yR,
+              tR = JR.filePackName(RR),
+              uR = null === tR || "lifeform" === JR.fileSource(RR) ? null : GR(tR);
+            if (null !== uR) return uR
           }
-          return EW(WW)
+          return tR(RR)
         },
-        shippedUrl: EW
+        shippedUrl: tR
       }
     }
 
-    function wW() {
-      return OW.e(50).then((() => OW(44924)))
+    function fR() {
+      return GR.e(50).then((() => GR(45021)))
     }
-    async function tW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return WW.startsWith("data:") ? (0, EW.c)(WW.slice(WW.indexOf(",") + 1), iW) : (0, mW.C)(WW, {
-        spare: iW
+    async function VR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return RR.startsWith("data:") ? (0, tR.c)(RR.slice(RR.indexOf(",") + 1), JR) : (0, yR.B)(RR, {
+        spare: JR
       })
     }
   },
-  42344: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW,
-      d: () => wW,
-      e: () => AW,
-      i: () => xW,
-      j: () => ZW,
-      l: () => lW
+  42357: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR,
+      h: () => fR,
+      k: () => eR,
+      m: () => wR,
+      q: () => KR,
+      t: () => rR
     });
-    const mW = 826427981,
-      EW = 1,
-      NW = 2,
-      PW = 44,
-      LW = 58,
-      cW = 8,
-      wW = 4;
+    const yR = 826427981,
+      tR = 1,
+      uR = 2,
+      ZR = 44,
+      qR = 58,
+      iR = 8,
+      fR = 4;
 
-    function tW(WW, iW, OW) {
-      const EW = (new TextEncoder).encode(OW),
-        NW = cW + 4 * (iW.length + 2),
-        PW = new Uint8Array(NW + (EW.byteLength + 3 & -4)),
-        LW = new DataView(PW.buffer);
-      return LW.setUint32(0, WW, !0), LW.setUint32(cW, mW, !0), iW.forEach(((WW, iW) => {
-        LW.setUint32(cW + 4 * (iW + 1), WW, !0)
-      })), LW.setUint32(NW - 4, EW.byteLength, !0), PW.set(EW, NW), PW
+    function VR(RR, JR, GR) {
+      const tR = (new TextEncoder).encode(GR),
+        uR = iR + 4 * (JR.length + 2),
+        ZR = new Uint8Array(uR + (tR.byteLength + 3 & -4)),
+        qR = new DataView(ZR.buffer);
+      return qR.setUint32(0, RR, !0), qR.setUint32(iR, yR, !0), JR.forEach(((RR, JR) => {
+        qR.setUint32(iR + 4 * (JR + 1), RR, !0)
+      })), qR.setUint32(uR - 4, tR.byteLength, !0), ZR.set(tR, uR), ZR
     }
 
-    function ZW(WW, iW) {
-      return tW(WW, [NW], iW)
+    function KR(RR, JR) {
+      return VR(RR, [uR], JR)
     }
 
-    function xW(WW, iW) {
-      return tW(WW, [EW, LW], iW)
+    function wR(RR, JR) {
+      return VR(RR, [tR, qR], JR)
     }
 
-    function lW(WW, iW) {
-      return tW(WW, [EW, PW], iW)
+    function rR(RR, JR) {
+      return VR(RR, [tR, ZR], JR)
     }
 
-    function AW(WW) {
-      const iW = cW;
-      if (WW.byteLength < iW + 12) return !1;
-      const OW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength);
-      return OW.getUint32(iW, !0) === mW && OW.getUint32(iW + 4, !0) === EW && OW.getUint32(iW + 8, !0) === PW
+    function eR(RR) {
+      const JR = iR;
+      if (RR.byteLength < JR + 12) return !1;
+      const GR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength);
+      return GR.getUint32(JR, !0) === yR && GR.getUint32(JR + 4, !0) === tR && GR.getUint32(JR + 8, !0) === ZR
     }
   },
-  42225: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      f: () => tW,
-      i: () => PW,
-      k: () => cW
+  42239: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      f: () => VR,
+      j: () => ZR,
+      n: () => iR
     });
-    var mW = OW(37265);
-    class EW extends Error {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${WW}: the module trapped${OW?" in an earlier call":""}: ${String(iW)}`, {
-          cause: iW
-        }), this.site = WW, this.trap = iW, this.earlier = OW, this.name = "ModuleTrapError", iW instanceof Error && void 0 !== iW.stack && (this.stack = `${this.name}: ${this.message}\n${iW.stack}`)
+    var yR = GR(37183);
+    class tR extends Error {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${RR}: the module trapped${GR?" in an earlier call":""}: ${String(JR)}`, {
+          cause: JR
+        }), this.site = RR, this.trap = JR, this.earlier = GR, this.name = "ModuleTrapError", JR instanceof Error && void 0 !== JR.stack && (this.stack = `${this.name}: ${this.message}\n${JR.stack}`)
       }
     }
-    const NW = new WeakMap;
+    const uR = new WeakMap;
 
-    function PW(WW) {
-      return NW.has(WW)
+    function ZR(RR) {
+      return uR.has(RR)
     }
 
-    function LW(WW, iW) {
-      NW.has(WW) || NW.set(WW, iW)
+    function qR(RR, JR) {
+      uR.has(RR) || uR.set(RR, JR)
     }
 
-    function cW(WW, iW) {
-      return !!(0, mW.i)(iW) && (LW(WW, iW), !0)
+    function iR(RR, JR) {
+      return !!(0, yR.i)(JR) && (qR(RR, JR), !0)
     }
-    const wW = [
-      ["error", WW => WW.error],
-      ["unhandledrejection", WW => WW.reason]
+    const fR = [
+      ["error", RR => RR.error],
+      ["unhandledrejection", RR => RR.reason]
     ];
 
-    function tW(WW, iW, OW) {
-      let PW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return NW.has(WW) ? Promise.reject(new EW(iW, NW.get(WW), !0)) : new Promise(((NW, cW) => {
-        const tW = OW => {
-            LW(WW, OW), lW(), cW(new EW(iW, OW))
+    function VR(RR, JR, GR) {
+      let ZR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return uR.has(RR) ? Promise.reject(new tR(JR, uR.get(RR), !0)) : new Promise(((uR, iR) => {
+        const VR = GR => {
+            qR(RR, GR), rR(), iR(new tR(JR, GR))
           },
-          ZW = WW => {
-            WW instanceof WebAssembly.RuntimeError ? tW(WW) : (lW(), cW(WW))
+          KR = RR => {
+            RR instanceof WebAssembly.RuntimeError ? VR(RR) : (rR(), iR(RR))
           },
-          xW = wW.map((WW => {
-            let [iW, OW] = WW;
-            return [iW, WW => {
-              const iW = OW(WW);
-              (0, mW.i)(iW) && tW(iW)
+          wR = fR.map((RR => {
+            let [JR, GR] = RR;
+            return [JR, RR => {
+              const JR = GR(RR);
+              (0, yR.i)(JR) && VR(JR)
             }]
           })),
-          lW = () => {
-            for (const [WW, iW] of xW) null === PW || void 0 === PW || PW.removeEventListener(WW, iW)
+          rR = () => {
+            for (const [RR, JR] of wR) null === ZR || void 0 === ZR || ZR.removeEventListener(RR, JR)
           };
-        for (const [WW, iW] of xW) null === PW || void 0 === PW || PW.addEventListener(WW, iW);
-        let AW;
+        for (const [RR, JR] of wR) null === ZR || void 0 === ZR || ZR.addEventListener(RR, JR);
+        let eR;
         try {
-          AW = OW()
-        } catch (bW) {
-          return void ZW(bW)
+          eR = GR()
+        } catch (aR) {
+          return void KR(aR)
         }
-        AW.then((WW => {
-          lW(), NW(WW)
-        }), ZW)
+        eR.then((RR => {
+          rR(), uR(RR)
+        }), KR)
       }))
     }
   },
-  42255: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => DW,
-      F: () => HW,
-      G: () => vW,
-      H: () => aW,
-      J: () => gW,
-      K: () => XW,
-      L: () => pW,
-      O: () => eW,
-      R: () => rW,
-      c: () => hW,
-      g: () => yW,
-      h: () => CW,
-      k: () => VW,
-      n: () => YW,
-      o: () => JW,
-      r: () => KW,
-      u: () => uW,
-      x: () => dW,
-      y: () => IW,
-      z: () => GW
+  42281: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => OR,
+      D: () => NR,
+      H: () => kR,
+      J: () => YR,
+      M: () => cR,
+      O: () => bR,
+      Q: () => HR,
+      S: () => QR,
+      W: () => oR,
+      _: () => SR,
+      bb: () => IR,
+      c: () => gR,
+      db: () => DR,
+      fb: () => FR,
+      g: () => BR,
+      j: () => zR,
+      n: () => PR,
+      r: () => MR,
+      t: () => pR,
+      x: () => CR
     });
-    var mW = OW(192),
-      EW = OW(25),
-      NW = OW(4802),
-      PW = OW(131),
-      LW = OW(324),
-      cW = OW(39),
-      wW = OW(299),
-      tW = OW(42216),
-      ZW = OW(42228),
-      xW = OW(37711),
-      lW = OW(42259),
-      AW = (OW(42244), OW(42358)),
-      bW = OW(42275),
-      jW = OW(42235);
-    const UW = "wasmJoinBuild";
-    let kW = null,
-      sW = null,
-      MW = null;
+    var yR = GR(216),
+      tR = GR(25),
+      uR = GR(4913),
+      ZR = GR(132),
+      qR = GR(350),
+      iR = GR(46),
+      fR = GR(327),
+      VR = GR(42230),
+      KR = GR(42247),
+      wR = GR(37622),
+      rR = GR(42283),
+      eR = (GR(42265), GR(42374)),
+      aR = GR(42306),
+      LR = GR(42255);
+    const nR = "wasmJoinBuild";
+    let UR = null,
+      WR = null,
+      AR = null;
 
-    function KW(WW) {
-      MW = WW
+    function CR(RR) {
+      AR = RR
     }
-    let SW = !1;
+    let XR = !1;
 
-    function YW() {
-      SW = !0
-    }
-
-    function yW() {
-      return SW
-    }
-    let TW = !1;
-
-    function JW() {
-      TW = !0
+    function MR() {
+      XR = !0
     }
 
-    function hW() {
-      return TW
+    function BR() {
+      return XR
+    }
+    let lR = !1;
+
+    function pR() {
+      lR = !0
     }
 
-    function HW() {
-      return MW
-    }
-    let nW = null;
-
-    function uW(WW) {
-      nW = WW, (0, LW.c)(WW)
-    }
-    const oW = "wasmClientRenderLost";
-
-    function dW() {
-      cW.j.setItem(oW, !0)
+    function gR() {
+      return lR
     }
 
-    function eW() {
-      return !0 === cW.j.getItem(oW)
+    function bR() {
+      return AR
+    }
+    let vR = null;
+
+    function OR(RR) {
+      vR = RR, (0, qR.b)(RR)
+    }
+    const xR = "wasmClientRenderLost";
+
+    function NR() {
+      iR.k.setItem(xR, !0)
     }
 
-    function vW() {
-      return nW
+    function DR() {
+      return !0 === iR.k.getItem(xR)
     }
 
-    function gW() {
-      if (null === kW) {
-        cW.i.removeItem("wasmLastPick"), cW.i.removeItem("wasmGuessVerdict");
+    function HR() {
+      return vR
+    }
+
+    function oR() {
+      if (null === UR) {
+        iR.i.removeItem("wasmLastPick"), iR.i.removeItem("wasmGuessVerdict");
         try {
           localStorage.removeItem("wasmClientMisdrawnGpu"), localStorage.removeItem("wasmClientGameGpu")
-        } catch {}(0, LW.j)(), kW = (0, wW.p)().then((() => (0, tW.B)(lW.g))).then((WW => (null === WW || (0, tW.r)(WW) || (sW = AW.e[WW.backend], EW.d.followGameGpu("webgpu" === WW.backend ? WW.adapter : null), "webgpu" === WW.backend && (0, bW.d)()), WW)))
+        } catch {}(0, qR.g)(), UR = (0, fR.k)().then((() => (0, VR.A)(rR.e))).then((RR => (null === RR || (0, VR.o)(RR) || (WR = eR.d[RR.backend], tR.d.followGameGpu("webgpu" === RR.backend ? RR.adapter : null), "webgpu" === RR.backend && (0, aR.g)()), RR)))
       }
-      return kW
+      return UR
     }
 
-    function DW() {
-      return sW
+    function cR() {
+      return WR
     }
 
-    function VW(WW) {
-      return WW ? WW.load() : Promise.resolve().then((function() {
-        var WW = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw WW.code = "MODULE_NOT_FOUND", WW
-      })).then((WW => WW.bloxdWasmClient))
+    function PR(RR) {
+      return RR ? RR.load() : Promise.resolve().then((function() {
+        var RR = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw RR.code = "MODULE_NOT_FOUND", RR
+      })).then((RR => RR.bloxdWasmClient))
     }
 
-    function pW(WW) {
-      cW.i.setItem(UW, WW)
+    function IR(RR) {
+      iR.i.setItem(nR, RR)
     }
 
-    function fW(WW, iW) {
-      const OW = cW.i.getItem(UW);
-      return null === OW ? function(WW) {
-        if (void 0 !== (0, mW.c)(WW, "webgpu") && (0, tW.z)()) return "webgpu";
-        return !1 === (0, PW.p)() ? "webgl1" : "webgl"
-      }(WW) : "none" === OW ? null : "string" === typeof OW && void 0 !== (0, mW.c)(WW, OW) ? OW : (iW && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(OW)}, is none of this client's: guessing WebGL2's`), "webgl")
+    function mR(RR, JR) {
+      const GR = iR.i.getItem(nR);
+      return null === GR ? function(RR) {
+        if (void 0 !== (0, yR.b)(RR, "webgpu") && (0, VR.y)()) return "webgpu";
+        return !1 === (0, ZR.t)() ? "webgl1" : "webgl"
+      }(RR) : "none" === GR ? null : "string" === typeof GR && void 0 !== (0, yR.b)(RR, GR) ? GR : (JR && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(GR)}, is none of this client's: guessing WebGL2's`), "webgl")
     }
-    async function CW() {
-      if (null === lW.g) return VW(null);
-      const WW = fW(lW.g, !0);
-      return null === WW ? null : lW.g[WW]()
+    async function zR() {
+      if (null === rR.e) return PR(null);
+      const RR = mR(rR.e, !0);
+      return null === RR ? null : rR.e[RR]()
     }
 
-    function XW() {
-      null === kW && null !== lW.g && "webgl" === fW(lW.g, !1) && (0, jW.b)()
+    function SR() {
+      null === UR && null !== rR.e && "webgl" === mR(rR.e, !1) && (0, LR.b)()
     }
-    let BW = null,
-      qW = null,
-      RW = null;
+    let jR = null,
+      dR = null,
+      ER = null;
 
-    function GW() {
-      return BW ??= gW().then((async WW => {
-        const iW = null !== WW && !(0, tW.r)(WW),
-          OW = {
-            indirectHangs: iW && await (0, tW.J)(WW, window.location.search),
-            storagePullBreaks: iW && (0, tW.Q)(WW, window.location.search),
-            splitPassBreaks: iW && (0, tW.P)(WW, window.location.search),
-            earlySky: iW && (0, tW.G)(WW, window.location.search),
-            instancedTerrain: iW ? (0, tW.K)(WW, window.location.search) : null,
-            cellLight: iW && await (0, NW.h)("cellLight"),
-            framesAhead: (0, tW.j)(window.location.search, iW ? WW : null),
-            webGpuRestores: !iW || (0, tW.U)(WW, (0, xW.c)()),
-            bufferCopiesCrash: iW && (0, tW.E)(WW, window.location.search),
-            firstVertex: iW ? (0, ZW.c)(WW.backend, window.location.search) : void 0
+    function YR() {
+      return jR ??= oR().then((async RR => {
+        const JR = null !== RR && !(0, VR.o)(RR),
+          GR = {
+            indirectHangs: JR && await (0, VR.G)(RR, window.location.search),
+            storagePullBreaks: JR && (0, VR.Q)(RR, window.location.search),
+            splitPassBreaks: JR && (0, VR.N)(RR, window.location.search),
+            earlySky: JR && (0, VR.D)(RR, window.location.search),
+            instancedTerrain: JR ? (0, VR.I)(RR, window.location.search) : null,
+            cellLight: JR && await (0, uR.i)("cellLight"),
+            framesAhead: (0, VR.j)(window.location.search, JR ? RR : null),
+            webGpuRestores: !JR || (0, VR.R)(RR, (0, wR.e)()),
+            bufferCopiesCrash: JR && (0, VR.C)(RR, window.location.search),
+            firstVertex: JR ? (0, KR.d)(RR.backend, window.location.search) : void 0
           };
-        return qW = OW.indirectHangs, RW = !OW.webGpuRestores, OW
-      })), BW
+        return dR = GR.indirectHangs, ER = !GR.webGpuRestores, GR
+      })), jR
     }
 
-    function IW() {
-      return qW
+    function kR() {
+      return dR
     }
 
-    function aW() {
-      return RW
+    function QR() {
+      return ER
     }
-    async function rW() {
-      const WW = null === kW ? null : await kW;
-      return null !== WW && (0, tW.r)(WW) && (kW = null, BW = null, qW = null, RW = null), gW()
+    async function FR() {
+      const RR = null === UR ? null : await UR;
+      return null !== RR && (0, VR.o)(RR) && (UR = null, jR = null, dR = null, ER = null), oR()
     }
   },
-  42362: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW,
-      g: () => wW
+  42379: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR,
+      h: () => fR
     });
-    var mW = OW(37297),
-      EW = OW(42202),
-      NW = OW(5089),
-      PW = OW(299),
-      LW = OW(37711);
-    async function cW(WW, iW) {
-      return await Promise.all([(0, NW.h)(void 0, !0), (0, PW.p)()]), (0, mW.o)(WW, EW.d, {
-        ...iW,
-        memoryMaximumBytes: (0, LW.m)()
+    var yR = GR(37213),
+      tR = GR(42212),
+      uR = GR(5191),
+      ZR = GR(327),
+      qR = GR(37622);
+    async function iR(RR, JR) {
+      return await Promise.all([(0, uR.h)(void 0, !0), (0, ZR.k)()]), (0, yR.r)(RR, tR.d, {
+        ...JR,
+        memoryMaximumBytes: (0, qR.r)()
       })
     }
-    async function wW() {
-      return await (0, NW.h)(void 0, !0), (0, mW.s)((0, LW.m)())
+    async function fR() {
+      return await (0, uR.h)(void 0, !0), (0, yR.s)((0, qR.r)())
     }
   },
-  42228: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      c: () => NW
+  42247: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      d: () => uR
     });
-    var mW = OW(248);
-    const EW = "provokingVertex";
+    var yR = GR(279);
+    const tR = "provokingVertex";
 
-    function NW(WW, iW) {
-      if ("webgl" !== WW) return;
-      const OW = new URLSearchParams(iW).get(EW);
-      return "first" === OW || "last" !== OW && null
+    function uR(RR, JR) {
+      if ("webgl" !== RR) return;
+      const GR = new URLSearchParams(JR).get(tR);
+      return "first" === GR || "last" !== GR && null
     }
-    const PW = new WeakSet;
+    const ZR = new WeakSet;
 
-    function LW(WW, iW) {
-      var OW, EW;
-      let NW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (OW = null === (EW = globalThis.navigator) || void 0 === EW ? void 0 : EW.userAgent) && void 0 !== OW ? OW : "";
+    function qR(RR, JR) {
+      var GR, tR;
+      let uR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GR = null === (tR = globalThis.navigator) || void 0 === tR ? void 0 : tR.userAgent) && void 0 !== GR ? GR : "";
       try {
-        !1 === iW || PW.has(WW) || (PW.add(WW), WW.addEventListener("webglcontextrestored", (() => {
-          LW(WW, iW, NW)
+        !1 === JR || ZR.has(RR) || (ZR.add(RR), RR.addEventListener("webglcontextrestored", (() => {
+          qR(RR, JR, uR)
         })));
-        const OW = WW.getContext("webgl2");
-        if (null === OW || OW.isContextLost()) return !1;
-        if (!(null !== iW && void 0 !== iW ? iW : function(WW, iW) {
-            var OW, EW;
-            const NW = WW.getExtension("WEBGL_debug_renderer_info");
-            if (null === NW) return !1;
-            return function(WW, iW, OW) {
-              return OW.includes("Windows") && "adreno_6" === (0, mW.i)(WW, iW)
-            }(String(null !== (OW = WW.getParameter(NW.UNMASKED_VENDOR_WEBGL)) && void 0 !== OW ? OW : ""), String(null !== (EW = WW.getParameter(NW.UNMASKED_RENDERER_WEBGL)) && void 0 !== EW ? EW : ""), iW)
-          }(OW, NW))) return !1;
-        const EW = OW.getExtension("WEBGL_provoking_vertex");
-        return null !== EW && (EW.provokingVertexWEBGL(EW.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
-      } catch (cW) {
-        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", cW), !1
+        const GR = RR.getContext("webgl2");
+        if (null === GR || GR.isContextLost()) return !1;
+        if (!(null !== JR && void 0 !== JR ? JR : function(RR, JR) {
+            var GR, tR;
+            const uR = RR.getExtension("WEBGL_debug_renderer_info");
+            if (null === uR) return !1;
+            return function(RR, JR, GR) {
+              return GR.includes("Windows") && "adreno_6" === (0, yR.k)(RR, JR)
+            }(String(null !== (GR = RR.getParameter(uR.UNMASKED_VENDOR_WEBGL)) && void 0 !== GR ? GR : ""), String(null !== (tR = RR.getParameter(uR.UNMASKED_RENDERER_WEBGL)) && void 0 !== tR ? tR : ""), JR)
+          }(GR, uR))) return !1;
+        const tR = GR.getExtension("WEBGL_provoking_vertex");
+        return null !== tR && (tR.provokingVertexWEBGL(tR.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
+      } catch (iR) {
+        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", iR), !1
       }
     }
   },
-  42240: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => wW,
-      h: () => LW,
-      k: () => tW,
-      n: () => PW
+  42259: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => fR,
+      e: () => qR,
+      i: () => VR,
+      l: () => ZR
     });
-    var mW = OW(339),
-      EW = OW(662);
-    let NW;
+    var yR = GR(371),
+      tR = GR(704);
+    let uR;
 
-    function PW(WW) {
-      var iW;
-      const OW = NW;
-      return NW = void 0, null !== (iW = cW(WW)) && void 0 !== iW ? iW : OW
+    function ZR(RR) {
+      var JR;
+      const GR = uR;
+      return uR = void 0, null !== (JR = iR(RR)) && void 0 !== JR ? JR : GR
     }
 
-    function LW(WW) {
+    function qR(RR) {
       try {
-        const iW = cW(WW);
-        void 0 !== iW && (NW = iW, (0, EW.g)((0, mW.l)(iW.reason, iW.message)))
-      } catch (iW) {
-        console.warn("Couldn't keep the WebGPU loss's cause", iW)
+        const JR = iR(RR);
+        void 0 !== JR && (uR = JR, (0, tR.h)((0, yR.q)(JR.reason, JR.message)))
+      } catch (JR) {
+        console.warn("Couldn't keep the WebGPU loss's cause", JR)
       }
     }
 
-    function cW(WW) {
-      var iW;
-      const OW = null === WW || void 0 === WW || null === (iW = WW.ZPW) || void 0 === iW ? void 0 : iW.call(WW),
-        mW = null === WW || void 0 === WW ? void 0 : WW.tPW();
-      if (void 0 === mW) return;
-      const EW = new Error(mW);
-      return void 0 !== OW && (EW.reason = OW), EW
+    function iR(RR) {
+      var JR;
+      const GR = null === RR || void 0 === RR || null === (JR = RR.TZR) || void 0 === JR ? void 0 : JR.call(RR),
+        yR = null === RR || void 0 === RR ? void 0 : RR.FZR();
+      if (void 0 === yR) return;
+      const tR = new Error(yR);
+      return void 0 !== GR && (tR.reason = GR), tR
     }
 
-    function wW(WW) {
-      return WW instanceof Error ? WW : void 0
+    function fR(RR) {
+      return RR instanceof Error ? RR : void 0
     }
 
-    function tW(WW, iW) {
-      return "lost" !== WW && "frames_refused" !== WW ? {} : (0, mW.l)("frames_refused" === WW ? WW : null === iW || void 0 === iW ? void 0 : iW.reason, null === iW || void 0 === iW ? void 0 : iW.message)
+    function VR(RR, JR) {
+      return "lost" !== RR && "frames_refused" !== RR ? {} : (0, yR.q)("frames_refused" === RR ? RR : null === JR || void 0 === JR ? void 0 : JR.reason, null === JR || void 0 === JR ? void 0 : JR.message)
     }
   },
-  42272: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => hW,
-      e: () => YW,
-      i: () => SW,
-      l: () => KW,
-      o: () => JW,
-      r: () => oW,
-      s: () => uW,
-      u: () => dW
+  42300: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => gR,
+      c: () => MR,
+      e: () => XR,
+      f: () => CR,
+      h: () => pR,
+      l: () => xR,
+      p: () => OR,
+      r: () => NR
     });
-    var mW = OW(5551),
-      EW = OW(42275),
-      NW = OW(35089);
-    const PW = 1,
-      LW = 18,
-      cW = 19,
-      wW = 20,
-      tW = 21,
-      ZW = 22,
-      xW = 23,
-      lW = {
-        [PW]: "link",
+    var yR = GR(5685),
+      tR = GR(42306),
+      uR = GR(34996);
+    const ZR = 1,
+      qR = 18,
+      iR = 19,
+      fR = 20,
+      VR = 21,
+      KR = 22,
+      wR = 23,
+      rR = {
+        [ZR]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -3234,28 +3234,28 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [LW]: "retry linked",
-        [cW]: "fallback linked",
-        [wW]: "fallback failed",
-        [tW]: "link stalled",
-        [ZW]: "link left pending",
-        [xW]: "moved to general",
+        [qR]: "retry linked",
+        [iR]: "fallback linked",
+        [fR]: "fallback failed",
+        [VR]: "link stalled",
+        [KR]: "link left pending",
+        [wR]: "moved to general",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function AW(WW, iW, OW) {
-      return WW === LW ? "program retry" : WW === PW ? "program link" : WW === tW ? "program link stall" : WW === ZW ? "program link pending" : WW === cW || WW === wW || WW === xW ? `program ${iW} ${OW}` : "program"
+    function eR(RR, JR, GR) {
+      return RR === qR ? "program retry" : RR === ZR ? "program link" : RR === VR ? "program link stall" : RR === KR ? "program link pending" : RR === iR || RR === fR || RR === wR ? `program ${JR} ${GR}` : "program"
     }
-    const bW = {
+    const aR = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain",
         5: "scene warm stuck"
       },
-      jW = {
+      LR = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -3268,18 +3268,18 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      UW = {
+      nR = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      kW = {
+      UR = {
         11: "none read after view",
         12: "some read after view"
       },
-      sW = {
+      WR = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -3287,26 +3287,26 @@ export const modules = {
         5: "no wait no clock",
         6: "no wait parallel links",
         7: "view shown unheld",
-        ...kW
+        ...UR
       },
-      MW = {
+      AR = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function KW(WW, iW) {
-      return WW === mW.o.RenderSerialLinks && void 0 !== kW[iW]
+    function CR(RR, JR) {
+      return RR === yR.p.RenderSerialLinks && void 0 !== UR[JR]
     }
 
-    function SW(WW, iW) {
-      return WW === mW.o.RenderInternal && (iW >>> 8 & 255) === ZW
+    function XR(RR, JR) {
+      return RR === yR.p.RenderInternal && (JR >>> 8 & 255) === KR
     }
 
-    function YW(WW, iW) {
-      return WW === mW.o.RenderSerialLinks && void 0 !== MW[15 & iW]
+    function MR(RR, JR) {
+      return RR === yR.p.RenderSerialLinks && void 0 !== AR[15 & JR]
     }
-    const yW = {
+    const BR = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -3315,89 +3315,89 @@ export const modules = {
       37442: "context lost"
     };
 
-    function TW(WW, iW) {
-      var OW;
-      return null !== (OW = WW[iW]) && void 0 !== OW ? OW : (0, NW.d)(iW)
+    function lR(RR, JR) {
+      var GR;
+      return null !== (GR = RR[JR]) && void 0 !== GR ? GR : (0, uR.e)(JR)
     }
 
-    function JW() {
-      return (0, NW.d)((0, EW.c)())
+    function pR() {
+      return (0, uR.e)((0, tR.e)())
     }
 
-    function hW(WW, iW) {
-      switch (WW) {
-        case mW.o.RenderSceneRowNotDrawn:
+    function gR(RR, JR) {
+      switch (RR) {
+        case yR.p.RenderSceneRowNotDrawn:
           return {
-            words: ` ${TW(jW,iW)}`, instance: String(iW), group: String(WW)
+            words: ` ${lR(LR,JR)}`, instance: String(JR), group: String(RR)
           };
-        case mW.o.RenderChunkMeshNotDrawn: {
-          const OW = 0 === (128 & iW) ? "" : " shortage",
-            mW = iW >>> 8;
+        case yR.p.RenderChunkMeshNotDrawn: {
+          const GR = 0 === (128 & JR) ? "" : " shortage",
+            yR = JR >>> 8;
           return {
-            words: ` ${TW(UW,127&iW)}${OW}${0===mW?"":` kind ${(0,NW.d)(mW)}`}`,
-            instance: String(iW),
-            group: String(WW)
+            words: ` ${lR(nR,127&JR)}${GR}${0===yR?"":` kind ${(0,uR.e)(yR)}`}`,
+            instance: String(JR),
+            group: String(RR)
           }
         }
-        case mW.o.RenderInternal: {
-          const OW = TW(bW, 255 & iW),
-            mW = iW >>> 8 & 255;
-          if (0 === mW) return {
-            words: ` ${OW}`,
-            instance: String(iW),
-            group: String(WW)
+        case yR.p.RenderInternal: {
+          const GR = lR(aR, 255 & JR),
+            yR = JR >>> 8 & 255;
+          if (0 === yR) return {
+            words: ` ${GR}`,
+            instance: String(JR),
+            group: String(RR)
           };
-          const EW = TW(lW, mW),
-            PW = iW >>> 16;
+          const tR = lR(rR, yR),
+            ZR = JR >>> 16;
           return {
-            words: ` ${OW} ${EW} program ${(0,NW.d)(PW)}`,
-            instance: `${OW} ${EW} ${PW}`,
-            group: AW(mW, EW, OW),
+            words: ` ${GR} ${tR} program ${(0,uR.e)(ZR)}`,
+            instance: `${GR} ${tR} ${ZR}`,
+            group: eR(yR, tR, GR),
             gpuDetails: {
-              programFailure: EW,
-              program: String(PW)
+              programFailure: tR,
+              program: String(ZR)
             }
           }
         }
-        case mW.o.RenderSerialLinks: {
-          if (YW(WW, iW)) {
-            const WW = function(WW) {
-              const iW = (iW, OW) => (0, NW.d)(WW >>> iW & (1 << OW) - 1),
-                OW = WW >>> 30 & 1 ? " restored" : "";
-              return `link census ${MW[15&WW]} linked ${iW(22,8)} failed ${iW(4,6)} retried ${iW(10,6)} fallback ${iW(16,6)}${OW}`
-            }(iW);
+        case yR.p.RenderSerialLinks: {
+          if (MR(RR, JR)) {
+            const RR = function(RR) {
+              const JR = (JR, GR) => (0, uR.e)(RR >>> JR & (1 << GR) - 1),
+                GR = RR >>> 30 & 1 ? " restored" : "";
+              return `link census ${AR[15&RR]} linked ${JR(22,8)} failed ${JR(4,6)} retried ${JR(10,6)} fallback ${JR(16,6)}${GR}`
+            }(JR);
             return {
-              words: ` ${WW}`,
-              instance: String(15 & iW),
+              words: ` ${RR}`,
+              instance: String(15 & JR),
               group: "link census",
               gpuDetails: {
-                linkCensus: WW
+                linkCensus: RR
               }
             }
           }
-          const OW = TW(sW, iW);
+          const GR = lR(WR, JR);
           return {
-            words: ` ${OW}`,
-            instance: String(iW),
-            group: String(WW),
+            words: ` ${GR}`,
+            instance: String(JR),
+            group: String(RR),
             gpuDetails: {
-              serialLinks: OW
+              serialLinks: GR
             }
           }
         }
-        case mW.o.RenderGlErrorAfterRestore: {
-          const OW = TW(yW, 65535 & iW),
-            mW = iW >>> 16,
-            EW = 65535 !== mW;
+        case yR.p.RenderGlErrorAfterRestore: {
+          const GR = lR(BR, 65535 & JR),
+            yR = JR >>> 16,
+            tR = 65535 !== yR;
           return {
-            words: ` ${OW}${EW?` program ${(0,NW.d)(mW)}`:""}`,
-            instance: String(iW),
-            group: String(WW),
-            gpuDetails: EW ? {
-              glError: OW,
-              program: String(mW)
+            words: ` ${GR}${tR?` program ${(0,uR.e)(yR)}`:""}`,
+            instance: String(JR),
+            group: String(RR),
+            gpuDetails: tR ? {
+              glError: GR,
+              program: String(yR)
             } : {
-              glError: OW
+              glError: GR
             }
           }
         }
@@ -3405,148 +3405,148 @@ export const modules = {
           return null
       }
     }
-    const HW = 2,
-      nW = new Map;
+    const bR = 2,
+      vR = new Map;
 
-    function uW(WW) {
+    function OR(RR) {
       let {
-        group: iW,
-        instance: OW
-      } = WW, mW = nW.get(iW);
-      return void 0 === mW && (mW = [], nW.set(iW, mW)), !mW.includes(OW) && (mW.length >= HW || (mW.push(OW), !1))
+        group: JR,
+        instance: GR
+      } = RR, yR = vR.get(JR);
+      return void 0 === yR && (yR = [], vR.set(JR, yR)), !yR.includes(GR) && (yR.length >= bR || (yR.push(GR), !1))
     }
 
-    function oW() {
-      return nW.size > 0
+    function xR() {
+      return vR.size > 0
     }
 
-    function dW() {
-      nW.clear()
+    function NR() {
+      vR.clear()
     }
   },
-  42259: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      g: () => NW
+  42283: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      e: () => uR
     });
-    var mW = OW(42266);
-    const EW = new WeakSet;
-    const NW = {
+    var yR = GR(42288);
+    const tR = new WeakSet;
+    const uR = {
         webgpu: async () => (function() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
-          if (void 0 === WW || EW.has(WW.prototype)) return;
-          EW.add(WW.prototype);
-          const iW = WW.prototype.requestDevice;
-          WW.prototype.requestDevice = function(WW) {
-            var OW;
-            const EW = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.requiredLimits) && void 0 !== OW ? OW : {},
-              NW = Object.keys(EW).filter((WW => !(WW in this.limits)));
-            if (0 === NW.length) return iW.call(this, WW);
-            const PW = Object.fromEntries(Object.entries(EW).filter((WW => {
-              let [iW] = WW;
-              return iW in this.limits
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
+          if (void 0 === RR || tR.has(RR.prototype)) return;
+          tR.add(RR.prototype);
+          const JR = RR.prototype.requestDevice;
+          RR.prototype.requestDevice = function(RR) {
+            var GR;
+            const tR = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.requiredLimits) && void 0 !== GR ? GR : {},
+              uR = Object.keys(tR).filter((RR => !(RR in this.limits)));
+            if (0 === uR.length) return JR.call(this, RR);
+            const ZR = Object.fromEntries(Object.entries(tR).filter((RR => {
+              let [JR] = RR;
+              return JR in this.limits
             })));
-            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${NW.join(", ")}`), (0, mW.reportDroppedRequiredLimits)(NW), iW.call(this, {
-              ...WW,
-              requiredLimits: PW
+            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${uR.join(", ")}`), (0, yR.reportDroppedRequiredLimits)(uR), JR.call(this, {
+              ...RR,
+              requiredLimits: ZR
             })
           }
-        }(), (await OW.e(8).then((() => OW(54749)))).bloxdWasmWebgpu),
-        webgl: async () => (await OW.e(6).then((() => OW(54761)))).bloxdWasmWebgl,
-        webgl1: async () => (await OW.e(7).then((() => OW(54775)))).bloxdWasmWebgl1
+        }(), (await GR.e(8).then((() => GR(54594)))).bloxdWasmWebgpu),
+        webgl: async () => (await GR.e(6).then((() => GR(54605)))).bloxdWasmWebgl,
+        webgl1: async () => (await GR.e(7).then((() => GR(54617)))).bloxdWasmWebgl1
       },
-      PW = async () => (await OW.e(5).then((() => OW(54787)))).compileAnimationPackInWasm
+      ZR = async () => (await GR.e(5).then((() => GR(54630)))).compileAnimationPackInWasm
   },
-  42316: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => UW,
-      c: () => jW,
-      d: () => KW
+  42335: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => nR,
+      g: () => LR,
+      i: () => CR
     });
-    var mW = OW(7646),
-      EW = OW(27),
-      NW = OW(4970),
-      PW = OW(5551),
-      LW = OW(7639),
-      cW = OW(42321);
+    var yR = GR(7786),
+      tR = GR(32),
+      uR = GR(5064),
+      ZR = GR(5685),
+      qR = GR(7777),
+      iR = GR(42342);
 
-    function wW(WW, iW) {
-      const OW = (0, LW.e)(iW.variants);
-      return WW.setShaderPack(OW.variantFlags, OW.hooks, OW.moduleCodes, (0, cW.x)(iW.layers), cW.l[iW.policy], iW.keepCircleShadows)
+    function fR(RR, JR) {
+      const GR = (0, qR.d)(JR.variants);
+      return RR.setShaderPack(GR.variantFlags, GR.hooks, GR.moduleCodes, (0, iR.y)(JR.layers), iR.k[JR.policy], JR.keepCircleShadows)
     }
-    const tW = 0,
-      ZW = 1,
-      xW = 2,
-      lW = "shaderPack:failedToCompile",
-      AW = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
-      bW = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
+    const VR = 0,
+      KR = 1,
+      wR = 2,
+      rR = "shaderPack:failedToCompile",
+      eR = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
+      aR = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
 
-    function jW(WW, iW, OW) {
-      var mW;
-      const EW = null !== (mW = null === WW || void 0 === WW ? void 0 : WW.reason) && void 0 !== mW ? mW : "none";
-      return AW.has(EW) ? {
-        messageKey: iW ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function LR(RR, JR, GR) {
+      var yR;
+      const tR = null !== (yR = null === RR || void 0 === RR ? void 0 : RR.reason) && void 0 !== yR ? yR : "none";
+      return eR.has(tR) ? {
+        messageKey: JR ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === EW && "override" === (null === WW || void 0 === WW ? void 0 : WW.source) ? {
+      } : "not_requested" === tR && "override" === (null === RR || void 0 === RR ? void 0 : RR.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: bW.has(EW) && !OW ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: aR.has(tR) && !GR ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    class UW extends Error {
-      constructor(WW) {
-        super(`the shader pack can't run in this game: ${WW}`), this.messageKey = WW, this.name = "ShaderPackJoinError"
+    class nR extends Error {
+      constructor(RR) {
+        super(`the shader pack can't run in this game: ${RR}`), this.messageKey = RR, this.name = "ShaderPackJoinError"
       }
     }
-    const kW = "strict";
-    class sW {
-      constructor(WW) {
-        this.deps = WW, this.pagePack = void 0, this.loaded = null, this.policy = kW, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = WW.load().catch((iW => (WW.warn("the shader pack could not load: the game draws without it", iW), {
+    const UR = "strict";
+    class WR {
+      constructor(RR) {
+        this.deps = RR, this.pagePack = void 0, this.loaded = null, this.policy = UR, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = RR.load().catch((JR => (RR.warn("the shader pack could not load: the game draws without it", JR), {
           status: "none"
-        }))).then((WW => (this.loaded = WW, "active" === WW.status && (this.handOverToPreviews(WW), null !== WW.harnessPolicy && (this.policy = WW.harnessPolicy, this.handOver())), WW)))
+        }))).then((RR => (this.loaded = RR, "active" === RR.status && (this.handOverToPreviews(RR), null !== RR.harnessPolicy && (this.policy = RR.harnessPolicy, this.handOver())), RR)))
       }
-      async join(WW) {
+      async join(RR) {
         this.leave();
-        const iW = this.game,
-          [OW, EW] = await Promise.all([this.pagePack, this.policyOf(WW)]);
-        if (iW !== this.game || "none" === OW.status) return null;
-        const NW = "active" === OW.status ? OW.pack.variants : OW.variants,
-          PW = (0, mW.j)(NW, EW);
-        if (PW && "active" === OW.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (PW) {
-          const WW = this.cantRun(OW, EW);
-          if (null !== WW) return WW
-        } else if ("blocked" === OW.status || null === this.deps.core) return null;
-        return this.policy = EW, this.handOver(), PW && this.refused ? lW : (this.joined = !0, this.offInThisGame = !PW, null)
+        const JR = this.game,
+          [GR, tR] = await Promise.all([this.pagePack, this.policyOf(RR)]);
+        if (JR !== this.game || "none" === GR.status) return null;
+        const uR = "active" === GR.status ? GR.pack.variants : GR.variants,
+          ZR = (0, yR.i)(uR, tR);
+        if (ZR && "active" === GR.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (ZR) {
+          const RR = this.cantRun(GR, tR);
+          if (null !== RR) return RR
+        } else if ("blocked" === GR.status || null === this.deps.core) return null;
+        return this.policy = tR, this.handOver(), ZR && this.refused ? rR : (this.joined = !0, this.offInThisGame = !ZR, null)
       }
-      async replay(WW) {
-        const iW = await this.join(WW);
-        null === iW ? this.playable() : this.deps.failInGame(iW)
+      async replay(RR) {
+        const JR = await this.join(RR);
+        null === JR ? this.playable() : this.deps.failInGame(JR)
       }
-      cantRun(WW, iW) {
+      cantRun(RR, JR) {
         const {
-          core: OW,
-          noWebGpu: mW
+          core: GR,
+          noWebGpu: yR
         } = this.deps;
-        if ("blocked" === WW.status) {
-          return "shaderPack:failedUnchecked" === WW.messageKey && null === OW && mW.noAdapter ? mW.messageKey : WW.messageKey
+        if ("blocked" === RR.status) {
+          return "shaderPack:failedUnchecked" === RR.messageKey && null === GR && yR.noAdapter ? yR.messageKey : RR.messageKey
         }
-        return this.refused || this.failedPolicies.has(iW) ? lW : null
+        return this.refused || this.failedPolicies.has(JR) ? rR : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var WW;
-        return this.runsInJoinedGame() && "active" === (null === (WW = this.loaded) || void 0 === WW ? void 0 : WW.status) ? function(WW, iW) {
-          const OW = WW.filter((WW => (0, mW.j)([WW], iW))),
-            EW = WW => OW.some((iW => iW[WW]));
+        var RR;
+        return this.runsInJoinedGame() && "active" === (null === (RR = this.loaded) || void 0 === RR ? void 0 : RR.status) ? function(RR, JR) {
+          const GR = RR.filter((RR => (0, yR.i)([RR], JR))),
+            tR = RR => GR.some((JR => JR[RR]));
           return {
-            sceneDepth: EW("sceneDepth"),
-            sunShadow: EW("sunShadow"),
-            airShadow: EW("airShadow")
+            sceneDepth: tR("sceneDepth"),
+            sunShadow: tR("sunShadow"),
+            airShadow: tR("airShadow")
           }
         }(this.loaded.pack.variants, this.policy) : null
       }
@@ -3554,691 +3554,691 @@ export const modules = {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(lW) : (null !== this.couldntRun ? this.notify(NW.e, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(rR) : (null !== this.couldntRun ? this.notify(uR.c, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(WW) {
+      coreErrors(RR) {
         for (const {
-            code: iW,
-            detail: OW
+            code: JR,
+            detail: GR
           }
-          of WW)
-          if (iW === PW.o.RenderShaderPackNotRun) switch (255 & OW) {
-            case tW:
+          of RR)
+          if (JR === ZR.p.RenderShaderPackNotRun) switch (255 & GR) {
+            case VR:
               this.refused = !0, this.failed();
               break;
-            case ZW:
+            case KR:
               this.failedPolicies.add(this.policy), this.failed();
               break;
-            case xW:
+            case wR:
               this.failedModelPolicies.add(this.policy), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(lW) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(rR) : this.failedWhileJoining = !0)
       }
-      fail(WW) {
-        this.leave(), this.deps.failInGame(WW)
+      fail(RR) {
+        this.leave(), this.deps.failInGame(RR)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(WW, iW) {
-        const OW = this.game;
-        this.deps.notify(WW, (() => OW === this.game && this.joined), iW)
+      notify(RR, JR) {
+        const GR = this.game;
+        this.deps.notify(RR, (() => GR === this.game && this.joined), JR)
       }
       handOver() {
-        var WW;
+        var RR;
         const {
-          core: iW
+          core: JR
         } = this.deps;
-        null !== iW && "active" === (null === (WW = this.loaded) || void 0 === WW ? void 0 : WW.status) && (wW(iW, {
+        null !== JR && "active" === (null === (RR = this.loaded) || void 0 === RR ? void 0 : RR.status) && (fR(JR, {
           ...this.loaded.pack,
           policy: this.policy
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(WW) {
+      handOverToPreviews(RR) {
         let {
-          pack: iW,
-          harnessPolicy: OW
-        } = WW;
+          pack: JR,
+          harnessPolicy: GR
+        } = RR;
         const {
-          previews: mW
+          previews: yR
         } = this.deps;
-        null !== mW && wW(mW, {
-          ...iW,
-          policy: null !== OW && void 0 !== OW ? OW : kW
+        null !== yR && fR(yR, {
+          ...JR,
+          policy: null !== GR && void 0 !== GR ? GR : UR
         })
       }
-      policyOf(WW) {
-        return this.deps.policyOf(WW).catch((WW => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", WW), kW)))
+      policyOf(RR) {
+        return this.deps.policyOf(RR).catch((RR => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", RR), UR)))
       }
     }
-    const MW = "wasmShaderPackNotice";
+    const AR = "wasmShaderPackNotice";
 
-    function KW(WW, iW, OW, mW) {
-      return EW.l.subscribe(MW, (WW => {
+    function CR(RR, JR, GR, yR) {
+      return tR.n.subscribe(AR, (RR => {
         let {
-          translationKey: iW,
-          stillCurrent: OW,
-          reasonKey: mW
-        } = WW;
-        OW() && EW.l.iZ("chat", (0, NW.j)(iW, mW))
-      })), new sW({
-        load: SW,
-        policyOf: YW,
-        core: WW,
-        previews: iW,
-        noWebGpu: OW,
-        notify: (WW, iW, OW) => {
-          const mW = {
-            translationKey: WW,
-            stillCurrent: iW,
-            reasonKey: OW
+          translationKey: JR,
+          stillCurrent: GR,
+          reasonKey: yR
+        } = RR;
+        GR() && tR.n.JK("chat", (0, uR.f)(JR, yR))
+      })), new WR({
+        load: XR,
+        policyOf: MR,
+        core: RR,
+        previews: JR,
+        noWebGpu: GR,
+        notify: (RR, JR, GR) => {
+          const yR = {
+            translationKey: RR,
+            stillCurrent: JR,
+            reasonKey: GR
           };
-          EW.l.iZ(MW, mW, !0)
+          tR.n.JK(AR, yR, !0)
         },
-        failInGame: WW => {
-          EW.l.iZ(NW.f, WW)
+        failInGame: RR => {
+          tR.n.JK(uR.d, RR)
         },
-        warn: mW
+        warn: yR
       })
     }
-    async function SW() {
+    async function XR() {
       const [{
-        shaderPackPage: WW,
-        harnessShaderPackMode: iW
+        shaderPackPage: RR,
+        harnessShaderPackMode: JR
       }, {
-        shaderPackTextures: mW
-      }] = await Promise.all([OW.e(138).then((() => OW(40448))), OW.e(139).then((() => OW(7637)))]), EW = await WW.load();
-      return "active" !== EW.status ? EW : {
+        shaderPackTextures: yR
+      }] = await Promise.all([GR.e(138).then((() => GR(40495))), GR.e(139).then((() => GR(7773)))]), tR = await RR.load();
+      return "active" !== tR.status ? tR : {
         status: "active",
         pack: {
-          variants: EW.pack.variants,
-          layers: mW().layers,
-          keepCircleShadows: EW.pack.keepCircleShadows
+          variants: tR.pack.variants,
+          layers: yR().layers,
+          keepCircleShadows: tR.pack.keepCircleShadows
         },
-        harnessPolicy: iW()
+        harnessPolicy: JR()
       }
     }
-    async function YW(WW) {
-      var iW;
+    async function MR(RR) {
+      var JR;
       const [{
-        shaderPackPage: mW,
-        harnessShaderPackMode: EW
+        shaderPackPage: yR,
+        harnessShaderPackMode: tR
       }, {
-        getShaderPackPolicy: NW
-      }] = await Promise.all([OW.e(138).then((() => OW(40448))), OW.e(108).then((() => OW(44879)))]);
-      return await mW.load(), null !== (iW = EW()) && void 0 !== iW ? iW : NW(WW)
+        getShaderPackPolicy: uR
+      }] = await Promise.all([GR.e(138).then((() => GR(40495))), GR.e(108).then((() => GR(44974)))]);
+      return await yR.load(), null !== (JR = tR()) && void 0 !== JR ? JR : uR(RR)
     }
   },
-  42348: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      e: () => jW,
-      f: () => cW,
-      j: () => wW,
-      l: () => tW,
-      m: () => xW
+  42364: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      g: () => LR,
+      k: () => iR,
+      o: () => fR,
+      s: () => VR,
+      w: () => wR
     });
-    var mW = OW(37343),
-      EW = OW(42356);
-    const NW = "atlas:",
-      PW = 3e4;
-    class LW extends Error {
-      constructor(WW, iW) {
-        super(`fetching ${WW} answered HTTP ${iW}`), this.url = WW, this.status = iW, this.name = "TerrainTextureFetchError"
+    var yR = GR(37256),
+      tR = GR(42369);
+    const uR = "atlas:",
+      ZR = 3e4;
+    class qR extends Error {
+      constructor(RR, JR) {
+        super(`fetching ${RR} answered HTTP ${JR}`), this.url = RR, this.status = JR, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function cW(WW) {
-      if (!WW.startsWith(NW)) return null;
-      const iW = Number(WW.slice(NW.length));
-      return Number.isInteger(iW) && iW >= 0 ? iW : null
+    function iR(RR) {
+      if (!RR.startsWith(uR)) return null;
+      const JR = Number(RR.slice(uR.length));
+      return Number.isInteger(JR) && JR >= 0 ? JR : null
     }
-    async function wW() {
-      const WW = await OW.e(234).then((() => OW(35332)));
+    async function fR() {
+      const RR = await GR.e(234).then((() => GR(35257)));
       return {
-        atlasSheets: WW.blockAtlasUrls,
-        texture: iW => {
-          var OW, mW, NW;
-          return null !== (OW = null !== (mW = null !== (NW = WW.animatedBlockTextures[iW]) && void 0 !== NW ? NW : WW.rotatedBlockTextures[iW]) && void 0 !== mW ? mW : EW.e[iW]) && void 0 !== OW ? OW : null
+        atlasSheets: RR.blockAtlasUrls,
+        texture: JR => {
+          var GR, yR, uR;
+          return null !== (GR = null !== (yR = null !== (uR = RR.animatedBlockTextures[JR]) && void 0 !== uR ? uR : RR.rotatedBlockTextures[JR]) && void 0 !== yR ? yR : tR.b[JR]) && void 0 !== GR ? GR : null
         }
       }
     }
-    async function tW(WW) {
-      const iW = new AbortController,
-        OW = setTimeout((() => {
-          iW.abort(new DOMException(`${WW} took over ${PW} ms`, "TimeoutError"))
-        }), PW);
-      let mW;
+    async function VR(RR) {
+      const JR = new AbortController,
+        GR = setTimeout((() => {
+          JR.abort(new DOMException(`${RR} took over ${ZR} ms`, "TimeoutError"))
+        }), ZR);
+      let yR;
       try {
-        const OW = await fetch(WW, {
-          signal: iW.signal
+        const GR = await fetch(RR, {
+          signal: JR.signal
         });
-        if (!OW.ok) throw new LW(WW, OW.status);
-        mW = await OW.blob()
+        if (!GR.ok) throw new qR(RR, GR.status);
+        yR = await GR.blob()
       } finally {
-        clearTimeout(OW)
+        clearTimeout(GR)
       }
-      const EW = await createImageBitmap(mW, {
+      const tR = await createImageBitmap(yR, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return xW(EW)
+        return wR(tR)
       } finally {
-        EW.close()
+        tR.close()
       }
     }
-    const ZW = 8192;
+    const KR = 8192;
 
-    function xW(WW) {
+    function wR(RR) {
       const {
-        width: iW,
-        height: OW
-      } = WW, EW = Math.max(1, Math.min(OW, ZW)), NW = (0, mW.g)(iW, EW, {
+        width: JR,
+        height: GR
+      } = RR, tR = Math.max(1, Math.min(GR, KR)), uR = (0, yR.e)(JR, tR, {
         willReadFrequently: !0
       });
-      if (!NW) throw new Error("no 2D context to read the texture back");
-      NW.globalCompositeOperation = "copy";
-      const PW = new Uint8Array(iW * OW * 4);
-      for (let mW = 0; mW < OW; mW += EW) {
-        const LW = Math.min(EW, OW - mW);
-        NW.drawImage(WW, 0, mW, iW, LW, 0, 0, iW, LW), PW.set(NW.getImageData(0, 0, iW, LW).data, mW * iW * 4)
+      if (!uR) throw new Error("no 2D context to read the texture back");
+      uR.globalCompositeOperation = "copy";
+      const ZR = new Uint8Array(JR * GR * 4);
+      for (let yR = 0; yR < GR; yR += tR) {
+        const qR = Math.min(tR, GR - yR);
+        uR.drawImage(RR, 0, yR, JR, qR, 0, 0, JR, qR), ZR.set(uR.getImageData(0, 0, JR, qR).data, yR * JR * 4)
       }
       return {
-        width: iW,
-        height: OW,
-        pixels: PW
+        width: JR,
+        height: GR,
+        pixels: ZR
       }
     }
-    async function lW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tW;
-      const mW = [],
-        EW = await Promise.all(WW.map((async WW => {
-          var EW, PW;
-          const LW = null !== (EW = null === (PW = iW.decoded) || void 0 === PW ? void 0 : PW.call(iW, WW)) && void 0 !== EW ? EW : null,
-            wW = null === LW ? function(WW, iW) {
-              if (WW.startsWith(NW)) {
-                var OW;
-                const mW = cW(WW);
-                return null === mW ? null : null !== (OW = iW.atlasSheets[mW]) && void 0 !== OW ? OW : null
+    async function rR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VR;
+      const yR = [],
+        tR = await Promise.all(RR.map((async RR => {
+          var tR, ZR;
+          const qR = null !== (tR = null === (ZR = JR.decoded) || void 0 === ZR ? void 0 : ZR.call(JR, RR)) && void 0 !== tR ? tR : null,
+            fR = null === qR ? function(RR, JR) {
+              if (RR.startsWith(uR)) {
+                var GR;
+                const yR = iR(RR);
+                return null === yR ? null : null !== (GR = JR.atlasSheets[yR]) && void 0 !== GR ? GR : null
               }
-              return iW.texture(WW)
-            }(WW, iW) : null,
-            tW = null !== LW && void 0 !== LW ? LW : null === wW ? null : OW(wW);
-          if (null === tW) return mW.push({
-            name: WW,
-            url: wW,
-            error: new Error(`no URL for terrain texture ${WW}`)
+              return JR.texture(RR)
+            }(RR, JR) : null,
+            VR = null !== qR && void 0 !== qR ? qR : null === fR ? null : GR(fR);
+          if (null === VR) return yR.push({
+            name: RR,
+            url: fR,
+            error: new Error(`no URL for terrain texture ${RR}`)
           }), null;
           try {
-            const iW = await tW;
-            if (iW.pixels.byteLength !== iW.width * iW.height * 4) throw new Error(`decoded ${iW.pixels.byteLength} bytes for ${iW.width}x${iW.height} texels`);
+            const JR = await VR;
+            if (JR.pixels.byteLength !== JR.width * JR.height * 4) throw new Error(`decoded ${JR.pixels.byteLength} bytes for ${JR.width}x${JR.height} texels`);
             return {
-              name: WW,
-              texture: iW
+              name: RR,
+              texture: JR
             }
-          } catch (ZW) {
-            return mW.push({
-              name: WW,
-              url: wW,
-              error: ZW
+          } catch (KR) {
+            return yR.push({
+              name: RR,
+              url: fR,
+              error: KR
             }), null
           }
         }))),
-        PW = EW.filter((WW => null !== WW)),
-        LW = new Uint32Array(2 * PW.length);
-      PW.forEach(((WW, iW) => {
+        ZR = tR.filter((RR => null !== RR)),
+        qR = new Uint32Array(2 * ZR.length);
+      ZR.forEach(((RR, JR) => {
         let {
-          texture: OW
-        } = WW;
-        LW[2 * iW] = OW.width, LW[2 * iW + 1] = OW.height
+          texture: GR
+        } = RR;
+        qR[2 * JR] = GR.width, qR[2 * JR + 1] = GR.height
       }));
       return {
         handOver: {
-          names: PW.map((WW => {
+          names: ZR.map((RR => {
             let {
-              name: iW
-            } = WW;
-            return iW
+              name: JR
+            } = RR;
+            return JR
           })),
-          textures: PW.map((WW => {
+          textures: ZR.map((RR => {
             let {
-              texture: iW
-            } = WW;
-            return iW.pixels
+              texture: JR
+            } = RR;
+            return JR.pixels
           })),
-          sizes: LW
+          sizes: qR
         },
-        failures: mW
+        failures: yR
       }
     }
-    const AW = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const eR = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function bW() {}
-    class jW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AW,
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = WW, this.retryMs = iW, this.keepBelow = OW, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function aR() {}
+    class LR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eR,
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = RR, this.retryMs = JR, this.keepBelow = GR, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wW,
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const mW = ++this.started,
-          EW = {
-            decode: OW.decode,
-            wholeAtlas: OW.wholeAtlas
+      async swap(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fR,
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const yR = ++this.started,
+          tR = {
+            decode: GR.decode,
+            wholeAtlas: GR.wholeAtlas
           };
-        return this.loadAndHandOver(iW, EW, WW, (() => {
-          var WW;
-          return mW < this.landed || !1 === (null === (WW = OW.wanted) || void 0 === WW ? void 0 : WW.call(OW))
+        return this.loadAndHandOver(JR, tR, RR, (() => {
+          var RR;
+          return yR < this.landed || !1 === (null === (RR = GR.wanted) || void 0 === RR ? void 0 : RR.call(GR))
         }), {
-          onTaken: (WW, OW) => {
-            this.landed = mW, this.current = {
-              mine: mW,
-              sources: iW,
-              load: EW,
-              EZ: WW,
-              failed: OW
+          onTaken: (RR, GR) => {
+            this.landed = yR, this.current = {
+              mine: yR,
+              sources: JR,
+              load: tR,
+              tK: RR,
+              failed: GR
             }
           }
         })
       }
-      restore(WW) {
-        var iW;
-        const OW = this.current;
-        if (null === OW) return Promise.resolve(null);
-        if ((null === (iW = this.restoring) || void 0 === iW ? void 0 : iW.mine) === OW.mine) return this.restoring.done;
-        const mW = {
-          mine: OW.mine,
-          done: this.restoreLanded(OW, WW).finally((() => {
-            this.restoring === mW && (this.restoring = null)
+      restore(RR) {
+        var JR;
+        const GR = this.current;
+        if (null === GR) return Promise.resolve(null);
+        if ((null === (JR = this.restoring) || void 0 === JR ? void 0 : JR.mine) === GR.mine) return this.restoring.done;
+        const yR = {
+          mine: GR.mine,
+          done: this.restoreLanded(GR, RR).finally((() => {
+            this.restoring === yR && (this.restoring = null)
           }))
         };
-        return this.restoring = mW, mW.done
+        return this.restoring = yR, yR.done
       }
-      async restoreLanded(WW, iW) {
-        const OW = () => this.landed !== WW.mine,
+      async restoreLanded(RR, JR) {
+        const GR = () => this.landed !== RR.mine,
           {
-            EZ: mW
-          } = WW;
-        if (null !== mW) return this.stopped() ? null : this.core.setTerrainTextures(mW.names, mW.textures, mW.sizes);
-        let EW = iW;
-        for (let NW = 0;; NW++) {
-          const iW = this.retryMs.at(NW),
-            mW = {
-              allOrNothingExcept: void 0 === iW ? void 0 : WW.failed
+            tK: yR
+          } = RR;
+        if (null !== yR) return this.stopped() ? null : this.core.setTerrainTextures(yR.names, yR.textures, yR.sizes);
+        let tR = JR;
+        for (let uR = 0;; uR++) {
+          const JR = this.retryMs.at(uR),
+            yR = {
+              allOrNothingExcept: void 0 === JR ? void 0 : RR.failed
             },
-            PW = await this.loadAndHandOver(WW.sources, WW.load, EW, OW, mW);
-          if (!1 !== PW || void 0 === iW || this.stopped()) return PW;
-          if (EW = bW, await new Promise((WW => {
-              setTimeout(WW, iW)
-            })), OW()) return null
+            ZR = await this.loadAndHandOver(RR.sources, RR.load, tR, GR, yR);
+          if (!1 !== ZR || void 0 === JR || this.stopped()) return ZR;
+          if (tR = aR, await new Promise((RR => {
+              setTimeout(RR, JR)
+            })), GR()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(WW, iW, OW, mW) {
-        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(RR, JR, GR, yR) {
+        let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const NW = this.core.terrainTextureNames();
-        var PW;
-        if (0 === NW.length) return null === (PW = EW.onTaken) || void 0 === PW || PW.call(EW, null, new Set), !0;
-        let LW, wW;
+        const uR = this.core.terrainTextureNames();
+        var ZR;
+        if (0 === uR.length) return null === (ZR = tR.onTaken) || void 0 === ZR || ZR.call(tR, null, new Set), !0;
+        let qR, fR;
         try {
-          LW = await WW(), wW = await lW(NW, LW, iW.decode)
-        } catch (jW) {
-          return mW() ? null : (OW({
+          qR = await RR(), fR = await rR(uR, qR, JR.decode)
+        } catch (LR) {
+          return yR() ? null : (GR({
             name: null,
             url: null,
-            error: jW
+            error: LR
           }), !1)
         }
-        if (mW() || this.stopped()) return null;
-        for (const cW of wW.failures) OW(cW);
-        const tW = EW.allOrNothingExcept;
-        if (void 0 !== tW && wW.failures.some((WW => {
+        if (yR() || this.stopped()) return null;
+        for (const iR of fR.failures) GR(iR);
+        const VR = tR.allOrNothingExcept;
+        if (void 0 !== VR && fR.failures.some((RR => {
             let {
-              name: iW
-            } = WW;
-            return null === iW || !tW.has(iW)
-          })) || !0 === iW.wholeAtlas && wW.failures.some((WW => {
+              name: JR
+            } = RR;
+            return null === JR || !VR.has(JR)
+          })) || !0 === JR.wholeAtlas && fR.failures.some((RR => {
             let {
-              name: iW
-            } = WW;
-            return null === iW || null !== cW(iW)
+              name: JR
+            } = RR;
+            return null === JR || null !== iR(JR)
           }))) return !1;
         const {
-          handOver: ZW
-        } = wW, xW = function(WW) {
-          return WW.textures.reduce(((WW, iW) => WW + iW.byteLength), 0)
-        }(ZW) < this.keepBelow, AW = this.core.setTerrainTextures(ZW.names, ZW.textures, ZW.sizes, xW ? void 0 : () => {
-          !async function(WW, iW) {
-            await iW;
+          handOver: KR
+        } = fR, wR = function(RR) {
+          return RR.textures.reduce(((RR, JR) => RR + JR.byteLength), 0)
+        }(KR) < this.keepBelow, eR = this.core.setTerrainTextures(KR.names, KR.textures, KR.sizes, wR ? void 0 : () => {
+          !async function(RR, JR) {
+            await JR;
             for (const {
-                buffer: mW
+                buffer: yR
               }
-              of WW) {
-              const WW = mW;
-              var OW;
-              if (!WW.detached) null === (OW = WW.transfer) || void 0 === OW || OW.call(WW, 0)
+              of RR) {
+              const RR = yR;
+              var GR;
+              if (!RR.detached) null === (GR = RR.transfer) || void 0 === GR || GR.call(RR, 0)
             }
-          }(ZW.textures, LW.heldUntil)
+          }(KR.textures, qR.heldUntil)
         });
-        if (AW) {
-          var bW;
-          const WW = new Set(wW.failures.flatMap((WW => {
+        if (eR) {
+          var aR;
+          const RR = new Set(fR.failures.flatMap((RR => {
             let {
-              name: iW
-            } = WW;
-            return null === iW ? [] : [iW]
+              name: JR
+            } = RR;
+            return null === JR ? [] : [JR]
           })));
-          null === (bW = EW.onTaken) || void 0 === bW || bW.call(EW, xW ? ZW : null, WW)
+          null === (aR = tR.onTaken) || void 0 === aR || aR.call(tR, wR ? KR : null, RR)
         }
-        return AW
+        return eR
       }
     }
   },
-  35175: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      g: () => ZW,
-      k: () => tW
+  35094: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => fR,
+      f: () => KR,
+      i: () => VR
     });
-    var mW = OW(248),
-      EW = OW(100),
-      NW = OW(131),
-      PW = OW(128),
-      LW = OW(669);
-    const cW = new Set(["mali_bifrost"]);
+    var yR = GR(279),
+      tR = GR(103),
+      uR = GR(132),
+      ZR = GR(127),
+      qR = GR(706);
+    const iR = new Set(["mali_bifrost"]);
 
-    function wW() {
-      if (LW.g) return;
-      const WW = (0, EW.pageOperatingSystem)();
-      if ("android" !== WW && "windows" !== WW || (0, LW.c)("webgl_default")) return;
-      if ("windows" === WW) return WW => "qualcomm" === (0, EW.normaliseGpuVendor)((0, PW.b)(WW).vendor);
-      const iW = (0, NW.j)(),
-        OW = null === iW ? (0, mW.t)() : (0, mW.i)(iW.vendor, iW.renderer);
-      return null !== OW && cW.has(OW) ? WW => (0, mW.p)((0, PW.b)(WW).vendor, OW) : void 0
+    function fR() {
+      if (qR.e) return;
+      const RR = (0, tR.pageOperatingSystem)();
+      if ("android" !== RR && "windows" !== RR || (0, qR.c)("webgl_default")) return;
+      if ("windows" === RR) return RR => "qualcomm" === (0, tR.normaliseGpuVendor)((0, ZR.b)(RR).vendor);
+      const JR = (0, uR.o)(),
+        GR = null === JR ? (0, yR.u)() : (0, yR.k)(JR.vendor, JR.renderer);
+      return null !== GR && iR.has(GR) ? RR => (0, yR.q)((0, ZR.b)(RR).vendor, GR) : void 0
     }
 
-    function tW(WW, iW) {
-      return WW ? () => !0 : iW()
+    function VR(RR, JR) {
+      return RR ? () => !0 : JR()
     }
-    async function ZW(WW) {
+    async function KR(RR) {
       try {
-        const iW = tW(WW, wW),
-          OW = navigator.gpu;
-        if (void 0 === iW || void 0 === OW) return !1;
-        const mW = await (0, PW.i)(OW, {
+        const JR = VR(RR, fR),
+          GR = navigator.gpu;
+        if (void 0 === JR || void 0 === GR) return !1;
+        const yR = await (0, ZR.i)(GR, {
           seed: !1,
-          compatibility: iW
+          compatibility: JR
         });
-        return "string" !== typeof mW && mW.compatibility && !(0, PW.e)(mW.adapter)
-      } catch (iW) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", iW), !1
+        return "string" !== typeof yR && yR.compatibility && !(0, ZR.e)(yR.adapter)
+      } catch (JR) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", JR), !1
       }
     }
   },
-  42275: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW,
-      d: () => wW
+  42306: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR,
+      g: () => fR
     });
-    var mW = OW(100),
-      EW = OW(5096);
-    const NW = "webgpuPipeline";
+    var yR = GR(103),
+      tR = GR(5201);
+    const uR = "webgpuPipeline";
 
-    function PW(WW) {
-      return WW.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function ZR(RR) {
+      return RR.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let LW = null;
+    let qR = null;
 
-    function cW() {
-      if (null === LW) try {
-        WW = (0, mW.getBrowserName)(), iW = (0, mW.getBrowserVersion)(), OW = (0, mW.getOperatingSystem)(), EW = (0, mW.getOperatingSystemVersion)(), LW = `${WW.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===iW?"unknown":PW(iW)}-${OW}${void 0===EW?"":`_${PW(EW)}`}`
-      } catch (NW) {
-        console.warn("The user agent couldn't be read for its browser code", NW), LW = "unknown"
+    function iR() {
+      if (null === qR) try {
+        RR = (0, yR.getBrowserName)(), JR = (0, yR.getBrowserVersion)(), GR = (0, yR.getOperatingSystem)(), tR = (0, yR.getOperatingSystemVersion)(), qR = `${RR.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===JR?"unknown":ZR(JR)}-${GR}${void 0===tR?"":`_${ZR(tR)}`}`
+      } catch (uR) {
+        console.warn("The user agent couldn't be read for its browser code", uR), qR = "unknown"
       }
-      var WW, iW, OW, EW;
-      return LW
+      var RR, JR, GR, tR;
+      return qR
     }
 
-    function wW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const iW = `WGPU-${cW()}`,
-        mW = (WW, mW) => {
+    function fR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const JR = `WGPU-${iR()}`,
+        yR = (RR, yR) => {
           const {
-            reason: PW,
-            message: LW
-          } = mW, cW = String(LW);
-          if ((0, EW.u)(PW, cW)) return;
-          const wW = {
-            pipeline: null !== WW && void 0 !== WW ? WW : "",
-            reason: String(PW),
-            browserMessage: cW
+            reason: ZR,
+            message: qR
+          } = yR, iR = String(qR);
+          if ((0, tR.v)(ZR, iR)) return;
+          const fR = {
+            pipeline: null !== RR && void 0 !== RR ? RR : "",
+            reason: String(ZR),
+            browserMessage: iR
           };
-          Promise.resolve().then((() => OW(42266))).then((WW => {
+          Promise.resolve().then((() => GR(42288))).then((RR => {
             let {
-              reportCrash: OW
-            } = WW;
-            OW({
+              reportCrash: GR
+            } = RR;
+            GR({
               kind: "coreError",
-              code: iW,
-              site: NW,
+              code: JR,
+              site: uR,
               fatal: !1,
-              message: `${wW.pipeline} ${wW.reason}: ${wW.browserMessage}`,
-              details: wW,
-              error: mW
+              message: `${fR.pipeline} ${fR.reason}: ${fR.browserMessage}`,
+              details: fR,
+              error: yR
             })
-          })).catch((WW => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", WW)
+          })).catch((RR => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", RR)
           }))
         },
-        PW = WW.createRenderPipelineAsync;
-      WW.createRenderPipelineAsync = function(WW) {
-        return PW.call(this, WW).catch((iW => {
-          throw mW(WW.label, iW), iW
+        ZR = RR.createRenderPipelineAsync;
+      RR.createRenderPipelineAsync = function(RR) {
+        return ZR.call(this, RR).catch((JR => {
+          throw yR(RR.label, JR), JR
         }))
       };
-      const LW = WW.createComputePipelineAsync;
-      WW.createComputePipelineAsync = function(WW) {
-        return LW.call(this, WW).catch((iW => {
-          throw mW(WW.label, iW), iW
+      const qR = RR.createComputePipelineAsync;
+      RR.createComputePipelineAsync = function(RR) {
+        return qR.call(this, RR).catch((JR => {
+          throw yR(RR.label, JR), JR
         }))
       }
     }
   },
-  42235: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      f: () => cW
+  42255: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      c: () => iR
     });
-    var mW = OW(131);
-    let EW = !1;
+    var yR = GR(132);
+    let tR = !1;
 
-    function NW() {
-      let WW = null;
+    function uR() {
+      let RR = null;
       try {
-        return WW = document.createElement("canvas").getContext("webgl2"), null !== WW
+        return RR = document.createElement("canvas").getContext("webgl2"), null !== RR
       } catch {
         return !1
       } finally {
         try {
-          var iW, OW;
-          null === (iW = WW) || void 0 === iW || null === (OW = iW.getExtension("WEBGL_lose_context")) || void 0 === OW || OW.loseContext()
+          var JR, GR;
+          null === (JR = RR) || void 0 === JR || null === (GR = JR.getExtension("WEBGL_lose_context")) || void 0 === GR || GR.loseContext()
         } catch {}
       }
     }
 
-    function PW() {
-      "hidden" === document.visibilityState && (EW = !1, document.removeEventListener("visibilitychange", PW))
+    function ZR() {
+      "hidden" === document.visibilityState && (tR = !1, document.removeEventListener("visibilitychange", ZR))
     }
 
-    function LW() {
-      EW || "visible" !== document.visibilityState || !(0, mW.m)() && !NW() || (EW = !0, document.addEventListener("visibilitychange", PW))
+    function qR() {
+      tR || "visible" !== document.visibilityState || !(0, yR.r)() && !uR() || (tR = !0, document.addEventListener("visibilitychange", ZR))
     }
 
-    function cW() {
-      return EW || NW()
+    function iR() {
+      return tR || uR()
     }
   },
-  42210: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/bloxd_wasm_models_bg.78d91793af0644e887d8.wasm"
+  42223: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/bloxd_wasm_models_bg.c167c820e95fdd32ea75.wasm"
   },
-  42205: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/bloxd_wasm_workers_bg.f45dc0780f611f9752e4.wasm"
+  42219: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/bloxd_wasm_workers_bg.d0ee27575a6e7e3f1fa4.wasm"
   },
-  42202: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      d: () => mW
+  42212: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      d: () => yR
     });
-    const mW = {
+    const yR = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new OW.U(OW(42205))
+        return new GR.U(GR(42219))
       }
     };
-    const EW = {
+    const tR = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new OW.U(OW(42210))
+        return new GR.U(GR(42223))
       }
     }
   },
-  7639: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => MW,
-      i: () => KW,
-      l: () => kW,
-      m: () => UW
+  7777: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => AR,
+      e: () => CR,
+      h: () => UR,
+      i: () => nR
     });
-    var mW = OW(7646);
-    const EW = 6,
-      NW = 3,
-      PW = 1,
-      LW = 2,
-      cW = 4,
-      wW = 8,
-      tW = 16,
-      ZW = 32,
-      xW = 64,
-      lW = 128,
-      AW = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var yR = GR(7786);
+    const tR = 6,
+      uR = 3,
+      ZR = 1,
+      qR = 2,
+      iR = 4,
+      fR = 8,
+      VR = 16,
+      KR = 32,
+      wR = 64,
+      rR = 128,
+      eR = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function bW(WW) {
-      if (!WW) return 0;
-      const iW = AW.indexOf(WW);
-      if (iW <= 0) throw new Error(`"${WW}" is not a shader pack hook function`);
-      return iW
+    function aR(RR) {
+      if (!RR) return 0;
+      const JR = eR.indexOf(RR);
+      if (JR <= 0) throw new Error(`"${RR}" is not a shader pack hook function`);
+      return JR
     }
 
-    function jW(WW) {
-      if (0 === WW) return null;
-      const iW = AW[WW];
-      if (void 0 === iW) throw new Error(`${WW} is not a shader pack hook function id`);
-      return iW
+    function LR(RR) {
+      if (0 === RR) return null;
+      const JR = eR[RR];
+      if (void 0 === JR) throw new Error(`${RR} is not a shader pack hook function id`);
+      return JR
     }
 
-    function UW(WW) {
-      const iW = mW.e.length;
+    function nR(RR) {
+      const JR = yR.c.length;
       return {
-        strict: WW >= iW,
-        program: mW.e[WW % iW]
+        strict: RR >= JR,
+        program: yR.c[RR % JR]
       }
     }
 
-    function kW(WW) {
-      return Number(WW.strict) * mW.e.length + mW.e.indexOf(WW.program)
+    function UR(RR) {
+      return Number(RR.strict) * yR.c.length + yR.c.indexOf(RR.program)
     }
 
-    function sW(WW) {
-      return "" === WW ? [] : WW.split(" ")
+    function WR(RR) {
+      return "" === RR ? [] : RR.split(" ")
     }
 
-    function MW(WW) {
-      const iW = {
-        variantFlags: new Uint8Array(EW),
-        hooks: new Uint8Array(EW * NW),
-        moduleCodes: Array(EW).fill(""),
-        reads: Array(2 * EW).fill("")
+    function AR(RR) {
+      const JR = {
+        variantFlags: new Uint8Array(tR),
+        hooks: new Uint8Array(tR * uR),
+        moduleCodes: Array(tR).fill(""),
+        reads: Array(2 * tR).fill("")
       };
-      for (const OW of WW) {
-        const WW = kW(OW.key),
-          mW = (WW, iW) => null === OW.hooks.surface || OW.reads.fragment.includes(WW) ? 0 : iW;
-        iW.variantFlags[WW] = (OW.sceneDepth ? PW : 0) | (OW.movesVertices ? LW : 0) | (OW.sunShadow ? cW : 0) | (OW.airShadow ? wW : 0) | (OW.discards ? tW : 0) | mW("localPosition", ZW) | mW("enchantSpeed", xW) | mW("enchantTier", lW), iW.hooks[WW * NW] = bW(OW.hooks.vertex), iW.hooks[WW * NW + 1] = bW(OW.hooks.surface), iW.hooks[WW * NW + 2] = bW(OW.hooks.light), iW.moduleCodes[WW] = OW.moduleCode, iW.reads[2 * WW] = OW.reads.vertex.join(" "), iW.reads[2 * WW + 1] = OW.reads.fragment.join(" ")
+      for (const GR of RR) {
+        const RR = UR(GR.key),
+          yR = (RR, JR) => null === GR.hooks.surface || GR.reads.fragment.includes(RR) ? 0 : JR;
+        JR.variantFlags[RR] = (GR.sceneDepth ? ZR : 0) | (GR.movesVertices ? qR : 0) | (GR.sunShadow ? iR : 0) | (GR.airShadow ? fR : 0) | (GR.discards ? VR : 0) | yR("localPosition", KR) | yR("enchantSpeed", wR) | yR("enchantTier", rR), JR.hooks[RR * uR] = aR(GR.hooks.vertex), JR.hooks[RR * uR + 1] = aR(GR.hooks.surface), JR.hooks[RR * uR + 2] = aR(GR.hooks.light), JR.moduleCodes[RR] = GR.moduleCode, JR.reads[2 * RR] = GR.reads.vertex.join(" "), JR.reads[2 * RR + 1] = GR.reads.fragment.join(" ")
       }
-      return iW
+      return JR
     }
 
-    function KW(WW) {
+    function CR(RR) {
       const {
-        hooks: iW,
-        moduleCodes: OW,
-        reads: mW
-      } = WW;
-      return Array.from(WW.variantFlags, ((WW, EW) => {
-        const ZW = EW * NW;
+        hooks: JR,
+        moduleCodes: GR,
+        reads: yR
+      } = RR;
+      return Array.from(RR.variantFlags, ((RR, tR) => {
+        const KR = tR * uR;
         return {
-          key: UW(EW),
+          key: nR(tR),
           hooks: {
-            vertex: jW(iW[ZW]),
-            surface: jW(iW[ZW + 1]),
-            light: jW(iW[ZW + 2])
+            vertex: LR(JR[KR]),
+            surface: LR(JR[KR + 1]),
+            light: LR(JR[KR + 2])
           },
-          moduleCode: OW[EW],
-          sceneDepth: 0 !== (WW & PW),
-          sunShadow: 0 !== (WW & cW),
-          airShadow: 0 !== (WW & wW),
-          movesVertices: 0 !== (WW & LW),
-          discards: 0 !== (WW & tW),
+          moduleCode: GR[tR],
+          sceneDepth: 0 !== (RR & ZR),
+          sunShadow: 0 !== (RR & iR),
+          airShadow: 0 !== (RR & fR),
+          movesVertices: 0 !== (RR & qR),
+          discards: 0 !== (RR & VR),
           reads: {
-            vertex: sW(mW[2 * EW]),
-            fragment: sW(mW[2 * EW + 1])
+            vertex: WR(yR[2 * tR]),
+            fragment: WR(yR[2 * tR + 1])
           }
         }
       }))
     }
   },
-  42321: (WW, iW, OW) => {
-    OW.d(iW, {
-      D: () => AW,
-      e: () => EW,
-      f: () => mW,
-      g: () => xW,
-      j: () => tW,
-      l: () => jW,
-      m: () => NW,
-      o: () => LW,
-      q: () => cW,
-      t: () => PW,
-      x: () => bW,
-      z: () => lW
+  42342: (RR, JR, GR) => {
+    GR.d(JR, {
+      C: () => rR,
+      G: () => eR,
+      b: () => tR,
+      e: () => yR,
+      i: () => wR,
+      j: () => VR,
+      k: () => LR,
+      n: () => uR,
+      o: () => qR,
+      r: () => iR,
+      v: () => ZR,
+      y: () => aR
     });
-    const mW = 3,
-      EW = 0,
-      NW = 1,
-      PW = 2,
-      LW = {
+    const yR = 3,
+      tR = 0,
+      uR = 1,
+      ZR = 2,
+      qR = {
         uniform: 3,
-        El: 4,
+        Rr: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      cW = 10,
-      wW = "BloxdPackInputs",
-      tW = "bloxdPackInputs",
-      ZW = [{
+      iR = 10,
+      fR = "BloxdPackInputs",
+      VR = "bloxdPackInputs",
+      KR = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -4263,74 +4263,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      xW = 80;
+      wR = 80;
 
-    function lW() {
-      const WW = ZW.map((WW => {
+    function rR() {
+      const RR = KR.map((RR => {
         let {
-          name: iW,
-          type: OW
-        } = WW;
-        return `    ${iW}: ${OW},\n`
+          name: JR,
+          type: GR
+        } = RR;
+        return `    ${JR}: ${GR},\n`
       })).join("");
-      return `struct ${wW} {\n${WW}}\n@group(${mW}) @binding(${EW}) var<uniform> ${tW}: ${wW};\n`
+      return `struct ${fR} {\n${RR}}\n@group(${yR}) @binding(${tR}) var<uniform> ${VR}: ${fR};\n`
     }
 
-    function AW(WW, iW) {
-      const OW = new DataView(WW, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, xW),
-        [mW, EW, NW, PW, LW, cW] = ZW;
-      OW.setFloat32(mW.offset, iW.seconds, !0), OW.setUint32(EW.offset, iW.lit ? 1 : 0, !0);
-      for (let wW = 0; wW < 3; wW++) OW.setInt32(NW.offset + 4 * wW, iW.renderOffset[wW], !0), OW.setFloat32(PW.offset + 4 * wW, iW.vWW[wW], !0), OW.setFloat32(LW.offset + 4 * wW, iW.eyePosition[wW], !0), OW.setFloat32(cW.offset + 4 * wW, iW.shadowDirection[wW], !0)
+    function eR(RR, JR) {
+      const GR = new DataView(RR, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, wR),
+        [yR, tR, uR, ZR, qR, iR] = KR;
+      GR.setFloat32(yR.offset, JR.seconds, !0), GR.setUint32(tR.offset, JR.lit ? 1 : 0, !0);
+      for (let fR = 0; fR < 3; fR++) GR.setInt32(uR.offset + 4 * fR, JR.renderOffset[fR], !0), GR.setFloat32(ZR.offset + 4 * fR, JR.AJR[fR], !0), GR.setFloat32(qR.offset + 4 * fR, JR.eyePosition[fR], !0), GR.setFloat32(iR.offset + 4 * fR, JR.shadowDirection[fR], !0)
     }
 
-    function bW(WW) {
-      const iW = new Uint32Array(Math.max(1, WW.length));
-      return WW.forEach(((WW, OW) => {
+    function aR(RR) {
+      const JR = new Uint32Array(Math.max(1, RR.length));
+      return RR.forEach(((RR, GR) => {
         let {
-          id: mW,
-          rotation: EW
-        } = WW;
-        iW[OW] = 65535 & mW | (3 & EW) << 16
-      })), iW
+          id: yR,
+          rotation: tR
+        } = RR;
+        JR[GR] = 65535 & yR | (3 & tR) << 16
+      })), JR
     }
-    const jW = {
+    const LR = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7646: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW,
-      g: () => PW,
-      j: () => LW,
-      n: () => EW,
-      p: () => NW
+  7786: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR,
+      e: () => ZR,
+      i: () => qR,
+      l: () => tR,
+      n: () => uR
     });
-    const mW = ["terrain", "liquid", "model"];
+    const yR = ["terrain", "liquid", "model"];
 
-    function EW() {
-      const WW = [];
-      for (const iW of [!1, !0])
-        for (const OW of mW) WW.push({
-          strict: iW,
-          program: OW
+    function tR() {
+      const RR = [];
+      for (const JR of [!1, !0])
+        for (const GR of yR) RR.push({
+          strict: JR,
+          program: GR
         });
-      return WW
+      return RR
     }
 
-    function NW(WW) {
-      return `${WW.strict?"strict":"allow"}.${WW.program}`
+    function uR(RR) {
+      return `${RR.strict?"strict":"allow"}.${RR.program}`
     }
 
-    function PW(WW) {
-      return !WW.hooks.vertex && !WW.hooks.surface && !WW.hooks.light
+    function ZR(RR) {
+      return !RR.hooks.vertex && !RR.hooks.surface && !RR.hooks.light
     }
 
-    function LW(WW, iW) {
-      return "off" !== iW && (null === WW || WW.some((WW => WW.key.strict === ("strict" === iW) && !PW(WW))))
+    function qR(RR, JR) {
+      return "off" !== JR && (null === RR || RR.some((RR => RR.key.strict === ("strict" === JR) && !ZR(RR))))
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

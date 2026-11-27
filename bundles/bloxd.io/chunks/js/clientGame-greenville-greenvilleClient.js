@@ -1,56 +1,56 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  37888: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      e: () => EW,
-      f: () => NW
+  37810: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => ZR,
+      g: () => tR,
+      j: () => uR
     });
-    var mW = OW(62);
+    var yR = GR(66);
 
-    function EW(WW) {
-      return LW(WW, cW)
+    function tR(RR) {
+      return qR(RR, iR)
     }
 
-    function NW(WW) {
-      return LW(WW, wW)
+    function uR(RR) {
+      return qR(RR, fR)
     }
 
-    function PW(WW) {
-      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
+    function ZR(RR) {
+      return `${Math.floor(RR/60)}:${String(RR%60).padStart(2,"0")}`
     }
 
-    function LW(WW, iW) {
-      const [, OW] = (0, mW.useState)(null);
-      return (0, mW.useEffect)((() => {
-        if (0 === WW) return;
-        const mW = window.setInterval((() => {
-          const mW = iW(WW);
-          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
-            endsAt: WW,
-            value: mW
+    function qR(RR, JR) {
+      const [, GR] = (0, yR.useState)(null);
+      return (0, yR.useEffect)((() => {
+        if (0 === RR) return;
+        const yR = window.setInterval((() => {
+          const yR = JR(RR);
+          GR((JR => (null === JR || void 0 === JR ? void 0 : JR.endsAt) === RR && JR.value === yR ? JR : {
+            endsAt: RR,
+            value: yR
           }))
         }), 250);
         return () => {
-          window.clearInterval(mW)
+          window.clearInterval(yR)
         }
-      }), [WW, iW]), iW(WW)
+      }), [RR, JR]), JR(RR)
     }
 
-    function cW(WW) {
-      return (WW - performance.now()) / 1e3
+    function iR(RR) {
+      return (RR - performance.now()) / 1e3
     }
 
-    function wW(WW) {
-      return Math.max(0, Math.ceil(cW(WW)))
+    function fR(RR) {
+      return Math.max(0, Math.ceil(iR(RR)))
     }
   },
-  37917: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW
+  37847: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR
     });
-    const mW = [{
+    const yR = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -67,79 +67,79 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function EW(WW, iW, OW) {
-      const EW = Math.abs(WW - iW),
-        NW = Date.now() - OW;
-      for (const PW of mW)
-        if (WW < PW.maxDist) return EW >= PW.hardUpdateDist || NW > PW.timeBetweenSoftChecks && EW >= PW.softUpdateDist;
+    function tR(RR, JR, GR) {
+      const tR = Math.abs(RR - JR),
+        uR = Date.now() - GR;
+      for (const ZR of yR)
+        if (RR < ZR.maxDist) return tR >= ZR.hardUpdateDist || uR > ZR.timeBetweenSoftChecks && tR >= ZR.softUpdateDist;
       return !1
     }
   },
-  39672: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW,
-      g: () => LW
+  39659: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      f: () => qR
     });
-    var mW = OW(344),
-      EW = OW(35231),
-      NW = OW(4454);
+    var yR = GR(377),
+      tR = GR(35162),
+      uR = GR(4555);
 
-    function PW(WW) {
-      const iW = (0, NW.b)(WW);
-      return (0, mW.Wb)(WW, void 0 === iW ? void 0 : (0, EW.displayNameOf)(iW))
+    function ZR(RR) {
+      const JR = (0, uR.b)(RR);
+      return (0, yR.Vb)(RR, void 0 === JR ? void 0 : (0, tR.displayNameOf)(JR))
     }
 
-    function LW(WW, iW) {
-      return WW(PW(iW))
+    function qR(RR, JR) {
+      return RR(ZR(JR))
     }
   },
-  39677: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW,
-      e: () => LW,
-      g: () => PW
+  39664: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      f: () => qR,
+      i: () => ZR
     });
-    var mW = OW(3451);
-    const EW = "(max-height: 420px), (max-width: 650px)";
+    var yR = GR(3588);
+    const tR = "(max-height: 420px), (max-width: 650px)";
 
-    function NW() {
-      return (0, mW.b)(EW)
+    function uR() {
+      return (0, yR.d)(tR)
     }
 
-    function PW(WW) {
-      return (0, mW.e)(EW, WW)
+    function ZR(RR) {
+      return (0, yR.k)(tR, RR)
     }
 
-    function LW() {
-      return (0, mW.c)(EW)
+    function qR() {
+      return (0, yR.g)(tR)
     }
   },
-  39679: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      h: () => NW
+  39672: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      h: () => uR
     });
-    const mW = new WeakMap;
+    const yR = new WeakMap;
 
-    function EW(WW) {
-      let iW = mW.get(WW);
-      return iW || (iW = {
-        hidden: WW.hidden,
+    function tR(RR) {
+      let JR = yR.get(RR);
+      return JR || (JR = {
+        hidden: RR.hidden,
         x: NaN,
         y: NaN
-      }, mW.set(WW, iW)), iW
+      }, yR.set(RR, JR)), JR
     }
 
-    function NW(WW, iW) {
-      const OW = EW(WW);
-      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
+    function uR(RR, JR) {
+      const GR = tR(RR);
+      GR.hidden !== JR && (GR.hidden = JR, RR.hidden = JR)
     }
 
-    function PW(WW, iW, OW) {
-      const mW = EW(WW);
-      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
+    function ZR(RR, JR, GR) {
+      const yR = tR(RR);
+      yR.x === JR && yR.y === GR || (yR.x = JR, yR.y = GR, RR.style.translate = `${JR}vw ${GR}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

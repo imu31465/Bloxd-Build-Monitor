@@ -1,165 +1,165 @@
 export const id = 131;
 export const ids = [131, 186];
 export const modules = {
-  10163: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => Mi
+  10279: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => AJ
     });
-    var mW = OW(1616),
-      EW = OW(25),
-      NW = OW(5361),
-      PW = OW(62),
-      LW = OW(1526);
-    var cW = OW(2037),
-      wW = OW(1605),
-      tW = OW(1422),
-      ZW = OW(1172),
-      xW = OW(10167),
-      lW = OW(10176),
-      AW = OW(5282),
-      bW = OW(154),
-      jW = OW(1111),
-      UW = OW(27),
-      kW = OW(1239),
-      sW = OW(1856),
-      MW = OW(100),
-      KW = OW(1339),
-      SW = OW(1515),
-      YW = OW(5232),
-      yW = OW(5033),
-      TW = OW(4984),
-      JW = OW(4426),
-      hW = OW(3245),
-      HW = OW(1365),
-      nW = OW(805),
-      uW = OW(1220),
-      oW = OW(1052),
-      dW = OW(1217),
-      eW = OW(4464),
-      vW = OW(4337),
-      gW = OW(1427),
-      DW = OW(1383),
-      VW = OW(5897),
-      pW = OW(10189),
-      fW = OW(4031),
-      CW = OW(1283);
+    var yR = GR(1677),
+      tR = GR(25),
+      uR = GR(5463),
+      ZR = GR(66),
+      qR = GR(1581);
+    var iR = GR(2134),
+      fR = GR(1663),
+      VR = GR(1493),
+      KR = GR(1270),
+      wR = GR(10285),
+      rR = GR(10291),
+      eR = GR(5392),
+      aR = GR(163),
+      LR = GR(1201),
+      nR = GR(32),
+      UR = GR(1341),
+      WR = GR(1943),
+      AR = GR(103),
+      CR = GR(1444),
+      XR = GR(1570),
+      MR = GR(5332),
+      BR = GR(5134),
+      lR = GR(5084),
+      pR = GR(4509),
+      gR = GR(3357),
+      bR = GR(1459),
+      vR = GR(858),
+      OR = GR(1322),
+      xR = GR(1127),
+      NR = GR(1317),
+      DR = GR(4571),
+      HR = GR(4422),
+      oR = GR(1496),
+      cR = GR(1465),
+      PR = GR(6028),
+      IR = GR(10303),
+      mR = GR(4124),
+      zR = GR(1378);
 
-    function XW(WW) {
+    function SR(RR) {
       let {
-        onApply: iW,
-        onSkip: OW
-      } = WW;
+        onApply: JR,
+        onSkip: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZW.B)();
-      return (0, PW.useEffect)((() => {
-        fW.d.skipPlayWait()
-      }), []), (0, CW.jsx)(gW.i, {
+        t: yR
+      } = (0, KR.A)();
+      return (0, ZR.useEffect)((() => {
+        mR.g.skipPlayWait()
+      }), []), (0, zR.jsx)(oR.g, {
         icon: "download",
         title: "customTexturePack:downloadTitle",
-        subtitle: (0, CW.jsxs)("div", {
+        subtitle: (0, zR.jsxs)("div", {
           className: "CustomTexturePackDownloaderSubtitleText",
-          children: [mW("customTexturePack:downloadPrompt"), (0, CW.jsx)("div", {
+          children: [yR("customTexturePack:downloadPrompt"), (0, zR.jsx)("div", {
             className: "CustomTexturePackDownloaderWarningText",
-            children: mW("customTexturePack:authorWarning")
-          }), (0, CW.jsx)("div", {
+            children: yR("customTexturePack:authorWarning")
+          }), (0, zR.jsx)("div", {
             className: "CustomTexturePackDownloaderSecondaryText",
-            children: mW("customTexturePack:existingPackSaved")
+            children: yR("customTexturePack:existingPackSaved")
           })]
         }),
         confirm: {
           text: "general:apply",
-          onClick: iW
+          onClick: JR
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: OW
+          onClick: GR
         }
       })
     }
-    async function BW() {
-      let WW = !1;
-      const iW = tW.NotificationProvider.showCustomPopup({
-        body: iW => (0, CW.jsx)(XW, {
+    async function jR() {
+      let RR = !1;
+      const JR = VR.NotificationProvider.showCustomPopup({
+        body: JR => (0, zR.jsx)(SR, {
           onApply: () => {
-            WW = !0, iW()
+            RR = !0, JR()
           },
-          onSkip: iW
+          onSkip: JR
         }),
         disableExitButton: !0,
         disablePressBackgroundToClose: !0
       });
-      return await iW.getResult(), WW
+      return await JR.getResult(), RR
     }
-    let qW = {
+    let dR = {
       wanted: !1
     };
-    let RW = null;
+    let ER = null;
 
-    function GW(WW) {
-      WW.setGamePackConfirm(BW), RW = WW
+    function YR(RR) {
+      RR.setGamePackConfirm(jR), ER = RR
     }
-    var IW = OW(4723),
-      aW = OW(1584),
-      rW = OW(39),
-      zW = OW(4431);
+    var kR = GR(4829),
+      QR = GR(1647),
+      FR = GR(46),
+      TR = GR(4521);
 
-    function FW(WW) {
+    function sR(RR) {
       let {
-        schematicId: iW,
-        texturePackKey: OW,
-        onClose: mW
-      } = WW;
-      const [EW, NW] = (0, PW.useState)("prompt"), [LW, cW] = (0, PW.useState)(null), wW = (0, IW.c)();
+        schematicId: JR,
+        texturePackKey: GR,
+        onClose: yR
+      } = RR;
+      const [tR, uR] = (0, ZR.useState)("prompt"), [qR, iR] = (0, ZR.useState)(null), fR = (0, kR.d)();
 
-      function tW() {
-        mW()
+      function VR() {
+        yR()
       }
-      return "prompt" === EW ? (0, CW.jsx)(XW, {
+      return "prompt" === tR ? (0, zR.jsx)(SR, {
         onApply: async function() {
-          NW("downloading");
+          uR("downloading");
           try {
-            const WW = await async function(WW, iW) {
-              const OW = await (0, VW.b)(iW);
-              if (OW) return {
-                pack: OW,
-                key: iW
+            const RR = await async function(RR, JR) {
+              const GR = await (0, PR.c)(JR);
+              if (GR) return {
+                pack: GR,
+                key: JR
               };
-              const mW = await jW.userContextManager.getCurrentUserContext(),
-                EW = (await aW.e.getGame(mW, WW, !0)).customTexturePackKey;
-              if (!EW) return null;
-              const NW = await (0, VW.b)(EW);
-              if (!NW) throw new Error("The texture pack could not be found");
+              const yR = await LR.userContextManager.getCurrentUserContext(),
+                tR = (await QR.c.getGame(yR, RR, !0)).customTexturePackKey;
+              if (!tR) return null;
+              const uR = await (0, PR.c)(tR);
+              if (!uR) throw new Error("The texture pack could not be found");
               return {
-                pack: NW,
-                key: EW
+                pack: uR,
+                key: tR
               }
-            }(iW, OW);
-            if (!wW.current) return;
-            if (!WW) return void mW();
-            if ((0, eW.q)(WW.pack)) return void NW("refused");
-            const EW = vW.d.toJson(),
-              PW = vW.d.isUsingTemporaryTexturePack() ? "customGame" : "player";
-            if (vW.d.setFromJson(WW.pack, "customGame"), await vW.d.saveTemporaryTexturePack(WW.key), wW.current) return void(0, sW.reloadBloxd)();
-            vW.d.setFromJson(EW, PW), await (0, zW.p)(rW.f)
-          } catch (WW) {
-            cW(WW instanceof Error ? WW.message : String(WW)), NW("error")
+            }(JR, GR);
+            if (!fR.current) return;
+            if (!RR) return void yR();
+            if ((0, DR.k)(RR.pack)) return void uR("refused");
+            const tR = HR.b.toJson(),
+              ZR = HR.b.isUsingTemporaryTexturePack() ? "customGame" : "player";
+            if (HR.b.setFromJson(RR.pack, "customGame"), await HR.b.saveTemporaryTexturePack(RR.key), fR.current) return void(0, WR.reloadBloxd)();
+            HR.b.setFromJson(tR, ZR), await (0, TR.q)(FR.g)
+          } catch (RR) {
+            iR(RR instanceof Error ? RR.message : String(RR)), uR("error")
           }
         },
-        onSkip: tW
-      }) : "downloading" === EW ? (0, CW.jsx)(gW.i, {
+        onSkip: VR
+      }) : "downloading" === tR ? (0, zR.jsx)(oR.g, {
         icon: "download",
         title: "customTexturePack:downloading",
-        subtitle: (0, CW.jsx)("div", {
+        subtitle: (0, zR.jsx)("div", {
           className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, CW.jsx)(DW.d, {
+          children: (0, zR.jsx)(cR.d, {
             showFace: !0
           })
         })
-      }) : "error" === EW ? (0, CW.jsx)(gW.i, {
+      }) : "error" === tR ? (0, zR.jsx)(oR.g, {
         icon: "face-worried",
         title: "customTexturePack:errorTitle",
-        subtitle: LW,
+        subtitle: qR,
         confirm: {
           text: "customTexturePack:refreshPage",
           onClick: () => {
@@ -168,872 +168,872 @@ export const modules = {
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: tW
+          onClick: VR
         }
-      }) : "refused" === EW ? (0, CW.jsx)(gW.i, {
+      }) : "refused" === tR ? (0, zR.jsx)(oR.g, {
         icon: "face-worried",
         title: "customTexturePack:cantApplyTitle",
         subtitle: "customTexturePack:gamePackHasExternalUrls",
         confirm: {
           text: "general:continue",
-          onClick: tW
+          onClick: VR
         }
       }) : null
     }
-    var QW = OW(10206),
-      Wi = OW(4979),
-      ii = OW(1907),
-      Oi = OW(10198),
-      mi = OW(1888),
-      Ei = OW(10209),
-      Ni = OW(2276),
-      Pi = OW(10215);
-    var Li = OW(5417),
-      ci = OW(10219),
-      wi = OW(1301),
-      ti = OW(1850),
-      Zi = OW(671),
-      xi = OW(10223),
-      li = OW(745),
-      Ai = OW(1755);
+    var hR = GR(10315),
+      RJ = GR(5073),
+      JJ = GR(1984),
+      GJ = GR(10311),
+      yJ = GR(1972),
+      tJ = GR(10320),
+      uJ = GR(2358),
+      ZJ = GR(10325);
+    var qJ = GR(5536),
+      iJ = GR(10332),
+      fJ = GR(1397),
+      VJ = GR(1939),
+      KJ = GR(709),
+      wJ = GR(10336),
+      rJ = GR(798),
+      eJ = GR(1825);
 
-    function bi() {
-      const WW = EW.d.get("clientEscMenuOptions");
-      cW.gameBridge.send("setLookSensitivity", EW.d.get("isTouchScreen") ? (0, li.s)(WW) : WW.mouseSensitivity)
+    function aJ() {
+      const RR = tR.d.get("clientEscMenuOptions");
+      iR.gameBridge.send("setLookSensitivity", tR.d.get("isTouchScreen") ? (0, rJ.x)(RR) : RR.mouseSensitivity)
     }
-    const ji = 45e3;
+    const LJ = 45e3;
 
-    function Ui(WW) {
-      if (null === WW || void 0 === WW || !WW.isError()) return !1;
-      const iW = WW.asError();
-      return iW.code === bW.k.REQUEST_TO_MATCHMAKING && !(0, ti.c)(iW.debugResult.error)
+    function nJ(RR) {
+      if (null === RR || void 0 === RR || !RR.isError()) return !1;
+      const JR = RR.asError();
+      return JR.code === aR.j.REQUEST_TO_MATCHMAKING && !(0, VJ.b)(JR.debugResult.error)
     }
 
-    function ki(WW) {
-      return !0 === (null === WW || void 0 === WW ? void 0 : WW.isError()) && !0 === WW.asError().debugResult.serverWaitEnded
+    function UJ(RR) {
+      return !0 === (null === RR || void 0 === RR ? void 0 : RR.isError()) && !0 === RR.asError().debugResult.serverWaitEnded
     }
-    async function si(WW, iW, OW, mW) {
-      const PW = (0, Li.P)(iW);
-      async function LW(WW, iW, OW, LW) {
-        if (LW.aborted) return null;
-        null === EW.d.get("gameEntrySource") && (0, EW.l)("directPlayUrl"), Zi.K && (0, pW.loadWasmPlay)().catch((() => {})), EW.d.set({
+    async function WJ(RR, JR, GR, yR) {
+      const ZR = (0, qJ.K)(JR);
+      async function qR(RR, JR, GR, qR) {
+        if (qR.aborted) return null;
+        null === tR.d.get("gameEntrySource") && (0, tR.k)("directPlayUrl"), KJ.G && (0, IR.loadWasmPlay)().catch((() => {})), tR.d.set({
           gameState: "findingLobby"
-        }), UW.l.iZ("loadingScreenState", "loadingPage:findingLobby");
-        const wW = await jW.userContextManager.getCurrentUserContext();
-        cW.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: iW,
-          discordContext: WW instanceof uW.g ? WW.getSerialisableParams() : null
+        }), nR.n.JK("loadingScreenState", "loadingPage:findingLobby");
+        const fR = await LR.userContextManager.getCurrentUserContext();
+        iR.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: JR,
+          discordContext: RR instanceof OR.h ? RR.getSerialisableParams() : null
         });
-        const tW = fW.d.playInputAt();
-        (0, ii.f)(null !== tW && void 0 !== tW ? tW : performance.now()), mW.fromTap = null !== tW, mW.mark("phase_join_started");
-        const ZW = await async function(WW, iW, OW, mW, EW, PW, LW) {
+        const VR = mR.g.playInputAt();
+        (0, JJ.f)(null !== VR && void 0 !== VR ? VR : performance.now()), yR.fromTap = null !== VR, yR.mark("phase_join_started");
+        const KR = await async function(RR, JR, GR, yR, tR, ZR, qR) {
           try {
-            await (0, Ai.o)(NW.reqLibsLoadedPromise, ji, "Required libraries timed out")
-          } catch (cW) {
-            const WW = cW instanceof Ai.g ? `Required libraries still loading after ${ji/1e3} s: ${(0,NW.requiredLibsPending)().join(", ")}` : cW.toString();
-            return kW.b.errorWithCode(WW, bW.k.LOAD_REQUIRED_LIBS, {
-              error: cW,
+            await (0, eJ.k)(uR.reqLibsLoadedPromise, LJ, "Required libraries timed out")
+          } catch (iR) {
+            const RR = iR instanceof eJ.g ? `Required libraries still loading after ${LJ/1e3} s: ${(0,uR.requiredLibsPending)().join(", ")}` : iR.toString();
+            return UR.e.errorWithCode(RR, aR.j.LOAD_REQUIRED_LIBS, {
+              error: iR,
               severity: "medium"
             })
           }
-          return UW.l.iZ("matchmakeAndPlayStepCompleted", {
-            step: bW.k.LOAD_REQUIRED_LIBS,
+          return nR.n.JK("matchmakeAndPlayStepCompleted", {
+            step: aR.j.LOAD_REQUIRED_LIBS,
             totalSubSteps: 1
-          }), LW.mark("phase_libs"), (0, NW.matchmakeAndPlayMaybeUnloaded)(WW, iW, OW, mW, EW, PW, LW)
-        }(WW, iW, OW, wW, LW, PW, mW), xW = ZW.isError() ? ZW.asError() : null;
-        if (LW.aborted) return xW && (0, Ei.h)(ZW), cW.gameBridge.send("leaveGame", {
+          }), qR.mark("phase_libs"), (0, uR.matchmakeAndPlayMaybeUnloaded)(RR, JR, GR, yR, tR, ZR, qR)
+        }(RR, JR, GR, fR, qR, ZR, yR), wR = KR.isError() ? KR.asError() : null;
+        if (qR.aborted) return wR && (0, tJ.f)(KR), iR.gameBridge.send("leaveGame", {
           reloadPath: null
         }), null;
-        if (null !== xW && void 0 !== xW && xW.debugResult.uW) return console.log("Join cancelled:", xW.message), null;
-        if (xW) return ZW;
+        if (null !== wR && void 0 !== wR && wR.debugResult.xR) return console.log("Join cancelled:", wR.message), null;
+        if (wR) return KR;
         const {
-          gameNameWithVariation: lW,
-          lobbyName: AW
-        } = ZW.getValue();
-        return bi(), (0, wi.y)().setGameViewShown(!0), wW.recordJoin(lW, AW), (0, KW.K)(), ZW
+          gameNameWithVariation: rR,
+          lobbyName: eR
+        } = KR.getValue();
+        return aJ(), (0, fJ.J)().setGameViewShown(!0), fR.recordJoin(rR, eR), (0, CR.P)(), KR
       }
-      return PW && (0, EW.l)("updateRejoin"), (0, Ni.i)((async EW => {
-        mW.mark("phase_prepared");
+      return ZR && (0, tR.k)("updateRejoin"), (0, uJ.k)((async tR => {
+        yR.mark("phase_prepared");
         try {
-          var NW;
-          let mW = WW,
-            cW = await LW(mW, iW, OW, EW);
-          for (let WW = 0; PW && WW < Li.n; WW++) {
-            if (ki(cW)) {
-              if ("string" !== typeof mW || !(0, dW.R)(mW)) break;
-              WW = Li.n - 1, (0, ci.i)(EW)
+          var uR;
+          let yR = RR,
+            iR = await qR(yR, JR, GR, tR);
+          for (let RR = 0; ZR && RR < qJ.m; RR++) {
+            if (UJ(iR)) {
+              if ("string" !== typeof yR || !(0, NR.E)(yR)) break;
+              RR = qJ.m - 1, (0, iJ.f)(tR)
             }
-            if (!Ui(cW) || !await (0, Li.T)((0, Li.x)(WW), EW)) break;
-            mW = (0, Li.y)(mW, WW + 1, "string" === typeof mW && (0, dW.R)(mW)), cW = await LW(mW, iW, OW, EW)
+            if (!nJ(iR) || !await (0, qJ.L)((0, qJ.w)(RR), tR)) break;
+            yR = (0, qJ.x)(yR, RR + 1, "string" === typeof yR && (0, NR.E)(yR)), iR = await qR(yR, JR, GR, tR)
           }
-          return null !== (NW = cW) && void 0 !== NW && NW.isError() && (0, Ei.h)(cW), cW
-        } catch (wW) {
-          if ((0, mi.reportClientError)("matchmake_failed", wW, "unexpected"), cW.gameBridge.send("leaveGame", {
-              reloadPath: EW.aborted ? null : "/"
-            }), EW.aborted) return null;
-          throw wW
+          return null !== (uR = iR) && void 0 !== uR && uR.isError() && (0, tJ.f)(iR), iR
+        } catch (fR) {
+          if ((0, yJ.reportClientError)("matchmake_failed", fR, "unexpected"), iR.gameBridge.send("leaveGame", {
+              reloadPath: tR.aborted ? null : "/"
+            }), tR.aborted) return null;
+          throw fR
         }
-      }), (async WW => {
-        var OW;
-        if (PW) return;
-        const mW = (0, KW.C)();
-        null !== mW && (await mW, WW.aborted) || (null !== (OW = nW.d[iW]) && void 0 !== OW && OW.playAdBeforeMatchmaking ? (fW.d.skipPlayWait(), await new Promise((WW => {
-          (0, KW.$)((() => {
-            WW(!0)
+      }), (async RR => {
+        var GR;
+        if (ZR) return;
+        const yR = (0, CR.G)();
+        null !== yR && (await yR, RR.aborted) || (null !== (GR = vR.b[JR]) && void 0 !== GR && GR.playAdBeforeMatchmaking ? (mR.g.skipPlayWait(), await new Promise((RR => {
+          (0, CR.ib)((() => {
+            RR(!0)
           }), "video_start")
-        }))) : (0, KW.$)((() => {}), "video_start"))
+        }))) : (0, CR.ib)((() => {}), "video_start"))
       }))
     }
 
-    function Mi() {
+    function AJ() {
       const {
-        t: WW
-      } = (0, ZW.B)(), iW = (0, wW.useNavigatePreserveSearch)(), OW = (0, mW.u)(), uW = (0, mW.z)(), eW = (0, PW.useRef)({
-        t: WW,
-        navigate: iW
+        t: RR
+      } = (0, KR.A)(), JR = (0, fR.useNavigatePreserveSearch)(), GR = (0, yR.r)(), OR = (0, yR.x)(), DR = (0, ZR.useRef)({
+        t: RR,
+        navigate: JR
       });
-      eW.current = {
-        t: WW,
-        navigate: iW
+      DR.current = {
+        t: RR,
+        navigate: JR
       };
-      const gW = (0, PW.useRef)("");
-      gW.current = OW.pathname + OW.search;
+      const oR = (0, ZR.useRef)("");
+      oR.current = GR.pathname + GR.search;
       const {
-        gameState: DW,
-        clientEscMenuOptions: VW
-      } = (0, EW.p)(["gameState", "clientEscMenuOptions"]), fW = (0, PW.useRef)(null), XW = (0, PW.useRef)(!1), BW = (0, PW.useRef)(!1), [IW, rW] = (0, PW.useState)(0);
-      var zW;
-      (0, LW.e)(wi.b, (() => {
-        BW.current = !0, rW((WW => WW + 1))
-      })), (0, PW.useEffect)((() => () => {
-        UW.l.iZ("leftPlayPage")
-      }), []), (0, Ni.j)(), (0, Ni.m)(), zW = Zi.K, (0, PW.useEffect)((() => {
-        if (!zW) return;
-        let WW = !0;
-        return (0, pW.loadWasmPlay)().then((iW => {
-          WW && GW(iW)
+        gameState: cR,
+        clientEscMenuOptions: PR
+      } = (0, tR.o)(["gameState", "clientEscMenuOptions"]), mR = (0, ZR.useRef)(null), SR = (0, ZR.useRef)(!1), jR = (0, ZR.useRef)(!1), [kR, FR] = (0, ZR.useState)(0);
+      var TR;
+      (0, qR.f)(fJ.b, (() => {
+        jR.current = !0, FR((RR => RR + 1))
+      })), (0, ZR.useEffect)((() => () => {
+        nR.n.JK("leftPlayPage")
+      }), []), (0, uJ.n)(), (0, uJ.r)(), TR = KJ.G, (0, ZR.useEffect)((() => {
+        if (!TR) return;
+        let RR = !0;
+        return (0, IR.loadWasmPlay)().then((JR => {
+          RR && YR(JR)
         })).catch((() => {})), () => {
-          var iW;
-          WW = !1, qW.wanted = !1, null === (iW = RW) || void 0 === iW || iW.setGamePackConfirm(null), RW = null
+          var JR;
+          RR = !1, dR.wanted = !1, null === (JR = ER) || void 0 === JR || JR.setGamePackConfirm(null), ER = null
         }
-      }), [zW]), (0, PW.useEffect)((() => {
-        var WW, iW, mW;
-        (0, NW.needGameClientNow)();
-        const PW = BW.current;
-        BW.current = !1;
+      }), [TR]), (0, ZR.useEffect)((() => {
+        var RR, JR, yR;
+        (0, uR.needGameClientNow)();
+        const ZR = jR.current;
+        jR.current = !1;
         const {
-          t: LW,
-          navigate: ZW
-        } = eW.current, SW = (0, QW.e)(uW, OW.search);
-        if (uW.lobbyName && !new URLSearchParams(OW.search).has("lobby")) return void ZW((0, HW.e)(SW.gameNameWithVariation, SW.lobbyName), {
+          t: qR,
+          navigate: KR
+        } = DR.current, XR = (0, hR.b)(OR, GR.search);
+        if (OR.lobbyName && !new URLSearchParams(GR.search).has("lobby")) return void KR((0, bR.e)(XR.gameNameWithVariation, XR.lobbyName), {
           replace: !0
         });
-        let DW = Promise.resolve({
+        let cR = Promise.resolve({
           shouldMatchmake: !0
         });
-        const VW = new AbortController;
-        if ("/play/discord-custom-lobby" === OW.pathname) {
-          const WW = EW.d.get("discordContext");
-          if (!WW) return void ZW("/");
-          DW = AW.b.setupDiscordLobby(WW, "classic").then((() => ({
+        const PR = new AbortController;
+        if ("/play/discord-custom-lobby" === GR.pathname) {
+          const RR = tR.d.get("discordContext");
+          if (!RR) return void KR("/");
+          cR = eR.c.setupDiscordLobby(RR, "classic").then((() => ({
             shouldMatchmake: !0,
-            discordContext: WW
-          }))).catch((iW => (console.error("Failed to setup discord lobby", iW), {
+            discordContext: RR
+          }))).catch((JR => (console.error("Failed to setup discord lobby", JR), {
             shouldMatchmake: !1,
-            discordContext: WW
+            discordContext: RR
           })))
-        } else if (!SW.gameNameWithVariation || !(0, dW.N)(SW.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${SW.gameNameWithVariation}`), void ZW(-1);
-        const RW = fW.current;
-        if (!PW && null !== RW && SW.gameNameWithVariation === RW.gameNameWithVariation && SW.lobbyName === RW.lobbyName) return;
-        if (cW.gameBridge.latest("connectedGame").replay) return void(0, Ni.g)(null);
-        if ("releaseCountdown" === (null === (WW = (0, hW.k)(SW.gameNameWithVariation)) || void 0 === WW ? void 0 : WW.type)) return console.error(`Game hasn't been released yet: ${SW.gameNameWithVariation}`), void ZW(-1);
-        const IW = XW.current;
-        XW.current = !1, (0, KW.E)(), EW.d.set({
+        } else if (!XR.gameNameWithVariation || !(0, NR.D)(XR.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${XR.gameNameWithVariation}`), void KR(-1);
+        const ER = mR.current;
+        if (!ZR && null !== ER && XR.gameNameWithVariation === ER.gameNameWithVariation && XR.lobbyName === ER.lobbyName) return;
+        if (iR.gameBridge.latest("connectedGame").replay) return void(0, uJ.g)(null);
+        if ("releaseCountdown" === (null === (RR = (0, gR.g)(XR.gameNameWithVariation)) || void 0 === RR ? void 0 : RR.type)) return console.error(`Game hasn't been released yet: ${XR.gameNameWithVariation}`), void KR(-1);
+        const kR = SR.current;
+        SR.current = !1, (0, CR.J)(), tR.d.set({
           gameState: "loadingScreen"
         });
-        const rW = function() {
-            qW.wanted = !1;
-            const WW = {
+        const FR = function() {
+            dR.wanted = !1;
+            const RR = {
               wanted: !0
             };
-            return qW = WW, () => WW.wanted
+            return dR = RR, () => RR.wanted
           }(),
-          zW = new Oi.e,
-          ii = SW.gameNameWithVariation,
-          mi = void 0 !== ii && (0, oW.i)(ii);
-        let Ei = Promise.resolve();
-        if (ii && (Zi.K || mi)) {
-          const WW = Zi.K ? Promise.all([(0, pW.loadWasmPlay)(), jW.userContextManager.getCurrentUserContext()]).then((WW => {
-            let [iW, OW] = WW;
-            if (zW.mark("phase_pack_begin"), rW()) return GW(iW), iW.packForGame(ii, OW, rW)
-          })) : async function(WW, iW) {
-            await vW.d.indexedDbValuesAreLoaded();
-            const OW = await jW.userContextManager.getCurrentUserContext(),
-              mW = (0, oW.n)(WW);
-            let EW;
+          TR = new GJ.e,
+          JJ = XR.gameNameWithVariation,
+          yJ = void 0 !== JJ && (0, xR.n)(JJ);
+        let tJ = Promise.resolve();
+        if (JJ && (KJ.G || yJ)) {
+          const RR = KJ.G ? Promise.all([(0, IR.loadWasmPlay)(), LR.userContextManager.getCurrentUserContext()]).then((RR => {
+            let [JR, GR] = RR;
+            if (TR.mark("phase_pack_begin"), FR()) return YR(JR), JR.packForGame(JJ, GR, FR)
+          })) : async function(RR, JR) {
+            await HR.b.indexedDbValuesAreLoaded();
+            const GR = await LR.userContextManager.getCurrentUserContext(),
+              yR = (0, xR.s)(RR);
+            let tR;
             try {
-              EW = await aW.e.getGame(OW, mW, !0)
-            } catch (cW) {
-              return void console.error("Failed to get game", cW)
+              tR = await QR.c.getGame(GR, yR, !0)
+            } catch (iR) {
+              return void console.error("Failed to get game", iR)
             }
-            if (null !== iW && void 0 !== iW && iW.aborted) return;
-            const NW = EW.customTexturePackKey;
-            if (!NW) return void(vW.d.isUsingTemporaryTexturePack() && ((0, sW.reloadBloxd)(), await new Promise((() => {}))));
-            if (vW.d.isUsingTemporaryTexturePack() && vW.d.getTemporaryTexturePackSource() === NW) return;
-            const PW = tW.NotificationProvider.showCustomPopup({
-                body: WW => (0, CW.jsx)(FW, {
-                  schematicId: mW,
-                  texturePackKey: NW,
-                  onClose: WW
+            if (null !== JR && void 0 !== JR && JR.aborted) return;
+            const uR = tR.customTexturePackKey;
+            if (!uR) return void(HR.b.isUsingTemporaryTexturePack() && ((0, WR.reloadBloxd)(), await new Promise((() => {}))));
+            if (HR.b.isUsingTemporaryTexturePack() && HR.b.getTemporaryTexturePackSource() === uR) return;
+            const ZR = VR.NotificationProvider.showCustomPopup({
+                body: RR => (0, zR.jsx)(sR, {
+                  schematicId: yR,
+                  texturePackKey: uR,
+                  onClose: RR
                 }),
                 disableExitButton: !0,
                 disablePressBackgroundToClose: !0
               }),
-              LW = () => {
-                PW.tearDownNotification()
+              qR = () => {
+                ZR.tearDownNotification()
               };
-            null === iW || void 0 === iW || iW.addEventListener("abort", LW, {
+            null === JR || void 0 === JR || JR.addEventListener("abort", qR, {
               once: !0
-            }), await PW.getResult(), null === iW || void 0 === iW || iW.removeEventListener("abort", LW)
-          }(ii, VW.signal), iW = WW.catch((WW => {
-            console.error("Failed to check for custom texture pack", WW)
+            }), await ZR.getResult(), null === JR || void 0 === JR || JR.removeEventListener("abort", qR)
+          }(JJ, PR.signal), JR = RR.catch((RR => {
+            console.error("Failed to check for custom texture pack", RR)
           })).then((() => {
-            zW.mark("phase_pack")
+            TR.mark("phase_pack")
           }));
-          Ei = iW;
-          const OW = Zi.K && !mi ? (0, pW.loadWasmPlay)().catch((() => {})) : iW,
-            mW = DW;
-          DW = OW.then((() => mW))
+          tJ = JR;
+          const GR = KJ.G && !yJ ? (0, IR.loadWasmPlay)().catch((() => {})) : JR,
+            yR = cR;
+          cR = GR.then((() => yR))
         }
-        Zi.K && (0, xi.f)(Ei);
-        const Li = {
-          wasm: Zi.K,
-          game: SW.gameNameWithVariation,
-          custom: mi,
-          lobbyName: null !== (iW = SW.lobbyName) && void 0 !== iW ? iW : null,
-          direct: null !== SW.directJoinVmUrl && void 0 !== SW.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === OW.pathname,
-          adBeforeMatchmaking: void 0 !== ii && !0 === (null === (mW = nW.d[ii]) || void 0 === mW ? void 0 : mW.playAdBeforeMatchmaking),
-          afterAnother: null !== fW.current || (0, Ni.b)()
+        KJ.G && (0, wJ.h)(tJ);
+        const qJ = {
+          wasm: KJ.G,
+          game: XR.gameNameWithVariation,
+          custom: yJ,
+          lobbyName: null !== (JR = XR.lobbyName) && void 0 !== JR ? JR : null,
+          direct: null !== XR.directJoinVmUrl && void 0 !== XR.directJoinVmUrl,
+          discord: "/play/discord-custom-lobby" === GR.pathname,
+          adBeforeMatchmaking: void 0 !== JJ && !0 === (null === (yR = vR.b[JJ]) || void 0 === yR ? void 0 : yR.playAdBeforeMatchmaking),
+          afterAnother: null !== mR.current || (0, uJ.c)()
         };
-        (0, Pi.g)(null);
-        const ci = !(wi = Li).wasm || void 0 === wi.game || wi.custom || wi.direct || wi.discord || wi.adBeforeMatchmaking || wi.afterAnother ? null : () => {
-          ! function(WW, iW, OW) {
-            (0, Pi.g)({
-              key: (0, Pi.f)(WW, iW),
-              settled: Promise.all([NW.matchmakingLibrariesPromise, jW.userContextManager.getCurrentUserContext()]).then((mW => {
-                let [EW, NW] = mW;
-                if (void 0 === EW.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return OW.mark("phase_ahead_sent"), EW.matchmakeForAhead(WW, iW, NW).then((WW => (OW.mark("phase_ahead_answered", WW.at), WW)))
-              })).catch((WW => ({
-                result: kW.b.errorWithCode(String(WW), bW.k.REQUEST_TO_MATCHMAKING, {
-                  error: WW,
+        (0, ZJ.f)(null);
+        const iJ = !(fJ = qJ).wasm || void 0 === fJ.game || fJ.custom || fJ.direct || fJ.discord || fJ.adBeforeMatchmaking || fJ.afterAnother ? null : () => {
+          ! function(RR, JR, GR) {
+            (0, ZJ.f)({
+              key: (0, ZJ.e)(RR, JR),
+              settled: Promise.all([uR.matchmakingLibrariesPromise, LR.userContextManager.getCurrentUserContext()]).then((yR => {
+                let [tR, uR] = yR;
+                if (void 0 === tR.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
+                return GR.mark("phase_ahead_sent"), tR.matchmakeForAhead(RR, JR, uR).then((RR => (GR.mark("phase_ahead_answered", RR.at), RR)))
+              })).catch((RR => ({
+                result: UR.e.errorWithCode(String(RR), aR.j.REQUEST_TO_MATCHMAKING, {
+                  error: RR,
                   severity: "medium"
                 }),
                 at: performance.now()
               })))
             })
-          }(Li.lobbyName, Li.game, zW)
+          }(qJ.lobbyName, qJ.game, TR)
         };
-        var wi;
-        const li = null !== fW.current;
-        fW.current = null, (0, Ni.g)(null);
-        const bi = () => {
-          IW ? (0, wW.navigateToHomePage)() : (XW.current = li, ZW(-1))
+        var fJ;
+        const rJ = null !== mR.current;
+        mR.current = null, (0, uJ.g)(null);
+        const aJ = () => {
+          kR ? (0, fR.navigateToHomePage)() : (SR.current = rJ, KR(-1))
         };
-        let ji = !1;
-        const Ui = OW.pathname + OW.search,
-          ki = () => !ji && gW.current === Ui;
-        return (0, Pi.e)(DW, ci, (WW => {
+        let LJ = !1;
+        const nJ = GR.pathname + GR.search,
+          UJ = () => !LJ && oR.current === nJ;
+        return (0, ZJ.c)(cR, iJ, (RR => {
           let {
-            shouldMatchmake: iW,
-            discordContext: OW
-          } = WW;
-          ki() && (zW.mark("phase_gate"), iW ? si(null !== OW && void 0 !== OW ? OW : SW.lobbyName, OW ? "classic" : SW.gameNameWithVariation, SW.directJoinVmUrl, zW).then((WW => {
-            if (null !== WW && ki())
-              if (WW.isError()) {
-                var iW, OW;
-                const mW = WW.asError(),
-                  NW = null !== (iW = mW.debugResult.severity) && void 0 !== iW ? iW : "high";
-                if (UW.l.iZ("joinFailed", {
-                    step: null !== (OW = mW.code) && void 0 !== OW ? OW : null,
-                    severity: NW
-                  }), (0, ti.c)(mW.debugResult.error)) return void ti.f.reload();
-                if (mW.code === bW.k.SHADER_PACK) return void(0, Wi.b)(mW.message, ZW);
-                const PW = EW.d.get("gameEntrySource"),
-                  wW = mW.code === bW.k.INITIALISE_WEBGL ? (0, yW.b)() : null,
+            shouldMatchmake: JR,
+            discordContext: GR
+          } = RR;
+          UJ() && (TR.mark("phase_gate"), JR ? WJ(null !== GR && void 0 !== GR ? GR : XR.lobbyName, GR ? "classic" : XR.gameNameWithVariation, XR.directJoinVmUrl, TR).then((RR => {
+            if (null !== RR && UJ())
+              if (RR.isError()) {
+                var JR, GR;
+                const yR = RR.asError(),
+                  uR = null !== (JR = yR.debugResult.severity) && void 0 !== JR ? JR : "high";
+                if (nR.n.JK("joinFailed", {
+                    step: null !== (GR = yR.code) && void 0 !== GR ? GR : null,
+                    severity: uR
+                  }), (0, VJ.b)(yR.debugResult.error)) return void VJ.e.reload();
+                if (yR.code === aR.j.SHADER_PACK) return void(0, RJ.c)(yR.message, KR);
+                const ZR = tR.d.get("gameEntrySource"),
+                  fR = yR.code === aR.j.INITIALISE_WEBGL ? (0, BR.b)() : null,
                   {
-                    error: AW
-                  } = mW.debugResult;
-                let jW;
-                if ((0, lW.b)(LW, mW)) jW = Promise.resolve(!1);
-                else if (null !== wW) jW = (0, yW.m)(wW);
-                else if (AW instanceof JW.n) jW = (0, TW.d)(AW);
+                    error: eR
+                  } = yR.debugResult;
+                let LR;
+                if ((0, rR.e)(qR, yR)) LR = Promise.resolve(!1);
+                else if (null !== fR) LR = (0, BR.l)(fR);
+                else if (eR instanceof pR.h) LR = (0, lR.c)(eR);
                 else {
-                  let WW;
-                  switch (NW) {
+                  let RR;
+                  switch (uR) {
                     case "low":
-                      WW = "face-diagonal-mouth";
+                      RR = "face-diagonal-mouth";
                       break;
                     case "medium":
-                      WW = "face-worried";
+                      RR = "face-worried";
                       break;
                     case "high":
-                      WW = "face-dizzy"
+                      RR = "face-dizzy"
                   }
-                  const iW = AW instanceof Ai.g;
-                  let OW = (0, xW.f)(mW.message);
-                  iW ? OW = LW("general:gameFilesStalled") : mW.debugResult.gameServerUnreachable && (OW = LW((0, MW.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  jW = tW.NotificationProvider.showPromptPopup({
-                    icon: WW,
-                    title: bW.E[mW.code],
-                    subtitle: (0, CW.jsxs)(CW.Fragment, {
-                      children: [OW, AW instanceof Error && !iW && (0, CW.jsx)("div", {
+                  const JR = eR instanceof eJ.g;
+                  let GR = (0, wR.e)(yR.message);
+                  JR ? GR = qR("general:gameFilesStalled") : yR.debugResult.gameServerUnreachable && (GR = qR((0, AR.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
+                  LR = VR.NotificationProvider.showPromptPopup({
+                    icon: RR,
+                    title: aR.C[yR.code],
+                    subtitle: (0, zR.jsxs)(zR.Fragment, {
+                      children: [GR, eR instanceof Error && !JR && (0, zR.jsx)("div", {
                         style: {
                           fontSize: "0.9rem",
                           paddingTop: "1rem"
                         },
-                        children: (0, CW.jsx)(YW.c, {
-                          errorString: AW.stack
+                        children: (0, zR.jsx)(MR.e, {
+                          errorString: eR.stack
                         })
                       })]
                     }),
-                    confirmText: LW("general:tryAgain"),
-                    cancelText: LW("general:cancel")
-                  }).getResult().then((WW => !0 === WW))
+                    confirmText: qR("general:tryAgain"),
+                    cancelText: qR("general:cancel")
+                  }).getResult().then((RR => !0 === RR))
                 }
-                jW.then((WW => {
-                  if (WW) {
-                    (0, EW.l)(PW);
-                    const WW = (0, HW.e)(SW.gameNameWithVariation, SW.lobbyName);
-                    "low" === NW ? ZW(WW) : (0, sW.reloadBloxd)(WW)
+                LR.then((RR => {
+                  if (RR) {
+                    (0, tR.k)(ZR);
+                    const RR = (0, bR.e)(XR.gameNameWithVariation, XR.lobbyName);
+                    "low" === uR ? KR(RR) : (0, WR.reloadBloxd)(RR)
                   }
-                })), cW.gameBridge.send("leaveGame", {
+                })), iR.gameBridge.send("leaveGame", {
                   reloadPath: "/"
-                }), bi()
+                }), aJ()
               } else {
                 const {
-                  gameNameWithVariation: iW,
-                  lobbyName: OW
-                } = WW.getValue();
-                fW.current = {
-                  gameNameWithVariation: iW,
-                  lobbyName: OW
+                  gameNameWithVariation: JR,
+                  lobbyName: GR
+                } = RR.getValue();
+                mR.current = {
+                  gameNameWithVariation: JR,
+                  lobbyName: GR
                 };
-                const mW = (0, HW.e)(iW, OW);
-                ZW(mW, {
+                const yR = (0, bR.e)(JR, GR);
+                KR(yR, {
                   replace: !0
                 })
               }
-          })).catch((WW => {
-            if (!ki()) return;
-            UW.l.iZ("joinFailed", {
+          })).catch((RR => {
+            if (!UJ()) return;
+            nR.n.JK("joinFailed", {
               step: null,
               severity: "unexpected"
             });
-            tW.NotificationProvider.showPromptPopup({
+            VR.NotificationProvider.showPromptPopup({
               icon: "face-dizzy",
               title: "Unexpected Error",
-              subtitle: (0, CW.jsxs)(CW.Fragment, {
-                children: [LW("homePage:pleaseCopyError"), (0, CW.jsx)("div", {
+              subtitle: (0, zR.jsxs)(zR.Fragment, {
+                children: [qR("homePage:pleaseCopyError"), (0, zR.jsx)("div", {
                   style: {
                     fontSize: "0.9rem",
                     paddingTop: "1rem"
                   },
-                  children: (0, CW.jsx)(YW.c, {
-                    errorString: WW.stack
+                  children: (0, zR.jsx)(MR.e, {
+                    errorString: RR.stack
                   })
                 })]
               }),
-              confirmText: LW("general:tryAgain"),
-              cancelText: LW("general:cancel")
-            }).getResult().then((WW => {
-              !0 === WW && (0, sW.reloadBloxd)((0, HW.e)(SW.gameNameWithVariation, SW.lobbyName))
-            })), bi()
-          })) : ZW(-1))
-        }), ki), () => {
-          ji = !0, VW.abort()
+              confirmText: qR("general:tryAgain"),
+              cancelText: qR("general:cancel")
+            }).getResult().then((RR => {
+              !0 === RR && (0, WR.reloadBloxd)((0, bR.e)(XR.gameNameWithVariation, XR.lobbyName))
+            })), aJ()
+          })) : KR(-1))
+        }), UJ), () => {
+          LJ = !0, PR.abort()
         }
-      }), [uW, OW.search, OW.pathname, IW]), (0, PW.useEffect)((() => {
-        VW.disableFullscreen && (0, SW.h)() ? (0, SW.m)() : !VW.disableFullscreen && (0, SW.j)() && (0, SW.s)({
+      }), [OR, GR.search, GR.pathname, kR]), (0, ZR.useEffect)((() => {
+        PR.disableFullscreen && (0, XR.i)() ? (0, XR.o)() : !PR.disableFullscreen && (0, XR.l)() && (0, XR.v)({
           automatic: !0
         })
-      }), [DW, VW]), (0, PW.useEffect)((() => {
-        "inGame" === DW && bi()
-      }), [DW, VW]), (0, PW.useEffect)((() => {
-        "inGame" !== DW && EW.d.set({
+      }), [cR, PR]), (0, ZR.useEffect)((() => {
+        "inGame" === cR && aJ()
+      }), [cR, PR]), (0, ZR.useEffect)((() => {
+        "inGame" !== cR && tR.d.set({
           openInGameMenuName: null
         })
-      }), [DW]);
-      const ii = function(WW) {
-        const iW = (0, EW.i)(WW),
-          [OW, mW] = (0, PW.useState)(0),
-          [NW, cW] = (0, PW.useState)(!1);
-        (0, LW.e)("gameJoined", (() => {
-          (0, EW.i)(EW.d.get("gameState")) && (mW((WW => WW + 1)), cW(!0))
-        })), (0, PW.useEffect)((() => {
-          iW || cW(!1)
-        }), [iW]);
-        const wW = "inGame" === WW;
+      }), [cR]);
+      const JJ = function(RR) {
+        const JR = (0, tR.j)(RR),
+          [GR, yR] = (0, ZR.useState)(0),
+          [uR, iR] = (0, ZR.useState)(!1);
+        (0, qR.f)("gameJoined", (() => {
+          (0, tR.j)(tR.d.get("gameState")) && (yR((RR => RR + 1)), iR(!0))
+        })), (0, ZR.useEffect)((() => {
+          JR || iR(!1)
+        }), [JR]);
+        const fR = "inGame" === RR;
         return {
-          mounted: wW || iW && NW,
-          shown: wW,
-          key: OW
+          mounted: fR || JR && uR,
+          shown: fR,
+          key: GR
         }
-      }(DW);
-      return (0, CW.jsx)(CW.Fragment, {
-        children: ii.mounted && (0, CW.jsx)(NW.InGameUi, {
-          shown: ii.shown
-        }, ii.key)
+      }(cR);
+      return (0, zR.jsx)(zR.Fragment, {
+        children: JJ.mounted && (0, zR.jsx)(uR.InGameUi, {
+          shown: JJ.shown
+        }, JJ.key)
       })
     }
   },
-  5897: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW
+  6028: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR
     });
-    var mW = OW(1185);
-    async function EW(WW) {
-      const iW = await fetch(`${mW.clientSideServerUrls.s3Url}/${WW}`, {
+    var yR = GR(1282);
+    async function tR(RR) {
+      const JR = await fetch(`${yR.clientSideServerUrls.s3Url}/${RR}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === iW.status || 403 === iW.status) return null;
-      if (!iW.ok) throw new Error(`Failed to download the texture pack (${iW.status})`);
-      return await iW.json()
+      if (404 === JR.status || 403 === JR.status) return null;
+      if (!JR.ok) throw new Error(`Failed to download the texture pack (${JR.status})`);
+      return await JR.json()
     }
   },
-  10176: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => jW,
-      c: () => UW
+  10291: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => LR,
+      i: () => nR
     });
-    var mW = OW(154),
-      EW = OW(182),
-      NW = OW(1052),
-      PW = OW(1065),
-      LW = OW(1217),
-      cW = OW(2037),
-      wW = OW(3245),
-      tW = OW(1584),
-      ZW = OW(1422),
-      xW = OW(1111),
-      lW = OW(10181),
-      AW = OW(1605),
-      bW = OW(1638);
+    var yR = GR(163),
+      tR = GR(203),
+      uR = GR(1127),
+      ZR = GR(1141),
+      qR = GR(1317),
+      iR = GR(2134),
+      fR = GR(3357),
+      VR = GR(1647),
+      KR = GR(1493),
+      wR = GR(1201),
+      rR = GR(10298),
+      eR = GR(1663),
+      aR = GR(1695);
 
-    function jW(WW, iW) {
-      const OW = !0 === iW.debugResult.gameRefused,
-        NW = OW || iW.code === mW.k.REQUEST_TO_MATCHMAKING ? (0, lW.h)(iW.message) : null;
-      if (null !== NW) return KW(WW, WW((0, lW.n)(NW)), WW(lW.k[NW])), !0;
-      if (OW) return async function(WW) {
+    function LR(RR, JR) {
+      const GR = !0 === JR.debugResult.gameRefused,
+        uR = GR || JR.code === yR.j.REQUEST_TO_MATCHMAKING ? (0, rR.k)(JR.message) : null;
+      if (null !== uR) return CR(RR, RR((0, rR.p)(uR)), RR(rR.n[uR])), !0;
+      if (GR) return async function(RR) {
         const {
-          gameNameWithVariation: iW,
-          lobbyName: OW,
-          shownLobbyName: mW
-        } = cW.gameBridge.latest("connectedGame"), EW = "classic" === iW && (0, LW.M)(OW) ? mW : await (0, wW.i)(WW, iW, OW);
-        return "" !== EW ? WW("general:cantJoinGame", {
-          game: EW
-        }) : WW("general:cantJoinThisGame")
-      }(WW).then((OW => {
-        KW(WW, OW, iW.message)
+          gameNameWithVariation: JR,
+          lobbyName: GR,
+          shownLobbyName: yR
+        } = iR.gameBridge.latest("connectedGame"), tR = "classic" === JR && (0, qR.A)(GR) ? yR : await (0, fR.d)(RR, JR, GR);
+        return "" !== tR ? RR("general:cantJoinGame", {
+          game: tR
+        }) : RR("general:cantJoinThisGame")
+      }(RR).then((GR => {
+        CR(RR, GR, JR.message)
       })), !0;
       const {
-        joinFailure: PW
-      } = iW.debugResult, tW = "refused" === (null === PW || void 0 === PW ? void 0 : PW.at) ? PW.code : null;
-      return tW === EW.e.schematicNotPublished.code ? (async function(WW, iW) {
-        const OW = kW(),
-          mW = await MW(OW);
-        if (null === mW || mW.gamePublished) return void KW(WW, WW("general:cantJoinThisGame"), iW);
-        await sW(WW, "rocket-launch", WW("studio:gameNotPublishedTitle", {
-          game: mW.name
-        }), WW("studio:publishInStudio"), OW)
-      }(WW, iW.message), !0) : (tW === EW.e.schematicBanned.code || tW === EW.e.customGameTakenDown.code) && (MW(kW()).then((iW => {
-        UW(WW, iW)
+        joinFailure: ZR
+      } = JR.debugResult, VR = "refused" === (null === ZR || void 0 === ZR ? void 0 : ZR.at) ? ZR.code : null;
+      return VR === tR.e.schematicNotPublished.code ? (async function(RR, JR) {
+        const GR = UR(),
+          yR = await AR(GR);
+        if (null === yR || yR.gamePublished) return void CR(RR, RR("general:cantJoinThisGame"), JR);
+        await WR(RR, "rocket-launch", RR("studio:gameNotPublishedTitle", {
+          game: yR.name
+        }), RR("studio:publishInStudio"), GR)
+      }(RR, JR.message), !0) : (VR === tR.e.schematicBanned.code || VR === tR.e.customGameTakenDown.code) && (AR(UR()).then((JR => {
+        nR(RR, JR)
       })), !0)
     }
 
-    function UW(WW, iW) {
-      !0 !== (null === iW || void 0 === iW ? void 0 : iW.takenDown) ? KW(WW, WW("general:cantJoinThisGame"), EW.e.customGameTakenDown.text) : sW(WW, "lock", WW("studio:gameTakenDownTitle", {
-        game: iW.name
-      }), WW("studio:viewInStudio"), iW.schematicId)
+    function nR(RR, JR) {
+      !0 !== (null === JR || void 0 === JR ? void 0 : JR.takenDown) ? CR(RR, RR("general:cantJoinThisGame"), tR.e.customGameTakenDown.text) : WR(RR, "lock", RR("studio:gameTakenDownTitle", {
+        game: JR.name
+      }), RR("studio:viewInStudio"), JR.schematicId)
     }
 
-    function kW() {
-      return (0, NW.n)(cW.gameBridge.latest("connectedGame").gameNameWithVariation)
+    function UR() {
+      return (0, uR.s)(iR.gameBridge.latest("connectedGame").gameNameWithVariation)
     }
-    async function sW(WW, iW, OW, mW, EW) {
-      !0 === await ZW.NotificationProvider.showPromptPopup({
-        icon: iW,
-        title: OW,
-        confirmText: mW,
-        cancelText: WW("general:cancel")
-      }).getResult() && (0, AW.navigatePreserveSearch)((0, bW.v)((0, PW.d)(EW), "manage"))
+    async function WR(RR, JR, GR, yR, tR) {
+      !0 === await KR.NotificationProvider.showPromptPopup({
+        icon: JR,
+        title: GR,
+        confirmText: yR,
+        cancelText: RR("general:cancel")
+      }).getResult() && (0, eR.navigatePreserveSearch)((0, aR.p)((0, ZR.d)(tR), "manage"))
     }
-    async function MW(WW) {
+    async function AR(RR) {
       try {
-        return await tW.e.getGame(await xW.userContextManager.getCurrentUserContext(), WW, !0)
-      } catch (iW) {
-        return (0, tW.f)(iW) || console.error(`Failed to get game ${WW}`, iW), null
+        return await VR.c.getGame(await wR.userContextManager.getCurrentUserContext(), RR, !0)
+      } catch (JR) {
+        return (0, VR.g)(JR) || console.error(`Failed to get game ${RR}`, JR), null
       }
     }
 
-    function KW(WW, iW, OW) {
-      ZW.NotificationProvider.showPromptPopup({
+    function CR(RR, JR, GR) {
+      KR.NotificationProvider.showPromptPopup({
         icon: "lock",
-        title: iW,
-        subtitle: OW,
-        confirmText: WW("general:ok"),
+        title: JR,
+        subtitle: GR,
+        confirmText: RR("general:ok"),
         cancelText: ""
       })
     }
   },
-  10206: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW
+  10315: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR
     });
-    var mW = OW(1365),
-      EW = OW(1217),
-      NW = OW(643);
+    var yR = GR(1459),
+      tR = GR(1317),
+      uR = GR(679);
 
-    function PW(WW) {
-      return WW = function(WW, iW) {
-        var OW;
-        const mW = new URLSearchParams(iW),
-          EW = mW.get("lobby"),
-          NW = mW.get("vm"),
-          PW = null !== (OW = EW) && void 0 !== OW ? OW : WW.lobbyName,
-          LW = null !== NW && void 0 !== NW ? NW : WW.directJoinVmUrl;
-        if (PW === WW.lobbyName && LW === WW.directJoinVmUrl) return WW;
+    function ZR(RR) {
+      return RR = function(RR, JR) {
+        var GR;
+        const yR = new URLSearchParams(JR),
+          tR = yR.get("lobby"),
+          uR = yR.get("vm"),
+          ZR = null !== (GR = tR) && void 0 !== GR ? GR : RR.lobbyName,
+          qR = null !== uR && void 0 !== uR ? uR : RR.directJoinVmUrl;
+        if (ZR === RR.lobbyName && qR === RR.directJoinVmUrl) return RR;
         return {
-          ...WW,
-          lobbyName: PW,
-          directJoinVmUrl: LW
+          ...RR,
+          lobbyName: ZR,
+          directJoinVmUrl: qR
         }
-      }(WW, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), WW = function(WW) {
-        if ((0, NW.K)(WW.directJoinVmUrl)) return WW;
-        const iW = (0, EW.fb)(WW.directJoinVmUrl);
-        null === iW && (WW.directJoinVmUrl = void 0);
-        return WW
-      }(WW = function(WW) {
-        if ((0, NW.K)(WW.gameNameWithVariation)) return WW;
-        return WW.gameNameWithVariation = (0, mW.h)(WW.gameNameWithVariation), WW
-      }(WW))
+      }(RR, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), RR = function(RR) {
+        if ((0, uR.I)(RR.directJoinVmUrl)) return RR;
+        const JR = (0, tR.S)(RR.directJoinVmUrl);
+        null === JR && (RR.directJoinVmUrl = void 0);
+        return RR
+      }(RR = function(RR) {
+        if ((0, uR.I)(RR.gameNameWithVariation)) return RR;
+        return RR.gameNameWithVariation = (0, yR.j)(RR.gameNameWithVariation), RR
+      }(RR))
     }
   },
-  10198: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      f: () => PW
+  10311: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      f: () => ZR
     });
-    var mW = OW(172);
-    class EW {
+    var yR = GR(188);
+    class tR {
       constructor() {
         this.marks = new Map, this.fromTap = !1
       }
-      mark(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        this.marks.has(WW) || this.marks.set(WW, iW)
+      mark(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        this.marks.has(RR) || this.marks.set(RR, JR)
       }
       marked() {
-        return mW.U.flatMap((WW => {
-          var iW;
-          const OW = null !== (iW = this.marks.get(WW)) && void 0 !== iW ? iW : NW.marks.get(WW);
-          return void 0 === OW ? [] : [
-            [WW, OW]
+        return yR.T.flatMap((RR => {
+          var JR;
+          const GR = null !== (JR = this.marks.get(RR)) && void 0 !== JR ? JR : uR.marks.get(RR);
+          return void 0 === GR ? [] : [
+            [RR, GR]
           ]
         }))
       }
     }
-    const NW = new EW;
+    const uR = new tR;
 
-    function PW(WW) {
-      NW.mark(WW)
+    function ZR(RR) {
+      uR.mark(RR)
     }
   },
-  10223: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => EW
+  10336: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      h: () => tR
     });
-    let mW = Promise.resolve();
+    let yR = Promise.resolve();
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW() {
-      return mW
+    function uR() {
+      return yR
     }
   },
-  10215: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      f: () => EW,
-      g: () => NW,
-      k: () => PW
+  10325: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      e: () => tR,
+      f: () => uR,
+      g: () => ZR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW(WW, iW) {
-      return `${iW}\n${null!==WW&&void 0!==WW?WW:""}`
+    function tR(RR, JR) {
+      return `${JR}\n${null!==RR&&void 0!==RR?RR:""}`
     }
 
-    function NW(WW) {
-      mW = WW
+    function uR(RR) {
+      yR = RR
     }
 
-    function PW(WW) {
-      const iW = mW;
-      return mW = null, null !== iW && iW.key === WW ? iW.settled : null
+    function ZR(RR) {
+      const JR = yR;
+      return yR = null, null !== JR && JR.key === RR ? JR.settled : null
     }
 
-    function LW(WW, iW, OW, mW) {
-      let EW = !1;
-      const NW = () => {
-        null !== iW && !EW && mW() && (EW = !0, iW())
+    function qR(RR, JR, GR, yR) {
+      let tR = !1;
+      const uR = () => {
+        null !== JR && !tR && yR() && (tR = !0, JR())
       };
-      null !== iW && setTimeout(NW, 0), WW.then((WW => {
-        NW(), OW(WW)
+      null !== JR && setTimeout(uR, 0), RR.then((RR => {
+        uR(), GR(RR)
       }))
     }
   },
-  10189: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      importClientLoad: () => ZW,
-      loadWasmPlay: () => AW,
-      loadWasmPlayAhead: () => bW,
-      loadWasmPreviews: () => jW
+  10303: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      importClientLoad: () => KR,
+      loadWasmPlay: () => eR,
+      loadWasmPlayAhead: () => aR,
+      loadWasmPreviews: () => LR
     });
-    var mW = OW(4337),
-      EW = OW(3153),
-      NW = OW(2283),
-      PW = OW(5348),
-      LW = OW(4746),
-      cW = OW(5368),
-      wW = OW(10198);
-    let tW = null;
+    var yR = GR(4422),
+      tR = GR(3243),
+      uR = GR(2363),
+      ZR = GR(5452),
+      qR = GR(4850),
+      iR = GR(5467),
+      fR = GR(10311);
+    let VR = null;
 
-    function ZW() {
-      return Promise.all([OW.e(91), OW.e(105), OW.e(240), OW.e(158), OW.e(244), OW.e(161), OW.e(255), OW.e(71)]).then((() => OW(42198)))
+    function KR() {
+      return Promise.all([GR.e(91), GR.e(105), GR.e(240), GR.e(158), GR.e(244), GR.e(161), GR.e(255), GR.e(71)]).then((() => GR(42208)))
     }
 
-    function xW() {
-      return Promise.all([OW.e(88), OW.e(91), OW.e(105), OW.e(240), OW.e(158), OW.e(244), OW.e(222), OW.e(161), OW.e(250), OW.e(242), OW.e(103), OW.e(246), OW.e(255), OW.e(76)]).then((() => OW(42371)))
+    function wR() {
+      return Promise.all([GR.e(88), GR.e(91), GR.e(105), GR.e(240), GR.e(158), GR.e(244), GR.e(222), GR.e(161), GR.e(250), GR.e(242), GR.e(103), GR.e(246), GR.e(255), GR.e(76)]).then((() => GR(42387)))
     }
 
-    function lW() {
-      Promise.all([OW.e(85), OW.e(89), OW.e(86), OW.e(87), OW.e(88), OW.e(105), OW.e(102), OW.e(306), OW.e(127), OW.e(280), OW.e(254), OW.e(246), OW.e(55)]).then((() => OW(42495))).catch((() => {}))
+    function rR() {
+      Promise.all([GR.e(85), GR.e(89), GR.e(86), GR.e(87), GR.e(88), GR.e(105), GR.e(102), GR.e(306), GR.e(127), GR.e(280), GR.e(254), GR.e(246), GR.e(55)]).then((() => GR(42538))).catch((() => {}))
     }
 
-    function AW() {
-      return PW.b.cancelDownloadForJoin(), (0, LW.c)(), (0, EW.c)(), (0, cW.g)(), (0, NW.h)(), lW(), ZW().then((WW => {
+    function eR() {
+      return ZR.e.cancelDownloadForJoin(), (0, qR.e)(), (0, tR.d)(), (0, iR.h)(), (0, uR.i)(), rR(), KR().then((RR => {
         let {
-          startJoinLoad: iW
-        } = WW;
-        iW()
-      }), (() => {})), tW ??= xW().then((WW => ((0, wW.f)("phase_chunk"), WW.startWasmPlay(), (0, wW.f)("phase_start"), WW.followPageUiPack((WW => {
-        mW.d.showGamePack(WW)
-      })), WW)), (WW => {
-        throw tW = null, WW
-      })), tW
+          startJoinLoad: JR
+        } = RR;
+        JR()
+      }), (() => {})), VR ??= wR().then((RR => ((0, fR.f)("phase_chunk"), RR.startWasmPlay(), (0, fR.f)("phase_start"), RR.followPageUiPack((RR => {
+        yR.b.showGamePack(RR)
+      })), RR)), (RR => {
+        throw VR = null, RR
+      })), VR
     }
 
-    function bW() {
-      return lW(), OW.e(132).then((() => OW(42537))).catch((() => {})), xW().then((() => {
-        (0, wW.f)("phase_chunk")
+    function aR() {
+      return rR(), GR.e(132).then((() => GR(42579))).catch((() => {})), wR().then((() => {
+        (0, fR.f)("phase_chunk")
       }))
     }
 
-    function jW() {
-      return xW().then((WW => {
-        WW.startWasmPreviews(), WW.prefetchWasmPreviews()
+    function LR() {
+      return wR().then((RR => {
+        RR.startWasmPreviews(), RR.prefetchWasmPreviews()
       }))
     }
   },
-  10209: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => wW,
-      h: () => tW
+  10320: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR,
+      f: () => VR
     });
-    var mW = OW(154),
-      EW = OW(1888),
-      NW = OW(4426),
-      PW = OW(4981),
-      LW = OW(1850);
-    const cW = new WeakSet;
+    var yR = GR(163),
+      tR = GR(1972),
+      uR = GR(4509),
+      ZR = GR(5081),
+      qR = GR(1939);
+    const iR = new WeakSet;
 
-    function wW(WW) {
-      return !0 !== WW.uW && !(0, LW.c)(WW.error)
+    function fR(RR) {
+      return !0 !== RR.xR && !(0, qR.b)(RR.error)
     }
 
-    function tW(WW) {
-      const iW = WW.asError(),
+    function VR(RR) {
+      const JR = RR.asError(),
         {
-          debugResult: OW
-        } = iW;
-      if (cW.has(OW) || !wW(OW)) return;
-      cW.add(OW), console.log("Failed to join lobby:", iW.message);
-      const LW = "timedOut" === OW.gameServerUnreachable;
-      (0, EW.reportClientError)("matchmake_failed", iW.message, LW ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : mW.k[iW.code]);
+          debugResult: GR
+        } = JR;
+      if (iR.has(GR) || !fR(GR)) return;
+      iR.add(GR), console.log("Failed to join lobby:", JR.message);
+      const qR = "timedOut" === GR.gameServerUnreachable;
+      (0, tR.reportClientError)("matchmake_failed", JR.message, qR ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : yR.j[JR.code]);
       const {
-        error: tW
-      } = OW;
-      if (tW instanceof NW.n && "default" !== tW.packSource) {
-        const WW = (0, PW.e)("js", "game" === tW.packSource ? "game" : "page", (0, PW.h)(tW));
-        (0, EW.reportClientError)("texture_pack", tW, WW)
+        error: VR
+      } = GR;
+      if (VR instanceof uR.h && "default" !== VR.packSource) {
+        const RR = (0, ZR.g)("js", "game" === VR.packSource ? "game" : "page", (0, ZR.i)(VR));
+        (0, tR.reportClientError)("texture_pack", VR, RR)
       }
     }
   },
-  10181: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => PW,
-      h: () => LW,
-      k: () => wW,
-      n: () => cW
+  10298: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      h: () => ZR,
+      k: () => qR,
+      n: () => fR,
+      p: () => iR
     });
-    var mW = OW(182),
-      EW = OW(5318);
+    var yR = GR(203),
+      tR = GR(5425);
 
-    function NW(WW) {
-      return PW(WW) === mW.e.gameOrPluginOnPlayerAuthRejected.code
+    function uR(RR) {
+      return ZR(RR) === yR.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function PW(WW) {
-      return "object" === typeof WW && null !== WW ? WW.code : void 0
+    function ZR(RR) {
+      return "object" === typeof RR && null !== RR ? RR.code : void 0
     }
 
-    function LW(WW) {
-      var iW;
-      return null !== (iW = Object.keys(EW.d).find((iW => EW.d[iW] === WW))) && void 0 !== iW ? iW : null
+    function qR(RR) {
+      var JR;
+      return null !== (JR = Object.keys(tR.d).find((JR => tR.d[JR] === RR))) && void 0 !== JR ? JR : null
     }
 
-    function cW(WW) {
-      return "notWhitelisted" === WW ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function iR(RR) {
+      return "notWhitelisted" === RR ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const wW = {
+    const fR = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  10167: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => wW,
-      f: () => cW
+  10285: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR,
+      e: () => iR
     });
-    var mW = OW(344);
+    var yR = GR(377);
 
-    function EW(WW) {
-      if (!WW.startsWith("{")) return WW;
-      let iW;
+    function tR(RR) {
+      if (!RR.startsWith("{")) return RR;
+      let JR;
       try {
-        iW = JSON.parse(WW)
+        JR = JSON.parse(RR)
       } catch {
-        return WW
+        return RR
       }
-      return function(WW) {
-        if (null === (0, mW.ye)(WW)) return !1;
+      return function(RR) {
+        if (null === (0, yR.Ee)(RR)) return !1;
         const {
-          params: iW
-        } = WW;
-        return void 0 === iW || "object" === typeof iW && null !== iW && Object.values(iW).every((WW => "string" === typeof WW))
-      }(iW) ? iW : WW
+          params: JR
+        } = RR;
+        return void 0 === JR || "object" === typeof JR && null !== JR && Object.values(JR).every((RR => "string" === typeof RR))
+      }(JR) ? JR : RR
     }
-    var NW = OW(1172),
-      PW = OW(1244);
+    var uR = GR(1270),
+      ZR = GR(1343);
 
-    function LW(WW) {
-      return (0, NW.u)(PW.e.get().getCurrentLanguageCode(), WW.translationKey, WW.params)
-    }
-
-    function cW(WW) {
-      const iW = EW(WW);
-      return "string" === typeof iW ? iW : LW(iW)
+    function qR(RR) {
+      return (0, uR.w)(ZR.g.get().getCurrentLanguageCode(), RR.translationKey, RR.params)
     }
 
-    function wW(WW) {
-      const iW = EW(WW);
-      return "string" === typeof iW ? iW : LW({
+    function iR(RR) {
+      const JR = tR(RR);
+      return "string" === typeof JR ? JR : qR(JR)
+    }
+
+    function fR(RR) {
+      const JR = tR(RR);
+      return "string" === typeof JR ? JR : qR({
         translationKey: "moderation:kicked",
         params: {
-          reason: LW(iW)
+          reason: qR(JR)
         }
       })
     }
   },
-  10219: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      i: () => NW,
-      j: () => LW
+  10332: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      f: () => uR,
+      i: () => qR
     });
-    var mW = OW(1239);
-    const EW = new WeakSet;
+    var yR = GR(1341);
+    const tR = new WeakSet;
 
-    function NW(WW) {
-      EW.add(WW)
+    function uR(RR) {
+      tR.add(RR)
     }
-    class PW {
-      constructor(WW, iW) {
-        this.joinSignal = WW, this.onWaiting = iW, this.deadline = null, this.waits = 0, EW.has(WW) && (this.deadline = performance.now())
+    class ZR {
+      constructor(RR, JR) {
+        this.joinSignal = RR, this.onWaiting = JR, this.deadline = null, this.waits = 0, tR.has(RR) && (this.deadline = performance.now())
       }
-      async waitToAskAgain(WW) {
+      async waitToAskAgain(RR) {
         if (this.joinSignal.aborted) return "left";
-        const iW = function(WW, iW) {
-            let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-            const mW = Math.min(Math.max(WW * 2 ** iW, 2e3), 15e3);
-            return Math.round(mW * (.75 + .5 * OW()))
-          }(WW, this.waits),
-          OW = performance.now();
-        return this.deadline ??= OW + 18e4, OW + iW > this.deadline ? "over" : (this.waits++, this.onWaiting(!0), await
-          function(WW, iW) {
-            if (iW.aborted) return Promise.resolve(!1);
-            return new Promise((OW => {
-              const mW = () => {
-                  clearTimeout(EW), OW(!1)
+        const JR = function(RR, JR) {
+            let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+            const yR = Math.min(Math.max(RR * 2 ** JR, 2e3), 15e3);
+            return Math.round(yR * (.75 + .5 * GR()))
+          }(RR, this.waits),
+          GR = performance.now();
+        return this.deadline ??= GR + 18e4, GR + JR > this.deadline ? "over" : (this.waits++, this.onWaiting(!0), await
+          function(RR, JR) {
+            if (JR.aborted) return Promise.resolve(!1);
+            return new Promise((GR => {
+              const yR = () => {
+                  clearTimeout(tR), GR(!1)
                 },
-                EW = setTimeout((() => {
-                  iW.removeEventListener("abort", mW), OW(!0)
-                }), WW);
-              iW.addEventListener("abort", mW, {
+                tR = setTimeout((() => {
+                  JR.removeEventListener("abort", yR), GR(!0)
+                }), RR);
+              JR.addEventListener("abort", yR, {
                 once: !0
               })
             }))
-          }(iW, this.joinSignal) ? "again" : "left")
+          }(JR, this.joinSignal) ? "again" : "left")
       }
       placed() {
         this.waits > 0 && this.onWaiting(!1)
       }
     }
-    async function LW(WW, iW, OW) {
-      let EW = WW;
+    async function qR(RR, JR, GR) {
+      let tR = RR;
       for (;;) {
-        if (!EW.result.isError()) return OW.placed(), EW;
-        const WW = EW.result.asError(),
+        if (!tR.result.isError()) return GR.placed(), tR;
+        const RR = tR.result.asError(),
           {
-            retryAfterMs: NW,
-            ...PW
-          } = WW.debugResult;
-        if (void 0 === NW) return EW;
-        const LW = await OW.waitToAskAgain(NW);
-        if ("left" === LW) return null;
-        if ("over" === LW) {
+            retryAfterMs: uR,
+            ...ZR
+          } = RR.debugResult;
+        if (void 0 === uR) return tR;
+        const qR = await GR.waitToAskAgain(uR);
+        if ("left" === qR) return null;
+        if ("over" === qR) {
           return {
-            result: mW.b.errorWithCode(WW.message, WW.code, {
-              ...PW,
+            result: yR.e.errorWithCode(RR.message, RR.code, {
+              ...ZR,
               serverWaitEnded: !0
             }),
-            at: EW.at
+            at: tR.at
           }
         }
-        EW = await iW()
+        tR = await JR()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

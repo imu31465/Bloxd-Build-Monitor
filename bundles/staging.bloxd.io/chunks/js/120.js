@@ -1,186 +1,186 @@
 export const id = 120;
 export const ids = [120];
 export const modules = {
-  5693: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => ZW,
-      e: () => tW,
-      f: () => xW
+  5817: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => KR,
+      g: () => VR,
+      h: () => wR
     });
-    OW(5701);
-    var mW = OW(1172),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1434),
-      LW = (OW(62), OW(5041)),
-      cW = OW(1391),
-      wW = OW(1283);
+    GR(5820);
+    var yR = GR(1270),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1501),
+      qR = (GR(66), GR(5141)),
+      iR = GR(1468),
+      fR = GR(1378);
 
-    function tW(WW) {
+    function VR(RR) {
       let {
-        children: iW,
-        label: OW,
-        className: EW,
-        circleInfoText: LW,
-        disabled: tW,
-        onLabelClick: ZW
-      } = WW;
+        children: JR,
+        label: GR,
+        className: tR,
+        circleInfoText: qR,
+        disabled: VR,
+        onLabelClick: KR
+      } = RR;
       const {
-        t: xW
-      } = (0, mW.B)(), lW = (0, wW.jsxs)("div", {
-        className: NW()("Label", {
-          ClickableLabel: void 0 !== ZW
+        t: wR
+      } = (0, yR.A)(), rR = (0, fR.jsxs)("div", {
+        className: uR()("Label", {
+          ClickableLabel: void 0 !== KR
         }),
-        onClick: ZW,
-        children: [xW(OW), LW && (0, wW.jsx)(cW.c, {
+        onClick: KR,
+        children: [wR(GR), qR && (0, fR.jsx)(iR.d, {
           name: "circle-info"
         })]
       });
-      return (0, wW.jsxs)("div", {
-        className: NW()("LabeledInput", {
-          [EW]: EW,
-          DisabledLabelInput: tW
+      return (0, fR.jsxs)("div", {
+        className: uR()("LabeledInput", {
+          [tR]: tR,
+          DisabledLabelInput: VR
         }),
-        children: [LW && (0, wW.jsx)(PW.f, {
-          tooltipInner: (0, wW.jsx)("div", {
+        children: [qR && (0, fR.jsx)(ZR.h, {
+          tooltipInner: (0, fR.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: xW(LW)
+            children: wR(qR)
           }),
-          children: lW
-        }), !LW && lW, iW]
+          children: rR
+        }), !qR && rR, JR]
       })
     }
 
-    function ZW(WW) {
+    function KR(RR) {
       let {
-        checked: iW,
-        setChecked: OW,
-        disabled: mW = !1
-      } = WW;
-      return (0, wW.jsx)("div", {
+        checked: JR,
+        setChecked: GR,
+        disabled: yR = !1
+      } = RR;
+      return (0, fR.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        "aria-disabled": mW || void 0,
-        onClick: WW => {
-          mW || OW(!iW)
+        "aria-disabled": yR || void 0,
+        onClick: RR => {
+          yR || GR(!JR)
         },
-        children: (0, wW.jsx)(LW.e, {
-          checked: iW,
-          onChange: WW => {
-            OW(WW.target.checked)
+        children: (0, fR.jsx)(qR.d, {
+          checked: JR,
+          onChange: RR => {
+            GR(RR.target.checked)
           },
-          disabled: mW
+          disabled: yR
         })
       })
     }
 
-    function xW(WW) {
+    function wR(RR) {
       let {
-        checked: iW,
-        setChecked: OW,
-        disabled: mW
-      } = WW;
-      return (0, wW.jsx)("div", {
-        className: NW()("SwitchContainer", {
-          SwitchContainerDisabled: mW
+        checked: JR,
+        setChecked: GR,
+        disabled: yR
+      } = RR;
+      return (0, fR.jsx)("div", {
+        className: uR()("SwitchContainer", {
+          SwitchContainerDisabled: yR
         }),
         onClick: () => {
-          mW || OW(!iW)
+          yR || GR(!JR)
         },
-        children: (0, wW.jsx)(LW.e, {
+        children: (0, fR.jsx)(qR.d, {
           className: "SwitchCheckbox",
-          checked: iW,
-          onChange: WW => {
-            OW(WW.target.checked)
+          checked: JR,
+          onChange: RR => {
+            GR(RR.target.checked)
           },
-          disabled: !!mW
+          disabled: !!yR
         })
       })
     }
   },
-  5706: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => wW
+  5828: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(5318),
-      PW = OW(1172),
-      LW = OW(1283);
-    const cW = [...NW.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(5425),
+      ZR = GR(1270),
+      qR = GR(1378);
+    const iR = [...uR.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function wW(WW) {
+    function fR(RR) {
       const {
-        disabled: iW,
-        hideWrapper: OW
-      } = WW, {
-        t: mW
-      } = (0, PW.B)(), wW = WW.advancedMode ? cW.map((iW => [iW, WW.callbacks[iW]])) : NW.n.map((iW => [iW, WW.callbacks[iW]])), ZW = (0, LW.jsx)("div", {
-        className: EW()("PluginsGrid", {
-          SectionBody: !OW
+        disabled: JR,
+        hideWrapper: GR
+      } = RR, {
+        t: yR
+      } = (0, ZR.A)(), fR = RR.advancedMode ? iR.map((JR => [JR, RR.callbacks[JR]])) : uR.j.map((JR => [JR, RR.callbacks[JR]])), KR = (0, qR.jsx)("div", {
+        className: tR()("PluginsGrid", {
+          SectionBody: !GR
         }),
-        children: wW.map((WW => {
-          let [OW, mW] = WW;
-          return (0, LW.jsx)(tW, {
-            plugin: OW,
-            callbacks: mW,
-            disabled: iW
-          }, OW)
+        children: fR.map((RR => {
+          let [GR, yR] = RR;
+          return (0, qR.jsx)(VR, {
+            plugin: GR,
+            callbacks: yR,
+            disabled: JR
+          }, GR)
         }))
       });
-      return OW ? ZW : (0, LW.jsxs)("div", {
+      return GR ? KR : (0, qR.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, LW.jsx)("div", {
+        children: [(0, qR.jsx)("div", {
           className: "SectionTitle",
-          children: mW("worldBuilder:pluginsSection")
-        }), ZW]
+          children: yR("worldBuilder:pluginsSection")
+        }), KR]
       })
     }
 
-    function tW(WW) {
+    function VR(RR) {
       let {
-        plugin: iW,
+        plugin: JR,
         callbacks: {
-          isEnabled: OW,
-          WK: mW
+          isEnabled: GR,
+          JA: yR
         },
-        disabled: NW
-      } = WW;
+        disabled: uR
+      } = RR;
       const {
-        t: cW
-      } = (0, PW.B)(), wW = OW();
-      return (0, LW.jsxs)("div", {
-        className: EW()("PluginCard", {
-          PluginCardEnabled: wW,
-          PluginCardDisabledForm: NW
+        t: iR
+      } = (0, ZR.A)(), fR = GR();
+      return (0, qR.jsxs)("div", {
+        className: tR()("PluginCard", {
+          PluginCardEnabled: fR,
+          PluginCardDisabledForm: uR
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": NW || void 0,
+        "aria-disabled": uR || void 0,
         onClick: () => {
-          NW || mW(!wW)
+          uR || yR(!fR)
         },
-        children: [(0, LW.jsx)("div", {
+        children: [(0, qR.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, LW.jsx)("img", {
-            src: `/textures/games/classic/customGames/${iW}.png`,
-            alt: iW
+          children: (0, qR.jsx)("img", {
+            src: `/textures/games/classic/customGames/${JR}.png`,
+            alt: JR
           })
-        }), (0, LW.jsxs)("div", {
+        }), (0, qR.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, LW.jsx)("div", {
+          children: [(0, qR.jsx)("div", {
             className: "PluginCardTitle",
-            children: cW(ZW[iW])
-          }), (0, LW.jsx)("div", {
+            children: iR(KR[JR])
+          }), (0, qR.jsx)("div", {
             className: "PluginCardDescription",
-            children: cW(xW[iW])
+            children: iR(wR[JR])
           })]
-        }), (0, LW.jsx)("span", {
+        }), (0, qR.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: cW(wW ? "general:on" : "general:off")
+          children: iR(fR ? "general:on" : "general:off")
         })]
       })
     }
-    const ZW = {
+    const KR = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -189,7 +189,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      xW = {
+      wR = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -199,823 +199,823 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  5848: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW
+  5987: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1172),
-      PW = OW(1391),
-      LW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1270),
+      ZR = GR(1468),
+      qR = GR(1378);
 
-    function cW(WW) {
+    function iR(RR) {
       let {
-        textKey: iW,
-        allowed: OW
-      } = WW;
+        textKey: JR,
+        allowed: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, NW.B)();
-      return (0, LW.jsxs)("li", {
-        className: EW()("PolicyListItem", OW ? "Allowed" : "NotAllowed"),
-        children: [(0, LW.jsx)(PW.c, {
-          name: OW ? "check" : "x"
-        }), (0, LW.jsx)("span", {
-          children: mW(iW)
+        t: yR
+      } = (0, uR.A)();
+      return (0, qR.jsxs)("li", {
+        className: tR()("PolicyListItem", GR ? "Allowed" : "NotAllowed"),
+        children: [(0, qR.jsx)(ZR.d, {
+          name: GR ? "check" : "x"
+        }), (0, qR.jsx)("span", {
+          children: yR(JR)
         })]
       })
     }
 
-    function wW(WW) {
+    function fR(RR) {
       let {
-        allowed: iW,
-        notAllowed: OW
-      } = WW;
-      return (0, LW.jsxs)("ul", {
+        allowed: JR,
+        notAllowed: GR
+      } = RR;
+      return (0, qR.jsxs)("ul", {
         className: "PolicyList",
-        children: [iW.map((WW => (0, LW.jsx)(cW, {
-          textKey: WW,
+        children: [JR.map((RR => (0, qR.jsx)(iR, {
+          textKey: RR,
           allowed: !0
-        }, WW))), OW.map((WW => (0, LW.jsx)(cW, {
-          textKey: WW,
+        }, RR))), GR.map((RR => (0, qR.jsx)(iR, {
+          textKey: RR,
           allowed: !1
-        }, WW)))]
+        }, RR)))]
       })
     }
   },
-  5839: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => MW,
-      e: () => KW
+  5982: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => AR,
+      f: () => CR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(80),
-      LW = OW(2953),
-      cW = OW(1172),
-      wW = OW(5693),
-      tW = OW(1391),
-      ZW = OW(1427),
-      xW = OW(1532),
-      lW = OW(5277),
-      AW = OW(5848),
-      bW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(83),
+      qR = GR(3029),
+      iR = GR(1270),
+      fR = GR(5817),
+      VR = GR(1468),
+      KR = GR(1496),
+      wR = GR(1590),
+      rR = GR(5383),
+      eR = GR(5987),
+      aR = GR(1378);
 
-    function jW(WW) {
-      return (0, PW.createPortal)((0, bW.jsx)(ZW.d, {
-        ...WW
+    function LR(RR) {
+      return (0, ZR.createPortal)((0, aR.jsx)(KR.b, {
+        ...RR
       }), document.body)
     }
-    const UW = LW.y.map((WW => `worldBuilder:publishingPolicy_${WW}`)),
-      kW = Object.keys(LW.z).map((WW => `worldBuilder:publishingPolicy_${WW}`));
+    const nR = qR.B.map((RR => `worldBuilder:publishingPolicy_${RR}`)),
+      UR = Object.keys(qR.C).map((RR => `worldBuilder:publishingPolicy_${RR}`));
 
-    function sW(WW) {
+    function WR(RR) {
       let {
-        onScrolledToEnd: iW
-      } = WW;
-      const OW = (0, mW.useRef)(null),
+        onScrolledToEnd: JR
+      } = RR;
+      const GR = (0, yR.useRef)(null),
         {
-          after: EW
-        } = (0, lW.d)(OW, "y");
-      return (0, mW.useEffect)((() => {
-        EW || null === iW || void 0 === iW || iW()
-      }), [EW, iW]), (0, bW.jsx)("div", {
-        ref: OW,
-        className: NW()("PublishingPolicyRows", {
-          PublishingPolicyRowsMoreBelow: EW
+          after: tR
+        } = (0, rR.b)(GR, "y");
+      return (0, yR.useEffect)((() => {
+        tR || null === JR || void 0 === JR || JR()
+      }), [tR, JR]), (0, aR.jsx)("div", {
+        ref: GR,
+        className: uR()("PublishingPolicyRows", {
+          PublishingPolicyRowsMoreBelow: tR
         }),
         tabIndex: 0,
         "data-pad-focusable": !0,
-        children: (0, bW.jsx)(AW.c, {
-          allowed: UW,
-          notAllowed: kW
+        children: (0, aR.jsx)(eR.e, {
+          allowed: nR,
+          notAllowed: UR
         })
       })
     }
 
-    function MW(WW) {
+    function AR(RR) {
       let {
-        onAnswer: iW
-      } = WW;
-      const [OW, EW] = (0, mW.useState)(!1), [NW, PW] = (0, mW.useState)(!1), LW = (0, mW.useCallback)((() => {
-        PW(!0)
+        onAnswer: JR
+      } = RR;
+      const [GR, tR] = (0, yR.useState)(!1), [uR, ZR] = (0, yR.useState)(!1), qR = (0, yR.useCallback)((() => {
+        ZR(!0)
       }), []);
-      return (0, bW.jsx)(jW, {
+      return (0, aR.jsx)(LR, {
         close: () => {
-          iW(!1)
+          JR(!1)
         },
         disableExitButton: !0,
-        body: (0, bW.jsxs)(ZW.i, {
+        body: (0, aR.jsxs)(KR.g, {
           className: "PublishingPolicyPopup",
           title: "worldBuilder:publishingPolicy",
           padStartsOn: "content",
           confirm: {
             text: "worldBuilder:publishAsGame",
-            disabled: !OW,
+            disabled: !GR,
             onClick: () => {
-              iW(!0)
+              JR(!0)
             }
           },
           cancel: {
             text: "general:cancel",
             onClick: () => {
-              iW(!1)
+              JR(!1)
             }
           },
-          children: [(0, bW.jsx)(sW, {
-            onScrolledToEnd: LW
-          }), (0, bW.jsx)(wW.e, {
+          children: [(0, aR.jsx)(WR, {
+            onScrolledToEnd: qR
+          }), (0, aR.jsx)(fR.g, {
             className: "PublishingPolicyAgree",
-            label: NW ? "worldBuilder:agreeToPublishingPolicy" : "worldBuilder:scrollToAgreeToPublishingPolicy",
-            disabled: !NW,
+            label: uR ? "worldBuilder:agreeToPublishingPolicy" : "worldBuilder:scrollToAgreeToPublishingPolicy",
+            disabled: !uR,
             onLabelClick: () => {
-              EW(!OW)
+              tR(!GR)
             },
-            children: (0, bW.jsx)(wW.d, {
-              checked: OW,
-              setChecked: EW,
-              disabled: !NW
+            children: (0, aR.jsx)(fR.c, {
+              checked: GR,
+              setChecked: tR,
+              disabled: !uR
             })
           })]
         })
       })
     }
 
-    function KW() {
+    function CR() {
       const {
-        t: WW
-      } = (0, cW.B)(), [iW, OW] = (0, mW.useState)(!1);
-      return (0, bW.jsxs)(bW.Fragment, {
-        children: [(0, bW.jsxs)(xW.Z, {
+        t: RR
+      } = (0, iR.A)(), [JR, GR] = (0, yR.useState)(!1);
+      return (0, aR.jsxs)(aR.Fragment, {
+        children: [(0, aR.jsxs)(wR.U, {
           className: "PublishingPolicyLink",
           onClick: () => {
-            OW(!0)
+            GR(!0)
           },
-          children: [(0, bW.jsx)(tW.c, {
+          children: [(0, aR.jsx)(VR.d, {
             name: "shield-halved"
-          }), " ", WW("worldBuilder:publishingPolicy")]
-        }), iW && (0, bW.jsx)(jW, {
+          }), " ", RR("worldBuilder:publishingPolicy")]
+        }), JR && (0, aR.jsx)(LR, {
           close: () => {
-            OW(!1)
+            GR(!1)
           },
-          body: (0, bW.jsx)(ZW.i, {
+          body: (0, aR.jsx)(KR.g, {
             className: "PublishingPolicyPopup",
             title: "worldBuilder:publishingPolicy",
-            children: (0, bW.jsx)(sW, {})
+            children: (0, aR.jsx)(WR, {})
           })
         })]
       })
     }
   },
-  5686: (WW, iW, OW) => {
-    OW.d(iW, {
-      h: () => xi,
-      d: () => Zi,
-      g: () => ti,
-      j: () => li
+  5814: (RR, JR, GR) => {
+    GR.d(JR, {
+      g: () => wJ,
+      c: () => KJ,
+      e: () => VJ,
+      h: () => rJ
     });
-    var mW = OW(62),
-      EW = OW(1422),
-      NW = OW(1532),
-      PW = OW(1782),
-      LW = OW(1172),
-      cW = OW(1383),
-      wW = OW(1434),
-      tW = OW(1391),
-      ZW = OW(1217),
-      xW = OW(1089),
-      lW = OW.n(xW),
-      AW = OW(327),
-      bW = OW(5318),
-      jW = OW(5713),
-      UW = OW(1230),
-      kW = OW(5693),
-      sW = OW(4292),
-      MW = OW(5706),
-      KW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1493),
+      uR = GR(1590),
+      ZR = GR(1867),
+      qR = GR(1270),
+      iR = GR(1465),
+      fR = GR(1501),
+      VR = GR(1468),
+      KR = GR(1317),
+      wR = GR(1163),
+      rR = GR.n(wR),
+      eR = GR(359),
+      aR = GR(5425),
+      LR = GR(5836),
+      nR = GR(1336),
+      UR = GR(5817),
+      WR = GR(4375),
+      AR = GR(5828),
+      CR = GR(1378);
 
-    function SW(WW) {
+    function XR(RR) {
       let {
-        icon: iW,
-        title: OW,
-        disabled: mW,
-        children: EW
-      } = WW;
-      return (0, KW.jsxs)("div", {
-        className: lW()("ManageCard", {
-          ManageCardDisabled: mW
+        icon: JR,
+        title: GR,
+        disabled: yR,
+        children: tR
+      } = RR;
+      return (0, CR.jsxs)("div", {
+        className: rR()("ManageCard", {
+          ManageCardDisabled: yR
         }),
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, KW.jsx)(tW.c, {
-              name: iW
+            children: (0, CR.jsx)(VR.d, {
+              name: JR
             })
-          }), (0, KW.jsx)("div", {
-            children: (0, KW.jsx)("h2", {
+          }), (0, CR.jsx)("div", {
+            children: (0, CR.jsx)("h2", {
               className: "ManageCardTitle",
-              children: OW
+              children: GR
             })
           })]
-        }), (0, KW.jsxs)("div", {
+        }), (0, CR.jsxs)("div", {
           className: "ManageCardBody",
-          children: [EW, mW && (0, KW.jsx)("div", {
+          children: [tR, yR && (0, CR.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function YW(WW) {
+    function MR(RR) {
       let {
-        label: iW,
-        caption: OW,
-        children: mW
-      } = WW;
-      return (0, KW.jsxs)("div", {
+        label: JR,
+        caption: GR,
+        children: yR
+      } = RR;
+      return (0, CR.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: iW
-        }), mW, OW && (0, KW.jsx)("div", {
+          children: JR
+        }), yR, GR && (0, CR.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: OW
+          children: GR
         })]
       })
     }
 
-    function yW(WW) {
+    function BR(RR) {
       let {
-        label: iW,
-        caption: OW,
-        disabled: mW,
-        children: EW
-      } = WW;
-      return (0, KW.jsxs)("div", {
-        className: lW()("ManageField", {
-          ManageFieldDisabled: mW
+        label: JR,
+        caption: GR,
+        disabled: yR,
+        children: tR
+      } = RR;
+      return (0, CR.jsxs)("div", {
+        className: rR()("ManageField", {
+          ManageFieldDisabled: yR
         }),
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "ManageFieldLabel",
-            children: iW
-          }), (0, KW.jsx)("div", {
+            children: JR
+          }), (0, CR.jsx)("div", {
             className: "ManageFieldCaption",
-            children: OW
+            children: GR
           })]
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "ManageFieldControl",
-          children: EW
+          children: tR
         })]
       })
     }
 
-    function TW(WW) {
-      var iW, OW;
+    function lR(RR) {
+      var JR, GR;
       let {
-        schematicData: mW,
-        updateSchematicData: EW,
-        publishFormEnabled: NW,
-        formEnabled: PW
-      } = WW;
+        schematicData: yR,
+        updateSchematicData: tR,
+        publishFormEnabled: uR,
+        formEnabled: ZR
+      } = RR;
       const {
-        t: cW
-      } = (0, LW.B)(), wW = !NW, tW = {
+        t: iR
+      } = (0, qR.A)(), fR = !uR, VR = {
         tpRequests: {
-          isEnabled: () => !mW.disableTpRequests,
-          WK: WW => EW("disableTpRequests", !WW)
+          isEnabled: () => !yR.disableTpRequests,
+          JA: RR => tR("disableTpRequests", !RR)
         },
         spawnProtection: {
-          isEnabled: () => !mW.disableSpawnProtection,
-          WK: WW => EW("disableSpawnProtection", !WW)
+          isEnabled: () => !yR.disableSpawnProtection,
+          JA: RR => tR("disableSpawnProtection", !RR)
         },
         spawnReset: {
-          isEnabled: () => !!mW.enableSpawnReset,
-          WK: WW => EW("enableSpawnReset", WW)
+          isEnabled: () => !!yR.enableSpawnReset,
+          JA: RR => tR("enableSpawnReset", RR)
         },
         smpMarketplace: {
-          isEnabled: () => !!mW.enableSmpMarketplace,
-          WK: WW => EW("enableSmpMarketplace", WW)
+          isEnabled: () => !!yR.enableSmpMarketplace,
+          JA: RR => tR("enableSmpMarketplace", RR)
         },
         survivalGuns: {
-          isEnabled: () => !!mW.enableSurvivalGuns,
-          WK: WW => EW("enableSurvivalGuns", WW)
+          isEnabled: () => !!yR.enableSurvivalGuns,
+          JA: RR => tR("enableSurvivalGuns", RR)
         },
         fallDamage: {
-          isEnabled: () => !mW.disableFallDamage,
-          WK: WW => EW("disableFallDamage", !WW)
+          isEnabled: () => !yR.disableFallDamage,
+          JA: RR => tR("disableFallDamage", !RR)
         },
         dayNight: {
-          isEnabled: () => !!mW.enableDayNight,
-          WK: WW => EW("enableDayNight", WW)
+          isEnabled: () => !!yR.enableDayNight,
+          JA: RR => tR("enableDayNight", RR)
         }
       };
-      return (0, KW.jsxs)(KW.Fragment, {
-        children: [!1 === mW.schematicContainsSpawnBlock && (0, KW.jsx)("div", {
+      return (0, CR.jsxs)(CR.Fragment, {
+        children: [!1 === yR.schematicContainsSpawnBlock && (0, CR.jsx)("div", {
           className: "ManageWarningBanner",
-          children: cW("worldBuilder:mustContainSpawnBlock")
-        }), (0, KW.jsxs)("div", {
+          children: iR("worldBuilder:mustContainSpawnBlock")
+        }), (0, CR.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, KW.jsxs)(SW, {
+          children: [(0, CR.jsxs)(XR, {
             icon: "globe",
-            title: cW("worldBuilder:worldRulesSection"),
-            disabled: !PW,
-            children: [(0, KW.jsx)(yW, {
-              label: cW("classic:defaultGamemode"),
-              caption: cW("classic:defaultGamemodeDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(sW.e, {
+            title: iR("worldBuilder:worldRulesSection"),
+            disabled: !ZR,
+            children: [(0, CR.jsx)(BR, {
+              label: iR("classic:defaultGamemode"),
+              caption: iR("classic:defaultGamemodeDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(WR.e, {
                 controlClassName: "ManageDropdown",
-                options: bW.M.map((WW => ({
-                  value: WW,
-                  label: AW.p[WW]
+                options: aR.B.map((RR => ({
+                  value: RR,
+                  label: eR.s[RR]
                 }))),
-                value: mW.defaultGamemode,
-                onChange: WW => EW("defaultGamemode", WW.value)
+                value: yR.defaultGamemode,
+                onChange: RR => tR("defaultGamemode", RR.value)
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:voidDeathHeight"),
-              caption: cW("classic:voidDeathHeightDescription"),
-              disabled: wW,
-              children: (0, KW.jsxs)("div", {
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:voidDeathHeight"),
+              caption: iR("classic:voidDeathHeightDescription"),
+              disabled: fR,
+              children: (0, CR.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, KW.jsx)("input", {
+                children: [(0, CR.jsx)("input", {
                   type: "number",
-                  max: UW.v,
-                  value: null !== (iW = mW.voidDeathHeight) && void 0 !== iW ? iW : "",
-                  onChange: WW => {
-                    const iW = parseInt(WW.target.value);
-                    EW("voidDeathHeight", iW)
+                  max: nR.I,
+                  value: null !== (JR = yR.voidDeathHeight) && void 0 !== JR ? JR : "",
+                  onChange: RR => {
+                    const JR = parseInt(RR.target.value);
+                    tR("voidDeathHeight", JR)
                   }
-                }), (0, KW.jsx)("span", {
+                }), (0, CR.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: cW("worldBuilder:blocksUnit")
+                  children: iR("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:worldBorder"),
-              caption: cW("classic:worldBorderDescription"),
-              disabled: wW,
-              children: (0, KW.jsxs)("div", {
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:worldBorder"),
+              caption: iR("classic:worldBorderDescription"),
+              disabled: fR,
+              children: (0, CR.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, KW.jsx)("input", {
+                children: [(0, CR.jsx)("input", {
                   type: "number",
-                  min: UW.D,
-                  max: UW.z,
-                  placeholder: cW("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (OW = mW.worldBorder) && void 0 !== OW ? OW : "",
-                  onChange: WW => {
-                    const iW = parseInt(WW.target.value);
-                    EW("worldBorder", isNaN(iW) ? null : iW)
+                  min: nR.N,
+                  max: nR.J,
+                  placeholder: iR("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (GR = yR.worldBorder) && void 0 !== GR ? GR : "",
+                  onChange: RR => {
+                    const JR = parseInt(RR.target.value);
+                    tR("worldBorder", isNaN(JR) ? null : JR)
                   }
-                }), (0, KW.jsx)("span", {
+                }), (0, CR.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: cW("worldBuilder:blocksUnit")
+                  children: iR("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:disableMobs"),
-              caption: cW("classic:disableMobsDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(kW.f, {
-                checked: mW.disableMobs,
-                setChecked: WW => EW("disableMobs", WW),
-                disabled: wW
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:disableMobs"),
+              caption: iR("classic:disableMobsDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(UR.h, {
+                checked: yR.disableMobs,
+                setChecked: RR => tR("disableMobs", RR),
+                disabled: fR
               })
             })]
-          }), (0, KW.jsxs)(SW, {
+          }), (0, CR.jsxs)(XR, {
             icon: "user-group",
-            title: cW("worldBuilder:playerAndLobbySection"),
-            disabled: !PW,
-            children: [(0, KW.jsx)(yW, {
-              label: cW("classic:disableKeepInventory"),
-              caption: cW("classic:disableKeepInventoryDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(kW.f, {
-                checked: mW.disableKeepInventory,
-                setChecked: WW => EW("disableKeepInventory", WW),
-                disabled: wW
+            title: iR("worldBuilder:playerAndLobbySection"),
+            disabled: !ZR,
+            children: [(0, CR.jsx)(BR, {
+              label: iR("classic:disableKeepInventory"),
+              caption: iR("classic:disableKeepInventoryDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(UR.h, {
+                checked: yR.disableKeepInventory,
+                setChecked: RR => tR("disableKeepInventory", RR),
+                disabled: fR
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:persistInventory"),
-              caption: cW("classic:persistInventoryDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(sW.e, {
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:persistInventory"),
+              caption: iR("classic:persistInventoryDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(WR.e, {
                 controlClassName: "ManageDropdown",
-                options: bW.r.map((WW => ({
-                  value: WW,
-                  label: AW.g[WW]
+                options: aR.m.map((RR => ({
+                  value: RR,
+                  label: eR.i[RR]
                 }))),
-                value: mW.persistInventory,
-                onChange: WW => EW("persistInventory", WW.value)
+                value: yR.persistInventory,
+                onChange: RR => tR("persistInventory", RR.value)
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:persistWorld"),
-              caption: cW("classic:persistWorldDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(kW.f, {
-                checked: mW.persistWorld,
-                setChecked: WW => EW("persistWorld", WW),
-                disabled: wW
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:persistWorld"),
+              caption: iR("classic:persistWorldDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(UR.h, {
+                checked: yR.persistWorld,
+                setChecked: RR => tR("persistWorld", RR),
+                disabled: fR
               })
-            }), jW.d && mW.persistWorld && (0, KW.jsx)(yW, {
-              label: cW("classic:fluidFlow"),
-              caption: cW("classic:fluidFlowDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(kW.f, {
-                checked: mW.enableFluidFlow,
-                setChecked: WW => EW("enableFluidFlow", WW),
-                disabled: wW
+            }), LR.c && yR.persistWorld && (0, CR.jsx)(BR, {
+              label: iR("classic:fluidFlow"),
+              caption: iR("classic:fluidFlowDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(UR.h, {
+                checked: yR.enableFluidFlow,
+                setChecked: RR => tR("enableFluidFlow", RR),
+                disabled: fR
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:disableLobbySpawn"),
-              caption: cW("classic:disableLobbySpawnDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(kW.f, {
-                checked: mW.disableLobbySpawn,
-                setChecked: WW => EW("disableLobbySpawn", WW),
-                disabled: wW
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:disableLobbySpawn"),
+              caption: iR("classic:disableLobbySpawnDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(UR.h, {
+                checked: yR.disableLobbySpawn,
+                setChecked: RR => tR("disableLobbySpawn", RR),
+                disabled: fR
               })
-            }), (0, KW.jsx)(yW, {
-              label: cW("classic:hideLobbyCode"),
-              caption: cW("classic:hideLobbyCodeDescription"),
-              disabled: wW,
-              children: (0, KW.jsx)(kW.f, {
-                checked: mW.hideLobbyCode,
-                setChecked: WW => EW("hideLobbyCode", WW),
-                disabled: wW
+            }), (0, CR.jsx)(BR, {
+              label: iR("classic:hideLobbyCode"),
+              caption: iR("classic:hideLobbyCodeDescription"),
+              disabled: fR,
+              children: (0, CR.jsx)(UR.h, {
+                checked: yR.hideLobbyCode,
+                setChecked: RR => tR("hideLobbyCode", RR),
+                disabled: fR
               })
             })]
           })]
-        }), (0, KW.jsx)(SW, {
+        }), (0, CR.jsx)(XR, {
           icon: "layer-group",
-          title: cW("worldBuilder:pluginsSection"),
-          disabled: !PW,
-          children: (0, KW.jsx)(MW.b, {
-            callbacks: tW,
-            disabled: wW,
+          title: iR("worldBuilder:pluginsSection"),
+          disabled: !ZR,
+          children: (0, CR.jsx)(AR.b, {
+            callbacks: VR,
+            disabled: fR,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var JW = OW(5832),
-      hW = OW(1673),
-      HW = OW(1584),
-      nW = OW(4723),
-      uW = OW(1107),
-      oW = OW(5668),
-      dW = OW(5864),
-      eW = OW(1536),
-      vW = OW(5856),
-      gW = OW(5848);
-    const DW = 50,
-      VW = .3;
-    async function pW(WW) {
-      const iW = await
-      function(WW) {
-        return new Promise(((iW, OW) => {
-          const mW = new FileReader;
-          mW.onload = () => iW(mW.result), mW.onerror = OW, mW.readAsDataURL(WW)
+    var pR = GR(5976),
+      gR = GR(1740),
+      bR = GR(1647),
+      vR = GR(4829),
+      OR = GR(1196),
+      xR = GR(5792),
+      NR = GR(6003),
+      DR = GR(1594),
+      HR = GR(5996),
+      oR = GR(5987);
+    const cR = 50,
+      PR = .3;
+    async function IR(RR) {
+      const JR = await
+      function(RR) {
+        return new Promise(((JR, GR) => {
+          const yR = new FileReader;
+          yR.onload = () => JR(yR.result), yR.onerror = GR, yR.readAsDataURL(RR)
         }))
-      }(WW), OW = await
-      function(WW) {
-        return new Promise(((iW, OW) => {
-          const mW = new Image;
-          mW.onload = () => iW(mW), mW.onerror = () => OW(new Error("Failed to load image")), mW.src = WW
+      }(RR), GR = await
+      function(RR) {
+        return new Promise(((JR, GR) => {
+          const yR = new Image;
+          yR.onload = () => JR(yR), yR.onerror = () => GR(new Error("Failed to load image")), yR.src = RR
         }))
-      }(iW);
-      if (OW.naturalHeight > OW.naturalWidth) throw new fW;
-      const mW = 1024 * DW,
+      }(JR);
+      if (GR.naturalHeight > GR.naturalWidth) throw new mR;
+      const yR = 1024 * cR,
         {
-          dataUrl: EW,
-          finalQuality: NW
-        } = function(WW, iW) {
-          const OW = document.createElement("canvas");
-          OW.width = WW.naturalWidth, OW.height = WW.naturalHeight, OW.getContext("2d").drawImage(WW, 0, 0);
-          let mW = .92,
-            EW = OW.toDataURL("image/jpeg", mW);
-          for (; .75 * EW.length > iW && mW > .05;) mW -= .05, EW = OW.toDataURL("image/jpeg", mW);
+          dataUrl: tR,
+          finalQuality: uR
+        } = function(RR, JR) {
+          const GR = document.createElement("canvas");
+          GR.width = RR.naturalWidth, GR.height = RR.naturalHeight, GR.getContext("2d").drawImage(RR, 0, 0);
+          let yR = .92,
+            tR = GR.toDataURL("image/jpeg", yR);
+          for (; .75 * tR.length > JR && yR > .05;) yR -= .05, tR = GR.toDataURL("image/jpeg", yR);
           return {
-            dataUrl: EW,
-            finalQuality: mW
+            dataUrl: tR,
+            finalQuality: yR
           }
-        }(OW, mW);
-      if (Math.ceil(.75 * EW.length) > mW) throw new CW;
+        }(GR, yR);
+      if (Math.ceil(.75 * tR.length) > yR) throw new zR;
       return {
-        base64Jpg: EW,
-        heavilyCompressed: NW < VW
+        base64Jpg: tR,
+        heavilyCompressed: uR < PR
       }
     }
-    class fW extends Error {}
-    class CW extends Error {}
+    class mR extends Error {}
+    class zR extends Error {}
 
-    function XW(WW) {
-      var iW;
+    function SR(RR) {
+      var JR;
       let {
-        schematicId: OW,
-        hasReadUploadPolicy: EW,
-        onPolicyValidationError: cW,
-        onThumbnailReady: wW
-      } = WW;
+        schematicId: GR,
+        hasReadUploadPolicy: tR,
+        onPolicyValidationError: iR,
+        onThumbnailReady: fR
+      } = RR;
       const {
-        t: xW
-      } = (0, LW.B)(), [AW, bW] = (0, mW.useState)(null), [jW, UW] = (0, mW.useState)(""), [kW, sW] = (0, mW.useState)(""), [MW, SW] = (0, mW.useState)(!0), [YW, yW] = (0, mW.useState)(!1), TW = (0, mW.useRef)(!1), [JW, hW] = (0, mW.useState)(null), [HW, nW] = (0, mW.useState)(!1), [uW, oW] = (0, mW.useState)(!1), eW = (0, mW.useRef)(0), {
-        getRootProps: vW,
-        getInputProps: gW,
-        isDragActive: DW
-      } = (0, dW.e)({
+        t: wR
+      } = (0, qR.A)(), [eR, aR] = (0, yR.useState)(null), [LR, nR] = (0, yR.useState)(""), [UR, WR] = (0, yR.useState)(""), [AR, XR] = (0, yR.useState)(!0), [MR, BR] = (0, yR.useState)(!1), lR = (0, yR.useRef)(!1), [pR, gR] = (0, yR.useState)(null), [bR, vR] = (0, yR.useState)(!1), [OR, xR] = (0, yR.useState)(!1), DR = (0, yR.useRef)(0), {
+        getRootProps: HR,
+        getInputProps: oR,
+        isDragActive: cR
+      } = (0, NR.e)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async WW => {
-          if (0 === WW.length) return;
-          const iW = WW[0],
-            OW = ++eW.current;
-          hW(null), nW(!1), bW(null), UW(iW.name);
+        onDrop: async RR => {
+          if (0 === RR.length) return;
+          const JR = RR[0],
+            GR = ++DR.current;
+          gR(null), vR(!1), aR(null), nR(JR.name);
           try {
-            const WW = await pW(iW);
-            if (OW !== eW.current) return;
-            bW(WW), nW(WW.heavilyCompressed)
-          } catch (mW) {
-            if (OW !== eW.current) return;
-            hW(xW(mW instanceof fW ? "thumbnail:portraitImagesNotAllowed" : mW instanceof CW ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const RR = await IR(JR);
+            if (GR !== DR.current) return;
+            aR(RR), vR(RR.heavilyCompressed)
+          } catch (yR) {
+            if (GR !== DR.current) return;
+            gR(wR(yR instanceof mR ? "thumbnail:portraitImagesNotAllowed" : yR instanceof zR ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), VW = jW.length <= 30 ? jW : `${jW.slice(0,27)}...`, XW = null !== (iW = null === AW || void 0 === AW ? void 0 : AW.base64Jpg) && void 0 !== iW ? iW : null, BW = kW.trim(), qW = BW.length >= ZW.o && BW.length <= ZW.n, RW = uW && !AW && !JW, GW = uW && !qW;
-      return (0, KW.jsxs)("div", {
+      }), PR = LR.length <= 30 ? LR : `${LR.slice(0,27)}...`, SR = null !== (JR = null === eR || void 0 === eR ? void 0 : eR.base64Jpg) && void 0 !== JR ? JR : null, jR = UR.trim(), dR = jR.length >= KR.h && jR.length <= KR.f, ER = OR && !eR && !pR, YR = OR && !dR;
+      return (0, CR.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, KW.jsxs)("div", {
-          ...vW({
-            className: lW()("ThumbnailUploadDropzone", {
-              ActiveDrag: DW,
-              ValidationError: RW
+        children: [(0, CR.jsxs)("div", {
+          ...HR({
+            className: rR()("ThumbnailUploadDropzone", {
+              ActiveDrag: cR,
+              ValidationError: ER
             })
           }),
-          children: [(0, KW.jsx)("input", {
-            ...gW()
-          }), !DW && XW ? (0, KW.jsxs)(KW.Fragment, {
-            children: [(0, KW.jsxs)("div", {
+          children: [(0, CR.jsx)("input", {
+            ...oR()
+          }), !cR && SR ? (0, CR.jsxs)(CR.Fragment, {
+            children: [(0, CR.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, KW.jsxs)("div", {
+              children: [(0, CR.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, KW.jsx)("div", {
+                children: [(0, CR.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, KW.jsx)("div", {
+                }), (0, CR.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, KW.jsx)("img", {
-                    src: XW,
+                  children: (0, CR.jsx)("img", {
+                    src: SR,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, KW.jsxs)("div", {
+              }), (0, CR.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, KW.jsx)("div", {
+                children: [(0, CR.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, KW.jsx)("div", {
+                }), (0, CR.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, KW.jsx)("img", {
-                    src: XW,
+                  children: (0, CR.jsx)("img", {
+                    src: SR,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, KW.jsxs)("div", {
-              children: [(0, KW.jsx)("div", {
+            }), (0, CR.jsxs)("div", {
+              children: [(0, CR.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: VW
-              }), (0, KW.jsx)("div", {
+                children: PR
+              }), (0, CR.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: xW("thumbnail:preview")
+                children: wR("thumbnail:preview")
               })]
             })]
-          }) : (0, KW.jsxs)(KW.Fragment, {
-            children: [(0, KW.jsx)("div", {
+          }) : (0, CR.jsxs)(CR.Fragment, {
+            children: [(0, CR.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, KW.jsx)(tW.c, {
+              children: (0, CR.jsx)(VR.d, {
                 name: "image"
               })
-            }), (0, KW.jsx)("div", {
+            }), (0, CR.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: xW("thumbnail:dragImageHere")
+              children: wR("thumbnail:dragImageHere")
             })]
           })]
-        }), RW && (0, KW.jsx)("div", {
+        }), ER && (0, CR.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: xW("thumbnail:imageRequired")
-        }), (0, KW.jsx)(PW.b, {
-          className: lW()("ThumbnailUploadNameInput", {
-            ValidationError: GW
+          children: wR("thumbnail:imageRequired")
+        }), (0, CR.jsx)(ZR.b, {
+          className: rR()("ThumbnailUploadNameInput", {
+            ValidationError: YR
           }),
-          placeholderText: xW("thumbnail:thumbnailName"),
-          defaultValue: kW,
-          onValueChange: WW => {
-            sW(WW)
+          placeholderText: wR("thumbnail:thumbnailName"),
+          defaultValue: UR,
+          onValueChange: RR => {
+            WR(RR)
           },
-          maxLength: ZW.n
-        }), GW && (0, KW.jsx)("div", {
+          maxLength: KR.f
+        }), YR && (0, CR.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: xW("thumbnail:nameRequired", {
-            min: ZW.o,
-            max: ZW.n
+          children: wR("thumbnail:nameRequired", {
+            min: KR.h,
+            max: KR.f
           })
-        }), (0, KW.jsxs)("label", {
+        }), (0, CR.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, KW.jsx)("input", {
+          children: [(0, CR.jsx)("input", {
             type: "checkbox",
-            checked: MW,
-            onChange: WW => {
-              SW(WW.target.checked)
+            checked: AR,
+            onChange: RR => {
+              XR(RR.target.checked)
             }
-          }), xW("thumbnail:setAsThumbnailOnceApproved")]
-        }), HW && (0, KW.jsx)("div", {
+          }), wR("thumbnail:setAsThumbnailOnceApproved")]
+        }), bR && (0, CR.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: xW("thumbnail:heavyCompressionWarning")
-        }), JW && (0, KW.jsx)("div", {
+          children: wR("thumbnail:heavyCompressionWarning")
+        }), pR && (0, CR.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: JW
-        }), (0, KW.jsx)(NW.n, {
-          disabled: YW,
+          children: pR
+        }), (0, CR.jsx)(uR.n, {
+          disabled: MR,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (oW(!0), !TW.current && AW && qW && EW) {
-              TW.current = !0, yW(!0), hW(null);
+            if (xR(!0), !lR.current && eR && dR && tR) {
+              lR.current = !0, BR(!0), gR(null);
               try {
-                await wW(AW.base64Jpg, BW, MW ? OW : null)
-              } catch (WW) {
-                hW(WW.errorMessageForUser ? xW(WW.errorMessageForUser, WW.errorMessageTranslationParams) : xW("thumbnail:failedToUploadImage"))
+                await fR(eR.base64Jpg, jR, AR ? GR : null)
+              } catch (RR) {
+                gR(RR.errorMessageForUser ? wR(RR.errorMessageForUser, RR.errorMessageTranslationParams) : wR("thumbnail:failedToUploadImage"))
               } finally {
-                TW.current = !1, yW(!1)
+                lR.current = !1, BR(!1)
               }
-            } else EW || cW()
+            } else tR || iR()
           },
-          children: xW(YW ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: wR(MR ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const BW = 2e3;
+    const jR = 2e3;
 
-    function qW(WW) {
+    function dR(RR) {
       let {
-        schematicId: iW,
-        ownedThumbnailCount: OW,
-        onClose: EW,
-        onThumbnailReady: NW
-      } = WW;
+        schematicId: JR,
+        ownedThumbnailCount: GR,
+        onClose: tR,
+        onThumbnailReady: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, LW.B)(), {
-        userContext: wW
-      } = (0, uW.e)(), [xW, AW] = (0, mW.useState)(!1), [bW, jW] = (0, mW.useState)(!1), [UW, kW] = (0, mW.useState)(!1), sW = (0, mW.useRef)(), {
-        loading: MW,
-        eligibility: SW
-      } = (0, vW.b)(), YW = (0, vW.e)();
-      (0, mW.useEffect)((() => () => {
-        clearTimeout(sW.current)
+        t: ZR
+      } = (0, qR.A)(), {
+        userContext: fR
+      } = (0, OR.d)(), [wR, eR] = (0, yR.useState)(!1), [aR, LR] = (0, yR.useState)(!1), [nR, UR] = (0, yR.useState)(!1), WR = (0, yR.useRef)(), {
+        loading: AR,
+        eligibility: XR
+      } = (0, HR.e)(), MR = (0, HR.f)();
+      (0, yR.useEffect)((() => () => {
+        clearTimeout(WR.current)
       }), []);
-      const yW = [];
-      wW.isLoggedIn() || yW.push(PW("thumbnail:mustBeLoggedInToUpload")), OW >= ZW.bb && yW.push(PW("thumbnail:thumbnailLimitReachedPleaseDelete", {
-        max: ZW.bb
+      const BR = [];
+      fR.isLoggedIn() || BR.push(ZR("thumbnail:mustBeLoggedInToUpload")), GR >= KR.O && BR.push(ZR("thumbnail:thumbnailLimitReachedPleaseDelete", {
+        max: KR.O
       }));
-      const TW = null === SW || void 0 === SW ? void 0 : SW.thumbnailUploadWait;
-      if (TW && yW.push(YW("accountAge" === TW.reason ? "thumbnail:accountTooNewUntil" : "thumbnail:uploadCooldownUntil", TW.until)), !xW && yW.length > 0) return (0, KW.jsxs)("div", {
+      const lR = null === XR || void 0 === XR ? void 0 : XR.thumbnailUploadWait;
+      if (lR && BR.push(MR("accountAge" === lR.reason ? "thumbnail:accountTooNewUntil" : "thumbnail:uploadCooldownUntil", lR.until)), !wR && BR.length > 0) return (0, CR.jsxs)("div", {
         className: "ThumbnailUploaderInner",
-        children: [(0, KW.jsx)("h1", {
+        children: [(0, CR.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: PW("thumbnail:cannotUploadThumbnail")
-        }), yW.map((WW => (0, KW.jsxs)("div", {
+          children: ZR("thumbnail:cannotUploadThumbnail")
+        }), BR.map((RR => (0, CR.jsxs)("div", {
           className: "CannotUploadThumbnailItem",
-          children: [(0, KW.jsx)(tW.c, {
+          children: [(0, CR.jsx)(VR.d, {
             name: "triangle-exclamation"
-          }), (0, KW.jsx)("span", {
-            children: WW
+          }), (0, CR.jsx)("span", {
+            children: RR
           })]
-        }, WW)))]
+        }, RR)))]
       });
-      if (MW) return (0, KW.jsx)("div", {
+      if (AR) return (0, CR.jsx)("div", {
         className: "ThumbnailUploaderInner",
-        children: (0, KW.jsx)(cW.d, {})
+        children: (0, CR.jsx)(iR.d, {})
       });
-      return (0, KW.jsxs)("div", {
-        className: lW()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: xW
+      return (0, CR.jsxs)("div", {
+        className: rR()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: wR
         }),
-        children: [xW && (0, KW.jsxs)("div", {
+        children: [wR && (0, CR.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, KW.jsxs)("div", {
+          children: [(0, CR.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, KW.jsx)(tW.c, {
+            children: [(0, CR.jsx)(VR.d, {
               name: "check"
-            }), (0, KW.jsx)(eW.d, {})]
-          }), (0, KW.jsx)("div", {
+            }), (0, CR.jsx)(DR.b, {})]
+          }), (0, CR.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: PW("thumbnail:thumbnailUploaded")
+            children: ZR("thumbnail:thumbnailUploaded")
           })]
-        }), (0, KW.jsx)("h1", {
+        }), (0, CR.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: PW("thumbnail:uploadThumbnail")
-        }), (0, KW.jsxs)("div", {
+          children: ZR("thumbnail:uploadThumbnail")
+        }), (0, CR.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, KW.jsxs)("div", {
+          children: [(0, CR.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, KW.jsx)("h3", {
+            children: [(0, CR.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: PW("thumbnail:chooseImage", {
-                maxSizeKb: DW
+              children: ZR("thumbnail:chooseImage", {
+                maxSizeKb: cR
               })
-            }), (0, KW.jsx)(XW, {
-              schematicId: iW,
-              hasReadUploadPolicy: bW,
+            }), (0, CR.jsx)(SR, {
+              schematicId: JR,
+              hasReadUploadPolicy: aR,
               onPolicyValidationError: () => {
-                kW(!0)
+                UR(!0)
               },
-              onThumbnailReady: async (WW, iW, OW) => {
-                await NW(WW, iW, OW), AW(!0), sW.current = setTimeout(EW, BW)
+              onThumbnailReady: async (RR, JR, GR) => {
+                await uR(RR, JR, GR), eR(!0), WR.current = setTimeout(tR, jR)
               }
             })]
-          }), (0, KW.jsxs)("div", {
+          }), (0, CR.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, KW.jsx)("h3", {
+            children: [(0, CR.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: PW("thumbnail:uploadPolicy")
-            }), (0, KW.jsx)(gW.c, {
+              children: ZR("thumbnail:uploadPolicy")
+            }), (0, CR.jsx)(oR.e, {
               allowed: ["thumbnail:policyFollowGuidelines", "thumbnail:policyInGameAssets", "thumbnail:policyLimitText"],
               notAllowed: ["thumbnail:policyCopyrightContent", "thumbnail:policyOutOfGameAssets", "thumbnail:policyBloxdTags", "thumbnail:policyMustReflectGame"]
-            }), (0, KW.jsxs)("label", {
-              className: lW()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: UW && !bW
+            }), (0, CR.jsxs)("label", {
+              className: rR()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: nR && !aR
               }),
-              children: [(0, KW.jsx)("input", {
+              children: [(0, CR.jsx)("input", {
                 type: "checkbox",
-                checked: bW,
-                onChange: WW => {
-                  jW(WW.target.checked)
+                checked: aR,
+                onChange: RR => {
+                  LR(RR.target.checked)
                 }
-              }), PW("thumbnail:agreeToUploadPolicy")]
-            }), UW && !bW && (0, KW.jsx)("div", {
+              }), ZR("thumbnail:agreeToUploadPolicy")]
+            }), nR && !aR && (0, CR.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: PW("thumbnail:policyRequired")
+              children: ZR("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
 
-    function RW(WW) {
+    function ER(RR) {
       let {
-        imageUrl: iW,
-        thumbnailName: OW,
-        onClose: mW
-      } = WW;
+        imageUrl: JR,
+        thumbnailName: GR,
+        onClose: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, LW.B)();
-      return (0, KW.jsxs)("div", {
+        t: tR
+      } = (0, qR.A)();
+      return (0, CR.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: EW("thumbnail:deleteThumbnail")
-        }), (0, KW.jsxs)("div", {
+          children: tR("thumbnail:deleteThumbnail")
+        }), (0, CR.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [null !== iW && (0, KW.jsx)("img", {
+          children: [null !== JR && (0, CR.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: iW,
-            alt: OW
-          }), (0, KW.jsx)("div", {
+            src: JR,
+            alt: GR
+          }), (0, CR.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: OW
+            children: GR
           })]
-        }), (0, KW.jsx)("div", {
+        }), (0, CR.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: EW("thumbnail:deleteThumbnailConfirmation")
-        }), (0, KW.jsxs)("div", {
+          children: tR("thumbnail:deleteThumbnailConfirmation")
+        }), (0, CR.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, KW.jsxs)(NW.O, {
+          children: [(0, CR.jsxs)(uR.M, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => mW(!0),
-            children: [(0, KW.jsx)(tW.c, {
+            onClick: () => yR(!0),
+            children: [(0, CR.jsx)(VR.d, {
               name: "trash-can"
-            }), " ", EW("general:delete")]
-          }), (0, KW.jsx)(NW.h, {
+            }), " ", tR("general:delete")]
+          }), (0, CR.jsx)(uR.i, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => mW(!1),
-            children: EW("general:cancel")
+            onClick: () => yR(!1),
+            children: tR("general:cancel")
           })]
         })]
       })
     }
-    var GW = OW(192);
-    const IW = ["thumbnail:policyFollowGuidelines"],
-      aW = {
+    var YR = GR(216);
+    const kR = ["thumbnail:policyFollowGuidelines"],
+      QR = {
         "custom-game-bad-thumbnail": {
           policyRows: ["thumbnail:rejectionBreaksUploadPolicy"],
           example: null,
@@ -1037,797 +1037,797 @@ export const modules = {
           fix: "thumbnail:rejectionUnauthorisedBrandingFix"
         },
         "thumbnail-sexual-content": {
-          policyRows: IW,
+          policyRows: kR,
           example: "thumbnail:rejectionSexualExample",
           fix: "thumbnail:rejectionSexualFix"
         },
         "thumbnail-substances-content": {
-          policyRows: IW,
+          policyRows: kR,
           example: "thumbnail:rejectionSubstancesExample",
           fix: "thumbnail:rejectionSubstancesFix"
         },
         "thumbnail-violent-gore-content": {
-          policyRows: IW,
+          policyRows: kR,
           example: "thumbnail:rejectionViolenceExample",
           fix: "thumbnail:rejectionViolenceFix"
         }
       };
 
-    function rW(WW) {
+    function FR(RR) {
       let {
-        rejectedThumbnails: iW,
-        isAcknowledging: OW,
-        onAcknowledge: mW
-      } = WW;
+        rejectedThumbnails: JR,
+        isAcknowledging: GR,
+        onAcknowledge: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, LW.B)();
-      return (0, KW.jsxs)("div", {
+        t: tR
+      } = (0, qR.A)();
+      return (0, CR.jsxs)("div", {
         className: "ManageWarningBanner ThumbnailRejectionNotice",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: EW("thumbnail:rejectedByModerators")
-        }), iW.map((WW => (0, KW.jsx)(zW, {
-          rejected: WW
-        }, WW.thumbnail.id))), (0, KW.jsx)(NW.n, {
+          children: tR("thumbnail:rejectedByModerators")
+        }), JR.map((RR => (0, CR.jsx)(TR, {
+          rejected: RR
+        }, RR.thumbnail.id))), (0, CR.jsx)(uR.n, {
           className: "ThumbnailRejectionNoticeButton",
-          onClick: mW,
-          disabled: OW,
-          children: OW ? (0, KW.jsx)(cW.d, {}) : EW("thumbnail:gotIt")
+          onClick: yR,
+          disabled: GR,
+          children: GR ? (0, CR.jsx)(iR.d, {}) : tR("thumbnail:gotIt")
         })]
       })
     }
 
-    function zW(WW) {
-      var iW;
+    function TR(RR) {
+      var JR;
       let {
         rejected: {
-          thumbnail: OW,
-          rejection: mW
+          thumbnail: GR,
+          rejection: yR
         }
-      } = WW;
+      } = RR;
       const {
-        t: EW
-      } = (0, LW.B)(), NW = null !== (iW = (0, GW.c)(aW, mW.policyId)) && void 0 !== iW ? iW : aW["custom-game-bad-thumbnail"], PW = new Date(mW.at).toLocaleDateString();
-      return (0, KW.jsxs)("div", {
+        t: tR
+      } = (0, qR.A)(), uR = null !== (JR = (0, YR.b)(QR, yR.policyId)) && void 0 !== JR ? JR : QR["custom-game-bad-thumbnail"], ZR = new Date(yR.at).toLocaleDateString();
+      return (0, CR.jsxs)("div", {
         className: "RejectedThumbnail",
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "RejectedThumbnailImage",
-          children: [null !== OW.preview && (0, KW.jsx)("img", {
-            src: OW.preview,
-            alt: OW.name
-          }), null === OW.preview && (0, KW.jsx)(tW.c, {
+          children: [null !== GR.preview && (0, CR.jsx)("img", {
+            src: GR.preview,
+            alt: GR.name
+          }), null === GR.preview && (0, CR.jsx)(VR.d, {
             name: "image-slash"
           })]
-        }), (0, KW.jsxs)("div", {
+        }), (0, CR.jsxs)("div", {
           className: "RejectedThumbnailDetails",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "RejectedThumbnailName",
-            children: OW.name
-          }), (0, KW.jsx)("div", {
-            children: null !== mW.gameName ? EW("thumbnail:rejectedGameAndDate", {
-              game: mW.gameName,
-              date: PW
-            }) : PW
-          }), null !== mW.reason && (0, KW.jsx)("div", {
-            children: EW("creatorModeration:moderatorNote", {
-              reason: mW.reason
+            children: GR.name
+          }), (0, CR.jsx)("div", {
+            children: null !== yR.gameName ? tR("thumbnail:rejectedGameAndDate", {
+              game: yR.gameName,
+              date: ZR
+            }) : ZR
+          }), null !== yR.reason && (0, CR.jsx)("div", {
+            children: tR("creatorModeration:moderatorNote", {
+              reason: yR.reason
             })
-          }), NW.policyRows.length > 0 && (0, KW.jsx)("ul", {
+          }), uR.policyRows.length > 0 && (0, CR.jsx)("ul", {
             className: "RejectedThumbnailPolicyRows",
-            children: NW.policyRows.map((WW => (0, KW.jsxs)("li", {
-              children: [(0, KW.jsx)(tW.c, {
+            children: uR.policyRows.map((RR => (0, CR.jsxs)("li", {
+              children: [(0, CR.jsx)(VR.d, {
                 name: "x"
-              }), (0, KW.jsx)("span", {
-                children: EW(WW)
+              }), (0, CR.jsx)("span", {
+                children: tR(RR)
               })]
-            }, WW)))
-          }), (0, KW.jsxs)("div", {
-            children: [null !== NW.example && null === mW.reason && `${EW(NW.example)} `, EW(NW.fix)]
+            }, RR)))
+          }), (0, CR.jsxs)("div", {
+            children: [null !== uR.example && null === yR.reason && `${tR(uR.example)} `, tR(uR.fix)]
           })]
         })]
       })
     }
-    var FW = OW(1185);
+    var sR = GR(1282);
 
-    function QW(WW) {
-      return null !== WW.preview ? WW.preview : WW.approved ? `${FW.clientSideServerUrls.s3Url}/${(0,hW.h)(WW.id)}` : null
+    function hR(RR) {
+      return null !== RR.preview ? RR.preview : RR.approved ? `${sR.clientSideServerUrls.s3Url}/${(0,gR.i)(RR.id)}` : null
     }
 
-    function Wi(WW) {
-      return null !== WW.pendingKey ? {
-        pendingKey: WW.pendingKey
+    function RJ(RR) {
+      return null !== RR.pendingKey ? {
+        pendingKey: RR.pendingKey
       } : {
-        thumbnailId: WW.id
+        thumbnailId: RR.id
       }
     }
 
-    function ii(WW) {
-      var iW, OW;
+    function JJ(RR) {
+      var JR, GR;
       let {
-        schematicData: PW,
-        updateSchematicData: wW,
-        publishFormEnabled: ZW,
-        onClose: xW
-      } = WW;
+        schematicData: ZR,
+        updateSchematicData: fR,
+        publishFormEnabled: KR,
+        onClose: wR
+      } = RR;
       const {
-        t: AW
-      } = (0, LW.B)(), {
-        userContext: bW,
-        isUserContextUpdating: jW
-      } = (0, uW.e)(), UW = (0, nW.c)(), [kW, sW] = (0, mW.useState)([]), [MW, SW] = (0, mW.useState)([]), [YW, yW] = (0, mW.useState)(!0), [TW, JW] = (0, mW.useState)(!1), [hW, dW] = (0, mW.useState)(null !== (iW = PW.customThumbnailId) && void 0 !== iW ? iW : null), [eW, vW] = (0, mW.useState)(null), gW = (0, mW.useRef)(null !== (OW = PW.customThumbnailId) && void 0 !== OW ? OW : null), DW = (0, mW.useRef)(0), VW = (0, mW.useRef)(null), pW = (0, mW.useRef)(null), fW = (0, mW.useRef)(null), CW = (0, mW.useRef)(!1);
+        t: eR
+      } = (0, qR.A)(), {
+        userContext: aR,
+        isUserContextUpdating: LR
+      } = (0, OR.d)(), nR = (0, vR.d)(), [UR, WR] = (0, yR.useState)([]), [AR, XR] = (0, yR.useState)([]), [MR, BR] = (0, yR.useState)(!0), [lR, pR] = (0, yR.useState)(!1), [gR, NR] = (0, yR.useState)(null !== (JR = ZR.customThumbnailId) && void 0 !== JR ? JR : null), [DR, HR] = (0, yR.useState)(null), oR = (0, yR.useRef)(null !== (GR = ZR.customThumbnailId) && void 0 !== GR ? GR : null), cR = (0, yR.useRef)(0), PR = (0, yR.useRef)(null), IR = (0, yR.useRef)(null), mR = (0, yR.useRef)(null), zR = (0, yR.useRef)(!1);
 
-      function XW(WW, iW) {
-        fW.current && (clearTimeout(fW.current), fW.current = null), vW(WW), null !== WW && iW && (fW.current = setTimeout((() => {
-          vW(null), fW.current = null
+      function SR(RR, JR) {
+        mR.current && (clearTimeout(mR.current), mR.current = null), HR(RR), null !== RR && JR && (mR.current = setTimeout((() => {
+          HR(null), mR.current = null
         }), 5e3))
-      }(0, mW.useEffect)((() => () => {
-        clearTimeout(pW.current), clearTimeout(fW.current)
+      }(0, yR.useEffect)((() => () => {
+        clearTimeout(IR.current), clearTimeout(mR.current)
       }), []);
-      const BW = (0, mW.useCallback)((() => {
-        yW(!0), HW.e.getOwnedThumbnails(bW).then((WW => {
-          const iW = [],
-            OW = [];
-          for (const mW of WW.thumbnails) mW.rejection ? iW.push({
-            thumbnail: mW,
-            rejection: mW.rejection
-          }) : OW.push(mW);
-          iW.sort(((WW, iW) => iW.rejection.at - WW.rejection.at)), OW.sort(((WW, iW) => {
-            const OW = WW.approved ? 1 : 0,
-              mW = (iW.approved ? 1 : 0) - OW;
-            return 0 !== mW ? mW : iW.lastUpdatedAt - WW.lastUpdatedAt
-          })), SW(iW), sW(OW)
-        })).catch((WW => {
-          console.error("Failed to fetch thumbnails:", WW)
+      const jR = (0, yR.useCallback)((() => {
+        BR(!0), bR.c.getOwnedThumbnails(aR).then((RR => {
+          const JR = [],
+            GR = [];
+          for (const yR of RR.thumbnails) yR.rejection ? JR.push({
+            thumbnail: yR,
+            rejection: yR.rejection
+          }) : GR.push(yR);
+          JR.sort(((RR, JR) => JR.rejection.at - RR.rejection.at)), GR.sort(((RR, JR) => {
+            const GR = RR.approved ? 1 : 0,
+              yR = (JR.approved ? 1 : 0) - GR;
+            return 0 !== yR ? yR : JR.lastUpdatedAt - RR.lastUpdatedAt
+          })), XR(JR), WR(GR)
+        })).catch((RR => {
+          console.error("Failed to fetch thumbnails:", RR)
         })).finally((() => {
-          yW(!1)
+          BR(!1)
         }))
-      }), [bW]);
-      async function GW(WW, iW, OW) {
-        return HW.e.uploadSchematicThumbnail(bW, WW, iW, OW).then((() => {
-          XW({
-            text: AW("thumbnail:uploadedAwaitingModeration"),
+      }), [aR]);
+      async function YR(RR, JR, GR) {
+        return bR.c.uploadSchematicThumbnail(aR, RR, JR, GR).then((() => {
+          SR({
+            text: eR("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), BW()
+          }, !0), jR()
         }))
       }
 
-      function IW() {
-        DW.current = Date.now(), pW.current = null;
-        const WW = VW.current;
-        VW.current = null, XW({
-          text: AW("thumbnail:settingThumbnail"),
+      function kR() {
+        cR.current = Date.now(), IR.current = null;
+        const RR = PR.current;
+        PR.current = null, SR({
+          text: eR("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), HW.e.setSchematicThumbnail(bW, PW.schematicId, WW).then((() => {
-          UW.current && (XW({
-            text: AW("thumbnail:thumbnailUpdated"),
+        }, !1), bR.c.setSchematicThumbnail(aR, ZR.schematicId, RR).then((() => {
+          nR.current && (SR({
+            text: eR("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), gW.current = WW, wW("customThumbnailId", WW), wW("customThumbnailBlurhash", void 0), wW("customThumbnailVariants", void 0))
-        })).catch((WW => {
-          UW.current && (XW({
-            text: WW.errorMessageForUser ? AW(WW.errorMessageForUser, WW.errorMessageTranslationParams) : AW("thumbnail:failedToSetThumbnail"),
+          }, !0), oR.current = RR, fR("customThumbnailId", RR), fR("customThumbnailBlurhash", void 0), fR("customThumbnailVariants", void 0))
+        })).catch((RR => {
+          nR.current && (SR({
+            text: RR.errorMessageForUser ? eR(RR.errorMessageForUser, RR.errorMessageTranslationParams) : eR("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), dW(gW.current))
+          }, !0), NR(oR.current))
         }))
       }
 
-      function aW(WW) {
-        dW(WW), VW.current = WW;
-        const iW = Date.now() - DW.current;
-        iW >= 1e3 ? IW() : (XW({
-          text: AW("thumbnail:settingThumbnail"),
+      function QR(RR) {
+        NR(RR), PR.current = RR;
+        const JR = Date.now() - cR.current;
+        JR >= 1e3 ? kR() : (SR({
+          text: eR("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), pW.current || (pW.current = setTimeout((() => {
-          IW()
-        }), 1e3 - iW)))
+        }, !1), IR.current || (IR.current = setTimeout((() => {
+          kR()
+        }), 1e3 - JR)))
       }
-      return (0, mW.useEffect)((() => {
-        !1 === jW && BW()
-      }), [jW, BW]), (0, KW.jsxs)("div", {
+      return (0, yR.useEffect)((() => {
+        !1 === LR && jR()
+      }), [LR, jR]), (0, CR.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "SectionTitle",
-          children: [AW("thumbnail:gameThumbnail"), eW && (0, KW.jsx)("span", {
-            className: lW()("ThumbnailActionMsg", `ThumbnailActionMsg--${eW.type}`),
-            children: eW.text
+          children: [eR("thumbnail:gameThumbnail"), DR && (0, CR.jsx)("span", {
+            className: rR()("ThumbnailActionMsg", `ThumbnailActionMsg--${DR.type}`),
+            children: DR.text
           })]
-        }), (0, KW.jsxs)("div", {
+        }), (0, CR.jsxs)("div", {
           className: "SectionBody",
-          children: [MW.length > 0 && (0, KW.jsx)(rW, {
-            rejectedThumbnails: MW,
-            isAcknowledging: TW,
+          children: [AR.length > 0 && (0, CR.jsx)(FR, {
+            rejectedThumbnails: AR,
+            isAcknowledging: lR,
             onAcknowledge: async function() {
-              JW(!0);
-              const WW = await Promise.allSettled(MW.map((WW => {
+              pR(!0);
+              const RR = await Promise.allSettled(AR.map((RR => {
                 let {
-                  thumbnail: iW
-                } = WW;
-                return HW.e.deleteSchematicThumbnail(bW, Wi(iW))
+                  thumbnail: JR
+                } = RR;
+                return bR.c.deleteSchematicThumbnail(aR, RJ(JR))
               })));
-              if (!UW.current) return;
-              JW(!1);
-              const iW = WW.filter((WW => "rejected" === WW.status));
-              iW.length > 0 && (console.error("Failed to acknowledge some thumbnail rejections:", iW), XW({
-                text: AW("thumbnail:failedToHideRejections"),
+              if (!nR.current) return;
+              pR(!1);
+              const JR = RR.filter((RR => "rejected" === RR.status));
+              JR.length > 0 && (console.error("Failed to acknowledge some thumbnail rejections:", JR), SR({
+                text: eR("thumbnail:failedToHideRejections"),
                 type: "error"
-              }, !0)), BW()
+              }, !0)), jR()
             }
-          }), (0, KW.jsxs)("div", {
+          }), (0, CR.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, KW.jsxs)("div", {
-              className: lW()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === hW
+            children: [(0, CR.jsxs)("div", {
+              className: rR()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === gR
               }),
-              onClick: () => aW(null),
-              children: [(0, KW.jsx)(oW.b, {
+              onClick: () => QR(null),
+              children: [(0, CR.jsx)(xR.e, {
                 game: {
-                  schematicId: PW.schematicId,
-                  imageBlurhash: PW.imageBlurhash
+                  schematicId: ZR.schematicId,
+                  imageBlurhash: ZR.imageBlurhash
                 }
-              }), (0, KW.jsx)("div", {
+              }), (0, CR.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: AW("general:default")
+                children: eR("general:default")
               })]
-            }), YW && (0, KW.jsx)(cW.d, {}), kW.map((WW => {
-              var iW;
-              const OW = QW(WW);
-              return (0, KW.jsxs)("div", {
-                className: lW()("ThumbnailGridItem", {
-                  ThumbnailGridItemSelected: WW.approved && hW === WW.id,
-                  ThumbnailGridItemPending: !WW.approved
+            }), MR && (0, CR.jsx)(iR.d, {}), UR.map((RR => {
+              var JR;
+              const GR = hR(RR);
+              return (0, CR.jsxs)("div", {
+                className: rR()("ThumbnailGridItem", {
+                  ThumbnailGridItemSelected: RR.approved && gR === RR.id,
+                  ThumbnailGridItemPending: !RR.approved
                 }),
                 onClick: () => {
-                  WW.approved && aW(WW.id)
+                  RR.approved && QR(RR.id)
                 },
-                children: [null !== OW && (0, KW.jsx)("img", {
-                  src: OW,
-                  alt: WW.name
-                }), (0, KW.jsx)(NW.O, {
+                children: [null !== GR && (0, CR.jsx)("img", {
+                  src: GR,
+                  alt: RR.name
+                }), (0, CR.jsx)(uR.M, {
                   className: "ThumbnailDeleteButton",
-                  onClick: iW => async function(WW, iW) {
-                    WW.stopPropagation();
-                    const OW = await EW.NotificationProvider.showCustomPopup({
-                        body: WW => (0, KW.jsx)(RW, {
-                          imageUrl: QW(iW),
-                          thumbnailName: iW.name,
-                          onClose: iW => {
-                            iW && (CW.current = !0), WW()
+                  onClick: JR => async function(RR, JR) {
+                    RR.stopPropagation();
+                    const GR = await tR.NotificationProvider.showCustomPopup({
+                        body: RR => (0, CR.jsx)(ER, {
+                          imageUrl: hR(JR),
+                          thumbnailName: JR.name,
+                          onClose: JR => {
+                            JR && (zR.current = !0), RR()
                           }
                         }),
                         middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                        onClose: xW
+                        onClose: wR
                       }).getResult(),
-                      mW = CW.current;
-                    CW.current = !1, mW && !0 === OW && (UW.current && XW({
-                      text: AW("thumbnail:deletingThumbnail"),
+                      yR = zR.current;
+                    zR.current = !1, yR && !0 === GR && (nR.current && SR({
+                      text: eR("thumbnail:deletingThumbnail"),
                       type: "info"
-                    }, !1), HW.e.deleteSchematicThumbnail(bW, Wi(iW)).then((() => {
-                      UW.current && (XW({
-                        text: AW("thumbnail:thumbnailDeleted"),
+                    }, !1), bR.c.deleteSchematicThumbnail(aR, RJ(JR)).then((() => {
+                      nR.current && (SR({
+                        text: eR("thumbnail:thumbnailDeleted"),
                         type: "success"
-                      }, !0), null !== iW.id && gW.current === iW.id && aW(null), BW())
-                    })).catch((WW => {
-                      UW.current && XW({
-                        text: WW.errorMessageForUser ? AW(WW.errorMessageForUser, WW.errorMessageTranslationParams) : AW("thumbnail:failedToDeleteThumbnail"),
+                      }, !0), null !== JR.id && oR.current === JR.id && QR(null), jR())
+                    })).catch((RR => {
+                      nR.current && SR({
+                        text: RR.errorMessageForUser ? eR(RR.errorMessageForUser, RR.errorMessageTranslationParams) : eR("thumbnail:failedToDeleteThumbnail"),
                         type: "error"
                       }, !0)
                     })))
-                  }(iW, WW),
-                  children: (0, KW.jsx)(tW.c, {
+                  }(JR, RR),
+                  children: (0, CR.jsx)(VR.d, {
                     name: "trash-can"
                   })
-                }), WW.approved && (0, KW.jsx)("div", {
+                }), RR.approved && (0, CR.jsx)("div", {
                   className: "ThumbnailGridItemLabel",
-                  children: WW.name
-                }), !WW.approved && (0, KW.jsx)("div", {
+                  children: RR.name
+                }), !RR.approved && (0, CR.jsx)("div", {
                   className: "ThumbnailUnapprovedIcon",
-                  children: (0, KW.jsx)(tW.c, {
+                  children: (0, CR.jsx)(VR.d, {
                     name: "hourglass-clock"
                   })
-                }), !WW.approved && (0, KW.jsxs)("div", {
+                }), !RR.approved && (0, CR.jsxs)("div", {
                   className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                  children: [WW.name, (0, KW.jsx)("br", {}), AW("thumbnail:pendingApproval")]
+                  children: [RR.name, (0, CR.jsx)("br", {}), eR("thumbnail:pendingApproval")]
                 })]
-              }, null !== (iW = WW.id) && void 0 !== iW ? iW : WW.pendingKey)
-            })), (0, KW.jsxs)("div", {
-              className: lW()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !ZW
+              }, null !== (JR = RR.id) && void 0 !== JR ? JR : RR.pendingKey)
+            })), (0, CR.jsxs)("div", {
+              className: rR()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !KR
               }),
               onClick: () => {
-                ZW && function(WW) {
+                KR && function(RR) {
                   let {
-                    schematicId: iW,
-                    ownedThumbnailCount: OW,
-                    onThumbnailReady: mW,
-                    onClose: NW
-                  } = WW;
-                  EW.NotificationProvider.showCustomPopup({
-                    body: WW => (0, KW.jsx)(qW, {
-                      schematicId: iW,
-                      ownedThumbnailCount: OW,
-                      onClose: WW,
-                      onThumbnailReady: mW
+                    schematicId: JR,
+                    ownedThumbnailCount: GR,
+                    onThumbnailReady: yR,
+                    onClose: uR
+                  } = RR;
+                  tR.NotificationProvider.showCustomPopup({
+                    body: RR => (0, CR.jsx)(dR, {
+                      schematicId: JR,
+                      ownedThumbnailCount: GR,
+                      onClose: RR,
+                      onThumbnailReady: yR
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: NW,
+                    onClose: uR,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: PW.schematicId,
-                  ownedThumbnailCount: kW.length,
-                  onThumbnailReady: GW,
-                  onClose: xW
+                  schematicId: ZR.schematicId,
+                  ownedThumbnailCount: UR.length,
+                  onThumbnailReady: YR,
+                  onClose: wR
                 })
               },
-              children: [(0, KW.jsx)(tW.c, {
+              children: [(0, CR.jsx)(VR.d, {
                 name: "plus"
-              }), (0, KW.jsx)("div", {
+              }), (0, CR.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: AW("thumbnail:uploadThumbnail")
+                children: eR("thumbnail:uploadThumbnail")
               })]
             })]
           })]
         })]
       })
     }
-    var Oi = OW(2300),
-      mi = OW(5897),
-      Ei = OW(5903),
-      Ni = OW(5947);
+    var GJ = GR(2374),
+      yJ = GR(6028),
+      tJ = GR(6035),
+      uJ = GR(6072);
 
-    function Pi(WW) {
+    function ZJ(RR) {
       let {
-        schematicData: iW,
-        setTexturePack: OW,
-        initializeTexturePack: EW,
-        publishFormEnabled: NW
-      } = WW;
+        schematicData: JR,
+        setTexturePack: GR,
+        initializeTexturePack: tR,
+        publishFormEnabled: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, LW.B)(), [cW, wW] = (0, mW.useState)(null), [tW, ZW] = (0, mW.useState)(null), [xW, AW] = (0, mW.useState)(!1), bW = (0, nW.c)(), jW = NW && !xW, UW = iW.customTexturePackKey;
+        t: ZR
+      } = (0, qR.A)(), [iR, fR] = (0, yR.useState)(null), [VR, KR] = (0, yR.useState)(null), [wR, eR] = (0, yR.useState)(!1), aR = (0, vR.d)(), LR = uR && !wR, nR = JR.customTexturePackKey;
 
-      function kW(WW) {
-        var iW;
-        wW(WW.metaData.id), ZW(null !== (iW = WW.metaData.fromFolderName) && void 0 !== iW ? iW : null), (WW.metaData.id !== Oi.n.CUSTOM || WW.metaData.fromFolderName) && OW(WW)
+      function UR(RR) {
+        var JR;
+        fR(RR.metaData.id), KR(null !== (JR = RR.metaData.fromFolderName) && void 0 !== JR ? JR : null), (RR.metaData.id !== GJ.q.CUSTOM || RR.metaData.fromFolderName) && GR(RR)
       }
-      return (0, mW.useEffect)((() => {
-        UW && (AW(!0), (0, mi.b)(UW).then((WW => {
-          var iW;
-          bW.current && (WW ? (wW(WW.metaData.id), ZW(null !== (iW = WW.metaData.fromFolderName) && void 0 !== iW ? iW : null), EW(WW)) : console.error(`No texture pack at ${UW}`))
-        })).catch((WW => {
-          console.error("Error fetching texture pack: ", WW)
+      return (0, yR.useEffect)((() => {
+        nR && (eR(!0), (0, yJ.c)(nR).then((RR => {
+          var JR;
+          aR.current && (RR ? (fR(RR.metaData.id), KR(null !== (JR = RR.metaData.fromFolderName) && void 0 !== JR ? JR : null), tR(RR)) : console.error(`No texture pack at ${nR}`))
+        })).catch((RR => {
+          console.error("Error fetching texture pack: ", RR)
         })).finally((() => {
-          AW(!1)
+          eR(!1)
         })))
-      }), [UW, EW, bW]), (0, KW.jsxs)("div", {
+      }), [nR, tR, aR]), (0, CR.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "SectionTitle",
-          children: PW("customTexturePack:customTexturePack")
-        }), (0, KW.jsxs)("div", {
+          children: ZR("customTexturePack:customTexturePack")
+        }), (0, CR.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, KW.jsx)("div", {
-            className: lW()("TexturePack", {
-              Selected: null === cW && !xW,
-              Disabled: !jW
+          children: [(0, CR.jsx)("div", {
+            className: rR()("TexturePack", {
+              Selected: null === iR && !wR,
+              Disabled: !LR
             }),
             onClick: () => {
-              jW && (wW(null), OW(null), ZW(null))
+              LR && (fR(null), GR(null), KR(null))
             },
-            children: (0, KW.jsx)("div", {
+            children: (0, CR.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(Oi.n).map((WW => (0, KW.jsx)(Ei.d, {
-            id: WW,
-            isSelected: WW === cW,
-            setSelected: kW,
-            disabled: !jW
-          }, WW)))]
-        }), cW === Oi.n.CUSTOM && (0, KW.jsx)(Ni.c, {
-          folderName: tW,
-          onTexturePackUpdated: kW,
-          disabled: !jW,
+          }), Object.values(GJ.q).map((RR => (0, CR.jsx)(tJ.i, {
+            id: RR,
+            isSelected: RR === iR,
+            setSelected: UR,
+            disabled: !LR
+          }, RR)))]
+        }), iR === GJ.q.CUSTOM && (0, CR.jsx)(uJ.e, {
+          folderName: VR,
+          onTexturePackUpdated: UR,
+          disabled: !LR,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var Li = OW(5990);
+    var qJ = GR(6105);
 
-    function ci(WW) {
-      var iW;
+    function iJ(RR) {
+      var JR;
       let {
-        gameCategory: OW,
-        setGameCategory: mW,
-        disabled: EW
-      } = WW;
-      const PW = null !== (iW = (0, AW.jb)(OW)) && void 0 !== iW ? iW : "other";
-      return (0, KW.jsxs)("div", {
+        gameCategory: GR,
+        setGameCategory: yR,
+        disabled: tR
+      } = RR;
+      const ZR = null !== (JR = (0, eR.fb)(GR)) && void 0 !== JR ? JR : "other";
+      return (0, CR.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, KW.jsx)(kW.e, {
+        children: [(0, CR.jsx)(UR.g, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: EW,
-          children: (0, KW.jsx)(sW.e, {
-            options: AW.$.map((WW => ({
-              value: WW,
-              label: AW.X[WW]
+          disabled: tR,
+          children: (0, CR.jsx)(WR.e, {
+            options: eR.Z.map((RR => ({
+              value: RR,
+              label: eR.X[RR]
             }))),
-            value: PW,
-            onChange: WW => {
-              WW.value !== PW && mW(AW.Q[WW.value][0])
+            value: ZR,
+            onChange: RR => {
+              RR.value !== ZR && yR(eR.U[RR.value][0])
             }
           })
-        }), (0, KW.jsx)(kW.e, {
+        }), (0, CR.jsx)(UR.g, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: EW,
-          children: (0, KW.jsx)("div", {
+          disabled: tR,
+          children: (0, CR.jsx)("div", {
             className: "GameCategoryOptions",
-            children: AW.Q[PW].map((WW => (0, KW.jsx)(NW.Z, {
-              active: WW === OW,
+            children: eR.U[ZR].map((RR => (0, CR.jsx)(uR.U, {
+              active: RR === GR,
               onClick: () => {
-                mW(WW)
+                yR(RR)
               },
-              children: (0, AW.gb)(WW)
-            }, WW)))
+              children: (0, eR.eb)(RR)
+            }, RR)))
           })
         })]
       })
     }
-    var wi = OW(5839);
+    var fJ = GR(5982);
 
-    function ti(WW) {
+    function VJ(RR) {
       let {
-        editor: iW,
-        onClose: OW
-      } = WW;
+        editor: JR,
+        onClose: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, LW.B)(), {
-        schematicData: EW,
-        updateSchematicData: NW,
-        publishFormEnabled: cW,
-        formEnabled: wW
-      } = iW;
-      return (0, KW.jsxs)(KW.Fragment, {
-        children: [(0, KW.jsxs)(SW, {
+        t: yR
+      } = (0, qR.A)(), {
+        schematicData: tR,
+        updateSchematicData: uR,
+        publishFormEnabled: iR,
+        formEnabled: fR
+      } = JR;
+      return (0, CR.jsxs)(CR.Fragment, {
+        children: [(0, CR.jsxs)(XR, {
           icon: "pen-to-square",
-          title: mW("worldBuilder:basicsSection"),
-          disabled: !wW,
-          children: [(0, KW.jsx)(YW, {
-            label: mW("general:name"),
-            caption: mW("worldBuilder:schematicNameTagsHint"),
-            children: (0, KW.jsx)(PW.b, {
+          title: yR("worldBuilder:basicsSection"),
+          disabled: !fR,
+          children: [(0, CR.jsx)(MR, {
+            label: yR("general:name"),
+            caption: yR("worldBuilder:schematicNameTagsHint"),
+            children: (0, CR.jsx)(ZR.b, {
               className: "SchematicPageName",
-              defaultValue: EW.name,
-              onValueChange: WW => NW("name", WW),
-              placeholderText: mW("worldBuilder:schematicNamePlaceholder"),
-              maxLength: ZW.zb
+              defaultValue: tR.name,
+              onValueChange: RR => uR("name", RR),
+              placeholderText: yR("worldBuilder:schematicNamePlaceholder"),
+              maxLength: KR.fb
             })
-          }), (0, KW.jsx)(YW, {
-            label: mW("general:description"),
-            children: (0, KW.jsx)(PW.b, {
+          }), (0, CR.jsx)(MR, {
+            label: yR("general:description"),
+            children: (0, CR.jsx)(ZR.b, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: EW.description,
-              onValueChange: WW => NW("description", WW),
-              placeholderText: mW("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: ZW.xb
+              defaultValue: tR.description,
+              onValueChange: RR => uR("description", RR),
+              placeholderText: yR("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: KR.eb
             })
-          }), (0, KW.jsx)(ci, {
-            gameCategory: EW.gameCategory,
-            setGameCategory: WW => NW("gameCategory", WW),
-            disabled: !cW
-          }), !0 === EW.gamePublished && (0, KW.jsx)(ii, {
-            schematicData: EW,
-            updateSchematicData: NW,
-            publishFormEnabled: cW,
+          }), (0, CR.jsx)(iJ, {
+            gameCategory: tR.gameCategory,
+            setGameCategory: RR => uR("gameCategory", RR),
+            disabled: !iR
+          }), !0 === tR.gamePublished && (0, CR.jsx)(JJ, {
+            schematicData: tR,
+            updateSchematicData: uR,
+            publishFormEnabled: iR,
             onClose: function() {
-              null === OW || void 0 === OW || OW()
+              null === GR || void 0 === GR || GR()
             }
-          }), (0, KW.jsx)(wi.e, {})]
-        }), (0, KW.jsx)(TW, {
-          schematicData: EW,
-          updateSchematicData: NW,
-          publishFormEnabled: cW,
-          formEnabled: wW
-        }), !0 === EW.gamePublished && (0, KW.jsx)(SW, {
+          }), (0, CR.jsx)(fJ.f, {})]
+        }), (0, CR.jsx)(lR, {
+          schematicData: tR,
+          updateSchematicData: uR,
+          publishFormEnabled: iR,
+          formEnabled: fR
+        }), !0 === tR.gamePublished && (0, CR.jsx)(XR, {
           icon: "palette",
-          title: mW("worldBuilder:texturePackSection"),
-          disabled: !wW,
-          children: (0, KW.jsx)(Pi, {
-            schematicData: EW,
-            setTexturePack: iW.setTexturePack,
-            initializeTexturePack: iW.initializeTexturePack,
-            publishFormEnabled: cW
+          title: yR("worldBuilder:texturePackSection"),
+          disabled: !fR,
+          children: (0, CR.jsx)(ZJ, {
+            schematicData: tR,
+            setTexturePack: JR.setTexturePack,
+            initializeTexturePack: JR.initializeTexturePack,
+            publishFormEnabled: iR
           })
         })]
       })
     }
 
-    function Zi(WW) {
+    function KJ(RR) {
       let {
-        editor: iW
-      } = WW;
+        editor: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, LW.B)(), {
-        schematicData: mW,
-        formEnabled: EW,
-        hasUnsavedChanges: PW,
-        publishSuspendedUntil: ZW
-      } = iW, xW = (0, vW.i)(), lW = !0 === mW.gamePublished ? ZW : null, AW = EW && PW && null === lW;
-      return (0, KW.jsxs)("footer", {
+        t: GR
+      } = (0, qR.A)(), {
+        schematicData: yR,
+        formEnabled: tR,
+        hasUnsavedChanges: ZR,
+        publishSuspendedUntil: KR
+      } = JR, wR = (0, HR.h)(), rR = !0 === yR.gamePublished ? KR : null, eR = tR && ZR && null === rR;
+      return (0, CR.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [null !== lW && (0, KW.jsx)("div", {
+        children: [null !== rR && (0, CR.jsx)("div", {
           className: "SchematicPageFooterNotice",
-          children: xW(lW)
-        }), EW && PW && null === lW && (0, KW.jsxs)("div", {
+          children: wR(rR)
+        }), tR && ZR && null === rR && (0, CR.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, KW.jsx)("span", {
+          children: [(0, CR.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), OW("worldBuilder:unsavedChanges")]
-        }), (0, KW.jsx)(wW.f, {
-          tooltipInner: (0, KW.jsx)("div", {
+          }), GR("worldBuilder:unsavedChanges")]
+        }), (0, CR.jsx)(fR.h, {
+          tooltipInner: (0, CR.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: OW(EW && !PW ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: GR(tR && !ZR ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, KW.jsxs)(NW.f, {
+          children: (0, CR.jsxs)(uR.g, {
             className: "SaveChangesButton",
-            onClick: () => iW.saveSchematic(mW.gamePublished),
-            disabled: !AW,
-            children: [(0, KW.jsxs)("span", {
-              className: EW ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, KW.jsx)(tW.c, {
+            onClick: () => JR.saveSchematic(yR.gamePublished),
+            disabled: !eR,
+            children: [(0, CR.jsxs)("span", {
+              className: tR ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, CR.jsx)(VR.d, {
                 name: "wrench"
-              }), " ", OW("worldBuilder:saveChanges")]
-            }), !EW && (0, KW.jsx)(cW.d, {})]
+              }), " ", GR("worldBuilder:saveChanges")]
+            }), !tR && (0, CR.jsx)(iR.d, {})]
           })
         })]
       })
     }
 
-    function xi(WW) {
+    function wJ(RR) {
       let {
-        schematic: iW,
-        onSchematicUpdate: OW,
-        onClose: EW,
-        inSourceWorld: PW
-      } = WW;
+        schematic: JR,
+        onSchematicUpdate: GR,
+        onClose: tR,
+        inSourceWorld: ZR
+      } = RR;
       const {
-        t: cW
-      } = (0, LW.B)();
+        t: iR
+      } = (0, qR.A)();
 
-      function wW() {
-        null === EW || void 0 === EW || EW()
+      function fR() {
+        null === tR || void 0 === tR || tR()
       }
-      const tW = (0, Li.c)(iW, {
-        onNavigateAway: wW,
-        inSourceWorld: PW
+      const VR = (0, qJ.d)(JR, {
+        onNavigateAway: fR,
+        inSourceWorld: ZR
       });
-      return (0, mW.useEffect)((() => {
-        null === OW || void 0 === OW || OW(tW.schematicData)
-      }), [tW.schematicData, OW]), (0, KW.jsxs)("div", {
+      return (0, yR.useEffect)((() => {
+        null === GR || void 0 === GR || GR(VR.schematicData)
+      }), [VR.schematicData, GR]), (0, CR.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, KW.jsxs)("div", {
+        children: [(0, CR.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, KW.jsx)(NW.b, {
-            onClick: wW,
-            children: cW("worldBuilder:back")
-          }), (0, KW.jsx)(SW, {
+          children: [(0, CR.jsx)(uR.d, {
+            onClick: fR,
+            children: iR("worldBuilder:back")
+          }), (0, CR.jsx)(XR, {
             icon: "rocket-launch",
-            title: cW("worldBuilder:actionsSection"),
-            disabled: !tW.formEnabled,
-            children: (0, KW.jsx)(JW.d, {
-              editor: tW
+            title: iR("worldBuilder:actionsSection"),
+            disabled: !VR.formEnabled,
+            children: (0, CR.jsx)(pR.b, {
+              editor: VR
             })
-          }), (0, KW.jsx)(ti, {
-            editor: tW,
-            onClose: wW
+          }), (0, CR.jsx)(VJ, {
+            editor: VR,
+            onClose: fR
           })]
-        }), (0, KW.jsx)(Zi, {
-          editor: tW
+        }), (0, CR.jsx)(KJ, {
+          editor: VR
         })]
       })
     }
 
-    function li(WW) {
+    function rJ(RR) {
       let {
-        schematic: iW,
-        onSchematicUpdate: OW,
-        onClose: mW,
-        inSourceWorld: NW
-      } = WW;
-      EW.NotificationProvider.showCustomPopup({
-        body: WW => (0, KW.jsx)(xi, {
-          schematic: iW,
-          onSchematicUpdate: OW,
-          onClose: WW,
-          inSourceWorld: NW
+        schematic: JR,
+        onSchematicUpdate: GR,
+        onClose: yR,
+        inSourceWorld: uR
+      } = RR;
+      tR.NotificationProvider.showCustomPopup({
+        body: RR => (0, CR.jsx)(wJ, {
+          schematic: JR,
+          onSchematicUpdate: GR,
+          onClose: RR,
+          inSourceWorld: uR
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: mW,
+        onClose: yR,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  5832: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => lW
+  5976: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => rR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1172),
-      PW = OW(1391),
-      LW = OW(1532),
-      cW = OW(1434),
-      wW = OW(1383),
-      tW = OW(5839),
-      ZW = OW(5856),
-      xW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1270),
+      ZR = GR(1468),
+      qR = GR(1590),
+      iR = GR(1501),
+      fR = GR(1465),
+      VR = GR(5982),
+      KR = GR(5996),
+      wR = GR(1378);
 
-    function lW(WW) {
+    function rR(RR) {
       let {
-        editor: iW,
-        className: OW,
-        publishRefusal: mW = null
-      } = WW;
+        editor: JR,
+        className: GR,
+        publishRefusal: yR = null
+      } = RR;
       const {
-        t: lW
-      } = (0, NW.B)(), {
-        schematicData: AW,
-        formEnabled: bW,
-        publishFormEnabled: jW,
-        publishSuspendedUntil: UW
-      } = iW, kW = !bW || !jW, sW = (0, ZW.i)();
-      return (0, xW.jsxs)("div", {
-        className: EW()("PublishButtonContainer", OW),
-        children: [iW.canEditSourceWorld && (0, xW.jsxs)(LW.f, {
-          onClick: iW.editSourceWorld,
-          disabled: kW,
-          children: [(0, xW.jsx)(PW.c, {
+        t: rR
+      } = (0, uR.A)(), {
+        schematicData: eR,
+        formEnabled: aR,
+        publishFormEnabled: LR,
+        publishSuspendedUntil: nR
+      } = JR, UR = !aR || !LR, WR = (0, KR.h)();
+      return (0, wR.jsxs)("div", {
+        className: tR()("PublishButtonContainer", GR),
+        children: [JR.canEditSourceWorld && (0, wR.jsxs)(qR.g, {
+          onClick: JR.editSourceWorld,
+          disabled: UR,
+          children: [(0, wR.jsx)(ZR.d, {
             name: "edit"
-          }), " ", lW("worldBuilder:editSourceWorld")]
-        }), !AW.gamePublished && (0, xW.jsx)(cW.f, {
-          tooltipInner: (0, xW.jsx)("div", {
+          }), " ", rR("worldBuilder:editSourceWorld")]
+        }), !eR.gamePublished && (0, wR.jsx)(iR.h, {
+          tooltipInner: (0, wR.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: null !== mW && void 0 !== mW ? mW : lW("worldBuilder:publishAsGameDescription")
+            children: null !== yR && void 0 !== yR ? yR : rR("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, xW.jsxs)(LW.n, {
-            onClick: () => iW.saveSchematic(!0),
-            disabled: kW || null !== mW || null !== UW,
-            children: [(0, xW.jsx)(PW.c, {
+          children: (0, wR.jsxs)(qR.n, {
+            onClick: () => JR.saveSchematic(!0),
+            disabled: UR || null !== yR || null !== nR,
+            children: [(0, wR.jsx)(ZR.d, {
               name: "rocket-launch"
-            }), " ", lW("worldBuilder:publishAsGame"), " ", (0, xW.jsx)(PW.c, {
+            }), " ", rR("worldBuilder:publishAsGame"), " ", (0, wR.jsx)(ZR.d, {
               name: "info-circle"
             })]
           })
-        }), !0 === AW.gamePublished && (0, xW.jsxs)(xW.Fragment, {
-          children: [(0, xW.jsx)(cW.f, {
-            tooltipInner: (0, xW.jsx)("div", {
+        }), !0 === eR.gamePublished && (0, wR.jsxs)(wR.Fragment, {
+          children: [(0, wR.jsx)(iR.h, {
+            tooltipInner: (0, wR.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: lW("worldBuilder:unpublishAsGameDescription")
+              children: rR("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, xW.jsxs)(LW.O, {
-              onClick: iW.unpublishSchematic,
-              disabled: kW,
-              children: [(0, xW.jsx)(PW.c, {
+            children: (0, wR.jsxs)(qR.M, {
+              onClick: JR.unpublishSchematic,
+              disabled: UR,
+              children: [(0, wR.jsx)(ZR.d, {
                 name: "rocket-launch"
-              }), " ", lW("worldBuilder:unpublishAsGame"), " ", (0, xW.jsx)(PW.c, {
+              }), " ", rR("worldBuilder:unpublishAsGame"), " ", (0, wR.jsx)(ZR.d, {
                 name: "info-circle"
               })]
             })
-          }), (0, xW.jsxs)(LW.f, {
-            onClick: iW.playGame,
-            disabled: kW,
-            children: [(0, xW.jsx)(PW.c, {
+          }), (0, wR.jsxs)(qR.g, {
+            onClick: JR.playGame,
+            disabled: UR,
+            children: [(0, wR.jsx)(ZR.d, {
               name: "joystick"
-            }), " ", lW("general:playGame")]
+            }), " ", rR("general:playGame")]
           })]
-        }), !bW && (0, xW.jsx)(wW.d, {
+        }), !aR && (0, wR.jsx)(fR.d, {
           loaderType: "Secondary"
-        }), !AW.gamePublished && null !== UW && (0, xW.jsx)("div", {
+        }), !eR.gamePublished && null !== nR && (0, wR.jsx)("div", {
           className: "PublishSuspendedNotice",
-          children: sW(UW)
-        }), iW.askingPublishingPolicy && (0, xW.jsx)(tW.b, {
-          onAnswer: iW.answerPublishingPolicy
+          children: WR(nR)
+        }), JR.askingPublishingPolicy && (0, wR.jsx)(VR.b, {
+          onAnswer: JR.answerPublishingPolicy
         })]
       })
     }
   },
-  5897: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW
+  6028: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR
     });
-    var mW = OW(1185);
-    async function EW(WW) {
-      const iW = await fetch(`${mW.clientSideServerUrls.s3Url}/${WW}`, {
+    var yR = GR(1282);
+    async function tR(RR) {
+      const JR = await fetch(`${yR.clientSideServerUrls.s3Url}/${RR}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === iW.status || 403 === iW.status) return null;
-      if (!iW.ok) throw new Error(`Failed to download the texture pack (${iW.status})`);
-      return await iW.json()
+      if (404 === JR.status || 403 === JR.status) return null;
+      if (!JR.ok) throw new Error(`Failed to download the texture pack (${JR.status})`);
+      return await JR.json()
     }
   },
-  5856: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      e: () => cW,
-      i: () => wW
+  5996: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      f: () => iR,
+      h: () => fR
     });
-    var mW = OW(62),
-      EW = OW(1584),
-      NW = OW(1172),
-      PW = OW(1107);
+    var yR = GR(66),
+      tR = GR(1647),
+      uR = GR(1270),
+      ZR = GR(1196);
 
-    function LW() {
-      let WW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+    function qR() {
+      let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
       const {
-        userContext: iW
-      } = (0, PW.e)(), [OW, NW] = (0, mW.useState)((() => ({
-        loading: WW && iW.isLoggedIn(),
+        userContext: JR
+      } = (0, ZR.d)(), [GR, uR] = (0, yR.useState)((() => ({
+        loading: RR && JR.isLoggedIn(),
         eligibility: null
       })));
-      if ((0, mW.useEffect)((() => {
-          if (!WW || !iW.isLoggedIn()) return void NW({
+      if ((0, yR.useEffect)((() => {
+          if (!RR || !JR.isLoggedIn()) return void uR({
             loading: !1,
             eligibility: null
           });
-          let OW = !1;
-          return EW.e.getCreatorEligibility(iW).then((WW => {
-            OW || NW({
+          let GR = !1;
+          return tR.c.getCreatorEligibility(JR).then((RR => {
+            GR || uR({
               loading: !1,
-              eligibility: WW
+              eligibility: RR
             })
-          })).catch((WW => {
-            console.warn("Failed to load creator eligibility", WW), OW || NW({
+          })).catch((RR => {
+            console.warn("Failed to load creator eligibility", RR), GR || uR({
               loading: !1,
               eligibility: null
             })
           })), () => {
-            OW = !0
+            GR = !0
           }
-        }), [iW, WW]), null === OW.eligibility) return OW;
-      const LW = Date.now(),
+        }), [JR, RR]), null === GR.eligibility) return GR;
+      const qR = Date.now(),
         {
-          thumbnailUploadWait: cW,
-          publishSuspendedUntil: wW
-        } = OW.eligibility;
+          thumbnailUploadWait: iR,
+          publishSuspendedUntil: fR
+        } = GR.eligibility;
       return {
-        loading: OW.loading,
+        loading: GR.loading,
         eligibility: {
-          thumbnailUploadWait: null !== cW && cW.until > LW ? cW : null,
-          publishSuspendedUntil: null !== wW && wW > LW ? wW : null
+          thumbnailUploadWait: null !== iR && iR.until > qR ? iR : null,
+          publishSuspendedUntil: null !== fR && fR > qR ? fR : null
         }
       }
     }
 
-    function cW() {
+    function iR() {
       const {
-        t: WW,
-        selectedLanguage: iW
-      } = (0, NW.B)();
-      return (OW, mW) => WW(OW, {
-        date: (0, NW.e)(iW.code, OW, mW, {
+        t: RR,
+        selectedLanguage: JR
+      } = (0, uR.A)();
+      return (GR, yR) => RR(GR, {
+        date: (0, uR.f)(JR.code, GR, yR, {
           dateStyle: "medium",
           timeStyle: "short"
         })
       })
     }
 
-    function wW() {
+    function fR() {
       const {
-        t: WW,
-        selectedLanguage: iW
-      } = (0, NW.B)();
-      return OW => {
-        const mW = "worldBuilder:publishSuspended";
-        return WW(mW, {
-          date: (0, NW.e)(iW.code, mW, OW, {
+        t: RR,
+        selectedLanguage: JR
+      } = (0, uR.A)();
+      return GR => {
+        const yR = "worldBuilder:publishSuspended";
+        return RR(yR, {
+          date: (0, uR.f)(JR.code, yR, GR, {
             dateStyle: "medium",
             timeStyle: "short",
             timeZone: "UTC"
@@ -1836,121 +1836,121 @@ export const modules = {
       }
     }
   },
-  5990: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => sW
+  6105: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => WR
     });
-    var mW = OW(62),
-      EW = OW(1365),
-      NW = OW(1052),
-      PW = OW(154),
-      LW = OW(2953),
-      cW = OW(1642),
-      wW = OW(25),
-      tW = OW(2037),
-      ZW = OW(1584),
-      xW = OW(5282),
-      lW = OW(1422),
-      AW = OW(1977),
-      bW = OW(1107),
-      jW = OW(1605),
-      UW = OW(5856);
+    var yR = GR(66),
+      tR = GR(1459),
+      uR = GR(1127),
+      ZR = GR(163),
+      qR = GR(3029),
+      iR = GR(1701),
+      fR = GR(25),
+      VR = GR(2134),
+      KR = GR(1647),
+      wR = GR(5392),
+      rR = GR(1493),
+      eR = GR(2068),
+      aR = GR(1196),
+      LR = GR(1663),
+      nR = GR(5996);
 
-    function kW(WW, iW) {
+    function UR(RR, JR) {
       return {
-        schematicId: WW.schematicId,
-        name: WW.name,
-        description: WW.description,
-        gamePublished: iW,
-        gameCategory: WW.gameCategory,
-        defaultGamemode: WW.defaultGamemode,
-        voidDeathHeight: WW.voidDeathHeight,
-        disableKeepInventory: WW.disableKeepInventory,
-        disableTpRequests: WW.disableTpRequests,
-        disableLobbySpawn: WW.disableLobbySpawn,
-        disableMobs: WW.disableMobs,
-        disableSpawnProtection: WW.disableSpawnProtection,
-        disableFallDamage: WW.disableFallDamage,
-        worldBorder: WW.worldBorder,
-        hideLobbyCode: WW.hideLobbyCode,
-        enableSmpMarketplace: WW.enableSmpMarketplace,
-        enableSurvivalGuns: WW.enableSurvivalGuns,
-        enableSpawnReset: WW.enableSpawnReset,
-        enableDayNight: WW.enableDayNight,
-        persistWorld: WW.persistWorld,
-        persistInventory: WW.persistInventory,
-        enableFluidFlow: WW.enableFluidFlow
+        schematicId: RR.schematicId,
+        name: RR.name,
+        description: RR.description,
+        gamePublished: JR,
+        gameCategory: RR.gameCategory,
+        defaultGamemode: RR.defaultGamemode,
+        voidDeathHeight: RR.voidDeathHeight,
+        disableKeepInventory: RR.disableKeepInventory,
+        disableTpRequests: RR.disableTpRequests,
+        disableLobbySpawn: RR.disableLobbySpawn,
+        disableMobs: RR.disableMobs,
+        disableSpawnProtection: RR.disableSpawnProtection,
+        disableFallDamage: RR.disableFallDamage,
+        worldBorder: RR.worldBorder,
+        hideLobbyCode: RR.hideLobbyCode,
+        enableSmpMarketplace: RR.enableSmpMarketplace,
+        enableSurvivalGuns: RR.enableSurvivalGuns,
+        enableSpawnReset: RR.enableSpawnReset,
+        enableDayNight: RR.enableDayNight,
+        persistWorld: RR.persistWorld,
+        persistInventory: RR.persistInventory,
+        enableFluidFlow: RR.enableFluidFlow
       }
     }
 
-    function sW(WW) {
-      var iW, OW;
+    function WR(RR) {
+      var JR, GR;
       let {
-        onNavigateAway: sW,
-        inSourceWorld: MW = !1,
-        canManage: KW = !0
+        onNavigateAway: WR,
+        inSourceWorld: AR = !1,
+        canManage: CR = !0
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: SW
-      } = (0, bW.e)(), YW = (0, jW.useNavigatePreserveSearch)(), [yW, TW] = (0, mW.useState)({
-        ...WW
-      }), [JW, hW] = (0, mW.useState)("Enter"), [HW, nW] = (0, mW.useState)(void 0), [uW, oW] = (0, mW.useState)(!1), dW = (0, mW.useRef)(kW(WW, WW.gamePublished)), eW = (0, mW.useRef)(void 0), vW = "Enter" === JW, gW = null !== (iW = null === (OW = (0, UW.b)(KW).eligibility) || void 0 === OW ? void 0 : OW.publishSuspendedUntil) && void 0 !== iW ? iW : null, DW = SW.playerHasRank("developer") || SW.playerHasRank("admin") || "Enter" === JW && !1 !== yW.schematicContainsSpawnBlock, VW = void 0 !== HW && HW !== eW.current || JSON.stringify(kW(yW, yW.gamePublished)) !== JSON.stringify(dW.current);
+        userContext: XR
+      } = (0, aR.d)(), MR = (0, LR.useNavigatePreserveSearch)(), [BR, lR] = (0, yR.useState)({
+        ...RR
+      }), [pR, gR] = (0, yR.useState)("Enter"), [bR, vR] = (0, yR.useState)(void 0), [OR, xR] = (0, yR.useState)(!1), NR = (0, yR.useRef)(UR(RR, RR.gamePublished)), DR = (0, yR.useRef)(void 0), HR = "Enter" === pR, oR = null !== (JR = null === (GR = (0, nR.e)(CR).eligibility) || void 0 === GR ? void 0 : GR.publishSuspendedUntil) && void 0 !== JR ? JR : null, cR = XR.playerHasRank("developer") || XR.playerHasRank("admin") || "Enter" === pR && !1 !== BR.schematicContainsSpawnBlock, PR = void 0 !== bR && bR !== DR.current || JSON.stringify(UR(BR, BR.gamePublished)) !== JSON.stringify(NR.current);
 
-      function pW(WW, iW) {
-        TW((OW => ({
-          ...OW,
-          [WW]: iW
+      function IR(RR, JR) {
+        lR((GR => ({
+          ...GR,
+          [RR]: JR
         })))
       }
-      const fW = (0, mW.useCallback)((WW => {
-        eW.current = WW, nW(WW)
+      const mR = (0, yR.useCallback)((RR => {
+        DR.current = RR, vR(RR)
       }), []);
 
-      function CW() {
-        return (0, cW.w)((0, NW.r)(yW.schematicId), yW)
+      function zR() {
+        return (0, iR.z)((0, uR.w)(BR.schematicId), BR)
       }
 
-      function XW(WW, iW) {
-        hW("Loading");
-        const OW = kW(yW, WW),
-          mW = HW !== eW.current ? HW : void 0;
-        ZW.e.updateSchematic(SW, OW, mW, iW).then((iW => {
+      function SR(RR, JR) {
+        gR("Loading");
+        const GR = UR(BR, RR),
+          yR = bR !== DR.current ? bR : void 0;
+        KR.c.updateSchematic(XR, GR, yR, JR).then((JR => {
           let {
-            customTexturePackKey: mW
-          } = iW;
-          hW("Success"), pW("customTexturePackKey", mW), dW.current = OW, eW.current = void 0, nW(void 0), !WW || yW.gamePublished || sW || AW.g.showGamePublished(yW.name, CW()), setTimeout((() => {
-            pW("gamePublished", WW), hW("Enter")
+            customTexturePackKey: yR
+          } = JR;
+          gR("Success"), IR("customTexturePackKey", yR), NR.current = GR, DR.current = void 0, vR(void 0), !RR || BR.gamePublished || WR || eR.j.showGamePublished(BR.name, zR()), setTimeout((() => {
+            IR("gamePublished", RR), gR("Enter")
           }), 1e3)
-        })).catch((WW => {
-          if (WW instanceof PW.c && WW.errorMessageForUser === LW.A && void 0 === iW) return hW("Enter"), void oW(!0);
-          var OW;
-          (console.error("Failed to save schematic:", WW), hW("Error"), WW instanceof PW.c && WW.errorMessageForUser) && lW.NotificationProvider.showAlertPopup({
+        })).catch((RR => {
+          if (RR instanceof ZR.d && RR.errorMessageForUser === qR.E && void 0 === JR) return gR("Enter"), void xR(!0);
+          var GR;
+          (console.error("Failed to save schematic:", RR), gR("Error"), RR instanceof ZR.d && RR.errorMessageForUser) && rR.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: WW.errorMessageForUser,
+            subtitle: RR.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (OW = WW.errorMessageTranslationParams) && void 0 !== OW ? OW : void 0
+              subtitle: null !== (GR = RR.errorMessageTranslationParams) && void 0 !== GR ? GR : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            hW("Enter")
+            gR("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: yW,
-        updateSchematicData: pW,
-        setTexturePack: nW,
-        initializeTexturePack: fW,
-        updateState: JW,
-        formEnabled: vW,
-        publishFormEnabled: DW,
-        hasUnsavedChanges: VW,
-        publishSuspendedUntil: gW,
-        canEditSourceWorld: !MW,
-        saveSchematic: XW,
+        schematicData: BR,
+        updateSchematicData: IR,
+        setTexturePack: vR,
+        initializeTexturePack: mR,
+        updateState: pR,
+        formEnabled: HR,
+        publishFormEnabled: cR,
+        hasUnsavedChanges: PR,
+        publishSuspendedUntil: oR,
+        canEditSourceWorld: !AR,
+        saveSchematic: SR,
         unpublishSchematic: function() {
-          lW.NotificationProvider.showPromptPopup({
+          rR.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
@@ -1958,117 +1958,117 @@ export const modules = {
             cancelText: "general:cancel",
             destructive: !0,
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((WW => {
-            !0 === WW && XW(!1)
+          }).getResult().then((RR => {
+            !0 === RR && SR(!1)
           }))
         },
-        askingPublishingPolicy: uW,
-        answerPublishingPolicy: function(WW) {
-          oW(!1), WW && XW(!0, LW.B)
+        askingPublishingPolicy: OR,
+        answerPublishingPolicy: function(RR) {
+          xR(!1), RR && SR(!0, qR.H)
         },
         editSourceWorld: function() {
-          hW("Loading"), xW.b.getSourceWorld(yW.schematicId).then((WW => {
-            tW.gameBridge.send("leaveGame", {
+          gR("Loading"), wR.c.getSourceWorld(BR.schematicId).then((RR => {
+            VR.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, wW.l)("other"), YW((0, EW.e)("classic", WW)), null === sW || void 0 === sW || sW()
-          })).catch((WW => {
-            console.error("Failed to get source world:", WW), hW("Error"), setTimeout((() => {
-              hW("Enter")
+            }), (0, fR.k)("other"), MR((0, tR.e)("classic", RR)), null === WR || void 0 === WR || WR()
+          })).catch((RR => {
+            console.error("Failed to get source world:", RR), gR("Error"), setTimeout((() => {
+              gR("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          tW.gameBridge.send("leaveGame", {
+          VR.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), YW(CW()), null === sW || void 0 === sW || sW()
+          }), MR(zR()), null === WR || void 0 === WR || WR()
         }
       }
     }
   },
-  5713: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => xW,
-      i: () => cW,
-      m: () => AW,
-      o: () => wW,
-      p: () => lW
+  5836: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      f: () => wR,
+      g: () => iR,
+      i: () => eR,
+      j: () => fR,
+      k: () => rR
     });
-    var mW = OW(5721),
-      EW = OW(5725);
-    const NW = !1,
-      PW = mW.h.map((WW => {
-        const iW = [];
-        for (let NW = 1; NW <= WW.reach; NW++) iW.push(EW.j[(0, mW.d)(WW.source, NW)].id);
-        const OW = "water" === WW.family;
+    var yR = GR(5839),
+      tR = GR(5844);
+    const uR = !1,
+      ZR = yR.j.map((RR => {
+        const JR = [];
+        for (let uR = 1; uR <= RR.reach; uR++) JR.push(tR.l[(0, yR.h)(RR.source, uR)].id);
+        const GR = "water" === RR.family;
         return Object.freeze({
-          name: WW.kind,
-          family: WW.family,
-          reach: WW.reach,
-          stepTicks: OW ? 5 : 10,
-          slopeDistance: OW ? 4 : 2,
-          sourceId: EW.j[WW.source].id,
-          fallingId: EW.j[(0, mW.b)(WW.source)].id,
-          flowingIds: Object.freeze(iW),
-          makesSources: OW,
-          stillId: EW.j[WW.still].id
+          name: RR.kind,
+          family: RR.family,
+          reach: RR.reach,
+          stepTicks: GR ? 5 : 10,
+          slopeDistance: GR ? 4 : 2,
+          sourceId: tR.l[RR.source].id,
+          fallingId: tR.l[(0, yR.d)(RR.source)].id,
+          flowingIds: Object.freeze(JR),
+          makesSources: GR,
+          stillId: tR.l[RR.still].id
         })
       })),
-      LW = new Map;
-    for (const bW of PW) LW.set(bW.sourceId, Object.freeze({
-      kind: bW,
+      qR = new Map;
+    for (const aR of ZR) qR.set(aR.sourceId, Object.freeze({
+      kind: aR,
       state: "source",
       distance: 0
-    })), LW.set(bW.fallingId, Object.freeze({
-      kind: bW,
+    })), qR.set(aR.fallingId, Object.freeze({
+      kind: aR,
       state: "falling",
       distance: 0
-    })), bW.flowingIds.forEach(((WW, iW) => {
-      LW.set(WW, Object.freeze({
-        kind: bW,
+    })), aR.flowingIds.forEach(((RR, JR) => {
+      qR.set(RR, Object.freeze({
+        kind: aR,
         state: "flowing",
-        distance: iW + 1
+        distance: JR + 1
       }))
     }));
 
-    function cW(WW) {
-      return PW.find((iW => iW.name === WW))
+    function iR(RR) {
+      return ZR.find((JR => JR.name === RR))
     }
 
-    function wW(WW) {
-      return null === WW ? void 0 : LW.get(WW)
+    function fR(RR) {
+      return null === RR ? void 0 : qR.get(RR)
     }
-    const tW = new Uint8Array(65536);
-    for (const [bW, jW] of LW) tW[bW] = "source" === jW.state ? 1 : 2;
-    const ZW = new Map;
-    for (const bW of PW) ZW.set(bW.stillId, bW.family);
+    const VR = new Uint8Array(65536);
+    for (const [aR, LR] of qR) VR[aR] = "source" === LR.state ? 1 : 2;
+    const KR = new Map;
+    for (const aR of ZR) KR.set(aR.stillId, aR.family);
 
-    function xW(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = wW(WW)) || void 0 === OW ? void 0 : OW.kind.family) && void 0 !== iW ? iW : lW(WW)
+    function wR(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = fR(RR)) || void 0 === GR ? void 0 : GR.kind.family) && void 0 !== JR ? JR : rR(RR)
     }
 
-    function lW(WW) {
-      var iW;
-      return null === WW ? null : null !== (iW = ZW.get(WW)) && void 0 !== iW ? iW : null
+    function rR(RR) {
+      var JR;
+      return null === RR ? null : null !== (JR = KR.get(RR)) && void 0 !== JR ? JR : null
     }
-    EW.j.Obsidian.id, EW.j["Messy Stone"].id;
+    tR.l.Obsidian.id, tR.l["Messy Stone"].id;
 
-    function AW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {
-        let WW = 0;
-        for (const iW of PW) WW = Math.max(WW, iW.stillId, iW.sourceId, iW.fallingId, ...iW.flowingIds);
-        return WW
+    function eR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {
+        let RR = 0;
+        for (const JR of ZR) RR = Math.max(RR, JR.stillId, JR.sourceId, JR.fallingId, ...JR.flowingIds);
+        return RR
       }() + 1;
-      const iW = new Uint8Array(WW);
-      for (const OW of PW) {
-        const mW = ("water" === OW.family ? 1 : 2) << 4;
-        for (const EW of [OW.stillId, OW.sourceId, OW.fallingId, ...OW.flowingIds]) EW < WW && (iW[EW] = mW)
+      const JR = new Uint8Array(RR);
+      for (const GR of ZR) {
+        const yR = ("water" === GR.family ? 1 : 2) << 4;
+        for (const tR of [GR.stillId, GR.sourceId, GR.fallingId, ...GR.flowingIds]) tR < RR && (JR[tR] = yR)
       }
-      return iW
+      return JR
     }
   },
-  5701: () => {}
+  5820: () => {}
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

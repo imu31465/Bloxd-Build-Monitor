@@ -1,266 +1,266 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  37536: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      isMoreOptionsInFooter: () => pW,
-      showOnboardingPopup: () => fW
+  37442: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      isMoreOptionsInFooter: () => IR,
+      showOnboardingPopup: () => mR
     });
-    var mW = OW(62),
-      EW = OW(1172),
-      NW = OW(1422),
-      PW = OW(1532),
-      LW = OW(1102),
-      cW = OW(4994),
-      wW = OW(1659),
-      tW = OW(344),
-      ZW = OW(1653),
-      xW = OW(3083),
-      lW = OW(1089),
-      AW = OW.n(lW),
-      bW = OW(1111),
-      jW = OW(37541),
-      UW = OW(3247),
-      kW = OW(4723),
-      sW = OW(1107),
-      MW = OW(1391),
-      KW = OW(1283);
-    const SW = "OnboardingMorePanel";
+    var yR = GR(66),
+      tR = GR(1270),
+      uR = GR(1493),
+      ZR = GR(1590),
+      qR = GR(1187),
+      iR = GR(5096),
+      fR = GR(1718),
+      VR = GR(377),
+      KR = GR(1716),
+      wR = GR(3178),
+      rR = GR(1163),
+      eR = GR.n(rR),
+      aR = GR(1201),
+      LR = GR(37444),
+      nR = GR(3361),
+      UR = GR(4829),
+      WR = GR(1196),
+      AR = GR(1468),
+      CR = GR(1378);
+    const XR = "OnboardingMorePanel";
 
-    function YW(WW) {
+    function MR(RR) {
       let {
-        open: iW,
-        onToggle: OW
-      } = WW;
+        open: JR,
+        onToggle: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, EW.B)();
-      return (0, KW.jsxs)("button", {
+        t: yR
+      } = (0, tR.A)();
+      return (0, CR.jsxs)("button", {
         type: "button",
         className: "OnboardingMoreOptions",
-        "aria-expanded": iW,
-        "aria-controls": iW ? SW : void 0,
+        "aria-expanded": JR,
+        "aria-controls": JR ? XR : void 0,
         onClick: () => {
-          iW || (0, cW.l)("more"), OW()
+          JR || (0, iR.l)("more"), GR()
         },
-        children: [mW("homePage:onboardingMoreOptions"), (0, KW.jsx)(MW.c, {
-          name: iW ? "caret-up" : "caret-down"
+        children: [yR("homePage:onboardingMoreOptions"), (0, CR.jsx)(AR.d, {
+          name: JR ? "caret-up" : "caret-down"
         })]
       })
     }
-    const yW = Object.entries(wW.e).filter((WW => {
-      let [, iW] = WW;
-      return "default" === iW.cosmeticPack
+    const BR = Object.entries(fR.b).filter((RR => {
+      let [, JR] = RR;
+      return "default" === JR.cosmeticPack
     }));
 
-    function TW(WW) {
-      return ZW.e.default.colourGroups[WW].colours.map(((WW, iW) => {
+    function lR(RR) {
+      return KR.b.default.colourGroups[RR].colours.map(((RR, JR) => {
         let {
-          rbg: OW,
-          order: mW
-        } = WW;
+          rbg: GR,
+          order: yR
+        } = RR;
         return {
-          rbg: OW,
-          order: mW,
-          index: iW
+          rbg: GR,
+          order: yR,
+          index: JR
         }
-      })).sort(((WW, iW) => WW.order - iW.order))
+      })).sort(((RR, JR) => RR.order - JR.order))
     }
-    const JW = TW("eyes"),
-      hW = TW("skin");
+    const pR = lR("eyes"),
+      gR = lR("skin");
 
-    function HW(WW, iW) {
-      var OW;
-      if (void 0 === iW || "default" !== (null === (OW = (0, xW.l)(WW, iW)) || void 0 === OW ? void 0 : OW.cosmeticPack)) return null;
-      const mW = (0, xW.h)(iW);
-      return mW && [mW[0], Number(mW[1])]
-    }
-
-    function nW(WW, iW, OW) {
-      return `${WW}_${iW}_${OW}`
+    function bR(RR, JR) {
+      var GR;
+      if (void 0 === JR || "default" !== (null === (GR = (0, wR.m)(RR, JR)) || void 0 === GR ? void 0 : GR.cosmeticPack)) return null;
+      const yR = (0, wR.i)(JR);
+      return yR && [yR[0], Number(yR[1])]
     }
 
-    function uW(WW) {
+    function vR(RR, JR, GR) {
+      return `${RR}_${JR}_${GR}`
+    }
+
+    function OR(RR) {
       let {
-        label: iW,
-        colours: OW,
-        picked: mW,
-        onPick: NW
-      } = WW;
+        label: JR,
+        colours: GR,
+        picked: yR,
+        onPick: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, EW.B)();
-      return (0, KW.jsxs)("div", {
+        t: ZR
+      } = (0, tR.A)();
+      return (0, CR.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: iW
-        }), (0, KW.jsx)("div", {
+          children: JR
+        }), (0, CR.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": iW,
-          children: OW.map(((WW, iW) => {
+          "aria-label": JR,
+          children: GR.map(((RR, JR) => {
             let {
-              rbg: OW,
-              index: EW
-            } = WW;
-            return (0, KW.jsx)("button", {
+              rbg: GR,
+              index: tR
+            } = RR;
+            return (0, CR.jsx)("button", {
               type: "button",
-              className: AW()("OnboardingSwatch", {
-                OnboardingSwatchSelected: EW === mW
+              className: eR()("OnboardingSwatch", {
+                OnboardingSwatchSelected: tR === yR
               }),
               style: {
-                backgroundColor: `rgb(${OW.join(",")})`
+                backgroundColor: `rgb(${GR.join(",")})`
               },
               role: "radio",
-              "aria-checked": EW === mW,
-              "aria-label": PW("homePage:onboardingColour", {
-                number: iW + 1
+              "aria-checked": tR === yR,
+              "aria-label": ZR("homePage:onboardingColour", {
+                number: JR + 1
               }),
               onClick: () => {
-                NW(EW)
+                uR(tR)
               }
-            }, EW)
+            }, tR)
           }))
         })]
       })
     }
 
-    function oW(WW) {
+    function xR(RR) {
       let {
-        moreOptions: iW,
-        onToggleMoreOptions: OW,
-        moreOptionsBelowPresets: NW
-      } = WW;
+        moreOptions: JR,
+        onToggleMoreOptions: GR,
+        moreOptionsBelowPresets: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, EW.B)(), {
-        userContext: LW,
-        isUserContextUpdating: wW
-      } = (0, sW.e)(), [, ZW] = (0, mW.useReducer)((WW => WW + 1), 0), xW = (0, mW.useRef)({}), lW = (0, mW.useRef)(null), MW = (0, mW.useRef)({}), TW = (0, kW.c)(), oW = {
-        ...LW.getPlayerCosmetics(),
-        ...lW.current
-      }, dW = (0, mW.useRef)(null);
-      (0, mW.useEffect)((() => {
-        var WW;
-        iW && (null === (WW = dW.current) || void 0 === WW || WW.scrollIntoView({
+        t: ZR
+      } = (0, tR.A)(), {
+        userContext: qR,
+        isUserContextUpdating: fR
+      } = (0, WR.d)(), [, KR] = (0, yR.useReducer)((RR => RR + 1), 0), wR = (0, yR.useRef)({}), rR = (0, yR.useRef)(null), AR = (0, yR.useRef)({}), lR = (0, UR.d)(), xR = {
+        ...qR.getPlayerCosmetics(),
+        ...rR.current
+      }, NR = (0, yR.useRef)(null);
+      (0, yR.useEffect)((() => {
+        var RR;
+        JR && (null === (RR = NR.current) || void 0 === RR || RR.scrollIntoView({
           block: "nearest"
         }))
-      }), [iW]);
-      const eW = (WW, iW) => {
-          (0, jW.d)(WW, Object.entries(iW)), TW.current ? ZW() : WW.publishUpdateIfCurrent()
+      }), [JR]);
+      const DR = (RR, JR) => {
+          (0, LR.e)(RR, Object.entries(JR)), lR.current ? KR() : RR.publishUpdateIfCurrent()
         },
-        vW = function(WW) {
+        HR = function(RR) {
           let {
-            isDefault: iW = !1
+            isDefault: JR = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const OW = {
-            ...!wW && LW.isLoggedIn() ? MW.current : lW.current,
-            ...WW
+          const GR = {
+            ...!fR && qR.isLoggedIn() ? AR.current : rR.current,
+            ...RR
           };
-          if (!wW) return lW.current = null, MW.current = {}, void eW(LW, OW);
-          lW.current = OW, iW || (MW.current = {
-            ...MW.current,
-            ...WW
-          }), ZW(), bW.userContextManager.getCurrentUserContext().then((WW => {
-            if (lW.current !== OW) return;
-            lW.current = null;
-            const iW = MW.current;
-            MW.current = {};
-            const mW = WW.isLoggedIn() ? iW : OW;
-            0 !== Object.keys(mW).length ? eW(WW, mW) : TW.current && ZW()
-          })).catch((WW => {
-            console.warn("Couldn't put on the onboarding look held for the account", WW), lW.current === OW && (lW.current = null, MW.current = {}, TW.current && ZW())
+          if (!fR) return rR.current = null, AR.current = {}, void DR(qR, GR);
+          rR.current = GR, JR || (AR.current = {
+            ...AR.current,
+            ...RR
+          }), KR(), aR.userContextManager.getCurrentUserContext().then((RR => {
+            if (rR.current !== GR) return;
+            rR.current = null;
+            const JR = AR.current;
+            AR.current = {};
+            const yR = RR.isLoggedIn() ? JR : GR;
+            0 !== Object.keys(yR).length ? DR(RR, yR) : lR.current && KR()
+          })).catch((RR => {
+            console.warn("Couldn't put on the onboarding look held for the account", RR), rR.current === GR && (rR.current = null, AR.current = {}, lR.current && KR())
           }))
         },
-        gW = (0, mW.useRef)(!1);
-      (0, mW.useEffect)((() => {
-        gW.current || (gW.current = !0, !wW && LW.isLoggedIn() || vW((0, tW.cc)(yW)[1].cosmetics, {
+        oR = (0, yR.useRef)(!1);
+      (0, yR.useEffect)((() => {
+        oR.current || (oR.current = !0, !fR && qR.isLoggedIn() || HR((0, VR.ec)(BR)[1].cosmetics, {
           isDefault: !0
         }))
-      }), []), (0, mW.useEffect)((() => () => {
-        LW.publishUpdateIfCurrent()
-      }), [LW]);
-      const DW = HW("eyes", oW.eyes),
-        VW = HW("skin", oW.skin);
-      return (0, KW.jsxs)(KW.Fragment, {
-        children: [(0, KW.jsx)("div", {
+      }), []), (0, yR.useEffect)((() => () => {
+        qR.publishUpdateIfCurrent()
+      }), [qR]);
+      const cR = bR("eyes", xR.eyes),
+        PR = bR("skin", xR.skin);
+      return (0, CR.jsxs)(CR.Fragment, {
+        children: [(0, CR.jsx)("div", {
           className: "OnboardingPresets",
-          children: yW.map(((WW, iW) => {
-            let [OW, {
-              cosmetics: mW
-            }] = WW;
-            const EW = function(WW, iW) {
-              return Object.entries(iW).every((iW => {
-                let [OW, mW] = iW;
-                return "skin" === OW || ("eyes" === OW ? (null === (EW = HW("eyes", WW.eyes)) || void 0 === EW ? void 0 : EW[0]) === (null === (NW = HW("eyes", mW)) || void 0 === NW ? void 0 : NW[0]) : WW[OW] === mW);
-                var EW, NW
+          children: BR.map(((RR, JR) => {
+            let [GR, {
+              cosmetics: yR
+            }] = RR;
+            const tR = function(RR, JR) {
+              return Object.entries(JR).every((JR => {
+                let [GR, yR] = JR;
+                return "skin" === GR || ("eyes" === GR ? (null === (tR = bR("eyes", RR.eyes)) || void 0 === tR ? void 0 : tR[0]) === (null === (uR = bR("eyes", yR)) || void 0 === uR ? void 0 : uR[0]) : RR[GR] === yR);
+                var tR, uR
               }))
-            }(oW, mW);
-            return (0, KW.jsx)("button", {
+            }(xR, yR);
+            return (0, CR.jsx)("button", {
               type: "button",
-              className: AW()("OnboardingPreset", {
-                OnboardingPresetSelected: EW
+              className: eR()("OnboardingPreset", {
+                OnboardingPresetSelected: tR
               }),
-              "aria-label": PW("homePage:onboardingPreset", {
-                number: iW + 1
+              "aria-label": ZR("homePage:onboardingPreset", {
+                number: JR + 1
               }),
-              "aria-pressed": EW,
+              "aria-pressed": tR,
               onClick: () => {
-                (0, cW.l)(`preset.${OW}`);
+                (0, iR.l)(`preset.${GR}`);
                 const {
-                  eyes: WW,
-                  skin: iW
-                } = xW.current;
-                vW({
-                  ...mW,
-                  ...void 0 !== WW && {
-                    eyes: nW("eyes", HW("eyes", mW.eyes)[0], WW)
+                  eyes: RR,
+                  skin: JR
+                } = wR.current;
+                HR({
+                  ...yR,
+                  ...void 0 !== RR && {
+                    eyes: vR("eyes", bR("eyes", yR.eyes)[0], RR)
                   },
-                  ...void 0 !== iW && {
-                    skin: nW("skin", "0", iW)
+                  ...void 0 !== JR && {
+                    skin: vR("skin", "0", JR)
                   }
                 })
               },
-              children: (0, KW.jsx)("div", {
+              children: (0, CR.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${OW}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${GR}_preview.png)`
                 }
               })
-            }, OW)
+            }, GR)
           }))
-        }), NW && (0, KW.jsx)(YW, {
-          open: iW,
-          onToggle: OW
-        }), iW && (0, KW.jsxs)("div", {
-          ref: dW,
-          id: SW,
+        }), uR && (0, CR.jsx)(MR, {
+          open: JR,
+          onToggle: GR
+        }), JR && (0, CR.jsxs)("div", {
+          ref: NR,
+          id: XR,
           className: "OnboardingMore",
-          children: [(0, KW.jsx)("div", {
+          children: [(0, CR.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, KW.jsx)(UW.e, {
-              cosmetics: oW
+            children: (0, CR.jsx)(nR.c, {
+              cosmetics: xR
             })
-          }), (0, KW.jsxs)("div", {
+          }), (0, CR.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, KW.jsx)(uW, {
-              label: PW("homePage:onboardingEyeColour"),
-              colours: JW,
-              picked: null === DW || void 0 === DW ? void 0 : DW[1],
-              onPick: WW => {
-                var iW;
-                (0, cW.l)("eyes"), xW.current.eyes = WW, vW({
-                  eyes: nW("eyes", null !== (iW = null === DW || void 0 === DW ? void 0 : DW[0]) && void 0 !== iW ? iW : "0", WW)
+            children: [(0, CR.jsx)(OR, {
+              label: ZR("homePage:onboardingEyeColour"),
+              colours: pR,
+              picked: null === cR || void 0 === cR ? void 0 : cR[1],
+              onPick: RR => {
+                var JR;
+                (0, iR.l)("eyes"), wR.current.eyes = RR, HR({
+                  eyes: vR("eyes", null !== (JR = null === cR || void 0 === cR ? void 0 : cR[0]) && void 0 !== JR ? JR : "0", RR)
                 })
               }
-            }), (0, KW.jsx)(uW, {
-              label: PW("homePage:onboardingSkinColour"),
-              colours: hW,
-              picked: null === VW || void 0 === VW ? void 0 : VW[1],
-              onPick: WW => {
-                (0, cW.l)("skin"), xW.current.skin = WW, vW({
-                  skin: nW("skin", "0", WW)
+            }), (0, CR.jsx)(OR, {
+              label: ZR("homePage:onboardingSkinColour"),
+              colours: gR,
+              picked: null === PR || void 0 === PR ? void 0 : PR[1],
+              onPick: RR => {
+                (0, iR.l)("skin"), wR.current.skin = RR, HR({
+                  skin: vR("skin", "0", RR)
                 })
               }
             })]
@@ -268,371 +268,371 @@ export const modules = {
         })]
       })
     }
-    var dW = OW(1259),
-      eW = OW(25),
-      vW = OW(35118),
-      gW = OW(1383),
-      DW = OW(1782);
+    var NR = GR(1359),
+      DR = GR(25),
+      HR = GR(35035),
+      oR = GR(1465),
+      cR = GR(1867);
 
-    function VW(WW) {
+    function PR(RR) {
       const {
-        t: iW
-      } = (0, EW.B)(), {
-        userContext: OW,
-        isUserContextUpdating: NW
-      } = (0, sW.e)(), LW = NW ? null : OW.getPlayerName(), wW = (0, mW.useRef)(null), [tW, ZW] = (0, mW.useState)((() => null === LW ? (0, dW.d)() : null)), [xW, lW] = (0, mW.useState)(null), [AW, bW] = (0, mW.useState)(!1), jW = (0, mW.useRef)("EZ"), UW = (0, kW.c)(), SW = (0, mW.useRef)(null !== tW), YW = (0, mW.useRef)(!1), yW = (0, mW.useRef)(null), TW = null !== tW && void 0 !== tW ? tW : LW, JW = (0, mW.useRef)(null), hW = WW => {
-        wW.current && (wW.current.value = WW), ZW(WW)
-      }, HW = (0, mW.useRef)(!1);
-      (0, mW.useEffect)((() => {
-        var WW, iW;
-        !AW && HW.current && (HW.current = !1, null === (WW = wW.current) || void 0 === WW || WW.focus(), null === (iW = wW.current) || void 0 === iW || iW.select())
-      }), [AW]);
-      const nW = (0, mW.useRef)(null);
-      (0, mW.useEffect)((() => {
-        var WW;
-        null !== xW && (null === (WW = nW.current) || void 0 === WW || WW.scrollIntoView({
+        t: JR
+      } = (0, tR.A)(), {
+        userContext: GR,
+        isUserContextUpdating: uR
+      } = (0, WR.d)(), qR = uR ? null : GR.getPlayerName(), fR = (0, yR.useRef)(null), [VR, KR] = (0, yR.useState)((() => null === qR ? (0, NR.g)() : null)), [wR, rR] = (0, yR.useState)(null), [eR, aR] = (0, yR.useState)(!1), LR = (0, yR.useRef)("tK"), nR = (0, UR.d)(), XR = (0, yR.useRef)(null !== VR), MR = (0, yR.useRef)(!1), BR = (0, yR.useRef)(null), lR = null !== VR && void 0 !== VR ? VR : qR, pR = (0, yR.useRef)(null), gR = RR => {
+        fR.current && (fR.current.value = RR), KR(RR)
+      }, bR = (0, yR.useRef)(!1);
+      (0, yR.useEffect)((() => {
+        var RR, JR;
+        !eR && bR.current && (bR.current = !1, null === (RR = fR.current) || void 0 === RR || RR.focus(), null === (JR = fR.current) || void 0 === JR || JR.select())
+      }), [eR]);
+      const vR = (0, yR.useRef)(null);
+      (0, yR.useEffect)((() => {
+        var RR;
+        null !== wR && (null === (RR = vR.current) || void 0 === RR || RR.scrollIntoView({
           block: "nearest"
         }))
-      }), [xW]);
-      const uW = (WW, iW) => {
-        const OW = document.activeElement === wW.current || HW.current;
-        bW(!0), lW(null), WW.then((WW => {
-          UW.current && (bW(!1), HW.current = OW, iW(WW))
+      }), [wR]);
+      const OR = (RR, JR) => {
+        const GR = document.activeElement === fR.current || bR.current;
+        aR(!0), rR(null), RR.then((RR => {
+          nR.current && (aR(!1), bR.current = GR, JR(RR))
         }))
       };
-      (0, mW.useEffect)((() => {
-        var WW, iW;
-        eW.d.get("isTouchScreen") || (null === (WW = wW.current) || void 0 === WW || WW.focus(), null === (iW = wW.current) || void 0 === iW || iW.select())
+      (0, yR.useEffect)((() => {
+        var RR, JR;
+        DR.d.get("isTouchScreen") || (null === (RR = fR.current) || void 0 === RR || RR.focus(), null === (JR = fR.current) || void 0 === JR || JR.select())
       }), []);
-      const oW = () => {
-          (0, cW.p)(jW.current), WW()
+      const xR = () => {
+          (0, iR.o)(LR.current), RR()
         },
-        VW = (WW, iW) => {
-          var OW, mW;
-          if (yW.current === WW) return jW.current = null !== (OW = null === (mW = JW.current) || void 0 === mW ? void 0 : mW.outcome) && void 0 !== OW ? OW : "EZ", void oW();
-          yW.current = WW, lW(iW)
+        PR = (RR, JR) => {
+          var GR, yR;
+          if (BR.current === RR) return LR.current = null !== (GR = null === (yR = pR.current) || void 0 === yR ? void 0 : yR.outcome) && void 0 !== GR ? GR : "tK", void xR();
+          BR.current = RR, rR(JR)
         },
-        pW = WW => "refused" === WW.outcome ? WW.message : iW((0, vW.i)(WW.failure)),
-        fW = WW => !(WW.length >= dW.j) && (lW({
+        IR = RR => "refused" === RR.outcome ? RR.message : JR((0, HR.e)(RR.failure)),
+        mR = RR => !(RR.length >= NR.j) && (rR({
           kind: "error",
-          message: iW("homePage:changeNameMinLengthError", {
-            length: dW.j
+          message: JR("homePage:changeNameMinLengthError", {
+            length: NR.j
           })
         }), !0),
-        CW = WW => {
-          var mW, EW, NW;
-          WW.toLowerCase() !== (null === (mW = null !== (EW = null === (NW = JW.current) || void 0 === NW ? void 0 : NW.name) && void 0 !== EW ? EW : LW) || void 0 === mW ? void 0 : mW.toLowerCase()) ? fW(WW) || uW((0, vW.e)(OW, WW), (OW => {
-            "taken" !== OW.outcome ? "refused" !== OW.outcome && "failed" !== OW.outcome ? OW.name !== WW ? (jW.current = "suffixed", JW.current = {
-              name: OW.name,
-              outcome: jW.current
-            }, hW(OW.name), lW({
+        zR = RR => {
+          var yR, tR, uR;
+          RR.toLowerCase() !== (null === (yR = null !== (tR = null === (uR = pR.current) || void 0 === uR ? void 0 : uR.name) && void 0 !== tR ? tR : qR) || void 0 === yR ? void 0 : yR.toLowerCase()) ? mR(RR) || OR((0, HR.c)(GR, RR), (GR => {
+            "taken" !== GR.outcome ? "refused" !== GR.outcome && "failed" !== GR.outcome ? GR.name !== RR ? (LR.current = "suffixed", pR.current = {
+              name: GR.name,
+              outcome: LR.current
+            }, gR(GR.name), rR({
               kind: "suffixed",
-              taken: WW,
-              name: OW.name
-            })) : oW() : VW(WW, {
+              taken: RR,
+              name: GR.name
+            })) : xR() : PR(RR, {
               kind: "error",
-              message: pW(OW)
-            }) : VW(WW, {
+              message: IR(GR)
+            }) : PR(RR, {
               kind: "error",
-              message: iW("homePage:onboardingNameAllTaken")
+              message: JR("homePage:onboardingNameAllTaken")
             })
-          })) : oW()
+          })) : xR()
         };
-      (0, mW.useEffect)((() => {
-        if (!AW || null !== LW || !YW.current) return;
-        const WW = setTimeout((() => {
-          YW.current = !1, bW(!1), VW(TW, {
+      (0, yR.useEffect)((() => {
+        if (!eR || null !== qR || !MR.current) return;
+        const RR = setTimeout((() => {
+          MR.current = !1, aR(!1), PR(lR, {
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [AW, LW]), (0, mW.useEffect)((() => {
-        if (null === LW) return;
-        const WW = SW.current && "EZ" === jW.current && OW.isLoggedIn();
-        SW.current = !1, yW.current = null, "noAccount" === (null === xW || void 0 === xW ? void 0 : xW.kind) && lW(null), WW && hW(LW), YW.current && (YW.current = !1, bW(!1), CW(WW ? LW : TW))
-      }), [LW]);
-      const XW = "error" === (null === xW || void 0 === xW ? void 0 : xW.kind) ? xW.message : "noAccount" === (null === xW || void 0 === xW ? void 0 : xW.kind) ? iW("homePage:onboardingNameNoAccount") : null;
+      }), [eR, qR]), (0, yR.useEffect)((() => {
+        if (null === qR) return;
+        const RR = XR.current && "tK" === LR.current && GR.isLoggedIn();
+        XR.current = !1, BR.current = null, "noAccount" === (null === wR || void 0 === wR ? void 0 : wR.kind) && rR(null), RR && gR(qR), MR.current && (MR.current = !1, aR(!1), zR(RR ? qR : lR))
+      }), [qR]);
+      const SR = "error" === (null === wR || void 0 === wR ? void 0 : wR.kind) ? wR.message : "noAccount" === (null === wR || void 0 === wR ? void 0 : wR.kind) ? JR("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, KW.jsxs)("div", {
+        field: (0, CR.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: nW,
-          children: [(0, KW.jsx)("div", {
+          ref: vR,
+          children: [(0, CR.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: iW("general:name")
-          }), null === TW && (0, KW.jsx)(gW.d, {}), null !== TW && (0, KW.jsxs)("div", {
+            children: JR("general:name")
+          }), null === lR && (0, CR.jsx)(oR.d, {}), null !== lR && (0, CR.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, KW.jsx)(DW.b, {
+            children: [(0, CR.jsx)(cR.b, {
               className: "OnboardingNameInput",
-              ariaLabel: iW("general:name"),
-              maxLength: dW.f,
-              defaultValue: TW,
-              domRef: wW,
-              forcedText: AW ? TW : null,
+              ariaLabel: JR("general:name"),
+              maxLength: NR.i,
+              defaultValue: lR,
+              domRef: fR,
+              forcedText: eR ? lR : null,
               onEnter: () => {
-                var WW;
-                null === (WW = wW.current) || void 0 === WW || WW.blur()
+                var RR;
+                null === (RR = fR.current) || void 0 === RR || RR.blur()
               },
-              onValueChange: WW => {
-                const OW = (0, dW.p)(WW);
-                OW !== WW && wW.current && (wW.current.value = OW), lW(OW !== WW ? {
+              onValueChange: RR => {
+                const GR = (0, NR.q)(RR);
+                GR !== RR && fR.current && (fR.current.value = GR), rR(GR !== RR ? {
                   kind: "error",
-                  message: iW("homePage:nameCharacters")
-                } : null), OW !== TW && (jW.current = "changed"), ZW(OW)
+                  message: JR("homePage:nameCharacters")
+                } : null), GR !== lR && (LR.current = "changed"), KR(GR)
               }
-            }), (0, KW.jsx)(PW.f, {
+            }), (0, CR.jsx)(ZR.g, {
               className: "OnboardingRandomName",
-              ariaLabel: iW("homePage:onboardingRandomName"),
-              disabled: AW,
+              ariaLabel: JR("homePage:onboardingRandomName"),
+              disabled: eR,
               onClick: () => {
                 (() => {
-                  if (lW(null), null === LW || OW.isLoggedIn()) return hW((0, dW.d)()), void(jW.current = "rolled");
-                  uW((0, vW.m)(OW), (WW => {
-                    var iW, mW;
-                    if ("refused" === WW.outcome || "failed" === WW.outcome) return hW(OW.getPlayerName()), jW.current = null !== (iW = null === (mW = JW.current) || void 0 === mW ? void 0 : mW.outcome) && void 0 !== iW ? iW : "EZ", void lW({
+                  if (rR(null), null === qR || GR.isLoggedIn()) return gR((0, NR.g)()), void(LR.current = "rolled");
+                  OR((0, HR.j)(GR), (RR => {
+                    var JR, yR;
+                    if ("refused" === RR.outcome || "failed" === RR.outcome) return gR(GR.getPlayerName()), LR.current = null !== (JR = null === (yR = pR.current) || void 0 === yR ? void 0 : yR.outcome) && void 0 !== JR ? JR : "tK", void rR({
                       kind: "error",
-                      message: pW(WW)
+                      message: IR(RR)
                     });
-                    jW.current = "rolled", JW.current = {
-                      name: WW.name,
+                    LR.current = "rolled", pR.current = {
+                      name: RR.name,
                       outcome: "rolled"
-                    }, hW(WW.name)
+                    }, gR(RR.name)
                   }))
                 })()
               },
-              children: (0, KW.jsx)(MW.c, {
+              children: (0, CR.jsx)(AR.d, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === xW || void 0 === xW ? void 0 : xW.kind) && (0, KW.jsx)("div", {
+          }), "suffixed" === (null === wR || void 0 === wR ? void 0 : wR.kind) && (0, CR.jsx)("div", {
             className: "OnboardingNameNote",
-            children: iW("homePage:onboardingNameSuffixed", {
-              taken: xW.taken,
-              name: xW.name
+            children: JR("homePage:onboardingNameSuffixed", {
+              taken: wR.taken,
+              name: wR.name
             })
-          }), null !== XW && (0, KW.jsx)("div", {
+          }), null !== SR && (0, CR.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: XW
+            children: SR
           })]
         }),
         submit: () => {
-          if (!AW && null !== TW) {
-            if (null === LW) {
-              if (fW(TW)) return;
-              return HW.current = document.activeElement === wW.current, YW.current = !0, bW(!0), void lW(null)
+          if (!eR && null !== lR) {
+            if (null === qR) {
+              if (mR(lR)) return;
+              return bR.current = document.activeElement === fR.current, MR.current = !0, aR(!0), void rR(null)
             }
-            CW(TW)
+            zR(lR)
           }
         },
-        busy: AW,
-        ready: null !== TW
+        busy: eR,
+        ready: null !== lR
       }
     }
 
-    function pW(WW) {
-      return WW < 500
+    function IR(RR) {
+      return RR < 500
     }
 
-    function fW() {
-      const WW = {
+    function mR() {
+      const RR = {
           finished: !1
         },
-        iW = {
+        JR = {
           press: null
         };
-      return NW.NotificationProvider.showCustomPopup({
-        body: OW => (0, KW.jsx)(CW, {
+      return uR.NotificationProvider.showCustomPopup({
+        body: GR => (0, CR.jsx)(zR, {
           onFinish: () => {
-            (0, cW.j)(), WW.finished = !0, OW()
+            (0, iR.j)(), RR.finished = !0, GR()
           },
-          doneRef: iW
+          doneRef: JR
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         disableExitButton: !0,
         ignoreBackgroundPress: !0,
         dismiss: () => {
-          var WW;
-          null === (WW = iW.press) || void 0 === WW || WW.call(iW)
+          var RR;
+          null === (RR = JR.press) || void 0 === RR || RR.call(JR)
         },
         onClose: () => {
-          WW.finished || (0, cW.f)()
+          RR.finished || (0, iR.h)()
         }
       })
     }
 
-    function CW(WW) {
+    function zR(RR) {
       let {
-        onFinish: iW,
-        doneRef: OW
-      } = WW;
+        onFinish: JR,
+        doneRef: GR
+      } = RR;
       const {
-        t: NW
-      } = (0, EW.B)(), wW = VW(iW), tW = wW.ready && !wW.busy ? wW.submit : null;
-      (0, mW.useEffect)((() => (OW.press = tW, () => {
-        OW.press = null
+        t: uR
+      } = (0, tR.A)(), fR = PR(JR), VR = fR.ready && !fR.busy ? fR.submit : null;
+      (0, yR.useEffect)((() => (GR.press = VR, () => {
+        GR.press = null
       })));
-      const [ZW, xW] = (0, mW.useState)(!1), lW = (0, LW.l)(((WW, iW) => pW(iW))), AW = () => {
-        xW(!ZW)
+      const [KR, wR] = (0, yR.useState)(!1), rR = (0, qR.o)(((RR, JR) => IR(JR))), eR = () => {
+        wR(!KR)
       };
-      return (0, mW.useEffect)((() => {
-        (0, cW.t)()
-      }), []), (0, KW.jsxs)("div", {
+      return (0, yR.useEffect)((() => {
+        (0, iR.q)()
+      }), []), (0, CR.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, KW.jsx)("div", {
+        children: [(0, CR.jsx)("div", {
           className: "OnboardingTitle",
-          children: NW("homePage:onboardingTitle")
-        }), (0, KW.jsxs)("div", {
+          children: uR("homePage:onboardingTitle")
+        }), (0, CR.jsxs)("div", {
           className: "OnboardingBody",
-          children: [wW.field, (0, KW.jsx)(oW, {
-            moreOptions: ZW,
-            onToggleMoreOptions: AW,
-            moreOptionsBelowPresets: !lW
+          children: [fR.field, (0, CR.jsx)(xR, {
+            moreOptions: KR,
+            onToggleMoreOptions: eR,
+            moreOptionsBelowPresets: !rR
           })]
-        }), (0, KW.jsxs)("div", {
+        }), (0, CR.jsxs)("div", {
           className: "OnboardingFooter",
-          children: [lW && (0, KW.jsx)(YW, {
-            open: ZW,
-            onToggle: AW
-          }), (0, KW.jsx)(PW.n, {
+          children: [rR && (0, CR.jsx)(MR, {
+            open: KR,
+            onToggle: eR
+          }), (0, CR.jsx)(ZR.n, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: wW.busy,
-            disabled: !wW.ready,
-            onClick: wW.submit,
-            children: NW("homePage:onboardingDone")
+            loading: fR.busy,
+            disabled: !fR.ready,
+            onClick: fR.submit,
+            children: uR("homePage:onboardingDone")
           })]
         })]
       })
     }
   },
-  37541: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW
+  37444: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => ZR
     });
-    var mW = OW(2037),
-      EW = OW(1584);
-    const NW = new class {
+    var yR = GR(2134),
+      tR = GR(1647);
+    const uR = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(WW, iW) {
-        WW !== this.userContext && this.sendHeld(), this.userContext = WW;
-        for (const [mW, EW] of iW) this.pending.set(mW, EW);
+      save(RR, JR) {
+        RR !== this.userContext && this.sendHeld(), this.userContext = RR;
+        for (const [yR, tR] of JR) this.pending.set(yR, tR);
         if (null !== this.timer) return;
-        const OW = this.lastSentAt + 1100 - Date.now();
-        OW <= 0 ? this.send(WW) : (this.timer = setTimeout((() => {
+        const GR = this.lastSentAt + 1100 - Date.now();
+        GR <= 0 ? this.send(RR) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), OW), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), GR), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(WW) {
-        const iW = Array.from(this.pending, (WW => {
-          let [iW, OW] = WW;
+      send(RR) {
+        const JR = Array.from(this.pending, (RR => {
+          let [JR, GR] = RR;
           return {
-            NE: iW,
-            PE: OW
+            ft: JR,
+            Vt: GR
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), EW.e.updateCosmetics(WW, iW).catch((WW => {
-          console.error("Failed to update cosmetics", WW)
+        this.pending.clear(), this.lastSentAt = Date.now(), tR.c.updateCosmetics(RR, JR).catch((RR => {
+          console.error("Failed to update cosmetics", RR)
         }))
       }
     };
 
-    function PW(WW, iW) {
-      for (const [OW, mW] of iW) WW.setPlayerCosmetics(OW, mW);
-      if (null === mW.gameBridge.latest("connectedGame").websocketUrl) NW.save(WW, iW);
+    function ZR(RR, JR) {
+      for (const [GR, yR] of JR) RR.setPlayerCosmetics(GR, yR);
+      if (null === yR.gameBridge.latest("connectedGame").websocketUrl) uR.save(RR, JR);
       else
-        for (const [OW, EW] of iW) mW.gameBridge.send("updateMyCosmetic", {
-          NE: OW,
-          PE: EW
+        for (const [GR, tR] of JR) yR.gameBridge.send("updateMyCosmetic", {
+          ft: GR,
+          Vt: tR
         })
     }
   },
-  35118: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => kW,
-      i: () => wW,
-      l: () => bW,
-      m: () => AW
+  35035: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => UR,
+      e: () => fR,
+      f: () => aR,
+      j: () => eR
     });
-    var mW = OW(154),
-      EW = OW(1259),
-      NW = OW(1185),
-      PW = OW(1111),
-      LW = OW(1850);
-    const cW = {
+    var yR = GR(163),
+      tR = GR(1359),
+      uR = GR(1282),
+      ZR = GR(1201),
+      qR = GR(1939);
+    const iR = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function wW(WW) {
-      return cW[WW]
+    function fR(RR) {
+      return iR[RR]
     }
 
-    function tW(WW) {
-      return (0, LW.c)(WW) ? "outdated" : WW instanceof mW.c ? 429 === WW.httpCode ? "busy" : "server" : "offline"
+    function VR(RR) {
+      return (0, qR.b)(RR) ? "outdated" : RR instanceof yR.d ? 429 === RR.httpCode ? "busy" : "server" : "offline"
     }
 
-    function ZW(WW, iW, OW) {
-      return (0, PW.postJsonWithMetricsCookiesAndJsonResponse)(`${NW.clientSideServerUrls.indexUrl}${iW}`, OW, {
+    function KR(RR, JR, GR) {
+      return (0, ZR.postJsonWithMetricsCookiesAndJsonResponse)(`${uR.clientSideServerUrls.indexUrl}${JR}`, GR, {
         retries: 3
-      }, WW.getMetricsCookies()).catch((WW => (console.error("Bad response from the server when trying to change name:", iW, WW), {
+      }, RR.getMetricsCookies()).catch((RR => (console.error("Bad response from the server when trying to change name:", JR, RR), {
         outcome: "failed",
-        failure: tW(WW)
+        failure: VR(RR)
       })))
     }
 
-    function xW(WW) {
-      return "outcome" in WW && "failed" === WW.outcome
+    function wR(RR) {
+      return "outcome" in RR && "failed" === RR.outcome
     }
 
-    function lW(WW) {
-      return console.error("Error when trying to get with new name from DB", WW), {
+    function rR(RR) {
+      return console.error("Error when trying to get with new name from DB", RR), {
         outcome: "refused",
-        message: WW
+        message: RR
       }
     }
-    async function AW(WW) {
-      const iW = await ZW(WW, "/index/name/random", {});
-      return xW(iW) ? iW : "err" in iW ? lW(iW.err) : (WW.setPlayerName(iW.name), {
+    async function eR(RR) {
+      const JR = await KR(RR, "/index/name/random", {});
+      return wR(JR) ? JR : "err" in JR ? rR(JR.err) : (RR.setPlayerName(JR.name), {
         outcome: "changed",
-        name: iW.name
+        name: JR.name
       })
     }
-    async function bW(WW, iW) {
-      const OW = await ZW(WW, "/index/name/update", {
-        name: iW
+    async function aR(RR, JR) {
+      const GR = await KR(RR, "/index/name/update", {
+        name: JR
       });
-      return xW(OW) ? OW : "err" in OW ? lW(OW.err) : OW.nameExists ? {
+      return wR(GR) ? GR : "err" in GR ? rR(GR.err) : GR.nameExists ? {
         outcome: "taken"
-      } : (WW.setPlayerName(iW), {
+      } : (RR.setPlayerName(JR), {
         outcome: "changed",
-        name: iW
+        name: JR
       })
     }
 
-    function jW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const mW = 1 === iW ? 1 : 10 ** (iW - 1),
-        NW = String(mW + Math.floor(OW() * (10 ** iW - mW)));
-      return `${WW.slice(0,EW.f-iW)}${NW}`
+    function LR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const yR = 1 === JR ? 1 : 10 ** (JR - 1),
+        uR = String(yR + Math.floor(GR() * (10 ** JR - yR)));
+      return `${RR.slice(0,tR.i-JR)}${uR}`
     }
-    const UW = [1, 2, 3, 4];
-    async function kW(WW, iW) {
-      const OW = await bW(WW, iW);
-      if ("taken" !== OW.outcome) return OW;
-      for (const mW of UW) {
-        const OW = jW(iW, mW),
-          EW = await bW(WW, OW);
-        if ("taken" !== EW.outcome) return EW
+    const nR = [1, 2, 3, 4];
+    async function UR(RR, JR) {
+      const GR = await aR(RR, JR);
+      if ("taken" !== GR.outcome) return GR;
+      for (const yR of nR) {
+        const GR = LR(JR, yR),
+          tR = await aR(RR, GR);
+        if ("taken" !== tR.outcome) return tR
       }
       return {
         outcome: "taken"
@@ -641,4 +641,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

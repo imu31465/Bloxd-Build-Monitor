@@ -1,62 +1,62 @@
 export const id = 675;
 export const ids = [675];
 export const modules = {
-  64479: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      applyLightFoOffset: () => PW,
-      getFloatingOriginOffset: () => EW,
-      lightFoVersion: () => NW,
-      wrapRenderableForFO: () => LW
+  64212: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      applyLightFoOffset: () => ZR,
+      getFloatingOriginOffset: () => tR,
+      lightFoVersion: () => uR,
+      wrapRenderableForFO: () => qR
     });
-    var mW = OW(53901);
+    var yR = GR(53745);
 
-    function EW(WW) {
-      const iW = WW.camera;
-      if (!iW) return {
+    function tR(RR) {
+      const JR = RR.camera;
+      if (!JR) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const OW = iW.worldMatrix;
+      const GR = JR.worldMatrix;
       return {
-        x: OW[12],
-        y: OW[13],
-        z: OW[14]
+        x: GR[12],
+        y: GR[13],
+        z: GR[14]
       }
     }
 
-    function NW(WW) {
-      return WW.camera ? WW.camera.worldMatrixVersion : 0
+    function uR(RR) {
+      return RR.camera ? RR.camera.worldMatrixVersion : 0
     }
 
-    function PW(WW, iW) {
-      const OW = iW.camera?.worldMatrix;
-      if (!OW) return;
-      const EW = OW[12],
-        NW = OW[13],
-        PW = OW[14];
-      let LW = 0;
-      for (const cW of iW.lights) {
-        if (LW >= mW.b) break;
-        if (!cW._writeLightUbo) continue;
-        const iW = 4 + 16 * LW,
-          OW = WW[iW + 3];
-        if (0 === OW || 2 === OW) {
-          const OW = cW.worldMatrix;
-          WW[iW] = OW[12] - EW, WW[iW + 1] = OW[13] - NW, WW[iW + 2] = OW[14] - PW
+    function ZR(RR, JR) {
+      const GR = JR.camera?.worldMatrix;
+      if (!GR) return;
+      const tR = GR[12],
+        uR = GR[13],
+        ZR = GR[14];
+      let qR = 0;
+      for (const iR of JR.lights) {
+        if (qR >= yR.d) break;
+        if (!iR._writeLightUbo) continue;
+        const JR = 4 + 16 * qR,
+          GR = RR[JR + 3];
+        if (0 === GR || 2 === GR) {
+          const GR = iR.worldMatrix;
+          RR[JR] = GR[12] - tR, RR[JR + 1] = GR[13] - uR, RR[JR + 2] = GR[14] - ZR
         }
-        LW++
+        qR++
       }
     }
 
-    function LW(WW, iW, OW) {
-      let mW = -1;
+    function qR(RR, JR, GR) {
+      let yR = -1;
       return () => {
-        const EW = iW.camera ? iW.camera.worldMatrixVersion : -1;
-        EW !== mW && (OW(), mW = EW), WW()
+        const tR = JR.camera ? JR.camera.worldMatrixVersion : -1;
+        tR !== yR && (GR(), yR = tR), RR()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

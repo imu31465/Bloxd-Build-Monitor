@@ -1,22 +1,22 @@
 export const id = 245;
 export const ids = [245];
 export const modules = {
-  37415: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => LW
+  37325: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR
     });
-    var mW = OW(1217);
+    var yR = GR(1317);
 
-    function EW(WW) {
-      const iW = /(\d*\.?\d+)px/.exec(WW);
-      return iW ? Number(iW[1]) : null
+    function tR(RR) {
+      const JR = /(\d*\.?\d+)px/.exec(RR);
+      return JR ? Number(JR[1]) : null
     }
 
-    function NW(WW) {
-      return WW.split(/[\s,]+/).pop()
+    function uR(RR) {
+      return RR.split(/[\s,]+/).pop()
     }
-    let PW = !1;
-    const LW = {
+    let ZR = !1;
+    const qR = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -27,380 +27,380 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(WW, iW, mW, LW, cW, wW) {
-        if (cW <= 0 || wW <= 0 || this.fontSize <= 0) return {
+      drawText: function(RR, JR, yR, qR, iR, fR) {
+        if (iR <= 0 || fR <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: tW,
-          fontVariant: ZW,
-          fontWeight: xW,
-          fontSize: lW,
-          font: AW
-        } = this, bW = [tW, ZW, xW, `${lW}px`, AW].filter(Boolean).join(" "), jW = [
-          [xW, `${lW}px`, NW(AW)].filter(Boolean).join(" "), `${lW}px sans-serif`
-        ], UW = WW.font, kW = function(WW, iW, OW) {
-          for (const mW of iW) {
-            WW.font = mW;
-            const iW = EW(WW.font),
-              PW = NW(mW);
-            if (null !== iW && Math.abs(iW - OW) <= .5 && WW.font.toLowerCase().includes(PW.toLowerCase())) return mW
+          fontStyle: VR,
+          fontVariant: KR,
+          fontWeight: wR,
+          fontSize: rR,
+          font: eR
+        } = this, aR = [VR, KR, wR, `${rR}px`, eR].filter(Boolean).join(" "), LR = [
+          [wR, `${rR}px`, uR(eR)].filter(Boolean).join(" "), `${rR}px sans-serif`
+        ], nR = RR.font, UR = function(RR, JR, GR) {
+          for (const yR of JR) {
+            RR.font = yR;
+            const JR = tR(RR.font),
+              ZR = uR(yR);
+            if (null !== JR && Math.abs(JR - GR) <= .5 && RR.font.toLowerCase().includes(ZR.toLowerCase())) return yR
           }
           return null
-        }(WW, [bW, ...jW], lW);
-        kW !== bW && function(WW, iW, mW) {
-          PW || (PW = !0, Promise.resolve().then((() => OW(1303))).then((OW => {
+        }(RR, [aR, ...LR], rR);
+        UR !== aR && function(RR, JR, yR) {
+          ZR || (ZR = !0, Promise.resolve().then((() => GR(1406))).then((GR => {
             let {
-              ub: EW
-            } = OW;
-            EW(new Error("A canvas didn't take canvasTxt's font"), {
-              font: WW,
-              EZ: iW,
-              drawnWith: null !== mW && void 0 !== mW ? mW : "the kept font, scaled"
+              ma: tR
+            } = GR;
+            tR(new Error("A canvas didn't take canvasTxt's font"), {
+              font: RR,
+              tK: JR,
+              drawnWith: null !== yR && void 0 !== yR ? yR : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(bW, UW, kW);
-        const sW = EW(WW.font);
-        if (null === kW && null !== sW && sW > 0) {
-          const OW = lW / sW;
-          WW.save();
+        }(aR, nR, UR);
+        const WR = tR(RR.font);
+        if (null === UR && null !== WR && WR > 0) {
+          const GR = rR / WR;
+          RR.save();
           try {
-            return WW.scale(OW, OW), {
-              height: this.drawLines(WW, iW, mW / OW, LW / OW, cW / OW, wW / OW, sW).height * OW
+            return RR.scale(GR, GR), {
+              height: this.drawLines(RR, JR, yR / GR, qR / GR, iR / GR, fR / GR, WR).height * GR
             }
           } finally {
-            WW.restore()
+            RR.restore()
           }
         }
-        return this.drawLines(WW, iW, mW, LW, cW, wW, lW)
+        return this.drawLines(RR, JR, yR, qR, iR, fR, rR)
       },
-      drawLines: function(WW, iW, OW, EW, NW, PW, LW) {
-        const cW = OW + NW,
-          wW = EW + PW;
-        let tW, ZW = EW + PW / 2 + LW / 2;
-        "right" === this.align ? (tW = cW, WW.textAlign = "right") : "left" === this.align ? (tW = OW, WW.textAlign = "left") : (tW = OW + NW / 2, WW.textAlign = "center");
-        for (const mW of iW) {
-          WW.measureText(mW).width >= NW && (iW = iW.replace(mW, ""))
+      drawLines: function(RR, JR, GR, tR, uR, ZR, qR) {
+        const iR = GR + uR,
+          fR = tR + ZR;
+        let VR, KR = tR + ZR / 2 + qR / 2;
+        "right" === this.align ? (VR = iR, RR.textAlign = "right") : "left" === this.align ? (VR = GR, RR.textAlign = "left") : (VR = GR + uR / 2, RR.textAlign = "center");
+        for (const yR of JR) {
+          RR.measureText(yR).width >= uR && (JR = JR.replace(yR, ""))
         }
-        iW = (0, mW.Z)(iW);
-        const xW = [],
-          lW = iW.split("\n"),
-          AW = this.justify ? WW.measureText("\u200a").width : 0;
-        lW.forEach((iW => {
-          let OW = WW.measureText(iW).width;
-          if (OW <= NW) xW.push(iW);
+        JR = (0, yR.N)(JR);
+        const wR = [],
+          rR = JR.split("\n"),
+          eR = this.justify ? RR.measureText("\u200a").width : 0;
+        rR.forEach((JR => {
+          let GR = RR.measureText(JR).width;
+          if (GR <= uR) wR.push(JR);
           else {
-            let mW = iW;
-            const EW = NW;
-            let PW, LW, cW;
-            for (OW = WW.measureText(mW).width; OW > EW;) {
-              for (PW = 0, LW = 0, cW = ""; LW < EW;) PW++, cW = mW.substr(0, PW), LW = WW.measureText(cW).width;
-              PW--, cW = cW.substr(0, PW);
-              const iW = PW;
-              if (" " !== mW.substr(PW, 1)) {
+            let yR = JR;
+            const tR = uR;
+            let ZR, qR, iR;
+            for (GR = RR.measureText(yR).width; GR > tR;) {
+              for (ZR = 0, qR = 0, iR = ""; qR < tR;) ZR++, iR = yR.substr(0, ZR), qR = RR.measureText(iR).width;
+              ZR--, iR = iR.substr(0, ZR);
+              const JR = ZR;
+              if (" " !== yR.substr(ZR, 1)) {
                 for (;
-                  " " !== mW.substr(PW, 1) && 0 !== PW;) PW--;
-                0 === PW && (PW = iW), cW = mW.substr(0, PW)
+                  " " !== yR.substr(ZR, 1) && 0 !== ZR;) ZR--;
+                0 === ZR && (ZR = JR), iR = yR.substr(0, ZR)
               }
-              cW = this.justify ? this.justifyLine(WW, cW, AW, "\u200a", NW) : cW, mW = mW.substr(PW), OW = WW.measureText(mW).width, xW.push(cW)
+              iR = this.justify ? this.justifyLine(RR, iR, eR, "\u200a", uR) : iR, yR = yR.substr(ZR), GR = RR.measureText(yR).width, wR.push(iR)
             }
-            OW > 0 && xW.push(mW)
+            GR > 0 && wR.push(yR)
           }
         }));
-        const bW = this.lineHeight ? this.lineHeight : this.getTextHeight(WW, iW),
-          jW = bW * (xW.length - 1),
-          UW = jW / 2;
-        let kW = EW;
-        "top" === this.vAlign ? ZW = EW + LW : "bottom" === this.vAlign ? (ZW = wW - jW, kW = wW) : (kW = EW + PW / 2, ZW -= UW), xW.forEach((iW => {
-          iW = iW.trim(), WW.fillText(iW, tW, ZW), ZW += bW
-        })), this.debug && (WW.lineWidth = 3, WW.strokeStyle = "#00909e", WW.strokeRect(OW, EW, NW, PW), WW.lineWidth = 2, WW.strokeStyle = "#f6d743", WW.beginPath(), WW.moveTo(tW, EW), WW.lineTo(tW, wW), WW.stroke(), WW.strokeStyle = "#ff6363", WW.beginPath(), WW.moveTo(OW, kW), WW.lineTo(cW, kW), WW.stroke());
+        const aR = this.lineHeight ? this.lineHeight : this.getTextHeight(RR, JR),
+          LR = aR * (wR.length - 1),
+          nR = LR / 2;
+        let UR = tR;
+        "top" === this.vAlign ? KR = tR + qR : "bottom" === this.vAlign ? (KR = fR - LR, UR = fR) : (UR = tR + ZR / 2, KR -= nR), wR.forEach((JR => {
+          JR = JR.trim(), RR.fillText(JR, VR, KR), KR += aR
+        })), this.debug && (RR.lineWidth = 3, RR.strokeStyle = "#00909e", RR.strokeRect(GR, tR, uR, ZR), RR.lineWidth = 2, RR.strokeStyle = "#f6d743", RR.beginPath(), RR.moveTo(VR, tR), RR.lineTo(VR, fR), RR.stroke(), RR.strokeStyle = "#ff6363", RR.beginPath(), RR.moveTo(GR, UR), RR.lineTo(iR, UR), RR.stroke());
         return {
-          height: jW + bW
+          height: LR + aR
         }
       },
-      getTextHeight: function(WW, iW) {
-        const OW = WW.textBaseline;
-        WW.textBaseline = "bottom";
+      getTextHeight: function(RR, JR) {
+        const GR = RR.textBaseline;
+        RR.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: mW
-        } = WW.measureText(iW);
-        return WW.textBaseline = OW, mW
+          actualBoundingBoxAscent: yR
+        } = RR.measureText(JR);
+        return RR.textBaseline = GR, yR
       },
-      justifyLine: function(WW, iW, OW, mW, EW) {
-        const NW = iW.trim(),
-          PW = WW.measureText(NW).width,
-          LW = NW.split(/\s+/).length - 1,
-          cW = Math.floor((EW - PW) / OW);
-        if (LW <= 0 || cW <= 0) return NW;
-        const wW = Math.floor(cW / LW);
-        let tW = cW - LW * wW,
-          ZW = [];
-        for (let xW = 0; xW < wW; xW++) ZW.push(mW);
-        ZW = ZW.join("");
-        return NW.replace(/\s+/g, (WW => {
-          const iW = tW > 0 ? ZW + mW : ZW;
-          return tW--, WW + iW
+      justifyLine: function(RR, JR, GR, yR, tR) {
+        const uR = JR.trim(),
+          ZR = RR.measureText(uR).width,
+          qR = uR.split(/\s+/).length - 1,
+          iR = Math.floor((tR - ZR) / GR);
+        if (qR <= 0 || iR <= 0) return uR;
+        const fR = Math.floor(iR / qR);
+        let VR = iR - qR * fR,
+          KR = [];
+        for (let wR = 0; wR < fR; wR++) KR.push(yR);
+        KR = KR.join("");
+        return uR.replace(/\s+/g, (RR => {
+          const JR = VR > 0 ? KR + yR : KR;
+          return VR--, RR + JR
         }))
       }
     }
   },
-  37425: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => bW,
-      c: () => AW,
-      d: () => xW,
-      g: () => tW,
-      k: () => ZW
+  37338: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => aR,
+      i: () => eR,
+      k: () => wR,
+      n: () => VR,
+      r: () => KR
     });
-    var mW = OW(2937),
-      EW = OW(344);
-    const NW = 1024,
-      PW = 1536,
-      LW = 2 * mW.l + 1,
-      cW = new Intl.NumberFormat("en", {
+    var yR = GR(3017),
+      tR = GR(377);
+    const uR = 1024,
+      ZR = 1536,
+      qR = 2 * yR.h + 1,
+      iR = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      wW = 1.5;
+      fR = 1.5;
 
-    function tW(WW, iW, OW) {
-      if ("string" !== typeof WW) return iW;
+    function VR(RR, JR, GR) {
+      if ("string" !== typeof RR) return JR;
       try {
-        const OW = JSON.parse(WW);
-        return OW && "object" === typeof OW ? OW : iW
-      } catch (mW) {
-        return void 0 !== OW && console.error(`Couldn't parse ${OW}`, mW), iW
+        const GR = JSON.parse(RR);
+        return GR && "object" === typeof GR ? GR : JR
+      } catch (yR) {
+        return void 0 !== GR && console.error(`Couldn't parse ${GR}`, yR), JR
       }
     }
 
-    function ZW(WW) {
-      return tW(WW, null, "a leaderboard's rows")
+    function KR(RR) {
+      return VR(RR, null, "a leaderboard's rows")
     }
 
-    function xW(WW, iW) {
-      var OW, mW;
-      return null !== iW && void 0 !== iW ? iW : {
-        status: null !== (OW = WW.status) && void 0 !== OW ? OW : "loading",
-        entries: null !== (mW = WW.entries) && void 0 !== mW ? mW : []
+    function wR(RR, JR) {
+      var GR, yR;
+      return null !== JR && void 0 !== JR ? JR : {
+        status: null !== (GR = RR.status) && void 0 !== GR ? GR : "loading",
+        entries: null !== (yR = RR.entries) && void 0 !== yR ? yR : []
       }
     }
 
-    function lW(WW, iW) {
-      return "number" === typeof WW && Number.isFinite(WW) && WW > 0 ? WW : iW
+    function rR(RR, JR) {
+      return "number" === typeof RR && Number.isFinite(RR) && RR > 0 ? RR : JR
     }
 
-    function AW(WW, iW) {
-      const OW = lW(WW.size, 1);
-      let mW = lW(WW.width, lW(2.5 * OW, 2.5)),
-        EW = lW(WW.height, lW(3.75 * OW, 3.75));
-      Number.isFinite(NW * EW / mW) && Number.isFinite(PW * mW / EW) || (mW = 2.5, EW = 3.75);
-      const LW = EW / mW,
-        cW = Math.max(1, Math.min(NW, iW / LW));
+    function eR(RR, JR) {
+      const GR = rR(RR.size, 1);
+      let yR = rR(RR.width, rR(2.5 * GR, 2.5)),
+        tR = rR(RR.height, rR(3.75 * GR, 3.75));
+      Number.isFinite(uR * tR / yR) && Number.isFinite(ZR * yR / tR) || (yR = 2.5, tR = 3.75);
+      const qR = tR / yR,
+        iR = Math.max(1, Math.min(uR, JR / qR));
       return {
-        width: mW,
-        height: EW,
-        layoutWidth: Math.max(NW, PW / LW),
-        layoutHeight: Math.max(PW, NW * LW),
-        pixelWidth: Math.round(cW),
-        pixelHeight: Math.round(Math.max(1, Math.min(iW, cW * LW)))
+        width: yR,
+        height: tR,
+        layoutWidth: Math.max(uR, ZR / qR),
+        layoutHeight: Math.max(ZR, uR * qR),
+        pixelWidth: Math.round(iR),
+        pixelHeight: Math.round(Math.max(1, Math.min(JR, iR * qR)))
       }
     }
 
-    function bW(WW, iW, OW, PW, tW, ZW) {
-      WW.setTransform(1, 0, 0, 1, 0, 0), WW.fillStyle = EW.M.defaultNameTagBackground, WW.fillRect(0, 0, iW, OW), WW.scale(iW / PW.layoutWidth, OW / PW.layoutHeight), WW.translate((PW.layoutWidth - NW) / 2, 0),
-        function(WW, iW, OW, NW) {
-          var PW, tW, ZW, xW;
+    function aR(RR, JR, GR, ZR, VR, KR) {
+      RR.setTransform(1, 0, 0, 1, 0, 0), RR.fillStyle = tR.C.defaultNameTagBackground, RR.fillRect(0, 0, JR, GR), RR.scale(JR / ZR.layoutWidth, GR / ZR.layoutHeight), RR.translate((ZR.layoutWidth - uR) / 2, 0),
+        function(RR, JR, GR, uR) {
+          var ZR, VR, KR, wR;
           const {
-            top: lW,
-            around: AW,
-            showPlayerText: bW,
-            localPlayerDbId: kW
-          } = OW, {
-            whiteUiText: sW,
-            grayUiText: MW,
-            yellowUiText: KW
-          } = EW.M;
-          WW.textBaseline = "middle";
-          const SW = function(iW, OW, mW, EW, NW, PW) {
-              let LW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              WW.font = `bold ${EW}px 'Jetbrains Mono', monospace`, WW.fillStyle = NW, WW.textAlign = LW;
-              let cW = iW.replace(/[\r\n\t]/g, " ");
-              if (WW.measureText(cW).width > PW) {
-                for (; cW.length > 0 && WW.measureText(`${cW}\u2026`).width > PW;) cW = cW.slice(0, -1);
-                cW += "\u2026"
+            top: rR,
+            around: eR,
+            showPlayerText: aR,
+            localPlayerDbId: UR
+          } = GR, {
+            whiteUiText: WR,
+            grayUiText: AR,
+            yellowUiText: CR
+          } = tR.C;
+          RR.textBaseline = "middle";
+          const XR = function(JR, GR, yR, tR, uR, ZR) {
+              let qR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              RR.font = `bold ${tR}px 'Jetbrains Mono', monospace`, RR.fillStyle = uR, RR.textAlign = qR;
+              let iR = JR.replace(/[\r\n\t]/g, " ");
+              if (RR.measureText(iR).width > ZR) {
+                for (; iR.length > 0 && RR.measureText(`${iR}\u2026`).width > ZR;) iR = iR.slice(0, -1);
+                iR += "\u2026"
               }
-              WW.fillText(cW, OW, mW)
+              RR.fillText(iR, GR, yR)
             },
-            YW = iW => {
-              WW.fillStyle = sW, WW.globalAlpha = .15, WW.fillRect(24, iW, 976, 2), WW.globalAlpha = 1
+            MR = JR => {
+              RR.fillStyle = WR, RR.globalAlpha = .15, RR.fillRect(24, JR, 976, 2), RR.globalAlpha = 1
             },
-            yW = null === kW ? null : (0, EW.jc)(kW),
-            TW = WW => null !== yW && WW.playerHash === yW,
-            JW = jW(lW.entries, mW.n),
-            hW = "ready" === lW.status && JW.length > 0,
-            HW = null === AW ? [] : jW(AW.entries, LW),
-            nW = JW.some(TW),
-            uW = null === AW ? null : function(WW) {
-              const iW = WW;
-              if (!iW || !Number.isFinite(iW.rank) || !Number.isFinite(iW.tied) || !Number.isFinite(iW.total)) return null;
-              return iW
-            }(AW.standing),
-            oW = HW.find(TW),
-            dW = JW.find(TW),
-            eW = null === uW || void 0 === oW ? null : {
-              value: oW.value,
-              rank: uW.rank
+            BR = null === UR ? null : (0, tR.oc)(UR),
+            lR = RR => null !== BR && RR.playerHash === BR,
+            pR = LR(rR.entries, yR.k),
+            gR = "ready" === rR.status && pR.length > 0,
+            bR = null === eR ? [] : LR(eR.entries, qR),
+            vR = pR.some(lR),
+            OR = null === eR ? null : function(RR) {
+              const JR = RR;
+              if (!JR || !Number.isFinite(JR.rank) || !Number.isFinite(JR.tied) || !Number.isFinite(JR.total)) return null;
+              return JR
+            }(eR.standing),
+            xR = bR.find(lR),
+            NR = pR.find(lR),
+            DR = null === OR || void 0 === xR ? null : {
+              value: xR.value,
+              rank: OR.rank
             },
-            vW = UW(JW, void 0 === dW || dW.value === (null === eW || void 0 === eW ? void 0 : eW.value) ? eW : null),
-            gW = UW(HW, eW),
-            DW = (WW, iW) => {
-              const OW = WW.findIndex(TW);
-              return OW >= 0 ? iW[OW] : null
+            HR = nR(pR, void 0 === NR || NR.value === (null === DR || void 0 === DR ? void 0 : DR.value) ? DR : null),
+            oR = nR(bR, DR),
+            cR = (RR, JR) => {
+              const GR = RR.findIndex(lR);
+              return GR >= 0 ? JR[GR] : null
             },
-            VW = null !== (PW = null !== (tW = null === uW || void 0 === uW ? void 0 : uW.rank) && void 0 !== tW ? tW : DW(HW, gW)) && void 0 !== PW ? PW : DW(JW, vW);
-          WW.font = "bold 34px 'Jetbrains Mono', monospace";
-          const pW = [...hW ? vW : [], ...nW ? [] : gW],
-            fW = Math.min(280, Math.max(0, ...pW.map((iW => WW.measureText(cW.format(iW)).width)))),
-            CW = fW <= 80,
-            XW = CW ? 80 : 32 + fW,
-            BW = CW ? 148 : XW + 28,
-            qW = 660 - BW;
-          SW(`TOP ${mW.n}  /  ALL TIME`, 24, 52, 28, MW, 976), SW(bW ? String(null !== (ZW = iW.title) && void 0 !== ZW ? ZW : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, sW, 976), SW("RANK", 32, 174, 28, MW, BW - 40), SW("PLAYER", BW, 174, 28, MW, qW), SW(bW ? String(null !== (xW = iW.scoreLabel) && void 0 !== xW ? xW : "Score").slice(0, 24) : "Score", 992, 174, 28, MW, 304, "right"), YW(202);
-          const RW = (NW - 232) / (mW.n + wW + LW),
-            GW = 208 + mW.n * RW,
-            IW = GW + wW * RW,
-            aW = (iW, OW, mW, EW) => {
-              const NW = TW(iW);
-              WW.fillStyle = NW ? KW : sW, WW.globalAlpha = NW ? .15 : EW ? .035 : 0, WW.fillRect(24, mW - RW / 2 + 1, 976, RW - 2), WW.globalAlpha = 1;
-              const PW = NW ? KW : sW;
-              SW(cW.format(OW), XW, mW, 34, PW, CW ? 80 : fW, CW ? "center" : "right"), SW(bW ? String(iW.name).slice(0, 64) : "Player", BW, mW, 34, PW, qW);
-              const LW = cW.format(iW.value);
-              SW(WW.measureText(LW).width > 304 ? iW.value.toExponential(6) : LW, 992, mW, 34, PW, 304, "right")
+            PR = null !== (ZR = null !== (VR = null === OR || void 0 === OR ? void 0 : OR.rank) && void 0 !== VR ? VR : cR(bR, oR)) && void 0 !== ZR ? ZR : cR(pR, HR);
+          RR.font = "bold 34px 'Jetbrains Mono', monospace";
+          const IR = [...gR ? HR : [], ...vR ? [] : oR],
+            mR = Math.min(280, Math.max(0, ...IR.map((JR => RR.measureText(iR.format(JR)).width)))),
+            zR = mR <= 80,
+            SR = zR ? 80 : 32 + mR,
+            jR = zR ? 148 : SR + 28,
+            dR = 660 - jR;
+          XR(`TOP ${yR.k}  /  ALL TIME`, 24, 52, 28, AR, 976), XR(aR ? String(null !== (KR = JR.title) && void 0 !== KR ? KR : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, WR, 976), XR("RANK", 32, 174, 28, AR, jR - 40), XR("PLAYER", jR, 174, 28, AR, dR), XR(aR ? String(null !== (wR = JR.scoreLabel) && void 0 !== wR ? wR : "Score").slice(0, 24) : "Score", 992, 174, 28, AR, 304, "right"), MR(202);
+          const ER = (uR - 232) / (yR.k + fR + qR),
+            YR = 208 + yR.k * ER,
+            kR = YR + fR * ER,
+            QR = (JR, GR, yR, tR) => {
+              const uR = lR(JR);
+              RR.fillStyle = uR ? CR : WR, RR.globalAlpha = uR ? .15 : tR ? .035 : 0, RR.fillRect(24, yR - ER / 2 + 1, 976, ER - 2), RR.globalAlpha = 1;
+              const ZR = uR ? CR : WR;
+              XR(iR.format(GR), SR, yR, 34, ZR, zR ? 80 : mR, zR ? "center" : "right"), XR(aR ? String(JR.name).slice(0, 64) : "Player", jR, yR, 34, ZR, dR);
+              const qR = iR.format(JR.value);
+              XR(RR.measureText(qR).width > 304 ? JR.value.toExponential(6) : qR, 992, yR, 34, ZR, 304, "right")
             };
-          if (hW)
-            for (const [mW, EW] of JW.entries()) aW(EW, vW[mW], 208 + (mW + .5) * RW, mW % 2 === 0);
+          if (gR)
+            for (const [yR, tR] of pR.entries()) QR(tR, HR[yR], 208 + (yR + .5) * ER, yR % 2 === 0);
           else {
-            const WW = "error" === lW.status,
-              iW = WW ? "Couldn't load leaderboard" : "ready" === lW.status ? "No scores yet" : "Loading leaderboard\u2026",
-              OW = WW ? "Trying again shortly" : "ready" === lW.status ? "Be the first on the board!" : "Fetching the top players",
-              mW = (208 + GW) / 2;
-            SW(iW, 512, mW - 28, 40, WW ? EW.M.redUiText : sW, 960, "center"), SW(OW, 512, mW + 27, 30, MW, 960, "center")
+            const RR = "error" === rR.status,
+              JR = RR ? "Couldn't load leaderboard" : "ready" === rR.status ? "No scores yet" : "Loading leaderboard\u2026",
+              GR = RR ? "Trying again shortly" : "ready" === rR.status ? "Be the first on the board!" : "Fetching the top players",
+              yR = (208 + YR) / 2;
+            XR(JR, 512, yR - 28, 40, RR ? tR.C.redUiText : WR, 960, "center"), XR(GR, 512, yR + 27, 30, AR, 960, "center")
           }
-          const rW = GW + wW * RW / 2;
-          if (null === VW) YW(rW);
+          const FR = YR + fR * ER / 2;
+          if (null === PR) MR(FR);
           else {
-            const iW = null === uW ? 0 : uW.tied - 1,
-              OW = `YOUR RANK #${cW.format(VW)}${null===uW?"":` of ${cW.format(uW.total)}`}`;
-            WW.font = "bold 36px 'Jetbrains Mono', monospace";
-            const mW = Math.max(20, Math.min(36, Math.floor(34560 / WW.measureText(OW).width)));
-            SW(OW, 512, rW - (iW > 0 ? 15 : 0), mW, KW, 960, "center"), iW > 0 && SW(`Tied with ${cW.format(iW)} other${1===iW?"":"s"}`, 512, rW + 24, 24, MW, 960, "center")
+            const JR = null === OR ? 0 : OR.tied - 1,
+              GR = `YOUR RANK #${iR.format(PR)}${null===OR?"":` of ${iR.format(OR.total)}`}`;
+            RR.font = "bold 36px 'Jetbrains Mono', monospace";
+            const yR = Math.max(20, Math.min(36, Math.floor(34560 / RR.measureText(GR).width)));
+            XR(GR, 512, FR - (JR > 0 ? 15 : 0), yR, CR, 960, "center"), JR > 0 && XR(`Tied with ${iR.format(JR)} other${1===JR?"":"s"}`, 512, FR + 24, 24, AR, 960, "center")
           }
-          if (null === AW) return;
-          const zW = IW + LW * RW / 2;
-          if (nW) SW(`You're in the top ${mW.n}!`, 512, zW, 40, KW, 960, "center");
-          else if (0 === HW.length) SW("You're not on this board yet", 512, zW, 34, MW, 960, "center");
+          if (null === eR) return;
+          const TR = kR + qR * ER / 2;
+          if (vR) XR(`You're in the top ${yR.k}!`, 512, TR, 40, CR, 960, "center");
+          else if (0 === bR.length) XR("You're not on this board yet", 512, TR, 34, AR, 960, "center");
           else
-            for (const [mW, EW] of HW.entries()) aW(EW, gW[mW], IW + (mW + .5) * RW, mW % 2 === 0)
-        }(WW, tW, ZW, PW.layoutHeight)
+            for (const [yR, tR] of bR.entries()) QR(tR, oR[yR], kR + (yR + .5) * ER, yR % 2 === 0)
+        }(RR, VR, KR, ZR.layoutHeight)
     }
 
-    function jW(WW, iW) {
-      return Array.isArray(WW) ? WW.slice(0, iW).filter((WW => WW && Number.isFinite(WW.rank) && Number.isFinite(WW.value))) : []
+    function LR(RR, JR) {
+      return Array.isArray(RR) ? RR.slice(0, JR).filter((RR => RR && Number.isFinite(RR.rank) && Number.isFinite(RR.value))) : []
     }
 
-    function UW(WW, iW) {
-      const OW = [];
-      let mW = !1;
-      return WW.forEach(((EW, NW) => {
-        if (null !== iW && EW.value === iW.value) return void OW.push(iW.rank);
-        const PW = NW > 0 && EW.value === WW[NW - 1].value;
-        PW || (mW = 0 === NW && 1 !== EW.rank), OW.push(PW && !mW ? OW[NW - 1] : EW.rank)
-      })), OW
+    function nR(RR, JR) {
+      const GR = [];
+      let yR = !1;
+      return RR.forEach(((tR, uR) => {
+        if (null !== JR && tR.value === JR.value) return void GR.push(JR.rank);
+        const ZR = uR > 0 && tR.value === RR[uR - 1].value;
+        ZR || (yR = 0 === uR && 1 !== tR.rank), GR.push(ZR && !yR ? GR[uR - 1] : tR.rank)
+      })), GR
     }
   },
-  37348: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      f: () => NW
+  37262: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      h: () => uR
     });
-    const mW = 32;
+    const yR = 32;
 
-    function EW(WW) {
-      return Array.from(WW).length
+    function tR(RR) {
+      return Array.from(RR).length
     }
 
-    function NW(WW) {
-      const iW = [""];
-      let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        EW = "";
-      const NW = () => {
-        iW.push(""), OW = 0, EW = ""
+    function uR(RR) {
+      const JR = [""];
+      let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        tR = "";
+      const uR = () => {
+        JR.push(""), GR = 0, tR = ""
       };
-      for (const PW of WW.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(PW)) NW();
-        else if (/^\s+$/.test(PW)) EW += PW;
-      else if (PW.length > 0) {
-        const WW = Array.from(PW);
-        OW > 0 && OW + EW.length + WW.length > mW && NW(), iW[iW.length - 1] += EW, OW += EW.length, EW = "";
-        for (const EW of WW) OW >= mW && NW(), iW[iW.length - 1] += EW, OW++
+      for (const ZR of RR.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(ZR)) uR();
+        else if (/^\s+$/.test(ZR)) tR += ZR;
+      else if (ZR.length > 0) {
+        const RR = Array.from(ZR);
+        GR > 0 && GR + tR.length + RR.length > yR && uR(), JR[JR.length - 1] += tR, GR += tR.length, tR = "";
+        for (const tR of RR) GR >= yR && uR(), JR[JR.length - 1] += tR, GR++
       }
-      return iW[iW.length - 1] += EW, iW
+      return JR[JR.length - 1] += tR, JR
     }
   },
-  37369: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => SW,
-      h: () => hW,
-      k: () => HW,
-      o: () => nW
+  37278: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => XR,
+      e: () => gR,
+      i: () => bR,
+      m: () => vR
     });
-    var mW = OW(37371),
-      EW = OW(7912),
-      NW = OW(7998),
-      PW = OW(37373),
-      LW = OW(37375),
-      cW = OW(37380),
-      wW = OW(8308),
-      tW = OW(8437),
-      ZW = OW(37383),
-      xW = OW(8647),
-      lW = OW(7787),
-      AW = OW(8930),
-      bW = OW(37389),
-      jW = OW(37398),
-      UW = OW(8956),
-      kW = OW(37403),
-      sW = OW(37410),
-      MW = OW(344);
-    const KW = {
-        redTeam: NW.d,
-        blueTeam: jW.f,
-        greenTeam: sW.g,
-        yellowTeam: UW.f,
-        cyanTeam: cW.e,
-        whiteTeam: lW.faPlus,
-        pinkTeam: tW.h,
-        grayTeam: ZW.f,
-        blackTeam: bW.g,
-        orangeTeam: kW.g,
-        lilacTeam: PW.f,
-        purpleTeam: xW.f,
-        magentaTeam: LW.g,
-        brownTeam: mW.i,
-        limeTeam: EW.faBolt,
-        lightGrayTeam: wW.d,
-        lightBlueTeam: AW.f
+    var yR = GR(37287),
+      tR = GR(8059),
+      uR = GR(8132),
+      ZR = GR(37293),
+      qR = GR(37298),
+      iR = GR(37301),
+      fR = GR(8461),
+      VR = GR(8583),
+      KR = GR(37303),
+      wR = GR(8784),
+      rR = GR(7934),
+      eR = GR(9048),
+      aR = GR(37309),
+      LR = GR(37312),
+      nR = GR(9074),
+      UR = GR(37314),
+      WR = GR(37323),
+      AR = GR(377);
+    const CR = {
+        redTeam: uR.c,
+        blueTeam: LR.g,
+        greenTeam: WR.f,
+        yellowTeam: nR.f,
+        cyanTeam: iR.f,
+        whiteTeam: rR.faPlus,
+        pinkTeam: VR.d,
+        grayTeam: KR.e,
+        blackTeam: aR.h,
+        orangeTeam: UR.h,
+        lilacTeam: ZR.e,
+        purpleTeam: wR.f,
+        magentaTeam: qR.e,
+        brownTeam: yR.g,
+        limeTeam: tR.faBolt,
+        lightGrayTeam: fR.h,
+        lightBlueTeam: eR.h
       },
-      SW = Object.fromEntries(Object.values(KW).map((WW => [YW(WW), WW])));
+      XR = Object.fromEntries(Object.values(CR).map((RR => [MR(RR), RR])));
 
-    function YW(WW) {
-      return `team-${WW.iconName}`
+    function MR(RR) {
+      return `team-${RR.iconName}`
     }
-    const yW = new Map;
-    for (const [uW, oW] of Object.entries(KW)) {
-      const WW = YW(oW),
-        iW = MW.M[uW];
-      iW && yW.set(iW.toLowerCase(), {
-        icon: WW,
+    const BR = new Map;
+    for (const [OR, xR] of Object.entries(CR)) {
+      const RR = MR(xR),
+        JR = AR.C[OR];
+      JR && BR.set(JR.toLowerCase(), {
+        icon: RR,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -410,46 +410,46 @@ export const modules = {
         visible: !0
       })
     }
-    let TW = !1;
-    const JW = new Set;
+    let lR = !1;
+    const pR = new Set;
 
-    function hW(WW) {
-      if (WW !== TW) {
-        TW = WW;
-        for (const WW of JW) WW()
+    function gR(RR) {
+      if (RR !== lR) {
+        lR = RR;
+        for (const RR of pR) RR()
       }
     }
 
-    function HW(WW) {
-      var iW;
-      return "string" === typeof WW && TW && null !== (iW = yW.get(WW.toLowerCase())) && void 0 !== iW ? iW : null
+    function bR(RR) {
+      var JR;
+      return "string" === typeof RR && lR && null !== (JR = BR.get(RR.toLowerCase())) && void 0 !== JR ? JR : null
     }
 
-    function nW(WW) {
-      return JW.add(WW), () => {
-        JW.delete(WW)
+    function vR(RR) {
+      return pR.add(RR), () => {
+        pR.delete(RR)
       }
     }
   },
-  37423: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => ZW,
-      B: () => bW,
-      D: () => jW,
-      F: () => UW,
-      G: () => sW,
-      d: () => EW,
-      g: () => lW,
-      k: () => PW,
-      m: () => AW,
-      o: () => kW,
-      s: () => xW,
-      t: () => MW,
-      u: () => NW,
-      x: () => tW
+  37329: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => nR,
+      E: () => WR,
+      d: () => tR,
+      g: () => rR,
+      i: () => ZR,
+      k: () => eR,
+      n: () => UR,
+      o: () => wR,
+      p: () => AR,
+      r: () => uR,
+      s: () => VR,
+      t: () => KR,
+      u: () => aR,
+      w: () => LR
     });
-    var mW = OW(2012);
-    const EW = [{
+    var yR = GR(2102);
+    const tR = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -466,68 +466,68 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function NW(WW) {
-      return (0, mW.r)(WW.toWellFormed().replace(/\uFFFD+/g, "\ufffd"))
+    function uR(RR) {
+      return (0, yR.q)(RR.toWellFormed().replace(/\uFFFD+/g, "\ufffd"))
     }
 
-    function PW(WW, iW) {
+    function ZR(RR, JR) {
       const {
-        numLines: OW,
-        charsPerLine: mW
-      } = EW[iW];
-      return KW(WW, OW, mW, !1)
+        numLines: GR,
+        charsPerLine: yR
+      } = tR[JR];
+      return CR(RR, GR, yR, !1)
     }
-    const LW = 7 / 8,
-      cW = .25,
-      wW = 8;
+    const qR = 7 / 8,
+      iR = .25,
+      fR = 8;
 
-    function tW(WW, iW) {
+    function VR(RR, JR) {
       return {
-        width: Math.min(WW, wW) - 2 * cW,
-        height: Math.min(iW, wW) - 2 * cW
+        width: Math.min(RR, fR) - 2 * iR,
+        height: Math.min(JR, fR) - 2 * iR
       }
     }
 
-    function ZW(WW, iW, OW) {
-      const mW = tW(WW, iW),
+    function KR(RR, JR, GR) {
+      const yR = VR(RR, JR),
         {
-          numLines: NW,
-          charsPerLine: PW
-        } = EW[OW];
+          numLines: uR,
+          charsPerLine: ZR
+        } = tR[GR];
       return {
-        numLines: Math.max(1, Math.floor(NW / LW * mW.height)),
-        charsPerLine: Math.max(1, Math.floor(PW * mW.width))
+        numLines: Math.max(1, Math.floor(uR / qR * yR.height)),
+        charsPerLine: Math.max(1, Math.floor(ZR * yR.width))
       }
     }
 
-    function xW(WW, iW, OW, mW) {
+    function wR(RR, JR, GR, yR) {
       const {
-        numLines: EW,
-        charsPerLine: NW
-      } = ZW(OW, mW, iW);
-      return KW(WW, EW, NW, !1)
+        numLines: tR,
+        charsPerLine: uR
+      } = KR(GR, yR, JR);
+      return CR(RR, tR, uR, !1)
     }
-    const lW = 32e3;
+    const rR = 32e3;
 
-    function AW(WW) {
-      return WW.slice(0, lW)
+    function eR(RR) {
+      return RR.slice(0, rR)
     }
-    const bW = 512e3,
-      jW = 64,
-      UW = bW;
+    const aR = 512e3,
+      LR = 64,
+      nR = aR;
 
-    function kW(WW, iW) {
-      const OW = Math.max(0, UW - iW),
-        mW = Math.min(bW, OW);
-      return WW.slice(0, mW)
+    function UR(RR, JR) {
+      const GR = Math.max(0, nR - JR),
+        yR = Math.min(aR, GR);
+      return RR.slice(0, yR)
     }
-    const sW = {
+    const WR = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      kt: {
+      XV: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -539,25 +539,25 @@ export const modules = {
       }
     };
 
-    function MW(WW, iW) {
+    function AR(RR, JR) {
       const {
-        numLines: OW,
-        charsPerLine: mW
-      } = sW[iW];
-      return KW(WW, OW, mW, !1)
+        numLines: GR,
+        charsPerLine: yR
+      } = WR[JR];
+      return CR(RR, GR, yR, !1)
     }
 
-    function KW(WW, iW, OW, mW, EW) {
-      (EW || mW) && (WW = WW.slice(0, null !== EW && void 0 !== EW ? EW : iW * OW));
-      const NW = WW.split("\n");
-      if (NW.length > iW && NW.splice(iW, NW.length - iW), !mW)
-        for (let PW = 0; PW < NW.length; PW++) {
-          const WW = NW[PW];
-          WW.length > OW && (NW[PW] = WW.substring(0, OW), NW.length < iW && NW.splice(PW + 1, 0, WW.substring(OW)))
+    function CR(RR, JR, GR, yR, tR) {
+      (tR || yR) && (RR = RR.slice(0, null !== tR && void 0 !== tR ? tR : JR * GR));
+      const uR = RR.split("\n");
+      if (uR.length > JR && uR.splice(JR, uR.length - JR), !yR)
+        for (let ZR = 0; ZR < uR.length; ZR++) {
+          const RR = uR[ZR];
+          RR.length > GR && (uR[ZR] = RR.substring(0, GR), uR.length < JR && uR.splice(ZR + 1, 0, RR.substring(GR)))
         }
-      return NW.join("\n")
+      return uR.join("\n")
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

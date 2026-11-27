@@ -1,11 +1,11 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7459: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  7596: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    const mW = {
+    const yR = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -164,7 +164,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: OW(2066).c,
+      _shopVersion: GR(2167).e,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -174,4 +174,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

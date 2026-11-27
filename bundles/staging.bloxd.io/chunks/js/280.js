@@ -1,701 +1,701 @@
 export const id = 280;
 export const ids = [280];
 export const modules = {
-  42533: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      h: () => PW
+  42577: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      g: () => ZR
     });
-    var mW = OW(2047);
-    let EW = !1;
+    var yR = GR(2144);
+    let tR = !1;
 
-    function NW() {
-      EW = !0
+    function uR() {
+      tR = !0
     }
 
-    function PW() {
-      EW && (EW = !1, (0, mW.b)())
+    function ZR() {
+      tR && (tR = !1, (0, yR.e)())
     }
   },
-  42394: (WW, iW, OW) => {
-    OW.d(iW, {
-      C: () => dW,
-      G: () => rW,
-      H: () => gW,
-      I: () => nW,
-      J: () => vW,
-      M: () => HW,
-      P: () => qW,
-      S: () => BW,
-      V: () => oW,
-      d: () => RW,
-      h: () => VW,
-      i: () => JW,
-      m: () => GW,
-      q: () => hW,
-      t: () => TW,
-      u: () => DW,
-      v: () => uW,
-      z: () => eW
+  42423: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => DR,
+      E: () => NR,
+      I: () => FR,
+      M: () => oR,
+      O: () => vR,
+      S: () => HR,
+      T: () => bR,
+      X: () => dR,
+      _: () => jR,
+      ab: () => xR,
+      d: () => ER,
+      h: () => PR,
+      k: () => pR,
+      o: () => YR,
+      r: () => gR,
+      t: () => lR,
+      w: () => cR,
+      y: () => OR
     });
-    var mW = OW(1459),
-      EW = OW(27),
-      NW = OW(1294),
-      PW = OW(3305),
-      LW = OW(5575),
-      cW = OW(5533);
-    let wW, tW = !1,
-      ZW = !1,
-      xW = !1,
-      lW = !1;
-    const AW = 1300,
-      bW = 3e3;
-    let jW = 0,
-      UW = !1,
-      kW = !1,
-      sW = 0;
-    const MW = 2;
-    let KW = !1,
-      SW = !1;
-    const YW = new Set,
-      yW = new Set;
+    var yR = GR(1532),
+      tR = GR(32),
+      uR = GR(1383),
+      ZR = GR(3428),
+      qR = GR(5699),
+      iR = GR(5665);
+    let fR, VR = !1,
+      KR = !1,
+      wR = !1,
+      rR = !1;
+    const eR = 1300,
+      aR = 3e3;
+    let LR = 0,
+      nR = !1,
+      UR = !1,
+      WR = 0;
+    const AR = 2;
+    let CR = !1,
+      XR = !1;
+    const MR = new Set,
+      BR = new Set;
 
-    function TW() {
-      return tW
+    function lR() {
+      return VR
     }
 
-    function JW() {
-      return kW
+    function pR() {
+      return UR
     }
 
-    function hW() {
-      return SW
+    function gR() {
+      return XR
     }
 
-    function HW() {
-      return (0, NW.z)() && !SW
+    function bR() {
+      return (0, uR.u)() && !XR
     }
 
-    function nW(WW) {
-      let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (WW !== SW) {
-        SW = WW;
-        for (const WW of [...yW]) WW(SW);
-        iW && BW()
+    function vR(RR) {
+      let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (RR !== XR) {
+        XR = RR;
+        for (const RR of [...BR]) RR(XR);
+        JR && jR()
       }
     }
 
-    function uW(WW) {
-      return yW.add(WW), () => {
-        yW.delete(WW)
+    function OR(RR) {
+      return BR.add(RR), () => {
+        BR.delete(RR)
       }
     }
 
-    function oW() {
-      (0, LW.j)(PW.y.Menu, (0, NW.z)() ? 0 : PW.y.Menu)
+    function xR() {
+      (0, qR.i)(ZR.C.Menu, (0, uR.u)() ? 0 : ZR.C.Menu)
     }
 
-    function dW() {
-      kW = !1, sW = 0, oW(), BW()
+    function NR() {
+      UR = !1, WR = 0, xR(), jR()
     }
 
-    function eW(WW) {
-      return YW.add(WW), () => {
-        YW.delete(WW)
+    function DR(RR) {
+      return MR.add(RR), () => {
+        MR.delete(RR)
       }
     }
 
-    function vW(WW) {
-      ZW = !1, WW !== tW && (tW = WW, lW = !1, clearTimeout(wW), xW = !tW && KW, tW ? (UW = !1, kW = !1, sW = 0) : HW() && !KW && (kW = !0), KW = !1, tW && !HW() && aW(), zW(), xW && BW())
+    function HR(RR) {
+      KR = !1, RR !== VR && (VR = RR, rR = !1, clearTimeout(fR), wR = !VR && CR, VR ? (nR = !1, UR = !1, WR = 0) : bR() && !CR && (UR = !0), CR = !1, VR && !bR() && QR(), TR(), wR && jR())
     }
 
-    function gW(WW) {
-      WW !== UW && (UW = WW, WW || BW())
+    function oR(RR) {
+      RR !== nR && (nR = RR, RR || jR())
     }
 
-    function DW() {
-      ZW = !1, lW || !0 !== CW() || (lW = !0, clearTimeout(wW), wW = setTimeout(pW, AW))
+    function cR() {
+      KR = !1, rR || !0 !== zR() || (rR = !0, clearTimeout(fR), fR = setTimeout(IR, eR))
     }
 
-    function VW() {
-      return (!ZW || performance.now() - jW > bW) && (ZW = (0, cW.K)().lockPointer(), jW = performance.now()), ZW
+    function PR() {
+      return (!KR || performance.now() - LR > aR) && (KR = (0, iR.E)().lockPointer(), LR = performance.now()), KR
     }
 
-    function pW() {
-      fW() && XW() && VW()
+    function IR() {
+      mR() && SR() && PR()
     }
 
-    function fW() {
-      return HW() && !tW && !UW && !(0, mW.k)()
+    function mR() {
+      return bR() && !VR && !nR && !(0, yR.j)()
     }
 
-    function CW() {
-      var WW;
-      return "undefined" === typeof navigator || null === (WW = navigator.userActivation) || void 0 === WW ? void 0 : WW.isActive
+    function zR() {
+      var RR;
+      return "undefined" === typeof navigator || null === (RR = navigator.userActivation) || void 0 === RR ? void 0 : RR.isActive
     }
 
-    function XW() {
-      return xW && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== CW()
+    function SR() {
+      return wR && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== zR()
     }
 
-    function BW() {
-      HW() ? fW() && !kW && XW() && VW() : tW && !KW && aW()
+    function jR() {
+      bR() ? mR() && !UR && SR() && PR() : VR && !CR && QR()
     }
 
-    function qW() {
-      kW ? navigator.vendor.startsWith("Apple") ? IW() : sW = MW : BW()
+    function dR() {
+      UR ? navigator.vendor.startsWith("Apple") ? kR() : WR = AR : jR()
     }
 
-    function RW() {
-      sW > 0 && 0 === --sW && IW()
+    function ER() {
+      WR > 0 && 0 === --WR && kR()
     }
 
-    function GW() {
-      sW = 0
+    function YR() {
+      WR = 0
     }
 
-    function IW() {
-      fW() && !0 === CW() && VW()
+    function kR() {
+      mR() && !0 === zR() && PR()
     }
 
-    function aW() {
-      KW = !0, (0, cW.K)().unlockPointer()
+    function QR() {
+      CR = !0, (0, iR.E)().unlockPointer()
     }
 
-    function rW() {
-      ZW = !1, xW = !1, lW = !1, clearTimeout(wW), UW = !1, kW = !1, sW = 0, KW = !1;
-      const WW = tW;
-      tW = !1, WW && zW()
+    function FR() {
+      KR = !1, wR = !1, rR = !1, clearTimeout(fR), nR = !1, UR = !1, WR = 0, CR = !1;
+      const RR = VR;
+      VR = !1, RR && TR()
     }
 
-    function zW() {
-      for (const WW of [...YW]) WW(tW);
-      EW.l.iZ("pointerLockUpdate", tW)
+    function TR() {
+      for (const RR of [...MR]) RR(VR);
+      tR.n.JK("pointerLockUpdate", VR)
     }
   },
-  42373: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => xW,
-      h: () => LW,
-      j: () => ZW,
-      n: () => wW,
-      q: () => PW,
-      t: () => tW,
-      x: () => cW
+  42394: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => wR,
+      f: () => qR,
+      i: () => KR,
+      l: () => fR,
+      n: () => ZR,
+      o: () => VR,
+      r: () => iR
     });
-    let mW = null,
-      EW = null,
-      NW = null;
+    let yR = null,
+      tR = null,
+      uR = null;
 
-    function PW(WW) {
-      mW = WW
+    function ZR(RR) {
+      yR = RR
     }
 
-    function LW() {
-      return mW
+    function qR() {
+      return yR
     }
 
-    function cW(WW) {
-      EW = WW
+    function iR(RR) {
+      tR = RR
     }
 
-    function wW() {
-      return EW
+    function fR() {
+      return tR
     }
 
-    function tW(WW) {
-      NW = WW
+    function VR(RR) {
+      uR = RR
     }
 
-    function ZW() {
-      return NW
+    function KR() {
+      return uR
     }
 
-    function xW() {
-      var WW, iW;
-      return !0 === (null === (WW = EW) || void 0 === WW || null === (iW = WW.currentViewer) || void 0 === iW ? void 0 : iW.inPlayback)
+    function wR() {
+      var RR, JR;
+      return !0 === (null === (RR = tR) || void 0 === RR || null === (JR = RR.currentViewer) || void 0 === JR ? void 0 : JR.inPlayback)
     }
   },
-  42528: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => PW,
-      c: () => NW,
-      f: () => LW
+  42568: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      d: () => uR,
+      g: () => qR
     });
-    var mW = OW(42094),
-      EW = OW(42109);
+    var yR = GR(42106),
+      tR = GR(42118);
 
-    function NW(WW) {
-      if (WW.queries.drawCensus() < mW.Ib.BYTES) return null;
-      const iW = WW.memoryData(WW.scratch(), mW.Ib.BYTES, 4, "the draw census");
-      return null === iW ? null : {
-        terrainOpaque: mW.Ib.terrainOpaque(iW, 0),
-        terrainTransparent: mW.Ib.terrainTransparent(iW, 0),
-        terrainPack: mW.Ib.terrainPack(iW, 0),
-        earthSky: mW.Ib.earthSky(iW, 0),
-        skyMeshes: mW.Ib.skyMeshes(iW, 0),
-        regular: mW.Ib.regular(iW, 0),
-        thin: mW.Ib.thin(iW, 0),
-        line: mW.Ib.line(iW, 0),
-        text: mW.Ib.text(iW, 0),
-        particles: mW.Ib.particles(iW, 0),
-        terrainParts: mW.Ib.terrainParts(iW, 0),
-        terrainCompiling: mW.Ib.terrainCompiling(iW, 0),
-        ringCopiesMax: mW.Ib.ringCopiesMax(iW, 0),
-        ringBusyWrites: mW.Ib.ringBusyWrites(iW, 0)
+    function uR(RR) {
+      if (RR.queries.drawCensus() < yR.wb.BYTES) return null;
+      const JR = RR.memoryData(RR.scratch(), yR.wb.BYTES, 4, "the draw census");
+      return null === JR ? null : {
+        terrainOpaque: yR.wb.terrainOpaque(JR, 0),
+        terrainTransparent: yR.wb.terrainTransparent(JR, 0),
+        terrainPack: yR.wb.terrainPack(JR, 0),
+        earthSky: yR.wb.earthSky(JR, 0),
+        skyMeshes: yR.wb.skyMeshes(JR, 0),
+        regular: yR.wb.regular(JR, 0),
+        thin: yR.wb.thin(JR, 0),
+        line: yR.wb.line(JR, 0),
+        text: yR.wb.text(JR, 0),
+        particles: yR.wb.particles(JR, 0),
+        terrainParts: yR.wb.terrainParts(JR, 0),
+        terrainCompiling: yR.wb.terrainCompiling(JR, 0),
+        ringCopiesMax: yR.wb.ringCopiesMax(JR, 0),
+        ringBusyWrites: yR.wb.ringBusyWrites(JR, 0)
       }
     }
 
-    function PW(WW) {
+    function ZR(RR) {
       const {
-        terrainOpaque: iW,
-        terrainTransparent: OW,
-        earthSky: mW,
-        skyMeshes: EW,
-        regular: NW,
-        thin: PW,
-        line: LW,
-        text: cW,
-        particles: wW
-      } = WW;
-      return iW + OW + mW + EW + NW + PW + LW + cW + wW
+        terrainOpaque: JR,
+        terrainTransparent: GR,
+        earthSky: yR,
+        skyMeshes: tR,
+        regular: uR,
+        thin: ZR,
+        line: qR,
+        text: iR,
+        particles: fR
+      } = RR;
+      return JR + GR + yR + tR + uR + ZR + qR + iR + fR
     }
 
-    function LW() {
-      const WW = (0, EW.f)();
-      return !0 === (null === WW || void 0 === WW ? void 0 : WW.isCoreRunning) ? function(WW) {
-        const iW = NW(WW);
-        if (null === iW) return [];
+    function qR() {
+      const RR = (0, tR.l)();
+      return !0 === (null === RR || void 0 === RR ? void 0 : RR.isCoreRunning) ? function(RR) {
+        const JR = uR(RR);
+        if (null === JR) return [];
         const {
-          terrainOpaque: OW,
-          terrainTransparent: mW,
-          terrainPack: EW,
-          earthSky: LW,
-          skyMeshes: cW,
-          regular: wW,
-          thin: tW,
-          line: ZW,
-          text: xW,
-          particles: lW
-        } = iW;
+          terrainOpaque: GR,
+          terrainTransparent: yR,
+          terrainPack: tR,
+          earthSky: qR,
+          skyMeshes: iR,
+          regular: fR,
+          thin: VR,
+          line: KR,
+          text: wR,
+          particles: rR
+        } = JR;
         return [{
           label: "Drawn",
-          value: `${PW(iW)}`
+          value: `${ZR(JR)}`
         }, {
           label: "Terrain",
-          value: `${OW} opaque / ${mW} transparent (${EW} shader pack)`
+          value: `${GR} opaque / ${yR} transparent (${tR} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${wW} / ${tW}`
+          value: `${fR} / ${VR}`
         }, {
           label: "Text / Lines",
-          value: `${xW} / ${ZW}`
+          value: `${wR} / ${KR}`
         }, {
           label: "Sky / Particles",
-          value: `${LW+cW} / ${lW}`
+          value: `${qR+iR} / ${rR}`
         }]
-      }(WW.api) : []
+      }(RR.api) : []
     }
   },
-  42508: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => AW,
-      c: () => xW,
-      g: () => lW
+  42552: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => eR,
+      g: () => wR,
+      h: () => rR
     });
-    var mW = OW(2051),
-      EW = OW(1296),
-      NW = OW(42109),
-      PW = OW(42131),
-      LW = OW(42134),
-      cW = OW(42149);
-    const wW = new EW.b;
-    let tW = !1;
+    var yR = GR(2152),
+      tR = GR(1391),
+      uR = GR(42118),
+      ZR = GR(42137),
+      qR = GR(42145),
+      iR = GR(42164);
+    const fR = new tR.d;
+    let VR = !1;
 
-    function ZW(WW) {
-      const iW = (0, NW.f)();
-      return null !== iW && +WW === iW.api.localId
+    function KR(RR) {
+      const JR = (0, uR.l)();
+      return null !== JR && +RR === JR.api.localId
     }
 
-    function xW() {
-      tW || (tW = !0, (0, cW.j)(PW.j, (WW => {
-        var iW, OW;
-        const mW = (0, LW.g)(PW.j, WW);
-        if (!(0, LW.d)(mW)) return;
-        const EW = mW;
-        ZW(EW.FN) && lW(EW.QN, {
-          icon: EW.iP,
-          level: EW.mP,
-          displayName: null !== (iW = EW.WP) && void 0 !== iW ? iW : null,
-          durationMs: null !== (OW = EW.OP) && void 0 !== OW ? OW : null
+    function wR() {
+      VR || (VR = !0, (0, iR.l)(ZR.k, (RR => {
+        var JR, GR;
+        const yR = (0, qR.i)(ZR.k, RR);
+        if (!(0, qR.e)(yR)) return;
+        const tR = yR;
+        KR(tR.tZ) && rR(tR.uZ, {
+          icon: tR.qZ,
+          level: tR.fZ,
+          displayName: null !== (JR = tR.ZZ) && void 0 !== JR ? JR : null,
+          durationMs: null !== (GR = tR.iZ) && void 0 !== GR ? GR : null
         })
-      })), (0, cW.j)(PW.S, (WW => {
-        const iW = (0, LW.g)(PW.S, WW);
-        if (!(0, LW.d)(iW)) return;
-        const OW = iW;
-        ZW(OW.FN) && mW.c.remove(OW.QN)
-      })), (0, cW.e)((() => {
-        mW.c.clear()
+      })), (0, iR.l)(ZR.R, (RR => {
+        const JR = (0, qR.i)(ZR.R, RR);
+        if (!(0, qR.e)(JR)) return;
+        const GR = JR;
+        KR(GR.tZ) && yR.d.remove(GR.uZ)
+      })), (0, iR.f)((() => {
+        yR.d.clear()
       })))
     }
 
-    function lW(WW, iW) {
-      mW.c.update(WW, iW), wW.forEach((iW => {
-        iW(WW)
+    function rR(RR, JR) {
+      yR.d.update(RR, JR), fR.forEach((JR => {
+        JR(RR)
       }))
     }
-    const AW = {
+    const eR = {
       localEffectUpdated: {
-        watch: WW => wW.add(WW)
+        watch: RR => fR.add(RR)
       }
     }
   },
-  42513: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => tW
+  42555: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => VR
     });
-    var mW = OW(5551),
-      EW = OW(5546),
-      NW = OW(42137),
-      PW = OW(42149);
-    const LW = new Set(mW.R),
-      cW = mW.R.map((WW => (new TextEncoder).encode(WW))),
-      wW = new Map;
+    var yR = GR(5685),
+      tR = GR(5676),
+      uR = GR(42154),
+      ZR = GR(42164);
+    const qR = new Set(yR.Q),
+      iR = yR.Q.map((RR => (new TextEncoder).encode(RR))),
+      fR = new Map;
 
-    function tW(WW, iW) {
-      var OW;
-      return null === (OW = wW.get(WW)) || void 0 === OW ? void 0 : OW[iW]
-    }(0, PW.j)(mW.uc.NewOtherEntitySettings, (WW => {
-      WW.payloadKind === EW.hc.Msgpack && cW.some((iW => function(WW, iW) {
-        const OW = iW[0];
-        for (let mW = WW.indexOf(OW); - 1 !== mW && mW + iW.length <= WW.length; mW = WW.indexOf(OW, mW + 1)) {
-          let OW = 1;
-          for (; OW < iW.length && WW[mW + OW] === iW[OW];) OW++;
-          if (OW === iW.length) return !0
+    function VR(RR, JR) {
+      var GR;
+      return null === (GR = fR.get(RR)) || void 0 === GR ? void 0 : GR[JR]
+    }(0, ZR.l)(yR.sc.NewOtherEntitySettings, (RR => {
+      RR.payloadKind === tR.gc.Msgpack && iR.some((JR => function(RR, JR) {
+        const GR = JR[0];
+        for (let yR = RR.indexOf(GR); - 1 !== yR && yR + JR.length <= RR.length; yR = RR.indexOf(GR, yR + 1)) {
+          let GR = 1;
+          for (; GR < JR.length && RR[yR + GR] === JR[GR];) GR++;
+          if (GR === JR.length) return !0
         }
         return !1
-      }(WW.payload, iW))) && function(WW) {
-        if (null === WW || "object" !== typeof WW || null === WW.settings || "object" !== typeof WW.settings) return;
-        const iW = String(WW.eId),
-          OW = WW.settings;
-        let mW = wW.get(iW);
-        for (const EW in OW) {
-          if (!LW.has(EW)) continue;
-          const WW = OW[EW];
-          null === WW || void 0 === WW ? mW && delete mW[EW] : (mW ??= {}, mW[EW] = WW)
+      }(RR.payload, JR))) && function(RR) {
+        if (null === RR || "object" !== typeof RR || null === RR.settings || "object" !== typeof RR.settings) return;
+        const JR = String(RR.eId),
+          GR = RR.settings;
+        let yR = fR.get(JR);
+        for (const tR in GR) {
+          if (!qR.has(tR)) continue;
+          const RR = GR[tR];
+          null === RR || void 0 === RR ? yR && delete yR[tR] : (yR ??= {}, yR[tR] = RR)
         }
-        mW && wW.set(iW, mW)
-      }((0, NW.d)(WW.payload))
-    })), (0, PW.e)((() => {
-      wW.clear()
+        yR && fR.set(JR, yR)
+      }((0, uR.e)(RR.payload))
+    })), (0, ZR.f)((() => {
+      fR.clear()
     }))
   },
-  42502: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => lW,
-      i: () => wW,
-      m: () => ZW
+  42543: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => rR,
+      f: () => fR,
+      i: () => KR
     });
-    var mW = OW(40205),
-      EW = OW(2042),
-      NW = OW(1296),
-      PW = OW(42131),
-      LW = OW(42134),
-      cW = OW(42149);
-    const wW = new mW.c;
-    let tW = {};
+    var yR = GR(40251),
+      tR = GR(2137),
+      uR = GR(1391),
+      ZR = GR(42137),
+      qR = GR(42145),
+      iR = GR(42164);
+    const fR = new yR.d;
+    let VR = {};
 
-    function ZW(WW) {
-      return tW[WW]
+    function KR(RR) {
+      return VR[RR]
     }
-    const xW = new NW.b;
+    const wR = new uR.d;
 
-    function lW(WW) {
-      return xW.add(WW)
+    function rR(RR) {
+      return wR.add(RR)
     }
 
-    function AW(WW) {
-      xW.callEach(WW, "a roster listener")
-    }(0, cW.j)(PW.db, (WW => {
-      const iW = (0, LW.g)(PW.db, WW);
-      if (void 0 === iW) return;
-      const OW = iW.SE.some((WW => {
+    function eR(RR) {
+      wR.callEach(RR, "a roster listener")
+    }(0, iR.l)(ZR.bb, (RR => {
+      const JR = (0, qR.i)(ZR.bb, RR);
+      if (void 0 === JR) return;
+      const GR = JR.vt.some((RR => {
           let {
-            YE: iW,
-            yE: OW
-          } = WW;
-          return null !== OW && wW.has(iW) && wW.getName(iW) !== OW
+            Ot: JR,
+            xt: GR
+          } = RR;
+          return null !== GR && fR.has(JR) && fR.getName(JR) !== GR
         })),
         {
-          added: mW,
-          removed: NW,
-          settingChanges: cW
-        } = wW.apply(iW),
-        tW = new Set;
-      for (const EW of cW)
-        for (const WW in EW.settings) tW.add(WW);
-      const ZW = OW || mW.length > 0 || NW.length > 0;
-      (ZW || tW.has("hideNameSeed")) && function() {
-        const WW = new Map;
-        for (const iW of wW.ids()) {
-          const OW = wW.getName(iW),
-            mW = wW.getSetting(iW, "hideNameSeed");
-          void 0 !== OW && void 0 !== mW && null !== mW && WW.set(OW, mW)
+          added: yR,
+          removed: uR,
+          settingChanges: iR
+        } = fR.apply(JR),
+        VR = new Set;
+      for (const tR of iR)
+        for (const RR in tR.settings) VR.add(RR);
+      const KR = GR || yR.length > 0 || uR.length > 0;
+      (KR || VR.has("hideNameSeed")) && function() {
+        const RR = new Map;
+        for (const JR of fR.ids()) {
+          const GR = fR.getName(JR),
+            yR = fR.getSetting(JR, "hideNameSeed");
+          void 0 !== GR && void 0 !== yR && null !== yR && RR.set(GR, yR)
         }
-        EW.e.replaceAll(WW)
-      }(), AW({
+        tR.e.replaceAll(RR)
+      }(), eR({
         kind: "roster",
-        members: ZW,
-        settings: tW
+        members: KR,
+        settings: VR
       })
-    })), (0, cW.j)(PW.O, (WW => {
-      const iW = (0, LW.g)(PW.O, WW);
-      if (void 0 !== iW) {
+    })), (0, iR.l)(ZR.Q, (RR => {
+      const JR = (0, qR.i)(ZR.Q, RR);
+      if (void 0 !== JR) {
         for (const {
-            EE: WW,
-            NE: OW,
-            PE: mW
+            Zt: RR,
+            ft: GR,
+            Vt: yR
           }
-          of iW) tW[WW] = {
-          ...tW[WW],
-          [OW]: mW
+          of JR) VR[RR] = {
+          ...VR[RR],
+          [GR]: yR
         };
-        AW({
+        eR({
           kind: "cosmetics",
-          updates: iW
+          updates: JR
         })
       }
-    })), (0, cW.e)((() => {
-      wW.clear(), tW = {}, EW.e.clear(), AW({
+    })), (0, iR.f)((() => {
+      fR.clear(), VR = {}, tR.e.clear(), eR({
         kind: "reset"
       })
-    })), (0, cW.i)((() => {
-      wW.clear(), AW({
+    })), (0, iR.i)((() => {
+      fR.clear(), eR({
         kind: "reset"
       })
     }))
   },
-  42519: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => hW,
-      g: () => jW,
-      k: () => oW,
-      l: () => dW
+  42563: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => gR,
+      f: () => LR,
+      j: () => xR,
+      l: () => NR
     });
-    var mW = OW(1259),
-      EW = OW(632),
-      NW = OW(100),
-      PW = OW(5551),
-      LW = OW(42094),
-      cW = OW(42125),
-      wW = OW(42109),
-      tW = OW(42513),
-      ZW = OW(42502),
-      xW = OW(42134),
-      lW = OW(42149);
+    var yR = GR(1359),
+      tR = GR(664),
+      uR = GR(103),
+      ZR = GR(5685),
+      qR = GR(42106),
+      iR = GR(42132),
+      fR = GR(42118),
+      VR = GR(42555),
+      KR = GR(42543),
+      wR = GR(42145),
+      rR = GR(42164);
 
-    function AW(WW) {
+    function eR(RR) {
       let {
-        deadEId: iW,
-        killerEId: OW,
-        killerLifeformType: mW,
-        withItem: EW,
-        killstreak: NW
-      } = WW;
+        deadEId: JR,
+        killerEId: GR,
+        killerLifeformType: yR,
+        withItem: tR,
+        killstreak: uR
+      } = RR;
       return {
-        killer: MW({
-          eId: OW,
-          lifeformType: mW
+        killer: AR({
+          eId: GR,
+          lifeformType: yR
         }),
-        victim: MW({
-          eId: iW
+        victim: AR({
+          eId: JR
         }),
-        withItem: EW,
-        killstreak: NW
+        withItem: tR,
+        killstreak: uR
       }
     }
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        killer: iW,
-        victim: OW,
-        withItem: mW
-      } = WW;
+        killer: JR,
+        victim: GR,
+        withItem: yR
+      } = RR;
       return {
-        killer: MW(iW),
-        victim: MW(OW),
-        withItem: mW,
+        killer: AR(JR),
+        victim: AR(GR),
+        withItem: yR,
         killstreak: 0
       }
     }
 
-    function jW(WW) {
-      yW && JW((() => "killed" === WW.kind ? AW(WW.body) : bW(WW.body)))
+    function LR(RR) {
+      BR && pR((() => "killed" === RR.kind ? eR(RR.body) : aR(RR.body)))
     }
-    const UW = "#2727f1",
-      kW = "#912c2c";
+    const nR = "#2727f1",
+      UR = "#912c2c";
 
-    function sW(WW, iW) {
-      var OW;
-      return ZW.i.has(WW) ? null === (OW = ZW.i.getSettings(WW)) || void 0 === OW ? void 0 : OW[iW] : (0, tW.c)(WW, iW)
+    function WR(RR, JR) {
+      var GR;
+      return KR.f.has(RR) ? null === (GR = KR.f.getSettings(RR)) || void 0 === GR ? void 0 : GR[JR] : (0, VR.b)(RR, JR)
     }
 
-    function MW(WW) {
-      var iW, OW, PW, LW, tW;
+    function AR(RR) {
+      var JR, GR, ZR, qR, VR;
       let {
-        eId: xW,
-        name: lW,
-        colour: AW,
-        lifeformType: bW
-      } = WW;
-      if (void 0 === xW || null === xW || "" === xW) {
-        const WW = lW || null;
+        eId: wR,
+        name: rR,
+        colour: eR,
+        lifeformType: aR
+      } = RR;
+      if (void 0 === wR || null === wR || "" === wR) {
+        const RR = rR || null;
         return {
           id: null,
-          shownName: WW,
-          lifeformType: null === WW && null !== bW && void 0 !== bW ? bW : null,
-          colour: AW || null,
+          shownName: RR,
+          lifeformType: null === RR && null !== aR && void 0 !== aR ? aR : null,
+          colour: eR || null,
           local: !1,
           realName: null
         }
       }
-      const jW = String(xW),
-        MW = null === (iW = (0, wW.f)()) || void 0 === iW ? void 0 : iW.api,
-        KW = void 0 !== MW && String(MW.localId) === jW,
-        SW = null !== (OW = ZW.i.getName(jW)) && void 0 !== OW ? OW : null,
-        YW = null !== (PW = sW(jW, "hideNameSeed")) && void 0 !== PW ? PW : null;
-      let yW = null === SW ? null : (0, mW.b)(SW, !NW.featureFlags.canSeeRealPlayerNames, YW) || null,
-        TW = null;
-      if (null === yW && void 0 !== MW) {
-        const WW = MW.getEntityType(jW);
-        "Player" !== WW && (yW = (0, cW.k)(MW, +jW) || null), TW = EW.i.includes(WW) ? WW : null
+      const LR = String(wR),
+        AR = null === (JR = (0, fR.l)()) || void 0 === JR ? void 0 : JR.api,
+        CR = void 0 !== AR && String(AR.localId) === LR,
+        XR = null !== (GR = KR.f.getName(LR)) && void 0 !== GR ? GR : null,
+        MR = null !== (ZR = WR(LR, "hideNameSeed")) && void 0 !== ZR ? ZR : null;
+      let BR = null === XR ? null : (0, yR.e)(XR, !uR.featureFlags.canSeeRealPlayerNames, MR) || null,
+        lR = null;
+      if (null === BR && void 0 !== AR) {
+        const RR = AR.getEntityType(LR);
+        "Player" !== RR && (BR = (0, iR.l)(AR, +LR) || null), lR = tR.k.includes(RR) ? RR : null
       }
       return {
-        id: jW,
-        shownName: yW,
-        lifeformType: null === yW && null !== (LW = null !== (tW = TW) && void 0 !== tW ? tW : bW) && void 0 !== LW ? LW : null,
-        colour: AW || sW(jW, "killfeedColour") || (KW ? UW : kW),
-        local: KW,
-        realName: SW
+        id: LR,
+        shownName: BR,
+        lifeformType: null === BR && null !== (qR = null !== (VR = lR) && void 0 !== VR ? VR : aR) && void 0 !== qR ? qR : null,
+        colour: eR || WR(LR, "killfeedColour") || (CR ? nR : UR),
+        local: CR,
+        realName: XR
       }
     }
-    const KW = 32;
-    let SW = [],
-      YW = null,
-      yW = !1,
-      TW = !1;
+    const CR = 32;
+    let XR = [],
+      MR = null,
+      BR = !1,
+      lR = !1;
 
-    function JW(WW) {
-      null === YW ? (SW.length === KW && SW.shift(), SW.push(WW)) : YW(WW())
+    function pR(RR) {
+      null === MR ? (XR.length === CR && XR.shift(), XR.push(RR)) : MR(RR())
     }
 
-    function hW() {
-      TW || (TW = !0, (0, lW.j)(PW.uc.PlayerKilled, (WW => {
-        const iW = (0, xW.j)(WW);
-        (0, xW.d)(iW) && JW((() => AW(iW)))
-      })), (0, lW.j)(PW.uc.CustomKillfeed, (WW => {
-        const iW = (0, xW.j)(WW);
-        (0, xW.d)(iW) && (0, xW.d)(iW.killer) && (0, xW.d)(iW.victim) && JW((() => bW(iW)))
-      })), (0, lW.e)((() => {
-        SW = []
+    function gR() {
+      lR || (lR = !0, (0, rR.l)(ZR.sc.PlayerKilled, (RR => {
+        const JR = (0, wR.k)(RR);
+        (0, wR.e)(JR) && pR((() => eR(JR)))
+      })), (0, rR.l)(ZR.sc.CustomKillfeed, (RR => {
+        const JR = (0, wR.k)(RR);
+        (0, wR.e)(JR) && (0, wR.e)(JR.killer) && (0, wR.e)(JR.victim) && pR((() => aR(JR)))
+      })), (0, rR.f)((() => {
+        XR = []
       })))
     }
-    const HW = Object.freeze([0, 0, 0]),
-      nW = [0, 0, 0],
-      uW = [0, 0, 0],
-      oW = {
+    const bR = Object.freeze([0, 0, 0]),
+      vR = [0, 0, 0],
+      OR = [0, 0, 0],
+      xR = {
         kill: {
-          watch(WW) {
-            if (yW = !0, 0 === SW.length) return YW = WW, () => {
-              yW = !1, YW = null
+          watch(RR) {
+            if (BR = !0, 0 === XR.length) return MR = RR, () => {
+              BR = !1, MR = null
             };
-            const iW = setTimeout((() => {
-              const iW = SW;
-              SW = [], YW = WW;
-              for (const mW of iW) try {
-                WW(mW())
-              } catch (OW) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", OW)
+            const JR = setTimeout((() => {
+              const JR = XR;
+              XR = [], MR = RR;
+              for (const yR of JR) try {
+                RR(yR())
+              } catch (GR) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", GR)
               }
             }), 0);
             return () => {
-              clearTimeout(iW), yW = !1, YW = null
+              clearTimeout(JR), BR = !1, MR = null
             }
           }
         }
       },
-      dW = {
+      NR = {
         localPos() {
-          const WW = (0, wW.f)();
-          if (null === WW) return HW;
-          const iW = WW.api.apiView;
-          for (let OW = 0; OW < 3; OW++) nW[OW] = LW.z.localPos(iW, 0, OW);
-          return nW
+          const RR = (0, fR.l)();
+          if (null === RR) return bR;
+          const JR = RR.api.apiView;
+          for (let GR = 0; GR < 3; GR++) vR[GR] = qR.s.localPos(JR, 0, GR);
+          return vR
         },
         targetedBlockPos() {
-          const WW = (0, wW.f)();
-          if (null === WW || LW.z.targetBlockId(WW.api.apiView, 0) === LW.nd) return null;
-          for (let iW = 0; iW < 3; iW++) uW[iW] = LW.z.targetBlock(WW.api.apiView, 0, iW);
-          return uW
+          const RR = (0, fR.l)();
+          if (null === RR || qR.s.targetBlockId(RR.api.apiView, 0) === qR.Yc) return null;
+          for (let JR = 0; JR < 3; JR++) OR[JR] = qR.s.targetBlock(RR.api.apiView, 0, JR);
+          return OR
         }
       }
   },
-  40205: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  40251: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    class mW {
+    class yR {
       constructor() {
         this.members = new Map
       }
-      apply(WW) {
-        const iW = {
+      apply(RR) {
+        const JR = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const mW of WW.SE) {
-          let WW = this.members.get(mW.YE);
-          if (WW || (WW = {
+        for (const yR of RR.vt) {
+          let RR = this.members.get(yR.Ot);
+          if (RR || (RR = {
               name: null,
               settings: {}
-            }, this.members.set(mW.YE, WW), iW.added.push(mW.YE)), null !== mW.yE && (WW.name = mW.yE), null !== mW.TE || mW.JE.length > 0) {
-            const OW = null === mW.TE ? {} : JSON.parse(mW.TE);
-            Object.assign(WW.settings, OW);
-            for (const iW of mW.JE) delete WW.settings[iW], OW[iW] = void 0;
-            iW.settingChanges.push({
-              playerId: mW.YE,
-              settings: OW
+            }, this.members.set(yR.Ot, RR), JR.added.push(yR.Ot)), null !== yR.xt && (RR.name = yR.xt), null !== yR.Nt || yR.Dt.length > 0) {
+            const GR = null === yR.Nt ? {} : JSON.parse(yR.Nt);
+            Object.assign(RR.settings, GR);
+            for (const JR of yR.Dt) delete RR.settings[JR], GR[JR] = void 0;
+            JR.settingChanges.push({
+              playerId: yR.Ot,
+              settings: GR
             })
           }
         }
-        for (const mW of WW.hE) {
-          const WW = this.members.get(mW);
-          var OW;
-          if (WW) this.members.delete(mW), iW.removed.push({
-            playerId: mW,
-            name: null !== (OW = WW.name) && void 0 !== OW ? OW : void 0
+        for (const yR of RR.Ht) {
+          const RR = this.members.get(yR);
+          var GR;
+          if (RR) this.members.delete(yR), JR.removed.push({
+            playerId: yR,
+            name: null !== (GR = RR.name) && void 0 !== GR ? GR : void 0
           })
         }
-        return iW
+        return JR
       }
-      has(WW) {
-        return this.members.has(WW)
+      has(RR) {
+        return this.members.has(RR)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(WW) {
-        var iW, OW;
-        return null !== (iW = null === (OW = this.members.get(WW)) || void 0 === OW ? void 0 : OW.name) && void 0 !== iW ? iW : void 0
+      getName(RR) {
+        var JR, GR;
+        return null !== (JR = null === (GR = this.members.get(RR)) || void 0 === GR ? void 0 : GR.name) && void 0 !== JR ? JR : void 0
       }
-      getSettings(WW) {
-        var iW;
-        return null === (iW = this.members.get(WW)) || void 0 === iW ? void 0 : iW.settings
+      getSettings(RR) {
+        var JR;
+        return null === (JR = this.members.get(RR)) || void 0 === JR ? void 0 : JR.settings
       }
-      getSetting(WW, iW) {
-        var OW;
-        return null === (OW = this.members.get(WW)) || void 0 === OW ? void 0 : OW.settings[iW]
+      getSetting(RR, JR) {
+        var GR;
+        return null === (GR = this.members.get(RR)) || void 0 === GR ? void 0 : GR.settings[JR]
       }
       clear() {
         this.members.clear()
@@ -704,4 +704,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

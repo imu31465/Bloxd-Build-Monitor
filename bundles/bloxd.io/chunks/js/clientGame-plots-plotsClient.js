@@ -1,717 +1,717 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  37868: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => jW,
-      h: () => UW,
-      l: () => xW,
-      o: () => ZW
+  37796: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => LR,
+      d: () => nR,
+      g: () => wR,
+      j: () => KR
     });
-    var mW = OW(35220),
-      EW = OW(3361),
-      NW = OW(3368),
-      PW = OW(9954),
-      LW = OW(1526),
-      cW = OW(62),
-      wW = OW(80),
-      tW = OW(1283);
+    var yR = GR(35140),
+      tR = GR(3494),
+      uR = GR(3498),
+      ZR = GR(10048),
+      qR = GR(1581),
+      iR = GR(66),
+      fR = GR(83),
+      VR = GR(1378);
 
-    function ZW() {
-      var WW;
-      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
-        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
+    function KR() {
+      var RR;
+      return (0, qR.h)(tR.e, (0, tR.r)()), (0, VR.jsx)(VR.Fragment, {
+        children: null === (RR = (0, tR.r)()) || void 0 === RR ? void 0 : RR.content
       })
     }
 
-    function xW(WW) {
-      var iW;
+    function wR(RR) {
+      var JR;
       let {
-        show: OW
-      } = WW;
-      (0, LW.g)(EW.g, (0, EW.F)());
-      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
-      return (0, cW.useEffect)((() => {
-        var WW;
-        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
-      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
-        showing: OW,
+        show: GR
+      } = RR;
+      (0, qR.h)(tR.e, (0, tR.r)());
+      const fR = null === (JR = (0, tR.r)()) || void 0 === JR ? void 0 : JR.menu;
+      return (0, iR.useEffect)((() => {
+        var RR;
+        GR || (null === fR || void 0 === fR || null === (RR = fR.onClose) || void 0 === RR || RR.call(fR), (0, uR.m)())
+      }), [GR, fR]), (0, iR.useEffect)((() => GR ? (0, ZR.e)(uR.q, uR.e) : void 0), [GR]), (0, VR.jsx)(yR.b, {
+        showing: GR,
         globallyUniqueKey: "clientGameMenu",
-        children: null === wW || void 0 === wW ? void 0 : wW.content
+        children: null === fR || void 0 === fR ? void 0 : fR.content
       })
     }
-    const lW = new Map,
-      AW = new Set;
+    const rR = new Map,
+      eR = new Set;
 
-    function bW(WW, iW) {
-      iW ? lW.set(WW, iW) : lW.delete(WW);
-      for (const OW of AW) OW()
+    function aR(RR, JR) {
+      JR ? rR.set(RR, JR) : rR.delete(RR);
+      for (const GR of eR) GR()
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        placement: iW = "bottom"
-      } = WW;
-      const OW = (0, cW.useRef)(null);
-      return (0, cW.useLayoutEffect)((() => {
-        const WW = OW.current;
-        return bW(iW, WW), () => {
-          lW.get(iW) === WW && bW(iW, null)
+        placement: JR = "bottom"
+      } = RR;
+      const GR = (0, iR.useRef)(null);
+      return (0, iR.useLayoutEffect)((() => {
+        const RR = GR.current;
+        return aR(JR, RR), () => {
+          rR.get(JR) === RR && aR(JR, null)
         }
-      }), [iW]), (0, tW.jsx)("div", {
-        ref: OW,
-        id: `clientGameHud-${iW}`,
+      }), [JR]), (0, VR.jsx)("div", {
+        ref: GR,
+        id: `clientGameHud-${JR}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function UW(WW) {
+    function nR(RR) {
       let {
-        children: iW,
-        placement: OW = "bottom"
-      } = WW;
-      const [mW, EW] = (0, cW.useState)((() => {
-        var WW;
-        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
+        children: JR,
+        placement: GR = "bottom"
+      } = RR;
+      const [yR, tR] = (0, iR.useState)((() => {
+        var RR;
+        return null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null
       }));
-      return (0, cW.useEffect)((() => {
-        const WW = () => {
-          var WW;
-          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
+      return (0, iR.useEffect)((() => {
+        const RR = () => {
+          var RR;
+          tR(null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null)
         };
-        return AW.add(WW), WW(), () => {
-          AW.delete(WW)
+        return eR.add(RR), RR(), () => {
+          eR.delete(RR)
         }
-      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
+      }), [GR]), yR ? (0, fR.createPortal)(JR, yR) : null
     }
   },
-  35220: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  35140: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(5243),
-      EW = OW(5251);
+    var yR = GR(5343),
+      tR = GR(5347);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        children: iW,
-        showing: OW,
-        globallyUniqueKey: NW,
-        alwaysMountChildren: PW = !1,
-        doGameplayStartStopOnShow: LW = !0,
-        keepsMovement: cW = !1
-      } = WW;
-      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
+        children: JR,
+        showing: GR,
+        globallyUniqueKey: uR,
+        alwaysMountChildren: ZR = !1,
+        doGameplayStartStopOnShow: qR = !0,
+        keepsMovement: iR = !1
+      } = RR;
+      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
     }
   },
-  38030: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => yW,
-      h: () => SW,
-      j: () => YW,
-      n: () => AW
+  37994: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => BR,
+      d: () => XR,
+      f: () => MR,
+      h: () => eR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(62),
-      PW = OW(80),
-      LW = OW(1436),
-      cW = OW(1532),
-      wW = OW(1434),
-      tW = OW(1269),
-      ZW = OW(1172),
-      xW = OW(38039),
-      lW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(66),
+      ZR = GR(83),
+      qR = GR(1504),
+      iR = GR(1590),
+      fR = GR(1501),
+      VR = GR(1366),
+      KR = GR(1270),
+      wR = GR(37999),
+      rR = GR(1378);
 
-    function AW(WW) {
-      const [iW, OW] = (0, NW.useState)((() => (0, xW.o)(WW)));
-      return (0, NW.useEffect)((() => (OW((0, xW.o)(WW)), (0, xW.M)((() => {
-        OW((0, xW.o)(WW))
-      })))), [WW]), iW
+    function eR(RR) {
+      const [JR, GR] = (0, uR.useState)((() => (0, wR.j)(RR)));
+      return (0, uR.useEffect)((() => (GR((0, wR.j)(RR)), (0, wR.D)((() => {
+        GR((0, wR.j)(RR))
+      })))), [RR]), JR
     }
 
-    function bW(WW, iW) {
-      "function" === typeof WW ? WW(iW) : WW && (WW.current = iW)
+    function aR(RR, JR) {
+      "function" === typeof RR ? RR(JR) : RR && (RR.current = JR)
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        tutorial: iW,
-        step: OW,
-        enabled: mW = !0
-      } = WW;
-      const EW = AW(iW);
-      return mW && EW === OW
+        tutorial: JR,
+        step: GR,
+        enabled: yR = !0
+      } = RR;
+      const tR = eR(JR);
+      return yR && tR === GR
     }
 
-    function UW(WW, iW) {
-      const OW = (0, xW.s)(WW),
-        mW = OW.indexOf(iW);
-      return !OW.slice(mW + 1).some((iW => (0, xW.x)(WW, iW)))
+    function nR(RR, JR) {
+      const GR = (0, wR.l)(RR),
+        yR = GR.indexOf(JR);
+      return !GR.slice(yR + 1).some((JR => (0, wR.p)(RR, JR)))
     }
 
-    function kW(WW, iW, OW, mW) {
+    function UR(RR, JR, GR, yR) {
       let {
-        tutorial: EW,
-        step: NW,
-        waitForClick: PW = !1,
-        onPrevious: LW
-      } = WW;
-      const cW = iW && (0, xW.w)(EW, NW),
-        wW = iW && !UW(EW, NW),
-        ZW = PW ? mW : OW;
-      let lW = null;
-      cW ? lW = () => {
-        null === LW || void 0 === LW || LW(), (0, xW.u)(EW, NW)
-      } : wW && (lW = () => {
-        (0, xW.m)(EW)
-      }), (0, tW.r)("popup", null !== ZW && void 0 !== ZW ? ZW : OW, lW, iW && null !== ZW, null, cW ? void 0 : "controller:menusSkipTutorial")
+        tutorial: tR,
+        step: uR,
+        waitForClick: ZR = !1,
+        onPrevious: qR
+      } = RR;
+      const iR = JR && (0, wR.o)(tR, uR),
+        fR = JR && !nR(tR, uR),
+        KR = ZR ? yR : GR;
+      let rR = null;
+      iR ? rR = () => {
+        null === qR || void 0 === qR || qR(), (0, wR.m)(tR, uR)
+      } : fR && (rR = () => {
+        (0, wR.g)(tR)
+      }), (0, VR.u)("popup", null !== KR && void 0 !== KR ? KR : GR, rR, JR && null !== KR, null, iR ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function sW(WW) {
+    function WR(RR) {
       let {
-        tutorial: iW,
-        step: OW,
-        text: mW,
-        waitForClick: EW = !1,
-        onPrevious: NW
-      } = WW;
+        tutorial: JR,
+        step: GR,
+        text: yR,
+        waitForClick: tR = !1,
+        onPrevious: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, ZW.B)(), LW = UW(iW, OW);
-      return (0, lW.jsxs)(lW.Fragment, {
-        children: [(0, lW.jsx)("div", {
+        t: ZR
+      } = (0, KR.A)(), qR = nR(JR, GR);
+      return (0, rR.jsxs)(rR.Fragment, {
+        children: [(0, rR.jsx)("div", {
           className: "TutorialStepText",
-          children: mW
-        }), (0, lW.jsxs)("div", {
+          children: yR
+        }), (0, rR.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, xW.w)(iW, OW) && (0, lW.jsx)(cW.h, {
+          children: [(0, wR.o)(JR, GR) && (0, rR.jsx)(iR.i, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === NW || void 0 === NW || NW(), (0, xW.u)(iW, OW)
+              null === uR || void 0 === uR || uR(), (0, wR.m)(JR, GR)
             },
-            children: PW("tutorial:back")
-          }), !EW && (0, lW.jsx)(cW.f, {
+            children: ZR("tutorial:back")
+          }), !tR && (0, rR.jsx)(iR.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, xW.h)(OW)
+              (0, wR.e)(GR)
             },
             padDefaultFocus: !0,
-            children: PW(LW ? "tutorial:done" : "tutorial:next")
-          }), !LW && (0, lW.jsx)(cW.h, {
+            children: ZR(qR ? "tutorial:done" : "tutorial:next")
+          }), !qR && (0, rR.jsx)(iR.i, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, xW.m)(iW)
+              (0, wR.g)(JR)
             },
-            children: PW("tutorial:skip")
+            children: ZR("tutorial:skip")
           })]
         })]
       })
     }
-    const MW = 6;
+    const AR = 6;
 
-    function KW(WW) {
+    function CR(RR) {
       let {
-        rect: iW,
-        margin: OW
-      } = WW;
-      const mW = Math.max(0, iW.top - OW),
-        EW = iW.bottom + OW,
-        NW = Math.max(0, iW.left - OW),
-        PW = iW.right + OW;
-      return (0, lW.jsxs)(lW.Fragment, {
-        children: [(0, lW.jsx)("div", {
+        rect: JR,
+        margin: GR
+      } = RR;
+      const yR = Math.max(0, JR.top - GR),
+        tR = JR.bottom + GR,
+        uR = Math.max(0, JR.left - GR),
+        ZR = JR.right + GR;
+      return (0, rR.jsxs)(rR.Fragment, {
+        children: [(0, rR.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: mW
+            height: yR
           }
-        }), (0, lW.jsx)("div", {
+        }), (0, rR.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: EW,
+            top: tR,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, lW.jsx)("div", {
+        }), (0, rR.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: mW,
+            top: yR,
             left: 0,
-            width: NW,
-            height: EW - mW
+            width: uR,
+            height: tR - yR
           }
-        }), (0, lW.jsx)("div", {
+        }), (0, rR.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: mW,
-            left: PW,
+            top: yR,
+            left: ZR,
             right: 0,
-            height: EW - mW
+            height: tR - yR
           }
         })]
       })
     }
 
-    function SW(WW) {
+    function XR(RR) {
       let {
-        target: iW,
-        placement: OW,
-        boxRef: mW,
-        className: cW,
-        spotlight: tW = !0,
-        spotlightMargin: ZW = MW,
-        children: xW
-      } = WW;
+        target: JR,
+        placement: GR,
+        boxRef: yR,
+        className: iR,
+        spotlight: VR = !0,
+        spotlightMargin: KR = AR,
+        children: wR
+      } = RR;
       const {
-        getArrowProps: AW,
-        getTooltipProps: bW,
-        setTooltipRef: jW,
-        setTriggerRef: UW,
-        update: kW
-      } = (0, LW.c)({
-        placement: OW,
+        getArrowProps: eR,
+        getTooltipProps: aR,
+        setTooltipRef: LR,
+        setTriggerRef: nR,
+        update: UR
+      } = (0, qR.b)({
+        placement: GR,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, ZW]
+        offset: [0, KR]
       });
-      (0, NW.useLayoutEffect)((() => {
-        UW(iW)
-      }), [iW, UW]);
-      const sW = function(WW, iW) {
-        const [OW, mW] = (0, NW.useState)(null);
-        return (0, NW.useEffect)((() => {
-          if (!iW || !WW) return void mW(null);
-          let OW = 0,
-            EW = null;
-          const NW = () => {
-            const iW = WW.getBoundingClientRect();
-            EW && iW.left === EW.left && iW.top === EW.top && iW.width === EW.width && iW.height === EW.height || (EW = iW, mW(iW)), OW = requestAnimationFrame(NW)
+      (0, uR.useLayoutEffect)((() => {
+        nR(JR)
+      }), [JR, nR]);
+      const WR = function(RR, JR) {
+        const [GR, yR] = (0, uR.useState)(null);
+        return (0, uR.useEffect)((() => {
+          if (!JR || !RR) return void yR(null);
+          let GR = 0,
+            tR = null;
+          const uR = () => {
+            const JR = RR.getBoundingClientRect();
+            tR && JR.left === tR.left && JR.top === tR.top && JR.width === tR.width && JR.height === tR.height || (tR = JR, yR(JR)), GR = requestAnimationFrame(uR)
           };
-          return NW(), () => {
-            cancelAnimationFrame(OW)
+          return uR(), () => {
+            cancelAnimationFrame(GR)
           }
-        }), [WW, iW]), OW
-      }(iW, tW);
-      (0, NW.useEffect)((() => {
-        null === kW || void 0 === kW || kW()
-      }), [sW, kW]), (0, NW.useEffect)((() => {
-        if (tW || !iW || !kW) return;
-        const WW = new ResizeObserver((() => {
-          kW()
+        }), [RR, JR]), GR
+      }(JR, VR);
+      (0, uR.useEffect)((() => {
+        null === UR || void 0 === UR || UR()
+      }), [WR, UR]), (0, uR.useEffect)((() => {
+        if (VR || !JR || !UR) return;
+        const RR = new ResizeObserver((() => {
+          UR()
         }));
-        return WW.observe(iW), iW.parentElement && WW.observe(iW.parentElement), () => {
-          WW.disconnect()
+        return RR.observe(JR), JR.parentElement && RR.observe(JR.parentElement), () => {
+          RR.disconnect()
         }
-      }), [iW, tW, kW]), (0, NW.useEffect)((() => {
-        tW && (null === iW || void 0 === iW || iW.scrollIntoView({
+      }), [JR, VR, UR]), (0, uR.useEffect)((() => {
+        VR && (null === JR || void 0 === JR || JR.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         }))
-      }), [iW, tW]);
-      const SW = (0, NW.useCallback)((WW => {
-        jW(WW), mW && (mW.current = WW)
-      }), [jW, mW]);
-      return (0, PW.createPortal)((0, lW.jsxs)(lW.Fragment, {
-        children: [sW && (0, lW.jsx)(KW, {
-          rect: sW,
-          margin: ZW
-        }), (0, lW.jsxs)("div", {
-          ref: SW,
-          ...bW({
-            className: EW()("tooltip-container SmallTextLight TutorialStep", cW)
+      }), [JR, VR]);
+      const XR = (0, uR.useCallback)((RR => {
+        LR(RR), yR && (yR.current = RR)
+      }), [LR, yR]);
+      return (0, ZR.createPortal)((0, rR.jsxs)(rR.Fragment, {
+        children: [WR && (0, rR.jsx)(CR, {
+          rect: WR,
+          margin: KR
+        }), (0, rR.jsxs)("div", {
+          ref: XR,
+          ...aR({
+            className: tR()("tooltip-container SmallTextLight TutorialStep", iR)
           }),
-          children: [xW, (0, lW.jsx)("div", {
-            ...AW({
+          children: [wR, (0, rR.jsx)("div", {
+            ...eR({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, wW.g)())
+      }), (0, fR.k)())
     }
-    const YW = (0, NW.forwardRef)((function(WW, iW) {
+    const MR = (0, uR.forwardRef)((function(RR, JR) {
       let {
-        placement: OW = "right",
-        children: mW,
-        ...EW
-      } = WW;
-      const PW = jW(EW),
-        LW = (0, NW.useRef)(null),
-        cW = (0, NW.useRef)(null);
-      kW(EW, PW, LW, cW);
-      const [wW, tW] = (0, NW.useState)(null), ZW = mW.ref, xW = (0, NW.useCallback)((WW => {
-        cW.current = WW, tW(WW), bW(iW, WW), bW(ZW, WW)
-      }), [iW, ZW]);
-      return (0, lW.jsxs)(lW.Fragment, {
-        children: [(0, NW.cloneElement)(mW, {
-          ref: xW
-        }), PW && (0, lW.jsx)(SW, {
-          target: wW,
-          placement: OW,
-          boxRef: LW,
-          children: (0, lW.jsx)(sW, {
-            ...EW
+        placement: GR = "right",
+        children: yR,
+        ...tR
+      } = RR;
+      const ZR = LR(tR),
+        qR = (0, uR.useRef)(null),
+        iR = (0, uR.useRef)(null);
+      UR(tR, ZR, qR, iR);
+      const [fR, VR] = (0, uR.useState)(null), KR = yR.ref, wR = (0, uR.useCallback)((RR => {
+        iR.current = RR, VR(RR), aR(JR, RR), aR(KR, RR)
+      }), [JR, KR]);
+      return (0, rR.jsxs)(rR.Fragment, {
+        children: [(0, uR.cloneElement)(yR, {
+          ref: wR
+        }), ZR && (0, rR.jsx)(XR, {
+          target: fR,
+          placement: GR,
+          boxRef: qR,
+          children: (0, rR.jsx)(WR, {
+            ...tR
           })
         })]
       })
     }));
 
-    function yW(WW) {
-      const iW = jW(WW),
-        OW = (0, NW.useRef)(null);
-      return kW(WW, iW, OW, null), iW ? (0, PW.createPortal)((0, lW.jsx)("div", {
+    function BR(RR) {
+      const JR = LR(RR),
+        GR = (0, uR.useRef)(null);
+      return UR(RR, JR, GR, null), JR ? (0, ZR.createPortal)((0, rR.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, lW.jsx)("div", {
-          ref: OW,
+        children: (0, rR.jsx)("div", {
+          ref: GR,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, lW.jsx)(sW, {
-            ...WW
+          children: (0, rR.jsx)(WR, {
+            ...RR
           })
         })
-      }), (0, wW.g)()) : null
+      }), (0, fR.k)()) : null
     }
   },
-  37919: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      e: () => cW,
-      h: () => wW,
-      i: () => tW,
-      j: () => AW
+  37849: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      e: () => iR,
+      i: () => fR,
+      k: () => VR,
+      l: () => eR
     });
-    var mW = OW(62),
-      EW = OW(4275),
-      NW = OW(3457),
-      PW = OW(27);
-    const LW = 8,
-      cW = "InGameHeaderContainer",
-      wW = "TopRightElements";
+    var yR = GR(66),
+      tR = GR(4352),
+      uR = GR(3593),
+      ZR = GR(32);
+    const qR = 8,
+      iR = "InGameHeaderContainer",
+      fR = "TopRightElements";
 
-    function tW(WW) {
-      const [iW] = (0, EW.d)(), [OW, NW] = (0, mW.useState)(!1);
-      return (0, mW.useLayoutEffect)((() => {
-        if (!WW) return;
-        const iW = document.querySelector(`.${cW}`),
-          OW = document.querySelector(`.${wW}`),
-          mW = () => {
-            const mW = WW.getBoundingClientRect(),
-              EW = iW ? iW.getBoundingClientRect().right : 0,
-              PW = OW ? OW.getBoundingClientRect().left : window.innerWidth,
-              cW = mW.left < EW + LW,
-              wW = mW.right > PW - LW;
-            NW(cW || wW)
+    function VR(RR) {
+      const [JR] = (0, tR.e)(), [GR, uR] = (0, yR.useState)(!1);
+      return (0, yR.useLayoutEffect)((() => {
+        if (!RR) return;
+        const JR = document.querySelector(`.${iR}`),
+          GR = document.querySelector(`.${fR}`),
+          yR = () => {
+            const yR = RR.getBoundingClientRect(),
+              tR = JR ? JR.getBoundingClientRect().right : 0,
+              ZR = GR ? GR.getBoundingClientRect().left : window.innerWidth,
+              iR = yR.left < tR + qR,
+              fR = yR.right > ZR - qR;
+            uR(iR || fR)
           };
-        mW();
-        const EW = new ResizeObserver(mW);
-        return EW.observe(WW), iW && EW.observe(iW), OW && EW.observe(OW), () => {
-          EW.disconnect()
+        yR();
+        const tR = new ResizeObserver(yR);
+        return tR.observe(RR), JR && tR.observe(JR), GR && tR.observe(GR), () => {
+          tR.disconnect()
         }
-      }), [WW, iW]), OW
+      }), [RR, JR]), GR
     }
-    const ZW = `.InGameUi .${cW}`,
-      xW = [ZW, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
-      lW = 1e3;
+    const KR = `.InGameUi .${iR}`,
+      wR = [KR, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      rR = 1e3;
 
-    function AW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW,
-        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const [EW, cW] = (0, mW.useState)(null);
-      return (0, mW.useLayoutEffect)((() => {
-        if (!WW) return;
-        const mW = new ResizeObserver((() => {
-          wW()
+    function eR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR,
+        GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [tR, iR] = (0, yR.useState)(null);
+      return (0, yR.useLayoutEffect)((() => {
+        if (!RR) return;
+        const yR = new ResizeObserver((() => {
+          fR()
         }));
-        mW.observe(WW), iW && iW !== WW && mW.observe(iW);
-        let EW = [];
+        yR.observe(RR), JR && JR !== RR && yR.observe(JR);
+        let tR = [];
 
-        function wW() {
-          var NW, PW, wW;
-          const tW = WW.getBoundingClientRect(),
-            lW = function() {
-              const WW = xW.map((WW => document.querySelector(WW))).filter((WW => null !== WW));
-              for (const iW of WW) EW.includes(iW) || mW.observe(iW);
-              for (const iW of EW) WW.includes(iW) || mW.unobserve(iW);
-              return EW = WW, WW
+        function fR() {
+          var uR, ZR, fR;
+          const VR = RR.getBoundingClientRect(),
+            rR = function() {
+              const RR = wR.map((RR => document.querySelector(RR))).filter((RR => null !== RR));
+              for (const JR of RR) tR.includes(JR) || yR.observe(JR);
+              for (const JR of tR) RR.includes(JR) || yR.unobserve(JR);
+              return tR = RR, RR
             }(),
-            AW = lW.filter((WW => {
-              const iW = WW.getBoundingClientRect();
-              return iW.width > 0 && iW.height > 0 && tW.left < iW.right + LW && tW.right > iW.left - LW
+            eR = rR.filter((RR => {
+              const JR = RR.getBoundingClientRect();
+              return JR.width > 0 && JR.height > 0 && VR.left < JR.right + qR && VR.right > JR.left - qR
             }));
-          if (0 === AW.length && !OW) return void cW(null);
-          const bW = lW.find((WW => WW.matches(ZW))),
-            jW = Math.max(null !== (NW = null === bW || void 0 === bW ? void 0 : bW.getBoundingClientRect().bottom) && void 0 !== NW ? NW : 0, ...AW.map((WW => WW.getBoundingClientRect().bottom))),
-            UW = null !== (PW = null === iW || void 0 === iW || null === (wW = iW.offsetParent) || void 0 === wW ? void 0 : wW.getBoundingClientRect().top) && void 0 !== PW ? PW : 0;
-          cW(Math.ceil(jW + LW / 2) - Math.round(UW))
+          if (0 === eR.length && !GR) return void iR(null);
+          const aR = rR.find((RR => RR.matches(KR))),
+            LR = Math.max(null !== (uR = null === aR || void 0 === aR ? void 0 : aR.getBoundingClientRect().bottom) && void 0 !== uR ? uR : 0, ...eR.map((RR => RR.getBoundingClientRect().bottom))),
+            nR = null !== (ZR = null === JR || void 0 === JR || null === (fR = JR.offsetParent) || void 0 === fR ? void 0 : fR.getBoundingClientRect().top) && void 0 !== ZR ? ZR : 0;
+          iR(Math.ceil(LR + qR / 2) - Math.round(nR))
         }
-        const tW = setInterval(wW, lW);
-        wW(), window.addEventListener("resize", wW);
-        const AW = (0, PW.n)(NW.d, wW);
+        const VR = setInterval(fR, rR);
+        fR(), window.addEventListener("resize", fR);
+        const eR = (0, ZR.q)(uR.h, fR);
         return () => {
-          mW.disconnect(), clearInterval(tW), window.removeEventListener("resize", wW), AW()
+          yR.disconnect(), clearInterval(VR), window.removeEventListener("resize", fR), eR()
         }
-      }), [WW, iW, OW]), EW
+      }), [RR, JR, GR]), tR
     }
   },
-  39244: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      f: () => mW,
-      h: () => LW,
-      k: () => EW,
-      o: () => PW,
-      q: () => NW
+  39221: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => fR,
+      f: () => yR,
+      j: () => qR,
+      m: () => tR,
+      p: () => ZR,
+      q: () => uR
     });
-    const mW = 1.001,
-      EW = .501,
-      NW = .025,
-      PW = .75,
-      LW = .08,
-      cW = 4;
+    const yR = 1.001,
+      tR = .501,
+      uR = .025,
+      ZR = .75,
+      qR = .08,
+      iR = 4;
 
-    function wW() {
-      const WW = EW,
-        iW = NW,
-        OW = WW - iW / 2,
-        mW = (2 * WW - 2 * iW) / (2 * cW - 1),
-        PW = [];
-      for (const EW of [-OW, OW])
-        for (const NW of [-OW, OW])
-          for (let OW = 0; OW < cW; OW++) {
-            const LW = -WW + iW + mW * (2 * OW + .5);
-            PW.push([mW, iW, iW, LW, EW, NW]), PW.push([iW, mW, iW, EW, LW, NW]), PW.push([iW, iW, mW, EW, NW, LW])
+    function fR() {
+      const RR = tR,
+        JR = uR,
+        GR = RR - JR / 2,
+        yR = (2 * RR - 2 * JR) / (2 * iR - 1),
+        ZR = [];
+      for (const tR of [-GR, GR])
+        for (const uR of [-GR, GR])
+          for (let GR = 0; GR < iR; GR++) {
+            const qR = -RR + JR + yR * (2 * GR + .5);
+            ZR.push([yR, JR, JR, qR, tR, uR]), ZR.push([JR, yR, JR, tR, qR, uR]), ZR.push([JR, JR, yR, tR, uR, qR])
           }
-      for (const EW of [-OW, OW])
-        for (const WW of [-OW, OW])
-          for (const mW of [-OW, OW]) PW.push([iW, iW, iW, EW, WW, mW]);
-      return PW
+      for (const tR of [-GR, GR])
+        for (const RR of [-GR, GR])
+          for (const yR of [-GR, GR]) ZR.push([JR, JR, JR, tR, RR, yR]);
+      return ZR
     }
   },
-  9954: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => EW
+  10048: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => tR
     });
-    let mW = null;
-    const EW = function(WW) {
-        const iW = {
-          cycle: WW,
+    let yR = null;
+    const tR = function(RR) {
+        const JR = {
+          cycle: RR,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return mW = iW, () => {
-          mW === iW && (mW = null)
+        return yR = JR, () => {
+          yR === JR && (yR = null)
         }
       },
-      NW = () => {
-        var WW;
-        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
+      uR = () => {
+        var RR;
+        return null !== (RR = yR) && void 0 !== RR && RR.canCycle() ? yR.cycle : null
       }
   },
-  39708: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      h: () => LW,
-      k: () => cW
+  39700: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      g: () => qR,
+      i: () => iR
     });
-    const mW = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      EW = [0, 1, 2, 0, 2, 3],
-      NW = [4, 5];
+    const yR = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      tR = [0, 1, 2, 0, 2, 3],
+      uR = [4, 5];
 
-    function PW(WW, iW, OW, mW, EW) {
-      for (let PW = 0; PW < 6; PW++) NW.includes(PW) === EW && wW(WW, iW, OW, mW, PW)
+    function ZR(RR, JR, GR, yR, tR) {
+      for (let ZR = 0; ZR < 6; ZR++) uR.includes(ZR) === tR && fR(RR, JR, GR, yR, ZR)
     }
 
-    function LW(WW, iW, OW, mW) {
-      for (let EW = 0; EW < 6; EW++) wW(WW, iW, OW, mW, EW)
+    function qR(RR, JR, GR, yR) {
+      for (let tR = 0; tR < 6; tR++) fR(RR, JR, GR, yR, tR)
     }
 
-    function cW(WW, iW, OW, NW, PW) {
-      for (let LW = 0; LW < 6; LW++)
-        for (const cW of [0, 1]) {
-          const [wW, tW, ZW] = [cW + 2, cW + 1, (cW + 3) % 4], xW = WW.length / 3;
-          for (const [iW, EW] of [
-              [cW, tW],
-              [wW, tW],
-              [wW, ZW],
-              [cW, ZW]
+    function iR(RR, JR, GR, uR, ZR) {
+      for (let qR = 0; qR < 6; qR++)
+        for (const iR of [0, 1]) {
+          const [fR, VR, KR] = [iR + 2, iR + 1, (iR + 3) % 4], wR = RR.length / 3;
+          for (const [JR, tR] of [
+              [iR, VR],
+              [fR, VR],
+              [fR, KR],
+              [iR, KR]
             ])
-            for (let cW = 0; cW < 3; cW++) {
-              const wW = mW[3 * (4 * LW + iW) + cW],
-                tW = mW[3 * (4 * LW + EW) + cW];
-              WW.push((wW + (tW - wW) * PW) * NW / 2 + OW[cW])
+            for (let iR = 0; iR < 3; iR++) {
+              const fR = yR[3 * (4 * qR + JR) + iR],
+                VR = yR[3 * (4 * qR + tR) + iR];
+              RR.push((fR + (VR - fR) * ZR) * uR / 2 + GR[iR])
             }
-          for (const WW of EW) iW.push(xW + WW)
+          for (const RR of tR) JR.push(wR + RR)
         }
     }
 
-    function wW(WW, iW, OW, NW, PW) {
-      let [LW, cW, wW] = OW, [tW, ZW, xW] = NW;
-      const lW = WW.length / 3;
-      for (let EW = 4 * PW; EW < 4 * PW + 4; EW++) WW.push(mW[3 * EW] * tW / 2 + LW, mW[3 * EW + 1] * ZW / 2 + cW, mW[3 * EW + 2] * xW / 2 + wW);
-      for (const mW of EW) iW.push(lW + mW)
+    function fR(RR, JR, GR, uR, ZR) {
+      let [qR, iR, fR] = GR, [VR, KR, wR] = uR;
+      const rR = RR.length / 3;
+      for (let tR = 4 * ZR; tR < 4 * ZR + 4; tR++) RR.push(yR[3 * tR] * VR / 2 + qR, yR[3 * tR + 1] * KR / 2 + iR, yR[3 * tR + 2] * wR / 2 + fR);
+      for (const yR of tR) JR.push(rR + yR)
     }
   },
-  40798: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      e: () => cW,
-      h: () => PW,
-      j: () => wW,
-      n: () => tW
+  40788: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      d: () => iR,
+      e: () => ZR,
+      g: () => fR,
+      i: () => VR
     });
-    var mW = OW(40804),
-      EW = OW(39708);
-    const NW = .35,
-      PW = {
+    var yR = GR(40792),
+      tR = GR(39700);
+    const uR = .35,
+      ZR = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      LW = {
+      qR = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      cW = [.95, .2, .15];
-    class wW {
+      iR = [.95, .2, .15];
+    class fR {
       constructor() {
         this.groups = []
       }
-      add(WW, iW, OW, EW, NW) {
-        let PW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mW.d;
-        for (const mW of this.groups)
-          if (xW(mW, EW, NW)) return mW.cells.push(WW, iW, OW), void mW.boxes.push(PW);
+      add(RR, JR, GR, tR, uR) {
+        let ZR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : yR.b;
+        for (const yR of this.groups)
+          if (wR(yR, tR, uR)) return yR.cells.push(RR, JR, GR), void yR.boxes.push(ZR);
         this.groups.push({
-          rgb: EW,
-          look: NW,
-          cells: [WW, iW, OW],
-          boxes: [PW]
+          rgb: tR,
+          look: uR,
+          cells: [RR, JR, GR],
+          boxes: [ZR]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class tW {
-      constructor(WW) {
-        this.api = WW, this.shown = []
+    class VR {
+      constructor(RR) {
+        this.api = RR, this.shown = []
       }
-      show(WW) {
-        const iW = [];
-        for (const OW of WW) {
-          const WW = this.shown.findIndex((WW => {
+      show(RR) {
+        const JR = [];
+        for (const GR of RR) {
+          const RR = this.shown.findIndex((RR => {
             let {
-              group: iW
-            } = WW;
-            return xW(iW, OW.rgb, OW.look) && lW(iW, OW)
-          })); - 1 === WW ? iW.push(this.build(OW)) : (iW.push(this.shown[WW]), this.shown.splice(WW, 1))
+              group: JR
+            } = RR;
+            return wR(JR, GR.rgb, GR.look) && rR(JR, GR)
+          })); - 1 === RR ? JR.push(this.build(GR)) : (JR.push(this.shown[RR]), this.shown.splice(RR, 1))
         }
-        this.dispose(), this.shown = iW
+        this.dispose(), this.shown = JR
       }
       dispose() {
         for (const {
-            meshes: WW
+            meshes: RR
           }
           of this.shown)
-          for (const iW of WW) this.api.disposeGameMesh(iW);
+          for (const JR of RR) this.api.disposeGameMesh(JR);
         this.shown = []
       }
-      build(WW) {
+      build(RR) {
         const {
-          rgb: iW,
-          look: OW,
-          boxes: mW
-        } = WW, PW = [iW[0] + (1 - iW[0]) * NW, iW[1] + (1 - iW[1]) * NW, iW[2] + (1 - iW[2]) * NW], LW = [this.buildMesh(WW.cells, iW, OW.alpha, ((WW, iW, EW, NW) => {
-          ZW(WW, iW, EW, mW[NW], OW.size, !1)
-        })), this.buildMesh(WW.cells, PW, OW.alpha, ((WW, iW, EW, NW) => {
-          ZW(WW, iW, EW, mW[NW], OW.size, !0)
+          rgb: JR,
+          look: GR,
+          boxes: yR
+        } = RR, ZR = [JR[0] + (1 - JR[0]) * uR, JR[1] + (1 - JR[1]) * uR, JR[2] + (1 - JR[2]) * uR], qR = [this.buildMesh(RR.cells, JR, GR.alpha, ((RR, JR, tR, uR) => {
+          KR(RR, JR, tR, yR[uR], GR.size, !1)
+        })), this.buildMesh(RR.cells, ZR, GR.alpha, ((RR, JR, tR, uR) => {
+          KR(RR, JR, tR, yR[uR], GR.size, !0)
         }))];
-        return OW.crossed && LW.push(this.buildMesh(WW.cells, iW, .9, ((WW, iW, mW) => {
-          (0, EW.k)(WW, iW, mW, OW.size + .01, .12)
+        return GR.crossed && qR.push(this.buildMesh(RR.cells, JR, .9, ((RR, JR, yR) => {
+          (0, tR.i)(RR, JR, yR, GR.size + .01, .12)
         }))), {
-          group: WW,
-          meshes: LW
+          group: RR,
+          meshes: qR
         }
       }
-      buildMesh(WW, iW, OW, mW) {
-        const EW = [WW[0], WW[1], WW[2]],
-          NW = [],
-          PW = [];
-        for (let LW = 0; LW < WW.length; LW += 3) mW(NW, PW, [WW[LW] - EW[0] + .5, WW[LW + 1] - EW[1] + .5, WW[LW + 2] - EW[2] + .5], LW / 3);
+      buildMesh(RR, JR, GR, yR) {
+        const tR = [RR[0], RR[1], RR[2]],
+          uR = [],
+          ZR = [];
+        for (let qR = 0; qR < RR.length; qR += 3) yR(uR, ZR, [RR[qR] - tR[0] + .5, RR[qR + 1] - tR[1] + .5, RR[qR + 2] - tR[2] + .5], qR / 3);
         return this.api.createGameMesh({
-          positions: NW,
-          indices: PW
+          positions: uR,
+          indices: ZR
         }, {
-          rgb: [iW[0], iW[1], iW[2]],
-          alpha: OW
-        }, EW)
+          rgb: [JR[0], JR[1], JR[2]],
+          alpha: GR
+        }, tR)
       }
     }
 
-    function ZW(WW, iW, OW, mW, NW, PW) {
-      for (let LW = 0; LW < mW.length; LW += 6) {
-        const cW = [0, 0, 0],
-          wW = [0, 0, 0];
-        for (let WW = 0; WW < 3; WW++) cW[WW] = OW[WW] + ((mW[LW + WW] + mW[LW + WW + 3]) / 2 - .5) * NW, wW[WW] = (mW[LW + WW + 3] - mW[LW + WW]) * NW;
-        (0, EW.d)(WW, iW, cW, wW, PW)
+    function KR(RR, JR, GR, yR, uR, ZR) {
+      for (let qR = 0; qR < yR.length; qR += 6) {
+        const iR = [0, 0, 0],
+          fR = [0, 0, 0];
+        for (let RR = 0; RR < 3; RR++) iR[RR] = GR[RR] + ((yR[qR + RR] + yR[qR + RR + 3]) / 2 - .5) * uR, fR[RR] = (yR[qR + RR + 3] - yR[qR + RR]) * uR;
+        (0, tR.c)(RR, JR, iR, fR, ZR)
       }
     }
 
-    function xW(WW, iW, OW) {
-      return WW.rgb[0] === iW[0] && WW.rgb[1] === iW[1] && WW.rgb[2] === iW[2] && WW.look === OW
+    function wR(RR, JR, GR) {
+      return RR.rgb[0] === JR[0] && RR.rgb[1] === JR[1] && RR.rgb[2] === JR[2] && RR.look === GR
     }
 
-    function lW(WW, iW) {
-      if (WW.cells.length !== iW.cells.length) return !1;
-      for (let OW = 0; OW < WW.cells.length; OW++)
-        if (WW.cells[OW] !== iW.cells[OW]) return !1;
-      return WW.boxes.every(((WW, OW) => WW === iW.boxes[OW]))
+    function rR(RR, JR) {
+      if (RR.cells.length !== JR.cells.length) return !1;
+      for (let GR = 0; GR < RR.cells.length; GR++)
+        if (RR.cells[GR] !== JR.cells[GR]) return !1;
+      return RR.boxes.every(((RR, GR) => RR === JR.boxes[GR]))
     }
   },
-  40809: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => lm
+  40799: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => Ky
     });
-    const mW = [0, 90, 180, 270],
-      EW = "plotsblueprint";
-    var NW = OW(62),
-      PW = OW(3361),
-      LW = OW(25),
-      cW = OW(1526),
-      wW = OW(2085),
-      tW = OW(1172),
-      ZW = OW(1089),
-      xW = OW.n(ZW),
-      lW = OW(1729),
-      AW = OW(40814),
-      bW = OW(37868),
-      jW = OW(1391),
-      UW = OW(2032),
-      kW = OW(2080),
-      sW = OW(4619),
-      MW = OW(1856);
+    const yR = [0, 90, 180, 270],
+      tR = "plotsblueprint";
+    var uR = GR(66),
+      ZR = GR(3494),
+      qR = GR(25),
+      iR = GR(1581),
+      fR = GR(2194),
+      VR = GR(1270),
+      KR = GR(1163),
+      wR = GR.n(KR),
+      rR = GR(1800),
+      eR = GR(40801),
+      aR = GR(37796),
+      LR = GR(1468),
+      nR = GR(2123),
+      UR = GR(2186),
+      WR = GR(4724),
+      AR = GR(1943);
 
-    function KW() {}
-    const SW = (0, NW.createContext)({
+    function CR() {}
+    const XR = (0, uR.createContext)({
       hint: null,
-      journalRef: KW,
-      placementCardRef: KW,
-      buildRef: KW
+      journalRef: CR,
+      placementCardRef: CR,
+      buildRef: CR
     });
-    var YW = OW(27);
-    const yW = [
+    var MR = GR(32);
+    const BR = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      TW = {
+      lR = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -785,18 +785,18 @@ export const modules = {
           tier: "large"
         }
       },
-      JW = ["small", "medium", "large"].flatMap((WW => yW.flat().filter((iW => TW[iW].tier === WW))));
+      pR = ["small", "medium", "large"].flatMap((RR => BR.flat().filter((JR => lR[JR].tier === RR))));
 
-    function hW(WW) {
-      return TW[WW]
+    function gR(RR) {
+      return lR[RR]
     }
-    const HW = new Map(yW.flatMap((WW => WW.slice(1).map(((iW, OW) => [iW, WW[OW]])))));
+    const bR = new Map(BR.flatMap((RR => RR.slice(1).map(((JR, GR) => [JR, RR[GR]])))));
 
-    function nW(WW) {
-      var iW;
-      return null !== (iW = HW.get(WW)) && void 0 !== iW ? iW : null
+    function vR(RR) {
+      var JR;
+      return null !== (JR = bR.get(RR)) && void 0 !== JR ? JR : null
     }
-    const uW = {
+    const OR = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -819,110 +819,110 @@ export const modules = {
       }
     };
 
-    function oW(WW, iW) {
-      const OW = new Set(WW),
-        mW = function(WW) {
-          const iW = new Set(WW);
-          return new Set(JW.filter((WW => {
-            const OW = nW(WW);
-            return null === OW || iW.has(OW)
+    function xR(RR, JR) {
+      const GR = new Set(RR),
+        yR = function(RR) {
+          const JR = new Set(RR);
+          return new Set(pR.filter((RR => {
+            const GR = vR(RR);
+            return null === GR || JR.has(GR)
           })))
-        }(OW);
-      return JW.map((WW => {
-        const EW = WW === iW;
-        if (OW.has(WW)) return {
-          id: WW,
-          active: EW,
+        }(GR);
+      return pR.map((RR => {
+        const tR = RR === JR;
+        if (GR.has(RR)) return {
+          id: RR,
+          active: tR,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const NW = uW[WW],
-          PW = void 0 === NW || NW.firstBuild && OW.size > 0 ? null : NW.key;
-        return mW.has(WW) ? {
-          id: WW,
-          active: EW,
-          note: PW,
+        const uR = OR[RR],
+          ZR = void 0 === uR || uR.firstBuild && GR.size > 0 ? null : uR.key;
+        return yR.has(RR) ? {
+          id: RR,
+          active: tR,
+          note: ZR,
           state: "open",
           unlockedBy: null
         } : {
-          id: WW,
-          active: EW,
-          note: PW,
+          id: RR,
+          active: tR,
+          note: ZR,
           state: "locked",
-          unlockedBy: nW(WW)
+          unlockedBy: vR(RR)
         }
       }))
     }
-    const dW = "plotsJournalChanged";
-    class eW {
-      constructor(WW, iW) {
-        this.api = WW, this.placement = iW, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.wZ(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = WW => {
-          this.placement.start(WW), (0, PW.m)()
+    const NR = "plotsJournalChanged";
+    class DR {
+      constructor(RR, JR) {
+        this.api = RR, this.placement = JR, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.fK(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = RR => {
+          this.placement.start(RR), (0, ZR.h)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${EW} cancel`)
+          this.api.sendCommand(`${tR} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      yZ(WW) {
-        let [, iW, OW] = WW;
-        this.pages = oW(iW, OW), YW.l.iZ(dW, this.pages, !0)
+      BK(RR) {
+        let [, JR, GR] = RR;
+        this.pages = xR(JR, GR), MR.n.JK(NR, this.pages, !0)
       }
-      openFromServer(WW) {
-        let [, iW] = WW;
-        this.openRequested = iW, this.hZ()
+      openFromServer(RR) {
+        let [, JR] = RR;
+        this.openRequested = JR, this.gK()
       }
-      hZ() {
-        const WW = this.openRequested;
-        null === WW || LW.d.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, lW.l)() || (0, MW.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = WW, (0, PW.H)()))
+      gK() {
+        const RR = this.openRequested;
+        null === RR || qR.d.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, rR.o)() || (0, AR.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = RR, (0, ZR.t)()))
       }
-      wZ(WW) {
-        this.reported.has(WW) || (this.reported.add(WW), this.api.sendCommand(`${EW} report ${WW}`))
+      fK(RR) {
+        this.reported.has(RR) || (this.reported.add(RR), this.api.sendCommand(`${tR} report ${RR}`))
       }
     }
-    var vW = OW(1283);
-    const gW = "KeyJ";
+    var HR = GR(1378);
+    const oR = "KeyJ";
 
-    function DW(WW) {
+    function cR(RR) {
       let {
-        journal: iW
-      } = WW;
-      const OW = (0, cW.g)(dW, iW.getPages()),
+        journal: JR
+      } = RR;
+      const GR = (0, iR.h)(NR, JR.getPages()),
         {
-          isTouchScreen: mW
-        } = (0, LW.p)(["isTouchScreen"]),
+          isTouchScreen: yR
+        } = (0, qR.o)(["isTouchScreen"]),
         {
-          t: EW
-        } = (0, tW.B)(),
-        wW = (0, NW.useContext)(SW),
-        ZW = null !== OW;
-      return (0, NW.useEffect)((() => ZW ? (0, AW.d)(gW) : void 0), [ZW]), (0, sW.c)((WW => ZW && WW.code === gW && !WW.repeat && !(0, MW.isTypingInInput)()), (WW => {
-        (0, lW.A)(WW, !0, PW.H)
-      })), null === OW ? null : (0, vW.jsx)(bW.h, {
+          t: tR
+        } = (0, VR.A)(),
+        fR = (0, uR.useContext)(XR),
+        KR = null !== GR;
+      return (0, uR.useEffect)((() => KR ? (0, eR.d)(oR) : void 0), [KR]), (0, WR.e)((RR => KR && RR.code === oR && !RR.repeat && !(0, AR.isTypingInInput)()), (RR => {
+        (0, rR.B)(RR, !0, ZR.t)
+      })), null === GR ? null : (0, HR.jsx)(aR.d, {
         placement: "topRight",
-        children: (0, vW.jsx)("div", {
+        children: (0, HR.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, vW.jsxs)("button", {
-            ref: wW.journalRef,
+          children: (0, HR.jsxs)("button", {
+            ref: fR.journalRef,
             type: "button",
-            className: xW()("PlotsJournalButton SmallTextBold", {
-              Touch: mW
+            className: wR()("PlotsJournalButton SmallTextBold", {
+              Touch: yR
             }),
-            onClick: PW.H,
-            children: [(0, vW.jsx)("span", {
+            onClick: ZR.t,
+            children: [(0, HR.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, vW.jsx)(UW.b, {
+              children: (0, HR.jsx)(nR.b, {
                 itemName: "Book",
                 amount: 0
               })
-            }), EW("plotsGame:journalButton"), !mW && (0, vW.jsx)(kW.e, {
+            }), tR("plotsGame:journalButton"), !yR && (0, HR.jsx)(UR.c, {
               className: "PlotsJournalButtonKey",
-              keyCode: gW
-            }), "openJournal" === wW.hint && (0, vW.jsx)(jW.c, {
+              keyCode: oR
+            }), "openJournal" === fR.hint && (0, HR.jsx)(LR.d, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -930,114 +930,114 @@ export const modules = {
         })
       })
     }
-    var VW = OW(5725);
-    const pW = [0, 90, 180, 270],
-      fW = /^(meta\|rot\d)\|([lrud]+)$/,
-      CW = "nesw",
-      XW = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      BW = function(WW) {
-        const iW = new WeakMap;
-        return (OW, mW) => {
-          let EW = iW.get(OW);
-          return void 0 === EW && (EW = WW(OW, mW), iW.set(OW, EW)), EW
+    var PR = GR(5844);
+    const IR = [0, 90, 180, 270],
+      mR = /^(meta\|rot\d)\|([lrud]+)$/,
+      zR = "nesw",
+      SR = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      jR = function(RR) {
+        const JR = new WeakMap;
+        return (GR, yR) => {
+          let tR = JR.get(GR);
+          return void 0 === tR && (tR = RR(GR, yR), JR.set(GR, tR)), tR
         }
-      }((WW => new qW(WW)));
-    class qW {
-      constructor(WW) {
-        this.blockMetadata = WW, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const iW = new Set(Object.keys(WW).map((iW => WW[iW].id)));
-        iW.add(0), this.maxBlockId = Math.max(...iW)
+      }((RR => new dR(RR)));
+    class dR {
+      constructor(RR) {
+        this.blockMetadata = RR, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const JR = new Set(Object.keys(RR).map((JR => RR[JR].id)));
+        JR.add(0), this.maxBlockId = Math.max(...JR)
       }
       static
-      for (WW) {
-        return BW(WW)
+      for (RR) {
+        return jR(RR)
       }
-      getBlockIdMapping(WW, iW) {
-        const OW = this.getBlockIdMappingKey(WW, iW);
-        let mW = this.blockIdMappings.get(OW);
-        return void 0 === mW && pW.includes(WW) && (mW = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, WW, iW), this.blockIdMappings.set(OW, mW)), mW
+      getBlockIdMapping(RR, JR) {
+        const GR = this.getBlockIdMappingKey(RR, JR);
+        let yR = this.blockIdMappings.get(GR);
+        return void 0 === yR && IR.includes(RR) && (yR = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, RR, JR), this.blockIdMappings.set(GR, yR)), yR
       }
-      turnBlockId(WW, iW, OW) {
-        return this.mapBlockId(this.blockMetadata[WW], iW, this.getRotationMapping(iW, OW), OW)
+      turnBlockId(RR, JR, GR) {
+        return this.mapBlockId(this.blockMetadata[RR], JR, this.getRotationMapping(JR, GR), GR)
       }
-      getBlockIdMappingKey(WW, iW) {
-        return `r${WW}|m${Number(iW)}`
+      getBlockIdMappingKey(RR, JR) {
+        return `r${RR}|m${Number(JR)}`
       }
-      createBlockIdMapping(WW, iW, OW, mW) {
-        const EW = new Uint16Array(iW + 1),
-          NW = this.getRotationMapping(OW, mW);
-        for (const PW in WW) {
-          const iW = WW[PW];
-          EW[iW.id] = this.mapBlockId(iW, OW, NW, mW)
+      createBlockIdMapping(RR, JR, GR, yR) {
+        const tR = new Uint16Array(JR + 1),
+          uR = this.getRotationMapping(GR, yR);
+        for (const ZR in RR) {
+          const JR = RR[ZR];
+          tR[JR.id] = this.mapBlockId(JR, GR, uR, yR)
         }
-        return EW
+        return tR
       }
-      getRotationMapping(WW, iW) {
-        const OW = Math.round(WW / 90),
-          mW = new Uint8Array(4);
-        for (let EW = 0; EW < 4; EW++) mW[EW] = (4 + EW - OW) % 4;
-        if (iW) {
-          let WW = mW[0];
-          mW[0] = mW[1], mW[1] = WW, WW = mW[2], mW[2] = mW[3], mW[3] = WW
+      getRotationMapping(RR, JR) {
+        const GR = Math.round(RR / 90),
+          yR = new Uint8Array(4);
+        for (let tR = 0; tR < 4; tR++) yR[tR] = (4 + tR - GR) % 4;
+        if (JR) {
+          let RR = yR[0];
+          yR[0] = yR[1], yR[1] = RR, RR = yR[2], yR[2] = yR[3], yR[3] = RR
         }
-        return mW
+        return yR
       }
-      mapBlockId(WW, iW, OW, mW) {
-        var EW;
+      mapBlockId(RR, JR, GR, yR) {
+        var tR;
         const {
-          blockMetadata: NW
-        } = this, PW = Math.round(iW / 90), {
-          id: LW,
-          meta: cW
-        } = WW, {
-          rot: wW,
-          rootName: tW,
-          metaStr: ZW
-        } = cW;
-        let xW;
-        const [, lW, AW] = null !== (EW = XW.exec(ZW)) && void 0 !== EW ? EW : [];
-        if (void 0 !== lW) {
-          var bW, jW;
-          xW = null !== (bW = null === (jW = NW[`${tW}|meta|${[CW.split("").filter(((WW,iW)=>lW.split("").some((WW=>{const OW=CW.indexOf(WW);return((mW?3-OW:OW)+PW)%4===iW})))).join(""),AW].filter(Boolean).join("|")}`]) || void 0 === jW ? void 0 : jW.id) && void 0 !== bW ? bW : LW
-        } else if (null === wW) xW = LW;
+          blockMetadata: uR
+        } = this, ZR = Math.round(JR / 90), {
+          id: qR,
+          meta: iR
+        } = RR, {
+          rot: fR,
+          rootName: VR,
+          metaStr: KR
+        } = iR;
+        let wR;
+        const [, rR, eR] = null !== (tR = SR.exec(KR)) && void 0 !== tR ? tR : [];
+        if (void 0 !== rR) {
+          var aR, LR;
+          wR = null !== (aR = null === (LR = uR[`${VR}|meta|${[zR.split("").filter(((RR,JR)=>rR.split("").some((RR=>{const GR=zR.indexOf(RR);return((yR?3-GR:GR)+ZR)%4===JR})))).join(""),eR].filter(Boolean).join("|")}`]) || void 0 === LR ? void 0 : LR.id) && void 0 !== aR ? aR : qR
+        } else if (null === fR) wR = qR;
         else {
-          var UW, kW;
-          const WW = OW[wW - 1] + 1;
-          let iW = ZW.replace(`rot${wW}`, `rot${WW}`);
-          mW && cW.stairsCorner && (iW = iW.replace(/(Left|Right)$/, (WW => "Left" === WW ? "Right" : "Left"))), mW && "Chest" === tW && (iW = iW.replace(/\|(left|right)$/, ((WW, iW) => "left" === iW ? "|right" : "|left")));
-          const EW = fW.exec(iW);
-          if (mW && null !== EW) {
-            const WW = "lrud".split("").filter((WW => EW[2].includes("l" === WW ? "r" : "r" === WW ? "l" : WW)));
-            iW = `${EW[1]}|${WW.join("")}`
+          var nR, UR;
+          const RR = GR[fR - 1] + 1;
+          let JR = KR.replace(`rot${fR}`, `rot${RR}`);
+          yR && iR.stairsCorner && (JR = JR.replace(/(Left|Right)$/, (RR => "Left" === RR ? "Right" : "Left"))), yR && "Chest" === VR && (JR = JR.replace(/\|(left|right)$/, ((RR, JR) => "left" === JR ? "|right" : "|left")));
+          const tR = mR.exec(JR);
+          if (yR && null !== tR) {
+            const RR = "lrud".split("").filter((RR => tR[2].includes("l" === RR ? "r" : "r" === RR ? "l" : RR)));
+            JR = `${tR[1]}|${RR.join("")}`
           }
-          const PW = `${tW}|${iW}`;
-          if (xW = null !== (UW = null === (kW = NW[PW]) || void 0 === kW ? void 0 : kW.id) && void 0 !== UW ? UW : null, null === xW) {
-            const WW = NW[tW];
-            xW = WW.rootMetaDesc === PW ? WW.id : LW
+          const ZR = `${VR}|${JR}`;
+          if (wR = null !== (nR = null === (UR = uR[ZR]) || void 0 === UR ? void 0 : UR.id) && void 0 !== nR ? nR : null, null === wR) {
+            const RR = uR[VR];
+            wR = RR.rootMetaDesc === ZR ? RR.id : qR
           }
         }
-        return xW
+        return wR
       }
     }
 
-    function RW(WW, iW, OW) {
+    function ER(RR, JR, GR) {
       let {
-        xRotationMappedOrigin: mW,
-        shouldSwapXZ: EW
-      } = OW;
-      const NW = EW ? iW : WW;
-      return null === mW ? NW : mW - NW
+        xRotationMappedOrigin: yR,
+        shouldSwapXZ: tR
+      } = GR;
+      const uR = tR ? JR : RR;
+      return null === yR ? uR : yR - uR
     }
 
-    function GW(WW, iW, OW) {
+    function YR(RR, JR, GR) {
       let {
-        zRotationMappedOrigin: mW,
-        shouldSwapXZ: EW
-      } = OW;
-      const NW = EW ? WW : iW;
-      return null === mW ? NW : mW - NW
+        zRotationMappedOrigin: yR,
+        shouldSwapXZ: tR
+      } = GR;
+      const uR = tR ? RR : JR;
+      return null === yR ? uR : yR - uR
     }
-    const IW = {
+    const kR = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -1099,304 +1099,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      aW = new Map;
+      QR = new Map;
 
-    function rW(WW, iW) {
-      const OW = `${WW}|${iW}`;
-      let mW = aW.get(OW);
-      if (void 0 === mW) {
+    function FR(RR, JR) {
+      const GR = `${RR}|${JR}`;
+      let yR = QR.get(GR);
+      if (void 0 === yR) {
         const {
-          size: EW,
-          palette: NW,
-          layers: PW
-        } = IW[WW], LW = 90 === iW || 270 === iW, [cW, wW] = LW ? [EW[2], EW[0]] : [EW[0], EW[2]], tW = function(WW, iW, OW) {
-          let mW = null,
-            EW = null,
-            NW = !1;
-          switch (WW) {
+          size: tR,
+          palette: uR,
+          layers: ZR
+        } = kR[RR], qR = 90 === JR || 270 === JR, [iR, fR] = qR ? [tR[2], tR[0]] : [tR[0], tR[2]], VR = function(RR, JR, GR) {
+          let yR = null,
+            tR = null,
+            uR = !1;
+          switch (RR) {
             case 0:
               break;
             case 90:
-              mW = iW - 1, NW = !0;
+              yR = JR - 1, uR = !0;
               break;
             case 180:
-              mW = iW - 1, EW = OW - 1;
+              yR = JR - 1, tR = GR - 1;
               break;
             case 270:
-              EW = OW - 1, NW = !0;
+              tR = GR - 1, uR = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${WW}`)
+              throw new Error(`Invalid rotation: ${RR}`)
           }
           return {
-            xRotationMappedOrigin: mW,
-            zRotationMappedOrigin: EW,
-            shouldSwapXZ: NW
+            xRotationMappedOrigin: yR,
+            zRotationMappedOrigin: tR,
+            shouldSwapXZ: uR
           }
-        }(iW, cW, wW), ZW = qW.for(VW.j), xW = NW.map((WW => (0, VW.f)(ZW.turnBlockId((0, VW.l)(WW), iW, !1)))), lW = [];
-        PW.forEach(((WW, iW) => {
-          WW.split(" ").forEach(((WW, OW) => {
-            for (let mW = 0; mW < WW.length; mW++)
-              if ("." !== WW[mW]) {
-                const EW = [RW(mW, OW, tW), iW, GW(mW, OW, tW)];
-                lW.push({
-                  offset: EW,
-                  block: xW[WW.charCodeAt(mW) - "a".charCodeAt(0)]
+        }(JR, iR, fR), KR = dR.for(PR.l), wR = uR.map((RR => (0, PR.h)(KR.turnBlockId((0, PR.n)(RR), JR, !1)))), rR = [];
+        ZR.forEach(((RR, JR) => {
+          RR.split(" ").forEach(((RR, GR) => {
+            for (let yR = 0; yR < RR.length; yR++)
+              if ("." !== RR[yR]) {
+                const tR = [ER(yR, GR, VR), JR, YR(yR, GR, VR)];
+                rR.push({
+                  offset: tR,
+                  block: wR[RR.charCodeAt(yR) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), mW = {
-          size: [cW, EW[1], wW],
-          cells: lW
-        }, aW.set(OW, mW)
+        })), yR = {
+          size: [iR, tR[1], fR],
+          cells: rR
+        }, QR.set(GR, yR)
       }
-      return mW
+      return yR
     }
-    const zW = "plotsBuildProgressChanged",
-      FW = new Map;
+    const TR = "plotsBuildProgressChanged",
+      sR = new Map;
 
-    function QW(WW, iW, OW) {
-      let mW = 0,
-        EW = 0;
-      return function(WW) {
-        let iW = FW.get(WW);
-        if (void 0 === iW) {
-          const mW = [];
+    function hR(RR, JR, GR) {
+      let yR = 0,
+        tR = 0;
+      return function(RR) {
+        let JR = sR.get(RR);
+        if (void 0 === JR) {
+          const yR = [];
           for (const {
-              offset: iW
+              offset: JR
             }
-            of rW(WW, 0).cells) {
-            var OW;
-            mW[iW[1]] = (null !== (OW = mW[iW[1]]) && void 0 !== OW ? OW : 0) + 1
+            of FR(RR, 0).cells) {
+            var GR;
+            yR[JR[1]] = (null !== (GR = yR[JR[1]]) && void 0 !== GR ? GR : 0) + 1
           }
-          iW = mW, FW.set(WW, iW)
+          JR = yR, sR.set(RR, JR)
         }
-        return iW
-      }(WW).forEach(((WW, OW) => {
-        mW += WW, OW > iW && (EW += WW)
+        return JR
+      }(RR).forEach(((RR, GR) => {
+        yR += RR, GR > JR && (tR += RR)
       })), {
-        id: WW,
-        filled: mW - EW - OW,
-        total: mW
+        id: RR,
+        filled: yR - tR - GR,
+        total: yR
       }
     }
-    class Wi {
+    class RJ {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(WW) {
-        this.shown = WW, this.topOpen = 0, null === WW && this.iZ(null)
+      show(RR) {
+        this.shown = RR, this.topOpen = 0, null === RR && this.JK(null)
       }
-      update(WW, iW, OW) {
-        const mW = this.shown;
-        null !== mW && (WW >= iW && (this.topOpen = OW), this.iZ(QW(mW.id, iW - mW.y, WW >= iW ? OW : this.topOpen + OW)))
+      update(RR, JR, GR) {
+        const yR = this.shown;
+        null !== yR && (RR >= JR && (this.topOpen = GR), this.JK(hR(yR.id, JR - yR.y, RR >= JR ? GR : this.topOpen + GR)))
       }
-      iZ(WW) {
-        const iW = this.progress;
-        (null === WW || void 0 === WW ? void 0 : WW.id) === (null === iW || void 0 === iW ? void 0 : iW.id) && (null === WW || void 0 === WW ? void 0 : WW.filled) === (null === iW || void 0 === iW ? void 0 : iW.filled) && (null === WW || void 0 === WW ? void 0 : WW.total) === (null === iW || void 0 === iW ? void 0 : iW.total) || (this.progress = WW, YW.l.iZ(zW, WW, !0))
+      JK(RR) {
+        const JR = this.progress;
+        (null === RR || void 0 === RR ? void 0 : RR.id) === (null === JR || void 0 === JR ? void 0 : JR.id) && (null === RR || void 0 === RR ? void 0 : RR.filled) === (null === JR || void 0 === JR ? void 0 : JR.filled) && (null === RR || void 0 === RR ? void 0 : RR.total) === (null === JR || void 0 === JR ? void 0 : JR.total) || (this.progress = RR, MR.n.JK(TR, RR, !0))
       }
     }
-    const ii = "plotsPlotChanged",
-      Oi = "plotsGuideChanged",
-      mi = "plotsGuideDone";
-    class Ei {
+    const JJ = "plotsPlotChanged",
+      GJ = "plotsGuideChanged",
+      yJ = "plotsGuideDone";
+    class tJ {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(WW) {
-        this.plot = WW, YW.l.iZ(ii, WW, !0)
+      receivePlot(RR) {
+        this.plot = RR, MR.n.JK(JJ, RR, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(WW) {
-        this.guide = WW, YW.l.iZ(Oi, WW, !0)
+      receiveGuide(RR) {
+        this.guide = RR, MR.n.JK(GJ, RR, !0)
       }
       receiveGuideDone() {
-        YW.l.iZ(mi, void 0, !0)
+        MR.n.JK(yJ, void 0, !0)
       }
     }
-    var Ni = OW(1269),
-      Pi = OW(39759),
-      Li = OW(38030),
-      ci = OW(1551);
+    var uJ = GR(1366),
+      ZJ = GR(39750),
+      qJ = GR(37994),
+      iJ = GR(1614);
 
-    function wi(WW) {
+    function fJ(RR) {
       let {
-        onSkip: iW,
-        className: OW
-      } = WW;
+        onSkip: JR,
+        className: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, tW.B)();
-      return (0, vW.jsx)("button", {
+        t: yR
+      } = (0, VR.A)();
+      return (0, HR.jsx)("button", {
         type: "button",
-        className: xW()("PlotsGuideSkipButton", OW),
-        ...(0, ci.d)(iW, "pointerup"),
-        children: mW("tutorial:skip")
+        className: wR()("PlotsGuideSkipButton", GR),
+        ...(0, iJ.f)(JR, "pointerup"),
+        children: yR("tutorial:skip")
       })
     }
 
-    function ti(WW) {
+    function VJ(RR) {
       let {
-        target: iW,
-        placement: OW,
-        spotlight: mW = null,
-        children: EW
-      } = WW;
+        target: JR,
+        placement: GR,
+        spotlight: yR = null,
+        children: tR
+      } = RR;
       const {
-        t: PW
-      } = (0, tW.B)(), LW = (0, NW.useRef)(iW);
-      return LW.current = iW, (0, Ni.r)("popup", LW, null === mW ? null : mW.onSkip, null !== mW, null, "controller:menusSkipTutorial"), (0, vW.jsxs)(Li.h, {
-        target: iW,
-        placement: OW,
-        className: xW()("PlotsGuideBubble", {
-          Passive: null === mW
+        t: ZR
+      } = (0, VR.A)(), qR = (0, uR.useRef)(JR);
+      return qR.current = JR, (0, uJ.u)("popup", qR, null === yR ? null : yR.onSkip, null !== yR, null, "controller:menusSkipTutorial"), (0, HR.jsxs)(qJ.d, {
+        target: JR,
+        placement: GR,
+        className: wR()("PlotsGuideBubble", {
+          Passive: null === yR
         }),
-        spotlight: null !== mW,
+        spotlight: null !== yR,
         spotlightMargin: 30,
-        children: [(0, vW.jsxs)("div", {
+        children: [(0, HR.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, vW.jsx)("img", {
+          children: [(0, HR.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: Pi,
+            src: ZJ,
             alt: "",
             draggable: !1
-          }), (0, vW.jsx)("span", {
+          }), (0, HR.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: PW("plotsGame:maverickName")
-          }), null !== mW && (0, vW.jsx)(wi, {
-            onSkip: mW.onSkip
+            children: ZR("plotsGame:maverickName")
+          }), null !== yR && (0, HR.jsx)(fJ, {
+            onSkip: yR.onSkip
           })]
-        }), (0, vW.jsx)("p", {
+        }), (0, HR.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: EW
+          children: tR
         })]
       })
     }
 
-    function Zi(WW) {
+    function KJ(RR) {
       let {
-        className: iW,
-        icon: OW,
-        title: mW,
-        children: EW
-      } = WW;
-      return (0, vW.jsxs)("div", {
-        className: xW()("PlotsCard", iW),
+        className: JR,
+        icon: GR,
+        title: yR,
+        children: tR
+      } = RR;
+      return (0, HR.jsxs)("div", {
+        className: wR()("PlotsCard", JR),
         role: "status",
-        children: [(0, vW.jsx)("span", {
+        children: [(0, HR.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, vW.jsx)(jW.c, {
-            name: OW
+          children: (0, HR.jsx)(LR.d, {
+            name: GR
           })
-        }), (0, vW.jsxs)("div", {
+        }), (0, HR.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, vW.jsx)("div", {
+          children: [(0, HR.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: mW
-          }), EW]
+            children: yR
+          }), tR]
         })]
       })
     }
 
-    function xi(WW) {
+    function wJ(RR) {
       let {
-        progress: iW,
-        goal: OW
-      } = WW;
-      const mW = Math.min(iW, OW);
-      return (0, vW.jsxs)("div", {
+        progress: JR,
+        goal: GR
+      } = RR;
+      const yR = Math.min(JR, GR);
+      return (0, HR.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, vW.jsx)("div", {
+        children: [(0, HR.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": OW,
-          "aria-valuenow": mW,
-          children: (0, vW.jsx)("div", {
+          "aria-valuemax": GR,
+          "aria-valuenow": yR,
+          children: (0, HR.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${mW/OW})`
+              transform: `scaleX(${yR/GR})`
             }
           })
-        }), (0, vW.jsxs)("span", {
+        }), (0, HR.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [mW, "/", OW]
+          children: [yR, "/", GR]
         })]
       })
     }
 
-    function li(WW) {
+    function rJ(RR) {
       let {
-        progress: iW,
-        guide: OW
-      } = WW;
+        progress: JR,
+        guide: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, tW.B)(), {
-        isTouchScreen: EW
-      } = (0, LW.p)(["isTouchScreen"]), NW = iW.filled < 5;
-      return (0, vW.jsxs)(vW.Fragment, {
-        children: [(NW || iW.total - iW.filled <= 5) && (0, vW.jsx)("div", {
+        t: yR
+      } = (0, VR.A)(), {
+        isTouchScreen: tR
+      } = (0, qR.o)(["isTouchScreen"]), uR = JR.filled < 5;
+      return (0, HR.jsxs)(HR.Fragment, {
+        children: [(uR || JR.total - JR.filled <= 5) && (0, HR.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, vW.jsx)("div", {
-            ref: OW.bindHand,
+          children: (0, HR.jsx)("div", {
+            ref: GR.bindHand,
             className: "PlotsGuideHand",
-            children: (0, vW.jsx)(jW.c, {
+            children: (0, HR.jsx)(LR.d, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, vW.jsx)(bW.h, {
+        }), (0, HR.jsx)(aR.d, {
           placement: "bottom",
-          children: (0, vW.jsxs)(Zi, {
+          children: (0, HR.jsxs)(KJ, {
             icon: "hammer",
-            title: mW(hW(iW.id).displayName.translationKey),
-            children: [NW && (0, vW.jsx)("div", {
+            title: yR(gR(JR.id).displayName.translationKey),
+            children: [uR && (0, HR.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: EW ? mW("plotsGame:guideBuildTouch") : Ai(mW)
-            }), (0, vW.jsx)(xi, {
-              progress: iW.filled,
-              goal: iW.total
+              children: tR ? yR("plotsGame:guideBuildTouch") : eJ(yR)
+            }), (0, HR.jsx)(wJ, {
+              progress: JR.filled,
+              goal: JR.total
             })]
           })
         })]
       })
     }
 
-    function Ai(WW) {
-      const iW = wW.v["alt-fire"][0];
-      return "Mouse3" === iW ? WW("plotsGame:guideBuildRightClick") : WW("plotsGame:guideBuildKeys", {
-        key: (0, wW.m)(iW)
+    function eJ(RR) {
+      const JR = fR.t["alt-fire"][0];
+      return "Mouse3" === JR ? RR("plotsGame:guideBuildRightClick") : RR("plotsGame:guideBuildKeys", {
+        key: (0, fR.m)(JR)
       })
     }
 
-    function bi() {
-      return (0, vW.jsx)("div", {
+    function aJ() {
+      return (0, HR.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, vW.jsx)(jW.c, {
+        children: (0, HR.jsx)(LR.d, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var ji = OW(1294),
-      Ui = OW(3599),
-      ki = OW(39595),
-      si = OW(39352),
-      Mi = OW(38088),
-      Ki = OW(5754),
-      Si = OW(5772),
-      Yi = OW(344),
-      yi = OW(38986);
-    const Ti = new Map([
+    var LJ = GR(1383),
+      nJ = GR(3701),
+      UJ = GR(39571),
+      WJ = GR(39329),
+      AJ = GR(38034),
+      CJ = GR(5886),
+      XJ = GR(5907),
+      MJ = GR(377),
+      BJ = GR(38977);
+    const lJ = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -1416,320 +1416,320 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      Ji = [...Mi.b.blockRemoveActionRoots, ...si.b, ...Ki.k, "Board", "Code Block", "Custom Lobby Block"],
-      Hi = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let ni = null;
+      pJ = [...AJ.b.blockRemoveActionRoots, ...WJ.d, ...CJ.i, "Board", "Code Block", "Custom Lobby Block"],
+      gJ = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let bJ = null;
 
-    function ui() {
-      return ni ??= function() {
-        const WW = oi(),
-          iW = Math.max(...WW.map((WW => VW.j[WW].id))) + 1,
-          OW = new Int32Array(iW),
-          mW = new Int32Array(iW),
-          EW = new Uint8Array(iW).fill(1),
-          NW = new Uint8Array(iW),
-          PW = new Uint8Array(iW),
-          LW = new Array(iW).fill("Air"),
-          cW = new Map,
-          wW = WW => {
-            let iW = cW.get(WW);
-            return void 0 === iW && (iW = cW.size + 1, cW.set(WW, iW)), iW
+    function vJ() {
+      return bJ ??= function() {
+        const RR = OJ(),
+          JR = Math.max(...RR.map((RR => PR.l[RR].id))) + 1,
+          GR = new Int32Array(JR),
+          yR = new Int32Array(JR),
+          tR = new Uint8Array(JR).fill(1),
+          uR = new Uint8Array(JR),
+          ZR = new Uint8Array(JR),
+          qR = new Array(JR).fill("Air"),
+          iR = new Map,
+          fR = RR => {
+            let JR = iR.get(RR);
+            return void 0 === JR && (JR = iR.size + 1, iR.set(RR, JR)), JR
           },
-          tW = new Set(Ji);
-        for (const xW of WW) {
-          var ZW;
+          VR = new Set(pJ);
+        for (const wR of RR) {
+          var KR;
           const {
-            id: WW,
-            meta: iW,
-            altActionable: cW,
-            canBePlacedOver: lW
-          } = VW.j[xW];
-          OW[WW] = wW(di(xW));
-          const AW = iW.stairsCorner;
-          if (null === AW) mW[WW] = OW[WW];
+            id: RR,
+            meta: JR,
+            altActionable: iR,
+            canBePlacedOver: rR
+          } = PR.l[wR];
+          GR[RR] = fR(xJ(wR));
+          const eR = JR.stairsCorner;
+          if (null === eR) yR[RR] = GR[RR];
           else {
-            const OW = AW.endsWith("Right");
-            mW[WW] = wW(`${iW.rootName}|rot${OW?iW.rot%4+1:iW.rot}|${iW.halfblockPlacement}|${AW.replace("Right","Left")}`)
+            const GR = eR.endsWith("Right");
+            yR[RR] = fR(`${JR.rootName}|rot${GR?JR.rot%4+1:JR.rot}|${JR.halfblockPlacement}|${eR.replace("Right","Left")}`)
           }
-          EW[WW] = lW ? 1 : 0, NW[WW] = cW || null !== iW.open || xW in yi.d || tW.has(iW.rootName) || void 0 !== (0, si.e)(iW.rootName) ? 1 : 0;
+          tR[RR] = rR ? 1 : 0, uR[RR] = iR || null !== JR.open || wR in BJ.c || VR.has(JR.rootName) || void 0 !== (0, WJ.g)(JR.rootName) ? 1 : 0;
           const {
-            rootName: bW
-          } = iW;
-          PW[WW] = null !== iW.open || si.b.includes(bW) || bW.includes("Bookshelf") || bW.includes("Mailbox") ? 1 : 0, LW[WW] = null !== (ZW = (0, ki.f)(WW)) && void 0 !== ZW ? ZW : bW
+            rootName: aR
+          } = JR;
+          ZR[RR] = null !== JR.open || WJ.d.includes(aR) || aR.includes("Bookshelf") || aR.includes("Mailbox") ? 1 : 0, qR[RR] = null !== (KR = (0, UJ.g)(RR)) && void 0 !== KR ? KR : aR
         }
         return {
-          kinds: OW,
-          shapes: mW,
-          empty: EW,
-          inUse: NW,
-          ownAltActionMessage: PW,
-          placingItems: LW
+          kinds: GR,
+          shapes: yR,
+          empty: tR,
+          inUse: uR,
+          ownAltActionMessage: ZR,
+          placingItems: qR
         }
-      }(), ni
+      }(), bJ
     }
 
-    function oi() {
-      return Object.keys(VW.j).filter((WW => VW.j[WW].name === WW))
+    function OJ() {
+      return Object.keys(PR.l).filter((RR => PR.l[RR].name === RR))
     }
 
-    function di(WW) {
-      var iW;
-      const OW = VW.j[WW],
+    function xJ(RR) {
+      var JR;
+      const GR = PR.l[RR],
         {
-          rootName: mW,
-          rot: EW
-        } = OW.meta,
-        [, ...NW] = (null !== (iW = OW.rootMetaDesc) && void 0 !== iW ? iW : WW).split("|"),
-        PW = NW.filter((WW => !("meta" === WW || Hi.test(WW) || (0, Si.w)(OW) && /^[nesw]+$/.test(WW) || Ki.k.includes(mW) && /^[lrud]+$/.test(WW) || Yi.L.includes(mW) && /^(left|right)$/.test(WW))));
-      return [mW, ...PW].map((WW => "fenceGate" === OW.model && WW === `rot${EW}` ? "rot" + ((EW - 1) % 2 + 1) : WW)).join("|")
+          rootName: yR,
+          rot: tR
+        } = GR.meta,
+        [, ...uR] = (null !== (JR = GR.rootMetaDesc) && void 0 !== JR ? JR : RR).split("|"),
+        ZR = uR.filter((RR => !("meta" === RR || gJ.test(RR) || (0, XJ.G)(GR) && /^[nesw]+$/.test(RR) || CJ.i.includes(yR) && /^[lrud]+$/.test(RR) || MJ.B.includes(yR) && /^(left|right)$/.test(RR))));
+      return [yR, ...ZR].map((RR => "fenceGate" === GR.model && RR === `rot${tR}` ? "rot" + ((tR - 1) % 2 + 1) : RR)).join("|")
     }
 
-    function ei(WW, iW) {
+    function NJ(RR, JR) {
       const {
-        kinds: OW,
-        shapes: mW
-      } = ui();
-      return OW[WW] === OW[iW] || mW[WW] === mW[iW]
+        kinds: GR,
+        shapes: yR
+      } = vJ();
+      return GR[RR] === GR[JR] || yR[RR] === yR[JR]
     }
 
-    function vi(WW) {
-      return 1 === ui().empty[WW]
+    function DJ(RR) {
+      return 1 === vJ().empty[RR]
     }
 
-    function gi(WW) {
-      return ui().placingItems[WW]
+    function HJ(RR) {
+      return vJ().placingItems[RR]
     }
 
-    function Di(WW) {
-      return Ti.get(VW.j[WW].meta.rootName)
+    function oJ(RR) {
+      return lJ.get(PR.l[RR].meta.rootName)
     }
-    var Vi = OW(40804),
-      fi = OW(182);
-    class Ci {
-      constructor(WW) {
-        this.api = WW, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var cJ = GR(40792),
+      PJ = GR(203);
+    class IJ {
+      constructor(RR) {
+        this.api = RR, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(WW) {
-        const iW = fi.f.jZ;
+      watch(RR) {
+        const JR = PJ.g.LK;
         this.chunks = [];
-        for (let OW = 0; OW < WW.length; OW += 3) {
-          const mW = Math.floor(WW[OW] / iW),
-            EW = Math.floor(WW[OW + 1] / iW),
-            NW = Math.floor(WW[OW + 2] / iW);
-          this.watches(mW, EW, NW) || this.chunks.push(mW, EW, NW)
+        for (let GR = 0; GR < RR.length; GR += 3) {
+          const yR = Math.floor(RR[GR] / JR),
+            tR = Math.floor(RR[GR + 1] / JR),
+            uR = Math.floor(RR[GR + 2] / JR);
+          this.watches(yR, tR, uR) || this.chunks.push(yR, tR, uR)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const WW = performance.now();
-        if (WW - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = WW;
-        let iW = !1;
-        for (let OW = 0; OW < this.chunks.length; OW += 3) {
-          const WW = this.api.getChunkVersion(this.chunks[OW], this.chunks[OW + 1], this.chunks[OW + 2]);
-          this.versions[OW / 3] !== WW && (this.versions[OW / 3] = WW, iW = !0)
+        const RR = performance.now();
+        if (RR - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = RR;
+        let JR = !1;
+        for (let GR = 0; GR < this.chunks.length; GR += 3) {
+          const RR = this.api.getChunkVersion(this.chunks[GR], this.chunks[GR + 1], this.chunks[GR + 2]);
+          this.versions[GR / 3] !== RR && (this.versions[GR / 3] = RR, JR = !0)
         }
-        return iW
+        return JR
       }
-      watches(WW, iW, OW) {
-        for (let mW = 0; mW < this.chunks.length; mW += 3)
-          if (this.chunks[mW] === WW && this.chunks[mW + 1] === iW && this.chunks[mW + 2] === OW) return !0;
+      watches(RR, JR, GR) {
+        for (let yR = 0; yR < this.chunks.length; yR += 3)
+          if (this.chunks[yR] === RR && this.chunks[yR + 1] === JR && this.chunks[yR + 2] === GR) return !0;
         return !1
       }
     }
-    var Xi = OW(40798);
+    var mJ = GR(40788);
 
-    function Bi(WW, iW, OW, mW, EW) {
-      if (!WW.isBlockInLoadedChunk(iW, mW - 6, OW) || !WW.isBlockInLoadedChunk(iW, mW + 6 + EW, OW) || !WW.canModifyBlockAt(iW, mW, OW)) return NaN;
-      let NW = mW - 1;
-      if (0 !== WW.getBlockId(iW, NW, OW)) {
-        for (; NW < mW + 6 && 0 !== WW.getBlockId(iW, NW + 1, OW);) NW++;
-        return NW
+    function zJ(RR, JR, GR, yR, tR) {
+      if (!RR.isBlockInLoadedChunk(JR, yR - 6, GR) || !RR.isBlockInLoadedChunk(JR, yR + 6 + tR, GR) || !RR.canModifyBlockAt(JR, yR, GR)) return NaN;
+      let uR = yR - 1;
+      if (0 !== RR.getBlockId(JR, uR, GR)) {
+        for (; uR < yR + 6 && 0 !== RR.getBlockId(JR, uR + 1, GR);) uR++;
+        return uR
       }
-      for (; NW > mW - 6;)
-        if (NW--, 0 !== WW.getBlockId(iW, NW, OW)) return NW;
+      for (; uR > yR - 6;)
+        if (uR--, 0 !== RR.getBlockId(JR, uR, GR)) return uR;
       return NaN
     }
 
-    function qi(WW, iW, OW, mW, EW) {
-      let NW = 0;
-      for (let PW = mW + 1; PW <= mW + EW; PW++) 0 !== WW.getBlockId(iW, PW, OW) && NW++;
-      return NW
+    function SJ(RR, JR, GR, yR, tR) {
+      let uR = 0;
+      for (let ZR = yR + 1; ZR <= yR + tR; ZR++) 0 !== RR.getBlockId(JR, ZR, GR) && uR++;
+      return uR
     }
 
-    function Ri(WW) {
-      const iW = new Map;
-      for (const PW of WW) {
-        var OW;
-        if (Number.isNaN(PW)) return null;
-        iW.set(PW, (null !== (OW = iW.get(PW)) && void 0 !== OW ? OW : 0) + 1)
+    function jJ(RR) {
+      const JR = new Map;
+      for (const ZR of RR) {
+        var GR;
+        if (Number.isNaN(ZR)) return null;
+        JR.set(ZR, (null !== (GR = JR.get(ZR)) && void 0 !== GR ? GR : 0) + 1)
       }
-      let mW = NaN,
-        EW = 0;
-      for (const [PW, LW] of iW)(LW > EW || LW === EW && PW < mW) && (mW = PW, EW = LW);
-      let NW = 0;
-      for (const PW of WW) NW += Math.abs(PW - mW);
-      return NW
+      let yR = NaN,
+        tR = 0;
+      for (const [ZR, qR] of JR)(qR > tR || qR === tR && ZR < yR) && (yR = ZR, tR = qR);
+      let uR = 0;
+      for (const ZR of RR) uR += Math.abs(ZR - yR);
+      return uR
     }
 
-    function Gi(WW, iW, OW, mW) {
+    function dJ(RR, JR, GR, yR) {
       const {
-        eye: EW,
-        forward: NW,
-        tanHalfFovX: PW,
-        tanHalfFovY: LW
-      } = WW, [cW, wW] = function(WW) {
-        let [iW, OW, mW] = WW;
-        const EW = Math.hypot(iW, mW),
-          [NW, PW] = [mW / EW, -iW / EW];
+        eye: tR,
+        forward: uR,
+        tanHalfFovX: ZR,
+        tanHalfFovY: qR
+      } = RR, [iR, fR] = function(RR) {
+        let [JR, GR, yR] = RR;
+        const tR = Math.hypot(JR, yR),
+          [uR, ZR] = [yR / tR, -JR / tR];
         return [
-          [NW, 0, PW],
-          [OW * PW, mW * NW - iW * PW, -OW * NW]
+          [uR, 0, ZR],
+          [GR * ZR, yR * uR - JR * ZR, -GR * uR]
         ]
-      }(NW), [tW, ZW] = [iW * PW, OW * LW], xW = NW[0] + tW * cW[0] + ZW * wW[0], lW = NW[1] + ZW * wW[1], AW = NW[2] + tW * cW[2] + ZW * wW[2], bW = (mW - EW[1]) / lW;
-      return bW > 0 && bW < 1 / 0 ? [EW[0] + bW * xW, EW[2] + bW * AW] : null
+      }(uR), [VR, KR] = [JR * ZR, GR * qR], wR = uR[0] + VR * iR[0] + KR * fR[0], rR = uR[1] + KR * fR[1], eR = uR[2] + VR * iR[2] + KR * fR[2], aR = (yR - tR[1]) / rR;
+      return aR > 0 && aR < 1 / 0 ? [tR[0] + aR * wR, tR[2] + aR * eR] : null
     }
-    const Ii = "plotsBlueprintPlacementChanged",
-      ai = {
+    const EJ = "plotsBlueprintPlacementChanged",
+      YJ = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class ri {
-      constructor(WW, iW) {
-        this.api = WW, this.localPlayerId = iW, this.placing = null, this.view = null, this.camera = {
+    class kJ {
+      constructor(RR, JR) {
+        this.api = RR, this.localPlayerId = JR, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = WW => {
-          var iW, OW, mW, NW;
-          const PW = null !== (iW = null === (OW = this.placing) || void 0 === OW ? void 0 : OW.rotation) && void 0 !== iW ? iW : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = RR => {
+          var JR, GR, yR, uR;
+          const ZR = null !== (JR = null === (GR = this.placing) || void 0 === GR ? void 0 : GR.rotation) && void 0 !== JR ? JR : 0,
             {
-              size: LW
-            } = rW(WW, PW),
-            cW = this.api.Vk(this.localPlayerId),
-            [wW, tW] = null !== (mW = null !== (NW = function(WW, iW, OW, mW) {
-              const [EW, NW, PW] = iW, [LW, cW, wW] = [Math.floor(OW[0]), Math.floor(OW[1]), Math.floor(OW[2])], tW = 6 + Math.max(EW, PW) / 2, [ZW, xW] = [Math.ceil(tW + EW / 2), Math.ceil(tW + PW / 2)], [lW, AW] = [LW - ZW, wW - xW], [bW, jW] = [2 * ZW + 1, 2 * xW + 1], UW = new Float64Array(bW * jW), kW = new Uint16Array(bW * jW);
-              for (let YW = 0; YW < bW; YW++)
-                for (let iW = 0; iW < jW; iW++) {
-                  const OW = Bi(WW, lW + YW, AW + iW, cW, NW);
-                  UW[YW * jW + iW] = OW, Number.isNaN(OW) || (kW[YW * jW + iW] = qi(WW, lW + YW, AW + iW, OW, NW))
+              size: qR
+            } = FR(RR, ZR),
+            iR = this.api.vW(this.localPlayerId),
+            [fR, VR] = null !== (yR = null !== (uR = function(RR, JR, GR, yR) {
+              const [tR, uR, ZR] = JR, [qR, iR, fR] = [Math.floor(GR[0]), Math.floor(GR[1]), Math.floor(GR[2])], VR = 6 + Math.max(tR, ZR) / 2, [KR, wR] = [Math.ceil(VR + tR / 2), Math.ceil(VR + ZR / 2)], [rR, eR] = [qR - KR, fR - wR], [aR, LR] = [2 * KR + 1, 2 * wR + 1], nR = new Float64Array(aR * LR), UR = new Uint16Array(aR * LR);
+              for (let MR = 0; MR < aR; MR++)
+                for (let JR = 0; JR < LR; JR++) {
+                  const GR = zJ(RR, rR + MR, eR + JR, iR, uR);
+                  nR[MR * LR + JR] = GR, Number.isNaN(GR) || (UR[MR * LR + JR] = SJ(RR, rR + MR, eR + JR, GR, uR))
                 }
-              const sW = Math.hypot(mW[0], mW[2]),
-                MW = [];
-              let KW = null,
-                SW = 1 / 0;
-              for (let YW = 0; YW + EW <= bW; YW++)
-                for (let WW = 0; WW + PW <= jW; WW++) {
-                  const [iW, NW] = [lW + YW, AW + WW], [cW, ZW] = [iW + EW / 2 - OW[0], NW + PW / 2 - OW[2]], xW = Math.hypot(cW, ZW);
-                  if (xW > tW || LW >= iW - 2 && LW < iW + EW + 2 && wW >= NW - 2 && wW < NW + PW + 2) continue;
-                  MW.length = 0;
-                  let bW = 0;
-                  for (let OW = 0; OW < EW; OW++)
-                    for (let iW = 0; iW < PW; iW++) MW.push(UW[(YW + OW) * jW + WW + iW]), bW += kW[(YW + OW) * jW + WW + iW];
-                  const yW = Ri(MW);
-                  if (null === yW) continue;
-                  const TW = xW + 3 * (yW + bW) + (1 - (0 === sW ? 1 : (cW * mW[0] + ZW * mW[2]) / (xW * sW))) / 2 * 6;
-                  TW < SW && (SW = TW, KW = [iW, NW])
+              const WR = Math.hypot(yR[0], yR[2]),
+                AR = [];
+              let CR = null,
+                XR = 1 / 0;
+              for (let MR = 0; MR + tR <= aR; MR++)
+                for (let RR = 0; RR + ZR <= LR; RR++) {
+                  const [JR, uR] = [rR + MR, eR + RR], [iR, KR] = [JR + tR / 2 - GR[0], uR + ZR / 2 - GR[2]], wR = Math.hypot(iR, KR);
+                  if (wR > VR || qR >= JR - 2 && qR < JR + tR + 2 && fR >= uR - 2 && fR < uR + ZR + 2) continue;
+                  AR.length = 0;
+                  let aR = 0;
+                  for (let GR = 0; GR < tR; GR++)
+                    for (let JR = 0; JR < ZR; JR++) AR.push(nR[(MR + GR) * LR + RR + JR]), aR += UR[(MR + GR) * LR + RR + JR];
+                  const BR = jJ(AR);
+                  if (null === BR) continue;
+                  const lR = wR + 3 * (BR + aR) + (1 - (0 === WR ? 1 : (iR * yR[0] + KR * yR[2]) / (wR * WR))) / 2 * 6;
+                  lR < XR && (XR = lR, CR = [JR, uR])
                 }
-              return KW
-            }(this.api, LW, cW, this.camera.forward)) && void 0 !== NW ? NW : this.cornerOnTarget(LW)) && void 0 !== mW ? mW : [Math.floor(cW[0]) + 2, Math.floor(cW[2])];
+              return CR
+            }(this.api, qR, iR, this.camera.forward)) && void 0 !== uR ? uR : this.cornerOnTarget(qR)) && void 0 !== yR ? yR : [Math.floor(iR[0]) + 2, Math.floor(iR[2])];
           this.placing = {
-            id: WW,
-            rotation: PW,
-            corner: [wW, this.playerLevel(), tW],
+            id: RR,
+            rotation: ZR,
+            corner: [fR, this.playerLevel(), VR],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${EW} preview`)
+          }, this.update(), this.api.sendCommand(`${tR} preview`)
         }, this.rotate = () => {
           const {
-            id: WW,
-            rotation: iW,
-            corner: OW
-          } = this.placing, EW = mW[(mW.indexOf(iW) + 1) % mW.length], [NW, , PW] = rW(WW, iW).size, [LW, , cW] = rW(WW, EW).size;
-          this.moveTo(OW[0] + Math.floor(NW / 2) - Math.floor(LW / 2), OW[2] + Math.floor(PW / 2) - Math.floor(cW / 2), EW)
-        }, this.hoverAt = (WW, iW) => {
-          this.placing.hover = [WW, iW], this.moveCentreTo(this.camera, WW, iW)
+            id: RR,
+            rotation: JR,
+            corner: GR
+          } = this.placing, tR = yR[(yR.indexOf(JR) + 1) % yR.length], [uR, , ZR] = FR(RR, JR).size, [qR, , iR] = FR(RR, tR).size;
+          this.moveTo(GR[0] + Math.floor(uR / 2) - Math.floor(qR / 2), GR[2] + Math.floor(ZR / 2) - Math.floor(iR / 2), tR)
+        }, this.hoverAt = (RR, JR) => {
+          this.placing.hover = [RR, JR], this.moveCentreTo(this.camera, RR, JR)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (WW, iW) => {
-          const OW = this.placing,
+        }, this.beginDrag = (RR, JR) => {
+          const GR = this.placing,
             {
-              eye: mW,
-              forward: EW,
-              tanHalfFovX: NW,
-              tanHalfFovY: PW
+              eye: yR,
+              forward: tR,
+              tanHalfFovX: uR,
+              tanHalfFovY: ZR
             } = this.camera,
-            LW = {
-              eye: [mW[0], mW[1], mW[2]],
-              forward: [EW[0], EW[1], EW[2]],
-              tanHalfFovX: NW,
-              tanHalfFovY: PW
+            qR = {
+              eye: [yR[0], yR[1], yR[2]],
+              forward: [tR[0], tR[1], tR[2]],
+              tanHalfFovX: uR,
+              tanHalfFovY: ZR
             },
-            cW = OW.corner[1],
-            wW = Gi(LW, WW, iW, cW);
-          OW.hover = null, OW.drag = wW && {
-            view: LW,
-            ground: wW,
-            corner: [OW.corner[0], OW.corner[2]],
-            level: cW
+            iR = GR.corner[1],
+            fR = dJ(qR, RR, JR, iR);
+          GR.hover = null, GR.drag = fR && {
+            view: qR,
+            ground: fR,
+            corner: [GR.corner[0], GR.corner[2]],
+            level: iR
           }
-        }, this.dragTo = (WW, iW) => {
-          const OW = this.placing.drag,
-            mW = OW && Gi(OW.view, WW, iW, OW.level);
-          null !== OW && null !== mW && this.moveTo(OW.corner[0] + Math.round(mW[0] - OW.ground[0]), OW.corner[1] + Math.round(mW[1] - OW.ground[1]))
+        }, this.dragTo = (RR, JR) => {
+          const GR = this.placing.drag,
+            yR = GR && dJ(GR.view, RR, JR, GR.level);
+          null !== GR && null !== yR && this.moveTo(GR.corner[0] + Math.round(yR[0] - GR.ground[0]), GR.corner[1] + Math.round(yR[1] - GR.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const WW = this.view;
-          WW.waiting || (WW.blocked ? this.iZ({
-            ...WW,
+          const RR = this.view;
+          RR.waiting || (RR.blocked ? this.JK({
+            ...RR,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const WW = this.placing,
+          const RR = this.placing,
             {
-              id: iW,
-              rotation: OW,
-              corner: mW
-            } = WW;
-          this.api.sendCommand(`${EW} place ${iW} ${mW.join(" ")} ${OW}`), WW.sent = {
+              id: JR,
+              rotation: GR,
+              corner: yR
+            } = RR;
+          this.api.sendCommand(`${tR} place ${JR} ${yR.join(" ")} ${GR}`), RR.sent = {
             atMs: performance.now(),
-            corner: [...mW],
-            rotation: OW,
+            corner: [...yR],
+            rotation: GR,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${EW} preview off`))
-        }, this.chunkWatch = new Ci(WW), this.meshes = new Xi.n(WW)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${tR} preview off`))
+        }, this.chunkWatch = new IJ(RR), this.meshes = new mJ.i(RR)
       }
       getView() {
         return this.view
       }
-      hZ() {
-        const WW = this.placing;
-        null !== WW && (null !== WW.sent && !WW.sent.timedOut && performance.now() - WW.sent.atMs > 3e3 ? (WW.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(WW) || this.chunkWatch.changed() || this.view.settled !== zi(WW, this.view.blocked)) && this.update())
+      gK() {
+        const RR = this.placing;
+        null !== RR && (null !== RR.sent && !RR.sent.timedOut && performance.now() - RR.sent.atMs > 3e3 ? (RR.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(RR) || this.chunkWatch.changed() || this.view.settled !== QJ(RR, this.view.blocked)) && this.update())
       }
-      afterRender(WW) {
-        ! function(WW, iW) {
-          for (let OW = 0; OW < 3; OW++) iW.eye[OW] = WW.cameraPosition[OW], iW.forward[OW] = WW.cameraDirection[OW];
-          iW.tanHalfFovX = WW.tanHalfFovX, iW.tanHalfFovY = WW.tanHalfFovY
-        }(WW, this.camera);
-        const iW = this.placing;
-        null !== iW && null !== iW.hover && this.moveCentreTo(this.camera, iW.hover[0], iW.hover[1])
+      afterRender(RR) {
+        ! function(RR, JR) {
+          for (let GR = 0; GR < 3; GR++) JR.eye[GR] = RR.cameraPosition[GR], JR.forward[GR] = RR.cameraDirection[GR];
+          JR.tanHalfFovX = RR.tanHalfFovX, JR.tanHalfFovY = RR.tanHalfFovY
+        }(RR, this.camera);
+        const JR = this.placing;
+        null !== JR && null !== JR.hover && this.moveCentreTo(this.camera, JR.hover[0], JR.hover[1])
       }
-      yZ(WW) {
-        const iW = this.placing;
-        if (null === iW || null === iW.sent || "active" !== WW[0]) return;
+      BK(RR) {
+        const JR = this.placing;
+        if (null === JR || null === JR.sent || "active" !== RR[0]) return;
         const {
-          sent: OW
-        } = iW, [, mW, EW, NW, PW, LW, cW] = WW;
-        EW && mW === iW.id && cW === OW.rotation && NW === OW.corner[0] && PW === OW.corner[1] && LW === OW.corner[2] && this.close()
+          sent: GR
+        } = JR, [, yR, tR, uR, ZR, qR, iR] = RR;
+        tR && yR === JR.id && iR === GR.rotation && uR === GR.corner[0] && ZR === GR.corner[1] && qR === GR.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1737,1238 +1737,1238 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(WW) {
-        let [iW, , OW] = WW;
-        const mW = this.api.getTargetedBlock();
-        if (null === mW) return null;
-        const [EW, , NW] = mW.position;
-        return [EW - Math.floor(iW / 2), NW - Math.floor(OW / 2)]
+      cornerOnTarget(RR) {
+        let [JR, , GR] = RR;
+        const yR = this.api.getTargetedBlock();
+        if (null === yR) return null;
+        const [tR, , uR] = yR.position;
+        return [tR - Math.floor(JR / 2), uR - Math.floor(GR / 2)]
       }
       playerLevel() {
-        var WW;
-        const [iW, OW, mW] = this.api.Vk(this.localPlayerId);
-        if (null !== (WW = this.api.getLocalPlayerMovement()) && void 0 !== WW && WW.onGround) return Math.ceil(OW - .01);
-        const [EW, NW, PW] = [Math.floor(iW), Math.floor(OW), Math.floor(mW)];
-        for (let LW = NW; LW >= NW - 2; LW--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(EW, LW, PW))) return LW + 1;
-        return NW
+        var RR;
+        const [JR, GR, yR] = this.api.vW(this.localPlayerId);
+        if (null !== (RR = this.api.getLocalPlayerMovement()) && void 0 !== RR && RR.onGround) return Math.ceil(GR - .01);
+        const [tR, uR, ZR] = [Math.floor(JR), Math.floor(GR), Math.floor(yR)];
+        for (let qR = uR; qR >= uR - 2; qR--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(tR, qR, ZR))) return qR + 1;
+        return uR
       }
-      followPlayerLevel(WW) {
-        if (Fi(WW)) return !1;
-        const iW = this.playerLevel();
-        return iW !== WW.corner[1] && (WW.corner[1] = iW, !0)
+      followPlayerLevel(RR) {
+        if (FJ(RR)) return !1;
+        const JR = this.playerLevel();
+        return JR !== RR.corner[1] && (RR.corner[1] = JR, !0)
       }
-      moveCentreTo(WW, iW, OW) {
-        const mW = this.placing,
-          EW = Gi(WW, iW, OW, mW.corner[1]);
-        if (null !== EW) {
-          const [WW, , iW] = rW(mW.id, mW.rotation).size;
-          this.moveTo(Math.round(EW[0] - WW / 2), Math.round(EW[1] - iW / 2))
+      moveCentreTo(RR, JR, GR) {
+        const yR = this.placing,
+          tR = dJ(RR, JR, GR, yR.corner[1]);
+        if (null !== tR) {
+          const [RR, , JR] = FR(yR.id, yR.rotation).size;
+          this.moveTo(Math.round(tR[0] - RR / 2), Math.round(tR[1] - JR / 2))
         }
       }
-      moveTo(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const mW = this.placing;
-        if (Fi(mW)) return;
-        const [EW, NW, PW] = mW.corner;
-        if (this.centreOnPlot(EW, PW) && !this.centreOnPlot(WW, iW, OW))
-          if (this.centreOnPlot(WW, PW, OW)) iW = PW;
+      moveTo(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const yR = this.placing;
+        if (FJ(yR)) return;
+        const [tR, uR, ZR] = yR.corner;
+        if (this.centreOnPlot(tR, ZR) && !this.centreOnPlot(RR, JR, GR))
+          if (this.centreOnPlot(RR, ZR, GR)) JR = ZR;
           else {
-            if (!this.centreOnPlot(EW, iW, OW)) return;
-            WW = EW
-          } WW === EW && iW === PW && OW === mW.rotation || (mW.rotation = OW, mW.corner = [WW, NW, iW], mW.moved = !0, mW.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(tR, JR, GR)) return;
+            RR = tR
+          } RR === tR && JR === ZR && GR === yR.rotation || (yR.rotation = GR, yR.corner = [RR, uR, JR], yR.moved = !0, yR.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: mW,
-          corner: EW
-        } = this.placing, [NW, , PW] = rW(mW, OW).size;
-        return this.api.canModifyBlockAt(WW + Math.floor(NW / 2), EW[1], iW + Math.floor(PW / 2))
+          id: yR,
+          corner: tR
+        } = this.placing, [uR, , ZR] = FR(yR, GR).size;
+        return this.api.canModifyBlockAt(RR + Math.floor(uR / 2), tR[1], JR + Math.floor(ZR / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.iZ(null)
+        this.placing = null, this.meshes.dispose(), this.JK(null)
       }
       update() {
         const {
-          id: WW,
-          rotation: iW,
-          corner: OW,
-          refusals: mW
-        } = this.placing, EW = new Xi.j, NW = [];
-        let PW = !1,
-          LW = 0;
+          id: RR,
+          rotation: JR,
+          corner: GR,
+          refusals: yR
+        } = this.placing, tR = new mJ.g, uR = [];
+        let ZR = !1,
+          qR = 0;
         for (const {
-            offset: ZW,
-            block: xW
+            offset: KR,
+            block: wR
           }
-          of rW(WW, iW).cells) {
-          const [WW, iW, mW] = [OW[0] + ZW[0], OW[1] + ZW[1], OW[2] + ZW[2]];
-          NW.push(WW, iW, mW);
-          const cW = !this.api.canModifyBlockAt(WW, iW, mW),
-            wW = this.api.getBlockId(WW, iW, mW),
-            tW = !vi(wW) && !ei(this.api.blockNameToBlockId(xW), wW);
-          PW ||= cW, LW += tW ? 1 : 0, cW || tW ? EW.add(WW, iW, mW, Xi.e, Xi.d) : EW.add(WW, iW, mW, Di(xW), ai, (0, Vi.e)(xW))
+          of FR(RR, JR).cells) {
+          const [RR, JR, yR] = [GR[0] + KR[0], GR[1] + KR[1], GR[2] + KR[2]];
+          uR.push(RR, JR, yR);
+          const iR = !this.api.canModifyBlockAt(RR, JR, yR),
+            fR = this.api.getBlockId(RR, JR, yR),
+            VR = !DJ(fR) && !NJ(this.api.blockNameToBlockId(wR), fR);
+          ZR ||= iR, qR += VR ? 1 : 0, iR || VR ? tR.add(RR, JR, yR, mJ.d, mJ.c) : tR.add(RR, JR, yR, oJ(wR), YJ, (0, cJ.c)(wR))
         }
-        this.chunkWatch.watch(NW), this.meshes.show(EW.toArray());
-        const cW = this.view,
-          wW = Fi(this.placing),
-          tW = zi(this.placing, PW);
-        (null === cW || void 0 === cW ? void 0 : cW.id) === WW && cW.blocked === PW && cW.toClear === LW && cW.waiting === wW && cW.refusals === mW && cW.settled === tW || this.iZ({
-          id: WW,
-          blocked: PW,
-          toClear: LW,
-          waiting: wW,
-          refusals: mW,
-          settled: tW
+        this.chunkWatch.watch(uR), this.meshes.show(tR.toArray());
+        const iR = this.view,
+          fR = FJ(this.placing),
+          VR = QJ(this.placing, ZR);
+        (null === iR || void 0 === iR ? void 0 : iR.id) === RR && iR.blocked === ZR && iR.toClear === qR && iR.waiting === fR && iR.refusals === yR && iR.settled === VR || this.JK({
+          id: RR,
+          blocked: ZR,
+          toClear: qR,
+          waiting: fR,
+          refusals: yR,
+          settled: VR
         })
       }
-      iZ(WW) {
-        this.view = WW, YW.l.iZ(Ii, WW, !0)
+      JK(RR) {
+        this.view = RR, MR.n.JK(EJ, RR, !0)
       }
     }
 
-    function zi(WW, iW) {
+    function QJ(RR, JR) {
       let {
-        moved: OW,
-        stillSinceMs: mW
-      } = WW;
-      return !iW && performance.now() - mW >= (OW ? 1500 : 6e3)
+        moved: GR,
+        stillSinceMs: yR
+      } = RR;
+      return !JR && performance.now() - yR >= (GR ? 1500 : 6e3)
     }
 
-    function Fi(WW) {
+    function FJ(RR) {
       let {
-        sent: iW
-      } = WW;
-      return null !== iW && !iW.timedOut
+        sent: JR
+      } = RR;
+      return null !== JR && !JR.timedOut
     }
-    var Qi = OW(5251);
-    class WO {
-      constructor(WW) {
-        this.placement = WW, this.press = null
+    var TJ = GR(5347);
+    class sJ {
+      constructor(RR) {
+        this.placement = RR, this.press = null
       }
-      down(WW) {
+      down(RR) {
         if (null !== this.press) return !1;
         const {
-          id: iW,
-          mouse: OW,
-          x: mW,
-          y: EW,
-          atMs: NW
-        } = WW;
+          id: JR,
+          mouse: GR,
+          x: yR,
+          y: tR,
+          atMs: uR
+        } = RR;
         return this.press = {
-          id: iW,
-          mouse: OW,
-          x: mW,
-          y: EW,
-          atMs: NW,
+          id: JR,
+          mouse: GR,
+          x: yR,
+          y: tR,
+          atMs: uR,
           moved: !1
-        }, OW || this.placement.beginDrag(WW.ndcX, WW.ndcY), !0
+        }, GR || this.placement.beginDrag(RR.ndcX, RR.ndcY), !0
       }
-      move(WW) {
-        const iW = this.press;
-        null !== iW && iW.id === WW.id && (iW.moved ||= Math.hypot(WW.x - iW.x, WW.y - iW.y) > 8), WW.mouse ? this.placement.hoverAt(WW.ndcX, WW.ndcY) : (null === iW || void 0 === iW ? void 0 : iW.id) === WW.id && this.placement.dragTo(WW.ndcX, WW.ndcY)
+      move(RR) {
+        const JR = this.press;
+        null !== JR && JR.id === RR.id && (JR.moved ||= Math.hypot(RR.x - JR.x, RR.y - JR.y) > 8), RR.mouse ? this.placement.hoverAt(RR.ndcX, RR.ndcY) : (null === JR || void 0 === JR ? void 0 : JR.id) === RR.id && this.placement.dragTo(RR.ndcX, RR.ndcY)
       }
-      up(WW) {
-        const iW = this.press;
-        (null === iW || void 0 === iW ? void 0 : iW.id) === WW.id && (this.move(WW), this.end(), !iW.moved && (iW.mouse || WW.atMs - iW.atMs <= 250) && this.placement.tap())
+      up(RR) {
+        const JR = this.press;
+        (null === JR || void 0 === JR ? void 0 : JR.id) === RR.id && (this.move(RR), this.end(), !JR.moved && (JR.mouse || RR.atMs - JR.atMs <= 250) && this.placement.tap())
       }
-      cancel(WW) {
-        var iW;
-        (null === (iW = this.press) || void 0 === iW ? void 0 : iW.id) === WW && this.end()
+      cancel(RR) {
+        var JR;
+        (null === (JR = this.press) || void 0 === JR ? void 0 : JR.id) === RR && this.end()
       }
-      leave(WW) {
+      leave(RR) {
         let {
-          id: iW,
-          mouse: OW
-        } = WW;
-        OW && this.placement.endHover(), this.cancel(iW)
+          id: JR,
+          mouse: GR
+        } = RR;
+        GR && this.placement.endHover(), this.cancel(JR)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const iO = "PlotsPlacementLayer";
+    const hJ = "PlotsPlacementLayer";
 
-    function OO(WW) {
+    function RG(RR) {
       let {
-        placement: iW
-      } = WW;
-      return null === (0, cW.g)(Ii, iW.getView()) ? null : (0, vW.jsx)(mO, {
-        placement: iW
+        placement: JR
+      } = RR;
+      return null === (0, iR.h)(EJ, JR.getView()) ? null : (0, HR.jsx)(JG, {
+        placement: JR
       })
     }
 
-    function mO(WW) {
+    function JG(RR) {
       let {
-        placement: iW
-      } = WW;
-      (0, Qi.b)(!0, !0, iO);
-      const OW = (0, NW.useMemo)((() => new WO(iW)), [iW]);
-      return (0, vW.jsx)("div", {
+        placement: JR
+      } = RR;
+      (0, TJ.d)(!0, !0, hJ);
+      const GR = (0, uR.useMemo)((() => new sJ(JR)), [JR]);
+      return (0, HR.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: WW => {
-          "mouse" === WW.pointerType && 0 !== WW.button || !OW.down(EO(WW)) || WW.currentTarget.setPointerCapture(WW.pointerId)
+        onPointerDown: RR => {
+          "mouse" === RR.pointerType && 0 !== RR.button || !GR.down(GG(RR)) || RR.currentTarget.setPointerCapture(RR.pointerId)
         },
-        onPointerMove: WW => {
-          OW.move(EO(WW))
+        onPointerMove: RR => {
+          GR.move(GG(RR))
         },
-        onPointerUp: WW => {
-          OW.up(EO(WW))
+        onPointerUp: RR => {
+          GR.up(GG(RR))
         },
-        onPointerCancel: WW => {
-          OW.cancel(WW.pointerId)
+        onPointerCancel: RR => {
+          GR.cancel(RR.pointerId)
         },
-        onLostPointerCapture: WW => {
-          OW.cancel(WW.pointerId)
+        onLostPointerCapture: RR => {
+          GR.cancel(RR.pointerId)
         },
-        onPointerLeave: WW => {
-          OW.leave(EO(WW))
+        onPointerLeave: RR => {
+          GR.leave(GG(RR))
         },
         "aria-hidden": !0
       })
     }
 
-    function EO(WW) {
+    function GG(RR) {
       const {
-        left: iW,
-        top: OW,
-        width: mW,
-        height: EW
-      } = WW.currentTarget.getBoundingClientRect();
+        left: JR,
+        top: GR,
+        width: yR,
+        height: tR
+      } = RR.currentTarget.getBoundingClientRect();
       return {
-        id: WW.pointerId,
-        mouse: "mouse" === WW.pointerType,
-        x: WW.clientX,
-        y: WW.clientY,
-        ndcX: (WW.clientX - iW) / mW * 2 - 1,
-        ndcY: 1 - (WW.clientY - OW) / EW * 2,
-        atMs: WW.timeStamp
+        id: RR.pointerId,
+        mouse: "mouse" === RR.pointerType,
+        x: RR.clientX,
+        y: RR.clientY,
+        ndcX: (RR.clientX - JR) / yR * 2 - 1,
+        ndcY: 1 - (RR.clientY - GR) / tR * 2,
+        atMs: RR.timeStamp
       }
     }
 
-    function NO() {
-      return (0, ji.t)().some((WW => WW !== ji.b && WW !== iO))
+    function yG() {
+      return (0, LJ.n)().some((RR => RR !== LJ.d && RR !== hJ))
     }
-    const PO = 2500;
+    const tG = 2500;
 
-    function LO(WW) {
+    function uG(RR) {
       let {
-        hud: iW,
-        guide: OW,
-        tracker: mW,
-        placement: EW,
-        children: PW
-      } = WW;
+        hud: JR,
+        guide: GR,
+        tracker: yR,
+        placement: tR,
+        children: ZR
+      } = RR;
       const {
-        t: ZW
-      } = (0, tW.B)(), {
-        isTouchScreen: xW
-      } = (0, LW.p)(["isTouchScreen"]), lW = (0, cW.g)(Oi, iW.getGuide()), AW = (0, cW.g)(ii, iW.getPlot()), bW = (0, cW.g)(zW, mW.get()), jW = function(WW) {
+        t: KR
+      } = (0, VR.A)(), {
+        isTouchScreen: wR
+      } = (0, qR.o)(["isTouchScreen"]), rR = (0, iR.h)(GJ, JR.getGuide()), eR = (0, iR.h)(JJ, JR.getPlot()), aR = (0, iR.h)(TR, yR.get()), LR = function(RR) {
         const {
-          openInGameMenuName: iW,
-          openEverythingMenuName: OW,
-          loadingOverlayVisible: mW
-        } = (0, LW.p)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), EW = (0, Ui.e)(), [PW, wW] = (0, NW.useState)(NO);
-        (0, NW.useEffect)((() => {
-          const WW = () => {
-            wW(NO())
+          openInGameMenuName: JR,
+          openEverythingMenuName: GR,
+          loadingOverlayVisible: yR
+        } = (0, qR.o)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), tR = (0, nJ.c)(), [ZR, fR] = (0, uR.useState)(yG);
+        (0, uR.useEffect)((() => {
+          const RR = () => {
+            fR(yG())
           };
-          WW();
-          const iW = (0, ji.r)(WW),
-            OW = (0, ji.n)(WW);
+          RR();
+          const JR = (0, LJ.k)(RR),
+            GR = (0, LJ.i)(RR);
           return () => {
-            iW(), OW()
+            JR(), GR()
           }
         }), []);
-        const tW = (0, cW.g)(Ii, WW.getView()),
-          ZW = "clientGame" === iW;
+        const VR = (0, iR.h)(EJ, RR.getView()),
+          KR = "clientGame" === JR;
         return {
-          hudHidden: EW || mW,
-          journalOpen: ZW,
-          covered: PW || null !== OW || null !== iW && !ZW,
-          placing: null === tW ? null : tW.settled ? "placeBuild" : "placeSpot"
+          hudHidden: tR || yR,
+          journalOpen: KR,
+          covered: ZR || null !== GR || null !== JR && !KR,
+          placing: null === VR ? null : VR.settled ? "placeBuild" : "placeSpot"
         }
-      }(EW), UW = function(WW, iW, OW) {
-        return "none" === WW[0] || OW.hudHidden || OW.journalOpen || OW.covered ? null : null !== OW.placing ? OW.placing : null !== iW ? "build" : "choose" === WW[1] ? "openJournal" : null
-      }(lW, null === bW ? null : bW.id, jW), kW = function() {
-        const [WW, iW] = (0, NW.useState)(null), [OW, mW] = (0, NW.useState)(!1);
-        return (0, cW.e)(mi, (() => {
-          iW(performance.now())
-        })), (0, NW.useEffect)((() => {
-          if (null === WW) return;
-          const iW = window.setTimeout((() => {
-              mW(!0)
-            }), PO),
-            OW = window.setTimeout((() => {
-              mW(!1)
+      }(tR), nR = function(RR, JR, GR) {
+        return "none" === RR[0] || GR.hudHidden || GR.journalOpen || GR.covered ? null : null !== GR.placing ? GR.placing : null !== JR ? "build" : "choose" === RR[1] ? "openJournal" : null
+      }(rR, null === aR ? null : aR.id, LR), UR = function() {
+        const [RR, JR] = (0, uR.useState)(null), [GR, yR] = (0, uR.useState)(!1);
+        return (0, iR.f)(yJ, (() => {
+          JR(performance.now())
+        })), (0, uR.useEffect)((() => {
+          if (null === RR) return;
+          const JR = window.setTimeout((() => {
+              yR(!0)
+            }), tG),
+            GR = window.setTimeout((() => {
+              yR(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(iW), window.clearTimeout(OW)
+            window.clearTimeout(JR), window.clearTimeout(GR)
           }
-        }), [WW]), OW
-      }() && !jW.hudHidden && !jW.covered && !jW.journalOpen && null === jW.placing, [sW, MW] = (0, NW.useState)(!1);
-      (0, NW.useEffect)((() => {
-        jW.journalOpen && MW(!0)
-      }), [jW.journalOpen]);
-      const [KW, YW] = (0, NW.useState)(null), [yW, TW] = (0, NW.useState)(null), [JW, hW] = (0, NW.useState)(null), HW = (0, NW.useMemo)((() => ({
-        hint: UW,
-        journalRef: YW,
-        placementCardRef: TW,
-        buildRef: hW
-      })), [UW]), nW = "plot" === AW[0] && "own" === AW[5], uW = xW && !sW && nW ? {
-        onSkip: OW.skip
+        }), [RR]), GR
+      }() && !LR.hudHidden && !LR.covered && !LR.journalOpen && null === LR.placing, [WR, AR] = (0, uR.useState)(!1);
+      (0, uR.useEffect)((() => {
+        LR.journalOpen && AR(!0)
+      }), [LR.journalOpen]);
+      const [CR, MR] = (0, uR.useState)(null), [BR, lR] = (0, uR.useState)(null), [pR, gR] = (0, uR.useState)(null), bR = (0, uR.useMemo)((() => ({
+        hint: nR,
+        journalRef: MR,
+        placementCardRef: lR,
+        buildRef: gR
+      })), [nR]), vR = "plot" === eR[0] && "own" === eR[5], OR = wR && !WR && vR ? {
+        onSkip: GR.skip
       } : null;
-      return (0, vW.jsxs)(SW.Provider, {
-        value: HW,
-        children: [PW, "openJournal" === UW && null !== KW && (0, vW.jsx)(ti, {
-          target: KW,
+      return (0, HR.jsxs)(XR.Provider, {
+        value: bR,
+        children: [ZR, "openJournal" === nR && null !== CR && (0, HR.jsx)(VJ, {
+          target: CR,
           placement: "left",
-          spotlight: uW,
-          children: xW ? ZW("plotsGame:guideOpenJournal") : ZW("plotsGame:guideOpenJournalKeys", {
-            key: (0, wW.m)(gW)
+          spotlight: OR,
+          children: wR ? KR("plotsGame:guideOpenJournal") : KR("plotsGame:guideOpenJournalKeys", {
+            key: (0, fR.m)(oR)
           })
-        }), "placeSpot" === UW && null !== yW && (0, vW.jsxs)(vW.Fragment, {
-          children: [xW && (0, vW.jsx)(bi, {}), (0, vW.jsx)(ti, {
-            target: yW,
+        }), "placeSpot" === nR && null !== BR && (0, HR.jsxs)(HR.Fragment, {
+          children: [wR && (0, HR.jsx)(aJ, {}), (0, HR.jsx)(VJ, {
+            target: BR,
             placement: "top",
-            children: ZW(xW ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: KR(wR ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === UW && null !== JW && null !== yW && (0, vW.jsx)(ti, {
-          target: xW ? JW : yW,
+        }), "placeBuild" === nR && null !== pR && null !== BR && (0, HR.jsx)(VJ, {
+          target: wR ? pR : BR,
           placement: "top",
-          children: ZW(xW ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === UW && null !== bW && (0, vW.jsx)(li, {
-          progress: bW,
-          guide: OW
-        }), kW && null !== KW && (0, vW.jsx)(ti, {
-          target: KW,
+          children: KR(wR ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === nR && null !== aR && (0, HR.jsx)(rJ, {
+          progress: aR,
+          guide: GR
+        }), UR && null !== CR && (0, HR.jsx)(VJ, {
+          target: CR,
           placement: "left",
-          children: ZW("plotsGame:guideMoreBuilds")
+          children: KR("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var cO = OW(39679),
-      wO = OW(39687);
-    class tO {
-      constructor(WW, iW, OW) {
-        this.api = WW, this.localPlayerId = iW, this.nextCell = OW, this.hand = null, this.skip = () => {
+    var ZG = GR(39672),
+      qG = GR(39679);
+    class iG {
+      constructor(RR, JR, GR) {
+        this.api = RR, this.localPlayerId = JR, this.nextCell = GR, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = WW => {
-          this.hand = WW
+        }, this.bindHand = RR => {
+          this.hand = RR
         }
       }
-      afterRender(WW) {
-        const iW = this.hand;
-        if (null === iW) return;
-        const OW = this.nextCell.get();
-        if (null === OW) return void(0, cO.h)(iW, !0);
-        const mW = (0, wO.c)(iW, WW, this.api.getPositionView(this.localPlayerId), OW, 1, 40);
-        null !== mW && (0, cO.e)(iW, Math.round(100 * mW.x) / 100, Math.round(100 * mW.y) / 100)
+      afterRender(RR) {
+        const JR = this.hand;
+        if (null === JR) return;
+        const GR = this.nextCell.get();
+        if (null === GR) return void(0, ZG.h)(JR, !0);
+        const yR = (0, qG.d)(JR, RR, this.api.getPositionView(this.localPlayerId), GR, 1, 40);
+        null !== yR && (0, ZG.d)(JR, Math.round(100 * yR.x) / 100, Math.round(100 * yR.y) / 100)
       }
     }
-    var ZO = OW(1532),
-      xO = OW(5238),
-      lO = OW(1102);
-    const AO = {
-        farm_hut: OW.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: OW.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: OW.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: OW.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: OW.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: OW.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: OW.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: OW.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: OW.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: OW.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: OW.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: OW.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var fG = GR(1590),
+      VG = GR(5338),
+      KG = GR(1187);
+    const wG = {
+        farm_hut: GR.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: GR.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: GR.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: GR.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: GR.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: GR.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: GR.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: GR.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: GR.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: GR.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: GR.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: GR.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      bO = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      jO = ["market_stand", "rusticHome_tent", "farm_hut"].map((WW => ({
-        id: WW,
-        blocks: rW(WW, 0).cells.length
-      }))).sort(((WW, iW) => WW.blocks - iW.blocks)).map(((WW, iW) => ({
-        ...WW,
-        effortKey: bO[iW]
+      rG = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      eG = ["market_stand", "rusticHome_tent", "farm_hut"].map((RR => ({
+        id: RR,
+        blocks: FR(RR, 0).cells.length
+      }))).sort(((RR, JR) => RR.blocks - JR.blocks)).map(((RR, JR) => ({
+        ...RR,
+        effortKey: rG[JR]
       })));
 
-    function UO(WW) {
+    function aG(RR) {
       let {
-        onBuild: iW
-      } = WW;
+        onBuild: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, tW.B)();
-      return (0, vW.jsx)("div", {
+        t: GR
+      } = (0, VR.A)();
+      return (0, HR.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, vW.jsxs)("div", {
+        children: (0, HR.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, vW.jsx)("h3", {
+          children: [(0, HR.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: OW("plotsGame:guidePickTitle")
-          }), (0, vW.jsxs)("p", {
+            children: GR("plotsGame:guidePickTitle")
+          }), (0, HR.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, vW.jsx)("img", {
-              src: Pi,
+            children: [(0, HR.jsx)("img", {
+              src: ZJ,
               alt: "",
               draggable: !1
-            }), OW("plotsGame:guidePickNote")]
-          }), (0, vW.jsx)("div", {
+            }), GR("plotsGame:guidePickNote")]
+          }), (0, HR.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: jO.map((WW => {
+            children: eG.map((RR => {
               let {
-                id: mW,
-                blocks: EW,
-                effortKey: NW
-              } = WW;
-              return (0, vW.jsxs)("article", {
+                id: yR,
+                blocks: tR,
+                effortKey: uR
+              } = RR;
+              return (0, HR.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, vW.jsx)("button", {
+                children: [(0, HR.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    iW(mW)
+                    JR(yR)
                   },
-                  children: (0, vW.jsx)("img", {
-                    src: AO[mW],
+                  children: (0, HR.jsx)("img", {
+                    src: wG[yR],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, vW.jsxs)("div", {
+                }), (0, HR.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, vW.jsxs)("span", {
+                  children: [(0, HR.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, vW.jsx)("span", {
+                    children: [(0, HR.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: OW(hW(mW).displayName.translationKey)
-                    }), (0, vW.jsx)("span", {
+                      children: GR(gR(yR).displayName.translationKey)
+                    }), (0, HR.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: OW(NW)
-                    }), (0, vW.jsx)("span", {
+                      children: GR(uR)
+                    }), (0, HR.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: OW("plotsGame:journalBlocks", {
-                        blocks: String(EW)
+                      children: GR("plotsGame:journalBlocks", {
+                        blocks: String(tR)
                       })
                     })]
-                  }), (0, vW.jsx)(ZO.n, {
+                  }), (0, HR.jsx)(fG.n, {
                     onClick: () => {
-                      iW(mW)
+                      JR(yR)
                     },
-                    children: OW("plotsGame:placementBuild")
+                    children: GR("plotsGame:placementBuild")
                   })]
                 })]
-              }, mW)
+              }, yR)
             }))
           })]
         })
       })
     }
 
-    function kO(WW) {
+    function LG(RR) {
       let {
-        direction: iW,
-        disabled: OW,
-        onTurn: mW
-      } = WW;
+        direction: JR,
+        disabled: GR,
+        onTurn: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, tW.B)();
-      return (0, vW.jsx)("div", {
-        className: xW()("PlotsJournalArrow", iW),
-        children: (0, vW.jsx)(ZO.f, {
-          disabled: OW,
-          ariaLabel: EW("Forward" === iW ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: tR
+      } = (0, VR.A)();
+      return (0, HR.jsx)("div", {
+        className: wR()("PlotsJournalArrow", JR),
+        children: (0, HR.jsx)(fG.g, {
+          disabled: GR,
+          ariaLabel: tR("Forward" === JR ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            mW(iW)
+            yR(JR)
           },
-          children: (0, vW.jsx)(jW.c, {
+          children: (0, HR.jsx)(LR.d, {
             name: "angle-up"
           })
         })
       })
     }
-    const sO = {
+    const nG = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function MO(WW) {
+    function UG(RR) {
       let {
-        page: iW,
-        building: OW,
-        onBuild: mW,
-        onPutAway: EW
-      } = WW;
+        page: JR,
+        building: GR,
+        onBuild: yR,
+        onPutAway: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, tW.B)(), {
-        displayName: PW,
-        tier: LW
-      } = hW(iW.id), cW = rW(iW.id, 0).cells.length, wW = "locked" === iW.state, ZW = OW ? ZO.f : ZO.n;
-      return (0, vW.jsxs)("article", {
-        className: xW()("PlotsJournalPage", {
-          Locked: wW
+        t: uR
+      } = (0, VR.A)(), {
+        displayName: ZR,
+        tier: qR
+      } = gR(JR.id), iR = FR(JR.id, 0).cells.length, fR = "locked" === JR.state, KR = GR ? fG.g : fG.n;
+      return (0, HR.jsxs)("article", {
+        className: wR()("PlotsJournalPage", {
+          Locked: fR
         }),
-        children: [(0, vW.jsx)("h3", {
+        children: [(0, HR.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: NW(PW.translationKey)
-        }), (0, vW.jsxs)("div", {
+          children: uR(ZR.translationKey)
+        }), (0, HR.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [NW(sO[LW]), " \xb7 ", NW("plotsGame:journalBlocks", {
-            blocks: String(cW)
+          children: [uR(nG[qR]), " \xb7 ", uR("plotsGame:journalBlocks", {
+            blocks: String(iR)
           })]
-        }), (0, vW.jsxs)("div", {
+        }), (0, HR.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [JW.map((WW => (0, vW.jsx)("img", {
-            className: xW()({
-              Shown: WW === iW.id
+          children: [pR.map((RR => (0, HR.jsx)("img", {
+            className: wR()({
+              Shown: RR === JR.id
             }),
-            src: AO[WW],
+            src: wG[RR],
             alt: "",
             draggable: !1
-          }, WW))), "completed" === iW.state && (0, vW.jsx)("span", {
+          }, RR))), "completed" === JR.state && (0, HR.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: NW("plotsGame:journalBuilt")
-          }), wW && (0, vW.jsx)("span", {
+            children: uR("plotsGame:journalBuilt")
+          }), fR && (0, HR.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, vW.jsx)(jW.c, {
+            children: (0, HR.jsx)(LR.d, {
               name: "lock"
             })
           })]
-        }), null !== iW.note && (0, vW.jsx)("p", {
+        }), null !== JR.note && (0, HR.jsx)("p", {
           className: "PlotsJournalNote",
-          children: NW(iW.note)
-        }), (0, vW.jsxs)("div", {
+          children: uR(JR.note)
+        }), (0, HR.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === iW.state && (0, vW.jsx)("p", {
+          children: ["locked" === JR.state && (0, HR.jsx)("p", {
             className: "PlotsJournalHint",
-            children: NW("plotsGame:journalLocked", {
-              name: NW(hW(iW.unlockedBy).displayName.translationKey)
+            children: uR("plotsGame:journalLocked", {
+              name: uR(gR(JR.unlockedBy).displayName.translationKey)
             })
-          }), iW.active && (0, vW.jsxs)(vW.Fragment, {
-            children: [(0, vW.jsx)("p", {
+          }), JR.active && (0, HR.jsxs)(HR.Fragment, {
+            children: [(0, HR.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: NW("plotsGame:journalBuilding")
-            }), (0, vW.jsx)(ZO.h, {
-              onClick: EW,
-              children: NW("plotsGame:journalPutAway")
+              children: uR("plotsGame:journalBuilding")
+            }), (0, HR.jsx)(fG.i, {
+              onClick: tR,
+              children: uR("plotsGame:journalPutAway")
             })]
-          }), !wW && !iW.active && (0, vW.jsx)(ZW, {
+          }), !fR && !JR.active && (0, HR.jsx)(KR, {
             onClick: () => {
-              mW(iW.id)
+              yR(JR.id)
             },
-            children: NW("plotsGame:placementBuild")
+            children: uR("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function KO(WW) {
+    function WG(RR) {
       let {
-        className: iW,
-        page: OW,
-        hidden: mW,
-        building: EW,
-        journal: NW
-      } = WW;
-      return (0, vW.jsxs)("div", {
-        ref: WW => {
-          null !== WW && (WW.inert = mW)
+        className: JR,
+        page: GR,
+        hidden: yR,
+        building: tR,
+        journal: uR
+      } = RR;
+      return (0, HR.jsxs)("div", {
+        ref: RR => {
+          null !== RR && (RR.inert = yR)
         },
-        className: xW()("PlotsJournalSide", iW),
-        children: [void 0 !== OW && (0, vW.jsx)(MO, {
-          page: OW,
-          building: EW,
-          onBuild: NW.build,
-          onPutAway: NW.putAway
-        }), void 0 === OW && (0, vW.jsx)("div", {
+        className: wR()("PlotsJournalSide", JR),
+        children: [void 0 !== GR && (0, HR.jsx)(UG, {
+          page: GR,
+          building: tR,
+          onBuild: uR.build,
+          onPutAway: uR.putAway
+        }), void 0 === GR && (0, HR.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var SO = OW(2012);
+    var AG = GR(2102);
 
-    function YO(WW) {
-      return Math.cos((0, SO.i)(WW))
+    function CG(RR) {
+      return Math.cos((0, AG.g)(RR))
     }
 
-    function yO(WW) {
-      return (0, SO.x)(Math.acos(Yi.e.clamp(WW, -1, 1)))
+    function XG(RR) {
+      return (0, AG.y)(Math.acos(MJ.e.clamp(RR, -1, 1)))
     }
 
-    function TO(WW, iW, OW, mW, EW) {
-      const NW = Math.abs(iW - WW),
-        PW = (0, SO.x)(EW / (OW * Math.abs(Math.sin((0, SO.i)(WW))))),
-        LW = 450 * Math.min(1, NW / mW),
-        cW = PW > 0 ? 3 * NW / PW : 1 / 0;
-      return Math.round(Math.max(120, Math.min(LW, cW)))
+    function MG(RR, JR, GR, yR, tR) {
+      const uR = Math.abs(JR - RR),
+        ZR = (0, AG.y)(tR / (GR * Math.abs(Math.sin((0, AG.g)(RR))))),
+        qR = 450 * Math.min(1, uR / yR),
+        iR = ZR > 0 ? 3 * uR / ZR : 1 / 0;
+      return Math.round(Math.max(120, Math.min(qR, iR)))
     }
-    class JO {
+    class BG {
       constructor() {
         this.samples = []
       }
-      add(WW, iW) {
+      add(RR, JR) {
         for (this.samples.push({
-            x: WW,
-            at: iW
-          }); iW - this.samples[0].at > 100;) this.samples.shift()
+            x: RR,
+            at: JR
+          }); JR - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const WW = this.samples[0],
-          iW = this.samples[this.samples.length - 1];
-        return iW.at > WW.at ? (iW.x - WW.x) / (iW.at - WW.at) : 0
+        const RR = this.samples[0],
+          JR = this.samples[this.samples.length - 1];
+        return JR.at > RR.at ? (JR.x - RR.x) / (JR.at - RR.at) : 0
       }
     }
 
-    function hO(WW) {
-      return yO(new DOMMatrixReadOnly(getComputedStyle(WW).transform).m11)
+    function lG(RR) {
+      return XG(new DOMMatrixReadOnly(getComputedStyle(RR).transform).m11)
     }
 
-    function HO(WW, iW) {
-      WW.style.transform = `rotateY(${-iW}deg)`, WW.classList.add("Turning")
+    function pG(RR, JR) {
+      RR.style.transform = `rotateY(${-JR}deg)`, RR.classList.add("Turning")
     }
 
-    function nO(WW, iW, OW) {
-      const [mW, EW] = (0, NW.useState)(OW), PW = (0, NW.useRef)(null), LW = (0, NW.useRef)(null), cW = (0, NW.useRef)({
+    function gG(RR, JR, GR) {
+      const [yR, tR] = (0, uR.useState)(GR), ZR = (0, uR.useRef)(null), qR = (0, uR.useRef)(null), iR = (0, uR.useRef)({
         Forward: null,
         Back: null
-      }), wW = iW ? 2 : 1, tW = iW ? 180 : 90, ZW = mW - mW % wW, xW = ZW > 0, lW = ZW + wW < WW, AW = (0, NW.useCallback)((() => {
-        const WW = LW.current;
-        return null === WW ? ZW : (LW.current = null, WW.animation.cancel(), (iW = cW.current[WW.direction]).style.transform = "", iW.classList.remove("Turning"), null === WW.next ? ZW : (EW(WW.next), WW.next));
-        var iW
-      }), [ZW]), bW = (0, NW.useCallback)(((WW, iW, OW, mW) => {
-        const EW = cW.current[WW],
-          NW = hO(EW),
-          PW = iW === ("Forward" === WW) ? tW : 0;
-        HO(EW, PW);
-        const ZW = EW.animate([{
-          transform: `rotateY(${-NW}deg)`
+      }), fR = JR ? 2 : 1, VR = JR ? 180 : 90, KR = yR - yR % fR, wR = KR > 0, rR = KR + fR < RR, eR = (0, uR.useCallback)((() => {
+        const RR = qR.current;
+        return null === RR ? KR : (qR.current = null, RR.animation.cancel(), (JR = iR.current[RR.direction]).style.transform = "", JR.classList.remove("Turning"), null === RR.next ? KR : (tR(RR.next), RR.next));
+        var JR
+      }), [KR]), aR = (0, uR.useCallback)(((RR, JR, GR, yR) => {
+        const tR = iR.current[RR],
+          uR = lG(tR),
+          ZR = JR === ("Forward" === RR) ? VR : 0;
+        pG(tR, ZR);
+        const KR = tR.animate([{
+          transform: `rotateY(${-uR}deg)`
         }, {
-          transform: `rotateY(${-PW}deg)`
+          transform: `rotateY(${-ZR}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : TO(NW, PW, EW.offsetWidth, tW, PW > NW ? -OW : OW),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : MG(uR, ZR, tR.offsetWidth, VR, ZR > uR ? -GR : GR),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        LW.current = {
-          direction: WW,
-          animation: ZW,
-          next: iW ? mW + ("Forward" === WW ? wW : -wW) : null
-        }, ZW.onfinish = () => {
-          var WW;
-          (null === (WW = LW.current) || void 0 === WW ? void 0 : WW.animation) === ZW && AW()
+        qR.current = {
+          direction: RR,
+          animation: KR,
+          next: JR ? yR + ("Forward" === RR ? fR : -fR) : null
+        }, KR.onfinish = () => {
+          var RR;
+          (null === (RR = qR.current) || void 0 === RR ? void 0 : RR.animation) === KR && eR()
         }
-      }), [wW, tW, AW]), jW = (0, NW.useCallback)((iW => {
-        if (null !== PW.current) return;
-        const OW = AW();
-        ("Forward" === iW ? OW + wW < WW : OW > 0) && bW(iW, !0, 0, OW)
-      }), [AW, bW, wW, WW]);
-      (0, NW.useEffect)((() => () => {
-        var WW;
-        null === (WW = LW.current) || void 0 === WW || WW.animation.cancel()
-      }), []), (0, NW.useEffect)((() => {
-        const WW = WW => {
-          var iW;
-          WW.pointerId !== (null === (iW = PW.current) || void 0 === iW ? void 0 : iW.pointerId) || PW.current.following || (PW.current = null)
+      }), [fR, VR, eR]), LR = (0, uR.useCallback)((JR => {
+        if (null !== ZR.current) return;
+        const GR = eR();
+        ("Forward" === JR ? GR + fR < RR : GR > 0) && aR(JR, !0, 0, GR)
+      }), [eR, aR, fR, RR]);
+      (0, uR.useEffect)((() => () => {
+        var RR;
+        null === (RR = qR.current) || void 0 === RR || RR.animation.cancel()
+      }), []), (0, uR.useEffect)((() => {
+        const RR = RR => {
+          var JR;
+          RR.pointerId !== (null === (JR = ZR.current) || void 0 === JR ? void 0 : JR.pointerId) || ZR.current.following || (ZR.current = null)
         };
-        return window.addEventListener("pointerup", WW), () => {
-          window.removeEventListener("pointerup", WW)
+        return window.addEventListener("pointerup", RR), () => {
+          window.removeEventListener("pointerup", RR)
         }
       }), []);
-      const UW = (WW, iW, OW) => {
-          const mW = function(WW, iW, OW, mW) {
-            return (WW < 0 ? OW : mW) ? Yi.e.clampAbs(WW, iW) : Math.sign(WW) * iW * (1 - 1 / (.55 * Math.abs(WW) / iW + 1))
-          }(WW.base + OW, wW * WW.width, lW, xW);
-          return "Forward" === iW ? Math.min(mW, 0) : Math.max(mW, 0)
+      const nR = (RR, JR, GR) => {
+          const yR = function(RR, JR, GR, yR) {
+            return (RR < 0 ? GR : yR) ? MJ.e.clampAbs(RR, JR) : Math.sign(RR) * JR * (1 - 1 / (.55 * Math.abs(RR) / JR + 1))
+          }(RR.base + GR, fR * RR.width, rR, wR);
+          return "Forward" === JR ? Math.min(yR, 0) : Math.max(yR, 0)
         },
-        kW = (WW, iW) => {
-          const OW = PW.current;
-          if (PW.current = null, null === OW.direction) return;
-          OW.speed.add(WW, iW);
-          const mW = OW.speed.get(),
-            EW = UW(OW, OW.direction, WW - OW.x);
-          bW(OW.direction, null !== function(WW, iW, OW, mW, EW) {
-            if (Math.abs(iW) >= .3 ? Math.sign(iW) !== Math.sign(WW) : Math.abs(WW) < .5 * OW) return null;
-            const NW = WW < 0 ? "Forward" : "Back";
-            return ("Forward" === NW ? mW : EW) ? NW : null
-          }(EW, mW, wW * OW.width, lW, xW), mW, ZW)
+        UR = (RR, JR) => {
+          const GR = ZR.current;
+          if (ZR.current = null, null === GR.direction) return;
+          GR.speed.add(RR, JR);
+          const yR = GR.speed.get(),
+            tR = nR(GR, GR.direction, RR - GR.x);
+          aR(GR.direction, null !== function(RR, JR, GR, yR, tR) {
+            if (Math.abs(JR) >= .3 ? Math.sign(JR) !== Math.sign(RR) : Math.abs(RR) < .5 * GR) return null;
+            const uR = RR < 0 ? "Forward" : "Back";
+            return ("Forward" === uR ? yR : tR) ? uR : null
+          }(tR, yR, fR * GR.width, rR, wR), yR, KR)
         },
-        sW = {
-          onPointerDown: WW => {
-            var iW;
-            if (!WW.isPrimary || 0 !== WW.button || null !== LW.current && null !== WW.target.closest("button")) return;
-            const OW = new JO;
-            OW.add(WW.clientX, WW.timeStamp);
-            const mW = cW.current.Forward.offsetWidth,
-              EW = LW.current;
-            LW.current = null;
-            let NW = 0;
-            if (null !== EW) {
-              const iW = cW.current[EW.direction],
-                OW = hO(iW);
-              EW.animation.cancel(), HO(iW, OW), NW = function(WW, iW, OW, mW) {
-                return (WW < 0 ? OW : mW) ? WW : Math.sign(WW) * iW * (1 / (1 - Math.min(Math.abs(WW) / iW, .99)) - 1) / .55
-              }(function(WW, iW, OW, mW) {
-                return OW * (YO(iW) - YO("Forward" === WW ? 0 : mW))
-              }(EW.direction, OW, mW, tW), wW * mW, lW, xW), WW.currentTarget.setPointerCapture(WW.pointerId)
+        WR = {
+          onPointerDown: RR => {
+            var JR;
+            if (!RR.isPrimary || 0 !== RR.button || null !== qR.current && null !== RR.target.closest("button")) return;
+            const GR = new BG;
+            GR.add(RR.clientX, RR.timeStamp);
+            const yR = iR.current.Forward.offsetWidth,
+              tR = qR.current;
+            qR.current = null;
+            let uR = 0;
+            if (null !== tR) {
+              const JR = iR.current[tR.direction],
+                GR = lG(JR);
+              tR.animation.cancel(), pG(JR, GR), uR = function(RR, JR, GR, yR) {
+                return (RR < 0 ? GR : yR) ? RR : Math.sign(RR) * JR * (1 / (1 - Math.min(Math.abs(RR) / JR, .99)) - 1) / .55
+              }(function(RR, JR, GR, yR) {
+                return GR * (CG(JR) - CG("Forward" === RR ? 0 : yR))
+              }(tR.direction, GR, yR, VR), fR * yR, rR, wR), RR.currentTarget.setPointerCapture(RR.pointerId)
             }
-            PW.current = {
-              pointerId: WW.pointerId,
-              x: WW.clientX,
-              y: WW.clientY,
-              base: NW,
-              width: mW,
-              following: null !== EW,
-              direction: null !== (iW = null === EW || void 0 === EW ? void 0 : EW.direction) && void 0 !== iW ? iW : null,
-              speed: OW
+            ZR.current = {
+              pointerId: RR.pointerId,
+              x: RR.clientX,
+              y: RR.clientY,
+              base: uR,
+              width: yR,
+              following: null !== tR,
+              direction: null !== (JR = null === tR || void 0 === tR ? void 0 : tR.direction) && void 0 !== JR ? JR : null,
+              speed: GR
             }
           },
-          onPointerMove: WW => {
-            const iW = PW.current;
-            if (null === iW || WW.pointerId !== iW.pointerId) return;
-            if (0 === WW.buttons) return void kW(WW.clientX, WW.timeStamp);
-            const OW = WW.clientX - iW.x;
-            !iW.following && function(WW, iW) {
-              return Math.abs(WW) > 8 && Math.abs(WW) > Math.abs(iW)
-            }(OW, WW.clientY - iW.y) && (iW.following = !0, iW.direction = OW < 0 ? "Forward" : "Back", WW.currentTarget.setPointerCapture(WW.pointerId)), null !== iW.direction && (iW.speed.add(WW.clientX, WW.timeStamp), HO(cW.current[iW.direction], function(WW, iW, OW, mW) {
-              const EW = OW * YO("Forward" === WW ? 0 : mW) + iW;
-              return Yi.e.clamp(yO(EW / OW), 0, mW)
-            }(iW.direction, UW(iW, iW.direction, OW), iW.width, tW)))
+          onPointerMove: RR => {
+            const JR = ZR.current;
+            if (null === JR || RR.pointerId !== JR.pointerId) return;
+            if (0 === RR.buttons) return void UR(RR.clientX, RR.timeStamp);
+            const GR = RR.clientX - JR.x;
+            !JR.following && function(RR, JR) {
+              return Math.abs(RR) > 8 && Math.abs(RR) > Math.abs(JR)
+            }(GR, RR.clientY - JR.y) && (JR.following = !0, JR.direction = GR < 0 ? "Forward" : "Back", RR.currentTarget.setPointerCapture(RR.pointerId)), null !== JR.direction && (JR.speed.add(RR.clientX, RR.timeStamp), pG(iR.current[JR.direction], function(RR, JR, GR, yR) {
+              const tR = GR * CG("Forward" === RR ? 0 : yR) + JR;
+              return MJ.e.clamp(XG(tR / GR), 0, yR)
+            }(JR.direction, nR(JR, JR.direction, GR), JR.width, VR)))
           },
-          onPointerUp: WW => {
-            var iW;
-            WW.pointerId === (null === (iW = PW.current) || void 0 === iW ? void 0 : iW.pointerId) && kW(WW.clientX, WW.timeStamp)
+          onPointerUp: RR => {
+            var JR;
+            RR.pointerId === (null === (JR = ZR.current) || void 0 === JR ? void 0 : JR.pointerId) && UR(RR.clientX, RR.timeStamp)
           },
-          onPointerCancel: WW => {
-            const iW = PW.current;
-            WW.pointerId === (null === iW || void 0 === iW ? void 0 : iW.pointerId) && (PW.current = null, null !== iW.direction && bW(iW.direction, !1, 0, ZW))
+          onPointerCancel: RR => {
+            const JR = ZR.current;
+            RR.pointerId === (null === JR || void 0 === JR ? void 0 : JR.pointerId) && (ZR.current = null, null !== JR.direction && aR(JR.direction, !1, 0, KR))
           }
         };
       return {
-        first: ZW,
-        step: wW,
-        canGoBack: xW,
-        canGoForward: lW,
-        turnPage: jW,
-        leaves: cW,
-        pagesHandlers: sW
+        first: KR,
+        step: fR,
+        canGoBack: wR,
+        canGoForward: rR,
+        turnPage: LR,
+        leaves: iR,
+        pagesHandlers: WR
       }
     }
 
-    function uO(WW, iW) {
-      return WW > iW && WW >= 600
+    function bG(RR, JR) {
+      return RR > JR && RR >= 600
     }
 
-    function oO(WW) {
+    function vG(RR) {
       let {
-        journal: iW,
-        hud: OW,
-        guide: mW
-      } = WW;
+        journal: JR,
+        hud: GR,
+        guide: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, tW.B)(), LW = (0, cW.g)(dW, iW.getPages()), wW = (0, cW.g)(Oi, OW.getGuide()), ZW = LW.find((WW => WW.active)), lW = (AW = wW, bW = void 0 === ZW ? null : ZW.id, "active" === AW[0] && null === bW);
-      var AW, bW;
-      const jW = (0, lO.l)(uO),
+        t: tR
+      } = (0, VR.A)(), qR = (0, iR.h)(NR, JR.getPages()), fR = (0, iR.h)(GJ, GR.getGuide()), KR = qR.find((RR => RR.active)), rR = (eR = fR, aR = void 0 === KR ? null : KR.id, "active" === eR[0] && null === aR);
+      var eR, aR;
+      const LR = (0, KG.o)(bG),
         {
-          first: UW,
-          step: kW,
-          canGoBack: KW,
-          canGoForward: SW,
-          turnPage: YW,
-          leaves: yW,
-          pagesHandlers: TW
-        } = nO(LW.length, jW, (() => function(WW) {
-          const iW = WW.findIndex((WW => WW.active));
-          return -1 !== iW ? iW : Math.max(0, WW.findIndex((WW => "open" === WW.state)))
-        }(LW)));
-      (0, NW.useEffect)((() => {
-        iW.onOpened()
-      }), [iW]), (0, sW.c)((WW => !lW && ("ArrowLeft" === WW.code || "ArrowRight" === WW.code) && !(0, MW.isTypingInInput)()), (WW => {
-        WW.stopPropagation(), YW("ArrowLeft" === WW.code ? "Back" : "Forward")
+          first: nR,
+          step: UR,
+          canGoBack: CR,
+          canGoForward: XR,
+          turnPage: MR,
+          leaves: BR,
+          pagesHandlers: lR
+        } = gG(qR.length, LR, (() => function(RR) {
+          const JR = RR.findIndex((RR => RR.active));
+          return -1 !== JR ? JR : Math.max(0, RR.findIndex((RR => "open" === RR.state)))
+        }(qR)));
+      (0, uR.useEffect)((() => {
+        JR.onOpened()
+      }), [JR]), (0, WR.e)((RR => !rR && ("ArrowLeft" === RR.code || "ArrowRight" === RR.code) && !(0, AR.isTypingInInput)()), (RR => {
+        RR.stopPropagation(), MR("ArrowLeft" === RR.code ? "Back" : "Forward")
       }));
-      const JW = void 0 !== ZW,
-        hW = (WW, OW, mW) => (0, vW.jsx)(KO, {
-          className: WW,
-          page: OW >= 0 && OW < LW.length ? LW[OW] : void 0,
-          hidden: mW,
-          building: JW,
-          journal: iW
+      const pR = void 0 !== KR,
+        gR = (RR, GR, yR) => (0, HR.jsx)(WG, {
+          className: RR,
+          page: GR >= 0 && GR < qR.length ? qR[GR] : void 0,
+          hidden: yR,
+          building: pR,
+          journal: JR
         });
-      return (0, vW.jsx)(xO.b, {
-        close: PW.q,
+      return (0, HR.jsx)(VG.e, {
+        close: ZR.j,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, vW.jsxs)("section", {
-          className: xW()("PlotsJournal", {
-            Spread: jW
+        children: (0, HR.jsxs)("section", {
+          className: wR()("PlotsJournal", {
+            Spread: LR
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": EW("plotsGame:journalTitle"),
-          children: [(0, vW.jsx)(ZO.l, {
+          "aria-label": tR("plotsGame:journalTitle"),
+          children: [(0, HR.jsx)(fG.l, {
             className: "PlotsJournalClose",
-            onClick: PW.q
-          }), "active" === wW[0] && (0, vW.jsx)(wi, {
+            onClick: ZR.j
+          }), "active" === fR[0] && (0, HR.jsx)(fJ, {
             className: "PlotsJournalGuideSkip",
-            onSkip: mW.skip
-          }), lW && (0, vW.jsx)(UO, {
-            onBuild: iW.build
-          }), !lW && (0, vW.jsx)(kO, {
+            onSkip: yR.skip
+          }), rR && (0, HR.jsx)(aG, {
+            onBuild: JR.build
+          }), !rR && (0, HR.jsx)(LG, {
             direction: "Back",
-            disabled: !KW,
-            onTurn: YW
-          }), (0, vW.jsx)("div", {
-            hidden: lW,
+            disabled: !CR,
+            onTurn: MR
+          }), (0, HR.jsx)("div", {
+            hidden: rR,
             className: "PlotsJournalBookPages",
-            ...TW,
-            children: (0, vW.jsxs)("div", {
+            ...lR,
+            children: (0, HR.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [jW && hW("Left", UW - 2, !0), hW("Right", UW + 2 * kW - 1, !0), (0, vW.jsxs)("div", {
-                ref: WW => {
-                  yW.current.Back = WW
+              children: [LR && gR("Left", nR - 2, !0), gR("Right", nR + 2 * UR - 1, !0), (0, HR.jsxs)("div", {
+                ref: RR => {
+                  BR.current.Back = RR
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [hW("Recto", UW - 1, !0), jW && hW("Verso", UW, !1)]
-              }), (0, vW.jsxs)("div", {
-                ref: WW => {
-                  yW.current.Forward = WW
+                children: [gR("Recto", nR - 1, !0), LR && gR("Verso", nR, !1)]
+              }), (0, HR.jsxs)("div", {
+                ref: RR => {
+                  BR.current.Forward = RR
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [hW("Recto", UW + kW - 1, !1), jW && hW("Verso", UW + kW, !0)]
+                children: [gR("Recto", nR + UR - 1, !1), LR && gR("Verso", nR + UR, !0)]
               })]
             })
-          }), !lW && (0, vW.jsx)(kO, {
+          }), !rR && (0, HR.jsx)(LG, {
             direction: "Forward",
-            disabled: !SW,
-            onTurn: YW
+            disabled: !XR,
+            onTurn: MR
           })]
         })
       })
     }
 
-    function dO(WW, iW, OW, mW, EW) {
-      const NW = Math.hypot(...iW.dir);
-      if (!Number.isFinite(NW) || 0 === NW) return -1;
+    function OG(RR, JR, GR, yR, tR) {
+      const uR = Math.hypot(...JR.dir);
+      if (!Number.isFinite(uR) || 0 === uR) return -1;
       const {
-        from: PW,
-        reach: LW,
-        solid: cW
-      } = iW, wW = [iW.dir[0] / NW, iW.dir[1] / NW, iW.dir[2] / NW], tW = null === cW ? LW : Math.min(LW, function(WW, iW, OW) {
-        const mW = eO(WW, iW, OW);
-        if (mW !== 1 / 0) return mW;
-        return (OW[0] + .5 - WW[0]) * iW[0] + (OW[1] + .5 - WW[1]) * iW[1] + (OW[2] + .5 - WW[2]) * iW[2]
-      }(PW, wW, cW) + .75);
-      let ZW = -1,
-        xW = 1 / 0,
-        lW = 1 / 0;
-      for (let AW = 0; AW < WW.length; AW += 4) {
-        const iW = [WW[AW], WW[AW + 1], WW[AW + 2]],
-          NW = EW(AW) ? LW : tW;
-        let cW = -1,
-          bW = eO(PW, wW, iW);
-        if (bW > NW) {
-          const WW = [iW[0] + .5 - PW[0], iW[1] + .5 - PW[1], iW[2] + .5 - PW[2]];
-          if (bW = WW[0] * wW[0] + WW[1] * wW[1] + WW[2] * wW[2], bW <= 0 || bW > NW) continue;
-          if (cW = Math.hypot(WW[0] - bW * wW[0], WW[1] - bW * wW[1], WW[2] - bW * wW[2]), cW > .7 || !mW(AW)) continue
-        }(cW < xW || cW === xW && bW < lW) && OW(AW) && (ZW = AW, xW = cW, lW = bW)
+        from: ZR,
+        reach: qR,
+        solid: iR
+      } = JR, fR = [JR.dir[0] / uR, JR.dir[1] / uR, JR.dir[2] / uR], VR = null === iR ? qR : Math.min(qR, function(RR, JR, GR) {
+        const yR = xG(RR, JR, GR);
+        if (yR !== 1 / 0) return yR;
+        return (GR[0] + .5 - RR[0]) * JR[0] + (GR[1] + .5 - RR[1]) * JR[1] + (GR[2] + .5 - RR[2]) * JR[2]
+      }(ZR, fR, iR) + .75);
+      let KR = -1,
+        wR = 1 / 0,
+        rR = 1 / 0;
+      for (let eR = 0; eR < RR.length; eR += 4) {
+        const JR = [RR[eR], RR[eR + 1], RR[eR + 2]],
+          uR = tR(eR) ? qR : VR;
+        let iR = -1,
+          aR = xG(ZR, fR, JR);
+        if (aR > uR) {
+          const RR = [JR[0] + .5 - ZR[0], JR[1] + .5 - ZR[1], JR[2] + .5 - ZR[2]];
+          if (aR = RR[0] * fR[0] + RR[1] * fR[1] + RR[2] * fR[2], aR <= 0 || aR > uR) continue;
+          if (iR = Math.hypot(RR[0] - aR * fR[0], RR[1] - aR * fR[1], RR[2] - aR * fR[2]), iR > .7 || !yR(eR)) continue
+        }(iR < wR || iR === wR && aR < rR) && GR(eR) && (KR = eR, wR = iR, rR = aR)
       }
-      return ZW
+      return KR
     }
 
-    function eO(WW, iW, OW) {
-      let mW = 0,
-        EW = 1 / 0;
-      for (let NW = 0; NW < 3; NW++) {
-        const PW = OW[NW] - WW[NW];
-        if (0 === iW[NW]) {
-          if (PW > 0 || PW + 1 < 0) return 1 / 0;
+    function xG(RR, JR, GR) {
+      let yR = 0,
+        tR = 1 / 0;
+      for (let uR = 0; uR < 3; uR++) {
+        const ZR = GR[uR] - RR[uR];
+        if (0 === JR[uR]) {
+          if (ZR > 0 || ZR + 1 < 0) return 1 / 0;
           continue
         }
-        const LW = PW / iW[NW],
-          cW = (PW + 1) / iW[NW];
-        mW = Math.max(mW, Math.min(LW, cW)), EW = Math.min(EW, Math.max(LW, cW))
+        const qR = ZR / JR[uR],
+          iR = (ZR + 1) / JR[uR];
+        yR = Math.max(yR, Math.min(qR, iR)), tR = Math.min(tR, Math.max(qR, iR))
       }
-      return mW <= EW ? mW : 1 / 0
+      return yR <= tR ? yR : 1 / 0
     }
-    var vO = OW(38048),
-      gO = OW(39244),
-      DO = OW(39708);
-    const VO = [1, 1, 1];
-    class pO {
-      constructor(WW) {
-        this.api = WW, this.meshes = null, this.shown = null
+    var NG = GR(38007),
+      DG = GR(39221),
+      HG = GR(39700);
+    const oG = [1, 1, 1];
+    class cG {
+      constructor(RR) {
+        this.api = RR, this.meshes = null, this.shown = null
       }
-      show(WW) {
-        if (!(0, vO.f)(WW, this.shown))
-          if (this.shown = null === WW ? null : [WW[0], WW[1], WW[2]], null !== this.meshes)
-            for (const iW of this.meshes) this.api.setGameMesh(iW, null === WW ? {
+      show(RR) {
+        if (!(0, NG.e)(RR, this.shown))
+          if (this.shown = null === RR ? null : [RR[0], RR[1], RR[2]], null !== this.meshes)
+            for (const JR of this.meshes) this.api.setGameMesh(JR, null === RR ? {
               visible: !1
             } : {
-              anchor: WW,
+              anchor: RR,
               visible: !0
             });
-          else if (null !== WW) {
-          const iW = [gO.f, gO.f, gO.f, 0, 0, 0];
-          this.meshes = [this.build([iW], gO.h, WW), this.build((0, gO.c)(), gO.o, WW)]
+          else if (null !== RR) {
+          const JR = [DG.f, DG.f, DG.f, 0, 0, 0];
+          this.meshes = [this.build([JR], DG.j, RR), this.build((0, DG.c)(), DG.p, RR)]
         }
       }
       dispose() {
-        for (const iW of null !== (WW = this.meshes) && void 0 !== WW ? WW : []) {
-          var WW;
-          this.api.disposeGameMesh(iW)
+        for (const JR of null !== (RR = this.meshes) && void 0 !== RR ? RR : []) {
+          var RR;
+          this.api.disposeGameMesh(JR)
         }
         this.meshes = null, this.shown = null
       }
-      build(WW, iW, OW) {
-        const mW = [],
-          EW = [];
-        for (const [NW, PW, LW, cW, wW, tW] of WW)(0, DO.h)(mW, EW, [cW + .5, wW + .5, tW + .5], [NW, PW, LW]);
+      build(RR, JR, GR) {
+        const yR = [],
+          tR = [];
+        for (const [uR, ZR, qR, iR, fR, VR] of RR)(0, HG.g)(yR, tR, [iR + .5, fR + .5, VR + .5], [uR, ZR, qR]);
         return this.api.createGameMesh({
-          positions: mW,
-          indices: EW
+          positions: yR,
+          indices: tR
         }, {
-          rgb: VO,
-          alpha: iW,
+          rgb: oG,
+          alpha: JR,
           onTop: !0
-        }, OW)
+        }, GR)
       }
     }
 
-    function fO(WW, iW) {
-      const OW = fi.f.tU / 2;
-      return WW[0] < iW[0] + OW && WW[0] + 1 > iW[0] - OW && WW[1] < iW[1] + fi.f.ZU && WW[1] + 1 > iW[1] && WW[2] < iW[2] + OW && WW[2] + 1 > iW[2] - OW
+    function PG(RR, JR) {
+      const GR = PJ.g.Vn / 2;
+      return RR[0] < JR[0] + GR && RR[0] + 1 > JR[0] - GR && RR[1] < JR[1] + PJ.g.Kn && RR[1] + 1 > JR[1] && RR[2] < JR[2] + GR && RR[2] + 1 > JR[2] - GR
     }
 
-    function CO(WW, iW) {
-      return WW.getClientOption(iW, "blockReach") + 1
+    function IG(RR, JR) {
+      return RR.getClientOption(JR, "blockReach") + 1
     }
-    class XO {
-      constructor(WW, iW, OW) {
-        this.api = WW, this.localPlayerId = iW, this.foreseen = OW, this.cells = [], this.playerCells = [], this.next = null
+    class mG {
+      constructor(RR, JR, GR) {
+        this.api = RR, this.localPlayerId = JR, this.foreseen = GR, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(WW) {
-        this.cells = WW
+      setCells(RR) {
+        this.cells = RR
       }
       playerMoved() {
-        return BO(this.api.getPositionView(this.localPlayerId)).some(((WW, iW) => WW !== this.playerCells[iW]))
+        return zG(this.api.getPositionView(this.localPlayerId)).some(((RR, JR) => RR !== this.playerCells[JR]))
       }
-      Kl(WW) {
-        const iW = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...BO(iW)), this.next = this.pickFrom(null === WW ? [iW[0], iW[1] + 1, iW[2]] : (0, vO.b)(WW), (() => !1)), this.next
+      Ur(RR) {
+        const JR = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...zG(JR)), this.next = this.pickFrom(null === RR ? [JR[0], JR[1] + 1, JR[2]] : (0, NG.b)(RR), (() => !1)), this.next
       }
-      pickFrom(WW, iW) {
-        const OW = this.api.getPositionView(this.localPlayerId),
-          mW = [OW[0], OW[1] + fi.f.ZU * fi.f.playerEyeToHeightRatio, OW[2]],
-          EW = CO(this.api, this.localPlayerId),
+      pickFrom(RR, JR) {
+        const GR = this.api.getPositionView(this.localPlayerId),
+          yR = [GR[0], GR[1] + PJ.g.Kn * PJ.g.playerEyeToHeightRatio, GR[2]],
+          tR = IG(this.api, this.localPlayerId),
           {
-            cells: NW
+            cells: uR
           } = this,
-          PW = WW => [NW[WW], NW[WW + 1], NW[WW + 2]],
-          LW = function(WW, iW, OW, mW, EW, NW) {
-            let PW = -1,
-              LW = -1,
-              cW = 1 / 0;
-            for (let wW = 0; wW < WW.length; wW += iW) {
-              const iW = (NW(wW) ? 2 : 0) + (mW(wW) ? 1 : 0);
-              if (iW < LW || EW(wW)) continue;
-              const tW = (WW[wW] + .5 - OW[0]) ** 2 + (WW[wW + 1] + .5 - OW[1]) ** 2 + (WW[wW + 2] + .5 - OW[2]) ** 2;
-              (iW > LW || tW < cW) && (PW = wW, LW = iW, cW = tW)
+          ZR = RR => [uR[RR], uR[RR + 1], uR[RR + 2]],
+          qR = function(RR, JR, GR, yR, tR, uR) {
+            let ZR = -1,
+              qR = -1,
+              iR = 1 / 0;
+            for (let fR = 0; fR < RR.length; fR += JR) {
+              const JR = (uR(fR) ? 2 : 0) + (yR(fR) ? 1 : 0);
+              if (JR < qR || tR(fR)) continue;
+              const VR = (RR[fR] + .5 - GR[0]) ** 2 + (RR[fR + 1] + .5 - GR[1]) ** 2 + (RR[fR + 2] + .5 - GR[2]) ** 2;
+              (JR > qR || VR < iR) && (ZR = fR, qR = JR, iR = VR)
             }
-            return PW
-          }(NW, 4, WW, (WW => 1 === NW[WW + 3]), (WW => {
-            const mW = PW(WW);
-            return fO(mW, OW) || this.foreseen.has(mW.join()) || iW(mW)
-          }), (WW => function(WW, iW, OW) {
-            return (iW[0] + .5 - WW[0]) ** 2 + (iW[1] + .5 - WW[1]) ** 2 + (iW[2] + .5 - WW[2]) ** 2 <= OW ** 2
-          }(mW, PW(WW), EW)));
-        return -1 === LW ? null : PW(LW)
+            return ZR
+          }(uR, 4, RR, (RR => 1 === uR[RR + 3]), (RR => {
+            const yR = ZR(RR);
+            return PG(yR, GR) || this.foreseen.has(yR.join()) || JR(yR)
+          }), (RR => function(RR, JR, GR) {
+            return (JR[0] + .5 - RR[0]) ** 2 + (JR[1] + .5 - RR[1]) ** 2 + (JR[2] + .5 - RR[2]) ** 2 <= GR ** 2
+          }(yR, ZR(RR), tR)));
+        return -1 === qR ? null : ZR(qR)
       }
     }
 
-    function BO(WW) {
-      let [iW, OW, mW] = WW;
-      const EW = fi.f.tU / 2;
-      return [Math.floor(iW), Math.floor(OW), Math.floor(mW), Math.floor(iW - EW), Math.floor(iW + EW), Math.floor(OW + fi.f.ZU), Math.floor(mW - EW), Math.floor(mW + EW)]
+    function zG(RR) {
+      let [JR, GR, yR] = RR;
+      const tR = PJ.g.Vn / 2;
+      return [Math.floor(JR), Math.floor(GR), Math.floor(yR), Math.floor(JR - tR), Math.floor(JR + tR), Math.floor(GR + PJ.g.Kn), Math.floor(yR - tR), Math.floor(yR + tR)]
     }
-    class qO {
-      constructor(WW, iW, OW) {
-        this.api = WW, this.localPlayerId = iW, this.pickNext = OW, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class SG {
+      constructor(RR, JR, GR) {
+        this.api = RR, this.localPlayerId = JR, this.pickNext = GR, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(WW) {
-        const [iW, , OW] = WW.cameraDirection, mW = Math.hypot(iW, OW);
-        mW > .001 && (this.heading = [iW / mW, OW / mW])
+      look(RR) {
+        const [JR, , GR] = RR.cameraDirection, yR = Math.hypot(JR, GR);
+        yR > .001 && (this.heading = [JR / yR, GR / yR])
       }
-      tapped(WW, iW, OW) {
-        const mW = CO(this.api, this.localPlayerId),
+      tapped(RR, JR, GR) {
+        const yR = IG(this.api, this.localPlayerId),
           {
-            origin: EW,
-            direction: NW
+            origin: tR,
+            direction: uR
           } = this.api.getActionRay(),
-          PW = [...EW],
-          LW = [
-            [PW, [PW[0] + NW[0] * mW, PW[1] + NW[1] * mW, PW[2] + NW[2] * mW]]
+          ZR = [...tR],
+          qR = [
+            [ZR, [ZR[0] + uR[0] * yR, ZR[1] + uR[1] * yR, ZR[2] + uR[2] * yR]]
           ];
-        null !== WW && LW.push([PW, (0, vO.b)(WW)]), this.tap = {
-          lines: LW,
-          next: iW,
-          ms: OW
+        null !== RR && qR.push([ZR, (0, NG.b)(RR)]), this.tap = {
+          lines: qR,
+          next: JR,
+          ms: GR
         }
       }
-      filled(WW, iW) {
-        this.tap = null, this.turnFrom(WW, iW), this.retry(iW)
+      filled(RR, JR) {
+        this.tap = null, this.turnFrom(RR, JR), this.retry(JR)
       }
-      arrived(WW, iW) {
+      arrived(RR, JR) {
         const {
-          tap: OW
+          tap: GR
         } = this;
-        if (null === OW || iW - OW.ms > 1500) return null;
-        const mW = (0, vO.b)(WW);
-        return (0, vO.f)(OW.next, WW) || OW.lines.some((WW => {
-          let [iW, OW] = WW;
-          return function(WW, iW, OW) {
-            const mW = [OW[0] - iW[0], OW[1] - iW[1], OW[2] - iW[2]],
-              EW = [WW[0] - iW[0], WW[1] - iW[1], WW[2] - iW[2]],
-              NW = mW[0] ** 2 + mW[1] ** 2 + mW[2] ** 2,
-              PW = 0 === NW ? 0 : Math.min(1, Math.max(0, (EW[0] * mW[0] + EW[1] * mW[1] + EW[2] * mW[2]) / NW));
-            return Math.hypot(EW[0] - mW[0] * PW, EW[1] - mW[1] * PW, EW[2] - mW[2] * PW)
-          }(mW, iW, OW) <= .9
-        })) ? (this.tap = null, this.turnFrom(WW, iW), OW.ms) : null
+        if (null === GR || JR - GR.ms > 1500) return null;
+        const yR = (0, NG.b)(RR);
+        return (0, NG.e)(GR.next, RR) || GR.lines.some((RR => {
+          let [JR, GR] = RR;
+          return function(RR, JR, GR) {
+            const yR = [GR[0] - JR[0], GR[1] - JR[1], GR[2] - JR[2]],
+              tR = [RR[0] - JR[0], RR[1] - JR[1], RR[2] - JR[2]],
+              uR = yR[0] ** 2 + yR[1] ** 2 + yR[2] ** 2,
+              ZR = 0 === uR ? 0 : Math.min(1, Math.max(0, (tR[0] * yR[0] + tR[1] * yR[1] + tR[2] * yR[2]) / uR));
+            return Math.hypot(tR[0] - yR[0] * ZR, tR[1] - yR[1] * ZR, tR[2] - yR[2] * ZR)
+          }(yR, JR, GR) <= .9
+        })) ? (this.tap = null, this.turnFrom(RR, JR), GR.ms) : null
       }
-      turnFrom(WW, iW) {
+      turnFrom(RR, JR) {
         this.pending = {
-          from: WW,
-          ms: iW,
-          turnMs: Math.max(50, Math.min(250, iW - this.lastFillMs))
-        }, this.lastFillMs = iW
+          from: RR,
+          ms: JR,
+          turnMs: Math.max(50, Math.min(250, JR - this.lastFillMs))
+        }, this.lastFillMs = JR
       }
-      retry(WW) {
+      retry(RR) {
         const {
-          pending: iW
+          pending: JR
         } = this;
-        if (null === iW) return;
-        if (WW - iW.ms > 1500) return void(this.pending = null);
-        const OW = this.pickNext((0, vO.b)(iW.from), (WW => (0, vO.f)(WW, iW.from)));
-        if (null === OW) return;
+        if (null === JR) return;
+        if (RR - JR.ms > 1500) return void(this.pending = null);
+        const GR = this.pickNext((0, NG.b)(JR.from), (RR => (0, NG.e)(RR, JR.from)));
+        if (null === GR) return;
         this.pending = null;
         const {
-          turning: mW
+          turning: yR
         } = this;
-        if (null !== mW && WW < mW.endMs && (0, vO.f)(mW.to, OW)) return;
-        const EW = this.api.getActionRay().origin,
-          NW = [OW[0] + .5 - EW[0], OW[1] + .5 - EW[1], OW[2] + .5 - EW[2]],
-          PW = Math.hypot(NW[0], NW[2]);
-        if (PW < .3) {
-          const WW = Math.max(PW, .001);
-          NW[0] = this.heading[0] * WW, NW[2] = this.heading[1] * WW
+        if (null !== yR && RR < yR.endMs && (0, NG.e)(yR.to, GR)) return;
+        const tR = this.api.getActionRay().origin,
+          uR = [GR[0] + .5 - tR[0], GR[1] + .5 - tR[1], GR[2] + .5 - tR[2]],
+          ZR = Math.hypot(uR[0], uR[2]);
+        if (ZR < .3) {
+          const RR = Math.max(ZR, .001);
+          uR[0] = this.heading[0] * RR, uR[2] = this.heading[1] * RR
         }
-        this.api.turnCamera(NW, iW.turnMs), this.turning = {
-          to: OW,
-          endMs: WW + iW.turnMs
+        this.api.turnCamera(uR, JR.turnMs), this.turning = {
+          to: GR,
+          endMs: RR + JR.turnMs
         }
       }
     }
-    class RO {
-      constructor(WW, iW, OW, mW) {
-        this.api = WW, this.localPlayerId = iW, this.juice = OW, this.tracker = mW, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Ci(WW), this.meshes = new Xi.n(WW), this.outline = new pO(WW), this.nextCell = new XO(WW, iW, this.foreseen), this.turn = new qO(WW, iW, ((WW, iW) => this.nextCell.pickFrom(WW, iW)))
+    class jG {
+      constructor(RR, JR, GR, yR) {
+        this.api = RR, this.localPlayerId = JR, this.juice = GR, this.tracker = yR, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new IJ(RR), this.meshes = new mJ.i(RR), this.outline = new cG(RR), this.nextCell = new mG(RR, JR, this.foreseen), this.turn = new SG(RR, JR, ((RR, JR) => this.nextCell.pickFrom(RR, JR)))
       }
-      yZ(WW) {
-        const iW = "active" === WW[0] ? `${WW[1]}|${WW[3]}|${WW[4]}|${WW[5]}|${WW[6]}` : "";
-        if ("active" !== WW[0]) "built" === WW[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      BK(RR) {
+        const JR = "active" === RR[0] ? `${RR[1]}|${RR[3]}|${RR[4]}|${RR[5]}|${RR[6]}` : "";
+        if ("active" !== RR[0]) "built" === RR[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , OW, mW, EW, NW] = WW;
-          iW !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = OW) : OW === this.layerY ? this.burstUnlisted(mW) : OW > this.layerY && this.finishLayer(OW), this.layerY = OW, this.layerCells.has(OW) || this.layerCells.set(OW, mW.filter(GO)), this.ghostCells = mW, this.palette = EW, this.occupiedCells = NW
+          const [, , , , , , , GR, yR, tR, uR] = RR;
+          JR !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = GR) : GR === this.layerY ? this.burstUnlisted(yR) : GR > this.layerY && this.finishLayer(GR), this.layerY = GR, this.layerCells.has(GR) || this.layerCells.set(GR, yR.filter(dG)), this.ghostCells = yR, this.palette = tR, this.occupiedCells = uR
         }
-        iW !== this.blueprint && (this.tracker.show("active" === WW[0] && WW[2] ? {
-          id: WW[1],
-          y: WW[4]
-        } : null), this.blueprint = iW, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((WW => this.api.blockNameToBlockId(WW))), this.chunkWatch.watch([...this.ghostCells.filter(GO), ...this.occupiedCells]), this.refresh()
+        JR !== this.blueprint && (this.tracker.show("active" === RR[0] && RR[2] ? {
+          id: RR[1],
+          y: RR[4]
+        } : null), this.blueprint = JR, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((RR => this.api.blockNameToBlockId(RR))), this.chunkWatch.watch([...this.ghostCells.filter(dG), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(WW) {
-        this.burstUnlisted([]), WW > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = WW)
+      finishLayer(RR) {
+        this.burstUnlisted([]), RR > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = RR)
       }
-      hZ() {
+      gK() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const WW = performance.now();
-        let iW = !1;
-        for (const [mW, EW] of this.foreseen) {
-          var OW;
-          if (WW - EW > 1e3) this.foreseen.delete(mW), iW = !0, (null === (OW = this.lastFilled) || void 0 === OW ? void 0 : OW.join()) === mW && (this.lastFilled = this.lastSeenFilled)
-        }(iW || this.nextCell.playerMoved()) && this.showNext()
+        const RR = performance.now();
+        let JR = !1;
+        for (const [yR, tR] of this.foreseen) {
+          var GR;
+          if (RR - tR > 1e3) this.foreseen.delete(yR), JR = !0, (null === (GR = this.lastFilled) || void 0 === GR ? void 0 : GR.join()) === yR && (this.lastFilled = this.lastSeenFilled)
+        }(JR || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(WW) {
-        const iW = new Set;
-        for (let EW = 0; EW < WW.length; EW += 4) iW.add(`${WW[EW]},${WW[EW+1]},${WW[EW+2]}`);
-        const OW = [],
+      burstUnlisted(RR) {
+        const JR = new Set;
+        for (let tR = 0; tR < RR.length; tR += 4) JR.add(`${RR[tR]},${RR[tR+1]},${RR[tR+2]}`);
+        const GR = [],
           {
-            ghostCells: mW
+            ghostCells: yR
           } = this;
-        for (let EW = 0; EW < mW.length; EW += 4) {
-          const WW = `${mW[EW]},${mW[EW+1]},${mW[EW+2]}`;
-          !iW.has(WW) && this.open.delete(WW) && OW.push(this.filledCell(EW))
+        for (let tR = 0; tR < yR.length; tR += 4) {
+          const RR = `${yR[tR]},${yR[tR+1]},${yR[tR+2]}`;
+          !JR.has(RR) && this.open.delete(RR) && GR.push(this.filledCell(tR))
         }
-        this.burst(OW)
+        this.burst(GR)
       }
       refresh() {
         const {
-          ghostCells: WW,
-          palette: iW,
-          occupiedCells: OW
-        } = this, mW = new Xi.j, EW = new Set, NW = [], PW = [];
-        let LW = 0;
-        for (let cW = 0; cW < WW.length; cW += 4) {
-          const [OW, wW, tW, ZW] = [WW[cW], WW[cW + 1], WW[cW + 2], WW[cW + 3]], xW = this.api.getBlockId(OW, wW, tW), lW = `${OW},${wW},${tW}`, AW = ei(this.blockIds[ZW], xW);
-          !AW && vi(xW) ? mW.add(OW, wW, tW, Di(iW[ZW]), Xi.h, (0, Vi.e)(iW[ZW])) : AW ? this.open.has(lW) && NW.push(this.filledCell(cW)) : mW.add(OW, wW, tW, Xi.e, Xi.d), AW || LW++, !AW && this.api.isBlockInLoadedChunk(OW, wW, tW) && (EW.add(lW), PW.push(OW, wW, tW, vi(xW) ? 0 : 1))
+          ghostCells: RR,
+          palette: JR,
+          occupiedCells: GR
+        } = this, yR = new mJ.g, tR = new Set, uR = [], ZR = [];
+        let qR = 0;
+        for (let iR = 0; iR < RR.length; iR += 4) {
+          const [GR, fR, VR, KR] = [RR[iR], RR[iR + 1], RR[iR + 2], RR[iR + 3]], wR = this.api.getBlockId(GR, fR, VR), rR = `${GR},${fR},${VR}`, eR = NJ(this.blockIds[KR], wR);
+          !eR && DJ(wR) ? yR.add(GR, fR, VR, oJ(JR[KR]), mJ.e, (0, cJ.c)(JR[KR])) : eR ? this.open.has(rR) && uR.push(this.filledCell(iR)) : yR.add(GR, fR, VR, mJ.d, mJ.c), eR || qR++, !eR && this.api.isBlockInLoadedChunk(GR, fR, VR) && (tR.add(rR), ZR.push(GR, fR, VR, DJ(wR) ? 0 : 1))
         }
-        this.open = EW, this.nextCell.setCells(PW), this.tracker.update(this.layerY, this.topLayerY, LW);
-        for (let cW = 0; cW < OW.length; cW += 3) {
-          const [WW, iW, EW] = [OW[cW], OW[cW + 1], OW[cW + 2]];
-          vi(this.api.getBlockId(WW, iW, EW)) || mW.add(WW, iW, EW, Xi.e, Xi.d)
+        this.open = tR, this.nextCell.setCells(ZR), this.tracker.update(this.layerY, this.topLayerY, qR);
+        for (let iR = 0; iR < GR.length; iR += 3) {
+          const [RR, JR, tR] = [GR[iR], GR[iR + 1], GR[iR + 2]];
+          DJ(this.api.getBlockId(RR, JR, tR)) || yR.add(RR, JR, tR, mJ.d, mJ.c)
         }
-        this.meshes.show(mW.toArray()), this.burst(NW), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(yR.toArray()), this.burst(uR), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(WW) {
-        const iW = performance.now(),
-          OW = [];
-        for (const [EW, NW, PW] of WW) {
-          const WW = [EW, NW, PW];
-          this.lastSeenFilled = WW, this.foreseen.delete(WW.join()) || OW.push(WW)
+      burst(RR) {
+        const JR = performance.now(),
+          GR = [];
+        for (const [tR, uR, ZR] of RR) {
+          const RR = [tR, uR, ZR];
+          this.lastSeenFilled = RR, this.foreseen.delete(RR.join()) || GR.push(RR)
         }
-        const mW = this.isHolding(iW);
-        for (const EW of OW) {
-          if (this.lastFilled = EW, mW && this.pressFilled) {
-            this.turn.filled(EW, iW);
+        const yR = this.isHolding(JR);
+        for (const tR of GR) {
+          if (this.lastFilled = tR, yR && this.pressFilled) {
+            this.turn.filled(tR, JR);
             continue
           }
-          const WW = this.turn.arrived(EW, iW);
-          if (null !== WW) {
-            this.pressFilled = mW;
-            for (const [iW, OW] of this.foreseen) OW <= WW && this.foreseen.delete(iW)
+          const RR = this.turn.arrived(tR, JR);
+          if (null !== RR) {
+            this.pressFilled = yR;
+            for (const [JR, GR] of this.foreseen) GR <= RR && this.foreseen.delete(JR)
           }
         }
-        this.juice.filled(WW)
+        this.juice.filled(RR)
       }
       showNext() {
-        var WW;
-        this.outline.show(null !== (WW = this.aimed) && void 0 !== WW ? WW : this.nextCell.Kl(this.lastFilled))
+        var RR;
+        this.outline.show(null !== (RR = this.aimed) && void 0 !== RR ? RR : this.nextCell.Ur(this.lastFilled))
       }
-      afterRender(WW) {
-        var iW;
-        this.turn.look(WW);
-        const OW = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === OW ? null : OW.position), this.outline.show(null !== (iW = this.aimed) && void 0 !== iW ? iW : this.nextCell.get())
+      afterRender(RR) {
+        var JR;
+        this.turn.look(RR);
+        const GR = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === GR ? null : GR.position), this.outline.show(null !== (JR = this.aimed) && void 0 !== JR ? JR : this.nextCell.get())
       }
-      isHolding(WW) {
-        return null !== this.altMs && WW - this.altMs <= 500
+      isHolding(RR) {
+        return null !== this.altMs && RR - this.altMs <= 500
       }
-      attemptAltAction(WW) {
-        const iW = performance.now();
-        if (this.isHolding(iW) || (this.pressFilled = !1), this.altMs = iW, this.pressFilled) return "preventPlacement";
-        const OW = this.findAimed(WW);
-        if (null !== OW) return this.foreseen.set(OW.join(), iW), this.lastFilled = OW, this.aimed = null, this.showNext(), this.turn.filled(OW, iW), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(RR) {
+        const JR = performance.now();
+        if (this.isHolding(JR) || (this.pressFilled = !1), this.altMs = JR, this.pressFilled) return "preventPlacement";
+        const GR = this.findAimed(RR);
+        if (null !== GR) return this.foreseen.set(GR.join(), JR), this.lastFilled = GR, this.aimed = null, this.showNext(), this.turn.filled(GR, JR), this.pressFilled = !0, "preventPlacement";
         {
-          const OW = this.nextCell.get();
-          null !== OW && this.turn.tapped(WW, OW, iW)
+          const GR = this.nextCell.get();
+          null !== GR && this.turn.tapped(RR, GR, JR)
         }
       }
       holdPressOnEntity() {
-        const WW = performance.now();
-        this.pressFilled && this.isHolding(WW) && (this.altMs = WW)
+        const RR = performance.now();
+        this.pressFilled && this.isHolding(RR) && (this.altMs = RR)
       }
-      findAimed(WW) {
-        return function(WW, iW, OW, mW, EW, NW, PW) {
-          const LW = WW.kOW(iW),
-            cW = null === LW || null === WW.blockNameToBlockId(LW.name, !0) ? null : LW.name,
-            wW = WW.getPositionView(iW),
+      findAimed(RR) {
+        return function(RR, JR, GR, yR, tR, uR, ZR) {
+          const qR = RR.uyR(JR),
+            iR = null === qR || null === RR.blockNameToBlockId(qR.name, !0) ? null : qR.name,
+            fR = RR.getPositionView(JR),
             {
-              origin: tW,
-              direction: ZW
-            } = WW.getActionRay(),
-            xW = dO(mW, {
-              from: tW,
-              dir: ZW,
-              reach: CO(WW, iW),
-              solid: OW
-            }, (iW => {
-              const OW = [mW[iW], mW[iW + 1], mW[iW + 2]];
-              return !ei(EW[mW[iW + 3]], WW.getBlockId(...OW)) && !PW.has(OW.join()) && WW.isBlockInLoadedChunk(...OW) && !fO(OW, wW)
-            }), (WW => null === cW || cW === gi(EW[mW[WW + 3]])), (WW => null !== NW && mW[WW] === NW[0] && mW[WW + 1] === NW[1] && mW[WW + 2] === NW[2]));
-          return -1 === xW ? null : [mW[xW], mW[xW + 1], mW[xW + 2]]
-        }(this.api, this.localPlayerId, WW, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: VR,
+              direction: KR
+            } = RR.getActionRay(),
+            wR = OG(yR, {
+              from: VR,
+              dir: KR,
+              reach: IG(RR, JR),
+              solid: GR
+            }, (JR => {
+              const GR = [yR[JR], yR[JR + 1], yR[JR + 2]];
+              return !NJ(tR[yR[JR + 3]], RR.getBlockId(...GR)) && !ZR.has(GR.join()) && RR.isBlockInLoadedChunk(...GR) && !PG(GR, fR)
+            }), (RR => null === iR || iR === HJ(tR[yR[RR + 3]])), (RR => null !== uR && yR[RR] === uR[0] && yR[RR + 1] === uR[1] && yR[RR + 2] === uR[2]));
+          return -1 === wR ? null : [yR[wR], yR[wR + 1], yR[wR + 2]]
+        }(this.api, this.localPlayerId, RR, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(WW) {
+      filledCell(RR) {
         const {
-          ghostCells: iW
-        } = this, [OW, mW, EW] = Di(this.palette[iW[WW + 3]]);
-        return [iW[WW], iW[WW + 1], iW[WW + 2], OW, mW, EW]
+          ghostCells: JR
+        } = this, [GR, yR, tR] = oJ(this.palette[JR[RR + 3]]);
+        return [JR[RR], JR[RR + 1], JR[RR + 2], GR, yR, tR]
       }
     }
 
-    function GO(WW, iW) {
-      return iW % 4 !== 3
+    function dG(RR, JR) {
+      return JR % 4 !== 3
     }
-    class IO {
-      constructor(WW) {
-        this.api = WW, this.sent = !1
+    class EG {
+      constructor(RR) {
+        this.api = RR, this.sent = !1
       }
-      hZ() {
-        this.sent || LW.d.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      gK() {
+        this.sent || qR.d.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var aO = OW(2937),
-      rO = OW(40371);
+    var YG = GR(3017),
+      kG = GR(40422);
 
-    function zO(WW, iW, OW) {
-      const mW = [255 * WW, 255 * iW, 255 * OW],
-        [EW, NW, PW] = mW.map((WW => WW + .4 * (255 - WW)));
+    function QG(RR, JR, GR) {
+      const yR = [255 * RR, 255 * JR, 255 * GR],
+        [tR, uR, ZR] = yR.map((RR => RR + .4 * (255 - RR)));
       return {
         texture: "square_particle",
-        aZ: 48,
-        minLifeTime: .3 / rO.d,
-        maxLifeTime: .55 / rO.d,
+        hK: 48,
+        minLifeTime: .3 / kG.b,
+        maxLifeTime: .55 / kG.b,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * rO.d * rO.d, 0],
+        gravity: [0, -14 * kG.b * kG.b, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...mW, 1],
-          maxColor: [EW, NW, PW, 1]
+          minColor: [...yR, 1],
+          maxColor: [tR, uR, ZR, 1]
         }, {
           timeFraction: 1,
-          minColor: [...mW, 0],
-          maxColor: [EW, NW, PW, 0]
+          minColor: [...yR, 0],
+          maxColor: [tR, uR, ZR, 0]
         }],
-        blendMode: aO.d.Standard
+        blendMode: YG.c.Standard
       }
     }
-    const FO = {
+    const FG = {
       texture: "glint",
       mipmaps: !1,
-      aZ: 96,
-      minLifeTime: .5 / rO.d,
-      maxLifeTime: .9 / rO.d,
+      hK: 96,
+      minLifeTime: .5 / kG.b,
+      maxLifeTime: .9 / kG.b,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * rO.d * rO.d, 0],
+      gravity: [0, 2 * kG.b * kG.b, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2977,112 +2977,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: aO.d.OneOne
+      blendMode: YG.c.OneOne
     };
-    class QO {
-      constructor(WW, iW) {
-        this.api = WW, this.localPlayerId = iW, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class TG {
+      constructor(RR, JR) {
+        this.api = RR, this.localPlayerId = JR, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(WW) {
+      filled(RR) {
         if (this.api.particlesEnabled())
-          for (const [iW, OW, mW, EW, NW, PW] of WW.slice(0, 3)) {
-            const WW = `${EW},${NW},${PW}`;
-            let LW = this.chips.get(WW);
-            void 0 === LW && (LW = this.api.createParticles(zO(EW, NW, PW), {
-              pos: [iW + .5, OW + .5, mW + .5]
-            }), this.chips.set(WW, LW));
-            for (let iW = 0; iW < 8; iW++) this.setPoint(iW, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            LW.emitPoints([iW + .5, OW + .5, mW + .5], this.points, 8)
+          for (const [JR, GR, yR, tR, uR, ZR] of RR.slice(0, 3)) {
+            const RR = `${tR},${uR},${ZR}`;
+            let qR = this.chips.get(RR);
+            void 0 === qR && (qR = this.api.createParticles(QG(tR, uR, ZR), {
+              pos: [JR + .5, GR + .5, yR + .5]
+            }), this.chips.set(RR, qR));
+            for (let JR = 0; JR < 8; JR++) this.setPoint(JR, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            qR.emitPoints([JR + .5, GR + .5, yR + .5], this.points, 8)
           }
       }
-      layerDone(WW) {
+      layerDone(RR) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const iW = WW.length / 3;
-        if (0 === iW || !this.api.particlesEnabled()) return;
-        const OW = Math.min(iW, 48),
-          [mW, EW, NW] = [WW[0] + .5, WW[1] + 1, WW[2] + .5];
-        let PW = 0;
-        for (let LW = 0; LW < OW; LW++) {
-          const cW = 3 * Math.floor(LW * iW / OW);
-          for (let iW = 0; iW < 2; iW++) this.setPoint(PW++, WW[cW] + Math.random() - mW, WW[cW + 1] + 1 - EW, WW[cW + 2] + Math.random() - NW, .6 + .8 * Math.random())
+        const JR = RR.length / 3;
+        if (0 === JR || !this.api.particlesEnabled()) return;
+        const GR = Math.min(JR, 48),
+          [yR, tR, uR] = [RR[0] + .5, RR[1] + 1, RR[2] + .5];
+        let ZR = 0;
+        for (let qR = 0; qR < GR; qR++) {
+          const iR = 3 * Math.floor(qR * JR / GR);
+          for (let JR = 0; JR < 2; JR++) this.setPoint(ZR++, RR[iR] + Math.random() - yR, RR[iR + 1] + 1 - tR, RR[iR + 2] + Math.random() - uR, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(FO, {
-          pos: [mW, EW, NW]
-        }), this.sparkles.emitPoints([mW, EW, NW], this.points, PW)
+        this.sparkles ??= this.api.createParticles(FG, {
+          pos: [yR, tR, uR]
+        }), this.sparkles.emitPoints([yR, tR, uR], this.points, ZR)
       }
       dispose() {
-        var WW;
-        for (const iW of this.chips.values()) iW.stop();
-        this.chips.clear(), null === (WW = this.sparkles) || void 0 === WW || WW.stop(), this.sparkles = null
+        var RR;
+        for (const JR of this.chips.values()) JR.stop();
+        this.chips.clear(), null === (RR = this.sparkles) || void 0 === RR || RR.stop(), this.sparkles = null
       }
-      setPoint(WW, iW, OW, mW, EW) {
-        const NW = 4 * WW;
-        this.points[NW] = iW, this.points[NW + 1] = OW, this.points[NW + 2] = mW, this.points[NW + 3] = EW
+      setPoint(RR, JR, GR, yR, tR) {
+        const uR = 4 * RR;
+        this.points[uR] = JR, this.points[uR + 1] = GR, this.points[uR + 2] = yR, this.points[uR + 3] = tR
       }
     }
-    const Wm = "SpecialAction1",
-      im = "KeyY",
-      Om = "KeyX";
+    const sG = "SpecialAction1",
+      hG = "KeyY",
+      Ry = "KeyX";
 
-    function mm(WW) {
+    function Jy(RR) {
       let {
-        placement: iW
-      } = WW;
-      const OW = (0, cW.g)(Ii, iW.getView()),
+        placement: JR
+      } = RR;
+      const GR = (0, iR.h)(EJ, JR.getView()),
         {
-          t: mW
-        } = (0, tW.B)(),
+          t: yR
+        } = (0, VR.A)(),
         {
-          isTouchScreen: EW
-        } = (0, LW.p)(["isTouchScreen"]),
-        PW = (0, NW.useContext)(SW),
-        ZW = null !== OW,
-        AW = ZW && !OW.blocked && !OW.waiting;
-      if ((0, sW.c)((WW => ZW && !WW.repeat && !(0, MW.isTypingInInput)() && !(0, lW.l)() && !EW), (WW => {
-          const OW = function(WW, iW, OW) {
-            if (WW === Om) return iW.stop;
-            if (WW === im) return OW ? iW.build : Nm;
-            return wW.v[Wm].includes(WW) ? iW.rotate : null
-          }(WW.code, iW, AW);
-          null !== OW && (WW.stopPropagation(), OW())
-        })), !ZW) return null;
-      let jW = EW ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return OW.blocked ? jW = "plotsGame:placementOffPlot" : OW.toClear > 0 ? jW = "plotsGame:placementClear" : "placeSpot" !== PW.hint && "placeBuild" !== PW.hint || (jW = null), (0, vW.jsx)(bW.h, {
+          isTouchScreen: tR
+        } = (0, qR.o)(["isTouchScreen"]),
+        ZR = (0, uR.useContext)(XR),
+        KR = null !== GR,
+        eR = KR && !GR.blocked && !GR.waiting;
+      if ((0, WR.e)((RR => KR && !RR.repeat && !(0, AR.isTypingInInput)() && !(0, rR.o)() && !tR), (RR => {
+          const GR = function(RR, JR, GR) {
+            if (RR === Ry) return JR.stop;
+            if (RR === hG) return GR ? JR.build : yy;
+            return fR.t[sG].includes(RR) ? JR.rotate : null
+          }(RR.code, JR, eR);
+          null !== GR && (RR.stopPropagation(), GR())
+        })), !KR) return null;
+      let LR = tR ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return GR.blocked ? LR = "plotsGame:placementOffPlot" : GR.toClear > 0 ? LR = "plotsGame:placementClear" : "placeSpot" !== ZR.hint && "placeBuild" !== ZR.hint || (LR = null), (0, HR.jsx)(aR.d, {
         placement: "bottom",
-        children: (0, vW.jsxs)("div", {
-          ref: PW.placementCardRef,
+        children: (0, HR.jsxs)("div", {
+          ref: ZR.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, vW.jsx)("div", {
+          children: [(0, HR.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: mW(hW(OW.id).displayName.translationKey)
-          }), null !== jW && (0, vW.jsx)("div", {
-            className: xW()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: OW.refusals > 0
+            children: yR(gR(GR.id).displayName.translationKey)
+          }), null !== LR && (0, HR.jsx)("div", {
+            className: wR()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: GR.refusals > 0
             }),
-            children: mW(jW)
-          }, OW.refusals), (0, vW.jsxs)("div", {
+            children: yR(LR)
+          }, GR.refusals), (0, HR.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, vW.jsxs)(ZO.f, {
-              onClick: iW.rotate,
-              children: [(0, vW.jsx)(Em, {
-                noaAction: Wm
-              }), mW("plotsGame:placementRotate")]
-            }), (0, vW.jsxs)(ZO.O, {
-              onClick: iW.stop,
-              children: [(0, vW.jsx)(Em, {
-                keyCode: Om
-              }), mW("general:cancel")]
-            }), (0, vW.jsx)("span", {
-              ref: PW.buildRef,
-              className: xW()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === PW.hint && AW && EW
+            children: [(0, HR.jsxs)(fG.g, {
+              onClick: JR.rotate,
+              children: [(0, HR.jsx)(Gy, {
+                noaAction: sG
+              }), yR("plotsGame:placementRotate")]
+            }), (0, HR.jsxs)(fG.M, {
+              onClick: JR.stop,
+              children: [(0, HR.jsx)(Gy, {
+                keyCode: Ry
+              }), yR("general:cancel")]
+            }), (0, HR.jsx)("span", {
+              ref: ZR.buildRef,
+              className: wR()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === ZR.hint && eR && tR
               }),
-              children: (0, vW.jsxs)(ZO.n, {
-                disabled: !AW,
-                onClick: iW.build,
-                children: [(0, vW.jsx)(Em, {
-                  keyCode: im
-                }), mW("plotsGame:placementBuild")]
+              children: (0, HR.jsxs)(fG.n, {
+                disabled: !eR,
+                onClick: JR.build,
+                children: [(0, HR.jsx)(Gy, {
+                  keyCode: hG
+                }), yR("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -3090,495 +3090,495 @@ export const modules = {
       })
     }
 
-    function Em(WW) {
-      return (0, vW.jsx)(kW.e, {
+    function Gy(RR) {
+      return (0, HR.jsx)(UR.c, {
         className: "PlotsPlacementKey",
-        ...WW
+        ...RR
       })
     }
 
-    function Nm() {}
-    var Pm = OW(3247),
-      Lm = OW(37919),
-      cm = OW(2075),
-      wm = OW(1255);
-    const tm = {
+    function yy() {}
+    var ty = GR(3361),
+      uy = GR(37849),
+      Zy = GR(2173),
+      qy = GR(1351);
+    const iy = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function Zm(WW) {
+    function fy(RR) {
       let {
-        hud: iW
-      } = WW;
-      const OW = (0, cW.g)(ii, iW.getPlot()),
-        [mW, EW] = (0, NW.useState)(null),
-        PW = (0, Lm.i)(mW);
-      if ("none" === OW[0]) return null;
-      const [, LW, wW, tW, ZW, lW] = OW;
-      return (0, vW.jsx)("div", {
-        className: xW()("PlotsPlotBannerContainer", {
-          Below: PW
+        hud: JR
+      } = RR;
+      const GR = (0, iR.h)(JJ, JR.getPlot()),
+        [yR, tR] = (0, uR.useState)(null),
+        ZR = (0, uy.k)(yR);
+      if ("none" === GR[0]) return null;
+      const [, qR, fR, VR, KR, rR] = GR;
+      return (0, HR.jsx)("div", {
+        className: wR()("PlotsPlotBannerContainer", {
+          Below: ZR
         }),
-        children: (0, vW.jsx)(xm, {
-          plotX: LW,
-          plotZ: wW,
-          ownerName: tW,
-          ownerId: ZW,
-          relation: lW,
-          plaqueRef: EW
-        }, `${LW},${wW}`)
+        children: (0, HR.jsx)(Vy, {
+          plotX: qR,
+          plotZ: fR,
+          ownerName: VR,
+          ownerId: KR,
+          relation: rR,
+          plaqueRef: tR
+        }, `${qR},${fR}`)
       })
     }
 
-    function xm(WW) {
-      var iW, OW;
+    function Vy(RR) {
+      var JR, GR;
       let {
-        plotX: mW,
-        plotZ: EW,
-        ownerName: NW,
-        ownerId: PW,
-        relation: LW,
-        plaqueRef: cW
-      } = WW;
+        plotX: yR,
+        plotZ: tR,
+        ownerName: uR,
+        ownerId: ZR,
+        relation: qR,
+        plaqueRef: iR
+      } = RR;
       const {
-        t: wW
-      } = (0, tW.B)(), ZW = (0, cm.g)("hiddenPlayerNames"), lW = (0, cm.g)("players"), AW = null === PW ? null : null !== (iW = null === (OW = lW.byId[PW]) || void 0 === OW ? void 0 : OW.cosmetics) && void 0 !== iW ? iW : null, bW = wW("plotsGame:plotBannerCoords", {
-        x: mW,
-        z: EW
-      }), UW = "own" === LW || null !== NW;
-      return (0, vW.jsxs)("div", {
-        ref: cW,
-        className: xW()("PlotsPlotBanner", {
-          Own: "own" === LW,
-          Shared: "shared" === LW
+        t: fR
+      } = (0, VR.A)(), KR = (0, Zy.i)("hiddenPlayerNames"), rR = (0, Zy.i)("players"), eR = null === ZR ? null : null !== (JR = null === (GR = rR.byId[ZR]) || void 0 === GR ? void 0 : GR.cosmetics) && void 0 !== JR ? JR : null, aR = fR("plotsGame:plotBannerCoords", {
+        x: yR,
+        z: tR
+      }), nR = "own" === qR || null !== uR;
+      return (0, HR.jsxs)("div", {
+        ref: iR,
+        className: wR()("PlotsPlotBanner", {
+          Own: "own" === qR,
+          Shared: "shared" === qR
         }),
         role: "status",
-        children: [(0, vW.jsxs)("span", {
-          className: xW()("PlotsPlotBannerSeal", {
-            Face: null !== AW
+        children: [(0, HR.jsxs)("span", {
+          className: wR()("PlotsPlotBannerSeal", {
+            Face: null !== eR
           }),
-          children: [null !== AW && (0, vW.jsx)(Pm.e, {
-            cosmetics: AW
-          }), null === AW && (0, vW.jsx)(jW.c, {
-            name: tm[LW]
+          children: [null !== eR && (0, HR.jsx)(ty.c, {
+            cosmetics: eR
+          }), null === eR && (0, HR.jsx)(LR.d, {
+            name: iy[qR]
           })]
-        }), (0, vW.jsxs)("div", {
+        }), (0, HR.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, vW.jsxs)("div", {
+          children: [(0, HR.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === LW && wW("plotsGame:plotBannerYours"), "own" !== LW && null !== NW && wW("plotsGame:plotBannerOwner", {
-              name: (0, wm.g)(NW, ZW)
-            }), !UW && bW]
-          }), UW && (0, vW.jsxs)("div", {
+            children: ["own" === qR && fR("plotsGame:plotBannerYours"), "own" !== qR && null !== uR && fR("plotsGame:plotBannerOwner", {
+              name: (0, qy.e)(uR, KR)
+            }), !nR && aR]
+          }), nR && (0, HR.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [bW, "shared" === LW && (0, vW.jsx)("span", {
+            children: [aR, "shared" === qR && (0, HR.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: wW("plotsGame:plotBannerShared")
+              children: fR("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const lm = function(WW, iW, OW, mW) {
+    const Ky = function(RR, JR, GR, yR) {
       let {
-        localPlayerId: EW
-      } = mW;
-      const LW = new Ei;
-      let cW = null,
-        wW = null,
-        tW = null,
-        ZW = null,
-        xW = null,
-        lW = null;
-      const AW = [];
+        localPlayerId: tR
+      } = yR;
+      const qR = new tJ;
+      let iR = null,
+        fR = null,
+        VR = null,
+        KR = null,
+        wR = null,
+        rR = null;
+      const eR = [];
       return {
-        onCreate: WW => {
-          cW = new QO(WW, EW);
-          const iW = new Wi;
-          wW = new RO(WW, EW, cW, iW), tW = new ri(WW, EW), ZW = new eW(WW, tW), xW = new tO(WW, EW, wW.nextCell), lW = new IO(WW), AW.push((0, PW.O)((0, NW.createElement)(LO, {
-            hud: LW,
-            guide: xW,
-            tracker: iW,
-            placement: tW
-          }, (0, NW.createElement)(Zm, {
-            hud: LW
-          }), (0, NW.createElement)(DW, {
-            journal: ZW
-          }), (0, NW.createElement)(OO, {
-            placement: tW
-          }), (0, NW.createElement)(mm, {
-            placement: tW
+        onCreate: RR => {
+          iR = new TG(RR, tR);
+          const JR = new RJ;
+          fR = new jG(RR, tR, iR, JR), VR = new kJ(RR, tR), KR = new DR(RR, VR), wR = new iG(RR, tR, fR.nextCell), rR = new EG(RR), eR.push((0, ZR.G)((0, uR.createElement)(uG, {
+            hud: qR,
+            guide: wR,
+            tracker: JR,
+            placement: VR
+          }, (0, uR.createElement)(fy, {
+            hud: qR
+          }), (0, uR.createElement)(cR, {
+            journal: KR
+          }), (0, uR.createElement)(RG, {
+            placement: VR
+          }), (0, uR.createElement)(Jy, {
+            placement: VR
           })), {
-            content: (0, NW.createElement)(oO, {
-              journal: ZW,
-              hud: LW,
-              guide: xW
+            content: (0, uR.createElement)(vG, {
+              journal: KR,
+              hud: qR,
+              guide: wR
             })
           }))
         },
-        hZ: () => {
-          lW.hZ(), wW.hZ(), tW.hZ(), ZW.hZ()
+        gK: () => {
+          rR.gK(), fR.gK(), VR.gK(), KR.gK()
         },
-        onPlayerAttemptAltAction: (WW, iW, OW, mW, EW, NW) => {
-          if (null !== NW) return void wW.holdPressOnEntity();
-          const PW = void 0 === iW ? null : [iW, OW, mW];
-          return wW.attemptAltAction(PW)
+        onPlayerAttemptAltAction: (RR, JR, GR, yR, tR, uR) => {
+          if (null !== uR) return void fR.holdPressOnEntity();
+          const ZR = void 0 === JR ? null : [JR, GR, yR];
+          return fR.attemptAltAction(ZR)
         },
         onPlayerClickUp: () => {
-          wW.endPress()
+          fR.endPress()
         },
-        onAfterRender: (WW, iW) => {
-          tW.afterRender(iW), wW.afterRender(iW), xW.afterRender(iW)
+        onAfterRender: (RR, JR) => {
+          VR.afterRender(JR), fR.afterRender(JR), wR.afterRender(JR)
         },
         onClose: () => {
-          for (const WW of AW) WW();
-          cW.dispose(), wW.dispose(), tW.dispose(), cW = null, wW = null, tW = null, ZW = null, xW = null, lW = null
+          for (const RR of eR) RR();
+          iR.dispose(), fR.dispose(), VR.dispose(), iR = null, fR = null, VR = null, KR = null, wR = null, rR = null
         },
-        onReceivedMessageFromServer: (WW, iW) => {
-          if ("plotsPlot" === WW) LW.receivePlot(iW);
-          else if ("plotsBlueprint" === WW) {
-            const WW = iW;
-            wW.yZ(WW), tW.yZ(WW)
-          } else "plotsJournal" === WW ? ZW.yZ(iW) : "plotsJournalOpen" === WW ? ZW.openFromServer(iW) : "plotsPreviewEnd" === WW ? tW.endFromServer() : "plotsGuide" === WW ? LW.receiveGuide(iW) : "plotsGuideDone" === WW && LW.receiveGuideDone()
+        onReceivedMessageFromServer: (RR, JR) => {
+          if ("plotsPlot" === RR) qR.receivePlot(JR);
+          else if ("plotsBlueprint" === RR) {
+            const RR = JR;
+            fR.BK(RR), VR.BK(RR)
+          } else "plotsJournal" === RR ? KR.BK(JR) : "plotsJournalOpen" === RR ? KR.openFromServer(JR) : "plotsPreviewEnd" === RR ? VR.endFromServer() : "plotsGuide" === RR ? qR.receiveGuide(JR) : "plotsGuideDone" === RR && qR.receiveGuideDone()
         }
       }
     }
   },
-  39687: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => LW
+  39679: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR
     });
-    var mW = OW(39679);
-    const EW = 5,
-      NW = [0, 0, 0],
-      PW = {
+    var yR = GR(39672);
+    const tR = 5,
+      uR = [0, 0, 0],
+      ZR = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function LW(WW, iW, OW, LW, cW, wW) {
-      let [tW, ZW, xW] = LW;
-      const lW = (tW + .5 - OW[0]) ** 2 + (ZW - OW[1]) ** 2 + (xW + .5 - OW[2]) ** 2;
-      let AW = null;
-      lW <= wW ** 2 && (NW[0] = tW + .5, NW[1] = ZW + cW, NW[2] = xW + .5, AW = iW.projectWorldPosToViewport(NW));
-      const bW = null !== AW && AW.x > -EW && AW.x < 100 + EW && AW.y > -EW && AW.y < 100 + EW;
-      return (0, mW.h)(WW, !bW), bW ? (PW.x = AW.x, PW.y = AW.y, PW.distSq = lW, PW) : null
+    function qR(RR, JR, GR, qR, iR, fR) {
+      let [VR, KR, wR] = qR;
+      const rR = (VR + .5 - GR[0]) ** 2 + (KR - GR[1]) ** 2 + (wR + .5 - GR[2]) ** 2;
+      let eR = null;
+      rR <= fR ** 2 && (uR[0] = VR + .5, uR[1] = KR + iR, uR[2] = wR + .5, eR = JR.projectWorldPosToViewport(uR));
+      const aR = null !== eR && eR.x > -tR && eR.x < 100 + tR && eR.y > -tR && eR.y < 100 + tR;
+      return (0, yR.h)(RR, !aR), aR ? (ZR.x = eR.x, ZR.y = eR.y, ZR.distSq = rR, ZR) : null
     }
   },
-  40371: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW,
-      h: () => NW
+  40422: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      d: () => uR
     });
-    const mW = 1 / .6,
-      EW = {
+    const yR = 1 / .6,
+      tR = {
         kind: "smokePuff"
       };
-    class NW {
-      constructor(WW, iW, OW) {
-        this.style = WW, this.aZ = iW, this.half = OW, this.particles = null, this.lastFrame = -1
+    class uR {
+      constructor(RR, JR, GR) {
+        this.style = RR, this.hK = JR, this.half = GR, this.particles = null, this.lastFrame = -1
       }
-      emit(WW, iW, OW) {
-        let NW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return OW !== this.lastFrame && (this.lastFrame = OW, this.particles || (this.particles = WW.createParticles(function(WW, iW) {
+      emit(RR, JR, GR) {
+        let uR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return GR !== this.lastFrame && (this.lastFrame = GR, this.particles || (this.particles = RR.createParticles(function(RR, JR) {
           const [
-            [OW, NW, PW],
-            [LW, cW, wW]
-          ] = WW.colours;
+            [GR, uR, ZR],
+            [qR, iR, fR]
+          ] = RR.colours;
           return {
-            texture: WW.soft ? EW : "square_particle",
-            aZ: iW,
-            minLifeTime: WW.life[0] / mW,
-            maxLifeTime: WW.life[1] / mW,
-            minEmitPower: WW.power[0] * mW,
-            maxEmitPower: WW.power[1] * mW,
-            minSize: WW.size[0],
-            maxSize: WW.size[1],
+            texture: RR.soft ? tR : "square_particle",
+            hK: JR,
+            minLifeTime: RR.life[0] / yR,
+            maxLifeTime: RR.life[1] / yR,
+            minEmitPower: RR.power[0] * yR,
+            maxEmitPower: RR.power[1] * yR,
+            minSize: RR.size[0],
+            maxSize: RR.size[1],
             emitRate: 0,
-            gravity: [0, WW.lift * mW * mW, 0],
-            dir1: [-WW.spread, 1, -WW.spread],
-            dir2: [WW.spread, 1, WW.spread],
+            gravity: [0, RR.lift * yR * yR, 0],
+            dir1: [-RR.spread, 1, -RR.spread],
+            dir2: [RR.spread, 1, RR.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [OW, NW, PW, WW.alpha],
-              maxColor: [LW, cW, wW, WW.alpha]
+              minColor: [GR, uR, ZR, RR.alpha],
+              maxColor: [qR, iR, fR, RR.alpha]
             }, {
               timeFraction: 1,
-              minColor: [OW, NW, PW, 0],
-              maxColor: [LW, cW, wW, 0]
+              minColor: [GR, uR, ZR, 0],
+              maxColor: [qR, iR, fR, 0]
             }],
-            blendMode: WW.blendMode
+            blendMode: RR.blendMode
           }
-        }(this.style, this.aZ), {
-          pos: iW,
+        }(this.style, this.hK), {
+          pos: JR,
           half: this.half
-        })), this.particles.moveTo(iW, this.half), this.particles.emit(NW), !0)
+        })), this.particles.moveTo(JR, this.half), this.particles.emit(uR), !0)
       }
       dispose() {
-        var WW;
-        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null
+        var RR;
+        null === (RR = this.particles) || void 0 === RR || RR.stop(), this.particles = null
       }
     }
   },
-  40814: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      g: () => LW,
-      k: () => cW
+  40801: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      e: () => qR,
+      g: () => iR
     });
-    const mW = new Map,
-      EW = [];
+    const yR = new Map,
+      tR = [];
 
-    function NW() {
-      for (const WW of EW) WW()
+    function uR() {
+      for (const RR of tR) RR()
     }
 
-    function PW(WW) {
-      var iW;
-      return mW.set(WW, (null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : 0) + 1), NW(), () => {
-        const iW = mW.get(WW) - 1;
-        0 === iW ? mW.delete(WW) : mW.set(WW, iW), NW()
+    function ZR(RR) {
+      var JR;
+      return yR.set(RR, (null !== (JR = yR.get(RR)) && void 0 !== JR ? JR : 0) + 1), uR(), () => {
+        const JR = yR.get(RR) - 1;
+        0 === JR ? yR.delete(RR) : yR.set(RR, JR), uR()
       }
     }
 
-    function LW() {
-      return [...mW.keys()]
+    function qR() {
+      return [...yR.keys()]
     }
 
-    function cW(WW) {
-      EW.push(WW)
+    function iR(RR) {
+      tR.push(RR)
     }
   },
-  38039: (WW, iW, OW) => {
-    OW.d(iW, {
-      C: () => gW,
-      G: () => DW,
-      I: () => eW,
-      M: () => VW,
-      d: () => cW,
-      h: () => HW,
-      i: () => LW,
-      m: () => dW,
-      o: () => JW,
-      s: () => SW,
-      u: () => oW,
-      w: () => uW,
-      x: () => TW,
-      y: () => vW
+  37999: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => DR,
+      D: () => PR,
+      c: () => iR,
+      e: () => bR,
+      f: () => qR,
+      g: () => NR,
+      j: () => pR,
+      l: () => XR,
+      m: () => xR,
+      o: () => OR,
+      p: () => lR,
+      t: () => HR,
+      u: () => oR,
+      x: () => cR
     });
-    var mW = OW(39);
-    const EW = {
+    var yR = GR(46);
+    const tR = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      NW = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      PW = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      LW = NW.filter((WW => "docsButton" !== WW)),
-      cW = PW.filter((WW => "aiHelperButton" !== WW)),
-      wW = "codeEditorTutorials",
-      tW = {
+      uR = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      ZR = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      qR = uR.filter((RR => "docsButton" !== RR)),
+      iR = ZR.filter((RR => "aiHelperButton" !== RR)),
+      fR = "codeEditorTutorials",
+      VR = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      ZW = {
+      KR = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let xW = null,
-      lW = null;
-    const AW = new Set,
-      bW = new Set;
-    let jW = null;
-    const UW = new Set,
-      kW = new Set;
+    let wR = null,
+      rR = null;
+    const eR = new Set,
+      aR = new Set;
+    let LR = null;
+    const nR = new Set,
+      UR = new Set;
 
-    function sW() {
-      kW.forEach((WW => {
-        WW()
+    function WR() {
+      UR.forEach((RR => {
+        RR()
       }))
     }
 
-    function MW() {
-      if (!xW) {
-        const WW = mW.i.getItem(wW);
-        xW = {
+    function AR() {
+      if (!wR) {
+        const RR = yR.i.getItem(fR);
+        wR = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof WW && null !== WW ? WW : {}
+          ..."object" === typeof RR && null !== RR ? RR : {}
         }
       }
-      return xW
+      return wR
     }
 
-    function KW(WW) {
-      const iW = MW();
-      iW[WW] || (xW = {
-        ...iW,
-        [WW]: !0
-      }, mW.i.setItem(wW, xW))
+    function CR(RR) {
+      const JR = AR();
+      JR[RR] || (wR = {
+        ...JR,
+        [RR]: !0
+      }, yR.i.setItem(fR, wR))
     }
 
-    function SW(WW) {
-      return "docsOverview" === WW ? NW : "aiHelperOverview" === WW ? PW : lW ? EW[lW] : []
+    function XR(RR) {
+      return "docsOverview" === RR ? uR : "aiHelperOverview" === RR ? ZR : rR ? tR[rR] : []
     }
 
-    function YW(WW) {
-      return ("worldCodeButton" !== WW || !MW().worldCodeIntroShown) && !UW.has(WW)
+    function MR(RR) {
+      return ("worldCodeButton" !== RR || !AR().worldCodeIntroShown) && !nR.has(RR)
     }
 
-    function yW(WW) {
-      var iW;
-      return (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW ? jW.stepsDone : AW
+    function BR(RR) {
+      var JR;
+      return (null === (JR = LR) || void 0 === JR ? void 0 : JR.name) === RR ? LR.stepsDone : eR
     }
 
-    function TW(WW, iW) {
-      if (! function(WW) {
-          return jW ? jW.name === WW : "welcome" === WW
-        }(WW) || !YW(iW) || yW(WW).has(iW)) return !1;
-      if (jW) return !0;
-      const OW = tW[iW];
-      return OW ? !MW()[OW] || bW.has(iW) : !MW()[ZW[WW]]
+    function lR(RR, JR) {
+      if (! function(RR) {
+          return LR ? LR.name === RR : "welcome" === RR
+        }(RR) || !MR(JR) || BR(RR).has(JR)) return !1;
+      if (LR) return !0;
+      const GR = VR[JR];
+      return GR ? !AR()[GR] || aR.has(JR) : !AR()[KR[RR]]
     }
 
-    function JW(WW) {
-      var iW;
-      return null !== (iW = SW(WW).find((iW => TW(WW, iW)))) && void 0 !== iW ? iW : null
+    function pR(RR) {
+      var JR;
+      return null !== (JR = XR(RR).find((JR => lR(RR, JR)))) && void 0 !== JR ? JR : null
     }
 
-    function hW(WW) {
-      var iW;
-      KW(ZW[WW]), (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW && (jW = null)
+    function gR(RR) {
+      var JR;
+      CR(KR[RR]), (null === (JR = LR) || void 0 === JR ? void 0 : JR.name) === RR && (LR = null)
     }
 
-    function HW(WW) {
-      const iW = (jW ? [jW.name] : ["welcome", "docsOverview"]).find((iW => JW(iW) === WW));
-      if (!iW) return;
-      yW(iW).add(WW);
-      const OW = tW[WW];
-      OW && (KW(OW), jW || bW.add(WW)), null === JW(iW) && hW(iW), sW()
+    function bR(RR) {
+      const JR = (LR ? [LR.name] : ["welcome", "docsOverview"]).find((JR => pR(JR) === RR));
+      if (!JR) return;
+      BR(JR).add(RR);
+      const GR = VR[RR];
+      GR && (CR(GR), LR || aR.add(RR)), null === pR(JR) && gR(JR), WR()
     }
 
-    function nW(WW, iW) {
-      const OW = SW(WW),
-        mW = yW(WW);
-      for (let EW = OW.indexOf(iW) - 1; EW >= 0; EW--)
-        if (mW.has(OW[EW]) && YW(OW[EW])) return OW[EW];
+    function vR(RR, JR) {
+      const GR = XR(RR),
+        yR = BR(RR);
+      for (let tR = GR.indexOf(JR) - 1; tR >= 0; tR--)
+        if (yR.has(GR[tR]) && MR(GR[tR])) return GR[tR];
       return null
     }
 
-    function uW(WW, iW) {
-      return null !== nW(WW, iW)
+    function OR(RR, JR) {
+      return null !== vR(RR, JR)
     }
 
-    function oW(WW, iW) {
-      const OW = nW(WW, iW);
-      OW && (yW(WW).delete(OW), sW())
+    function xR(RR, JR) {
+      const GR = vR(RR, JR);
+      GR && (BR(RR).delete(GR), WR())
     }
 
-    function dW(WW) {
-      hW(WW), "welcome" === WW && SW("welcome").forEach((WW => {
-        const iW = tW[WW];
-        iW && KW(iW)
-      })), sW()
+    function NR(RR) {
+      gR(RR), "welcome" === RR && XR("welcome").forEach((RR => {
+        const JR = VR[RR];
+        JR && CR(JR)
+      })), WR()
     }
 
-    function eW(WW) {
-      jW = {
-        name: WW,
+    function DR(RR) {
+      LR = {
+        name: RR,
         stepsDone: new Set
-      }, sW()
+      }, WR()
     }
 
-    function vW() {
-      (jW || 0 !== AW.size || 0 !== bW.size) && (jW = null, AW.clear(), bW.clear(), sW())
+    function HR() {
+      (LR || 0 !== eR.size || 0 !== aR.size) && (LR = null, eR.clear(), aR.clear(), WR())
     }
 
-    function gW(WW, iW) {
-      const OW = iW ? WW : lW === WW ? null : lW;
-      OW !== lW && (lW = OW, sW())
+    function oR(RR, JR) {
+      const GR = JR ? RR : rR === RR ? null : rR;
+      GR !== rR && (rR = GR, WR())
     }
 
-    function DW(WW, iW) {
-      UW.has(WW) === iW && (iW ? UW.delete(WW) : UW.add(WW), sW())
+    function cR(RR, JR) {
+      nR.has(RR) === JR && (JR ? nR.delete(RR) : nR.add(RR), WR())
     }
 
-    function VW(WW) {
-      return kW.add(WW), () => {
-        kW.delete(WW)
+    function PR(RR) {
+      return UR.add(RR), () => {
+        UR.delete(RR)
       }
     }
   },
-  39679: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      h: () => NW
+  39672: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      h: () => uR
     });
-    const mW = new WeakMap;
+    const yR = new WeakMap;
 
-    function EW(WW) {
-      let iW = mW.get(WW);
-      return iW || (iW = {
-        hidden: WW.hidden,
+    function tR(RR) {
+      let JR = yR.get(RR);
+      return JR || (JR = {
+        hidden: RR.hidden,
         x: NaN,
         y: NaN
-      }, mW.set(WW, iW)), iW
+      }, yR.set(RR, JR)), JR
     }
 
-    function NW(WW, iW) {
-      const OW = EW(WW);
-      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
+    function uR(RR, JR) {
+      const GR = tR(RR);
+      GR.hidden !== JR && (GR.hidden = JR, RR.hidden = JR)
     }
 
-    function PW(WW, iW, OW) {
-      const mW = EW(WW);
-      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
+    function ZR(RR, JR, GR) {
+      const yR = tR(RR);
+      yR.x === JR && yR.y === GR || (yR.x = JR, yR.y = GR, RR.style.translate = `${JR}vw ${GR}vh`)
     }
   },
-  39606: (WW, iW, OW) => {
-    OW.d(iW, {
-      C: () => yW,
-      F: () => KW,
-      G: () => MW,
-      J: () => xW,
-      M: () => bW,
-      N: () => UW,
-      O: () => EW,
-      c: () => tW,
-      f: () => cW,
-      j: () => sW,
-      l: () => wW,
-      n: () => LW,
-      q: () => PW,
-      t: () => NW,
-      w: () => YW,
-      x: () => lW,
-      y: () => SW
+  39585: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => CR,
+      E: () => AR,
+      H: () => wR,
+      J: () => aR,
+      N: () => nR,
+      R: () => tR,
+      b: () => VR,
+      c: () => iR,
+      d: () => WR,
+      e: () => fR,
+      g: () => qR,
+      i: () => ZR,
+      l: () => uR,
+      o: () => MR,
+      s: () => rR,
+      v: () => XR,
+      y: () => BR
     });
-    var mW = OW(5797);
+    var yR = GR(5938);
 
-    function EW(WW) {
-      return Math.floor(WW).toLocaleString("en-US")
+    function tR(RR) {
+      return Math.floor(RR).toLocaleString("en-US")
     }
-    const NW = 2e3,
-      PW = .005,
-      LW = .001,
-      cW = 2,
-      wW = "Fluid Tank",
-      tW = "Coolant Mixer",
-      ZW = 144;
+    const uR = 2e3,
+      ZR = .005,
+      qR = .001,
+      iR = 2,
+      fR = "Fluid Tank",
+      VR = "Coolant Mixer",
+      KR = 144;
 
-    function xW(WW) {
-      const iW = WW.split("|")[0];
-      return (0, mW.p)(iW) ? iW === mW.e ? "cryo" : "water" : null
+    function wR(RR) {
+      const JR = RR.split("|")[0];
+      return (0, yR.i)(JR) ? JR === yR.c ? "cryo" : "water" : null
     }
-    const lW = [
+    const rR = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -3586,43 +3586,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      AW = 63;
+      eR = 63;
 
-    function bW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const OW = iW ? function(WW, iW, OW) {
-        const mW = lW.findIndex((mW => {
-          let [EW, NW, PW] = mW;
-          return EW === WW && NW === iW && PW === OW
+    function aR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const GR = JR ? function(RR, JR, GR) {
+        const yR = rR.findIndex((yR => {
+          let [tR, uR, ZR] = yR;
+          return tR === RR && uR === JR && ZR === GR
         }));
-        return mW < 0 ? 0 : 1 << mW
-      }(iW[0], iW[1], iW[2]) : 0;
-      return "maker" === WW ? {
-        kind: WW,
-        faces: OW
-      } : "user" === WW ? {
-        kind: WW,
-        faces: AW & ~OW
+        return yR < 0 ? 0 : 1 << yR
+      }(JR[0], JR[1], JR[2]) : 0;
+      return "maker" === RR ? {
+        kind: RR,
+        faces: GR
+      } : "user" === RR ? {
+        kind: RR,
+        faces: eR & ~GR
       } : {
-        kind: WW,
-        faces: AW
+        kind: RR,
+        faces: eR
       }
     }
 
-    function jW(WW) {
-      return "pipe" === WW || "tank" === WW || "maker" === WW
+    function LR(RR) {
+      return "pipe" === RR || "tank" === RR || "maker" === RR
     }
 
-    function UW(WW, iW, OW) {
-      return 0 !== (WW.faces & 1 << OW) && 0 !== (iW.faces & 1 << (1 ^ OW)) && (jW(WW.kind) || jW(iW.kind))
+    function nR(RR, JR, GR) {
+      return 0 !== (RR.faces & 1 << GR) && 0 !== (JR.faces & 1 << (1 ^ GR)) && (LR(RR.kind) || LR(JR.kind))
     }
-    const kW = (WW, iW, OW, mW) => ({
-        input: WW,
-        inputAmount: mW,
-        output: iW,
-        outputAmount: OW
+    const UR = (RR, JR, GR, yR) => ({
+        input: RR,
+        inputAmount: yR,
+        output: JR,
+        outputAmount: GR
       }),
-      sW = {
+      WR = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -3641,7 +3641,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [kW("Uranium Grit", "Uranium Pellet", 1, 12), kW("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [UR("Uranium Grit", "Uranium Pellet", 1, 12), UR("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -3662,68 +3662,68 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [kW("Biomass", "", 0, 1)],
+          recipes: [UR("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: ZW,
+          cryoMade: KR,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function MW(WW, iW) {
-      return 1e3 * (null !== iW && void 0 !== iW ? iW : 0) / WW.opMs
+    function AR(RR, JR) {
+      return 1e3 * (null !== JR && void 0 !== JR ? JR : 0) / RR.opMs
     }
 
-    function KW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const OW = MW(sW["Coolant Mixer"], ZW) * iW;
-      return WW <= 0 ? 0 : Math.ceil(WW / OW - 1e-9)
+    function CR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const GR = AR(WR["Coolant Mixer"], KR) * JR;
+      return RR <= 0 ? 0 : Math.ceil(RR / GR - 1e-9)
     }
-    const SW = "baf2Water",
-      YW = "baf2waterclose",
-      yW = "baf2wateropen"
+    const XR = "baf2Water",
+      MR = "baf2waterclose",
+      BR = "baf2wateropen"
   },
-  40804: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      e: () => ZW
+  40792: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      c: () => KR
     });
-    var mW = OW(5725),
-      EW = OW(5747),
-      NW = OW(5766);
-    const PW = [0, 0, 0, 1, 1, 1],
-      LW = (0, EW.c)([
+    var yR = GR(5844),
+      tR = GR(5879),
+      uR = GR(5898);
+    const ZR = [0, 0, 0, 1, 1, 1],
+      qR = (0, tR.d)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      cW = (0, EW.c)([
+      iR = (0, tR.d)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      wW = (0, EW.c)([
+      fR = (0, tR.d)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      tW = [0, 1, 2, 3].map((WW => (0, EW.c)((0, EW.q)([
+      VR = [0, 1, 2, 3].map((RR => (0, tR.d)((0, tR.m)([
         [3, 2, 0, 5, 7, 3]
-      ], WW))));
+      ], RR))));
 
-    function ZW(WW) {
+    function KR(RR) {
       const {
-        sj: iW,
-        model: OW,
-        blockModel: EW,
-        meta: ZW
-      } = mW.j[WW];
-      return void 0 !== iW ? iW : "CentreCross" === OW ? LW : null !== EW && void 0 !== EW && EW.startsWith("torch") ? ZW.halfblockPlacement === NW.d.side ? tW[ZW.rot - 1] : ZW.halfblockPlacement === NW.d.top ? wW : cW : PW
+        AL: JR,
+        model: GR,
+        blockModel: tR,
+        meta: KR
+      } = yR.l[RR];
+      return void 0 !== JR ? JR : "CentreCross" === GR ? qR : null !== tR && void 0 !== tR && tR.startsWith("torch") ? KR.halfblockPlacement === uR.d.side ? VR[KR.rot - 1] : KR.halfblockPlacement === uR.d.top ? fR : iR : ZR
     }
   },
-  39595: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => dW,
-      f: () => eW
+  39571: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => NR,
+      g: () => DR
     });
-    var mW = OW(5725),
-      EW = OW(5754);
-    const NW = [
+    var yR = GR(5844),
+      tR = GR(5886);
+    const uR = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -3731,45 +3731,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var PW = OW(5772),
-      LW = OW(39392),
-      cW = OW(5766);
-    const wW = {
+    var ZR = GR(5907),
+      qR = GR(39380),
+      iR = GR(5898);
+    const fR = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function tW(WW) {
-      let [iW, OW] = WW;
-      return [-OW, iW]
+    function VR(RR) {
+      let [JR, GR] = RR;
+      return [-GR, JR]
     }
 
-    function ZW(WW, iW) {
-      return WW[0] === iW[0] && WW[1] === iW[1]
+    function KR(RR, JR) {
+      return RR[0] === JR[0] && RR[1] === JR[1]
     }
 
-    function xW(WW, iW) {
-      return WW[0] * iW[0] + WW[1] * iW[1] === 0
+    function wR(RR, JR) {
+      return RR[0] * JR[0] + RR[1] * JR[1] === 0
     }
-    const lW = [
+    const rR = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var AW = OW(5790);
+    var eR = GR(5935);
 
-    function bW(WW, iW, OW, mW, EW) {
-      return iW < AW.p || iW >= AW.p + AW.t || Math.floor(WW / AW.A) === Math.floor(mW / AW.A) && Math.floor(OW / AW.A) === Math.floor(EW / AW.A)
+    function aR(RR, JR, GR, yR, tR) {
+      return JR < eR.t || JR >= eR.t + eR.v || Math.floor(RR / eR.B) === Math.floor(yR / eR.B) && Math.floor(GR / eR.B) === Math.floor(tR / eR.B)
     }
-    const jW = "Splitter",
-      UW = "Sorting Gate",
-      kW = new Set(AW.O),
-      sW = new Set([...AW.O, "Belt Loader", "Fast Loader", UW]),
-      MW = new Set(AW.w),
-      KW = [
+    const LR = "Splitter",
+      nR = "Sorting Gate",
+      UR = new Set(eR.S),
+      WR = new Set([...eR.S, "Belt Loader", "Fast Loader", nR]),
+      AR = new Set(eR.y),
+      CR = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -3778,259 +3778,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function SW(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = mW.j[WW]) || void 0 === OW ? void 0 : OW.meta.rootName) && void 0 !== iW ? iW : ""
+    function XR(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = yR.l[RR]) || void 0 === GR ? void 0 : GR.meta.rootName) && void 0 !== JR ? JR : ""
     }
 
-    function YW(WW) {
-      return SW(WW) === AW.i && (0, AW.V)(mW.j[WW].name)
+    function MR(RR) {
+      return XR(RR) === eR.l && (0, eR.eb)(yR.l[RR].name)
     }
-    var yW = OW(5762),
-      TW = OW(5780);
-    const JW = [
+    var BR = GR(5895),
+      lR = GR(5919);
+    const pR = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function hW(WW) {
-      var iW, OW;
-      const EW = null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta;
-      return (null === EW || void 0 === EW ? void 0 : EW.rootName) !== TW.i ? null : {
-        rot: null !== (OW = EW.rot) && void 0 !== OW ? OW : 1,
-        half: (0, TW.e)(EW.rootName, EW.metaStr)
+    function gR(RR) {
+      var JR, GR;
+      const tR = null === (JR = yR.l[RR]) || void 0 === JR ? void 0 : JR.meta;
+      return (null === tR || void 0 === tR ? void 0 : tR.rootName) !== lR.n ? null : {
+        rot: null !== (GR = tR.rot) && void 0 !== GR ? GR : 1,
+        half: (0, lR.f)(tR.rootName, tR.metaStr)
       }
     }
 
-    function HW(WW, iW, OW, mW) {
-      return hW(WW(iW, OW, mW))
+    function bR(RR, JR, GR, yR) {
+      return gR(RR(JR, GR, yR))
     }
 
-    function nW(WW, iW, OW, mW, EW) {
+    function vR(RR, JR, GR, yR, tR) {
       let {
-        rot: NW,
-        half: PW
-      } = EW;
-      const [LW, cW] = (0, TW.h)(NW, PW), wW = HW(WW, iW + LW, OW, mW + cW);
-      return null !== wW && wW.rot === NW && wW.half === TW.l[PW]
+        rot: uR,
+        half: ZR
+      } = tR;
+      const [qR, iR] = (0, lR.l)(uR, ZR), fR = bR(RR, JR + qR, GR, yR + iR);
+      return null !== fR && fR.rot === uR && fR.half === lR.r[ZR]
     }
-    var uW = OW(39602);
-    const oW = [new class {
+    var OR = GR(39576);
+    const xR = [new class {
       constructor() {
-        this.reshapeOffsets = lW
+        this.reshapeOffsets = rR
       }
-      handles(WW) {
-        var iW;
-        return "Stairs" === (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.model)
+      handles(RR) {
+        var JR;
+        return "Stairs" === (null === (JR = yR.l[RR]) || void 0 === JR ? void 0 : JR.model)
       }
-      affects(WW) {
-        return this.handles(WW)
+      affects(RR) {
+        return this.handles(RR)
       }
-      shape(WW, iW, OW, EW, NW) {
-        const PW = this.stairsOf(NW),
-          LW = this.cornerAt(WW, iW, OW, EW, PW),
-          wW = PW.half === cW.d.top ? "top" : "bot";
-        return (0, mW.l)(`${mW.j[NW].meta.rootName}|meta|rot${PW.rot}|${wW}${null===LW?"":`|${LW}`}`)
+      shape(RR, JR, GR, tR, uR) {
+        const ZR = this.stairsOf(uR),
+          qR = this.cornerAt(RR, JR, GR, tR, ZR),
+          fR = ZR.half === iR.d.top ? "top" : "bot";
+        return (0, yR.n)(`${yR.l[uR].meta.rootName}|meta|rot${ZR.rot}|${fR}${null===qR?"":`|${qR}`}`)
       }
-      stairsOf(WW) {
+      stairsOf(RR) {
         const {
-          rot: iW,
-          halfblockPlacement: OW
-        } = mW.j[WW].meta;
+          rot: JR,
+          halfblockPlacement: GR
+        } = yR.l[RR].meta;
         return {
-          rot: iW,
-          half: OW
+          rot: JR,
+          half: GR
         }
       }
-      stairsAt(WW, iW, OW, mW) {
-        const EW = WW(iW, OW, mW);
-        return this.handles(EW) ? this.stairsOf(EW) : null
+      stairsAt(RR, JR, GR, yR) {
+        const tR = RR(JR, GR, yR);
+        return this.handles(tR) ? this.stairsOf(tR) : null
       }
-      cornerAt(WW, iW, OW, mW, EW) {
+      cornerAt(RR, JR, GR, yR, tR) {
         let {
-          rot: NW,
-          half: PW
-        } = EW;
-        const LW = wW[NW],
-          cW = EW => {
-            let [LW, cW] = EW;
-            const wW = this.stairsAt(WW, iW + LW, OW, mW + cW);
-            return null !== wW && wW.rot === NW && wW.half === PW
+          rot: uR,
+          half: ZR
+        } = tR;
+        const qR = fR[uR],
+          iR = tR => {
+            let [qR, iR] = tR;
+            const fR = this.stairsAt(RR, JR + qR, GR, yR + iR);
+            return null !== fR && fR.rot === uR && fR.half === ZR
           },
-          lW = this.stairsAt(WW, iW + LW[0], OW, mW + LW[1]);
-        if (null !== lW && lW.half === PW) {
-          const WW = wW[lW.rot];
-          if (xW(LW, WW) && !cW([-WW[0], -WW[1]])) return ZW(WW, tW(LW)) ? "outerLeft" : "outerRight"
+          rR = this.stairsAt(RR, JR + qR[0], GR, yR + qR[1]);
+        if (null !== rR && rR.half === ZR) {
+          const RR = fR[rR.rot];
+          if (wR(qR, RR) && !iR([-RR[0], -RR[1]])) return KR(RR, VR(qR)) ? "outerLeft" : "outerRight"
         }
-        const AW = this.stairsAt(WW, iW - LW[0], OW, mW - LW[1]);
-        if (null !== AW && AW.half === PW) {
-          const WW = wW[AW.rot];
-          if (xW(LW, WW) && !cW(WW)) return ZW(WW, tW(LW)) ? "innerLeft" : "innerRight"
+        const eR = this.stairsAt(RR, JR - qR[0], GR, yR - qR[1]);
+        if (null !== eR && eR.half === ZR) {
+          const RR = fR[eR.rot];
+          if (wR(qR, RR) && !iR(RR)) return KR(RR, VR(qR)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = NW, this.rootIds = new Set(EW.k.map((WW => (0, mW.l)(WW))))
+        this.reshapeOffsets = uR, this.rootIds = new Set(tR.i.map((RR => (0, yR.n)(RR))))
       }
-      handles(WW) {
-        var iW;
-        const OW = null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta;
-        return void 0 !== OW && this.rootIds.has(OW.rootId)
+      handles(RR) {
+        var JR;
+        const GR = null === (JR = yR.l[RR]) || void 0 === JR ? void 0 : JR.meta;
+        return void 0 !== GR && this.rootIds.has(GR.rootId)
       }
-      affects(WW) {
-        return this.handles(WW)
+      affects(RR) {
+        return this.handles(RR)
       }
-      placedBy(WW) {
-        return mW.j[WW].meta.rootName === EW.t ? null : EW.t
+      placedBy(RR) {
+        return yR.l[RR].meta.rootName === tR.p ? null : tR.p
       }
-      shape(WW, iW, OW, NW, PW) {
+      shape(RR, JR, GR, uR, ZR) {
         const {
-          rootId: LW,
-          rootName: cW,
-          rot: wW
-        } = mW.j[PW].meta;
-        let tW = 0;
-        return EW.y[wW].forEach(((EW, PW) => {
-          var cW;
-          let [ZW, xW, lW] = EW;
-          const AW = null === (cW = mW.j[WW(iW + ZW, OW + xW, NW + lW)]) || void 0 === cW ? void 0 : cW.meta;
-          (null === AW || void 0 === AW ? void 0 : AW.rootId) === LW && AW.rot === wW && (tW |= 1 << PW)
-        })), (0, mW.l)((0, EW.g)(cW, wW, tW))
+          rootId: qR,
+          rootName: iR,
+          rot: fR
+        } = yR.l[ZR].meta;
+        let VR = 0;
+        return tR.t[fR].forEach(((tR, ZR) => {
+          var iR;
+          let [KR, wR, rR] = tR;
+          const eR = null === (iR = yR.l[RR(JR + KR, GR + wR, uR + rR)]) || void 0 === iR ? void 0 : iR.meta;
+          (null === eR || void 0 === eR ? void 0 : eR.rootId) === qR && eR.rot === fR && (VR |= 1 << ZR)
+        })), (0, yR.n)((0, tR.h)(iR, fR, VR))
       }
-    }, ...PW.c.map((WW => new LW.d(WW))), new class {
+    }, ...ZR.d.map((RR => new qR.d(RR))), new class {
       constructor() {
-        this.reshapeOffsets = KW
+        this.reshapeOffsets = CR
       }
-      handles(WW) {
-        const iW = SW(WW);
-        return kW.has(iW) || iW === AW.i
+      handles(RR) {
+        const JR = XR(RR);
+        return UR.has(JR) || JR === eR.l
       }
-      affects(WW) {
-        const iW = SW(WW);
-        return sW.has(iW) || MW.has(iW) || iW === jW || iW === AW.i || void 0 !== AW.d[iW]
+      affects(RR) {
+        const JR = XR(RR);
+        return WR.has(JR) || AR.has(JR) || JR === LR || JR === eR.l || void 0 !== eR.d[JR]
       }
-      shape(WW, iW, OW, EW, NW, PW) {
+      shape(RR, JR, GR, tR, uR, ZR) {
         const {
-          rootName: LW,
-          rot: cW
-        } = mW.j[NW].meta;
-        return LW === AW.i ? PW ? NW : function(WW, iW, OW, EW, NW) {
-          const [PW, LW] = AW.h[NW - 1];
-          for (let cW = 1; cW <= AW.L; cW++) {
-            const [wW, tW] = [iW - PW * cW, EW - LW * cW], ZW = WW(wW, OW, tW);
-            if (SW(ZW) === AW.i && mW.j[ZW].meta.rot === NW && bW(iW, OW, EW, wW, tW)) return (0, mW.l)((0, AW.bb)(NW, !YW(ZW)))
+          rootName: qR,
+          rot: iR
+        } = yR.l[uR].meta;
+        return qR === eR.l ? ZR ? uR : function(RR, JR, GR, tR, uR) {
+          const [ZR, qR] = eR.h[uR - 1];
+          for (let iR = 1; iR <= eR.O; iR++) {
+            const [fR, VR] = [JR - ZR * iR, tR - qR * iR], KR = RR(fR, GR, VR);
+            if (XR(KR) === eR.l && yR.l[KR].meta.rot === uR && aR(JR, GR, tR, fR, VR)) return (0, yR.n)((0, eR.lb)(uR, !MR(KR)))
           }
-          return (0, mW.l)((0, AW.bb)(NW, !1))
-        }(WW, iW, OW, EW, cW) : (0, mW.l)((0, AW.Q)(LW, cW, function(WW, iW, OW, EW, NW) {
-          const [PW, LW] = AW.h[NW - 1], cW = (NW, PW) => function(WW, iW, OW) {
-            var EW;
-            const NW = null === (EW = mW.j[WW]) || void 0 === EW ? void 0 : EW.meta;
-            if (!NW) return !1;
-            const PW = NW.rootName,
-              LW = sW.has(PW) || YW(WW);
-            if (!LW && !MW.has(PW) && PW !== jW) return !1;
-            const [cW, wW] = AW.h[NW.rot - 1];
-            if (LW && cW === -iW && wW === -OW) return !0;
-            if (MW.has(PW)) return cW === iW && wW === OW;
-            const tW = mW.j[WW].name;
-            return (PW === jW ? (0, AW.$)(tW, cW, wW) : PW === UW ? [(0, AW.R)(tW, cW, wW)] : []).some((WW => {
-              let [mW, EW] = WW;
-              return mW === -iW && EW === -OW
+          return (0, yR.n)((0, eR.lb)(uR, !1))
+        }(RR, JR, GR, tR, iR) : (0, yR.n)((0, eR.V)(qR, iR, function(RR, JR, GR, tR, uR) {
+          const [ZR, qR] = eR.h[uR - 1], iR = (uR, ZR) => function(RR, JR, GR) {
+            var tR;
+            const uR = null === (tR = yR.l[RR]) || void 0 === tR ? void 0 : tR.meta;
+            if (!uR) return !1;
+            const ZR = uR.rootName,
+              qR = WR.has(ZR) || MR(RR);
+            if (!qR && !AR.has(ZR) && ZR !== LR) return !1;
+            const [iR, fR] = eR.h[uR.rot - 1];
+            if (qR && iR === -JR && fR === -GR) return !0;
+            if (AR.has(ZR)) return iR === JR && fR === GR;
+            const VR = yR.l[RR].name;
+            return (ZR === LR ? (0, eR.hb)(VR, iR, fR) : ZR === nR ? [(0, eR.Z)(VR, iR, fR)] : []).some((RR => {
+              let [yR, tR] = RR;
+              return yR === -JR && tR === -GR
             }))
-          }(WW(iW + NW, OW, EW + PW), NW, PW), wW = WW(iW - PW, OW, EW - LW), tW = SW(wW) === jW && mW.j[wW].meta.rot === NW, ZW = 1 === AW.d[SW(WW(iW, OW - 1, EW))] || -1 === AW.d[SW(WW(iW, OW + 1, EW))];
-          if (ZW || tW || cW(-PW, -LW)) return null;
-          const xW = cW(-LW, PW),
-            lW = cW(LW, -PW);
-          if (xW === lW) return null;
-          return xW ? "turnLeft" : "turnRight"
-        }(WW, iW, OW, EW, cW)))
+          }(RR(JR + uR, GR, tR + ZR), uR, ZR), fR = RR(JR - ZR, GR, tR - qR), VR = XR(fR) === LR && yR.l[fR].meta.rot === uR, KR = 1 === eR.d[XR(RR(JR, GR - 1, tR))] || -1 === eR.d[XR(RR(JR, GR + 1, tR))];
+          if (KR || VR || iR(-ZR, -qR)) return null;
+          const wR = iR(-qR, ZR),
+            rR = iR(qR, -ZR);
+          if (wR === rR) return null;
+          return wR ? "turnLeft" : "turnRight"
+        }(RR, JR, GR, tR, iR)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = JW, this.rootId = (0, mW.l)(TW.i)
+        this.reshapeOffsets = pR, this.rootId = (0, yR.n)(lR.n)
       }
-      handles(WW) {
-        var iW;
-        return (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta.rootId) === this.rootId
+      handles(RR) {
+        var JR;
+        return (null === (JR = yR.l[RR]) || void 0 === JR ? void 0 : JR.meta.rootId) === this.rootId
       }
-      affects(WW) {
-        return this.handles(WW)
+      affects(RR) {
+        return this.handles(RR)
       }
-      shape(WW, iW, OW, EW, NW, PW) {
-        const LW = hW(NW);
-        return (0, mW.l)((cW = LW.rot, null !== (wW = PW ? this.reshapedHalf(WW, iW, OW, EW, LW) : this.placedHalf(WW, iW, OW, EW, LW.rot)) ? (0, TW.b)(TW.i, cW, wW) : 1 === cW ? TW.i : `${TW.i}|meta|rot${cW}`));
-        var cW, wW
+      shape(RR, JR, GR, tR, uR, ZR) {
+        const qR = gR(uR);
+        return (0, yR.n)((iR = qR.rot, null !== (fR = ZR ? this.reshapedHalf(RR, JR, GR, tR, qR) : this.placedHalf(RR, JR, GR, tR, qR.rot)) ? (0, lR.d)(lR.n, iR, fR) : 1 === iR ? lR.n : `${lR.n}|meta|rot${iR}`));
+        var iR, fR
       }
-      placedHalf(WW, iW, OW, mW, EW) {
-        const [NW, PW] = yW.d[EW];
-        for (const [LW, cW] of [
+      placedHalf(RR, JR, GR, yR, tR) {
+        const [uR, ZR] = BR.c[tR];
+        for (const [qR, iR] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const wW = iW + cW * NW,
-            tW = mW + cW * PW,
-            ZW = HW(WW, wW, OW, tW);
-          if (null !== ZW && ZW.rot === EW && (null === ZW.half || !nW(WW, wW, OW, tW, ZW))) return LW
+          const fR = JR + iR * uR,
+            VR = yR + iR * ZR,
+            KR = bR(RR, fR, GR, VR);
+          if (null !== KR && KR.rot === tR && (null === KR.half || !vR(RR, fR, GR, VR, KR))) return qR
         }
         return null
       }
-      reshapedHalf(WW, iW, OW, mW, EW) {
-        if (null !== EW.half && nW(WW, iW, OW, mW, EW)) return EW.half;
-        for (const NW of ["right", "left"]) {
-          const [PW, LW] = (0, TW.h)(EW.rot, NW), cW = HW(WW, iW + PW, OW, mW + LW);
-          if (null !== cW && cW.rot === EW.rot && cW.half === TW.l[NW]) return NW
+      reshapedHalf(RR, JR, GR, yR, tR) {
+        if (null !== tR.half && vR(RR, JR, GR, yR, tR)) return tR.half;
+        for (const uR of ["right", "left"]) {
+          const [ZR, qR] = (0, lR.l)(tR.rot, uR), iR = bR(RR, JR + ZR, GR, yR + qR);
+          if (null !== iR && iR.rot === tR.rot && iR.half === lR.r[uR]) return uR
         }
         return null
       }
-    }, new uW.c];
+    }, new OR.c];
 
-    function dW(WW, iW, OW, mW, EW) {
-      let NW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const PW of oW)
-        if (PW.handles(EW)) return PW.shape(WW, iW, OW, mW, EW, NW);
-      return EW
+    function NR(RR, JR, GR, yR, tR) {
+      let uR = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const ZR of xR)
+        if (ZR.handles(tR)) return ZR.shape(RR, JR, GR, yR, tR, uR);
+      return tR
     }
 
-    function eW(WW) {
-      for (const mW of oW) {
-        var iW, OW;
-        if (mW.handles(WW)) return null !== (iW = null === (OW = mW.placedBy) || void 0 === OW ? void 0 : OW.call(mW, WW)) && void 0 !== iW ? iW : null
+    function DR(RR) {
+      for (const yR of xR) {
+        var JR, GR;
+        if (yR.handles(RR)) return null !== (JR = null === (GR = yR.placedBy) || void 0 === GR ? void 0 : GR.call(yR, RR)) && void 0 !== JR ? JR : null
       }
       return null
     }
   },
-  39602: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => TW,
-      g: () => MW,
-      i: () => sW
+  39576: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => lR,
+      e: () => AR,
+      g: () => WR
     });
-    var mW = OW(5725),
-      EW = OW(5745),
-      NW = OW(5797),
-      PW = OW(39606),
-      LW = OW(5790);
-    const cW = (0, PW.M)("pipe"),
-      wW = (0, PW.M)("tank"),
-      tW = (0, PW.M)("port"),
-      ZW = "Reactor Port";
+    var yR = GR(5844),
+      tR = GR(5871),
+      uR = GR(5938),
+      ZR = GR(39585),
+      qR = GR(5935);
+    const iR = (0, ZR.J)("pipe"),
+      fR = (0, ZR.J)("tank"),
+      VR = (0, ZR.J)("port"),
+      KR = "Reactor Port";
 
-    function xW(WW, iW, OW) {
-      const mW = new Set([NW.h, NW.e, ZW, ...iW, ...OW, ...WW ? [PW.l] : []]);
+    function wR(RR, JR, GR) {
+      const yR = new Set([uR.f, uR.c, KR, ...JR, ...GR, ...RR ? [ZR.e] : []]);
       return {
-        makers: new Set(iW),
-        roots: mW
+        makers: new Set(JR),
+        roots: yR
       }
     }
-    const lW = {
-        water: xW(!0, ["Condenser"], ["Centrifuge", "Synthesizer", PW.c]),
-        cryo: xW(!1, [PW.c], [])
+    const rR = {
+        water: wR(!0, ["Condenser"], ["Centrifuge", "Synthesizer", ZR.b]),
+        cryo: wR(!1, [ZR.b], [])
       },
-      AW = new Set([...lW.water.roots, ...lW.cryo.roots]),
-      bW = {
+      eR = new Set([...rR.water.roots, ...rR.cryo.roots]),
+      aR = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -4038,140 +4038,140 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      jW = EW.g.map((WW => bW[WW])),
-      UW = jW.map((WW => {
-        let [iW, OW, mW] = WW;
-        return PW.x.findIndex((WW => {
-          let [EW, NW, PW] = WW;
-          return EW === iW && NW === OW && PW === mW
+      LR = tR.f.map((RR => aR[RR])),
+      nR = LR.map((RR => {
+        let [JR, GR, yR] = RR;
+        return ZR.s.findIndex((RR => {
+          let [tR, uR, ZR] = RR;
+          return tR === JR && uR === GR && ZR === yR
         }))
       }));
 
-    function kW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const OW = mW.j[WW],
-        EW = null === OW || void 0 === OW ? void 0 : OW.meta.rootName,
-        xW = lW[iW];
-      if (!EW || !xW.roots.has(EW)) return null;
-      if ((0, NW.p)(EW)) return (0, PW.J)(OW.name) === iW ? cW : null;
-      if (EW === PW.l) return wW;
-      if (EW === ZW) return OW.name.endsWith("|Water") ? tW : null;
-      const [AW, bW] = LW.h[(OW.meta.rot || 1) - 1];
-      return (0, PW.M)(xW.makers.has(EW) ? "maker" : "user", [-AW, 0, -bW])
+    function UR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const GR = yR.l[RR],
+        tR = null === GR || void 0 === GR ? void 0 : GR.meta.rootName,
+        wR = rR[JR];
+      if (!tR || !wR.roots.has(tR)) return null;
+      if ((0, uR.i)(tR)) return (0, ZR.H)(GR.name) === JR ? iR : null;
+      if (tR === ZR.e) return fR;
+      if (tR === KR) return GR.name.endsWith("|Water") ? VR : null;
+      const [eR, aR] = qR.h[(GR.meta.rot || 1) - 1];
+      return (0, ZR.J)(wR.makers.has(tR) ? "maker" : "user", [-eR, 0, -aR])
     }
 
-    function sW(WW, iW, OW, EW) {
-      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function WR(RR, JR, GR, tR) {
+      let uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: LW
-      } = lW[NW];
-      return jW.some(((wW, tW) => {
-        var ZW, xW;
-        let [lW, AW, bW] = wW;
-        const jW = WW(iW + lW, OW + AW, EW + bW),
-          sW = kW(jW, NW);
-        return null !== sW && LW.has(null !== (ZW = null === (xW = mW.j[jW]) || void 0 === xW ? void 0 : xW.meta.rootName) && void 0 !== ZW ? ZW : "") && !(0, PW.N)(cW, sW, UW[tW])
+        makers: qR
+      } = rR[uR];
+      return LR.some(((fR, VR) => {
+        var KR, wR;
+        let [rR, eR, aR] = fR;
+        const LR = RR(JR + rR, GR + eR, tR + aR),
+          WR = UR(LR, uR);
+        return null !== WR && qR.has(null !== (KR = null === (wR = yR.l[LR]) || void 0 === wR ? void 0 : wR.meta.rootName) && void 0 !== KR ? KR : "") && !(0, ZR.N)(iR, WR, nR[VR])
       }))
     }
 
-    function MW(WW) {
-      const iW = mW.j[WW];
-      return iW ? (0, PW.J)(iW.name) : null
+    function AR(RR) {
+      const JR = yR.l[RR];
+      return JR ? (0, ZR.H)(JR.name) : null
     }
-    let KW = null;
+    let CR = null;
 
-    function SW(WW) {
-      if (!KW) {
-        KW = new Map;
-        for (const WW of ["water", "cryo"])
-          for (let iW = 0; iW < 64; iW++)
-            for (const OW of [!1, !0]) KW.set((0, NW.s)(WW, iW, OW), {
-              dl: WW,
-              mask: iW,
-              full: OW
+    function XR(RR) {
+      if (!CR) {
+        CR = new Map;
+        for (const RR of ["water", "cryo"])
+          for (let JR = 0; JR < 64; JR++)
+            for (const GR of [!1, !0]) CR.set((0, uR.l)(RR, JR, GR), {
+              Nr: RR,
+              mask: JR,
+              full: GR
             })
       }
-      return KW.get(WW)
+      return CR.get(RR)
     }
-    const YW = new Map(Array.from({
-      length: NW.l + 1
-    }, ((WW, iW) => [(0, NW.u)(iW), iW])));
+    const MR = new Map(Array.from({
+      length: uR.g + 1
+    }, ((RR, JR) => [(0, uR.p)(JR), JR])));
 
-    function yW(WW, iW, OW, EW, NW, PW) {
-      return jW.some(((LW, cW) => {
-        var wW, tW, ZW;
-        let [xW, lW, AW] = LW;
-        if (0 === (PW >> cW & 1)) return !1;
-        const bW = null !== (wW = null === (tW = mW.j[WW(iW + xW, OW + lW, EW + AW)]) || void 0 === tW ? void 0 : tW.name) && void 0 !== wW ? wW : "",
-          jW = SW(bW);
-        return jW ? jW.dl === NW && jW.full : (null !== (ZW = function(WW) {
-          var iW;
-          return null !== (iW = YW.get(WW)) && void 0 !== iW ? iW : null
-        }(bW)) && void 0 !== ZW ? ZW : 0) > 0
+    function BR(RR, JR, GR, tR, uR, ZR) {
+      return LR.some(((qR, iR) => {
+        var fR, VR, KR;
+        let [wR, rR, eR] = qR;
+        if (0 === (ZR >> iR & 1)) return !1;
+        const aR = null !== (fR = null === (VR = yR.l[RR(JR + wR, GR + rR, tR + eR)]) || void 0 === VR ? void 0 : VR.name) && void 0 !== fR ? fR : "",
+          LR = XR(aR);
+        return LR ? LR.Nr === uR && LR.full : (null !== (KR = function(RR) {
+          var JR;
+          return null !== (JR = MR.get(RR)) && void 0 !== JR ? JR : null
+        }(aR)) && void 0 !== KR ? KR : 0) > 0
       }))
     }
-    class TW {
+    class lR {
       constructor() {
-        this.reshapeOffsets = jW
+        this.reshapeOffsets = LR
       }
-      handles(WW) {
-        return null !== MW(WW)
+      handles(RR) {
+        return null !== AR(RR)
       }
-      affects(WW) {
-        var iW, OW;
-        return AW.has(null !== (iW = null === (OW = mW.j[WW]) || void 0 === OW ? void 0 : OW.meta.rootName) && void 0 !== iW ? iW : "")
+      affects(RR) {
+        var JR, GR;
+        return eR.has(null !== (JR = null === (GR = yR.l[RR]) || void 0 === GR ? void 0 : GR.meta.rootName) && void 0 !== JR ? JR : "")
       }
-      placedBy(WW) {
-        var iW;
-        return (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta.rootName) === NW.e ? NW.h : null
+      placedBy(RR) {
+        var JR;
+        return (null === (JR = yR.l[RR]) || void 0 === JR ? void 0 : JR.meta.rootName) === uR.c ? uR.f : null
       }
-      shape(WW, iW, OW, EW, LW, wW) {
-        var tW, ZW, xW;
-        const lW = null !== (tW = null === (ZW = mW.j[LW]) || void 0 === ZW ? void 0 : ZW.name) && void 0 !== tW ? tW : "",
-          AW = wW || lW !== NW.h ? null !== (xW = (0, PW.J)(lW)) && void 0 !== xW ? xW : "water" : function(WW, iW, OW, mW) {
-            return jW.some(((EW, NW) => {
-              let [LW, wW, tW] = EW;
-              const ZW = kW(WW(iW + LW, OW + wW, mW + tW), "cryo");
-              return null !== ZW && "port" !== ZW.kind && (0, PW.N)(cW, ZW, UW[NW])
+      shape(RR, JR, GR, tR, qR, fR) {
+        var VR, KR, wR;
+        const rR = null !== (VR = null === (KR = yR.l[qR]) || void 0 === KR ? void 0 : KR.name) && void 0 !== VR ? VR : "",
+          eR = fR || rR !== uR.f ? null !== (wR = (0, ZR.H)(rR)) && void 0 !== wR ? wR : "water" : function(RR, JR, GR, yR) {
+            return LR.some(((tR, uR) => {
+              let [qR, fR, VR] = tR;
+              const KR = UR(RR(JR + qR, GR + fR, yR + VR), "cryo");
+              return null !== KR && "port" !== KR.kind && (0, ZR.N)(iR, KR, nR[uR])
             })) ? "cryo" : "water"
-          }(WW, iW, OW, EW),
-          bW = function(WW, iW, OW, mW) {
-            let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              NW = 0;
-            return jW.forEach(((LW, wW) => {
-              let [tW, ZW, xW] = LW;
-              const lW = kW(WW(iW + tW, OW + ZW, mW + xW), EW);
-              lW && (0, PW.N)(cW, lW, UW[wW]) && (NW |= 1 << wW)
-            })), NW
-          }(WW, iW, OW, EW, AW),
-          sW = wW ? function(WW) {
-            var iW;
-            return !0 === (null === (iW = SW(WW)) || void 0 === iW ? void 0 : iW.full)
-          }(lW) : yW(WW, iW, OW, EW, AW, bW);
-        return (0, mW.l)((0, NW.s)(AW, bW, sW))
+          }(RR, JR, GR, tR),
+          aR = function(RR, JR, GR, yR) {
+            let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              uR = 0;
+            return LR.forEach(((qR, fR) => {
+              let [VR, KR, wR] = qR;
+              const rR = UR(RR(JR + VR, GR + KR, yR + wR), tR);
+              rR && (0, ZR.N)(iR, rR, nR[fR]) && (uR |= 1 << fR)
+            })), uR
+          }(RR, JR, GR, tR, eR),
+          WR = fR ? function(RR) {
+            var JR;
+            return !0 === (null === (JR = XR(RR)) || void 0 === JR ? void 0 : JR.full)
+          }(rR) : BR(RR, JR, GR, tR, eR, aR);
+        return (0, yR.n)((0, uR.l)(eR, aR, WR))
       }
     }
   },
-  38048: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      return null === WW || null === iW ? WW === iW : WW[0] === iW[0] && WW[1] === iW[1] && WW[2] === iW[2]
+  38007: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      return null === RR || null === JR ? RR === JR : RR[0] === JR[0] && RR[1] === JR[1] && RR[2] === JR[2]
     }
 
-    function EW(WW) {
-      return [WW[0] + .5, WW[1] + .5, WW[2] + .5]
+    function tR(RR) {
+      return [RR[0] + .5, RR[1] + .5, RR[2] + .5]
     }
-    OW.d(iW, {
-      b: () => EW,
-      f: () => mW
+    GR.d(JR, {
+      b: () => tR,
+      e: () => yR
     })
   },
-  39352: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW,
-      e: () => NW
+  39329: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR,
+      g: () => uR
     });
-    const mW = ["Chest", "Loot Chest", "Moonstone Chest"],
-      EW = [{
+    const yR = ["Chest", "Loot Chest", "Moonstone Chest"],
+      tR = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -4191,56 +4191,56 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function NW(WW) {
-      return EW.find((iW => iW.exactMatch ? WW === iW.name : WW.includes(iW.name)))
+    function uR(RR) {
+      return tR.find((JR => JR.exactMatch ? RR === JR.name : RR.includes(JR.name)))
     }
   },
-  38097: (WW, iW, OW) => {
-    function mW(WW) {
-      return WW.includes("Leaf Bed")
+  38040: (RR, JR, GR) => {
+    function yR(RR) {
+      return RR.includes("Leaf Bed")
     }
 
-    function EW(WW) {
-      return / Bed(?: Head)?(?:\||$)/.test(WW) && !mW(WW)
+    function tR(RR) {
+      return / Bed(?: Head)?(?:\||$)/.test(RR) && !yR(RR)
     }
 
-    function NW(WW) {
-      return WW.includes(" Strongbed")
+    function uR(RR) {
+      return RR.includes(" Strongbed")
     }
 
-    function PW(WW) {
-      return mW(WW) || EW(WW) || NW(WW)
+    function ZR(RR) {
+      return yR(RR) || tR(RR) || uR(RR)
     }
-    OW.d(iW, {
-      d: () => PW,
-      f: () => mW,
-      j: () => NW,
-      l: () => EW
+    GR.d(JR, {
+      d: () => ZR,
+      f: () => yR,
+      h: () => uR,
+      k: () => tR
     })
   },
-  38088: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => wW
+  38034: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR
     });
-    var mW = OW(38097),
-      EW = OW(5725);
-    const NW = [],
-      PW = [],
-      LW = [],
-      cW = [];
-    for (const tW of Object.keys(EW.p))(0, mW.f)(tW) ? NW.push(tW) : (0, mW.l)(tW) && PW.push(tW), (0, mW.j)(tW) && LW.push(tW), (tW.includes(" Bed Head") || tW.includes(" Strongbed Head")) && cW.push(tW);
-    const wW = {
-      leafBeds: NW,
-      woolBeds: PW,
-      strongBeds: LW,
-      beds: [...NW, ...PW, ...LW],
-      bedHeads: cW,
+    var yR = GR(38040),
+      tR = GR(5844);
+    const uR = [],
+      ZR = [],
+      qR = [],
+      iR = [];
+    for (const VR of Object.keys(tR.q))(0, yR.f)(VR) ? uR.push(VR) : (0, yR.k)(VR) && ZR.push(VR), (0, yR.h)(VR) && qR.push(VR), (VR.includes(" Bed Head") || VR.includes(" Strongbed Head")) && iR.push(VR);
+    const fR = {
+      leafBeds: uR,
+      woolBeds: ZR,
+      strongBeds: qR,
+      beds: [...uR, ...ZR, ...qR],
+      bedHeads: iR,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  39759: WW => {
-    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  39750: RR => {
+    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

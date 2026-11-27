@@ -1,221 +1,221 @@
 export const id = 610;
 export const ids = [610];
 export const modules = {
-  44898: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      CharacterPreview: () => lW
+  44996: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      CharacterPreview: () => rR
     });
-    var mW = OW(62),
-      EW = OW(3809),
-      NW = OW(1230),
-      PW = OW(3540),
-      LW = OW(35264),
-      cW = OW(4846),
-      wW = OW(1283);
-    let tW = null;
-    const ZW = [],
-      xW = .6 * Math.PI,
-      lW = (0, mW.memo)((0, mW.forwardRef)((function(WW, iW) {
+    var yR = GR(66),
+      tR = GR(3909),
+      uR = GR(1336),
+      ZR = GR(3644),
+      qR = GR(35193),
+      iR = GR(4955),
+      fR = GR(1378);
+    let VR = null;
+    const KR = [],
+      wR = .6 * Math.PI,
+      rR = (0, yR.memo)((0, yR.forwardRef)((function(RR, JR) {
         let {
-          onReady: OW,
-          onDrawn: lW,
-          onSetupFailed: AW,
-          owner: bW = "other",
-          framing: jW = "player",
-          forcedCosmetics: UW,
-          LL: kW,
-          emotePlaySeq: sW,
-          turntableFromYaw: MW = null,
-          nametag: KW
-        } = WW;
-        const SW = (0, mW.useRef)(null),
+          onReady: GR,
+          onDrawn: rR,
+          onSetupFailed: eR,
+          owner: aR = "other",
+          framing: LR = "player",
+          forcedCosmetics: nR,
+          wq: UR,
+          emotePlaySeq: WR,
+          turntableFromYaw: AR = null,
+          nametag: CR
+        } = RR;
+        const XR = (0, yR.useRef)(null),
           {
-            width: YW,
-            height: yW
-          } = (0, EW.d)(SW),
-          TW = (0, mW.useRef)({
-            width: YW,
-            height: yW
+            width: MR,
+            height: BR
+          } = (0, tR.b)(XR),
+          lR = (0, yR.useRef)({
+            width: MR,
+            height: BR
           });
-        TW.current = {
-          width: YW,
-          height: yW
+        lR.current = {
+          width: MR,
+          height: BR
         };
-        const JW = (0, mW.useRef)(null),
-          hW = (0, mW.useRef)({}),
-          HW = (0, mW.useRef)({}),
-          [nW, uW] = (0, mW.useState)(!1),
-          oW = (0, mW.useRef)(OW);
-        oW.current = OW;
-        const dW = (0, mW.useRef)(lW);
-        dW.current = lW;
-        const eW = (0, mW.useRef)(AW);
-        eW.current = AW;
-        const vW = (0, mW.useRef)(null),
-          gW = (0, mW.useRef)(!1),
-          DW = (0, mW.useRef)(KW);
-        DW.current = KW;
-        const VW = (0, mW.useRef)(!0),
-          pW = (0, mW.useRef)(!1),
-          fW = (0, mW.useCallback)((() => {
-            const WW = JW.current;
-            if (!WW || !dW.current || gW.current || !pW.current) return;
-            const iW = {};
-            vW.current = iW, queueMicrotask((() => {
-              if (vW.current !== iW) return;
-              const OW = Promise.all(NW.p.map((iW => WW.untilDrawn(iW)))).then((() => !0), (WW => (console.error("Failed to draw the character preview", WW), !1))),
-                mW = new Promise((WW => {
+        const pR = (0, yR.useRef)(null),
+          gR = (0, yR.useRef)({}),
+          bR = (0, yR.useRef)({}),
+          [vR, OR] = (0, yR.useState)(!1),
+          xR = (0, yR.useRef)(GR);
+        xR.current = GR;
+        const NR = (0, yR.useRef)(rR);
+        NR.current = rR;
+        const DR = (0, yR.useRef)(eR);
+        DR.current = eR;
+        const HR = (0, yR.useRef)(null),
+          oR = (0, yR.useRef)(!1),
+          cR = (0, yR.useRef)(CR);
+        cR.current = CR;
+        const PR = (0, yR.useRef)(!0),
+          IR = (0, yR.useRef)(!1),
+          mR = (0, yR.useCallback)((() => {
+            const RR = pR.current;
+            if (!RR || !NR.current || oR.current || !IR.current) return;
+            const JR = {};
+            HR.current = JR, queueMicrotask((() => {
+              if (HR.current !== JR) return;
+              const GR = Promise.all(uR.w.map((JR => RR.untilDrawn(JR)))).then((() => !0), (RR => (console.error("Failed to draw the character preview", RR), !1))),
+                yR = new Promise((RR => {
                   setTimeout((() => {
-                    WW(!1)
+                    RR(!1)
                   }), 1e4)
                 }));
-              Promise.race([OW, mW]).then((OW => {
-                const mW = dW.current;
-                JW.current === WW && vW.current === iW && !gW.current && mW && (gW.current = !0, mW(OW))
+              Promise.race([GR, yR]).then((GR => {
+                const yR = NR.current;
+                pR.current === RR && HR.current === JR && !oR.current && yR && (oR.current = !0, yR(GR))
               }))
             }))
           }), []);
-        return (0, mW.useImperativeHandle)(iW, (() => {
-          const WW = (WW, iW) => {
-            var OW;
-            (hW.current[WW] = iW, null !== UW && void 0 !== UW && UW[WW]) || (null === (OW = JW.current) || void 0 === OW || OW.setCosmetic(WW, iW), fW())
+        return (0, yR.useImperativeHandle)(JR, (() => {
+          const RR = (RR, JR) => {
+            var GR;
+            (gR.current[RR] = JR, null !== nR && void 0 !== nR && nR[RR]) || (null === (GR = pR.current) || void 0 === GR || GR.setCosmetic(RR, JR), mR())
           };
           return {
-            updateCosmetic: WW,
-            setAllCosmetics(iW) {
-              for (const mW of NW.p) {
-                var OW;
-                WW(mW, null !== (OW = iW[mW]) && void 0 !== OW ? OW : (0, PW.d)(mW))
+            updateCosmetic: RR,
+            setAllCosmetics(JR) {
+              for (const yR of uR.w) {
+                var GR;
+                RR(yR, null !== (GR = JR[yR]) && void 0 !== GR ? GR : (0, ZR.c)(yR))
               }
             },
             isReady() {
-              var WW, iW;
-              return null !== (WW = null === (iW = JW.current) || void 0 === iW ? void 0 : iW.isReady()) && void 0 !== WW && WW
+              var RR, JR;
+              return null !== (RR = null === (JR = pR.current) || void 0 === JR ? void 0 : JR.isReady()) && void 0 !== RR && RR
             },
             resetCamera() {
-              var WW;
-              null === (WW = JW.current) || void 0 === WW || WW.resetCamera()
+              var RR;
+              null === (RR = pR.current) || void 0 === RR || RR.resetCamera()
             },
-            setOrbit(WW) {
-              var iW;
-              null === (iW = JW.current) || void 0 === iW || iW.setOrbit(WW)
+            setOrbit(RR) {
+              var JR;
+              null === (JR = pR.current) || void 0 === JR || JR.setOrbit(RR)
             },
-            turnCamera(WW) {
-              var iW;
-              const OW = LW.d[jW];
-              null === (iW = JW.current) || void 0 === iW || iW.setOrbit({
-                ...OW,
-                yaw: OW.yaw + WW
+            turnCamera(RR) {
+              var JR;
+              const GR = qR.d[LR];
+              null === (JR = pR.current) || void 0 === JR || JR.setOrbit({
+                ...GR,
+                yaw: GR.yaw + RR
               })
             },
-            async ensureReadyForCapture(WW) {
-              var iW;
-              await (null === (iW = JW.current) || void 0 === iW ? void 0 : iW.untilDrawn(WW))
+            async ensureReadyForCapture(RR) {
+              var JR;
+              await (null === (JR = pR.current) || void 0 === JR ? void 0 : JR.untilDrawn(RR))
             },
             getDevTools() {
-              var WW;
-              return null !== (WW = JW.current) && void 0 !== WW && WW.isReady() ? JW.current.dev : null
+              var RR;
+              return null !== (RR = pR.current) && void 0 !== RR && RR.isReady() ? pR.current.dev : null
             },
-            setNametagShown(WW) {
-              var iW, OW;
-              VW.current = WW, null === (iW = JW.current) || void 0 === iW || iW.setNametag(WW && null !== (OW = DW.current) && void 0 !== OW ? OW : null)
+            setNametagShown(RR) {
+              var JR, GR;
+              PR.current = RR, null === (JR = pR.current) || void 0 === JR || JR.setNametag(RR && null !== (GR = cR.current) && void 0 !== GR ? GR : null)
             }
           }
-        }), [UW, jW, fW]), (0, mW.useEffect)((() => {
-          const WW = cW.b.register(bW);
-          let iW = !0;
-          const OW = WW => {
-            const OW = JW.current,
-              mW = LW.f.openCharacter(SW.current, jW);
-            if (JW.current = mW, tW = mW, OW) {
-              OW.close();
+        }), [nR, LR, mR]), (0, yR.useEffect)((() => {
+          const RR = iR.b.register(aR);
+          let JR = !0;
+          const GR = RR => {
+            const GR = pR.current,
+              yR = qR.g.openCharacter(XR.current, LR);
+            if (pR.current = yR, VR = yR, GR) {
+              GR.close();
               const {
-                width: WW,
-                height: iW
-              } = TW.current;
-              WW > 0 && iW > 0 && mW.resize(WW, iW)
+                width: RR,
+                height: JR
+              } = lR.current;
+              RR > 0 && JR > 0 && yR.resize(RR, JR)
             }
-            HW.current = {}, uW(!1), mW.ready.then((() => {
-              if (iW && JW.current === mW)
-                if (uW(!0), WW) {
-                  mW.resetCamera();
-                  for (const WW of NW.p) {
-                    var OW;
-                    mW.setCosmetic(WW, null !== (OW = hW.current[WW]) && void 0 !== OW ? OW : (0, PW.d)(WW))
+            bR.current = {}, OR(!1), yR.ready.then((() => {
+              if (JR && pR.current === yR)
+                if (OR(!0), RR) {
+                  yR.resetCamera();
+                  for (const RR of uR.w) {
+                    var GR;
+                    yR.setCosmetic(RR, null !== (GR = gR.current[RR]) && void 0 !== GR ? GR : (0, ZR.c)(RR))
                   }
-                } else oW.current()
-            })).catch((WW => {
-              var OW;
-              (console.error("Failed to set up the character preview", WW), iW && JW.current === mW) && (null === (OW = eW.current) || void 0 === OW || OW.call(eW))
+                } else xR.current()
+            })).catch((RR => {
+              var GR;
+              (console.error("Failed to set up the character preview", RR), JR && pR.current === yR) && (null === (GR = DR.current) || void 0 === GR || GR.call(DR))
             }))
           };
-          OW(!1);
-          const mW = {
+          GR(!1);
+          const yR = {
             reopen: () => {
-              OW(!0)
+              GR(!0)
             }
           };
-          return ZW.push(mW), () => {
-            iW = !1, WW();
-            const OW = JW.current;
-            tW === OW && (OW.resetCamera(), tW = null), OW.close(), JW.current = null;
-            const EW = ZW.indexOf(mW);
-            if (ZW.splice(EW, 1), EW === ZW.length && EW > 0) {
-              const WW = ZW[EW - 1];
+          return KR.push(yR), () => {
+            JR = !1, RR();
+            const GR = pR.current;
+            VR === GR && (GR.resetCamera(), VR = null), GR.close(), pR.current = null;
+            const tR = KR.indexOf(yR);
+            if (KR.splice(tR, 1), tR === KR.length && tR > 0) {
+              const RR = KR[tR - 1];
               queueMicrotask((() => {
-                ZW.at(-1) === WW && null === tW && LW.f.sharesCharacter() && WW.reopen()
+                KR.at(-1) === RR && null === VR && qR.g.sharesCharacter() && RR.reopen()
               }))
             }
           }
-        }), []), (0, mW.useEffect)((() => {
-          YW <= 0 || yW <= 0 || JW.current.resize(YW, yW)
-        }), [YW, yW]), (0, mW.useEffect)((() => {
-          if (!nW) return;
-          const WW = HW.current;
-          for (const iW of NW.p) {
-            const OW = null === UW || void 0 === UW ? void 0 : UW[iW],
-              mW = WW[iW];
-            OW && OW !== mW ? JW.current.setCosmetic(iW, OW) : !OW && mW && hW.current[iW] && JW.current.setCosmetic(iW, hW.current[iW])
+        }), []), (0, yR.useEffect)((() => {
+          MR <= 0 || BR <= 0 || pR.current.resize(MR, BR)
+        }), [MR, BR]), (0, yR.useEffect)((() => {
+          if (!vR) return;
+          const RR = bR.current;
+          for (const JR of uR.w) {
+            const GR = null === nR || void 0 === nR ? void 0 : nR[JR],
+              yR = RR[JR];
+            GR && GR !== yR ? pR.current.setCosmetic(JR, GR) : !GR && yR && gR.current[JR] && pR.current.setCosmetic(JR, gR.current[JR])
           }
-          HW.current = {
-            ...UW
-          }, pW.current = !0, fW()
-        }), [UW, nW, fW]), (0, mW.useEffect)((() => {
-          nW && JW.current.playEmote(null !== kW && void 0 !== kW ? kW : null)
-        }), [kW, sW, nW]), (0, mW.useEffect)((() => {
-          nW && VW.current && JW.current.setNametag(null !== KW && void 0 !== KW ? KW : null)
-        }), [KW, nW]), (0, mW.useEffect)((() => {
-          if (!nW || null === MW) return;
-          const WW = JW.current,
+          bR.current = {
+            ...nR
+          }, IR.current = !0, mR()
+        }), [nR, vR, mR]), (0, yR.useEffect)((() => {
+          vR && pR.current.playEmote(null !== UR && void 0 !== UR ? UR : null)
+        }), [UR, WR, vR]), (0, yR.useEffect)((() => {
+          vR && PR.current && pR.current.setNametag(null !== CR && void 0 !== CR ? CR : null)
+        }), [CR, vR]), (0, yR.useEffect)((() => {
+          if (!vR || null === AR) return;
+          const RR = pR.current,
             {
-              pitch: iW,
-              radius: OW
-            } = LW.d[jW];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return WW.setOrbit({
-            yaw: MW + xW,
-            pitch: iW,
-            radius: OW
+              pitch: JR,
+              radius: GR
+            } = qR.d[LR];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return RR.setOrbit({
+            yaw: AR + wR,
+            pitch: JR,
+            radius: GR
           }), () => {
-            tW === WW && WW.resetCamera()
+            VR === RR && RR.resetCamera()
           };
-          const mW = performance.now();
-          let EW = 0;
-          const NW = PW => {
-            JW.current === WW && (WW.setOrbit({
-              yaw: MW + (PW - mW) / 6e3 * 2 * Math.PI,
-              pitch: iW,
-              radius: OW
-            }), EW = requestAnimationFrame(NW))
+          const yR = performance.now();
+          let tR = 0;
+          const uR = ZR => {
+            pR.current === RR && (RR.setOrbit({
+              yaw: AR + (ZR - yR) / 6e3 * 2 * Math.PI,
+              pitch: JR,
+              radius: GR
+            }), tR = requestAnimationFrame(uR))
           };
-          return EW = requestAnimationFrame(NW), () => {
-            cancelAnimationFrame(EW), tW === WW && WW.resetCamera()
+          return tR = requestAnimationFrame(uR), () => {
+            cancelAnimationFrame(tR), VR === RR && RR.resetCamera()
           }
-        }), [nW, MW]), (0, wW.jsx)("div", {
+        }), [vR, AR]), (0, fR.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: SW
+          ref: XR
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

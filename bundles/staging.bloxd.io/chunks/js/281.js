@@ -1,130 +1,130 @@
 export const id = 281;
 export const ids = [281];
 export const modules = {
-  40712: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW
+  40722: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR
     });
-    const mW = 1e3;
+    const yR = 1e3;
 
-    function EW(WW, iW) {
-      const OW = performance.now() + WW;
-      return 0 !== iW && Math.abs(OW - iW) < mW ? iW : OW
+    function tR(RR, JR) {
+      const GR = performance.now() + RR;
+      return 0 !== JR && Math.abs(GR - JR) < yR ? JR : GR
     }
   },
-  40890: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => wO
+  40882: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => qG
     });
-    var mW = OW(62);
-    const EW = "shootingLobby",
-      NW = {
+    var yR = GR(66);
+    const tR = "shootingLobby",
+      uR = {
         Red: "#fc6464",
         Blue: "#4f94f1"
       };
 
-    function PW(WW, iW) {
-      const OW = WW.reduce(((WW, iW) => WW + iW[5]), 0);
-      return 0 === OW ? 0 === WW.length ? 0 : Math.round(100 / WW.length) : Math.round(WW[iW][5] / OW * 100)
+    function ZR(RR, JR) {
+      const GR = RR.reduce(((RR, JR) => RR + JR[5]), 0);
+      return 0 === GR ? 0 === RR.length ? 0 : Math.round(100 / RR.length) : Math.round(RR[JR][5] / GR * 100)
     }
-    var LW = OW(27),
-      cW = OW(3361),
-      wW = OW(40710),
-      tW = OW(40706),
-      ZW = OW(1089),
-      xW = OW.n(ZW),
-      lW = OW(2075),
-      AW = OW(1391),
-      bW = OW(1532),
-      jW = OW(5238),
-      UW = OW(5673),
-      kW = OW(37888),
-      sW = OW(1172),
-      MW = OW(344),
-      KW = OW(3247),
-      SW = OW(1255),
-      YW = OW(1283);
-    const yW = "shootingOverlays:";
+    var qR = GR(32),
+      iR = GR(3494),
+      fR = GR(40720),
+      VR = GR(40717),
+      KR = GR(1163),
+      wR = GR.n(KR),
+      rR = GR(2173),
+      eR = GR(1468),
+      aR = GR(1590),
+      LR = GR(5338),
+      nR = GR(5798),
+      UR = GR(37810),
+      WR = GR(1270),
+      AR = GR(377),
+      CR = GR(3361),
+      XR = GR(1351),
+      MR = GR(1378);
+    const BR = "shootingOverlays:";
 
-    function TW(WW, iW) {
-      var OW;
-      return "tdm" === iW && nW(WW) ? NW[WW] : null !== (OW = (0, MW.lb)(WW)) && void 0 !== OW ? OW : "#ffffff"
+    function lR(RR, JR) {
+      var GR;
+      return "tdm" === JR && vR(RR) ? uR[RR] : null !== (GR = (0, AR.lb)(RR)) && void 0 !== GR ? GR : "#ffffff"
     }
 
-    function JW(WW, iW) {
+    function pR(RR, JR) {
       return {
-        "--team": TW(WW, iW)
+        "--team": lR(RR, JR)
       }
     }
-    const hW = {
-        Red: `${yW}teamRed`,
-        Blue: `${yW}teamBlue`
+    const gR = {
+        Red: `${BR}teamRed`,
+        Blue: `${BR}teamBlue`
       },
-      HW = {
-        diamonds: `${yW}mutation_diamonds`,
-        explosives: `${yW}mutation_explosives`,
-        gungame: `${yW}mutation_gungame`
+      bR = {
+        diamonds: `${BR}mutation_diamonds`,
+        explosives: `${BR}mutation_explosives`,
+        gungame: `${BR}mutation_gungame`
       };
 
-    function nW(WW) {
-      return Object.hasOwn(NW, WW)
+    function vR(RR) {
+      return Object.hasOwn(uR, RR)
     }
-    const uW = {
+    const OR = {
       normal: "streak",
       explosives: "streak",
       diamonds: "diamonds",
       gungame: "kills"
     };
 
-    function oW(WW) {
-      return uW[WW]
+    function xR(RR) {
+      return OR[RR]
     }
 
-    function dW() {
-      const WW = (0, lW.g)("hiddenPlayerNames");
-      return (0, mW.useCallback)((iW => "" === iW ? "" : (0, SW.g)(iW, WW)), [WW])
+    function NR() {
+      const RR = (0, rR.i)("hiddenPlayerNames");
+      return (0, yR.useCallback)((JR => "" === JR ? "" : (0, XR.e)(JR, RR)), [RR])
     }
 
-    function eW(WW) {
-      var iW;
+    function DR(RR) {
+      var JR;
       let {
-        playerId: OW
-      } = WW;
-      const mW = null === (iW = (0, lW.g)("players").byId[OW]) || void 0 === iW ? void 0 : iW.cosmetics;
-      return (0, YW.jsx)(KW.e, {
-        cosmetics: null !== mW && void 0 !== mW ? mW : {}
+        playerId: GR
+      } = RR;
+      const yR = null === (JR = (0, rR.i)("players").byId[GR]) || void 0 === JR ? void 0 : JR.cosmetics;
+      return (0, MR.jsx)(CR.c, {
+        cosmetics: null !== yR && void 0 !== yR ? yR : {}
       })
     }
 
-    function vW(WW) {
+    function HR(RR) {
       let {
-        icon: iW,
-        value: OW,
-        label: mW,
-        gold: EW = !1
-      } = WW;
-      return (0, YW.jsxs)("div", {
+        icon: JR,
+        value: GR,
+        label: yR,
+        gold: tR = !1
+      } = RR;
+      return (0, MR.jsxs)("div", {
         className: "ShootingStat",
-        children: [(0, YW.jsxs)("b", {
-          className: xW()("FullyFancyText", {
-            Gold: EW
+        children: [(0, MR.jsxs)("b", {
+          className: wR()("FullyFancyText", {
+            Gold: tR
           }),
-          children: [iW && (0, YW.jsx)(AW.c, {
-            name: iW
-          }), OW]
-        }), (0, YW.jsx)("span", {
+          children: [JR && (0, MR.jsx)(eR.d, {
+            name: JR
+          }), GR]
+        }), (0, MR.jsx)("span", {
           className: "SmallTextBold",
-          children: mW
+          children: yR
         })]
       })
     }
-    var gW = OW(1463),
-      DW = OW(40712);
+    var oR = GR(1534),
+      cR = GR(40722);
 
-    function VW(WW) {
-      return `shooting:${WW}`
+    function PR(RR) {
+      return `shooting:${RR}`
     }
-    class pW {
+    class IR {
       constructor() {
         this.slices = {
           hud: {
@@ -147,296 +147,296 @@ export const modules = {
           death: null
         }, this.seq = 0
       }
-      get(WW) {
-        return this.slices[WW]
+      get(RR) {
+        return this.slices[RR]
       }
-      yZ(WW, iW) {
-        switch (WW) {
+      BK(RR, JR) {
+        switch (RR) {
           case "shootingHud":
-            return this.receiveHud(iW), !0;
-          case EW: {
-            const WW = iW;
+            return this.receiveHud(JR), !0;
+          case tR: {
+            const RR = JR;
             return this.set("lobby", {
-              wire: WW,
-              startsAt: "lobby" === WW[0] ? (0, DW.e)(WW[2], this.slices.lobby.startsAt) : 0
+              wire: RR,
+              startsAt: "lobby" === RR[0] ? (0, cR.c)(RR[2], this.slices.lobby.startsAt) : 0
             }), !0
           }
           case "shootingRoundEnd": {
-            const WW = iW;
+            const RR = JR;
             return this.set("roundEnd", {
-              wire: WW,
-              lobbyAt: "roundEnd" === WW[0] ? performance.now() + WW[17] : 0
+              wire: RR,
+              lobbyAt: "roundEnd" === RR[0] ? performance.now() + RR[17] : 0
             }), !0
           }
           case "shootingLeaderboard":
-            return this.set("leaderboard", iW), !0;
+            return this.set("leaderboard", JR), !0;
           case "shootingKillfeed": {
-            const WW = {
+            const RR = {
               seq: ++this.seq,
               at: performance.now(),
-              wire: iW
+              wire: JR
             };
-            return this.set("killfeed", [...this.slices.killfeed.slice(-11), WW]), !0
+            return this.set("killfeed", [...this.slices.killfeed.slice(-11), RR]), !0
           }
           case "shootingEvent":
-            return this.receiveEvent(iW), !0;
+            return this.receiveEvent(JR), !0;
           default:
             return !1
         }
       }
-      receiveHud(WW) {
-        var iW;
-        const OW = this.slices.hud,
-          mW = (null === (iW = OW.wire) || void 0 === iW ? void 0 : iW[1]) === WW[1];
-        OW.wire && !mW && (this.set("kill", null), this.set("tier", null), this.set("death", null)), this.set("hud", {
-          wire: WW,
-          endsAt: (0, DW.e)(WW[4], mW ? OW.endsAt : 0),
-          spawnProtectionEndsAt: 0 === WW[13] ? 0 : (0, DW.e)(WW[13], OW.spawnProtectionEndsAt)
+      receiveHud(RR) {
+        var JR;
+        const GR = this.slices.hud,
+          yR = (null === (JR = GR.wire) || void 0 === JR ? void 0 : JR[1]) === RR[1];
+        GR.wire && !yR && (this.set("kill", null), this.set("tier", null), this.set("death", null)), this.set("hud", {
+          wire: RR,
+          endsAt: (0, cR.c)(RR[4], yR ? GR.endsAt : 0),
+          spawnProtectionEndsAt: 0 === RR[13] ? 0 : (0, cR.c)(RR[13], GR.spawnProtectionEndsAt)
         })
       }
-      receiveEvent(WW) {
-        const iW = {
+      receiveEvent(RR) {
+        const JR = {
           seq: ++this.seq,
           at: performance.now()
         };
-        switch (WW[0]) {
+        switch (RR[0]) {
           case "kill":
             this.set("kill", {
-              ...iW,
-              wire: WW
+              ...JR,
+              wire: RR
             });
             break;
           case "tier":
             this.set("tier", {
-              ...iW,
-              wire: WW
+              ...JR,
+              wire: RR
             });
             break;
           case "death":
             this.set("death", {
-              ...iW,
-              wire: WW
+              ...JR,
+              wire: RR
             })
         }
       }
-      set(WW, iW) {
-        this.slices[WW] = iW, LW.l.iZ(VW(WW), iW, !0)
+      set(RR, JR) {
+        this.slices[RR] = JR, qR.n.JK(PR(RR), JR, !0)
       }
     }
 
-    function fW(WW, iW) {
-      return (0, gW.e)(VW(iW), (() => WW.get(iW)))
+    function mR(RR, JR) {
+      return (0, oR.b)(PR(JR), (() => RR.get(JR)))
     }
-    const CW = ["Red", "Blue"],
-      XW = {
-        streak: `${yW}scoreIs_streak`,
-        diamonds: `${yW}scoreIs_diamonds`,
-        kills: `${yW}scoreIs_kills`
+    const zR = ["Red", "Blue"],
+      SR = {
+        streak: `${BR}scoreIs_streak`,
+        diamonds: `${BR}scoreIs_diamonds`,
+        kills: `${BR}scoreIs_kills`
       };
 
-    function BW(WW) {
-      var iW;
+    function jR(RR) {
+      var JR;
       let {
-        store: OW,
-        variation: mW
-      } = WW;
+        store: GR,
+        variation: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, sW.B)(), NW = fW(OW, "leaderboard"), PW = fW(OW, "hud"), [, LW = "lobby", , wW = "normal", , , tW = "", , , ZW = null] = null !== (iW = PW.wire) && void 0 !== iW ? iW : [], UW = (0, kW.f)("match" === LW ? PW.endsAt : 0), MW = (0, lW.g)("players").localId, KW = "tdm" === mW, SW = "normal" === wW ? null : HW[wW], TW = "Blue" === tW ? [...CW].reverse() : CW, JW = WW => "tdm" !== (null === ZW || void 0 === ZW ? void 0 : ZW[0]) ? 0 : "Red" === WW ? ZW[1] : ZW[2];
-      return (0, YW.jsx)(jW.b, {
-        close: cW.q,
+        t: tR
+      } = (0, WR.A)(), uR = mR(GR, "leaderboard"), ZR = mR(GR, "hud"), [, qR = "lobby", , fR = "normal", , , VR = "", , , KR = null] = null !== (JR = ZR.wire) && void 0 !== JR ? JR : [], nR = (0, UR.j)("match" === qR ? ZR.endsAt : 0), AR = (0, rR.i)("players").localId, CR = "tdm" === yR, XR = "normal" === fR ? null : bR[fR], lR = "Blue" === VR ? [...zR].reverse() : zR, pR = RR => "tdm" !== (null === KR || void 0 === KR ? void 0 : KR[0]) ? 0 : "Red" === RR ? KR[1] : KR[2];
+      return (0, MR.jsx)(LR.e, {
+        close: iR.j,
         togglePointerLock: !1,
         className: "ShootingBoardOverlay",
-        children: (0, YW.jsxs)("section", {
-          className: xW()("ShootingBoard", {
-            ShootingBoardFfa: !KW
+        children: (0, MR.jsxs)("section", {
+          className: wR()("ShootingBoard", {
+            ShootingBoardFfa: !CR
           }),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "shootingBoardTitle",
-          children: [(0, YW.jsxs)("header", {
+          children: [(0, MR.jsxs)("header", {
             className: "ShootingBoardHeader",
-            children: [(0, YW.jsxs)("h2", {
+            children: [(0, MR.jsxs)("h2", {
               id: "shootingBoardTitle",
               className: "SmallTextBold",
-              children: [(0, YW.jsx)(AW.c, {
+              children: [(0, MR.jsx)(eR.d, {
                 name: "list"
-              }), EW(KW ? `${yW}teamDeathmatch` : `${yW}freeForAll`)]
-            }), (0, YW.jsxs)("div", {
+              }), tR(CR ? `${BR}teamDeathmatch` : `${BR}freeForAll`)]
+            }), (0, MR.jsxs)("div", {
               className: "ShootingBoardMeta SmallTextBold",
-              children: [SW && (0, YW.jsx)("span", {
-                children: EW(SW)
-              }), "match" === LW && (0, YW.jsxs)("span", {
-                children: [(0, YW.jsx)(AW.c, {
+              children: [XR && (0, MR.jsx)("span", {
+                children: tR(XR)
+              }), "match" === qR && (0, MR.jsxs)("span", {
+                children: [(0, MR.jsx)(eR.d, {
                   name: "stopwatch"
-                }), " ", (0, kW.d)(UW)]
+                }), " ", (0, UR.e)(nR)]
               })]
-            }), (0, YW.jsx)(bW.l, {
+            }), (0, MR.jsx)(aR.l, {
               className: "ShootingBoardClose",
-              onClick: cW.q
+              onClick: iR.j
             })]
-          }), (0, YW.jsxs)("div", {
+          }), (0, MR.jsxs)("div", {
             className: "ShootingBoardColumns",
-            children: [KW && TW.map((WW => (0, YW.jsx)(qW, {
-              title: EW(hW[WW]),
+            children: [CR && lR.map((RR => (0, MR.jsx)(dR, {
+              title: tR(gR[RR]),
               team: {
-                id: WW,
-                score: JW(WW),
-                mine: WW === tW
+                id: RR,
+                score: pR(RR),
+                mine: RR === VR
               },
-              rows: NW.filter((iW => iW[2] === WW)),
-              localId: MW
-            }, WW))), !KW && (0, YW.jsx)(qW, {
-              title: EW(`${yW}players`),
+              rows: uR.filter((JR => JR[2] === RR)),
+              localId: AR
+            }, RR))), !CR && (0, MR.jsx)(dR, {
+              title: tR(`${BR}players`),
               team: null,
-              rows: NW,
-              localId: MW
+              rows: uR,
+              localId: AR
             })]
-          }), (0, YW.jsxs)("footer", {
+          }), (0, MR.jsxs)("footer", {
             className: "ShootingBoardFooter SmallTextBold",
-            children: [(0, YW.jsx)("span", {
-              children: EW(XW[oW(wW)])
-            }), (0, YW.jsx)("span", {
-              children: EW(`${yW}kdLegend`)
+            children: [(0, MR.jsx)("span", {
+              children: tR(SR[xR(fR)])
+            }), (0, MR.jsx)("span", {
+              children: tR(`${BR}kdLegend`)
             })]
           })]
         })
       })
     }
 
-    function qW(WW) {
+    function dR(RR) {
       let {
-        title: iW,
-        team: OW,
-        rows: mW,
-        localId: EW
-      } = WW;
+        title: JR,
+        team: GR,
+        rows: yR,
+        localId: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, sW.B)(), PW = dW(), LW = [{
+        t: uR
+      } = (0, WR.A)(), ZR = NR(), qR = [{
         key: "name",
-        header: (0, YW.jsxs)("span", {
+        header: (0, MR.jsxs)("span", {
           className: "ShootingBoardTeam",
-          children: [(0, YW.jsxs)("span", {
-            children: [iW, (null === OW || void 0 === OW ? void 0 : OW.mine) && (0, YW.jsxs)("span", {
+          children: [(0, MR.jsxs)("span", {
+            children: [JR, (null === GR || void 0 === GR ? void 0 : GR.mine) && (0, MR.jsxs)("span", {
               className: "ShootingBoardYou",
-              children: [" \xb7 ", NW(`${yW}you`)]
+              children: [" \xb7 ", uR(`${BR}you`)]
             })]
-          }), OW && (0, YW.jsx)("b", {
-            children: OW.score
+          }), GR && (0, MR.jsx)("b", {
+            children: GR.score
           })]
         })
       }, {
         key: "kills",
-        header: (0, YW.jsx)("abbr", {
-          title: NW(`${yW}kills`),
-          children: NW(`${yW}killsShort`)
+        header: (0, MR.jsx)("abbr", {
+          title: uR(`${BR}kills`),
+          children: uR(`${BR}killsShort`)
         })
       }, {
         key: "deaths",
-        header: (0, YW.jsx)("abbr", {
-          title: NW(`${yW}deaths`),
-          children: NW(`${yW}deathsShort`)
+        header: (0, MR.jsx)("abbr", {
+          title: uR(`${BR}deaths`),
+          children: uR(`${BR}deathsShort`)
         })
       }, {
         key: "score",
-        header: NW(`${yW}score`)
+        header: uR(`${BR}score`)
       }];
-      return (0, YW.jsx)("div", {
+      return (0, MR.jsx)("div", {
         className: "ShootingBoardColumn",
-        style: OW ? JW(OW.id, "tdm") : void 0,
-        children: (0, YW.jsx)(UW.b, {
-          className: xW()("ShootingBoardTable", {
-            Team: OW
+        style: GR ? pR(GR.id, "tdm") : void 0,
+        children: (0, MR.jsx)(nR.e, {
+          className: wR()("ShootingBoardTable", {
+            Team: GR
           }),
-          columns: LW,
-          rows: mW,
-          getRowKey: WW => WW[0],
-          renderRow: (WW, iW) => {
-            const [mW, NW, LW, cW, wW, tW, ZW] = WW, lW = iW + 1;
-            return (0, YW.jsxs)("tr", {
-              className: xW()({
-                Mine: mW === EW,
-                Dead: !ZW
+          columns: qR,
+          rows: yR,
+          getRowKey: RR => RR[0],
+          renderRow: (RR, JR) => {
+            const [yR, uR, qR, iR, fR, VR, KR] = RR, rR = JR + 1;
+            return (0, MR.jsxs)("tr", {
+              className: wR()({
+                Mine: yR === tR,
+                Dead: !KR
               }),
-              style: OW ? void 0 : JW(LW, "ffa"),
-              children: [(0, YW.jsx)("td", {
-                children: (0, YW.jsxs)("span", {
+              style: GR ? void 0 : pR(qR, "ffa"),
+              children: [(0, MR.jsx)("td", {
+                children: (0, MR.jsxs)("span", {
                   className: "ShootingBoardName",
-                  children: [!OW && (0, YW.jsx)("span", {
-                    className: xW()("ShootingBoardPlace", `Place${lW}`),
-                    children: lW
-                  }), (0, YW.jsx)(eW, {
-                    playerId: mW
-                  }), (0, YW.jsx)("span", {
+                  children: [!GR && (0, MR.jsx)("span", {
+                    className: wR()("ShootingBoardPlace", `Place${rR}`),
+                    children: rR
+                  }), (0, MR.jsx)(DR, {
+                    playerId: yR
+                  }), (0, MR.jsx)("span", {
                     className: "ShootingBoardNameText",
-                    children: PW(NW)
+                    children: ZR(uR)
                   })]
                 })
-              }), (0, YW.jsx)("td", {
-                children: cW
-              }), (0, YW.jsx)("td", {
-                children: wW
-              }), (0, YW.jsx)("td", {
+              }), (0, MR.jsx)("td", {
+                children: iR
+              }), (0, MR.jsx)("td", {
+                children: fR
+              }), (0, MR.jsx)("td", {
                 className: "ShootingBoardScore",
-                children: tW
+                children: VR
               })]
             })
           }
         })
       })
     }
-    var RW = OW(37868),
-      GW = OW(37919),
-      IW = OW(25),
-      aW = OW(5668),
-      rW = OW(2080),
-      zW = OW(5251),
-      FW = OW(3599),
-      QW = OW(1526),
-      Wi = OW(1551),
-      ii = OW(39775);
-    const Oi = "shooting:vote";
-    class mi {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new ii.c;
-        this.iZ = WW, this.sendCommand = iW, this.pacer = OW, this.view = {
+    var ER = GR(37796),
+      YR = GR(37849),
+      kR = GR(25),
+      QR = GR(5792),
+      FR = GR(2186),
+      TR = GR(5347),
+      sR = GR(3701),
+      hR = GR(1581),
+      RJ = GR(1614),
+      JJ = GR(39767);
+    const GJ = "shooting:vote";
+    class yJ {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new JJ.c;
+        this.JK = RR, this.sendCommand = JR, this.pacer = GR, this.view = {
           hidden: !1,
           pending: null
-        }, this.unsent = !1, this.cardsKey = "", this.pendingTimer = null, this.unsubscribePacer = void 0, this.vote = WW => {
+        }, this.unsent = !1, this.cardsKey = "", this.pendingTimer = null, this.unsubscribePacer = void 0, this.vote = RR => {
           this.unsent = !0, this.set({
             ...this.view,
-            pending: WW
+            pending: RR
           }), this.flush()
-        }, this.setHidden = WW => {
+        }, this.setHidden = RR => {
           this.set({
             ...this.view,
-            hidden: WW
+            hidden: RR
           })
         }, this.flush = () => {
-          const WW = this.view.pending;
-          this.unsent && null !== WW && this.pacer.tryStart() && (this.unsent = !1, this.sendCommand(`mapvote ${WW}`), this.clearPendingTimer(), this.pendingTimer = setTimeout((() => {
-            this.pendingTimer = null, this.unsent || this.view.pending !== WW || this.set({
+          const RR = this.view.pending;
+          this.unsent && null !== RR && this.pacer.tryStart() && (this.unsent = !1, this.sendCommand(`mapvote ${RR}`), this.clearPendingTimer(), this.pendingTimer = setTimeout((() => {
+            this.pendingTimer = null, this.unsent || this.view.pending !== RR || this.set({
               ...this.view,
               pending: null
             })
           }), 5e3))
-        }, this.unsubscribePacer = OW.subscribe(this.flush)
+        }, this.unsubscribePacer = GR.subscribe(this.flush)
       }
       getView() {
         return this.view
       }
-      onLobby(WW) {
-        const iW = "lobby" === WW[0] ? WW[9] : [],
-          OW = iW.map((WW => WW[0])).join("\n");
-        if (OW !== this.cardsKey) return this.cardsKey = OW, this.unsent = !1, void this.set({
+      onLobby(RR) {
+        const JR = "lobby" === RR[0] ? RR[9] : [],
+          GR = JR.map((RR => RR[0])).join("\n");
+        if (GR !== this.cardsKey) return this.cardsKey = GR, this.unsent = !1, void this.set({
           hidden: !1,
           pending: null
         });
-        const mW = this.view.pending;
-        if (null === mW) return;
-        const EW = iW.find((WW => WW[0] === mW));
-        (!EW || EW[6] && !this.unsent) && (this.unsent = !1, this.set({
+        const yR = this.view.pending;
+        if (null === yR) return;
+        const tR = JR.find((RR => RR[0] === yR));
+        (!tR || tR[6] && !this.unsent) && (this.unsent = !1, this.set({
           ...this.view,
           pending: null
         }))
@@ -447,254 +447,254 @@ export const modules = {
       clearPendingTimer() {
         null !== this.pendingTimer && (clearTimeout(this.pendingTimer), this.pendingTimer = null)
       }
-      set(WW) {
-        this.view = WW, this.iZ(WW)
+      set(RR) {
+        this.view = RR, this.JK(RR)
       }
     }
-    const Ei = "ShootingVoteStripOpen";
+    const tJ = "ShootingVoteStripOpen";
 
-    function Ni(WW) {
-      var iW, OW, EW, NW, LW;
+    function uJ(RR) {
+      var JR, GR, tR, uR, qR;
       let {
-        maps: cW,
-        votes: wW
-      } = WW;
+        maps: iR,
+        votes: fR
+      } = RR;
       const {
-        t: tW
-      } = (0, sW.B)(), ZW = (0, QW.g)(Oi, wW.getView()), {
-        isTouchScreen: lW,
-        openInGameMenuName: bW,
-        openEverythingMenuName: jW
-      } = (0, IW.p)(["isTouchScreen", "openInGameMenuName", "openEverythingMenuName"]), UW = null !== bW || null !== jW, kW = (0, FW.e)();
-      (0, zW.b)(!0, !lW && !ZW.hidden && !UW && !kW, "shootingVoteStrip", !0), (0, mW.useEffect)((() => {
-        if (!ZW.hidden && !lW) return document.body.classList.add(Ei), () => {
-          document.body.classList.remove(Ei)
+        t: VR
+      } = (0, WR.A)(), KR = (0, hR.h)(GJ, fR.getView()), {
+        isTouchScreen: rR,
+        openInGameMenuName: aR,
+        openEverythingMenuName: LR
+      } = (0, kR.o)(["isTouchScreen", "openInGameMenuName", "openEverythingMenuName"]), nR = null !== aR || null !== LR, UR = (0, sR.c)();
+      (0, TR.d)(!0, !rR && !KR.hidden && !nR && !UR, "shootingVoteStrip", !0), (0, yR.useEffect)((() => {
+        if (!KR.hidden && !rR) return document.body.classList.add(tJ), () => {
+          document.body.classList.remove(tJ)
         }
-      }), [ZW.hidden, lW]);
-      const MW = null !== (iW = null !== (OW = ZW.pending) && void 0 !== OW ? OW : null === (EW = cW.find((WW => WW[6]))) || void 0 === EW ? void 0 : EW[0]) && void 0 !== iW ? iW : null,
-        KW = null !== (NW = null === (LW = cW.find((WW => WW[0] === MW))) || void 0 === LW ? void 0 : LW[1]) && void 0 !== NW ? NW : null;
-      return ZW.hidden ? (0, YW.jsxs)("button", {
+      }), [KR.hidden, rR]);
+      const AR = null !== (JR = null !== (GR = KR.pending) && void 0 !== GR ? GR : null === (tR = iR.find((RR => RR[6]))) || void 0 === tR ? void 0 : tR[0]) && void 0 !== JR ? JR : null,
+        CR = null !== (uR = null === (qR = iR.find((RR => RR[0] === AR))) || void 0 === qR ? void 0 : qR[1]) && void 0 !== uR ? uR : null;
+      return KR.hidden ? (0, MR.jsxs)("button", {
         type: "button",
         className: "ShootingVoteChip",
         "data-over-keys": "",
-        ...(0, Wi.d)((() => {
-          wW.setHidden(!1)
+        ...(0, RJ.f)((() => {
+          fR.setHidden(!1)
         }), "pointerup"),
-        children: [(0, YW.jsx)("span", {
+        children: [(0, MR.jsx)("span", {
           className: "ShootingVoteChipLabel",
-          children: tW("shootingLobby:mapVote")
-        }), (0, YW.jsx)("span", {
+          children: VR("shootingLobby:mapVote")
+        }), (0, MR.jsx)("span", {
           className: "ShootingVoteChipVote",
-          children: null !== KW && void 0 !== KW ? KW : tW("shootingLobby:notVoted")
-        }), !lW && (0, YW.jsxs)("span", {
+          children: null !== CR && void 0 !== CR ? CR : VR("shootingLobby:notVoted")
+        }), !rR && (0, MR.jsxs)("span", {
           className: "ShootingVoteChipShop",
-          children: [tW("shootingLobby:voteInShop"), (0, YW.jsx)(rW.e, {
+          children: [VR("shootingLobby:voteInShop"), (0, MR.jsx)(FR.c, {
             noaAction: "OpenShop",
             padHidesKey: !0
           })]
-        }), (0, YW.jsx)(AW.c, {
+        }), (0, MR.jsx)(eR.d, {
           name: "angle-up"
         })]
-      }) : (0, YW.jsxs)("div", {
-        className: xW()("ShootingVoteStrip", {
-          Touch: lW
+      }) : (0, MR.jsxs)("div", {
+        className: wR()("ShootingVoteStrip", {
+          Touch: rR
         }),
         "data-over-keys": "",
-        children: [(0, YW.jsxs)("div", {
+        children: [(0, MR.jsxs)("div", {
           className: "ShootingVoteHeader",
-          children: [(0, YW.jsx)("span", {
+          children: [(0, MR.jsx)("span", {
             className: "ShootingVoteTitle",
-            children: tW("shootingLobby:voteTitle")
-          }), (0, YW.jsx)("span", {
+            children: VR("shootingLobby:voteTitle")
+          }), (0, MR.jsx)("span", {
             className: "ShootingVoteHint",
-            children: tW("shootingLobby:voteHint")
-          }), (0, YW.jsxs)("button", {
+            children: VR("shootingLobby:voteHint")
+          }), (0, MR.jsxs)("button", {
             type: "button",
             className: "ShootingVoteHide",
-            ...(0, Wi.d)((() => {
-              wW.setHidden(!0)
+            ...(0, RJ.f)((() => {
+              fR.setHidden(!0)
             }), "pointerup"),
-            children: [tW("shootingLobby:hide"), (0, YW.jsx)(AW.c, {
+            children: [VR("shootingLobby:hide"), (0, MR.jsx)(eR.d, {
               name: "angle-down"
             })]
           })]
-        }), (0, YW.jsx)("div", {
+        }), (0, MR.jsx)("div", {
           className: "ShootingVoteCards",
-          children: cW.map(((WW, iW) => (0, YW.jsx)(Pi, {
-            map: WW,
-            chance: PW(cW, iW),
-            mine: MW === WW[0],
-            onVote: wW.vote,
-            showHeads: !lW
-          }, WW[0])))
+          children: iR.map(((RR, JR) => (0, MR.jsx)(ZJ, {
+            map: RR,
+            chance: ZR(iR, JR),
+            mine: AR === RR[0],
+            onVote: fR.vote,
+            showHeads: !rR
+          }, RR[0])))
         })]
       })
     }
 
-    function Pi(WW) {
+    function ZJ(RR) {
       let {
-        map: iW,
-        chance: OW,
-        mine: EW,
-        onVote: NW,
-        showHeads: PW
-      } = WW;
+        map: JR,
+        chance: GR,
+        mine: tR,
+        onVote: uR,
+        showHeads: ZR
+      } = RR;
       const {
-        t: LW
-      } = (0, sW.B)(), [cW, wW, tW, ZW, lW, bW, , jW, UW] = iW, [kW, MW] = (0, mW.useState)(!1);
-      return (0, YW.jsxs)("button", {
+        t: qR
+      } = (0, WR.A)(), [iR, fR, VR, KR, rR, aR, , LR, nR] = JR, [UR, AR] = (0, yR.useState)(!1);
+      return (0, MR.jsxs)("button", {
         type: "button",
-        className: xW()("ShootingMapCard", {
-          Mine: EW
+        className: wR()("ShootingMapCard", {
+          Mine: tR
         }),
-        "aria-pressed": EW,
-        ...(0, Wi.d)((() => {
-          EW || NW(cW)
+        "aria-pressed": tR,
+        ...(0, RJ.f)((() => {
+          tR || uR(iR)
         }), "pointerup"),
-        children: [(0, YW.jsxs)("div", {
+        children: [(0, MR.jsxs)("div", {
           className: "ShootingMapCardImage",
-          children: [null !== UW && (0, YW.jsx)(aW.b, {
+          children: [null !== nR && (0, MR.jsx)(QR.e, {
             game: {
-              schematicId: UW
+              schematicId: nR
             }
-          }), null === UW && !kW && (0, YW.jsx)("img", {
+          }), null === nR && !UR && (0, MR.jsx)("img", {
             alt: "",
-            src: `/textures/games/shooting/${tW}`,
+            src: `/textures/games/shooting/${VR}`,
             onError: () => {
-              MW(!0)
+              AR(!0)
             }
-          }), lW && (0, YW.jsx)("span", {
+          }), rR && (0, MR.jsx)("span", {
             className: "ShootingMapCardNew",
-            children: LW("shootingLobby:new")
-          }), "normal" !== ZW && (0, YW.jsx)("span", {
+            children: qR("shootingLobby:new")
+          }), "normal" !== KR && (0, MR.jsx)("span", {
             className: "ShootingMapCardMutation",
-            children: LW(HW[ZW])
-          }), EW && (0, YW.jsx)("span", {
+            children: qR(bR[KR])
+          }), tR && (0, MR.jsx)("span", {
             className: "ShootingMapCardCheck",
-            children: (0, YW.jsx)(AW.c, {
+            children: (0, MR.jsx)(eR.d, {
               name: "check"
             })
           })]
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "ShootingMapCardInfo",
-          children: [(0, YW.jsx)("span", {
+          children: [(0, MR.jsx)("span", {
             className: "ShootingMapCardName",
-            children: wW
-          }), (0, YW.jsxs)("span", {
+            children: fR
+          }), (0, MR.jsxs)("span", {
             className: "ShootingMapCardVotes",
-            children: [bW, (0, YW.jsx)(AW.c, {
+            children: [aR, (0, MR.jsx)(eR.d, {
               name: "user"
             })]
           })]
-        }), (0, YW.jsx)("div", {
+        }), (0, MR.jsx)("div", {
           className: "ShootingMapCardBar",
-          children: (0, YW.jsx)("i", {
+          children: (0, MR.jsx)("i", {
             style: {
-              width: `${OW}%`
+              width: `${GR}%`
             }
           })
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "ShootingMapCardFooter",
-          children: [PW && (0, YW.jsx)(Li, {
-            voters: jW
-          }), (0, YW.jsx)("span", {
+          children: [ZR && (0, MR.jsx)(qJ, {
+            voters: LR
+          }), (0, MR.jsx)("span", {
             className: "ShootingMapCardChance",
-            children: LW("shootingLobby:chance", {
-              percent: OW
+            children: qR("shootingLobby:chance", {
+              percent: GR
             })
           })]
         })]
       })
     }
 
-    function Li(WW) {
+    function qJ(RR) {
       let {
-        voters: iW
-      } = WW;
-      const OW = (0, lW.g)("players");
-      return (0, YW.jsx)("span", {
+        voters: JR
+      } = RR;
+      const GR = (0, rR.i)("players");
+      return (0, MR.jsx)("span", {
         className: "ShootingMapCardHeads",
-        children: iW.slice(0, 8).map((WW => {
-          var iW;
-          return (null === (iW = OW.byId[WW]) || void 0 === iW ? void 0 : iW.cosmetics) && (0, YW.jsx)(eW, {
-            playerId: WW
-          }, WW)
+        children: JR.slice(0, 8).map((RR => {
+          var JR;
+          return (null === (JR = GR.byId[RR]) || void 0 === JR ? void 0 : JR.cosmetics) && (0, MR.jsx)(DR, {
+            playerId: RR
+          }, RR)
         }))
       })
     }
 
-    function ci(WW) {
+    function iJ(RR) {
       let {
-        store: iW,
-        votes: OW,
-        variation: mW
-      } = WW;
-      const EW = fW(iW, "lobby"),
-        NW = (0, lW.g)("localPlayerAlive"),
-        PW = (0, lW.f)("connectedGame", (WW => WW.replay));
-      if ("lobby" !== EW.wire[0] || PW) return null;
-      const LW = EW.wire;
-      return (0, YW.jsxs)(YW.Fragment, {
-        children: [(0, YW.jsx)(wi, {
-          wire: LW,
-          startsAt: EW.startsAt,
-          variation: mW
-        }), NW && LW[9].length > 0 && (0, YW.jsx)(RW.h, {
-          children: (0, YW.jsx)(Ni, {
-            maps: LW[9],
-            votes: OW
+        store: JR,
+        votes: GR,
+        variation: yR
+      } = RR;
+      const tR = mR(JR, "lobby"),
+        uR = (0, rR.i)("localPlayerAlive"),
+        ZR = (0, rR.e)("connectedGame", (RR => RR.replay));
+      if ("lobby" !== tR.wire[0] || ZR) return null;
+      const qR = tR.wire;
+      return (0, MR.jsxs)(MR.Fragment, {
+        children: [(0, MR.jsx)(fJ, {
+          wire: qR,
+          startsAt: tR.startsAt,
+          variation: yR
+        }), uR && qR[9].length > 0 && (0, MR.jsx)(ER.d, {
+          children: (0, MR.jsx)(uJ, {
+            maps: qR[9],
+            votes: GR
           })
         })]
       })
     }
-    const wi = (0, mW.memo)((function(WW) {
+    const fJ = (0, yR.memo)((function(RR) {
       let {
-        wire: iW,
-        startsAt: OW,
-        variation: EW
-      } = WW;
+        wire: JR,
+        startsAt: GR,
+        variation: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, sW.B)(), [PW, LW] = (0, mW.useState)(null), [cW, wW] = (0, mW.useState)(null), tW = (0, GW.j)(PW, cW), [, ZW, , xW, lW, bW, jW, UW, kW] = iW, {
-        isTouchScreen: MW
-      } = (0, IW.p)(["isTouchScreen"]);
-      return (0, YW.jsx)("div", {
-        ref: wW,
+        t: uR
+      } = (0, WR.A)(), [ZR, qR] = (0, yR.useState)(null), [iR, fR] = (0, yR.useState)(null), VR = (0, YR.l)(ZR, iR), [, KR, , wR, rR, aR, LR, nR, UR] = JR, {
+        isTouchScreen: AR
+      } = (0, kR.o)(["isTouchScreen"]);
+      return (0, MR.jsx)("div", {
+        ref: fR,
         className: "ShootingLobbyStatusContainer",
-        style: null === tW ? void 0 : {
-          top: tW
+        style: null === VR ? void 0 : {
+          top: VR
         },
-        children: (0, YW.jsxs)("div", {
-          ref: LW,
+        children: (0, MR.jsxs)("div", {
+          ref: qR,
           className: "ShootingLobbyStatus",
-          children: [(0, YW.jsx)(ti, {
-            waiting: "waiting" === ZW,
-            startsAt: OW
-          }), "tdm" === EW && (0, YW.jsxs)("div", {
+          children: [(0, MR.jsx)(VJ, {
+            waiting: "waiting" === KR,
+            startsAt: GR
+          }), "tdm" === tR && (0, MR.jsxs)("div", {
             className: "ShootingLobbyTeams",
-            children: [(0, YW.jsx)(Zi, {
+            children: [(0, MR.jsx)(KJ, {
               team: "Blue",
-              count: jW,
-              cap: UW,
-              mine: "Blue" === kW
-            }), (0, YW.jsx)("span", {
+              count: LR,
+              cap: nR,
+              mine: "Blue" === UR
+            }), (0, MR.jsx)("span", {
               className: "ShootingLobbyTeamHint",
-              children: NW(MW ? "shootingLobby:teamHintTouch" : "" === kW ? "shootingLobby:teamHintPick" : "shootingLobby:teamHintSwitch")
-            }), (0, YW.jsx)(Zi, {
+              children: uR(AR ? "shootingLobby:teamHintTouch" : "" === UR ? "shootingLobby:teamHintPick" : "shootingLobby:teamHintSwitch")
+            }), (0, MR.jsx)(KJ, {
               team: "Red",
-              count: bW,
-              cap: UW,
-              mine: "Red" === kW
+              count: aR,
+              cap: nR,
+              mine: "Red" === UR
             })]
-          }), "ffa" === EW && (0, YW.jsx)("div", {
+          }), "ffa" === tR && (0, MR.jsx)("div", {
             className: "ShootingLobbyTeams",
-            children: (0, YW.jsxs)("span", {
+            children: (0, MR.jsxs)("span", {
               className: "ShootingLobbyPlayers",
-              children: [(0, YW.jsx)(AW.c, {
+              children: [(0, MR.jsx)(eR.d, {
                 name: "user-group"
-              }), NW("shootingLobby:players", {
-                count: xW,
-                max: lW
+              }), uR("shootingLobby:players", {
+                count: wR,
+                max: rR
               })]
             })
           })]
@@ -702,687 +702,687 @@ export const modules = {
       })
     }));
 
-    function ti(WW) {
+    function VJ(RR) {
       let {
-        waiting: iW,
-        startsAt: OW
-      } = WW;
+        waiting: JR,
+        startsAt: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, sW.B)(), EW = (0, kW.f)(iW ? 0 : OW);
-      return (0, YW.jsxs)("div", {
+        t: yR
+      } = (0, WR.A)(), tR = (0, UR.j)(JR ? 0 : GR);
+      return (0, MR.jsxs)("div", {
         className: "ShootingLobbyCountdown",
-        children: [iW && (0, YW.jsx)("span", {
+        children: [JR && (0, MR.jsx)("span", {
           className: "ShootingLobbyCountdownLabel",
-          children: mW("shootingLobby:waiting")
-        }), !iW && (0, YW.jsxs)(YW.Fragment, {
-          children: [(0, YW.jsx)("span", {
+          children: yR("shootingLobby:waiting")
+        }), !JR && (0, MR.jsxs)(MR.Fragment, {
+          children: [(0, MR.jsx)("span", {
             className: "ShootingLobbyCountdownLabel",
-            children: mW("shootingLobby:startingIn")
-          }), (0, YW.jsx)("span", {
-            className: xW()("ShootingLobbyCountdownTime", {
-              Soon: EW < 10
+            children: yR("shootingLobby:startingIn")
+          }), (0, MR.jsx)("span", {
+            className: wR()("ShootingLobbyCountdownTime", {
+              Soon: tR < 10
             }),
-            children: (0, kW.d)(EW)
+            children: (0, UR.e)(tR)
           })]
         })]
       })
     }
 
-    function Zi(WW) {
+    function KJ(RR) {
       let {
-        team: iW,
-        count: OW,
-        cap: mW,
-        mine: EW
-      } = WW;
+        team: JR,
+        count: GR,
+        cap: yR,
+        mine: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, sW.B)();
-      return (0, YW.jsxs)("span", {
-        className: xW()("ShootingLobbyTeam", {
-          Mine: EW,
-          Full: OW >= mW
+        t: uR
+      } = (0, WR.A)();
+      return (0, MR.jsxs)("span", {
+        className: wR()("ShootingLobbyTeam", {
+          Mine: tR,
+          Full: GR >= yR
         }),
-        style: JW(iW, "tdm"),
-        children: [NW(hW[iW]), (0, YW.jsx)("span", {
+        style: pR(JR, "tdm"),
+        children: [uR(gR[JR]), (0, MR.jsx)("span", {
           className: "ShootingLobbyTeamCount",
-          children: NW("shootingLobby:teamCount", {
-            count: OW,
-            cap: mW
+          children: uR("shootingLobby:teamCount", {
+            count: GR,
+            cap: yR
           })
         })]
       })
     }
-    var xi = OW(37783),
-      li = OW(1856),
-      Ai = OW(2032);
-    const bi = "--cubeWarfareKillfeedOffset",
-      ji = (0, mW.memo)((function(WW) {
+    var wJ = GR(37712),
+      rJ = GR(1943),
+      eJ = GR(2123);
+    const aJ = "--cubeWarfareKillfeedOffset",
+      LJ = (0, yR.memo)((function(RR) {
         let {
-          wire: iW,
-          endsAt: OW,
-          leaderboard: EW
-        } = WW;
+          wire: JR,
+          endsAt: GR,
+          leaderboard: tR
+        } = RR;
         const {
-          t: NW
-        } = (0, sW.B)(), {
-          isTouchScreen: PW
-        } = (0, IW.p)(["isTouchScreen"]), [LW, cW] = (0, mW.useState)(null), [wW, tW] = (0, mW.useState)(null), ZW = (0, GW.j)(wW, LW, PW);
-        ! function(WW, iW) {
-          (0, mW.useLayoutEffect)((() => {
-            if (!WW || null === iW) return;
-            let OW = null;
-            const mW = WW => {
-                OW = WW, null === WW ? document.body.style.removeProperty(bi) : document.body.style.setProperty(bi, `${WW}px`)
+          t: uR
+        } = (0, WR.A)(), {
+          isTouchScreen: ZR
+        } = (0, kR.o)(["isTouchScreen"]), [qR, iR] = (0, yR.useState)(null), [fR, VR] = (0, yR.useState)(null), KR = (0, YR.l)(fR, qR, ZR);
+        ! function(RR, JR) {
+          (0, yR.useLayoutEffect)((() => {
+            if (!RR || null === JR) return;
+            let GR = null;
+            const yR = RR => {
+                GR = RR, null === RR ? document.body.style.removeProperty(aJ) : document.body.style.setProperty(aJ, `${RR}px`)
               },
-              EW = () => {
-                var iW;
-                const EW = document.querySelector(".InGameUi .Killfeed");
-                if (!EW) return void mW(null);
-                const NW = .3 * (0, li.getRemInPx)(),
-                  PW = EW.getBoundingClientRect().top - (null !== (iW = OW) && void 0 !== iW ? iW : NW);
-                mW(Math.max(Math.ceil(NW), Math.ceil(WW.getBoundingClientRect().bottom + GW.b - PW)))
+              tR = () => {
+                var JR;
+                const tR = document.querySelector(".InGameUi .Killfeed");
+                if (!tR) return void yR(null);
+                const uR = .3 * (0, rJ.getRemInPx)(),
+                  ZR = tR.getBoundingClientRect().top - (null !== (JR = GR) && void 0 !== JR ? JR : uR);
+                yR(Math.max(Math.ceil(uR), Math.ceil(RR.getBoundingClientRect().bottom + YR.b - ZR)))
               },
-              NW = new ResizeObserver(EW);
-            NW.observe(WW);
-            const PW = document.querySelector(`.InGameUi .${GW.h}`);
-            return PW && NW.observe(PW), EW(), window.addEventListener("resize", EW), () => {
-              NW.disconnect(), window.removeEventListener("resize", EW), mW(null)
+              uR = new ResizeObserver(tR);
+            uR.observe(RR);
+            const ZR = document.querySelector(`.InGameUi .${YR.i}`);
+            return ZR && uR.observe(ZR), tR(), window.addEventListener("resize", tR), () => {
+              uR.disconnect(), window.removeEventListener("resize", tR), yR(null)
             }
-          }), [WW, iW])
-        }(LW, ZW);
-        const [, , xW, lW, , AW, bW, jW, UW, kW, MW] = iW, KW = AW > 0 ? NW("cubeWarfareHud:firstTo", {
-          target: AW
-        }) : NW("cubeWarfareHud:timeLeft");
-        return (0, YW.jsxs)("div", {
-          ref: cW,
+          }), [RR, JR])
+        }(qR, KR);
+        const [, , wR, rR, , eR, aR, LR, nR, UR, AR] = JR, CR = eR > 0 ? uR("cubeWarfareHud:firstTo", {
+          target: eR
+        }) : uR("cubeWarfareHud:timeLeft");
+        return (0, MR.jsxs)("div", {
+          ref: iR,
           className: "CubeWarfareScoreBarContainer",
-          style: null === ZW ? void 0 : {
-            top: ZW
+          style: null === KR ? void 0 : {
+            top: KR
           },
-          children: [(0, YW.jsxs)("div", {
-            ref: tW,
+          children: [(0, MR.jsxs)("div", {
+            ref: VR,
             className: "CubeWarfareScoreBar",
-            children: ["tdm" === kW[0] && (0, YW.jsx)(ki, {
-              myTeam: bW,
-              redScore: kW[1],
-              blueScore: kW[2],
-              leaderboard: EW,
-              target: "diamonds" === lW ? AW : 0,
-              clock: (0, YW.jsx)(Ui, {
-                endsAt: OW,
-                label: KW
+            children: ["tdm" === UR[0] && (0, MR.jsx)(UJ, {
+              myTeam: aR,
+              redScore: UR[1],
+              blueScore: UR[2],
+              leaderboard: tR,
+              target: "diamonds" === rR ? eR : 0,
+              clock: (0, MR.jsx)(nJ, {
+                endsAt: GR,
+                label: CR
               })
-            }), "ffa" === kW[0] && (0, YW.jsx)(si, {
-              myTeam: bW,
-              myScore: UW,
-              myRank: kW[1],
-              playerCount: kW[2],
-              leader: kW[3],
-              second: kW[4],
-              spectating: jW,
-              target: AW,
-              clock: (0, YW.jsx)(Ui, {
-                endsAt: OW,
-                label: KW
+            }), "ffa" === UR[0] && (0, MR.jsx)(WJ, {
+              myTeam: aR,
+              myScore: nR,
+              myRank: UR[1],
+              playerCount: UR[2],
+              leader: UR[3],
+              second: UR[4],
+              spectating: LR,
+              target: eR,
+              clock: (0, MR.jsx)(nJ, {
+                endsAt: GR,
+                label: CR
               })
             })]
-          }), null !== MW && (0, YW.jsxs)("div", {
+          }), null !== AR && (0, MR.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, YW.jsx)("span", {
-              children: NW("cubeWarfareHud:gungameKills", {
-                kills: MW[0],
-                target: AW
+            children: [(0, MR.jsx)("span", {
+              children: uR("cubeWarfareHud:gungameKills", {
+                kills: AR[0],
+                target: eR
               })
-            }), "" !== MW[2] && (0, YW.jsxs)(YW.Fragment, {
-              children: [(0, YW.jsx)("span", {
+            }), "" !== AR[2] && (0, MR.jsxs)(MR.Fragment, {
+              children: [(0, MR.jsx)("span", {
                 "aria-hidden": !0,
                 children: "\xb7"
-              }), (0, YW.jsx)("span", {
-                children: NW("cubeWarfareHud:nextWeapon")
-              }), (0, YW.jsx)("span", {
+              }), (0, MR.jsx)("span", {
+                children: uR("cubeWarfareHud:nextWeapon")
+              }), (0, MR.jsx)("span", {
                 className: "CubeWarfareScoreLineItem",
-                children: (0, YW.jsx)(Ai.b, {
-                  itemName: MW[2],
+                children: (0, MR.jsx)(eJ.b, {
+                  itemName: AR[2],
                   amount: 0,
                   gunTransform: "none"
                 })
               })]
             })]
-          }), null === MW && "diamonds" === lW && (0, YW.jsxs)("div", {
+          }), null === AR && "diamonds" === rR && (0, MR.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, YW.jsx)("span", {
+            children: [(0, MR.jsx)("span", {
               className: "CubeWarfareScoreLineItem",
-              children: (0, YW.jsx)(Ai.b, {
+              children: (0, MR.jsx)(eJ.b, {
                 itemName: "Diamond",
                 amount: 0
               })
-            }), (0, YW.jsx)("span", {
-              children: NW("cubeWarfareHud:collectDiamonds")
+            }), (0, MR.jsx)("span", {
+              children: uR("cubeWarfareHud:collectDiamonds")
             })]
-          }), null === MW && "diamonds" !== lW && "tdm" === xW && !jW && (0, YW.jsxs)("div", {
+          }), null === AR && "diamonds" !== rR && "tdm" === wR && !LR && (0, MR.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, YW.jsx)("span", {
-              children: NW("cubeWarfareHud:yourScore")
-            }), (0, YW.jsx)("b", {
-              children: UW
+            children: [(0, MR.jsx)("span", {
+              children: uR("cubeWarfareHud:yourScore")
+            }), (0, MR.jsx)("b", {
+              children: nR
             })]
           })]
         })
       }));
 
-    function Ui(WW) {
+    function nJ(RR) {
       let {
-        endsAt: iW,
-        label: OW
-      } = WW;
-      const mW = (0, kW.f)(iW);
-      return (0, YW.jsxs)("div", {
+        endsAt: JR,
+        label: GR
+      } = RR;
+      const yR = (0, UR.j)(JR);
+      return (0, MR.jsxs)("div", {
         className: "CubeWarfareClock",
-        children: [(0, YW.jsx)("div", {
-          className: xW()("CubeWarfareClockTime", {
-            Urgent: mW < 60
+        children: [(0, MR.jsx)("div", {
+          className: wR()("CubeWarfareClockTime", {
+            Urgent: yR < 60
           }),
-          children: (0, kW.d)(mW)
-        }), (0, YW.jsx)("div", {
+          children: (0, UR.e)(yR)
+        }), (0, MR.jsx)("div", {
           className: "CubeWarfareClockLabel",
-          children: OW
+          children: GR
         })]
       })
     }
 
-    function ki(WW) {
+    function UJ(RR) {
       const {
-        t: iW
-      } = (0, sW.B)(), OW = iW => WW.leaderboard.filter((WW => WW[2] === iW)), mW = {
+        t: JR
+      } = (0, WR.A)(), GR = JR => RR.leaderboard.filter((RR => RR[2] === JR)), yR = {
         team: "Red",
-        name: iW(hW.Red),
-        score: WW.redScore,
-        members: OW("Red")
-      }, EW = {
+        name: JR(gR.Red),
+        score: RR.redScore,
+        members: GR("Red")
+      }, tR = {
         team: "Blue",
-        name: iW(hW.Blue),
-        score: WW.blueScore,
-        members: OW("Blue")
-      }, [NW, PW] = "Blue" === WW.myTeam ? [EW, mW] : [mW, EW], LW = (OW, mW) => (0, YW.jsxs)("div", {
-        className: xW()("CubeWarfareSide", mW, `Team-${OW.team}`, {
-          Mine: OW.team === WW.myTeam
+        name: JR(gR.Blue),
+        score: RR.blueScore,
+        members: GR("Blue")
+      }, [uR, ZR] = "Blue" === RR.myTeam ? [tR, yR] : [yR, tR], qR = (GR, yR) => (0, MR.jsxs)("div", {
+        className: wR()("CubeWarfareSide", yR, `Team-${GR.team}`, {
+          Mine: GR.team === RR.myTeam
         }),
-        style: JW(OW.team, "tdm"),
-        children: [OW.team === WW.myTeam && (0, YW.jsx)("span", {
+        style: pR(GR.team, "tdm"),
+        children: [GR.team === RR.myTeam && (0, MR.jsx)("span", {
           className: "CubeWarfareYouTag",
-          children: iW("shootingOverlays:you")
-        }), (0, YW.jsx)("div", {
+          children: JR("shootingOverlays:you")
+        }), (0, MR.jsx)("div", {
           className: "CubeWarfareHeads",
-          children: OW.members.map((WW => {
-            let [iW, , , , , , OW] = WW;
-            return (0, YW.jsx)("span", {
-              className: xW()("CubeWarfareHead", {
-                Dead: !OW
+          children: GR.members.map((RR => {
+            let [JR, , , , , , GR] = RR;
+            return (0, MR.jsx)("span", {
+              className: wR()("CubeWarfareHead", {
+                Dead: !GR
               }),
-              children: (0, YW.jsx)(eW, {
-                playerId: iW
+              children: (0, MR.jsx)(DR, {
+                playerId: JR
               })
-            }, iW)
+            }, JR)
           }))
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "CubeWarfareSideText",
-          children: [(0, YW.jsx)("div", {
+          children: [(0, MR.jsx)("div", {
             className: "CubeWarfareSideName",
-            children: (0, YW.jsx)("span", {
+            children: (0, MR.jsx)("span", {
               className: "CubeWarfareSideLabel",
-              children: OW.name
+              children: GR.name
             })
-          }), (0, YW.jsx)("div", {
+          }), (0, MR.jsx)("div", {
             className: "CubeWarfareSideScore SmallTextBold",
-            children: OW.score
+            children: GR.score
           })]
-        }), (0, YW.jsx)(Mi, {
-          score: OW.score,
-          target: WW.target
+        }), (0, MR.jsx)(AJ, {
+          score: GR.score,
+          target: RR.target
         })]
       });
-      return (0, YW.jsxs)(YW.Fragment, {
-        children: [LW(NW, "Left"), WW.clock, LW(PW, "Right")]
+      return (0, MR.jsxs)(MR.Fragment, {
+        children: [qR(uR, "Left"), RR.clock, qR(ZR, "Right")]
       })
     }
 
-    function si(WW) {
-      var iW;
+    function WJ(RR) {
+      var JR;
       const {
-        t: OW
-      } = (0, sW.B)(), mW = dW(), EW = null !== (iW = WW.second) && void 0 !== iW ? iW : WW.spectating || WW.playerCount > 1 ? WW.leader : null;
-      return (0, YW.jsxs)(YW.Fragment, {
-        children: [!WW.spectating && (0, YW.jsxs)("div", {
-          className: xW()("CubeWarfareSide", "Left", "Mine", "Ffa"),
+        t: GR
+      } = (0, WR.A)(), yR = NR(), tR = null !== (JR = RR.second) && void 0 !== JR ? JR : RR.spectating || RR.playerCount > 1 ? RR.leader : null;
+      return (0, MR.jsxs)(MR.Fragment, {
+        children: [!RR.spectating && (0, MR.jsxs)("div", {
+          className: wR()("CubeWarfareSide", "Left", "Mine", "Ffa"),
           style: {
-            "--team": (0, MW.lb)(WW.myTeam)
+            "--team": (0, AR.lb)(RR.myTeam)
           },
-          children: [(0, YW.jsx)("span", {
+          children: [(0, MR.jsx)("span", {
             className: "CubeWarfareYouTag",
-            children: OW("shootingOverlays:you")
-          }), (0, YW.jsxs)("div", {
+            children: GR("shootingOverlays:you")
+          }), (0, MR.jsxs)("div", {
             className: "CubeWarfareSideText",
-            children: [(0, YW.jsx)("div", {
+            children: [(0, MR.jsx)("div", {
               className: "CubeWarfareSideName",
-              children: (0, YW.jsx)("span", {
+              children: (0, MR.jsx)("span", {
                 className: "CubeWarfareSideLabel",
-                children: OW("cubeWarfareHud:rank", {
-                  rank: WW.myRank
+                children: GR("cubeWarfareHud:rank", {
+                  rank: RR.myRank
                 })
               })
-            }), (0, YW.jsx)("div", {
+            }), (0, MR.jsx)("div", {
               className: "CubeWarfareSideScore SmallTextBold",
-              children: WW.myScore
+              children: RR.myScore
             })]
-          }), (0, YW.jsx)(Mi, {
-            score: WW.myScore,
-            target: WW.target
+          }), (0, MR.jsx)(AJ, {
+            score: RR.myScore,
+            target: RR.target
           })]
-        }), WW.clock, null !== EW && (0, YW.jsxs)("div", {
-          className: xW()("CubeWarfareSide", "Right", "Ffa"),
-          children: [(0, YW.jsxs)("div", {
+        }), RR.clock, null !== tR && (0, MR.jsxs)("div", {
+          className: wR()("CubeWarfareSide", "Right", "Ffa"),
+          children: [(0, MR.jsxs)("div", {
             className: "CubeWarfareSideText",
-            children: [(0, YW.jsxs)("div", {
+            children: [(0, MR.jsxs)("div", {
               className: "CubeWarfareSideName",
-              children: [(0, YW.jsx)("span", {
+              children: [(0, MR.jsx)("span", {
                 className: "CubeWarfareSideLabel",
-                children: null !== WW.second ? OW("cubeWarfareHud:second") : OW("cubeWarfareHud:leader")
-              }), (0, YW.jsx)("span", {
+                children: null !== RR.second ? GR("cubeWarfareHud:second") : GR("cubeWarfareHud:leader")
+              }), (0, MR.jsx)("span", {
                 className: "CubeWarfareSideWho",
-                children: mW(EW[1])
+                children: yR(tR[1])
               })]
-            }), (0, YW.jsx)("div", {
+            }), (0, MR.jsx)("div", {
               className: "CubeWarfareSideScore SmallTextBold",
-              children: EW[2]
+              children: tR[2]
             })]
-          }), (0, YW.jsx)(Mi, {
-            score: EW[2],
-            target: WW.target
+          }), (0, MR.jsx)(AJ, {
+            score: tR[2],
+            target: RR.target
           })]
         })]
       })
     }
 
-    function Mi(WW) {
+    function AJ(RR) {
       let {
-        score: iW,
-        target: OW
-      } = WW;
-      return (0, YW.jsx)("div", {
-        className: xW()("CubeWarfareStrip", {
-          Progress: OW > 0
+        score: JR,
+        target: GR
+      } = RR;
+      return (0, MR.jsx)("div", {
+        className: wR()("CubeWarfareStrip", {
+          Progress: GR > 0
         }),
-        children: OW > 0 && (0, YW.jsx)("i", {
+        children: GR > 0 && (0, MR.jsx)("i", {
           style: {
-            transform: `scaleX(${Math.min(1,iW/OW)})`
+            transform: `scaleX(${Math.min(1,JR/GR)})`
           }
         })
       })
     }
-    const Ki = (0, mW.memo)((function(WW) {
+    const CJ = (0, yR.memo)((function(RR) {
       let {
-        wire: iW
-      } = WW;
+        wire: JR
+      } = RR;
       const {
-        isTouchScreen: OW
-      } = (0, IW.p)(["isTouchScreen"]);
-      return OW ? (0, YW.jsx)("div", {
+        isTouchScreen: GR
+      } = (0, kR.o)(["isTouchScreen"]);
+      return GR ? (0, MR.jsx)("div", {
         className: "CubeWarfarePerkColumnTouch",
-        children: (0, YW.jsx)(Si, {
-          wire: iW,
+        children: (0, MR.jsx)(XJ, {
+          wire: JR,
           touch: !0
         })
-      }) : (0, YW.jsx)(RW.h, {
+      }) : (0, MR.jsx)(ER.d, {
         placement: "bottomLeft",
-        children: (0, YW.jsx)(Si, {
-          wire: iW
+        children: (0, MR.jsx)(XJ, {
+          wire: JR
         })
       })
     }));
 
-    function Si(WW) {
+    function XJ(RR) {
       let {
-        wire: iW,
-        touch: OW = !1
-      } = WW;
+        wire: JR,
+        touch: GR = !1
+      } = RR;
       const {
-        t: mW
-      } = (0, sW.B)(), EW = iW[11], NW = iW[12], PW = NW.findIndex((WW => {
-        let [, iW] = WW;
-        return EW < iW
+        t: yR
+      } = (0, WR.A)(), tR = JR[11], uR = JR[12], ZR = uR.findIndex((RR => {
+        let [, JR] = RR;
+        return tR < JR
       }));
-      return (0, YW.jsxs)("div", {
+      return (0, MR.jsxs)("div", {
         className: "CubeWarfarePerkColumn",
-        children: [(0, YW.jsxs)("div", {
+        children: [(0, MR.jsxs)("div", {
           className: "CubeWarfarePerkPoints SmallTextBold",
-          children: [(0, YW.jsx)(AW.c, {
+          children: [(0, MR.jsx)(eR.d, {
             name: "crosshairs"
-          }), EW]
-        }), NW.map(((WW, iW) => {
-          let [LW, cW, wW, tW, ZW] = WW;
-          const lW = EW >= cW,
-            bW = 0 === iW ? 0 : NW[iW - 1][1],
-            jW = lW ? 1 : iW === PW ? Math.max(0, (EW - bW) / (cW - bW)) : 0;
-          return (0, YW.jsxs)("div", {
-            className: xW()("CubeWarfarePerk", {
-              Active: ZW,
-              Reached: lW,
-              Next: iW === PW
+          }), tR]
+        }), uR.map(((RR, JR) => {
+          let [qR, iR, fR, VR, KR] = RR;
+          const rR = tR >= iR,
+            aR = 0 === JR ? 0 : uR[JR - 1][1],
+            LR = rR ? 1 : JR === ZR ? Math.max(0, (tR - aR) / (iR - aR)) : 0;
+          return (0, MR.jsxs)("div", {
+            className: wR()("CubeWarfarePerk", {
+              Active: KR,
+              Reached: rR,
+              Next: JR === ZR
             }),
-            children: [(0, YW.jsxs)("div", {
+            children: [(0, MR.jsxs)("div", {
               className: "CubeWarfarePerkTile",
-              children: [!lW && (0, YW.jsx)("div", {
+              children: [!rR && (0, MR.jsx)("div", {
                 className: "CubeWarfarePerkFill",
                 style: {
-                  transform: `scaleY(${jW})`
+                  transform: `scaleY(${LR})`
                 }
-              }), (0, YW.jsx)(AW.c, {
-                name: tW || "lock"
+              }), (0, MR.jsx)(eR.d, {
+                name: VR || "lock"
               })]
-            }), (0, YW.jsxs)("div", {
+            }), (0, MR.jsxs)("div", {
               className: "CubeWarfarePerkText SmallTextBold",
-              children: [(0, YW.jsx)("span", {
+              children: [(0, MR.jsx)("span", {
                 className: "CubeWarfarePerkName",
-                children: wW || mW("cubeWarfareHud:tier", {
-                  tier: LW
+                children: fR || yR("cubeWarfareHud:tier", {
+                  tier: qR
                 })
-              }), (0, YW.jsxs)("small", {
-                children: [lW && mW(ZW ? "cubeWarfareHud:active" : "cubeWarfareHud:noPerk"), !lW && !OW && mW("cubeWarfareHud:toGo", {
-                  count: cW - EW
-                }), !lW && OW && (0, YW.jsxs)(YW.Fragment, {
-                  children: [(0, YW.jsx)(AW.c, {
+              }), (0, MR.jsxs)("small", {
+                children: [rR && yR(KR ? "cubeWarfareHud:active" : "cubeWarfareHud:noPerk"), !rR && !GR && yR("cubeWarfareHud:toGo", {
+                  count: iR - tR
+                }), !rR && GR && (0, MR.jsxs)(MR.Fragment, {
+                  children: [(0, MR.jsx)(eR.d, {
                     name: "crosshairs"
-                  }), " ", cW]
+                  }), " ", iR]
                 })]
               })]
             })]
-          }, LW)
+          }, qR)
         }))]
       })
     }
 
-    function Yi(WW) {
-      const [, iW] = (0, mW.useReducer)((WW => WW + 1), 0);
-      (0, mW.useEffect)((() => {
-        const OW = WW - performance.now();
-        if (0 === WW || OW <= 0) return;
-        const mW = window.setTimeout(iW, OW);
+    function MJ(RR) {
+      const [, JR] = (0, yR.useReducer)((RR => RR + 1), 0);
+      (0, yR.useEffect)((() => {
+        const GR = RR - performance.now();
+        if (0 === RR || GR <= 0) return;
+        const yR = window.setTimeout(JR, GR);
         return () => {
-          window.clearTimeout(mW)
+          window.clearTimeout(yR)
         }
-      }), [WW])
+      }), [RR])
     }
-    const yi = ["", "", "cubeWarfareHud:doubleKill", "cubeWarfareHud:tripleKill", "cubeWarfareHud:quadKill", "cubeWarfareHud:rampage"];
+    const BJ = ["", "", "cubeWarfareHud:doubleKill", "cubeWarfareHud:tripleKill", "cubeWarfareHud:quadKill", "cubeWarfareHud:rampage"];
 
-    function Ti(WW) {
+    function lJ(RR) {
       let {
-        store: iW
-      } = WW;
-      const OW = ui(fW(iW, "kill"), 2500),
-        mW = dW();
-      return OW ? (0, YW.jsx)(Hi, {
-        victimName: mW(OW.wire[2]),
-        headshot: OW.wire[4],
-        killsThisLife: OW.wire[5],
-        gold: OW.wire[6]
-      }, OW.seq) : null
-    }
-
-    function Ji(WW) {
-      let {
-        store: iW
-      } = WW;
-      const OW = ui(fW(iW, "tier"), 3500);
-      return OW ? (0, YW.jsx)(ni, {
-        tier: OW.wire[1],
-        perk: OW.wire[2],
-        icon: OW.wire[3]
-      }, OW.seq) : null
+        store: JR
+      } = RR;
+      const GR = vJ(mR(JR, "kill"), 2500),
+        yR = NR();
+      return GR ? (0, MR.jsx)(gJ, {
+        victimName: yR(GR.wire[2]),
+        headshot: GR.wire[4],
+        killsThisLife: GR.wire[5],
+        gold: GR.wire[6]
+      }, GR.seq) : null
     }
 
-    function Hi(WW) {
+    function pJ(RR) {
       let {
-        victimName: iW,
-        headshot: OW,
-        killsThisLife: mW,
-        gold: EW
-      } = WW;
+        store: JR
+      } = RR;
+      const GR = vJ(mR(JR, "tier"), 3500);
+      return GR ? (0, MR.jsx)(bJ, {
+        tier: GR.wire[1],
+        perk: GR.wire[2],
+        icon: GR.wire[3]
+      }, GR.seq) : null
+    }
+
+    function gJ(RR) {
+      let {
+        victimName: JR,
+        headshot: GR,
+        killsThisLife: yR,
+        gold: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, sW.B)(), PW = yi[Math.min(mW, yi.length - 1)];
-      return (0, YW.jsxs)("div", {
+        t: uR
+      } = (0, WR.A)(), ZR = BJ[Math.min(yR, BJ.length - 1)];
+      return (0, MR.jsxs)("div", {
         className: "CubeWarfareKillPop",
-        children: [PW && (0, YW.jsx)("div", {
+        children: [ZR && (0, MR.jsx)("div", {
           className: "CubeWarfareMultiKill SmallTextBold",
-          children: NW(PW)
-        }), (0, YW.jsxs)("div", {
+          children: uR(ZR)
+        }), (0, MR.jsxs)("div", {
           className: "CubeWarfareKillLine SmallTextBold",
-          children: [(0, YW.jsx)("span", {
+          children: [(0, MR.jsx)("span", {
             className: "CubeWarfareKillTag",
-            children: NW("cubeWarfareHud:eliminated")
-          }), (0, YW.jsx)("span", {
+            children: uR("cubeWarfareHud:eliminated")
+          }), (0, MR.jsx)("span", {
             className: "CubeWarfareKillName",
-            children: iW
+            children: JR
           })]
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "CubeWarfareKillRewards",
-          children: [EW > 0 && (0, YW.jsxs)("span", {
+          children: [tR > 0 && (0, MR.jsxs)("span", {
             className: "CubeWarfareReward Gold SmallTextBold",
-            children: [`+${EW}`, (0, YW.jsx)(AW.c, {
+            children: [`+${tR}`, (0, MR.jsx)(eR.d, {
               name: "coins",
               className: "CubeWarfareCoin"
             })]
-          }), OW && (0, YW.jsxs)("span", {
+          }), GR && (0, MR.jsxs)("span", {
             className: "CubeWarfareReward Headshot SmallTextBold",
-            children: [(0, YW.jsx)(AW.c, {
+            children: [(0, MR.jsx)(eR.d, {
               name: "crosshairs"
-            }), NW("shootingOverlays:headshot")]
+            }), uR("shootingOverlays:headshot")]
           })]
         })]
       })
     }
 
-    function ni(WW) {
+    function bJ(RR) {
       let {
-        tier: iW,
-        perk: OW,
-        icon: mW
-      } = WW;
+        tier: JR,
+        perk: GR,
+        icon: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, sW.B)();
-      return (0, YW.jsxs)("div", {
+        t: tR
+      } = (0, WR.A)();
+      return (0, MR.jsxs)("div", {
         className: "CubeWarfareTierBanner",
-        children: [(0, YW.jsx)("div", {
+        children: [(0, MR.jsx)("div", {
           className: "CubeWarfareTierIcon",
-          children: (0, YW.jsx)(AW.c, {
-            name: mW || "crosshairs"
+          children: (0, MR.jsx)(eR.d, {
+            name: yR || "crosshairs"
           })
-        }), (0, YW.jsxs)("div", {
-          children: [(0, YW.jsx)("div", {
+        }), (0, MR.jsxs)("div", {
+          children: [(0, MR.jsx)("div", {
             className: "CubeWarfareTierTitle",
-            children: EW("cubeWarfareHud:tierReached", {
-              tier: iW
+            children: tR("cubeWarfareHud:tierReached", {
+              tier: JR
             })
-          }), (0, YW.jsx)("div", {
+          }), (0, MR.jsx)("div", {
             className: "CubeWarfareTierPerk SmallTextBold",
-            children: OW ? EW("cubeWarfareHud:perkActive", {
-              perk: OW
-            }) : EW("cubeWarfareHud:noPerk")
+            children: GR ? tR("cubeWarfareHud:perkActive", {
+              perk: GR
+            }) : tR("cubeWarfareHud:noPerk")
           })]
         })]
       })
     }
 
-    function ui(WW, iW) {
-      return Yi(WW ? WW.at + iW : 0), WW && performance.now() - WW.at < iW ? WW : null
+    function vJ(RR, JR) {
+      return MJ(RR ? RR.at + JR : 0), RR && performance.now() - RR.at < JR ? RR : null
     }
-    var oi = OW(3332);
+    var OJ = GR(3465);
 
-    function di() {
-      var WW, iW;
-      const OW = null === (WW = (0, oi.e)("currencyAmounts")) || void 0 === WW || null === (iW = WW.gold) || void 0 === iW ? void 0 : iW.amount,
-        [EW, NW] = (0, mW.useState)(0),
-        PW = (0, mW.useRef)(OW);
-      return (0, mW.useEffect)((() => {
-        void 0 !== OW && void 0 !== PW.current && OW > PW.current && NW((WW => WW + 1)), PW.current = OW
-      }), [OW]), void 0 === OW ? null : (0, YW.jsx)(RW.h, {
+    function xJ() {
+      var RR, JR;
+      const GR = null === (RR = (0, OJ.f)("currencyAmounts")) || void 0 === RR || null === (JR = RR.gold) || void 0 === JR ? void 0 : JR.amount,
+        [tR, uR] = (0, yR.useState)(0),
+        ZR = (0, yR.useRef)(GR);
+      return (0, yR.useEffect)((() => {
+        void 0 !== GR && void 0 !== ZR.current && GR > ZR.current && uR((RR => RR + 1)), ZR.current = GR
+      }), [GR]), void 0 === GR ? null : (0, MR.jsx)(ER.d, {
         placement: "statBars",
-        children: (0, YW.jsxs)("div", {
-          className: xW()("CubeWarfareWallet SmallTextBold", {
-            Bump: EW > 0
+        children: (0, MR.jsxs)("div", {
+          className: wR()("CubeWarfareWallet SmallTextBold", {
+            Bump: tR > 0
           }),
-          children: [(0, YW.jsx)(AW.c, {
+          children: [(0, MR.jsx)(eR.d, {
             name: "coins",
             className: "CubeWarfareCoin"
-          }), OW]
-        }, EW)
+          }), GR]
+        }, tR)
       })
     }
 
-    function ei(WW) {
+    function NJ(RR) {
       let {
-        endsAt: iW
-      } = WW;
-      return 0 === iW ? null : (0, YW.jsx)(gi, {
-        endsAt: iW
-      }, iW)
+        endsAt: JR
+      } = RR;
+      return 0 === JR ? null : (0, MR.jsx)(HJ, {
+        endsAt: JR
+      }, JR)
     }
 
-    function vi(WW) {
+    function DJ(RR) {
       let {
-        endsAt: iW
-      } = WW;
-      return Yi(iW), iW <= performance.now() ? null : (0, YW.jsx)("div", {
+        endsAt: JR
+      } = RR;
+      return MJ(JR), JR <= performance.now() ? null : (0, MR.jsx)("div", {
         className: "CubeWarfareProtectionEdge"
       })
     }
 
-    function gi(WW) {
+    function HJ(RR) {
       let {
-        endsAt: iW
-      } = WW;
+        endsAt: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, sW.B)(), [EW] = (0, mW.useState)((() => Math.max(0, iW - performance.now())));
-      return Yi(iW), iW <= performance.now() ? null : (0, YW.jsxs)("div", {
+        t: GR
+      } = (0, WR.A)(), [tR] = (0, yR.useState)((() => Math.max(0, JR - performance.now())));
+      return MJ(JR), JR <= performance.now() ? null : (0, MR.jsxs)("div", {
         className: "CubeWarfareProtection",
-        children: [(0, YW.jsx)(AW.c, {
+        children: [(0, MR.jsx)(eR.d, {
           name: "shield-halved",
           className: "CubeWarfareProtectionIcon"
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "CubeWarfareProtectionText SmallTextBold",
-          children: [OW("cubeWarfareHud:spawnProtected"), (0, YW.jsx)("small", {
-            children: OW("cubeWarfareHud:spawnProtectedHint")
+          children: [GR("cubeWarfareHud:spawnProtected"), (0, MR.jsx)("small", {
+            children: GR("cubeWarfareHud:spawnProtectedHint")
           })]
-        }), (0, YW.jsx)("div", {
+        }), (0, MR.jsx)("div", {
           className: "CubeWarfareProtectionDrain",
           style: {
-            "--cubeWarfareDrainMs": `${EW}ms`
+            "--cubeWarfareDrainMs": `${tR}ms`
           }
         })]
       })
     }
 
-    function Di(WW) {
+    function oJ(RR) {
       let {
-        place: iW,
-        hidden: OW = !1,
-        children: mW
-      } = WW;
-      return "OverHotbar" !== iW ? (0, YW.jsx)("div", {
-        className: xW()("CubeWarfareCentreSlot", iW, {
-          Hidden: OW
+        place: JR,
+        hidden: GR = !1,
+        children: yR
+      } = RR;
+      return "OverHotbar" !== JR ? (0, MR.jsx)("div", {
+        className: wR()("CubeWarfareCentreSlot", JR, {
+          Hidden: GR
         }),
-        children: mW
-      }) : (0, YW.jsx)(RW.h, {
-        children: (0, YW.jsx)("div", {
+        children: yR
+      }) : (0, MR.jsx)(ER.d, {
+        children: (0, MR.jsx)("div", {
           className: "CubeWarfareOverHotbar",
-          children: (0, YW.jsx)("div", {
+          children: (0, MR.jsx)("div", {
             className: "CubeWarfareCentreSlot OverHotbar",
-            children: mW
+            children: yR
           })
         })
       })
     }
-    const Vi = WW => {
-      var iW;
-      const OW = null === (iW = WW.attributes.customAttributes) || void 0 === iW ? void 0 : iW.shotsLeft;
-      return "number" === typeof OW && WW.clipSize ? (0, YW.jsx)(fi, {
-        item: WW,
-        shotsLeft: OW,
-        clipSize: WW.clipSize
+    const cJ = RR => {
+      var JR;
+      const GR = null === (JR = RR.attributes.customAttributes) || void 0 === JR ? void 0 : JR.shotsLeft;
+      return "number" === typeof GR && RR.clipSize ? (0, MR.jsx)(PJ, {
+        item: RR,
+        shotsLeft: GR,
+        clipSize: RR.clipSize
       }) : null
     };
 
-    function fi(WW) {
+    function PJ(RR) {
       let {
-        item: iW,
-        shotsLeft: OW,
-        clipSize: EW
-      } = WW;
+        item: JR,
+        shotsLeft: GR,
+        clipSize: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, sW.B)(), PW = function(WW, iW, OW) {
-        const [EW, NW] = (0, mW.useState)(null), PW = (0, mW.useRef)(WW), LW = (0, mW.useRef)(0);
-        return (0, QW.e)("middleScreenBarInitiate", (WW => {
+        t: uR
+      } = (0, WR.A)(), ZR = function(RR, JR, GR) {
+        const [tR, uR] = (0, yR.useState)(null), ZR = (0, yR.useRef)(RR), qR = (0, yR.useRef)(0);
+        return (0, hR.f)("middleScreenBarInitiate", (RR => {
           let {
-            duration: OW
-          } = WW;
-          OW >= 400 && PW.current < iW && NW({
-            key: ++LW.current,
-            ms: OW
+            duration: GR
+          } = RR;
+          GR >= 400 && ZR.current < JR && uR({
+            key: ++qR.current,
+            ms: GR
           })
-        })), (0, QW.e)("middleScreenBarRemove", (() => {
-          NW(null)
-        })), (0, mW.useEffect)((() => {
-          const iW = WW > PW.current;
-          PW.current = WW, iW && NW(null)
-        }), [WW]), (0, mW.useEffect)((() => {
-          NW(null)
-        }), [OW]), (0, mW.useEffect)((() => {
-          if (!EW) return;
-          const WW = window.setTimeout((() => {
-            NW(null)
-          }), EW.ms);
+        })), (0, hR.f)("middleScreenBarRemove", (() => {
+          uR(null)
+        })), (0, yR.useEffect)((() => {
+          const JR = RR > ZR.current;
+          ZR.current = RR, JR && uR(null)
+        }), [RR]), (0, yR.useEffect)((() => {
+          uR(null)
+        }), [GR]), (0, yR.useEffect)((() => {
+          if (!tR) return;
+          const RR = window.setTimeout((() => {
+            uR(null)
+          }), tR.ms);
           return () => {
-            window.clearTimeout(WW)
+            window.clearTimeout(RR)
           }
-        }), [EW]), EW
-      }(OW, EW, iW.instance), LW = OW <= Math.ceil(.25 * EW);
-      return (0, YW.jsx)(RW.h, {
+        }), [tR]), tR
+      }(GR, tR, JR.instance), qR = GR <= Math.ceil(.25 * tR);
+      return (0, MR.jsx)(ER.d, {
         placement: "statBars",
-        children: (0, YW.jsxs)("div", {
-          className: xW()("CubeWarfareAmmo", {
-            Low: LW,
-            Reloading: null !== PW
+        children: (0, MR.jsxs)("div", {
+          className: wR()("CubeWarfareAmmo", {
+            Low: qR,
+            Reloading: null !== ZR
           }),
-          children: [null === PW && (0, YW.jsxs)(YW.Fragment, {
-            children: [(0, YW.jsx)("span", {
+          children: [null === ZR && (0, MR.jsxs)(MR.Fragment, {
+            children: [(0, MR.jsx)("span", {
               className: "CubeWarfareAmmoMag SmallTextBold",
-              children: OW
-            }), (0, YW.jsx)("span", {
+              children: GR
+            }), (0, MR.jsx)("span", {
               className: "CubeWarfareAmmoClip SmallTextBold",
-              children: `/ ${EW}`
+              children: `/ ${tR}`
             })]
-          }), null !== PW && (0, YW.jsxs)("span", {
+          }), null !== ZR && (0, MR.jsxs)("span", {
             className: "CubeWarfareAmmoReloading SmallTextBold",
-            children: [NW("cubeWarfareHud:reloading"), (0, YW.jsx)("i", {
+            children: [uR("cubeWarfareHud:reloading"), (0, MR.jsx)("i", {
               className: "CubeWarfareAmmoReloadBar",
               style: {
-                "--cubeWarfareReloadMs": `${PW.ms}ms`
+                "--cubeWarfareReloadMs": `${ZR.ms}ms`
               }
-            }, PW.key)]
-          }), (0, YW.jsx)("span", {
+            }, ZR.key)]
+          }), (0, MR.jsx)("span", {
             className: "CubeWarfareAmmoGun",
-            children: (0, YW.jsx)(Ai.b, {
-              itemName: iW.name,
+            children: (0, MR.jsx)(eJ.b, {
+              itemName: JR.name,
               amount: 0,
               gunTransform: "none"
             })
-          }), LW && null === PW && (0, YW.jsx)(rW.e, {
+          }), qR && null === ZR && (0, MR.jsx)(FR.c, {
             noaAction: "ReloadGun",
             className: "CubeWarfareAmmoKey",
             padHidesKey: !0
@@ -1391,671 +1391,671 @@ export const modules = {
       })
     }
 
-    function Ci(WW) {
+    function IJ(RR) {
       let {
-        store: iW
-      } = WW;
-      const OW = fW(iW, "hud"),
-        EW = fW(iW, "leaderboard"),
-        NW = (0, lW.f)("connectedGame", (WW => WW.replay));
-      ! function(WW) {
-        (0, mW.useEffect)((() => {
-          const iW = (0, xi.r)({
-              headshot: (iW, OW) => {
-                var mW;
-                const EW = performance.now(),
-                  NW = WW.get("killfeed").findLast((WW => {
+        store: JR
+      } = RR;
+      const GR = mR(JR, "hud"),
+        tR = mR(JR, "leaderboard"),
+        uR = (0, rR.e)("connectedGame", (RR => RR.replay));
+      ! function(RR) {
+        (0, yR.useEffect)((() => {
+          const JR = (0, wJ.m)({
+              headshot: (JR, GR) => {
+                var yR;
+                const tR = performance.now(),
+                  uR = RR.get("killfeed").findLast((RR => {
                     let {
-                      at: mW,
-                      wire: NW
-                    } = WW;
-                    return NW[0] === iW && NW[1] === OW && EW - mW < 3e3
+                      at: yR,
+                      wire: uR
+                    } = RR;
+                    return uR[0] === JR && uR[1] === GR && tR - yR < 3e3
                   }));
-                return null !== (mW = null === NW || void 0 === NW ? void 0 : NW.wire[3]) && void 0 !== mW && mW
+                return null !== (yR = null === uR || void 0 === uR ? void 0 : uR.wire[3]) && void 0 !== yR && yR
               },
-              streakLabel: WW => `\xd7${WW}`
+              streakLabel: RR => `\xd7${RR}`
             }),
-            OW = (0, xi.o)(Vi);
+            GR = (0, wJ.l)(cJ);
           return () => {
-            iW(), OW()
+            JR(), GR()
           }
-        }), [WW])
-      }(iW);
-      const PW = OW.wire;
-      if (!PW || "match" !== PW[1] || NW) return null;
-      const LW = !PW[7];
-      return (0, YW.jsxs)("div", {
+        }), [RR])
+      }(JR);
+      const ZR = GR.wire;
+      if (!ZR || "match" !== ZR[1] || uR) return null;
+      const qR = !ZR[7];
+      return (0, MR.jsxs)("div", {
         className: "CubeWarfareHud",
-        children: [(0, YW.jsx)(ji, {
-          wire: PW,
-          endsAt: OW.endsAt,
-          leaderboard: EW
-        }), LW && (0, YW.jsxs)(YW.Fragment, {
-          children: [(0, YW.jsx)(Ki, {
-            wire: PW
-          }), (0, YW.jsx)(Xi, {
-            store: iW,
-            protectionEndsAt: OW.spawnProtectionEndsAt
-          }), (0, YW.jsx)(di, {}), (0, YW.jsx)(vi, {
-            endsAt: OW.spawnProtectionEndsAt
+        children: [(0, MR.jsx)(LJ, {
+          wire: ZR,
+          endsAt: GR.endsAt,
+          leaderboard: tR
+        }), qR && (0, MR.jsxs)(MR.Fragment, {
+          children: [(0, MR.jsx)(CJ, {
+            wire: ZR
+          }), (0, MR.jsx)(mJ, {
+            store: JR,
+            protectionEndsAt: GR.spawnProtectionEndsAt
+          }), (0, MR.jsx)(xJ, {}), (0, MR.jsx)(DJ, {
+            endsAt: GR.spawnProtectionEndsAt
           })]
         })]
       })
     }
 
-    function Xi(WW) {
+    function mJ(RR) {
       let {
-        store: iW,
-        protectionEndsAt: OW
-      } = WW;
+        store: JR,
+        protectionEndsAt: GR
+      } = RR;
       const {
-        isTouchScreen: mW
-      } = (0, IW.p)(["isTouchScreen"]), EW = (0, QW.g)("aimingOverlay", "none"), NW = (0, YW.jsx)(ei, {
-        endsAt: OW
-      }), PW = (0, YW.jsx)(Ji, {
-        store: iW
-      }), LW = (0, YW.jsx)(Ti, {
-        store: iW
+        isTouchScreen: yR
+      } = (0, kR.o)(["isTouchScreen"]), tR = (0, hR.h)("aimingOverlay", "none"), uR = (0, MR.jsx)(NJ, {
+        endsAt: GR
+      }), ZR = (0, MR.jsx)(pJ, {
+        store: JR
+      }), qR = (0, MR.jsx)(lJ, {
+        store: JR
       });
-      if (!mW) return (0, YW.jsxs)(Di, {
+      if (!yR) return (0, MR.jsxs)(oJ, {
         place: "OverHotbar",
-        children: [NW, PW, LW]
+        children: [uR, ZR, qR]
       });
-      const cW = "sniper" === EW;
-      return (0, YW.jsxs)(YW.Fragment, {
-        children: [(0, YW.jsxs)(Di, {
+      const iR = "sniper" === tR;
+      return (0, MR.jsxs)(MR.Fragment, {
+        children: [(0, MR.jsxs)(oJ, {
           place: "AboveCrosshair",
-          hidden: cW,
-          children: [NW, LW]
-        }), (0, YW.jsx)(Di, {
+          hidden: iR,
+          children: [uR, qR]
+        }), (0, MR.jsx)(oJ, {
           place: "BelowCrosshair",
-          hidden: cW,
-          children: PW
+          hidden: iR,
+          children: ZR
         })]
       })
     }
-    var Bi = OW(327);
-    const qi = 2 * Math.PI * 19;
+    var zJ = GR(359);
+    const SJ = 2 * Math.PI * 19;
 
-    function Ri(WW) {
-      var iW, OW;
+    function jJ(RR) {
+      var JR, GR;
       let {
-        store: EW,
-        variation: NW,
-        state: PW
-      } = WW;
+        store: tR,
+        variation: uR,
+        state: ZR
+      } = RR;
       const {
-        t: LW
-      } = (0, sW.B)(), cW = fW(EW, "death"), wW = fW(EW, "leaderboard"), tW = dW(), ZW = (0, mW.useRef)(performance.now()), xW = (0, mW.useRef)(PW.alive);
-      !PW.alive && xW.current && (ZW.current = performance.now()), xW.current = PW.alive;
-      const lW = (0, mW.useRef)(null);
-      cW && cW.at >= ZW.current - 3e3 && (lW.current = {
-        diedAt: ZW.current,
-        wire: cW.wire
+        t: qR
+      } = (0, WR.A)(), iR = mR(tR, "death"), fR = mR(tR, "leaderboard"), VR = NR(), KR = (0, yR.useRef)(performance.now()), wR = (0, yR.useRef)(ZR.alive);
+      !ZR.alive && wR.current && (KR.current = performance.now()), wR.current = ZR.alive;
+      const rR = (0, yR.useRef)(null);
+      iR && iR.at >= KR.current - 3e3 && (rR.current = {
+        diedAt: KR.current,
+        wire: iR.wire
       });
-      const jW = (null === (iW = lW.current) || void 0 === iW ? void 0 : iW.diedAt) === ZW.current ? lW.current.wire : null,
-        [, UW, kW, MW, KW, SW, JW, hW, HW] = null !== jW && void 0 !== jW ? jW : [],
-        nW = "player" === UW && "" !== kW,
-        uW = null === (OW = wW.find((WW => WW[0] === kW))) || void 0 === OW ? void 0 : OW[2];
-      return (0, YW.jsxs)("div", {
+      const LR = (null === (JR = rR.current) || void 0 === JR ? void 0 : JR.diedAt) === KR.current ? rR.current.wire : null,
+        [, nR, UR, AR, CR, XR, pR, gR, bR] = null !== LR && void 0 !== LR ? LR : [],
+        vR = "player" === nR && "" !== UR,
+        OR = null === (GR = fR.find((RR => RR[0] === UR))) || void 0 === GR ? void 0 : GR[2];
+      return (0, MR.jsxs)("div", {
         className: "ShootingDeathCard",
         style: {
-          "--killer": nW && uW ? TW(uW, NW) : void 0
+          "--killer": vR && OR ? lR(OR, uR) : void 0
         },
-        children: [(0, YW.jsxs)("div", {
+        children: [(0, MR.jsxs)("div", {
           className: "ShootingDeathKiller",
-          children: [nW && (0, YW.jsx)("div", {
+          children: [vR && (0, MR.jsx)("div", {
             className: "ShootingDeathHead",
-            children: (0, YW.jsx)(eW, {
-              playerId: kW
+            children: (0, MR.jsx)(DR, {
+              playerId: UR
             })
-          }), !nW && (0, YW.jsx)("div", {
+          }), !vR && (0, MR.jsx)("div", {
             className: "ShootingDeathHead ShootingDeathSkull",
-            children: (0, YW.jsx)(AW.c, {
+            children: (0, MR.jsx)(eR.d, {
               name: "skull"
             })
-          }), (0, YW.jsxs)("div", {
+          }), (0, MR.jsxs)("div", {
             className: "ShootingDeathWho",
-            children: [nW && (0, YW.jsxs)(YW.Fragment, {
-              children: [(0, YW.jsx)("div", {
+            children: [vR && (0, MR.jsxs)(MR.Fragment, {
+              children: [(0, MR.jsx)("div", {
                 className: "ShootingDeathEyebrow SmallTextBold",
-                children: LW(`${yW}killedBy`)
-              }), (0, YW.jsx)("div", {
+                children: qR(`${BR}killedBy`)
+              }), (0, MR.jsx)("div", {
                 className: "ShootingDeathName FullyFancyText",
-                children: tW(null !== MW && void 0 !== MW ? MW : "")
+                children: VR(null !== AR && void 0 !== AR ? AR : "")
               })]
-            }), !nW && (0, YW.jsx)("div", {
+            }), !vR && (0, MR.jsx)("div", {
               className: "ShootingDeathName FullyFancyText",
-              children: LW(Gi(UW))
-            }), KW && (0, YW.jsxs)("div", {
+              children: qR(dJ(nR))
+            }), CR && (0, MR.jsxs)("div", {
               className: "ShootingDeathWeapon SmallTextBold",
-              children: [(0, YW.jsx)("span", {
+              children: [(0, MR.jsx)("span", {
                 className: "ShootingDeathGun",
-                children: (0, YW.jsx)(Ai.b, {
-                  itemName: KW,
+                children: (0, MR.jsx)(eJ.b, {
+                  itemName: CR,
                   amount: 0,
                   gunTransform: "none"
                 })
-              }), (0, YW.jsx)("span", {
-                children: KW
-              }), SW && (0, YW.jsxs)("span", {
+              }), (0, MR.jsx)("span", {
+                children: CR
+              }), XR && (0, MR.jsxs)("span", {
                 className: "ShootingDeathHeadshot",
-                children: [(0, YW.jsx)(AW.c, {
+                children: [(0, MR.jsx)(eR.d, {
                   name: "crosshairs"
-                }), " ", LW(`${yW}headshot`)]
+                }), " ", qR(`${BR}headshot`)]
               })]
             })]
-          }), (0, YW.jsx)(Ii, {
-            secondsLeft: PW.secondsLeft,
-            totalSeconds: PW.totalSeconds,
-            alive: PW.alive
+          }), (0, MR.jsx)(EJ, {
+            secondsLeft: ZR.secondsLeft,
+            totalSeconds: ZR.totalSeconds,
+            alive: ZR.alive
           })]
-        }), jW && (0, YW.jsxs)("div", {
+        }), LR && (0, MR.jsxs)("div", {
           className: "ShootingDeathLife",
-          children: [(0, YW.jsx)(vW, {
-            value: String(JW),
-            label: LW(`${yW}killsThisLife`)
-          }), (0, YW.jsx)(vW, {
+          children: [(0, MR.jsx)(HR, {
+            value: String(pR),
+            label: qR(`${BR}killsThisLife`)
+          }), (0, MR.jsx)(HR, {
             icon: "crosshairs",
-            value: String(hW),
-            label: LW(`${yW}streakPoints`)
-          }), (0, YW.jsx)(vW, {
+            value: String(gR),
+            label: qR(`${BR}streakPoints`)
+          }), (0, MR.jsx)(HR, {
             icon: "coins",
-            value: `+${HW}`,
-            label: LW(`${yW}goldEarned`),
+            value: `+${bR}`,
+            label: qR(`${BR}goldEarned`),
             gold: !0
           })]
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "ShootingDeathActions",
-          children: [(0, YW.jsx)(bW.f, {
+          children: [(0, MR.jsx)(aR.g, {
             className: "ShootingDeathLoadout",
             onClick: () => {
-              IW.d.set({
-                openEverythingMenuName: Bi.m.SHOP
+              kR.d.set({
+                openEverythingMenuName: zJ.o.SHOP
               })
             },
             touchPressOn: "pointerup",
-            children: (0, YW.jsxs)("span", {
+            children: (0, MR.jsxs)("span", {
               className: "ShootingDeathLoadoutText",
-              children: [LW(`${yW}changeLoadout`), (0, YW.jsx)(rW.e, {
+              children: [qR(`${BR}changeLoadout`), (0, MR.jsx)(FR.c, {
                 noaAction: "OpenShop",
                 padHidesKey: !0
               })]
             })
-          }), (0, YW.jsx)("div", {
+          }), (0, MR.jsx)("div", {
             className: "ShootingDeathStatus FullyFancyText",
-            children: PW.status
+            children: ZR.status
           })]
         })]
       })
     }
 
-    function Gi(WW) {
-      switch (WW) {
+    function dJ(RR) {
+      switch (RR) {
         case "self":
-          return `${yW}diedSelf`;
+          return `${BR}diedSelf`;
         case "void":
-          return `${yW}diedVoid`;
+          return `${BR}diedVoid`;
         default:
           return "respawnPage:youDied"
       }
     }
 
-    function Ii(WW) {
+    function EJ(RR) {
       let {
-        secondsLeft: iW,
-        totalSeconds: OW,
-        alive: mW
-      } = WW;
-      const EW = mW || iW <= 0,
-        NW = OW > 0 ? Math.min(1, iW / OW) : 0;
-      return (0, YW.jsxs)("div", {
+        secondsLeft: JR,
+        totalSeconds: GR,
+        alive: yR
+      } = RR;
+      const tR = yR || JR <= 0,
+        uR = GR > 0 ? Math.min(1, JR / GR) : 0;
+      return (0, MR.jsxs)("div", {
         className: "ShootingDeathRing",
-        children: [(0, YW.jsxs)("svg", {
+        children: [(0, MR.jsxs)("svg", {
           viewBox: "0 0 44 44",
-          children: [(0, YW.jsx)("circle", {
+          children: [(0, MR.jsx)("circle", {
             className: "ShootingDeathRingTrack",
             cx: "22",
             cy: "22",
             r: 19
-          }), (0, YW.jsx)("circle", {
+          }), (0, MR.jsx)("circle", {
             className: "ShootingDeathRingFill",
             cx: "22",
             cy: "22",
             r: 19,
-            strokeDasharray: qi,
-            strokeDashoffset: qi * (1 - (EW ? 0 : NW))
+            strokeDasharray: SJ,
+            strokeDashoffset: SJ * (1 - (tR ? 0 : uR))
           })]
-        }), (0, YW.jsxs)("b", {
+        }), (0, MR.jsxs)("b", {
           className: "FullyFancyText",
-          children: [EW && (0, YW.jsx)(AW.c, {
+          children: [tR && (0, MR.jsx)(eR.d, {
             name: "check"
-          }), !EW && iW]
+          }), !tR && JR]
         })]
       })
     }
-    const ai = [1, 0, 2],
-      ri = [`${yW}place1`, `${yW}place2`, `${yW}place3`],
-      zi = [`${yW}place1Short`, `${yW}place2Short`, `${yW}place3Short`],
-      Fi = {
-        streak: `${yW}reasonTimeUp_streak`,
-        diamonds: `${yW}reasonTimeUp_diamonds`,
-        kills: `${yW}reasonTimeUp_kills`
+    const YJ = [1, 0, 2],
+      kJ = [`${BR}place1`, `${BR}place2`, `${BR}place3`],
+      QJ = [`${BR}place1Short`, `${BR}place2Short`, `${BR}place3Short`],
+      FJ = {
+        streak: `${BR}reasonTimeUp_streak`,
+        diamonds: `${BR}reasonTimeUp_diamonds`,
+        kills: `${BR}reasonTimeUp_kills`
       },
-      Qi = {
+      TJ = {
         streak: null,
-        diamonds: `${yW}reasonTarget_diamonds`,
-        kills: `${yW}reasonTarget_kills`
+        diamonds: `${BR}reasonTarget_diamonds`,
+        kills: `${BR}reasonTarget_kills`
       };
 
-    function WO(WW) {
+    function sJ(RR) {
       let {
-        store: iW
-      } = WW;
-      const OW = fW(iW, "roundEnd"),
-        mW = fW(iW, "hud").wire,
-        EW = (0, lW.g)("localPlayerAlive"),
-        NW = (0, kW.f)(OW.lobbyAt),
-        PW = (0, lW.f)("connectedGame", (WW => WW.replay));
-      return "roundEnd" !== OW.wire[0] || !mW || !EW || NW <= 0 || PW ? null : (0, YW.jsx)(iO, {
-        wire: OW.wire,
-        hud: mW,
-        lobbyAt: OW.lobbyAt,
-        secondsLeft: NW
-      }, OW.lobbyAt)
+        store: JR
+      } = RR;
+      const GR = mR(JR, "roundEnd"),
+        yR = mR(JR, "hud").wire,
+        tR = (0, rR.i)("localPlayerAlive"),
+        uR = (0, UR.j)(GR.lobbyAt),
+        ZR = (0, rR.e)("connectedGame", (RR => RR.replay));
+      return "roundEnd" !== GR.wire[0] || !yR || !tR || uR <= 0 || ZR ? null : (0, MR.jsx)(hJ, {
+        wire: GR.wire,
+        hud: yR,
+        lobbyAt: GR.lobbyAt,
+        secondsLeft: uR
+      }, GR.lobbyAt)
     }
-    const iO = (0, mW.memo)((function(WW) {
+    const hJ = (0, yR.memo)((function(RR) {
       let {
-        wire: iW,
-        hud: OW,
-        lobbyAt: EW,
-        secondsLeft: NW
-      } = WW;
+        wire: JR,
+        hud: GR,
+        lobbyAt: tR,
+        secondsLeft: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, sW.B)(), [LW] = (0, mW.useState)((() => Math.max(0, EW - performance.now()))), cW = dW(), [, wW, tW, ZW, , lW, AW, bW, jW, UW, , kW, MW, KW, SW, TW, HW, nW] = iW, [, , uW, eW, , gW, DW, VW] = OW, pW = "tdm" === uW, fW = WW => WW === DW ? PW(`${yW}teamYours`, {
-        team: PW(hW[WW])
-      }) : PW(hW[WW]);
-      return (0, YW.jsxs)("div", {
-        className: xW()("ShootingResults", "win" === wW ? "Won" : "Lost"),
+        t: ZR
+      } = (0, WR.A)(), [qR] = (0, yR.useState)((() => Math.max(0, tR - performance.now()))), iR = NR(), [, fR, VR, KR, , rR, eR, aR, LR, nR, , UR, AR, CR, XR, lR, bR, vR] = JR, [, , OR, DR, , oR, cR, PR] = GR, IR = "tdm" === OR, mR = RR => RR === cR ? ZR(`${BR}teamYours`, {
+        team: ZR(gR[RR])
+      }) : ZR(gR[RR]);
+      return (0, MR.jsxs)("div", {
+        className: wR()("ShootingResults", "win" === fR ? "Won" : "Lost"),
         style: {
-          "--lobbyMs": `${nW}ms`,
-          "--lobbyElapsedMs": `${Math.max(0,nW-LW)}ms`
+          "--lobbyMs": `${vR}ms`,
+          "--lobbyElapsedMs": `${Math.max(0,vR-qR)}ms`
         },
-        children: [(0, YW.jsx)("div", {
+        children: [(0, MR.jsx)("div", {
           className: "ShootingResultsTitle FullyFancyText",
-          children: OO(PW, iW, pW, VW, cW)
-        }), (0, YW.jsxs)("div", {
+          children: RG(ZR, JR, IR, PR, iR)
+        }), (0, MR.jsxs)("div", {
           className: "ShootingResultsScore FullyFancyText",
-          children: [pW && (0, YW.jsxs)(YW.Fragment, {
-            children: [(0, YW.jsx)("span", {
+          children: [IR && (0, MR.jsxs)(MR.Fragment, {
+            children: [(0, MR.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: fW("Red")
-            }), (0, YW.jsx)("b", {
-              style: JW("Red", "tdm"),
-              children: bW
-            }), (0, YW.jsx)("span", {
+              children: mR("Red")
+            }), (0, MR.jsx)("b", {
+              style: pR("Red", "tdm"),
+              children: aR
+            }), (0, MR.jsx)("span", {
               className: "ShootingResultsDash",
               children: "\u2013"
-            }), (0, YW.jsx)("b", {
-              style: JW("Blue", "tdm"),
-              children: jW
-            }), (0, YW.jsx)("span", {
+            }), (0, MR.jsx)("b", {
+              style: pR("Blue", "tdm"),
+              children: LR
+            }), (0, MR.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: fW("Blue")
+              children: mR("Blue")
             })]
-          }), !pW && ("win" === wW || "" !== lW) && (0, YW.jsxs)(YW.Fragment, {
-            children: [(0, YW.jsx)("span", {
+          }), !IR && ("win" === fR || "" !== rR) && (0, MR.jsxs)(MR.Fragment, {
+            children: [(0, MR.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: "win" === wW ? PW(`${yW}youWonWith`) : PW(`${yW}playerWonWith`, {
-                name: cW(lW)
+              children: "win" === fR ? ZR(`${BR}youWonWith`) : ZR(`${BR}playerWonWith`, {
+                name: iR(rR)
               })
-            }), (0, YW.jsx)("b", {
-              style: JW(ZW, "ffa"),
-              children: UW
+            }), (0, MR.jsx)("b", {
+              style: pR(KR, "ffa"),
+              children: nR
             })]
           })]
-        }), (0, YW.jsx)("div", {
+        }), (0, MR.jsx)("div", {
           className: "ShootingResultsWhy SmallTextBold",
-          children: mO(PW, AW, pW, oW(eW), gW)
-        }), kW.length > 0 && (0, YW.jsx)("div", {
+          children: JG(ZR, eR, IR, xR(DR), oR)
+        }), UR.length > 0 && (0, MR.jsx)("div", {
           className: "ShootingResultsPodium",
-          children: ai.filter((WW => WW < kW.length)).map((WW => (0, YW.jsx)(EO, {
-            entry: kW[WW],
-            place: WW,
-            mvp: kW[WW][0] === MW,
-            tdm: pW
-          }, WW)))
-        }), !VW && (0, YW.jsxs)("div", {
+          children: YJ.filter((RR => RR < UR.length)).map((RR => (0, MR.jsx)(GG, {
+            entry: UR[RR],
+            place: RR,
+            mvp: UR[RR][0] === AR,
+            tdm: IR
+          }, RR)))
+        }), !PR && (0, MR.jsxs)("div", {
           className: "ShootingResultsYou",
-          children: [(0, YW.jsx)(vW, {
-            value: String(KW),
-            label: PW(`${yW}kills`)
-          }), (0, YW.jsx)(vW, {
-            value: String(SW),
-            label: PW(`${yW}deaths`)
-          }), (0, YW.jsx)(vW, {
+          children: [(0, MR.jsx)(HR, {
+            value: String(CR),
+            label: ZR(`${BR}kills`)
+          }), (0, MR.jsx)(HR, {
+            value: String(XR),
+            label: ZR(`${BR}deaths`)
+          }), (0, MR.jsx)(HR, {
             icon: "crosshairs",
-            value: String(TW),
-            label: PW(`${yW}bestStreak`)
-          }), (0, YW.jsx)(vW, {
+            value: String(lR),
+            label: ZR(`${BR}bestStreak`)
+          }), (0, MR.jsx)(HR, {
             icon: "coins",
-            value: `+${HW}`,
-            label: PW(`${yW}goldEarned`),
+            value: `+${bR}`,
+            label: ZR(`${BR}goldEarned`),
             gold: !0
           })]
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "ShootingResultsNext SmallTextBold",
-          children: [(0, YW.jsx)("span", {
-            children: PW(`${yW}backToLobby`, {
-              seconds: String(NW)
+          children: [(0, MR.jsx)("span", {
+            children: ZR(`${BR}backToLobby`, {
+              seconds: String(uR)
             })
-          }), (0, YW.jsx)("span", {
+          }), (0, MR.jsx)("span", {
             className: "ShootingResultsBar",
-            children: (0, YW.jsx)("i", {})
+            children: (0, MR.jsx)("i", {})
           })]
         })]
       })
     }));
 
-    function OO(WW, iW, OW, mW, EW) {
-      const [, NW, PW, LW, , cW] = iW;
-      return mW && OW ? WW(`${yW}teamWins`, {
-        team: nW(LW) ? WW(hW[LW]) : LW
-      }) : mW ? "" === cW ? WW(`${yW}matchOver`) : WW(`${yW}playerWins`, {
-        name: EW(cW)
-      }) : "win" === NW ? WW(`${yW}victory`) : OW || 0 === PW ? WW(`${yW}defeat`) : PW <= ri.length ? WW(ri[PW - 1]) : WW(`${yW}placeNth`, {
-        place: String(PW)
+    function RG(RR, JR, GR, yR, tR) {
+      const [, uR, ZR, qR, , iR] = JR;
+      return yR && GR ? RR(`${BR}teamWins`, {
+        team: vR(qR) ? RR(gR[qR]) : qR
+      }) : yR ? "" === iR ? RR(`${BR}matchOver`) : RR(`${BR}playerWins`, {
+        name: tR(iR)
+      }) : "win" === uR ? RR(`${BR}victory`) : GR || 0 === ZR ? RR(`${BR}defeat`) : ZR <= kJ.length ? RR(kJ[ZR - 1]) : RR(`${BR}placeNth`, {
+        place: String(ZR)
       })
     }
 
-    function mO(WW, iW, OW, mW, EW) {
-      switch (iW) {
+    function JG(RR, JR, GR, yR, tR) {
+      switch (JR) {
         case "timeUp":
-          return WW(Fi[mW]);
+          return RR(FJ[yR]);
         case "target": {
-          const iW = Qi[mW];
-          return iW && EW > 0 ? WW(iW, {
-            target: String(EW)
-          }) : WW(`${yW}reasonTarget`)
+          const JR = TJ[yR];
+          return JR && tR > 0 ? RR(JR, {
+            target: String(tR)
+          }) : RR(`${BR}reasonTarget`)
         }
         case "lastTeam":
-          return WW(OW ? `${yW}reasonLastTeam` : `${yW}reasonLastPlayer`)
+          return RR(GR ? `${BR}reasonLastTeam` : `${BR}reasonLastPlayer`)
       }
     }
 
-    function EO(WW) {
+    function GG(RR) {
       let {
-        entry: iW,
-        place: OW,
-        mvp: mW,
-        tdm: EW
-      } = WW;
+        entry: JR,
+        place: GR,
+        mvp: yR,
+        tdm: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, sW.B)(), PW = dW(), [LW, cW, wW, tW, ZW] = iW, bW = (0, lW.g)("players").localId;
-      return (0, YW.jsxs)("div", {
-        className: xW()("ShootingPodiumCard", `Place${OW+1}`, {
-          Mvp: mW,
-          Mine: LW === bW,
-          Team: EW
+        t: uR
+      } = (0, WR.A)(), ZR = NR(), [qR, iR, fR, VR, KR] = JR, aR = (0, rR.i)("players").localId;
+      return (0, MR.jsxs)("div", {
+        className: wR()("ShootingPodiumCard", `Place${GR+1}`, {
+          Mvp: yR,
+          Mine: qR === aR,
+          Team: tR
         }),
-        style: EW ? JW(wW, "tdm") : void 0,
-        children: [mW && (0, YW.jsx)("span", {
+        style: tR ? pR(fR, "tdm") : void 0,
+        children: [yR && (0, MR.jsx)("span", {
           className: "ShootingPodiumCrown",
-          children: (0, YW.jsx)(AW.c, {
+          children: (0, MR.jsx)(eR.d, {
             name: "crown"
           })
-        }), (0, YW.jsx)("div", {
+        }), (0, MR.jsx)("div", {
           className: "ShootingPodiumHead",
-          children: (0, YW.jsx)(eW, {
-            playerId: LW
+          children: (0, MR.jsx)(DR, {
+            playerId: qR
           })
-        }), (0, YW.jsxs)("div", {
+        }), (0, MR.jsxs)("div", {
           className: "ShootingPodiumPlace SmallTextBold",
-          children: [NW(zi[OW]), mW && ` \xb7 ${NW(`${yW}mvp`)}`]
-        }), (0, YW.jsx)("div", {
+          children: [uR(QJ[GR]), yR && ` \xb7 ${uR(`${BR}mvp`)}`]
+        }), (0, MR.jsx)("div", {
           className: "ShootingPodiumName SmallTextBold",
-          children: PW(cW)
-        }), (0, YW.jsx)("div", {
+          children: ZR(iR)
+        }), (0, MR.jsx)("div", {
           className: "ShootingPodiumStats SmallTextBold",
-          children: NW(`${yW}podiumStats`, {
-            kills: String(tW),
-            score: String(ZW)
+          children: uR(`${BR}podiumStats`, {
+            kills: String(VR),
+            score: String(KR)
           })
         })]
       })
     }
 
-    function NO(WW) {
-      var iW, OW;
+    function yG(RR) {
+      var JR, GR;
       let {
-        store: EW,
-        variation: NW
-      } = WW;
-      const PW = "lobby" !== (null !== (iW = null === (OW = fW(EW, "hud").wire) || void 0 === OW ? void 0 : OW[1]) && void 0 !== iW ? iW : "lobby");
-      return (0, mW.useEffect)((() => {
-        if (!PW) return;
-        const WW = (0, cW.I)(cW.H);
+        store: tR,
+        variation: uR
+      } = RR;
+      const ZR = "lobby" !== (null !== (JR = null === (GR = mR(tR, "hud").wire) || void 0 === GR ? void 0 : GR[1]) && void 0 !== JR ? JR : "lobby");
+      return (0, yR.useEffect)((() => {
+        if (!ZR) return;
+        const RR = (0, iR.x)(iR.t);
         return () => {
-          WW(), (0, cW.m)()
+          RR(), (0, iR.h)()
         }
-      }), [PW]), (0, mW.useEffect)((() => (0, cW.M)((WW => (0, YW.jsx)(Ri, {
-        store: EW,
-        variation: NW,
-        state: WW
-      })))), [EW, NW]), (0, YW.jsx)(WO, {
-        store: EW
+      }), [ZR]), (0, yR.useEffect)((() => (0, iR.D)((RR => (0, MR.jsx)(jJ, {
+        store: tR,
+        variation: uR,
+        state: RR
+      })))), [tR, uR]), (0, MR.jsx)(sJ, {
+        store: tR
       })
     }
 
-    function PO(WW) {
-      return (0, YW.jsxs)(YW.Fragment, {
-        children: [(0, YW.jsx)(Ci, {
-          ...WW
-        }), (0, YW.jsx)(NO, {
-          ...WW
-        }), (0, YW.jsx)(ci, {
-          ...WW
+    function tG(RR) {
+      return (0, MR.jsxs)(MR.Fragment, {
+        children: [(0, MR.jsx)(IJ, {
+          ...RR
+        }), (0, MR.jsx)(yG, {
+          ...RR
+        }), (0, MR.jsx)(iJ, {
+          ...RR
         })]
       })
     }
-    const LO = "CubeWarfareUi",
-      cO = "CubeWarfareFfa",
-      wO = function(WW, iW, OW, NW) {
+    const uG = "CubeWarfareUi",
+      ZG = "CubeWarfareFfa",
+      qG = function(RR, JR, GR, uR) {
         let {
-          localPlayerId: PW
-        } = NW;
-        const ZW = new pW,
-          xW = "tdm" === OW ? "tdm" : "ffa";
-        let lW = null,
-          AW = null,
-          bW = null;
+          localPlayerId: ZR
+        } = uR;
+        const KR = new IR,
+          wR = "tdm" === GR ? "tdm" : "ffa";
+        let rR = null,
+          eR = null,
+          aR = null;
         return {
-          onCreate: WW => {
-            document.body.classList.add(LO), document.body.classList.toggle(cO, "ffa" === xW), AW = new tW.d(WW, PW), bW = new mi((WW => {
-              LW.l.iZ(Oi, WW, !0)
-            }), (iW => {
-              WW.sendCommand(iW)
-            })), lW = (0, cW.O)((0, mW.createElement)(mW.Fragment, null, (0, mW.createElement)(wW.e, {
-              controller: AW
-            }), (0, mW.createElement)(PO, {
-              store: ZW,
-              votes: bW,
-              variation: xW
+          onCreate: RR => {
+            document.body.classList.add(uG), document.body.classList.toggle(ZG, "ffa" === wR), eR = new VR.d(RR, ZR), aR = new yJ((RR => {
+              qR.n.JK(GJ, RR, !0)
+            }), (JR => {
+              RR.sendCommand(JR)
+            })), rR = (0, iR.G)((0, yR.createElement)(yR.Fragment, null, (0, yR.createElement)(fR.e, {
+              controller: eR
+            }), (0, yR.createElement)(tG, {
+              store: KR,
+              votes: aR,
+              variation: wR
             })), {
-              content: (0, mW.createElement)(BW, {
-                store: ZW,
-                variation: xW
+              content: (0, yR.createElement)(jR, {
+                store: KR,
+                variation: wR
               })
             })
           },
           onClose: () => {
-            var WW, iW, OW;
-            document.body.classList.remove(LO, cO), null === (WW = lW) || void 0 === WW || WW(), lW = null, null === (iW = AW) || void 0 === iW || iW.dispose(), AW = null, null === (OW = bW) || void 0 === OW || OW.dispose(), bW = null
+            var RR, JR, GR;
+            document.body.classList.remove(uG, ZG), null === (RR = rR) || void 0 === RR || RR(), rR = null, null === (JR = eR) || void 0 === JR || JR.dispose(), eR = null, null === (GR = aR) || void 0 === GR || GR.dispose(), aR = null
           },
-          onAfterRender: (WW, iW) => {
-            var OW;
-            null === (OW = AW) || void 0 === OW || OW.frame(iW.cameraHeading)
+          onAfterRender: (RR, JR) => {
+            var GR;
+            null === (GR = eR) || void 0 === GR || GR.frame(JR.cameraHeading)
           },
-          onReceivedMessageFromServer: (WW, iW) => {
-            var OW;
-            (ZW.yZ(WW, iW), WW === EW) && (null === (OW = bW) || void 0 === OW || OW.onLobby(ZW.get("lobby").wire))
+          onReceivedMessageFromServer: (RR, JR) => {
+            var GR;
+            (KR.BK(RR, JR), RR === tR) && (null === (GR = aR) || void 0 === GR || GR.onLobby(KR.get("lobby").wire))
           }
         }
       }
   },
-  40710: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW
+  40720: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(62),
-      EW = OW(1283);
-    const NW = (0, mW.memo)((function(WW) {
+    var yR = GR(66),
+      tR = GR(1378);
+    const uR = (0, yR.memo)((function(RR) {
       let {
-        controller: iW
-      } = WW;
-      return (0, EW.jsxs)("div", {
+        controller: JR
+      } = RR;
+      return (0, tR.jsxs)("div", {
         className: "DamageFeedback",
-        ref: iW.bindElement,
-        children: [(0, EW.jsx)("div", {
+        ref: JR.bindElement,
+        children: [(0, tR.jsx)("div", {
           className: "DamageFeedbackLow",
-          children: (0, EW.jsx)("div", {
+          children: (0, tR.jsx)("div", {
             className: "DamageFeedbackShade"
           })
-        }), (0, EW.jsx)("div", {
+        }), (0, tR.jsx)("div", {
           className: "DamageFeedbackArcs"
         })]
       })
     }))
   },
-  40706: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW
+  40717: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR
     });
-    var mW = OW(27);
-    const EW = "DamageFeedbackArcsShown",
-      NW = .45,
-      PW = .2;
-    class LW {
-      constructor(WW, iW) {
+    var yR = GR(32);
+    const tR = "DamageFeedbackArcsShown",
+      uR = .45,
+      ZR = .2;
+    class qR {
+      constructor(RR, JR) {
         let {
-          arcs: OW = !0,
-          edgeGlow: EW = !0,
-          lowHealthShade: NW = !0,
-          enabled: PW = !0
+          arcs: GR = !0,
+          edgeGlow: tR = !0,
+          lowHealthShade: uR = !0,
+          enabled: ZR = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.api = WW, this.localPlayerId = iW, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+        this.api = RR, this.localPlayerId = JR, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.DE = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = WW => {
-          var iW, OW;
-          this.clearHits(), this.root = WW, this.lowLayer = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".DamageFeedbackLow")) && void 0 !== iW ? iW : null, this.arcLayer = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".DamageFeedbackArcs")) && void 0 !== OW ? OW : null, this.showRoot(), this.drawLow()
+        }, this.maxHealth = null, this.Et = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = RR => {
+          var JR, GR;
+          this.clearHits(), this.root = RR, this.lowLayer = null !== (JR = null === RR || void 0 === RR ? void 0 : RR.querySelector(".DamageFeedbackLow")) && void 0 !== JR ? JR : null, this.arcLayer = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.querySelector(".DamageFeedbackArcs")) && void 0 !== GR ? GR : null, this.showRoot(), this.drawLow()
         }, this.parts = {
-          arcs: OW,
-          edgeGlow: EW,
-          lowHealthShade: NW
-        }, this.enabled = PW, this.token = mW.l.subscribe("damagedByOtherPlayer", (WW => {
+          arcs: GR,
+          edgeGlow: tR,
+          lowHealthShade: uR
+        }, this.enabled = ZR, this.token = yR.n.subscribe("damagedByOtherPlayer", (RR => {
           let {
-            direction: iW,
-            vE: OW
-          } = WW;
-          this.onHurt(iW, OW)
+            direction: JR,
+            jt: GR
+          } = RR;
+          this.onHurt(JR, GR)
         })), this.syncHealth(), this.showCustomDamage()
       }
-      WK(WW) {
-        WW !== this.enabled && (this.enabled = WW, this.showCustomDamage(), WW || this.clearHits(), this.showRoot())
+      JA(RR) {
+        RR !== this.enabled && (this.enabled = RR, this.showCustomDamage(), RR || this.clearHits(), this.showRoot())
       }
-      frame(WW) {
-        this.syncHealth(), this.cameraHeading = WW;
-        for (const iW of this.arcs) this.drawArcAngle(iW)
+      frame(RR) {
+        this.syncHealth(), this.cameraHeading = RR;
+        for (const JR of this.arcs) this.drawArcAngle(JR)
       }
       dispose() {
-        mW.l.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(EW)
+        yR.n.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(tR)
       }
       showCustomDamage() {
-        document.body.classList.toggle(EW, this.enabled && this.parts.arcs)
+        document.body.classList.toggle(tR, this.enabled && this.parts.arcs)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const WW = this.api.getClientOption(this.localPlayerId, "_health"),
-          iW = this.api.getClientOption(this.localPlayerId, "_shield"),
-          OW = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(WW, this.readHealth) && Object.is(iW, this.readShield) && Object.is(OW, this.readMaxHealth)) return;
-        if (this.readHealth = WW, this.readShield = iW, this.readMaxHealth = OW, null === WW || void 0 === WW || !OW) return this.lastHealthPool = null, this.maxHealth = null, this.DE = 1, this.dead = !1, void this.drawLow();
-        const mW = WW + (null !== iW && void 0 !== iW ? iW : 0);
-        if (null !== this.lastHealthPool && mW < this.lastHealthPool) {
-          const WW = performance.now(),
-            iW = (this.lastHealthPool - mW) / OW;
-          this.lastDrop = WW - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + iW,
+        const RR = this.api.getClientOption(this.localPlayerId, "_health"),
+          JR = this.api.getClientOption(this.localPlayerId, "_shield"),
+          GR = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(RR, this.readHealth) && Object.is(JR, this.readShield) && Object.is(GR, this.readMaxHealth)) return;
+        if (this.readHealth = RR, this.readShield = JR, this.readMaxHealth = GR, null === RR || void 0 === RR || !GR) return this.lastHealthPool = null, this.maxHealth = null, this.Et = 1, this.dead = !1, void this.drawLow();
+        const yR = RR + (null !== JR && void 0 !== JR ? JR : 0);
+        if (null !== this.lastHealthPool && yR < this.lastHealthPool) {
+          const RR = performance.now(),
+            JR = (this.lastHealthPool - yR) / GR;
+          this.lastDrop = RR - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + JR,
             at: this.lastDrop.at
           } : {
-            frac: iW,
-            at: WW
+            frac: JR,
+            at: RR
           }
         }
-        this.dead = WW <= 0, this.dead && this.clearHits(), this.lastHealthPool = mW, this.maxHealth = OW, this.DE = WW > 0 ? WW / OW : 1, this.drawLow()
+        this.dead = RR <= 0, this.dead && this.clearHits(), this.lastHealthPool = yR, this.maxHealth = GR, this.Et = RR > 0 ? RR / GR : 1, this.drawLow()
       }
-      onHurt(WW, iW) {
+      onHurt(RR, JR) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const OW = Math.min(1, this.takeDamageFrac(iW) / .3);
-        null !== WW && this.parts.arcs && this.showArc(WW, OW), this.parts.edgeGlow && this.flashEdge(null === WW ? null : WW - this.cameraHeading, .4 + .6 * OW)
+        const GR = Math.min(1, this.takeDamageFrac(JR) / .3);
+        null !== RR && this.parts.arcs && this.showArc(RR, GR), this.parts.edgeGlow && this.flashEdge(null === RR ? null : RR - this.cameraHeading, .4 + .6 * GR)
       }
-      takeDamageFrac(WW) {
-        if (void 0 !== WW && this.maxHealth) return WW / this.maxHealth;
+      takeDamageFrac(RR) {
+        if (void 0 !== RR && this.maxHealth) return RR / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: iW
+          frac: JR
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, iW
+        }, JR
       }
       drawLow() {
         if (!this.lowLayer || !this.parts.lowHealthShade) return;
-        const WW = wW((NW - this.DE) / .25),
-          iW = wW((PW - this.DE) / .15000000000000002),
-          OW = this.DE < NW;
-        this.lowLayer.classList.toggle("Active", OW), this.lowLayer.classList.toggle("Critical", this.DE < PW), this.lowLayer.style.opacity = String(OW ? .55 + .3 * WW + .15 * iW : 0)
+        const RR = fR((uR - this.Et) / .25),
+          JR = fR((ZR - this.Et) / .15000000000000002),
+          GR = this.Et < uR;
+        this.lowLayer.classList.toggle("Active", GR), this.lowLayer.classList.toggle("Critical", this.Et < ZR), this.lowLayer.style.opacity = String(GR ? .55 + .3 * RR + .15 * JR : 0)
       }
-      showArc(WW, iW) {
-        var OW, mW;
+      showArc(RR, JR) {
+        var GR, yR;
         if (!this.arcLayer) return;
-        let EW = this.arcs.find((iW => cW(iW.direction, WW) < .6));
-        if (!EW) {
-          const iW = document.createElement("div");
-          iW.className = "DamageFeedbackArc", iW.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(iW), EW = {
-            element: iW,
-            direction: WW,
+        let tR = this.arcs.find((JR => iR(JR.direction, RR) < .6));
+        if (!tR) {
+          const JR = document.createElement("div");
+          JR.className = "DamageFeedbackArc", JR.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(JR), tR = {
+            element: JR,
+            direction: RR,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(EW)
+          }, this.arcs.push(tR)
         }
-        EW.direction = WW, this.drawArcAngle(EW);
-        const NW = EW.fade ? Number(getComputedStyle(EW.element).opacity) : 0;
-        null === (OW = EW.fade) || void 0 === OW || OW.cancel(), null === (mW = EW.pop) || void 0 === mW || mW.cancel(), EW.element.style.opacity = "1";
-        const PW = EW.element.animate([{
-          opacity: NW
+        tR.direction = RR, this.drawArcAngle(tR);
+        const uR = tR.fade ? Number(getComputedStyle(tR.element).opacity) : 0;
+        null === (GR = tR.fade) || void 0 === GR || GR.cancel(), null === (yR = tR.pop) || void 0 === yR || yR.cancel(), tR.element.style.opacity = "1";
+        const ZR = tR.element.animate([{
+          opacity: uR
         }, {
           opacity: 1
         }], 144);
-        EW.fade = PW, EW.pop = EW.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * iW
+        tR.fade = ZR, tR.pop = tR.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * JR
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const LW = EW;
-        PW.onfinish = () => {
-          if (LW.fade !== PW) return;
-          const WW = LW.element.animate([{
+        const qR = tR;
+        ZR.onfinish = () => {
+          if (qR.fade !== ZR) return;
+          const RR = qR.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -2065,120 +2065,120 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          WW.startTime = PW.startTime, LW.fade = WW, WW.onfinish = () => {
-            LW.fade === WW && (LW.element.remove(), tW(this.arcs, LW))
+          RR.startTime = ZR.startTime, qR.fade = RR, RR.onfinish = () => {
+            qR.fade === RR && (qR.element.remove(), VR(this.arcs, qR))
           }
         }
       }
-      drawArcAngle(WW) {
-        const iW = WW.direction - this.cameraHeading;
-        (null === WW.drawnAngle || Math.abs(iW - WW.drawnAngle) > .005) && (WW.drawnAngle = iW, WW.element.style.rotate = `${iW}rad`)
+      drawArcAngle(RR) {
+        const JR = RR.direction - this.cameraHeading;
+        (null === RR.drawnAngle || Math.abs(JR - RR.drawnAngle) > .005) && (RR.drawnAngle = JR, RR.element.style.rotate = `${JR}rad`)
       }
-      flashEdge(WW, iW) {
-        var OW, mW, EW;
+      flashEdge(RR, JR) {
+        var GR, yR, tR;
         if (!this.root) return;
-        let NW = this.flashes.find((iW => null === iW.angle || null === WW ? iW.angle === WW : cW(iW.angle, WW) < .5));
-        if (!NW) {
-          const iW = document.createElement("div");
-          iW.className = "DamageFeedbackFlash";
-          const OW = iW.appendChild(document.createElement("div"));
-          OW.className = "DamageFeedbackFlashGlow", this.root.insertBefore(iW, this.arcLayer), NW = {
-            element: iW,
-            glow: OW,
-            angle: WW,
+        let uR = this.flashes.find((JR => null === JR.angle || null === RR ? JR.angle === RR : iR(JR.angle, RR) < .5));
+        if (!uR) {
+          const JR = document.createElement("div");
+          JR.className = "DamageFeedbackFlash";
+          const GR = JR.appendChild(document.createElement("div"));
+          GR.className = "DamageFeedbackFlashGlow", this.root.insertBefore(JR, this.arcLayer), uR = {
+            element: JR,
+            glow: GR,
+            angle: RR,
             level: 0,
             animation: null
-          }, this.flashes.push(NW)
+          }, this.flashes.push(uR)
         }
-        const PW = null === (OW = NW.animation) || void 0 === OW || null === (mW = OW.effect) || void 0 === mW ? void 0 : mW.getComputedTiming().progress,
-          LW = null === PW || void 0 === PW ? 0 : NW.level * (1 - PW);
-        NW.level = Math.min(1, Math.max(iW, LW + .6 * iW)), NW.angle = WW;
+        const ZR = null === (GR = uR.animation) || void 0 === GR || null === (yR = GR.effect) || void 0 === yR ? void 0 : yR.getComputedTiming().progress,
+          qR = null === ZR || void 0 === ZR ? 0 : uR.level * (1 - ZR);
+        uR.level = Math.min(1, Math.max(JR, qR + .6 * JR)), uR.angle = RR;
         const {
-          x: wW,
-          y: ZW,
-          rx: xW,
-          ry: lW
-        } = function(WW, iW) {
-          const OW = window.innerWidth,
-            mW = window.innerHeight;
-          if (null === WW) return {
-            x: OW / 2,
-            y: mW / 2,
+          x: fR,
+          y: KR,
+          rx: wR,
+          ry: rR
+        } = function(RR, JR) {
+          const GR = window.innerWidth,
+            yR = window.innerHeight;
+          if (null === RR) return {
+            x: GR / 2,
+            y: yR / 2,
             rx: 0,
             ry: 0
           };
-          const EW = Math.sin(WW),
-            NW = -Math.cos(WW),
-            PW = OW / 2 / Math.max(1e-6, Math.abs(EW)),
-            LW = mW / 2 / Math.max(1e-6, Math.abs(NW)),
-            cW = Math.min(PW, LW),
-            wW = Math.round(OW / 2 + EW * cW),
-            tW = Math.round(mW / 2 + NW * cW),
-            ZW = mW / 100 * (.85 + .25 * iW),
-            xW = PW <= LW,
-            lW = Math.round((xW ? 30 : 74) * ZW),
-            AW = Math.round((xW ? 58 : 26) * ZW);
+          const tR = Math.sin(RR),
+            uR = -Math.cos(RR),
+            ZR = GR / 2 / Math.max(1e-6, Math.abs(tR)),
+            qR = yR / 2 / Math.max(1e-6, Math.abs(uR)),
+            iR = Math.min(ZR, qR),
+            fR = Math.round(GR / 2 + tR * iR),
+            VR = Math.round(yR / 2 + uR * iR),
+            KR = yR / 100 * (.85 + .25 * JR),
+            wR = ZR <= qR,
+            rR = Math.round((wR ? 30 : 74) * KR),
+            eR = Math.round((wR ? 58 : 26) * KR);
           return {
-            x: wW,
-            y: tW,
-            rx: lW,
-            ry: AW
+            x: fR,
+            y: VR,
+            rx: rR,
+            ry: eR
           }
-        }(WW, NW.level), {
-          style: AW
-        } = NW.glow;
-        NW.glow.classList.toggle("Everywhere", null === WW), AW.setProperty("--glowX", `${wW}px`), AW.setProperty("--glowY", `${ZW}px`), AW.setProperty("--glowRx", `${xW}px`), AW.setProperty("--glowRy", `${lW}px`), NW.element.style.transformOrigin = `${wW}px ${ZW}px`, null === (EW = NW.animation) || void 0 === EW || EW.cancel();
-        const bW = NW.element.animate([{
+        }(RR, uR.level), {
+          style: eR
+        } = uR.glow;
+        uR.glow.classList.toggle("Everywhere", null === RR), eR.setProperty("--glowX", `${fR}px`), eR.setProperty("--glowY", `${KR}px`), eR.setProperty("--glowRx", `${wR}px`), eR.setProperty("--glowRy", `${rR}px`), uR.element.style.transformOrigin = `${fR}px ${KR}px`, null === (tR = uR.animation) || void 0 === tR || tR.cancel();
+        const aR = uR.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: NW.level,
+          opacity: uR.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * NW.level,
+          opacity: .8 * uR.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * NW.level
+          duration: 520 + 180 * uR.level
         });
-        NW.animation = bW;
-        const jW = NW;
-        bW.onfinish = () => {
-          jW.animation === bW && (jW.element.remove(), tW(this.flashes, jW))
+        uR.animation = aR;
+        const LR = uR;
+        aR.onfinish = () => {
+          LR.animation === aR && (LR.element.remove(), VR(this.flashes, LR))
         }
       }
       clearHits() {
-        for (const mW of this.arcs) {
-          var WW, iW;
-          null === (WW = mW.fade) || void 0 === WW || WW.cancel(), mW.fade = null, null === (iW = mW.pop) || void 0 === iW || iW.cancel(), mW.element.remove()
+        for (const yR of this.arcs) {
+          var RR, JR;
+          null === (RR = yR.fade) || void 0 === RR || RR.cancel(), yR.fade = null, null === (JR = yR.pop) || void 0 === JR || JR.cancel(), yR.element.remove()
         }
         this.arcs.length = 0;
-        for (const mW of this.flashes) {
-          var OW;
-          null === (OW = mW.animation) || void 0 === OW || OW.cancel(), mW.element.remove()
+        for (const yR of this.flashes) {
+          var GR;
+          null === (GR = yR.animation) || void 0 === GR || GR.cancel(), yR.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function cW(WW, iW) {
-      return Math.abs(Math.atan2(Math.sin(WW - iW), Math.cos(WW - iW)))
+    function iR(RR, JR) {
+      return Math.abs(Math.atan2(Math.sin(RR - JR), Math.cos(RR - JR)))
     }
 
-    function wW(WW) {
-      return Math.max(0, Math.min(1, WW))
+    function fR(RR) {
+      return Math.max(0, Math.min(1, RR))
     }
 
-    function tW(WW, iW) {
-      const OW = WW.indexOf(iW); - 1 !== OW && WW.splice(OW, 1)
+    function VR(RR, JR) {
+      const GR = RR.indexOf(JR); - 1 !== GR && RR.splice(GR, 1)
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

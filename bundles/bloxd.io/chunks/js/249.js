@@ -1,132 +1,132 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  37511: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => yW
+  37422: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => BR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1616),
-      PW = OW(1081),
-      LW = OW(805),
-      cW = OW(1172),
-      wW = OW(1532),
-      tW = OW(1605),
-      ZW = OW(4796),
-      xW = OW(1391),
-      lW = OW(4718),
-      AW = OW(3602),
-      bW = OW(1283);
-    const jW = 2;
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1677),
+      ZR = GR(1155),
+      qR = GR(858),
+      iR = GR(1270),
+      fR = GR(1590),
+      VR = GR(1663),
+      KR = GR(4904),
+      wR = GR(1468),
+      rR = GR(4824),
+      eR = GR(3706),
+      aR = GR(1378);
+    const LR = 2;
 
-    function UW(WW) {
-      return "firstPartyGame" === WW.type ? {
+    function nR(RR) {
+      return "firstPartyGame" === RR.type ? {
         type: "game",
-        gameNameWithVariation: WW.gameNameWithVariation
+        gameNameWithVariation: RR.gameNameWithVariation
       } : {
         type: "preview",
-        preview: WW.preview
+        preview: RR.preview
       }
     }
 
-    function kW(WW) {
+    function UR(RR) {
       let {
-        game: iW,
-        disabled: OW,
-        showPlaceholder: mW
-      } = WW;
-      return null !== iW ? (0, bW.jsx)(lW.d, {
-        source: UW(iW),
+        game: JR,
+        disabled: GR,
+        showPlaceholder: yR
+      } = RR;
+      return null !== JR ? (0, aR.jsx)(rR.i, {
+        source: nR(JR),
         gameWidth: "100%",
         useLongRatio: !0,
-        disabled: OW,
+        disabled: GR,
         entrySource: "customGamePlace"
-      }) : mW ? (0, bW.jsx)(lW.c, {
+      }) : yR ? (0, aR.jsx)(rR.e, {
         gameWidth: "100%",
         useLongRatio: !0
       }) : null
     }
 
-    function sW(WW) {
-      var iW;
+    function WR(RR) {
+      var JR;
       let {
-        category: OW,
-        title: mW,
-        tintColour: EW,
-        layout: NW,
-        games: PW,
-        landscape: LW = !1
-      } = WW;
+        category: GR,
+        title: yR,
+        tintColour: tR,
+        layout: uR,
+        games: ZR,
+        landscape: qR = !1
+      } = RR;
       const {
-        followsLeader: cW
-      } = (0, AW.d)(), wW = null !== (iW = null === PW || void 0 === PW ? void 0 : PW.slice(0, NW.gameCount)) && void 0 !== iW ? iW : [], ZW = {
-        "--custom-game-place-tint": EW
+        followsLeader: iR
+      } = (0, eR.d)(), fR = null !== (JR = null === ZR || void 0 === ZR ? void 0 : ZR.slice(0, uR.gameCount)) && void 0 !== JR ? JR : [], KR = {
+        "--custom-game-place-tint": tR
       };
-      return (0, bW.jsxs)("div", {
+      return (0, aR.jsxs)("div", {
         className: "CustomGamePlacePanel AnimFadeIn",
-        style: ZW,
-        children: [(0, bW.jsx)("h2", {
+        style: KR,
+        children: [(0, aR.jsx)("h2", {
           className: "CustomGamePlacePanelHeading",
-          children: (0, bW.jsxs)(tW.LinkPreserveSearch, {
-            to: `/custom-games/${encodeURIComponent(OW)}`,
+          children: (0, aR.jsxs)(VR.LinkPreserveSearch, {
+            to: `/custom-games/${encodeURIComponent(GR)}`,
             className: "CustomGamePlacePanelTitle SmallTextBold",
-            children: [(0, bW.jsx)("span", {
-              children: mW
-            }), (0, bW.jsx)(xW.c, {
+            children: [(0, aR.jsx)("span", {
+              children: yR
+            }), (0, aR.jsx)(wR.d, {
               name: "arrow-up"
             })]
           })
-        }), (0, bW.jsx)("div", {
+        }), (0, aR.jsx)("div", {
           className: "CustomGamePlacePanelGames",
           style: {
-            gridTemplateColumns: `repeat(${LW?NW.columnCount:jW}, ${LW?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
+            gridTemplateColumns: `repeat(${qR?uR.columnCount:LR}, ${qR?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
           },
           children: Array.from({
-            length: NW.gameCount
-          }, ((WW, iW) => {
-            var OW;
-            return (0, bW.jsx)(kW, {
-              game: null !== (OW = wW[iW]) && void 0 !== OW ? OW : null,
-              disabled: cW,
-              showPlaceholder: !PW
-            }, iW)
+            length: uR.gameCount
+          }, ((RR, JR) => {
+            var GR;
+            return (0, aR.jsx)(UR, {
+              game: null !== (GR = fR[JR]) && void 0 !== GR ? GR : null,
+              disabled: iR,
+              showPlaceholder: !ZR
+            }, JR)
           }))
         })]
       })
     }
 
-    function MW(WW) {
+    function AR(RR) {
       let {
-        categories: iW
-      } = WW;
+        categories: JR
+      } = RR;
 
-      function OW(WW) {
-        const OW = iW[WW];
-        return (0, bW.jsx)(sW, {
-          ...OW,
+      function GR(RR) {
+        const GR = JR[RR];
+        return (0, aR.jsx)(WR, {
+          ...GR,
           landscape: !0
-        }, OW.id)
+        }, GR.id)
       }
-      return (0, bW.jsxs)("div", {
+      return (0, aR.jsxs)("div", {
         className: "CustomGamePlaceMosaic CustomGamePlaceMosaicLandscape AnimFadeIn",
-        children: [(0, bW.jsxs)("div", {
+        children: [(0, aR.jsxs)("div", {
           className: "CustomGamePlaceUpper",
-          children: [(0, bW.jsxs)("div", {
+          children: [(0, aR.jsxs)("div", {
             className: "CustomGamePlaceMain",
-            children: [(0, bW.jsxs)("div", {
+            children: [(0, aR.jsxs)("div", {
               className: "CustomGamePlaceRow",
-              children: [OW(0), OW(2)]
-            }), OW(1)]
-          }), OW(4)]
-        }), (0, bW.jsxs)("div", {
+              children: [GR(0), GR(2)]
+            }), GR(1)]
+          }), GR(4)]
+        }), (0, aR.jsxs)("div", {
           className: "CustomGamePlaceRow",
-          children: [OW(3), OW(5)]
+          children: [GR(3), GR(5)]
         })]
       })
     }
-    const KW = ["section1", "section2", "section3", "section4", "section5", "section6"],
-      SW = {
+    const CR = ["section1", "section2", "section3", "section4", "section5", "section6"],
+      XR = {
         section1: {
           gameCount: 4,
           columnCount: 2
@@ -152,67 +152,67 @@ export const modules = {
           columnCount: 4
         }
       };
-    var YW = OW(1095);
+    var MR = GR(1179);
 
-    function yW() {
-      var WW;
+    function BR() {
+      var RR;
       const {
-        t: iW
-      } = (0, cW.B)(), OW = (0, NW.z)(), mW = (0, YW.h)(), xW = (0, ZW.e)({
+        t: JR
+      } = (0, iR.A)(), GR = (0, uR.x)(), yR = (0, MR.h)(), wR = (0, KR.c)({
         refresh: !0
-      }), lW = OW.customGamePlace;
-      if (!(0, PW.k)(lW)) return (0, bW.jsx)(tW.NavigatePreserveSearch, {
+      }), rR = GR.customGamePlace;
+      if (!(0, ZR.g)(rR)) return (0, aR.jsx)(VR.NavigatePreserveSearch, {
         to: "/"
       });
-      const AW = LW.d[lW],
-        jW = PW.d[lW],
-        UW = null !== (WW = null === xW || void 0 === xW ? void 0 : xW[lW]) && void 0 !== WW ? WW : null,
-        kW = [];
-      for (let EW = 0; EW < jW.length; EW++) {
-        var yW;
-        const WW = KW[EW];
-        if (!WW) continue;
-        const OW = jW[EW];
-        kW.push({
-          id: OW.id,
-          category: OW.category,
-          title: iW(OW.displayTranslationKey),
-          tintColour: OW.tintColour,
-          layout: SW[WW],
-          games: null !== (yW = null === UW || void 0 === UW ? void 0 : UW[OW.id]) && void 0 !== yW ? yW : null
+      const eR = qR.b[rR],
+        LR = ZR.b[rR],
+        nR = null !== (RR = null === wR || void 0 === wR ? void 0 : wR[rR]) && void 0 !== RR ? RR : null,
+        UR = [];
+      for (let tR = 0; tR < LR.length; tR++) {
+        var BR;
+        const RR = CR[tR];
+        if (!RR) continue;
+        const GR = LR[tR];
+        UR.push({
+          id: GR.id,
+          category: GR.category,
+          title: JR(GR.displayTranslationKey),
+          tintColour: GR.tintColour,
+          layout: XR[RR],
+          games: null !== (BR = null === nR || void 0 === nR ? void 0 : nR[GR.id]) && void 0 !== BR ? BR : null
         })
       }
-      return (0, bW.jsxs)("div", {
+      return (0, aR.jsxs)("div", {
         className: "CustomGamePlaceContainer AnimFadeIn",
-        children: [(0, bW.jsx)("div", {
+        children: [(0, aR.jsx)("div", {
           className: "BackgroundImage",
           style: {
-            backgroundImage: `url(/textures/games/${lW}/${AW.largePicture}.png)`
+            backgroundImage: `url(/textures/games/${rR}/${eR.largePicture}.png)`
           }
-        }), (0, bW.jsx)("h1", {
+        }), (0, aR.jsx)("h1", {
           className: "VisuallyHidden",
-          children: iW(AW.title)
-        }), (0, bW.jsx)("div", {
+          children: JR(eR.title)
+        }), (0, aR.jsx)("div", {
           className: "CustomGamePlaceHeaderContainer",
-          children: (0, bW.jsx)(wW.b, {
-            onClick: () => (0, tW.navigatePreserveSearch)("/"),
-            children: iW("homePage:backToGames")
+          children: (0, aR.jsx)(fR.d, {
+            onClick: () => (0, VR.navigatePreserveSearch)("/"),
+            children: JR("homePage:backToGames")
           })
-        }), !mW && (0, bW.jsx)(MW, {
-          categories: kW
-        }), mW && (0, bW.jsx)("div", {
-          className: EW()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
-          children: kW.map((WW => (0, bW.jsx)(sW, {
-            category: WW.category,
-            title: WW.title,
-            tintColour: WW.tintColour,
-            layout: WW.layout,
-            games: WW.games
-          }, WW.id)))
+        }), !yR && (0, aR.jsx)(AR, {
+          categories: UR
+        }), yR && (0, aR.jsx)("div", {
+          className: tR()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
+          children: UR.map((RR => (0, aR.jsx)(WR, {
+            category: RR.category,
+            title: RR.title,
+            tintColour: RR.tintColour,
+            layout: RR.layout,
+            games: RR.games
+          }, RR.id)))
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

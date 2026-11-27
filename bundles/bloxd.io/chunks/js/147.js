@@ -1,48 +1,48 @@
 export const id = 147;
 export const ids = [147];
 export const modules = {
-  7525: (WW, iW, OW) => {
-    OW.d(iW, {
-      WorldCodeAiChatGptNotice: () => tW,
-      WorldCodeAiDeepSeekNotice: () => wW,
-      d: () => PW,
-      f: () => cW,
-      i: () => LW
+  7659: (RR, JR, GR) => {
+    GR.d(JR, {
+      WorldCodeAiChatGptNotice: () => VR,
+      WorldCodeAiDeepSeekNotice: () => fR,
+      c: () => ZR,
+      g: () => iR,
+      i: () => qR
     });
-    var mW = OW(1172),
-      EW = OW(7532),
-      NW = OW(1283);
-    const PW = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
-      LW = "https://openai.com/policies/terms-of-use/",
-      cW = "https://openai.com/policies/privacy-policy/";
+    var yR = GR(1270),
+      tR = GR(7668),
+      uR = GR(1378);
+    const ZR = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+      qR = "https://openai.com/policies/terms-of-use/",
+      iR = "https://openai.com/policies/privacy-policy/";
 
-    function wW() {
+    function fR() {
       const {
-        t: WW
-      } = (0, mW.B)();
-      return (0, NW.jsxs)(NW.Fragment, {
-        children: [WW("superBotXd:deepSeekNotice"), " ", (0, NW.jsx)(EW.d, {
-          href: PW,
-          children: WW("superBotXd:deepSeekPrivacyPolicy")
+        t: RR
+      } = (0, yR.A)();
+      return (0, uR.jsxs)(uR.Fragment, {
+        children: [RR("superBotXd:deepSeekNotice"), " ", (0, uR.jsx)(tR.e, {
+          href: ZR,
+          children: RR("superBotXd:deepSeekPrivacyPolicy")
         })]
       })
     }
 
-    function tW() {
+    function VR() {
       const {
-        t: WW
-      } = (0, mW.B)();
-      return (0, NW.jsxs)(NW.Fragment, {
-        children: [WW("aiHelperChatGpt:notice"), " ", (0, NW.jsx)(EW.d, {
-          href: LW,
-          children: WW("aiHelperChatGpt:terms")
-        }), " ", (0, NW.jsx)(EW.d, {
-          href: cW,
-          children: WW("aiHelperChatGpt:privacyPolicy")
+        t: RR
+      } = (0, yR.A)();
+      return (0, uR.jsxs)(uR.Fragment, {
+        children: [RR("aiHelperChatGpt:notice"), " ", (0, uR.jsx)(tR.e, {
+          href: qR,
+          children: RR("aiHelperChatGpt:terms")
+        }), " ", (0, uR.jsx)(tR.e, {
+          href: iR,
+          children: RR("aiHelperChatGpt:privacyPolicy")
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

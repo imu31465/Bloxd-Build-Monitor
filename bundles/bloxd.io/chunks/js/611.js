@@ -1,66 +1,66 @@
 export const id = 611;
 export const ids = [611];
 export const modules = {
-  53492: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => Ii
+  53307: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => EJ
     });
-    var mW = OW(53501),
-      EW = OW(53539),
-      NW = OW(53546),
-      PW = OW(62),
-      LW = OW(80),
-      cW = OW(53565),
-      wW = OW(53569),
-      tW = OW(5506),
-      ZW = OW(53577),
-      xW = OW(2021),
-      lW = OW(53583),
-      AW = OW(53597),
-      bW = OW.n(AW),
-      jW = OW(53555),
-      UW = OW(53557),
-      kW = OW(1383),
-      sW = OW(38001),
-      MW = OW(1230),
-      KW = OW(3327),
-      SW = OW(37423),
-      YW = OW(1526),
-      yW = OW(643),
-      TW = OW(1239),
-      JW = OW(53636),
-      hW = OW(53507),
-      HW = OW(53511),
-      nW = OW(2037),
-      uW = OW(2478),
-      oW = OW(27),
-      dW = OW(1111);
-    const eW = 1e4,
-      vW = 250,
-      gW = 250;
-    var DW = OW(53522);
-    const VW = 50,
-      pW = 100;
-    const fW = 2e3,
-      CW = hW.H.define(),
-      XW = hW.H.define(),
-      BW = hW.H.define();
-    class qW extends HW.j {
-      constructor(WW, iW, OW) {
-        super(), this.colour = WW, this.playerName = iW, this.showName = OW
+    var yR = GR(53314),
+      tR = GR(53355),
+      uR = GR(53364),
+      ZR = GR(66),
+      qR = GR(83),
+      iR = GR(53379),
+      fR = GR(53382),
+      VR = GR(5650),
+      KR = GR(53388),
+      wR = GR(2105),
+      rR = GR(53395),
+      eR = GR(53420),
+      aR = GR.n(eR),
+      LR = GR(53368),
+      nR = GR(53374),
+      UR = GR(1465),
+      WR = GR(37967),
+      AR = GR(1336),
+      CR = GR(3458),
+      XR = GR(37329),
+      MR = GR(1581),
+      BR = GR(679),
+      lR = GR(1341),
+      pR = GR(53481),
+      gR = GR(53317),
+      bR = GR(53321),
+      vR = GR(2134),
+      OR = GR(2532),
+      xR = GR(32),
+      NR = GR(1201);
+    const DR = 1e4,
+      HR = 250,
+      oR = 250;
+    var cR = GR(53340);
+    const PR = 50,
+      IR = 100;
+    const mR = 2e3,
+      zR = gR.K.define(),
+      SR = gR.K.define(),
+      jR = gR.K.define();
+    class dR extends bR.q {
+      constructor(RR, JR, GR) {
+        super(), this.colour = RR, this.playerName = JR, this.showName = GR
       }
       toDOM() {
-        const WW = document.createElement("span");
-        WW.className = "cm-remote-cursor-wrapper", WW.style.borderLeftColor = this.colour;
-        const iW = document.createElement("span");
-        if (iW.className = "cm-remote-cursor", iW.style.borderLeftColor = this.colour, WW.appendChild(iW), this.showName) {
-          const iW = document.createElement("span");
-          iW.className = "cm-remote-cursor-name", iW.style.backgroundColor = this.colour, iW.textContent = this.playerName, WW.appendChild(iW)
+        const RR = document.createElement("span");
+        RR.className = "cm-remote-cursor-wrapper", RR.style.borderLeftColor = this.colour;
+        const JR = document.createElement("span");
+        if (JR.className = "cm-remote-cursor", JR.style.borderLeftColor = this.colour, RR.appendChild(JR), this.showName) {
+          const JR = document.createElement("span");
+          JR.className = "cm-remote-cursor-name", JR.style.backgroundColor = this.colour, JR.textContent = this.playerName, RR.appendChild(JR)
         }
-        return WW
+        return RR
       }
-      eq(WW) {
-        return this.colour === WW.colour && this.playerName === WW.playerName && this.showName === WW.showName
+      eq(RR) {
+        return this.colour === RR.colour && this.playerName === RR.playerName && this.showName === RR.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function RW(WW, iW) {
-      const OW = [],
-        mW = [];
-      for (const [, PW] of WW) {
-        const WW = iW - PW.lastMoved < fW;
-        if (OW.push({
-            pos: PW.head,
-            decoration: HW.c.widget({
-              widget: new qW(PW.colour, PW.playerName, WW),
+    function ER(RR, JR) {
+      const GR = [],
+        yR = [];
+      for (const [, ZR] of RR) {
+        const RR = JR - ZR.lastMoved < mR;
+        if (GR.push({
+            pos: ZR.head,
+            decoration: bR.e.widget({
+              widget: new dR(ZR.colour, ZR.playerName, RR),
               side: 1
             })
-          }), PW.anchor !== PW.head) {
-          const WW = Math.min(PW.anchor, PW.head),
-            iW = Math.max(PW.anchor, PW.head);
-          mW.push({
-            from: WW,
-            to: iW,
-            decoration: HW.c.mark({
+          }), ZR.anchor !== ZR.head) {
+          const RR = Math.min(ZR.anchor, ZR.head),
+            JR = Math.max(ZR.anchor, ZR.head);
+          yR.push({
+            from: RR,
+            to: JR,
+            decoration: bR.e.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${PW.colour}33`
+                style: `background-color: ${ZR.colour}33`
               }
             })
           })
         }
       }
-      const EW = new hW.A,
-        NW = [];
-      for (const PW of OW) NW.push({
+      const tR = new gR.C,
+        uR = [];
+      for (const ZR of GR) uR.push({
         bias: 1,
-        deco: PW.decoration,
-        from: PW.pos,
-        to: PW.pos
+        deco: ZR.decoration,
+        from: ZR.pos,
+        to: ZR.pos
       });
-      for (const PW of mW) NW.push({
+      for (const ZR of yR) uR.push({
         bias: 0,
-        deco: PW.decoration,
-        from: PW.from,
-        to: PW.to
+        deco: ZR.decoration,
+        from: ZR.from,
+        to: ZR.to
       });
-      NW.sort(((WW, iW) => WW.from - iW.from || WW.deco.startSide - iW.deco.startSide || WW.bias - iW.bias));
-      for (const PW of NW) EW.add(PW.from, PW.to, PW.deco);
-      return EW.finish()
+      uR.sort(((RR, JR) => RR.from - JR.from || RR.deco.startSide - JR.deco.startSide || RR.bias - JR.bias));
+      for (const ZR of uR) tR.add(ZR.from, ZR.to, ZR.deco);
+      return tR.finish()
     }
-    const GW = hW.L.define({
+    const YR = gR.L.define({
       create: () => ({
         cursors: new Map,
-        Km: HW.c.none
+        Cy: bR.e.none
       }),
-      update(WW, iW) {
-        let OW = WW.cursors,
-          mW = !1;
-        if (iW.docChanged) {
-          const WW = new Map;
-          for (const [mW, EW] of OW) WW.set(mW, {
-            ...EW,
-            anchor: iW.changes.mapPos(EW.anchor, 1),
-            head: iW.changes.mapPos(EW.head, 1)
+      update(RR, JR) {
+        let GR = RR.cursors,
+          yR = !1;
+        if (JR.docChanged) {
+          const RR = new Map;
+          for (const [yR, tR] of GR) RR.set(yR, {
+            ...tR,
+            anchor: JR.changes.mapPos(tR.anchor, 1),
+            head: JR.changes.mapPos(tR.head, 1)
           });
-          OW = WW, mW = !0
+          GR = RR, yR = !0
         }
-        for (const EW of iW.effects)
-          if (EW.is(CW)) {
-            if (!Number.isInteger(EW.value.anchor) || !Number.isInteger(EW.value.head)) {
-              console.warn(`Code Editor: ignored player ${EW.value.playerId}'s cursor at ${EW.value.anchor}-${EW.value.head}`);
+        for (const tR of JR.effects)
+          if (tR.is(zR)) {
+            if (!Number.isInteger(tR.value.anchor) || !Number.isInteger(tR.value.head)) {
+              console.warn(`Code Editor: ignored player ${tR.value.playerId}'s cursor at ${tR.value.anchor}-${tR.value.head}`);
               continue
             }
-            const NW = iW.state.doc.length,
-              PW = {
-                ...EW.value,
-                anchor: Math.min(EW.value.anchor, NW),
-                head: Math.min(EW.value.head, NW)
+            const uR = JR.state.doc.length,
+              ZR = {
+                ...tR.value,
+                anchor: Math.min(tR.value.anchor, uR),
+                head: Math.min(tR.value.head, uR)
               };
-            OW === WW.cursors && (OW = new Map(OW)), OW.set(PW.playerId, PW), mW = !0
-          } else EW.is(XW) ? OW.has(EW.value) && (OW === WW.cursors && (OW = new Map(OW)), OW.delete(EW.value), mW = !0) : EW.is(BW) && (mW = !0);
-        return mW ? {
-          cursors: OW,
-          Km: RW(OW, Date.now())
-        } : WW
+            GR === RR.cursors && (GR = new Map(GR)), GR.set(ZR.playerId, ZR), yR = !0
+          } else tR.is(SR) ? GR.has(tR.value) && (GR === RR.cursors && (GR = new Map(GR)), GR.delete(tR.value), yR = !0) : tR.is(jR) && (yR = !0);
+        return yR ? {
+          cursors: GR,
+          Cy: ER(GR, Date.now())
+        } : RR
       },
-      provide: WW => HW.e.Km.from(WW, (WW => WW.Km))
+      provide: RR => bR.k.Cy.from(RR, (RR => RR.Cy))
     });
-    const IW = hW.H.define(),
-      aW = HW.c.mark({
+    const kR = gR.K.define(),
+      QR = bR.e.mark({
         class: "CodeInsertFlash"
       }),
-      rW = hW.L.define({
-        create: () => HW.c.none,
-        update(WW, iW) {
-          let OW = WW.map(iW.changes);
-          for (const mW of iW.effects) mW.is(IW) && (OW = mW.value ? HW.c.set(aW.range(mW.value.from, mW.value.to)) : HW.c.none);
-          return OW
+      FR = gR.L.define({
+        create: () => bR.e.none,
+        update(RR, JR) {
+          let GR = RR.map(JR.changes);
+          for (const yR of JR.effects) yR.is(kR) && (GR = yR.value ? bR.e.set(QR.range(yR.value.from, yR.value.to)) : bR.e.none);
+          return GR
         },
-        provide: WW => HW.e.Km.from(WW)
+        provide: RR => bR.k.Cy.from(RR)
       }),
-      zW = hW.L.define({
+      TR = gR.L.define({
         create: () => !1,
-        update: (WW, iW) => WW || void 0 !== iW.annotation(hW.P.userEvent) && !iW.annotation(hW.P.remote)
+        update: (RR, JR) => RR || void 0 !== JR.annotation(gR.R.userEvent) && !JR.annotation(gR.R.remote)
       }),
-      FW = [rW, zW];
+      sR = [FR, TR];
 
-    function QW(WW) {
-      return WW.field(zW)
+    function hR(RR) {
+      return RR.field(TR)
     }
-    const Wi = 3e4;
+    const RJ = 3e4;
 
-    function ii(WW, iW) {
-      const OW = (0, PW.useRef)(null);
-      (0, PW.useEffect)((() => {
-        var WW;
-        (null === (WW = OW.current) || void 0 === WW ? void 0 : WW.path) !== iW && (OW.current = null)
-      }), [iW]);
-      const mW = WW => {
-        var mW;
-        const EW = OW.current;
-        if (null === WW || void 0 === WW || !WW.dom.isConnected || !EW || EW.path !== iW) return;
-        OW.current = null;
+    function JJ(RR, JR) {
+      const GR = (0, ZR.useRef)(null);
+      (0, ZR.useEffect)((() => {
+        var RR;
+        (null === (RR = GR.current) || void 0 === RR ? void 0 : RR.path) !== JR && (GR.current = null)
+      }), [JR]);
+      const yR = RR => {
+        var yR;
+        const tR = GR.current;
+        if (null === RR || void 0 === RR || !RR.dom.isConnected || !tR || tR.path !== JR) return;
+        GR.current = null;
         const {
-          EZ: PW
-        } = EW;
-        if (PW && null !== PW.text && performance.now() - PW.at < Wi) {
-          const iW = function(WW, iW) {
-            if (WW === iW) return null;
-            const OW = Math.min(WW.length, iW.length);
-            let mW = 0;
-            for (; mW < OW && WW[mW] === iW[mW];) mW++;
-            let EW = 0;
-            for (; EW < OW - mW && WW[WW.length - 1 - EW] === iW[iW.length - 1 - EW];) EW++;
+          tK: ZR
+        } = tR;
+        if (ZR && null !== ZR.text && performance.now() - ZR.at < RJ) {
+          const JR = function(RR, JR) {
+            if (RR === JR) return null;
+            const GR = Math.min(RR.length, JR.length);
+            let yR = 0;
+            for (; yR < GR && RR[yR] === JR[yR];) yR++;
+            let tR = 0;
+            for (; tR < GR - yR && RR[RR.length - 1 - tR] === JR[JR.length - 1 - tR];) tR++;
             return {
-              from: mW,
-              to: WW.length - EW,
-              insert: iW.slice(mW, iW.length - EW)
+              from: yR,
+              to: RR.length - tR,
+              insert: JR.slice(yR, JR.length - tR)
             }
-          }(WW.state.doc.toString(), PW.text);
-          null !== iW && WW.dispatch({
-            changes: iW,
-            userEvent: PW.placed ? "input" : void 0
+          }(RR.state.doc.toString(), ZR.text);
+          null !== JR && RR.dispatch({
+            changes: JR,
+            userEvent: ZR.placed ? "input" : void 0
           })
         }
         const {
-          doc: LW
-        } = WW.state, cW = LW.line(Math.min(Math.max(EW.line, 1), LW.lines)), wW = cW.from + Math.min(null !== (mW = EW.column) && void 0 !== mW ? mW : 0, cW.length);
-        WW.dispatch({
+          doc: qR
+        } = RR.state, iR = qR.line(Math.min(Math.max(tR.line, 1), qR.lines)), fR = iR.from + Math.min(null !== (yR = tR.column) && void 0 !== yR ? yR : 0, iR.length);
+        RR.dispatch({
           selection: {
-            anchor: wW
+            anchor: fR
           },
-          effects: NW.e.scrollIntoView(wW, {
+          effects: uR.e.scrollIntoView(fR, {
             y: "center"
           }),
-          userEvent: null !== PW && void 0 !== PW && PW.placed ? "select" : void 0
-        }), !1 !== (null === PW || void 0 === PW ? void 0 : PW.focused) && WW.focus()
+          userEvent: null !== ZR && void 0 !== ZR && ZR.placed ? "select" : void 0
+        }), !1 !== (null === ZR || void 0 === ZR ? void 0 : ZR.focused) && RR.focus()
       };
-      return (0, YW.e)("CodeEditorGoToLine", (iW => {
-        OW.current = iW, mW(WW.current)
-      })), (0, YW.e)("CodeEditorKeepEdits", (() => {
-        const mW = WW.current;
-        if (null === mW || !mW.dom.isConnected || null === iW) return;
+      return (0, MR.f)("CodeEditorGoToLine", (JR => {
+        GR.current = JR, yR(RR.current)
+      })), (0, MR.f)("CodeEditorKeepEdits", (() => {
+        const yR = RR.current;
+        if (null === yR || !yR.dom.isConnected || null === JR) return;
         const {
-          doc: EW,
-          selection: NW
-        } = mW.state, {
-          head: PW
-        } = NW.main, LW = EW.lineAt(PW), cW = {
-          text: (0, JW.k)(mW.state).length > 0 ? EW.toString() : null,
+          doc: tR,
+          selection: uR
+        } = yR.state, {
+          head: ZR
+        } = uR.main, qR = tR.lineAt(ZR), iR = {
+          text: (0, pR.m)(yR.state).length > 0 ? tR.toString() : null,
           at: performance.now(),
-          focused: mW.hasFocus,
-          placed: QW(mW.state)
+          focused: yR.hasFocus,
+          placed: hR(yR.state)
         };
-        OW.current = {
-          path: iW,
-          line: LW.number,
-          column: PW - LW.from,
-          EZ: cW
+        GR.current = {
+          path: JR,
+          line: qR.number,
+          column: ZR - qR.from,
+          tK: iR
         }
-      })), WW => {
-        var EW;
-        const NW = OW.current;
-        !1 === (null === NW || void 0 === NW || null === (EW = NW.EZ) || void 0 === EW ? void 0 : EW.focused) && NW.path === iW || WW.focus(), mW(WW)
+      })), RR => {
+        var tR;
+        const uR = GR.current;
+        !1 === (null === uR || void 0 === uR || null === (tR = uR.tK) || void 0 === tR ? void 0 : tR.focused) && uR.path === JR || RR.focus(), yR(RR)
       }
     }
-    var Oi = OW(5038),
-      mi = OW(1172);
+    var GJ = GR(5138),
+      yJ = GR(1270);
 
-    function Ei(WW, iW) {
+    function tJ(RR, JR) {
       const {
-        t: OW
-      } = (0, mi.B)();
-      (0, YW.e)("CodeEditorInsertText", (mW => {
+        t: GR
+      } = (0, yJ.A)();
+      (0, MR.f)("CodeEditorInsertText", (yR => {
         let {
-          text: EW,
-          focus: NW
-        } = mW;
-        const PW = WW.current,
-          LW = null !== PW && void 0 !== PW && PW.dom.isConnected ? function(WW, iW) {
-            if (!QW(WW)) return null;
+          text: tR,
+          focus: uR
+        } = yR;
+        const ZR = RR.current,
+          qR = null !== ZR && void 0 !== ZR && ZR.dom.isConnected ? function(RR, JR) {
+            if (!hR(RR)) return null;
             const {
-              from: OW,
-              to: mW
-            } = WW.selection.main, EW = OW + iW.length;
+              from: GR,
+              to: yR
+            } = RR.selection.main, tR = GR + JR.length;
             return {
               changes: {
-                from: OW,
-                to: mW,
-                insert: iW
+                from: GR,
+                to: yR,
+                insert: JR
               },
               selection: {
-                anchor: EW
+                anchor: tR
               },
-              effects: [HW.e.scrollIntoView(EW, {
+              effects: [bR.k.scrollIntoView(tR, {
                 y: "center"
-              }), IW.of({
-                from: OW,
-                to: EW
+              }), kR.of({
+                from: GR,
+                to: tR
               })],
               userEvent: "input"
             }
-          }(PW.state, EW) : null;
-        null !== PW && null !== LW ? (PW.dispatch(LW), NW && PW.focus(), setTimeout((() => {
-          PW.dom.isConnected && PW.dispatch({
-            effects: IW.of(null)
+          }(ZR.state, tR) : null;
+        null !== ZR && null !== qR ? (ZR.dispatch(qR), uR && ZR.focus(), setTimeout((() => {
+          ZR.dom.isConnected && ZR.dispatch({
+            effects: kR.of(null)
           })
-        }), 1500)) : (0, Oi.b)(EW).then((() => {
-          iW({
-            message: OW("codeEditorWorld:pickCopied", {
-              coords: EW
+        }), 1500)) : (0, GJ.e)(tR).then((() => {
+          JR({
+            message: GR("codeEditorWorld:pickCopied", {
+              coords: tR
             }),
             type: "success"
           })
-        }), (WW => {
-          console.error("Pick could not copy the coordinates", WW), iW({
-            message: OW("codeEditorWorld:pickPlaceCursor", {
-              coords: EW
+        }), (RR => {
+          console.error("Pick could not copy the coordinates", RR), JR({
+            message: GR("codeEditorWorld:pickPlaceCursor", {
+              coords: tR
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var Ni = OW(53532);
-    const Pi = "#e45649",
-      Li = "#383a42",
-      ci = "#696c77",
-      wi = "#986801",
-      ti = "#e5e5e6",
-      Zi = "#fafafa",
-      xi = "#eaeaeb",
-      li = "#526fff",
-      Ai = HW.e.theme({
+    var uJ = GR(53352);
+    const ZJ = "#e45649",
+      qJ = "#383a42",
+      iJ = "#696c77",
+      fJ = "#986801",
+      VJ = "#e5e5e6",
+      KJ = "#fafafa",
+      wJ = "#eaeaeb",
+      rJ = "#526fff",
+      eJ = bR.k.theme({
         "&": {
-          color: Li,
-          backgroundColor: Zi
+          color: qJ,
+          backgroundColor: KJ
         },
         ".cm-content": {
-          caretColor: li
+          caretColor: rJ
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: li
+          borderLeftColor: rJ
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: Li
+          color: qJ
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: Zi,
-          color: ci,
+          backgroundColor: KJ,
+          color: iJ,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: ti
+          backgroundColor: VJ
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: xi
+          backgroundColor: wJ
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: xi,
-          borderBottomColor: xi
+          borderTopColor: wJ,
+          borderBottomColor: wJ
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: ti,
-            color: Li
+            backgroundColor: VJ,
+            color: qJ
           }
         }
       }, {
         dark: !1
       }),
-      bi = DW.b.define([{
-        tag: Ni.l.keyword,
+      aJ = cR.e.define([{
+        tag: uJ.l.keyword,
         color: "#a626a4"
       }, {
-        tag: [Ni.l.name, Ni.l.deleted, Ni.l.character, Ni.l.propertyName, Ni.l.macroName],
-        color: Pi
+        tag: [uJ.l.name, uJ.l.deleted, uJ.l.character, uJ.l.propertyName, uJ.l.macroName],
+        color: ZJ
       }, {
-        tag: [Ni.l.function(Ni.l.variableName), Ni.l.labelName],
+        tag: [uJ.l.function(uJ.l.variableName), uJ.l.labelName],
         color: "#4078f2"
       }, {
-        tag: [Ni.l.color, Ni.l.constant(Ni.l.name), Ni.l.standard(Ni.l.name)],
-        color: wi
+        tag: [uJ.l.color, uJ.l.constant(uJ.l.name), uJ.l.standard(uJ.l.name)],
+        color: fJ
       }, {
-        tag: [Ni.l.definition(Ni.l.name), Ni.l.separator],
-        color: Li
+        tag: [uJ.l.definition(uJ.l.name), uJ.l.separator],
+        color: qJ
       }, {
-        tag: [Ni.l.typeName, Ni.l.className, Ni.l.number, Ni.l.changed, Ni.l.annotation, Ni.l.modifier, Ni.l.self, Ni.l.namespace],
+        tag: [uJ.l.typeName, uJ.l.className, uJ.l.number, uJ.l.changed, uJ.l.annotation, uJ.l.modifier, uJ.l.self, uJ.l.namespace],
         color: "#c18401"
       }, {
-        tag: [Ni.l.operator, Ni.l.operatorKeyword, Ni.l.url, Ni.l.escape, Ni.l.regexp, Ni.l.link, Ni.l.special(Ni.l.string)],
+        tag: [uJ.l.operator, uJ.l.operatorKeyword, uJ.l.url, uJ.l.escape, uJ.l.regexp, uJ.l.link, uJ.l.special(uJ.l.string)],
         color: "#0184bc"
       }, {
-        tag: [Ni.l.meta, Ni.l.comment],
-        color: ci
+        tag: [uJ.l.meta, uJ.l.comment],
+        color: iJ
       }, {
-        tag: Ni.l.strong,
+        tag: uJ.l.strong,
         fontWeight: "bold"
       }, {
-        tag: Ni.l.emphasis,
+        tag: uJ.l.emphasis,
         fontStyle: "italic"
       }, {
-        tag: Ni.l.strikethrough,
+        tag: uJ.l.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: Ni.l.link,
-        color: ci,
+        tag: uJ.l.link,
+        color: iJ,
         textDecoration: "underline"
       }, {
-        tag: Ni.l.heading,
+        tag: uJ.l.heading,
         fontWeight: "bold",
-        color: Pi
+        color: ZJ
       }, {
-        tag: [Ni.l.atom, Ni.l.bool, Ni.l.special(Ni.l.variableName)],
-        color: wi
+        tag: [uJ.l.atom, uJ.l.bool, uJ.l.special(uJ.l.variableName)],
+        color: fJ
       }, {
-        tag: [Ni.l.processingInstruction, Ni.l.string, Ni.l.inserted],
+        tag: [uJ.l.processingInstruction, uJ.l.string, uJ.l.inserted],
         color: "#50a14f"
       }, {
-        tag: Ni.l.invalid,
+        tag: uJ.l.invalid,
         color: "#000000"
       }]),
-      ji = [Ai, (0, DW.cb)(bi)];
-    var Ui = OW(38060),
-      ki = OW(53643);
-    const si = NW.j.define(),
-      Mi = NW.m.define({
+      LJ = [eJ, (0, cR.kb)(aJ)];
+    var nJ = GR(38016),
+      UJ = GR(53483);
+    const WJ = uR.j.define(),
+      AJ = uR.l.define({
         create: () => !1,
-        update(WW, iW) {
-          for (const OW of iW.effects) OW.is(si) && (WW = OW.value);
-          return WW
+        update(RR, JR) {
+          for (const GR of JR.effects) GR.is(WJ) && (RR = GR.value);
+          return RR
         }
       }),
-      Ki = [{
+      CJ = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function Si(WW, iW) {
-      return [Mi, NW.n.fromClass(class {
-        constructor(WW) {
-          this.view = WW, this.onDown = WW => {
-            const iW = WW.target instanceof Element && null !== WW.target.closest(".cm-tooltip");
-            0 !== WW.button || iW || this.view.state.field(Mi) || this.view.dispatch({
-              effects: si.of(!0)
+    function XJ(RR, JR) {
+      return [AJ, uR.m.fromClass(class {
+        constructor(RR) {
+          this.view = RR, this.onDown = RR => {
+            const JR = RR.target instanceof Element && null !== RR.target.closest(".cm-tooltip");
+            0 !== RR.button || JR || this.view.state.field(AJ) || this.view.dispatch({
+              effects: WJ.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(Mi) && this.view.dispatch({
-              effects: si.of(!1)
+            this.view.state.field(AJ) && this.view.dispatch({
+              effects: WJ.of(!1)
             })
-          }, WW.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, RR.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), NW.q.compute(["selection", Mi], (OW => function(WW, iW, OW) {
-        const mW = WW.selection.main;
-        return mW.empty || WW.field(Mi) || WW.sliceDoc(mW.from, mW.to).trim().length < 2 ? null : {
-          pos: mW.from,
+      }), uR.u.compute(["selection", AJ], (GR => function(RR, JR, GR) {
+        const yR = RR.selection.main;
+        return yR.empty || RR.field(AJ) || RR.sliceDoc(yR.from, yR.to).trim().length < 2 ? null : {
+          pos: yR.from,
           above: !0,
-          create: WW => {
-            const mW = document.createElement("div");
-            mW.className = "CodeSelectionActions", mW.setAttribute("role", "toolbar"), mW.setAttribute("aria-label", "AI Helper: picked code");
+          create: RR => {
+            const yR = document.createElement("div");
+            yR.className = "CodeSelectionActions", yR.setAttribute("role", "toolbar"), yR.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: EW,
-                label: NW
+                action: tR,
+                label: uR
               }
-              of Ki) {
-              if (!OW && "explain" !== EW) continue;
-              const PW = document.createElement("button");
-              PW.type = "button", PW.textContent = NW, "change" !== EW && (PW.title = ki.d, PW.dataset.asksAi = "true"), PW.addEventListener("mousedown", (WW => {
-                WW.preventDefault()
-              })), PW.addEventListener("click", (() => {
-                const OW = WW.state.selection.main;
-                if (OW.empty) return;
-                const mW = {
-                  action: EW,
-                  path: iW,
-                  fromLine: WW.state.doc.lineAt(OW.from).number,
-                  toLine: WW.state.doc.lineAt(OW.to > OW.from && WW.state.doc.lineAt(OW.to).from === OW.to ? OW.to - 1 : OW.to).number,
-                  text: WW.state.sliceDoc(OW.from, OW.to)
+              of CJ) {
+              if (!GR && "explain" !== tR) continue;
+              const ZR = document.createElement("button");
+              ZR.type = "button", ZR.textContent = uR, "change" !== tR && (ZR.title = UJ.d, ZR.dataset.asksAi = "true"), ZR.addEventListener("mousedown", (RR => {
+                RR.preventDefault()
+              })), ZR.addEventListener("click", (() => {
+                const GR = RR.state.selection.main;
+                if (GR.empty) return;
+                const yR = {
+                  action: tR,
+                  path: JR,
+                  fromLine: RR.state.doc.lineAt(GR.from).number,
+                  toLine: RR.state.doc.lineAt(GR.to > GR.from && RR.state.doc.lineAt(GR.to).from === GR.to ? GR.to - 1 : GR.to).number,
+                  text: RR.state.sliceDoc(GR.from, GR.to)
                 };
-                oW.l.iZ("WorldCodeAiSelection", mW), WW.dispatch({
+                xR.n.JK("WorldCodeAiSelection", yR), RR.dispatch({
                   selection: {
-                    anchor: OW.to
+                    anchor: GR.to
                   }
                 })
-              })), mW.appendChild(PW)
+              })), yR.appendChild(ZR)
             }
             return {
-              dom: mW
+              dom: yR
             }
           }
         }
-      }(OW, WW, iW)))]
+      }(GR, RR, JR)))]
     }
-    var Yi = OW(1283);
-    const yi = new Set(["(", "{", "[", "<"]),
-      Ti = new Set([")", "}", "]", ">"]),
-      Ji = {
+    var MJ = GR(1378);
+    const BJ = new Set(["(", "{", "[", "<"]),
+      lJ = new Set([")", "}", "]", ">"]),
+      pJ = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function Hi(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function gJ(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function OW(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const mW = [];
-        for (const EW of WW) {
-          let WW;
-          WW = "punctuation" === EW.kind ? Ji.text : "parameterName" === EW.kind ? Ji.parameterName : iW, mW.push({
-            str: EW.text,
+      function GR(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const yR = [];
+        for (const tR of RR) {
+          let RR;
+          RR = "punctuation" === tR.kind ? pJ.text : "parameterName" === tR.kind ? pJ.parameterName : JR, yR.push({
+            str: tR.text,
             style: {
-              color: WW,
-              opacity: OW ? .5 : void 0
+              color: RR,
+              opacity: GR ? .5 : void 0
             }
           })
         }
-        return mW
+        return yR
       }
-      const mW = [];
-      if (mW.push(...OW(WW.prefixDisplayParts, Ji.text)), WW.parameters.length > 0) {
-        mW.push("\n");
-        for (let EW = 0; EW < WW.parameters.length; EW++) {
-          const NW = WW.parameters[EW];
-          mW.push("\t"), mW.push(...OW(NW.displayParts, Ji.parameter, null !== iW && EW !== iW)), mW.push("\n")
+      const yR = [];
+      if (yR.push(...GR(RR.prefixDisplayParts, pJ.text)), RR.parameters.length > 0) {
+        yR.push("\n");
+        for (let tR = 0; tR < RR.parameters.length; tR++) {
+          const uR = RR.parameters[tR];
+          yR.push("\t"), yR.push(...GR(uR.displayParts, pJ.parameter, null !== JR && tR !== JR)), yR.push("\n")
         }
       }
-      return mW.push(...OW(WW.suffixDisplayParts, Ji.suffix)), WW.documentation && (mW.push("\n\n"), mW.push(...OW(WW.documentation, Ji.docs))), mW
+      return yR.push(...GR(RR.suffixDisplayParts, pJ.suffix)), RR.documentation && (yR.push("\n\n"), yR.push(...GR(RR.documentation, pJ.docs))), yR
     }
-    var ni = function(WW) {
-      return WW[WW.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", WW[WW.DuplicateIdentifier = 2300] = "DuplicateIdentifier", WW
-    }(ni || {});
-    const ui = new Set([ni.DuplicateIdentifier]),
-      oi = new Set([ni.VariableDefinedElsewhere]),
-      di = new Set([]),
-      ei = "/index.js";
+    var bJ = function(RR) {
+      return RR[RR.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", RR[RR.DuplicateIdentifier = 2300] = "DuplicateIdentifier", RR
+    }(bJ || {});
+    const vJ = new Set([bJ.DuplicateIdentifier]),
+      OJ = new Set([bJ.VariableDefinedElsewhere]),
+      xJ = new Set([]),
+      NJ = "/index.js";
 
-    function vi(WW) {
-      return "/" + WW
-    }
-
-    function gi(WW, iW, OW) {
-      WW.getSourceFile(iW) && WW.deleteFile(iW), WW.createFile(iW, OW)
+    function DJ(RR) {
+      return "/" + RR
     }
 
-    function Di(WW) {
-      return !!WW && ((0, KW.j)(WW) || (0, KW.i)(WW))
+    function HJ(RR, JR, GR) {
+      RR.getSourceFile(JR) && RR.deleteFile(JR), RR.createFile(JR, GR)
     }
 
-    function Vi(WW, iW, OW) {
+    function oJ(RR) {
+      return !!RR && ((0, CR.m)(RR) || (0, CR.l)(RR))
+    }
+
+    function cJ(RR, JR, GR) {
       return () => {
-        let mW = [...iW.languageService.getSemanticDiagnostics(OW), ...iW.languageService.getSyntacticDiagnostics(OW)];
-        return mW = mW.filter((WW => !(0, yW.K)(WW.start) && !(0, yW.K)(WW.length) && !ui.has(WW.code))), WW || (mW = mW.filter((WW => !oi.has(WW.code)))), mW.map((WW => ({
-          from: WW.start,
-          to: WW.start + WW.length,
-          message: "string" === typeof WW.messageText ? WW.messageText : WW.messageText.messageText,
-          severity: di.has(WW.code) ? "warning" : "error"
+        let yR = [...JR.languageService.getSemanticDiagnostics(GR), ...JR.languageService.getSyntacticDiagnostics(GR)];
+        return yR = yR.filter((RR => !(0, BR.I)(RR.start) && !(0, BR.I)(RR.length) && !vJ.has(RR.code))), RR || (yR = yR.filter((RR => !OJ.has(RR.code)))), yR.map((RR => ({
+          from: RR.start,
+          to: RR.start + RR.length,
+          message: "string" === typeof RR.messageText ? RR.messageText : RR.messageText.messageText,
+          severity: xJ.has(RR.code) ? "warning" : "error"
         })))
       }
     }
 
-    function fi(WW, iW) {
-      return OW => {
-        var mW, EW;
-        const NW = WW.languageService.getCompletionsAtPosition(iW, OW.pos, {});
-        if (!NW) return {
-          from: OW.pos,
+    function PJ(RR, JR) {
+      return GR => {
+        var yR, tR;
+        const uR = RR.languageService.getCompletionsAtPosition(JR, GR.pos, {});
+        if (!uR) return {
+          from: GR.pos,
           options: []
         };
-        let PW = null !== (mW = null === (EW = NW.optionalReplacementSpan) || void 0 === EW ? void 0 : EW.start) && void 0 !== mW ? mW : OW.pos;
-        if (!NW.optionalReplacementSpan) {
-          const WW = OW.state.doc.sliceString(0, OW.pos);
-          for (; PW > 0 && /[\w$]/.test(WW[PW - 1]);) PW--
+        let ZR = null !== (yR = null === (tR = uR.optionalReplacementSpan) || void 0 === tR ? void 0 : tR.start) && void 0 !== yR ? yR : GR.pos;
+        if (!uR.optionalReplacementSpan) {
+          const RR = GR.state.doc.sliceString(0, GR.pos);
+          for (; ZR > 0 && /[\w$]/.test(RR[ZR - 1]);) ZR--
         }
-        return NW.entries = NW.entries.filter((WW => WW.kind !== bW().ScriptElementKind.warning)), {
-          from: PW,
-          options: NW.entries.map((mW => {
-            var EW, NW, LW, cW;
-            const wW = WW.languageService.getCompletionEntryDetails(iW, OW.pos, mW.name, {}, mW.source, {}, mW.data),
-              tW = null !== (EW = null === (NW = mW.replacementSpan) || void 0 === NW ? void 0 : NW.start) && void 0 !== EW ? EW : PW,
-              ZW = mW.replacementSpan ? mW.replacementSpan.start + mW.replacementSpan.length : OW.pos,
-              xW = null !== (LW = mW.insertText) && void 0 !== LW ? LW : mW.name;
+        return uR.entries = uR.entries.filter((RR => RR.kind !== aR().ScriptElementKind.warning)), {
+          from: ZR,
+          options: uR.entries.map((yR => {
+            var tR, uR, qR, iR;
+            const fR = RR.languageService.getCompletionEntryDetails(JR, GR.pos, yR.name, {}, yR.source, {}, yR.data),
+              VR = null !== (tR = null === (uR = yR.replacementSpan) || void 0 === uR ? void 0 : uR.start) && void 0 !== tR ? tR : ZR,
+              KR = yR.replacementSpan ? yR.replacementSpan.start + yR.replacementSpan.length : GR.pos,
+              wR = null !== (qR = yR.insertText) && void 0 !== qR ? qR : yR.name;
             return {
-              label: mW.name,
-              detail: null === wW || void 0 === wW ? void 0 : wW.displayParts.map((WW => WW.text)).join(""),
-              info: null === wW || void 0 === wW || null === (cW = wW.documentation) || void 0 === cW ? void 0 : cW.map((WW => WW.text)).join(""),
-              apply: WW => {
-                WW.dispatch({
+              label: yR.name,
+              detail: null === fR || void 0 === fR ? void 0 : fR.displayParts.map((RR => RR.text)).join(""),
+              info: null === fR || void 0 === fR || null === (iR = fR.documentation) || void 0 === iR ? void 0 : iR.map((RR => RR.text)).join(""),
+              apply: RR => {
+                RR.dispatch({
                   changes: {
-                    from: tW,
-                    to: ZW,
-                    insert: xW
+                    from: VR,
+                    to: KR,
+                    insert: wR
                   },
                   selection: {
-                    anchor: tW + xW.length
+                    anchor: VR + wR.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function Ci(WW) {
-      return iW => {
-        const OW = document.createElement("div");
-        OW.className = "CodeEditorTooltip";
-        let mW = !1;
+    function IJ(RR) {
+      return JR => {
+        const GR = document.createElement("div");
+        GR.className = "CodeEditorTooltip";
+        let yR = !1;
         return queueMicrotask((() => {
-          mW || (LW.render((0, Yi.jsx)(xW.d, {
-            text: WW
-          }), OW), iW.requestMeasure())
+          yR || (qR.render((0, MJ.jsx)(wR.c, {
+            text: RR
+          }), GR), JR.requestMeasure())
         })), {
-          dom: OW,
+          dom: GR,
           destroy() {
-            mW = !0, queueMicrotask((() => {
-              LW.unmountComponentAtNode(OW)
+            yR = !0, queueMicrotask((() => {
+              qR.unmountComponentAtNode(GR)
             }))
           }
         }
       }
     }
 
-    function Xi(WW, iW, OW) {
-      return mW => {
-        var EW;
-        if (!iW) return [];
-        const NW = null === (EW = mW.selection.kj[0]) || void 0 === EW ? void 0 : EW.head;
-        if (void 0 === NW) return [];
-        const PW = WW.languageService.getSignatureHelpItems(OW, NW, {});
-        if (!PW || !PW.items.length) return [];
-        const LW = PW.applicableSpan.start - PW.items[0].prefixDisplayParts.map((WW => WW.text)).join("").length,
-          cW = PW.applicableSpan.start,
-          wW = mW.doc.lineAt(NW),
-          tW = wW.from,
-          ZW = Math.min(wW.to, NW);
-        let xW, lW;
-        return LW < tW ? (xW = tW, lW = ZW) : (xW = LW, lW = cW), [{
-          pos: xW,
-          end: lW,
+    function mJ(RR, JR, GR) {
+      return yR => {
+        var tR;
+        if (!JR) return [];
+        const uR = null === (tR = yR.selection.WL[0]) || void 0 === tR ? void 0 : tR.head;
+        if (void 0 === uR) return [];
+        const ZR = RR.languageService.getSignatureHelpItems(GR, uR, {});
+        if (!ZR || !ZR.items.length) return [];
+        const qR = ZR.applicableSpan.start - ZR.items[0].prefixDisplayParts.map((RR => RR.text)).join("").length,
+          iR = ZR.applicableSpan.start,
+          fR = yR.doc.lineAt(uR),
+          VR = fR.from,
+          KR = Math.min(fR.to, uR);
+        let wR, rR;
+        return qR < VR ? (wR = VR, rR = KR) : (wR = qR, rR = iR), [{
+          pos: wR,
+          end: rR,
           above: !1,
-          create: Ci(Hi(PW.items[0], PW.argumentIndex))
+          create: IJ(gJ(ZR.items[0], ZR.argumentIndex))
         }]
       }
     }
 
-    function Bi(WW, iW) {
-      return (OW, mW, EW) => {
-        const NW = WW.languageService.getQuickInfoAtPosition(iW, mW);
-        if (!NW) return [];
-        const PW = NW.textSpan.start,
-          LW = NW.textSpan.start + NW.textSpan.length;
-        if (mW < PW || mW >= LW) return [];
-        if (NW.kind === bW().ScriptElementKind.memberFunctionElement || NW.kind === bW().ScriptElementKind.variableElement && "declare" === NW.kindModifiers) {
-          const WW = NW.displayParts.findIndex((WW => "space" === WW.kind)); - 1 !== WW && (NW.displayParts = NW.displayParts.slice(WW));
-          const iW = {
+    function zJ(RR, JR) {
+      return (GR, yR, tR) => {
+        const uR = RR.languageService.getQuickInfoAtPosition(JR, yR);
+        if (!uR) return [];
+        const ZR = uR.textSpan.start,
+          qR = uR.textSpan.start + uR.textSpan.length;
+        if (yR < ZR || yR >= qR) return [];
+        if (uR.kind === aR().ScriptElementKind.memberFunctionElement || uR.kind === aR().ScriptElementKind.variableElement && "declare" === uR.kindModifiers) {
+          const RR = uR.displayParts.findIndex((RR => "space" === RR.kind)); - 1 !== RR && (uR.displayParts = uR.displayParts.slice(RR));
+          const JR = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            OW = NW.displayParts.findIndex((WW => "punctuation" === WW.kind && "(" === WW.text)); - 1 !== OW && (iW.prefixDisplayParts = NW.displayParts.slice(0, OW + 1), NW.displayParts = NW.displayParts.slice(OW + 1));
-          const mW = NW.displayParts.findLastIndex((WW => "punctuation" === WW.kind && ")" === WW.text)); - 1 !== mW && (iW.suffixDisplayParts = NW.displayParts.slice(mW), NW.displayParts = NW.displayParts.slice(0, mW));
-          let EW = 0,
-            cW = [];
-          for (const PW of NW.displayParts)
-            if (yi.has(PW.text) ? EW++ : Ti.has(PW.text) && EW--, "lineBreak" !== PW.kind) {
-              if ("space" === PW.kind) {
-                if (0 === cW.length) continue;
-                cW.push({
+            GR = uR.displayParts.findIndex((RR => "punctuation" === RR.kind && "(" === RR.text)); - 1 !== GR && (JR.prefixDisplayParts = uR.displayParts.slice(0, GR + 1), uR.displayParts = uR.displayParts.slice(GR + 1));
+          const yR = uR.displayParts.findLastIndex((RR => "punctuation" === RR.kind && ")" === RR.text)); - 1 !== yR && (JR.suffixDisplayParts = uR.displayParts.slice(yR), uR.displayParts = uR.displayParts.slice(0, yR));
+          let tR = 0,
+            iR = [];
+          for (const ZR of uR.displayParts)
+            if (BJ.has(ZR.text) ? tR++ : lJ.has(ZR.text) && tR--, "lineBreak" !== ZR.kind) {
+              if ("space" === ZR.kind) {
+                if (0 === iR.length) continue;
+                iR.push({
                   kind: "space",
                   text: " "
                 })
-              } else cW.push(PW);
-              0 === EW && "," === PW.text && (iW.parameters.push({
-                displayParts: cW
-              }), cW = [])
-            } return cW.length > 0 && iW.parameters.push({
-            displayParts: cW
-          }), iW.documentation = NW.documentation, [{
-            pos: PW,
-            end: LW,
+              } else iR.push(ZR);
+              0 === tR && "," === ZR.text && (JR.parameters.push({
+                displayParts: iR
+              }), iR = [])
+            } return iR.length > 0 && JR.parameters.push({
+            displayParts: iR
+          }), JR.documentation = uR.documentation, [{
+            pos: ZR,
+            end: qR,
             above: !0,
-            create: Ci(Hi(iW))
+            create: IJ(gJ(JR))
           }]
         }
-        const cW = [];
-        for (const WW of NW.displayParts) cW.push({
-          str: WW.text,
+        const iR = [];
+        for (const RR of uR.displayParts) iR.push({
+          str: RR.text,
           style: {
-            color: Ji.text
+            color: pJ.text
           }
         });
-        if (NW.documentation) {
-          cW.push("\n\n");
-          for (const WW of NW.documentation) cW.push({
-            str: WW.text,
+        if (uR.documentation) {
+          iR.push("\n\n");
+          for (const RR of uR.documentation) iR.push({
+            str: RR.text,
             style: {
-              color: Ji.docs
+              color: pJ.docs
             }
           })
         }
         return [{
-          pos: PW,
-          end: LW,
+          pos: ZR,
+          end: qR,
           above: !0,
-          create: Ci(cW)
+          create: IJ(iR)
         }]
       }
     }
-    const qi = {
+    const SJ = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: bW().SemicolonPreference.Insert
+      semicolons: aR().SemicolonPreference.Insert
     };
-    const Ri = NW.j.define(),
-      Gi = {
+    const jJ = uR.j.define(),
+      dJ = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function Ii(WW) {
+    function EJ(RR) {
       let {
-        isLobbyCode: iW,
-        code: OW,
-        onChange: LW,
-        canEditCode: xW,
-        setTemporaryMessage: AW,
-        close: yW,
-        showTooltips: qW,
-        lightMode: RW,
-        collabState: IW,
-        onRemoteDocChange: aW,
-        files: rW,
-        activePath: zW,
-        pluginName: QW,
-        pluginFile: Wi,
-        pluginSource: Oi,
-        setActiveDocReplacer: mi,
-        showAiHints: Ni,
-        canAiChangeCode: Pi = xW
-      } = WW;
-      const [Li, ci] = (0, PW.useState)(null), wi = null === IW || void 0 === IW ? void 0 : IW.version, ti = null === IW || void 0 === IW ? void 0 : IW.clientID, Zi = (0, PW.useRef)({
-        isLobbyCode: iW,
-        files: rW,
-        code: OW,
-        activePath: zW
-      }), xi = (0, PW.useRef)(aW);
-      xi.current = aW;
-      const li = (0, PW.useRef)(null),
-        Ai = (0, PW.useRef)(IW);
-      Ai.current = IW;
-      const bi = (0, PW.useRef)(null),
-        ki = (0, PW.useRef)(null),
-        si = (0, PW.useRef)(null),
-        Mi = (0, PW.useRef)(yW);
-      Mi.current = yW;
-      const Ki = (0, PW.useRef)(OW);
-      Ki.current = OW;
-      const yi = (0, PW.useRef)(Oi);
-      yi.current = Oi;
-      const Ti = function(WW, iW, OW, mW) {
-        return OW ? `/plugin-preview/${OW}/${null!==mW&&void 0!==mW?mW:"index.ts"}` : WW ? vi(null !== iW && void 0 !== iW ? iW : MW.e) : ei
-      }(iW, zW, QW, Wi);
-      (0, PW.useEffect)((() => {
+        isLobbyCode: JR,
+        code: GR,
+        onChange: qR,
+        canEditCode: wR,
+        setTemporaryMessage: eR,
+        close: BR,
+        showTooltips: dR,
+        lightMode: ER,
+        collabState: kR,
+        onRemoteDocChange: QR,
+        files: FR,
+        activePath: TR,
+        pluginName: hR,
+        pluginFile: RJ,
+        pluginSource: GJ,
+        setActiveDocReplacer: yJ,
+        showAiHints: uJ,
+        canAiChangeCode: ZJ = wR
+      } = RR;
+      const [qJ, iJ] = (0, ZR.useState)(null), fJ = null === kR || void 0 === kR ? void 0 : kR.version, VJ = null === kR || void 0 === kR ? void 0 : kR.clientID, KJ = (0, ZR.useRef)({
+        isLobbyCode: JR,
+        files: FR,
+        code: GR,
+        activePath: TR
+      }), wJ = (0, ZR.useRef)(QR);
+      wJ.current = QR;
+      const rJ = (0, ZR.useRef)(null),
+        eJ = (0, ZR.useRef)(kR);
+      eJ.current = kR;
+      const aJ = (0, ZR.useRef)(null),
+        UJ = (0, ZR.useRef)(null),
+        WJ = (0, ZR.useRef)(null),
+        AJ = (0, ZR.useRef)(BR);
+      AJ.current = BR;
+      const CJ = (0, ZR.useRef)(GR);
+      CJ.current = GR;
+      const BJ = (0, ZR.useRef)(GJ);
+      BJ.current = GJ;
+      const lJ = function(RR, JR, GR, yR) {
+        return GR ? `/plugin-preview/${GR}/${null!==yR&&void 0!==yR?yR:"index.ts"}` : RR ? DJ(null !== JR && void 0 !== JR ? JR : AR.i) : NJ
+      }(JR, TR, hR, RJ);
+      (0, ZR.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: WW,
-            files: iW,
-            code: OW,
-            activePath: mW
-          } = Zi.current, EW = {
+            isLobbyCode: RR,
+            files: JR,
+            code: GR,
+            activePath: yR
+          } = KJ.current, tR = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: bW().ModuleKind.ESNext,
-            moduleResolution: bW().ModuleResolutionKind.Bundler,
-            target: bW().ScriptTarget.ES2015,
+            module: aR().ModuleKind.ESNext,
+            moduleResolution: aR().ModuleResolutionKind.Bundler,
+            target: aR().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(sW.e).map((WW => [WW.specifier, [WW.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(WR.i).map((RR => [RR.specifier, [RR.typesVfsPath]])))
             }
-          }, NW = new Map, PW = [];
-          if (WW) {
-            const WW = null !== iW && void 0 !== iW ? iW : {
-              [MW.e]: OW || "\n"
+          }, uR = new Map, ZR = [];
+          if (RR) {
+            const RR = null !== JR && void 0 !== JR ? JR : {
+              [AR.i]: GR || "\n"
             };
-            for (const [iW, OW] of Object.entries(WW)) {
-              const WW = vi(iW);
-              NW.set(WW, OW || "\n"), PW.push(WW)
+            for (const [JR, GR] of Object.entries(RR)) {
+              const RR = DJ(JR);
+              uR.set(RR, GR || "\n"), ZR.push(RR)
             }
-            const EW = vi(null !== mW && void 0 !== mW ? mW : MW.e);
-            NW.has(EW) ? NW.set(EW, OW || "\n") : (NW.set(EW, OW || "\n"), PW.push(EW)), NW.set("/node_modules/@bloxd/index.d.ts", tW.default), PW.push("/node_modules/@bloxd/index.d.ts");
-            for (const iW of Object.values(sW.e)) {
-              NW.set(iW.typesVfsPath, iW.types), PW.push(iW.typesVfsPath);
-              for (const [WW, OW] of Object.entries(iW.files)) {
-                const mW = `/plugin-preview/${iW.name}/${WW}`;
-                NW.set(mW, OW || "\n"), PW.push(mW)
+            const tR = DJ(null !== yR && void 0 !== yR ? yR : AR.i);
+            uR.has(tR) ? uR.set(tR, GR || "\n") : (uR.set(tR, GR || "\n"), ZR.push(tR)), uR.set("/node_modules/@bloxd/index.d.ts", VR.default), ZR.push("/node_modules/@bloxd/index.d.ts");
+            for (const JR of Object.values(WR.i)) {
+              uR.set(JR.typesVfsPath, JR.types), ZR.push(JR.typesVfsPath);
+              for (const [RR, GR] of Object.entries(JR.files)) {
+                const yR = `/plugin-preview/${JR.name}/${RR}`;
+                uR.set(yR, GR || "\n"), ZR.push(yR)
               }
             }
-          } else NW.set(ei, OW || "\n"), PW.push(ei);
-          NW.set("/globals.d.ts", WW ? wW.e : cW.d), NW.set("/lib.d.ts", ZW.e), PW.push("/globals.d.ts", "/lib.d.ts");
-          const LW = lW.b(NW),
-            xW = lW.d(LW, PW, bW(), EW);
-          ci({
-            MZ: xW,
-            fsMap: NW
+          } else uR.set(NJ, GR || "\n"), ZR.push(NJ);
+          uR.set("/globals.d.ts", RR ? fR.d : iR.c), uR.set("/lib.d.ts", KR.b), ZR.push("/globals.d.ts", "/lib.d.ts");
+          const qR = rR.e(uR),
+            wR = rR.g(qR, ZR, aR(), tR);
+          iJ({
+            AK: wR,
+            fsMap: uR
           })
         }()
-      }), []), (0, PW.useEffect)((() => {
-        var WW, mW;
-        if (!Li || !iW) return;
+      }), []), (0, ZR.useEffect)((() => {
+        var RR, yR;
+        if (!qJ || !JR) return;
         const {
-          MZ: EW,
-          fsMap: NW
-        } = Li;
-        if (function(WW, iW, OW) {
-            const mW = new Set;
-            for (const [EW, NW] of Object.entries(OW)) {
-              const OW = vi(EW);
-              mW.add(OW);
-              const PW = NW || "\n";
-              iW.get(OW) !== PW && (iW.set(OW, PW), gi(WW, OW, PW))
+          AK: tR,
+          fsMap: uR
+        } = qJ;
+        if (function(RR, JR, GR) {
+            const yR = new Set;
+            for (const [tR, uR] of Object.entries(GR)) {
+              const GR = DJ(tR);
+              yR.add(GR);
+              const ZR = uR || "\n";
+              JR.get(GR) !== ZR && (JR.set(GR, ZR), HJ(RR, GR, ZR))
             }
-            for (const EW of [...iW.keys()]) "/globals.d.ts" === EW || "/lib.d.ts" === EW || EW.startsWith("/node_modules/") || EW.startsWith("/plugin-preview/") || mW.has(EW) || (iW.delete(EW), WW.getSourceFile(EW) && WW.deleteFile(EW))
-          }(EW, NW, null !== rW && void 0 !== rW ? rW : {
-            [MW.e]: OW || "\n"
-          }), QW) return void gi(EW, Ti, Oi || "\n");
-        const PW = null !== (WW = null === (mW = li.current) || void 0 === mW ? void 0 : mW.state.doc.toString()) && void 0 !== WW ? WW : OW;
-        gi(EW, Ti, PW || "\n")
-      }), [rW, zW, Li, QW, Oi, Ti, OW, iW]), (0, PW.useEffect)((() => {
-        if (!Li) return;
+            for (const tR of [...JR.keys()]) "/globals.d.ts" === tR || "/lib.d.ts" === tR || tR.startsWith("/node_modules/") || tR.startsWith("/plugin-preview/") || yR.has(tR) || (JR.delete(tR), RR.getSourceFile(tR) && RR.deleteFile(tR))
+          }(tR, uR, null !== FR && void 0 !== FR ? FR : {
+            [AR.i]: GR || "\n"
+          }), hR) return void HJ(tR, lJ, GJ || "\n");
+        const ZR = null !== (RR = null === (yR = rJ.current) || void 0 === yR ? void 0 : yR.state.doc.toString()) && void 0 !== RR ? RR : GR;
+        HJ(tR, lJ, ZR || "\n")
+      }), [FR, TR, qJ, hR, GJ, lJ, GR, JR]), (0, ZR.useEffect)((() => {
+        if (!qJ) return;
         const {
-          MZ: WW
-        } = Li;
-        gi(WW, Ti, (QW ? Oi : OW) || "\n")
-      }), [OW, QW, Oi, Ti, Li]), (0, PW.useEffect)((() => () => {
-        ki.current && (ki.current(), ki.current = null)
-      }), []), (0, PW.useEffect)((() => (mi(((WW, iW) => {
-        if (QW) return !1;
-        const OW = li.current,
-          mW = Ai.current,
-          EW = mW ? (0, KW.o)(mW.docKey) : null;
-        if (!OW || !mW || bi.current !== mW.clientID || WW !== EW) return !1;
-        const NW = OW.state.doc.toString();
-        return NW !== iW && OW.dispatch({
+          AK: RR
+        } = qJ;
+        HJ(RR, lJ, (hR ? GJ : GR) || "\n")
+      }), [GR, hR, GJ, lJ, qJ]), (0, ZR.useEffect)((() => () => {
+        UJ.current && (UJ.current(), UJ.current = null)
+      }), []), (0, ZR.useEffect)((() => (yJ(((RR, JR) => {
+        if (hR) return !1;
+        const GR = rJ.current,
+          yR = eJ.current,
+          tR = yR ? (0, CR.t)(yR.docKey) : null;
+        if (!GR || !yR || aJ.current !== yR.clientID || RR !== tR) return !1;
+        const uR = GR.state.doc.toString();
+        return uR !== JR && GR.dispatch({
           changes: {
             from: 0,
-            to: NW.length,
-            insert: iW
+            to: uR.length,
+            insert: JR
           }
         }), !0
       })), () => {
-        li.current = null, bi.current = null, mi(null)
-      })), [mi, QW]);
-      const Ji = iW ? QW ? null : null !== zW && void 0 !== zW ? zW : MW.e : Ui.d,
-        Hi = ii(li, Ji);
-      Ei(li, AW), (0, YW.e)("FormatCode", (() => {
-        if (!Li || !li.current || QW) return;
+        rJ.current = null, aJ.current = null, yJ(null)
+      })), [yJ, hR]);
+      const pJ = JR ? hR ? null : null !== TR && void 0 !== TR ? TR : AR.i : nJ.e,
+        gJ = JJ(rJ, pJ);
+      tJ(rJ, eR), (0, MR.f)("FormatCode", (() => {
+        if (!qJ || !rJ.current || hR) return;
         const {
-          MZ: WW,
-          fsMap: OW
-        } = Li, mW = WW.getSourceFile(Ti).getFullText();
-        let EW = 0;
-        if (iW && rW)
-          for (const [iW, LW] of Object.entries(rW)) iW !== (null !== zW && void 0 !== zW ? zW : MW.e) && (EW += LW.length);
-        const NW = function(WW, iW, OW, mW, EW) {
-          const NW = WW.languageService.getFormattingEditsForDocument(mW, qi);
-          if (!NW.length) return TW.b.error("Code is already formatted.");
-          NW.sort(((WW, iW) => iW.span.start - WW.span.start));
-          let PW = WW.getSourceFile(mW).getFullText();
-          for (const LW of NW) PW = PW.slice(0, LW.span.start) + LW.Wc + PW.slice(LW.span.start + LW.span.length);
-          return PW !== (OW ? (0, SW.o)(PW, EW) : (0, SW.m)(PW)) ? TW.b.error("Formatting the code will go beyond the character limit.") : TW.b.value(PW)
-        }(WW, 0, iW, Ti, EW);
-        if (NW.isError()) return void AW({
-          message: NW.asError().message,
+          AK: RR,
+          fsMap: GR
+        } = qJ, yR = RR.getSourceFile(lJ).getFullText();
+        let tR = 0;
+        if (JR && FR)
+          for (const [JR, qR] of Object.entries(FR)) JR !== (null !== TR && void 0 !== TR ? TR : AR.i) && (tR += qR.length);
+        const uR = function(RR, JR, GR, yR, tR) {
+          const uR = RR.languageService.getFormattingEditsForDocument(yR, SJ);
+          if (!uR.length) return lR.e.error("Code is already formatted.");
+          uR.sort(((RR, JR) => JR.span.start - RR.span.start));
+          let ZR = RR.getSourceFile(yR).getFullText();
+          for (const qR of uR) ZR = ZR.slice(0, qR.span.start) + qR.ui + ZR.slice(qR.span.start + qR.span.length);
+          return ZR !== (GR ? (0, XR.n)(ZR, tR) : (0, XR.k)(ZR)) ? lR.e.error("Formatting the code will go beyond the character limit.") : lR.e.value(ZR)
+        }(RR, 0, JR, lJ, tR);
+        if (uR.isError()) return void eR({
+          message: uR.asError().message,
           type: "warning"
         });
-        const PW = NW.getValue();
-        PW && (li.current.dispatch({
+        const ZR = uR.getValue();
+        ZR && (rJ.current.dispatch({
           changes: {
             from: 0,
-            to: mW.length,
-            insert: PW
+            to: yR.length,
+            insert: ZR
           },
           selection: {
-            anchor: PW.length
+            anchor: ZR.length
           }
-        }), gi(WW, Ti, PW), LW(PW))
+        }), HJ(RR, lJ, ZR), qR(ZR))
       }));
-      const ni = (0, PW.useMemo)((() => {
-        if (!Li) return [];
+      const bJ = (0, ZR.useMemo)((() => {
+        if (!qJ) return [];
         const {
-          MZ: WW,
-          fsMap: OW
-        } = Li;
-        ! function(WW, iW, OW, mW) {
-          if (WW.getSourceFile(OW)) return;
-          const EW = mW || "\n";
-          iW.set(OW, EW), WW.createFile(OW, EW)
-        }(WW, OW, Ti, (QW ? yi.current : Ki.current) || "\n");
-        const PW = iW && Di(QW ? null !== Wi && void 0 !== Wi ? Wi : "index.ts" : zW),
-          LW = [(0, EW.b)({
+          AK: RR,
+          fsMap: GR
+        } = qJ;
+        ! function(RR, JR, GR, yR) {
+          if (RR.getSourceFile(GR)) return;
+          const tR = yR || "\n";
+          JR.set(GR, tR), RR.createFile(GR, tR)
+        }(RR, GR, lJ, (hR ? BJ.current : CJ.current) || "\n");
+        const ZR = JR && oJ(hR ? null !== RJ && void 0 !== RJ ? RJ : "index.ts" : TR),
+          qR = [(0, tR.c)({
             jsx: !1,
-            typescript: PW
-          }), NW.f.highest(NW.e.domEventHandlers({
-            keydown: WW => "Escape" === WW.key ? (Mi.current(), WW.stopPropagation(), !0) : (WW.stopPropagation(), !1)
-          })), (0, mW.d)({
-            override: [fi(WW, Ti)]
-          }), HW.i.fromClass(class {
-            constructor(WW) {
-              this.view = WW, this.timeout = null, this.scheduleParse()
+            typescript: ZR
+          }), uR.f.highest(uR.e.domEventHandlers({
+            keydown: RR => "Escape" === RR.key ? (AJ.current(), RR.stopPropagation(), !0) : (RR.stopPropagation(), !1)
+          })), (0, yR.e)({
+            override: [PJ(RR, lJ)]
+          }), bR.o.fromClass(class {
+            constructor(RR) {
+              this.view = RR, this.timeout = null, this.scheduleParse()
             }
-            update(WW) {
-              (WW.docChanged || WW.viewportChanged) && this.scheduleParse()
+            update(RR) {
+              (RR.docChanged || RR.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const WW = this.view.viewport.to;
-                (0, DW.db)(this.view.state, WW) || (0, DW.K)(this.view, WW, VW) || this.scheduleParse()
-              }), pW))
+                const RR = this.view.viewport.to;
+                (0, cR.mb)(this.view.state, RR) || (0, cR.I)(this.view, RR, PR) || this.scheduleParse()
+              }), IR))
             }
-          }), ...FW, NW.e.lineWrapping, NW.m.define({
-            create: Xi(WW, qW, Ti),
-            update(iW, OW) {
-              const mW = OW.effects.some((WW => WW.is(Ri)));
-              return OW.docChanged || OW.selection || mW ? (gi(WW, Ti, OW.state.doc.toString() || " "), Xi(WW, qW, Ti)(OW.state)) : iW
+          }), ...sR, uR.e.lineWrapping, uR.l.define({
+            create: mJ(RR, dR, lJ),
+            update(JR, GR) {
+              const yR = GR.effects.some((RR => RR.is(jJ)));
+              return GR.docChanged || GR.selection || yR ? (HJ(RR, lJ, GR.state.doc.toString() || " "), mJ(RR, dR, lJ)(GR.state)) : JR
             },
-            provide: WW => NW.q.computeN([WW], (iW => iW.field(WW)))
-          }), (0, NW.p)(Bi(WW, Ti)), (0, UW.h)(Vi(iW, WW, Ti)), NW.n.fromClass(class {
-            constructor(WW) {
-              this.view = WW, this.searchPanel = null
+            provide: RR => uR.u.computeN([RR], (JR => JR.field(RR)))
+          }), (0, uR.t)(zJ(RR, lJ)), (0, nR.f)(cJ(JR, RR, lJ)), uR.m.fromClass(class {
+            constructor(RR) {
+              this.view = RR, this.searchPanel = null
             }
-            update(WW) {
-              const iW = WW.view.dom.querySelector(".cm-search");
-              if (iW !== this.searchPanel) {
-                if (this.searchPanel = iW, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (WW => {
-                  "Escape" === WW.key && (0, jW.b)(this.view), WW.stopPropagation()
+            update(RR) {
+              const JR = RR.view.dom.querySelector(".cm-search");
+              if (JR !== this.searchPanel) {
+                if (this.searchPanel = JR, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (RR => {
+                  "Escape" === RR.key && (0, LR.b)(this.view), RR.stopPropagation()
                 }))
               }
             }
           })];
-        Ni && !QW && LW.push(Si(iW ? null !== zW && void 0 !== zW ? zW : MW.e : Ui.d, Pi));
-        const cW = Ai.current;
-        if (cW && !QW) {
-          LW.push(... function(WW, iW, OW, mW, EW) {
-            let NW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const PW = (0, KW.o)(OW),
-              LW = HW.i.fromClass(class {
-                constructor(WW) {
-                  this.view = WW, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = oW.l.subscribe("codeCollab", (WW => {
-                    WW.docKey === PW && WW.type === KW.d.Updates && (WW.updates ? this.applyUpdates(WW.updates) : this.pull())
+        uJ && !hR && qR.push(XJ(JR ? null !== TR && void 0 !== TR ? TR : AR.i : nJ.e, ZJ));
+        const iR = eJ.current;
+        if (iR && !hR) {
+          qR.push(... function(RR, JR, GR, yR, tR) {
+            let uR = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const ZR = (0, CR.t)(GR),
+              qR = bR.o.fromClass(class {
+                constructor(RR) {
+                  this.view = RR, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = xR.n.subscribe("codeCollab", (RR => {
+                    RR.docKey === ZR && RR.type === CR.f.Updates && (RR.updates ? this.applyUpdates(RR.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(WW) {
-                  const iW = JSON.parse(WW).map((WW => ({
-                    clientID: WW.clientID,
-                    changes: hW.ChangeSet.fromJSON(WW.changes)
+                applyUpdates(RR) {
+                  const JR = JSON.parse(RR).map((RR => ({
+                    clientID: RR.clientID,
+                    changes: gR.ChangeSet.fromJSON(RR.changes)
                   })));
-                  iW.length > 0 && (this.view.dispatch((0, JW.j)(this.view.state, iW)), EW && EW(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  JR.length > 0 && (this.view.dispatch((0, pR.l)(this.view.state, JR)), tR && tR(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(WW) {
-                  NW && (WW.docChanged && this.push(), this.sendCursor())
+                update(RR) {
+                  uR && (RR.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const WW = (0, JW.k)(this.view.state);
-                  if (this.pushing || !WW.length) return;
-                  const iW = Date.now() - this.lastPushTime;
-                  if (iW < gW) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const RR = (0, pR.m)(this.view.state);
+                  if (this.pushing || !RR.length) return;
+                  const JR = Date.now() - this.lastPushTime;
+                  if (JR < oR) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), gW - iW)));
+                  }), oR - JR)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), eW);
-                  const OW = (0, JW.f)(this.view.state),
-                    EW = WW.map((WW => ({
-                      clientID: WW.clientID,
-                      changes: WW.changes.toJSON()
+                  }), DR);
+                  const GR = (0, pR.i)(this.view.state),
+                    tR = RR.map((RR => ({
+                      clientID: RR.clientID,
+                      changes: RR.changes.toJSON()
                     }))),
-                    NW = JSON.stringify(EW);
-                  NW.length <= KW.e ? nW.gameBridge.send("sendCodeCollab", {
-                    uO: KW.c.Push,
-                    oO: PW,
-                    dO: OW,
-                    gO: NW
-                  }) : (0, dW.postJsonWithMetricsCookiesAndJsonResponse)(`${mW.gsUrl}/code/collab-push`, uW.s["collab-push"].toBuffer({
-                    gameNameWithVariation: mW.gameNameWithVariation,
-                    lobbyName: mW.lobbyName,
-                    docKey: PW,
-                    version: OW,
-                    updates: NW
+                    uR = JSON.stringify(tR);
+                  uR.length <= CR.h ? vR.gameBridge.send("sendCodeCollab", {
+                    bG: CR.d.Push,
+                    vG: ZR,
+                    OG: GR,
+                    DG: uR
+                  }) : (0, NR.postJsonWithMetricsCookiesAndJsonResponse)(`${yR.gsUrl}/code/collab-push`, OR.n["collab-push"].toBuffer({
+                    gameNameWithVariation: yR.gameNameWithVariation,
+                    lobbyName: yR.lobbyName,
+                    docKey: ZR,
+                    version: GR,
+                    updates: uR
                   }), {
                     retries: 0
-                  }).catch((WW => {
-                    console.error("[CodeCollab] HTTP push failed", WW)
+                  }).catch((RR => {
+                    console.error("[CodeCollab] HTTP push failed", RR)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const WW = (0, JW.f)(this.view.state);
-                  (0, dW.postJsonWithMetricsCookiesAndJsonResponse)(`${mW.gsUrl}/code/collab-pull`, uW.s["collab-pull"].toBuffer({
-                    gameNameWithVariation: mW.gameNameWithVariation,
-                    lobbyName: mW.lobbyName,
-                    docKey: PW,
-                    fromVersion: WW
+                  const RR = (0, pR.i)(this.view.state);
+                  (0, NR.postJsonWithMetricsCookiesAndJsonResponse)(`${yR.gsUrl}/code/collab-pull`, OR.n["collab-pull"].toBuffer({
+                    gameNameWithVariation: yR.gameNameWithVariation,
+                    lobbyName: yR.lobbyName,
+                    docKey: ZR,
+                    fromVersion: RR
                   }), {
                     retries: 1
-                  }).then((WW => {
-                    this.destroyed || (WW.fullDoc ? oW.l.iZ("codeCollabRejoin", {
-                      docKey: PW,
-                      doc: WW.fullDoc,
-                      version: WW.version
-                    }) : this.applyUpdates(WW.updates))
-                  })).catch((WW => {
-                    console.error("[CodeCollab] Pull failed", WW)
+                  }).then((RR => {
+                    this.destroyed || (RR.fullDoc ? xR.n.JK("codeCollabRejoin", {
+                      docKey: ZR,
+                      doc: RR.fullDoc,
+                      version: RR.version
+                    }) : this.applyUpdates(RR.updates))
+                  })).catch((RR => {
+                    console.error("[CodeCollab] Pull failed", RR)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const WW = Date.now();
-                  if (WW - this.lastCursorSent < vW) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const RR = Date.now();
+                  if (RR - this.lastCursorSent < HR) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), vW)));
-                  this.lastCursorSent = WW;
-                  const iW = this.view.state.selection.main;
-                  nW.gameBridge.send("sendCodeCollab", {
-                    uO: KW.c.Cursor,
-                    oO: PW,
-                    fO: iW.anchor,
-                    CO: iW.head
+                  }), HR)));
+                  this.lastCursorSent = RR;
+                  const JR = this.view.state.selection.main;
+                  vR.gameBridge.send("sendCodeCollab", {
+                    bG: CR.d.Cursor,
+                    vG: ZR,
+                    PG: JR.anchor,
+                    IG: JR.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, oW.l.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, xR.n.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, JW.e)({
-              startVersion: WW,
-              clientID: iW
-            }), LW]
-          }(wi, ti, cW.docKey, cW.httpConfig, (WW => {
-            var iW;
-            null === (iW = xi.current) || void 0 === iW || iW.call(xi, WW)
-          }), xW));
-          const WW = function(WW, iW) {
-            const OW = (0, KW.o)(WW);
+            return [(0, pR.e)({
+              startVersion: RR,
+              clientID: JR
+            }), qR]
+          }(fJ, VJ, iR.docKey, iR.httpConfig, (RR => {
+            var JR;
+            null === (JR = wJ.current) || void 0 === JR || JR.call(wJ, RR)
+          }), wR));
+          const RR = function(RR, JR) {
+            const GR = (0, CR.t)(RR);
             return {
-              extensions: [GW],
-              connect(WW) {
-                if (iW) {
-                  const OW = iW.map((WW => CW.of({
-                    playerId: WW.playerId,
-                    playerName: WW.playerName,
-                    colour: WW.colour,
-                    anchor: WW.anchor,
-                    head: WW.head,
+              extensions: [YR],
+              connect(RR) {
+                if (JR) {
+                  const GR = JR.map((RR => zR.of({
+                    playerId: RR.playerId,
+                    playerName: RR.playerName,
+                    colour: RR.colour,
+                    anchor: RR.anchor,
+                    head: RR.head,
                     lastMoved: Date.now()
                   })));
-                  OW.length > 0 && WW.dispatch({
-                    effects: OW
+                  GR.length > 0 && RR.dispatch({
+                    effects: GR
                   })
                 }
-                const mW = oW.l.subscribe("codeCollab", (iW => {
-                    if (iW.docKey === OW)
-                      if (iW.type === KW.d.RemoteCursor) WW.dispatch({
-                        effects: CW.of({
-                          playerId: iW.playerId,
-                          playerName: iW.playerName,
-                          colour: iW.colour,
-                          anchor: iW.anchor,
-                          head: iW.head,
+                const yR = xR.n.subscribe("codeCollab", (JR => {
+                    if (JR.docKey === GR)
+                      if (JR.type === CR.f.RemoteCursor) RR.dispatch({
+                        effects: zR.of({
+                          playerId: JR.playerId,
+                          playerName: JR.playerName,
+                          colour: JR.colour,
+                          anchor: JR.anchor,
+                          head: JR.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (iW.type === KW.d.Presence) {
-                      const OW = JSON.parse(iW.peers),
-                        mW = new Set(OW.map((WW => WW.playerId))),
-                        EW = WW.state.field(GW),
-                        NW = [];
-                      for (const [WW] of EW.cursors) mW.has(WW) || NW.push(XW.of(WW));
-                      NW.length > 0 && WW.dispatch({
-                        effects: NW
+                      else if (JR.type === CR.f.Presence) {
+                      const GR = JSON.parse(JR.peers),
+                        yR = new Set(GR.map((RR => RR.playerId))),
+                        tR = RR.state.field(YR),
+                        uR = [];
+                      for (const [RR] of tR.cursors) yR.has(RR) || uR.push(SR.of(RR));
+                      uR.length > 0 && RR.dispatch({
+                        effects: uR
                       })
                     }
                   })),
-                  EW = setInterval((() => {
-                    WW.dom.isConnected ? WW.dispatch({
-                      effects: BW.of(Date.now())
-                    }) : clearInterval(EW)
-                  }), fW);
+                  tR = setInterval((() => {
+                    RR.dom.isConnected ? RR.dispatch({
+                      effects: jR.of(Date.now())
+                    }) : clearInterval(tR)
+                  }), mR);
                 return () => {
-                  oW.l.unsubscribe(mW), clearInterval(EW)
+                  xR.n.unsubscribe(yR), clearInterval(tR)
                 }
               }
             }
-          }(cW.docKey, cW.existingCursors);
-          LW.push(...WW.extensions), si.current = WW.connect
-        } else si.current = null;
-        return LW
-      }), [iW, Li, qW, wi, ti, Ti, zW, QW, Wi, xW, Ni, Pi]);
-      if (!Li || !IW && !QW) return (0, Yi.jsx)("div", {
+          }(iR.docKey, iR.existingCursors);
+          qR.push(...RR.extensions), WJ.current = RR.connect
+        } else WJ.current = null;
+        return qR
+      }), [JR, qJ, dR, fJ, VJ, lJ, TR, hR, RJ, wR, uJ, ZJ]);
+      if (!qJ || !kR && !hR) return (0, MJ.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, Yi.jsx)(kW.d, {})
+        children: (0, MJ.jsx)(UR.d, {})
       });
-      const ui = QW ? `plugin-${QW}-${null!==Wi&&void 0!==Wi?Wi:"index.ts"}` : IW ? `collab-${IW.clientID}` : `local-${iW}`;
-      return (0, Yi.jsx)(NW.o, {
-        value: QW ? null !== Oi && void 0 !== Oi ? Oi : "" : OW,
-        onChange: LW,
-        extensions: ni,
+      const vJ = hR ? `plugin-${hR}-${null!==RJ&&void 0!==RJ?RJ:"index.ts"}` : kR ? `collab-${kR.clientID}` : `local-${JR}`;
+      return (0, MJ.jsx)(uR.q, {
+        value: hR ? null !== GJ && void 0 !== GJ ? GJ : "" : GR,
+        onChange: qR,
+        extensions: bJ,
         className: "CodeEditorContent",
-        theme: RW ? ji : "dark",
-        editable: xW && !QW,
-        basicSetup: Gi,
-        onCreateEditor: WW => {
-          var iW;
-          li.current = WW, bi.current = null !== (iW = null === IW || void 0 === IW ? void 0 : IW.clientID) && void 0 !== iW ? iW : null, Hi(WW), ki.current && ki.current(), si.current && (ki.current = si.current(WW))
+        theme: ER ? LJ : "dark",
+        editable: wR && !hR,
+        basicSetup: dJ,
+        onCreateEditor: RR => {
+          var JR;
+          rJ.current = RR, aJ.current = null !== (JR = null === kR || void 0 === kR ? void 0 : kR.clientID) && void 0 !== JR ? JR : null, gJ(RR), UJ.current && UJ.current(), WJ.current && (UJ.current = WJ.current(RR))
         }
-      }, ui)
+      }, vJ)
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

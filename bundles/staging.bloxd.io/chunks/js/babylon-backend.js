@@ -1,109 +1,109 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  42601: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      CapeMaterialPlugin: () => MW,
-      HueTintMaterialPlugin: () => KW,
-      LifeformMaterialPlugin: () => SW,
-      OverlayMaterialPlugin: () => YW
+  42663: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      CapeMaterialPlugin: () => AR,
+      HueTintMaterialPlugin: () => CR,
+      LifeformMaterialPlugin: () => XR,
+      OverlayMaterialPlugin: () => MR
     });
-    var mW = OW(42603),
-      EW = OW(39198);
-    class NW extends((0, mW.d)(EW.b)) {}(0, mW.g)(EW.b, NW);
-    var PW = OW(38485);
-    class LW extends((0, mW.d)(PW.e)) {}(0, mW.g)(PW.e, LW);
-    var cW = OW(39025);
-    class wW extends((0, mW.d)(cW.f)) {}(0, mW.g)(cW.f, wW);
-    var tW = OW(38511),
-      ZW = OW(41782),
-      xW = OW(38502);
-    class lW extends((0, mW.d)(xW.h)) {
-      constructor(WW, iW, OW) {
-        super(WW, iW, OW), (0, tW.i)(WW)
+    var yR = GR(42671),
+      tR = GR(39172);
+    class uR extends((0, yR.d)(tR.e)) {}(0, yR.e)(tR.e, uR);
+    var ZR = GR(38453);
+    class qR extends((0, yR.d)(ZR.f)) {}(0, yR.e)(ZR.f, qR);
+    var iR = GR(39010);
+    class fR extends((0, yR.d)(iR.f)) {}(0, yR.e)(iR.f, fR);
+    var VR = GR(38475),
+      KR = GR(41781),
+      wR = GR(38466);
+    class rR extends((0, yR.d)(wR.e)) {
+      constructor(RR, JR, GR) {
+        super(RR, JR, GR), (0, VR.j)(RR)
       }
-      dispose(WW) {
-        (0, tW.k)(this._material), super.dispose(WW)
+      dispose(RR) {
+        (0, VR.l)(this._material), super.dispose(RR)
       }
-    }(0, mW.g)(xW.h, lW), (0, xW.j)({
-      disableUnusedSpecularTerm: mW.c,
-      isLightingDisabled: WW => WW instanceof ZW.StandardMaterial && WW.disableLighting
+    }(0, yR.e)(wR.e, rR), (0, wR.i)({
+      disableUnusedSpecularTerm: yR.b,
+      isLightingDisabled: RR => RR instanceof KR.StandardMaterial && RR.disableLighting
     });
-    var AW = OW(39915);
-    class bW extends((0, mW.d)(AW.d)) {}(0, mW.g)(AW.d, bW);
-    var jW = OW(40011),
-      UW = OW(38376),
-      kW = OW(39308),
-      sW = OW(38500);
-    class MW extends((0, mW.d)(jW.b)) {}(0, mW.g)(jW.b, MW);
-    class KW extends((0, mW.d)(UW.b)) {}(0, mW.g)(UW.b, KW);
-    class SW extends((0, mW.d)(kW.m)) {}(0, mW.g)(kW.m, SW);
-    class YW extends((0, mW.d)(sW.c)) {}(0, mW.g)(sW.c, YW)
+    var eR = GR(39922);
+    class aR extends((0, yR.d)(eR.f)) {}(0, yR.e)(eR.f, aR);
+    var LR = GR(40035),
+      nR = GR(38340),
+      UR = GR(39288),
+      WR = GR(38460);
+    class AR extends((0, yR.d)(LR.c)) {}(0, yR.e)(LR.c, AR);
+    class CR extends((0, yR.d)(nR.c)) {}(0, yR.e)(nR.c, CR);
+    class XR extends((0, yR.d)(UR.q)) {}(0, yR.e)(UR.q, XR);
+    class MR extends((0, yR.d)(WR.b)) {}(0, yR.e)(WR.b, MR)
   },
-  53714: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      addBabylonLights: () => Hi,
-      createSceneParticleSystem: () => di,
-      default: () => vi
+  53540: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      addBabylonLights: () => gJ,
+      createSceneParticleSystem: () => xJ,
+      default: () => DJ
     });
-    var mW = OW(53720),
-      EW = (OW(41491), OW(42599), OW(41997), OW(53738)),
-      NW = OW(38369),
-      PW = OW(38235),
-      LW = OW(53752),
-      cW = OW(53756),
-      wW = OW(38431),
-      tW = (OW(42603), OW(53769)),
-      ZW = OW(53763),
-      xW = OW(39948),
-      lW = OW(53774),
-      AW = OW(41392),
-      bW = OW(39931);
-    const jW = "gpuParticles",
-      UW = "gpuParticlesSummed",
-      kW = bW.A,
-      sW = WW => WW / 4,
-      MW = (WW, iW, OW, mW) => Array.from({
-        length: iW
-      }, ((EW, NW) => `(${((WW,iW,OW)=>0===iW?`${WW} < 1`:iW===OW-1?`${WW} >= ${iW}`:`${WW} == ${iW}`)(WW,NW,iW)} ? ${OW(NW)} : ${mW})`)).join("\n\t\t+ "),
-      KW = (WW, iW, OW) => `vec4 ${WW}(int i) {\n\treturn ${MW("i",OW,(WW=>`gpuParticleSystem[${iW+WW}]`),"vec4(0.0)")};\n}\n`,
-      SW = `\n${KW("colorPositionsAt",sW(kW.colorPositions),bW.c/4)}\n${KW("color1At",sW(kW.color1),bW.c)}\n${KW("color2At",sW(kW.color2),bW.c)}\n${KW("velocityAt",sW(kW.Sj),bW.c)}\n${KW("remapStopAt",sW(kW.remap),bW.c)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${MW("j",4,(WW=>`v[${WW}]`),"0.0")};\n}\n`,
-      YW = (WW, iW, OW, mW) => WW ? `${OW}(${mW})` : `gpuParticleSystem[${iW} + ${mW}]`,
-      yW = WW => `gpuParticleSystem[${WW>>2}].${"xyzw"[3&WW]}`,
-      TW = WW => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${bW.c}\n#define COLOR_POSITIONS ${sW(kW.colorPositions)}\n#define COLOR1 ${sW(kW.color1)}\n#define COLOR2 ${sW(kW.color2)}\n#define VELOCITY ${sW(kW.Sj)}\n#define REMAP ${sW(kW.remap)}\n#define RECORDS_PER_ROW ${bW.p}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${bW.t/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${yW(kW.gravity)}, ${yW(kW.gravity+1)}, ${yW(kW.gravity+2)}); }\nint colorCount() { return int(${yW(kW.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${sW(kW.colorDead)}]; }\nint velocityCount() { return int(${yW(kW.velocityCount)}); }\nint remapCount() { return int(${yW(kW.remapCount)}); }\n${WW?SW:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${WW?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${YW(WW,"COLOR1","color1At","i")}, ${YW(WW,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${YW(WW,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${YW(WW,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${YW(WW,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${YW(WW,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${YW(WW,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${YW(WW,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${YW(WW,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
-      JW = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    AW.c.ShadersStore[`${jW}VertexShader`] = TW(!1), AW.c.ShadersStore[`${jW}PixelShader`] = JW, AW.c.ShadersStore[`${UW}VertexShader`] = TW(!0), AW.c.ShadersStore[`${UW}PixelShader`] = JW;
-    const hW = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      HW = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var nW = OW(39925),
-      uW = OW(53776);
-    class oW extends nW.d {
-      constructor(WW, iW, OW, mW) {
-        super(WW, iW, OW), this.renderer = OW, this.rb = mW, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(bW.t), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, uW.g)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (WW, iW) => {
+    var yR = GR(53543),
+      tR = (GR(41497), GR(42657), GR(42014), GR(53557)),
+      uR = GR(38329),
+      ZR = GR(38195),
+      qR = GR(53568),
+      iR = GR(53576),
+      fR = GR(38397),
+      VR = (GR(42671), GR(53584)),
+      KR = GR(53579),
+      wR = GR(39950),
+      rR = GR(53589),
+      eR = GR(41387),
+      aR = GR(39934);
+    const LR = "gpuParticles",
+      nR = "gpuParticlesSummed",
+      UR = aR.x,
+      WR = RR => RR / 4,
+      AR = (RR, JR, GR, yR) => Array.from({
+        length: JR
+      }, ((tR, uR) => `(${((RR,JR,GR)=>0===JR?`${RR} < 1`:JR===GR-1?`${RR} >= ${JR}`:`${RR} == ${JR}`)(RR,uR,JR)} ? ${GR(uR)} : ${yR})`)).join("\n\t\t+ "),
+      CR = (RR, JR, GR) => `vec4 ${RR}(int i) {\n\treturn ${AR("i",GR,(RR=>`gpuParticleSystem[${JR+RR}]`),"vec4(0.0)")};\n}\n`,
+      XR = `\n${CR("colorPositionsAt",WR(UR.colorPositions),aR.c/4)}\n${CR("color1At",WR(UR.color1),aR.c)}\n${CR("color2At",WR(UR.color2),aR.c)}\n${CR("velocityAt",WR(UR.BL),aR.c)}\n${CR("remapStopAt",WR(UR.remap),aR.c)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${AR("j",4,(RR=>`v[${RR}]`),"0.0")};\n}\n`,
+      MR = (RR, JR, GR, yR) => RR ? `${GR}(${yR})` : `gpuParticleSystem[${JR} + ${yR}]`,
+      BR = RR => `gpuParticleSystem[${RR>>2}].${"xyzw"[3&RR]}`,
+      lR = RR => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${aR.c}\n#define COLOR_POSITIONS ${WR(UR.colorPositions)}\n#define COLOR1 ${WR(UR.color1)}\n#define COLOR2 ${WR(UR.color2)}\n#define VELOCITY ${WR(UR.BL)}\n#define REMAP ${WR(UR.remap)}\n#define RECORDS_PER_ROW ${aR.r}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${aR.t/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${BR(UR.gravity)}, ${BR(UR.gravity+1)}, ${BR(UR.gravity+2)}); }\nint colorCount() { return int(${BR(UR.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${WR(UR.colorDead)}]; }\nint velocityCount() { return int(${BR(UR.velocityCount)}); }\nint remapCount() { return int(${BR(UR.remapCount)}); }\n${RR?XR:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${RR?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${MR(RR,"COLOR1","color1At","i")}, ${MR(RR,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${MR(RR,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${MR(RR,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${MR(RR,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${MR(RR,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${MR(RR,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${MR(RR,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${MR(RR,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
+      pR = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    eR.b.ShadersStore[`${LR}VertexShader`] = lR(!1), eR.b.ShadersStore[`${LR}PixelShader`] = pR, eR.b.ShadersStore[`${nR}VertexShader`] = lR(!0), eR.b.ShadersStore[`${nR}PixelShader`] = pR;
+    const gR = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      bR = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var vR = GR(39932),
+      OR = GR(53594);
+    class xR extends vR.e {
+      constructor(RR, JR, GR, yR) {
+        super(RR, JR, GR), this.renderer = GR, this.tL = yR, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(aR.t), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, OR.d)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (RR, JR) => {
           const {
-            engine: OW
-          } = this, mW = OW._gl;
-          OW._bindTextureDirectly(mW.TEXTURE_2D, this.records, !0), OW._unpackFlipY(!1);
-          const EW = this.ring.recordBits;
-          for (let NW = WW; NW < iW;) {
-            const WW = Math.floor(NW / bW.p),
-              OW = Math.min(iW, (WW + 1) * bW.p);
-            mW.texSubImage2D(mW.TEXTURE_2D, 0, NW % bW.p * 4, WW, 4 * (OW - NW), 1, mW.RGBA_INTEGER, mW.UNSIGNED_INT, EW, NW * bW.g), NW = OW
+            engine: GR
+          } = this, yR = GR._gl;
+          GR._bindTextureDirectly(yR.TEXTURE_2D, this.records, !0), GR._unpackFlipY(!1);
+          const tR = this.ring.recordBits;
+          for (let uR = RR; uR < JR;) {
+            const RR = Math.floor(uR / aR.r),
+              GR = Math.min(JR, (RR + 1) * aR.r);
+            yR.texSubImage2D(yR.TEXTURE_2D, 0, uR % aR.r * 4, RR, 4 * (GR - uR), 1, yR.RGBA_INTEGER, yR.UNSIGNED_INT, tR, uR * aR.g), uR = GR
           }
-          OW._bindTextureDirectly(mW.TEXTURE_2D, null)
-        }, this.id = WW;
-        const EW = mW.VA();
-        this.engine = EW;
-        const NW = Math.max(1, iW),
-          PW = Math.min(NW, bW.p);
-        this.records = EW.createRawTexture(null, 4 * PW, Math.ceil(NW / PW), tW.e.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, tW.e.TEXTURE_NEAREST_SAMPLINGMODE, null, tW.e.TEXTURETYPE_UNSIGNED_INTEGER)
+          GR._bindTextureDirectly(yR.TEXTURE_2D, null)
+        }, this.id = RR;
+        const tR = yR.ke();
+        this.engine = tR;
+        const uR = Math.max(1, JR),
+          ZR = Math.min(uR, aR.r);
+        this.records = tR.createRawTexture(null, 4 * ZR, Math.ceil(uR / ZR), VR.c.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, VR.c.TEXTURE_NEAREST_SAMPLINGMODE, null, VR.c.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.rb.getAnimationRatio() || 1;
-        const iW = this.rb.getFrameId();
-        if (iW === this.animatedFrame) return !1;
-        const OW = super.animate(WW);
-        return OW && (this.animatedFrame = iW, this.ring.takeUploads(this.uploadSlots)), OW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.tL.getAnimationRatio() || 1;
+        const JR = this.tL.getFrameId();
+        if (JR === this.animatedFrame) return !1;
+        const GR = super.animate(RR);
+        return GR && (this.animatedFrame = JR, this.ring.takeUploads(this.uploadSlots)), GR
       }
       render() {
         return this.renderer.render(this)
@@ -112,780 +112,780 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(WW) {
-        (0, uW.h)(this, this.uniforms, this.uniformBits, WW);
-        for (const OW of bW.w) this.uniforms[OW] = this.uniformBits[OW];
-        var iW;
-        (0, uW.i)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (iW = this.ramp) || void 0 === iW || iW.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = ZW.b.CreateRGBATexture(this.rampTexels.texels, bW.l, 1, this.rb, !1, !1, tW.e.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(RR) {
+        (0, OR.e)(this, this.uniforms, this.uniformBits, RR);
+        for (const GR of aR.w) this.uniforms[GR] = this.uniformBits[GR];
+        var JR;
+        (0, OR.g)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (JR = this.ramp) || void 0 === JR || JR.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = KR.b.CreateRGBATexture(this.rampTexels.texels, aR.o, 1, this.tL, !1, !1, VR.c.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var WW;
-        this.records.dispose(), null === (WW = this.ramp) || void 0 === WW || WW.dispose(), this.ramp = null
+        var RR;
+        this.records.dispose(), null === (RR = this.ramp) || void 0 === RR || RR.dispose(), this.ramp = null
       }
     }
-    const dW = "the context was lost before the programs linked";
-    class eW {
-      constructor(WW, iW) {
-        this.rb = WW, this.reportFailure = iW, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = jW, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, lW.b)(), this.engine = WW.VA(), this.whiteRamp = ZW.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, WW, !1, !1, tW.e.TEXTURE_NEAREST_SAMPLINGMODE);
-        const OW = this.linkPair(jW),
-          mW = null !== OW && OW !== dW ? this.linkPair(UW) : OW;
-        null === mW && null !== OW ? (console.warn(`GPU particles link their fallback here: ${OW}`), this.reportFailure(OW, !0)) : null !== mW && this.fail(mW === dW ? dW : null !== OW && void 0 !== OW ? OW : mW)
+    const NR = "the context was lost before the programs linked";
+    class DR {
+      constructor(RR, JR) {
+        this.tL = RR, this.reportFailure = JR, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = LR, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, rR.d)(), this.engine = RR.ke(), this.whiteRamp = KR.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, RR, !1, !1, VR.c.TEXTURE_NEAREST_SAMPLINGMODE);
+        const GR = this.linkPair(LR),
+          yR = null !== GR && GR !== NR ? this.linkPair(nR) : GR;
+        null === yR && null !== GR ? (console.warn(`GPU particles link their fallback here: ${GR}`), this.reportFailure(GR, !0)) : null !== yR && this.fail(yR === NR ? NR : null !== GR && void 0 !== GR ? GR : yR)
       }
-      wV(WW, iW) {
-        const OW = bW.p * this.engine.getCaps().maxTextureSize;
-        iW > OW && this.warnOnce(`capacity:${WW}`, `particle system ${WW} holds ${OW} particles, not ${iW}: its records texture's limit`);
-        const mW = new oW(WW, Math.min(iW, OW), this, this.rb);
-        return this.rb.addParticleSystem(mW), mW
+      Km(RR, JR) {
+        const GR = aR.r * this.engine.getCaps().maxTextureSize;
+        JR > GR && this.warnOnce(`capacity:${RR}`, `particle system ${RR} holds ${GR} particles, not ${JR}: its records texture's limit`);
+        const yR = new xR(RR, Math.min(JR, GR), this, this.tL);
+        return this.tL.addParticleSystem(yR), yR
       }
-      canDraw(WW) {
-        var iW, OW;
-        if (this.failed || null === (iW = WW.texture) || void 0 === iW || null === (OW = iW.mirror) || void 0 === OW || !OW.isReady()) return !1;
-        for (const mW of (0, xW.h)(WW.blendMode))
-          if (!this.effectFor(mW).isReady()) return !1;
+      canDraw(RR) {
+        var JR, GR;
+        if (this.failed || null === (JR = RR.texture) || void 0 === JR || null === (GR = JR.mirror) || void 0 === GR || !GR.isReady()) return !1;
+        for (const yR of (0, wR.m)(RR.blendMode))
+          if (!this.effectFor(yR).isReady()) return !1;
         return !0
       }
-      disposeStopped(WW) {
-        this.rb._toBeDisposed.push(WW)
+      disposeStopped(RR) {
+        this.tL._toBeDisposed.push(RR)
       }
-      remove(WW) {
-        this.rb.removeParticleSystem(WW), WW.releaseGl()
+      remove(RR) {
+        this.tL.removeParticleSystem(RR), RR.releaseGl()
       }
-      render(WW) {
-        var iW;
-        if (!WW.isReady() || !WW.hasLiveParticles()) return 0;
+      render(RR) {
+        var JR;
+        if (!RR.isReady() || !RR.hasLiveParticles()) return 0;
         const {
-          engine: OW,
-          rb: mW,
-          frame: EW
+          engine: GR,
+          tL: yR,
+          frame: tR
         } = this;
-        WW.prepareDraw(this.warnOnce), WW.drawOffset(EW, 0), EW[3] = WW.drawTime();
-        const NW = WW.ring.drawStart(),
-          PW = WW.ring.drawCount(),
-          LW = null !== (iW = WW.ramp) && void 0 !== iW ? iW : this.whiteRamp;
-        OW.setState(!1);
-        for (const cW of (0, xW.h)(WW.blendMode)) {
-          const iW = this.effectFor(cW);
-          OW.enableEffect(iW), iW.setTexture("gpuParticleTexture", WW.texture.mirror), iW.setTexture("gpuParticleRampTexture", LW), iW._bindTexture("gpuParticleRecords", WW.records), iW.setMatrix("gpuParticleView", mW.getViewMatrix()), iW.setMatrix("gpuParticleProjection", mW.getProjectionMatrix()), iW.setFloatArray4("gpuParticleSystem", WW.uniforms), iW.setFloat4("gpuParticleFrame", EW[0], EW[1], EW[2], EW[3]), iW.setFloat2("gpuParticleRange", NW, PW), iW.setFloat("gpuParticleRamp", WW.uniforms[bW.A.ramp]), OW.bindBuffers(this.vertexBuffers, null, iW), OW.setAlphaMode((0, xW.e)(cW)), OW.drawArraysType(tW.e.MATERIAL_TriangleStripDrawMode, 0, 4, PW), iW._bindTexture("gpuParticleRecords", null)
+        RR.prepareDraw(this.warnOnce), RR.drawOffset(tR, 0), tR[3] = RR.drawTime();
+        const uR = RR.ring.drawStart(),
+          ZR = RR.ring.drawCount(),
+          qR = null !== (JR = RR.ramp) && void 0 !== JR ? JR : this.whiteRamp;
+        GR.setState(!1);
+        for (const iR of (0, wR.m)(RR.blendMode)) {
+          const JR = this.effectFor(iR);
+          GR.enableEffect(JR), JR.setTexture("gpuParticleTexture", RR.texture.mirror), JR.setTexture("gpuParticleRampTexture", qR), JR._bindTexture("gpuParticleRecords", RR.records), JR.setMatrix("gpuParticleView", yR.getViewMatrix()), JR.setMatrix("gpuParticleProjection", yR.getProjectionMatrix()), JR.setFloatArray4("gpuParticleSystem", RR.uniforms), JR.setFloat4("gpuParticleFrame", tR[0], tR[1], tR[2], tR[3]), JR.setFloat2("gpuParticleRange", uR, ZR), JR.setFloat("gpuParticleRamp", RR.uniforms[aR.x.ramp]), GR.bindBuffers(this.vertexBuffers, null, JR), GR.setAlphaMode((0, wR.i)(iR)), GR.drawArraysType(VR.c.MATERIAL_TriangleStripDrawMode, 0, 4, ZR), JR._bindTexture("gpuParticleRecords", null)
         }
-        return OW.setAlphaMode(tW.e.ALPHA_DISABLE), PW
+        return GR.setAlphaMode(VR.c.ALPHA_DISABLE), ZR
       }
-      linkPair(WW) {
-        this.shader = WW, this.pairFailure = null, this.linkingPair = !0;
+      linkPair(RR) {
+        this.shader = RR, this.pairFailure = null, this.linkingPair = !0;
         try {
-          return this.effect = this.createEffect(WW, ""), this.multiplyEffect = this.createEffect(WW, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
+          return this.effect = this.createEffect(RR, ""), this.multiplyEffect = this.createEffect(RR, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
         } finally {
           this.linkingPair = !1
         }
       }
-      awaitLink(WW) {
-        const iW = WW.getPipelineContext(),
-          OW = this.gl();
-        OW && null === this.pairFailure && (!iW || iW.isParallelCompiled && !iW.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : iW.isParallelCompiled && iW.program && (OW.getProgramParameter(iW.program, OW.LINK_STATUS) || this.programFailed(function(WW, iW, OW) {
-          if (WW.isContextLost()) return dW;
-          for (const [mW, EW] of [
-              ["VERTEX SHADER", iW.vertexShader],
-              ["FRAGMENT SHADER", iW.fragmentShader]
+      awaitLink(RR) {
+        const JR = RR.getPipelineContext(),
+          GR = this.gl();
+        GR && null === this.pairFailure && (!JR || JR.isParallelCompiled && !JR.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : JR.isParallelCompiled && JR.program && (GR.getProgramParameter(JR.program, GR.LINK_STATUS) || this.programFailed(function(RR, JR, GR) {
+          if (RR.isContextLost()) return NR;
+          for (const [yR, tR] of [
+              ["VERTEX SHADER", JR.vertexShader],
+              ["FRAGMENT SHADER", JR.fragmentShader]
             ]) {
-            const iW = EW && !WW.getShaderParameter(EW, WW.COMPILE_STATUS) ? WW.getShaderInfoLog(EW) : null;
-            if (iW) return `${mW} ${iW}`
+            const JR = tR && !RR.getShaderParameter(tR, RR.COMPILE_STATUS) ? RR.getShaderInfoLog(tR) : null;
+            if (JR) return `${yR} ${JR}`
           }
-          return WW.getProgramInfoLog(OW) || "a program did not link"
-        }(OW, iW, iW.program))))
+          return RR.getProgramInfoLog(GR) || "a program did not link"
+        }(GR, JR, JR.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(WW) {
-        return WW === xW.b ? this.multiplyEffect : this.effect
+      effectFor(RR) {
+        return RR === wR.c ? this.multiplyEffect : this.effect
       }
-      createEffect(WW, iW) {
-        return this.engine.createEffect(WW, [], hW, HW, iW, void 0, void 0, ((iW, OW) => {
-          var mW;
-          WW === this.shader && this.programFailed(null !== (mW = this.gl()) && void 0 !== mW && mW.isContextLost() ? dW : function(WW) {
-            const iW = WW.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(iW) ? "a program failed, its log not in this browser's stack" : iW.replace(/^Error: /, "")
-          }(OW))
+      createEffect(RR, JR) {
+        return this.engine.createEffect(RR, [], gR, bR, JR, void 0, void 0, ((JR, GR) => {
+          var yR;
+          RR === this.shader && this.programFailed(null !== (yR = this.gl()) && void 0 !== yR && yR.isContextLost() ? NR : function(RR) {
+            const JR = RR.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(JR) ? "a program failed, its log not in this browser's stack" : JR.replace(/^Error: /, "")
+          }(GR))
         }))
       }
-      programFailed(WW) {
-        this.linkingPair ? this.pairFailure ??= WW : this.fail(WW)
+      programFailed(RR) {
+        this.linkingPair ? this.pairFailure ??= RR : this.fail(RR)
       }
-      fail(WW) {
+      fail(RR) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${WW}`), this.reportFailure(WW, !1);
-          for (const WW of this.rb.vY.slice()) WW instanceof oW && WW.disposeOnStop && WW.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${RR}`), this.reportFailure(RR, !1);
+          for (const RR of this.tL.pM.slice()) RR instanceof xR && RR.disposeOnStop && RR.dispose()
         }
       }
     }
-    var vW = OW(41359);
-    class gW extends vW.c {
+    var HR = GR(41352);
+    class oR extends HR.c {
       createEffect() {
-        const WW = super.createEffect(...arguments);
-        return VW(WW), DW.has(WW) || (DW.add(WW), WW.onCompileObservable.add((() => {
-          VW(WW)
-        }))), WW
+        const RR = super.createEffect(...arguments);
+        return PR(RR), cR.has(RR) || (cR.add(RR), RR.onCompileObservable.add((() => {
+          PR(RR)
+        }))), RR
       }
     }
-    const DW = new WeakSet;
+    const cR = new WeakSet;
 
-    function VW(WW) {
-      WW._vertexSourceCodeBeforeMigration = "", WW._fragmentSourceCodeBeforeMigration = ""
+    function PR(RR) {
+      RR._vertexSourceCodeBeforeMigration = "", RR._fragmentSourceCodeBeforeMigration = ""
     }
-    var pW = OW(41715),
-      fW = OW(42588),
-      CW = OW(41469),
-      XW = OW(41680),
-      BW = OW(41675),
-      qW = OW(41604),
-      RW = OW(42650),
-      GW = OW(38691),
-      IW = OW(53781),
-      aW = OW(53788),
-      rW = OW(53797),
-      zW = OW(41628),
-      FW = OW(3911),
-      QW = OW(38576),
-      Wi = OW(41825),
-      ii = OW(38645),
-      Oi = OW(38594);
+    var IR = GR(41719),
+      mR = GR(42644),
+      zR = GR(41475),
+      SR = GR(41690),
+      jR = GR(41681),
+      dR = GR(41610),
+      ER = GR(42716),
+      YR = GR(38675),
+      kR = GR(53599),
+      QR = GR(53605),
+      FR = GR(53612),
+      TR = GR(41626),
+      sR = GR(4006),
+      hR = GR(38550),
+      RJ = GR(41829),
+      JJ = GR(38628),
+      GJ = GR(38576);
 
-    function mi(WW) {
-      if (WW.visibility < 1 || !WW.isVisible || !WW.isEnabled() || WW.metadata[Oi.g] || !WW.isReady()) return !0;
-      const iW = WW.hY;
-      if (!iW || 0 === iW.length) return !0;
-      for (let OW = 0; OW < iW.length; OW++) {
-        const mW = iW[OW],
-          EW = mW.BA();
-        if (!EW || !EW.isReadyForSubMesh(WW, mW, !1)) return !0
+    function yJ(RR) {
+      if (RR.visibility < 1 || !RR.isVisible || !RR.isEnabled() || RR.metadata[GJ.f] || !RR.isReady()) return !0;
+      const JR = RR.XM;
+      if (!JR || 0 === JR.length) return !0;
+      for (let GR = 0; GR < JR.length; GR++) {
+        const yR = JR[GR],
+          tR = yR.he();
+        if (!tR || !tR.isReadyForSubMesh(RR, yR, !1)) return !0
       }
       return !1
     }
-    class Ei {
-      constructor(WW, iW) {
-        this.Hx = WW, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, iW.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class tJ {
+      constructor(RR, JR) {
+        this.xw = RR, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, JR.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      kZ(WW) {
-        var iW;
-        const OW = this.armed;
-        if (this.armed = !1, this.vis = null, !OW) return !1;
+      UK(RR) {
+        var JR;
+        const GR = this.armed;
+        if (this.armed = !1, this.vis = null, !GR) return !1;
         this.culled = 0;
         const {
-          Hx: mW
-        } = this, EW = null === (iW = mW.bY) || void 0 === iW ? void 0 : iW.visibility;
-        if (!EW || !WW || mW.TZ.Lb) return !1;
-        if (!(mW.oZ.lEW[0] >= ii.f)) return !1;
-        const NW = WW.getProjectionMatrix().m;
-        if (0 !== NW[15]) return !1;
-        const PW = mW.Wl,
-          LW = WW.globalPosition,
-          cW = this.eye;
-        return cW[0] = LW.x + PW[0], cW[1] = LW.y + PW[1], cW[2] = LW.z + PW[2], !!EW.eyeClear(cW[0], cW[1], cW[2], WW.minZ, NW, mW.oZ) && (this.vis = EW, this.passable.clear(), this.count = 0, !0)
+          xw: yR
+        } = this, tR = null === (JR = yR.BX) || void 0 === JR ? void 0 : JR.visibility;
+        if (!tR || !RR || yR.lK.La) return !1;
+        if (!(yR.NK.htR[0] >= JJ.d)) return !1;
+        const uR = RR.getProjectionMatrix().m;
+        if (0 !== uR[15]) return !1;
+        const ZR = yR.Fw,
+          qR = RR.globalPosition,
+          iR = this.eye;
+        return iR[0] = qR.x + ZR[0], iR[1] = qR.y + ZR[1], iR[2] = qR.z + ZR[2], !!tR.eyeClear(iR[0], iR[1], iR[2], RR.minZ, uR, yR.NK) && (this.vis = tR, this.passable.clear(), this.count = 0, !0)
       }
-      see(WW, iW) {
-        const OW = this.count++;
-        if (OW === this.cellSlots.length) {
-          const WW = new Int32Array(2 * OW);
-          WW.set(this.cellSlots), this.cellSlots = WW
+      see(RR, JR) {
+        const GR = this.count++;
+        if (GR === this.cellSlots.length) {
+          const RR = new Int32Array(2 * GR);
+          RR.set(this.cellSlots), this.cellSlots = RR
         }
-        this.cellSlots[OW] = iW, this.meshes[OW] = WW
+        this.cellSlots[GR] = JR, this.meshes[GR] = RR
       }
-      seeThrough(WW) {
-        this.passable.add(WW)
+      seeThrough(RR) {
+        this.passable.add(RR)
       }
-      finish(WW, iW) {
+      finish(RR, JR) {
         const {
-          vis: OW,
-          eye: mW,
-          meshes: EW,
-          count: NW,
-          cellSlots: PW
+          vis: GR,
+          eye: yR,
+          meshes: tR,
+          count: uR,
+          cellSlots: ZR
         } = this, {
-          oZ: LW
-        } = this.Hx, [cW, wW] = LW.lEW, tW = null !== OW && OW.update(mW[0], mW[1], mW[2], LW.UZ, cW, wW, this.passable);
-        let ZW = 0;
-        for (let xW = 0; xW < NW; xW++) {
-          const mW = EW[xW];
-          if (tW) {
-            const WW = 3 * PW[xW];
-            if (WW >= 0 && !OW.isDrawn(iW[WW], iW[WW + 1], iW[WW + 2])) {
-              ZW++;
+          NK: qR
+        } = this.xw, [iR, fR] = qR.htR, VR = null !== GR && GR.update(yR[0], yR[1], yR[2], qR.nK, iR, fR, this.passable);
+        let KR = 0;
+        for (let wR = 0; wR < uR; wR++) {
+          const yR = tR[wR];
+          if (VR) {
+            const RR = 3 * ZR[wR];
+            if (RR >= 0 && !GR.isDrawn(JR[RR], JR[RR + 1], JR[RR + 2])) {
+              KR++;
               continue
             }
           }
-          zW.g.prototype.push.call(WW, mW)
+          TR.f.prototype.push.call(RR, yR)
         }
-        EW.fill(null, 0, NW), this.count = 0, this.vis = null, this.culled = ZW
+        tR.fill(null, 0, uR), this.count = 0, this.vis = null, this.culled = KR
       }
     }
-    var Ni = OW(38626),
-      Pi = OW(38589),
-      Li = OW(41805),
-      ci = OW(53801),
-      wi = OW(41808),
-      ti = OW(41732);
-    let Zi = 1;
-    const xi = new WeakSet;
+    var uJ = GR(38616),
+      ZJ = GR(38565),
+      qJ = GR(41810),
+      iJ = GR(53615),
+      fJ = GR(41813),
+      VJ = GR(41741);
+    let KJ = 1;
+    const wJ = new WeakSet;
 
-    function li() {
-      return Zi
+    function rJ() {
+      return KJ
     }
 
-    function Ai() {
-      Zi = Zi >= 1073741823 ? 1 : Zi + 1
+    function eJ() {
+      KJ = KJ >= 1073741823 ? 1 : KJ + 1
     }
 
-    function bi(WW) {
-      const iW = WW.metadata;
-      if (!iW || !0 !== iW[QW.q]) return;
-      const OW = iW[QW.v],
-        mW = null === OW || void 0 === OW ? void 0 : OW._noaStamps;
-      if (!OW || !mW) return;
-      const EW = OW.entries.indexOf(WW);
-      EW >= 0 && (mW[EW] = 0)
+    function aJ(RR) {
+      const JR = RR.metadata;
+      if (!JR || !0 !== JR[hR.s]) return;
+      const GR = JR[hR.x],
+        yR = null === GR || void 0 === GR ? void 0 : GR._noaStamps;
+      if (!GR || !yR) return;
+      const tR = GR.entries.indexOf(RR);
+      tR >= 0 && (yR[tR] = 0)
     }
 
-    function ji(WW) {
-      const iW = WW.hY;
-      for (let OW = 0; OW < iW.length; OW++) {
-        const WW = iW[OW].BA();
-        if (WW && !WW.isFrozen) return !1
+    function LJ(RR) {
+      const JR = RR.XM;
+      for (let GR = 0; GR < JR.length; GR++) {
+        const RR = JR[GR].he();
+        if (RR && !RR.isFrozen) return !1
       }
-      for (let OW = 0; OW < iW.length; OW++) {
-        const WW = iW[OW].BA();
-        WW && xi.add(WW)
+      for (let GR = 0; GR < JR.length; GR++) {
+        const RR = JR[GR].he();
+        RR && wJ.add(RR)
       }
       return !0
     }
-    let Ui = !1;
-    const ki = new WeakSet;
+    let nJ = !1;
+    const UJ = new WeakSet;
 
-    function si(WW, iW) {
-      const OW = WW[iW];
-      if ("function" !== typeof OW) throw new Error(`terrainDrawState: Babylon has no ${iW} to hook`);
-      return OW
+    function WJ(RR, JR) {
+      const GR = RR[JR];
+      if ("function" !== typeof GR) throw new Error(`terrainDrawState: Babylon has no ${JR} to hook`);
+      return GR
     }
 
-    function Mi(WW, iW, OW, mW, EW) {
-      const NW = OW.oZ.UZ,
-        PW = new Map;
-      let LW = 0;
-      const cW = new Ei(OW, WW),
-        wW = new Ni.d(NW, WW.VA());
-      ! function(WW) {
-        if (ki.has(WW) || (ki.add(WW), WW.onContextLostObservable.add(Ai), WW.DA.add(Ai)), Ui) return;
-        Ui = !0;
-        const iW = ci.b.prototype,
-          OW = si(iW, "_markSubMeshesAsDirty");
-        Object.assign(iW, {
-          _markSubMeshesAsDirty(WW) {
-            OW.call(this, WW), bi(this)
+    function AJ(RR, JR, GR, yR, tR) {
+      const uR = GR.NK.nK,
+        ZR = new Map;
+      let qR = 0;
+      const iR = new tJ(GR, RR),
+        fR = new uJ.e(uR, RR.ke());
+      ! function(RR) {
+        if (UJ.has(RR) || (UJ.add(RR), RR.onContextLostObservable.add(eJ), RR.Ye.add(eJ)), nJ) return;
+        nJ = !0;
+        const JR = iJ.d.prototype,
+          GR = WJ(JR, "_markSubMeshesAsDirty");
+        Object.assign(JR, {
+          _markSubMeshesAsDirty(RR) {
+            GR.call(this, RR), aJ(this)
           }
         });
-        const mW = si(ti.d.prototype, "_syncParentEnabledState");
-        Object.assign(ti.d.prototype, {
+        const yR = WJ(VJ.d.prototype, "_syncParentEnabledState");
+        Object.assign(VJ.d.prototype, {
           _syncParentEnabledState() {
-            mW.call(this), bi(this)
+            yR.call(this), aJ(this)
           }
         });
-        const EW = si(wi.d.prototype, "resetDrawCache");
-        wi.d.prototype.resetDrawCache = function(WW, iW) {
-          EW.call(this, WW, iW), bi(this.getMesh())
+        const tR = WJ(fJ.b.prototype, "resetDrawCache");
+        fJ.b.prototype.resetDrawCache = function(RR, JR) {
+          tR.call(this, RR, JR), aJ(this.getMesh())
         };
-        const NW = Li.d.prototype,
-          PW = si(NW, "markDirty");
-        NW.markDirty = function(WW) {
-          PW.call(this, WW), xi.has(this) && Ai()
+        const uR = qJ.d.prototype,
+          ZR = WJ(uR, "markDirty");
+        uR.markDirty = function(RR) {
+          ZR.call(this, RR), wJ.has(this) && eJ()
         };
-        const LW = si(NW, "_markAllSubMeshesAsDirty");
-        Object.assign(NW, {
-          _markAllSubMeshesAsDirty(WW) {
-            LW.call(this, WW), xi.has(this) && Ai()
+        const qR = WJ(uR, "_markAllSubMeshesAsDirty");
+        Object.assign(uR, {
+          _markAllSubMeshesAsDirty(RR) {
+            qR.call(this, RR), wJ.has(this) && eJ()
           }
         })
-      }(WW.VA());
-      let tW = new Float64Array(384),
-        ZW = new Int32Array(64),
-        xW = new Uint8Array(64),
-        lW = new Float64Array(64),
-        AW = new Int32Array(192),
-        bW = 0;
-      const jW = [],
-        UW = new Float64Array(24),
-        kW = () => {
-          const WW = jW.pop();
-          return void 0 !== WW ? (ZW[WW] = 0, WW) : (bW === ZW.length && (tW = Ki(tW, new Float64Array(2 * tW.length)), ZW = Ki(ZW, new Int32Array(2 * ZW.length)), xW = Ki(xW, new Uint8Array(2 * xW.length)), lW = Ki(lW, new Float64Array(2 * lW.length)), AW = Ki(AW, new Int32Array(2 * AW.length))), bW++)
+      }(RR.ke());
+      let VR = new Float64Array(384),
+        KR = new Int32Array(64),
+        wR = new Uint8Array(64),
+        rR = new Float64Array(64),
+        eR = new Int32Array(192),
+        aR = 0;
+      const LR = [],
+        nR = new Float64Array(24),
+        UR = () => {
+          const RR = LR.pop();
+          return void 0 !== RR ? (KR[RR] = 0, RR) : (aR === KR.length && (VR = CJ(VR, new Float64Array(2 * VR.length)), KR = CJ(KR, new Int32Array(2 * KR.length)), wR = CJ(wR, new Uint8Array(2 * wR.length)), rR = CJ(rR, new Float64Array(2 * rR.length)), eR = CJ(eR, new Int32Array(2 * eR.length))), aR++)
         },
-        sW = WW => {
-          const iW = 6 * WW._noaSlot,
-            OW = WW.MEW[0],
-            mW = WW.MEW[1];
-          tW[iW] = OW.x, tW[iW + 1] = OW.y, tW[iW + 2] = OW.z, tW[iW + 3] = mW.x, tW[iW + 4] = mW.y, tW[iW + 5] = mW.z
+        WR = RR => {
+          const JR = 6 * RR._noaSlot,
+            GR = RR.ZuR[0],
+            yR = RR.ZuR[1];
+          VR[JR] = GR.x, VR[JR + 1] = GR.y, VR[JR + 2] = GR.z, VR[JR + 3] = yR.x, VR[JR + 4] = yR.y, VR[JR + 5] = yR.z
         },
-        MW = (WW, iW, OW) => {
-          if (!OW) return cW.see(WW, -1), !1;
-          const mW = mi(WW);
-          return mW && cW.seeThrough(lW[iW]), cW.see(WW, iW), !mW
+        AR = (RR, JR, GR) => {
+          if (!GR) return iR.see(RR, -1), !1;
+          const yR = yJ(RR);
+          return yR && iR.seeThrough(rR[JR]), iR.see(RR, JR), !yR
         };
-      let KW = -1;
-      return WW.getActiveMeshCandidates = () => {
-        const OW = WW.frustumPlanes,
-          mW = iW._selectionContent;
-        mW.reset(), (OW => {
-          const mW = WW.frustumPlanes;
-          LW = LW + 1 | 0 || 1;
-          const EW = iW.blocks,
-            NW = cW.kZ(WW.activeCamera),
-            PW = NW && !0;
-          if (PW) {
-            const iW = WW.VA().currentRenderPassId;
-            iW !== KW && (KW = iW, Ai())
+      let CR = -1;
+      return RR.getActiveMeshCandidates = () => {
+        const GR = RR.frustumPlanes,
+          yR = JR._selectionContent;
+        yR.reset(), (GR => {
+          const yR = RR.frustumPlanes;
+          qR = qR + 1 | 0 || 1;
+          const tR = JR.blocks,
+            uR = iR.UK(RR.activeCamera),
+            ZR = uR && !0;
+          if (ZR) {
+            const JR = RR.ke().currentRenderPassId;
+            JR !== CR && (CR = JR, eJ())
           }
-          const wW = li(),
-            lW = PW && !1;
-          EW.length > 0 && function(WW, iW) {
-            for (let OW = 0; OW < 6; OW++) {
-              const mW = WW[OW],
-                EW = mW.normal;
-              iW[4 * OW] = EW.x, iW[4 * OW + 1] = EW.y, iW[4 * OW + 2] = EW.z, iW[4 * OW + 3] = mW.d
+          const fR = rJ(),
+            rR = ZR && !1;
+          tR.length > 0 && function(RR, JR) {
+            for (let GR = 0; GR < 6; GR++) {
+              const yR = RR[GR],
+                tR = yR.normal;
+              JR[4 * GR] = tR.x, JR[4 * GR + 1] = tR.y, JR[4 * GR + 2] = tR.z, JR[4 * GR + 3] = yR.d
             }
-          }(mW, UW);
-          const bW = tW,
-            jW = ZW,
-            kW = xW;
-          for (let WW = 0; WW < EW.length; WW++) {
-            const iW = EW[WW];
-            if (!Wi.b.IsInFrustum(iW.MEW, mW)) continue;
-            const tW = iW.entries;
+          }(yR, nR);
+          const aR = VR,
+            LR = KR,
+            UR = wR;
+          for (let RR = 0; RR < tR.length; RR++) {
+            const JR = tR[RR];
+            if (!RJ.c.IsInFrustum(JR.ZuR, yR)) continue;
+            const VR = JR.entries;
             {
-              const WW = iW._noaSlots,
-                mW = iW._noaStamps,
-                EW = iW._noaTerrain;
-              for (let iW = 0; iW < tW.length; iW++) {
-                const ZW = WW[iW];
-                if (jW[ZW] !== LW && (jW[ZW] = LW, kW[ZW] = Si(bW, 6 * ZW, UW) ? 1 : 0), 0 === kW[ZW]) continue;
-                const xW = tW[iW];
-                if (PW && mW[iW] === wW) lW && 1 === EW[iW] && mi(xW) && 0, cW.see(xW, 1 === EW[iW] ? ZW : -1);
-                else if (PW) {
-                  mW[iW] = wW;
-                  const WW = !0 === xW.metadata[Pi.l];
-                  EW[iW] = WW ? 1 : 0;
-                  const OW = MW(xW, ZW, WW);
-                  !WW || OW && ji(xW) || (mW[iW] = 0)
-                } else NW ? MW(xW, ZW, !0 === xW.metadata[Pi.l]) : zW.g.prototype.push.call(OW, xW)
+              const RR = JR._noaSlots,
+                yR = JR._noaStamps,
+                tR = JR._noaTerrain;
+              for (let JR = 0; JR < VR.length; JR++) {
+                const KR = RR[JR];
+                if (LR[KR] !== qR && (LR[KR] = qR, UR[KR] = XJ(aR, 6 * KR, nR) ? 1 : 0), 0 === UR[KR]) continue;
+                const wR = VR[JR];
+                if (ZR && yR[JR] === fR) rR && 1 === tR[JR] && yJ(wR) && 0, iR.see(wR, 1 === tR[JR] ? KR : -1);
+                else if (ZR) {
+                  yR[JR] = fR;
+                  const RR = !0 === wR.metadata[ZJ.j];
+                  tR[JR] = RR ? 1 : 0;
+                  const GR = AR(wR, KR, RR);
+                  !RR || GR && LJ(wR) || (yR[JR] = 0)
+                } else uR ? AR(wR, KR, !0 === wR.metadata[ZJ.j]) : TR.f.prototype.push.call(GR, wR)
               }
               continue
             }
           }
-          NW && cW.finish(OW, AW)
-        })(mW), wW.apply(mW, WW.activeCamera);
-        const NW = iW.sEW;
-        for (let WW = 0; WW < NW.length; WW++) {
-          const iW = NW[WW];
-          iW.isEnabled() && zW.g.prototype.push.call(mW, iW)
+          uR && iR.finish(GR, eR)
+        })(yR), fR.apply(yR, RR.activeCamera);
+        const uR = JR.uuR;
+        for (let RR = 0; RR < uR.length; RR++) {
+          const JR = uR[RR];
+          JR.isEnabled() && TR.f.prototype.push.call(yR, JR)
         }
-        return EW(mW, OW), mW
+        return tR(yR, GR), yR
       }, {
-        KEW: () => cW.culled,
-        xEW: (WW, iW) => {
-          const EW = Math.floor(iW[0] / NW),
-            LW = Math.floor(iW[1] / NW),
-            cW = Math.floor(iW[2] / NW),
-            wW = `${EW}|${LW}|${cW}`;
-          let tW = PW.get(wW);
-          if (!tW) {
-            const WW = [0, 0, 0];
-            OW.fiW([EW * NW - 1, LW * NW - 1, cW * NW - 1], null, WW), tW = Object.assign(mW(WW, NW + 2), {
-              SEW: wW,
-              YEW: 0,
+        quR: () => iR.culled,
+        stR: (RR, JR) => {
+          const tR = Math.floor(JR[0] / uR),
+            qR = Math.floor(JR[1] / uR),
+            iR = Math.floor(JR[2] / uR),
+            fR = `${tR}|${qR}|${iR}`;
+          let VR = ZR.get(fR);
+          if (!VR) {
+            const RR = [0, 0, 0];
+            GR.gGR([tR * uR - 1, qR * uR - 1, iR * uR - 1], null, RR), VR = Object.assign(yR(RR, uR + 2), {
+              iuR: fR,
+              fuR: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: kW()
-            }), sW(tW), lW[tW._noaSlot] = (0, FW.e)(EW, LW, cW), AW[3 * tW._noaSlot] = EW, AW[3 * tW._noaSlot + 1] = LW, AW[3 * tW._noaSlot + 2] = cW, PW.set(wW, tW)
+              _noaSlot: UR()
+            }), WR(VR), rR[VR._noaSlot] = (0, sR.g)(tR, qR, iR), eR[3 * VR._noaSlot] = tR, eR[3 * VR._noaSlot + 1] = qR, eR[3 * VR._noaSlot + 2] = iR, ZR.set(fR, VR)
           }
-          tW.YEW++, WW.metadata[QW.y] = tW
+          VR.fuR++, RR.metadata[hR.A] = VR
         },
-        pD: WW => {
-          const iW = WW.metadata[QW.y];
-          iW && (iW.YEW--, iW.YEW <= 0 && (PW.delete(iW.SEW), jW.push(iW._noaSlot)), WW.metadata[QW.y] = null)
+        vI: RR => {
+          const JR = RR.metadata[hR.A];
+          JR && (JR.fuR--, JR.fuR <= 0 && (ZR.delete(JR.iuR), LR.push(JR._noaSlot)), RR.metadata[hR.A] = null)
         },
-        kEW: (WW, iW) => {
-          const OW = WW,
-            mW = iW.metadata[QW.y];
-          (OW._noaSlots ??= []).push(mW._noaSlot), (OW._noaStamps ??= []).push(0), (OW._noaTerrain ??= []).push(0), OW.entries.push(iW)
+        tuR: (RR, JR) => {
+          const GR = RR,
+            yR = JR.metadata[hR.A];
+          (GR._noaSlots ??= []).push(yR._noaSlot), (GR._noaStamps ??= []).push(0), (GR._noaTerrain ??= []).push(0), GR.entries.push(JR)
         },
-        removeEntry: (WW, iW) => {
-          const OW = WW,
-            mW = OW.entries,
-            EW = mW.indexOf(iW);
-          if (EW < 0) return;
-          const NW = OW._noaSlots,
-            PW = OW._noaStamps,
-            LW = OW._noaTerrain,
-            cW = mW.length - 1;
-          mW[EW] = mW[cW], NW[EW] = NW[cW], PW[EW] = PW[cW], LW[EW] = LW[cW], mW.pop(), NW.pop(), PW.pop(), LW.pop()
+        removeEntry: (RR, JR) => {
+          const GR = RR,
+            yR = GR.entries,
+            tR = yR.indexOf(JR);
+          if (tR < 0) return;
+          const uR = GR._noaSlots,
+            ZR = GR._noaStamps,
+            qR = GR._noaTerrain,
+            iR = yR.length - 1;
+          yR[tR] = yR[iR], uR[tR] = uR[iR], ZR[tR] = ZR[iR], qR[tR] = qR[iR], yR.pop(), uR.pop(), ZR.pop(), qR.pop()
         },
-        YWW: WW => {
-          for (const iW of PW.values()) {
-            iW.ZEW.yEW(WW), iW.tEW.yEW(WW);
-            for (const OW of iW.MEW) OW.yEW(WW);
-            sW(iW)
+        fJR: RR => {
+          for (const JR of ZR.values()) {
+            JR.TtR.VuR(RR), JR.FtR.VuR(RR);
+            for (const GR of JR.ZuR) GR.VuR(RR);
+            WR(JR)
           }
         }
       }
     }
 
-    function Ki(WW, iW) {
-      return iW.set(WW), iW
+    function CJ(RR, JR) {
+      return JR.set(RR), JR
     }
 
-    function Si(WW, iW, OW) {
-      const mW = WW[iW],
-        EW = WW[iW + 1],
-        NW = WW[iW + 2],
-        PW = WW[iW + 3],
-        LW = WW[iW + 4],
-        cW = WW[iW + 5];
-      for (let wW = 0; wW < 24; wW += 4) {
-        const WW = OW[wW],
-          iW = OW[wW + 1],
-          tW = OW[wW + 2];
-        if (!(WW * (WW >= 0 ? PW : mW) + iW * (iW >= 0 ? LW : EW) + tW * (tW >= 0 ? cW : NW) + OW[wW + 3] >= 0)) return !1
+    function XJ(RR, JR, GR) {
+      const yR = RR[JR],
+        tR = RR[JR + 1],
+        uR = RR[JR + 2],
+        ZR = RR[JR + 3],
+        qR = RR[JR + 4],
+        iR = RR[JR + 5];
+      for (let fR = 0; fR < 24; fR += 4) {
+        const RR = GR[fR],
+          JR = GR[fR + 1],
+          VR = GR[fR + 2];
+        if (!(RR * (RR >= 0 ? ZR : yR) + JR * (JR >= 0 ? qR : tR) + VR * (VR >= 0 ? iR : uR) + GR[fR + 3] >= 0)) return !1
       }
       return !0
     }
-    var Yi = OW(38948);
-    class yi {
-      constructor(WW, iW) {
-        var OW = WW.rb;
-        OW.MmW(new rW.b(OW));
-        var mW = new IW.d(cW);
-        OW.JEW = mW, mW.blocks = [];
-        var EW, NW = {},
-          LW = [];
-        this.textPlanes = LW, this.KEW = () => EW.KEW(), this.YWW = WW => {
-          tW(mW, WW), EW.YWW(WW)
-        }, this.xEW = (iW, OW, PW) => {
-          if (!iW.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!iW.metadata[QW.v] && !iW.metadata[QW.o]) {
-            if (!OW) {
-              var cW = mW.sEW;
-              if (iW.metadata[QW.E] && !iW.parent) {
-                cW = LW;
-                var tW = iW.KV().HEW;
-                iW.metadata[QW.F] = tW.center.length() + tW.radius, iW.pA = !0
+    var MJ = GR(38935);
+    class BJ {
+      constructor(RR, JR) {
+        var GR = RR.tL;
+        GR.qtR(new FR.e(GR));
+        var yR = new kR.b(iR);
+        GR.wuR = yR, yR.blocks = [];
+        var tR, uR = {},
+          qR = [];
+        this.textPlanes = qR, this.quR = () => tR.quR(), this.fJR = RR => {
+          VR(yR, RR), tR.fJR(RR)
+        }, this.stR = (JR, GR, ZR) => {
+          if (!JR.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!JR.metadata[hR.x] && !JR.metadata[hR.o]) {
+            if (!GR) {
+              var iR = yR.uuR;
+              if (JR.metadata[hR.C] && !JR.parent) {
+                iR = qR;
+                var VR = JR.Tm().euR;
+                JR.metadata[hR.E] = VR.center.length() + VR.radius, JR.Qe = !0
               }
-              return cW.push(iW), iW.metadata[QW.j] = cW, void(iW.metadata[QW.o] = !0)
+              return iR.push(JR), JR.metadata[hR.j] = iR, void(JR.metadata[hR.o] = !0)
             }
-            var xW = Math.floor(PW[0] / wW),
-              lW = Math.floor(PW[1] / wW),
-              AW = Math.floor(PW[2] / wW),
-              bW = xW + "|" + lW + "|" + AW,
-              jW = NW[bW];
-            if (!jW) {
-              var UW = [xW * wW, lW * wW, AW * wW],
-                kW = [0, 0, 0];
-              WW.Hx.fiW(UW, null, kW), jW = ZW(kW, wW), mW.blocks.push(jW), NW[bW] = jW, jW.SEW = bW
+            var wR = Math.floor(ZR[0] / fR),
+              rR = Math.floor(ZR[1] / fR),
+              eR = Math.floor(ZR[2] / fR),
+              aR = wR + "|" + rR + "|" + eR,
+              LR = uR[aR];
+            if (!LR) {
+              var nR = [wR * fR, rR * fR, eR * fR],
+                UR = [0, 0, 0];
+              RR.xw.gGR(nR, null, UR), LR = KR(UR, fR), yR.blocks.push(LR), uR[aR] = LR, LR.iuR = aR
             }
-            EW.xEW(iW, PW), EW.kEW(jW, iW), jW.YEW = (jW.YEW || 0) + 1, iW.metadata[QW.v] = jW, iW.metadata[QW.q] = !0, iW.pA = !0
+            tR.stR(JR, ZR), tR.tuR(LR, JR), LR.fuR = (LR.fuR || 0) + 1, JR.metadata[hR.x] = LR, JR.metadata[hR.s] = !0, JR.Qe = !0
           }
-        }, this.pD = WW => {
-          if (WW.metadata) {
-            WW.metadata[QW.o] && ((0, FW.i)(WW.metadata[QW.j], WW), WW.metadata[QW.o] = !1), WW.metadata[QW.j] === LW && (WW.pA = !1), WW.metadata[QW.j] = void 0, WW.metadata[QW.F] = void 0;
-            var iW = WW.metadata[QW.v];
-            iW && iW.entries && (WW.metadata[QW.q] && EW.removeEntry(iW, WW), iW.YEW--, iW.YEW <= 0 && (delete NW[iW.SEW], (0, FW.i)(mW.blocks, iW))), EW.pD(WW), WW.metadata[QW.v] = null, WW.metadata[QW.q] = !1
+        }, this.vI = RR => {
+          if (RR.metadata) {
+            RR.metadata[hR.o] && ((0, sR.k)(RR.metadata[hR.j], RR), RR.metadata[hR.o] = !1), RR.metadata[hR.j] === qR && (RR.Qe = !1), RR.metadata[hR.j] = void 0, RR.metadata[hR.E] = void 0;
+            var JR = RR.metadata[hR.x];
+            JR && JR.entries && (RR.metadata[hR.s] && tR.removeEntry(JR, RR), JR.fuR--, JR.fuR <= 0 && (delete uR[JR.iuR], (0, sR.k)(yR.blocks, JR))), tR.vI(RR), RR.metadata[hR.x] = null, RR.metadata[hR.s] = !1
           }
-        }, this.NWW = function(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (WW.metadata[QW.v]) {
-            if (WW.metadata[QW.q] === iW) return;
-            var OW = WW.metadata[QW.v];
-            OW && OW.entries && (iW ? EW.kEW(OW, WW) : EW.removeEntry(OW, WW)), WW.metadata[QW.q] = iW
+        }, this.jRR = function(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (RR.metadata[hR.x]) {
+            if (RR.metadata[hR.s] === JR) return;
+            var GR = RR.metadata[hR.x];
+            GR && GR.entries && (JR ? tR.tuR(GR, RR) : tR.removeEntry(GR, RR)), RR.metadata[hR.s] = JR
           } else {
-            if (WW.metadata[QW.o] === iW) return;
-            var NW = WW.metadata[QW.j] || mW.sEW;
-            iW ? NW.push(WW) : (0, FW.i)(NW, WW), WW.metadata[QW.o] = iW
+            if (RR.metadata[hR.o] === JR) return;
+            var uR = RR.metadata[hR.j] || yR.uuR;
+            JR ? uR.push(RR) : (0, sR.k)(uR, RR), RR.metadata[hR.o] = JR
           }
         };
-        var cW = () => {},
-          wW = iW * WW.Hx.oZ.UZ,
-          tW = (WW, iW) => {
-            WW.blocks.forEach((WW => {
-              WW.ZEW.yEW(iW), WW.tEW.yEW(iW), WW.MEW.forEach((WW => WW.yEW(iW))), WW.blocks && tW(WW, iW)
+        var iR = () => {},
+          fR = JR * RR.xw.NK.nK,
+          VR = (RR, JR) => {
+            RR.blocks.forEach((RR => {
+              RR.TtR.VuR(JR), RR.FtR.VuR(JR), RR.ZuR.forEach((RR => RR.VuR(JR))), RR.blocks && VR(RR, JR)
             }))
           },
-          ZW = (WW, iW) => {
-            var OW = new PW.fA(WW[0], WW[1], WW[2]),
-              mW = new PW.fA(WW[0] + iW, WW[1] + iW, WW[2] + iW);
-            return new aW.e(OW, mW, void 0, void 0, void 0, cW)
+          KR = (RR, JR) => {
+            var GR = new ZR.Fe(RR[0], RR[1], RR[2]),
+              yR = new ZR.Fe(RR[0] + JR, RR[1] + JR, RR[2] + JR);
+            return new QR.d(GR, yR, void 0, void 0, void 0, iR)
           };
-        EW = Mi(OW, mW, WW.Hx, ZW, ((WW, iW) => {
-          for (var OW = 0; OW < LW.length; OW++) {
-            var mW = LW[OW];
-            mW.isEnabled(!1) && ((0, Yi.e)(mW, iW) && zW.g.prototype.push.call(WW, mW))
+        tR = AJ(GR, yR, RR.xw, KR, ((RR, JR) => {
+          for (var GR = 0; GR < qR.length; GR++) {
+            var yR = qR[GR];
+            yR.isEnabled(!1) && ((0, MJ.b)(yR, JR) && TR.f.prototype.push.call(RR, yR))
           }
         }))
       }
     }
 
-    function Ti(WW) {
+    function lJ(RR) {
       const {
-        holderPosition: iW,
-        holderRotation: OW,
-        f4: mW,
-        fov: EW,
-        near: NW,
-        far: PW
-      } = WW.model.o4, LW = WW.gEW;
-      LW.position.yWW(iW[0], iW[1], iW[2]), LW.rotation.yWW(OW[0], OW[1], OW[2]);
-      const cW = WW.camera;
-      cW.position.yWW(mW[0], mW[1], mW[2]), cW.fov = EW, cW.minZ = NW, cW.maxZ = PW
+        holderPosition: JR,
+        holderRotation: GR,
+        y5: yR,
+        fov: tR,
+        near: uR,
+        far: ZR
+      } = RR.model.Z2, qR = RR.CuR;
+      qR.position.VJR(JR[0], JR[1], JR[2]), qR.rotation.VJR(GR[0], GR[1], GR[2]);
+      const iR = RR.camera;
+      iR.position.VJR(yR[0], yR[1], yR[2]), iR.fov = tR, iR.minZ = uR, iR.maxZ = ZR
     }
 
-    function Ji(WW) {
-      const iW = WW.VA(),
-        OW = iW,
-        mW = OW._gl;
-      if (!mW || OW.bb < 2 || iW.nmW || mW.getParameter(mW.DEPTH_BITS) < 24) return !1;
-      const EW = WW._renderingManager,
-        NW = EW.getRenderingGroup(-1),
-        PW = EW.getRenderingGroup(0),
-        LW = XW.c.prototype.render;
-      return NW.render = function(WW, iW, OW, mW, EW, NW, cW, wW, tW) {
-        (WW || PW._empty) && LW.call(this, WW, iW, OW, mW, EW, NW, cW, wW, tW)
-      }, PW.render = function(WW, OW, EW, PW) {
-        let cW = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          wW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          ZW = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          xW = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          lW = arguments.length > 8 ? arguments[8] : void 0;
-        WW ? LW.call(this, WW, OW, EW, PW, cW, wW, ZW, xW, lW) : (iW.setAlphaMode(tW.e.ALPHA_DISABLE), LW.call(this, null, !1, !1, PW, cW, wW, ZW, !1), NW._empty || (mW.depthRange(1, 1), LW.call(NW, null, OW, EW, PW, cW, wW, ZW, xW, lW), mW.depthRange(0, 1)), LW.call(this, null, OW, EW, PW, !1, !1, !1, xW, lW))
+    function pJ(RR) {
+      const JR = RR.ke(),
+        GR = JR,
+        yR = GR._gl;
+      if (!yR || GR.Ma < 2 || JR.LtR || yR.getParameter(yR.DEPTH_BITS) < 24) return !1;
+      const tR = RR._renderingManager,
+        uR = tR.getRenderingGroup(-1),
+        ZR = tR.getRenderingGroup(0),
+        qR = SR.d.prototype.render;
+      return uR.render = function(RR, JR, GR, yR, tR, uR, iR, fR, VR) {
+        (RR || ZR._empty) && qR.call(this, RR, JR, GR, yR, tR, uR, iR, fR, VR)
+      }, ZR.render = function(RR, GR, tR, ZR) {
+        let iR = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          fR = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          KR = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          wR = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          rR = arguments.length > 8 ? arguments[8] : void 0;
+        RR ? qR.call(this, RR, GR, tR, ZR, iR, fR, KR, wR, rR) : (JR.setAlphaMode(VR.c.ALPHA_DISABLE), qR.call(this, null, !1, !1, ZR, iR, fR, KR, !1), uR._empty || (yR.depthRange(1, 1), qR.call(uR, null, GR, tR, ZR, iR, fR, KR, wR, rR), yR.depthRange(0, 1)), qR.call(this, null, GR, tR, ZR, !1, !1, !1, wR, rR))
       }, !0
     }
 
-    function Hi(WW, iW) {
-      return [iW, GW.e].map(((iW, OW) => {
-        const mW = new EW.d("light", PW.fA.FromArray(iW), WW);
-        return mW.diffuse = NW.Color3.FromArray([1, 1, 1]), mW.specular = NW.Color3.FromArray([1, 1, 1]), mW.intensity = GW.b[OW], mW
+    function gJ(RR, JR) {
+      return [JR, YR.g].map(((JR, GR) => {
+        const yR = new tR.c("light", ZR.Fe.FromArray(JR), RR);
+        return yR.diffuse = uR.Color3.FromArray([1, 1, 1]), yR.specular = uR.Color3.FromArray([1, 1, 1]), yR.intensity = YR.e[GR], yR
       }))
     }
-    class ni extends cW.c {
+    class bJ extends iR.e {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(WW) {
-        var iW;
-        this.heldTexture = WW, this.particleTexture = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.mirror) && void 0 !== iW ? iW : null
+      set texture(RR) {
+        var JR;
+        this.heldTexture = RR, this.particleTexture = null !== (JR = null === RR || void 0 === RR ? void 0 : RR.mirror) && void 0 !== JR ? JR : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let WW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        WW && (this.particleTexture = null, (0, wW.D)(this.heldTexture), this.heldTexture = null), super.dispose(WW, iW, OW)
+        let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        RR && (this.particleTexture = null, (0, fR.B)(this.heldTexture), this.heldTexture = null), super.dispose(RR, JR, GR)
       }
     }
 
-    function ui(WW, iW, OW, mW) {
-      return iW && !iW.failed ? iW.wV(OW, mW) : new ni(OW, mW, WW)
+    function vJ(RR, JR, GR, yR) {
+      return JR && !JR.failed ? JR.Km(GR, yR) : new bJ(GR, yR, RR)
     }
-    const oi = new WeakMap;
+    const OJ = new WeakMap;
 
-    function di(WW, iW, OW) {
-      var mW;
-      let EW = null !== (mW = oi.get(WW)) && void 0 !== mW ? mW : null;
-      return !EW && WW.VA().bb >= 2 && (EW = new eW(WW, (iW => {
-        console.error(`Particle programs failed in scene ${WW.uid}: ${iW}`)
-      })), oi.set(WW, EW)), ui(WW, EW, iW, OW)
+    function xJ(RR, JR, GR) {
+      var yR;
+      let tR = null !== (yR = OJ.get(RR)) && void 0 !== yR ? yR : null;
+      return !tR && RR.ke().Ma >= 2 && (tR = new DR(RR, (JR => {
+        console.error(`Particle programs failed in scene ${RR.uid}: ${JR}`)
+      })), OJ.set(RR, tR)), vJ(RR, tR, JR, GR)
     }
-    const ei = mW.b.Zero();
-    const vi = {
-      rOW: function(WW, iW) {
-        return new gW(WW, iW.ROW, {
-          preserveDrawingBuffer: iW.preserveDrawingBuffer,
+    const NJ = yR.d.Zero();
+    const DJ = {
+      oyR: function(RR, JR) {
+        return new oR(RR, JR.xyR, {
+          preserveDrawingBuffer: JR.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      pEW: function(WW, iW) {
-        ! function(WW, iW, OW) {
-          const mW = new qW.c(WW.engine);
-          WW.rb = mW, mW.detachControl(), mW.autoClear = !1, BW.d.MIN_RENDERINGGROUPS = -1;
-          for (let NW = BW.d.MIN_RENDERINGGROUPS; NW <= 1; NW++) mW.setRenderingOrder(NW, XW.c.PainterSortCompare, XW.c.PainterSortCompare, XW.c.PainterSortCompare);
-          mW.setRenderingAutoClearDepthStencil(0, !1), CW.e.Enabled = !1, WW.dEW = new yi(WW, Math.round(iW.eEW)), WW.gEW = new fW.e("camHolder", mW), WW.camera = new pW.b("camera", new PW.fA(0, 0, 0), mW), WW.camera.parent = WW.gEW, Ti(WW), (0, GW.g)(WW, ((WW, iW, OW) => (0, RW.e)(iW, OW, WW.rb))), mW.clearColor = NW.c.FromArray(iW.clearColor), mW.ambientColor = NW.Color3.FromArray(iW.ambientColor);
-          const EW = OW(mW, iW.VEW);
-          mW.onNewLightAddedObservable.add((WW => {
-            EW.some((iW => iW === WW)) || console.error(`Light "${WW.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), mW.skipPointerMovePicking = !0
-        }(WW, iW, Hi), Ji(WW.rb)
+      BuR: function(RR, JR) {
+        ! function(RR, JR, GR) {
+          const yR = new dR.c(RR.engine);
+          RR.tL = yR, yR.detachControl(), yR.autoClear = !1, jR.e.MIN_RENDERINGGROUPS = -1;
+          for (let uR = jR.e.MIN_RENDERINGGROUPS; uR <= 1; uR++) yR.setRenderingOrder(uR, SR.d.PainterSortCompare, SR.d.PainterSortCompare, SR.d.PainterSortCompare);
+          yR.setRenderingAutoClearDepthStencil(0, !1), zR.d.Enabled = !1, RR.UuR = new BJ(RR, Math.round(JR.WuR)), RR.CuR = new mR.c("camHolder", yR), RR.camera = new IR.e("camera", new ZR.Fe(0, 0, 0), yR), RR.camera.parent = RR.CuR, lJ(RR), (0, YR.i)(RR, ((RR, JR, GR) => (0, ER.i)(JR, GR, RR.tL))), yR.clearColor = uR.e.FromArray(JR.clearColor), yR.ambientColor = uR.Color3.FromArray(JR.ambientColor);
+          const tR = GR(yR, JR.MuR);
+          yR.onNewLightAddedObservable.add((RR => {
+            tR.some((JR => JR === RR)) || console.error(`Light "${RR.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), yR.skipPointerMovePicking = !0
+        }(RR, JR, gJ), pJ(RR.tL)
       },
-      vEW: Ti,
-      setBabylonFog: function(WW, iW, OW, mW) {
-        const EW = WW.rb;
-        EW.fogMode = 3, EW.fogStart = iW, EW.fogEnd = OW, EW.fogColor.set(mW[0], mW[1], mW[2])
+      AuR: lJ,
+      setBabylonFog: function(RR, JR, GR, yR) {
+        const tR = RR.tL;
+        tR.fogMode = 3, tR.fogStart = JR, tR.fogEnd = GR, tR.fogColor.set(yR[0], yR[1], yR[2])
       },
-      CEW: function(WW, iW, OW) {
-        return WW.engine.bb >= 2 && !WW.XEW && (WW.XEW = new eW(WW.rb, WW.BEW)), ui(WW.rb, WW.XEW, iW, OW)
+      puR: function(RR, JR, GR) {
+        return RR.engine.Ma >= 2 && !RR.guR && (RR.guR = new DR(RR.tL, RR.buR)), vJ(RR.tL, RR.guR, JR, GR)
       },
-      REW: function(WW, iW) {
-        WW.rb.vY.forEach((OW => {
-          if (OW instanceof oW) return void OW.YWW(iW, WW.Hx.Wl);
-          const mW = OW;
-          if (mW.emitter.getConnectedParticleSystems)
-            for (const WW of mW._particles) WW.position.set(WW.position.x - iW[0], WW.position.y - iW[1], WW.position.z - iW[2]);
+      OuR: function(RR, JR) {
+        RR.tL.pM.forEach((GR => {
+          if (GR instanceof xR) return void GR.fJR(JR, RR.xw.Fw);
+          const yR = GR;
+          if (yR.emitter.getConnectedParticleSystems)
+            for (const RR of yR._particles) RR.position.set(RR.position.x - JR[0], RR.position.y - JR[1], RR.position.z - JR[2]);
           else {
-            if (!mW.worldOffset) throw new Error("Particle system has no world offset");
-            mW.worldOffset.x = -WW.Hx.Wl[0], mW.worldOffset.y = -WW.Hx.Wl[1], mW.worldOffset.z = -WW.Hx.Wl[2]
+            if (!yR.worldOffset) throw new Error("Particle system has no world offset");
+            yR.worldOffset.x = -RR.xw.Fw[0], yR.worldOffset.y = -RR.xw.Fw[1], yR.worldOffset.z = -RR.xw.Fw[2]
           }
         }))
       },
-      linesFromArrays: function(WW, iW, OW) {
-        const mW = new LW.b(iW, WW.rb, null, void 0, void 0, !1);
-        return (0, RW.d)(iW, OW, WW.rb, mW), mW
+      linesFromArrays: function(RR, JR, GR) {
+        const yR = new qR.d(JR, RR.tL, null, void 0, void 0, !1);
+        return (0, ER.e)(JR, GR, RR.tL, yR), yR
       },
-      zb: bi,
-      qEW: function(WW, iW) {
-        return ei.origin.HJ(iW.origin), ei.direction.HJ(iW.direction), ei.length = iW.length, ei.epsilon = iW.epsilon, ei.qEW(WW, !1, void 0, !1, void 0, !0).pickedPoint
+      uL: aJ,
+      vuR: function(RR, JR) {
+        return NJ.origin.vN(JR.origin), NJ.direction.vN(JR.direction), NJ.length = JR.length, NJ.epsilon = JR.epsilon, NJ.vuR(RR, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  42603: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => XW,
-      d: () => sW,
-      g: () => rW
+  42671: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => SR,
+      d: () => WR,
+      e: () => FR
     });
-    var mW = OW(41782),
-      EW = OW(42612),
-      NW = OW(42652),
-      PW = OW(42616),
-      LW = OW(38995),
-      cW = OW(39004),
-      wW = OW(39009),
-      tW = OW(39011),
-      ZW = OW(38464),
-      xW = OW(38427),
-      lW = OW(38431),
-      AW = OW(42623),
-      bW = OW(38405),
-      jW = OW(38419),
-      UW = OW(38388);
+    var yR = GR(41781),
+      tR = GR(42677),
+      uR = GR(42722),
+      ZR = GR(42685),
+      qR = GR(38986),
+      iR = GR(38988),
+      fR = GR(38995),
+      VR = GR(38998),
+      KR = GR(38424),
+      wR = GR(38391),
+      rR = GR(38397),
+      eR = GR(42693),
+      aR = GR(38366),
+      LR = GR(38382),
+      nR = GR(38358);
 
-    function kW(WW, iW) {
-      return Object.assign((function(WW, OW, mW, EW) {
-        return iW(this.featureState, WW, OW, mW, EW)
+    function UR(RR, JR) {
+      return Object.assign((function(RR, GR, yR, tR) {
+        return JR(this.featureState, RR, GR, yR, tR)
       }), {
-        cZ: WW
+        iK: RR
       })
     }
 
-    function sW(WW) {
-      const iW = class extends AW.e {
-          constructor(iW, OW) {
-            const mW = (0, jW.bb)(iW),
-              EW = mW && (0, jW.v)(mW, WW.name);
-            for (var NW = arguments.length, PW = new Array(NW > 2 ? NW - 2 : 0), LW = 2; LW < NW; LW++) PW[LW - 2] = arguments[LW];
-            super(iW, WW.name, WW.priority, EW ? EW.defines : WW.defines(...PW), !1), this.featureState = void 0, this.featureState = OW, this._pluginManager._addPlugin(this), this._enable(!0), (0, jW.x)(this._material, WW, this.featureState, this._pluginDefineNames)
+    function WR(RR) {
+      const JR = class extends eR.e {
+          constructor(JR, GR) {
+            const yR = (0, LR.bb)(JR),
+              tR = yR && (0, LR.E)(yR, RR.name);
+            for (var uR = arguments.length, ZR = new Array(uR > 2 ? uR - 2 : 0), qR = 2; qR < uR; qR++) ZR[qR - 2] = arguments[qR];
+            super(JR, RR.name, RR.priority, tR ? tR.defines : RR.defines(...ZR), !1), this.featureState = void 0, this.featureState = GR, this._pluginManager._addPlugin(this), this._enable(!0), (0, LR.H)(this._material, RR, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return WW.className
+            return RR.className
           }
-          isCompatible(WW) {
-            return WW === UW.e.GLSL || WW === UW.e.WGSL
+          isCompatible(RR) {
+            return RR === nR.c.GLSL || RR === nR.c.WGSL
           }
         },
-        OW = (0, bW.i)(WW);
-      for (const [mW, EW] of Object.entries(bW.d)) {
-        const NW = WW[mW];
-        if (NW) {
-          const WW = OW[mW];
-          Object.defineProperty(iW.prototype, EW, {
-            value: kW(NW, WW),
+        GR = (0, aR.i)(RR);
+      for (const [yR, tR] of Object.entries(aR.e)) {
+        const uR = RR[yR];
+        if (uR) {
+          const RR = GR[yR];
+          Object.defineProperty(JR.prototype, tR, {
+            value: UR(uR, RR),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return iW
+      return JR
     }
-    class MW extends(sW(LW.e)) {}
-    var KW = OW(41359),
-      SW = OW(42630),
-      YW = OW(42633);
+    class AR extends(WR(qR.c)) {}
+    var CR = GR(41352),
+      XR = GR(42697),
+      MR = GR(42704);
 
-    function yW(WW, iW, OW) {
-      return (0, YW.i)(OW, iW.urls, (() => async function(WW, iW, OW) {
+    function BR(RR, JR, GR) {
+      return (0, MR.c)(GR, JR.urls, (() => async function(RR, JR, GR) {
         const {
-          width: mW
-        } = WW[0].getSize(), EW = WW.map(((WW, OW) => {
-          var EW;
-          const NW = Math.round(WW.getSize().height / mW),
-            PW = null === iW || void 0 === iW ? void 0 : iW[OW];
+          width: yR
+        } = RR[0].getSize(), tR = RR.map(((RR, GR) => {
+          var tR;
+          const uR = Math.round(RR.getSize().height / yR),
+            ZR = null === JR || void 0 === JR ? void 0 : JR[GR];
           return {
-            pixels: PW && PW.byteLength === mW * mW * NW * 4 ? PW : null !== (EW = TW.get(WW.getInternalTexture())) && void 0 !== EW ? EW : WW._readPixelsSync(),
-            layers: NW
+            pixels: ZR && ZR.byteLength === yR * yR * uR * 4 ? ZR : null !== (tR = lR.get(RR.getInternalTexture())) && void 0 !== tR ? tR : RR._readPixelsSync(),
+            layers: uR
           }
-        })), NW = Math.min(OW.VA().getCaps().texture2DArrayMaxLayerCount, 256), LW = (0, YW.e)(EW, mW, NW).map((WW => {
+        })), uR = Math.min(GR.ke().getCaps().texture2DArrayMaxLayerCount, 256), qR = (0, MR.b)(tR, yR, uR).map((RR => {
           let {
-            pixels: iW,
-            layers: EW
-          } = WW;
+            pixels: JR,
+            layers: tR
+          } = RR;
           return {
-            atlas: new SW.b(iW, mW, mW, EW, KW.c.TEXTUREFORMAT_RGBA, OW, !0, !1, PW.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: EW
+            atlas: new XR.d(JR, yR, yR, tR, CR.c.TEXTUREFORMAT_RGBA, GR, !0, !1, ZR.c.NEAREST_NEAREST_MIPLINEAR),
+            layers: tR
           }
         }));
-        return WW.forEach(((WW, iW) => {
-          const mW = WW.getInternalTexture();
-          TW.has(mW) || (! function(WW, iW) {
-            const OW = iW.createRawTexture(new Uint8Array(4), 1, 1, KW.c.TEXTUREFORMAT_RGBA, !1, !1, PW.d.NEAREST_SAMPLINGMODE);
-            WW._hardwareTexture.release(), iW.unbindAllTextures(), OW._swapAndDie(WW, !1)
-          }(mW, OW.VA()), TW.set(mW, EW[iW].pixels))
-        })), LW
-      }(WW, iW.pixels, OW)))
+        return RR.forEach(((RR, JR) => {
+          const yR = RR.getInternalTexture();
+          lR.has(yR) || (! function(RR, JR) {
+            const GR = JR.createRawTexture(new Uint8Array(4), 1, 1, CR.c.TEXTUREFORMAT_RGBA, !1, !1, ZR.c.NEAREST_SAMPLINGMODE);
+            RR._hardwareTexture.release(), JR.unbindAllTextures(), GR._swapAndDie(RR, !1)
+          }(yR, GR.ke()), lR.set(yR, tR[JR].pixels))
+        })), qR
+      }(RR, JR.pixels, GR)))
     }
-    const TW = new WeakMap;
-    var JW = OW(39017);
-    class hW extends(sW(cW.e)) {
-      constructor(WW, iW) {
-        super(WW, iW), this.loaded = new Set, this.mirrors = void 0, this.mirrors = iW.textures.map((WW => WW.mirror)), iW.useWebGL2 && !iW.imagesPerAtlas.length && iW.textureAtlases.splice(0, iW.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((WW, iW) => {
-          WW.onLoadObservable.add((WW => {
-            this.setTextureArrayData(WW, iW).catch((WW => {
-              console.error(`Failed to build the texture arrays, at atlas ${iW}`, WW)
+    const lR = new WeakMap;
+    var pR = GR(39007);
+    class gR extends(WR(iR.j)) {
+      constructor(RR, JR) {
+        super(RR, JR), this.loaded = new Set, this.mirrors = void 0, this.mirrors = JR.textures.map((RR => RR.mirror)), JR.useWebGL2 && !JR.imagesPerAtlas.length && JR.textureAtlases.splice(0, JR.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((RR, JR) => {
+          RR.onLoadObservable.add((RR => {
+            this.setTextureArrayData(RR, JR).catch((RR => {
+              console.error(`Failed to build the texture arrays, at atlas ${JR}`, RR)
             }))
           }))
-        })), (0, JW.h)(iW, WW.shaderLanguage)
+        })), (0, pR.l)(JR, RR.shaderLanguage)
       }
-      async setTextureArrayData(WW, iW) {
-        const OW = this.featureState,
+      async setTextureArrayData(RR, JR) {
+        const GR = this.featureState,
           {
-            width: mW,
-            height: EW
-          } = WW.getSize(),
-          NW = this._material.shaderLanguage;
-        if (!OW.useWebGL2) return void(0, JW.f)(this._material, OW, iW, mW, Math.round(EW / mW), NW);
-        if (this.loaded.add(iW), this.loaded.size < this.mirrors.length) return;
-        const PW = await yW(this.mirrors, OW.sources, this._material.bD());
-        (0, JW.d)(this._material, OW, PW, mW, NW)
+            width: yR,
+            height: tR
+          } = RR.getSize(),
+          uR = this._material.shaderLanguage;
+        if (!GR.useWebGL2) return void(0, pR.g)(this._material, GR, JR, yR, Math.round(tR / yR), uR);
+        if (this.loaded.add(JR), this.loaded.size < this.mirrors.length) return;
+        const ZR = await BR(this.mirrors, GR.sources, this._material.jH());
+        (0, pR.e)(this._material, GR, ZR, yR, uR)
       }
     }
-    var HW = OW(42635),
-      nW = OW(41818),
-      uW = OW(38235),
-      oW = OW(42641),
-      dW = OW(41927),
-      eW = OW(41808),
-      vW = OW(42588),
-      gW = OW(38669),
-      DW = OW(42650);
-    class VW extends HW.e {
+    var bR = GR(42711),
+      vR = GR(41822),
+      OR = GR(38195),
+      xR = GR(42714),
+      NR = GR(41951),
+      DR = GR(41813),
+      HR = GR(42644),
+      oR = GR(38650),
+      cR = GR(42716);
+    class PR extends bR.b {
       getData() {
         return null
       }
@@ -894,335 +894,335 @@ export const modules = {
         super._rebuild()
       }
     }
-    const pW = {
-      Mesh: oW.e,
-      TransformNode: vW.e,
-      OZ: HW.e,
-      VertexBuffer: HW.g,
-      BoundingInfo: nW.b,
-      fA: uW.fA,
-      ArenaBuffer: VW,
-      SubMesh: eW.d,
-      VertexData: dW.c,
-      MirroredGeometry: DW.c,
-      meshFromArrays: DW.d,
-      plainMeshFromArrays: DW.e
+    const IR = {
+      Mesh: xR.b,
+      TransformNode: HR.c,
+      GK: bR.b,
+      VertexBuffer: bR.c,
+      BoundingInfo: vR.c,
+      Fe: OR.Fe,
+      ArenaBuffer: PR,
+      SubMesh: DR.b,
+      VertexData: NR.c,
+      MirroredGeometry: cR.b,
+      meshFromArrays: cR.e,
+      plainMeshFromArrays: cR.i
     };
-    (0, gW.f)(pW);
-    var fW = OW(38511);
-    class CW extends(sW(tW.l)) {
-      constructor(WW, iW) {
-        if (super(WW, iW), WW instanceof mW.StandardMaterial && iW.dirLightCount > 0) {
-          const iW = WW,
-            OW = iW._blockDirtyMechanism;
-          iW._blockDirtyMechanism = !0, WW.disableLighting = !0, iW._blockDirtyMechanism = OW;
-          const mW = (0, jW.bb)(WW);
-          mW && (mW.disableLighting = !0, (0, jW._)(mW))
-        }(0, fW.i)(WW)
+    (0, oR.g)(IR);
+    var mR = GR(38475);
+    class zR extends(WR(VR.h)) {
+      constructor(RR, JR) {
+        if (super(RR, JR), RR instanceof yR.StandardMaterial && JR.dirLightCount > 0) {
+          const JR = RR,
+            GR = JR._blockDirtyMechanism;
+          JR._blockDirtyMechanism = !0, RR.disableLighting = !0, JR._blockDirtyMechanism = GR;
+          const yR = (0, LR.bb)(RR);
+          yR && (yR.disableLighting = !0, (0, LR._)(yR))
+        }(0, mR.j)(RR)
       }
-      dispose(WW) {
-        (0, fW.k)(this._material), super.dispose(WW)
+      dispose(RR) {
+        (0, mR.l)(this._material), super.dispose(RR)
       }
     }
 
-    function XW(WW, iW) {
-      if (!(iW instanceof mW.StandardMaterial) || iW.specularTexture) return;
+    function SR(RR, JR) {
+      if (!(JR instanceof yR.StandardMaterial) || JR.specularTexture) return;
       const {
-        r: OW,
-        g: EW,
-        b: NW
-      } = iW.specularColor;
-      0 === OW && 0 === EW && 0 === NW && (WW.SPECULARTERM = !1)
-    }(0, tW.h)({
-      disableUnusedSpecularTerm: XW
+        r: GR,
+        g: tR,
+        b: uR
+      } = JR.specularColor;
+      0 === GR && 0 === tR && 0 === uR && (RR.SPECULARTERM = !1)
+    }(0, VR.f)({
+      disableUnusedSpecularTerm: SR
     });
-    var BW = OW(38437),
-      qW = OW(38683);
-    const RW = new RegExp(`^#define ${wW.c}\\s*$`, "m");
-    class GW extends(sW(wW.i)) {
-      constructor(WW, iW) {
-        super(WW, iW), this.JA = !1, iW.ditherOnlyWhileFading && (qW.h.add(WW), this.prewarmDitherTwins(WW))
+    var jR = GR(38406),
+      dR = GR(38666);
+    const ER = new RegExp(`^#define ${fR.e}\\s*$`, "m");
+    class YR extends(WR(fR.j)) {
+      constructor(RR, JR) {
+        super(RR, JR), this.He = !1, JR.ditherOnlyWhileFading && (dR.f.add(RR), this.prewarmDitherTwins(RR))
       }
-      prewarmDitherTwins(WW) {
-        const iW = new WeakSet;
-        WW.onEffectCreatedObservable.add((OW => {
+      prewarmDitherTwins(RR) {
+        const JR = new WeakSet;
+        RR.onEffectCreatedObservable.add((GR => {
           let {
-            effect: mW,
-            subMesh: EW
-          } = OW;
-          if (this.featureState.prewarmingDither || iW.has(mW)) return;
-          iW.add(mW);
-          const NW = null === EW || void 0 === EW ? void 0 : EW.getMesh();
-          NW && !RW.test(mW.defines) && WW.bD().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(NW) || iW.delete(mW)
+            effect: yR,
+            subMesh: tR
+          } = GR;
+          if (this.featureState.prewarmingDither || JR.has(yR)) return;
+          JR.add(yR);
+          const uR = null === tR || void 0 === tR ? void 0 : tR.getMesh();
+          uR && !ER.test(yR.defines) && RR.jH().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(uR) || JR.delete(yR)
           }))
         }))
       }
-      prewarmDither(WW) {
-        if (this.JA || WW.Ay()) return !1;
-        const iW = new eW.d(0, 0, 0, 0, 0, WW, void 0, !1, !1);
+      prewarmDither(RR) {
+        if (this.He || RR.oB()) return !1;
+        const JR = new DR.b(0, 0, 0, 0, 0, RR, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(WW, iW)
+          this._material.isReadyForSubMesh(RR, JR)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== iW.effect
+        return null !== JR.effect
       }
-      dispose(WW) {
-        this.JA = !0, super.dispose(WW)
+      dispose(RR) {
+        this.He = !0, super.dispose(RR)
       }
     }
-    class IW extends(sW(ZW.d)) {}
-    const aW = new Map;
+    class kR extends(WR(KR.e)) {}
+    const QR = new Map;
 
-    function rW(WW, iW) {
-      aW.set(WW, iW)
+    function FR(RR, JR) {
+      QR.set(RR, JR)
     }
-    rW(LW.e, MW), rW(cW.e, hW), rW(wW.i, GW), rW(tW.l, CW), rW(ZW.d, IW), (0, xW.c)({
-      create: (WW, iW) => {
-        const OW = new mW.StandardMaterial(WW.name, iW);
-        return (0, BW.w)(WW, OW), OW.detailMap._pluginDefineNames
+    FR(qR.c, AR), FR(iR.j, gR), FR(fR.j, YR), FR(VR.h, zR), FR(KR.e, kR), (0, wR.b)({
+      create: (RR, JR) => {
+        const GR = new yR.StandardMaterial(RR.name, JR);
+        return (0, jR.t)(RR, GR), GR.detailMap._pluginDefineNames
       },
-      write: (WW, iW, OW) => {
-        (0, BW.Z)(WW.mirror, iW, OW)
+      write: (RR, JR, GR) => {
+        (0, jR.ab)(RR.mirror, JR, GR)
       },
-      addFeature: (WW, iW, OW) => {
-        const mW = aW.get(iW.feature);
-        if (!mW) throw new Error(`${iW.feature.name} has no plugin class (registerPluginClass)`);
-        new mW(WW.mirror, iW.state, ...OW)
+      addFeature: (RR, JR, GR) => {
+        const yR = QR.get(JR.feature);
+        if (!yR) throw new Error(`${JR.feature.name} has no plugin class (registerPluginClass)`);
+        new yR(RR.mirror, JR.state, ...GR)
       },
-      texture: (WW, iW, OW) => {
+      texture: (RR, JR, GR) => {
         let {
-          url: mW,
-          noMipmap: EW,
-          invertY: NW,
-          samplingMode: LW,
-          data: cW,
-          sets: wW
-        } = OW;
-        if (!cW) {
-          const OW = new PW.d(mW, iW, EW, NW, LW);
-          return Object.assign(OW, wW), void(0, lW.O)(WW, OW)
+          url: yR,
+          noMipmap: tR,
+          invertY: uR,
+          samplingMode: qR,
+          data: iR,
+          sets: fR
+        } = GR;
+        if (!iR) {
+          const GR = new ZR.c(yR, JR, tR, uR, qR);
+          return Object.assign(GR, fR), void(0, rR.J)(RR, GR)
         }
-        const tW = {},
-          ZW = new Promise(((WW, iW) => {
-            tW.onLoad = WW, tW.onError = (WW, OW) => {
-              iW(new Error(`${cW.context}: ${(null===OW||void 0===OW?void 0:OW.message)||WW||"Failed to load texture"}`))
+        const VR = {},
+          KR = new Promise(((RR, JR) => {
+            VR.onLoad = RR, VR.onError = (RR, GR) => {
+              JR(new Error(`${iR.context}: ${(null===GR||void 0===GR?void 0:GR.message)||RR||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: xW,
-            bytes: AW,
-            label: bW
-          } = cW,
-          jW = {
-            noMipmap: EW,
+            mimeType: wR,
+            bytes: eR,
+            label: aR
+          } = iR,
+          LR = {
+            noMipmap: tR,
             invertY: !1,
-            samplingMode: LW,
-            ...tW,
-            mimeType: xW,
+            samplingMode: qR,
+            ...VR,
+            mimeType: wR,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          UW = new PW.d(null, iW, jW);
-        BW.z.set(UW, ZW), Object.assign(UW, wW), UW.updateURL(mW, AW);
-        const kW = UW.getInternalTexture();
-        kW && (kW.label = bW), WW.uvSet = UW.coordinatesIndex, WW.matrix.set((0, BW.U)(UW)), (0, lW.O)(WW, UW)
+          nR = new ZR.c(null, JR, LR);
+        jR.v.set(nR, KR), Object.assign(nR, fR), nR.updateURL(yR, eR);
+        const UR = nR.getInternalTexture();
+        UR && (UR.label = aR), RR.uvSet = nR.coordinatesIndex, RR.matrix.set((0, jR.T)(nR)), (0, rR.J)(RR, nR)
       },
-      cube: (WW, iW, OW) => {
+      cube: (RR, JR, GR) => {
         let {
-          rootUrl: mW,
-          files: NW,
-          noMipmap: LW,
-          luminance: cW
-        } = OW;
+          rootUrl: yR,
+          files: uR,
+          noMipmap: qR,
+          luminance: iR
+        } = GR;
         const {
-          samplingMode: wW
-        } = WW.sampler, tW = wW === (0, lW.A)(LW) ? null : () => {
-          (0, BW.R)(ZW, wW)
-        }, ZW = new EW.b(mW, iW, null, LW, NW, tW, null, (0, lW.z)(cW));
-        ZW.coordinatesMode = PW.d.SKYBOX_MODE, (0, lW.O)(WW, ZW)
+          samplingMode: fR
+        } = RR.sampler, VR = fR === (0, rR.A)(qR) ? null : () => {
+          (0, jR.P)(KR, fR)
+        }, KR = new tR.d(yR, JR, null, qR, uR, VR, null, (0, rR.w)(iR));
+        KR.coordinatesMode = ZR.c.SKYBOX_MODE, (0, rR.J)(RR, KR)
       },
-      canvas: (WW, iW, OW) => {
+      canvas: (RR, JR, GR) => {
         let {
-          width: mW,
-          height: EW,
-          mipmaps: LW,
-          samplingMode: cW,
-          hasAlpha: wW = !1,
-          wrap: tW = PW.d.CLAMP_ADDRESSMODE
-        } = OW;
-        const ZW = new NW.d(iW, {
-          width: mW,
-          height: EW
-        }, WW, LW, cW);
-        ZW.hasAlpha = wW, ZW.wrapU = tW, ZW.wrapV = tW;
-        const xW = (0, BW.H)(ZW);
-        return (0, BW.K)(xW, ZW), xW
+          width: yR,
+          height: tR,
+          mipmaps: qR,
+          samplingMode: iR,
+          hasAlpha: fR = !1,
+          wrap: VR = ZR.c.CLAMP_ADDRESSMODE
+        } = GR;
+        const KR = new uR.b(JR, {
+          width: yR,
+          height: tR
+        }, RR, qR, iR);
+        KR.hasAlpha = fR, KR.wrapU = VR, KR.wrapV = VR;
+        const wR = (0, jR.D)(KR);
+        return (0, jR.G)(wR, KR), wR
       }
     })
   },
-  42650: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => tW,
-      d: () => ZW,
-      e: () => xW
+  42716: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => VR,
+      e: () => KR,
+      i: () => wR
     });
-    var mW = OW(42635),
-      EW = OW(41582),
-      NW = OW(41818),
-      PW = OW(41929),
-      LW = OW(42641),
-      cW = OW(41927),
-      wW = OW(38562);
-    class tW extends PW.b {
+    var yR = GR(42711),
+      tR = GR(41586),
+      uR = GR(41822),
+      ZR = GR(41957),
+      qR = GR(42714),
+      iR = GR(41951),
+      fR = GR(38532);
+    class VR extends ZR.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (WW, iW) => {
-          this.releaseUnlessInstanced(iW)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (RR, JR) => {
+          this.releaseUnlessInstanced(JR)
         }, this.onLinked = null
       }
-      link(WW) {
-        var iW;
-        (0, wW.k)(WW), this.model = WW, null === (iW = this.onLinked) || void 0 === iW || iW.call(this, WW)
+      link(RR) {
+        var JR;
+        (0, fR.m)(RR), this.model = RR, null === (JR = this.onLinked) || void 0 === JR || JR.call(this, RR)
       }
       relink() {
         this.release();
-        const WW = [];
-        for (const EW of Object.values(this._vertexBuffers))
-          if (!EW.getIsInstanced()) {
+        const RR = [];
+        for (const tR of Object.values(this._vertexBuffers))
+          if (!tR.getIsInstanced()) {
             const {
-              byteOffset: iW,
-              byteStride: OW,
-              type: mW,
-              normalized: NW
-            } = EW;
-            WW.push({
-              kind: EW.getKind(),
-              data: EW.getData(),
-              offset: iW,
-              stride: OW,
-              components: EW.getSize(),
-              glType: mW,
-              isNormalized: NW
+              byteOffset: JR,
+              byteStride: GR,
+              type: yR,
+              normalized: uR
+            } = tR;
+            RR.push({
+              kind: tR.getKind(),
+              data: tR.getData(),
+              offset: JR,
+              stride: GR,
+              components: tR.getSize(),
+              glType: yR,
+              isNormalized: uR
             })
-          } const iW = this._indices.length ? this._indices : null,
+          } const JR = this._indices.length ? this._indices : null,
           {
-            minimum: OW,
-            maximum: mW
+            minimum: GR,
+            maximum: yR
           } = this.extend;
-        this.link(new wW.d(WW, iW, this.getTotalVertices(), new Float64Array(OW.wEW()), new Float64Array(mW.wEW())))
+        this.link(new fR.e(RR, JR, this.getTotalVertices(), new Float64Array(GR.QtR()), new Float64Array(yR.QtR())))
       }
-      copy(WW) {
-        if (!this.model) return super.copy(WW);
-        const iW = new tW(WW, this.bD()),
-          OW = this.IEW(void 0, !0);
-        OW && iW.setIndices(OW);
-        let PW = !1;
-        for (const NW in this._vertexBuffers) {
-          const WW = this._vertexBuffers[NW],
-            OW = WW.getData();
-          if (!OW) continue;
-          const LW = WW.getSize(),
+      copy(RR) {
+        if (!this.model) return super.copy(RR);
+        const JR = new VR(RR, this.jH()),
+          GR = this.NuR(void 0, !0);
+        GR && JR.setIndices(GR);
+        let ZR = !1;
+        for (const uR in this._vertexBuffers) {
+          const RR = this._vertexBuffers[uR],
+            GR = RR.getData();
+          if (!GR) continue;
+          const qR = RR.getSize(),
             {
-              type: cW,
-              byteOffset: wW,
-              byteStride: tW,
-              normalized: ZW
-            } = WW;
-          PW ||= WW.isUpdatable();
-          const xW = WW.getIsInstanced() ? (OW instanceof Array ? 4 * OW.length : OW.byteLength) / tW : this.getTotalVertices(),
-            lW = (0, EW.l)(OW, LW, cW, wW, tW, xW, !0),
-            AW = {
-              updatable: WW.isUpdatable(),
-              stride: LW,
-              type: cW,
-              normalized: ZW,
+              type: iR,
+              byteOffset: fR,
+              byteStride: VR,
+              normalized: KR
+            } = RR;
+          ZR ||= RR.isUpdatable();
+          const wR = RR.getIsInstanced() ? (GR instanceof Array ? 4 * GR.length : GR.byteLength) / VR : this.getTotalVertices(),
+            rR = (0, tR.l)(GR, qR, iR, fR, VR, wR, !0),
+            eR = {
+              updatable: RR.isUpdatable(),
+              stride: qR,
+              type: iR,
+              normalized: KR,
               takeBufferOwnership: !0,
-              instanced: WW.getIsInstanced()
+              instanced: RR.getIsInstanced()
             };
-          iW.setVerticesBuffer(new mW.g(this.VA(), lW, NW, AW), xW)
+          JR.setVerticesBuffer(new yR.c(this.ke(), rR, uR, eR), wR)
         }
-        return iW._updatable = PW, iW._boundingInfo = new NW.b(this.extend.minimum, this.extend.maximum), iW.relink(), iW
+        return JR._updatable = ZR, JR._boundingInfo = new uR.c(this.extend.minimum, this.extend.maximum), JR.relink(), JR
       }
-      static mergeMeshes(WW, iW, OW, mW, EW, NW) {
-        const cW = WW[0].bD(),
-          wW = new LW.e(WW[0].name + "_merged", cW),
-          ZW = new tW(PW.b.RandomId(), cW, void 0, !1, wW);
+      static mergeMeshes(RR, JR, GR, yR, tR, uR) {
+        const iR = RR[0].jH(),
+          fR = new qR.b(RR[0].name + "_merged", iR),
+          KR = new VR(ZR.e.RandomId(), iR, void 0, !1, fR);
         try {
-          if (!LW.e.MergeMeshes(WW, iW, OW, wW, EW, NW)) return wW.dispose(), null
-        } catch (xW) {
-          throw wW.dispose(), xW
+          if (!qR.b.MergeMeshes(RR, JR, GR, fR, tR, uR)) return fR.dispose(), null
+        } catch (wR) {
+          throw fR.dispose(), wR
         }
-        return ZW.relink(), wW
+        return KR.relink(), fR
       }
-      removeVerticesData(WW) {
-        this.releaseUnlessInstanced(WW), super.removeVerticesData(WW)
+      removeVerticesData(RR) {
+        this.releaseUnlessInstanced(RR), super.removeVerticesData(RR)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(WW) {
-        var iW;
-        WW && null !== (iW = this.getVertexBuffer(WW)) && void 0 !== iW && iW.getIsInstanced() || this.release()
+      releaseUnlessInstanced(RR) {
+        var JR;
+        RR && null !== (JR = this.getVertexBuffer(RR)) && void 0 !== JR && JR.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, wW.q)(this.model), this.model = null)
+        this.model && ((0, fR.s)(this.model), this.model = null)
       }
     }
 
-    function ZW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new LW.e(WW, OW);
-      const EW = (0, wW.i)(iW),
+    function KR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new qR.b(RR, GR);
+      const tR = (0, fR.j)(JR),
         {
-          positions: NW,
-          normals: ZW,
-          uvs: xW,
-          indices: lW,
-          named: AW = {}
-        } = iW,
-        bW = new cW.c;
-      bW.positions = NW, bW.normals = null !== ZW && void 0 !== ZW ? ZW : null, bW.uvs = null !== xW && void 0 !== xW ? xW : null, bW.indices = lW;
-      const jW = new tW(PW.b.RandomId(), OW, bW, !1, mW);
+          positions: uR,
+          normals: KR,
+          uvs: wR,
+          indices: rR,
+          named: eR = {}
+        } = JR,
+        aR = new iR.c;
+      aR.positions = uR, aR.normals = null !== KR && void 0 !== KR ? KR : null, aR.uvs = null !== wR && void 0 !== wR ? wR : null, aR.indices = rR;
+      const LR = new VR(ZR.e.RandomId(), GR, aR, !1, yR);
       for (const {
-          kind: PW,
-          components: LW
+          kind: ZR,
+          components: qR
         }
-        of EW.vertexAttributes) PW in AW && mW.setVerticesData(PW, AW[PW], !1, LW);
-      return jW.link(EW), mW
+        of tR.vertexAttributes) ZR in eR && yR.setVerticesData(ZR, eR[ZR], !1, qR);
+      return LR.link(tR), yR
     }
 
-    function xW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const EW = new LW.e(WW, OW),
+    function wR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const tR = new qR.b(RR, GR),
         {
-          positions: NW,
-          normals: PW,
-          uvs: wW,
-          indices: tW
-        } = iW;
-      return Object.assign(new cW.c, {
-        positions: NW,
-        normals: PW,
-        uvs: wW,
-        indices: tW
-      }).applyToMesh(EW, mW), EW
+          positions: uR,
+          normals: ZR,
+          uvs: fR,
+          indices: VR
+        } = JR;
+      return Object.assign(new iR.c, {
+        positions: uR,
+        normals: ZR,
+        uvs: fR,
+        indices: VR
+      }).applyToMesh(tR, yR), tR
     }
   },
-  39931: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => cW,
-      c: () => mW,
-      g: () => PW,
-      h: () => NW,
-      l: () => EW,
-      p: () => LW,
-      t: () => wW,
-      w: () => tW
+  39934: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR,
+      g: () => ZR,
+      k: () => uR,
+      o: () => tR,
+      r: () => qR,
+      t: () => fR,
+      w: () => VR,
+      x: () => iR
     });
-    const mW = 16,
-      EW = 256,
-      NW = {
+    const yR = 16,
+      tR = 256,
+      uR = {
         position: 0,
         time: 3,
         direction: 4,
@@ -1231,9 +1231,9 @@ export const modules = {
         seed: 9,
         colour: 12
       },
-      PW = 16,
-      LW = 256,
-      cW = {
+      ZR = 16,
+      qR = 256,
+      iR = {
         gravity: 0,
         colorCount: 3,
         colorDead: 4,
@@ -1241,28 +1241,28 @@ export const modules = {
         remapCount: 9,
         ramp: 10,
         colorPositions: 12,
-        color1: 12 + mW,
-        color2: 12 + 5 * mW,
-        Sj: 12 + 9 * mW,
-        remap: 12 + 13 * mW
+        color1: 12 + yR,
+        color2: 12 + 5 * yR,
+        BL: 12 + 9 * yR,
+        remap: 12 + 13 * yR
       },
-      wW = 12 + 17 * mW,
-      tW = [cW.colorCount, cW.velocityCount, cW.remapCount, cW.ramp]
+      fR = 12 + 17 * yR,
+      VR = [iR.colorCount, iR.velocityCount, iR.remapCount, iR.ramp]
   },
-  39925: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => jW,
-      g: () => sW
+  39932: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => LR,
+      g: () => WR
     });
-    var mW = OW(38285),
-      EW = OW(38235),
-      NW = OW(38431),
-      PW = OW(39931);
-    class LW {
-      constructor(WW) {
-        this.aZ = WW, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
-        const iW = Math.max(1, WW);
-        this.records = new Float32Array(iW * PW.g), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(iW).fill(-1 / 0)
+    var yR = GR(38239),
+      tR = GR(38195),
+      uR = GR(38397),
+      ZR = GR(39934);
+    class qR {
+      constructor(RR) {
+        this.hK = RR, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
+        const JR = Math.max(1, RR);
+        this.records = new Float32Array(JR * ZR.g), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(JR).fill(-1 / 0)
       }
       restart() {
         this.cursor = 0, this.highWater = 0
@@ -1270,30 +1270,30 @@ export const modules = {
       clear() {
         this.deaths.fill(-1 / 0), this.restart(), this.uploadFrom = -1, this.wrapTo = 0
       }
-      freeSlot(WW) {
-        const iW = this.aZ;
-        for (let OW = 0; OW < iW; OW++) {
-          const OW = this.cursor;
-          if (this.cursor = OW + 1 === iW ? 0 : OW + 1, this.deaths[OW] <= WW) return OW
+      freeSlot(RR) {
+        const JR = this.hK;
+        for (let GR = 0; GR < JR; GR++) {
+          const GR = this.cursor;
+          if (this.cursor = GR + 1 === JR ? 0 : GR + 1, this.deaths[GR] <= RR) return GR
         }
         return -1
       }
-      written(WW, iW) {
-        this.deaths[WW] = iW, WW >= this.highWater && (this.highWater = WW + 1), this.uploadFrom < 0 ? (this.uploadFrom = WW, this.uploadTo = WW + 1) : WW >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, WW + 1) : this.wrapTo = Math.max(this.wrapTo, WW + 1)
+      written(RR, JR) {
+        this.deaths[RR] = JR, RR >= this.highWater && (this.highWater = RR + 1), this.uploadFrom < 0 ? (this.uploadFrom = RR, this.uploadTo = RR + 1) : RR >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, RR + 1) : this.wrapTo = Math.max(this.wrapTo, RR + 1)
       }
-      shiftTimes(WW) {
-        const iW = this.records,
-          OW = this.highWater * PW.g;
-        for (let mW = PW.h.time; mW < OW; mW += PW.g) iW[mW] -= WW;
+      shiftTimes(RR) {
+        const JR = this.records,
+          GR = this.highWater * ZR.g;
+        for (let yR = ZR.k.time; yR < GR; yR += ZR.g) JR[yR] -= RR;
         this.highWater > 0 && (this.uploadFrom = 0, this.uploadTo = this.highWater, this.wrapTo = 0)
       }
-      takeUploads(WW) {
-        this.uploadFrom >= 0 && (WW(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && WW(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
+      takeUploads(RR) {
+        this.uploadFrom >= 0 && (RR(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && RR(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
       }
-      liveCount(WW) {
-        let iW = 0;
-        for (let OW = 0; OW < this.highWater; OW++) this.deaths[OW] > WW && iW++;
-        return iW
+      liveCount(RR) {
+        let JR = 0;
+        for (let GR = 0; GR < this.highWater; GR++) this.deaths[GR] > RR && JR++;
+        return JR
       }
       drawCount() {
         return this.highWater
@@ -1302,107 +1302,107 @@ export const modules = {
         return this.cursor < this.highWater ? this.cursor : 0
       }
     }
-    var cW = OW(38369),
-      wW = OW(39938),
-      tW = OW(39940),
-      ZW = OW(39948);
-    class xW {
+    var iR = GR(38329),
+      fR = GR(39941),
+      VR = GR(39943),
+      KR = GR(39950);
+    class wR {
       constructor() {
-        this.particleEmitterType = new tW.d, this.texture = null, this.blendMode = ZW.d, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = EW.fA.Zero(), this.worldOffset = new EW.fA(0, 0, 0), this.color1 = new cW.c(1, 1, 1, 1), this.color2 = new cW.c(1, 1, 1, 1), this.colorDead = new cW.c(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
+        this.particleEmitterType = new VR.b, this.texture = null, this.blendMode = KR.f, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = tR.Fe.Zero(), this.worldOffset = new tR.Fe(0, 0, 0), this.color1 = new iR.e(1, 1, 1, 1), this.color2 = new iR.e(1, 1, 1, 1), this.colorDead = new iR.e(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
       }
       get direction1() {
-        var WW;
-        return null !== (WW = lW(this).direction1) && void 0 !== WW ? WW : EW.fA.Zero()
+        var RR;
+        return null !== (RR = rR(this).direction1) && void 0 !== RR ? RR : tR.Fe.Zero()
       }
-      set direction1(WW) {
-        const iW = lW(this);
-        iW.direction1 && (iW.direction1 = WW)
+      set direction1(RR) {
+        const JR = rR(this);
+        JR.direction1 && (JR.direction1 = RR)
       }
       get direction2() {
-        var WW;
-        return null !== (WW = lW(this).direction2) && void 0 !== WW ? WW : EW.fA.Zero()
+        var RR;
+        return null !== (RR = rR(this).direction2) && void 0 !== RR ? RR : tR.Fe.Zero()
       }
-      set direction2(WW) {
-        const iW = lW(this);
-        iW.direction2 && (iW.direction2 = WW)
+      set direction2(RR) {
+        const JR = rR(this);
+        JR.direction2 && (JR.direction2 = RR)
       }
       get minEmitBox() {
-        var WW;
-        return null !== (WW = lW(this).minEmitBox) && void 0 !== WW ? WW : EW.fA.Zero()
+        var RR;
+        return null !== (RR = rR(this).minEmitBox) && void 0 !== RR ? RR : tR.Fe.Zero()
       }
-      set minEmitBox(WW) {
-        const iW = lW(this);
-        iW.minEmitBox && (iW.minEmitBox = WW)
+      set minEmitBox(RR) {
+        const JR = rR(this);
+        JR.minEmitBox && (JR.minEmitBox = RR)
       }
       get maxEmitBox() {
-        var WW;
-        return null !== (WW = lW(this).maxEmitBox) && void 0 !== WW ? WW : EW.fA.Zero()
+        var RR;
+        return null !== (RR = rR(this).maxEmitBox) && void 0 !== RR ? RR : tR.Fe.Zero()
       }
-      set maxEmitBox(WW) {
-        const iW = lW(this);
-        iW.maxEmitBox && (iW.maxEmitBox = WW)
+      set maxEmitBox(RR) {
+        const JR = rR(this);
+        JR.maxEmitBox && (JR.maxEmitBox = RR)
       }
-      createBoxEmitter(WW, iW, OW, mW) {
-        const EW = new tW.d;
-        return this.particleEmitterType = EW, EW.direction1 = WW, EW.direction2 = iW, EW.minEmitBox = OW, EW.maxEmitBox = mW, EW
+      createBoxEmitter(RR, JR, GR, yR) {
+        const tR = new VR.b;
+        return this.particleEmitterType = tR, tR.direction1 = RR, tR.direction2 = JR, tR.minEmitBox = GR, tR.maxEmitBox = yR, tR
       }
-      addColorGradient(WW, iW, OW) {
-        return this.colorGradients ??= [], this.colorGradients.push(new wW.d(WW, iW, OW)), this.colorGradients.sort(AW), this
+      addColorGradient(RR, JR, GR) {
+        return this.colorGradients ??= [], this.colorGradients.push(new fR.c(RR, JR, GR)), this.colorGradients.sort(eR), this
       }
-      removeColorGradient(WW) {
-        return bW(this.colorGradients, WW), this
+      removeColorGradient(RR) {
+        return aR(this.colorGradients, RR), this
       }
       getColorGradients() {
         return this.colorGradients
       }
-      addVelocityGradient(WW, iW, OW) {
-        return this.velocityGradients ??= [], this.velocityGradients.push(new wW.i(WW, iW, OW)), this.velocityGradients.sort(AW), this
+      addVelocityGradient(RR, JR, GR) {
+        return this.velocityGradients ??= [], this.velocityGradients.push(new fR.k(RR, JR, GR)), this.velocityGradients.sort(eR), this
       }
       getVelocityGradients() {
         return this.velocityGradients
       }
-      addColorRemapGradient(WW, iW, OW) {
-        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new wW.i(WW, iW, OW)), this.colorRemapGradients.sort(AW), this
+      addColorRemapGradient(RR, JR, GR) {
+        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new fR.k(RR, JR, GR)), this.colorRemapGradients.sort(eR), this
       }
       getColorRemapGradients() {
         return this.colorRemapGradients
       }
-      addRampGradient(WW, iW) {
-        return this.rampGradients ??= [], this.rampGradients.push(new wW.g(WW, iW)), this.rampGradients.sort(AW), this
+      addRampGradient(RR, JR) {
+        return this.rampGradients ??= [], this.rampGradients.push(new fR.g(RR, JR)), this.rampGradients.sort(eR), this
       }
-      removeRampGradient(WW) {
-        return bW(this.rampGradients, WW), this
+      removeRampGradient(RR) {
+        return aR(this.rampGradients, RR), this
       }
       getRampGradients() {
         return this.rampGradients
       }
     }
 
-    function lW(WW) {
-      return WW.particleEmitterType
+    function rR(RR) {
+      return RR.particleEmitterType
     }
 
-    function AW(WW, iW) {
-      return WW.gradient < iW.gradient ? -1 : WW.gradient > iW.gradient ? 1 : 0
+    function eR(RR, JR) {
+      return RR.gradient < JR.gradient ? -1 : RR.gradient > JR.gradient ? 1 : 0
     }
 
-    function bW(WW, iW) {
-      const OW = WW ? WW.findIndex((WW => WW.gradient === iW)) : -1;
-      OW >= 0 && WW.splice(OW, 1)
+    function aR(RR, JR) {
+      const GR = RR ? RR.findIndex((RR => RR.gradient === JR)) : -1;
+      GR >= 0 && RR.splice(GR, 1)
     }
-    class jW extends xW {
-      constructor(WW, iW, OW) {
-        super(), this.name = WW, this.host = OW, this.onDispose = UW, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = EW.fA.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.JA = !1, this.emitterMatrix = new EW.Matrix, this.inverseEmitterMatrix = new EW.Matrix, this.spawned = {
-          position: new EW.fA,
-          direction: new EW.fA
-        }, this.ring = new LW(iW)
+    class LR extends wR {
+      constructor(RR, JR, GR) {
+        super(), this.name = RR, this.host = GR, this.onDispose = nR, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = tR.Fe.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.He = !1, this.emitterMatrix = new tR.Matrix, this.inverseEmitterMatrix = new tR.Matrix, this.spawned = {
+          position: new tR.Fe,
+          direction: new tR.Fe
+        }, this.ring = new qR(JR)
       }
       get emitter() {
         return this.emitterValue
       }
-      set emitter(WW) {
-        var iW;
-        null === (iW = this.emitterDisposed) || void 0 === iW || iW.remove(), this.emitterDisposed = null, this.emitterValue = WW, WW && MW(WW) && (this.emitterDisposed = WW.jD.add((() => {
+      set emitter(RR) {
+        var JR;
+        null === (JR = this.emitterDisposed) || void 0 === JR || JR.remove(), this.emitterDisposed = null, this.emitterValue = RR, RR && AR(RR) && (this.emitterDisposed = RR.YH.add((() => {
           this.emitterDisposed = null, this.dispose()
         })))
       }
@@ -1422,12 +1422,12 @@ export const modules = {
         return this.started && !this.stopped
       }
       isReady() {
-        return !this.JA && null !== this.emitterValue && this.host.canDraw(this)
+        return !this.He && null !== this.emitterValue && this.host.canDraw(this)
       }
       dispose() {
-        var WW;
-        let iW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this.JA || (this.JA = !0, null === (WW = this.emitterDisposed) || void 0 === WW || WW.remove(), this.emitterDisposed = null, iW && ((0, NW.D)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
+        var RR;
+        let JR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this.He || (this.He = !0, null === (RR = this.emitterDisposed) || void 0 === RR || RR.remove(), this.emitterDisposed = null, JR && ((0, uR.B)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
       }
       reset() {
         this.liveUntil = -1 / 0, this.alive = !1, this.ring.clear()
@@ -1435,258 +1435,258 @@ export const modules = {
       getActiveCount() {
         return this.ring.liveCount(this.time)
       }
-      animateIfActive(WW) {
-        const iW = this.emitter;
-        return !!iW && !(MW(iW) && !iW.isEnabled()) && this.animate(WW)
+      animateIfActive(RR) {
+        const JR = this.emitter;
+        return !!JR && !(AR(JR) && !JR.isEnabled()) && this.animate(RR)
       }
-      animate(WW) {
+      animate(RR) {
         if (!this.started) return !1;
         if (!this.isReady()) return this.endIfSpent(), !1;
-        const iW = this.updateSpeed * WW;
-        let OW;
-        return this.manualEmitCount > -1 ? (OW = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (OW = this.emitRate * iW | 0, this.newPartsExcess += this.emitRate * iW - OW), this.newPartsExcess > 1 && (OW += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (OW = 0), this.alive = this.liveUntil > this.time, this.time += iW, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), OW > 0 && this.spawn(OW), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
+        const JR = this.updateSpeed * RR;
+        let GR;
+        return this.manualEmitCount > -1 ? (GR = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (GR = this.emitRate * JR | 0, this.newPartsExcess += this.emitRate * JR - GR), this.newPartsExcess > 1 && (GR += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (GR = 0), this.alive = this.liveUntil > this.time, this.time += JR, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), GR > 0 && this.spawn(GR), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
       }
       endIfSpent() {
-        this.started && this.stopped && !this.JA && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
+        this.started && this.stopped && !this.He && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
       }
       end() {
-        var WW;
-        return this.started = !1, null === (WW = this.onAnimationEnd) || void 0 === WW || WW.call(this), !!this.JA || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
+        var RR;
+        return this.started = !1, null === (RR = this.onAnimationEnd) || void 0 === RR || RR.call(this), !!this.He || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
       }
       hasLiveParticles() {
         return this.liveUntil > this.time
       }
-      drawOffset(WW, iW) {
-        WW[iW] = this.anchor[0] + this.shift[0] + this.worldOffset.x, WW[iW + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, WW[iW + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
+      drawOffset(RR, JR) {
+        RR[JR] = this.anchor[0] + this.shift[0] + this.worldOffset.x, RR[JR + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, RR[JR + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
       }
       drawTime() {
         return this.time - this.epoch
       }
-      YWW(WW, iW) {
-        this.emitterValue && MW(this.emitterValue) ? (this.shift[0] -= WW[0], this.shift[1] -= WW[1], this.shift[2] -= WW[2]) : this.worldOffset.set(-iW[0], -iW[1], -iW[2])
+      fJR(RR, JR) {
+        this.emitterValue && AR(this.emitterValue) ? (this.shift[0] -= RR[0], this.shift[1] -= RR[1], this.shift[2] -= RR[2]) : this.worldOffset.set(-JR[0], -JR[1], -JR[2])
       }
-      spawn(WW) {
-        var iW, OW;
-        const NW = this.emitterValue,
-          LW = MW(NW) ? NW.getWorldMatrix() : EW.Matrix.TranslationToRef(NW.x, NW.y, NW.z, this.emitterMatrix);
-        LW.invertToRef(this.inverseEmitterMatrix);
+      spawn(RR) {
+        var JR, GR;
+        const uR = this.emitterValue,
+          qR = AR(uR) ? uR.getWorldMatrix() : tR.Matrix.TranslationToRef(uR.x, uR.y, uR.z, this.emitterMatrix);
+        qR.invertToRef(this.inverseEmitterMatrix);
         const {
-          position: cW,
-          direction: wW
-        } = this.spawned, tW = this.spawned, ZW = this.ring, xW = this.liveUntil <= this.time;
-        xW && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, ZW.restart());
+          position: iR,
+          direction: fR
+        } = this.spawned, VR = this.spawned, KR = this.ring, wR = this.liveUntil <= this.time;
+        wR && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, KR.restart());
         const {
-          records: lW,
-          recordBits: AW
-        } = ZW, bW = PW.h, jW = null === (iW = this.getColorGradients()) || void 0 === iW ? void 0 : iW[0], UW = jW ? jW.color1 : this.color1, kW = jW ? null !== (OW = jW.color2) && void 0 !== OW ? OW : jW.color1 : this.color2;
-        for (let EW = 0; EW < WW; EW++) {
-          const WW = ZW.freeSlot(this.time);
-          if (WW < 0) break;
-          const iW = (0, mW.RandomRange)(this.minLifeTime, this.maxLifeTime),
-            OW = (0, mW.RandomRange)(this.minEmitPower, this.maxEmitPower);
-          this.particleEmitterType.startPositionFunction(LW, cW, tW, !1), this.particleEmitterType.startDirectionFunction(LW, wW, tW, !1, this.inverseEmitterMatrix), 0 === OW ? wW.set(0, 0, 0) : wW.scaleInPlace(OW);
-          const NW = (0, mW.RandomRange)(this.minSize, this.maxSize);
-          xW && 0 === EW && (this.anchor[0] = cW.x, this.anchor[1] = cW.y, this.anchor[2] = cW.z);
-          const jW = WW * PW.g;
-          lW[jW + bW.position] = cW.x - this.anchor[0] - this.shift[0], lW[jW + bW.position + 1] = cW.y - this.anchor[1] - this.shift[1], lW[jW + bW.position + 2] = cW.z - this.anchor[2] - this.shift[2], lW[jW + bW.time] = this.time - this.epoch, lW[jW + bW.direction] = wW.x, lW[jW + bW.direction + 1] = wW.y, lW[jW + bW.direction + 2] = wW.z, lW[jW + bW.lifeTime] = iW, lW[jW + bW.size] = NW, AW[jW + bW.seed] = 4294967296 * Math.random() >>> 0;
-          const sW = Math.random();
-          lW[jW + bW.colour] = UW.r + (kW.r - UW.r) * sW, lW[jW + bW.colour + 1] = UW.g + (kW.g - UW.g) * sW, lW[jW + bW.colour + 2] = UW.b + (kW.b - UW.b) * sW, lW[jW + bW.colour + 3] = UW.a + (kW.a - UW.a) * sW;
-          const MW = this.time + iW;
-          MW > this.liveUntil && (this.liveUntil = MW), ZW.written(WW, MW)
+          records: rR,
+          recordBits: eR
+        } = KR, aR = ZR.k, LR = null === (JR = this.getColorGradients()) || void 0 === JR ? void 0 : JR[0], nR = LR ? LR.color1 : this.color1, UR = LR ? null !== (GR = LR.color2) && void 0 !== GR ? GR : LR.color1 : this.color2;
+        for (let tR = 0; tR < RR; tR++) {
+          const RR = KR.freeSlot(this.time);
+          if (RR < 0) break;
+          const JR = (0, yR.RandomRange)(this.minLifeTime, this.maxLifeTime),
+            GR = (0, yR.RandomRange)(this.minEmitPower, this.maxEmitPower);
+          this.particleEmitterType.startPositionFunction(qR, iR, VR, !1), this.particleEmitterType.startDirectionFunction(qR, fR, VR, !1, this.inverseEmitterMatrix), 0 === GR ? fR.set(0, 0, 0) : fR.scaleInPlace(GR);
+          const uR = (0, yR.RandomRange)(this.minSize, this.maxSize);
+          wR && 0 === tR && (this.anchor[0] = iR.x, this.anchor[1] = iR.y, this.anchor[2] = iR.z);
+          const LR = RR * ZR.g;
+          rR[LR + aR.position] = iR.x - this.anchor[0] - this.shift[0], rR[LR + aR.position + 1] = iR.y - this.anchor[1] - this.shift[1], rR[LR + aR.position + 2] = iR.z - this.anchor[2] - this.shift[2], rR[LR + aR.time] = this.time - this.epoch, rR[LR + aR.direction] = fR.x, rR[LR + aR.direction + 1] = fR.y, rR[LR + aR.direction + 2] = fR.z, rR[LR + aR.lifeTime] = JR, rR[LR + aR.size] = uR, eR[LR + aR.seed] = 4294967296 * Math.random() >>> 0;
+          const WR = Math.random();
+          rR[LR + aR.colour] = nR.r + (UR.r - nR.r) * WR, rR[LR + aR.colour + 1] = nR.g + (UR.g - nR.g) * WR, rR[LR + aR.colour + 2] = nR.b + (UR.b - nR.b) * WR, rR[LR + aR.colour + 3] = nR.a + (UR.a - nR.a) * WR;
+          const AR = this.time + JR;
+          AR > this.liveUntil && (this.liveUntil = AR), KR.written(RR, AR)
         }
       }
     }
 
-    function UW() {}
-    const kW = 5;
+    function nR() {}
+    const UR = 5;
 
-    function sW(WW, iW) {
-      const OW = [];
-      let mW = 0;
-      for (const EW of WW) EW.isReady() || (mW++, OW.length < kW && OW.push(`${iW} particle system ${EW.name}`));
-      return mW > OW.length && OW.push(`${mW-OW.length} more ${iW} particle systems`), OW
+    function WR(RR, JR) {
+      const GR = [];
+      let yR = 0;
+      for (const tR of RR) tR.isReady() || (yR++, GR.length < UR && GR.push(`${JR} particle system ${tR.name}`));
+      return yR > GR.length && GR.push(`${yR-GR.length} more ${JR} particle systems`), GR
     }
 
-    function MW(WW) {
-      return void 0 !== WW.position
+    function AR(RR) {
+      return void 0 !== RR.position
     }
   },
-  53776: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => jW,
-      g: () => LW,
-      h: () => PW,
-      i: () => wW
+  53594: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => LR,
+      d: () => qR,
+      e: () => ZR,
+      g: () => fR
     });
-    var mW = OW(38369),
-      EW = OW(39938),
-      NW = OW(39931);
+    var yR = GR(38329),
+      tR = GR(39941),
+      uR = GR(39934);
 
-    function PW(WW, iW, OW, mW) {
-      const EW = NW.A;
-      iW.fill(0), WW.gravity.toArray(iW, EW.gravity), WW.colorDead.toArray(iW, EW.colorDead), OW[EW.ramp] = WW.useRampGradients ? 1 : 0;
-      const PW = WW.getColorGradients(),
-        LW = xW(WW, PW, "colour", mW);
-      OW[EW.colorCount] = LW;
-      for (let NW = 0; NW < LW; NW++) {
-        var cW;
-        const WW = PW[lW(PW, NW)];
-        iW[EW.colorPositions + NW] = WW.gradient, WW.color1.toArray(iW, EW.color1 + 4 * NW), (null !== (cW = WW.color2) && void 0 !== cW ? cW : WW.color1).toArray(iW, EW.color2 + 4 * NW)
+    function ZR(RR, JR, GR, yR) {
+      const tR = uR.x;
+      JR.fill(0), RR.gravity.toArray(JR, tR.gravity), RR.colorDead.toArray(JR, tR.colorDead), GR[tR.ramp] = RR.useRampGradients ? 1 : 0;
+      const ZR = RR.getColorGradients(),
+        qR = wR(RR, ZR, "colour", yR);
+      GR[tR.colorCount] = qR;
+      for (let uR = 0; uR < qR; uR++) {
+        var iR;
+        const RR = ZR[rR(ZR, uR)];
+        JR[tR.colorPositions + uR] = RR.gradient, RR.color1.toArray(JR, tR.color1 + 4 * uR), (null !== (iR = RR.color2) && void 0 !== iR ? iR : RR.color1).toArray(JR, tR.color2 + 4 * uR)
       }
-      const wW = WW.getVelocityGradients(),
-        tW = xW(WW, wW, "Sj", mW);
-      OW[EW.velocityCount] = tW;
-      for (let NW = 0; NW < tW; NW++) kW(iW, EW.Sj + 4 * NW, wW[lW(wW, NW)]);
-      const ZW = WW.useRampGradients ? WW.getColorRemapGradients() : null,
-        AW = xW(WW, ZW, "colour remap", mW);
-      OW[EW.remapCount] = AW;
-      for (let NW = 0; NW < AW; NW++) kW(iW, EW.remap + 4 * NW, ZW[lW(ZW, NW)])
+      const fR = RR.getVelocityGradients(),
+        VR = wR(RR, fR, "BL", yR);
+      GR[tR.velocityCount] = VR;
+      for (let uR = 0; uR < VR; uR++) UR(JR, tR.BL + 4 * uR, fR[rR(fR, uR)]);
+      const KR = RR.useRampGradients ? RR.getColorRemapGradients() : null,
+        eR = wR(RR, KR, "colour remap", yR);
+      GR[tR.remapCount] = eR;
+      for (let uR = 0; uR < eR; uR++) UR(JR, tR.remap + 4 * uR, KR[rR(KR, uR)])
     }
 
-    function LW() {
+    function qR() {
       return {
         key: [],
-        texels: new Uint8Array(4 * NW.l)
+        texels: new Uint8Array(4 * uR.o)
       }
     }
-    const cW = [];
+    const iR = [];
 
-    function wW(WW, iW) {
-      return tW(WW, cW), !UW(cW, iW.key) && (iW.key.length = 0, iW.key.push(...cW), iW.key.length > 0 && function(WW, iW) {
-        for (let OW = 0; OW < NW.l; OW++) EW.m.GetCurrentGradient(OW / NW.l, WW, ((WW, iW, OW) => {
-          mW.Color3.LerpToRef(WW.color, iW.color, OW, ZW)
-        })), iW[4 * OW] = 255 * ZW.r, iW[4 * OW + 1] = 255 * ZW.g, iW[4 * OW + 2] = 255 * ZW.b, iW[4 * OW + 3] = 255
-      }(WW.getRampGradients(), iW.texels), !0)
+    function fR(RR, JR) {
+      return VR(RR, iR), !nR(iR, JR.key) && (JR.key.length = 0, JR.key.push(...iR), JR.key.length > 0 && function(RR, JR) {
+        for (let GR = 0; GR < uR.o; GR++) tR.m.GetCurrentGradient(GR / uR.o, RR, ((RR, JR, GR) => {
+          yR.Color3.LerpToRef(RR.color, JR.color, GR, KR)
+        })), JR[4 * GR] = 255 * KR.r, JR[4 * GR + 1] = 255 * KR.g, JR[4 * GR + 2] = 255 * KR.b, JR[4 * GR + 3] = 255
+      }(RR.getRampGradients(), JR.texels), !0)
     }
 
-    function tW(WW, iW) {
-      iW.length = 0;
-      const OW = WW.useRampGradients ? WW.getRampGradients() : null;
-      if (null !== OW && void 0 !== OW && OW.length) {
-        iW.push(OW.length);
-        for (const WW of OW) iW.push(WW.gradient, WW.color.r, WW.color.g, WW.color.b)
+    function VR(RR, JR) {
+      JR.length = 0;
+      const GR = RR.useRampGradients ? RR.getRampGradients() : null;
+      if (null !== GR && void 0 !== GR && GR.length) {
+        JR.push(GR.length);
+        for (const RR of GR) JR.push(RR.gradient, RR.color.r, RR.color.g, RR.color.b)
       }
     }
-    const ZW = new mW.Color3;
+    const KR = new yR.Color3;
 
-    function xW(WW, iW, OW, mW) {
-      return iW ? iW.length > NW.c ? (mW(`particleStops:${OW}`, `GPU particles use the first 2 and last ${NW.c-2} of more than ${NW.c} ${OW} gradient stops (${WW.name})`), NW.c) : iW.length : 0
+    function wR(RR, JR, GR, yR) {
+      return JR ? JR.length > uR.c ? (yR(`particleStops:${GR}`, `GPU particles use the first 2 and last ${uR.c-2} of more than ${uR.c} ${GR} gradient stops (${RR.name})`), uR.c) : JR.length : 0
     }
 
-    function lW(WW, iW) {
-      return iW < 2 || WW.length <= NW.c ? iW : WW.length - NW.c + iW
+    function rR(RR, JR) {
+      return JR < 2 || RR.length <= uR.c ? JR : RR.length - uR.c + JR
     }
-    const AW = new Float32Array(NW.t),
-      bW = new Uint32Array(AW.buffer);
+    const eR = new Float32Array(uR.t),
+      aR = new Uint32Array(eR.buffer);
 
-    function jW(WW, iW, OW) {
-      return PW(WW, AW, bW, OW), iW && UW(bW, iW) ? null : bW.slice()
+    function LR(RR, JR, GR) {
+      return ZR(RR, eR, aR, GR), JR && nR(aR, JR) ? null : aR.slice()
     }
 
-    function UW(WW, iW) {
-      if (WW.length !== iW.length) return !1;
-      for (let OW = 0; OW < WW.length; OW++)
-        if (WW[OW] !== iW[OW]) return !1;
+    function nR(RR, JR) {
+      if (RR.length !== JR.length) return !1;
+      for (let GR = 0; GR < RR.length; GR++)
+        if (RR[GR] !== JR[GR]) return !1;
       return !0
     }
 
-    function kW(WW, iW, OW) {
-      var mW;
-      WW[iW] = OW.gradient, WW[iW + 1] = OW.factor1, WW[iW + 2] = null !== (mW = OW.factor2) && void 0 !== mW ? mW : OW.factor1
+    function UR(RR, JR, GR) {
+      var yR;
+      RR[JR] = GR.gradient, RR[JR + 1] = GR.factor1, RR[JR + 2] = null !== (yR = GR.factor2) && void 0 !== yR ? yR : GR.factor1
     }
   },
-  42633: (WW, iW, OW) => {
-    function mW(WW, iW, OW) {
-      const mW = iW * iW * 4,
-        EW = WW[0].layers,
-        NW = EW * (WW.length - 1) + WW[WW.length - 1].layers,
-        PW = new Uint8Array(NW * mW);
-      WW.forEach(((iW, OW) => {
-        const NW = OW + 1 < WW.length ? Math.min(iW.layers, EW) : iW.layers;
-        PW.set(new Uint8Array(iW.pixels.buffer, iW.pixels.byteOffset, NW * mW), OW * EW * mW)
+  42704: (RR, JR, GR) => {
+    function yR(RR, JR, GR) {
+      const yR = JR * JR * 4,
+        tR = RR[0].layers,
+        uR = tR * (RR.length - 1) + RR[RR.length - 1].layers,
+        ZR = new Uint8Array(uR * yR);
+      RR.forEach(((JR, GR) => {
+        const uR = GR + 1 < RR.length ? Math.min(JR.layers, tR) : JR.layers;
+        ZR.set(new Uint8Array(JR.pixels.buffer, JR.pixels.byteOffset, uR * yR), GR * tR * yR)
       }));
-      const LW = Math.max(1, Math.min(NW, OW || NW));
-      if (LW === NW) return [{
-        pixels: PW,
-        layers: NW
+      const qR = Math.max(1, Math.min(uR, GR || uR));
+      if (qR === uR) return [{
+        pixels: ZR,
+        layers: uR
       }];
-      const cW = [];
-      for (let wW = 0; wW < NW; wW += LW) {
-        const WW = Math.min(NW, wW + LW);
-        cW.push({
-          pixels: PW.slice(wW * mW, WW * mW),
-          layers: WW - wW
+      const iR = [];
+      for (let fR = 0; fR < uR; fR += qR) {
+        const RR = Math.min(uR, fR + qR);
+        iR.push({
+          pixels: ZR.slice(fR * yR, RR * yR),
+          layers: RR - fR
         })
       }
-      return cW
+      return iR
     }
-    OW.d(iW, {
-      e: () => mW,
-      i: () => NW
+    GR.d(JR, {
+      b: () => yR,
+      c: () => uR
     });
-    const EW = new WeakMap;
+    const tR = new WeakMap;
 
-    function NW(WW, iW, OW) {
-      var mW, NW;
-      const PW = null !== (mW = EW.get(WW)) && void 0 !== mW ? mW : new Map;
-      EW.set(WW, PW);
-      const LW = null !== (NW = PW.get(iW[0])) && void 0 !== NW ? NW : [];
-      PW.set(iW[0], LW);
-      const cW = LW.find((WW => WW.urls.length === iW.length && WW.urls.every(((WW, OW) => WW === iW[OW]))));
-      if (cW) return cW.built;
-      const wW = {
-        urls: [...iW],
-        built: OW()
+    function uR(RR, JR, GR) {
+      var yR, uR;
+      const ZR = null !== (yR = tR.get(RR)) && void 0 !== yR ? yR : new Map;
+      tR.set(RR, ZR);
+      const qR = null !== (uR = ZR.get(JR[0])) && void 0 !== uR ? uR : [];
+      ZR.set(JR[0], qR);
+      const iR = qR.find((RR => RR.urls.length === JR.length && RR.urls.every(((RR, GR) => RR === JR[GR]))));
+      if (iR) return iR.built;
+      const fR = {
+        urls: [...JR],
+        built: GR()
       };
-      return LW.push(wW), wW.built.catch((() => {
-        LW.splice(LW.indexOf(wW), 1)
-      })), wW.built
+      return qR.push(fR), fR.built.catch((() => {
+        qR.splice(qR.indexOf(fR), 1)
+      })), fR.built
     }
   },
-  39948: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW,
-      d: () => EW,
-      e: () => cW,
-      h: () => ZW
+  39950: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      f: () => tR,
+      i: () => iR,
+      m: () => KR
     });
-    var mW = OW(38364);
-    const EW = 0,
-      NW = 3,
-      PW = 4,
-      LW = new Map([
-        [EW, mW.e.ALPHA_ONEONE],
-        [1, mW.e.ALPHA_COMBINE],
-        [2, mW.e.ALPHA_ADD],
-        [NW, mW.e.ALPHA_MULTIPLY],
-        [-1, mW.e.ALPHA_SUBTRACT]
+    var yR = GR(38325);
+    const tR = 0,
+      uR = 3,
+      ZR = 4,
+      qR = new Map([
+        [tR, yR.d.ALPHA_ONEONE],
+        [1, yR.d.ALPHA_COMBINE],
+        [2, yR.d.ALPHA_ADD],
+        [uR, yR.d.ALPHA_MULTIPLY],
+        [-1, yR.d.ALPHA_SUBTRACT]
       ]);
 
-    function cW(WW) {
-      var iW;
-      return null !== (iW = LW.get(WW)) && void 0 !== iW ? iW : WW
+    function iR(RR) {
+      var JR;
+      return null !== (JR = qR.get(RR)) && void 0 !== JR ? JR : RR
     }
-    const wW = [NW, 2],
-      tW = new Map;
+    const fR = [uR, 2],
+      VR = new Map;
 
-    function ZW(WW) {
-      if (WW === PW) return wW;
-      let iW = tW.get(WW);
-      return iW || (iW = [WW], tW.set(WW, iW)), iW
+    function KR(RR) {
+      if (RR === ZR) return fR;
+      let JR = VR.get(RR);
+      return JR || (JR = [RR], VR.set(RR, JR)), JR
     }
   },
-  53774: (WW, iW, OW) => {
-    function mW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const iW = new Set;
-      return (OW, mW) => {
-        iW.has(OW) || (iW.add(OW), console.warn(WW + mW))
+  53589: (RR, JR, GR) => {
+    function yR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const JR = new Set;
+      return (GR, yR) => {
+        JR.has(GR) || (JR.add(GR), console.warn(RR + yR))
       }
     }
-    OW.d(iW, {
-      b: () => mW
+    GR.d(JR, {
+      d: () => yR
     })
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

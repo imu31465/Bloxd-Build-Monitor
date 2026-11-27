@@ -1,485 +1,485 @@
 export const id = 92;
 export const ids = [92, 220];
 export const modules = {
-  35111: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      EverythingMenu: () => Kt
+  35024: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      EverythingMenu: () => XV
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1172),
-      LW = OW(1391),
-      cW = OW(2180),
-      wW = OW(1532),
-      tW = OW(1095),
-      ZW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1270),
+      qR = GR(1468),
+      iR = GR(2278),
+      fR = GR(1590),
+      VR = GR(1179),
+      KR = GR(1378);
 
-    function xW(WW) {
+    function wR(RR) {
       let {
-        items: iW,
-        link: OW,
-        onClick: mW,
-        selectedItemId: EW,
-        className: xW,
-        padStartsOnTab: lW = !0
-      } = WW;
+        items: JR,
+        link: GR,
+        onClick: yR,
+        selectedItemId: tR,
+        className: wR,
+        padStartsOnTab: rR = !0
+      } = RR;
       const {
-        t: AW
-      } = (0, PW.B)(), bW = (0, tW.h)(), jW = [];
-      for (const NW of iW) {
-        var UW;
-        const WW = jW[jW.length - 1];
-        var kW;
-        if (WW && WW.title === (null !== (UW = NW.section) && void 0 !== UW ? UW : null)) WW.items.push(NW);
-        else jW.push({
-          title: null !== (kW = NW.section) && void 0 !== kW ? kW : null,
-          items: [NW]
+        t: eR
+      } = (0, ZR.A)(), aR = (0, VR.h)(), LR = [];
+      for (const uR of JR) {
+        var nR;
+        const RR = LR[LR.length - 1];
+        var UR;
+        if (RR && RR.title === (null !== (nR = uR.section) && void 0 !== nR ? nR : null)) RR.items.push(uR);
+        else LR.push({
+          title: null !== (UR = uR.section) && void 0 !== UR ? UR : null,
+          items: [uR]
         })
       }
-      return (0, ZW.jsxs)("div", {
-        className: NW()("MenuSideBarBody", xW),
+      return (0, KR.jsxs)("div", {
+        className: uR()("MenuSideBarBody", wR),
         "data-pad-tabs": "2",
-        children: [jW.map(((WW, iW) => {
-          var OW;
-          return (0, ZW.jsxs)("div", {
+        children: [LR.map(((RR, JR) => {
+          var GR;
+          return (0, KR.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [WW.title && (0, ZW.jsx)("div", {
+            children: [RR.title && (0, KR.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: AW(WW.title)
-            }), WW.items.map((WW => {
-              var iW;
-              const OW = !!WW.iconElement || !!WW.faIcon;
-              return (0, ZW.jsxs)("div", {
+              children: eR(RR.title)
+            }), RR.items.map((RR => {
+              var JR;
+              const GR = !!RR.iconElement || !!RR.faIcon;
+              return (0, KR.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": EW === WW.id ? "true" : void 0,
-                "data-pad-default-focus": lW && EW === WW.id || void 0,
-                className: NW()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: EW === WW.id
+                "data-pad-selected": tR === RR.id ? "true" : void 0,
+                "data-pad-default-focus": rR && tR === RR.id || void 0,
+                className: uR()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: tR === RR.id
                 }),
                 onClick: () => {
-                  mW(WW.id)
+                  yR(RR.id)
                 },
-                children: [OW && (0, ZW.jsx)("div", {
+                children: [GR && (0, KR.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (iW = WW.iconElement) && void 0 !== iW ? iW : (0, ZW.jsx)(LW.c, {
-                    name: WW.faIcon
+                  children: null !== (JR = RR.iconElement) && void 0 !== JR ? JR : (0, KR.jsx)(qR.d, {
+                    name: RR.faIcon
                   })
-                }), (!bW || !OW) && (0, ZW.jsx)("div", {
-                  children: AW(WW.title)
-                }), WW.redDot && (0, ZW.jsx)(cW.b, {
+                }), (!aR || !GR) && (0, KR.jsx)("div", {
+                  children: eR(RR.title)
+                }), RR.redDot && (0, KR.jsx)(iR.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, WW.id)
+              }, RR.id)
             }))]
-          }, null !== (OW = WW.title) && void 0 !== OW ? OW : iW)
-        })), OW && (0, ZW.jsxs)("div", {
-          ...(0, wW.fb)(),
+          }, null !== (GR = RR.title) && void 0 !== GR ? GR : JR)
+        })), GR && (0, KR.jsxs)("div", {
+          ...(0, fR.bb)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: OW.onClick,
-          children: [(0, ZW.jsx)("div", {
+          onClick: GR.onClick,
+          children: [(0, KR.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, ZW.jsx)(LW.c, {
-              name: OW.faIcon
+            children: (0, KR.jsx)(qR.d, {
+              name: GR.faIcon
             })
-          }), (0, ZW.jsx)("div", {
-            children: AW(OW.title)
-          }), (0, ZW.jsx)(LW.c, {
+          }), (0, KR.jsx)("div", {
+            children: eR(GR.title)
+          }), (0, KR.jsx)(qR.d, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var lW = OW(2959),
-      AW = OW(1107),
-      bW = OW(3332),
-      jW = OW(4275),
-      UW = OW(100),
-      kW = OW(2037),
-      sW = OW(3118),
-      MW = OW(3122),
-      KW = OW(1782),
-      SW = OW(1383),
-      YW = OW(5910),
-      yW = OW(25),
-      TW = OW(35114);
+    var rR = GR(3037),
+      eR = GR(1196),
+      aR = GR(3465),
+      LR = GR(4352),
+      nR = GR(103),
+      UR = GR(2134),
+      WR = GR(3204),
+      AR = GR(3210),
+      CR = GR(1867),
+      XR = GR(1465),
+      MR = GR(6037),
+      BR = GR(25),
+      lR = GR(35029);
 
-    function JW(WW) {
+    function pR(RR) {
       let {
-        setApplySettingsCallback: iW
-      } = WW;
+        setApplySettingsCallback: JR
+      } = RR;
       const {
-        clientEscMenuOptions: OW
-      } = (0, yW.p)(["clientEscMenuOptions"]), [EW, NW] = (0, mW.useState)(!1), [PW, LW] = (0, mW.useState)(!1), [cW, tW] = (0, mW.useState)(6400), [xW, lW] = (0, mW.useState)(3600), [AW, bW] = (0, mW.useState)(!1), [jW, UW] = (0, mW.useState)(!1);
+        clientEscMenuOptions: GR
+      } = (0, BR.o)(["clientEscMenuOptions"]), [tR, uR] = (0, yR.useState)(!1), [ZR, qR] = (0, yR.useState)(!1), [iR, VR] = (0, yR.useState)(6400), [wR, rR] = (0, yR.useState)(3600), [eR, aR] = (0, yR.useState)(!1), [LR, nR] = (0, yR.useState)(!1);
 
-      function kW(WW) {
-        const iW = "screenshot" === WW ? LW : NW;
-        iW(!0);
-        const OW = AW ? "normals" : jW ? "depth" : null;
-        TW.devTools.downloadScene(WW, {
-          width: cW,
-          height: xW,
-          colouring: OW
-        }).catch((WW => {
-          console.error("Couldn't download the scene", WW)
+      function UR(RR) {
+        const JR = "screenshot" === RR ? qR : uR;
+        JR(!0);
+        const GR = eR ? "normals" : LR ? "depth" : null;
+        lR.devTools.downloadScene(RR, {
+          width: iR,
+          height: wR,
+          colouring: GR
+        }).catch((RR => {
+          console.error("Couldn't download the scene", RR)
         })).finally((() => {
-          iW(!1)
+          JR(!1)
         }))
       }
-      return (0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, ZW.jsx)(YW.e, {
+        children: [(0, KR.jsx)(MR.e, {
           label: "Disable Ambient Occlusion",
-          checked: OW.disableAmbientOcclusion,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: WW
-            }), iW((() => YW.n))
+          checked: GR.disableAmbientOcclusion,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: RR
+            }), JR((() => MR.m))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), TW.devTools.supports("ambientLight") && (0, ZW.jsx)(YW.k, {
+        }), lR.devTools.supports("ambientLight") && (0, KR.jsx)(MR.i, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: OW.ambientLightIntensity,
-          onChange: WW => {
-            TW.devTools.setAmbientLightIntensity(WW).then((() => {
-              yW.d.setClientEscMenuOptions({
-                ambientLightIntensity: WW
+          initValue: GR.ambientLightIntensity,
+          onChange: RR => {
+            lR.devTools.setAmbientLightIntensity(RR).then((() => {
+              BR.d.setClientEscMenuOptions({
+                ambientLightIntensity: RR
               })
-            })).catch((WW => {
-              console.error("Couldn't set the ambient light", WW)
+            })).catch((RR => {
+              console.error("Couldn't set the ambient light", RR)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), TW.devTools.supports("weaponRaycasts") && (0, ZW.jsx)(YW.e, {
+        }), lR.devTools.supports("weaponRaycasts") && (0, KR.jsx)(MR.e, {
           label: "Show Weapon Raycasts",
-          checked: OW.showWeaponRaycasts,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              showWeaponRaycasts: WW
+          checked: GR.showWeaponRaycasts,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              showWeaponRaycasts: RR
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), TW.devTools.supports("sceneDownload") && (0, ZW.jsxs)("div", {
+        }), lR.devTools.supports("sceneDownload") && (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, ZW.jsx)(YW.e, {
+            children: [(0, KR.jsx)(MR.e, {
               label: "Apply normal-based coloring",
-              checked: AW,
-              onClick: WW => {
-                bW(WW), WW && UW(!1)
+              checked: eR,
+              onClick: RR => {
+                aR(RR), RR && nR(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, ZW.jsx)(YW.e, {
+            }), (0, KR.jsx)(MR.e, {
               label: "Apply depth-based coloring",
-              checked: jW,
-              onClick: WW => {
-                UW(WW), WW && bW(!1)
+              checked: LR,
+              onClick: RR => {
+                nR(RR), RR && aR(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, ZW.jsxs)("div", {
+            }), (0, KR.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, ZW.jsx)("div", {
+              children: [(0, KR.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, ZW.jsx)(KW.b, {
+              }), (0, KR.jsx)(CR.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (WW, iW) => {
-                  const OW = parseInt(WW) || 6400;
-                  tW(OW)
+                onValueChange: (RR, JR) => {
+                  const GR = parseInt(RR) || 6400;
+                  VR(GR)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: cW.toString()
-              }), (0, ZW.jsx)("span", {
+                defaultValue: iR.toString()
+              }), (0, KR.jsx)("span", {
                 children: "X"
-              }), (0, ZW.jsx)(KW.b, {
+              }), (0, KR.jsx)(CR.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (WW, iW) => {
-                  const OW = parseInt(WW) || 3600;
-                  lW(OW)
+                onValueChange: (RR, JR) => {
+                  const GR = parseInt(RR) || 3600;
+                  rR(GR)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: xW.toString()
+                defaultValue: wR.toString()
               })]
-            }), (0, ZW.jsxs)("div", {
+            }), (0, KR.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, ZW.jsxs)(wW.f, {
+              children: [(0, KR.jsxs)(fR.g, {
                 onClick: () => {
-                  kW("screenshot")
+                  UR("screenshot")
                 },
-                disabled: PW,
-                children: [PW && (0, ZW.jsx)(SW.d, {}), "Download Screenshot"]
-              }), (0, ZW.jsxs)(wW.f, {
+                disabled: ZR,
+                children: [ZR && (0, KR.jsx)(XR.d, {}), "Download Screenshot"]
+              }), (0, KR.jsxs)(fR.g, {
                 onClick: () => {
-                  kW("glb")
+                  UR("glb")
                 },
-                disabled: EW,
-                children: [EW && (0, ZW.jsx)(SW.d, {}), "Download GLB"]
+                disabled: tR,
+                children: [tR && (0, KR.jsx)(XR.d, {}), "Download GLB"]
               })]
             })]
-          }), (0, ZW.jsx)("div", {
+          }), (0, KR.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var hW = OW(136),
-      HW = OW(1111),
-      nW = OW(35118),
-      uW = OW(4060),
-      oW = OW(1605),
-      dW = OW(1259),
-      eW = OW(1223),
-      vW = OW(2146),
-      gW = OW(1584),
-      DW = OW(344),
-      VW = OW(614),
-      pW = OW(3210),
-      fW = OW(3214);
-    const CW = "store:retiredRankEnds";
+    var gR = GR(134),
+      bR = GR(1201),
+      vR = GR(35035),
+      OR = GR(4155),
+      xR = GR(1663),
+      NR = GR(1359),
+      DR = GR(1328),
+      HR = GR(2248),
+      oR = GR(1647),
+      cR = GR(377),
+      PR = GR(645),
+      IR = GR(3314),
+      mR = GR(3322);
+    const zR = "store:retiredRankEnds";
 
-    function XW(WW) {
+    function SR(RR) {
       let {
-        until: iW,
-        className: OW
-      } = WW;
+        until: JR,
+        className: GR
+      } = RR;
       const {
-        t: mW,
-        selectedLanguage: EW
-      } = (0, PW.B)(), NW = new Date(iW).toLocaleDateString((0, PW.k)(EW.code, CW), {
+        t: yR,
+        selectedLanguage: tR
+      } = (0, ZR.A)(), uR = new Date(JR).toLocaleDateString((0, ZR.n)(tR.code, zR), {
         year: "numeric",
         month: "short",
         day: "numeric"
       });
-      return (0, ZW.jsx)("span", {
-        className: OW,
-        children: mW(CW, {
-          date: NW
+      return (0, KR.jsx)("span", {
+        className: GR,
+        children: yR(zR, {
+          date: uR
         })
       })
     }
-    var BW = OW(3132),
-      qW = OW(4096),
-      RW = OW(4092),
-      GW = OW(192),
-      IW = OW(1736),
-      aW = OW(1244),
-      rW = OW(4115);
+    var jR = GR(3217),
+      dR = GR(4186),
+      ER = GR(4180),
+      YR = GR(216),
+      kR = GR(1803),
+      QR = GR(1343),
+      FR = GR(4198);
 
-    function zW(WW, iW, OW) {
-      const mW = VW.p[(0, VW.m)(VW.p, iW)],
-        EW = void 0 === mW ? void 0 : (0, GW.c)(WW.entitlements, mW.entitlementId);
-      return void 0 === EW || null === EW.expiresAt || (0, RW.f)(EW) <= OW ? null : EW.willRenew && null === EW.billingIssueDetectedAt ? {
+    function TR(RR, JR, GR) {
+      const yR = PR.r[(0, PR.l)(PR.r, JR)],
+        tR = void 0 === yR ? void 0 : (0, YR.b)(RR.entitlements, yR.entitlementId);
+      return void 0 === tR || null === tR.expiresAt || (0, ER.g)(tR) <= GR ? null : tR.willRenew && null === tR.billingIssueDetectedAt ? {
         renews: !0,
-        at: Math.max(EW.expiresAt, OW)
+        at: Math.max(tR.expiresAt, GR)
       } : {
         renews: !1,
-        at: (0, RW.f)(EW)
+        at: (0, ER.g)(tR)
       }
     }
-    var FW = OW(4076),
-      QW = OW(4085);
-    const Wi = {
+    var sR = GR(4171),
+      hR = GR(4175);
+    const RJ = {
       cancel: !1,
       resume: !1,
       manage: !1
     };
 
-    function ii(WW) {
-      return WW instanceof qW.c && "storeUnavailable" === WW.code ? (console.warn("Billing: the store didn't take a subscription change:", WW), "store:subscriptionStoreUnavailable") : WW instanceof qW.c && "subscriptionActionUnavailable" === WW.code ? (console.warn("Billing: a subscription action billing no longer offers:", WW), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", WW), "store:subscriptionChangeFailed")
+    function JJ(RR) {
+      return RR instanceof dR.d && "storeUnavailable" === RR.code ? (console.warn("Billing: the store didn't take a subscription change:", RR), "store:subscriptionStoreUnavailable") : RR instanceof dR.d && "subscriptionActionUnavailable" === RR.code ? (console.warn("Billing: a subscription action billing no longer offers:", RR), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", RR), "store:subscriptionChangeFailed")
     }
-    async function Oi() {
+    async function GJ() {
       try {
-        var WW;
+        var RR;
         const {
-          offering: iW
-        } = await (0, QW.getBillingClient)().getOfferings((0, pW.l)(VW.g.id).placementId);
-        return null !== (WW = null === iW || void 0 === iW ? void 0 : iW.packages.find(FW.isPricedPackage)) && void 0 !== WW ? WW : null
-      } catch (iW) {
-        return console.warn("Billing: loading the rank plan's price failed:", iW), null
+          offering: JR
+        } = await (0, hR.getBillingClient)().getOfferings((0, IR.l)(PR.h.id).placementId);
+        return null !== (RR = null === JR || void 0 === JR ? void 0 : JR.packages.find(sR.isPricedPackage)) && void 0 !== RR ? RR : null
+      } catch (JR) {
+        return console.warn("Billing: loading the rank plan's price failed:", JR), null
       }
     }
 
-    function mi(WW) {
+    function yJ(RR) {
       const {
-        userContext: iW
-      } = (0, AW.e)(), {
-        superRankInfo: OW
-      } = iW, EW = (0, BW.usePurchasesAllowed)(), NW = (0, DW.sc)(OW), PW = WW && EW && (NW || iW.ranksMayChange), [LW, cW] = (0, mW.useState)(null), [wW, tW] = (0, mW.useState)(!1), [ZW, xW] = (0, mW.useState)(!1), [lW, bW] = (0, mW.useState)(null);
-      (0, mW.useEffect)((() => {
-        if (!PW) return;
-        let WW = !1;
-        const OW = () => {
-          Promise.all([(0, QW.getBillingClient)().getSubscriptions(), Oi()]).then((OW => {
-            let [mW, EW] = OW;
-            WW || (cW({
-              for: iW,
-              answer: mW,
-              pkg: EW
-            }), tW(!1))
-          }), (iW => {
-            console.error("Billing: loading the player's subscriptions failed:", iW), WW || tW(!0)
+        userContext: JR
+      } = (0, eR.d)(), {
+        superRankInfo: GR
+      } = JR, tR = (0, jR.usePurchasesAllowed)(), uR = (0, cR.wc)(GR), ZR = RR && tR && (uR || JR.ranksMayChange), [qR, iR] = (0, yR.useState)(null), [fR, VR] = (0, yR.useState)(!1), [KR, wR] = (0, yR.useState)(!1), [rR, aR] = (0, yR.useState)(null);
+      (0, yR.useEffect)((() => {
+        if (!ZR) return;
+        let RR = !1;
+        const GR = () => {
+          Promise.all([(0, hR.getBillingClient)().getSubscriptions(), GJ()]).then((GR => {
+            let [yR, tR] = GR;
+            RR || (iR({
+              for: JR,
+              answer: yR,
+              pkg: tR
+            }), VR(!1))
+          }), (JR => {
+            console.error("Billing: loading the player's subscriptions failed:", JR), RR || VR(!0)
           }))
         };
-        OW();
-        const mW = IW.e.addRefetchListener("billing", OW);
+        GR();
+        const yR = kR.e.addRefetchListener("billing", GR);
         return () => {
-          WW = !0, mW()
+          RR = !0, yR()
         }
-      }), [PW, iW]);
-      const jW = PW && NW && null !== LW && LW.for === iW ? function(WW, iW, OW, mW) {
-        var EW;
+      }), [ZR, JR]);
+      const LR = ZR && uR && null !== qR && qR.for === JR ? function(RR, JR, GR, yR) {
+        var tR;
         const {
-          customerInfo: NW,
-          actions: PW
-        } = WW, LW = VW.p[(0, VW.m)(VW.p, iW)], cW = void 0 === LW ? void 0 : (0, GW.c)(NW.entitlements, LW.entitlementId), wW = zW(NW, iW, mW);
-        if (void 0 === cW || null === wW) return null;
-        const tW = Object.entries(NW.subscriptions).find((WW => {
-          let [, iW] = WW;
-          return iW.productId === cW.productId && iW.store === cW.store && !(0, RW.l)(iW.status)
+          customerInfo: uR,
+          actions: ZR
+        } = RR, qR = PR.r[(0, PR.l)(PR.r, JR)], iR = void 0 === qR ? void 0 : (0, YR.b)(uR.entitlements, qR.entitlementId), fR = TR(uR, JR, yR);
+        if (void 0 === iR || null === fR) return null;
+        const VR = Object.entries(uR.subscriptions).find((RR => {
+          let [, JR] = RR;
+          return JR.productId === iR.productId && JR.store === iR.store && !(0, ER.m)(JR.status)
         }));
-        if (void 0 === tW) return null;
-        const [ZW, xW] = tW, lW = (null === OW || void 0 === OW ? void 0 : OW.productId) === xW.productId && xW.store === (0, BW.getBillingStore)();
+        if (void 0 === VR) return null;
+        const [KR, wR] = VR, rR = (null === GR || void 0 === GR ? void 0 : GR.productId) === wR.productId && wR.store === (0, jR.getBillingStore)();
         return {
-          key: ZW,
-          tierId: iW,
-          info: xW,
-          actions: null !== (EW = (0, GW.c)(PW, ZW)) && void 0 !== EW ? EW : Wi,
-          date: wW,
-          pkg: lW ? OW : null
+          key: KR,
+          tierId: JR,
+          info: wR,
+          actions: null !== (tR = (0, YR.b)(ZR, KR)) && void 0 !== tR ? tR : RJ,
+          date: fR,
+          pkg: rR ? GR : null
         }
-      }(LW.answer, OW.tier, LW.pkg, Date.now()) : null;
+      }(qR.answer, GR.tier, qR.pkg, Date.now()) : null;
       return {
-        subscription: jW,
-        loadFailed: PW && NW && wW,
-        busy: ZW,
-        errorKey: lW,
-        change: async function(WW) {
-          if (null === jW || ZW) return;
-          xW(!0), bW(null);
-          const OW = (0, QW.getBillingClient)();
+        subscription: LR,
+        loadFailed: ZR && uR && fR,
+        busy: KR,
+        errorKey: rR,
+        change: async function(RR) {
+          if (null === LR || KR) return;
+          wR(!0), aR(null);
+          const GR = (0, hR.getBillingClient)();
           try {
-            const mW = await ("cancel" === WW ? OW.cancelSubscription(jW.key) : OW.resumeSubscription(jW.key));
-            cW({
-              for: iW,
-              answer: mW,
-              pkg: jW.pkg
-            }), (0, rW.f)()
-          } catch (mW) {
-            bW(ii(mW))
+            const yR = await ("cancel" === RR ? GR.cancelSubscription(LR.key) : GR.resumeSubscription(LR.key));
+            iR({
+              for: JR,
+              answer: yR,
+              pkg: LR.pkg
+            }), (0, FR.d)()
+          } catch (yR) {
+            aR(JJ(yR))
           } finally {
-            xW(!1)
+            wR(!1)
           }
         },
         openManagePage: async function() {
-          if (null === jW || ZW) return;
-          const WW = window.open("", "_blank");
-          xW(!0), bW(null);
+          if (null === LR || KR) return;
+          const RR = window.open("", "_blank");
+          wR(!0), aR(null);
           try {
-            const iW = await (0, QW.getBillingClient)().subscriptionManagementUrl(jW.key, aW.e.get().getCurrentLanguageCode());
-            null === WW ? window.open(iW, "_blank", "noopener") : (WW.opener = null, WW.location.href = iW)
-          } catch (iW) {
-            null === WW || void 0 === WW || WW.close(), bW(ii(iW))
+            const JR = await (0, hR.getBillingClient)().subscriptionManagementUrl(LR.key, QR.g.get().getCurrentLanguageCode());
+            null === RR ? window.open(JR, "_blank", "noopener") : (RR.opener = null, RR.location.href = JR)
+          } catch (JR) {
+            null === RR || void 0 === RR || RR.close(), aR(JJ(JR))
           } finally {
-            xW(!1)
+            wR(!1)
           }
         }
       }
     }
-    var Ei = OW(1422),
-      Ni = OW(4147);
+    var tJ = GR(1493),
+      uJ = GR(4227);
 
-    function Pi(WW, iW) {
-      return new Date(WW).toLocaleDateString(iW, {
+    function ZJ(RR, JR) {
+      return new Date(RR).toLocaleDateString(JR, {
         year: "numeric",
         month: "short",
         day: "numeric"
       })
     }
 
-    function Li(WW) {
+    function qJ(RR) {
       let {
-        showing: iW,
-        className: OW
-      } = WW;
+        showing: JR,
+        className: GR
+      } = RR;
       const {
-        t: mW,
-        selectedLanguage: EW
-      } = (0, PW.B)(), {
-        subscription: cW,
-        loadFailed: tW,
-        busy: xW,
-        errorKey: lW,
-        change: AW,
-        openManagePage: bW
-      } = mi(iW);
-      if (tW) return (0, ZW.jsx)("div", {
-        className: NW()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", OW),
-        children: mW("store:subscriptionLoadFailed")
+        t: yR,
+        selectedLanguage: tR
+      } = (0, ZR.A)(), {
+        subscription: iR,
+        loadFailed: VR,
+        busy: wR,
+        errorKey: rR,
+        change: eR,
+        openManagePage: aR
+      } = yJ(JR);
+      if (VR) return (0, KR.jsx)("div", {
+        className: uR()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", GR),
+        children: yR("store:subscriptionLoadFailed")
       });
-      if (null === cW) return null;
+      if (null === iR) return null;
       const {
-        date: jW,
-        info: UW,
-        actions: kW,
-        pkg: sW
-      } = cW, MW = jW.renews ? "store:renewsOn" : "store:endsOn", KW = Pi(jW.at, (0, PW.k)(EW.code, MW)), SW = mW((0, pW.l)(cW.tierId).nameKey), YW = null !== UW.billingIssueDetectedAt;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("RankSubscriptionManage", OW),
-        children: [(0, ZW.jsxs)("div", {
+        date: LR,
+        info: nR,
+        actions: UR,
+        pkg: WR
+      } = iR, AR = LR.renews ? "store:renewsOn" : "store:endsOn", CR = ZJ(LR.at, (0, ZR.n)(tR.code, AR)), XR = yR((0, IR.l)(iR.tierId).nameKey), MR = null !== nR.billingIssueDetectedAt;
+      return (0, KR.jsxs)("div", {
+        className: uR()("RankSubscriptionManage", GR),
+        children: [(0, KR.jsxs)("div", {
           className: "RankSubscriptionManageStatus SmallTextBold",
-          children: [mW(MW, {
-            date: KW
-          }), jW.renews && null !== sW && (0, BW.subscriptionsSold)() && (0, ZW.jsxs)(ZW.Fragment, {
-            children: [" \xb7 ", mW("store:pricePerMonth", {
-              price: (0, Ni.e)(sW)
+          children: [yR(AR, {
+            date: CR
+          }), LR.renews && null !== WR && (0, jR.subscriptionsSold)() && (0, KR.jsxs)(KR.Fragment, {
+            children: [" \xb7 ", yR("store:pricePerMonth", {
+              price: (0, uJ.d)(WR)
             })]
           })]
-        }), YW && (0, ZW.jsxs)("div", {
+        }), MR && (0, KR.jsxs)("div", {
           className: "RankSubscriptionManageWarning SmallTextBold",
-          children: [(0, ZW.jsx)(LW.c, {
+          children: [(0, KR.jsx)(qR.d, {
             name: "triangle-exclamation"
-          }), " ", mW("store:paymentFailing", {
-            rank: SW
+          }), " ", yR("store:paymentFailing", {
+            rank: XR
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "RankSubscriptionManageActions",
-          children: [kW.manage && (0, ZW.jsx)(wW.h, {
-            disabled: xW,
+          children: [UR.manage && (0, KR.jsx)(fR.i, {
+            disabled: wR,
             onClick: () => {
-              bW()
+              aR()
             },
-            children: mW(YW ? "store:updatePayment" : "payments:manageSubscription")
-          }), kW.resume && (0, ZW.jsx)(wW.f, {
-            loading: xW,
+            children: yR(MR ? "store:updatePayment" : "payments:manageSubscription")
+          }), UR.resume && (0, KR.jsx)(fR.g, {
+            loading: wR,
             onClick: () => {
-              AW("resume")
+              eR("resume")
             },
-            children: mW("store:resumeSubscription")
-          }), kW.cancel && (0, ZW.jsx)(wW.O, {
-            loading: xW,
+            children: yR("store:resumeSubscription")
+          }), UR.cancel && (0, KR.jsx)(fR.M, {
+            loading: wR,
             onClick: () => {
-              (async function(WW, iW, OW) {
-                const mW = Date.now() >= WW.info.currentPeriodEnd;
-                return !0 === await Ei.NotificationProvider.showPromptPopup({
+              (async function(RR, JR, GR) {
+                const yR = Date.now() >= RR.info.currentPeriodEnd;
+                return !0 === await tJ.NotificationProvider.showPromptPopup({
                   title: "store:cancelSubscriptionTitle",
-                  subtitle: mW ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
+                  subtitle: yR ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
                   textOpts: {
                     title: {
-                      rank: iW
+                      rank: JR
                     },
                     subtitle: {
-                      rank: iW,
-                      date: OW
+                      rank: JR,
+                      date: GR
                     }
                   },
                   confirmText: "store:cancelSubscription",
@@ -489,143 +489,143 @@ export const modules = {
                   destructive: !0,
                   unlockPointerKey: "rankSubscriptionCancel"
                 }).getResult()
-              })(cW, SW, Pi(UW.currentPeriodEnd, (0, PW.k)(EW.code, "store:cancelKeepsUntil"))).then((WW => {
-                WW && AW("cancel")
+              })(iR, XR, ZJ(nR.currentPeriodEnd, (0, ZR.n)(tR.code, "store:cancelKeepsUntil"))).then((RR => {
+                RR && eR("cancel")
               }))
             },
-            children: mW("store:cancelSubscription")
+            children: yR("store:cancelSubscription")
           })]
-        }), null !== lW && (0, ZW.jsx)("div", {
+        }), null !== rR && (0, KR.jsx)("div", {
           className: "RankSubscriptionManageError SmallTextBold",
-          children: mW(lW)
+          children: yR(rR)
         })]
       })
     }
-    var ci = OW(3125),
-      wi = OW(3702),
-      ti = OW(1755);
-    async function Zi() {
+    var iJ = GR(3213),
+      fJ = GR(3810),
+      VJ = GR(1825);
+    async function KJ() {
       try {
-        return function(WW) {
-          const iW = new Map;
+        return function(RR) {
+          const JR = new Map;
           for (const {
-              store: OW,
-              status: mW,
-              autoRenewStatus: EW,
-              managementUrl: NW
+              store: GR,
+              status: yR,
+              autoRenewStatus: tR,
+              managementUrl: uR
             }
-            of Object.values(WW.subscriptions)) !(0, RW.j)(OW) || (0, RW.l)(mW) || "willNotRenew" === EW || iW.has(OW) || iW.set(OW, null !== NW && void 0 !== NW ? NW : RW.o[OW]);
-          return Array.from(iW, (WW => {
-            let [iW, OW] = WW;
+            of Object.values(RR.subscriptions)) !(0, ER.i)(GR) || (0, ER.m)(yR) || "willNotRenew" === tR || JR.has(GR) || JR.set(GR, null !== uR && void 0 !== uR ? uR : ER.o[GR]);
+          return Array.from(JR, (RR => {
+            let [JR, GR] = RR;
             return {
-              store: iW,
-              managementUrl: OW
+              store: JR,
+              managementUrl: GR
             }
           }))
-        }(await (0, ti.o)((0, QW.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (WW) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", WW), null
+        }(await (0, VJ.k)((0, hR.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (RR) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", RR), null
       }
     }
 
-    function xi(WW) {
+    function wJ(RR) {
       const {
-        t: iW,
-        selectedLanguage: OW
-      } = (0, PW.B)(), {
-        userContext: EW
-      } = (0, AW.e)(), {
-        superRankInfo: NW
-      } = EW, LW = (0, BW.usePurchasesAllowed)(), cW = WW && ((0, DW.sc)(NW) || EW.ranksMayChange) && LW, {
-        accountId: wW,
-        data: tW
-      } = (0, wi.g)(rW.e, cW);
-      if ((0, mW.useEffect)((() => {
-          if (cW) return rW.e.watchAccount(), IW.e.addRefetchListener("billing", (WW => {
-            "reconnected" === WW ? rW.e.refreshAfterReconnect() : rW.e.refresh()
+        t: JR,
+        selectedLanguage: GR
+      } = (0, ZR.A)(), {
+        userContext: tR
+      } = (0, eR.d)(), {
+        superRankInfo: uR
+      } = tR, qR = (0, jR.usePurchasesAllowed)(), iR = RR && ((0, cR.wc)(uR) || tR.ranksMayChange) && qR, {
+        accountId: fR,
+        data: VR
+      } = (0, fJ.h)(FR.c, iR);
+      if ((0, yR.useEffect)((() => {
+          if (iR) return FR.c.watchAccount(), kR.e.addRefetchListener("billing", (RR => {
+            "reconnected" === RR ? FR.c.refreshAfterReconnect() : FR.c.refresh()
           }))
-        }), [cW]), !cW || !(0, DW.sc)(NW) || null === tW || wW !== EW.whamm) return null;
-      const ZW = zW(tW, NW.tier, Date.now());
-      if (null === ZW) return null;
-      const xW = ZW.renews ? "store:renewsOn" : "store:endsOn",
-        lW = (0, PW.e)(OW.code, xW, ZW.at, {
+        }), [iR]), !iR || !(0, cR.wc)(uR) || null === VR || fR !== tR.whamm) return null;
+      const KR = TR(VR, uR.tier, Date.now());
+      if (null === KR) return null;
+      const wR = KR.renews ? "store:renewsOn" : "store:endsOn",
+        rR = (0, ZR.f)(GR.code, wR, KR.at, {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        bW = (0, BW.getBillingStore)(),
-        jW = null !== bW && (0, RW.j)(bW) ? function(WW, iW) {
-          var OW;
-          const mW = Object.values(WW.subscriptions).find((WW => WW.store === iW && !(0, RW.l)(WW.status)));
-          return void 0 === mW ? null : null !== (OW = mW.managementUrl) && void 0 !== OW ? OW : RW.o[iW]
-        }(tW, bW) : null;
+        aR = (0, jR.getBillingStore)(),
+        LR = null !== aR && (0, ER.i)(aR) ? function(RR, JR) {
+          var GR;
+          const yR = Object.values(RR.subscriptions).find((RR => RR.store === JR && !(0, ER.m)(RR.status)));
+          return void 0 === yR ? null : null !== (GR = yR.managementUrl) && void 0 !== GR ? GR : ER.o[JR]
+        }(VR, aR) : null;
       return {
-        text: iW(xW, {
-          date: lW
+        text: JR(wR, {
+          date: rR
         }),
-        manageUrl: jW
+        manageUrl: LR
       }
     }
-    var li = OW(1434),
-      Ai = OW(1201),
-      bi = OW(5643),
-      ji = OW(1556),
-      Ui = OW(4906),
-      ki = OW(3285);
+    var rJ = GR(1501),
+      eJ = GR(1304),
+      aJ = GR(5766),
+      LJ = GR(1618),
+      nJ = GR(5013),
+      UJ = GR(3410);
 
-    function si(WW) {
+    function WJ(RR) {
       let {
-        showing: iW
-      } = WW;
+        showing: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), {
-        data: mW,
-        failed: EW
-      } = (0, wi.g)(Ui.f, iW);
-      return 0 === (null === mW || void 0 === mW ? void 0 : mW.length) || null === mW && !EW ? null : (0, ZW.jsxs)("div", {
+        t: GR
+      } = (0, ZR.A)(), {
+        data: yR,
+        failed: tR
+      } = (0, fJ.h)(nJ.g, JR);
+      return 0 === (null === yR || void 0 === yR ? void 0 : yR.length) || null === yR && !tR ? null : (0, KR.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: OW("paymentHistory:title")
-        }), null === mW && EW && (0, ZW.jsx)("div", {
+          children: GR("paymentHistory:title")
+        }), null === yR && tR && (0, KR.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: OW("paymentHistory:loadFailed")
-        }), null !== mW && (0, ZW.jsx)("ul", {
+          children: GR("paymentHistory:loadFailed")
+        }), null !== yR && (0, KR.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: mW.map((WW => (0, ZW.jsxs)("li", {
+          children: yR.map((RR => (0, KR.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, ZW.jsx)(ki.b, {
-              entry: WW
-            }), (0, ZW.jsxs)("div", {
+            children: [(0, KR.jsx)(UJ.d, {
+              entry: RR
+            }), (0, KR.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, ZW.jsx)("div", {
-                children: (0, ki.i)(OW, WW)
-              }), (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)("div", {
+                children: (0, UJ.i)(GR, RR)
+              }), (0, KR.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(WW.at).toLocaleDateString(), "number" === typeof WW.orderId && ` \xb7 ${OW("paymentHistory:order",{orderId:WW.orderId})}`]
+                children: [new Date(RR.at).toLocaleDateString(), "number" === typeof RR.orderId && ` \xb7 ${GR("paymentHistory:order",{orderId:RR.orderId})}`]
               })]
             })]
-          }, (0, Ui.b)(WW))))
+          }, (0, nJ.e)(RR))))
         })]
       })
     }
-    var Mi = OW(3135),
-      Ki = OW(2257);
+    var AJ = GR(3225),
+      CJ = GR(2344);
 
-    function Si() {
-      (0, Ki.e)({
+    function XJ() {
+      (0, CJ.e)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function Yi(WW) {
+    function MJ(RR) {
       let {
-        status: iW
-      } = WW;
-      switch (iW) {
+        status: JR
+      } = RR;
+      switch (JR) {
         case "restored":
-          return (0, rW.f)(), {
+          return (0, FR.d)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -638,898 +638,898 @@ export const modules = {
       }
     }
 
-    function yi() {
-      const WW = (0, QW.usePageBillingClient)(),
+    function BJ() {
+      const RR = (0, hR.usePageBillingClient)(),
         {
-          userContext: iW
-        } = (0, AW.e)(),
-        [OW, EW] = (0, mW.useState)(!1),
-        [NW, PW] = (0, mW.useState)(null);
+          userContext: JR
+        } = (0, eR.d)(),
+        [GR, tR] = (0, yR.useState)(!1),
+        [uR, ZR] = (0, yR.useState)(null);
       return {
-        restoring: OW,
-        notice: NW,
+        restoring: GR,
+        notice: uR,
         restore: () => {
-          iW.isLoggedIn() ? (EW(!0), PW(null), WW.restorePurchases().then(Yi, (WW => WW instanceof qW.c && "loginRequired" === WW.code ? (Si(), null) : function(WW) {
-            return WW instanceof qW.c && "storeBusy" === WW.code ? {
+          JR.isLoggedIn() ? (tR(!0), ZR(null), RR.restorePurchases().then(MJ, (RR => RR instanceof dR.d && "loginRequired" === RR.code ? (XJ(), null) : function(RR) {
+            return RR instanceof dR.d && "storeBusy" === RR.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", WW), (0, rW.f)(), {
+            } : (console.error("Billing: restoring purchases failed:", RR), (0, FR.d)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(WW))).then(PW).finally((() => {
-            EW(!1)
-          }))) : Si()
+          }(RR))).then(ZR).finally((() => {
+            tR(!1)
+          }))) : XJ()
         }
       }
     }
 
-    function Ti(WW) {
+    function lJ(RR) {
       let {
-        restoring: iW,
-        notice: OW,
-        restore: EW
-      } = WW;
+        restoring: JR,
+        notice: GR,
+        restore: tR
+      } = RR;
       const {
-        t: LW
-      } = (0, PW.B)(), cW = (0, BW.usePurchasesAllowed)(), tW = (0, BW.getBillingStore)(), xW = (0, mW.useRef)(null);
-      return (0, mW.useEffect)((() => {
-        var WW;
-        null === (WW = xW.current) || void 0 === WW || WW.scrollIntoView({
+        t: qR
+      } = (0, ZR.A)(), iR = (0, jR.usePurchasesAllowed)(), VR = (0, jR.getBillingStore)(), wR = (0, yR.useRef)(null);
+      return (0, yR.useEffect)((() => {
+        var RR;
+        null === (RR = wR.current) || void 0 === RR || RR.scrollIntoView({
           block: "nearest"
         })
-      }), [OW]), cW && (0, Mi.e)(tW) ? (0, ZW.jsxs)("div", {
+      }), [GR]), iR && (0, AJ.e)(VR) ? (0, KR.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, ZW.jsx)(wW.h, {
+        children: [(0, KR.jsx)(fR.i, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: iW,
-          onClick: EW,
-          children: LW("payments:restorePurchases")
-        }), null !== OW && (0, ZW.jsx)("div", {
-          ref: xW,
-          className: NW()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: OW.failed
+          loading: JR,
+          onClick: tR,
+          children: qR("payments:restorePurchases")
+        }), null !== GR && (0, KR.jsx)("div", {
+          ref: wR,
+          className: uR()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: GR.failed
           }),
-          children: LW(OW.key)
+          children: qR(GR.key)
         })]
       }) : null
     }
-    var Ji = OW(2008),
-      Hi = OW(1239),
-      ni = OW(1185),
-      ui = OW(1339),
-      oi = OW(327),
-      di = OW(3474);
-    const ei = {
+    var pJ = GR(2098),
+      gJ = GR(1341),
+      bJ = GR(1282),
+      vJ = GR(1444),
+      OJ = GR(359),
+      xJ = GR(3604);
+    const NJ = {
       appStore: {
         name: "App Store",
-        ...oi.bc.appStore
+        ...OJ.Vb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...oi.bc.googlePlay
+        ...OJ.Vb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...oi.bc.discord
+        ...OJ.Vb.discord
       }
     };
 
-    function vi(WW) {
+    function DJ(RR) {
       let {
-        warning: iW,
-        subscriptions: OW
-      } = WW;
+        warning: JR,
+        subscriptions: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return null !== OW && 0 === OW.length ? (0, ZW.jsx)(ZW.Fragment, {
-        children: mW(iW)
-      }) : (0, ZW.jsxs)("div", {
+        t: yR
+      } = (0, ZR.A)();
+      return null !== GR && 0 === GR.length ? (0, KR.jsx)(KR.Fragment, {
+        children: yR(JR)
+      }) : (0, KR.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [mW(iW), null === OW && (0, ZW.jsx)("div", {
+        children: [yR(JR), null === GR && (0, KR.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: mW("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== OW && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)("div", {
+          children: yR("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== GR && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: mW("auth:deleteAccountStoreSubscriptions")
-          }), (0, ZW.jsx)(di.e, {
+            children: yR("auth:deleteAccountStoreSubscriptions")
+          }), (0, KR.jsx)(xJ.d, {
             className: "DeleteAccountSubtitleLinks",
-            links: OW.map((WW => {
+            links: GR.map((RR => {
               let {
-                store: iW,
-                managementUrl: OW
-              } = WW;
+                store: JR,
+                managementUrl: GR
+              } = RR;
               return {
-                ...ei[iW],
-                url: OW
+                ...NJ[JR],
+                url: GR
               }
             }))
           })]
         })]
       })
     }
-    var gi = OW(5378);
+    var HJ = GR(5482);
 
-    function Di(WW) {
+    function oJ(RR) {
       let {
-        showing: iW
-      } = WW;
+        showing: JR
+      } = RR;
       const {
-        userContext: OW,
-        isUserContextUpdating: EW
-      } = (0, AW.e)(), {
-        t: NW
-      } = (0, PW.B)(), [LW, cW] = (0, mW.useState)(!1), [tW, xW] = (0, mW.useState)(null), lW = (0, mW.useRef)(iW);
-      (0, mW.useEffect)((() => (lW.current = iW, () => {
-        lW.current = !1
-      })), [iW]);
-      const bW = EW || LW;
-      return (0, ZW.jsxs)("div", {
+        userContext: GR,
+        isUserContextUpdating: tR
+      } = (0, eR.d)(), {
+        t: uR
+      } = (0, ZR.A)(), [qR, iR] = (0, yR.useState)(!1), [VR, wR] = (0, yR.useState)(null), rR = (0, yR.useRef)(JR);
+      (0, yR.useEffect)((() => (rR.current = JR, () => {
+        rR.current = !1
+      })), [JR]);
+      const aR = tR || qR;
+      return (0, KR.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, ZW.jsxs)(wW.O, {
+        children: [(0, KR.jsxs)(fR.M, {
           onClick: async function() {
-            if (!LW) {
-              cW(!0);
+            if (!qR) {
+              iR(!0);
               try {
-                const WW = await async function() {
-                  const [WW, iW] = await Promise.all([(0, Ji.e)(OW.availableUserContextTypes) ? Zi() : [], fi(OW)]);
-                  if (!lW.current) return Hi.b.ok();
-                  const mW = (0, dW.b)(OW.getPlayerName(), !UW.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await Ei.NotificationProvider.showPromptPopup({
+                const RR = await async function() {
+                  const [RR, JR] = await Promise.all([(0, pJ.c)(GR.availableUserContextTypes) ? KJ() : [], PJ(GR)]);
+                  if (!rR.current) return gJ.e.ok();
+                  const yR = (0, NR.e)(GR.getPlayerName(), !nR.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await tJ.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: mW
+                          playerName: yR
                         }
                       },
-                      subtitle: (0, ZW.jsx)(vi, {
-                        warning: Vi(OW.isLoggedIn(), iW),
-                        subscriptions: WW
+                      subtitle: (0, KR.jsx)(DJ, {
+                        warning: cJ(GR.isLoggedIn(), JR),
+                        subscriptions: RR
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: iW ? NW("auth:deleteAccountTypedConfirm", {
-                        playerName: mW
+                      typedConfirm: JR ? uR("auth:deleteAccountTypedConfirm", {
+                        playerName: yR
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return Hi.b.ok();
-                  const EW = await (0, HW.postJsonWithMetricsCookiesAndJsonResponse)(`${ni.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: yW.d.get("gameState")
+                    }).getResult()) return gJ.e.ok();
+                  const tR = await (0, bR.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: BR.d.get("gameState")
                   }, {
                     retries: 3
-                  }, OW.getMetricsCookies());
-                  if (EW.error) return Hi.b.error(EW.error);
-                  (0, hW.isDiscordClient)() && (await ui.h.discordActivity()).exit("User deleted their account");
-                  return gi.e.stopRecordingHere("the player deleted their account", {
+                  }, GR.getMetricsCookies());
+                  if (tR.error) return gJ.e.error(tR.error);
+                  (0, gR.isDiscordClient)() && (await vJ.l.discordActivity()).exit("User deleted their account");
+                  return HJ.e.stopRecordingHere("the player deleted their account", {
                     forget: !0
-                  }), (0, HW.forgetStoredGuestAccount)(OW.whamm), (0, HW.forceGlobalSignOut)(!0), Hi.b.ok()
-                }(), iW = WW.isError() ? WW.asError().message : null;
-                xW(iW)
-              } catch (WW) {
-                console.error("Failed to delete account:", WW), xW(NW("auth:genericDeleteAccountError"))
+                  }), (0, bR.forgetStoredGuestAccount)(GR.whamm), (0, bR.forceGlobalSignOut)(!0), gJ.e.ok()
+                }(), JR = RR.isError() ? RR.asError().message : null;
+                wR(JR)
+              } catch (RR) {
+                console.error("Failed to delete account:", RR), wR(uR("auth:genericDeleteAccountError"))
               }
-              cW(!1)
+              iR(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: bW,
-          children: [bW && (0, ZW.jsx)("div", {
+          disabled: aR,
+          children: [aR && (0, KR.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, ZW.jsx)(SW.d, {})
-          }), NW("auth:deleteAccount")]
-        }), tW && (0, ZW.jsx)("div", {
+            children: (0, KR.jsx)(XR.d, {})
+          }), uR("auth:deleteAccount")]
+        }), VR && (0, KR.jsx)("div", {
           className: "DeleteAccountError",
-          children: tW
+          children: VR
         })]
       })
     }
 
-    function Vi(WW, iW) {
-      return (0, hW.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : WW ? "auth:deleteAccountLossWarning" : iW ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function cJ(RR, JR) {
+      return (0, gR.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : RR ? "auth:deleteAccountLossWarning" : JR ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function fi(WW) {
+    async function PJ(RR) {
       try {
         const {
-          accountCreatedAt: iW
-        } = await (0, ti.o)(gW.e.getPlayerProfile(WW, {
-          lowerCaseName: WW.getPlayerName().toLowerCase()
+          accountCreatedAt: JR
+        } = await (0, VJ.k)(oR.c.getPlayerProfile(RR, {
+          lowerCaseName: RR.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== iW && Date.now() - iW >= 7 * DW.k
-      } catch (iW) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", iW), !0
+        return null !== JR && Date.now() - JR >= 7 * cR.i
+      } catch (JR) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", JR), !0
       }
     }
-    var Ci = OW(4827),
-      Xi = OW(4841),
-      Bi = OW(4839);
+    var IJ = GR(4939),
+      mJ = GR(4949),
+      zJ = GR(4945);
 
-    function qi(WW) {
+    function SJ(RR) {
       let {
-        showing: iW
-      } = WW;
+        showing: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), {
-        data: mW,
-        failed: EW
-      } = (0, wi.g)(Ci.d, iW), NW = null === mW ? null : (0, Ci.g)(mW);
-      return (0, ZW.jsxs)("div", {
+        t: GR
+      } = (0, ZR.A)(), {
+        data: yR,
+        failed: tR
+      } = (0, fJ.h)(IJ.d, JR), uR = null === yR ? null : (0, IJ.f)(yR);
+      return (0, KR.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: OW("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === NW && !EW && (0, ZW.jsx)(SW.d, {}), null === NW && EW && (0, ZW.jsxs)("div", {
+          children: GR("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === uR && !tR && (0, KR.jsx)(XR.d, {}), null === uR && tR && (0, KR.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [OW("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, ZW.jsx)(wW.f, {
+          children: [GR("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, KR.jsx)(fR.g, {
             className: "SmallTextLight",
             onClick: () => {
-              Ci.d.refresh()
+              IJ.d.refresh()
             },
-            children: OW("general:tryAgain")
+            children: GR("general:tryAgain")
           })]
-        }), 0 === (null === NW || void 0 === NW ? void 0 : NW.length) && (0, ZW.jsx)("div", {
+        }), 0 === (null === uR || void 0 === uR ? void 0 : uR.length) && (0, KR.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: OW("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== NW && NW.length > 0 && (0, ZW.jsx)("ul", {
+          children: GR("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== uR && uR.length > 0 && (0, KR.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: NW.map((WW => {
+          children: uR.map((RR => {
             let {
-              name: iW,
-              exclusion: mW
-            } = WW;
-            const EW = Bi.d[mW];
-            return (0, ZW.jsxs)("li", {
+              name: JR,
+              exclusion: yR
+            } = RR;
+            const tR = zJ.i[yR];
+            return (0, KR.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, ZW.jsx)("div", {
+              children: [(0, KR.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: iW
-              }), (0, ZW.jsx)(wW.h, {
+                children: JR
+              }), (0, KR.jsx)(fR.i, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Xi.d)(EW, iW, {
+                  (0, mJ.f)(tR, JR, {
                     chatMessage: null
                   })
                 },
-                children: OW(Bi.g[EW].text)
+                children: GR(zJ.l[tR].text)
               })]
-            }, iW)
+            }, JR)
           }))
         })]
       })
     }
-    const Ri = (0, mW.memo)((function(WW) {
-      var iW, OW;
+    const jJ = (0, yR.memo)((function(RR) {
+      var JR, GR;
       let {
-        showing: EW,
-        inGame: cW
-      } = WW;
+        showing: tR,
+        inGame: iR
+      } = RR;
       const {
-        t: tW,
-        selectedLanguage: xW
-      } = (0, PW.B)(), {
-        hideSocialLocationFrom: bW
-      } = (0, yW.p)(["hideSocialLocationFrom"]), jW = (0, BW.usePurchasesAllowed)(), kW = yi(), sW = (0, lW.b)(), {
-        userContext: MW,
-        isUserContextUpdating: TW
-      } = (0, AW.e)(), [JW, CW] = (0, mW.useState)(null !== (iW = MW.getPlayerName()) && void 0 !== iW ? iW : ""), [qW, RW] = (0, mW.useState)(null), {
-        purchasing: GW,
-        outcome: IW,
-        purchase: aW
-      } = (0, uW.e)("/super-rank-welcome"), rW = (0, DW.ec)((0, PW.k)(xW.code, "general:timeLeft"), MW.superRankInfo), zW = null === (OW = xi(EW)) || void 0 === OW ? void 0 : OW.text, FW = Date.now(), QW = (0, fW.j)(FW), Wi = (0, pW.p)(FW), ii = (0, fW.h)(FW), Oi = (0, pW.l)(QW.id), mi = ii && (0, ZW.jsxs)(wW.n, {
+        t: VR,
+        selectedLanguage: wR
+      } = (0, ZR.A)(), {
+        hideSocialLocationFrom: aR
+      } = (0, BR.o)(["hideSocialLocationFrom"]), LR = (0, jR.usePurchasesAllowed)(), UR = BJ(), WR = (0, rR.b)(), {
+        userContext: AR,
+        isUserContextUpdating: lR
+      } = (0, eR.d)(), [pR, zR] = (0, yR.useState)(null !== (JR = AR.getPlayerName()) && void 0 !== JR ? JR : ""), [dR, ER] = (0, yR.useState)(null), {
+        purchasing: YR,
+        outcome: kR,
+        purchase: QR
+      } = (0, OR.c)("/super-rank-welcome"), FR = (0, cR.ic)((0, ZR.n)(wR.code, "general:timeLeft"), AR.superRankInfo), TR = null === (GR = wJ(tR)) || void 0 === GR ? void 0 : GR.text, sR = Date.now(), hR = (0, mR.i)(sR), RJ = (0, IR.v)(sR), JJ = (0, mR.g)(sR), GJ = (0, IR.l)(hR.id), yJ = JJ && (0, KR.jsxs)(fR.n, {
         className: "AccountSettingsSuperRankProlong",
         onClick: () => {
-          (0, ci.o)({
+          (0, iJ.m)({
             mode: "gift",
             source: "accountSettings",
             openItem: "superRank"
           })
         },
-        children: [(0, ZW.jsx)(LW.c, {
+        children: [(0, KR.jsx)(qR.d, {
           name: "bolt"
-        }), tW(Oi.giftKey)]
-      }), Ei = (0, pW.h)(MW.getPlayerRanks(), FW), Ni = (0, pW.m)(MW.superRankInfo, FW), Pi = QW.id !== VW.s.id, wi = Pi && !Ei && (0, DW.sc)(MW.superRankInfo) ? MW.superRankInfo : null, ti = rW ? tW("general:timeLeft", {
-        time: rW
-      }) : !(Pi && jW) && zW, [Zi, Ui] = (0, mW.useState)(!1), [ki, Mi] = (0, mW.useState)(!1), Ki = (0, mW.useRef)(null), Si = (0, mW.useRef)(null), Yi = (0, vW.f)({
+        }), VR(GJ.giftKey)]
+      }), tJ = (0, IR.h)(AR.getPlayerRanks(), sR), uJ = (0, IR.o)(AR.superRankInfo, sR), ZJ = hR.id !== PR.t.id, fJ = ZJ && !tJ && (0, cR.wc)(AR.superRankInfo) ? AR.superRankInfo : null, VJ = FR ? VR("general:timeLeft", {
+        time: FR
+      }) : !(ZJ && LR) && TR, [KJ, nJ] = (0, yR.useState)(!1), [UJ, AJ] = (0, yR.useState)(!1), CJ = (0, yR.useRef)(null), XJ = (0, yR.useRef)(null), MJ = (0, HR.e)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), Ji = null === Yi, Hi = null !== Yi && void 0 !== Yi ? Yi : [], ni = MW !== HW.NULL_USER_CONTEXT && !MW.isLoggedIn(), ui = ni && 0 !== (null === Yi || void 0 === Yi ? void 0 : Yi.length), [oi, di] = (0, mW.useState)([]), [ei, vi] = (0, mW.useState)(!1), gi = MW.playerHasRank("youtuber"), Vi = (0, mW.useCallback)((() => gW.e.getPlayerProfile(MW, {
-        lowerCaseName: MW.getPlayerName().toLowerCase()
-      }).then((WW => {
-        di(WW.socialLinks)
-      })).catch((WW => {
-        console.error("Failed to refresh social links", WW)
-      }))), [MW]);
+      }), pJ = null === MJ, gJ = null !== MJ && void 0 !== MJ ? MJ : [], bJ = AR !== bR.NULL_USER_CONTEXT && !AR.isLoggedIn(), vJ = bJ && 0 !== (null === MJ || void 0 === MJ ? void 0 : MJ.length), [OJ, xJ] = (0, yR.useState)([]), [NJ, DJ] = (0, yR.useState)(!1), HJ = AR.playerHasRank("youtuber"), cJ = (0, yR.useCallback)((() => oR.c.getPlayerProfile(AR, {
+        lowerCaseName: AR.getPlayerName().toLowerCase()
+      }).then((RR => {
+        xJ(RR.socialLinks)
+      })).catch((RR => {
+        console.error("Failed to refresh social links", RR)
+      }))), [AR]);
 
-      function fi(WW) {
-        WW !== JW && ((0, dW.l)(WW) ? (WW = (0, dW.p)(WW), RW(tW("homePage:nameCharacters"))) : RW(null), Ki.current && (Ki.current.value = WW), CW(WW))
+      function PJ(RR) {
+        RR !== pR && ((0, NR.m)(RR) ? (RR = (0, NR.q)(RR), ER(VR("homePage:nameCharacters"))) : ER(null), CJ.current && (CJ.current.value = RR), zR(RR))
       }
-      return (0, mW.useEffect)((() => (!0 === EW ? (clearInterval(Si.current), Si.current = setInterval(sW, 1e3)) : clearInterval(Si.current), () => {
-        clearInterval(Si.current)
-      })), [EW, sW]), (0, mW.useEffect)((() => {
-        var WW;
-        CW(null !== (WW = MW.getPlayerName()) && void 0 !== WW ? WW : "")
-      }), [MW]), (0, mW.useEffect)((() => {
-        if (!EW || !gi || TW) return;
-        let WW = !1;
-        return vi(!0), di([]), gW.e.getPlayerProfile(MW, {
-          lowerCaseName: MW.getPlayerName().toLowerCase()
-        }).then((iW => {
-          WW || di(iW.socialLinks)
-        })).catch((WW => {
-          console.error("Failed to load social links", WW)
+      return (0, yR.useEffect)((() => (!0 === tR ? (clearInterval(XJ.current), XJ.current = setInterval(WR, 1e3)) : clearInterval(XJ.current), () => {
+        clearInterval(XJ.current)
+      })), [tR, WR]), (0, yR.useEffect)((() => {
+        var RR;
+        zR(null !== (RR = AR.getPlayerName()) && void 0 !== RR ? RR : "")
+      }), [AR]), (0, yR.useEffect)((() => {
+        if (!tR || !HJ || lR) return;
+        let RR = !1;
+        return DJ(!0), xJ([]), oR.c.getPlayerProfile(AR, {
+          lowerCaseName: AR.getPlayerName().toLowerCase()
+        }).then((JR => {
+          RR || xJ(JR.socialLinks)
+        })).catch((RR => {
+          console.error("Failed to load social links", RR)
         })).finally((() => {
-          WW || vi(!1)
+          RR || DJ(!1)
         })), () => {
-          WW = !0
+          RR = !0
         }
-      }), [EW, gi, TW, MW]), (0, ZW.jsxs)("div", {
-        className: NW()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: cW
+      }), [tR, HJ, lR, AR]), (0, KR.jsxs)("div", {
+        className: uR()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: iR
         }),
-        children: [cW && (0, ZW.jsx)("div", {
+        children: [iR && (0, KR.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: tW("settingsMenu:accountSettingsInGameWarning")
-        }), (0, ZW.jsxs)("div", {
+          children: VR("settingsMenu:accountSettingsInGameWarning")
+        }), (0, KR.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [tW("homePage:discordNamePopupTitle"), (0, ZW.jsxs)(oW.LinkPreserveSearch, {
+            children: [VR("homePage:discordNamePopupTitle"), (0, KR.jsxs)(xR.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, eW.i)({
-                name: MW.getPlayerName()
+              to: (0, DR.d)({
+                name: AR.getPlayerName()
               }),
               onClick: () => {
-                yW.d.set({
+                BR.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "arrow-up-right-from-square"
-              }), " ", tW("profileCard:viewProfile")]
+              }), " ", VR("profileCard:viewProfile")]
             })]
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, ZW.jsxs)("div", {
+            children: [(0, KR.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [UW.featureFlags.canChangeName && (0, ZW.jsx)(KW.b, {
+              children: [nR.featureFlags.canChangeName && (0, KR.jsx)(CR.b, {
                 className: "EnterName",
-                placeholderText: tW("homePage:enterName"),
-                maxLength: dW.f,
-                defaultValue: JW,
-                onValueChange: WW => {
-                  fi(WW)
+                placeholderText: VR("homePage:enterName"),
+                maxLength: NR.i,
+                defaultValue: pR,
+                onValueChange: RR => {
+                  PJ(RR)
                 },
-                forcedText: Zi || !UW.featureFlags.canChangeName ? JW : null,
+                forcedText: KJ || !nR.featureFlags.canChangeName ? pR : null,
                 blurOnEnter: !0,
-                domRef: Ki
-              }), (0, ZW.jsx)(wW.f, {
+                domRef: CJ
+              }), (0, KR.jsx)(fR.g, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  fi((0, dW.d)())
+                  PJ((0, NR.g)())
                 },
-                children: (0, ZW.jsx)(LW.c, {
+                children: (0, KR.jsx)(qR.d, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !UW.featureFlags.canChangeName && (0, ZW.jsx)("div", {
+              }), !nR.featureFlags.canChangeName && (0, KR.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, dW.b)(JW, !UW.featureFlags.canSeeRealPlayerNames)
+                children: (0, NR.e)(pR, !nR.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, ZW.jsx)(wW.f, {
+            }), (0, KR.jsx)(fR.g, {
               className: "ChooseNameButton",
-              disabled: Zi || JW === MW.getPlayerName(),
+              disabled: KJ || pR === AR.getPlayerName(),
               onClick: () => {
-                JW.length < dW.j ? RW(tW("homePage:changeNameMinLengthError", {
-                  length: dW.j
-                })) : JW.length > dW.f ? RW(tW("homePage:changeNameMaxLengthError", {
-                  length: dW.f
-                })) : (Ui(!0), RW(null), (0, nW.l)(MW, JW).then((WW => {
-                  Ui(!1), "taken" === WW.outcome ? RW(tW("homePage:nameTaken")) : "refused" === WW.outcome ? RW(WW.message) : "failed" === WW.outcome && RW(tW((0, nW.i)(WW.failure)))
+                pR.length < NR.j ? ER(VR("homePage:changeNameMinLengthError", {
+                  length: NR.j
+                })) : pR.length > NR.i ? ER(VR("homePage:changeNameMaxLengthError", {
+                  length: NR.i
+                })) : (nJ(!0), ER(null), (0, vR.f)(AR, pR).then((RR => {
+                  nJ(!1), "taken" === RR.outcome ? ER(VR("homePage:nameTaken")) : "refused" === RR.outcome ? ER(RR.message) : "failed" === RR.outcome && ER(VR((0, vR.e)(RR.failure)))
                 })))
               },
-              children: tW("general:choose")
+              children: VR("general:choose")
             })]
-          }), qW && (0, ZW.jsx)("div", {
+          }), dR && (0, KR.jsx)("div", {
             className: "ChooseAccNameError",
-            children: qW
+            children: dR
           })]
-        }), (0, ZW.jsx)(YW.e, {
+        }), (0, KR.jsx)(MR.e, {
           label: (() => {
-            if ((0, Ai.l)(bW)) {
-              const WW = (0, PW.k)(xW.code, "general:timeLeft"),
-                iW = (0, DW.$)(WW, Date.now(), bW + Ai.j);
-              return `${tW("settingsMenu:hideSocialLocation")} (${tW("general:timeLeft",{time:iW})})`
+            if ((0, eJ.k)(aR)) {
+              const RR = (0, ZR.n)(wR.code, "general:timeLeft"),
+                JR = (0, cR.Z)(RR, Date.now(), aR + eJ.j);
+              return `${VR("settingsMenu:hideSocialLocation")} (${VR("general:timeLeft",{time:JR})})`
             }
-            return tW("settingsMenu:hideSocialLocation")
+            return VR("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const WW = !(0, Ai.l)(bW);
-            (0, ji.reportAnalyticsClick)({
+            const RR = !(0, eJ.k)(aR);
+            (0, LJ.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: WW ? "on" : "off"
-            }), Mi(!0), gW.e.setHideSocialLocation(MW, WW).then((() => {
-              yW.d.set({
-                hideSocialLocationFrom: WW ? Date.now() : null
+              value: RR ? "on" : "off"
+            }), AJ(!0), oR.c.setHideSocialLocation(AR, RR).then((() => {
+              BR.d.set({
+                hideSocialLocationFrom: RR ? Date.now() : null
               })
             })).finally((() => {
-              Mi(!1)
+              AJ(!1)
             }))
           },
-          checked: (0, Ai.l)(bW),
-          disabled: ki
-        }), gi && (0, ZW.jsxs)("div", {
+          checked: (0, eJ.k)(aR),
+          disabled: UJ
+        }), HJ && (0, KR.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: tW("settingsMenu:socialLinks")
-          }), ei && (0, ZW.jsx)(SW.d, {}), !ei && (0, ZW.jsx)(bi.d, {
-            socialLinks: oi,
+            children: VR("settingsMenu:socialLinks")
+          }), NJ && (0, KR.jsx)(XR.d, {}), !NJ && (0, KR.jsx)(aJ.e, {
+            socialLinks: OJ,
             editable: !0,
-            userContext: MW,
-            onLinksUpdated: Vi
+            userContext: AR,
+            onLinksUpdated: cJ
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: tW(ui ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), Ji && (0, ZW.jsx)(SW.d, {}), !Ji && 0 === Hi.length && (0, ZW.jsx)("div", {
+            children: VR(vJ ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), pJ && (0, KR.jsx)(XR.d, {}), !pJ && 0 === gJ.length && (0, KR.jsx)("div", {
             className: "NoLoginOptions",
-            children: tW("auth:noLoginOptions")
-          }), !Ji && Hi.length > 0 && "crazygames" !== hW.siteUsed && (0, ZW.jsx)("div", {
+            children: VR("auth:noLoginOptions")
+          }), !pJ && gJ.length > 0 && "crazygames" !== gR.siteUsed && (0, KR.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: Hi
-          }), !Ji && Hi.length > 0 && "crazygames" === hW.siteUsed && (0, ZW.jsxs)("div", {
+            children: gJ
+          }), !pJ && gJ.length > 0 && "crazygames" === gR.siteUsed && (0, KR.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [Hi[0], Hi.length > 1 && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [(0, ZW.jsxs)("div", {
+            children: [gJ[0], gJ.length > 1 && (0, KR.jsxs)(KR.Fragment, {
+              children: [(0, KR.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, ZW.jsx)("span", {
+                children: [(0, KR.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: tW("auth:legacyLoginOptions")
-                }), (0, ZW.jsx)(li.d, {
+                  children: VR("auth:legacyLoginOptions")
+                }), (0, KR.jsx)(rJ.e, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: tW("auth:legacyLoginOptionsInfo")
+                  hoverInfo: VR("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, ZW.jsx)("div", {
+              }), (0, KR.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: Hi.slice(1)
+                children: gJ.slice(1)
               })]
             })]
-          }), UW.featureFlags.useLogin && (null !== MW.loggedInInfo || MW.isLoggedIn()) && (0, ZW.jsxs)(ZW.Fragment, {
-            children: [(0, ZW.jsx)("div", {
+          }), nR.featureFlags.useLogin && (null !== AR.loggedInInfo || AR.isLoggedIn()) && (0, KR.jsxs)(KR.Fragment, {
+            children: [(0, KR.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, ZW.jsxs)(wW.O, {
+            }), (0, KR.jsxs)(fR.M, {
               onClick: () => {
-                (0, HW.forceGlobalSignOut)()
+                (0, bR.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "right-from-bracket"
-              }), tW("auth:signOut")]
+              }), VR("auth:signOut")]
             })]
           })]
-        }), null !== wi && (0, ZW.jsxs)("div", {
+        }), null !== fJ && (0, KR.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, ZW.jsx)(pW.f, {
-              tierId: wi.tier
+            children: (0, KR.jsx)(IR.g, {
+              tierId: fJ.tier
             })
-          }), (0, ZW.jsx)(Li, {
-            showing: EW
+          }), (0, KR.jsx)(qJ, {
+            showing: tR
           })]
-        }), !Ei && jW && (0, ZW.jsxs)("div", {
+        }), !tJ && LR && (0, KR.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, ZW.jsx)(pW.f, {
-              tierId: QW.id
+            children: (0, KR.jsx)(IR.g, {
+              tierId: hR.id
             })
-          }), null !== Ni && (0, ZW.jsx)(XW, {
+          }), null !== uJ && (0, KR.jsx)(SR, {
             className: "AccountSettingsSuperRankRetired SmallTextBold",
-            until: Ni
-          }), (0, ZW.jsxs)("div", {
+            until: uJ
+          }), (0, KR.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, ZW.jsxs)(wW.n, {
+            children: [(0, KR.jsxs)(fR.n, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, ci.o)({
+                (0, iJ.m)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "bolt"
-              }), tW(null !== Ni ? "store:upgradeToHyperRank" : Oi.getKey)]
-            }), mi]
-          }), (0, ZW.jsx)(Ti, {
-            ...kW
+              }), VR(null !== uJ ? "store:upgradeToHyperRank" : GJ.getKey)]
+            }), yJ]
+          }), (0, KR.jsx)(lJ, {
+            ...UR
           })]
-        }), Ei && (0, ZW.jsxs)("div", {
+        }), tJ && (0, KR.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, ZW.jsx)(pW.f, {
-              tierId: QW.id
-            }), ti && (0, ZW.jsxs)("div", {
+            children: [(0, KR.jsx)(IR.g, {
+              tierId: hR.id
+            }), VJ && (0, KR.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", ti, ")"]
+              children: ["(", VJ, ")"]
             })]
-          }), Pi && (0, ZW.jsx)(Li, {
-            showing: EW
-          }), jW && ii && (0, ZW.jsxs)("div", {
+          }), ZJ && (0, KR.jsx)(qJ, {
+            showing: tR
+          }), LR && JJ && (0, KR.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, DW.sc)(MW.superRankInfo) && (0, ZW.jsxs)(wW.n, {
+            children: [!(0, cR.wc)(AR.superRankInfo) && (0, KR.jsxs)(fR.n, {
               className: "AccountSettingsSuperRankProlong",
-              loading: GW,
+              loading: YR,
               onClick: () => {
-                aW(Wi.id, null)
+                QR(RJ.id, null)
               },
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "bolt"
-              }), tW("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: Wi.product.days,
-                price: Wi.price
+              }), VR("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: RJ.product.days,
+                price: RJ.price
               })]
-            }), mi]
-          }), IW && (0, ZW.jsx)("div", {
+            }), yJ]
+          }), kR && (0, KR.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: tW(IW.translationKey)
-          }), (0, ZW.jsx)(Ti, {
-            ...kW
+            children: VR(kR.translationKey)
+          }), (0, KR.jsx)(lJ, {
+            ...UR
           })]
-        }), (0, ZW.jsx)(si, {
-          showing: EW
-        }), UW.featureFlags.useSocialFeatures && (0, ZW.jsx)(qi, {
-          showing: EW
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsx)(WJ, {
+          showing: tR
+        }), nR.featureFlags.useSocialFeatures && (0, KR.jsx)(SJ, {
+          showing: tR
+        }), (0, KR.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: tW(Gi(ni, ui))
-            }), (0, hW.isDiscordClient)() && (0, ZW.jsx)("div", {
+              children: VR(dJ(bJ, vJ))
+            }), (0, gR.isDiscordClient)() && (0, KR.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: tW("auth:discordActivityKickWarning")
-            }), (0, ZW.jsx)(Di, {
-              showing: EW
+              children: VR("auth:discordActivityKickWarning")
+            }), (0, KR.jsx)(oJ, {
+              showing: tR
             })]
-          }), (0, ZW.jsx)("div", {
+          }), (0, KR.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: tW(ni ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: VR(bJ ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function Gi(WW, iW) {
-      return WW ? iW ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function dJ(RR, JR) {
+      return RR ? JR ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var Ii = OW(35121),
-      ai = OW(4292),
-      ri = OW(1515),
-      zi = OW(2075),
-      Fi = OW(10122),
-      Qi = OW(35124);
+    var EJ = GR(35044),
+      YJ = GR(4375),
+      kJ = GR(1570),
+      QJ = GR(2173),
+      FJ = GR(10241),
+      TJ = GR(35047);
 
-    function WO() {
+    function sJ() {
       const {
-        t: WW
-      } = (0, PW.B)();
-      return (0, zi.g)("localPlayerAlive") ? (0, ZW.jsx)(Fi.e, {
+        t: RR
+      } = (0, ZR.A)();
+      return (0, QJ.i)("localPlayerAlive") ? (0, KR.jsx)(FJ.b, {
         icon: "camera-alt",
-        title: WW("screenshotMode:title"),
-        sub: WW("screenshotMode:entrySub"),
-        onClick: Qi.e
+        title: RR("screenshotMode:title"),
+        sub: RR("screenshotMode:entrySub"),
+        onClick: TJ.e
       }) : null
     }
-    var iO = OW(35146);
-    const OO = (0, mW.memo)((function(WW) {
+    var hJ = GR(35059);
+    const RG = (0, yR.memo)((function(RR) {
         let {
-          inGame: iW
-        } = WW;
+          inGame: JR
+        } = RR;
         const {
-          t: OW,
-          selectedLanguage: mW
-        } = (0, PW.B)(), {
-          clientEscMenuOptions: EW,
-          showDebugOverlay: NW,
-          isTouchScreen: LW
-        } = (0, yW.p)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), cW = (0, bW.e)("hideCoordinates");
-        let wW = "settingsMenu:showCoordinates",
-          tW = "settingsMenu:showChunkCoordinates";
+          t: GR,
+          selectedLanguage: yR
+        } = (0, ZR.A)(), {
+          clientEscMenuOptions: tR,
+          showDebugOverlay: uR,
+          isTouchScreen: qR
+        } = (0, BR.o)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), iR = (0, aR.f)("hideCoordinates");
+        let fR = "settingsMenu:showCoordinates",
+          VR = "settingsMenu:showChunkCoordinates";
 
-        function xW(WW) {
-          const iW = new Intl.DisplayNames([WW], {
+        function wR(RR) {
+          const JR = new Intl.DisplayNames([RR], {
             type: "language"
-          }).of(WW);
-          return iW.charAt(0).toUpperCase() + iW.slice(1)
+          }).of(RR);
+          return JR.charAt(0).toUpperCase() + JR.slice(1)
         }
-        return cW && (wW = "settingsMenu:showCoordinatesHidden", tW = "settingsMenu:showChunkCoordinatesHidden"), (0, ZW.jsxs)("div", {
+        return iR && (fR = "settingsMenu:showCoordinatesHidden", VR = "settingsMenu:showChunkCoordinatesHidden"), (0, KR.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [iW && UW.featureFlags.canUseInviteLinks && (0, ZW.jsxs)("div", {
+          children: [JR && nR.featureFlags.canUseInviteLinks && (0, KR.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: OW("settingsMenu:inviteLink")
-            }), (0, ZW.jsx)(Ii.i, {})]
-          }), (0, ZW.jsxs)("div", {
+              children: GR("settingsMenu:inviteLink")
+            }), (0, KR.jsx)(EJ.h, {})]
+          }), (0, KR.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: OW("settingsMenu:language")
-            }), (0, ZW.jsx)(ai.e, {
-              options: Object.entries(PW.h).map((WW => {
-                let [iW, OW] = WW;
+              children: GR("settingsMenu:language")
+            }), (0, KR.jsx)(YJ.e, {
+              options: Object.entries(ZR.j).map((RR => {
+                let [JR, GR] = RR;
                 return {
-                  label: (0, ZW.jsxs)("div", {
+                  label: (0, KR.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, ZW.jsx)("img", {
-                      src: OW.flagImg,
+                    children: [(0, KR.jsx)("img", {
+                      src: GR.flagImg,
                       alt: "flag"
-                    }), (0, ZW.jsxs)("span", {
-                      children: [xW(iW), " ", (0, ZW.jsxs)("span", {
+                    }), (0, KR.jsxs)("span", {
+                      children: [wR(JR), " ", (0, KR.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", iW, ")"]
+                        children: ["(", JR, ")"]
                       })]
                     })]
                   }),
-                  value: iW
+                  value: JR
                 }
               })),
-              value: mW.code,
-              onChange: WW => {
-                aW.e.get().setCurrentLanguage(WW.value)
+              value: yR.code,
+              onChange: RR => {
+                QR.g.get().setCurrentLanguage(RR.value)
               }
             })]
-          }), iW && LW && (0, iO.d)() && (0, ZW.jsx)(WO, {}), !(0, UW.isMobileApp)() && (0, ri.j)() && UW.featureFlags.useForceRotateForceFullscreenOverlay && (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:disableFullscreenMode"),
-            checked: EW.disableFullscreen,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                disableFullscreen: WW
+          }), JR && qR && (0, hJ.b)() && (0, KR.jsx)(sJ, {}), !(0, nR.isMobileApp)() && (0, kJ.l)() && nR.featureFlags.useForceRotateForceFullscreenOverlay && (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:disableFullscreenMode"),
+            checked: tR.disableFullscreen,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                disableFullscreen: RR
               })
             }
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW(wW),
-            checked: EW.showCoordinates,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showCoordinates: WW
+          }), (0, KR.jsx)(MR.e, {
+            label: GR(fR),
+            checked: tR.showCoordinates,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showCoordinates: RR
               })
             },
-            disabled: cW
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW(tW),
-            checked: EW.showChunkCoordinates,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showChunkCoordinates: WW
+            disabled: iR
+          }), (0, KR.jsx)(MR.e, {
+            label: GR(VR),
+            checked: tR.showChunkCoordinates,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showChunkCoordinates: RR
               })
             },
-            disabled: cW
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:showFps"),
-            checked: EW.showFPS,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showFPS: WW
+            disabled: iR
+          }), (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:showFps"),
+            checked: tR.showFPS,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showFPS: RR
               })
             }
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:disableBunnyHopping"),
-            checked: EW.disableBunnyHopping,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                disableBunnyHopping: WW
+          }), (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:disableBunnyHopping"),
+            checked: tR.disableBunnyHopping,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                disableBunnyHopping: RR
               })
             }
-          }), (0, ui.w)() && (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:showChat"),
-            checked: EW.showChat,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showChat: WW
+          }), (0, vJ.x)() && (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:showChat"),
+            checked: tR.showChat,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showChat: RR
               })
             }
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:showDebugOverlay"),
-            checked: NW,
-            onClick: WW => {
-              yW.d.set({
-                showDebugOverlay: WW
+          }), (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:showDebugOverlay"),
+            checked: uR,
+            onClick: RR => {
+              BR.d.set({
+                showDebugOverlay: RR
               })
             }
-          }), UW.featureFlags.useSocialFeatures && (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:showFriendOnlineToasts"),
-            checked: EW.showFriendOnlineToasts,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: WW
+          }), nR.featureFlags.useSocialFeatures && (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:showFriendOnlineToasts"),
+            checked: tR.showFriendOnlineToasts,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: RR
               })
             }
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:showNewItemIndicator"),
-            checked: EW.showNewItemIndicator,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showNewItemIndicator: WW
+          }), (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:showNewItemIndicator"),
+            checked: tR.showNewItemIndicator,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showNewItemIndicator: RR
               })
             }
-          }), (0, ZW.jsx)(YW.e, {
-            label: OW("settingsMenu:showTeamSymbols"),
-            checked: EW.showTeamSymbols,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showTeamSymbols: WW
+          }), (0, KR.jsx)(MR.e, {
+            label: GR("settingsMenu:showTeamSymbols"),
+            checked: tR.showTeamSymbols,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showTeamSymbols: RR
               })
             },
-            circleInfoText: OW("settingsMenu:showTeamSymbolsInfo")
+            circleInfoText: GR("settingsMenu:showTeamSymbolsInfo")
           })]
         })
       })),
-      mO = (0, mW.memo)((function() {
+      JG = (0, yR.memo)((function() {
         const {
-          t: WW
-        } = (0, PW.B)(), {
-          soundVolume: iW,
-          musicVolume: OW,
-          clientEscMenuOptions: mW
-        } = (0, yW.p)(["soundVolume", "musicVolume", "clientEscMenuOptions"]);
-        return (0, ZW.jsxs)("div", {
+          t: RR
+        } = (0, ZR.A)(), {
+          soundVolume: JR,
+          musicVolume: GR,
+          clientEscMenuOptions: yR
+        } = (0, BR.o)(["soundVolume", "musicVolume", "clientEscMenuOptions"]);
+        return (0, KR.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, ZW.jsx)(YW.k, {
-            name: WW("settingsMenu:musicVolume"),
+          children: [(0, KR.jsx)(MR.i, {
+            name: RR("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: OW,
-            onChange: WW => {
-              yW.d.set({
-                musicVolume: Math.round(100 * WW) / 100
+            initValue: GR,
+            onChange: RR => {
+              BR.d.set({
+                musicVolume: Math.round(100 * RR) / 100
               })
             },
-            format: WW => WW.toFixed(2)
-          }), (0, ZW.jsx)(YW.k, {
-            name: WW("settingsMenu:soundEffectsVolume"),
+            format: RR => RR.toFixed(2)
+          }), (0, KR.jsx)(MR.i, {
+            name: RR("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: iW,
-            onChange: WW => {
-              yW.d.set({
-                soundVolume: Math.round(100 * WW) / 100
+            initValue: JR,
+            onChange: RR => {
+              BR.d.set({
+                soundVolume: Math.round(100 * RR) / 100
               })
             },
-            format: WW => WW.toFixed(2)
-          }), (0, ZW.jsx)(YW.e, {
-            label: WW("settingsMenu:showSoundDirections"),
-            checked: mW.showSoundDirections,
-            onClick: WW => {
-              yW.d.setClientEscMenuOptions({
-                showSoundDirections: WW
+            format: RR => RR.toFixed(2)
+          }), (0, KR.jsx)(MR.e, {
+            label: RR("settingsMenu:showSoundDirections"),
+            checked: yR.showSoundDirections,
+            onClick: RR => {
+              BR.d.setClientEscMenuOptions({
+                showSoundDirections: RR
               })
             },
-            circleInfoText: WW("settingsMenu:showSoundDirectionsInfo")
+            circleInfoText: RR("settingsMenu:showSoundDirectionsInfo")
           })]
         })
       }));
-    var EO = OW(724),
-      NO = OW(1526),
-      PO = OW(3279),
-      LO = OW(3270),
-      cO = OW(4723);
-    const wO = {
+    var GG = GR(773),
+      yG = GR(1581),
+      tG = GR(3403),
+      uG = GR(3391),
+      ZG = GR(4829);
+    const qG = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function tO() {
+    function iG() {
       const {
-        t: WW
-      } = (0, PW.B)(), iW = (0, cO.c)(), {
-        mobilePushNotificationsCanAsk: OW
-      } = (0, yW.p)(["mobilePushNotificationsCanAsk"]), [EW, NW] = (0, mW.useState)(null), [LW, cW] = (0, mW.useState)(!1), [tW, xW] = (0, mW.useState)(null), [lW, AW] = (0, mW.useState)(!1), bW = (0, mW.useCallback)((() => {
-        (0, PO.e)().then((WW => {
-          iW.current && (NW(WW), cW(!1))
-        })).catch((WW => {
-          console.error("Failed to load push notification targets:", WW), iW.current && cW(!0)
+        t: RR
+      } = (0, ZR.A)(), JR = (0, ZG.d)(), {
+        mobilePushNotificationsCanAsk: GR
+      } = (0, BR.o)(["mobilePushNotificationsCanAsk"]), [tR, uR] = (0, yR.useState)(null), [qR, iR] = (0, yR.useState)(!1), [VR, wR] = (0, yR.useState)(null), [rR, eR] = (0, yR.useState)(!1), aR = (0, yR.useCallback)((() => {
+        (0, tG.d)().then((RR => {
+          JR.current && (uR(RR), iR(!1))
+        })).catch((RR => {
+          console.error("Failed to load push notification targets:", RR), JR.current && iR(!0)
         }))
-      }), [iW]), jW = (0, mW.useCallback)((() => {
-        (0, LO.h)().then((WW => {
-          iW.current && xW((() => WW))
+      }), [JR]), LR = (0, yR.useCallback)((() => {
+        (0, uG.g)().then((RR => {
+          JR.current && wR((() => RR))
         }))
-      }), [iW]);
-      (0, mW.useEffect)((() => {
-        bW()
-      }), [bW]), (0, mW.useEffect)((() => {
-        jW()
-      }), [jW, OW]), (0, NO.e)(PO.i, bW);
-      const UW = null === EW ? [] : Object.keys(wO).filter((WW => EW[WW] > 0));
-      return (0, ZW.jsxs)("div", {
+      }), [JR]);
+      (0, yR.useEffect)((() => {
+        aR()
+      }), [aR]), (0, yR.useEffect)((() => {
+        LR()
+      }), [LR, GR]), (0, yG.f)(tG.g, aR);
+      const nR = null === tR ? [] : Object.keys(qG).filter((RR => tR[RR] > 0));
+      return (0, KR.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "SliderText",
-          children: WW("notificationSettings:pushNotifications")
-        }), null === EW && LW && (0, ZW.jsx)("div", {
+          children: RR("notificationSettings:pushNotifications")
+        }), null === tR && qR && (0, KR.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: WW("notificationSettings:pushTargetsLoadFailed")
-        }), null !== EW && 0 === UW.length && (0, ZW.jsx)("div", {
+          children: RR("notificationSettings:pushTargetsLoadFailed")
+        }), null !== tR && 0 === nR.length && (0, KR.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: WW("notificationSettings:pushTargetsNone")
-        }), UW.length > 0 && (0, ZW.jsx)("ul", {
+          children: RR("notificationSettings:pushTargetsNone")
+        }), nR.length > 0 && (0, KR.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: UW.map((iW => {
-            var OW;
-            return (0, ZW.jsx)("li", {
-              children: WW(wO[iW], {
-                count: null !== (OW = null === EW || void 0 === EW ? void 0 : EW[iW]) && void 0 !== OW ? OW : 0
+          children: nR.map((JR => {
+            var GR;
+            return (0, KR.jsx)("li", {
+              children: RR(qG[JR], {
+                count: null !== (GR = null === tR || void 0 === tR ? void 0 : tR[JR]) && void 0 !== GR ? GR : 0
               })
-            }, iW)
+            }, JR)
           }))
-        }), null !== tW && (0, ZW.jsx)(wW.f, {
+        }), null !== VR && (0, KR.jsx)(fR.g, {
           className: "PushNotificationSettingsButton",
-          loading: lW,
+          loading: rR,
           onClick: () => {
-            AW(!0), tW().catch((WW => {
-              console.error("Failed to turn on push notifications:", WW)
+            eR(!0), VR().catch((RR => {
+              console.error("Failed to turn on push notifications:", RR)
             })).finally((() => {
-              iW.current && (AW(!1), jW())
+              JR.current && (eR(!1), LR())
             }))
           },
-          children: WW("notificationSettings:pushTurnOn")
+          children: RR("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var ZO = OW(3524),
-      xO = OW(3265),
-      lO = OW(1977),
-      AO = OW(39);
-    async function bO() {
-      return "dailyDropReminderAsked_" + (await HW.userContextManager.getCurrentUserContext()).whamm
+    var fG = GR(3637),
+      VG = GR(3379),
+      KG = GR(2068),
+      wG = GR(46);
+    async function rG() {
+      return "dailyDropReminderAsked_" + (await bR.userContextManager.getCurrentUserContext()).whamm
     }
 
-    function jO(WW) {
-      return async function(WW) {
-        if (WW.remindersOn || (0, yW.e)(yW.d.get("gameState"))) return null;
-        const iW = await bO();
-        if (null !== AO.i.getItem(iW)) return null;
-        const [OW, mW] = await Promise.all([(0, LO.h)().catch((WW => (console.error("Couldn't tell whether this device can take push notifications:", WW), null))), UO()]);
-        if (null === OW && !mW) return null;
-        if (null !== OW && ((0, xO.d)() || (0, LO.k)())) return null;
+    function eG(RR) {
+      return async function(RR) {
+        if (RR.remindersOn || (0, BR.h)(BR.d.get("gameState"))) return null;
+        const JR = await rG();
+        if (null !== wG.i.getItem(JR)) return null;
+        const [GR, yR] = await Promise.all([(0, uG.g)().catch((RR => (console.error("Couldn't tell whether this device can take push notifications:", RR), null))), aG()]);
+        if (null === GR && !yR) return null;
+        if (null !== GR && ((0, VG.e)() || (0, uG.h)())) return null;
         return {
-          askedKey: iW,
-          requester: OW
+          askedKey: JR,
+          requester: GR
         }
-      }(WW).catch((WW => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", WW), null)))
+      }(RR).catch((RR => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", RR), null)))
     }
 
-    function UO() {
-      return (0, PO.e)().then((WW => WW.app + WW.browser + WW.msnPlay > 0), (WW => (console.error("Couldn't tell where push notifications reach this account:", WW), !0)))
+    function aG() {
+      return (0, tG.d)().then((RR => RR.app + RR.browser + RR.msnPlay > 0), (RR => (console.error("Couldn't tell where push notifications reach this account:", RR), !0)))
     }
-    async function kO(WW) {
-      const iW = (0, ZO.x)({
+    async function LG(RR) {
+      const JR = (0, fG.C)({
           remindersOn: !0
         }),
-        OW = null === WW ? Promise.resolve() : WW(),
-        [mW, EW] = await Promise.allSettled([iW, OW]);
-      "rejected" === mW.status && console.error("Failed to turn on Lucky Skin Block reminders:", mW.reason), "rejected" === EW.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", EW.reason), "rejected" !== mW.status && "rejected" !== EW.status || lO.g.showMessage({
+        GR = null === RR ? Promise.resolve() : RR(),
+        [yR, tR] = await Promise.allSettled([JR, GR]);
+      "rejected" === yR.status && console.error("Failed to turn on Lucky Skin Block reminders:", yR.reason), "rejected" === tR.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", tR.reason), "rejected" !== yR.status && "rejected" !== tR.status || KG.j.showMessage({
         translationKey: "dailyDrop:remindFailed"
       })
     }
-    const sO = {
+    const nG = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1543,7 +1543,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      MO = {
+      UG = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1554,401 +1554,401 @@ export const modules = {
         }
       };
 
-    function KO(WW) {
+    function WG(RR) {
       let {
-        setting: iW,
-        value: OW
-      } = WW;
+        setting: JR,
+        value: GR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)(), LW = (0, cO.c)(), [cW, wW] = (0, mW.useState)(null), [tW, xW] = (0, mW.useState)(!1), [lW, AW] = (0, mW.useState)(null);
-      return (0, mW.useEffect)((() => {
-        "remindersOn" === iW && (0, LO.h)().then((WW => {
-          LW.current && AW((() => WW))
-        }), (WW => {
-          console.error("Couldn't tell whether this device can take push notifications:", WW)
+        t: tR
+      } = (0, ZR.A)(), qR = (0, ZG.d)(), [iR, fR] = (0, yR.useState)(null), [VR, wR] = (0, yR.useState)(!1), [rR, eR] = (0, yR.useState)(null);
+      return (0, yR.useEffect)((() => {
+        "remindersOn" === JR && (0, uG.g)().then((RR => {
+          qR.current && eR((() => RR))
+        }), (RR => {
+          console.error("Couldn't tell whether this device can take push notifications:", RR)
         }))
-      }), [iW, LW]), (0, ZW.jsx)(YW.e, {
-        className: NW()({
-          DailyDropSettingFailed: tW
+      }), [JR, qR]), (0, KR.jsx)(MR.e, {
+        className: uR()({
+          DailyDropSettingFailed: VR
         }),
-        label: EW(MO[iW].label),
-        checked: null !== cW && void 0 !== cW ? cW : OW,
-        note: tW ? EW("dailyDrop:settingFailed") : void 0,
-        onClick: WW => {
-          null === cW && (wW(WW), xW(!1), WW && null !== lW && lW().catch((WW => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", WW)
-          })), (0, ZO.v)("daily_drop.setting", `${MO[iW].reportAs}_${WW?"on":"off"}`), "remindersOn" === iW && bO().then((WW => {
-            AO.i.setItem(WW, !0)
-          }), (WW => {
-            console.error("Failed to keep the Lucky Skin Block reminders choice:", WW)
-          })), (0, ZO.x)("hidden" === iW ? {
-            hidden: WW
+        label: tR(UG[JR].label),
+        checked: null !== iR && void 0 !== iR ? iR : GR,
+        note: VR ? tR("dailyDrop:settingFailed") : void 0,
+        onClick: RR => {
+          null === iR && (fR(RR), wR(!1), RR && null !== rR && rR().catch((RR => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", RR)
+          })), (0, fG.y)("daily_drop.setting", `${UG[JR].reportAs}_${RR?"on":"off"}`), "remindersOn" === JR && rG().then((RR => {
+            wG.i.setItem(RR, !0)
+          }), (RR => {
+            console.error("Failed to keep the Lucky Skin Block reminders choice:", RR)
+          })), (0, fG.C)("hidden" === JR ? {
+            hidden: RR
           } : {
-            remindersOn: WW
-          }).catch((WW => {
-            console.error(`Failed to save the Lucky Skin Block's ${iW} setting:`, WW), LW.current && xW(!0)
+            remindersOn: RR
+          }).catch((RR => {
+            console.error(`Failed to save the Lucky Skin Block's ${JR} setting:`, RR), qR.current && wR(!0)
           })).finally((() => {
-            LW.current && wW(null)
+            qR.current && fR(null)
           })))
         }
       })
     }
-    const SO = (0, mW.memo)((function() {
+    const AG = (0, yR.memo)((function() {
       const {
-        t: WW
-      } = (0, PW.B)(), {
-        clientEscMenuOptions: iW
-      } = (0, yW.p)(["clientEscMenuOptions"]), {
-        userContext: OW
-      } = (0, AW.e)(), mW = OW.dailyDrop;
-      return (0, ZW.jsxs)("div", {
+        t: RR
+      } = (0, ZR.A)(), {
+        clientEscMenuOptions: JR
+      } = (0, BR.o)(["clientEscMenuOptions"]), {
+        userContext: GR
+      } = (0, eR.d)(), yR = GR.dailyDrop;
+      return (0, KR.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [UW.featureFlags.useSocialFeatures && (0, ZW.jsx)(YW.h, {
-          label: WW("notificationSettings:friendRequests"),
-          options: EO.b.map((iW => ({
-            value: iW,
-            label: WW(sO[iW].label)
+        children: [nR.featureFlags.useSocialFeatures && (0, KR.jsx)(MR.g, {
+          label: RR("notificationSettings:friendRequests"),
+          options: GG.d.map((JR => ({
+            value: JR,
+            label: RR(nG[JR].label)
           }))),
-          value: iW.friendRequestNotifications,
-          onChange: WW => {
-            yW.d.setClientEscMenuOptions({
-              friendRequestNotifications: WW
+          value: JR.friendRequestNotifications,
+          onChange: RR => {
+            BR.d.setClientEscMenuOptions({
+              friendRequestNotifications: RR
             })
           },
-          circleInfoText: (0, ZW.jsx)("div", {
+          circleInfoText: (0, KR.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: EO.b.map((iW => (0, ZW.jsxs)("div", {
-              children: [(0, ZW.jsx)("b", {
-                children: WW(sO[iW].label)
-              }), ": ", WW(sO[iW].info)]
-            }, iW)))
+            children: GG.d.map((JR => (0, KR.jsxs)("div", {
+              children: [(0, KR.jsx)("b", {
+                children: RR(nG[JR].label)
+              }), ": ", RR(nG[JR].info)]
+            }, JR)))
           })
-        }), null !== mW && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)(KO, {
+        }), null !== yR && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)(WG, {
             setting: "remindersOn",
-            value: mW.remindersOn
-          }), (0, ZW.jsx)(KO, {
+            value: yR.remindersOn
+          }), (0, KR.jsx)(WG, {
             setting: "hidden",
-            value: mW.hidden
+            value: yR.hidden
           })]
-        }), (0, ZW.jsx)(tO, {})]
+        }), (0, KR.jsx)(iG, {})]
       })
     }));
-    var YO = OW(5211),
-      yO = OW(182),
-      TO = OW(315),
-      JO = OW(7659),
-      hO = OW(4666),
-      HO = OW(35150),
-      nO = OW(643),
-      uO = OW(27);
-    var oO = OW(671),
-      dO = OW(5049);
-    const eO = new Map([
+    var CG = GR(5313),
+      XG = GR(203),
+      MG = GR(342),
+      BG = GR(7802),
+      lG = GR(4776),
+      pG = GR(35064),
+      gG = GR(679),
+      bG = GR(32);
+    var vG = GR(709),
+      OG = GR(5145);
+    const xG = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function vO(WW) {
-      return eO.has(WW) ? kW.gameBridge.lookup("YM", null) : null
+    function NG(RR) {
+      return xG.has(RR) ? UR.gameBridge.lookup("zW", null) : null
     }
 
-    function gO(WW) {
-      if (!(0, nO.K)(yW.d.get("clientEscMenuOptions")[WW])) return yW.d.get("clientEscMenuOptions")[WW];
-      const iW = vO(WW);
-      return null !== iW ? iW[eO.get(WW)] : AO.i.getItem(WW)
+    function DG(RR) {
+      if (!(0, gG.I)(BR.d.get("clientEscMenuOptions")[RR])) return BR.d.get("clientEscMenuOptions")[RR];
+      const JR = NG(RR);
+      return null !== JR ? JR[xG.get(RR)] : wG.i.getItem(RR)
     }
 
-    function DO(WW, iW) {
-      if ("useTouchControls" === WW) return void(0, dO.e)(iW);
-      WW in yW.d.get("clientEscMenuOptions") && yW.d.setClientEscMenuOptions({
-        [WW]: iW
+    function HG(RR, JR) {
+      if ("useTouchControls" === RR) return void(0, OG.b)(JR);
+      RR in BR.d.get("clientEscMenuOptions") && BR.d.setClientEscMenuOptions({
+        [RR]: JR
       });
-      const OW = vO(WW);
-      null !== OW && kW.gameBridge.send("setChunkAddDistance", {
-        ...OW,
-        [eO.get(WW)]: iW
-      }), AO.i.setItem(WW, iW)
+      const GR = NG(RR);
+      null !== GR && UR.gameBridge.send("setChunkAddDistance", {
+        ...GR,
+        [xG.get(RR)]: JR
+      }), wG.i.setItem(RR, JR)
     }
-    var VO = OW(5129),
-      pO = OW(35157),
-      fO = OW(35159),
-      CO = OW(5203),
-      XO = OW(35175);
+    var oG = GR(5224),
+      cG = GR(35067),
+      PG = GR(35072),
+      IG = GR(5310),
+      mG = GR(35094);
 
-    function BO(WW) {
-      var iW, EW, LW, cW;
+    function zG(RR) {
+      var JR, tR, qR, iR;
       let {
-        minChunkAddDist: wW,
-        getValue: tW,
-        onChange: xW,
-        setApplySettingsCallback: lW
-      } = WW;
+        minChunkAddDist: fR,
+        getValue: VR,
+        onChange: wR,
+        setApplySettingsCallback: rR
+      } = RR;
       const {
-        t: AW
-      } = (0, PW.B)(), {
-        clientEscMenuOptions: jW
-      } = (0, yW.p)(["clientEscMenuOptions", "showDistantNametags"]), kW = (0, mW.useRef)(tW("showFog")), sW = (0, mW.useRef)(jW.antiAliasing), MW = (0, mW.useRef)(jW.useWebGpu), [KW, SW] = (0, mW.useState)(null), [JW, hW] = (0, mW.useState)(!1), [HW, nW] = (0, mW.useState)((() => (0, hO.c)(UW.featureFlags.settings.canUseShaderPacks))), [uW] = (0, mW.useState)((() => yW.d.isWebGpuDefaultOff())), [oW] = (0, mW.useState)(TO.l), [dW, eW] = (0, mW.useState)(!1);
-      (0, mW.useEffect)((() => {
-        const WW = () => {
-          eW((0, fO.t)())
+        t: eR
+      } = (0, ZR.A)(), {
+        clientEscMenuOptions: LR
+      } = (0, BR.o)(["clientEscMenuOptions", "showDistantNametags"]), UR = (0, yR.useRef)(VR("showFog")), WR = (0, yR.useRef)(LR.antiAliasing), AR = (0, yR.useRef)(LR.useWebGpu), [CR, XR] = (0, yR.useState)(null), [pR, gR] = (0, yR.useState)(!1), [bR, vR] = (0, yR.useState)((() => (0, lG.h)(nR.featureFlags.settings.canUseShaderPacks))), [OR] = (0, yR.useState)((() => BR.d.isWebGpuDefaultOff())), [xR] = (0, yR.useState)(MG.j), [NR, DR] = (0, yR.useState)(!1);
+      (0, yR.useEffect)((() => {
+        const RR = () => {
+          DR((0, PG.p)())
         };
-        return WW(), (0, fO.C)(WW)
-      }), []), (0, NO.e)("appManagerUpdated|clientEscMenuOptions", (() => {
-        eW((0, fO.t)())
+        return RR(), (0, PG.v)(RR)
+      }), []), (0, yG.f)("appManagerUpdated|clientEscMenuOptions", (() => {
+        DR((0, PG.p)())
       }));
-      const [vW] = (0, mW.useState)((() => !0 === AO.i.getItem(oi.pc))), [gW] = (0, mW.useState)((() => yW.d.isWebGpuOnStored()));
-      (0, mW.useEffect)((() => {
-        let WW = !1;
-        return (0, UW.hasUsableWebGpuAdapter)().then((async iW => {
-          const OW = vW || gW,
-            mW = !iW && oO.K && await (0, XO.g)(OW);
-          WW || (SW(iW || mW), hW(mW))
-        })), (0, hO.i)(UW.featureFlags.settings.canUseShaderPacks) && (0, JO.g)().then((async iW => {
-          const mW = null !== iW && await async function(WW) {
+      const [HR] = (0, yR.useState)((() => !0 === wG.i.getItem(OJ.jc))), [oR] = (0, yR.useState)((() => BR.d.isWebGpuOnStored()));
+      (0, yR.useEffect)((() => {
+        let RR = !1;
+        return (0, nR.hasUsableWebGpuAdapter)().then((async JR => {
+          const GR = HR || oR,
+            yR = !JR && vG.G && await (0, mG.f)(GR);
+          RR || (XR(JR || yR), gR(yR))
+        })), (0, lG.o)(nR.featureFlags.settings.canUseShaderPacks) && (0, BG.d)().then((async JR => {
+          const yR = null !== JR && await async function(RR) {
             const [{
-              isShaderPackActive: iW
+              isShaderPackActive: JR
             }, {
-              loadPageShaderPackCompiler: mW
-            }] = await Promise.all([OW.e(160).then((() => OW(7656))), Promise.all([OW.e(91), OW.e(157), OW.e(159)]).then((() => OW(7621)))]);
-            return iW(WW, await mW())
-          }(iW);
-          WW || nW(mW)
+              loadPageShaderPackCompiler: yR
+            }] = await Promise.all([GR.e(160).then((() => GR(7800))), Promise.all([GR.e(91), GR.e(157), GR.e(159)]).then((() => GR(7756)))]);
+            return JR(RR, await yR())
+          }(JR);
+          RR || vR(yR)
         })), () => {
-          WW = !0
+          RR = !0
         }
-      }), [vW, gW]);
-      const DW = (!(HW && !vW) || !JW) && KW,
-        VW = function(WW, iW, OW, mW, EW) {
-          return (0, HO.c)(OW, mW) && !0 === iW ? {
+      }), [HR, oR]);
+      const cR = (!(bR && !HR) || !pR) && CR,
+        PR = function(RR, JR, GR, yR, tR) {
+          return (0, pG.b)(GR, yR) && !0 === JR ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== iW ? "settingsMenu:newWebGpu" : EW ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: WW && !1 !== iW,
-            disabled: !0 !== iW
+            translationKey: !1 !== JR ? "settingsMenu:newWebGpu" : tR ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: RR && !1 !== JR,
+            disabled: !0 !== JR
           }
-        }(jW.useWebGpu, DW, HW, uW, oW),
-        pW = (jW.useWebGpu || (0, HO.c)(HW, uW)) && HW && !0 === DW,
-        fW = (0, bW.e)("lightingOverride"),
-        CW = !(0, nO.K)(fW);
-      let XW = "settingsMenu:enableLighting";
-      CW && (XW = fW ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const BW = WW => {
-          var iW, OW, mW;
-          const EW = null !== (iW = WW.showFog) && void 0 !== iW ? iW : tW("showFog"),
-            NW = null !== (OW = WW.antiAliasing) && void 0 !== OW ? OW : jW.antiAliasing,
-            PW = null !== (mW = WW.useWebGpu) && void 0 !== mW ? mW : jW.useWebGpu,
-            LW = !oO.K && EW !== kW.current || NW !== sW.current || PW !== MW.current;
-          lW(LW ? () => YW.n : null)
+        }(LR.useWebGpu, cR, bR, OR, xR),
+        IR = (LR.useWebGpu || (0, pG.b)(bR, OR)) && bR && !0 === cR,
+        mR = (0, aR.f)("lightingOverride"),
+        zR = !(0, gG.I)(mR);
+      let SR = "settingsMenu:enableLighting";
+      zR && (SR = mR ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const jR = RR => {
+          var JR, GR, yR;
+          const tR = null !== (JR = RR.showFog) && void 0 !== JR ? JR : VR("showFog"),
+            uR = null !== (GR = RR.antiAliasing) && void 0 !== GR ? GR : LR.antiAliasing,
+            ZR = null !== (yR = RR.useWebGpu) && void 0 !== yR ? yR : LR.useWebGpu,
+            qR = !vG.G && tR !== UR.current || uR !== WR.current || ZR !== AR.current;
+          rR(qR ? () => MR.m : null)
         },
-        qW = (0, bW.e)("fogChunkDistanceOverride"),
-        RW = (0, bW.e)("fogBlockDistanceOverride"),
-        GW = !(0, nO.K)(qW) || !(0, nO.K)(RW),
-        IW = GW ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [aW, rW] = (0, YO.h)(wW),
-        [zW, FW] = (0, CO.i)(wW),
-        QW = AW("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        Wi = zW < aW,
-        ii = Math.min(null !== (iW = tW("chunkHorizAddDist")) && void 0 !== iW ? iW : wW[0], zW),
-        Oi = !GW && function(WW, iW) {
-          return !0 === WW.showFog && WW.fogChunkDistance > iW
-        }(jW, ii);
-      return (0, ZW.jsxs)("div", {
+        dR = (0, aR.f)("fogChunkDistanceOverride"),
+        ER = (0, aR.f)("fogBlockDistanceOverride"),
+        YR = !(0, gG.I)(dR) || !(0, gG.I)(ER),
+        kR = YR ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [QR, FR] = (0, CG.f)(fR),
+        [TR, sR] = (0, IG.l)(fR),
+        hR = eR("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        RJ = TR < QR,
+        JJ = Math.min(null !== (JR = VR("chunkHorizAddDist")) && void 0 !== JR ? JR : fR[0], TR),
+        GJ = !YR && function(RR, JR) {
+          return !0 === RR.showFog && RR.fogChunkDistance > JR
+        }(LR, JJ);
+      return (0, KR.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, ZW.jsx)(YW.k, {
-          name: AW("settingsMenu:horizontalChunkLoadDistance"),
-          min: wW[0],
-          max: aW,
-          selectableMax: zW,
-          cappedNote: QW,
+        children: [(0, KR.jsx)(MR.i, {
+          name: eR("settingsMenu:horizontalChunkLoadDistance"),
+          min: fR[0],
+          max: QR,
+          selectableMax: TR,
+          cappedNote: hR,
           step: 1,
-          initValue: ii,
-          onChange: WW => {
-            !0 === tW("showFog") && WW < tW("fogChunkDistance") && xW("fogChunkDistance", WW), xW("chunkHorizAddDist", WW), uO.l.iZ("updatedChunkLoadDist")
+          initValue: JJ,
+          onChange: RR => {
+            !0 === VR("showFog") && RR < VR("fogChunkDistance") && wR("fogChunkDistance", RR), wR("chunkHorizAddDist", RR), bG.n.JK("updatedChunkLoadDist")
           },
-          circleInfoText: AW("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, ZW.jsx)(YW.k, {
-          name: AW("settingsMenu:verticalChunkLoadDistance"),
-          min: wW[1],
-          max: rW,
-          selectableMax: FW,
-          cappedNote: Wi ? void 0 : QW,
+          circleInfoText: eR("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, KR.jsx)(MR.i, {
+          name: eR("settingsMenu:verticalChunkLoadDistance"),
+          min: fR[1],
+          max: FR,
+          selectableMax: sR,
+          cappedNote: RJ ? void 0 : hR,
           step: 1,
-          initValue: Math.min(null !== (EW = tW("chunkVertAddDist")) && void 0 !== EW ? EW : wW[1], FW),
-          onChange: WW => {
-            xW("chunkVertAddDist", WW), uO.l.iZ("updatedChunkLoadDist")
+          initValue: Math.min(null !== (tR = VR("chunkVertAddDist")) && void 0 !== tR ? tR : fR[1], sR),
+          onChange: RR => {
+            wR("chunkVertAddDist", RR), bG.n.JK("updatedChunkLoadDist")
           },
-          circleInfoText: AW("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: eR("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, ZW.jsx)(YW.e, {
-          label: AW("settingsMenu:chunkFadeIn"),
-          checked: jW.chunkFadeIn,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              chunkFadeIn: WW
+        }), (0, KR.jsx)(MR.e, {
+          label: eR("settingsMenu:chunkFadeIn"),
+          checked: LR.chunkFadeIn,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              chunkFadeIn: RR
             })
           },
-          circleInfoText: AW("settingsMenu:chunkFadeInInfo")
-        }), TW.devTools.supports("chunkBorders") && (0, ZW.jsx)(YW.e, {
-          label: AW("settingsMenu:showChunkBorders"),
-          checked: jW.showChunkBorders,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              showChunkBorders: WW
+          circleInfoText: eR("settingsMenu:chunkFadeInInfo")
+        }), lR.devTools.supports("chunkBorders") && (0, KR.jsx)(MR.e, {
+          label: eR("settingsMenu:showChunkBorders"),
+          checked: LR.showChunkBorders,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              showChunkBorders: RR
             })
           },
-          circleInfoText: AW("settingsMenu:showChunkBordersInfo")
-        }), (0, ZW.jsx)(YW.e, {
-          label: AW(XW),
-          checked: jW.enableLighting,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              enableLighting: WW
+          circleInfoText: eR("settingsMenu:showChunkBordersInfo")
+        }), (0, KR.jsx)(MR.e, {
+          label: eR(SR),
+          checked: LR.enableLighting,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              enableLighting: RR
             })
           },
-          disabled: CW
-        }), (0, ZW.jsxs)("div", {
+          disabled: zR
+        }), (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, ZW.jsx)(YW.e, {
-            label: AW(IW),
-            checked: jW.showFog,
-            onClick: WW => {
-              BW({
-                showFog: WW
-              }), yW.d.setClientEscMenuOptions({
-                showFog: WW
+          children: [(0, KR.jsx)(MR.e, {
+            label: eR(kR),
+            checked: LR.showFog,
+            onClick: RR => {
+              jR({
+                showFog: RR
+              }), BR.d.setClientEscMenuOptions({
+                showFog: RR
               })
             },
-            disabled: GW,
-            className: NW()({
-              SettingBoxWarning: Oi
+            disabled: YR,
+            className: uR()({
+              SettingBoxWarning: GJ
             })
-          }), (0, ZW.jsx)(YW.k, {
-            name: AW("settingsMenu:fogChunkDistance"),
-            min: wW[0],
-            max: yO.f.maxChunkHorizAddDistance,
+          }), (0, KR.jsx)(MR.i, {
+            name: eR("settingsMenu:fogChunkDistance"),
+            min: fR[0],
+            max: XG.g.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (LW = jW.fogChunkDistance) && void 0 !== LW ? LW : wW[0],
-            onChange: WW => {
-              yW.d.setClientEscMenuOptions({
-                fogChunkDistance: WW
-              }), uO.l.iZ("fogChunkDistanceChanged", WW)
+            initValue: null !== (qR = LR.fogChunkDistance) && void 0 !== qR ? qR : fR[0],
+            onChange: RR => {
+              BR.d.setClientEscMenuOptions({
+                fogChunkDistance: RR
+              }), bG.n.JK("fogChunkDistanceChanged", RR)
             },
-            circleInfoText: AW("settingsMenu:fogChunkDistanceInfo"),
-            disabled: GW || !1 === tW("showFog"),
-            className: NW()({
-              SettingBoxWarning: Oi
+            circleInfoText: eR("settingsMenu:fogChunkDistanceInfo"),
+            disabled: YR || !1 === VR("showFog"),
+            className: uR()({
+              SettingBoxWarning: GJ
             })
-          }), Oi && (0, ZW.jsx)("div", {
+          }), GJ && (0, KR.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: AW("settingsMenu:fogChunkDistanceInfo")
+            children: eR("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !oO.K && (0, ZW.jsx)(YW.e, {
-          label: AW(pW ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !pW && jW.disableTexAtlas,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              disableTexAtlas: WW
+        }), !vG.G && (0, KR.jsx)(MR.e, {
+          label: eR(IR ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !IR && LR.disableTexAtlas,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              disableTexAtlas: RR
             })
           },
-          circleInfoText: AW("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: pW
-        }), (0, ZW.jsx)(YW.k, {
-          name: AW("settingsMenu:fieldOfView"),
+          circleInfoText: eR("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: IR
+        }), (0, KR.jsx)(MR.i, {
+          name: eR("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: jW.cameraFOV,
-          onChange: WW => {
-            yW.d.setClientEscMenuOptions({
-              cameraFOV: WW
+          initValue: LR.cameraFOV,
+          onChange: RR => {
+            BR.d.setClientEscMenuOptions({
+              cameraFOV: RR
             })
           }
-        }), (0, ZW.jsx)(YW.e, {
-          label: AW("settingsMenu:disableViewBobbing"),
-          checked: jW.disableBobbing,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              disableBobbing: WW
+        }), (0, KR.jsx)(MR.e, {
+          label: eR("settingsMenu:disableViewBobbing"),
+          checked: LR.disableBobbing,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              disableBobbing: RR
             })
           },
-          circleInfoText: AW("settingsMenu:disableViewBobbingInfo")
-        }), (0, ZW.jsx)(YW.e, {
-          label: AW("settingsMenu:antiAliasing"),
-          checked: jW.antiAliasing,
-          onClick: WW => {
-            BW({
-              antiAliasing: WW
-            }), (0, VO.h)("antiAliasing"), yW.d.setClientEscMenuOptions({
-              antiAliasing: WW
+          circleInfoText: eR("settingsMenu:disableViewBobbingInfo")
+        }), (0, KR.jsx)(MR.e, {
+          label: eR("settingsMenu:antiAliasing"),
+          checked: LR.antiAliasing,
+          onClick: RR => {
+            jR({
+              antiAliasing: RR
+            }), (0, oG.i)("antiAliasing"), BR.d.setClientEscMenuOptions({
+              antiAliasing: RR
             })
           },
-          circleInfoText: AW("settingsMenu:antiAliasingInfo")
-        }), (0, ZW.jsx)(YW.k, {
-          name: AW("settingsMenu:pixelScale"),
+          circleInfoText: eR("settingsMenu:antiAliasingInfo")
+        }), (0, KR.jsx)(MR.i, {
+          name: eR("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (cW = jW.pixelScale) && void 0 !== cW ? cW : 1,
-          onChange: WW => {
-            (WW !== yW.d.get("clientEscMenuOptions").pixelScale || (0, fO.q)()) && (0, VO.h)("pixelScale"), yW.d.setClientEscMenuOptions({
-              pixelScale: WW
+          initValue: null !== (iR = LR.pixelScale) && void 0 !== iR ? iR : 1,
+          onChange: RR => {
+            (RR !== BR.d.get("clientEscMenuOptions").pixelScale || (0, PG.m)()) && (0, oG.i)("pixelScale"), BR.d.setClientEscMenuOptions({
+              pixelScale: RR
             })
           },
-          circleInfoText: AW("settingsMenu:pixelScaleInfo"),
-          note: dW ? AW("settingsMenu:pixelScaleLowered") : void 0,
-          format: WW => `${WW}x`
-        }), (0, ZW.jsx)(YW.e, {
-          label: AW("settingsMenu:pixelSmoothing"),
-          checked: jW.pixelSmoothing,
-          onClick: WW => {
-            yW.d.setClientEscMenuOptions({
-              pixelSmoothing: WW
+          circleInfoText: eR("settingsMenu:pixelScaleInfo"),
+          note: NR ? eR("settingsMenu:pixelScaleLowered") : void 0,
+          format: RR => `${RR}x`
+        }), (0, KR.jsx)(MR.e, {
+          label: eR("settingsMenu:pixelSmoothing"),
+          checked: LR.pixelSmoothing,
+          onClick: RR => {
+            BR.d.setClientEscMenuOptions({
+              pixelSmoothing: RR
             })
           },
-          circleInfoText: AW("settingsMenu:pixelSmoothingInfo")
-        }), oO.K && (0, ZW.jsx)(YW.e, {
-          label: AW("settingsMenu:distantNametags"),
-          checked: (0, pO.b)(),
-          onClick: WW => {
-            yW.d.set({
-              showDistantNametags: WW
+          circleInfoText: eR("settingsMenu:pixelSmoothingInfo")
+        }), vG.G && (0, KR.jsx)(MR.e, {
+          label: eR("settingsMenu:distantNametags"),
+          checked: (0, cG.d)(),
+          onClick: RR => {
+            BR.d.set({
+              showDistantNametags: RR
             })
           },
-          circleInfoText: AW("settingsMenu:distantNametagsInfo")
-        }), (0, ZW.jsx)(YW.e, {
-          label: AW(VW.translationKey),
-          checked: VW.checked,
-          onClick: WW => {
-            BW({
-              useWebGpu: WW
-            }), yW.d.setClientEscMenuOptions({
-              useWebGpu: WW
+          circleInfoText: eR("settingsMenu:distantNametagsInfo")
+        }), (0, KR.jsx)(MR.e, {
+          label: eR(PR.translationKey),
+          checked: PR.checked,
+          onClick: RR => {
+            jR({
+              useWebGpu: RR
+            }), BR.d.setClientEscMenuOptions({
+              useWebGpu: RR
             })
           },
-          circleInfoText: AW("settingsMenu:newWebGpuInfo"),
-          disabled: VW.disabled
+          circleInfoText: eR("settingsMenu:newWebGpuInfo"),
+          disabled: PR.disabled
         })]
       })
     }
-    var qO = OW(5126),
-      RO = OW(10092),
-      GO = OW(35177),
-      IO = OW(10104),
-      aO = OW(10158),
-      rO = OW(35181);
-    const zO = {
+    var SG = GR(5218),
+      jG = GR(10215),
+      dG = GR(35099),
+      EG = GR(10227),
+      YG = GR(10273),
+      kG = GR(35106);
+    const QG = {
         color: 16777215,
         name: "white"
       },
-      FO = {
+      FG = {
         color: 0,
         name: "black"
       },
-      QO = [zO, {
+      TG = [QG, {
         color: 5046092,
         name: "green"
       }, {
@@ -1963,134 +1963,134 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, FO],
-      Wm = [FO, zO];
+      }, FG],
+      sG = [FG, QG];
 
-    function im(WW) {
-      return `${WW} px`
+    function hG(RR) {
+      return `${RR} px`
     }
 
-    function Om(WW) {
-      return `${WW}%`
+    function Ry(RR) {
+      return `${RR}%`
     }
 
-    function mm(WW) {
+    function Jy(RR) {
       let {
-        settings: iW,
-        onChange: OW
-      } = WW;
+        settings: JR,
+        onChange: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)(), EW = (WW, mW) => {
-        OW((0, rO.A)(iW, WW, mW))
-      }, NW = function(WW, OW) {
-        let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : im;
+        t: yR
+      } = (0, ZR.A)(), tR = (RR, yR) => {
+        GR((0, kG.w)(JR, RR, yR))
+      }, uR = function(RR, GR) {
+        let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hG;
         const {
-          min: NW,
-          max: PW,
-          step: LW
-        } = rO.e[WW];
-        return (0, ZW.jsx)(YW.k, {
-          name: OW,
-          min: NW,
-          max: PW,
-          step: LW,
-          initValue: iW[WW],
-          format: mW,
-          onChange: iW => {
-            EW(WW, iW)
+          min: uR,
+          max: ZR,
+          step: qR
+        } = kG.d[RR];
+        return (0, KR.jsx)(MR.i, {
+          name: GR,
+          min: uR,
+          max: ZR,
+          step: qR,
+          initValue: JR[RR],
+          format: yR,
+          onChange: JR => {
+            tR(RR, JR)
           }
-        }, WW)
-      }, LW = (WW, OW, NW) => (0, ZW.jsx)(aO.b, {
-        label: WW,
-        value: (0, rO.m)(iW[OW]),
-        swatches: NW.map((WW => {
+        }, RR)
+      }, qR = (RR, GR, uR) => (0, KR.jsx)(YG.b, {
+        label: RR,
+        value: (0, kG.j)(JR[GR]),
+        swatches: uR.map((RR => {
           let {
-            color: iW,
-            name: OW
-          } = WW;
+            color: JR,
+            name: GR
+          } = RR;
           return {
-            colour: (0, rO.m)(iW),
-            label: mW(`crosshairSettings:color_${OW}`)
+            colour: (0, kG.j)(JR),
+            label: yR(`crosshairSettings:color_${GR}`)
           }
         })),
-        customLabel: mW("crosshairSettings:customColor"),
-        onChange: WW => {
-          const iW = (0, rO.t)(WW);
-          null !== iW && EW(OW, iW)
+        customLabel: yR("crosshairSettings:customColor"),
+        onChange: RR => {
+          const JR = (0, kG.p)(RR);
+          null !== JR && tR(GR, JR)
         }
-      }), cW = ["lines", "dot", "circle"].filter((WW => iW[WW])), wW = (WW, OW, mW) => (0, ZW.jsx)(YW.e, {
-        label: OW,
-        checked: iW[WW],
-        disabled: 1 === cW.length && cW[0] === WW,
-        circleInfoText: mW,
-        onClick: iW => {
-          EW(WW, iW)
+      }), iR = ["lines", "dot", "circle"].filter((RR => JR[RR])), fR = (RR, GR, yR) => (0, KR.jsx)(MR.e, {
+        label: GR,
+        checked: JR[RR],
+        disabled: 1 === iR.length && iR[0] === RR,
+        circleInfoText: yR,
+        onClick: JR => {
+          tR(RR, JR)
         }
-      }, WW), tW = "shapes" === iW.style;
-      return (0, ZW.jsxs)(ZW.Fragment, {
-        children: [(0, ZW.jsx)(YW.h, {
-          label: mW("crosshairSettings:style"),
+      }, RR), VR = "shapes" === JR.style;
+      return (0, KR.jsxs)(KR.Fragment, {
+        children: [(0, KR.jsx)(MR.g, {
+          label: yR("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: mW("crosshairSettings:styleClassic")
+            label: yR("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: mW("crosshairSettings:styleShapes")
+            label: yR("crosshairSettings:styleShapes")
           }],
-          value: iW.style,
-          onChange: WW => {
-            EW("style", WW)
+          value: JR.style,
+          onChange: RR => {
+            tR("style", RR)
           }
-        }), LW(mW("crosshairSettings:color"), "color", QO), NW("opacity", mW("crosshairSettings:opacity"), Om), !tW && NW("size", mW("crosshairSettings:size"), Om), tW && (0, ZW.jsxs)("div", {
+        }), qR(yR("crosshairSettings:color"), "color", TG), uR("opacity", yR("crosshairSettings:opacity"), Ry), !VR && uR("size", yR("crosshairSettings:size"), Ry), VR && (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [wW("lines", mW("crosshairSettings:lines")), iW.lines && NW("lineLength", mW("crosshairSettings:lineLength")), iW.lines && NW("lineThickness", mW("crosshairSettings:lineThickness")), iW.lines && NW("gap", mW("crosshairSettings:gap")), iW.lines && wW("tStyle", mW("crosshairSettings:tStyle"))]
-        }), tW && (0, ZW.jsxs)("div", {
+          children: [fR("lines", yR("crosshairSettings:lines")), JR.lines && uR("lineLength", yR("crosshairSettings:lineLength")), JR.lines && uR("lineThickness", yR("crosshairSettings:lineThickness")), JR.lines && uR("gap", yR("crosshairSettings:gap")), JR.lines && fR("tStyle", yR("crosshairSettings:tStyle"))]
+        }), VR && (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [wW("dot", mW("crosshairSettings:dot")), iW.dot && NW("dotSize", mW("crosshairSettings:dotSize"))]
-        }), tW && (0, ZW.jsxs)("div", {
+          children: [fR("dot", yR("crosshairSettings:dot")), JR.dot && uR("dotSize", yR("crosshairSettings:dotSize"))]
+        }), VR && (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [wW("circle", mW("crosshairSettings:circle")), iW.circle && NW("circleRadius", mW("crosshairSettings:circleRadius")), iW.circle && NW("circleThickness", mW("crosshairSettings:circleThickness"))]
-        }), (0, ZW.jsxs)("div", {
+          children: [fR("circle", yR("crosshairSettings:circle")), JR.circle && uR("circleRadius", yR("crosshairSettings:circleRadius")), JR.circle && uR("circleThickness", yR("crosshairSettings:circleThickness"))]
+        }), (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [NW("outline", mW("crosshairSettings:outline"), (WW => WW > 0 ? im(WW) : mW("crosshairSettings:off"))), iW.outline > 0 && LW(mW("crosshairSettings:outlineColor"), "outlineColor", Wm)]
-        }), wW("growOnClick", mW("crosshairSettings:growOnClick")), tW && wW("forGuns", mW("crosshairSettings:forGuns"), mW("crosshairSettings:forGunsInfo"))]
+          children: [uR("outline", yR("crosshairSettings:outline"), (RR => RR > 0 ? hG(RR) : yR("crosshairSettings:off"))), JR.outline > 0 && qR(yR("crosshairSettings:outlineColor"), "outlineColor", sG)]
+        }), fR("growOnClick", yR("crosshairSettings:growOnClick")), VR && fR("forGuns", yR("crosshairSettings:forGuns"), yR("crosshairSettings:forGunsInfo"))]
       })
     }
-    var Em = OW(80),
-      Nm = OW(1269),
-      Pm = OW(13952),
-      Lm = OW(15078),
-      cm = OW(16479),
-      wm = OW(17016);
-    const tm = ["sky", "grass", "stone", "sand", "snow", "night"],
-      Zm = "4rem";
+    var Gy = GR(83),
+      yy = GR(1366),
+      ty = GR(14020),
+      uy = GR(15168),
+      Zy = GR(16520),
+      qy = GR(17051);
+    const iy = ["sky", "grass", "stone", "sand", "snow", "night"],
+      fy = "4rem";
 
-    function xm(WW) {
+    function Vy(RR) {
       return {
-        backgroundImage: `url(${WW})`,
-        backgroundSize: `${Zm} ${Zm}`,
+        backgroundImage: `url(${RR})`,
+        backgroundSize: `${fy} ${fy}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function lm(WW) {
+    function Ky(RR) {
       return {
         ...(() => {
-          switch (WW) {
+          switch (RR) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return xm(Pm);
+              return Vy(ty);
             case "stone":
-              return xm(Lm);
+              return Vy(uy);
             case "sand":
-              return xm(cm);
+              return Vy(Zy);
             case "snow":
-              return xm(wm);
+              return Vy(qy);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -2101,21 +2101,21 @@ export const modules = {
       }
     }
 
-    function Am(WW) {
+    function wy(RR) {
       return Object.freeze({
-        ...rO.g,
+        ...kG.e,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...WW
+        ...RR
       })
     }
-    const bm = [{
+    const ry = [{
         id: "default",
-        settings: rO.g
+        settings: kG.e
       }, {
         id: "cross",
-        settings: Am({
+        settings: wy({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -2124,7 +2124,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: Am({
+        settings: wy({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -2135,13 +2135,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: Am({
+        settings: wy({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: Am({
+        settings: wy({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -2150,7 +2150,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: Am({
+        settings: wy({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -2160,7 +2160,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: Am({
+        settings: wy({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -2169,7 +2169,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: Am({
+        settings: wy({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -2177,570 +2177,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      jm = ["growOnClick", "forGuns"];
-    var Um = OW(35190);
+      ey = ["growOnClick", "forGuns"];
+    var ay = GR(35111);
 
-    function km(WW) {
+    function Ly(RR) {
       let {
-        label: iW,
-        selected: OW,
-        onClick: mW,
-        className: EW,
-        style: PW,
-        children: LW
-      } = WW;
-      return (0, ZW.jsx)("button", {
+        label: JR,
+        selected: GR,
+        onClick: yR,
+        className: tR,
+        style: ZR,
+        children: qR
+      } = RR;
+      return (0, KR.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": OW,
-        title: iW,
-        "aria-label": iW,
+        "aria-checked": GR,
+        title: JR,
+        "aria-label": JR,
         "data-pad-focusable": !0,
-        className: NW()("CrosshairBackdropSwatch", EW, {
-          Selected: OW
+        className: uR()("CrosshairBackdropSwatch", tR, {
+          Selected: GR
         }),
-        style: PW,
-        onClick: mW,
-        children: LW
+        style: ZR,
+        onClick: yR,
+        children: qR
       })
     }
 
-    function sm(WW) {
+    function ny(RR) {
       let {
-        backdrop: iW,
-        onChange: OW,
-        game: mW
-      } = WW;
+        backdrop: JR,
+        onChange: GR,
+        game: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
+        t: tR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": EW("crosshairSettings:background"),
-        children: [mW && (0, ZW.jsx)(km, {
-          label: EW("crosshairSettings:bg_game"),
-          selected: mW.selected,
-          onClick: mW.onSelect,
+        "aria-label": tR("crosshairSettings:background"),
+        children: [yR && (0, KR.jsx)(Ly, {
+          label: tR("crosshairSettings:bg_game"),
+          selected: yR.selected,
+          onClick: yR.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, ZW.jsx)(LW.c, {
+          children: (0, KR.jsx)(qR.d, {
             name: "cube"
           })
-        }), tm.map((WW => (0, ZW.jsx)(km, {
-          label: EW(`crosshairSettings:bg_${WW}`),
-          selected: !(null !== mW && void 0 !== mW && mW.selected) && WW === iW,
-          style: lm(WW),
+        }), iy.map((RR => (0, KR.jsx)(Ly, {
+          label: tR(`crosshairSettings:bg_${RR}`),
+          selected: !(null !== yR && void 0 !== yR && yR.selected) && RR === JR,
+          style: Ky(RR),
           onClick: () => {
-            OW(WW)
+            GR(RR)
           }
-        }, WW)))]
+        }, RR)))]
       })
     }
 
-    function Mm(WW) {
+    function Uy(RR) {
       let {
-        settings: iW,
-        touch: OW,
-        backdrop: mW,
-        onChange: EW
-      } = WW;
+        settings: JR,
+        touch: GR,
+        backdrop: yR,
+        onChange: tR
+      } = RR;
       const {
-        t: LW
-      } = (0, PW.B)(), cW = function(WW) {
-        var iW;
-        return null !== (iW = bm.find((iW => (0, rO.w)(iW.settings, WW, jm)))) && void 0 !== iW ? iW : null
-      }(iW);
-      return (0, ZW.jsx)("div", {
+        t: qR
+      } = (0, ZR.A)(), iR = function(RR) {
+        var JR;
+        return null !== (JR = ry.find((JR => (0, kG.t)(JR.settings, RR, ey)))) && void 0 !== JR ? JR : null
+      }(JR);
+      return (0, KR.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": LW("crosshairSettings:presets"),
-        children: bm.map((WW => {
-          const PW = (null === cW || void 0 === cW ? void 0 : cW.id) === WW.id;
-          return (0, ZW.jsxs)("button", {
+        "aria-label": qR("crosshairSettings:presets"),
+        children: ry.map((RR => {
+          const ZR = (null === iR || void 0 === iR ? void 0 : iR.id) === RR.id;
+          return (0, KR.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": PW,
+            "aria-checked": ZR,
             "data-pad-focusable": !0,
-            className: NW()("CrosshairPreset", {
-              Selected: PW
+            className: uR()("CrosshairPreset", {
+              Selected: ZR
             }),
             onClick: () => {
-              EW(function(WW, iW) {
+              tR(function(RR, JR) {
                 return {
-                  ...iW.settings,
-                  growOnClick: WW.growOnClick,
-                  forGuns: WW.forGuns
+                  ...JR.settings,
+                  growOnClick: RR.growOnClick,
+                  forGuns: RR.forGuns
                 }
-              }(iW, WW))
+              }(JR, RR))
             },
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: lm(mW),
-              children: (0, ZW.jsx)(Um.b, {
-                settings: WW.settings,
-                touch: OW,
+              style: Ky(yR),
+              children: (0, KR.jsx)(ay.d, {
+                settings: RR.settings,
+                touch: GR,
                 inPreview: !0
               })
-            }), (0, ZW.jsx)("div", {
+            }), (0, KR.jsx)("div", {
               className: "CrosshairPresetName",
-              children: LW(`crosshairSettings:preset_${WW.id}`)
+              children: qR(`crosshairSettings:preset_${RR.id}`)
             })]
-          }, WW.id)
+          }, RR.id)
         }))
       })
     }
-    var Km = OW(1776);
+    var Wy = GR(1859);
 
-    function Sm(WW, iW) {
-      const [OW, EW] = (0, mW.useState)(!1), NW = () => {
-        EW(!1)
-      }, [PW, LW] = (0, mW.useState)(!1), cW = (0, mW.useRef)({
-        growOnClick: WW.growOnClick,
-        forGuns: WW.forGuns
+    function Ay(RR, JR) {
+      const [GR, tR] = (0, yR.useState)(!1), uR = () => {
+        tR(!1)
+      }, [ZR, qR] = (0, yR.useState)(!1), iR = (0, yR.useRef)({
+        growOnClick: RR.growOnClick,
+        forGuns: RR.forGuns
       });
-      (0, mW.useEffect)((() => {
-        const iW = cW.current;
-        cW.current = {
-          growOnClick: WW.growOnClick,
-          forGuns: WW.forGuns
-        }, (WW.growOnClick && !iW.growOnClick || WW.forGuns && !iW.forGuns) && LW(!0)
-      }), [WW.growOnClick, WW.forGuns]), (0, mW.useEffect)((() => {
-        if (!PW) return;
-        const WW = setTimeout((() => {
-          LW(!1)
+      (0, yR.useEffect)((() => {
+        const JR = iR.current;
+        iR.current = {
+          growOnClick: RR.growOnClick,
+          forGuns: RR.forGuns
+        }, (RR.growOnClick && !JR.growOnClick || RR.forGuns && !JR.forGuns) && qR(!0)
+      }), [RR.growOnClick, RR.forGuns]), (0, yR.useEffect)((() => {
+        if (!ZR) return;
+        const RR = setTimeout((() => {
+          qR(!1)
         }), 600);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [PW]);
-      const wW = OW || PW;
+      }), [ZR]);
+      const fR = GR || ZR;
       return {
         view: {
-          pressed: wW,
-          spread: wW && WW.forGuns && !WW.growOnClick ? 6 : 0
+          pressed: fR,
+          spread: fR && RR.forGuns && !RR.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: WW => {
-            !WW.target.closest(iW) && (0, Km.e)(WW.currentTarget, WW.pointerId) && EW(!0)
+          onPointerDown: RR => {
+            !RR.target.closest(JR) && (0, Wy.b)(RR.currentTarget, RR.pointerId) && tR(!0)
           },
-          onPointerUp: NW,
-          onPointerCancel: NW,
-          onLostPointerCapture: NW
+          onPointerUp: uR,
+          onPointerCancel: uR,
+          onLostPointerCapture: uR
         }
       }
     }
 
-    function Ym(WW) {
+    function Cy(RR) {
       let {
-        settings: iW,
-        touch: OW,
-        backdrop: mW,
-        className: EW,
-        children: PW,
-        label: LW
-      } = WW;
-      const cW = Sm(iW, ".CrosshairStageControls");
-      return (0, ZW.jsxs)("div", {
-        className: NW()("CrosshairStage", EW),
-        style: lm(mW),
-        ...cW.handlers,
-        children: [(0, ZW.jsx)("div", {
+        settings: JR,
+        touch: GR,
+        backdrop: yR,
+        className: tR,
+        children: ZR,
+        label: qR
+      } = RR;
+      const iR = Ay(JR, ".CrosshairStageControls");
+      return (0, KR.jsxs)("div", {
+        className: uR()("CrosshairStage", tR),
+        style: Ky(yR),
+        ...iR.handlers,
+        children: [(0, KR.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": LW,
-          children: (0, ZW.jsx)(Um.b, {
-            settings: iW,
-            touch: OW,
+          "aria-label": qR,
+          children: (0, KR.jsx)(ay.d, {
+            settings: JR,
+            touch: GR,
             inPreview: !0,
-            ...cW.view
+            ...iR.view
           })
-        }), PW]
+        }), ZR]
       })
     }
-    const ym = "crosshairFullScreen";
+    const Xy = "crosshairFullScreen";
 
-    function Tm(WW) {
+    function My(RR) {
       let {
-        settings: iW,
-        touch: OW,
-        backdrop: EW,
-        onBackdrop: cW,
-        inGame: tW,
-        onChange: xW,
-        onClose: lW
-      } = WW;
+        settings: JR,
+        touch: GR,
+        backdrop: tR,
+        onBackdrop: iR,
+        inGame: VR,
+        onChange: wR,
+        onClose: rR
+      } = RR;
       const {
-        t: AW
-      } = (0, PW.B)(), bW = (0, mW.useRef)(null);
-      (0, Nm.r)("popup", bW, lW),
-      function(WW) {
-        const iW = (0, mW.useRef)(WW);
-        iW.current = WW, (0, mW.useEffect)((() => {
+        t: eR
+      } = (0, ZR.A)(), aR = (0, yR.useRef)(null);
+      (0, yy.u)("popup", aR, rR),
+      function(RR) {
+        const JR = (0, yR.useRef)(RR);
+        JR.current = RR, (0, yR.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [ym]: !0
+            [Xy]: !0
           }, "");
-          let WW = !1;
-          const OW = () => {
-            WW = !0, iW.current()
+          let RR = !1;
+          const GR = () => {
+            RR = !0, JR.current()
           };
-          return window.addEventListener("popstate", OW), () => {
-            var iW;
-            window.removeEventListener("popstate", OW), !WW && null !== (iW = window.history.state) && void 0 !== iW && iW[ym] && window.history.back()
+          return window.addEventListener("popstate", GR), () => {
+            var JR;
+            window.removeEventListener("popstate", GR), !RR && null !== (JR = window.history.state) && void 0 !== JR && JR[Xy] && window.history.back()
           }
         }), [])
-      }(lW);
-      const jW = (0, mW.useRef)(lW);
-      jW.current = lW, (0, mW.useEffect)((() => {
-        function WW(WW) {
-          "Escape" === WW.key && (WW.stopPropagation(), jW.current())
+      }(rR);
+      const LR = (0, yR.useRef)(rR);
+      LR.current = rR, (0, yR.useEffect)((() => {
+        function RR(RR) {
+          "Escape" === RR.key && (RR.stopPropagation(), LR.current())
         }
-        return window.addEventListener("keydown", WW, !0), () => {
-          window.removeEventListener("keydown", WW, !0)
+        return window.addEventListener("keydown", RR, !0), () => {
+          window.removeEventListener("keydown", RR, !0)
         }
       }), []);
-      const UW = Sm(iW, ".CrosshairFullScreenPanel"),
-        [kW, sW] = (0, mW.useState)(!0),
-        MW = kW && tW;
-      (0, mW.useEffect)((() => {
-        if (MW) return yW.d.set({
+      const nR = Ay(JR, ".CrosshairFullScreenPanel"),
+        [UR, WR] = (0, yR.useState)(!0),
+        AR = UR && VR;
+      (0, yR.useEffect)((() => {
+        if (AR) return BR.d.set({
           crosshairGameView: !0
         }), () => {
-          yW.d.set({
+          BR.d.set({
             crosshairGameView: !1
           })
         }
-      }), [MW]);
-      const [KW, SW] = (0, mW.useState)(!0);
-      return (0, Em.createPortal)((0, ZW.jsxs)("div", {
-        ref: bW,
+      }), [AR]);
+      const [CR, XR] = (0, yR.useState)(!0);
+      return (0, Gy.createPortal)((0, KR.jsxs)("div", {
+        ref: aR,
         className: "CrosshairFullScreen",
-        style: MW ? void 0 : lm(EW),
-        ...UW.handlers,
-        children: [(0, ZW.jsx)(Um.b, {
-          settings: iW,
-          touch: OW,
+        style: AR ? void 0 : Ky(tR),
+        ...nR.handlers,
+        children: [(0, KR.jsx)(ay.d, {
+          settings: JR,
+          touch: GR,
           inEditor: !0,
-          ...UW.view
-        }), (0, ZW.jsxs)("div", {
-          className: NW()("CrosshairFullScreenPanel", {
-            Collapsed: !KW
+          ...nR.view
+        }), (0, KR.jsxs)("div", {
+          className: uR()("CrosshairFullScreenPanel", {
+            Collapsed: !CR
           }),
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, ZW.jsx)(sm, {
-              backdrop: EW,
-              onChange: WW => {
-                sW(!1), cW(WW)
+            children: [(0, KR.jsx)(ny, {
+              backdrop: tR,
+              onChange: RR => {
+                WR(!1), iR(RR)
               },
-              game: tW ? {
-                selected: MW,
+              game: VR ? {
+                selected: AR,
                 onSelect: () => {
-                  sW(!0)
+                  WR(!0)
                 }
               } : void 0
-            }), (0, ZW.jsx)(wW.Z, {
+            }), (0, KR.jsx)(fR.U, {
               className: "CrosshairPanelToggle",
-              ariaLabel: AW(KW ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: eR(CR ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                SW(!KW)
+                XR(!CR)
               },
-              children: (0, ZW.jsx)(LW.c, {
-                name: KW ? "caret-up" : "pen"
+              children: (0, KR.jsx)(qR.d, {
+                name: CR ? "caret-up" : "pen"
               })
-            }), (0, ZW.jsx)(wW.f, {
+            }), (0, KR.jsx)(fR.g, {
               className: "CrosshairFullScreenDone",
-              onClick: lW,
+              onClick: rR,
               padDefaultFocus: !0,
-              children: AW("crosshairSettings:done")
+              children: eR("crosshairSettings:done")
             })]
-          }), KW && (0, ZW.jsxs)("div", {
+          }), CR && (0, KR.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, ZW.jsx)(Mm, {
-              settings: iW,
-              touch: OW,
-              backdrop: EW,
-              onChange: xW
-            }), (0, ZW.jsx)(mm, {
-              settings: iW,
-              onChange: xW
+            children: [(0, KR.jsx)(Uy, {
+              settings: JR,
+              touch: GR,
+              backdrop: tR,
+              onChange: wR
+            }), (0, KR.jsx)(Jy, {
+              settings: JR,
+              onChange: wR
             })]
           })]
         })]
       }), document.body)
     }
-    var Jm = OW(3687),
-      hm = OW(35205);
+    var By = GR(3791),
+      ly = GR(35122);
 
-    function Hm(WW) {
+    function py(RR) {
       let {
-        settings: iW,
-        onChange: OW
-      } = WW;
+        settings: JR,
+        onChange: GR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)(), cW = (0, hm.h)(iW), [tW, xW] = (0, Jm.j)(), [lW, AW] = (0, mW.useState)(!1), bW = (0, mW.useRef)(null), [jW, UW] = (0, Jm.j)(), [kW, sW] = (0, mW.useState)(!1);
-      return (0, ZW.jsxs)("div", {
+        t: tR
+      } = (0, ZR.A)(), iR = (0, ly.h)(JR), [VR, wR] = (0, By.h)(), [rR, eR] = (0, yR.useState)(!1), aR = (0, yR.useRef)(null), [LR, nR] = (0, By.h)(), [UR, WR] = (0, yR.useState)(!1);
+      return (0, KR.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, ZW.jsxs)(wW.Z, {
-            className: NW()("CrosshairCopy", {
-              ActiveSecondaryButton: tW
+          children: [(0, KR.jsxs)(fR.U, {
+            className: uR()("CrosshairCopy", {
+              ActiveSecondaryButton: VR
             }),
             onClick: () => {
-              (0, Jm.g)(cW, {
+              (0, By.d)(iR, {
                 useShareSheet: !1,
-                onOutcome: WW => {
-                  AW("failed" === WW), "copied" === WW && xW()
+                onOutcome: RR => {
+                  eR("failed" === RR), "copied" === RR && wR()
                 }
               })
             },
-            children: [(0, ZW.jsx)(LW.c, {
-              name: tW ? "check" : "copy"
-            }), " ", EW(tW ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, ZW.jsx)(KW.b, {
+            children: [(0, KR.jsx)(qR.d, {
+              name: VR ? "check" : "copy"
+            }), " ", tR(VR ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, KR.jsx)(CR.b, {
             className: "CrosshairPaste",
-            domRef: bW,
-            ariaLabel: EW("crosshairSettings:paste"),
-            placeholderText: EW("crosshairSettings:paste"),
-            onValueChange: WW => {
-              const iW = (0, hm.e)(WW);
-              sW(!iW && WW.trim().length >= hm.c), iW && (OW(iW), bW.current.value = "", UW())
+            domRef: aR,
+            ariaLabel: tR("crosshairSettings:paste"),
+            placeholderText: tR("crosshairSettings:paste"),
+            onValueChange: RR => {
+              const JR = (0, ly.f)(RR);
+              WR(!JR && RR.trim().length >= ly.e), JR && (GR(JR), aR.current.value = "", nR())
             }
           })]
-        }), lW && (0, ZW.jsx)("input", {
+        }), rR && (0, KR.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: cW,
-          "aria-label": EW("crosshairSettings:copy"),
-          onFocus: WW => {
-            WW.currentTarget.select()
+          value: iR,
+          "aria-label": tR("crosshairSettings:copy"),
+          onFocus: RR => {
+            RR.currentTarget.select()
           }
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           "aria-live": "polite",
-          children: [kW && (0, ZW.jsx)("div", {
+          children: [UR && (0, KR.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: EW("crosshairSettings:pasteInvalid")
-          }), jW && !kW && (0, ZW.jsx)("div", {
+            children: tR("crosshairSettings:pasteInvalid")
+          }), LR && !UR && (0, KR.jsx)("div", {
             className: "CrosshairShareNote",
-            children: EW("crosshairSettings:applied")
+            children: tR("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var nm = OW(35209);
-    let um = "sky";
+    var gy = GR(35124);
+    let by = "sky";
 
-    function om(WW) {
+    function vy(RR) {
       let {
-        showing: iW
-      } = WW;
+        showing: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), {
-        isTouchScreen: EW,
-        gameState: NW,
-        clientEscMenuOptions: cW
-      } = (0, yW.p)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), tW = (0, nm.g)(), [xW, lW] = (0, mW.useState)(um), AW = WW => {
-        um = WW, lW(WW)
-      }, [bW, jW] = (0, mW.useState)(!1);
-      return (0, mW.useEffect)((() => {
-        iW || jW(!1)
-      }), [iW]), (0, ZW.jsxs)("div", {
+        t: GR
+      } = (0, ZR.A)(), {
+        isTouchScreen: tR,
+        gameState: uR,
+        clientEscMenuOptions: iR
+      } = (0, BR.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), VR = (0, gy.f)(), [wR, rR] = (0, yR.useState)(by), eR = RR => {
+        by = RR, rR(RR)
+      }, [aR, LR] = (0, yR.useState)(!1);
+      return (0, yR.useEffect)((() => {
+        JR || LR(!1)
+      }), [JR]), (0, KR.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, ZW.jsx)(Ym, {
+          children: (0, KR.jsx)(Cy, {
             className: "CrosshairPreviewStage",
-            settings: tW,
-            touch: EW,
-            backdrop: xW,
-            label: OW("crosshairSettings:preview"),
-            children: (0, ZW.jsxs)("div", {
+            settings: VR,
+            touch: tR,
+            backdrop: wR,
+            label: GR("crosshairSettings:preview"),
+            children: (0, KR.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, ZW.jsx)(sm, {
-                backdrop: xW,
-                onChange: AW
-              }), (0, ZW.jsxs)(wW.Z, {
+              children: [(0, KR.jsx)(ny, {
+                backdrop: wR,
+                onChange: eR
+              }), (0, KR.jsxs)(fR.U, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  jW(!0)
+                  LR(!0)
                 },
-                children: [(0, ZW.jsx)(LW.c, {
+                children: [(0, KR.jsx)(qR.d, {
                   name: "expand"
-                }), " ", OW("crosshairSettings:fullScreen")]
+                }), " ", GR("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "SettingBox",
-          children: (0, ZW.jsx)(Mm, {
-            settings: tW,
-            touch: EW,
-            backdrop: xW,
-            onChange: nm.d
+          children: (0, KR.jsx)(Uy, {
+            settings: VR,
+            touch: tR,
+            backdrop: wR,
+            onChange: gy.d
           })
-        }), (0, ZW.jsx)(Hm, {
-          settings: tW,
-          onChange: nm.d
-        }), EW && (0, ZW.jsx)(IO.c, {
-          note: (0, GO.d)(EW, cW.touchActionButtons) ? OW("crosshairSettings:touchNote") : void 0
-        }), (0, ZW.jsx)(mm, {
-          settings: tW,
-          onChange: nm.d
-        }), bW && (0, ZW.jsx)(Tm, {
-          settings: tW,
-          touch: EW,
-          backdrop: xW,
-          onBackdrop: AW,
-          inGame: "inGame" === NW,
-          onChange: nm.d,
+        }), (0, KR.jsx)(py, {
+          settings: VR,
+          onChange: gy.d
+        }), tR && (0, KR.jsx)(EG.c, {
+          note: (0, dG.i)(tR, iR.touchActionButtons) ? GR("crosshairSettings:touchNote") : void 0
+        }), (0, KR.jsx)(Jy, {
+          settings: VR,
+          onChange: gy.d
+        }), aR && (0, KR.jsx)(My, {
+          settings: VR,
+          touch: tR,
+          backdrop: wR,
+          onBackdrop: eR,
+          inGame: "inGame" === uR,
+          onChange: gy.d,
           onClose: () => {
-            jW(!1)
+            LR(!1)
           }
         })]
       })
     }
-    var dm = OW(10101),
-      em = OW(1472),
-      gm = OW(5903),
-      Dm = OW(35213),
-      Vm = OW(4920),
-      pm = OW(2080),
-      fm = OW(727);
-    const Cm = (0, mW.memo)((function() {
+    var Oy = GR(10223),
+      xy = GR(1542),
+      Ny = GR(6035),
+      Dy = GR(35131),
+      Hy = GR(5028),
+      oy = GR(2186),
+      cy = GR(775);
+    const Py = (0, yR.memo)((function() {
       const {
-        clientEscMenuOptions: WW
-      } = (0, yW.p)(["clientEscMenuOptions"]), {
-        recording: iW,
-        clipping: OW,
-        hasClipBuffer: EW
-      } = (0, zi.g)("replayRecorder"), PW = (0, zi.f)("connectedGame", (WW => WW.replay)), LW = (0, Vm.m)(), cW = !1 === (0, bW.e)("canRecordReplays");
-      (0, mW.useEffect)((() => {
-        kW.gameBridge.send("setRecorderPrefs", {
-          clipping: WW.enableClipping,
-          clipSeconds: WW.clipDurationSeconds
+        clientEscMenuOptions: RR
+      } = (0, BR.o)(["clientEscMenuOptions"]), {
+        recording: JR,
+        clipping: GR,
+        hasClipBuffer: tR
+      } = (0, QJ.i)("replayRecorder"), ZR = (0, QJ.e)("connectedGame", (RR => RR.replay)), qR = (0, Hy.k)(), iR = !1 === (0, aR.f)("canRecordReplays");
+      (0, yR.useEffect)((() => {
+        UR.gameBridge.send("setRecorderPrefs", {
+          clipping: RR.enableClipping,
+          clipSeconds: RR.clipDurationSeconds
         })
-      }), [WW.enableClipping, WW.clipDurationSeconds]);
-      const tW = LW || PW,
-        xW = !tW && !cW,
-        lW = iW || xW,
-        AW = xW,
-        jW = AW && OW && !iW;
+      }), [RR.enableClipping, RR.clipDurationSeconds]);
+      const VR = qR || ZR,
+        wR = !VR && !iR,
+        rR = JR || wR,
+        eR = wR,
+        LR = eR && GR && !JR;
 
-      function UW() {
-        lW && kW.gameBridge.send("toggleRecording", null)
+      function nR() {
+        rR && UR.gameBridge.send("toggleRecording", null)
       }
-      return (0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: iW ? (0, ZW.jsxs)(ZW.Fragment, {
-              children: [(0, ZW.jsxs)(wW.O, {
+            children: JR ? (0, KR.jsxs)(KR.Fragment, {
+              children: [(0, KR.jsxs)(fR.M, {
                 className: "ReplayViewerCategoryButton",
-                onClick: UW,
-                disabled: !lW,
-                children: [(0, ZW.jsx)("span", {
+                onClick: nR,
+                disabled: !rR,
+                children: [(0, KR.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, ZW.jsx)(pm.e, {
+                }), (0, KR.jsx)(oy.c, {
                   noaAction: "recordGame"
                 })]
-              }), (0, ZW.jsx)(Dm.e, {
+              }), (0, KR.jsx)(Dy.e, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, ZW.jsxs)(wW.f, {
+            }) : (0, KR.jsxs)(fR.g, {
               className: "ReplayViewerCategoryButton",
-              onClick: UW,
-              disabled: !lW,
-              children: [(0, ZW.jsx)("span", {
+              onClick: nR,
+              disabled: !rR,
+              children: [(0, KR.jsx)("span", {
                 children: "Start Recording"
-              }), (0, ZW.jsx)(pm.e, {
+              }), (0, KR.jsx)(oy.c, {
                 noaAction: "recordGame"
               })]
             })
-          }), cW && (0, ZW.jsx)("div", {
+          }), iR && (0, KR.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), tW && !iW && (0, ZW.jsx)("div", {
+          }), VR && !JR && (0, KR.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, ZW.jsx)(YW.e, {
+          children: [(0, KR.jsx)(MR.e, {
             label: "Enable clipping",
-            checked: WW.enableClipping,
-            disabled: !AW,
-            onClick: function(WW) {
-              AW && yW.d.setClientEscMenuOptions({
-                enableClipping: WW
+            checked: RR.enableClipping,
+            disabled: !eR,
+            onClick: function(RR) {
+              eR && BR.d.setClientEscMenuOptions({
+                enableClipping: RR
               })
             },
-            className: NW()({
-              SettingBoxDisabled: !AW
+            className: uR()({
+              SettingBoxDisabled: !eR
             })
-          }), (0, ZW.jsx)(YW.k, {
+          }), (0, KR.jsx)(MR.i, {
             name: "Clip duration (seconds)",
-            min: fm.j,
-            max: fm.h,
-            step: fm.c,
-            initValue: WW.clipDurationSeconds,
-            onChange: function(WW) {
-              yW.d.setClientEscMenuOptions({
-                clipDurationSeconds: WW
+            min: cy.i,
+            max: cy.e,
+            step: cy.b,
+            initValue: RR.clipDurationSeconds,
+            onChange: function(RR) {
+              BR.d.setClientEscMenuOptions({
+                clipDurationSeconds: RR
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !AW || !WW.enableClipping
+            disabled: !eR || !RR.enableClipping
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, ZW.jsxs)(wW.f, {
+          children: [(0, KR.jsxs)(fR.g, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              jW && kW.gameBridge.send("saveClip", null)
+              LR && UR.gameBridge.send("saveClip", null)
             },
-            disabled: !jW,
-            children: [(0, ZW.jsx)("span", {
+            disabled: !LR,
+            children: [(0, KR.jsx)("span", {
               children: "Record clip"
-            }), (0, ZW.jsx)(pm.e, {
+            }), (0, KR.jsx)(oy.c, {
               noaAction: "recordClip"
             })]
-          }), WW.enableClipping && !EW && AW && !iW && (0, ZW.jsx)("div", {
+          }), RR.enableClipping && !tR && eR && !JR && (0, KR.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), iW && (0, ZW.jsx)("div", {
+          }), JR && (0, KR.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, ZW.jsxs)(wW.f, {
+          children: [(0, KR.jsxs)(fR.g, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Vm.j)(!0), yW.d.set({
+              (0, Hy.h)(!0), BR.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: LW,
-            children: [(0, ZW.jsx)("span", {
+            disabled: qR,
+            children: [(0, KR.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, ZW.jsx)(pm.e, {
+            }), (0, KR.jsx)(oy.c, {
               noaAction: "replayViewerOpen"
             })]
-          }), LW && (0, ZW.jsx)("div", {
+          }), qR && (0, KR.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, ZW.jsx)("iframe", {
+          }), (0, KR.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2751,8 +2751,8 @@ export const modules = {
         })]
       })
     }));
-    var Xm = OW(2012);
-    const Bm = {
+    var Iy = GR(2102);
+    const my = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2774,11 +2774,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, ZW.jsx)("svg", {
+        icon: () => (0, KR.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, ZW.jsx)("path", {
+          children: (0, KR.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2797,7 +2797,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      kA: {
+      Be: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2823,376 +2823,376 @@ export const modules = {
       }
     };
 
-    function qm() {
-      return Promise.all([OW.e(91), OW.e(157), OW.e(156), OW.e(153)]).then((() => OW(42556))).then((WW => ({
-        default: WW.ShaderPackCategory
-      })), (WW => (console.error("Failed to load the shader pack settings", WW), {
-        default: Rm
+    function zy() {
+      return Promise.all([GR.e(91), GR.e(157), GR.e(156), GR.e(153)]).then((() => GR(42603))).then((RR => ({
+        default: RR.ShaderPackCategory
+      })), (RR => (console.error("Failed to load the shader pack settings", RR), {
+        default: Sy
       })))
     }
 
-    function Rm() {
+    function Sy() {
       const {
-        t: WW
-      } = (0, PW.B)();
-      return (0, ZW.jsx)("div", {
+        t: RR
+      } = (0, ZR.A)();
+      return (0, KR.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: WW("shaderPack:tabLoadFailed")
+        children: RR("shaderPack:tabLoadFailed")
       })
     }
-    var Gm = OW(1459),
-      Im = OW(172);
-    const am = /party\s*voice/i;
-    let rm = !1;
+    var jy = GR(1532),
+      dy = GR(188);
+    const Ey = /party\s*voice/i;
+    let Yy = !1;
 
-    function zm(WW) {
-      return Object.keys(WW).some((WW => WW.startsWith("__reactFiber$")))
+    function ky(RR) {
+      return Object.keys(RR).some((RR => RR.startsWith("__reactFiber$")))
     }
-    const Fm = ".MenuSideBarBody, .MenuSideBarSection";
+    const Qy = ".MenuSideBarBody, .MenuSideBarSection";
 
-    function Qm(WW) {
-      var iW;
-      return (null !== (iW = WW.textContent) && void 0 !== iW ? iW : "").replace(/\s+/g, " ").trim()
+    function Fy(RR) {
+      var JR;
+      return (null !== (JR = RR.textContent) && void 0 !== JR ? JR : "").replace(/\s+/g, " ").trim()
     }
 
-    function WE(WW) {
-      for (const iW of function(WW) {
-          const iW = new Set;
-          for (const OW of WW.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) iW.add(OW);
-          for (const OW of [WW, ...WW.querySelectorAll(Fm)])
-            for (const WW of OW.children) iW.add(WW);
-          return [...iW]
-        }(WW))
-        if (!zm(iW) || !iW.matches(Fm) && am.test(Qm(iW))) return iW;
+    function Ty(RR) {
+      for (const JR of function(RR) {
+          const JR = new Set;
+          for (const GR of RR.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) JR.add(GR);
+          for (const GR of [RR, ...RR.querySelectorAll(Qy)])
+            for (const RR of GR.children) JR.add(RR);
+          return [...JR]
+        }(RR))
+        if (!ky(JR) || !JR.matches(Qy) && Ey.test(Fy(JR))) return JR;
       return null
     }
 
-    function iE(WW) {
-      return WW.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
+    function sy(RR) {
+      return RR.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
     }
-    const OE = new Set(["STYLE", "SCRIPT", "TITLE"]);
+    const hy = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
-    function mE(WW) {
-      const iW = document.createTreeWalker(WW, NodeFilter.SHOW_TEXT, {
-        acceptNode: WW => {
-          var iW, OW;
-          return OE.has(null !== (iW = null === (OW = WW.parentElement) || void 0 === OW ? void 0 : OW.tagName.toUpperCase()) && void 0 !== iW ? iW : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    function Rt(RR) {
+      const JR = document.createTreeWalker(RR, NodeFilter.SHOW_TEXT, {
+        acceptNode: RR => {
+          var JR, GR;
+          return hy.has(null !== (JR = null === (GR = RR.parentElement) || void 0 === GR ? void 0 : GR.tagName.toUpperCase()) && void 0 !== JR ? JR : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
         }
       });
-      for (let NW = iW.nextNode(); null !== NW; NW = iW.nextNode()) {
-        var OW;
-        const WW = (null !== (OW = NW.textContent) && void 0 !== OW ? OW : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
-        if ("" !== WW) {
-          var mW, EW;
-          return (null !== (mW = null === (EW = WW.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === EW ? void 0 : EW[0]) && void 0 !== mW ? mW : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
+      for (let uR = JR.nextNode(); null !== uR; uR = JR.nextNode()) {
+        var GR;
+        const RR = (null !== (GR = uR.textContent) && void 0 !== GR ? GR : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
+        if ("" !== RR) {
+          var yR, tR;
+          return (null !== (yR = null === (tR = RR.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === tR ? void 0 : tR[0]) && void 0 !== yR ? yR : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
         }
       }
       return ""
     }
 
-    function EE(WW, iW) {
-      const OW = iE(iW).slice(0, 40) || "blank";
-      return `${(iE(WW.toLowerCase())||"none").slice(0,Math.max(23,Im.ab-1-OW.length))}:${OW}`.slice(0, Im.ab)
+    function Jt(RR, JR) {
+      const GR = sy(JR).slice(0, 40) || "blank";
+      return `${(sy(RR.toLowerCase())||"none").slice(0,Math.max(23,dy.fb-1-GR.length))}:${GR}`.slice(0, dy.fb)
     }
-    const NE = (0, mW.lazy)((() => OW.e(308).then((() => OW(42541))).then((WW => ({
-        default: WW.BloxdInformation
+    const Gt = (0, yR.lazy)((() => GR.e(308).then((() => GR(42584))).then((RR => ({
+        default: RR.BloxdInformation
       }))))),
-      PE = (0, mW.lazy)(qm);
+      yt = (0, yR.lazy)(zy);
 
-    function LE(WW) {
-      return WW ? "general" : "account"
+    function tt(RR) {
+      return RR ? "general" : "account"
     }
-    const cE = new Map,
-      wE = (0, mW.memo)((function(WW) {
+    const ut = new Map,
+      Zt = (0, yR.memo)((function(RR) {
         let {
-          show: iW,
-          setBeforeResumeCallback: OW
-        } = WW;
-        (0, jW.d)();
+          show: JR,
+          setBeforeResumeCallback: GR
+        } = RR;
+        (0, LR.e)();
         const {
-          gameState: EW,
-          openSettingsCategory: NW
-        } = (0, yW.p)(["gameState", "openSettingsCategory"]), {
-          userContext: cW
-        } = (0, AW.e)(), {
-          t: tW
-        } = (0, PW.B)(), KW = (0, lW.b)(), SW = (0, bW.e)("minChunkAddDist"), YW = "inGame" === EW, [TW, HW] = (0, mW.useState)(LE(YW)), [nW, uW] = (0, mW.useState)(null), [oW, dW] = (0, mW.useState)([]), eW = (0, mW.useRef)(function() {
-          const WW = new Date,
-            iW = 6 * (WW.getMonth() + WW.getDate()) % oi.t.length;
-          return [...oi.t, ...oi.t].slice(iW, iW + 6)
-        }()), vW = (0, mW.useRef)(null), gW = (0, mW.useRef)(null), DW = (0, NO.g)(em.f, (0, em.b)()), VW = Object.keys(Bm).filter((WW => {
-          switch (WW) {
+          gameState: tR,
+          openSettingsCategory: uR
+        } = (0, BR.o)(["gameState", "openSettingsCategory"]), {
+          userContext: iR
+        } = (0, eR.d)(), {
+          t: VR
+        } = (0, ZR.A)(), CR = (0, rR.b)(), XR = (0, aR.f)("minChunkAddDist"), MR = "inGame" === tR, [lR, bR] = (0, yR.useState)(tt(MR)), [vR, OR] = (0, yR.useState)(null), [xR, NR] = (0, yR.useState)([]), DR = (0, yR.useRef)(function() {
+          const RR = new Date,
+            JR = 6 * (RR.getMonth() + RR.getDate()) % OJ.x.length;
+          return [...OJ.x, ...OJ.x].slice(JR, JR + 6)
+        }()), HR = (0, yR.useRef)(null), oR = (0, yR.useRef)(null), cR = (0, yG.h)(xy.k, (0, xy.d)()), PR = Object.keys(my).filter((RR => {
+          switch (RR) {
             case "replayViewer":
-              return YW;
+              return MR;
             case "developerTools":
-              return cW.playerHasRank("developer") || !1;
+              return iR.playerHasRank("developer") || !1;
             case "texturePack":
-              return UW.featureFlags.settings.canChangeTexturePack;
-            case "kA":
-              return UW.featureFlags.settings.canUseShaderPacks;
+              return nR.featureFlags.settings.canChangeTexturePack;
+            case "Be":
+              return nR.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return UW.featureFlags.useSocialFeatures || null !== cW.dailyDrop;
+              return nR.featureFlags.useSocialFeatures || null !== iR.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== hW.siteUsed;
+              return "crazygames" !== gR.siteUsed;
             case "controller":
-              return UW.featureFlags.useControllerSupport && (DW || "controller" === TW);
+              return nR.featureFlags.useControllerSupport && (cR || "controller" === lR);
             default:
               return !0
           }
         }));
-        (0, NO.e)("toggleFullCoordinateOverlay", (() => {
-          const WW = gO("showCoordinates") && gO("showChunkCoordinates") && gO("showFPS");
-          DO("showCoordinates", !WW), DO("showChunkCoordinates", !WW), DO("showFPS", !WW), KW()
-        })), (0, NO.e)("updatedChunkLoadDist", (() => {
-          KW()
-        })), (0, mW.useEffect)((() => {
-          if (uW(null), null === yW.d.get("openSettingsCategory")) {
-            const WW = (0, Gm.k)() ? cE.get(YW) : void 0;
-            HW(WW && VW.includes(WW) ? WW : LE(YW))
+        (0, yG.f)("toggleFullCoordinateOverlay", (() => {
+          const RR = DG("showCoordinates") && DG("showChunkCoordinates") && DG("showFPS");
+          HG("showCoordinates", !RR), HG("showChunkCoordinates", !RR), HG("showFPS", !RR), CR()
+        })), (0, yG.f)("updatedChunkLoadDist", (() => {
+          CR()
+        })), (0, yR.useEffect)((() => {
+          if (OR(null), null === BR.d.get("openSettingsCategory")) {
+            const RR = (0, jy.j)() ? ut.get(MR) : void 0;
+            bR(RR && PR.includes(RR) ? RR : tt(MR))
           }
-        }), [iW]), (0, mW.useEffect)((() => {
-          if (iW && gW.current) return function(WW) {
-            if (rm) return () => {};
-            let iW = null,
-              OW = null;
-            const mW = () => {
-                var WW;
-                null !== OW && (clearTimeout(OW), OW = null), null === (WW = iW) || void 0 === WW || WW.disconnect(), iW = null
+        }), [JR]), (0, yR.useEffect)((() => {
+          if (JR && oR.current) return function(RR) {
+            if (Yy) return () => {};
+            let JR = null,
+              GR = null;
+            const yR = () => {
+                var RR;
+                null !== GR && (clearTimeout(GR), GR = null), null === (RR = JR) || void 0 === RR || RR.disconnect(), JR = null
               },
-              EW = () => {
-                const iW = WE(WW);
-                null !== iW && (rm = !0, mW(), (0, ji.reportAnalyticsClick)({
+              tR = () => {
+                const JR = Ty(RR);
+                null !== JR && (Yy = !0, yR(), (0, LJ.reportAnalyticsClick)({
                   id: "settings.unknown_tab_seen",
-                  value: EE(window.location.hostname, mE(iW))
+                  value: Jt(window.location.hostname, Rt(JR))
                 }))
               };
-            return OW = setTimeout((() => {
-              OW = null, EW(), rm || (iW = new MutationObserver(EW), iW.observe(WW, {
+            return GR = setTimeout((() => {
+              GR = null, tR(), Yy || (JR = new MutationObserver(tR), JR.observe(RR, {
                 childList: !0,
                 subtree: !0
               }))
-            }), 2e3), mW
-          }(gW.current)
-        }), [iW]), (0, mW.useEffect)((() => {
-          null !== NW && (HW(NW), cE.set(YW, NW), yW.d.set({
+            }), 2e3), yR
+          }(oR.current)
+        }), [JR]), (0, yR.useEffect)((() => {
+          null !== uR && (bR(uR), ut.set(MR, uR), BR.d.set({
             openSettingsCategory: null
           }))
-        }), [NW, YW]), (0, mW.useLayoutEffect)((() => {
-          vW.current && (vW.current.scrollTop = 0)
-        }), [TW, iW]), (0, mW.useEffect)((() => {
-          "updateLog" === TW && (0, MW.c)().then(dW)
-        }), [TW]), (0, mW.useEffect)((() => {
-          if ((0, nO.K)(SW)) return;
-          const [WW, iW] = (0, qO.i)(), [OW, mW] = (0, YO.h)(SW), EW = (0, Xm.f)(SW[0], WW, OW), NW = (0, Xm.f)(SW[1], iW, mW);
-          kW.gameBridge.send("setChunkAddDistance", {
-            horizontal: EW,
-            vertical: NW
+        }), [uR, MR]), (0, yR.useLayoutEffect)((() => {
+          HR.current && (HR.current.scrollTop = 0)
+        }), [lR, JR]), (0, yR.useEffect)((() => {
+          "updateLog" === lR && (0, AR.b)().then(NR)
+        }), [lR]), (0, yR.useEffect)((() => {
+          if ((0, gG.I)(XR)) return;
+          const [RR, JR] = (0, SG.g)(), [GR, yR] = (0, CG.f)(XR), tR = (0, Iy.e)(XR[0], RR, GR), uR = (0, Iy.e)(XR[1], JR, yR);
+          UR.gameBridge.send("setChunkAddDistance", {
+            horizontal: tR,
+            vertical: uR
           })
-        }), [SW]);
-        const pW = (0, mW.useCallback)((async () => {
-          nW && (await nW(), uW(null))
-        }), [nW]);
+        }), [XR]);
+        const IR = (0, yR.useCallback)((async () => {
+          vR && (await vR(), OR(null))
+        }), [vR]);
 
-        function fW() {
-          yW.d.set({
+        function mR() {
+          BR.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, mW.useEffect)((() => {
-          OW((() => pW))
-        }), [pW, OW]), (0, ZW.jsxs)("div", {
+        return (0, yR.useEffect)((() => {
+          GR((() => IR))
+        }), [IR, GR]), (0, KR.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: iW ? {} : {
+          style: JR ? {} : {
             display: "none"
           },
-          children: [(0, ZW.jsx)("div", {
-            ref: gW,
+          children: [(0, KR.jsx)("div", {
+            ref: oR,
             className: "MenuSideBar",
-            children: (0, ZW.jsx)("div", {
+            children: (0, KR.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, ZW.jsx)(xW, {
-                items: VW.map((WW => {
-                  const iW = Bm[WW].icon;
+              children: (0, KR.jsx)(wR, {
+                items: PR.map((RR => {
+                  const JR = my[RR].icon;
                   return {
-                    id: WW,
-                    faIcon: "string" === typeof iW ? iW : void 0,
-                    iconElement: "string" === typeof iW ? void 0 : (0, ZW.jsx)(iW, {}),
-                    title: tW(Bm[WW].displayName),
+                    id: RR,
+                    faIcon: "string" === typeof JR ? JR : void 0,
+                    iconElement: "string" === typeof JR ? void 0 : (0, KR.jsx)(JR, {}),
+                    title: VR(my[RR].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: TW,
-                onClick: WW => {
-                  !async function(WW) {
-                    await pW(), HW(WW), cE.set(YW, WW)
-                  }(WW)
+                selectedItemId: lR,
+                onClick: RR => {
+                  !async function(RR) {
+                    await IR(), bR(RR), ut.set(MR, RR)
+                  }(RR)
                 }
               })
             })
-          }), (0, ZW.jsxs)("div", {
-            ref: vW,
+          }), (0, KR.jsxs)("div", {
+            ref: HR,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === TW && (0, ZW.jsx)(Ri, {
-              showing: iW,
-              inGame: YW
-            }), "general" === TW && (0, ZW.jsx)(OO, {
-              inGame: YW
-            }), "audio" === TW && (0, ZW.jsx)(mO, {}), "notifications" === TW && (0, ZW.jsx)(SO, {}), "graphics" === TW && (0, ZW.jsx)(BO, {
-              minChunkAddDist: null !== SW && void 0 !== SW ? SW : [2, 2],
-              getValue: gO,
-              onChange: DO,
-              setApplySettingsCallback: uW
-            }), "controls" === TW && (0, ZW.jsx)(RO.h, {}), "crosshair" === TW && (0, ZW.jsx)(om, {
-              showing: iW
-            }), "controller" === TW && UW.featureFlags.useControllerSupport && (0, ZW.jsx)(dm.c, {}), UW.featureFlags.settings.canChangeTexturePack && "texturePack" === TW && (0, ZW.jsx)(gm.c, {
-              setApplySettingsCallback: uW
-            }), UW.featureFlags.settings.canUseShaderPacks && "kA" === TW && (0, ZW.jsx)(mW.Suspense, {
+            children: ["account" === lR && (0, KR.jsx)(jJ, {
+              showing: JR,
+              inGame: MR
+            }), "general" === lR && (0, KR.jsx)(RG, {
+              inGame: MR
+            }), "audio" === lR && (0, KR.jsx)(JG, {}), "notifications" === lR && (0, KR.jsx)(AG, {}), "graphics" === lR && (0, KR.jsx)(zG, {
+              minChunkAddDist: null !== XR && void 0 !== XR ? XR : [2, 2],
+              getValue: DG,
+              onChange: HG,
+              setApplySettingsCallback: OR
+            }), "controls" === lR && (0, KR.jsx)(jG.f, {}), "crosshair" === lR && (0, KR.jsx)(vy, {
+              showing: JR
+            }), "controller" === lR && nR.featureFlags.useControllerSupport && (0, KR.jsx)(Oy.d, {}), nR.featureFlags.settings.canChangeTexturePack && "texturePack" === lR && (0, KR.jsx)(Ny.e, {
+              setApplySettingsCallback: OR
+            }), nR.featureFlags.settings.canUseShaderPacks && "Be" === lR && (0, KR.jsx)(yR.Suspense, {
               fallback: null,
-              children: (0, ZW.jsx)(PE, {
-                setApplySettingsCallback: uW
+              children: (0, KR.jsx)(yt, {
+                setApplySettingsCallback: OR
               })
-            }), "updateLog" === TW && (0, ZW.jsx)("div", {
+            }), "updateLog" === lR && (0, KR.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, ZW.jsx)("div", {
+              children: (0, KR.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: oW.map(((WW, iW) => (0, ZW.jsx)(sW.d, {
-                  updateLog: WW,
-                  index: iW,
-                  close: fW
-                }, iW)))
+                children: xR.map(((RR, JR) => (0, KR.jsx)(WR.c, {
+                  updateLog: RR,
+                  index: JR,
+                  close: mR
+                }, JR)))
               })
-            }), "information" === TW && (0, ZW.jsx)("div", {
+            }), "information" === lR && (0, KR.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, ZW.jsx)(mW.Suspense, {
+              children: (0, KR.jsx)(yR.Suspense, {
                 fallback: null,
-                children: (0, ZW.jsx)(NE, {})
+                children: (0, KR.jsx)(Gt, {})
               })
-            }), "alternativeDomains" === TW && (0, ZW.jsxs)("div", {
+            }), "alternativeDomains" === lR && (0, KR.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, ZW.jsx)("div", {
+              children: [(0, KR.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: tW("settingsMenu:unblockedDomainsDescription")
-              }), (0, ZW.jsx)("div", {
+                children: VR("settingsMenu:unblockedDomainsDescription")
+              }), (0, KR.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: eW.current.map((WW => (0, ZW.jsxs)(wW.f, {
+                children: DR.current.map((RR => (0, KR.jsxs)(fR.g, {
                   onClick: () => {
-                    window.open(`https://${WW}`)
+                    window.open(`https://${RR}`)
                   },
-                  children: [(0, ZW.jsx)(LW.c, {
+                  children: [(0, KR.jsx)(qR.d, {
                     name: "arrow-up-right-from-square"
-                  }), " ", WW]
-                }, WW)))
+                  }), " ", RR]
+                }, RR)))
               })]
-            }), "replayViewer" === TW && (0, ZW.jsx)(Cm, {}), "developerTools" === TW && (0, ZW.jsx)("div", {
+            }), "replayViewer" === lR && (0, KR.jsx)(Py, {}), "developerTools" === lR && (0, KR.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, ZW.jsx)(JW, {
-                setApplySettingsCallback: uW
+              children: (0, KR.jsx)(pR, {
+                setApplySettingsCallback: OR
               })
-            }), null !== nW && (0, ZW.jsx)("div", {
+            }), null !== vR && (0, KR.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, ZW.jsx)(wW.f, {
+              children: (0, KR.jsx)(fR.g, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: pW,
-                children: tW("general:apply")
+                onClick: IR,
+                children: VR("general:apply")
               })
             })]
           })]
         })
       }));
-    var tE = OW(3634),
-      ZE = OW(1664),
-      xE = OW(3184),
-      lE = OW(5033);
-    const AE = (0, mW.lazy)((() => Promise.resolve().then((() => OW(5361))).then((WW => (WW.needGameClientAfterPaint(), (0, tE.c)((WW => WW.loadCharacterCustomisationUI()), (WW => WW.CharacterCustomisationUI))))))),
-      bE = "openCustomisationTab";
+    var qt = GR(3728),
+      it = GR(1727),
+      ft = GR(3283),
+      Vt = GR(5134);
+    const Kt = (0, yR.lazy)((() => Promise.resolve().then((() => GR(5463))).then((RR => (RR.needGameClientAfterPaint(), (0, qt.c)((RR => RR.loadCharacterCustomisationUI()), (RR => RR.CharacterCustomisationUI))))))),
+      wt = "openCustomisationTab";
 
-    function jE(WW) {
-      var iW, OW, EW;
+    function rt(RR) {
+      var JR, GR, tR;
       let {
-        show: NW
-      } = WW;
+        show: uR
+      } = RR;
       const {
-        userContext: PW
-      } = (0, AW.e)(), LW = (0, BW.usePurchasesAllowed)(), cW = (0, mW.useRef)(null);
-      var wW, tW;
-      PW !== HW.NULL_USER_CONTEXT && (null === (iW = cW.current) || void 0 === iW ? void 0 : iW.whamm) !== PW.whamm && (cW.current = {
-        whamm: PW.whamm,
-        mountKey: (null !== (wW = null === (tW = cW.current) || void 0 === tW ? void 0 : tW.mountKey) && void 0 !== wW ? wW : -1) + 1
+        userContext: ZR
+      } = (0, eR.d)(), qR = (0, jR.usePurchasesAllowed)(), iR = (0, yR.useRef)(null);
+      var fR, VR;
+      ZR !== bR.NULL_USER_CONTEXT && (null === (JR = iR.current) || void 0 === JR ? void 0 : JR.whamm) !== ZR.whamm && (iR.current = {
+        whamm: ZR.whamm,
+        mountKey: (null !== (fR = null === (VR = iR.current) || void 0 === VR ? void 0 : VR.mountKey) && void 0 !== fR ? fR : -1) + 1
       });
-      const [lW, bW] = (0, mW.useState)("characters");
-      if ((0, NO.e)(bE, bW), !NW) return null;
-      const jW = null !== (0, ZE.e)(Date.now()),
-        UW = PW.getOwnedCosmeticPacks(),
-        kW = oi.Yb.filter((WW => "pet" === WW || "aura" === WW ? jW || (0, xE.s)(WW).some((iW => iW !== `${WW}_none` && (0, xE.I)(WW, iW, UW))) : "cape" !== WW && "nameColour" !== WW || (0, VW.e)(PW.getPlayerRanks()) || LW)).map((WW => ({
-          id: WW,
-          faIcon: oi.z[WW],
-          title: oi.D[WW],
+      const [rR, aR] = (0, yR.useState)("characters");
+      if ((0, yG.f)(wt, aR), !uR) return null;
+      const LR = null !== (0, it.i)(Date.now()),
+        nR = ZR.getOwnedCosmeticPacks(),
+        UR = OJ.Mb.filter((RR => "pet" === RR || "aura" === RR ? LR || (0, ft.p)(RR).some((JR => JR !== `${RR}_none` && (0, ft.G)(RR, JR, nR))) : "cape" !== RR && "nameColour" !== RR || (0, PR.e)(ZR.getPlayerRanks()) || qR)).map((RR => ({
+          id: RR,
+          faIcon: OJ.E[RR],
+          title: OJ.I[RR],
           redDot: !1
         })));
-      return (0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, ZW.jsx)(xW, {
-            items: kW,
-            selectedItemId: lW,
-            onClick: WW => {
-              bW(WW)
+          children: (0, KR.jsx)(wR, {
+            items: UR,
+            selectedItemId: rR,
+            onClick: RR => {
+              aR(RR)
             }
           })
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "MenuBody",
-          children: (0, ZW.jsx)(mW.Suspense, {
-            fallback: (0, ZW.jsx)("div", {
+          children: (0, KR.jsx)(yR.Suspense, {
+            fallback: (0, KR.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, ZW.jsx)(SW.d, {})
+              children: (0, KR.jsx)(XR.d, {})
             }),
-            children: (0, ZW.jsx)(AE, {
-              selectedTab: lW,
-              noWebGlFallback: kE
-            }, null !== (OW = null === (EW = cW.current) || void 0 === EW ? void 0 : EW.mountKey) && void 0 !== OW ? OW : 0)
+            children: (0, KR.jsx)(Kt, {
+              selectedTab: rR,
+              noWebGlFallback: Lt
+            }, null !== (GR = null === (tR = iR.current) || void 0 === tR ? void 0 : tR.mountKey) && void 0 !== GR ? GR : 0)
           })
         })]
       })
     }
 
-    function UE() {
+    function et() {
       const {
-        t: WW
-      } = (0, PW.B)();
-      return (0, ZW.jsx)("div", {
+        t: RR
+      } = (0, ZR.A)();
+      return (0, KR.jsx)("div", {
         className: "CharacterCustomisationNoWebGl SmallTextBold",
-        children: WW((0, lE.f)((0, lE.b)()))
+        children: RR((0, Vt.d)((0, Vt.b)()))
       })
     }
-    const kE = (0, ZW.jsx)(UE, {});
-    var sE = OW(1546),
-      ME = OW(1551),
-      KE = OW(35220),
-      SE = OW(5238),
-      YE = OW(4626),
-      yE = OW(4712),
-      TE = OW(10006),
-      JE = OW(35223),
-      hE = OW(35229),
-      HE = OW(2032),
-      nE = OW(2021),
-      uE = OW(5668),
-      oE = OW(1255),
-      dE = OW(1217),
-      eE = OW(1774),
-      vE = OW(10071),
-      gE = OW(3339),
-      DE = OW(3348);
+    const Lt = (0, KR.jsx)(et, {});
+    var nt = GR(1605),
+      Ut = GR(1614),
+      Wt = GR(35140),
+      At = GR(5338),
+      Ct = GR(4728),
+      Xt = GR(4822),
+      Mt = GR(10125),
+      Bt = GR(35143),
+      lt = GR(35155),
+      pt = GR(2123),
+      gt = GR(2105),
+      bt = GR(5792),
+      vt = GR(1351),
+      Ot = GR(1317),
+      xt = GR(1850),
+      Nt = GR(10199),
+      Dt = GR(3473),
+      Ht = GR(3479);
 
-    function VE(WW) {
-      return WW ? Object.keys(WW).sort(((iW, OW) => {
-        var mW, EW, NW, PW;
-        const LW = (null !== (mW = null === (EW = WW[OW]) || void 0 === EW ? void 0 : EW.sortPriority) && void 0 !== mW ? mW : 0) - (null !== (NW = null === (PW = WW[iW]) || void 0 === PW ? void 0 : PW.sortPriority) && void 0 !== NW ? NW : 0);
-        return 0 !== LW ? LW : iW.localeCompare(OW)
+    function ot(RR) {
+      return RR ? Object.keys(RR).sort(((JR, GR) => {
+        var yR, tR, uR, ZR;
+        const qR = (null !== (yR = null === (tR = RR[GR]) || void 0 === tR ? void 0 : tR.sortPriority) && void 0 !== yR ? yR : 0) - (null !== (uR = null === (ZR = RR[JR]) || void 0 === ZR ? void 0 : ZR.sortPriority) && void 0 !== uR ? uR : 0);
+        return 0 !== qR ? qR : JR.localeCompare(GR)
       })) : []
     }
-    const pE = [{
+    const ct = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -3206,241 +3206,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function fE(WW) {
+    function Pt(RR) {
       for (const {
-          threshold: iW,
-          suffix: OW
+          threshold: JR,
+          suffix: GR
         }
-        of pE)
-        if (WW >= iW) {
-          const mW = WW / iW;
-          return mW >= 100 ? `${Math.floor(mW)}${OW}` : mW >= 10 ? `${mW.toFixed(1).replace(/\.0$/,"")}${OW}` : `${mW.toFixed(2).replace(/\.?0+$/,"")}${OW}`
-        } return String(WW)
+        of ct)
+        if (RR >= JR) {
+          const yR = RR / JR;
+          return yR >= 100 ? `${Math.floor(yR)}${GR}` : yR >= 10 ? `${yR.toFixed(1).replace(/\.0$/,"")}${GR}` : `${yR.toFixed(2).replace(/\.?0+$/,"")}${GR}`
+        } return String(RR)
     }
-    var CE = OW(4171);
-    const XE = {
+    var It = GR(4250);
+    const mt = {
         normal: "0.8em",
         big: "1em"
       },
-      BE = (0, mW.memo)((function(WW) {
+      zt = (0, yR.memo)((function(RR) {
         let {
-          item: iW,
-          amount: OW = 0,
-          size: mW = "normal",
-          tier: EW = null
-        } = WW;
-        return (0, ZW.jsx)("div", {
-          className: NW()("SmpSlot", `SmpSlot-${mW}`),
-          children: iW && (0, ZW.jsx)(HE.b, {
-            itemName: iW,
-            amount: OW > 1 ? OW : 0,
-            amountFontSize: XE[mW],
-            enchantmentTier: EW
+          item: JR,
+          amount: GR = 0,
+          size: yR = "normal",
+          tier: tR = null
+        } = RR;
+        return (0, KR.jsx)("div", {
+          className: uR()("SmpSlot", `SmpSlot-${yR}`),
+          children: JR && (0, KR.jsx)(pt.b, {
+            itemName: JR,
+            amount: GR > 1 ? GR : 0,
+            amountFontSize: mt[yR],
+            enchantmentTier: tR
           })
         })
       }));
 
-    function qE(WW) {
+    function St(RR) {
       let {
-        amount: iW,
-        exact: OW = !1,
-        className: mW
-      } = WW;
-      return (0, ZW.jsxs)("span", {
-        className: NW()("SmpGold", mW),
-        children: [(0, ZW.jsx)("span", {
+        amount: JR,
+        exact: GR = !1,
+        className: yR
+      } = RR;
+      return (0, KR.jsxs)("span", {
+        className: uR()("SmpGold", yR),
+        children: [(0, KR.jsx)("span", {
           className: "SmpCoin",
-          children: (0, ZW.jsx)(HE.b, {
+          children: (0, KR.jsx)(pt.b, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), OW ? iW.toLocaleString("en-US") : fE(iW)]
+        }), GR ? JR.toLocaleString("en-US") : Pt(JR)]
       })
     }
 
-    function RE(WW) {
+    function jt(RR) {
       let {
-        count: iW = 5,
-        grid: OW = !1
-      } = WW;
-      return (0, ZW.jsx)("div", {
-        className: OW ? "SmpCardGrid" : "SmpList",
+        count: JR = 5,
+        grid: GR = !1
+      } = RR;
+      return (0, KR.jsx)("div", {
+        className: GR ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: iW
-        }, ((WW, iW) => (0, ZW.jsxs)("div", {
-          className: NW()(OW ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, ZW.jsx)("div", {
-            className: NW()("SmpSlot", OW ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, ZW.jsxs)("div", {
+          length: JR
+        }, ((RR, JR) => (0, KR.jsxs)("div", {
+          className: uR()(GR ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, KR.jsx)("div", {
+            className: uR()("SmpSlot", GR ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, KR.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, ZW.jsx)("b", {}), (0, ZW.jsx)("small", {})]
-          }), (0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("b", {}), (0, KR.jsx)("small", {})]
+          }), (0, KR.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, iW)))
+        }, JR)))
       })
     }
 
-    function GE(WW) {
+    function dt(RR) {
       let {
-        title: iW,
-        children: OW
-      } = WW;
-      return (0, ZW.jsxs)("div", {
+        title: JR,
+        children: GR
+      } = RR;
+      return (0, KR.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, ZW.jsx)("b", {
-          children: iW
-        }), OW && (0, ZW.jsx)("small", {
-          children: OW
+        children: [(0, KR.jsx)("b", {
+          children: JR
+        }), GR && (0, KR.jsx)("small", {
+          children: GR
         })]
       })
     }
 
-    function IE(WW) {
+    function Et(RR) {
       let {
-        entry: iW
-      } = WW;
-      return (0, ZW.jsx)(GE, {
-        title: (0, ZW.jsx)(nE.d, {
-          text: iW.item.customTitle
+        entry: JR
+      } = RR;
+      return (0, KR.jsx)(dt, {
+        title: (0, KR.jsx)(gt.c, {
+          text: JR.item.customTitle
         }),
-        children: (0, ZW.jsx)(nE.d, {
-          text: iW.item.description
+        children: (0, KR.jsx)(gt.c, {
+          text: JR.item.description
         })
       })
     }
 
-    function aE(WW) {
-      return (0, ZW.jsx)(CE.c, {
-        ...WW,
-        className: NW()("SmpChoice", WW.className),
+    function Yt(RR) {
+      return (0, KR.jsx)(It.c, {
+        ...RR,
+        className: uR()("SmpChoice", RR.className),
         reselectable: !0
       })
     }
 
-    function rE() {
-      return (0, ZW.jsx)("span", {
+    function kt() {
+      return (0, KR.jsx)("span", {
         className: "SmpLoader",
-        children: (0, ZW.jsx)(SW.d, {})
+        children: (0, KR.jsx)(XR.d, {})
       })
     }
 
-    function zE(WW) {
+    function Qt(RR) {
       let {
-        value: iW,
-        onChange: OW,
-        min: EW = 1,
-        max: NW,
-        step: PW = 1,
-        label: LW
-      } = WW;
-      const cW = (0, mW.useRef)(null),
-        wW = (0, mW.useRef)(iW);
-      wW.current = iW;
-      const [tW, xW] = (0, mW.useState)(null), lW = WW => Math.max(EW, Math.min(NW, Math.floor(WW))), AW = WW => {
-        const iW = wW.current,
-          mW = "function" === typeof PW ? PW(iW, WW) : PW,
-          EW = lW(iW + mW * WW);
-        wW.current = EW, OW(EW)
+        value: JR,
+        onChange: GR,
+        min: tR = 1,
+        max: uR,
+        step: ZR = 1,
+        label: qR
+      } = RR;
+      const iR = (0, yR.useRef)(null),
+        fR = (0, yR.useRef)(JR);
+      fR.current = JR;
+      const [VR, wR] = (0, yR.useState)(null), rR = RR => Math.max(tR, Math.min(uR, Math.floor(RR))), eR = RR => {
+        const JR = fR.current,
+          yR = "function" === typeof ZR ? ZR(JR, RR) : ZR,
+          tR = rR(JR + yR * RR);
+        fR.current = tR, GR(tR)
       };
-      (0, mW.useEffect)((() => {
-        if (null === tW) return;
-        let WW;
-        const iW = () => {
-            xW(null)
+      (0, yR.useEffect)((() => {
+        if (null === VR) return;
+        let RR;
+        const JR = () => {
+            wR(null)
           },
-          OW = setTimeout((() => {
-            WW = setInterval((() => {
-              AW(tW);
-              const WW = wW.current;
-              (tW > 0 ? WW >= NW : WW <= EW) && iW()
+          GR = setTimeout((() => {
+            RR = setInterval((() => {
+              eR(VR);
+              const RR = fR.current;
+              (VR > 0 ? RR >= uR : RR <= tR) && JR()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", iW), window.addEventListener("pointercancel", iW), window.addEventListener("blur", iW), () => {
-          clearTimeout(OW), clearInterval(WW), window.removeEventListener("pointerup", iW), window.removeEventListener("pointercancel", iW), window.removeEventListener("blur", iW)
+        return window.addEventListener("pointerup", JR), window.addEventListener("pointercancel", JR), window.addEventListener("blur", JR), () => {
+          clearTimeout(GR), clearInterval(RR), window.removeEventListener("pointerup", JR), window.removeEventListener("pointercancel", JR), window.removeEventListener("blur", JR)
         }
-      }), [tW]), (0, mW.useEffect)((() => {
-        const WW = cW.current;
-        WW && document.activeElement !== WW && WW.value !== String(iW) && (WW.value = String(iW))
-      }), [iW]), (0, mW.useEffect)((() => {
-        const WW = cW.current;
-        if (!WW) return;
-        const iW = () => {
-          WW.value = String(wW.current)
+      }), [VR]), (0, yR.useEffect)((() => {
+        const RR = iR.current;
+        RR && document.activeElement !== RR && RR.value !== String(JR) && (RR.value = String(JR))
+      }), [JR]), (0, yR.useEffect)((() => {
+        const RR = iR.current;
+        if (!RR) return;
+        const JR = () => {
+          RR.value = String(fR.current)
         };
-        return WW.addEventListener("blur", iW), () => {
-          WW.removeEventListener("blur", iW)
+        return RR.addEventListener("blur", JR), () => {
+          RR.removeEventListener("blur", JR)
         }
       }), []);
-      const bW = WW => (0, ZW.jsx)("button", {
+      const aR = RR => (0, KR.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${WW>0?"More":"Less"} ${LW}`,
-        disabled: WW > 0 ? iW >= NW : iW <= EW,
-        onPointerDown: iW => {
-          0 === iW.button && (AW(WW), xW(WW))
+        "aria-label": `${RR>0?"More":"Less"} ${qR}`,
+        disabled: RR > 0 ? JR >= uR : JR <= tR,
+        onPointerDown: JR => {
+          0 === JR.button && (eR(RR), wR(RR))
         },
-        onKeyDown: iW => {
-          "Enter" !== iW.key && " " !== iW.key || AW(WW)
+        onKeyDown: JR => {
+          "Enter" !== JR.key && " " !== JR.key || eR(RR)
         },
-        onContextMenu: WW => {
-          WW.preventDefault()
+        onContextMenu: RR => {
+          RR.preventDefault()
         },
-        children: WW > 0 ? "+" : "\u2212"
+        children: RR > 0 ? "+" : "\u2212"
       });
-      return (0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
         className: "SmpStepper",
-        children: [bW(-1), (0, ZW.jsx)(KW.b, {
+        children: [aR(-1), (0, KR.jsx)(CR.b, {
           className: "SmpStepperInput",
-          domRef: cW,
-          defaultValue: String(iW),
-          ariaLabel: LW,
+          domRef: iR,
+          defaultValue: String(JR),
+          ariaLabel: qR,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: WW => {
-            const iW = WW.replace(/[^\d]/g, "");
-            cW.current && iW !== WW && (cW.current.value = iW), "" !== iW && OW(lW(Number(iW)))
+          onValueChange: RR => {
+            const JR = RR.replace(/[^\d]/g, "");
+            iR.current && JR !== RR && (iR.current.value = JR), "" !== JR && GR(rR(Number(JR)))
           }
-        }), bW(1)]
+        }), aR(1)]
       })
     }
 
-    function FE(WW) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, WW))) - 1))
+    function Ft(RR) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, RR))) - 1))
     }
-    var QE = OW(35231),
-      WN = OW(1230);
-    const iN = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    WN.q, DW.yc.length;
+    var Tt = GR(35162),
+      st = GR(1336);
+    const ht = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    st.x, cR.Cc.length;
     new Map;
-    var ON = OW(4454);
+    var Ru = GR(4555);
 
-    function mN(WW, iW) {
-      var OW;
-      return iW && (null === (OW = WW[iW]) || void 0 === OW ? void 0 : OW.smp) || null
+    function Ju(RR, JR) {
+      var GR;
+      return JR && (null === (GR = RR[JR]) || void 0 === GR ? void 0 : GR.smp) || null
     }
 
-    function EN(WW, iW) {
-      const OW = [];
-      for (const EW of VE(WW)) {
-        var mW;
-        const NW = WW[EW];
-        (null === (mW = NW.smp) || void 0 === mW ? void 0 : mW.kind) === iW && OW.push({
-          key: EW,
-          item: NW,
-          meta: NW.smp
+    function Gu(RR, JR) {
+      const GR = [];
+      for (const tR of ot(RR)) {
+        var yR;
+        const uR = RR[tR];
+        (null === (yR = uR.smp) || void 0 === yR ? void 0 : yR.kind) === JR && GR.push({
+          key: tR,
+          item: uR,
+          meta: uR.smp
         })
       }
-      return OW
+      return GR
     }
 
-    function NN(WW, iW) {
-      var OW;
-      return null !== (OW = EN(WW, iW)[0]) && void 0 !== OW ? OW : null
+    function yu(RR, JR) {
+      var GR;
+      return null !== (GR = Gu(RR, JR)[0]) && void 0 !== GR ? GR : null
     }
-    const PN = "50% 0% 50% 0%",
-      LN = [{
+    const tu = "50% 0% 50% 0%",
+      uu = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3454,746 +3454,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function cN(WW) {
-      const iW = WW - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function Zu(RR) {
+      const JR = RR - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: OW,
-          suffix: mW
+          divisor: GR,
+          suffix: yR
         }
-        of LN)
-        if (iW >= OW) return `${Math.floor(iW/OW)}${mW}`;
+        of uu)
+        if (JR >= GR) return `${Math.floor(JR/GR)}${yR}`;
       return "<1s"
     }
 
-    function wN(WW) {
-      const iW = WW.map(TE.c),
-        OW = [];
-      return iW.forEach(((WW, mW) => {
-        const EW = function(WW) {
-            const iW = WW.match(/\d+/);
-            return iW ? Number(iW[0]) : 0
-          }(WW),
-          NW = mW === iW.length - 1;
-        (NW || 1 === EW || 10 === EW || 100 === EW) && OW.push({
-          label: WW,
-          quantity: EW,
-          isAll: NW
+    function qu(RR) {
+      const JR = RR.map(Mt.f),
+        GR = [];
+      return JR.forEach(((RR, yR) => {
+        const tR = function(RR) {
+            const JR = RR.match(/\d+/);
+            return JR ? Number(JR[0]) : 0
+          }(RR),
+          uR = yR === JR.length - 1;
+        (uR || 1 === tR || 10 === tR || 100 === tR) && GR.push({
+          label: RR,
+          quantity: tR,
+          isAll: uR
         })
-      })), OW
+      })), GR
     }
-    let tN = null;
+    let iu = null;
 
-    function ZN(WW, iW) {
-      const OW = iW.trim().toLowerCase();
-      if (!OW) return [];
-      const mW = WW => {
-          if (WW === OW) return 0;
-          if (WW.startsWith(OW)) return 1;
-          const iW = WW.indexOf(OW);
-          return -1 === iW ? -1 : 2 + iW
+    function fu(RR, JR) {
+      const GR = JR.trim().toLowerCase();
+      if (!GR) return [];
+      const yR = RR => {
+          if (RR === GR) return 0;
+          if (RR.startsWith(GR)) return 1;
+          const JR = RR.indexOf(GR);
+          return -1 === JR ? -1 : 2 + JR
         },
-        EW = [];
-      for (const LW of WW) {
-        const WW = [mW(LW.lowerLabel), mW(LW.lowerName)].filter((WW => -1 !== WW));
-        WW.length && EW.push({
-          item: LW,
-          rank: Math.min(...WW)
+        tR = [];
+      for (const qR of RR) {
+        const RR = [yR(qR.lowerLabel), yR(qR.lowerName)].filter((RR => -1 !== RR));
+        RR.length && tR.push({
+          item: qR,
+          rank: Math.min(...RR)
         })
       }
-      if (EW.length > 0) return EW.sort(((WW, iW) => WW.rank - iW.rank)).map((WW => WW.item));
-      const NW = [...OW],
-        PW = WW => {
-          let iW = 0;
-          for (const OW of NW) {
-            if (iW = WW.indexOf(OW, iW), -1 === iW) return !1;
-            iW++
+      if (tR.length > 0) return tR.sort(((RR, JR) => RR.rank - JR.rank)).map((RR => RR.item));
+      const uR = [...GR],
+        ZR = RR => {
+          let JR = 0;
+          for (const GR of uR) {
+            if (JR = RR.indexOf(GR, JR), -1 === JR) return !1;
+            JR++
           }
           return !0
         };
-      return WW.filter((WW => PW(WW.lowerLabel) || PW(WW.lowerName)))
+      return RR.filter((RR => ZR(RR.lowerLabel) || ZR(RR.lowerName)))
     }
 
-    function xN(WW, iW) {
-      var OW;
-      return null !== (OW = null === WW || void 0 === WW ? void 0 : WW[iW]) && void 0 !== OW ? OW : iW
+    function Vu(RR, JR) {
+      var GR;
+      return null !== (GR = null === RR || void 0 === RR ? void 0 : RR[JR]) && void 0 !== GR ? GR : JR
     }
 
-    function lN(WW, iW) {
-      const OW = WW.userInput;
-      return void 0 !== iW && "dropdown" === (null === OW || void 0 === OW ? void 0 : OW.type) && OW.dropdownOptions.map(TE.c).includes(iW) ? iW : function(WW) {
-        const iW = WW.userInput;
-        if ("dropdown" !== (null === iW || void 0 === iW ? void 0 : iW.type) || 0 === iW.dropdownOptions.length) return null;
-        const OW = iW.dropdownOptions.map(TE.c);
-        return iW.initialValue && OW.includes(iW.initialValue) ? iW.initialValue : OW[OW.length - 1]
-      }(WW)
+    function Ku(RR, JR) {
+      const GR = RR.userInput;
+      return void 0 !== JR && "dropdown" === (null === GR || void 0 === GR ? void 0 : GR.type) && GR.dropdownOptions.map(Mt.f).includes(JR) ? JR : function(RR) {
+        const JR = RR.userInput;
+        if ("dropdown" !== (null === JR || void 0 === JR ? void 0 : JR.type) || 0 === JR.dropdownOptions.length) return null;
+        const GR = JR.dropdownOptions.map(Mt.f);
+        return JR.initialValue && GR.includes(JR.initialValue) ? JR.initialValue : GR[GR.length - 1]
+      }(RR)
     }
 
-    function AN(WW) {
-      return void 0 === WW ? "" : JSON.stringify(WW)
+    function wu(RR) {
+      return void 0 === RR ? "" : JSON.stringify(RR)
     }
-    const bN = (0, mW.createContext)(null);
+    const ru = (0, yR.createContext)(null);
 
-    function jN() {
-      return (0, mW.useContext)(bN)
+    function eu() {
+      return (0, yR.useContext)(ru)
     }
-    var UN = OW(3714);
-    const kN = (0, mW.memo)((function(WW) {
+    var au = GR(3815);
+    const Lu = (0, yR.memo)((function(RR) {
         let {
-          name: iW,
-          label: OW,
-          onPick: mW
-        } = WW;
-        return (0, ZW.jsxs)("button", {
+          name: JR,
+          label: GR,
+          onPick: yR
+        } = RR;
+        return (0, KR.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: OW,
+          title: GR,
           onClick: () => {
-            mW(iW)
+            yR(JR)
           },
-          children: [(0, ZW.jsx)(BE, {
-            item: iW,
+          children: [(0, KR.jsx)(zt, {
+            item: JR,
             size: "big"
-          }), (0, ZW.jsx)("span", {
-            children: OW
+          }), (0, KR.jsx)("span", {
+            children: GR
           })]
         })
       })),
-      sN = (0, mW.memo)((function(WW) {
+      nu = (0, yR.memo)((function(RR) {
         let {
-          items: iW,
-          query: OW,
-          onPick: EW
-        } = WW;
+          items: JR,
+          query: GR,
+          onPick: tR
+        } = RR;
         const {
-          t: NW
-        } = (0, PW.B)(), [LW, cW] = (0, mW.useState)(new Set), wW = (0, mW.useMemo)((() => function(WW) {
-          const iW = new Map;
-          for (const OW of WW) {
-            let WW = iW.get(OW.category);
-            WW || (WW = [], iW.set(OW.category, WW)), WW.push(OW)
+          t: uR
+        } = (0, ZR.A)(), [qR, iR] = (0, yR.useState)(new Set), fR = (0, yR.useMemo)((() => function(RR) {
+          const JR = new Map;
+          for (const GR of RR) {
+            let RR = JR.get(GR.category);
+            RR || (RR = [], JR.set(GR.category, RR)), RR.push(GR)
           }
-          return [...iN, "other"].filter((WW => iW.has(WW))).map((WW => ({
-            category: WW,
-            items: iW.get(WW)
+          return [...ht, "other"].filter((RR => JR.has(RR))).map((RR => ({
+            category: RR,
+            items: JR.get(RR)
           })))
-        }(iW)), [iW]), tW = (0, mW.useMemo)((() => ZN(iW, OW).slice(0, 60)), [iW, OW]);
-        return OW.trim() ? 0 === tW.length ? (0, ZW.jsx)(GE, {
-          title: NW("smpShop:noItemsFound", {
-            query: OW.trim()
+        }(JR)), [JR]), VR = (0, yR.useMemo)((() => fu(JR, GR).slice(0, 60)), [JR, GR]);
+        return GR.trim() ? 0 === VR.length ? (0, KR.jsx)(dt, {
+          title: uR("smpShop:noItemsFound", {
+            query: GR.trim()
           }),
-          children: NW("smpShop:tryShorterName")
-        }) : (0, ZW.jsx)(UN.e, {
+          children: uR("smpShop:tryShorterName")
+        }) : (0, KR.jsx)(au.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: PN,
-          observerUpdateDeps: [OW],
-          children: tW.map((WW => (0, ZW.jsx)(kN, {
-            name: WW.name,
-            label: WW.label,
-            onPick: EW
-          }, WW.name)))
-        }) : (0, ZW.jsx)(ZW.Fragment, {
-          children: wW.map((WW => {
+          rootMargin: tu,
+          observerUpdateDeps: [GR],
+          children: VR.map((RR => (0, KR.jsx)(Lu, {
+            name: RR.name,
+            label: RR.label,
+            onPick: tR
+          }, RR.name)))
+        }) : (0, KR.jsx)(KR.Fragment, {
+          children: fR.map((RR => {
             let {
-              category: iW,
-              items: OW
-            } = WW;
-            const mW = LW.has(iW) || OW.length <= 48,
-              PW = mW ? OW : OW.slice(0, 48);
-            return (0, ZW.jsxs)("section", {
+              category: JR,
+              items: GR
+            } = RR;
+            const yR = qR.has(JR) || GR.length <= 48,
+              ZR = yR ? GR : GR.slice(0, 48);
+            return (0, KR.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, ZW.jsxs)("h4", {
-                children: [NW("other" === iW ? "smpShop:otherItems" : `creativeInventory:${iW}`), !mW && (0, ZW.jsx)("button", {
+              children: [(0, KR.jsxs)("h4", {
+                children: [uR("other" === JR ? "smpShop:otherItems" : `creativeInventory:${JR}`), !yR && (0, KR.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    cW(new Set([...LW, iW]))
+                    iR(new Set([...qR, JR]))
                   },
-                  children: NW("smpShop:showAll", {
-                    count: OW.length
+                  children: uR("smpShop:showAll", {
+                    count: GR.length
                   })
                 })]
-              }), (0, ZW.jsx)(UN.e, {
+              }), (0, KR.jsx)(au.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: PN,
-                observerUpdateDeps: [mW],
-                children: PW.map((WW => (0, ZW.jsx)(kN, {
-                  name: WW.name,
-                  label: WW.label,
-                  onPick: EW
-                }, WW.name)))
+                rootMargin: tu,
+                observerUpdateDeps: [yR],
+                children: ZR.map((RR => (0, KR.jsx)(Lu, {
+                  name: RR.name,
+                  label: RR.label,
+                  onPick: tR
+                }, RR.name)))
               })]
-            }, iW)
+            }, JR)
           }))
         })
       }));
 
-    function MN(WW, iW) {
+    function Uu(RR, JR) {
       const {
-        searched: OW,
-        shown: EW,
-        searchFor: NW,
-        loading: PW
-      } = function(WW, iW) {
-        var OW;
-        const EW = jN(),
-          [NW, PW] = (0, mW.useState)(void 0),
-          LW = (0, mW.useRef)(void 0),
-          cW = (0, mW.useRef)(0),
-          wW = (0, mW.useRef)(void 0),
-          tW = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.meta.item) && void 0 !== OW ? OW : null,
-          ZW = !!WW && EW.isPending(WW.key);
-        (0, mW.useEffect)((() => {
-          if (!WW || ZW || !iW || void 0 === NW || NW === tW) return;
-          const OW = NW === LW.current && EW.gaveUpAt(WW.key) > cW.current && wW.current !== NW;
-          (NW !== LW.current || OW) && EW.act(WW.key, null !== NW && void 0 !== NW ? NW : "*", OW) && (OW && (wW.current = NW), LW.current = NW, cW.current = Date.now())
-        }), [WW, ZW, iW, NW, tW, EW]);
-        const xW = (0, mW.useCallback)((WW => {
-            LW.current = void 0, wW.current = void 0, PW(WW)
+        searched: GR,
+        shown: tR,
+        searchFor: uR,
+        loading: ZR
+      } = function(RR, JR) {
+        var GR;
+        const tR = eu(),
+          [uR, ZR] = (0, yR.useState)(void 0),
+          qR = (0, yR.useRef)(void 0),
+          iR = (0, yR.useRef)(0),
+          fR = (0, yR.useRef)(void 0),
+          VR = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.meta.item) && void 0 !== GR ? GR : null,
+          KR = !!RR && tR.isPending(RR.key);
+        (0, yR.useEffect)((() => {
+          if (!RR || KR || !JR || void 0 === uR || uR === VR) return;
+          const GR = uR === qR.current && tR.gaveUpAt(RR.key) > iR.current && fR.current !== uR;
+          (uR !== qR.current || GR) && tR.act(RR.key, null !== uR && void 0 !== uR ? uR : "*", GR) && (GR && (fR.current = uR), qR.current = uR, iR.current = Date.now())
+        }), [RR, KR, JR, uR, VR, tR]);
+        const wR = (0, yR.useCallback)((RR => {
+            qR.current = void 0, fR.current = void 0, ZR(RR)
           }), []),
-          lW = void 0 !== NW && NW !== tW && (ZW || LW.current !== NW);
+          rR = void 0 !== uR && uR !== VR && (KR || qR.current !== uR);
         return {
-          searched: tW,
-          shown: lW ? NW : tW,
-          searchFor: xW,
-          loading: lW || ZW || null !== tW && !iW
+          searched: VR,
+          shown: rR ? uR : VR,
+          searchFor: wR,
+          loading: rR || KR || null !== VR && !JR
         }
-      }(WW, iW), LW = (0, mW.useMemo)((() => function() {
-        var WW;
-        let iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const EW = `${(0,ON.f)()}\x1f${iW.join("\x1e")}\x1f${OW.join("\x1e")}\x1f${JSON.stringify(mW)}`;
-        if ((null === (WW = tN) || void 0 === WW ? void 0 : WW.key) === EW) return tN.items;
-        const NW = new Set(OW),
-          PW = new Set,
-          LW = [],
-          cW = (WW, iW) => {
-            var OW;
-            if (!WW || PW.has(WW) || NW.has(WW)) return;
-            PW.add(WW);
-            const EW = null !== (OW = mW[WW]) && void 0 !== OW ? OW : WW;
-            LW.push({
-              name: WW,
-              label: EW,
-              lowerLabel: EW.toLowerCase(),
-              lowerName: WW.toLowerCase(),
-              category: iW
+      }(RR, JR), qR = (0, yR.useMemo)((() => function() {
+        var RR;
+        let JR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const tR = `${(0,Ru.f)()}\x1f${JR.join("\x1e")}\x1f${GR.join("\x1e")}\x1f${JSON.stringify(yR)}`;
+        if ((null === (RR = iu) || void 0 === RR ? void 0 : RR.key) === tR) return iu.items;
+        const uR = new Set(GR),
+          ZR = new Set,
+          qR = [],
+          iR = (RR, JR) => {
+            var GR;
+            if (!RR || ZR.has(RR) || uR.has(RR)) return;
+            ZR.add(RR);
+            const tR = null !== (GR = yR[RR]) && void 0 !== GR ? GR : RR;
+            qR.push({
+              name: RR,
+              label: tR,
+              lowerLabel: tR.toLowerCase(),
+              lowerName: RR.toLowerCase(),
+              category: JR
             })
           };
-        for (const tW of (0, QE.creativeItemIds)()) {
-          var wW;
-          (0, QE.itemIsDisabled)(tW, !0, !0, !1) || (0, QE.showOnlyInCreativeSearch)(tW) || cW((0, ON.d)(tW), null !== (wW = (0, QE.creativeCategoryOf)(tW)) && void 0 !== wW ? wW : "other")
+        for (const VR of (0, Tt.creativeItemIds)()) {
+          var fR;
+          (0, Tt.itemIsDisabled)(VR, !0, !0, !1) || (0, Tt.showOnlyInCreativeSearch)(VR) || iR((0, Ru.c)(VR), null !== (fR = (0, Tt.creativeCategoryOf)(VR)) && void 0 !== fR ? fR : "other")
         }
-        for (const tW of iW) cW(tW, "other");
-        return tN = {
-          key: EW,
-          items: LW
-        }, LW
-      }(null === WW || void 0 === WW ? void 0 : WW.meta.extra, null === WW || void 0 === WW ? void 0 : WW.meta.excluded, null === WW || void 0 === WW ? void 0 : WW.meta.names)), [null === WW || void 0 === WW ? void 0 : WW.meta.extra, null === WW || void 0 === WW ? void 0 : WW.meta.excluded, null === WW || void 0 === WW ? void 0 : WW.meta.names]), [cW, wW] = (0, mW.useState)(""), [tW, ZW] = (0, mW.useState)(0), [xW, lW] = (0, mW.useState)("recent"), AW = (0, mW.useCallback)((WW => {
-        wW(""), ZW((WW => WW + 1)), NW(WW)
-      }), [NW]), bW = "browse" === xW || "" !== cW.trim();
+        for (const VR of JR) iR(VR, "other");
+        return iu = {
+          key: tR,
+          items: qR
+        }, qR
+      }(null === RR || void 0 === RR ? void 0 : RR.meta.extra, null === RR || void 0 === RR ? void 0 : RR.meta.excluded, null === RR || void 0 === RR ? void 0 : RR.meta.names)), [null === RR || void 0 === RR ? void 0 : RR.meta.extra, null === RR || void 0 === RR ? void 0 : RR.meta.excluded, null === RR || void 0 === RR ? void 0 : RR.meta.names]), [iR, fR] = (0, yR.useState)(""), [VR, KR] = (0, yR.useState)(0), [wR, rR] = (0, yR.useState)("recent"), eR = (0, yR.useCallback)((RR => {
+        fR(""), KR((RR => RR + 1)), uR(RR)
+      }), [uR]), aR = "browse" === wR || "" !== iR.trim();
       return {
-        searched: OW,
-        shown: EW,
-        searchFor: NW,
-        loading: PW,
-        catalogue: LW,
-        names: null === WW || void 0 === WW ? void 0 : WW.meta.names,
-        query: cW,
-        setQuery: wW,
-        searchBoxKey: tW,
-        pickItem: AW,
-        setView: lW,
-        browsing: bW
+        searched: GR,
+        shown: tR,
+        searchFor: uR,
+        loading: ZR,
+        catalogue: qR,
+        names: null === RR || void 0 === RR ? void 0 : RR.meta.names,
+        query: iR,
+        setQuery: fR,
+        searchBoxKey: VR,
+        pickItem: eR,
+        setView: rR,
+        browsing: aR
       }
     }
 
-    function KN(WW) {
+    function Wu(RR) {
       let {
-        browser: iW,
-        children: OW
-      } = WW;
+        browser: JR,
+        children: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)(), EW = jN();
-      return (0, ZW.jsxs)("div", {
+        t: yR
+      } = (0, ZR.A)(), tR = eu();
+      return (0, KR.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "SmpSearch",
-          children: (0, ZW.jsx)(KW.b, {
+          children: (0, KR.jsx)(CR.b, {
             className: "SmpSearchInput",
-            placeholderText: mW("smpShop:searchPlaceholder"),
-            defaultValue: iW.query,
-            onValueChange: WW => {
-              iW.setQuery(WW), iW.searched && WW.trim() && iW.searchFor(null)
+            placeholderText: yR("smpShop:searchPlaceholder"),
+            defaultValue: JR.query,
+            onValueChange: RR => {
+              JR.setQuery(RR), JR.searched && RR.trim() && JR.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const WW = ZN(iW.catalogue, iW.query)[0];
-              WW ? iW.pickItem(WW.name) : iW.query.trim() && EW.notify(mW("smpShop:noItemsFound", {
-                query: iW.query.trim()
+              const RR = fu(JR.catalogue, JR.query)[0];
+              RR ? JR.pickItem(RR.name) : JR.query.trim() && tR.notify(yR("smpShop:noItemsFound", {
+                query: JR.query.trim()
               }))
             }
-          }, iW.searchBoxKey)
-        }), OW]
+          }, JR.searchBoxKey)
+        }), GR]
       })
     }
 
-    function SN(WW) {
+    function Au(RR) {
       let {
-        browser: iW,
-        recentLabel: OW,
-        children: mW
-      } = WW;
+        browser: JR,
+        recentLabel: GR,
+        children: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
+        t: tR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, ZW.jsx)(aE, {
+        children: [(0, KR.jsx)(Yt, {
           options: [{
             value: "recent",
-            label: OW
+            label: GR
           }, {
             value: "browse",
-            label: EW("smpShop:browseItems")
+            label: tR("smpShop:browseItems")
           }],
-          value: iW.browsing ? "browse" : "recent",
-          onChange: iW.setView,
-          ariaLabel: EW("smpShop:show")
-        }), !iW.browsing && mW]
+          value: JR.browsing ? "browse" : "recent",
+          onChange: JR.setView,
+          ariaLabel: tR("smpShop:show")
+        }), !JR.browsing && yR]
       })
     }
 
-    function YN(WW) {
+    function Cu(RR) {
       let {
-        item: iW,
-        names: OW,
-        summary: mW,
-        onBack: EW,
-        children: NW
-      } = WW;
+        item: JR,
+        names: GR,
+        summary: yR,
+        onBack: tR,
+        children: uR
+      } = RR;
       const {
-        t: LW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
+        t: qR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, ZW.jsx)(wW.b, {
+        children: [(0, KR.jsx)(fR.d, {
           className: "SmpBackButton",
-          onClick: EW,
-          children: LW("general:back")
-        }), (0, ZW.jsx)(BE, {
-          item: iW,
+          onClick: tR,
+          children: qR("general:back")
+        }), (0, KR.jsx)(zt, {
+          item: JR,
           size: "big"
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, ZW.jsx)("b", {
-            children: xN(OW, iW)
-          }), mW && (0, ZW.jsx)("small", {
-            children: mW
+          children: [(0, KR.jsx)("b", {
+            children: Vu(GR, JR)
+          }), yR && (0, KR.jsx)("small", {
+            children: yR
           })]
-        }), NW]
+        }), uR]
       })
     }
 
-    function yN(WW) {
+    function Xu(RR) {
       let {
-        browser: iW,
-        className: OW,
-        action: mW,
-        above: EW,
-        list: PW,
-        summary: LW,
-        recentLabel: cW,
-        listControls: wW,
-        onBack: tW
-      } = WW;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("SmpScreen", OW),
-        children: [(0, ZW.jsx)(KN, {
-          browser: iW,
-          children: mW
-        }), iW.shown && (0, ZW.jsx)(YN, {
-          item: iW.shown,
-          names: iW.names,
-          summary: !iW.loading && LW,
+        browser: JR,
+        className: GR,
+        action: yR,
+        above: tR,
+        list: ZR,
+        summary: qR,
+        recentLabel: iR,
+        listControls: fR,
+        onBack: VR
+      } = RR;
+      return (0, KR.jsxs)("div", {
+        className: uR()("SmpScreen", GR),
+        children: [(0, KR.jsx)(Wu, {
+          browser: JR,
+          children: yR
+        }), JR.shown && (0, KR.jsx)(Cu, {
+          item: JR.shown,
+          names: JR.names,
+          summary: !JR.loading && qR,
           onBack: () => {
-            null === tW || void 0 === tW || tW(), iW.searchFor(null)
+            null === VR || void 0 === VR || VR(), JR.searchFor(null)
           },
-          children: wW
-        }), EW, iW.shown ? PW : (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)(SN, {
-            browser: iW,
-            recentLabel: cW,
-            children: wW
-          }), iW.browsing ? (0, ZW.jsx)(sN, {
-            items: iW.catalogue,
-            query: iW.query,
-            onPick: iW.pickItem
-          }) : PW]
+          children: fR
+        }), tR, JR.shown ? ZR : (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)(Au, {
+            browser: JR,
+            recentLabel: iR,
+            children: fR
+          }), JR.browsing ? (0, KR.jsx)(nu, {
+            items: JR.catalogue,
+            query: JR.query,
+            onPick: JR.pickItem
+          }) : ZR]
         })]
       })
     }
 
-    function TN(WW, iW) {
-      const OW = WW.map((WW => {
+    function Mu(RR, JR) {
+      const GR = RR.map((RR => {
         let {
-          meta: iW
-        } = WW;
-        return iW.pricePerItem
+          meta: JR
+        } = RR;
+        return JR.pricePerItem
       }));
-      return "min" === iW ? Math.min(...OW) : Math.max(...OW)
+      return "min" === JR ? Math.min(...GR) : Math.max(...GR)
     }
-    var JN = OW(7583);
-    const hN = (0, mW.memo)((function(WW) {
-      var iW;
+    var Bu = GR(7717);
+    const lu = (0, yR.memo)((function(RR) {
+      var JR;
       const {
-        t: OW
-      } = (0, PW.B)(), mW = null === WW.seller, EW = WW.quantity * WW.pricePerItem;
-      return (0, ZW.jsxs)("div", {
-        className: WW.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, ZW.jsx)(BE, {
-          item: WW.item,
-          amount: WW.quantity,
-          size: WW.grid ? "big" : "normal",
-          tier: WW.tier
-        }), (0, ZW.jsxs)("div", {
+        t: GR
+      } = (0, ZR.A)(), yR = null === RR.seller, tR = RR.quantity * RR.pricePerItem;
+      return (0, KR.jsxs)("div", {
+        className: RR.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, KR.jsx)(zt, {
+          item: RR.item,
+          amount: RR.quantity,
+          size: RR.grid ? "big" : "normal",
+          tier: RR.tier
+        }), (0, KR.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, ZW.jsx)("b", {
-            children: (0, ZW.jsx)(nE.d, {
-              text: null !== (iW = WW.title) && void 0 !== iW ? iW : `${WW.quantity}x ${WW.item}`
+          children: [(0, KR.jsx)("b", {
+            children: (0, KR.jsx)(gt.c, {
+              text: null !== (JR = RR.title) && void 0 !== JR ? JR : `${RR.quantity}x ${RR.item}`
             })
-          }), (0, ZW.jsxs)("small", {
+          }), (0, KR.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, ZW.jsx)("span", {
-              children: mW ? OW("smpShop:you") : (0, ZW.jsx)(nE.d, {
+            children: [(0, KR.jsx)("span", {
+              children: yR ? GR("smpShop:you") : (0, KR.jsx)(gt.c, {
                 text: [{
-                  entityName: WW.seller
+                  entityName: RR.seller
                 }]
               })
-            }), (0, ZW.jsx)("span", {
-              children: OW("smpShop:timeLeft", {
-                time: cN(WW.expiresAt)
+            }), (0, KR.jsx)("span", {
+              children: GR("smpShop:timeLeft", {
+                time: Zu(RR.expiresAt)
               })
             })]
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, ZW.jsx)(qE, {
-            amount: WW.pricePerItem
-          }), (0, ZW.jsx)("small", {
-            children: OW("smpShop:each")
+          children: [(0, KR.jsx)(St, {
+            amount: RR.pricePerItem
+          }), (0, KR.jsx)("small", {
+            children: GR("smpShop:each")
           })]
-        }), (0, ZW.jsx)(wW.f, {
+        }), (0, KR.jsx)(fR.g, {
           className: "SmpBuyButton",
-          disabled: mW || !WW.canAfford && !WW.busy,
-          loading: WW.busy,
+          disabled: yR || !RR.canAfford && !RR.busy,
+          loading: RR.busy,
           onClick: () => {
-            WW.onBuy(WW.itemKey)
+            RR.onBuy(RR.itemKey)
           },
-          children: mW ? OW("smpShop:yours") : (0, ZW.jsx)(qE, {
-            amount: EW
+          children: yR ? GR("smpShop:yours") : (0, KR.jsx)(St, {
+            amount: tR
           })
         })]
       })
     }));
 
-    function HN(WW) {
+    function pu(RR) {
       let {
-        view: iW,
-        onChange: OW
-      } = WW;
+        view: JR,
+        onChange: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return (0, ZW.jsx)(CE.c, {
+        t: yR
+      } = (0, ZR.A)();
+      return (0, KR.jsx)(It.c, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: mW("smpShop:layout"),
+        ariaLabel: yR("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, ZW.jsx)(LW.c, {
+          label: (0, KR.jsx)(qR.d, {
             name: "list"
           }),
-          ariaLabel: mW("smpShop:listView")
+          ariaLabel: yR("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, ZW.jsx)(LW.c, {
+          label: (0, KR.jsx)(qR.d, {
             name: "grid-2"
           }),
-          ariaLabel: mW("smpShop:gridView")
+          ariaLabel: yR("smpShop:gridView")
         }],
-        value: iW,
-        onChange: OW
+        value: JR,
+        onChange: GR
       })
     }
 
-    function nN(WW) {
+    function gu(RR) {
       let {
-        entries: iW,
-        view: OW
-      } = WW;
+        entries: JR,
+        view: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)(), EW = jN(), NW = "grid" === OW;
-      return (0, ZW.jsxs)(ZW.Fragment, {
-        children: [!NW && (0, ZW.jsxs)("div", {
+        t: yR
+      } = (0, ZR.A)(), tR = eu(), uR = "grid" === GR;
+      return (0, KR.jsxs)(KR.Fragment, {
+        children: [!uR && (0, KR.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, ZW.jsx)("span", {}), (0, ZW.jsx)("span", {
-            children: mW("smpShop:columnItem")
-          }), (0, ZW.jsx)("span", {
-            children: mW("smpShop:columnPriceEach")
-          }), (0, ZW.jsx)("span", {
-            children: mW("smpShop:columnTotal")
+          children: [(0, KR.jsx)("span", {}), (0, KR.jsx)("span", {
+            children: yR("smpShop:columnItem")
+          }), (0, KR.jsx)("span", {
+            children: yR("smpShop:columnPriceEach")
+          }), (0, KR.jsx)("span", {
+            children: yR("smpShop:columnTotal")
           })]
-        }), (0, ZW.jsx)(UN.e, {
-          lazyLoadedClassName: NW ? "SmpCardGrid" : "SmpList",
+        }), (0, KR.jsx)(au.d, {
+          lazyLoadedClassName: uR ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: PN,
-          observerUpdateDeps: [iW.length],
-          children: iW.map((WW => {
-            var iW, OW;
+          rootMargin: tu,
+          observerUpdateDeps: [JR.length],
+          children: JR.map((RR => {
+            var JR, GR;
             let {
-              key: mW,
-              item: PW,
-              meta: LW
-            } = WW;
-            const cW = LW.quantity * LW.pricePerItem;
-            return (0, ZW.jsx)(hN, {
-              itemKey: mW,
-              item: LW.item,
-              title: PW.customTitle,
-              quantity: LW.quantity,
-              pricePerItem: LW.pricePerItem,
-              seller: LW.seller,
-              expiresAt: LW.expiresAt,
-              tier: null !== (iW = null === (OW = PW.enchant) || void 0 === OW ? void 0 : OW.tier) && void 0 !== iW ? iW : null,
-              busy: EW.isPending(mW) || null !== LW.seller && !1 === PW.canBuy,
-              canAfford: EW.canAfford(PW, cW),
-              grid: NW,
-              onBuy: EW.act
-            }, mW)
+              key: yR,
+              item: ZR,
+              meta: qR
+            } = RR;
+            const iR = qR.quantity * qR.pricePerItem;
+            return (0, KR.jsx)(lu, {
+              itemKey: yR,
+              item: qR.item,
+              title: ZR.customTitle,
+              quantity: qR.quantity,
+              pricePerItem: qR.pricePerItem,
+              seller: qR.seller,
+              expiresAt: qR.expiresAt,
+              tier: null !== (JR = null === (GR = ZR.enchant) || void 0 === GR ? void 0 : GR.tier) && void 0 !== JR ? JR : null,
+              busy: tR.isPending(yR) || null !== qR.seller && !1 === ZR.canBuy,
+              canAfford: tR.canAfford(ZR, iR),
+              grid: uR,
+              onBuy: tR.act
+            }, yR)
           }))
-        }, OW)]
+        }, GR)]
       })
     }
-    const uN = [1, 10, 100],
-      oN = [1, 10, 100, 999];
+    const bu = [1, 10, 100],
+      vu = [1, 10, 100, 999];
 
-    function dN(WW) {
-      var iW, OW, EW, cW, tW, xW, lW, AW, bW, jW;
+    function Ou(RR) {
+      var JR, GR, tR, iR, VR, wR, rR, eR, aR, LR;
       const {
-        t: UW
-      } = (0, PW.B)(), kW = jN(), {
-        creator: sW,
-        mode: MW
-      } = WW, [SW, YW] = (0, mW.useState)(null !== (iW = null === sW || void 0 === sW ? void 0 : sW.meta.item) && void 0 !== iW ? iW : null), [yW, TW] = (0, mW.useState)(1), [JW, hW] = (0, mW.useState)(0), [HW, nW] = (0, mW.useState)(""), [uW, oW] = (0, mW.useState)(0), dW = (0, mW.useRef)(SW), eW = (0, mW.useRef)(!1), [vW, gW] = (0, mW.useState)(!1), DW = null !== (OW = null === sW || void 0 === sW ? void 0 : sW.meta.item) && void 0 !== OW ? OW : null, VW = null !== (EW = null === sW || void 0 === sW ? void 0 : sW.meta.owned) && void 0 !== EW ? EW : 0;
-      (0, mW.useEffect)((() => {
-        WW.searching || null === DW || DW === dW.current || (dW.current = DW, eW.current = !1, YW(DW), hW(0), TW("list" === MW ? Math.max(1, VW) : 1))
-      }), [DW, WW.searching]);
-      const pW = !!sW && !!SW && sW.meta.item === SW,
-        fW = pW ? sW.meta.owned : null !== (cW = null === (tW = WW.inventory) || void 0 === tW || null === (xW = tW.find((WW => WW.item === SW))) || void 0 === xW ? void 0 : xW.quantity) && void 0 !== cW ? cW : 0,
-        CW = "list" === MW ? Math.max(1, fW) : 45954,
-        XW = null !== (lW = WW.prices[0]) && void 0 !== lW ? lW : null,
-        BW = WW.prices.length ? Math.round(WW.prices.reduce(((WW, iW) => WW + iW), 0) / WW.prices.length) : null,
-        qW = null === (AW = WW.inventory) || void 0 === AW || null === (bW = AW.find((WW => WW.item === SW))) || void 0 === bW ? void 0 : bW.sellPrice;
-      (0, mW.useEffect)((() => {
-        var WW;
-        pW && (TW((WW => "list" === MW ? Math.min(Math.max(1, WW), Math.max(1, fW)) : WW)), eW.current || hW(null !== (WW = null !== XW && void 0 !== XW ? XW : BW) && void 0 !== WW ? WW : Math.max(1, null !== qW && void 0 !== qW ? qW : 1)))
-      }), [pW, fW, SW, XW, BW]);
-      const RW = WW => {
-          eW.current = !0, hW(WW)
+        t: nR
+      } = (0, ZR.A)(), UR = eu(), {
+        creator: WR,
+        mode: AR
+      } = RR, [XR, MR] = (0, yR.useState)(null !== (JR = null === WR || void 0 === WR ? void 0 : WR.meta.item) && void 0 !== JR ? JR : null), [BR, lR] = (0, yR.useState)(1), [pR, gR] = (0, yR.useState)(0), [bR, vR] = (0, yR.useState)(""), [OR, xR] = (0, yR.useState)(0), NR = (0, yR.useRef)(XR), DR = (0, yR.useRef)(!1), [HR, oR] = (0, yR.useState)(!1), cR = null !== (GR = null === WR || void 0 === WR ? void 0 : WR.meta.item) && void 0 !== GR ? GR : null, PR = null !== (tR = null === WR || void 0 === WR ? void 0 : WR.meta.owned) && void 0 !== tR ? tR : 0;
+      (0, yR.useEffect)((() => {
+        RR.searching || null === cR || cR === NR.current || (NR.current = cR, DR.current = !1, MR(cR), gR(0), lR("list" === AR ? Math.max(1, PR) : 1))
+      }), [cR, RR.searching]);
+      const IR = !!WR && !!XR && WR.meta.item === XR,
+        mR = IR ? WR.meta.owned : null !== (iR = null === (VR = RR.inventory) || void 0 === VR || null === (wR = VR.find((RR => RR.item === XR))) || void 0 === wR ? void 0 : wR.quantity) && void 0 !== iR ? iR : 0,
+        zR = "list" === AR ? Math.max(1, mR) : 45954,
+        SR = null !== (rR = RR.prices[0]) && void 0 !== rR ? rR : null,
+        jR = RR.prices.length ? Math.round(RR.prices.reduce(((RR, JR) => RR + JR), 0) / RR.prices.length) : null,
+        dR = null === (eR = RR.inventory) || void 0 === eR || null === (aR = eR.find((RR => RR.item === XR))) || void 0 === aR ? void 0 : aR.sellPrice;
+      (0, yR.useEffect)((() => {
+        var RR;
+        IR && (lR((RR => "list" === AR ? Math.min(Math.max(1, RR), Math.max(1, mR)) : RR)), DR.current || gR(null !== (RR = null !== SR && void 0 !== SR ? SR : jR) && void 0 !== RR ? RR : Math.max(1, null !== dR && void 0 !== dR ? dR : 1)))
+      }), [IR, mR, XR, SR, jR]);
+      const ER = RR => {
+          DR.current = !0, gR(RR)
         },
-        GW = iW => {
-          var OW, mW, EW;
-          dW.current = iW, eW.current = !1, gW(!1), nW(""), oW((WW => WW + 1)), YW(iW), hW(0), TW("list" === MW && null !== (OW = null === (mW = WW.inventory) || void 0 === mW || null === (EW = mW.find((WW => WW.item === iW))) || void 0 === EW ? void 0 : EW.quantity) && void 0 !== OW ? OW : 1), (null === sW || void 0 === sW ? void 0 : sW.meta.item) !== iW && WW.onPickItem(iW)
+        YR = JR => {
+          var GR, yR, tR;
+          NR.current = JR, DR.current = !1, oR(!1), vR(""), xR((RR => RR + 1)), MR(JR), gR(0), lR("list" === AR && null !== (GR = null === (yR = RR.inventory) || void 0 === yR || null === (tR = yR.find((RR => RR.item === JR))) || void 0 === tR ? void 0 : tR.quantity) && void 0 !== GR ? GR : 1), (null === WR || void 0 === WR ? void 0 : WR.meta.item) !== JR && RR.onPickItem(JR)
         },
-        IW = yW * JW,
-        aW = "list" === MW && null !== sW && void 0 !== sW && sW.meta.fee ? function(WW, iW) {
-          const OW = Math.max(0, iW - WW.taxFreeAllowance);
-          return Math.ceil(Math.round(OW * WW.rate * 1e6) / 1e6)
-        }(sW.meta.fee, IW) : 0,
-        rW = !!sW && kW.isPending(sW.key),
-        zW = pW && !WW.searching && yW >= 1 && JW >= 1 && ("order" === MW || fW >= yW) && !rW,
-        FW = !!SW && !pW && !WW.searching && yW >= 1 && JW >= 1,
-        QW = () => {
-          zW ? kW.act(sW.key, `${yW}|${JW}`) : FW && (WW.onPickItem(SW), gW(!0))
+        kR = BR * pR,
+        QR = "list" === AR && null !== WR && void 0 !== WR && WR.meta.fee ? function(RR, JR) {
+          const GR = Math.max(0, JR - RR.taxFreeAllowance);
+          return Math.ceil(Math.round(GR * RR.rate * 1e6) / 1e6)
+        }(WR.meta.fee, kR) : 0,
+        FR = !!WR && UR.isPending(WR.key),
+        TR = IR && !RR.searching && BR >= 1 && pR >= 1 && ("order" === AR || mR >= BR) && !FR,
+        sR = !!XR && !IR && !RR.searching && BR >= 1 && pR >= 1,
+        hR = () => {
+          TR ? UR.act(WR.key, `${BR}|${pR}`) : sR && (RR.onPickItem(XR), oR(!0))
         };
-      (0, mW.useEffect)((() => {
-        vW && pW && !WW.searching && (gW(!1), QW())
-      }), [vW, pW, WW.searching]);
-      const Wi = !!SW && !pW && (WW.searching || vW),
-        ii = SW ? xN(WW.names, SW) : "",
-        Oi = (0, mW.useMemo)((() => ZN(WW.catalogue, HW).slice(0, 8)), [WW.catalogue, HW]),
-        mi = ("list" === MW ? uN.filter((WW => WW < fW)) : oN).map((WW => ({
-          value: WW,
-          label: String(WW)
+      (0, yR.useEffect)((() => {
+        HR && IR && !RR.searching && (oR(!1), hR())
+      }), [HR, IR, RR.searching]);
+      const RJ = !!XR && !IR && (RR.searching || HR),
+        JJ = XR ? Vu(RR.names, XR) : "",
+        GJ = (0, yR.useMemo)((() => fu(RR.catalogue, bR).slice(0, 8)), [RR.catalogue, bR]),
+        yJ = ("list" === AR ? bu.filter((RR => RR < mR)) : vu).map((RR => ({
+          value: RR,
+          label: String(RR)
         })));
-      "list" === MW && fW > 0 && mi.push({
-        value: fW,
-        label: UW("smpShop:all", {
-          count: fW
+      "list" === AR && mR > 0 && yJ.push({
+        value: mR,
+        label: nR("smpShop:all", {
+          count: mR
         })
       });
-      const Ei = [];
-      return null !== XW && (XW > 1 && Ei.push({
-        value: XW - 1,
-        label: UW("smpShop:undercut", {
-          price: fE(XW - 1)
+      const tJ = [];
+      return null !== SR && (SR > 1 && tJ.push({
+        value: SR - 1,
+        label: nR("smpShop:undercut", {
+          price: Pt(SR - 1)
         })
-      }), Ei.push({
-        value: XW,
-        label: UW("smpShop:lowest", {
-          price: fE(XW)
+      }), tJ.push({
+        value: SR,
+        label: nR("smpShop:lowest", {
+          price: Pt(SR)
         })
-      })), null !== BW && BW !== XW && Ei.push({
-        value: BW,
-        label: UW("smpShop:average", {
-          price: fE(BW)
+      })), null !== jR && jR !== SR && tJ.push({
+        value: jR,
+        label: nR("smpShop:average", {
+          price: Pt(jR)
         })
-      }), (0, ZW.jsxs)("div", {
+      }), (0, KR.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, ZW.jsx)("b", {
-            children: UW("list" === MW ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, ZW.jsx)("button", {
+          children: [(0, KR.jsx)("b", {
+            children: nR("list" === AR ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, KR.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": UW("smpShop:close"),
-            onClick: WW.onClose,
-            children: (0, ZW.jsx)(LW.c, {
+            "aria-label": nR("smpShop:close"),
+            onClick: RR.onClose,
+            children: (0, KR.jsx)(qR.d, {
               name: "xmark"
             })
           })]
-        }), "list" === MW && (0, ZW.jsx)("div", {
+        }), "list" === AR && (0, KR.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (jW = WW.inventory) && void 0 !== jW && jW.length ? WW.inventory.map((WW => {
+          children: null !== (LR = RR.inventory) && void 0 !== LR && LR.length ? RR.inventory.map((RR => {
             let {
-              item: iW,
-              quantity: OW
-            } = WW;
-            return (0, ZW.jsx)("button", {
+              item: JR,
+              quantity: GR
+            } = RR;
+            return (0, KR.jsx)("button", {
               type: "button",
-              title: iW,
-              className: NW()("SmpPickerSlot", {
-                SmpPickerSlotOn: iW === SW
+              title: JR,
+              className: uR()("SmpPickerSlot", {
+                SmpPickerSlotOn: JR === XR
               }),
               onClick: () => {
-                GW(iW)
+                YR(JR)
               },
-              children: (0, ZW.jsx)(BE, {
-                item: iW,
-                amount: OW
+              children: (0, KR.jsx)(zt, {
+                item: JR,
+                amount: GR
               })
-            }, iW)
-          })) : (0, ZW.jsx)("span", {
+            }, JR)
+          })) : (0, KR.jsx)("span", {
             className: "SmpMuted",
-            children: UW("smpShop:nothingToList")
+            children: nR("smpShop:nothingToList")
           })
-        }), ("list" === MW || !SW) && (0, ZW.jsxs)("div", {
+        }), ("list" === AR || !XR) && (0, KR.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, ZW.jsx)(KW.b, {
+          children: [(0, KR.jsx)(CR.b, {
             className: "SmpSearchInput",
-            placeholderText: UW("list" === MW ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: HW,
-            onValueChange: nW,
+            placeholderText: nR("list" === AR ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: bR,
+            onValueChange: vR,
             blurOnEnter: !0,
             onEnter: () => {
-              Oi[0] && GW(Oi[0].name)
+              GJ[0] && YR(GJ[0].name)
             }
-          }, uW), Oi.length > 0 && (0, ZW.jsx)("div", {
+          }, OR), GJ.length > 0 && (0, KR.jsx)("div", {
             className: "SmpPicker",
-            children: Oi.map((WW => {
+            children: GJ.map((RR => {
               let {
-                name: iW
-              } = WW;
-              return (0, ZW.jsx)("button", {
+                name: JR
+              } = RR;
+              return (0, KR.jsx)("button", {
                 type: "button",
-                title: iW,
-                className: NW()("SmpPickerSlot", {
-                  SmpPickerSlotOn: iW === SW
+                title: JR,
+                className: uR()("SmpPickerSlot", {
+                  SmpPickerSlotOn: JR === XR
                 }),
                 onClick: () => {
-                  GW(iW)
+                  YR(JR)
                 },
-                children: (0, ZW.jsx)(BE, {
-                  item: iW
+                children: (0, KR.jsx)(zt, {
+                  item: JR
                 })
-              }, iW)
+              }, JR)
             }))
           })]
-        }), SW && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsxs)("div", {
+        }), XR && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsxs)("div", {
             className: "SmpPickedName",
-            children: [ii, Wi && (0, ZW.jsx)(rE, {})]
-          }), (0, ZW.jsxs)("div", {
+            children: [JJ, RJ && (0, KR.jsx)(kt, {})]
+          }), (0, KR.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, ZW.jsxs)("div", {
+            children: [(0, KR.jsxs)("div", {
               className: "SmpField",
-              children: [(0, ZW.jsxs)("span", {
-                children: [UW("smpShop:quantity"), "list" === MW && pW && (0, ZW.jsx)("small", {
-                  children: UW("smpShop:youHave", {
-                    count: fW
+              children: [(0, KR.jsxs)("span", {
+                children: [nR("smpShop:quantity"), "list" === AR && IR && (0, KR.jsx)("small", {
+                  children: nR("smpShop:youHave", {
+                    count: mR
                   })
                 })]
-              }), (0, ZW.jsx)(zE, {
-                value: yW,
-                onChange: TW,
-                max: CW,
-                label: UW("smpShop:quantity")
-              }), (0, ZW.jsx)(aE, {
-                options: mi,
-                value: yW,
-                onChange: TW,
-                ariaLabel: UW("smpShop:quantity")
+              }), (0, KR.jsx)(Qt, {
+                value: BR,
+                onChange: lR,
+                max: zR,
+                label: nR("smpShop:quantity")
+              }), (0, KR.jsx)(Yt, {
+                options: yJ,
+                value: BR,
+                onChange: lR,
+                ariaLabel: nR("smpShop:quantity")
               })]
-            }), (0, ZW.jsxs)("div", {
+            }), (0, KR.jsxs)("div", {
               className: "SmpField",
-              children: [(0, ZW.jsx)("span", {
-                children: UW("smpShop:pricePerItem")
-              }), (0, ZW.jsx)(zE, {
-                value: Math.max(1, JW),
-                onChange: RW,
+              children: [(0, KR.jsx)("span", {
+                children: nR("smpShop:pricePerItem")
+              }), (0, KR.jsx)(Qt, {
+                value: Math.max(1, pR),
+                onChange: ER,
                 max: 9999999,
-                step: FE,
-                label: UW("smpShop:pricePerItem")
-              }), (0, ZW.jsx)(aE, {
-                options: Ei,
-                value: JW,
-                onChange: RW,
-                ariaLabel: UW("smpShop:pricePerItem")
+                step: Ft,
+                label: nR("smpShop:pricePerItem")
+              }), (0, KR.jsx)(Yt, {
+                options: tJ,
+                value: pR,
+                onChange: ER,
+                ariaLabel: nR("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === MW && (0, ZW.jsxs)("div", {
+          }), "list" === AR && (0, KR.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, ZW.jsxs)("span", {
-              children: [UW("smpShop:youGet"), " ", (0, ZW.jsx)(qE, {
-                amount: Math.max(0, IW - aW),
+            children: [(0, KR.jsxs)("span", {
+              children: [nR("smpShop:youGet"), " ", (0, KR.jsx)(St, {
+                amount: Math.max(0, kR - QR),
                 exact: !0
               })]
-            }), (0, ZW.jsx)("small", {
-              children: aW > 0 ? UW("smpShop:listingFee", {
-                fee: aW.toLocaleString("en-US")
-              }) : UW("smpShop:listingRules")
+            }), (0, KR.jsx)("small", {
+              children: QR > 0 ? nR("smpShop:listingFee", {
+                fee: QR.toLocaleString("en-US")
+              }) : nR("smpShop:listingRules")
             })]
-          }), (0, ZW.jsx)(wW.s, {
+          }), (0, KR.jsx)(fR.r, {
             className: "SmpSubmit",
-            disabled: !zW && !FW && !rW,
-            loading: rW || Wi || pW && WW.searching,
-            onClick: QW,
-            children: "list" === MW ? UW("smpShop:listButton", {
-              count: yW,
-              item: ii
-            }) : (0, ZW.jsxs)(ZW.Fragment, {
-              children: [UW("smpShop:orderButton", {
-                count: yW,
-                item: ii
-              }), " ", JW >= 1 && (0, ZW.jsx)(qE, {
-                amount: IW
+            disabled: !TR && !sR && !FR,
+            loading: FR || RJ || IR && RR.searching,
+            onClick: hR,
+            children: "list" === AR ? nR("smpShop:listButton", {
+              count: BR,
+              item: JJ
+            }) : (0, KR.jsxs)(KR.Fragment, {
+              children: [nR("smpShop:orderButton", {
+                count: BR,
+                item: JJ
+              }), " ", pR >= 1 && (0, KR.jsx)(St, {
+                amount: kR
               })]
             })
           })]
@@ -4201,627 +4201,627 @@ export const modules = {
       })
     }
 
-    function eN() {
-      var WW;
+    function xu() {
+      var RR;
       const {
-        t: iW
-      } = (0, PW.B)(), OW = jN(), EW = null === (WW = OW.shopInfo[OW.categoryKey]) || void 0 === WW ? void 0 : WW.items, NW = NN(EW, "search"), LW = NN(EW, "creator"), cW = EN(EW, "enchantedCreator"), tW = EN(EW, "listing"), xW = NN(EW, "empty"), lW = MN(NW, tW.length > 0 || null !== xW), {
-        searched: AW,
-        shown: bW,
-        loading: jW
-      } = lW, [UW, kW] = (0, mW.useState)(!1), [sW, MW] = function() {
-        const [WW, iW] = (0, JN.d)("smpMarketView", "list");
-        return ["grid" === WW ? "grid" : "list", iW]
-      }(), KW = "grid" === sW, SW = (0, mW.useMemo)((() => tW.filter((WW => {
+        t: JR
+      } = (0, ZR.A)(), GR = eu(), tR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, uR = yu(tR, "search"), qR = yu(tR, "creator"), iR = Gu(tR, "enchantedCreator"), VR = Gu(tR, "listing"), wR = yu(tR, "empty"), rR = Uu(uR, VR.length > 0 || null !== wR), {
+        searched: eR,
+        shown: aR,
+        loading: LR
+      } = rR, [nR, UR] = (0, yR.useState)(!1), [WR, AR] = function() {
+        const [RR, JR] = (0, Bu.e)("smpMarketView", "list");
+        return ["grid" === RR ? "grid" : "list", JR]
+      }(), CR = "grid" === WR, XR = (0, yR.useMemo)((() => VR.filter((RR => {
         let {
-          meta: iW
-        } = WW;
-        return null !== iW.seller && iW.item === AW
-      })).map((WW => {
+          meta: JR
+        } = RR;
+        return null !== JR.seller && JR.item === eR
+      })).map((RR => {
         let {
-          meta: iW
-        } = WW;
-        return iW.pricePerItem
-      })).sort(((WW, iW) => WW - iW))), [tW, AW]), YW = (0, mW.useMemo)((() => {
-        const WW = new Set(lW.catalogue.map((WW => {
+          meta: JR
+        } = RR;
+        return JR.pricePerItem
+      })).sort(((RR, JR) => RR - JR))), [VR, eR]), MR = (0, yR.useMemo)((() => {
+        const RR = new Set(rR.catalogue.map((RR => {
           let {
-            name: iW
-          } = WW;
-          return iW
+            name: JR
+          } = RR;
+          return JR
         })));
-        return function(WW) {
-          for (const iW in WW)
-            if ("sell" === WW[iW].smp) return EN(WW[iW].items, "sell").filter((WW => {
+        return function(RR) {
+          for (const JR in RR)
+            if ("sell" === RR[JR].smp) return Gu(RR[JR].items, "sell").filter((RR => {
               let {
-                item: iW
-              } = WW;
-              return !iW.enchant
-            })).map((WW => {
+                item: JR
+              } = RR;
+              return !JR.enchant
+            })).map((RR => {
               let {
-                meta: iW
-              } = WW;
+                meta: JR
+              } = RR;
               return {
-                item: iW.item,
-                quantity: iW.quantity,
-                sellPrice: iW.pricePerItem
+                item: JR.item,
+                quantity: JR.quantity,
+                sellPrice: JR.pricePerItem
               }
             }));
           return []
-        }(OW.shopInfo).filter((iW => {
+        }(GR.shopInfo).filter((JR => {
           let {
-            item: OW
-          } = iW;
-          return WW.has(OW)
+            item: GR
+          } = JR;
+          return RR.has(GR)
         }))
-      }), [OW.shopInfo, lW.catalogue]);
-      return (0, ZW.jsx)(yN, {
-        browser: lW,
+      }), [GR.shopInfo, rR.catalogue]);
+      return (0, KR.jsx)(Xu, {
+        browser: rR,
         className: "SmpMarketTab",
-        recentLabel: iW("smpShop:recentlyListed"),
-        action: (0, ZW.jsx)(wW.s, {
+        recentLabel: JR("smpShop:recentlyListed"),
+        action: (0, KR.jsx)(fR.r, {
           className: "SmpSellButton",
           onClick: () => {
-            kW((WW => !WW))
+            UR((RR => !RR))
           },
-          children: iW("smpShop:sell")
+          children: JR("smpShop:sell")
         }),
-        above: UW && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)(dN, {
+        above: nR && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)(Ou, {
             mode: "list",
-            creator: LW,
-            inventory: YW,
-            catalogue: lW.catalogue,
-            names: lW.names,
-            searching: jW,
-            prices: SW,
-            onPickItem: lW.searchFor,
+            creator: qR,
+            inventory: MR,
+            catalogue: rR.catalogue,
+            names: rR.names,
+            searching: LR,
+            prices: XR,
+            onPickItem: rR.searchFor,
             onClose: () => {
-              kW(!1)
+              UR(!1)
             }
-          }), cW.length > 0 && (0, ZW.jsx)(vN, {
-            entries: cW
+          }), iR.length > 0 && (0, KR.jsx)(Nu, {
+            entries: iR
           })]
         }),
-        listControls: (0, ZW.jsx)(HN, {
-          view: sW,
-          onChange: MW
+        listControls: (0, KR.jsx)(pu, {
+          view: WR,
+          onChange: AR
         }),
-        summary: bW && (tW.length > 0 ? iW(1 === tW.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: tW.length,
-          price: fE(TN(tW, "min"))
-        }) : iW("smpShop:noOneSelling", {
-          item: xN(lW.names, bW)
+        summary: aR && (VR.length > 0 ? JR(1 === VR.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: VR.length,
+          price: Pt(Mu(VR, "min"))
+        }) : JR("smpShop:noOneSelling", {
+          item: Vu(rR.names, aR)
         })),
-        list: jW ? (0, ZW.jsx)(RE, {
-          grid: KW
-        }) : tW.length > 0 ? (0, ZW.jsx)(nN, {
-          entries: tW,
-          view: sW
-        }) : xW ? (0, ZW.jsx)(IE, {
-          entry: xW
-        }) : (0, ZW.jsx)(RE, {
+        list: LR ? (0, KR.jsx)(jt, {
+          grid: CR
+        }) : VR.length > 0 ? (0, KR.jsx)(gu, {
+          entries: VR,
+          view: WR
+        }) : wR ? (0, KR.jsx)(Et, {
+          entry: wR
+        }) : (0, KR.jsx)(jt, {
           count: 3,
-          grid: KW
+          grid: CR
         })
       })
     }
 
-    function vN(WW) {
+    function Nu(RR) {
       let {
-        entries: iW
-      } = WW;
+        entries: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), EW = jN(), [NW, LW] = (0, mW.useState)({});
-      return (0, ZW.jsx)("div", {
+        t: GR
+      } = (0, ZR.A)(), tR = eu(), [uR, qR] = (0, yR.useState)({});
+      return (0, KR.jsx)("div", {
         className: "SmpList",
-        children: iW.map((WW => {
-          var iW, mW, PW;
+        children: JR.map((RR => {
+          var JR, yR, ZR;
           let {
-            key: cW,
-            item: tW,
-            meta: xW
-          } = WW;
-          const lW = null !== (iW = NW[cW]) && void 0 !== iW ? iW : 1;
-          return (0, ZW.jsxs)("div", {
+            key: iR,
+            item: VR,
+            meta: wR
+          } = RR;
+          const rR = null !== (JR = uR[iR]) && void 0 !== JR ? JR : 1;
+          return (0, KR.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, ZW.jsx)(BE, {
-              item: xW.item,
-              amount: xW.quantity,
-              tier: null !== (mW = null === (PW = tW.enchant) || void 0 === PW ? void 0 : PW.tier) && void 0 !== mW ? mW : null
-            }), (0, ZW.jsxs)("div", {
+            children: [(0, KR.jsx)(zt, {
+              item: wR.item,
+              amount: wR.quantity,
+              tier: null !== (yR = null === (ZR = VR.enchant) || void 0 === ZR ? void 0 : ZR.tier) && void 0 !== yR ? yR : null
+            }), (0, KR.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, ZW.jsx)("b", {
-                children: (0, ZW.jsx)(nE.d, {
-                  text: tW.customTitle
+              children: [(0, KR.jsx)("b", {
+                children: (0, KR.jsx)(gt.c, {
+                  text: VR.customTitle
                 })
-              }), (0, ZW.jsx)("small", {
-                children: OW("smpShop:enchantedListing")
+              }), (0, KR.jsx)("small", {
+                children: GR("smpShop:enchantedListing")
               })]
-            }), (0, ZW.jsx)(zE, {
-              value: lW,
-              onChange: WW => {
-                LW({
-                  ...NW,
-                  [cW]: WW
+            }), (0, KR.jsx)(Qt, {
+              value: rR,
+              onChange: RR => {
+                qR({
+                  ...uR,
+                  [iR]: RR
                 })
               },
               max: 9999999,
-              step: FE,
-              label: OW("smpShop:pricePerItem")
-            }), (0, ZW.jsxs)(wW.s, {
-              loading: EW.isPending(cW),
+              step: Ft,
+              label: GR("smpShop:pricePerItem")
+            }), (0, KR.jsxs)(fR.r, {
+              loading: tR.isPending(iR),
               onClick: () => {
-                EW.act(cW, String(lW))
+                tR.act(iR, String(rR))
               },
-              children: [OW("smpShop:list"), " ", (0, ZW.jsx)(qE, {
-                amount: lW
+              children: [GR("smpShop:list"), " ", (0, KR.jsx)(St, {
+                amount: rR
               })]
             })]
-          }, cW)
+          }, iR)
         }))
       })
     }
-    const gN = (0, mW.memo)((function(WW) {
+    const Du = (0, yR.memo)((function(RR) {
       let {
-        itemKey: iW,
-        item: OW,
-        quantity: mW,
-        pricePerItem: EW,
-        tier: PW,
-        selected: LW,
-        onSelect: cW
-      } = WW;
-      return (0, ZW.jsxs)("button", {
+        itemKey: JR,
+        item: GR,
+        quantity: yR,
+        pricePerItem: tR,
+        tier: ZR,
+        selected: qR,
+        onSelect: iR
+      } = RR;
+      return (0, KR.jsxs)("button", {
         type: "button",
-        className: NW()("SmpInventorySlot", {
-          SmpInventorySlotOn: LW
+        className: uR()("SmpInventorySlot", {
+          SmpInventorySlotOn: qR
         }),
-        title: OW,
+        title: GR,
         onClick: () => {
-          cW(iW)
+          iR(JR)
         },
-        children: [(0, ZW.jsx)(BE, {
-          item: OW,
-          amount: mW,
-          tier: PW
-        }), (0, ZW.jsx)(qE, {
-          amount: EW
+        children: [(0, KR.jsx)(zt, {
+          item: GR,
+          amount: yR,
+          tier: ZR
+        }), (0, KR.jsx)(St, {
+          amount: tR
         })]
       })
     }));
 
-    function DN() {
-      var WW;
+    function Hu() {
+      var RR;
       const {
-        t: iW
-      } = (0, PW.B)(), OW = jN(), EW = null === (WW = OW.shopInfo[OW.categoryKey]) || void 0 === WW ? void 0 : WW.items, LW = EN(EW, "sell"), cW = NN(EW, "empty"), [wW, tW] = (0, mW.useState)(null), [xW, lW] = (0, mW.useState)({}), AW = LW.find((WW => {
+        t: JR
+      } = (0, ZR.A)(), GR = eu(), tR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, qR = Gu(tR, "sell"), iR = yu(tR, "empty"), [fR, VR] = (0, yR.useState)(null), [wR, rR] = (0, yR.useState)({}), eR = qR.find((RR => {
         let {
-          key: iW
-        } = WW;
-        return iW === wW
+          key: JR
+        } = RR;
+        return JR === fR
       }));
-      return 0 === LW.length ? (0, ZW.jsx)("div", {
+      return 0 === qR.length ? (0, KR.jsx)("div", {
         className: "SmpScreen",
-        children: (0, ZW.jsx)(GE, {
-          title: cW ? (0, ZW.jsx)(nE.d, {
-            text: cW.item.customTitle
-          }) : iW("smpShop:nothingToSell"),
-          children: cW && (0, ZW.jsx)(nE.d, {
-            text: cW.item.description
+        children: (0, KR.jsx)(dt, {
+          title: iR ? (0, KR.jsx)(gt.c, {
+            text: iR.item.customTitle
+          }) : JR("smpShop:nothingToSell"),
+          children: iR && (0, KR.jsx)(gt.c, {
+            text: iR.item.description
           })
         })
-      }) : (0, ZW.jsxs)("div", {
+      }) : (0, KR.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: LW.map((WW => {
-            var iW, OW;
+          children: qR.map((RR => {
+            var JR, GR;
             let {
-              key: mW,
-              item: EW,
-              meta: NW
-            } = WW;
-            return (0, ZW.jsx)(gN, {
-              itemKey: mW,
-              item: NW.item,
-              quantity: NW.quantity,
-              pricePerItem: NW.pricePerItem,
-              tier: null !== (iW = null === (OW = EW.enchant) || void 0 === OW ? void 0 : OW.tier) && void 0 !== iW ? iW : null,
-              selected: mW === wW,
-              onSelect: tW
-            }, mW)
+              key: yR,
+              item: tR,
+              meta: uR
+            } = RR;
+            return (0, KR.jsx)(Du, {
+              itemKey: yR,
+              item: uR.item,
+              quantity: uR.quantity,
+              pricePerItem: uR.pricePerItem,
+              tier: null !== (JR = null === (GR = tR.enchant) || void 0 === GR ? void 0 : GR.tier) && void 0 !== JR ? JR : null,
+              selected: yR === fR,
+              onSelect: VR
+            }, yR)
           }))
-        }), (0, ZW.jsx)("div", {
-          className: NW()("SmpSellBar", {
-            SmpSellBarIdle: !AW
+        }), (0, KR.jsx)("div", {
+          className: uR()("SmpSellBar", {
+            SmpSellBarIdle: !eR
           }),
-          children: AW ? (0, ZW.jsx)(VN, {
-            entry: AW,
-            choice: lN(AW.item, xW[AW.key]),
-            onChoose: WW => {
-              lW({
-                ...xW,
-                [AW.key]: WW
+          children: eR ? (0, KR.jsx)(ou, {
+            entry: eR,
+            choice: Ku(eR.item, wR[eR.key]),
+            onChoose: RR => {
+              rR({
+                ...wR,
+                [eR.key]: RR
               })
             }
-          }) : (0, ZW.jsx)("span", {
+          }) : (0, KR.jsx)("span", {
             className: "SmpMuted",
-            children: iW("smpShop:tapToSell")
+            children: JR("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function VN(WW) {
-      var iW, OW, mW, EW;
+    function ou(RR) {
+      var JR, GR, yR, tR;
       let {
-        entry: NW,
-        choice: LW,
-        onChoose: cW
-      } = WW;
+        entry: uR,
+        choice: qR,
+        onChoose: iR
+      } = RR;
       const {
-        t: tW
-      } = (0, PW.B)(), xW = jN(), {
-        key: lW,
-        item: AW,
-        meta: bW
-      } = NW, jW = wN("dropdown" === (null === (iW = AW.userInput) || void 0 === iW ? void 0 : iW.type) ? AW.userInput.dropdownOptions : []), UW = null === LW ? 0 : -(0, TE.b)(AW, LW);
-      return (0, ZW.jsxs)(ZW.Fragment, {
-        children: [(0, ZW.jsx)(BE, {
-          item: bW.item,
-          amount: bW.quantity,
-          tier: null !== (OW = null === (mW = AW.enchant) || void 0 === mW ? void 0 : mW.tier) && void 0 !== OW ? OW : null
-        }), (0, ZW.jsxs)("div", {
+        t: VR
+      } = (0, ZR.A)(), wR = eu(), {
+        key: rR,
+        item: eR,
+        meta: aR
+      } = uR, LR = qu("dropdown" === (null === (JR = eR.userInput) || void 0 === JR ? void 0 : JR.type) ? eR.userInput.dropdownOptions : []), nR = null === qR ? 0 : -(0, Mt.e)(eR, qR);
+      return (0, KR.jsxs)(KR.Fragment, {
+        children: [(0, KR.jsx)(zt, {
+          item: aR.item,
+          amount: aR.quantity,
+          tier: null !== (GR = null === (yR = eR.enchant) || void 0 === yR ? void 0 : yR.tier) && void 0 !== GR ? GR : null
+        }), (0, KR.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, ZW.jsx)("b", {
-            children: (0, ZW.jsx)(nE.d, {
-              text: null !== (EW = AW.customTitle) && void 0 !== EW ? EW : bW.item
+          children: [(0, KR.jsx)("b", {
+            children: (0, KR.jsx)(gt.c, {
+              text: null !== (tR = eR.customTitle) && void 0 !== tR ? tR : aR.item
             })
-          }), (0, ZW.jsx)("small", {
-            children: tW("smpShop:sellEach", {
-              count: bW.quantity
+          }), (0, KR.jsx)("small", {
+            children: VR("smpShop:sellEach", {
+              count: aR.quantity
             })
           })]
-        }), (0, ZW.jsx)(aE, {
-          options: jW.map((WW => {
+        }), (0, KR.jsx)(Yt, {
+          options: LR.map((RR => {
             let {
-              label: iW,
-              quantity: OW,
-              isAll: mW
-            } = WW;
+              label: JR,
+              quantity: GR,
+              isAll: yR
+            } = RR;
             return {
-              value: iW,
-              label: mW ? tW("smpShop:all", {
-                count: OW
-              }) : String(OW)
+              value: JR,
+              label: yR ? VR("smpShop:all", {
+                count: GR
+              }) : String(GR)
             }
           })),
-          value: LW,
-          onChange: cW,
-          ariaLabel: tW("smpShop:quantity")
-        }), (0, ZW.jsxs)(wW.s, {
-          loading: xW.isPending(lW),
-          disabled: null === LW,
+          value: qR,
+          onChange: iR,
+          ariaLabel: VR("smpShop:quantity")
+        }), (0, KR.jsxs)(fR.r, {
+          loading: wR.isPending(rR),
+          disabled: null === qR,
           onClick: () => {
-            xW.act(lW, LW)
+            wR.act(rR, qR)
           },
-          children: [tW("smpShop:sellButton"), " ", (0, ZW.jsx)(qE, {
-            amount: UW
+          children: [VR("smpShop:sellButton"), " ", (0, KR.jsx)(St, {
+            amount: nR
           })]
         })]
       })
     }
 
-    function pN() {
-      var WW;
+    function cu() {
+      var RR;
       const {
-        t: iW
-      } = (0, PW.B)(), OW = jN(), mW = null === (WW = OW.shopInfo[OW.categoryKey]) || void 0 === WW ? void 0 : WW.items, EW = EN(mW, "collect"), NW = EN(mW, "myListing"), LW = (WW, iW) => OW.isPending(WW) || !1 === iW.canBuy;
-      return (0, ZW.jsxs)("div", {
+        t: JR
+      } = (0, ZR.A)(), GR = eu(), yR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, tR = Gu(yR, "collect"), uR = Gu(yR, "myListing"), qR = (RR, JR) => GR.isPending(RR) || !1 === JR.canBuy;
+      return (0, KR.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, ZW.jsx)("h3", {
+        children: [(0, KR.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: iW("smpShop:readyToCollect")
-        }), EW.length > 0 ? (0, ZW.jsx)("div", {
+          children: JR("smpShop:readyToCollect")
+        }), tR.length > 0 ? (0, KR.jsx)("div", {
           className: "SmpList",
-          children: EW.map((WW => {
-            var mW, EW;
+          children: tR.map((RR => {
+            var yR, tR;
             let {
-              key: NW,
-              item: PW,
-              meta: cW
-            } = WW;
-            return (0, ZW.jsxs)("div", {
+              key: uR,
+              item: ZR,
+              meta: iR
+            } = RR;
+            return (0, KR.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, ZW.jsx)(BE, {
-                item: "sold" === cW.type ? "Gold Coin" : cW.item,
-                amount: "sold" === cW.type ? 0 : cW.quantity,
-                tier: null !== (mW = null === (EW = PW.enchant) || void 0 === EW ? void 0 : EW.tier) && void 0 !== mW ? mW : null
-              }), (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)(zt, {
+                item: "sold" === iR.type ? "Gold Coin" : iR.item,
+                amount: "sold" === iR.type ? 0 : iR.quantity,
+                tier: null !== (yR = null === (tR = ZR.enchant) || void 0 === tR ? void 0 : tR.tier) && void 0 !== yR ? yR : null
+              }), (0, KR.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, ZW.jsx)("b", {
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: PW.customTitle
+                children: [(0, KR.jsx)("b", {
+                  children: (0, KR.jsx)(gt.c, {
+                    text: ZR.customTitle
                   })
-                }), (0, ZW.jsx)("small", {
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: PW.description
+                }), (0, KR.jsx)("small", {
+                  children: (0, KR.jsx)(gt.c, {
+                    text: ZR.description
                   })
                 })]
-              }), (0, ZW.jsx)(wW.n, {
-                loading: LW(NW, PW),
+              }), (0, KR.jsx)(fR.n, {
+                loading: qR(uR, ZR),
                 onClick: () => {
-                  OW.act(NW)
+                  GR.act(uR)
                 },
-                children: iW("smpShop:collect")
+                children: JR("smpShop:collect")
               })]
-            }, NW)
+            }, uR)
           }))
-        }) : (0, ZW.jsx)(GE, {
-          title: iW("smpShop:nothingToCollect"),
-          children: iW("smpShop:nothingToCollectHint")
-        }), (0, ZW.jsx)("h3", {
+        }) : (0, KR.jsx)(dt, {
+          title: JR("smpShop:nothingToCollect"),
+          children: JR("smpShop:nothingToCollectHint")
+        }), (0, KR.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: iW("smpShop:activeListings", {
-            count: NW.length
+          children: JR("smpShop:activeListings", {
+            count: uR.length
           })
-        }), NW.length > 0 ? (0, ZW.jsx)("div", {
+        }), uR.length > 0 ? (0, KR.jsx)("div", {
           className: "SmpList",
-          children: NW.map((WW => {
-            var mW, EW;
+          children: uR.map((RR => {
+            var yR, tR;
             let {
-              key: NW,
-              item: PW,
-              meta: cW
-            } = WW;
-            return (0, ZW.jsxs)("div", {
+              key: uR,
+              item: ZR,
+              meta: iR
+            } = RR;
+            return (0, KR.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, ZW.jsx)(BE, {
-                item: cW.item,
-                amount: cW.quantity,
-                tier: null !== (mW = null === (EW = PW.enchant) || void 0 === EW ? void 0 : EW.tier) && void 0 !== mW ? mW : null
-              }), (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)(zt, {
+                item: iR.item,
+                amount: iR.quantity,
+                tier: null !== (yR = null === (tR = ZR.enchant) || void 0 === tR ? void 0 : tR.tier) && void 0 !== yR ? yR : null
+              }), (0, KR.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, ZW.jsx)("b", {
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: PW.customTitle
+                children: [(0, KR.jsx)("b", {
+                  children: (0, KR.jsx)(gt.c, {
+                    text: ZR.customTitle
                   })
-                }), (0, ZW.jsx)("small", {
-                  children: iW("smpShop:timeLeft", {
-                    time: cN(cW.expiresAt)
+                }), (0, KR.jsx)("small", {
+                  children: JR("smpShop:timeLeft", {
+                    time: Zu(iR.expiresAt)
                   })
                 })]
-              }), (0, ZW.jsxs)("div", {
+              }), (0, KR.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, ZW.jsx)(qE, {
-                  amount: cW.pricePerItem
-                }), (0, ZW.jsx)("small", {
-                  children: iW("smpShop:each")
+                children: [(0, KR.jsx)(St, {
+                  amount: iR.pricePerItem
+                }), (0, KR.jsx)("small", {
+                  children: JR("smpShop:each")
                 })]
-              }), (0, ZW.jsx)(wW.O, {
-                loading: LW(NW, PW),
+              }), (0, KR.jsx)(fR.M, {
+                loading: qR(uR, ZR),
                 onClick: () => {
-                  OW.act(NW)
+                  GR.act(uR)
                 },
-                children: iW("smpShop:cancel")
+                children: JR("smpShop:cancel")
               })]
-            }, NW)
+            }, uR)
           }))
-        }) : (0, ZW.jsx)(GE, {
-          title: iW("smpShop:noActiveListings"),
-          children: iW("smpShop:noActiveListingsHint")
+        }) : (0, KR.jsx)(dt, {
+          title: JR("smpShop:noActiveListings"),
+          children: JR("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function fN(WW) {
+    function Pu(RR) {
       let {
-        done: iW,
-        of: OW
-      } = WW;
-      return (0, ZW.jsx)("span", {
+        done: JR,
+        of: GR
+      } = RR;
+      return (0, KR.jsx)("span", {
         className: "SmpProgress",
-        children: (0, ZW.jsx)("i", {
+        children: (0, KR.jsx)("i", {
           style: {
-            width: `${Math.min(100,iW/Math.max(1,OW)*100)}%`
+            width: `${Math.min(100,JR/Math.max(1,GR)*100)}%`
           }
         })
       })
     }
 
-    function CN(WW) {
-      var iW, OW, mW;
+    function Iu(RR) {
+      var JR, GR, yR;
       let {
-        entry: EW,
-        choice: NW,
-        onChoose: LW
-      } = WW;
+        entry: tR,
+        choice: uR,
+        onChoose: qR
+      } = RR;
       const {
-        t: cW
-      } = (0, PW.B)(), tW = jN(), {
-        key: xW,
-        item: lW,
-        meta: AW
-      } = EW, bW = "dropdown" === (null === (iW = lW.userInput) || void 0 === iW ? void 0 : iW.type) ? lW.userInput.dropdownOptions : [], jW = !0 === AW.processing, UW = null !== AW.creator && (AW.owned > 0 || jW), kW = UW && AW.owned > 0 ? wN(bW) : [], sW = null === NW ? 0 : null !== (OW = null === (mW = kW.find((WW => WW.label === NW))) || void 0 === mW ? void 0 : mW.quantity) && void 0 !== OW ? OW : 0;
-      return (0, ZW.jsxs)("div", {
+        t: iR
+      } = (0, ZR.A)(), VR = eu(), {
+        key: wR,
+        item: rR,
+        meta: eR
+      } = tR, aR = "dropdown" === (null === (JR = rR.userInput) || void 0 === JR ? void 0 : JR.type) ? rR.userInput.dropdownOptions : [], LR = !0 === eR.processing, nR = null !== eR.creator && (eR.owned > 0 || LR), UR = nR && eR.owned > 0 ? qu(aR) : [], WR = null === uR ? 0 : null !== (GR = null === (yR = UR.find((RR => RR.label === uR))) || void 0 === yR ? void 0 : yR.quantity) && void 0 !== GR ? GR : 0;
+      return (0, KR.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, ZW.jsx)(BE, {
-          item: AW.item
-        }), (0, ZW.jsxs)("div", {
+        children: [(0, KR.jsx)(zt, {
+          item: eR.item
+        }), (0, KR.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, ZW.jsx)("b", {
-            children: (0, ZW.jsx)(nE.d, {
-              text: lW.customTitle
+          children: [(0, KR.jsx)("b", {
+            children: (0, KR.jsx)(gt.c, {
+              text: rR.customTitle
             })
-          }), (0, ZW.jsxs)("small", {
-            children: [(0, ZW.jsx)(qE, {
-              amount: AW.pricePerItem
-            }), " ", cW("smpShop:each"), " \xb7", " ", null === AW.creator ? cW("smpShop:you") : (0, ZW.jsx)(nE.d, {
+          }), (0, KR.jsxs)("small", {
+            children: [(0, KR.jsx)(St, {
+              amount: eR.pricePerItem
+            }), " ", iR("smpShop:each"), " \xb7", " ", null === eR.creator ? iR("smpShop:you") : (0, KR.jsx)(gt.c, {
               text: [{
-                entityName: AW.creator
+                entityName: eR.creator
               }]
             })]
-          }), (0, ZW.jsx)(fN, {
-            done: AW.delivered,
-            of: AW.wanted
+          }), (0, KR.jsx)(Pu, {
+            done: eR.delivered,
+            of: eR.wanted
           })]
-        }), UW ? (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)(aE, {
-            options: kW.map((WW => {
+        }), nR ? (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)(Yt, {
+            options: UR.map((RR => {
               let {
-                label: iW,
-                quantity: OW,
-                isAll: mW
-              } = WW;
+                label: JR,
+                quantity: GR,
+                isAll: yR
+              } = RR;
               return {
-                value: iW,
-                label: mW ? cW("smpShop:max", {
-                  count: OW
-                }) : String(OW)
+                value: JR,
+                label: yR ? iR("smpShop:max", {
+                  count: GR
+                }) : String(GR)
               }
             })),
-            value: NW,
-            onChange: LW,
-            ariaLabel: cW("smpShop:quantity")
-          }), (0, ZW.jsxs)(wW.s, {
-            loading: tW.isPending(xW) || jW,
-            disabled: null === NW,
+            value: uR,
+            onChange: qR,
+            ariaLabel: iR("smpShop:quantity")
+          }), (0, KR.jsxs)(fR.r, {
+            loading: VR.isPending(wR) || LR,
+            disabled: null === uR,
             onClick: () => {
-              tW.act(xW, NW)
+              VR.act(wR, uR)
             },
-            children: [cW("smpShop:deliver"), " ", (0, ZW.jsx)(qE, {
-              amount: sW * AW.pricePerItem
+            children: [iR("smpShop:deliver"), " ", (0, KR.jsx)(St, {
+              amount: WR * eR.pricePerItem
             })]
           })]
-        }) : (0, ZW.jsx)("span", {
+        }) : (0, KR.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === AW.creator ? cW("smpShop:yourOrder") : cW("smpShop:youHave", {
+          children: null === eR.creator ? iR("smpShop:yourOrder") : iR("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function XN() {
-      var WW;
+    function mu() {
+      var RR;
       const {
-        t: iW
-      } = (0, PW.B)(), OW = jN(), EW = null === (WW = OW.shopInfo[OW.categoryKey]) || void 0 === WW ? void 0 : WW.items, NW = NN(EW, "search"), LW = NN(EW, "creator"), cW = EN(EW, "order"), tW = NN(EW, "empty"), xW = MN(NW, cW.length > 0 || null !== tW), [lW, AW] = (0, mW.useState)(!1), [bW, jW] = (0, mW.useState)({});
-      return (0, ZW.jsx)(yN, {
-        browser: xW,
-        recentLabel: iW("smpShop:recentOrders"),
-        action: (0, ZW.jsx)(wW.s, {
+        t: JR
+      } = (0, ZR.A)(), GR = eu(), tR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, uR = yu(tR, "search"), qR = yu(tR, "creator"), iR = Gu(tR, "order"), VR = yu(tR, "empty"), wR = Uu(uR, iR.length > 0 || null !== VR), [rR, eR] = (0, yR.useState)(!1), [aR, LR] = (0, yR.useState)({});
+      return (0, KR.jsx)(Xu, {
+        browser: wR,
+        recentLabel: JR("smpShop:recentOrders"),
+        action: (0, KR.jsx)(fR.r, {
           onClick: () => {
-            AW((WW => !WW))
+            eR((RR => !RR))
           },
-          children: iW("smpShop:createOrder")
+          children: JR("smpShop:createOrder")
         }),
-        above: lW && (0, ZW.jsx)(dN, {
+        above: rR && (0, KR.jsx)(Ou, {
           mode: "order",
-          creator: LW,
-          catalogue: xW.catalogue,
-          names: xW.names,
-          searching: xW.loading,
+          creator: qR,
+          catalogue: wR.catalogue,
+          names: wR.names,
+          searching: wR.loading,
           prices: [],
-          onPickItem: xW.searchFor,
+          onPickItem: wR.searchFor,
           onClose: () => {
-            AW(!1)
+            eR(!1)
           }
         }),
         onBack: () => {
-          AW(!1)
+          eR(!1)
         },
-        summary: cW.length > 0 && iW(1 === cW.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: cW.length,
-          price: fE(TN(cW, "max"))
+        summary: iR.length > 0 && JR(1 === iR.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: iR.length,
+          price: Pt(Mu(iR, "max"))
         }),
-        list: xW.loading ? (0, ZW.jsx)(RE, {}) : cW.length > 0 ? (0, ZW.jsx)(UN.e, {
+        list: wR.loading ? (0, KR.jsx)(jt, {}) : iR.length > 0 ? (0, KR.jsx)(au.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: PN,
-          observerUpdateDeps: [cW.length],
-          children: cW.map((WW => (0, ZW.jsx)(CN, {
-            entry: WW,
-            choice: lN(WW.item, bW[WW.key]),
-            onChoose: iW => {
-              jW({
-                ...bW,
-                [WW.key]: iW
+          rootMargin: tu,
+          observerUpdateDeps: [iR.length],
+          children: iR.map((RR => (0, KR.jsx)(Iu, {
+            entry: RR,
+            choice: Ku(RR.item, aR[RR.key]),
+            onChoose: JR => {
+              LR({
+                ...aR,
+                [RR.key]: JR
               })
             }
-          }, WW.key)))
-        }) : tW ? (0, ZW.jsx)(IE, {
-          entry: tW
-        }) : (0, ZW.jsx)(RE, {
+          }, RR.key)))
+        }) : VR ? (0, KR.jsx)(Et, {
+          entry: VR
+        }) : (0, KR.jsx)(jt, {
           count: 3
         })
       })
     }
 
-    function BN() {
-      var WW;
+    function zu() {
+      var RR;
       const {
-        t: iW
-      } = (0, PW.B)(), OW = jN(), mW = EN(null === (WW = OW.shopInfo[OW.categoryKey]) || void 0 === WW ? void 0 : WW.items, "myOrder");
-      return 0 === mW.length ? (0, ZW.jsx)("div", {
+        t: JR
+      } = (0, ZR.A)(), GR = eu(), yR = Gu(null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, "myOrder");
+      return 0 === yR.length ? (0, KR.jsx)("div", {
         className: "SmpScreen",
-        children: (0, ZW.jsx)(GE, {
-          title: iW("smpShop:noOrders"),
-          children: iW("smpShop:noOrdersHint")
+        children: (0, KR.jsx)(dt, {
+          title: JR("smpShop:noOrders"),
+          children: JR("smpShop:noOrdersHint")
         })
-      }) : (0, ZW.jsx)("div", {
+      }) : (0, KR.jsx)("div", {
         className: "SmpScreen",
-        children: (0, ZW.jsx)("div", {
+        children: (0, KR.jsx)("div", {
           className: "SmpList",
-          children: mW.map((WW => {
+          children: yR.map((RR => {
             let {
-              key: mW,
-              item: EW,
-              meta: NW
-            } = WW;
-            const PW = OW.isPending(mW) || !1 === EW.canBuy;
-            return (0, ZW.jsxs)("div", {
+              key: yR,
+              item: tR,
+              meta: uR
+            } = RR;
+            const ZR = GR.isPending(yR) || !1 === tR.canBuy;
+            return (0, KR.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, ZW.jsx)(BE, {
-                item: NW.item,
-                amount: NW.collectable
-              }), (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)(zt, {
+                item: uR.item,
+                amount: uR.collectable
+              }), (0, KR.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, ZW.jsx)("b", {
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: EW.customTitle
+                children: [(0, KR.jsx)("b", {
+                  children: (0, KR.jsx)(gt.c, {
+                    text: tR.customTitle
                   })
-                }), (0, ZW.jsxs)("small", {
-                  children: [(0, ZW.jsx)(qE, {
-                    amount: NW.pricePerItem
-                  }), " ", iW("smpShop:each"), NW.collectable > 0 && ` \xb7 ${iW("smpShop:readyCount",{count:NW.collectable})}`]
-                }), (0, ZW.jsx)(fN, {
-                  done: NW.delivered,
-                  of: NW.wanted
+                }), (0, KR.jsxs)("small", {
+                  children: [(0, KR.jsx)(St, {
+                    amount: uR.pricePerItem
+                  }), " ", JR("smpShop:each"), uR.collectable > 0 && ` \xb7 ${JR("smpShop:readyCount",{count:uR.collectable})}`]
+                }), (0, KR.jsx)(Pu, {
+                  done: uR.delivered,
+                  of: uR.wanted
                 })]
-              }), NW.collectable > 0 ? (0, ZW.jsx)(wW.n, {
-                loading: PW,
+              }), uR.collectable > 0 ? (0, KR.jsx)(fR.n, {
+                loading: ZR,
                 onClick: () => {
-                  OW.act(mW)
+                  GR.act(yR)
                 },
-                children: iW("smpShop:collectCount", {
-                  count: NW.collectable
+                children: JR("smpShop:collectCount", {
+                  count: uR.collectable
                 })
-              }) : (0, ZW.jsx)(wW.O, {
-                loading: PW,
+              }) : (0, KR.jsx)(fR.M, {
+                loading: ZR,
                 onClick: () => {
-                  OW.act(mW)
+                  GR.act(yR)
                 },
-                children: iW("smpShop:cancel")
+                children: JR("smpShop:cancel")
               })]
-            }, mW)
+            }, yR)
           }))
         })
       })
     }
-    const qN = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      RN = {
+    const Su = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      ju = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4829,293 +4829,293 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function GN(WW, iW) {
-      let OW = !1;
-      const mW = {};
-      for (const EW in WW) iW(EW, WW[EW]) ? mW[EW] = WW[EW] : OW = !0;
-      return OW ? mW : WW
+    function du(RR, JR) {
+      let GR = !1;
+      const yR = {};
+      for (const tR in RR) JR(tR, RR[tR]) ? yR[tR] = RR[tR] : GR = !0;
+      return GR ? yR : RR
     }
 
-    function IN(WW) {
-      var iW, OW, EW, cW;
+    function Eu(RR) {
+      var JR, GR, tR, iR;
       const {
-        show: wW,
-        shopInfo: tW,
-        selectedCategoryKey: xW
-      } = WW, {
-        t: lW
-      } = (0, PW.B)(), AW = null !== xW && void 0 !== xW ? xW : "", bW = mN(tW, AW), jW = null === (iW = tW[AW]) || void 0 === iW ? void 0 : iW.items, UW = null !== bW, [kW, sW] = (0, mW.useState)({}), [MW, KW] = (0, mW.useState)([]), [SW, YW] = (0, mW.useState)(!1), [yW, TW] = (0, mW.useState)(null), [, JW] = (0, mW.useState)(0), hW = (0, mW.useRef)(0), HW = (0, mW.useRef)({}), nW = (0, mW.useRef)({
-        items: jW,
-        pending: kW,
-        shopInfo: tW,
-        active: UW,
-        show: wW,
-        canAfford: WW.canAfford,
-        buy: WW.buy
+        show: fR,
+        shopInfo: VR,
+        selectedCategoryKey: wR
+      } = RR, {
+        t: rR
+      } = (0, ZR.A)(), eR = null !== wR && void 0 !== wR ? wR : "", aR = Ju(VR, eR), LR = null === (JR = VR[eR]) || void 0 === JR ? void 0 : JR.items, nR = null !== aR, [UR, WR] = (0, yR.useState)({}), [AR, CR] = (0, yR.useState)([]), [XR, MR] = (0, yR.useState)(!1), [BR, lR] = (0, yR.useState)(null), [, pR] = (0, yR.useState)(0), gR = (0, yR.useRef)(0), bR = (0, yR.useRef)({}), vR = (0, yR.useRef)({
+        items: LR,
+        pending: UR,
+        shopInfo: VR,
+        active: nR,
+        show: fR,
+        canAfford: RR.canAfford,
+        buy: RR.buy
       });
-      nW.current = {
-        items: jW,
-        pending: kW,
-        shopInfo: tW,
-        active: UW,
-        show: wW,
-        canAfford: WW.canAfford,
-        buy: WW.buy
+      vR.current = {
+        items: LR,
+        pending: UR,
+        shopInfo: VR,
+        active: nR,
+        show: fR,
+        canAfford: RR.canAfford,
+        buy: RR.buy
       };
-      const uW = (0, mW.useCallback)((WW => {
-        hW.current++;
-        const iW = hW.current;
-        KW((OW => [{
-          id: iW,
-          text: WW
-        }, ...OW].slice(0, 8))), TW(iW)
+      const OR = (0, yR.useCallback)((RR => {
+        gR.current++;
+        const JR = gR.current;
+        CR((GR => [{
+          id: JR,
+          text: RR
+        }, ...GR].slice(0, 8))), lR(JR)
       }), []);
-      (0, mW.useEffect)((() => {
-        if (null === yW) return;
-        const WW = setTimeout((() => {
-          TW(null)
+      (0, yR.useEffect)((() => {
+        if (null === BR) return;
+        const RR = setTimeout((() => {
+          lR(null)
         }), 3e3);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [yW]), (0, mW.useEffect)((() => {
-        const iW = WW.message;
-        if (!iW) return;
+      }), [BR]), (0, yR.useEffect)((() => {
+        const JR = RR.message;
+        if (!JR) return;
         const {
-          shopInfo: OW,
-          active: mW,
-          items: EW
-        } = nW.current, NW = null !== iW.categoryKey ? null !== mN(OW, iW.categoryKey) : mW;
-        (NW || mW) && uW(iW.text), NW && sW((WW => GN(WW, (WW => {
-          var iW, OW;
-          return !qN.has(null === EW || void 0 === EW || null === (iW = EW[WW]) || void 0 === iW || null === (OW = iW.smp) || void 0 === OW ? void 0 : OW.kind)
+          shopInfo: GR,
+          active: yR,
+          items: tR
+        } = vR.current, uR = null !== JR.categoryKey ? null !== Ju(GR, JR.categoryKey) : yR;
+        (uR || yR) && OR(JR.text), uR && WR((RR => du(RR, (RR => {
+          var JR, GR;
+          return !Su.has(null === tR || void 0 === tR || null === (JR = tR[RR]) || void 0 === JR || null === (GR = JR.smp) || void 0 === GR ? void 0 : GR.kind)
         }))))
-      }), [WW.message, uW]), (0, mW.useEffect)((() => {
-        sW((WW => GN(WW, ((WW, iW) => AN(null === jW || void 0 === jW ? void 0 : jW[WW]) === iW.snapshot))))
-      }), [tW, jW]);
-      const oW = Object.keys(kW).length > 0;
-      (0, mW.useEffect)((() => {
-        if (!oW) return;
-        const WW = setInterval((() => {
+      }), [RR.message, OR]), (0, yR.useEffect)((() => {
+        WR((RR => du(RR, ((RR, JR) => wu(null === LR || void 0 === LR ? void 0 : LR[RR]) === JR.snapshot))))
+      }), [VR, LR]);
+      const xR = Object.keys(UR).length > 0;
+      (0, yR.useEffect)((() => {
+        if (!xR) return;
+        const RR = setInterval((() => {
           const {
-            pending: WW,
-            items: iW,
-            show: OW
-          } = nW.current;
-          if (!OW) return;
-          JW((WW => WW + 1));
-          const mW = Date.now(),
-            EW = Object.keys(WW).filter((OW => mW - WW[OW].at >= 12e3 && AN(null === iW || void 0 === iW ? void 0 : iW[OW]) === WW[OW].snapshot));
-          if (0 === EW.length) return;
-          const NW = EW.some((OW => {
-            var mW, EW;
-            return "search" !== (null === iW || void 0 === iW || null === (mW = iW[OW]) || void 0 === mW || null === (EW = mW.smp) || void 0 === EW ? void 0 : EW.kind) || WW[OW].resend
+            pending: RR,
+            items: JR,
+            show: GR
+          } = vR.current;
+          if (!GR) return;
+          pR((RR => RR + 1));
+          const yR = Date.now(),
+            tR = Object.keys(RR).filter((GR => yR - RR[GR].at >= 12e3 && wu(null === JR || void 0 === JR ? void 0 : JR[GR]) === RR[GR].snapshot));
+          if (0 === tR.length) return;
+          const uR = tR.some((GR => {
+            var yR, tR;
+            return "search" !== (null === JR || void 0 === JR || null === (yR = JR[GR]) || void 0 === yR || null === (tR = yR.smp) || void 0 === tR ? void 0 : tR.kind) || RR[GR].resend
           }));
-          for (const PW of EW) HW.current[PW] = mW;
-          sW((WW => GN(WW, (WW => !EW.includes(WW))))), NW && uW(lW("smpShop:noAnswer"))
+          for (const ZR of tR) bR.current[ZR] = yR;
+          WR((RR => du(RR, (RR => !tR.includes(RR))))), uR && OR(rR("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(WW)
+          clearInterval(RR)
         }
-      }), [oW]), (0, mW.useEffect)((() => {
-        sW({})
-      }), [AW]), (0, mW.useEffect)((() => {
-        wW || YW(!1)
-      }), [wW]);
-      const dW = (0, mW.useCallback)((function(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [xR]), (0, yR.useEffect)((() => {
+        WR({})
+      }), [eR]), (0, yR.useEffect)((() => {
+        fR || MR(!1)
+      }), [fR]);
+      const NR = (0, yR.useCallback)((function(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: mW,
-            pending: EW,
-            canAfford: NW,
-            buy: PW
-          } = nW.current, LW = null === mW || void 0 === mW ? void 0 : mW[WW];
-          if (!LW || WW in EW || !1 === LW.canBuy) return !1;
-          if (!NW(LW, (0, TE.b)(LW, iW))) return !1;
-          PW(WW, LW, iW);
-          const cW = {
-            snapshot: AN(LW),
+            items: yR,
+            pending: tR,
+            canAfford: uR,
+            buy: ZR
+          } = vR.current, qR = null === yR || void 0 === yR ? void 0 : yR[RR];
+          if (!qR || RR in tR || !1 === qR.canBuy) return !1;
+          if (!uR(qR, (0, Mt.e)(qR, JR))) return !1;
+          ZR(RR, qR, JR);
+          const iR = {
+            snapshot: wu(qR),
             at: Date.now(),
-            resend: OW
+            resend: GR
           };
-          return nW.current.pending = {
-            ...nW.current.pending,
-            [WW]: cW
-          }, sW((iW => ({
-            ...iW,
-            [WW]: cW
+          return vR.current.pending = {
+            ...vR.current.pending,
+            [RR]: iR
+          }, WR((JR => ({
+            ...JR,
+            [RR]: iR
           }))), !0
         }), []),
-        eW = (0, mW.useMemo)((() => ({
-          shopInfo: tW,
-          categoryKey: AW,
-          canAfford: WW.canAfford,
-          isPending: WW => WW in kW,
-          gaveUpAt: WW => {
-            var iW;
-            return null !== (iW = HW.current[WW]) && void 0 !== iW ? iW : 0
+        DR = (0, yR.useMemo)((() => ({
+          shopInfo: VR,
+          categoryKey: eR,
+          canAfford: RR.canAfford,
+          isPending: RR => RR in UR,
+          gaveUpAt: RR => {
+            var JR;
+            return null !== (JR = bR.current[RR]) && void 0 !== JR ? JR : 0
           },
-          act: dW,
-          notify: uW
-        })), [tW, AW, WW.canAfford, kW, dW, uW]),
-        vW = Math.min(...Object.values(kW).map((WW => WW.at))),
-        gW = oW && Date.now() - vW > 1500,
-        DW = MW.length > 1,
-        VW = null !== (OW = null === (EW = tW[AW]) || void 0 === EW ? void 0 : EW.customTitle) && void 0 !== OW ? OW : AW,
-        pW = null === (cW = tW[AW]) || void 0 === cW ? void 0 : cW.description;
-      let fW = null;
-      return "market" === bW ? fW = (0, ZW.jsx)(eN, {}) : "sell" === bW ? fW = (0, ZW.jsx)(DN, {}) : "collect" === bW ? fW = (0, ZW.jsx)(pN, {}) : "orders" === bW ? fW = (0, ZW.jsx)(XN, {}) : "myOrders" === bW && (fW = (0, ZW.jsx)(BN, {})), (0, ZW.jsx)(bN.Provider, {
-        value: eW,
-        children: (0, ZW.jsx)("div", {
+          act: NR,
+          notify: OR
+        })), [VR, eR, RR.canAfford, UR, NR, OR]),
+        HR = Math.min(...Object.values(UR).map((RR => RR.at))),
+        oR = xR && Date.now() - HR > 1500,
+        cR = AR.length > 1,
+        PR = null !== (GR = null === (tR = VR[eR]) || void 0 === tR ? void 0 : tR.customTitle) && void 0 !== GR ? GR : eR,
+        IR = null === (iR = VR[eR]) || void 0 === iR ? void 0 : iR.description;
+      let mR = null;
+      return "market" === aR ? mR = (0, KR.jsx)(xu, {}) : "sell" === aR ? mR = (0, KR.jsx)(Hu, {}) : "collect" === aR ? mR = (0, KR.jsx)(cu, {}) : "orders" === aR ? mR = (0, KR.jsx)(mu, {}) : "myOrders" === aR && (mR = (0, KR.jsx)(zu, {})), (0, KR.jsx)(ru.Provider, {
+        value: DR,
+        children: (0, KR.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !UW,
-          children: (0, ZW.jsxs)("div", {
+          hidden: !nR,
+          children: (0, KR.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, ZW.jsx)("header", {
+            children: [(0, KR.jsx)("header", {
               className: "SmpHeader",
-              children: (0, ZW.jsxs)("div", {
+              children: (0, KR.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, ZW.jsxs)("h2", {
-                  children: [bW && (0, ZW.jsx)(LW.c, {
-                    name: RN[bW]
-                  }), lW(VW)]
-                }), pW && (0, ZW.jsx)("p", {
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: pW
+                children: [(0, KR.jsxs)("h2", {
+                  children: [aR && (0, KR.jsx)(qR.d, {
+                    name: ju[aR]
+                  }), rR(PR)]
+                }), IR && (0, KR.jsx)("p", {
+                  children: (0, KR.jsx)(gt.c, {
+                    text: IR
                   })
                 })]
               })
-            }), (0, ZW.jsx)("main", {
+            }), (0, KR.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: wW && fW
-            }), (0, ZW.jsxs)("button", {
+              children: fR && mR
+            }), (0, KR.jsxs)("button", {
               type: "button",
-              className: NW()("SmpStatus", {
-                SmpStatusWaiting: oW,
-                SmpStatusFresh: !oW && null !== yW,
-                SmpStatusHasHistory: DW
+              className: uR()("SmpStatus", {
+                SmpStatusWaiting: xR,
+                SmpStatusFresh: !xR && null !== BR,
+                SmpStatusHasHistory: cR
               }),
               "aria-live": "polite",
-              "aria-expanded": DW ? SW : void 0,
+              "aria-expanded": cR ? XR : void 0,
               onClick: () => {
-                DW && YW((WW => !WW))
+                cR && MR((RR => !RR))
               },
-              children: [oW ? (0, ZW.jsxs)("span", {
+              children: [xR ? (0, KR.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, ZW.jsx)(rE, {}), lW(gW ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : MW[0] ? (0, ZW.jsx)("span", {
+                children: [(0, KR.jsx)(kt, {}), rR(oR ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : AR[0] ? (0, KR.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, ZW.jsx)(nE.d, {
-                  text: MW[0].text
+                children: (0, KR.jsx)(gt.c, {
+                  text: AR[0].text
                 })
-              }, MW[0].id) : (0, ZW.jsx)("span", {
+              }, AR[0].id) : (0, KR.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: lW("smpShop:ready")
-              }), DW && (0, ZW.jsx)("small", {
-                children: lW("smpShop:recentMessages", {
-                  count: MW.length
+                children: rR("smpShop:ready")
+              }), cR && (0, KR.jsx)("small", {
+                children: rR("smpShop:recentMessages", {
+                  count: AR.length
                 })
               })]
-            }), SW && DW && (0, ZW.jsx)("div", {
+            }), XR && cR && (0, KR.jsx)("div", {
               className: "SmpStatusHistory",
-              children: MW.map((WW => (0, ZW.jsx)("div", {
-                children: (0, ZW.jsx)(nE.d, {
-                  text: WW.text
+              children: AR.map((RR => (0, KR.jsx)("div", {
+                children: (0, KR.jsx)(gt.c, {
+                  text: RR.text
                 })
-              }, WW.id)))
+              }, RR.id)))
             })]
           })
         })
       })
     }
-    var aN = OW(2061),
-      rN = OW(35236);
-    const zN = "\x1floadout";
+    var Yu = GR(2163),
+      ku = GR(35166);
+    const Qu = "\x1floadout";
 
-    function FN(WW) {
-      const iW = [];
-      for (const OW in WW) {
-        const mW = WW[OW].loadout;
-        mW && iW.push({
-          categoryKey: OW,
-          config: mW
+    function Fu(RR) {
+      const JR = [];
+      for (const GR in RR) {
+        const yR = RR[GR].loadout;
+        yR && JR.push({
+          categoryKey: GR,
+          config: yR
         })
       }
-      return iW.sort(((WW, iW) => QN(WW.config) - QN(iW.config)))
+      return JR.sort(((RR, JR) => Tu(RR.config) - Tu(JR.config)))
     }
 
-    function QN(WW) {
-      return "gun" === WW.slot ? 0 : WW.tier
+    function Tu(RR) {
+      return "gun" === RR.slot ? 0 : RR.tier
     }
 
-    function WP(WW) {
-      const iW = [];
-      for (const OW of VE(WW)) WW[OW].loadout ? iW.includes(zN) || iW.push(zN) : iW.push(OW);
-      return iW
+    function su(RR) {
+      const JR = [];
+      for (const GR of ot(RR)) RR[GR].loadout ? JR.includes(Qu) || JR.push(Qu) : JR.push(GR);
+      return JR
     }
 
-    function iP(WW, iW) {
-      const OW = [];
-      for (const mW in WW) {
-        const EW = WW[mW].loadout;
-        (null === EW || void 0 === EW ? void 0 : EW.kind) === iW && OW.push({
-          key: mW,
-          item: WW[mW],
-          meta: EW
+    function hu(RR, JR) {
+      const GR = [];
+      for (const yR in RR) {
+        const tR = RR[yR].loadout;
+        (null === tR || void 0 === tR ? void 0 : tR.kind) === JR && GR.push({
+          key: yR,
+          item: RR[yR],
+          meta: tR
         })
       }
-      return OW.sort(((WW, iW) => {
-        const OW = mP(WW.meta) - mP(iW.meta);
-        return 0 !== OW ? OW : WW.meta.free !== iW.meta.free ? WW.meta.free ? -1 : 1 : WW.key.localeCompare(iW.key)
+      return GR.sort(((RR, JR) => {
+        const GR = JZ(RR.meta) - JZ(JR.meta);
+        return 0 !== GR ? GR : RR.meta.free !== JR.meta.free ? RR.meta.free ? -1 : 1 : RR.key.localeCompare(JR.key)
       }))
     }
-    const OP = ["assaultRifle", "battleRifle", "smg", "shotgun", "marksman", "sniper", "machineGun", "pistol", "machinePistol"];
+    const RZ = ["assaultRifle", "battleRifle", "smg", "shotgun", "marksman", "sniper", "machineGun", "pistol", "machinePistol"];
 
-    function mP(WW) {
-      return "gun" === WW.kind ? OP.indexOf(WW.gunClass) : 0
+    function JZ(RR) {
+      return "gun" === RR.kind ? RZ.indexOf(RR.gunClass) : 0
     }
-    const EP = ["damage", "fireRate", "accuracy"];
+    const GZ = ["damage", "fireRate", "accuracy"];
 
-    function NP(WW, iW) {
-      var OW, mW, EW;
-      const NW = rN.c[WW];
-      if (!NW) return null;
-      const PW = {
-        ...NW,
-        ...iW
+    function yZ(RR, JR) {
+      var GR, yR, tR;
+      const uR = ku.e[RR];
+      if (!uR) return null;
+      const ZR = {
+        ...uR,
+        ...JR
       };
       return {
-        damage: PW.damage * (null !== (OW = PW.shotPelletCount) && void 0 !== OW ? OW : 1),
-        fireRate: PP(PW.fireRate, null !== (mW = PW.burstCount) && void 0 !== mW ? mW : 1, null !== (EW = PW.burstDelay) && void 0 !== EW ? EW : 0),
-        accuracy: -(PW.altInaccuracyStanding + PW.altInaccuracyFromShot),
-        clipSize: PW.clipSize
+        damage: ZR.damage * (null !== (GR = ZR.shotPelletCount) && void 0 !== GR ? GR : 1),
+        fireRate: tZ(ZR.fireRate, null !== (yR = ZR.burstCount) && void 0 !== yR ? yR : 1, null !== (tR = ZR.burstDelay) && void 0 !== tR ? tR : 0),
+        accuracy: -(ZR.altInaccuracyStanding + ZR.altInaccuracyFromShot),
+        clipSize: ZR.clipSize
       }
     }
 
-    function PP(WW, iW, OW) {
-      return 6e4 * iW / (6e4 / WW + (iW - 1) * OW)
+    function tZ(RR, JR, GR) {
+      return 6e4 * JR / (6e4 / RR + (JR - 1) * GR)
     }
 
-    function LP(WW, iW, OW, mW) {
-      if ("accuracy" !== WW) return OW <= 0 ? 1 : iW / OW;
-      const EW = Math.sqrt(-mW) - Math.sqrt(-OW);
-      return EW <= 0 ? 1 : 1 - (Math.sqrt(-iW) - Math.sqrt(-OW)) / EW * .94
+    function uZ(RR, JR, GR, yR) {
+      if ("accuracy" !== RR) return GR <= 0 ? 1 : JR / GR;
+      const tR = Math.sqrt(-yR) - Math.sqrt(-GR);
+      return tR <= 0 ? 1 : 1 - (Math.sqrt(-JR) - Math.sqrt(-GR)) / tR * .94
     }
 
-    function cP(WW) {
+    function ZZ(RR) {
       let {
-        iconName: iW
-      } = WW;
-      return kW.gameBridge.lookup("isItemName", iW) ? (0, ZW.jsx)(HE.b, {
-        itemName: iW,
+        iconName: JR
+      } = RR;
+      return UR.gameBridge.lookup("isItemName", JR) ? (0, KR.jsx)(pt.b, {
+        itemName: JR,
         amount: 1
-      }) : (0, ZW.jsx)(LW.c, {
-        name: iW,
+      }) : (0, KR.jsx)(qR.d, {
+        name: JR,
         className: "2x"
       })
     }
-    const wP = {
+    const qZ = {
       assaultRifle: "loadoutShop:classAssaultRifle",
       battleRifle: "loadoutShop:classBattleRifle",
       smg: "loadoutShop:classSmg",
@@ -5127,251 +5127,251 @@ export const modules = {
       machinePistol: "loadoutShop:classMachinePistol"
     };
 
-    function tP(WW) {
+    function iZ(RR) {
       let {
-        entry: iW,
-        stats: OW,
-        bars: mW,
-        compared: EW,
-        buy: cW,
-        canAfford: wW,
-        currency: tW
-      } = WW;
+        entry: JR,
+        stats: GR,
+        bars: yR,
+        compared: tR,
+        buy: iR,
+        canAfford: fR,
+        currency: VR
+      } = RR;
       const {
-        t: xW
-      } = (0, PW.B)(), {
-        meta: lW
-      } = iW;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("LoadoutCard", "LoadoutGunCard", {
-          LoadoutCardEquipped: lW.equipped,
-          LoadoutCardLocked: !lW.unlocked
+        t: wR
+      } = (0, ZR.A)(), {
+        meta: rR
+      } = JR;
+      return (0, KR.jsxs)("div", {
+        className: uR()("LoadoutCard", "LoadoutGunCard", {
+          LoadoutCardEquipped: rR.equipped,
+          LoadoutCardLocked: !rR.unlocked
         }),
-        children: [!lW.unlocked && (0, ZW.jsx)(LW.c, {
+        children: [!rR.unlocked && (0, KR.jsx)(qR.d, {
           name: "lock",
           className: "LoadoutCardLock"
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "LoadoutGunArt",
-          children: (0, ZW.jsx)(HE.b, {
-            itemName: lW.gun,
+          children: (0, KR.jsx)(pt.b, {
+            itemName: rR.gun,
             amount: 0,
             gunTransform: "none"
           })
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "LoadoutCardTitle",
-          children: [(0, ZW.jsx)("b", {
-            children: iW.key
-          }), (0, ZW.jsxs)("small", {
-            children: [xW(wP[lW.gunClass]), OW && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [" \xb7 ", xW("loadoutShop:rounds", {
-                count: OW.clipSize
+          children: [(0, KR.jsx)("b", {
+            children: JR.key
+          }), (0, KR.jsxs)("small", {
+            children: [wR(qZ[rR.gunClass]), GR && (0, KR.jsxs)(KR.Fragment, {
+              children: [" \xb7 ", wR("loadoutShop:rounds", {
+                count: GR.clipSize
               })]
             })]
           })]
-        }), OW && mW && (0, ZW.jsx)("div", {
+        }), GR && yR && (0, KR.jsx)("div", {
           className: "LoadoutStats",
-          children: EP.map((WW => {
-            const iW = EW ? function(WW, iW) {
-              const OW = Math.max(Math.abs(WW), Math.abs(iW), 1);
-              return Math.abs(WW - iW) / OW < .05 ? null : WW > iW ? "better" : "worse"
-            }(OW[WW], EW[WW]) : null;
-            return (0, ZW.jsxs)("div", {
+          children: GZ.map((RR => {
+            const JR = tR ? function(RR, JR) {
+              const GR = Math.max(Math.abs(RR), Math.abs(JR), 1);
+              return Math.abs(RR - JR) / GR < .05 ? null : RR > JR ? "better" : "worse"
+            }(GR[RR], tR[RR]) : null;
+            return (0, KR.jsxs)("div", {
               className: "LoadoutStat",
-              children: [(0, ZW.jsx)("span", {
-                children: xW(`loadoutShop:${WW}`)
-              }), (0, ZW.jsx)("div", {
+              children: [(0, KR.jsx)("span", {
+                children: wR(`loadoutShop:${RR}`)
+              }), (0, KR.jsx)("div", {
                 className: "LoadoutBar",
-                children: (0, ZW.jsx)("i", {
-                  className: NW()({
-                    LoadoutBarBetter: "better" === iW,
-                    LoadoutBarWorse: "worse" === iW
+                children: (0, KR.jsx)("i", {
+                  className: uR()({
+                    LoadoutBarBetter: "better" === JR,
+                    LoadoutBarWorse: "worse" === JR
                   }),
                   style: {
-                    width: 100 * mW[WW] + "%"
+                    width: 100 * yR[RR] + "%"
                   }
                 })
               })]
-            }, WW)
+            }, RR)
           }))
-        }), (0, ZW.jsx)(xP, {
-          entry: iW,
-          buy: cW,
-          canAfford: wW,
-          currency: tW
+        }), (0, KR.jsx)(VZ, {
+          entry: JR,
+          buy: iR,
+          canAfford: fR,
+          currency: VR
         })]
       })
     }
 
-    function ZP(WW) {
+    function fZ(RR) {
       let {
-        entry: iW,
-        buy: OW,
-        canAfford: mW,
-        currency: EW
-      } = WW;
+        entry: JR,
+        buy: GR,
+        canAfford: yR,
+        currency: tR
+      } = RR;
       const {
-        meta: PW
-      } = iW;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("LoadoutCard", "LoadoutPerkCard", {
-          LoadoutCardEquipped: PW.equipped,
-          LoadoutCardLocked: !PW.unlocked
+        meta: ZR
+      } = JR;
+      return (0, KR.jsxs)("div", {
+        className: uR()("LoadoutCard", "LoadoutPerkCard", {
+          LoadoutCardEquipped: ZR.equipped,
+          LoadoutCardLocked: !ZR.unlocked
         }),
-        children: [!PW.unlocked && (0, ZW.jsx)(LW.c, {
+        children: [!ZR.unlocked && (0, KR.jsx)(qR.d, {
           name: "lock",
           className: "LoadoutCardLock"
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "LoadoutPerkIcon",
-          children: (0, ZW.jsx)(LW.c, {
-            name: PW.icon
+          children: (0, KR.jsx)(qR.d, {
+            name: ZR.icon
           })
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "LoadoutCardTitle",
-          children: [(0, ZW.jsx)("b", {
-            children: iW.key
-          }), (0, ZW.jsx)("small", {
-            children: PW.description
+          children: [(0, KR.jsx)("b", {
+            children: JR.key
+          }), (0, KR.jsx)("small", {
+            children: ZR.description
           })]
-        }), (0, ZW.jsx)(xP, {
-          entry: iW,
-          buy: OW,
-          canAfford: mW,
-          currency: EW
+        }), (0, KR.jsx)(VZ, {
+          entry: JR,
+          buy: GR,
+          canAfford: yR,
+          currency: tR
         })]
       })
     }
 
-    function xP(WW) {
+    function VZ(RR) {
       let {
-        entry: iW,
-        buy: OW,
-        canAfford: mW,
-        currency: EW
-      } = WW;
+        entry: JR,
+        buy: GR,
+        canAfford: yR,
+        currency: tR
+      } = RR;
       const {
-        t: cW
-      } = (0, PW.B)(), {
-        meta: tW,
-        item: xW
-      } = iW, lW = () => {
-        OW(iW.key, xW)
+        t: iR
+      } = (0, ZR.A)(), {
+        meta: VR,
+        item: wR
+      } = JR, rR = () => {
+        GR(JR.key, wR)
       };
-      return (0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
         className: "LoadoutCardFoot",
-        children: [tW.equipped && (0, ZW.jsxs)("span", {
+        children: [VR.equipped && (0, KR.jsxs)("span", {
           className: "LoadoutCardState LoadoutCardStateEquipped",
-          children: [(0, ZW.jsx)(LW.c, {
+          children: [(0, KR.jsx)(qR.d, {
             name: "check"
-          }), cW("loadoutShop:equipped")]
-        }), tW.unlocked && !tW.equipped && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)("span", {
+          }), iR("loadoutShop:equipped")]
+        }), VR.unlocked && !VR.equipped && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)("span", {
             className: "LoadoutCardState",
-            children: tW.free ? cW("loadoutShop:free") : cW("loadoutShop:owned")
-          }), (0, ZW.jsx)(wW.f, {
+            children: VR.free ? iR("loadoutShop:free") : iR("loadoutShop:owned")
+          }), (0, KR.jsx)(fR.g, {
             className: "LoadoutCardButton",
-            disabled: !mW,
-            onClick: lW,
-            children: cW("loadoutShop:equip")
+            disabled: !yR,
+            onClick: rR,
+            children: iR("loadoutShop:equip")
           })]
-        }), !tW.unlocked && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsxs)("span", {
-            className: NW()("LoadoutPrice", {
-              LoadoutPriceShort: !mW
+        }), !VR.unlocked && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsxs)("span", {
+            className: uR()("LoadoutPrice", {
+              LoadoutPriceShort: !yR
             }),
-            children: [EW && (0, ZW.jsx)("span", {
+            children: [tR && (0, KR.jsx)("span", {
               className: "LoadoutPriceIcon",
               style: {
-                color: EW.iconColour
+                color: tR.iconColour
               },
-              children: (0, ZW.jsx)(cP, {
-                iconName: EW.icon
+              children: (0, KR.jsx)(ZZ, {
+                iconName: tR.icon
               })
-            }), xW.cost]
-          }), (0, ZW.jsx)(wW.n, {
+            }), wR.cost]
+          }), (0, KR.jsx)(fR.n, {
             className: "LoadoutCardButton",
-            disabled: !mW,
-            onClick: lW,
-            children: cW("loadoutShop:unlock")
+            disabled: !yR,
+            onClick: rR,
+            children: iR("loadoutShop:unlock")
           })]
         })]
       })
     }
 
-    function lP(WW) {
+    function KZ(RR) {
       let {
-        shopInfo: iW,
-        selectedCategoryKey: OW,
-        selectCategory: EW,
-        buy: NW,
-        canAfford: LW,
-        currencyAmounts: cW
-      } = WW;
+        shopInfo: JR,
+        selectedCategoryKey: GR,
+        selectCategory: tR,
+        buy: uR,
+        canAfford: qR,
+        currencyAmounts: iR
+      } = RR;
       const {
-        t: wW
-      } = (0, PW.B)(), tW = FN(iW), {
-        loadout: xW,
-        items: lW
-      } = iW[OW], AW = WW => LW(WW, (0, TE.b)(WW, null)), bW = {
-        buy: (WW, iW) => {
-          AW(iW) && NW(WW, iW)
+        t: fR
+      } = (0, ZR.A)(), VR = Fu(JR), {
+        loadout: wR,
+        items: rR
+      } = JR[GR], eR = RR => qR(RR, (0, Mt.e)(RR, null)), aR = {
+        buy: (RR, JR) => {
+          eR(JR) && uR(RR, JR)
         },
-        affordable: AW,
-        currencyAmounts: cW
+        affordable: eR,
+        currencyAmounts: iR
       };
-      return (0, ZW.jsx)("div", {
+      return (0, KR.jsx)("div", {
         className: "LoadoutShopHost",
-        children: (0, ZW.jsxs)("div", {
+        children: (0, KR.jsxs)("div", {
           className: "LoadoutShop",
-          children: [(0, ZW.jsxs)("header", {
+          children: [(0, KR.jsxs)("header", {
             className: "LoadoutHeader",
-            children: [(0, ZW.jsx)("h2", {
-              children: wW("loadoutShop:title")
-            }), (0, ZW.jsx)("p", {
-              children: wW("loadoutShop:subtitle")
+            children: [(0, KR.jsx)("h2", {
+              children: fR("loadoutShop:title")
+            }), (0, KR.jsx)("p", {
+              children: fR("loadoutShop:subtitle")
             })]
-          }), (0, ZW.jsx)("nav", {
+          }), (0, KR.jsx)("nav", {
             className: "LoadoutSlots",
             "data-pad-tabs": "3",
-            children: tW.map((WW => {
-              var NW, PW;
+            children: VR.map((RR => {
+              var uR, ZR;
               const {
-                config: LW
-              } = WW;
-              return (0, ZW.jsxs)(mW.Fragment, {
-                children: ["perk" === LW.slot && (0, ZW.jsx)(bP, {
-                  points: LW.points,
-                  reached: (null !== (NW = null === cW || void 0 === cW || null === (PW = cW[LW.pointsCurrency]) || void 0 === PW ? void 0 : PW.amount) && void 0 !== NW ? NW : 0) >= LW.points
-                }), (0, ZW.jsx)(jP, {
-                  slot: WW,
-                  items: iW[WW.categoryKey].items,
-                  selected: WW.categoryKey === OW,
+                config: qR
+              } = RR;
+              return (0, KR.jsxs)(yR.Fragment, {
+                children: ["perk" === qR.slot && (0, KR.jsx)(rZ, {
+                  points: qR.points,
+                  reached: (null !== (uR = null === iR || void 0 === iR || null === (ZR = iR[qR.pointsCurrency]) || void 0 === ZR ? void 0 : ZR.amount) && void 0 !== uR ? uR : 0) >= qR.points
+                }), (0, KR.jsx)(eZ, {
+                  slot: RR,
+                  items: JR[RR.categoryKey].items,
+                  selected: RR.categoryKey === GR,
                   onClick: () => {
-                    EW(WW.categoryKey)
+                    tR(RR.categoryKey)
                   }
                 })]
-              }, WW.categoryKey)
+              }, RR.categoryKey)
             }))
-          }), (0, ZW.jsxs)("main", {
+          }), (0, KR.jsxs)("main", {
             className: "LoadoutPicker",
             "data-pad-initial-area": !0,
-            children: ["gun" === (null === xW || void 0 === xW ? void 0 : xW.slot) && (0, ZW.jsx)(kP, {
-              items: lW,
-              ...bW
-            }), "perk" === (null === xW || void 0 === xW ? void 0 : xW.slot) && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [(0, ZW.jsx)("p", {
+            children: ["gun" === (null === wR || void 0 === wR ? void 0 : wR.slot) && (0, KR.jsx)(LZ, {
+              items: rR,
+              ...aR
+            }), "perk" === (null === wR || void 0 === wR ? void 0 : wR.slot) && (0, KR.jsxs)(KR.Fragment, {
+              children: [(0, KR.jsx)("p", {
                 className: "LoadoutPickerNote",
-                children: wW("loadoutShop:tierPicker", {
-                  tier: xW.tier,
-                  points: xW.points
+                children: fR("loadoutShop:tierPicker", {
+                  tier: wR.tier,
+                  points: wR.points
                 })
-              }), (0, ZW.jsx)("div", {
+              }), (0, KR.jsx)("div", {
                 className: "LoadoutPerkGrid",
-                children: iP(lW, "perk").map((WW => (0, ZW.jsx)(ZP, {
-                  entry: WW,
-                  buy: bW.buy,
-                  canAfford: AW(WW.item),
-                  currency: AP(cW, WW.item)
-                }, WW.key)))
+                children: hu(rR, "perk").map((RR => (0, KR.jsx)(fZ, {
+                  entry: RR,
+                  buy: aR.buy,
+                  canAfford: eR(RR.item),
+                  currency: wZ(iR, RR.item)
+                }, RR.key)))
               })]
             })]
           })]
@@ -5379,815 +5379,815 @@ export const modules = {
       })
     }
 
-    function AP(WW, iW) {
-      return iW.currency ? null === WW || void 0 === WW ? void 0 : WW[iW.currency] : void 0
+    function wZ(RR, JR) {
+      return JR.currency ? null === RR || void 0 === RR ? void 0 : RR[JR.currency] : void 0
     }
 
-    function bP(WW) {
+    function rZ(RR) {
       let {
-        points: iW,
-        reached: OW
-      } = WW;
+        points: JR,
+        reached: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
-        className: NW()("LoadoutStep", {
-          LoadoutStepReached: OW
+        t: yR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
+        className: uR()("LoadoutStep", {
+          LoadoutStepReached: GR
         }),
-        title: mW("loadoutShop:pointsTooltip", {
-          points: iW
+        title: yR("loadoutShop:pointsTooltip", {
+          points: JR
         }),
-        children: [(0, ZW.jsx)(LW.c, {
+        children: [(0, KR.jsx)(qR.d, {
           name: "arrow-right",
           className: "LoadoutStepArrow"
-        }), (0, ZW.jsxs)("span", {
-          children: [OW && (0, ZW.jsx)(LW.c, {
+        }), (0, KR.jsxs)("span", {
+          children: [GR && (0, KR.jsx)(qR.d, {
             name: "check"
-          }), mW("loadoutShop:points", {
-            points: iW
+          }), yR("loadoutShop:points", {
+            points: JR
           })]
         })]
       })
     }
 
-    function jP(WW) {
+    function eZ(RR) {
       let {
-        slot: iW,
-        items: OW,
-        selected: mW,
-        onClick: EW
-      } = WW;
+        slot: JR,
+        items: GR,
+        selected: yR,
+        onClick: tR
+      } = RR;
       const {
-        t: cW
-      } = (0, PW.B)(), {
-        config: wW
-      } = iW, tW = "gun" === wW.slot ? UP(iP(OW, "gun")) : UP(iP(OW, "perk")), xW = "gun" === wW.slot ? cW("loadoutShop:gun") : cW("loadoutShop:tier", {
-        tier: wW.tier
+        t: iR
+      } = (0, ZR.A)(), {
+        config: fR
+      } = JR, VR = "gun" === fR.slot ? aZ(hu(GR, "gun")) : aZ(hu(GR, "perk")), wR = "gun" === fR.slot ? iR("loadoutShop:gun") : iR("loadoutShop:tier", {
+        tier: fR.tier
       });
-      return (0, ZW.jsxs)("button", {
+      return (0, KR.jsxs)("button", {
         type: "button",
-        className: NW()("LoadoutSlot", {
-          LoadoutSlotSelected: mW,
-          LoadoutSlotEmpty: !tW
+        className: uR()("LoadoutSlot", {
+          LoadoutSlotSelected: yR,
+          LoadoutSlotEmpty: !VR
         }),
         "data-pad-tab": !0,
-        "data-pad-selected": mW ? "true" : void 0,
-        "aria-pressed": mW,
-        onClick: EW,
-        children: [(0, ZW.jsxs)("span", {
+        "data-pad-selected": yR ? "true" : void 0,
+        "aria-pressed": yR,
+        onClick: tR,
+        children: [(0, KR.jsxs)("span", {
           className: "LoadoutSlotArt",
-          children: ["gun" === (null === tW || void 0 === tW ? void 0 : tW.meta.kind) && (0, ZW.jsx)(HE.b, {
-            itemName: tW.meta.gun,
+          children: ["gun" === (null === VR || void 0 === VR ? void 0 : VR.meta.kind) && (0, KR.jsx)(pt.b, {
+            itemName: VR.meta.gun,
             amount: 0,
             gunTransform: "none"
-          }), "perk" === (null === tW || void 0 === tW ? void 0 : tW.meta.kind) && (0, ZW.jsx)(LW.c, {
-            name: tW.meta.icon
-          }), !tW && (0, ZW.jsx)(LW.c, {
+          }), "perk" === (null === VR || void 0 === VR ? void 0 : VR.meta.kind) && (0, KR.jsx)(qR.d, {
+            name: VR.meta.icon
+          }), !VR && (0, KR.jsx)(qR.d, {
             name: "plus"
           })]
-        }), (0, ZW.jsxs)("span", {
+        }), (0, KR.jsxs)("span", {
           className: "LoadoutSlotText",
-          children: [(0, ZW.jsx)("small", {
-            children: xW
-          }), (0, ZW.jsx)("b", {
-            children: tW ? tW.key : cW("gun" === wW.slot ? "loadoutShop:noGun" : "loadoutShop:noPerk")
+          children: [(0, KR.jsx)("small", {
+            children: wR
+          }), (0, KR.jsx)("b", {
+            children: VR ? VR.key : iR("gun" === fR.slot ? "loadoutShop:noGun" : "loadoutShop:noPerk")
           })]
         })]
       })
     }
 
-    function UP(WW) {
-      var iW;
-      return null !== (iW = WW.find((WW => WW.meta.equipped))) && void 0 !== iW ? iW : null
+    function aZ(RR) {
+      var JR;
+      return null !== (JR = RR.find((RR => RR.meta.equipped))) && void 0 !== JR ? JR : null
     }
 
-    function kP(WW) {
+    function LZ(RR) {
       let {
-        items: iW,
-        buy: OW,
-        affordable: mW,
-        currencyAmounts: EW
-      } = WW;
+        items: JR,
+        buy: GR,
+        affordable: yR,
+        currencyAmounts: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, PW.B)(), LW = iP(iW, "gun"), cW = UP(LW), wW = {};
+        t: uR
+      } = (0, ZR.A)(), qR = hu(JR, "gun"), iR = aZ(qR), fR = {};
       for (const {
-          meta: PW
+          meta: ZR
         }
-        of LW) {
-        const WW = aN.d.get(`${PW.gun}GunStats`),
-          iW = NP(PW.gun, WW);
-        iW && (wW[PW.gun] = iW)
+        of qR) {
+        const RR = Yu.c.get(`${ZR.gun}GunStats`),
+          JR = yZ(ZR.gun, RR);
+        JR && (fR[ZR.gun] = JR)
       }
-      const tW = function(WW) {
-          const iW = {},
-            OW = {};
-          for (const EW of EP) {
-            iW[EW] = -1 / 0, OW[EW] = 1 / 0;
-            for (const mW in WW) iW[EW] = Math.max(iW[EW], WW[mW][EW]), OW[EW] = Math.min(OW[EW], WW[mW][EW])
+      const VR = function(RR) {
+          const JR = {},
+            GR = {};
+          for (const tR of GZ) {
+            JR[tR] = -1 / 0, GR[tR] = 1 / 0;
+            for (const yR in RR) JR[tR] = Math.max(JR[tR], RR[yR][tR]), GR[tR] = Math.min(GR[tR], RR[yR][tR])
           }
-          const mW = {};
-          for (const EW in WW) {
-            mW[EW] = {};
-            for (const NW of EP) mW[EW][NW] = Math.max(.06, LP(NW, WW[EW][NW], iW[NW], OW[NW]))
+          const yR = {};
+          for (const tR in RR) {
+            yR[tR] = {};
+            for (const uR of GZ) yR[tR][uR] = Math.max(.06, uZ(uR, RR[tR][uR], JR[uR], GR[uR]))
           }
-          return mW
-        }(wW),
-        xW = cW ? wW[cW.meta.gun] : void 0,
-        [lW, AW] = NW("loadoutShop:comparing", {
+          return yR
+        }(fR),
+        wR = iR ? fR[iR.meta.gun] : void 0,
+        [rR, eR] = uR("loadoutShop:comparing", {
           gun: "\x01"
         }).split("\x01");
-      return (0, ZW.jsxs)(ZW.Fragment, {
-        children: [cW && (0, ZW.jsxs)("p", {
+      return (0, KR.jsxs)(KR.Fragment, {
+        children: [iR && (0, KR.jsxs)("p", {
           className: "LoadoutPickerNote",
-          children: [lW, (0, ZW.jsx)("b", {
+          children: [rR, (0, KR.jsx)("b", {
             className: "LoadoutGold",
-            children: cW.key
-          }), AW]
-        }), (0, ZW.jsx)("div", {
+            children: iR.key
+          }), eR]
+        }), (0, KR.jsx)("div", {
           className: "LoadoutGunGrid",
-          children: LW.map((WW => (0, ZW.jsx)(tP, {
-            entry: WW,
-            stats: wW[WW.meta.gun],
-            bars: tW[WW.meta.gun],
-            compared: WW.meta.equipped ? void 0 : xW,
-            buy: OW,
-            canAfford: mW(WW.item),
-            currency: AP(EW, WW.item)
-          }, WW.key)))
+          children: qR.map((RR => (0, KR.jsx)(iZ, {
+            entry: RR,
+            stats: fR[RR.meta.gun],
+            bars: VR[RR.meta.gun],
+            compared: RR.meta.equipped ? void 0 : wR,
+            buy: GR,
+            canAfford: yR(RR.item),
+            currency: wZ(tR, RR.item)
+          }, RR.key)))
         })]
       })
     }
-    var sP = OW(35243),
-      MP = OW(35240);
+    var nZ = GR(35174),
+      UZ = GR(35172);
 
-    function KP(WW) {
+    function WZ(RR) {
       let {
-        currency: iW,
-        info: OW,
-        smaller: EW,
-        show: PW
-      } = WW;
-      const LW = (0, mW.useRef)(null);
-      (0, MP.c)(iW, LW, PW);
-      const cW = (0, MP.f)(iW, OW.amount);
-      return (0, ZW.jsxs)("div", {
-        className: NW()("ShopCurrencyDiv", {
-          SmallText: EW
+        currency: JR,
+        info: GR,
+        smaller: tR,
+        show: ZR
+      } = RR;
+      const qR = (0, yR.useRef)(null);
+      (0, UZ.h)(JR, qR, ZR);
+      const iR = (0, UZ.l)(JR, GR.amount);
+      return (0, KR.jsxs)("div", {
+        className: uR()("ShopCurrencyDiv", {
+          SmallText: tR
         }),
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "ShopCurrencyDetails",
-          children: [(0, ZW.jsx)("div", {
-            ref: LW,
+          children: [(0, KR.jsx)("div", {
+            ref: qR,
             className: "ShopCurrencyAmtIcon",
             style: {
-              color: OW.iconColour
+              color: GR.iconColour
             },
-            children: (0, ZW.jsx)(cP, {
-              iconName: OW.icon
+            children: (0, KR.jsx)(ZZ, {
+              iconName: GR.icon
             })
-          }), "\xa0", (0, sP.e)(cW, 6)]
-        }), void 0 !== OW.subtext && OW.subtext.length > 0 && (0, ZW.jsx)("div", {
+          }), "\xa0", (0, nZ.e)(iR, 6)]
+        }), void 0 !== GR.subtext && GR.subtext.length > 0 && (0, KR.jsx)("div", {
           className: "ShopCurrencySubtext",
-          children: (0, ZW.jsx)(nE.d, {
-            text: OW.subtext
+          children: (0, KR.jsx)(gt.c, {
+            text: GR.subtext
           })
         })]
       })
     }
-    class SP {
-      constructor(WW) {
-        this.info = WW
+    class AZ {
+      constructor(RR) {
+        this.info = RR
       }
-      static fromShopInfo(WW) {
-        const iW = {};
-        for (const OW in WW) {
-          const mW = !0 === WW[OW].redDot && !0 !== WW[OW].forceRemoveRedDot;
-          iW[OW] = {
-            redDot: mW,
+      static fromShopInfo(RR) {
+        const JR = {};
+        for (const GR in RR) {
+          const yR = !0 === RR[GR].redDot && !0 !== RR[GR].forceRemoveRedDot;
+          JR[GR] = {
+            redDot: yR,
             items: {}
           };
-          for (const EW in WW[OW].items) {
-            const mW = WW[OW].items[EW],
-              NW = !0 === mW.redDot && !0 !== mW.forceRemoveRedDot;
-            iW[OW].items[EW] = {
-              redDot: NW
+          for (const tR in RR[GR].items) {
+            const yR = RR[GR].items[tR],
+              uR = !0 === yR.redDot && !0 !== yR.forceRemoveRedDot;
+            JR[GR].items[tR] = {
+              redDot: uR
             }
           }
         }
-        return new SP(iW)
+        return new AZ(JR)
       }
       anyCategoryHasRedDots() {
-        for (const WW in this.info)
-          if (this.categoryHasRedDot(WW)) return !0;
+        for (const RR in this.info)
+          if (this.categoryHasRedDot(RR)) return !0;
         return !1
       }
-      doesCategoryExist(WW) {
-        return !(0, nO.K)(this.info[WW])
+      doesCategoryExist(RR) {
+        return !(0, gG.I)(this.info[RR])
       }
-      categoryHasRedDot(WW) {
-        return !0 === this.info[WW].redDot
+      categoryHasRedDot(RR) {
+        return !0 === this.info[RR].redDot
       }
-      updateCategoryRedDot(WW, iW) {
-        this.info[WW].redDot = iW
+      updateCategoryRedDot(RR, JR) {
+        this.info[RR].redDot = JR
       }
-      doesItemExist(WW, iW) {
-        return this.doesCategoryExist(WW) && !(0, nO.K)(this.info[WW].items[iW])
+      doesItemExist(RR, JR) {
+        return this.doesCategoryExist(RR) && !(0, gG.I)(this.info[RR].items[JR])
       }
-      itemHasRedDot(WW, iW) {
-        return !0 === this.info[WW].items[iW].redDot
+      itemHasRedDot(RR, JR) {
+        return !0 === this.info[RR].items[JR].redDot
       }
-      updateItemRedDot(WW, iW, OW) {
-        this.info[WW].items[iW].redDot = OW
+      updateItemRedDot(RR, JR, GR) {
+        this.info[RR].items[JR].redDot = GR
       }
       shallowCopy() {
-        return new SP(this.info)
+        return new AZ(this.info)
       }
     }
 
-    function YP(WW, iW) {
-      return `${WW}\x1f${iW}`
+    function CZ(RR, JR) {
+      return `${RR}\x1f${JR}`
     }
 
-    function yP(WW, iW, OW) {
-      const mW = SP.fromShopInfo(WW);
-      for (const LW in WW) {
-        var EW;
-        if (OW.doesCategoryExist(LW)) {
-          (null === (EW = iW[LW]) || void 0 === EW ? void 0 : EW.redDot) === WW[LW].redDot && mW.updateCategoryRedDot(LW, OW.categoryHasRedDot(LW));
-          for (const EW in WW[LW].items) {
-            var NW, PW;
-            OW.doesItemExist(LW, EW) && ((null === (NW = iW[LW]) || void 0 === NW || null === (PW = NW.items[EW]) || void 0 === PW ? void 0 : PW.redDot) === WW[LW].items[EW].redDot && mW.updateItemRedDot(LW, EW, OW.itemHasRedDot(LW, EW)))
+    function XZ(RR, JR, GR) {
+      const yR = AZ.fromShopInfo(RR);
+      for (const qR in RR) {
+        var tR;
+        if (GR.doesCategoryExist(qR)) {
+          (null === (tR = JR[qR]) || void 0 === tR ? void 0 : tR.redDot) === RR[qR].redDot && yR.updateCategoryRedDot(qR, GR.categoryHasRedDot(qR));
+          for (const tR in RR[qR].items) {
+            var uR, ZR;
+            GR.doesItemExist(qR, tR) && ((null === (uR = JR[qR]) || void 0 === uR || null === (ZR = uR.items[tR]) || void 0 === ZR ? void 0 : ZR.redDot) === RR[qR].items[tR].redDot && yR.updateItemRedDot(qR, tR, GR.itemHasRedDot(qR, tR)))
           }
         }
       }
-      return mW
+      return yR
     }
 
-    function TP(WW, iW, OW, mW) {
-      if (null !== iW && !mW) return iW;
-      if (null === OW || !WW[OW]) {
-        const iW = VE(WW);
-        return iW.length > 0 ? iW[0] : null
+    function MZ(RR, JR, GR, yR) {
+      if (null !== JR && !yR) return JR;
+      if (null === GR || !RR[GR]) {
+        const JR = ot(RR);
+        return JR.length > 0 ? JR[0] : null
       }
-      return OW
+      return GR
     }
 
-    function JP(WW, iW, OW) {
-      if ((0, nO.K)(WW) || 0 === Object.keys(WW).length) return {
+    function BZ(RR, JR, GR) {
+      if ((0, gG.I)(RR) || 0 === Object.keys(RR).length) return {
         shopInfo: {},
-        redDotInfo: SP.fromShopInfo({}),
+        redDotInfo: AZ.fromShopInfo({}),
         selectedCategoryKey: null
       };
       const {
-        shopInfo: mW,
-        autoSelectCategory: EW
-      } = function(WW) {
-        const iW = hW.siteUsedData[hW.siteUsed].adConfig.showRewardedAds,
-          OW = {};
-        let mW = null;
-        for (const EW in WW) {
-          const NW = WW[EW],
-            PW = {};
-          let LW = !1;
-          for (const WW in NW.items) {
-            const OW = NW.items[WW];
-            (0, TE.g)(OW, iW) && (PW[WW] = OW, LW = !0)
+        shopInfo: yR,
+        autoSelectCategory: tR
+      } = function(RR) {
+        const JR = gR.siteUsedData[gR.siteUsed].adConfig.showRewardedAds,
+          GR = {};
+        let yR = null;
+        for (const tR in RR) {
+          const uR = RR[tR],
+            ZR = {};
+          let qR = !1;
+          for (const RR in uR.items) {
+            const GR = uR.items[RR];
+            (0, Mt.n)(GR, JR) && (ZR[RR] = GR, qR = !0)
           }
-          LW && (OW[EW] = {
-            ...NW,
-            items: PW
-          }, !0 === NW.autoSelectCategory && (mW = EW))
+          qR && (GR[tR] = {
+            ...uR,
+            items: ZR
+          }, !0 === uR.autoSelectCategory && (yR = tR))
         }
         return {
-          shopInfo: OW,
-          autoSelectCategory: mW
+          shopInfo: GR,
+          autoSelectCategory: yR
         }
-      }(WW);
+      }(RR);
       return {
-        shopInfo: mW,
-        redDotInfo: yP(mW, iW.shopInfo, iW.redDotInfo),
-        selectedCategoryKey: TP(mW, EW, iW.selectedCategoryKey, OW)
+        shopInfo: yR,
+        redDotInfo: XZ(yR, JR.shopInfo, JR.redDotInfo),
+        selectedCategoryKey: MZ(yR, tR, JR.selectedCategoryKey, GR)
       }
     }
 
-    function hP(WW, iW, OW, mW, EW) {
-      const NW = {},
-        PW = (WW, iW, PW, LW) => {
-          var cW, wW;
-          const tW = YP(WW, iW),
-            ZW = null !== (cW = OW[tW]) && void 0 !== cW ? cW : OW[iW];
-          if (null !== (wW = LW.userInput) && void 0 !== wW && wW.type) switch (LW.userInput.type) {
+    function lZ(RR, JR, GR, yR, tR) {
+      const uR = {},
+        ZR = (RR, JR, ZR, qR) => {
+          var iR, fR;
+          const VR = CZ(RR, JR),
+            KR = null !== (iR = GR[VR]) && void 0 !== iR ? iR : GR[JR];
+          if (null !== (fR = qR.userInput) && void 0 !== fR && fR.type) switch (qR.userInput.type) {
             case "dropdown": {
-              var xW;
-              const WW = !ZW || !LW.userInput.dropdownOptions.some((WW => (0, TE.c)(WW) === ZW)),
-                iW = LW.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === PW || void 0 === PW || null === (xW = PW.userInput) || void 0 === xW ? void 0 : xW.type) || JSON.stringify(PW.userInput.dropdownOptions) !== JSON.stringify(LW.userInput.dropdownOptions)),
-                OW = LW.userInput,
-                mW = !(0, nO.K)(OW.initialValue) && OW.dropdownOptions.some((WW => (0, TE.c)(WW) === OW.initialValue));
-              var lW;
-              if (WW || iW)
-                if (mW) NW[tW] = null !== (lW = LW.userInput.initialValue) && void 0 !== lW ? lW : null;
-                else LW.userInput.dropdownOptions.length > 0 ? NW[tW] = (0, TE.c)(LW.userInput.dropdownOptions[0]) : NW[tW] = null;
-              else NW[tW] = ZW;
+              var wR;
+              const RR = !KR || !qR.userInput.dropdownOptions.some((RR => (0, Mt.f)(RR) === KR)),
+                JR = qR.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === ZR || void 0 === ZR || null === (wR = ZR.userInput) || void 0 === wR ? void 0 : wR.type) || JSON.stringify(ZR.userInput.dropdownOptions) !== JSON.stringify(qR.userInput.dropdownOptions)),
+                GR = qR.userInput,
+                yR = !(0, gG.I)(GR.initialValue) && GR.dropdownOptions.some((RR => (0, Mt.f)(RR) === GR.initialValue));
+              var rR;
+              if (RR || JR)
+                if (yR) uR[VR] = null !== (rR = qR.userInput.initialValue) && void 0 !== rR ? rR : null;
+                else qR.userInput.dropdownOptions.length > 0 ? uR[VR] = (0, Mt.f)(qR.userInput.dropdownOptions[0]) : uR[VR] = null;
+              else uR[VR] = KR;
               return
             }
             case "text":
             case "number":
-              var AW, bW, jW;
-              if ((null === PW || void 0 === PW ? void 0 : PW.userInput) !== LW.userInput) NW[tW] = null !== (AW = null !== (bW = LW.userInput.initialValue) && void 0 !== bW ? bW : ZW) && void 0 !== AW ? AW : "";
-              else NW[tW] = null !== (jW = null !== ZW && void 0 !== ZW ? ZW : LW.userInput.initialValue) && void 0 !== jW ? jW : "";
+              var eR, aR, LR;
+              if ((null === ZR || void 0 === ZR ? void 0 : ZR.userInput) !== qR.userInput) uR[VR] = null !== (eR = null !== (aR = qR.userInput.initialValue) && void 0 !== aR ? aR : KR) && void 0 !== eR ? eR : "";
+              else uR[VR] = null !== (LR = null !== KR && void 0 !== KR ? KR : qR.userInput.initialValue) && void 0 !== LR ? LR : "";
               return;
             case "color":
-              var UW, kW, sW;
-              if ((null === PW || void 0 === PW ? void 0 : PW.userInput) !== LW.userInput) NW[tW] = null !== (UW = null !== (kW = LW.userInput.initialValue) && void 0 !== kW ? kW : ZW) && void 0 !== UW ? UW : "#000000";
-              else NW[tW] = null !== (sW = null !== ZW && void 0 !== ZW ? ZW : LW.userInput.initialValue) && void 0 !== sW ? sW : "#000000";
+              var nR, UR, WR;
+              if ((null === ZR || void 0 === ZR ? void 0 : ZR.userInput) !== qR.userInput) uR[VR] = null !== (nR = null !== (UR = qR.userInput.initialValue) && void 0 !== UR ? UR : KR) && void 0 !== nR ? nR : "#000000";
+              else uR[VR] = null !== (WR = null !== KR && void 0 !== KR ? KR : qR.userInput.initialValue) && void 0 !== WR ? WR : "#000000";
               return;
             case "player": {
-              const WW = (0, TE.d)(mW, EW, LW.userInput);
-              return void(ZW && WW.includes(ZW) ? NW[tW] = ZW : NW[tW] = WW.length > 0 ? WW[0] : null)
+              const RR = (0, Mt.j)(yR, tR, qR.userInput);
+              return void(KR && RR.includes(KR) ? uR[VR] = KR : uR[VR] = RR.length > 0 ? RR[0] : null)
             }
           }
         };
-      for (const cW in WW)
-        for (const OW in WW[cW].items) {
-          var LW;
-          const mW = WW[cW].items[OW];
-          PW(cW, OW, null === (LW = iW[cW]) || void 0 === LW ? void 0 : LW.items[OW], mW)
+      for (const iR in RR)
+        for (const GR in RR[iR].items) {
+          var qR;
+          const yR = RR[iR].items[GR];
+          ZR(iR, GR, null === (qR = JR[iR]) || void 0 === qR ? void 0 : qR.items[GR], yR)
         }
-      return NW
+      return uR
     }
 
-    function HP(WW, iW) {
-      return !(0, nO.K)(iW) && !(0, nO.K)(WW) && iW in WW
+    function pZ(RR, JR) {
+      return !(0, gG.I)(JR) && !(0, gG.I)(RR) && JR in RR
     }
-    const nP = (0, mW.memo)((function(WW) {
-      var iW, OW;
+    const gZ = (0, yR.memo)((function(RR) {
+      var JR, GR;
       let {
-        show: EW
-      } = WW;
-      const PW = (0, zi.f)("players", gP),
-        LW = (0, zi.f)("players", DP),
-        tW = (0, gE.c)(),
-        [lW, AW] = (0, mW.useState)({
+        show: tR
+      } = RR;
+      const ZR = (0, QJ.e)("players", DZ),
+        qR = (0, QJ.e)("players", HZ),
+        VR = (0, Dt.c)(),
+        [rR, eR] = (0, yR.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: SP.fromShopInfo({}),
+          redDotInfo: AZ.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        jW = (0, mW.useRef)(""),
-        UW = (0, mW.useRef)(null),
-        sW = (0, mW.useRef)(null),
-        MW = (0, mW.useRef)(0),
-        KW = (0, mW.useRef)(void 0),
-        SW = (0, mW.useRef)(null),
-        YW = (0, mW.useRef)(lW),
-        TW = (0, mW.useRef)(null),
-        JW = lW.redDotInfo.anyCategoryHasRedDots(),
-        [hW, HW] = (0, mW.useState)(null),
-        nW = (0, mW.useRef)(!1);
-      let uW = !1,
-        oW = 0,
-        dW = 0;
-      if (lW.currencyAmounts) {
-        for (const WW in lW.currencyAmounts) {
-          var eW;
-          const iW = lW.currencyAmounts[WW];
-          iW.hidden || (oW++, (null === (eW = iW.subtext) || void 0 === eW ? void 0 : eW.length) > 0 && dW++)
+        LR = (0, yR.useRef)(""),
+        nR = (0, yR.useRef)(null),
+        WR = (0, yR.useRef)(null),
+        AR = (0, yR.useRef)(0),
+        CR = (0, yR.useRef)(void 0),
+        XR = (0, yR.useRef)(null),
+        MR = (0, yR.useRef)(rR),
+        lR = (0, yR.useRef)(null),
+        pR = rR.redDotInfo.anyCategoryHasRedDots(),
+        [gR, bR] = (0, yR.useState)(null),
+        vR = (0, yR.useRef)(!1);
+      let OR = !1,
+        xR = 0,
+        NR = 0;
+      if (rR.currencyAmounts) {
+        for (const RR in rR.currencyAmounts) {
+          var DR;
+          const JR = rR.currencyAmounts[RR];
+          JR.hidden || (xR++, (null === (DR = JR.subtext) || void 0 === DR ? void 0 : DR.length) > 0 && NR++)
         }
-        uW = oW + dW > 4
-      }(0, mW.useEffect)((() => {
-        uO.l.iZ("showShopIconRedDot", JW, !0)
-      }), [JW]), (0, mW.useEffect)((() => {
-        kW.gameBridge.send("setShopOpen", EW), EW || (clearTimeout(KW.current), AW((WW => WW.awaitingPurchase ? {
-          ...WW,
+        OR = xR + NR > 4
+      }(0, yR.useEffect)((() => {
+        bG.n.JK("showShopIconRedDot", pR, !0)
+      }), [pR]), (0, yR.useEffect)((() => {
+        UR.gameBridge.send("setShopOpen", tR), tR || (clearTimeout(CR.current), eR((RR => RR.awaitingPurchase ? {
+          ...RR,
           awaitingPurchase: !1
-        } : WW)))
-      }), [EW]), (0, mW.useEffect)((() => () => {
-        kW.gameBridge.send("setShopOpen", !1), clearTimeout(KW.current)
-      }), []), (0, mW.useEffect)((() => {
-        YW.current = lW
-      }), [lW]), (0, mW.useEffect)((() => {
-        if (null === hW) return;
-        return (0, eE.e)("pointerdown", (WW => {
-          const iW = WW.target;
-          null !== iW && void 0 !== iW && iW.closest(".ShopItem") || HW(null)
+        } : RR)))
+      }), [tR]), (0, yR.useEffect)((() => () => {
+        UR.gameBridge.send("setShopOpen", !1), clearTimeout(CR.current)
+      }), []), (0, yR.useEffect)((() => {
+        MR.current = rR
+      }), [rR]), (0, yR.useEffect)((() => {
+        if (null === gR) return;
+        return (0, xt.c)("pointerdown", (RR => {
+          const JR = RR.target;
+          null !== JR && void 0 !== JR && JR.closest(".ShopItem") || bR(null)
         }))
-      }), [hW]);
-      const vW = WW => {
-          AW((iW => ({
-            ...iW,
-            ...WW
+      }), [gR]);
+      const HR = RR => {
+          eR((JR => ({
+            ...JR,
+            ...RR
           })))
         },
-        gW = WW => {
-          var iW;
-          clearTimeout(null === (iW = lW.onBoughtInfo) || void 0 === iW ? void 0 : iW.timeout);
-          const OW = setTimeout((() => {
-            vW({
+        oR = RR => {
+          var JR;
+          clearTimeout(null === (JR = rR.onBoughtInfo) || void 0 === JR ? void 0 : JR.timeout);
+          const GR = setTimeout((() => {
+            HR({
               onBoughtInfo: null
             })
           }), 3e3);
-          jW.current = WW, vW({
+          LR.current = RR, HR({
             onBoughtInfo: {
-              text: WW,
-              timeout: OW,
-              categoryKey: UW.current
+              text: RR,
+              timeout: GR,
+              categoryKey: nR.current
             }
           })
         },
-        VW = WW => {
-          const iW = JP(WW, lW, !0);
-          return 0 === Object.keys(iW.shopInfo).length && yW.d.set({
+        PR = RR => {
+          const JR = BZ(RR, rR, !0);
+          return 0 === Object.keys(JR.shopInfo).length && BR.d.set({
             openEverythingMenuName: null
           }), {
-            ...iW,
-            userInputsPerItem: hP(iW.shopInfo, lW.shopInfo, lW.userInputsPerItem, PW, LW)
+            ...JR,
+            userInputsPerItem: lZ(JR.shopInfo, rR.shopInfo, rR.userInputsPerItem, ZR, qR)
           }
         },
-        pW = () => {
-          var WW;
-          return null !== (WW = TW.current) && void 0 !== WW ? WW : lW
+        IR = () => {
+          var RR;
+          return null !== (RR = lR.current) && void 0 !== RR ? RR : rR
         },
-        fW = WW => {
-          const iW = pW(),
-            OW = JP(WW, iW, !1);
-          TW.current = OW;
-          const mW = OW.redDotInfo.anyCategoryHasRedDots();
-          mW !== iW.redDotInfo.anyCategoryHasRedDots() && uO.l.iZ("showShopIconRedDot", mW, !0)
+        mR = RR => {
+          const JR = IR(),
+            GR = BZ(RR, JR, !1);
+          lR.current = GR;
+          const yR = GR.redDotInfo.anyCategoryHasRedDots();
+          yR !== JR.redDotInfo.anyCategoryHasRedDots() && bG.n.JK("showShopIconRedDot", yR, !0)
         },
-        CW = () => {
-          const WW = TW.current;
-          null !== WW && (TW.current = null, AW((iW => {
-            const OW = hP(WW.shopInfo, iW.shopInfo, iW.userInputsPerItem, PW, LW);
+        zR = () => {
+          const RR = lR.current;
+          null !== RR && (lR.current = null, eR((JR => {
+            const GR = lZ(RR.shopInfo, JR.shopInfo, JR.userInputsPerItem, ZR, qR);
             return {
-              ...iW,
-              ...WW,
-              userInputsPerItem: OW
+              ...JR,
+              ...RR,
+              userInputsPerItem: GR
             }
           })))
         },
-        XW = (WW, iW, OW) => {
-          const mW = lW.selectedCategoryKey,
-            EW = YP(mW, WW),
-            NW = null !== OW && void 0 !== OW ? OW : lW.userInputsPerItem[EW],
-            PW = {
-              categoryKey: mW,
-              itemKey: WW,
-              userInput: NW
+        SR = (RR, JR, GR) => {
+          const yR = rR.selectedCategoryKey,
+            tR = CZ(yR, RR),
+            uR = null !== GR && void 0 !== GR ? GR : rR.userInputsPerItem[tR],
+            ZR = {
+              categoryKey: yR,
+              itemKey: RR,
+              userInput: uR
             };
-          if (UW.current = mW, iW.isRewardedAd) {
-            if (Date.now() - MW.current < 5e3) return;
-            (0, ui.Y)((() => {
-              var OW, mW, NW;
+          if (nR.current = yR, JR.isRewardedAd) {
+            if (Date.now() - AR.current < 5e3) return;
+            (0, vJ.eb)((() => {
+              var GR, yR, uR;
               console.log("bought rewarded ad");
-              const LW = TW.current,
-                cW = (null !== LW && void 0 !== LW ? LW : YW.current).shopInfo,
-                wW = PW.categoryKey ? null === (OW = cW[PW.categoryKey]) || void 0 === OW ? void 0 : OW.items[WW] : null;
-              if (!wW || !wW.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              if (!((null === (mW = iW.userInput) || void 0 === mW ? void 0 : mW.type) === (null === wW || void 0 === wW || null === (NW = wW.userInput) || void 0 === NW ? void 0 : NW.type))) return void console.warn("Shop item input type changed, early out");
+              const qR = lR.current,
+                iR = (null !== qR && void 0 !== qR ? qR : MR.current).shopInfo,
+                fR = ZR.categoryKey ? null === (GR = iR[ZR.categoryKey]) || void 0 === GR ? void 0 : GR.items[RR] : null;
+              if (!fR || !fR.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              if (!((null === (yR = JR.userInput) || void 0 === yR ? void 0 : yR.type) === (null === fR || void 0 === fR || null === (uR = fR.userInput) || void 0 === uR ? void 0 : uR.type))) return void console.warn("Shop item input type changed, early out");
               const {
-                shopInfo: tW,
-                userInputsPerItem: ZW
-              } = YW.current, xW = RW.current;
-              PW.userInput = (null === LW ? ZW : hP(LW.shopInfo, tW, ZW, xW.playerIds, xW.localPlayerId))[EW], kW.gameBridge.send("buyShopItem", PW), iW.onBoughtMessage && gW(iW.onBoughtMessage)
-            })), MW.current = Date.now()
+                shopInfo: VR,
+                userInputsPerItem: KR
+              } = MR.current, wR = ER.current;
+              ZR.userInput = (null === qR ? KR : lZ(qR.shopInfo, VR, KR, wR.playerIds, wR.localPlayerId))[tR], UR.gameBridge.send("buyShopItem", ZR), JR.onBoughtMessage && oR(JR.onBoughtMessage)
+            })), AR.current = Date.now()
           } else {
-            kW.gameBridge.send("buyShopItem", PW), vW({
+            UR.gameBridge.send("buyShopItem", ZR), HR({
               awaitingPurchase: !0
-            }), clearTimeout(KW.current), KW.current = setTimeout((() => {
-              SW.current = null, vW({
+            }), clearTimeout(CR.current), CR.current = setTimeout((() => {
+              XR.current = null, HR({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const WW = (0, TE.b)(iW, NW);
-            if (SW.current = null, !isNaN(WW) && HP(lW.currencyAmounts, iW.currency)) {
-              0 !== WW && (SW.current = {
-                currency: iW.currency,
-                amountBefore: lW.currencyAmounts[iW.currency].amount
+            const RR = (0, Mt.e)(JR, uR);
+            if (XR.current = null, !isNaN(RR) && pZ(rR.currencyAmounts, JR.currency)) {
+              0 !== RR && (XR.current = {
+                currency: JR.currency,
+                amountBefore: rR.currencyAmounts[JR.currency].amount
               });
-              const OW = {
-                ...lW.currencyAmounts
+              const GR = {
+                ...rR.currencyAmounts
               };
-              OW[iW.currency].amount -= WW, vW({
-                currencyAmounts: OW
+              GR[JR.currency].amount -= RR, HR({
+                currencyAmounts: GR
               })
             }
-            iW.onBoughtMessage && gW(iW.onBoughtMessage)
+            JR.onBoughtMessage && oR(JR.onBoughtMessage)
           }
         },
-        BW = (WW, iW) => {
-          if (null === iW || !WW.shopInfo[iW]) return WW;
-          let OW = WW.redDotInfo;
-          return OW.categoryHasRedDot(iW) && (OW.updateCategoryRedDot(iW, !1), OW = OW.shallowCopy()), {
-            ...WW,
-            selectedCategoryKey: iW,
-            redDotInfo: OW
+        jR = (RR, JR) => {
+          if (null === JR || !RR.shopInfo[JR]) return RR;
+          let GR = RR.redDotInfo;
+          return GR.categoryHasRedDot(JR) && (GR.updateCategoryRedDot(JR, !1), GR = GR.shallowCopy()), {
+            ...RR,
+            selectedCategoryKey: JR,
+            redDotInfo: GR
           }
         },
-        qW = WW => {
-          CW(), AW((iW => BW(iW, WW)))
+        dR = RR => {
+          zR(), eR((JR => jR(JR, RR)))
         };
-      (0, NO.e)(vE.i, (() => {
-        CW(), AW((WW => {
-          const iW = (0, vE.k)(VE(WW.shopInfo), WW.selectedCategoryKey, (iW => (0, vE.g)(WW.shopInfo[iW].items)));
-          return iW === WW.selectedCategoryKey ? WW : BW(WW, iW)
+      (0, yG.f)(Nt.i, (() => {
+        zR(), eR((RR => {
+          const JR = (0, Nt.m)(ot(RR.shopInfo), RR.selectedCategoryKey, (JR => (0, Nt.g)(RR.shopInfo[JR].items)));
+          return JR === RR.selectedCategoryKey ? RR : jR(RR, JR)
         }))
-      })), (0, NO.e)("showShopFromServer", (WW => {
+      })), (0, yG.f)("showShopFromServer", (RR => {
         let {
-          toggle: iW,
-          ni: OW
-        } = WW;
-        const mW = 0 !== Object.keys(pW().shopInfo).length;
-        OW && qW(OW), !mW || iW && EW ? yW.d.set({
+          toggle: JR,
+          OJ: GR
+        } = RR;
+        const yR = 0 !== Object.keys(IR().shopInfo).length;
+        GR && dR(GR), !yR || JR && tR ? BR.d.set({
           openEverythingMenuName: null
-        }) : yW.d.set({
-          openEverythingMenuName: oi.m.SHOP
+        }) : BR.d.set({
+          openEverythingMenuName: OJ.o.SHOP
         })
-      })), (0, NO.e)("closeShopOnDamaged", (() => {
-        EW && yW.d.set({
+      })), (0, yG.f)("closeShopOnDamaged", (() => {
+        tR && BR.d.set({
           openEverythingMenuName: null
         })
-      })), (0, NO.e)("overShopInfo", (WW => {
-        gW(WW)
-      })), (0, bW.d)("currencyAmounts", (WW => {
-        var iW;
-        const OW = SW.current;
-        OW && (null === WW || void 0 === WW || null === (iW = WW[OW.currency]) || void 0 === iW ? void 0 : iW.amount) === OW.amountBefore ? vW({
-          currencyAmounts: WW
-        }) : (SW.current = null, vW({
-          currencyAmounts: WW,
+      })), (0, yG.f)("overShopInfo", (RR => {
+        oR(RR)
+      })), (0, aR.e)("currencyAmounts", (RR => {
+        var JR;
+        const GR = XR.current;
+        GR && (null === RR || void 0 === RR || null === (JR = RR[GR.currency]) || void 0 === JR ? void 0 : JR.amount) === GR.amountBefore ? HR({
+          currencyAmounts: RR
+        }) : (XR.current = null, HR({
+          currencyAmounts: RR,
           awaitingPurchase: !1
         }))
-      })), (0, bW.d)("shopInfo", (WW => {
-        EW ? vW({
-          ...VW(WW),
+      })), (0, aR.e)("shopInfo", (RR => {
+        tR ? HR({
+          ...PR(RR),
           awaitingPurchase: !1
-        }) : fW(WW)
-      })), (0, mW.useLayoutEffect)((() => {
-        EW && CW()
-      }), [EW]);
-      const RW = (0, mW.useRef)({
-        playerIds: PW,
-        localPlayerId: LW
+        }) : mR(RR)
+      })), (0, yR.useLayoutEffect)((() => {
+        tR && zR()
+      }), [tR]);
+      const ER = (0, yR.useRef)({
+        playerIds: ZR,
+        localPlayerId: qR
       });
-      (0, mW.useEffect)((() => {
-        RW.current.playerIds === PW && RW.current.localPlayerId === LW || (RW.current = {
-          playerIds: PW,
-          localPlayerId: LW
-        }, EW ? AW((WW => {
-          const iW = VW(WW.shopInfo);
+      (0, yR.useEffect)((() => {
+        ER.current.playerIds === ZR && ER.current.localPlayerId === qR || (ER.current = {
+          playerIds: ZR,
+          localPlayerId: qR
+        }, tR ? eR((RR => {
+          const JR = PR(RR.shopInfo);
           return {
-            ...WW,
-            ...iW
+            ...RR,
+            ...JR
           }
-        })) : fW(pW().shopInfo))
-      }), [PW, LW]);
-      const GW = lW.selectedCategoryKey,
-        IW = (WW, iW) => {
-          var OW, mW;
-          return (isNaN(iW) || (0, nO.K)(WW.currency) || HP(lW.currencyAmounts, WW.currency) && iW <= lW.currencyAmounts[WW.currency].amount) && (null === (OW = WW.canBuy) || void 0 === OW || OW) && !(null !== (mW = WW.hidden) && void 0 !== mW && mW)
+        })) : mR(IR().shopInfo))
+      }), [ZR, qR]);
+      const YR = rR.selectedCategoryKey,
+        kR = (RR, JR) => {
+          var GR, yR;
+          return (isNaN(JR) || (0, gG.I)(RR.currency) || pZ(rR.currencyAmounts, RR.currency) && JR <= rR.currencyAmounts[RR.currency].amount) && (null === (GR = RR.canBuy) || void 0 === GR || GR) && !(null !== (yR = RR.hidden) && void 0 !== yR && yR)
         },
-        aW = (WW, iW) => {
-          var OW, mW, EW;
-          const PW = YP(GW, WW),
-            LW = lW.shopInfo[GW].items[WW],
-            tW = lW.userInputsPerItem[PW],
-            xW = (0, TE.b)(LW, tW),
-            AW = IW(LW, xW),
-            bW = LW.enchant,
-            jW = bW ? (0, DW.ob)(null !== (OW = LW.customTitle) && void 0 !== OW ? OW : WW, {
-              colour: DW.kb[bW.tier]
-            }) : null !== (mW = LW.customTitle) && void 0 !== mW ? mW : WW,
-            UW = iW => {
-              const OW = null !== iW && void 0 !== iW ? iW : tW,
-                mW = void 0 !== iW ? (0, TE.b)(LW, iW) : xW;
-              IW(LW, mW) && null !== OW && XW(WW, LW, iW);
-              let EW = lW.redDotInfo;
-              EW.itemHasRedDot(GW, WW) && (EW.updateItemRedDot(GW, WW, !1), EW = EW.shallowCopy()), vW({
-                redDotInfo: EW
+        QR = (RR, JR) => {
+          var GR, yR, tR;
+          const ZR = CZ(YR, RR),
+            qR = rR.shopInfo[YR].items[RR],
+            VR = rR.userInputsPerItem[ZR],
+            wR = (0, Mt.e)(qR, VR),
+            eR = kR(qR, wR),
+            aR = qR.enchant,
+            LR = aR ? (0, cR.rb)(null !== (GR = qR.customTitle) && void 0 !== GR ? GR : RR, {
+              colour: cR.kb[aR.tier]
+            }) : null !== (yR = qR.customTitle) && void 0 !== yR ? yR : RR,
+            nR = JR => {
+              const GR = null !== JR && void 0 !== JR ? JR : VR,
+                yR = void 0 !== JR ? (0, Mt.e)(qR, JR) : wR;
+              kR(qR, yR) && null !== GR && SR(RR, qR, JR);
+              let tR = rR.redDotInfo;
+              tR.itemHasRedDot(YR, RR) && (tR.updateItemRedDot(YR, RR, !1), tR = tR.shallowCopy()), HR({
+                redDotInfo: tR
               })
             };
-          return (0, ZW.jsxs)("div", {
-            className: NW()("ShopItem", {
-              ShopItemNoInput: !LW.userInput,
-              ShopItemNoInputCanBuy: !LW.userInput && AW,
-              ShopItemNoInputSelected: LW.isSelected,
-              ShopItemEnchant: !!bW
+          return (0, KR.jsxs)("div", {
+            className: uR()("ShopItem", {
+              ShopItemNoInput: !qR.userInput,
+              ShopItemNoInputCanBuy: !qR.userInput && eR,
+              ShopItemNoInputSelected: qR.isSelected,
+              ShopItemEnchant: !!aR
             }),
-            "data-pad-focusable": !LW.userInput || void 0,
-            "data-pad-unavailable": !LW.userInput && !AW || void 0,
-            "data-pad-repeat": null !== (EW = (0, vE.c)(LW)) && void 0 !== EW ? EW : void 0,
-            "data-pad-repeat-wait": lW.awaitingPurchase || void 0,
+            "data-pad-focusable": !qR.userInput || void 0,
+            "data-pad-unavailable": !qR.userInput && !eR || void 0,
+            "data-pad-repeat": null !== (tR = (0, Nt.c)(qR)) && void 0 !== tR ? tR : void 0,
+            "data-pad-repeat-wait": rR.awaitingPurchase || void 0,
             onClick: () => {
-              if (bW && nW.current) {
-                if (hW !== PW) return void HW(PW);
-                HW(null)
+              if (aR && vR.current) {
+                if (gR !== ZR) return void bR(ZR);
+                bR(null)
               }
-              LW.userInput || UW()
+              qR.userInput || nR()
             },
-            onPointerDown: WW => {
-              bW && (nW.current = (0, hE.v)(WW))
+            onPointerDown: RR => {
+              aR && (vR.current = (0, lt.w)(RR))
             },
-            onPointerEnter: WW => {
-              bW && !(0, hE.v)(WW) && HW(PW)
+            onPointerEnter: RR => {
+              aR && !(0, lt.w)(RR) && bR(ZR)
             },
-            onPointerLeave: WW => {
-              bW && !(0, hE.v)(WW) && HW((WW => WW === PW ? null : WW))
+            onPointerLeave: RR => {
+              aR && !(0, lt.w)(RR) && bR((RR => RR === ZR ? null : RR))
             },
             style: {
-              zIndex: Object.keys(lW.shopInfo[GW].items).length - iW
+              zIndex: Object.keys(rR.shopInfo[YR].items).length - JR
             },
-            children: [lW.redDotInfo.itemHasRedDot(GW, WW) && (0, ZW.jsx)(cW.b, {
+            children: [rR.redDotInfo.itemHasRedDot(YR, RR) && (0, KR.jsx)(iR.c, {
               top: "-6px",
               right: "-6px"
-            }), LW.badge && (0, ZW.jsx)("div", {
+            }), qR.badge && (0, KR.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, ZW.jsx)("div", {
-                className: NW()("ShopBadgeMain", LW.badge.type),
-                children: (0, ZW.jsx)(nE.d, {
-                  text: LW.badge.text
+              children: (0, KR.jsx)("div", {
+                className: uR()("ShopBadgeMain", qR.badge.type),
+                children: (0, KR.jsx)(gt.c, {
+                  text: qR.badge.text
                 })
               })
-            }), (0, ZW.jsx)("div", {
+            }), (0, KR.jsx)("div", {
               className: "ShopItemLeft",
-              children: LW.image && (0, ZW.jsx)(uP, {
-                item: LW,
+              children: qR.image && (0, KR.jsx)(bZ, {
+                item: qR,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, ZW.jsxs)("div", {
+            }), (0, KR.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, ZW.jsxs)("div", {
+              children: [(0, KR.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, ZW.jsx)("div", {
+                children: [(0, KR.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: jW
+                  children: (0, KR.jsx)(gt.c, {
+                    text: LR
                   })
-                }), (0, ZW.jsx)("div", {
+                }), (0, KR.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, ZW.jsx)(nE.d, {
-                    text: LW.description
+                  children: (0, KR.jsx)(gt.c, {
+                    text: qR.description
                   })
                 })]
-              }), LW.userInput && (0, ZW.jsxs)("div", {
+              }), qR.userInput && (0, KR.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: WW => {
-                  WW.stopPropagation()
+                onClick: RR => {
+                  RR.stopPropagation()
                 },
-                children: [(0, ZW.jsx)(eP, {
-                  item: LW,
-                  currInput: tW,
-                  updateInput: iW => {
-                    ((WW, iW, OW) => {
-                      const mW = YP(WW, iW),
-                        EW = {
-                          ...lW.userInputsPerItem
+                children: [(0, KR.jsx)(xZ, {
+                  item: qR,
+                  currInput: VR,
+                  updateInput: JR => {
+                    ((RR, JR, GR) => {
+                      const yR = CZ(RR, JR),
+                        tR = {
+                          ...rR.userInputsPerItem
                         };
-                      EW[mW] = OW, vW({
-                        userInputsPerItem: EW
+                      tR[yR] = GR, HR({
+                        userInputsPerItem: tR
                       })
-                    })(GW, WW, iW)
+                    })(YR, RR, JR)
                   },
-                  onSubmit: WW => {
-                    UW(WW)
+                  onSubmit: RR => {
+                    nR(RR)
                   }
-                }), ("dropdown" !== LW.userInput.type || !LW.userInput.autoSubmit) && (0, ZW.jsx)(wW.f, {
+                }), ("dropdown" !== qR.userInput.type || !qR.userInput.autoSubmit) && (0, KR.jsx)(fR.g, {
                   className: "ItemCostButton",
-                  disabled: !AW && null !== tW,
+                  disabled: !eR && null !== VR,
                   onClick: () => {
-                    UW()
+                    nR()
                   },
-                  children: (0, ZW.jsx)(dP, {
-                    item: LW,
-                    cost: xW,
-                    currencyAmounts: lW.currencyAmounts
+                  children: (0, KR.jsx)(OZ, {
+                    item: qR,
+                    cost: wR,
+                    currencyAmounts: rR.currencyAmounts
                   })
                 })]
               })]
-            }), !LW.userInput && (0, ZW.jsx)("div", {
+            }), !qR.userInput && (0, KR.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, ZW.jsx)(dP, {
-                item: LW,
-                cost: xW,
-                currencyAmounts: lW.currencyAmounts
+              children: (0, KR.jsx)(OZ, {
+                item: qR,
+                cost: wR,
+                currencyAmounts: rR.currencyAmounts
               })
-            }), bW && hW === PW && (0, ZW.jsxs)("div", {
+            }), aR && gR === ZR && (0, KR.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, ZW.jsx)(nE.d, {
-                text: jW
-              }), (0, ZW.jsx)("div", {
+              children: [(0, KR.jsx)(gt.c, {
+                text: LR
+              }), (0, KR.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, ZW.jsx)(nE.d, {
-                  text: (0, JE.d)("", bW.enchantments, bW.enchantmentData)
+                children: (0, KR.jsx)(gt.c, {
+                  text: (0, Bt.d)("", aR.enchantments, aR.enchantmentData)
                 })
               })]
             })]
-          }, PW)
+          }, ZR)
         },
-        rW = function(WW) {
-          for (const iW in WW)
-            if (WW[iW].smp) return !0;
+        FR = function(RR) {
+          for (const JR in RR)
+            if (RR[JR].smp) return !0;
           return !1
-        }(lW.shopInfo),
-        zW = mN(lW.shopInfo, GW),
-        FW = function(WW, iW) {
-          var OW;
-          return !!iW && !(null === (OW = WW[iW]) || void 0 === OW || !OW.loadout)
-        }(lW.shopInfo, GW),
-        QW = (0, ZW.jsx)("div", {
-          className: NW()("ShopOnBoughtInfo", {
-            ShopOnBoughtInfoShow: null !== lW.onBoughtInfo
+        }(rR.shopInfo),
+        TR = Ju(rR.shopInfo, YR),
+        sR = function(RR, JR) {
+          var GR;
+          return !!JR && !(null === (GR = RR[JR]) || void 0 === GR || !GR.loadout)
+        }(rR.shopInfo, YR),
+        hR = (0, KR.jsx)("div", {
+          className: uR()("ShopOnBoughtInfo", {
+            ShopOnBoughtInfoShow: null !== rR.onBoughtInfo
           }),
-          children: (0, ZW.jsx)(nE.d, {
-            text: jW.current
+          children: (0, KR.jsx)(gt.c, {
+            text: LR.current
           })
         });
-      return (0, ZW.jsx)(YE.b, {
+      return (0, KR.jsx)(Ct.d, {
         className: "Menu ShopBody",
-        show: EW,
-        children: 0 !== Object.keys(lW.shopInfo).length && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsxs)("div", {
+        show: tR,
+        children: 0 !== Object.keys(rR.shopInfo).length && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, ZW.jsx)(xW, {
-              items: WP(lW.shopInfo).map((WW => {
-                var iW;
-                return WW === zN ? {
-                  id: WW,
+            children: [(0, KR.jsx)(wR, {
+              items: su(rR.shopInfo).map((RR => {
+                var JR;
+                return RR === Qu ? {
+                  id: RR,
                   title: "loadoutShop:title",
                   redDot: !1
                 } : {
-                  id: WW,
-                  title: null !== (iW = lW.shopInfo[WW].customTitle) && void 0 !== iW ? iW : WW,
-                  redDot: lW.redDotInfo.categoryHasRedDot(WW)
+                  id: RR,
+                  title: null !== (JR = rR.shopInfo[RR].customTitle) && void 0 !== JR ? JR : RR,
+                  redDot: rR.redDotInfo.categoryHasRedDot(RR)
                 }
               })),
-              link: tW ? {
+              link: VR ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, DE.g)({
-                    page: (0, DE.e)(),
+                  (0, Ht.f)({
+                    page: (0, Ht.b)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: FW ? zN : GW,
-              onClick: WW => {
-                WW !== zN ? qW(WW) : FW || qW(FN(lW.shopInfo)[0].categoryKey)
+              selectedItemId: sR ? Qu : YR,
+              onClick: RR => {
+                RR !== Qu ? dR(RR) : sR || dR(Fu(rR.shopInfo)[0].categoryKey)
               },
-              padStartsOnTab: (0, vE.e)(GW)
-            }), (0, ZW.jsx)("div", {
+              padStartsOnTab: (0, Nt.f)(YR)
+            }), (0, KR.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: lW.currencyAmounts && Object.keys(lW.currencyAmounts).map((WW => {
-                const iW = lW.currencyAmounts[WW];
-                return iW.hidden ? null : (0, ZW.jsx)(KP, {
-                  currency: WW,
-                  info: iW,
-                  smaller: uW,
-                  show: EW
-                }, WW)
+              children: rR.currencyAmounts && Object.keys(rR.currencyAmounts).map((RR => {
+                const JR = rR.currencyAmounts[RR];
+                return JR.hidden ? null : (0, KR.jsx)(WZ, {
+                  currency: RR,
+                  info: JR,
+                  smaller: OR,
+                  show: tR
+                }, RR)
               }))
             })]
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [rW && (0, ZW.jsx)(IN, {
-              show: EW,
-              shopInfo: lW.shopInfo,
-              selectedCategoryKey: GW,
-              buy: (WW, iW, OW) => {
-                XW(WW, iW, OW)
+            children: [FR && (0, KR.jsx)(Eu, {
+              show: tR,
+              shopInfo: rR.shopInfo,
+              selectedCategoryKey: YR,
+              buy: (RR, JR, GR) => {
+                SR(RR, JR, GR)
               },
-              canAfford: IW,
-              message: lW.onBoughtInfo
-            }), FW && EW && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [QW, (0, ZW.jsx)(lP, {
-                shopInfo: lW.shopInfo,
-                selectedCategoryKey: GW,
-                selectCategory: qW,
-                buy: XW,
-                canAfford: IW,
-                currencyAmounts: lW.currencyAmounts
+              canAfford: kR,
+              message: rR.onBoughtInfo
+            }), sR && tR && (0, KR.jsxs)(KR.Fragment, {
+              children: [hR, (0, KR.jsx)(KZ, {
+                shopInfo: rR.shopInfo,
+                selectedCategoryKey: YR,
+                selectCategory: dR,
+                buy: SR,
+                canAfford: kR,
+                currencyAmounts: rR.currencyAmounts
               })]
-            }), null === zW && !FW && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [QW, (0, ZW.jsx)("div", {
+            }), null === TR && !sR && (0, KR.jsxs)(KR.Fragment, {
+              children: [hR, (0, KR.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, ZW.jsxs)("div", {
+                children: (0, KR.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (iW = lW.shopInfo[GW]) || void 0 === iW ? void 0 : iW.description) && (0, ZW.jsx)("div", {
+                  children: [(null === (JR = rR.shopInfo[YR]) || void 0 === JR ? void 0 : JR.description) && (0, KR.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, ZW.jsx)(nE.d, {
-                      text: lW.shopInfo[GW].description
+                    children: (0, KR.jsx)(gt.c, {
+                      text: rR.shopInfo[YR].description
                     })
-                  }), EW && (0, ZW.jsx)("div", {
+                  }), tR && (0, KR.jsx)("div", {
                     className: "ShopItems",
-                    ref: sW,
+                    ref: WR,
                     "data-pad-initial-area": !0,
-                    children: VE(null === (OW = lW.shopInfo[GW]) || void 0 === OW ? void 0 : OW.items).map(((WW, iW) => aW(WW, iW)))
+                    children: ot(null === (GR = rR.shopInfo[YR]) || void 0 === GR ? void 0 : GR.items).map(((RR, JR) => QR(RR, JR)))
                   })]
                 })
               })]
@@ -6197,681 +6197,681 @@ export const modules = {
       })
     }));
 
-    function uP(WW) {
+    function bZ(RR) {
       let {
-        item: iW,
-        minWidth: OW,
-        minHeight: mW
-      } = WW;
+        item: JR,
+        minWidth: GR,
+        minHeight: yR
+      } = RR;
       const {
-        image: EW,
-        schematicId: NW,
-        imageColour: PW
-      } = iW;
-      if (NW) return (0, ZW.jsx)("div", {
+        image: tR,
+        schematicId: uR,
+        imageColour: ZR
+      } = JR;
+      if (uR) return (0, KR.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${OW}rem`,
-          height: `${mW}rem`
+          width: `${GR}rem`,
+          height: `${yR}rem`
         },
-        children: (0, ZW.jsx)(uE.b, {
+        children: (0, KR.jsx)(bt.e, {
           game: {
-            schematicId: NW
+            schematicId: uR
           }
         })
       });
-      var cW, wW;
-      if ((0, HE.d)(EW)) return (0, ZW.jsx)("div", {
+      var iR, fR;
+      if ((0, pt.c)(tR)) return (0, KR.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${OW}rem`,
+          minWidth: `${GR}rem`,
           height: "0",
-          minHeight: `${mW}rem`
+          minHeight: `${yR}rem`
         },
-        children: (0, ZW.jsx)(HE.b, {
-          itemName: EW,
-          amount: null !== (cW = iW.amount) && void 0 !== cW ? cW : 0,
-          amountFontSize: mW / 4 + "rem",
-          enchantmentTier: null === (wW = iW.enchant) || void 0 === wW ? void 0 : wW.tier
+        children: (0, KR.jsx)(pt.b, {
+          itemName: tR,
+          amount: null !== (iR = JR.amount) && void 0 !== iR ? iR : 0,
+          amountFontSize: yR / 4 + "rem",
+          enchantmentTier: null === (fR = JR.enchant) || void 0 === fR ? void 0 : fR.tier
         })
       });
-      const tW = EW.slice(-4);
-      return ".jpg" === tW || ".png" === tW ? (0, ZW.jsx)(oP, {
-        image: EW,
-        minWidth: OW
-      }) : (0, ZW.jsx)(LW.c, {
-        name: EW,
+      const VR = tR.slice(-4);
+      return ".jpg" === VR || ".png" === VR ? (0, KR.jsx)(vZ, {
+        image: tR,
+        minWidth: GR
+      }) : (0, KR.jsx)(qR.d, {
+        name: tR,
         className: "SelectedItemImage",
         style: {
-          color: PW
+          color: ZR
         }
       })
     }
 
-    function oP(WW) {
+    function vZ(RR) {
       let {
-        image: iW,
-        minWidth: OW
-      } = WW;
+        image: JR,
+        minWidth: GR
+      } = RR;
       const {
-        gameNameWithVariation: mW
-      } = (0, zi.g)("connectedGame"), EW = iW.endsWith(".jpg");
-      return (0, ZW.jsx)("img", {
-        className: NW()({
-          ShopPixelImage: !EW
+        gameNameWithVariation: yR
+      } = (0, QJ.i)("connectedGame"), tR = JR.endsWith(".jpg");
+      return (0, KR.jsx)("img", {
+        className: uR()({
+          ShopPixelImage: !tR
         }),
         style: {
-          width: `${EW?1.6*OW:OW}rem`,
+          width: `${tR?1.6*GR:GR}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,DW.Tb)(mW)}/${iW}`,
-        alt: iW,
+        src: `/textures/games/${(0,cR.Sb)(yR)}/${JR}`,
+        alt: JR,
         draggable: !1
       })
     }
 
-    function dP(WW) {
+    function OZ(RR) {
       let {
-        item: iW,
-        cost: OW,
-        currencyAmounts: mW
-      } = WW;
-      const EW = !isNaN(OW) && 0 !== OW && HP(mW, iW.currency);
-      let NW = null;
-      return iW.buyButtonText ? NW = iW.buyButtonText : EW ? (NW = OW, iW.sell && (NW = -1 * OW), NW = NW.toString()) : 0 === OW ? NW = "Free" : iW.isRewardedAd && (NW = "Watch ad"), (0, nO.K)(NW) || " " === NW ? null : (0, ZW.jsxs)("div", {
+        item: JR,
+        cost: GR,
+        currencyAmounts: yR
+      } = RR;
+      const tR = !isNaN(GR) && 0 !== GR && pZ(yR, JR.currency);
+      let uR = null;
+      return JR.buyButtonText ? uR = JR.buyButtonText : tR ? (uR = GR, JR.sell && (uR = -1 * GR), uR = uR.toString()) : 0 === GR ? uR = "Free" : JR.isRewardedAd && (uR = "Watch ad"), (0, gG.I)(uR) || " " === uR ? null : (0, KR.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [EW && (0, ZW.jsx)("div", {
+        children: [tR && (0, KR.jsx)("div", {
           style: {
-            color: mW[iW.currency].iconColour
+            color: yR[JR.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, ZW.jsx)(cP, {
-            iconName: mW[iW.currency].icon
+          children: (0, KR.jsx)(ZZ, {
+            iconName: yR[JR.currency].icon
           })
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, ZW.jsx)(nE.d, {
-            text: NW
+          children: (0, KR.jsx)(gt.c, {
+            text: uR
           })
         })]
       })
     }
 
-    function eP(WW) {
+    function xZ(RR) {
       let {
-        item: iW,
-        currInput: OW,
-        updateInput: EW,
-        onSubmit: NW
-      } = WW;
+        item: JR,
+        currInput: GR,
+        updateInput: tR,
+        onSubmit: uR
+      } = RR;
       const {
-        t: LW
-      } = (0, PW.B)(), cW = (0, mW.useRef)(null);
-      if ((0, mW.useEffect)((() => {
-          const WW = cW.current;
-          WW && WW.value !== OW && document.activeElement !== WW && (WW.value = null !== OW && void 0 !== OW ? OW : "")
-        }), [OW]), !iW.userInput) return null;
-      let wW = iW.userInput;
-      if (UW.featureFlags.sanitizeShopInput && "text" === iW.userInput.type && (wW = {
+        t: qR
+      } = (0, ZR.A)(), iR = (0, yR.useRef)(null);
+      if ((0, yR.useEffect)((() => {
+          const RR = iR.current;
+          RR && RR.value !== GR && document.activeElement !== RR && (RR.value = null !== GR && void 0 !== GR ? GR : "")
+        }), [GR]), !JR.userInput) return null;
+      let fR = JR.userInput;
+      if (nR.featureFlags.sanitizeShopInput && "text" === JR.userInput.type && (fR = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === wW.type || "number" === wW.type) {
-        var tW, xW;
-        console.assert(void 0 !== OW, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(iW)}`);
-        const WW = "text" === wW.type && wW.wordCharsOnly;
-        return (0, ZW.jsx)("div", {
+        }), "text" === fR.type || "number" === fR.type) {
+        var VR, wR;
+        console.assert(void 0 !== GR, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(JR)}`);
+        const RR = "text" === fR.type && fR.wordCharsOnly;
+        return (0, KR.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, ZW.jsx)(KW.b, {
+          children: (0, KR.jsx)(CR.b, {
             className: "ShopItemUserInputText",
-            placeholderText: LW(wW.placeholderText),
-            defaultValue: OW,
-            domRef: cW,
-            onValueChange: (iW, OW) => {
-              !0 === WW && (iW = (0, dE.pb)(iW)), cW.current.value = iW, EW(iW)
+            placeholderText: qR(fR.placeholderText),
+            defaultValue: GR,
+            domRef: iR,
+            onValueChange: (JR, GR) => {
+              !0 === RR && (JR = (0, Ot.ab)(JR)), iR.current.value = JR, tR(JR)
             },
-            onEnter: NW,
-            type: wW.type
-          }, (null !== (tW = wW.initialValue) && void 0 !== tW ? tW : "") + (null !== (xW = wW.placeholderText) && void 0 !== xW ? xW : ""))
+            onEnter: uR,
+            type: fR.type
+          }, (null !== (VR = fR.initialValue) && void 0 !== VR ? VR : "") + (null !== (wR = fR.placeholderText) && void 0 !== wR ? wR : ""))
         })
       }
-      if ("dropdown" === wW.type) {
-        console.assert(void 0 !== OW, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(iW)}`);
-        const WW = wW.autoSubmit;
-        return (0, ZW.jsx)("div", {
+      if ("dropdown" === fR.type) {
+        console.assert(void 0 !== GR, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(JR)}`);
+        const RR = fR.autoSubmit;
+        return (0, KR.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, ZW.jsx)(ai.e, {
-            options: wW.dropdownOptions.map((WW => (0, TE.c)(WW))),
-            value: OW,
-            onChange: iW => {
+          children: (0, KR.jsx)(YJ.e, {
+            options: fR.dropdownOptions.map((RR => (0, Mt.f)(RR))),
+            value: GR,
+            onChange: JR => {
               let {
-                value: OW
-              } = iW;
-              EW(OW), WW && NW(OW)
+                value: GR
+              } = JR;
+              tR(GR), RR && uR(GR)
             }
           })
         })
       }
-      return "player" === wW.type ? (0, ZW.jsx)(vP, {
-        userInput: wW,
-        currInput: OW,
-        updateInput: EW
-      }) : "color" === wW.type ? (0, ZW.jsx)("div", {
+      return "player" === fR.type ? (0, KR.jsx)(NZ, {
+        userInput: fR,
+        currInput: GR,
+        updateInput: tR
+      }) : "color" === fR.type ? (0, KR.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, ZW.jsx)("input", {
+        children: (0, KR.jsx)("input", {
           type: "color",
-          value: OW,
-          onChange: WW => {
-            EW(WW.target.value)
+          value: GR,
+          onChange: RR => {
+            tR(RR.target.value)
           }
         })
       }) : null
     }
 
-    function vP(WW) {
+    function NZ(RR) {
       let {
-        userInput: iW,
-        currInput: OW,
-        updateInput: mW
-      } = WW;
-      const EW = (0, zi.g)("players"),
-        NW = (0, zi.g)("hiddenPlayerNames"),
-        PW = (0, TE.d)(EW.ids, EW.localId, iW);
-      return (0, ZW.jsx)("div", {
+        userInput: JR,
+        currInput: GR,
+        updateInput: yR
+      } = RR;
+      const tR = (0, QJ.i)("players"),
+        uR = (0, QJ.i)("hiddenPlayerNames"),
+        ZR = (0, Mt.j)(tR.ids, tR.localId, JR);
+      return (0, KR.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, ZW.jsx)(ai.e, {
-          options: PW.map((WW => {
+        children: (0, KR.jsx)(YJ.e, {
+          options: ZR.map((RR => {
             const {
-              name: iW
-            } = EW.byId[WW];
+              name: JR
+            } = tR.byId[RR];
             return {
-              value: WW,
-              label: null === iW ? "" : (0, oE.g)(iW, NW)
+              value: RR,
+              label: null === JR ? "" : (0, vt.e)(JR, uR)
             }
           })),
-          value: OW,
-          onChange: WW => {
+          value: GR,
+          onChange: RR => {
             let {
-              value: iW
-            } = WW;
-            mW(iW)
+              value: JR
+            } = RR;
+            yR(JR)
           }
         })
       })
     }
 
-    function gP(WW) {
+    function DZ(RR) {
       let {
-        ids: iW
-      } = WW;
-      return iW
+        ids: JR
+      } = RR;
+      return JR
     }
 
-    function DP(WW) {
+    function HZ(RR) {
       let {
-        localId: iW
-      } = WW;
-      return iW
+        localId: JR
+      } = RR;
+      return JR
     }
-    var VP = OW(1729);
-    const pP = (0, OW(1479).l)((WW => WW.PadLobbyShortcuts)),
-      fP = (0, mW.lazy)((() => Promise.resolve().then((() => OW(5361))).then((WW => ({
-        default: WW.Lobbyleaderboard
+    var oZ = GR(1800);
+    const cZ = (0, GR(1547).j)((RR => RR.PadLobbyShortcuts)),
+      PZ = (0, yR.lazy)((() => Promise.resolve().then((() => GR(5463))).then((RR => ({
+        default: RR.Lobbyleaderboard
       }))))),
-      CP = (0, mW.lazy)((() => OW.e(253).then((() => OW(42561))).then((WW => ({
-        default: WW.LobbyManageView
+      IZ = (0, yR.lazy)((() => GR.e(253).then((() => GR(42608))).then((RR => ({
+        default: RR.LobbyManageView
       })))));
 
-    function XP(WW) {
+    function mZ(RR) {
       let {
-        show: iW
-      } = WW;
-      return iW ? (0, ZW.jsx)(BP, {}) : null
+        show: JR
+      } = RR;
+      return JR ? (0, KR.jsx)(zZ, {}) : null
     }
 
-    function BP() {
-      const WW = (0, gE.c)();
-      return (0, ZW.jsxs)(ZW.Fragment, {
-        children: [(0, ZW.jsx)(pP, {}), (0, ZW.jsxs)(mW.Suspense, {
-          fallback: (0, ZW.jsx)("div", {
+    function zZ() {
+      const RR = (0, Dt.c)();
+      return (0, KR.jsxs)(KR.Fragment, {
+        children: [(0, KR.jsx)(cZ, {}), (0, KR.jsxs)(yR.Suspense, {
+          fallback: (0, KR.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, ZW.jsx)(SW.d, {})
+            children: (0, KR.jsx)(XR.d, {})
           }),
-          children: [WW && (0, ZW.jsx)(CP, {
-            leaderboard: (0, ZW.jsx)(fP, {})
-          }), !WW && (0, ZW.jsx)(fP, {})]
+          children: [RR && (0, KR.jsx)(IZ, {
+            leaderboard: (0, KR.jsx)(PZ, {})
+          }), !RR && (0, KR.jsx)(PZ, {})]
         })]
       })
     }
-    var qP = OW(1653),
-      RP = OW(3216),
-      GP = OW(1856),
-      IP = OW(4126),
-      aP = OW(3697),
-      rP = OW(1576),
-      zP = OW(1536),
-      FP = OW(4058),
-      QP = OW(4066),
-      WL = OW(4217),
-      iL = OW(3200);
-    const OL = "storeRecentGiftRecipients",
-      mL = new Map;
+    var SZ = GR(1716),
+      jZ = GR(3329),
+      dZ = GR(1943),
+      EZ = GR(4214),
+      YZ = GR(3804),
+      kZ = GR(1642),
+      QZ = GR(1594),
+      FZ = GR(4150),
+      TZ = GR(4161),
+      sZ = GR(4293),
+      hZ = GR(3301);
+    const Rq = "storeRecentGiftRecipients",
+      Jq = new Map;
 
-    function EL() {
+    function Gq() {
       try {
-        const WW = AO.i.getItem(OL);
-        return Array.isArray(WW) ? WW.filter((WW => "string" === typeof(null === WW || void 0 === WW ? void 0 : WW.name) && WW.name.length > 0)).map((WW => ({
-          name: WW.name,
-          cosmetics: WW.cosmetics && "object" === typeof WW.cosmetics ? WW.cosmetics : null
+        const RR = wG.i.getItem(Rq);
+        return Array.isArray(RR) ? RR.filter((RR => "string" === typeof(null === RR || void 0 === RR ? void 0 : RR.name) && RR.name.length > 0)).map((RR => ({
+          name: RR.name,
+          cosmetics: RR.cosmetics && "object" === typeof RR.cosmetics ? RR.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function NL(WW, iW) {
-      var OW;
-      const [EW, NW] = (0, mW.useState)(""), [PW, LW] = (0, mW.useState)("search"), [cW, wW] = (0, mW.useState)(null), [tW, ZW] = (0, mW.useState)(null), xW = (0, mW.useRef)(null), lW = (0, mW.useRef)(null);
-      (0, mW.useEffect)((() => () => {
-        xW.current && clearTimeout(xW.current)
-      }), []), (0, mW.useEffect)((() => {
-        iW || jW()
-      }), [iW]);
-      const AW = null !== (OW = null === cW || void 0 === cW ? void 0 : cW.name) && void 0 !== OW ? OW : null;
+    function yq(RR, JR) {
+      var GR;
+      const [tR, uR] = (0, yR.useState)(""), [ZR, qR] = (0, yR.useState)("search"), [iR, fR] = (0, yR.useState)(null), [VR, KR] = (0, yR.useState)(null), wR = (0, yR.useRef)(null), rR = (0, yR.useRef)(null);
+      (0, yR.useEffect)((() => () => {
+        wR.current && clearTimeout(wR.current)
+      }), []), (0, yR.useEffect)((() => {
+        JR || LR()
+      }), [JR]);
+      const eR = null !== (GR = null === iR || void 0 === iR ? void 0 : iR.name) && void 0 !== GR ? GR : null;
 
-      function bW() {
-        xW.current && (clearTimeout(xW.current), xW.current = null)
+      function aR() {
+        wR.current && (clearTimeout(wR.current), wR.current = null)
       }
 
-      function jW() {
-        bW(), NW(""), LW("search"), wW(null)
-      }(0, mW.useEffect)((() => {
-        if (null === AW || WW === HW.NULL_USER_CONTEXT) return;
-        const iW = AW.toLowerCase();
-        if (iW === WW.getPlayerName().toLowerCase()) return void ZW({
-          name: AW,
+      function LR() {
+        aR(), uR(""), qR("search"), fR(null)
+      }(0, yR.useEffect)((() => {
+        if (null === eR || RR === bR.NULL_USER_CONTEXT) return;
+        const JR = eR.toLowerCase();
+        if (JR === RR.getPlayerName().toLowerCase()) return void KR({
+          name: eR,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const OW = mL.get(iW);
-        if (OW) return void ZW({
-          name: AW,
-          result: OW
+        const GR = Jq.get(JR);
+        if (GR) return void KR({
+          name: eR,
+          result: GR
         });
-        let mW = !1;
-        return async function(WW, iW) {
+        let yR = !1;
+        return async function(RR, JR) {
           try {
-            const OW = await (0, HW.postJsonWithMetricsCookiesAndJsonResponse)(`${ni.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: iW
+            const GR = await (0, bR.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: JR
             }, {
               retries: 1
-            }, WW.getMetricsCookies());
-            if ("boolean" !== typeof(null === OW || void 0 === OW ? void 0 : OW.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(OW)}`);
-            return OW
-          } catch (OW) {
-            return console.error("Failed to look up gift recipient:", OW), {
+            }, RR.getMetricsCookies());
+            if ("boolean" !== typeof(null === GR || void 0 === GR ? void 0 : GR.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(GR)}`);
+            return GR
+          } catch (GR) {
+            return console.error("Failed to look up gift recipient:", GR), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(WW, AW).catch((WW => (console.error("Gift recipient lookup failed:", WW), {
+        }(RR, eR).catch((RR => (console.error("Gift recipient lookup failed:", RR), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((WW => {
-          !0 !== WW.giftRecipientFound && "store:giftRecipientLookupFailed" === WW.giftRecipientError || mL.set(iW, WW), mW || ZW({
-            name: AW,
-            result: WW
+        }))).then((RR => {
+          !0 !== RR.giftRecipientFound && "store:giftRecipientLookupFailed" === RR.giftRecipientError || Jq.set(JR, RR), yR || KR({
+            name: eR,
+            result: RR
           })
         })), () => {
-          mW = !0
+          yR = !0
         }
-      }), [AW, WW]);
-      const UW = (0, mW.useMemo)((() => {
-        const WW = EW.trim();
-        if (!WW) return {
+      }), [eR, RR]);
+      const nR = (0, yR.useMemo)((() => {
+        const RR = tR.trim();
+        if (!RR) return {
           status: "none"
         };
-        if (!cW || cW.name !== WW || (null === tW || void 0 === tW ? void 0 : tW.name) !== cW.name) return {
+        if (!iR || iR.name !== RR || (null === VR || void 0 === VR ? void 0 : VR.name) !== iR.name) return {
           status: "pending",
-          name: WW
+          name: RR
         };
-        const iW = tW.result;
-        return !1 === iW.giftRecipientFound ? {
+        const JR = VR.result;
+        return !1 === JR.giftRecipientFound ? {
           status: "error",
-          name: cW.name,
-          error: iW.giftRecipientError
+          name: iR.name,
+          error: JR.giftRecipientError
         } : {
           status: "found",
-          name: iW.giftRecipientName,
-          ownedPacks: iW.giftRecipientOwnedPacks,
-          hasSuperRank: iW.giftRecipientHasSuperRank,
-          isSubscriber: iW.giftRecipientIsSubscriber
+          name: JR.giftRecipientName,
+          ownedPacks: JR.giftRecipientOwnedPacks,
+          hasSuperRank: JR.giftRecipientHasSuperRank,
+          isSubscriber: JR.giftRecipientIsSubscriber
         }
-      }), [EW, cW, tW]);
-      (0, mW.useEffect)((() => {
-        "found" === UW.status && "typed" === (null === cW || void 0 === cW ? void 0 : cW.source) && lW.current !== UW.name && (lW.current = UW.name, (0, ji.reportAnalyticsClick)({
+      }), [tR, iR, VR]);
+      (0, yR.useEffect)((() => {
+        "found" === nR.status && "typed" === (null === iR || void 0 === iR ? void 0 : iR.source) && rR.current !== nR.name && (rR.current = nR.name, (0, LJ.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [UW, cW]);
-      const kW = (null === tW || void 0 === tW ? void 0 : tW.name) === (null === cW || void 0 === cW ? void 0 : cW.name) ? null === tW || void 0 === tW ? void 0 : tW.result : null,
-        sW = !0 === (null === kW || void 0 === kW ? void 0 : kW.giftRecipientFound) ? kW.giftRecipientCosmetics : null;
+      }), [nR, iR]);
+      const UR = (null === VR || void 0 === VR ? void 0 : VR.name) === (null === iR || void 0 === iR ? void 0 : iR.name) ? null === VR || void 0 === VR ? void 0 : VR.result : null,
+        WR = !0 === (null === UR || void 0 === UR ? void 0 : UR.giftRecipientFound) ? UR.giftRecipientCosmetics : null;
       return {
-        query: EW,
-        via: PW,
-        recipient: UW,
-        recipientCosmetics: sW,
-        type: function(WW) {
-          NW(WW), LW("search"), bW();
-          const iW = WW.trim();
-          iW ? xW.current = setTimeout((() => {
-            wW({
-              name: iW,
+        query: tR,
+        via: ZR,
+        recipient: nR,
+        recipientCosmetics: WR,
+        type: function(RR) {
+          uR(RR), qR("search"), aR();
+          const JR = RR.trim();
+          JR ? wR.current = setTimeout((() => {
+            fR({
+              name: JR,
               source: "typed"
             })
-          }), 400) : wW(null)
+          }), 400) : fR(null)
         },
-        choose: function(WW, iW) {
-          bW(), NW(WW), LW("typed" === iW ? "search" : "prefilled" === iW ? "prefilled" : "suggestion"), wW({
-            name: WW,
-            source: iW
-          }), "typed" !== iW && "prefilled" !== iW && (0, ji.reportAnalyticsClick)({
+        choose: function(RR, JR) {
+          aR(), uR(RR), qR("typed" === JR ? "search" : "prefilled" === JR ? "prefilled" : "suggestion"), fR({
+            name: RR,
+            source: JR
+          }), "typed" !== JR && "prefilled" !== JR && (0, LJ.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: iW
+            value: JR
           })
         },
-        clear: jW,
-        recordGift: function(WW, iW) {
-          ! function(WW) {
-            mL.delete(WW.toLowerCase())
-          }(WW), ZW((OW => {
-            if (!OW || OW.name.toLowerCase() !== WW.toLowerCase() || !0 !== OW.result.giftRecipientFound || "superRank" === iW) return OW;
-            const mW = OW.result.giftRecipientOwnedPacks;
+        clear: LR,
+        recordGift: function(RR, JR) {
+          ! function(RR) {
+            Jq.delete(RR.toLowerCase())
+          }(RR), KR((GR => {
+            if (!GR || GR.name.toLowerCase() !== RR.toLowerCase() || !0 !== GR.result.giftRecipientFound || "superRank" === JR) return GR;
+            const yR = GR.result.giftRecipientOwnedPacks;
             return {
-              ...OW,
+              ...GR,
               result: {
-                ...OW.result,
-                giftRecipientOwnedPacks: mW.includes(iW) ? mW : [...mW, iW]
+                ...GR.result,
+                giftRecipientOwnedPacks: yR.includes(JR) ? yR : [...yR, JR]
               }
             }
           }))
         }
       }
     }
-    var PL = OW(3193),
-      LL = OW(5371),
-      cL = OW(232),
-      wL = OW(3953);
-    const tL = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var ZL = OW(3147),
-      xL = OW(625),
-      lL = OW(3247),
-      AL = OW(3610);
+    var tq = GR(3292),
+      uq = GR(5474),
+      Zq = GR(271),
+      qq = GR(4051);
+    const iq = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var fq = GR(3240),
+      Vq = GR(656),
+      Kq = GR(3361),
+      wq = GR(3713);
 
-    function bL(WW) {
+    function rq(RR) {
       let {
-        cosmetics: iW
-      } = WW;
-      return (0, ZW.jsx)("span", {
+        cosmetics: JR
+      } = RR;
+      return (0, KR.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, ZW.jsx)(lL.e, {
-          cosmetics: iW
+        children: (0, KR.jsx)(Kq.c, {
+          cosmetics: JR
         })
       })
     }
 
-    function jL(WW, iW) {
-      var OW, mW;
-      const EW = null !== (OW = WW.friend) && void 0 !== OW ? OW : {
+    function eq(RR, JR) {
+      var GR, yR;
+      const tR = null !== (GR = RR.friend) && void 0 !== GR ? GR : {
         isError: !1,
-        name: WW.name,
+        name: RR.name,
         ranks: [],
-        cosmetics: null !== (mW = WW.cosmetics) && void 0 !== mW ? mW : {},
-        nameColour: xL.d,
+        cosmetics: null !== (yR = RR.cosmetics) && void 0 !== yR ? yR : {},
+        nameColour: Vq.c,
         location: {
           status: "noGamePlayed"
         }
       };
-      return iW ? {
-        ...EW,
-        cosmetics: iW
-      } : EW
+      return JR ? {
+        ...tR,
+        cosmetics: JR
+      } : tR
     }
 
-    function UL(WW) {
+    function aq(RR) {
       let {
-        pending: iW
-      } = WW;
-      return (0, ZW.jsx)("span", {
+        pending: JR
+      } = RR;
+      return (0, KR.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: iW && (0, ZW.jsx)(SW.d, {})
+        children: JR && (0, KR.jsx)(XR.d, {})
       })
     }
 
-    function kL(WW) {
-      var iW;
+    function Lq(RR) {
+      var JR;
       let {
-        selfName: OW,
-        giftRecipient: EW,
-        suggestionsVersion: cW,
-        pulseSignal: tW,
-        disabled: xW
-      } = WW;
+        selfName: GR,
+        giftRecipient: tR,
+        suggestionsVersion: iR,
+        pulseSignal: VR,
+        disabled: wR
+      } = RR;
       const {
-        t: lW
-      } = (0, PW.B)(), AW = (0, IW.l)(), bW = (0, mW.useRef)(null), jW = (0, mW.useRef)(null), {
-        query: kW,
-        via: sW,
-        recipient: MW,
-        recipientCosmetics: SW
-      } = EW, YW = (0, iL.m)(kW), yW = (0, mW.useMemo)((() => {
-        const WW = UW.featureFlags.useSocialFeatures ? AW.friends.filter((WW => !WW.isError)) : [];
-        return (0, iL.h)({
-          onlineFriends: (0, IW.h)(WW),
-          recentRecipients: EL(),
-          friends: WW,
-          selfName: OW,
+        t: rR
+      } = (0, ZR.A)(), eR = (0, kR.k)(), aR = (0, yR.useRef)(null), LR = (0, yR.useRef)(null), {
+        query: UR,
+        via: WR,
+        recipient: AR,
+        recipientCosmetics: XR
+      } = tR, MR = (0, hZ.i)(UR), BR = (0, yR.useMemo)((() => {
+        const RR = nR.featureFlags.useSocialFeatures ? eR.friends.filter((RR => !RR.isError)) : [];
+        return (0, hZ.g)({
+          onlineFriends: (0, kR.f)(RR),
+          recentRecipients: Gq(),
+          friends: RR,
+          selfName: GR,
           max: 8
         })
-      }), [AW.friends, OW, cW]), TW = kW.trim().toLowerCase(), JW = "search" !== sW && TW ? yW.find((WW => WW.name.toLowerCase() === TW)) : void 0, hW = JW && "prefilled" === sW ? [JW, ...yW.filter((WW => WW !== JW))] : yW, HW = "" !== TW && !JW, nW = HW ? kW : "", uW = hW.length > 0;
-      (0, mW.useEffect)((() => {
-        bW.current && bW.current.value !== nW && (bW.current.value = nW)
-      }), [nW]), (0, mW.useEffect)((() => {
-        bW.current && (bW.current.disabled = xW)
-      }), [xW, tW]);
-      const oW = (0, mW.useRef)(0);
+      }), [eR.friends, GR, iR]), lR = UR.trim().toLowerCase(), pR = "search" !== WR && lR ? BR.find((RR => RR.name.toLowerCase() === lR)) : void 0, gR = pR && "prefilled" === WR ? [pR, ...BR.filter((RR => RR !== pR))] : BR, bR = "" !== lR && !pR, vR = bR ? UR : "", OR = gR.length > 0;
+      (0, yR.useEffect)((() => {
+        aR.current && aR.current.value !== vR && (aR.current.value = vR)
+      }), [vR]), (0, yR.useEffect)((() => {
+        aR.current && (aR.current.disabled = wR)
+      }), [wR, VR]);
+      const xR = (0, yR.useRef)(0);
 
-      function eW() {
-        "self" !== YW && (0, ji.reportAnalyticsClick)({
+      function DR() {
+        "self" !== MR && (0, LJ.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), EW.clear()
+        }), tR.clear()
       }
 
-      function vW(WW) {
-        var iW, OW;
-        if (xW) return;
-        if (" " === WW.key || "Enter" === WW.key) return WW.preventDefault(), void WW.currentTarget.click();
-        const mW = Array.from(null !== (iW = null === (OW = jW.current) || void 0 === OW ? void 0 : OW.querySelectorAll("[role=radio]")) && void 0 !== iW ? iW : []),
-          EW = mW.indexOf(WW.currentTarget);
-        let NW;
-        "ArrowRight" === WW.key || "ArrowDown" === WW.key ? NW = mW[(EW + 1) % mW.length] : "ArrowLeft" === WW.key || "ArrowUp" === WW.key ? NW = mW[(EW - 1 + mW.length) % mW.length] : "Home" === WW.key ? NW = mW[0] : "End" === WW.key && (NW = mW[mW.length - 1]), NW && (WW.preventDefault(), NW.focus(), NW.click())
-      }(0, mW.useEffect)((() => {
-        var WW;
-        tW > oW.current && !xW && (oW.current = tW, null === (WW = bW.current) || void 0 === WW || WW.focus())
-      }), [tW, xW]);
-      const gW = "self" === YW,
-        DW = null !== (iW = null === JW || void 0 === JW ? void 0 : JW.name) && void 0 !== iW ? iW : null,
-        VW = "error" === MW.status ? MW.error : null,
-        pW = "store:giftRecipientLookupFailed" === VW;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: xW,
-          StoreRecipientStripNoChips: !uW
+      function HR(RR) {
+        var JR, GR;
+        if (wR) return;
+        if (" " === RR.key || "Enter" === RR.key) return RR.preventDefault(), void RR.currentTarget.click();
+        const yR = Array.from(null !== (JR = null === (GR = LR.current) || void 0 === GR ? void 0 : GR.querySelectorAll("[role=radio]")) && void 0 !== JR ? JR : []),
+          tR = yR.indexOf(RR.currentTarget);
+        let uR;
+        "ArrowRight" === RR.key || "ArrowDown" === RR.key ? uR = yR[(tR + 1) % yR.length] : "ArrowLeft" === RR.key || "ArrowUp" === RR.key ? uR = yR[(tR - 1 + yR.length) % yR.length] : "Home" === RR.key ? uR = yR[0] : "End" === RR.key && (uR = yR[yR.length - 1]), uR && (RR.preventDefault(), uR.focus(), uR.click())
+      }(0, yR.useEffect)((() => {
+        var RR;
+        VR > xR.current && !wR && (xR.current = VR, null === (RR = aR.current) || void 0 === RR || RR.focus())
+      }), [VR, wR]);
+      const oR = "self" === MR,
+        cR = null !== (JR = null === pR || void 0 === pR ? void 0 : pR.name) && void 0 !== JR ? JR : null,
+        PR = "error" === AR.status ? AR.error : null,
+        IR = "store:giftRecipientLookupFailed" === PR;
+      return (0, KR.jsxs)("div", {
+        className: uR()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: wR,
+          StoreRecipientStripNoChips: !OR
         }),
-        children: [(0, ZW.jsx)("span", {
+        children: [(0, KR.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: lW("store:buyingFor")
-        }), (0, ZW.jsxs)("div", {
-          ref: jW,
+          children: rR("store:buyingFor")
+        }), (0, KR.jsxs)("div", {
+          ref: LR,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": lW("store:whoIsItFor"),
-          children: [(0, ZW.jsxs)("div", {
+          "aria-label": rR("store:whoIsItFor"),
+          children: [(0, KR.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": gW,
-            tabIndex: xW || !gW && null !== DW ? -1 : 0,
-            className: NW()("StoreRecipientMe", {
-              StoreRecipientChecked: gW
+            "aria-checked": oR,
+            tabIndex: wR || !oR && null !== cR ? -1 : 0,
+            className: uR()("StoreRecipientMe", {
+              StoreRecipientChecked: oR
             }),
             onClick: () => {
-              xW || eW()
+              wR || DR()
             },
-            onKeyDown: vW,
-            children: [(0, ZW.jsx)(LW.c, {
+            onKeyDown: HR,
+            children: [(0, KR.jsx)(qR.d, {
               name: "user"
-            }), " ", lW("store:me")]
-          }), uW && (0, ZW.jsx)("div", {
+            }), " ", rR("store:me")]
+          }), OR && (0, KR.jsx)("div", {
             className: "StoreRecipientChips",
-            children: hW.map((WW => {
-              const iW = WW === JW;
-              return (0, ZW.jsx)("div", {
+            children: gR.map((RR => {
+              const JR = RR === pR;
+              return (0, KR.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": iW,
-                tabIndex: !xW && iW ? 0 : -1,
-                title: WW.name,
-                className: NW()("StoreRecipientChip", {
-                  StoreRecipientChecked: iW
+                "aria-checked": JR,
+                tabIndex: !wR && JR ? 0 : -1,
+                title: RR.name,
+                className: uR()("StoreRecipientChip", {
+                  StoreRecipientChecked: JR
                 }),
                 onClick: () => {
-                  xW || function(WW) {
-                    "gift" !== YW && (0, ji.reportAnalyticsClick)({
+                  wR || function(RR) {
+                    "gift" !== MR && (0, LJ.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), EW.choose(WW.name, WW.kind)
-                  }(WW)
+                    }), tR.choose(RR.name, RR.kind)
+                  }(RR)
                 },
-                onKeyDown: vW,
-                children: (0, ZW.jsx)(AL.g, {
-                  playerSocialPreview: jL(WW, iW ? SW : null),
+                onKeyDown: HR,
+                children: (0, KR.jsx)(wq.h, {
+                  playerSocialPreview: eq(RR, JR ? XR : null),
                   opensProfileCard: !1,
-                  isFriend: null !== WW.friend,
+                  isFriend: null !== RR.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== WW.friend,
-                  status: null === WW.friend ? null : void 0,
-                  trailing: iW ? (0, ZW.jsx)(UL, {
-                    pending: "pending" === MW.status
+                  showLocation: null !== RR.friend,
+                  status: null === RR.friend ? null : void 0,
+                  trailing: JR ? (0, KR.jsx)(aq, {
+                    pending: "pending" === AR.status
                   }) : void 0
                 })
-              }, WW.name)
+              }, RR.name)
             }))
           })]
-        }), (0, ZW.jsxs)("div", {
-          className: NW()("StoreRecipientSearch", {
-            StoreRecipientChecked: HW,
-            StoreRecipientSearchPulse: tW > 0 && !HW,
-            StoreRecipientSearchError: null !== VW && !pW
+        }), (0, KR.jsxs)("div", {
+          className: uR()("StoreRecipientSearch", {
+            StoreRecipientChecked: bR,
+            StoreRecipientSearchPulse: VR > 0 && !bR,
+            StoreRecipientSearchError: null !== PR && !IR
           }),
           onClick: () => {
-            var WW;
-            null === (WW = bW.current) || void 0 === WW || WW.focus()
+            var RR;
+            null === (RR = aR.current) || void 0 === RR || RR.focus()
           },
-          children: [HW && "found" === MW.status && SW && (0, ZW.jsx)(bL, {
-            cosmetics: SW
-          }), !(HW && "found" === MW.status && SW) && (0, ZW.jsx)(LW.c, {
+          children: [bR && "found" === AR.status && XR && (0, KR.jsx)(rq, {
+            cosmetics: XR
+          }), !(bR && "found" === AR.status && XR) && (0, KR.jsx)(qR.d, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, ZW.jsx)(KW.b, {
+          }), (0, KR.jsx)(CR.b, {
             className: "StoreRecipientSearchInput",
-            domRef: bW,
-            placeholderText: lW("store:searchName"),
-            defaultValue: nW,
-            maxLength: dW.f,
-            onValueChange: function(WW) {
-              "gift" !== YW && WW.trim() && (0, ji.reportAnalyticsClick)({
+            domRef: aR,
+            placeholderText: rR("store:searchName"),
+            defaultValue: vR,
+            maxLength: NR.i,
+            onValueChange: function(RR) {
+              "gift" !== MR && RR.trim() && (0, LJ.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), EW.type(WW)
+              }), tR.type(RR)
             },
             onEnter: () => {
-              var WW;
-              const iW = null === (WW = bW.current) || void 0 === WW ? void 0 : WW.value.trim();
-              iW && EW.choose(iW, "typed")
+              var RR;
+              const JR = null === (RR = aR.current) || void 0 === RR ? void 0 : RR.value.trim();
+              JR && tR.choose(JR, "typed")
             },
             blurOnEnter: !0
-          }), HW && (0, ZW.jsx)(UL, {
-            pending: "pending" === MW.status
-          }), HW && (0, ZW.jsx)("div", {
-            ...(0, wW.fb)({
-              disabled: xW
+          }), bR && (0, KR.jsx)(aq, {
+            pending: "pending" === AR.status
+          }), bR && (0, KR.jsx)("div", {
+            ...(0, fR.bb)({
+              disabled: wR
             }),
-            "aria-label": lW("store:clearRecipient"),
-            title: lW("store:clearRecipient"),
+            "aria-label": rR("store:clearRecipient"),
+            title: rR("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: WW => {
-              WW.stopPropagation(), xW || eW()
+            onClick: RR => {
+              RR.stopPropagation(), wR || DR()
             },
-            children: (0, ZW.jsx)(LW.c, {
+            children: (0, KR.jsx)(qR.d, {
               name: "xmark"
             })
           })]
-        }, tW), VW && (0, ZW.jsx)("div", {
-          className: NW()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: pW
+        }, VR), PR && (0, KR.jsx)("div", {
+          className: uR()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: IR
           }),
           role: "status",
-          children: lW(VW)
+          children: rR(PR)
         })]
       })
     }
-    var sL = OW(3079),
-      ML = OW(3291),
-      KL = OW(3627),
-      SL = OW(4779),
-      YL = OW(3153),
-      yL = OW(4261),
-      TL = OW(4264),
-      JL = OW(4226);
-    const hL = [xL.C.yellow, xL.C.green, xL.C.aqua, xL.C.blue, xL.C.purple, xL.C.red];
+    var nq = GR(3172),
+      Uq = GR(3413),
+      Wq = GR(3724),
+      Aq = GR(4884),
+      Cq = GR(3243),
+      Xq = GR(4326),
+      Mq = GR(4332),
+      Bq = GR(4296);
+    const lq = [Vq.v.yellow, Vq.v.green, Vq.v.aqua, Vq.v.blue, Vq.v.purple, Vq.v.red];
 
-    function HL(WW) {
-      return "needsRecipient" === WW || "lookingUp" === WW || "gift" === WW || "recipientOwns" === WW || "recipientSharesOwned" === WW || "recipientSubscribed" === WW
+    function pq(RR) {
+      return "needsRecipient" === RR || "lookingUp" === RR || "gift" === RR || "recipientOwns" === RR || "recipientSharesOwned" === RR || "recipientSubscribed" === RR
     }
 
-    function nL(WW) {
+    function gq(RR) {
       const {
-        onKeyDown: iW,
-        ...OW
-      } = (0, wW.fb)();
+        onKeyDown: JR,
+        ...GR
+      } = (0, fR.bb)();
       return {
-        ...OW,
-        "aria-label": WW,
-        onKeyDown: WW => {
-          WW.target === WW.currentTarget && (null === iW || void 0 === iW || iW(WW))
+        ...GR,
+        "aria-label": RR,
+        onKeyDown: RR => {
+          RR.target === RR.currentTarget && (null === JR || void 0 === JR || JR(RR))
         }
       }
     }
 
-    function uL(WW) {
+    function bq(RR) {
       let {
-        text: iW
-      } = WW;
-      return (0, ZW.jsx)("span", {
+        text: JR
+      } = RR;
+      return (0, KR.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(iW).map(((WW, iW) => (0, ZW.jsx)("span", {
+        children: Array.from(JR).map(((RR, JR) => (0, KR.jsx)("span", {
           style: {
-            color: hL[iW % hL.length]
+            color: lq[JR % lq.length]
           },
-          children: WW
-        }, iW)))
+          children: RR
+        }, JR)))
       })
     }
-    const oL = {
+    const vq = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6879,81 +6879,81 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function dL(WW) {
+    function Oq(RR) {
       let {
-        state: iW,
-        item: OW,
-        price: mW,
-        busy: EW,
-        highlight: cW = !1,
-        secondary: tW = !1,
-        onAct: xW,
-        onNeedRecipient: lW,
-        onLogin: AW
-      } = WW;
+        state: JR,
+        item: GR,
+        price: yR,
+        busy: tR,
+        highlight: iR = !1,
+        secondary: VR = !1,
+        onAct: wR,
+        onNeedRecipient: rR,
+        onLogin: eR
+      } = RR;
       const {
-        t: bW
-      } = (0, PW.B)(), jW = "superRank" === OW ? (0, pW.p)(Date.now()).product.days : null, UW = "superRank" === OW && "hyper" === (0, pW.o)(Date.now()).look ? wW.v : wW.n, kW = tW ? wW.h : UW, sW = WW => null === jW ? bW(WW ? "general:gift" : "general:buy") : bW(WW ? "store:giftDays" : "store:buyDays", {
-        days: jW
-      }), MW = (WW, iW) => {
-        const OW = (0, ZW.jsxs)(ZW.Fragment, {
-          children: [null === WW && (0, ZW.jsx)("span", {
+        t: aR
+      } = (0, ZR.A)(), LR = "superRank" === GR ? (0, IR.v)(Date.now()).product.days : null, nR = "superRank" === GR && "hyper" === (0, IR.s)(Date.now()).look ? fR.u : fR.n, UR = VR ? fR.i : nR, WR = RR => null === LR ? aR(RR ? "general:gift" : "general:buy") : aR(RR ? "store:giftDays" : "store:buyDays", {
+        days: LR
+      }), AR = (RR, JR) => {
+        const GR = (0, KR.jsxs)(KR.Fragment, {
+          children: [null === RR && (0, KR.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== WW && (0, ZW.jsx)("span", {
+          }), null !== RR && (0, KR.jsx)("span", {
             className: "StoreCtaLabel",
-            title: WW,
-            children: WW
+            title: RR,
+            children: RR
           })]
         });
-        return null !== jW ? (0, ZW.jsxs)(ZW.Fragment, {
-          children: [iW && (0, ZW.jsx)("span", {
+        return null !== LR ? (0, KR.jsxs)(KR.Fragment, {
+          children: [JR && (0, KR.jsx)("span", {
             className: "StoreCtaIcon",
-            children: iW
-          }), OW, (0, ZW.jsxs)("span", {
+            children: JR
+          }), GR, (0, KR.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, ZW.jsx)(ML.c, {
-              amount: mW
+            children: ["\xb7", (0, KR.jsx)(Uq.b, {
+              amount: yR
             })]
           })]
-        }) : (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsxs)("span", {
+        }) : (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [OW, "\xb7"]
-          }), (0, ZW.jsxs)("span", {
+            children: [GR, "\xb7"]
+          }), (0, KR.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [iW, (0, ZW.jsx)(ML.c, {
-              amount: mW
+            children: [JR, (0, KR.jsx)(Uq.b, {
+              amount: yR
             })]
           })]
         })
       };
-      let KW;
-      switch (iW) {
+      let CR;
+      switch (JR) {
         case "pending":
-          KW = (0, ZW.jsx)(UW, {
+          CR = (0, KR.jsx)(nR, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: MW(null)
+            children: AR(null)
           });
           break;
         case "login":
-          KW = (0, ZW.jsx)(kW, {
+          CR = (0, KR.jsx)(UR, {
             className: "StoreCtaButton",
-            onClick: AW,
-            children: MW(sW(!1))
+            onClick: eR,
+            children: AR(WR(!1))
           });
           break;
         case "owned":
-          KW = (0, ZW.jsx)(wW.h, {
+          CR = (0, KR.jsx)(fR.i, {
             className: "StoreCtaButton",
             onClick: () => {
-              (0, sL.d)("store")
+              (0, nq.b)("store")
             },
-            children: (0, ZW.jsxs)("span", {
+            children: (0, KR.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "shirt"
-              }), " ", bW("store:equip")]
+              }), " ", aR("store:equip")]
             })
           });
           break;
@@ -6962,56 +6962,56 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          KW = (0, ZW.jsx)(UW, {
+          CR = (0, KR.jsx)(nR, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, ZW.jsx)("span", {
+            children: (0, KR.jsx)("span", {
               className: "StoreCtaLabel",
-              children: bW(oL[iW])
+              children: aR(vq[JR])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          KW = (0, ZW.jsx)(UW, {
+          CR = (0, KR.jsx)(nR, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === iW || null === mW,
-            loading: "lookingUp" === iW || EW,
-            onClick: xW,
+            disabled: "needsRecipient" === JR || null === yR,
+            loading: "lookingUp" === JR || tR,
+            onClick: wR,
             analyticsClick: {
               id: "store.gift",
-              value: OW
+              value: GR
             },
-            children: MW(sW(!0), iL.d)
+            children: AR(WR(!0), hZ.b)
           });
           break;
         case "buy":
         case "recharge":
-          KW = (0, ZW.jsx)(kW, {
+          CR = (0, KR.jsx)(UR, {
             className: "StoreCtaButton",
-            loading: EW,
-            disabled: null === mW,
-            onClick: xW,
+            loading: tR,
+            disabled: null === yR,
+            onClick: wR,
             analyticsClick: {
               id: "store.buy",
-              value: OW
+              value: GR
             },
-            children: MW(sW(!1))
+            children: AR(WR(!1))
           })
       }
-      return (0, ZW.jsx)("div", {
-        className: NW()("StoreCta", {
-          StoreCtaHighlight: cW,
-          StoreCtaLabelFirst: null !== jW
+      return (0, KR.jsx)("div", {
+        className: uR()("StoreCta", {
+          StoreCtaHighlight: iR,
+          StoreCtaLabelFirst: null !== LR
         }),
-        onClick: WW => {
-          WW.stopPropagation(), "needsRecipient" === iW && lW()
+        onClick: RR => {
+          RR.stopPropagation(), "needsRecipient" === JR && rR()
         },
-        children: KW
+        children: CR
       })
     }
-    const eL = {
+    const xq = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -7019,474 +7019,474 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function vL(WW) {
-      var iW;
+    function Nq(RR) {
+      var JR;
       let {
-        pack: OW,
-        state: EW,
-        busy: cW,
-        onOpen: wW,
-        onAct: tW,
-        onNeedRecipient: xW,
-        onLogin: lW
-      } = WW;
+        pack: GR,
+        state: tR,
+        busy: iR,
+        onOpen: fR,
+        onAct: VR,
+        onNeedRecipient: wR,
+        onLogin: rR
+      } = RR;
       const {
-        t: AW
-      } = (0, PW.B)(), bW = qP.e[OW], jW = FP.m[OW], UW = (0, ZL.l)(OW), kW = (0, mW.useRef)(null);
-      (0, yL.l)(OW, kW);
-      const sW = HL(EW),
-        MW = null !== (iW = bW.displayName) && void 0 !== iW ? iW : OW,
-        KW = (0, SL.b)((() => {
-          (0, KL.i)();
-          const WW = (0, yL.f)(OW);
-          void 0 !== WW && (0, YL.f)((0, yL.d)(WW))
+        t: eR
+      } = (0, ZR.A)(), aR = SZ.b[GR], LR = FZ.j[GR], nR = (0, fq.k)(GR), UR = (0, yR.useRef)(null);
+      (0, Xq.n)(GR, UR);
+      const WR = pq(tR),
+        AR = null !== (JR = aR.displayName) && void 0 !== JR ? JR : GR,
+        CR = (0, Aq.e)((() => {
+          (0, Wq.g)();
+          const RR = (0, Xq.f)(GR);
+          void 0 !== RR && (0, Cq.g)((0, Xq.e)(RR))
         })),
-        [SW] = (0, mW.useState)(wL.g);
-      return (0, ZW.jsxs)("div", {
-        className: NW()("StoreTile StorePackTile", eL[bW.tier], {
-          StorePackTileOwned: "owned" === EW,
-          StorePackTileRecipientOwns: "recipientOwns" === EW,
-          StoreTileGift: sW
+        [XR] = (0, yR.useState)(qq.i);
+      return (0, KR.jsxs)("div", {
+        className: uR()("StoreTile StorePackTile", xq[aR.tier], {
+          StorePackTileOwned: "owned" === tR,
+          StorePackTileRecipientOwns: "recipientOwns" === tR,
+          StoreTileGift: WR
         }),
-        ...nL(MW),
-        ref: kW,
-        "data-store-item": OW,
-        onClick: wW,
-        onPointerMove: WW => {
-          "mouse" !== WW.pointerType || 0 === WW.movementX && 0 === WW.movementY || SW || KW.start()
+        ...gq(AR),
+        ref: UR,
+        "data-store-item": GR,
+        onClick: fR,
+        onPointerMove: RR => {
+          "mouse" !== RR.pointerType || 0 === RR.movementX && 0 === RR.movementY || XR || CR.start()
         },
-        onPointerLeave: KW.cancel,
-        children: [jW && (0, ZW.jsx)(jW, {
+        onPointerLeave: CR.cancel,
+        children: [LR && (0, KR.jsx)(LR, {
           simple: !0
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "StorePackCharacters",
-          children: UW.map((WW => (0, ZW.jsx)("div", {
+          children: nR.map((RR => (0, KR.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,ZL.g)(WW)})`
+              backgroundImage: `url(${(0,fq.g)(RR)})`
             }
-          }, WW)))
-        }), (0, ZW.jsx)("div", {
+          }, RR)))
+        }), (0, KR.jsx)("div", {
           className: "StoreTileScrim"
-        }), sW && (0, ZW.jsx)("div", {
+        }), WR && (0, KR.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, ZW.jsx)(JL.d, {
-          pack: OW,
-          className: NW()({
-            PackAnimatedBadgeBesideRibbon: sW
+        }), (0, KR.jsx)(Bq.c, {
+          pack: GR,
+          className: uR()({
+            PackAnimatedBadgeBesideRibbon: WR
           })
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "StoreTileTitle",
-            children: MW
-          }), (0, ZW.jsxs)("div", {
+            children: AR
+          }), (0, KR.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, ZW.jsx)(TL.c, {
-              tier: bW.tier
-            }), " \xb7 ", AW("store:itemCount", {
-              count: (0, xE.m)(OW)
-            }), "owned" === EW && (0, ZW.jsxs)("span", {
+            children: [(0, KR.jsx)(Mq.b, {
+              tier: aR.tier
+            }), " \xb7 ", eR("store:itemCount", {
+              count: (0, ft.j)(GR)
+            }), "owned" === tR && (0, KR.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, ZW.jsx)(LW.c, {
+              children: [" \xb7 ", (0, KR.jsx)(qR.d, {
                 name: "check"
-              }), " ", AW("general:owned")]
+              }), " ", eR("general:owned")]
             })]
-          }), (0, ZW.jsx)(dL, {
-            state: EW,
-            item: OW,
-            price: (0, RP.i)(OW),
-            busy: cW,
-            onAct: tW,
-            onNeedRecipient: xW,
-            onLogin: lW
+          }), (0, KR.jsx)(Oq, {
+            state: tR,
+            item: GR,
+            price: (0, jZ.f)(GR),
+            busy: iR,
+            onAct: VR,
+            onNeedRecipient: wR,
+            onLogin: rR
           })]
         })]
       })
     }
-    var gL = OW(1662),
-      DL = OW(4825),
-      VL = OW(4279),
-      pL = OW(4934),
-      fL = OW(35247),
-      CL = OW(4846);
-    const XL = {
-      cape: VW.g.cape
+    var Dq = GR(1724),
+      Hq = GR(4937),
+      oq = GR(4360),
+      cq = GR(5041),
+      Pq = GR(35176),
+      Iq = GR(4955);
+    const mq = {
+      cape: PR.h.cape
     };
 
-    function BL(WW) {
-      var iW, OW;
+    function zq(RR) {
+      var JR, GR;
       let {
-        wearer: EW,
-        active: LW,
-        tryOn: cW = XL,
-        framing: wW = "store",
-        glow: tW = !0,
-        turnable: xW = !1,
-        className: lW
-      } = WW;
+        wearer: tR,
+        active: qR,
+        tryOn: iR = mq,
+        framing: fR = "store",
+        glow: VR = !0,
+        turnable: wR = !1,
+        className: rR
+      } = RR;
       const {
-        t: AW
-      } = (0, PW.B)(), bW = (0, mW.useRef)(null), [jW] = (0, mW.useState)(wL.g), UW = function(WW) {
-        const [iW, OW] = (0, mW.useState)(!1);
-        return (0, mW.useEffect)((() => {
-          const iW = new IntersectionObserver((WW => {
-            OW(WW[WW.length - 1].isIntersecting)
+        t: eR
+      } = (0, ZR.A)(), aR = (0, yR.useRef)(null), [LR] = (0, yR.useState)(qq.i), nR = function(RR) {
+        const [JR, GR] = (0, yR.useState)(!1);
+        return (0, yR.useEffect)((() => {
+          const JR = new IntersectionObserver((RR => {
+            GR(RR[RR.length - 1].isIntersecting)
           }));
-          return iW.observe(WW.current), () => {
-            iW.disconnect()
+          return JR.observe(RR.current), () => {
+            JR.disconnect()
           }
-        }), [WW]), iW
-      }(bW), kW = (0, CL.d)("storeRank"), sW = null !== (iW = EW.name) && void 0 !== iW ? iW : AW(EW.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), MW = null !== (OW = EW.cosmetics) && void 0 !== OW ? OW : {}, KW = `${sW}|${JSON.stringify(MW)}`, SW = LW && UW && !jW && !kW, [YW, yW] = (0, mW.useState)(null);
-      SW || null === YW || yW(null);
-      const TW = SW && YW === KW;
-      return (0, ZW.jsxs)("div", {
-        ref: bW,
-        className: NW()("HyperRankStage", lW, {
-          HyperRankStageDrawn: TW
+        }), [RR]), JR
+      }(aR), UR = (0, Iq.f)("storeRank"), WR = null !== (JR = tR.name) && void 0 !== JR ? JR : eR(tR.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), AR = null !== (GR = tR.cosmetics) && void 0 !== GR ? GR : {}, CR = `${WR}|${JSON.stringify(AR)}`, XR = qR && nR && !LR && !UR, [MR, BR] = (0, yR.useState)(null);
+      XR || null === MR || BR(null);
+      const lR = XR && MR === CR;
+      return (0, KR.jsxs)("div", {
+        ref: aR,
+        className: uR()("HyperRankStage", rR, {
+          HyperRankStageDrawn: lR
         }),
-        children: [tW && (0, ZW.jsx)("div", {
+        children: [VR && (0, KR.jsx)("div", {
           className: "HyperRankStageGlow"
-        }), (0, ZW.jsx)(pW.b, {
+        }), (0, KR.jsx)(IR.c, {
           className: "HyperRankStageStandIn"
-        }), SW && (0, ZW.jsx)(qL, {
-          name: sW,
-          cosmetics: MW,
-          tryOn: cW,
-          framing: wW,
-          turnable: xW,
+        }), XR && (0, KR.jsx)(Sq, {
+          name: WR,
+          cosmetics: AR,
+          tryOn: iR,
+          framing: fR,
+          turnable: wR,
           onDrawn: () => {
-            yW(KW)
+            BR(CR)
           }
-        }, KW), (0, ZW.jsx)("div", {
+        }, CR), (0, KR.jsx)("div", {
           className: "HyperRankStageFloor"
         })]
       })
     }
 
-    function qL(WW) {
+    function Sq(RR) {
       let {
-        name: iW,
-        cosmetics: OW,
-        tryOn: EW,
-        framing: PW,
-        turnable: LW,
-        onDrawn: cW
-      } = WW;
-      const wW = (0, mW.useRef)(null),
-        tW = (0, mW.useRef)(0),
-        xW = (0, mW.useRef)(null),
-        lW = (0, mW.useMemo)((() => {
-          var WW;
+        name: JR,
+        cosmetics: GR,
+        tryOn: tR,
+        framing: ZR,
+        turnable: qR,
+        onDrawn: iR
+      } = RR;
+      const fR = (0, yR.useRef)(null),
+        VR = (0, yR.useRef)(0),
+        wR = (0, yR.useRef)(null),
+        rR = (0, yR.useMemo)((() => {
+          var RR;
           return {
-            name: iW,
-            ranks: [VW.g.rank],
-            nameColour: null !== (WW = OW.nameColour) && void 0 !== WW ? WW : xL.d
+            name: JR,
+            ranks: [PR.h.rank],
+            nameColour: null !== (RR = GR.nameColour) && void 0 !== RR ? RR : Vq.c
           }
-        }), [iW, OW.nameColour]),
-        AW = WW => {
-          var iW;
-          (null === (iW = xW.current) || void 0 === iW ? void 0 : iW.pointerId) === WW.pointerId && (xW.current = null)
+        }), [JR, GR.nameColour]),
+        eR = RR => {
+          var JR;
+          (null === (JR = wR.current) || void 0 === JR ? void 0 : JR.pointerId) === RR.pointerId && (wR.current = null)
         },
-        bW = LW ? {
-          onPointerDown: WW => {
-            0 === WW.button && (xW.current = {
-              pointerId: WW.pointerId,
-              x: WW.clientX
-            }, WW.currentTarget.setPointerCapture(WW.pointerId))
+        aR = qR ? {
+          onPointerDown: RR => {
+            0 === RR.button && (wR.current = {
+              pointerId: RR.pointerId,
+              x: RR.clientX
+            }, RR.currentTarget.setPointerCapture(RR.pointerId))
           },
-          onPointerMove: WW => {
-            var iW;
-            const OW = xW.current;
-            (null === OW || void 0 === OW ? void 0 : OW.pointerId) === WW.pointerId && (tW.current -= (WW.clientX - OW.x) * fL.b, OW.x = WW.clientX, null === (iW = wW.current) || void 0 === iW || iW.turnCamera(tW.current))
+          onPointerMove: RR => {
+            var JR;
+            const GR = wR.current;
+            (null === GR || void 0 === GR ? void 0 : GR.pointerId) === RR.pointerId && (VR.current -= (RR.clientX - GR.x) * Pq.e, GR.x = RR.clientX, null === (JR = fR.current) || void 0 === JR || JR.turnCamera(VR.current))
           },
-          onPointerUp: AW,
-          onPointerCancel: AW
+          onPointerUp: eR,
+          onPointerCancel: eR
         } : {};
-      return (0, ZW.jsx)("div", {
-        className: NW()("HyperRankStageLive", {
-          HyperRankStageTurnable: LW
+      return (0, KR.jsx)("div", {
+        className: uR()("HyperRankStageLive", {
+          HyperRankStageTurnable: qR
         }),
-        ...bW,
-        children: (0, ZW.jsx)(mW.Suspense, {
+        ...aR,
+        children: (0, KR.jsx)(yR.Suspense, {
           fallback: null,
-          children: (0, ZW.jsx)(KL.e, {
-            ref: wW,
+          children: (0, KR.jsx)(Wq.e, {
+            ref: fR,
             owner: "storeRank",
-            framing: PW,
-            forcedCosmetics: EW,
-            nametag: lW,
+            framing: ZR,
+            forcedCosmetics: tR,
+            nametag: rR,
             onReady: () => {
-              var WW;
-              null === (WW = wW.current) || void 0 === WW || WW.setAllCosmetics(OW)
+              var RR;
+              null === (RR = fR.current) || void 0 === RR || RR.setAllCosmetics(GR)
             },
-            onDrawn: cW
+            onDrawn: iR
           })
         })
       })
     }
-    var RL = OW(4940);
+    var jq = GR(5043);
 
-    function GL(WW) {
-      var iW;
-      return null !== (iW = (0, ZE.e)(WW)) && void 0 !== iW ? iW : ZE.j[ZE.j.length - 1]
+    function dq(RR) {
+      var JR;
+      return null !== (JR = (0, it.i)(RR)) && void 0 !== JR ? JR : it.n[it.n.length - 1]
     }
 
-    function IL(WW, iW) {
-      return WW.tiers.flatMap((WW => {
-        var OW;
-        return null !== (OW = WW[iW]) && void 0 !== OW ? OW : []
+    function Eq(RR, JR) {
+      return RR.tiers.flatMap((RR => {
+        var GR;
+        return null !== (GR = RR[JR]) && void 0 !== GR ? GR : []
       }))
     }
 
-    function aL(WW) {
-      const iW = IL(WW, "hyper");
-      return iW.filter((WW => "cosmetic" === WW.kind && !(0, pL.w)(WW, iW)))
+    function Yq(RR) {
+      const JR = Eq(RR, "hyper");
+      return JR.filter((RR => "cosmetic" === RR.kind && !(0, cq.q)(RR, JR)))
     }
 
-    function rL(WW, iW) {
-      const OW = IL(WW, iW).find((WW => "xpBoost" === WW.kind));
-      return "xpBoost" === (null === OW || void 0 === OW ? void 0 : OW.kind) ? OW : null
+    function kq(RR, JR) {
+      const GR = Eq(RR, JR).find((RR => "xpBoost" === RR.kind));
+      return "xpBoost" === (null === GR || void 0 === GR ? void 0 : GR.kind) ? GR : null
     }
 
-    function zL(WW) {
+    function Qq(RR) {
       return [{
         id: "colourfulNames",
         icon: "palette",
-        title: (0, ZW.jsx)(uL, {
-          text: WW("store:colourfulNames")
+        title: (0, KR.jsx)(bq, {
+          text: RR("store:colourfulNames")
         }),
-        detail: WW("store:perkColourfulNamesDetail")
+        detail: RR("store:perkColourfulNamesDetail")
       }, {
         id: "capes",
         icon: "shirt",
-        title: WW("store:perkCapes"),
-        detail: WW("store:perkCapesDetail")
+        title: RR("store:perkCapes"),
+        detail: RR("store:perkCapesDetail")
       }, {
         id: "nametag",
         icon: "user",
-        title: WW("store:perkNametag", {
-          rank: WW((0, pW.l)(VW.g.id).nameKey)
+        title: RR("store:perkNametag", {
+          rank: RR((0, IR.l)(PR.h.id).nameKey)
         }),
-        detail: WW("store:perkNametagDetail")
+        detail: RR("store:perkNametagDetail")
       }, {
         id: "noAdverts",
         icon: "eye-slash",
-        title: WW("store:perkNoAdverts"),
-        detail: WW("store:perkNoAdvertsDetail")
+        title: RR("store:perkNoAdverts"),
+        detail: RR("store:perkNoAdvertsDetail")
       }, {
         id: "friends",
         icon: "user-group",
-        title: WW("store:perkFriends", {
-          count: (0, Ai.e)([VW.g.rank])
+        title: RR("store:perkFriends", {
+          count: (0, eJ.d)([PR.h.rank])
         }),
-        detail: WW("store:perkFriendsDetail", {
-          count: (0, Ai.e)([])
+        detail: RR("store:perkFriendsDetail", {
+          count: (0, eJ.d)([])
         })
       }]
     }
 
-    function FL() {
+    function Fq() {
       const {
-        t: WW
-      } = (0, PW.B)(), iW = [{
+        t: RR
+      } = (0, ZR.A)(), JR = [{
         id: "battlePass",
         icon: "crown",
-        title: WW("store:perkBattlePassTrack")
-      }, ...zL(WW)];
-      return (0, ZW.jsx)("ul", {
+        title: RR("store:perkBattlePassTrack")
+      }, ...Qq(RR)];
+      return (0, KR.jsx)("ul", {
         className: "HyperRankTilePerks",
-        children: iW.map((WW => (0, ZW.jsxs)("li", {
-          children: [(0, ZW.jsx)("span", {
+        children: JR.map((RR => (0, KR.jsxs)("li", {
+          children: [(0, KR.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, ZW.jsx)(LW.c, {
-              name: WW.icon
+            children: (0, KR.jsx)(qR.d, {
+              name: RR.icon
             })
-          }), WW.title]
-        }, WW.id)))
+          }), RR.title]
+        }, RR.id)))
       })
     }
 
-    function QL() {
+    function Tq() {
       const {
-        t: WW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
+        t: RR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
         className: "HyperRankPerkTiles",
-        children: [(0, ZW.jsx)(Wc, {}), zL(WW).map((WW => (0, ZW.jsxs)("div", {
+        children: [(0, KR.jsx)(sq, {}), Qq(RR).map((RR => (0, KR.jsxs)("div", {
           className: "HyperRankPerkTile",
-          children: [(0, ZW.jsx)("span", {
+          children: [(0, KR.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, ZW.jsx)(LW.c, {
-              name: WW.icon
+            children: (0, KR.jsx)(qR.d, {
+              name: RR.icon
             })
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "HyperRankPerkText",
-            children: [(0, ZW.jsx)("b", {
-              children: WW.title
-            }), (0, ZW.jsx)("small", {
-              children: WW.detail
+            children: [(0, KR.jsx)("b", {
+              children: RR.title
+            }), (0, KR.jsx)("small", {
+              children: RR.detail
             })]
           })]
-        }, WW.id)))]
+        }, RR.id)))]
       })
     }
 
-    function Wc() {
+    function sq() {
       const {
-        t: WW,
-        selectedLanguage: iW
-      } = (0, PW.B)(), OW = GL(Date.now()), mW = aL(OW), EW = function(WW) {
-        return aL(WW).filter((WW => null !== (0, pL.t)(WW) || null !== (0, pL.v)(WW))).reverse()
-      }(OW).slice(0, 4), NW = rL(OW, "hyper"), cW = rL(OW, "free"), wW = (0, PW.e)(iW.code, "store:battlePassTiersEnds", OW.endsAtMs, {
+        t: RR,
+        selectedLanguage: JR
+      } = (0, ZR.A)(), GR = dq(Date.now()), yR = Yq(GR), tR = function(RR) {
+        return Yq(RR).filter((RR => null !== (0, cq.o)(RR) || null !== (0, cq.p)(RR))).reverse()
+      }(GR).slice(0, 4), uR = kq(GR, "hyper"), iR = kq(GR, "free"), fR = (0, ZR.f)(JR.code, "store:battlePassTiersEnds", GR.endsAtMs, {
         month: "long",
         day: "numeric"
       });
-      return (0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
         className: "HyperRankPerkTile HyperRankBattlePassPerk",
-        children: [(0, ZW.jsx)("span", {
+        children: [(0, KR.jsx)("span", {
           className: "HyperRankPerkIcon",
-          children: (0, ZW.jsx)(LW.c, {
+          children: (0, KR.jsx)(qR.d, {
             name: "crown"
           })
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "HyperRankPerkText",
-          children: [(0, ZW.jsx)("b", {
-            children: WW("store:battlePassSeason", {
-              season: OW.seasonNumber
+          children: [(0, KR.jsx)("b", {
+            children: RR("store:battlePassSeason", {
+              season: GR.seasonNumber
             })
-          }), (0, ZW.jsx)("small", {
-            children: WW("store:battlePassTiersEnds", {
-              tiers: OW.tierCount,
-              date: wW
+          }), (0, KR.jsx)("small", {
+            children: RR("store:battlePassTiersEnds", {
+              tiers: GR.tierCount,
+              date: fR
             })
           })]
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "HyperRankBattlePassRewards",
-          children: [(0, ZW.jsx)("span", {
+          children: [(0, KR.jsx)("span", {
             className: "HyperRankBattlePassCount",
-            children: 1 === mW.length ? WW("store:battlePassOneCosmetic") : WW("store:battlePassCosmetics", {
-              count: mW.length
+            children: 1 === yR.length ? RR("store:battlePassOneCosmetic") : RR("store:battlePassCosmetics", {
+              count: yR.length
             })
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "HyperRankBattlePassFeatured",
-            children: [EW.map((iW => (0, ZW.jsx)("span", {
+            children: [tR.map((JR => (0, KR.jsx)("span", {
               className: "HyperRankBattlePassReward",
-              title: (0, pL.k)(iW, WW),
-              children: (0, ZW.jsx)(RL.e, {
-                reward: iW
+              title: (0, cq.f)(JR, RR),
+              children: (0, KR.jsx)(jq.e, {
+                reward: JR
               })
-            }, iW.id))), mW.length > EW.length && (0, ZW.jsx)("span", {
+            }, JR.id))), yR.length > tR.length && (0, KR.jsx)("span", {
               className: "HyperRankBattlePassReward HyperRankBattlePassMore",
-              children: WW("store:battlePassMore", {
-                count: mW.length - EW.length
+              children: RR("store:battlePassMore", {
+                count: yR.length - tR.length
               })
             })]
           })]
-        }), (0, ZW.jsxs)("ul", {
+        }), (0, KR.jsxs)("ul", {
           className: "HyperRankBattlePassFacts",
-          children: [NW && cW && (0, ZW.jsxs)("li", {
-            children: [(0, ZW.jsx)(LW.c, {
+          children: [uR && iR && (0, KR.jsxs)("li", {
+            children: [(0, KR.jsx)(qR.d, {
               name: "angles-up"
-            }), WW("store:battlePassXp", {
-              multiplier: NW.multiplier,
-              minutes: NW.minutes,
-              freeMinutes: cW.minutes
+            }), RR("store:battlePassXp", {
+              multiplier: uR.multiplier,
+              minutes: uR.minutes,
+              freeMinutes: iR.minutes
             })]
-          }), (0, ZW.jsxs)("li", {
-            children: [(0, ZW.jsx)(LW.c, {
+          }), (0, KR.jsxs)("li", {
+            children: [(0, KR.jsx)(qR.d, {
               name: "lock-open"
-            }), WW("store:battlePassUnlockAtOnce")]
+            }), RR("store:battlePassUnlockAtOnce")]
           })]
         })]
       })
     }
-    const ic = ["snowmanSet", "skis", "reindeerPet"];
+    const hq = ["snowmanSet", "skis", "reindeerPet"];
 
-    function Oc() {
-      const WW = GL(Date.now()),
-        iW = {};
-      let OW = 0;
-      for (const EW of WW.tiers) {
-        const WW = EW.hyper;
-        var mW;
-        if ("cosmetic" === (null === WW || void 0 === WW ? void 0 : WW.kind) && ic.includes(WW.id)) Object.assign(iW, null === (mW = (0, pL.p)(WW)) || void 0 === mW ? void 0 : mW.cosmetics), OW++
+    function Ri() {
+      const RR = dq(Date.now()),
+        JR = {};
+      let GR = 0;
+      for (const tR of RR.tiers) {
+        const RR = tR.hyper;
+        var yR;
+        if ("cosmetic" === (null === RR || void 0 === RR ? void 0 : RR.kind) && hq.includes(RR.id)) Object.assign(JR, null === (yR = (0, cq.k)(RR)) || void 0 === yR ? void 0 : yR.cosmetics), GR++
       }
-      return OW < ic.length && console.warn(`Hyper Rank's page wears ${OW} of its ${ic.length} rewards: ${WW.seasonId} lacks the others`), {
-        ...iW,
-        cape: VW.g.cape
+      return GR < hq.length && console.warn(`Hyper Rank's page wears ${GR} of its ${hq.length} rewards: ${RR.seasonId} lacks the others`), {
+        ...JR,
+        cape: PR.h.cape
       }
     }
 
-    function mc(WW) {
+    function Ji(RR) {
       let {
-        wearer: iW
-      } = WW;
-      const OW = (0, mW.useMemo)(Oc, []);
-      return (0, ZW.jsx)(BL, {
+        wearer: JR
+      } = RR;
+      const GR = (0, yR.useMemo)(Ri, []);
+      return (0, KR.jsx)(zq, {
         className: "HyperRankShowcase",
-        wearer: iW,
+        wearer: JR,
         active: !0,
-        tryOn: OW,
+        tryOn: GR,
         framing: "showcase",
         glow: !1,
         turnable: !0
       })
     }
-    const Ec = OW.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    const Gi = GR.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function Nc() {
-      (0, YL.f)(Ec, {
+    function yi() {
+      (0, Cq.g)(Gi, {
         lowPriority: !1
       })
     }
 
-    function Pc() {
+    function ti() {
       const {
-        t: WW
-      } = (0, PW.B)(), [iW, OW] = (0, mW.useState)("starting"), EW = (0, mW.useRef)(null), NW = (0, cO.c)(), cW = (0, mW.useRef)(null), tW = (0, mW.useCallback)((() => {
-        const WW = EW.current;
-        null !== WW.error && WW.load();
-        const iW = WW.play();
-        cW.current = iW, iW.catch((WW => {
-          (0, DL.c)("Failed to play Super Rank video", WW), NW.current && cW.current === iW && OW("failed")
+        t: RR
+      } = (0, ZR.A)(), [JR, GR] = (0, yR.useState)("starting"), tR = (0, yR.useRef)(null), uR = (0, ZG.d)(), iR = (0, yR.useRef)(null), VR = (0, yR.useCallback)((() => {
+        const RR = tR.current;
+        null !== RR.error && RR.load();
+        const JR = RR.play();
+        iR.current = JR, JR.catch((RR => {
+          (0, Hq.e)("Failed to play Super Rank video", RR), uR.current && iR.current === JR && GR("failed")
         }))
-      }), [NW]);
-      return (0, mW.useEffect)((() => {
-        const WW = EW.current;
-        let iW;
+      }), [uR]);
+      return (0, yR.useEffect)((() => {
+        const RR = tR.current;
+        let JR;
 
-        function OW() {
-          clearTimeout(iW), iW = setTimeout(tW, 3e3)
+        function GR() {
+          clearTimeout(JR), JR = setTimeout(VR, 3e3)
         }
-        return tW(), WW.addEventListener("ended", OW), () => {
-          clearTimeout(iW), WW.removeEventListener("ended", OW)
+        return VR(), RR.addEventListener("ended", GR), () => {
+          clearTimeout(JR), RR.removeEventListener("ended", GR)
         }
-      }), [tW]), (0, ZW.jsxs)("div", {
+      }), [VR]), (0, KR.jsxs)("div", {
         className: "StoreSuperRankVideo",
-        children: [(0, ZW.jsx)("video", {
-          ref: EW,
-          src: `${ni.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-          poster: Ec,
+        children: [(0, KR.jsx)("video", {
+          ref: tR,
+          src: `${bJ.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+          poster: Gi,
           muted: !0,
           playsInline: !0,
-          controls: "playing" === iW,
+          controls: "playing" === JR,
           onPlaying: () => {
-            OW("playing")
+            GR("playing")
           },
           onError: () => {
-            OW("failed")
+            GR("failed")
           }
-        }), ("failed" === iW || "loading" === iW) && (0, ZW.jsx)("div", {
+        }), ("failed" === JR || "loading" === JR) && (0, KR.jsx)("div", {
           className: "StoreSuperRankPlay",
-          children: (0, ZW.jsx)(wW.f, {
-            ariaLabel: WW("general:play"),
-            loading: "loading" === iW,
+          children: (0, KR.jsx)(fR.g, {
+            ariaLabel: RR("general:play"),
+            loading: "loading" === JR,
             onClick: () => {
-              OW("loading"), tW()
+              GR("loading"), VR()
             },
             touchPressOn: "pointerup",
-            children: (0, ZW.jsx)(LW.c, {
+            children: (0, KR.jsx)(qR.d, {
               name: "play"
             })
           })
@@ -7494,76 +7494,76 @@ export const modules = {
       })
     }
 
-    function Lc(WW) {
+    function ui(RR) {
       let {
-        tierId: iW,
-        wearer: OW,
-        onBack: mW,
-        cta: EW,
-        recipient: LW,
-        afterCta: cW
-      } = WW;
+        tierId: JR,
+        wearer: GR,
+        onBack: yR,
+        cta: tR,
+        recipient: qR,
+        afterCta: iR
+      } = RR;
       const {
-        t: tW
-      } = (0, PW.B)(), xW = "hyper" === (0, pW.l)(iW).look;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("StoreSuperRankDetail", {
-          StoreHyperRankDetail: xW
+        t: VR
+      } = (0, ZR.A)(), wR = "hyper" === (0, IR.l)(JR).look;
+      return (0, KR.jsxs)("div", {
+        className: uR()("StoreSuperRankDetail", {
+          StoreHyperRankDetail: wR
         }),
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, ZW.jsx)(wW.b, {
+          children: [(0, KR.jsx)(fR.d, {
             className: "StoreDetailBackButton",
-            onClick: mW,
+            onClick: yR,
             padBack: !0,
-            children: tW("general:back")
-          }), (0, ZW.jsx)("div", {
+            children: VR("general:back")
+          }), (0, KR.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, ZW.jsx)(pW.f, {
-              tierId: iW
+            children: (0, KR.jsx)(IR.g, {
+              tierId: JR
             })
-          }), LW]
-        }), (0, ZW.jsxs)("div", {
+          }), qR]
+        }), (0, KR.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [xW && (0, ZW.jsx)(mc, {
-            wearer: OW
-          }), !xW && (0, ZW.jsx)(Pc, {}), (0, ZW.jsxs)("div", {
+          children: [wR && (0, KR.jsx)(Ji, {
+            wearer: GR
+          }), !wR && (0, KR.jsx)(ti, {}), (0, KR.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [xW && (0, ZW.jsx)(QL, {}), !xW && (0, ZW.jsx)("div", {
+            children: [wR && (0, KR.jsx)(Tq, {}), !wR && (0, KR.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, ZW.jsx)(VL.b, {
-                tierId: iW
+              children: (0, KR.jsx)(oq.b, {
+                tierId: JR
               })
-            }), (0, ZW.jsxs)("div", {
+            }), (0, KR.jsxs)("div", {
               className: "StoreTileActions",
-              children: [EW, cW]
+              children: [tR, iR]
             })]
           })]
         })]
       })
     }
-    var cc = OW(4155),
-      wc = OW(3637);
+    var Zi = GR(4231),
+      qi = GR(3731);
 
-    function tc() {
+    function ii() {
       const {
-        t: WW
-      } = (0, PW.B)();
-      return (0, ZW.jsx)("div", {
+        t: RR
+      } = (0, ZR.A)();
+      return (0, KR.jsx)("div", {
         className: "SmallTextBold",
-        children: WW("payments:legalDocumentLoadFailed")
+        children: RR("payments:legalDocumentLoadFailed")
       })
     }
-    const Zc = (0, mW.lazy)((() => (0, wc.b)(Promise.all([OW.e(146), OW.e(711)]).then((() => OW(7519))), (WW => WW.default), tc))),
-      xc = (0, mW.lazy)((() => (0, wc.b)(OW.e(148).then((() => OW(7541))), (WW => WW.default), tc)));
+    const fi = (0, yR.lazy)((() => (0, qi.b)(Promise.all([GR.e(146), GR.e(711)]).then((() => GR(7654))), (RR => RR.default), ii))),
+      Vi = (0, yR.lazy)((() => (0, qi.b)(GR.e(148).then((() => GR(7675))), (RR => RR.default), ii)));
 
-    function lc(WW, iW) {
-      WW.preventDefault(), Ei.NotificationProvider.showCustomPopup({
-        body: (0, ZW.jsx)("div", {
+    function Ki(RR, JR) {
+      RR.preventDefault(), tJ.NotificationProvider.showCustomPopup({
+        body: (0, KR.jsx)("div", {
           className: "AppLegalDocument",
-          children: (0, ZW.jsx)(mW.Suspense, {
-            fallback: (0, ZW.jsx)(SW.d, {}),
-            children: (0, ZW.jsx)(iW, {})
+          children: (0, KR.jsx)(yR.Suspense, {
+            fallback: (0, KR.jsx)(XR.d, {}),
+            children: (0, KR.jsx)(JR, {})
           })
         }),
         middleScreenPopupClassName: "AppLegalDocumentPopup",
@@ -7571,137 +7571,137 @@ export const modules = {
       })
     }
 
-    function Ac(WW) {
+    function wi(RR) {
       let {
-        price: iW,
-        perks: OW
-      } = WW;
+        price: JR,
+        perks: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
+        t: yR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [OW, (0, ZW.jsx)("div", {
+        children: [GR, (0, KR.jsx)("div", {
           className: "SmallTextLight",
-          children: mW("payments:subscriptionRenewsMonthly", {
-            price: iW
+          children: yR("payments:subscriptionRenewsMonthly", {
+            price: JR
           })
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: ["mobileIos" === hW.siteUsed && (0, ZW.jsx)("a", {
+          children: ["mobileIos" === gR.siteUsed && (0, KR.jsx)("a", {
             href: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
             target: "_blank",
             rel: "noreferrer",
-            children: mW("payments:appleTermsOfUse")
-          }), "mobileIos" !== hW.siteUsed && (0, ZW.jsx)("a", {
+            children: yR("payments:appleTermsOfUse")
+          }), "mobileIos" !== gR.siteUsed && (0, KR.jsx)("a", {
             href: "/terms-of-service",
-            onClick: WW => {
-              lc(WW, xc)
+            onClick: RR => {
+              Ki(RR, Vi)
             },
-            children: mW("homePage:termsOfService")
-          }), (0, ZW.jsx)("a", {
+            children: yR("homePage:termsOfService")
+          }), (0, KR.jsx)("a", {
             href: "/privacy-policy",
-            onClick: WW => {
-              lc(WW, Zc)
+            onClick: RR => {
+              Ki(RR, fi)
             },
-            children: mW("homePage:privacyPolicy")
+            children: yR("homePage:privacyPolicy")
           })]
         })]
       })
     }
-    var bc = OW(4240),
-      jc = OW(4247),
-      Uc = OW(4105);
+    var ri = GR(4305),
+      ei = GR(4307),
+      ai = GR(4191);
 
-    function kc(WW) {
+    function Li(RR) {
       const {
-        userContext: iW
-      } = (0, AW.e)(), {
-        purchaseUnderWay: OW,
-        notice: EW,
-        subscribe: NW
-      } = (0, Uc.b)(), [PW, LW] = (0, mW.useState)(null), [cW, wW] = (0, mW.useState)(0), tW = (0, cO.c)(), ZW = iW !== HW.NULL_USER_CONTEXT, xW = ZW && (iW.mayBuy() || (0, BW.guestsMayBuy)()), lW = null !== PW && PW.loadedFor === iW ? PW.offer : null, bW = null === EW || void 0 === EW ? void 0 : EW.pendingIntentId, jW = (0, mW.useRef)(bW);
+        userContext: JR
+      } = (0, eR.d)(), {
+        purchaseUnderWay: GR,
+        notice: tR,
+        subscribe: uR
+      } = (0, ai.e)(), [ZR, qR] = (0, yR.useState)(null), [iR, fR] = (0, yR.useState)(0), VR = (0, ZG.d)(), KR = JR !== bR.NULL_USER_CONTEXT, wR = KR && (JR.mayBuy() || (0, jR.guestsMayBuy)()), rR = null !== ZR && ZR.loadedFor === JR ? ZR.offer : null, aR = null === tR || void 0 === tR ? void 0 : tR.pendingIntentId, LR = (0, yR.useRef)(aR);
 
-      function UW() {
-        wW((WW => WW + 1))
+      function nR() {
+        fR((RR => RR + 1))
       }
-      return (0, mW.useEffect)((() => {
-        void 0 !== jW.current && void 0 === bW && UW(), jW.current = bW
-      }), [bW]), (0, mW.useEffect)((() => {
-        if (!ZW) return;
-        let OW = !1;
-        return async function(WW, iW) {
+      return (0, yR.useEffect)((() => {
+        void 0 !== LR.current && void 0 === aR && nR(), LR.current = aR
+      }), [aR]), (0, yR.useEffect)((() => {
+        if (!KR) return;
+        let GR = !1;
+        return async function(RR, JR) {
           const {
-            offering: OW
-          } = await (0, QW.getBillingClient)().getOfferings(WW), mW = null === OW || void 0 === OW ? void 0 : OW.packages.find(FW.isPricedPackage);
-          return void 0 === mW ? {
+            offering: GR
+          } = await (0, hR.getBillingClient)().getOfferings(RR), yR = null === GR || void 0 === GR ? void 0 : GR.packages.find(sR.isPricedPackage);
+          return void 0 === yR ? {
             kind: "unavailable"
-          } : iW ? {
+          } : JR ? {
             kind: "loaded",
-            pkg: mW,
-            preview: await (0, jc.g)(mW.productId)
+            pkg: yR,
+            preview: await (0, ei.f)(yR.productId)
           } : {
             kind: "loaded",
-            pkg: mW,
+            pkg: yR,
             preview: {
               kind: "none"
             }
           }
-        }(WW, xW).catch((iW => (console.error(`Billing: loading the ${WW} subscription or its preview failed:`, iW), {
+        }(RR, wR).catch((JR => (console.error(`Billing: loading the ${RR} subscription or its preview failed:`, JR), {
           kind: "loadFailed"
-        }))).then((WW => {
-          OW || LW((OW => "loadFailed" === WW.kind && (null === OW || void 0 === OW ? void 0 : OW.loadedFor) === iW ? OW : {
-            loadedFor: iW,
-            offer: WW
+        }))).then((RR => {
+          GR || qR((GR => "loadFailed" === RR.kind && (null === GR || void 0 === GR ? void 0 : GR.loadedFor) === JR ? GR : {
+            loadedFor: JR,
+            offer: RR
           }))
         })), () => {
-          OW = !0
+          GR = !0
         }
-      }), [WW, iW, ZW, xW, cW]), {
-        offer: lW,
-        purchaseUnderWay: OW,
-        notice: EW,
-        pendingIntentId: bW,
-        mountedRef: tW,
-        checkOut: async function(WW) {
-          const OW = await NW(WW);
-          tW.current && ("unknownPackage" === OW.kind && LW({
-            loadedFor: iW,
+      }), [RR, JR, KR, wR, iR]), {
+        offer: rR,
+        purchaseUnderWay: GR,
+        notice: tR,
+        pendingIntentId: aR,
+        mountedRef: VR,
+        checkOut: async function(RR) {
+          const GR = await uR(RR);
+          VR.current && ("unknownPackage" === GR.kind && qR({
+            loadedFor: JR,
             offer: {
               kind: "unavailable"
             }
-          }), UW())
+          }), nR())
         }
       }
     }
 
-    function sc(WW) {
+    function ni(RR) {
       let {
-        onOfferedChange: iW
-      } = WW;
-      return (0, BW.usePurchasesAllowed)() && (0, BW.subscriptionsSold)() ? (0, ZW.jsx)(Mc, {
-        onOfferedChange: iW
+        onOfferedChange: JR
+      } = RR;
+      return (0, jR.usePurchasesAllowed)() && (0, jR.subscriptionsSold)() ? (0, KR.jsx)(Ui, {
+        onOfferedChange: JR
       }) : null
     }
 
-    function Mc(WW) {
+    function Ui(RR) {
       let {
-        onOfferedChange: iW
-      } = WW;
+        onOfferedChange: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), {
-        offer: EW,
-        purchaseUnderWay: NW,
-        notice: LW,
-        pendingIntentId: cW,
-        mountedRef: tW,
-        checkOut: xW
-      } = kc((0, pW.l)(VW.g.id).placementId), [lW, AW] = (0, mW.useState)(!1), bW = null === EW || "loaded" === EW.kind && "refused" !== EW.preview.kind;
-      if ((0, mW.useEffect)((() => {
-          iW(bW)
-        }), [bW]), null === EW || "unavailable" === EW.kind) return null;
-      if ("loadFailed" === EW.kind) return (0, ZW.jsx)(cc.e, {
+        t: GR
+      } = (0, ZR.A)(), {
+        offer: tR,
+        purchaseUnderWay: uR,
+        notice: qR,
+        pendingIntentId: iR,
+        mountedRef: VR,
+        checkOut: wR
+      } = Li((0, IR.l)(PR.h.id).placementId), [rR, eR] = (0, yR.useState)(!1), aR = null === tR || "loaded" === tR.kind && "refused" !== tR.preview.kind;
+      if ((0, yR.useEffect)((() => {
+          JR(aR)
+        }), [aR]), null === tR || "unavailable" === tR.kind) return null;
+      if ("loadFailed" === tR.kind) return (0, KR.jsx)(Zi.j, {
         notice: {
           kind: "error",
           key: "payments:subscriptionLoadFailed"
@@ -7709,595 +7709,595 @@ export const modules = {
         className: "StoreSubscribe SmallTextBold"
       });
       const {
-        pkg: jW,
-        preview: kW
-      } = EW;
-      if ("refused" === kW.kind) return (0, ZW.jsx)(cc.e, {
+        pkg: LR,
+        preview: UR
+      } = tR;
+      if ("refused" === UR.kind) return (0, KR.jsx)(Zi.j, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(kW.until).toLocaleDateString()
+            date: new Date(UR.until).toLocaleDateString()
           }
         },
         className: "StoreSubscribe SmallTextBold"
       });
-      const sW = (0, Ni.e)(jW);
-      return (0, ZW.jsxs)("div", {
+      const WR = (0, uJ.d)(LR);
+      return (0, KR.jsxs)("div", {
         className: "StoreSubscribe",
-        onClick: WW => {
-          WW.stopPropagation()
+        onClick: RR => {
+          RR.stopPropagation()
         },
-        children: [(0, ZW.jsx)(cc.e, {
-          notice: LW,
+        children: [(0, KR.jsx)(Zi.j, {
+          notice: qR,
           className: "SmallTextBold"
-        }), (0, ZW.jsx)(cc.b, {
+        }), (0, KR.jsx)(Zi.c, {
           className: "SmallTextBold"
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "StoreCta",
-          children: (0, ZW.jsx)(wW.v, {
+          children: (0, KR.jsx)(fR.u, {
             className: "StoreSubscribeButton",
             onClick: () => {
-              !async function(WW, iW) {
-                if ("refund" === iW.kind) {
-                  AW(!0);
-                  const WW = await (0, bc.e)(iW, null);
-                  if (!tW.current) return;
-                  if (AW(!1), !WW) return
+              !async function(RR, JR) {
+                if ("refund" === JR.kind) {
+                  eR(!0);
+                  const RR = await (0, ri.e)(JR, null);
+                  if (!VR.current) return;
+                  if (eR(!1), !RR) return
                 }
-                await xW(WW)
-              }(jW, kW)
+                await wR(RR)
+              }(LR, UR)
             },
-            disabled: void 0 !== cW,
-            loading: NW || lW,
+            disabled: void 0 !== iR,
+            loading: uR || rR,
             analyticsClick: {
               id: "store.buy",
               value: "subscription"
             },
-            children: (0, ZW.jsx)("span", {
+            children: (0, KR.jsx)("span", {
               className: "StoreCtaLabel",
-              children: OW("payments:subscribeContinue", {
-                price: sW
+              children: GR("payments:subscribeContinue", {
+                price: WR
               })
             })
           })
-        }), (0, UW.isMobileApp)() && (0, ZW.jsx)(Ac, {
-          price: sW,
-          perks: (0, ZW.jsx)(FL, {})
+        }), (0, nR.isMobileApp)() && (0, KR.jsx)(wi, {
+          price: WR,
+          perks: (0, KR.jsx)(Fq, {})
         })]
       })
     }
 
-    function Kc() {
+    function Wi() {
       const {
-        t: WW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("ul", {
+        t: RR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, ZW.jsxs)("li", {
-          children: [(0, ZW.jsx)(LW.c, {
+        children: [(0, KR.jsxs)("li", {
+          children: [(0, KR.jsx)(qR.d, {
             name: "check"
-          }), (0, ZW.jsx)(uL, {
-            text: WW("store:colourfulNames")
+          }), (0, KR.jsx)(bq, {
+            text: RR("store:colourfulNames")
           })]
-        }), (0, ZW.jsxs)("li", {
-          children: [(0, ZW.jsx)(LW.c, {
+        }), (0, KR.jsxs)("li", {
+          children: [(0, KR.jsx)(qR.d, {
             name: "check"
-          }), WW("store:perkCapes")]
-        }), (0, ZW.jsxs)("li", {
-          children: [(0, ZW.jsx)(LW.c, {
+          }), RR("store:perkCapes")]
+        }), (0, KR.jsxs)("li", {
+          children: [(0, KR.jsx)(qR.d, {
             name: "check"
-          }), WW("store:perkNoAdverts")]
-        }), (0, ZW.jsxs)("li", {
-          children: [(0, ZW.jsx)(LW.c, {
+          }), RR("store:perkNoAdverts")]
+        }), (0, KR.jsxs)("li", {
+          children: [(0, KR.jsx)(qR.d, {
             name: "check"
-          }), WW("store:perkFriends", {
-            count: (0, Ai.e)(["super"])
+          }), RR("store:perkFriends", {
+            count: (0, eJ.d)(["super"])
           })]
         })]
       })
     }
 
-    function Sc(WW, iW) {
-      return 1 === iW ? WW("store:oneDayLeft") : WW("store:daysLeft", {
-        days: iW
+    function Ai(RR, JR) {
+      return 1 === JR ? RR("store:oneDayLeft") : RR("store:daysLeft", {
+        days: JR
       })
     }
 
-    function Yc(WW) {
+    function Ci(RR) {
       let {
-        daysLeft: iW,
-        totalDays: OW,
-        urgent: mW
-      } = WW;
+        daysLeft: JR,
+        totalDays: GR,
+        urgent: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)(), LW = OW > 0 ? Math.min(1, Math.max(.03, iW / OW)) : 1;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: mW
+        t: tR
+      } = (0, ZR.A)(), qR = GR > 0 ? Math.min(1, Math.max(.03, JR / GR)) : 1;
+      return (0, KR.jsxs)("div", {
+        className: uR()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: yR
         }),
-        children: [(0, ZW.jsx)("span", {
+        children: [(0, KR.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: Sc(EW, iW)
-        }), (0, ZW.jsx)("div", {
+          children: Ai(tR, JR)
+        }), (0, KR.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, ZW.jsx)("i", {
+          children: (0, KR.jsx)("i", {
             style: {
-              width: 100 * LW + "%"
+              width: 100 * qR + "%"
             }
           })
         })]
       })
     }
 
-    function yc(WW) {
-      var iW;
+    function Xi(RR) {
+      var JR;
       let {
-        state: OW,
-        urgent: EW,
-        daysLeft: LW,
-        totalDays: cW,
-        recipientHasSuperRank: wW,
-        busy: tW,
-        highlight: xW,
-        onOpen: lW,
-        onAct: bW,
-        onNeedRecipient: jW,
-        onLogin: kW,
-        wearer: sW,
-        live: MW,
-        onWake: KW
-      } = WW;
+        state: GR,
+        urgent: tR,
+        daysLeft: qR,
+        totalDays: iR,
+        recipientHasSuperRank: fR,
+        busy: VR,
+        highlight: wR,
+        onOpen: rR,
+        onAct: aR,
+        onNeedRecipient: LR,
+        onLogin: UR,
+        wearer: WR,
+        live: AR,
+        onWake: CR
+      } = RR;
       const {
-        t: SW
-      } = (0, PW.B)(), {
-        userContext: YW
-      } = (0, AW.e)(), yW = Date.now(), TW = (0, pW.o)(yW), JW = "hyper" === TW.look, hW = JW ? void 0 : Nc, HW = HL(OW), nW = (0, pW.p)(yW), {
-        days: uW
-      } = nW.product, oW = SW("store:recipientHasSuperRank", {
-        giftDays: uW
-      }), dW = null === (iW = xi("subscribed" === OW)) || void 0 === iW ? void 0 : iW.text, eW = HW ? null : (0, pW.m)(YW.superRankInfo, yW), vW = JW && !HW && "subscribed" !== OW && "pending" !== OW && (0, BW.subscriptionsSold)() && !(0, UW.isMobileApp)(), [gW, DW] = (0, mW.useState)(!0);
-      return (0, ZW.jsxs)("div", {
-        className: NW()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: HW,
-          StoreSuperRankTileUrgent: "recharge" === OW && EW,
-          StoreSuperRankTileWithChip: wW,
-          StoreSuperRankTileGiftReady: "gift" === OW,
-          StoreHyperRankTile: JW
+        t: XR
+      } = (0, ZR.A)(), {
+        userContext: MR
+      } = (0, eR.d)(), BR = Date.now(), lR = (0, IR.s)(BR), pR = "hyper" === lR.look, gR = pR ? void 0 : yi, bR = pq(GR), vR = (0, IR.v)(BR), {
+        days: OR
+      } = vR.product, xR = XR("store:recipientHasSuperRank", {
+        giftDays: OR
+      }), NR = null === (JR = wJ("subscribed" === GR)) || void 0 === JR ? void 0 : JR.text, DR = bR ? null : (0, IR.o)(MR.superRankInfo, BR), HR = pR && !bR && "subscribed" !== GR && "pending" !== GR && (0, jR.subscriptionsSold)() && !(0, nR.isMobileApp)(), [oR, cR] = (0, yR.useState)(!0);
+      return (0, KR.jsxs)("div", {
+        className: uR()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: bR,
+          StoreSuperRankTileUrgent: "recharge" === GR && tR,
+          StoreSuperRankTileWithChip: fR,
+          StoreSuperRankTileGiftReady: "gift" === GR,
+          StoreHyperRankTile: pR
         }),
-        ...nL(SW(TW.nameKey)),
+        ...gq(XR(lR.nameKey)),
         "data-store-item": "superRank",
-        onPointerEnter: hW,
-        onFocus: hW,
-        onPointerMove: WW => {
-          !JW || MW || "mouse" !== WW.pointerType || 0 === WW.movementX && 0 === WW.movementY || KW()
+        onPointerEnter: gR,
+        onFocus: gR,
+        onPointerMove: RR => {
+          !pR || AR || "mouse" !== RR.pointerType || 0 === RR.movementX && 0 === RR.movementY || CR()
         },
-        onClick: lW,
-        children: [JW && (0, ZW.jsx)(BL, {
+        onClick: rR,
+        children: [pR && (0, KR.jsx)(zq, {
           className: "StoreHyperRankTileStage",
-          wearer: sW,
-          active: MW
-        }), !JW && (0, ZW.jsx)("div", {
+          wearer: WR,
+          active: AR
+        }), !pR && (0, KR.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${TW.artUrl})`
+            backgroundImage: `url(${lR.artUrl})`
           }
-        }), HW && (0, ZW.jsx)("div", {
+        }), bR && (0, KR.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "StoreTileContent",
-          children: [wW && (0, ZW.jsx)("span", {
+          children: [fR && (0, KR.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: oW,
-            children: oW
-          }), (0, ZW.jsx)("div", {
+            title: xR,
+            children: xR
+          }), (0, KR.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, ZW.jsx)(pW.f, {
-              tierId: (0, fW.j)(yW).id
+            children: (0, KR.jsx)(IR.g, {
+              tierId: (0, mR.i)(BR).id
             })
-          }), HW && (0, ZW.jsx)("div", {
+          }), bR && (0, KR.jsx)("div", {
             className: "StoreTilePitch",
-            children: SW("store:giftPitch", {
-              days: uW
+            children: XR("store:giftPitch", {
+              days: OR
             })
-          }), JW && ("buy" === OW || "login" === OW) && null === eW && (0, ZW.jsx)("div", {
+          }), pR && ("buy" === GR || "login" === GR) && null === DR && (0, KR.jsx)("div", {
             className: "StoreTilePitch",
-            children: SW("store:hyperHook")
-          }), "recharge" === OW && (0, ZW.jsx)(Yc, {
-            daysLeft: LW,
-            totalDays: cW,
-            urgent: EW
-          }), dW && (0, ZW.jsx)("div", {
+            children: XR("store:hyperHook")
+          }), "recharge" === GR && (0, KR.jsx)(Ci, {
+            daysLeft: qR,
+            totalDays: iR,
+            urgent: tR
+          }), NR && (0, KR.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, ZW.jsx)("span", {
+            children: (0, KR.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: dW
+              children: NR
             })
-          }), null !== eW && (0, ZW.jsx)("div", {
+          }), null !== DR && (0, KR.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, ZW.jsx)(XW, {
+            children: (0, KR.jsx)(SR, {
               className: "StoreSuperRankDaysLeft",
-              until: eW
+              until: DR
             })
-          }), JW && (0, ZW.jsx)(FL, {}), !JW && (0, ZW.jsx)(Kc, {}), (0, ZW.jsxs)("div", {
+          }), pR && (0, KR.jsx)(Fq, {}), !pR && (0, KR.jsx)(Wi, {}), (0, KR.jsxs)("div", {
             className: "StoreTileActions",
-            children: [vW && (0, ZW.jsx)(sc, {
-              onOfferedChange: DW
-            }), (0, gL.f)(nW.product.tierId, yW) && (0, ZW.jsx)(dL, {
-              state: OW,
+            children: [HR && (0, KR.jsx)(ni, {
+              onOfferedChange: cR
+            }), (0, Dq.e)(vR.product.tierId, BR) && (0, KR.jsx)(Oq, {
+              state: GR,
               item: "superRank",
-              price: nW.price,
-              busy: tW,
-              highlight: xW,
-              secondary: vW && gW,
-              onAct: bW,
-              onNeedRecipient: jW,
-              onLogin: kW
-            }), "needsRecipient" === OW && (0, ZW.jsx)("span", {
+              price: vR.price,
+              busy: VR,
+              highlight: wR,
+              secondary: HR && oR,
+              onAct: aR,
+              onNeedRecipient: LR,
+              onLogin: UR
+            }), "needsRecipient" === GR && (0, KR.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: SW("store:pickRecipientFirst")
-            }), "recharge" === OW && EW && (0, ZW.jsx)("span", {
+              children: XR("store:pickRecipientFirst")
+            }), "recharge" === GR && tR && (0, KR.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === LW ? SW("store:endsInOneDay") : SW("store:endsInDays", {
-                days: LW
+              children: 1 === qR ? XR("store:endsInOneDay") : XR("store:endsInDays", {
+                days: qR
               })
             })]
           })]
         })]
       })
     }
-    var Tc = OW(1649),
-      Jc = OW(1544),
-      hc = OW(4802);
+    var Mi = GR(1709),
+      Bi = GR(1597),
+      li = GR(4913);
 
-    function Hc() {
-      return (0, ZW.jsx)("span", {
+    function gi() {
+      return (0, KR.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var nc = OW(1414),
-      uc = OW(1659),
-      oc = OW(35264);
+    var bi = GR(1487),
+      vi = GR(1718),
+      Oi = GR(35193);
 
-    function dc(WW) {
+    function xi(RR) {
       let {
-        character: iW,
-        drawn: OW,
-        onDrawn: EW
-      } = WW;
-      const PW = (0, mW.useRef)(null),
-        LW = (0, oc.e)(iW);
-      return (0, ZW.jsx)("div", {
-        className: NW()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: OW
+        character: JR,
+        drawn: GR,
+        onDrawn: tR
+      } = RR;
+      const ZR = (0, yR.useRef)(null),
+        qR = (0, Oi.e)(JR);
+      return (0, KR.jsx)("div", {
+        className: uR()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: GR
         }),
-        children: (0, ZW.jsx)(mW.Suspense, {
+        children: (0, KR.jsx)(yR.Suspense, {
           fallback: null,
-          children: (0, ZW.jsx)(KL.e, {
-            ref: PW,
+          children: (0, KR.jsx)(Wq.e, {
+            ref: ZR,
             framing: "store",
-            turntableFromYaw: OW ? LW.yaw : null,
+            turntableFromYaw: GR ? qR.yaw : null,
             onReady: () => {
-              var WW, OW;
-              null === (WW = PW.current) || void 0 === WW || WW.setOrbit(LW), null === (OW = PW.current) || void 0 === OW || OW.setAllCosmetics(uc.e[iW].cosmetics)
+              var RR, GR;
+              null === (RR = ZR.current) || void 0 === RR || RR.setOrbit(qR), null === (GR = ZR.current) || void 0 === GR || GR.setAllCosmetics(vi.b[JR].cosmetics)
             },
-            onDrawn: EW
+            onDrawn: tR
           })
         })
       })
     }
-    var ec = OW(4231);
-    const vc = {
+    var Ni = GR(4303);
+    const Di = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      gc = new Set(["wildSpirits"]);
+      Hi = new Set(["wildSpirits"]);
 
-    function Dc(WW) {
-      var iW;
+    function oi(RR) {
+      var JR;
       let {
-        tile: OW,
-        design: EW,
-        canGoLive: cW,
-        live: wW,
-        busy: tW,
-        highlight: xW,
-        onLiveStart: lW,
-        onLiveEnd: AW,
-        onOpen: bW,
-        onAct: jW,
-        onNeedRecipient: UW,
-        onLogin: kW
-      } = WW;
+        tile: GR,
+        design: tR,
+        canGoLive: iR,
+        live: fR,
+        busy: VR,
+        highlight: wR,
+        onLiveStart: rR,
+        onLiveEnd: eR,
+        onOpen: aR,
+        onAct: LR,
+        onNeedRecipient: nR,
+        onLogin: UR
+      } = RR;
       const {
-        t: sW
-      } = (0, PW.B)(), {
-        pack: MW,
-        state: KW
-      } = OW, SW = qP.e[MW], YW = (0, qP.g)(MW), yW = (0, ZL.j)(MW), TW = FP.m[yW], JW = gc.has(yW), {
-        tier: hW
-      } = SW, HW = (0, ec.e)(MW), nW = "legendary" === hW || "mythic" === hW, uW = (0, mW.useRef)(null);
-      (0, nc.b)(uW, "epic" === hW || nW || JW);
-      const [dW, eW] = (0, mW.useState)(!1);
-      return !wW && dW && eW(!1), (0, ZW.jsxs)("div", {
-        ref: uW,
-        className: NW()("StoreCharacterCard", `StoreCharacterCard${EW}`, vc[hW], {
-          StoreCharacterCardOwned: "owned" === KW || "recipientOwns" === KW,
-          StoreCharacterCardGift: HL(KW),
-          StoreCharacterCardItem: void 0 === YW
+        t: WR
+      } = (0, ZR.A)(), {
+        pack: AR,
+        state: CR
+      } = GR, XR = SZ.b[AR], MR = (0, SZ.c)(AR), BR = (0, fq.h)(AR), lR = FZ.j[BR], pR = Hi.has(BR), {
+        tier: gR
+      } = XR, bR = (0, Ni.f)(AR), vR = "legendary" === gR || "mythic" === gR, OR = (0, yR.useRef)(null);
+      (0, bi.b)(OR, "epic" === gR || vR || pR);
+      const [NR, DR] = (0, yR.useState)(!1);
+      return !fR && NR && DR(!1), (0, KR.jsxs)("div", {
+        ref: OR,
+        className: uR()("StoreCharacterCard", `StoreCharacterCard${tR}`, Di[gR], {
+          StoreCharacterCardOwned: "owned" === CR || "recipientOwns" === CR,
+          StoreCharacterCardGift: pq(CR),
+          StoreCharacterCardItem: void 0 === MR
         }),
-        onPointerMove: WW => {
-          "mouse" !== WW.pointerType || 0 === WW.movementX && 0 === WW.movementY || !cW || wW || void 0 === YW || lW()
+        onPointerMove: RR => {
+          "mouse" !== RR.pointerType || 0 === RR.movementX && 0 === RR.movementY || !iR || fR || void 0 === MR || rR()
         },
-        onPointerLeave: AW,
-        children: [(0, ZW.jsx)("div", {
+        onPointerLeave: eR,
+        children: [(0, KR.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: TW && (0, ZW.jsx)(TW, {
+          children: lR && (0, KR.jsx)(lR, {
             simple: !0
           })
-        }), nW && (0, ZW.jsx)("div", {
+        }), vR && (0, KR.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, ZW.jsxs)(oW.LinkPreserveSearch, {
+        }), (0, KR.jsxs)(xR.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, Tc.g)({
+          to: (0, Mi.g)({
             kind: "pack",
-            pack: MW
+            pack: AR
           }, Date.now()),
-          "data-store-item": MW,
-          onClick: WW => {
-            (0, Jc.d)(WW) && (WW.preventDefault(), bW())
+          "data-store-item": AR,
+          onClick: RR => {
+            (0, Bi.e)(RR) && (RR.preventDefault(), aR())
           },
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, ZW.jsx)("div", {
-              className: NW()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: dW
+            }), (0, KR.jsx)("div", {
+              className: uR()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: NR
               }),
               style: {
-                backgroundImage: `url(${(0,ZL.q)(MW)})`
+                backgroundImage: `url(${(0,fq.o)(AR)})`
               }
-            }), wW && void 0 !== YW && (0, ZW.jsx)(dc, {
-              character: YW,
-              drawn: dW,
+            }), fR && void 0 !== MR && (0, KR.jsx)(xi, {
+              character: MR,
+              drawn: NR,
               onDrawn: () => {
-                eW(!0)
+                DR(!0)
               }
             })]
-          }), (0, ZW.jsx)("div", {
+          }), (0, KR.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (iW = SW.displayName) && void 0 !== iW ? iW : MW
-          }), (0, ZW.jsxs)("div", {
+            children: null !== (JR = XR.displayName) && void 0 !== JR ? JR : AR
+          }), (0, KR.jsxs)("div", {
             className: "StoreCharacterTierLine",
-            children: [(0, ZW.jsx)(TL.c, {
-              tier: hW
-            }), HW && (0, ZW.jsxs)("span", {
+            children: [(0, KR.jsx)(Mq.b, {
+              tier: gR
+            }), bR && (0, KR.jsxs)("span", {
               className: "StoreTierLabel StoreCharacterAnimated",
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "film"
-              }), sW("packPerks:badgeAnimated")]
+              }), WR("packPerks:badgeAnimated")]
             })]
           })]
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), JW && (0, ZW.jsx)("span", {
+        }), pR && (0, KR.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, ZW.jsx)(Hc, {})
-        }), (0, ZW.jsx)(JL.d, {
-          pack: MW,
+          children: (0, KR.jsx)(gi, {})
+        }), (0, KR.jsx)(Bq.c, {
+          pack: AR,
           iconOnly: !0,
-          className: NW()({
-            PackAnimatedBadgeBelowOwned: "owned" === KW
+          className: uR()({
+            PackAnimatedBadgeBelowOwned: "owned" === CR
           })
-        }), "owned" === KW && (0, ZW.jsx)("span", {
+        }), "owned" === CR && (0, KR.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: sW("general:owned"),
-          "aria-label": sW("general:owned"),
-          children: (0, ZW.jsx)(LW.c, {
+          title: WR("general:owned"),
+          "aria-label": WR("general:owned"),
+          children: (0, KR.jsx)(qR.d, {
             name: "check"
           })
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, ZW.jsx)(dL, {
-            state: KW,
-            item: MW,
-            price: (0, RP.i)(MW),
-            busy: tW,
-            highlight: xW,
-            onAct: jW,
-            onNeedRecipient: UW,
-            onLogin: kW
+          children: (0, KR.jsx)(Oq, {
+            state: CR,
+            item: AR,
+            price: (0, jZ.f)(AR),
+            busy: VR,
+            highlight: wR,
+            onAct: LR,
+            onNeedRecipient: nR,
+            onLogin: UR
           })
         })]
       })
     }
 
-    function Vc(WW) {
+    function ci(RR) {
       let {
-        tiles: iW,
-        busy: OW,
-        highlightItem: EW,
-        onOpen: NW,
-        onAct: PW,
-        onNeedRecipient: LW,
-        onLogin: cW,
-        livePack: wW,
-        setLivePack: tW
-      } = WW;
-      const xW = (0, hc.q)("storeCharacterCardFoil"),
-        lW = (0, hc.q)("storeCharacterCardSpotlight"),
-        AW = xW ? "Foil" : lW ? "Spotlight" : "Showcase",
-        [bW] = (0, mW.useState)(wL.g);
-      return (0, ZW.jsx)("div", {
+        tiles: JR,
+        busy: GR,
+        highlightItem: tR,
+        onOpen: uR,
+        onAct: ZR,
+        onNeedRecipient: qR,
+        onLogin: iR,
+        livePack: fR,
+        setLivePack: VR
+      } = RR;
+      const wR = (0, li.s)("storeCharacterCardFoil"),
+        rR = (0, li.s)("storeCharacterCardSpotlight"),
+        eR = wR ? "Foil" : rR ? "Spotlight" : "Showcase",
+        [aR] = (0, yR.useState)(qq.i);
+      return (0, KR.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: iW.map((WW => (0, ZW.jsx)(Dc, {
-          tile: WW,
-          design: AW,
-          canGoLive: !bW,
-          live: wW === WW.pack,
-          busy: OW,
-          highlight: EW === WW.pack,
+        children: JR.map((RR => (0, KR.jsx)(oi, {
+          tile: RR,
+          design: eR,
+          canGoLive: !aR,
+          live: fR === RR.pack,
+          busy: GR,
+          highlight: tR === RR.pack,
           onLiveStart: () => {
-            tW(WW.pack)
+            VR(RR.pack)
           },
           onLiveEnd: () => {
-            tW((iW => iW === WW.pack ? null : iW))
+            VR((JR => JR === RR.pack ? null : JR))
           },
           onOpen: () => {
-            NW(WW.pack)
+            uR(RR.pack)
           },
           onAct: () => {
-            PW(WW.pack)
+            ZR(RR.pack)
           },
-          onNeedRecipient: LW,
+          onNeedRecipient: qR,
           onLogin: () => {
-            cW(WW.pack)
+            iR(RR.pack)
           }
-        }, WW.pack)))
+        }, RR.pack)))
       })
     }
-    var pc = OW(35272);
+    var Pi = GR(35204);
 
-    function fc(WW) {
+    function Ii(RR) {
       let {
-        title: iW
-      } = WW;
-      return (0, ZW.jsx)("h2", {
+        title: JR
+      } = RR;
+      return (0, KR.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, ZW.jsx)("span", {
+        children: (0, KR.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: iW
+          children: JR
         })
       })
     }
 
-    function Cc(WW) {
+    function mi(RR) {
       let {
-        mountAtOnce: iW,
-        children: OW
-      } = WW;
-      const EW = (0, mW.useRef)(null),
-        [NW, PW] = (0, mW.useState)(iW),
-        LW = (0, pc.c)();
-      return (0, mW.useLayoutEffect)((() => {
-        const WW = EW.current;
-        WW && WW.getBoundingClientRect().top < WW.parentElement.getBoundingClientRect().bottom && PW(!0)
-      }), []), NW || LW ? (0, ZW.jsx)(ZW.Fragment, {
-        children: OW
-      }) : (0, ZW.jsx)("div", {
-        ref: EW
+        mountAtOnce: JR,
+        children: GR
+      } = RR;
+      const tR = (0, yR.useRef)(null),
+        [uR, ZR] = (0, yR.useState)(JR),
+        qR = (0, Pi.e)();
+      return (0, yR.useLayoutEffect)((() => {
+        const RR = tR.current;
+        RR && RR.getBoundingClientRect().top < RR.parentElement.getBoundingClientRect().bottom && ZR(!0)
+      }), []), uR || qR ? (0, KR.jsx)(KR.Fragment, {
+        children: GR
+      }) : (0, KR.jsx)("div", {
+        ref: tR
       })
     }
 
-    function Xc(WW) {
+    function zi(RR) {
       let {
-        layout: iW,
-        mountAtOnce: OW,
-        bundleGift: EW,
-        superRankTotalDays: NW,
-        busy: LW,
-        highlightItem: cW,
-        onOpen: wW,
-        onAct: tW,
-        onNeedRecipient: xW,
-        onLogin: lW,
-        dailyDropTile: AW,
-        dealBanner: bW,
-        rankWearer: jW
-      } = WW;
+        layout: JR,
+        mountAtOnce: GR,
+        bundleGift: tR,
+        superRankTotalDays: uR,
+        busy: qR,
+        highlightItem: iR,
+        onOpen: fR,
+        onAct: VR,
+        onNeedRecipient: wR,
+        onLogin: rR,
+        dailyDropTile: eR,
+        dealBanner: aR,
+        rankWearer: LR
+      } = RR;
       const {
-        t: UW
-      } = (0, PW.B)(), kW = iW.packs.filter((WW => void 0 === (0, qP.g)(WW.pack) && !(0, qP.j)(WW.pack))), sW = iW.packs.filter((WW => void 0 !== (0, qP.g)(WW.pack))), MW = iW.packs.filter((WW => (0, qP.j)(WW.pack))), [KW, SW] = (0, mW.useState)(null), [YW, TW] = (0, mW.useState)(!1), {
-        gameState: JW
-      } = (0, yW.p)(["gameState"]), hW = null === KW && (YW || "inGame" === JW);
-      return (0, ZW.jsxs)(ZW.Fragment, {
-        children: [(0, ZW.jsx)(Ni.b, {
+        t: nR
+      } = (0, ZR.A)(), UR = JR.packs.filter((RR => void 0 === (0, SZ.c)(RR.pack) && !(0, SZ.h)(RR.pack))), WR = JR.packs.filter((RR => void 0 !== (0, SZ.c)(RR.pack))), AR = JR.packs.filter((RR => (0, SZ.h)(RR.pack))), [CR, XR] = (0, yR.useState)(null), [MR, lR] = (0, yR.useState)(!1), {
+        gameState: pR
+      } = (0, BR.o)(["gameState"]), gR = null === CR && (MR || "inGame" === pR);
+      return (0, KR.jsxs)(KR.Fragment, {
+        children: [(0, KR.jsx)(uJ.c, {
           className: "StoreSuperGems",
-          gift: EW,
-          highlightSku: cW,
-          leadingTile: AW,
-          afterLeadingTile: bW
-        }), null !== iW.superRank && (0, ZW.jsxs)(ZW.Fragment, {
-          children: [(0, ZW.jsx)(fc, {
-            title: UW("store:rank")
-          }), (0, ZW.jsx)(yc, {
-            state: iW.superRank.state,
-            urgent: iW.superRank.urgent,
-            daysLeft: iW.superRankDaysLeft,
-            totalDays: NW,
-            recipientHasSuperRank: iW.recipientHasSuperRank,
-            wearer: jW,
-            live: hW,
+          gift: tR,
+          highlightSku: iR,
+          leadingTile: eR,
+          afterLeadingTile: aR
+        }), null !== JR.superRank && (0, KR.jsxs)(KR.Fragment, {
+          children: [(0, KR.jsx)(Ii, {
+            title: nR("store:rank")
+          }), (0, KR.jsx)(Xi, {
+            state: JR.superRank.state,
+            urgent: JR.superRank.urgent,
+            daysLeft: JR.superRankDaysLeft,
+            totalDays: uR,
+            recipientHasSuperRank: JR.recipientHasSuperRank,
+            wearer: LR,
+            live: gR,
             onWake: () => {
-              TW(!0)
+              lR(!0)
             },
-            busy: LW,
-            highlight: "superRank" === cW,
+            busy: qR,
+            highlight: "superRank" === iR,
             onOpen: () => {
-              wW("superRank")
+              fR("superRank")
             },
             onAct: () => {
-              tW("superRank")
+              VR("superRank")
             },
-            onNeedRecipient: xW,
+            onNeedRecipient: wR,
             onLogin: () => {
-              lW("superRank")
+              rR("superRank")
             }
           })]
-        }), (0, ZW.jsxs)(Cc, {
-          mountAtOnce: OW,
-          children: [(0, ZW.jsx)(fc, {
-            title: UW("store:bundles")
-          }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsxs)(mi, {
+          mountAtOnce: GR,
+          children: [(0, KR.jsx)(Ii, {
+            title: nR("store:bundles")
+          }), (0, KR.jsx)("div", {
             className: "StorePackGrid",
-            children: kW.map((WW => (0, ZW.jsx)(vL, {
-              pack: WW.pack,
-              state: WW.state,
-              busy: LW,
+            children: UR.map((RR => (0, KR.jsx)(Nq, {
+              pack: RR.pack,
+              state: RR.state,
+              busy: qR,
               onOpen: () => {
-                wW(WW.pack)
+                fR(RR.pack)
               },
               onAct: () => {
-                tW(WW.pack)
+                VR(RR.pack)
               },
-              onNeedRecipient: xW,
+              onNeedRecipient: wR,
               onLogin: () => {
-                lW(WW.pack)
+                rR(RR.pack)
               }
-            }, WW.pack)))
-          }), (0, ZW.jsxs)(Cc, {
-            mountAtOnce: OW,
-            children: [(0, ZW.jsx)(fc, {
-              title: UW("store:characters")
-            }), (0, ZW.jsx)(Vc, {
-              tiles: sW,
-              busy: LW,
-              highlightItem: cW,
-              onOpen: wW,
-              onAct: tW,
-              onNeedRecipient: xW,
-              onLogin: lW,
-              livePack: KW,
-              setLivePack: SW
-            }), MW.length > 0 && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [(0, ZW.jsx)(fc, {
-                title: UW("store:premiumItems")
-              }), (0, ZW.jsx)(Vc, {
-                tiles: MW,
-                busy: LW,
-                highlightItem: cW,
-                onOpen: wW,
-                onAct: tW,
-                onNeedRecipient: xW,
-                onLogin: lW,
-                livePack: KW,
-                setLivePack: SW
+            }, RR.pack)))
+          }), (0, KR.jsxs)(mi, {
+            mountAtOnce: GR,
+            children: [(0, KR.jsx)(Ii, {
+              title: nR("store:characters")
+            }), (0, KR.jsx)(ci, {
+              tiles: WR,
+              busy: qR,
+              highlightItem: iR,
+              onOpen: fR,
+              onAct: VR,
+              onNeedRecipient: wR,
+              onLogin: rR,
+              livePack: CR,
+              setLivePack: XR
+            }), AR.length > 0 && (0, KR.jsxs)(KR.Fragment, {
+              children: [(0, KR.jsx)(Ii, {
+                title: nR("store:premiumItems")
+              }), (0, KR.jsx)(ci, {
+                tiles: AR,
+                busy: qR,
+                highlightItem: iR,
+                onOpen: fR,
+                onAct: VR,
+                onNeedRecipient: wR,
+                onLogin: rR,
+                livePack: CR,
+                setLivePack: XR
               })]
             })]
           })]
@@ -8305,471 +8305,471 @@ export const modules = {
       })
     }
 
-    function Bc(WW) {
+    function Si(RR) {
       let {
-        giftName: iW,
-        onChooseRecipient: OW
-      } = WW;
+        giftName: JR,
+        onChooseRecipient: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return iW ? (0, ZW.jsxs)("span", {
+        t: yR
+      } = (0, ZR.A)();
+      return JR ? (0, KR.jsxs)("span", {
         className: "StoreDetailRecipient",
-        title: mW("store:giftFor", {
-          name: iW
+        title: yR("store:giftFor", {
+          name: JR
         }),
-        children: [iL.d, " ", mW("store:giftFor", {
-          name: iW
+        children: [hZ.b, " ", yR("store:giftFor", {
+          name: JR
         })]
-      }) : (0, ZW.jsxs)("div", {
-        ...(0, wW.fb)(),
+      }) : (0, KR.jsxs)("div", {
+        ...(0, fR.bb)(),
         className: "StoreDetailRecipient StoreDetailRecipientChoose",
-        onClick: OW,
-        children: [iL.d, " ", mW("store:chooseRecipient")]
+        onClick: GR,
+        children: [hZ.b, " ", yR("store:chooseRecipient")]
       })
     }
 
-    function qc(WW) {
-      return (0, fW.e)(Date.now()) ? (0, ZW.jsx)(Gc, {
-        ...WW
-      }) : (0, ZW.jsx)(Rc, {
-        ...WW
+    function ji(RR) {
+      return (0, mR.c)(Date.now()) ? (0, KR.jsx)(Ei, {
+        ...RR
+      }) : (0, KR.jsx)(di, {
+        ...RR
       })
     }
 
-    function Rc(WW) {
+    function di(RR) {
       let {
-        state: iW,
-        wearer: OW,
-        mode: mW,
-        giftName: EW,
-        busy: NW,
-        highlight: LW,
-        purchaseError: cW,
-        onBack: wW,
-        onChooseRecipient: tW,
-        onAct: xW,
-        onLogin: lW
-      } = WW;
+        state: JR,
+        wearer: GR,
+        mode: yR,
+        giftName: tR,
+        busy: uR,
+        highlight: qR,
+        purchaseError: iR,
+        onBack: fR,
+        onChooseRecipient: VR,
+        onAct: wR,
+        onLogin: rR
+      } = RR;
       const {
-        t: AW
-      } = (0, PW.B)(), bW = xi("gift" !== mW);
-      return (0, ZW.jsx)(Lc, {
-        tierId: VW.s.id,
-        wearer: OW,
-        onBack: wW,
-        recipient: "gift" === mW && (0, ZW.jsx)(Bc, {
-          giftName: EW,
-          onChooseRecipient: tW
+        t: eR
+      } = (0, ZR.A)(), aR = wJ("gift" !== yR);
+      return (0, KR.jsx)(ui, {
+        tierId: PR.t.id,
+        wearer: GR,
+        onBack: fR,
+        recipient: "gift" === yR && (0, KR.jsx)(Si, {
+          giftName: tR,
+          onChooseRecipient: VR
         }),
-        cta: (0, ZW.jsx)(dL, {
-          state: iW,
+        cta: (0, KR.jsx)(Oq, {
+          state: JR,
           item: "superRank",
-          price: (0, pW.p)(Date.now()).price,
-          busy: NW,
-          highlight: LW,
-          onAct: xW,
-          onNeedRecipient: tW,
-          onLogin: lW
+          price: (0, IR.v)(Date.now()).price,
+          busy: uR,
+          highlight: qR,
+          onAct: wR,
+          onNeedRecipient: VR,
+          onLogin: rR
         }),
-        afterCta: (0, ZW.jsxs)(ZW.Fragment, {
-          children: [bW && (0, ZW.jsx)("span", {
+        afterCta: (0, KR.jsxs)(KR.Fragment, {
+          children: [aR && (0, KR.jsx)("span", {
             className: "StoreTileNote",
-            children: bW.text
-          }), (null === bW || void 0 === bW ? void 0 : bW.manageUrl) && (0, ZW.jsx)("a", {
+            children: aR.text
+          }), (null === aR || void 0 === aR ? void 0 : aR.manageUrl) && (0, KR.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: bW.manageUrl,
+            href: aR.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: AW("payments:manageSubscription")
-          }), cW && (0, ZW.jsx)("span", {
+            children: eR("payments:manageSubscription")
+          }), iR && (0, KR.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: AW(cW)
+            children: eR(iR)
           })]
         })
       })
     }
 
-    function Gc(WW) {
+    function Ei(RR) {
       let {
-        state: iW,
-        daysLeft: OW,
-        wearer: EW,
-        mode: NW,
-        giftName: LW,
-        busy: cW,
-        highlight: wW,
-        purchaseError: tW,
-        onBack: xW,
-        onChooseRecipient: lW,
-        onAct: bW,
-        onLogin: jW
-      } = WW;
+        state: JR,
+        daysLeft: GR,
+        wearer: tR,
+        mode: uR,
+        giftName: qR,
+        busy: iR,
+        highlight: fR,
+        purchaseError: VR,
+        onBack: wR,
+        onChooseRecipient: rR,
+        onAct: aR,
+        onLogin: LR
+      } = RR;
       const {
-        t: UW
-      } = (0, PW.B)(), {
-        userContext: kW
-      } = (0, AW.e)(), sW = Date.now(), MW = "gift" !== NW, KW = MW && "subscribed" === iW, SW = MW ? (0, pW.m)(kW.superRankInfo, sW) : null, YW = MW && !KW && "pending" !== iW && (0, BW.subscriptionsSold)(), [yW, TW] = (0, mW.useState)(!0);
-      return (0, ZW.jsx)(Lc, {
-        tierId: VW.g.id,
-        wearer: EW,
-        onBack: xW,
-        recipient: !MW && (0, ZW.jsx)(Bc, {
-          giftName: LW,
-          onChooseRecipient: lW
+        t: nR
+      } = (0, ZR.A)(), {
+        userContext: UR
+      } = (0, eR.d)(), WR = Date.now(), AR = "gift" !== uR, CR = AR && "subscribed" === JR, XR = AR ? (0, IR.o)(UR.superRankInfo, WR) : null, MR = AR && !CR && "pending" !== JR && (0, jR.subscriptionsSold)(), [BR, lR] = (0, yR.useState)(!0);
+      return (0, KR.jsx)(ui, {
+        tierId: PR.h.id,
+        wearer: tR,
+        onBack: wR,
+        recipient: !AR && (0, KR.jsx)(Si, {
+          giftName: qR,
+          onChooseRecipient: rR
         }),
-        cta: (0, ZW.jsxs)(ZW.Fragment, {
-          children: [null !== SW && (0, ZW.jsx)(XW, {
+        cta: (0, KR.jsxs)(KR.Fragment, {
+          children: [null !== XR && (0, KR.jsx)(SR, {
             className: "StoreTileNote StoreDetailNote",
-            until: SW
-          }), "recharge" === iW && OW > 0 && (0, ZW.jsx)("span", {
+            until: XR
+          }), "recharge" === JR && GR > 0 && (0, KR.jsx)("span", {
             className: "StoreTileNote StoreDetailNote",
-            children: Sc(UW, OW)
-          }), YW && (0, ZW.jsx)(sc, {
-            onOfferedChange: TW
-          }), MW && (0, ZW.jsx)(Li, {
+            children: Ai(nR, GR)
+          }), MR && (0, KR.jsx)(ni, {
+            onOfferedChange: lR
+          }), AR && (0, KR.jsx)(qJ, {
             showing: !0
-          }), !KW && (0, gL.f)(VW.g.id, sW) && (0, ZW.jsx)(dL, {
-            state: iW,
+          }), !CR && (0, Dq.e)(PR.h.id, WR) && (0, KR.jsx)(Oq, {
+            state: JR,
             item: "superRank",
-            price: (0, pW.p)(sW).price,
-            busy: cW,
-            highlight: wW,
-            secondary: YW && yW,
-            onAct: bW,
-            onNeedRecipient: lW,
-            onLogin: jW
+            price: (0, IR.v)(WR).price,
+            busy: iR,
+            highlight: fR,
+            secondary: MR && BR,
+            onAct: aR,
+            onNeedRecipient: rR,
+            onLogin: LR
           })]
         }),
-        afterCta: tW && (0, ZW.jsx)("span", {
+        afterCta: VR && (0, KR.jsx)("span", {
           className: "StoreTileNote StoreDetailNote StoreTileNoteError",
-          children: UW(tW)
+          children: nR(VR)
         })
       })
     }
 
-    function Ic() {}
+    function Yi() {}
 
-    function ac() {
-      return "true" !== new URLSearchParams(window.location.search).get("tempSubscription") ? null : (0, ZW.jsx)("div", {
+    function ki() {
+      return "true" !== new URLSearchParams(window.location.search).get("tempSubscription") ? null : (0, KR.jsx)("div", {
         className: "StoreTempSubscribe",
-        children: (0, ZW.jsx)(sc, {
-          onOfferedChange: Ic
+        children: (0, KR.jsx)(ni, {
+          onOfferedChange: Yi
         })
       })
     }
-    var rc = OW(3546);
+    var Qi = GR(3653);
 
-    function zc(WW) {
+    function Fi(RR) {
       let {
-        state: iW,
-        view: OW,
-        claiming: EW,
-        onOpen: LW
-      } = WW;
+        state: JR,
+        view: GR,
+        claiming: tR,
+        onOpen: qR
+      } = RR;
       const {
-        t: tW
-      } = (0, PW.B)(), xW = (0, mW.useRef)(null), lW = "ready" === OW.kind;
-      return (0, nc.b)(xW, lW), (0, ZW.jsxs)("div", {
-        ref: xW,
-        className: NW()("DailyDropTile", {
-          DailyDropTileReady: lW
+        t: VR
+      } = (0, ZR.A)(), wR = (0, yR.useRef)(null), rR = "ready" === GR.kind;
+      return (0, bi.b)(wR, rR), (0, KR.jsxs)("div", {
+        ref: wR,
+        className: uR()("DailyDropTile", {
+          DailyDropTileReady: rR
         }),
-        children: [lW && (0, ZW.jsx)(cW.b, {
+        children: [rR && (0, KR.jsx)(iR.c, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: tW("dailyDrop:name")
-        }), (0, ZW.jsxs)("div", {
+          children: VR("dailyDrop:name")
+        }), (0, KR.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, ZW.jsx)(rc.b, {
+          children: [(0, KR.jsx)(Qi.c, {
             className: "DailyDropTileBlock"
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: [(0, ZW.jsx)("span", {
-              children: tW("dailyDrop:basicItems")
-            }), " ", (0, ZW.jsx)("span", {
-              children: tW("dailyDrop:collected", {
-                count: iW.collected.length,
-                total: iW.total
+            children: [(0, KR.jsx)("span", {
+              children: VR("dailyDrop:basicItems")
+            }), " ", (0, KR.jsx)("span", {
+              children: VR("dailyDrop:collected", {
+                count: JR.collected.length,
+                total: JR.total
               })
             })]
           })]
-        }), "ready" === OW.kind && (0, ZW.jsx)(wW.n, {
+        }), "ready" === GR.kind && (0, KR.jsx)(fR.n, {
           className: "DailyDropTileOpen",
-          onClick: LW,
-          loading: EW,
-          children: tW("dailyDrop:open")
-        }), "waiting" === OW.kind && (0, ZW.jsx)("div", {
+          onClick: qR,
+          loading: tR,
+          children: VR("dailyDrop:open")
+        }), "waiting" === GR.kind && (0, KR.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: tW("dailyDrop:nextIn", {
-            count: OW.hours
+          children: VR("dailyDrop:nextIn", {
+            count: GR.hours
           })
         })]
       })
     }
-    var Fc = OW(3083);
-    const Qc = Math.PI / 180;
+    var Ti = GR(3178);
+    const si = Math.PI / 180;
 
-    function Ww(WW) {
-      return WW / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
+    function Rf(RR) {
+      return RR / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
     }
 
-    function iw(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const mW = (WW / (2 * Math.PI / OW) % OW + OW) % OW;
-      let EW = null,
-        NW = 1 / 0;
-      for (let PW = 0; PW < OW; PW++) {
-        if (!iW[PW]) continue;
-        const WW = Math.abs(PW - mW),
-          LW = Math.min(WW, OW - WW);
-        LW < NW && (EW = PW, NW = LW)
+    function Jf(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const yR = (RR / (2 * Math.PI / GR) % GR + GR) % GR;
+      let tR = null,
+        uR = 1 / 0;
+      for (let ZR = 0; ZR < GR; ZR++) {
+        if (!JR[ZR]) continue;
+        const RR = Math.abs(ZR - yR),
+          qR = Math.min(RR, GR - RR);
+        qR < uR && (tR = ZR, uR = qR)
       }
-      return EW
+      return tR
     }
 
-    function Ow(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const mW = iw(WW, iW, OW);
-      if (null === mW) return WW;
-      const EW = Ww(mW, OW) - WW;
-      return WW + EW - 2 * Math.PI * Math.round(EW / (2 * Math.PI))
+    function Gf(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const yR = Jf(RR, JR, GR);
+      if (null === yR) return RR;
+      const tR = Rf(yR, GR) - RR;
+      return RR + tR - 2 * Math.PI * Math.round(tR / (2 * Math.PI))
     }
-    const mw = 32;
+    const yf = 32;
 
-    function Ew(WW) {
-      if (0 === WW.width || 0 === WW.height) return !0;
-      const iW = document.createElement("canvas");
-      iW.width = mw, iW.height = mw;
-      const OW = iW.getContext("2d", {
+    function tf(RR) {
+      if (0 === RR.width || 0 === RR.height) return !0;
+      const JR = document.createElement("canvas");
+      JR.width = yf, JR.height = yf;
+      const GR = JR.getContext("2d", {
         willReadFrequently: !0
       });
-      if (!OW) return !0;
-      OW.drawImage(WW, 0, 0, mw, mw);
+      if (!GR) return !0;
+      GR.drawImage(RR, 0, 0, yf, yf);
       const {
-        data: mW
-      } = OW.getImageData(0, 0, mw, mw);
-      for (let EW = 3; EW < mW.length; EW += 4)
-        if (mW[EW] > 0) return !1;
+        data: yR
+      } = GR.getImageData(0, 0, yf, yf);
+      for (let tR = 3; tR < yR.length; tR += 4)
+        if (yR[tR] > 0) return !1;
       return !0
     }
 
-    function Nw(WW) {
-      WW.width = 0, WW.height = 0
+    function uf(RR) {
+      RR.width = 0, RR.height = 0
     }
 
-    function Pw() {
+    function Zf() {
       return "hidden" === document.visibilityState
     }
-    async function Lw(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 1e3;
+    async function qf(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 1e3;
       for (;;) {
-        await (Pw() ? new Promise((WW => {
-          const iW = () => {
-            Pw() || (document.removeEventListener("visibilitychange", iW), WW())
+        await (Zf() ? new Promise((RR => {
+          const JR = () => {
+            Zf() || (document.removeEventListener("visibilitychange", JR), RR())
           };
-          document.addEventListener("visibilitychange", iW)
+          document.addEventListener("visibilitychange", JR)
         })) : Promise.resolve());
-        const OW = Math.min(iW(), 1e3);
-        if (OW <= 0) return null;
-        const mW = await WW.captureFrame(OW);
-        if (null !== mW || !Pw()) return null !== mW && Ew(mW) ? (Nw(mW), null) : mW
+        const GR = Math.min(JR(), 1e3);
+        if (GR <= 0) return null;
+        const yR = await RR.captureFrame(GR);
+        if (null !== yR || !Zf()) return null !== yR && tf(yR) ? (uf(yR), null) : yR
       }
     }
-    async function ww(WW, iW) {
-      const OW = performance.now();
-      let mW = 0,
-        EW = Pw() ? OW : null;
-      const NW = () => {
-          Pw() ? EW ??= performance.now() : null !== EW && (mW += performance.now() - EW, EW = null)
+    async function ff(RR, JR) {
+      const GR = performance.now();
+      let yR = 0,
+        tR = Zf() ? GR : null;
+      const uR = () => {
+          Zf() ? tR ??= performance.now() : null !== tR && (yR += performance.now() - tR, tR = null)
         },
-        PW = () => {
-          const WW = performance.now();
-          return 3e3 - (WW - OW - mW - (null === EW ? 0 : WW - EW))
+        ZR = () => {
+          const RR = performance.now();
+          return 3e3 - (RR - GR - yR - (null === tR ? 0 : RR - tR))
         };
-      document.addEventListener("visibilitychange", NW);
+      document.addEventListener("visibilitychange", uR);
       try {
-        let OW = await Lw(WW);
-        for (; null === OW && iW() && PW() > 0;) OW = await Lw(WW, PW);
-        return OW
+        let GR = await qf(RR);
+        for (; null === GR && JR() && ZR() > 0;) GR = await qf(RR, ZR);
+        return GR
       } finally {
-        document.removeEventListener("visibilitychange", NW)
+        document.removeEventListener("visibilitychange", uR)
       }
     }
 
-    function tw(WW) {
+    function Vf(RR) {
       let {
-        cosmetics: iW
-      } = WW;
-      return (0, ZW.jsx)("div", {
+        cosmetics: JR
+      } = RR;
+      return (0, KR.jsx)("div", {
         className: "DailyDropRevealHead",
-        children: (0, ZW.jsx)(lL.e, {
-          cosmetics: iW
+        children: (0, KR.jsx)(Kq.c, {
+          cosmetics: JR
         })
       })
     }
 
-    function Zw(WW) {
+    function Kf(RR) {
       let {
-        worn: iW,
-        NE: OW,
-        PE: EW,
-        prompting: cW,
-        className: wW
-      } = WW;
+        worn: JR,
+        ft: GR,
+        Vt: tR,
+        prompting: iR,
+        className: fR
+      } = RR;
       const {
-        t: tW
-      } = (0, PW.B)(), xW = (0, mW.useRef)(null), [lW, AW] = (0, mW.useState)(null), [bW, jW] = (0, mW.useState)(!1), [UW, kW] = (0, mW.useState)(!1), sW = (0, mW.useRef)([]), MW = (0, mW.useRef)(null), KW = (0, mW.useRef)(0), YW = (0, mW.useRef)(null), yW = (0, mW.useRef)(!0), TW = (0, mW.useCallback)((() => {
-        const WW = MW.current,
-          iW = sW.current,
-          OW = iw(KW.current, iW),
-          mW = null === OW ? null : iW[OW],
-          EW = null === WW || void 0 === WW ? void 0 : WW.getContext("2d");
-        WW && mW && EW && (WW.width === mW.width && WW.height === mW.height || (WW.width = mW.width, WW.height = mW.height), EW.clearRect(0, 0, WW.width, WW.height), EW.drawImage(mW, 0, 0))
+        t: VR
+      } = (0, ZR.A)(), wR = (0, yR.useRef)(null), [rR, eR] = (0, yR.useState)(null), [aR, LR] = (0, yR.useState)(!1), [nR, UR] = (0, yR.useState)(!1), WR = (0, yR.useRef)([]), AR = (0, yR.useRef)(null), CR = (0, yR.useRef)(0), MR = (0, yR.useRef)(null), BR = (0, yR.useRef)(!0), lR = (0, yR.useCallback)((() => {
+        const RR = AR.current,
+          JR = WR.current,
+          GR = Jf(CR.current, JR),
+          yR = null === GR ? null : JR[GR],
+          tR = null === RR || void 0 === RR ? void 0 : RR.getContext("2d");
+        RR && yR && tR && (RR.width === yR.width && RR.height === yR.height || (RR.width = yR.width, RR.height = yR.height), tR.clearRect(0, 0, RR.width, RR.height), tR.drawImage(yR, 0, 0))
       }), []);
-      async function JW(WW, iW) {
-        const OW = performance.now(),
-          mW = () => xW.current === WW;
-        let EW = 0;
-        for (const NW of function() {
-            let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
-            const iW = [],
-              OW = new Set;
-            for (let mW = WW / 2; mW >= 1 && Number.isInteger(mW); mW /= 2)
-              for (let EW = 0; EW < WW; EW += mW) OW.has(EW) || (OW.add(EW), iW.push(EW));
-            for (let mW = 0; mW < WW; mW++) OW.has(mW) || iW.push(mW);
-            return iW
+      async function pR(RR, JR) {
+        const GR = performance.now(),
+          yR = () => wR.current === RR;
+        let tR = 0;
+        for (const uR of function() {
+            let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
+            const JR = [],
+              GR = new Set;
+            for (let yR = RR / 2; yR >= 1 && Number.isInteger(yR); yR /= 2)
+              for (let tR = 0; tR < RR; tR += yR) GR.has(tR) || (GR.add(tR), JR.push(tR));
+            for (let yR = 0; yR < RR; yR++) GR.has(yR) || JR.push(yR);
+            return JR
           }()) {
-          if (!mW()) break;
-          WW.turnCamera(Ww(NW));
-          const OW = 0 === NW ? await ww(iW, mW) : await Lw(iW);
-          if (!mW()) {
-            null !== OW && Nw(OW);
+          if (!yR()) break;
+          RR.turnCamera(Rf(uR));
+          const GR = 0 === uR ? await ff(JR, yR) : await qf(JR);
+          if (!yR()) {
+            null !== GR && uf(GR);
             break
           }
-          if (null !== OW) sW.current[NW] = OW, EW++, 0 === NW && AW("stills");
-          else if (0 === NW) break
+          if (null !== GR) WR.current[uR] = GR, tR++, 0 === uR && eR("stills");
+          else if (0 === uR) break
         }
-        EW > 0 && console.info(`Lucky Skin Block's Before: ${EW} stills in ${Math.round(performance.now()-OW)} ms`)
+        tR > 0 && console.info(`Lucky Skin Block's Before: ${tR} stills in ${Math.round(performance.now()-GR)} ms`)
       }
 
-      function hW(WW) {
-        var iW, OW;
-        (null === (iW = YW.current) || void 0 === iW ? void 0 : iW.pointerId) === WW.pointerId && (YW.current = null, yW.current || (KW.current = Ow(KW.current, sW.current), TW(), null === (OW = xW.current) || void 0 === OW || OW.turnCamera(KW.current)))
-      }(0, mW.useEffect)((() => {
-        "stills" === lW && TW()
-      }), [lW, TW]), (0, mW.useEffect)((() => () => {
-        for (const WW of sW.current) WW && Nw(WW);
-        sW.current = []
+      function gR(RR) {
+        var JR, GR;
+        (null === (JR = MR.current) || void 0 === JR ? void 0 : JR.pointerId) === RR.pointerId && (MR.current = null, BR.current || (CR.current = Gf(CR.current, WR.current), lR(), null === (GR = wR.current) || void 0 === GR || GR.turnCamera(CR.current)))
+      }(0, yR.useEffect)((() => {
+        "stills" === rR && lR()
+      }), [rR, lR]), (0, yR.useEffect)((() => () => {
+        for (const RR of WR.current) RR && uf(RR);
+        WR.current = []
       }), []);
-      const HW = cW && !UW,
-        nW = HW ? {
-          onPointerDown: WW => {
-            null === YW.current && (WW.currentTarget.setPointerCapture(WW.pointerId), YW.current = {
-              pointerId: WW.pointerId,
-              startX: WW.clientX,
-              startTurn: KW.current
+      const bR = iR && !nR,
+        vR = bR ? {
+          onPointerDown: RR => {
+            null === MR.current && (RR.currentTarget.setPointerCapture(RR.pointerId), MR.current = {
+              pointerId: RR.pointerId,
+              startX: RR.clientX,
+              startTurn: CR.current
             })
           },
-          onPointerMove: WW => {
-            const iW = YW.current;
-            var OW;
-            null !== iW && iW.pointerId === WW.pointerId && (KW.current = iW.startTurn - (WW.clientX - iW.startX) * Qc, TW(), yW.current || null === (OW = xW.current) || void 0 === OW || OW.turnCamera(KW.current))
+          onPointerMove: RR => {
+            const JR = MR.current;
+            var GR;
+            null !== JR && JR.pointerId === RR.pointerId && (CR.current = JR.startTurn - (RR.clientX - JR.startX) * si, lR(), BR.current || null === (GR = wR.current) || void 0 === GR || GR.turnCamera(CR.current))
           },
-          onPointerUp: hW,
-          onPointerCancel: hW
+          onPointerUp: gR,
+          onPointerCancel: gR
         } : {};
-      return (0, ZW.jsxs)("div", {
-        className: NW()("DailyDropRevealFigures", {
-          DailyDropRevealFiguresTurnable: HW
-        }, wW),
-        children: [(0, ZW.jsxs)("div", {
+      return (0, KR.jsxs)("div", {
+        className: uR()("DailyDropRevealFigures", {
+          DailyDropRevealFiguresTurnable: bR
+        }, fR),
+        children: [(0, KR.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            ...nW,
-            children: ["stills" === lW && (0, ZW.jsx)("canvas", {
-              ref: MW,
+            ...vR,
+            children: ["stills" === rR && (0, KR.jsx)("canvas", {
+              ref: AR,
               className: "DailyDropRevealBeforeStill"
-            }), "head" === lW && (0, ZW.jsx)(tw, {
-              cosmetics: iW
-            }), null === lW && (0, ZW.jsx)(SW.d, {})]
-          }), (0, ZW.jsx)("span", {
+            }), "head" === rR && (0, KR.jsx)(Vf, {
+              cosmetics: JR
+            }), null === rR && (0, KR.jsx)(XR.d, {})]
+          }), (0, KR.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: tW("dailyDrop:before")
+            children: VR("dailyDrop:before")
           })]
-        }), (0, ZW.jsx)(LW.c, {
+        }), (0, KR.jsx)(qR.d, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, ZW.jsx)("div", {
-              className: NW()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: bW
+            children: [(0, KR.jsx)("div", {
+              className: uR()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: aR
               }),
-              children: (0, ZW.jsx)(mW.Suspense, {
+              children: (0, KR.jsx)(yR.Suspense, {
                 fallback: null,
-                children: (0, ZW.jsx)(KL.e, {
+                children: (0, KR.jsx)(Wq.e, {
                   onNoWebGl: () => {
-                    AW("head"), kW(!0)
+                    eR("head"), UR(!0)
                   },
-                  ref: xW,
+                  ref: wR,
                   onReady: () => {
-                    var WW, OW;
-                    null === (WW = xW.current) || void 0 === WW || WW.resetCamera(), null === (OW = xW.current) || void 0 === OW || OW.setAllCosmetics(iW)
+                    var RR, GR;
+                    null === (RR = wR.current) || void 0 === RR || RR.resetCamera(), null === (GR = wR.current) || void 0 === GR || GR.setAllCosmetics(JR)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
                       !async function() {
-                        const WW = xW.current;
-                        if (!WW) return;
-                        const iW = WW.getDevTools();
+                        const RR = wR.current;
+                        if (!RR) return;
+                        const JR = RR.getDevTools();
                         try {
-                          iW && await JW(WW, iW)
-                        } catch (NW) {
-                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", NW)
+                          JR && await pR(RR, JR)
+                        } catch (uR) {
+                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", uR)
                         } finally {
-                          yW.current = !1
+                          BR.current = !1
                         }
-                        if (xW.current !== WW) return;
-                        sW.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), (0, ZO.v)("daily_drop.before_head", "no_front_still"), AW("head")), null === YW.current && (KW.current = Ow(KW.current, sW.current)), WW.turnCamera(KW.current), TW(), WW.updateCosmetic(OW, EW);
-                        const mW = new Promise((WW => {
-                          setTimeout(WW, 1e4)
+                        if (wR.current !== RR) return;
+                        WR.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), (0, fG.y)("daily_drop.before_head", "no_front_still"), eR("head")), null === MR.current && (CR.current = Gf(CR.current, WR.current)), RR.turnCamera(CR.current), lR(), RR.updateCosmetic(GR, tR);
+                        const yR = new Promise((RR => {
+                          setTimeout(RR, 1e4)
                         }));
-                        await Promise.race([WW.ensureReadyForCapture(OW), mW]).catch((WW => {
-                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", WW)
-                        })), xW.current === WW && jW(!0)
+                        await Promise.race([RR.ensureReadyForCapture(GR), yR]).catch((RR => {
+                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", RR)
+                        })), wR.current === RR && LR(!0)
                       }()
                     }))
                   }
                 })
               })
-            }), UW && (WN.E.includes(OW) ? (0, ZW.jsx)(tw, {
+            }), nR && (st.R.includes(GR) ? (0, KR.jsx)(Vf, {
               cosmetics: {
-                ...iW,
-                [OW]: EW
+                ...JR,
+                [GR]: tR
               }
-            }) : (0, ZW.jsx)("img", {
+            }) : (0, KR.jsx)("img", {
               className: "DailyDropRevealAfterPiece",
-              src: `/textures/charSkins/previews/${(0,Fc.l)(OW,EW).previewTex}.png`,
+              src: `/textures/charSkins/previews/${(0,Ti.m)(GR,tR).previewTex}.png`,
               alt: "",
               draggable: !1
-            })), !bW && !UW && (0, ZW.jsx)(SW.d, {}), (0, ZW.jsx)("div", {
+            })), !aR && !nR && (0, KR.jsx)(XR.d, {}), (0, KR.jsx)("div", {
               className: "DailyDropRevealTurn",
-              ...nW
+              ...vR
             })]
-          }), (0, ZW.jsx)("span", {
+          }), (0, KR.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: tW("dailyDrop:after")
+            children: VR("dailyDrop:after")
           })]
         })]
       })
     }
-    const xw = {
+    const wf = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -8777,211 +8777,211 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      lw = {
+      rf = {
         opening: 900,
         shrinking: 700
       };
 
-    function Aw(WW) {
+    function ef(RR) {
       let {
-        drop: iW,
-        onClose: OW
-      } = WW;
+        drop: JR,
+        onClose: GR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)(), {
-        userContext: cW
-      } = (0, AW.e)(), {
-        state: tW,
-        view: xW
-      } = (0, ZO.z)(), [lW, bW] = (0, mW.useState)("closed"), [jW] = (0, mW.useState)((() => ({
-        ...cW.getPlayerCosmetics()
-      }))), [UW] = (0, mW.useState)((() => (0, ZO.l)(iW, jW))), [kW, sW] = (0, mW.useState)(!1), [MW, KW] = (0, mW.useState)(!1), [SW] = (0, mW.useState)((() => null === tW ? Promise.resolve(null) : jO(tW))), [YW, TW] = (0, mW.useState)(null), JW = (0, cO.c)(), {
-        gameState: hW
-      } = (0, yW.p)(["gameState"]);
-      async function HW() {
-        const WW = await SW;
-        JW.current && (null === WW ? (OW(), async function(WW) {
-          let iW = null;
+        t: tR
+      } = (0, ZR.A)(), {
+        userContext: iR
+      } = (0, eR.d)(), {
+        state: VR,
+        view: wR
+      } = (0, fG.F)(), [rR, aR] = (0, yR.useState)("closed"), [LR] = (0, yR.useState)((() => ({
+        ...iR.getPlayerCosmetics()
+      }))), [nR] = (0, yR.useState)((() => (0, fG.j)(JR, LR))), [UR, WR] = (0, yR.useState)(!1), [AR, CR] = (0, yR.useState)(!1), [XR] = (0, yR.useState)((() => null === VR ? Promise.resolve(null) : eG(VR))), [MR, lR] = (0, yR.useState)(null), pR = (0, ZG.d)(), {
+        gameState: gR
+      } = (0, BR.o)(["gameState"]);
+      async function bR() {
+        const RR = await XR;
+        pR.current && (null === RR ? (GR(), async function(RR) {
+          let JR = null;
           try {
-            const OW = await bO();
-            null === WW || WW.remindersOn || null !== AO.i.getItem(OW) || (iW = OW)
-          } catch (mW) {
-            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", mW)
+            const GR = await rG();
+            null === RR || RR.remindersOn || null !== wG.i.getItem(GR) || (JR = GR)
+          } catch (yR) {
+            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", yR)
           }
-          if (null === iW) return void await (0, xO.i)("dailyDrop");
-          const OW = iW;
-          await (0, xO.i)("dailyDrop", {
+          if (null === JR) return void await (0, VG.k)("dailyDrop");
+          const GR = JR;
+          await (0, VG.k)("dailyDrop", {
             copy: {
               title: "mobilePushNotifications:optInTitle",
               subtitle: "mobilePushNotifications:offerSubtitleDailyDrop"
             },
             onAllow: () => {
-              AO.i.setItem(OW, !0), kO(null)
+              wG.i.setItem(GR, !0), LG(null)
             }
           })
-        }(tW)) : ((0, xO.e)(), TW(WW), bW("remind")))
+        }(VR)) : ((0, VG.h)(), lR(RR), aR("remind")))
       }
 
-      function nW(WW) {
-        null !== YW && function(WW, iW) {
-          AO.i.setItem(WW.askedKey, !0), (0, LO.m)(), (0, ZO.v)("daily_drop.remind", iW ? "yes" : "no"), iW && kO(WW.requester)
-        }(YW, WW), OW()
-      }(0, mW.useEffect)((() => {
-        (0, ZO.v)("daily_drop.reveal_step", lW)
-      }), [lW]), (0, mW.useEffect)((() => {
-        const WW = lw[lW];
-        if (void 0 === WW) return;
-        const iW = setTimeout((() => {
-          bW(xw[lW])
-        }), WW);
+      function vR(RR) {
+        null !== MR && function(RR, JR) {
+          wG.i.setItem(RR.askedKey, !0), (0, uG.k)(), (0, fG.y)("daily_drop.remind", JR ? "yes" : "no"), JR && LG(RR.requester)
+        }(MR, RR), GR()
+      }(0, yR.useEffect)((() => {
+        (0, fG.y)("daily_drop.reveal_step", rR)
+      }), [rR]), (0, yR.useEffect)((() => {
+        const RR = rf[rR];
+        if (void 0 === RR) return;
+        const JR = setTimeout((() => {
+          aR(wf[rR])
+        }), RR);
         return () => {
-          clearTimeout(iW)
+          clearTimeout(JR)
         }
-      }), [lW]);
-      const uW = EW(`dailyDrop:kind_${UW.NE}`),
-        oW = tW && EW("dailyDrop:collected", {
-          count: tW.collected.length,
-          total: tW.total
+      }), [rR]);
+      const OR = tR(`dailyDrop:kind_${nR.ft}`),
+        xR = VR && tR("dailyDrop:collected", {
+          count: VR.collected.length,
+          total: VR.total
         }),
-        dW = "revealed" === lW || "shrinking" === lW,
-        eW = "equip" !== lW && "remind" !== lW;
-      return (0, ZW.jsx)(SE.b, {
+        NR = "revealed" === rR || "shrinking" === rR,
+        DR = "equip" !== rR && "remind" !== rR;
+      return (0, KR.jsx)(At.e, {
         className: "DailyDropRevealScreen",
-        close: "remind" === lW ? () => {
-          nW(!1)
-        } : OW,
+        close: "remind" === rR ? () => {
+          vR(!1)
+        } : GR,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, ZW.jsxs)("div", {
-          className: NW()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === lW,
-            DailyDropRevealShrinking: "shrinking" === lW,
-            DailyDropRevealFiguresShown: "shrinking" === lW || "equip" === lW || "remind" === lW
+        children: (0, KR.jsxs)("div", {
+          className: uR()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === rR,
+            DailyDropRevealShrinking: "shrinking" === rR,
+            DailyDropRevealFiguresShown: "shrinking" === rR || "equip" === rR || "remind" === rR
           }),
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, ZW.jsx)(Zw, {
+            children: [(0, KR.jsx)(Kf, {
               className: "DailyDropRevealStageFigures",
-              worn: jW,
-              NE: UW.NE,
-              PE: UW.PE,
-              prompting: !eW
-            }), ("closed" === lW || "opening" === lW) && (0, ZW.jsx)(rc.b, {
+              worn: LR,
+              ft: nR.ft,
+              Vt: nR.Vt,
+              prompting: !DR
+            }), ("closed" === rR || "opening" === rR) && (0, KR.jsx)(Qi.c, {
               className: "DailyDropRevealBlock",
-              open: "opening" === lW
-            }), dW && (0, ZW.jsx)("div", {
+              open: "opening" === rR
+            }), NR && (0, KR.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, ZW.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,Fc.l)(UW.NE,UW.PE).previewTex}.png`,
-                alt: uW,
+              children: (0, KR.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,Ti.m)(nR.ft,nR.Vt).previewTex}.png`,
+                alt: OR,
                 draggable: !1
               })
             })]
-          }), eW && (0, ZW.jsxs)(ZW.Fragment, {
-            children: [(0, ZW.jsxs)("div", {
+          }), DR && (0, KR.jsxs)(KR.Fragment, {
+            children: [(0, KR.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, ZW.jsx)("div", {
+              children: [(0, KR.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: dW ? uW : EW("dailyDrop:name")
-              }), "closed" === lW && (0, ZW.jsx)("div", {
+                children: NR ? OR : tR("dailyDrop:name")
+              }), "closed" === rR && (0, KR.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: EW("dailyDrop:tapToOpen")
-              }), "revealed" === lW && (0, ZW.jsx)("div", {
+                children: tR("dailyDrop:tapToOpen")
+              }), "revealed" === rR && (0, KR.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: EW("dailyDrop:tapToContinue")
+                children: tR("dailyDrop:tapToContinue")
               })]
-            }), (0, ZW.jsx)("button", {
+            }), (0, KR.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": EW("closed" === lW ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": tR("closed" === rR ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                bW(xw[lW])
+                aR(wf[rR])
               }
             })]
-          }), "equip" === lW && (0, ZW.jsxs)("div", {
+          }), "equip" === rR && (0, KR.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: uW
-            }), (0, ZW.jsx)("div", {
+              children: OR
+            }), (0, KR.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: EW("dailyDrop:equipQuestion")
-            }), (0, ZW.jsxs)("div", {
+              children: tR("dailyDrop:equipQuestion")
+            }), (0, KR.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, ZW.jsx)(wW.f, {
+              children: [(0, KR.jsx)(fR.g, {
                 className: "DailyDropRevealButton",
-                disabled: kW,
+                disabled: UR,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, ZO.v)("daily_drop.not_now", iW), HW()
+                  (0, fG.y)("daily_drop.not_now", JR), bR()
                 },
-                children: EW("dailyDrop:notNow")
-              }), (0, ZW.jsx)(wW.f, {
+                children: tR("dailyDrop:notNow")
+              }), (0, KR.jsx)(fR.g, {
                 className: "DailyDropRevealButton",
-                loading: kW,
+                loading: UR,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, ZO.v)("daily_drop.equip", iW), sW(!0), KW(!1);
+                    (0, fG.y)("daily_drop.equip", JR), WR(!0), CR(!1);
                     try {
-                      await (0, ZO.h)(cW, UW.NE, UW.PE)
-                    } catch (WW) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", WW), sW(!1), void KW(!0)
+                      await (0, fG.g)(iR, nR.ft, nR.Vt)
+                    } catch (RR) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", RR), WR(!1), void CR(!0)
                     }
-                    await HW()
+                    await bR()
                   }()
                 },
-                children: EW("dailyDrop:equip")
+                children: tR("dailyDrop:equip")
               })]
-            }), MW && (0, ZW.jsx)("div", {
+            }), AR && (0, KR.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: EW("dailyDrop:equipFailed")
-            }), !(0, yW.e)(hW) && (0, ZW.jsxs)("button", {
+              children: tR("dailyDrop:equipFailed")
+            }), !(0, BR.h)(gR) && (0, KR.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: kW,
+              disabled: UR,
               onClick: () => {
-                var WW;
-                (0, ZO.v)("daily_drop.customise", iW), WW = UW.NE, uO.l.iZ(bE, WW), yW.d.set({
-                  openEverythingMenuName: oi.m.CUSTOMISATION
-                }), OW()
+                var RR;
+                (0, fG.y)("daily_drop.customise", JR), RR = nR.ft, bG.n.JK(wt, RR), BR.d.set({
+                  openEverythingMenuName: OJ.o.CUSTOMISATION
+                }), GR()
               },
-              children: [EW("dailyDrop:customise"), " ", (0, ZW.jsx)(LW.c, {
+              children: [tR("dailyDrop:customise"), " ", (0, KR.jsx)(qR.d, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), oW && (0, ZW.jsxs)("div", {
+            }), xR && (0, KR.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [oW, "waiting" === (null === xW || void 0 === xW ? void 0 : xW.kind) && ` \xb7 ${EW("dailyDrop:nextInInline",{count:xW.hours})}`]
+              children: [xR, "waiting" === (null === wR || void 0 === wR ? void 0 : wR.kind) && ` \xb7 ${tR("dailyDrop:nextInInline",{count:wR.hours})}`]
             })]
-          }), "remind" === lW && (0, ZW.jsxs)("div", {
+          }), "remind" === rR && (0, KR.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, ZW.jsx)("div", {
+            children: [(0, KR.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: EW("dailyDrop:remindTitle")
-            }), (0, ZW.jsx)("div", {
+              children: tR("dailyDrop:remindTitle")
+            }), (0, KR.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: EW("dailyDrop:remindSubtitle")
-            }), (0, ZW.jsxs)("div", {
+              children: tR("dailyDrop:remindSubtitle")
+            }), (0, KR.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, ZW.jsx)(wW.f, {
+              children: [(0, KR.jsx)(fR.g, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  nW(!1)
+                  vR(!1)
                 },
-                children: EW("dailyDrop:remindNo")
-              }), (0, ZW.jsx)(wW.n, {
+                children: tR("dailyDrop:remindNo")
+              }), (0, KR.jsx)(fR.n, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  nW(!0)
+                  vR(!0)
                 },
-                children: EW("dailyDrop:remindYes")
+                children: tR("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -8989,803 +8989,803 @@ export const modules = {
       })
     }
 
-    function bw(WW, iW) {
+    function af(RR, JR) {
       const {
-        t: OW
-      } = (0, PW.B)(), EW = function(WW, iW) {
+        t: GR
+      } = (0, ZR.A)(), tR = function(RR, JR) {
         const {
-          state: OW,
-          view: EW
-        } = (0, ZO.z)(), [NW, PW] = (0, mW.useState)(!1), [LW, cW] = (0, mW.useState)(!1), [wW, tW] = (0, mW.useState)(null), ZW = (0, mW.useRef)(null), xW = (0, mW.useRef)(!1), lW = iW && "ready" === (null === EW || void 0 === EW ? void 0 : EW.kind);
-        (0, mW.useEffect)((() => {
-          WW ? lW && !xW.current && (xW.current = !0, (0, ZO.v)("daily_drop.shown", "tile")) : xW.current = !1
-        }), [WW, lW]), (0, mW.useEffect)((() => {
-          WW || (UW(), cW(!1))
-        }), [WW]);
-        const AW = WW && null === wW && !(0, ZO.r)(EW);
-        (0, mW.useEffect)((() => {
-          AW && yW.d.set({
-            openEverythingMenuName: oi.m.CUSTOMISATION
+          state: GR,
+          view: tR
+        } = (0, fG.F)(), [uR, ZR] = (0, yR.useState)(!1), [qR, iR] = (0, yR.useState)(!1), [fR, VR] = (0, yR.useState)(null), KR = (0, yR.useRef)(null), wR = (0, yR.useRef)(!1), rR = JR && "ready" === (null === tR || void 0 === tR ? void 0 : tR.kind);
+        (0, yR.useEffect)((() => {
+          RR ? rR && !wR.current && (wR.current = !0, (0, fG.y)("daily_drop.shown", "tile")) : wR.current = !1
+        }), [RR, rR]), (0, yR.useEffect)((() => {
+          RR || (nR(), iR(!1))
+        }), [RR]);
+        const eR = RR && null === fR && !(0, fG.u)(tR);
+        (0, yR.useEffect)((() => {
+          eR && BR.d.set({
+            openEverythingMenuName: OJ.o.CUSTOMISATION
           })
-        }), [AW]);
-        const bW = (0, mW.useRef)(!1),
-          jW = (0, mW.useRef)(WW);
+        }), [eR]);
+        const aR = (0, yR.useRef)(!1),
+          LR = (0, yR.useRef)(RR);
 
-        function UW() {
-          null !== ZW.current && (ZW.current = null, tW(null))
+        function nR() {
+          null !== KR.current && (KR.current = null, VR(null))
         }
-        return jW.current = WW, {
-          state: OW,
-          view: EW,
-          claiming: NW,
-          claimFailed: LW,
-          reveal: wW,
+        return LR.current = RR, {
+          state: GR,
+          view: tR,
+          claiming: uR,
+          claimFailed: qR,
+          reveal: fR,
           open: async function() {
-            if (!bW.current) {
-              bW.current = !0, PW(!0), cW(!1);
+            if (!aR.current) {
+              aR.current = !0, ZR(!0), iR(!1);
               try {
                 const {
-                  state: WW,
-                  drop: iW
-                } = await (0, ZO.e)();
-                if (null === WW || null === iW) return;
-                if (!jW.current) return;
-                (0, ZO.v)("daily_drop.open", iW), ZW.current = {
-                  state: WW,
-                  drop: iW
-                }, tW(ZW.current)
-              } catch (WW) {
-                console.error("Failed to claim the Lucky Skin Block", WW), jW.current && cW(!0)
+                  state: RR,
+                  drop: JR
+                } = await (0, fG.e)();
+                if (null === RR || null === JR) return;
+                if (!LR.current) return;
+                (0, fG.y)("daily_drop.open", JR), KR.current = {
+                  state: RR,
+                  drop: JR
+                }, VR(KR.current)
+              } catch (RR) {
+                console.error("Failed to claim the Lucky Skin Block", RR), LR.current && iR(!0)
               } finally {
-                bW.current = !1, PW(!1)
+                aR.current = !1, ZR(!1)
               }
             }
           },
-          closeReveal: UW
+          closeReveal: nR
         }
-      }(WW, iW);
+      }(RR, JR);
       return {
-        shown: (0, ZO.r)(EW.view) || null !== EW.reveal,
-        tile: EW.state && EW.view && (0, ZW.jsx)(zc, {
-          state: EW.state,
-          view: EW.view,
-          claiming: EW.claiming,
-          onOpen: EW.open
+        shown: (0, fG.u)(tR.view) || null !== tR.reveal,
+        tile: tR.state && tR.view && (0, KR.jsx)(Fi, {
+          state: tR.state,
+          view: tR.view,
+          claiming: tR.claiming,
+          onOpen: tR.open
         }),
-        claimFailed: EW.claimFailed && (0, ZW.jsx)("div", {
+        claimFailed: tR.claimFailed && (0, KR.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: OW("dailyDrop:claimFailed")
+          children: GR("dailyDrop:claimFailed")
         }),
-        reveal: EW.reveal && (0, ZW.jsx)(Aw, {
-          drop: EW.reveal.drop,
-          onClose: EW.closeReveal
+        reveal: tR.reveal && (0, KR.jsx)(ef, {
+          drop: tR.reveal.drop,
+          onClose: tR.closeReveal
         })
       }
     }
 
-    function jw(WW) {
+    function Lf(RR) {
       let {
-        show: iW
-      } = WW;
-      const OW = bw(iW, iW);
-      return (0, ci.B)(iW && OW.shown, (0, ci.E)(), (WW => {
-        (0, ZO.v)("daily_drop.store_only_open", WW)
-      })), iW && OW.shown ? (0, ZW.jsxs)("div", {
+        show: JR
+      } = RR;
+      const GR = af(JR, JR);
+      return (0, iJ.D)(JR && GR.shown, (0, iJ.E)(), (RR => {
+        (0, fG.y)("daily_drop.store_only_open", RR)
+      })), JR && GR.shown ? (0, KR.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [OW.claimFailed, OW.tile && (0, ZW.jsx)("div", {
+        children: [GR.claimFailed, GR.tile && (0, KR.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: OW.tile
-        }), OW.reveal]
+          children: GR.tile
+        }), GR.reveal]
       }) : null
     }
-    var Uw = OW(3559),
-      kw = OW(35277),
-      sw = OW(35285);
+    var nf = GR(3663),
+      Uf = GR(35208),
+      Wf = GR(35218);
 
-    function Mw(WW) {
+    function Af(RR) {
       let {
-        view: iW,
-        highlight: OW,
-        scrollSignal: EW,
-        onScrolledIntoView: NW
-      } = WW;
+        view: JR,
+        highlight: GR,
+        scrollSignal: tR,
+        onScrolledIntoView: uR
+      } = RR;
       const {
-        t: LW
-      } = (0, PW.B)(), {
-        purchaseUnderWay: cW,
-        notice: wW,
-        needsLogin: tW,
-        buyPack: xW
-      } = (0, sw.g)("banner");
-      (0, Uw.W)(iW.arm, "banner");
-      const lW = (0, mW.useRef)(null);
-      return (0, mW.useEffect)((() => {
-        var WW;
-        EW > 0 && (null === (WW = lW.current) || void 0 === WW || WW.scrollIntoView({
+        t: qR
+      } = (0, ZR.A)(), {
+        purchaseUnderWay: iR,
+        notice: fR,
+        needsLogin: VR,
+        buyPack: wR
+      } = (0, Wf.f)("banner");
+      (0, nf.L)(JR.arm, "banner");
+      const rR = (0, yR.useRef)(null);
+      return (0, yR.useEffect)((() => {
+        var RR;
+        tR > 0 && (null === (RR = rR.current) || void 0 === RR || RR.scrollIntoView({
           block: "nearest"
-        }), NW())
-      }), [EW]), (0, ZW.jsxs)("div", {
-        ref: lW,
+        }), uR())
+      }), [tR]), (0, KR.jsxs)("div", {
+        ref: rR,
         className: "NewPlayerDealBanner",
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "NewPlayerDealBannerHead",
-          children: [(0, ZW.jsx)("div", {
+          children: [(0, KR.jsx)("div", {
             className: "NewPlayerDealBannerTitle",
-            children: LW("newPlayerDeal:title")
-          }), (0, ZW.jsx)(kw.c, {
-            endsAt: iW.endsAt
+            children: qR("newPlayerDeal:title")
+          }), (0, KR.jsx)(Uf.b, {
+            endsAt: JR.endsAt
           })]
-        }), (0, ZW.jsx)(kw.d, {
-          view: iW,
-          needsLogin: tW,
-          busy: cW,
-          highlight: OW,
-          onBuy: WW => {
-            xW(iW, WW)
+        }), (0, KR.jsx)(Uf.d, {
+          view: JR,
+          needsLogin: VR,
+          busy: iR,
+          highlight: GR,
+          onBuy: RR => {
+            wR(JR, RR)
           }
-        }), (0, ZW.jsx)(cc.e, {
-          notice: wW,
+        }), (0, KR.jsx)(Zi.j, {
+          notice: fR,
           className: "SmallTextBold NewPlayerDealNotice"
         })]
       })
     }
-    OW(35279);
-    var Kw = OW(3566);
+    GR(35211);
+    var Cf = GR(3670);
 
-    function Sw(WW) {
+    function Xf(RR) {
       let {
-        wallet: iW,
-        close: OW
-      } = WW;
+        wallet: JR,
+        close: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("div", {
+        t: yR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("div", {
         className: "NewPlayerDealGiftNotice",
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "NewPlayerDealGiftNoticeRows",
-          children: [(0, ZW.jsx)("span", {
-            children: mW("newPlayerDeal:giftable")
-          }), (0, ZW.jsx)(ML.c, {
-            amount: (0, aP.e)(iW)
-          }), (0, ZW.jsx)("span", {
-            children: mW("newPlayerDeal:ungiftable")
-          }), (0, ZW.jsx)(ML.c, {
-            amount: iW.ungiftable
+          children: [(0, KR.jsx)("span", {
+            children: yR("newPlayerDeal:giftable")
+          }), (0, KR.jsx)(Uq.b, {
+            amount: (0, YZ.b)(JR)
+          }), (0, KR.jsx)("span", {
+            children: yR("newPlayerDeal:ungiftable")
+          }), (0, KR.jsx)(Uq.b, {
+            amount: JR.ungiftable
           })]
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "NewPlayerDealGiftNoticeWhy",
-          children: mW("newPlayerDeal:ungiftableWhy")
-        }), (0, ZW.jsx)(wW.n, {
+          children: yR("newPlayerDeal:ungiftableWhy")
+        }), (0, KR.jsx)(fR.n, {
           className: "NewPlayerDealGiftNoticeOk",
-          onClick: OW,
-          children: mW("general:ok")
+          onClick: GR,
+          children: yR("general:ok")
         })]
       })
     }
 
-    function Yw(WW) {
-      Ei.NotificationProvider.showCustomPopup({
-        body: iW => (0, ZW.jsx)(Sw, {
-          wallet: WW,
-          close: iW
+    function Mf(RR) {
+      tJ.NotificationProvider.showCustomPopup({
+        body: JR => (0, KR.jsx)(Xf, {
+          wallet: RR,
+          close: JR
         }),
         middleScreenPopupClassName: "NewPlayerDealGiftNoticePopup",
         disableExitButton: !0
       })
     }
-    const yw = {
+    const Bf = {
       kind: "board"
     };
-    let Tw = !1;
+    let lf = !1;
 
-    function Jw(WW) {
-      return "found" === WW.status || "error" === WW.status && "store:giftRecipientLookupFailed" === WW.error ? WW.name : null
-    }(0, ci.x)(FW.prefetchBillingOfferings);
-    const hw = (0, mW.memo)((function(WW) {
-      var iW;
+    function pf(RR) {
+      return "found" === RR.status || "error" === RR.status && "store:giftRecipientLookupFailed" === RR.error ? RR.name : null
+    }(0, iJ.u)(sR.prefetchBillingOfferings);
+    const gf = (0, yR.memo)((function(RR) {
+      var JR;
       let {
-        show: EW
-      } = WW;
+        show: tR
+      } = RR;
       const {
-        t: LW
-      } = (0, PW.B)(), {
-        userContext: cW
-      } = (0, AW.e)(), wW = (0, BW.usePurchasesAllowed)(), tW = cW !== HW.NULL_USER_CONTEXT, xW = NL(cW, EW), [lW, bW] = (0, jW.d)(), {
-        page: UW,
-        urlMode: kW,
-        goTo: sW
-      } = (0, PL.d)(), MW = function(WW) {
-        return "superRank" === WW.kind ? "superRank" : "pack" === WW.kind ? WW.pack : null
-      }(UW), {
-        openEverythingMenuName: KW,
-        gameState: SW
-      } = (0, yW.p)(["openEverythingMenuName", "gameState"]), YW = null !== KW, TW = "landingPage" === SW;
-      ! function(WW, iW) {
-        const [EW] = (0, mW.useState)(wL.g), [NW, PW] = (0, mW.useState)(!1);
-        EW && iW && !NW && PW(!0);
-        const LW = (0, Gm.x)(),
-          cW = EW && NW && WW && !LW;
-        (0, mW.useEffect)((() => {
-          if (!cW) return;
-          let WW = null,
-            iW = null,
-            mW = null;
-          const EW = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, QW.getBillingClient)().purchaseUnderWay,
-            NW = () => {
-              var OW;
-              null === (OW = mW) || void 0 === OW || OW(), mW = null, null !== WW && (clearTimeout(WW), WW = null), null !== iW && (clearTimeout(iW), iW = null)
+        t: qR
+      } = (0, ZR.A)(), {
+        userContext: iR
+      } = (0, eR.d)(), fR = (0, jR.usePurchasesAllowed)(), VR = iR !== bR.NULL_USER_CONTEXT, wR = yq(iR, tR), [rR, aR] = (0, LR.e)(), {
+        page: nR,
+        urlMode: UR,
+        goTo: WR
+      } = (0, tq.e)(), AR = function(RR) {
+        return "superRank" === RR.kind ? "superRank" : "pack" === RR.kind ? RR.pack : null
+      }(nR), {
+        openEverythingMenuName: CR,
+        gameState: XR
+      } = (0, BR.o)(["openEverythingMenuName", "gameState"]), MR = null !== CR, lR = "landingPage" === XR;
+      ! function(RR, JR) {
+        const [tR] = (0, yR.useState)(qq.i), [uR, ZR] = (0, yR.useState)(!1);
+        tR && JR && !uR && ZR(!0);
+        const qR = (0, jy.s)(),
+          iR = tR && uR && RR && !qR;
+        (0, yR.useEffect)((() => {
+          if (!iR) return;
+          let RR = null,
+            JR = null,
+            yR = null;
+          const tR = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, hR.getBillingClient)().purchaseUnderWay,
+            uR = () => {
+              var GR;
+              null === (GR = yR) || void 0 === GR || GR(), yR = null, null !== RR && (clearTimeout(RR), RR = null), null !== JR && (clearTimeout(JR), JR = null)
             },
-            PW = () => {
-              (0, LL.l)(!1), (0, LL.i)(!1), NW(), WW = setTimeout((() => {
-                WW = null, mW = (0, cL.d)((() => {
-                  mW = null, EW() ? PW() : ((0, LL.l)(!0), iW = setTimeout((() => {
-                    iW = null, mW = (0, cL.d)((() => {
-                      mW = null, EW() ? PW() : (0, LL.i)(!0)
+            ZR = () => {
+              (0, uq.p)(!1), (0, uq.n)(!1), uR(), RR = setTimeout((() => {
+                RR = null, yR = (0, Zq.e)((() => {
+                  yR = null, tR() ? ZR() : ((0, uq.p)(!0), JR = setTimeout((() => {
+                    JR = null, yR = (0, Zq.e)((() => {
+                      yR = null, tR() ? ZR() : (0, uq.n)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => OW(5361))).then((WW => {
-                    WW.startBackgroundGameSetup()
-                  }), (WW => {
-                    console.warn("Background game setup: its chunk failed to load", WW)
+                  }), 3e3), Promise.resolve().then((() => GR(5463))).then((RR => {
+                    RR.startBackgroundGameSetup()
+                  }), (RR => {
+                    console.warn("Background game setup: its chunk failed to load", RR)
                   })))
                 }))
               }), 2e3)
             };
-          for (const OW of tL) window.addEventListener(OW, PW, {
+          for (const GR of iq) window.addEventListener(GR, ZR, {
             capture: !0,
             passive: !0
           });
-          return PW(), () => {
-            for (const WW of tL) window.removeEventListener(WW, PW, {
+          return ZR(), () => {
+            for (const RR of iq) window.removeEventListener(RR, ZR, {
               capture: !0
             });
-            NW(), (0, LL.l)(!1), (0, LL.i)(!1)
+            uR(), (0, uq.p)(!1), (0, uq.n)(!1)
           }
-        }), [cW])
-      }(EW && YW && TW, "pack" === UW.kind), (0, mW.useEffect)((() => {
-        YW && (0, FW.prefetchBillingOfferings)()
-      }), [YW]), (0, mW.useEffect)((() => {
-        YW && !EW && TW && (0, ZL.r)()
-      }), [YW, EW, TW]);
-      const [JW, hW] = (0, mW.useState)(0), [nW, uW] = (0, mW.useState)(null), [oW, dW] = (0, mW.useState)(null), [eW, vW] = (0, mW.useState)(null), [gW, DW] = (0, mW.useState)(null), [VW, CW] = (0, mW.useState)(0), XW = (0, mW.useRef)(null), qW = (0, mW.useRef)(null), RW = (0, mW.useRef)(null), GW = (0, mW.useRef)(!1), IW = (0, ci.E)(), aW = (0, mW.useRef)(0);
+        }), [iR])
+      }(tR && MR && lR, "pack" === nR.kind), (0, yR.useEffect)((() => {
+        MR && (0, sR.prefetchBillingOfferings)()
+      }), [MR]), (0, yR.useEffect)((() => {
+        MR && !tR && lR && (0, fq.p)()
+      }), [MR, tR, lR]);
+      const [pR, gR] = (0, yR.useState)(0), [vR, OR] = (0, yR.useState)(null), [xR, NR] = (0, yR.useState)(null), [DR, HR] = (0, yR.useState)(null), [oR, cR] = (0, yR.useState)(null), [PR, zR] = (0, yR.useState)(0), SR = (0, yR.useRef)(null), dR = (0, yR.useRef)(null), ER = (0, yR.useRef)(null), YR = (0, yR.useRef)(!1), kR = (0, iJ.E)(), QR = (0, yR.useRef)(0);
 
-      function rW() {
-        hW((WW => WW + 1))
-      }(0, mW.useEffect)((() => {
-        if (EW) {
-          if (Tw = !0, (0, ci.k)(), IW && IW.seq !== aW.current) {
-            var WW;
-            aW.current = IW.seq, "loginResume" !== IW.source && (0, ci.A)();
-            const iW = (0, ci.d)(IW);
-            kW || sW(iW), DW(null !== (WW = IW.highlight) && void 0 !== WW ? WW : null);
-            const OW = "newPlayerDeal" === IW.source || "loginResume" === IW.source && void 0 !== IW.highlight && (0, Uw.h)(cW).includes(IW.highlight);
-            CW((WW => OW ? WW + 1 : 0)), dW(null), "gift" === IW.mode && IW.giftRecipientName ? xW.choose(IW.giftRecipientName, "prefilled") : xW.clear(), "gift" !== IW.mode || IW.giftRecipientName || rW()
+      function FR() {
+        gR((RR => RR + 1))
+      }(0, yR.useEffect)((() => {
+        if (tR) {
+          if (lf = !0, (0, iJ.k)(), kR && kR.seq !== QR.current) {
+            var RR;
+            QR.current = kR.seq, "loginResume" !== kR.source && (0, iJ.A)();
+            const JR = (0, iJ.b)(kR);
+            UR || WR(JR), cR(null !== (RR = kR.highlight) && void 0 !== RR ? RR : null);
+            const GR = "newPlayerDeal" === kR.source || "loginResume" === kR.source && void 0 !== kR.highlight && (0, nf.e)(iR).includes(kR.highlight);
+            zR((RR => GR ? RR + 1 : 0)), NR(null), "gift" === kR.mode && kR.giftRecipientName ? wR.choose(kR.giftRecipientName, "prefilled") : wR.clear(), "gift" !== kR.mode || kR.giftRecipientName || FR()
           }
-        } else CW(0)
-      }), [EW, IW]), (0, ci.B)(EW, IW, (WW => {
-        (0, ji.reportAnalyticsClick)({
+        } else zR(0)
+      }), [tR, kR]), (0, iJ.D)(tR, kR, (RR => {
+        (0, LJ.reportAnalyticsClick)({
           id: "store.open",
-          value: WW
+          value: RR
         })
       }));
-      const zW = (0, Uw.V)(),
-        Wi = null !== gW && null === zW && null === (0, Uw.l)((0, Uw.e)(cW)) && (0, Uw.h)(cW).includes(gW);
-      (0, mW.useEffect)((() => {
-        if (!gW) return;
-        const WW = setTimeout((() => {
-          DW(null)
-        }), Wi ? 15e3 : 4e3);
+      const TR = (0, nf.K)(),
+        RJ = null !== oR && null === TR && null === (0, nf.g)((0, nf.b)(iR)) && (0, nf.e)(iR).includes(oR);
+      (0, yR.useEffect)((() => {
+        if (!oR) return;
+        const RR = setTimeout((() => {
+          cR(null)
+        }), RJ ? 15e3 : 4e3);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [gW, Wi]), (0, mW.useLayoutEffect)((() => {
-        const WW = XW.current;
-        if (!EW || !WW) return qW.current = null, void(RW.current = null);
-        var iW;
-        if (MW) qW.current = MW, null === (iW = WW.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === iW || iW.focus();
-        else if (qW.current) {
-          const iW = RW.current;
-          null !== iW && (WW.scrollTop = iW);
-          const OW = WW.querySelector(`[data-store-item="${qW.current}"]`);
-          if (OW) {
-            const mW = OW.getBoundingClientRect(),
-              EW = WW.getBoundingClientRect();
-            OW.focus({
-              preventScroll: null !== iW && mW.bottom > EW.top && mW.top < EW.bottom
+      }), [oR, RJ]), (0, yR.useLayoutEffect)((() => {
+        const RR = SR.current;
+        if (!tR || !RR) return dR.current = null, void(ER.current = null);
+        var JR;
+        if (AR) dR.current = AR, null === (JR = RR.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === JR || JR.focus();
+        else if (dR.current) {
+          const JR = ER.current;
+          null !== JR && (RR.scrollTop = JR);
+          const GR = RR.querySelector(`[data-store-item="${dR.current}"]`);
+          if (GR) {
+            const yR = GR.getBoundingClientRect(),
+              tR = RR.getBoundingClientRect();
+            GR.focus({
+              preventScroll: null !== JR && yR.bottom > tR.top && yR.top < tR.bottom
             })
           }
-          qW.current = null
+          dR.current = null
         }
-      }), [MW, EW]), (0, mW.useEffect)((() => {
-        dW(null)
-      }), [xW.query]), (0, mW.useEffect)((() => {
-        if (!eW) return;
-        const WW = setTimeout((() => {
-          vW(null)
+      }), [AR, tR]), (0, yR.useEffect)((() => {
+        NR(null)
+      }), [wR.query]), (0, yR.useEffect)((() => {
+        if (!DR) return;
+        const RR = setTimeout((() => {
+          HR(null)
         }), 8e3);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [eW]);
-      const ii = cW.superRankInfo,
-        Oi = cW.isLoggedIn() || (0, BW.guestsMayBuy)(),
-        mi = cW.getOwnedCosmeticPacks(),
-        Ei = (0, iL.m)(xW.query),
-        Ni = (0, iL.e)({
-          mode: Ei,
-          loggedIn: tW ? Oi : null,
-          superRankInfo: ii,
-          soldTierId: (0, pW.p)(Date.now()).product.tierId,
+      }), [DR]);
+      const JJ = iR.superRankInfo,
+        GJ = iR.isLoggedIn() || (0, jR.guestsMayBuy)(),
+        yJ = iR.getOwnedCosmeticPacks(),
+        tJ = (0, hZ.i)(wR.query),
+        uJ = (0, hZ.d)({
+          mode: tJ,
+          loggedIn: VR ? GJ : null,
+          superRankInfo: JJ,
+          soldTierId: (0, IR.v)(Date.now()).product.tierId,
           now: Date.now(),
-          ownedPacks: mi,
-          packs: qP.q,
-          recipient: xW.recipient
+          ownedPacks: yJ,
+          packs: SZ.p,
+          recipient: wR.recipient
         });
-      (0, mW.useEffect)((() => {
-        if (!Oi || !EW) return;
-        const WW = (0, Uw.h)(cW),
-          iW = (0, ci.A)((iW => !WW.includes(iW.item))),
-          OW = iW && (0, iL.i)(iW, qP.q);
-        iW && OW && ((0, ji.reportAnalyticsClick)({
+      (0, yR.useEffect)((() => {
+        if (!GJ || !tR) return;
+        const RR = (0, nf.e)(iR),
+          JR = (0, iJ.A)((JR => !RR.includes(JR.item))),
+          GR = JR && (0, hZ.h)(JR, SZ.p);
+        JR && GR && ((0, LJ.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: iW.item
-        }), (0, ci.o)(OW))
-      }), [Oi, EW]);
-      const Pi = EW && "gift" === Ei,
-        Li = (0, mW.useRef)(Pi);
-      Li.current = Pi;
-      const wi = "none" !== xW.recipient.status,
-        ti = (0, mW.useRef)(!1);
-      (0, mW.useEffect)((() => {
-        Pi ? wi && !ti.current && (ti.current = !0, async function(WW) {
-          var iW;
-          if ("gift" === (null === (iW = (0, Kw.n)()) || void 0 === iW ? void 0 : iW.show)) return void Yw(Kw.c);
-          const OW = await (0, aP.g)();
-          null !== OW && OW.ungiftable > 0 && WW() && Yw(OW)
-        }((() => Li.current))) : ti.current = !1
-      }), [Pi, wi]);
-      const Zi = (0, iL.n)({
-        superRankDaysLeft: Ni.superRankDaysLeft,
-        openedThisSession: Tw || EW,
-        seenNewItems: (0, ci.g)()
+          value: JR.item
+        }), (0, iJ.m)(GR))
+      }), [GJ, tR]);
+      const ZJ = tR && "gift" === tJ,
+        qJ = (0, yR.useRef)(ZJ);
+      qJ.current = ZJ;
+      const fJ = "none" !== wR.recipient.status,
+        VJ = (0, yR.useRef)(!1);
+      (0, yR.useEffect)((() => {
+        ZJ ? fJ && !VJ.current && (VJ.current = !0, async function(RR) {
+          var JR;
+          if ("gift" === (null === (JR = (0, Cf.i)()) || void 0 === JR ? void 0 : JR.show)) return void Mf(Cf.b);
+          const GR = await (0, YZ.f)();
+          null !== GR && GR.ungiftable > 0 && RR() && Mf(GR)
+        }((() => qJ.current))) : VJ.current = !1
+      }), [ZJ, fJ]);
+      const KJ = (0, hZ.l)({
+        superRankDaysLeft: uJ.superRankDaysLeft,
+        openedThisSession: lf || tR,
+        seenNewItems: (0, iJ.g)()
       });
-      (0, mW.useEffect)((() => {
-        (0, ci.z)(Zi)
-      }), [Zi]);
-      const xi = "self" === Ei,
-        li = bw(EW, EW && xi && "board" === UW.kind);
-      if (!EW || !wW) return null;
-      const Ai = bW > lW && lW <= 700,
-        bi = !Ai && bW <= 420,
-        Ui = "gift" === Ei ? Jw(xW.recipient) : null,
-        ki = null !== nW,
-        si = "gift" === Ei ? {
-          name: Ui,
-          cosmetics: xW.recipientCosmetics,
+      (0, yR.useEffect)((() => {
+        (0, iJ.y)(KJ)
+      }), [KJ]);
+      const wJ = "self" === tJ,
+        rJ = af(tR, tR && wJ && "board" === nR.kind);
+      if (!tR || !fR) return null;
+      const eJ = aR > rR && rR <= 700,
+        aJ = !eJ && aR <= 420,
+        nJ = "gift" === tJ ? pf(wR.recipient) : null,
+        UJ = null !== vR,
+        WJ = "gift" === tJ ? {
+          name: nJ,
+          cosmetics: wR.recipientCosmetics,
           gift: !0
         } : {
-          name: tW && cW.getPlayerName() || null,
-          cosmetics: cW.getPlayerCosmetics(),
+          name: VR && iR.getPlayerName() || null,
+          cosmetics: iR.getPlayerCosmetics(),
           gift: !1
         };
 
-      function Mi(WW) {
-        (0, IP.b)(WW, "gift" === Ei ? xW.query.trim() : null)
+      function AJ(RR) {
+        (0, EZ.c)(RR, "gift" === tJ ? wR.query.trim() : null)
       }
 
-      function Ki(WW, iW) {
-        (0, ji.reportAnalyticsClick)({
+      function CJ(RR, JR) {
+        (0, LJ.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${iW?"gift":"self"}:${WW}`
-        }), iW && (xW.recordGift(iW.name, WW), Si(iW))
+          value: `${JR?"gift":"self"}:${RR}`
+        }), JR && (wR.recordGift(JR.name, RR), XJ(JR))
       }
 
-      function Si(WW) {
-        ! function(WW) {
+      function XJ(RR) {
+        ! function(RR) {
           try {
-            AO.i.setItem(OL, (0, iL.r)(EL(), WW))
+            wG.i.setItem(Rq, (0, hZ.u)(Gq(), RR))
           } catch {}
         }({
-          name: WW.name,
-          cosmetics: WW.cosmetics
-        }), sW(yw), vW((iW => {
-          var OW;
+          name: RR.name,
+          cosmetics: RR.cosmetics
+        }), WR(Bf), HR((JR => {
+          var GR;
           return {
-            name: WW.name,
-            seq: (null !== (OW = null === iW || void 0 === iW ? void 0 : iW.seq) && void 0 !== OW ? OW : 0) + 1
+            name: RR.name,
+            seq: (null !== (GR = null === JR || void 0 === JR ? void 0 : JR.seq) && void 0 !== GR ? GR : 0) + 1
           }
         }))
       }
-      async function Yi(WW) {
-        var iW, OW;
-        if (GW.current) return;
-        if (!Oi) return void Mi(WW);
-        dW(null), DW(null);
-        const mW = "gift" === Ei ? {
-          name: Jw(xW.recipient),
-          cosmetics: xW.recipientCosmetics
+      async function MJ(RR) {
+        var JR, GR;
+        if (YR.current) return;
+        if (!GJ) return void AJ(RR);
+        NR(null), cR(null);
+        const yR = "gift" === tJ ? {
+          name: pf(wR.recipient),
+          cosmetics: wR.recipientCosmetics
         } : null;
-        if (mW && !mW.name) return void rW();
-        const EW = "superRank" === WW ? (0, pW.p)(Date.now()).id : (0, RP.e)(WW);
-        GW.current = !0;
-        const NW = await (0, QP.c)(EW, null !== (iW = null === mW || void 0 === mW ? void 0 : mW.name) && void 0 !== iW ? iW : null);
-        if (GW.current = !1, !NW) return;
-        uW(WW);
-        const PW = await aP.j.purchase(EW, null !== (OW = null === mW || void 0 === mW ? void 0 : mW.name) && void 0 !== OW ? OW : null, NW);
-        uW(null), PW ? dW(PW) : (Ki(WW, mW), mW && (0, WL.f)(EW, NW, mW.name), mW || (await (0, rP.flushClientAnalyticsEvents)(), (0, GP.refreshWithoutConfirmation)("superRank" === WW ? "/super-rank-welcome" : `/pack-welcome/${WW}`)))
+        if (yR && !yR.name) return void FR();
+        const tR = "superRank" === RR ? (0, IR.v)(Date.now()).id : (0, jZ.b)(RR);
+        YR.current = !0;
+        const uR = await (0, TZ.b)(tR, null !== (JR = null === yR || void 0 === yR ? void 0 : yR.name) && void 0 !== JR ? JR : null);
+        if (YR.current = !1, !uR) return;
+        OR(RR);
+        const ZR = await YZ.g.purchase(tR, null !== (GR = null === yR || void 0 === yR ? void 0 : yR.name) && void 0 !== GR ? GR : null, uR);
+        OR(null), ZR ? NR(ZR) : (CJ(RR, yR), yR && (0, sZ.g)(tR, uR, yR.name), yR || (await (0, kZ.flushClientAnalyticsEvents)(), (0, dZ.refreshWithoutConfirmation)("superRank" === RR ? "/super-rank-welcome" : `/pack-welcome/${RR}`)))
       }
-      const yi = NW()("Store", {
-        StoreGift: "gift" === Ei,
-        StorePortrait: Ai,
-        StoreCompact: bi
+      const BJ = uR()("Store", {
+        StoreGift: "gift" === tJ,
+        StorePortrait: eJ,
+        StoreCompact: aJ
       });
-      if ("pack" === UW.kind) {
-        const WW = UW.pack,
-          iW = Ni.packs.find((iW => iW.pack === WW));
-        return (0, ZW.jsx)("div", {
-          ref: XW,
+      if ("pack" === nR.kind) {
+        const RR = nR.pack,
+          JR = uJ.packs.find((JR => JR.pack === RR));
+        return (0, KR.jsx)("div", {
+          ref: SR,
           className: "CosmeticShopContainer",
-          children: (0, ZW.jsx)(FP.h, {
-            pack: WW,
+          children: (0, KR.jsx)(FZ.f, {
+            pack: RR,
             onBack: () => {
-              sW(yw)
+              WR(Bf)
             },
-            onPurchased: iW => {
-              Ki(WW, iW ? {
-                name: iW,
+            onPurchased: JR => {
+              CJ(RR, JR ? {
+                name: JR,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Ei && Ui && iW && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [(0, ZW.jsx)(dL, {
-                state: iW.state,
-                item: WW,
-                price: (Ti = WW, "superRank" === Ti ? (0, pW.p)(Date.now()).price : (0, RP.i)(Ti)),
-                busy: ki,
+            giftCta: "gift" === tJ && nJ && JR && (0, KR.jsxs)(KR.Fragment, {
+              children: [(0, KR.jsx)(Oq, {
+                state: JR.state,
+                item: RR,
+                price: (lJ = RR, "superRank" === lJ ? (0, IR.v)(Date.now()).price : (0, jZ.f)(lJ)),
+                busy: UJ,
                 onAct: () => {
-                  Yi(WW)
+                  MJ(RR)
                 },
                 onNeedRecipient: () => {
-                  sW(yw), rW()
+                  WR(Bf), FR()
                 },
                 onLogin: () => {
-                  Mi(WW)
+                  AJ(RR)
                 },
-                highlight: gW === WW
-              }), oW && (0, ZW.jsx)("span", {
+                highlight: oR === RR
+              }), xR && (0, KR.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: LW(oW)
+                children: qR(xR)
               })]
             }),
-            ownedPacks: mi,
-            startAsGift: "gift" === Ei,
-            initialGiftRecipient: "gift" === Ei ? null !== Ui && void 0 !== Ui ? Ui : xW.query.trim() : "",
-            highlightCta: gW === WW
-          }, WW)
+            ownedPacks: yJ,
+            startAsGift: "gift" === tJ,
+            initialGiftRecipient: "gift" === tJ ? null !== nJ && void 0 !== nJ ? nJ : wR.query.trim() : "",
+            highlightCta: oR === RR
+          }, RR)
         })
       }
-      var Ti;
-      return "superRank" === UW.kind && null !== Ni.superRank ? (0, ZW.jsx)("div", {
-        ref: XW,
-        className: NW()(yi, "StoreDetailView"),
-        children: (0, ZW.jsx)(qc, {
-          state: Ni.superRank.state,
-          daysLeft: Ni.superRankDaysLeft,
-          wearer: si,
-          mode: Ei,
-          giftName: Ui,
-          busy: ki,
-          highlight: "superRank" === gW,
-          purchaseError: oW,
+      var lJ;
+      return "superRank" === nR.kind && null !== uJ.superRank ? (0, KR.jsx)("div", {
+        ref: SR,
+        className: uR()(BJ, "StoreDetailView"),
+        children: (0, KR.jsx)(ji, {
+          state: uJ.superRank.state,
+          daysLeft: uJ.superRankDaysLeft,
+          wearer: WJ,
+          mode: tJ,
+          giftName: nJ,
+          busy: UJ,
+          highlight: "superRank" === oR,
+          purchaseError: xR,
           onBack: () => {
-            sW(yw)
+            WR(Bf)
           },
           onChooseRecipient: () => {
-            sW(yw), rW()
+            WR(Bf), FR()
           },
           onAct: () => {
-            Yi("superRank")
+            MJ("superRank")
           },
           onLogin: () => {
-            Mi("superRank")
+            AJ("superRank")
           }
         })
-      }) : (0, ZW.jsxs)("div", {
-        ref: XW,
-        className: yi,
-        onScroll: WW => {
-          RW.current = WW.currentTarget.scrollTop
+      }) : (0, KR.jsxs)("div", {
+        ref: SR,
+        className: BJ,
+        onScroll: RR => {
+          ER.current = RR.currentTarget.scrollTop
         },
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, ZW.jsx)(kL, {
-            selfName: tW ? cW.getPlayerName() : "",
-            giftRecipient: xW,
-            suggestionsVersion: null !== (iW = null === eW || void 0 === eW ? void 0 : eW.seq) && void 0 !== iW ? iW : 0,
-            pulseSignal: JW,
-            disabled: ki || !tW
+          children: (0, KR.jsx)(Lq, {
+            selfName: VR ? iR.getPlayerName() : "",
+            giftRecipient: wR,
+            suggestionsVersion: null !== (JR = null === DR || void 0 === DR ? void 0 : DR.seq) && void 0 !== JR ? JR : 0,
+            pulseSignal: pR,
+            disabled: UJ || !VR
           })
-        }), eW && (0, ZW.jsxs)("div", {
+        }), DR && (0, KR.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            vW(null)
+            HR(null)
           },
-          children: [(0, ZW.jsx)(zP.d, {
-            showSignal: eW.seq
-          }), iL.d, " ", LW("store:giftSent", {
-            name: eW.name
+          children: [(0, KR.jsx)(QZ.b, {
+            showSignal: DR.seq
+          }), hZ.b, " ", qR("store:giftSent", {
+            name: DR.name
           })]
-        }, eW.seq), !eW && oW && (0, ZW.jsx)("div", {
+        }, DR.seq), !DR && xR && (0, KR.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: LW(oW)
-        }), xi && li.claimFailed, (0, ZW.jsx)(Xc, {
-          layout: Ni,
-          mountAtOnce: null !== qW.current,
-          bundleGift: "gift" === Ei ? {
-            recipientName: Ui,
-            lookingUp: "pending" === xW.recipient.status,
-            busy: ki,
-            onNeedRecipient: rW,
-            onSent: WW => {
-              (0, ji.reportAnalyticsClick)({
+          children: qR(xR)
+        }), wJ && rJ.claimFailed, (0, KR.jsx)(zi, {
+          layout: uJ,
+          mountAtOnce: null !== dR.current,
+          bundleGift: "gift" === tJ ? {
+            recipientName: nJ,
+            lookingUp: "pending" === wR.recipient.status,
+            busy: UJ,
+            onNeedRecipient: FR,
+            onSent: RR => {
+              (0, LJ.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), Si({
-                name: WW,
-                cosmetics: xW.recipientCosmetics
+              }), XJ({
+                name: RR,
+                cosmetics: wR.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, iL.o)(ii),
-          busy: ki,
-          highlightItem: gW,
-          onOpen: function(WW) {
-            (0, ji.reportAnalyticsClick)({
+          superRankTotalDays: (0, hZ.m)(JJ),
+          busy: UJ,
+          highlightItem: oR,
+          onOpen: function(RR) {
+            (0, LJ.reportAnalyticsClick)({
               id: "store.item_open",
-              value: WW
-            }), sW((0, ci.e)(WW))
+              value: RR
+            }), WR((0, iJ.d)(RR))
           },
-          onAct: Yi,
-          onNeedRecipient: rW,
-          onLogin: Mi,
-          dailyDropTile: xi && li.tile,
-          rankWearer: si,
-          dealBanner: "self" === Ei && null !== zW && (0, ZW.jsx)(Mw, {
-            view: zW,
-            highlight: gW,
-            scrollSignal: VW,
+          onAct: MJ,
+          onNeedRecipient: FR,
+          onLogin: AJ,
+          dailyDropTile: wJ && rJ.tile,
+          rankWearer: WJ,
+          dealBanner: "self" === tJ && null !== TR && (0, KR.jsx)(Af, {
+            view: TR,
+            highlight: oR,
+            scrollSignal: PR,
             onScrolledIntoView: () => {
-              CW(0)
+              zR(0)
             }
           })
-        }), "gift" !== Ei && !(0, fW.e)(Date.now()) && (0, ZW.jsx)(ac, {}), li.reveal]
+        }), "gift" !== tJ && !(0, mR.c)(Date.now()) && (0, KR.jsx)(ki, {}), rJ.reveal]
       })
     }));
-    var Hw = OW(3692),
-      nw = OW(10066),
-      uw = OW(9910),
-      ow = OW(3804),
-      dw = OW(3602),
-      ew = OW(3654),
-      vw = OW(3661),
-      gw = OW(3665),
-      Dw = OW(3744),
-      Vw = OW(3721),
-      pw = OW(3232),
-      fw = OW(3294),
-      Cw = OW(3251),
-      Xw = OW(2138),
-      Bw = OW(3670),
-      qw = OW(3297);
+    var bf = GR(3795),
+      vf = GR(10194),
+      Of = GR(9992),
+      xf = GR(3902),
+      Nf = GR(3706),
+      Df = GR(3747),
+      Hf = GR(3761),
+      of = GR(3763),
+      Pf = GR(3848),
+      If = GR(3828),
+      mf = GR(3347),
+      zf = GR(3416),
+      Sf = GR(3370),
+      jf = GR(2242),
+      df = GR(3772),
+      Ef = GR(3422);
 
-    function Rw(WW) {
+    function Yf(RR) {
       let {
-        show: iW
-      } = WW;
-      return iW ? (0, ZW.jsx)(Gw, {}) : null
+        show: JR
+      } = RR;
+      return JR ? (0, KR.jsx)(kf, {}) : null
     }
 
-    function Gw() {
+    function kf() {
       const {
-        t: WW
-      } = (0, PW.B)(), {
-        followsLeader: iW
-      } = (0, dw.d)(), {
-        loading: OW,
-        friends: EW,
-        requests: cW,
-        invites: tW
-      } = (0, IW.l)(), {
-        userContext: xW
-      } = (0, AW.e)(), [lW, bW] = (0, mW.useState)(qw.f);
-      (0, mW.useEffect)((() => {
-        (0, qw.b)()
+        t: RR
+      } = (0, ZR.A)(), {
+        followsLeader: JR
+      } = (0, Nf.d)(), {
+        loading: GR,
+        friends: tR,
+        requests: iR,
+        invites: VR
+      } = (0, kR.k)(), {
+        userContext: wR
+      } = (0, eR.d)(), [rR, aR] = (0, yR.useState)(Ef.n);
+      (0, yR.useEffect)((() => {
+        (0, Ef.d)()
       }), []);
-      const jW = cW.map((WW => WW.name)),
+      const LR = iR.map((RR => RR.name)),
         {
-          state: UW,
-          recentRequesters: kW
-        } = (0, Vw.l)(),
-        sW = new Map([...("loaded" === UW.status ? UW.recentPlayers : []).map((WW => [WW.preview.name, WW])), ...kW.map((WW => [WW.name, WW]))]),
-        MW = (0, mW.useRef)(null),
-        [YW, yW] = (0, mW.useState)(""),
-        [TW, JW] = (0, mW.useState)("Enter"),
-        [hW, HW] = (0, mW.useState)(null);
+          state: nR,
+          recentRequesters: UR
+        } = (0, If.n)(),
+        WR = new Map([...("loaded" === nR.status ? nR.recentPlayers : []).map((RR => [RR.preview.name, RR])), ...UR.map((RR => [RR.name, RR]))]),
+        AR = (0, yR.useRef)(null),
+        [MR, BR] = (0, yR.useState)(""),
+        [lR, pR] = (0, yR.useState)("Enter"),
+        [gR, bR] = (0, yR.useState)(null);
 
-      function nW() {
-        YW && (JW("Loading"), (0, Cw.f)(YW, "social_menu").then((WW => {
-          if (MW.current) switch (WW.kind) {
+      function vR() {
+        MR && (pR("Loading"), (0, Sf.j)(MR, "social_menu").then((RR => {
+          if (AR.current) switch (RR.kind) {
             case "sent":
-              JW("Success");
+              pR("Success");
               break;
             case "becameFriends":
-              JW("BecameFriends");
+              pR("BecameFriends");
               break;
             case "failed":
-              HW(WW.message), JW("Error")
+              bR(RR.message), pR("Error")
           }
         })))
       }
-      return (0, mW.useEffect)((() => {
-        if ("Enter" === TW || "Loading" === TW) return;
-        const WW = setTimeout((() => {
-          MW.current.value = "", yW(""), JW("Enter")
-        }), "Success" === TW ? 1e3 : 4e3);
+      return (0, yR.useEffect)((() => {
+        if ("Enter" === lR || "Loading" === lR) return;
+        const RR = setTimeout((() => {
+          AR.current.value = "", BR(""), pR("Enter")
+        }), "Success" === lR ? 1e3 : 4e3);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [TW]), (0, ZW.jsx)("div", {
+      }), [lR]), (0, KR.jsx)("div", {
         className: "SocialMenu",
-        children: (0, ZW.jsxs)("div", {
+        children: (0, KR.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, ZW.jsxs)("div", {
+            children: [(0, KR.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, ZW.jsx)(gw.b, {
-                label: WW("socialBar:addFriend")
-              }), (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)(of.c, {
+                label: RR("socialBar:addFriend")
+              }), (0, KR.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, ZW.jsxs)("div", {
-                  className: NW()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${TW}`]: !0
+                children: [(0, KR.jsxs)("div", {
+                  className: uR()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${lR}`]: !0
                   }),
-                  children: ["Loading" === TW && (0, ZW.jsx)(SW.d, {}), "Success" === TW && (0, ZW.jsx)(LW.c, {
+                  children: ["Loading" === lR && (0, KR.jsx)(XR.d, {}), "Success" === lR && (0, KR.jsx)(qR.d, {
                     name: "check"
-                  }), "BecameFriends" === TW && (0, ZW.jsx)(ZW.Fragment, {
-                    children: WW("socialBar:nowFriends", {
-                      playerName: YW
+                  }), "BecameFriends" === lR && (0, KR.jsx)(KR.Fragment, {
+                    children: RR("socialBar:nowFriends", {
+                      playerName: MR
                     })
-                  }), "Error" === TW && hW && (0, ZW.jsx)(ZW.Fragment, {
-                    children: WW(hW.translationKey, hW.params)
+                  }), "Error" === lR && gR && (0, KR.jsx)(KR.Fragment, {
+                    children: RR(gR.translationKey, gR.params)
                   })]
-                }), (0, ZW.jsxs)("div", {
+                }), (0, KR.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, ZW.jsx)(KW.b, {
+                  children: [(0, KR.jsx)(CR.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: WW("socialBar:enterPlayerName"),
-                    domRef: MW,
-                    onValueChange: WW => {
-                      yW((0, dW.p)(WW)), MW.current.value = (0, dW.p)(WW)
+                    placeholderText: RR("socialBar:enterPlayerName"),
+                    domRef: AR,
+                    onValueChange: RR => {
+                      BR((0, NR.q)(RR)), AR.current.value = (0, NR.q)(RR)
                     },
                     onEnter: () => {
-                      YW && (0, ji.reportAnalyticsClick)({
+                      MR && (0, LJ.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), nW()
+                      }), vR()
                     }
-                  }), (0, ZW.jsxs)(wW.f, {
+                  }), (0, KR.jsxs)(fR.g, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      nW()
+                      vR()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, ZW.jsx)(LW.c, {
+                    children: [(0, KR.jsx)(qR.d, {
                       name: "user-plus"
-                    }), " ", WW("socialBar:sendRequest")]
+                    }), " ", RR("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, ZW.jsx)(Bw.b, {
+              }), (0, KR.jsx)(df.b, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), tW.length > 0 && (0, ZW.jsxs)("div", {
+            }), VR.length > 0 && (0, KR.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, ZW.jsx)(gw.b, {
-                label: WW("socialBar:invites"),
-                meta: tW.length
-              }), tW.map((iW => (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)(of.c, {
+                label: RR("socialBar:invites"),
+                meta: VR.length
+              }), VR.map((JR => (0, KR.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, ZW.jsx)("div", {
+                children: [(0, KR.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, ZW.jsx)(pw.b, {
-                    invite: iW
+                  children: (0, KR.jsx)(mf.d, {
+                    invite: JR
                   })
-                }), (0, ZW.jsx)("div", {
+                }), (0, KR.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, ZW.jsx)(pw.d, {
-                    invite: iW
+                  children: (0, KR.jsx)(mf.e, {
+                    invite: JR
                   })
-                }), (0, ZW.jsx)(wW.n, {
+                }), (0, KR.jsx)(fR.n, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, fw.h)(iW)
+                    (0, zf.d)(JR)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${iW.destination.kind}`
+                    value: `social_menu:${JR.destination.kind}`
                   },
-                  children: WW("general:join")
-                }), (0, ZW.jsx)(li.f, {
-                  tooltipInner: (0, ZW.jsx)(ZW.Fragment, {
-                    children: WW("general:decline")
+                  children: RR("general:join")
+                }), (0, KR.jsx)(rJ.h, {
+                  tooltipInner: (0, KR.jsx)(KR.Fragment, {
+                    children: RR("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, ZW.jsx)(wW.h, {
+                  children: (0, KR.jsx)(fR.i, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === lW || void 0 === lW ? void 0 : lW.kind) && lW.inviteId === iW.id,
+                    padDefaultFocus: "invite" === (null === rR || void 0 === rR ? void 0 : rR.kind) && rR.inviteId === JR.id,
                     onClick: () => {
-                      IW.e.declineInvite(iW.id)
+                      kR.e.declineInvite(JR.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${iW.destination.kind}`
+                      value: `social_menu:${JR.destination.kind}`
                     },
-                    children: (0, ZW.jsx)(LW.c, {
+                    children: (0, KR.jsx)(qR.d, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, iW.id)))]
-            }), (0, ZW.jsxs)("div", {
-              className: NW()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !OW && 0 === cW.length
+              }, JR.id)))]
+            }), (0, KR.jsxs)("div", {
+              className: uR()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !GR && 0 === iR.length
               }),
-              children: [(0, ZW.jsx)(gw.b, {
-                label: (0, ZW.jsxs)(ZW.Fragment, {
-                  children: [(0, ZW.jsx)(LW.c, {
-                    name: Xw.h
-                  }), " ", WW("socialBar:requests")]
+              children: [(0, KR.jsx)(of.c, {
+                label: (0, KR.jsxs)(KR.Fragment, {
+                  children: [(0, KR.jsx)(qR.d, {
+                    name: jf.c
+                  }), " ", RR("socialBar:requests")]
                 }),
-                meta: (0, ZW.jsxs)(ZW.Fragment, {
-                  children: [cW.length, cW.length === Ai.p && (0, ZW.jsx)("span", {
+                meta: (0, KR.jsxs)(KR.Fragment, {
+                  children: [iR.length, iR.length === eJ.n && (0, KR.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: WW("socialBar:limitReached")
+                    children: RR("socialBar:limitReached")
                   })]
                 })
-              }), OW && (0, ZW.jsx)("div", {
+              }), GR && (0, KR.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, ZW.jsx)(SW.d, {})
-              }), !OW && 0 === cW.length && (0, ZW.jsx)("div", {
+                children: (0, KR.jsx)(XR.d, {})
+              }), !GR && 0 === iR.length && (0, KR.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: WW("socialBar:noFriendRequests")
-              }), !OW && cW.length > 0 && (0, ZW.jsx)("div", {
+                children: RR("socialBar:noFriendRequests")
+              }), !GR && iR.length > 0 && (0, KR.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, ZW.jsx)(UN.e, {
+                children: (0, KR.jsx)(au.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [cW],
-                  children: cW.map(((iW, OW) => {
-                    const mW = sW.get(iW.name);
-                    return (0, ZW.jsxs)(vw.h, {
-                      playerSocialPreview: iW,
-                      zIndex: cW.length - OW,
-                      padDefaultFocus: (0, qw.d)(lW, iW.name, OW),
-                      status: mW && (0, ZW.jsx)(Dw.c, {
-                        gameNameWithVariation: mW.gameNameWithVariation,
-                        isPrivateLobby: mW.isPrivateLobby
+                  observerUpdateDeps: [iR],
+                  children: iR.map(((JR, GR) => {
+                    const yR = WR.get(JR.name);
+                    return (0, KR.jsxs)(Hf.g, {
+                      playerSocialPreview: JR,
+                      zIndex: iR.length - GR,
+                      padDefaultFocus: (0, Ef.j)(rR, JR.name, GR),
+                      status: yR && (0, KR.jsx)(Pf.e, {
+                        gameNameWithVariation: yR.gameNameWithVariation,
+                        isPrivateLobby: yR.isPrivateLobby
                       }),
-                      children: [(0, ZW.jsx)(li.f, {
-                        tooltipInner: (0, ZW.jsx)(ZW.Fragment, {
-                          children: WW("general:accept")
+                      children: [(0, KR.jsx)(rJ.h, {
+                        tooltipInner: (0, KR.jsx)(KR.Fragment, {
+                          children: RR("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, ZW.jsx)(wW.f, {
+                        children: (0, KR.jsx)(fR.g, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            bW((0, qw.c)(jW, OW)), (0, Cw.d)(iW.name, !0, {
+                            aR((0, Ef.g)(LR, GR)), (0, Sf.f)(JR.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -9794,19 +9794,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, ZW.jsx)(LW.c, {
+                          children: (0, KR.jsx)(qR.d, {
                             name: "check"
                           })
                         })
-                      }), (0, ZW.jsx)(li.f, {
-                        tooltipInner: (0, ZW.jsx)(ZW.Fragment, {
-                          children: WW("general:decline")
+                      }), (0, KR.jsx)(rJ.h, {
+                        tooltipInner: (0, KR.jsx)(KR.Fragment, {
+                          children: RR("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, ZW.jsx)(wW.h, {
+                        children: (0, KR.jsx)(fR.i, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            bW((0, qw.c)(jW, OW)), (0, Cw.d)(iW.name, !1, {
+                            aR((0, Ef.g)(LR, GR)), (0, Sf.f)(JR.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -9814,62 +9814,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, ZW.jsx)(LW.c, {
+                          children: (0, KR.jsx)(qR.d, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${iW.name}_${iW.isError}`)
+                    }, `${JR.name}_${JR.isError}`)
                   }))
                 })
               })]
-            }), (0, ZW.jsx)(Dw.h, {})]
-          }), (0, ZW.jsxs)("div", {
+            }), (0, KR.jsx)(Pf.k, {})]
+          }), (0, KR.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, ZW.jsxs)("div", {
+            children: [(0, KR.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, ZW.jsx)(gw.b, {
-                label: WW("socialBar:party")
-              }), (0, ZW.jsx)(ew.b, {})]
-            }), (0, ZW.jsxs)("div", {
+              children: [(0, KR.jsx)(of.c, {
+                label: RR("socialBar:party")
+              }), (0, KR.jsx)(Df.b, {})]
+            }), (0, KR.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, ZW.jsx)(gw.b, {
-                label: (0, ZW.jsxs)(ZW.Fragment, {
-                  children: [(0, ZW.jsx)(LW.c, {
-                    name: Xw.e
-                  }), " ", WW("socialBar:friends")]
+              children: [(0, KR.jsx)(of.c, {
+                label: (0, KR.jsxs)(KR.Fragment, {
+                  children: [(0, KR.jsx)(qR.d, {
+                    name: jf.b
+                  }), " ", RR("socialBar:friends")]
                 }),
-                meta: (0, ZW.jsxs)(ZW.Fragment, {
-                  children: [EW.length, EW.length >= (0, Ai.e)(xW.getPlayerRanks()) && (0, ZW.jsx)("span", {
+                meta: (0, KR.jsxs)(KR.Fragment, {
+                  children: [tR.length, tR.length >= (0, eJ.d)(wR.getPlayerRanks()) && (0, KR.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: WW("socialBar:limitReached")
+                    children: RR("socialBar:limitReached")
                   })]
                 })
-              }), OW && (0, ZW.jsx)("div", {
+              }), GR && (0, KR.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, ZW.jsx)(SW.d, {})
-              }), !OW && 0 === EW.length && (0, ZW.jsx)("div", {
+                children: (0, KR.jsx)(XR.d, {})
+              }), !GR && 0 === tR.length && (0, KR.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: WW("socialBar:noFriends")
-              }), !OW && EW.length > 0 && (0, ZW.jsx)("div", {
+                children: RR("socialBar:noFriends")
+              }), !GR && tR.length > 0 && (0, KR.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, ZW.jsx)(UN.e, {
+                children: (0, KR.jsx)(au.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [EW],
-                  children: EW.map(((WW, OW) => (0, ZW.jsx)(vw.h, {
-                    playerSocialPreview: WW,
+                  observerUpdateDeps: [tR],
+                  children: tR.map(((RR, GR) => (0, KR.jsx)(Hf.g, {
+                    playerSocialPreview: RR,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: WW => {
-                      IW.e.removeFriendFromState(WW)
+                    onFriendRemoved: RR => {
+                      kR.e.removeFriendFromState(RR)
                     },
-                    zIndex: EW.length - OW,
-                    children: (0, ZW.jsx)(vw.d, {
-                      friend: WW,
-                      followsLeader: iW,
+                    zIndex: tR.length - GR,
+                    children: (0, KR.jsx)(Hf.e, {
+                      friend: RR,
+                      followsLeader: JR,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${WW.name}_${WW.isError}`)))
+                  }, `${RR.name}_${RR.isError}`)))
                 })
               })]
             })]
@@ -9877,834 +9877,834 @@ export const modules = {
         })
       })
     }
-    var Iw = OW(3503),
-      aw = OW(4859),
-      rw = OW(1964),
-      zw = OW(4851),
-      Fw = OW(4862);
+    var Qf = GR(3621),
+      Ff = GR(4970),
+      Tf = GR(2046),
+      sf = GR(4964),
+      hf = GR(4978);
 
-    function Qw(WW) {
+    function RV(RR) {
       let {
-        count: iW,
-        claiming: OW
-      } = WW;
+        count: JR,
+        claiming: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return 0 === iW ? null : (0, ZW.jsx)(wW.n, {
+        t: yR
+      } = (0, ZR.A)();
+      return 0 === JR ? null : (0, KR.jsx)(fR.n, {
         className: "SeasonPassClaimAllButton",
-        loading: OW,
+        loading: GR,
         onClick: () => {
-          aw.g.claimAll().catch((WW => {
-            console.error("Failed to claim all season pass rewards", WW)
+          Ff.h.claimAll().catch((RR => {
+            console.error("Failed to claim all season pass rewards", RR)
           }))
         },
-        children: mW("seasonPass:claimAll", {
-          count: iW
+        children: yR("seasonPass:claimAll", {
+          count: JR
         })
       })
     }
 
-    function Wt(WW) {
+    function JV(RR) {
       let {
-        view: iW,
-        claiming: OW
-      } = WW;
+        view: JR,
+        claiming: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)(), {
-        userContext: EW
-      } = (0, AW.e)(), {
-        config: NW,
-        state: cW,
-        tier: wW,
-        xpIntoTier: tW,
-        xpForNextTier: xW
-      } = iW, lW = Date.now(), bW = (0, Fw.l)(iW, lW), jW = wW >= NW.tierCount, UW = bW && !jW && xW > 0, kW = xW > 0 && !jW ? Math.min(100, tW / xW * 100) : 100, sW = cW.xpToday >= NW.maxXpPerDay, MW = null !== iW.xpBoost && iW.xpBoost.endsAtMs > lW && !sW ? iW.xpBoost : null;
-      return (0, ZW.jsxs)("header", {
+        t: yR
+      } = (0, ZR.A)(), {
+        userContext: tR
+      } = (0, eR.d)(), {
+        config: uR,
+        state: iR,
+        tier: fR,
+        xpIntoTier: VR,
+        xpForNextTier: wR
+      } = JR, rR = Date.now(), aR = (0, hf.l)(JR, rR), LR = fR >= uR.tierCount, nR = aR && !LR && wR > 0, UR = wR > 0 && !LR ? Math.min(100, VR / wR * 100) : 100, WR = iR.xpToday >= uR.maxXpPerDay, AR = null !== JR.xpBoost && JR.xpBoost.endsAtMs > rR && !WR ? JR.xpBoost : null;
+      return (0, KR.jsxs)("header", {
         className: "SeasonPassHeader",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "SeasonPassHeaderTitleBlock",
-          children: (0, ZW.jsx)("h1", {
+          children: (0, KR.jsx)("h1", {
             className: "SeasonPassHeaderTitle",
-            children: mW("seasonPass:title", {
-              season: cW.seasonNumber
+            children: yR("seasonPass:title", {
+              season: iR.seasonNumber
             })
           })
-        }), (0, ZW.jsxs)("div", {
+        }), (0, KR.jsxs)("div", {
           className: "SeasonPassHeaderProgress",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "SeasonPassHeaderProgressRow",
-            children: [(0, ZW.jsx)("span", {
+            children: [(0, KR.jsx)("span", {
               className: "SeasonPassHeaderTierBadge",
-              title: mW("seasonPass:tier"),
-              "aria-label": `${mW("seasonPass:tier")} ${wW}`,
-              children: wW
-            }), (0, ZW.jsxs)("div", {
+              title: yR("seasonPass:tier"),
+              "aria-label": `${yR("seasonPass:tier")} ${fR}`,
+              children: fR
+            }), (0, KR.jsxs)("div", {
               className: "SeasonPassHeaderBar",
               role: "progressbar",
               "aria-valuemin": 0,
               "aria-valuemax": 100,
-              "aria-valuenow": Math.round(kW),
-              children: [(0, ZW.jsx)("div", {
+              "aria-valuenow": Math.round(UR),
+              children: [(0, KR.jsx)("div", {
                 className: "SeasonPassHeaderBarFill",
                 style: {
-                  width: `${kW}%`
+                  width: `${UR}%`
                 }
-              }), (0, ZW.jsxs)("span", {
+              }), (0, KR.jsxs)("span", {
                 className: "SeasonPassHeaderBarText SmallTextBold",
-                children: [jW && mW("seasonPass:passComplete"), UW && mW("seasonPass:xpProgress", {
-                  xp: tW,
-                  xpForNextTier: xW
+                children: [LR && yR("seasonPass:passComplete"), nR && yR("seasonPass:xpProgress", {
+                  xp: VR,
+                  xpForNextTier: wR
                 })]
               })]
-            }), UW && (0, ZW.jsxs)(ZW.Fragment, {
-              children: [(0, ZW.jsx)(LW.c, {
+            }), nR && (0, KR.jsxs)(KR.Fragment, {
+              children: [(0, KR.jsx)(qR.d, {
                 className: "SeasonPassHeaderNextArrow",
                 name: "caret-right"
-              }), (0, ZW.jsx)("span", {
+              }), (0, KR.jsx)("span", {
                 className: "SeasonPassHeaderNextTier",
-                children: wW + 1
+                children: fR + 1
               })]
             })]
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "SeasonPassHeaderFootnotes",
-            children: [(0, ZW.jsxs)("span", {
+            children: [(0, KR.jsxs)("span", {
               className: "SeasonPassHeaderTimeLeft",
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "hourglass"
-              }), " ", bW ? mW("seasonPass:endsIn", {
-                time: (0, zw.c)((iW.endsAtMs - lW) / 6e4)
-              }) : (0, pL.e)(iW.claimEndsAtMs, mW, lW)]
-            }), bW && !jW && (0, ZW.jsx)("span", {
-              className: sW ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
-              children: sW ? mW("seasonPass:dailyCapReached") : mW("seasonPass:dailyXp", {
-                xp: cW.xpToday,
-                cap: NW.maxXpPerDay
+              }), " ", aR ? yR("seasonPass:endsIn", {
+                time: (0, sf.e)((JR.endsAtMs - rR) / 6e4)
+              }) : (0, cq.c)(JR.claimEndsAtMs, yR, rR)]
+            }), aR && !LR && (0, KR.jsx)("span", {
+              className: WR ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
+              children: WR ? yR("seasonPass:dailyCapReached") : yR("seasonPass:dailyXp", {
+                xp: iR.xpToday,
+                cap: uR.maxXpPerDay
               })
-            }), bW && !jW && MW && (0, ZW.jsxs)("span", {
+            }), aR && !LR && AR && (0, KR.jsxs)("span", {
               className: "SeasonPassHeaderBoost",
-              children: [(0, ZW.jsx)(LW.c, {
+              children: [(0, KR.jsx)(qR.d, {
                 name: "angles-up"
-              }), " ", mW("seasonPass:xpBoostActive", {
-                multiplier: MW.multiplier,
-                time: (0, zw.c)(Math.ceil((MW.endsAtMs - lW) / 6e4))
+              }), " ", yR("seasonPass:xpBoostActive", {
+                multiplier: AR.multiplier,
+                time: (0, sf.e)(Math.ceil((AR.endsAtMs - rR) / 6e4))
               })]
-            }), bW && !jW && !sW && !MW && (0, ZW.jsx)("span", {
+            }), aR && !LR && !WR && !AR && (0, KR.jsx)("span", {
               className: "SeasonPassHeaderHint",
-              children: mW("seasonPass:playToEarn")
-            }), EW.type === rw.c.ANONYMOUS && (0, ZW.jsx)("span", {
+              children: yR("seasonPass:playToEarn")
+            }), tR.type === Tf.e.ANONYMOUS && (0, KR.jsx)("span", {
               className: "SeasonPassHeaderGuest",
-              children: mW("seasonPass:logInToKeep")
+              children: yR("seasonPass:logInToKeep")
             })]
           })]
-        }), (0, ZW.jsx)(Qw, {
-          count: iW.claimable.length,
-          claiming: OW
+        }), (0, KR.jsx)(RV, {
+          count: JR.claimable.length,
+          claiming: GR
         })]
       })
     }
-    var it = OW(4251),
-      Ot = OW(4255);
+    var GV = GR(4315),
+      yV = GR(4324);
 
-    function mt(WW) {
-      return null !== (0, pL.v)(WW) || null !== (0, pL.p)(WW)
+    function tV(RR) {
+      return null !== (0, cq.p)(RR) || null !== (0, cq.k)(RR)
     }
-    let Et = null;
+    let uV = null;
 
-    function Nt() {
-      var WW;
-      null === (WW = Et) || void 0 === WW || WW.tearDownNotification()
+    function ZV() {
+      var RR;
+      null === (RR = uV) || void 0 === RR || RR.tearDownNotification()
     }
 
-    function Pt(WW) {
+    function qV(RR) {
       let {
-        reward: iW
-      } = WW;
+        reward: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)(), {
-        userContext: mW
-      } = (0, AW.e)(), EW = (0, pL.v)(iW);
-      return (0, ZW.jsxs)("div", {
+        t: GR
+      } = (0, ZR.A)(), {
+        userContext: yR
+      } = (0, eR.d)(), tR = (0, cq.p)(JR);
+      return (0, KR.jsxs)("div", {
         className: "PromptGenericPopup SeasonPassRewardPreview",
-        children: [(0, ZW.jsx)("div", {
+        children: [(0, KR.jsx)("div", {
           className: "PromptGenericPopupTitle SmallTextBold",
-          children: (0, pL.k)(iW, OW)
-        }), null !== EW && (0, ZW.jsx)("div", {
+          children: (0, cq.f)(JR, GR)
+        }), null !== tR && (0, KR.jsx)("div", {
           className: "SeasonPassRewardPreviewProfileEffect",
-          children: (0, ZW.jsx)(it.c, {
-            profileEffect: EW,
-            name: mW.getPlayerName(),
-            cosmetics: mW.getPlayerCosmetics()
+          children: (0, KR.jsx)(GV.b, {
+            profileEffect: tR,
+            name: yR.getPlayerName(),
+            cosmetics: yR.getPlayerCosmetics()
           })
-        }), null === EW && (0, ZW.jsx)(Lt, {
-          reward: iW
+        }), null === tR && (0, KR.jsx)(iV, {
+          reward: JR
         })]
       })
     }
 
-    function Lt(WW) {
+    function iV(RR) {
       let {
-        reward: iW
-      } = WW;
+        reward: JR
+      } = RR;
       const {
-        userContext: OW
-      } = (0, AW.e)(), EW = (0, mW.useRef)(null), {
-        previewEmote: NW,
-        playEmote: PW
-      } = (0, Ot.b)(), LW = (0, mW.useMemo)((() => (0, pL.p)(iW)), [iW]), cW = LW.emote;
-      return (0, ZW.jsx)("div", {
+        userContext: GR
+      } = (0, eR.d)(), tR = (0, yR.useRef)(null), {
+        previewEmote: uR,
+        playEmote: ZR
+      } = (0, yV.e)(), qR = (0, yR.useMemo)((() => (0, cq.k)(JR)), [JR]), iR = qR.emote;
+      return (0, KR.jsx)("div", {
         className: "SeasonPassRewardPreviewCharacter",
-        children: (0, ZW.jsx)(mW.Suspense, {
-          fallback: (0, ZW.jsx)(SW.d, {}),
-          children: (0, ZW.jsx)(KL.e, {
-            ref: EW,
+        children: (0, KR.jsx)(yR.Suspense, {
+          fallback: (0, KR.jsx)(XR.d, {}),
+          children: (0, KR.jsx)(Wq.e, {
+            ref: tR,
             framing: "store",
-            forcedCosmetics: LW.cosmetics,
-            LL: NW.id,
-            emotePlaySeq: NW.seq,
+            forcedCosmetics: qR.cosmetics,
+            wq: uR.id,
+            emotePlaySeq: uR.seq,
             onReady: () => {
-              var WW, iW;
-              null === (WW = EW.current) || void 0 === WW || WW.resetCamera(), null === (iW = EW.current) || void 0 === iW || iW.setAllCosmetics(OW.getPlayerCosmetics())
+              var RR, JR;
+              null === (RR = tR.current) || void 0 === RR || RR.resetCamera(), null === (JR = tR.current) || void 0 === JR || JR.setAllCosmetics(GR.getPlayerCosmetics())
             },
             onDrawn: () => {
-              null !== cW && PW(cW)
+              null !== iR && ZR(iR)
             }
           })
         })
       })
     }
 
-    function ct(WW) {
+    function fV(RR) {
       let {
-        waitingCount: iW
-      } = WW;
+        waitingCount: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, PW.B)();
-      return (0, BW.usePurchasesAllowed)() ? (0, ZW.jsxs)("div", {
+        t: GR
+      } = (0, ZR.A)();
+      return (0, jR.usePurchasesAllowed)() ? (0, KR.jsxs)("div", {
         className: "SeasonPassHyperUpsell",
-        children: [iW > 0 && (0, ZW.jsx)("span", {
+        children: [JR > 0 && (0, KR.jsx)("span", {
           className: "SeasonPassHyperUpsellText",
-          children: 1 === iW ? OW("seasonPass:hyperRewardWaiting") : OW("seasonPass:hyperRewardsWaiting", {
-            count: iW
+          children: 1 === JR ? GR("seasonPass:hyperRewardWaiting") : GR("seasonPass:hyperRewardsWaiting", {
+            count: JR
           })
-        }), (0, ZW.jsxs)("span", {
+        }), (0, KR.jsxs)("span", {
           className: "SeasonPassHyperUpsellButtonWrapper",
-          children: [(0, ZW.jsxs)(wW.v, {
+          children: [(0, KR.jsxs)(fR.u, {
             className: "SeasonPassHyperUpsellButton",
             onClick: () => {
-              (0, ci.o)({
+              (0, iJ.m)({
                 mode: "self",
                 source: "seasonPass",
                 openItem: "superRank"
               })
             },
-            children: [(0, ZW.jsx)(pW.b, {}), " ", OW("homePage:getHyperRank")]
-          }), iW > 0 && (0, ZW.jsx)("span", {
+            children: [(0, KR.jsx)(IR.c, {}), " ", GR("homePage:getHyperRank")]
+          }), JR > 0 && (0, KR.jsx)("span", {
             className: "SeasonPassHyperUpsellCount",
-            children: iW
+            children: JR
           })]
         })]
       }) : null
     }
-    var wt = OW(35291);
+    var VV = GR(35221);
 
-    function tt(WW) {
+    function KV(RR) {
       let {
-        stub: iW,
-        name: OW
-      } = WW;
+        stub: JR,
+        name: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, PW.B)();
-      return (0, ZW.jsxs)("span", {
+        t: yR
+      } = (0, ZR.A)();
+      return (0, KR.jsxs)("span", {
         className: "SeasonPassTrackLabelName",
-        children: [(0, ZW.jsx)("span", {
+        children: [(0, KR.jsx)("span", {
           className: "SeasonPassTicketStub",
-          children: iW
-        }), (0, ZW.jsxs)("span", {
+          children: JR
+        }), (0, KR.jsxs)("span", {
           className: "SeasonPassTicketBody",
-          children: [(0, ZW.jsx)("span", {
+          children: [(0, KR.jsx)("span", {
             className: "SeasonPassTicketPass",
-            children: mW("seasonPass:trackTicketPass")
-          }), (0, ZW.jsx)("span", {
+            children: yR("seasonPass:trackTicketPass")
+          }), (0, KR.jsx)("span", {
             className: "SeasonPassTicketName",
-            children: OW
+            children: GR
           })]
         })]
       })
     }
 
-    function Zt(WW) {
-      var iW, OW;
+    function wV(RR) {
+      var JR, GR;
       let {
-        view: EW,
-        claimingKeys: NW,
-        hyperWaitingCount: cW,
-        onClaim: wW
-      } = WW;
+        view: tR,
+        claimingKeys: uR,
+        hyperWaitingCount: iR,
+        onClaim: fR
+      } = RR;
       const {
-        t: tW
-      } = (0, PW.B)(), xW = (0, mW.useRef)(null), {
-        config: lW,
-        tier: AW,
-        xpIntoTier: bW,
-        xpForNextTier: jW,
-        state: UW
-      } = EW, kW = (0, Fw.l)(EW), sW = (0, mW.useRef)(!1), MW = null !== (iW = null === (OW = EW.claimable[0]) || void 0 === OW ? void 0 : OW.tier) && void 0 !== iW ? iW : Math.min(AW + 1, lW.tierCount);
-      (0, mW.useLayoutEffect)((() => {
-        if (sW.current) return;
-        const WW = xW.current,
-          iW = WW.querySelector(`[data-tier="${MW}"]`).getBoundingClientRect(),
-          OW = WW.getBoundingClientRect();
-        WW.scrollLeft += iW.left - OW.left - .3 * WW.clientWidth, WW.scrollTop += iW.top - OW.top - .3 * WW.clientHeight
-      }), [MW]), (0, mW.useEffect)((() => {
-        const WW = xW.current;
+        t: VR
+      } = (0, ZR.A)(), wR = (0, yR.useRef)(null), {
+        config: rR,
+        tier: eR,
+        xpIntoTier: aR,
+        xpForNextTier: LR,
+        state: nR
+      } = tR, UR = (0, hf.l)(tR), WR = (0, yR.useRef)(!1), AR = null !== (JR = null === (GR = tR.claimable[0]) || void 0 === GR ? void 0 : GR.tier) && void 0 !== JR ? JR : Math.min(eR + 1, rR.tierCount);
+      (0, yR.useLayoutEffect)((() => {
+        if (WR.current) return;
+        const RR = wR.current,
+          JR = RR.querySelector(`[data-tier="${AR}"]`).getBoundingClientRect(),
+          GR = RR.getBoundingClientRect();
+        RR.scrollLeft += JR.left - GR.left - .3 * RR.clientWidth, RR.scrollTop += JR.top - GR.top - .3 * RR.clientHeight
+      }), [AR]), (0, yR.useEffect)((() => {
+        const RR = wR.current;
 
-        function iW(iW) {
-          sW.current = !0, Math.abs(iW.deltaY) <= Math.abs(iW.deltaX) || WW.scrollWidth <= WW.clientWidth || (iW.preventDefault(), WW.scrollLeft += iW.deltaY)
+        function JR(JR) {
+          WR.current = !0, Math.abs(JR.deltaY) <= Math.abs(JR.deltaX) || RR.scrollWidth <= RR.clientWidth || (JR.preventDefault(), RR.scrollLeft += JR.deltaY)
         }
-        return WW.addEventListener("wheel", iW, {
+        return RR.addEventListener("wheel", JR, {
           passive: !1
         }), () => {
-          WW.removeEventListener("wheel", iW)
+          RR.removeEventListener("wheel", JR)
         }
       }), []);
-      const KW = jW > 0 ? bW / jW : 1;
-      return (0, ZW.jsxs)("div", {
+      const CR = LR > 0 ? aR / LR : 1;
+      return (0, KR.jsxs)("div", {
         className: "SeasonPassTrack",
-        children: [(0, ZW.jsxs)("div", {
+        children: [(0, KR.jsxs)("div", {
           className: "SeasonPassTrackLabels",
-          children: [(0, ZW.jsxs)("div", {
+          children: [(0, KR.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelHyper",
-            children: [(0, ZW.jsx)(tt, {
-              stub: (0, ZW.jsx)(pW.b, {}),
-              name: tW("seasonPass:hyperTrack")
-            }), !UW.hasHyperRank && (0, ZW.jsx)(ct, {
-              waitingCount: cW
+            children: [(0, KR.jsx)(KV, {
+              stub: (0, KR.jsx)(IR.c, {}),
+              name: VR("seasonPass:hyperTrack")
+            }), !nR.hasHyperRank && (0, KR.jsx)(fV, {
+              waitingCount: iR
             })]
-          }), (0, ZW.jsxs)("div", {
+          }), (0, KR.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelFree",
-            children: [(0, ZW.jsx)(tt, {
-              stub: (0, ZW.jsx)(LW.c, {
+            children: [(0, KR.jsx)(KV, {
+              stub: (0, KR.jsx)(qR.d, {
                 name: "star"
               }),
-              name: tW("seasonPass:freeTrack")
-            }), (0, ZW.jsx)("span", {
+              name: VR("seasonPass:freeTrack")
+            }), (0, KR.jsx)("span", {
               className: "SeasonPassTrackLabelHint",
-              children: tW("seasonPass:freeTrackHint")
+              children: VR("seasonPass:freeTrackHint")
             })]
           })]
-        }), (0, ZW.jsx)("div", {
+        }), (0, KR.jsx)("div", {
           className: "SeasonPassTrackScroller",
-          ref: xW,
+          ref: wR,
           onPointerDown: () => {
-            sW.current = !0
+            WR.current = !0
           },
-          children: (0, ZW.jsx)("div", {
+          children: (0, KR.jsx)("div", {
             className: "SeasonPassTrackRow",
-            children: lW.tiers.map((WW => {
-              const iW = WW.tier,
-                OW = function(WW, iW, OW) {
-                  if (WW <= iW) return "reached";
-                  return OW && WW === iW + 1 ? "earning" : "locked"
-                }(iW, AW, kW),
-                mW = "earning" === OW;
-              return (0, ZW.jsx)(xt, {
-                tierRewards: WW,
-                nodeState: OW,
-                progress: mW ? KW : 0,
-                freeState: EW.tileState({
-                  tier: iW,
+            children: rR.tiers.map((RR => {
+              const JR = RR.tier,
+                GR = function(RR, JR, GR) {
+                  if (RR <= JR) return "reached";
+                  return GR && RR === JR + 1 ? "earning" : "locked"
+                }(JR, eR, UR),
+                yR = "earning" === GR;
+              return (0, KR.jsx)(rV, {
+                tierRewards: RR,
+                nodeState: GR,
+                progress: yR ? CR : 0,
+                freeState: tR.tileState({
+                  tier: JR,
                   track: "free"
                 }),
-                hyperState: EW.tileState({
-                  tier: iW,
+                hyperState: tR.tileState({
+                  tier: JR,
                   track: "hyper"
                 }),
-                freeClaiming: NW.has((0, Fw.o)({
-                  tier: iW,
+                freeClaiming: uR.has((0, hf.p)({
+                  tier: JR,
                   track: "free"
                 })),
-                hyperClaiming: NW.has((0, Fw.o)({
-                  tier: iW,
+                hyperClaiming: uR.has((0, hf.p)({
+                  tier: JR,
                   track: "hyper"
                 })),
-                hasHyperRank: UW.hasHyperRank,
-                onClaim: wW
-              }, iW)
+                hasHyperRank: nR.hasHyperRank,
+                onClaim: fR
+              }, JR)
             }))
           })
         })]
       })
     }
-    const xt = (0, mW.memo)((function(WW) {
+    const rV = (0, yR.memo)((function(RR) {
       let {
-        tierRewards: iW,
-        nodeState: OW,
-        progress: mW,
-        freeState: EW,
-        hyperState: PW,
-        freeClaiming: LW,
-        hyperClaiming: cW,
-        hasHyperRank: wW,
-        onClaim: tW
-      } = WW;
+        tierRewards: JR,
+        nodeState: GR,
+        progress: yR,
+        freeState: tR,
+        hyperState: ZR,
+        freeClaiming: qR,
+        hyperClaiming: iR,
+        hasHyperRank: fR,
+        onClaim: VR
+      } = RR;
       const {
-        tier: xW
-      } = iW;
-      return (0, ZW.jsxs)("div", {
-        className: NW()("SeasonPassTrackColumn", {
-          SeasonPassTrackColumnLocked: "reached" !== OW
+        tier: wR
+      } = JR;
+      return (0, KR.jsxs)("div", {
+        className: uR()("SeasonPassTrackColumn", {
+          SeasonPassTrackColumnLocked: "reached" !== GR
         }),
-        "data-tier": xW,
-        children: [(0, ZW.jsx)(lt, {
-          tier: xW,
+        "data-tier": wR,
+        children: [(0, KR.jsx)(eV, {
+          tier: wR,
           track: "hyper",
-          reward: iW.hyper,
-          tileState: PW,
-          claiming: cW,
-          padlock: !wW && "claimed" !== PW,
-          onClaim: tW
-        }), (0, ZW.jsxs)("div", {
+          reward: JR.hyper,
+          tileState: ZR,
+          claiming: iR,
+          padlock: !fR && "claimed" !== ZR,
+          onClaim: VR
+        }), (0, KR.jsxs)("div", {
           className: "SeasonPassTrackRoad",
-          children: [(0, ZW.jsx)("span", {
-            className: NW()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
-              SeasonPassTrackRoadFilled: "reached" === OW
+          children: [(0, KR.jsx)("span", {
+            className: uR()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
+              SeasonPassTrackRoadFilled: "reached" === GR
             }),
-            children: "earning" === OW && (0, ZW.jsx)("span", {
+            children: "earning" === GR && (0, KR.jsx)("span", {
               className: "SeasonPassTrackRoadProgress",
               style: {
-                "--seasonPassRoadProgress": 100 * mW + "%"
+                "--seasonPassRoadProgress": 100 * yR + "%"
               }
             })
-          }), (0, ZW.jsx)("span", {
-            className: NW()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
-              SeasonPassTrackRoadFilled: "reached" === OW
+          }), (0, KR.jsx)("span", {
+            className: uR()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
+              SeasonPassTrackRoadFilled: "reached" === GR
             })
-          }), (0, ZW.jsx)(wt.b, {
-            tier: xW,
-            state: OW,
-            progress: mW
+          }), (0, KR.jsx)(VV.e, {
+            tier: wR,
+            state: GR,
+            progress: yR
           })]
-        }), (0, ZW.jsx)(lt, {
-          tier: xW,
+        }), (0, KR.jsx)(eV, {
+          tier: wR,
           track: "free",
-          reward: iW.free,
-          tileState: EW,
-          claiming: LW,
+          reward: JR.free,
+          tileState: tR,
+          claiming: qR,
           padlock: !1,
-          onClaim: tW
+          onClaim: VR
         })]
       })
     }));
 
-    function lt(WW) {
+    function eV(RR) {
       let {
-        tier: iW,
-        track: OW,
-        reward: mW,
-        tileState: EW,
-        claiming: NW,
-        padlock: PW,
-        onClaim: LW
-      } = WW;
-      return mW ? (0, ZW.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${OW}`,
-        children: (0, ZW.jsx)(RL.h, {
-          reward: mW,
-          tileState: EW,
-          track: OW,
+        tier: JR,
+        track: GR,
+        reward: yR,
+        tileState: tR,
+        claiming: uR,
+        padlock: ZR,
+        onClaim: qR
+      } = RR;
+      return yR ? (0, KR.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${GR}`,
+        children: (0, KR.jsx)(jq.g, {
+          reward: yR,
+          tileState: tR,
+          track: GR,
           size: "large",
           onClaim: () => {
-            LW({
-              tier: iW,
-              track: OW
+            qR({
+              tier: JR,
+              track: GR
             })
           },
-          claiming: NW,
-          padlock: PW,
-          onPreview: mt(mW) ? () => {
-            ! function(WW) {
-              const iW = Ei.NotificationProvider.showCustomPopup({
-                body: (0, ZW.jsx)(Pt, {
-                  reward: WW
+          claiming: uR,
+          padlock: ZR,
+          onPreview: tV(yR) ? () => {
+            ! function(RR) {
+              const JR = tJ.NotificationProvider.showCustomPopup({
+                body: (0, KR.jsx)(qV, {
+                  reward: RR
                 })
               });
-              Et = iW, iW.getResult().finally((() => {
-                Et === iW && (Et = null)
+              uV = JR, JR.getResult().finally((() => {
+                uV === JR && (uV = null)
               }))
-            }(mW)
+            }(yR)
           } : void 0
         })
-      }) : (0, ZW.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${OW}`
+      }) : (0, KR.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${GR}`
       })
     }
 
-    function At(WW) {
+    function aV(RR) {
       let {
-        show: iW
-      } = WW;
-      return iW ? (0, ZW.jsx)(bt, {}) : null
+        show: JR
+      } = RR;
+      return JR ? (0, KR.jsx)(LV, {}) : null
     }
 
-    function bt() {
+    function LV() {
       const {
-        t: WW
-      } = (0, PW.B)(), iW = (0, aw.h)();
-      return (0, mW.useEffect)((() => Nt), []), (0, ZW.jsxs)("div", {
+        t: RR
+      } = (0, ZR.A)(), JR = (0, Ff.k)();
+      return (0, yR.useEffect)((() => ZV), []), (0, KR.jsxs)("div", {
         className: "SeasonPassScreen",
-        children: ["loading" === iW.status && (0, ZW.jsx)(SW.d, {}), "error" === iW.status && (0, ZW.jsxs)("div", {
+        children: ["loading" === JR.status && (0, KR.jsx)(XR.d, {}), "error" === JR.status && (0, KR.jsxs)("div", {
           className: "SeasonPassScreenNotice",
-          children: [(0, ZW.jsx)("p", {
+          children: [(0, KR.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: WW("seasonPass:errorLoad")
-          }), (0, ZW.jsx)(wW.f, {
+            children: RR("seasonPass:errorLoad")
+          }), (0, KR.jsx)(fR.g, {
             className: "SeasonPassScreenRetry",
             onClick: () => {
-              aw.g.retry()
+              Ff.h.retry()
             },
-            children: WW("seasonPass:retry")
+            children: RR("seasonPass:retry")
           })]
-        }), "noSeason" === iW.status && (0, ZW.jsx)("div", {
+        }), "noSeason" === JR.status && (0, KR.jsx)("div", {
           className: "SeasonPassScreenNotice",
-          children: (0, ZW.jsx)("p", {
+          children: (0, KR.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: (0, pL.g)(WW)
+            children: (0, cq.d)(RR)
           })
-        }), "loaded" === iW.status && (0, ZW.jsx)(jt, {
-          view: iW.view,
-          claimingKeys: iW.claimingKeys
+        }), "loaded" === JR.status && (0, KR.jsx)(nV, {
+          view: JR.view,
+          claimingKeys: JR.claimingKeys
         })]
       })
     }
 
-    function jt(WW) {
+    function nV(RR) {
       let {
-        view: iW,
-        claimingKeys: OW
-      } = WW;
-      const mW = iW.config.tiers.filter((WW => "needsHyper" === iW.tileState({
-          tier: WW.tier,
+        view: JR,
+        claimingKeys: GR
+      } = RR;
+      const yR = JR.config.tiers.filter((RR => "needsHyper" === JR.tileState({
+          tier: RR.tier,
           track: "hyper"
         }))).length,
-        EW = OW.size > 0;
-      return (0, ZW.jsxs)("div", {
+        tR = GR.size > 0;
+      return (0, KR.jsxs)("div", {
         className: "SeasonPassScreenLoaded",
-        children: [(0, ZW.jsx)(Wt, {
-          view: iW,
-          claiming: EW
-        }), (0, ZW.jsx)(Zt, {
-          view: iW,
-          claimingKeys: OW,
-          hyperWaitingCount: mW,
-          onClaim: Ut
-        }), (0, ZW.jsxs)("div", {
+        children: [(0, KR.jsx)(JV, {
+          view: JR,
+          claiming: tR
+        }), (0, KR.jsx)(wV, {
+          view: JR,
+          claimingKeys: GR,
+          hyperWaitingCount: yR,
+          onClaim: UV
+        }), (0, KR.jsxs)("div", {
           className: "SeasonPassScreenActions",
-          children: [(0, ZW.jsx)(Qw, {
-            count: iW.claimable.length,
-            claiming: EW
-          }), !iW.state.hasHyperRank && (0, ZW.jsx)(ct, {
-            waitingCount: mW
+          children: [(0, KR.jsx)(RV, {
+            count: JR.claimable.length,
+            claiming: tR
+          }), !JR.state.hasHyperRank && (0, KR.jsx)(fV, {
+            waitingCount: yR
           })]
         })]
       })
     }
 
-    function Ut(WW) {
-      aw.g.claim(WW).catch((WW => {
-        console.error("Failed to claim season pass reward", WW)
+    function UV(RR) {
+      Ff.h.claim(RR).catch((RR => {
+        console.error("Failed to claim season pass reward", RR)
       }))
     }
-    var kt = OW(5445);
-    var st = OW(4003);
-    const Mt = WW => {
+    var WV = GR(5581);
+    var AV = GR(4096);
+    const CV = RR => {
         let {
-          action: iW,
-          padAction: OW
-        } = WW;
+          action: JR,
+          padAction: GR
+        } = RR;
         const {
-          isTouchScreen: mW
-        } = (0, yW.p)(["isTouchScreen"]), EW = (0, Gm.x)();
-        return mW && !EW ? null : (0, ZW.jsx)(pm.e, {
+          isTouchScreen: yR
+        } = (0, BR.o)(["isTouchScreen"]), tR = (0, jy.s)();
+        return yR && !tR ? null : (0, KR.jsx)(oy.c, {
           className: "EverythingMenuTabKey",
-          noaAction: iW,
+          noaAction: JR,
           padHidesKey: !0,
-          padMenuShortcut: OW
+          padMenuShortcut: GR
         })
       },
-      Kt = (0, mW.memo)((function() {
+      XV = (0, yR.memo)((function() {
         const {
-          t: WW
-        } = (0, PW.B)(), {
-          gameState: iW,
-          openEverythingMenuName: OW,
-          crosshairGameView: EW,
-          everythingMenuOverLoadingScreen: LW
-        } = (0, yW.p)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
-          userContext: cW
-        } = (0, AW.e)(), tW = (0, ZE.e)(Date.now()), xW = (0, BW.usePurchasesAllowed)(), lW = (0, ci.I)(), {
-          view: bW
-        } = (0, ZO.z)(), jW = "dot" === lW || null === lW && "ready" === (null === bW || void 0 === bW ? void 0 : bW.kind), kW = (WW, iW) => (0, ZW.jsx)(Mt, {
-          action: WW,
-          padAction: iW
-        }), [sW, MW] = (0, mW.useState)(null), KW = (0, mW.useRef)(null), SW = (0, mW.useRef)(null);
-        (0, mW.useEffect)((() => {
-          var WW;
-          const iW = null === (WW = SW.current) || void 0 === WW ? void 0 : WW.querySelector(".EverythingMenuTabActive");
-          null === iW || void 0 === iW || iW.scrollIntoView({
+          t: RR
+        } = (0, ZR.A)(), {
+          gameState: JR,
+          openEverythingMenuName: GR,
+          crosshairGameView: tR,
+          everythingMenuOverLoadingScreen: qR
+        } = (0, BR.o)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
+          userContext: iR
+        } = (0, eR.d)(), VR = (0, it.i)(Date.now()), wR = (0, jR.usePurchasesAllowed)(), rR = (0, iJ.H)(), {
+          view: aR
+        } = (0, fG.F)(), LR = "dot" === rR || null === rR && "ready" === (null === aR || void 0 === aR ? void 0 : aR.kind), UR = (RR, JR) => (0, KR.jsx)(CV, {
+          action: RR,
+          padAction: JR
+        }), [WR, AR] = (0, yR.useState)(null), CR = (0, yR.useRef)(null), XR = (0, yR.useRef)(null);
+        (0, yR.useEffect)((() => {
+          var RR;
+          const JR = null === (RR = XR.current) || void 0 === RR ? void 0 : RR.querySelector(".EverythingMenuTabActive");
+          null === JR || void 0 === JR || JR.scrollIntoView({
             block: "nearest",
             inline: "nearest"
           })
-        }), [OW]);
-        const YW = {
-            ..."inGame" === iW ? {} : (0, wW.fb)({
+        }), [GR]);
+        const MR = {
+            ..."inGame" === JR ? {} : (0, fR.bb)({
               focusOnClick: !1
             }),
-            ...sE.d
+            ...nt.f
           },
-          TW = WW => {
-            const iW = (0, ME.d)((iW => {
-              (0, wW.cb)(iW.currentTarget), yW.d.set({
-                openEverythingMenuName: WW
+          lR = RR => {
+            const JR = (0, Ut.f)((JR => {
+              (0, fR.$)(JR.currentTarget), BR.d.set({
+                openEverythingMenuName: RR
               })
             }), "pointerup");
             return {
-              ...YW,
-              onPointerDown: WW => {
-                YW.onPointerDown(WW), iW.onPointerDown(WW)
+              ...MR,
+              onPointerDown: RR => {
+                MR.onPointerDown(RR), JR.onPointerDown(RR)
               },
-              onPointerUp: WW => {
-                YW.onPointerUp(WW), iW.onPointerUp(WW)
+              onPointerUp: RR => {
+                MR.onPointerUp(RR), JR.onPointerUp(RR)
               },
-              onClick: iW.onClick
+              onClick: JR.onClick
             }
           },
-          JW = null !== OW;
-        (0, mW.useEffect)((() => {
-          OW === oi.m.CUSTOMISATION ? (0, ji.reportAnalyticsClick)({
+          pR = null !== GR;
+        (0, yR.useEffect)((() => {
+          GR === OJ.o.CUSTOMISATION ? (0, LJ.reportAnalyticsClick)({
             id: "customise.open",
-            value: (0, sL.e)()
-          }) : null === OW && yW.d.get("everythingMenuOverLoadingScreen") && yW.d.set({
+            value: (0, nq.d)()
+          }) : null === GR && BR.d.get("everythingMenuOverLoadingScreen") && BR.d.set({
             everythingMenuOverLoadingScreen: !1
           })
-        }), [OW]);
-        const HW = OW !== oi.m.COSMETIC_SHOP && !EW;
-        async function nW() {
+        }), [GR]);
+        const bR = GR !== OJ.o.COSMETIC_SHOP && !tR;
+        async function vR() {
           await async function() {
-            if (!sW) return;
-            await sW(), MW(null)
-          }(), yW.d.set({
+            if (!WR) return;
+            await WR(), AR(null)
+          }(), BR.d.set({
             openEverythingMenuName: null
           })
         }
-        const uW = (0, mW.useRef)(null),
-          oW = (0, mW.useCallback)((() => null !== uW.current && (0, uw.g)(uW.current)), []);
+        const OR = (0, yR.useRef)(null),
+          xR = (0, yR.useCallback)((() => null !== OR.current && (0, Of.f)(OR.current)), []);
 
-        function dW() {
-          oW() || nW()
-        }(0, mW.useEffect)((() => (0, VP.p)(oW)), [oW]);
-        const eW = (0, mW.useMemo)((() => "inGame" === iW ? {
-            text: WW("settingsMenu:exitGame"),
+        function NR() {
+          xR() || vR()
+        }(0, yR.useEffect)((() => (0, oZ.t)(xR)), [xR]);
+        const DR = (0, yR.useMemo)((() => "inGame" === JR ? {
+            text: RR("settingsMenu:exitGame"),
             onClick: () => {
-              (0, nw.d)()
+              (0, vf.e)()
             }
-          } : (0, hW.isDiscordClient)() ? {
-            text: WW("settingsMenu:exitGame"),
+          } : (0, gR.isDiscordClient)() ? {
+            text: RR("settingsMenu:exitGame"),
             onClick: () => {
-              ui.h.discordActivity().then((WW => {
-                WW.exit("User exited the game")
+              vJ.l.discordActivity().then((RR => {
+                RR.exit("User exited the game")
               }))
             }
-          } : null), [iW, WW]),
-          vW = JW && !EW,
-          gW = "inGame" !== iW,
-          DW = vW && gW;
-        (0, mW.useLayoutEffect)((() => {
-          if (DW) return yW.d.set({
+          } : null), [JR, RR]),
+          HR = pR && !tR,
+          oR = "inGame" !== JR,
+          cR = HR && oR;
+        (0, yR.useLayoutEffect)((() => {
+          if (cR) return BR.d.set({
             menuCoversPage: !0
           }), () => {
-            yW.d.set({
+            BR.d.set({
               menuCoversPage: !1
             })
           }
-        }), [DW]);
-        const VW = (0, mW.useRef)(null);
-        ! function(WW, iW) {
-          (0, mW.useEffect)((() => {
-            var OW;
-            const mW = (0, kt.g)();
-            if (!iW || null === mW || !(0, kt.d)({
-                site: hW.siteUsed,
-                isMobileApp: (0, UW.isMobileApp)(),
-                isTouchScreen: yW.d.get("isTouchScreen")
+        }), [cR]);
+        const PR = (0, yR.useRef)(null);
+        ! function(RR, JR) {
+          (0, yR.useEffect)((() => {
+            var GR;
+            const yR = (0, WV.c)();
+            if (!JR || null === yR || !(0, WV.b)({
+                site: gR.siteUsed,
+                isMobileApp: (0, nR.isMobileApp)(),
+                isTouchScreen: BR.d.get("isTouchScreen")
               })) return;
-            const EW = null === (OW = WW.current) || void 0 === OW ? void 0 : OW.querySelector(".EverythingMenuBackButton");
-            return EW ? mW(EW) : void 0
-          }), [WW, iW])
-        }(VW, vW && !(0, VP.j)(OW) && "inGame" === iW);
-        const pW = (0, ZW.jsx)("div", {
+            const tR = null === (GR = RR.current) || void 0 === GR ? void 0 : GR.querySelector(".EverythingMenuBackButton");
+            return tR ? yR(tR) : void 0
+          }), [RR, JR])
+        }(PR, HR && !(0, oZ.i)(GR) && "inGame" === JR);
+        const IR = (0, KR.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: dW,
-          children: (0, ZW.jsx)(wW.l, {
+          onClick: NR,
+          children: (0, KR.jsx)(fR.l, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, ZW.jsx)(KE.d, {
-          showing: JW,
+        return (0, KR.jsx)(Wt.b, {
+          showing: pR,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: OW === oi.m.SHOP,
-          doGameplayStartStopOnShow: "inGame" === iW,
-          children: (0, ZW.jsx)(YE.b, {
-            className: NW()("EverythingMenuContainer", {
-              EverythingMenuOverLoadingScreen: LW
+          keepsMovement: GR === OJ.o.SHOP,
+          doGameplayStartStopOnShow: "inGame" === JR,
+          children: (0, KR.jsx)(Ct.d, {
+            className: uR()("EverythingMenuContainer", {
+              EverythingMenuOverLoadingScreen: qR
             }),
-            show: vW,
-            children: (0, ZW.jsx)(SE.b, {
-              close: dW,
+            show: HR,
+            children: (0, KR.jsx)(At.e, {
+              close: NR,
               togglePointerLock: !1,
-              children: (0, ZW.jsxs)("div", {
+              children: (0, KR.jsxs)("div", {
                 className: "EverythingMenu",
-                ref: VW,
-                children: [!(0, VP.j)(OW) && (0, ZW.jsxs)("div", {
+                ref: PR,
+                children: [!(0, oZ.i)(GR) && (0, KR.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, ZW.jsxs)("div", {
+                  children: [(0, KR.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [eW && (0, ZW.jsx)(wW.b, {
+                    children: [DR && (0, KR.jsx)(fR.d, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        eW.onClick()
+                        DR.onClick()
                       },
-                      children: eW.text
-                    }), JW && xW && (0, ZW.jsx)("div", {
-                      ...YW,
+                      children: DR.text
+                    }), pR && wR && (0, KR.jsx)("div", {
+                      ...MR,
                       className: "EverythingMenuWallet",
-                      title: WW("homePage:getPremiumCurrency"),
+                      title: RR("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, ci.o)({
+                        (0, iJ.m)({
                           mode: "self",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, ZW.jsx)(Hw.f, {})
+                      children: (0, KR.jsx)(bf.f, {})
                     })]
-                  }), (0, ZW.jsxs)("div", {
+                  }), (0, KR.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
-                    ref: SW,
+                    ref: XR,
                     "data-pad-tabs": "1",
-                    children: [(0, ZW.jsxs)("div", {
-                      ...TW(oi.m.SETTINGS),
+                    children: [(0, KR.jsxs)("div", {
+                      ...lR(OJ.o.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": OW === oi.m.SETTINGS ? "true" : void 0,
-                      className: NW()("EverythingMenuTab", {
-                        EverythingMenuTabActive: OW === oi.m.SETTINGS
+                      "data-pad-selected": GR === OJ.o.SETTINGS ? "true" : void 0,
+                      className: uR()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GR === OJ.o.SETTINGS
                       }),
-                      children: [WW("general:settings"), kW("OpenSettings", "pause")]
-                    }), (0, ZW.jsxs)("div", {
-                      ...TW(oi.m.CUSTOMISATION),
+                      children: [RR("general:settings"), UR("OpenSettings", "pause")]
+                    }), (0, KR.jsxs)("div", {
+                      ...lR(OJ.o.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": OW === oi.m.CUSTOMISATION ? "true" : void 0,
-                      className: NW()("EverythingMenuTab", {
-                        EverythingMenuTabActive: OW === oi.m.CUSTOMISATION
+                      "data-pad-selected": GR === OJ.o.CUSTOMISATION ? "true" : void 0,
+                      className: uR()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GR === OJ.o.CUSTOMISATION
                       }),
-                      children: [WW("general:player"), kW("OpenCharacterCustomization")]
-                    }), UW.featureFlags.useSocialFeatures && (0, ZW.jsxs)("div", {
-                      ...TW(oi.m.SOCIAL),
+                      children: [RR("general:player"), UR("OpenCharacterCustomization")]
+                    }), nR.featureFlags.useSocialFeatures && (0, KR.jsxs)("div", {
+                      ...lR(OJ.o.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": OW === oi.m.SOCIAL ? "true" : void 0,
-                      className: NW()("EverythingMenuTab", {
-                        EverythingMenuTabActive: OW === oi.m.SOCIAL
+                      "data-pad-selected": GR === OJ.o.SOCIAL ? "true" : void 0,
+                      className: uR()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GR === OJ.o.SOCIAL
                       }),
-                      ...(0, ji.getAnalyticsClickAttributes)({
+                      ...(0, LJ.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, OW === oi.m.SOCIAL),
-                      children: [WW("socialBar:social"), (0, ZW.jsx)(Iw.b, {})]
-                    }), tW && (0, ZW.jsx)("div", {
-                      ...TW(oi.m.SEASON_PASS),
+                      }, GR === OJ.o.SOCIAL),
+                      children: [RR("socialBar:social"), (0, KR.jsx)(Qf.b, {})]
+                    }), VR && (0, KR.jsx)("div", {
+                      ...lR(OJ.o.SEASON_PASS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": OW === oi.m.SEASON_PASS ? "true" : void 0,
-                      className: NW()("EverythingMenuTab", {
-                        EverythingMenuTabActive: OW === oi.m.SEASON_PASS
+                      "data-pad-selected": GR === OJ.o.SEASON_PASS ? "true" : void 0,
+                      className: uR()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GR === OJ.o.SEASON_PASS
                       }),
-                      children: WW("seasonPass:title", {
-                        season: tW.seasonNumber
+                      children: RR("seasonPass:title", {
+                        season: VR.seasonNumber
                       })
-                    }), (0, ZO.r)(bW) && (0, ZW.jsxs)("div", {
-                      ...TW(oi.m.COSMETIC_SHOP),
+                    }), (0, fG.u)(aR) && (0, KR.jsxs)("div", {
+                      ...lR(OJ.o.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": OW === oi.m.COSMETIC_SHOP ? "true" : void 0,
-                      className: NW()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: OW === oi.m.COSMETIC_SHOP
+                      "data-pad-selected": GR === OJ.o.COSMETIC_SHOP ? "true" : void 0,
+                      className: uR()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: GR === OJ.o.COSMETIC_SHOP
                       }),
-                      children: [(0, ZW.jsx)("span", {
+                      children: [(0, KR.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: WW("store:title")
-                      }), "new" === lW && (0, ZW.jsx)(Hc, {}), jW && (0, ZW.jsx)("span", {
+                        children: RR("store:title")
+                      }), "new" === rR && (0, KR.jsx)(gi, {}), LR && (0, KR.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === iW && (0, ZW.jsxs)("div", {
-                      ...TW(oi.m.LOBBY_LEADERBOARD),
+                    }), "inGame" === JR && (0, KR.jsxs)("div", {
+                      ...lR(OJ.o.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": OW === oi.m.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: NW()("EverythingMenuTab", {
-                        EverythingMenuTabActive: OW === oi.m.LOBBY_LEADERBOARD
+                      "data-pad-selected": GR === OJ.o.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: uR()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GR === OJ.o.LOBBY_LEADERBOARD
                       }),
-                      children: [WW("general:lobby"), kW("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [RR("general:lobby"), UR("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, ZW.jsx)("div", {
+                  }), (0, KR.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: pW
+                    children: IR
                   })]
-                }), (0, VP.j)(OW) && pW, (0, ZW.jsxs)("div", {
-                  ref: uW,
+                }), (0, oZ.i)(GR) && IR, (0, KR.jsxs)("div", {
+                  ref: OR,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": gW ? "1" : "0.85"
+                    "--everythingMenuBodyBackgroundOpacity": oR ? "1" : "0.85"
                   },
-                  children: [(0, ZW.jsx)(wE, {
-                    show: OW === oi.m.SETTINGS,
-                    setBeforeResumeCallback: MW
-                  }), (0, ZW.jsx)(jE, {
-                    show: OW === oi.m.CUSTOMISATION
-                  }), (0, ZW.jsx)(mW.Suspense, {
+                  children: [(0, KR.jsx)(Zt, {
+                    show: GR === OJ.o.SETTINGS,
+                    setBeforeResumeCallback: AR
+                  }), (0, KR.jsx)(rt, {
+                    show: GR === OJ.o.CUSTOMISATION
+                  }), (0, KR.jsx)(yR.Suspense, {
                     fallback: null,
-                    children: (0, ZW.jsx)(nP, {
-                      show: OW === oi.m.SHOP
+                    children: (0, KR.jsx)(gZ, {
+                      show: GR === OJ.o.SHOP
                     })
-                  }), (0, ZW.jsx)(XP, {
-                    show: OW === oi.m.LOBBY_LEADERBOARD
-                  }), xW && (0, ZW.jsx)(hw, {
-                    show: OW === oi.m.COSMETIC_SHOP
-                  }), !xW && (0, ZW.jsx)(jw, {
-                    show: OW === oi.m.COSMETIC_SHOP
-                  }), (0, ZW.jsx)(Rw, {
-                    show: OW === oi.m.SOCIAL
-                  }), (0, ZW.jsx)(At, {
-                    show: OW === oi.m.SEASON_PASS
+                  }), (0, KR.jsx)(mZ, {
+                    show: GR === OJ.o.LOBBY_LEADERBOARD
+                  }), wR && (0, KR.jsx)(gf, {
+                    show: GR === OJ.o.COSMETIC_SHOP
+                  }), !wR && (0, KR.jsx)(Lf, {
+                    show: GR === OJ.o.COSMETIC_SHOP
+                  }), (0, KR.jsx)(Yf, {
+                    show: GR === OJ.o.SOCIAL
+                  }), (0, KR.jsx)(aV, {
+                    show: GR === OJ.o.SEASON_PASS
                   })]
-                }), !(0, UW.isMobileApp)() && (0, st.k)() && (0, yE.e)(cW.getPlayerRanks()) && (0, ZW.jsx)(YE.b, {
-                  ref: KW,
+                }), !(0, nR.isMobileApp)() && (0, AV.i)() && (0, Xt.i)(iR.getPlayerRanks()) && (0, KR.jsx)(Ct.d, {
+                  ref: CR,
                   className: "EverythingMenuBannerDiv",
-                  show: HW,
+                  show: bR,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, ZW.jsx)(ow.e, {
+                  children: (0, KR.jsx)(xf.d, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: KW
+                      parentRef: CR
                     },
-                    showing: JW && HW,
+                    showing: pR && bR,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -10716,135 +10716,135 @@ export const modules = {
         })
       }))
   },
-  35223: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  35143: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR
     });
-    var mW = OW(344),
-      EW = OW(35225);
+    var yR = GR(377),
+      tR = GR(35150);
 
-    function NW(WW, iW, OW) {
-      const NW = Object.entries(iW).sort(((WW, iW) => iW[1] - WW[1])),
-        PW = (0, mW.ob)(WW);
-      PW.push(WW ? "\n\n" : "\n");
-      for (const [EW, AW] of NW) {
-        var LW, cW, wW;
-        const WW = null !== (LW = null === OW || void 0 === OW || null === (cW = OW[EW]) || void 0 === cW ? void 0 : cW.icon) && void 0 !== LW ? LW : `${EW} Enchantment`;
-        PW.push({
-          icon: WW,
+    function uR(RR, JR, GR) {
+      const uR = Object.entries(JR).sort(((RR, JR) => JR[1] - RR[1])),
+        ZR = (0, yR.rb)(RR);
+      ZR.push(RR ? "\n\n" : "\n");
+      for (const [tR, eR] of uR) {
+        var qR, iR, fR;
+        const RR = null !== (qR = null === GR || void 0 === GR || null === (iR = GR[tR]) || void 0 === iR ? void 0 : iR.icon) && void 0 !== qR ? qR : `${tR} Enchantment`;
+        ZR.push({
+          icon: RR,
           style: {
             fontSize: "1.5rem"
           }
-        }), PW.push({
-          str: `${EW} ${null!==(wW=(0,mW.V)(AW))&&void 0!==wW?wW:AW}\n`
+        }), ZR.push({
+          str: `${tR} ${null!==(fR=(0,yR.J)(eR))&&void 0!==fR?fR:eR}\n`
         })
       }
-      PW.push({
+      ZR.push({
         str: "\n"
       });
-      for (const [mW, AW] of NW) {
-        var tW, ZW, xW, lW;
-        const WW = null !== (tW = null === OW || void 0 === OW || null === (ZW = OW[mW]) || void 0 === ZW ? void 0 : ZW.icon) && void 0 !== tW ? tW : `${mW} Enchantment`,
-          iW = null !== (xW = null === OW || void 0 === OW || null === (lW = OW[mW]) || void 0 === lW ? void 0 : lW.description) && void 0 !== xW ? xW : (0, EW.k)(mW);
-        PW.push({
-          icon: WW,
+      for (const [yR, eR] of uR) {
+        var VR, KR, wR, rR;
+        const RR = null !== (VR = null === GR || void 0 === GR || null === (KR = GR[yR]) || void 0 === KR ? void 0 : KR.icon) && void 0 !== VR ? VR : `${yR} Enchantment`,
+          JR = null !== (wR = null === GR || void 0 === GR || null === (rR = GR[yR]) || void 0 === rR ? void 0 : rR.description) && void 0 !== wR ? wR : (0, tR.o)(yR);
+        ZR.push({
+          icon: RR,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), PW.push({
-          str: iW,
+        }), ZR.push({
+          str: JR,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), PW.push({
+        }), ZR.push({
           str: "\n"
         })
       }
-      return PW
+      return ZR
     }
   },
-  35229: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => wW,
-      h: () => kW,
-      j: () => jW,
-      m: () => cW,
-      p: () => UW,
-      t: () => tW,
-      v: () => xW,
-      w: () => bW,
-      y: () => ZW
+  35155: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR,
+      h: () => UR,
+      l: () => LR,
+      n: () => iR,
+      q: () => nR,
+      t: () => VR,
+      w: () => wR,
+      x: () => aR,
+      y: () => KR
     });
-    var mW = OW(327),
-      EW = OW(643),
-      NW = OW(344),
-      PW = OW(2924),
-      LW = OW(35223);
+    var yR = GR(359),
+      tR = GR(679),
+      uR = GR(377),
+      ZR = GR(3004),
+      qR = GR(35143);
 
-    function cW(WW, iW) {
-      var OW;
+    function iR(RR, JR) {
+      var GR;
       let {
-        player: mW,
-        chestOrCreative: EW
-      } = WW;
-      var NW;
-      return iW < mW.length ? null !== (NW = mW[iW]) && void 0 !== NW ? NW : null : null !== (OW = EW[iW - mW.length]) && void 0 !== OW ? OW : null
+        player: yR,
+        chestOrCreative: tR
+      } = RR;
+      var uR;
+      return JR < yR.length ? null !== (uR = yR[JR]) && void 0 !== uR ? uR : null : null !== (GR = tR[JR - yR.length]) && void 0 !== GR ? GR : null
     }
 
-    function wW(WW) {
-      var iW;
-      return null !== (iW = WW.amount) && void 0 !== iW ? iW : 0
+    function fR(RR) {
+      var JR;
+      return null !== (JR = RR.amount) && void 0 !== JR ? JR : 0
     }
 
-    function tW(WW) {
-      return 0 === WW.button || void 0 === WW.button
+    function VR(RR) {
+      return 0 === RR.button || void 0 === RR.button
     }
 
-    function ZW(WW) {
-      return !!WW.shiftKey
+    function KR(RR) {
+      return !!RR.shiftKey
     }
 
-    function xW(WW) {
-      return "touches" in WW || "touch" === WW.pointerType || "pen" === WW.pointerType
+    function wR(RR) {
+      return "touches" in RR || "touch" === RR.pointerType || "pen" === RR.pointerType
     }
-    const lW = new Set,
-      AW = 50;
+    const rR = new Set,
+      eR = 50;
 
-    function bW(WW, iW) {
-      var OW;
-      const mW = null === (OW = WW[iW]) || void 0 === OW ? void 0 : OW.displayName;
-      return (0, EW.K)(mW) ? "string" !== typeof iW ? "" : (!lW.has(iW) && lW.size < AW && (lW.add(iW), console.warn(`No item called "${iW}", so its hover shows the name as given`)), iW) : mW
+    function aR(RR, JR) {
+      var GR;
+      const yR = null === (GR = RR[JR]) || void 0 === GR ? void 0 : GR.displayName;
+      return (0, tR.I)(yR) ? "string" !== typeof JR ? "" : (!rR.has(JR) && rR.size < eR && (rR.add(JR), console.warn(`No item called "${JR}", so its hover shows the name as given`)), JR) : yR
     }
 
-    function jW(WW, iW, OW) {
-      var cW, wW, tW, ZW, xW, lW, AW, jW, UW, kW, sW, MW, KW, SW;
-      const YW = WW.attributes,
-        yW = null !== (cW = null === (wW = iW[WW.name]) || void 0 === wW ? void 0 : wW.rootName) && void 0 !== cW ? cW : WW.name,
-        TW = null !== (tW = null !== (ZW = YW.customDisplayName) && void 0 !== ZW ? ZW : null === (xW = iW[WW.name]) || void 0 === xW ? void 0 : xW.displayName) && void 0 !== tW ? tW : bW(iW, yW);
-      let JW = TW;
-      const hW = null === (lW = YW.customAttributes) || void 0 === lW ? void 0 : lW.enchantmentTier;
-      hW && (JW = (0, NW.ob)(TW, {
-        colour: NW.kb[hW]
+    function LR(RR, JR, GR) {
+      var iR, fR, VR, KR, wR, rR, eR, LR, nR, UR, WR, AR, CR, XR;
+      const MR = RR.attributes,
+        BR = null !== (iR = null === (fR = JR[RR.name]) || void 0 === fR ? void 0 : fR.rootName) && void 0 !== iR ? iR : RR.name,
+        lR = null !== (VR = null !== (KR = MR.customDisplayName) && void 0 !== KR ? KR : null === (wR = JR[RR.name]) || void 0 === wR ? void 0 : wR.displayName) && void 0 !== VR ? VR : aR(JR, BR);
+      let pR = lR;
+      const gR = null === (rR = MR.customAttributes) || void 0 === rR ? void 0 : rR.enchantmentTier;
+      gR && (pR = (0, uR.rb)(lR, {
+        colour: uR.kb[gR]
       }));
-      const HW = null !== (AW = null !== (jW = null !== (UW = function(WW, iW) {
-        var OW;
-        if (void 0 === WW || null !== (OW = iW.customAttributes) && void 0 !== OW && OW.author) return WW;
-        const EW = (0, mW.kc)(WW);
-        return EW.every((WW => "string" === typeof WW)) ? WW : EW.map((WW => "string" === typeof WW ? WW : {
-          icon: WW.icon,
+      const bR = null !== (eR = null !== (LR = null !== (nR = function(RR, JR) {
+        var GR;
+        if (void 0 === RR || null !== (GR = JR.customAttributes) && void 0 !== GR && GR.author) return RR;
+        const tR = (0, yR.dc)(RR);
+        return tR.every((RR => "string" === typeof RR)) ? RR : tR.map((RR => "string" === typeof RR ? RR : {
+          icon: RR.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(YW.customDescription, YW)) && void 0 !== UW ? UW : null === (kW = iW[WW.name]) || void 0 === kW ? void 0 : kW.description) && void 0 !== jW ? jW : null === (sW = iW[yW]) || void 0 === sW ? void 0 : sW.description) && void 0 !== AW ? AW : "";
-      let nW = HW;
-      if (null !== (MW = YW.customAttributes) && void 0 !== MW && MW.enchantments) nW = (0, LW.d)(HW, YW.customAttributes.enchantments, YW.customAttributes.enchantmentData);
-      else if (OW[yW]) nW = (0, NW.ob)(HW), nW.push({
+      }(MR.customDescription, MR)) && void 0 !== nR ? nR : null === (UR = JR[RR.name]) || void 0 === UR ? void 0 : UR.description) && void 0 !== LR ? LR : null === (WR = JR[BR]) || void 0 === WR ? void 0 : WR.description) && void 0 !== eR ? eR : "";
+      let vR = bR;
+      if (null !== (AR = MR.customAttributes) && void 0 !== AR && AR.enchantments) vR = (0, qR.d)(bR, MR.customAttributes.enchantments, MR.customAttributes.enchantmentData);
+      else if (GR[BR]) vR = (0, uR.rb)(bR), vR.push({
         str: "\n"
-      }), nW.push({
+      }), vR.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -10852,700 +10852,700 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (KW = YW.customAttributes) && void 0 !== KW && KW.mobSettings) {
-        var uW, oW;
-        const WW = YW.customAttributes.mobSettings;
-        var dW, eW;
-        if (nW = [], (0, EW.K)(YW.customAttributes.health) || (nW.push({
+      else if (null !== (CR = MR.customAttributes) && void 0 !== CR && CR.mobSettings) {
+        var OR, xR;
+        const RR = MR.customAttributes.mobSettings;
+        var NR, DR;
+        if (vR = [], (0, tR.I)(MR.customAttributes.health) || (vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
-          }), nW.push({
-            str: YW.customAttributes.health.toString()
-          }), (0, EW.K)(WW.maxHealth) || (nW.push({
+          }), vR.push({
+            str: MR.customAttributes.health.toString()
+          }), (0, tR.I)(RR.maxHealth) || (vR.push({
             str: "/"
-          }), nW.push({
-            str: WW.maxHealth.toString()
-          }))), !(0, EW.K)(WW.attackDamage) && WW.attackDamage > 0 && (nW.push({
+          }), vR.push({
+            str: RR.maxHealth.toString()
+          }))), !(0, tR.I)(RR.attackDamage) && RR.attackDamage > 0 && (vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
-          }), nW.push({
-            str: WW.attackDamage.toString()
-          })), !(0, EW.K)(WW.secondaryAttackDamage) && WW.secondaryAttackDamage > 0 && (nW.push({
+          }), vR.push({
+            str: RR.attackDamage.toString()
+          })), !(0, tR.I)(RR.secondaryAttackDamage) && RR.secondaryAttackDamage > 0 && (vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
-          }), nW.push({
-            str: WW.secondaryAttackDamage.toString()
-          })), (0, EW.K)(WW.baseRunningSpeed) || (nW.push({
+          }), vR.push({
+            str: RR.secondaryAttackDamage.toString()
+          })), (0, tR.I)(RR.baseRunningSpeed) || (vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
-          }), nW.push({
-            str: WW.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === WW.metaInfo) nW.push({
+          }), vR.push({
+            str: RR.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === RR.metaInfo) vR.push({
           str: "\n"
-        }), nW.push({
+        }), vR.push({
           str: {
             translationKey: "general:has"
           }
-        }), nW.push({
+        }), vR.push({
           str: " "
-        }), nW.push({
-          icon: null !== (dW = null === (eW = WW.tameInfo) || void 0 === eW ? void 0 : eW.saddleItemName) && void 0 !== dW ? dW : "Saddle",
+        }), vR.push({
+          icon: null !== (NR = null === (DR = RR.tameInfo) || void 0 === DR ? void 0 : DR.saddleItemName) && void 0 !== NR ? NR : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (nW.push({
+        if (vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             str: "\n"
-          }), WW.petInfo && null !== (uW = WW.tameInfo) && void 0 !== uW && uW.supportsFriendship) {
-          const iW = PW.b.getIconsFromFriendshipPoints(WW.petInfo.friendshipPoints);
-          for (const WW of iW) nW.push({
-            icon: WW,
+          }), RR.petInfo && null !== (OR = RR.tameInfo) && void 0 !== OR && OR.supportsFriendship) {
+          const JR = ZR.e.getIconsFromFriendshipPoints(RR.petInfo.friendshipPoints);
+          for (const RR of JR) vR.push({
+            icon: RR,
             style: {
               fontSize: "1.5em"
             }
           });
-          nW.push({
+          vR.push({
             str: "\n"
           });
-          const OW = PW.b.getMobHungerLevel(WW.petInfo.lastFedAt);
-          for (const WW of PW.b.hungerLevelIcons[OW]) nW.push({
-            icon: WW,
+          const GR = ZR.e.getMobHungerLevel(RR.petInfo.lastFedAt);
+          for (const RR of ZR.e.hungerLevelIcons[GR]) vR.push({
+            icon: RR,
             style: {
               fontSize: "1.5em"
             }
           });
-          nW.push({
+          vR.push({
             str: " "
-          }), nW.push({
-            str: PW.b.hungerLevelTranslations[OW],
+          }), vR.push({
+            str: ZR.e.hungerLevelTranslations[GR],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (WW.tameInfo && null !== (oW = WW.tameInfo) && void 0 !== oW && oW.supportsFriendship) {
-          var vW, gW;
-          let iW = null !== (vW = WW.tameInfo.likedFoods) && void 0 !== vW ? vW : [];
-          nW.push({
+        if (RR.tameInfo && null !== (xR = RR.tameInfo) && void 0 !== xR && xR.supportsFriendship) {
+          var HR, oR;
+          let JR = null !== (HR = RR.tameInfo.likedFoods) && void 0 !== HR ? HR : [];
+          vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PW.b.feedTextColours[PW.b.MobFoodType.Superliked]
+              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Superliked]
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
-          }), null !== (gW = WW.petInfo) && void 0 !== gW && gW.superlikedFoodKnown ? (nW.push({
-            icon: WW.petInfo.superlikedFood,
+          }), null !== (oR = RR.petInfo) && void 0 !== oR && oR.superlikedFoodKnown ? (vR.push({
+            icon: RR.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), iW = iW.filter((iW => iW !== WW.petInfo.superlikedFood))) : nW.push({
+          }), JR = JR.filter((JR => JR !== RR.petInfo.superlikedFood))) : vR.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), nW.push({
+          }), vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PW.b.feedTextColours[PW.b.MobFoodType.Liked]
+              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Liked]
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
           });
-          for (const WW of iW) nW.push({
-            icon: WW,
+          for (const RR of JR) vR.push({
+            icon: RR,
             style: {
               fontSize: "1.5em"
             }
           });
-          nW.push({
+          vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PW.b.feedTextColours[PW.b.MobFoodType.Neutral]
+              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Neutral]
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
           });
-          for (const OW of null !== (DW = WW.tameInfo.neutralFoods) && void 0 !== DW ? DW : []) {
-            var DW;
-            nW.push({
-              icon: OW,
+          for (const GR of null !== (cR = RR.tameInfo.neutralFoods) && void 0 !== cR ? cR : []) {
+            var cR;
+            vR.push({
+              icon: GR,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          nW.push({
+          vR.push({
             str: "\n"
-          }), nW.push({
+          }), vR.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PW.b.feedTextColours[PW.b.MobFoodType.Disliked]
+              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Disliked]
             }
-          }), nW.push({
+          }), vR.push({
             str: " "
           });
-          for (const OW of null !== (VW = WW.tameInfo.dislikedFoods) && void 0 !== VW ? VW : []) {
-            var VW;
-            nW.push({
-              icon: OW,
+          for (const GR of null !== (PR = RR.tameInfo.dislikedFoods) && void 0 !== PR ? PR : []) {
+            var PR;
+            vR.push({
+              icon: GR,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        nW.length > 0 ? (nW.shift(), nW.unshift(...(0, NW.ob)(HW))) : nW = (0, NW.ob)(HW)
+        vR.length > 0 ? (vR.shift(), vR.unshift(...(0, uR.rb)(bR))) : vR = (0, uR.rb)(bR)
       }
       return {
-        name: JW,
-        desc: nW,
-        fontStyle: null !== (SW = YW.customAttributes) && void 0 !== SW && SW.author ? "italic" : "normal"
+        name: pR,
+        desc: vR,
+        fontStyle: null !== (XR = MR.customAttributes) && void 0 !== XR && XR.author ? "italic" : "normal"
       }
     }
 
-    function UW(WW, iW, OW, mW) {
-      const EW = cW(WW, OW),
-        NW = cW(WW, mW);
-      if (!EW) return !1;
-      const PW = iW[EW.name].armourReduction,
-        LW = iW[NW.name].armourReduction;
-      if (LW === PW) {
-        var wW, tW, ZW, xW;
-        const WW = null !== (wW = null === (tW = EW.attributes.customAttributes) || void 0 === tW ? void 0 : tW.enchantmentTier) && void 0 !== wW ? wW : "Tier 0",
-          iW = null !== (ZW = null === (xW = NW.attributes.customAttributes) || void 0 === xW ? void 0 : xW.enchantmentTier) && void 0 !== ZW ? ZW : "Tier 0";
-        return parseInt(WW.replace("Tier ", "")) >= parseInt(iW.replace("Tier ", ""))
+    function nR(RR, JR, GR, yR) {
+      const tR = iR(RR, GR),
+        uR = iR(RR, yR);
+      if (!tR) return !1;
+      const ZR = JR[tR.name].armourReduction,
+        qR = JR[uR.name].armourReduction;
+      if (qR === ZR) {
+        var fR, VR, KR, wR;
+        const RR = null !== (fR = null === (VR = tR.attributes.customAttributes) || void 0 === VR ? void 0 : VR.enchantmentTier) && void 0 !== fR ? fR : "Tier 0",
+          JR = null !== (KR = null === (wR = uR.attributes.customAttributes) || void 0 === wR ? void 0 : wR.enchantmentTier) && void 0 !== KR ? KR : "Tier 0";
+        return parseInt(RR.replace("Tier ", "")) >= parseInt(JR.replace("Tier ", ""))
       }
-      return PW > LW
+      return ZR > qR
     }
 
-    function kW(WW) {
-      let iW;
-      if ("number" === typeof WW) {
-        const OW = document.querySelector(`[data-inven-idx="${WW}"]`);
-        if (!OW) return null;
-        iW = OW.getBoundingClientRect()
-      } else iW = WW.getBoundingClientRect();
+    function UR(RR) {
+      let JR;
+      if ("number" === typeof RR) {
+        const GR = document.querySelector(`[data-inven-idx="${RR}"]`);
+        if (!GR) return null;
+        JR = GR.getBoundingClientRect()
+      } else JR = RR.getBoundingClientRect();
       return {
-        x: iW.left + iW.width / 2,
-        y: iW.top + iW.height / 2
+        x: JR.left + JR.width / 2,
+        y: JR.top + JR.height / 2
       }
     }
   },
-  35121: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => jW,
-      i: () => UW,
-      l: () => kW
+  35044: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => LR,
+      h: () => nR,
+      j: () => UR
     });
-    var mW = OW(62),
-      EW = OW(5038),
-      NW = OW(1172),
-      PW = OW(3687),
-      LW = OW(1532),
-      cW = OW(1283);
+    var yR = GR(66),
+      tR = GR(5138),
+      uR = GR(1270),
+      ZR = GR(3791),
+      qR = GR(1590),
+      iR = GR(1378);
 
-    function wW(WW) {
+    function fR(RR) {
       let {
-        text: iW
-      } = WW;
+        text: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, NW.B)(), [mW, wW] = (0, PW.j)();
-      return (0, cW.jsxs)("div", {
+        t: GR
+      } = (0, uR.A)(), [yR, fR] = (0, ZR.h)();
+      return (0, iR.jsxs)("div", {
         className: "CopyTextRow",
-        children: [(0, cW.jsx)("div", {
+        children: [(0, iR.jsx)("div", {
           className: "CopyTextRowText",
-          children: iW
-        }), (0, cW.jsx)(LW.f, {
+          children: JR
+        }), (0, iR.jsx)(qR.g, {
           className: "CopyTextRowButton",
           onClick: () => {
-            (0, EW.b)(iW).catch((WW => {
-              console.error("Failed to copy text:", WW)
-            })), wW()
+            (0, tR.e)(JR).catch((RR => {
+              console.error("Failed to copy text:", RR)
+            })), fR()
           },
-          disabled: mW,
-          children: OW(mW ? "general:copied" : "general:copy")
+          disabled: yR,
+          children: GR(yR ? "general:copied" : "general:copy")
         })]
       })
     }
-    var tW = OW(1339),
-      ZW = OW(5238),
-      xW = OW(3236),
-      lW = OW(100),
-      AW = OW(2075),
-      bW = OW(1383);
+    var VR = GR(1444),
+      KR = GR(5338),
+      wR = GR(3351),
+      rR = GR(103),
+      eR = GR(2173),
+      aR = GR(1465);
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        show: iW,
-        onClose: OW
-      } = WW;
+        show: JR,
+        onClose: GR
+      } = RR;
       const {
-        requestedGameNameWithVariation: mW,
-        lobbyName: EW,
-        shownLobbyName: NW
-      } = (0, AW.g)("connectedGame"), PW = (0, xW.c)(mW, EW, !1);
-      return lW.featureFlags.canUseInviteLinks && (0, cW.jsx)(ZW.b, {
-        show: iW,
-        close: OW,
+        requestedGameNameWithVariation: yR,
+        lobbyName: tR,
+        shownLobbyName: uR
+      } = (0, eR.i)("connectedGame"), ZR = (0, wR.e)(yR, tR, !1);
+      return rR.featureFlags.canUseInviteLinks && (0, iR.jsx)(KR.e, {
+        show: JR,
+        close: GR,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, cW.jsxs)("div", {
+        children: (0, iR.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, cW.jsx)("div", {
+          children: [(0, iR.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, cW.jsxs)("div", {
+          }), (0, iR.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, cW.jsx)("div", {
+            children: [(0, iR.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === PW ? (0, cW.jsx)(bW.d, {}) : PW, (0, cW.jsx)("br", {}), "Lobby Name: ", NW, (0, cW.jsx)("br", {}), (0, cW.jsx)("br", {}), (0, cW.jsx)("br", {}), (0, cW.jsx)("div", {
+            }), "Game: ", null === ZR ? (0, iR.jsx)(aR.d, {}) : ZR, (0, iR.jsx)("br", {}), "Lobby Name: ", uR, (0, iR.jsx)("br", {}), (0, iR.jsx)("br", {}), (0, iR.jsx)("br", {}), (0, iR.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, cW.jsx)(UW, {})]
+          }), (0, iR.jsx)(nR, {})]
         })
       })
     }
 
-    function UW() {
-      var WW;
-      const iW = null !== (WW = kW(lW.featureFlags.canUseInviteLinks)) && void 0 !== WW ? WW : "Loading Link...";
-      return lW.featureFlags.canUseInviteLinks && (0, cW.jsx)(wW, {
-        text: iW
+    function nR() {
+      var RR;
+      const JR = null !== (RR = UR(rR.featureFlags.canUseInviteLinks)) && void 0 !== RR ? RR : "Loading Link...";
+      return rR.featureFlags.canUseInviteLinks && (0, iR.jsx)(fR, {
+        text: JR
       })
     }
 
-    function kW(WW) {
-      const [iW, OW] = (0, mW.useState)(null);
-      return (0, mW.useEffect)((() => {
-        if (!WW) return;
-        let iW = !0;
-        return (0, tW.x)().then((WW => {
-          iW && OW(WW)
-        })).catch((WW => {
-          console.error("Failed to get invite link:", WW)
+    function UR(RR) {
+      const [JR, GR] = (0, yR.useState)(null);
+      return (0, yR.useEffect)((() => {
+        if (!RR) return;
+        let JR = !0;
+        return (0, VR.B)().then((RR => {
+          JR && GR(RR)
+        })).catch((RR => {
+          console.error("Failed to get invite link:", RR)
         })), () => {
-          iW = !1
+          JR = !1
         }
-      }), [WW]), iW
+      }), [RR]), JR
     }
   },
-  35277: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW,
-      d: () => jW
+  35208: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => eR,
+      d: () => LR
     });
-    OW(35279);
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1172),
-      LW = OW(1532),
-      cW = OW(3582),
-      wW = OW(1391),
-      tW = OW(3291),
-      ZW = OW(4147),
-      xW = OW(3147),
-      lW = OW(1283);
+    GR(35211);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1270),
+      qR = GR(1590),
+      iR = GR(3690),
+      fR = GR(1468),
+      VR = GR(3413),
+      KR = GR(4227),
+      wR = GR(3240),
+      rR = GR(1378);
 
-    function AW(WW) {
+    function eR(RR) {
       let {
-        endsAt: iW,
-        className: OW
-      } = WW;
-      return (0, lW.jsxs)("span", {
-        className: NW()("NewPlayerDealClock", OW),
-        children: [(0, lW.jsx)(wW.c, {
+        endsAt: JR,
+        className: GR
+      } = RR;
+      return (0, rR.jsxs)("span", {
+        className: uR()("NewPlayerDealClock", GR),
+        children: [(0, rR.jsx)(fR.d, {
           name: "hourglass"
-        }), (0, lW.jsx)(cW.f, {
-          toTime: iW
+        }), (0, rR.jsx)(iR.g, {
+          toTime: JR
         })]
       })
     }
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        offered: iW,
-        needsLogin: OW,
-        busy: mW,
-        highlight: EW,
-        onBuy: cW
-      } = WW;
+        offered: JR,
+        needsLogin: GR,
+        busy: yR,
+        highlight: tR,
+        onBuy: iR
+      } = RR;
       const {
-        t: wW
-      } = (0, PW.B)(), {
-        pack: AW
-      } = iW, bW = (0, ZW.e)(iW.package);
-      return (0, lW.jsxs)("div", {
-        className: NW()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: EW
+        t: fR
+      } = (0, ZR.A)(), {
+        pack: eR
+      } = JR, aR = (0, KR.d)(JR.package);
+      return (0, rR.jsxs)("div", {
+        className: uR()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: tR
         }),
-        children: [(0, lW.jsxs)("div", {
+        children: [(0, rR.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, lW.jsx)("img", {
-            src: xW.c[iW.tier],
+          children: [(0, rR.jsx)("img", {
+            src: wR.b[JR.tier],
             alt: "",
             draggable: !1
-          }), (0, lW.jsx)("span", {
+          }), (0, rR.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: wW("newPlayerDeal:tag")
+            children: fR("newPlayerDeal:tag")
           })]
-        }), (0, lW.jsxs)("div", {
+        }), (0, rR.jsxs)("div", {
           className: "NewPlayerDealPackText",
-          children: [(0, lW.jsx)(tW.c, {
+          children: [(0, rR.jsx)(VR.b, {
             className: "NewPlayerDealPackAmount",
-            amount: AW.gems
-          }), (0, lW.jsx)("span", {
+            amount: eR.gems
+          }), (0, rR.jsx)("span", {
             className: "NewPlayerDealSplit",
-            children: wW("newPlayerDeal:split", {
-              usual: AW.usualGems.toLocaleString(),
-              bonus: (AW.gems - AW.usualGems).toLocaleString()
+            children: fR("newPlayerDeal:split", {
+              usual: eR.usualGems.toLocaleString(),
+              bonus: (eR.gems - eR.usualGems).toLocaleString()
             })
           })]
-        }), (0, lW.jsx)(LW.n, {
+        }), (0, rR.jsx)(qR.n, {
           className: "NewPlayerDealBuy",
-          loading: mW,
-          onClick: cW,
-          ariaLabel: wW("newPlayerDeal:buyLabel", {
-            amount: AW.gems.toLocaleString(),
-            price: bW
+          loading: yR,
+          onClick: iR,
+          ariaLabel: fR("newPlayerDeal:buyLabel", {
+            amount: eR.gems.toLocaleString(),
+            price: aR
           }),
-          children: wW(OW ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: bW
+          children: fR(GR ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: aR
           })
         })]
       })
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        view: iW,
-        needsLogin: OW,
-        busy: EW,
-        highlight: LW,
-        onBuy: cW
-      } = WW;
+        view: JR,
+        needsLogin: GR,
+        busy: tR,
+        highlight: qR,
+        onBuy: iR
+      } = RR;
       const {
-        t: wW
-      } = (0, PW.B)();
-      return (0, lW.jsxs)("div", {
-        className: NW()("NewPlayerDealPacks", iW.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [iW.packs.map(((WW, iW) => (0, lW.jsxs)(mW.Fragment, {
-          children: [iW > 0 && (0, lW.jsx)("div", {
+        t: fR
+      } = (0, ZR.A)();
+      return (0, rR.jsxs)("div", {
+        className: uR()("NewPlayerDealPacks", JR.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [JR.packs.map(((RR, JR) => (0, rR.jsxs)(yR.Fragment, {
+          children: [JR > 0 && (0, rR.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, lW.jsx)("i", {})
-          }), (0, lW.jsx)(bW, {
-            offered: WW,
-            needsLogin: OW,
-            busy: EW,
-            highlight: LW === WW.pack.packageId,
+            children: (0, rR.jsx)("i", {})
+          }), (0, rR.jsx)(aR, {
+            offered: RR,
+            needsLogin: GR,
+            busy: tR,
+            highlight: qR === RR.pack.packageId,
             onBuy: () => {
-              cW(WW)
+              iR(RR)
             }
           })]
-        }, WW.pack.packageId))), (0, lW.jsx)("div", {
+        }, RR.pack.packageId))), (0, rR.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, lW.jsx)("span", {
+          children: (0, rR.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: wW("newPlayerDeal:limit")
+            children: fR("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35285: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => TW,
-      g: () => hW
+  35218: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => lR,
+      f: () => gR
     });
-    OW(35279);
-    var mW = OW(4139),
-      EW = OW(1556),
-      NW = OW(3132),
-      PW = OW(4126),
-      LW = OW(4105),
-      cW = OW(4132),
-      wW = OW(4085),
-      tW = OW(1172),
-      ZW = OW(1422),
-      xW = OW(1107),
-      lW = OW(1532),
-      AW = OW(1391),
-      bW = OW(3291),
-      jW = OW(3697),
-      UW = OW(3559),
-      kW = OW(3566),
-      sW = OW(3572),
-      MW = OW(1283);
-    const KW = new cW.d(wW.getBillingClient, wW.addPurchaseRecordListener);
-    let SW = !1;
+    GR(35211);
+    var yR = GR(4224),
+      tR = GR(1618),
+      uR = GR(3217),
+      ZR = GR(4214),
+      qR = GR(4191),
+      iR = GR(4216),
+      fR = GR(4175),
+      VR = GR(1270),
+      KR = GR(1493),
+      wR = GR(1196),
+      rR = GR(1590),
+      eR = GR(1468),
+      aR = GR(3413),
+      LR = GR(3804),
+      nR = GR(3663),
+      UR = GR(3670),
+      WR = GR(3674),
+      AR = GR(1378);
+    const CR = new iR.d(fR.getBillingClient, fR.addPurchaseRecordListener);
+    let XR = !1;
 
-    function YW(WW, iW) {
-      null !== WW && (0, UW.v)(WW) || ((0, EW.reportAnalyticsClick)({
+    function MR(RR, JR) {
+      null !== RR && (0, nR.k)(RR) || ((0, tR.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${iW.pack.packageId}`
-      }), null !== WW && (0, UW.D)(WW), TW(iW.pack.gems))
+        value: `self:${JR.pack.packageId}`
+      }), null !== RR && (0, nR.m)(RR), lR(JR.pack.gems))
     }
 
-    function yW(WW, iW, OW) {
-      const EW = (0, UW.e)(iW);
-      switch (WW.kind) {
+    function BR(RR, JR, GR) {
+      const tR = (0, nR.b)(JR);
+      switch (RR.kind) {
         case "completed":
-          YW(EW, OW);
+          MR(tR, GR);
           break;
         case "pending":
-          NW = WW.intentId, PW = () => {
-            jW.j.refresh(), YW(EW, OW)
-          }, SW || (SW = !0, KW.listen()), KW.follow(NW, PW);
+          uR = RR.intentId, ZR = () => {
+            LR.g.refresh(), MR(tR, GR)
+          }, XR || (XR = !0, CR.listen()), CR.follow(uR, ZR);
           break;
         case "unknownPackage":
-          (0, UW.T)(iW, null);
+          (0, nR.H)(JR, null);
           break;
         case "failed":
-          WW.errorKey === mW.b.newPlayerDealUnavailable && (0, UW.T)(iW, null)
+          RR.errorKey === yR.d.newPlayerDealUnavailable && (0, nR.H)(JR, null)
       }
-      var NW, PW
+      var uR, ZR
     }
 
-    function TW(WW) {
-      ZW.NotificationProvider.showCustomPopup({
-        body: iW => (0, MW.jsx)(JW, {
-          gems: WW,
-          close: iW
+    function lR(RR) {
+      KR.NotificationProvider.showCustomPopup({
+        body: JR => (0, AR.jsx)(pR, {
+          gems: RR,
+          close: JR
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function JW(WW) {
+    function pR(RR) {
       let {
-        gems: iW,
-        close: OW
-      } = WW;
+        gems: JR,
+        close: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, tW.B)();
-      return (0, MW.jsxs)("div", {
+        t: yR
+      } = (0, VR.A)();
+      return (0, AR.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, MW.jsxs)("div", {
+        children: [(0, AR.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, MW.jsx)(AW.c, {
+          children: [(0, AR.jsx)(eR.d, {
             name: "circle-check"
-          }), (0, MW.jsx)(bW.c, {
-            amount: iW
-          }), (0, MW.jsx)("span", {
-            children: mW("newPlayerDeal:added")
+          }), (0, AR.jsx)(aR.b, {
+            amount: JR
+          }), (0, AR.jsx)("span", {
+            children: yR("newPlayerDeal:added")
           })]
-        }), (0, MW.jsx)(lW.n, {
+        }), (0, AR.jsx)(rR.n, {
           className: "NewPlayerDealAddedOk",
-          onClick: OW,
-          children: mW("general:ok")
+          onClick: GR,
+          children: yR("general:ok")
         })]
       })
     }
 
-    function hW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW.b;
+    function gR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR.c;
       const {
-        userContext: OW
-      } = (0, xW.e)(), {
-        purchaseUnderWay: mW,
-        notice: EW,
-        buy: cW
-      } = (0, LW.b)(iW), wW = (0, kW.n)(), tW = OW.mayBuy() || (0, NW.guestsMayBuy)(), ZW = null === wW ? !tW : wW.guest && !OW.isLoggedIn();
+        userContext: GR
+      } = (0, wR.d)(), {
+        purchaseUnderWay: yR,
+        notice: tR,
+        buy: iR
+      } = (0, qR.e)(JR), fR = (0, UR.i)(), VR = GR.mayBuy() || (0, uR.guestsMayBuy)(), KR = null === fR ? !VR : fR.guest && !GR.isLoggedIn();
       return {
-        purchaseUnderWay: mW,
-        notice: EW,
-        needsLogin: ZW,
-        buyPack: function(mW, EW) {
-          (0, UW.L)("new_player_deal.buy", (0, sW.b)(mW.arm, WW, EW.pack.packageId)), null === wW ? cW(function(WW) {
+        purchaseUnderWay: yR,
+        notice: tR,
+        needsLogin: KR,
+        buyPack: function(yR, tR) {
+          (0, nR.v)("new_player_deal.buy", (0, WR.d)(yR.arm, RR, tR.pack.packageId)), null === fR ? iR(function(RR) {
             return {
-              sku: WW.pack.packageId,
-              tier: WW.tier,
-              amount: WW.pack.gems,
+              sku: RR.pack.packageId,
+              tier: RR.tier,
+              amount: RR.pack.gems,
               bonusPercent: 0,
-              package: WW.package
+              package: RR.package
             }
-          }(EW), null, {
+          }(tR), null, {
             followPending: !1
-          }).then((WW => {
-            yW(WW, OW, EW)
-          })) : ZW ? iW(EW.pack.packageId, null) : YW((0, UW.e)(OW), EW)
+          }).then((RR => {
+            BR(RR, GR, tR)
+          })) : KR ? JR(tR.pack.packageId, null) : MR((0, nR.b)(GR), tR)
         }
       }
     }
   },
-  35213: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => wW
+  35131: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(2075),
-      LW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(2173),
+      qR = GR(1378);
 
-    function cW(WW) {
-      const iW = Math.floor(WW / 3600),
-        OW = Math.floor(WW % 3600 / 60),
-        mW = Math.floor(WW % 60),
-        EW = `${OW.toString().padStart(2,"0")}:${mW.toString().padStart(2,"0")}`;
-      return iW > 0 ? `${iW}:${EW}` : EW
+    function iR(RR) {
+      const JR = Math.floor(RR / 3600),
+        GR = Math.floor(RR % 3600 / 60),
+        yR = Math.floor(RR % 60),
+        tR = `${GR.toString().padStart(2,"0")}:${yR.toString().padStart(2,"0")}`;
+      return JR > 0 ? `${JR}:${tR}` : tR
     }
-    const wW = (0, mW.memo)((function(WW) {
+    const fR = (0, yR.memo)((function(RR) {
       let {
-        className: iW
-      } = WW;
+        className: JR
+      } = RR;
       const {
-        recording: OW,
-        clipping: mW,
-        seconds: EW
-      } = (0, PW.g)("replayRecorder");
-      return OW || mW ? (0, LW.jsxs)("div", {
-        className: NW()("RecordingIndicator", {
-          RecordingIndicatorClipping: !OW
-        }, iW),
+        recording: GR,
+        clipping: yR,
+        seconds: tR
+      } = (0, ZR.i)("replayRecorder");
+      return GR || yR ? (0, qR.jsxs)("div", {
+        className: uR()("RecordingIndicator", {
+          RecordingIndicatorClipping: !GR
+        }, JR),
         "data-camera-keeper": "",
-        children: [(0, LW.jsx)("span", {
+        children: [(0, qR.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, LW.jsx)("span", {
+        }), (0, qR.jsx)("span", {
           className: "RecordingIndicatorLabel",
-          children: OW ? "REC" : "CLIP"
-        }), OW && (0, LW.jsx)("span", {
+          children: GR ? "REC" : "CLIP"
+        }), GR && (0, qR.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: cW(EW)
+          children: iR(tR)
         })]
       }) : null
     }))
   },
-  35291: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW
+  35221: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1283);
-    const PW = 21,
-      LW = 2 * Math.PI * PW;
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1378);
+    const ZR = 21,
+      qR = 2 * Math.PI * ZR;
 
-    function cW(WW) {
+    function iR(RR) {
       let {
-        tier: iW,
-        state: OW,
-        progress: mW,
-        size: cW = "large"
-      } = WW;
-      const wW = EW()("SeasonPassTierNode", {
-        SeasonPassTierNodeSmall: "small" === cW,
-        SeasonPassTierNodeLarge: "large" === cW,
-        SeasonPassTierNodeReached: "reached" === OW,
-        SeasonPassTierNodeEarning: "earning" === OW
+        tier: JR,
+        state: GR,
+        progress: yR,
+        size: iR = "large"
+      } = RR;
+      const fR = tR()("SeasonPassTierNode", {
+        SeasonPassTierNodeSmall: "small" === iR,
+        SeasonPassTierNodeLarge: "large" === iR,
+        SeasonPassTierNodeReached: "reached" === GR,
+        SeasonPassTierNodeEarning: "earning" === GR
       });
-      if ("earning" !== OW || "large" === cW) return (0, NW.jsx)("span", {
-        className: wW,
-        children: (0, NW.jsx)("span", {
+      if ("earning" !== GR || "large" === iR) return (0, uR.jsx)("span", {
+        className: fR,
+        children: (0, uR.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: iW
+          children: JR
         })
       });
-      const tW = Math.max(0, Math.min(1, mW));
-      return (0, NW.jsxs)("span", {
-        className: wW,
+      const VR = Math.max(0, Math.min(1, yR));
+      return (0, uR.jsxs)("span", {
+        className: fR,
         role: "progressbar",
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(100 * tW),
-        children: [(0, NW.jsxs)("svg", {
+        "aria-valuenow": Math.round(100 * VR),
+        children: [(0, uR.jsxs)("svg", {
           className: "SeasonPassTierNodeRing",
           viewBox: "0 0 56 56",
           "aria-hidden": "true",
-          children: [(0, NW.jsx)("circle", {
+          children: [(0, uR.jsx)("circle", {
             className: "SeasonPassTierNodeRingEdge",
             cx: "28",
             cy: "28",
             r: "26"
-          }), (0, NW.jsx)("circle", {
+          }), (0, uR.jsx)("circle", {
             className: "SeasonPassTierNodeRingTrack",
             cx: "28",
             cy: "28",
-            r: PW
-          }), (0, NW.jsx)("circle", {
+            r: ZR
+          }), (0, uR.jsx)("circle", {
             className: "SeasonPassTierNodeRingFill",
             cx: "28",
             cy: "28",
-            r: PW,
-            strokeDasharray: `${tW*LW} ${LW}`,
+            r: ZR,
+            strokeDasharray: `${VR*qR} ${qR}`,
             transform: "rotate(-90 28 28)"
-          }), (0, NW.jsx)("circle", {
+          }), (0, uR.jsx)("circle", {
             className: "SeasonPassTierNodeRingCore",
             cx: "28",
             cy: "28",
             r: "16"
           })]
-        }), (0, NW.jsx)("span", {
+        }), (0, uR.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: iW
+          children: JR
         })]
       })
     }
   },
-  5643: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => jW
+  5766: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => LR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(5329),
-      PW = OW(1172),
-      LW = OW(1391),
-      cW = OW(1532),
-      wW = OW(1584),
-      tW = OW(1422),
-      ZW = OW(3479),
-      xW = OW(1283);
-    const lW = {
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(5434),
+      ZR = GR(1270),
+      qR = GR(1468),
+      iR = GR(1590),
+      fR = GR(1647),
+      VR = GR(1493),
+      KR = GR(3606),
+      wR = GR(1378);
+    const rR = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -11573,440 +11573,440 @@ export const modules = {
       }
     };
 
-    function AW(WW) {
+    function eR(RR) {
       let {
-        platform: iW
-      } = WW;
-      const OW = "youtube" === iW;
-      return (0, xW.jsxs)("span", {
-        className: EW()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: OW
+        platform: JR
+      } = RR;
+      const GR = "youtube" === JR;
+      return (0, wR.jsxs)("span", {
+        className: tR()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: GR
         }),
-        children: [OW && (0, xW.jsx)(ZW.e, {
+        children: [GR && (0, wR.jsx)(KR.e, {
           variant: "white"
-        }), !OW && (0, xW.jsx)(LW.c, {
-          name: lW[iW].icon,
+        }), !GR && (0, wR.jsx)(qR.d, {
+          name: rR[JR].icon,
           kit: "brands"
         })]
       })
     }
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        platform: iW,
-        link: OW,
-        editable: mW,
-        userContext: EW,
-        onLinksUpdated: ZW
-      } = WW;
+        platform: JR,
+        link: GR,
+        editable: yR,
+        userContext: tR,
+        onLinksUpdated: KR
+      } = RR;
       const {
-        t: bW
-      } = (0, PW.B)(), jW = lW[iW];
-      if (!OW && !mW) return null;
+        t: aR
+      } = (0, ZR.A)(), LR = rR[JR];
+      if (!GR && !yR) return null;
 
-      function UW() {
-        var WW;
-        if (!EW || !ZW) return;
-        tW.NotificationProvider.showInputPopup({
+      function nR() {
+        var RR;
+        if (!tR || !KR) return;
+        VR.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: jW.name
+              platform: LR.name
             }
           },
-          prefixText: NW.u[iW],
+          prefixText: uR.u[JR],
           placeholderText: "playBloxd",
-          initialValue: null !== (WW = null === OW || void 0 === OW ? void 0 : OW.handle) && void 0 !== WW ? WW : "",
+          initialValue: null !== (RR = null === GR || void 0 === GR ? void 0 : GR.handle) && void 0 !== RR ? RR : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: OW ? "general:remove" : void 0
-        }).getResult().then((async WW => {
-          if ("notificationTornDown" !== WW && null !== WW) try {
-            "submit" === WW.type ? await wW.e.setSocialLink(EW, iW, WW.value) : await wW.e.clearSocialLink(EW, iW), ZW()
-          } catch (OW) {
-            console.error("Failed to update social link", OW), tW.NotificationProvider.showAlertPopup({
-              title: OW.errorMessageForUser,
+          secondaryButtonText: GR ? "general:remove" : void 0
+        }).getResult().then((async RR => {
+          if ("notificationTornDown" !== RR && null !== RR) try {
+            "submit" === RR.type ? await fR.c.setSocialLink(tR, JR, RR.value) : await fR.c.clearSocialLink(tR, JR), KR()
+          } catch (GR) {
+            console.error("Failed to update social link", GR), VR.NotificationProvider.showAlertPopup({
+              title: GR.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (OW) {
-        const WW = `@${OW.handle}`;
-        return (0, xW.jsxs)("a", {
+      if (GR) {
+        const RR = `@${GR.handle}`;
+        return (0, wR.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: jW.color
+            background: LR.color
           },
-          href: OW.profileUrl,
+          href: GR.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, xW.jsxs)("div", {
+          children: [(0, wR.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, xW.jsx)(AW, {
-              platform: iW
-            }), (0, xW.jsx)("span", {
+            children: [(0, wR.jsx)(eR, {
+              platform: JR
+            }), (0, wR.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, xW.jsx)("span", {
+              children: (0, wR.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: WW
+                children: RR
               })
             })]
-          }), mW && (0, xW.jsx)("button", {
+          }), yR && (0, wR.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, cW.fb)({
+            ...(0, iR.bb)({
               stopPropagation: !0
             }),
-            onClick: WW => {
-              WW.stopPropagation(), WW.preventDefault(), UW()
+            onClick: RR => {
+              RR.stopPropagation(), RR.preventDefault(), nR()
             },
-            children: (0, xW.jsx)(LW.c, {
+            children: (0, wR.jsx)(qR.d, {
               name: "pen-to-square"
             })
-          }), !mW && (0, xW.jsx)("span", {
+          }), !yR && (0, wR.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, xW.jsx)(LW.c, {
+            children: (0, wR.jsx)(qR.d, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, xW.jsxs)("button", {
+      return (0, wR.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: jW.color
+          background: LR.color
         },
-        ...(0, cW.fb)(),
+        ...(0, iR.bb)(),
         onClick: () => {
-          UW()
+          nR()
         },
-        children: [(0, xW.jsx)(AW, {
-          platform: iW
-        }), (0, xW.jsxs)("span", {
+        children: [(0, wR.jsx)(eR, {
+          platform: JR
+        }), (0, wR.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, xW.jsx)("span", {
+          children: [(0, wR.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: jW.name
-          }), (0, xW.jsx)("span", {
+            children: LR.name
+          }), (0, wR.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: bW("homePage:profileSocialLinkAdd")
+            children: aR("homePage:profileSocialLinkAdd")
           })]
-        }), (0, xW.jsx)("span", {
+        }), (0, wR.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, xW.jsx)(LW.c, {
+          children: (0, wR.jsx)(qR.d, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        socialLinks: iW,
-        editable: OW = !1,
-        userContext: mW,
-        onLinksUpdated: EW
-      } = WW;
-      if (!OW && 0 === iW.length) return null;
-      const PW = new Map(iW.map((WW => [WW.platform, WW]))),
-        LW = OW ? NW.t : iW.map((WW => WW.platform));
-      return (0, xW.jsx)("div", {
+        socialLinks: JR,
+        editable: GR = !1,
+        userContext: yR,
+        onLinksUpdated: tR
+      } = RR;
+      if (!GR && 0 === JR.length) return null;
+      const ZR = new Map(JR.map((RR => [RR.platform, RR]))),
+        qR = GR ? uR.r : JR.map((RR => RR.platform));
+      return (0, wR.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, xW.jsx)("div", {
+        children: (0, wR.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: LW.map((WW => (0, xW.jsx)(bW, {
-            platform: WW,
-            link: PW.get(WW),
-            editable: OW,
-            userContext: mW,
-            onLinksUpdated: EW
-          }, WW)))
+          children: qR.map((RR => (0, wR.jsx)(aR, {
+            platform: RR,
+            link: ZR.get(RR),
+            editable: GR,
+            userContext: yR,
+            onLinksUpdated: tR
+          }, RR)))
         })
       })
     }
   },
-  35220: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  35140: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(5243),
-      EW = OW(5251);
+    var yR = GR(5343),
+      tR = GR(5347);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        children: iW,
-        showing: OW,
-        globallyUniqueKey: NW,
-        alwaysMountChildren: PW = !1,
-        doGameplayStartStopOnShow: LW = !0,
-        keepsMovement: cW = !1
-      } = WW;
-      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
+        children: JR,
+        showing: GR,
+        globallyUniqueKey: uR,
+        alwaysMountChildren: ZR = !1,
+        doGameplayStartStopOnShow: qR = !0,
+        keepsMovement: iR = !1
+      } = RR;
+      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
     }
   },
-  35272: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  35204: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(62),
-      EW = OW(4653);
+    var yR = GR(66),
+      tR = GR(4757);
 
-    function NW() {
-      const [WW, iW] = (0, mW.useState)(!1);
-      return (0, mW.useLayoutEffect)((() => {
-        let WW = !0;
-        return (0, EW.c)().then((() => {
-          WW && iW(!0)
+    function uR() {
+      const [RR, JR] = (0, yR.useState)(!1);
+      return (0, yR.useLayoutEffect)((() => {
+        let RR = !0;
+        return (0, tR.h)().then((() => {
+          RR && JR(!0)
         })), () => {
-          WW = !1
+          RR = !1
         }
-      }), []), WW
+      }), []), RR
     }
   },
-  7583: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  7717: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(62),
-      EW = OW(39);
+    var yR = GR(66),
+      tR = GR(46);
 
-    function NW(WW, iW) {
-      var OW;
-      const [NW, PW] = (0, mW.useState)(null !== (OW = EW.i.getItem(WW)) && void 0 !== OW ? OW : iW);
-      return [NW, iW => {
-        EW.i.setItem(WW, iW), PW(iW)
+    function uR(RR, JR) {
+      var GR;
+      const [uR, ZR] = (0, yR.useState)(null !== (GR = tR.i.getItem(RR)) && void 0 !== GR ? GR : JR);
+      return [uR, JR => {
+        tR.i.setItem(RR, JR), ZR(JR)
       }]
     }
   },
-  35190: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => bW,
-      c: () => AW
+  35111: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => aR,
+      e: () => eR
     });
-    OW(35198);
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(62),
-      PW = OW(35181);
+    GR(35113);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(66),
+      ZR = GR(35106);
 
-    function LW(WW, iW) {
-      return Math.max(1, Math.round(WW * iW))
+    function qR(RR, JR) {
+      return Math.max(1, Math.round(RR * JR))
     }
 
-    function cW(WW, iW) {
-      const OW = iW * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        mW = function(WW, iW) {
-          if (WW.lines) return LW(WW.lineThickness, iW) % 2;
-          if (WW.dot) return LW(WW.dotSize, iW) % 2;
-          return wW(WW, iW) % 2
-        }(WW, iW),
-        EW = tW(WW.lineThickness * OW, mW),
-        NW = LW(WW.lineLength, OW),
-        PW = Math.round(WW.gap * OW),
-        cW = WW.outline > 0 ? LW(WW.outline, OW) : 0,
-        xW = [];
-      if (WW.lines && (xW.push({
-          x: EW + PW,
+    function iR(RR, JR) {
+      const GR = JR * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        yR = function(RR, JR) {
+          if (RR.lines) return qR(RR.lineThickness, JR) % 2;
+          if (RR.dot) return qR(RR.dotSize, JR) % 2;
+          return fR(RR, JR) % 2
+        }(RR, JR),
+        tR = VR(RR.lineThickness * GR, yR),
+        uR = qR(RR.lineLength, GR),
+        ZR = Math.round(RR.gap * GR),
+        iR = RR.outline > 0 ? qR(RR.outline, GR) : 0,
+        wR = [];
+      if (RR.lines && (wR.push({
+          x: tR + ZR,
           y: 0,
-          w: NW,
-          h: EW,
+          w: uR,
+          h: tR,
           arm: "right"
-        }), xW.push({
-          x: -PW - NW,
+        }), wR.push({
+          x: -ZR - uR,
           y: 0,
-          w: NW,
-          h: EW,
+          w: uR,
+          h: tR,
           arm: "left"
-        }), xW.push({
+        }), wR.push({
           x: 0,
-          y: EW + PW,
-          w: EW,
-          h: NW,
+          y: tR + ZR,
+          w: tR,
+          h: uR,
           arm: "down"
-        }), WW.tStyle || xW.push({
+        }), RR.tStyle || wR.push({
           x: 0,
-          y: -PW - NW,
-          w: EW,
-          h: NW,
+          y: -ZR - uR,
+          w: tR,
+          h: uR,
           arm: "up"
-        }), 0 === PW && xW.push({
+        }), 0 === ZR && wR.push({
           x: 0,
           y: 0,
-          w: EW,
-          h: EW
-        })), WW.dot) {
-        const iW = tW(WW.dotSize * OW, mW),
-          NW = WW.lines && 0 === PW && WW.dotSize > WW.lineThickness ? Math.max(iW, EW + 2) : iW,
-          LW = (EW - NW) / 2;
-        xW.push({
-          x: LW,
-          y: LW,
-          w: NW,
-          h: NW
+          w: tR,
+          h: tR
+        })), RR.dot) {
+        const JR = VR(RR.dotSize * GR, yR),
+          uR = RR.lines && 0 === ZR && RR.dotSize > RR.lineThickness ? Math.max(JR, tR + 2) : JR,
+          qR = (tR - uR) / 2;
+        wR.push({
+          x: qR,
+          y: qR,
+          w: uR,
+          h: uR
         })
       }
-      const lW = xW.map((WW => ({
-        ...WW,
-        x: WW.x - cW,
-        y: WW.y - cW,
-        w: WW.w + 2 * cW,
-        h: WW.h + 2 * cW
+      const rR = wR.map((RR => ({
+        ...RR,
+        x: RR.x - iR,
+        y: RR.y - iR,
+        w: RR.w + 2 * iR,
+        h: RR.h + 2 * iR
       })));
-      let AW = null,
-        bW = null;
-      if (WW.circle) {
-        const iW = LW(WW.circleThickness, OW),
-          NW = function(WW, iW) {
-            return WW + (WW % 2 === iW ? 0 : 1)
-          }(wW(WW, OW), mW),
-          PW = (EW - NW) / 2;
-        AW = ZW(PW, NW, iW), cW > 0 && (bW = ZW(PW - cW, NW + 2 * cW, iW + 2 * cW))
+      let eR = null,
+        aR = null;
+      if (RR.circle) {
+        const JR = qR(RR.circleThickness, GR),
+          uR = function(RR, JR) {
+            return RR + (RR % 2 === JR ? 0 : 1)
+          }(fR(RR, GR), yR),
+          ZR = (tR - uR) / 2;
+        eR = KR(ZR, uR, JR), iR > 0 && (aR = KR(ZR - iR, uR + 2 * iR, JR + 2 * iR))
       }
       return {
-        cell: EW,
-        fills: xW,
-        outlines: cW > 0 ? lW : [],
-        ring: AW,
-        ringOutline: bW
+        cell: tR,
+        fills: wR,
+        outlines: iR > 0 ? rR : [],
+        ring: eR,
+        ringOutline: aR
       }
     }
 
-    function wW(WW, iW) {
-      return Math.round(WW.circleRadius * iW * 2 + LW(WW.circleThickness, iW))
+    function fR(RR, JR) {
+      return Math.round(RR.circleRadius * JR * 2 + qR(RR.circleThickness, JR))
     }
 
-    function tW(WW, iW) {
-      return Math.max(2 - iW, 2 * Math.round((WW - iW) / 2) + iW)
+    function VR(RR, JR) {
+      return Math.max(2 - JR, 2 * Math.round((RR - JR) / 2) + JR)
     }
 
-    function ZW(WW, iW, OW) {
-      const mW = 2 * OW >= iW - 1;
+    function KR(RR, JR, GR) {
+      const yR = 2 * GR >= JR - 1;
       return {
-        x: WW,
-        y: WW,
-        size: iW,
-        border: Math.min(OW, Math.floor(iW / 2)),
-        filled: mW
+        x: RR,
+        y: RR,
+        size: JR,
+        border: Math.min(GR, Math.floor(JR / 2)),
+        filled: yR
       }
     }
-    var xW = OW(1283);
-    const lW = 1.4;
+    var wR = GR(1378);
+    const rR = 1.4;
 
-    function AW(WW, iW) {
-      return WW && iW ? `scale(${lW})` : "scale(1)"
+    function eR(RR, JR) {
+      return RR && JR ? `scale(${rR})` : "scale(1)"
     }
 
-    function bW(WW) {
-      return "classic" === WW.settings.style ? (0, xW.jsx)(kW, {
-        ...WW
-      }) : (0, xW.jsx)(TW, {
-        ...WW
+    function aR(RR) {
+      return "classic" === RR.settings.style ? (0, wR.jsx)(UR, {
+        ...RR
+      }) : (0, wR.jsx)(lR, {
+        ...RR
       })
     }
-    const jW = .125;
+    const LR = .125;
 
-    function UW(WW, iW) {
-      const OW = {};
-      if (WW.color !== PW.g.color && (OW.color = (0, PW.m)(WW.color)), WW.opacity !== PW.g.opacity && (OW.opacity = WW.opacity / 100), WW.outline !== PW.g.outline || WW.outlineColor !== PW.g.outlineColor) {
-        const iW = WW.outline,
-          mW = (0, PW.m)(WW.outlineColor);
-        OW.textShadow = iW > 0 ? `-${iW}px 0 ${mW}, 0 ${iW}px ${mW}, ${iW}px 0 ${mW}, 0 -${iW}px ${mW}` : "none"
+    function nR(RR, JR) {
+      const GR = {};
+      if (RR.color !== ZR.e.color && (GR.color = (0, ZR.j)(RR.color)), RR.opacity !== ZR.e.opacity && (GR.opacity = RR.opacity / 100), RR.outline !== ZR.e.outline || RR.outlineColor !== ZR.e.outlineColor) {
+        const JR = RR.outline,
+          yR = (0, ZR.j)(RR.outlineColor);
+        GR.textShadow = JR > 0 ? `-${JR}px 0 ${yR}, 0 ${JR}px ${yR}, ${JR}px 0 ${yR}, 0 -${JR}px ${yR}` : "none"
       }
-      if (WW.size !== PW.g.size) {
-        const mW = WW.size / 100;
-        OW.fontSize = iW ? `calc(max(1.3rem, 18px) * ${mW})` : `calc(1.3rem * ${mW})`, OW.marginTop = `-${jW}em`, OW.transformOrigin = `50% calc(50% + ${jW}em)`
+      if (RR.size !== ZR.e.size) {
+        const yR = RR.size / 100;
+        GR.fontSize = JR ? `calc(max(1.3rem, 18px) * ${yR})` : `calc(1.3rem * ${yR})`, GR.marginTop = `-${LR}em`, GR.transformOrigin = `50% calc(50% + ${LR}em)`
       }
-      return OW
+      return GR
     }
 
-    function kW(WW) {
+    function UR(RR) {
       let {
-        settings: iW,
-        touch: OW,
-        inPreview: mW,
-        inEditor: NW,
-        pressed: PW = !1,
-        pressRef: LW
-      } = WW;
-      return (0, xW.jsx)("div", {
-        className: EW()("Crosshair", {
-          Touch: OW,
-          CrosshairInPreview: mW,
-          CrosshairInEditor: NW || mW
+        settings: JR,
+        touch: GR,
+        inPreview: yR,
+        inEditor: uR,
+        pressed: ZR = !1,
+        pressRef: qR
+      } = RR;
+      return (0, wR.jsx)("div", {
+        className: tR()("Crosshair", {
+          Touch: GR,
+          CrosshairInPreview: yR,
+          CrosshairInEditor: uR || yR
         }),
-        ref: LW,
+        ref: qR,
         style: {
-          transform: AW(PW, iW.growOnClick),
-          ...UW(iW, OW)
+          transform: eR(ZR, JR.growOnClick),
+          ...nR(JR, GR)
         },
         children: "+"
       })
     }
 
-    function sW(WW, iW) {
-      return WW / iW + "px"
+    function WR(RR, JR) {
+      return RR / JR + "px"
     }
 
-    function MW(WW, iW, OW, mW) {
+    function AR(RR, JR, GR, yR) {
       return {
-        ...YW(WW, iW, OW),
-        width: sW(WW.w, OW),
-        height: sW(WW.h, OW),
-        background: mW
+        ...MR(RR, JR, GR),
+        width: WR(RR.w, GR),
+        height: WR(RR.h, GR),
+        background: yR
       }
     }
 
-    function KW(WW, iW, OW) {
+    function CR(RR, JR, GR) {
       return {
-        left: sW(WW.x, iW),
-        top: sW(WW.y, iW),
-        width: sW(WW.size, iW),
-        height: sW(WW.size, iW),
-        borderWidth: sW(WW.border, iW),
-        borderColor: OW,
-        background: WW.filled ? OW : void 0
+        left: WR(RR.x, JR),
+        top: WR(RR.y, JR),
+        width: WR(RR.size, JR),
+        height: WR(RR.size, JR),
+        borderWidth: WR(RR.border, JR),
+        borderColor: GR,
+        background: RR.filled ? GR : void 0
       }
     }
-    const SW = {
+    const XR = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function YW(WW, iW, OW) {
-      const [mW, EW] = WW.arm ? SW[WW.arm] : [0, 0], NW = Math.round(iW * OW);
+    function MR(RR, JR, GR) {
+      const [yR, tR] = RR.arm ? XR[RR.arm] : [0, 0], uR = Math.round(JR * GR);
       return {
-        left: sW(WW.x + mW * NW, OW),
-        top: sW(WW.y + EW * NW, OW)
+        left: WR(RR.x + yR * uR, GR),
+        top: WR(RR.y + tR * uR, GR)
       }
     }
 
-    function yW(WW) {
-      return WW.arm ? {
-        "data-arm": WW.arm,
-        "data-x": WW.x,
-        "data-y": WW.y
+    function BR(RR) {
+      return RR.arm ? {
+        "data-arm": RR.arm,
+        "data-x": RR.x,
+        "data-y": RR.y
       } : {}
     }
 
-    function TW(WW) {
+    function lR(RR) {
       let {
-        settings: iW,
-        inPreview: OW,
-        inEditor: mW,
-        pressed: LW = !1,
-        spread: wW,
-        spreadRef: tW
-      } = WW;
-      const ZW = (0, NW.useRef)(null),
+        settings: JR,
+        inPreview: GR,
+        inEditor: yR,
+        pressed: qR = !1,
+        spread: fR,
+        spreadRef: VR
+      } = RR;
+      const KR = (0, uR.useRef)(null),
         {
-          box: AW,
-          dpr: bW
-        } = function(WW) {
-          const [iW, OW] = (0, NW.useState)({
+          box: eR,
+          dpr: aR
+        } = function(RR) {
+          const [JR, GR] = (0, uR.useState)({
             box: {
               left: 0,
               top: 0,
@@ -12015,200 +12015,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, NW.useLayoutEffect)((() => {
-            const iW = WW.current;
-            if (!iW) return;
-            const mW = () => {
-              const WW = iW.getBoundingClientRect(),
-                mW = window.devicePixelRatio || 1;
-              OW((iW => iW.dpr === mW && iW.box.left === WW.left && iW.box.top === WW.top && iW.box.width === WW.width && iW.box.height === WW.height ? iW : {
+          return (0, uR.useLayoutEffect)((() => {
+            const JR = RR.current;
+            if (!JR) return;
+            const yR = () => {
+              const RR = JR.getBoundingClientRect(),
+                yR = window.devicePixelRatio || 1;
+              GR((JR => JR.dpr === yR && JR.box.left === RR.left && JR.box.top === RR.top && JR.box.width === RR.width && JR.box.height === RR.height ? JR : {
                 box: {
-                  left: WW.left,
-                  top: WW.top,
-                  width: WW.width,
-                  height: WW.height
+                  left: RR.left,
+                  top: RR.top,
+                  width: RR.width,
+                  height: RR.height
                 },
-                dpr: mW
+                dpr: yR
               }))
             };
-            mW();
-            const EW = new ResizeObserver(mW);
-            return EW.observe(iW), window.addEventListener("resize", mW), window.addEventListener("scroll", mW, !0), () => {
-              EW.disconnect(), window.removeEventListener("resize", mW), window.removeEventListener("scroll", mW, !0)
+            yR();
+            const tR = new ResizeObserver(yR);
+            return tR.observe(JR), window.addEventListener("resize", yR), window.addEventListener("scroll", yR, !0), () => {
+              tR.disconnect(), window.removeEventListener("resize", yR), window.removeEventListener("scroll", yR, !0)
             }
-          }), [WW]), iW
-        }(ZW),
-        jW = (0, NW.useRef)(bW);
-      jW.current = bW;
-      const UW = cW(iW, bW, LW && iW.growOnClick ? lW : 1),
-        kW = function(WW, iW, OW) {
-          const mW = Math.round((WW.left + WW.width / 2) * OW - iW / 2),
-            EW = Math.round((WW.top + WW.height / 2) * OW - iW / 2);
+          }), [RR]), JR
+        }(KR),
+        LR = (0, uR.useRef)(aR);
+      LR.current = aR;
+      const nR = iR(JR, aR, qR && JR.growOnClick ? rR : 1),
+        UR = function(RR, JR, GR) {
+          const yR = Math.round((RR.left + RR.width / 2) * GR - JR / 2),
+            tR = Math.round((RR.top + RR.height / 2) * GR - JR / 2);
           return {
-            x: mW / OW - WW.left,
-            y: EW / OW - WW.top
+            x: yR / GR - RR.left,
+            y: tR / GR - RR.top
           }
-        }(AW, UW.cell, bW),
-        sW = (0, PW.m)(iW.color),
-        SW = (0, PW.m)(iW.outlineColor),
-        TW = (0, NW.useRef)(0);
-      (0, NW.useLayoutEffect)((() => {
-        if (tW) return tW.current = WW => {
-          var iW;
-          TW.current = WW, null === (iW = ZW.current) || void 0 === iW || iW.querySelectorAll("[data-arm]").forEach((iW => {
-            Object.assign(iW.style, YW(function(WW) {
+        }(eR, nR.cell, aR),
+        WR = (0, ZR.j)(JR.color),
+        XR = (0, ZR.j)(JR.outlineColor),
+        lR = (0, uR.useRef)(0);
+      (0, uR.useLayoutEffect)((() => {
+        if (VR) return VR.current = RR => {
+          var JR;
+          lR.current = RR, null === (JR = KR.current) || void 0 === JR || JR.querySelectorAll("[data-arm]").forEach((JR => {
+            Object.assign(JR.style, MR(function(RR) {
               return {
-                x: Number(WW.dataset.x),
-                y: Number(WW.dataset.y),
-                arm: WW.dataset.arm
+                x: Number(RR.dataset.x),
+                y: Number(RR.dataset.y),
+                arm: RR.dataset.arm
               }
-            }(iW), WW, jW.current))
+            }(JR), RR, LR.current))
           }))
         }, () => {
-          tW.current = null
+          VR.current = null
         }
-      }), [tW]);
-      const JW = null !== wW && void 0 !== wW ? wW : TW.current;
-      return (0, xW.jsx)("div", {
-        ref: ZW,
-        className: EW()("CrosshairShapes", {
-          CrosshairInPreview: OW,
-          CrosshairInEditor: mW || OW,
-          CrosshairSpreads: void 0 !== tW
+      }), [VR]);
+      const pR = null !== fR && void 0 !== fR ? fR : lR.current;
+      return (0, wR.jsx)("div", {
+        ref: KR,
+        className: tR()("CrosshairShapes", {
+          CrosshairInPreview: GR,
+          CrosshairInEditor: yR || GR,
+          CrosshairSpreads: void 0 !== VR
         }),
-        children: (0, xW.jsx)("div", {
+        children: (0, wR.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: kW.x,
-            top: kW.y,
-            opacity: iW.opacity / 100
+            left: UR.x,
+            top: UR.y,
+            opacity: JR.opacity / 100
           },
-          children: (0, xW.jsxs)("div", {
+          children: (0, wR.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [UW.ringOutline && (0, xW.jsx)("div", {
+            children: [nR.ringOutline && (0, wR.jsx)("div", {
               className: "CrosshairRing",
-              style: KW(UW.ringOutline, bW, SW)
-            }), UW.outlines.map(((WW, iW) => (0, xW.jsx)("div", {
+              style: CR(nR.ringOutline, aR, XR)
+            }), nR.outlines.map(((RR, JR) => (0, wR.jsx)("div", {
               className: "CrosshairPart",
-              ...yW(WW),
-              style: MW(WW, JW, bW, SW)
-            }, `o${iW}`))), UW.ring && (0, xW.jsx)("div", {
+              ...BR(RR),
+              style: AR(RR, pR, aR, XR)
+            }, `o${JR}`))), nR.ring && (0, wR.jsx)("div", {
               className: "CrosshairRing",
-              style: KW(UW.ring, bW, sW)
-            }), UW.fills.map(((WW, iW) => (0, xW.jsx)("div", {
+              style: CR(nR.ring, aR, WR)
+            }), nR.fills.map(((RR, JR) => (0, wR.jsx)("div", {
               className: "CrosshairPart",
-              ...yW(WW),
-              style: MW(WW, JW, bW, sW)
-            }, `f${iW}`)))]
+              ...BR(RR),
+              style: AR(RR, pR, aR, WR)
+            }, `f${JR}`)))]
           })
         })
       })
     }
   },
-  35205: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => tW,
-      e: () => jW,
-      h: () => bW
+  35122: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => VR,
+      f: () => LR,
+      h: () => aR
     });
-    var mW = OW(35181);
-    const EW = "XH1-",
-      NW = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      PW = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      LW = ["color", "outlineColor"],
-      cW = 1 + 3 * LW.length + PW.length + 1,
-      wW = Math.ceil(8 * cW / Math.log2(62)),
-      tW = EW.length + wW;
+    var yR = GR(35106);
+    const tR = "XH1-",
+      uR = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      ZR = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      qR = ["color", "outlineColor"],
+      iR = 1 + 3 * qR.length + ZR.length + 1,
+      fR = Math.ceil(8 * iR / Math.log2(62)),
+      VR = tR.length + fR;
 
-    function ZW(WW) {
-      let iW = 90;
-      for (const OW of WW) iW = 31 * iW + OW & 255;
-      return iW
+    function KR(RR) {
+      let JR = 90;
+      for (const GR of RR) JR = 31 * JR + GR & 255;
+      return JR
     }
-    const xW = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      lW = BigInt(xW.length);
+    const wR = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      rR = BigInt(wR.length);
 
-    function AW(WW, iW) {
-      let OW = 0n;
-      for (const EW of WW) {
-        const WW = xW.indexOf(EW);
-        if (WW < 0) return null;
-        OW = OW * lW + BigInt(WW)
+    function eR(RR, JR) {
+      let GR = 0n;
+      for (const tR of RR) {
+        const RR = wR.indexOf(tR);
+        if (RR < 0) return null;
+        GR = GR * rR + BigInt(RR)
       }
-      if (OW >> BigInt(8 * iW) !== 0n) return null;
-      const mW = [];
-      for (let EW = 0; EW < iW; EW++) mW.unshift(Number(0xffn & OW)), OW >>= 8n;
-      return mW
+      if (GR >> BigInt(8 * JR) !== 0n) return null;
+      const yR = [];
+      for (let tR = 0; tR < JR; tR++) yR.unshift(Number(0xffn & GR)), GR >>= 8n;
+      return yR
     }
 
-    function bW(WW) {
-      let iW = "shapes" === WW.style ? 1 : 0;
-      NW.forEach(((OW, mW) => {
-        WW[OW] && (iW |= 1 << mW + 1)
+    function aR(RR) {
+      let JR = "shapes" === RR.style ? 1 : 0;
+      uR.forEach(((GR, yR) => {
+        RR[GR] && (JR |= 1 << yR + 1)
       }));
-      const OW = [iW];
-      for (const EW of LW) {
-        const iW = (0, mW.i)(EW, WW[EW]);
-        OW.push(iW >> 16 & 255, iW >> 8 & 255, 255 & iW)
+      const GR = [JR];
+      for (const tR of qR) {
+        const JR = (0, yR.f)(tR, RR[tR]);
+        GR.push(JR >> 16 & 255, JR >> 8 & 255, 255 & JR)
       }
-      for (const EW of PW) {
+      for (const tR of ZR) {
         const {
-          min: iW,
-          step: NW
-        } = mW.e[EW];
-        OW.push(Math.round(((0, mW.i)(EW, WW[EW]) - iW) / NW))
+          min: JR,
+          step: uR
+        } = yR.d[tR];
+        GR.push(Math.round(((0, yR.f)(tR, RR[tR]) - JR) / uR))
       }
-      return OW.push(ZW(OW)), EW + function(WW, iW) {
-        let OW = 0n;
-        for (const EW of WW) OW = OW << 8n | BigInt(EW);
-        let mW = "";
-        for (let EW = 0; EW < iW; EW++) mW = xW[Number(OW % lW)] + mW, OW /= lW;
-        return mW
-      }(OW, wW)
+      return GR.push(KR(GR)), tR + function(RR, JR) {
+        let GR = 0n;
+        for (const tR of RR) GR = GR << 8n | BigInt(tR);
+        let yR = "";
+        for (let tR = 0; tR < JR; tR++) yR = wR[Number(GR % rR)] + yR, GR /= rR;
+        return yR
+      }(GR, fR)
     }
 
-    function jW(WW) {
-      for (const iW of WW.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${wW}})`, "gi"))) {
-        const WW = UW(AW(iW[1], cW));
-        if (WW) return WW
+    function LR(RR) {
+      for (const JR of RR.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${fR}})`, "gi"))) {
+        const RR = nR(eR(JR[1], iR));
+        if (RR) return RR
       }
       return null
     }
 
-    function UW(WW) {
-      if (!WW || WW.length !== cW || ZW(WW.slice(0, -1)) !== WW[WW.length - 1]) return null;
-      const iW = WW[0],
-        OW = {
-          ...mW.g,
-          style: 1 & iW ? "shapes" : "classic"
+    function nR(RR) {
+      if (!RR || RR.length !== iR || KR(RR.slice(0, -1)) !== RR[RR.length - 1]) return null;
+      const JR = RR[0],
+        GR = {
+          ...yR.e,
+          style: 1 & JR ? "shapes" : "classic"
         };
-      NW.forEach(((WW, mW) => {
-        OW[WW] = 0 !== (iW & 1 << mW + 1)
+      uR.forEach(((RR, yR) => {
+        GR[RR] = 0 !== (JR & 1 << yR + 1)
       }));
-      let EW = 1;
-      for (const mW of LW) OW[mW] = WW[EW] << 16 | WW[EW + 1] << 8 | WW[EW + 2], EW += 3;
-      for (const NW of PW) {
+      let tR = 1;
+      for (const yR of qR) GR[yR] = RR[tR] << 16 | RR[tR + 1] << 8 | RR[tR + 2], tR += 3;
+      for (const uR of ZR) {
         const {
-          min: iW,
-          step: PW
-        } = mW.e[NW];
-        OW[NW] = (0, mW.i)(NW, iW + WW[EW] * PW), EW++
+          min: JR,
+          step: ZR
+        } = yR.d[uR];
+        GR[uR] = (0, yR.f)(uR, JR + RR[tR] * ZR), tR++
       }
-      return OW
+      return GR
     }
   },
-  35181: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => PW,
-      e: () => mW,
-      g: () => EW,
-      i: () => NW,
-      m: () => wW,
-      q: () => cW,
-      t: () => tW,
-      w: () => LW
+  35106: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR,
+      e: () => tR,
+      f: () => uR,
+      j: () => fR,
+      m: () => iR,
+      p: () => VR,
+      t: () => qR,
+      w: () => ZR
     });
-    const mW = {
+    const yR = {
         opacity: {
           min: 5,
           max: 100,
@@ -12265,7 +12265,7 @@ export const modules = {
           step: 1
         }
       },
-      EW = Object.freeze({
+      tR = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -12286,412 +12286,412 @@ export const modules = {
         forGuns: !1
       });
 
-    function NW(WW, iW) {
-      var OW;
+    function uR(RR, JR) {
+      var GR;
       const {
-        min: NW,
-        max: PW,
-        step: LW
-      } = mW[WW];
-      if (!Number.isFinite(iW)) return EW[WW];
-      const cW = (null !== (OW = String(LW).split(".")[1]) && void 0 !== OW ? OW : "").length,
-        wW = Number((Math.round(iW / LW) * LW).toFixed(cW));
-      return Math.min(PW, Math.max(NW, wW))
+        min: uR,
+        max: ZR,
+        step: qR
+      } = yR[RR];
+      if (!Number.isFinite(JR)) return tR[RR];
+      const iR = (null !== (GR = String(qR).split(".")[1]) && void 0 !== GR ? GR : "").length,
+        fR = Number((Math.round(JR / qR) * qR).toFixed(iR));
+      return Math.min(ZR, Math.max(uR, fR))
     }
 
-    function PW(WW, iW, OW) {
-      const mW = "number" === typeof OW ? NW(iW, OW) : OW;
+    function ZR(RR, JR, GR) {
+      const yR = "number" === typeof GR ? uR(JR, GR) : GR;
       return {
-        ...WW,
-        [iW]: mW
+        ...RR,
+        [JR]: yR
       }
     }
 
-    function LW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(EW).every((mW => OW.includes(mW) || WW[mW] === iW[mW]))
+    function qR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(tR).every((yR => GR.includes(yR) || RR[yR] === JR[yR]))
     }
 
-    function cW(WW) {
-      return LW(WW, EW)
+    function iR(RR) {
+      return qR(RR, tR)
     }
 
-    function wW(WW) {
-      return `#${WW.toString(16).padStart(6,"0")}`
+    function fR(RR) {
+      return `#${RR.toString(16).padStart(6,"0")}`
     }
 
-    function tW(WW) {
-      const iW = /^#?([0-9a-f]{6})$/i.exec(WW.trim());
-      return iW ? parseInt(iW[1], 16) : null
+    function VR(RR) {
+      const JR = /^#?([0-9a-f]{6})$/i.exec(RR.trim());
+      return JR ? parseInt(JR[1], 16) : null
     }
   },
-  35209: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => ZW,
-      g: () => xW
+  35124: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => KR,
+      f: () => wR
     });
-    var mW = OW(62),
-      EW = OW(39),
-      NW = OW(35205),
-      PW = OW(35181);
-    const LW = "crosshairCode";
-    let cW = null;
-    const wW = new Set;
+    var yR = GR(66),
+      tR = GR(46),
+      uR = GR(35122),
+      ZR = GR(35106);
+    const qR = "crosshairCode";
+    let iR = null;
+    const fR = new Set;
 
-    function tW() {
-      if (null === cW) {
-        var WW;
-        const iW = EW.i.getItem(LW);
-        cW = null !== (WW = "string" === typeof iW ? (0, NW.e)(iW) : null) && void 0 !== WW ? WW : PW.g
+    function VR() {
+      if (null === iR) {
+        var RR;
+        const JR = tR.i.getItem(qR);
+        iR = null !== (RR = "string" === typeof JR ? (0, uR.f)(JR) : null) && void 0 !== RR ? RR : ZR.e
       }
-      return cW
+      return iR
     }
 
-    function ZW(WW) {
-      cW = WW, (0, PW.q)(WW) ? EW.i.removeItem(LW) : EW.i.setItem(LW, (0, NW.h)(WW));
-      for (const iW of wW) iW()
+    function KR(RR) {
+      iR = RR, (0, ZR.m)(RR) ? tR.i.removeItem(qR) : tR.i.setItem(qR, (0, uR.h)(RR));
+      for (const JR of fR) JR()
     }
 
-    function xW() {
-      const [WW, iW] = (0, mW.useState)(tW);
-      return (0, mW.useEffect)((() => {
-        const WW = () => {
-          iW(tW())
+    function wR() {
+      const [RR, JR] = (0, yR.useState)(VR);
+      return (0, yR.useEffect)((() => {
+        const RR = () => {
+          JR(VR())
         };
-        return WW(), OW = WW, wW.add(OW), () => {
-          wW.delete(OW)
+        return RR(), GR = RR, fR.add(GR), () => {
+          fR.delete(GR)
         };
-        var OW
-      }), []), WW
+        var GR
+      }), []), RR
     }
   },
-  35240: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW,
-      c: () => PW,
-      f: () => NW
+  35172: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      h: () => ZR,
+      l: () => uR
     });
-    var mW = OW(62);
-    const EW = new class {
+    var yR = GR(66);
+    const tR = new class {
       constructor() {
         this.inFlight = new Map, this.landings = new Map, this.listeners = new Set
       }
-      getInFlight(WW) {
-        var iW;
-        return null !== (iW = this.inFlight.get(WW)) && void 0 !== iW ? iW : 0
+      getInFlight(RR) {
+        var JR;
+        return null !== (JR = this.inFlight.get(RR)) && void 0 !== JR ? JR : 0
       }
-      setInFlight(WW, iW) {
-        this.getInFlight(WW) !== iW && (this.inFlight.set(WW, iW), this.notify())
+      setInFlight(RR, JR) {
+        this.getInFlight(RR) !== JR && (this.inFlight.set(RR, JR), this.notify())
       }
-      subscribe(WW) {
-        return this.listeners.add(WW), () => {
-          this.listeners.delete(WW)
+      subscribe(RR) {
+        return this.listeners.add(RR), () => {
+          this.listeners.delete(RR)
         }
       }
-      getLanding(WW) {
-        var iW, OW;
-        return null !== (iW = null === (OW = this.landings.get(WW)) || void 0 === OW ? void 0 : OW.at(-1)) && void 0 !== iW ? iW : null
+      getLanding(RR) {
+        var JR, GR;
+        return null !== (JR = null === (GR = this.landings.get(RR)) || void 0 === GR ? void 0 : GR.at(-1)) && void 0 !== JR ? JR : null
       }
-      hasLanding(WW, iW) {
-        var OW, mW;
-        return null !== (OW = null === (mW = this.landings.get(WW)) || void 0 === mW ? void 0 : mW.includes(iW)) && void 0 !== OW && OW
+      hasLanding(RR, JR) {
+        var GR, yR;
+        return null !== (GR = null === (yR = this.landings.get(RR)) || void 0 === yR ? void 0 : yR.includes(JR)) && void 0 !== GR && GR
       }
-      addLanding(WW, iW) {
-        var OW;
-        const mW = null !== (OW = this.landings.get(WW)) && void 0 !== OW ? OW : [];
-        return this.landings.set(WW, [...mW, iW]), this.notify(), () => {
-          this.landings.set(WW, this.landings.get(WW).filter((WW => WW !== iW))), this.notify()
+      addLanding(RR, JR) {
+        var GR;
+        const yR = null !== (GR = this.landings.get(RR)) && void 0 !== GR ? GR : [];
+        return this.landings.set(RR, [...yR, JR]), this.notify(), () => {
+          this.landings.set(RR, this.landings.get(RR).filter((RR => RR !== JR))), this.notify()
         }
       }
       notify() {
-        for (const WW of this.listeners) WW()
+        for (const RR of this.listeners) RR()
       }
     };
 
-    function NW(WW, iW) {
-      const [OW, NW] = (0, mW.useState)((() => EW.getInFlight(WW)));
-      return (0, mW.useLayoutEffect)((() => {
-        const iW = () => {
-          NW(EW.getInFlight(WW))
+    function uR(RR, JR) {
+      const [GR, uR] = (0, yR.useState)((() => tR.getInFlight(RR)));
+      return (0, yR.useLayoutEffect)((() => {
+        const JR = () => {
+          uR(tR.getInFlight(RR))
         };
-        return iW(), EW.subscribe(iW)
-      }), [WW]), Math.max(0, iW - OW)
+        return JR(), tR.subscribe(JR)
+      }), [RR]), Math.max(0, JR - GR)
     }
 
-    function PW(WW, iW) {
-      let OW = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      (0, mW.useLayoutEffect)((() => {
-        if (OW) return EW.addLanding(WW, iW.current)
-      }), [WW, iW, OW])
+    function ZR(RR, JR) {
+      let GR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      (0, yR.useLayoutEffect)((() => {
+        if (GR) return tR.addLanding(RR, JR.current)
+      }), [RR, JR, GR])
     }
   },
-  35139: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      g: () => mW
+  35054: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      h: () => yR
     });
-    const mW = "image/jpeg",
-      EW = "jpg"
+    const yR = "image/jpeg",
+      tR = "jpg"
   },
-  35146: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => cW,
-      h: () => wW,
-      l: () => tW
+  35059: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => iR,
+      e: () => fR,
+      f: () => VR
     });
-    var mW = OW(1787),
-      EW = OW(4390),
-      NW = OW(100),
-      PW = OW(1876),
-      LW = OW(35139);
+    var yR = GR(1879),
+      tR = GR(4479),
+      uR = GR(103),
+      ZR = GR(1963),
+      qR = GR(35054);
 
-    function cW() {
-      return !(0, NW.isMobileApp)() || mW.d.supports("photos")
+    function iR() {
+      return !(0, uR.isMobileApp)() || yR.c.supports("photos")
     }
-    async function wW(WW) {
-      var iW, OW;
-      if ((0, NW.isMobileApp)()) {
+    async function fR(RR) {
+      var JR, GR;
+      if ((0, uR.isMobileApp)()) {
         const {
-          saved: iW
-        } = await mW.d.request("photos.save", {
-          data: await (0, EW.e)(WW),
-          mimeType: LW.g
+          saved: JR
+        } = await yR.c.request("photos.save", {
+          data: await (0, tR.e)(RR),
+          mimeType: qR.h
         });
-        return iW ? "saved" : "denied"
+        return JR ? "saved" : "denied"
       }
-      return (0, NW.isIOS)() && null !== (iW = (OW = navigator).canShare) && void 0 !== iW && iW.call(OW, {
-        files: [WW]
-      }) ? tW(WW) : ((0, PW.e)(WW, WW.name), "saved")
+      return (0, uR.isIOS)() && null !== (JR = (GR = navigator).canShare) && void 0 !== JR && JR.call(GR, {
+        files: [RR]
+      }) ? VR(RR) : ((0, ZR.e)(RR, RR.name), "saved")
     }
-    async function tW(WW) {
+    async function VR(RR) {
       try {
         return await navigator.share({
-          files: [WW]
+          files: [RR]
         }), "shared"
-      } catch (iW) {
-        if (iW instanceof DOMException && "AbortError" === iW.name) return "uW";
-        if (iW instanceof DOMException && "NotAllowedError" === iW.name) return "needsTap";
-        throw iW
+      } catch (JR) {
+        if (JR instanceof DOMException && "AbortError" === JR.name) return "xR";
+        if (JR instanceof DOMException && "NotAllowedError" === JR.name) return "needsTap";
+        throw JR
       }
     }
   },
-  35124: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW,
-      e: () => bW,
-      h: () => jW,
-      l: () => UW
+  35047: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => eR,
+      e: () => aR,
+      h: () => LR,
+      i: () => nR
     });
-    var mW = OW(25),
-      EW = OW(35114),
-      NW = OW(1729),
-      PW = OW(35130);
-    const LW = 64,
-      cW = 8;
-    async function wW(WW) {
+    var yR = GR(25),
+      tR = GR(35029),
+      uR = GR(1800),
+      ZR = GR(35051);
+    const qR = 64,
+      iR = 8;
+    async function fR(RR) {
       try {
-        const iW = await createImageBitmap(WW, {
-          resizeWidth: LW,
-          resizeHeight: LW,
+        const JR = await createImageBitmap(RR, {
+          resizeWidth: qR,
+          resizeHeight: qR,
           resizeQuality: "high"
         });
         try {
-          const WW = document.createElement("canvas");
-          WW.width = LW, WW.height = LW;
-          const OW = WW.getContext("2d", {
+          const RR = document.createElement("canvas");
+          RR.width = qR, RR.height = qR;
+          const GR = RR.getContext("2d", {
             willReadFrequently: !0
           });
-          return OW.drawImage(iW, 0, 0, LW, LW),
-            function(WW) {
-              for (let iW = 0; iW < WW.length; iW += 4)
-                if (WW[iW] > cW || WW[iW + 1] > cW || WW[iW + 2] > cW) return !1;
+          return GR.drawImage(JR, 0, 0, qR, qR),
+            function(RR) {
+              for (let JR = 0; JR < RR.length; JR += 4)
+                if (RR[JR] > iR || RR[JR + 1] > iR || RR[JR + 2] > iR) return !1;
               return !0
-            }(OW.getImageData(0, 0, LW, LW).data)
+            }(GR.getImageData(0, 0, qR, qR).data)
         } finally {
-          iW.close()
+          JR.close()
         }
-      } catch (iW) {
-        return console.warn("Screenshot mode: couldn't check whether a photo is blank", iW), !1
+      } catch (JR) {
+        return console.warn("Screenshot mode: couldn't check whether a photo is blank", JR), !1
       }
     }
-    var tW = OW(35139);
-    const ZW = 8294400,
-      xW = .92,
-      lW = 3;
-    class AW extends Error {
-      constructor(WW) {
-        super(`The photo came out blank ${WW} times`), this.name = "BlankPhotoError"
+    var VR = GR(35054);
+    const KR = 8294400,
+      wR = .92,
+      rR = 3;
+    class eR extends Error {
+      constructor(RR) {
+        super(`The photo came out blank ${RR} times`), this.name = "BlankPhotoError"
       }
     }
 
-    function bW() {
-      (0, NW.f)(), mW.d.set({
+    function aR() {
+      (0, uR.e)(), yR.d.set({
         screenshotMode: !0
       })
     }
 
-    function jW() {
-      mW.d.set({
+    function LR() {
+      yR.d.set({
         screenshotMode: !1
       })
     }
-    async function UW() {
-      const WW = performance.now(),
-        iW = await async function(WW, iW) {
-          let OW = 0;
-          for (; OW < lW;) {
-            let EW;
+    async function nR() {
+      const RR = performance.now(),
+        JR = await async function(RR, JR) {
+          let GR = 0;
+          for (; GR < rR;) {
+            let tR;
             try {
-              EW = await WW()
-            } catch (mW) {
-              if (0 === OW) throw mW;
+              tR = await RR()
+            } catch (yR) {
+              if (0 === GR) throw yR;
               return {
                 outcome: "failed",
-                error: mW,
-                blanks: OW
+                error: yR,
+                blanks: GR
               }
             }
-            if (!await iW(EW)) return {
+            if (!await JR(tR)) return {
               outcome: "saved",
-              blob: EW,
-              blanks: OW
+              blob: tR,
+              blanks: GR
             };
-            OW++
+            GR++
           }
           return {
             outcome: "refused",
-            blanks: OW
+            blanks: GR
           }
         }((async () => {
           const {
-            width: WW,
-            height: iW,
-            scale: OW
-          } = function(WW, iW, OW) {
-            const mW = Math.max(1, WW),
-              EW = Math.max(1, iW),
-              NW = Math.min(Math.max(1, OW), Math.sqrt(ZW / (mW * EW)));
+            width: RR,
+            height: JR,
+            scale: GR
+          } = function(RR, JR, GR) {
+            const yR = Math.max(1, RR),
+              tR = Math.max(1, JR),
+              uR = Math.min(Math.max(1, GR), Math.sqrt(KR / (yR * tR)));
             return {
-              width: Math.round(mW * NW),
-              height: Math.round(EW * NW),
-              scale: NW
+              width: Math.round(yR * uR),
+              height: Math.round(tR * uR),
+              scale: uR
             }
           }(window.innerWidth, window.innerHeight, window.devicePixelRatio);
-          return (await EW.devTools.capturePhoto(WW, iW, {
-            scale: OW,
-            type: tW.g,
-            quality: xW
+          return (await tR.devTools.capturePhoto(RR, JR, {
+            scale: GR,
+            type: VR.h,
+            quality: wR
           })).blob
-        }), wW);
-      if (iW.blanks > 0) {
-        const mW = (0, PW.c)();
-        OW.e(309).then((() => OW(42551))).then((OW => {
+        }), fR);
+      if (JR.blanks > 0) {
+        const yR = (0, ZR.d)();
+        GR.e(309).then((() => GR(42594))).then((GR => {
           let {
-            reportBlankPhoto: EW
-          } = OW;
-          EW(iW.blanks, iW.outcome, WW, mW)
-        })).catch((WW => {
-          console.warn("Screenshot mode: couldn't report a blank photo", WW)
+            reportBlankPhoto: tR
+          } = GR;
+          tR(JR.blanks, JR.outcome, RR, yR)
+        })).catch((RR => {
+          console.warn("Screenshot mode: couldn't report a blank photo", RR)
         }))
       }
-      switch (iW.outcome) {
+      switch (JR.outcome) {
         case "saved":
-          return new File([iW.blob], function(WW) {
-            const iW = WW => String(WW).padStart(2, "0"),
-              OW = `${WW.getFullYear()}${iW(WW.getMonth()+1)}${iW(WW.getDate())}`,
-              mW = `${iW(WW.getHours())}${iW(WW.getMinutes())}${iW(WW.getSeconds())}`;
-            return `bloxd-${OW}-${mW}.${tW.d}`
+          return new File([JR.blob], function(RR) {
+            const JR = RR => String(RR).padStart(2, "0"),
+              GR = `${RR.getFullYear()}${JR(RR.getMonth()+1)}${JR(RR.getDate())}`,
+              yR = `${JR(RR.getHours())}${JR(RR.getMinutes())}${JR(RR.getSeconds())}`;
+            return `bloxd-${GR}-${yR}.${VR.e}`
           }(new Date), {
-            type: tW.g
+            type: VR.h
           });
         case "refused":
-          throw new AW(iW.blanks);
+          throw new eR(JR.blanks);
         case "failed":
-          throw iW.error
+          throw JR.error
       }
     }
   },
-  35177: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      d: () => EW
+  35099: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      i: () => tR
     });
-    var mW = OW(25);
+    var yR = GR(25);
 
-    function EW(WW, iW) {
-      return WW && !iW
+    function tR(RR, JR) {
+      return RR && !JR
     }
 
-    function NW() {
-      return EW(mW.d.get("isTouchScreen"), mW.d.get("clientEscMenuOptions").touchActionButtons)
+    function uR() {
+      return tR(yR.d.get("isTouchScreen"), yR.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  5445: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      g: () => NW,
-      k: () => EW
+  5581: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      c: () => uR,
+      e: () => tR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW() {
-      return mW
+    function uR() {
+      return yR
     }
 
-    function PW(WW) {
-      return "bloxd" === WW.site && !WW.isMobileApp && !WW.isTouchScreen
+    function ZR(RR) {
+      return "bloxd" === RR.site && !RR.isMobileApp && !RR.isTouchScreen
     }
   },
-  35116: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW
+  35031: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR
     });
-    const mW = new Set(["chunkBorders"])
+    const yR = new Set(["chunkBorders"])
   },
-  35114: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      ALL_DEV_TOOLS: () => PW,
-      coreDevTools: () => wW,
-      devTools: () => cW
+  35029: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      ALL_DEV_TOOLS: () => ZR,
+      coreDevTools: () => fR,
+      devTools: () => iR
     });
-    var mW = OW(671),
-      EW = OW(1301),
-      NW = OW(35116);
-    const PW = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function LW() {
+    var yR = GR(709),
+      tR = GR(1397),
+      uR = GR(35031);
+    const ZR = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function qR() {
       const {
-        noaDevTools: WW
-      } = await OW.e(269).then((() => OW(42543)));
-      return WW
+        noaDevTools: RR
+      } = await GR.e(269).then((() => GR(42590)));
+      return RR
     }
-    const cW = new class {
+    const iR = new class {
         constructor() {
-          this.loadHost = LW, this.tools = PW
+          this.loadHost = qR, this.tools = ZR
         }
-        setHost(WW) {
-          this.tools = null === WW ? PW : WW.tools, this.loadHost = null === WW ? LW : async () => WW
+        setHost(RR) {
+          this.tools = null === RR ? ZR : RR.tools, this.loadHost = null === RR ? qR : async () => RR
         }
-        supports(WW) {
-          return this.tools.has(WW)
+        supports(RR) {
+          return this.tools.has(RR)
         }
-        async downloadScene(WW, iW) {
-          const OW = await this.loadHost();
-          await OW.downloadScene(WW, iW)
+        async downloadScene(RR, JR) {
+          const GR = await this.loadHost();
+          await GR.downloadScene(RR, JR)
         }
-        async setAmbientLightIntensity(WW) {
-          const iW = await this.loadHost();
-          await iW.setAmbientLightIntensity(WW)
+        async setAmbientLightIntensity(RR) {
+          const JR = await this.loadHost();
+          await JR.setAmbientLightIntensity(RR)
         }
-        async capturePhoto(WW, iW, OW) {
-          return (await this.loadHost()).capturePhoto(WW, iW, OW)
+        async capturePhoto(RR, JR, GR) {
+          return (await this.loadHost()).capturePhoto(RR, JR, GR)
         }
       },
-      wW = {
-        tools: NW.e,
+      fR = {
+        tools: uR.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -12702,130 +12702,130 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    mW.K && cW.setHost(wW), (0, EW.s)((() => {
-      cW.setHost(wW)
+    yR.G && iR.setHost(fR), (0, tR.E)((() => {
+      iR.setHost(fR)
     }))
   },
-  35270: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      e: () => EW,
-      f: () => ZW
+  35195: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      i: () => tR,
+      l: () => KR
     });
-    var mW = OW(1659);
+    var yR = GR(1718);
 
-    function EW(WW) {
-      var iW;
+    function tR(RR) {
+      var JR;
       return {
-        ...LW.store,
-        yaw: LW.store.yaw + (null !== (iW = mW.e[WW].previewYaw) && void 0 !== iW ? iW : 0)
+        ...qR.store,
+        yaw: qR.store.yaw + (null !== (JR = yR.b[RR].previewYaw) && void 0 !== JR ? JR : 0)
       }
     }
-    const NW = {
+    const uR = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      PW = {
-        ...NW,
+      ZR = {
+        ...uR,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      LW = {
-        player: NW,
-        store: PW,
+      qR = {
+        player: uR,
+        store: ZR,
         showcase: {
-          ...PW,
+          ...ZR,
           target: [0, 1.9, 0]
         }
       };
 
-    function cW(WW, iW) {
-      WW instanceof Promise ? WW.then(iW).catch((WW => {
-        console.error("Couldn't open the preview", WW)
-      })) : iW(WW)
+    function iR(RR, JR) {
+      RR instanceof Promise ? RR.then(JR).catch((RR => {
+        console.error("Couldn't open the preview", RR)
+      })) : JR(RR)
     }
-    class wW {
-      constructor(WW) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, cW(WW, (WW => {
-          this.closed ? WW.close() : (this.opened = WW, null !== this.size && WW.resize(this.size.width, this.size.height), null !== this.view && WW.show(this.view))
+    class fR {
+      constructor(RR) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, iR(RR, (RR => {
+          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height), null !== this.view && RR.show(this.view))
         }))
       }
-      show(WW) {
-        var iW;
-        this.view = WW, null === (iW = this.opened) || void 0 === iW || iW.show(WW)
+      show(RR) {
+        var JR;
+        this.view = RR, null === (JR = this.opened) || void 0 === JR || JR.show(RR)
       }
-      resize(WW, iW) {
-        var OW;
+      resize(RR, JR) {
+        var GR;
         this.size = {
-          width: WW,
-          height: iW
-        }, null === (OW = this.opened) || void 0 === OW || OW.resize(WW, iW)
+          width: RR,
+          height: JR
+        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.opened) || void 0 === WW || WW.close(), this.opened = null
+        var RR;
+        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
       }
     }
-    class tW {
-      constructor(WW) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(WW).then((WW => WW.ready)), cW(WW, (WW => {
-          this.closed ? WW.close() : (this.opened = WW, null !== this.size && WW.resize(this.size.width, this.size.height))
+    class VR {
+      constructor(RR) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(RR).then((RR => RR.ready)), iR(RR, (RR => {
+          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.opened) || void 0 === iW ? void 0 : iW.isReady()) && void 0 !== WW && WW
+        var RR, JR;
+        return null !== (RR = null === (JR = this.opened) || void 0 === JR ? void 0 : JR.isReady()) && void 0 !== RR && RR
       }
-      setCosmetic(WW, iW) {
-        var OW;
-        null === (OW = this.opened) || void 0 === OW || OW.setCosmetic(WW, iW)
+      setCosmetic(RR, JR) {
+        var GR;
+        null === (GR = this.opened) || void 0 === GR || GR.setCosmetic(RR, JR)
       }
-      setNametag(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.setNametag(WW)
+      setNametag(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.setNametag(RR)
       }
-      playEmote(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.playEmote(WW)
+      playEmote(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.playEmote(RR)
       }
-      setOrbit(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.setOrbit(WW)
+      setOrbit(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.setOrbit(RR)
       }
       resetCamera() {
-        var WW;
-        null === (WW = this.opened) || void 0 === WW || WW.resetCamera()
+        var RR;
+        null === (RR = this.opened) || void 0 === RR || RR.resetCamera()
       }
-      async untilDrawn(WW) {
-        var iW;
-        await this.ready, await (null === (iW = this.opened) || void 0 === iW ? void 0 : iW.untilDrawn(WW))
+      async untilDrawn(RR) {
+        var JR;
+        await this.ready, await (null === (JR = this.opened) || void 0 === JR ? void 0 : JR.untilDrawn(RR))
       }
-      resize(WW, iW) {
-        var OW;
+      resize(RR, JR) {
+        var GR;
         this.size = {
-          width: WW,
-          height: iW
-        }, null === (OW = this.opened) || void 0 === OW || OW.resize(WW, iW)
+          width: RR,
+          height: JR
+        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.opened) || void 0 === WW || WW.close(), this.opened = null
+        var RR;
+        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
       }
     }
-    const ZW = new class {
+    const KR = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(WW) {
-        this.host = WW
+      setHost(RR) {
+        this.host = RR
       }
-      setDefaultHost(WW) {
-        this.makeDefault = WW
+      setDefaultHost(RR) {
+        this.makeDefault = RR
       }
       current() {
         if (null === this.host) {
@@ -12834,102 +12834,102 @@ export const modules = {
         }
         return this.host
       }
-      openMob(WW) {
-        return new wW(this.current().openMob(WW))
+      openMob(RR) {
+        return new fR(this.current().openMob(RR))
       }
-      openPet(WW) {
-        return new wW(this.current().openPet(WW))
+      openPet(RR) {
+        return new fR(this.current().openPet(RR))
       }
-      openMobLineup(WW) {
-        return new wW(this.current().openMobLineup(WW))
+      openMobLineup(RR) {
+        return new fR(this.current().openMobLineup(RR))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(WW, iW) {
-        return new tW(this.current().openCharacter(WW, iW))
+      openCharacter(RR, JR) {
+        return new VR(this.current().openCharacter(RR, JR))
       }
     }
   },
-  35264: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW.d,
-      e: () => mW.e,
-      f: () => mW.f
+  35193: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR.e,
+      e: () => yR.i,
+      g: () => yR.l
     });
-    var mW = OW(35270);
-    class EW {
-      constructor(WW) {
-        this.load = WW, this.loaded = null, this.loading = null
+    var yR = GR(35195);
+    class tR {
+      constructor(RR) {
+        this.load = RR, this.loaded = null, this.loading = null
       }
-      run(WW) {
-        return null !== this.loaded ? WW(this.loaded) : (this.loading ??= this.load().then((WW => (this.loaded = WW, WW)), (WW => {
-          throw this.loading = null, WW
-        })), this.loading.then(WW))
+      run(RR) {
+        return null !== this.loaded ? RR(this.loaded) : (this.loading ??= this.load().then((RR => (this.loaded = RR, RR)), (RR => {
+          throw this.loading = null, RR
+        })), this.loading.then(RR))
       }
     }
-    class NW {
+    class uR {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new EW((() => Promise.all([OW.e(85), OW.e(264), OW.e(263), OW.e(289), OW.e(113), OW.e(290), OW.e(89), OW.e(86), OW.e(287), OW.e(87), OW.e(88), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(311), OW.e(260), OW.e(278), OW.e(292), OW.e(295), OW.e(91), OW.e(252), OW.e(266), OW.e(112), OW.e(124), OW.e(257), OW.e(142), OW.e(90), OW.e(122), OW.e(310)]).then((() => OW(42563))))), this.characterScene = new EW((() => Promise.all([OW.e(85), OW.e(264), OW.e(263), OW.e(289), OW.e(113), OW.e(290), OW.e(89), OW.e(86), OW.e(287), OW.e(87), OW.e(88), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(311), OW.e(177), OW.e(260), OW.e(278), OW.e(292), OW.e(295), OW.e(91), OW.e(224), OW.e(252), OW.e(266), OW.e(112), OW.e(124), OW.e(257), OW.e(142), OW.e(90), OW.e(122), OW.e(279), OW.e(184)]).then((() => OW(42656)))))
+        this.sharesCharacter = !0, this.mobScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(310)]).then((() => GR(42616))))), this.characterScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(177), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(224), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(279), GR.e(184)]).then((() => GR(42729)))))
       }
-      openMob(WW) {
-        return this.mobScene.run((iW => iW.openMobPreview(WW)))
+      openMob(RR) {
+        return this.mobScene.run((JR => JR.openMobPreview(RR)))
       }
-      openPet(WW) {
-        return this.mobScene.run((iW => iW.openPetPreview(WW)))
+      openPet(RR) {
+        return this.mobScene.run((JR => JR.openPetPreview(RR)))
       }
-      openMobLineup(WW) {
-        return this.mobScene.run((iW => iW.openMobLineupPreview(WW)))
+      openMobLineup(RR) {
+        return this.mobScene.run((JR => JR.openMobLineupPreview(RR)))
       }
-      openCharacter(WW, iW) {
-        return this.characterScene.run((OW => OW.openCharacterPreview(WW, iW)))
+      openCharacter(RR, JR) {
+        return this.characterScene.run((GR => GR.openCharacterPreview(RR, JR)))
       }
     }
-    mW.f.setDefaultHost((() => new NW))
+    yR.l.setDefaultHost((() => new uR))
   },
-  7659: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      g: () => NW
+  7802: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      d: () => uR
     });
-    var mW = OW(39);
-    const EW = "shaderPack";
-    async function NW() {
-      var WW;
-      let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (WW = await mW.f.getItem(EW, iW)) && void 0 !== WW ? WW : null
+    var yR = GR(46);
+    const tR = "shaderPack";
+    async function uR() {
+      var RR;
+      let JR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (RR = await yR.g.getItem(tR, JR)) && void 0 !== RR ? RR : null
     }
   },
-  35150: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      return WW && !iW
+  35064: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      return RR && !JR
     }
-    OW.d(iW, {
-      c: () => mW
+    GR.d(JR, {
+      b: () => yR
     })
   },
-  35167: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  35085: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR
     });
-    var mW = OW(1303);
+    var yR = GR(1406);
 
-    function EW() {
-      var WW, iW;
-      return null !== (WW = null === (iW = screen.orientation) || void 0 === iW ? void 0 : iW.type) && void 0 !== WW ? WW : innerWidth > innerHeight ? "landscape" : "portrait"
+    function tR() {
+      var RR, JR;
+      return null !== (RR = null === (JR = screen.orientation) || void 0 === JR ? void 0 : JR.type) && void 0 !== RR ? RR : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const NW = new class {
+    const uR = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && EW() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && tR() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = EW(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, mW.ub)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = tR(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, yR.ma)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -12937,260 +12937,260 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const WW of this.resizers) WW()
+            for (const RR of this.resizers) RR()
           }
         }), 1e3)
       }
-      heldSizer(WW) {
-        let iW = !1;
+      heldSizer(RR) {
+        let JR = !1;
         return () => {
-          if (iW && this.isHeld()) return null;
-          const OW = WW();
-          return iW ||= null !== OW, OW
+          if (JR && this.isHeld()) return null;
+          const GR = RR();
+          return JR ||= null !== GR, GR
         }
       }
-      onRelease(WW) {
-        return this.resizers.add(WW), () => {
-          this.resizers.delete(WW)
+      onRelease(RR) {
+        return this.resizers.add(RR), () => {
+          this.resizers.delete(RR)
         }
       }
     }
   },
-  35118: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => kW,
-      i: () => wW,
-      l: () => bW,
-      m: () => AW
+  35035: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => UR,
+      e: () => fR,
+      f: () => aR,
+      j: () => eR
     });
-    var mW = OW(154),
-      EW = OW(1259),
-      NW = OW(1185),
-      PW = OW(1111),
-      LW = OW(1850);
-    const cW = {
+    var yR = GR(163),
+      tR = GR(1359),
+      uR = GR(1282),
+      ZR = GR(1201),
+      qR = GR(1939);
+    const iR = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function wW(WW) {
-      return cW[WW]
+    function fR(RR) {
+      return iR[RR]
     }
 
-    function tW(WW) {
-      return (0, LW.c)(WW) ? "outdated" : WW instanceof mW.c ? 429 === WW.httpCode ? "busy" : "server" : "offline"
+    function VR(RR) {
+      return (0, qR.b)(RR) ? "outdated" : RR instanceof yR.d ? 429 === RR.httpCode ? "busy" : "server" : "offline"
     }
 
-    function ZW(WW, iW, OW) {
-      return (0, PW.postJsonWithMetricsCookiesAndJsonResponse)(`${NW.clientSideServerUrls.indexUrl}${iW}`, OW, {
+    function KR(RR, JR, GR) {
+      return (0, ZR.postJsonWithMetricsCookiesAndJsonResponse)(`${uR.clientSideServerUrls.indexUrl}${JR}`, GR, {
         retries: 3
-      }, WW.getMetricsCookies()).catch((WW => (console.error("Bad response from the server when trying to change name:", iW, WW), {
+      }, RR.getMetricsCookies()).catch((RR => (console.error("Bad response from the server when trying to change name:", JR, RR), {
         outcome: "failed",
-        failure: tW(WW)
+        failure: VR(RR)
       })))
     }
 
-    function xW(WW) {
-      return "outcome" in WW && "failed" === WW.outcome
+    function wR(RR) {
+      return "outcome" in RR && "failed" === RR.outcome
     }
 
-    function lW(WW) {
-      return console.error("Error when trying to get with new name from DB", WW), {
+    function rR(RR) {
+      return console.error("Error when trying to get with new name from DB", RR), {
         outcome: "refused",
-        message: WW
+        message: RR
       }
     }
-    async function AW(WW) {
-      const iW = await ZW(WW, "/index/name/random", {});
-      return xW(iW) ? iW : "err" in iW ? lW(iW.err) : (WW.setPlayerName(iW.name), {
+    async function eR(RR) {
+      const JR = await KR(RR, "/index/name/random", {});
+      return wR(JR) ? JR : "err" in JR ? rR(JR.err) : (RR.setPlayerName(JR.name), {
         outcome: "changed",
-        name: iW.name
+        name: JR.name
       })
     }
-    async function bW(WW, iW) {
-      const OW = await ZW(WW, "/index/name/update", {
-        name: iW
+    async function aR(RR, JR) {
+      const GR = await KR(RR, "/index/name/update", {
+        name: JR
       });
-      return xW(OW) ? OW : "err" in OW ? lW(OW.err) : OW.nameExists ? {
+      return wR(GR) ? GR : "err" in GR ? rR(GR.err) : GR.nameExists ? {
         outcome: "taken"
-      } : (WW.setPlayerName(iW), {
+      } : (RR.setPlayerName(JR), {
         outcome: "changed",
-        name: iW
+        name: JR
       })
     }
 
-    function jW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const mW = 1 === iW ? 1 : 10 ** (iW - 1),
-        NW = String(mW + Math.floor(OW() * (10 ** iW - mW)));
-      return `${WW.slice(0,EW.f-iW)}${NW}`
+    function LR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const yR = 1 === JR ? 1 : 10 ** (JR - 1),
+        uR = String(yR + Math.floor(GR() * (10 ** JR - yR)));
+      return `${RR.slice(0,tR.i-JR)}${uR}`
     }
-    const UW = [1, 2, 3, 4];
-    async function kW(WW, iW) {
-      const OW = await bW(WW, iW);
-      if ("taken" !== OW.outcome) return OW;
-      for (const mW of UW) {
-        const OW = jW(iW, mW),
-          EW = await bW(WW, OW);
-        if ("taken" !== EW.outcome) return EW
+    const nR = [1, 2, 3, 4];
+    async function UR(RR, JR) {
+      const GR = await aR(RR, JR);
+      if ("taken" !== GR.outcome) return GR;
+      for (const yR of nR) {
+        const GR = LR(JR, yR),
+          tR = await aR(RR, GR);
+        if ("taken" !== tR.outcome) return tR
       }
       return {
         outcome: "taken"
       }
     }
   },
-  35130: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      e: () => EW
+  35051: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      g: () => tR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW() {
-      mW = performance.now()
+    function tR() {
+      yR = performance.now()
     }
 
-    function NW() {
-      return mW
+    function uR() {
+      return yR
     }
   },
-  35157: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      e: () => cW
+  35067: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR,
+      h: () => iR
     });
-    var mW = OW(25);
-    const EW = 24,
-      NW = "farNametags",
-      PW = 1e5;
+    var yR = GR(25);
+    const tR = 24,
+      uR = "farNametags",
+      ZR = 1e5;
 
-    function LW() {
-      var WW;
-      return null === (WW = mW.d.get("showDistantNametags")) || void 0 === WW || WW
+    function qR() {
+      var RR;
+      return null === (RR = yR.d.get("showDistantNametags")) || void 0 === RR || RR
     }
 
-    function cW() {
-      var WW;
-      return null !== (WW = function() {
-        const WW = new URLSearchParams(window.location.search).get(NW),
-          iW = null === WW || "" === WW ? NaN : Number(WW);
-        return Number.isFinite(iW) && iW >= 0 ? Math.min(iW, PW) : null
-      }()) && void 0 !== WW ? WW : LW() ? 0 : EW
+    function iR() {
+      var RR;
+      return null !== (RR = function() {
+        const RR = new URLSearchParams(window.location.search).get(uR),
+          JR = null === RR || "" === RR ? NaN : Number(RR);
+        return Number.isFinite(JR) && JR >= 0 ? Math.min(JR, ZR) : null
+      }()) && void 0 !== RR ? RR : qR() ? 0 : tR
     }
   },
-  35247: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW,
-      f: () => tW
+  35176: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR,
+      i: () => VR
     });
-    const mW = .01,
-      EW = .08,
-      NW = .01,
-      PW = 5,
-      LW = 100,
-      cW = 40,
-      wW = 800;
+    const yR = .01,
+      tR = .08,
+      uR = .01,
+      ZR = 5,
+      qR = 100,
+      iR = 40,
+      fR = 800;
 
-    function tW(WW) {
+    function VR(RR) {
       const {
-        canvas: iW
-      } = WW;
-      let OW = null;
-      const tW = WW => {
-          var mW;
-          OW = {
-            pointer: WW.pointerId,
-            x: WW.clientX,
-            y: WW.clientY
-          }, null === (mW = iW.setPointerCapture) || void 0 === mW || mW.call(iW, WW.pointerId)
+        canvas: JR
+      } = RR;
+      let GR = null;
+      const VR = RR => {
+          var yR;
+          GR = {
+            pointer: RR.pointerId,
+            x: RR.clientX,
+            y: RR.clientY
+          }, null === (yR = JR.setPointerCapture) || void 0 === yR || yR.call(JR, RR.pointerId)
         },
-        ZW = iW => {
-          var EW;
-          const PW = WW.orbit;
-          if ((null === (EW = OW) || void 0 === EW ? void 0 : EW.pointer) !== iW.pointerId || null === PW) return;
-          const LW = iW.clientX - OW.x,
-            cW = iW.clientY - OW.y;
-          OW = {
-            ...OW,
-            x: iW.clientX,
-            y: iW.clientY
-          }, WW.setOrbit({
-            alpha: PW.alpha - LW * mW,
-            beta: Math.min(Math.PI - NW, Math.max(NW, PW.beta - cW * mW)),
-            radius: PW.radius
+        KR = JR => {
+          var tR;
+          const ZR = RR.orbit;
+          if ((null === (tR = GR) || void 0 === tR ? void 0 : tR.pointer) !== JR.pointerId || null === ZR) return;
+          const qR = JR.clientX - GR.x,
+            iR = JR.clientY - GR.y;
+          GR = {
+            ...GR,
+            x: JR.clientX,
+            y: JR.clientY
+          }, RR.setOrbit({
+            alpha: ZR.alpha - qR * yR,
+            beta: Math.min(Math.PI - uR, Math.max(uR, ZR.beta - iR * yR)),
+            radius: ZR.radius
           })
         },
-        xW = WW => {
-          var iW;
-          (null === (iW = OW) || void 0 === iW ? void 0 : iW.pointer) === WW.pointerId && (OW = null)
+        wR = RR => {
+          var JR;
+          (null === (JR = GR) || void 0 === JR ? void 0 : JR.pointer) === RR.pointerId && (GR = null)
         },
-        lW = iW => {
-          const OW = WW.orbit;
-          if (null === OW) return;
-          iW.preventDefault();
-          const mW = iW.deltaY * (iW.deltaMode === WheelEvent.DOM_DELTA_LINE ? cW : iW.deltaMode === WheelEvent.DOM_DELTA_PAGE ? wW : 1),
-            NW = Math.min(LW, Math.max(PW, OW.radius + mW * EW));
-          WW.setOrbit({
-            ...OW,
-            radius: NW
+        rR = JR => {
+          const GR = RR.orbit;
+          if (null === GR) return;
+          JR.preventDefault();
+          const yR = JR.deltaY * (JR.deltaMode === WheelEvent.DOM_DELTA_LINE ? iR : JR.deltaMode === WheelEvent.DOM_DELTA_PAGE ? fR : 1),
+            uR = Math.min(qR, Math.max(ZR, GR.radius + yR * tR));
+          RR.setOrbit({
+            ...GR,
+            radius: uR
           })
         };
-      return iW.style.touchAction = "none", iW.addEventListener("pointerdown", tW), iW.addEventListener("pointermove", ZW), iW.addEventListener("pointerup", xW), iW.addEventListener("pointercancel", xW), iW.addEventListener("wheel", lW, {
+      return JR.style.touchAction = "none", JR.addEventListener("pointerdown", VR), JR.addEventListener("pointermove", KR), JR.addEventListener("pointerup", wR), JR.addEventListener("pointercancel", wR), JR.addEventListener("wheel", rR, {
         passive: !1
       }), () => {
-        iW.removeEventListener("pointerdown", tW), iW.removeEventListener("pointermove", ZW), iW.removeEventListener("pointerup", xW), iW.removeEventListener("pointercancel", xW), iW.removeEventListener("wheel", lW)
+        JR.removeEventListener("pointerdown", VR), JR.removeEventListener("pointermove", KR), JR.removeEventListener("pointerup", wR), JR.removeEventListener("pointercancel", wR), JR.removeEventListener("wheel", rR)
       }
     }
   },
-  35175: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      g: () => ZW,
-      k: () => tW
+  35094: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => fR,
+      f: () => KR,
+      i: () => VR
     });
-    var mW = OW(248),
-      EW = OW(100),
-      NW = OW(131),
-      PW = OW(128),
-      LW = OW(669);
-    const cW = new Set(["mali_bifrost"]);
+    var yR = GR(279),
+      tR = GR(103),
+      uR = GR(132),
+      ZR = GR(127),
+      qR = GR(706);
+    const iR = new Set(["mali_bifrost"]);
 
-    function wW() {
-      if (LW.g) return;
-      const WW = (0, EW.pageOperatingSystem)();
-      if ("android" !== WW && "windows" !== WW || (0, LW.c)("webgl_default")) return;
-      if ("windows" === WW) return WW => "qualcomm" === (0, EW.normaliseGpuVendor)((0, PW.b)(WW).vendor);
-      const iW = (0, NW.j)(),
-        OW = null === iW ? (0, mW.t)() : (0, mW.i)(iW.vendor, iW.renderer);
-      return null !== OW && cW.has(OW) ? WW => (0, mW.p)((0, PW.b)(WW).vendor, OW) : void 0
+    function fR() {
+      if (qR.e) return;
+      const RR = (0, tR.pageOperatingSystem)();
+      if ("android" !== RR && "windows" !== RR || (0, qR.c)("webgl_default")) return;
+      if ("windows" === RR) return RR => "qualcomm" === (0, tR.normaliseGpuVendor)((0, ZR.b)(RR).vendor);
+      const JR = (0, uR.o)(),
+        GR = null === JR ? (0, yR.u)() : (0, yR.k)(JR.vendor, JR.renderer);
+      return null !== GR && iR.has(GR) ? RR => (0, yR.q)((0, ZR.b)(RR).vendor, GR) : void 0
     }
 
-    function tW(WW, iW) {
-      return WW ? () => !0 : iW()
+    function VR(RR, JR) {
+      return RR ? () => !0 : JR()
     }
-    async function ZW(WW) {
+    async function KR(RR) {
       try {
-        const iW = tW(WW, wW),
-          OW = navigator.gpu;
-        if (void 0 === iW || void 0 === OW) return !1;
-        const mW = await (0, PW.i)(OW, {
+        const JR = VR(RR, fR),
+          GR = navigator.gpu;
+        if (void 0 === JR || void 0 === GR) return !1;
+        const yR = await (0, ZR.i)(GR, {
           seed: !1,
-          compatibility: iW
+          compatibility: JR
         });
-        return "string" !== typeof mW && mW.compatibility && !(0, PW.e)(mW.adapter)
-      } catch (iW) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", iW), !1
+        return "string" !== typeof yR && yR.compatibility && !(0, ZR.e)(yR.adapter)
+      } catch (JR) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", JR), !1
       }
     }
   },
-  35243: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      g: () => PW
+  35174: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      i: () => ZR
     });
-    const mW = [{
+    const yR = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -13372,79 +13372,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function EW(WW) {
-      let iW, OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof WW) {
-        if (!Number.isFinite(WW)) return "0";
-        if (Math.abs(WW) < 100) {
-          const iW = WW < 0 ? "-" : "",
-            OW = Math.abs(WW);
-          return OW >= 10 ? `${iW}${OW.toFixed(1).replace(/\.0$/,"")}` : `${iW}${OW.toFixed(2).replace(/\.?0+$/,"")}`
+    function tR(RR) {
+      let JR, GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof RR) {
+        if (!Number.isFinite(RR)) return "0";
+        if (Math.abs(RR) < 100) {
+          const JR = RR < 0 ? "-" : "",
+            GR = Math.abs(RR);
+          return GR >= 10 ? `${JR}${GR.toFixed(1).replace(/\.0$/,"")}` : `${JR}${GR.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        iW = BigInt(Math.floor(WW))
-      } else iW = WW;
-      const EW = iW < 0n ? -iW : iW,
-        NW = iW < 0n ? "-" : "",
-        PW = EW.toString();
-      if (PW.length <= OW) return `${NW}${PW}`;
-      const LW = 3 * Math.floor((PW.length - 1) / 3);
-      if (LW < 3) return `${NW}${PW}`;
-      if (LW > 3 * mW.length) {
-        const WW = PW[0],
-          iW = PW.slice(1, 3).replace(/0+$/, "");
-        return `${NW}${iW?`${WW}.${iW}`:WW}e${PW.length-1}`
+        JR = BigInt(Math.floor(RR))
+      } else JR = RR;
+      const tR = JR < 0n ? -JR : JR,
+        uR = JR < 0n ? "-" : "",
+        ZR = tR.toString();
+      if (ZR.length <= GR) return `${uR}${ZR}`;
+      const qR = 3 * Math.floor((ZR.length - 1) / 3);
+      if (qR < 3) return `${uR}${ZR}`;
+      if (qR > 3 * yR.length) {
+        const RR = ZR[0],
+          JR = ZR.slice(1, 3).replace(/0+$/, "");
+        return `${uR}${JR?`${RR}.${JR}`:RR}e${ZR.length-1}`
       }
       const {
-        threshold: cW,
-        suffix: wW
-      } = mW[mW.length - LW / 3], tW = EW / cW, ZW = Number(1000n * (EW % cW) / cW), xW = Number(tW) + ZW / 1e3;
-      let lW;
-      return lW = xW >= 100 ? Math.floor(xW).toString() : xW >= 10 ? xW.toFixed(1).replace(/\.0$/, "") : xW.toFixed(2).replace(/\.?0+$/, ""), `${NW}${lW}${wW}`
+        threshold: iR,
+        suffix: fR
+      } = yR[yR.length - qR / 3], VR = tR / iR, KR = Number(1000n * (tR % iR) / iR), wR = Number(VR) + KR / 1e3;
+      let rR;
+      return rR = wR >= 100 ? Math.floor(wR).toString() : wR >= 10 ? wR.toFixed(1).replace(/\.0$/, "") : wR.toFixed(2).replace(/\.?0+$/, ""), `${uR}${rR}${fR}`
     }
-    const NW = mW.map((WW => {
+    const uR = yR.map((RR => {
       let {
-        threshold: iW,
-        suffix: OW
-      } = WW;
+        threshold: JR,
+        suffix: GR
+      } = RR;
       return {
-        threshold: Number(iW),
-        suffix: OW
+        threshold: Number(JR),
+        suffix: GR
       }
-    })).filter((WW => {
+    })).filter((RR => {
       let {
-        threshold: iW
-      } = WW;
-      return Number.isFinite(iW)
+        threshold: JR
+      } = RR;
+      return Number.isFinite(JR)
     }));
 
-    function PW(WW) {
-      const iW = Math.abs(WW),
-        OW = WW < 0 ? "-" : "";
+    function ZR(RR) {
+      const JR = Math.abs(RR),
+        GR = RR < 0 ? "-" : "";
       for (const {
-          threshold: mW,
-          suffix: EW
+          threshold: yR,
+          suffix: tR
         }
-        of NW)
-        if (iW >= mW) {
-          const WW = iW / mW;
-          if (WW >= 1e3) return `${OW}${iW.toExponential(2).replace("e+","e")}`;
-          let NW;
-          return NW = WW >= 100 ? Math.floor(WW).toString() : WW >= 10 ? WW.toFixed(1).replace(/\.0$/, "") : WW.toFixed(2).replace(/\.?0+$/, ""), `${OW}${NW}${EW}`
-        } return `${OW}${iW}`
+        of uR)
+        if (JR >= yR) {
+          const RR = JR / yR;
+          if (RR >= 1e3) return `${GR}${JR.toExponential(2).replace("e+","e")}`;
+          let uR;
+          return uR = RR >= 100 ? Math.floor(RR).toString() : RR >= 10 ? RR.toFixed(1).replace(/\.0$/, "") : RR.toFixed(2).replace(/\.?0+$/, ""), `${GR}${uR}${tR}`
+        } return `${GR}${JR}`
     }
   },
-  35225: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => tW,
-      e: () => xW,
-      g: () => ZW,
-      k: () => PW,
-      o: () => wW,
-      q: () => cW
+  35150: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => VR,
+      i: () => wR,
+      k: () => KR,
+      o: () => ZR,
+      r: () => fR,
+      v: () => iR
     });
-    var mW = OW(344);
-    const EW = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      NW = {
+    var yR = GR(377);
+    const tR = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      uR = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -13519,13 +13519,13 @@ export const modules = {
         }
       };
 
-    function PW(WW) {
-      var iW;
-      return null !== (iW = NW[WW]) && void 0 !== iW ? iW : {
+    function ZR(RR) {
+      var JR;
+      return null !== (JR = uR[RR]) && void 0 !== JR ? JR : {
         translationKey: ""
       }
     }
-    const LW = {
+    const qR = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -13578,77 +13578,77 @@ export const modules = {
       }]
     };
 
-    function cW(WW) {
-      return EW.includes(WW)
+    function iR(RR) {
+      return tR.includes(RR)
     }
 
-    function wW(WW) {
-      var iW;
-      return !0 === (null === WW || void 0 === WW || null === (iW = WW.customAttributes) || void 0 === iW ? void 0 : iW.cannotEnchant)
+    function fR(RR) {
+      var JR;
+      return !0 === (null === RR || void 0 === RR || null === (JR = RR.customAttributes) || void 0 === JR ? void 0 : JR.cannotEnchant)
     }
 
-    function tW(WW, iW) {
+    function VR(RR, JR) {
       const {
-        max: OW
-      } = LW[WW].at(-1);
-      return iW <= OW
+        max: GR
+      } = qR[RR].at(-1);
+      return JR <= GR
     }
 
-    function ZW(WW) {
-      const iW = Math.sin(WW / 80),
-        OW = WW => {
-          if (WW <= 0) return 0;
-          if (WW > 1) return 1;
-          let iW = 0;
-          const OW = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let mW = 0; mW < OW.length; mW++) {
-            iW += (mW % 2 === 0 ? 1 : -1) * OW[mW] * Math.pow(WW, 2 + mW) / (2 + mW)
+    function KR(RR) {
+      const JR = Math.sin(RR / 80),
+        GR = RR => {
+          if (RR <= 0) return 0;
+          if (RR > 1) return 1;
+          let JR = 0;
+          const GR = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let yR = 0; yR < GR.length; yR++) {
+            JR += (yR % 2 === 0 ? 1 : -1) * GR[yR] * Math.pow(RR, 2 + yR) / (2 + yR)
           }
-          return 72 * iW
+          return 72 * JR
         },
-        mW = .3 - .78 * iW,
-        EW = .5 - .78 * iW,
-        NW = .6 - .7 * iW,
-        PW = .8 - .6 * iW;
-      let LW = OW(mW),
-        cW = OW(EW) - LW,
-        wW = OW(NW) - cW - LW,
-        tW = OW(PW) - wW - cW - LW;
-      mW < .041 && (cW /= 1 - LW, wW /= 1 - LW, tW /= 1 - LW, LW = 0), EW < .041 && (LW /= 1 - cW, wW /= 1 - cW, tW /= 1 - cW, cW = 0), NW < .041 && (LW /= 1 - wW, cW /= 1 - wW, tW /= 1 - wW, wW = 0), PW < .041 && (LW /= 1 - tW, cW /= 1 - tW, wW /= 1 - tW, tW = 0);
+        yR = .3 - .78 * JR,
+        tR = .5 - .78 * JR,
+        uR = .6 - .7 * JR,
+        ZR = .8 - .6 * JR;
+      let qR = GR(yR),
+        iR = GR(tR) - qR,
+        fR = GR(uR) - iR - qR,
+        VR = GR(ZR) - fR - iR - qR;
+      yR < .041 && (iR /= 1 - qR, fR /= 1 - qR, VR /= 1 - qR, qR = 0), tR < .041 && (qR /= 1 - iR, fR /= 1 - iR, VR /= 1 - iR, iR = 0), uR < .041 && (qR /= 1 - fR, iR /= 1 - fR, VR /= 1 - fR, fR = 0), ZR < .041 && (qR /= 1 - VR, iR /= 1 - VR, fR /= 1 - VR, VR = 0);
       return {
-        commonProb: LW,
-        uncommonProb: cW,
-        rareProb: wW,
-        epicProb: tW,
-        legendaryProb: 1 - (tW + wW + cW + LW)
+        commonProb: qR,
+        uncommonProb: iR,
+        rareProb: fR,
+        epicProb: VR,
+        legendaryProb: 1 - (VR + fR + iR + qR)
       }
     }
 
-    function xW(WW, iW) {
+    function wR(RR, JR) {
       const {
-        min: OW,
-        max: EW
-      } = LW[WW][iW], NW = mW.e.sampleUniformIntDistribution(OW, EW, "includeMax");
+        min: GR,
+        max: tR
+      } = qR[RR][JR], uR = yR.e.sampleUniformIntDistribution(GR, tR, "includeMax");
       return {
-        ...ZW(NW),
-        level: NW
+        ...KR(uR),
+        level: uR
       }
     }
   },
-  35198: () => {},
-  35279: () => {},
-  13952: WW => {
-    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  35113: () => {},
+  35211: () => {},
+  14020: RR => {
+    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  15078: WW => {
-    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  15168: RR => {
+    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  16479: WW => {
-    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  16520: RR => {
+    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  17016: WW => {
-    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  17051: RR => {
+    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

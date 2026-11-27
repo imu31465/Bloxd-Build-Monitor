@@ -1,394 +1,394 @@
 export const id = 266;
 export const ids = [266];
 export const modules = {
-  38323: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => LW,
-      g: () => PW,
-      i: () => EW
+  38279: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      d: () => ZR,
+      g: () => tR
     });
-    const mW = 1024,
-      EW = 16,
-      NW = 36e4;
-    class PW {
-      constructor(WW) {
-        this.boneCount = WW, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * WW), this.position = new Float64Array(3 * WW), this.scale = new Float64Array(3 * WW).fill(1), this.touched = new Uint8Array(WW)
+    const yR = 1024,
+      tR = 16,
+      uR = 36e4;
+    class ZR {
+      constructor(RR) {
+        this.boneCount = RR, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * RR), this.position = new Float64Array(3 * RR), this.scale = new Float64Array(3 * RR).fill(1), this.touched = new Uint8Array(RR)
       }
       clampToLimits() {
-        for (let WW = 0; WW < this.boneCount; WW++)
-          if (0 !== this.touched[WW])
-            for (let iW = 3 * WW; iW < 3 * WW + 3; iW++) {
-              const WW = this.rotation[iW],
-                OW = this.position[iW],
-                PW = this.scale[iW];
-              WW >= -36e4 && WW <= NW || (this.rotation[iW] = cW(WW, NW)), OW >= -1024 && OW <= mW || (this.position[iW] = cW(OW, mW)), PW >= -EW && PW <= EW || (this.scale[iW] = cW(PW, EW, 1))
+        for (let RR = 0; RR < this.boneCount; RR++)
+          if (0 !== this.touched[RR])
+            for (let JR = 3 * RR; JR < 3 * RR + 3; JR++) {
+              const RR = this.rotation[JR],
+                GR = this.position[JR],
+                ZR = this.scale[JR];
+              RR >= -36e4 && RR <= uR || (this.rotation[JR] = iR(RR, uR)), GR >= -1024 && GR <= yR || (this.position[JR] = iR(GR, yR)), ZR >= -tR && ZR <= tR || (this.scale[JR] = iR(ZR, tR, 1))
             }
       }
       reset() {
-        for (let WW = 0; WW < this.boneCount; WW++)
-          if (0 !== this.touched[WW]) {
-            this.touched[WW] = 0;
-            for (let iW = 3 * WW; iW < 3 * WW + 3; iW++) this.rotation[iW] = 0, this.position[iW] = 0, this.scale[iW] = 1
+        for (let RR = 0; RR < this.boneCount; RR++)
+          if (0 !== this.touched[RR]) {
+            this.touched[RR] = 0;
+            for (let JR = 3 * RR; JR < 3 * RR + 3; JR++) this.rotation[JR] = 0, this.position[JR] = 0, this.scale[JR] = 1
           }
       }
     }
-    class LW {
-      constructor(WW) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * WW), this.position = new Float64Array(3 * WW), this.scaleDelta = new Float64Array(3 * WW), this.boneWeight = new Float64Array(WW), this.touched = new Uint8Array(WW), this.overrides = new Uint8Array(WW), this.touchedBones = new Int32Array(WW)
+    class qR {
+      constructor(RR) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * RR), this.position = new Float64Array(3 * RR), this.scaleDelta = new Float64Array(3 * RR), this.boneWeight = new Float64Array(RR), this.touched = new Uint8Array(RR), this.overrides = new Uint8Array(RR), this.touchedBones = new Int32Array(RR)
       }
-      touch(WW, iW, OW) {
-        0 === this.touched[WW] && (this.touched[WW] = 1, this.touchedBones[this.touchedCount++] = WW), this.boneWeight[WW] += iW, OW && (this.overrides[WW] = 1)
+      touch(RR, JR, GR) {
+        0 === this.touched[RR] && (this.touched[RR] = 1, this.touchedBones[this.touchedCount++] = RR), this.boneWeight[RR] += JR, GR && (this.overrides[RR] = 1)
       }
-      applyTo(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let EW = 0; EW < this.touchedCount; EW++) {
-          const NW = this.touchedBones[EW],
-            PW = this.boneWeight[NW];
-          if (OW || 1 === this.overrides[NW]) {
-            const OW = iW * Math.min(1, PW);
-            for (let iW = 3 * NW; iW < 3 * NW + 3; iW++) WW.rotation[iW] += (this.rotation[iW] / PW - WW.rotation[iW]) * OW, WW.position[iW] += (this.position[iW] / PW - WW.position[iW]) * OW, WW.scale[iW] += (1 + this.scaleDelta[iW] / PW - WW.scale[iW]) * OW
+      applyTo(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let tR = 0; tR < this.touchedCount; tR++) {
+          const uR = this.touchedBones[tR],
+            ZR = this.boneWeight[uR];
+          if (GR || 1 === this.overrides[uR]) {
+            const GR = JR * Math.min(1, ZR);
+            for (let JR = 3 * uR; JR < 3 * uR + 3; JR++) RR.rotation[JR] += (this.rotation[JR] / ZR - RR.rotation[JR]) * GR, RR.position[JR] += (this.position[JR] / ZR - RR.position[JR]) * GR, RR.scale[JR] += (1 + this.scaleDelta[JR] / ZR - RR.scale[JR]) * GR
           } else {
-            const OW = mW && PW > 1 ? iW / PW : iW;
-            for (let iW = 3 * NW; iW < 3 * NW + 3; iW++) WW.rotation[iW] += this.rotation[iW] * OW, WW.position[iW] += this.position[iW] * OW, WW.scale[iW] *= 1 + this.scaleDelta[iW] * OW
+            const GR = yR && ZR > 1 ? JR / ZR : JR;
+            for (let JR = 3 * uR; JR < 3 * uR + 3; JR++) RR.rotation[JR] += this.rotation[JR] * GR, RR.position[JR] += this.position[JR] * GR, RR.scale[JR] *= 1 + this.scaleDelta[JR] * GR
           }
-          WW.touched[NW] = 1
+          RR.touched[uR] = 1
         }
       }
       clear() {
-        for (let WW = 0; WW < this.touchedCount; WW++) {
-          const iW = this.touchedBones[WW];
-          this.touched[iW] = 0, this.overrides[iW] = 0, this.boneWeight[iW] = 0;
-          for (let WW = 3 * iW; WW < 3 * iW + 3; WW++) this.rotation[WW] = 0, this.position[WW] = 0, this.scaleDelta[WW] = 0
+        for (let RR = 0; RR < this.touchedCount; RR++) {
+          const JR = this.touchedBones[RR];
+          this.touched[JR] = 0, this.overrides[JR] = 0, this.boneWeight[JR] = 0;
+          for (let RR = 3 * JR; RR < 3 * JR + 3; RR++) this.rotation[RR] = 0, this.position[RR] = 0, this.scaleDelta[RR] = 0
         }
         this.touchedCount = 0
       }
     }
 
-    function cW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(WW) ? OW : Math.min(iW, Math.max(-iW, WW))
+    function iR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(RR) ? GR : Math.min(JR, Math.max(-JR, RR))
     }
   },
-  38320: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => cW,
-      h: () => LW
+  38275: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR,
+      h: () => qR
     });
-    var mW = OW(38307),
-      EW = OW(344),
-      NW = OW(2012),
-      PW = OW(38323);
+    var yR = GR(38265),
+      tR = GR(377),
+      uR = GR(2102),
+      ZR = GR(38279);
 
-    function LW(WW) {
-      if ("kO" in WW) return TW.createAnimationScript(WW);
-      return new tW(WW).createAnimationScript()
+    function qR(RR) {
+      if ("LG" in RR) return lR.createAnimationScript(RR);
+      return new VR(RR).createAnimationScript()
     }
 
-    function cW(WW, iW, OW, EW) {
-      const NW = WW.kO <= 0 ? 1 : iW + OW * Math.max(0, EW) / WW.kO;
-      return WW.sO === mW.i.LoopOnLastFrame ? NW % 1 : WW.sO === mW.i.NoLoop && NW >= 1 ? null : Math.min(1, NW)
+    function iR(RR, JR, GR, tR) {
+      const uR = RR.LG <= 0 ? 1 : JR + GR * Math.max(0, tR) / RR.LG;
+      return RR.nG === yR.o.LoopOnLastFrame ? uR % 1 : RR.nG === yR.o.NoLoop && uR >= 1 ? null : Math.min(1, uR)
     }
-    class wW {
-      createAnimationScript(WW) {
+    class fR {
+      createAnimationScript(RR) {
         const {
-          kO: iW,
-          loop: OW,
-          MO: mW
-        } = WW;
+          LG: JR,
+          loop: GR,
+          UG: yR
+        } = RR;
         return {
-          kO: Math.round(iW),
-          sO: this.createLoopMode(null !== OW && void 0 !== OW && OW),
-          MO: this.createNodeSkeletonAnimationScript(null !== mW && void 0 !== mW ? mW : null)
+          LG: Math.round(JR),
+          nG: this.createLoopMode(null !== GR && void 0 !== GR && GR),
+          UG: this.createNodeSkeletonAnimationScript(null !== yR && void 0 !== yR ? yR : null)
         }
       }
-      createLoopMode(WW) {
-        switch (WW) {
+      createLoopMode(RR) {
+        switch (RR) {
           case !1:
-            return mW.i.NoLoop;
+            return yR.o.NoLoop;
           case !0:
-            return mW.i.LoopOnLastFrame;
+            return yR.o.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return mW.i.HoldOnLastFrame
+            return yR.o.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${WW}`)
+        throw new Error(`Invalid loop mode schema: ${RR}`)
       }
-      createNodeSkeletonAnimationScript(WW) {
-        if (null === WW) return null;
-        const iW = {};
-        for (const OW in WW) {
-          const mW = WW[OW];
-          iW[OW] = this.createNodeAnimationScript(mW)
+      createNodeSkeletonAnimationScript(RR) {
+        if (null === RR) return null;
+        const JR = {};
+        for (const GR in RR) {
+          const yR = RR[GR];
+          JR[GR] = this.createNodeAnimationScript(yR)
         }
-        return iW
+        return JR
       }
-      createNodeAnimationScript(WW) {
+      createNodeAnimationScript(RR) {
         const {
-          timeline: iW
-        } = WW, OW = iW.filter((WW => Number.isFinite(WW.timeFraction)));
-        return OW.sort(((WW, iW) => WW.timeFraction - iW.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(OW, "rotation", lW),
-          position: this.createTimelineFromKeyframes(OW, "position", bW),
-          scale: this.createTimelineFromKeyframes(OW, "scale", bW, UW)
+          timeline: JR
+        } = RR, GR = JR.filter((RR => Number.isFinite(RR.timeFraction)));
+        return GR.sort(((RR, JR) => RR.timeFraction - JR.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(GR, "rotation", rR),
+          position: this.createTimelineFromKeyframes(GR, "position", aR),
+          scale: this.createTimelineFromKeyframes(GR, "scale", aR, nR)
         }
       }
-      createTimelineFromKeyframes(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : WW => WW;
-        const EW = [];
-        for (const wW of WW) {
-          const WW = wW[iW];
-          if (WW) {
-            const iW = this.createAnimationFrameWithoutPrecomputes(wW.timeFraction, WW, mW);
-            ZW(iW) && EW.push(iW)
+      createTimelineFromKeyframes(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RR => RR;
+        const tR = [];
+        for (const fR of RR) {
+          const RR = fR[JR];
+          if (RR) {
+            const JR = this.createAnimationFrameWithoutPrecomputes(fR.timeFraction, RR, yR);
+            KR(JR) && tR.push(JR)
           }
         }
-        const NW = [];
-        for (let wW = 0; wW < EW.length; wW++) {
-          var PW, LW, cW;
-          const WW = EW[wW],
-            iW = null !== (PW = EW[wW - 1]) && void 0 !== PW ? PW : WW,
-            mW = null !== (LW = EW[wW + 1]) && void 0 !== LW ? LW : WW,
-            tW = null !== (cW = EW[wW + 2]) && void 0 !== cW ? cW : mW;
-          NW.push({
-            ...WW,
-            ...OW(iW.post, iW.timeFraction, WW.post, WW.timeFraction, mW.pre, mW.timeFraction, tW.pre, tW.timeFraction)
+        const uR = [];
+        for (let fR = 0; fR < tR.length; fR++) {
+          var ZR, qR, iR;
+          const RR = tR[fR],
+            JR = null !== (ZR = tR[fR - 1]) && void 0 !== ZR ? ZR : RR,
+            yR = null !== (qR = tR[fR + 1]) && void 0 !== qR ? qR : RR,
+            VR = null !== (iR = tR[fR + 2]) && void 0 !== iR ? iR : yR;
+          uR.push({
+            ...RR,
+            ...GR(JR.post, JR.timeFraction, RR.post, RR.timeFraction, yR.pre, yR.timeFraction, VR.pre, VR.timeFraction)
           })
         }
-        return NW
+        return uR
       }
-      createAnimationFrameWithoutPrecomputes(WW, iW, OW) {
-        let mW, EW, NW = null;
-        var PW;
-        if ("object" === typeof iW && "point" in iW) NW = null !== (PW = iW.YO) && void 0 !== PW ? PW : null, mW = iW.point, EW = iW.point;
-        else if ("object" === typeof iW && "pre" in iW) {
-          var LW;
-          NW = null !== (LW = iW.YO) && void 0 !== LW ? LW : null, mW = iW.pre, EW = iW.post
-        } else mW = iW, EW = iW;
+      createAnimationFrameWithoutPrecomputes(RR, JR, GR) {
+        let yR, tR, uR = null;
+        var ZR;
+        if ("object" === typeof JR && "point" in JR) uR = null !== (ZR = JR.CG) && void 0 !== ZR ? ZR : null, yR = JR.point, tR = JR.point;
+        else if ("object" === typeof JR && "pre" in JR) {
+          var qR;
+          uR = null !== (qR = JR.CG) && void 0 !== qR ? qR : null, yR = JR.pre, tR = JR.post
+        } else yR = JR, tR = JR;
         return {
-          timeFraction: WW,
-          YO: this.createLerpMode(NW),
-          pre: OW(mW),
-          post: OW(EW)
+          timeFraction: RR,
+          CG: this.createLerpMode(uR),
+          pre: GR(yR),
+          post: GR(tR)
         }
       }
-      createLerpMode(WW) {
-        return null === WW ? mW.f.Linear : wW.LERP_MODE_SCHEMA_MAPPING[WW]
+      createLerpMode(RR) {
+        return null === RR ? yR.l.Linear : fR.LERP_MODE_SCHEMA_MAPPING[RR]
       }
     }
-    wW.LERP_MODE_SCHEMA_MAPPING = {
-      linear: mW.f.Linear,
-      "catmull-rom-spline": mW.f.CatmullRomSpline
+    fR.LERP_MODE_SCHEMA_MAPPING = {
+      linear: yR.l.Linear,
+      "catmull-rom-spline": yR.l.CatmullRomSpline
     };
-    class tW {
-      constructor(WW) {
-        this.animationSchema = WW
+    class VR {
+      constructor(RR) {
+        this.animationSchema = RR
       }
       createAnimationScript() {
         const {
-          animation_length: WW,
-          loop: iW,
-          bones: OW
+          animation_length: RR,
+          loop: JR,
+          bones: GR
         } = this.animationSchema;
         return {
-          kO: Math.round(1e3 * WW),
-          sO: this.createLoopMode(null !== iW && void 0 !== iW && iW),
-          MO: this.createNodeSkeletonAnimationScript(null !== OW && void 0 !== OW ? OW : null)
+          LG: Math.round(1e3 * RR),
+          nG: this.createLoopMode(null !== JR && void 0 !== JR && JR),
+          UG: this.createNodeSkeletonAnimationScript(null !== GR && void 0 !== GR ? GR : null)
         }
       }
-      createLoopMode(WW) {
-        switch (WW) {
+      createLoopMode(RR) {
+        switch (RR) {
           case !1:
-            return mW.i.NoLoop;
+            return yR.o.NoLoop;
           case !0:
-            return mW.i.LoopOnLastFrame;
+            return yR.o.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return mW.i.HoldOnLastFrame
+            return yR.o.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${WW}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${RR}`)
       }
-      createNodeSkeletonAnimationScript(WW) {
-        if (null === WW) return null;
-        const iW = {};
-        for (const OW in WW) {
-          const mW = WW[OW];
-          iW[OW] = this.createNodeAnimationScript(mW)
+      createNodeSkeletonAnimationScript(RR) {
+        if (null === RR) return null;
+        const JR = {};
+        for (const GR in RR) {
+          const yR = RR[GR];
+          JR[GR] = this.createNodeAnimationScript(yR)
         }
-        return iW
+        return JR
       }
-      createNodeAnimationScript(WW) {
+      createNodeAnimationScript(RR) {
         const {
-          rotation: iW,
-          position: OW,
-          scale: mW
-        } = WW;
+          rotation: JR,
+          position: GR,
+          scale: yR
+        } = RR;
         return {
-          rotation: this.createAnimationTimeline(null !== iW && void 0 !== iW ? iW : null, sW, lW, !0),
-          position: this.createAnimationTimeline(null !== OW && void 0 !== OW ? OW : null, KW, bW, !1),
-          scale: this.createAnimationTimeline(null !== mW && void 0 !== mW ? mW : null, jW, bW, !1)
+          rotation: this.createAnimationTimeline(null !== JR && void 0 !== JR ? JR : null, WR, rR, !0),
+          position: this.createAnimationTimeline(null !== GR && void 0 !== GR ? GR : null, CR, aR, !1),
+          scale: this.createAnimationTimeline(null !== yR && void 0 !== yR ? yR : null, LR, aR, !1)
         }
       }
-      createAnimationTimeline(WW, iW, OW, mW) {
-        if (null === WW) return [];
-        (Array.isArray(WW) || "number" === typeof WW) && (WW = {
-          "0.0": WW
+      createAnimationTimeline(RR, JR, GR, yR) {
+        if (null === RR) return [];
+        (Array.isArray(RR) || "number" === typeof RR) && (RR = {
+          "0.0": RR
         });
-        const EW = Object.entries(WW).map((WW => {
-          let [OW, mW] = WW;
-          const EW = Number(OW) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(EW, mW, iW)
-        })).filter(ZW);
-        EW.sort(((WW, iW) => WW.timeFraction - iW.timeFraction)), mW && function(WW) {
-          for (let iW = 1; iW < WW.length; iW++) {
-            const OW = WW[iW - 1].post,
-              mW = WW[iW],
-              EW = SW(mW.pre),
-              NW = SW(mW.post),
-              PW = yW(OW, mW.pre);
-            yW(OW, EW) < PW && (WW[iW] = {
-              ...mW,
-              pre: EW,
-              post: NW
+        const tR = Object.entries(RR).map((RR => {
+          let [GR, yR] = RR;
+          const tR = Number(GR) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(tR, yR, JR)
+        })).filter(KR);
+        tR.sort(((RR, JR) => RR.timeFraction - JR.timeFraction)), yR && function(RR) {
+          for (let JR = 1; JR < RR.length; JR++) {
+            const GR = RR[JR - 1].post,
+              yR = RR[JR],
+              tR = XR(yR.pre),
+              uR = XR(yR.post),
+              ZR = BR(GR, yR.pre);
+            BR(GR, tR) < ZR && (RR[JR] = {
+              ...yR,
+              pre: tR,
+              post: uR
             })
           }
-        }(EW);
-        const NW = [];
-        for (let wW = 0; wW < EW.length; wW++) {
-          var PW, LW, cW;
-          const WW = EW[wW],
-            iW = null !== (PW = EW[wW - 1]) && void 0 !== PW ? PW : WW,
-            mW = null !== (LW = EW[wW + 1]) && void 0 !== LW ? LW : WW,
-            tW = null !== (cW = EW[wW + 2]) && void 0 !== cW ? cW : mW;
-          NW.push({
-            ...WW,
-            ...OW(iW.post, iW.timeFraction, WW.post, WW.timeFraction, mW.pre, mW.timeFraction, tW.pre, tW.timeFraction)
+        }(tR);
+        const uR = [];
+        for (let fR = 0; fR < tR.length; fR++) {
+          var ZR, qR, iR;
+          const RR = tR[fR],
+            JR = null !== (ZR = tR[fR - 1]) && void 0 !== ZR ? ZR : RR,
+            yR = null !== (qR = tR[fR + 1]) && void 0 !== qR ? qR : RR,
+            VR = null !== (iR = tR[fR + 2]) && void 0 !== iR ? iR : yR;
+          uR.push({
+            ...RR,
+            ...GR(JR.post, JR.timeFraction, RR.post, RR.timeFraction, yR.pre, yR.timeFraction, VR.pre, VR.timeFraction)
           })
         }
-        return NW
+        return uR
       }
-      createAnimationFrameWithoutPrecomputes(WW, iW, OW) {
-        let mW, EW, NW = null;
-        if ("object" === typeof iW && "post" in iW) {
-          var PW;
-          NW = null !== (PW = iW.lerp_mode) && void 0 !== PW ? PW : null, EW = OW(iW.post), mW = void 0 !== iW.pre ? OW(iW.pre) : EW
+      createAnimationFrameWithoutPrecomputes(RR, JR, GR) {
+        let yR, tR, uR = null;
+        if ("object" === typeof JR && "post" in JR) {
+          var ZR;
+          uR = null !== (ZR = JR.lerp_mode) && void 0 !== ZR ? ZR : null, tR = GR(JR.post), yR = void 0 !== JR.pre ? GR(JR.pre) : tR
         } else {
-          const WW = OW(iW);
-          EW = WW, mW = WW
+          const RR = GR(JR);
+          tR = RR, yR = RR
         }
         return {
-          timeFraction: WW,
-          YO: this.createLerpMode(NW),
-          pre: mW,
-          post: EW
+          timeFraction: RR,
+          CG: this.createLerpMode(uR),
+          pre: yR,
+          post: tR
         }
       }
-      createLerpMode(WW) {
-        return null === WW ? mW.f.Linear : tW.LERP_MODE_SCHEMA_MAPPING[WW]
+      createLerpMode(RR) {
+        return null === RR ? yR.l.Linear : VR.LERP_MODE_SCHEMA_MAPPING[RR]
       }
     }
 
-    function ZW(WW) {
-      return Number.isFinite(WW.timeFraction) && xW(WW.pre) && xW(WW.post)
+    function KR(RR) {
+      return Number.isFinite(RR.timeFraction) && wR(RR.pre) && wR(RR.post)
     }
 
-    function xW(WW) {
-      return Number.isFinite(WW[0]) && Number.isFinite(WW[1]) && Number.isFinite(WW[2])
+    function wR(RR) {
+      return Number.isFinite(RR[0]) && Number.isFinite(RR[1]) && Number.isFinite(RR[2])
     }
 
-    function lW(WW, iW, OW, mW, EW, NW, PW, LW) {
-      const cW = NW - iW,
-        wW = NW - mW,
-        tW = LW - mW,
-        ZW = [null, null, null];
-      for (let xW = 0; xW < ZW.length; xW++) ZW[xW] = AW(WW[xW], OW[xW], EW[xW], PW[xW], cW, tW);
+    function rR(RR, JR, GR, yR, tR, uR, ZR, qR) {
+      const iR = uR - JR,
+        fR = uR - yR,
+        VR = qR - yR,
+        KR = [null, null, null];
+      for (let wR = 0; wR < KR.length; wR++) KR[wR] = eR(RR[wR], GR[wR], tR[wR], ZR[wR], iR, VR);
       return {
-        yO: wW,
-        JO: ZW
+        XG: fR,
+        MG: KR
       }
     }
 
-    function AW(WW, iW, OW, mW, NW, PW) {
+    function eR(RR, JR, GR, yR, uR, ZR) {
       return {
-        HO: EW.e.computeShortestRotation(WW, OW) / NW,
-        nO: EW.e.computeShortestRotation(iW, mW) / PW,
-        delta: EW.e.computeShortestRotation(iW, OW)
+        pG: tR.e.computeShortestRotation(RR, GR) / uR,
+        gG: tR.e.computeShortestRotation(JR, yR) / ZR,
+        delta: tR.e.computeShortestRotation(JR, GR)
       }
     }
 
-    function bW(WW, iW, OW, mW, EW, NW, PW, LW) {
-      const cW = NW - iW,
-        wW = NW - mW,
-        tW = LW - mW,
-        ZW = [null, null, null];
-      for (let xW = 0; xW < ZW.length; xW++) ZW[xW] = {
-        HO: (EW[xW] - WW[xW]) / cW,
-        nO: (PW[xW] - OW[xW]) / tW,
-        delta: EW[xW] - OW[xW]
+    function aR(RR, JR, GR, yR, tR, uR, ZR, qR) {
+      const iR = uR - JR,
+        fR = uR - yR,
+        VR = qR - yR,
+        KR = [null, null, null];
+      for (let wR = 0; wR < KR.length; wR++) KR[wR] = {
+        pG: (tR[wR] - RR[wR]) / iR,
+        gG: (ZR[wR] - GR[wR]) / VR,
+        delta: tR[wR] - GR[wR]
       };
       return {
-        yO: wW,
-        JO: ZW
+        XG: fR,
+        MG: KR
       }
     }
 
-    function jW(WW) {
-      return UW("number" === typeof WW ? [WW, WW, WW] : WW)
+    function LR(RR) {
+      return nR("number" === typeof RR ? [RR, RR, RR] : RR)
     }
 
-    function UW(WW) {
-      return [kW(WW[0]), kW(WW[1]), kW(WW[2])]
+    function nR(RR) {
+      return [UR(RR[0]), UR(RR[1]), UR(RR[2])]
     }
 
-    function kW(WW) {
-      return Number.isFinite(WW) ? Math.min(PW.i, Math.max(-PW.i, WW)) : WW
+    function UR(RR) {
+      return Number.isFinite(RR) ? Math.min(ZR.g, Math.max(-ZR.g, RR)) : RR
     }
 
-    function sW(WW) {
-      const [iW, OW, mW] = WW, PW = -(0, NW.i)(iW), LW = -(0, NW.i)(OW), cW = (0, NW.i)(mW), wW = EW.e.quaternionFromEulerZYX(PW, LW, cW);
-      return EW.e.eulerYXZFromQuaternion(wW)
+    function WR(RR) {
+      const [JR, GR, yR] = RR, ZR = -(0, uR.g)(JR), qR = -(0, uR.g)(GR), iR = (0, uR.g)(yR), fR = tR.e.quaternionFromEulerZYX(ZR, qR, iR);
+      return tR.e.eulerYXZFromQuaternion(fR)
     }
-    tW.LERP_MODE_SCHEMA_MAPPING = {
-      linear: mW.f.Linear,
-      catmullrom: mW.f.CatmullRomSpline
+    VR.LERP_MODE_SCHEMA_MAPPING = {
+      linear: yR.l.Linear,
+      catmullrom: yR.l.CatmullRomSpline
     };
-    const MW = 1 / 16;
+    const AR = 1 / 16;
 
-    function KW(WW) {
-      return [-WW[0] * MW, WW[1] * MW, WW[2] * MW]
+    function CR(RR) {
+      return [-RR[0] * AR, RR[1] * AR, RR[2] * AR]
     }
 
-    function SW(WW) {
-      const [iW, OW, mW] = WW;
-      return [iW >= 0 ? Math.PI - iW : -Math.PI - iW, YW(OW + Math.PI), YW(mW + Math.PI)]
+    function XR(RR) {
+      const [JR, GR, yR] = RR;
+      return [JR >= 0 ? Math.PI - JR : -Math.PI - JR, MR(GR + Math.PI), MR(yR + Math.PI)]
     }
 
-    function YW(WW) {
-      return EW.e.mod(WW + Math.PI, 2 * Math.PI) - Math.PI
+    function MR(RR) {
+      return tR.e.mod(RR + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function yW(WW, iW) {
-      return Math.abs(EW.e.computeShortestRotation(WW[0], iW[0])) + Math.abs(EW.e.computeShortestRotation(WW[1], iW[1])) + Math.abs(EW.e.computeShortestRotation(WW[2], iW[2]))
+    function BR(RR, JR) {
+      return Math.abs(tR.e.computeShortestRotation(RR[0], JR[0])) + Math.abs(tR.e.computeShortestRotation(RR[1], JR[1])) + Math.abs(tR.e.computeShortestRotation(RR[2], JR[2]))
     }
-    const TW = new wW
+    const lR = new fR
   },
-  38307: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => PW,
-      d: () => NW,
-      f: () => mW,
-      i: () => EW
+  38265: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => ZR,
+      h: () => uR,
+      l: () => yR,
+      o: () => tR
     });
-    let mW = function(WW) {
-        return WW[WW.Linear = 0] = "Linear", WW[WW.CatmullRomSpline = 1] = "CatmullRomSpline", WW
+    let yR = function(RR) {
+        return RR[RR.Linear = 0] = "Linear", RR[RR.CatmullRomSpline = 1] = "CatmullRomSpline", RR
       }({}),
-      EW = function(WW) {
-        return WW[WW.NoLoop = 0] = "NoLoop", WW[WW.LoopOnLastFrame = 1] = "LoopOnLastFrame", WW[WW.HoldOnLastFrame = 2] = "HoldOnLastFrame", WW
+      tR = function(RR) {
+        return RR[RR.NoLoop = 0] = "NoLoop", RR[RR.LoopOnLastFrame = 1] = "LoopOnLastFrame", RR[RR.HoldOnLastFrame = 2] = "HoldOnLastFrame", RR
       }({}),
-      NW = function(WW) {
-        return WW[WW.Movement = 0] = "Movement", WW[WW.Action = 1] = "Action", WW[WW.Emote = 2] = "Emote", WW[WW.Custom = 3] = "Custom", WW
+      uR = function(RR) {
+        return RR[RR.Movement = 0] = "Movement", RR[RR.Action = 1] = "Action", RR[RR.Emote = 2] = "Emote", RR[RR.Custom = 3] = "Custom", RR
       }({}),
-      PW = function(WW) {
-        return WW[WW.Start = 0] = "Start", WW[WW.Stop = 1] = "Stop", WW
+      ZR = function(RR) {
+        return RR[RR.Start = 0] = "Start", RR[RR.Stop = 1] = "Stop", RR
       }({})
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,156 +1,156 @@
 export const id = 127;
 export const ids = [127];
 export const modules = {
-  42134: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => cW,
-      g: () => LW,
-      j: () => PW
+  42145: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR,
+      i: () => qR,
+      k: () => ZR
     });
-    var mW = OW(42137),
-      EW = OW(5546),
-      NW = OW(42146);
+    var yR = GR(42154),
+      tR = GR(5676),
+      uR = GR(42157);
 
-    function PW(WW) {
-      return WW.payloadKind === EW.hc.Msgpack ? (0, mW.d)(WW.payload) : void 0
+    function ZR(RR) {
+      return RR.payloadKind === tR.gc.Msgpack ? (0, yR.e)(RR.payload) : void 0
     }
 
-    function LW(WW, iW) {
-      if (iW.payloadKind === EW.hc.Bytes || iW.payloadKind === EW.hc.MsgpackBin) return (0, NW.c)(WW, iW.payload)
+    function qR(RR, JR) {
+      if (JR.payloadKind === tR.gc.Bytes || JR.payloadKind === tR.gc.MsgpackBin) return (0, uR.e)(RR, JR.payload)
     }
 
-    function cW(WW) {
-      return null !== WW && "object" === typeof WW
+    function iR(RR) {
+      return null !== RR && "object" === typeof RR
     }
   },
-  42149: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => ZW,
-      e: () => xW,
-      i: () => lW,
-      j: () => tW,
-      k: () => jW
+  42164: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => KR,
+      f: () => wR,
+      i: () => rR,
+      l: () => VR,
+      o: () => LR
     });
-    var mW = OW(5546),
-      EW = OW(42158);
-    const NW = new Map,
-      PW = new Set,
-      LW = new Set;
-    let cW = 0,
-      wW = 0;
+    var yR = GR(5676),
+      tR = GR(42170);
+    const uR = new Map,
+      ZR = new Set,
+      qR = new Set;
+    let iR = 0,
+      fR = 0;
 
-    function tW(WW, iW) {
-      let OW = NW.get(WW);
-      return OW || (OW = new Set, NW.set(WW, OW)), OW.add(iW), () => {
-        OW.delete(iW)
+    function VR(RR, JR) {
+      let GR = uR.get(RR);
+      return GR || (GR = new Set, uR.set(RR, GR)), GR.add(JR), () => {
+        GR.delete(JR)
       }
     }
 
-    function ZW() {
-      return 0 !== cW
+    function KR() {
+      return 0 !== iR
     }
 
-    function xW(WW) {
-      return PW.add(WW), () => {
-        PW.delete(WW)
+    function wR(RR) {
+      return ZR.add(RR), () => {
+        ZR.delete(RR)
       }
     }
 
-    function lW(WW) {
-      return LW.add(WW), () => {
-        LW.delete(WW)
+    function rR(RR) {
+      return qR.add(RR), () => {
+        qR.delete(RR)
       }
     }
-    const AW = "A raw message listener threw";
+    const eR = "A raw message listener threw";
 
-    function bW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW;
-      for (const mW of iW) try {
-        mW()
-      } catch (OW) {
-        WW ? (0, EW.n)(OW, AW) : console.error(AW, OW)
+    function aR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR;
+      for (const yR of JR) try {
+        yR()
+      } catch (GR) {
+        RR ? (0, tR.j)(GR, eR) : console.error(eR, GR)
       }
     }
-    const jW = {
-      fire: function(WW) {
-        if ("connection" === WW.type) {
-          const iW = WW.phase === mW.A.Activated && WW.conn !== cW && WW.conn > wW,
-            OW = (WW.phase === mW.A.Left || WW.phase === mW.A.Closed) && WW.conn === cW;
-          return void(iW || OW ? (cW = iW ? WW.conn : 0, bW(!0)) : WW.phase === mW.A.Resumed && 0 !== cW && WW.conn > wW && (cW = WW.conn, bW(!0, LW)))
+    const LR = {
+      fire: function(RR) {
+        if ("connection" === RR.type) {
+          const JR = RR.phase === yR.H.Activated && RR.conn !== iR && RR.conn > fR,
+            GR = (RR.phase === yR.H.Left || RR.phase === yR.H.Closed) && RR.conn === iR;
+          return void(JR || GR ? (iR = JR ? RR.conn : 0, aR(!0)) : RR.phase === yR.H.Resumed && 0 !== iR && RR.conn > fR && (iR = RR.conn, aR(!0, qR)))
         }
-        const iW = NW.get(WW.tP);
-        if (iW && WW.conn === cW && 0 !== cW)
-          for (const mW of iW) try {
-            mW(WW)
-          } catch (OW) {
-            (0, EW.n)(OW, AW)
+        const JR = uR.get(RR.LZ);
+        if (JR && RR.conn === iR && 0 !== iR)
+          for (const yR of JR) try {
+            yR(RR)
+          } catch (GR) {
+            (0, tR.j)(GR, eR)
           }
       },
-      close: function(WW) {
-        wW = Math.max(wW, WW, cW), 0 !== cW && (cW = 0, bW(!1))
+      close: function(RR) {
+        fR = Math.max(fR, RR, iR), 0 !== iR && (iR = 0, aR(!1))
       }
     }
   },
-  42125: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => wW,
-      g: () => cW,
-      k: () => LW
+  42132: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR,
+      h: () => iR,
+      l: () => qR
     });
-    var mW = OW(1259),
-      EW = OW(42094);
-    const NW = new TextDecoder,
-      PW = new TextEncoder;
+    var yR = GR(1359),
+      tR = GR(42106);
+    const uR = new TextDecoder,
+      ZR = new TextEncoder;
 
-    function LW(WW, iW) {
-      const OW = WW.queries.entityName(iW);
-      if (OW === EW.Yc) return;
-      const PW = WW.memoryData(WW.scratch(), 4 + OW, 4, "entity_name's answer");
-      if (!PW) return;
-      const LW = PW.getUint32(0, !0),
-        cW = NW.decode(new Uint8Array(PW.buffer, PW.byteOffset + 4, OW));
-      return (0, mW.b)(cW, !1, LW === EW.be ? null : LW)
+    function qR(RR, JR) {
+      const GR = RR.queries.entityName(JR);
+      if (GR === tR.xc) return;
+      const ZR = RR.memoryData(RR.scratch(), 4 + GR, 4, "entity_name's answer");
+      if (!ZR) return;
+      const qR = ZR.getUint32(0, !0),
+        iR = uR.decode(new Uint8Array(ZR.buffer, ZR.byteOffset + 4, GR));
+      return (0, yR.e)(iR, !1, qR === tR.Jd ? null : qR)
     }
 
-    function cW(WW, iW, OW) {
-      const mW = PW.encode(OW);
-      if (mW.length > EW.Mb) return !1;
-      const NW = WW.memoryView(Uint8Array, WW.scratch(), mW.length, "has_effect's name");
-      return !!NW && (NW.set(mW), 1 === WW.queries.hasEffect(iW, mW.length))
+    function iR(RR, JR, GR) {
+      const yR = ZR.encode(GR);
+      if (yR.length > tR.Ab) return !1;
+      const uR = RR.memoryView(Uint8Array, RR.scratch(), yR.length, "has_effect's name");
+      return !!uR && (uR.set(yR), 1 === RR.queries.hasEffect(JR, yR.length))
     }
 
-    function wW(WW, iW, OW, mW) {
-      const PW = WW.queries.blockData(iW, OW, mW);
-      if (PW === EW.Yc) return;
-      const LW = WW.memoryView(Uint8Array, WW.scratch(), PW, "block_data's answer");
-      return LW ? JSON.parse(NW.decode(LW)) : void 0
+    function fR(RR, JR, GR, yR) {
+      const ZR = RR.queries.blockData(JR, GR, yR);
+      if (ZR === tR.xc) return;
+      const qR = RR.memoryView(Uint8Array, RR.scratch(), ZR, "block_data's answer");
+      return qR ? JSON.parse(uR.decode(qR)) : void 0
     }
   },
-  42137: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      e: () => tW
+  42154: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      i: () => VR
     });
-    const mW = new TextDecoder;
+    const yR = new TextDecoder;
 
-    function EW(WW) {
-      const iW = new NW(WW),
-        OW = iW.value();
-      if (iW.at !== WW.length) throw new Error(`msgpack: ${WW.length-iW.at} bytes after the value`);
-      return OW
+    function tR(RR) {
+      const JR = new uR(RR),
+        GR = JR.value();
+      if (JR.at !== RR.length) throw new Error(`msgpack: ${RR.length-JR.at} bytes after the value`);
+      return GR
     }
-    class NW {
-      constructor(WW) {
-        this.bytes = WW, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(WW.buffer, WW.byteOffset, WW.byteLength)
+    class uR {
+      constructor(RR) {
+        this.bytes = RR, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(RR.buffer, RR.byteOffset, RR.byteLength)
       }
       value() {
-        const WW = this.u8();
-        if (WW <= 127) return WW;
-        if (WW >= 224) return WW - 256;
-        if (WW >= 128 && WW <= 143) return this.map(15 & WW);
-        if (WW >= 144 && WW <= 159) return this.array(15 & WW);
-        if (WW >= 160 && WW <= 191) return this.str(31 & WW);
-        switch (WW) {
+        const RR = this.u8();
+        if (RR <= 127) return RR;
+        if (RR >= 224) return RR - 256;
+        if (RR >= 128 && RR <= 143) return this.map(15 & RR);
+        if (RR >= 144 && RR <= 159) return this.array(15 & RR);
+        if (RR >= 160 && RR <= 191) return this.str(31 & RR);
+        switch (RR) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${WW.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${RR.toString(16)} at ${this.at-1}`)
         }
       }
-      take(WW) {
-        const iW = this.at;
-        if (iW + WW > this.bytes.length) throw new Error(`msgpack: ${WW} bytes past the end at ${iW}`);
-        return this.at = iW + WW, iW
+      take(RR) {
+        const JR = this.at;
+        if (JR + RR > this.bytes.length) throw new Error(`msgpack: ${RR} bytes past the end at ${JR}`);
+        return this.at = JR + RR, JR
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(WW) {
-        const iW = this.take(8);
-        return WW ? this.view.getBigInt64(iW, !1) : this.view.getBigUint64(iW, !1)
+      int64(RR) {
+        const JR = this.take(8);
+        return RR ? this.view.getBigInt64(JR, !1) : this.view.getBigUint64(JR, !1)
       }
-      str(WW) {
-        const iW = this.take(WW),
-          OW = this.bytes;
-        if (WW < 16) {
-          let EW = "";
-          for (let NW = iW; NW < iW + WW; NW++) {
-            const PW = OW[NW];
-            if (PW >= 128) return mW.decode(OW.subarray(iW, iW + WW));
-            EW += String.fromCharCode(PW)
+      str(RR) {
+        const JR = this.take(RR),
+          GR = this.bytes;
+        if (RR < 16) {
+          let tR = "";
+          for (let uR = JR; uR < JR + RR; uR++) {
+            const ZR = GR[uR];
+            if (ZR >= 128) return yR.decode(GR.subarray(JR, JR + RR));
+            tR += String.fromCharCode(ZR)
           }
-          return EW
+          return tR
         }
-        return mW.decode(OW.subarray(iW, iW + WW))
+        return yR.decode(GR.subarray(JR, JR + RR))
       }
-      bin(WW) {
-        const iW = this.take(WW);
-        return this.bytes.subarray(iW, iW + WW)
+      bin(RR) {
+        const JR = this.take(RR);
+        return this.bytes.subarray(JR, JR + RR)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(WW) {
+      array(RR) {
         this.enter();
-        const iW = [];
-        for (let OW = 0; OW < WW; OW++) iW.push(this.value());
-        return this.depth--, iW
+        const JR = [];
+        for (let GR = 0; GR < RR; GR++) JR.push(this.value());
+        return this.depth--, JR
       }
-      map(WW) {
+      map(RR) {
         this.enter();
-        const iW = {};
-        for (let OW = 0; OW < WW; OW++) {
-          const WW = this.value(),
-            OW = this.value();
-          iW["__proto__" === WW ? "__proto_" : String(WW)] = OW
+        const JR = {};
+        for (let GR = 0; GR < RR; GR++) {
+          const RR = this.value(),
+            GR = this.value();
+          JR["__proto__" === RR ? "__proto_" : String(RR)] = GR
         }
-        return this.depth--, iW
+        return this.depth--, JR
       }
-      ext(WW) {
-        const iW = this.view.getInt8(this.take(1)),
-          OW = this.take(WW);
-        if (0 !== iW) {
-          if (-1 === iW) {
-            if (1 === WW) return new Date(NaN);
-            if (4 === WW) return new Date(1e3 * this.view.getUint32(OW, !1));
-            if (8 === WW) {
-              const WW = this.view.getUint32(OW, !1),
-                iW = WW >>> 2,
-                mW = 4294967296 * (3 & WW) + this.view.getUint32(OW + 4, !1);
-              return new Date(1e3 * mW + iW / 1e6)
+      ext(RR) {
+        const JR = this.view.getInt8(this.take(1)),
+          GR = this.take(RR);
+        if (0 !== JR) {
+          if (-1 === JR) {
+            if (1 === RR) return new Date(NaN);
+            if (4 === RR) return new Date(1e3 * this.view.getUint32(GR, !1));
+            if (8 === RR) {
+              const RR = this.view.getUint32(GR, !1),
+                JR = RR >>> 2,
+                yR = 4294967296 * (3 & RR) + this.view.getUint32(GR + 4, !1);
+              return new Date(1e3 * yR + JR / 1e6)
             }
-            if (12 === WW) {
-              const WW = this.view.getUint32(OW, !1),
-                iW = 4294967296 * this.view.getInt32(OW + 4, !1) + this.view.getUint32(OW + 8, !1);
-              return new Date(1e3 * iW + WW / 1e6)
+            if (12 === RR) {
+              const RR = this.view.getUint32(GR, !1),
+                JR = 4294967296 * this.view.getInt32(GR + 4, !1) + this.view.getUint32(GR + 8, !1);
+              return new Date(1e3 * JR + RR / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${iW} of ${WW} bytes`)
+          throw new Error(`msgpack: ext type ${JR} of ${RR} bytes`)
         }
       }
     }
-    const PW = new TextEncoder,
-      LW = -(2n ** 63n),
-      cW = 2n ** 63n - 1n,
-      wW = 2n ** 64n - 1n;
+    const ZR = new TextEncoder,
+      qR = -(2n ** 63n),
+      iR = 2n ** 63n - 1n,
+      fR = 2n ** 64n - 1n;
 
-    function tW(WW) {
-      const iW = new ZW;
-      return iW.value(WW, 0), iW.bytes()
+    function VR(RR) {
+      const JR = new KR;
+      return JR.value(RR, 0), JR.bytes()
     }
-    class ZW {
+    class KR {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(WW, iW) {
-        if (iW > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof WW) {
+      value(RR, JR) {
+        if (JR > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof RR) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(WW ? 195 : 194);
+            return void this.u8(RR ? 195 : 194);
           case "number":
-            return void this.number(WW);
+            return void this.number(RR);
           case "bigint":
-            return void this.bigint(WW);
+            return void this.bigint(RR);
           case "string":
-            return void this.string(WW);
+            return void this.string(RR);
           case "object":
-            if (null === WW) this.u8(192);
-            else if (WW instanceof Uint8Array) this.head(WW.length, 196, -1, 197, 198), this.room(WW.length), this.buf.set(WW, this.at), this.at += WW.length;
-            else if (Array.isArray(WW)) {
-              this.head(WW.length, 220, 144, 220, 221);
-              for (const OW of WW) this.value(OW, iW + 1)
+            if (null === RR) this.u8(192);
+            else if (RR instanceof Uint8Array) this.head(RR.length, 196, -1, 197, 198), this.room(RR.length), this.buf.set(RR, this.at), this.at += RR.length;
+            else if (Array.isArray(RR)) {
+              this.head(RR.length, 220, 144, 220, 221);
+              for (const GR of RR) this.value(GR, JR + 1)
             } else {
-              var OW, mW;
-              if (Object.getPrototypeOf(WW) !== Object.prototype && null !== Object.getPrototypeOf(WW)) throw new Error(`msgpack: can't encode a ${null!==(OW=null===(mW=WW.constructor)||void 0===mW?void 0:mW.name)&&void 0!==OW?OW:"object"}`);
+              var GR, yR;
+              if (Object.getPrototypeOf(RR) !== Object.prototype && null !== Object.getPrototypeOf(RR)) throw new Error(`msgpack: can't encode a ${null!==(GR=null===(yR=RR.constructor)||void 0===yR?void 0:yR.name)&&void 0!==GR?GR:"object"}`);
               {
-                const OW = Object.keys(WW);
-                this.head(OW.length, 222, 128, 222, 223);
-                for (const mW of OW) this.string(mW), this.value(WW[mW], iW + 1)
+                const GR = Object.keys(RR);
+                this.head(GR.length, 222, 128, 222, 223);
+                for (const yR of GR) this.string(yR), this.value(RR[yR], JR + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof WW)
+            throw new Error("msgpack: can't encode a " + typeof RR)
         }
       }
-      number(WW) {
-        Number.isInteger(WW) && WW >= -2147483648 && WW <= 4294967295 ? WW >= 0 ? WW < 128 ? this.u8(WW) : WW < 256 ? (this.u8(204), this.u8(WW)) : WW < 65536 ? (this.u8(205), this.u16(WW)) : (this.u8(206), this.u32(WW)) : WW >= -32 ? this.u8(WW + 256) : WW >= -128 ? (this.u8(208), this.u8(WW + 256)) : WW >= -32768 ? (this.u8(209), this.u16(WW + 65536)) : (this.u8(210), this.u32(WW >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, WW, !1), this.at += 8)
+      number(RR) {
+        Number.isInteger(RR) && RR >= -2147483648 && RR <= 4294967295 ? RR >= 0 ? RR < 128 ? this.u8(RR) : RR < 256 ? (this.u8(204), this.u8(RR)) : RR < 65536 ? (this.u8(205), this.u16(RR)) : (this.u8(206), this.u32(RR)) : RR >= -32 ? this.u8(RR + 256) : RR >= -128 ? (this.u8(208), this.u8(RR + 256)) : RR >= -32768 ? (this.u8(209), this.u16(RR + 65536)) : (this.u8(210), this.u32(RR >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, RR, !1), this.at += 8)
       }
-      bigint(WW) {
-        const iW = WW >= LW && WW <= cW;
-        if (!iW && (WW < 0n || WW > wW)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(iW ? 211 : 207), this.room(8), iW ? this.view.setBigInt64(this.at, WW, !1) : this.view.setBigUint64(this.at, WW, !1), this.at += 8
+      bigint(RR) {
+        const JR = RR >= qR && RR <= iR;
+        if (!JR && (RR < 0n || RR > fR)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(JR ? 211 : 207), this.room(8), JR ? this.view.setBigInt64(this.at, RR, !1) : this.view.setBigUint64(this.at, RR, !1), this.at += 8
       }
-      string(WW) {
-        const iW = PW.encode(WW);
-        this.head(iW.length, 217, 160, 218, 219), this.room(iW.length), this.buf.set(iW, this.at), this.at += iW.length
+      string(RR) {
+        const JR = ZR.encode(RR);
+        this.head(JR.length, 217, 160, 218, 219), this.room(JR.length), this.buf.set(JR, this.at), this.at += JR.length
       }
-      head(WW, iW, OW, mW, EW) {
-        OW >= 0 && WW < (160 === OW ? 32 : 16) ? this.u8(OW | WW) : iW !== mW && WW < 256 ? (this.u8(iW), this.u8(WW)) : WW < 65536 ? (this.u8(mW), this.u16(WW)) : (this.u8(EW), this.u32(WW))
+      head(RR, JR, GR, yR, tR) {
+        GR >= 0 && RR < (160 === GR ? 32 : 16) ? this.u8(GR | RR) : JR !== yR && RR < 256 ? (this.u8(JR), this.u8(RR)) : RR < 65536 ? (this.u8(yR), this.u16(RR)) : (this.u8(tR), this.u32(RR))
       }
-      room(WW) {
-        if (this.at + WW <= this.buf.length) return;
-        let iW = 2 * this.buf.length;
-        for (; iW < this.at + WW;) iW *= 2;
-        const OW = new Uint8Array(iW);
-        OW.set(this.buf.subarray(0, this.at)), this.buf = OW, this.view = new DataView(OW.buffer)
+      room(RR) {
+        if (this.at + RR <= this.buf.length) return;
+        let JR = 2 * this.buf.length;
+        for (; JR < this.at + RR;) JR *= 2;
+        const GR = new Uint8Array(JR);
+        GR.set(this.buf.subarray(0, this.at)), this.buf = GR, this.view = new DataView(GR.buffer)
       }
-      u8(WW) {
-        this.room(1), this.buf[this.at++] = WW
+      u8(RR) {
+        this.room(1), this.buf[this.at++] = RR
       }
-      u16(WW) {
-        this.room(2), this.view.setUint16(this.at, WW, !1), this.at += 2
+      u16(RR) {
+        this.room(2), this.view.setUint16(this.at, RR, !1), this.at += 2
       }
-      u32(WW) {
-        this.room(4), this.view.setUint32(this.at, WW, !1), this.at += 4
+      u32(RR) {
+        this.room(4), this.view.setUint32(this.at, RR, !1), this.at += 4
       }
     }
   },
-  42146: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW
+  42157: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => ZR
     });
-    var mW = OW(42131);
-    const EW = new TextDecoder("utf-8", {
+    var yR = GR(42137);
+    const tR = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class NW {
-      constructor(WW) {
-        this.buf = WW, this.at = 0, this.view = null
+    class uR {
+      constructor(RR) {
+        this.buf = RR, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let WW = this.u8(),
-          iW = 127 & WW,
-          OW = 128;
-        for (; 128 & WW;) {
-          if (OW > 2 ** 63) throw new RangeError("avro: varint too long");
-          WW = this.u8(), iW += (127 & WW) * OW, OW *= 128
+        let RR = this.u8(),
+          JR = 127 & RR,
+          GR = 128;
+        for (; 128 & RR;) {
+          if (GR > 2 ** 63) throw new RangeError("avro: varint too long");
+          RR = this.u8(), JR += (127 & RR) * GR, GR *= 128
         }
-        return iW % 2 === 1 ? -(iW + 1) / 2 : iW / 2
+        return JR % 2 === 1 ? -(JR + 1) / 2 : JR / 2
       }
       float() {
-        const WW = this.take(4);
-        return this.floats().getFloat32(WW, !0)
+        const RR = this.take(4);
+        return this.floats().getFloat32(RR, !0)
       }
       double() {
-        const WW = this.take(8);
-        return this.floats().getFloat64(WW, !0)
+        const RR = this.take(8);
+        return this.floats().getFloat64(RR, !0)
       }
       str() {
-        const WW = this.size(),
-          iW = this.take(WW),
-          OW = iW + WW;
-        if (WW <= 32) {
-          let WW = "";
-          for (let mW = iW; mW < OW; mW++) {
-            const NW = this.buf[mW];
-            if (NW >= 128) return EW.decode(this.buf.subarray(iW, OW));
-            WW += String.fromCharCode(NW)
+        const RR = this.size(),
+          JR = this.take(RR),
+          GR = JR + RR;
+        if (RR <= 32) {
+          let RR = "";
+          for (let yR = JR; yR < GR; yR++) {
+            const uR = this.buf[yR];
+            if (uR >= 128) return tR.decode(this.buf.subarray(JR, GR));
+            RR += String.fromCharCode(uR)
           }
-          return WW
+          return RR
         }
-        return EW.decode(this.buf.subarray(iW, OW))
+        return tR.decode(this.buf.subarray(JR, GR))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(WW) {
-        const iW = this.take(WW);
-        return this.buf.slice(iW, iW + WW)
+      fixed(RR) {
+        const JR = this.take(RR);
+        return this.buf.slice(JR, JR + RR)
       }
-      index(WW) {
-        const iW = this.long();
-        if (!(iW >= 0 && iW < WW)) throw new RangeError(`avro: index ${iW} of ${WW}`);
-        return iW
+      index(RR) {
+        const JR = this.long();
+        if (!(JR >= 0 && JR < RR)) throw new RangeError(`avro: index ${JR} of ${RR}`);
+        return JR
       }
-      LZ(WW) {
-        const iW = [];
-        for (let OW = this.long(); 0 !== OW; OW = this.long()) {
-          OW = this.block(OW);
-          for (let mW = 0; mW < OW; mW++) iW.push(WW(this))
+      qK(RR) {
+        const JR = [];
+        for (let GR = this.long(); 0 !== GR; GR = this.long()) {
+          GR = this.block(GR);
+          for (let yR = 0; yR < GR; yR++) JR.push(RR(this))
         }
-        return iW
+        return JR
       }
-      map(WW) {
-        const iW = {};
-        for (let OW = this.long(); 0 !== OW; OW = this.long()) {
-          OW = this.block(OW);
-          for (let mW = 0; mW < OW; mW++) {
-            iW[this.str()] = WW(this)
+      map(RR) {
+        const JR = {};
+        for (let GR = this.long(); 0 !== GR; GR = this.long()) {
+          GR = this.block(GR);
+          for (let yR = 0; yR < GR; yR++) {
+            JR[this.str()] = RR(this)
           }
         }
-        return iW
+        return JR
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(WW) {
-        let iW = WW;
-        if (iW < 0 && (iW = -iW, this.long()), iW > this.buf.length - this.at) throw new RangeError(`avro: block of ${iW} items in ${this.buf.length-this.at} bytes`);
-        return iW
+      block(RR) {
+        let JR = RR;
+        if (JR < 0 && (JR = -JR, this.long()), JR > this.buf.length - this.at) throw new RangeError(`avro: block of ${JR} items in ${this.buf.length-this.at} bytes`);
+        return JR
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const WW = this.long();
-        if (WW < 0) throw new RangeError(`avro: length ${WW}`);
-        return WW
+        const RR = this.long();
+        if (RR < 0) throw new RangeError(`avro: length ${RR}`);
+        return RR
       }
       u8() {
-        const WW = this.buf[this.at];
-        if (void 0 === WW) throw new RangeError("avro: truncated");
-        return this.at++, WW
+        const RR = this.buf[this.at];
+        if (void 0 === RR) throw new RangeError("avro: truncated");
+        return this.at++, RR
       }
-      take(WW) {
-        const iW = this.at;
-        if (WW > this.buf.length - iW) throw new RangeError("avro: truncated");
-        return this.at = iW + WW, iW
+      take(RR) {
+        const JR = this.at;
+        if (RR > this.buf.length - JR) throw new RangeError("avro: truncated");
+        return this.at = JR + RR, JR
       }
     }
 
-    function PW(WW, iW) {
-      const OW = new NW(iW),
-        EW = (0, mW.tb)(WW, OW);
-      return OW.end(), EW
+    function ZR(RR, JR) {
+      const GR = new uR(JR),
+        tR = (0, yR.sb)(RR, GR);
+      return GR.end(), tR
     }
   },
-  42131: (WW, iW, OW) => {
-    OW.d(iW, {
-      C: () => PW,
-      E: () => hW,
-      F: () => EW,
-      J: () => LW,
-      K: () => lW,
-      O: () => TW,
-      S: () => yW,
-      V: () => SW,
-      Y: () => tW,
-      ab: () => ZW,
-      b: () => KW,
-      d: () => jW,
-      db: () => JW,
-      f: () => UW,
-      g: () => kW,
-      hb: () => AW,
-      j: () => YW,
-      kb: () => sW,
-      mb: () => bW,
-      n: () => mW,
-      o: () => NW,
-      pb: () => cW,
-      r: () => MW,
-      tb: () => HW,
-      v: () => xW,
-      z: () => wW
+  42137: (RR, JR, GR) => {
+    GR.d(JR, {
+      D: () => gR,
+      F: () => tR,
+      I: () => qR,
+      M: () => rR,
+      Q: () => lR,
+      R: () => BR,
+      V: () => XR,
+      Y: () => VR,
+      _: () => KR,
+      b: () => CR,
+      bb: () => pR,
+      d: () => LR,
+      fb: () => eR,
+      g: () => nR,
+      h: () => UR,
+      jb: () => WR,
+      k: () => MR,
+      kb: () => aR,
+      l: () => yR,
+      n: () => uR,
+      ob: () => iR,
+      r: () => AR,
+      s: () => wR,
+      sb: () => bR,
+      w: () => fR,
+      z: () => ZR
     });
-    const mW = 2,
-      EW = 12,
-      NW = 27,
-      PW = 40,
-      LW = 52,
-      cW = 59,
-      wW = 63,
-      tW = 83,
-      ZW = 84,
-      xW = 89,
-      lW = 91,
-      AW = 93,
-      bW = 94,
-      jW = 95,
-      UW = 97,
-      kW = 101,
-      sW = 102,
-      MW = 73,
-      KW = 16,
-      SW = 86,
-      YW = 60,
-      yW = 17,
-      TW = 56,
-      JW = 100,
-      hW = 81;
+    const yR = 2,
+      tR = 12,
+      uR = 27,
+      ZR = 40,
+      qR = 52,
+      iR = 59,
+      fR = 63,
+      VR = 83,
+      KR = 84,
+      wR = 89,
+      rR = 91,
+      eR = 93,
+      aR = 94,
+      LR = 95,
+      nR = 97,
+      UR = 101,
+      WR = 102,
+      AR = 73,
+      CR = 16,
+      XR = 86,
+      MR = 60,
+      BR = 17,
+      lR = 56,
+      pR = 100,
+      gR = 81;
 
-    function HW(WW, iW) {
-      switch (WW) {
-        case mW:
-          return function(WW) {
+    function bR(RR, JR) {
+      switch (RR) {
+        case yR:
+          return function(RR) {
             return {
-              qN: aW(WW),
-              RN: WW.float(),
-              GN: WW.long()
+              su: QR(RR),
+              hu: RR.float(),
+              RZ: RR.long()
             }
-          }(iW);
-        case EW:
-          return function(WW) {
+          }(JR);
+        case tR:
+          return function(RR) {
             return {
-              cN: eW(WW),
-              wN: eW(WW)
+              au: DR(RR),
+              Lu: DR(RR)
             }
-          }(iW);
-        case NW:
-          return function(WW) {
+          }(JR);
+        case uR:
+          return function(RR) {
             return {
-              Hi: WW.bool(),
-              ni: eW(WW)
+              vJ: RR.bool(),
+              OJ: DR(RR)
             }
-          }(iW);
-        case PW:
-          return iW.str();
-        case LW:
-          return function(WW) {
+          }(JR);
+        case ZR:
+          return JR.str();
+        case qR:
+          return function(RR) {
             return {
-              id: WW.long(),
-              jN: Pi(WW)
+              id: RR.long(),
+              Xu: ZJ(RR)
             }
-          }(iW);
-        case cW:
-          return function(WW) {
+          }(JR);
+        case iR:
+          return function(RR) {
             return {
-              yi: eW(WW),
-              Ti: ci(WW)
+              pJ: DR(RR),
+              gJ: iJ(RR)
             }
-          }(iW);
-        case wW:
-          return iW.str();
-        case tW:
-        case ZW:
-          return iW.long();
-        case xW:
-          return function(WW) {
+          }(JR);
+        case fR:
+          return JR.str();
+        case VR:
+        case KR:
+          return JR.long();
+        case wR:
+          return function(RR) {
             return {
-              xN: WW.long(),
-              lN: WW.bool(),
-              bN: WW.float()
+              Wu: RR.long(),
+              Au: RR.bool(),
+              Cu: RR.float()
             }
-          }(iW);
-        case lW:
-          return iW.long();
-        case AW:
-          return function(WW) {
+          }(JR);
+        case rR:
+          return JR.long();
+        case eR:
+          return function(RR) {
             return {
-              ui: WW.bool(),
-              oi: Zi(WW)
+              xJ: RR.bool(),
+              NJ: KJ(RR)
             }
-          }(iW);
-        case bW:
-          return function(WW) {
+          }(JR);
+        case aR:
+          return function(RR) {
             return {
-              id: WW.str(),
-              position: ti(WW),
-              Gi: xi(WW),
-              style: fW(WW),
-              zi: WW.bool()
+              id: RR.str(),
+              position: VJ(RR),
+              dJ: wJ(RR),
+              style: mR(RR),
+              QJ: RR.bool()
             }
-          }(iW);
-        case jW:
-          return function(WW) {
+          }(JR);
+        case LR:
+          return function(RR) {
             return {
-              id: eW(WW)
+              id: DR(RR)
             }
-          }(iW);
-        case UW:
-          return function(WW) {
+          }(JR);
+        case nR:
+          return function(RR) {
             return {
-              uO: WW.long(),
-              oO: WW.str(),
-              dO: Ei(WW),
-              eO: Ei(WW),
-              vO: eW(WW),
-              gO: eW(WW),
-              DO: eW(WW),
-              VO: eW(WW),
-              pO: eW(WW),
-              fO: Ei(WW),
-              CO: Ei(WW),
-              XO: eW(WW),
-              BO: eW(WW),
-              qO: eW(WW)
+              bG: RR.long(),
+              vG: RR.str(),
+              OG: tJ(RR),
+              xG: tJ(RR),
+              NG: DR(RR),
+              DG: DR(RR),
+              HG: DR(RR),
+              oG: DR(RR),
+              cG: DR(RR),
+              PG: tJ(RR),
+              IG: tJ(RR),
+              mG: DR(RR),
+              zG: DR(RR),
+              SG: DR(RR)
             }
-          }(iW);
-        case kW:
-          return iW.str();
-        case sW:
-          return iW.long();
-        case MW:
-          return function(WW) {
+          }(JR);
+        case UR:
+          return JR.str();
+        case WR:
+          return JR.long();
+        case AR:
+          return function(RR) {
             return {
-              sE: WW.long(),
-              ME: WW.str(),
-              KE: WW.float()
+              lt: RR.long(),
+              gt: RR.str(),
+              bt: RR.float()
             }
-          }(iW);
-        case KW:
-          return function(WW) {
+          }(JR);
+        case CR:
+          return function(RR) {
             return {
-              VE: WW.bool(),
-              pE: eW(WW),
-              fE: WW.str(),
-              CE: Ai(WW),
-              XE: Ai(WW),
-              qE: WW.bool(),
-              RE: WW.long(),
-              GE: bi(WW)
+              Yt: RR.bool(),
+              kt: DR(RR),
+              Qt: RR.str(),
+              Ft: eJ(RR),
+              Tt: eJ(RR),
+              st: RR.bool(),
+              ht: RR.long(),
+              Ru: aJ(RR)
             }
-          }(iW);
-        case SW:
-          return function(WW) {
+          }(JR);
+        case XR:
+          return function(RR) {
             return {
-              Oi: eW(WW)
+              tJ: DR(RR)
             }
-          }(iW);
-        case YW:
-          return function(WW) {
+          }(JR);
+        case MR:
+          return function(RR) {
             return {
-              FN: WW.str(),
-              QN: WW.str(),
-              WP: ji(WW),
-              iP: WW.str(),
-              OP: FW(WW),
-              mP: WW.float()
+              tZ: RR.str(),
+              uZ: RR.str(),
+              ZZ: LJ(RR),
+              qZ: RR.str(),
+              iZ: sR(RR),
+              fZ: RR.float()
             }
-          }(iW);
-        case yW:
-          return function(WW) {
+          }(JR);
+        case BR:
+          return function(RR) {
             return {
-              FN: WW.str(),
-              QN: WW.str(),
-              WP: ji(WW)
+              tZ: RR.str(),
+              uZ: RR.str(),
+              ZZ: LJ(RR)
             }
-          }(iW);
-        case TW:
-          return function(WW) {
-            return WW.LZ(Ui)
-          }(iW);
-        case JW:
-          return function(WW) {
+          }(JR);
+        case lR:
+          return function(RR) {
+            return RR.qK(nJ)
+          }(JR);
+        case pR:
+          return function(RR) {
             return {
-              SE: si(WW),
-              hE: BW(WW)
+              vt: WJ(RR),
+              Ht: jR(RR)
             }
-          }(iW);
-        case hW:
-          return function(WW) {
+          }(JR);
+        case gR:
+          return function(RR) {
             return {
-              Pm: WW.bool(),
-              Lm: eW(WW),
-              wm: Ki(WW),
-              Zm: Vi(WW)
+              ty: RR.bool(),
+              uy: DR(RR),
+              Zy: CJ(RR),
+              iy: cJ(RR)
             }
-          }(iW);
+          }(JR);
         default:
-          throw new Error(`no reader for to-client message ${WW}`)
+          throw new Error(`no reader for to-client message ${RR}`)
       }
     }
 
-    function nW(WW) {
+    function vR(RR) {
       return {
-        entityName: WW.str()
+        entityName: RR.str()
       }
     }
 
-    function uW(WW) {
-      const iW = WW.index(4);
-      return 0 === iW ? WW.str() : 1 === iW ? WW.long() : 2 === iW ? WW.bool() : nW(WW)
+    function OR(RR) {
+      const JR = RR.index(4);
+      return 0 === JR ? RR.str() : 1 === JR ? RR.long() : 2 === JR ? RR.bool() : vR(RR)
     }
 
-    function oW(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
-        return WW.map(uW)
-      }(WW)
+    function xR(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
+        return RR.map(OR)
+      }(RR)
     }
 
-    function dW(WW) {
+    function NR(RR) {
       return {
-        translationKey: WW.str(),
-        params: oW(WW)
+        translationKey: RR.str(),
+        params: xR(RR)
       }
     }
 
-    function eW(WW) {
-      return 0 === WW.index(2) ? null : WW.str()
+    function DR(RR) {
+      return 0 === RR.index(2) ? null : RR.str()
     }
 
-    function vW(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function HR(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          color: eW(WW),
-          colour: eW(WW),
-          fontSize: eW(WW)
+          color: DR(RR),
+          colour: DR(RR),
+          fontSize: DR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function gW(WW) {
+    function oR(RR) {
       return {
-        icon: WW.str(),
-        style: vW(WW)
+        icon: RR.str(),
+        style: HR(RR)
       }
     }
 
-    function DW(WW) {
-      const iW = WW.index(3);
-      return 0 === iW ? {
-        string: WW.str()
-      } : 1 === iW ? {
-        styledEntityName: nW(WW)
+    function cR(RR) {
+      const JR = RR.index(3);
+      return 0 === JR ? {
+        string: RR.str()
+      } : 1 === JR ? {
+        styledEntityName: vR(RR)
       } : {
-        styledTranslatedText: dW(WW)
+        styledTranslatedText: NR(RR)
       }
     }
 
-    function VW(WW) {
-      const iW = WW.index(3);
-      return 0 === iW ? null : 1 === iW ? WW.str() : WW.long()
+    function PR(RR) {
+      const JR = RR.index(3);
+      return 0 === JR ? null : 1 === JR ? RR.str() : RR.long()
     }
 
-    function pW(WW) {
-      return 0 === WW.index(2) ? null : WW.float()
+    function IR(RR) {
+      return 0 === RR.index(2) ? null : RR.float()
     }
 
-    function fW(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function mR(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          color: eW(WW),
-          colour: eW(WW),
-          fontWeight: VW(WW),
-          fontStyle: eW(WW),
-          fontSize: eW(WW),
-          opacity: pW(WW)
+          color: DR(RR),
+          colour: DR(RR),
+          fontWeight: PR(RR),
+          fontStyle: DR(RR),
+          fontSize: DR(RR),
+          opacity: IR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function CW(WW) {
+    function zR(RR) {
       return {
-        str: DW(WW),
-        style: fW(WW),
-        clickableUrl: eW(WW)
+        str: cR(RR),
+        style: mR(RR),
+        clickableUrl: DR(RR)
       }
     }
 
-    function XW(WW) {
-      return WW.str()
+    function SR(RR) {
+      return RR.str()
     }
 
-    function BW(WW) {
-      return WW.LZ(XW)
+    function jR(RR) {
+      return RR.qK(SR)
     }
 
-    function qW(WW) {
-      return 0 === WW.index(2) ? null : BW(WW)
+    function dR(RR) {
+      return 0 === RR.index(2) ? null : jR(RR)
     }
 
-    function RW(WW) {
+    function ER(RR) {
       return {
-        type: WW.str(),
-        progress: WW.float(),
-        width: eW(WW),
-        height: eW(WW),
-        colours: qW(WW),
-        backgroundColour: eW(WW)
+        type: RR.str(),
+        progress: RR.float(),
+        width: DR(RR),
+        height: DR(RR),
+        colours: dR(RR),
+        backgroundColour: DR(RR)
       }
     }
 
-    function GW(WW) {
+    function YR(RR) {
       return {
-        type: WW.str(),
-        action: WW.str(),
-        style: fW(WW)
+        type: RR.str(),
+        action: RR.str(),
+        style: mR(RR)
       }
     }
 
-    function IW(WW) {
-      const iW = WW.index(7);
-      return 0 === iW ? {
-        string: WW.str()
-      } : 1 === iW ? {
-        entityName: nW(WW)
-      } : 2 === iW ? {
-        translatedText: dW(WW)
-      } : 3 === iW ? {
-        styledIcon: gW(WW)
-      } : 4 === iW ? {
-        Ii: CW(WW)
-      } : 5 === iW ? {
-        styledProgressBar: RW(WW)
+    function kR(RR) {
+      const JR = RR.index(7);
+      return 0 === JR ? {
+        string: RR.str()
+      } : 1 === JR ? {
+        entityName: vR(RR)
+      } : 2 === JR ? {
+        translatedText: NR(RR)
+      } : 3 === JR ? {
+        styledIcon: oR(RR)
+      } : 4 === JR ? {
+        EJ: zR(RR)
+      } : 5 === JR ? {
+        styledProgressBar: ER(RR)
       } : {
-        styledKeyBinding: GW(WW)
+        styledKeyBinding: YR(RR)
       }
     }
 
-    function aW(WW) {
-      return WW.LZ(IW)
+    function QR(RR) {
+      return RR.qK(kR)
     }
-    const rW = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const FR = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function zW(WW) {
-      return rW[WW.index(5)]
-    }
-
-    function FW(WW) {
-      return 0 === WW.index(2) ? null : WW.double()
+    function TR(RR) {
+      return FR[RR.index(5)]
     }
 
-    function QW(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function sR(RR) {
+      return 0 === RR.index(2) ? null : RR.double()
+    }
+
+    function hR(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          MN: FW(WW),
-          KN: WW.double(),
-          SN: WW.double(),
-          YN: WW.bool(),
-          description: aW(WW),
-          yN: WW.str(),
-          scale: FW(WW),
-          rotation: FW(WW)
+          pu: sR(RR),
+          gu: RR.double(),
+          bu: RR.double(),
+          vu: RR.bool(),
+          description: QR(RR),
+          Ou: RR.str(),
+          scale: sR(RR),
+          rotation: sR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function Wi(WW) {
-      return 0 === WW.index(2) ? null : WW.bool()
+    function RJ(RR) {
+      return 0 === RR.index(2) ? null : RR.bool()
     }
 
-    function ii(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function JJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          JN: WW.double(),
-          icon: WW.str(),
-          label: aW(WW),
-          hN: WW.bool(),
-          scale: FW(WW),
-          rotation: FW(WW),
-          HN: Wi(WW)
+          Du: RR.double(),
+          icon: RR.str(),
+          label: QR(RR),
+          Hu: RR.bool(),
+          scale: sR(RR),
+          rotation: sR(RR),
+          ou: RJ(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function Oi(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function GJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          MN: FW(WW),
-          uN: WW.double(),
-          oN: WW.double(),
-          dN: WW.double(),
-          gravity: WW.double(),
-          eN: WW.double(),
-          vN: WW.double(),
-          gN: WW.double(),
-          YN: WW.bool(),
-          description: aW(WW),
-          icon: eW(WW)
+          pu: sR(RR),
+          Pu: RR.double(),
+          Iu: RR.double(),
+          mu: RR.double(),
+          gravity: RR.double(),
+          zu: RR.double(),
+          Su: RR.double(),
+          ju: RR.double(),
+          vu: RR.bool(),
+          description: QR(RR),
+          icon: DR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function mi(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function yJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          speed: WW.double(),
-          VN: WW.double(),
-          label: aW(WW),
-          icon: eW(WW),
-          scale: FW(WW),
-          rotation: FW(WW)
+          speed: RR.double(),
+          Eu: RR.double(),
+          label: QR(RR),
+          icon: DR(RR),
+          scale: sR(RR),
+          rotation: sR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function Ei(WW) {
-      return 0 === WW.index(2) ? null : WW.long()
+    function tJ(RR) {
+      return 0 === RR.index(2) ? null : RR.long()
     }
 
-    function Ni(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function uJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          fN: WW.long(),
-          CN: WW.double(),
-          XN: WW.double(),
-          BN: Ei(WW),
-          label: aW(WW),
-          icon: eW(WW)
+          ku: RR.long(),
+          Qu: RR.double(),
+          Fu: RR.double(),
+          Tu: tJ(RR),
+          label: QR(RR),
+          icon: DR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function Pi(WW) {
+    function ZJ(RR) {
       return {
-        type: zW(WW),
-        progressBar: QW(WW),
-        timedClick: ii(WW),
-        gravityBar: Oi(WW),
-        precisionBar: mi(WW),
-        rhythmClick: Ni(WW)
+        type: TR(RR),
+        progressBar: hR(RR),
+        timedClick: JJ(RR),
+        gravityBar: GJ(RR),
+        precisionBar: yJ(RR),
+        rhythmClick: uJ(RR)
       }
     }
-    const Li = ["playerGone", "rateLimited"];
+    const qJ = ["playerGone", "rateLimited"];
 
-    function ci(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
-        return Li[WW.index(2)]
-      }(WW)
+    function iJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
+        return qJ[RR.index(2)]
+      }(RR)
     }
 
-    function wi(WW) {
-      return WW.float()
+    function fJ(RR) {
+      return RR.float()
     }
 
-    function ti(WW) {
-      return WW.LZ(wi)
+    function VJ(RR) {
+      return RR.qK(fJ)
     }
 
-    function Zi(WW) {
-      return 0 === WW.index(2) ? null : ti(WW)
+    function KJ(RR) {
+      return 0 === RR.index(2) ? null : VJ(RR)
     }
 
-    function xi(WW) {
-      return 0 === WW.index(2) ? null : aW(WW)
+    function wJ(RR) {
+      return 0 === RR.index(2) ? null : QR(RR)
     }
 
-    function li(WW) {
-      return WW.long()
+    function rJ(RR) {
+      return RR.long()
     }
 
-    function Ai(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
-        return WW.LZ(li)
-      }(WW)
+    function eJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
+        return RR.qK(rJ)
+      }(RR)
     }
 
-    function bi(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function aJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          mO: WW.str(),
-          tO: WW.long()
+          GG: RR.str(),
+          iG: RR.long()
         }
-      }(WW)
+      }(RR)
     }
 
-    function ji(WW) {
-      const iW = WW.index(3);
-      return 0 === iW ? null : 1 === iW ? WW.str() : dW(WW)
+    function LJ(RR) {
+      const JR = RR.index(3);
+      return 0 === JR ? null : 1 === JR ? RR.str() : NR(RR)
     }
 
-    function Ui(WW) {
+    function nJ(RR) {
       return {
-        EE: WW.str(),
-        NE: WW.str(),
-        PE: WW.str()
+        Zt: RR.str(),
+        ft: RR.str(),
+        Vt: RR.str()
       }
     }
 
-    function ki(WW) {
+    function UJ(RR) {
       return {
-        YE: WW.str(),
-        yE: eW(WW),
-        TE: eW(WW),
-        JE: BW(WW)
+        Ot: RR.str(),
+        xt: DR(RR),
+        Nt: DR(RR),
+        Dt: jR(RR)
       }
     }
 
-    function si(WW) {
-      return WW.LZ(ki)
+    function WJ(RR) {
+      return RR.qK(UJ)
     }
 
-    function Mi(WW) {
+    function AJ(RR) {
       return {
-        tm: WW.str(),
-        x: WW.long(),
-        y: WW.long(),
-        z: WW.long()
+        qy: RR.str(),
+        x: RR.long(),
+        y: RR.long(),
+        z: RR.long()
       }
     }
 
-    function Ki(WW) {
-      return WW.LZ(Mi)
+    function CJ(RR) {
+      return RR.qK(AJ)
     }
 
-    function Si(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function XJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          om: WW.float(),
-          dm: WW.long(),
-          gm: WW.long()
+          Ny: RR.float(),
+          Dy: RR.long(),
+          Hy: RR.long()
         }
-      }(WW)
+      }(RR)
     }
 
-    function Yi(WW) {
+    function MJ(RR) {
       return {
-        blockName: WW.str(),
-        Ym: WW.bool(),
-        ym: WW.bool(),
-        Tm: WW.bool(),
-        Jm: WW.float(),
-        hm: WW.float(),
-        Hm: WW.long(),
-        nm: Si(WW)
+        blockName: RR.str(),
+        My: RR.bool(),
+        By: RR.bool(),
+        ly: RR.bool(),
+        py: RR.float(),
+        gy: RR.float(),
+        vy: RR.long(),
+        Oy: XJ(RR)
       }
     }
 
-    function yi(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
-        return WW.LZ(Yi)
-      }(WW)
+    function BJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
+        return RR.qK(MJ)
+      }(RR)
     }
 
-    function Ti(WW) {
+    function lJ(RR) {
       return {
-        Mm: WW.str(),
-        Km: yi(WW)
+        Ay: RR.str(),
+        Cy: BJ(RR)
       }
     }
 
-    function Ji(WW) {
+    function pJ(RR) {
       return {
-        blockName: WW.str(),
-        frequency: WW.float()
+        blockName: RR.str(),
+        frequency: RR.float()
       }
     }
 
-    function Hi(WW) {
-      return WW.LZ(Ji)
+    function gJ(RR) {
+      return RR.qK(pJ)
     }
 
-    function ni(WW) {
+    function bJ(RR) {
       return {
-        pm: WW.str(),
-        fm: WW.str(),
-        frequency: WW.float(),
-        Cm: Hi(WW)
+        Iy: RR.str(),
+        my: RR.str(),
+        frequency: RR.float(),
+        zy: gJ(RR)
       }
     }
 
-    function ui(WW) {
-      return WW.LZ(ni)
+    function vJ(RR) {
+      return RR.qK(bJ)
     }
 
-    function oi(WW) {
+    function OJ(RR) {
       return {
-        blockName: WW.str(),
-        radius: WW.long(),
-        Rm: WW.long(),
-        Am: WW.long(),
-        bm: WW.long(),
-        Gm: WW.float()
+        blockName: RR.str(),
+        radius: RR.long(),
+        Yy: RR.long(),
+        wy: RR.long(),
+        ey: RR.long(),
+        ky: RR.float()
       }
     }
 
-    function di(WW) {
-      return WW.LZ(oi)
+    function xJ(RR) {
+      return RR.qK(OJ)
     }
 
-    function ei(WW) {
+    function NJ(RR) {
       return {
-        Am: WW.long(),
-        bm: WW.long(),
-        jm: WW.long(),
-        Um: WW.bool(),
-        km: Ti(WW),
-        Dm: ui(WW),
-        Bm: di(WW)
+        wy: RR.long(),
+        ey: RR.long(),
+        Ly: RR.long(),
+        ny: RR.bool(),
+        Uy: lJ(RR),
+        oy: vJ(RR),
+        jy: xJ(RR)
       }
     }
 
-    function vi(WW) {
-      return WW.LZ(ei)
+    function DJ(RR) {
+      return RR.qK(NJ)
     }
 
-    function gi(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function HJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          name: WW.str(),
-          zm: eW(WW)
+          name: RR.str(),
+          hy: DR(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function Di(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function oJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          terrain: gi(WW),
-          Fm: di(WW)
+          terrain: HJ(RR),
+          Rt: xJ(RR)
         }
-      }(WW)
+      }(RR)
     }
 
-    function Vi(WW) {
-      return 0 === WW.index(2) ? null : function(WW) {
+    function cJ(RR) {
+      return 0 === RR.index(2) ? null : function(RR) {
         return {
-          layers: vi(WW),
-          Im: Di(WW)
+          layers: DJ(RR),
+          Qy: oJ(RR)
         }
-      }(WW)
+      }(RR)
     }
   },
-  42116: (WW, iW, OW) => {
-    OW.d(iW, {
-      $: () => UW,
-      A: () => hW,
-      B: () => TW,
-      E: () => YW,
-      G: () => nW,
-      I: () => MW,
-      L: () => KW,
-      N: () => jW,
-      P: () => JW,
-      T: () => oW,
-      U: () => AW,
-      V: () => eW,
-      Y: () => kW,
-      db: () => sW,
-      e: () => EW,
-      gb: () => SW,
-      i: () => dW,
-      m: () => uW,
-      p: () => lW,
-      r: () => bW,
-      s: () => HW,
-      w: () => yW
+  42126: (RR, JR, GR) => {
+    GR.d(JR, {
+      D: () => MR,
+      F: () => vR,
+      I: () => AR,
+      M: () => CR,
+      N: () => LR,
+      O: () => pR,
+      Q: () => xR,
+      T: () => eR,
+      U: () => DR,
+      Y: () => UR,
+      Z: () => nR,
+      bb: () => WR,
+      cb: () => XR,
+      d: () => tR,
+      g: () => NR,
+      k: () => OR,
+      m: () => rR,
+      q: () => aR,
+      s: () => bR,
+      w: () => BR,
+      y: () => gR,
+      z: () => lR
     });
-    var mW = OW(2908);
-    const EW = {
+    var yR = GR(2989);
+    const tR = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function NW(WW, iW) {
-      return !ArrayBuffer.isView(WW) || WW instanceof DataView ? Array.isArray(WW) ? WW.map((WW => iW(WW))) : WW : Array.from(WW, (WW => iW(WW)))
+    function uR(RR, JR) {
+      return !ArrayBuffer.isView(RR) || RR instanceof DataView ? Array.isArray(RR) ? RR.map((RR => JR(RR))) : RR : Array.from(RR, (RR => JR(RR)))
     }
 
-    function PW(WW) {
-      if ("string" !== typeof WW) return WW;
-      for (let iW = 0; iW < WW.length; iW++) {
-        const OW = WW.charCodeAt(iW);
-        if (OW >= 55296 && OW <= 57343) return cW.decode(LW.encode(WW))
+    function ZR(RR) {
+      if ("string" !== typeof RR) return RR;
+      for (let JR = 0; JR < RR.length; JR++) {
+        const GR = RR.charCodeAt(JR);
+        if (GR >= 55296 && GR <= 57343) return iR.decode(qR.encode(RR))
       }
-      return WW
+      return RR
     }
-    const LW = new TextEncoder,
-      cW = new TextDecoder;
+    const qR = new TextEncoder,
+      iR = new TextDecoder;
 
-    function wW(WW) {
-      return WW
+    function fR(RR) {
+      return RR
     }
-    let tW;
+    let VR;
 
-    function ZW(WW) {
-      return null === WW || "object" !== typeof WW ? WW : [PW(WW.policy), PW(WW.PL)]
-    }
-
-    function xW(WW) {
-      return null === WW || "object" !== typeof WW ? WW : [NW(WW.CE, wW), NW(WW.rL, wW)]
+    function KR(RR) {
+      return null === RR || "object" !== typeof RR ? RR : [ZR(RR.policy), ZR(RR.Kq)]
     }
 
-    function lW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.tP), PW(iW.ZP)];
-      var iW
+    function wR(RR) {
+      return null === RR || "object" !== typeof RR ? RR : [uR(RR.Ft, fR), uR(RR.Ji, fR)]
     }
 
-    function AW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [iW.id, iW.ct];
-      var iW
+    function rR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.LZ), ZR(JR.nZ)];
+      var JR
     }
 
-    function bW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [iW.uO, PW(iW.oO), iW.dO, PW(iW.gO), iW.fO, iW.CO, iW.LP, PW(iW.cP), PW(iW.wP)];
-      var iW
+    function eR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [JR.id, JR.wV];
+      var JR
     }
 
-    function jW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [NW(iW.EL, wW), iW.NL];
-      var iW
+    function aR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [JR.bG, ZR(JR.vG), JR.OG, ZR(JR.DG), JR.PG, JR.IG, JR.rZ, ZR(JR.eZ), ZR(JR.aZ)];
+      var JR
     }
 
-    function UW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [NW(iW.Ut, (WW => PW(WW))), PW(iW.kt), iW.st];
-      var iW
+    function LR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [uR(JR.fq, fR), JR.Vq];
+      var JR
     }
 
-    function kW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [NW(iW.QL, wW), PW(iW.Wc), PW(iW.Oc), iW.mc];
-      var iW
+    function nR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [uR(JR.CV, (RR => ZR(RR))), ZR(JR.XV), JR.MV];
+      var JR
     }
 
-    function sW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.NE), PW(iW.PE)];
-      var iW
+    function UR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [uR(JR.ti, fR), ZR(JR.ui), ZR(JR.Zi), JR.qi];
+      var JR
     }
 
-    function MW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.LL)];
-      var iW
+    function WR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.ft), ZR(JR.Vt)];
+      var JR
     }
 
-    function KW(WW) {
-      return PW(WW)
+    function AR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.wq)];
+      var JR
     }
 
-    function SW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.et), PW(iW.vt), PW(iW.policy), PW(iW.PL), NW(iW.gt, (WW => PW(WW)))];
-      var iW
+    function CR(RR) {
+      return ZR(RR)
     }
 
-    function YW(WW) {
-      return ZW(WW)
+    function XR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.PV), ZR(JR.IV), ZR(JR.policy), ZR(JR.Kq), uR(JR.mV, (RR => ZR(RR)))];
+      var JR
     }
 
-    function yW(WW) {
-      return ZW(WW)
+    function MR(RR) {
+      return KR(RR)
     }
 
-    function TW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.Nt)];
-      var iW
+    function BR(RR) {
+      return KR(RR)
     }
 
-    function JW(WW) {
-      return WW
+    function lR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.fV)];
+      var JR
     }
 
-    function hW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.bt), PW(iW.jt)];
-      var iW
+    function pR(RR) {
+      return RR
     }
 
-    function HW(WW) {
-      return PW(WW)
+    function gR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.WV), ZR(JR.AV)];
+      var JR
     }
 
-    function nW(WW) {
-      return xW(WW)
+    function bR(RR) {
+      return ZR(RR)
     }
 
-    function uW(WW) {
-      return xW(WW)
+    function vR(RR) {
+      return wR(RR)
     }
 
-    function oW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.rw)];
-      var iW
+    function OR(RR) {
+      return wR(RR)
     }
 
-    function dW(WW) {
-      return (tW ??= (0, mW.g)().map((WW => WW.name)), tW).map((iW => {
-        return "string" === typeof(OW = WW[iW]) ? PW(OW) : NW(OW, wW);
-        var OW
+    function xR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.GV)];
+      var JR
+    }
+
+    function NR(RR) {
+      return (VR ??= (0, yR.e)().map((RR => RR.name)), VR).map((JR => {
+        return "string" === typeof(GR = RR[JR]) ? ZR(GR) : uR(GR, fR);
+        var GR
       }))
     }
 
-    function eW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [iW.jP, iW.UP, iW.kP];
-      var iW
+    function DR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [JR.XZ, JR.MZ, JR.BZ];
+      var JR
     }
   },
-  5807: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW,
-      f: () => NW
+  5953: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR,
+      d: () => uR
     });
-    var mW = OW(5766);
-    const EW = "Air",
-      NW = Object.freeze(new mW.h(EW, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var yR = GR(5898);
+    const tR = "Air",
+      uR = Object.freeze(new yR.h(tR, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  40469: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      h: () => LW
+  40522: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR,
+      d: () => qR
     });
-    var mW = OW(344),
-      EW = OW(5174);
-    const NW = new Set(EW.o),
-      PW = new Map;
+    var yR = GR(377),
+      tR = GR(5268);
+    const uR = new Set(tR.n),
+      ZR = new Map;
 
-    function LW(WW, iW) {
-      let OW = PW.get(iW);
-      void 0 === OW && (OW = new Map, PW.set(iW, OW));
-      let EW = OW.get(WW);
-      return void 0 === EW && (EW = `${WW}${(0,mW.C)(iW)}`, OW.set(WW, EW)), EW
+    function qR(RR, JR) {
+      let GR = ZR.get(JR);
+      void 0 === GR && (GR = new Map, ZR.set(JR, GR));
+      let tR = GR.get(RR);
+      return void 0 === tR && (tR = `${RR}${(0,yR.u)(JR)}`, GR.set(RR, tR)), tR
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

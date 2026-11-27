@@ -1,197 +1,197 @@
 export const id = 710;
 export const ids = [710];
 export const modules = {
-  65059: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      rebuildScenePbrPipelines: () => LW,
-      rebuildSceneRenderables: () => cW
+  64790: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      rebuildScenePbrPipelines: () => qR,
+      rebuildSceneRenderables: () => iR
     });
-    var mW = OW(53885),
-      EW = (WW, iW) => WW.order - iW.order,
-      NW = 8,
-      PW = WW => cW(WW);
-    async function LW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await wW(WW, "pbr", iW)
+    var yR = GR(53735),
+      tR = (RR, JR) => RR.order - JR.order,
+      uR = 8,
+      ZR = RR => iR(RR);
+    async function qR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await fR(RR, "pbr", JR)
     }
-    async function cW(WW) {
-      await wW(WW, void 0, !1)
+    async function iR(RR) {
+      await fR(RR, void 0, !1)
     }
-    async function wW(WW, iW, LW) {
-      const cW = WW;
-      if (!cW._built && !LW) return;
-      const wW = cW._lightListVersion ?? 0,
-        tW = cW.surface.engine,
-        ZW = WW => {
-          cW._z ? WW.forEach((WW => WW())) : (0, mW.g)(tW, (() => WW.forEach((WW => WW()))))
+    async function fR(RR, JR, qR) {
+      const iR = RR;
+      if (!iR._built && !qR) return;
+      const fR = iR._lightListVersion ?? 0,
+        VR = iR.surface.engine,
+        KR = RR => {
+          iR._z ? RR.forEach((RR => RR())) : (0, yR.e)(VR, (() => RR.forEach((RR => RR()))))
         };
-      let xW = !1,
-        lW = !1,
-        AW = !1,
-        bW = !1;
+      let wR = !1,
+        rR = !1,
+        eR = !1,
+        aR = !1;
       try {
-        for (let WW = 1;; WW++) {
-          if (void 0 !== iW) {
-            await jW();
+        for (let RR = 1;; RR++) {
+          if (void 0 !== JR) {
+            await LR();
             break
           }
-          if (kW(cW), await jW(), !UW(cW)) break;
-          if (WW >= NW) {
-            cW._rebuildHook = PW, bW = !0, lW = !0;
+          if (UR(iR), await LR(), !nR(iR)) break;
+          if (RR >= uR) {
+            iR._rebuildHook = ZR, aR = !0, rR = !0;
             break
           }
         }
-        AW = !0
+        eR = !0
       } finally {
-        if (xW && (cW._renderables.sort(EW), cW._renderableVersion++, cW._materialEpoch++, cW._built && cW._frameGraph.build()), void 0 === iW && AW && !lW && (cW._lightListVersion ?? 0) === wW) {
-          const WW = cW._pendingTopologyRetirements?.splice(0);
-          WW?.length && ZW(WW), bW || (cW._rebuildHook = void 0)
+        if (wR && (iR._renderables.sort(tR), iR._renderableVersion++, iR._materialEpoch++, iR._built && iR._frameGraph.build()), void 0 === JR && eR && !rR && (iR._lightListVersion ?? 0) === fR) {
+          const RR = iR._pendingTopologyRetirements?.splice(0);
+          RR?.length && KR(RR), aR || (iR._rebuildHook = void 0)
         }
       }
-      async function jW() {
-        for (const [WW, mW] of cW._groups) {
-          if (void 0 !== iW && WW._materialFamily !== iW) continue;
-          if (0 === mW.length) {
-            (mW.o || mW.r) && (sW(WW, mW), xW = !0);
+      async function LR() {
+        for (const [RR, yR] of iR._groups) {
+          if (void 0 !== JR && RR._materialFamily !== JR) continue;
+          if (0 === yR.length) {
+            (yR.o || yR.r) && (WR(RR, yR), wR = !0);
             continue
           }
-          const EW = cW._runtimeBuilds;
-          await (EW?.wait(mW));
-          let NW = !1;
-          const LW = async () => {
-            const iW = cW._runtimeBuilds,
-              OW = [...mW].filter((iW => cW.meshes.includes(iW) && iW.material?._buildGroup === WW));
-            if (0 === OW.length) return void sW(WW, mW);
-            const PW = !!mW.r,
-              LW = cW._disposables.length,
-              wW = new Map,
-              tW = new Map(OW.map((WW => [WW, WW.material])));
-            for (const WW of OW) {
-              const OW = cW._meshDisposables.get(WW);
-              OW && (wW.set(WW, OW), cW._meshDisposables.delete(WW), iW?.holdPendingDisposers(WW, OW))
+          const tR = iR._runtimeBuilds;
+          await (tR?.wait(yR));
+          let uR = !1;
+          const qR = async () => {
+            const JR = iR._runtimeBuilds,
+              GR = [...yR].filter((JR => iR.meshes.includes(JR) && JR.material?._buildGroup === RR));
+            if (0 === GR.length) return void WR(RR, yR);
+            const ZR = !!yR.r,
+              qR = iR._disposables.length,
+              fR = new Map,
+              VR = new Map(GR.map((RR => [RR, RR.material])));
+            for (const RR of GR) {
+              const GR = iR._meshDisposables.get(RR);
+              GR && (fR.set(RR, GR), iR._meshDisposables.delete(RR), JR?.holdPendingDisposers(RR, GR))
             }
-            let xW, lW;
-            cW._p = WW => (lW = WW, !0);
+            let wR, rR;
+            iR._p = RR => (rR = RR, !0);
             try {
-              xW = await WW(cW, OW)
-            } catch (SW) {
-              lW?.[1]();
-              for (const EW of OW) {
-                const OW = wW.get(EW),
-                  NW = cW._meshDisposables.get(EW);
-                if (NW && NW !== OW)
-                  for (const WW of NW) WW();
-                const PW = cW.meshes.includes(EW) && EW.material === tW.get(EW) && EW.material?._buildGroup === WW && mW.includes(EW);
-                OW && PW ? cW._meshDisposables.set(EW, OW) : (cW._meshDisposables.delete(EW), OW && ZW(OW)), OW && iW?.releasePendingDisposers(EW, OW)
+              wR = await RR(iR, GR)
+            } catch (XR) {
+              rR?.[1]();
+              for (const tR of GR) {
+                const GR = fR.get(tR),
+                  uR = iR._meshDisposables.get(tR);
+                if (uR && uR !== GR)
+                  for (const RR of uR) RR();
+                const ZR = iR.meshes.includes(tR) && tR.material === VR.get(tR) && tR.material?._buildGroup === RR && yR.includes(tR);
+                GR && ZR ? iR._meshDisposables.set(tR, GR) : (iR._meshDisposables.delete(tR), GR && KR(GR)), GR && JR?.releasePendingDisposers(tR, GR)
               }
-              throw SW
+              throw XR
             } finally {
-              delete cW._p
+              delete iR._p
             }
-            if (cW._z || EW?._d()) {
-              lW?.[1]();
-              for (const iW of OW) {
-                const WW = cW._meshDisposables.get(iW),
-                  OW = wW.get(iW);
-                if (WW && WW !== OW)
-                  for (const iW of WW) iW();
-                cW._meshDisposables.delete(iW)
+            if (iR._z || tR?._d()) {
+              rR?.[1]();
+              for (const JR of GR) {
+                const RR = iR._meshDisposables.get(JR),
+                  GR = fR.get(JR);
+                if (RR && RR !== GR)
+                  for (const JR of RR) JR();
+                iR._meshDisposables.delete(JR)
               }
-              for (const iW of cW._disposables.splice(0)) iW();
-              const WW = [...wW.values()].flat();
-              ZW(WW);
-              for (const [OW, mW] of wW) iW?.releasePendingDisposers(OW, mW);
+              for (const JR of iR._disposables.splice(0)) JR();
+              const RR = [...fR.values()].flat();
+              KR(RR);
+              for (const [GR, yR] of fR) JR?.releasePendingDisposers(GR, yR);
               return
             }
-            lW?.[0](), WW._rebuildSingle = xW.rebuildSingle, mW.r = cW._runtimeBuilds?.base(WW, xW.rebuildSingle) ?? xW.rebuildSingle, "pbr" === WW._materialFamily && xW._G && (mW._w = null), PW && MW(cW, LW);
-            const AW = new Set(OW.filter((iW => cW.meshes.includes(iW) && iW.material === tW.get(iW) && iW.material?._buildGroup === WW && mW.includes(iW))));
-            if (AW.size !== OW.length && xW.renderables.some((WW => !WW.mesh))) {
-              for (const WW of OW) {
-                const OW = cW._meshDisposables.get(WW),
-                  mW = wW.get(WW);
-                if (OW && OW !== mW)
-                  for (const WW of OW) WW();
-                mW && cW.meshes.includes(WW) ? cW._meshDisposables.set(WW, mW) : (cW._meshDisposables.delete(WW), mW && ZW(mW)), mW && iW?.releasePendingDisposers(WW, mW)
+            rR?.[0](), RR._rebuildSingle = wR.rebuildSingle, yR.r = iR._runtimeBuilds?.base(RR, wR.rebuildSingle) ?? wR.rebuildSingle, "pbr" === RR._materialFamily && wR._G && (yR._w = null), ZR && AR(iR, qR);
+            const eR = new Set(GR.filter((JR => iR.meshes.includes(JR) && JR.material === VR.get(JR) && JR.material?._buildGroup === RR && yR.includes(JR))));
+            if (eR.size !== GR.length && wR.renderables.some((RR => !RR.mesh))) {
+              for (const RR of GR) {
+                const GR = iR._meshDisposables.get(RR),
+                  yR = fR.get(RR);
+                if (GR && GR !== yR)
+                  for (const RR of GR) RR();
+                yR && iR.meshes.includes(RR) ? iR._meshDisposables.set(RR, yR) : (iR._meshDisposables.delete(RR), yR && KR(yR)), yR && JR?.releasePendingDisposers(RR, yR)
               }
-              return void(NW = !0)
+              return void(uR = !0)
             }
-            const bW = new Set;
-            for (const WW of OW)
-              if (AW.has(WW)) bW.add(WW.material), cW._runtimeBuilds?.reset(WW);
+            const aR = new Set;
+            for (const RR of GR)
+              if (eR.has(RR)) aR.add(RR.material), iR._runtimeBuilds?.reset(RR);
               else {
-                const OW = wW.get(WW),
-                  mW = cW._meshDisposables.get(WW);
-                if (mW && mW !== OW)
-                  for (const WW of mW) WW();
-                OW && cW.meshes.includes(WW) ? (cW._meshDisposables.set(WW, OW), wW.delete(WW), iW?.releasePendingDisposers(WW, OW)) : cW._meshDisposables.delete(WW)
-              } for (const WW of bW) WW._csmGen = (WW._csmGen ?? 0) + 1;
-            const jW = mW.o,
-              UW = jW?.length ? new Set(jW) : null;
-            for (let WW = cW._renderables.length - 1; WW >= 0; WW--) {
-              const iW = cW._renderables[WW];
-              (AW.has(iW.mesh) || UW?.has(iW)) && cW._renderables.splice(WW, 1)
+                const GR = fR.get(RR),
+                  yR = iR._meshDisposables.get(RR);
+                if (yR && yR !== GR)
+                  for (const RR of yR) RR();
+                GR && iR.meshes.includes(RR) ? (iR._meshDisposables.set(RR, GR), fR.delete(RR), JR?.releasePendingDisposers(RR, GR)) : iR._meshDisposables.delete(RR)
+              } for (const RR of aR) RR._csmGen = (RR._csmGen ?? 0) + 1;
+            const LR = yR.o,
+              nR = LR?.length ? new Set(LR) : null;
+            for (let RR = iR._renderables.length - 1; RR >= 0; RR--) {
+              const JR = iR._renderables[RR];
+              (eR.has(JR.mesh) || nR?.has(JR)) && iR._renderables.splice(RR, 1)
             }
-            const kW = xW.renderables.filter((WW => !WW.mesh || AW.has(WW.mesh)));
-            cW._renderables.push(...kW), mW.o = kW;
-            const KW = [...wW.values()].flat();
-            ZW(KW);
-            for (const [WW, mW] of wW) iW?.releasePendingDisposers(WW, mW)
+            const UR = wR.renderables.filter((RR => !RR.mesh || eR.has(RR.mesh)));
+            iR._renderables.push(...UR), yR.o = UR;
+            const CR = [...fR.values()].flat();
+            KR(CR);
+            for (const [RR, yR] of fR) JR?.releasePendingDisposers(RR, yR)
           }, {
-            X: wW
-          } = await Promise.resolve().then((() => OW(64503))), tW = 3;
-          for (let iW = 1;; iW++) {
-            if (NW = !1, await wW(cW, WW, LW), cW._z || EW?._d()) return void(lW = !0);
-            if (!NW) break;
-            if (iW >= tW) {
-              sW(WW, mW), cW._rebuildHook = PW, bW = !0, lW = !0;
+            X: fR
+          } = await Promise.resolve().then((() => GR(64244))), VR = 3;
+          for (let JR = 1;; JR++) {
+            if (uR = !1, await fR(iR, RR, qR), iR._z || tR?._d()) return void(rR = !0);
+            if (!uR) break;
+            if (JR >= VR) {
+              WR(RR, yR), iR._rebuildHook = ZR, aR = !0, rR = !0;
               break
             }
           }
-          NW ? xW = !0 : xW = !0
+          uR ? wR = !0 : wR = !0
         }
       }
 
-      function UW(WW) {
-        for (const iW of WW.meshes) {
-          const OW = iW.material?._buildGroup;
-          if (OW && !WW._groups.get(OW)?.includes(iW)) return !0
+      function nR(RR) {
+        for (const JR of RR.meshes) {
+          const GR = JR.material?._buildGroup;
+          if (GR && !RR._groups.get(GR)?.includes(JR)) return !0
         }
         return !1
       }
 
-      function kW(WW) {
-        const iW = new Map;
-        for (const OW of WW.meshes) {
-          const WW = OW.material?._buildGroup;
-          if (!WW) continue;
-          const mW = iW.get(WW);
-          mW ? mW.push(OW) : iW.set(WW, [OW])
+      function UR(RR) {
+        const JR = new Map;
+        for (const GR of RR.meshes) {
+          const RR = GR.material?._buildGroup;
+          if (!RR) continue;
+          const yR = JR.get(RR);
+          yR ? yR.push(GR) : JR.set(RR, [GR])
         }
-        for (const [OW, mW] of WW._groups) {
-          const WW = iW.get(OW) ?? [];
-          (mW.length !== WW.length || WW.some(((WW, iW) => mW[iW] !== WW))) && (mW.length = 0, mW.push(...WW)), iW.delete(OW)
+        for (const [GR, yR] of RR._groups) {
+          const RR = JR.get(GR) ?? [];
+          (yR.length !== RR.length || RR.some(((RR, JR) => yR[JR] !== RR))) && (yR.length = 0, yR.push(...RR)), JR.delete(GR)
         }
-        for (const [OW, mW] of iW) {
-          const iW = mW;
-          WW._groups.set(OW, iW)
+        for (const [GR, yR] of JR) {
+          const JR = yR;
+          RR._groups.set(GR, JR)
         }
       }
 
-      function sW(WW, iW) {
-        const OW = iW.o;
-        if (OW?.length) {
-          const WW = new Set(OW);
-          for (let iW = cW._renderables.length - 1; iW >= 0; iW--) WW.has(cW._renderables[iW]) && cW._renderables.splice(iW, 1)
+      function WR(RR, JR) {
+        const GR = JR.o;
+        if (GR?.length) {
+          const RR = new Set(GR);
+          for (let JR = iR._renderables.length - 1; JR >= 0; JR--) RR.has(iR._renderables[JR]) && iR._renderables.splice(JR, 1)
         }
-        iW.o = void 0, iW.r = void 0, cW._runtimeBuilds?.dropBase(WW), cW._rebuildHook = PW, bW = !0
+        JR.o = void 0, JR.r = void 0, iR._runtimeBuilds?.dropBase(RR), iR._rebuildHook = ZR, aR = !0
       }
 
-      function MW(WW, iW) {
-        const OW = new Set(WW._disposables.slice(0, iW));
-        for (let mW = WW._disposables.length - 1; mW >= iW; mW--) OW.has(WW._disposables[mW]) && WW._disposables.splice(mW, 1)
+      function AR(RR, JR) {
+        const GR = new Set(RR._disposables.slice(0, JR));
+        for (let yR = RR._disposables.length - 1; yR >= JR; yR--) GR.has(RR._disposables[yR]) && RR._disposables.splice(yR, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,309 +1,309 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  37343: (WW, iW, OW) => {
-    function mW(WW, iW, OW) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(WW, iW).getContext("2d", OW);
-      const mW = document.createElement("canvas");
-      return mW.width = WW, mW.height = iW, mW.getContext("2d", OW)
+  37256: (RR, JR, GR) => {
+    function yR(RR, JR, GR) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(RR, JR).getContext("2d", GR);
+      const yR = document.createElement("canvas");
+      return yR.width = RR, yR.height = JR, yR.getContext("2d", GR)
     }
 
-    function EW(WW, iW) {
-      return WW.getContext("2d", iW)
+    function tR(RR, JR) {
+      return RR.getContext("2d", JR)
     }
-    OW.d(iW, {
-      c: () => EW,
-      g: () => mW
+    GR.d(JR, {
+      c: () => tR,
+      e: () => yR
     })
   },
-  42246: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW
+  42274: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR
     });
-    const mW = 1 << 20,
-      EW = 1 << 21,
-      NW = 1024,
-      PW = 2048;
+    const yR = 1 << 20,
+      tR = 1 << 21,
+      uR = 1024,
+      ZR = 2048;
 
-    function LW(WW, iW, OW) {
-      const LW = WW + mW,
-        cW = iW + NW,
-        wW = OW + mW;
-      return LW < 0 || LW >= EW || wW < 0 || wW >= EW || cW < 0 || cW >= PW ? -1 : (LW * EW + wW) * PW + cW
+    function qR(RR, JR, GR) {
+      const qR = RR + yR,
+        iR = JR + uR,
+        fR = GR + yR;
+      return qR < 0 || qR >= tR || fR < 0 || fR >= tR || iR < 0 || iR >= ZR ? -1 : (qR * tR + fR) * ZR + iR
     }
   },
-  42244: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW,
-      f: () => PW,
-      h: () => EW,
-      l: () => NW,
-      p: () => tW,
-      t: () => wW,
-      u: () => cW,
-      w: () => LW
+  42265: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      e: () => ZR,
+      g: () => tR,
+      h: () => uR,
+      k: () => VR,
+      m: () => fR,
+      p: () => iR,
+      r: () => qR
     });
-    OW(4675);
-    OW(42246);
+    GR(4781);
+    GR(42274);
 
-    function mW(WW) {}
+    function yR(RR) {}
 
-    function EW(WW) {}
+    function tR(RR) {}
 
-    function NW(WW) {}
+    function uR(RR) {}
 
-    function PW(WW) {}
+    function ZR(RR) {}
 
-    function LW(WW) {}
+    function qR(RR) {}
 
-    function cW(WW, iW, OW) {}
+    function iR(RR, JR, GR) {}
 
-    function wW(WW) {}
+    function fR(RR) {}
 
-    function tW(WW) {}
+    function VR(RR) {}
   },
-  42281: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => sW,
-      f: () => AW,
-      h: () => IW,
-      j: () => hW,
-      l: () => qW,
-      m: () => uW,
-      q: () => oW,
-      u: () => kW,
-      y: () => jW,
-      z: () => UW,
-      B: () => JW,
-      C: () => CW,
-      F: () => SW,
-      I: () => DW,
-      J: () => GW,
-      L: () => dW,
-      P: () => vW
+  42310: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => WR,
+      e: () => eR,
+      f: () => kR,
+      g: () => gR,
+      j: () => dR,
+      n: () => OR,
+      p: () => xR,
+      q: () => UR,
+      r: () => LR,
+      v: () => nR,
+      w: () => pR,
+      x: () => zR,
+      B: () => XR,
+      E: () => cR,
+      G: () => YR,
+      K: () => NR,
+      O: () => HR
     });
-    var mW = OW(5546),
-      EW = OW(42158),
-      NW = (OW(42244), OW(13));
-    class PW {
-      constructor(WW, iW) {
-        this.memory = WW, this.access = iW, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.aZ = 0, this.u32 = new NW.l(0), this.f32 = new NW.i(0), this.u8 = new NW.e(0), this.dataView = new NW.k(new ArrayBuffer(0)), this.refresh()
+    var yR = GR(5676),
+      tR = GR(42170),
+      uR = (GR(42265), GR(14));
+    class ZR {
+      constructor(RR, JR) {
+        this.memory = RR, this.access = JR, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.hK = 0, this.u32 = new uR.j(0), this.f32 = new uR.d(0), this.u8 = new uR.c(0), this.dataView = new uR.h(new ArrayBuffer(0)), this.refresh()
       }
       refresh() {
-        this.ptr = this.access.ptr(), this.aZ = this.access.aZ(), this.buffer = (0, NW.I)(this.memory()), this.u32 = new NW.l(this.buffer, this.ptr, this.aZ >>> 2), this.f32 = new NW.i(this.buffer, this.ptr, this.aZ >>> 2), this.u8 = new NW.e(this.buffer, this.ptr, this.aZ), this.dataView = new NW.k(this.buffer, this.ptr, this.aZ)
+        this.ptr = this.access.ptr(), this.hK = this.access.hK(), this.buffer = (0, uR.D)(this.memory()), this.u32 = new uR.j(this.buffer, this.ptr, this.hK >>> 2), this.f32 = new uR.d(this.buffer, this.ptr, this.hK >>> 2), this.u8 = new uR.c(this.buffer, this.ptr, this.hK), this.dataView = new uR.h(this.buffer, this.ptr, this.hK)
       }
       ensureViews() {
-        (0, NW.I)(this.memory()) !== this.buffer && this.refresh()
+        (0, uR.D)(this.memory()) !== this.buffer && this.refresh()
       }
       get view() {
         return this.ensureViews(), this.dataView
       }
-      room(WW) {
-        return !!this.fits(WW) || (this.dropped++, !1)
+      room(RR) {
+        return !!this.fits(RR) || (this.dropped++, !1)
       }
-      fits(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+      fits(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
         this.ensureViews();
-        const OW = iW + WW;
-        return OW <= this.aZ || OW <= mW.Oc && 0 !== this.access.reserve(OW) && (this.refresh(), OW <= this.aZ)
+        const GR = JR + RR;
+        return GR <= this.hK || GR <= yR.Nc && 0 !== this.access.reserve(GR) && (this.refresh(), GR <= this.hK)
       }
-      consume(WW) {
-        const iW = this.cursor - WW;
-        iW > 0 && WW > 0 && (this.ensureViews(), this.u8.copyWithin(0, WW, this.cursor)), this.cursor = iW > 0 ? iW : 0
+      consume(RR) {
+        const JR = this.cursor - RR;
+        JR > 0 && RR > 0 && (this.ensureViews(), this.u8.copyWithin(0, RR, this.cursor)), this.cursor = JR > 0 ? JR : 0
       }
-      writeRecord(WW, iW, OW, EW, NW) {
-        if (!this.room(mW.gb)) return !1;
-        const PW = this.cursor >>> 2;
-        return this.u32[PW] = 65535 & WW | (65535 & iW) << 16, this.f32[PW + 1] = OW, this.f32[PW + 2] = EW, this.u32[PW + 3] = NW >>> 0, this.cursor += mW.gb, !0
+      writeRecord(RR, JR, GR, tR, uR) {
+        if (!this.room(yR.sb)) return !1;
+        const ZR = this.cursor >>> 2;
+        return this.u32[ZR] = 65535 & RR | (65535 & JR) << 16, this.f32[ZR + 1] = GR, this.f32[ZR + 2] = tR, this.u32[ZR + 3] = uR >>> 0, this.cursor += yR.sb, !0
       }
-      writeOptions(WW, iW) {
-        const OW = iW.byteLength,
-          EW = mW.gb + (0, mW.xe)(OW);
-        if (!this.fits(EW)) return !1;
-        const NW = this.cursor,
-          PW = NW >>> 2;
-        this.u32[PW] = mW.hb.Options, this.u32[PW + 1] = OW, this.u32[PW + 2] = 0, this.u32[PW + 3] = WW >>> 0;
-        const LW = NW + mW.gb;
-        return this.u8.set(iW, LW), this.u8.fill(0, LW + OW, NW + EW), this.cursor += EW, !0
+      writeOptions(RR, JR) {
+        const GR = JR.byteLength,
+          tR = yR.sb + (0, yR.ve)(GR);
+        if (!this.fits(tR)) return !1;
+        const uR = this.cursor,
+          ZR = uR >>> 2;
+        this.u32[ZR] = yR.wb.Options, this.u32[ZR + 1] = GR, this.u32[ZR + 2] = 0, this.u32[ZR + 3] = RR >>> 0;
+        const qR = uR + yR.sb;
+        return this.u8.set(JR, qR), this.u8.fill(0, qR + GR, uR + tR), this.cursor += tR, !0
       }
-      writeWorkerRecord(WW, iW, OW, EW, NW, PW) {
-        const LW = PW.byteLength,
-          cW = mW.Pd + (0, mW.xe)(LW);
-        if (LW > mW.Od) return this.dropped++, !1;
-        if (!this.room(cW)) return !1;
-        const wW = this.cursor,
-          tW = wW >>> 2;
-        this.u32[tW] = WW >>> 0, this.u32[tW + 1] = 65535 & iW | (65535 & OW) << 16, this.u32[tW + 2] = EW >>> 0, this.u32[tW + 3] = NW >>> 0, this.u32[tW + 4] = LW;
-        const ZW = wW + mW.Pd;
-        return this.u8.set(PW, ZW), this.u8.fill(0, ZW + LW, wW + cW), this.cursor += cW, !0
+      writeWorkerRecord(RR, JR, GR, tR, uR, ZR) {
+        const qR = ZR.byteLength,
+          iR = yR.Pd + (0, yR.ve)(qR);
+        if (qR > yR.Md) return this.dropped++, !1;
+        if (!this.room(iR)) return !1;
+        const fR = this.cursor,
+          VR = fR >>> 2;
+        this.u32[VR] = RR >>> 0, this.u32[VR + 1] = 65535 & JR | (65535 & GR) << 16, this.u32[VR + 2] = tR >>> 0, this.u32[VR + 3] = uR >>> 0, this.u32[VR + 4] = qR;
+        const KR = fR + yR.Pd;
+        return this.u8.set(ZR, KR), this.u8.fill(0, KR + qR, fR + iR), this.cursor += iR, !0
       }
       written() {
         return this.ensureViews(), this.u8.subarray(0, this.cursor)
       }
-      writeFrame(WW, iW) {
-        return this.writeNet(mW.Wb.Frame, WW, iW)
+      writeFrame(RR, JR) {
+        return this.writeNet(yR.Zb.Frame, RR, JR)
       }
-      writeOpen(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(mW.Wb.Open, WW, cW(iW))
+      writeOpen(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(yR.Zb.Open, RR, iR(JR))
       }
-      writeClose(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(mW.Wb.Close, WW, cW(iW))
+      writeClose(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(yR.Zb.Close, RR, iR(JR))
       }
-      writeNet(WW, iW, OW) {
-        const EW = OW.byteLength,
-          NW = mW.Ub + (0, mW.xe)(EW);
-        if (EW > mW.Mb) return this.dropped++, !1;
-        if (!this.room(NW)) return !1;
-        const PW = this.cursor;
-        this.u32[PW >>> 2] = EW, this.u32[1 + (PW >>> 2)] = (0, mW.re)(WW, iW);
-        const LW = PW + mW.Ub;
-        return this.u8.set(OW, LW), this.u8.fill(0, LW + EW, PW + NW), this.cursor += NW, !0
+      writeNet(RR, JR, GR) {
+        const tR = GR.byteLength,
+          uR = yR.Yb + (0, yR.ve)(tR);
+        if (tR > yR.Rb) return this.dropped++, !1;
+        if (!this.room(uR)) return !1;
+        const ZR = this.cursor;
+        this.u32[ZR >>> 2] = tR, this.u32[1 + (ZR >>> 2)] = (0, yR.qe)(RR, JR);
+        const qR = ZR + yR.Yb;
+        return this.u8.set(GR, qR), this.u8.fill(0, qR + tR, ZR + uR), this.cursor += uR, !0
       }
-      kZ(WW, iW, OW) {
-        const EW = mW.o + (0, mW.xe)(OW);
-        if (!this.room(EW)) return -1;
-        const NW = this.cursor;
-        this.u32[NW >>> 2] = 65535 & WW | (65535 & iW) << 16, this.u32[1 + (NW >>> 2)] = OW;
-        const PW = NW + mW.o;
-        return this.u8.fill(0, PW, NW + EW), this.cursor += EW, PW
+      UK(RR, JR, GR) {
+        const tR = yR.w + (0, yR.ve)(GR);
+        if (!this.room(tR)) return -1;
+        const uR = this.cursor;
+        this.u32[uR >>> 2] = 65535 & RR | (65535 & JR) << 16, this.u32[1 + (uR >>> 2)] = GR;
+        const ZR = uR + yR.w;
+        return this.u8.fill(0, ZR, uR + tR), this.cursor += tR, ZR
       }
-      growForCmd(WW) {
-        return this.fits(mW.o + (0, mW.xe)(WW), 0)
+      growForCmd(RR) {
+        return this.fits(yR.w + (0, yR.ve)(RR), 0)
       }
-      writeCmd(WW, iW, OW) {
-        const mW = this.kZ(WW, iW, OW.byteLength);
-        return !(mW < 0) && (this.u8.set(OW, mW), !0)
+      writeCmd(RR, JR, GR) {
+        const yR = this.UK(RR, JR, GR.byteLength);
+        return !(yR < 0) && (this.u8.set(GR, yR), !0)
       }
-      copyWritten(WW, iW) {
-        return this.ensureViews(), this.u8.slice(WW, WW + iW)
+      copyWritten(RR, JR) {
+        return this.ensureViews(), this.u8.slice(RR, RR + JR)
       }
     }
-    const LW = new NW.e(0);
+    const qR = new uR.c(0);
 
-    function cW(WW) {
-      if (0 === WW) return LW;
-      const iW = new NW.e(mW.Qb);
-      for (let OW = 0; OW < mW.Qb; OW++) iW[OW] = WW >>> 8 * OW & 255;
-      return iW
+    function iR(RR) {
+      if (0 === RR) return qR;
+      const JR = new uR.c(yR.Vb);
+      for (let GR = 0; GR < yR.Vb; GR++) JR[GR] = RR >>> 8 * GR & 255;
+      return JR
     }
-    class wW {
-      constructor(WW, iW) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new PW(iW, {
-          ptr: () => WW.wx(),
-          aZ: () => WW.uPW(),
-          reserve: iW => WW.qPW(iW)
-        }), this.net = new PW(iW, {
-          ptr: () => WW.fPW(),
-          aZ: () => WW.pPW(),
-          reserve: iW => WW.RPW(iW)
-        }), this.worker = new PW(iW, {
-          ptr: () => WW.xLW(),
-          aZ: () => WW.ZLW(),
-          reserve: iW => WW.GPW(iW)
-        }), this.cmd = new PW(iW, {
-          ptr: () => WW.sPW(),
-          aZ: () => WW.UPW(),
-          reserve: iW => WW.kPW(iW)
+    class fR {
+      constructor(RR, JR) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new ZR(JR, {
+          ptr: () => RR.ww(),
+          hK: () => RR.aqR(),
+          reserve: JR => RR.gqR(JR)
+        }), this.net = new ZR(JR, {
+          ptr: () => RR.MqR(),
+          hK: () => RR.XqR(),
+          reserve: JR => RR.bqR(JR)
+        }), this.worker = new ZR(JR, {
+          ptr: () => RR.TqR(),
+          hK: () => RR.FqR(),
+          reserve: JR => RR.vqR(JR)
+        }), this.cmd = new ZR(JR, {
+          ptr: () => RR.uqR(),
+          hK: () => RR.yqR(),
+          reserve: JR => RR.tqR(JR)
         })
       }
-      reset(WW, iW, OW) {
-        this.input.consume(WW), this.worker.consume(iW), this.cmd.consume(OW)
+      reset(RR, JR, GR) {
+        this.input.consume(RR), this.worker.consume(JR), this.cmd.consume(GR)
       }
     }
-    var tW = OW(37265),
-      ZW = OW(3308),
-      xW = OW(5540),
-      lW = OW(42288);
-    const AW = "coreFrame",
-      bW = "fatalStatus",
-      jW = "otherCall",
-      UW = "coreRings",
-      kW = "netIn",
-      sW = "abi",
-      MW = "netOut",
-      KW = "workerOut",
-      SW = "worldgenHost",
-      YW = "eventWalker",
-      yW = "netEvent",
-      TW = "envEvent",
-      JW = "sharedTables",
-      hW = "inputAction",
-      HW = "frameSends",
-      nW = new Set([YW, yW, TW, HW, hW, JW]),
-      uW = "wasmMemory",
-      oW = "meshHost";
+    var VR = GR(37183),
+      KR = GR(3437),
+      wR = GR(5671),
+      rR = GR(42315);
+    const eR = "coreFrame",
+      aR = "fatalStatus",
+      LR = "otherCall",
+      nR = "coreRings",
+      UR = "netIn",
+      WR = "abi",
+      AR = "netOut",
+      CR = "workerOut",
+      XR = "worldgenHost",
+      MR = "eventWalker",
+      BR = "netEvent",
+      lR = "envEvent",
+      pR = "sharedTables",
+      gR = "inputAction",
+      bR = "frameSends",
+      vR = new Set([MR, BR, lR, bR, gR, pR]),
+      OR = "wasmMemory",
+      xR = "meshHost";
 
-    function dW(WW, iW) {
-      WW.forEachWorkerOut(((OW, EW, NW) => {
-        if ((0, mW.je)(OW)) try {
-          var PW;
-          null === (PW = iW.worldgen) || void 0 === PW || PW.take(OW, NW)
-        } catch (cW) {
-          WW.crash(SW, cW)
+    function NR(RR, JR) {
+      RR.forEachWorkerOut(((GR, tR, uR) => {
+        if ((0, yR.je)(GR)) try {
+          var ZR;
+          null === (ZR = JR.worldgen) || void 0 === ZR || ZR.take(GR, uR)
+        } catch (iR) {
+          RR.crash(XR, iR)
         } else try {
-          var LW;
-          null === (LW = iW.mesh) || void 0 === LW || LW.take(OW, EW, NW)
-        } catch (cW) {
-          WW.crash(oW, cW)
+          var qR;
+          null === (qR = JR.mesh) || void 0 === qR || qR.take(GR, tR, uR)
+        } catch (iR) {
+          RR.crash(xR, iR)
         }
       }))
     }
-    const eW = 1048576;
+    const DR = 1048576;
 
-    function vW(WW, iW) {
-      let OW = !1;
-      const mW = () => {
-        OW = !1, iW()
+    function HR(RR, JR) {
+      let GR = !1;
+      const yR = () => {
+        GR = !1, JR()
       };
       return () => {
-        !OW && WW.cursor >= eW && (OW = !0, queueMicrotask(mW))
+        !GR && RR.cursor >= DR && (GR = !0, queueMicrotask(yR))
       }
     }
-    const gW = new Set([bW, jW, SW, oW]);
+    const oR = new Set([aR, LR, XR, xR]);
 
-    function DW(WW) {
-      return nW.has(WW.site) ? WW.error instanceof WebAssembly.RuntimeError || (0, EW.m)(WW.error) : !gW.has(WW.site) && WW.error instanceof Error
+    function cR(RR) {
+      return vR.has(RR.site) ? RR.error instanceof WebAssembly.RuntimeError || (0, tR.i)(RR.error) : !oR.has(RR.site) && RR.error instanceof Error
     }
-    const VW = "events",
-      pW = [],
-      fW = "debugLog",
-      CW = "terrainTextures",
-      XW = "sunShadowTextures",
-      BW = "joinWarm",
-      qW = {
+    const PR = "events",
+      IR = [],
+      mR = "debugLog",
+      zR = "terrainTextures",
+      SR = "sunShadowTextures",
+      jR = "joinWarm",
+      dR = {
         Home: 0,
         Play: 1,
         Joined: 2
       },
-      RW = new TextDecoder;
+      ER = new TextDecoder;
 
-    function GW(WW, iW) {
+    function YR(RR, JR) {
       const {
-        site: OW,
-        error: EW,
-        header: NW
-      } = WW, PW = NW ? (0, mW.de)(NW.lastError) : "noFrame", LW = `CORE-${OW===bW?PW:OW}`, cW = null === EW || void 0 === EW ? "" : ` ${(0,tW.m)(EW)}`, wW = {
-        site: OW,
-        wasmBuild: iW.wasm,
-        clientVersion: iW.client
+        site: GR,
+        error: tR,
+        header: uR
+      } = RR, ZR = uR ? (0, yR.ge)(uR.lastError) : "noFrame", qR = `CORE-${GR===aR?ZR:GR}`, iR = null === tR || void 0 === tR ? "" : ` ${(0,VR.k)(tR)}`, fR = {
+        site: GR,
+        wasmBuild: JR.wasm,
+        clientVersion: JR.client
       };
-      return NW && (wW.status = String(NW.status), wW.lastError = PW, wW.lastErrorCode = String(NW.lastError), wW.lastErrorDetail = String(NW.lastErrorDetail), wW.errorCount = String(NW.errorCount), wW.frameIndex = String(NW.frameIndex), wW.tickIndex = String(NW.tickIndex)), {
-        code: LW,
-        message: `core ${OW}, last error ${PW};${cW}`,
-        details: wW
+      return uR && (fR.status = String(uR.status), fR.lastError = ZR, fR.lastErrorCode = String(uR.lastError), fR.lastErrorDetail = String(uR.lastErrorDetail), fR.errorCount = String(uR.errorCount), fR.frameIndex = String(uR.frameIndex), fR.tickIndex = String(uR.tickIndex)), {
+        code: qR,
+        message: `core ${GR}, last error ${ZR};${iR}`,
+        details: fR
       }
     }
-    class IW {
-      constructor(WW, iW, OW) {
-        this.core = WW, this.memory = iW, this.handlers = OW, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+    class kR {
+      constructor(RR, JR, GR) {
+        this.core = RR, this.memory = JR, this.handlers = GR, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
           ptr: 0,
           len: 0,
-          net: pW,
+          net: IR,
           netOffsets: this.netOffsets,
           kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new wW(WW, iW)
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new fR(RR, JR)
       }
       get netKeptFrames() {
         return this.keptFrames
@@ -314,564 +314,564 @@ export const modules = {
       hasPendingCommands() {
         return this.rings.cmd.cursor > 0
       }
-      framePaces(WW) {
+      framePaces(RR) {
         if (this.stopped || this.drawsHeld) return !1;
         try {
-          return this.core.hPW(WW)
-        } catch (iW) {
-          return this.crash(AW, iW), !1
+          return this.core.wqR(RR)
+        } catch (JR) {
+          return this.crash(eR, JR), !1
         }
       }
       get isStopped() {
         return this.stopped
       }
-      frame(WW, iW) {
-        var OW;
-        let NW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      frame(RR, JR) {
+        var GR;
+        let uR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this.stopped) return !1;
         if (!this.writePendingInput()) return !1;
         const {
-          input: PW,
-          net: LW,
-          worker: cW,
-          cmd: wW
-        } = this.rings, tW = LW.cursor, ZW = iW && !this.drawsHeld;
-        let jW = mW.E.Fatal;
-        const UW = PW.cursor,
-          sW = cW.cursor,
-          MW = wW.cursor;
-        let KW, SW = null;
-        const TW = this.handlers.onSends;
+          input: ZR,
+          net: qR,
+          worker: iR,
+          cmd: fR
+        } = this.rings, VR = qR.cursor, KR = JR && !this.drawsHeld;
+        let LR = yR.L.Fatal;
+        const nR = ZR.cursor,
+          WR = iR.cursor,
+          AR = fR.cursor;
+        let CR, XR = null;
+        const lR = this.handlers.onSends;
         try {
-          const iW = (ZW ? mW.Y.Draws : 0) | (NW ? mW.Y.NetAll : 0) | (TW ? mW.Y.StopForSends : 0);
-          jW = (0, lW.e)((() => {
-            let OW = this.core.frame(WW, UW, LW.cursor, sW, iW, MW);
-            for (; OW === mW.vd && TW;) {
-              var EW;
-              if (KW ??= null === (EW = this.gameHost) || void 0 === EW ? void 0 : EW.takeFault(), void 0 === KW && !this.takeSends(TW)) return mW.E.Fatal;
-              OW = this.core.LU()
+          const JR = (KR ? yR.cb.Draws : 0) | (uR ? yR.cb.NetAll : 0) | (lR ? yR.cb.StopForSends : 0);
+          LR = (0, rR.f)((() => {
+            let GR = this.core.frame(RR, nR, qR.cursor, WR, JR, AR);
+            for (; GR === yR.md && lR;) {
+              var tR;
+              if (CR ??= null === (tR = this.gameHost) || void 0 === tR ? void 0 : tR.takeFault(), void 0 === CR && !this.takeSends(lR)) return yR.L.Fatal;
+              GR = this.core.Zn()
             }
-            return OW
+            return GR
           }))
-        } catch (BW) {
-          SW = {
-            error: BW
+        } catch (jR) {
+          XR = {
+            error: jR
           }
         }
-        KW ??= null === (OW = this.gameHost) || void 0 === OW ? void 0 : OW.takeFault();
-        const JW = this.stopped || null !== SW || void 0 !== KW;
-        this.rings.reset(JW ? PW.cursor : UW, JW ? cW.cursor : sW, JW ? wW.cursor : MW);
-        const hW = null === SW && void 0 === KW,
-          HW = hW && !this.stopped && jW === mW.E.Fatal && 0 === this.core.fl(),
-          nW = hW && !HW ? this.headerView() : null,
-          uW = HW ? {
-            ...null !== (oW = this.lastHeader) && void 0 !== oW ? oW : (0, mW.ye)(new Uint32Array(mW._)),
-            status: mW.E.Fatal,
-            lastError: mW.D.CoreBusy,
+        CR ??= null === (GR = this.gameHost) || void 0 === GR ? void 0 : GR.takeFault();
+        const pR = this.stopped || null !== XR || void 0 !== CR;
+        this.rings.reset(pR ? ZR.cursor : nR, pR ? iR.cursor : WR, pR ? fR.cursor : AR);
+        const gR = null === XR && void 0 === CR,
+          bR = gR && !this.stopped && LR === yR.L.Fatal && 0 === this.core.Sr(),
+          vR = gR && !bR ? this.headerView() : null,
+          OR = bR ? {
+            ...null !== (xR = this.lastHeader) && void 0 !== xR ? xR : (0, yR.ye)(new Uint32Array(yR.jb)),
+            status: yR.L.Fatal,
+            lastError: yR.K.CoreBusy,
             lastErrorDetail: 0
-          } : null === nW ? null : (0, mW.ye)(nW);
-        var oW;
-        null !== uW && (this.lastHeader = uW);
-        const dW = null !== uW && jW !== mW.E.Fatal,
-          eW = dW && null !== nW ? nW[mW.ab.NetInKept] : 0,
-          vW = dW && eW <= tW && eW % 4 === 0 ? eW : null;
-        var gW, DW;
-        null !== uW && null !== vW && jW === mW.E.Errors && (null === (gW = (DW = this.handlers).onErrors) || void 0 === gW || gW.call(DW, uW));
-        const VW = null === vW ? pW : this.readEvents(tW);
-        if (LW.consume(tW - (null !== vW && void 0 !== vW ? vW : 0)), this.netKept = null !== vW && void 0 !== vW ? vW : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== SW) return this.crash(AW, void 0 === KW || KW instanceof EW.e ? SW.error : KW), !1;
-        if (void 0 !== KW || null === uW) return this.crashOn(AW, KW), !1;
-        if (HW) return this.crash(bW, null), !1;
-        const fW = this.headerView()[mW.ab.FrameDraw];
-        if (this.lastFrameKind = (0, xW.f)(ZW, fW), jW === mW.E.Fatal) return this.crash(bW, null), !1;
-        if (null === vW) return this.crash(kW, `the core kept ${eW} of ${tW} net-in bytes`), !1;
+          } : null === vR ? null : (0, yR.ye)(vR);
+        var xR;
+        null !== OR && (this.lastHeader = OR);
+        const NR = null !== OR && LR !== yR.L.Fatal,
+          DR = NR && null !== vR ? vR[yR.kb.NetInKept] : 0,
+          HR = NR && DR <= VR && DR % 4 === 0 ? DR : null;
+        var oR, cR;
+        null !== OR && null !== HR && LR === yR.L.Errors && (null === (oR = (cR = this.handlers).onErrors) || void 0 === oR || oR.call(cR, OR));
+        const PR = null === HR ? IR : this.readEvents(VR);
+        if (qR.consume(VR - (null !== HR && void 0 !== HR ? HR : 0)), this.netKept = null !== HR && void 0 !== HR ? HR : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== XR) return this.crash(eR, void 0 === CR || CR instanceof tR.c ? XR.error : CR), !1;
+        if (void 0 !== CR || null === OR) return this.crashOn(eR, CR), !1;
+        if (bR) return this.crash(aR, null), !1;
+        const mR = this.headerView()[yR.kb.FrameDraw];
+        if (this.lastFrameKind = (0, wR.e)(KR, mR), LR === yR.L.Fatal) return this.crash(aR, null), !1;
+        if (null === HR) return this.crash(UR, `the core kept ${DR} of ${VR} net-in bytes`), !1;
         if (this.eventWalker) {
           if (this.stopped) return !1;
-          const WW = this.frameEvents,
-            iW = this.headerView();
-          WW.ptr = iW[mW.ab.EventsPtr], WW.len = iW[mW.ab.EventsLen], WW.net = VW, WW.kind = this.lastFrameKind;
+          const RR = this.frameEvents,
+            JR = this.headerView();
+          RR.ptr = JR[yR.kb.EventsPtr], RR.len = JR[yR.kb.EventsLen], RR.net = PR, RR.kind = this.lastFrameKind;
           try {
-            this.eventWalker(WW)
-          } catch (BW) {
-            return this.crashOn(YW, BW), !1
+            this.eventWalker(RR)
+          } catch (jR) {
+            return this.crashOn(MR, jR), !1
           }
           return this.handEnvEvents()
         }
-        for (const mW of VW) {
+        for (const yR of PR) {
           if (this.stopped) return !1;
           try {
-            var CW, XW;
-            null === (CW = (XW = this.handlers).onNetEvent) || void 0 === CW || CW.call(XW, mW)
-          } catch (BW) {
-            return this.crashOn(yW, BW), !1
+            var zR, SR;
+            null === (zR = (SR = this.handlers).onNetEvent) || void 0 === zR || zR.call(SR, yR)
+          } catch (jR) {
+            return this.crashOn(BR, jR), !1
           }
         }
         return this.handEnvEvents()
       }
       handEnvEvents() {
-        for (const NW of this.graceEvents) {
+        for (const uR of this.graceEvents) {
           if (this.stopped) return !1;
           try {
-            var WW, iW;
-            null === (WW = (iW = this.handlers).onReconnectGrace) || void 0 === WW || WW.call(iW, NW)
-          } catch (EW) {
-            return this.crashOn(yW, EW), !1
+            var RR, JR;
+            null === (RR = (JR = this.handlers).onReconnectGrace) || void 0 === RR || RR.call(JR, uR)
+          } catch (tR) {
+            return this.crashOn(BR, tR), !1
           }
         }
-        for (const NW of this.envEvents) {
+        for (const uR of this.envEvents) {
           if (this.stopped) return !1;
           try {
-            var OW, mW;
-            null === (OW = (mW = this.handlers).onEnvEvent) || void 0 === OW || OW.call(mW, NW)
-          } catch (EW) {
-            return this.crashOn(TW, EW), !1
+            var GR, yR;
+            null === (GR = (yR = this.handlers).onEnvEvent) || void 0 === GR || GR.call(yR, uR)
+          } catch (tR) {
+            return this.crashOn(lR, tR), !1
           }
         }
         return !this.stopped
       }
-      setEventWalker(WW) {
-        this.eventWalker = WW
+      setEventWalker(RR) {
+        this.eventWalker = RR
       }
       writePendingInput() {
         if (this.stopped) return !1;
         const {
-          input: WW
+          input: RR
         } = this.rings;
         try {
-          const iW = this.unsentUiPrefs;
-          iW && WW.writeRecord(mW.hb.UiPrefs, 0, iW.nametagCutDistance, 0, (0, mW.Be)(iW)) && (this.unsentUiPrefs = null);
-          const OW = this.unsentEnvPrefs;
-          OW && WW.writeRecord(mW.hb.EnvPrefs, (0, mW.ge)(OW), OW.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const EW = this.unsentLookPrefs;
-          EW && WW.writeRecord(mW.hb.Sensitivity, 0, EW.mouse, EW.touch, (0, ZW.i)(EW.fovPercent)) && (this.unsentLookPrefs = null);
-          let NW = 0;
+          const JR = this.unsentUiPrefs;
+          JR && RR.writeRecord(yR.wb.UiPrefs, 0, JR.nametagCutDistance, 0, (0, yR.Ae)(JR)) && (this.unsentUiPrefs = null);
+          const GR = this.unsentEnvPrefs;
+          GR && RR.writeRecord(yR.wb.EnvPrefs, (0, yR.ie)(GR), GR.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const tR = this.unsentLookPrefs;
+          tR && RR.writeRecord(yR.wb.Sensitivity, 0, tR.mouse, tR.touch, (0, KR.l)(tR.fovPercent)) && (this.unsentLookPrefs = null);
+          let uR = 0;
           for (const {
-              aux: mW,
-              payload: PW
+              aux: yR,
+              payload: ZR
             }
             of this.unsentOptions) {
-            if (!WW.writeOptions(mW, PW)) {
-              if (WW.cursor > 0) break;
+            if (!RR.writeOptions(yR, ZR)) {
+              if (RR.cursor > 0) break;
               this.optionsDropped++
             }
-            NW++
+            uR++
           }
-          NW > 0 && this.unsentOptions.splice(0, NW)
-        } catch (iW) {
-          return this.crash(UW, iW), !1
+          uR > 0 && this.unsentOptions.splice(0, uR)
+        } catch (JR) {
+          return this.crash(nR, JR), !1
         }
         return !0
       }
-      setHoldDraws(WW) {
-        this.drawsHeld = WW
+      setHoldDraws(RR) {
+        this.drawsHeld = RR
       }
-      setUiPrefs(WW) {
+      setUiPrefs(RR) {
         this.unsentUiPrefs = {
-          ...WW
+          ...RR
         }
       }
-      setEnvPrefs(WW) {
+      setEnvPrefs(RR) {
         this.unsentEnvPrefs = {
-          ...WW
+          ...RR
         }
       }
-      setLookPrefs(WW) {
+      setLookPrefs(RR) {
         this.unsentLookPrefs = {
-          ...WW
+          ...RR
         }
       }
-      queueOptions(WW, iW) {
-        return !this.isStopped && (iW.byteLength > mW.bc.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: WW,
-          payload: iW
+      queueOptions(RR, JR) {
+        return !this.isStopped && (JR.byteLength > yR.$b.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: RR,
+          payload: JR
         }), !0))
       }
-      setChunkCap(WW) {
-        return this.callCore("setChunkCap", null, (iW => iW.QPW(WW)))
+      setChunkCap(RR) {
+        return this.callCore("setChunkCap", null, (JR => JR.cqR(RR)))
       }
-      shedMemory(WW) {
-        const iW = this.callCore("shedMemory", null, (iW => iW.NLW(WW)));
-        return 0 === iW ? null : iW
+      shedMemory(RR) {
+        const JR = this.callCore("shedMemory", null, (JR => JR.jqR(RR)));
+        return 0 === JR ? null : JR
       }
       releaseLeftGame() {
-        this.callCore("releaseLeftGame", void 0, (WW => {
-          WW.BPW()
+        this.callCore("releaseLeftGame", void 0, (RR => {
+          RR.pqR()
         }))
       }
       addDistanceInUse() {
-        const WW = this.callCore("addDistanceInUse", null, (WW => WW.xPW()));
-        return 0 === WW ? null : WW
+        const RR = this.callCore("addDistanceInUse", null, (RR => RR.sZR()));
+        return 0 === RR ? null : RR
       }
-      setChunkAddDistance(WW, iW) {
-        return this.callCore("setChunkAddDistance", !1, (OW => OW.FPW(WW, iW)))
+      setChunkAddDistance(RR, JR) {
+        return this.callCore("setChunkAddDistance", !1, (GR => GR.oqR(RR, JR)))
       }
-      setGameHost(WW) {
-        return this.callCore("setGameHost", !1, (iW => (iW.JPW(WW), this.gameHost = WW, !0)))
+      setGameHost(RR) {
+        return this.callCore("setGameHost", !1, (JR => (JR.KqR(RR), this.gameHost = RR, !0)))
       }
-      setAntiCheatProbes(WW) {
-        return this.callCore("setAntiCheatProbes", !1, (iW => iW.rPW(WW)))
+      setAntiCheatProbes(RR) {
+        return this.callCore("setAntiCheatProbes", !1, (JR => JR.DqR(RR)))
       }
-      setAmbientOcclusion(WW) {
-        this.callCore("setAmbientOcclusion", void 0, (iW => {
-          iW.aPW(WW)
+      setAmbientOcclusion(RR) {
+        this.callCore("setAmbientOcclusion", void 0, (JR => {
+          JR.NqR(RR)
         }))
       }
-      setPoseLod(WW) {
-        this.callCore("setPoseLod", void 0, (iW => {
-          iW.iLW(WW)
+      setPoseLod(RR) {
+        this.callCore("setPoseLod", void 0, (JR => {
+          JR.IqR(RR)
         }))
       }
-      setDebugLog(WW, iW) {
-        this.callCore(fW, void 0, (OW => {
-          OW.OU(WW, iW)
+      setDebugLog(RR, JR) {
+        this.callCore(mR, void 0, (GR => {
+          GR.Jn(RR, JR)
         }))
       }
-      takeDebugLog(WW) {
-        return this.callCore(fW, [], (iW => iW.mU(WW)))
+      takeDebugLog(RR) {
+        return this.callCore(mR, [], (JR => JR.Gn(RR)))
       }
-      setTextureLayers(WW) {
-        return this.callCore("setTextureLayers", !1, (iW => iW.ELW(WW)))
+      setTextureLayers(RR) {
+        return this.callCore("setTextureLayers", !1, (JR => JR.SqR(RR)))
       }
-      setBlockColours(WW) {
+      setBlockColours(RR) {
         let {
-          blocks: iW,
-          counts: OW,
-          values: mW
-        } = WW;
-        return this.callCore("setBlockColours", !1, (WW => WW.SmW(iW, OW, mW)))
+          blocks: JR,
+          counts: GR,
+          values: yR
+        } = RR;
+        return this.callCore("setBlockColours", !1, (RR => RR.ftR(JR, GR, yR)))
       }
       terrainTextureNames() {
-        return this.callCore(CW, [], (WW => WW.tLW()))
+        return this.callCore(zR, [], (RR => RR.QqR()))
       }
-      setTerrainTextures(WW, iW, OW, mW) {
-        return this.callCore(CW, !1, (EW => EW.mLW(WW, OW, iW, mW)))
+      setTerrainTextures(RR, JR, GR, yR) {
+        return this.callCore(zR, !1, (tR => tR.zqR(RR, GR, JR, yR)))
       }
-      setShaderPack(WW, iW, OW, mW, EW, NW) {
-        return this.callCore("setShaderPack", !1, (PW => {
-          var LW, cW;
-          return null !== (LW = null === (cW = PW.umW) || void 0 === cW ? void 0 : cW.call(PW, WW, iW, OW, mW, EW, NW)) && void 0 !== LW && LW
+      setShaderPack(RR, JR, GR, yR, tR, uR) {
+        return this.callCore("setShaderPack", !1, (ZR => {
+          var qR, iR;
+          return null !== (qR = null === (iR = ZR.ntR) || void 0 === iR ? void 0 : iR.call(ZR, RR, JR, GR, yR, tR, uR)) && void 0 !== qR && qR
         }))
       }
-      warmBeforeJoin(WW, iW) {
-        this.callCore(BW, void 0, (OW => {
-          var mW;
-          null === (mW = OW.TPW) || void 0 === mW || mW.call(OW, WW, iW)
+      warmBeforeJoin(RR, JR) {
+        this.callCore(jR, void 0, (GR => {
+          var yR;
+          null === (yR = GR.VqR) || void 0 === yR || yR.call(GR, RR, JR)
         }))
       }
       firstViewTerrainCodes() {
-        return this.callCore(BW, null, (WW => {
-          var iW, OW;
-          return null !== (iW = null === (OW = WW.ymW) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : null
+        return this.callCore(jR, null, (RR => {
+          var JR, GR;
+          return null !== (JR = null === (GR = RR.KtR) || void 0 === GR ? void 0 : GR.call(RR)) && void 0 !== JR ? JR : null
         }))
       }
       sunShadowWantedTextures() {
-        return this.callCore(XW, null, (WW => {
-          var iW, OW;
-          return null !== (iW = null === (OW = WW.PLW) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : null
+        return this.callCore(SR, null, (RR => {
+          var JR, GR;
+          return null !== (JR = null === (GR = RR.dqR) || void 0 === GR ? void 0 : GR.call(RR)) && void 0 !== JR ? JR : null
         }))
       }
-      setSunShadowTexture(WW, iW, OW, mW, EW) {
-        this.callCore(XW, void 0, (NW => {
-          var PW;
-          null === (PW = NW.OLW) || void 0 === PW || PW.call(NW, WW, iW, OW, mW, EW)
+      setSunShadowTexture(RR, JR, GR, yR, tR) {
+        this.callCore(SR, void 0, (uR => {
+          var ZR;
+          null === (ZR = uR.mqR) || void 0 === ZR || ZR.call(uR, RR, JR, GR, yR, tR)
         }))
       }
       takeSunShadowWarnings() {
-        return this.callCore(XW, [], (WW => {
-          var iW, OW;
-          return null !== (iW = null === (OW = WW.cLW) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : []
+        return this.callCore(SR, [], (RR => {
+          var JR, GR;
+          return null !== (JR = null === (GR = RR.YqR) || void 0 === GR ? void 0 : GR.call(RR)) && void 0 !== JR ? JR : []
         }))
       }
       sunShadowsHeld() {
-        return this.callCore(XW, null, (WW => {
-          var iW, OW;
-          return null !== (iW = null === (OW = WW.LLW) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : null
+        return this.callCore(SR, null, (RR => {
+          var JR, GR;
+          return null !== (JR = null === (GR = RR.EqR) || void 0 === GR ? void 0 : GR.call(RR)) && void 0 !== JR ? JR : null
         }))
       }
-      callCore(WW, iW, OW) {
-        if (this.stopped) return iW;
+      callCore(RR, JR, GR) {
+        if (this.stopped) return JR;
         try {
-          return OW(this.core)
-        } catch (mW) {
-          return this.crash(WW, mW), iW
+          return GR(this.core)
+        } catch (yR) {
+          return this.crash(RR, yR), JR
         }
       }
-      readEvents(WW) {
+      readEvents(RR) {
         this.netOffsets.length = 0;
-        const iW = this.headerView(),
-          OW = iW[mW.ab.EventsPtr],
-          EW = iW[mW.ab.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === EW) return pW;
-        const NW = [],
-          PW = this.memory().buffer;
-        if (OW % 4 !== 0 || OW + EW > PW.byteLength) return this.crash(VW, `events of ${EW} bytes at ${OW} outside ${PW.byteLength} bytes of memory`), pW;
-        const LW = new DataView(PW, OW, EW),
-          cW = this.rings.net,
-          wW = (iW, OW) => iW + OW <= WW ? cW.copyWritten(iW, OW) : null;
-        let tW = 0;
-        for (; tW < EW;) {
-          const WW = tW + mW.N,
-            iW = WW <= EW ? LW.getUint32(tW, !0) : -1,
-            cW = iW >>> 16;
-          if (iW < 0 || cW > EW - WW) return this.crash(VW, `event record at ${tW} overruns its ${EW} bytes`), pW;
-          const hW = 65535 & iW,
-            HW = iW => LW.getUint32(WW + 4 * iW, !0);
-          if (hW === mW.Q.RawMessage) {
-            const WW = cW >= mW.Sc.BYTES ? 65535 & HW(1) : -1,
-              iW = WW === mW.Sc.STRING_TYPE,
-              OW = cW === (iW ? mW.Sc.STRING_TYPE_BYTES : mW.Sc.BYTES) ? wW(HW(2), HW(3)) : null,
-              EW = iW && OW ? wW(HW(4), HW(5)) : null;
-            if (!OW || iW && !EW) return this.crash(VW, `RawMessage at ${tW} of ${cW} bytes names bytes outside net-in`), pW;
-            this.netOffsets.push(tW), NW.push({
+        const JR = this.headerView(),
+          GR = JR[yR.kb.EventsPtr],
+          tR = JR[yR.kb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === tR) return IR;
+        const uR = [],
+          ZR = this.memory().buffer;
+        if (GR % 4 !== 0 || GR + tR > ZR.byteLength) return this.crash(PR, `events of ${tR} bytes at ${GR} outside ${ZR.byteLength} bytes of memory`), IR;
+        const qR = new DataView(ZR, GR, tR),
+          iR = this.rings.net,
+          fR = (JR, GR) => JR + GR <= RR ? iR.copyWritten(JR, GR) : null;
+        let VR = 0;
+        for (; VR < tR;) {
+          const RR = VR + yR.T,
+            JR = RR <= tR ? qR.getUint32(VR, !0) : -1,
+            iR = JR >>> 16;
+          if (JR < 0 || iR > tR - RR) return this.crash(PR, `event record at ${VR} overruns its ${tR} bytes`), IR;
+          const gR = 65535 & JR,
+            bR = JR => qR.getUint32(RR + 4 * JR, !0);
+          if (gR === yR.X.RawMessage) {
+            const RR = iR >= yR.Oc.BYTES ? 65535 & bR(1) : -1,
+              JR = RR === yR.Oc.STRING_TYPE,
+              GR = iR === (JR ? yR.Oc.STRING_TYPE_BYTES : yR.Oc.BYTES) ? fR(bR(2), bR(3)) : null,
+              tR = JR && GR ? fR(bR(4), bR(5)) : null;
+            if (!GR || JR && !tR) return this.crash(PR, `RawMessage at ${VR} of ${iR} bytes names bytes outside net-in`), IR;
+            this.netOffsets.push(VR), uR.push({
               type: "message",
-              conn: HW(0),
-              tP: WW,
-              payloadKind: HW(1) >>> 16,
-              payload: OW,
-              stringType: EW ? RW.decode(EW) : null
+              conn: bR(0),
+              LZ: RR,
+              payloadKind: bR(1) >>> 16,
+              payload: GR,
+              stringType: tR ? ER.decode(tR) : null
             })
-          } else if (hW === mW.Q.CoreErrors) {
-            var ZW, xW;
-            const WW = cW >= 4 ? HW(0) : -1;
-            if (WW < 0 || WW > mW.C.PAIRS_MAX || cW !== 4 * (mW.C.FIXED_WORDS + mW.C.PAIR_WORDS * WW)) return this.crash(VW, `CoreErrors at ${tW} of ${cW} bytes`), pW;
-            const iW = [];
-            for (let OW = 0; OW < WW; OW++) iW.push({
-              code: HW(1 + 2 * OW),
-              detail: HW(2 + 2 * OW)
+          } else if (gR === yR.X.CoreErrors) {
+            var KR, wR;
+            const RR = iR >= 4 ? bR(0) : -1;
+            if (RR < 0 || RR > yR.J.PAIRS_MAX || iR !== 4 * (yR.J.FIXED_WORDS + yR.J.PAIR_WORDS * RR)) return this.crash(PR, `CoreErrors at ${VR} of ${iR} bytes`), IR;
+            const JR = [];
+            for (let GR = 0; GR < RR; GR++) JR.push({
+              code: bR(1 + 2 * GR),
+              detail: bR(2 + 2 * GR)
             });
-            null === (ZW = (xW = this.handlers).onCoreErrors) || void 0 === ZW || ZW.call(xW, iW, HW(1 + 2 * WW))
-          } else if (hW === mW.Q.RenderReload) {
-            var lW, AW;
-            if (cW !== mW.cd.BYTES) return this.crash(VW, `RenderReload at ${tW} of ${cW} bytes`), pW;
-            null === (lW = (AW = this.handlers).onRenderReload) || void 0 === lW || lW.call(AW, HW(0), HW(1), HW(2))
-          } else if (hW === mW.Q.JoinPreloadEnded) {
-            var bW, jW;
-            if (cW !== mW.mb.BYTES) return this.crash(VW, `JoinPreloadEnded at ${tW} of ${cW} bytes`), pW;
-            null === (bW = (jW = this.handlers).onJoinPreloadEnded) || void 0 === bW || bW.call(jW, {
-              chunks: HW(mW.mb.CHUNKS),
-              bytes: HW(mW.mb.BYTES_HELD),
-              asked: HW(mW.mb.ASKED),
-              replaced: HW(mW.mb.REPLACED),
-              dropped: HW(mW.mb.DROPPED)
+            null === (KR = (wR = this.handlers).onCoreErrors) || void 0 === KR || KR.call(wR, JR, bR(1 + 2 * RR))
+          } else if (gR === yR.X.RenderReload) {
+            var rR, eR;
+            if (iR !== yR.Yc.BYTES) return this.crash(PR, `RenderReload at ${VR} of ${iR} bytes`), IR;
+            null === (rR = (eR = this.handlers).onRenderReload) || void 0 === rR || rR.call(eR, bR(0), bR(1), bR(2))
+          } else if (gR === yR.X.JoinPreloadEnded) {
+            var aR, LR;
+            if (iR !== yR.Ab.BYTES) return this.crash(PR, `JoinPreloadEnded at ${VR} of ${iR} bytes`), IR;
+            null === (aR = (LR = this.handlers).onJoinPreloadEnded) || void 0 === aR || aR.call(LR, {
+              chunks: bR(yR.Ab.CHUNKS),
+              bytes: bR(yR.Ab.BYTES_HELD),
+              asked: bR(yR.Ab.ASKED),
+              replaced: bR(yR.Ab.REPLACED),
+              dropped: bR(yR.Ab.DROPPED)
             })
-          } else if (hW === mW.Q.Images) {
-            var UW, kW;
-            null === (UW = (kW = this.handlers).onImages) || void 0 === UW || UW.call(kW, new Uint8Array(PW.slice(OW + WW, OW + WW + cW)))
-          } else if (hW === mW.Q.ModelRequests)
-            for (let OW = 0; OW < cW >>> 2; OW++) {
-              var sW, MW;
-              null === (sW = (MW = this.handlers).onModelRequest) || void 0 === sW || sW.call(MW, HW(OW))
-            } else if (hW === mW.Q.ModelTaken) {
-              var KW, SW;
-              if (cW < 4) return this.crash(VW, `ModelTaken at ${tW} of ${cW} bytes`), pW;
-              const WW = new Uint32Array((cW >>> 2) - 1);
-              for (let iW = 0; iW < WW.length; iW++) WW[iW] = HW(1 + iW);
-              null === (KW = (SW = this.handlers).onModelTaken) || void 0 === KW || KW.call(SW, HW(0), WW)
-            } else if (hW === mW.Q.TerrainTexturesWanted) {
-            var YW, yW;
-            if (0 !== cW) return this.crash(VW, `TerrainTexturesWanted at ${tW} of ${cW} bytes`), pW;
-            null === (YW = (yW = this.handlers).onTerrainTexturesWanted) || void 0 === YW || YW.call(yW)
-          } else if (hW === mW.Q.KeepAliveDue) {
-            var TW, JW;
-            if (cW > mW.qb) return this.crash(VW, `KeepAliveDue at ${tW} of ${cW} bytes`), pW;
-            null === (TW = (JW = this.handlers).onKeepAlive) || void 0 === TW || TW.call(JW, new Uint8Array(PW, OW + WW, cW).slice())
-          } else if (hW === mW.Q.ConnectionState) {
-            if (cW !== mW.r) return this.crash(VW, `ConnectionState at ${tW} of ${cW} bytes`), pW;
-            this.netOffsets.push(tW), NW.push({
+          } else if (gR === yR.X.Images) {
+            var nR, UR;
+            null === (nR = (UR = this.handlers).onImages) || void 0 === nR || nR.call(UR, new Uint8Array(ZR.slice(GR + RR, GR + RR + iR)))
+          } else if (gR === yR.X.ModelRequests)
+            for (let GR = 0; GR < iR >>> 2; GR++) {
+              var WR, AR;
+              null === (WR = (AR = this.handlers).onModelRequest) || void 0 === WR || WR.call(AR, bR(GR))
+            } else if (gR === yR.X.ModelTaken) {
+              var CR, XR;
+              if (iR < 4) return this.crash(PR, `ModelTaken at ${VR} of ${iR} bytes`), IR;
+              const RR = new Uint32Array((iR >>> 2) - 1);
+              for (let JR = 0; JR < RR.length; JR++) RR[JR] = bR(1 + JR);
+              null === (CR = (XR = this.handlers).onModelTaken) || void 0 === CR || CR.call(XR, bR(0), RR)
+            } else if (gR === yR.X.TerrainTexturesWanted) {
+            var MR, BR;
+            if (0 !== iR) return this.crash(PR, `TerrainTexturesWanted at ${VR} of ${iR} bytes`), IR;
+            null === (MR = (BR = this.handlers).onTerrainTexturesWanted) || void 0 === MR || MR.call(BR)
+          } else if (gR === yR.X.KeepAliveDue) {
+            var lR, pR;
+            if (iR > yR.Bb) return this.crash(PR, `KeepAliveDue at ${VR} of ${iR} bytes`), IR;
+            null === (lR = (pR = this.handlers).onKeepAlive) || void 0 === lR || lR.call(pR, new Uint8Array(ZR, GR + RR, iR).slice())
+          } else if (gR === yR.X.ConnectionState) {
+            if (iR !== yR.y) return this.crash(PR, `ConnectionState at ${VR} of ${iR} bytes`), IR;
+            this.netOffsets.push(VR), uR.push({
               type: "connection",
-              conn: HW(0),
-              phase: HW(1),
-              code: 0 | HW(2)
+              conn: bR(0),
+              phase: bR(1),
+              code: 0 | bR(2)
             })
-          } else if (hW === mW.Q.EnvLighting || hW === mW.Q.SkyImages) {
-            if (cW !== (hW === mW.Q.EnvLighting ? mW.M : mW.Cd)) return this.crash(VW, `event ${hW} at ${tW} of ${cW} bytes`), pW;
+          } else if (gR === yR.X.EnvLighting || gR === yR.X.SkyImages) {
+            if (iR !== (gR === yR.X.EnvLighting ? yR.R : yR.sd)) return this.crash(PR, `event ${gR} at ${VR} of ${iR} bytes`), IR;
             this.envEvents.push({
-              kind: hW,
-              payload: new Uint8Array(PW.slice(OW + WW, OW + WW + cW))
+              kind: gR,
+              payload: new Uint8Array(ZR.slice(GR + RR, GR + RR + iR))
             })
-          } else if (hW === mW.Q.ReconnectGrace) {
-            if (cW !== mW.tc) return this.crash(VW, `ReconnectGrace at ${tW} of ${cW} bytes`), pW;
-            const WW = HW(2);
+          } else if (gR === yR.X.ReconnectGrace) {
+            if (iR !== yR.pc) return this.crash(PR, `ReconnectGrace at ${VR} of ${iR} bytes`), IR;
+            const RR = bR(2);
             this.graceEvents.push({
-              conn: HW(0),
-              graceMs: HW(1),
-              sessionBased: 0 !== (WW & mW.Tc.SessionBased),
-              replayOffer: 0 !== (WW & mW.Tc.ReplayOffer)
+              conn: bR(0),
+              graceMs: bR(1),
+              sessionBased: 0 !== (RR & yR.Qc.SessionBased),
+              replayOffer: 0 !== (RR & yR.Qc.ReplayOffer)
             })
           }
-          tW = WW + (0, mW.xe)(cW)
+          VR = RR + (0, yR.ve)(iR)
         }
-        return NW
+        return uR
       }
-      takeSends(WW) {
+      takeSends(RR) {
         this.atSendsStop = !0;
         try {
-          WW()
-        } catch (iW) {
-          this.crashOn(HW, iW)
+          RR()
+        } catch (JR) {
+          this.crashOn(bR, JR)
         } finally {
           this.atSendsStop = !1
         }
         return !this.stopped
       }
-      forEachNetOut(WW) {
-        this.forEachOut(MW, "net-out", mW.ab.NetOutPtr, mW.ab.NetOutLen, mW.Ub, 0, ((iW, OW, EW, NW) => {
-          const PW = (0, mW.ne)(OW);
-          PW === mW.Wb.Frame ? WW((0, mW.me)(OW), EW) : this.crash(MW, `net-out record at ${NW} is kind ${PW}, not a frame`)
+      forEachNetOut(RR) {
+        this.forEachOut(AR, "net-out", yR.kb.NetOutPtr, yR.kb.NetOutLen, yR.Yb, 0, ((JR, GR, tR, uR) => {
+          const ZR = (0, yR.me)(GR);
+          ZR === yR.Zb.Frame ? RR((0, yR.ke)(GR), tR) : this.crash(AR, `net-out record at ${uR} is kind ${ZR}, not a frame`)
         }))
       }
-      forEachWorkerOut(WW) {
-        this.forEachOut(KW, "worker-out", mW.ab.WorkerOutPtr, mW.ab.WorkerOutLen, mW.Md, 4, ((iW, OW, EW, NW) => {
-          const PW = 255 & iW,
-            LW = PW === mW._d.Init ? this.initOf(EW, NW) : EW;
-          null !== LW && WW(PW, iW >>> 8 & 16777215, LW)
+      forEachWorkerOut(RR) {
+        this.forEachOut(CR, "worker-out", yR.kb.WorkerOutPtr, yR.kb.WorkerOutLen, yR.Id, 4, ((JR, GR, tR, uR) => {
+          const ZR = 255 & JR,
+            qR = ZR === yR.Yd.Init ? this.initOf(tR, uR) : tR;
+          null !== qR && RR(ZR, JR >>> 8 & 16777215, qR)
         }))
       }
-      initOf(WW, iW) {
-        const OW = this.memory().buffer;
-        if (WW.byteLength !== mW.bb) return this.crash(KW, `worker-out Init record at ${iW} is ${WW.byteLength} bytes, not a view`), null;
-        const EW = new DataView(WW.buffer, WW.byteOffset, mW.bb),
-          NW = EW.getUint32(0, !0),
-          PW = EW.getUint32(4, !0);
-        return NW + PW > OW.byteLength ? (this.crash(KW, `worker-out Init record at ${iW} names ${PW} bytes at ${NW} outside ${OW.byteLength} bytes of memory`), null) : new Uint8Array(OW, NW, PW)
+      initOf(RR, JR) {
+        const GR = this.memory().buffer;
+        if (RR.byteLength !== yR.nb) return this.crash(CR, `worker-out Init record at ${JR} is ${RR.byteLength} bytes, not a view`), null;
+        const tR = new DataView(RR.buffer, RR.byteOffset, yR.nb),
+          uR = tR.getUint32(0, !0),
+          ZR = tR.getUint32(4, !0);
+        return uR + ZR > GR.byteLength ? (this.crash(CR, `worker-out Init record at ${JR} names ${ZR} bytes at ${uR} outside ${GR.byteLength} bytes of memory`), null) : new Uint8Array(GR, uR, ZR)
       }
-      forEachOut(WW, iW, OW, EW, NW, PW, LW) {
+      forEachOut(RR, JR, GR, tR, uR, ZR, qR) {
         if (!this.headerReadable()) return;
-        const cW = this.headerView(),
-          wW = cW[OW],
-          tW = cW[EW];
-        if (0 === tW) return;
-        const ZW = this.memory().buffer;
-        if (wW % 4 !== 0 || wW + tW > ZW.byteLength) return void this.crash(WW, `${iW} of ${tW} bytes at ${wW} outside ${ZW.byteLength} bytes of memory`);
-        const xW = new DataView(ZW, wW, tW);
-        let lW = 0;
-        for (; lW < tW;) {
-          const OW = lW + NW,
-            EW = OW <= tW ? xW.getUint32(lW + PW, !0) : -1;
-          if (EW < 0 || EW > tW - OW) return void this.crash(WW, `${iW} record at ${lW} overruns its ${tW} bytes`);
-          if (LW(xW.getUint32(lW, !0), xW.getUint32(lW + 4, !0), new Uint8Array(ZW, wW + OW, EW), lW), this.stopped) return;
-          lW = OW + (0, mW.xe)(EW)
+        const iR = this.headerView(),
+          fR = iR[GR],
+          VR = iR[tR];
+        if (0 === VR) return;
+        const KR = this.memory().buffer;
+        if (fR % 4 !== 0 || fR + VR > KR.byteLength) return void this.crash(RR, `${JR} of ${VR} bytes at ${fR} outside ${KR.byteLength} bytes of memory`);
+        const wR = new DataView(KR, fR, VR);
+        let rR = 0;
+        for (; rR < VR;) {
+          const GR = rR + uR,
+            tR = GR <= VR ? wR.getUint32(rR + ZR, !0) : -1;
+          if (tR < 0 || tR > VR - GR) return void this.crash(RR, `${JR} record at ${rR} overruns its ${VR} bytes`);
+          if (qR(wR.getUint32(rR, !0), wR.getUint32(rR + 4, !0), new Uint8Array(KR, fR + GR, tR), rR), this.stopped) return;
+          rR = GR + (0, yR.ve)(tR)
         }
       }
-      forEachEvent(WW) {
+      forEachEvent(RR) {
         if (this.stopped || null === this.lastHeader) return;
-        const iW = this.headerView(),
-          OW = iW[mW.ab.EventsPtr],
-          EW = iW[mW.ab.EventsLen];
-        if (0 === EW) return;
-        const NW = this.memory().buffer;
-        if (OW % 4 !== 0 || OW + EW > NW.byteLength) return void this.crash(VW, `events of ${EW} bytes at ${OW} outside ${NW.byteLength} bytes of memory`);
-        const PW = new DataView(NW, OW, EW);
-        let LW = 0;
-        for (; LW < EW;) {
-          const iW = LW + mW.N,
-            OW = iW <= EW ? PW.getUint32(LW, !0) : -1,
-            NW = OW >>> 16;
-          if (OW < 0 || NW > EW - iW) return void this.crash(VW, `event record at ${LW} overruns its ${EW} bytes`);
-          WW(65535 & OW, PW, iW, NW), LW = iW + (0, mW.xe)(NW)
+        const JR = this.headerView(),
+          GR = JR[yR.kb.EventsPtr],
+          tR = JR[yR.kb.EventsLen];
+        if (0 === tR) return;
+        const uR = this.memory().buffer;
+        if (GR % 4 !== 0 || GR + tR > uR.byteLength) return void this.crash(PR, `events of ${tR} bytes at ${GR} outside ${uR.byteLength} bytes of memory`);
+        const ZR = new DataView(uR, GR, tR);
+        let qR = 0;
+        for (; qR < tR;) {
+          const JR = qR + yR.T,
+            GR = JR <= tR ? ZR.getUint32(qR, !0) : -1,
+            uR = GR >>> 16;
+          if (GR < 0 || uR > tR - JR) return void this.crash(PR, `event record at ${qR} overruns its ${tR} bytes`);
+          RR(65535 & GR, ZR, JR, uR), qR = JR + (0, yR.ve)(uR)
         }
       }
-      crashOn(WW, iW) {
-        iW instanceof EW.e ? this.crash(VW, iW.message) : this.crash(WW, iW)
+      crashOn(RR, JR) {
+        JR instanceof tR.c ? this.crash(PR, JR.message) : this.crash(RR, JR)
       }
-      crash(WW, iW) {
+      crash(RR, JR) {
         this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: WW,
-          error: iW,
+          site: RR,
+          error: JR,
           header: this.lastHeader
         }))
       }
-      headerWord(WW) {
-        return this.headerReadable() ? this.headerView()[WW] : 0
+      headerWord(RR) {
+        return this.headerReadable() ? this.headerView()[RR] : 0
       }
       headerReadable() {
         return !this.stopped && (null !== this.lastHeader || this.atSendsStop)
       }
-      readLoadCounts(WW) {
-        const iW = this.loadCountWords();
-        return null !== iW && (WW.chunksReceived = iW[mW.Eb.ChunksReceived], WW.chunksCancelled = this.headerView()[mW.ab.ChunksCancelled], WW.chunksStored = iW[mW.Eb.ChunksStored], WW.jobsSent = iW[mW.Eb.JobsSent], WW.jobsDone = iW[mW.Eb.JobsDone], WW.jobsInFlight = iW[mW.Eb.JobsInFlight], WW.workersLive = iW[mW.Eb.WorkersLive], WW.workersRetired = iW[mW.Eb.WorkersRetired], !0)
+      readLoadCounts(RR) {
+        const JR = this.loadCountWords();
+        return null !== JR && (RR.chunksReceived = JR[yR.Jb.ChunksReceived], RR.chunksCancelled = this.headerView()[yR.kb.ChunksCancelled], RR.chunksStored = JR[yR.Jb.ChunksStored], RR.jobsSent = JR[yR.Jb.JobsSent], RR.jobsDone = JR[yR.Jb.JobsDone], RR.jobsInFlight = JR[yR.Jb.JobsInFlight], RR.workersLive = JR[yR.Jb.WorkersLive], RR.workersRetired = JR[yR.Jb.WorkersRetired], !0)
       }
       readViewQueuedPrograms() {
-        var WW, iW;
-        const OW = null !== (WW = null === (iW = this.loadCountWords()) || void 0 === iW ? void 0 : iW[mW.Eb.ViewQueuedPrograms]) && void 0 !== WW ? WW : 0;
-        return 0 === OW ? null : OW - 1
+        var RR, JR;
+        const GR = null !== (RR = null === (JR = this.loadCountWords()) || void 0 === JR ? void 0 : JR[yR.Jb.ViewQueuedPrograms]) && void 0 !== RR ? RR : 0;
+        return 0 === GR ? null : GR - 1
       }
-      readFirstViewWait(WW, iW) {
-        const OW = this.loadCountWords();
-        return null === OW ? null : [OW[mW.Eb.FirstViewLinkMs], OW[mW.Eb.FirstViewTerrainMs], OW[mW.Eb.FirstViewHeldMs], OW[mW.Eb.FirstViewOtherMs], OW[mW.Eb.FirstViewGaps], OW[mW.Eb.FirstViewGapMs], WW, iW]
+      readFirstViewWait(RR, JR) {
+        const GR = this.loadCountWords();
+        return null === GR ? null : [GR[yR.Jb.FirstViewLinkMs], GR[yR.Jb.FirstViewTerrainMs], GR[yR.Jb.FirstViewHeldMs], GR[yR.Jb.FirstViewOtherMs], GR[yR.Jb.FirstViewGaps], GR[yR.Jb.FirstViewGapMs], RR, JR]
       }
       loadCountWords() {
         if (this.stopped || null === this.lastHeader) return null;
-        const WW = this.core.iU();
-        if (0 === WW) return null;
-        const iW = this.memory().buffer;
-        return iW !== this.loadCountsBuffer && (this.loadCountsBuffer = iW, this.loadCounts = new Uint32Array(iW, WW, mW.tb)), this.loadCounts
+        const RR = this.core.Rn();
+        if (0 === RR) return null;
+        const JR = this.memory().buffer;
+        return JR !== this.loadCountsBuffer && (this.loadCountsBuffer = JR, this.loadCounts = new Uint32Array(JR, RR, yR.Db)), this.loadCounts
       }
       headerView() {
-        const WW = this.memory().buffer;
-        return WW !== this.headerBuffer && (this.headerBuffer = WW, this.header = new Uint32Array(WW, this.core.fl(), mW._)), this.header
+        const RR = this.memory().buffer;
+        return RR !== this.headerBuffer && (this.headerBuffer = RR, this.header = new Uint32Array(RR, this.core.Sr(), yR.jb)), this.header
       }
     }
   },
-  42288: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      e: () => NW
+  42315: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      f: () => uR
     });
-    var mW = OW(5427);
-    let EW = null;
+    var yR = GR(5554);
+    let tR = null;
 
-    function NW(WW) {
-      EW = {
+    function uR(RR) {
+      tR = {
         scanned: !1
       };
       try {
-        return WW()
+        return RR()
       } finally {
-        EW = null
+        tR = null
       }
     }
 
-    function PW() {
-      const WW = EW;
-      if (null === WW) return (0, mW.e)();
-      const iW = (0, mW.e)(!WW.scanned);
-      return WW.scanned = !0, iW
+    function ZR() {
+      const RR = tR;
+      if (null === RR) return (0, yR.h)();
+      const JR = (0, yR.h)(!RR.scanned);
+      return RR.scanned = !0, JR
     }
   },
-  42358: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW
+  42374: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    const mW = {
+    const yR = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  37446: (WW, iW, OW) => {
-    function mW() {
-      return OW(37453)
+  37362: (RR, JR, GR) => {
+    function yR() {
+      return GR(37370)
     }
 
-    function EW() {
-      return OW(37460)
+    function tR() {
+      return GR(37379)
     }
 
-    function NW(WW) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(WW)
+    function uR(RR) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(RR)
     }
-    OW.d(iW, {
-      b: () => NW,
-      d: () => mW,
-      h: () => EW
+    GR.d(JR, {
+      c: () => uR,
+      f: () => yR,
+      j: () => tR
     })
   },
-  37453: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  37370: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  37460: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  37379: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

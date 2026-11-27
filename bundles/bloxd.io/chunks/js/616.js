@@ -1,26 +1,26 @@
 export const id = 616;
 export const ids = [616];
 export const modules = {
-  53583: (WW, iW, OW) => {
-    function mW() {
-      return mW = Object.assign ? Object.assign.bind() : function(WW) {
-        for (var iW = 1; iW < arguments.length; iW++) {
-          var OW = arguments[iW];
-          for (var mW in OW)({}).hasOwnProperty.call(OW, mW) && (WW[mW] = OW[mW])
+  53395: (RR, JR, GR) => {
+    function yR() {
+      return yR = Object.assign ? Object.assign.bind() : function(RR) {
+        for (var JR = 1; JR < arguments.length; JR++) {
+          var GR = arguments[JR];
+          for (var yR in GR)({}).hasOwnProperty.call(GR, yR) && (RR[yR] = GR[yR])
         }
-        return WW
-      }, mW.apply(null, arguments)
+        return RR
+      }, yR.apply(null, arguments)
     }
-    OW.d(iW, {
-      b: () => xW,
-      d: () => LW
+    GR.d(JR, {
+      e: () => wR,
+      g: () => qR
     });
-    var EW = !1;
+    var tR = !1;
     try {
-      EW = "undefined" !== typeof localStorage
-    } catch (AW) {}
-    var NW = "undefined" !== typeof process,
-      PW = EW && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || NW && {
+      tR = "undefined" !== typeof localStorage
+    } catch (eR) {}
+    var uR = "undefined" !== typeof process,
+      ZR = tR && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || uR && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -28,141 +28,141 @@ export const modules = {
         WDS_SOCKET_PORT: void 0,
         FAST_REFRESH: !0,
         REACT_APP_DEV_URLS: "false"
-      }.DEBUG ? console.log : function(WW) {
+      }.DEBUG ? console.log : function(RR) {
         return ""
       };
 
-    function LW(WW, iW, OW, EW, NW) {
-      void 0 === EW && (EW = {});
-      var PW = mW({}, tW(OW), EW),
-        LW = function(WW, iW, OW, EW, NW) {
-          var PW = [].concat(iW),
-            LW = lW(WW, OW, EW),
-            cW = LW.compilerHost,
-            wW = LW.updateFile,
-            tW = LW.deleteFile,
-            ZW = new Map,
-            xW = 0,
-            AW = mW({}, cW, {
+    function qR(RR, JR, GR, tR, uR) {
+      void 0 === tR && (tR = {});
+      var ZR = yR({}, VR(GR), tR),
+        qR = function(RR, JR, GR, tR, uR) {
+          var ZR = [].concat(JR),
+            qR = rR(RR, GR, tR),
+            iR = qR.compilerHost,
+            fR = qR.updateFile,
+            VR = qR.deleteFile,
+            KR = new Map,
+            wR = 0,
+            eR = yR({}, iR, {
               getProjectVersion: function() {
-                return xW.toString()
+                return wR.toString()
               },
               getCompilationSettings: function() {
-                return OW
+                return GR
               },
               getCustomTransformers: function() {
-                return NW
+                return uR
               },
               getScriptFileNames: function() {
-                return PW.slice()
+                return ZR.slice()
               },
-              getScriptSnapshot: function(iW) {
-                var OW = WW.readFile(iW);
-                if (OW && "string" === typeof OW) return EW.ScriptSnapshot.fromString(OW)
+              getScriptSnapshot: function(JR) {
+                var GR = RR.readFile(JR);
+                if (GR && "string" === typeof GR) return tR.ScriptSnapshot.fromString(GR)
               },
-              getScriptVersion: function(WW) {
-                return ZW.get(WW) || "0"
+              getScriptVersion: function(RR) {
+                return KR.get(RR) || "0"
               },
-              writeFile: WW.writeFile
+              writeFile: RR.writeFile
             }),
-            bW = {
-              languageServiceHost: AW,
-              updateFile: function(WW) {
-                xW++, ZW.set(WW.fileName, xW.toString()), PW.includes(WW.fileName) || PW.push(WW.fileName), wW(WW)
+            aR = {
+              languageServiceHost: eR,
+              updateFile: function(RR) {
+                wR++, KR.set(RR.fileName, wR.toString()), ZR.includes(RR.fileName) || ZR.push(RR.fileName), fR(RR)
               },
-              deleteFile: function(WW) {
-                xW++, ZW.set(WW.fileName, xW.toString());
-                var iW = PW.indexOf(WW.fileName); - 1 !== iW && PW.splice(iW, 1), tW(WW)
+              deleteFile: function(RR) {
+                wR++, KR.set(RR.fileName, wR.toString());
+                var JR = ZR.indexOf(RR.fileName); - 1 !== JR && ZR.splice(JR, 1), VR(RR)
               }
             };
-          return bW
-        }(WW, iW, PW, OW, NW),
-        cW = LW.languageServiceHost,
-        wW = LW.updateFile,
-        ZW = LW.deleteFile,
-        xW = OW.createLanguageService(cW),
-        AW = xW.getCompilerOptionsDiagnostics();
-      if (AW.length) {
-        var bW = lW(WW, EW, OW);
-        throw new Error(OW.formatDiagnostics(AW, bW.compilerHost))
+          return aR
+        }(RR, JR, ZR, GR, uR),
+        iR = qR.languageServiceHost,
+        fR = qR.updateFile,
+        KR = qR.deleteFile,
+        wR = GR.createLanguageService(iR),
+        eR = wR.getCompilerOptionsDiagnostics();
+      if (eR.length) {
+        var aR = rR(RR, tR, GR);
+        throw new Error(GR.formatDiagnostics(eR, aR.compilerHost))
       }
       return {
         name: "vfs",
-        sys: WW,
-        languageService: xW,
-        getSourceFile: function(WW) {
-          var iW;
-          return null == (iW = xW.getProgram()) ? void 0 : iW.getSourceFile(WW)
+        sys: RR,
+        languageService: wR,
+        getSourceFile: function(RR) {
+          var JR;
+          return null == (JR = wR.getProgram()) ? void 0 : JR.getSourceFile(RR)
         },
-        createFile: function(WW, iW) {
-          wW(OW.createSourceFile(WW, iW, PW.target, !1))
+        createFile: function(RR, JR) {
+          fR(GR.createSourceFile(RR, JR, ZR.target, !1))
         },
-        updateFile: function(WW, iW, mW) {
-          var EW = xW.getProgram().getSourceFile(WW);
-          if (!EW) throw new Error("Did not find a source file for " + WW);
-          var NW = EW.text,
-            PW = null != mW ? mW : OW.createTextSpan(0, NW.length),
-            LW = NW.slice(0, PW.start) + iW + NW.slice(PW.start + PW.length),
-            cW = OW.updateSourceFile(EW, LW, {
-              span: PW,
-              newLength: iW.length
+        updateFile: function(RR, JR, yR) {
+          var tR = wR.getProgram().getSourceFile(RR);
+          if (!tR) throw new Error("Did not find a source file for " + RR);
+          var uR = tR.text,
+            ZR = null != yR ? yR : GR.createTextSpan(0, uR.length),
+            qR = uR.slice(0, ZR.start) + JR + uR.slice(ZR.start + ZR.length),
+            iR = GR.updateSourceFile(tR, qR, {
+              span: ZR,
+              newLength: JR.length
             });
-          wW(cW)
+          fR(iR)
         },
-        deleteFile: function(WW) {
-          var iW = xW.getProgram().getSourceFile(WW);
-          iW && ZW(iW)
+        deleteFile: function(RR) {
+          var JR = wR.getProgram().getSourceFile(RR);
+          JR && KR(JR)
         }
       }
     }
 
-    function cW(WW) {
-      throw new Error("Method '" + WW + "' is not implemented.")
+    function iR(RR) {
+      throw new Error("Method '" + RR + "' is not implemented.")
     }
 
-    function wW(WW, iW) {
+    function fR(RR, JR) {
       return function() {
-        for (var OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
-        var NW = iW.apply(void 0, mW),
-          LW = "string" === typeof NW ? NW.slice(0, 80) + "..." : NW;
-        return PW.apply(void 0, ["> " + WW].concat(mW)), PW("< " + LW), NW
+        for (var GR = arguments.length, yR = new Array(GR), tR = 0; tR < GR; tR++) yR[tR] = arguments[tR];
+        var uR = JR.apply(void 0, yR),
+          qR = "string" === typeof uR ? uR.slice(0, 80) + "..." : uR;
+        return ZR.apply(void 0, ["> " + RR].concat(yR)), ZR("< " + qR), uR
       }
     }
-    var tW = function(WW) {
-        return mW({}, WW.getDefaultCompilerOptions(), {
-          jsx: WW.JsxEmit.React,
+    var VR = function(RR) {
+        return yR({}, RR.getDefaultCompilerOptions(), {
+          jsx: RR.JsxEmit.React,
           strict: !0,
           esModuleInterop: !0,
-          module: WW.ModuleKind.ESNext,
+          module: RR.ModuleKind.ESNext,
           suppressOutputPathCheck: !0,
           skipLibCheck: !0,
           skipDefaultLibCheck: !0
-        }, WW.versionMajorMinor && Number(WW.versionMajorMinor.split(".")[0]) >= 6 ? {
+        }, RR.versionMajorMinor && Number(RR.versionMajorMinor.split(".")[0]) >= 6 ? {
           ignoreDeprecations: "6.0"
         } : {
-          moduleResolution: WW.ModuleResolutionKind.NodeJs
+          moduleResolution: RR.ModuleResolutionKind.NodeJs
         })
       },
-      ZW = function(WW) {
-        return WW.replace("/", "/lib.").toLowerCase()
+      KR = function(RR) {
+        return RR.replace("/", "/lib.").toLowerCase()
       };
 
-    function xW(WW) {
+    function wR(RR) {
       return {
         args: [],
         createDirectory: function() {
-          return cW("createDirectory")
+          return iR("createDirectory")
         },
-        directoryExists: wW("directoryExists", (function(iW) {
-          return Array.from(WW.keys()).some((function(WW) {
-            return WW.startsWith(iW)
+        directoryExists: fR("directoryExists", (function(JR) {
+          return Array.from(RR.keys()).some((function(RR) {
+            return RR.startsWith(JR)
           }))
         })),
         exit: function() {
-          return cW("exit")
+          return iR("exit")
         },
-        fileExists: wW("fileExists", (function(iW) {
-          return WW.has(iW) || WW.has(ZW(iW))
+        fileExists: fR("fileExists", (function(JR) {
+          return RR.has(JR) || RR.has(KR(JR))
         })),
         getCurrentDirectory: function() {
           return "/"
@@ -171,64 +171,64 @@ export const modules = {
           return []
         },
         getExecutingFilePath: function() {
-          return cW("getExecutingFilePath")
+          return iR("getExecutingFilePath")
         },
-        readDirectory: wW("readDirectory", (function(iW) {
-          return "/" === iW ? Array.from(WW.keys()) : []
+        readDirectory: fR("readDirectory", (function(JR) {
+          return "/" === JR ? Array.from(RR.keys()) : []
         })),
-        readFile: wW("readFile", (function(iW) {
-          var OW;
-          return null != (OW = WW.get(iW)) ? OW : WW.get(ZW(iW))
+        readFile: fR("readFile", (function(JR) {
+          var GR;
+          return null != (GR = RR.get(JR)) ? GR : RR.get(KR(JR))
         })),
-        resolvePath: function(WW) {
-          return WW
+        resolvePath: function(RR) {
+          return RR
         },
         newLine: "\n",
         useCaseSensitiveFileNames: !0,
         write: function() {
-          return cW("write")
+          return iR("write")
         },
-        writeFile: function(iW, OW) {
-          WW.set(iW, OW)
+        writeFile: function(JR, GR) {
+          RR.set(JR, GR)
         },
-        deleteFile: function(iW) {
-          WW.delete(iW)
+        deleteFile: function(JR) {
+          RR.delete(JR)
         }
       }
     }
 
-    function lW(WW, iW, OW) {
-      var EW = new Map;
+    function rR(RR, JR, GR) {
+      var tR = new Map;
       return {
-        compilerHost: mW({}, WW, {
-          getCanonicalFileName: function(WW) {
-            return WW
+        compilerHost: yR({}, RR, {
+          getCanonicalFileName: function(RR) {
+            return RR
           },
           getDefaultLibFileName: function() {
-            return "/" + OW.getDefaultLibFileName(iW)
+            return "/" + GR.getDefaultLibFileName(JR)
           },
           getNewLine: function() {
-            return WW.newLine
+            return RR.newLine
           },
-          getSourceFile: function(mW, NW) {
-            var PW, LW;
-            return EW.get(mW) || (LW = OW.createSourceFile(mW, WW.readFile(mW), null != (PW = null != NW ? NW : iW.target) ? PW : tW(OW).target, !1), EW.set(LW.fileName, LW), LW)
+          getSourceFile: function(yR, uR) {
+            var ZR, qR;
+            return tR.get(yR) || (qR = GR.createSourceFile(yR, RR.readFile(yR), null != (ZR = null != uR ? uR : JR.target) ? ZR : VR(GR).target, !1), tR.set(qR.fileName, qR), qR)
           },
           useCaseSensitiveFileNames: function() {
-            return WW.useCaseSensitiveFileNames
+            return RR.useCaseSensitiveFileNames
           }
         }),
-        updateFile: function(iW) {
-          var OW = EW.has(iW.fileName);
-          return WW.writeFile(iW.fileName, iW.text), EW.set(iW.fileName, iW), OW
+        updateFile: function(JR) {
+          var GR = tR.has(JR.fileName);
+          return RR.writeFile(JR.fileName, JR.text), tR.set(JR.fileName, JR), GR
         },
-        deleteFile: function(iW) {
-          var OW = EW.has(iW.fileName);
-          return EW.delete(iW.fileName), WW.deleteFile(iW.fileName), OW
+        deleteFile: function(JR) {
+          var GR = tR.has(JR.fileName);
+          return tR.delete(JR.fileName), RR.deleteFile(JR.fileName), GR
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

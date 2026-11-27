@@ -1,585 +1,585 @@
-/*! For license information please see 1yqdn.236.7944a948.chunk.js.LICENSE.txt */
+/*! For license information please see 4udp6d.236.4a2aac0a.chunk.js.LICENSE.txt */
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  41001: (WW, iW, OW) => {
-    function mW() {
+  41009: (RR, JR, GR) => {
+    function yR() {
       return "object" === typeof process && "object" === typeof process.versions && "undefined" !== typeof process.versions.node
     }
 
-    function EW(WW) {
-      return WW instanceof Uint8Array && (!mW() || !Buffer.isBuffer(WW))
+    function tR(RR) {
+      return RR instanceof Uint8Array && (!yR() || !Buffer.isBuffer(RR))
     }
 
-    function NW(WW) {
-      return WW instanceof ArrayBuffer
+    function uR(RR) {
+      return RR instanceof ArrayBuffer
     }
 
-    function PW(WW) {
-      return !!mW() && Buffer.isBuffer(WW)
+    function ZR(RR) {
+      return !!yR() && Buffer.isBuffer(RR)
     }
-    var LW = OW(41009).c,
-      cW = OW(41012).d,
-      wW = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
-    iW.d = function(WW) {
-      if (!EW(WW) && !NW(WW) && !PW(WW)) throw new TypeError(wW);
-      var iW = !1,
-        OW = !1;
-      EW(WW) ? iW = !0 : NW(WW) && (OW = !0, WW = new Uint8Array(WW));
-      var mW, LW, tW, ZW = new cW(WW),
-        xW = ZW.maxCompressedLength();
-      if (iW ? (mW = new Uint8Array(xW), tW = ZW.compressToBuffer(mW)) : OW ? (mW = new ArrayBuffer(xW), LW = new Uint8Array(mW), tW = ZW.compressToBuffer(LW)) : (mW = Buffer.alloc(xW), tW = ZW.compressToBuffer(mW)), !mW.slice) {
-        var lW = new Uint8Array(Array.prototype.slice.call(mW, 0, tW));
-        if (iW) return lW;
-        if (OW) return lW.buffer;
+    var qR = GR(41017).b,
+      iR = GR(41023).d,
+      fR = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
+    JR.e = function(RR) {
+      if (!tR(RR) && !uR(RR) && !ZR(RR)) throw new TypeError(fR);
+      var JR = !1,
+        GR = !1;
+      tR(RR) ? JR = !0 : uR(RR) && (GR = !0, RR = new Uint8Array(RR));
+      var yR, qR, VR, KR = new iR(RR),
+        wR = KR.maxCompressedLength();
+      if (JR ? (yR = new Uint8Array(wR), VR = KR.compressToBuffer(yR)) : GR ? (yR = new ArrayBuffer(wR), qR = new Uint8Array(yR), VR = KR.compressToBuffer(qR)) : (yR = Buffer.alloc(wR), VR = KR.compressToBuffer(yR)), !yR.slice) {
+        var rR = new Uint8Array(Array.prototype.slice.call(yR, 0, VR));
+        if (JR) return rR;
+        if (GR) return rR.buffer;
         throw new Error("Not implemented")
       }
-      return mW.slice(0, tW)
+      return yR.slice(0, VR)
     }
   },
-  41012: (WW, iW) => {
-    var OW = new Array(15);
+  41023: (RR, JR) => {
+    var GR = new Array(15);
 
-    function mW(WW, iW) {
-      return 506832829 * WW >>> iW
+    function yR(RR, JR) {
+      return 506832829 * RR >>> JR
     }
 
-    function EW(WW, iW) {
-      return WW[iW] + (WW[iW + 1] << 8) + (WW[iW + 2] << 16) + (WW[iW + 3] << 24)
+    function tR(RR, JR) {
+      return RR[JR] + (RR[JR + 1] << 8) + (RR[JR + 2] << 16) + (RR[JR + 3] << 24)
     }
 
-    function NW(WW, iW, OW) {
-      return WW[iW] === WW[OW] && WW[iW + 1] === WW[OW + 1] && WW[iW + 2] === WW[OW + 2] && WW[iW + 3] === WW[OW + 3]
+    function uR(RR, JR, GR) {
+      return RR[JR] === RR[GR] && RR[JR + 1] === RR[GR + 1] && RR[JR + 2] === RR[GR + 2] && RR[JR + 3] === RR[GR + 3]
     }
 
-    function PW(WW, iW, OW, mW, EW) {
-      return OW <= 60 ? (mW[EW] = OW - 1 << 2, EW += 1) : OW < 256 ? (mW[EW] = 240, mW[EW + 1] = OW - 1, EW += 2) : (mW[EW] = 244, mW[EW + 1] = OW - 1 & 255, mW[EW + 2] = OW - 1 >>> 8, EW += 3),
-        function(WW, iW, OW, mW, EW) {
-          var NW;
-          for (NW = 0; NW < EW; NW++) OW[mW + NW] = WW[iW + NW]
-        }(WW, iW, mW, EW, OW), EW + OW
+    function ZR(RR, JR, GR, yR, tR) {
+      return GR <= 60 ? (yR[tR] = GR - 1 << 2, tR += 1) : GR < 256 ? (yR[tR] = 240, yR[tR + 1] = GR - 1, tR += 2) : (yR[tR] = 244, yR[tR + 1] = GR - 1 & 255, yR[tR + 2] = GR - 1 >>> 8, tR += 3),
+        function(RR, JR, GR, yR, tR) {
+          var uR;
+          for (uR = 0; uR < tR; uR++) GR[yR + uR] = RR[JR + uR]
+        }(RR, JR, yR, tR, GR), tR + GR
     }
 
-    function LW(WW, iW, OW, mW) {
-      return mW < 12 && OW < 2048 ? (WW[iW] = 1 + (mW - 4 << 2) + (OW >>> 8 << 5), WW[iW + 1] = 255 & OW, iW + 2) : (WW[iW] = 2 + (mW - 1 << 2), WW[iW + 1] = 255 & OW, WW[iW + 2] = OW >>> 8, iW + 3)
+    function qR(RR, JR, GR, yR) {
+      return yR < 12 && GR < 2048 ? (RR[JR] = 1 + (yR - 4 << 2) + (GR >>> 8 << 5), RR[JR + 1] = 255 & GR, JR + 2) : (RR[JR] = 2 + (yR - 1 << 2), RR[JR + 1] = 255 & GR, RR[JR + 2] = GR >>> 8, JR + 3)
     }
 
-    function cW(WW, iW, OW, mW) {
-      for (; mW >= 68;) iW = LW(WW, iW, OW, 64), mW -= 64;
-      return mW > 64 && (iW = LW(WW, iW, OW, 60), mW -= 60), LW(WW, iW, OW, mW)
+    function iR(RR, JR, GR, yR) {
+      for (; yR >= 68;) JR = qR(RR, JR, GR, 64), yR -= 64;
+      return yR > 64 && (JR = qR(RR, JR, GR, 60), yR -= 60), qR(RR, JR, GR, yR)
     }
 
-    function wW(WW, iW, LW, wW, tW) {
-      for (var ZW = 1; 1 << ZW <= LW && ZW <= 14;) ZW += 1;
-      var xW = 32 - (ZW -= 1);
-      "undefined" === typeof OW[ZW] && (OW[ZW] = new Uint16Array(1 << ZW));
-      var lW, AW = OW[ZW];
-      for (lW = 0; lW < AW.length; lW++) AW[lW] = 0;
-      var bW, jW, UW, kW, sW, MW, KW, SW, YW, yW, TW = iW + LW,
-        JW = iW,
-        hW = iW,
-        HW = !0;
-      if (LW >= 15)
-        for (bW = TW - 15, UW = mW(EW(WW, iW += 1), xW); HW;) {
-          MW = 32, kW = iW;
+    function fR(RR, JR, qR, fR, VR) {
+      for (var KR = 1; 1 << KR <= qR && KR <= 14;) KR += 1;
+      var wR = 32 - (KR -= 1);
+      "undefined" === typeof GR[KR] && (GR[KR] = new Uint16Array(1 << KR));
+      var rR, eR = GR[KR];
+      for (rR = 0; rR < eR.length; rR++) eR[rR] = 0;
+      var aR, LR, nR, UR, WR, AR, CR, XR, MR, BR, lR = JR + qR,
+        pR = JR,
+        gR = JR,
+        bR = !0;
+      if (qR >= 15)
+        for (aR = lR - 15, nR = yR(tR(RR, JR += 1), wR); bR;) {
+          AR = 32, UR = JR;
           do {
-            if (jW = UW, KW = MW >>> 5, MW += 1, kW = (iW = kW) + KW, iW > bW) {
-              HW = !1;
+            if (LR = nR, CR = AR >>> 5, AR += 1, UR = (JR = UR) + CR, JR > aR) {
+              bR = !1;
               break
             }
-            UW = mW(EW(WW, kW), xW), sW = JW + AW[jW], AW[jW] = iW - JW
-          } while (!NW(WW, iW, sW));
-          if (!HW) break;
-          tW = PW(WW, hW, iW - hW, wW, tW);
+            nR = yR(tR(RR, UR), wR), WR = pR + eR[LR], eR[LR] = JR - pR
+          } while (!uR(RR, JR, WR));
+          if (!bR) break;
+          VR = ZR(RR, gR, JR - gR, fR, VR);
           do {
-            for (SW = iW, YW = 4; iW + YW < TW && WW[iW + YW] === WW[sW + YW];) YW += 1;
-            if (iW += YW, tW = cW(wW, tW, SW - sW, YW), hW = iW, iW >= bW) {
-              HW = !1;
+            for (XR = JR, MR = 4; JR + MR < lR && RR[JR + MR] === RR[WR + MR];) MR += 1;
+            if (JR += MR, VR = iR(fR, VR, XR - WR, MR), gR = JR, JR >= aR) {
+              bR = !1;
               break
             }
-            AW[mW(EW(WW, iW - 1), xW)] = iW - 1 - JW, sW = JW + AW[yW = mW(EW(WW, iW), xW)], AW[yW] = iW - JW
-          } while (NW(WW, iW, sW));
-          if (!HW) break;
-          UW = mW(EW(WW, iW += 1), xW)
+            eR[yR(tR(RR, JR - 1), wR)] = JR - 1 - pR, WR = pR + eR[BR = yR(tR(RR, JR), wR)], eR[BR] = JR - pR
+          } while (uR(RR, JR, WR));
+          if (!bR) break;
+          nR = yR(tR(RR, JR += 1), wR)
         }
-      return hW < TW && (tW = PW(WW, hW, TW - hW, wW, tW)), tW
+      return gR < lR && (VR = ZR(RR, gR, lR - gR, fR, VR)), VR
     }
 
-    function tW(WW) {
-      this.array = WW
+    function VR(RR) {
+      this.array = RR
     }
-    tW.prototype.maxCompressedLength = function() {
-      var WW = this.array.length;
-      return 32 + WW + Math.floor(WW / 6)
-    }, tW.prototype.compressToBuffer = function(WW) {
-      var iW, OW = this.array,
-        mW = OW.length,
-        EW = 0,
-        NW = 0;
-      for (NW = function(WW, iW, OW) {
+    VR.prototype.maxCompressedLength = function() {
+      var RR = this.array.length;
+      return 32 + RR + Math.floor(RR / 6)
+    }, VR.prototype.compressToBuffer = function(RR) {
+      var JR, GR = this.array,
+        yR = GR.length,
+        tR = 0,
+        uR = 0;
+      for (uR = function(RR, JR, GR) {
           do {
-            iW[OW] = 127 & WW, (WW >>>= 7) > 0 && (iW[OW] += 128), OW += 1
-          } while (WW > 0);
-          return OW
-        }(mW, WW, NW); EW < mW;) NW = wW(OW, EW, iW = Math.min(mW - EW, 65536), WW, NW), EW += iW;
-      return NW
-    }, iW.d = tW
+            JR[GR] = 127 & RR, (RR >>>= 7) > 0 && (JR[GR] += 128), GR += 1
+          } while (RR > 0);
+          return GR
+        }(yR, RR, uR); tR < yR;) uR = fR(GR, tR, JR = Math.min(yR - tR, 65536), RR, uR), tR += JR;
+      return uR
+    }, JR.d = VR
   },
-  41009: (WW, iW) => {
-    var OW = [0, 255, 65535, 16777215, 4294967295];
+  41017: (RR, JR) => {
+    var GR = [0, 255, 65535, 16777215, 4294967295];
 
-    function mW(WW, iW, OW, mW, EW) {
-      var NW;
-      for (NW = 0; NW < EW; NW++) OW[mW + NW] = WW[iW + NW]
+    function yR(RR, JR, GR, yR, tR) {
+      var uR;
+      for (uR = 0; uR < tR; uR++) GR[yR + uR] = RR[JR + uR]
     }
 
-    function EW(WW, iW, OW, mW) {
-      var EW;
-      for (EW = 0; EW < mW; EW++) WW[iW + EW] = WW[iW - OW + EW]
+    function tR(RR, JR, GR, yR) {
+      var tR;
+      for (tR = 0; tR < yR; tR++) RR[JR + tR] = RR[JR - GR + tR]
     }
 
-    function NW(WW) {
-      this.array = WW, this.pos = 0
+    function uR(RR) {
+      this.array = RR, this.pos = 0
     }
-    NW.prototype.readUncompressedLength = function() {
-      for (var WW, iW, OW = 0, mW = 0; mW < 32 && this.pos < this.array.length;) {
-        if (WW = this.array[this.pos], this.pos += 1, (iW = 127 & WW) << mW >>> mW !== iW) return -1;
-        if (OW |= iW << mW, WW < 128) return OW;
-        mW += 7
+    uR.prototype.readUncompressedLength = function() {
+      for (var RR, JR, GR = 0, yR = 0; yR < 32 && this.pos < this.array.length;) {
+        if (RR = this.array[this.pos], this.pos += 1, (JR = 127 & RR) << yR >>> yR !== JR) return -1;
+        if (GR |= JR << yR, RR < 128) return GR;
+        yR += 7
       }
       return -1
-    }, NW.prototype.uncompressToBuffer = function(WW) {
-      for (var iW, NW, PW, LW, cW = this.array, wW = cW.length, tW = this.pos, ZW = 0; tW < cW.length;)
-        if (iW = cW[tW], tW += 1, 0 === (3 & iW)) {
-          if ((NW = 1 + (iW >>> 2)) > 60) {
-            if (tW + 3 >= wW) return !1;
-            PW = NW - 60, NW = 1 + ((NW = cW[tW] + (cW[tW + 1] << 8) + (cW[tW + 2] << 16) + (cW[tW + 3] << 24)) & OW[PW]), tW += PW
+    }, uR.prototype.uncompressToBuffer = function(RR) {
+      for (var JR, uR, ZR, qR, iR = this.array, fR = iR.length, VR = this.pos, KR = 0; VR < iR.length;)
+        if (JR = iR[VR], VR += 1, 0 === (3 & JR)) {
+          if ((uR = 1 + (JR >>> 2)) > 60) {
+            if (VR + 3 >= fR) return !1;
+            ZR = uR - 60, uR = 1 + ((uR = iR[VR] + (iR[VR + 1] << 8) + (iR[VR + 2] << 16) + (iR[VR + 3] << 24)) & GR[ZR]), VR += ZR
           }
-          if (tW + NW > wW) return !1;
-          mW(cW, tW, WW, ZW, NW), tW += NW, ZW += NW
+          if (VR + uR > fR) return !1;
+          yR(iR, VR, RR, KR, uR), VR += uR, KR += uR
         } else {
-          switch (3 & iW) {
+          switch (3 & JR) {
             case 1:
-              NW = 4 + (iW >>> 2 & 7), LW = cW[tW] + (iW >>> 5 << 8), tW += 1;
+              uR = 4 + (JR >>> 2 & 7), qR = iR[VR] + (JR >>> 5 << 8), VR += 1;
               break;
             case 2:
-              if (tW + 1 >= wW) return !1;
-              NW = 1 + (iW >>> 2), LW = cW[tW] + (cW[tW + 1] << 8), tW += 2;
+              if (VR + 1 >= fR) return !1;
+              uR = 1 + (JR >>> 2), qR = iR[VR] + (iR[VR + 1] << 8), VR += 2;
               break;
             case 3:
-              if (tW + 3 >= wW) return !1;
-              NW = 1 + (iW >>> 2), LW = cW[tW] + (cW[tW + 1] << 8) + (cW[tW + 2] << 16) + (cW[tW + 3] << 24), tW += 4
+              if (VR + 3 >= fR) return !1;
+              uR = 1 + (JR >>> 2), qR = iR[VR] + (iR[VR + 1] << 8) + (iR[VR + 2] << 16) + (iR[VR + 3] << 24), VR += 4
           }
-          if (0 === LW || LW > ZW) return !1;
-          EW(WW, ZW, LW, NW), ZW += NW
+          if (0 === qR || qR > KR) return !1;
+          tR(RR, KR, qR, uR), KR += uR
         } return !0
-    }, iW.c = NW
+    }, JR.b = uR
   },
-  37245: WW => {
-    WW.exports = function(WW, iW, OW, mW) {
-      var EW = self || window;
+  37156: RR => {
+    RR.exports = function(RR, JR, GR, yR) {
+      var tR = self || window;
       try {
         try {
-          var NW;
+          var uR;
           try {
-            NW = new EW.Blob([WW])
-          } catch (wW) {
-            (NW = new(EW.BlobBuilder || EW.WebKitBlobBuilder || EW.MozBlobBuilder || EW.MSBlobBuilder)).append(WW), NW = NW.getBlob()
+            uR = new tR.Blob([RR])
+          } catch (fR) {
+            (uR = new(tR.BlobBuilder || tR.WebKitBlobBuilder || tR.MozBlobBuilder || tR.MSBlobBuilder)).append(RR), uR = uR.getBlob()
           }
-          var PW = EW.URL || EW.webkitURL,
-            LW = PW.createObjectURL(NW),
-            cW = new EW[iW](LW, OW);
-          return PW.revokeObjectURL(LW), cW
-        } catch (wW) {
-          return new EW[iW]("data:application/javascript,".concat(encodeURIComponent(WW)), OW)
+          var ZR = tR.URL || tR.webkitURL,
+            qR = ZR.createObjectURL(uR),
+            iR = new tR[JR](qR, GR);
+          return ZR.revokeObjectURL(qR), iR
+        } catch (fR) {
+          return new tR[JR]("data:application/javascript,".concat(encodeURIComponent(RR)), GR)
         }
-      } catch (wW) {
-        if (!mW) throw Error("Inline worker is not supported");
-        return new EW[iW](mW, OW)
+      } catch (fR) {
+        if (!yR) throw Error("Inline worker is not supported");
+        return new tR[JR](yR, GR)
       }
     }
   },
-  41149: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      g: () => EW,
-      i: () => wW,
-      k: () => lW,
-      n: () => PW,
-      q: () => AW
+  41128: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      f: () => tR,
+      i: () => fR,
+      j: () => rR,
+      k: () => ZR,
+      l: () => eR
     });
-    var mW = OW(41154);
-    const EW = [96e3, 88200, 64e3, 48e3, 44100, 32e3, 24e3, 22050, 16e3, 12e3, 11025, 8e3, 7350],
-      NW = [-1, 1, 2, 3, 4, 5, 6, 8],
-      PW = WW => {
-        if (!WW || WW.byteLength < 2) throw new TypeError("AAC description must be at least 2 bytes long.");
-        const iW = new mW.c(WW),
-          OW = LW(iW),
+    var yR = GR(41130);
+    const tR = [96e3, 88200, 64e3, 48e3, 44100, 32e3, 24e3, 22050, 16e3, 12e3, 11025, 8e3, 7350],
+      uR = [-1, 1, 2, 3, 4, 5, 6, 8],
+      ZR = RR => {
+        if (!RR || RR.byteLength < 2) throw new TypeError("AAC description must be at least 2 bytes long.");
+        const JR = new yR.b(RR),
+          GR = qR(JR),
           {
-            frequencyIndex: EW,
-            sampleRate: PW
-          } = cW(iW),
-          wW = iW.readBits(4);
-        let tW = null;
-        wW >= 1 && wW <= 7 && (tW = NW[wW]);
-        let ZW = OW,
-          xW = !1,
-          lW = PW;
-        if (5 === OW || 29 === OW) xW = 29 === OW, lW = cW(iW).sampleRate, ZW = LW(iW), 22 === ZW && iW.skipBits(4);
+            frequencyIndex: tR,
+            sampleRate: ZR
+          } = iR(JR),
+          fR = JR.readBits(4);
+        let VR = null;
+        fR >= 1 && fR <= 7 && (VR = uR[fR]);
+        let KR = GR,
+          wR = !1,
+          rR = ZR;
+        if (5 === GR || 29 === GR) wR = 29 === GR, rR = iR(JR).sampleRate, KR = qR(JR), 22 === KR && JR.skipBits(4);
         else
-          for (; iW.getBitsLeft() > 15;) {
-            const WW = iW.pos;
-            if (695 === iW.readBits(11)) {
-              5 === LW(iW) && iW.readBits(1) && (lW = cW(iW).sampleRate, iW.getBitsLeft() > 11 && 1352 === iW.readBits(11) && (xW = !!iW.readBits(1)));
+          for (; JR.getBitsLeft() > 15;) {
+            const RR = JR.pos;
+            if (695 === JR.readBits(11)) {
+              5 === qR(JR) && JR.readBits(1) && (rR = iR(JR).sampleRate, JR.getBitsLeft() > 11 && 1352 === JR.readBits(11) && (wR = !!JR.readBits(1)));
               break
             }
-            iW.pos = WW + 1
+            JR.pos = RR + 1
           }
-        return null !== tW && tW > 1 && (xW = !1), {
-          objectType: OW,
-          coreObjectType: ZW,
-          frequencyIndex: EW,
-          channelConfiguration: wW,
-          outputSampleRate: lW,
-          outputNumberOfChannels: xW && 1 === tW ? 2 : tW
+        return null !== VR && VR > 1 && (wR = !1), {
+          objectType: GR,
+          coreObjectType: KR,
+          frequencyIndex: tR,
+          channelConfiguration: fR,
+          outputSampleRate: rR,
+          outputNumberOfChannels: wR && 1 === VR ? 2 : VR
         }
       },
-      LW = WW => {
-        const iW = WW.readBits(5);
-        return 31 === iW ? 32 + WW.readBits(6) : iW
+      qR = RR => {
+        const JR = RR.readBits(5);
+        return 31 === JR ? 32 + RR.readBits(6) : JR
       },
-      cW = WW => {
-        const iW = WW.readBits(4);
-        return 15 === iW ? {
-          frequencyIndex: iW,
-          sampleRate: WW.readBits(24)
+      iR = RR => {
+        const JR = RR.readBits(4);
+        return 15 === JR ? {
+          frequencyIndex: JR,
+          sampleRate: RR.readBits(24)
         } : {
-          frequencyIndex: iW,
-          sampleRate: iW < EW.length ? EW[iW] : null
+          frequencyIndex: JR,
+          sampleRate: JR < tR.length ? tR[JR] : null
         }
       },
-      wW = WW => {
-        const iW = 5 === WW.objectType || 29 === WW.objectType,
-          OW = 29 === WW.objectType,
-          EW = iW ? WW.outputSampleRate / 2 : WW.outputSampleRate,
-          PW = OW ? 1 : WW.outputNumberOfChannels,
-          LW = NW.indexOf(PW);
-        if (-1 === LW) throw new TypeError(`Unsupported number of channels: ${WW.outputNumberOfChannels}`);
-        let cW = 16;
-        WW.objectType >= 32 && (cW += 6), 15 === xW(EW) && (cW += 24), iW && (cW += 9, 15 === xW(WW.outputSampleRate) && (cW += 24));
-        const wW = Math.ceil(cW / 8),
-          lW = new Uint8Array(wW),
-          AW = new mW.c(lW);
-        return tW(AW, WW.objectType), ZW(AW, EW), AW.writeBits(4, LW), iW && (ZW(AW, WW.outputSampleRate), tW(AW, 2)), AW.writeBits(3, 0), lW
+      fR = RR => {
+        const JR = 5 === RR.objectType || 29 === RR.objectType,
+          GR = 29 === RR.objectType,
+          tR = JR ? RR.outputSampleRate / 2 : RR.outputSampleRate,
+          ZR = GR ? 1 : RR.outputNumberOfChannels,
+          qR = uR.indexOf(ZR);
+        if (-1 === qR) throw new TypeError(`Unsupported number of channels: ${RR.outputNumberOfChannels}`);
+        let iR = 16;
+        RR.objectType >= 32 && (iR += 6), 15 === wR(tR) && (iR += 24), JR && (iR += 9, 15 === wR(RR.outputSampleRate) && (iR += 24));
+        const fR = Math.ceil(iR / 8),
+          rR = new Uint8Array(fR),
+          eR = new yR.b(rR);
+        return VR(eR, RR.objectType), KR(eR, tR), eR.writeBits(4, qR), JR && (KR(eR, RR.outputSampleRate), VR(eR, 2)), eR.writeBits(3, 0), rR
       },
-      tW = (WW, iW) => {
-        iW < 32 ? WW.writeBits(5, iW) : (WW.writeBits(5, 31), WW.writeBits(6, iW - 32))
+      VR = (RR, JR) => {
+        JR < 32 ? RR.writeBits(5, JR) : (RR.writeBits(5, 31), RR.writeBits(6, JR - 32))
       },
-      ZW = (WW, iW) => {
-        const OW = xW(iW);
-        WW.writeBits(4, OW), 15 === OW && WW.writeBits(24, iW)
+      KR = (RR, JR) => {
+        const GR = wR(JR);
+        RR.writeBits(4, GR), 15 === GR && RR.writeBits(24, JR)
       },
-      xW = WW => {
-        const iW = EW.indexOf(WW);
-        return -1 === iW ? 15 : iW
+      wR = RR => {
+        const JR = tR.indexOf(RR);
+        return -1 === JR ? 15 : JR
       },
-      lW = WW => {
-        const iW = new Uint8Array(7),
-          OW = new mW.c(iW),
+      rR = RR => {
+        const JR = new Uint8Array(7),
+          GR = new yR.b(JR),
           {
-            coreObjectType: EW,
-            frequencyIndex: NW,
-            channelConfiguration: PW
-          } = WW,
-          LW = EW - 1;
-        return OW.writeBits(12, 4095), OW.writeBits(1, 0), OW.writeBits(2, 0), OW.writeBits(1, 1), OW.writeBits(2, LW), OW.writeBits(4, NW), OW.writeBits(1, 0), OW.writeBits(3, PW), OW.writeBits(1, 0), OW.writeBits(1, 0), OW.writeBits(1, 0), OW.writeBits(1, 0), OW.skipBits(13), OW.writeBits(11, 2047), OW.writeBits(2, 0), {
-          header: iW,
-          bitstream: OW
+            coreObjectType: tR,
+            frequencyIndex: uR,
+            channelConfiguration: ZR
+          } = RR,
+          qR = tR - 1;
+        return GR.writeBits(12, 4095), GR.writeBits(1, 0), GR.writeBits(2, 0), GR.writeBits(1, 1), GR.writeBits(2, qR), GR.writeBits(4, uR), GR.writeBits(1, 0), GR.writeBits(3, ZR), GR.writeBits(1, 0), GR.writeBits(1, 0), GR.writeBits(1, 0), GR.writeBits(1, 0), GR.skipBits(13), GR.writeBits(11, 2047), GR.writeBits(2, 0), {
+          header: JR,
+          bitstream: GR
         }
       },
-      AW = (WW, iW) => {
-        WW.pos = 30, WW.writeBits(13, iW)
+      eR = (RR, JR) => {
+        RR.pos = 30, RR.writeBits(13, JR)
       }
   },
-  41154: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  41130: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR
     });
-    class mW {
-      constructor(WW) {
-        this.bytes = WW, this.pos = 0
+    class yR {
+      constructor(RR) {
+        this.bytes = RR, this.pos = 0
       }
-      seekToByte(WW) {
-        this.pos = 8 * WW
+      seekToByte(RR) {
+        this.pos = 8 * RR
       }
       readBit() {
-        const WW = Math.floor(this.pos / 8),
-          iW = this.bytes[WW] ?? 0,
-          OW = 7 - (7 & this.pos),
-          mW = (iW & 1 << OW) >> OW;
-        return this.pos++, mW
+        const RR = Math.floor(this.pos / 8),
+          JR = this.bytes[RR] ?? 0,
+          GR = 7 - (7 & this.pos),
+          yR = (JR & 1 << GR) >> GR;
+        return this.pos++, yR
       }
-      readBits(WW) {
-        if (1 === WW) return this.readBit();
-        let iW = 0;
-        for (let OW = 0; OW < WW; OW++) iW <<= 1, iW |= this.readBit();
-        return iW
+      readBits(RR) {
+        if (1 === RR) return this.readBit();
+        let JR = 0;
+        for (let GR = 0; GR < RR; GR++) JR <<= 1, JR |= this.readBit();
+        return JR
       }
-      writeBits(WW, iW) {
-        const OW = this.pos + WW;
-        for (let mW = this.pos; mW < OW; mW++) {
-          const WW = Math.floor(mW / 8);
-          let EW = this.bytes[WW];
-          const NW = 7 - (7 & mW);
-          EW &= ~(1 << NW), EW |= (iW & 1 << OW - mW - 1) >> OW - mW - 1 << NW, this.bytes[WW] = EW
+      writeBits(RR, JR) {
+        const GR = this.pos + RR;
+        for (let yR = this.pos; yR < GR; yR++) {
+          const RR = Math.floor(yR / 8);
+          let tR = this.bytes[RR];
+          const uR = 7 - (7 & yR);
+          tR &= ~(1 << uR), tR |= (JR & 1 << GR - yR - 1) >> GR - yR - 1 << uR, this.bytes[RR] = tR
         }
-        this.pos = OW
+        this.pos = GR
       }
-      copyBits(WW, iW) {
-        let OW = 0;
-        for (; OW < WW - 7; OW += 8) this.writeBits(8, iW.readBits(8));
-        const mW = WW - OW;
-        mW > 0 && this.writeBits(mW, iW.readBits(mW))
+      copyBits(RR, JR) {
+        let GR = 0;
+        for (; GR < RR - 7; GR += 8) this.writeBits(8, JR.readBits(8));
+        const yR = RR - GR;
+        yR > 0 && this.writeBits(yR, JR.readBits(yR))
       }
       readAlignedByte() {
         if (this.pos % 8 !== 0) throw new Error("Bitstream is not byte-aligned.");
-        const WW = this.pos / 8,
-          iW = this.bytes[WW] ?? 0;
-        return this.pos += 8, iW
+        const RR = this.pos / 8,
+          JR = this.bytes[RR] ?? 0;
+        return this.pos += 8, JR
       }
-      skipBits(WW) {
-        this.pos += WW
+      skipBits(RR) {
+        this.pos += RR
       }
       getBitsLeft() {
         return 8 * this.bytes.length - this.pos
       }
       clone() {
-        const WW = new mW(this.bytes);
-        return WW.pos = this.pos, WW
+        const RR = new yR(this.bytes);
+        return RR.pos = this.pos, RR
       }
     }
   },
-  41160: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => QW,
-      g: () => cW,
-      i: () => Wi,
-      k: () => rW,
-      m: () => wW,
-      o: () => BW,
-      q: () => Ai,
-      s: () => UW,
-      v: () => kW,
-      y: () => zW,
-      A: () => KW,
-      E: () => DW,
-      G: () => aW,
-      N: () => XW,
-      J: () => sW,
-      P: () => hW,
-      S: () => AW,
-      U: () => JW,
-      V: () => fW,
-      Z: () => xW,
-      bb: () => lW,
-      cb: () => FW,
-      eb: () => Zi,
-      hb: () => Oi,
-      kb: () => IW,
-      nb: () => qW,
-      pb: () => GW,
-      rb: () => MW,
-      ub: () => gW
+  41140: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => hR,
+      c: () => iR,
+      f: () => RJ,
+      j: () => FR,
+      n: () => fR,
+      q: () => jR,
+      u: () => eJ,
+      v: () => nR,
+      x: () => UR,
+      A: () => TR,
+      C: () => CR,
+      D: () => cR,
+      H: () => QR,
+      O: () => SR,
+      L: () => WR,
+      Q: () => gR,
+      U: () => eR,
+      V: () => pR,
+      X: () => mR,
+      $: () => wR,
+      cb: () => rR,
+      eb: () => sR,
+      gb: () => KJ,
+      hb: () => GJ,
+      ib: () => kR,
+      jb: () => dR,
+      kb: () => YR,
+      lb: () => AR,
+      ob: () => oR
     });
-    var mW = OW(41156),
-      EW = OW(41127),
-      NW = OW(41162);
-    const PW = [48e3, 44100, 32e3],
-      LW = [24e3, 22050, 16e3];
-    var cW, wW, tW = OW(41154),
-      ZW = OW(41164);
-    ! function(WW) {
-      WW[WW.NON_IDR_SLICE = 1] = "NON_IDR_SLICE", WW[WW.SLICE_DPA = 2] = "SLICE_DPA", WW[WW.SLICE_DPB = 3] = "SLICE_DPB", WW[WW.SLICE_DPC = 4] = "SLICE_DPC", WW[WW.IDR = 5] = "IDR", WW[WW.SEI = 6] = "SEI", WW[WW.SPS = 7] = "SPS", WW[WW.PPS = 8] = "PPS", WW[WW.AUD = 9] = "AUD", WW[WW.SPS_EXT = 13] = "SPS_EXT"
-    }(cW || (cW = {})),
-    function(WW) {
-      WW[WW.RASL_N = 8] = "RASL_N", WW[WW.RASL_R = 9] = "RASL_R", WW[WW.BLA_W_LP = 16] = "BLA_W_LP", WW[WW.RSV_IRAP_VCL23 = 23] = "RSV_IRAP_VCL23", WW[WW.VPS_NUT = 32] = "VPS_NUT", WW[WW.SPS_NUT = 33] = "SPS_NUT", WW[WW.PPS_NUT = 34] = "PPS_NUT", WW[WW.AUD_NUT = 35] = "AUD_NUT", WW[WW.PREFIX_SEI_NUT = 39] = "PREFIX_SEI_NUT", WW[WW.SUFFIX_SEI_NUT = 40] = "SUFFIX_SEI_NUT"
-    }(wW || (wW = {}));
-    const xW = function*(WW) {
-        let iW = 0,
-          OW = -1;
-        for (; iW < WW.length - 2;) {
-          const mW = WW.indexOf(0, iW);
-          if (-1 === mW || mW >= WW.length - 2) break;
-          iW = mW;
-          let EW = 0;
-          iW + 3 < WW.length && 0 === WW[iW + 1] && 0 === WW[iW + 2] && 1 === WW[iW + 3] ? EW = 4 : 0 === WW[iW + 1] && 1 === WW[iW + 2] && (EW = 3), 0 !== EW ? (-1 !== OW && iW > OW && (yield {
-            offset: OW,
-            length: iW - OW
-          }), OW = iW + EW, iW = OW) : iW++
-        } - 1 !== OW && OW < WW.length && (yield {
-          offset: OW,
-          length: WW.length - OW
+    var yR = GR(41133),
+      tR = GR(41115),
+      uR = GR(41147);
+    const ZR = [48e3, 44100, 32e3],
+      qR = [24e3, 22050, 16e3];
+    var iR, fR, VR = GR(41130),
+      KR = GR(41149);
+    ! function(RR) {
+      RR[RR.NON_IDR_SLICE = 1] = "NON_IDR_SLICE", RR[RR.SLICE_DPA = 2] = "SLICE_DPA", RR[RR.SLICE_DPB = 3] = "SLICE_DPB", RR[RR.SLICE_DPC = 4] = "SLICE_DPC", RR[RR.IDR = 5] = "IDR", RR[RR.SEI = 6] = "SEI", RR[RR.SPS = 7] = "SPS", RR[RR.PPS = 8] = "PPS", RR[RR.AUD = 9] = "AUD", RR[RR.SPS_EXT = 13] = "SPS_EXT"
+    }(iR || (iR = {})),
+    function(RR) {
+      RR[RR.RASL_N = 8] = "RASL_N", RR[RR.RASL_R = 9] = "RASL_R", RR[RR.BLA_W_LP = 16] = "BLA_W_LP", RR[RR.RSV_IRAP_VCL23 = 23] = "RSV_IRAP_VCL23", RR[RR.VPS_NUT = 32] = "VPS_NUT", RR[RR.SPS_NUT = 33] = "SPS_NUT", RR[RR.PPS_NUT = 34] = "PPS_NUT", RR[RR.AUD_NUT = 35] = "AUD_NUT", RR[RR.PREFIX_SEI_NUT = 39] = "PREFIX_SEI_NUT", RR[RR.SUFFIX_SEI_NUT = 40] = "SUFFIX_SEI_NUT"
+    }(fR || (fR = {}));
+    const wR = function*(RR) {
+        let JR = 0,
+          GR = -1;
+        for (; JR < RR.length - 2;) {
+          const yR = RR.indexOf(0, JR);
+          if (-1 === yR || yR >= RR.length - 2) break;
+          JR = yR;
+          let tR = 0;
+          JR + 3 < RR.length && 0 === RR[JR + 1] && 0 === RR[JR + 2] && 1 === RR[JR + 3] ? tR = 4 : 0 === RR[JR + 1] && 1 === RR[JR + 2] && (tR = 3), 0 !== tR ? (-1 !== GR && JR > GR && (yield {
+            offset: GR,
+            length: JR - GR
+          }), GR = JR + tR, JR = GR) : JR++
+        } - 1 !== GR && GR < RR.length && (yield {
+          offset: GR,
+          length: RR.length - GR
         })
       },
-      lW = function*(WW, iW) {
-        let OW = 0;
-        const mW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength);
-        for (; OW + iW <= WW.length;) {
-          let WW;
-          1 === iW ? WW = mW.getUint8(OW) : 2 === iW ? WW = mW.getUint16(OW, !1) : 3 === iW ? WW = (0, EW.ub)(mW, OW, !1) : ((0, EW.K)(4 === iW), WW = mW.getUint32(OW, !1)), OW += iW, yield {
-            offset: OW,
-            length: WW
-          }, OW += WW
+      rR = function*(RR, JR) {
+        let GR = 0;
+        const yR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength);
+        for (; GR + JR <= RR.length;) {
+          let RR;
+          1 === JR ? RR = yR.getUint8(GR) : 2 === JR ? RR = yR.getUint16(GR, !1) : 3 === JR ? RR = (0, tR.nb)(yR, GR, !1) : ((0, tR.I)(4 === JR), RR = yR.getUint32(GR, !1)), GR += JR, yield {
+            offset: GR,
+            length: RR
+          }, GR += RR
         }
       },
-      AW = WW => 31 & WW,
-      bW = WW => {
-        const iW = [],
-          OW = WW.length;
-        for (let mW = 0; mW < OW; mW++) mW + 2 < OW && 0 === WW[mW] && 0 === WW[mW + 1] && 3 === WW[mW + 2] ? (iW.push(0, 0), mW += 2) : iW.push(WW[mW]);
-        return new Uint8Array(iW)
+      eR = RR => 31 & RR,
+      aR = RR => {
+        const JR = [],
+          GR = RR.length;
+        for (let yR = 0; yR < GR; yR++) yR + 2 < GR && 0 === RR[yR] && 0 === RR[yR + 1] && 3 === RR[yR + 2] ? (JR.push(0, 0), yR += 2) : JR.push(RR[yR]);
+        return new Uint8Array(JR)
       },
-      jW = new Uint8Array([0, 0, 0, 1]),
-      UW = WW => {
-        const iW = WW.reduce(((WW, iW) => WW + jW.byteLength + iW.byteLength), 0),
-          OW = new Uint8Array(iW);
-        let mW = 0;
-        for (const EW of WW) OW.set(jW, mW), mW += jW.byteLength, OW.set(EW, mW), mW += EW.byteLength;
-        return OW
+      LR = new Uint8Array([0, 0, 0, 1]),
+      nR = RR => {
+        const JR = RR.reduce(((RR, JR) => RR + LR.byteLength + JR.byteLength), 0),
+          GR = new Uint8Array(JR);
+        let yR = 0;
+        for (const tR of RR) GR.set(LR, yR), yR += LR.byteLength, GR.set(tR, yR), yR += tR.byteLength;
+        return GR
       },
-      kW = (WW, iW) => {
-        const OW = WW.reduce(((WW, OW) => WW + iW + OW.byteLength), 0),
-          mW = new Uint8Array(OW);
-        let NW = 0;
-        for (const PW of WW) {
-          const WW = new DataView(mW.buffer, mW.byteOffset, mW.byteLength);
-          switch (iW) {
+      UR = (RR, JR) => {
+        const GR = RR.reduce(((RR, GR) => RR + JR + GR.byteLength), 0),
+          yR = new Uint8Array(GR);
+        let uR = 0;
+        for (const ZR of RR) {
+          const RR = new DataView(yR.buffer, yR.byteOffset, yR.byteLength);
+          switch (JR) {
             case 1:
-              WW.setUint8(NW, PW.byteLength);
+              RR.setUint8(uR, ZR.byteLength);
               break;
             case 2:
-              WW.setUint16(NW, PW.byteLength, !1);
+              RR.setUint16(uR, ZR.byteLength, !1);
               break;
             case 3:
-              (0, EW.cd)(WW, NW, PW.byteLength, !1);
+              (0, tR.Nc)(RR, uR, ZR.byteLength, !1);
               break;
             case 4:
-              WW.setUint32(NW, PW.byteLength, !1)
+              RR.setUint32(uR, ZR.byteLength, !1)
           }
-          NW += iW, mW.set(PW, NW), NW += PW.byteLength
+          uR += JR, yR.set(ZR, uR), uR += ZR.byteLength
         }
-        return mW
+        return yR
       },
-      sW = WW => {
+      WR = RR => {
         try {
-          const iW = [],
-            OW = [],
-            mW = [];
-          for (const EW of xW(WW)) {
-            const NW = WW.subarray(EW.offset, EW.offset + EW.length),
-              PW = AW(NW[0]);
-            PW === cW.SPS ? iW.push(NW) : PW === cW.PPS ? OW.push(NW) : PW === cW.SPS_EXT && mW.push(NW)
+          const JR = [],
+            GR = [],
+            yR = [];
+          for (const tR of wR(RR)) {
+            const uR = RR.subarray(tR.offset, tR.offset + tR.length),
+              ZR = eR(uR[0]);
+            ZR === iR.SPS ? JR.push(uR) : ZR === iR.PPS ? GR.push(uR) : ZR === iR.SPS_EXT && yR.push(uR)
           }
-          if (0 === iW.length) return null;
-          if (0 === OW.length) return null;
-          const NW = iW[0],
-            PW = YW(NW);
-          (0, EW.K)(null !== PW);
-          const LW = 100 === PW.profileIdc || 110 === PW.profileIdc || 122 === PW.profileIdc || 144 === PW.profileIdc;
+          if (0 === JR.length) return null;
+          if (0 === GR.length) return null;
+          const uR = JR[0],
+            ZR = MR(uR);
+          (0, tR.I)(null !== ZR);
+          const qR = 100 === ZR.profileIdc || 110 === ZR.profileIdc || 122 === ZR.profileIdc || 144 === ZR.profileIdc;
           return {
             configurationVersion: 1,
-            avcProfileIndication: PW.profileIdc,
-            profileCompatibility: PW.constraintFlags,
-            avcLevelIndication: PW.levelIdc,
+            avcProfileIndication: ZR.profileIdc,
+            profileCompatibility: ZR.constraintFlags,
+            avcLevelIndication: ZR.levelIdc,
             lengthSizeMinusOne: 3,
-            sequenceParameterSets: iW,
-            pictureParameterSets: OW,
-            chromaFormat: LW ? PW.chromaFormatIdc : null,
-            bitDepthLumaMinus8: LW ? PW.bitDepthLumaMinus8 : null,
-            bitDepthChromaMinus8: LW ? PW.bitDepthChromaMinus8 : null,
-            sequenceParameterSetExt: LW ? mW : null
+            sequenceParameterSets: JR,
+            pictureParameterSets: GR,
+            chromaFormat: qR ? ZR.chromaFormatIdc : null,
+            bitDepthLumaMinus8: qR ? ZR.bitDepthLumaMinus8 : null,
+            bitDepthChromaMinus8: qR ? ZR.bitDepthChromaMinus8 : null,
+            sequenceParameterSetExt: qR ? yR : null
           }
-        } catch (iW) {
-          return NW.d._error("Error building AVC Decoder Configuration Record:", iW), null
+        } catch (JR) {
+          return uR.e._error("Error building AVC Decoder Configuration Record:", JR), null
         }
       },
-      MW = WW => {
-        const iW = [];
-        iW.push(WW.configurationVersion), iW.push(WW.avcProfileIndication), iW.push(WW.profileCompatibility), iW.push(WW.avcLevelIndication), iW.push(252 | 3 & WW.lengthSizeMinusOne), iW.push(224 | 31 & WW.sequenceParameterSets.length);
-        for (const OW of WW.sequenceParameterSets) {
-          const WW = OW.byteLength;
-          iW.push(WW >> 8), iW.push(255 & WW);
-          for (let mW = 0; mW < WW; mW++) iW.push(OW[mW])
+      AR = RR => {
+        const JR = [];
+        JR.push(RR.configurationVersion), JR.push(RR.avcProfileIndication), JR.push(RR.profileCompatibility), JR.push(RR.avcLevelIndication), JR.push(252 | 3 & RR.lengthSizeMinusOne), JR.push(224 | 31 & RR.sequenceParameterSets.length);
+        for (const GR of RR.sequenceParameterSets) {
+          const RR = GR.byteLength;
+          JR.push(RR >> 8), JR.push(255 & RR);
+          for (let yR = 0; yR < RR; yR++) JR.push(GR[yR])
         }
-        iW.push(WW.pictureParameterSets.length);
-        for (const OW of WW.pictureParameterSets) {
-          const WW = OW.byteLength;
-          iW.push(WW >> 8), iW.push(255 & WW);
-          for (let mW = 0; mW < WW; mW++) iW.push(OW[mW])
+        JR.push(RR.pictureParameterSets.length);
+        for (const GR of RR.pictureParameterSets) {
+          const RR = GR.byteLength;
+          JR.push(RR >> 8), JR.push(255 & RR);
+          for (let yR = 0; yR < RR; yR++) JR.push(GR[yR])
         }
-        if ((100 === WW.avcProfileIndication || 110 === WW.avcProfileIndication || 122 === WW.avcProfileIndication || 144 === WW.avcProfileIndication) && null !== WW.chromaFormat) {
-          (0, EW.K)(null !== WW.bitDepthLumaMinus8), (0, EW.K)(null !== WW.bitDepthChromaMinus8), (0, EW.K)(null !== WW.sequenceParameterSetExt), iW.push(252 | 3 & WW.chromaFormat), iW.push(248 | 7 & WW.bitDepthLumaMinus8), iW.push(248 | 7 & WW.bitDepthChromaMinus8), iW.push(WW.sequenceParameterSetExt.length);
-          for (const OW of WW.sequenceParameterSetExt) {
-            const WW = OW.byteLength;
-            iW.push(WW >> 8), iW.push(255 & WW);
-            for (let mW = 0; mW < WW; mW++) iW.push(OW[mW])
+        if ((100 === RR.avcProfileIndication || 110 === RR.avcProfileIndication || 122 === RR.avcProfileIndication || 144 === RR.avcProfileIndication) && null !== RR.chromaFormat) {
+          (0, tR.I)(null !== RR.bitDepthLumaMinus8), (0, tR.I)(null !== RR.bitDepthChromaMinus8), (0, tR.I)(null !== RR.sequenceParameterSetExt), JR.push(252 | 3 & RR.chromaFormat), JR.push(248 | 7 & RR.bitDepthLumaMinus8), JR.push(248 | 7 & RR.bitDepthChromaMinus8), JR.push(RR.sequenceParameterSetExt.length);
+          for (const GR of RR.sequenceParameterSetExt) {
+            const RR = GR.byteLength;
+            JR.push(RR >> 8), JR.push(255 & RR);
+            for (let yR = 0; yR < RR; yR++) JR.push(GR[yR])
           }
         }
-        return new Uint8Array(iW)
+        return new Uint8Array(JR)
       },
-      KW = WW => {
+      CR = RR => {
         try {
-          const iW = (0, EW.od)(WW);
-          let OW = 0;
-          const mW = iW.getUint8(OW++),
-            NW = iW.getUint8(OW++),
-            PW = iW.getUint8(OW++),
-            LW = iW.getUint8(OW++),
-            cW = 3 & iW.getUint8(OW++),
-            wW = 31 & iW.getUint8(OW++),
-            tW = [];
-          for (let EW = 0; EW < wW; EW++) {
-            const mW = iW.getUint16(OW, !1);
-            OW += 2, tW.push(WW.subarray(OW, OW + mW)), OW += mW
+          const JR = (0, tR.ad)(RR);
+          let GR = 0;
+          const yR = JR.getUint8(GR++),
+            uR = JR.getUint8(GR++),
+            ZR = JR.getUint8(GR++),
+            qR = JR.getUint8(GR++),
+            iR = 3 & JR.getUint8(GR++),
+            fR = 31 & JR.getUint8(GR++),
+            VR = [];
+          for (let tR = 0; tR < fR; tR++) {
+            const yR = JR.getUint16(GR, !1);
+            GR += 2, VR.push(RR.subarray(GR, GR + yR)), GR += yR
           }
-          const ZW = iW.getUint8(OW++),
-            xW = [];
-          for (let EW = 0; EW < ZW; EW++) {
-            const mW = iW.getUint16(OW, !1);
-            OW += 2, xW.push(WW.subarray(OW, OW + mW)), OW += mW
+          const KR = JR.getUint8(GR++),
+            wR = [];
+          for (let tR = 0; tR < KR; tR++) {
+            const yR = JR.getUint16(GR, !1);
+            GR += 2, wR.push(RR.subarray(GR, GR + yR)), GR += yR
           }
-          const lW = {
-            configurationVersion: mW,
-            avcProfileIndication: NW,
-            profileCompatibility: PW,
-            avcLevelIndication: LW,
-            lengthSizeMinusOne: cW,
-            sequenceParameterSets: tW,
-            pictureParameterSets: xW,
+          const rR = {
+            configurationVersion: yR,
+            avcProfileIndication: uR,
+            profileCompatibility: ZR,
+            avcLevelIndication: qR,
+            lengthSizeMinusOne: iR,
+            sequenceParameterSets: VR,
+            pictureParameterSets: wR,
             chromaFormat: null,
             bitDepthLumaMinus8: null,
             bitDepthChromaMinus8: null,
             sequenceParameterSetExt: null
           };
-          if ((100 === NW || 110 === NW || 122 === NW || 144 === NW) && OW + 4 <= WW.length) {
-            const mW = 3 & iW.getUint8(OW++),
-              EW = 7 & iW.getUint8(OW++),
-              NW = 7 & iW.getUint8(OW++),
-              PW = iW.getUint8(OW++);
-            lW.chromaFormat = mW, lW.bitDepthLumaMinus8 = EW, lW.bitDepthChromaMinus8 = NW;
-            const LW = [];
-            for (let cW = 0; cW < PW; cW++) {
-              const mW = iW.getUint16(OW, !1);
-              OW += 2, LW.push(WW.subarray(OW, OW + mW)), OW += mW
+          if ((100 === uR || 110 === uR || 122 === uR || 144 === uR) && GR + 4 <= RR.length) {
+            const yR = 3 & JR.getUint8(GR++),
+              tR = 7 & JR.getUint8(GR++),
+              uR = 7 & JR.getUint8(GR++),
+              ZR = JR.getUint8(GR++);
+            rR.chromaFormat = yR, rR.bitDepthLumaMinus8 = tR, rR.bitDepthChromaMinus8 = uR;
+            const qR = [];
+            for (let iR = 0; iR < ZR; iR++) {
+              const yR = JR.getUint16(GR, !1);
+              GR += 2, qR.push(RR.subarray(GR, GR + yR)), GR += yR
             }
-            lW.sequenceParameterSetExt = LW
+            rR.sequenceParameterSetExt = qR
           }
-          return lW
-        } catch (iW) {
-          return NW.d._error("Error deserializing AVC Decoder Configuration Record:", iW), null
+          return rR
+        } catch (JR) {
+          return uR.e._error("Error deserializing AVC Decoder Configuration Record:", JR), null
         }
       },
-      SW = {
+      XR = {
         1: {
           num: 1,
           den: 1
@@ -645,497 +645,497 @@ export const modules = {
           den: 1
         }
       },
-      YW = WW => {
+      MR = RR => {
         try {
-          const iW = bW(WW),
-            OW = new tW.c(iW);
-          OW.skipBits(1), OW.skipBits(2);
-          if (7 !== OW.readBits(5)) return null;
-          const NW = OW.readAlignedByte(),
-            PW = OW.readAlignedByte(),
-            LW = OW.readAlignedByte();
-          (0, EW.Ic)(OW);
-          let cW = 1,
-            wW = 0,
-            ZW = 0,
-            xW = 0;
-          if (100 === NW || 110 === NW || 122 === NW || 244 === NW || 44 === NW || 83 === NW || 86 === NW || 118 === NW || 128 === NW) {
-            cW = (0, EW.Ic)(OW), 3 === cW && (xW = OW.readBits(1)), wW = (0, EW.Ic)(OW), ZW = (0, EW.Ic)(OW), OW.skipBits(1);
-            if (OW.readBits(1))
-              for (let WW = 0; WW < (3 !== cW ? 8 : 12); WW++) {
-                if (OW.readBits(1)) {
-                  const iW = WW < 6 ? 16 : 64;
-                  let mW = 8,
-                    NW = 8;
-                  for (let WW = 0; WW < iW; WW++) {
-                    if (0 !== NW) {
-                      NW = (mW + (0, EW.Jc)(OW) + 256) % 256
+          const JR = aR(RR),
+            GR = new VR.b(JR);
+          GR.skipBits(1), GR.skipBits(2);
+          if (7 !== GR.readBits(5)) return null;
+          const uR = GR.readAlignedByte(),
+            ZR = GR.readAlignedByte(),
+            qR = GR.readAlignedByte();
+          (0, tR.uc)(GR);
+          let iR = 1,
+            fR = 0,
+            KR = 0,
+            wR = 0;
+          if (100 === uR || 110 === uR || 122 === uR || 244 === uR || 44 === uR || 83 === uR || 86 === uR || 118 === uR || 128 === uR) {
+            iR = (0, tR.uc)(GR), 3 === iR && (wR = GR.readBits(1)), fR = (0, tR.uc)(GR), KR = (0, tR.uc)(GR), GR.skipBits(1);
+            if (GR.readBits(1))
+              for (let RR = 0; RR < (3 !== iR ? 8 : 12); RR++) {
+                if (GR.readBits(1)) {
+                  const JR = RR < 6 ? 16 : 64;
+                  let yR = 8,
+                    uR = 8;
+                  for (let RR = 0; RR < JR; RR++) {
+                    if (0 !== uR) {
+                      uR = (yR + (0, tR.vc)(GR) + 256) % 256
                     }
-                    mW = 0 === NW ? mW : NW
+                    yR = 0 === uR ? yR : uR
                   }
                 }
               }
-          }(0, EW.Ic)(OW);
-          const lW = (0, EW.Ic)(OW);
-          if (0 === lW)(0, EW.Ic)(OW);
-          else if (1 === lW) {
-            OW.skipBits(1), (0, EW.Jc)(OW), (0, EW.Jc)(OW);
-            const WW = (0, EW.Ic)(OW);
-            for (let iW = 0; iW < WW; iW++)(0, EW.Jc)(OW)
-          }(0, EW.Ic)(OW), OW.skipBits(1);
-          const AW = (0, EW.Ic)(OW),
-            jW = (0, EW.Ic)(OW),
-            UW = 16 * (AW + 1),
-            kW = 16 * (jW + 1);
-          let sW = UW,
-            MW = kW;
-          const KW = OW.readBits(1);
-          KW || OW.skipBits(1), OW.skipBits(1);
-          if (OW.readBits(1)) {
-            const WW = (0, EW.Ic)(OW),
-              iW = (0, EW.Ic)(OW),
-              mW = (0, EW.Ic)(OW),
-              NW = (0, EW.Ic)(OW);
-            let PW, LW;
-            if (0 === (0 === xW ? cW : 0)) PW = 1, LW = 2 - KW;
+          }(0, tR.uc)(GR);
+          const rR = (0, tR.uc)(GR);
+          if (0 === rR)(0, tR.uc)(GR);
+          else if (1 === rR) {
+            GR.skipBits(1), (0, tR.vc)(GR), (0, tR.vc)(GR);
+            const RR = (0, tR.uc)(GR);
+            for (let JR = 0; JR < RR; JR++)(0, tR.vc)(GR)
+          }(0, tR.uc)(GR), GR.skipBits(1);
+          const eR = (0, tR.uc)(GR),
+            LR = (0, tR.uc)(GR),
+            nR = 16 * (eR + 1),
+            UR = 16 * (LR + 1);
+          let WR = nR,
+            AR = UR;
+          const CR = GR.readBits(1);
+          CR || GR.skipBits(1), GR.skipBits(1);
+          if (GR.readBits(1)) {
+            const RR = (0, tR.uc)(GR),
+              JR = (0, tR.uc)(GR),
+              yR = (0, tR.uc)(GR),
+              uR = (0, tR.uc)(GR);
+            let ZR, qR;
+            if (0 === (0 === wR ? iR : 0)) ZR = 1, qR = 2 - CR;
             else {
-              PW = 3 === cW ? 1 : 2, LW = (1 === cW ? 2 : 1) * (2 - KW)
+              ZR = 3 === iR ? 1 : 2, qR = (1 === iR ? 2 : 1) * (2 - CR)
             }
-            sW -= PW * (WW + iW), MW -= LW * (mW + NW)
+            WR -= ZR * (RR + JR), AR -= qR * (yR + uR)
           }
-          let YW = 2,
-            TW = 2,
-            JW = 2,
-            hW = 0,
-            HW = {
+          let MR = 2,
+            lR = 2,
+            pR = 2,
+            gR = 0,
+            bR = {
               num: 1,
               den: 1
             },
-            nW = null,
-            uW = null,
-            oW = null,
-            dW = null;
-          const eW = OW.pos;
-          if (OW.readBits(1)) {
-            if (OW.readBits(1)) {
-              const WW = OW.readBits(8);
-              if (255 === WW) HW = {
-                num: OW.readBits(16),
-                den: OW.readBits(16)
+            vR = null,
+            OR = null,
+            xR = null,
+            NR = null;
+          const DR = GR.pos;
+          if (GR.readBits(1)) {
+            if (GR.readBits(1)) {
+              const RR = GR.readBits(8);
+              if (255 === RR) bR = {
+                num: GR.readBits(16),
+                den: GR.readBits(16)
               };
               else {
-                const iW = SW[WW];
-                iW && (HW = iW)
+                const JR = XR[RR];
+                JR && (bR = JR)
               }
             }
-            OW.readBits(1) && OW.skipBits(1);
-            if (OW.readBits(1)) {
-              OW.skipBits(3), hW = OW.readBits(1);
-              OW.readBits(1) && (YW = OW.readBits(8), TW = OW.readBits(8), JW = OW.readBits(8))
+            GR.readBits(1) && GR.skipBits(1);
+            if (GR.readBits(1)) {
+              GR.skipBits(3), gR = GR.readBits(1);
+              GR.readBits(1) && (MR = GR.readBits(8), lR = GR.readBits(8), pR = GR.readBits(8))
             }
-            OW.readBits(1) && ((0, EW.Ic)(OW), (0, EW.Ic)(OW));
-            OW.readBits(1) && (OW.skipBits(32), OW.skipBits(32), OW.skipBits(1));
-            const WW = OW.readBits(1);
-            WW && yW(OW);
-            const iW = OW.readBits(1);
-            iW && yW(OW), (WW || iW) && OW.skipBits(1), OW.skipBits(1), oW = OW.pos, dW = OW.readBits(1), dW && (OW.skipBits(1), (0, EW.Ic)(OW), (0, EW.Ic)(OW), (0, EW.Ic)(OW), (0, EW.Ic)(OW), nW = (0, EW.Ic)(OW), uW = (0, EW.Ic)(OW))
+            GR.readBits(1) && ((0, tR.uc)(GR), (0, tR.uc)(GR));
+            GR.readBits(1) && (GR.skipBits(32), GR.skipBits(32), GR.skipBits(1));
+            const RR = GR.readBits(1);
+            RR && BR(GR);
+            const JR = GR.readBits(1);
+            JR && BR(GR), (RR || JR) && GR.skipBits(1), GR.skipBits(1), xR = GR.pos, NR = GR.readBits(1), NR && (GR.skipBits(1), (0, tR.uc)(GR), (0, tR.uc)(GR), (0, tR.uc)(GR), (0, tR.uc)(GR), vR = (0, tR.uc)(GR), OR = (0, tR.uc)(GR))
           }
-          if (null === nW) {
-            (0, EW.K)(null === uW);
-            if (44 !== NW && 86 !== NW && 100 !== NW && 110 !== NW && 122 !== NW && 244 !== NW || !(16 & PW)) {
-              const WW = AW + 1,
-                iW = (2 - KW) * (jW + 1),
-                OW = mW.h.find((WW => WW.level >= LW)) ?? (0, EW.mc)(mW.h),
-                NW = Math.min(Math.floor(OW.maxDpbMbs / (WW * iW)), 16);
-              nW = NW, uW = NW
-            } else nW = 0, uW = 0
+          if (null === vR) {
+            (0, tR.I)(null === OR);
+            if (44 !== uR && 86 !== uR && 100 !== uR && 110 !== uR && 122 !== uR && 244 !== uR || !(16 & ZR)) {
+              const RR = eR + 1,
+                JR = (2 - CR) * (LR + 1),
+                GR = yR.e.find((RR => RR.level >= qR)) ?? (0, tR.$b)(yR.e),
+                uR = Math.min(Math.floor(GR.maxDpbMbs / (RR * JR)), 16);
+              vR = uR, OR = uR
+            } else vR = 0, OR = 0
           }
-          return (0, EW.K)(null !== uW), {
-            emulationUnpreventedBytes: iW,
-            profileIdc: NW,
-            constraintFlags: PW,
-            levelIdc: LW,
-            frameMbsOnlyFlag: KW,
-            chromaFormatIdc: cW,
-            bitDepthLumaMinus8: wW,
-            bitDepthChromaMinus8: ZW,
-            codedWidth: UW,
-            codedHeight: kW,
-            displayWidth: sW,
-            displayHeight: MW,
-            pixelAspectRatio: HW,
-            colourPrimaries: YW,
-            matrixCoefficients: JW,
-            transferCharacteristics: TW,
-            fullRangeFlag: hW,
-            numReorderFrames: nW,
-            maxDecFrameBuffering: uW,
-            vuiParametersFlagBitOffset: eW,
-            bitstreamRestrictionFlagBitOffset: oW,
-            bitstreamRestrictionFlag: dW
+          return (0, tR.I)(null !== OR), {
+            emulationUnpreventedBytes: JR,
+            profileIdc: uR,
+            constraintFlags: ZR,
+            levelIdc: qR,
+            frameMbsOnlyFlag: CR,
+            chromaFormatIdc: iR,
+            bitDepthLumaMinus8: fR,
+            bitDepthChromaMinus8: KR,
+            codedWidth: nR,
+            codedHeight: UR,
+            displayWidth: WR,
+            displayHeight: AR,
+            pixelAspectRatio: bR,
+            colourPrimaries: MR,
+            matrixCoefficients: pR,
+            transferCharacteristics: lR,
+            fullRangeFlag: gR,
+            numReorderFrames: vR,
+            maxDecFrameBuffering: OR,
+            vuiParametersFlagBitOffset: DR,
+            bitstreamRestrictionFlagBitOffset: xR,
+            bitstreamRestrictionFlag: NR
           }
-        } catch (iW) {
-          return NW.d._error("Error parsing AVC SPS:", iW), null
+        } catch (JR) {
+          return uR.e._error("Error parsing AVC SPS:", JR), null
         }
       },
-      yW = WW => {
-        const iW = (0, EW.Ic)(WW);
-        WW.skipBits(4), WW.skipBits(4);
-        for (let OW = 0; OW <= iW; OW++)(0, EW.Ic)(WW), (0, EW.Ic)(WW), WW.skipBits(1);
-        WW.skipBits(5), WW.skipBits(5), WW.skipBits(5), WW.skipBits(5)
+      BR = RR => {
+        const JR = (0, tR.uc)(RR);
+        RR.skipBits(4), RR.skipBits(4);
+        for (let GR = 0; GR <= JR; GR++)(0, tR.uc)(RR), (0, tR.uc)(RR), RR.skipBits(1);
+        RR.skipBits(5), RR.skipBits(5), RR.skipBits(5), RR.skipBits(5)
       },
-      TW = (WW, iW) => {
-        if (iW.description) {
-          const OW = 3 & (0, EW.pd)(iW.description)[21];
-          return lW(WW, OW + 1)
+      lR = (RR, JR) => {
+        if (JR.description) {
+          const GR = 3 & (0, tR.cd)(JR.description)[21];
+          return rR(RR, GR + 1)
         }
-        return xW(WW)
+        return wR(RR)
       },
-      JW = WW => WW >> 1 & 63,
-      hW = WW => {
+      pR = RR => RR >> 1 & 63,
+      gR = RR => {
         try {
-          const iW = [],
-            OW = [],
-            mW = [],
-            PW = [];
-          for (const EW of xW(WW)) {
-            const NW = WW.subarray(EW.offset, EW.offset + EW.length),
-              LW = JW(NW[0]);
-            LW === wW.VPS_NUT ? iW.push(NW) : LW === wW.SPS_NUT ? OW.push(NW) : LW === wW.PPS_NUT ? mW.push(NW) : LW !== wW.PREFIX_SEI_NUT && LW !== wW.SUFFIX_SEI_NUT || PW.push(NW)
+          const JR = [],
+            GR = [],
+            yR = [],
+            ZR = [];
+          for (const tR of wR(RR)) {
+            const uR = RR.subarray(tR.offset, tR.offset + tR.length),
+              qR = pR(uR[0]);
+            qR === fR.VPS_NUT ? JR.push(uR) : qR === fR.SPS_NUT ? GR.push(uR) : qR === fR.PPS_NUT ? yR.push(uR) : qR !== fR.PREFIX_SEI_NUT && qR !== fR.SUFFIX_SEI_NUT || ZR.push(uR)
           }
-          if (0 === OW.length || 0 === mW.length) return null;
-          const LW = (WW => {
+          if (0 === GR.length || 0 === yR.length) return null;
+          const qR = (RR => {
             try {
-              const iW = new tW.c(bW(WW));
-              iW.skipBits(16), iW.readBits(4);
-              const OW = iW.readBits(3),
-                mW = iW.readBits(1),
+              const JR = new VR.b(aR(RR));
+              JR.skipBits(16), JR.readBits(4);
+              const GR = JR.readBits(3),
+                yR = JR.readBits(1),
                 {
-                  general_profile_space: NW,
-                  general_tier_flag: PW,
-                  general_profile_idc: LW,
-                  general_profile_compatibility_flags: cW,
-                  general_constraint_indicator_flags: wW,
-                  general_level_idc: ZW
-                } = HW(iW, OW);
-              (0, EW.Ic)(iW);
-              const xW = (0, EW.Ic)(iW);
-              let lW = 0;
-              3 === xW && (lW = iW.readBits(1));
-              const AW = (0, EW.Ic)(iW),
-                jW = (0, EW.Ic)(iW);
-              let UW = AW,
-                kW = jW;
-              if (iW.readBits(1)) {
-                const WW = (0, EW.Ic)(iW),
-                  OW = (0, EW.Ic)(iW),
-                  mW = (0, EW.Ic)(iW),
-                  NW = (0, EW.Ic)(iW);
-                let PW = 1,
-                  LW = 1;
-                const cW = 0 === lW ? xW : 0;
-                1 === cW ? (PW = 2, LW = 2) : 2 === cW && (PW = 2, LW = 1), UW -= (WW + OW) * PW, kW -= (mW + NW) * LW
+                  general_profile_space: uR,
+                  general_tier_flag: ZR,
+                  general_profile_idc: qR,
+                  general_profile_compatibility_flags: iR,
+                  general_constraint_indicator_flags: fR,
+                  general_level_idc: KR
+                } = bR(JR, GR);
+              (0, tR.uc)(JR);
+              const wR = (0, tR.uc)(JR);
+              let rR = 0;
+              3 === wR && (rR = JR.readBits(1));
+              const eR = (0, tR.uc)(JR),
+                LR = (0, tR.uc)(JR);
+              let nR = eR,
+                UR = LR;
+              if (JR.readBits(1)) {
+                const RR = (0, tR.uc)(JR),
+                  GR = (0, tR.uc)(JR),
+                  yR = (0, tR.uc)(JR),
+                  uR = (0, tR.uc)(JR);
+                let ZR = 1,
+                  qR = 1;
+                const iR = 0 === rR ? wR : 0;
+                1 === iR ? (ZR = 2, qR = 2) : 2 === iR && (ZR = 2, qR = 1), nR -= (RR + GR) * ZR, UR -= (yR + uR) * qR
               }
-              const sW = (0, EW.Ic)(iW),
-                MW = (0, EW.Ic)(iW);
-              (0, EW.Ic)(iW);
-              const KW = iW.readBits(1);
-              let SW = 0;
-              for (let WW = KW ? 0 : OW; WW <= OW; WW++)(0, EW.Ic)(iW), SW = (0, EW.Ic)(iW), (0, EW.Ic)(iW);
-              (0, EW.Ic)(iW), (0, EW.Ic)(iW), (0, EW.Ic)(iW), (0, EW.Ic)(iW), (0, EW.Ic)(iW), (0, EW.Ic)(iW), iW.readBits(1) && iW.readBits(1) && nW(iW), iW.skipBits(1), iW.skipBits(1), iW.readBits(1) && (iW.skipBits(4), iW.skipBits(4), (0, EW.Ic)(iW), (0, EW.Ic)(iW), iW.skipBits(1));
-              const YW = (0, EW.Ic)(iW);
-              if (uW(iW, YW), iW.readBits(1)) {
-                const WW = (0, EW.Ic)(iW);
-                for (let OW = 0; OW < WW; OW++)(0, EW.Ic)(iW), iW.skipBits(1)
+              const WR = (0, tR.uc)(JR),
+                AR = (0, tR.uc)(JR);
+              (0, tR.uc)(JR);
+              const CR = JR.readBits(1);
+              let XR = 0;
+              for (let RR = CR ? 0 : GR; RR <= GR; RR++)(0, tR.uc)(JR), XR = (0, tR.uc)(JR), (0, tR.uc)(JR);
+              (0, tR.uc)(JR), (0, tR.uc)(JR), (0, tR.uc)(JR), (0, tR.uc)(JR), (0, tR.uc)(JR), (0, tR.uc)(JR), JR.readBits(1) && JR.readBits(1) && vR(JR), JR.skipBits(1), JR.skipBits(1), JR.readBits(1) && (JR.skipBits(4), JR.skipBits(4), (0, tR.uc)(JR), (0, tR.uc)(JR), JR.skipBits(1));
+              const MR = (0, tR.uc)(JR);
+              if (OR(JR, MR), JR.readBits(1)) {
+                const RR = (0, tR.uc)(JR);
+                for (let GR = 0; GR < RR; GR++)(0, tR.uc)(JR), JR.skipBits(1)
               }
-              iW.skipBits(1), iW.skipBits(1);
-              let yW = 2,
-                TW = 2,
-                JW = 2,
-                hW = 0,
-                oW = 0,
-                eW = {
+              JR.skipBits(1), JR.skipBits(1);
+              let BR = 2,
+                lR = 2,
+                pR = 2,
+                gR = 0,
+                xR = 0,
+                DR = {
                   num: 1,
                   den: 1
                 };
-              if (iW.readBits(1)) {
-                const WW = dW(iW, OW);
-                eW = WW.pixelAspectRatio, yW = WW.colourPrimaries, TW = WW.transferCharacteristics, JW = WW.matrixCoefficients, hW = WW.fullRangeFlag, oW = WW.minSpatialSegmentationIdc
+              if (JR.readBits(1)) {
+                const RR = NR(JR, GR);
+                DR = RR.pixelAspectRatio, BR = RR.colourPrimaries, lR = RR.transferCharacteristics, pR = RR.matrixCoefficients, gR = RR.fullRangeFlag, xR = RR.minSpatialSegmentationIdc
               }
               return {
-                displayWidth: UW,
-                displayHeight: kW,
-                pixelAspectRatio: eW,
-                colourPrimaries: yW,
-                transferCharacteristics: TW,
-                matrixCoefficients: JW,
-                fullRangeFlag: hW,
-                maxDecFrameBuffering: SW + 1,
-                spsMaxSubLayersMinus1: OW,
-                spsTemporalIdNestingFlag: mW,
-                generalProfileSpace: NW,
-                generalTierFlag: PW,
-                generalProfileIdc: LW,
-                generalProfileCompatibilityFlags: cW,
-                generalConstraintIndicatorFlags: wW,
-                generalLevelIdc: ZW,
-                chromaFormatIdc: xW,
-                bitDepthLumaMinus8: sW,
-                bitDepthChromaMinus8: MW,
-                minSpatialSegmentationIdc: oW
+                displayWidth: nR,
+                displayHeight: UR,
+                pixelAspectRatio: DR,
+                colourPrimaries: BR,
+                transferCharacteristics: lR,
+                matrixCoefficients: pR,
+                fullRangeFlag: gR,
+                maxDecFrameBuffering: XR + 1,
+                spsMaxSubLayersMinus1: GR,
+                spsTemporalIdNestingFlag: yR,
+                generalProfileSpace: uR,
+                generalTierFlag: ZR,
+                generalProfileIdc: qR,
+                generalProfileCompatibilityFlags: iR,
+                generalConstraintIndicatorFlags: fR,
+                generalLevelIdc: KR,
+                chromaFormatIdc: wR,
+                bitDepthLumaMinus8: WR,
+                bitDepthChromaMinus8: AR,
+                minSpatialSegmentationIdc: xR
               }
-            } catch (iW) {
-              return NW.d._error("Error parsing HEVC SPS:", iW), null
+            } catch (JR) {
+              return uR.e._error("Error parsing HEVC SPS:", JR), null
             }
-          })(OW[0]);
-          if (!LW) return null;
-          let cW = 0;
-          if (mW.length > 0) {
-            const WW = mW[0],
-              iW = new tW.c(bW(WW));
-            iW.skipBits(16), (0, EW.Ic)(iW), (0, EW.Ic)(iW), iW.skipBits(1), iW.skipBits(1), iW.skipBits(3), iW.skipBits(1), iW.skipBits(1), (0, EW.Ic)(iW), (0, EW.Ic)(iW), (0, EW.Jc)(iW), iW.skipBits(1), iW.skipBits(1), iW.readBits(1) && (0, EW.Ic)(iW), (0, EW.Jc)(iW), (0, EW.Jc)(iW), iW.skipBits(1), iW.skipBits(1), iW.skipBits(1), iW.skipBits(1);
-            const OW = iW.readBits(1),
-              NW = iW.readBits(1);
-            cW = OW || NW ? OW && !NW ? 2 : !OW && NW ? 3 : 0 : 0
+          })(GR[0]);
+          if (!qR) return null;
+          let iR = 0;
+          if (yR.length > 0) {
+            const RR = yR[0],
+              JR = new VR.b(aR(RR));
+            JR.skipBits(16), (0, tR.uc)(JR), (0, tR.uc)(JR), JR.skipBits(1), JR.skipBits(1), JR.skipBits(3), JR.skipBits(1), JR.skipBits(1), (0, tR.uc)(JR), (0, tR.uc)(JR), (0, tR.vc)(JR), JR.skipBits(1), JR.skipBits(1), JR.readBits(1) && (0, tR.uc)(JR), (0, tR.vc)(JR), (0, tR.vc)(JR), JR.skipBits(1), JR.skipBits(1), JR.skipBits(1), JR.skipBits(1);
+            const GR = JR.readBits(1),
+              uR = JR.readBits(1);
+            iR = GR || uR ? GR && !uR ? 2 : !GR && uR ? 3 : 0 : 0
           }
-          const ZW = [...iW.length ? [{
+          const KR = [...JR.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: wW.VPS_NUT,
-            nalUnits: iW
-          }] : [], ...OW.length ? [{
+            nalUnitType: fR.VPS_NUT,
+            nalUnits: JR
+          }] : [], ...GR.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: wW.SPS_NUT,
-            nalUnits: OW
-          }] : [], ...mW.length ? [{
+            nalUnitType: fR.SPS_NUT,
+            nalUnits: GR
+          }] : [], ...yR.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: wW.PPS_NUT,
-            nalUnits: mW
-          }] : [], ...PW.length ? [{
+            nalUnitType: fR.PPS_NUT,
+            nalUnits: yR
+          }] : [], ...ZR.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: JW(PW[0][0]),
-            nalUnits: PW
+            nalUnitType: pR(ZR[0][0]),
+            nalUnits: ZR
           }] : []];
           return {
             configurationVersion: 1,
-            generalProfileSpace: LW.generalProfileSpace,
-            generalTierFlag: LW.generalTierFlag,
-            generalProfileIdc: LW.generalProfileIdc,
-            generalProfileCompatibilityFlags: LW.generalProfileCompatibilityFlags,
-            generalConstraintIndicatorFlags: LW.generalConstraintIndicatorFlags,
-            generalLevelIdc: LW.generalLevelIdc,
-            minSpatialSegmentationIdc: LW.minSpatialSegmentationIdc,
-            parallelismType: cW,
-            chromaFormatIdc: LW.chromaFormatIdc,
-            bitDepthLumaMinus8: LW.bitDepthLumaMinus8,
-            bitDepthChromaMinus8: LW.bitDepthChromaMinus8,
+            generalProfileSpace: qR.generalProfileSpace,
+            generalTierFlag: qR.generalTierFlag,
+            generalProfileIdc: qR.generalProfileIdc,
+            generalProfileCompatibilityFlags: qR.generalProfileCompatibilityFlags,
+            generalConstraintIndicatorFlags: qR.generalConstraintIndicatorFlags,
+            generalLevelIdc: qR.generalLevelIdc,
+            minSpatialSegmentationIdc: qR.minSpatialSegmentationIdc,
+            parallelismType: iR,
+            chromaFormatIdc: qR.chromaFormatIdc,
+            bitDepthLumaMinus8: qR.bitDepthLumaMinus8,
+            bitDepthChromaMinus8: qR.bitDepthChromaMinus8,
             avgFrameRate: 0,
             constantFrameRate: 0,
-            numTemporalLayers: LW.spsMaxSubLayersMinus1 + 1,
-            temporalIdNested: LW.spsTemporalIdNestingFlag,
+            numTemporalLayers: qR.spsMaxSubLayersMinus1 + 1,
+            temporalIdNested: qR.spsTemporalIdNestingFlag,
             lengthSizeMinusOne: 3,
-            arrays: ZW
+            arrays: KR
           }
-        } catch (iW) {
-          return NW.d._error("Error building HEVC Decoder Configuration Record:", iW), null
+        } catch (JR) {
+          return uR.e._error("Error building HEVC Decoder Configuration Record:", JR), null
         }
       },
-      HW = (WW, iW) => {
-        const OW = WW.readBits(2),
-          mW = WW.readBits(1),
-          EW = WW.readBits(5);
-        let NW = 0;
-        for (let tW = 0; tW < 32; tW++) NW = NW << 1 | WW.readBits(1);
-        const PW = new Uint8Array(6);
-        for (let tW = 0; tW < 6; tW++) PW[tW] = WW.readBits(8);
-        const LW = WW.readBits(8),
-          cW = [],
-          wW = [];
-        for (let tW = 0; tW < iW; tW++) cW.push(WW.readBits(1)), wW.push(WW.readBits(1));
-        if (iW > 0)
-          for (let tW = iW; tW < 8; tW++) WW.skipBits(2);
-        for (let tW = 0; tW < iW; tW++) cW[tW] && WW.skipBits(88), wW[tW] && WW.skipBits(8);
+      bR = (RR, JR) => {
+        const GR = RR.readBits(2),
+          yR = RR.readBits(1),
+          tR = RR.readBits(5);
+        let uR = 0;
+        for (let VR = 0; VR < 32; VR++) uR = uR << 1 | RR.readBits(1);
+        const ZR = new Uint8Array(6);
+        for (let VR = 0; VR < 6; VR++) ZR[VR] = RR.readBits(8);
+        const qR = RR.readBits(8),
+          iR = [],
+          fR = [];
+        for (let VR = 0; VR < JR; VR++) iR.push(RR.readBits(1)), fR.push(RR.readBits(1));
+        if (JR > 0)
+          for (let VR = JR; VR < 8; VR++) RR.skipBits(2);
+        for (let VR = 0; VR < JR; VR++) iR[VR] && RR.skipBits(88), fR[VR] && RR.skipBits(8);
         return {
-          general_profile_space: OW,
-          general_tier_flag: mW,
-          general_profile_idc: EW,
-          general_profile_compatibility_flags: NW,
-          general_constraint_indicator_flags: PW,
-          general_level_idc: LW
+          general_profile_space: GR,
+          general_tier_flag: yR,
+          general_profile_idc: tR,
+          general_profile_compatibility_flags: uR,
+          general_constraint_indicator_flags: ZR,
+          general_level_idc: qR
         }
       },
-      nW = WW => {
-        for (let iW = 0; iW < 4; iW++)
-          for (let OW = 0; OW < (3 === iW ? 2 : 6); OW++) {
-            if (WW.readBits(1)) {
-              const OW = Math.min(64, 1 << 4 + (iW << 1));
-              iW > 1 && (0, EW.Jc)(WW);
-              for (let iW = 0; iW < OW; iW++)(0, EW.Jc)(WW)
-            } else(0, EW.Ic)(WW)
+      vR = RR => {
+        for (let JR = 0; JR < 4; JR++)
+          for (let GR = 0; GR < (3 === JR ? 2 : 6); GR++) {
+            if (RR.readBits(1)) {
+              const GR = Math.min(64, 1 << 4 + (JR << 1));
+              JR > 1 && (0, tR.vc)(RR);
+              for (let JR = 0; JR < GR; JR++)(0, tR.vc)(RR)
+            } else(0, tR.uc)(RR)
           }
       },
-      uW = (WW, iW) => {
-        const OW = [];
-        for (let mW = 0; mW < iW; mW++) OW[mW] = oW(WW, mW, iW, OW)
+      OR = (RR, JR) => {
+        const GR = [];
+        for (let yR = 0; yR < JR; yR++) GR[yR] = xR(RR, yR, JR, GR)
       },
-      oW = (WW, iW, OW, mW) => {
-        let NW = 0,
-          PW = 0,
-          LW = 0;
-        if (0 !== iW && (PW = WW.readBits(1)), PW) {
-          if (iW === OW) {
-            LW = iW - ((0, EW.Ic)(WW) + 1)
-          } else LW = iW - 1;
-          WW.readBits(1), (0, EW.Ic)(WW);
-          const PW = mW[LW] ?? 0;
-          for (let iW = 0; iW <= PW; iW++) {
-            WW.readBits(1) || WW.readBits(1)
+      xR = (RR, JR, GR, yR) => {
+        let uR = 0,
+          ZR = 0,
+          qR = 0;
+        if (0 !== JR && (ZR = RR.readBits(1)), ZR) {
+          if (JR === GR) {
+            qR = JR - ((0, tR.uc)(RR) + 1)
+          } else qR = JR - 1;
+          RR.readBits(1), (0, tR.uc)(RR);
+          const ZR = yR[qR] ?? 0;
+          for (let JR = 0; JR <= ZR; JR++) {
+            RR.readBits(1) || RR.readBits(1)
           }
-          NW = mW[LW]
+          uR = yR[qR]
         } else {
-          const iW = (0, EW.Ic)(WW),
-            OW = (0, EW.Ic)(WW);
-          for (let mW = 0; mW < iW; mW++)(0, EW.Ic)(WW), WW.readBits(1);
-          for (let mW = 0; mW < OW; mW++)(0, EW.Ic)(WW), WW.readBits(1);
-          NW = iW + OW
+          const JR = (0, tR.uc)(RR),
+            GR = (0, tR.uc)(RR);
+          for (let yR = 0; yR < JR; yR++)(0, tR.uc)(RR), RR.readBits(1);
+          for (let yR = 0; yR < GR; yR++)(0, tR.uc)(RR), RR.readBits(1);
+          uR = JR + GR
         }
-        return NW
+        return uR
       },
-      dW = (WW, iW) => {
-        let OW = 2,
-          mW = 2,
-          NW = 2,
-          PW = 0,
-          LW = 0,
-          cW = {
+      NR = (RR, JR) => {
+        let GR = 2,
+          yR = 2,
+          uR = 2,
+          ZR = 0,
+          qR = 0,
+          iR = {
             num: 1,
             den: 1
           };
-        if (WW.readBits(1)) {
-          const iW = WW.readBits(8);
-          if (255 === iW) cW = {
-            num: WW.readBits(16),
-            den: WW.readBits(16)
+        if (RR.readBits(1)) {
+          const JR = RR.readBits(8);
+          if (255 === JR) iR = {
+            num: RR.readBits(16),
+            den: RR.readBits(16)
           };
           else {
-            const WW = SW[iW];
-            WW && (cW = WW)
+            const RR = XR[JR];
+            RR && (iR = RR)
           }
         }
-        return WW.readBits(1) && WW.readBits(1), WW.readBits(1) && (WW.readBits(3), PW = WW.readBits(1), WW.readBits(1) && (OW = WW.readBits(8), mW = WW.readBits(8), NW = WW.readBits(8))), WW.readBits(1) && ((0, EW.Ic)(WW), (0, EW.Ic)(WW)), WW.readBits(1), WW.readBits(1), WW.readBits(1), WW.readBits(1) && ((0, EW.Ic)(WW), (0, EW.Ic)(WW), (0, EW.Ic)(WW), (0, EW.Ic)(WW)), WW.readBits(1) && (WW.readBits(32), WW.readBits(32), WW.readBits(1) && (0, EW.Ic)(WW), WW.readBits(1) && eW(WW, !0, iW)), WW.readBits(1) && (WW.readBits(1), WW.readBits(1), WW.readBits(1), LW = (0, EW.Ic)(WW), (0, EW.Ic)(WW), (0, EW.Ic)(WW), (0, EW.Ic)(WW), (0, EW.Ic)(WW)), {
-          pixelAspectRatio: cW,
-          colourPrimaries: OW,
-          transferCharacteristics: mW,
-          matrixCoefficients: NW,
-          fullRangeFlag: PW,
-          minSpatialSegmentationIdc: LW
+        return RR.readBits(1) && RR.readBits(1), RR.readBits(1) && (RR.readBits(3), ZR = RR.readBits(1), RR.readBits(1) && (GR = RR.readBits(8), yR = RR.readBits(8), uR = RR.readBits(8))), RR.readBits(1) && ((0, tR.uc)(RR), (0, tR.uc)(RR)), RR.readBits(1), RR.readBits(1), RR.readBits(1), RR.readBits(1) && ((0, tR.uc)(RR), (0, tR.uc)(RR), (0, tR.uc)(RR), (0, tR.uc)(RR)), RR.readBits(1) && (RR.readBits(32), RR.readBits(32), RR.readBits(1) && (0, tR.uc)(RR), RR.readBits(1) && DR(RR, !0, JR)), RR.readBits(1) && (RR.readBits(1), RR.readBits(1), RR.readBits(1), qR = (0, tR.uc)(RR), (0, tR.uc)(RR), (0, tR.uc)(RR), (0, tR.uc)(RR), (0, tR.uc)(RR)), {
+          pixelAspectRatio: iR,
+          colourPrimaries: GR,
+          transferCharacteristics: yR,
+          matrixCoefficients: uR,
+          fullRangeFlag: ZR,
+          minSpatialSegmentationIdc: qR
         }
       },
-      eW = (WW, iW, OW) => {
-        let mW = !1,
-          NW = !1,
-          PW = !1;
-        iW && (mW = 1 === WW.readBits(1), NW = 1 === WW.readBits(1), (mW || NW) && (PW = 1 === WW.readBits(1), PW && (WW.readBits(8), WW.readBits(5), WW.readBits(1), WW.readBits(5)), WW.readBits(4), WW.readBits(4), PW && WW.readBits(4), WW.readBits(5), WW.readBits(5), WW.readBits(5)));
-        for (let LW = 0; LW <= OW; LW++) {
-          let iW = !0;
-          1 === WW.readBits(1) || (iW = 1 === WW.readBits(1));
-          let OW = !1;
-          iW ? (0, EW.Ic)(WW) : OW = 1 === WW.readBits(1);
-          let LW = 1;
-          if (!OW) {
-            LW = (0, EW.Ic)(WW) + 1
+      DR = (RR, JR, GR) => {
+        let yR = !1,
+          uR = !1,
+          ZR = !1;
+        JR && (yR = 1 === RR.readBits(1), uR = 1 === RR.readBits(1), (yR || uR) && (ZR = 1 === RR.readBits(1), ZR && (RR.readBits(8), RR.readBits(5), RR.readBits(1), RR.readBits(5)), RR.readBits(4), RR.readBits(4), ZR && RR.readBits(4), RR.readBits(5), RR.readBits(5), RR.readBits(5)));
+        for (let qR = 0; qR <= GR; qR++) {
+          let JR = !0;
+          1 === RR.readBits(1) || (JR = 1 === RR.readBits(1));
+          let GR = !1;
+          JR ? (0, tR.uc)(RR) : GR = 1 === RR.readBits(1);
+          let qR = 1;
+          if (!GR) {
+            qR = (0, tR.uc)(RR) + 1
           }
-          mW && vW(WW, LW, PW), NW && vW(WW, LW, PW)
+          yR && HR(RR, qR, ZR), uR && HR(RR, qR, ZR)
         }
       },
-      vW = (WW, iW, OW) => {
-        for (let mW = 0; mW < iW; mW++)(0, EW.Ic)(WW), (0, EW.Ic)(WW), OW && ((0, EW.Ic)(WW), (0, EW.Ic)(WW)), WW.readBits(1)
+      HR = (RR, JR, GR) => {
+        for (let yR = 0; yR < JR; yR++)(0, tR.uc)(RR), (0, tR.uc)(RR), GR && ((0, tR.uc)(RR), (0, tR.uc)(RR)), RR.readBits(1)
       },
-      gW = WW => {
-        const iW = [];
-        iW.push(WW.configurationVersion), iW.push((3 & WW.generalProfileSpace) << 6 | (1 & WW.generalTierFlag) << 5 | 31 & WW.generalProfileIdc), iW.push(WW.generalProfileCompatibilityFlags >>> 24 & 255), iW.push(WW.generalProfileCompatibilityFlags >>> 16 & 255), iW.push(WW.generalProfileCompatibilityFlags >>> 8 & 255), iW.push(255 & WW.generalProfileCompatibilityFlags), iW.push(...WW.generalConstraintIndicatorFlags), iW.push(255 & WW.generalLevelIdc), iW.push(240 | WW.minSpatialSegmentationIdc >> 8 & 15), iW.push(255 & WW.minSpatialSegmentationIdc), iW.push(252 | 3 & WW.parallelismType), iW.push(252 | 3 & WW.chromaFormatIdc), iW.push(248 | 7 & WW.bitDepthLumaMinus8), iW.push(248 | 7 & WW.bitDepthChromaMinus8), iW.push(WW.avgFrameRate >> 8 & 255), iW.push(255 & WW.avgFrameRate), iW.push((3 & WW.constantFrameRate) << 6 | (7 & WW.numTemporalLayers) << 3 | (1 & WW.temporalIdNested) << 2 | 3 & WW.lengthSizeMinusOne), iW.push(255 & WW.arrays.length);
-        for (const OW of WW.arrays) {
-          iW.push((1 & OW.arrayCompleteness) << 7 | 63 & OW.nalUnitType), iW.push(OW.nalUnits.length >> 8 & 255), iW.push(255 & OW.nalUnits.length);
-          for (const WW of OW.nalUnits) {
-            iW.push(WW.length >> 8 & 255), iW.push(255 & WW.length);
-            for (let OW = 0; OW < WW.length; OW++) iW.push(WW[OW])
+      oR = RR => {
+        const JR = [];
+        JR.push(RR.configurationVersion), JR.push((3 & RR.generalProfileSpace) << 6 | (1 & RR.generalTierFlag) << 5 | 31 & RR.generalProfileIdc), JR.push(RR.generalProfileCompatibilityFlags >>> 24 & 255), JR.push(RR.generalProfileCompatibilityFlags >>> 16 & 255), JR.push(RR.generalProfileCompatibilityFlags >>> 8 & 255), JR.push(255 & RR.generalProfileCompatibilityFlags), JR.push(...RR.generalConstraintIndicatorFlags), JR.push(255 & RR.generalLevelIdc), JR.push(240 | RR.minSpatialSegmentationIdc >> 8 & 15), JR.push(255 & RR.minSpatialSegmentationIdc), JR.push(252 | 3 & RR.parallelismType), JR.push(252 | 3 & RR.chromaFormatIdc), JR.push(248 | 7 & RR.bitDepthLumaMinus8), JR.push(248 | 7 & RR.bitDepthChromaMinus8), JR.push(RR.avgFrameRate >> 8 & 255), JR.push(255 & RR.avgFrameRate), JR.push((3 & RR.constantFrameRate) << 6 | (7 & RR.numTemporalLayers) << 3 | (1 & RR.temporalIdNested) << 2 | 3 & RR.lengthSizeMinusOne), JR.push(255 & RR.arrays.length);
+        for (const GR of RR.arrays) {
+          JR.push((1 & GR.arrayCompleteness) << 7 | 63 & GR.nalUnitType), JR.push(GR.nalUnits.length >> 8 & 255), JR.push(255 & GR.nalUnits.length);
+          for (const RR of GR.nalUnits) {
+            JR.push(RR.length >> 8 & 255), JR.push(255 & RR.length);
+            for (let GR = 0; GR < RR.length; GR++) JR.push(RR[GR])
           }
         }
-        return new Uint8Array(iW)
+        return new Uint8Array(JR)
       },
-      DW = WW => {
+      cR = RR => {
         try {
-          const iW = (0, EW.od)(WW);
-          let OW = 0;
-          const mW = iW.getUint8(OW++),
-            NW = iW.getUint8(OW++),
-            PW = NW >> 6 & 3,
-            LW = NW >> 5 & 1,
-            cW = 31 & NW,
-            wW = iW.getUint32(OW, !1);
-          OW += 4;
-          const tW = WW.subarray(OW, OW + 6);
-          OW += 6;
-          const ZW = iW.getUint8(OW++),
-            xW = (15 & iW.getUint8(OW++)) << 8 | iW.getUint8(OW++),
-            lW = 3 & iW.getUint8(OW++),
-            AW = 3 & iW.getUint8(OW++),
-            bW = 7 & iW.getUint8(OW++),
-            jW = 7 & iW.getUint8(OW++),
-            UW = iW.getUint16(OW, !1);
-          OW += 2;
-          const kW = iW.getUint8(OW++),
-            sW = kW >> 6 & 3,
-            MW = kW >> 3 & 7,
-            KW = kW >> 2 & 1,
-            SW = 3 & kW,
-            YW = iW.getUint8(OW++),
-            yW = [];
-          for (let EW = 0; EW < YW; EW++) {
-            const mW = iW.getUint8(OW++),
-              EW = mW >> 7 & 1,
-              NW = 63 & mW,
-              PW = iW.getUint16(OW, !1);
-            OW += 2;
-            const LW = [];
-            for (let cW = 0; cW < PW; cW++) {
-              const mW = iW.getUint16(OW, !1);
-              OW += 2, LW.push(WW.subarray(OW, OW + mW)), OW += mW
+          const JR = (0, tR.ad)(RR);
+          let GR = 0;
+          const yR = JR.getUint8(GR++),
+            uR = JR.getUint8(GR++),
+            ZR = uR >> 6 & 3,
+            qR = uR >> 5 & 1,
+            iR = 31 & uR,
+            fR = JR.getUint32(GR, !1);
+          GR += 4;
+          const VR = RR.subarray(GR, GR + 6);
+          GR += 6;
+          const KR = JR.getUint8(GR++),
+            wR = (15 & JR.getUint8(GR++)) << 8 | JR.getUint8(GR++),
+            rR = 3 & JR.getUint8(GR++),
+            eR = 3 & JR.getUint8(GR++),
+            aR = 7 & JR.getUint8(GR++),
+            LR = 7 & JR.getUint8(GR++),
+            nR = JR.getUint16(GR, !1);
+          GR += 2;
+          const UR = JR.getUint8(GR++),
+            WR = UR >> 6 & 3,
+            AR = UR >> 3 & 7,
+            CR = UR >> 2 & 1,
+            XR = 3 & UR,
+            MR = JR.getUint8(GR++),
+            BR = [];
+          for (let tR = 0; tR < MR; tR++) {
+            const yR = JR.getUint8(GR++),
+              tR = yR >> 7 & 1,
+              uR = 63 & yR,
+              ZR = JR.getUint16(GR, !1);
+            GR += 2;
+            const qR = [];
+            for (let iR = 0; iR < ZR; iR++) {
+              const yR = JR.getUint16(GR, !1);
+              GR += 2, qR.push(RR.subarray(GR, GR + yR)), GR += yR
             }
-            yW.push({
-              arrayCompleteness: EW,
-              nalUnitType: NW,
-              nalUnits: LW
+            BR.push({
+              arrayCompleteness: tR,
+              nalUnitType: uR,
+              nalUnits: qR
             })
           }
           return {
-            configurationVersion: mW,
-            generalProfileSpace: PW,
-            generalTierFlag: LW,
-            generalProfileIdc: cW,
-            generalProfileCompatibilityFlags: wW,
-            generalConstraintIndicatorFlags: tW,
-            generalLevelIdc: ZW,
-            minSpatialSegmentationIdc: xW,
-            parallelismType: lW,
-            chromaFormatIdc: AW,
-            bitDepthLumaMinus8: bW,
-            bitDepthChromaMinus8: jW,
-            avgFrameRate: UW,
-            constantFrameRate: sW,
-            numTemporalLayers: MW,
-            temporalIdNested: KW,
-            lengthSizeMinusOne: SW,
-            arrays: yW
+            configurationVersion: yR,
+            generalProfileSpace: ZR,
+            generalTierFlag: qR,
+            generalProfileIdc: iR,
+            generalProfileCompatibilityFlags: fR,
+            generalConstraintIndicatorFlags: VR,
+            generalLevelIdc: KR,
+            minSpatialSegmentationIdc: wR,
+            parallelismType: rR,
+            chromaFormatIdc: eR,
+            bitDepthLumaMinus8: aR,
+            bitDepthChromaMinus8: LR,
+            avgFrameRate: nR,
+            constantFrameRate: WR,
+            numTemporalLayers: AR,
+            temporalIdNested: CR,
+            lengthSizeMinusOne: XR,
+            arrays: BR
           }
-        } catch (iW) {
-          return NW.d._error("Error deserializing HEVC Decoder Configuration Record:", iW), null
+        } catch (JR) {
+          return uR.e._error("Error deserializing HEVC Decoder Configuration Record:", JR), null
         }
       };
-    var VW;
-    ! function(WW) {
-      WW[WW.audAllowed = 0] = "audAllowed", WW[WW.beforeFirstVcl = 1] = "beforeFirstVcl", WW[WW.afterFirstVcl = 2] = "afterFirstVcl", WW[WW.eoBitstreamAllowed = 3] = "eoBitstreamAllowed", WW[WW.noMoreDataAllowed = 4] = "noMoreDataAllowed"
-    }(VW || (VW = {}));
-    const pW = {
+    var PR;
+    ! function(RR) {
+      RR[RR.audAllowed = 0] = "audAllowed", RR[RR.beforeFirstVcl = 1] = "beforeFirstVcl", RR[RR.afterFirstVcl = 2] = "afterFirstVcl", RR[RR.eoBitstreamAllowed = 3] = "eoBitstreamAllowed", RR[RR.noMoreDataAllowed = 4] = "noMoreDataAllowed"
+    }(PR || (PR = {}));
+    const IR = {
         1: {
           colourPrimaries: 5,
           transferCharacteristics: 6,
@@ -1167,648 +1167,648 @@ export const modules = {
           matrixCoefficients: 0
         }
       },
-      fW = WW => {
-        const iW = new tW.c(WW);
-        if (2 !== iW.readBits(2)) return null;
-        const OW = iW.readBits(1),
-          NW = (iW.readBits(1) << 1) + OW;
-        3 === NW && iW.skipBits(1);
-        if (1 === iW.readBits(1)) return null;
-        if (0 !== iW.readBits(1)) return null;
-        iW.skipBits(2);
-        if (4817730 !== iW.readBits(24)) return null;
-        let PW = 8;
-        if (NW >= 2) {
-          PW = iW.readBits(1) ? 12 : 10
+      mR = RR => {
+        const JR = new VR.b(RR);
+        if (2 !== JR.readBits(2)) return null;
+        const GR = JR.readBits(1),
+          uR = (JR.readBits(1) << 1) + GR;
+        3 === uR && JR.skipBits(1);
+        if (1 === JR.readBits(1)) return null;
+        if (0 !== JR.readBits(1)) return null;
+        JR.skipBits(2);
+        if (4817730 !== JR.readBits(24)) return null;
+        let ZR = 8;
+        if (uR >= 2) {
+          ZR = JR.readBits(1) ? 12 : 10
         }
-        const LW = iW.readBits(3);
-        let cW = 0,
-          wW = 0;
-        if (7 !== LW) {
-          if (wW = iW.readBits(1), 1 === NW || 3 === NW) {
-            const WW = iW.readBits(1),
-              OW = iW.readBits(1);
-            cW = WW || OW ? WW && !OW ? 2 : 1 : 3, iW.skipBits(1)
-          } else cW = 1
-        } else cW = 3, wW = 1;
-        const ZW = (iW.readBits(16) + 1) * (iW.readBits(16) + 1);
-        let xW = (0, EW.mc)(mW.A).level;
-        for (const EW of mW.A)
-          if (ZW <= EW.maxPictureSize) {
-            xW = EW.level;
+        const qR = JR.readBits(3);
+        let iR = 0,
+          fR = 0;
+        if (7 !== qR) {
+          if (fR = JR.readBits(1), 1 === uR || 3 === uR) {
+            const RR = JR.readBits(1),
+              GR = JR.readBits(1);
+            iR = RR || GR ? RR && !GR ? 2 : 1 : 3, JR.skipBits(1)
+          } else iR = 1
+        } else iR = 3, fR = 1;
+        const KR = (JR.readBits(16) + 1) * (JR.readBits(16) + 1);
+        let wR = (0, tR.$b)(yR.w).level;
+        for (const tR of yR.w)
+          if (KR <= tR.maxPictureSize) {
+            wR = tR.level;
             break
-          } const lW = pW[LW];
+          } const rR = IR[qR];
         return {
-          profile: NW,
-          level: xW,
-          bitDepth: PW,
-          chromaSubsampling: cW,
-          videoFullRangeFlag: wW,
-          colourPrimaries: lW?.colourPrimaries ?? 2,
-          transferCharacteristics: lW?.transferCharacteristics ?? 2,
-          matrixCoefficients: lW?.matrixCoefficients ?? 2
+          profile: uR,
+          level: wR,
+          bitDepth: ZR,
+          chromaSubsampling: iR,
+          videoFullRangeFlag: fR,
+          colourPrimaries: rR?.colourPrimaries ?? 2,
+          transferCharacteristics: rR?.transferCharacteristics ?? 2,
+          matrixCoefficients: rR?.matrixCoefficients ?? 2
         }
       },
-      CW = function*(WW) {
-        const iW = new tW.c(WW),
-          OW = () => {
-            let WW = 0;
-            for (let OW = 0; OW < 8; OW++) {
-              const mW = iW.readAlignedByte();
-              if (WW += (127 & mW) * 2 ** (7 * OW), !(128 & mW)) break;
-              if (7 === OW && 128 & mW) return null
+      zR = function*(RR) {
+        const JR = new VR.b(RR),
+          GR = () => {
+            let RR = 0;
+            for (let GR = 0; GR < 8; GR++) {
+              const yR = JR.readAlignedByte();
+              if (RR += (127 & yR) * 2 ** (7 * GR), !(128 & yR)) break;
+              if (7 === GR && 128 & yR) return null
             }
-            return WW > 2 ** 32 - 1 ? null : WW
+            return RR > 2 ** 32 - 1 ? null : RR
           };
-        for (; iW.getBitsLeft() >= 8;) {
-          iW.skipBits(1);
-          const mW = iW.readBits(4),
-            NW = iW.readBits(1),
-            PW = iW.readBits(1);
-          let LW;
-          if (iW.skipBits(1), NW && iW.skipBits(8), PW) {
-            const WW = OW();
-            if (null === WW) return;
-            LW = WW
-          } else LW = Math.floor(iW.getBitsLeft() / 8);
-          (0, EW.K)(iW.pos % 8 === 0), yield {
-            type: mW,
-            data: WW.subarray(iW.pos / 8, iW.pos / 8 + LW)
-          }, iW.skipBits(8 * LW)
+        for (; JR.getBitsLeft() >= 8;) {
+          JR.skipBits(1);
+          const yR = JR.readBits(4),
+            uR = JR.readBits(1),
+            ZR = JR.readBits(1);
+          let qR;
+          if (JR.skipBits(1), uR && JR.skipBits(8), ZR) {
+            const RR = GR();
+            if (null === RR) return;
+            qR = RR
+          } else qR = Math.floor(JR.getBitsLeft() / 8);
+          (0, tR.I)(JR.pos % 8 === 0), yield {
+            type: yR,
+            data: RR.subarray(JR.pos / 8, JR.pos / 8 + qR)
+          }, JR.skipBits(8 * qR)
         }
       },
-      XW = WW => {
+      SR = RR => {
         for (const {
-            type: iW,
-            data: OW
+            type: JR,
+            data: GR
           }
-          of CW(WW)) {
-          if (1 !== iW) continue;
-          const WW = new tW.c(OW),
-            mW = WW.readBits(3),
-            EW = (WW.readBits(1), WW.readBits(1));
-          let NW = 0,
-            PW = 0,
-            LW = 0;
-          if (EW) NW = WW.readBits(5);
+          of zR(RR)) {
+          if (1 !== JR) continue;
+          const RR = new VR.b(GR),
+            yR = RR.readBits(3),
+            tR = (RR.readBits(1), RR.readBits(1));
+          let uR = 0,
+            ZR = 0,
+            qR = 0;
+          if (tR) uR = RR.readBits(5);
           else {
-            let iW = 0;
-            if (WW.readBits(1)) {
-              WW.skipBits(32), WW.skipBits(32);
-              if (WW.readBits(1)) {
-                let iW = 0;
-                for (; iW < 32 && !WW.readBits(1);) iW++;
-                iW < 32 && WW.skipBits(iW)
+            let JR = 0;
+            if (RR.readBits(1)) {
+              RR.skipBits(32), RR.skipBits(32);
+              if (RR.readBits(1)) {
+                let JR = 0;
+                for (; JR < 32 && !RR.readBits(1);) JR++;
+                JR < 32 && RR.skipBits(JR)
               }
-              iW = WW.readBits(1), iW && (LW = WW.readBits(5), WW.skipBits(32), WW.skipBits(5), WW.skipBits(5))
+              JR = RR.readBits(1), JR && (qR = RR.readBits(5), RR.skipBits(32), RR.skipBits(5), RR.skipBits(5))
             }
-            const OW = WW.readBits(1),
-              mW = WW.readBits(5);
-            for (let EW = 0; EW <= mW; EW++) {
-              WW.skipBits(12);
-              const mW = WW.readBits(5);
-              if (0 === EW && (NW = mW), mW > 7) {
-                const iW = WW.readBits(1);
-                0 === EW && (PW = iW)
+            const GR = RR.readBits(1),
+              yR = RR.readBits(5);
+            for (let tR = 0; tR <= yR; tR++) {
+              RR.skipBits(12);
+              const yR = RR.readBits(5);
+              if (0 === tR && (uR = yR), yR > 7) {
+                const JR = RR.readBits(1);
+                0 === tR && (ZR = JR)
               }
-              if (iW) {
-                if (WW.readBits(1)) {
-                  const iW = LW + 1;
-                  WW.skipBits(iW), WW.skipBits(iW), WW.skipBits(1)
+              if (JR) {
+                if (RR.readBits(1)) {
+                  const JR = qR + 1;
+                  RR.skipBits(JR), RR.skipBits(JR), RR.skipBits(1)
                 }
               }
-              if (OW) {
-                WW.readBits(1) && WW.skipBits(4)
+              if (GR) {
+                RR.readBits(1) && RR.skipBits(4)
               }
             }
           }
-          const cW = WW.readBits(4),
-            wW = WW.readBits(4),
-            ZW = cW + 1;
-          WW.skipBits(ZW);
-          const xW = wW + 1;
-          WW.skipBits(xW);
-          let lW = 0;
-          if (lW = EW ? 0 : WW.readBits(1), lW && (WW.skipBits(4), WW.skipBits(3)), WW.skipBits(1), WW.skipBits(1), WW.skipBits(1), !EW) {
-            WW.skipBits(1), WW.skipBits(1), WW.skipBits(1), WW.skipBits(1);
-            const iW = WW.readBits(1);
-            iW && (WW.skipBits(1), WW.skipBits(1));
-            let OW = 0;
-            if (OW = WW.readBits(1) ? 2 : WW.readBits(1), OW > 0) {
-              WW.readBits(1) || WW.skipBits(1)
+          const iR = RR.readBits(4),
+            fR = RR.readBits(4),
+            KR = iR + 1;
+          RR.skipBits(KR);
+          const wR = fR + 1;
+          RR.skipBits(wR);
+          let rR = 0;
+          if (rR = tR ? 0 : RR.readBits(1), rR && (RR.skipBits(4), RR.skipBits(3)), RR.skipBits(1), RR.skipBits(1), RR.skipBits(1), !tR) {
+            RR.skipBits(1), RR.skipBits(1), RR.skipBits(1), RR.skipBits(1);
+            const JR = RR.readBits(1);
+            JR && (RR.skipBits(1), RR.skipBits(1));
+            let GR = 0;
+            if (GR = RR.readBits(1) ? 2 : RR.readBits(1), GR > 0) {
+              RR.readBits(1) || RR.skipBits(1)
             }
-            iW && WW.skipBits(3)
+            JR && RR.skipBits(3)
           }
-          WW.skipBits(1), WW.skipBits(1), WW.skipBits(1);
-          const AW = WW.readBits(1);
-          let bW = 8;
-          if (2 === mW && AW) {
-            bW = WW.readBits(1) ? 12 : 10
-          } else mW <= 2 && (bW = AW ? 10 : 8);
-          let jW = 0;
-          1 !== mW && (jW = WW.readBits(1));
-          let UW = 2,
-            kW = 2,
-            sW = 2;
-          WW.readBits(1) && (UW = WW.readBits(8), kW = WW.readBits(8), sW = WW.readBits(8));
-          let MW = 0,
-            KW = 1,
-            SW = 1,
-            YW = 0;
-          return jW ? MW = WW.readBits(1) : 1 === UW && 13 === kW && 0 === sW ? (MW = 1, KW = 0, SW = 0) : (MW = WW.readBits(1), 0 === mW ? (KW = 1, SW = 1) : 1 === mW ? (KW = 0, SW = 0) : 12 === bW ? (KW = WW.readBits(1), SW = KW ? WW.readBits(1) : 0) : (KW = 1, SW = 0), KW && SW && (YW = WW.readBits(2))), {
-            profile: mW,
-            level: NW,
-            tier: PW,
-            bitDepth: bW,
-            monochrome: jW,
-            chromaSubsamplingX: KW,
-            chromaSubsamplingY: SW,
-            chromaSamplePosition: YW,
-            videoFullRangeFlag: MW,
-            colourPrimaries: UW,
-            transferCharacteristics: kW,
-            matrixCoefficients: sW
+          RR.skipBits(1), RR.skipBits(1), RR.skipBits(1);
+          const eR = RR.readBits(1);
+          let aR = 8;
+          if (2 === yR && eR) {
+            aR = RR.readBits(1) ? 12 : 10
+          } else yR <= 2 && (aR = eR ? 10 : 8);
+          let LR = 0;
+          1 !== yR && (LR = RR.readBits(1));
+          let nR = 2,
+            UR = 2,
+            WR = 2;
+          RR.readBits(1) && (nR = RR.readBits(8), UR = RR.readBits(8), WR = RR.readBits(8));
+          let AR = 0,
+            CR = 1,
+            XR = 1,
+            MR = 0;
+          return LR ? AR = RR.readBits(1) : 1 === nR && 13 === UR && 0 === WR ? (AR = 1, CR = 0, XR = 0) : (AR = RR.readBits(1), 0 === yR ? (CR = 1, XR = 1) : 1 === yR ? (CR = 0, XR = 0) : 12 === aR ? (CR = RR.readBits(1), XR = CR ? RR.readBits(1) : 0) : (CR = 1, XR = 0), CR && XR && (MR = RR.readBits(2))), {
+            profile: yR,
+            level: uR,
+            tier: ZR,
+            bitDepth: aR,
+            monochrome: LR,
+            chromaSubsamplingX: CR,
+            chromaSubsamplingY: XR,
+            chromaSamplePosition: MR,
+            videoFullRangeFlag: AR,
+            colourPrimaries: nR,
+            transferCharacteristics: UR,
+            matrixCoefficients: WR
           }
         }
         return null
       },
-      BW = WW => 2 !== WW.colourPrimaries || 2 !== WW.transferCharacteristics || 2 !== WW.matrixCoefficients,
-      qW = WW => {
-        const iW = (0, EW.od)(WW),
-          OW = iW.getUint8(9),
-          mW = iW.getUint16(10, !0),
-          NW = iW.getUint32(12, !0),
-          PW = iW.getInt16(16, !0),
-          LW = iW.getUint8(18);
-        let cW = null;
-        return LW && (cW = WW.subarray(19, 21 + OW)), {
-          outputChannelCount: OW,
-          preSkip: mW,
-          inputSampleRate: NW,
-          outputGain: PW,
-          channelMappingFamily: LW,
-          channelMappingTable: cW
+      jR = RR => 2 !== RR.colourPrimaries || 2 !== RR.transferCharacteristics || 2 !== RR.matrixCoefficients,
+      dR = RR => {
+        const JR = (0, tR.ad)(RR),
+          GR = JR.getUint8(9),
+          yR = JR.getUint16(10, !0),
+          uR = JR.getUint32(12, !0),
+          ZR = JR.getInt16(16, !0),
+          qR = JR.getUint8(18);
+        let iR = null;
+        return qR && (iR = RR.subarray(19, 21 + GR)), {
+          outputChannelCount: GR,
+          preSkip: yR,
+          inputSampleRate: uR,
+          outputGain: ZR,
+          channelMappingFamily: qR,
+          channelMappingTable: iR
         }
       },
-      RW = [480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960],
-      GW = WW => {
-        const iW = WW[0] >> 3,
-          OW = 3 & WW[0];
-        let mW;
-        return mW = 0 === OW ? 1 : 1 === OW || 2 === OW ? 2 : 63 & WW[1], {
-          durationInSamples: RW[iW] * mW
+      ER = [480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960],
+      YR = RR => {
+        const JR = RR[0] >> 3,
+          GR = 3 & RR[0];
+        let yR;
+        return yR = 0 === GR ? 1 : 1 === GR || 2 === GR ? 2 : 63 & RR[1], {
+          durationInSamples: ER[JR] * yR
         }
       },
-      IW = WW => {
-        if (WW.length < 7) throw new Error("Setup header is too short.");
-        if (5 !== WW[0]) throw new Error("Wrong packet type in Setup header.");
-        if ("vorbis" !== String.fromCharCode(...WW.slice(1, 7))) throw new Error("Invalid packet signature in Setup header.");
-        const iW = WW.length,
-          OW = new Uint8Array(iW);
-        for (let tW = 0; tW < iW; tW++) OW[tW] = WW[iW - 1 - tW];
-        const mW = new tW.c(OW);
-        let EW = 0;
-        for (; mW.getBitsLeft() > 97;)
-          if (1 === mW.readBits(1)) {
-            EW = mW.pos;
+      kR = RR => {
+        if (RR.length < 7) throw new Error("Setup header is too short.");
+        if (5 !== RR[0]) throw new Error("Wrong packet type in Setup header.");
+        if ("vorbis" !== String.fromCharCode(...RR.slice(1, 7))) throw new Error("Invalid packet signature in Setup header.");
+        const JR = RR.length,
+          GR = new Uint8Array(JR);
+        for (let VR = 0; VR < JR; VR++) GR[VR] = RR[JR - 1 - VR];
+        const yR = new VR.b(GR);
+        let tR = 0;
+        for (; yR.getBitsLeft() > 97;)
+          if (1 === yR.readBits(1)) {
+            tR = yR.pos;
             break
-          } if (0 === EW) throw new Error("Invalid Setup header: framing bit not found.");
-        let NW = 0,
-          PW = !1,
-          LW = 0;
-        for (; mW.getBitsLeft() >= 97;) {
-          const WW = mW.pos,
-            iW = mW.readBits(8),
-            OW = mW.readBits(16),
-            EW = mW.readBits(16);
-          if (iW > 63 || 0 !== OW || 0 !== EW) {
-            mW.pos = WW;
+          } if (0 === tR) throw new Error("Invalid Setup header: framing bit not found.");
+        let uR = 0,
+          ZR = !1,
+          qR = 0;
+        for (; yR.getBitsLeft() >= 97;) {
+          const RR = yR.pos,
+            JR = yR.readBits(8),
+            GR = yR.readBits(16),
+            tR = yR.readBits(16);
+          if (JR > 63 || 0 !== GR || 0 !== tR) {
+            yR.pos = RR;
             break
           }
-          if (mW.skipBits(1), NW++, NW > 64) break;
-          mW.clone().readBits(6) + 1 === NW && (PW = !0, LW = NW)
+          if (yR.skipBits(1), uR++, uR > 64) break;
+          yR.clone().readBits(6) + 1 === uR && (ZR = !0, qR = uR)
         }
-        if (!PW) throw new Error("Invalid Setup header: mode header not found.");
-        if (LW > 63) throw new Error(`Unsupported mode count: ${LW}.`);
-        const cW = LW;
-        mW.pos = 0, mW.skipBits(EW);
-        const wW = Array(cW).fill(0);
-        for (let tW = cW - 1; tW >= 0; tW--) mW.skipBits(40), wW[tW] = mW.readBits(1);
+        if (!ZR) throw new Error("Invalid Setup header: mode header not found.");
+        if (qR > 63) throw new Error(`Unsupported mode count: ${qR}.`);
+        const iR = qR;
+        yR.pos = 0, yR.skipBits(tR);
+        const fR = Array(iR).fill(0);
+        for (let VR = iR - 1; VR >= 0; VR--) yR.skipBits(40), fR[VR] = yR.readBits(1);
         return {
-          modeBlockflags: wW
+          modeBlockflags: fR
         }
       },
-      aW = (WW, iW, OW) => {
-        switch (WW) {
+      QR = (RR, JR, GR) => {
+        switch (RR) {
           case "avc":
-            for (const WW of ((WW, iW) => {
-                if (iW.description) {
-                  const OW = 3 & (0, EW.pd)(iW.description)[4];
-                  return lW(WW, OW + 1)
+            for (const RR of ((RR, JR) => {
+                if (JR.description) {
+                  const GR = 3 & (0, tR.cd)(JR.description)[4];
+                  return rR(RR, GR + 1)
                 }
-                return xW(WW)
-              })(OW, iW)) {
-              const iW = OW[WW.offset],
-                mW = AW(iW);
-              if (mW >= cW.NON_IDR_SLICE && mW <= cW.SLICE_DPC) return "delta";
-              if (mW === cW.IDR) return "key";
-              if (mW === cW.SEI && !(0, EW.Fb)()) {
-                const iW = OW.subarray(WW.offset, WW.offset + WW.length),
-                  mW = bW(iW);
-                let NW = 1;
+                return wR(RR)
+              })(GR, JR)) {
+              const JR = GR[RR.offset],
+                yR = eR(JR);
+              if (yR >= iR.NON_IDR_SLICE && yR <= iR.SLICE_DPC) return "delta";
+              if (yR === iR.IDR) return "key";
+              if (yR === iR.SEI && !(0, tR.ub)()) {
+                const JR = GR.subarray(RR.offset, RR.offset + RR.length),
+                  yR = aR(JR);
+                let uR = 1;
                 do {
-                  let WW = 0;
+                  let RR = 0;
                   for (;;) {
-                    const iW = mW[NW++];
-                    if (void 0 === iW) break;
-                    if (WW += iW, iW < 255) break
+                    const JR = yR[uR++];
+                    if (void 0 === JR) break;
+                    if (RR += JR, JR < 255) break
                   }
-                  let iW = 0;
+                  let JR = 0;
                   for (;;) {
-                    const WW = mW[NW++];
-                    if (void 0 === WW) break;
-                    if (iW += WW, WW < 255) break
+                    const RR = yR[uR++];
+                    if (void 0 === RR) break;
+                    if (JR += RR, RR < 255) break
                   }
-                  if (WW === 6) {
-                    const WW = new tW.c(mW);
-                    WW.pos = 8 * NW;
-                    const iW = (0, EW.Ic)(WW),
-                      OW = WW.readBits(1);
-                    if (0 === iW && 1 === OW) return "key"
+                  if (RR === 6) {
+                    const RR = new VR.b(yR);
+                    RR.pos = 8 * uR;
+                    const JR = (0, tR.uc)(RR),
+                      GR = RR.readBits(1);
+                    if (0 === JR && 1 === GR) return "key"
                   }
-                  NW += iW
-                } while (NW < mW.length - 1)
+                  uR += JR
+                } while (uR < yR.length - 1)
               }
             }
             return "delta";
           case "hevc":
-            for (const WW of TW(OW, iW)) {
-              const iW = JW(OW[WW.offset]);
-              if (iW < wW.BLA_W_LP) return "delta";
-              if (iW <= wW.RSV_IRAP_VCL23) return "key"
+            for (const RR of lR(GR, JR)) {
+              const JR = pR(GR[RR.offset]);
+              if (JR < fR.BLA_W_LP) return "delta";
+              if (JR <= fR.RSV_IRAP_VCL23) return "key"
             }
             return "delta";
           case "vp8":
-            return 0 === (1 & OW[0]) ? "key" : "delta";
+            return 0 === (1 & GR[0]) ? "key" : "delta";
           case "vp9": {
-            const WW = new tW.c(OW);
-            if (2 !== WW.readBits(2)) return null;
-            const iW = WW.readBits(1);
-            3 === (WW.readBits(1) << 1) + iW && WW.skipBits(1);
-            if (WW.readBits(1)) return null;
-            return 0 === WW.readBits(1) ? "key" : "delta"
+            const RR = new VR.b(GR);
+            if (2 !== RR.readBits(2)) return null;
+            const JR = RR.readBits(1);
+            3 === (RR.readBits(1) << 1) + JR && RR.skipBits(1);
+            if (RR.readBits(1)) return null;
+            return 0 === RR.readBits(1) ? "key" : "delta"
           }
           case "av1": {
-            let WW = !1;
+            let RR = !1;
             for (const {
-                type: iW,
-                data: mW
+                type: JR,
+                data: yR
               }
-              of CW(OW))
-              if (1 === iW) {
-                const iW = new tW.c(mW);
-                iW.skipBits(4), WW = !!iW.readBits(1)
-              } else if (3 === iW || 6 === iW || 7 === iW) {
-              if (WW) return "key";
-              const iW = new tW.c(mW);
-              if (iW.readBits(1)) return null;
-              return 0 === iW.readBits(2) ? "key" : "delta"
+              of zR(GR))
+              if (1 === JR) {
+                const JR = new VR.b(yR);
+                JR.skipBits(4), RR = !!JR.readBits(1)
+              } else if (3 === JR || 6 === JR || 7 === JR) {
+              if (RR) return "key";
+              const JR = new VR.b(yR);
+              if (JR.readBits(1)) return null;
+              return 0 === JR.readBits(2) ? "key" : "delta"
             }
             return null
           }
           case "prores":
             return "key";
           default:
-            (0, EW.J)(WW), (0, EW.K)(!1)
+            (0, tR.H)(RR), (0, tR.I)(!1)
         }
       };
-    var rW;
-    ! function(WW) {
-      WW[WW.STREAMINFO = 0] = "STREAMINFO", WW[WW.VORBIS_COMMENT = 4] = "VORBIS_COMMENT", WW[WW.PICTURE = 6] = "PICTURE"
-    }(rW || (rW = {}));
-    const zW = (WW, iW, OW) => {
-        const mW = [WW],
-          NW = EW.kd.encode(ZW.b);
-        let PW = new Uint8Array(4 + NW.length),
-          LW = new DataView(PW.buffer);
-        LW.setUint32(0, NW.length, !0), PW.set(NW, 4), mW.push(PW);
-        const cW = [],
-          wW = (WW, iW) => {
-            const OW = `${WW}=${iW}`,
-              NW = EW.kd.encode(OW);
-            PW = new Uint8Array(4 + NW.length), LW = new DataView(PW.buffer), LW.setUint32(0, NW.length, !0), PW.set(NW, 4), mW.push(PW), cW.push(WW)
+    var FR;
+    ! function(RR) {
+      RR[RR.STREAMINFO = 0] = "STREAMINFO", RR[RR.VORBIS_COMMENT = 4] = "VORBIS_COMMENT", RR[RR.PICTURE = 6] = "PICTURE"
+    }(FR || (FR = {}));
+    const TR = (RR, JR, GR) => {
+        const yR = [RR],
+          uR = tR.Vc.encode(KR.e);
+        let ZR = new Uint8Array(4 + uR.length),
+          qR = new DataView(ZR.buffer);
+        qR.setUint32(0, uR.length, !0), ZR.set(uR, 4), yR.push(ZR);
+        const iR = [],
+          fR = (RR, JR) => {
+            const GR = `${RR}=${JR}`,
+              uR = tR.Vc.encode(GR);
+            ZR = new Uint8Array(4 + uR.length), qR = new DataView(ZR.buffer), qR.setUint32(0, uR.length, !0), ZR.set(uR, 4), yR.push(ZR), iR.push(RR)
           };
         for (const {
-            key: ZW,
-            value: bW
+            key: KR,
+            value: aR
           }
-          of(0, EW.kc)(iW)) switch (ZW) {
+          of(0, tR._b)(JR)) switch (KR) {
           case "title":
-            wW("TITLE", bW);
+            fR("TITLE", aR);
             break;
           case "description":
-            wW("DESCRIPTION", bW);
+            fR("DESCRIPTION", aR);
             break;
           case "artist":
-            wW("ARTIST", bW);
+            fR("ARTIST", aR);
             break;
           case "album":
-            wW("ALBUM", bW);
+            fR("ALBUM", aR);
             break;
           case "albumArtist":
-            wW("ALBUMARTIST", bW);
+            fR("ALBUMARTIST", aR);
             break;
           case "genre":
-            wW("GENRE", bW);
+            fR("GENRE", aR);
             break;
           case "date":
-            wW("DATE", bW.toISOString().slice(0, 10));
+            fR("DATE", aR.toISOString().slice(0, 10));
             break;
           case "comment":
-            wW("COMMENT", bW);
+            fR("COMMENT", aR);
             break;
           case "lyrics":
-            wW("LYRICS", bW);
+            fR("LYRICS", aR);
             break;
           case "trackNumber":
-            wW("TRACKNUMBER", bW.toString());
+            fR("TRACKNUMBER", aR.toString());
             break;
           case "tracksTotal":
-            wW("TRACKTOTAL", bW.toString());
+            fR("TRACKTOTAL", aR.toString());
             break;
           case "discNumber":
-            wW("DISCNUMBER", bW.toString());
+            fR("DISCNUMBER", aR.toString());
             break;
           case "discsTotal":
-            wW("DISCTOTAL", bW.toString());
+            fR("DISCTOTAL", aR.toString());
             break;
           case "beatsPerMinute":
-            wW("BPM", bW.toString());
+            fR("BPM", aR.toString());
             break;
           case "images":
-            if (!OW) break;
-            for (const WW of bW) {
-              const iW = "coverFront" === WW.kind ? 3 : "coverBack" === WW.kind ? 4 : 0,
-                OW = new Uint8Array(WW.mimeType.length);
-              for (let EW = 0; EW < WW.mimeType.length; EW++) OW[EW] = WW.mimeType.charCodeAt(EW);
-              const mW = EW.kd.encode(WW.description ?? ""),
-                NW = new Uint8Array(8 + OW.length + 4 + mW.length + 16 + 4 + WW.data.length),
-                PW = (0, EW.od)(NW);
-              PW.setUint32(0, iW, !1), PW.setUint32(4, OW.length, !1), NW.set(OW, 8), PW.setUint32(8 + OW.length, mW.length, !1), NW.set(mW, 12 + OW.length), PW.setUint32(28 + OW.length + mW.length, WW.data.length, !1), NW.set(WW.data, 32 + OW.length + mW.length);
-              wW("METADATA_BLOCK_PICTURE", (0, EW.S)(NW))
+            if (!GR) break;
+            for (const RR of aR) {
+              const JR = "coverFront" === RR.kind ? 3 : "coverBack" === RR.kind ? 4 : 0,
+                GR = new Uint8Array(RR.mimeType.length);
+              for (let tR = 0; tR < RR.mimeType.length; tR++) GR[tR] = RR.mimeType.charCodeAt(tR);
+              const yR = tR.Vc.encode(RR.description ?? ""),
+                uR = new Uint8Array(8 + GR.length + 4 + yR.length + 16 + 4 + RR.data.length),
+                ZR = (0, tR.ad)(uR);
+              ZR.setUint32(0, JR, !1), ZR.setUint32(4, GR.length, !1), uR.set(GR, 8), ZR.setUint32(8 + GR.length, yR.length, !1), uR.set(yR, 12 + GR.length), ZR.setUint32(28 + GR.length + yR.length, RR.data.length, !1), uR.set(RR.data, 32 + GR.length + yR.length);
+              fR("METADATA_BLOCK_PICTURE", (0, tR.O)(uR))
             }
             break;
           case "raw":
             break;
           default:
-            (0, EW.J)(ZW)
+            (0, tR.H)(KR)
         }
-        if (iW.raw)
-          for (const EW in iW.raw) {
-            const WW = iW.raw[EW] ?? iW.raw[EW.toLowerCase()];
-            if ("vendor" !== EW && null != WW && !cW.includes(EW))
-              if ("string" === typeof WW) wW(EW, WW);
-              else if (Array.isArray(WW)) {
-              if (WW.every((WW => "string" === typeof WW)))
-                for (const iW of WW) wW(EW, iW)
+        if (JR.raw)
+          for (const tR in JR.raw) {
+            const RR = JR.raw[tR] ?? JR.raw[tR.toLowerCase()];
+            if ("vendor" !== tR && null != RR && !iR.includes(tR))
+              if ("string" === typeof RR) fR(tR, RR);
+              else if (Array.isArray(RR)) {
+              if (RR.every((RR => "string" === typeof RR)))
+                for (const JR of RR) fR(tR, JR)
             }
           }
-        const tW = new Uint8Array(4);
-        (0, EW.od)(tW).setUint32(0, cW.length, !0), mW.splice(2, 0, tW);
-        const xW = mW.reduce(((WW, iW) => WW + iW.length), 0),
-          lW = new Uint8Array(xW);
-        let AW = 0;
-        for (const EW of mW) lW.set(EW, AW), AW += EW.length;
-        return lW
+        const VR = new Uint8Array(4);
+        (0, tR.ad)(VR).setUint32(0, iR.length, !0), yR.splice(2, 0, VR);
+        const wR = yR.reduce(((RR, JR) => RR + JR.length), 0),
+          rR = new Uint8Array(wR);
+        let eR = 0;
+        for (const tR of yR) rR.set(tR, eR), eR += tR.length;
+        return rR
       },
-      FW = WW => {
-        if (WW.length < 7) return null;
-        if (11 !== WW[0] || 119 !== WW[1]) return null;
-        const iW = new tW.c(WW);
-        iW.skipBits(16), iW.skipBits(16);
-        const OW = iW.readBits(2);
-        if (3 === OW) return null;
-        const mW = iW.readBits(6),
-          EW = iW.readBits(5);
-        if (EW > 8) return null;
-        const NW = iW.readBits(3),
-          PW = iW.readBits(3);
-        0 !== (1 & PW) && 1 !== PW && iW.skipBits(2), 0 !== (4 & PW) && iW.skipBits(2), 2 === PW && iW.skipBits(2);
+      sR = RR => {
+        if (RR.length < 7) return null;
+        if (11 !== RR[0] || 119 !== RR[1]) return null;
+        const JR = new VR.b(RR);
+        JR.skipBits(16), JR.skipBits(16);
+        const GR = JR.readBits(2);
+        if (3 === GR) return null;
+        const yR = JR.readBits(6),
+          tR = JR.readBits(5);
+        if (tR > 8) return null;
+        const uR = JR.readBits(3),
+          ZR = JR.readBits(3);
+        0 !== (1 & ZR) && 1 !== ZR && JR.skipBits(2), 0 !== (4 & ZR) && JR.skipBits(2), 2 === ZR && JR.skipBits(2);
         return {
-          fscod: OW,
-          bsid: EW,
-          bsmod: NW,
-          acmod: PW,
-          lfeon: iW.readBits(1),
-          bitRateCode: Math.floor(mW / 2)
+          fscod: GR,
+          bsid: tR,
+          bsmod: uR,
+          acmod: ZR,
+          lfeon: JR.readBits(1),
+          bitRateCode: Math.floor(yR / 2)
         }
       },
-      QW = new Uint8Array([5, 4, 65, 67, 45, 51]),
-      Wi = new Uint8Array([5, 4, 69, 65, 67, 51]),
-      ii = [1, 2, 3, 6],
-      Oi = WW => {
-        if (WW.length < 6) return null;
-        if (11 !== WW[0] || 119 !== WW[1]) return null;
-        const iW = new tW.c(WW);
-        iW.skipBits(16);
-        const OW = iW.readBits(2);
-        if (iW.skipBits(3), 0 !== OW && 2 !== OW) return null;
-        const mW = iW.readBits(11),
-          EW = iW.readBits(2);
-        let NW, cW = 0;
-        3 === EW ? (cW = iW.readBits(2), NW = 3) : NW = iW.readBits(2);
-        const wW = iW.readBits(3),
-          ZW = iW.readBits(1),
-          xW = iW.readBits(5);
-        if (xW < 11 || xW > 16) return null;
-        const lW = ii[NW];
-        let AW;
-        AW = EW < 3 ? PW[EW] / 1e3 : LW[cW] / 1e3;
+      hR = new Uint8Array([5, 4, 65, 67, 45, 51]),
+      RJ = new Uint8Array([5, 4, 69, 65, 67, 51]),
+      JJ = [1, 2, 3, 6],
+      GJ = RR => {
+        if (RR.length < 6) return null;
+        if (11 !== RR[0] || 119 !== RR[1]) return null;
+        const JR = new VR.b(RR);
+        JR.skipBits(16);
+        const GR = JR.readBits(2);
+        if (JR.skipBits(3), 0 !== GR && 2 !== GR) return null;
+        const yR = JR.readBits(11),
+          tR = JR.readBits(2);
+        let uR, iR = 0;
+        3 === tR ? (iR = JR.readBits(2), uR = 3) : uR = JR.readBits(2);
+        const fR = JR.readBits(3),
+          KR = JR.readBits(1),
+          wR = JR.readBits(5);
+        if (wR < 11 || wR > 16) return null;
+        const rR = JJ[uR];
+        let eR;
+        eR = tR < 3 ? ZR[tR] / 1e3 : qR[iR] / 1e3;
         return {
-          dataRate: Math.round((mW + 1) * AW / (16 * lW)),
+          dataRate: Math.round((yR + 1) * eR / (16 * rR)),
           substreams: [{
-            fscod: EW,
-            fscod2: cW,
-            bsid: xW,
+            fscod: tR,
+            fscod2: iR,
+            bsid: wR,
             bsmod: 0,
-            acmod: wW,
-            lfeon: ZW,
+            acmod: fR,
+            lfeon: KR,
             numDepSub: 0,
             chanLoc: 0
           }]
         }
       },
-      mi = [0, 8e3, 16e3, 32e3, 0, 0, 11025, 22050, 44100, 0, 0, 12e3, 24e3, 48e3, 96e3, 192e3],
-      Ei = [32e3, 56e3, 64e3, 96e3, 112e3, 128e3, 192e3, 224e3, 256e3, 32e4, 384e3, 448e3, 512e3, 576e3, 64e4, 768e3, 96e4, 1024e3, 1152e3, 128e4, 1344e3, 1408e3, 1411200, 1472e3, 1536e3, 192e4, 2048e3, 3072e3, 384e4, 0, 0, 0],
-      Ni = [16, 16, 20, 20, 0, 24, 24, 0],
-      Pi = [1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8],
-      Li = [1, 2, 2, 2, 2, 3, 18, 19, 6, 7, 518, 323, 83, 519, 582, 535],
-      ci = [32e3, 44100, 48e3, 0],
-      wi = [8e3, 16e3, 32e3, 64e3, 128e3, 22050, 44100, 88200, 176400, 352800, 12e3, 24e3, 48e3, 96e3, 192e3, 384e3],
-      ti = [512, 1024, 2048, 4096],
-      Zi = WW => {
-        const iW = xi(WW),
-          OW = (0, EW.od)(WW);
-        let mW = iW ? 4 * Math.ceil(iW.frameSize / 4) : 0,
-          NW = null;
-        for (; mW + 4 <= WW.length && 1683496997 === OW.getUint32(mW);) {
-          const iW = li(WW.subarray(mW));
-          if (!iW) break;
-          NW ??= iW, mW += iW.frameSize
+      yJ = [0, 8e3, 16e3, 32e3, 0, 0, 11025, 22050, 44100, 0, 0, 12e3, 24e3, 48e3, 96e3, 192e3],
+      tJ = [32e3, 56e3, 64e3, 96e3, 112e3, 128e3, 192e3, 224e3, 256e3, 32e4, 384e3, 448e3, 512e3, 576e3, 64e4, 768e3, 96e4, 1024e3, 1152e3, 128e4, 1344e3, 1408e3, 1411200, 1472e3, 1536e3, 192e4, 2048e3, 3072e3, 384e4, 0, 0, 0],
+      uJ = [16, 16, 20, 20, 0, 24, 24, 0],
+      ZJ = [1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8],
+      qJ = [1, 2, 2, 2, 2, 3, 18, 19, 6, 7, 518, 323, 83, 519, 582, 535],
+      iJ = [32e3, 44100, 48e3, 0],
+      fJ = [8e3, 16e3, 32e3, 64e3, 128e3, 22050, 44100, 88200, 176400, 352800, 12e3, 24e3, 48e3, 96e3, 192e3, 384e3],
+      VJ = [512, 1024, 2048, 4096],
+      KJ = RR => {
+        const JR = wJ(RR),
+          GR = (0, tR.ad)(RR);
+        let yR = JR ? 4 * Math.ceil(JR.frameSize / 4) : 0,
+          uR = null;
+        for (; yR + 4 <= RR.length && 1683496997 === GR.getUint32(yR);) {
+          const JR = rJ(RR.subarray(yR));
+          if (!JR) break;
+          uR ??= JR, yR += JR.frameSize
         }
-        if (iW) return {
-          frameSize: NW ? mW : iW.frameSize,
-          sampleRate: iW.sampleRate,
-          numberOfChannels: iW.numberOfChannels,
-          sampleCount: iW.sampleCount,
-          channelLayout: iW.channelLayout,
-          pcmResolution: iW.pcmResolution,
-          bitRate: iW.bitRate,
-          core: iW,
-          hasExtensions: null !== NW
+        if (JR) return {
+          frameSize: uR ? yR : JR.frameSize,
+          sampleRate: JR.sampleRate,
+          numberOfChannels: JR.numberOfChannels,
+          sampleCount: JR.sampleCount,
+          channelLayout: JR.channelLayout,
+          pcmResolution: JR.pcmResolution,
+          bitRate: JR.bitRate,
+          core: JR,
+          hasExtensions: null !== uR
         };
-        if (!NW?.asset) return null;
+        if (!uR?.asset) return null;
         const {
-          asset: PW
-        } = NW;
+          asset: ZR
+        } = uR;
         return {
-          frameSize: mW,
-          sampleRate: PW.sampleRate,
-          numberOfChannels: PW.numberOfChannels,
-          sampleCount: PW.sampleCount,
-          channelLayout: PW.channelLayout,
-          pcmResolution: PW.pcmResolution,
+          frameSize: yR,
+          sampleRate: ZR.sampleRate,
+          numberOfChannels: ZR.numberOfChannels,
+          sampleCount: ZR.sampleCount,
+          channelLayout: ZR.channelLayout,
+          pcmResolution: ZR.pcmResolution,
           bitRate: 0,
           core: null,
           hasExtensions: !0
         }
       },
-      xi = WW => {
-        if (WW.length < 18) return null;
-        if (127 !== WW[0] || 254 !== WW[1] || 128 !== WW[2] || 1 !== WW[3]) return null;
-        const iW = new tW.c(WW);
-        if (iW.skipBits(32), iW.skipBits(1), 31 !== iW.readBits(5)) return null;
-        const OW = iW.readBits(1),
-          mW = iW.readBits(7) + 1;
-        if (mW % 8 !== 0) return null;
-        const EW = iW.readBits(14) + 1;
-        if (EW < 96) return null;
-        const NW = iW.readBits(6);
-        if (NW >= Pi.length) return null;
-        const PW = mi[iW.readBits(4)];
-        if (0 === PW) return null;
-        const LW = Ei[iW.readBits(5)];
-        if (0 !== iW.readBits(1)) return null;
-        iW.skipBits(4), iW.skipBits(5);
-        const cW = iW.readBits(2);
-        if (3 === cW) return null;
-        iW.skipBits(1), OW && iW.skipBits(16), iW.skipBits(7);
-        const wW = Ni[iW.readBits(3)];
-        if (0 === wW) return null;
-        const ZW = 0 !== cW;
+      wJ = RR => {
+        if (RR.length < 18) return null;
+        if (127 !== RR[0] || 254 !== RR[1] || 128 !== RR[2] || 1 !== RR[3]) return null;
+        const JR = new VR.b(RR);
+        if (JR.skipBits(32), JR.skipBits(1), 31 !== JR.readBits(5)) return null;
+        const GR = JR.readBits(1),
+          yR = JR.readBits(7) + 1;
+        if (yR % 8 !== 0) return null;
+        const tR = JR.readBits(14) + 1;
+        if (tR < 96) return null;
+        const uR = JR.readBits(6);
+        if (uR >= ZJ.length) return null;
+        const ZR = yJ[JR.readBits(4)];
+        if (0 === ZR) return null;
+        const qR = tJ[JR.readBits(5)];
+        if (0 !== JR.readBits(1)) return null;
+        JR.skipBits(4), JR.skipBits(5);
+        const iR = JR.readBits(2);
+        if (3 === iR) return null;
+        JR.skipBits(1), GR && JR.skipBits(16), JR.skipBits(7);
+        const fR = uJ[JR.readBits(3)];
+        if (0 === fR) return null;
+        const KR = 0 !== iR;
         return {
-          frameSize: EW,
-          sampleRate: PW,
-          numberOfChannels: Pi[NW] + (ZW ? 1 : 0),
-          sampleCount: 32 * mW,
-          channelLayout: Li[NW] | (ZW ? 8 : 0),
-          amode: NW,
-          lfePresent: ZW,
-          bitRate: LW,
-          pcmResolution: wW
+          frameSize: tR,
+          sampleRate: ZR,
+          numberOfChannels: ZJ[uR] + (KR ? 1 : 0),
+          sampleCount: 32 * yR,
+          channelLayout: qJ[uR] | (KR ? 8 : 0),
+          amode: uR,
+          lfePresent: KR,
+          bitRate: qR,
+          pcmResolution: fR
         }
       },
-      li = WW => {
-        if (WW.length < 10) return null;
-        if (100 !== WW[0] || 88 !== WW[1] || 32 !== WW[2] || 37 !== WW[3]) return null;
-        const iW = new tW.c(WW);
-        iW.skipBits(32), iW.skipBits(8);
-        const OW = iW.readBits(2),
-          mW = iW.readBits(1),
-          NW = 8 + 4 * mW,
-          PW = 16 + 4 * mW;
-        iW.skipBits(NW);
-        const LW = iW.readBits(PW) + 1,
-          cW = {
-            frameSize: LW,
+      rJ = RR => {
+        if (RR.length < 10) return null;
+        if (100 !== RR[0] || 88 !== RR[1] || 32 !== RR[2] || 37 !== RR[3]) return null;
+        const JR = new VR.b(RR);
+        JR.skipBits(32), JR.skipBits(8);
+        const GR = JR.readBits(2),
+          yR = JR.readBits(1),
+          uR = 8 + 4 * yR,
+          ZR = 16 + 4 * yR;
+        JR.skipBits(uR);
+        const qR = JR.readBits(ZR) + 1,
+          iR = {
+            frameSize: qR,
             asset: null
           };
-        if (!iW.readBits(1)) return cW;
-        const wW = ci[iW.readBits(2)],
-          ZW = 512 * (iW.readBits(3) + 1);
-        iW.readBits(1) && iW.skipBits(36);
-        const xW = iW.readBits(3) + 1,
-          lW = iW.readBits(3) + 1,
-          AW = [];
-        for (let EW = 0; EW < xW; EW++) AW.push(iW.readBits(OW + 1));
-        for (const tW of AW) iW.skipBits(8 * (0, EW.Ec)(tW));
-        if (iW.readBits(1)) {
-          iW.skipBits(2);
-          const WW = iW.readBits(2) + 1 << 2,
-            OW = iW.readBits(2) + 1;
-          iW.skipBits(OW * WW)
+        if (!JR.readBits(1)) return iR;
+        const fR = iJ[JR.readBits(2)],
+          KR = 512 * (JR.readBits(3) + 1);
+        JR.readBits(1) && JR.skipBits(36);
+        const wR = JR.readBits(3) + 1,
+          rR = JR.readBits(3) + 1,
+          eR = [];
+        for (let tR = 0; tR < wR; tR++) eR.push(JR.readBits(GR + 1));
+        for (const VR of eR) JR.skipBits(8 * (0, tR.pc)(VR));
+        if (JR.readBits(1)) {
+          JR.skipBits(2);
+          const RR = JR.readBits(2) + 1 << 2,
+            GR = JR.readBits(2) + 1;
+          JR.skipBits(GR * RR)
         }
-        for (let EW = 0; EW < lW; EW++) iW.skipBits(PW);
-        iW.skipBits(9), iW.skipBits(3), iW.readBits(1) && iW.skipBits(4), iW.readBits(1) && iW.skipBits(24), iW.readBits(1) && iW.skipBits(8 * (iW.readBits(10) + 1));
-        const bW = iW.readBits(5) + 1,
-          jW = wi[iW.readBits(4)],
-          UW = iW.readBits(8) + 1;
-        let kW = 0;
-        if (iW.readBits(1) && (UW > 2 && iW.skipBits(1), UW > 6 && iW.skipBits(1), iW.readBits(1))) {
-          const WW = iW.readBits(2) + 1 << 2;
-          kW = iW.readBits(WW)
+        for (let tR = 0; tR < rR; tR++) JR.skipBits(ZR);
+        JR.skipBits(9), JR.skipBits(3), JR.readBits(1) && JR.skipBits(4), JR.readBits(1) && JR.skipBits(24), JR.readBits(1) && JR.skipBits(8 * (JR.readBits(10) + 1));
+        const aR = JR.readBits(5) + 1,
+          LR = fJ[JR.readBits(4)],
+          nR = JR.readBits(8) + 1;
+        let UR = 0;
+        if (JR.readBits(1) && (nR > 2 && JR.skipBits(1), nR > 6 && JR.skipBits(1), JR.readBits(1))) {
+          const RR = JR.readBits(2) + 1 << 2;
+          UR = JR.readBits(RR)
         }
-        return 0 === wW || iW.getBitsLeft() < 0 ? cW : {
-          frameSize: LW,
+        return 0 === fR || JR.getBitsLeft() < 0 ? iR : {
+          frameSize: qR,
           asset: {
-            sampleRate: jW,
-            numberOfChannels: UW,
-            sampleCount: Math.round(ZW * jW / wW),
-            channelLayout: kW,
-            pcmResolution: bW
+            sampleRate: LR,
+            numberOfChannels: nR,
+            sampleCount: Math.round(KR * LR / fR),
+            channelLayout: UR,
+            pcmResolution: aR
           }
         }
       },
-      Ai = WW => {
-        const iW = new Uint8Array(20),
-          OW = (0, EW.od)(iW);
-        OW.setUint32(0, WW.sampleRate), OW.setUint32(4, WW.bitRate), OW.setUint32(8, WW.bitRate), iW[12] = WW.pcmResolution;
-        const mW = WW.core && !WW.hasExtensions ? 1 : 0,
-          NW = new tW.c(iW);
-        return NW.seekToByte(13), NW.writeBits(2, Math.max(ti.indexOf(WW.sampleCount), 0)), NW.writeBits(5, mW), NW.writeBits(1, WW.core?.lfePresent ? 1 : 0), NW.writeBits(6, WW.core?.amode ?? 0), NW.writeBits(14, WW.core ? WW.core.frameSize - 1 : 0), NW.writeBits(1, 0), NW.writeBits(3, 0), NW.writeBits(16, WW.channelLayout), NW.writeBits(1, 0), NW.writeBits(1, 0), NW.writeBits(1, 0), NW.writeBits(5, 0), iW
+      eJ = RR => {
+        const JR = new Uint8Array(20),
+          GR = (0, tR.ad)(JR);
+        GR.setUint32(0, RR.sampleRate), GR.setUint32(4, RR.bitRate), GR.setUint32(8, RR.bitRate), JR[12] = RR.pcmResolution;
+        const yR = RR.core && !RR.hasExtensions ? 1 : 0,
+          uR = new VR.b(JR);
+        return uR.seekToByte(13), uR.writeBits(2, Math.max(VJ.indexOf(RR.sampleCount), 0)), uR.writeBits(5, yR), uR.writeBits(1, RR.core?.lfePresent ? 1 : 0), uR.writeBits(6, RR.core?.amode ?? 0), uR.writeBits(14, RR.core ? RR.core.frameSize - 1 : 0), uR.writeBits(1, 0), uR.writeBits(3, 0), uR.writeBits(16, RR.channelLayout), uR.writeBits(1, 0), uR.writeBits(1, 0), uR.writeBits(1, 0), uR.writeBits(5, 0), JR
       }
   },
-  41156: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => xW,
-      E: () => YW,
-      G: () => sW,
-      H: () => SW,
-      J: () => KW,
-      L: () => MW,
-      N: () => nW,
-      Q: () => HW,
-      S: () => hW,
-      U: () => JW,
-      W: () => VW,
-      _: () => pW,
-      bb: () => gW,
-      d: () => cW,
-      h: () => tW,
-      j: () => LW,
-      n: () => yW,
-      r: () => PW,
-      v: () => wW,
-      x: () => NW
+  41133: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => MR,
+      B: () => WR,
+      E: () => XR,
+      H: () => CR,
+      I: () => AR,
+      J: () => vR,
+      N: () => bR,
+      P: () => gR,
+      Q: () => pR,
+      S: () => PR,
+      T: () => IR,
+      X: () => oR,
+      d: () => iR,
+      e: () => VR,
+      h: () => qR,
+      l: () => BR,
+      p: () => ZR,
+      t: () => fR,
+      v: () => uR,
+      w: () => wR
     });
-    var mW = OW(41160),
-      EW = OW(41127);
-    const NW = ["avc", "hevc", "vp9", "av1", "vp8", "prores"],
-      PW = ["pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", "pcm-u8", "pcm-s8", "ulaw", "alaw"],
-      LW = ["aac", "opus", "mp3", "vorbis", "flac", "ac3", "eac3", "dts"],
-      cW = [...LW, ...PW],
-      wW = ["webvtt"],
-      tW = [{
+    var yR = GR(41140),
+      tR = GR(41115);
+    const uR = ["avc", "hevc", "vp9", "av1", "vp8", "prores"],
+      ZR = ["pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", "pcm-u8", "pcm-s8", "ulaw", "alaw"],
+      qR = ["aac", "opus", "mp3", "vorbis", "flac", "ac3", "eac3", "dts"],
+      iR = [...qR, ...ZR],
+      fR = ["webvtt"],
+      VR = [{
         maxMacroblocks: 99,
         maxBitrate: 64e3,
         maxDpbMbs: 396,
@@ -1904,7 +1904,7 @@ export const modules = {
         maxDpbMbs: 696320,
         level: 62
       }],
-      ZW = [{
+      KR = [{
         maxPictureSize: 36864,
         maxBitrate: 128e3,
         tier: "L",
@@ -2010,7 +2010,7 @@ export const modules = {
         tier: "H",
         level: 186
       }],
-      xW = [{
+      wR = [{
         maxPictureSize: 36864,
         maxBitrate: 2e5,
         level: 10
@@ -2067,7 +2067,7 @@ export const modules = {
         maxBitrate: 48e7,
         level: 62
       }],
-      lW = [{
+      rR = [{
         maxPictureSize: 147456,
         maxBitrate: 15e5,
         tier: "M",
@@ -2188,11 +2188,11 @@ export const modules = {
         tier: "H",
         level: 19
       }],
-      AW = ".01.01.01.01.00",
-      bW = ".0.110.01.01.01.0",
-      jW = ["ap4x", "ap4h", "apch", "apcn", "apcs", "apco"],
-      UW = ["dtsc", "dtsh", "dtsl", "dtse"],
-      kW = [{
+      eR = ".01.01.01.01.00",
+      aR = ".0.110.01.01.01.0",
+      LR = ["ap4x", "ap4h", "apch", "apcn", "apcs", "apco"],
+      nR = ["dtsc", "dtsh", "dtsl", "dtse"],
+      UR = [{
         fourCc: "apco",
         bitrate: 45e6,
         alpha: !1
@@ -2217,451 +2217,451 @@ export const modules = {
         bitrate: 5e8,
         alpha: !0
       }],
-      sW = (WW, iW, OW, mW, NW) => {
-        if ("avc" === WW) {
-          const WW = 100,
-            NW = Math.ceil(iW / 16) * Math.ceil(OW / 16),
-            PW = tW.find((WW => NW <= WW.maxMacroblocks && mW <= WW.maxBitrate)) ?? (0, EW.mc)(tW),
-            LW = PW ? PW.level : 0;
-          return `avc1.${WW.toString(16).padStart(2,"0")}${"00"}${LW.toString(16).padStart(2,"0")}`
+      WR = (RR, JR, GR, yR, uR) => {
+        if ("avc" === RR) {
+          const RR = 100,
+            uR = Math.ceil(JR / 16) * Math.ceil(GR / 16),
+            ZR = VR.find((RR => uR <= RR.maxMacroblocks && yR <= RR.maxBitrate)) ?? (0, tR.$b)(VR),
+            qR = ZR ? ZR.level : 0;
+          return `avc1.${RR.toString(16).padStart(2,"0")}${"00"}${qR.toString(16).padStart(2,"0")}`
         }
-        if ("hevc" === WW) {
-          const WW = "",
-            NW = 1,
-            PW = "6",
-            LW = iW * OW,
-            cW = ZW.find((WW => LW <= WW.maxPictureSize && mW <= WW.maxBitrate)) ?? (0, EW.mc)(ZW),
-            wW = "B0";
-          return `hev1.${WW}${NW}.${PW}.${cW.tier}${cW.level}.${wW}`
+        if ("hevc" === RR) {
+          const RR = "",
+            uR = 1,
+            ZR = "6",
+            qR = JR * GR,
+            iR = KR.find((RR => qR <= RR.maxPictureSize && yR <= RR.maxBitrate)) ?? (0, tR.$b)(KR),
+            fR = "B0";
+          return `hev1.${RR}${uR}.${ZR}.${iR.tier}${iR.level}.${fR}`
         }
-        if ("vp8" === WW) return "vp8";
-        if ("vp9" === WW) {
-          const WW = iW * OW,
-            NW = "08";
-          return `vp09.${"00"}.${(xW.find((iW=>WW<=iW.maxPictureSize&&mW<=iW.maxBitrate))??(0,EW.mc)(xW)).level.toString().padStart(2,"0")}.${NW}`
+        if ("vp8" === RR) return "vp8";
+        if ("vp9" === RR) {
+          const RR = JR * GR,
+            uR = "08";
+          return `vp09.${"00"}.${(wR.find((JR=>RR<=JR.maxPictureSize&&yR<=JR.maxBitrate))??(0,tR.$b)(wR)).level.toString().padStart(2,"0")}.${uR}`
         }
-        if ("av1" === WW) {
-          const WW = 0,
-            NW = iW * OW,
-            PW = lW.find((WW => NW <= WW.maxPictureSize && mW <= WW.maxBitrate)) ?? (0, EW.mc)(lW),
-            LW = "08";
-          return `av01.${WW}.${PW.level.toString().padStart(2,"0")}${PW.tier}.${LW}`
+        if ("av1" === RR) {
+          const RR = 0,
+            uR = JR * GR,
+            ZR = rR.find((RR => uR <= RR.maxPictureSize && yR <= RR.maxBitrate)) ?? (0, tR.$b)(rR),
+            qR = "08";
+          return `av01.${RR}.${ZR.level.toString().padStart(2,"0")}${ZR.tier}.${qR}`
         }
-        if ("prores" === WW) {
-          const WW = 2073600,
-            EW = Math.pow(iW * OW / WW, .95),
-            PW = kW.filter((WW => WW.alpha === NW));
-          let LW = PW[0].fourCc,
-            cW = 1 / 0;
+        if ("prores" === RR) {
+          const RR = 2073600,
+            tR = Math.pow(JR * GR / RR, .95),
+            ZR = UR.filter((RR => RR.alpha === uR));
+          let qR = ZR[0].fourCc,
+            iR = 1 / 0;
           for (const {
-              fourCc: iW,
-              bitrate: OW
+              fourCc: JR,
+              bitrate: GR
             }
-            of PW) {
-            const WW = Math.abs(OW * EW - mW);
-            WW < cW && (cW = WW, LW = iW)
+            of ZR) {
+            const RR = Math.abs(GR * tR - yR);
+            RR < iR && (iR = RR, qR = JR)
           }
-          return LW
+          return qR
         }
-        throw (0, EW.J)(WW), new TypeError(`Unhandled codec '${String(WW)}'.`)
+        throw (0, tR.H)(RR), new TypeError(`Unhandled codec '${String(RR)}'.`)
       },
-      MW = WW => {
-        const iW = WW.split(".");
-        return [1, 1, Number(iW[1]), 2, 1, Number(iW[2]), 3, 1, Number(iW[3]), 4, 1, iW[4] ? Number(iW[4]) : 1]
+      AR = RR => {
+        const JR = RR.split(".");
+        return [1, 1, Number(JR[1]), 2, 1, Number(JR[2]), 3, 1, Number(JR[3]), 4, 1, JR[4] ? Number(JR[4]) : 1]
       },
-      KW = WW => {
-        const iW = WW.split("."),
-          OW = Number(iW[1]),
-          mW = iW[2],
-          EW = (OW << 5) + Number(mW.slice(0, -1)),
-          NW = "H" === mW.slice(-1) ? 1 : 0,
-          PW = Number(iW[3]);
-        return [129, EW, (NW << 7) + ((8 === PW ? 0 : 1) << 6) + ((12 === PW ? 1 : 0) << 5) + ((iW[4] ? Number(iW[4]) : 0) << 4) + ((iW[5] ? Number(iW[5][0]) : 1) << 3) + ((iW[5] ? Number(iW[5][1]) : 1) << 2) + (iW[5] ? Number(iW[5][2]) : 0), 0]
+      CR = RR => {
+        const JR = RR.split("."),
+          GR = Number(JR[1]),
+          yR = JR[2],
+          tR = (GR << 5) + Number(yR.slice(0, -1)),
+          uR = "H" === yR.slice(-1) ? 1 : 0,
+          ZR = Number(JR[3]);
+        return [129, tR, (uR << 7) + ((8 === ZR ? 0 : 1) << 6) + ((12 === ZR ? 1 : 0) << 5) + ((JR[4] ? Number(JR[4]) : 0) << 4) + ((JR[5] ? Number(JR[5][0]) : 1) << 3) + ((JR[5] ? Number(JR[5][1]) : 1) << 2) + (JR[5] ? Number(JR[5][2]) : 0), 0]
       },
-      SW = WW => {
+      XR = RR => {
         const {
-          codec: iW,
-          codecDescription: OW,
-          colorSpace: NW,
-          avcCodecInfo: PW,
-          hevcCodecInfo: LW,
-          vp9CodecInfo: cW,
-          av1CodecInfo: wW,
-          proresFormat: tW
-        } = WW;
-        if ("avc" === iW) {
-          if ((0, EW.K)(null !== WW.avcType), PW) {
-            const iW = new Uint8Array([PW.avcProfileIndication, PW.profileCompatibility, PW.avcLevelIndication]);
-            return `avc${WW.avcType}.${(0,EW.V)(iW)}`
+          codec: JR,
+          codecDescription: GR,
+          colorSpace: uR,
+          avcCodecInfo: ZR,
+          hevcCodecInfo: qR,
+          vp9CodecInfo: iR,
+          av1CodecInfo: fR,
+          proresFormat: VR
+        } = RR;
+        if ("avc" === JR) {
+          if ((0, tR.I)(null !== RR.avcType), ZR) {
+            const JR = new Uint8Array([ZR.avcProfileIndication, ZR.profileCompatibility, ZR.avcLevelIndication]);
+            return `avc${RR.avcType}.${(0,tR.P)(JR)}`
           }
-          if (!OW || OW.byteLength < 4) throw new TypeError("AVC decoder description is not provided or is not at least 4 bytes long.");
-          return `avc${WW.avcType}.${(0,EW.V)(OW.subarray(1,4))}`
+          if (!GR || GR.byteLength < 4) throw new TypeError("AVC decoder description is not provided or is not at least 4 bytes long.");
+          return `avc${RR.avcType}.${(0,tR.P)(GR.subarray(1,4))}`
         }
-        if ("hevc" === iW) {
-          let WW, iW, mW, NW, PW, cW;
-          if (LW) WW = LW.generalProfileSpace, iW = LW.generalProfileIdc, mW = (0, EW.Mc)(LW.generalProfileCompatibilityFlags), NW = LW.generalTierFlag, PW = LW.generalLevelIdc, cW = [...LW.generalConstraintIndicatorFlags];
+        if ("hevc" === JR) {
+          let RR, JR, yR, uR, ZR, iR;
+          if (qR) RR = qR.generalProfileSpace, JR = qR.generalProfileIdc, yR = (0, tR.wc)(qR.generalProfileCompatibilityFlags), uR = qR.generalTierFlag, ZR = qR.generalLevelIdc, iR = [...qR.generalConstraintIndicatorFlags];
           else {
-            if (!OW || OW.byteLength < 23) throw new TypeError("HEVC decoder description is not provided or is not at least 23 bytes long.");
-            const LW = (0, EW.od)(OW),
-              wW = LW.getUint8(1);
-            WW = wW >> 6 & 3, iW = 31 & wW, mW = (0, EW.Mc)(LW.getUint32(2)), NW = wW >> 5 & 1, PW = LW.getUint8(12), cW = [];
-            for (let WW = 0; WW < 6; WW++) cW.push(LW.getUint8(6 + WW))
+            if (!GR || GR.byteLength < 23) throw new TypeError("HEVC decoder description is not provided or is not at least 23 bytes long.");
+            const qR = (0, tR.ad)(GR),
+              fR = qR.getUint8(1);
+            RR = fR >> 6 & 3, JR = 31 & fR, yR = (0, tR.wc)(qR.getUint32(2)), uR = fR >> 5 & 1, ZR = qR.getUint8(12), iR = [];
+            for (let RR = 0; RR < 6; RR++) iR.push(qR.getUint8(6 + RR))
           }
-          let wW = "hev1.";
-          for (wW += ["", "A", "B", "C"][WW] + iW, wW += ".", wW += mW.toString(16).toUpperCase(), wW += ".", wW += 0 === NW ? "L" : "H", wW += PW; cW.length > 0 && 0 === cW[cW.length - 1];) cW.pop();
-          return cW.length > 0 && (wW += ".", wW += cW.map((WW => WW.toString(16).toUpperCase())).join(".")), wW
+          let fR = "hev1.";
+          for (fR += ["", "A", "B", "C"][RR] + JR, fR += ".", fR += yR.toString(16).toUpperCase(), fR += ".", fR += 0 === uR ? "L" : "H", fR += ZR; iR.length > 0 && 0 === iR[iR.length - 1];) iR.pop();
+          return iR.length > 0 && (fR += ".", fR += iR.map((RR => RR.toString(16).toUpperCase())).join(".")), fR
         }
-        if ("vp8" === iW) return "vp8";
-        if ("vp9" === iW) {
-          if (!cW) {
-            const iW = WW.width * WW.height;
-            let OW = (0, EW.mc)(xW).level;
-            for (const WW of xW)
-              if (iW <= WW.maxPictureSize) {
-                OW = WW.level;
+        if ("vp8" === JR) return "vp8";
+        if ("vp9" === JR) {
+          if (!iR) {
+            const JR = RR.width * RR.height;
+            let GR = (0, tR.$b)(wR).level;
+            for (const RR of wR)
+              if (JR <= RR.maxPictureSize) {
+                GR = RR.level;
                 break
-              } return `vp09.00.${OW.toString().padStart(2,"0")}.08`
+              } return `vp09.00.${GR.toString().padStart(2,"0")}.08`
           }
-          let iW = `vp09.${cW.profile.toString().padStart(2,"0")}.${cW.level.toString().padStart(2,"0")}.${cW.bitDepth.toString().padStart(2,"0")}.${cW.chromaSubsampling.toString().padStart(2,"0")}`;
-          return iW += `.${cW.colourPrimaries.toString().padStart(2,"0")}.${cW.transferCharacteristics.toString().padStart(2,"0")}.${cW.matrixCoefficients.toString().padStart(2,"0")}.${cW.videoFullRangeFlag.toString().padStart(2,"0")}`, iW.endsWith(AW) && (iW = iW.slice(0, -15)), iW
+          let JR = `vp09.${iR.profile.toString().padStart(2,"0")}.${iR.level.toString().padStart(2,"0")}.${iR.bitDepth.toString().padStart(2,"0")}.${iR.chromaSubsampling.toString().padStart(2,"0")}`;
+          return JR += `.${iR.colourPrimaries.toString().padStart(2,"0")}.${iR.transferCharacteristics.toString().padStart(2,"0")}.${iR.matrixCoefficients.toString().padStart(2,"0")}.${iR.videoFullRangeFlag.toString().padStart(2,"0")}`, JR.endsWith(eR) && (JR = JR.slice(0, -15)), JR
         }
-        if ("av1" === iW) {
-          if (!wW) {
-            const iW = WW.width * WW.height;
-            let OW = (0, EW.mc)(xW).level;
-            for (const WW of xW)
-              if (iW <= WW.maxPictureSize) {
-                OW = WW.level;
+        if ("av1" === JR) {
+          if (!fR) {
+            const JR = RR.width * RR.height;
+            let GR = (0, tR.$b)(wR).level;
+            for (const RR of wR)
+              if (JR <= RR.maxPictureSize) {
+                GR = RR.level;
                 break
-              } return `av01.0.${OW.toString().padStart(2,"0")}M.08`
+              } return `av01.0.${GR.toString().padStart(2,"0")}M.08`
           }
-          const iW = wW.profile,
-            OW = wW.level.toString().padStart(2, "0"),
-            PW = wW.tier ? "H" : "M",
-            LW = wW.bitDepth.toString().padStart(2, "0"),
-            cW = wW.monochrome ? "1" : "0",
-            tW = 100 * wW.chromaSubsamplingX + 10 * wW.chromaSubsamplingY + 1 * (wW.chromaSubsamplingX && wW.chromaSubsamplingY ? wW.chromaSamplePosition : 0);
-          let ZW, lW, AW, jW;
-          (0, mW.o)(wW) ? (ZW = wW.colourPrimaries, lW = wW.transferCharacteristics, AW = wW.matrixCoefficients, jW = wW.videoFullRangeFlag) : (ZW = NW?.primaries ? EW.g[NW.primaries] : 1, lW = NW?.transfer ? EW.v[NW.transfer] : 1, AW = NW?.matrix ? EW.r[NW.matrix] : 1, jW = NW?.fullRange ? 1 : 0);
-          let UW = `av01.${iW}.${OW}${PW}.${LW}`;
-          return UW += `.${cW}.${tW.toString().padStart(3,"0")}`, UW += `.${ZW.toString().padStart(2,"0")}`, UW += `.${lW.toString().padStart(2,"0")}`, UW += `.${AW.toString().padStart(2,"0")}`, UW += `.${jW}`, UW.endsWith(bW) && (UW = UW.slice(0, -17)), UW
+          const JR = fR.profile,
+            GR = fR.level.toString().padStart(2, "0"),
+            ZR = fR.tier ? "H" : "M",
+            qR = fR.bitDepth.toString().padStart(2, "0"),
+            iR = fR.monochrome ? "1" : "0",
+            VR = 100 * fR.chromaSubsamplingX + 10 * fR.chromaSubsamplingY + 1 * (fR.chromaSubsamplingX && fR.chromaSubsamplingY ? fR.chromaSamplePosition : 0);
+          let KR, rR, eR, LR;
+          (0, yR.q)(fR) ? (KR = fR.colourPrimaries, rR = fR.transferCharacteristics, eR = fR.matrixCoefficients, LR = fR.videoFullRangeFlag) : (KR = uR?.primaries ? tR.e[uR.primaries] : 1, rR = uR?.transfer ? tR.x[uR.transfer] : 1, eR = uR?.matrix ? tR.o[uR.matrix] : 1, LR = uR?.fullRange ? 1 : 0);
+          let nR = `av01.${JR}.${GR}${ZR}.${qR}`;
+          return nR += `.${iR}.${VR.toString().padStart(3,"0")}`, nR += `.${KR.toString().padStart(2,"0")}`, nR += `.${rR.toString().padStart(2,"0")}`, nR += `.${eR.toString().padStart(2,"0")}`, nR += `.${LR}`, nR.endsWith(aR) && (nR = nR.slice(0, -17)), nR
         }
-        if ("prores" === iW) return tW ?? "apch";
-        throw null !== iW && (0, EW.J)(iW), new TypeError(`Unhandled codec '${iW}'.`)
+        if ("prores" === JR) return VR ?? "apch";
+        throw null !== JR && (0, tR.H)(JR), new TypeError(`Unhandled codec '${JR}'.`)
       },
-      YW = (WW, iW, OW) => {
-        if ("aac" === WW) return iW >= 2 && OW <= 24e3 ? "mp4a.40.29" : OW <= 24e3 ? "mp4a.40.5" : "mp4a.40.2";
-        if ("mp3" === WW) return "mp3";
-        if ("opus" === WW) return "opus";
-        if ("vorbis" === WW) return "vorbis";
-        if ("flac" === WW) return "flac";
-        if ("ac3" === WW) return "ac-3";
-        if ("eac3" === WW) return "ec-3";
-        if ("dts" === WW) return "dtsc";
-        if (PW.includes(WW)) return WW;
-        throw new TypeError(`Unhandled codec '${WW}'.`)
+      MR = (RR, JR, GR) => {
+        if ("aac" === RR) return JR >= 2 && GR <= 24e3 ? "mp4a.40.29" : GR <= 24e3 ? "mp4a.40.5" : "mp4a.40.2";
+        if ("mp3" === RR) return "mp3";
+        if ("opus" === RR) return "opus";
+        if ("vorbis" === RR) return "vorbis";
+        if ("flac" === RR) return "flac";
+        if ("ac3" === RR) return "ac-3";
+        if ("eac3" === RR) return "ec-3";
+        if ("dts" === RR) return "dtsc";
+        if (ZR.includes(RR)) return RR;
+        throw new TypeError(`Unhandled codec '${RR}'.`)
       },
-      yW = 48e3,
-      TW = /^pcm-([usf])(\d+)(be)?$/,
-      JW = WW => {
-        if ((0, EW.K)(PW.includes(WW)), "ulaw" === WW) return {
+      BR = 48e3,
+      lR = /^pcm-([usf])(\d+)(be)?$/,
+      pR = RR => {
+        if ((0, tR.I)(ZR.includes(RR)), "ulaw" === RR) return {
           dataType: "ulaw",
           sampleSize: 1,
           littleEndian: !0,
           silentValue: 255
         };
-        if ("alaw" === WW) return {
+        if ("alaw" === RR) return {
           dataType: "alaw",
           sampleSize: 1,
           littleEndian: !0,
           silentValue: 213
         };
-        const iW = TW.exec(WW);
-        let OW;
-        (0, EW.K)(iW), OW = "u" === iW[1] ? "unsigned" : "s" === iW[1] ? "signed" : "float";
+        const JR = lR.exec(RR);
+        let GR;
+        (0, tR.I)(JR), GR = "u" === JR[1] ? "unsigned" : "s" === JR[1] ? "signed" : "float";
         return {
-          dataType: OW,
-          sampleSize: Number(iW[2]) / 8,
-          littleEndian: "be" !== iW[3],
-          silentValue: "pcm-u8" === WW ? 128 : 0
+          dataType: GR,
+          sampleSize: Number(JR[2]) / 8,
+          littleEndian: "be" !== JR[3],
+          silentValue: "pcm-u8" === RR ? 128 : 0
         }
       },
-      hW = WW => WW.startsWith("avc1") || WW.startsWith("avc3") ? "avc" : WW.startsWith("hev1") || WW.startsWith("hvc1") ? "hevc" : "vp8" === WW ? "vp8" : WW.startsWith("vp09") ? "vp9" : WW.startsWith("av01") ? "av1" : jW.includes(WW) ? "prores" : "mp3" === WW || "mp4a.69" === WW || "mp4a.6B" === WW || "mp4a.6b" === WW || "mp4a.40.34" === WW ? "mp3" : WW.startsWith("mp4a.40.") || "mp4a.67" === WW ? "aac" : "opus" === WW || "Opus" === WW ? "opus" : "vorbis" === WW ? "vorbis" : "flac" === WW ? "flac" : "ac-3" === WW || "ac3" === WW ? "ac3" : "ec-3" === WW || "eac3" === WW ? "eac3" : UW.includes(WW) ? "dts" : "ulaw" === WW ? "ulaw" : "alaw" === WW ? "alaw" : TW.test(WW) ? WW : "webvtt" === WW ? "webvtt" : null,
-      HW = WW => "avc" === WW ? {
+      gR = RR => RR.startsWith("avc1") || RR.startsWith("avc3") ? "avc" : RR.startsWith("hev1") || RR.startsWith("hvc1") ? "hevc" : "vp8" === RR ? "vp8" : RR.startsWith("vp09") ? "vp9" : RR.startsWith("av01") ? "av1" : LR.includes(RR) ? "prores" : "mp3" === RR || "mp4a.69" === RR || "mp4a.6B" === RR || "mp4a.6b" === RR || "mp4a.40.34" === RR ? "mp3" : RR.startsWith("mp4a.40.") || "mp4a.67" === RR ? "aac" : "opus" === RR || "Opus" === RR ? "opus" : "vorbis" === RR ? "vorbis" : "flac" === RR ? "flac" : "ac-3" === RR || "ac3" === RR ? "ac3" : "ec-3" === RR || "eac3" === RR ? "eac3" : nR.includes(RR) ? "dts" : "ulaw" === RR ? "ulaw" : "alaw" === RR ? "alaw" : lR.test(RR) ? RR : "webvtt" === RR ? "webvtt" : null,
+      bR = RR => "avc" === RR ? {
         avc: {
           format: "avc"
         }
-      } : "hevc" === WW ? {
+      } : "hevc" === RR ? {
         hevc: {
           format: "hevc"
         }
       } : {},
-      nW = WW => "aac" === WW ? {
+      vR = RR => "aac" === RR ? {
         aac: {
           format: "aac"
         }
-      } : "opus" === WW ? {
+      } : "opus" === RR ? {
         opus: {
           format: "opus"
         }
       } : {},
-      uW = ["avc1", "avc3", "hev1", "hvc1", "vp8", "vp09", "av01", ...jW],
-      oW = /^(avc1|avc3)\.[0-9a-fA-F]{6}$/,
-      dW = /^(hev1|hvc1)\.(?:[ABC]?\d+)\.[0-9a-fA-F]{1,8}\.[LH]\d+(?:\.[0-9a-fA-F]{1,2}){0,6}$/,
-      eW = /^vp09(?:\.\d{2}){3}(?:(?:\.\d{2}){5})?$/,
-      vW = /^av01\.\d\.\d{2}[MH]\.\d{2}(?:\.\d\.\d{3}\.\d{2}\.\d{2}\.\d{2}\.\d)?$/,
-      gW = (WW, iW) => {
-        if (!WW) throw new TypeError("Video chunk metadata must be provided.");
-        if ("object" !== typeof WW) throw new TypeError("Video chunk metadata must be an object.");
-        if (!WW.decoderConfig) throw new TypeError("Video chunk metadata must include a decoder configuration.");
-        if ("object" !== typeof WW.decoderConfig) throw new TypeError("Video chunk metadata decoder configuration must be an object.");
-        if ("string" !== typeof WW.decoderConfig.codec) throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");
-        if (!uW.some((iW => WW.decoderConfig.codec.startsWith(iW)))) throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");
-        if (!Number.isInteger(WW.decoderConfig.codedWidth) || WW.decoderConfig.codedWidth <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");
-        if (!Number.isInteger(WW.decoderConfig.codedHeight) || WW.decoderConfig.codedHeight <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");
-        if (void 0 !== WW.decoderConfig.displayAspectWidth && (!Number.isInteger(WW.decoderConfig.displayAspectWidth) || WW.decoderConfig.displayAspectWidth <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");
-        if (void 0 !== WW.decoderConfig.displayAspectHeight && (!Number.isInteger(WW.decoderConfig.displayAspectHeight) || WW.decoderConfig.displayAspectHeight <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");
-        if (void 0 !== WW.decoderConfig.displayAspectWidth !== (void 0 !== WW.decoderConfig.displayAspectHeight)) throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");
-        if (void 0 !== WW.decoderConfig.description && !(0, EW.Bb)(WW.decoderConfig.description)) throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
-        if (void 0 !== WW.decoderConfig.colorSpace) {
+      OR = ["avc1", "avc3", "hev1", "hvc1", "vp8", "vp09", "av01", ...LR],
+      xR = /^(avc1|avc3)\.[0-9a-fA-F]{6}$/,
+      NR = /^(hev1|hvc1)\.(?:[ABC]?\d+)\.[0-9a-fA-F]{1,8}\.[LH]\d+(?:\.[0-9a-fA-F]{1,2}){0,6}$/,
+      DR = /^vp09(?:\.\d{2}){3}(?:(?:\.\d{2}){5})?$/,
+      HR = /^av01\.\d\.\d{2}[MH]\.\d{2}(?:\.\d\.\d{3}\.\d{2}\.\d{2}\.\d{2}\.\d)?$/,
+      oR = (RR, JR) => {
+        if (!RR) throw new TypeError("Video chunk metadata must be provided.");
+        if ("object" !== typeof RR) throw new TypeError("Video chunk metadata must be an object.");
+        if (!RR.decoderConfig) throw new TypeError("Video chunk metadata must include a decoder configuration.");
+        if ("object" !== typeof RR.decoderConfig) throw new TypeError("Video chunk metadata decoder configuration must be an object.");
+        if ("string" !== typeof RR.decoderConfig.codec) throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");
+        if (!OR.some((JR => RR.decoderConfig.codec.startsWith(JR)))) throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");
+        if (!Number.isInteger(RR.decoderConfig.codedWidth) || RR.decoderConfig.codedWidth <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");
+        if (!Number.isInteger(RR.decoderConfig.codedHeight) || RR.decoderConfig.codedHeight <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");
+        if (void 0 !== RR.decoderConfig.displayAspectWidth && (!Number.isInteger(RR.decoderConfig.displayAspectWidth) || RR.decoderConfig.displayAspectWidth <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");
+        if (void 0 !== RR.decoderConfig.displayAspectHeight && (!Number.isInteger(RR.decoderConfig.displayAspectHeight) || RR.decoderConfig.displayAspectHeight <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");
+        if (void 0 !== RR.decoderConfig.displayAspectWidth !== (void 0 !== RR.decoderConfig.displayAspectHeight)) throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");
+        if (void 0 !== RR.decoderConfig.description && !(0, tR.tb)(RR.decoderConfig.description)) throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
+        if (void 0 !== RR.decoderConfig.colorSpace) {
           const {
-            colorSpace: iW
-          } = WW.decoderConfig;
-          if ("object" !== typeof iW) throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");
-          const OW = Object.keys(EW.g);
-          if (null != iW.primaries && !OW.includes(iW.primaries)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${OW.join(", ")}.`);
-          const mW = Object.keys(EW.v);
-          if (null != iW.transfer && !mW.includes(iW.transfer)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${mW.join(", ")}.`);
-          const NW = Object.keys(EW.r);
-          if (null != iW.matrix && !NW.includes(iW.matrix)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${NW.join(", ")}.`);
-          if (null != iW.fullRange && "boolean" !== typeof iW.fullRange) throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")
+            colorSpace: JR
+          } = RR.decoderConfig;
+          if ("object" !== typeof JR) throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");
+          const GR = Object.keys(tR.e);
+          if (null != JR.primaries && !GR.includes(JR.primaries)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${GR.join(", ")}.`);
+          const yR = Object.keys(tR.x);
+          if (null != JR.transfer && !yR.includes(JR.transfer)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${yR.join(", ")}.`);
+          const uR = Object.keys(tR.o);
+          if (null != JR.matrix && !uR.includes(JR.matrix)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${uR.join(", ")}.`);
+          if (null != JR.fullRange && "boolean" !== typeof JR.fullRange) throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")
         }
-        if (WW.decoderConfig.codec.startsWith("avc1") || WW.decoderConfig.codec.startsWith("avc3")) {
-          if (!oW.test(WW.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")
-        } else if (WW.decoderConfig.codec.startsWith("hev1") || WW.decoderConfig.codec.startsWith("hvc1")) {
-          if (!dW.test(WW.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")
-        } else if (WW.decoderConfig.codec.startsWith("vp8")) {
-          if ("vp8" !== WW.decoderConfig.codec) throw new TypeError('Video chunk metadata decoder configuration codec string for VP8 must be "vp8".')
-        } else if (WW.decoderConfig.codec.startsWith("vp09")) {
-          if (!eW.test(WW.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.')
-        } else if (WW.decoderConfig.codec.startsWith("av01")) {
-          if (!vW.test(WW.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.')
-        } else if (jW.some((iW => WW.decoderConfig.codec.startsWith(iW))) && !jW.some((iW => WW.decoderConfig.codec === iW))) throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${jW.join(", ")}.`);
-        if (null !== iW && hW(WW.decoderConfig.codec) !== iW) throw new TypeError(`Video chunk metadata decoder configuration codec string '${WW.decoderConfig.codec}' does not fit to the track codec '${iW}'.`)
+        if (RR.decoderConfig.codec.startsWith("avc1") || RR.decoderConfig.codec.startsWith("avc3")) {
+          if (!xR.test(RR.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")
+        } else if (RR.decoderConfig.codec.startsWith("hev1") || RR.decoderConfig.codec.startsWith("hvc1")) {
+          if (!NR.test(RR.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")
+        } else if (RR.decoderConfig.codec.startsWith("vp8")) {
+          if ("vp8" !== RR.decoderConfig.codec) throw new TypeError('Video chunk metadata decoder configuration codec string for VP8 must be "vp8".')
+        } else if (RR.decoderConfig.codec.startsWith("vp09")) {
+          if (!DR.test(RR.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.')
+        } else if (RR.decoderConfig.codec.startsWith("av01")) {
+          if (!HR.test(RR.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.')
+        } else if (LR.some((JR => RR.decoderConfig.codec.startsWith(JR))) && !LR.some((JR => RR.decoderConfig.codec === JR))) throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${LR.join(", ")}.`);
+        if (null !== JR && gR(RR.decoderConfig.codec) !== JR) throw new TypeError(`Video chunk metadata decoder configuration codec string '${RR.decoderConfig.codec}' does not fit to the track codec '${JR}'.`)
       },
-      DW = ["mp4a", "mp3", "opus", "vorbis", "flac", "ulaw", "alaw", "pcm", "ac-3", "ec-3", "dts"],
-      VW = (WW, iW) => {
-        if (!WW) throw new TypeError("Audio chunk metadata must be provided.");
-        if ("object" !== typeof WW) throw new TypeError("Audio chunk metadata must be an object.");
-        if (!WW.decoderConfig) throw new TypeError("Audio chunk metadata must include a decoder configuration.");
-        if ("object" !== typeof WW.decoderConfig) throw new TypeError("Audio chunk metadata decoder configuration must be an object.");
-        if ("string" !== typeof WW.decoderConfig.codec) throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");
-        if (!DW.some((iW => WW.decoderConfig.codec.startsWith(iW)))) throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");
-        if (!Number.isInteger(WW.decoderConfig.sampleRate) || WW.decoderConfig.sampleRate <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");
-        if (!Number.isInteger(WW.decoderConfig.numberOfChannels) || WW.decoderConfig.numberOfChannels <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");
-        if (void 0 !== WW.decoderConfig.description && !(0, EW.Bb)(WW.decoderConfig.description)) throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
-        if (WW.decoderConfig.codec.startsWith("mp4a") && "mp4a.69" !== WW.decoderConfig.codec && "mp4a.6B" !== WW.decoderConfig.codec && "mp4a.6b" !== WW.decoderConfig.codec) {
-          if (!["mp4a.40.2", "mp4a.40.02", "mp4a.40.5", "mp4a.40.05", "mp4a.40.29", "mp4a.67"].includes(WW.decoderConfig.codec)) throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")
-        } else if (WW.decoderConfig.codec.startsWith("mp3") || WW.decoderConfig.codec.startsWith("mp4a")) {
-          if ("mp3" !== WW.decoderConfig.codec && "mp4a.69" !== WW.decoderConfig.codec && "mp4a.6B" !== WW.decoderConfig.codec && "mp4a.6b" !== WW.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".')
-        } else if (WW.decoderConfig.codec.startsWith("opus")) {
-          if ("opus" !== WW.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Opus must be "opus".');
-          if (WW.decoderConfig.description && WW.decoderConfig.description.byteLength < 18) throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")
-        } else if (WW.decoderConfig.codec.startsWith("vorbis")) {
-          if ("vorbis" !== WW.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".');
-          if (!WW.decoderConfig.description) throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")
-        } else if (WW.decoderConfig.codec.startsWith("flac")) {
-          if ("flac" !== WW.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for FLAC must be "flac".');
-          const iW = 42;
-          if (!WW.decoderConfig.description || WW.decoderConfig.description.byteLength < iW) throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")
-        } else if (WW.decoderConfig.codec.startsWith("ac-3") || WW.decoderConfig.codec.startsWith("ac3")) {
-          if ("ac-3" !== WW.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".')
-        } else if (WW.decoderConfig.codec.startsWith("ec-3") || WW.decoderConfig.codec.startsWith("eac3")) {
-          if ("ec-3" !== WW.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".')
-        } else if (WW.decoderConfig.codec.startsWith("dts")) {
-          if (!UW.includes(WW.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${UW.join(", ")}.`)
-        } else if ((WW.decoderConfig.codec.startsWith("pcm") || WW.decoderConfig.codec.startsWith("ulaw") || WW.decoderConfig.codec.startsWith("alaw")) && !PW.includes(WW.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${PW.join(", ")}).`);
-        if (null !== iW && hW(WW.decoderConfig.codec) !== iW) throw new TypeError(`Audio chunk metadata decoder configuration codec string '${WW.decoderConfig.codec}' does not fit to the track codec '${iW}'.`)
+      cR = ["mp4a", "mp3", "opus", "vorbis", "flac", "ulaw", "alaw", "pcm", "ac-3", "ec-3", "dts"],
+      PR = (RR, JR) => {
+        if (!RR) throw new TypeError("Audio chunk metadata must be provided.");
+        if ("object" !== typeof RR) throw new TypeError("Audio chunk metadata must be an object.");
+        if (!RR.decoderConfig) throw new TypeError("Audio chunk metadata must include a decoder configuration.");
+        if ("object" !== typeof RR.decoderConfig) throw new TypeError("Audio chunk metadata decoder configuration must be an object.");
+        if ("string" !== typeof RR.decoderConfig.codec) throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");
+        if (!cR.some((JR => RR.decoderConfig.codec.startsWith(JR)))) throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");
+        if (!Number.isInteger(RR.decoderConfig.sampleRate) || RR.decoderConfig.sampleRate <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");
+        if (!Number.isInteger(RR.decoderConfig.numberOfChannels) || RR.decoderConfig.numberOfChannels <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");
+        if (void 0 !== RR.decoderConfig.description && !(0, tR.tb)(RR.decoderConfig.description)) throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
+        if (RR.decoderConfig.codec.startsWith("mp4a") && "mp4a.69" !== RR.decoderConfig.codec && "mp4a.6B" !== RR.decoderConfig.codec && "mp4a.6b" !== RR.decoderConfig.codec) {
+          if (!["mp4a.40.2", "mp4a.40.02", "mp4a.40.5", "mp4a.40.05", "mp4a.40.29", "mp4a.67"].includes(RR.decoderConfig.codec)) throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")
+        } else if (RR.decoderConfig.codec.startsWith("mp3") || RR.decoderConfig.codec.startsWith("mp4a")) {
+          if ("mp3" !== RR.decoderConfig.codec && "mp4a.69" !== RR.decoderConfig.codec && "mp4a.6B" !== RR.decoderConfig.codec && "mp4a.6b" !== RR.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".')
+        } else if (RR.decoderConfig.codec.startsWith("opus")) {
+          if ("opus" !== RR.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Opus must be "opus".');
+          if (RR.decoderConfig.description && RR.decoderConfig.description.byteLength < 18) throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")
+        } else if (RR.decoderConfig.codec.startsWith("vorbis")) {
+          if ("vorbis" !== RR.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".');
+          if (!RR.decoderConfig.description) throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")
+        } else if (RR.decoderConfig.codec.startsWith("flac")) {
+          if ("flac" !== RR.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for FLAC must be "flac".');
+          const JR = 42;
+          if (!RR.decoderConfig.description || RR.decoderConfig.description.byteLength < JR) throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")
+        } else if (RR.decoderConfig.codec.startsWith("ac-3") || RR.decoderConfig.codec.startsWith("ac3")) {
+          if ("ac-3" !== RR.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".')
+        } else if (RR.decoderConfig.codec.startsWith("ec-3") || RR.decoderConfig.codec.startsWith("eac3")) {
+          if ("ec-3" !== RR.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".')
+        } else if (RR.decoderConfig.codec.startsWith("dts")) {
+          if (!nR.includes(RR.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${nR.join(", ")}.`)
+        } else if ((RR.decoderConfig.codec.startsWith("pcm") || RR.decoderConfig.codec.startsWith("ulaw") || RR.decoderConfig.codec.startsWith("alaw")) && !ZR.includes(RR.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${ZR.join(", ")}).`);
+        if (null !== JR && gR(RR.decoderConfig.codec) !== JR) throw new TypeError(`Audio chunk metadata decoder configuration codec string '${RR.decoderConfig.codec}' does not fit to the track codec '${JR}'.`)
       },
-      pW = WW => {
-        if (!WW) throw new TypeError("Subtitle metadata must be provided.");
-        if ("object" !== typeof WW) throw new TypeError("Subtitle metadata must be an object.");
-        if (!WW.config) throw new TypeError("Subtitle metadata must include a config object.");
-        if ("object" !== typeof WW.config) throw new TypeError("Subtitle metadata config must be an object.");
-        if ("string" !== typeof WW.config.description) throw new TypeError("Subtitle metadata config description must be a string.")
+      IR = RR => {
+        if (!RR) throw new TypeError("Subtitle metadata must be provided.");
+        if ("object" !== typeof RR) throw new TypeError("Subtitle metadata must be an object.");
+        if (!RR.config) throw new TypeError("Subtitle metadata must include a config object.");
+        if ("object" !== typeof RR.config) throw new TypeError("Subtitle metadata config must be an object.");
+        if ("string" !== typeof RR.config.description) throw new TypeError("Subtitle metadata config description must be a string.")
       }
   },
-  41196: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => xW,
-      i: () => ZW,
-      j: () => UW,
-      k: () => cW,
-      m: () => kW,
-      n: () => wW,
-      o: () => PW
+  41182: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => wR,
+      f: () => KR,
+      h: () => nR,
+      j: () => iR,
+      k: () => UR,
+      m: () => fR,
+      n: () => ZR
     });
-    var mW = OW(41156),
-      EW = OW(41127),
-      NW = OW(41198);
+    var yR = GR(41133),
+      tR = GR(41115),
+      uR = GR(41187);
     new Map, new Map;
-    const PW = WW => {
-        if (!WW || "object" !== typeof WW) throw new TypeError("Encoding config must be an object.");
-        if (!mW.x.includes(WW.codec)) throw new TypeError(`Invalid video codec '${WW.codec}'. Must be one of: ${mW.x.join(", ")}.`);
-        const iW = WW.bitrate;
-        if (void 0 === WW.quality && void 0 === iW) throw new TypeError("config.quality must be provided.");
-        if (void 0 !== WW.quality && void 0 !== iW) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
-        if (void 0 !== WW.quality && !(WW.quality instanceof xW)) throw new TypeError("config.quality, when provided, must be a Quality.");
-        if (void 0 !== iW && !(iW instanceof xW) && (!Number.isInteger(iW) || iW <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
-        if (void 0 !== WW.keyFrameInterval && (!Number.isFinite(WW.keyFrameInterval) || WW.keyFrameInterval < 0)) throw new TypeError("config.keyFrameInterval, when provided, must be a non-negative number.");
-        if (void 0 !== WW.sizeChangeBehavior && !["deny", "passThrough", "fill", "contain", "cover"].includes(WW.sizeChangeBehavior)) throw new TypeError("config.sizeChangeBehavior, when provided, must be 'deny', 'passThrough', 'fill', 'contain' or 'cover'.");
-        if (void 0 !== WW.transform) {
-          if ("object" !== typeof WW.transform || !WW.transform) throw new TypeError("config.transform, when provided, must be an object.");
-          if (void 0 !== WW.transform.width && (!Number.isInteger(WW.transform.width) || WW.transform.width <= 0)) throw new TypeError("config.transform.width, when provided, must be a positive integer.");
-          if (void 0 !== WW.transform.height && (!Number.isInteger(WW.transform.height) || WW.transform.height <= 0)) throw new TypeError("config.transform.height, when provided, must be a positive integer.");
-          if (void 0 !== WW.transform.fit && !["fill", "contain", "cover"].includes(WW.transform.fit)) throw new TypeError('config.transform.fit, when provided, must be one of "fill", "contain", or "cover".');
-          if (void 0 !== WW.transform.width && void 0 !== WW.transform.height && void 0 === WW.transform.fit && !["fill", "contain", "cover"].includes(WW.sizeChangeBehavior)) throw new TypeError("When both config.transform.width and config.transform.height are provided, config.transform.fit must also be provided.");
-          if (void 0 !== WW.transform.fit && ["fill", "contain", "cover"].includes(WW.sizeChangeBehavior) && WW.transform.fit !== WW.sizeChangeBehavior) throw new TypeError("config.transform.fit, when provided, cannot differ from config.sizeChangeBehavior when config.sizeChangeBehavior is 'fill', 'contain' or 'cover', as sizeChangeBehavior already determines the fitting algorithm.");
-          if (void 0 !== WW.transform.rotate && ![0, 90, 180, 270].includes(WW.transform.rotate)) throw new TypeError("config.transform.rotate, when provided, must be 0, 90, 180 or 270.");
-          if (void 0 !== WW.transform.flip && "boolean" !== typeof WW.transform.flip) throw new TypeError("config.transform.flip, when provided, must be a boolean.");
-          if (void 0 !== WW.transform.crop && (0, NW.o)(WW.transform.crop, "config.transform."), void 0 !== WW.transform.process && "function" !== typeof WW.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.");
-          if (void 0 !== WW.transform.frameRate && (!Number.isFinite(WW.transform.frameRate) || WW.transform.frameRate <= 0)) throw new TypeError("config.transform.frameRate, when provided, must be a finite positive number.");
-          if (void 0 !== WW.transform.force && "boolean" !== typeof WW.transform.force) throw new TypeError("config.transform.force, when provided, must be a boolean.")
+    const ZR = RR => {
+        if (!RR || "object" !== typeof RR) throw new TypeError("Encoding config must be an object.");
+        if (!yR.v.includes(RR.codec)) throw new TypeError(`Invalid video codec '${RR.codec}'. Must be one of: ${yR.v.join(", ")}.`);
+        const JR = RR.bitrate;
+        if (void 0 === RR.quality && void 0 === JR) throw new TypeError("config.quality must be provided.");
+        if (void 0 !== RR.quality && void 0 !== JR) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
+        if (void 0 !== RR.quality && !(RR.quality instanceof wR)) throw new TypeError("config.quality, when provided, must be a Quality.");
+        if (void 0 !== JR && !(JR instanceof wR) && (!Number.isInteger(JR) || JR <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
+        if (void 0 !== RR.keyFrameInterval && (!Number.isFinite(RR.keyFrameInterval) || RR.keyFrameInterval < 0)) throw new TypeError("config.keyFrameInterval, when provided, must be a non-negative number.");
+        if (void 0 !== RR.sizeChangeBehavior && !["deny", "passThrough", "fill", "contain", "cover"].includes(RR.sizeChangeBehavior)) throw new TypeError("config.sizeChangeBehavior, when provided, must be 'deny', 'passThrough', 'fill', 'contain' or 'cover'.");
+        if (void 0 !== RR.transform) {
+          if ("object" !== typeof RR.transform || !RR.transform) throw new TypeError("config.transform, when provided, must be an object.");
+          if (void 0 !== RR.transform.width && (!Number.isInteger(RR.transform.width) || RR.transform.width <= 0)) throw new TypeError("config.transform.width, when provided, must be a positive integer.");
+          if (void 0 !== RR.transform.height && (!Number.isInteger(RR.transform.height) || RR.transform.height <= 0)) throw new TypeError("config.transform.height, when provided, must be a positive integer.");
+          if (void 0 !== RR.transform.fit && !["fill", "contain", "cover"].includes(RR.transform.fit)) throw new TypeError('config.transform.fit, when provided, must be one of "fill", "contain", or "cover".');
+          if (void 0 !== RR.transform.width && void 0 !== RR.transform.height && void 0 === RR.transform.fit && !["fill", "contain", "cover"].includes(RR.sizeChangeBehavior)) throw new TypeError("When both config.transform.width and config.transform.height are provided, config.transform.fit must also be provided.");
+          if (void 0 !== RR.transform.fit && ["fill", "contain", "cover"].includes(RR.sizeChangeBehavior) && RR.transform.fit !== RR.sizeChangeBehavior) throw new TypeError("config.transform.fit, when provided, cannot differ from config.sizeChangeBehavior when config.sizeChangeBehavior is 'fill', 'contain' or 'cover', as sizeChangeBehavior already determines the fitting algorithm.");
+          if (void 0 !== RR.transform.rotate && ![0, 90, 180, 270].includes(RR.transform.rotate)) throw new TypeError("config.transform.rotate, when provided, must be 0, 90, 180 or 270.");
+          if (void 0 !== RR.transform.flip && "boolean" !== typeof RR.transform.flip) throw new TypeError("config.transform.flip, when provided, must be a boolean.");
+          if (void 0 !== RR.transform.crop && (0, uR.l)(RR.transform.crop, "config.transform."), void 0 !== RR.transform.process && "function" !== typeof RR.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.");
+          if (void 0 !== RR.transform.frameRate && (!Number.isFinite(RR.transform.frameRate) || RR.transform.frameRate <= 0)) throw new TypeError("config.transform.frameRate, when provided, must be a finite positive number.");
+          if (void 0 !== RR.transform.force && "boolean" !== typeof RR.transform.force) throw new TypeError("config.transform.force, when provided, must be a boolean.")
         }
-        if (void 0 !== WW.onEncodedPacket && "function" !== typeof WW.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
-        if (void 0 !== WW.onEncoderConfig && "function" !== typeof WW.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
-        if (void 0 !== WW.onEncodedSample && "function" !== typeof WW.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
-        LW(WW.codec, WW)
+        if (void 0 !== RR.onEncodedPacket && "function" !== typeof RR.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
+        if (void 0 !== RR.onEncoderConfig && "function" !== typeof RR.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
+        if (void 0 !== RR.onEncodedSample && "function" !== typeof RR.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
+        qR(RR.codec, RR)
       },
-      LW = (WW, iW) => {
-        if (!iW || "object" !== typeof iW) throw new TypeError("Encoding options must be an object.");
-        if (void 0 !== iW.alpha && !["discard", "keep"].includes(iW.alpha)) throw new TypeError("options.alpha, when provided, must be 'discard' or 'keep'.");
-        const OW = iW.bitrateMode;
-        if (void 0 !== OW && !["constant", "variable"].includes(OW)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if (void 0 !== iW.latencyMode && !["quality", "realtime"].includes(iW.latencyMode)) throw new TypeError("latencyMode, when provided, must be 'quality' or 'realtime'.");
-        if (void 0 !== iW.fullCodecString && "string" !== typeof iW.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
-        if (void 0 !== iW.fullCodecString && (0, mW.S)(iW.fullCodecString) !== WW) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${WW}).`);
-        if (void 0 !== iW.hardwareAcceleration && !["no-preference", "prefer-hardware", "prefer-software"].includes(iW.hardwareAcceleration)) throw new TypeError("hardwareAcceleration, when provided, must be 'no-preference', 'prefer-hardware' or 'prefer-software'.");
-        if (void 0 !== iW.scalabilityMode && "string" !== typeof iW.scalabilityMode) throw new TypeError("scalabilityMode, when provided, must be a string.");
-        if (void 0 !== iW.contentHint && "string" !== typeof iW.contentHint) throw new TypeError("contentHint, when provided, must be a string.")
+      qR = (RR, JR) => {
+        if (!JR || "object" !== typeof JR) throw new TypeError("Encoding options must be an object.");
+        if (void 0 !== JR.alpha && !["discard", "keep"].includes(JR.alpha)) throw new TypeError("options.alpha, when provided, must be 'discard' or 'keep'.");
+        const GR = JR.bitrateMode;
+        if (void 0 !== GR && !["constant", "variable"].includes(GR)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if (void 0 !== JR.latencyMode && !["quality", "realtime"].includes(JR.latencyMode)) throw new TypeError("latencyMode, when provided, must be 'quality' or 'realtime'.");
+        if (void 0 !== JR.fullCodecString && "string" !== typeof JR.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
+        if (void 0 !== JR.fullCodecString && (0, yR.P)(JR.fullCodecString) !== RR) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${RR}).`);
+        if (void 0 !== JR.hardwareAcceleration && !["no-preference", "prefer-hardware", "prefer-software"].includes(JR.hardwareAcceleration)) throw new TypeError("hardwareAcceleration, when provided, must be 'no-preference', 'prefer-hardware' or 'prefer-software'.");
+        if (void 0 !== JR.scalabilityMode && "string" !== typeof JR.scalabilityMode) throw new TypeError("scalabilityMode, when provided, must be a string.");
+        if (void 0 !== JR.contentHint && "string" !== typeof JR.contentHint) throw new TypeError("contentHint, when provided, must be a string.")
       },
-      cW = WW => {
-        const iW = WW.bitrateMode,
-          OW = WW.quality._toVideoRateControl(WW.codec, WW.width, WW.height, iW),
-          NW = (iW, OW, EW) => ({
-            codec: WW.fullCodecString ?? (0, mW.G)(WW.codec, WW.width, WW.height, EW, "keep" === WW.alpha),
-            width: WW.width,
-            height: WW.height,
-            displayWidth: WW.squarePixelWidth,
-            displayHeight: WW.squarePixelHeight,
-            bitrate: iW,
-            bitrateMode: OW,
-            alpha: WW.alpha ?? "discard",
-            framerate: WW.framerate,
-            latencyMode: WW.latencyMode,
-            hardwareAcceleration: WW.hardwareAcceleration,
-            scalabilityMode: WW.scalabilityMode,
-            contentHint: WW.contentHint,
-            ...(0, mW.Q)(WW.codec)
+      iR = RR => {
+        const JR = RR.bitrateMode,
+          GR = RR.quality._toVideoRateControl(RR.codec, RR.width, RR.height, JR),
+          uR = (JR, GR, tR) => ({
+            codec: RR.fullCodecString ?? (0, yR.B)(RR.codec, RR.width, RR.height, tR, "keep" === RR.alpha),
+            width: RR.width,
+            height: RR.height,
+            displayWidth: RR.squarePixelWidth,
+            displayHeight: RR.squarePixelHeight,
+            bitrate: JR,
+            bitrateMode: GR,
+            alpha: RR.alpha ?? "discard",
+            framerate: RR.framerate,
+            latencyMode: RR.latencyMode,
+            hardwareAcceleration: RR.hardwareAcceleration,
+            scalabilityMode: RR.scalabilityMode,
+            contentHint: RR.contentHint,
+            ...(0, yR.N)(RR.codec)
           }),
-          PW = [];
-        return null !== OW.quantizer && PW.push({
-          config: NW(void 0, "quantizer", OW.bitrate),
-          quantizer: OW.quantizer
-        }), "quantizer" !== OW.bitrateMode && PW.push({
-          config: NW(OW.bitrate, OW.bitrateMode, OW.bitrate),
+          ZR = [];
+        return null !== GR.quantizer && ZR.push({
+          config: uR(void 0, "quantizer", GR.bitrate),
+          quantizer: GR.quantizer
+        }), "quantizer" !== GR.bitrateMode && ZR.push({
+          config: uR(GR.bitrate, GR.bitrateMode, GR.bitrate),
           quantizer: null
-        }), (0, EW.K)(PW.length > 0), PW
+        }), (0, tR.I)(ZR.length > 0), ZR
       },
-      wW = WW => {
-        if (!WW || "object" !== typeof WW) throw new TypeError("Encoding config must be an object.");
-        if (!mW.d.includes(WW.codec)) throw new TypeError(`Invalid audio codec '${WW.codec}'. Must be one of: ${mW.d.join(", ")}.`);
-        const iW = WW.bitrate;
-        if (void 0 === WW.quality && void 0 === iW && !mW.r.includes(WW.codec) && "flac" !== WW.codec) throw new TypeError("config.quality must be provided for compressed audio codecs.");
-        if (void 0 !== WW.quality && void 0 !== iW) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
-        if (void 0 !== WW.quality && !(WW.quality instanceof xW)) throw new TypeError("config.quality, when provided, must be a Quality.");
-        if (void 0 !== iW && !(iW instanceof xW) && (!Number.isInteger(iW) || iW <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
-        if (void 0 !== WW.transform) {
-          if ("object" !== typeof WW.transform || !WW.transform) throw new TypeError("config.transform, when provided, must be an object.");
-          if (void 0 !== WW.transform.numberOfChannels && (!Number.isInteger(WW.transform.numberOfChannels) || WW.transform.numberOfChannels <= 0)) throw new TypeError("config.transform.numberOfChannels, when provided, must be a positive integer.");
-          if (void 0 !== WW.transform.sampleRate && (!Number.isInteger(WW.transform.sampleRate) || WW.transform.sampleRate <= 0)) throw new TypeError("config.transform.sampleRate, when provided, must be a positive integer.");
-          if (void 0 !== WW.transform.sampleFormat && !["u8", "s16", "s32", "f32"].includes(WW.transform.sampleFormat)) throw new TypeError("config.transform.sampleFormat, when provided, must be one of: u8, s16, s32, f32.");
-          if (void 0 !== WW.transform.process && "function" !== typeof WW.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.")
+      fR = RR => {
+        if (!RR || "object" !== typeof RR) throw new TypeError("Encoding config must be an object.");
+        if (!yR.d.includes(RR.codec)) throw new TypeError(`Invalid audio codec '${RR.codec}'. Must be one of: ${yR.d.join(", ")}.`);
+        const JR = RR.bitrate;
+        if (void 0 === RR.quality && void 0 === JR && !yR.p.includes(RR.codec) && "flac" !== RR.codec) throw new TypeError("config.quality must be provided for compressed audio codecs.");
+        if (void 0 !== RR.quality && void 0 !== JR) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
+        if (void 0 !== RR.quality && !(RR.quality instanceof wR)) throw new TypeError("config.quality, when provided, must be a Quality.");
+        if (void 0 !== JR && !(JR instanceof wR) && (!Number.isInteger(JR) || JR <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
+        if (void 0 !== RR.transform) {
+          if ("object" !== typeof RR.transform || !RR.transform) throw new TypeError("config.transform, when provided, must be an object.");
+          if (void 0 !== RR.transform.numberOfChannels && (!Number.isInteger(RR.transform.numberOfChannels) || RR.transform.numberOfChannels <= 0)) throw new TypeError("config.transform.numberOfChannels, when provided, must be a positive integer.");
+          if (void 0 !== RR.transform.sampleRate && (!Number.isInteger(RR.transform.sampleRate) || RR.transform.sampleRate <= 0)) throw new TypeError("config.transform.sampleRate, when provided, must be a positive integer.");
+          if (void 0 !== RR.transform.sampleFormat && !["u8", "s16", "s32", "f32"].includes(RR.transform.sampleFormat)) throw new TypeError("config.transform.sampleFormat, when provided, must be one of: u8, s16, s32, f32.");
+          if (void 0 !== RR.transform.process && "function" !== typeof RR.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.")
         }
-        if (void 0 !== WW.onEncodedPacket && "function" !== typeof WW.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
-        if (void 0 !== WW.onEncoderConfig && "function" !== typeof WW.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
-        if (void 0 !== WW.onEncodedSample && "function" !== typeof WW.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
-        tW(WW.codec, WW)
+        if (void 0 !== RR.onEncodedPacket && "function" !== typeof RR.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
+        if (void 0 !== RR.onEncoderConfig && "function" !== typeof RR.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
+        if (void 0 !== RR.onEncodedSample && "function" !== typeof RR.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
+        VR(RR.codec, RR)
       },
-      tW = (WW, iW) => {
-        if (!iW || "object" !== typeof iW) throw new TypeError("Encoding options must be an object.");
-        const OW = iW.bitrateMode;
-        if (void 0 !== OW && !["constant", "variable"].includes(OW)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if (void 0 !== iW.fullCodecString && "string" !== typeof iW.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
-        if (void 0 !== iW.fullCodecString && (0, mW.S)(iW.fullCodecString) !== WW) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${WW}).`)
+      VR = (RR, JR) => {
+        if (!JR || "object" !== typeof JR) throw new TypeError("Encoding options must be an object.");
+        const GR = JR.bitrateMode;
+        if (void 0 !== GR && !["constant", "variable"].includes(GR)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if (void 0 !== JR.fullCodecString && "string" !== typeof JR.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
+        if (void 0 !== JR.fullCodecString && (0, yR.P)(JR.fullCodecString) !== RR) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${RR}).`)
       },
-      ZW = WW => {
-        const iW = WW.bitrateMode;
+      KR = RR => {
+        const JR = RR.bitrateMode;
         return {
-          codec: WW.fullCodecString ?? (0, mW.E)(WW.codec, WW.numberOfChannels, WW.sampleRate),
-          numberOfChannels: WW.numberOfChannels,
-          sampleRate: WW.sampleRate,
-          bitrate: WW.quality?._toAudioBitrate(WW.codec),
-          bitrateMode: WW.quality?._bitrateMode ?? iW,
-          ...(0, mW.N)(WW.codec)
+          codec: RR.fullCodecString ?? (0, yR.A)(RR.codec, RR.numberOfChannels, RR.sampleRate),
+          numberOfChannels: RR.numberOfChannels,
+          sampleRate: RR.sampleRate,
+          bitrate: RR.quality?._toAudioBitrate(RR.codec),
+          bitrateMode: RR.quality?._bitrateMode ?? JR,
+          ...(0, yR.J)(RR.codec)
         }
       };
-    class xW {
-      constructor(WW) {
-        if ("number" !== typeof WW && "string" !== typeof WW || (WW = {
-            quality: WW
-          }), !WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (void 0 !== WW.bitrateMode && !["constant", "variable"].includes(WW.bitrateMode)) throw new TypeError("options.bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if ("quality" in WW) {
-          if ("string" === typeof WW.quality ? !(WW.quality in lW) : "number" !== typeof WW.quality || Number.isNaN(WW.quality)) throw new TypeError("options.quality must be a number, or one of 'very-low', 'low', 'medium', 'high' or 'very-high'.");
-          if (void 0 !== WW.preferBitrate && "boolean" !== typeof WW.preferBitrate) throw new TypeError("options.preferBitrate, when provided, must be a boolean.");
-          if ("bitrate" in WW || "quantizer" in WW) throw new TypeError("options.quality cannot be combined with options.bitrate or options.quantizer.");
-          this._quality = "string" === typeof WW.quality ? lW[WW.quality] : WW.quality, this._preferBitrate = WW.preferBitrate ?? !1, this._bitrate = void 0, this._quantizer = void 0
+    class wR {
+      constructor(RR) {
+        if ("number" !== typeof RR && "string" !== typeof RR || (RR = {
+            quality: RR
+          }), !RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (void 0 !== RR.bitrateMode && !["constant", "variable"].includes(RR.bitrateMode)) throw new TypeError("options.bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if ("quality" in RR) {
+          if ("string" === typeof RR.quality ? !(RR.quality in rR) : "number" !== typeof RR.quality || Number.isNaN(RR.quality)) throw new TypeError("options.quality must be a number, or one of 'very-low', 'low', 'medium', 'high' or 'very-high'.");
+          if (void 0 !== RR.preferBitrate && "boolean" !== typeof RR.preferBitrate) throw new TypeError("options.preferBitrate, when provided, must be a boolean.");
+          if ("bitrate" in RR || "quantizer" in RR) throw new TypeError("options.quality cannot be combined with options.bitrate or options.quantizer.");
+          this._quality = "string" === typeof RR.quality ? rR[RR.quality] : RR.quality, this._preferBitrate = RR.preferBitrate ?? !1, this._bitrate = void 0, this._quantizer = void 0
         } else {
-          if (void 0 !== WW.bitrate && (!Number.isInteger(WW.bitrate) || WW.bitrate <= 0)) throw new TypeError("options.bitrate, when provided, must be a positive integer.");
-          if (void 0 !== WW.quantizer && (!Number.isInteger(WW.quantizer) || WW.quantizer < 0)) throw new TypeError("options.quantizer, when provided, must be a non-negative integer.");
-          if (void 0 === WW.bitrate && void 0 === WW.quantizer) throw new TypeError("At least one of options.bitrate or options.quantizer must be set.");
-          if ("preferBitrate" in WW) throw new TypeError("options.preferBitrate can only be combined with options.quality.");
-          this._quality = void 0, this._preferBitrate = !1, this._bitrate = WW.bitrate, this._quantizer = WW.quantizer
+          if (void 0 !== RR.bitrate && (!Number.isInteger(RR.bitrate) || RR.bitrate <= 0)) throw new TypeError("options.bitrate, when provided, must be a positive integer.");
+          if (void 0 !== RR.quantizer && (!Number.isInteger(RR.quantizer) || RR.quantizer < 0)) throw new TypeError("options.quantizer, when provided, must be a non-negative integer.");
+          if (void 0 === RR.bitrate && void 0 === RR.quantizer) throw new TypeError("At least one of options.bitrate or options.quantizer must be set.");
+          if ("preferBitrate" in RR) throw new TypeError("options.preferBitrate can only be combined with options.quality.");
+          this._quality = void 0, this._preferBitrate = !1, this._bitrate = RR.bitrate, this._quantizer = RR.quantizer
         }
-        this._bitrateMode = WW.bitrateMode
+        this._bitrateMode = RR.bitrateMode
       }
-      _toVideoRateControl(WW, iW, OW, mW) {
-        const NW = AW[WW];
-        let PW, LW = null,
-          cW = this._bitrateMode ?? mW ?? "variable";
+      _toVideoRateControl(RR, JR, GR, yR) {
+        const uR = eR[RR];
+        let ZR, qR = null,
+          iR = this._bitrateMode ?? yR ?? "variable";
         if (void 0 !== this._quantizer) {
-          if (NW)
-            if (this._quantizer < NW.min || this._quantizer > NW.max) {
-              if (void 0 === this._bitrate) throw new Error(`Quantizer ${this._quantizer} is out of range for codec '${WW}'; must be between ${NW.min} and ${NW.max}.`)
-            } else LW = this._quantizer, void 0 === this._bitrate && (cW = "quantizer");
-          else if (void 0 === this._bitrate) throw new Error(`Codec '${WW}' does not support quantizer-based encoding. Provide a bitrate in the Quality to define a fallback.`)
-        } else void 0 === this._bitrate && NW && !this._preferBitrate && ((0, EW.K)(void 0 !== this._quality), LW = (0, EW.X)(Math.round((0, EW.nc)(NW.worst, NW.best, this._quality)), NW.min, NW.max));
-        if (void 0 !== this._bitrate) PW = this._bitrate;
+          if (uR)
+            if (this._quantizer < uR.min || this._quantizer > uR.max) {
+              if (void 0 === this._bitrate) throw new Error(`Quantizer ${this._quantizer} is out of range for codec '${RR}'; must be between ${uR.min} and ${uR.max}.`)
+            } else qR = this._quantizer, void 0 === this._bitrate && (iR = "quantizer");
+          else if (void 0 === this._bitrate) throw new Error(`Codec '${RR}' does not support quantizer-based encoding. Provide a bitrate in the Quality to define a fallback.`)
+        } else void 0 === this._bitrate && uR && !this._preferBitrate && ((0, tR.I)(void 0 !== this._quality), qR = (0, tR.V)(Math.round((0, tR.ac)(uR.worst, uR.best, this._quality)), uR.min, uR.max));
+        if (void 0 !== this._bitrate) ZR = this._bitrate;
         else {
-          let mW = this._quality;
-          void 0 === mW && ((0, EW.K)(null !== LW && NW), mW = (0, EW.X)((LW - NW.worst) / (NW.best - NW.worst), 0, 1)), PW = jW(WW, iW, OW, bW(mW))
+          let yR = this._quality;
+          void 0 === yR && ((0, tR.I)(null !== qR && uR), yR = (0, tR.V)((qR - uR.worst) / (uR.best - uR.worst), 0, 1)), ZR = LR(RR, JR, GR, aR(yR))
         }
         return {
-          quantizer: LW,
-          bitrate: PW,
-          bitrateMode: cW
+          quantizer: qR,
+          bitrate: ZR,
+          bitrateMode: iR
         }
       }
-      _toVideoBitrate(WW, iW, OW) {
-        return void 0 !== this._bitrate ? this._bitrate : ((0, EW.K)(void 0 !== this._quality), jW(WW, iW, OW, bW(this._quality)))
+      _toVideoBitrate(RR, JR, GR) {
+        return void 0 !== this._bitrate ? this._bitrate : ((0, tR.I)(void 0 !== this._quality), LR(RR, JR, GR, aR(this._quality)))
       }
-      _toAudioBitrate(WW) {
-        if (mW.r.includes(WW) || "flac" === WW) return;
+      _toAudioBitrate(RR) {
+        if (yR.p.includes(RR) || "flac" === RR) return;
         if (void 0 !== this._bitrate) return this._bitrate;
         if (void 0 === this._quality) throw new Error("This Quality defines neither a quality level nor a bitrate and therefore cannot be used for audio encoding.");
-        const iW = bW(this._quality),
-          OW = {
+        const JR = aR(this._quality),
+          GR = {
             aac: 128e3,
             opus: 64e3,
             mp3: 16e4,
@@ -2669,26 +2669,26 @@ export const modules = {
             ac3: 384e3,
             eac3: 192e3,
             dts: 768e3
-          } [WW];
-        if (!OW) throw new Error(`Unhandled codec: ${WW}`);
-        let EW = OW * iW;
-        if ("aac" === WW) {
-          EW = [96e3, 128e3, 16e4, 192e3].reduce(((WW, iW) => Math.abs(iW - EW) < Math.abs(WW - EW) ? iW : WW))
-        } else if ("opus" === WW || "vorbis" === WW) EW = Math.max(6e3, EW);
-        else if ("mp3" === WW) {
-          EW = [8e3, 16e3, 24e3, 32e3, 4e4, 48e3, 64e3, 8e4, 96e3, 112e3, 128e3, 16e4, 192e3, 224e3, 256e3, 32e4].reduce(((WW, iW) => Math.abs(iW - EW) < Math.abs(WW - EW) ? iW : WW))
+          } [RR];
+        if (!GR) throw new Error(`Unhandled codec: ${RR}`);
+        let tR = GR * JR;
+        if ("aac" === RR) {
+          tR = [96e3, 128e3, 16e4, 192e3].reduce(((RR, JR) => Math.abs(JR - tR) < Math.abs(RR - tR) ? JR : RR))
+        } else if ("opus" === RR || "vorbis" === RR) tR = Math.max(6e3, tR);
+        else if ("mp3" === RR) {
+          tR = [8e3, 16e3, 24e3, 32e3, 4e4, 48e3, 64e3, 8e4, 96e3, 112e3, 128e3, 16e4, 192e3, 224e3, 256e3, 32e4].reduce(((RR, JR) => Math.abs(JR - tR) < Math.abs(RR - tR) ? JR : RR))
         }
-        return 1e3 * Math.round(EW / 1e3)
+        return 1e3 * Math.round(tR / 1e3)
       }
     }
-    const lW = {
+    const rR = {
         "very-low": 0,
         low: .25,
         medium: .5,
         high: .75,
         "very-high": 1
       },
-      AW = {
+      eR = {
         avc: {
           min: 0,
           max: 51,
@@ -2714,94 +2714,94 @@ export const modules = {
           best: 80
         }
       },
-      bW = WW => .3 * Math.exp(2.5538 * WW),
-      jW = (WW, iW, OW, mW) => {
-        const EW = iW * OW,
-          NW = 3e6,
-          PW = NW * Math.pow(EW / 2073600, .95) * {
+      aR = RR => .3 * Math.exp(2.5538 * RR),
+      LR = (RR, JR, GR, yR) => {
+        const tR = JR * GR,
+          uR = 3e6,
+          ZR = uR * Math.pow(tR / 2073600, .95) * {
             avc: 1,
             hevc: .6,
             vp9: .6,
             av1: .4,
             vp8: 1.2,
             prores: 73.33333333333333
-          } [WW] * mW;
-        return 1e3 * Math.ceil(PW / 1e3)
+          } [RR] * yR;
+        return 1e3 * Math.ceil(ZR / 1e3)
       },
-      UW = (WW, iW) => "avc" === WW ? {
+      nR = (RR, JR) => "avc" === RR ? {
         avc: {
-          quantizer: iW
+          quantizer: JR
         }
-      } : "hevc" === WW ? {
+      } : "hevc" === RR ? {
         hevc: {
-          quantizer: iW
+          quantizer: JR
         }
-      } : "vp9" === WW ? {
+      } : "vp9" === RR ? {
         vp9: {
-          quantizer: iW
+          quantizer: JR
         }
-      } : "av1" === WW ? {
+      } : "av1" === RR ? {
         av1: {
-          quantizer: iW
+          quantizer: JR
         }
-      } : void(0, EW.K)(!1),
-      kW = (WW, iW) => void 0 !== WW ? WW : void 0 !== iW ? iW instanceof xW ? iW : new xW({
-        bitrate: iW
+      } : void(0, tR.I)(!1),
+      UR = (RR, JR) => void 0 !== RR ? RR : void 0 !== JR ? JR instanceof wR ? JR : new wR({
+        bitrate: JR
       }) : void 0
   },
-  41162: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  41147: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW, EW = OW(41127);
-    ! function(WW) {
-      WW[WW.Silent = 0] = "Silent", WW[WW.Errors = 1] = "Errors", WW[WW.Warnings = 2] = "Warnings", WW[WW.Info = 3] = "Info"
-    }(mW || (mW = {}));
-    class NW {
+    var yR, tR = GR(41115);
+    ! function(RR) {
+      RR[RR.Silent = 0] = "Silent", RR[RR.Errors = 1] = "Errors", RR[RR.Warnings = 2] = "Warnings", RR[RR.Info = 3] = "Info"
+    }(yR || (yR = {}));
+    class uR {
       constructor() {}
       static get level() {
-        return NW._level
+        return uR._level
       }
-      static set level(WW) {
-        if (WW !== mW.Silent && WW !== mW.Errors && WW !== mW.Warnings && WW !== mW.Info) throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");
-        NW._level = WW
+      static set level(RR) {
+        if (RR !== yR.Silent && RR !== yR.Errors && RR !== yR.Warnings && RR !== yR.Info) throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");
+        uR._level = RR
       }
       static get _emitter() {
-        return NW._emitterInstance ??= new EW.n
+        return uR._emitterInstance ??= new tR.i
       }
-      static on(WW, iW, OW) {
-        return NW._emitter.on(WW, iW, OW)
+      static on(RR, JR, GR) {
+        return uR._emitter.on(RR, JR, GR)
       }
       static _error() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        NW._emitter._emit("error", iW), NW._level >= mW.Errors && console.error(...iW)
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        uR._emitter._emit("error", JR), uR._level >= yR.Errors && console.error(...JR)
       }
       static _warn() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        NW._emitter._emit("warn", iW), NW._level >= mW.Warnings && console.warn(...iW)
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        uR._emitter._emit("warn", JR), uR._level >= yR.Warnings && console.warn(...JR)
       }
       static _info() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        NW._emitter._emit("info", iW), NW._level >= mW.Info && console.info(...iW)
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        uR._emitter._emit("info", JR), uR._level >= yR.Info && console.info(...JR)
       }
     }
-    NW._level = mW.Info, NW._emitterInstance = null
+    uR._level = yR.Info, uR._emitterInstance = null
   },
-  41205: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => wW,
-      g: () => tW,
-      k: () => cW,
-      n: () => ZW,
-      o: () => PW
+  41192: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR,
+      c: () => VR,
+      f: () => iR,
+      j: () => KR,
+      m: () => ZR
     });
-    OW(41149);
-    var mW = OW(41156);
-    OW(41127), OW(41171);
-    var EW = OW(41190);
-    OW(41198), OW(41196);
-    OW(41160), OW(41162), "function" === typeof SuppressedError && SuppressedError;
-    class NW {
+    GR(41128);
+    var yR = GR(41133);
+    GR(41115), GR(41158);
+    var tR = GR(41179);
+    GR(41187), GR(41182);
+    GR(41140), GR(41147), "function" === typeof SuppressedError && SuppressedError;
+    class uR {
       constructor() {
         this._connectedTrack = null, this._closingPromise = null, this._closed = !1, this._nominalBitrate = null
       }
@@ -2813,123 +2813,123 @@ export const modules = {
         if (this._closed) throw new Error("Source is closed.")
       }
       async _start() {}
-      async _flushAndClose(WW) {}
+      async _flushAndClose(RR) {}
       close() {
         if (this._closingPromise) return;
-        const WW = this._connectedTrack;
-        if (!WW) throw new Error("Cannot call close without connecting the source to an output track.");
-        if ("pending" === WW.output.state) throw new Error("Cannot call close before output has been started.");
+        const RR = this._connectedTrack;
+        if (!RR) throw new Error("Cannot call close without connecting the source to an output track.");
+        if ("pending" === RR.output.state) throw new Error("Cannot call close before output has been started.");
         this._closingPromise = (async () => {
-          await this._flushAndClose(!1), this._closed = !0, "finalizing" !== WW.output.state && "finalized" !== WW.output.state && WW.output._muxer.onTrackClose(WW)
+          await this._flushAndClose(!1), this._closed = !0, "finalizing" !== RR.output.state && "finalized" !== RR.output.state && RR.output._muxer.onTrackClose(RR)
         })()
       }
-      async _flushOrWaitForOngoingClose(WW) {
+      async _flushOrWaitForOngoingClose(RR) {
         return this._closingPromise ??= (async () => {
-          await this._flushAndClose(WW), this._closed = !0
+          await this._flushAndClose(RR), this._closed = !0
         })()
       }
     }
-    class PW extends NW {
-      constructor(WW) {
-        if (super(), !mW.x.includes(WW)) throw new TypeError(`Invalid video codec '${WW}'. Must be one of: ${mW.x.join(", ")}.`);
-        this._codec = WW
+    class ZR extends uR {
+      constructor(RR) {
+        if (super(), !yR.v.includes(RR)) throw new TypeError(`Invalid video codec '${RR}'. Must be one of: ${yR.v.join(", ")}.`);
+        this._codec = RR
       }
     }
-    const LW = (WW, iW) => {
-      if (WW.metadata.hasOnlyKeyPackets && "key" !== iW.type) throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")
+    const qR = (RR, JR) => {
+      if (RR.metadata.hasOnlyKeyPackets && "key" !== JR.type) throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")
     };
-    class cW extends PW {
-      constructor(WW) {
-        super(WW)
+    class iR extends ZR {
+      constructor(RR) {
+        super(RR)
       }
-      add(WW, iW) {
-        if (!(WW instanceof EW.c)) throw new TypeError("packet must be an EncodedPacket.");
-        if (WW.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
-        if (void 0 !== iW && (!iW || "object" !== typeof iW)) throw new TypeError("meta, when provided, must be an object.");
-        return this._ensureValidAdd(), LW(this._connectedTrack, WW), this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack, WW, iW)
-      }
-    }
-    class wW extends NW {
-      constructor(WW) {
-        if (super(), !mW.d.includes(WW)) throw new TypeError(`Invalid audio codec '${WW}'. Must be one of: ${mW.d.join(", ")}.`);
-        this._codec = WW
+      add(RR, JR) {
+        if (!(RR instanceof tR.c)) throw new TypeError("packet must be an EncodedPacket.");
+        if (RR.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
+        if (void 0 !== JR && (!JR || "object" !== typeof JR)) throw new TypeError("meta, when provided, must be an object.");
+        return this._ensureValidAdd(), qR(this._connectedTrack, RR), this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack, RR, JR)
       }
     }
-    class tW extends wW {
-      constructor(WW) {
-        super(WW)
-      }
-      add(WW, iW) {
-        if (!(WW instanceof EW.c)) throw new TypeError("packet must be an EncodedPacket.");
-        if (WW.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
-        if (void 0 !== iW && (!iW || "object" !== typeof iW)) throw new TypeError("meta, when provided, must be an object.");
-        return this._ensureValidAdd(), this._connectedTrack.output._muxer.addEncodedAudioPacket(this._connectedTrack, WW, iW)
+    class fR extends uR {
+      constructor(RR) {
+        if (super(), !yR.d.includes(RR)) throw new TypeError(`Invalid audio codec '${RR}'. Must be one of: ${yR.d.join(", ")}.`);
+        this._codec = RR
       }
     }
-    class ZW extends NW {
-      constructor(WW) {
-        if (super(), !mW.v.includes(WW)) throw new TypeError(`Invalid subtitle codec '${WW}'. Must be one of: ${mW.v.join(", ")}.`);
-        this._codec = WW
+    class VR extends fR {
+      constructor(RR) {
+        super(RR)
+      }
+      add(RR, JR) {
+        if (!(RR instanceof tR.c)) throw new TypeError("packet must be an EncodedPacket.");
+        if (RR.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
+        if (void 0 !== JR && (!JR || "object" !== typeof JR)) throw new TypeError("meta, when provided, must be an object.");
+        return this._ensureValidAdd(), this._connectedTrack.output._muxer.addEncodedAudioPacket(this._connectedTrack, RR, JR)
+      }
+    }
+    class KR extends uR {
+      constructor(RR) {
+        if (super(), !yR.t.includes(RR)) throw new TypeError(`Invalid subtitle codec '${RR}'. Must be one of: ${yR.t.join(", ")}.`);
+        this._codec = RR
       }
     }
   },
-  41134: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      g: () => cW,
-      i: () => EW,
-      j: () => LW,
-      l: () => PW,
-      m: () => wW
+  41119: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      g: () => iR,
+      k: () => tR,
+      n: () => qR,
+      o: () => ZR,
+      p: () => fR
     });
-    var mW = OW(41127);
-    class EW {
-      constructor(WW, iW) {
-        if (this.data = WW, this.mimeType = iW, !(WW instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if ("string" !== typeof iW) throw new TypeError("mimeType must be a string.")
+    var yR = GR(41115);
+    class tR {
+      constructor(RR, JR) {
+        if (this.data = RR, this.mimeType = JR, !(RR instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if ("string" !== typeof JR) throw new TypeError("mimeType must be a string.")
       }
     }
-    class NW {
-      constructor(WW, iW, OW, mW) {
-        if (this.data = WW, this.mimeType = iW, this.name = OW, this.description = mW, !(WW instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if (void 0 !== iW && "string" !== typeof iW) throw new TypeError("mimeType, when provided, must be a string.");
-        if (void 0 !== OW && "string" !== typeof OW) throw new TypeError("name, when provided, must be a string.");
-        if (void 0 !== mW && "string" !== typeof mW) throw new TypeError("description, when provided, must be a string.")
+    class uR {
+      constructor(RR, JR, GR, yR) {
+        if (this.data = RR, this.mimeType = JR, this.name = GR, this.description = yR, !(RR instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if (void 0 !== JR && "string" !== typeof JR) throw new TypeError("mimeType, when provided, must be a string.");
+        if (void 0 !== GR && "string" !== typeof GR) throw new TypeError("name, when provided, must be a string.");
+        if (void 0 !== yR && "string" !== typeof yR) throw new TypeError("description, when provided, must be a string.")
       }
     }
-    const PW = WW => {
-        if (!WW || "object" !== typeof WW) throw new TypeError("tags must be an object.");
-        if (void 0 !== WW.title && "string" !== typeof WW.title) throw new TypeError("tags.title, when provided, must be a string.");
-        if (void 0 !== WW.description && "string" !== typeof WW.description) throw new TypeError("tags.description, when provided, must be a string.");
-        if (void 0 !== WW.artist && "string" !== typeof WW.artist) throw new TypeError("tags.artist, when provided, must be a string.");
-        if (void 0 !== WW.album && "string" !== typeof WW.album) throw new TypeError("tags.album, when provided, must be a string.");
-        if (void 0 !== WW.albumArtist && "string" !== typeof WW.albumArtist) throw new TypeError("tags.albumArtist, when provided, must be a string.");
-        if (void 0 !== WW.trackNumber && (!Number.isInteger(WW.trackNumber) || WW.trackNumber <= 0)) throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");
-        if (void 0 !== WW.tracksTotal && (!Number.isInteger(WW.tracksTotal) || WW.tracksTotal <= 0)) throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");
-        if (void 0 !== WW.discNumber && (!Number.isInteger(WW.discNumber) || WW.discNumber <= 0)) throw new TypeError("tags.discNumber, when provided, must be a positive integer.");
-        if (void 0 !== WW.discsTotal && (!Number.isInteger(WW.discsTotal) || WW.discsTotal <= 0)) throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");
-        if (void 0 !== WW.genre && "string" !== typeof WW.genre) throw new TypeError("tags.genre, when provided, must be a string.");
-        if (void 0 !== WW.date && (!(WW.date instanceof Date) || Number.isNaN(WW.date.getTime()))) throw new TypeError("tags.date, when provided, must be a valid Date.");
-        if (void 0 !== WW.beatsPerMinute && (!Number.isInteger(WW.beatsPerMinute) || WW.beatsPerMinute <= 0)) throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");
-        if (void 0 !== WW.lyrics && "string" !== typeof WW.lyrics) throw new TypeError("tags.lyrics, when provided, must be a string.");
-        if (void 0 !== WW.images) {
-          if (!Array.isArray(WW.images)) throw new TypeError("tags.images, when provided, must be an array.");
-          for (const iW of WW.images) {
-            if (!iW || "object" !== typeof iW) throw new TypeError("Each image in tags.images must be an object.");
-            if (!(iW.data instanceof Uint8Array)) throw new TypeError("Each image.data must be a Uint8Array.");
-            if ("string" !== typeof iW.mimeType) throw new TypeError("Each image.mimeType must be a string.");
-            if (!["coverFront", "coverBack", "unknown"].includes(iW.kind)) throw new TypeError("Each image.kind must be 'coverFront', 'coverBack', or 'unknown'.")
+    const ZR = RR => {
+        if (!RR || "object" !== typeof RR) throw new TypeError("tags must be an object.");
+        if (void 0 !== RR.title && "string" !== typeof RR.title) throw new TypeError("tags.title, when provided, must be a string.");
+        if (void 0 !== RR.description && "string" !== typeof RR.description) throw new TypeError("tags.description, when provided, must be a string.");
+        if (void 0 !== RR.artist && "string" !== typeof RR.artist) throw new TypeError("tags.artist, when provided, must be a string.");
+        if (void 0 !== RR.album && "string" !== typeof RR.album) throw new TypeError("tags.album, when provided, must be a string.");
+        if (void 0 !== RR.albumArtist && "string" !== typeof RR.albumArtist) throw new TypeError("tags.albumArtist, when provided, must be a string.");
+        if (void 0 !== RR.trackNumber && (!Number.isInteger(RR.trackNumber) || RR.trackNumber <= 0)) throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");
+        if (void 0 !== RR.tracksTotal && (!Number.isInteger(RR.tracksTotal) || RR.tracksTotal <= 0)) throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");
+        if (void 0 !== RR.discNumber && (!Number.isInteger(RR.discNumber) || RR.discNumber <= 0)) throw new TypeError("tags.discNumber, when provided, must be a positive integer.");
+        if (void 0 !== RR.discsTotal && (!Number.isInteger(RR.discsTotal) || RR.discsTotal <= 0)) throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");
+        if (void 0 !== RR.genre && "string" !== typeof RR.genre) throw new TypeError("tags.genre, when provided, must be a string.");
+        if (void 0 !== RR.date && (!(RR.date instanceof Date) || Number.isNaN(RR.date.getTime()))) throw new TypeError("tags.date, when provided, must be a valid Date.");
+        if (void 0 !== RR.beatsPerMinute && (!Number.isInteger(RR.beatsPerMinute) || RR.beatsPerMinute <= 0)) throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");
+        if (void 0 !== RR.lyrics && "string" !== typeof RR.lyrics) throw new TypeError("tags.lyrics, when provided, must be a string.");
+        if (void 0 !== RR.images) {
+          if (!Array.isArray(RR.images)) throw new TypeError("tags.images, when provided, must be an array.");
+          for (const JR of RR.images) {
+            if (!JR || "object" !== typeof JR) throw new TypeError("Each image in tags.images must be an object.");
+            if (!(JR.data instanceof Uint8Array)) throw new TypeError("Each image.data must be a Uint8Array.");
+            if ("string" !== typeof JR.mimeType) throw new TypeError("Each image.mimeType must be a string.");
+            if (!["coverFront", "coverBack", "unknown"].includes(JR.kind)) throw new TypeError("Each image.kind must be 'coverFront', 'coverBack', or 'unknown'.")
           }
         }
-        if (void 0 !== WW.comment && "string" !== typeof WW.comment) throw new TypeError("tags.comment, when provided, must be a string.");
-        if (void 0 !== WW.raw) {
-          if (!WW.raw || "object" !== typeof WW.raw) throw new TypeError("tags.raw, when provided, must be an object.");
-          for (const iW of Object.values(WW.raw))
-            if (null !== iW && "string" !== typeof iW && (!Array.isArray(iW) || !iW.every((WW => "string" === typeof WW))) && !(iW instanceof Uint8Array) && !(iW instanceof EW) && !(iW instanceof NW) && !(0, mW._b)(iW)) throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")
+        if (void 0 !== RR.comment && "string" !== typeof RR.comment) throw new TypeError("tags.comment, when provided, must be a string.");
+        if (void 0 !== RR.raw) {
+          if (!RR.raw || "object" !== typeof RR.raw) throw new TypeError("tags.raw, when provided, must be an object.");
+          for (const JR of Object.values(RR.raw))
+            if (null !== JR && "string" !== typeof JR && (!Array.isArray(JR) || !JR.every((RR => "string" === typeof RR))) && !(JR instanceof Uint8Array) && !(JR instanceof tR) && !(JR instanceof uR) && !(0, yR.Ob)(JR)) throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")
         }
       },
-      LW = WW => void 0 === WW.title && void 0 === WW.description && void 0 === WW.artist && void 0 === WW.album && void 0 === WW.albumArtist && void 0 === WW.trackNumber && void 0 === WW.tracksTotal && void 0 === WW.discNumber && void 0 === WW.discsTotal && void 0 === WW.genre && void 0 === WW.beatsPerMinute && void 0 === WW.date && void 0 === WW.lyrics && (!WW.images || 0 === WW.images.length) && void 0 === WW.comment && (void 0 === WW.raw || 0 === Object.keys(WW.raw).length),
-      cW = {
+      qR = RR => void 0 === RR.title && void 0 === RR.description && void 0 === RR.artist && void 0 === RR.album && void 0 === RR.albumArtist && void 0 === RR.trackNumber && void 0 === RR.tracksTotal && void 0 === RR.discNumber && void 0 === RR.discsTotal && void 0 === RR.genre && void 0 === RR.beatsPerMinute && void 0 === RR.date && void 0 === RR.lyrics && (!RR.images || 0 === RR.images.length) && void 0 === RR.comment && (void 0 === RR.raw || 0 === Object.keys(RR.raw).length),
+      iR = {
         default: !0,
         primary: !0,
         forced: !1,
@@ -2938,257 +2938,257 @@ export const modules = {
         hearingImpaired: !1,
         visuallyImpaired: !1
       },
-      wW = WW => {
-        if (!WW || "object" !== typeof WW) throw new TypeError("disposition must be an object.");
-        if (void 0 !== WW.default && "boolean" !== typeof WW.default) throw new TypeError("disposition.default must be a boolean.");
-        if (void 0 !== WW.primary && "boolean" !== typeof WW.primary) throw new TypeError("disposition.primary must be a boolean.");
-        if (void 0 !== WW.forced && "boolean" !== typeof WW.forced) throw new TypeError("disposition.forced must be a boolean.");
-        if (void 0 !== WW.original && "boolean" !== typeof WW.original) throw new TypeError("disposition.original must be a boolean.");
-        if (void 0 !== WW.commentary && "boolean" !== typeof WW.commentary) throw new TypeError("disposition.commentary must be a boolean.");
-        if (void 0 !== WW.hearingImpaired && "boolean" !== typeof WW.hearingImpaired) throw new TypeError("disposition.hearingImpaired must be a boolean.");
-        if (void 0 !== WW.visuallyImpaired && "boolean" !== typeof WW.visuallyImpaired) throw new TypeError("disposition.visuallyImpaired must be a boolean.")
+      fR = RR => {
+        if (!RR || "object" !== typeof RR) throw new TypeError("disposition must be an object.");
+        if (void 0 !== RR.default && "boolean" !== typeof RR.default) throw new TypeError("disposition.default must be a boolean.");
+        if (void 0 !== RR.primary && "boolean" !== typeof RR.primary) throw new TypeError("disposition.primary must be a boolean.");
+        if (void 0 !== RR.forced && "boolean" !== typeof RR.forced) throw new TypeError("disposition.forced must be a boolean.");
+        if (void 0 !== RR.original && "boolean" !== typeof RR.original) throw new TypeError("disposition.original must be a boolean.");
+        if (void 0 !== RR.commentary && "boolean" !== typeof RR.commentary) throw new TypeError("disposition.commentary must be a boolean.");
+        if (void 0 !== RR.hearingImpaired && "boolean" !== typeof RR.hearingImpaired) throw new TypeError("disposition.hearingImpaired must be a boolean.");
+        if (void 0 !== RR.visuallyImpaired && "boolean" !== typeof RR.visuallyImpaired) throw new TypeError("disposition.visuallyImpaired must be a boolean.")
       }
   },
-  41127: (WW, iW, OW) => {
-    function mW(WW) {
-      if (!WW) throw new Error("Assertion failed.")
+  41115: (RR, JR, GR) => {
+    function yR(RR) {
+      if (!RR) throw new Error("Assertion failed.")
     }
-    OW.d(iW, {
-      $: () => fi,
-      $c: () => RW,
-      A: () => rW,
-      Bb: () => eW,
-      Bd: () => KW,
-      Cc: () => Si,
-      E: () => Ji,
-      Ec: () => ii,
-      F: () => Ti,
-      Fb: () => xi,
-      Gc: () => pW,
-      Hb: () => Ai,
-      Ic: () => sW,
-      J: () => CW,
-      Jc: () => MW,
-      K: () => mW,
-      Kb: () => ti,
-      Mc: () => DW,
-      Nb: () => mi,
-      Nc: () => ZW,
-      O: () => VW,
-      Pc: () => FW,
-      Rb: () => HW,
-      S: () => Mi,
-      Sc: () => zW,
-      Tc: () => lW,
-      Ub: () => kW,
-      V: () => gW,
-      Vc: () => Vi,
-      W: () => cW,
-      X: () => GW,
-      Xb: () => Yi,
-      Yc: () => qW,
-      _b: () => qi,
-      ac: () => ji,
-      bb: () => Ui,
-      c: () => vW,
-      cc: () => UW,
-      cd: () => BW,
-      ed: () => Hi,
-      fb: () => dW,
-      fc: () => ci,
-      g: () => nW,
-      gd: () => JW,
-      hc: () => yi,
-      j: () => Pi,
-      jb: () => bW,
-      kc: () => ki,
-      kd: () => hW,
-      lb: () => Ni,
-      ld: () => Xi,
-      mb: () => wW,
-      mc: () => jW,
-      n: () => Bi,
-      nb: () => fW,
-      nc: () => IW,
-      oc: () => li,
-      od: () => YW,
-      pd: () => SW,
-      q: () => LW,
-      qb: () => QW,
-      qc: () => aW,
-      qd: () => Ki,
-      r: () => oW,
-      t: () => NW,
-      td: () => ni,
-      u: () => Ei,
-      ub: () => XW,
-      uc: () => AW,
-      v: () => uW,
-      x: () => TW,
-      xd: () => Ci,
-      yb: () => Wi,
-      yc: () => PW,
-      zb: () => si
+    GR.d(JR, {
+      $b: () => LR,
+      B: () => FR,
+      Bc: () => TR,
+      C: () => pJ,
+      Cc: () => rR,
+      Db: () => yJ,
+      E: () => lJ,
+      Ec: () => cJ,
+      H: () => zR,
+      Hb: () => bR,
+      I: () => yR,
+      Ic: () => dR,
+      Kb: () => UR,
+      M: () => PR,
+      Mc: () => ER,
+      Nb: () => MJ,
+      Nc: () => jR,
+      O: () => AJ,
+      Ob: () => SJ,
+      P: () => oR,
+      Qc: () => gJ,
+      Rb: () => LJ,
+      S: () => iR,
+      Tb: () => nR,
+      Tc: () => pR,
+      Ub: () => iJ,
+      V: () => YR,
+      Vc: () => gR,
+      W: () => PJ,
+      Xb: () => BJ,
+      Y: () => nJ,
+      Yc: () => mJ,
+      _: () => NR,
+      _b: () => UJ,
+      ac: () => kR,
+      ad: () => MR,
+      c: () => HR,
+      cb: () => aR,
+      cc: () => rJ,
+      cd: () => XR,
+      db: () => uJ,
+      dc: () => QR,
+      e: () => vR,
+      f: () => ZJ,
+      gc: () => eR,
+      gd: () => CJ,
+      hb: () => fR,
+      i: () => zJ,
+      ib: () => mR,
+      id: () => bJ,
+      jb: () => hR,
+      kc: () => ZR,
+      m: () => qR,
+      mc: () => XJ,
+      md: () => IJ,
+      nb: () => SR,
+      o: () => xR,
+      ob: () => RJ,
+      pb: () => WJ,
+      pc: () => JJ,
+      pd: () => CR,
+      s: () => uR,
+      sc: () => IR,
+      tb: () => DR,
+      u: () => tJ,
+      ub: () => wJ,
+      uc: () => WR,
+      vc: () => AR,
+      wc: () => cR,
+      x: () => OR,
+      xb: () => eJ,
+      xc: () => KR,
+      y: () => lR,
+      zb: () => VJ,
+      zc: () => sR
     });
-    const EW = Math.PI / 180,
-      NW = 180 / Math.PI,
-      PW = WW => {
-        const iW = (WW % 360 + 360) % 360;
-        if (0 === iW || 90 === iW || 180 === iW || 270 === iW) return iW;
-        throw new Error(`Invalid rotation ${WW}.`)
+    const tR = Math.PI / 180,
+      uR = 180 / Math.PI,
+      ZR = RR => {
+        const JR = (RR % 360 + 360) % 360;
+        if (0 === JR || 90 === JR || 180 === JR || 270 === JR) return JR;
+        throw new Error(`Invalid rotation ${RR}.`)
       },
-      LW = [1, 0, 0, 0, 1, 0, 0, 0, 1],
-      cW = (WW, iW, OW) => {
-        const [mW, EW, , NW, PW] = WW, LW = Math.abs(mW) * iW + Math.abs(NW) * OW, cW = Math.abs(EW) * iW + Math.abs(PW) * OW;
-        return AW(AW(xW(-iW / 2, -OW / 2), WW), xW(LW / 2, cW / 2))
+      qR = [1, 0, 0, 0, 1, 0, 0, 0, 1],
+      iR = (RR, JR, GR) => {
+        const [yR, tR, , uR, ZR] = RR, qR = Math.abs(yR) * JR + Math.abs(uR) * GR, iR = Math.abs(tR) * JR + Math.abs(ZR) * GR;
+        return eR(eR(wR(-JR / 2, -GR / 2), RR), wR(qR / 2, iR / 2))
       },
-      wW = WW => {
-        const [iW, OW] = WW, mW = Math.atan2(OW, tW(WW) ? -iW : iW);
-        return PW(zW(mW * NW, 90))
+      fR = RR => {
+        const [JR, GR] = RR, yR = Math.atan2(GR, VR(RR) ? -JR : JR);
+        return ZR(TR(yR * uR, 90))
       },
-      tW = WW => {
-        const [iW, OW, , mW, EW] = WW;
-        return iW * EW - OW * mW < 0
+      VR = RR => {
+        const [JR, GR, , yR, tR] = RR;
+        return JR * tR - GR * yR < 0
       },
-      ZW = WW => {
-        const iW = WW * EW,
-          OW = Math.round(Math.cos(iW)),
-          mW = Math.round(Math.sin(iW));
-        return [OW, mW, 0, -mW, OW, 0, 0, 0, 1]
+      KR = RR => {
+        const JR = RR * tR,
+          GR = Math.round(Math.cos(JR)),
+          yR = Math.round(Math.sin(JR));
+        return [GR, yR, 0, -yR, GR, 0, 0, 0, 1]
       },
-      xW = (WW, iW) => [1, 0, 0, 0, 1, 0, WW, iW, 1],
-      lW = (WW, iW) => [WW, 0, 0, 0, iW, 0, 0, 0, 1],
-      AW = (WW, iW) => {
-        const OW = new Array(9);
-        for (let mW = 0; mW < 3; mW++)
-          for (let EW = 0; EW < 3; EW++) OW[3 * mW + EW] = WW[3 * mW] * iW[EW] + WW[3 * mW + 1] * iW[3 + EW] + WW[3 * mW + 2] * iW[6 + EW];
-        return OW
+      wR = (RR, JR) => [1, 0, 0, 0, 1, 0, RR, JR, 1],
+      rR = (RR, JR) => [RR, 0, 0, 0, JR, 0, 0, 0, 1],
+      eR = (RR, JR) => {
+        const GR = new Array(9);
+        for (let yR = 0; yR < 3; yR++)
+          for (let tR = 0; tR < 3; tR++) GR[3 * yR + tR] = RR[3 * yR] * JR[tR] + RR[3 * yR + 1] * JR[3 + tR] + RR[3 * yR + 2] * JR[6 + tR];
+        return GR
       },
-      bW = (WW, iW, OW, mW) => ({
-        rotation: PW(WW + (iW ? -OW : OW)),
-        flip: iW !== mW
+      aR = (RR, JR, GR, yR) => ({
+        rotation: ZR(RR + (JR ? -GR : GR)),
+        flip: JR !== yR
       }),
-      jW = WW => WW && WW[WW.length - 1],
-      UW = WW => WW >= 0 && WW < 2 ** 32,
-      kW = WW => WW >= -(2 ** 31) && WW < 2 ** 31,
-      sW = WW => {
-        let iW = 0;
-        for (; 0 === WW.readBits(1) && iW < 32;) iW++;
-        if (iW >= 32) throw new Error("Invalid exponential-Golomb code.");
-        return (1 << iW) - 1 + WW.readBits(iW)
+      LR = RR => RR && RR[RR.length - 1],
+      nR = RR => RR >= 0 && RR < 2 ** 32,
+      UR = RR => RR >= -(2 ** 31) && RR < 2 ** 31,
+      WR = RR => {
+        let JR = 0;
+        for (; 0 === RR.readBits(1) && JR < 32;) JR++;
+        if (JR >= 32) throw new Error("Invalid exponential-Golomb code.");
+        return (1 << JR) - 1 + RR.readBits(JR)
       },
-      MW = WW => {
-        const iW = sW(WW);
-        return 0 === (1 & iW) ? -(iW >> 1) : iW + 1 >> 1
+      AR = RR => {
+        const JR = WR(RR);
+        return 0 === (1 & JR) ? -(JR >> 1) : JR + 1 >> 1
       },
-      KW = (WW, iW, OW, mW) => {
-        for (let EW = iW; EW < OW; EW++) {
-          const iW = Math.floor(EW / 8);
-          let NW = WW[iW];
-          const PW = 7 - (7 & EW);
-          NW &= ~(1 << PW), NW |= (mW & 1 << OW - EW - 1) >> OW - EW - 1 << PW, WW[iW] = NW
+      CR = (RR, JR, GR, yR) => {
+        for (let tR = JR; tR < GR; tR++) {
+          const JR = Math.floor(tR / 8);
+          let uR = RR[JR];
+          const ZR = 7 - (7 & tR);
+          uR &= ~(1 << ZR), uR |= (yR & 1 << GR - tR - 1) >> GR - tR - 1 << ZR, RR[JR] = uR
         }
       },
-      SW = WW => WW.constructor === Uint8Array ? WW : ArrayBuffer.isView(WW) ? new Uint8Array(WW.buffer, WW.byteOffset, WW.byteLength) : new Uint8Array(WW),
-      YW = WW => WW.constructor === DataView ? WW : ArrayBuffer.isView(WW) ? new DataView(WW.buffer, WW.byteOffset, WW.byteLength) : new DataView(WW),
-      yW = "undefined" !== typeof globalThis.TextEncoder ? globalThis.TextEncoder : class {
+      XR = RR => RR.constructor === Uint8Array ? RR : ArrayBuffer.isView(RR) ? new Uint8Array(RR.buffer, RR.byteOffset, RR.byteLength) : new Uint8Array(RR),
+      MR = RR => RR.constructor === DataView ? RR : ArrayBuffer.isView(RR) ? new DataView(RR.buffer, RR.byteOffset, RR.byteLength) : new DataView(RR),
+      BR = "undefined" !== typeof globalThis.TextEncoder ? globalThis.TextEncoder : class {
         constructor() {
           this.encoding = "utf-8"
         }
         encode() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-          const iW = new Uint8Array(3 * WW.length);
-          let OW = 0;
-          for (let mW = 0; mW < WW.length; mW++) {
-            let EW = WW.charCodeAt(mW);
-            if (EW < 128) iW[OW++] = EW;
-            else if (EW < 2048) iW[OW++] = 192 | EW >> 6, iW[OW++] = 128 | 63 & EW;
-            else if (EW < 55296 || EW > 57343) iW[OW++] = 224 | EW >> 12, iW[OW++] = 128 | EW >> 6 & 63, iW[OW++] = 128 | 63 & EW;
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+          const JR = new Uint8Array(3 * RR.length);
+          let GR = 0;
+          for (let yR = 0; yR < RR.length; yR++) {
+            let tR = RR.charCodeAt(yR);
+            if (tR < 128) JR[GR++] = tR;
+            else if (tR < 2048) JR[GR++] = 192 | tR >> 6, JR[GR++] = 128 | 63 & tR;
+            else if (tR < 55296 || tR > 57343) JR[GR++] = 224 | tR >> 12, JR[GR++] = 128 | tR >> 6 & 63, JR[GR++] = 128 | 63 & tR;
             else {
-              const NW = mW + 1 < WW.length ? WW.charCodeAt(mW + 1) : 0;
-              EW < 56320 && NW >= 56320 && NW <= 57343 ? (EW = 65536 + (EW - 55296 << 10) + (NW - 56320), mW++, iW[OW++] = 240 | EW >> 18, iW[OW++] = 128 | EW >> 12 & 63, iW[OW++] = 128 | EW >> 6 & 63, iW[OW++] = 128 | 63 & EW) : (iW[OW++] = 239, iW[OW++] = 191, iW[OW++] = 189)
+              const uR = yR + 1 < RR.length ? RR.charCodeAt(yR + 1) : 0;
+              tR < 56320 && uR >= 56320 && uR <= 57343 ? (tR = 65536 + (tR - 55296 << 10) + (uR - 56320), yR++, JR[GR++] = 240 | tR >> 18, JR[GR++] = 128 | tR >> 12 & 63, JR[GR++] = 128 | tR >> 6 & 63, JR[GR++] = 128 | 63 & tR) : (JR[GR++] = 239, JR[GR++] = 191, JR[GR++] = 189)
             }
           }
-          return iW.slice(0, OW)
+          return JR.slice(0, GR)
         }
       },
-      TW = "undefined" !== typeof globalThis.TextDecoder ? globalThis.TextDecoder : class {
+      lR = "undefined" !== typeof globalThis.TextDecoder ? globalThis.TextDecoder : class {
         constructor() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "utf-8";
-          const iW = WW.trim().toLowerCase();
-          if ("utf-8" === iW || "utf8" === iW || "unicode-1-1-utf-8" === iW) this.encoding = "utf-8";
-          else if ("utf-16le" === iW || "utf-16" === iW) this.encoding = "utf-16le";
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "utf-8";
+          const JR = RR.trim().toLowerCase();
+          if ("utf-8" === JR || "utf8" === JR || "unicode-1-1-utf-8" === JR) this.encoding = "utf-8";
+          else if ("utf-16le" === JR || "utf-16" === JR) this.encoding = "utf-16le";
           else {
-            if ("utf-16be" !== iW) throw new RangeError(`The encoding label provided ('${WW}') is invalid.`);
+            if ("utf-16be" !== JR) throw new RangeError(`The encoding label provided ('${RR}') is invalid.`);
             this.encoding = "utf-16be"
           }
         }
-        decode(WW) {
-          const iW = WW ? SW(WW) : new Uint8Array(0),
-            OW = [];
+        decode(RR) {
+          const JR = RR ? XR(RR) : new Uint8Array(0),
+            GR = [];
           if ("utf-8" === this.encoding) {
-            let WW = iW.length >= 3 && 239 === iW[0] && 187 === iW[1] && 191 === iW[2] ? 3 : 0;
-            for (; WW < iW.length;) {
-              const mW = iW[WW];
-              if (mW < 128) {
-                OW.push(mW), WW++;
+            let RR = JR.length >= 3 && 239 === JR[0] && 187 === JR[1] && 191 === JR[2] ? 3 : 0;
+            for (; RR < JR.length;) {
+              const yR = JR[RR];
+              if (yR < 128) {
+                GR.push(yR), RR++;
                 continue
               }
-              let EW, NW;
-              if (mW >= 194 && mW < 224) EW = 1, NW = 31 & mW;
-              else if (mW >= 224 && mW < 240) EW = 2, NW = 15 & mW;
+              let tR, uR;
+              if (yR >= 194 && yR < 224) tR = 1, uR = 31 & yR;
+              else if (yR >= 224 && yR < 240) tR = 2, uR = 15 & yR;
               else {
-                if (!(mW >= 240 && mW < 245)) {
-                  OW.push(65533), WW++;
+                if (!(yR >= 240 && yR < 245)) {
+                  GR.push(65533), RR++;
                   continue
                 }
-                EW = 3, NW = 7 & mW
+                tR = 3, uR = 7 & yR
               }
-              let PW = 224 === mW ? 160 : 240 === mW ? 144 : 128,
-                LW = 237 === mW ? 159 : 244 === mW ? 143 : 191,
-                cW = 1;
-              for (; cW <= EW; cW++) {
-                const OW = WW + cW < iW.length ? iW[WW + cW] : 0;
-                if (OW < PW || OW > LW) break;
-                NW = NW << 6 | 63 & OW, PW = 128, LW = 191
+              let ZR = 224 === yR ? 160 : 240 === yR ? 144 : 128,
+                qR = 237 === yR ? 159 : 244 === yR ? 143 : 191,
+                iR = 1;
+              for (; iR <= tR; iR++) {
+                const GR = RR + iR < JR.length ? JR[RR + iR] : 0;
+                if (GR < ZR || GR > qR) break;
+                uR = uR << 6 | 63 & GR, ZR = 128, qR = 191
               }
-              WW += cW, cW <= EW ? OW.push(65533) : NW >= 65536 ? (NW -= 65536, OW.push(55296 | NW >> 10, 56320 | 1023 & NW)) : OW.push(NW)
+              RR += iR, iR <= tR ? GR.push(65533) : uR >= 65536 ? (uR -= 65536, GR.push(55296 | uR >> 10, 56320 | 1023 & uR)) : GR.push(uR)
             }
           } else {
-            const WW = "utf-16le" === this.encoding,
-              mW = WW ? 255 : 254,
-              EW = WW ? 254 : 255;
-            let NW = iW.length >= 2 && iW[0] === mW && iW[1] === EW ? 2 : 0;
-            for (; NW + 1 < iW.length;) {
-              const mW = WW ? iW[NW] | iW[NW + 1] << 8 : iW[NW] << 8 | iW[NW + 1];
-              if (NW += 2, mW >= 55296 && mW <= 56319) {
-                const EW = NW + 1 < iW.length ? WW ? iW[NW] | iW[NW + 1] << 8 : iW[NW] << 8 | iW[NW + 1] : -1;
-                EW >= 56320 && EW <= 57343 ? (OW.push(mW, EW), NW += 2) : OW.push(65533)
-              } else mW >= 56320 && mW <= 57343 ? OW.push(65533) : OW.push(mW)
+            const RR = "utf-16le" === this.encoding,
+              yR = RR ? 255 : 254,
+              tR = RR ? 254 : 255;
+            let uR = JR.length >= 2 && JR[0] === yR && JR[1] === tR ? 2 : 0;
+            for (; uR + 1 < JR.length;) {
+              const yR = RR ? JR[uR] | JR[uR + 1] << 8 : JR[uR] << 8 | JR[uR + 1];
+              if (uR += 2, yR >= 55296 && yR <= 56319) {
+                const tR = uR + 1 < JR.length ? RR ? JR[uR] | JR[uR + 1] << 8 : JR[uR] << 8 | JR[uR + 1] : -1;
+                tR >= 56320 && tR <= 57343 ? (GR.push(yR, tR), uR += 2) : GR.push(65533)
+              } else yR >= 56320 && yR <= 57343 ? GR.push(65533) : GR.push(yR)
             }
-            NW < iW.length && OW.push(65533)
+            uR < JR.length && GR.push(65533)
           }
-          let mW = "";
-          for (let EW = 0; EW < OW.length; EW += 8192) mW += String.fromCharCode(...OW.slice(EW, EW + 8192));
-          return mW
+          let yR = "";
+          for (let tR = 0; tR < GR.length; tR += 8192) yR += String.fromCharCode(...GR.slice(tR, tR + 8192));
+          return yR
         }
       },
-      JW = new TW,
-      hW = new yW,
-      HW = WW => {
-        for (let iW = 0; iW < WW.length; iW++) {
-          if (WW.charCodeAt(iW) > 255) return !1
+      pR = new lR,
+      gR = new BR,
+      bR = RR => {
+        for (let JR = 0; JR < RR.length; JR++) {
+          if (RR.charCodeAt(JR) > 255) return !1
         }
         return !0
       },
-      nW = {
+      vR = {
         bt709: 1,
         bt470bg: 5,
         smpte170m: 6,
         bt2020: 9,
         smpte432: 12
       },
-      uW = {
+      OR = {
         bt709: 1,
         smpte170m: 6,
         linear: 8,
@@ -3196,148 +3196,148 @@ export const modules = {
         pq: 16,
         hlg: 18
       },
-      oW = {
+      xR = {
         rgb: 0,
         bt709: 1,
         bt470bg: 5,
         smpte170m: 6,
         "bt2020-ncl": 9
       },
-      dW = WW => !WW || null == WW.primaries && null == WW.transfer && null == WW.matrix && null == WW.fullRange,
-      eW = WW => WW instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && WW instanceof SharedArrayBuffer || ArrayBuffer.isView(WW);
-    class vW {
+      NR = RR => !RR || null == RR.primaries && null == RR.transfer && null == RR.matrix && null == RR.fullRange,
+      DR = RR => RR instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && RR instanceof SharedArrayBuffer || ArrayBuffer.isView(RR);
+    class HR {
       constructor() {
         this.currentPromise = Promise.resolve(), this.pending = 0
       }
       async acquire() {
-        let WW;
-        const iW = new Promise((iW => {
-            let OW = !1;
-            WW = () => {
-              OW || (iW(), this.pending--, OW = !0)
+        let RR;
+        const JR = new Promise((JR => {
+            let GR = !1;
+            RR = () => {
+              GR || (JR(), this.pending--, GR = !0)
             }
           })),
-          OW = this.currentPromise;
-        return this.currentPromise = iW, this.pending++, await OW, WW
+          GR = this.currentPromise;
+        return this.currentPromise = JR, this.pending++, await GR, RR
       }
     }
-    const gW = WW => [...WW].map((WW => WW.toString(16).padStart(2, "0"))).join(""),
-      DW = WW => (WW = (WW = (WW = (WW = (WW = WW >> 1 & 1431655765 | (1431655765 & WW) << 1) >> 2 & 858993459 | (858993459 & WW) << 2) >> 4 & 252645135 | (252645135 & WW) << 4) >> 8 & 16711935 | (16711935 & WW) << 8) >> 16 & 65535 | (65535 & WW) << 16) >>> 0,
-      VW = (WW, iW, OW) => {
-        let mW = 0,
-          EW = WW.length - 1,
-          NW = -1;
-        for (; mW <= EW;) {
-          const PW = mW + (EW - mW + 1) / 2 | 0;
-          OW(WW[PW]) <= iW ? (NW = PW, mW = PW + 1) : EW = PW - 1
+    const oR = RR => [...RR].map((RR => RR.toString(16).padStart(2, "0"))).join(""),
+      cR = RR => (RR = (RR = (RR = (RR = (RR = RR >> 1 & 1431655765 | (1431655765 & RR) << 1) >> 2 & 858993459 | (858993459 & RR) << 2) >> 4 & 252645135 | (252645135 & RR) << 4) >> 8 & 16711935 | (16711935 & RR) << 8) >> 16 & 65535 | (65535 & RR) << 16) >>> 0,
+      PR = (RR, JR, GR) => {
+        let yR = 0,
+          tR = RR.length - 1,
+          uR = -1;
+        for (; yR <= tR;) {
+          const ZR = yR + (tR - yR + 1) / 2 | 0;
+          GR(RR[ZR]) <= JR ? (uR = ZR, yR = ZR + 1) : tR = ZR - 1
         }
-        return NW
+        return uR
       },
-      pW = () => {
-        let WW, iW;
+      IR = () => {
+        let RR, JR;
         return {
-          promise: new Promise(((OW, mW) => {
-            WW = OW, iW = mW
+          promise: new Promise(((GR, yR) => {
+            RR = GR, JR = yR
           })),
-          resolve: WW,
-          reject: iW
+          resolve: RR,
+          reject: JR
         }
       },
-      fW = (WW, iW) => {
-        for (let OW = WW.length - 1; OW >= 0; OW--)
-          if (iW(WW[OW])) return OW;
+      mR = (RR, JR) => {
+        for (let GR = RR.length - 1; GR >= 0; GR--)
+          if (JR(RR[GR])) return GR;
         return -1
       },
-      CW = WW => {
-        throw new Error(`Unexpected value: ${WW}`)
+      zR = RR => {
+        throw new Error(`Unexpected value: ${RR}`)
       },
-      XW = (WW, iW, OW) => {
-        const mW = WW.getUint8(iW),
-          EW = WW.getUint8(iW + 1),
-          NW = WW.getUint8(iW + 2);
-        return OW ? mW | EW << 8 | NW << 16 : mW << 16 | EW << 8 | NW
+      SR = (RR, JR, GR) => {
+        const yR = RR.getUint8(JR),
+          tR = RR.getUint8(JR + 1),
+          uR = RR.getUint8(JR + 2);
+        return GR ? yR | tR << 8 | uR << 16 : yR << 16 | tR << 8 | uR
       },
-      BW = (WW, iW, OW, mW) => {
-        OW >>>= 0, OW &= 16777215, mW ? (WW.setUint8(iW, 255 & OW), WW.setUint8(iW + 1, OW >>> 8 & 255), WW.setUint8(iW + 2, OW >>> 16 & 255)) : (WW.setUint8(iW, OW >>> 16 & 255), WW.setUint8(iW + 1, OW >>> 8 & 255), WW.setUint8(iW + 2, 255 & OW))
+      jR = (RR, JR, GR, yR) => {
+        GR >>>= 0, GR &= 16777215, yR ? (RR.setUint8(JR, 255 & GR), RR.setUint8(JR + 1, GR >>> 8 & 255), RR.setUint8(JR + 2, GR >>> 16 & 255)) : (RR.setUint8(JR, GR >>> 16 & 255), RR.setUint8(JR + 1, GR >>> 8 & 255), RR.setUint8(JR + 2, 255 & GR))
       },
-      qW = (WW, iW, OW, mW) => {
-        (OW = GW(OW, -8388608, 8388607)) < 0 && (OW = OW + 16777216 & 16777215), BW(WW, iW, OW, mW)
+      dR = (RR, JR, GR, yR) => {
+        (GR = YR(GR, -8388608, 8388607)) < 0 && (GR = GR + 16777216 & 16777215), jR(RR, JR, GR, yR)
       },
-      RW = (WW, iW, OW, mW) => {
-        mW ? (WW.setUint32(iW + 0, OW, !0), WW.setInt32(iW + 4, Math.floor(OW / 2 ** 32), !0)) : (WW.setInt32(iW + 0, Math.floor(OW / 2 ** 32), !0), WW.setUint32(iW + 4, OW, !0))
+      ER = (RR, JR, GR, yR) => {
+        yR ? (RR.setUint32(JR + 0, GR, !0), RR.setInt32(JR + 4, Math.floor(GR / 2 ** 32), !0)) : (RR.setInt32(JR + 0, Math.floor(GR / 2 ** 32), !0), RR.setUint32(JR + 4, GR, !0))
       },
-      GW = (WW, iW, OW) => Math.max(iW, Math.min(OW, WW)),
-      IW = (WW, iW, OW) => WW + (iW - WW) * OW,
-      aW = (WW, iW) => WW - Math.floor(WW / iW) * iW,
-      rW = "und",
-      zW = (WW, iW) => Math.round(WW / iW) * iW,
-      FW = (WW, iW) => Math.round(WW * iW) / iW,
-      QW = (WW, iW) => Math.floor(WW * iW) / iW,
-      Wi = WW => {
-        let iW = 0;
-        for (; WW;) iW++, WW >>= 1;
-        return iW
+      YR = (RR, JR, GR) => Math.max(JR, Math.min(GR, RR)),
+      kR = (RR, JR, GR) => RR + (JR - RR) * GR,
+      QR = (RR, JR) => RR - Math.floor(RR / JR) * JR,
+      FR = "und",
+      TR = (RR, JR) => Math.round(RR / JR) * JR,
+      sR = (RR, JR) => Math.round(RR * JR) / JR,
+      hR = (RR, JR) => Math.floor(RR * JR) / JR,
+      RJ = RR => {
+        let JR = 0;
+        for (; RR;) JR++, RR >>= 1;
+        return JR
       },
-      ii = WW => {
-        let iW = 0;
-        for (; 0 !== WW;) WW &= WW - 1, iW++;
-        return iW
+      JJ = RR => {
+        let JR = 0;
+        for (; 0 !== RR;) RR &= RR - 1, JR++;
+        return JR
       },
-      Oi = /^[a-z]{3}$/,
-      mi = WW => Oi.test(WW),
-      Ei = 1e6 * (1 + Number.EPSILON),
-      Ni = (WW, iW) => {
-        const OW = WW < 0 ? -1 : 1;
-        let mW = 0,
-          EW = 1,
-          NW = 1,
-          PW = 0,
-          LW = WW = Math.abs(WW);
+      GJ = /^[a-z]{3}$/,
+      yJ = RR => GJ.test(RR),
+      tJ = 1e6 * (1 + Number.EPSILON),
+      uJ = (RR, JR) => {
+        const GR = RR < 0 ? -1 : 1;
+        let yR = 0,
+          tR = 1,
+          uR = 1,
+          ZR = 0,
+          qR = RR = Math.abs(RR);
         for (;;) {
-          const WW = Math.floor(LW),
-            cW = WW * NW + mW,
-            wW = WW * PW + EW;
-          if (wW > iW) return {
-            num: OW * NW,
-            den: PW
+          const RR = Math.floor(qR),
+            iR = RR * uR + yR,
+            fR = RR * ZR + tR;
+          if (fR > JR) return {
+            num: GR * uR,
+            den: ZR
           };
-          if (mW = NW, EW = PW, NW = cW, PW = wW, LW = 1 / (LW - WW), !isFinite(LW)) break
+          if (yR = uR, tR = ZR, uR = iR, ZR = fR, qR = 1 / (qR - RR), !isFinite(qR)) break
         }
         return {
-          num: OW * NW,
-          den: PW
+          num: GR * uR,
+          den: ZR
         }
       };
-    class Pi {
+    class ZJ {
       constructor() {
         this.currentPromise = Promise.resolve()
       }
-      call(WW) {
-        return this.currentPromise = this.currentPromise.then(WW)
+      call(RR) {
+        return this.currentPromise = this.currentPromise.then(RR)
       }
     }
-    let Li = null;
-    const ci = () => null !== Li ? Li : Li = !("undefined" === typeof navigator || !(navigator.vendor?.match(/apple/i) || /AppleWebKit/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) || /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent)));
-    let wi = null;
-    const ti = () => null !== wi ? wi : wi = "undefined" !== typeof navigator && navigator.userAgent?.includes("Firefox");
-    let Zi = null;
-    const xi = () => null !== Zi ? Zi : Zi = !("undefined" === typeof navigator || !navigator.vendor?.includes("Google Inc") && !/Chrome/.test(navigator.userAgent));
-    const li = WW => "undefined" === typeof globalThis.isSecureContext || globalThis.isSecureContext ? `${WW} is not available in this environment.` : `${WW} is not available in this environment; this may be because this page is running in an insecure context. Try serving your page over HTTPS or use localhost.`,
-      Ai = WW => WW instanceof DOMException && "QuotaExceededError" === WW.name && /reclaimed/i.test(WW.message),
-      bi = (async () => {})().constructor,
-      ji = WW => WW instanceof bi || WW instanceof Promise || "function" === typeof WW?.then,
-      Ui = (WW, iW) => -1 !== WW ? WW : iW,
-      ki = function*(WW) {
-        for (const iW in WW) {
-          const OW = WW[iW];
-          void 0 !== OW && (yield {
-            key: iW,
-            value: OW
+    let qJ = null;
+    const iJ = () => null !== qJ ? qJ : qJ = !("undefined" === typeof navigator || !(navigator.vendor?.match(/apple/i) || /AppleWebKit/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) || /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent)));
+    let fJ = null;
+    const VJ = () => null !== fJ ? fJ : fJ = "undefined" !== typeof navigator && navigator.userAgent?.includes("Firefox");
+    let KJ = null;
+    const wJ = () => null !== KJ ? KJ : KJ = !("undefined" === typeof navigator || !navigator.vendor?.includes("Google Inc") && !/Chrome/.test(navigator.userAgent));
+    const rJ = RR => "undefined" === typeof globalThis.isSecureContext || globalThis.isSecureContext ? `${RR} is not available in this environment.` : `${RR} is not available in this environment; this may be because this page is running in an insecure context. Try serving your page over HTTPS or use localhost.`,
+      eJ = RR => RR instanceof DOMException && "QuotaExceededError" === RR.name && /reclaimed/i.test(RR.message),
+      aJ = (async () => {})().constructor,
+      LJ = RR => RR instanceof aJ || RR instanceof Promise || "function" === typeof RR?.then,
+      nJ = (RR, JR) => -1 !== RR ? RR : JR,
+      UJ = function*(RR) {
+        for (const JR in RR) {
+          const GR = RR[JR];
+          void 0 !== GR && (yield {
+            key: JR,
+            value: GR
           })
         }
       },
-      si = WW => {
-        switch (WW.toLowerCase()) {
+      WJ = RR => {
+        switch (RR.toLowerCase()) {
           case "image/jpeg":
           case "image/jpg":
             return ".jpg";
@@ -3362,218 +3362,218 @@ export const modules = {
             return null
         }
       },
-      Mi = WW => {
-        let iW = "";
-        for (let OW = 0; OW < WW.length; OW++) iW += String.fromCharCode(WW[OW]);
-        return btoa(iW)
+      AJ = RR => {
+        let JR = "";
+        for (let GR = 0; GR < RR.length; GR++) JR += String.fromCharCode(RR[GR]);
+        return btoa(JR)
       },
-      Ki = (WW, iW) => {
-        if (WW.length !== iW.length) return !1;
-        for (let OW = 0; OW < WW.length; OW++)
-          if (WW[OW] !== iW[OW]) return !1;
+      CJ = (RR, JR) => {
+        if (RR.length !== JR.length) return !1;
+        for (let GR = 0; GR < RR.length; GR++)
+          if (RR[GR] !== JR[GR]) return !1;
         return !0
       },
-      Si = () => {
+      XJ = () => {
         Symbol.dispose ??= Symbol("Symbol.dispose")
       },
-      Yi = WW => "number" === typeof WW && !Number.isNaN(WW),
-      yi = (WW, iW) => {
-        if (iW.includes("://")) return iW;
-        if (WW.includes("://")) {
-          const iW = WW.indexOf("?"); - 1 !== iW && (WW = WW.slice(0, iW))
+      MJ = RR => "number" === typeof RR && !Number.isNaN(RR),
+      BJ = (RR, JR) => {
+        if (JR.includes("://")) return JR;
+        if (RR.includes("://")) {
+          const JR = RR.indexOf("?"); - 1 !== JR && (RR = RR.slice(0, JR))
         }
-        let OW;
-        if (iW.startsWith("/")) {
-          const mW = WW.indexOf("://");
-          if (-1 === mW) OW = iW;
+        let GR;
+        if (JR.startsWith("/")) {
+          const yR = RR.indexOf("://");
+          if (-1 === yR) GR = JR;
           else {
-            const EW = WW.indexOf("/", mW + 3);
-            OW = -1 === EW ? WW + iW : WW.slice(0, EW) + iW
+            const tR = RR.indexOf("/", yR + 3);
+            GR = -1 === tR ? RR + JR : RR.slice(0, tR) + JR
           }
         } else {
-          const mW = WW.lastIndexOf("/");
-          OW = -1 === mW ? iW : WW.slice(0, mW + 1) + iW
+          const yR = RR.lastIndexOf("/");
+          GR = -1 === yR ? JR : RR.slice(0, yR + 1) + JR
         }
-        let mW = "";
-        const EW = OW.indexOf("://");
-        if (-1 !== EW) {
-          const WW = OW.indexOf("/", EW + 3); - 1 !== WW && (mW = OW.slice(0, WW), OW = OW.slice(WW))
+        let yR = "";
+        const tR = GR.indexOf("://");
+        if (-1 !== tR) {
+          const RR = GR.indexOf("/", tR + 3); - 1 !== RR && (yR = GR.slice(0, RR), GR = GR.slice(RR))
         }
-        const NW = OW.split("/"),
-          PW = [];
-        for (const LW of NW) ".." === LW ? PW.pop() : "." !== LW && PW.push(LW);
-        return mW + PW.join("/")
+        const uR = GR.split("/"),
+          ZR = [];
+        for (const qR of uR) ".." === qR ? ZR.pop() : "." !== qR && ZR.push(qR);
+        return yR + ZR.join("/")
       },
-      Ti = (WW, iW) => {
-        let OW = -1,
-          mW = 1 / 0;
-        for (let EW = 0; EW < WW.length; EW++) {
-          const NW = iW(WW[EW]);
-          NW < mW && (mW = NW, OW = EW)
+      lJ = (RR, JR) => {
+        let GR = -1,
+          yR = 1 / 0;
+        for (let tR = 0; tR < RR.length; tR++) {
+          const uR = JR(RR[tR]);
+          uR < yR && (yR = uR, GR = tR)
         }
-        return OW
+        return GR
       },
-      Ji = (WW, iW) => {
-        let OW = -1,
-          mW = -1 / 0;
-        for (let EW = 0; EW < WW.length; EW++) {
-          const NW = iW(WW[EW]);
-          NW > mW && (mW = NW, OW = EW)
+      pJ = (RR, JR) => {
+        let GR = -1,
+          yR = -1 / 0;
+        for (let tR = 0; tR < RR.length; tR++) {
+          const uR = JR(RR[tR]);
+          uR > yR && (yR = uR, GR = tR)
         }
-        return OW
+        return GR
       },
-      Hi = WW => {
-        mW(Number.isInteger(WW.num)), mW(Number.isInteger(WW.den)), mW(0 !== WW.den);
-        let iW = Math.abs(WW.num),
-          OW = Math.abs(WW.den);
-        for (; 0 !== OW;) {
-          const WW = iW % OW;
-          iW = OW, OW = WW
+      gJ = RR => {
+        yR(Number.isInteger(RR.num)), yR(Number.isInteger(RR.den)), yR(0 !== RR.den);
+        let JR = Math.abs(RR.num),
+          GR = Math.abs(RR.den);
+        for (; 0 !== GR;) {
+          const RR = JR % GR;
+          JR = GR, GR = RR
         }
-        const EW = iW || 1;
+        const tR = JR || 1;
         return {
-          num: WW.num / EW,
-          den: WW.den / EW
+          num: RR.num / tR,
+          den: RR.den / tR
         }
       },
-      ni = (WW, iW) => {
-        if ("object" !== typeof WW || !WW) throw new TypeError(`${iW} must be an object.`);
-        if (!Number.isInteger(WW.left) || WW.left < 0) throw new TypeError(`${iW}.left must be a non-negative integer.`);
-        if (!Number.isInteger(WW.top) || WW.top < 0) throw new TypeError(`${iW}.top must be a non-negative integer.`);
-        if (!Number.isInteger(WW.width) || WW.width < 0) throw new TypeError(`${iW}.width must be a non-negative integer.`);
-        if (!Number.isInteger(WW.height) || WW.height < 0) throw new TypeError(`${iW}.height must be a non-negative integer.`)
+      bJ = (RR, JR) => {
+        if ("object" !== typeof RR || !RR) throw new TypeError(`${JR} must be an object.`);
+        if (!Number.isInteger(RR.left) || RR.left < 0) throw new TypeError(`${JR}.left must be a non-negative integer.`);
+        if (!Number.isInteger(RR.top) || RR.top < 0) throw new TypeError(`${JR}.top must be a non-negative integer.`);
+        if (!Number.isInteger(RR.width) || RR.width < 0) throw new TypeError(`${JR}.width must be a non-negative integer.`);
+        if (!Number.isInteger(RR.height) || RR.height < 0) throw new TypeError(`${JR}.height must be a non-negative integer.`)
       };
-    let ui, oi = 1;
-    const di = new Map,
-      ei = new Map,
-      vi = () => "undefined" === typeof window,
-      gi = () => {
-        const WW = new Map,
-          iW = new Map;
-        self.onmessage = OW => {
-          const mW = OW.data;
-          switch (mW.type) {
+    let vJ, OJ = 1;
+    const xJ = new Map,
+      NJ = new Map,
+      DJ = () => "undefined" === typeof window,
+      HJ = () => {
+        const RR = new Map,
+          JR = new Map;
+        self.onmessage = GR => {
+          const yR = GR.data;
+          switch (yR.type) {
             case "set-timeout": {
-              const iW = setTimeout((() => {
-                WW.delete(mW.timerId), self.postMessage({
+              const JR = setTimeout((() => {
+                RR.delete(yR.timerId), self.postMessage({
                   type: "fire",
-                  timerId: mW.timerId
+                  timerId: yR.timerId
                 })
-              }), mW.delay);
-              WW.set(mW.timerId, iW)
+              }), yR.delay);
+              RR.set(yR.timerId, JR)
             }
             break;
             case "set-interval": {
-              const WW = setInterval((() => {
+              const RR = setInterval((() => {
                 self.postMessage({
                   type: "fire",
-                  timerId: mW.timerId
+                  timerId: yR.timerId
                 })
-              }), mW.delay);
-              iW.set(mW.timerId, WW)
+              }), yR.delay);
+              JR.set(yR.timerId, RR)
             }
             break;
             case "clear-timeout": {
-              const iW = WW.get(mW.timerId);
-              void 0 !== iW && (clearTimeout(iW), WW.delete(mW.timerId))
+              const JR = RR.get(yR.timerId);
+              void 0 !== JR && (clearTimeout(JR), RR.delete(yR.timerId))
             }
             break;
             case "clear-interval": {
-              const WW = iW.get(mW.timerId);
-              void 0 !== WW && (clearInterval(WW), iW.delete(mW.timerId))
+              const RR = JR.get(yR.timerId);
+              void 0 !== RR && (clearInterval(RR), JR.delete(yR.timerId))
             }
           }
         }
       },
-      Di = () => {
-        if (ui) return ui;
-        const WW = `(${gi.toString()})();`,
-          iW = URL.createObjectURL(new Blob([WW], {
+      oJ = () => {
+        if (vJ) return vJ;
+        const RR = `(${HJ.toString()})();`,
+          JR = URL.createObjectURL(new Blob([RR], {
             type: "text/javascript"
           }));
-        return ui = new Worker(iW), URL.revokeObjectURL(iW), ui.onmessage = WW => {
-          const iW = WW.data,
-            OW = di.get(iW.timerId);
-          if (OW) return di.delete(iW.timerId), void OW();
-          const mW = ei.get(iW.timerId);
-          mW && mW()
-        }, ui
+        return vJ = new Worker(JR), URL.revokeObjectURL(JR), vJ.onmessage = RR => {
+          const JR = RR.data,
+            GR = xJ.get(JR.timerId);
+          if (GR) return xJ.delete(JR.timerId), void GR();
+          const yR = NJ.get(JR.timerId);
+          yR && yR()
+        }, vJ
       },
-      Vi = (WW, iW) => {
-        if (vi()) return {
-          id: setInterval(WW, iW)
+      cJ = (RR, JR) => {
+        if (DJ()) return {
+          id: setInterval(RR, JR)
         };
-        const OW = oi++;
-        return ei.set(OW, (() => {
-          WW()
-        })), Di().postMessage({
+        const GR = OJ++;
+        return NJ.set(GR, (() => {
+          RR()
+        })), oJ().postMessage({
           type: "set-interval",
-          timerId: OW,
-          delay: iW
+          timerId: GR,
+          delay: JR
         }), {
-          id: OW
+          id: GR
         }
       },
-      fi = WW => {
-        vi() ? clearInterval(WW.id) : (mW("number" === typeof WW.id), ei.delete(WW.id), Di().postMessage({
+      PJ = RR => {
+        DJ() ? clearInterval(RR.id) : (yR("number" === typeof RR.id), NJ.delete(RR.id), oJ().postMessage({
           type: "clear-interval",
-          timerId: WW.id
+          timerId: RR.id
         }))
       },
-      Ci = WW => new Promise((iW => setTimeout(iW, WW))),
-      Xi = WW => Array.isArray(WW) ? WW : [WW];
-    class Bi {
+      IJ = RR => new Promise((JR => setTimeout(JR, RR))),
+      mJ = RR => Array.isArray(RR) ? RR : [RR];
+    class zJ {
       constructor() {
         this._listeners = new Map
       }
-      on(WW, iW, OW) {
-        this._listeners.has(WW) || this._listeners.set(WW, new Set);
-        const mW = {
-          cZ: iW,
-          once: OW?.once ?? !1
+      on(RR, JR, GR) {
+        this._listeners.has(RR) || this._listeners.set(RR, new Set);
+        const yR = {
+          iK: JR,
+          once: GR?.once ?? !1
         };
-        return this._listeners.get(WW).add(mW), () => {
-          this._listeners.get(WW)?.delete(mW)
+        return this._listeners.get(RR).add(yR), () => {
+          this._listeners.get(RR)?.delete(yR)
         }
       }
       _emit() {
-        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-        const [mW, EW] = iW, NW = this._listeners.get(mW);
-        if (NW)
-          for (const LW of NW) {
+        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        const [yR, tR] = JR, uR = this._listeners.get(yR);
+        if (uR)
+          for (const qR of uR) {
             try {
-              LW.cZ(EW)
-            } catch (PW) {
-              console.error(PW)
+              qR.iK(tR)
+            } catch (ZR) {
+              console.error(ZR)
             }
-            LW.once && NW.delete(LW)
+            qR.once && uR.delete(qR)
           }
       }
     }
-    const qi = WW => null !== WW && "object" === typeof WW && Object.getPrototypeOf(WW) === Object.prototype && Object.values(WW).every((WW => "string" === typeof WW))
+    const SJ = RR => null !== RR && "object" === typeof RR && Object.getPrototypeOf(RR) === Object.prototype && Object.values(RR).every((RR => "string" === typeof RR))
   },
-  41142: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => VO,
-      f: () => pO,
-      h: () => DO,
-      j: () => vO,
-      n: () => CO
+  41123: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => oG,
+      i: () => cG,
+      l: () => HG,
+      n: () => NG,
+      q: () => IG
     });
-    var mW = OW(41149),
-      EW = OW(41156);
-    var NW;
-    ! function(WW) {
-      WW[WW.FrameCount = 1] = "FrameCount", WW[WW.FileSize = 2] = "FileSize", WW[WW.Toc = 4] = "Toc"
-    }(NW || (NW = {}));
-    var PW = OW(41162),
-      LW = OW(41127);
-    class cW {
-      constructor(WW, iW, OW, mW, EW) {
-        this.bytes = WW, this.view = iW, this.offset = OW, this.start = mW, this.end = EW, this.bufferPos = mW - OW
+    var yR = GR(41128),
+      tR = GR(41133);
+    var uR;
+    ! function(RR) {
+      RR[RR.FrameCount = 1] = "FrameCount", RR[RR.FileSize = 2] = "FileSize", RR[RR.Toc = 4] = "Toc"
+    }(uR || (uR = {}));
+    var ZR = GR(41147),
+      qR = GR(41115);
+    class iR {
+      constructor(RR, JR, GR, yR, tR) {
+        this.bytes = RR, this.view = JR, this.offset = GR, this.start = yR, this.end = tR, this.bufferPos = yR - GR
       }
-      static tempFromBytes(WW) {
-        return new cW(WW, (0, LW.od)(WW), 0, 0, WW.length)
+      static tempFromBytes(RR) {
+        return new iR(RR, (0, qR.ad)(RR), 0, 0, RR.length)
       }
       get length() {
         return this.end - this.start
@@ -3581,501 +3581,501 @@ export const modules = {
       get filePos() {
         return this.offset + this.bufferPos
       }
-      set filePos(WW) {
-        this.bufferPos = WW - this.offset
+      set filePos(RR) {
+        this.bufferPos = RR - this.offset
       }
       get remainingLength() {
         return Math.max(this.end - this.filePos, 0)
       }
-      skip(WW) {
-        this.bufferPos += WW
+      skip(RR) {
+        this.bufferPos += RR
       }
-      slice(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.end - WW;
-        if (WW < this.start || WW + iW > this.end) throw new RangeError("Slicing outside of original slice.");
-        return new cW(this.bytes, this.view, this.offset, WW, WW + iW)
+      slice(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.end - RR;
+        if (RR < this.start || RR + JR > this.end) throw new RangeError("Slicing outside of original slice.");
+        return new iR(this.bytes, this.view, this.offset, RR, RR + JR)
       }
     }
-    const wW = (WW, iW) => {
-        if (WW.filePos < WW.start || WW.filePos + iW > WW.end) throw new RangeError(`Tried reading [${WW.filePos}, ${WW.filePos+iW}), but slice is [${WW.start}, ${WW.end}). This is likely an internal error, please report it alongside the file that caused it.`)
+    const fR = (RR, JR) => {
+        if (RR.filePos < RR.start || RR.filePos + JR > RR.end) throw new RangeError(`Tried reading [${RR.filePos}, ${RR.filePos+JR}), but slice is [${RR.start}, ${RR.end}). This is likely an internal error, please report it alongside the file that caused it.`)
       },
-      tW = (WW, iW) => {
-        wW(WW, iW);
-        const OW = WW.bytes.subarray(WW.bufferPos, WW.bufferPos + iW);
-        return WW.bufferPos += iW, OW
+      VR = (RR, JR) => {
+        fR(RR, JR);
+        const GR = RR.bytes.subarray(RR.bufferPos, RR.bufferPos + JR);
+        return RR.bufferPos += JR, GR
       };
-    var ZW, xW;
-    ! function(WW) {
-      WW[WW.Unsynchronisation = 128] = "Unsynchronisation", WW[WW.ExtendedHeader = 64] = "ExtendedHeader", WW[WW.ExperimentalIndicator = 32] = "ExperimentalIndicator", WW[WW.Footer = 16] = "Footer"
-    }(ZW || (ZW = {})),
-    function(WW) {
-      WW[WW.ISO_8859_1 = 0] = "ISO_8859_1", WW[WW.UTF_16_WITH_BOM = 1] = "UTF_16_WITH_BOM", WW[WW.UTF_16_BE_NO_BOM = 2] = "UTF_16_BE_NO_BOM", WW[WW.UTF_8 = 3] = "UTF_8"
-    }(xW || (xW = {}));
-    var lW = OW(41134);
-    class AW {
-      constructor(WW) {
-        this.mutex = new LW.c, this.trackTimestampInfo = new WeakMap, this.output = WW
+    var KR, wR;
+    ! function(RR) {
+      RR[RR.Unsynchronisation = 128] = "Unsynchronisation", RR[RR.ExtendedHeader = 64] = "ExtendedHeader", RR[RR.ExperimentalIndicator = 32] = "ExperimentalIndicator", RR[RR.Footer = 16] = "Footer"
+    }(KR || (KR = {})),
+    function(RR) {
+      RR[RR.ISO_8859_1 = 0] = "ISO_8859_1", RR[RR.UTF_16_WITH_BOM = 1] = "UTF_16_WITH_BOM", RR[RR.UTF_16_BE_NO_BOM = 2] = "UTF_16_BE_NO_BOM", RR[RR.UTF_8 = 3] = "UTF_8"
+    }(wR || (wR = {}));
+    var rR = GR(41119);
+    class eR {
+      constructor(RR) {
+        this.mutex = new qR.c, this.trackTimestampInfo = new WeakMap, this.output = RR
       }
-      onTrackClose(WW) {}
-      validateTimestamp(WW, iW, OW) {
-        let mW = this.trackTimestampInfo.get(WW);
-        if (mW) {
-          if (OW && (mW.maxTimestampBeforeLastKeyPacket = mW.maxTimestamp), null !== mW.maxTimestampBeforeLastKeyPacket && iW < mW.maxTimestampBeforeLastKeyPacket) throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${iW}s, but largest timestamp is ${mW.maxTimestampBeforeLastKeyPacket}s.`);
-          mW.maxTimestamp = Math.max(mW.maxTimestamp, iW)
+      onTrackClose(RR) {}
+      validateTimestamp(RR, JR, GR) {
+        let yR = this.trackTimestampInfo.get(RR);
+        if (yR) {
+          if (GR && (yR.maxTimestampBeforeLastKeyPacket = yR.maxTimestamp), null !== yR.maxTimestampBeforeLastKeyPacket && JR < yR.maxTimestampBeforeLastKeyPacket) throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${JR}s, but largest timestamp is ${yR.maxTimestampBeforeLastKeyPacket}s.`);
+          yR.maxTimestamp = Math.max(yR.maxTimestamp, JR)
         } else {
-          if (!OW) throw new Error("First packet must be a key packet.");
-          mW = {
-            maxTimestamp: iW,
+          if (!GR) throw new Error("First packet must be a key packet.");
+          yR = {
+            maxTimestamp: JR,
             maxTimestampBeforeLastKeyPacket: null
-          }, this.trackTimestampInfo.set(WW, mW)
+          }, this.trackTimestampInfo.set(RR, yR)
         }
       }
     }
-    var bW = OW(41160),
-      jW = OW(41154);
-    var UW = OW(41171),
-      kW = OW(41164);
-    class sW {
-      constructor(WW) {
-        this.writer = WW, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap
+    var aR = GR(41140),
+      LR = GR(41130);
+    var nR = GR(41158),
+      UR = GR(41149);
+    class WR {
+      constructor(RR) {
+        this.writer = RR, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap
       }
-      writeU32(WW) {
-        this.helperView.setUint32(0, WW, !1), this.writer.write(this.helper.subarray(0, 4))
+      writeU32(RR) {
+        this.helperView.setUint32(0, RR, !1), this.writer.write(this.helper.subarray(0, 4))
       }
-      writeU64(WW) {
-        this.helperView.setUint32(0, Math.floor(WW / 2 ** 32), !1), this.helperView.setUint32(4, WW, !1), this.writer.write(this.helper.subarray(0, 8))
+      writeU64(RR) {
+        this.helperView.setUint32(0, Math.floor(RR / 2 ** 32), !1), this.helperView.setUint32(4, RR, !1), this.writer.write(this.helper.subarray(0, 8))
       }
-      writeAscii(WW) {
-        for (let iW = 0; iW < WW.length; iW++) this.helperView.setUint8(iW % 8, WW.charCodeAt(iW)), iW % 8 === 7 && this.writer.write(this.helper);
-        WW.length % 8 !== 0 && this.writer.write(this.helper.subarray(0, WW.length % 8))
+      writeAscii(RR) {
+        for (let JR = 0; JR < RR.length; JR++) this.helperView.setUint8(JR % 8, RR.charCodeAt(JR)), JR % 8 === 7 && this.writer.write(this.helper);
+        RR.length % 8 !== 0 && this.writer.write(this.helper.subarray(0, RR.length % 8))
       }
-      writeBox(WW) {
-        if (this.offsets.set(WW, this.writer.getPos()), WW.contents && !WW.children) this.writeBoxHeader(WW, WW.size ?? WW.contents.byteLength + 8), this.writer.write(WW.contents);
+      writeBox(RR) {
+        if (this.offsets.set(RR, this.writer.getPos()), RR.contents && !RR.children) this.writeBoxHeader(RR, RR.size ?? RR.contents.byteLength + 8), this.writer.write(RR.contents);
         else {
-          const iW = this.writer.getPos();
-          if (this.writeBoxHeader(WW, 0), WW.contents && this.writer.write(WW.contents), WW.children)
-            for (const EW of WW.children) EW && this.writeBox(EW);
-          const OW = this.writer.getPos(),
-            mW = WW.size ?? OW - iW;
-          this.writer.seek(iW), this.writeBoxHeader(WW, mW), this.writer.seek(OW)
+          const JR = this.writer.getPos();
+          if (this.writeBoxHeader(RR, 0), RR.contents && this.writer.write(RR.contents), RR.children)
+            for (const tR of RR.children) tR && this.writeBox(tR);
+          const GR = this.writer.getPos(),
+            yR = RR.size ?? GR - JR;
+          this.writer.seek(JR), this.writeBoxHeader(RR, yR), this.writer.seek(GR)
         }
       }
-      writeBoxHeader(WW, iW) {
-        this.writeU32(WW.largeSize ? 1 : iW), this.writeAscii(WW.type), WW.largeSize && this.writeU64(iW)
+      writeBoxHeader(RR, JR) {
+        this.writeU32(RR.largeSize ? 1 : JR), this.writeAscii(RR.type), RR.largeSize && this.writeU64(JR)
       }
-      measureBoxHeader(WW) {
-        return 8 + (WW.largeSize ? 8 : 0)
+      measureBoxHeader(RR) {
+        return 8 + (RR.largeSize ? 8 : 0)
       }
-      patchBox(WW) {
-        const iW = this.offsets.get(WW);
-        (0, LW.K)(void 0 !== iW);
-        const OW = this.writer.getPos();
-        this.writer.seek(iW), this.writeBox(WW), this.writer.seek(OW)
+      patchBox(RR) {
+        const JR = this.offsets.get(RR);
+        (0, qR.I)(void 0 !== JR);
+        const GR = this.writer.getPos();
+        this.writer.seek(JR), this.writeBox(RR), this.writer.seek(GR)
       }
-      measureBox(WW) {
-        if (WW.contents && !WW.children) {
-          return this.measureBoxHeader(WW) + WW.contents.byteLength
+      measureBox(RR) {
+        if (RR.contents && !RR.children) {
+          return this.measureBoxHeader(RR) + RR.contents.byteLength
         } {
-          let iW = this.measureBoxHeader(WW);
-          if (WW.contents && (iW += WW.contents.byteLength), WW.children)
-            for (const OW of WW.children) OW && (iW += this.measureBox(OW));
-          return iW
+          let JR = this.measureBoxHeader(RR);
+          if (RR.contents && (JR += RR.contents.byteLength), RR.children)
+            for (const GR of RR.children) GR && (JR += this.measureBox(GR));
+          return JR
         }
       }
     }
-    const MW = new Uint8Array(8),
-      KW = new DataView(MW.buffer),
-      SW = WW => [(WW % 256 + 256) % 256],
-      YW = WW => (KW.setUint16(0, WW, !1), [MW[0], MW[1]]),
-      yW = WW => (KW.setInt16(0, WW, !1), [MW[0], MW[1]]),
-      TW = WW => (KW.setUint32(0, WW, !1), [MW[1], MW[2], MW[3]]),
-      JW = WW => (KW.setUint32(0, WW, !1), [MW[0], MW[1], MW[2], MW[3]]),
-      hW = WW => (KW.setInt32(0, WW, !1), [MW[0], MW[1], MW[2], MW[3]]),
-      HW = WW => (KW.setUint32(0, Math.floor(WW / 2 ** 32), !1), KW.setUint32(4, WW, !1), [MW[0], MW[1], MW[2], MW[3], MW[4], MW[5], MW[6], MW[7]]),
-      nW = WW => (KW.setInt32(0, Math.floor(WW / 2 ** 32), !1), KW.setUint32(4, WW, !1), [MW[0], MW[1], MW[2], MW[3], MW[4], MW[5], MW[6], MW[7]]),
-      uW = WW => (KW.setInt16(0, 256 * WW, !1), [MW[0], MW[1]]),
-      oW = WW => (KW.setInt32(0, 65536 * WW, !1), [MW[0], MW[1], MW[2], MW[3]]),
-      dW = WW => (KW.setInt32(0, 2 ** 30 * WW, !1), [MW[0], MW[1], MW[2], MW[3]]),
-      eW = (WW, iW) => {
-        const OW = [];
-        let mW = WW;
+    const AR = new Uint8Array(8),
+      CR = new DataView(AR.buffer),
+      XR = RR => [(RR % 256 + 256) % 256],
+      MR = RR => (CR.setUint16(0, RR, !1), [AR[0], AR[1]]),
+      BR = RR => (CR.setInt16(0, RR, !1), [AR[0], AR[1]]),
+      lR = RR => (CR.setUint32(0, RR, !1), [AR[1], AR[2], AR[3]]),
+      pR = RR => (CR.setUint32(0, RR, !1), [AR[0], AR[1], AR[2], AR[3]]),
+      gR = RR => (CR.setInt32(0, RR, !1), [AR[0], AR[1], AR[2], AR[3]]),
+      bR = RR => (CR.setUint32(0, Math.floor(RR / 2 ** 32), !1), CR.setUint32(4, RR, !1), [AR[0], AR[1], AR[2], AR[3], AR[4], AR[5], AR[6], AR[7]]),
+      vR = RR => (CR.setInt32(0, Math.floor(RR / 2 ** 32), !1), CR.setUint32(4, RR, !1), [AR[0], AR[1], AR[2], AR[3], AR[4], AR[5], AR[6], AR[7]]),
+      OR = RR => (CR.setInt16(0, 256 * RR, !1), [AR[0], AR[1]]),
+      xR = RR => (CR.setInt32(0, 65536 * RR, !1), [AR[0], AR[1], AR[2], AR[3]]),
+      NR = RR => (CR.setInt32(0, 2 ** 30 * RR, !1), [AR[0], AR[1], AR[2], AR[3]]),
+      DR = (RR, JR) => {
+        const GR = [];
+        let yR = RR;
         do {
-          let WW = 127 & mW;
-          mW >>= 7, OW.length > 0 && (WW |= 128), OW.push(WW), void 0 !== iW && iW--
-        } while (mW > 0 || iW);
-        return OW.reverse()
+          let RR = 127 & yR;
+          yR >>= 7, GR.length > 0 && (RR |= 128), GR.push(RR), void 0 !== JR && JR--
+        } while (yR > 0 || JR);
+        return GR.reverse()
       },
-      vW = function(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const OW = Array(WW.length).fill(null).map(((iW, OW) => WW.charCodeAt(OW)));
-        return iW && OW.push(0), OW
+      HR = function(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const GR = Array(RR.length).fill(null).map(((JR, GR) => RR.charCodeAt(GR)));
+        return JR && GR.push(0), GR
       },
-      gW = WW => [oW(WW[0]), oW(WW[1]), dW(WW[2]), oW(WW[3]), oW(WW[4]), dW(WW[5]), oW(WW[6]), oW(WW[7]), dW(WW[8])],
-      DW = (WW, iW, OW) => ({
-        type: WW,
-        contents: iW && new Uint8Array(iW.flat(10)),
-        children: OW
+      oR = RR => [xR(RR[0]), xR(RR[1]), NR(RR[2]), xR(RR[3]), xR(RR[4]), NR(RR[5]), xR(RR[6]), xR(RR[7]), NR(RR[8])],
+      cR = (RR, JR, GR) => ({
+        type: RR,
+        contents: JR && new Uint8Array(JR.flat(10)),
+        children: GR
       }),
-      VW = (WW, iW, OW, mW, EW) => DW(WW, [SW(iW), TW(OW), mW ?? []], EW),
-      pW = () => DW("styp", [vW("iso5"), JW(0), vW("iso5"), vW("iso6"), vW("mp41"), vW("cmfc"), vW("dash")]),
-      fW = (WW, iW) => {
-        const OW = Math.max(0, WW.minWrittenTimestamp);
-        let mW = Math.max(0, WW.maxWrittenEndTimestamp - OW);
-        return Number.isFinite(mW) || (mW = 0), VW("sidx", 1, 0, [JW(1), JW(xO), HW(AO(OW, xO)), HW(0), YW(0), YW(1), JW(2147483647 & iW), JW(AO(mW, xO)), JW(0)])
+      PR = (RR, JR, GR, yR, tR) => cR(RR, [XR(JR), lR(GR), yR ?? []], tR),
+      IR = () => cR("styp", [HR("iso5"), pR(0), HR("iso5"), HR("iso6"), HR("mp41"), HR("cmfc"), HR("dash")]),
+      mR = (RR, JR) => {
+        const GR = Math.max(0, RR.minWrittenTimestamp);
+        let yR = Math.max(0, RR.maxWrittenEndTimestamp - GR);
+        return Number.isFinite(yR) || (yR = 0), PR("sidx", 1, 0, [pR(1), pR(VG), bR(wG(GR, VG)), bR(0), MR(0), MR(1), pR(2147483647 & JR), pR(wG(yR, VG)), pR(0)])
       },
-      CW = WW => ({
+      zR = RR => ({
         type: "mdat",
-        largeSize: WW
+        largeSize: RR
       }),
-      XW = WW => DW("moov", void 0, [BW(WW.creationTime, WW.trackDatas), ...WW.trackDatas.map((iW => qW(iW, WW.creationTime))), WW.isFragmented ? oi(WW.trackDatas) : null, Ii(WW)]),
-      BW = (WW, iW) => {
-        const OW = Math.max(0, ...iW.map((WW => Math.max(0, AO(bO(WW), xO) + AO(WW.startTimestampOffset ?? 0, xO))))),
-          mW = Math.max(0, ...iW.map((WW => WW.track.id))) + 1,
-          EW = !(0, LW.cc)(WW) || !(0, LW.cc)(OW),
-          NW = EW ? HW : JW;
-        return VW("mvhd", +EW, 0, [NW(WW), NW(WW), JW(xO), NW(OW), oW(1), uW(1), Array(10).fill(0), gW(LW.q), Array(24).fill(0), JW(mW)])
+      SR = RR => cR("moov", void 0, [jR(RR.creationTime, RR.trackDatas), ...RR.trackDatas.map((JR => dR(JR, RR.creationTime))), RR.isFragmented ? OJ(RR.trackDatas) : null, EJ(RR)]),
+      jR = (RR, JR) => {
+        const GR = Math.max(0, ...JR.map((RR => Math.max(0, wG(rG(RR), VG) + wG(RR.startTimestampOffset ?? 0, VG))))),
+          yR = Math.max(0, ...JR.map((RR => RR.track.id))) + 1,
+          tR = !(0, qR.Tb)(RR) || !(0, qR.Tb)(GR),
+          uR = tR ? bR : pR;
+        return PR("mvhd", +tR, 0, [uR(RR), uR(RR), pR(VG), uR(GR), xR(1), OR(1), Array(10).fill(0), oR(qR.m), Array(24).fill(0), pR(yR)])
       },
-      qW = (WW, iW) => {
-        const OW = lO(WW),
-          mW = null !== WW.startTimestampOffset && 0 !== WW.startTimestampOffset;
-        return DW("trak", void 0, [RW(WW, iW), mW ? GW(WW) : null, IW(WW, iW), void 0 !== OW.name ? DW("udta", void 0, [DW("name", [...LW.kd.encode(OW.name)])]) : null])
+      dR = (RR, JR) => {
+        const GR = KG(RR),
+          yR = null !== RR.startTimestampOffset && 0 !== RR.startTimestampOffset;
+        return cR("trak", void 0, [ER(RR, JR), yR ? YR(RR) : null, kR(RR, JR), void 0 !== GR.name ? cR("udta", void 0, [cR("name", [...qR.Vc.encode(GR.name)])]) : null])
       },
-      RW = (WW, iW) => {
-        const OW = Math.max(0, AO(bO(WW), xO) + AO(WW.startTimestampOffset ?? 0, xO)),
-          mW = !(0, LW.cc)(iW) || !(0, LW.cc)(OW),
-          EW = mW ? HW : JW;
-        let NW;
-        if ("video" === WW.type && WW.track.metadata.transformationMatrix) NW = WW.track.metadata.transformationMatrix;
-        else if ("video" === WW.type) {
+      ER = (RR, JR) => {
+        const GR = Math.max(0, wG(rG(RR), VG) + wG(RR.startTimestampOffset ?? 0, VG)),
+          yR = !(0, qR.Tb)(JR) || !(0, qR.Tb)(GR),
+          tR = yR ? bR : pR;
+        let uR;
+        if ("video" === RR.type && RR.track.metadata.transformationMatrix) uR = RR.track.metadata.transformationMatrix;
+        else if ("video" === RR.type) {
           const {
-            rotation: iW,
-            flip: OW
-          } = WW.track.metadata, mW = (0, LW.uc)((0, LW.Nc)(iW ?? 0), (0, LW.Tc)(OW ? -1 : 1, 1));
-          NW = (0, LW.W)(mW, WW.info.width, WW.info.height)
-        } else NW = LW.q;
-        let PW = 2;
-        !1 !== WW.track.metadata.disposition?.default && (PW |= 1);
-        const cW = "video" === WW.type ? 0 : "audio" === WW.type ? 1 : "subtitle" === WW.type ? 2 : (0, LW.J)(WW);
-        return VW("tkhd", +mW, PW, [EW(iW), EW(iW), JW(WW.track.id), JW(0), EW(OW), Array(8).fill(0), YW(0), YW(cW), uW("audio" === WW.type ? 1 : 0), YW(0), gW(NW), oW("video" === WW.type ? WW.info.width : 0), oW("video" === WW.type ? WW.info.height : 0)])
+            rotation: JR,
+            flip: GR
+          } = RR.track.metadata, yR = (0, qR.gc)((0, qR.xc)(JR ?? 0), (0, qR.Cc)(GR ? -1 : 1, 1));
+          uR = (0, qR.S)(yR, RR.info.width, RR.info.height)
+        } else uR = qR.m;
+        let ZR = 2;
+        !1 !== RR.track.metadata.disposition?.default && (ZR |= 1);
+        const iR = "video" === RR.type ? 0 : "audio" === RR.type ? 1 : "subtitle" === RR.type ? 2 : (0, qR.H)(RR);
+        return PR("tkhd", +yR, ZR, [tR(JR), tR(JR), pR(RR.track.id), pR(0), tR(GR), Array(8).fill(0), MR(0), MR(iR), OR("audio" === RR.type ? 1 : 0), MR(0), oR(uR), xR("video" === RR.type ? RR.info.width : 0), xR("video" === RR.type ? RR.info.height : 0)])
       },
-      GW = WW => {
-        const iW = WW.startTimestampOffset;
-        if ((0, LW.K)(null !== iW), iW > 0) {
-          const OW = AO(iW, xO),
-            mW = AO(bO(WW), xO),
-            EW = !(0, LW.cc)(OW) || !(0, LW.cc)(mW),
-            NW = EW ? HW : JW,
-            PW = EW ? nW : hW;
-          return DW("edts", void 0, [VW("elst", EW ? 1 : 0, 0, [JW(2), NW(OW), PW(-1), oW(1), NW(mW), PW(0), oW(1)])])
+      YR = RR => {
+        const JR = RR.startTimestampOffset;
+        if ((0, qR.I)(null !== JR), JR > 0) {
+          const GR = wG(JR, VG),
+            yR = wG(rG(RR), VG),
+            tR = !(0, qR.Tb)(GR) || !(0, qR.Tb)(yR),
+            uR = tR ? bR : pR,
+            ZR = tR ? vR : gR;
+          return cR("edts", void 0, [PR("elst", tR ? 1 : 0, 0, [pR(2), uR(GR), ZR(-1), xR(1), uR(yR), ZR(0), xR(1)])])
         } {
-          const OW = AO(-iW, WW.timescale),
-            mW = Math.max(0, AO(bO(WW), xO) + AO(iW, xO)),
-            EW = !(0, LW.Ub)(OW) || !(0, LW.cc)(mW),
-            NW = EW ? HW : JW,
-            PW = EW ? nW : hW;
-          return DW("edts", void 0, [VW("elst", EW ? 1 : 0, 0, [JW(1), NW(mW), PW(OW), oW(1)])])
+          const GR = wG(-JR, RR.timescale),
+            yR = Math.max(0, wG(rG(RR), VG) + wG(JR, VG)),
+            tR = !(0, qR.Kb)(GR) || !(0, qR.Tb)(yR),
+            uR = tR ? bR : pR,
+            ZR = tR ? vR : gR;
+          return cR("edts", void 0, [PR("elst", tR ? 1 : 0, 0, [pR(1), uR(yR), ZR(GR), xR(1)])])
         }
       },
-      IW = (WW, iW) => DW("mdia", void 0, [aW(WW, iW), FW(!0, rW[WW.type], zW[WW.type]), QW(WW)]),
-      aW = (WW, iW) => {
-        const OW = AO(bO(WW), WW.timescale),
-          mW = !(0, LW.cc)(iW) || !(0, LW.cc)(OW),
-          EW = mW ? HW : JW;
-        return VW("mdhd", +mW, 0, [EW(iW), EW(iW), JW(WW.timescale), EW(OW), YW(cO(WW.track.metadata.languageCode ?? LW.A)), YW(0)])
+      kR = (RR, JR) => cR("mdia", void 0, [QR(RR, JR), sR(!0, FR[RR.type], TR[RR.type]), hR(RR)]),
+      QR = (RR, JR) => {
+        const GR = wG(rG(RR), RR.timescale),
+          yR = !(0, qR.Tb)(JR) || !(0, qR.Tb)(GR),
+          tR = yR ? bR : pR;
+        return PR("mdhd", +yR, 0, [tR(JR), tR(JR), pR(RR.timescale), tR(GR), MR(ZG(RR.track.metadata.languageCode ?? qR.B)), MR(0)])
       },
-      rW = {
+      FR = {
         video: "vide",
         audio: "soun",
         subtitle: "text"
       },
-      zW = {
+      TR = {
         video: "MediabunnyVideoHandler",
         audio: "MediabunnySoundHandler",
         subtitle: "MediabunnyTextHandler"
       },
-      FW = function(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "\0\0\0\0";
-        return VW("hdlr", 0, 0, [WW ? vW("mhlr") : JW(0), vW(iW), vW(mW), JW(0), JW(0), vW(OW, !0)])
+      sR = function(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "\0\0\0\0";
+        return PR("hdlr", 0, 0, [RR ? HR("mhlr") : pR(0), HR(JR), HR(yR), pR(0), pR(0), HR(GR, !0)])
       },
-      QW = WW => DW("minf", void 0, [Wi[WW.type](), ii(), Ei(WW)]),
-      Wi = {
-        video: () => VW("vmhd", 0, 1, [YW(0), YW(0), YW(0), YW(0)]),
-        audio: () => VW("smhd", 0, 0, [YW(0), YW(0)]),
-        subtitle: () => VW("nmhd", 0, 0)
+      hR = RR => cR("minf", void 0, [RJ[RR.type](), JJ(), tJ(RR)]),
+      RJ = {
+        video: () => PR("vmhd", 0, 1, [MR(0), MR(0), MR(0), MR(0)]),
+        audio: () => PR("smhd", 0, 0, [MR(0), MR(0)]),
+        subtitle: () => PR("nmhd", 0, 0)
       },
-      ii = () => DW("dinf", void 0, [Oi()]),
-      Oi = () => VW("dref", 0, 0, [JW(1)], [mi()]),
-      mi = () => VW("url ", 0, 1),
-      Ei = WW => {
-        const iW = WW.compositionTimeOffsetTable.length > 1 || WW.compositionTimeOffsetTable.some((WW => 0 !== WW.sampleCompositionTimeOffset));
-        return DW("stbl", void 0, [Ni(WW), Yi(WW), iW ? ni(WW) : null, iW ? ui(WW) : null, Ti(WW), Ji(WW), Hi(WW), yi(WW)])
+      JJ = () => cR("dinf", void 0, [GJ()]),
+      GJ = () => PR("dref", 0, 0, [pR(1)], [yJ()]),
+      yJ = () => PR("url ", 0, 1),
+      tJ = RR => {
+        const JR = RR.compositionTimeOffsetTable.length > 1 || RR.compositionTimeOffsetTable.some((RR => 0 !== RR.sampleCompositionTimeOffset));
+        return cR("stbl", void 0, [uJ(RR), MJ(RR), JR ? bJ(RR) : null, JR ? vJ(RR) : null, lJ(RR), pJ(RR), gJ(RR), BJ(RR)])
       },
-      Ni = WW => {
-        let iW;
-        if ("video" === WW.type) iW = Pi(OO(WW.track.source._codec, WW.info.decoderConfig.codec), WW);
-        else if ("audio" === WW.type) {
-          const OW = EO(WW.track.source._codec, WW.info.decoderConfig.codec, WW.muxer.isQuickTime);
-          (0, LW.K)(OW), iW = Zi(OW, WW)
-        } else "subtitle" === WW.type && (iW = Si(PO[WW.track.source._codec], WW));
-        return (0, LW.K)(iW), VW("stsd", 0, 0, [JW(1)], [iW])
+      uJ = RR => {
+        let JR;
+        if ("video" === RR.type) JR = ZJ(RG(RR.track.source._codec, RR.info.decoderConfig.codec), RR);
+        else if ("audio" === RR.type) {
+          const GR = GG(RR.track.source._codec, RR.info.decoderConfig.codec, RR.muxer.isQuickTime);
+          (0, qR.I)(GR), JR = KJ(GR, RR)
+        } else "subtitle" === RR.type && (JR = XJ(tG[RR.track.source._codec], RR));
+        return (0, qR.I)(JR), PR("stsd", 0, 0, [pR(1)], [JR])
       },
-      Pi = (WW, iW) => DW(WW, [Array(6).fill(0), YW(1), YW(0), YW(0), Array(12).fill(0), YW(iW.info.width), YW(iW.info.height), JW(4718592), JW(4718592), JW(0), YW(1), SW(kW.b.length), vW(kW.b), Array(31 - kW.b.length).fill(0), YW(iW.info.hasAlphaChannel ? 32 : 24), yW(65535)], [mO[iW.track.source._codec]?.(iW) ?? null, ci(iW), (0, LW.fb)(iW.info.decoderConfig.colorSpace) ? null : wi(iW), Li(iW)]),
-      Li = WW => 0 === WW.avgBitrate && 0 === WW.maxBitrate ? null : DW("btrt", [JW(0), JW(WW.maxBitrate), JW(WW.avgBitrate)]),
-      ci = WW => WW.info.pixelAspectRatio.num === WW.info.pixelAspectRatio.den ? null : DW("pasp", [JW(WW.info.pixelAspectRatio.num), JW(WW.info.pixelAspectRatio.den)]),
-      wi = WW => {
-        const iW = WW.info.decoderConfig.colorSpace;
-        return DW("colr", [vW(WW.muxer.isQuickTime ? "nclc" : "nclx"), YW(null != iW?.primaries ? LW.g[iW.primaries] : 2), YW(null != iW?.transfer ? LW.v[iW.transfer] : 2), YW(null != iW?.matrix ? LW.r[iW.matrix] : 2), WW.muxer.isQuickTime ? [] : SW((iW?.fullRange ? 1 : 0) << 7)])
+      ZJ = (RR, JR) => cR(RR, [Array(6).fill(0), MR(1), MR(0), MR(0), Array(12).fill(0), MR(JR.info.width), MR(JR.info.height), pR(4718592), pR(4718592), pR(0), MR(1), XR(UR.e.length), HR(UR.e), Array(31 - UR.e.length).fill(0), MR(JR.info.hasAlphaChannel ? 32 : 24), BR(65535)], [JG[JR.track.source._codec]?.(JR) ?? null, iJ(JR), (0, qR._)(JR.info.decoderConfig.colorSpace) ? null : fJ(JR), qJ(JR)]),
+      qJ = RR => 0 === RR.avgBitrate && 0 === RR.maxBitrate ? null : cR("btrt", [pR(0), pR(RR.maxBitrate), pR(RR.avgBitrate)]),
+      iJ = RR => RR.info.pixelAspectRatio.num === RR.info.pixelAspectRatio.den ? null : cR("pasp", [pR(RR.info.pixelAspectRatio.num), pR(RR.info.pixelAspectRatio.den)]),
+      fJ = RR => {
+        const JR = RR.info.decoderConfig.colorSpace;
+        return cR("colr", [HR(RR.muxer.isQuickTime ? "nclc" : "nclx"), MR(null != JR?.primaries ? qR.e[JR.primaries] : 2), MR(null != JR?.transfer ? qR.x[JR.transfer] : 2), MR(null != JR?.matrix ? qR.o[JR.matrix] : 2), RR.muxer.isQuickTime ? [] : XR((JR?.fullRange ? 1 : 0) << 7)])
       },
-      ti = WW => {
-        if (!WW.info.decoderConfig) return null;
-        const iW = WW.info.decoderConfig,
-          OW = iW.codec.split("."),
-          mW = Number(OW[1]),
-          EW = Number(OW[2]),
-          NW = (Number(OW[3]) << 4) + ((OW[4] ? Number(OW[4]) : 1) << 1) + (OW[8] ? Number(OW[8]) : Number(iW.colorSpace?.fullRange ?? 0)),
-          PW = OW[5] ? Number(OW[5]) : iW.colorSpace?.primaries ? LW.g[iW.colorSpace.primaries] : 1,
-          cW = OW[6] ? Number(OW[6]) : iW.colorSpace?.transfer ? LW.v[iW.colorSpace.transfer] : 1,
-          wW = OW[7] ? Number(OW[7]) : iW.colorSpace?.matrix ? LW.r[iW.colorSpace.matrix] : 1;
-        return VW("vpcC", 1, 0, [SW(mW), SW(EW), SW(NW), SW(PW), SW(cW), SW(wW), YW(0)])
+      VJ = RR => {
+        if (!RR.info.decoderConfig) return null;
+        const JR = RR.info.decoderConfig,
+          GR = JR.codec.split("."),
+          yR = Number(GR[1]),
+          tR = Number(GR[2]),
+          uR = (Number(GR[3]) << 4) + ((GR[4] ? Number(GR[4]) : 1) << 1) + (GR[8] ? Number(GR[8]) : Number(JR.colorSpace?.fullRange ?? 0)),
+          ZR = GR[5] ? Number(GR[5]) : JR.colorSpace?.primaries ? qR.e[JR.colorSpace.primaries] : 1,
+          iR = GR[6] ? Number(GR[6]) : JR.colorSpace?.transfer ? qR.x[JR.colorSpace.transfer] : 1,
+          fR = GR[7] ? Number(GR[7]) : JR.colorSpace?.matrix ? qR.o[JR.colorSpace.matrix] : 1;
+        return PR("vpcC", 1, 0, [XR(yR), XR(tR), XR(uR), XR(ZR), XR(iR), XR(fR), MR(0)])
       },
-      Zi = (WW, iW) => {
-        let OW, mW = 0,
-          NW = 16;
-        const PW = EW.r.includes(iW.track.source._codec);
-        if (PW) {
-          const WW = iW.track.source._codec,
+      KJ = (RR, JR) => {
+        let GR, yR = 0,
+          uR = 16;
+        const ZR = tR.p.includes(JR.track.source._codec);
+        if (ZR) {
+          const RR = JR.track.source._codec,
             {
-              sampleSize: OW
-            } = (0, EW.U)(WW);
-          NW = 8 * OW, NW > 16 && (mW = 1)
+              sampleSize: GR
+            } = (0, tR.Q)(RR);
+          uR = 8 * GR, uR > 16 && (yR = 1)
         }
-        if (iW.muxer.isQuickTime && (mW = 1), 0 === mW) OW = [Array(6).fill(0), YW(1), YW(mW), YW(0), JW(0), YW(iW.info.numberOfChannels), YW(NW), YW(0), YW(0), YW(iW.info.sampleRate < 65536 ? iW.info.sampleRate : 0), YW(0)];
+        if (JR.muxer.isQuickTime && (yR = 1), 0 === yR) GR = [Array(6).fill(0), MR(1), MR(yR), MR(0), pR(0), MR(JR.info.numberOfChannels), MR(uR), MR(0), MR(0), MR(JR.info.sampleRate < 65536 ? JR.info.sampleRate : 0), MR(0)];
         else {
-          const WW = PW ? 0 : -2;
-          OW = [Array(6).fill(0), YW(1), YW(mW), YW(0), JW(0), YW(iW.info.numberOfChannels), YW(Math.min(NW, 16)), yW(WW), YW(0), YW(iW.info.sampleRate < 65536 ? iW.info.sampleRate : 0), YW(0), PW ? [JW(1), JW(NW / 8), JW(iW.info.numberOfChannels * NW / 8)] : [JW(0), JW(0), JW(0)], JW(2)]
+          const RR = ZR ? 0 : -2;
+          GR = [Array(6).fill(0), MR(1), MR(yR), MR(0), pR(0), MR(JR.info.numberOfChannels), MR(Math.min(uR, 16)), BR(RR), MR(0), MR(JR.info.sampleRate < 65536 ? JR.info.sampleRate : 0), MR(0), ZR ? [pR(1), pR(uR / 8), pR(JR.info.numberOfChannels * uR / 8)] : [pR(0), pR(0), pR(0)], pR(2)]
         }
-        return DW(WW, OW, [NO(iW.track.source._codec, iW.muxer.isQuickTime)?.(iW) ?? null, Li(iW)])
+        return cR(RR, GR, [yG(JR.track.source._codec, JR.muxer.isQuickTime)?.(JR) ?? null, qJ(JR)])
       },
-      xi = WW => {
-        let iW;
-        switch (WW.track.source._codec) {
+      wJ = RR => {
+        let JR;
+        switch (RR.track.source._codec) {
           case "aac":
-            iW = 64;
+            JR = 64;
             break;
           case "mp3":
-            iW = 107;
+            JR = 107;
             break;
           case "vorbis":
-            iW = 221;
+            JR = 221;
             break;
           default:
-            throw new Error(`Unhandled audio codec: ${WW.track.source._codec}`)
+            throw new Error(`Unhandled audio codec: ${RR.track.source._codec}`)
         }
-        let OW = [...SW(iW), ...SW(21), ...TW(0), ...JW(WW.maxBitrate), ...JW(WW.avgBitrate)];
-        if (WW.info.decoderConfig.description) {
-          const iW = (0, LW.pd)(WW.info.decoderConfig.description);
-          OW = [...OW, ...SW(5), ...eW(iW.byteLength), ...iW]
+        let GR = [...XR(JR), ...XR(21), ...lR(0), ...pR(RR.maxBitrate), ...pR(RR.avgBitrate)];
+        if (RR.info.decoderConfig.description) {
+          const JR = (0, qR.cd)(RR.info.decoderConfig.description);
+          GR = [...GR, ...XR(5), ...DR(JR.byteLength), ...JR]
         }
-        return OW = [...YW(1), ...SW(0), ...SW(4), ...eW(OW.length), ...OW, ...SW(6), ...SW(1), ...SW(2)], OW = [...SW(3), ...eW(OW.length), ...OW], VW("esds", 0, 0, OW)
+        return GR = [...MR(1), ...XR(0), ...XR(4), ...DR(GR.length), ...GR, ...XR(6), ...XR(1), ...XR(2)], GR = [...XR(3), ...DR(GR.length), ...GR], PR("esds", 0, 0, GR)
       },
-      li = WW => DW("wave", void 0, [Ai(WW), bi(WW), DW("\0\0\0\0")]),
-      Ai = WW => DW("frma", [vW(EO(WW.track.source._codec, WW.info.decoderConfig.codec, WW.muxer.isQuickTime))]),
-      bi = WW => {
+      rJ = RR => cR("wave", void 0, [eJ(RR), aJ(RR), cR("\0\0\0\0")]),
+      eJ = RR => cR("frma", [HR(GG(RR.track.source._codec, RR.info.decoderConfig.codec, RR.muxer.isQuickTime))]),
+      aJ = RR => {
         const {
-          littleEndian: iW
-        } = (0, EW.U)(WW.track.source._codec);
-        return DW("enda", [YW(+iW)])
+          littleEndian: JR
+        } = (0, tR.Q)(RR.track.source._codec);
+        return cR("enda", [MR(+JR)])
       },
-      ji = WW => {
-        let iW = WW.info.numberOfChannels,
-          OW = 3840,
-          mW = WW.info.sampleRate,
-          EW = 0,
-          NW = 0,
-          PW = new Uint8Array(0);
-        const cW = WW.info.decoderConfig?.description;
-        if (cW) {
-          (0, LW.K)(cW.byteLength >= 18);
-          const WW = (0, LW.pd)(cW),
-            wW = (0, bW.nb)(WW);
-          iW = wW.outputChannelCount, OW = wW.preSkip, mW = wW.inputSampleRate, EW = wW.outputGain, NW = wW.channelMappingFamily, wW.channelMappingTable && (PW = wW.channelMappingTable)
+      LJ = RR => {
+        let JR = RR.info.numberOfChannels,
+          GR = 3840,
+          yR = RR.info.sampleRate,
+          tR = 0,
+          uR = 0,
+          ZR = new Uint8Array(0);
+        const iR = RR.info.decoderConfig?.description;
+        if (iR) {
+          (0, qR.I)(iR.byteLength >= 18);
+          const RR = (0, qR.cd)(iR),
+            fR = (0, aR.jb)(RR);
+          JR = fR.outputChannelCount, GR = fR.preSkip, yR = fR.inputSampleRate, tR = fR.outputGain, uR = fR.channelMappingFamily, fR.channelMappingTable && (ZR = fR.channelMappingTable)
         }
-        return DW("dOps", [SW(0), SW(iW), YW(OW), JW(mW), yW(EW), SW(NW), ...PW])
+        return cR("dOps", [XR(0), XR(JR), MR(GR), pR(yR), BR(tR), XR(uR), ...ZR])
       },
-      Ui = WW => {
-        const iW = WW.info.decoderConfig?.description;
-        (0, LW.K)(iW);
-        const OW = (0, LW.pd)(iW);
-        return VW("dfLa", 0, 0, [...OW.subarray(4)])
+      nJ = RR => {
+        const JR = RR.info.decoderConfig?.description;
+        (0, qR.I)(JR);
+        const GR = (0, qR.cd)(JR);
+        return PR("dfLa", 0, 0, [...GR.subarray(4)])
       },
-      ki = WW => {
+      UJ = RR => {
         const {
-          littleEndian: iW,
-          sampleSize: OW
-        } = (0, EW.U)(WW.track.source._codec);
-        return VW("pcmC", 0, 0, [SW(+iW), SW(8 * OW)])
+          littleEndian: JR,
+          sampleSize: GR
+        } = (0, tR.Q)(RR.track.source._codec);
+        return PR("pcmC", 0, 0, [XR(+JR), XR(8 * GR)])
       },
-      si = WW => {
-        (0, LW.K)(WW.info.primingPacket);
-        const iW = (0, bW.cb)(WW.info.primingPacket.data);
-        if (!iW) throw new Error("Couldn't extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");
-        const OW = new Uint8Array(3),
-          mW = new jW.c(OW);
-        return mW.writeBits(2, iW.fscod), mW.writeBits(5, iW.bsid), mW.writeBits(3, iW.bsmod), mW.writeBits(3, iW.acmod), mW.writeBits(1, iW.lfeon), mW.writeBits(5, iW.bitRateCode), mW.writeBits(5, 0), DW("dac3", [...OW])
+      WJ = RR => {
+        (0, qR.I)(RR.info.primingPacket);
+        const JR = (0, aR.eb)(RR.info.primingPacket.data);
+        if (!JR) throw new Error("Couldn't extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");
+        const GR = new Uint8Array(3),
+          yR = new LR.b(GR);
+        return yR.writeBits(2, JR.fscod), yR.writeBits(5, JR.bsid), yR.writeBits(3, JR.bsmod), yR.writeBits(3, JR.acmod), yR.writeBits(1, JR.lfeon), yR.writeBits(5, JR.bitRateCode), yR.writeBits(5, 0), cR("dac3", [...GR])
       },
-      Mi = WW => {
-        (0, LW.K)(WW.info.primingPacket);
-        const iW = (0, bW.hb)(WW.info.primingPacket.data);
-        if (!iW) throw new Error("Couldn't extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");
-        let OW = 16;
-        for (const PW of iW.substreams) OW += 23, PW.numDepSub > 0 ? OW += 9 : OW += 1;
-        const mW = Math.ceil(OW / 8),
-          EW = new Uint8Array(mW),
-          NW = new jW.c(EW);
-        NW.writeBits(13, iW.dataRate), NW.writeBits(3, iW.substreams.length - 1);
-        for (const PW of iW.substreams) NW.writeBits(2, PW.fscod), NW.writeBits(5, PW.bsid), NW.writeBits(1, 0), NW.writeBits(1, 0), NW.writeBits(3, PW.bsmod), NW.writeBits(3, PW.acmod), NW.writeBits(1, PW.lfeon), NW.writeBits(3, 0), NW.writeBits(4, PW.numDepSub), PW.numDepSub > 0 ? NW.writeBits(9, PW.chanLoc) : NW.writeBits(1, 0);
-        return DW("dec3", [...EW])
+      AJ = RR => {
+        (0, qR.I)(RR.info.primingPacket);
+        const JR = (0, aR.hb)(RR.info.primingPacket.data);
+        if (!JR) throw new Error("Couldn't extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");
+        let GR = 16;
+        for (const ZR of JR.substreams) GR += 23, ZR.numDepSub > 0 ? GR += 9 : GR += 1;
+        const yR = Math.ceil(GR / 8),
+          tR = new Uint8Array(yR),
+          uR = new LR.b(tR);
+        uR.writeBits(13, JR.dataRate), uR.writeBits(3, JR.substreams.length - 1);
+        for (const ZR of JR.substreams) uR.writeBits(2, ZR.fscod), uR.writeBits(5, ZR.bsid), uR.writeBits(1, 0), uR.writeBits(1, 0), uR.writeBits(3, ZR.bsmod), uR.writeBits(3, ZR.acmod), uR.writeBits(1, ZR.lfeon), uR.writeBits(3, 0), uR.writeBits(4, ZR.numDepSub), ZR.numDepSub > 0 ? uR.writeBits(9, ZR.chanLoc) : uR.writeBits(1, 0);
+        return cR("dec3", [...tR])
       },
-      Ki = WW => {
-        (0, LW.K)(WW.info.primingPacket);
-        const iW = (0, bW.eb)(WW.info.primingPacket.data);
-        if (!iW) throw new Error("Couldn't extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");
-        return DW("ddts", [...(0, bW.q)(iW)])
+      CJ = RR => {
+        (0, qR.I)(RR.info.primingPacket);
+        const JR = (0, aR.gb)(RR.info.primingPacket.data);
+        if (!JR) throw new Error("Couldn't extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");
+        return cR("ddts", [...(0, aR.u)(JR)])
       },
-      Si = (WW, iW) => DW(WW, [Array(6).fill(0), YW(1)], [LO[iW.track.source._codec](iW), Li(iW)]),
-      Yi = WW => VW("stts", 0, 0, [JW(WW.timeToSampleTable.length), WW.timeToSampleTable.map((WW => [JW(WW.sampleCount), JW(WW.sampleDelta)]))]),
-      yi = WW => {
-        if (WW.samples.every((WW => "key" === WW.type))) return null;
-        const iW = [...WW.samples.entries()].filter((WW => {
-          let [, iW] = WW;
-          return "key" === iW.type
+      XJ = (RR, JR) => cR(RR, [Array(6).fill(0), MR(1)], [uG[JR.track.source._codec](JR), qJ(JR)]),
+      MJ = RR => PR("stts", 0, 0, [pR(RR.timeToSampleTable.length), RR.timeToSampleTable.map((RR => [pR(RR.sampleCount), pR(RR.sampleDelta)]))]),
+      BJ = RR => {
+        if (RR.samples.every((RR => "key" === RR.type))) return null;
+        const JR = [...RR.samples.entries()].filter((RR => {
+          let [, JR] = RR;
+          return "key" === JR.type
         }));
-        return VW("stss", 0, 0, [JW(iW.length), iW.map((WW => {
-          let [iW] = WW;
-          return JW(iW + 1)
+        return PR("stss", 0, 0, [pR(JR.length), JR.map((RR => {
+          let [JR] = RR;
+          return pR(JR + 1)
         }))])
       },
-      Ti = WW => VW("stsc", 0, 0, [JW(WW.compactlyCodedChunkTable.length), WW.compactlyCodedChunkTable.map((WW => [JW(WW.firstChunk), JW(WW.samplesPerChunk), JW(1)]))]),
-      Ji = WW => {
-        if ("audio" === WW.type && WW.info.requiresPcmTransformation) {
+      lJ = RR => PR("stsc", 0, 0, [pR(RR.compactlyCodedChunkTable.length), RR.compactlyCodedChunkTable.map((RR => [pR(RR.firstChunk), pR(RR.samplesPerChunk), pR(1)]))]),
+      pJ = RR => {
+        if ("audio" === RR.type && RR.info.requiresPcmTransformation) {
           const {
-            sampleSize: iW
-          } = (0, EW.U)(WW.track.source._codec);
-          return VW("stsz", 0, 0, [JW(iW * WW.info.numberOfChannels), JW(WW.samples.reduce(((iW, OW) => iW + AO(OW.duration, WW.timescale)), 0))])
+            sampleSize: JR
+          } = (0, tR.Q)(RR.track.source._codec);
+          return PR("stsz", 0, 0, [pR(JR * RR.info.numberOfChannels), pR(RR.samples.reduce(((JR, GR) => JR + wG(GR.duration, RR.timescale)), 0))])
         }
-        return VW("stsz", 0, 0, [JW(0), JW(WW.samples.length), WW.samples.map((WW => JW(WW.size)))])
+        return PR("stsz", 0, 0, [pR(0), pR(RR.samples.length), RR.samples.map((RR => pR(RR.size)))])
       },
-      Hi = WW => WW.finalizedChunks.length > 0 && (0, LW.mc)(WW.finalizedChunks).offset >= 2 ** 32 ? VW("co64", 0, 0, [JW(WW.finalizedChunks.length), WW.finalizedChunks.map((WW => HW(WW.offset)))]) : VW("stco", 0, 0, [JW(WW.finalizedChunks.length), WW.finalizedChunks.map((WW => JW(WW.offset)))]),
-      ni = WW => VW("ctts", 1, 0, [JW(WW.compositionTimeOffsetTable.length), WW.compositionTimeOffsetTable.map((WW => [JW(WW.sampleCount), hW(WW.sampleCompositionTimeOffset)]))]),
-      ui = WW => {
-        let iW = 1 / 0,
-          OW = -1 / 0,
-          mW = 1 / 0,
-          EW = -1 / 0;
-        (0, LW.K)(WW.compositionTimeOffsetTable.length > 0), (0, LW.K)(WW.samples.length > 0);
-        for (let PW = 0; PW < WW.compositionTimeOffsetTable.length; PW++) {
-          const mW = WW.compositionTimeOffsetTable[PW];
-          iW = Math.min(iW, mW.sampleCompositionTimeOffset), OW = Math.max(OW, mW.sampleCompositionTimeOffset)
+      gJ = RR => RR.finalizedChunks.length > 0 && (0, qR.$b)(RR.finalizedChunks).offset >= 2 ** 32 ? PR("co64", 0, 0, [pR(RR.finalizedChunks.length), RR.finalizedChunks.map((RR => bR(RR.offset)))]) : PR("stco", 0, 0, [pR(RR.finalizedChunks.length), RR.finalizedChunks.map((RR => pR(RR.offset)))]),
+      bJ = RR => PR("ctts", 1, 0, [pR(RR.compositionTimeOffsetTable.length), RR.compositionTimeOffsetTable.map((RR => [pR(RR.sampleCount), gR(RR.sampleCompositionTimeOffset)]))]),
+      vJ = RR => {
+        let JR = 1 / 0,
+          GR = -1 / 0,
+          yR = 1 / 0,
+          tR = -1 / 0;
+        (0, qR.I)(RR.compositionTimeOffsetTable.length > 0), (0, qR.I)(RR.samples.length > 0);
+        for (let ZR = 0; ZR < RR.compositionTimeOffsetTable.length; ZR++) {
+          const yR = RR.compositionTimeOffsetTable[ZR];
+          JR = Math.min(JR, yR.sampleCompositionTimeOffset), GR = Math.max(GR, yR.sampleCompositionTimeOffset)
         }
-        for (let PW = 0; PW < WW.samples.length; PW++) {
-          const iW = WW.samples[PW];
-          mW = Math.min(mW, AO(iW.timestamp, WW.timescale)), EW = Math.max(EW, AO(iW.timestamp + iW.duration, WW.timescale))
+        for (let ZR = 0; ZR < RR.samples.length; ZR++) {
+          const JR = RR.samples[ZR];
+          yR = Math.min(yR, wG(JR.timestamp, RR.timescale)), tR = Math.max(tR, wG(JR.timestamp + JR.duration, RR.timescale))
         }
-        const NW = Math.max(-iW, 0);
-        return EW >= 2 ** 31 ? null : VW("cslg", 0, 0, [hW(NW), hW(iW), hW(OW), hW(mW), hW(EW)])
+        const uR = Math.max(-JR, 0);
+        return tR >= 2 ** 31 ? null : PR("cslg", 0, 0, [gR(uR), gR(JR), gR(GR), gR(yR), gR(tR)])
       },
-      oi = WW => DW("mvex", void 0, WW.map(di)),
-      di = WW => VW("trex", 0, 0, [JW(WW.track.id), JW(1), JW(0), JW(0), JW(0)]),
-      ei = (WW, iW) => DW("moof", void 0, [vi(WW), ...iW.map(Di)]),
-      vi = WW => VW("mfhd", 0, 0, [JW(WW)]),
-      gi = WW => {
-        let iW = 0,
-          OW = 0;
-        const mW = "delta" === WW.type;
-        return OW |= +mW, iW |= mW ? 1 : 2, iW << 24 | OW << 16
+      OJ = RR => cR("mvex", void 0, RR.map(xJ)),
+      xJ = RR => PR("trex", 0, 0, [pR(RR.track.id), pR(1), pR(0), pR(0), pR(0)]),
+      NJ = (RR, JR) => cR("moof", void 0, [DJ(RR), ...JR.map(oJ)]),
+      DJ = RR => PR("mfhd", 0, 0, [pR(RR)]),
+      HJ = RR => {
+        let JR = 0,
+          GR = 0;
+        const yR = "delta" === RR.type;
+        return GR |= +yR, JR |= yR ? 1 : 2, JR << 24 | GR << 16
       },
-      Di = WW => DW("traf", void 0, [Vi(WW), fi(WW), Ci(WW)]),
-      Vi = WW => {
-        (0, LW.K)(WW.currentChunk);
-        let iW = 0;
-        iW |= 8, iW |= 16, iW |= 32, iW |= 131072;
-        const OW = WW.currentChunk.samples[1] ?? WW.currentChunk.samples[0],
-          mW = {
-            duration: OW.timescaleUnitsToNextSample,
-            size: OW.size,
-            flags: gi(OW)
+      oJ = RR => cR("traf", void 0, [cJ(RR), PJ(RR), IJ(RR)]),
+      cJ = RR => {
+        (0, qR.I)(RR.currentChunk);
+        let JR = 0;
+        JR |= 8, JR |= 16, JR |= 32, JR |= 131072;
+        const GR = RR.currentChunk.samples[1] ?? RR.currentChunk.samples[0],
+          yR = {
+            duration: GR.timescaleUnitsToNextSample,
+            size: GR.size,
+            flags: HJ(GR)
           };
-        return VW("tfhd", 0, 131128, [JW(WW.track.id), JW(mW.duration), JW(mW.size), JW(mW.flags)])
+        return PR("tfhd", 0, 131128, [pR(RR.track.id), pR(yR.duration), pR(yR.size), pR(yR.flags)])
       },
-      fi = WW => ((0, LW.K)(WW.currentChunk), VW("tfdt", 1, 0, [HW(AO(WW.currentChunk.startTimestamp, WW.timescale))])),
-      Ci = WW => {
-        (0, LW.K)(WW.currentChunk);
-        const iW = WW.currentChunk.samples.map((WW => WW.timescaleUnitsToNextSample)),
-          OW = WW.currentChunk.samples.map((WW => WW.size)),
-          mW = WW.currentChunk.samples.map(gi),
-          EW = WW.currentChunk.samples.map((iW => AO(iW.timestamp - iW.decodeTimestamp, WW.timescale))),
-          NW = new Set(iW),
-          PW = new Set(OW),
-          cW = new Set(mW),
-          wW = new Set(EW),
-          tW = 2 === cW.size && mW[0] !== mW[1],
-          ZW = NW.size > 1,
-          xW = PW.size > 1,
-          lW = !tW && cW.size > 1,
-          AW = wW.size > 1 || [...wW].some((WW => 0 !== WW));
-        let bW = 0;
-        return bW |= 1, bW |= 4 * +tW, bW |= 256 * +ZW, bW |= 512 * +xW, bW |= 1024 * +lW, bW |= 2048 * +AW, VW("trun", 1, bW, [JW(WW.currentChunk.samples.length), JW(WW.currentChunk.offset - WW.currentChunk.moofOffset || 0), tW ? JW(mW[0]) : [], WW.currentChunk.samples.map(((WW, NW) => [ZW ? JW(iW[NW]) : [], xW ? JW(OW[NW]) : [], lW ? JW(mW[NW]) : [], AW ? hW(EW[NW]) : []]))])
+      PJ = RR => ((0, qR.I)(RR.currentChunk), PR("tfdt", 1, 0, [bR(wG(RR.currentChunk.startTimestamp, RR.timescale))])),
+      IJ = RR => {
+        (0, qR.I)(RR.currentChunk);
+        const JR = RR.currentChunk.samples.map((RR => RR.timescaleUnitsToNextSample)),
+          GR = RR.currentChunk.samples.map((RR => RR.size)),
+          yR = RR.currentChunk.samples.map(HJ),
+          tR = RR.currentChunk.samples.map((JR => wG(JR.timestamp - JR.decodeTimestamp, RR.timescale))),
+          uR = new Set(JR),
+          ZR = new Set(GR),
+          iR = new Set(yR),
+          fR = new Set(tR),
+          VR = 2 === iR.size && yR[0] !== yR[1],
+          KR = uR.size > 1,
+          wR = ZR.size > 1,
+          rR = !VR && iR.size > 1,
+          eR = fR.size > 1 || [...fR].some((RR => 0 !== RR));
+        let aR = 0;
+        return aR |= 1, aR |= 4 * +VR, aR |= 256 * +KR, aR |= 512 * +wR, aR |= 1024 * +rR, aR |= 2048 * +eR, PR("trun", 1, aR, [pR(RR.currentChunk.samples.length), pR(RR.currentChunk.offset - RR.currentChunk.moofOffset || 0), VR ? pR(yR[0]) : [], RR.currentChunk.samples.map(((RR, uR) => [KR ? pR(JR[uR]) : [], wR ? pR(GR[uR]) : [], rR ? pR(yR[uR]) : [], eR ? gR(tR[uR]) : []]))])
       },
-      Xi = WW => VW("tfra", 1, 0, [JW(WW.track.id), JW(63), JW(WW.finalizedChunks.length), WW.finalizedChunks.map((iW => [HW(AO(iW.samples[0].timestamp, WW.timescale)), HW(iW.moofOffset), JW(iW.trafIndex + 1), JW(1), JW(1)]))]),
-      Bi = () => VW("mfro", 0, 0, [JW(0)]),
-      qi = () => DW("vtte"),
-      Ri = (WW, iW, OW, mW, EW) => DW("vttc", void 0, [null !== EW ? DW("vsid", [hW(EW)]) : null, null !== OW ? DW("iden", [...LW.kd.encode(OW)]) : null, null !== iW ? DW("ctim", [...LW.kd.encode((0, UW.d)(iW))]) : null, null !== mW ? DW("sttg", [...LW.kd.encode(mW)]) : null, DW("payl", [...LW.kd.encode(WW)])]),
-      Gi = WW => DW("vtta", [...LW.kd.encode(WW)]),
-      Ii = WW => {
-        const iW = [],
-          OW = WW.format._options.metadataFormat ?? "auto",
-          mW = WW.output._metadataTags;
-        if ("mdir" === OW || "auto" === OW && !WW.isQuickTime) {
-          const WW = Qi(mW);
-          WW && iW.push(WW)
-        } else if ("mdta" === OW) {
-          const WW = WO(mW);
-          WW && iW.push(WW)
-        } else("udta" === OW || "auto" === OW && WW.isQuickTime) && ai(iW, WW.output._metadataTags);
-        return 0 === iW.length ? null : DW("udta", void 0, iW)
+      mJ = RR => PR("tfra", 1, 0, [pR(RR.track.id), pR(63), pR(RR.finalizedChunks.length), RR.finalizedChunks.map((JR => [bR(wG(JR.samples[0].timestamp, RR.timescale)), bR(JR.moofOffset), pR(JR.trafIndex + 1), pR(1), pR(1)]))]),
+      zJ = () => PR("mfro", 0, 0, [pR(0)]),
+      SJ = () => cR("vtte"),
+      jJ = (RR, JR, GR, yR, tR) => cR("vttc", void 0, [null !== tR ? cR("vsid", [gR(tR)]) : null, null !== GR ? cR("iden", [...qR.Vc.encode(GR)]) : null, null !== JR ? cR("ctim", [...qR.Vc.encode((0, nR.g)(JR))]) : null, null !== yR ? cR("sttg", [...qR.Vc.encode(yR)]) : null, cR("payl", [...qR.Vc.encode(RR)])]),
+      dJ = RR => cR("vtta", [...qR.Vc.encode(RR)]),
+      EJ = RR => {
+        const JR = [],
+          GR = RR.format._options.metadataFormat ?? "auto",
+          yR = RR.output._metadataTags;
+        if ("mdir" === GR || "auto" === GR && !RR.isQuickTime) {
+          const RR = TJ(yR);
+          RR && JR.push(RR)
+        } else if ("mdta" === GR) {
+          const RR = sJ(yR);
+          RR && JR.push(RR)
+        } else("udta" === GR || "auto" === GR && RR.isQuickTime) && YJ(JR, RR.output._metadataTags);
+        return 0 === JR.length ? null : cR("udta", void 0, JR)
       },
-      ai = (WW, iW) => {
+      YJ = (RR, JR) => {
         for (const {
-            key: OW,
-            value: mW
+            key: GR,
+            value: yR
           }
-          of(0, LW.kc)(iW)) switch (OW) {
+          of(0, qR._b)(JR)) switch (GR) {
           case "title":
-            WW.push(ri("\xa9nam", mW));
+            RR.push(kJ("\xa9nam", yR));
             break;
           case "description":
-            WW.push(ri("\xa9des", mW));
+            RR.push(kJ("\xa9des", yR));
             break;
           case "artist":
-            WW.push(ri("\xa9ART", mW));
+            RR.push(kJ("\xa9ART", yR));
             break;
           case "album":
-            WW.push(ri("\xa9alb", mW));
+            RR.push(kJ("\xa9alb", yR));
             break;
           case "albumArtist":
-            WW.push(ri("albr", mW));
+            RR.push(kJ("albr", yR));
             break;
           case "genre":
-            WW.push(ri("\xa9gen", mW));
+            RR.push(kJ("\xa9gen", yR));
             break;
           case "date":
-            WW.push(ri("\xa9day", mW.toISOString().slice(0, 10)));
+            RR.push(kJ("\xa9day", yR.toISOString().slice(0, 10)));
             break;
           case "comment":
-            WW.push(ri("\xa9cmt", mW));
+            RR.push(kJ("\xa9cmt", yR));
             break;
           case "lyrics":
-            WW.push(ri("\xa9lyr", mW));
+            RR.push(kJ("\xa9lyr", yR));
             break;
           case "raw":
           case "discNumber":
@@ -4086,112 +4086,112 @@ export const modules = {
           case "images":
             break;
           default:
-            (0, LW.J)(OW)
+            (0, qR.H)(GR)
         }
-        if (iW.raw)
-          for (const OW in iW.raw) {
-            const mW = iW.raw[OW];
-            null == mW || 4 !== OW.length || WW.some((WW => WW.type === OW)) || ("string" === typeof mW ? WW.push(ri(OW, mW)) : mW instanceof Uint8Array && WW.push(DW(OW, Array.from(mW))))
+        if (JR.raw)
+          for (const GR in JR.raw) {
+            const yR = JR.raw[GR];
+            null == yR || 4 !== GR.length || RR.some((RR => RR.type === GR)) || ("string" === typeof yR ? RR.push(kJ(GR, yR)) : yR instanceof Uint8Array && RR.push(cR(GR, Array.from(yR))))
           }
       },
-      ri = (WW, iW) => {
-        const OW = LW.kd.encode(iW);
-        return DW(WW, [YW(OW.length), YW(cO("und")), Array.from(OW)])
+      kJ = (RR, JR) => {
+        const GR = qR.Vc.encode(JR);
+        return cR(RR, [MR(GR.length), MR(ZG("und")), Array.from(GR)])
       },
-      zi = {
+      QJ = {
         "image/jpeg": 13,
         "image/png": 14,
         "image/bmp": 27
       },
-      Fi = (WW, iW) => {
-        const OW = [];
+      FJ = (RR, JR) => {
+        const GR = [];
         for (const {
-            key: mW,
-            value: EW
+            key: yR,
+            value: tR
           }
-          of(0, LW.kc)(WW)) switch (mW) {
+          of(0, qR._b)(RR)) switch (yR) {
           case "title":
-            OW.push({
-              key: iW ? "title" : "\xa9nam",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "title" : "\xa9nam",
+              value: hJ(tR)
             });
             break;
           case "description":
-            OW.push({
-              key: iW ? "description" : "\xa9des",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "description" : "\xa9des",
+              value: hJ(tR)
             });
             break;
           case "artist":
-            OW.push({
-              key: iW ? "artist" : "\xa9ART",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "artist" : "\xa9ART",
+              value: hJ(tR)
             });
             break;
           case "album":
-            OW.push({
-              key: iW ? "album" : "\xa9alb",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "album" : "\xa9alb",
+              value: hJ(tR)
             });
             break;
           case "albumArtist":
-            OW.push({
-              key: iW ? "album_artist" : "aART",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "album_artist" : "aART",
+              value: hJ(tR)
             });
             break;
           case "comment":
-            OW.push({
-              key: iW ? "comment" : "\xa9cmt",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "comment" : "\xa9cmt",
+              value: hJ(tR)
             });
             break;
           case "genre":
-            OW.push({
-              key: iW ? "genre" : "\xa9gen",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "genre" : "\xa9gen",
+              value: hJ(tR)
             });
             break;
           case "beatsPerMinute":
-            iW || OW.push({
+            JR || GR.push({
               key: "tmpo",
-              value: DW("data", [JW(21), JW(0), YW(EW)])
+              value: cR("data", [pR(21), pR(0), MR(tR)])
             });
             break;
           case "lyrics":
-            OW.push({
-              key: iW ? "lyrics" : "\xa9lyr",
-              value: iO(EW)
+            GR.push({
+              key: JR ? "lyrics" : "\xa9lyr",
+              value: hJ(tR)
             });
             break;
           case "date":
-            OW.push({
-              key: iW ? "date" : "\xa9day",
-              value: iO(EW.toISOString().slice(0, 10))
+            GR.push({
+              key: JR ? "date" : "\xa9day",
+              value: hJ(tR.toISOString().slice(0, 10))
             });
             break;
           case "images":
-            for (const WW of EW) "coverFront" === WW.kind && OW.push({
+            for (const RR of tR) "coverFront" === RR.kind && GR.push({
               key: "covr",
-              value: DW("data", [JW(zi[WW.mimeType] ?? 0), JW(0), Array.from(WW.data)])
+              value: cR("data", [pR(QJ[RR.mimeType] ?? 0), pR(0), Array.from(RR.data)])
             });
             break;
           case "trackNumber":
-            if (iW) {
-              const iW = void 0 !== WW.tracksTotal ? `${EW}/${WW.tracksTotal}` : EW.toString();
-              OW.push({
+            if (JR) {
+              const JR = void 0 !== RR.tracksTotal ? `${tR}/${RR.tracksTotal}` : tR.toString();
+              GR.push({
                 key: "track",
-                value: iO(iW)
+                value: hJ(JR)
               })
-            } else OW.push({
+            } else GR.push({
               key: "trkn",
-              value: DW("data", [JW(0), JW(0), YW(0), YW(EW), YW(WW.tracksTotal ?? 0), YW(0)])
+              value: cR("data", [pR(0), pR(0), MR(0), MR(tR), MR(RR.tracksTotal ?? 0), MR(0)])
             });
             break;
           case "discNumber":
-            iW || OW.push({
+            JR || GR.push({
               key: "disc",
-              value: DW("data", [JW(0), JW(0), YW(0), YW(EW), YW(WW.discsTotal ?? 0), YW(0)])
+              value: cR("data", [pR(0), pR(0), MR(0), MR(tR), MR(RR.discsTotal ?? 0), MR(0)])
             });
             break;
           case "tracksTotal":
@@ -4199,40 +4199,40 @@ export const modules = {
           case "raw":
             break;
           default:
-            (0, LW.J)(mW)
+            (0, qR.H)(yR)
         }
-        if (WW.raw)
-          for (const mW in WW.raw) {
-            const EW = WW.raw[mW];
-            null == EW || !iW && 4 !== mW.length || OW.some((WW => WW.key === mW)) || ("string" === typeof EW ? OW.push({
-              key: mW,
-              value: iO(EW)
-            }) : EW instanceof Uint8Array ? OW.push({
-              key: mW,
-              value: DW("data", [JW(0), JW(0), Array.from(EW)])
-            }) : EW instanceof lW.i && OW.push({
-              key: mW,
-              value: DW("data", [JW(zi[EW.mimeType] ?? 0), JW(0), Array.from(EW.data)])
+        if (RR.raw)
+          for (const yR in RR.raw) {
+            const tR = RR.raw[yR];
+            null == tR || !JR && 4 !== yR.length || GR.some((RR => RR.key === yR)) || ("string" === typeof tR ? GR.push({
+              key: yR,
+              value: hJ(tR)
+            }) : tR instanceof Uint8Array ? GR.push({
+              key: yR,
+              value: cR("data", [pR(0), pR(0), Array.from(tR)])
+            }) : tR instanceof rR.k && GR.push({
+              key: yR,
+              value: cR("data", [pR(QJ[tR.mimeType] ?? 0), pR(0), Array.from(tR.data)])
             }))
           }
-        return OW
+        return GR
       },
-      Qi = WW => {
-        const iW = Fi(WW, !1);
-        return 0 === iW.length ? null : VW("meta", 0, 0, void 0, [FW(!1, "mdir", "", "appl"), DW("ilst", void 0, iW.map((WW => DW(WW.key, void 0, [WW.value]))))])
+      TJ = RR => {
+        const JR = FJ(RR, !1);
+        return 0 === JR.length ? null : PR("meta", 0, 0, void 0, [sR(!1, "mdir", "", "appl"), cR("ilst", void 0, JR.map((RR => cR(RR.key, void 0, [RR.value]))))])
       },
-      WO = WW => {
-        const iW = Fi(WW, !0);
-        return 0 === iW.length ? null : DW("meta", void 0, [FW(!1, "mdta", ""), VW("keys", 0, 0, [JW(iW.length)], iW.map((WW => DW("mdta", [...LW.kd.encode(WW.key)])))), DW("ilst", void 0, iW.map(((WW, iW) => {
-          const OW = String.fromCharCode(...JW(iW + 1));
-          return DW(OW, void 0, [WW.value])
+      sJ = RR => {
+        const JR = FJ(RR, !0);
+        return 0 === JR.length ? null : cR("meta", void 0, [sR(!1, "mdta", ""), PR("keys", 0, 0, [pR(JR.length)], JR.map((RR => cR("mdta", [...qR.Vc.encode(RR.key)])))), cR("ilst", void 0, JR.map(((RR, JR) => {
+          const GR = String.fromCharCode(...pR(JR + 1));
+          return cR(GR, void 0, [RR.value])
         })))])
       },
-      iO = WW => DW("data", [JW(1), JW(0), ...LW.kd.encode(WW)]),
-      OO = (WW, iW) => {
-        switch (WW) {
+      hJ = RR => cR("data", [pR(1), pR(0), ...qR.Vc.encode(RR)]),
+      RG = (RR, JR) => {
+        switch (RR) {
           case "avc":
-            return iW.startsWith("avc3") ? "avc3" : "avc1";
+            return JR.startsWith("avc3") ? "avc3" : "avc1";
           case "hevc":
             return "hvc1";
           case "vp8":
@@ -4242,19 +4242,19 @@ export const modules = {
           case "av1":
             return "av01";
           case "prores":
-            return iW
+            return JR
         }
       },
-      mO = {
-        avc: WW => WW.info.decoderConfig && DW("avcC", [...(0, LW.pd)(WW.info.decoderConfig.description)]),
-        hevc: WW => WW.info.decoderConfig && DW("hvcC", [...(0, LW.pd)(WW.info.decoderConfig.description)]),
-        vp8: ti,
-        vp9: ti,
-        av1: WW => DW("av1C", (0, EW.J)(WW.info.decoderConfig.codec)),
+      JG = {
+        avc: RR => RR.info.decoderConfig && cR("avcC", [...(0, qR.cd)(RR.info.decoderConfig.description)]),
+        hevc: RR => RR.info.decoderConfig && cR("hvcC", [...(0, qR.cd)(RR.info.decoderConfig.description)]),
+        vp8: VJ,
+        vp9: VJ,
+        av1: RR => cR("av1C", (0, tR.H)(RR.info.decoderConfig.codec)),
         prores: null
       },
-      EO = (WW, iW, OW) => {
-        switch (WW) {
+      GG = (RR, JR, GR) => {
+        switch (RR) {
           case "aac":
           case "mp3":
           case "vorbis":
@@ -4276,9 +4276,9 @@ export const modules = {
           case "eac3":
             return "ec-3";
           case "dts":
-            return iW
+            return JR
         }
-        if (OW) switch (WW) {
+        if (GR) switch (RR) {
           case "pcm-s16":
             return "sowt";
           case "pcm-s16be":
@@ -4295,7 +4295,7 @@ export const modules = {
           case "pcm-f64":
           case "pcm-f64be":
             return "fl64"
-        } else switch (WW) {
+        } else switch (RR) {
           case "pcm-s16":
           case "pcm-s16be":
           case "pcm-s24":
@@ -4310,24 +4310,24 @@ export const modules = {
             return "fpcm"
         }
       },
-      NO = (WW, iW) => {
-        switch (WW) {
+      yG = (RR, JR) => {
+        switch (RR) {
           case "aac":
           case "mp3":
           case "vorbis":
-            return xi;
+            return wJ;
           case "opus":
-            return ji;
+            return LJ;
           case "flac":
-            return Ui;
+            return nJ;
           case "ac3":
-            return si;
+            return WJ;
           case "eac3":
-            return Mi;
+            return AJ;
           case "dts":
-            return Ki
+            return CJ
         }
-        if (iW) switch (WW) {
+        if (JR) switch (RR) {
           case "pcm-s24":
           case "pcm-s24be":
           case "pcm-s32":
@@ -4336,8 +4336,8 @@ export const modules = {
           case "pcm-f32be":
           case "pcm-f64":
           case "pcm-f64be":
-            return li
-        } else switch (WW) {
+            return rJ
+        } else switch (RR) {
           case "pcm-s16":
           case "pcm-s16be":
           case "pcm-s24":
@@ -4348,192 +4348,192 @@ export const modules = {
           case "pcm-f32be":
           case "pcm-f64":
           case "pcm-f64be":
-            return ki
+            return UJ
         }
         return null
       },
-      PO = {
+      tG = {
         webvtt: "wvtt"
       },
-      LO = {
-        webvtt: WW => DW("vttC", [...LW.kd.encode(WW.info.config.description)])
+      uG = {
+        webvtt: RR => cR("vttC", [...qR.Vc.encode(RR.info.config.description)])
       },
-      cO = WW => {
-        (0, LW.K)(3 === WW.length);
-        let iW = 0;
-        for (let OW = 0; OW < 3; OW++) iW <<= 5, iW += WW.charCodeAt(OW) - 96;
-        return iW
+      ZG = RR => {
+        (0, qR.I)(3 === RR.length);
+        let JR = 0;
+        for (let GR = 0; GR < 3; GR++) JR <<= 5, JR += RR.charCodeAt(GR) - 96;
+        return JR
       };
-    var wO = OW(41176),
-      tO = OW(41179);
-    const ZO = WW => {
-        const iW = WW.filePos,
-          OW = tW(WW, 9),
-          mW = new jW.c(OW);
-        if (4095 !== mW.readBits(12)) return null;
-        mW.skipBits(1);
-        if (0 !== mW.readBits(2)) return null;
-        const EW = mW.readBits(1),
-          NW = mW.readBits(2) + 1,
-          PW = mW.readBits(4);
-        if (15 === PW) return null;
-        mW.skipBits(1);
-        const LW = mW.readBits(3);
-        if (0 === LW) throw new Error("ADTS frames with channel configuration 0 are not supported.");
-        mW.skipBits(1), mW.skipBits(1), mW.skipBits(1), mW.skipBits(1);
-        const cW = mW.readBits(13);
-        mW.skipBits(11);
-        const wW = mW.readBits(2) + 1;
-        if (1 !== wW) throw new Error("ADTS frames with more than one AAC frame are not supported.");
-        let ZW = null;
-        return 1 === EW ? WW.filePos -= 2 : ZW = mW.readBits(16), {
-          objectType: NW,
-          samplingFrequencyIndex: PW,
-          channelConfiguration: LW,
-          frameLength: cW,
-          numberOfAacFrames: wW,
-          crcCheck: ZW,
-          startPos: iW
+    var qG = GR(41166),
+      iG = GR(41170);
+    const fG = RR => {
+        const JR = RR.filePos,
+          GR = VR(RR, 9),
+          yR = new LR.b(GR);
+        if (4095 !== yR.readBits(12)) return null;
+        yR.skipBits(1);
+        if (0 !== yR.readBits(2)) return null;
+        const tR = yR.readBits(1),
+          uR = yR.readBits(2) + 1,
+          ZR = yR.readBits(4);
+        if (15 === ZR) return null;
+        yR.skipBits(1);
+        const qR = yR.readBits(3);
+        if (0 === qR) throw new Error("ADTS frames with channel configuration 0 are not supported.");
+        yR.skipBits(1), yR.skipBits(1), yR.skipBits(1), yR.skipBits(1);
+        const iR = yR.readBits(13);
+        yR.skipBits(11);
+        const fR = yR.readBits(2) + 1;
+        if (1 !== fR) throw new Error("ADTS frames with more than one AAC frame are not supported.");
+        let KR = null;
+        return 1 === tR ? RR.filePos -= 2 : KR = yR.readBits(16), {
+          objectType: uR,
+          samplingFrequencyIndex: ZR,
+          channelConfiguration: qR,
+          frameLength: iR,
+          numberOfAacFrames: fR,
+          crcCheck: KR,
+          startPos: JR
         }
       },
-      xO = 57600,
-      lO = WW => {
-        const iW = {},
-          OW = WW.track;
-        return void 0 !== OW.metadata.name && (iW.name = OW.metadata.name), iW
+      VG = 57600,
+      KG = RR => {
+        const JR = {},
+          GR = RR.track;
+        return void 0 !== GR.metadata.name && (JR.name = GR.metadata.name), JR
       },
-      AO = function(WW, iW) {
-        const OW = WW * iW;
-        return !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Math.round(OW) : OW
+      wG = function(RR, JR) {
+        const GR = RR * JR;
+        return !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Math.round(GR) : GR
       },
-      bO = WW => {
-        if (0 === WW.samples.length) return 0;
-        let iW = 1 / 0,
-          OW = -1 / 0;
-        for (let mW = 0; mW < WW.samples.length; mW++) {
-          const EW = WW.samples[mW];
-          EW.timestamp < iW && (iW = EW.timestamp), EW.timestamp + EW.duration > OW && (OW = EW.timestamp + EW.duration)
+      rG = RR => {
+        if (0 === RR.samples.length) return 0;
+        let JR = 1 / 0,
+          GR = -1 / 0;
+        for (let yR = 0; yR < RR.samples.length; yR++) {
+          const tR = RR.samples[yR];
+          tR.timestamp < JR && (JR = tR.timestamp), tR.timestamp + tR.duration > GR && (GR = tR.timestamp + tR.duration)
         }
-        return iW === 1 / 0 ? 0 : OW - iW
+        return JR === 1 / 0 ? 0 : GR - JR
       };
-    class jO extends AW {
-      constructor(WW, iW) {
-        super(WW), this.writer = null, this.boxWriter = null, this.initWriter = null, this.initBoxWriter = null, this.auxTarget = new tO.b, this.auxWriter = new wO.d(this.auxTarget, !1), this.auxBoxWriter = new sW(this.auxWriter), this.mdat = null, this.ftypSize = null, this.trackDatas = [], this.allTracksKnown = (0, LW.Gc)(), this.creationTime = Math.floor(Date.now() / 1e3) + 2082844800, this.finalizedChunks = [], this.wroteFragmentedHeader = !1, this.nextFragmentNumber = 1, this.maxWrittenTimestamp = -1 / 0, this.minWrittenTimestamp = 1 / 0, this.maxWrittenEndTimestamp = -1 / 0, this.segmentHeaderSize = null, this.format = iW, this.formatOptions = {
-          ...iW._options
-        }, this.isQuickTime = iW instanceof pO, this.isCmaf = iW instanceof VO, this.minimumFragmentDuration = this.formatOptions.minimumFragmentDuration ?? (iW instanceof VO ? 1 / 0 : 1), this.auxWriter.start()
+    class eG extends eR {
+      constructor(RR, JR) {
+        super(RR), this.writer = null, this.boxWriter = null, this.initWriter = null, this.initBoxWriter = null, this.auxTarget = new iG.b, this.auxWriter = new qG.e(this.auxTarget, !1), this.auxBoxWriter = new WR(this.auxWriter), this.mdat = null, this.ftypSize = null, this.trackDatas = [], this.allTracksKnown = (0, qR.sc)(), this.creationTime = Math.floor(Date.now() / 1e3) + 2082844800, this.finalizedChunks = [], this.wroteFragmentedHeader = !1, this.nextFragmentNumber = 1, this.maxWrittenTimestamp = -1 / 0, this.minWrittenTimestamp = 1 / 0, this.maxWrittenEndTimestamp = -1 / 0, this.segmentHeaderSize = null, this.format = JR, this.formatOptions = {
+          ...JR._options
+        }, this.isQuickTime = JR instanceof cG, this.isCmaf = JR instanceof oG, this.minimumFragmentDuration = this.formatOptions.minimumFragmentDuration ?? (JR instanceof oG ? 1 / 0 : 1), this.auxWriter.start()
       }
       async start() {
-        const WW = await this.mutex.acquire();
-        if (this.isCmaf ? (this.fastStart = "fragmented", this.isFragmented = !0) : (this.writer = await this.output._getRootWriter((WW => void 0 !== this.formatOptions.fastStart ? "fragmented" === this.formatOptions.fastStart : WW instanceof tO.b)), this.boxWriter = new sW(this.writer), this.fastStart = this.formatOptions.fastStart ?? (this.writer.target instanceof tO.b && "in-memory"), this.isFragmented = "fragmented" === this.fastStart), this.isCmaf) {
+        const RR = await this.mutex.acquire();
+        if (this.isCmaf ? (this.fastStart = "fragmented", this.isFragmented = !0) : (this.writer = await this.output._getRootWriter((RR => void 0 !== this.formatOptions.fastStart ? "fragmented" === this.formatOptions.fastStart : RR instanceof iG.b)), this.boxWriter = new WR(this.writer), this.fastStart = this.formatOptions.fastStart ?? (this.writer.target instanceof iG.b && "in-memory"), this.isFragmented = "fragmented" === this.fastStart), this.isCmaf) {
           if (!this.output._hasInitTarget()) throw new Error("CMAF outputs require the initTarget field in OutputOptions to be set; the init segment will be written to it.");
-          const WW = await this.output._getInitTarget(),
-            iW = new wO.d(WW, !0);
-          iW.start(), this.initWriter = iW, this.initBoxWriter = new sW(iW)
+          const RR = await this.output._getInitTarget(),
+            JR = new qG.e(RR, !0);
+          JR.start(), this.initWriter = JR, this.initBoxWriter = new WR(JR)
         }
-        const iW = this.output.tracks.some((WW => WW.isVideoTrack() && "avc" === WW.source._codec));
+        const JR = this.output.tracks.some((RR => RR.isVideoTrack() && "avc" === RR.source._codec));
         {
-          const WW = this.initBoxWriter ?? this.boxWriter;
-          if ((0, LW.K)(WW), this.formatOptions.onFtyp && WW.writer.startTrackingWrites(), WW.writeBox((WW => {
-              const iW = 512;
-              return WW.isQuickTime ? DW("ftyp", [vW("qt  "), JW(iW), vW("qt  ")]) : WW.fragmented ? WW.cmaf ? DW("ftyp", [vW("iso5"), JW(iW), vW("iso5"), vW("iso6"), vW("mp41"), vW("cmfc"), vW("dash")]) : DW("ftyp", [vW("iso5"), JW(iW), vW("iso5"), vW("iso6"), vW("mp41")]) : DW("ftyp", [vW("isom"), JW(iW), vW("isom"), WW.holdsAvc ? vW("avc1") : [], vW("mp41")])
+          const RR = this.initBoxWriter ?? this.boxWriter;
+          if ((0, qR.I)(RR), this.formatOptions.onFtyp && RR.writer.startTrackingWrites(), RR.writeBox((RR => {
+              const JR = 512;
+              return RR.isQuickTime ? cR("ftyp", [HR("qt  "), pR(JR), HR("qt  ")]) : RR.fragmented ? RR.cmaf ? cR("ftyp", [HR("iso5"), pR(JR), HR("iso5"), HR("iso6"), HR("mp41"), HR("cmfc"), HR("dash")]) : cR("ftyp", [HR("iso5"), pR(JR), HR("iso5"), HR("iso6"), HR("mp41")]) : cR("ftyp", [HR("isom"), pR(JR), HR("isom"), RR.holdsAvc ? HR("avc1") : [], HR("mp41")])
             })({
               isQuickTime: this.isQuickTime,
-              holdsAvc: iW,
+              holdsAvc: JR,
               fragmented: this.isFragmented,
               cmaf: this.isCmaf
             })), this.formatOptions.onFtyp) {
             const {
-              data: iW,
-              start: OW
-            } = WW.writer.stopTrackingWrites();
-            this.formatOptions.onFtyp(iW, OW)
+              data: JR,
+              start: GR
+            } = RR.writer.stopTrackingWrites();
+            this.formatOptions.onFtyp(JR, GR)
           }
-          this.ftypSize = WW.writer.getPos(), this.isCmaf && await this.initWriter.flush()
+          this.ftypSize = RR.writer.getPos(), this.isCmaf && await this.initWriter.flush()
         }
         if ("in-memory" === this.fastStart);
         else if ("reserve" === this.fastStart) {
-          for (const OW of this.output.tracks)
-            if (void 0 === OW.metadata.maximumPacketCount) throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: 'reserve'.")
-        } else this.isFragmented || ((0, LW.K)(this.writer), (0, LW.K)(this.boxWriter), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = CW(!0), this.boxWriter.writeBox(this.mdat));
+          for (const GR of this.output.tracks)
+            if (void 0 === GR.metadata.maximumPacketCount) throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: 'reserve'.")
+        } else this.isFragmented || ((0, qR.I)(this.writer), (0, qR.I)(this.boxWriter), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = zR(!0), this.boxWriter.writeBox(this.mdat));
         await (this.writer?.flush());
-        for (const OW of this.output.tracks) OW.isVideoTrack() && OW.metadata.decoderConfig ? this.getVideoTrackData(OW, OW.metadata.primingPacket ?? null, {
-          decoderConfig: OW.metadata.decoderConfig
-        }) : OW.isAudioTrack() && OW.metadata.decoderConfig && this.getAudioTrackData(OW, OW.metadata.primingPacket ?? null, {
-          decoderConfig: OW.metadata.decoderConfig
+        for (const GR of this.output.tracks) GR.isVideoTrack() && GR.metadata.decoderConfig ? this.getVideoTrackData(GR, GR.metadata.primingPacket ?? null, {
+          decoderConfig: GR.metadata.decoderConfig
+        }) : GR.isAudioTrack() && GR.metadata.decoderConfig && this.getAudioTrackData(GR, GR.metadata.primingPacket ?? null, {
+          decoderConfig: GR.metadata.decoderConfig
         });
-        WW()
+        RR()
       }
       allTracksAreKnown() {
-        for (const WW of this.output.tracks)
-          if (!WW.source._closed && !this.trackDatas.some((iW => iW.track === WW))) return !1;
+        for (const RR of this.output.tracks)
+          if (!RR.source._closed && !this.trackDatas.some((JR => JR.track === RR))) return !1;
         return !0
       }
       async getMimeType() {
         await this.allTracksKnown.promise;
-        const WW = this.trackDatas.map((WW => {
-          if ("video" === WW.type) return WW.info.decoderConfig.codec;
-          if ("audio" === WW.type) return WW.info.decoderConfig.codec;
+        const RR = this.trackDatas.map((RR => {
+          if ("video" === RR.type) return RR.info.decoderConfig.codec;
+          if ("audio" === RR.type) return RR.info.decoderConfig.codec;
           return {
             webvtt: "wvtt"
-          } [WW.track.source._codec]
+          } [RR.track.source._codec]
         }));
-        return (WW => {
-          let iW = (WW.hasVideo ? "video/" : WW.hasAudio ? "audio/" : "application/") + (WW.isQuickTime ? "quicktime" : "mp4");
-          WW.codecStrings.length > 0 && (iW += `; codecs="${[...new Set(WW.codecStrings)].join(", ")}"`);
-          return iW
+        return (RR => {
+          let JR = (RR.hasVideo ? "video/" : RR.hasAudio ? "audio/" : "application/") + (RR.isQuickTime ? "quicktime" : "mp4");
+          RR.codecStrings.length > 0 && (JR += `; codecs="${[...new Set(RR.codecStrings)].join(", ")}"`);
+          return JR
         })({
           isQuickTime: this.isQuickTime,
-          hasVideo: this.trackDatas.some((WW => "video" === WW.type)),
-          hasAudio: this.trackDatas.some((WW => "audio" === WW.type)),
-          codecStrings: WW
+          hasVideo: this.trackDatas.some((RR => "video" === RR.type)),
+          hasAudio: this.trackDatas.some((RR => "audio" === RR.type)),
+          codecStrings: RR
         })
       }
-      getVideoTrackData(WW, iW, OW) {
-        const mW = this.trackDatas.find((iW => iW.track === WW));
-        if (mW) return mW;
-        (0, EW.bb)(OW, WW.source._codec), (0, LW.K)(OW), (0, LW.K)(OW.decoderConfig);
-        const NW = {
-          ...OW.decoderConfig
+      getVideoTrackData(RR, JR, GR) {
+        const yR = this.trackDatas.find((JR => JR.track === RR));
+        if (yR) return yR;
+        (0, tR.X)(GR, RR.source._codec), (0, qR.I)(GR), (0, qR.I)(GR.decoderConfig);
+        const uR = {
+          ...GR.decoderConfig
         };
-        (0, LW.K)(void 0 !== NW.codedWidth), (0, LW.K)(void 0 !== NW.codedHeight);
-        let PW = !1;
-        if ("avc" !== WW.source._codec || NW.description) {
-          if ("hevc" === WW.source._codec && !NW.description) {
-            if (!iW) throw new Error("No HEVC description provided; you must therefore provide a priming packet.");
-            const WW = (0, bW.P)(iW.data);
-            if (!WW) throw new Error("Couldn't extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");
-            NW.description = (0, bW.ub)(WW), PW = !0
+        (0, qR.I)(void 0 !== uR.codedWidth), (0, qR.I)(void 0 !== uR.codedHeight);
+        let ZR = !1;
+        if ("avc" !== RR.source._codec || uR.description) {
+          if ("hevc" === RR.source._codec && !uR.description) {
+            if (!JR) throw new Error("No HEVC description provided; you must therefore provide a priming packet.");
+            const RR = (0, aR.Q)(JR.data);
+            if (!RR) throw new Error("Couldn't extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");
+            uR.description = (0, aR.ob)(RR), ZR = !0
           }
         } else {
-          if (!iW) throw new Error("No AVC description provided; you must therefore provide a priming packet.");
-          const WW = (0, bW.J)(iW.data);
-          if (!WW) throw new Error("Couldn't extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");
-          NW.description = (0, bW.rb)(WW), PW = !0
+          if (!JR) throw new Error("No AVC description provided; you must therefore provide a priming packet.");
+          const RR = (0, aR.L)(JR.data);
+          if (!RR) throw new Error("Couldn't extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");
+          uR.description = (0, aR.lb)(RR), ZR = !0
         }
-        const cW = (0, LW.lb)(1 / (WW.metadata.frameRate ?? xO), 1e6).den,
-          wW = NW.displayAspectWidth,
-          tW = NW.displayAspectHeight,
-          ZW = void 0 === wW || void 0 === tW ? {
+        const iR = (0, qR.db)(1 / (RR.metadata.frameRate ?? VG), 1e6).den,
+          fR = uR.displayAspectWidth,
+          VR = uR.displayAspectHeight,
+          KR = void 0 === fR || void 0 === VR ? {
             num: 1,
             den: 1
-          } : (0, LW.ed)({
-            num: wW * NW.codedHeight,
-            den: tW * NW.codedWidth
+          } : (0, qR.Qc)({
+            num: fR * uR.codedHeight,
+            den: VR * uR.codedWidth
           }),
-          xW = "ap4h" === NW.codec || "ap4x" === NW.codec,
-          lW = {
+          wR = "ap4h" === uR.codec || "ap4x" === uR.codec,
+          rR = {
             muxer: this,
-            track: WW,
+            track: RR,
             type: "video",
             info: {
-              width: NW.codedWidth,
-              height: NW.codedHeight,
-              pixelAspectRatio: ZW,
-              decoderConfig: NW,
-              requiresAnnexBTransformation: PW,
-              hasAlphaChannel: xW
+              width: uR.codedWidth,
+              height: uR.codedHeight,
+              pixelAspectRatio: KR,
+              decoderConfig: uR,
+              requiresAnnexBTransformation: ZR,
+              hasAlphaChannel: wR
             },
-            timescale: cW,
+            timescale: iR,
             samples: [],
             sampleQueue: [],
             timestampProcessingQueue: [],
@@ -4546,50 +4546,50 @@ export const modules = {
             currentChunk: null,
             compactlyCodedChunkTable: [],
             closed: !1,
-            avgBitrate: WW.source._nominalBitrate ?? WW.metadata.averageBitrate ?? 0,
-            maxBitrate: WW.source._nominalBitrate ?? WW.metadata.bitrate ?? 0
+            avgBitrate: RR.source._nominalBitrate ?? RR.metadata.averageBitrate ?? 0,
+            maxBitrate: RR.source._nominalBitrate ?? RR.metadata.bitrate ?? 0
           };
-        return this.trackDatas.push(lW), this.trackDatas.sort(((WW, iW) => WW.track.id - iW.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), lW
+        return this.trackDatas.push(rR), this.trackDatas.sort(((RR, JR) => RR.track.id - JR.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), rR
       }
-      getAudioTrackData(WW, iW, OW) {
-        const NW = this.trackDatas.find((iW => iW.track === WW));
-        if (NW) return NW;
-        (0, EW.W)(OW, WW.source._codec), (0, LW.K)(OW), (0, LW.K)(OW.decoderConfig);
-        const PW = {
-          ...OW.decoderConfig
+      getAudioTrackData(RR, JR, GR) {
+        const uR = this.trackDatas.find((JR => JR.track === RR));
+        if (uR) return uR;
+        (0, tR.S)(GR, RR.source._codec), (0, qR.I)(GR), (0, qR.I)(GR.decoderConfig);
+        const ZR = {
+          ...GR.decoderConfig
         };
-        let wW = !1;
-        if ("aac" === WW.source._codec && !PW.description) {
-          if (!iW) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
-          const WW = ZO(cW.tempFromBytes(iW.data));
-          if (!WW) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
-          const OW = mW.g[WW.samplingFrequencyIndex],
-            EW = mW.e[WW.channelConfiguration];
-          if (void 0 === OW || void 0 === EW) throw new Error("Invalid ADTS frame header.");
-          PW.description = (0, mW.i)({
-            objectType: WW.objectType,
-            outputSampleRate: OW,
-            outputNumberOfChannels: EW
-          }), wW = !0
+        let fR = !1;
+        if ("aac" === RR.source._codec && !ZR.description) {
+          if (!JR) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
+          const RR = fG(iR.tempFromBytes(JR.data));
+          if (!RR) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
+          const GR = yR.f[RR.samplingFrequencyIndex],
+            tR = yR.c[RR.channelConfiguration];
+          if (void 0 === GR || void 0 === tR) throw new Error("Invalid ADTS frame header.");
+          ZR.description = (0, yR.i)({
+            objectType: RR.objectType,
+            outputSampleRate: GR,
+            outputNumberOfChannels: tR
+          }), fR = !0
         }
-        if (!iW) {
-          if ("ac3" === WW.source._codec || "eac3" === WW.source._codec) throw new Error("AC-3/E-AC-3 require a priming packet.");
-          if ("dts" === WW.source._codec) throw new Error("DTS requires a priming packet.")
+        if (!JR) {
+          if ("ac3" === RR.source._codec || "eac3" === RR.source._codec) throw new Error("AC-3/E-AC-3 require a priming packet.");
+          if ("dts" === RR.source._codec) throw new Error("DTS requires a priming packet.")
         }
-        const tW = {
+        const VR = {
           muxer: this,
-          track: WW,
+          track: RR,
           type: "audio",
           info: {
-            numberOfChannels: OW.decoderConfig.numberOfChannels,
-            sampleRate: OW.decoderConfig.sampleRate,
-            decoderConfig: PW,
-            requiresPcmTransformation: !this.isFragmented && EW.r.includes(WW.source._codec),
+            numberOfChannels: GR.decoderConfig.numberOfChannels,
+            sampleRate: GR.decoderConfig.sampleRate,
+            decoderConfig: ZR,
+            requiresPcmTransformation: !this.isFragmented && tR.p.includes(RR.source._codec),
             expectedNextPcmPacketTimestamp: null,
-            requiresAdtsStripping: wW,
-            primingPacket: iW
+            requiresAdtsStripping: fR,
+            primingPacket: JR
           },
-          timescale: PW.sampleRate,
+          timescale: ZR.sampleRate,
           samples: [],
           sampleQueue: [],
           timestampProcessingQueue: [],
@@ -4602,21 +4602,21 @@ export const modules = {
           currentChunk: null,
           compactlyCodedChunkTable: [],
           closed: !1,
-          avgBitrate: WW.source._nominalBitrate ?? WW.metadata.averageBitrate ?? 0,
-          maxBitrate: WW.source._nominalBitrate ?? WW.metadata.bitrate ?? 0
+          avgBitrate: RR.source._nominalBitrate ?? RR.metadata.averageBitrate ?? 0,
+          maxBitrate: RR.source._nominalBitrate ?? RR.metadata.bitrate ?? 0
         };
-        return this.trackDatas.push(tW), this.trackDatas.sort(((WW, iW) => WW.track.id - iW.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), tW
+        return this.trackDatas.push(VR), this.trackDatas.sort(((RR, JR) => RR.track.id - JR.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), VR
       }
-      getSubtitleTrackData(WW, iW) {
-        const OW = this.trackDatas.find((iW => iW.track === WW));
-        if (OW) return OW;
-        (0, EW._)(iW), (0, LW.K)(iW), (0, LW.K)(iW.config);
-        const mW = {
+      getSubtitleTrackData(RR, JR) {
+        const GR = this.trackDatas.find((JR => JR.track === RR));
+        if (GR) return GR;
+        (0, tR.T)(JR), (0, qR.I)(JR), (0, qR.I)(JR.config);
+        const yR = {
           muxer: this,
-          track: WW,
+          track: RR,
           type: "subtitle",
           info: {
-            config: iW.config
+            config: JR.config
           },
           timescale: 1e3,
           samples: [],
@@ -4631,618 +4631,618 @@ export const modules = {
           currentChunk: null,
           compactlyCodedChunkTable: [],
           closed: !1,
-          avgBitrate: WW.source._nominalBitrate ?? WW.metadata.averageBitrate ?? 0,
-          maxBitrate: WW.source._nominalBitrate ?? WW.metadata.bitrate ?? 0,
+          avgBitrate: RR.source._nominalBitrate ?? RR.metadata.averageBitrate ?? 0,
+          maxBitrate: RR.source._nominalBitrate ?? RR.metadata.bitrate ?? 0,
           lastCueEndTimestamp: null,
           cueQueue: [],
           nextSourceId: 0,
           cueToSourceId: new WeakMap
         };
-        return this.trackDatas.push(mW), this.trackDatas.sort(((WW, iW) => WW.track.id - iW.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), mW
+        return this.trackDatas.push(yR), this.trackDatas.sort(((RR, JR) => RR.track.id - JR.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), yR
       }
-      async addEncodedVideoPacket(WW, iW, OW) {
-        const mW = await this.mutex.acquire();
+      async addEncodedVideoPacket(RR, JR, GR) {
+        const yR = await this.mutex.acquire();
         try {
-          const mW = this.getVideoTrackData(WW, iW, OW);
-          let EW = iW.data;
-          if (mW.info.requiresAnnexBTransformation) {
-            const WW = [...(0, bW.Z)(EW)].map((WW => EW.subarray(WW.offset, WW.offset + WW.length)));
-            if (0 === WW.length) throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");
-            EW = (0, bW.v)(WW, 4)
+          const yR = this.getVideoTrackData(RR, JR, GR);
+          let tR = JR.data;
+          if (yR.info.requiresAnnexBTransformation) {
+            const RR = [...(0, aR.$)(tR)].map((RR => tR.subarray(RR.offset, RR.offset + RR.length)));
+            if (0 === RR.length) throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");
+            tR = (0, aR.x)(RR, 4)
           }
-          this.validateTimestamp(mW.track, iW.timestamp, "key" === iW.type);
-          const NW = this.createSampleForTrack(mW, EW, iW.timestamp, iW.duration, iW.type);
-          await this.registerSample(mW, NW)
+          this.validateTimestamp(yR.track, JR.timestamp, "key" === JR.type);
+          const uR = this.createSampleForTrack(yR, tR, JR.timestamp, JR.duration, JR.type);
+          await this.registerSample(yR, uR)
         } finally {
-          mW()
+          yR()
         }
       }
-      async addEncodedAudioPacket(WW, iW, OW) {
-        const mW = await this.mutex.acquire();
+      async addEncodedAudioPacket(RR, JR, GR) {
+        const yR = await this.mutex.acquire();
         try {
-          const mW = this.getAudioTrackData(WW, iW, OW);
-          let NW = iW.data;
-          if (mW.info.requiresAdtsStripping) {
-            const WW = ZO(cW.tempFromBytes(NW));
-            if (!WW) throw new Error("Expected ADTS frame, didn't get one.");
-            const iW = null === WW.crcCheck ? 7 : 9;
-            NW = NW.subarray(iW)
+          const yR = this.getAudioTrackData(RR, JR, GR);
+          let uR = JR.data;
+          if (yR.info.requiresAdtsStripping) {
+            const RR = fG(iR.tempFromBytes(uR));
+            if (!RR) throw new Error("Expected ADTS frame, didn't get one.");
+            const JR = null === RR.crcCheck ? 7 : 9;
+            uR = uR.subarray(JR)
           }
-          this.validateTimestamp(mW.track, iW.timestamp, "key" === iW.type);
-          let PW = iW.timestamp,
-            LW = iW.duration;
-          if (mW.info.requiresPcmTransformation) {
-            const WW = (0, EW.U)(mW.info.decoderConfig.codec).sampleSize * mW.info.numberOfChannels;
-            if (LW = NW.byteLength / WW / mW.info.sampleRate, null !== mW.info.expectedNextPcmPacketTimestamp) {
-              const WW = PW - mW.info.expectedNextPcmPacketTimestamp;
-              if (WW < .01) PW = mW.info.expectedNextPcmPacketTimestamp;
+          this.validateTimestamp(yR.track, JR.timestamp, "key" === JR.type);
+          let ZR = JR.timestamp,
+            qR = JR.duration;
+          if (yR.info.requiresPcmTransformation) {
+            const RR = (0, tR.Q)(yR.info.decoderConfig.codec).sampleSize * yR.info.numberOfChannels;
+            if (qR = uR.byteLength / RR / yR.info.sampleRate, null !== yR.info.expectedNextPcmPacketTimestamp) {
+              const RR = ZR - yR.info.expectedNextPcmPacketTimestamp;
+              if (RR < .01) ZR = yR.info.expectedNextPcmPacketTimestamp;
               else {
-                const iW = await this.padWithSilence(mW, mW.info.expectedNextPcmPacketTimestamp, WW);
-                PW = mW.info.expectedNextPcmPacketTimestamp + iW
+                const JR = await this.padWithSilence(yR, yR.info.expectedNextPcmPacketTimestamp, RR);
+                ZR = yR.info.expectedNextPcmPacketTimestamp + JR
               }
             }
-            mW.info.expectedNextPcmPacketTimestamp = PW + LW
+            yR.info.expectedNextPcmPacketTimestamp = ZR + qR
           }
-          const wW = this.createSampleForTrack(mW, NW, PW, LW, iW.type);
-          await this.registerSample(mW, wW)
+          const fR = this.createSampleForTrack(yR, uR, ZR, qR, JR.type);
+          await this.registerSample(yR, fR)
         } finally {
-          mW()
+          yR()
         }
       }
-      async padWithSilence(WW, iW, OW) {
-        const mW = AO(OW, WW.timescale);
-        if (OW = mW / WW.timescale, mW > 0) {
+      async padWithSilence(RR, JR, GR) {
+        const yR = wG(GR, RR.timescale);
+        if (GR = yR / RR.timescale, yR > 0) {
           const {
-            sampleSize: NW,
-            silentValue: PW
-          } = (0, EW.U)(WW.info.decoderConfig.codec), LW = mW * WW.info.numberOfChannels, cW = new Uint8Array(NW * LW).fill(PW), wW = this.createSampleForTrack(WW, new Uint8Array(cW.buffer), iW, OW, "key");
-          await this.registerSample(WW, wW)
+            sampleSize: uR,
+            silentValue: ZR
+          } = (0, tR.Q)(RR.info.decoderConfig.codec), qR = yR * RR.info.numberOfChannels, iR = new Uint8Array(uR * qR).fill(ZR), fR = this.createSampleForTrack(RR, new Uint8Array(iR.buffer), JR, GR, "key");
+          await this.registerSample(RR, fR)
         }
-        return OW
+        return GR
       }
-      async addSubtitleCue(WW, iW, OW) {
-        const mW = await this.mutex.acquire();
+      async addSubtitleCue(RR, JR, GR) {
+        const yR = await this.mutex.acquire();
         try {
-          const mW = this.getSubtitleTrackData(WW, OW);
-          this.validateTimestamp(mW.track, iW.timestamp, !0), "webvtt" === WW.source._codec && (mW.cueQueue.push(iW), await this.processWebVTTCues(mW, iW.timestamp))
+          const yR = this.getSubtitleTrackData(RR, GR);
+          this.validateTimestamp(yR.track, JR.timestamp, !0), "webvtt" === RR.source._codec && (yR.cueQueue.push(JR), await this.processWebVTTCues(yR, JR.timestamp))
         } finally {
-          mW()
+          yR()
         }
       }
-      async processWebVTTCues(WW, iW) {
-        for (; WW.cueQueue.length > 0;) {
-          WW.lastCueEndTimestamp ??= Math.min(0, WW.cueQueue[0].timestamp);
-          const OW = new Set([]);
-          for (const wW of WW.cueQueue)(0, LW.K)(wW.timestamp <= iW), (0, LW.K)(WW.lastCueEndTimestamp <= wW.timestamp + wW.duration), OW.add(Math.max(wW.timestamp, WW.lastCueEndTimestamp)), OW.add(wW.timestamp + wW.duration);
-          const mW = [...OW].sort(((WW, iW) => WW - iW)),
-            EW = mW[0],
-            NW = mW[1] ?? EW;
-          if (iW < NW) break;
-          if (WW.lastCueEndTimestamp < EW) {
+      async processWebVTTCues(RR, JR) {
+        for (; RR.cueQueue.length > 0;) {
+          RR.lastCueEndTimestamp ??= Math.min(0, RR.cueQueue[0].timestamp);
+          const GR = new Set([]);
+          for (const fR of RR.cueQueue)(0, qR.I)(fR.timestamp <= JR), (0, qR.I)(RR.lastCueEndTimestamp <= fR.timestamp + fR.duration), GR.add(Math.max(fR.timestamp, RR.lastCueEndTimestamp)), GR.add(fR.timestamp + fR.duration);
+          const yR = [...GR].sort(((RR, JR) => RR - JR)),
+            tR = yR[0],
+            uR = yR[1] ?? tR;
+          if (JR < uR) break;
+          if (RR.lastCueEndTimestamp < tR) {
             this.auxWriter.seek(0);
-            const iW = qi();
-            this.auxBoxWriter.writeBox(iW);
-            const OW = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
-              mW = this.createSampleForTrack(WW, OW, WW.lastCueEndTimestamp, EW - WW.lastCueEndTimestamp, "key");
-            await this.registerSample(WW, mW), WW.lastCueEndTimestamp = EW
+            const JR = SJ();
+            this.auxBoxWriter.writeBox(JR);
+            const GR = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
+              yR = this.createSampleForTrack(RR, GR, RR.lastCueEndTimestamp, tR - RR.lastCueEndTimestamp, "key");
+            await this.registerSample(RR, yR), RR.lastCueEndTimestamp = tR
           }
           this.auxWriter.seek(0);
-          for (let iW = 0; iW < WW.cueQueue.length; iW++) {
-            const OW = WW.cueQueue[iW];
-            if (OW.timestamp >= NW) break;
-            UW.g.lastIndex = 0;
-            const mW = UW.g.test(OW.text),
-              PW = OW.timestamp + OW.duration;
-            let LW = WW.cueToSourceId.get(OW);
-            if (void 0 === LW && NW < PW && (LW = WW.nextSourceId++, WW.cueToSourceId.set(OW, LW)), OW.notes) {
-              const WW = Gi(OW.notes);
-              this.auxBoxWriter.writeBox(WW)
+          for (let JR = 0; JR < RR.cueQueue.length; JR++) {
+            const GR = RR.cueQueue[JR];
+            if (GR.timestamp >= uR) break;
+            nR.k.lastIndex = 0;
+            const yR = nR.k.test(GR.text),
+              ZR = GR.timestamp + GR.duration;
+            let qR = RR.cueToSourceId.get(GR);
+            if (void 0 === qR && uR < ZR && (qR = RR.nextSourceId++, RR.cueToSourceId.set(GR, qR)), GR.notes) {
+              const RR = dJ(GR.notes);
+              this.auxBoxWriter.writeBox(RR)
             }
-            const cW = Ri(OW.text, mW ? EW : null, OW.identifier ?? null, OW.settings ?? null, LW ?? null);
-            this.auxBoxWriter.writeBox(cW), PW === NW && WW.cueQueue.splice(iW--, 1)
+            const iR = jJ(GR.text, yR ? tR : null, GR.identifier ?? null, GR.settings ?? null, qR ?? null);
+            this.auxBoxWriter.writeBox(iR), ZR === uR && RR.cueQueue.splice(JR--, 1)
           }
-          const PW = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
-            cW = this.createSampleForTrack(WW, PW, EW, NW - EW, "key");
-          await this.registerSample(WW, cW), WW.lastCueEndTimestamp = NW
+          const ZR = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
+            iR = this.createSampleForTrack(RR, ZR, tR, uR - tR, "key");
+          await this.registerSample(RR, iR), RR.lastCueEndTimestamp = uR
         }
       }
-      createSampleForTrack(WW, iW, OW, mW, EW) {
+      createSampleForTrack(RR, JR, GR, yR, tR) {
         return {
-          timestamp: OW,
-          decodeTimestamp: OW,
-          duration: mW,
-          data: iW,
-          size: iW.byteLength,
-          type: EW,
-          timescaleUnitsToNextSample: AO(mW, WW.timescale)
+          timestamp: GR,
+          decodeTimestamp: GR,
+          duration: yR,
+          data: JR,
+          size: JR.byteLength,
+          type: tR,
+          timescaleUnitsToNextSample: wG(yR, RR.timescale)
         }
       }
-      processTimestamps(WW, iW) {
-        if (0 === WW.timestampProcessingQueue.length) return;
-        if ("audio" === WW.type && WW.info.requiresPcmTransformation) {
-          (0, LW.K)(!this.isFragmented), WW.startTimestampOffset ??= WW.timestampProcessingQueue[0].timestamp;
-          let iW = 0;
-          for (let OW = 0; OW < WW.timestampProcessingQueue.length; OW++) {
-            const mW = WW.timestampProcessingQueue[OW];
-            iW += AO(mW.duration, WW.timescale)
+      processTimestamps(RR, JR) {
+        if (0 === RR.timestampProcessingQueue.length) return;
+        if ("audio" === RR.type && RR.info.requiresPcmTransformation) {
+          (0, qR.I)(!this.isFragmented), RR.startTimestampOffset ??= RR.timestampProcessingQueue[0].timestamp;
+          let JR = 0;
+          for (let GR = 0; GR < RR.timestampProcessingQueue.length; GR++) {
+            const yR = RR.timestampProcessingQueue[GR];
+            JR += wG(yR.duration, RR.timescale)
           }
-          if (0 === WW.timeToSampleTable.length) WW.timeToSampleTable.push({
-            sampleCount: iW,
+          if (0 === RR.timeToSampleTable.length) RR.timeToSampleTable.push({
+            sampleCount: JR,
             sampleDelta: 1
           });
           else {
-            (0, LW.mc)(WW.timeToSampleTable).sampleCount += iW
+            (0, qR.$b)(RR.timeToSampleTable).sampleCount += JR
           }
-          return void(WW.timestampProcessingQueue.length = 0)
+          return void(RR.timestampProcessingQueue.length = 0)
         }
-        const OW = WW.timestampProcessingQueue.map((WW => WW.timestamp)).sort(((WW, iW) => WW - iW));
-        this.isFragmented ? WW.startTimestampOffset ??= Math.min(OW[0], 0) : WW.startTimestampOffset ??= OW[0];
-        for (let mW = 0; mW < WW.timestampProcessingQueue.length; mW++) {
-          const iW = WW.timestampProcessingQueue[mW];
-          iW.decodeTimestamp = OW[mW];
-          const EW = AO(iW.timestamp - iW.decodeTimestamp, WW.timescale),
-            NW = AO(iW.duration, WW.timescale);
-          if (null !== WW.lastTimescaleUnits) {
-            (0, LW.K)(WW.lastSample);
-            const OW = AO(iW.decodeTimestamp, WW.timescale, !1),
-              mW = Math.round(OW - WW.lastTimescaleUnits);
-            if ((0, LW.K)(mW >= 0), WW.lastTimescaleUnits += mW, WW.lastSample.timescaleUnitsToNextSample = mW, !this.isFragmented) {
-              let iW = (0, LW.mc)(WW.timeToSampleTable);
-              if ((0, LW.K)(iW), 1 === iW.sampleCount) {
-                iW.sampleDelta = mW;
-                const OW = WW.timeToSampleTable[WW.timeToSampleTable.length - 2];
-                OW && OW.sampleDelta === mW && (OW.sampleCount++, WW.timeToSampleTable.pop(), iW = OW)
-              } else iW.sampleDelta !== mW && (iW.sampleCount--, WW.timeToSampleTable.push(iW = {
+        const GR = RR.timestampProcessingQueue.map((RR => RR.timestamp)).sort(((RR, JR) => RR - JR));
+        this.isFragmented ? RR.startTimestampOffset ??= Math.min(GR[0], 0) : RR.startTimestampOffset ??= GR[0];
+        for (let yR = 0; yR < RR.timestampProcessingQueue.length; yR++) {
+          const JR = RR.timestampProcessingQueue[yR];
+          JR.decodeTimestamp = GR[yR];
+          const tR = wG(JR.timestamp - JR.decodeTimestamp, RR.timescale),
+            uR = wG(JR.duration, RR.timescale);
+          if (null !== RR.lastTimescaleUnits) {
+            (0, qR.I)(RR.lastSample);
+            const GR = wG(JR.decodeTimestamp, RR.timescale, !1),
+              yR = Math.round(GR - RR.lastTimescaleUnits);
+            if ((0, qR.I)(yR >= 0), RR.lastTimescaleUnits += yR, RR.lastSample.timescaleUnitsToNextSample = yR, !this.isFragmented) {
+              let JR = (0, qR.$b)(RR.timeToSampleTable);
+              if ((0, qR.I)(JR), 1 === JR.sampleCount) {
+                JR.sampleDelta = yR;
+                const GR = RR.timeToSampleTable[RR.timeToSampleTable.length - 2];
+                GR && GR.sampleDelta === yR && (GR.sampleCount++, RR.timeToSampleTable.pop(), JR = GR)
+              } else JR.sampleDelta !== yR && (JR.sampleCount--, RR.timeToSampleTable.push(JR = {
                 sampleCount: 1,
-                sampleDelta: mW
+                sampleDelta: yR
               }));
-              iW.sampleDelta === NW ? iW.sampleCount++ : WW.timeToSampleTable.push({
+              JR.sampleDelta === uR ? JR.sampleCount++ : RR.timeToSampleTable.push({
                 sampleCount: 1,
-                sampleDelta: NW
+                sampleDelta: uR
               });
-              const OW = (0, LW.mc)(WW.compositionTimeOffsetTable);
-              (0, LW.K)(OW), OW.sampleCompositionTimeOffset === EW ? OW.sampleCount++ : WW.compositionTimeOffsetTable.push({
+              const GR = (0, qR.$b)(RR.compositionTimeOffsetTable);
+              (0, qR.I)(GR), GR.sampleCompositionTimeOffset === tR ? GR.sampleCount++ : RR.compositionTimeOffsetTable.push({
                 sampleCount: 1,
-                sampleCompositionTimeOffset: EW
+                sampleCompositionTimeOffset: tR
               })
             }
-          } else WW.lastTimescaleUnits = AO(iW.decodeTimestamp, WW.timescale, !1), this.isFragmented || (WW.timeToSampleTable.push({
+          } else RR.lastTimescaleUnits = wG(JR.decodeTimestamp, RR.timescale, !1), this.isFragmented || (RR.timeToSampleTable.push({
             sampleCount: 1,
-            sampleDelta: NW
-          }), WW.compositionTimeOffsetTable.push({
+            sampleDelta: uR
+          }), RR.compositionTimeOffsetTable.push({
             sampleCount: 1,
-            sampleCompositionTimeOffset: EW
+            sampleCompositionTimeOffset: tR
           }));
-          WW.lastSample = iW
+          RR.lastSample = JR
         }
-        if (WW.timestampProcessingQueue.length = 0, (0, LW.K)(WW.lastSample), (0, LW.K)(null !== WW.lastTimescaleUnits), void 0 !== iW && 0 === WW.lastSample.timescaleUnitsToNextSample) {
-          (0, LW.K)("key" === iW.type);
-          const OW = AO(iW.timestamp, WW.timescale, !1),
-            mW = Math.round(OW - WW.lastTimescaleUnits);
-          WW.lastSample.timescaleUnitsToNextSample = mW
+        if (RR.timestampProcessingQueue.length = 0, (0, qR.I)(RR.lastSample), (0, qR.I)(null !== RR.lastTimescaleUnits), void 0 !== JR && 0 === RR.lastSample.timescaleUnitsToNextSample) {
+          (0, qR.I)("key" === JR.type);
+          const GR = wG(JR.timestamp, RR.timescale, !1),
+            yR = Math.round(GR - RR.lastTimescaleUnits);
+          RR.lastSample.timescaleUnitsToNextSample = yR
         }
       }
-      async registerSample(WW, iW) {
-        "key" === iW.type && this.processTimestamps(WW, iW), WW.timestampProcessingQueue.push(iW), this.isFragmented ? (WW.sampleQueue.push(iW), await this.interleaveSamples()) : "reserve" === this.fastStart ? await this.registerSampleFastStartReserve(WW, iW) : await this.addSampleToTrack(WW, iW)
+      async registerSample(RR, JR) {
+        "key" === JR.type && this.processTimestamps(RR, JR), RR.timestampProcessingQueue.push(JR), this.isFragmented ? (RR.sampleQueue.push(JR), await this.interleaveSamples()) : "reserve" === this.fastStart ? await this.registerSampleFastStartReserve(RR, JR) : await this.addSampleToTrack(RR, JR)
       }
-      async addSampleToTrack(WW, iW) {
-        if (!this.isFragmented && (WW.samples.push(iW), "reserve" === this.fastStart)) {
-          const iW = WW.track.metadata.maximumPacketCount;
-          if ((0, LW.K)(void 0 !== iW), WW.samples.length > iW) throw new Error(`Track #${WW.track.id} has already reached the maximum packet count (${iW}). Either add less packets or increase the maximum packet count.`)
+      async addSampleToTrack(RR, JR) {
+        if (!this.isFragmented && (RR.samples.push(JR), "reserve" === this.fastStart)) {
+          const JR = RR.track.metadata.maximumPacketCount;
+          if ((0, qR.I)(void 0 !== JR), RR.samples.length > JR) throw new Error(`Track #${RR.track.id} has already reached the maximum packet count (${JR}). Either add less packets or increase the maximum packet count.`)
         }
-        let OW = !1;
-        if (WW.currentChunk) {
-          WW.currentChunk.startTimestamp = Math.min(WW.currentChunk.startTimestamp, iW.timestamp);
-          const mW = iW.timestamp - WW.currentChunk.startTimestamp;
+        let GR = !1;
+        if (RR.currentChunk) {
+          RR.currentChunk.startTimestamp = Math.min(RR.currentChunk.startTimestamp, JR.timestamp);
+          const yR = JR.timestamp - RR.currentChunk.startTimestamp;
           if (this.isFragmented) {
-            const EW = this.trackDatas.every((OW => {
-              if (WW === OW) return "key" === iW.type;
-              const mW = OW.sampleQueue[0];
-              return mW ? "key" === mW.type : OW.closed
+            const tR = this.trackDatas.every((GR => {
+              if (RR === GR) return "key" === JR.type;
+              const yR = GR.sampleQueue[0];
+              return yR ? "key" === yR.type : GR.closed
             }));
-            mW >= this.minimumFragmentDuration && EW && iW.timestamp > this.maxWrittenTimestamp && (OW = !0, await this.finalizeFragment())
-          } else OW = mW >= .5
-        } else OW = !0;
-        OW && (WW.currentChunk && await this.finalizeCurrentChunk(WW), WW.currentChunk = {
-          startTimestamp: iW.timestamp,
+            yR >= this.minimumFragmentDuration && tR && JR.timestamp > this.maxWrittenTimestamp && (GR = !0, await this.finalizeFragment())
+          } else GR = yR >= .5
+        } else GR = !0;
+        GR && (RR.currentChunk && await this.finalizeCurrentChunk(RR), RR.currentChunk = {
+          startTimestamp: JR.timestamp,
           samples: [],
           offset: null,
           moofOffset: null,
           trafIndex: null
-        }), (0, LW.K)(WW.currentChunk), WW.currentChunk.samples.push(iW), this.isFragmented && (this.maxWrittenTimestamp = Math.max(this.maxWrittenTimestamp, iW.timestamp), this.maxWrittenEndTimestamp = Math.max(this.maxWrittenEndTimestamp, iW.timestamp + iW.duration), this.minWrittenTimestamp = Math.min(this.minWrittenTimestamp, iW.timestamp))
+        }), (0, qR.I)(RR.currentChunk), RR.currentChunk.samples.push(JR), this.isFragmented && (this.maxWrittenTimestamp = Math.max(this.maxWrittenTimestamp, JR.timestamp), this.maxWrittenEndTimestamp = Math.max(this.maxWrittenEndTimestamp, JR.timestamp + JR.duration), this.minWrittenTimestamp = Math.min(this.minWrittenTimestamp, JR.timestamp))
       }
-      async finalizeCurrentChunk(WW) {
-        if ((0, LW.K)(!this.isFragmented), (0, LW.K)(this.writer), !WW.currentChunk) return;
-        WW.finalizedChunks.push(WW.currentChunk), this.finalizedChunks.push(WW.currentChunk);
-        let iW = WW.currentChunk.samples.length;
-        if ("audio" === WW.type && WW.info.requiresPcmTransformation && (iW = WW.currentChunk.samples.reduce(((iW, OW) => iW + AO(OW.duration, WW.timescale)), 0)), 0 !== WW.compactlyCodedChunkTable.length && (0, LW.mc)(WW.compactlyCodedChunkTable).samplesPerChunk === iW || WW.compactlyCodedChunkTable.push({
-            firstChunk: WW.finalizedChunks.length,
-            samplesPerChunk: iW
+      async finalizeCurrentChunk(RR) {
+        if ((0, qR.I)(!this.isFragmented), (0, qR.I)(this.writer), !RR.currentChunk) return;
+        RR.finalizedChunks.push(RR.currentChunk), this.finalizedChunks.push(RR.currentChunk);
+        let JR = RR.currentChunk.samples.length;
+        if ("audio" === RR.type && RR.info.requiresPcmTransformation && (JR = RR.currentChunk.samples.reduce(((JR, GR) => JR + wG(GR.duration, RR.timescale)), 0)), 0 !== RR.compactlyCodedChunkTable.length && (0, qR.$b)(RR.compactlyCodedChunkTable).samplesPerChunk === JR || RR.compactlyCodedChunkTable.push({
+            firstChunk: RR.finalizedChunks.length,
+            samplesPerChunk: JR
           }), "in-memory" !== this.fastStart) {
-          WW.currentChunk.offset = this.writer.getPos();
-          for (const iW of WW.currentChunk.samples)(0, LW.K)(iW.data), this.writer.write(iW.data), iW.data = null;
+          RR.currentChunk.offset = this.writer.getPos();
+          for (const JR of RR.currentChunk.samples)(0, qR.I)(JR.data), this.writer.write(JR.data), JR.data = null;
           await this.writer.flush()
-        } else WW.currentChunk.offset = 0
+        } else RR.currentChunk.offset = 0
       }
       async interleaveSamples() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if ((0, LW.K)(this.isFragmented), WW || this.allTracksAreKnown()) WW: for (;;) {
-          let iW = null,
-            OW = 1 / 0;
-          for (const EW of this.trackDatas) {
-            if (!WW && 0 === EW.sampleQueue.length && !EW.closed) break WW;
-            EW.sampleQueue.length > 0 && EW.sampleQueue[0].timestamp < OW && (iW = EW, OW = EW.sampleQueue[0].timestamp)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if ((0, qR.I)(this.isFragmented), RR || this.allTracksAreKnown()) RR: for (;;) {
+          let JR = null,
+            GR = 1 / 0;
+          for (const tR of this.trackDatas) {
+            if (!RR && 0 === tR.sampleQueue.length && !tR.closed) break RR;
+            tR.sampleQueue.length > 0 && tR.sampleQueue[0].timestamp < GR && (JR = tR, GR = tR.sampleQueue[0].timestamp)
           }
-          if (!iW) break;
-          const mW = iW.sampleQueue.shift();
-          await this.addSampleToTrack(iW, mW)
+          if (!JR) break;
+          const yR = JR.sampleQueue.shift();
+          await this.addSampleToTrack(JR, yR)
         }
       }
       async finalizeFragment() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : !this.isCmaf;
-        if ((0, LW.K)(this.isFragmented), !this.wroteFragmentedHeader) {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : !this.isCmaf;
+        if ((0, qR.I)(this.isFragmented), !this.wroteFragmentedHeader) {
           this.wroteFragmentedHeader = !0;
-          const WW = this.initBoxWriter ?? this.boxWriter;
-          (0, LW.K)(WW), this.formatOptions.onMoov && WW.writer.startTrackingWrites(), this.ensureOneEnabledTrack();
-          const iW = XW(this);
-          if (WW.writeBox(iW), this.formatOptions.onMoov) {
+          const RR = this.initBoxWriter ?? this.boxWriter;
+          (0, qR.I)(RR), this.formatOptions.onMoov && RR.writer.startTrackingWrites(), this.ensureOneEnabledTrack();
+          const JR = SR(this);
+          if (RR.writeBox(JR), this.formatOptions.onMoov) {
             const {
-              data: iW,
-              start: OW
-            } = WW.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(iW, OW)
+              data: JR,
+              start: GR
+            } = RR.writer.stopTrackingWrites();
+            this.formatOptions.onMoov(JR, GR)
           }
           if (this.isCmaf) {
-            (0, LW.K)(this.initWriter), await this.initWriter.flush(), await this.initWriter.finalize(), this.writer = await this.output._getRootWriter(!0), this.boxWriter = new sW(this.writer);
-            const WW = this.boxWriter.measureBox(pW()),
-              iW = this.boxWriter.measureBox(fW(this, 0));
-            this.segmentHeaderSize = WW + iW, this.writer.seek(this.segmentHeaderSize)
+            (0, qR.I)(this.initWriter), await this.initWriter.flush(), await this.initWriter.finalize(), this.writer = await this.output._getRootWriter(!0), this.boxWriter = new WR(this.writer);
+            const RR = this.boxWriter.measureBox(IR()),
+              JR = this.boxWriter.measureBox(mR(this, 0));
+            this.segmentHeaderSize = RR + JR, this.writer.seek(this.segmentHeaderSize)
           }
-        }(0, LW.K)(this.writer), (0, LW.K)(this.boxWriter);
-        const iW = this.trackDatas.filter((WW => WW.currentChunk));
-        if (0 === iW.length) return void(WW && await this.writer.flush());
-        const OW = this.nextFragmentNumber++,
-          mW = ei(OW, iW),
-          EW = this.writer.getPos(),
-          NW = EW + this.boxWriter.measureBox(mW);
-        let PW = NW + 8,
-          cW = 1 / 0;
-        for (let lW = 0; lW < iW.length; lW++) {
-          const WW = iW[lW];
-          (0, LW.K)(WW.currentChunk), (0, LW.K)(null !== WW.startTimestampOffset), WW.currentChunk.offset = PW, WW.currentChunk.moofOffset = EW, WW.currentChunk.trafIndex = lW, WW.currentChunk.startTimestamp -= WW.startTimestampOffset;
-          for (const iW of WW.currentChunk.samples) PW += iW.size, iW.timestamp -= WW.startTimestampOffset, iW.decodeTimestamp -= WW.startTimestampOffset;
-          cW = Math.min(cW, WW.currentChunk.startTimestamp)
+        }(0, qR.I)(this.writer), (0, qR.I)(this.boxWriter);
+        const JR = this.trackDatas.filter((RR => RR.currentChunk));
+        if (0 === JR.length) return void(RR && await this.writer.flush());
+        const GR = this.nextFragmentNumber++,
+          yR = NJ(GR, JR),
+          tR = this.writer.getPos(),
+          uR = tR + this.boxWriter.measureBox(yR);
+        let ZR = uR + 8,
+          iR = 1 / 0;
+        for (let rR = 0; rR < JR.length; rR++) {
+          const RR = JR[rR];
+          (0, qR.I)(RR.currentChunk), (0, qR.I)(null !== RR.startTimestampOffset), RR.currentChunk.offset = ZR, RR.currentChunk.moofOffset = tR, RR.currentChunk.trafIndex = rR, RR.currentChunk.startTimestamp -= RR.startTimestampOffset;
+          for (const JR of RR.currentChunk.samples) ZR += JR.size, JR.timestamp -= RR.startTimestampOffset, JR.decodeTimestamp -= RR.startTimestampOffset;
+          iR = Math.min(iR, RR.currentChunk.startTimestamp)
         }
-        const wW = PW - NW,
-          tW = wW >= 2 ** 32;
-        if (tW)
-          for (const LW of iW) LW.currentChunk.offset += 8;
+        const fR = ZR - uR,
+          VR = fR >= 2 ** 32;
+        if (VR)
+          for (const qR of JR) qR.currentChunk.offset += 8;
         this.formatOptions.onMoof && this.writer.startTrackingWrites();
-        const ZW = ei(OW, iW);
-        if (this.boxWriter.writeBox(ZW), this.formatOptions.onMoof) {
+        const KR = NJ(GR, JR);
+        if (this.boxWriter.writeBox(KR), this.formatOptions.onMoof) {
           const {
-            data: WW,
-            start: iW
+            data: RR,
+            start: JR
           } = this.writer.stopTrackingWrites();
-          this.formatOptions.onMoof(WW, iW, cW)
-        }(0, LW.K)(this.writer.getPos() === NW), this.formatOptions.onMdat && this.writer.startTrackingWrites();
-        const xW = CW(tW);
-        xW.size = wW, this.boxWriter.writeBox(xW), this.writer.seek(NW + (tW ? 16 : 8));
-        for (const LW of iW)
-          for (const WW of LW.currentChunk.samples) this.writer.write(WW.data), WW.data = null;
+          this.formatOptions.onMoof(RR, JR, iR)
+        }(0, qR.I)(this.writer.getPos() === uR), this.formatOptions.onMdat && this.writer.startTrackingWrites();
+        const wR = zR(VR);
+        wR.size = fR, this.boxWriter.writeBox(wR), this.writer.seek(uR + (VR ? 16 : 8));
+        for (const qR of JR)
+          for (const RR of qR.currentChunk.samples) this.writer.write(RR.data), RR.data = null;
         if (this.formatOptions.onMdat) {
           const {
-            data: WW,
-            start: iW
+            data: RR,
+            start: JR
           } = this.writer.stopTrackingWrites();
-          this.formatOptions.onMdat(WW, iW)
+          this.formatOptions.onMdat(RR, JR)
         }
-        for (const LW of iW) LW.finalizedChunks.push(LW.currentChunk), this.finalizedChunks.push(LW.currentChunk), LW.currentChunk = null;
-        WW && await this.writer.flush()
+        for (const qR of JR) qR.finalizedChunks.push(qR.currentChunk), this.finalizedChunks.push(qR.currentChunk), qR.currentChunk = null;
+        RR && await this.writer.flush()
       }
-      async registerSampleFastStartReserve(WW, iW) {
-        this.allTracksAreKnown() ? (this.mdat || await this.createFastStartReserveMdat(), await this.addSampleToTrack(WW, iW)) : WW.sampleQueue.push(iW)
+      async registerSampleFastStartReserve(RR, JR) {
+        this.allTracksAreKnown() ? (this.mdat || await this.createFastStartReserveMdat(), await this.addSampleToTrack(RR, JR)) : RR.sampleQueue.push(JR)
       }
       async createFastStartReserveMdat() {
-        (0, LW.K)(this.writer), (0, LW.K)(this.boxWriter), this.ensureOneEnabledTrack();
-        const WW = XW(this),
-          iW = this.boxWriter.measureBox(WW) + this.computeSampleTableSizeUpperBound() + 4096;
-        (0, LW.K)(null !== this.ftypSize), this.writer.seek(this.ftypSize + iW), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = CW(!0), this.boxWriter.writeBox(this.mdat);
-        for (const OW of this.trackDatas) {
-          for (const WW of OW.sampleQueue) await this.addSampleToTrack(OW, WW);
-          OW.sampleQueue.length = 0
+        (0, qR.I)(this.writer), (0, qR.I)(this.boxWriter), this.ensureOneEnabledTrack();
+        const RR = SR(this),
+          JR = this.boxWriter.measureBox(RR) + this.computeSampleTableSizeUpperBound() + 4096;
+        (0, qR.I)(null !== this.ftypSize), this.writer.seek(this.ftypSize + JR), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = zR(!0), this.boxWriter.writeBox(this.mdat);
+        for (const GR of this.trackDatas) {
+          for (const RR of GR.sampleQueue) await this.addSampleToTrack(GR, RR);
+          GR.sampleQueue.length = 0
         }
       }
       computeSampleTableSizeUpperBound() {
-        (0, LW.K)("reserve" === this.fastStart);
-        let WW = 0;
-        for (const iW of this.trackDatas) {
-          const OW = iW.track.metadata.maximumPacketCount;
-          (0, LW.K)(void 0 !== OW), WW += 8 * Math.ceil(2 / 3 * OW), WW += 4 * OW, WW += 8 * Math.ceil(2 / 3 * OW), WW += 12 * Math.ceil(2 / 3 * OW), WW += 4 * OW, WW += 8 * OW
+        (0, qR.I)("reserve" === this.fastStart);
+        let RR = 0;
+        for (const JR of this.trackDatas) {
+          const GR = JR.track.metadata.maximumPacketCount;
+          (0, qR.I)(void 0 !== GR), RR += 8 * Math.ceil(2 / 3 * GR), RR += 4 * GR, RR += 8 * Math.ceil(2 / 3 * GR), RR += 12 * Math.ceil(2 / 3 * GR), RR += 4 * GR, RR += 8 * GR
         }
-        return WW
+        return RR
       }
-      async onTrackClose(WW) {
-        const iW = await this.mutex.acquire(),
-          OW = this.trackDatas.find((iW => iW.track === WW));
-        OW && (OW.closed = !0, "subtitle" === OW.type && "webvtt" === WW.source._codec && await this.processWebVTTCues(OW, 1 / 0), this.processTimestamps(OW)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), this.isFragmented && await this.interleaveSamples(), iW()
+      async onTrackClose(RR) {
+        const JR = await this.mutex.acquire(),
+          GR = this.trackDatas.find((JR => JR.track === RR));
+        GR && (GR.closed = !0, "subtitle" === GR.type && "webvtt" === RR.source._codec && await this.processWebVTTCues(GR, 1 / 0), this.processTimestamps(GR)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), this.isFragmented && await this.interleaveSamples(), JR()
       }
       ensureOneEnabledTrack() {
-        for (const WW of ["video", "audio", "subtitle"]) {
-          const iW = this.trackDatas.filter((iW => iW.type === WW));
-          if (0 === iW.length) continue;
-          if (!iW.some((WW => !1 !== WW.track.metadata.disposition?.default))) {
-            const WW = iW[0];
-            WW.track.metadata.disposition = {
-              ...WW.track.metadata.disposition,
+        for (const RR of ["video", "audio", "subtitle"]) {
+          const JR = this.trackDatas.filter((JR => JR.type === RR));
+          if (0 === JR.length) continue;
+          if (!JR.some((RR => !1 !== RR.track.metadata.disposition?.default))) {
+            const RR = JR[0];
+            RR.track.metadata.disposition = {
+              ...RR.track.metadata.disposition,
               default: !0
             }
           }
         }
       }
       async forceFragmentFinalization() {
-        (0, LW.K)(this.isFragmented);
-        const WW = await this.mutex.acquire();
+        (0, qR.I)(this.isFragmented);
+        const RR = await this.mutex.acquire();
         try {
-          for (const WW of this.trackDatas) "subtitle" === WW.type && "webvtt" === WW.track.source._codec && await this.processWebVTTCues(WW, 1 / 0), this.processTimestamps(WW);
+          for (const RR of this.trackDatas) "subtitle" === RR.type && "webvtt" === RR.track.source._codec && await this.processWebVTTCues(RR, 1 / 0), this.processTimestamps(RR);
           await this.interleaveSamples(!0), await this.finalizeFragment()
         } finally {
-          WW()
+          RR()
         }
       }
       async finalize() {
-        const WW = await this.mutex.acquire();
+        const RR = await this.mutex.acquire();
         this.allTracksKnown.resolve(), this.ensureOneEnabledTrack(), this.mdat || "reserve" !== this.fastStart || await this.createFastStartReserveMdat();
-        for (const OW of this.trackDatas) OW.closed = !0, "subtitle" === OW.type && "webvtt" === OW.track.source._codec && await this.processWebVTTCues(OW, 1 / 0), this.processTimestamps(OW);
+        for (const GR of this.trackDatas) GR.closed = !0, "subtitle" === GR.type && "webvtt" === GR.track.source._codec && await this.processWebVTTCues(GR, 1 / 0), this.processTimestamps(GR);
         if (this.isFragmented) await this.interleaveSamples(!0), await this.finalizeFragment(!1);
         else
-          for (const OW of this.trackDatas) {
-            await this.finalizeCurrentChunk(OW);
-            const WW = bO(OW);
-            if (WW > 0) {
-              let iW = 0;
-              for (const WW of OW.samples) iW += WW.size;
-              OW.avgBitrate = Math.round(8 * iW / WW)
-            } else OW.avgBitrate = 0;
-            let iW = 0,
-              mW = 0,
-              EW = 0;
-            for (let NW = 0; NW < OW.samples.length; NW++) {
-              const WW = OW.samples[NW];
-              for (mW += WW.size; WW.decodeTimestamp - OW.samples[iW].decodeTimestamp >= 1;) mW -= OW.samples[iW].size, iW++;
-              EW = Math.max(EW, mW)
+          for (const GR of this.trackDatas) {
+            await this.finalizeCurrentChunk(GR);
+            const RR = rG(GR);
+            if (RR > 0) {
+              let JR = 0;
+              for (const RR of GR.samples) JR += RR.size;
+              GR.avgBitrate = Math.round(8 * JR / RR)
+            } else GR.avgBitrate = 0;
+            let JR = 0,
+              yR = 0,
+              tR = 0;
+            for (let uR = 0; uR < GR.samples.length; uR++) {
+              const RR = GR.samples[uR];
+              for (yR += RR.size; RR.decodeTimestamp - GR.samples[JR].decodeTimestamp >= 1;) yR -= GR.samples[JR].size, JR++;
+              tR = Math.max(tR, yR)
             }
-            if (OW.maxBitrate = 8 * EW, null !== OW.startTimestampOffset)
-              for (let NW = 0; NW < OW.samples.length; NW++) {
-                const WW = OW.samples[NW];
-                WW.timestamp -= OW.startTimestampOffset, WW.decodeTimestamp -= OW.startTimestampOffset
+            if (GR.maxBitrate = 8 * tR, null !== GR.startTimestampOffset)
+              for (let uR = 0; uR < GR.samples.length; uR++) {
+                const RR = GR.samples[uR];
+                RR.timestamp -= GR.startTimestampOffset, RR.decodeTimestamp -= GR.startTimestampOffset
               }
           }
-        if ((0, LW.K)(this.writer), (0, LW.K)(this.boxWriter), "in-memory" === this.fastStart) {
-          let WW;
-          this.mdat = CW(!1);
-          for (let OW = 0; OW < 2; OW++) {
-            const iW = XW(this),
-              OW = this.boxWriter.measureBox(iW);
-            WW = this.boxWriter.measureBox(this.mdat);
-            let mW = this.writer.getPos() + OW + WW;
-            for (const EW of this.finalizedChunks) {
-              EW.offset = mW;
+        if ((0, qR.I)(this.writer), (0, qR.I)(this.boxWriter), "in-memory" === this.fastStart) {
+          let RR;
+          this.mdat = zR(!1);
+          for (let GR = 0; GR < 2; GR++) {
+            const JR = SR(this),
+              GR = this.boxWriter.measureBox(JR);
+            RR = this.boxWriter.measureBox(this.mdat);
+            let yR = this.writer.getPos() + GR + RR;
+            for (const tR of this.finalizedChunks) {
+              tR.offset = yR;
               for (const {
-                  data: iW
+                  data: JR
                 }
-                of EW.samples)(0, LW.K)(iW), mW += iW.byteLength, WW += iW.byteLength
+                of tR.samples)(0, qR.I)(JR), yR += JR.byteLength, RR += JR.byteLength
             }
-            if (mW < 2 ** 32) break;
-            WW >= 2 ** 32 && (this.mdat.largeSize = !0)
+            if (yR < 2 ** 32) break;
+            RR >= 2 ** 32 && (this.mdat.largeSize = !0)
           }
           this.formatOptions.onMoov && this.writer.startTrackingWrites();
-          const iW = XW(this);
-          if (this.boxWriter.writeBox(iW), this.formatOptions.onMoov) {
+          const JR = SR(this);
+          if (this.boxWriter.writeBox(JR), this.formatOptions.onMoov) {
             const {
-              data: WW,
-              start: iW
+              data: RR,
+              start: JR
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(WW, iW)
+            this.formatOptions.onMoov(RR, JR)
           }
-          this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat.size = WW, this.boxWriter.writeBox(this.mdat);
-          for (const OW of this.finalizedChunks)
-            for (const WW of OW.samples)(0, LW.K)(WW.data), this.writer.write(WW.data), WW.data = null;
+          this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat.size = RR, this.boxWriter.writeBox(this.mdat);
+          for (const GR of this.finalizedChunks)
+            for (const RR of GR.samples)(0, qR.I)(RR.data), this.writer.write(RR.data), RR.data = null;
           if (this.formatOptions.onMdat) {
             const {
-              data: WW,
-              start: iW
+              data: RR,
+              start: JR
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMdat(WW, iW)
+            this.formatOptions.onMdat(RR, JR)
           }
         } else if (this.isFragmented)
           if (this.isCmaf) {
-            const WW = null !== this.segmentHeaderSize ? this.writer.getPos() - this.segmentHeaderSize : 0;
-            this.writer.seek(0), this.boxWriter.writeBox(pW()), this.boxWriter.writeBox(fW(this, WW))
+            const RR = null !== this.segmentHeaderSize ? this.writer.getPos() - this.segmentHeaderSize : 0;
+            this.writer.seek(0), this.boxWriter.writeBox(IR()), this.boxWriter.writeBox(mR(this, RR))
           } else {
-            const WW = this.writer.getPos(),
-              OW = (iW = this.trackDatas, DW("mfra", void 0, [...iW.map(Xi), Bi()]));
-            this.boxWriter.writeBox(OW);
-            const mW = this.writer.getPos() - WW;
-            this.writer.seek(this.writer.getPos() - 4), this.boxWriter.writeU32(mW)
+            const RR = this.writer.getPos(),
+              GR = (JR = this.trackDatas, cR("mfra", void 0, [...JR.map(mJ), zJ()]));
+            this.boxWriter.writeBox(GR);
+            const yR = this.writer.getPos() - RR;
+            this.writer.seek(this.writer.getPos() - 4), this.boxWriter.writeU32(yR)
           }
         else {
-          (0, LW.K)(this.mdat);
-          const WW = this.boxWriter.offsets.get(this.mdat);
-          (0, LW.K)(void 0 !== WW);
-          const iW = this.writer.getPos() - WW;
-          if (this.mdat.size = iW, this.mdat.largeSize = iW >= 2 ** 32, this.boxWriter.patchBox(this.mdat), this.formatOptions.onMdat) {
+          (0, qR.I)(this.mdat);
+          const RR = this.boxWriter.offsets.get(this.mdat);
+          (0, qR.I)(void 0 !== RR);
+          const JR = this.writer.getPos() - RR;
+          if (this.mdat.size = JR, this.mdat.largeSize = JR >= 2 ** 32, this.boxWriter.patchBox(this.mdat), this.formatOptions.onMdat) {
             const {
-              data: WW,
-              start: iW
+              data: RR,
+              start: JR
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMdat(WW, iW)
+            this.formatOptions.onMdat(RR, JR)
           }
-          const OW = XW(this);
+          const GR = SR(this);
           if ("reserve" === this.fastStart) {
-            (0, LW.K)(null !== this.ftypSize), this.writer.seek(this.ftypSize), this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(OW);
-            const WW = this.boxWriter.offsets.get(this.mdat) - this.writer.getPos();
+            (0, qR.I)(null !== this.ftypSize), this.writer.seek(this.ftypSize), this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(GR);
+            const RR = this.boxWriter.offsets.get(this.mdat) - this.writer.getPos();
             this.boxWriter.writeBox({
               type: "free",
-              size: WW
+              size: RR
             })
-          } else this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(OW);
+          } else this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(GR);
           if (this.formatOptions.onMoov) {
             const {
-              data: WW,
-              start: iW
+              data: RR,
+              start: JR
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(WW, iW)
+            this.formatOptions.onMoov(RR, JR)
           }
         }
-        var iW;
-        WW()
+        var JR;
+        RR()
       }
     }
-    class UO {
-      constructor(WW) {
-        this.value = WW
+    class aG {
+      constructor(RR) {
+        this.value = RR
       }
     }
-    class kO {
-      constructor(WW) {
-        this.value = WW
+    class LG {
+      constructor(RR) {
+        this.value = RR
       }
     }
-    class sO {
-      constructor(WW) {
-        this.value = WW
+    class nG {
+      constructor(RR) {
+        this.value = RR
       }
     }
-    class MO {
-      constructor(WW) {
-        this.value = WW
+    class UG {
+      constructor(RR) {
+        this.value = RR
       }
     }
-    var KO;
-    ! function(WW) {
-      WW[WW.EBML = 440786851] = "EBML", WW[WW.EBMLVersion = 17030] = "EBMLVersion", WW[WW.EBMLReadVersion = 17143] = "EBMLReadVersion", WW[WW.EBMLMaxIDLength = 17138] = "EBMLMaxIDLength", WW[WW.EBMLMaxSizeLength = 17139] = "EBMLMaxSizeLength", WW[WW.DocType = 17026] = "DocType", WW[WW.DocTypeVersion = 17031] = "DocTypeVersion", WW[WW.DocTypeReadVersion = 17029] = "DocTypeReadVersion", WW[WW.Void = 236] = "Void", WW[WW.Segment = 408125543] = "Segment", WW[WW.SeekHead = 290298740] = "SeekHead", WW[WW.Seek = 19899] = "Seek", WW[WW.SeekID = 21419] = "SeekID", WW[WW.SeekPosition = 21420] = "SeekPosition", WW[WW.Duration = 17545] = "Duration", WW[WW.Info = 357149030] = "Info", WW[WW.TimestampScale = 2807729] = "TimestampScale", WW[WW.MuxingApp = 19840] = "MuxingApp", WW[WW.WritingApp = 22337] = "WritingApp", WW[WW.Tracks = 374648427] = "Tracks", WW[WW.TrackEntry = 174] = "TrackEntry", WW[WW.TrackNumber = 215] = "TrackNumber", WW[WW.TrackUID = 29637] = "TrackUID", WW[WW.TrackType = 131] = "TrackType", WW[WW.FlagEnabled = 185] = "FlagEnabled", WW[WW.FlagDefault = 136] = "FlagDefault", WW[WW.FlagForced = 21930] = "FlagForced", WW[WW.FlagOriginal = 21934] = "FlagOriginal", WW[WW.FlagHearingImpaired = 21931] = "FlagHearingImpaired", WW[WW.FlagVisualImpaired = 21932] = "FlagVisualImpaired", WW[WW.FlagCommentary = 21935] = "FlagCommentary", WW[WW.FlagLacing = 156] = "FlagLacing", WW[WW.Name = 21358] = "Name", WW[WW.Language = 2274716] = "Language", WW[WW.LanguageBCP47 = 2274717] = "LanguageBCP47", WW[WW.CodecID = 134] = "CodecID", WW[WW.CodecPrivate = 25506] = "CodecPrivate", WW[WW.CodecDelay = 22186] = "CodecDelay", WW[WW.SeekPreRoll = 22203] = "SeekPreRoll", WW[WW.DefaultDuration = 2352003] = "DefaultDuration", WW[WW.Video = 224] = "Video", WW[WW.PixelWidth = 176] = "PixelWidth", WW[WW.PixelHeight = 186] = "PixelHeight", WW[WW.DisplayWidth = 21680] = "DisplayWidth", WW[WW.DisplayHeight = 21690] = "DisplayHeight", WW[WW.DisplayUnit = 21682] = "DisplayUnit", WW[WW.AlphaMode = 21440] = "AlphaMode", WW[WW.Audio = 225] = "Audio", WW[WW.SamplingFrequency = 181] = "SamplingFrequency", WW[WW.Channels = 159] = "Channels", WW[WW.BitDepth = 25188] = "BitDepth", WW[WW.SimpleBlock = 163] = "SimpleBlock", WW[WW.BlockGroup = 160] = "BlockGroup", WW[WW.Block = 161] = "Block", WW[WW.BlockAdditions = 30113] = "BlockAdditions", WW[WW.BlockMore = 166] = "BlockMore", WW[WW.BlockAdditional = 165] = "BlockAdditional", WW[WW.BlockAddID = 238] = "BlockAddID", WW[WW.BlockDuration = 155] = "BlockDuration", WW[WW.ReferenceBlock = 251] = "ReferenceBlock", WW[WW.Cluster = 524531317] = "Cluster", WW[WW.Timestamp = 231] = "Timestamp", WW[WW.Cues = 475249515] = "Cues", WW[WW.CuePoint = 187] = "CuePoint", WW[WW.CueTime = 179] = "CueTime", WW[WW.CueTrackPositions = 183] = "CueTrackPositions", WW[WW.CueTrack = 247] = "CueTrack", WW[WW.CueClusterPosition = 241] = "CueClusterPosition", WW[WW.Colour = 21936] = "Colour", WW[WW.MatrixCoefficients = 21937] = "MatrixCoefficients", WW[WW.TransferCharacteristics = 21946] = "TransferCharacteristics", WW[WW.Primaries = 21947] = "Primaries", WW[WW.Range = 21945] = "Range", WW[WW.Projection = 30320] = "Projection", WW[WW.ProjectionType = 30321] = "ProjectionType", WW[WW.ProjectionPoseYaw = 30323] = "ProjectionPoseYaw", WW[WW.ProjectionPosePitch = 30324] = "ProjectionPosePitch", WW[WW.ProjectionPoseRoll = 30325] = "ProjectionPoseRoll", WW[WW.Attachments = 423732329] = "Attachments", WW[WW.AttachedFile = 24999] = "AttachedFile", WW[WW.FileDescription = 18046] = "FileDescription", WW[WW.FileName = 18030] = "FileName", WW[WW.FileMediaType = 18016] = "FileMediaType", WW[WW.FileData = 18012] = "FileData", WW[WW.FileUID = 18094] = "FileUID", WW[WW.Chapters = 272869232] = "Chapters", WW[WW.Tags = 307544935] = "Tags", WW[WW.Tag = 29555] = "Tag", WW[WW.Targets = 25536] = "Targets", WW[WW.TargetTypeValue = 26826] = "TargetTypeValue", WW[WW.TargetType = 25546] = "TargetType", WW[WW.TagTrackUID = 25541] = "TagTrackUID", WW[WW.TagEditionUID = 25545] = "TagEditionUID", WW[WW.TagChapterUID = 25540] = "TagChapterUID", WW[WW.TagAttachmentUID = 25542] = "TagAttachmentUID", WW[WW.SimpleTag = 26568] = "SimpleTag", WW[WW.TagName = 17827] = "TagName", WW[WW.TagLanguage = 17530] = "TagLanguage", WW[WW.TagString = 17543] = "TagString", WW[WW.TagBinary = 17541] = "TagBinary", WW[WW.ContentEncodings = 28032] = "ContentEncodings", WW[WW.ContentEncoding = 25152] = "ContentEncoding", WW[WW.ContentEncodingOrder = 20529] = "ContentEncodingOrder", WW[WW.ContentEncodingScope = 20530] = "ContentEncodingScope", WW[WW.ContentCompression = 20532] = "ContentCompression", WW[WW.ContentCompAlgo = 16980] = "ContentCompAlgo", WW[WW.ContentCompSettings = 16981] = "ContentCompSettings", WW[WW.ContentEncryption = 20533] = "ContentEncryption"
-    }(KO || (KO = {}));
-    KO.EBML, KO.Segment, KO.SeekHead, KO.Info, KO.Cluster, KO.Tracks, KO.Cues, KO.Attachments, KO.Chapters, KO.Tags;
-    const SO = WW => WW < 256 ? 1 : WW < 65536 ? 2 : WW < 1 << 24 ? 3 : WW < 2 ** 32 ? 4 : WW < 2 ** 40 ? 5 : 6,
-      YO = WW => WW < 256n ? 1 : WW < 65536n ? 2 : WW < 1n << 24n ? 3 : WW < 1n << 32n ? 4 : WW < 1n << 40n ? 5 : WW < 1n << 48n ? 6 : WW < 1n << 56n ? 7 : 8,
-      yO = WW => WW >= -64 && WW < 64 ? 1 : WW >= -8192 && WW < 8192 ? 2 : WW >= -1048576 && WW < 1 << 20 ? 3 : WW >= -(1 << 27) && WW < 1 << 27 ? 4 : WW >= -(2 ** 34) && WW < 2 ** 34 ? 5 : 6;
-    class TO {
-      constructor(WW) {
-        this.writer = WW, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap, this.dataOffsets = new WeakMap
+    var WG;
+    ! function(RR) {
+      RR[RR.EBML = 440786851] = "EBML", RR[RR.EBMLVersion = 17030] = "EBMLVersion", RR[RR.EBMLReadVersion = 17143] = "EBMLReadVersion", RR[RR.EBMLMaxIDLength = 17138] = "EBMLMaxIDLength", RR[RR.EBMLMaxSizeLength = 17139] = "EBMLMaxSizeLength", RR[RR.DocType = 17026] = "DocType", RR[RR.DocTypeVersion = 17031] = "DocTypeVersion", RR[RR.DocTypeReadVersion = 17029] = "DocTypeReadVersion", RR[RR.Void = 236] = "Void", RR[RR.Segment = 408125543] = "Segment", RR[RR.SeekHead = 290298740] = "SeekHead", RR[RR.Seek = 19899] = "Seek", RR[RR.SeekID = 21419] = "SeekID", RR[RR.SeekPosition = 21420] = "SeekPosition", RR[RR.Duration = 17545] = "Duration", RR[RR.Info = 357149030] = "Info", RR[RR.TimestampScale = 2807729] = "TimestampScale", RR[RR.MuxingApp = 19840] = "MuxingApp", RR[RR.WritingApp = 22337] = "WritingApp", RR[RR.Tracks = 374648427] = "Tracks", RR[RR.TrackEntry = 174] = "TrackEntry", RR[RR.TrackNumber = 215] = "TrackNumber", RR[RR.TrackUID = 29637] = "TrackUID", RR[RR.TrackType = 131] = "TrackType", RR[RR.FlagEnabled = 185] = "FlagEnabled", RR[RR.FlagDefault = 136] = "FlagDefault", RR[RR.FlagForced = 21930] = "FlagForced", RR[RR.FlagOriginal = 21934] = "FlagOriginal", RR[RR.FlagHearingImpaired = 21931] = "FlagHearingImpaired", RR[RR.FlagVisualImpaired = 21932] = "FlagVisualImpaired", RR[RR.FlagCommentary = 21935] = "FlagCommentary", RR[RR.FlagLacing = 156] = "FlagLacing", RR[RR.Name = 21358] = "Name", RR[RR.Language = 2274716] = "Language", RR[RR.LanguageBCP47 = 2274717] = "LanguageBCP47", RR[RR.CodecID = 134] = "CodecID", RR[RR.CodecPrivate = 25506] = "CodecPrivate", RR[RR.CodecDelay = 22186] = "CodecDelay", RR[RR.SeekPreRoll = 22203] = "SeekPreRoll", RR[RR.DefaultDuration = 2352003] = "DefaultDuration", RR[RR.Video = 224] = "Video", RR[RR.PixelWidth = 176] = "PixelWidth", RR[RR.PixelHeight = 186] = "PixelHeight", RR[RR.DisplayWidth = 21680] = "DisplayWidth", RR[RR.DisplayHeight = 21690] = "DisplayHeight", RR[RR.DisplayUnit = 21682] = "DisplayUnit", RR[RR.AlphaMode = 21440] = "AlphaMode", RR[RR.Audio = 225] = "Audio", RR[RR.SamplingFrequency = 181] = "SamplingFrequency", RR[RR.Channels = 159] = "Channels", RR[RR.BitDepth = 25188] = "BitDepth", RR[RR.SimpleBlock = 163] = "SimpleBlock", RR[RR.BlockGroup = 160] = "BlockGroup", RR[RR.Block = 161] = "Block", RR[RR.BlockAdditions = 30113] = "BlockAdditions", RR[RR.BlockMore = 166] = "BlockMore", RR[RR.BlockAdditional = 165] = "BlockAdditional", RR[RR.BlockAddID = 238] = "BlockAddID", RR[RR.BlockDuration = 155] = "BlockDuration", RR[RR.ReferenceBlock = 251] = "ReferenceBlock", RR[RR.Cluster = 524531317] = "Cluster", RR[RR.Timestamp = 231] = "Timestamp", RR[RR.Cues = 475249515] = "Cues", RR[RR.CuePoint = 187] = "CuePoint", RR[RR.CueTime = 179] = "CueTime", RR[RR.CueTrackPositions = 183] = "CueTrackPositions", RR[RR.CueTrack = 247] = "CueTrack", RR[RR.CueClusterPosition = 241] = "CueClusterPosition", RR[RR.Colour = 21936] = "Colour", RR[RR.MatrixCoefficients = 21937] = "MatrixCoefficients", RR[RR.TransferCharacteristics = 21946] = "TransferCharacteristics", RR[RR.Primaries = 21947] = "Primaries", RR[RR.Range = 21945] = "Range", RR[RR.Projection = 30320] = "Projection", RR[RR.ProjectionType = 30321] = "ProjectionType", RR[RR.ProjectionPoseYaw = 30323] = "ProjectionPoseYaw", RR[RR.ProjectionPosePitch = 30324] = "ProjectionPosePitch", RR[RR.ProjectionPoseRoll = 30325] = "ProjectionPoseRoll", RR[RR.Attachments = 423732329] = "Attachments", RR[RR.AttachedFile = 24999] = "AttachedFile", RR[RR.FileDescription = 18046] = "FileDescription", RR[RR.FileName = 18030] = "FileName", RR[RR.FileMediaType = 18016] = "FileMediaType", RR[RR.FileData = 18012] = "FileData", RR[RR.FileUID = 18094] = "FileUID", RR[RR.Chapters = 272869232] = "Chapters", RR[RR.Tags = 307544935] = "Tags", RR[RR.Tag = 29555] = "Tag", RR[RR.Targets = 25536] = "Targets", RR[RR.TargetTypeValue = 26826] = "TargetTypeValue", RR[RR.TargetType = 25546] = "TargetType", RR[RR.TagTrackUID = 25541] = "TagTrackUID", RR[RR.TagEditionUID = 25545] = "TagEditionUID", RR[RR.TagChapterUID = 25540] = "TagChapterUID", RR[RR.TagAttachmentUID = 25542] = "TagAttachmentUID", RR[RR.SimpleTag = 26568] = "SimpleTag", RR[RR.TagName = 17827] = "TagName", RR[RR.TagLanguage = 17530] = "TagLanguage", RR[RR.TagString = 17543] = "TagString", RR[RR.TagBinary = 17541] = "TagBinary", RR[RR.ContentEncodings = 28032] = "ContentEncodings", RR[RR.ContentEncoding = 25152] = "ContentEncoding", RR[RR.ContentEncodingOrder = 20529] = "ContentEncodingOrder", RR[RR.ContentEncodingScope = 20530] = "ContentEncodingScope", RR[RR.ContentCompression = 20532] = "ContentCompression", RR[RR.ContentCompAlgo = 16980] = "ContentCompAlgo", RR[RR.ContentCompSettings = 16981] = "ContentCompSettings", RR[RR.ContentEncryption = 20533] = "ContentEncryption"
+    }(WG || (WG = {}));
+    WG.EBML, WG.Segment, WG.SeekHead, WG.Info, WG.Cluster, WG.Tracks, WG.Cues, WG.Attachments, WG.Chapters, WG.Tags;
+    const AG = RR => RR < 256 ? 1 : RR < 65536 ? 2 : RR < 1 << 24 ? 3 : RR < 2 ** 32 ? 4 : RR < 2 ** 40 ? 5 : 6,
+      CG = RR => RR < 256n ? 1 : RR < 65536n ? 2 : RR < 1n << 24n ? 3 : RR < 1n << 32n ? 4 : RR < 1n << 40n ? 5 : RR < 1n << 48n ? 6 : RR < 1n << 56n ? 7 : 8,
+      XG = RR => RR >= -64 && RR < 64 ? 1 : RR >= -8192 && RR < 8192 ? 2 : RR >= -1048576 && RR < 1 << 20 ? 3 : RR >= -(1 << 27) && RR < 1 << 27 ? 4 : RR >= -(2 ** 34) && RR < 2 ** 34 ? 5 : 6;
+    class MG {
+      constructor(RR) {
+        this.writer = RR, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap, this.dataOffsets = new WeakMap
       }
-      writeByte(WW) {
-        this.helperView.setUint8(0, WW), this.writer.write(this.helper.subarray(0, 1))
+      writeByte(RR) {
+        this.helperView.setUint8(0, RR), this.writer.write(this.helper.subarray(0, 1))
       }
-      writeFloat32(WW) {
-        this.helperView.setFloat32(0, WW, !1), this.writer.write(this.helper.subarray(0, 4))
+      writeFloat32(RR) {
+        this.helperView.setFloat32(0, RR, !1), this.writer.write(this.helper.subarray(0, 4))
       }
-      writeFloat64(WW) {
-        this.helperView.setFloat64(0, WW, !1), this.writer.write(this.helper)
+      writeFloat64(RR) {
+        this.helperView.setFloat64(0, RR, !1), this.writer.write(this.helper)
       }
-      writeUnsignedInt(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SO(WW),
-          OW = 0;
-        switch (iW) {
+      writeUnsignedInt(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AG(RR),
+          GR = 0;
+        switch (JR) {
           case 6:
-            this.helperView.setUint8(OW++, WW / 2 ** 40 | 0);
+            this.helperView.setUint8(GR++, RR / 2 ** 40 | 0);
           case 5:
-            this.helperView.setUint8(OW++, WW / 2 ** 32 | 0);
+            this.helperView.setUint8(GR++, RR / 2 ** 32 | 0);
           case 4:
-            this.helperView.setUint8(OW++, WW >> 24);
+            this.helperView.setUint8(GR++, RR >> 24);
           case 3:
-            this.helperView.setUint8(OW++, WW >> 16);
+            this.helperView.setUint8(GR++, RR >> 16);
           case 2:
-            this.helperView.setUint8(OW++, WW >> 8);
+            this.helperView.setUint8(GR++, RR >> 8);
           case 1:
-            this.helperView.setUint8(OW++, WW);
+            this.helperView.setUint8(GR++, RR);
             break;
           default:
-            throw new Error("Bad unsigned int size " + iW)
+            throw new Error("Bad unsigned int size " + JR)
         }
-        this.writer.write(this.helper.subarray(0, OW))
+        this.writer.write(this.helper.subarray(0, GR))
       }
-      writeUnsignedBigInt(WW) {
-        let iW = 0;
-        for (let OW = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YO(WW)) - 1; OW >= 0; OW--) this.helperView.setUint8(iW++, Number(WW >> BigInt(8 * OW) & 0xffn));
-        this.writer.write(this.helper.subarray(0, iW))
+      writeUnsignedBigInt(RR) {
+        let JR = 0;
+        for (let GR = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CG(RR)) - 1; GR >= 0; GR--) this.helperView.setUint8(JR++, Number(RR >> BigInt(8 * GR) & 0xffn));
+        this.writer.write(this.helper.subarray(0, JR))
       }
-      writeSignedInt(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yO(WW);
-        WW < 0 && (WW += 2 ** (8 * iW)), this.writeUnsignedInt(WW, iW)
+      writeSignedInt(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XG(RR);
+        RR < 0 && (RR += 2 ** (8 * JR)), this.writeUnsignedInt(RR, JR)
       }
-      writeVarInt(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (WW => {
-            if (WW < 127) return 1;
-            if (WW < 16383) return 2;
-            if (WW < 2097151) return 3;
-            if (WW < 268435455) return 4;
-            if (WW < 2 ** 35 - 1) return 5;
-            if (WW < 2 ** 42 - 1) return 6;
-            throw new Error("EBML varint size not supported " + WW)
-          })(WW),
-          OW = 0;
-        switch (iW) {
+      writeVarInt(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (RR => {
+            if (RR < 127) return 1;
+            if (RR < 16383) return 2;
+            if (RR < 2097151) return 3;
+            if (RR < 268435455) return 4;
+            if (RR < 2 ** 35 - 1) return 5;
+            if (RR < 2 ** 42 - 1) return 6;
+            throw new Error("EBML varint size not supported " + RR)
+          })(RR),
+          GR = 0;
+        switch (JR) {
           case 1:
-            this.helperView.setUint8(OW++, 128 | WW);
+            this.helperView.setUint8(GR++, 128 | RR);
             break;
           case 2:
-            this.helperView.setUint8(OW++, 64 | WW >> 8), this.helperView.setUint8(OW++, WW);
+            this.helperView.setUint8(GR++, 64 | RR >> 8), this.helperView.setUint8(GR++, RR);
             break;
           case 3:
-            this.helperView.setUint8(OW++, 32 | WW >> 16), this.helperView.setUint8(OW++, WW >> 8), this.helperView.setUint8(OW++, WW);
+            this.helperView.setUint8(GR++, 32 | RR >> 16), this.helperView.setUint8(GR++, RR >> 8), this.helperView.setUint8(GR++, RR);
             break;
           case 4:
-            this.helperView.setUint8(OW++, 16 | WW >> 24), this.helperView.setUint8(OW++, WW >> 16), this.helperView.setUint8(OW++, WW >> 8), this.helperView.setUint8(OW++, WW);
+            this.helperView.setUint8(GR++, 16 | RR >> 24), this.helperView.setUint8(GR++, RR >> 16), this.helperView.setUint8(GR++, RR >> 8), this.helperView.setUint8(GR++, RR);
             break;
           case 5:
-            this.helperView.setUint8(OW++, 8 | WW / 2 ** 32 & 7), this.helperView.setUint8(OW++, WW >> 24), this.helperView.setUint8(OW++, WW >> 16), this.helperView.setUint8(OW++, WW >> 8), this.helperView.setUint8(OW++, WW);
+            this.helperView.setUint8(GR++, 8 | RR / 2 ** 32 & 7), this.helperView.setUint8(GR++, RR >> 24), this.helperView.setUint8(GR++, RR >> 16), this.helperView.setUint8(GR++, RR >> 8), this.helperView.setUint8(GR++, RR);
             break;
           case 6:
-            this.helperView.setUint8(OW++, 4 | WW / 2 ** 40 & 3), this.helperView.setUint8(OW++, WW / 2 ** 32 | 0), this.helperView.setUint8(OW++, WW >> 24), this.helperView.setUint8(OW++, WW >> 16), this.helperView.setUint8(OW++, WW >> 8), this.helperView.setUint8(OW++, WW);
+            this.helperView.setUint8(GR++, 4 | RR / 2 ** 40 & 3), this.helperView.setUint8(GR++, RR / 2 ** 32 | 0), this.helperView.setUint8(GR++, RR >> 24), this.helperView.setUint8(GR++, RR >> 16), this.helperView.setUint8(GR++, RR >> 8), this.helperView.setUint8(GR++, RR);
             break;
           default:
-            throw new Error("Bad EBML varint size " + iW)
+            throw new Error("Bad EBML varint size " + JR)
         }
-        this.writer.write(this.helper.subarray(0, OW))
+        this.writer.write(this.helper.subarray(0, GR))
       }
-      writeAsciiString(WW) {
-        this.writer.write(new Uint8Array(WW.split("").map((WW => WW.charCodeAt(0)))))
+      writeAsciiString(RR) {
+        this.writer.write(new Uint8Array(RR.split("").map((RR => RR.charCodeAt(0)))))
       }
-      writeEBML(WW) {
-        if (null !== WW)
-          if (WW instanceof Uint8Array) this.writer.write(WW);
-          else if (Array.isArray(WW))
-          for (const iW of WW) this.writeEBML(iW);
-        else if (this.offsets.set(WW, this.writer.getPos()), this.writeUnsignedInt(WW.id), Array.isArray(WW.data)) {
-          const iW = this.writer.getPos(),
-            OW = -1 === WW.size ? 1 : WW.size ?? 4; - 1 === WW.size ? this.writeByte(255) : this.writer.seek(this.writer.getPos() + OW);
-          const mW = this.writer.getPos();
-          if (this.dataOffsets.set(WW, mW), this.writeEBML(WW.data), -1 !== WW.size) {
-            const WW = this.writer.getPos() - mW,
-              EW = this.writer.getPos();
-            this.writer.seek(iW), this.writeVarInt(WW, OW), this.writer.seek(EW)
+      writeEBML(RR) {
+        if (null !== RR)
+          if (RR instanceof Uint8Array) this.writer.write(RR);
+          else if (Array.isArray(RR))
+          for (const JR of RR) this.writeEBML(JR);
+        else if (this.offsets.set(RR, this.writer.getPos()), this.writeUnsignedInt(RR.id), Array.isArray(RR.data)) {
+          const JR = this.writer.getPos(),
+            GR = -1 === RR.size ? 1 : RR.size ?? 4; - 1 === RR.size ? this.writeByte(255) : this.writer.seek(this.writer.getPos() + GR);
+          const yR = this.writer.getPos();
+          if (this.dataOffsets.set(RR, yR), this.writeEBML(RR.data), -1 !== RR.size) {
+            const RR = this.writer.getPos() - yR,
+              tR = this.writer.getPos();
+            this.writer.seek(JR), this.writeVarInt(RR, GR), this.writer.seek(tR)
           }
-        } else if ("number" === typeof WW.data) {
-          const iW = WW.size ?? SO(WW.data);
-          this.writeVarInt(iW), this.writeUnsignedInt(WW.data, iW)
-        } else if ("bigint" === typeof WW.data) {
-          const iW = WW.size ?? YO(WW.data);
-          this.writeVarInt(iW), this.writeUnsignedBigInt(WW.data, iW)
-        } else if ("string" === typeof WW.data) this.writeVarInt(WW.data.length), this.writeAsciiString(WW.data);
-        else if (WW.data instanceof Uint8Array) this.writeVarInt(WW.data.byteLength, WW.size), this.writer.write(WW.data);
-        else if (WW.data instanceof UO) this.writeVarInt(4), this.writeFloat32(WW.data.value);
-        else if (WW.data instanceof kO) this.writeVarInt(8), this.writeFloat64(WW.data.value);
-        else if (WW.data instanceof sO) {
-          const iW = WW.size ?? yO(WW.data.value);
-          this.writeVarInt(iW), this.writeSignedInt(WW.data.value, iW)
-        } else if (WW.data instanceof MO) {
-          const iW = LW.kd.encode(WW.data.value);
-          this.writeVarInt(iW.length), this.writer.write(iW)
-        } else(0, LW.J)(WW.data)
+        } else if ("number" === typeof RR.data) {
+          const JR = RR.size ?? AG(RR.data);
+          this.writeVarInt(JR), this.writeUnsignedInt(RR.data, JR)
+        } else if ("bigint" === typeof RR.data) {
+          const JR = RR.size ?? CG(RR.data);
+          this.writeVarInt(JR), this.writeUnsignedBigInt(RR.data, JR)
+        } else if ("string" === typeof RR.data) this.writeVarInt(RR.data.length), this.writeAsciiString(RR.data);
+        else if (RR.data instanceof Uint8Array) this.writeVarInt(RR.data.byteLength, RR.size), this.writer.write(RR.data);
+        else if (RR.data instanceof aG) this.writeVarInt(4), this.writeFloat32(RR.data.value);
+        else if (RR.data instanceof LG) this.writeVarInt(8), this.writeFloat64(RR.data.value);
+        else if (RR.data instanceof nG) {
+          const JR = RR.size ?? XG(RR.data.value);
+          this.writeVarInt(JR), this.writeSignedInt(RR.data.value, JR)
+        } else if (RR.data instanceof UG) {
+          const JR = qR.Vc.encode(RR.data.value);
+          this.writeVarInt(JR.length), this.writer.write(JR)
+        } else(0, qR.H)(RR.data)
       }
     }
-    const JO = {
+    const BG = {
       avc: "V_MPEG4/ISO/AVC",
       hevc: "V_MPEGH/ISO/HEVC",
       vp8: "V_VP8",
@@ -5268,365 +5268,365 @@ export const modules = {
       "pcm-f64": "A_PCM/FLOAT/IEEE",
       webvtt: "S_TEXT/WEBVTT"
     };
-    const hO = {
+    const lG = {
       video: 1,
       audio: 2,
       subtitle: 17
     };
-    class HO extends AW {
-      constructor(WW, iW) {
-        super(WW), this.trackDatas = [], this.allTracksKnown = (0, LW.Gc)(), this.segment = null, this.segmentInfo = null, this.seekHead = null, this.tracksElement = null, this.tagsElement = null, this.attachmentsElement = null, this.segmentDuration = null, this.cues = null, this.currentCluster = null, this.currentClusterStartMsTimestamp = null, this.currentClusterMaxMsTimestamp = null, this.trackDatasInCurrentCluster = new Map, this.startTimestamp = 1 / 0, this.endTimestamp = -1 / 0, this.warnedAboutTooNegativeTimestamp = !1, this.format = iW
+    class pG extends eR {
+      constructor(RR, JR) {
+        super(RR), this.trackDatas = [], this.allTracksKnown = (0, qR.sc)(), this.segment = null, this.segmentInfo = null, this.seekHead = null, this.tracksElement = null, this.tagsElement = null, this.attachmentsElement = null, this.segmentDuration = null, this.cues = null, this.currentCluster = null, this.currentClusterStartMsTimestamp = null, this.currentClusterMaxMsTimestamp = null, this.trackDatasInCurrentCluster = new Map, this.startTimestamp = 1 / 0, this.endTimestamp = -1 / 0, this.warnedAboutTooNegativeTimestamp = !1, this.format = JR
       }
       async start() {
-        const WW = await this.mutex.acquire();
-        this.writer = await this.output._getRootWriter(!!this.format._options.appendOnly), this.ebmlWriter = new TO(this.writer), this.writeEBMLHeader(), this.createSegmentInfo(), this.createCues(), await this.writer.flush();
-        for (const iW of this.output.tracks) iW.isVideoTrack() && iW.metadata.decoderConfig ? this.getVideoTrackData(iW, iW.metadata.primingPacket ?? null, {
-          decoderConfig: iW.metadata.decoderConfig
-        }) : iW.isAudioTrack() && iW.metadata.decoderConfig && this.getAudioTrackData(iW, iW.metadata.primingPacket ?? null, {
-          decoderConfig: iW.metadata.decoderConfig
+        const RR = await this.mutex.acquire();
+        this.writer = await this.output._getRootWriter(!!this.format._options.appendOnly), this.ebmlWriter = new MG(this.writer), this.writeEBMLHeader(), this.createSegmentInfo(), this.createCues(), await this.writer.flush();
+        for (const JR of this.output.tracks) JR.isVideoTrack() && JR.metadata.decoderConfig ? this.getVideoTrackData(JR, JR.metadata.primingPacket ?? null, {
+          decoderConfig: JR.metadata.decoderConfig
+        }) : JR.isAudioTrack() && JR.metadata.decoderConfig && this.getAudioTrackData(JR, JR.metadata.primingPacket ?? null, {
+          decoderConfig: JR.metadata.decoderConfig
         });
-        WW()
+        RR()
       }
       writeEBMLHeader() {
         this.format._options.onEbmlHeader && this.writer.startTrackingWrites();
-        const WW = {
-          id: KO.EBML,
+        const RR = {
+          id: WG.EBML,
           data: [{
-            id: KO.EBMLVersion,
+            id: WG.EBMLVersion,
             data: 1
           }, {
-            id: KO.EBMLReadVersion,
+            id: WG.EBMLReadVersion,
             data: 1
           }, {
-            id: KO.EBMLMaxIDLength,
+            id: WG.EBMLMaxIDLength,
             data: 4
           }, {
-            id: KO.EBMLMaxSizeLength,
+            id: WG.EBMLMaxSizeLength,
             data: 8
           }, {
-            id: KO.DocType,
-            data: this.format instanceof CO ? "webm" : "matroska"
+            id: WG.DocType,
+            data: this.format instanceof IG ? "webm" : "matroska"
           }, {
-            id: KO.DocTypeVersion,
+            id: WG.DocTypeVersion,
             data: 4
           }, {
-            id: KO.DocTypeReadVersion,
+            id: WG.DocTypeReadVersion,
             data: 2
           }]
         };
-        if (this.ebmlWriter.writeEBML(WW), this.format._options.onEbmlHeader) {
+        if (this.ebmlWriter.writeEBML(RR), this.format._options.onEbmlHeader) {
           const {
-            data: WW,
-            start: iW
+            data: RR,
+            start: JR
           } = this.writer.stopTrackingWrites();
-          this.format._options.onEbmlHeader(WW, iW)
+          this.format._options.onEbmlHeader(RR, JR)
         }
       }
-      maybeCreateSeekHead(WW) {
+      maybeCreateSeekHead(RR) {
         if (this.format._options.appendOnly) return;
-        const iW = new Uint8Array([28, 83, 187, 107]),
-          OW = new Uint8Array([21, 73, 169, 102]),
-          mW = new Uint8Array([22, 84, 174, 107]),
-          EW = new Uint8Array([25, 65, 164, 105]),
-          NW = new Uint8Array([18, 84, 195, 103]),
-          PW = {
-            id: KO.SeekHead,
+        const JR = new Uint8Array([28, 83, 187, 107]),
+          GR = new Uint8Array([21, 73, 169, 102]),
+          yR = new Uint8Array([22, 84, 174, 107]),
+          tR = new Uint8Array([25, 65, 164, 105]),
+          uR = new Uint8Array([18, 84, 195, 103]),
+          ZR = {
+            id: WG.SeekHead,
             data: [{
-              id: KO.Seek,
+              id: WG.Seek,
               data: [{
-                id: KO.SeekID,
-                data: OW
+                id: WG.SeekID,
+                data: GR
               }, {
-                id: KO.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: WW ? this.ebmlWriter.offsets.get(this.segmentInfo) - this.segmentDataOffset : 0
+                data: RR ? this.ebmlWriter.offsets.get(this.segmentInfo) - this.segmentDataOffset : 0
               }]
             }, {
-              id: KO.Seek,
+              id: WG.Seek,
               data: [{
-                id: KO.SeekID,
-                data: mW
+                id: WG.SeekID,
+                data: yR
               }, {
-                id: KO.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: WW ? this.ebmlWriter.offsets.get(this.tracksElement) - this.segmentDataOffset : 0
+                data: RR ? this.ebmlWriter.offsets.get(this.tracksElement) - this.segmentDataOffset : 0
               }]
             }, this.attachmentsElement ? {
-              id: KO.Seek,
+              id: WG.Seek,
               data: [{
-                id: KO.SeekID,
-                data: EW
+                id: WG.SeekID,
+                data: tR
               }, {
-                id: KO.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: WW ? this.ebmlWriter.offsets.get(this.attachmentsElement) - this.segmentDataOffset : 0
+                data: RR ? this.ebmlWriter.offsets.get(this.attachmentsElement) - this.segmentDataOffset : 0
               }]
             } : null, this.tagsElement ? {
-              id: KO.Seek,
+              id: WG.Seek,
               data: [{
-                id: KO.SeekID,
-                data: NW
+                id: WG.SeekID,
+                data: uR
               }, {
-                id: KO.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: WW ? this.ebmlWriter.offsets.get(this.tagsElement) - this.segmentDataOffset : 0
+                data: RR ? this.ebmlWriter.offsets.get(this.tagsElement) - this.segmentDataOffset : 0
               }]
             } : null, {
-              id: KO.Seek,
+              id: WG.Seek,
               data: [{
-                id: KO.SeekID,
-                data: iW
+                id: WG.SeekID,
+                data: JR
               }, {
-                id: KO.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: WW ? this.ebmlWriter.offsets.get(this.cues) - this.segmentDataOffset : 0
+                data: RR ? this.ebmlWriter.offsets.get(this.cues) - this.segmentDataOffset : 0
               }]
             }]
           };
-        this.seekHead = PW
+        this.seekHead = ZR
       }
       createSegmentInfo() {
-        const WW = {
-          id: KO.Duration,
-          data: new kO(0)
+        const RR = {
+          id: WG.Duration,
+          data: new LG(0)
         };
-        this.segmentDuration = WW;
-        const iW = {
-          id: KO.Info,
+        this.segmentDuration = RR;
+        const JR = {
+          id: WG.Info,
           data: [{
-            id: KO.TimestampScale,
+            id: WG.TimestampScale,
             data: 1e6
           }, {
-            id: KO.MuxingApp,
-            data: kW.b
+            id: WG.MuxingApp,
+            data: UR.e
           }, {
-            id: KO.WritingApp,
-            data: kW.b
-          }, this.format._options.appendOnly ? null : WW]
+            id: WG.WritingApp,
+            data: UR.e
+          }, this.format._options.appendOnly ? null : RR]
         };
-        this.segmentInfo = iW
+        this.segmentInfo = JR
       }
       createTracks() {
-        const WW = {
-          id: KO.Tracks,
+        const RR = {
+          id: WG.Tracks,
           data: []
         };
-        this.tracksElement = WW;
-        for (const iW of this.trackDatas) {
-          let OW = JO[iW.track.source._codec];
-          (0, LW.K)(OW), "audio" === iW.type && "dts" === iW.track.source._codec && ("dtse" === iW.info.decoderConfig.codec ? OW = "A_DTS/EXPRESS" : "dtsl" === iW.info.decoderConfig.codec && (OW = "A_DTS/LOSSLESS"));
-          let mW = 0;
-          if ("audio" === iW.type && "opus" === iW.track.source._codec) {
-            mW = 8e7;
-            const WW = iW.info.decoderConfig.description;
-            if (WW) {
-              const iW = (0, LW.pd)(WW),
-                OW = (0, bW.nb)(iW);
-              mW = Math.round(OW.preSkip / EW.n * 1e9)
+        this.tracksElement = RR;
+        for (const JR of this.trackDatas) {
+          let GR = BG[JR.track.source._codec];
+          (0, qR.I)(GR), "audio" === JR.type && "dts" === JR.track.source._codec && ("dtse" === JR.info.decoderConfig.codec ? GR = "A_DTS/EXPRESS" : "dtsl" === JR.info.decoderConfig.codec && (GR = "A_DTS/LOSSLESS"));
+          let yR = 0;
+          if ("audio" === JR.type && "opus" === JR.track.source._codec) {
+            yR = 8e7;
+            const RR = JR.info.decoderConfig.description;
+            if (RR) {
+              const JR = (0, qR.cd)(RR),
+                GR = (0, aR.jb)(JR);
+              yR = Math.round(GR.preSkip / tR.l * 1e9)
             }
           }
-          WW.data.push({
-            id: KO.TrackEntry,
+          RR.data.push({
+            id: WG.TrackEntry,
             data: [{
-              id: KO.TrackNumber,
-              data: iW.track.id
+              id: WG.TrackNumber,
+              data: JR.track.id
             }, {
-              id: KO.TrackUID,
-              data: iW.track.id
+              id: WG.TrackUID,
+              data: JR.track.id
             }, {
-              id: KO.TrackType,
-              data: hO[iW.type]
-            }, !1 === iW.track.metadata.disposition?.default ? {
-              id: KO.FlagDefault,
+              id: WG.TrackType,
+              data: lG[JR.type]
+            }, !1 === JR.track.metadata.disposition?.default ? {
+              id: WG.FlagDefault,
               data: 0
-            } : null, iW.track.metadata.disposition?.forced ? {
-              id: KO.FlagForced,
+            } : null, JR.track.metadata.disposition?.forced ? {
+              id: WG.FlagForced,
               data: 1
-            } : null, iW.track.metadata.disposition?.hearingImpaired ? {
-              id: KO.FlagHearingImpaired,
+            } : null, JR.track.metadata.disposition?.hearingImpaired ? {
+              id: WG.FlagHearingImpaired,
               data: 1
-            } : null, iW.track.metadata.disposition?.visuallyImpaired ? {
-              id: KO.FlagVisualImpaired,
+            } : null, JR.track.metadata.disposition?.visuallyImpaired ? {
+              id: WG.FlagVisualImpaired,
               data: 1
-            } : null, iW.track.metadata.disposition?.original ? {
-              id: KO.FlagOriginal,
+            } : null, JR.track.metadata.disposition?.original ? {
+              id: WG.FlagOriginal,
               data: 1
-            } : null, iW.track.metadata.disposition?.commentary ? {
-              id: KO.FlagCommentary,
+            } : null, JR.track.metadata.disposition?.commentary ? {
+              id: WG.FlagCommentary,
               data: 1
             } : null, {
-              id: KO.FlagLacing,
+              id: WG.FlagLacing,
               data: 0
             }, {
-              id: KO.Language,
-              data: iW.track.metadata.languageCode ?? LW.A
+              id: WG.Language,
+              data: JR.track.metadata.languageCode ?? qR.B
             }, {
-              id: KO.CodecID,
-              data: OW
-            }, iW.codecPrivate ? {
-              id: KO.CodecPrivate,
-              data: (0, LW.pd)(iW.codecPrivate)
-            } : null, mW > 0 ? {
-              id: KO.SeekPreRoll,
-              data: mW
-            } : null, void 0 !== iW.track.metadata.name ? {
-              id: KO.Name,
-              data: new MO(iW.track.metadata.name)
-            } : null, "video" === iW.type ? this.videoSpecificTrackInfo(iW) : null, "audio" === iW.type ? this.audioSpecificTrackInfo(iW) : null, "subtitle" === iW.type ? this.subtitleSpecificTrackInfo(iW) : null]
+              id: WG.CodecID,
+              data: GR
+            }, JR.codecPrivate ? {
+              id: WG.CodecPrivate,
+              data: (0, qR.cd)(JR.codecPrivate)
+            } : null, yR > 0 ? {
+              id: WG.SeekPreRoll,
+              data: yR
+            } : null, void 0 !== JR.track.metadata.name ? {
+              id: WG.Name,
+              data: new UG(JR.track.metadata.name)
+            } : null, "video" === JR.type ? this.videoSpecificTrackInfo(JR) : null, "audio" === JR.type ? this.audioSpecificTrackInfo(JR) : null, "subtitle" === JR.type ? this.subtitleSpecificTrackInfo(JR) : null]
           })
         }
       }
-      videoSpecificTrackInfo(WW) {
+      videoSpecificTrackInfo(RR) {
         const {
-          frameRate: iW,
-          transformationMatrix: OW
-        } = WW.track.metadata, mW = [iW ? {
-          id: KO.DefaultDuration,
-          data: 1e9 / iW
+          frameRate: JR,
+          transformationMatrix: GR
+        } = RR.track.metadata, yR = [JR ? {
+          id: WG.DefaultDuration,
+          data: 1e9 / JR
         } : null];
-        let EW, NW, PW;
-        if (OW) {
-          EW = (0, LW.mb)(OW);
-          const WW = (0, LW.uc)((0, LW.Nc)(-EW), OW);
-          NW = Math.sign(WW[0]), PW = Math.sign(WW[4]), -1 === PW && (PW = 1, NW = -NW, EW = (0, LW.yc)(EW + 180))
-        } else EW = WW.track.metadata.rotation ?? 0, NW = WW.track.metadata.flip ? -1 : 1, PW = 1;
-        const cW = EW ? (0, LW.yc)(-1 === NW ? EW : -EW) : 0,
-          wW = Math.round(Math.acos(NW) * LW.t),
-          tW = Math.round(Math.acos(PW) * LW.t),
-          ZW = !!WW.info.aspectRatio && WW.info.aspectRatio.num * WW.info.height !== WW.info.aspectRatio.den * WW.info.width,
-          xW = WW.info.decoderConfig.colorSpace,
-          lW = {
-            id: KO.Video,
+        let tR, uR, ZR;
+        if (GR) {
+          tR = (0, qR.hb)(GR);
+          const RR = (0, qR.gc)((0, qR.xc)(-tR), GR);
+          uR = Math.sign(RR[0]), ZR = Math.sign(RR[4]), -1 === ZR && (ZR = 1, uR = -uR, tR = (0, qR.kc)(tR + 180))
+        } else tR = RR.track.metadata.rotation ?? 0, uR = RR.track.metadata.flip ? -1 : 1, ZR = 1;
+        const iR = tR ? (0, qR.kc)(-1 === uR ? tR : -tR) : 0,
+          fR = Math.round(Math.acos(uR) * qR.s),
+          VR = Math.round(Math.acos(ZR) * qR.s),
+          KR = !!RR.info.aspectRatio && RR.info.aspectRatio.num * RR.info.height !== RR.info.aspectRatio.den * RR.info.width,
+          wR = RR.info.decoderConfig.colorSpace,
+          rR = {
+            id: WG.Video,
             data: [{
-              id: KO.PixelWidth,
-              data: WW.info.width
+              id: WG.PixelWidth,
+              data: RR.info.width
             }, {
-              id: KO.PixelHeight,
-              data: WW.info.height
-            }, ZW ? {
-              id: KO.DisplayWidth,
-              data: WW.info.aspectRatio.num
-            } : null, ZW ? {
-              id: KO.DisplayHeight,
-              data: WW.info.aspectRatio.den
-            } : null, ZW ? {
-              id: KO.DisplayUnit,
+              id: WG.PixelHeight,
+              data: RR.info.height
+            }, KR ? {
+              id: WG.DisplayWidth,
+              data: RR.info.aspectRatio.num
+            } : null, KR ? {
+              id: WG.DisplayHeight,
+              data: RR.info.aspectRatio.den
+            } : null, KR ? {
+              id: WG.DisplayUnit,
               data: 3
-            } : null, WW.info.alphaMode ? {
-              id: KO.AlphaMode,
+            } : null, RR.info.alphaMode ? {
+              id: WG.AlphaMode,
               data: 1
-            } : null, (0, LW.fb)(xW) ? null : {
-              id: KO.Colour,
+            } : null, (0, qR._)(wR) ? null : {
+              id: WG.Colour,
               data: [{
-                id: KO.MatrixCoefficients,
-                data: null != xW?.matrix ? LW.r[xW.matrix] : 2
+                id: WG.MatrixCoefficients,
+                data: null != wR?.matrix ? qR.o[wR.matrix] : 2
               }, {
-                id: KO.TransferCharacteristics,
-                data: null != xW?.transfer ? LW.v[xW.transfer] : 2
+                id: WG.TransferCharacteristics,
+                data: null != wR?.transfer ? qR.x[wR.transfer] : 2
               }, {
-                id: KO.Primaries,
-                data: null != xW?.primaries ? LW.g[xW.primaries] : 2
+                id: WG.Primaries,
+                data: null != wR?.primaries ? qR.e[wR.primaries] : 2
               }, {
-                id: KO.Range,
-                data: null != xW?.fullRange ? xW.fullRange ? 2 : 1 : 0
+                id: WG.Range,
+                data: null != wR?.fullRange ? wR.fullRange ? 2 : 1 : 0
               }]
-            }, cW || wW || tW ? {
-              id: KO.Projection,
+            }, iR || fR || VR ? {
+              id: WG.Projection,
               data: [{
-                id: KO.ProjectionType,
+                id: WG.ProjectionType,
                 data: 0
-              }, wW ? {
-                id: KO.ProjectionPoseYaw,
-                data: new UO(wW)
-              } : null, tW ? {
-                id: KO.ProjectionPosePitch,
-                data: new UO(tW)
-              } : null, cW ? {
-                id: KO.ProjectionPoseRoll,
-                data: new UO((cW + 180) % 360 - 180)
+              }, fR ? {
+                id: WG.ProjectionPoseYaw,
+                data: new aG(fR)
+              } : null, VR ? {
+                id: WG.ProjectionPosePitch,
+                data: new aG(VR)
+              } : null, iR ? {
+                id: WG.ProjectionPoseRoll,
+                data: new aG((iR + 180) % 360 - 180)
               } : null]
             } : null]
           };
-        return mW.push(lW), mW
+        return yR.push(rR), yR
       }
-      audioSpecificTrackInfo(WW) {
-        const iW = EW.r.includes(WW.track.source._codec) ? (0, EW.U)(WW.track.source._codec) : null;
+      audioSpecificTrackInfo(RR) {
+        const JR = tR.p.includes(RR.track.source._codec) ? (0, tR.Q)(RR.track.source._codec) : null;
         return [{
-          id: KO.Audio,
+          id: WG.Audio,
           data: [{
-            id: KO.SamplingFrequency,
-            data: new UO(WW.info.sampleRate)
+            id: WG.SamplingFrequency,
+            data: new aG(RR.info.sampleRate)
           }, {
-            id: KO.Channels,
-            data: WW.info.numberOfChannels
-          }, iW ? {
-            id: KO.BitDepth,
-            data: 8 * iW.sampleSize
+            id: WG.Channels,
+            data: RR.info.numberOfChannels
+          }, JR ? {
+            id: WG.BitDepth,
+            data: 8 * JR.sampleSize
           } : null]
         }]
       }
-      subtitleSpecificTrackInfo(WW) {
+      subtitleSpecificTrackInfo(RR) {
         return []
       }
       maybeCreateTags() {
-        const WW = [],
-          iW = (iW, OW) => {
-            WW.push({
-              id: KO.SimpleTag,
+        const RR = [],
+          JR = (JR, GR) => {
+            RR.push({
+              id: WG.SimpleTag,
               data: [{
-                id: KO.TagName,
-                data: new MO(iW)
-              }, "string" === typeof OW ? {
-                id: KO.TagString,
-                data: new MO(OW)
+                id: WG.TagName,
+                data: new UG(JR)
+              }, "string" === typeof GR ? {
+                id: WG.TagString,
+                data: new UG(GR)
               } : {
-                id: KO.TagBinary,
-                data: OW
+                id: WG.TagBinary,
+                data: GR
               }]
             })
           },
-          OW = this.output._metadataTags,
-          mW = new Set;
+          GR = this.output._metadataTags,
+          yR = new Set;
         for (const {
-            key: EW,
-            value: NW
+            key: tR,
+            value: uR
           }
-          of(0, LW.kc)(OW)) switch (EW) {
+          of(0, qR._b)(GR)) switch (tR) {
           case "title":
-            iW("TITLE", NW), mW.add("TITLE");
+            JR("TITLE", uR), yR.add("TITLE");
             break;
           case "description":
-            iW("DESCRIPTION", NW), mW.add("DESCRIPTION");
+            JR("DESCRIPTION", uR), yR.add("DESCRIPTION");
             break;
           case "artist":
-            iW("ARTIST", NW), mW.add("ARTIST");
+            JR("ARTIST", uR), yR.add("ARTIST");
             break;
           case "album":
-            iW("ALBUM", NW), mW.add("ALBUM");
+            JR("ALBUM", uR), yR.add("ALBUM");
             break;
           case "albumArtist":
-            iW("ALBUM_ARTIST", NW), mW.add("ALBUM_ARTIST");
+            JR("ALBUM_ARTIST", uR), yR.add("ALBUM_ARTIST");
             break;
           case "genre":
-            iW("GENRE", NW), mW.add("GENRE");
+            JR("GENRE", uR), yR.add("GENRE");
             break;
           case "beatsPerMinute":
-            iW("BPM", NW.toString()), mW.add("BPM");
+            JR("BPM", uR.toString()), yR.add("BPM");
             break;
           case "comment":
-            iW("COMMENT", NW), mW.add("COMMENT");
+            JR("COMMENT", uR), yR.add("COMMENT");
             break;
           case "lyrics":
-            iW("LYRICS", NW), mW.add("LYRICS");
+            JR("LYRICS", uR), yR.add("LYRICS");
             break;
           case "date":
-            iW("DATE", NW.toISOString().slice(0, 10)), mW.add("DATE");
+            JR("DATE", uR.toISOString().slice(0, 10)), yR.add("DATE");
             break;
           case "trackNumber":
-            iW("PART_NUMBER", void 0 !== OW.tracksTotal ? `${NW}/${OW.tracksTotal}` : NW.toString()), mW.add("PART_NUMBER");
+            JR("PART_NUMBER", void 0 !== GR.tracksTotal ? `${uR}/${GR.tracksTotal}` : uR.toString()), yR.add("PART_NUMBER");
             break;
           case "discNumber":
-            iW("DISC", void 0 !== OW.discsTotal ? `${NW}/${OW.discsTotal}` : NW.toString()), mW.add("DISC");
+            JR("DISC", void 0 !== GR.discsTotal ? `${uR}/${GR.discsTotal}` : uR.toString()), yR.add("DISC");
             break;
           case "tracksTotal":
           case "discsTotal":
@@ -5634,543 +5634,543 @@ export const modules = {
           case "raw":
             break;
           default:
-            (0, LW.J)(EW)
+            (0, qR.H)(tR)
         }
-        if (OW.raw)
-          for (const EW in OW.raw) {
-            const WW = OW.raw[EW];
-            null == WW || mW.has(EW) || ("string" === typeof WW || WW instanceof Uint8Array) && iW(EW, WW)
+        if (GR.raw)
+          for (const tR in GR.raw) {
+            const RR = GR.raw[tR];
+            null == RR || yR.has(tR) || ("string" === typeof RR || RR instanceof Uint8Array) && JR(tR, RR)
           }
-        0 !== WW.length && (this.tagsElement = {
-          id: KO.Tags,
+        0 !== RR.length && (this.tagsElement = {
+          id: WG.Tags,
           data: [{
-            id: KO.Tag,
+            id: WG.Tag,
             data: [{
-              id: KO.Targets,
+              id: WG.Targets,
               data: [{
-                id: KO.TargetTypeValue,
+                id: WG.TargetTypeValue,
                 data: 50
               }, {
-                id: KO.TargetType,
+                id: WG.TargetType,
                 data: "MOVIE"
               }]
-            }, ...WW]
+            }, ...RR]
           }]
         })
       }
       maybeCreateAttachments() {
-        const WW = this.output._metadataTags,
-          iW = [],
-          OW = new Set,
-          mW = WW.images ?? [];
-        for (const EW of mW) {
-          let WW, mW = EW.name;
-          if (void 0 === mW) {
-            mW = ("coverFront" === EW.kind ? "cover" : "coverBack" === EW.kind ? "back" : "image") + ((0, LW.zb)(EW.mimeType) ?? "")
+        const RR = this.output._metadataTags,
+          JR = [],
+          GR = new Set,
+          yR = RR.images ?? [];
+        for (const tR of yR) {
+          let RR, yR = tR.name;
+          if (void 0 === yR) {
+            yR = ("coverFront" === tR.kind ? "cover" : "coverBack" === tR.kind ? "back" : "image") + ((0, qR.pb)(tR.mimeType) ?? "")
           }
           for (;;) {
-            WW = 0n;
-            for (let iW = 0; iW < 8; iW++) WW <<= 8n, WW |= BigInt(Math.floor(256 * Math.random()));
-            if (0n !== WW && !OW.has(WW)) break
+            RR = 0n;
+            for (let JR = 0; JR < 8; JR++) RR <<= 8n, RR |= BigInt(Math.floor(256 * Math.random()));
+            if (0n !== RR && !GR.has(RR)) break
           }
-          OW.add(WW), iW.push({
-            id: KO.AttachedFile,
-            data: [void 0 !== EW.description ? {
-              id: KO.FileDescription,
-              data: new MO(EW.description)
+          GR.add(RR), JR.push({
+            id: WG.AttachedFile,
+            data: [void 0 !== tR.description ? {
+              id: WG.FileDescription,
+              data: new UG(tR.description)
             } : null, {
-              id: KO.FileName,
-              data: new MO(mW)
+              id: WG.FileName,
+              data: new UG(yR)
             }, {
-              id: KO.FileMediaType,
-              data: EW.mimeType
+              id: WG.FileMediaType,
+              data: tR.mimeType
             }, {
-              id: KO.FileData,
-              data: EW.data
+              id: WG.FileData,
+              data: tR.data
             }, {
-              id: KO.FileUID,
-              data: WW
+              id: WG.FileUID,
+              data: RR
             }]
           })
         }
-        for (const [EW, NW] of Object.entries(WW.raw ?? {})) {
-          if (!(NW instanceof lW.e)) continue;
-          /^\d+$/.test(EW) && (mW.find((WW => WW.mimeType === NW.mimeType && (0, LW.qd)(WW.data, NW.data))) || iW.push({
-            id: KO.AttachedFile,
-            data: [void 0 !== NW.description ? {
-              id: KO.FileDescription,
-              data: new MO(NW.description)
+        for (const [tR, uR] of Object.entries(RR.raw ?? {})) {
+          if (!(uR instanceof rR.d)) continue;
+          /^\d+$/.test(tR) && (yR.find((RR => RR.mimeType === uR.mimeType && (0, qR.gd)(RR.data, uR.data))) || JR.push({
+            id: WG.AttachedFile,
+            data: [void 0 !== uR.description ? {
+              id: WG.FileDescription,
+              data: new UG(uR.description)
             } : null, {
-              id: KO.FileName,
-              data: new MO(NW.name ?? "")
+              id: WG.FileName,
+              data: new UG(uR.name ?? "")
             }, {
-              id: KO.FileMediaType,
-              data: NW.mimeType ?? ""
+              id: WG.FileMediaType,
+              data: uR.mimeType ?? ""
             }, {
-              id: KO.FileData,
-              data: NW.data
+              id: WG.FileData,
+              data: uR.data
             }, {
-              id: KO.FileUID,
-              data: BigInt(EW)
+              id: WG.FileUID,
+              data: BigInt(tR)
             }]
           }))
         }
-        0 !== iW.length && (this.attachmentsElement = {
-          id: KO.Attachments,
-          data: iW
+        0 !== JR.length && (this.attachmentsElement = {
+          id: WG.Attachments,
+          data: JR
         })
       }
       createSegment() {
         this.createTracks(), this.maybeCreateTags(), this.maybeCreateAttachments(), this.maybeCreateSeekHead(!1);
-        const WW = {
-          id: KO.Segment,
+        const RR = {
+          id: WG.Segment,
           size: this.format._options.appendOnly ? -1 : 6,
           data: [this.seekHead, this.segmentInfo, this.tracksElement, this.attachmentsElement, this.tagsElement]
         };
-        if (this.segment = WW, this.format._options.onSegmentHeader && this.writer.startTrackingWrites(), this.ebmlWriter.writeEBML(WW), this.format._options.onSegmentHeader) {
+        if (this.segment = RR, this.format._options.onSegmentHeader && this.writer.startTrackingWrites(), this.ebmlWriter.writeEBML(RR), this.format._options.onSegmentHeader) {
           const {
-            data: WW,
-            start: iW
+            data: RR,
+            start: JR
           } = this.writer.stopTrackingWrites();
-          this.format._options.onSegmentHeader(WW, iW)
+          this.format._options.onSegmentHeader(RR, JR)
         }
       }
       createCues() {
         this.cues = {
-          id: KO.Cues,
+          id: WG.Cues,
           data: []
         }
       }
       get segmentDataOffset() {
-        return (0, LW.K)(this.segment), this.ebmlWriter.dataOffsets.get(this.segment)
+        return (0, qR.I)(this.segment), this.ebmlWriter.dataOffsets.get(this.segment)
       }
       allTracksAreKnown() {
-        for (const WW of this.output.tracks)
-          if (!WW.source._closed && !this.trackDatas.some((iW => iW.track === WW))) return !1;
+        for (const RR of this.output.tracks)
+          if (!RR.source._closed && !this.trackDatas.some((JR => JR.track === RR))) return !1;
         return !0
       }
       async getMimeType() {
         await this.allTracksKnown.promise;
-        const WW = this.trackDatas.map((WW => {
-          if ("video" === WW.type) return WW.info.decoderConfig.codec;
-          if ("audio" === WW.type) return WW.info.decoderConfig.codec;
+        const RR = this.trackDatas.map((RR => {
+          if ("video" === RR.type) return RR.info.decoderConfig.codec;
+          if ("audio" === RR.type) return RR.info.decoderConfig.codec;
           return {
             webvtt: "wvtt"
-          } [WW.track.source._codec]
+          } [RR.track.source._codec]
         }));
-        return (WW => {
-          let iW = (WW.hasVideo ? "video/" : WW.hasAudio ? "audio/" : "application/") + (WW.isWebM ? "webm" : "x-matroska");
-          WW.codecStrings.length > 0 && (iW += `; codecs="${[...new Set(WW.codecStrings.filter(Boolean))].join(", ")}"`);
-          return iW
+        return (RR => {
+          let JR = (RR.hasVideo ? "video/" : RR.hasAudio ? "audio/" : "application/") + (RR.isWebM ? "webm" : "x-matroska");
+          RR.codecStrings.length > 0 && (JR += `; codecs="${[...new Set(RR.codecStrings.filter(Boolean))].join(", ")}"`);
+          return JR
         })({
-          isWebM: this.format instanceof CO,
-          hasVideo: this.trackDatas.some((WW => "video" === WW.type)),
-          hasAudio: this.trackDatas.some((WW => "audio" === WW.type)),
-          codecStrings: WW
+          isWebM: this.format instanceof IG,
+          hasVideo: this.trackDatas.some((RR => "video" === RR.type)),
+          hasAudio: this.trackDatas.some((RR => "audio" === RR.type)),
+          codecStrings: RR
         })
       }
-      getVideoTrackData(WW, iW, OW) {
-        const mW = this.trackDatas.find((iW => iW.track === WW));
-        if (mW) return mW;
-        (0, EW.bb)(OW, WW.source._codec), (0, LW.K)(OW), (0, LW.K)(OW.decoderConfig), (0, LW.K)(void 0 !== OW.decoderConfig.codedWidth), (0, LW.K)(void 0 !== OW.decoderConfig.codedHeight);
-        const NW = OW.decoderConfig.displayAspectWidth,
-          PW = OW.decoderConfig.displayAspectHeight,
-          cW = void 0 === NW || void 0 === PW ? null : (0, LW.ed)({
-            num: NW,
-            den: PW
+      getVideoTrackData(RR, JR, GR) {
+        const yR = this.trackDatas.find((JR => JR.track === RR));
+        if (yR) return yR;
+        (0, tR.X)(GR, RR.source._codec), (0, qR.I)(GR), (0, qR.I)(GR.decoderConfig), (0, qR.I)(void 0 !== GR.decoderConfig.codedWidth), (0, qR.I)(void 0 !== GR.decoderConfig.codedHeight);
+        const uR = GR.decoderConfig.displayAspectWidth,
+          ZR = GR.decoderConfig.displayAspectHeight,
+          iR = void 0 === uR || void 0 === ZR ? null : (0, qR.Qc)({
+            num: uR,
+            den: ZR
           }),
-          wW = {
-            track: WW,
+          fR = {
+            track: RR,
             type: "video",
             info: {
-              width: OW.decoderConfig.codedWidth,
-              height: OW.decoderConfig.codedHeight,
-              aspectRatio: cW,
-              decoderConfig: OW.decoderConfig,
-              alphaMode: WW.metadata.canBeTransparent || (iW ? !!iW.sideData.alpha : null)
+              width: GR.decoderConfig.codedWidth,
+              height: GR.decoderConfig.codedHeight,
+              aspectRatio: iR,
+              decoderConfig: GR.decoderConfig,
+              alphaMode: RR.metadata.canBeTransparent || (JR ? !!JR.sideData.alpha : null)
             },
             chunkQueue: [],
             lastWrittenMsTimestamp: null,
-            codecPrivate: OW.decoderConfig.description ?? null,
+            codecPrivate: GR.decoderConfig.description ?? null,
             closed: !1
           };
-        return "vp9" === WW.source._codec ? wW.codecPrivate = new Uint8Array((0, EW.L)(wW.info.decoderConfig.codec)) : "av1" === WW.source._codec ? wW.codecPrivate = new Uint8Array((0, EW.J)(wW.info.decoderConfig.codec)) : "prores" === WW.source._codec && (wW.codecPrivate = LW.kd.encode(OW.decoderConfig.codec)), this.trackDatas.push(wW), this.trackDatas.sort(((WW, iW) => WW.track.id - iW.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), wW
+        return "vp9" === RR.source._codec ? fR.codecPrivate = new Uint8Array((0, tR.I)(fR.info.decoderConfig.codec)) : "av1" === RR.source._codec ? fR.codecPrivate = new Uint8Array((0, tR.H)(fR.info.decoderConfig.codec)) : "prores" === RR.source._codec && (fR.codecPrivate = qR.Vc.encode(GR.decoderConfig.codec)), this.trackDatas.push(fR), this.trackDatas.sort(((RR, JR) => RR.track.id - JR.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), fR
       }
-      getAudioTrackData(WW, iW, OW) {
-        const NW = this.trackDatas.find((iW => iW.track === WW));
-        if (NW) return NW;
-        (0, EW.W)(OW, WW.source._codec), (0, LW.K)(OW), (0, LW.K)(OW.decoderConfig);
-        const PW = {
-          ...OW.decoderConfig
+      getAudioTrackData(RR, JR, GR) {
+        const uR = this.trackDatas.find((JR => JR.track === RR));
+        if (uR) return uR;
+        (0, tR.S)(GR, RR.source._codec), (0, qR.I)(GR), (0, qR.I)(GR.decoderConfig);
+        const ZR = {
+          ...GR.decoderConfig
         };
-        let wW = !1;
-        if ("aac" === WW.source._codec && !PW.description) {
-          if (!iW) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
-          const WW = ZO(cW.tempFromBytes(iW.data));
-          if (!WW) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
-          const OW = mW.g[WW.samplingFrequencyIndex],
-            EW = mW.e[WW.channelConfiguration];
-          if (void 0 === OW || void 0 === EW) throw new Error("Invalid ADTS frame header.");
-          PW.description = (0, mW.i)({
-            objectType: WW.objectType,
-            outputSampleRate: OW,
-            outputNumberOfChannels: EW
-          }), wW = !0
+        let fR = !1;
+        if ("aac" === RR.source._codec && !ZR.description) {
+          if (!JR) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
+          const RR = fG(iR.tempFromBytes(JR.data));
+          if (!RR) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
+          const GR = yR.f[RR.samplingFrequencyIndex],
+            tR = yR.c[RR.channelConfiguration];
+          if (void 0 === GR || void 0 === tR) throw new Error("Invalid ADTS frame header.");
+          ZR.description = (0, yR.i)({
+            objectType: RR.objectType,
+            outputSampleRate: GR,
+            outputNumberOfChannels: tR
+          }), fR = !0
         }
-        const tW = {
-          track: WW,
+        const VR = {
+          track: RR,
           type: "audio",
           info: {
-            numberOfChannels: OW.decoderConfig.numberOfChannels,
-            sampleRate: OW.decoderConfig.sampleRate,
-            decoderConfig: PW,
-            requiresAdtsStripping: wW
+            numberOfChannels: GR.decoderConfig.numberOfChannels,
+            sampleRate: GR.decoderConfig.sampleRate,
+            decoderConfig: ZR,
+            requiresAdtsStripping: fR
           },
           chunkQueue: [],
           lastWrittenMsTimestamp: null,
-          codecPrivate: PW.description ?? null,
+          codecPrivate: ZR.description ?? null,
           closed: !1
         };
-        return this.trackDatas.push(tW), this.trackDatas.sort(((WW, iW) => WW.track.id - iW.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), tW
+        return this.trackDatas.push(VR), this.trackDatas.sort(((RR, JR) => RR.track.id - JR.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), VR
       }
-      getSubtitleTrackData(WW, iW) {
-        const OW = this.trackDatas.find((iW => iW.track === WW));
-        if (OW) return OW;
-        (0, EW._)(iW), (0, LW.K)(iW), (0, LW.K)(iW.config);
-        const mW = {
-          track: WW,
+      getSubtitleTrackData(RR, JR) {
+        const GR = this.trackDatas.find((JR => JR.track === RR));
+        if (GR) return GR;
+        (0, tR.T)(JR), (0, qR.I)(JR), (0, qR.I)(JR.config);
+        const yR = {
+          track: RR,
           type: "subtitle",
           info: {
-            config: iW.config
+            config: JR.config
           },
           chunkQueue: [],
           lastWrittenMsTimestamp: null,
-          codecPrivate: LW.kd.encode(iW.config.description),
+          codecPrivate: qR.Vc.encode(JR.config.description),
           closed: !1
         };
-        return this.trackDatas.push(mW), this.trackDatas.sort(((WW, iW) => WW.track.id - iW.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), mW
+        return this.trackDatas.push(yR), this.trackDatas.sort(((RR, JR) => RR.track.id - JR.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), yR
       }
-      async addEncodedVideoPacket(WW, iW, OW) {
-        const mW = await this.mutex.acquire();
+      async addEncodedVideoPacket(RR, JR, GR) {
+        const yR = await this.mutex.acquire();
         try {
-          const mW = this.getVideoTrackData(WW, iW, OW);
-          mW.info.alphaMode ??= !!iW.sideData.alpha;
-          let EW = iW.data;
-          if ("prores" === WW.source._codec) {
-            if (EW.byteLength < 8) throw new Error("ProRes packet too small, expected at least 8 bytes.");
-            EW = EW.subarray(8)
+          const yR = this.getVideoTrackData(RR, JR, GR);
+          yR.info.alphaMode ??= !!JR.sideData.alpha;
+          let tR = JR.data;
+          if ("prores" === RR.source._codec) {
+            if (tR.byteLength < 8) throw new Error("ProRes packet too small, expected at least 8 bytes.");
+            tR = tR.subarray(8)
           }
-          const NW = "key" === iW.type;
-          this.validateTimestamp(mW.track, iW.timestamp, NW);
-          let PW = iW.timestamp,
-            cW = iW.duration;
-          void 0 !== WW.metadata.frameRate && (PW = (0, LW.Pc)(PW, WW.metadata.frameRate), cW = (0, LW.Pc)(cW, WW.metadata.frameRate));
-          const wW = mW.info.alphaMode ? iW.sideData.alpha ?? null : null,
-            tW = this.createInternalChunk(EW, PW, cW, iW.type, wW);
-          "vp9" === WW.source._codec && this.fixVP9ColorSpace(mW, tW), mW.chunkQueue.push(tW), await this.interleaveChunks()
+          const uR = "key" === JR.type;
+          this.validateTimestamp(yR.track, JR.timestamp, uR);
+          let ZR = JR.timestamp,
+            iR = JR.duration;
+          void 0 !== RR.metadata.frameRate && (ZR = (0, qR.zc)(ZR, RR.metadata.frameRate), iR = (0, qR.zc)(iR, RR.metadata.frameRate));
+          const fR = yR.info.alphaMode ? JR.sideData.alpha ?? null : null,
+            VR = this.createInternalChunk(tR, ZR, iR, JR.type, fR);
+          "vp9" === RR.source._codec && this.fixVP9ColorSpace(yR, VR), yR.chunkQueue.push(VR), await this.interleaveChunks()
         } finally {
-          mW()
+          yR()
         }
       }
-      async addEncodedAudioPacket(WW, iW, OW) {
-        const mW = await this.mutex.acquire();
+      async addEncodedAudioPacket(RR, JR, GR) {
+        const yR = await this.mutex.acquire();
         try {
-          const mW = this.getAudioTrackData(WW, iW, OW);
-          let EW = iW.data;
-          if (mW.info.requiresAdtsStripping) {
-            const WW = ZO(cW.tempFromBytes(EW));
-            if (!WW) throw new Error("Expected ADTS frame, didn't get one.");
-            const iW = null === WW.crcCheck ? 7 : 9;
-            EW = EW.subarray(iW)
+          const yR = this.getAudioTrackData(RR, JR, GR);
+          let tR = JR.data;
+          if (yR.info.requiresAdtsStripping) {
+            const RR = fG(iR.tempFromBytes(tR));
+            if (!RR) throw new Error("Expected ADTS frame, didn't get one.");
+            const JR = null === RR.crcCheck ? 7 : 9;
+            tR = tR.subarray(JR)
           }
-          const NW = "key" === iW.type;
-          this.validateTimestamp(mW.track, iW.timestamp, NW);
-          const PW = this.createInternalChunk(EW, iW.timestamp, iW.duration, iW.type);
-          mW.chunkQueue.push(PW), await this.interleaveChunks()
+          const uR = "key" === JR.type;
+          this.validateTimestamp(yR.track, JR.timestamp, uR);
+          const ZR = this.createInternalChunk(tR, JR.timestamp, JR.duration, JR.type);
+          yR.chunkQueue.push(ZR), await this.interleaveChunks()
         } finally {
-          mW()
+          yR()
         }
       }
-      async addSubtitleCue(WW, iW, OW) {
-        const mW = await this.mutex.acquire();
+      async addSubtitleCue(RR, JR, GR) {
+        const yR = await this.mutex.acquire();
         try {
-          const mW = this.getSubtitleTrackData(WW, OW);
-          this.validateTimestamp(mW.track, iW.timestamp, !0);
-          let EW = iW.text;
-          const NW = Math.round(1e3 * iW.timestamp);
-          UW.g.lastIndex = 0, EW = EW.replace(UW.g, (WW => {
-            const iW = (0, UW.j)(WW.slice(1, -1)) - NW;
-            return `<${(0,UW.d)(iW)}>`
+          const yR = this.getSubtitleTrackData(RR, GR);
+          this.validateTimestamp(yR.track, JR.timestamp, !0);
+          let tR = JR.text;
+          const uR = Math.round(1e3 * JR.timestamp);
+          nR.k.lastIndex = 0, tR = tR.replace(nR.k, (RR => {
+            const JR = (0, nR.m)(RR.slice(1, -1)) - uR;
+            return `<${(0,nR.g)(JR)}>`
           }));
-          const PW = LW.kd.encode(EW),
-            cW = `${iW.settings??""}\n${iW.identifier??""}\n${iW.notes??""}`,
-            wW = this.createInternalChunk(PW, iW.timestamp, iW.duration, "key", cW.trim() ? LW.kd.encode(cW) : null);
-          mW.chunkQueue.push(wW), await this.interleaveChunks()
+          const ZR = qR.Vc.encode(tR),
+            iR = `${JR.settings??""}\n${JR.identifier??""}\n${JR.notes??""}`,
+            fR = this.createInternalChunk(ZR, JR.timestamp, JR.duration, "key", iR.trim() ? qR.Vc.encode(iR) : null);
+          yR.chunkQueue.push(fR), await this.interleaveChunks()
         } finally {
-          mW()
+          yR()
         }
       }
       async interleaveChunks() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (WW || this.allTracksAreKnown()) {
-          WW: for (;;) {
-            let iW = null,
-              OW = 1 / 0;
-            for (const EW of this.trackDatas) {
-              if (!WW && 0 === EW.chunkQueue.length && !EW.closed) break WW;
-              EW.chunkQueue.length > 0 && EW.chunkQueue[0].timestamp < OW && (iW = EW, OW = EW.chunkQueue[0].timestamp)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (RR || this.allTracksAreKnown()) {
+          RR: for (;;) {
+            let JR = null,
+              GR = 1 / 0;
+            for (const tR of this.trackDatas) {
+              if (!RR && 0 === tR.chunkQueue.length && !tR.closed) break RR;
+              tR.chunkQueue.length > 0 && tR.chunkQueue[0].timestamp < GR && (JR = tR, GR = tR.chunkQueue[0].timestamp)
             }
-            if (!iW) break;
-            const mW = iW.chunkQueue.shift();
-            this.writeBlock(iW, mW)
+            if (!JR) break;
+            const yR = JR.chunkQueue.shift();
+            this.writeBlock(JR, yR)
           }
-          WW || await this.writer.flush()
+          RR || await this.writer.flush()
         }
       }
-      fixVP9ColorSpace(WW, iW) {
-        if ("key" !== iW.type) return;
-        if (!WW.info.decoderConfig.colorSpace || !WW.info.decoderConfig.colorSpace.matrix) return;
-        const OW = new jW.c(iW.data);
-        OW.skipBits(2);
-        const mW = OW.readBits(1),
-          EW = (OW.readBits(1) << 1) + mW;
-        3 === EW && OW.skipBits(1);
-        if (OW.readBits(1)) return;
-        if (0 !== OW.readBits(1)) return;
-        OW.skipBits(2);
-        if (4817730 !== OW.readBits(24)) return;
-        EW >= 2 && OW.skipBits(1);
-        const NW = {
+      fixVP9ColorSpace(RR, JR) {
+        if ("key" !== JR.type) return;
+        if (!RR.info.decoderConfig.colorSpace || !RR.info.decoderConfig.colorSpace.matrix) return;
+        const GR = new LR.b(JR.data);
+        GR.skipBits(2);
+        const yR = GR.readBits(1),
+          tR = (GR.readBits(1) << 1) + yR;
+        3 === tR && GR.skipBits(1);
+        if (GR.readBits(1)) return;
+        if (0 !== GR.readBits(1)) return;
+        GR.skipBits(2);
+        if (4817730 !== GR.readBits(24)) return;
+        tR >= 2 && GR.skipBits(1);
+        const uR = {
           rgb: 7,
           bt709: 2,
           bt470bg: 1,
           smpte170m: 3
-        } [WW.info.decoderConfig.colorSpace.matrix];
-        (0, LW.Bd)(iW.data, OW.pos, OW.pos + 3, NW)
+        } [RR.info.decoderConfig.colorSpace.matrix];
+        (0, qR.pd)(JR.data, GR.pos, GR.pos + 3, uR)
       }
-      createInternalChunk(WW, iW, OW, mW) {
+      createInternalChunk(RR, JR, GR, yR) {
         return {
-          data: WW,
-          type: mW,
-          timestamp: iW,
-          duration: OW,
+          data: RR,
+          type: yR,
+          timestamp: JR,
+          duration: GR,
           additions: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
         }
       }
-      writeBlock(WW, iW) {
+      writeBlock(RR, JR) {
         this.segment || this.createSegment();
-        const OW = Math.round(1e3 * iW.timestamp),
-          mW = this.trackDatas.every((OW => {
-            if (WW === OW) return "key" === iW.type;
-            const mW = OW.chunkQueue[0];
-            return mW ? "key" === mW.type : OW.closed
+        const GR = Math.round(1e3 * JR.timestamp),
+          yR = this.trackDatas.every((GR => {
+            if (RR === GR) return "key" === JR.type;
+            const yR = GR.chunkQueue[0];
+            return yR ? "key" === yR.type : GR.closed
           }));
-        let EW = !1;
+        let tR = !1;
         if (this.currentCluster) {
-          (0, LW.K)(null !== this.currentClusterStartMsTimestamp), (0, LW.K)(null !== this.currentClusterMaxMsTimestamp);
-          const WW = OW - this.currentClusterStartMsTimestamp;
-          EW = mW && OW > this.currentClusterMaxMsTimestamp && WW >= 1e3 * (this.format._options.minimumClusterDuration ?? 1) || WW > 32767
-        } else EW = !0;
-        EW && this.createNewCluster(OW);
-        const NW = OW - this.currentClusterStartMsTimestamp;
-        if (NW < -32768) {
+          (0, qR.I)(null !== this.currentClusterStartMsTimestamp), (0, qR.I)(null !== this.currentClusterMaxMsTimestamp);
+          const RR = GR - this.currentClusterStartMsTimestamp;
+          tR = yR && GR > this.currentClusterMaxMsTimestamp && RR >= 1e3 * (this.format._options.minimumClusterDuration ?? 1) || RR > 32767
+        } else tR = !0;
+        tR && this.createNewCluster(GR);
+        const uR = GR - this.currentClusterStartMsTimestamp;
+        if (uR < -32768) {
           if (!this.warnedAboutTooNegativeTimestamp) {
-            const WW = this.format instanceof CO ? "WebM" : "Matroska";
-            PW.d._warn(`Packets had to be discarded because their timestamp is too negative to represent in ${WW}.`), this.warnedAboutTooNegativeTimestamp = !0
+            const RR = this.format instanceof IG ? "WebM" : "Matroska";
+            ZR.e._warn(`Packets had to be discarded because their timestamp is too negative to represent in ${RR}.`), this.warnedAboutTooNegativeTimestamp = !0
           }
           return
         }
-        const cW = new Uint8Array(4),
-          wW = new DataView(cW.buffer);
-        wW.setUint8(0, 128 | WW.track.id), wW.setInt16(1, NW, !1);
-        const tW = Math.round(1e3 * iW.duration);
-        if (!!iW.additions || "subtitle" === WW.type) {
-          const mW = {
-            id: KO.BlockGroup,
+        const iR = new Uint8Array(4),
+          fR = new DataView(iR.buffer);
+        fR.setUint8(0, 128 | RR.track.id), fR.setInt16(1, uR, !1);
+        const VR = Math.round(1e3 * JR.duration);
+        if (!!JR.additions || "subtitle" === RR.type) {
+          const yR = {
+            id: WG.BlockGroup,
             data: [{
-              id: KO.Block,
-              data: [cW, iW.data]
-            }, "delta" === iW.type ? {
-              id: KO.ReferenceBlock,
-              data: new sO(WW.lastWrittenMsTimestamp - OW)
-            } : null, iW.additions ? {
-              id: KO.BlockAdditions,
+              id: WG.Block,
+              data: [iR, JR.data]
+            }, "delta" === JR.type ? {
+              id: WG.ReferenceBlock,
+              data: new nG(RR.lastWrittenMsTimestamp - GR)
+            } : null, JR.additions ? {
+              id: WG.BlockAdditions,
               data: [{
-                id: KO.BlockMore,
+                id: WG.BlockMore,
                 data: [{
-                  id: KO.BlockAddID,
+                  id: WG.BlockAddID,
                   data: 1
                 }, {
-                  id: KO.BlockAdditional,
-                  data: iW.additions
+                  id: WG.BlockAdditional,
+                  data: JR.additions
                 }]
               }]
-            } : null, tW > 0 ? {
-              id: KO.BlockDuration,
-              data: tW
+            } : null, VR > 0 ? {
+              id: WG.BlockDuration,
+              data: VR
             } : null]
           };
-          this.ebmlWriter.writeEBML(mW)
+          this.ebmlWriter.writeEBML(yR)
         } else {
-          wW.setUint8(3, Number("key" === iW.type) << 7);
-          const WW = {
-            id: KO.SimpleBlock,
-            data: [cW, iW.data]
+          fR.setUint8(3, Number("key" === JR.type) << 7);
+          const RR = {
+            id: WG.SimpleBlock,
+            data: [iR, JR.data]
           };
-          this.ebmlWriter.writeEBML(WW)
+          this.ebmlWriter.writeEBML(RR)
         }
-        this.startTimestamp = Math.min(this.startTimestamp, OW), this.endTimestamp = Math.max(this.endTimestamp, OW + tW), WW.lastWrittenMsTimestamp = OW, this.trackDatasInCurrentCluster.has(WW) || this.trackDatasInCurrentCluster.set(WW, {
-          firstMsTimestamp: OW
-        }), this.currentClusterMaxMsTimestamp = Math.max(this.currentClusterMaxMsTimestamp, OW)
+        this.startTimestamp = Math.min(this.startTimestamp, GR), this.endTimestamp = Math.max(this.endTimestamp, GR + VR), RR.lastWrittenMsTimestamp = GR, this.trackDatasInCurrentCluster.has(RR) || this.trackDatasInCurrentCluster.set(RR, {
+          firstMsTimestamp: GR
+        }), this.currentClusterMaxMsTimestamp = Math.max(this.currentClusterMaxMsTimestamp, GR)
       }
-      createNewCluster(WW) {
-        WW = Math.max(0, WW), this.currentCluster && this.finalizeCurrentCluster(), this.format._options.onCluster && this.writer.startTrackingWrites(), this.currentCluster = {
-          id: KO.Cluster,
+      createNewCluster(RR) {
+        RR = Math.max(0, RR), this.currentCluster && this.finalizeCurrentCluster(), this.format._options.onCluster && this.writer.startTrackingWrites(), this.currentCluster = {
+          id: WG.Cluster,
           size: this.format._options.appendOnly ? -1 : 5,
           data: [{
-            id: KO.Timestamp,
-            data: WW
+            id: WG.Timestamp,
+            data: RR
           }]
-        }, this.ebmlWriter.writeEBML(this.currentCluster), this.currentClusterStartMsTimestamp = WW, this.currentClusterMaxMsTimestamp = WW, this.trackDatasInCurrentCluster.clear()
+        }, this.ebmlWriter.writeEBML(this.currentCluster), this.currentClusterStartMsTimestamp = RR, this.currentClusterMaxMsTimestamp = RR, this.trackDatasInCurrentCluster.clear()
       }
       finalizeCurrentCluster() {
-        if ((0, LW.K)(this.currentCluster), !this.format._options.appendOnly) {
-          const WW = this.writer.getPos() - this.ebmlWriter.dataOffsets.get(this.currentCluster),
-            iW = this.writer.getPos();
-          this.writer.seek(this.ebmlWriter.offsets.get(this.currentCluster) + 4), this.ebmlWriter.writeVarInt(WW, 5), this.writer.seek(iW)
+        if ((0, qR.I)(this.currentCluster), !this.format._options.appendOnly) {
+          const RR = this.writer.getPos() - this.ebmlWriter.dataOffsets.get(this.currentCluster),
+            JR = this.writer.getPos();
+          this.writer.seek(this.ebmlWriter.offsets.get(this.currentCluster) + 4), this.ebmlWriter.writeVarInt(RR, 5), this.writer.seek(JR)
         }
         if (this.format._options.onCluster) {
-          (0, LW.K)(null !== this.currentClusterStartMsTimestamp);
+          (0, qR.I)(null !== this.currentClusterStartMsTimestamp);
           const {
-            data: WW,
-            start: iW
+            data: RR,
+            start: JR
           } = this.writer.stopTrackingWrites();
-          this.format._options.onCluster(WW, iW, this.currentClusterStartMsTimestamp / 1e3)
+          this.format._options.onCluster(RR, JR, this.currentClusterStartMsTimestamp / 1e3)
         }
-        const WW = this.ebmlWriter.offsets.get(this.currentCluster) - this.segmentDataOffset,
-          iW = new Map;
-        for (const [mW, {
-            firstMsTimestamp: EW
-          }] of this.trackDatasInCurrentCluster) iW.has(EW) || iW.set(EW, []), iW.get(EW).push(mW);
-        const OW = [...iW.entries()].sort(((WW, iW) => WW[0] - iW[0]));
-        for (const [mW, EW] of OW)(0, LW.K)(this.cues), this.cues.data.push({
-          id: KO.CuePoint,
+        const RR = this.ebmlWriter.offsets.get(this.currentCluster) - this.segmentDataOffset,
+          JR = new Map;
+        for (const [yR, {
+            firstMsTimestamp: tR
+          }] of this.trackDatasInCurrentCluster) JR.has(tR) || JR.set(tR, []), JR.get(tR).push(yR);
+        const GR = [...JR.entries()].sort(((RR, JR) => RR[0] - JR[0]));
+        for (const [yR, tR] of GR)(0, qR.I)(this.cues), this.cues.data.push({
+          id: WG.CuePoint,
           data: [{
-            id: KO.CueTime,
-            data: Math.max(0, mW)
-          }, ...EW.map((iW => ({
-            id: KO.CueTrackPositions,
+            id: WG.CueTime,
+            data: Math.max(0, yR)
+          }, ...tR.map((JR => ({
+            id: WG.CueTrackPositions,
             data: [{
-              id: KO.CueTrack,
-              data: iW.track.id
+              id: WG.CueTrack,
+              data: JR.track.id
             }, {
-              id: KO.CueClusterPosition,
-              data: WW
+              id: WG.CueClusterPosition,
+              data: RR
             }]
           })))]
         })
       }
-      async onTrackClose(WW) {
-        const iW = await this.mutex.acquire(),
-          OW = this.trackDatas.find((iW => iW.track === WW));
-        OW && (OW.closed = !0), this.allTracksAreKnown() && this.allTracksKnown.resolve(), await this.interleaveChunks(), iW()
+      async onTrackClose(RR) {
+        const JR = await this.mutex.acquire(),
+          GR = this.trackDatas.find((JR => JR.track === RR));
+        GR && (GR.closed = !0), this.allTracksAreKnown() && this.allTracksKnown.resolve(), await this.interleaveChunks(), JR()
       }
       async finalize() {
-        const WW = await this.mutex.acquire();
+        const RR = await this.mutex.acquire();
         this.allTracksKnown.resolve();
-        for (const iW of this.trackDatas) iW.closed = !0;
-        if (this.segment || this.createSegment(), await this.interleaveChunks(!0), this.currentCluster && this.finalizeCurrentCluster(), (0, LW.K)(this.cues), this.ebmlWriter.writeEBML(this.cues), !this.format._options.appendOnly) {
-          const WW = this.writer.getPos() - this.segmentDataOffset;
-          this.writer.seek(this.ebmlWriter.offsets.get(this.segment) + 4), this.ebmlWriter.writeVarInt(WW, 6);
-          const iW = this.startTimestamp === 1 / 0 ? 0 : this.endTimestamp;
-          this.segmentDuration.data = new kO(iW), this.writer.seek(this.ebmlWriter.offsets.get(this.segmentDuration)), this.ebmlWriter.writeEBML(this.segmentDuration), (0, LW.K)(this.seekHead), this.writer.seek(this.ebmlWriter.offsets.get(this.seekHead)), this.maybeCreateSeekHead(!0), this.ebmlWriter.writeEBML(this.seekHead)
+        for (const JR of this.trackDatas) JR.closed = !0;
+        if (this.segment || this.createSegment(), await this.interleaveChunks(!0), this.currentCluster && this.finalizeCurrentCluster(), (0, qR.I)(this.cues), this.ebmlWriter.writeEBML(this.cues), !this.format._options.appendOnly) {
+          const RR = this.writer.getPos() - this.segmentDataOffset;
+          this.writer.seek(this.ebmlWriter.offsets.get(this.segment) + 4), this.ebmlWriter.writeVarInt(RR, 6);
+          const JR = this.startTimestamp === 1 / 0 ? 0 : this.endTimestamp;
+          this.segmentDuration.data = new LG(JR), this.writer.seek(this.ebmlWriter.offsets.get(this.segmentDuration)), this.ebmlWriter.writeEBML(this.segmentDuration), (0, qR.I)(this.seekHead), this.writer.seek(this.ebmlWriter.offsets.get(this.seekHead)), this.maybeCreateSeekHead(!0), this.ebmlWriter.writeEBML(this.seekHead)
         }
-        WW()
+        RR()
       }
     }
-    const nO = new Uint32Array(256);
-    for (let XO = 0; XO < 256; XO++) {
-      let WW = XO << 24;
-      for (let iW = 0; iW < 8; iW++) WW = 2147483648 & WW ? WW << 1 ^ 79764919 : WW << 1;
-      nO[XO] = WW >>> 0 & 4294967295
+    const gG = new Uint32Array(256);
+    for (let mG = 0; mG < 256; mG++) {
+      let RR = mG << 24;
+      for (let JR = 0; JR < 8; JR++) RR = 2147483648 & RR ? RR << 1 ^ 79764919 : RR << 1;
+      gG[mG] = RR >>> 0 & 4294967295
     }
     new Uint8Array([9, 240]), new Uint8Array([70, 1]);
-    const uO = new Uint32Array(256);
-    for (let XO = 0; XO < 256; XO++) {
-      let WW = XO << 24;
-      for (let iW = 0; iW < 8; iW++) WW = 2147483648 & WW ? WW << 1 ^ 79764919 : WW << 1;
-      uO[XO] = WW >>> 0 & 4294967295
+    const bG = new Uint32Array(256);
+    for (let mG = 0; mG < 256; mG++) {
+      let RR = mG << 24;
+      for (let JR = 0; JR < 8; JR++) RR = 2147483648 & RR ? RR << 1 ^ 79764919 : RR << 1;
+      bG[mG] = RR >>> 0 & 4294967295
     }
-    const oO = WW => {
-        let iW = 4294967295;
-        for (let OW = 0; OW < WW.length; OW++) {
-          const mW = WW[OW];
-          iW = (iW << 8 ^ uO[iW >>> 24 ^ mW]) >>> 0
+    const vG = RR => {
+        let JR = 4294967295;
+        for (let GR = 0; GR < RR.length; GR++) {
+          const yR = RR[GR];
+          JR = (JR << 8 ^ bG[JR >>> 24 ^ yR]) >>> 0
         }
-        return iW
+        return JR
       },
-      dO = new Uint8Array(16);
+      OG = new Uint8Array(16);
     {
-      const WW = (0, LW.od)(dO);
-      dO[0] = 0, WW.setUint16(1, 45069, !1), WW.setUint16(3, 1, !1), dO[5] = 193, dO[6] = 0, dO[7] = 0, WW.setUint16(8, 1, !1), WW.setUint16(10, 61440, !1), WW.setUint32(12, oO(dO.subarray(0, 12)), !1)
+      const RR = (0, qR.ad)(OG);
+      OG[0] = 0, RR.setUint16(1, 45069, !1), RR.setUint16(3, 1, !1), OG[5] = 193, OG[6] = 0, OG[7] = 0, RR.setUint16(8, 1, !1), RR.setUint16(10, 61440, !1), RR.setUint32(12, vG(OG.subarray(0, 12)), !1)
     }
-    var eO;
-    OW(41190);
-    ! function(WW) {
-      WW[WW.PCM = 1] = "PCM", WW[WW.IEEE_FLOAT = 3] = "IEEE_FLOAT", WW[WW.ALAW = 6] = "ALAW", WW[WW.MULAW = 7] = "MULAW", WW[WW.EXTENSIBLE = 65534] = "EXTENSIBLE"
-    }(eO || (eO = {}));
-    OW(41196), OW(41205), OW(41120);
-    class vO {
+    var xG;
+    GR(41179);
+    ! function(RR) {
+      RR[RR.PCM = 1] = "PCM", RR[RR.IEEE_FLOAT = 3] = "IEEE_FLOAT", RR[RR.ALAW = 6] = "ALAW", RR[RR.MULAW = 7] = "MULAW", RR[RR.EXTENSIBLE = 65534] = "EXTENSIBLE"
+    }(xG || (xG = {}));
+    GR(41182), GR(41192), GR(41108);
+    class NG {
       get supportsVideoRotationMetadata() {
         return this.supportsVideoTransformationMetadata
       }
       getSupportedVideoCodecs() {
-        return this.getSupportedCodecs().filter((WW => EW.x.includes(WW)))
+        return this.getSupportedCodecs().filter((RR => tR.v.includes(RR)))
       }
       getSupportedAudioCodecs() {
-        return this.getSupportedCodecs().filter((WW => EW.d.includes(WW)))
+        return this.getSupportedCodecs().filter((RR => tR.d.includes(RR)))
       }
       getSupportedSubtitleCodecs() {
-        return this.getSupportedCodecs().filter((WW => EW.v.includes(WW)))
+        return this.getSupportedCodecs().filter((RR => tR.t.includes(RR)))
       }
-      _codecUnsupportedHint(WW) {
+      _codecUnsupportedHint(RR) {
         return ""
       }
       _isFragmentedIsobmff() {
         return !1
       }
     }
-    class gO extends vO {
+    class DG extends NG {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (void 0 !== WW.fastStart && ![!1, "in-memory", "reserve", "fragmented"].includes(WW.fastStart)) throw new TypeError("options.fastStart, when provided, must be false, 'in-memory', 'reserve', or 'fragmented'.");
-        if (void 0 !== WW.minimumFragmentDuration && (!(0, LW.Xb)(WW.minimumFragmentDuration) || WW.minimumFragmentDuration < 0)) throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");
-        if (void 0 !== WW.onFtyp && "function" !== typeof WW.onFtyp) throw new TypeError("options.onFtyp, when provided, must be a function.");
-        if (void 0 !== WW.onMoov && "function" !== typeof WW.onMoov) throw new TypeError("options.onMoov, when provided, must be a function.");
-        if (void 0 !== WW.onMdat && "function" !== typeof WW.onMdat) throw new TypeError("options.onMdat, when provided, must be a function.");
-        if (void 0 !== WW.onMoof && "function" !== typeof WW.onMoof) throw new TypeError("options.onMoof, when provided, must be a function.");
-        if (void 0 !== WW.metadataFormat && !["mdir", "mdta", "udta", "auto"].includes(WW.metadataFormat)) throw new TypeError("options.metadataFormat, when provided, must be either 'auto', 'mdir', 'mdta', or 'udta'.");
-        super(), this._options = WW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (void 0 !== RR.fastStart && ![!1, "in-memory", "reserve", "fragmented"].includes(RR.fastStart)) throw new TypeError("options.fastStart, when provided, must be false, 'in-memory', 'reserve', or 'fragmented'.");
+        if (void 0 !== RR.minimumFragmentDuration && (!(0, qR.Nb)(RR.minimumFragmentDuration) || RR.minimumFragmentDuration < 0)) throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");
+        if (void 0 !== RR.onFtyp && "function" !== typeof RR.onFtyp) throw new TypeError("options.onFtyp, when provided, must be a function.");
+        if (void 0 !== RR.onMoov && "function" !== typeof RR.onMoov) throw new TypeError("options.onMoov, when provided, must be a function.");
+        if (void 0 !== RR.onMdat && "function" !== typeof RR.onMdat) throw new TypeError("options.onMdat, when provided, must be a function.");
+        if (void 0 !== RR.onMoof && "function" !== typeof RR.onMoof) throw new TypeError("options.onMoof, when provided, must be a function.");
+        if (void 0 !== RR.metadataFormat && !["mdir", "mdta", "udta", "auto"].includes(RR.metadataFormat)) throw new TypeError("options.metadataFormat, when provided, must be either 'auto', 'mdir', 'mdta', or 'udta'.");
+        super(), this._options = RR
       }
       getSupportedTrackCounts() {
-        const WW = 2 ** 32 - 1;
+        const RR = 2 ** 32 - 1;
         return {
           video: {
             min: 0,
-            max: WW
+            max: RR
           },
           audio: {
             min: 0,
-            max: WW
+            max: RR
           },
           subtitle: {
             min: 0,
-            max: WW
+            max: RR
           },
           total: {
             min: 0,
-            max: WW
+            max: RR
           }
         }
       }
@@ -6183,16 +6183,16 @@ export const modules = {
       get negativeTimestampSupport() {
         return "full"
       }
-      _createMuxer(WW) {
-        return new jO(WW, this)
+      _createMuxer(RR) {
+        return new eG(RR, this)
       }
       _isFragmentedIsobmff() {
         return "fragmented" === this._options.fastStart
       }
     }
-    class DO extends gO {
-      constructor(WW) {
-        super(WW)
+    class HG extends DG {
+      constructor(RR) {
+        super(RR)
       }
       get _name() {
         return "MP4"
@@ -6204,15 +6204,15 @@ export const modules = {
         return "video/mp4"
       }
       getSupportedCodecs() {
-        return [...EW.x, ...EW.j, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...EW.v]
+        return [...tR.v, ...tR.h, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...tR.t]
       }
-      _codecUnsupportedHint(WW) {
-        return (new pO).getSupportedCodecs().includes(WW) ? " Switching to MOV will grant support for this codec." : ""
+      _codecUnsupportedHint(RR) {
+        return (new cG).getSupportedCodecs().includes(RR) ? " Switching to MOV will grant support for this codec." : ""
       }
     }
-    class VO extends gO {
-      constructor(WW) {
-        super(WW)
+    class oG extends DG {
+      constructor(RR) {
+        super(RR)
       }
       get _name() {
         return "CMAF"
@@ -6224,12 +6224,12 @@ export const modules = {
         return "video/mp4"
       }
       getSupportedCodecs() {
-        return [...EW.x, ...EW.j, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...EW.v]
+        return [...tR.v, ...tR.h, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...tR.t]
       }
     }
-    class pO extends gO {
-      constructor(WW) {
-        super(WW)
+    class cG extends DG {
+      constructor(RR) {
+        super(RR)
       }
       get _name() {
         return "MOV"
@@ -6241,47 +6241,47 @@ export const modules = {
         return "video/quicktime"
       }
       getSupportedCodecs() {
-        return [...EW.x, ...EW.d]
+        return [...tR.v, ...tR.d]
       }
-      _codecUnsupportedHint(WW) {
-        return (new DO).getSupportedCodecs().includes(WW) ? " Switching to MP4 will grant support for this codec." : ""
+      _codecUnsupportedHint(RR) {
+        return (new HG).getSupportedCodecs().includes(RR) ? " Switching to MP4 will grant support for this codec." : ""
       }
     }
-    class fO extends vO {
+    class PG extends NG {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (void 0 !== WW.appendOnly && "boolean" !== typeof WW.appendOnly) throw new TypeError("options.appendOnly, when provided, must be a boolean.");
-        if (void 0 !== WW.minimumClusterDuration && (!(0, LW.Xb)(WW.minimumClusterDuration) || WW.minimumClusterDuration < 0)) throw new TypeError("options.minimumClusterDuration, when provided, must be a non-negative number.");
-        if (void 0 !== WW.onEbmlHeader && "function" !== typeof WW.onEbmlHeader) throw new TypeError("options.onEbmlHeader, when provided, must be a function.");
-        if (void 0 !== WW.onSegmentHeader && "function" !== typeof WW.onSegmentHeader) throw new TypeError("options.onHeader, when provided, must be a function.");
-        if (void 0 !== WW.onCluster && "function" !== typeof WW.onCluster) throw new TypeError("options.onCluster, when provided, must be a function.");
-        super(), this._options = WW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (void 0 !== RR.appendOnly && "boolean" !== typeof RR.appendOnly) throw new TypeError("options.appendOnly, when provided, must be a boolean.");
+        if (void 0 !== RR.minimumClusterDuration && (!(0, qR.Nb)(RR.minimumClusterDuration) || RR.minimumClusterDuration < 0)) throw new TypeError("options.minimumClusterDuration, when provided, must be a non-negative number.");
+        if (void 0 !== RR.onEbmlHeader && "function" !== typeof RR.onEbmlHeader) throw new TypeError("options.onEbmlHeader, when provided, must be a function.");
+        if (void 0 !== RR.onSegmentHeader && "function" !== typeof RR.onSegmentHeader) throw new TypeError("options.onHeader, when provided, must be a function.");
+        if (void 0 !== RR.onCluster && "function" !== typeof RR.onCluster) throw new TypeError("options.onCluster, when provided, must be a function.");
+        super(), this._options = RR
       }
-      _createMuxer(WW) {
-        return new HO(WW, this)
+      _createMuxer(RR) {
+        return new pG(RR, this)
       }
       get _name() {
         return "Matroska"
       }
       getSupportedTrackCounts() {
-        const WW = 127;
+        const RR = 127;
         return {
           video: {
             min: 0,
-            max: WW
+            max: RR
           },
           audio: {
             min: 0,
-            max: WW
+            max: RR
           },
           subtitle: {
             min: 0,
-            max: WW
+            max: RR
           },
           total: {
             min: 0,
-            max: WW
+            max: RR
           }
         }
       }
@@ -6292,7 +6292,7 @@ export const modules = {
         return "video/x-matroska"
       }
       getSupportedCodecs() {
-        return [...EW.x, ...EW.j, ...EW.r.filter((WW => !["pcm-s8", "pcm-f32be", "pcm-f64be", "ulaw", "alaw"].includes(WW))), ...EW.v]
+        return [...tR.v, ...tR.h, ...tR.p.filter((RR => !["pcm-s8", "pcm-f32be", "pcm-f64be", "ulaw", "alaw"].includes(RR))), ...tR.t]
       }
       get supportsVideoTransformationMetadata() {
         return !1
@@ -6304,12 +6304,12 @@ export const modules = {
         return "prefer-non-negative"
       }
     }
-    class CO extends fO {
-      constructor(WW) {
-        super(WW)
+    class IG extends PG {
+      constructor(RR) {
+        super(RR)
       }
       getSupportedCodecs() {
-        return [...EW.x.filter((WW => ["vp8", "vp9", "av1"].includes(WW))), ...EW.d.filter((WW => ["opus", "vorbis"].includes(WW))), ...EW.v]
+        return [...tR.v.filter((RR => ["vp8", "vp9", "av1"].includes(RR))), ...tR.d.filter((RR => ["opus", "vorbis"].includes(RR))), ...tR.t]
       }
       get _name() {
         return "WebM"
@@ -6320,28 +6320,28 @@ export const modules = {
       get mimeType() {
         return "video/webm"
       }
-      _codecUnsupportedHint(WW) {
-        return (new fO).getSupportedCodecs().includes(WW) ? " Switching to MKV will grant support for this codec." : ""
+      _codecUnsupportedHint(RR) {
+        return (new PG).getSupportedCodecs().includes(RR) ? " Switching to MKV will grant support for this codec." : ""
       }
     }
   },
-  41120: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => sW
+  41108: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => WR
     });
-    var mW = OW(41127),
-      EW = OW(41134),
-      NW = OW(41142),
-      PW = OW(41205),
-      LW = OW(41179),
-      cW = OW(41176),
-      wW = OW(41162),
-      tW = OW(41190),
-      ZW = OW(41156);
-    const xW = ["video", "audio", "subtitle"];
-    class lW {
-      constructor(WW, iW, OW, mW, EW) {
-        this.id = WW, this.output = iW, this.type = OW, this.source = mW, this.metadata = EW
+    var yR = GR(41115),
+      tR = GR(41119),
+      uR = GR(41123),
+      ZR = GR(41192),
+      qR = GR(41170),
+      iR = GR(41166),
+      fR = GR(41147),
+      VR = GR(41179),
+      KR = GR(41133);
+    const wR = ["video", "audio", "subtitle"];
+    class rR {
+      constructor(RR, JR, GR, yR, tR) {
+        this.id = RR, this.output = JR, this.type = GR, this.source = yR, this.metadata = tR
       }
       isVideoTrack() {
         return "video" === this.type
@@ -6352,95 +6352,95 @@ export const modules = {
       isSubtitleTrack() {
         return "subtitle" === this.type
       }
-      canBePairedWith(WW) {
-        if (!(WW instanceof lW)) throw new TypeError("other must be an OutputTrack.");
-        if (this === WW) return !1;
-        const iW = (0, mW.ld)(this.metadata.group),
-          OW = (0, mW.ld)(WW.metadata.group);
-        for (const mW of iW) {
-          if (this.type !== WW.type && OW.some((WW => mW === WW))) return !0;
-          if (OW.some((WW => mW._pairedGroups.has(WW)))) return !0
+      canBePairedWith(RR) {
+        if (!(RR instanceof rR)) throw new TypeError("other must be an OutputTrack.");
+        if (this === RR) return !1;
+        const JR = (0, yR.Yc)(this.metadata.group),
+          GR = (0, yR.Yc)(RR.metadata.group);
+        for (const yR of JR) {
+          if (this.type !== RR.type && GR.some((RR => yR === RR))) return !0;
+          if (GR.some((RR => yR._pairedGroups.has(RR)))) return !0
         }
         return !1
       }
     }
-    class AW extends lW {
-      constructor(WW, iW, OW, mW) {
-        super(WW, iW, "video", OW, mW)
+    class eR extends rR {
+      constructor(RR, JR, GR, yR) {
+        super(RR, JR, "video", GR, yR)
       }
     }
-    class bW extends lW {
-      constructor(WW, iW, OW, mW) {
-        super(WW, iW, "audio", OW, mW)
+    class aR extends rR {
+      constructor(RR, JR, GR, yR) {
+        super(RR, JR, "audio", GR, yR)
       }
     }
-    class jW extends lW {
-      constructor(WW, iW, OW, mW) {
-        super(WW, iW, "subtitle", OW, mW)
+    class LR extends rR {
+      constructor(RR, JR, GR, yR) {
+        super(RR, JR, "subtitle", GR, yR)
       }
     }
-    class UW {
+    class nR {
       constructor() {
         this._pairedGroups = new Set
       }
-      pairWith(WW) {
-        if (!(WW instanceof UW)) throw new TypeError("other must be an OutputTrackGroup.");
-        if (this === WW) throw new TypeError("Cannot pair a group with itself.");
-        this._pairedGroups.add(WW), WW._pairedGroups.add(this)
+      pairWith(RR) {
+        if (!(RR instanceof nR)) throw new TypeError("other must be an OutputTrackGroup.");
+        if (this === RR) throw new TypeError("Cannot pair a group with itself.");
+        this._pairedGroups.add(RR), RR._pairedGroups.add(this)
       }
     }
-    const kW = WW => {
-      if (!WW || "object" !== typeof WW) throw new TypeError("metadata must be an object.");
-      if (void 0 !== WW.languageCode && !(0, mW.Nb)(WW.languageCode)) throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");
-      if (void 0 !== WW.name && "string" !== typeof WW.name) throw new TypeError("metadata.name, when provided, must be a string.");
-      if (void 0 !== WW.disposition && (0, EW.m)(WW.disposition), void 0 !== WW.maximumPacketCount && (!Number.isInteger(WW.maximumPacketCount) || WW.maximumPacketCount < 0)) throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");
-      if (void 0 !== WW.bitrate && (!Number.isFinite(WW.bitrate) || WW.bitrate < 0)) throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");
-      if (void 0 !== WW.averageBitrate && (!Number.isFinite(WW.averageBitrate) || WW.averageBitrate < 0)) throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");
-      if (void 0 !== WW.group && !(WW.group instanceof UW) && (!Array.isArray(WW.group) || WW.group.some((WW => !(WW instanceof UW))))) throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")
+    const UR = RR => {
+      if (!RR || "object" !== typeof RR) throw new TypeError("metadata must be an object.");
+      if (void 0 !== RR.languageCode && !(0, yR.Db)(RR.languageCode)) throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");
+      if (void 0 !== RR.name && "string" !== typeof RR.name) throw new TypeError("metadata.name, when provided, must be a string.");
+      if (void 0 !== RR.disposition && (0, tR.p)(RR.disposition), void 0 !== RR.maximumPacketCount && (!Number.isInteger(RR.maximumPacketCount) || RR.maximumPacketCount < 0)) throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");
+      if (void 0 !== RR.bitrate && (!Number.isFinite(RR.bitrate) || RR.bitrate < 0)) throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");
+      if (void 0 !== RR.averageBitrate && (!Number.isFinite(RR.averageBitrate) || RR.averageBitrate < 0)) throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");
+      if (void 0 !== RR.group && !(RR.group instanceof nR) && (!Array.isArray(RR.group) || RR.group.some((RR => !(RR instanceof nR))))) throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")
     };
-    class sW extends mW.n {
+    class WR extends yR.i {
       get target() {
-        const WW = "Output.target cannot be used when using PathedTarget with an async callback. Use the 'target' event instead.";
-        if (this._rootTargetPromise) throw new TypeError(WW);
-        const iW = this._getRootTarget();
-        if ((0, mW.ac)(iW)) throw new TypeError(WW);
-        return iW
+        const RR = "Output.target cannot be used when using PathedTarget with an async callback. Use the 'target' event instead.";
+        if (this._rootTargetPromise) throw new TypeError(RR);
+        const JR = this._getRootTarget();
+        if ((0, yR.Rb)(JR)) throw new TypeError(RR);
+        return JR
       }
-      constructor(WW) {
-        if (super(), this.state = "pending", this.defaultTrackGroup = new UW, this.tracks = [], this._onFinalize = null, this._unfinalizedTargets = new Set, this._rootWriterPromise = null, this._startPromise = null, this._cancelPromise = null, this._finalizePromise = null, this._mutex = new mW.c, this._metadataTags = {}, this._rootTarget = null, this._rootTargetPromise = null, this._firstMediaStreamTimestamp = null, !WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (!(WW.format instanceof NW.j)) throw new TypeError("options.format must be an OutputFormat.");
-        if (!(WW.target instanceof LW.n || WW.target instanceof LW.j)) throw new TypeError("options.target must be a Target or a PathedTarget.");
-        if (WW.target instanceof LW.n && this._rememberTarget(WW.target), void 0 !== WW.initTarget && !(WW.initTarget instanceof LW.n) && "function" !== typeof WW.initTarget) throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");
-        if (void 0 !== WW.onFinalize && "function" !== typeof WW.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
-        this.format = WW.format, this.HZ = WW.target, this._onFinalize = WW.onFinalize ?? null, this._initTarget = WW.initTarget ?? null, this._initTarget instanceof LW.n && this._rememberTarget(this._initTarget), this._muxer = WW.format._createMuxer(this)
+      constructor(RR) {
+        if (super(), this.state = "pending", this.defaultTrackGroup = new nR, this.tracks = [], this._onFinalize = null, this._unfinalizedTargets = new Set, this._rootWriterPromise = null, this._startPromise = null, this._cancelPromise = null, this._finalizePromise = null, this._mutex = new yR.c, this._metadataTags = {}, this._rootTarget = null, this._rootTargetPromise = null, this._firstMediaStreamTimestamp = null, !RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (!(RR.format instanceof uR.n)) throw new TypeError("options.format must be an OutputFormat.");
+        if (!(RR.target instanceof qR.k || RR.target instanceof qR.j)) throw new TypeError("options.target must be a Target or a PathedTarget.");
+        if (RR.target instanceof qR.k && this._rememberTarget(RR.target), void 0 !== RR.initTarget && !(RR.initTarget instanceof qR.k) && "function" !== typeof RR.initTarget) throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");
+        if (void 0 !== RR.onFinalize && "function" !== typeof RR.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
+        this.format = RR.format, this.bK = RR.target, this._onFinalize = RR.onFinalize ?? null, this._initTarget = RR.initTarget ?? null, this._initTarget instanceof qR.k && this._rememberTarget(this._initTarget), this._muxer = RR.format._createMuxer(this)
       }
-      _getTargetValidated(WW) {
-        (0, mW.K)(this.HZ instanceof LW.j);
-        const iW = this.HZ.getTarget(WW),
-          OW = WW => {
-            if (!(WW instanceof LW.n)) throw new TypeError("getTarget must return a Target.");
-            return WW
+      _getTargetValidated(RR) {
+        (0, yR.I)(this.bK instanceof qR.j);
+        const JR = this.bK.getTarget(RR),
+          GR = RR => {
+            if (!(RR instanceof qR.k)) throw new TypeError("getTarget must return a Target.");
+            return RR
           };
-        return (0, mW.ac)(iW) ? iW.then(OW) : OW(iW)
+        return (0, yR.Rb)(JR) ? JR.then(GR) : GR(JR)
       }
-      async _getTarget(WW) {
-        (0, mW.K)(this.HZ instanceof LW.j);
-        const iW = await this._getTargetValidated(WW);
+      async _getTarget(RR) {
+        (0, yR.I)(this.bK instanceof qR.j);
+        const JR = await this._getTargetValidated(RR);
         return this._emit("target", {
-          target: iW,
-          request: WW,
-          isRoot: WW.isRoot
-        }), "canceled" === this.state ? await iW._close() : this._rememberTarget(iW), iW
+          target: JR,
+          request: RR,
+          isRoot: RR.isRoot
+        }), "canceled" === this.state ? await JR._close() : this._rememberTarget(JR), JR
       }
-      _rememberTarget(WW) {
-        this._unfinalizedTargets.add(WW), WW.on("finalized", (() => this._unfinalizedTargets.delete(WW)), {
+      _rememberTarget(RR) {
+        this._unfinalizedTargets.add(RR), RR.on("finalized", (() => this._unfinalizedTargets.delete(RR)), {
           once: !0
         })
       }
       async _getInitTarget() {
-        if ((0, mW.K)(null !== this._initTarget), this._initTarget instanceof LW.n) return this._initTarget;
-        const WW = await this._initTarget();
-        return "canceled" === this.state ? await WW._close() : this._rememberTarget(WW), WW
+        if ((0, yR.I)(null !== this._initTarget), this._initTarget instanceof qR.k) return this._initTarget;
+        const RR = await this._initTarget();
+        return "canceled" === this.state ? await RR._close() : this._rememberTarget(RR), RR
       }
       _hasInitTarget() {
         return null !== this._initTarget
@@ -6448,129 +6448,129 @@ export const modules = {
       _getRootTarget() {
         if (this._rootTarget) return this._rootTarget;
         if (this._rootTargetPromise) return this._rootTargetPromise;
-        if (this.HZ instanceof LW.n) return this._emit("target", {
-          target: this.HZ,
+        if (this.bK instanceof qR.k) return this._emit("target", {
+          target: this.bK,
           request: null,
           isRoot: !0
-        }), this._rootTarget = this.HZ, this.HZ;
-        const WW = {
-            path: this.HZ.rootPath,
+        }), this._rootTarget = this.bK, this.bK;
+        const RR = {
+            path: this.bK.rootPath,
             isRoot: !0,
             mimeType: this.format.mimeType
           },
-          iW = this._getTargetValidated(WW),
-          OW = iW => ("canceled" === this.state ? iW._close() : this._rememberTarget(iW), this._emit("target", {
-            target: iW,
-            request: WW,
+          JR = this._getTargetValidated(RR),
+          GR = JR => ("canceled" === this.state ? JR._close() : this._rememberTarget(JR), this._emit("target", {
+            target: JR,
+            request: RR,
             isRoot: !0
-          }), this._rootTarget = iW, iW);
-        return (0, mW.ac)(iW) ? this._rootTargetPromise = iW.then(OW) : OW(iW)
+          }), this._rootTarget = JR, JR);
+        return (0, yR.Rb)(JR) ? this._rootTargetPromise = JR.then(GR) : GR(JR)
       }
-      _getRootWriter(WW) {
+      _getRootWriter(RR) {
         return this._rootWriterPromise ??= (async () => {
-          const iW = await this._getRootTarget(),
-            OW = new cW.d(iW, "boolean" === typeof WW ? WW : WW(iW));
-          return OW.start(), OW
+          const JR = await this._getRootTarget(),
+            GR = new iR.e(JR, "boolean" === typeof RR ? RR : RR(JR));
+          return GR.start(), GR
         })()
       }
-      addVideoTrack(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(WW instanceof PW.o)) throw new TypeError("source must be a VideoSource.");
-        if (kW(iW), void 0 !== iW.rotation && ![0, 90, 180, 270].includes(iW.rotation)) throw new TypeError(`Invalid video rotation: ${iW.rotation}. Has to be 0, 90, 180 or 270.`);
-        if (void 0 !== iW.flip && "boolean" !== typeof iW.flip) throw new TypeError("metadata.flip, when provided, must be a boolean.");
-        if (void 0 !== iW.transformationMatrix && (!Array.isArray(iW.transformationMatrix) || 9 !== iW.transformationMatrix.length || !iW.transformationMatrix.every((WW => Number.isFinite(WW))))) throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");
-        if (void 0 !== iW.frameRate && (!Number.isFinite(iW.frameRate) || iW.frameRate <= 0)) throw new TypeError(`Invalid video frame rate: ${iW.frameRate}. Must be a positive number.`);
-        if (void 0 !== iW.hasOnlyKeyPackets && "boolean" !== typeof iW.hasOnlyKeyPackets) throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");
-        if (void 0 !== iW.canBeTransparent && "boolean" !== typeof iW.canBeTransparent) throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");
-        if (void 0 !== iW.decoderConfig && (0, ZW.bb)({
-            decoderConfig: iW.decoderConfig
-          }, WW._codec), void 0 !== iW.primingPacket) {
-          if (!(iW.primingPacket instanceof tW.c)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
-          if (void 0 === iW.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
+      addVideoTrack(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(RR instanceof ZR.m)) throw new TypeError("source must be a VideoSource.");
+        if (UR(JR), void 0 !== JR.rotation && ![0, 90, 180, 270].includes(JR.rotation)) throw new TypeError(`Invalid video rotation: ${JR.rotation}. Has to be 0, 90, 180 or 270.`);
+        if (void 0 !== JR.flip && "boolean" !== typeof JR.flip) throw new TypeError("metadata.flip, when provided, must be a boolean.");
+        if (void 0 !== JR.transformationMatrix && (!Array.isArray(JR.transformationMatrix) || 9 !== JR.transformationMatrix.length || !JR.transformationMatrix.every((RR => Number.isFinite(RR))))) throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");
+        if (void 0 !== JR.frameRate && (!Number.isFinite(JR.frameRate) || JR.frameRate <= 0)) throw new TypeError(`Invalid video frame rate: ${JR.frameRate}. Must be a positive number.`);
+        if (void 0 !== JR.hasOnlyKeyPackets && "boolean" !== typeof JR.hasOnlyKeyPackets) throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");
+        if (void 0 !== JR.canBeTransparent && "boolean" !== typeof JR.canBeTransparent) throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");
+        if (void 0 !== JR.decoderConfig && (0, KR.X)({
+            decoderConfig: JR.decoderConfig
+          }, RR._codec), void 0 !== JR.primingPacket) {
+          if (!(JR.primingPacket instanceof VR.c)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
+          if (void 0 === JR.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
         }
-        const OW = {
-          ...iW
+        const GR = {
+          ...JR
         };
-        return OW.group ??= this.defaultTrackGroup, this._addTrack(new AW(this.tracks.length + 1, this, WW, OW))
+        return GR.group ??= this.defaultTrackGroup, this._addTrack(new eR(this.tracks.length + 1, this, RR, GR))
       }
-      addAudioTrack(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(WW instanceof PW.d)) throw new TypeError("source must be an AudioSource.");
-        if (kW(iW), void 0 !== iW.decoderConfig && (0, ZW.W)({
-            decoderConfig: iW.decoderConfig
-          }, WW._codec), void 0 !== iW.primingPacket) {
-          if (!(iW.primingPacket instanceof tW.c)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
-          if (void 0 === iW.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
+      addAudioTrack(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(RR instanceof ZR.b)) throw new TypeError("source must be an AudioSource.");
+        if (UR(JR), void 0 !== JR.decoderConfig && (0, KR.S)({
+            decoderConfig: JR.decoderConfig
+          }, RR._codec), void 0 !== JR.primingPacket) {
+          if (!(JR.primingPacket instanceof VR.c)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
+          if (void 0 === JR.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
         }
-        const OW = {
-          ...iW
+        const GR = {
+          ...JR
         };
-        return OW.group ??= this.defaultTrackGroup, this._addTrack(new bW(this.tracks.length + 1, this, WW, OW))
+        return GR.group ??= this.defaultTrackGroup, this._addTrack(new aR(this.tracks.length + 1, this, RR, GR))
       }
-      addSubtitleTrack(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(WW instanceof PW.n)) throw new TypeError("source must be a SubtitleSource.");
-        kW(iW);
-        const OW = {
-          ...iW
+      addSubtitleTrack(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(RR instanceof ZR.j)) throw new TypeError("source must be a SubtitleSource.");
+        UR(JR);
+        const GR = {
+          ...JR
         };
-        return OW.group ??= this.defaultTrackGroup, this._addTrack(new jW(this.tracks.length + 1, this, WW, OW))
+        return GR.group ??= this.defaultTrackGroup, this._addTrack(new LR(this.tracks.length + 1, this, RR, GR))
       }
-      setMetadataTags(WW) {
-        if ((0, EW.l)(WW), "pending" !== this.state) throw new Error("Cannot set metadata tags after output has been started or canceled.");
-        this._metadataTags = WW
+      setMetadataTags(RR) {
+        if ((0, tR.o)(RR), "pending" !== this.state) throw new Error("Cannot set metadata tags after output has been started or canceled.");
+        this._metadataTags = RR
       }
-      _addTrack(WW) {
+      _addTrack(RR) {
         if ("pending" !== this.state) throw new Error("Cannot add track after output has been started or canceled.");
-        if (WW.source._connectedTrack) throw new Error("Source is already used for a track.");
-        const iW = this.format.getSupportedTrackCounts(),
-          OW = this.tracks.reduce(((iW, OW) => iW + (OW.type === WW.type ? 1 : 0)), 0),
-          mW = iW[WW.type].max;
-        if (OW === mW) throw new Error(0 === mW ? `${this.format._name} does not support ${WW.type} tracks.` : `${this.format._name} does not support more than ${mW} ${WW.type} track` + (1 === mW ? "" : "s") + ".");
-        const EW = iW.total.max;
-        if (this.tracks.length === EW) throw new Error(`${this.format._name} does not support more than ${EW} tracks` + (1 === EW ? "" : "s") + " in total.");
-        if (WW.isVideoTrack()) {
-          const iW = this.format.getSupportedVideoCodecs();
-          if (0 === iW.length) throw new Error(`${this.format._name} does not support video tracks.` + this.format._codecUnsupportedHint(WW.source._codec));
-          if (!iW.includes(WW.source._codec)) throw new Error(`Codec '${WW.source._codec}' cannot be contained within ${this.format._name}. Supported video codecs are: ${iW.map((WW=>`'${WW}'`)).join(", ")}.` + this.format._codecUnsupportedHint(WW.source._codec))
-        } else if (WW.isAudioTrack()) {
-          const iW = this.format.getSupportedAudioCodecs();
-          if (0 === iW.length) throw new Error(`${this.format._name} does not support audio tracks.` + this.format._codecUnsupportedHint(WW.source._codec));
-          if (!iW.includes(WW.source._codec)) throw new Error(`Codec '${WW.source._codec}' cannot be contained within ${this.format._name}. Supported audio codecs are: ${iW.map((WW=>`'${WW}'`)).join(", ")}.` + this.format._codecUnsupportedHint(WW.source._codec))
-        } else if (WW.isSubtitleTrack()) {
-          const iW = this.format.getSupportedSubtitleCodecs();
-          if (0 === iW.length) throw new Error(`${this.format._name} does not support subtitle tracks.` + this.format._codecUnsupportedHint(WW.source._codec));
-          if (!iW.includes(WW.source._codec)) throw new Error(`Codec '${WW.source._codec}' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${iW.map((WW=>`'${WW}'`)).join(", ")}.` + this.format._codecUnsupportedHint(WW.source._codec))
+        if (RR.source._connectedTrack) throw new Error("Source is already used for a track.");
+        const JR = this.format.getSupportedTrackCounts(),
+          GR = this.tracks.reduce(((JR, GR) => JR + (GR.type === RR.type ? 1 : 0)), 0),
+          yR = JR[RR.type].max;
+        if (GR === yR) throw new Error(0 === yR ? `${this.format._name} does not support ${RR.type} tracks.` : `${this.format._name} does not support more than ${yR} ${RR.type} track` + (1 === yR ? "" : "s") + ".");
+        const tR = JR.total.max;
+        if (this.tracks.length === tR) throw new Error(`${this.format._name} does not support more than ${tR} tracks` + (1 === tR ? "" : "s") + " in total.");
+        if (RR.isVideoTrack()) {
+          const JR = this.format.getSupportedVideoCodecs();
+          if (0 === JR.length) throw new Error(`${this.format._name} does not support video tracks.` + this.format._codecUnsupportedHint(RR.source._codec));
+          if (!JR.includes(RR.source._codec)) throw new Error(`Codec '${RR.source._codec}' cannot be contained within ${this.format._name}. Supported video codecs are: ${JR.map((RR=>`'${RR}'`)).join(", ")}.` + this.format._codecUnsupportedHint(RR.source._codec))
+        } else if (RR.isAudioTrack()) {
+          const JR = this.format.getSupportedAudioCodecs();
+          if (0 === JR.length) throw new Error(`${this.format._name} does not support audio tracks.` + this.format._codecUnsupportedHint(RR.source._codec));
+          if (!JR.includes(RR.source._codec)) throw new Error(`Codec '${RR.source._codec}' cannot be contained within ${this.format._name}. Supported audio codecs are: ${JR.map((RR=>`'${RR}'`)).join(", ")}.` + this.format._codecUnsupportedHint(RR.source._codec))
+        } else if (RR.isSubtitleTrack()) {
+          const JR = this.format.getSupportedSubtitleCodecs();
+          if (0 === JR.length) throw new Error(`${this.format._name} does not support subtitle tracks.` + this.format._codecUnsupportedHint(RR.source._codec));
+          if (!JR.includes(RR.source._codec)) throw new Error(`Codec '${RR.source._codec}' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${JR.map((RR=>`'${RR}'`)).join(", ")}.` + this.format._codecUnsupportedHint(RR.source._codec))
         }
-        return this.tracks.push(WW), WW.source._connectedTrack = WW, WW
+        return this.tracks.push(RR), RR.source._connectedTrack = RR, RR
       }
       hasEnoughTracks() {
-        const WW = this.format.getSupportedTrackCounts();
-        for (const OW of xW) {
-          if (this.tracks.reduce(((WW, iW) => WW + (iW.type === OW ? 1 : 0)), 0) < WW[OW].min) return !1
+        const RR = this.format.getSupportedTrackCounts();
+        for (const GR of wR) {
+          if (this.tracks.reduce(((RR, JR) => RR + (JR.type === GR ? 1 : 0)), 0) < RR[GR].min) return !1
         }
-        const iW = WW.total.min;
-        return !(this.tracks.length < iW)
+        const JR = RR.total.min;
+        return !(this.tracks.length < JR)
       }
       async start() {
-        const WW = this.format.getSupportedTrackCounts();
-        for (const OW of xW) {
-          const iW = this.tracks.reduce(((WW, iW) => WW + (iW.type === OW ? 1 : 0)), 0),
-            mW = WW[OW].min;
-          if (iW < mW) throw new Error(mW === WW[OW].max ? `${this.format._name} requires exactly ${mW} ${OW} track${1===mW?"":"s"}.` : `${this.format._name} requires at least ${mW} ${OW} track${1===mW?"":"s"}.`)
+        const RR = this.format.getSupportedTrackCounts();
+        for (const GR of wR) {
+          const JR = this.tracks.reduce(((RR, JR) => RR + (JR.type === GR ? 1 : 0)), 0),
+            yR = RR[GR].min;
+          if (JR < yR) throw new Error(yR === RR[GR].max ? `${this.format._name} requires exactly ${yR} ${GR} track${1===yR?"":"s"}.` : `${this.format._name} requires at least ${yR} ${GR} track${1===yR?"":"s"}.`)
         }
-        const iW = WW.total.min;
-        if (this.tracks.length < iW) throw new Error(iW === WW.total.max ? `${this.format._name} requires exactly ${iW} track` + (1 === iW ? "" : "s") + "." : `${this.format._name} requires at least ${iW} track` + (1 === iW ? "" : "s") + ".");
+        const JR = RR.total.min;
+        if (this.tracks.length < JR) throw new Error(JR === RR.total.max ? `${this.format._name} requires exactly ${JR} track` + (1 === JR ? "" : "s") + "." : `${this.format._name} requires at least ${JR} track` + (1 === JR ? "" : "s") + ".");
         if ("canceled" === this.state) throw new Error("Output has been canceled.");
-        return this._startPromise ? (wW.d._warn("Output has already been started."), this._startPromise) : this._startPromise = (async () => {
+        return this._startPromise ? (fR.e._warn("Output has already been started."), this._startPromise) : this._startPromise = (async () => {
           this.state = "started";
-          const WW = this._mutex.acquire();
+          const RR = this._mutex.acquire();
           try {
             await this._muxer.start();
-            const WW = this.tracks.map((WW => WW.source._start()));
-            await Promise.all(WW)
+            const RR = this.tracks.map((RR => RR.source._start()));
+            await Promise.all(RR)
           } finally {
-            (await WW)()
+            (await RR)()
           }
         })()
       }
@@ -6580,69 +6580,69 @@ export const modules = {
       async cancel() {
         return "canceled" === this.state ? this._cancelPromise ?? void 0 : "finalizing" !== this.state && "finalized" !== this.state ? this._cancelPromise = (async () => {
           this.state = "canceled";
-          const WW = await this._mutex.acquire();
+          const RR = await this._mutex.acquire();
           try {
-            const WW = this.tracks.map((WW => WW.source._flushOrWaitForOngoingClose(!0)));
-            await Promise.all(WW), await Promise.all([...this._unfinalizedTargets].map((WW => WW._close()))), this._unfinalizedTargets.clear()
+            const RR = this.tracks.map((RR => RR.source._flushOrWaitForOngoingClose(!0)));
+            await Promise.all(RR), await Promise.all([...this._unfinalizedTargets].map((RR => RR._close()))), this._unfinalizedTargets.clear()
           } finally {
-            WW()
+            RR()
           }
-        })() : void("finalized" === this.state && wW.d._warn("Output has already been finalized."))
+        })() : void("finalized" === this.state && fR.e._warn("Output has already been finalized."))
       }
       async finalize() {
         if ("pending" === this.state) throw new Error("Cannot finalize before starting.");
         if ("canceled" === this.state) throw new Error("Cannot finalize after canceling.");
-        return this._finalizePromise ? (wW.d._warn("Output has already been finalized."), this._finalizePromise) : this._finalizePromise = (async () => {
+        return this._finalizePromise ? (fR.e._warn("Output has already been finalized."), this._finalizePromise) : this._finalizePromise = (async () => {
           this.state = "finalizing";
-          const WW = await this._mutex.acquire();
+          const RR = await this._mutex.acquire();
           try {
-            const WW = this.tracks.map((WW => WW.source._flushOrWaitForOngoingClose(!1)));
-            if (await Promise.all(WW), await this._muxer.finalize(), this._rootWriterPromise) {
-              const WW = await this._rootWriterPromise;
-              WW.finalized || (await WW.flush(), await WW.finalize())
+            const RR = this.tracks.map((RR => RR.source._flushOrWaitForOngoingClose(!1)));
+            if (await Promise.all(RR), await this._muxer.finalize(), this._rootWriterPromise) {
+              const RR = await this._rootWriterPromise;
+              RR.finalized || (await RR.flush(), await RR.finalize())
             }
             this._onFinalize && await this._onFinalize(), this.state = "finalized"
-          } catch (iW) {
-            throw this.state = "canceled", iW
+          } catch (JR) {
+            throw this.state = "canceled", JR
           } finally {
-            await Promise.all([...this._unfinalizedTargets].map((WW => WW._close().catch((() => {}))))), this._unfinalizedTargets.clear(), WW()
+            await Promise.all([...this._unfinalizedTargets].map((RR => RR._close().catch((() => {}))))), this._unfinalizedTargets.clear(), RR()
           }
         })()
       }
     }
   },
-  41190: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => EW
+  41179: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      d: () => tR
     });
-    var mW = OW(41127);
-    const EW = new Uint8Array(0);
-    class NW {
-      constructor(WW, iW, OW, mW) {
-        let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          PW = arguments.length > 5 ? arguments[5] : void 0,
-          LW = arguments.length > 6 ? arguments[6] : void 0;
-        if (this.data = WW, this.type = iW, this.timestamp = OW, this.duration = mW, this.sequenceNumber = NW, WW === EW && void 0 === PW) throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");
-        if (void 0 === PW && (PW = WW.byteLength), !(WW instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if ("key" !== iW && "delta" !== iW) throw new TypeError('type must be either "key" or "delta".');
-        if (!Number.isFinite(OW)) throw new TypeError("timestamp must be a number.");
-        if (!Number.isFinite(mW) || mW < 0) throw new TypeError("duration must be a non-negative number.");
-        if (!Number.isFinite(NW)) throw new TypeError("sequenceNumber must be a number.");
-        if (!Number.isInteger(PW) || PW < 0) throw new TypeError("byteLength must be a non-negative integer.");
-        if (void 0 !== LW && ("object" !== typeof LW || !LW)) throw new TypeError("sideData, when provided, must be an object.");
-        if (void 0 !== LW?.alpha && !(LW.alpha instanceof Uint8Array)) throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");
-        if (void 0 !== LW?.alphaByteLength && (!Number.isInteger(LW.alphaByteLength) || LW.alphaByteLength < 0)) throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");
-        this.byteLength = PW, this.sideData = LW ?? {}, this.sideData.alpha && void 0 === this.sideData.alphaByteLength && (this.sideData.alphaByteLength = this.sideData.alpha.byteLength)
+    var yR = GR(41115);
+    const tR = new Uint8Array(0);
+    class uR {
+      constructor(RR, JR, GR, yR) {
+        let uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          ZR = arguments.length > 5 ? arguments[5] : void 0,
+          qR = arguments.length > 6 ? arguments[6] : void 0;
+        if (this.data = RR, this.type = JR, this.timestamp = GR, this.duration = yR, this.sequenceNumber = uR, RR === tR && void 0 === ZR) throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");
+        if (void 0 === ZR && (ZR = RR.byteLength), !(RR instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if ("key" !== JR && "delta" !== JR) throw new TypeError('type must be either "key" or "delta".');
+        if (!Number.isFinite(GR)) throw new TypeError("timestamp must be a number.");
+        if (!Number.isFinite(yR) || yR < 0) throw new TypeError("duration must be a non-negative number.");
+        if (!Number.isFinite(uR)) throw new TypeError("sequenceNumber must be a number.");
+        if (!Number.isInteger(ZR) || ZR < 0) throw new TypeError("byteLength must be a non-negative integer.");
+        if (void 0 !== qR && ("object" !== typeof qR || !qR)) throw new TypeError("sideData, when provided, must be an object.");
+        if (void 0 !== qR?.alpha && !(qR.alpha instanceof Uint8Array)) throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");
+        if (void 0 !== qR?.alphaByteLength && (!Number.isInteger(qR.alphaByteLength) || qR.alphaByteLength < 0)) throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");
+        this.byteLength = ZR, this.sideData = qR ?? {}, this.sideData.alpha && void 0 === this.sideData.alphaByteLength && (this.sideData.alphaByteLength = this.sideData.alpha.byteLength)
       }
       get isMetadataOnly() {
-        return this.data === EW
+        return this.data === tR
       }
       get microsecondTimestamp() {
-        return Math.trunc(mW.u * this.timestamp)
+        return Math.trunc(yR.u * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(mW.u * this.duration)
+        return Math.trunc(yR.u * this.duration)
       }
       toEncodedVideoChunk() {
         if (this.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");
@@ -6655,13 +6655,13 @@ export const modules = {
         })
       }
       alphaToEncodedVideoChunk() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.type;
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.type;
         if (!this.sideData.alpha) throw new TypeError("This packet does not contain alpha side data.");
         if (this.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");
         if ("undefined" === typeof EncodedVideoChunk) throw new Error("EncodedVideoChunk is not available in this environment.");
         return new EncodedVideoChunk({
           data: this.sideData.alpha,
-          type: WW,
+          type: RR,
           timestamp: this.microsecondTimestamp,
           duration: this.microsecondDuration
         })
@@ -6676,104 +6676,104 @@ export const modules = {
           duration: this.microsecondDuration
         })
       }
-      static fromEncodedChunk(WW, iW) {
-        if (!(WW instanceof EncodedVideoChunk || WW instanceof EncodedAudioChunk)) throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");
-        const OW = new Uint8Array(WW.byteLength);
-        return WW.copyTo(OW), new NW(OW, WW.type, WW.timestamp / 1e6, (WW.duration ?? 0) / 1e6, void 0, void 0, iW)
+      static fromEncodedChunk(RR, JR) {
+        if (!(RR instanceof EncodedVideoChunk || RR instanceof EncodedAudioChunk)) throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");
+        const GR = new Uint8Array(RR.byteLength);
+        return RR.copyTo(GR), new uR(GR, RR.type, RR.timestamp / 1e6, (RR.duration ?? 0) / 1e6, void 0, void 0, JR)
       }
-      clone(WW) {
-        if (void 0 !== WW && ("object" !== typeof WW || null === WW)) throw new TypeError("options, when provided, must be an object.");
-        if (void 0 !== WW?.data && !(WW.data instanceof Uint8Array)) throw new TypeError("options.data, when provided, must be a Uint8Array.");
-        if (void 0 !== WW?.type && "key" !== WW.type && "delta" !== WW.type) throw new TypeError('options.type, when provided, must be either "key" or "delta".');
-        if (void 0 !== WW?.timestamp && !Number.isFinite(WW.timestamp)) throw new TypeError("options.timestamp, when provided, must be a number.");
-        if (void 0 !== WW?.duration && !Number.isFinite(WW.duration)) throw new TypeError("options.duration, when provided, must be a number.");
-        if (void 0 !== WW?.sequenceNumber && !Number.isFinite(WW.sequenceNumber)) throw new TypeError("options.sequenceNumber, when provided, must be a number.");
-        if (void 0 !== WW?.sideData && ("object" !== typeof WW.sideData || null === WW.sideData)) throw new TypeError("options.sideData, when provided, must be an object.");
-        return new NW(WW?.data ?? this.data, WW?.type ?? this.type, WW?.timestamp ?? this.timestamp, WW?.duration ?? this.duration, WW?.sequenceNumber ?? this.sequenceNumber, this.byteLength, WW?.sideData ?? this.sideData)
+      clone(RR) {
+        if (void 0 !== RR && ("object" !== typeof RR || null === RR)) throw new TypeError("options, when provided, must be an object.");
+        if (void 0 !== RR?.data && !(RR.data instanceof Uint8Array)) throw new TypeError("options.data, when provided, must be a Uint8Array.");
+        if (void 0 !== RR?.type && "key" !== RR.type && "delta" !== RR.type) throw new TypeError('options.type, when provided, must be either "key" or "delta".');
+        if (void 0 !== RR?.timestamp && !Number.isFinite(RR.timestamp)) throw new TypeError("options.timestamp, when provided, must be a number.");
+        if (void 0 !== RR?.duration && !Number.isFinite(RR.duration)) throw new TypeError("options.duration, when provided, must be a number.");
+        if (void 0 !== RR?.sequenceNumber && !Number.isFinite(RR.sequenceNumber)) throw new TypeError("options.sequenceNumber, when provided, must be a number.");
+        if (void 0 !== RR?.sideData && ("object" !== typeof RR.sideData || null === RR.sideData)) throw new TypeError("options.sideData, when provided, must be an object.");
+        return new uR(RR?.data ?? this.data, RR?.type ?? this.type, RR?.timestamp ?? this.timestamp, RR?.duration ?? this.duration, RR?.sequenceNumber ?? this.sequenceNumber, this.byteLength, RR?.sideData ?? this.sideData)
       }
     }
   },
-  41198: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => oW,
-      g: () => lW,
-      k: () => fW,
-      n: () => VW,
-      o: () => KW
+  41187: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => xR,
+      f: () => rR,
+      g: () => mR,
+      k: () => PR,
+      l: () => CR
     });
-    var mW = OW(41127),
-      EW = OW(41162),
-      NW = function(WW, iW, OW) {
-        if (null !== iW && void 0 !== iW) {
-          if ("object" !== typeof iW && "function" !== typeof iW) throw new TypeError("Object expected.");
-          var mW, EW;
-          if (OW) {
+    var yR = GR(41115),
+      tR = GR(41147),
+      uR = function(RR, JR, GR) {
+        if (null !== JR && void 0 !== JR) {
+          if ("object" !== typeof JR && "function" !== typeof JR) throw new TypeError("Object expected.");
+          var yR, tR;
+          if (GR) {
             if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-            mW = iW[Symbol.asyncDispose]
+            yR = JR[Symbol.asyncDispose]
           }
-          if (void 0 === mW) {
+          if (void 0 === yR) {
             if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-            mW = iW[Symbol.dispose], OW && (EW = mW)
+            yR = JR[Symbol.dispose], GR && (tR = yR)
           }
-          if ("function" !== typeof mW) throw new TypeError("Object not disposable.");
-          EW && (mW = function() {
+          if ("function" !== typeof yR) throw new TypeError("Object not disposable.");
+          tR && (yR = function() {
             try {
-              EW.call(this)
-            } catch (WW) {
-              return Promise.reject(WW)
+              tR.call(this)
+            } catch (RR) {
+              return Promise.reject(RR)
             }
-          }), WW.stack.push({
-            value: iW,
-            dispose: mW,
-            async: OW
+          }), RR.stack.push({
+            value: JR,
+            dispose: yR,
+            async: GR
           })
-        } else OW && WW.stack.push({
+        } else GR && RR.stack.push({
           async: !0
         });
-        return iW
+        return JR
       },
-      PW = function(WW) {
-        return function(iW) {
-          function OW(OW) {
-            iW.error = iW.hasError ? new WW(OW, iW.error, "An error was suppressed during disposal.") : OW, iW.hasError = !0
+      ZR = function(RR) {
+        return function(JR) {
+          function GR(GR) {
+            JR.error = JR.hasError ? new RR(GR, JR.error, "An error was suppressed during disposal.") : GR, JR.hasError = !0
           }
-          var mW, EW = 0;
-          return function WW() {
-            for (; mW = iW.stack.pop();) try {
-              if (!mW.async && 1 === EW) return EW = 0, iW.stack.push(mW), Promise.resolve().then(WW);
-              if (mW.dispose) {
-                var NW = mW.dispose.call(mW.value);
-                if (mW.async) return EW |= 2, Promise.resolve(NW).then(WW, (function(iW) {
-                  return OW(iW), WW()
+          var yR, tR = 0;
+          return function RR() {
+            for (; yR = JR.stack.pop();) try {
+              if (!yR.async && 1 === tR) return tR = 0, JR.stack.push(yR), Promise.resolve().then(RR);
+              if (yR.dispose) {
+                var uR = yR.dispose.call(yR.value);
+                if (yR.async) return tR |= 2, Promise.resolve(uR).then(RR, (function(JR) {
+                  return GR(JR), RR()
                 }))
-              } else EW |= 1
-            } catch (PW) {
-              OW(PW)
+              } else tR |= 1
+            } catch (ZR) {
+              GR(ZR)
             }
-            if (1 === EW) return iW.hasError ? Promise.reject(iW.error) : Promise.resolve();
-            if (iW.hasError) throw iW.error
+            if (1 === tR) return JR.hasError ? Promise.reject(JR.error) : Promise.resolve();
+            if (JR.hasError) throw JR.error
           }()
         }
-      }("function" === typeof SuppressedError ? SuppressedError : function(WW, iW, OW) {
-        var mW = new Error(OW);
-        return mW.name = "SuppressedError", mW.error = WW, mW.suppressed = iW, mW
+      }("function" === typeof SuppressedError ? SuppressedError : function(RR, JR, GR) {
+        var yR = new Error(GR);
+        return yR.name = "SuppressedError", yR.error = RR, yR.suppressed = JR, yR
       });
-    (0, mW.Cc)();
-    let LW = -1 / 0,
-      cW = -1 / 0,
-      wW = null;
-    "undefined" !== typeof FinalizationRegistry && (wW = new FinalizationRegistry((WW => {
-      const iW = performance.now();
-      "video" === WW.type ? (iW - LW >= 1e3 && (EW.d._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you're done using them."), LW = iW), "undefined" !== typeof VideoFrame && WW.data instanceof VideoFrame && WW.data.close()) : (iW - cW >= 1e3 && (EW.d._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you're done using them."), cW = iW), "undefined" !== typeof AudioData && WW.data instanceof AudioData && WW.data.close())
+    (0, yR.mc)();
+    let qR = -1 / 0,
+      iR = -1 / 0,
+      fR = null;
+    "undefined" !== typeof FinalizationRegistry && (fR = new FinalizationRegistry((RR => {
+      const JR = performance.now();
+      "video" === RR.type ? (JR - qR >= 1e3 && (tR.e._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you're done using them."), qR = JR), "undefined" !== typeof VideoFrame && RR.data instanceof VideoFrame && RR.data.close()) : (JR - iR >= 1e3 && (tR.e._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you're done using them."), iR = JR), "undefined" !== typeof AudioData && RR.data instanceof AudioData && RR.data.close())
     })));
-    class tW {
+    class VR {
       constructor() {
         this._referenceCount = 0, this._lastAllocationBuffer = null
       }
     }
-    const ZW = ["I420", "I420P10", "I420P12", "I420A", "I420AP10", "I420AP12", "I422", "I422P10", "I422P12", "I422A", "I422AP10", "I422AP12", "I444", "I444P10", "I444P12", "I444A", "I444AP10", "I444AP12", "NV12", "RGBA", "RGBX", "BGRA", "BGRX"],
-      xW = new Set(ZW);
-    class lW {
+    const KR = ["I420", "I420P10", "I420P12", "I420A", "I420AP10", "I420AP12", "I422", "I422P10", "I422P12", "I422A", "I422AP10", "I422AP12", "I444", "I444P10", "I444P12", "I444A", "I444AP10", "I444AP12", "NV12", "RGBA", "RGBX", "BGRA", "BGRX"],
+      wR = new Set(KR);
+    class rR {
       get codedWidth() {
         return this.visibleRect.width
       }
@@ -6787,39 +6787,39 @@ export const modules = {
         return this.rotation % 180 === 0 ? this.squarePixelHeight : this.squarePixelWidth
       }
       get microsecondTimestamp() {
-        return Math.trunc(mW.u * this.timestamp)
+        return Math.trunc(yR.u * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(mW.u * this.duration)
+        return Math.trunc(yR.u * this.duration)
       }
       get hasAlpha() {
         return this.format && this.format.includes("A")
       }
-      constructor(WW, iW) {
-        if (this._closed = !1, WW instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && WW instanceof SharedArrayBuffer || ArrayBuffer.isView(WW)) {
-          if (!iW || "object" !== typeof iW) throw new TypeError("init must be an object.");
-          if (void 0 === iW.format || !xW.has(iW.format)) throw new TypeError("init.format must be one of: " + ZW.join(", "));
-          if (!Number.isInteger(iW.codedWidth) || iW.codedWidth <= 0) throw new TypeError("init.codedWidth must be a positive integer.");
-          if (!Number.isInteger(iW.codedHeight) || iW.codedHeight <= 0) throw new TypeError("init.codedHeight must be a positive integer.");
-          if (void 0 !== iW.rotation && ![0, 90, 180, 270].includes(iW.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== iW.flip && "boolean" !== typeof iW.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(iW.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== iW.duration && (!Number.isFinite(iW.duration) || iW.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (void 0 !== iW.layout) {
-            if (!Array.isArray(iW.layout)) throw new TypeError("init.layout, when provided, must be an array.");
-            for (const WW of iW.layout) {
-              if (!WW || "object" !== typeof WW || Array.isArray(WW)) throw new TypeError("Each entry in init.layout must be an object.");
-              if (!Number.isInteger(WW.offset) || WW.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
-              if (!Number.isInteger(WW.stride) || WW.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
+      constructor(RR, JR) {
+        if (this._closed = !1, RR instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && RR instanceof SharedArrayBuffer || ArrayBuffer.isView(RR)) {
+          if (!JR || "object" !== typeof JR) throw new TypeError("init must be an object.");
+          if (void 0 === JR.format || !wR.has(JR.format)) throw new TypeError("init.format must be one of: " + KR.join(", "));
+          if (!Number.isInteger(JR.codedWidth) || JR.codedWidth <= 0) throw new TypeError("init.codedWidth must be a positive integer.");
+          if (!Number.isInteger(JR.codedHeight) || JR.codedHeight <= 0) throw new TypeError("init.codedHeight must be a positive integer.");
+          if (void 0 !== JR.rotation && ![0, 90, 180, 270].includes(JR.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== JR.flip && "boolean" !== typeof JR.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(JR.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== JR.duration && (!Number.isFinite(JR.duration) || JR.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (void 0 !== JR.layout) {
+            if (!Array.isArray(JR.layout)) throw new TypeError("init.layout, when provided, must be an array.");
+            for (const RR of JR.layout) {
+              if (!RR || "object" !== typeof RR || Array.isArray(RR)) throw new TypeError("Each entry in init.layout must be an object.");
+              if (!Number.isInteger(RR.offset) || RR.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
+              if (!Number.isInteger(RR.stride) || RR.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
             }
           }
-          if (void 0 !== iW.visibleRect && (0, mW.td)(iW.visibleRect, "init.visibleRect"), void 0 !== iW.displayWidth && (!Number.isInteger(iW.displayWidth) || iW.displayWidth <= 0)) throw new TypeError("init.displayWidth, when provided, must be a positive integer.");
-          if (void 0 !== iW.displayHeight && (!Number.isInteger(iW.displayHeight) || iW.displayHeight <= 0)) throw new TypeError("init.displayHeight, when provided, must be a positive integer.");
-          if (void 0 !== iW.displayWidth !== (void 0 !== iW.displayHeight)) throw new TypeError("init.displayWidth and init.displayHeight must be either both provided or both omitted.");
-          this.format = iW.format, this.rotation = iW.rotation ?? 0, this.flip = iW.flip ?? !1, this.timestamp = iW.timestamp, this.duration = iW.duration ?? 0;
-          const OW = iW.layout ?? YW(iW.format, iW.codedWidth, iW.codedHeight);
-          let EW = iW.colorSpace ?? null;
-          null === EW && (EW = "RGBA" === this.format || "RGBX" === this.format || "BGRA" === this.format || "BGRX" === this.format ? {
+          if (void 0 !== JR.visibleRect && (0, yR.id)(JR.visibleRect, "init.visibleRect"), void 0 !== JR.displayWidth && (!Number.isInteger(JR.displayWidth) || JR.displayWidth <= 0)) throw new TypeError("init.displayWidth, when provided, must be a positive integer.");
+          if (void 0 !== JR.displayHeight && (!Number.isInteger(JR.displayHeight) || JR.displayHeight <= 0)) throw new TypeError("init.displayHeight, when provided, must be a positive integer.");
+          if (void 0 !== JR.displayWidth !== (void 0 !== JR.displayHeight)) throw new TypeError("init.displayWidth and init.displayHeight must be either both provided or both omitted.");
+          this.format = JR.format, this.rotation = JR.rotation ?? 0, this.flip = JR.flip ?? !1, this.timestamp = JR.timestamp, this.duration = JR.duration ?? 0;
+          const GR = JR.layout ?? MR(JR.format, JR.codedWidth, JR.codedHeight);
+          let tR = JR.colorSpace ?? null;
+          null === tR && (tR = "RGBA" === this.format || "RGBX" === this.format || "BGRA" === this.format || "BGRX" === this.format ? {
             primaries: "bt709",
             transfer: "iec61966-2-1",
             matrix: "rgb",
@@ -6830,106 +6830,106 @@ export const modules = {
             matrix: "bt709",
             fullRange: !1
           }), this.visibleRect = {
-            left: iW.visibleRect?.left ?? 0,
-            top: iW.visibleRect?.top ?? 0,
-            width: iW.visibleRect?.width ?? iW.codedWidth,
-            height: iW.visibleRect?.height ?? iW.codedHeight
-          }, void 0 !== iW.displayWidth ? (this.squarePixelWidth = this.rotation % 180 === 0 ? iW.displayWidth : iW.displayHeight, this.squarePixelHeight = this.rotation % 180 === 0 ? iW.displayHeight : iW.displayWidth) : (this.squarePixelWidth = this.visibleRect.width, this.squarePixelHeight = this.visibleRect.height), this._data = iW._doNotCopy ? (0, mW.pd)(WW) : (0, mW.pd)(WW).slice(), this._layout = OW, this.colorSpace = new kW(EW)
-        } else if ("undefined" !== typeof VideoFrame && WW instanceof VideoFrame) {
-          if (void 0 !== iW?.rotation && ![0, 90, 180, 270].includes(iW.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== iW?.flip && "boolean" !== typeof iW.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (void 0 !== iW?.timestamp && !Number.isFinite(iW?.timestamp)) throw new TypeError("init.timestamp, when provided, must be a number.");
-          if (void 0 !== iW?.duration && (!Number.isFinite(iW.duration) || iW.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          void 0 !== iW?.visibleRect && (0, mW.td)(iW.visibleRect, "init.visibleRect"), this._data = WW, this._layout = null, this.format = WW.format, this.visibleRect = {
-            left: WW.visibleRect?.x ?? 0,
-            top: WW.visibleRect?.y ?? 0,
-            width: WW.visibleRect?.width ?? WW.codedWidth,
-            height: WW.visibleRect?.height ?? WW.codedHeight
-          }, this.rotation = iW?.rotation ?? 0, this.flip = iW?.flip ?? !1, this.squarePixelWidth = WW.displayWidth, this.squarePixelHeight = WW.displayHeight, this.timestamp = iW?.timestamp ?? WW.timestamp / 1e6, this.duration = iW?.duration ?? (WW.duration ?? 0) / 1e6, this.colorSpace = new kW(WW.colorSpace)
-        } else if ("undefined" !== typeof HTMLImageElement && WW instanceof HTMLImageElement || "undefined" !== typeof SVGImageElement && WW instanceof SVGImageElement || "undefined" !== typeof ImageBitmap && WW instanceof ImageBitmap || "undefined" !== typeof HTMLVideoElement && WW instanceof HTMLVideoElement || "undefined" !== typeof HTMLCanvasElement && WW instanceof HTMLCanvasElement || "undefined" !== typeof OffscreenCanvas && WW instanceof OffscreenCanvas) {
-          if (!iW || "object" !== typeof iW) throw new TypeError("init must be an object.");
-          if (void 0 !== iW.rotation && ![0, 90, 180, 270].includes(iW.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== iW.flip && "boolean" !== typeof iW.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(iW.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== iW.duration && (!Number.isFinite(iW.duration) || iW.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (void 0 !== iW.visibleRect && (0, mW.td)(iW.visibleRect, "init.visibleRect"), "undefined" !== typeof VideoFrame) return new lW(new VideoFrame(WW, {
-            timestamp: Math.trunc(iW.timestamp * mW.u),
-            duration: Math.trunc((iW.duration ?? 0) * mW.u) || void 0,
-            visibleRect: iW.visibleRect && {
-              x: iW.visibleRect.left,
-              y: iW.visibleRect.top,
-              width: iW.visibleRect.width,
-              height: iW.visibleRect.height
+            left: JR.visibleRect?.left ?? 0,
+            top: JR.visibleRect?.top ?? 0,
+            width: JR.visibleRect?.width ?? JR.codedWidth,
+            height: JR.visibleRect?.height ?? JR.codedHeight
+          }, void 0 !== JR.displayWidth ? (this.squarePixelWidth = this.rotation % 180 === 0 ? JR.displayWidth : JR.displayHeight, this.squarePixelHeight = this.rotation % 180 === 0 ? JR.displayHeight : JR.displayWidth) : (this.squarePixelWidth = this.visibleRect.width, this.squarePixelHeight = this.visibleRect.height), this._data = JR._doNotCopy ? (0, yR.cd)(RR) : (0, yR.cd)(RR).slice(), this._layout = GR, this.colorSpace = new UR(tR)
+        } else if ("undefined" !== typeof VideoFrame && RR instanceof VideoFrame) {
+          if (void 0 !== JR?.rotation && ![0, 90, 180, 270].includes(JR.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== JR?.flip && "boolean" !== typeof JR.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (void 0 !== JR?.timestamp && !Number.isFinite(JR?.timestamp)) throw new TypeError("init.timestamp, when provided, must be a number.");
+          if (void 0 !== JR?.duration && (!Number.isFinite(JR.duration) || JR.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          void 0 !== JR?.visibleRect && (0, yR.id)(JR.visibleRect, "init.visibleRect"), this._data = RR, this._layout = null, this.format = RR.format, this.visibleRect = {
+            left: RR.visibleRect?.x ?? 0,
+            top: RR.visibleRect?.y ?? 0,
+            width: RR.visibleRect?.width ?? RR.codedWidth,
+            height: RR.visibleRect?.height ?? RR.codedHeight
+          }, this.rotation = JR?.rotation ?? 0, this.flip = JR?.flip ?? !1, this.squarePixelWidth = RR.displayWidth, this.squarePixelHeight = RR.displayHeight, this.timestamp = JR?.timestamp ?? RR.timestamp / 1e6, this.duration = JR?.duration ?? (RR.duration ?? 0) / 1e6, this.colorSpace = new UR(RR.colorSpace)
+        } else if ("undefined" !== typeof HTMLImageElement && RR instanceof HTMLImageElement || "undefined" !== typeof SVGImageElement && RR instanceof SVGImageElement || "undefined" !== typeof ImageBitmap && RR instanceof ImageBitmap || "undefined" !== typeof HTMLVideoElement && RR instanceof HTMLVideoElement || "undefined" !== typeof HTMLCanvasElement && RR instanceof HTMLCanvasElement || "undefined" !== typeof OffscreenCanvas && RR instanceof OffscreenCanvas) {
+          if (!JR || "object" !== typeof JR) throw new TypeError("init must be an object.");
+          if (void 0 !== JR.rotation && ![0, 90, 180, 270].includes(JR.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== JR.flip && "boolean" !== typeof JR.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(JR.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== JR.duration && (!Number.isFinite(JR.duration) || JR.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (void 0 !== JR.visibleRect && (0, yR.id)(JR.visibleRect, "init.visibleRect"), "undefined" !== typeof VideoFrame) return new rR(new VideoFrame(RR, {
+            timestamp: Math.trunc(JR.timestamp * yR.u),
+            duration: Math.trunc((JR.duration ?? 0) * yR.u) || void 0,
+            visibleRect: JR.visibleRect && {
+              x: JR.visibleRect.left,
+              y: JR.visibleRect.top,
+              width: JR.visibleRect.width,
+              height: JR.visibleRect.height
             }
-          }), iW);
-          let OW = 0,
-            EW = 0;
-          if ("naturalWidth" in WW ? (OW = WW.naturalWidth, EW = WW.naturalHeight) : "videoWidth" in WW ? (OW = WW.videoWidth, EW = WW.videoHeight) : "width" in WW && (OW = Number(WW.width), EW = Number(WW.height)), !OW || !EW) throw new TypeError("Could not determine dimensions.");
-          const NW = iW.visibleRect ?? {
+          }), JR);
+          let GR = 0,
+            tR = 0;
+          if ("naturalWidth" in RR ? (GR = RR.naturalWidth, tR = RR.naturalHeight) : "videoWidth" in RR ? (GR = RR.videoWidth, tR = RR.videoHeight) : "width" in RR && (GR = Number(RR.width), tR = Number(RR.height)), !GR || !tR) throw new TypeError("Could not determine dimensions.");
+          const uR = JR.visibleRect ?? {
               left: 0,
               top: 0,
-              width: OW,
-              height: EW
+              width: GR,
+              height: tR
             },
-            PW = new OffscreenCanvas(NW.width, NW.height),
-            LW = PW.getContext("2d", {
-              alpha: (0, mW.Kb)(),
+            ZR = new OffscreenCanvas(uR.width, uR.height),
+            qR = ZR.getContext("2d", {
+              alpha: (0, yR.zb)(),
               willReadFrequently: !0
             });
-          if (!LW) throw new Error("OffscreenCanvas must have support for the '2d' context in order to create a VideoSample from this data.");
-          LW.drawImage(WW, -NW.left, -NW.top), this._data = PW, this._layout = null, this.format = "RGBX", this.visibleRect = {
+          if (!qR) throw new Error("OffscreenCanvas must have support for the '2d' context in order to create a VideoSample from this data.");
+          qR.drawImage(RR, -uR.left, -uR.top), this._data = ZR, this._layout = null, this.format = "RGBX", this.visibleRect = {
             left: 0,
             top: 0,
-            width: NW.width,
-            height: NW.height
-          }, this.squarePixelWidth = NW.width, this.squarePixelHeight = NW.height, this.rotation = iW.rotation ?? 0, this.flip = iW.flip ?? !1, this.timestamp = iW.timestamp, this.duration = iW.duration ?? 0, this.colorSpace = new kW({
+            width: uR.width,
+            height: uR.height
+          }, this.squarePixelWidth = uR.width, this.squarePixelHeight = uR.height, this.rotation = JR.rotation ?? 0, this.flip = JR.flip ?? !1, this.timestamp = JR.timestamp, this.duration = JR.duration ?? 0, this.colorSpace = new UR({
             matrix: "rgb",
             primaries: "bt709",
             transfer: "iec61966-2-1",
             fullRange: !0
           })
         } else {
-          if (!(WW instanceof tW)) throw new TypeError("Invalid data type: Must be a BufferSource, CanvasImageSource, or VideoSampleResource.");
-          if (!iW || "object" !== typeof iW) throw new TypeError("init must be an object.");
-          if (void 0 !== iW.rotation && ![0, 90, 180, 270].includes(iW.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== iW.flip && "boolean" !== typeof iW.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(iW.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== iW.duration && (!Number.isFinite(iW.duration) || iW.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (this._data = WW, WW._referenceCount++, this.format = WW.getFormat(), null !== this.format && !ZW.includes(this.format)) throw new TypeError("getFormat() must return a VideoSamplePixelFormat or null.");
+          if (!(RR instanceof VR)) throw new TypeError("Invalid data type: Must be a BufferSource, CanvasImageSource, or VideoSampleResource.");
+          if (!JR || "object" !== typeof JR) throw new TypeError("init must be an object.");
+          if (void 0 !== JR.rotation && ![0, 90, 180, 270].includes(JR.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== JR.flip && "boolean" !== typeof JR.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(JR.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== JR.duration && (!Number.isFinite(JR.duration) || JR.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (this._data = RR, RR._referenceCount++, this.format = RR.getFormat(), null !== this.format && !KR.includes(this.format)) throw new TypeError("getFormat() must return a VideoSamplePixelFormat or null.");
           if (this.visibleRect = {
               left: 0,
               top: 0,
-              width: WW.getCodedWidth(),
-              height: WW.getCodedHeight()
+              width: RR.getCodedWidth(),
+              height: RR.getCodedHeight()
             }, !Number.isInteger(this.visibleRect.width) || this.visibleRect.width <= 0) throw new TypeError("getCodedWidth() must return a positive integer.");
           if (!Number.isInteger(this.visibleRect.height) || this.visibleRect.height <= 0) throw new TypeError("getCodedHeight() must return a positive integer.");
-          if (this.squarePixelWidth = WW.getSquarePixelWidth(), !Number.isInteger(this.squarePixelWidth) || this.squarePixelWidth <= 0) throw new TypeError("getSquarePixelWidth() must return a positive integer.");
-          if (this.squarePixelHeight = WW.getSquarePixelHeight(), !Number.isInteger(this.squarePixelHeight) || this.squarePixelHeight <= 0) throw new TypeError("getSquarePixelHeight() must return a positive integer.");
-          this.rotation = iW.rotation ?? 0, this.flip = iW.flip ?? !1, this.timestamp = iW.timestamp, this.duration = iW.duration ?? 0, this.colorSpace = WW.getColorSpace()
+          if (this.squarePixelWidth = RR.getSquarePixelWidth(), !Number.isInteger(this.squarePixelWidth) || this.squarePixelWidth <= 0) throw new TypeError("getSquarePixelWidth() must return a positive integer.");
+          if (this.squarePixelHeight = RR.getSquarePixelHeight(), !Number.isInteger(this.squarePixelHeight) || this.squarePixelHeight <= 0) throw new TypeError("getSquarePixelHeight() must return a positive integer.");
+          this.rotation = JR.rotation ?? 0, this.flip = JR.flip ?? !1, this.timestamp = JR.timestamp, this.duration = JR.duration ?? 0, this.colorSpace = RR.getColorSpace()
         }
-        this.encodeOptions = iW?.encodeOptions ?? {}, this.pixelAspectRatio = (0, mW.ed)({
+        this.encodeOptions = JR?.encodeOptions ?? {}, this.pixelAspectRatio = (0, yR.Qc)({
           num: this.squarePixelWidth * this.codedHeight,
           den: this.squarePixelHeight * this.codedWidth
-        }), wW?.register(this, {
+        }), fR?.register(this, {
           type: "video",
           data: this._data
         }, this)
       }
       clone() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        return (0, mW.K)(null !== this._data), this._data instanceof tW ? new lW(this._data, {
+        return (0, yR.I)(null !== this._data), this._data instanceof VR ? new rR(this._data, {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: this.rotation,
           flip: this.flip,
           encodeOptions: this.encodeOptions
-        }) : sW(this._data) ? new lW(this._data.clone(), {
+        }) : WR(this._data) ? new rR(this._data.clone(), {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: this.rotation,
           flip: this.flip,
           encodeOptions: this.encodeOptions
-        }) : this._data instanceof Uint8Array ? ((0, mW.K)(this._layout), new lW(this._data, {
+        }) : this._data instanceof Uint8Array ? ((0, yR.I)(this._layout), new rR(this._data, {
           format: this.format,
           layout: this._layout,
           codedWidth: this.codedWidth,
@@ -6944,7 +6944,7 @@ export const modules = {
           displayHeight: this.displayHeight,
           encodeOptions: this.encodeOptions,
           _doNotCopy: !0
-        })) : new lW(this._data, {
+        })) : new rR(this._data, {
           format: this.format,
           codedWidth: this.codedWidth,
           codedHeight: this.codedHeight,
@@ -6960,129 +6960,129 @@ export const modules = {
         })
       }
       close() {
-        this._closed || (wW?.unregister(this), this._data instanceof tW ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : sW(this._data) ? this._data.close() : this._data = null, this._closed = !0)
+        this._closed || (fR?.unregister(this), this._data instanceof VR ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : WR(this._data) ? this._data.close() : this._data = null, this._closed = !0)
       }
       allocationSize() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (SW(WW), this._closed) throw new Error("VideoSample is closed.");
-        if (null == (WW.format ?? this.format)) throw new Error("Cannot get allocation size when format is null.");
-        if (sW(this._data)) return this._data.allocationSize(WW);
-        return TW(this, WW).allocationSize
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (XR(RR), this._closed) throw new Error("VideoSample is closed.");
+        if (null == (RR.format ?? this.format)) throw new Error("Cannot get allocation size when format is null.");
+        if (WR(this._data)) return this._data.allocationSize(RR);
+        return lR(this, RR).allocationSize
       }
-      async copyTo(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(0, mW.Bb)(WW)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
-        if (SW(iW), this._closed) throw new Error("VideoSample is closed.");
-        if (null == (iW.format ?? this.format)) throw new Error("Cannot copy video sample data when format is null.");
-        if ((0, mW.K)(null !== this._data), sW(this._data)) return this._data.copyTo(WW, iW);
-        if (iW.format && !["RGBA", "RGBX", "BGRA", "BGRX"].includes(this.format) && ["RGBA", "RGBX", "BGRA", "BGRX"].includes(iW.format)) {
-          if (!(this._data instanceof tW)) {
+      async copyTo(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(0, yR.tb)(RR)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
+        if (XR(JR), this._closed) throw new Error("VideoSample is closed.");
+        if (null == (JR.format ?? this.format)) throw new Error("Cannot copy video sample data when format is null.");
+        if ((0, yR.I)(null !== this._data), WR(this._data)) return this._data.copyTo(RR, JR);
+        if (JR.format && !["RGBA", "RGBX", "BGRA", "BGRX"].includes(this.format) && ["RGBA", "RGBX", "BGRA", "BGRX"].includes(JR.format)) {
+          if (!(this._data instanceof VR)) {
             if ("undefined" === typeof VideoFrame) throw new Error("For this sample, converting from a non-RGB to an RGB format requires VideoFrame to be defined.");
-            const OW = this.toVideoFrame(),
-              mW = await OW.copyTo(WW, iW);
-            return OW.close(), mW
+            const GR = this.toVideoFrame(),
+              yR = await GR.copyTo(RR, JR);
+            return GR.close(), yR
           } {
-            const OW = {
+            const GR = {
               stack: [],
               error: void 0,
               hasError: !1
             };
             try {
-              const mW = NW(OW, await this._data.toRgbSample({
+              const yR = uR(GR, await this._data.toRgbSample({
                 timestamp: this.timestamp,
                 duration: this.duration,
                 rotation: this.rotation,
                 flip: this.flip
-              }, iW.colorSpace ?? "srgb"), !1);
-              if (!(mW instanceof lW)) throw new TypeError("toRgbSample() must return a VideoSample.");
-              if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(mW.format)) throw new Error(`Sample returned by toRgbSample was expected to have an RGB format, got '${mW.format}' instead.`);
-              return await mW.copyTo(WW, iW)
-            } catch (xW) {
-              OW.error = xW, OW.hasError = !0
+              }, JR.colorSpace ?? "srgb"), !1);
+              if (!(yR instanceof rR)) throw new TypeError("toRgbSample() must return a VideoSample.");
+              if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(yR.format)) throw new Error(`Sample returned by toRgbSample was expected to have an RGB format, got '${yR.format}' instead.`);
+              return await yR.copyTo(RR, JR)
+            } catch (wR) {
+              GR.error = wR, GR.hasError = !0
             } finally {
-              PW(OW)
+              ZR(GR)
             }
           }
         }
-        const OW = TW(this, iW);
-        (0, mW.K)(this.format);
-        const EW = (0, mW.pd)(WW);
-        if (EW.byteLength < OW.allocationSize) throw new TypeError(`Destination buffer too small. Required: ${OW.allocationSize}, Available: ${EW.byteLength}`);
-        const LW = yW(this.format);
-        let cW;
-        if (this._data instanceof tW) {
-          let WW = this._data.getDataPlanes();
-          if ((0, mW.ac)(WW) && (WW = await WW), !Array.isArray(WW) || WW.some((WW => !(WW.data instanceof Uint8Array) || !Number.isInteger(WW.stride) || WW.stride < 0))) throw new TypeError('getDataPlanes() must return an array of objects with a Uint8Array "data" property and a non-negative integer "stride" property.');
-          cW = WW
-        } else if (this._data instanceof Uint8Array)(0, mW.K)(this._layout), (0, mW.K)(this._layout.length === LW.length), cW = this._layout.map(((WW, iW) => {
-          const OW = Math.ceil(this.codedHeight / LW[iW].heightDivisor);
+        const GR = lR(this, JR);
+        (0, yR.I)(this.format);
+        const tR = (0, yR.cd)(RR);
+        if (tR.byteLength < GR.allocationSize) throw new TypeError(`Destination buffer too small. Required: ${GR.allocationSize}, Available: ${tR.byteLength}`);
+        const qR = BR(this.format);
+        let iR;
+        if (this._data instanceof VR) {
+          let RR = this._data.getDataPlanes();
+          if ((0, yR.Rb)(RR) && (RR = await RR), !Array.isArray(RR) || RR.some((RR => !(RR.data instanceof Uint8Array) || !Number.isInteger(RR.stride) || RR.stride < 0))) throw new TypeError('getDataPlanes() must return an array of objects with a Uint8Array "data" property and a non-negative integer "stride" property.');
+          iR = RR
+        } else if (this._data instanceof Uint8Array)(0, yR.I)(this._layout), (0, yR.I)(this._layout.length === qR.length), iR = this._layout.map(((RR, JR) => {
+          const GR = Math.ceil(this.codedHeight / qR[JR].heightDivisor);
           return {
-            data: this._data.subarray(WW.offset, WW.offset + WW.stride * OW),
-            stride: WW.stride
+            data: this._data.subarray(RR.offset, RR.offset + RR.stride * GR),
+            stride: RR.stride
           }
         }));
         else {
-          const WW = this._data.getContext("2d");
-          (0, mW.K)(WW);
-          const iW = WW.getImageData(0, 0, this.codedWidth, this.codedHeight);
-          cW = [{
-            data: (0, mW.pd)(iW.data),
+          const RR = this._data.getContext("2d");
+          (0, yR.I)(RR);
+          const JR = RR.getImageData(0, 0, this.codedWidth, this.codedHeight);
+          iR = [{
+            data: (0, yR.cd)(JR.data),
             stride: 4 * this.codedWidth
           }]
         }
-        const wW = [],
-          ZW = LW.length;
-        for (let mW = 0; mW < ZW; mW++) {
-          const WW = OW.computedLayouts[mW],
-            iW = cW[mW].stride,
-            NW = cW[mW].data;
-          let PW = WW.sourceTop * iW;
-          PW += WW.sourceLeftBytes;
-          let LW = WW.destinationOffset;
-          const tW = WW.sourceWidthBytes,
-            ZW = {
-              offset: LW,
-              stride: WW.destinationStride
+        const fR = [],
+          KR = qR.length;
+        for (let yR = 0; yR < KR; yR++) {
+          const RR = GR.computedLayouts[yR],
+            JR = iR[yR].stride,
+            uR = iR[yR].data;
+          let ZR = RR.sourceTop * JR;
+          ZR += RR.sourceLeftBytes;
+          let qR = RR.destinationOffset;
+          const VR = RR.sourceWidthBytes,
+            KR = {
+              offset: qR,
+              stride: RR.destinationStride
             };
-          for (let OW = 0; OW < WW.sourceHeight; OW++) {
-            if (PW + tW > NW.byteLength) throw new Error("Source buffer OOB read.");
-            if (LW + tW > EW.byteLength) throw new Error("Destination buffer OOB write.");
-            const OW = NW.subarray(PW, PW + tW);
-            EW.set(OW, LW), PW += iW, LW += WW.destinationStride
+          for (let GR = 0; GR < RR.sourceHeight; GR++) {
+            if (ZR + VR > uR.byteLength) throw new Error("Source buffer OOB read.");
+            if (qR + VR > tR.byteLength) throw new Error("Destination buffer OOB write.");
+            const GR = uR.subarray(ZR, ZR + VR);
+            tR.set(GR, qR), ZR += JR, qR += RR.destinationStride
           }
-          wW.push(ZW)
+          fR.push(KR)
         }
-        if (void 0 !== iW.format) {
-          const WW = this.format.startsWith("RGB") !== iW.format.startsWith("RGB"),
-            mW = this.format.includes("X") && iW.format.includes("A");
-          if (WW || mW)
-            for (let iW = 0; iW < OW.allocationSize; iW += 4) {
-              if (WW) {
-                const WW = EW[iW],
-                  OW = EW[iW + 2];
-                EW[iW] = OW, EW[iW + 2] = WW
+        if (void 0 !== JR.format) {
+          const RR = this.format.startsWith("RGB") !== JR.format.startsWith("RGB"),
+            yR = this.format.includes("X") && JR.format.includes("A");
+          if (RR || yR)
+            for (let JR = 0; JR < GR.allocationSize; JR += 4) {
+              if (RR) {
+                const RR = tR[JR],
+                  GR = tR[JR + 2];
+                tR[JR] = GR, tR[JR + 2] = RR
               }
-              mW && (EW[iW + 3] = 255)
+              yR && (tR[JR + 3] = 255)
             }
         }
-        return wW
+        return fR
       }
       toVideoFrame() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        if ((0, mW.K)(null !== this._data), this._data instanceof tW) {
+        if ((0, yR.I)(null !== this._data), this._data instanceof VR) {
           if (null === this.format) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if format is null.");
-          const WW = this._data.getDataPlanes();
-          if ((0, mW.ac)(WW)) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if getDataPlanes() returns a promise.");
-          const iW = WW.reduce(((WW, iW) => WW + iW.data.byteLength), 0),
-            OW = new Uint8Array(iW);
-          let EW = 0;
-          const NW = [];
-          for (const mW of WW) OW.set(mW.data, EW), NW.push(EW), EW += mW.data.byteLength;
-          return new VideoFrame(OW, {
+          const RR = this._data.getDataPlanes();
+          if ((0, yR.Rb)(RR)) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if getDataPlanes() returns a promise.");
+          const JR = RR.reduce(((RR, JR) => RR + JR.data.byteLength), 0),
+            GR = new Uint8Array(JR);
+          let tR = 0;
+          const uR = [];
+          for (const yR of RR) GR.set(yR.data, tR), uR.push(tR), tR += yR.data.byteLength;
+          return new VideoFrame(GR, {
             format: this.format,
-            layout: WW.map(((WW, iW) => ({
-              offset: NW[iW],
-              stride: WW.stride
+            layout: RR.map(((RR, JR) => ({
+              offset: uR[JR],
+              stride: RR.stride
             }))),
             codedWidth: this.codedWidth,
             codedHeight: this.codedHeight,
@@ -7094,10 +7094,10 @@ export const modules = {
             displayHeight: this.squarePixelHeight
           })
         }
-        return sW(this._data) ? new VideoFrame(this._data, {
+        return WR(this._data) ? new VideoFrame(this._data, {
           timestamp: this.microsecondTimestamp,
           duration: this.microsecondDuration || void 0
-        }) : this._data instanceof Uint8Array ? ((0, mW.K)(this._layout), new VideoFrame(this._data, {
+        }) : this._data instanceof Uint8Array ? ((0, yR.I)(this._layout), new VideoFrame(this._data, {
           format: this.format,
           codedWidth: this.codedWidth,
           codedHeight: this.codedHeight,
@@ -7113,244 +7113,244 @@ export const modules = {
           duration: this.microsecondDuration || void 0
         })
       }
-      draw(WW, iW, OW, mW, EW, NW, PW, LW, cW) {
-        let wW = 0,
-          tW = 0,
-          ZW = this.displayWidth,
-          xW = this.displayHeight,
-          lW = 0,
-          AW = 0,
-          bW = this.displayWidth,
-          jW = this.displayHeight;
-        if (void 0 !== NW ? (wW = iW, tW = OW, ZW = mW, xW = EW, lW = NW, AW = PW, void 0 !== LW ? (bW = LW, jW = cW) : (bW = ZW, jW = xW)) : (lW = iW, AW = OW, void 0 !== mW && (bW = mW, jW = EW)), !("undefined" !== typeof CanvasRenderingContext2D && WW instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && WW instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
-        if (!Number.isFinite(wW)) throw new TypeError("sx must be a number.");
-        if (!Number.isFinite(tW)) throw new TypeError("sy must be a number.");
-        if (!Number.isFinite(ZW) || ZW < 0) throw new TypeError("sWidth must be a non-negative number.");
-        if (!Number.isFinite(xW) || xW < 0) throw new TypeError("sHeight must be a non-negative number.");
-        if (!Number.isFinite(lW)) throw new TypeError("dx must be a number.");
-        if (!Number.isFinite(AW)) throw new TypeError("dy must be a number.");
-        if (!Number.isFinite(bW) || bW < 0) throw new TypeError("dWidth must be a non-negative number.");
-        if (!Number.isFinite(jW) || jW < 0) throw new TypeError("dHeight must be a non-negative number.");
+      draw(RR, JR, GR, yR, tR, uR, ZR, qR, iR) {
+        let fR = 0,
+          VR = 0,
+          KR = this.displayWidth,
+          wR = this.displayHeight,
+          rR = 0,
+          eR = 0,
+          aR = this.displayWidth,
+          LR = this.displayHeight;
+        if (void 0 !== uR ? (fR = JR, VR = GR, KR = yR, wR = tR, rR = uR, eR = ZR, void 0 !== qR ? (aR = qR, LR = iR) : (aR = KR, LR = wR)) : (rR = JR, eR = GR, void 0 !== yR && (aR = yR, LR = tR)), !("undefined" !== typeof CanvasRenderingContext2D && RR instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && RR instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
+        if (!Number.isFinite(fR)) throw new TypeError("sx must be a number.");
+        if (!Number.isFinite(VR)) throw new TypeError("sy must be a number.");
+        if (!Number.isFinite(KR) || KR < 0) throw new TypeError("sWidth must be a non-negative number.");
+        if (!Number.isFinite(wR) || wR < 0) throw new TypeError("sHeight must be a non-negative number.");
+        if (!Number.isFinite(rR)) throw new TypeError("dx must be a number.");
+        if (!Number.isFinite(eR)) throw new TypeError("dy must be a number.");
+        if (!Number.isFinite(aR) || aR < 0) throw new TypeError("dWidth must be a non-negative number.");
+        if (!Number.isFinite(LR) || LR < 0) throw new TypeError("dHeight must be a non-negative number.");
         if (this._closed) throw new Error("VideoSample is closed.");
         ({
-          sx: wW,
-          sy: tW,
-          sWidth: ZW,
-          sHeight: xW
-        } = this._unmapSourceRegion(wW, tW, ZW, xW, this.rotation, this.flip));
-        const UW = this.toCanvasImageSource();
-        WW.save();
-        const kW = lW + bW / 2,
-          sW = AW + jW / 2;
-        WW.translate(kW, sW), this.flip && WW.scale(-1, 1), WW.rotate(this.rotation * Math.PI / 180);
-        const MW = this.rotation % 180 === 0 ? 1 : bW / jW;
-        WW.scale(1 / MW, MW), WW.drawImage(UW, wW, tW, ZW, xW, -bW / 2, -jW / 2, bW, jW), WW.restore()
+          sx: fR,
+          sy: VR,
+          sWidth: KR,
+          sHeight: wR
+        } = this._unmapSourceRegion(fR, VR, KR, wR, this.rotation, this.flip));
+        const nR = this.toCanvasImageSource();
+        RR.save();
+        const UR = rR + aR / 2,
+          WR = eR + LR / 2;
+        RR.translate(UR, WR), this.flip && RR.scale(-1, 1), RR.rotate(this.rotation * Math.PI / 180);
+        const AR = this.rotation % 180 === 0 ? 1 : aR / LR;
+        RR.scale(1 / AR, AR), RR.drawImage(nR, fR, VR, KR, wR, -aR / 2, -LR / 2, aR, LR), RR.restore()
       }
-      drawWithFit(WW, iW) {
-        if (!("undefined" !== typeof CanvasRenderingContext2D && WW instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && WW instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
-        if (!iW || "object" !== typeof iW) throw new TypeError("options must be an object.");
-        if (!["fill", "contain", "cover"].includes(iW.fit)) throw new TypeError("options.fit must be 'fill', 'contain', or 'cover'.");
-        if (void 0 !== iW.rotation && ![0, 90, 180, 270].includes(iW.rotation)) throw new TypeError("options.rotation, when provided, must be 0, 90, 180, or 270.");
-        if (void 0 !== iW.flip && "boolean" !== typeof iW.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
-        void 0 !== iW.crop && KW(iW.crop, "options.");
-        const OW = WW.canvas.width,
-          mW = WW.canvas.height,
-          EW = iW.rotation ?? this.rotation,
-          NW = iW.flip ?? this.flip,
-          [PW, LW] = EW % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
-        let cW, wW, tW, ZW, xW = iW.crop;
-        xW && (xW = MW(xW, PW, LW));
+      drawWithFit(RR, JR) {
+        if (!("undefined" !== typeof CanvasRenderingContext2D && RR instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && RR instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
+        if (!JR || "object" !== typeof JR) throw new TypeError("options must be an object.");
+        if (!["fill", "contain", "cover"].includes(JR.fit)) throw new TypeError("options.fit must be 'fill', 'contain', or 'cover'.");
+        if (void 0 !== JR.rotation && ![0, 90, 180, 270].includes(JR.rotation)) throw new TypeError("options.rotation, when provided, must be 0, 90, 180, or 270.");
+        if (void 0 !== JR.flip && "boolean" !== typeof JR.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
+        void 0 !== JR.crop && CR(JR.crop, "options.");
+        const GR = RR.canvas.width,
+          yR = RR.canvas.height,
+          tR = JR.rotation ?? this.rotation,
+          uR = JR.flip ?? this.flip,
+          [ZR, qR] = tR % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
+        let iR, fR, VR, KR, wR = JR.crop;
+        wR && (wR = AR(wR, ZR, qR));
         const {
-          sx: lW,
-          sy: AW,
-          sWidth: bW,
-          sHeight: jW
-        } = this._unmapSourceRegion(iW.crop?.left ?? 0, iW.crop?.top ?? 0, iW.crop?.width ?? PW, iW.crop?.height ?? LW, EW, NW);
-        if ("fill" === iW.fit) cW = 0, wW = 0, tW = OW, ZW = mW;
+          sx: rR,
+          sy: eR,
+          sWidth: aR,
+          sHeight: LR
+        } = this._unmapSourceRegion(JR.crop?.left ?? 0, JR.crop?.top ?? 0, JR.crop?.width ?? ZR, JR.crop?.height ?? qR, tR, uR);
+        if ("fill" === JR.fit) iR = 0, fR = 0, VR = GR, KR = yR;
         else {
-          const [WW, EW] = iW.crop ? [iW.crop.width, iW.crop.height] : [PW, LW], NW = "contain" === iW.fit ? Math.min(OW / WW, mW / EW) : Math.max(OW / WW, mW / EW);
-          tW = WW * NW, ZW = EW * NW, cW = (OW - tW) / 2, wW = (mW - ZW) / 2
+          const [RR, tR] = JR.crop ? [JR.crop.width, JR.crop.height] : [ZR, qR], uR = "contain" === JR.fit ? Math.min(GR / RR, yR / tR) : Math.max(GR / RR, yR / tR);
+          VR = RR * uR, KR = tR * uR, iR = (GR - VR) / 2, fR = (yR - KR) / 2
         }
-        WW.save();
-        const UW = EW % 180 === 0 ? 1 : tW / ZW;
-        WW.translate(OW / 2, mW / 2), NW && WW.scale(-1, 1), WW.rotate(EW * Math.PI / 180), WW.scale(1 / UW, UW), WW.translate(-OW / 2, -mW / 2), WW.drawImage(this.toCanvasImageSource(), lW, AW, bW, jW, cW, wW, tW, ZW), WW.restore()
+        RR.save();
+        const nR = tR % 180 === 0 ? 1 : VR / KR;
+        RR.translate(GR / 2, yR / 2), uR && RR.scale(-1, 1), RR.rotate(tR * Math.PI / 180), RR.scale(1 / nR, nR), RR.translate(-GR / 2, -yR / 2), RR.drawImage(this.toCanvasImageSource(), rR, eR, aR, LR, iR, fR, VR, KR), RR.restore()
       }
-      _unmapSourceRegion(WW, iW, OW, mW, EW, NW) {
-        if (NW) {
-          WW = (EW % 180 === 0 ? this.squarePixelWidth : this.squarePixelHeight) - WW - OW
+      _unmapSourceRegion(RR, JR, GR, yR, tR, uR) {
+        if (uR) {
+          RR = (tR % 180 === 0 ? this.squarePixelWidth : this.squarePixelHeight) - RR - GR
         }
-        return 90 === EW ? [WW, iW, OW, mW] = [iW, this.squarePixelHeight - WW - OW, mW, OW] : 180 === EW ? [WW, iW] = [this.squarePixelWidth - WW - OW, this.squarePixelHeight - iW - mW] : 270 === EW && ([WW, iW, OW, mW] = [this.squarePixelWidth - iW - mW, WW, mW, OW]), {
-          sx: WW,
-          sy: iW,
-          sWidth: OW,
-          sHeight: mW
+        return 90 === tR ? [RR, JR, GR, yR] = [JR, this.squarePixelHeight - RR - GR, yR, GR] : 180 === tR ? [RR, JR] = [this.squarePixelWidth - RR - GR, this.squarePixelHeight - JR - yR] : 270 === tR && ([RR, JR, GR, yR] = [this.squarePixelWidth - JR - yR, RR, yR, GR]), {
+          sx: RR,
+          sy: JR,
+          sWidth: GR,
+          sHeight: yR
         }
       }
-      _drawWithFitAndMipmapping(WW, iW, OW) {
-        const mW = WW.width,
-          EW = WW.height,
-          [NW, PW] = OW.rotation % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth],
-          LW = OW.crop ? OW.crop.width : NW,
-          cW = OW.crop ? OW.crop.height : PW;
-        let wW = 0;
-        2 * mW < LW && 2 * EW < cW && (wW = Math.floor(Math.log2(Math.min(LW / mW, cW / EW))));
-        const tW = mW * 2 ** wW,
-          ZW = EW * 2 ** wW,
+      _drawWithFitAndMipmapping(RR, JR, GR) {
+        const yR = RR.width,
+          tR = RR.height,
+          [uR, ZR] = GR.rotation % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth],
+          qR = GR.crop ? GR.crop.width : uR,
+          iR = GR.crop ? GR.crop.height : ZR;
+        let fR = 0;
+        2 * yR < qR && 2 * tR < iR && (fR = Math.floor(Math.log2(Math.min(qR / yR, iR / tR))));
+        const VR = yR * 2 ** fR,
+          KR = tR * 2 ** fR,
           {
-            canvas: xW,
-            context: lW,
-            isNew: AW
-          } = wW > 0 ? UW(tW, ZW) : {
-            canvas: WW,
-            context: iW,
-            isNew: OW.targetIsFresh
+            canvas: wR,
+            context: rR,
+            isNew: eR
+          } = fR > 0 ? nR(VR, KR) : {
+            canvas: RR,
+            context: JR,
+            isNew: GR.targetIsFresh
           };
-        lW.imageSmoothingQuality = "high", OW.fillBlack ? (lW.fillStyle = "black", lW.fillRect(0, 0, tW, ZW)) : AW || lW.clearRect(0, 0, tW, ZW), this.drawWithFit(lW, {
-          fit: OW.fit,
-          rotation: OW.rotation,
-          flip: OW.flip,
-          crop: OW.crop
-        }), lW.globalCompositeOperation = "copy";
-        for (let bW = wW; bW > 1; bW--) {
-          const WW = mW * 2 ** bW,
-            iW = EW * 2 ** bW;
-          lW.drawImage(xW, 0, 0, WW, iW, 0, 0, WW / 2, iW / 2)
+        rR.imageSmoothingQuality = "high", GR.fillBlack ? (rR.fillStyle = "black", rR.fillRect(0, 0, VR, KR)) : eR || rR.clearRect(0, 0, VR, KR), this.drawWithFit(rR, {
+          fit: GR.fit,
+          rotation: GR.rotation,
+          flip: GR.flip,
+          crop: GR.crop
+        }), rR.globalCompositeOperation = "copy";
+        for (let aR = fR; aR > 1; aR--) {
+          const RR = yR * 2 ** aR,
+            JR = tR * 2 ** aR;
+          rR.drawImage(wR, 0, 0, RR, JR, 0, 0, RR / 2, JR / 2)
         }
-        lW.globalCompositeOperation = "source-over", wW > 0 && (iW.imageSmoothingQuality = "high", iW.globalCompositeOperation = "copy", iW.drawImage(xW, 0, 0, 2 * mW, 2 * EW, 0, 0, mW, EW), iW.globalCompositeOperation = "source-over")
+        rR.globalCompositeOperation = "source-over", fR > 0 && (JR.imageSmoothingQuality = "high", JR.globalCompositeOperation = "copy", JR.drawImage(wR, 0, 0, 2 * yR, 2 * tR, 0, 0, yR, tR), JR.globalCompositeOperation = "source-over")
       }
       toCanvasImageSource() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        if ((0, mW.K)(null !== this._data), this._data instanceof tW || this._data instanceof Uint8Array) {
-          const WW = this.toVideoFrame();
-          return queueMicrotask((() => WW.close())), WW
+        if ((0, yR.I)(null !== this._data), this._data instanceof VR || this._data instanceof Uint8Array) {
+          const RR = this.toVideoFrame();
+          return queueMicrotask((() => RR.close())), RR
         }
         return this._data
       }
-      async transform(WW) {
-        if (!WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (void 0 !== WW.width && (!Number.isInteger(WW.width) || WW.width <= 0)) throw new TypeError("options.width, when provided, must be a positive integer.");
-        if (void 0 !== WW.height && (!Number.isInteger(WW.height) || WW.height <= 0)) throw new TypeError("options.height, when provided, must be a positive integer.");
-        if (void 0 !== WW.roundDimensionsTo && (!Number.isInteger(WW.roundDimensionsTo) || WW.roundDimensionsTo <= 0)) throw new TypeError("options.roundDimensionsTo, when provided, must be a positive integer.");
-        if (void 0 !== WW.fit && !["fill", "contain", "cover"].includes(WW.fit)) throw new TypeError('options.fit, when provided, must be one of "fill", "contain", or "cover".');
-        if (void 0 !== WW.width && void 0 !== WW.height && void 0 === WW.fit) throw new TypeError("When both options.width and options.height are provided, options.fit must also be provided.");
-        if (void 0 !== WW.rotate && ![0, 90, 180, 270].includes(WW.rotate)) throw new TypeError("options.rotate, when provided, must be 0, 90, 180 or 270.");
-        if (void 0 !== WW.flip && "boolean" !== typeof WW.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
-        if (void 0 !== WW.crop && KW(WW.crop, "options."), void 0 !== WW.alpha && !["keep", "discard"].includes(WW.alpha)) throw new TypeError("options.alpha, when provided, must be 'keep' or 'discard'.");
+      async transform(RR) {
+        if (!RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (void 0 !== RR.width && (!Number.isInteger(RR.width) || RR.width <= 0)) throw new TypeError("options.width, when provided, must be a positive integer.");
+        if (void 0 !== RR.height && (!Number.isInteger(RR.height) || RR.height <= 0)) throw new TypeError("options.height, when provided, must be a positive integer.");
+        if (void 0 !== RR.roundDimensionsTo && (!Number.isInteger(RR.roundDimensionsTo) || RR.roundDimensionsTo <= 0)) throw new TypeError("options.roundDimensionsTo, when provided, must be a positive integer.");
+        if (void 0 !== RR.fit && !["fill", "contain", "cover"].includes(RR.fit)) throw new TypeError('options.fit, when provided, must be one of "fill", "contain", or "cover".');
+        if (void 0 !== RR.width && void 0 !== RR.height && void 0 === RR.fit) throw new TypeError("When both options.width and options.height are provided, options.fit must also be provided.");
+        if (void 0 !== RR.rotate && ![0, 90, 180, 270].includes(RR.rotate)) throw new TypeError("options.rotate, when provided, must be 0, 90, 180 or 270.");
+        if (void 0 !== RR.flip && "boolean" !== typeof RR.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
+        if (void 0 !== RR.crop && CR(RR.crop, "options."), void 0 !== RR.alpha && !["keep", "discard"].includes(RR.alpha)) throw new TypeError("options.alpha, when provided, must be 'keep' or 'discard'.");
         const {
-          rotation: iW,
-          flip: OW
-        } = (0, mW.jb)(this.rotation, this.flip, WW.rotate ?? 0, WW.flip ?? !1), [EW, NW] = iW % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
-        let PW = WW.crop;
-        PW && (PW = MW(PW, EW, NW));
-        const LW = PW ? PW.width : EW,
-          cW = PW ? PW.height : NW,
-          wW = LW / cW;
-        let tW, ZW;
-        void 0 !== WW.width && void 0 === WW.height ? (tW = WW.width, ZW = tW / wW) : void 0 === WW.width && void 0 !== WW.height ? (ZW = WW.height, tW = ZW * wW) : void 0 !== WW.width && void 0 !== WW.height ? (tW = WW.width, ZW = WW.height) : (tW = LW, ZW = cW), tW = (0, mW.Sc)(tW, WW.roundDimensionsTo ?? 1), ZW = (0, mW.Sc)(ZW, WW.roundDimensionsTo ?? 1);
-        const xW = {
-          width: tW,
-          height: ZW,
-          fit: WW.fit ?? "fill",
-          rotation: iW,
-          flip: OW,
-          crop: PW ?? {
+          rotation: JR,
+          flip: GR
+        } = (0, yR.cb)(this.rotation, this.flip, RR.rotate ?? 0, RR.flip ?? !1), [tR, uR] = JR % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
+        let ZR = RR.crop;
+        ZR && (ZR = AR(ZR, tR, uR));
+        const qR = ZR ? ZR.width : tR,
+          iR = ZR ? ZR.height : uR,
+          fR = qR / iR;
+        let VR, KR;
+        void 0 !== RR.width && void 0 === RR.height ? (VR = RR.width, KR = VR / fR) : void 0 === RR.width && void 0 !== RR.height ? (KR = RR.height, VR = KR * fR) : void 0 !== RR.width && void 0 !== RR.height ? (VR = RR.width, KR = RR.height) : (VR = qR, KR = iR), VR = (0, yR.Bc)(VR, RR.roundDimensionsTo ?? 1), KR = (0, yR.Bc)(KR, RR.roundDimensionsTo ?? 1);
+        const wR = {
+          width: VR,
+          height: KR,
+          fit: RR.fit ?? "fill",
+          rotation: JR,
+          flip: GR,
+          crop: ZR ?? {
             left: 0,
             top: 0,
-            width: EW,
-            height: NW
+            width: tR,
+            height: uR
           },
-          alpha: WW.alpha ?? "keep"
+          alpha: RR.alpha ?? "keep"
         };
-        for (const lW of AW) {
-          let WW = lW(this, xW);
-          if ((0, mW.ac)(WW) && (WW = await WW), null !== WW) return WW
+        for (const rR of eR) {
+          let RR = rR(this, wR);
+          if ((0, yR.Rb)(RR) && (RR = await RR), null !== RR) return RR
         }
         const {
-          canvas: bW,
-          context: jW,
-          isNew: kW
-        } = UW(xW.width, xW.height);
-        return this._drawWithFitAndMipmapping(bW, jW, {
-          fit: xW.fit,
-          rotation: xW.rotation,
-          flip: xW.flip,
-          crop: xW.crop,
-          targetIsFresh: kW,
-          fillBlack: "discard" === xW.alpha
-        }), new lW(bW, {
+          canvas: aR,
+          context: LR,
+          isNew: UR
+        } = nR(wR.width, wR.height);
+        return this._drawWithFitAndMipmapping(aR, LR, {
+          fit: wR.fit,
+          rotation: wR.rotation,
+          flip: wR.flip,
+          crop: wR.crop,
+          targetIsFresh: UR,
+          fillBlack: "discard" === wR.alpha
+        }), new rR(aR, {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: 0,
           flip: !1
         })
       }
-      setRotation(WW) {
-        if (![0, 90, 180, 270].includes(WW)) throw new TypeError("newRotation must be 0, 90, 180, or 270.");
-        this.rotation = WW
+      setRotation(RR) {
+        if (![0, 90, 180, 270].includes(RR)) throw new TypeError("newRotation must be 0, 90, 180, or 270.");
+        this.rotation = RR
       }
-      setFlip(WW) {
-        if ("boolean" !== typeof WW) throw new TypeError("newFlip must be a boolean.");
-        this.flip = WW
+      setFlip(RR) {
+        if ("boolean" !== typeof RR) throw new TypeError("newFlip must be a boolean.");
+        this.flip = RR
       }
-      setTimestamp(WW) {
-        if (!Number.isFinite(WW)) throw new TypeError("newTimestamp must be a number.");
-        this.timestamp = WW
+      setTimestamp(RR) {
+        if (!Number.isFinite(RR)) throw new TypeError("newTimestamp must be a number.");
+        this.timestamp = RR
       }
-      setDuration(WW) {
-        if (!Number.isFinite(WW) || WW < 0) throw new TypeError("newDuration must be a non-negative number.");
-        this.duration = WW
+      setDuration(RR) {
+        if (!Number.isFinite(RR) || RR < 0) throw new TypeError("newDuration must be a non-negative number.");
+        this.duration = RR
       }
-      setEncodeOptions(WW) {
-        if (!WW || "object" !== typeof WW) throw new TypeError("newEncodeOptions must be an object.");
-        this.encodeOptions = WW
+      setEncodeOptions(RR) {
+        if (!RR || "object" !== typeof RR) throw new TypeError("newEncodeOptions must be an object.");
+        this.encodeOptions = RR
       } [Symbol.dispose]() {
         this.close()
       }
     }
-    const AW = [],
-      bW = [];
-    let jW = 0;
-    const UW = (WW, iW) => {
-      for (const mW of bW)
-        if (mW.canvas.width === WW && mW.canvas.height === iW) return mW.age = jW++, {
-          canvas: mW.canvas,
-          context: mW.context,
+    const eR = [],
+      aR = [];
+    let LR = 0;
+    const nR = (RR, JR) => {
+      for (const yR of aR)
+        if (yR.canvas.width === RR && yR.canvas.height === JR) return yR.age = LR++, {
+          canvas: yR.canvas,
+          context: yR.context,
           isNew: !1
         };
-      let OW;
-      if ("undefined" !== typeof OffscreenCanvas) OW = new OffscreenCanvas(WW, iW);
+      let GR;
+      if ("undefined" !== typeof OffscreenCanvas) GR = new OffscreenCanvas(RR, JR);
       else {
         if ("undefined" === typeof window || "undefined" === typeof document) throw new Error("Cannot transform VideoSamples in this environment. Either run in an environment with OffscreenCanvas or HTMLCanvasElement, or supply a custom VideoSample transformer using registerVideoSampleTransformer().");
-        OW = document.createElement("canvas"), OW.width = WW, OW.height = iW
+        GR = document.createElement("canvas"), GR.width = RR, GR.height = JR
       }
-      const EW = OW.getContext("2d", {
+      const tR = GR.getContext("2d", {
         alpha: !0,
         willReadFrequently: !1
       });
-      if (!EW) throw new Error("The '2d' canvas context is required to transform VideoSamples. Register a custom transformer using registerVideoSampleTransformer to work around this limitation.");
-      return bW.length >= 3 && bW.splice((0, mW.F)(bW, (WW => WW.age)), 1), bW.push({
-        canvas: OW,
-        context: EW,
-        age: jW++
+      if (!tR) throw new Error("The '2d' canvas context is required to transform VideoSamples. Register a custom transformer using registerVideoSampleTransformer to work around this limitation.");
+      return aR.length >= 3 && aR.splice((0, yR.E)(aR, (RR => RR.age)), 1), aR.push({
+        canvas: GR,
+        context: tR,
+        age: LR++
       }), {
-        canvas: OW,
-        context: EW,
+        canvas: GR,
+        context: tR,
         isNew: !0
       }
     };
-    class kW {
-      constructor(WW) {
-        if (void 0 !== WW) {
-          if (!WW || "object" !== typeof WW) throw new TypeError("init.colorSpace, when provided, must be an object.");
-          const iW = Object.keys(mW.g);
-          if (null != WW.primaries && !iW.includes(WW.primaries)) throw new TypeError(`init.colorSpace.primaries, when provided, must be one of ${iW.join(", ")}.`);
-          const OW = Object.keys(mW.v);
-          if (null != WW.transfer && !OW.includes(WW.transfer)) throw new TypeError(`init.colorSpace.transfer, when provided, must be one of ${OW.join(", ")}.`);
-          const EW = Object.keys(mW.r);
-          if (null != WW.matrix && !EW.includes(WW.matrix)) throw new TypeError(`init.colorSpace.matrix, when provided, must be one of ${EW.join(", ")}.`);
-          if (null != WW.fullRange && "boolean" !== typeof WW.fullRange) throw new TypeError("init.colorSpace.fullRange, when provided, must be a boolean.")
+    class UR {
+      constructor(RR) {
+        if (void 0 !== RR) {
+          if (!RR || "object" !== typeof RR) throw new TypeError("init.colorSpace, when provided, must be an object.");
+          const JR = Object.keys(yR.e);
+          if (null != RR.primaries && !JR.includes(RR.primaries)) throw new TypeError(`init.colorSpace.primaries, when provided, must be one of ${JR.join(", ")}.`);
+          const GR = Object.keys(yR.x);
+          if (null != RR.transfer && !GR.includes(RR.transfer)) throw new TypeError(`init.colorSpace.transfer, when provided, must be one of ${GR.join(", ")}.`);
+          const tR = Object.keys(yR.o);
+          if (null != RR.matrix && !tR.includes(RR.matrix)) throw new TypeError(`init.colorSpace.matrix, when provided, must be one of ${tR.join(", ")}.`);
+          if (null != RR.fullRange && "boolean" !== typeof RR.fullRange) throw new TypeError("init.colorSpace.fullRange, when provided, must be a boolean.")
         }
-        this.primaries = WW?.primaries ?? null, this.transfer = WW?.transfer ?? null, this.matrix = WW?.matrix ?? null, this.fullRange = WW?.fullRange ?? null
+        this.primaries = RR?.primaries ?? null, this.transfer = RR?.transfer ?? null, this.matrix = RR?.matrix ?? null, this.fullRange = RR?.fullRange ?? null
       }
       toJSON() {
         return {
@@ -7361,114 +7361,114 @@ export const modules = {
         }
       }
     }
-    const sW = WW => "undefined" !== typeof VideoFrame && WW instanceof VideoFrame,
-      MW = (WW, iW, OW) => {
-        const EW = Math.min(WW.left, iW),
-          NW = Math.min(WW.top, OW),
-          PW = Math.min(WW.width, iW - EW),
-          LW = Math.min(WW.height, OW - NW);
-        return (0, mW.K)(PW >= 0), (0, mW.K)(LW >= 0), {
-          left: EW,
-          top: NW,
-          width: PW,
-          height: LW
+    const WR = RR => "undefined" !== typeof VideoFrame && RR instanceof VideoFrame,
+      AR = (RR, JR, GR) => {
+        const tR = Math.min(RR.left, JR),
+          uR = Math.min(RR.top, GR),
+          ZR = Math.min(RR.width, JR - tR),
+          qR = Math.min(RR.height, GR - uR);
+        return (0, yR.I)(ZR >= 0), (0, yR.I)(qR >= 0), {
+          left: tR,
+          top: uR,
+          width: ZR,
+          height: qR
         }
       },
-      KW = (WW, iW) => {
-        if (!WW || "object" !== typeof WW) throw new TypeError(iW + "crop, when provided, must be an object.");
-        if (!Number.isInteger(WW.left) || WW.left < 0) throw new TypeError(iW + "crop.left must be a non-negative integer.");
-        if (!Number.isInteger(WW.top) || WW.top < 0) throw new TypeError(iW + "crop.top must be a non-negative integer.");
-        if (!Number.isInteger(WW.width) || WW.width < 0) throw new TypeError(iW + "crop.width must be a non-negative integer.");
-        if (!Number.isInteger(WW.height) || WW.height < 0) throw new TypeError(iW + "crop.height must be a non-negative integer.")
+      CR = (RR, JR) => {
+        if (!RR || "object" !== typeof RR) throw new TypeError(JR + "crop, when provided, must be an object.");
+        if (!Number.isInteger(RR.left) || RR.left < 0) throw new TypeError(JR + "crop.left must be a non-negative integer.");
+        if (!Number.isInteger(RR.top) || RR.top < 0) throw new TypeError(JR + "crop.top must be a non-negative integer.");
+        if (!Number.isInteger(RR.width) || RR.width < 0) throw new TypeError(JR + "crop.width must be a non-negative integer.");
+        if (!Number.isInteger(RR.height) || RR.height < 0) throw new TypeError(JR + "crop.height must be a non-negative integer.")
       },
-      SW = WW => {
-        if (!WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (void 0 !== WW.colorSpace && !["display-p3", "srgb"].includes(WW.colorSpace)) throw new TypeError("options.colorSpace, when provided, must be 'display-p3' or 'srgb'.");
-        if (void 0 !== WW.format && "string" !== typeof WW.format) throw new TypeError("options.format, when provided, must be a string.");
-        if (void 0 !== WW.layout) {
-          if (!Array.isArray(WW.layout)) throw new TypeError("options.layout, when provided, must be an array.");
-          for (const iW of WW.layout) {
-            if (!iW || "object" !== typeof iW) throw new TypeError("Each entry in options.layout must be an object.");
-            if (!Number.isInteger(iW.offset) || iW.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
-            if (!Number.isInteger(iW.stride) || iW.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
+      XR = RR => {
+        if (!RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (void 0 !== RR.colorSpace && !["display-p3", "srgb"].includes(RR.colorSpace)) throw new TypeError("options.colorSpace, when provided, must be 'display-p3' or 'srgb'.");
+        if (void 0 !== RR.format && "string" !== typeof RR.format) throw new TypeError("options.format, when provided, must be a string.");
+        if (void 0 !== RR.layout) {
+          if (!Array.isArray(RR.layout)) throw new TypeError("options.layout, when provided, must be an array.");
+          for (const JR of RR.layout) {
+            if (!JR || "object" !== typeof JR) throw new TypeError("Each entry in options.layout must be an object.");
+            if (!Number.isInteger(JR.offset) || JR.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
+            if (!Number.isInteger(JR.stride) || JR.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
           }
         }
-        if (void 0 !== WW.rect) {
-          if (!WW.rect || "object" !== typeof WW.rect) throw new TypeError("options.rect, when provided, must be an object.");
-          if (void 0 !== WW.rect.x && (!Number.isInteger(WW.rect.x) || WW.rect.x < 0)) throw new TypeError("options.rect.x, when provided, must be a non-negative integer.");
-          if (void 0 !== WW.rect.y && (!Number.isInteger(WW.rect.y) || WW.rect.y < 0)) throw new TypeError("options.rect.y, when provided, must be a non-negative integer.");
-          if (void 0 !== WW.rect.width && (!Number.isInteger(WW.rect.width) || WW.rect.width < 0)) throw new TypeError("options.rect.width, when provided, must be a non-negative integer.");
-          if (void 0 !== WW.rect.height && (!Number.isInteger(WW.rect.height) || WW.rect.height < 0)) throw new TypeError("options.rect.height, when provided, must be a non-negative integer.")
+        if (void 0 !== RR.rect) {
+          if (!RR.rect || "object" !== typeof RR.rect) throw new TypeError("options.rect, when provided, must be an object.");
+          if (void 0 !== RR.rect.x && (!Number.isInteger(RR.rect.x) || RR.rect.x < 0)) throw new TypeError("options.rect.x, when provided, must be a non-negative integer.");
+          if (void 0 !== RR.rect.y && (!Number.isInteger(RR.rect.y) || RR.rect.y < 0)) throw new TypeError("options.rect.y, when provided, must be a non-negative integer.");
+          if (void 0 !== RR.rect.width && (!Number.isInteger(RR.rect.width) || RR.rect.width < 0)) throw new TypeError("options.rect.width, when provided, must be a non-negative integer.");
+          if (void 0 !== RR.rect.height && (!Number.isInteger(RR.rect.height) || RR.rect.height < 0)) throw new TypeError("options.rect.height, when provided, must be a non-negative integer.")
         }
       },
-      YW = (WW, iW, OW) => {
-        const mW = yW(WW),
-          EW = [];
-        let NW = 0;
-        for (const PW of mW) {
-          const WW = Math.ceil(iW / PW.widthDivisor),
-            mW = Math.ceil(OW / PW.heightDivisor),
-            LW = WW * PW.sampleBytes,
-            cW = LW * mW;
-          EW.push({
-            offset: NW,
-            stride: LW
-          }), NW += cW
+      MR = (RR, JR, GR) => {
+        const yR = BR(RR),
+          tR = [];
+        let uR = 0;
+        for (const ZR of yR) {
+          const RR = Math.ceil(JR / ZR.widthDivisor),
+            yR = Math.ceil(GR / ZR.heightDivisor),
+            qR = RR * ZR.sampleBytes,
+            iR = qR * yR;
+          tR.push({
+            offset: uR,
+            stride: qR
+          }), uR += iR
         }
-        return EW
+        return tR
       },
-      yW = WW => {
-        const iW = (WW, iW, OW, mW, EW) => {
-          const NW = [{
-            sampleBytes: WW,
+      BR = RR => {
+        const JR = (RR, JR, GR, yR, tR) => {
+          const uR = [{
+            sampleBytes: RR,
             widthDivisor: 1,
             heightDivisor: 1
           }, {
-            sampleBytes: iW,
-            widthDivisor: OW,
-            heightDivisor: mW
+            sampleBytes: JR,
+            widthDivisor: GR,
+            heightDivisor: yR
           }, {
-            sampleBytes: iW,
-            widthDivisor: OW,
-            heightDivisor: mW
+            sampleBytes: JR,
+            widthDivisor: GR,
+            heightDivisor: yR
           }];
-          return EW && NW.push({
-            sampleBytes: WW,
+          return tR && uR.push({
+            sampleBytes: RR,
             widthDivisor: 1,
             heightDivisor: 1
-          }), NW
+          }), uR
         };
-        switch (WW) {
+        switch (RR) {
           case "I420":
-            return iW(1, 1, 2, 2, !1);
+            return JR(1, 1, 2, 2, !1);
           case "I420P10":
           case "I420P12":
-            return iW(2, 2, 2, 2, !1);
+            return JR(2, 2, 2, 2, !1);
           case "I420A":
-            return iW(1, 1, 2, 2, !0);
+            return JR(1, 1, 2, 2, !0);
           case "I420AP10":
           case "I420AP12":
-            return iW(2, 2, 2, 2, !0);
+            return JR(2, 2, 2, 2, !0);
           case "I422":
-            return iW(1, 1, 2, 1, !1);
+            return JR(1, 1, 2, 1, !1);
           case "I422P10":
           case "I422P12":
-            return iW(2, 2, 2, 1, !1);
+            return JR(2, 2, 2, 1, !1);
           case "I422A":
-            return iW(1, 1, 2, 1, !0);
+            return JR(1, 1, 2, 1, !0);
           case "I422AP10":
           case "I422AP12":
-            return iW(2, 2, 2, 1, !0);
+            return JR(2, 2, 2, 1, !0);
           case "I444":
-            return iW(1, 1, 1, 1, !1);
+            return JR(1, 1, 1, 1, !1);
           case "I444P10":
           case "I444P12":
-            return iW(2, 2, 1, 1, !1);
+            return JR(2, 2, 1, 1, !1);
           case "I444A":
-            return iW(1, 1, 1, 1, !0);
+            return JR(1, 1, 1, 1, !0);
           case "I444AP10":
           case "I444AP12":
-            return iW(2, 2, 1, 1, !0);
+            return JR(2, 2, 1, 1, !0);
           case "NV12":
             return [{
               sampleBytes: 1,
@@ -7489,64 +7489,64 @@ export const modules = {
               heightDivisor: 1
             }];
           default:
-            (0, mW.J)(WW), (0, mW.K)(!1)
+            (0, yR.H)(RR), (0, yR.I)(!1)
         }
       },
-      TW = (WW, iW) => {
-        const OW = {
+      lR = (RR, JR) => {
+        const GR = {
             left: 0,
             top: 0,
-            width: WW.codedWidth,
-            height: WW.codedHeight
+            width: RR.codedWidth,
+            height: RR.codedHeight
           },
-          mW = iW.rect,
-          EW = JW(OW, mW, WW.codedWidth, WW.codedHeight, WW.format),
-          NW = iW.layout;
-        let PW;
-        if (iW.format && iW.format !== WW.format) {
-          if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(iW.format)) throw new Error("NotSupportedError: Invalid destination format.");
-          PW = iW.format
-        } else PW = WW.format;
-        return HW(EW, PW, NW)
+          yR = JR.rect,
+          tR = pR(GR, yR, RR.codedWidth, RR.codedHeight, RR.format),
+          uR = JR.layout;
+        let ZR;
+        if (JR.format && JR.format !== RR.format) {
+          if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(JR.format)) throw new Error("NotSupportedError: Invalid destination format.");
+          ZR = JR.format
+        } else ZR = RR.format;
+        return bR(tR, ZR, uR)
       },
-      JW = (WW, iW, OW, mW, EW) => {
-        const NW = {
-          ...WW
+      pR = (RR, JR, GR, yR, tR) => {
+        const uR = {
+          ...RR
         };
-        if (void 0 !== iW) {
-          if (0 === iW.width || 0 === iW.height) throw new TypeError("visibleRect dimensions cannot be zero.");
-          if ((iW.x || 0) + (iW.width || 0) > OW) throw new TypeError("visibleRect exceeds codedWidth.");
-          if ((iW.y || 0) + (iW.height || 0) > mW) throw new TypeError("visibleRect exceeds codedHeight.");
-          NW.x = iW.x || 0, NW.y = iW.y || 0, NW.width = iW.width || 0, NW.height = iW.height || 0
+        if (void 0 !== JR) {
+          if (0 === JR.width || 0 === JR.height) throw new TypeError("visibleRect dimensions cannot be zero.");
+          if ((JR.x || 0) + (JR.width || 0) > GR) throw new TypeError("visibleRect exceeds codedWidth.");
+          if ((JR.y || 0) + (JR.height || 0) > yR) throw new TypeError("visibleRect exceeds codedHeight.");
+          uR.x = JR.x || 0, uR.y = JR.y || 0, uR.width = JR.width || 0, uR.height = JR.height || 0
         }
-        if (!hW(EW, NW)) throw new TypeError("visibleRect alignment is invalid for the format.");
-        return NW
+        if (!gR(tR, uR)) throw new TypeError("visibleRect alignment is invalid for the format.");
+        return uR
       },
-      hW = (WW, iW) => {
-        if (null === WW) return !0;
-        const OW = yW(WW);
-        for (let mW = 0; mW < OW.length; mW++) {
-          const WW = OW[mW],
-            EW = WW.widthDivisor,
-            NW = WW.heightDivisor;
-          if ((iW.x || 0) % EW !== 0) return !1;
-          if ((iW.y || 0) % NW !== 0) return !1
+      gR = (RR, JR) => {
+        if (null === RR) return !0;
+        const GR = BR(RR);
+        for (let yR = 0; yR < GR.length; yR++) {
+          const RR = GR[yR],
+            tR = RR.widthDivisor,
+            uR = RR.heightDivisor;
+          if ((JR.x || 0) % tR !== 0) return !1;
+          if ((JR.y || 0) % uR !== 0) return !1
         }
         return !0
       },
-      HW = (WW, iW, OW) => {
-        const mW = yW(iW),
-          EW = mW.length;
-        if (void 0 !== OW && OW.length !== EW) throw new TypeError(`Layout must have ${EW} planes.`);
-        let NW = 0;
-        const PW = [],
-          LW = [];
-        for (let cW = 0; cW < EW; cW++) {
-          const iW = mW[cW],
-            EW = iW.sampleBytes,
-            wW = iW.widthDivisor,
-            tW = iW.heightDivisor,
-            ZW = {
+      bR = (RR, JR, GR) => {
+        const yR = BR(JR),
+          tR = yR.length;
+        if (void 0 !== GR && GR.length !== tR) throw new TypeError(`Layout must have ${tR} planes.`);
+        let uR = 0;
+        const ZR = [],
+          qR = [];
+        for (let iR = 0; iR < tR; iR++) {
+          const JR = yR[iR],
+            tR = JR.sampleBytes,
+            fR = JR.widthDivisor,
+            VR = JR.heightDivisor,
+            KR = {
               destinationOffset: 0,
               destinationStride: 0,
               sourceTop: 0,
@@ -7554,200 +7554,200 @@ export const modules = {
               sourceLeftBytes: 0,
               sourceWidthBytes: 0
             };
-          if (ZW.sourceTop = Math.ceil(Math.trunc(WW.y || 0) / tW), ZW.sourceHeight = Math.ceil(Math.trunc(WW.height || 0) / tW), ZW.sourceLeftBytes = Math.floor(Math.trunc(WW.x || 0) / wW) * EW, ZW.sourceWidthBytes = Math.floor(Math.trunc(WW.width || 0) / wW) * EW, void 0 !== OW) {
-            const WW = OW[cW];
-            if (WW.stride < ZW.sourceWidthBytes) throw new TypeError(`Stride for plane ${cW} is too small.`);
-            ZW.destinationOffset = WW.offset, ZW.destinationStride = WW.stride
-          } else ZW.destinationOffset = NW, ZW.destinationStride = ZW.sourceWidthBytes;
-          const xW = ZW.destinationStride * ZW.sourceHeight + ZW.destinationOffset;
-          if (xW > 4294967295) throw new TypeError("Allocation size exceeds limit.");
-          LW.push(xW), NW = Math.max(NW, xW);
-          for (let WW = 0; WW < cW; WW++) {
-            const iW = PW[WW];
-            if (!(LW[cW] <= iW.destinationOffset || LW[WW] <= ZW.destinationOffset)) throw new TypeError("Planes overlap.")
+          if (KR.sourceTop = Math.ceil(Math.trunc(RR.y || 0) / VR), KR.sourceHeight = Math.ceil(Math.trunc(RR.height || 0) / VR), KR.sourceLeftBytes = Math.floor(Math.trunc(RR.x || 0) / fR) * tR, KR.sourceWidthBytes = Math.floor(Math.trunc(RR.width || 0) / fR) * tR, void 0 !== GR) {
+            const RR = GR[iR];
+            if (RR.stride < KR.sourceWidthBytes) throw new TypeError(`Stride for plane ${iR} is too small.`);
+            KR.destinationOffset = RR.offset, KR.destinationStride = RR.stride
+          } else KR.destinationOffset = uR, KR.destinationStride = KR.sourceWidthBytes;
+          const wR = KR.destinationStride * KR.sourceHeight + KR.destinationOffset;
+          if (wR > 4294967295) throw new TypeError("Allocation size exceeds limit.");
+          qR.push(wR), uR = Math.max(uR, wR);
+          for (let RR = 0; RR < iR; RR++) {
+            const JR = ZR[RR];
+            if (!(qR[iR] <= JR.destinationOffset || qR[RR] <= KR.destinationOffset)) throw new TypeError("Planes overlap.")
           }
-          PW.push(ZW)
+          ZR.push(KR)
         }
         return {
-          allocationSize: NW,
-          computedLayouts: PW
+          allocationSize: uR,
+          computedLayouts: ZR
         }
       },
-      nW = new Set(["f32", "f32-planar", "s16", "s16-planar", "s32", "s32-planar", "u8", "u8-planar"]);
-    class uW {
+      vR = new Set(["f32", "f32-planar", "s16", "s16-planar", "s32", "s32-planar", "u8", "u8-planar"]);
+    class OR {
       constructor() {
         this._referenceCount = 0
       }
     }
-    class oW {
+    class xR {
       get microsecondTimestamp() {
-        return Math.trunc(mW.u * this.timestamp)
+        return Math.trunc(yR.u * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(mW.u * this.duration)
+        return Math.trunc(yR.u * this.duration)
       }
-      constructor(WW) {
-        if (this._closed = !1, DW(WW)) {
-          if (null === WW.format) throw new TypeError("AudioData with null format is not supported.");
-          this._data = WW, this.format = WW.format, this.sampleRate = WW.sampleRate, this.numberOfFrames = WW.numberOfFrames, this.numberOfChannels = WW.numberOfChannels, this.timestamp = WW.timestamp / 1e6, this.duration = WW.numberOfFrames / WW.sampleRate
-        } else if (WW instanceof uW) {
-          if (this._data = WW, WW._referenceCount++, this.format = WW.getFormat(), !nW.has(this.format)) throw new TypeError("getFormat() must return an AudioSampleFormat.");
-          if (this.sampleRate = WW.getSampleRate(), !Number.isInteger(this.sampleRate) || this.sampleRate <= 0) throw new TypeError("getSampleRate() must return a positive integer.");
-          if (this.numberOfFrames = WW.getNumberOfFrames(), !Number.isInteger(this.numberOfFrames) || this.numberOfFrames < 0) throw new TypeError("getNumberOfFrames() must return a non-negative integer.");
-          if (this.numberOfChannels = WW.getNumberOfChannels(), !Number.isInteger(this.numberOfChannels) || this.numberOfChannels <= 0) throw new TypeError("getNumberOfChannels() must return a positive integer.");
-          if (this.timestamp = WW.getTimestamp(), !Number.isFinite(this.timestamp)) throw new TypeError("getTimestamp() must return a finite number.");
+      constructor(RR) {
+        if (this._closed = !1, cR(RR)) {
+          if (null === RR.format) throw new TypeError("AudioData with null format is not supported.");
+          this._data = RR, this.format = RR.format, this.sampleRate = RR.sampleRate, this.numberOfFrames = RR.numberOfFrames, this.numberOfChannels = RR.numberOfChannels, this.timestamp = RR.timestamp / 1e6, this.duration = RR.numberOfFrames / RR.sampleRate
+        } else if (RR instanceof OR) {
+          if (this._data = RR, RR._referenceCount++, this.format = RR.getFormat(), !vR.has(this.format)) throw new TypeError("getFormat() must return an AudioSampleFormat.");
+          if (this.sampleRate = RR.getSampleRate(), !Number.isInteger(this.sampleRate) || this.sampleRate <= 0) throw new TypeError("getSampleRate() must return a positive integer.");
+          if (this.numberOfFrames = RR.getNumberOfFrames(), !Number.isInteger(this.numberOfFrames) || this.numberOfFrames < 0) throw new TypeError("getNumberOfFrames() must return a non-negative integer.");
+          if (this.numberOfChannels = RR.getNumberOfChannels(), !Number.isInteger(this.numberOfChannels) || this.numberOfChannels <= 0) throw new TypeError("getNumberOfChannels() must return a positive integer.");
+          if (this.timestamp = RR.getTimestamp(), !Number.isFinite(this.timestamp)) throw new TypeError("getTimestamp() must return a finite number.");
           this.duration = this.numberOfFrames / this.sampleRate
         } else {
-          if (!WW || "object" !== typeof WW) throw new TypeError("Invalid AudioDataInit: must be an object.");
-          if (!nW.has(WW.format)) throw new TypeError("Invalid AudioDataInit: invalid format.");
-          if (!Number.isFinite(WW.sampleRate) || WW.sampleRate <= 0) throw new TypeError("Invalid AudioDataInit: sampleRate must be > 0.");
-          if (!Number.isInteger(WW.numberOfChannels) || 0 === WW.numberOfChannels) throw new TypeError("Invalid AudioDataInit: numberOfChannels must be an integer > 0.");
-          if (!Number.isFinite(WW?.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          const iW = WW.data.byteLength / (dW(WW.format) * WW.numberOfChannels);
-          if (!Number.isInteger(iW)) throw new TypeError("Invalid AudioDataInit: data size is not a multiple of frame size.");
-          let OW;
-          if (this.format = WW.format, this.sampleRate = WW.sampleRate, this.numberOfFrames = iW, this.numberOfChannels = WW.numberOfChannels, this.timestamp = WW.timestamp, this.duration = iW / WW.sampleRate, WW.data instanceof ArrayBuffer) OW = new Uint8Array(WW.data);
+          if (!RR || "object" !== typeof RR) throw new TypeError("Invalid AudioDataInit: must be an object.");
+          if (!vR.has(RR.format)) throw new TypeError("Invalid AudioDataInit: invalid format.");
+          if (!Number.isFinite(RR.sampleRate) || RR.sampleRate <= 0) throw new TypeError("Invalid AudioDataInit: sampleRate must be > 0.");
+          if (!Number.isInteger(RR.numberOfChannels) || 0 === RR.numberOfChannels) throw new TypeError("Invalid AudioDataInit: numberOfChannels must be an integer > 0.");
+          if (!Number.isFinite(RR?.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          const JR = RR.data.byteLength / (NR(RR.format) * RR.numberOfChannels);
+          if (!Number.isInteger(JR)) throw new TypeError("Invalid AudioDataInit: data size is not a multiple of frame size.");
+          let GR;
+          if (this.format = RR.format, this.sampleRate = RR.sampleRate, this.numberOfFrames = JR, this.numberOfChannels = RR.numberOfChannels, this.timestamp = RR.timestamp, this.duration = JR / RR.sampleRate, RR.data instanceof ArrayBuffer) GR = new Uint8Array(RR.data);
           else {
-            if (!ArrayBuffer.isView(WW.data)) throw new TypeError("Invalid AudioDataInit: data is not a BufferSource.");
-            OW = new Uint8Array(WW.data.buffer, WW.data.byteOffset, WW.data.byteLength)
+            if (!ArrayBuffer.isView(RR.data)) throw new TypeError("Invalid AudioDataInit: data is not a BufferSource.");
+            GR = new Uint8Array(RR.data.buffer, RR.data.byteOffset, RR.data.byteLength)
           }
-          const mW = this.numberOfFrames * this.numberOfChannels * dW(this.format);
-          if (OW.byteLength < mW) throw new TypeError("Invalid AudioDataInit: insufficient data size.");
-          this._data = OW
+          const yR = this.numberOfFrames * this.numberOfChannels * NR(this.format);
+          if (GR.byteLength < yR) throw new TypeError("Invalid AudioDataInit: insufficient data size.");
+          this._data = GR
         }
-        wW?.register(this, {
+        fR?.register(this, {
           type: "audio",
           data: this._data
         }, this)
       }
-      allocationSize(WW) {
-        if (!WW || "object" !== typeof WW) throw new TypeError("options must be an object.");
-        if (!Number.isInteger(WW.planeIndex) || WW.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
-        if (void 0 !== WW.format && !nW.has(WW.format)) throw new TypeError("Invalid format.");
-        if (void 0 !== WW.frameOffset && (!Number.isInteger(WW.frameOffset) || WW.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
-        if (void 0 !== WW.frameCount && (!Number.isInteger(WW.frameCount) || WW.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
+      allocationSize(RR) {
+        if (!RR || "object" !== typeof RR) throw new TypeError("options must be an object.");
+        if (!Number.isInteger(RR.planeIndex) || RR.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
+        if (void 0 !== RR.format && !vR.has(RR.format)) throw new TypeError("Invalid format.");
+        if (void 0 !== RR.frameOffset && (!Number.isInteger(RR.frameOffset) || RR.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
+        if (void 0 !== RR.frameCount && (!Number.isInteger(RR.frameCount) || RR.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
         if (this._closed) throw new Error("AudioSample is closed.");
-        const iW = WW.format ?? this.format,
-          OW = WW.frameOffset ?? 0;
-        if (OW >= this.numberOfFrames) throw new RangeError("frameOffset out of range");
-        const mW = void 0 !== WW.frameCount ? WW.frameCount : this.numberOfFrames - OW;
-        if (mW > this.numberOfFrames - OW) throw new RangeError("frameCount out of range");
-        const EW = dW(iW),
-          NW = eW(iW);
-        if (NW && WW.planeIndex >= this.numberOfChannels) throw new RangeError("planeIndex out of range");
-        if (!NW && 0 !== WW.planeIndex) throw new RangeError("planeIndex out of range");
-        return (NW ? mW : mW * this.numberOfChannels) * EW
+        const JR = RR.format ?? this.format,
+          GR = RR.frameOffset ?? 0;
+        if (GR >= this.numberOfFrames) throw new RangeError("frameOffset out of range");
+        const yR = void 0 !== RR.frameCount ? RR.frameCount : this.numberOfFrames - GR;
+        if (yR > this.numberOfFrames - GR) throw new RangeError("frameCount out of range");
+        const tR = NR(JR),
+          uR = DR(JR);
+        if (uR && RR.planeIndex >= this.numberOfChannels) throw new RangeError("planeIndex out of range");
+        if (!uR && 0 !== RR.planeIndex) throw new RangeError("planeIndex out of range");
+        return (uR ? yR : yR * this.numberOfChannels) * tR
       }
-      copyTo(WW, iW) {
-        if (!(0, mW.Bb)(WW)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
-        if (!iW || "object" !== typeof iW) throw new TypeError("options must be an object.");
-        if (!Number.isInteger(iW.planeIndex) || iW.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
-        if (void 0 !== iW.format && !nW.has(iW.format)) throw new TypeError("Invalid format.");
-        if (void 0 !== iW.frameOffset && (!Number.isInteger(iW.frameOffset) || iW.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
-        if (void 0 !== iW.frameCount && (!Number.isInteger(iW.frameCount) || iW.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
+      copyTo(RR, JR) {
+        if (!(0, yR.tb)(RR)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
+        if (!JR || "object" !== typeof JR) throw new TypeError("options must be an object.");
+        if (!Number.isInteger(JR.planeIndex) || JR.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
+        if (void 0 !== JR.format && !vR.has(JR.format)) throw new TypeError("Invalid format.");
+        if (void 0 !== JR.frameOffset && (!Number.isInteger(JR.frameOffset) || JR.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
+        if (void 0 !== JR.frameCount && (!Number.isInteger(JR.frameCount) || JR.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
         if (this._closed) throw new Error("AudioSample is closed.");
         const {
-          format: OW,
-          frameCount: EW,
-          frameOffset: NW
-        } = iW;
+          format: GR,
+          frameCount: tR,
+          frameOffset: uR
+        } = JR;
         let {
-          planeIndex: PW
-        } = iW, LW = this.format;
-        const cW = OW ?? this.format;
-        if (!cW) throw new Error("Destination format not determined");
-        const wW = this.numberOfFrames,
-          tW = this.numberOfChannels,
-          ZW = NW ?? 0;
-        if (ZW >= wW) throw new RangeError("frameOffset out of range");
-        const xW = void 0 !== EW ? EW : wW - ZW;
-        if (xW > wW - ZW) throw new RangeError("frameCount out of range");
-        const lW = dW(cW),
-          AW = eW(cW);
-        if (AW && PW >= tW) throw new RangeError("planeIndex out of range");
-        if (!AW && 0 !== PW) throw new RangeError("planeIndex out of range");
-        const bW = (AW ? xW : xW * tW) * lW;
-        if (WW.byteLength < bW) throw new RangeError("Destination buffer is too small");
-        const jW = (0, mW.od)(WW),
-          UW = gW(cW);
-        if (DW(this._data)) {
-          if ((0, mW.fc)() && tW > 2 && cW !== LW) return void pW(this._data, jW, LW, cW, tW, PW, ZW, xW);
+          planeIndex: ZR
+        } = JR, qR = this.format;
+        const iR = GR ?? this.format;
+        if (!iR) throw new Error("Destination format not determined");
+        const fR = this.numberOfFrames,
+          VR = this.numberOfChannels,
+          KR = uR ?? 0;
+        if (KR >= fR) throw new RangeError("frameOffset out of range");
+        const wR = void 0 !== tR ? tR : fR - KR;
+        if (wR > fR - KR) throw new RangeError("frameCount out of range");
+        const rR = NR(iR),
+          eR = DR(iR);
+        if (eR && ZR >= VR) throw new RangeError("planeIndex out of range");
+        if (!eR && 0 !== ZR) throw new RangeError("planeIndex out of range");
+        const aR = (eR ? wR : wR * VR) * rR;
+        if (RR.byteLength < aR) throw new RangeError("Destination buffer is too small");
+        const LR = (0, yR.ad)(RR),
+          nR = oR(iR);
+        if (cR(this._data)) {
+          if ((0, yR.Ub)() && VR > 2 && iR !== qR) return void IR(this._data, LR, qR, iR, VR, ZR, KR, wR);
           try {
-            return void this._data.copyTo(WW, {
-              planeIndex: PW,
-              frameOffset: ZW,
-              frameCount: xW,
-              format: cW
+            return void this._data.copyTo(RR, {
+              planeIndex: ZR,
+              frameOffset: KR,
+              frameCount: wR,
+              format: iR
             })
-          } catch (YW) {
-            if ("f32-planar" === cW) throw YW;
-            LW = "f32-planar"
+          } catch (MR) {
+            if ("f32-planar" === iR) throw MR;
+            qR = "f32-planar"
           }
         }
-        const kW = vW(LW),
-          sW = dW(LW),
-          MW = eW(LW);
-        let KW;
-        if (this._data instanceof uW) {
-          const WW = WW => {
-            const iW = this._data.getDataPlane(WW);
-            if (!(iW instanceof Uint8Array)) throw new TypeError("getDataPlane() must return a Uint8Array.");
-            const OW = wW * sW * (MW ? 1 : tW);
-            if (iW.byteLength !== OW) throw new TypeError(`Data plane ${WW} has invalid size. Expected exactly ${OW} bytes, got ${iW.byteLength} bytes.`);
-            return iW
+        const UR = HR(qR),
+          WR = NR(qR),
+          AR = DR(qR);
+        let CR;
+        if (this._data instanceof OR) {
+          const RR = RR => {
+            const JR = this._data.getDataPlane(RR);
+            if (!(JR instanceof Uint8Array)) throw new TypeError("getDataPlane() must return a Uint8Array.");
+            const GR = fR * WR * (AR ? 1 : VR);
+            if (JR.byteLength !== GR) throw new TypeError(`Data plane ${RR} has invalid size. Expected exactly ${GR} bytes, got ${JR.byteLength} bytes.`);
+            return JR
           };
-          if (MW)
-            if (AW) KW = WW(PW), PW = 0;
+          if (AR)
+            if (eR) CR = RR(ZR), ZR = 0;
             else {
-              KW = new Uint8Array(wW * sW * tW);
-              for (let iW = 0; iW < tW; iW++) {
-                const OW = WW(iW);
-                KW.set(OW, iW * wW * sW)
+              CR = new Uint8Array(fR * WR * VR);
+              for (let JR = 0; JR < VR; JR++) {
+                const GR = RR(JR);
+                CR.set(GR, JR * fR * WR)
               }
             }
-          else KW = WW(0)
-        } else if (this._data instanceof Uint8Array) KW = this._data;
-        else if ((0, mW.K)("f32-planar" === LW), AW) KW = new Uint8Array(this._data.allocationSize({
+          else CR = RR(0)
+        } else if (this._data instanceof Uint8Array) CR = this._data;
+        else if ((0, yR.I)("f32-planar" === qR), eR) CR = new Uint8Array(this._data.allocationSize({
           format: "f32-planar",
-          planeIndex: PW
-        })), this._data.copyTo(KW, {
+          planeIndex: ZR
+        })), this._data.copyTo(CR, {
           format: "f32-planar",
-          planeIndex: PW
-        }), PW = 0;
+          planeIndex: ZR
+        }), ZR = 0;
         else {
-          KW = new Uint8Array(this._data.allocationSize({
+          CR = new Uint8Array(this._data.allocationSize({
             format: "f32-planar",
             planeIndex: 0
-          }) * tW);
-          for (let WW = 0; WW < tW; WW++) this._data.copyTo(KW.subarray(WW * wW * sW, (WW + 1) * wW * sW), {
+          }) * VR);
+          for (let RR = 0; RR < VR; RR++) this._data.copyTo(CR.subarray(RR * fR * WR, (RR + 1) * fR * WR), {
             format: "f32-planar",
-            planeIndex: WW
+            planeIndex: RR
           })
         }
-        const SW = (0, mW.od)(KW);
-        for (let mW = 0; mW < xW; mW++)
-          if (AW) {
-            let WW;
-            WW = MW ? (PW * wW + (mW + ZW)) * sW : ((mW + ZW) * tW + PW) * sW;
-            UW(jW, mW * lW, kW(SW, WW))
+        const XR = (0, yR.ad)(CR);
+        for (let yR = 0; yR < wR; yR++)
+          if (eR) {
+            let RR;
+            RR = AR ? (ZR * fR + (yR + KR)) * WR : ((yR + KR) * VR + ZR) * WR;
+            nR(LR, yR * rR, UR(XR, RR))
           } else
-            for (let WW = 0; WW < tW; WW++) {
-              let iW;
-              iW = MW ? (WW * wW + (mW + ZW)) * sW : ((mW + ZW) * tW + WW) * sW;
-              UW(jW, (mW * tW + WW) * lW, kW(SW, iW))
+            for (let RR = 0; RR < VR; RR++) {
+              let JR;
+              JR = AR ? (RR * fR + (yR + KR)) * WR : ((yR + KR) * VR + RR) * WR;
+              nR(LR, (yR * VR + RR) * rR, UR(XR, JR))
             }
       }
       clone() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        if (this._data instanceof uW) {
-          const WW = new oW(this._data);
-          return WW.setTimestamp(this.timestamp), WW
+        if (this._data instanceof OR) {
+          const RR = new xR(this._data);
+          return RR.setTimestamp(this.timestamp), RR
         }
-        if (DW(this._data)) {
-          const WW = new oW(this._data.clone());
-          return WW.setTimestamp(this.timestamp), WW
+        if (cR(this._data)) {
+          const RR = new xR(this._data.clone());
+          return RR.setTimestamp(this.timestamp), RR
         }
-        return new oW({
+        return new xR({
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfFrames: this.numberOfFrames,
@@ -7756,46 +7756,46 @@ export const modules = {
           data: this._data
         })
       }
-      trim(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.numberOfFrames;
-        if (!Number.isInteger(WW) || WW < 0) throw new TypeError("startFrame must be a non-negative integer.");
-        if (!Number.isInteger(iW) || iW < 0) throw new TypeError("endFrame must be a non-negative integer.");
-        if (WW > this.numberOfFrames) throw new RangeError("startFrame out of range.");
-        if (iW > this.numberOfFrames) throw new RangeError("endFrame out of range.");
-        if (iW < WW) throw new RangeError("endFrame must not be less than startFrame.");
+      trim(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.numberOfFrames;
+        if (!Number.isInteger(RR) || RR < 0) throw new TypeError("startFrame must be a non-negative integer.");
+        if (!Number.isInteger(JR) || JR < 0) throw new TypeError("endFrame must be a non-negative integer.");
+        if (RR > this.numberOfFrames) throw new RangeError("startFrame out of range.");
+        if (JR > this.numberOfFrames) throw new RangeError("endFrame out of range.");
+        if (JR < RR) throw new RangeError("endFrame must not be less than startFrame.");
         if (this._closed) throw new Error("AudioSample is closed.");
-        const OW = iW - WW,
-          mW = dW(this.format);
-        let EW;
-        if (eW(this.format)) {
-          const iW = OW * mW;
-          if (EW = new Uint8Array(iW * this.numberOfChannels), OW > 0)
-            for (let mW = 0; mW < this.numberOfChannels; mW++) this.copyTo(EW.subarray(mW * iW, (mW + 1) * iW), {
-              planeIndex: mW,
+        const GR = JR - RR,
+          yR = NR(this.format);
+        let tR;
+        if (DR(this.format)) {
+          const JR = GR * yR;
+          if (tR = new Uint8Array(JR * this.numberOfChannels), GR > 0)
+            for (let yR = 0; yR < this.numberOfChannels; yR++) this.copyTo(tR.subarray(yR * JR, (yR + 1) * JR), {
+              planeIndex: yR,
               format: this.format,
-              frameOffset: WW,
-              frameCount: OW
+              frameOffset: RR,
+              frameCount: GR
             })
-        } else EW = new Uint8Array(OW * this.numberOfChannels * mW), OW > 0 && this.copyTo(EW, {
+        } else tR = new Uint8Array(GR * this.numberOfChannels * yR), GR > 0 && this.copyTo(tR, {
           planeIndex: 0,
           format: this.format,
-          frameOffset: WW,
-          frameCount: OW
+          frameOffset: RR,
+          frameCount: GR
         });
-        return new oW({
-          data: EW,
+        return new xR({
+          data: tR,
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfChannels: this.numberOfChannels,
-          timestamp: this.timestamp + WW / this.sampleRate
+          timestamp: this.timestamp + RR / this.sampleRate
         })
       }
       close() {
-        this._closed || (wW?.unregister(this), this._data instanceof uW ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : DW(this._data) ? this._data.close() : this._data = new Uint8Array(0), this._closed = !0)
+        this._closed || (fR?.unregister(this), this._data instanceof OR ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : cR(this._data) ? this._data.close() : this._data = new Uint8Array(0), this._closed = !0)
       }
       toAudioData() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        return this._data instanceof uW ? this._createAudioDataFromData() : DW(this._data) ? this._data.timestamp === this.microsecondTimestamp ? this._data.clone() : this._createAudioDataFromData() : new AudioData({
+        return this._data instanceof OR ? this._createAudioDataFromData() : cR(this._data) ? this._data.timestamp === this.microsecondTimestamp ? this._data.clone() : this._createAudioDataFromData() : new AudioData({
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfFrames: this.numberOfFrames,
@@ -7805,14 +7805,14 @@ export const modules = {
         })
       }
       _createAudioDataFromData() {
-        if (eW(this.format)) {
-          const WW = this.allocationSize({
+        if (DR(this.format)) {
+          const RR = this.allocationSize({
               planeIndex: 0,
               format: this.format
             }),
-            iW = new ArrayBuffer(WW * this.numberOfChannels);
-          for (let OW = 0; OW < this.numberOfChannels; OW++) this.copyTo(new Uint8Array(iW, OW * WW, WW), {
-            planeIndex: OW,
+            JR = new ArrayBuffer(RR * this.numberOfChannels);
+          for (let GR = 0; GR < this.numberOfChannels; GR++) this.copyTo(new Uint8Array(JR, GR * RR, RR), {
+            planeIndex: GR,
             format: this.format
           });
           return new AudioData({
@@ -7821,14 +7821,14 @@ export const modules = {
             numberOfFrames: this.numberOfFrames,
             numberOfChannels: this.numberOfChannels,
             timestamp: this.microsecondTimestamp,
-            data: iW
+            data: JR
           })
         } {
-          const WW = new ArrayBuffer(this.allocationSize({
+          const RR = new ArrayBuffer(this.allocationSize({
             planeIndex: 0,
             format: this.format
           }));
-          return this.copyTo(WW, {
+          return this.copyTo(RR, {
             planeIndex: 0,
             format: this.format
           }), new AudioData({
@@ -7837,83 +7837,83 @@ export const modules = {
             numberOfFrames: this.numberOfFrames,
             numberOfChannels: this.numberOfChannels,
             timestamp: this.microsecondTimestamp,
-            data: WW
+            data: RR
           })
         }
       }
       toAudioBuffer() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        const WW = new AudioBuffer({
+        const RR = new AudioBuffer({
             numberOfChannels: this.numberOfChannels,
             length: this.numberOfFrames,
             sampleRate: this.sampleRate
           }),
-          iW = new Float32Array(this.allocationSize({
+          JR = new Float32Array(this.allocationSize({
             planeIndex: 0,
             format: "f32-planar"
           }) / 4);
-        for (let OW = 0; OW < this.numberOfChannels; OW++) this.copyTo(iW, {
-          planeIndex: OW,
+        for (let GR = 0; GR < this.numberOfChannels; GR++) this.copyTo(JR, {
+          planeIndex: GR,
           format: "f32-planar"
-        }), WW.copyToChannel(iW, OW);
-        return WW
+        }), RR.copyToChannel(JR, GR);
+        return RR
       }
-      setTimestamp(WW) {
-        if (!Number.isFinite(WW)) throw new TypeError("newTimestamp must be a number.");
-        this.timestamp = WW
+      setTimestamp(RR) {
+        if (!Number.isFinite(RR)) throw new TypeError("newTimestamp must be a number.");
+        this.timestamp = RR
       } [Symbol.dispose]() {
         this.close()
       }
-      static * _fromAudioBuffer(WW, iW) {
-        if (!(WW instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
-        const OW = WW.numberOfChannels,
-          mW = WW.sampleRate,
-          EW = WW.length,
-          NW = Math.floor(24e4 / OW);
-        let PW = 0,
-          LW = EW;
-        for (; LW > 0;) {
-          const EW = Math.min(NW, LW),
-            cW = new Float32Array(OW * EW);
-          for (let iW = 0; iW < OW; iW++) WW.copyFromChannel(cW.subarray(iW * EW, (iW + 1) * EW), iW, PW);
-          yield new oW({
+      static * _fromAudioBuffer(RR, JR) {
+        if (!(RR instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
+        const GR = RR.numberOfChannels,
+          yR = RR.sampleRate,
+          tR = RR.length,
+          uR = Math.floor(24e4 / GR);
+        let ZR = 0,
+          qR = tR;
+        for (; qR > 0;) {
+          const tR = Math.min(uR, qR),
+            iR = new Float32Array(GR * tR);
+          for (let JR = 0; JR < GR; JR++) RR.copyFromChannel(iR.subarray(JR * tR, (JR + 1) * tR), JR, ZR);
+          yield new xR({
             format: "f32-planar",
-            sampleRate: mW,
-            numberOfFrames: EW,
-            numberOfChannels: OW,
-            timestamp: iW + PW / mW,
-            data: cW
-          }), PW += EW, LW -= EW
+            sampleRate: yR,
+            numberOfFrames: tR,
+            numberOfChannels: GR,
+            timestamp: JR + ZR / yR,
+            data: iR
+          }), ZR += tR, qR -= tR
         }
       }
-      static fromAudioBuffer(WW, iW) {
-        if (!(WW instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
-        const OW = WW.numberOfChannels,
-          mW = WW.sampleRate,
-          EW = WW.length,
-          NW = Math.floor(24e4 / OW);
-        let PW = 0,
-          LW = EW;
-        const cW = [];
-        for (; LW > 0;) {
-          const EW = Math.min(NW, LW),
-            wW = new Float32Array(OW * EW);
-          for (let iW = 0; iW < OW; iW++) WW.copyFromChannel(wW.subarray(iW * EW, (iW + 1) * EW), iW, PW);
-          const tW = new oW({
+      static fromAudioBuffer(RR, JR) {
+        if (!(RR instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
+        const GR = RR.numberOfChannels,
+          yR = RR.sampleRate,
+          tR = RR.length,
+          uR = Math.floor(24e4 / GR);
+        let ZR = 0,
+          qR = tR;
+        const iR = [];
+        for (; qR > 0;) {
+          const tR = Math.min(uR, qR),
+            fR = new Float32Array(GR * tR);
+          for (let JR = 0; JR < GR; JR++) RR.copyFromChannel(fR.subarray(JR * tR, (JR + 1) * tR), JR, ZR);
+          const VR = new xR({
             format: "f32-planar",
-            sampleRate: mW,
-            numberOfFrames: EW,
-            numberOfChannels: OW,
-            timestamp: iW + PW / mW,
-            data: wW
+            sampleRate: yR,
+            numberOfFrames: tR,
+            numberOfChannels: GR,
+            timestamp: JR + ZR / yR,
+            data: fR
           });
-          cW.push(tW), PW += EW, LW -= EW
+          iR.push(VR), ZR += tR, qR -= tR
         }
-        return cW
+        return iR
       }
     }
-    const dW = WW => {
-        switch (WW) {
+    const NR = RR => {
+        switch (RR) {
           case "u8":
           case "u8-planar":
             return 1;
@@ -7929,8 +7929,8 @@ export const modules = {
             throw new Error("Unknown AudioSampleFormat")
         }
       },
-      eW = WW => {
-        switch (WW) {
+      DR = RR => {
+        switch (RR) {
           case "u8-planar":
           case "s16-planar":
           case "s32-planar":
@@ -7940,41 +7940,41 @@ export const modules = {
             return !1
         }
       },
-      vW = WW => {
-        switch (WW) {
+      HR = RR => {
+        switch (RR) {
           case "u8":
           case "u8-planar":
-            return (WW, iW) => (WW.getUint8(iW) - 128) / 128;
+            return (RR, JR) => (RR.getUint8(JR) - 128) / 128;
           case "s16":
           case "s16-planar":
-            return (WW, iW) => WW.getInt16(iW, !0) / 32768;
+            return (RR, JR) => RR.getInt16(JR, !0) / 32768;
           case "s32":
           case "s32-planar":
-            return (WW, iW) => WW.getInt32(iW, !0) / 2147483648;
+            return (RR, JR) => RR.getInt32(JR, !0) / 2147483648;
           case "f32":
           case "f32-planar":
-            return (WW, iW) => WW.getFloat32(iW, !0)
+            return (RR, JR) => RR.getFloat32(JR, !0)
         }
       },
-      gW = WW => {
-        switch (WW) {
+      oR = RR => {
+        switch (RR) {
           case "u8":
           case "u8-planar":
-            return (WW, iW, OW) => WW.setUint8(iW, (0, mW.X)(Math.round(128 * OW) + 128, 0, 255));
+            return (RR, JR, GR) => RR.setUint8(JR, (0, yR.V)(Math.round(128 * GR) + 128, 0, 255));
           case "s16":
           case "s16-planar":
-            return (WW, iW, OW) => WW.setInt16(iW, (0, mW.X)(Math.round(32768 * OW), -32768, 32767), !0);
+            return (RR, JR, GR) => RR.setInt16(JR, (0, yR.V)(Math.round(32768 * GR), -32768, 32767), !0);
           case "s32":
           case "s32-planar":
-            return (WW, iW, OW) => WW.setInt32(iW, (0, mW.X)(Math.round(2147483648 * OW), -2147483648, 2147483647), !0);
+            return (RR, JR, GR) => RR.setInt32(JR, (0, yR.V)(Math.round(2147483648 * GR), -2147483648, 2147483647), !0);
           case "f32":
           case "f32-planar":
-            return (WW, iW, OW) => WW.setFloat32(iW, OW, !0)
+            return (RR, JR, GR) => RR.setFloat32(JR, GR, !0)
         }
       },
-      DW = WW => "undefined" !== typeof AudioData && WW instanceof AudioData,
-      VW = WW => {
-        switch (WW) {
+      cR = RR => "undefined" !== typeof AudioData && RR instanceof AudioData,
+      PR = RR => {
+        switch (RR) {
           case "u8-planar":
             return "u8";
           case "s16-planar":
@@ -7984,228 +7984,228 @@ export const modules = {
           case "f32-planar":
             return "f32";
           default:
-            return WW
+            return RR
         }
       },
-      pW = (WW, iW, OW, EW, NW, PW, LW, cW) => {
-        const wW = vW(OW),
-          tW = gW(EW),
-          ZW = dW(OW),
-          xW = dW(EW),
-          lW = eW(OW);
-        if (eW(EW))
-          if (lW) {
-            const EW = new ArrayBuffer(cW * ZW),
-              NW = (0, mW.od)(EW);
-            WW.copyTo(EW, {
-              planeIndex: PW,
-              frameOffset: LW,
-              frameCount: cW,
-              format: OW
+      IR = (RR, JR, GR, tR, uR, ZR, qR, iR) => {
+        const fR = HR(GR),
+          VR = oR(tR),
+          KR = NR(GR),
+          wR = NR(tR),
+          rR = DR(GR);
+        if (DR(tR))
+          if (rR) {
+            const tR = new ArrayBuffer(iR * KR),
+              uR = (0, yR.ad)(tR);
+            RR.copyTo(tR, {
+              planeIndex: ZR,
+              frameOffset: qR,
+              frameCount: iR,
+              format: GR
             });
-            for (let WW = 0; WW < cW; WW++) {
-              tW(iW, WW * xW, wW(NW, WW * ZW))
+            for (let RR = 0; RR < iR; RR++) {
+              VR(JR, RR * wR, fR(uR, RR * KR))
             }
           } else {
-            const EW = new ArrayBuffer(cW * NW * ZW),
-              lW = (0, mW.od)(EW);
-            WW.copyTo(EW, {
+            const tR = new ArrayBuffer(iR * uR * KR),
+              rR = (0, yR.ad)(tR);
+            RR.copyTo(tR, {
               planeIndex: 0,
-              frameOffset: LW,
-              frameCount: cW,
-              format: OW
+              frameOffset: qR,
+              frameCount: iR,
+              format: GR
             });
-            for (let WW = 0; WW < cW; WW++) {
-              tW(iW, WW * xW, wW(lW, (WW * NW + PW) * ZW))
+            for (let RR = 0; RR < iR; RR++) {
+              VR(JR, RR * wR, fR(rR, (RR * uR + ZR) * KR))
             }
           }
-        else if (lW) {
-          const EW = new ArrayBuffer(cW * ZW),
-            PW = (0, mW.od)(EW);
-          for (let mW = 0; mW < NW; mW++) {
-            WW.copyTo(EW, {
-              planeIndex: mW,
-              frameOffset: LW,
-              frameCount: cW,
-              format: OW
+        else if (rR) {
+          const tR = new ArrayBuffer(iR * KR),
+            ZR = (0, yR.ad)(tR);
+          for (let yR = 0; yR < uR; yR++) {
+            RR.copyTo(tR, {
+              planeIndex: yR,
+              frameOffset: qR,
+              frameCount: iR,
+              format: GR
             });
-            for (let WW = 0; WW < cW; WW++) {
-              tW(iW, (WW * NW + mW) * xW, wW(PW, WW * ZW))
+            for (let RR = 0; RR < iR; RR++) {
+              VR(JR, (RR * uR + yR) * wR, fR(ZR, RR * KR))
             }
           }
         } else {
-          const EW = new ArrayBuffer(cW * NW * ZW),
-            PW = (0, mW.od)(EW);
-          WW.copyTo(EW, {
+          const tR = new ArrayBuffer(iR * uR * KR),
+            ZR = (0, yR.ad)(tR);
+          RR.copyTo(tR, {
             planeIndex: 0,
-            frameOffset: LW,
-            frameCount: cW,
-            format: OW
+            frameOffset: qR,
+            frameCount: iR,
+            format: GR
           });
-          for (let WW = 0; WW < cW; WW++)
-            for (let OW = 0; OW < NW; OW++) {
-              const mW = WW * NW + OW;
-              tW(iW, mW * xW, wW(PW, mW * ZW))
+          for (let RR = 0; RR < iR; RR++)
+            for (let GR = 0; GR < uR; GR++) {
+              const yR = RR * uR + GR;
+              VR(JR, yR * wR, fR(ZR, yR * KR))
             }
         }
       },
-      fW = (WW, iW) => {
-        const OW = WW.allocationSize({
-            format: iW,
+      mR = (RR, JR) => {
+        const GR = RR.allocationSize({
+            format: JR,
             planeIndex: 0
           }),
-          mW = new ArrayBuffer(OW);
-        return WW.copyTo(mW, {
-          format: iW,
+          yR = new ArrayBuffer(GR);
+        return RR.copyTo(yR, {
+          format: JR,
           planeIndex: 0
-        }), new oW({
-          data: mW,
-          format: iW,
-          numberOfChannels: WW.numberOfChannels,
-          sampleRate: WW.sampleRate,
-          timestamp: WW.timestamp,
-          duration: WW.duration
+        }), new xR({
+          data: yR,
+          format: JR,
+          numberOfChannels: RR.numberOfChannels,
+          sampleRate: RR.sampleRate,
+          timestamp: RR.timestamp,
+          duration: RR.duration
         })
       }
   },
-  41171: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => PW,
-      d: () => wW,
-      g: () => NW,
-      j: () => cW
+  41158: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      g: () => fR,
+      k: () => uR,
+      m: () => iR
     });
-    const mW = /(?:(.+?)\n)?((?:\d{2}:)?\d{2}:\d{2}.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}.\d{3})/g,
-      EW = /^WEBVTT(.|\n)*?\n{2}/,
-      NW = /<(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})>/g;
-    class PW {
-      constructor(WW) {
-        this.preambleText = null, this.preambleEmitted = !1, this.options = WW
+    const yR = /(?:(.+?)\n)?((?:\d{2}:)?\d{2}:\d{2}.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}.\d{3})/g,
+      tR = /^WEBVTT(.|\n)*?\n{2}/,
+      uR = /<(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})>/g;
+    class ZR {
+      constructor(RR) {
+        this.preambleText = null, this.preambleEmitted = !1, this.options = RR
       }
-      parse(WW) {
-        let iW;
-        if (WW = WW.replaceAll("\r\n", "\n").replaceAll("\r", "\n"), mW.lastIndex = 0, !this.preambleText) {
-          if (!EW.test(WW)) throw new Error("WebVTT preamble incorrect.");
-          iW = mW.exec(WW);
-          const OW = WW.slice(0, iW?.index ?? WW.length).trimEnd();
-          if (!OW) throw new Error("No WebVTT preamble provided.");
-          this.preambleText = OW, iW && (WW = WW.slice(iW.index), mW.lastIndex = 0)
+      parse(RR) {
+        let JR;
+        if (RR = RR.replaceAll("\r\n", "\n").replaceAll("\r", "\n"), yR.lastIndex = 0, !this.preambleText) {
+          if (!tR.test(RR)) throw new Error("WebVTT preamble incorrect.");
+          JR = yR.exec(RR);
+          const GR = RR.slice(0, JR?.index ?? RR.length).trimEnd();
+          if (!GR) throw new Error("No WebVTT preamble provided.");
+          this.preambleText = GR, JR && (RR = RR.slice(JR.index), yR.lastIndex = 0)
         }
-        for (; iW = mW.exec(WW);) {
-          const OW = WW.slice(0, iW.index),
-            EW = iW[1],
-            NW = iW.index + iW[0].length,
-            PW = WW.indexOf("\n", NW) + 1,
-            LW = WW.slice(NW, PW).trim();
-          let wW = WW.indexOf("\n\n", NW); - 1 === wW && (wW = WW.length);
-          const tW = cW(iW[2]),
-            ZW = cW(iW[3]) - tW,
-            xW = WW.slice(PW, wW).trim();
-          WW = WW.slice(wW).trimStart(), mW.lastIndex = 0;
-          const lW = {
-              timestamp: tW / 1e3,
-              duration: ZW / 1e3,
-              text: xW,
-              identifier: EW,
-              settings: LW,
-              notes: OW
+        for (; JR = yR.exec(RR);) {
+          const GR = RR.slice(0, JR.index),
+            tR = JR[1],
+            uR = JR.index + JR[0].length,
+            ZR = RR.indexOf("\n", uR) + 1,
+            qR = RR.slice(uR, ZR).trim();
+          let fR = RR.indexOf("\n\n", uR); - 1 === fR && (fR = RR.length);
+          const VR = iR(JR[2]),
+            KR = iR(JR[3]) - VR,
+            wR = RR.slice(ZR, fR).trim();
+          RR = RR.slice(fR).trimStart(), yR.lastIndex = 0;
+          const rR = {
+              timestamp: VR / 1e3,
+              duration: KR / 1e3,
+              text: wR,
+              identifier: tR,
+              settings: qR,
+              notes: GR
             },
-            AW = {};
-          this.preambleEmitted || (AW.config = {
+            eR = {};
+          this.preambleEmitted || (eR.config = {
             description: this.preambleText
-          }, this.preambleEmitted = !0), this.options.output(lW, AW)
+          }, this.preambleEmitted = !0), this.options.output(rR, eR)
         }
       }
     }
-    const LW = /(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})/,
-      cW = WW => {
-        const iW = LW.exec(WW);
-        if (!iW) throw new Error("Expected match.");
-        return 36e5 * Number(iW[1] || "0") + 6e4 * Number(iW[2]) + 1e3 * Number(iW[3]) + Number(iW[4])
+    const qR = /(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})/,
+      iR = RR => {
+        const JR = qR.exec(RR);
+        if (!JR) throw new Error("Expected match.");
+        return 36e5 * Number(JR[1] || "0") + 6e4 * Number(JR[2]) + 1e3 * Number(JR[3]) + Number(JR[4])
       },
-      wW = WW => {
-        const iW = Math.floor(WW / 36e5),
-          OW = Math.floor(WW % 36e5 / 6e4),
-          mW = Math.floor(WW % 6e4 / 1e3),
-          EW = WW % 1e3;
-        return iW.toString().padStart(2, "0") + ":" + OW.toString().padStart(2, "0") + ":" + mW.toString().padStart(2, "0") + "." + EW.toString().padStart(3, "0")
+      fR = RR => {
+        const JR = Math.floor(RR / 36e5),
+          GR = Math.floor(RR % 36e5 / 6e4),
+          yR = Math.floor(RR % 6e4 / 1e3),
+          tR = RR % 1e3;
+        return JR.toString().padStart(2, "0") + ":" + GR.toString().padStart(2, "0") + ":" + yR.toString().padStart(2, "0") + "." + tR.toString().padStart(3, "0")
       }
   },
-  41179: (WW, iW, OW) => {
-    var mW;
-    OW.d(iW, {
-      b: () => wW,
-      f: () => tW,
-      j: () => xW,
-      n: () => PW
+  41170: (RR, JR, GR) => {
+    var yR;
+    GR.d(JR, {
+      b: () => fR,
+      f: () => VR,
+      j: () => wR,
+      k: () => ZR
     });
-    var EW = OW(41185),
-      NW = OW(41127);
-    "undefined" !== typeof(mW || (mW = OW.t(EW, 2))) && (mW || (mW = OW.t(EW, 2)));
-    class PW extends NW.n {
+    var tR = GR(41175),
+      uR = GR(41115);
+    "undefined" !== typeof(yR || (yR = GR.t(tR, 2))) && (yR || (yR = GR.t(tR, 2)));
+    class ZR extends uR.i {
       constructor() {
         super(...arguments), this._writerAcquired = !1, this._monotonicity = null, this.onwrite = null
       }
-      _setMonotonicity(WW) {
-        !1 !== this._monotonicity && (this._monotonicity = WW)
+      _setMonotonicity(RR) {
+        !1 !== this._monotonicity && (this._monotonicity = RR)
       }
-      _dispatchWrite(WW, iW) {
-        this.onwrite?.(WW, iW), this._emit("write", {
-          start: WW,
-          end: iW
+      _dispatchWrite(RR, JR) {
+        this.onwrite?.(RR, JR), this._emit("write", {
+          start: RR,
+          end: JR
         })
       }
-      slice(WW) {
-        if (!Number.isInteger(WW) || WW < 0) throw new TypeError("offset must be a non-negative integer.");
-        return new ZW(this, WW)
+      slice(RR) {
+        if (!Number.isInteger(RR) || RR < 0) throw new TypeError("offset must be a non-negative integer.");
+        return new KR(this, RR)
       }
     }
-    const LW = 65536,
-      cW = 2 ** 32;
-    class wW extends PW {
+    const qR = 65536,
+      iR = 2 ** 32;
+    class fR extends ZR {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (super(), this.buffer = null, this._maxPos = 0, !WW || "object" !== typeof WW) throw new TypeError("BufferTarget options, when provided, must be an object.");
-        if (void 0 !== WW.onFinalize && "function" !== typeof WW.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
-        if (this._options = WW, this._supportsResize = "resize" in new ArrayBuffer(0), this._supportsResize) try {
-          this._buffer = new ArrayBuffer(LW, {
-            maxByteLength: cW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (super(), this.buffer = null, this._maxPos = 0, !RR || "object" !== typeof RR) throw new TypeError("BufferTarget options, when provided, must be an object.");
+        if (void 0 !== RR.onFinalize && "function" !== typeof RR.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
+        if (this._options = RR, this._supportsResize = "resize" in new ArrayBuffer(0), this._supportsResize) try {
+          this._buffer = new ArrayBuffer(qR, {
+            maxByteLength: iR
           })
         } catch {
-          this._buffer = new ArrayBuffer(LW), this._supportsResize = !1
-        } else this._buffer = new ArrayBuffer(LW);
+          this._buffer = new ArrayBuffer(qR), this._supportsResize = !1
+        } else this._buffer = new ArrayBuffer(qR);
         this._bytes = new Uint8Array(this._buffer)
       }
-      _ensureSize(WW) {
-        let iW = this._buffer.byteLength;
-        for (; iW < WW;) iW *= 2;
-        if (iW !== this._buffer.byteLength) {
-          if (iW > cW) throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");
-          if (this._supportsResize) this._buffer.resize(iW);
+      _ensureSize(RR) {
+        let JR = this._buffer.byteLength;
+        for (; JR < RR;) JR *= 2;
+        if (JR !== this._buffer.byteLength) {
+          if (JR > iR) throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");
+          if (this._supportsResize) this._buffer.resize(JR);
           else {
-            const WW = new ArrayBuffer(iW),
-              OW = new Uint8Array(WW);
-            OW.set(this._bytes, 0), this._buffer = WW, this._bytes = OW
+            const RR = new ArrayBuffer(JR),
+              GR = new Uint8Array(RR);
+            GR.set(this._bytes, 0), this._buffer = RR, this._bytes = GR
           }
         }
       }
       _start() {}
-      _write(WW, iW) {
-        this._ensureSize(iW + WW.byteLength), this._bytes.set(WW, iW), this._maxPos = Math.max(this._maxPos, iW + WW.byteLength), this._dispatchWrite(iW, iW + WW.byteLength)
+      _write(RR, JR) {
+        this._ensureSize(JR + RR.byteLength), this._bytes.set(RR, JR), this._maxPos = Math.max(this._maxPos, JR + RR.byteLength), this._dispatchWrite(JR, JR + RR.byteLength)
       }
       async _flush() {}
       async _finalize() {
         this.buffer = this._buffer.slice(0, this._maxPos), this._options.onFinalize && await this._options.onFinalize(this.buffer), this._emit("finalized")
       }
       async _close() {}
-      _getSlice(WW, iW) {
-        return this._bytes.slice(WW, iW)
+      _getSlice(RR, JR) {
+        return this._bytes.slice(RR, JR)
       }
     }
-    class tW extends PW {
+    class VR extends ZR {
       _start() {}
-      _write(WW, iW) {
-        this._dispatchWrite(iW, iW + WW.byteLength)
+      _write(RR, JR) {
+        this._dispatchWrite(JR, JR + RR.byteLength)
       }
       async _flush() {}
       async _finalize() {
@@ -8213,13 +8213,13 @@ export const modules = {
       }
       async _close() {}
     }
-    class ZW extends PW {
-      constructor(WW, iW) {
-        super(), this._baseTarget = WW, this._offset = iW
+    class KR extends ZR {
+      constructor(RR, JR) {
+        super(), this._baseTarget = RR, this._offset = JR
       }
       _start() {}
-      _write(WW, iW) {
-        this._baseTarget._write(WW, this._offset + iW), this._dispatchWrite(iW, iW + WW.byteLength)
+      _write(RR, JR) {
+        this._baseTarget._write(RR, this._offset + JR), this._dispatchWrite(JR, JR + RR.byteLength)
       }
       _flush() {
         return this._baseTarget._flush()
@@ -8228,81 +8228,81 @@ export const modules = {
         this._emit("finalized")
       }
       async _close() {}
-      _setMonotonicity(WW) {
-        super._setMonotonicity(WW), this._baseTarget._setMonotonicity(WW)
+      _setMonotonicity(RR) {
+        super._setMonotonicity(RR), this._baseTarget._setMonotonicity(RR)
       }
     }
-    class xW {
-      constructor(WW, iW) {
-        if (this.rootPath = WW, this.getTarget = iW, "string" !== typeof WW) throw new TypeError("rootPath must be a string.");
-        if ("function" !== typeof iW) throw new TypeError("getTarget must be a function.")
+    class wR {
+      constructor(RR, JR) {
+        if (this.rootPath = RR, this.getTarget = JR, "string" !== typeof RR) throw new TypeError("rootPath must be a string.");
+        if ("function" !== typeof JR) throw new TypeError("getTarget must be a function.")
       }
     }
   },
-  41164: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW
+  41149: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR
     });
-    const mW = "Mediabunny v1.61.3"
+    const yR = "Mediabunny v1.61.3"
   },
-  41176: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW
+  41166: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR
     });
-    var mW = OW(41127);
-    class EW {
-      constructor(WW, iW) {
-        if (this.finalized = !1, this.started = !1, this.pos = 0, this.trackedWrites = null, this.trackedStart = -1, this.trackedEnd = -1, WW._writerAcquired) throw new Error("Can't have multiple Writers for the same Target.");
-        this.target = WW, WW._setMonotonicity(iW), WW._writerAcquired = !0
+    var yR = GR(41115);
+    class tR {
+      constructor(RR, JR) {
+        if (this.finalized = !1, this.started = !1, this.pos = 0, this.trackedWrites = null, this.trackedStart = -1, this.trackedEnd = -1, RR._writerAcquired) throw new Error("Can't have multiple Writers for the same Target.");
+        this.target = RR, RR._setMonotonicity(JR), RR._writerAcquired = !0
       }
       start() {
-        (0, mW.K)(!this.started), this.target._start(), this.started = !0
+        (0, yR.I)(!this.started), this.target._start(), this.started = !0
       }
-      write(WW) {
-        (0, mW.K)(this.started && !this.finalized), this.maybeTrackWrites(WW), this.target._write(WW, this.pos), this.pos += WW.byteLength
+      write(RR) {
+        (0, yR.I)(this.started && !this.finalized), this.maybeTrackWrites(RR), this.target._write(RR, this.pos), this.pos += RR.byteLength
       }
-      seek(WW) {
-        this.pos = WW
+      seek(RR) {
+        this.pos = RR
       }
       getPos() {
         return this.pos
       }
       async flush() {
-        return (0, mW.K)(this.started && !this.finalized), this.target._flush()
+        return (0, yR.I)(this.started && !this.finalized), this.target._flush()
       }
       async finalize() {
-        (0, mW.K)(this.started && !this.finalized), await this.target._finalize(), this.finalized = !0
+        (0, yR.I)(this.started && !this.finalized), await this.target._finalize(), this.finalized = !0
       }
-      maybeTrackWrites(WW) {
+      maybeTrackWrites(RR) {
         if (!this.trackedWrites) return;
-        let iW = this.getPos();
-        if (iW < this.trackedStart) {
-          if (iW + WW.byteLength <= this.trackedStart) return;
-          WW = WW.subarray(this.trackedStart - iW), iW = 0
+        let JR = this.getPos();
+        if (JR < this.trackedStart) {
+          if (JR + RR.byteLength <= this.trackedStart) return;
+          RR = RR.subarray(this.trackedStart - JR), JR = 0
         }
-        const OW = iW + WW.byteLength - this.trackedStart;
-        let mW = this.trackedWrites.byteLength;
-        for (; mW < OW;) mW *= 2;
-        if (mW !== this.trackedWrites.byteLength) {
-          const WW = new Uint8Array(mW);
-          WW.set(this.trackedWrites, 0), this.trackedWrites = WW
+        const GR = JR + RR.byteLength - this.trackedStart;
+        let yR = this.trackedWrites.byteLength;
+        for (; yR < GR;) yR *= 2;
+        if (yR !== this.trackedWrites.byteLength) {
+          const RR = new Uint8Array(yR);
+          RR.set(this.trackedWrites, 0), this.trackedWrites = RR
         }
-        this.trackedWrites.set(WW, iW - this.trackedStart), this.trackedEnd = Math.max(this.trackedEnd, iW + WW.byteLength)
+        this.trackedWrites.set(RR, JR - this.trackedStart), this.trackedEnd = Math.max(this.trackedEnd, JR + RR.byteLength)
       }
       startTrackingWrites() {
         this.trackedWrites = new Uint8Array(1024), this.trackedStart = this.getPos(), this.trackedEnd = this.trackedStart
       }
       stopTrackingWrites() {
         if (!this.trackedWrites) throw new Error("Internal error: Can't get tracked writes since nothing was tracked.");
-        const WW = {
+        const RR = {
           data: this.trackedWrites.subarray(0, this.trackedEnd - this.trackedStart),
           start: this.trackedStart,
           end: this.trackedEnd
         };
-        return this.trackedWrites = null, WW
+        return this.trackedWrites = null, RR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

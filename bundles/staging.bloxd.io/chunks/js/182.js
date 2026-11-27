@@ -1,247 +1,247 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  37868: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => jW,
-      h: () => UW,
-      l: () => xW,
-      o: () => ZW
+  37796: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => LR,
+      d: () => nR,
+      g: () => wR,
+      j: () => KR
     });
-    var mW = OW(35220),
-      EW = OW(3361),
-      NW = OW(3368),
-      PW = OW(9954),
-      LW = OW(1526),
-      cW = OW(62),
-      wW = OW(80),
-      tW = OW(1283);
+    var yR = GR(35140),
+      tR = GR(3494),
+      uR = GR(3498),
+      ZR = GR(10048),
+      qR = GR(1581),
+      iR = GR(66),
+      fR = GR(83),
+      VR = GR(1378);
 
-    function ZW() {
-      var WW;
-      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
-        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
+    function KR() {
+      var RR;
+      return (0, qR.h)(tR.e, (0, tR.r)()), (0, VR.jsx)(VR.Fragment, {
+        children: null === (RR = (0, tR.r)()) || void 0 === RR ? void 0 : RR.content
       })
     }
 
-    function xW(WW) {
-      var iW;
+    function wR(RR) {
+      var JR;
       let {
-        show: OW
-      } = WW;
-      (0, LW.g)(EW.g, (0, EW.F)());
-      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
-      return (0, cW.useEffect)((() => {
-        var WW;
-        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
-      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
-        showing: OW,
+        show: GR
+      } = RR;
+      (0, qR.h)(tR.e, (0, tR.r)());
+      const fR = null === (JR = (0, tR.r)()) || void 0 === JR ? void 0 : JR.menu;
+      return (0, iR.useEffect)((() => {
+        var RR;
+        GR || (null === fR || void 0 === fR || null === (RR = fR.onClose) || void 0 === RR || RR.call(fR), (0, uR.m)())
+      }), [GR, fR]), (0, iR.useEffect)((() => GR ? (0, ZR.e)(uR.q, uR.e) : void 0), [GR]), (0, VR.jsx)(yR.b, {
+        showing: GR,
         globallyUniqueKey: "clientGameMenu",
-        children: null === wW || void 0 === wW ? void 0 : wW.content
+        children: null === fR || void 0 === fR ? void 0 : fR.content
       })
     }
-    const lW = new Map,
-      AW = new Set;
+    const rR = new Map,
+      eR = new Set;
 
-    function bW(WW, iW) {
-      iW ? lW.set(WW, iW) : lW.delete(WW);
-      for (const OW of AW) OW()
+    function aR(RR, JR) {
+      JR ? rR.set(RR, JR) : rR.delete(RR);
+      for (const GR of eR) GR()
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        placement: iW = "bottom"
-      } = WW;
-      const OW = (0, cW.useRef)(null);
-      return (0, cW.useLayoutEffect)((() => {
-        const WW = OW.current;
-        return bW(iW, WW), () => {
-          lW.get(iW) === WW && bW(iW, null)
+        placement: JR = "bottom"
+      } = RR;
+      const GR = (0, iR.useRef)(null);
+      return (0, iR.useLayoutEffect)((() => {
+        const RR = GR.current;
+        return aR(JR, RR), () => {
+          rR.get(JR) === RR && aR(JR, null)
         }
-      }), [iW]), (0, tW.jsx)("div", {
-        ref: OW,
-        id: `clientGameHud-${iW}`,
+      }), [JR]), (0, VR.jsx)("div", {
+        ref: GR,
+        id: `clientGameHud-${JR}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function UW(WW) {
+    function nR(RR) {
       let {
-        children: iW,
-        placement: OW = "bottom"
-      } = WW;
-      const [mW, EW] = (0, cW.useState)((() => {
-        var WW;
-        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
+        children: JR,
+        placement: GR = "bottom"
+      } = RR;
+      const [yR, tR] = (0, iR.useState)((() => {
+        var RR;
+        return null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null
       }));
-      return (0, cW.useEffect)((() => {
-        const WW = () => {
-          var WW;
-          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
+      return (0, iR.useEffect)((() => {
+        const RR = () => {
+          var RR;
+          tR(null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null)
         };
-        return AW.add(WW), WW(), () => {
-          AW.delete(WW)
+        return eR.add(RR), RR(), () => {
+          eR.delete(RR)
         }
-      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
+      }), [GR]), yR ? (0, fR.createPortal)(JR, yR) : null
     }
   },
-  35220: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  35140: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(5243),
-      EW = OW(5251);
+    var yR = GR(5343),
+      tR = GR(5347);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        children: iW,
-        showing: OW,
-        globallyUniqueKey: NW,
-        alwaysMountChildren: PW = !1,
-        doGameplayStartStopOnShow: LW = !0,
-        keepsMovement: cW = !1
-      } = WW;
-      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
+        children: JR,
+        showing: GR,
+        globallyUniqueKey: uR,
+        alwaysMountChildren: ZR = !1,
+        doGameplayStartStopOnShow: qR = !0,
+        keepsMovement: iR = !1
+      } = RR;
+      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
     }
   },
-  9954: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => EW
+  10048: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => tR
     });
-    let mW = null;
-    const EW = function(WW) {
-        const iW = {
-          cycle: WW,
+    let yR = null;
+    const tR = function(RR) {
+        const JR = {
+          cycle: RR,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return mW = iW, () => {
-          mW === iW && (mW = null)
+        return yR = JR, () => {
+          yR === JR && (yR = null)
         }
       },
-      NW = () => {
-        var WW;
-        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
+      uR = () => {
+        var RR;
+        return null !== (RR = yR) && void 0 !== RR && RR.canCycle() ? yR.cycle : null
       }
   },
-  53936: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      Smp2OnboardingUi: () => bW
+  53781: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      Smp2OnboardingUi: () => aR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(40542),
-      LW = OW(27),
-      cW = OW(37868),
-      wW = OW(2983),
-      tW = OW(2032),
-      ZW = OW(3599),
-      xW = OW(25),
-      lW = OW(40534),
-      AW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(40564),
+      qR = GR(32),
+      iR = GR(37796),
+      fR = GR(3059),
+      VR = GR(2123),
+      KR = GR(3701),
+      wR = GR(25),
+      rR = GR(40562),
+      eR = GR(1378);
 
-    function bW(WW) {
+    function aR(RR) {
       let {
-        store: iW
-      } = WW;
-      const OW = function(WW) {
-          const [iW, OW] = (0, mW.useState)((() => WW.get()));
-          return (0, mW.useEffect)((() => {
-            const iW = LW.l.subscribe(lW.d, (WW => {
-              OW(WW)
+        store: JR
+      } = RR;
+      const GR = function(RR) {
+          const [JR, GR] = (0, yR.useState)((() => RR.get()));
+          return (0, yR.useEffect)((() => {
+            const JR = qR.n.subscribe(rR.e, (RR => {
+              GR(RR)
             }));
-            return OW(WW.get()), () => {
-              LW.l.unsubscribe(iW)
+            return GR(RR.get()), () => {
+              qR.n.unsubscribe(JR)
             }
-          }), [WW]), iW
-        }(iW),
-        EW = (0, ZW.e)(),
+          }), [RR]), JR
+        }(JR),
+        tR = (0, KR.c)(),
         {
-          openInGameMenuName: NW,
-          openEverythingMenuName: PW
-        } = (0, xW.p)(["openInGameMenuName", "openEverythingMenuName"]),
-        bW = !EW && null === NW && null === PW;
-      (0, mW.useEffect)((() => {
-        iW.setShowing(bW)
-      }), [iW, bW]);
-      const UW = Boolean(OW.path);
-      return (0, mW.useEffect)((() => {
-        if (UW) return (0, wW.c)()
-      }), [UW]), bW ? (0, AW.jsxs)(AW.Fragment, {
-        children: [OW.path && (0, AW.jsx)(cW.h, {
+          openInGameMenuName: uR,
+          openEverythingMenuName: ZR
+        } = (0, wR.o)(["openInGameMenuName", "openEverythingMenuName"]),
+        aR = !tR && null === uR && null === ZR;
+      (0, yR.useEffect)((() => {
+        JR.setShowing(aR)
+      }), [JR, aR]);
+      const nR = Boolean(GR.path);
+      return (0, yR.useEffect)((() => {
+        if (nR) return (0, fR.e)()
+      }), [nR]), aR ? (0, eR.jsxs)(eR.Fragment, {
+        children: [GR.path && (0, eR.jsx)(iR.d, {
           placement: "topRight",
-          children: (0, AW.jsx)(jW, {
-            path: OW.path
+          children: (0, eR.jsx)(LR, {
+            path: GR.path
           })
-        }), OW.reward && (0, AW.jsxs)("div", {
+        }), GR.reward && (0, eR.jsxs)("div", {
           className: "Smp2RewardCard",
           role: "status",
           style: {
-            "--smp2-reward-show-ms": `${lW.e}ms`
+            "--smp2-reward-show-ms": `${rR.i}ms`
           },
-          children: [(0, AW.jsx)("span", {
+          children: [(0, eR.jsx)("span", {
             className: "Smp2RewardBurst",
             "aria-hidden": "true"
-          }), (0, AW.jsx)("div", {
+          }), (0, eR.jsx)("div", {
             className: "Smp2RewardIcon",
-            children: (0, AW.jsx)(tW.b, {
-              itemName: OW.reward.icon,
+            children: (0, eR.jsx)(VR.b, {
+              itemName: GR.reward.icon,
               amount: 1
             })
-          }), (0, AW.jsxs)("div", {
+          }), (0, eR.jsxs)("div", {
             className: "Smp2RewardText",
-            children: [(0, AW.jsx)("strong", {
-              children: OW.reward.title
-            }), (0, AW.jsx)("span", {
-              children: OW.reward.text
+            children: [(0, eR.jsx)("strong", {
+              children: GR.reward.title
+            }), (0, eR.jsx)("span", {
+              children: GR.reward.text
             })]
           })]
-        }, OW.reward.id)]
+        }, GR.reward.id)]
       }) : null
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        path: iW
-      } = WW;
-      const OW = iW.steps[iW.step],
-        mW = (0, PW.m)(OW);
-      return (0, AW.jsxs)("div", {
+        path: JR
+      } = RR;
+      const GR = JR.steps[JR.step],
+        yR = (0, ZR.k)(GR);
+      return (0, eR.jsxs)("div", {
         className: "Smp2PathCard",
-        children: [(0, AW.jsx)("span", {
+        children: [(0, eR.jsx)("span", {
           className: "Smp2PathTitle",
-          children: iW.title
-        }), (0, AW.jsx)("div", {
+          children: JR.title
+        }), (0, eR.jsx)("div", {
           className: "Smp2PathSegments",
           "aria-hidden": "true",
-          children: iW.steps.map(((WW, OW) => (0, AW.jsx)("span", {
-            className: NW()("Smp2PathSegment", {
-              Filled: OW < iW.step,
-              Current: OW === iW.step
+          children: JR.steps.map(((RR, GR) => (0, eR.jsx)("span", {
+            className: uR()("Smp2PathSegment", {
+              Filled: GR < JR.step,
+              Current: GR === JR.step
             })
-          }, WW.key)))
-        }), (0, AW.jsxs)("div", {
+          }, RR.key)))
+        }), (0, eR.jsxs)("div", {
           className: "Smp2PathStep",
-          children: [(0, AW.jsx)("div", {
+          children: [(0, eR.jsx)("div", {
             className: "Smp2PathStepIcon",
-            children: (0, AW.jsx)(tW.b, {
-              itemName: OW.icon,
+            children: (0, eR.jsx)(VR.b, {
+              itemName: GR.icon,
               amount: 1
             })
-          }), (0, AW.jsx)("span", {
+          }), (0, eR.jsx)("span", {
             className: "Smp2PathStepText",
-            children: OW.text
-          }), mW > 1 && (0, AW.jsxs)("span", {
+            children: GR.text
+          }), yR > 1 && (0, eR.jsxs)("span", {
             className: "Smp2PathStepProgress",
-            children: [iW.progress, "/", mW]
+            children: [JR.progress, "/", yR]
           })]
-        }, `${iW.step}`)]
+        }, `${JR.step}`)]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

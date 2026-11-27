@@ -1,255 +1,255 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  37497: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW
+  37406: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => iR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(62),
-      PW = OW(5277),
-      LW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(66),
+      ZR = GR(5383),
+      qR = GR(1378);
 
-    function cW(WW) {
+    function iR(RR) {
       let {
-        locked: iW,
-        children: OW
-      } = WW;
-      const mW = (0, NW.useRef)(null),
-        cW = (0, PW.d)(mW, "y");
-      return (0, LW.jsx)("div", {
-        ref: mW,
-        className: EW()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: cW.before,
-          CreateCustomLobbyBodyMoreBelow: cW.after
+        locked: JR,
+        children: GR
+      } = RR;
+      const yR = (0, uR.useRef)(null),
+        iR = (0, ZR.b)(yR, "y");
+      return (0, qR.jsx)("div", {
+        ref: yR,
+        className: tR()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: iR.before,
+          CreateCustomLobbyBodyMoreBelow: iR.after
         }),
-        "data-pad-ignore": iW || void 0,
-        children: OW
+        "data-pad-ignore": JR || void 0,
+        children: GR
       })
     }
   },
-  37684: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      showFirstWorldSetupPopup: () => bW
+  37595: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      showFirstWorldSetupPopup: () => aR
     });
-    OW(5701), OW(37480);
-    var mW = OW(5318),
-      EW = OW(62),
-      NW = OW(5282),
-      PW = OW(1172),
-      LW = OW(1422),
-      cW = OW(37497),
-      wW = OW(5706),
-      tW = OW(1532),
-      ZW = OW(4723),
-      xW = OW(37489),
-      lW = OW(5312),
-      AW = OW(1283);
+    GR(5820), GR(37391);
+    var yR = GR(5425),
+      tR = GR(66),
+      uR = GR(5392),
+      ZR = GR(1270),
+      qR = GR(1493),
+      iR = GR(37406),
+      fR = GR(5828),
+      VR = GR(1590),
+      KR = GR(4829),
+      wR = GR(37397),
+      rR = GR(5423),
+      eR = GR(1378);
 
-    function bW(WW) {
-      const iW = {
+    function aR(RR) {
+      const JR = {
         requested: !1,
         closed: !1
       };
-      LW.NotificationProvider.showCustomPopup({
-        body: OW => (0, AW.jsx)(jW, {
-          flow: iW,
-          close: OW,
-          ...WW
+      qR.NotificationProvider.showCustomPopup({
+        body: GR => (0, eR.jsx)(LR, {
+          flow: JR,
+          close: GR,
+          ...RR
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          iW.closed = !0, iW.requested || (0, lW.g)()
+          JR.closed = !0, JR.requested || (0, rR.e)()
         }
       })
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        flow: iW,
-        close: OW,
-        onCreating: LW,
-        onCreated: bW,
-        onFailedClosed: jW,
-        join: UW
-      } = WW;
+        flow: JR,
+        close: GR,
+        onCreating: qR,
+        onCreated: aR,
+        onFailedClosed: LR,
+        join: nR
+      } = RR;
       const {
-        t: kW
-      } = (0, PW.B)(), [sW, MW] = (0, EW.useState)(mW.C), [KW, SW] = (0, EW.useState)(!1), [YW, yW] = (0, EW.useState)(""), TW = (0, ZW.c)();
-      (0, EW.useEffect)((() => {
-        (0, lW.p)()
+        t: UR
+      } = (0, ZR.A)(), [WR, AR] = (0, tR.useState)(yR.s), [CR, XR] = (0, tR.useState)(!1), [MR, BR] = (0, tR.useState)(""), lR = (0, KR.d)();
+      (0, tR.useEffect)((() => {
+        (0, rR.n)()
       }), []);
-      const JW = WW => ({
-        isEnabled: () => sW.plugins[WW],
-        WK: iW => {
-          (0, lW.k)({
-            plugin: WW,
-            enabled: iW
-          }), MW({
-            ...sW,
+      const pR = RR => ({
+        isEnabled: () => WR.plugins[RR],
+        JA: JR => {
+          (0, rR.h)({
+            plugin: RR,
+            enabled: JR
+          }), AR({
+            ...WR,
             plugins: {
-              ...sW.plugins,
-              [WW]: iW
+              ...WR.plugins,
+              [RR]: JR
             }
           })
         }
       });
-      return (0, AW.jsxs)("div", {
+      return (0, eR.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, AW.jsx)("div", {
+        children: [(0, eR.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, AW.jsx)("div", {
+          children: (0, eR.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: kW("homePage:myWorld")
+            children: UR("homePage:myWorld")
           })
-        }), (0, AW.jsx)(cW.b, {
-          locked: KW,
-          children: (0, AW.jsxs)("div", {
+        }), (0, eR.jsx)(iR.e, {
+          locked: CR,
+          children: (0, eR.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, AW.jsx)(xW.c, {
-              value: sW.defaultGamemode,
-              onChange: WW => {
-                (0, mW.D)(WW) && WW !== sW.defaultGamemode && ((0, lW.k)({
-                  defaultGamemode: WW
-                }), MW({
-                  ...sW,
-                  defaultGamemode: WW
+            children: [(0, eR.jsx)(wR.d, {
+              value: WR.defaultGamemode,
+              onChange: RR => {
+                (0, yR.v)(RR) && RR !== WR.defaultGamemode && ((0, rR.h)({
+                  defaultGamemode: RR
+                }), AR({
+                  ...WR,
+                  defaultGamemode: RR
                 }))
               },
               showAll: !1,
-              disabled: KW
-            }), (0, AW.jsx)(xW.f, {
-              mapTypes: mW.j,
-              value: sW.mapType,
-              onChange: WW => {
-                (0, mW.F)(WW) && WW !== sW.mapType && ((0, lW.k)({
-                  mapType: WW
-                }), MW({
-                  ...sW,
-                  mapType: WW
+              disabled: CR
+            }), (0, eR.jsx)(wR.g, {
+              mapTypes: yR.i,
+              value: WR.mapType,
+              onChange: RR => {
+                (0, yR.w)(RR) && RR !== WR.mapType && ((0, rR.h)({
+                  mapType: RR
+                }), AR({
+                  ...WR,
+                  mapType: RR
                 }))
               },
               showAll: !1,
-              disabled: KW
-            }), (0, AW.jsx)(wW.b, {
+              disabled: CR
+            }), (0, eR.jsx)(fR.b, {
               callbacks: {
-                dayNight: JW("dayNight"),
-                fallDamage: JW("fallDamage"),
-                survivalGuns: JW("survivalGuns")
+                dayNight: pR("dayNight"),
+                fallDamage: pR("fallDamage"),
+                survivalGuns: pR("survivalGuns")
               },
-              disabled: KW,
+              disabled: CR,
               advancedMode: !1
             })]
           })
-        }), (0, AW.jsxs)("div", {
+        }), (0, eR.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, AW.jsx)(tW.n, {
+          children: [(0, eR.jsx)(VR.n, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: KW,
+            loading: CR,
             onClick: () => {
-              iW.requested = !0, SW(!0), LW(!0), yW(""), (0, lW.n)(sW), NW.b.createPersonalWorld(sW).then((WW => {
-                LW(!1);
-                const mW = bW(WW);
-                !iW.closed && TW.current ? (OW(), UW(WW)) : mW || (0, lW.g)()
-              }), (WW => {
-                if (console.error("Failed to create personal world:", WW), LW(!1), iW.requested = !1, iW.closed || !TW.current) return (0, lW.g)(), void jW(WW);
-                yW(WW.message), SW(!1)
+              JR.requested = !0, XR(!0), qR(!0), BR(""), (0, rR.j)(WR), uR.c.createPersonalWorld(WR).then((RR => {
+                qR(!1);
+                const yR = aR(RR);
+                !JR.closed && lR.current ? (GR(), nR(RR)) : yR || (0, rR.e)()
+              }), (RR => {
+                if (console.error("Failed to create personal world:", RR), qR(!1), JR.requested = !1, JR.closed || !lR.current) return (0, rR.e)(), void LR(RR);
+                BR(RR.message), XR(!1)
               }))
             },
-            children: kW("general:play")
-          }), YW && (0, AW.jsx)("div", {
+            children: UR("general:play")
+          }), MR && (0, eR.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: YW
+            children: MR
           })]
         })]
       })
     }
   },
-  5706: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => wW
+  5828: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(5318),
-      PW = OW(1172),
-      LW = OW(1283);
-    const cW = [...NW.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(5425),
+      ZR = GR(1270),
+      qR = GR(1378);
+    const iR = [...uR.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function wW(WW) {
+    function fR(RR) {
       const {
-        disabled: iW,
-        hideWrapper: OW
-      } = WW, {
-        t: mW
-      } = (0, PW.B)(), wW = WW.advancedMode ? cW.map((iW => [iW, WW.callbacks[iW]])) : NW.n.map((iW => [iW, WW.callbacks[iW]])), ZW = (0, LW.jsx)("div", {
-        className: EW()("PluginsGrid", {
-          SectionBody: !OW
+        disabled: JR,
+        hideWrapper: GR
+      } = RR, {
+        t: yR
+      } = (0, ZR.A)(), fR = RR.advancedMode ? iR.map((JR => [JR, RR.callbacks[JR]])) : uR.j.map((JR => [JR, RR.callbacks[JR]])), KR = (0, qR.jsx)("div", {
+        className: tR()("PluginsGrid", {
+          SectionBody: !GR
         }),
-        children: wW.map((WW => {
-          let [OW, mW] = WW;
-          return (0, LW.jsx)(tW, {
-            plugin: OW,
-            callbacks: mW,
-            disabled: iW
-          }, OW)
+        children: fR.map((RR => {
+          let [GR, yR] = RR;
+          return (0, qR.jsx)(VR, {
+            plugin: GR,
+            callbacks: yR,
+            disabled: JR
+          }, GR)
         }))
       });
-      return OW ? ZW : (0, LW.jsxs)("div", {
+      return GR ? KR : (0, qR.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, LW.jsx)("div", {
+        children: [(0, qR.jsx)("div", {
           className: "SectionTitle",
-          children: mW("worldBuilder:pluginsSection")
-        }), ZW]
+          children: yR("worldBuilder:pluginsSection")
+        }), KR]
       })
     }
 
-    function tW(WW) {
+    function VR(RR) {
       let {
-        plugin: iW,
+        plugin: JR,
         callbacks: {
-          isEnabled: OW,
-          WK: mW
+          isEnabled: GR,
+          JA: yR
         },
-        disabled: NW
-      } = WW;
+        disabled: uR
+      } = RR;
       const {
-        t: cW
-      } = (0, PW.B)(), wW = OW();
-      return (0, LW.jsxs)("div", {
-        className: EW()("PluginCard", {
-          PluginCardEnabled: wW,
-          PluginCardDisabledForm: NW
+        t: iR
+      } = (0, ZR.A)(), fR = GR();
+      return (0, qR.jsxs)("div", {
+        className: tR()("PluginCard", {
+          PluginCardEnabled: fR,
+          PluginCardDisabledForm: uR
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": NW || void 0,
+        "aria-disabled": uR || void 0,
         onClick: () => {
-          NW || mW(!wW)
+          uR || yR(!fR)
         },
-        children: [(0, LW.jsx)("div", {
+        children: [(0, qR.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, LW.jsx)("img", {
-            src: `/textures/games/classic/customGames/${iW}.png`,
-            alt: iW
+          children: (0, qR.jsx)("img", {
+            src: `/textures/games/classic/customGames/${JR}.png`,
+            alt: JR
           })
-        }), (0, LW.jsxs)("div", {
+        }), (0, qR.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, LW.jsx)("div", {
+          children: [(0, qR.jsx)("div", {
             className: "PluginCardTitle",
-            children: cW(ZW[iW])
-          }), (0, LW.jsx)("div", {
+            children: iR(KR[JR])
+          }), (0, qR.jsx)("div", {
             className: "PluginCardDescription",
-            children: cW(xW[iW])
+            children: iR(wR[JR])
           })]
-        }), (0, LW.jsx)("span", {
+        }), (0, qR.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: cW(wW ? "general:on" : "general:off")
+          children: iR(fR ? "general:on" : "general:off")
         })]
       })
     }
-    const ZW = {
+    const KR = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      xW = {
+      wR = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  37489: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      f: () => tW
+  37397: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => fR,
+      g: () => VR
     });
-    OW(62);
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(5318),
-      PW = OW(327),
-      LW = OW(1172),
-      cW = OW(1283);
+    GR(66);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(5425),
+      ZR = GR(359),
+      qR = GR(1270),
+      iR = GR(1378);
 
-    function wW(WW) {
+    function fR(RR) {
       let {
-        value: iW,
-        onChange: OW,
-        showAll: mW,
-        disabled: wW = !1
-      } = WW;
+        value: JR,
+        onChange: GR,
+        showAll: yR,
+        disabled: fR = !1
+      } = RR;
       const {
-        t: tW
-      } = (0, LW.B)();
-      return (0, cW.jsxs)("div", {
-        className: EW()("BloxdForm GamemodeForm", {
-          BasicOptions: !mW
+        t: VR
+      } = (0, qR.A)();
+      return (0, iR.jsxs)("div", {
+        className: tR()("BloxdForm GamemodeForm", {
+          BasicOptions: !yR
         }),
-        children: [(0, cW.jsx)("div", {
+        children: [(0, iR.jsx)("div", {
           className: "SectionTitle",
-          children: tW("classic:defaultGamemode")
-        }), (0, cW.jsx)("div", {
+          children: VR("classic:defaultGamemode")
+        }), (0, iR.jsx)("div", {
           className: "SectionBody",
-          children: NW.M.map((WW => mW || (0, NW.D)(WW) ? (0, cW.jsx)("button", {
+          children: uR.B.map((RR => yR || (0, uR.v)(RR) ? (0, iR.jsx)("button", {
             type: "button",
-            className: EW()("WorldGamemode", {
-              Selected: iW === WW
+            className: tR()("WorldGamemode", {
+              Selected: JR === RR
             }),
-            disabled: wW,
+            disabled: fR,
             onClick: () => {
-              OW(WW)
+              GR(RR)
             },
             style: {
-              "--background-image": `url(${PW.s[WW]})`
+              "--background-image": `url(${ZR.u[RR]})`
             },
-            children: PW.p[WW]
-          }, WW) : null))
+            children: ZR.s[RR]
+          }, RR) : null))
         })]
       })
     }
 
-    function tW(WW) {
+    function VR(RR) {
       let {
-        mapTypes: iW,
-        value: OW,
-        onChange: mW,
-        showAll: wW,
-        disabled: tW = !1,
-        children: ZW
-      } = WW;
+        mapTypes: JR,
+        value: GR,
+        onChange: yR,
+        showAll: fR,
+        disabled: VR = !1,
+        children: KR
+      } = RR;
       const {
-        t: xW
-      } = (0, LW.B)();
-      return (0, cW.jsxs)("div", {
-        className: EW()("BloxdForm MapTypeForm", {
-          BasicOptions: !wW
+        t: wR
+      } = (0, qR.A)();
+      return (0, iR.jsxs)("div", {
+        className: tR()("BloxdForm MapTypeForm", {
+          BasicOptions: !fR
         }),
-        children: [(0, cW.jsx)("div", {
+        children: [(0, iR.jsx)("div", {
           className: "SectionTitle",
-          children: xW("customLobby:mapType")
-        }), (0, cW.jsx)("div", {
+          children: wR("customLobby:mapType")
+        }), (0, iR.jsx)("div", {
           className: "SectionBody",
-          children: iW.map((WW => wW || (0, NW.F)(WW) ? (0, cW.jsx)("button", {
+          children: JR.map((RR => fR || (0, uR.w)(RR) ? (0, iR.jsx)("button", {
             type: "button",
-            className: EW()("MapType", {
-              Selected: OW === WW
+            className: tR()("MapType", {
+              Selected: GR === RR
             }),
-            disabled: tW,
+            disabled: VR,
             onClick: () => {
-              mW(WW)
+              yR(RR)
             },
             style: {
-              "--background-image": `url(${PW.j[WW]})`
+              "--background-image": `url(${ZR.n[RR]})`
             },
-            children: PW.h[WW]
-          }, WW) : null))
-        }), ZW]
+            children: ZR.j[RR]
+          }, RR) : null))
+        }), KR]
       })
     }
   },
-  5701: () => {},
-  37480: () => {}
+  5820: () => {},
+  37391: () => {}
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

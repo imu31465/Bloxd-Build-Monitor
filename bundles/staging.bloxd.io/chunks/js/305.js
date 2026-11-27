@@ -1,114 +1,114 @@
-/*! For license information please see 1yqdn.305.7b1d42cd.chunk.js.LICENSE.txt */
+/*! For license information please see 4udp6d.305.15b19431.chunk.js.LICENSE.txt */
 export const id = 305;
 export const ids = [305];
 export const modules = {
-    42048: (WW, iW, OW) => {
-        OW.r(iW), OW.d(iW, {
-          ActionCodeOperation: () => xW,
-          ActionCodeURL: () => Qi,
-          AuthCredential: () => fi,
-          AuthErrorCodes: () => UW,
-          EmailAuthCredential: () => Ii,
-          EmailAuthProvider: () => iO,
-          FacebookAuthProvider: () => NO,
-          FactorId: () => cW,
-          GithubAuthProvider: () => LO,
-          GoogleAuthProvider: () => PO,
-          OAuthCredential: () => ri,
-          OAuthProvider: () => EO,
-          OperationType: () => ZW,
-          PhoneAuthCredential: () => Fi,
-          PhoneAuthProvider: () => EE,
-          PhoneMultiFactorGenerator: () => mN,
-          ProviderId: () => wW,
-          RecaptchaVerifier: () => zm,
-          SAMLAuthProvider: () => wO,
-          SignInMethod: () => tW,
-          TotpMultiFactorGenerator: () => EN,
-          TotpSecret: () => PN,
-          TwitterAuthProvider: () => tO,
-          applyActionCode: () => eO,
-          beforeAuthStateChanged: () => Pm,
-          browserLocalPersistence: () => Km,
-          browserPopupRedirectResolver: () => WN,
-          browserSessionPersistence: () => Ym,
-          checkActionCode: () => vO,
-          confirmPasswordReset: () => dO,
-          connectAuthEmulator: () => gi,
-          createUserWithEmailAndPassword: () => DO,
-          debugErrorMap: () => AW,
-          deleteUser: () => Zm,
-          fetchSignInMethodsForEmail: () => XO,
-          getAdditionalUserInfo: () => Om,
-          getAuth: () => AN,
-          getIdToken: () => RW,
-          getIdTokenResult: () => GW,
-          getMultiFactorResolver: () => Am,
-          getRedirectResult: () => JE,
-          inMemoryPersistence: () => Li,
-          indexedDBLocalPersistence: () => fm,
-          initializeAuth: () => vi,
-          initializeRecaptchaConfig: () => Em,
-          isSignInWithEmailLink: () => fO,
-          linkWithCredential: () => yO,
-          linkWithPhoneNumber: () => WE,
-          linkWithPopup: () => AE,
-          linkWithRedirect: () => TE,
-          multiFactor: () => Um,
-          onAuthStateChanged: () => Lm,
-          onIdTokenChanged: () => Nm,
-          parseActionCodeURL: () => WO,
-          prodErrorMap: () => bW,
-          reauthenticateWithCredential: () => TO,
-          reauthenticateWithPhoneNumber: () => iE,
-          reauthenticateWithPopup: () => lE,
-          reauthenticateWithRedirect: () => yE,
-          reload: () => Wi,
-          sendEmailVerification: () => BO,
-          sendPasswordResetEmail: () => oO,
-          sendSignInLinkToEmail: () => pO,
-          setPersistence: () => mm,
-          signInAnonymously: () => AO,
-          signInWithCredential: () => YO,
-          signInWithCustomToken: () => JO,
-          signInWithEmailAndPassword: () => VO,
-          signInWithEmailLink: () => CO,
-          signInWithPhoneNumber: () => Qm,
-          signInWithPopup: () => xE,
-          signInWithRedirect: () => YE,
-          signOut: () => tm,
-          unlink: () => kO,
-          updateCurrentUser: () => wm,
-          updateEmail: () => GO,
-          updatePassword: () => IO,
-          updatePhoneNumber: () => mE,
-          updateProfile: () => RO,
-          useDeviceLanguage: () => cm,
-          verifyBeforeUpdateEmail: () => qO,
-          verifyPasswordResetCode: () => gO
+    42062: (RR, JR, GR) => {
+        GR.r(JR), GR.d(JR, {
+          ActionCodeOperation: () => wR,
+          ActionCodeURL: () => TJ,
+          AuthCredential: () => PJ,
+          AuthErrorCodes: () => nR,
+          EmailAuthCredential: () => EJ,
+          EmailAuthProvider: () => hJ,
+          FacebookAuthProvider: () => yG,
+          FactorId: () => iR,
+          GithubAuthProvider: () => uG,
+          GoogleAuthProvider: () => tG,
+          OAuthCredential: () => kJ,
+          OAuthProvider: () => GG,
+          OperationType: () => KR,
+          PhoneAuthCredential: () => FJ,
+          PhoneAuthProvider: () => Jt,
+          PhoneMultiFactorGenerator: () => Ju,
+          ProviderId: () => fR,
+          RecaptchaVerifier: () => ky,
+          SAMLAuthProvider: () => qG,
+          SignInMethod: () => VR,
+          TotpMultiFactorGenerator: () => Gu,
+          TotpSecret: () => tu,
+          TwitterAuthProvider: () => iG,
+          applyActionCode: () => xG,
+          beforeAuthStateChanged: () => ty,
+          browserLocalPersistence: () => Wy,
+          browserPopupRedirectResolver: () => st,
+          browserSessionPersistence: () => Cy,
+          checkActionCode: () => NG,
+          confirmPasswordReset: () => OG,
+          connectAuthEmulator: () => HJ,
+          createUserWithEmailAndPassword: () => HG,
+          debugErrorMap: () => eR,
+          deleteUser: () => fy,
+          fetchSignInMethodsForEmail: () => mG,
+          getAdditionalUserInfo: () => Ry,
+          getAuth: () => wu,
+          getIdToken: () => ER,
+          getIdTokenResult: () => YR,
+          getMultiFactorResolver: () => wy,
+          getRedirectResult: () => Bt,
+          inMemoryPersistence: () => qJ,
+          indexedDBLocalPersistence: () => cy,
+          initializeAuth: () => DJ,
+          initializeRecaptchaConfig: () => Gy,
+          isSignInWithEmailLink: () => PG,
+          linkWithCredential: () => XG,
+          linkWithPhoneNumber: () => Ty,
+          linkWithPopup: () => Kt,
+          linkWithRedirect: () => Mt,
+          multiFactor: () => ay,
+          onAuthStateChanged: () => uy,
+          onIdTokenChanged: () => yy,
+          parseActionCodeURL: () => sJ,
+          prodErrorMap: () => aR,
+          reauthenticateWithCredential: () => MG,
+          reauthenticateWithPhoneNumber: () => sy,
+          reauthenticateWithPopup: () => Vt,
+          reauthenticateWithRedirect: () => Xt,
+          reload: () => RJ,
+          sendEmailVerification: () => zG,
+          sendPasswordResetEmail: () => vG,
+          sendSignInLinkToEmail: () => cG,
+          setPersistence: () => Jy,
+          signInAnonymously: () => wG,
+          signInWithCredential: () => CG,
+          signInWithCustomToken: () => BG,
+          signInWithEmailAndPassword: () => oG,
+          signInWithEmailLink: () => IG,
+          signInWithPhoneNumber: () => Fy,
+          signInWithPopup: () => ft,
+          signInWithRedirect: () => Ct,
+          signOut: () => iy,
+          unlink: () => LG,
+          updateCurrentUser: () => qy,
+          updateEmail: () => dG,
+          updatePassword: () => EG,
+          updatePhoneNumber: () => Rt,
+          updateProfile: () => jG,
+          useDeviceLanguage: () => Zy,
+          verifyBeforeUpdateEmail: () => SG,
+          verifyPasswordResetCode: () => DG
         });
-        var mW = OW(42041),
-          EW = OW(42035);
+        var yR = GR(42046),
+          tR = GR(42038);
 
-        function NW(WW, iW) {
-          var OW = {};
-          for (var mW in WW) Object.prototype.hasOwnProperty.call(WW, mW) && iW.indexOf(mW) < 0 && (OW[mW] = WW[mW]);
-          if (null != WW && "function" === typeof Object.getOwnPropertySymbols) {
-            var EW = 0;
-            for (mW = Object.getOwnPropertySymbols(WW); EW < mW.length; EW++) iW.indexOf(mW[EW]) < 0 && Object.prototype.propertyIsEnumerable.call(WW, mW[EW]) && (OW[mW[EW]] = WW[mW[EW]])
+        function uR(RR, JR) {
+          var GR = {};
+          for (var yR in RR) Object.prototype.hasOwnProperty.call(RR, yR) && JR.indexOf(yR) < 0 && (GR[yR] = RR[yR]);
+          if (null != RR && "function" === typeof Object.getOwnPropertySymbols) {
+            var tR = 0;
+            for (yR = Object.getOwnPropertySymbols(RR); tR < yR.length; tR++) JR.indexOf(yR[tR]) < 0 && Object.prototype.propertyIsEnumerable.call(RR, yR[tR]) && (GR[yR[tR]] = RR[yR[tR]])
           }
-          return OW
+          return GR
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var PW = OW(42043),
-          LW = OW(42038);
-        const cW = {
+        var ZR = GR(42051),
+          qR = GR(42044);
+        const iR = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          wW = {
+          fR = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          tW = {
+          VR = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          ZW = {
+          KR = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          xW = {
+          wR = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function lW() {
+        function rR() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const AW = function() {
+        const eR = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          bW = lW,
-          jW = new mW.h("auth", "Firebase", {
+          aR = rR,
+          LR = new yR.e("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          UW = {
+          nR = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          kW = new PW.f("@firebase/auth");
+          UR = new ZR.g("@firebase/auth");
 
-        function sW(WW) {
-          if (kW.logLevel <= PW.b.ERROR) {
-            for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
-            kW.error(`Auth (${EW.f}): ${WW}`, ...OW)
+        function WR(RR) {
+          if (UR.logLevel <= ZR.d.ERROR) {
+            for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), yR = 1; yR < JR; yR++) GR[yR - 1] = arguments[yR];
+            UR.error(`Auth (${tR.c}): ${RR}`, ...GR)
           }
         }
 
-        function MW(WW) {
-          for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
-          throw yW(WW, ...OW)
+        function AR(RR) {
+          for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), yR = 1; yR < JR; yR++) GR[yR - 1] = arguments[yR];
+          throw BR(RR, ...GR)
         }
 
-        function KW(WW) {
-          for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
-          return yW(WW, ...OW)
+        function CR(RR) {
+          for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), yR = 1; yR < JR; yR++) GR[yR - 1] = arguments[yR];
+          return BR(RR, ...GR)
         }
 
-        function SW(WW, iW, OW) {
-          const EW = Object.assign(Object.assign({}, bW()), {
-            [iW]: OW
+        function XR(RR, JR, GR) {
+          const tR = Object.assign(Object.assign({}, aR()), {
+            [JR]: GR
           });
-          return new mW.h("auth", "Firebase", EW).create(iW, {
-            appName: WW.name
+          return new yR.e("auth", "Firebase", tR).create(JR, {
+            appName: RR.name
           })
         }
 
-        function YW(WW, iW, OW) {
-          if (!(iW instanceof OW)) throw OW.name !== iW.constructor.name && MW(WW, "argument-error"), SW(WW, "argument-error", `Type of ${iW.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function MR(RR, JR, GR) {
+          if (!(JR instanceof GR)) throw GR.name !== JR.constructor.name && AR(RR, "argument-error"), XR(RR, "argument-error", `Type of ${JR.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function yW(WW) {
-          for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
-          if ("string" !== typeof WW) {
-            const iW = OW[0],
-              mW = [...OW.slice(1)];
-            return mW[0] && (mW[0].appName = WW.name), WW._errorFactory.create(iW, ...mW)
+        function BR(RR) {
+          for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), yR = 1; yR < JR; yR++) GR[yR - 1] = arguments[yR];
+          if ("string" !== typeof RR) {
+            const JR = GR[0],
+              yR = [...GR.slice(1)];
+            return yR[0] && (yR[0].appName = RR.name), RR._errorFactory.create(JR, ...yR)
           }
-          return jW.create(WW, ...OW)
+          return LR.create(RR, ...GR)
         }
 
-        function TW(WW, iW) {
-          if (!WW) {
-            for (var OW = arguments.length, mW = new Array(OW > 2 ? OW - 2 : 0), EW = 2; EW < OW; EW++) mW[EW - 2] = arguments[EW];
-            throw yW(iW, ...mW)
+        function lR(RR, JR) {
+          if (!RR) {
+            for (var GR = arguments.length, yR = new Array(GR > 2 ? GR - 2 : 0), tR = 2; tR < GR; tR++) yR[tR - 2] = arguments[tR];
+            throw BR(JR, ...yR)
           }
         }
 
-        function JW(WW) {
-          const iW = "INTERNAL ASSERTION FAILED: " + WW;
-          throw sW(iW), new Error(iW)
+        function pR(RR) {
+          const JR = "INTERNAL ASSERTION FAILED: " + RR;
+          throw WR(JR), new Error(JR)
         }
 
-        function hW(WW, iW) {
-          WW || JW(iW)
+        function gR(RR, JR) {
+          RR || pR(JR)
         }
 
-        function HW() {
-          var WW;
-          return "undefined" !== typeof self && (null === (WW = self.location) || void 0 === WW ? void 0 : WW.href) || ""
+        function bR() {
+          var RR;
+          return "undefined" !== typeof self && (null === (RR = self.location) || void 0 === RR ? void 0 : RR.href) || ""
         }
 
-        function nW() {
-          return "http:" === uW() || "https:" === uW()
+        function vR() {
+          return "http:" === OR() || "https:" === OR()
         }
 
-        function uW() {
-          var WW;
-          return "undefined" !== typeof self && (null === (WW = self.location) || void 0 === WW ? void 0 : WW.protocol) || null
+        function OR() {
+          var RR;
+          return "undefined" !== typeof self && (null === (RR = self.location) || void 0 === RR ? void 0 : RR.protocol) || null
         }
-        class oW {
-          constructor(WW, iW) {
-            this.shortDelay = WW, this.longDelay = iW, hW(iW > WW, "Short delay should be less than long delay!"), this.isMobile = (0, mW.X)() || (0, mW.Y)()
+        class xR {
+          constructor(RR, JR) {
+            this.shortDelay = RR, this.longDelay = JR, gR(JR > RR, "Short delay should be less than long delay!"), this.isMobile = (0, yR.T)() || (0, yR.X)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (nW() || (0, mW.O)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (vR() || (0, yR.I)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function dW(WW, iW) {
-          hW(WW.emulator, "Emulator should always be set here");
+        function NR(RR, JR) {
+          gR(RR.emulator, "Emulator should always be set here");
           const {
-            url: OW
-          } = WW.emulator;
-          return iW ? `${OW}${iW.startsWith("/")?iW.slice(1):iW}` : OW
+            url: GR
+          } = RR.emulator;
+          return JR ? `${GR}${JR.startsWith("/")?JR.slice(1):JR}` : GR
         }
-        class eW {
-          static initialize(WW, iW, OW) {
-            this.fetchImpl = WW, iW && (this.headersImpl = iW), OW && (this.responseImpl = OW)
+        class DR {
+          static initialize(RR, JR, GR) {
+            this.fetchImpl = RR, JR && (this.headersImpl = JR), GR && (this.responseImpl = GR)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void JW("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void pR("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void JW("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void pR("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void JW("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void pR("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const vW = {
+        const HR = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          gW = new oW(3e4, 6e4);
+          oR = new xR(3e4, 6e4);
 
-        function DW(WW, iW) {
-          return WW.tenantId && !iW.tenantId ? Object.assign(Object.assign({}, iW), {
-            tenantId: WW.tenantId
-          }) : iW
+        function cR(RR, JR) {
+          return RR.tenantId && !JR.tenantId ? Object.assign(Object.assign({}, JR), {
+            tenantId: RR.tenantId
+          }) : JR
         }
-        async function VW(WW, iW, OW, EW) {
-          return pW(WW, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let NW = {},
-              PW = {};
-            EW && ("GET" === iW ? PW = EW : NW = {
-              body: JSON.stringify(EW)
+        async function PR(RR, JR, GR, tR) {
+          return IR(RR, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let uR = {},
+              ZR = {};
+            tR && ("GET" === JR ? ZR = tR : uR = {
+              body: JSON.stringify(tR)
             });
-            const LW = (0, mW.$)(Object.assign({
-                key: WW.config.apiKey
-              }, PW)).slice(1),
-              cW = await WW._getAdditionalHeaders();
-            return cW["Content-Type"] = "application/json", WW.languageCode && (cW["X-Firebase-Locale"] = WW.languageCode), eW.fetch()(CW(WW, WW.config.apiHost, OW, LW), Object.assign({
-              method: iW,
-              headers: cW,
+            const qR = (0, yR.db)(Object.assign({
+                key: RR.config.apiKey
+              }, ZR)).slice(1),
+              iR = await RR._getAdditionalHeaders();
+            return iR["Content-Type"] = "application/json", RR.languageCode && (iR["X-Firebase-Locale"] = RR.languageCode), DR.fetch()(zR(RR, RR.config.apiHost, GR, qR), Object.assign({
+              method: JR,
+              headers: iR,
               referrerPolicy: "no-referrer"
-            }, NW))
+            }, uR))
           }))
         }
-        async function pW(WW, iW, OW) {
-          WW._canInitEmulator = !1;
-          const EW = Object.assign(Object.assign({}, vW), iW);
+        async function IR(RR, JR, GR) {
+          RR._canInitEmulator = !1;
+          const tR = Object.assign(Object.assign({}, HR), JR);
           try {
-            const iW = new XW(WW),
-              mW = await Promise.race([OW(), iW.promise]);
-            iW.clearNetworkTimeout();
-            const NW = await mW.json();
-            if ("needConfirmation" in NW) throw BW(WW, "account-exists-with-different-credential", NW);
-            if (mW.ok && !("errorMessage" in NW)) return NW;
+            const JR = new SR(RR),
+              yR = await Promise.race([GR(), JR.promise]);
+            JR.clearNetworkTimeout();
+            const uR = await yR.json();
+            if ("needConfirmation" in uR) throw jR(RR, "account-exists-with-different-credential", uR);
+            if (yR.ok && !("errorMessage" in uR)) return uR;
             {
-              const iW = mW.ok ? NW.errorMessage : NW.error.message,
-                [OW, PW] = iW.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === OW) throw BW(WW, "credential-already-in-use", NW);
-              if ("EMAIL_EXISTS" === OW) throw BW(WW, "email-already-in-use", NW);
-              if ("USER_DISABLED" === OW) throw BW(WW, "user-disabled", NW);
-              const LW = EW[OW] || OW.toLowerCase().replace(/[_\s]+/g, "-");
-              if (PW) throw SW(WW, LW, PW);
-              MW(WW, LW)
+              const JR = yR.ok ? uR.errorMessage : uR.error.message,
+                [GR, ZR] = JR.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === GR) throw jR(RR, "credential-already-in-use", uR);
+              if ("EMAIL_EXISTS" === GR) throw jR(RR, "email-already-in-use", uR);
+              if ("USER_DISABLED" === GR) throw jR(RR, "user-disabled", uR);
+              const qR = tR[GR] || GR.toLowerCase().replace(/[_\s]+/g, "-");
+              if (ZR) throw XR(RR, qR, ZR);
+              AR(RR, qR)
             }
-          } catch (NW) {
-            if (NW instanceof mW.k) throw NW;
-            MW(WW, "network-request-failed", {
-              message: String(NW)
+          } catch (uR) {
+            if (uR instanceof yR.f) throw uR;
+            AR(RR, "network-request-failed", {
+              message: String(uR)
             })
           }
         }
-        async function fW(WW, iW, OW, mW) {
-          let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const NW = await VW(WW, iW, OW, mW, EW);
-          return "mfaPendingCredential" in NW && MW(WW, "multi-factor-auth-required", {
-            _serverResponse: NW
-          }), NW
+        async function mR(RR, JR, GR, yR) {
+          let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const uR = await PR(RR, JR, GR, yR, tR);
+          return "mfaPendingCredential" in uR && AR(RR, "multi-factor-auth-required", {
+            _serverResponse: uR
+          }), uR
         }
 
-        function CW(WW, iW, OW, mW) {
-          const EW = `${iW}${OW}?${mW}`;
-          return WW.config.emulator ? dW(WW.config, EW) : `${WW.config.apiScheme}://${EW}`
+        function zR(RR, JR, GR, yR) {
+          const tR = `${JR}${GR}?${yR}`;
+          return RR.config.emulator ? NR(RR.config, tR) : `${RR.config.apiScheme}://${tR}`
         }
-        class XW {
-          constructor(WW) {
-            this.auth = WW, this.timer = null, this.promise = new Promise(((WW, iW) => {
-              this.timer = setTimeout((() => iW(KW(this.auth, "network-request-failed"))), gW.get())
+        class SR {
+          constructor(RR) {
+            this.auth = RR, this.timer = null, this.promise = new Promise(((RR, JR) => {
+              this.timer = setTimeout((() => JR(CR(this.auth, "network-request-failed"))), oR.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,75 +586,75 @@ export const modules = {
           }
         }
 
-        function BW(WW, iW, OW) {
-          const mW = {
-            appName: WW.name
+        function jR(RR, JR, GR) {
+          const yR = {
+            appName: RR.name
           };
-          OW.email && (mW.email = OW.email), OW.phoneNumber && (mW.phoneNumber = OW.phoneNumber);
-          const EW = KW(WW, iW, mW);
-          return EW.customData._tokenResponse = OW, EW
+          GR.email && (yR.email = GR.email), GR.phoneNumber && (yR.phoneNumber = GR.phoneNumber);
+          const tR = CR(RR, JR, yR);
+          return tR.customData._tokenResponse = GR, tR
         }
 
-        function qW(WW) {
-          if (WW) try {
-            const iW = new Date(Number(WW));
-            if (!isNaN(iW.getTime())) return iW.toUTCString()
-          } catch (iW) {}
+        function dR(RR) {
+          if (RR) try {
+            const JR = new Date(Number(RR));
+            if (!isNaN(JR.getTime())) return JR.toUTCString()
+          } catch (JR) {}
         }
 
-        function RW(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, mW.J)(WW).getIdToken(iW)
+        function ER(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, yR.C)(RR).getIdToken(JR)
         }
-        async function GW(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const OW = (0, mW.J)(WW),
-            EW = await OW.getIdToken(iW),
-            NW = aW(EW);
-          TW(NW && NW.exp && NW.auth_time && NW.iat, OW.auth, "internal-error");
-          const PW = "object" === typeof NW.firebase ? NW.firebase : void 0,
-            LW = null === PW || void 0 === PW ? void 0 : PW.sign_in_provider;
+        async function YR(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const GR = (0, yR.C)(RR),
+            tR = await GR.getIdToken(JR),
+            uR = QR(tR);
+          lR(uR && uR.exp && uR.auth_time && uR.iat, GR.auth, "internal-error");
+          const ZR = "object" === typeof uR.firebase ? uR.firebase : void 0,
+            qR = null === ZR || void 0 === ZR ? void 0 : ZR.sign_in_provider;
           return {
-            claims: NW,
-            token: EW,
-            authTime: qW(IW(NW.auth_time)),
-            issuedAtTime: qW(IW(NW.iat)),
-            expirationTime: qW(IW(NW.exp)),
-            signInProvider: LW || null,
-            signInSecondFactor: (null === PW || void 0 === PW ? void 0 : PW.sign_in_second_factor) || null
+            claims: uR,
+            token: tR,
+            authTime: dR(kR(uR.auth_time)),
+            issuedAtTime: dR(kR(uR.iat)),
+            expirationTime: dR(kR(uR.exp)),
+            signInProvider: qR || null,
+            signInSecondFactor: (null === ZR || void 0 === ZR ? void 0 : ZR.sign_in_second_factor) || null
           }
         }
 
-        function IW(WW) {
-          return 1e3 * Number(WW)
+        function kR(RR) {
+          return 1e3 * Number(RR)
         }
 
-        function aW(WW) {
-          const [iW, OW, EW] = WW.split(".");
-          if (void 0 === iW || void 0 === OW || void 0 === EW) return sW("JWT malformed, contained fewer than 3 sections"), null;
+        function QR(RR) {
+          const [JR, GR, tR] = RR.split(".");
+          if (void 0 === JR || void 0 === GR || void 0 === tR) return WR("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const WW = (0, mW.o)(OW);
-            return WW ? JSON.parse(WW) : (sW("Failed to decode base64 JWT payload"), null)
-          } catch (NW) {
-            return sW("Caught error parsing JWT payload as JSON", null === NW || void 0 === NW ? void 0 : NW.toString()), null
+            const RR = (0, yR.m)(GR);
+            return RR ? JSON.parse(RR) : (WR("Failed to decode base64 JWT payload"), null)
+          } catch (uR) {
+            return WR("Caught error parsing JWT payload as JSON", null === uR || void 0 === uR ? void 0 : uR.toString()), null
           }
         }
-        async function rW(WW, iW) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return iW;
+        async function FR(RR, JR) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return JR;
           try {
-            return await iW
-          } catch (OW) {
-            throw OW instanceof mW.k && function(WW) {
+            return await JR
+          } catch (GR) {
+            throw GR instanceof yR.f && function(RR) {
               let {
-                code: iW
-              } = WW;
-              return "auth/user-disabled" === iW || "auth/user-token-expired" === iW
-            }(OW) && WW.auth.currentUser === WW && await WW.auth.signOut(), OW
+                code: JR
+              } = RR;
+              return "auth/user-disabled" === JR || "auth/user-token-expired" === JR
+            }(GR) && RR.auth.currentUser === RR && await RR.auth.signOut(), GR
           }
         }
-        class zW {
-          constructor(WW) {
-            this.user = WW, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
+        class TR {
+          constructor(RR) {
+            this.user = RR, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
           _start() {
             this.isRunning || (this.isRunning = !0, this.schedule())
@@ -662,43 +662,43 @@ export const modules = {
           _stop() {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
-          getInterval(WW) {
-            var iW;
-            if (WW) {
-              const WW = this.errorBackoff;
-              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), WW
+          getInterval(RR) {
+            var JR;
+            if (RR) {
+              const RR = this.errorBackoff;
+              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), RR
             } {
               this.errorBackoff = 3e4;
-              const WW = (null !== (iW = this.user.stsTokenManager.expirationTime) && void 0 !== iW ? iW : 0) - Date.now() - 3e5;
-              return Math.max(0, WW)
+              const RR = (null !== (JR = this.user.stsTokenManager.expirationTime) && void 0 !== JR ? JR : 0) - Date.now() - 3e5;
+              return Math.max(0, RR)
             }
           }
           schedule() {
-            let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const iW = this.getInterval(WW);
+            const JR = this.getInterval(RR);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), iW)
+            }), JR)
           }
           async iteration() {
             try {
               await this.user.getIdToken(!0)
-            } catch (WW) {
-              return void("auth/network-request-failed" === (null === WW || void 0 === WW ? void 0 : WW.code) && this.schedule(!0))
+            } catch (RR) {
+              return void("auth/network-request-failed" === (null === RR || void 0 === RR ? void 0 : RR.code) && this.schedule(!0))
             }
             this.schedule()
           }
         }
-        class FW {
-          constructor(WW, iW) {
-            this.createdAt = WW, this.lastLoginAt = iW, this._initializeTime()
+        class sR {
+          constructor(RR, JR) {
+            this.createdAt = RR, this.lastLoginAt = JR, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = qW(this.lastLoginAt), this.creationTime = qW(this.createdAt)
+            this.lastSignInTime = dR(this.lastLoginAt), this.creationTime = dR(this.createdAt)
           }
-          _copy(WW) {
-            this.createdAt = WW.createdAt, this.lastLoginAt = WW.lastLoginAt, this._initializeTime()
+          _copy(RR) {
+            this.createdAt = RR.createdAt, this.lastLoginAt = RR.lastLoginAt, this._initializeTime()
           }
           toJSON() {
             return {
@@ -707,123 +707,123 @@ export const modules = {
             }
           }
         }
-        async function QW(WW) {
-          var iW;
-          const OW = WW.auth,
-            mW = await WW.getIdToken(),
-            EW = await rW(WW, async function(WW, iW) {
-              return VW(WW, "POST", "/v1/accounts:lookup", iW)
-            }(OW, {
-              idToken: mW
+        async function hR(RR) {
+          var JR;
+          const GR = RR.auth,
+            yR = await RR.getIdToken(),
+            tR = await FR(RR, async function(RR, JR) {
+              return PR(RR, "POST", "/v1/accounts:lookup", JR)
+            }(GR, {
+              idToken: yR
             }));
-          TW(null === EW || void 0 === EW ? void 0 : EW.users.length, OW, "internal-error");
-          const PW = EW.users[0];
-          WW._notifyReloadListener(PW);
-          const LW = (null === (iW = PW.providerUserInfo) || void 0 === iW ? void 0 : iW.length) ? PW.providerUserInfo.map((WW => {
+          lR(null === tR || void 0 === tR ? void 0 : tR.users.length, GR, "internal-error");
+          const ZR = tR.users[0];
+          RR._notifyReloadListener(ZR);
+          const qR = (null === (JR = ZR.providerUserInfo) || void 0 === JR ? void 0 : JR.length) ? ZR.providerUserInfo.map((RR => {
             var {
-              providerId: iW
-            } = WW, OW = NW(WW, ["providerId"]);
+              providerId: JR
+            } = RR, GR = uR(RR, ["providerId"]);
             return {
-              providerId: iW,
-              uid: OW.rawId || "",
-              displayName: OW.displayName || null,
-              email: OW.email || null,
-              phoneNumber: OW.phoneNumber || null,
-              photoURL: OW.photoUrl || null
+              providerId: JR,
+              uid: GR.rawId || "",
+              displayName: GR.displayName || null,
+              email: GR.email || null,
+              phoneNumber: GR.phoneNumber || null,
+              photoURL: GR.photoUrl || null
             }
           })) : [];
-          const cW = (wW = WW.providerData, tW = LW, [...wW.filter((WW => !tW.some((iW => iW.providerId === WW.providerId)))), ...tW]);
-          var wW, tW;
-          const ZW = WW.isAnonymous,
-            xW = !(WW.email && PW.passwordHash) && !(null === cW || void 0 === cW ? void 0 : cW.length),
-            lW = !!ZW && xW,
-            AW = {
-              uid: PW.localId,
-              displayName: PW.displayName || null,
-              photoURL: PW.photoUrl || null,
-              email: PW.email || null,
-              emailVerified: PW.emailVerified || !1,
-              phoneNumber: PW.phoneNumber || null,
-              tenantId: PW.tenantId || null,
-              providerData: cW,
-              metadata: new FW(PW.createdAt, PW.lastLoginAt),
-              isAnonymous: lW
+          const iR = (fR = RR.providerData, VR = qR, [...fR.filter((RR => !VR.some((JR => JR.providerId === RR.providerId)))), ...VR]);
+          var fR, VR;
+          const KR = RR.isAnonymous,
+            wR = !(RR.email && ZR.passwordHash) && !(null === iR || void 0 === iR ? void 0 : iR.length),
+            rR = !!KR && wR,
+            eR = {
+              uid: ZR.localId,
+              displayName: ZR.displayName || null,
+              photoURL: ZR.photoUrl || null,
+              email: ZR.email || null,
+              emailVerified: ZR.emailVerified || !1,
+              phoneNumber: ZR.phoneNumber || null,
+              tenantId: ZR.tenantId || null,
+              providerData: iR,
+              metadata: new sR(ZR.createdAt, ZR.lastLoginAt),
+              isAnonymous: rR
             };
-          Object.assign(WW, AW)
+          Object.assign(RR, eR)
         }
-        async function Wi(WW) {
-          const iW = (0, mW.J)(WW);
-          await QW(iW), await iW.auth._persistUserIfCurrent(iW), iW.auth._notifyListenersIfCurrent(iW)
+        async function RJ(RR) {
+          const JR = (0, yR.C)(RR);
+          await hR(JR), await JR.auth._persistUserIfCurrent(JR), JR.auth._notifyListenersIfCurrent(JR)
         }
-        class ii {
+        class JJ {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
           get isExpired() {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
-          updateFromServerResponse(WW) {
-            TW(WW.idToken, "internal-error"), TW("undefined" !== typeof WW.idToken, "internal-error"), TW("undefined" !== typeof WW.refreshToken, "internal-error");
-            const iW = "expiresIn" in WW && "undefined" !== typeof WW.expiresIn ? Number(WW.expiresIn) : function(WW) {
-              const iW = aW(WW);
-              return TW(iW, "internal-error"), TW("undefined" !== typeof iW.exp, "internal-error"), TW("undefined" !== typeof iW.iat, "internal-error"), Number(iW.exp) - Number(iW.iat)
-            }(WW.idToken);
-            this.updateTokensAndExpiration(WW.idToken, WW.refreshToken, iW)
+          updateFromServerResponse(RR) {
+            lR(RR.idToken, "internal-error"), lR("undefined" !== typeof RR.idToken, "internal-error"), lR("undefined" !== typeof RR.refreshToken, "internal-error");
+            const JR = "expiresIn" in RR && "undefined" !== typeof RR.expiresIn ? Number(RR.expiresIn) : function(RR) {
+              const JR = QR(RR);
+              return lR(JR, "internal-error"), lR("undefined" !== typeof JR.exp, "internal-error"), lR("undefined" !== typeof JR.iat, "internal-error"), Number(JR.exp) - Number(JR.iat)
+            }(RR.idToken);
+            this.updateTokensAndExpiration(RR.idToken, RR.refreshToken, JR)
           }
-          async getToken(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return TW(!this.accessToken || this.refreshToken, WW, "user-token-expired"), iW || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(WW, this.refreshToken), this.accessToken) : null : this.accessToken
+          async getToken(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return lR(!this.accessToken || this.refreshToken, RR, "user-token-expired"), JR || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(RR, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(WW, iW) {
+          async refresh(RR, JR) {
             const {
-              accessToken: OW,
-              refreshToken: EW,
-              expiresIn: NW
-            } = await async function(WW, iW) {
-              const OW = await pW(WW, {}, (async () => {
-                const OW = (0, mW.$)({
+              accessToken: GR,
+              refreshToken: tR,
+              expiresIn: uR
+            } = await async function(RR, JR) {
+              const GR = await IR(RR, {}, (async () => {
+                const GR = (0, yR.db)({
                     grant_type: "refresh_token",
-                    refresh_token: iW
+                    refresh_token: JR
                   }).slice(1),
                   {
-                    tokenApiHost: EW,
-                    apiKey: NW
-                  } = WW.config,
-                  PW = CW(WW, EW, "/v1/token", `key=${NW}`),
-                  LW = await WW._getAdditionalHeaders();
-                return LW["Content-Type"] = "application/x-www-form-urlencoded", eW.fetch()(PW, {
+                    tokenApiHost: tR,
+                    apiKey: uR
+                  } = RR.config,
+                  ZR = zR(RR, tR, "/v1/token", `key=${uR}`),
+                  qR = await RR._getAdditionalHeaders();
+                return qR["Content-Type"] = "application/x-www-form-urlencoded", DR.fetch()(ZR, {
                   method: "POST",
-                  headers: LW,
-                  body: OW
+                  headers: qR,
+                  body: GR
                 })
               }));
               return {
-                accessToken: OW.access_token,
-                expiresIn: OW.expires_in,
-                refreshToken: OW.refresh_token
+                accessToken: GR.access_token,
+                expiresIn: GR.expires_in,
+                refreshToken: GR.refresh_token
               }
-            }(WW, iW);
-            this.updateTokensAndExpiration(OW, EW, Number(NW))
+            }(RR, JR);
+            this.updateTokensAndExpiration(GR, tR, Number(uR))
           }
-          updateTokensAndExpiration(WW, iW, OW) {
-            this.refreshToken = iW || null, this.accessToken = WW || null, this.expirationTime = Date.now() + 1e3 * OW
+          updateTokensAndExpiration(RR, JR, GR) {
+            this.refreshToken = JR || null, this.accessToken = RR || null, this.expirationTime = Date.now() + 1e3 * GR
           }
-          static fromJSON(WW, iW) {
+          static fromJSON(RR, JR) {
             const {
-              refreshToken: OW,
-              accessToken: mW,
-              expirationTime: EW
-            } = iW, NW = new ii;
-            return OW && (TW("string" === typeof OW, "internal-error", {
-              appName: WW
-            }), NW.refreshToken = OW), mW && (TW("string" === typeof mW, "internal-error", {
-              appName: WW
-            }), NW.accessToken = mW), EW && (TW("number" === typeof EW, "internal-error", {
-              appName: WW
-            }), NW.expirationTime = EW), NW
+              refreshToken: GR,
+              accessToken: yR,
+              expirationTime: tR
+            } = JR, uR = new JJ;
+            return GR && (lR("string" === typeof GR, "internal-error", {
+              appName: RR
+            }), uR.refreshToken = GR), yR && (lR("string" === typeof yR, "internal-error", {
+              appName: RR
+            }), uR.accessToken = yR), tR && (lR("number" === typeof tR, "internal-error", {
+              appName: RR
+            }), uR.expirationTime = tR), uR
           }
           toJSON() {
             return {
@@ -832,56 +832,56 @@ export const modules = {
               expirationTime: this.expirationTime
             }
           }
-          _assign(WW) {
-            this.accessToken = WW.accessToken, this.refreshToken = WW.refreshToken, this.expirationTime = WW.expirationTime
+          _assign(RR) {
+            this.accessToken = RR.accessToken, this.refreshToken = RR.refreshToken, this.expirationTime = RR.expirationTime
           }
           _clone() {
-            return Object.assign(new ii, this.toJSON())
+            return Object.assign(new JJ, this.toJSON())
           }
           _performRefresh() {
-            return JW("not implemented")
+            return pR("not implemented")
           }
         }
 
-        function Oi(WW, iW) {
-          TW("string" === typeof WW || "undefined" === typeof WW, "internal-error", {
-            appName: iW
+        function GJ(RR, JR) {
+          lR("string" === typeof RR || "undefined" === typeof RR, "internal-error", {
+            appName: JR
           })
         }
-        class mi {
-          constructor(WW) {
+        class yJ {
+          constructor(RR) {
             var {
-              uid: iW,
-              auth: OW,
-              stsTokenManager: mW
-            } = WW, EW = NW(WW, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new zW(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = iW, this.auth = OW, this.stsTokenManager = mW, this.accessToken = mW.accessToken, this.displayName = EW.displayName || null, this.email = EW.email || null, this.emailVerified = EW.emailVerified || !1, this.phoneNumber = EW.phoneNumber || null, this.photoURL = EW.photoURL || null, this.isAnonymous = EW.isAnonymous || !1, this.tenantId = EW.tenantId || null, this.providerData = EW.providerData ? [...EW.providerData] : [], this.metadata = new FW(EW.createdAt || void 0, EW.lastLoginAt || void 0)
+              uid: JR,
+              auth: GR,
+              stsTokenManager: yR
+            } = RR, tR = uR(RR, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new TR(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = JR, this.auth = GR, this.stsTokenManager = yR, this.accessToken = yR.accessToken, this.displayName = tR.displayName || null, this.email = tR.email || null, this.emailVerified = tR.emailVerified || !1, this.phoneNumber = tR.phoneNumber || null, this.photoURL = tR.photoURL || null, this.isAnonymous = tR.isAnonymous || !1, this.tenantId = tR.tenantId || null, this.providerData = tR.providerData ? [...tR.providerData] : [], this.metadata = new sR(tR.createdAt || void 0, tR.lastLoginAt || void 0)
           }
-          async getIdToken(WW) {
-            const iW = await rW(this, this.stsTokenManager.getToken(this.auth, WW));
-            return TW(iW, this.auth, "internal-error"), this.accessToken !== iW && (this.accessToken = iW, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), iW
+          async getIdToken(RR) {
+            const JR = await FR(this, this.stsTokenManager.getToken(this.auth, RR));
+            return lR(JR, this.auth, "internal-error"), this.accessToken !== JR && (this.accessToken = JR, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), JR
           }
-          getIdTokenResult(WW) {
-            return GW(this, WW)
+          getIdTokenResult(RR) {
+            return YR(this, RR)
           }
           reload() {
-            return Wi(this)
+            return RJ(this)
           }
-          _assign(WW) {
-            this !== WW && (TW(this.uid === WW.uid, this.auth, "internal-error"), this.displayName = WW.displayName, this.photoURL = WW.photoURL, this.email = WW.email, this.emailVerified = WW.emailVerified, this.phoneNumber = WW.phoneNumber, this.isAnonymous = WW.isAnonymous, this.tenantId = WW.tenantId, this.providerData = WW.providerData.map((WW => Object.assign({}, WW))), this.metadata._copy(WW.metadata), this.stsTokenManager._assign(WW.stsTokenManager))
+          _assign(RR) {
+            this !== RR && (lR(this.uid === RR.uid, this.auth, "internal-error"), this.displayName = RR.displayName, this.photoURL = RR.photoURL, this.email = RR.email, this.emailVerified = RR.emailVerified, this.phoneNumber = RR.phoneNumber, this.isAnonymous = RR.isAnonymous, this.tenantId = RR.tenantId, this.providerData = RR.providerData.map((RR => Object.assign({}, RR))), this.metadata._copy(RR.metadata), this.stsTokenManager._assign(RR.stsTokenManager))
           }
-          _clone(WW) {
-            const iW = new mi(Object.assign(Object.assign({}, this), {
-              auth: WW,
+          _clone(RR) {
+            const JR = new yJ(Object.assign(Object.assign({}, this), {
+              auth: RR,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return iW.metadata._copy(this.metadata), iW
+            return JR.metadata._copy(this.metadata), JR
           }
-          _onReload(WW) {
-            TW(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = WW, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+          _onReload(RR) {
+            lR(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = RR, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
-          _notifyReloadListener(WW) {
-            this.reloadListener ? this.reloadListener(WW) : this.reloadUserInfo = WW
+          _notifyReloadListener(RR) {
+            this.reloadListener ? this.reloadListener(RR) : this.reloadUserInfo = RR
           }
           _startProactiveRefresh() {
             this.proactiveRefresh._start()
@@ -889,17 +889,17 @@ export const modules = {
           _stopProactiveRefresh() {
             this.proactiveRefresh._stop()
           }
-          async _updateTokensIfNecessary(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              OW = !1;
-            WW.idToken && WW.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(WW), OW = !0), iW && await QW(this), await this.auth._persistUserIfCurrent(this), OW && this.auth._notifyListenersIfCurrent(this)
+          async _updateTokensIfNecessary(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              GR = !1;
+            RR.idToken && RR.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(RR), GR = !0), JR && await hR(this), await this.auth._persistUserIfCurrent(this), GR && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
-            const WW = await this.getIdToken();
-            return await rW(this, async function(WW, iW) {
-              return VW(WW, "POST", "/v1/accounts:delete", iW)
+            const RR = await this.getIdToken();
+            return await FR(this, async function(RR, JR) {
+              return PR(RR, "POST", "/v1/accounts:delete", JR)
             }(this.auth, {
-              idToken: WW
+              idToken: RR
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
           }
           toJSON() {
@@ -912,7 +912,7 @@ export const modules = {
               photoURL: this.photoURL || void 0,
               phoneNumber: this.phoneNumber || void 0,
               tenantId: this.tenantId || void 0,
-              providerData: this.providerData.map((WW => Object.assign({}, WW))),
+              providerData: this.providerData.map((RR => Object.assign({}, RR))),
               stsTokenManager: this.stsTokenManager.toJSON(),
               _redirectEventId: this._redirectEventId
             }, this.metadata.toJSON()), {
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(WW, iW) {
-            var OW, mW, EW, NW, PW, LW, cW, wW;
-            const tW = null !== (OW = iW.displayName) && void 0 !== OW ? OW : void 0,
-              ZW = null !== (mW = iW.email) && void 0 !== mW ? mW : void 0,
-              xW = null !== (EW = iW.phoneNumber) && void 0 !== EW ? EW : void 0,
-              lW = null !== (NW = iW.photoURL) && void 0 !== NW ? NW : void 0,
-              AW = null !== (PW = iW.tenantId) && void 0 !== PW ? PW : void 0,
-              bW = null !== (LW = iW._redirectEventId) && void 0 !== LW ? LW : void 0,
-              jW = null !== (cW = iW.createdAt) && void 0 !== cW ? cW : void 0,
-              UW = null !== (wW = iW.lastLoginAt) && void 0 !== wW ? wW : void 0,
+          static _fromJSON(RR, JR) {
+            var GR, yR, tR, uR, ZR, qR, iR, fR;
+            const VR = null !== (GR = JR.displayName) && void 0 !== GR ? GR : void 0,
+              KR = null !== (yR = JR.email) && void 0 !== yR ? yR : void 0,
+              wR = null !== (tR = JR.phoneNumber) && void 0 !== tR ? tR : void 0,
+              rR = null !== (uR = JR.photoURL) && void 0 !== uR ? uR : void 0,
+              eR = null !== (ZR = JR.tenantId) && void 0 !== ZR ? ZR : void 0,
+              aR = null !== (qR = JR._redirectEventId) && void 0 !== qR ? qR : void 0,
+              LR = null !== (iR = JR.createdAt) && void 0 !== iR ? iR : void 0,
+              nR = null !== (fR = JR.lastLoginAt) && void 0 !== fR ? fR : void 0,
               {
-                uid: kW,
-                emailVerified: sW,
-                isAnonymous: MW,
-                providerData: KW,
-                stsTokenManager: SW
-              } = iW;
-            TW(kW && SW, WW, "internal-error");
-            const YW = ii.fromJSON(this.name, SW);
-            TW("string" === typeof kW, WW, "internal-error"), Oi(tW, WW.name), Oi(ZW, WW.name), TW("boolean" === typeof sW, WW, "internal-error"), TW("boolean" === typeof MW, WW, "internal-error"), Oi(xW, WW.name), Oi(lW, WW.name), Oi(AW, WW.name), Oi(bW, WW.name), Oi(jW, WW.name), Oi(UW, WW.name);
-            const yW = new mi({
-              uid: kW,
-              auth: WW,
-              email: ZW,
-              emailVerified: sW,
-              displayName: tW,
-              isAnonymous: MW,
-              photoURL: lW,
-              phoneNumber: xW,
-              tenantId: AW,
-              stsTokenManager: YW,
-              createdAt: jW,
-              lastLoginAt: UW
+                uid: UR,
+                emailVerified: WR,
+                isAnonymous: AR,
+                providerData: CR,
+                stsTokenManager: XR
+              } = JR;
+            lR(UR && XR, RR, "internal-error");
+            const MR = JJ.fromJSON(this.name, XR);
+            lR("string" === typeof UR, RR, "internal-error"), GJ(VR, RR.name), GJ(KR, RR.name), lR("boolean" === typeof WR, RR, "internal-error"), lR("boolean" === typeof AR, RR, "internal-error"), GJ(wR, RR.name), GJ(rR, RR.name), GJ(eR, RR.name), GJ(aR, RR.name), GJ(LR, RR.name), GJ(nR, RR.name);
+            const BR = new yJ({
+              uid: UR,
+              auth: RR,
+              email: KR,
+              emailVerified: WR,
+              displayName: VR,
+              isAnonymous: AR,
+              photoURL: rR,
+              phoneNumber: wR,
+              tenantId: eR,
+              stsTokenManager: MR,
+              createdAt: LR,
+              lastLoginAt: nR
             });
-            return KW && Array.isArray(KW) && (yW.providerData = KW.map((WW => Object.assign({}, WW)))), bW && (yW._redirectEventId = bW), yW
+            return CR && Array.isArray(CR) && (BR.providerData = CR.map((RR => Object.assign({}, RR)))), aR && (BR._redirectEventId = aR), BR
           }
-          static async _fromIdTokenResponse(WW, iW) {
-            let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const mW = new ii;
-            mW.updateFromServerResponse(iW);
-            const EW = new mi({
-              uid: iW.localId,
-              auth: WW,
-              stsTokenManager: mW,
-              isAnonymous: OW
+          static async _fromIdTokenResponse(RR, JR) {
+            let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const yR = new JJ;
+            yR.updateFromServerResponse(JR);
+            const tR = new yJ({
+              uid: JR.localId,
+              auth: RR,
+              stsTokenManager: yR,
+              isAnonymous: GR
             });
-            return await QW(EW), EW
+            return await hR(tR), tR
           }
         }
-        const Ei = new Map;
+        const tJ = new Map;
 
-        function Ni(WW) {
-          hW(WW instanceof Function, "Expected a class definition");
-          let iW = Ei.get(WW);
-          return iW ? (hW(iW instanceof WW, "Instance stored in cache mismatched with class"), iW) : (iW = new WW, Ei.set(WW, iW), iW)
+        function uJ(RR) {
+          gR(RR instanceof Function, "Expected a class definition");
+          let JR = tJ.get(RR);
+          return JR ? (gR(JR instanceof RR, "Instance stored in cache mismatched with class"), JR) : (JR = new RR, tJ.set(RR, JR), JR)
         }
-        class Pi {
+        class ZJ {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(WW, iW) {
-            this.storage[WW] = iW
+          async _set(RR, JR) {
+            this.storage[RR] = JR
           }
-          async _get(WW) {
-            const iW = this.storage[WW];
-            return void 0 === iW ? null : iW
+          async _get(RR) {
+            const JR = this.storage[RR];
+            return void 0 === JR ? null : JR
           }
-          async _remove(WW) {
-            delete this.storage[WW]
+          async _remove(RR) {
+            delete this.storage[RR]
           }
-          _addListener(WW, iW) {}
-          _removeListener(WW, iW) {}
+          _addListener(RR, JR) {}
+          _removeListener(RR, JR) {}
         }
-        Pi.type = "NONE";
-        const Li = Pi;
+        ZJ.type = "NONE";
+        const qJ = ZJ;
 
-        function ci(WW, iW, OW) {
-          return `firebase:${WW}:${iW}:${OW}`
+        function iJ(RR, JR, GR) {
+          return `firebase:${RR}:${JR}:${GR}`
         }
-        class wi {
-          constructor(WW, iW, OW) {
-            this.persistence = WW, this.auth = iW, this.userKey = OW;
+        class fJ {
+          constructor(RR, JR, GR) {
+            this.persistence = RR, this.auth = JR, this.userKey = GR;
             const {
-              config: mW,
-              name: EW
+              config: yR,
+              name: tR
             } = this.auth;
-            this.fullUserKey = ci(this.userKey, mW.apiKey, EW), this.fullPersistenceKey = ci("persistence", mW.apiKey, EW), this.boundEventHandler = iW._onStorageEvent.bind(iW), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = iJ(this.userKey, yR.apiKey, tR), this.fullPersistenceKey = iJ("persistence", yR.apiKey, tR), this.boundEventHandler = JR._onStorageEvent.bind(JR), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
-          setCurrentUser(WW) {
-            return this.persistence._set(this.fullUserKey, WW.toJSON())
+          setCurrentUser(RR) {
+            return this.persistence._set(this.fullUserKey, RR.toJSON())
           }
           async getCurrentUser() {
-            const WW = await this.persistence._get(this.fullUserKey);
-            return WW ? mi._fromJSON(this.auth, WW) : null
+            const RR = await this.persistence._get(this.fullUserKey);
+            return RR ? yJ._fromJSON(this.auth, RR) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1027,364 +1027,364 @@ export const modules = {
           savePersistenceForRedirect() {
             return this.persistence._set(this.fullPersistenceKey, this.persistence.type)
           }
-          async setPersistence(WW) {
-            if (this.persistence === WW) return;
-            const iW = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = WW, iW ? this.setCurrentUser(iW) : void 0
+          async setPersistence(RR) {
+            if (this.persistence === RR) return;
+            const JR = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = RR, JR ? this.setCurrentUser(JR) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(WW, iW) {
-            let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!iW.length) return new wi(Ni(Li), WW, OW);
-            const mW = (await Promise.all(iW.map((async WW => {
-              if (await WW._isAvailable()) return WW
-            })))).filter((WW => WW));
-            let EW = mW[0] || Ni(Li);
-            const NW = ci(OW, WW.config.apiKey, WW.name);
-            let PW = null;
-            for (const wW of iW) try {
-              const iW = await wW._get(NW);
-              if (iW) {
-                const OW = mi._fromJSON(WW, iW);
-                wW !== EW && (PW = OW), EW = wW;
+          static async create(RR, JR) {
+            let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!JR.length) return new fJ(uJ(qJ), RR, GR);
+            const yR = (await Promise.all(JR.map((async RR => {
+              if (await RR._isAvailable()) return RR
+            })))).filter((RR => RR));
+            let tR = yR[0] || uJ(qJ);
+            const uR = iJ(GR, RR.config.apiKey, RR.name);
+            let ZR = null;
+            for (const fR of JR) try {
+              const JR = await fR._get(uR);
+              if (JR) {
+                const GR = yJ._fromJSON(RR, JR);
+                fR !== tR && (ZR = GR), tR = fR;
                 break
               }
-            } catch (cW) {}
-            const LW = mW.filter((WW => WW._shouldAllowMigration));
-            return EW._shouldAllowMigration && LW.length ? (EW = LW[0], PW && await EW._set(NW, PW.toJSON()), await Promise.all(iW.map((async WW => {
-              if (WW !== EW) try {
-                await WW._remove(NW)
-              } catch (cW) {}
-            }))), new wi(EW, WW, OW)) : new wi(EW, WW, OW)
+            } catch (iR) {}
+            const qR = yR.filter((RR => RR._shouldAllowMigration));
+            return tR._shouldAllowMigration && qR.length ? (tR = qR[0], ZR && await tR._set(uR, ZR.toJSON()), await Promise.all(JR.map((async RR => {
+              if (RR !== tR) try {
+                await RR._remove(uR)
+              } catch (iR) {}
+            }))), new fJ(tR, RR, GR)) : new fJ(tR, RR, GR)
           }
         }
 
-        function ti(WW) {
-          const iW = WW.toLowerCase();
-          if (iW.includes("opera/") || iW.includes("opr/") || iW.includes("opios/")) return "Opera";
-          if (Ai(iW)) return "IEMobile";
-          if (iW.includes("msie") || iW.includes("trident/")) return "IE";
-          if (iW.includes("edge/")) return "Edge";
-          if (Zi(iW)) return "Firefox";
-          if (iW.includes("silk/")) return "Silk";
-          if (ji(iW)) return "Blackberry";
-          if (Ui(iW)) return "Webos";
-          if (xi(iW)) return "Safari";
-          if ((iW.includes("chrome/") || li(iW)) && !iW.includes("edge/")) return "Chrome";
-          if (bi(iW)) return "Android";
+        function VJ(RR) {
+          const JR = RR.toLowerCase();
+          if (JR.includes("opera/") || JR.includes("opr/") || JR.includes("opios/")) return "Opera";
+          if (eJ(JR)) return "IEMobile";
+          if (JR.includes("msie") || JR.includes("trident/")) return "IE";
+          if (JR.includes("edge/")) return "Edge";
+          if (KJ(JR)) return "Firefox";
+          if (JR.includes("silk/")) return "Silk";
+          if (LJ(JR)) return "Blackberry";
+          if (nJ(JR)) return "Webos";
+          if (wJ(JR)) return "Safari";
+          if ((JR.includes("chrome/") || rJ(JR)) && !JR.includes("edge/")) return "Chrome";
+          if (aJ(JR)) return "Android";
           {
-            const iW = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              OW = WW.match(iW);
-            if (2 === (null === OW || void 0 === OW ? void 0 : OW.length)) return OW[1]
+            const JR = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              GR = RR.match(JR);
+            if (2 === (null === GR || void 0 === GR ? void 0 : GR.length)) return GR[1]
           }
           return "Other"
         }
 
-        function Zi() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /firefox\//i.test(WW)
+        function KJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /firefox\//i.test(RR)
         }
 
-        function xi() {
-          const WW = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)()).toLowerCase();
-          return WW.includes("safari/") && !WW.includes("chrome/") && !WW.includes("crios/") && !WW.includes("android")
+        function wJ() {
+          const RR = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)()).toLowerCase();
+          return RR.includes("safari/") && !RR.includes("chrome/") && !RR.includes("crios/") && !RR.includes("android")
         }
 
-        function li() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /crios\//i.test(WW)
+        function rJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /crios\//i.test(RR)
         }
 
-        function Ai() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /iemobile/i.test(WW)
+        function eJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /iemobile/i.test(RR)
         }
 
-        function bi() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /android/i.test(WW)
+        function aJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /android/i.test(RR)
         }
 
-        function ji() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /blackberry/i.test(WW)
+        function LJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /blackberry/i.test(RR)
         }
 
-        function Ui() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /webos/i.test(WW)
+        function nJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /webos/i.test(RR)
         }
 
-        function ki() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return /iphone|ipad|ipod/i.test(WW) || /macintosh/i.test(WW) && /mobile/i.test(WW)
+        function UJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return /iphone|ipad|ipod/i.test(RR) || /macintosh/i.test(RR) && /mobile/i.test(RR)
         }
 
-        function si() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)();
-          return ki(WW) || bi(WW) || Ui(WW) || ji(WW) || /windows phone/i.test(WW) || Ai(WW)
+        function WJ() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)();
+          return UJ(RR) || aJ(RR) || nJ(RR) || LJ(RR) || /windows phone/i.test(RR) || eJ(RR)
         }
 
-        function Mi(WW) {
-          let iW, OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-          switch (WW) {
+        function AJ(RR) {
+          let JR, GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+          switch (RR) {
             case "Browser":
-              iW = ti((0, mW.L)());
+              JR = VJ((0, yR.F)());
               break;
             case "Worker":
-              iW = `${ti((0,mW.L)())}-${WW}`;
+              JR = `${VJ((0,yR.F)())}-${RR}`;
               break;
             default:
-              iW = WW
+              JR = RR
           }
-          const NW = OW.length ? OW.join(",") : "FirebaseCore-web";
-          return `${iW}/JsCore/${EW.f}/${NW}`
+          const uR = GR.length ? GR.join(",") : "FirebaseCore-web";
+          return `${JR}/JsCore/${tR.c}/${uR}`
         }
-        async function Ki(WW, iW) {
-          return VW(WW, "GET", "/v2/recaptchaConfig", DW(WW, iW))
-        }
-
-        function Si(WW) {
-          return void 0 !== WW && void 0 !== WW.getResponse
+        async function CJ(RR, JR) {
+          return PR(RR, "GET", "/v2/recaptchaConfig", cR(RR, JR))
         }
 
-        function Yi(WW) {
-          return void 0 !== WW && void 0 !== WW.enterprise
+        function XJ(RR) {
+          return void 0 !== RR && void 0 !== RR.getResponse
         }
-        class yi {
-          constructor(WW) {
-            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === WW.recaptchaKey) throw new Error("recaptchaKey undefined");
-            this.siteKey = WW.recaptchaKey.split("/")[3], this.emailPasswordEnabled = WW.recaptchaEnforcementState.some((WW => "EMAIL_PASSWORD_PROVIDER" === WW.provider && "OFF" !== WW.enforcementState))
+
+        function MJ(RR) {
+          return void 0 !== RR && void 0 !== RR.enterprise
+        }
+        class BJ {
+          constructor(RR) {
+            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === RR.recaptchaKey) throw new Error("recaptchaKey undefined");
+            this.siteKey = RR.recaptchaKey.split("/")[3], this.emailPasswordEnabled = RR.recaptchaEnforcementState.some((RR => "EMAIL_PASSWORD_PROVIDER" === RR.provider && "OFF" !== RR.enforcementState))
           }
         }
 
-        function Ti(WW) {
-          return new Promise(((iW, OW) => {
-            const mW = document.createElement("script");
-            mW.setAttribute("src", WW), mW.onload = iW, mW.onerror = WW => {
-                const iW = KW("internal-error");
-                iW.customData = WW, OW(iW)
-              }, mW.type = "text/javascript", mW.charset = "UTF-8",
+        function lJ(RR) {
+          return new Promise(((JR, GR) => {
+            const yR = document.createElement("script");
+            yR.setAttribute("src", RR), yR.onload = JR, yR.onerror = RR => {
+                const JR = CR("internal-error");
+                JR.customData = RR, GR(JR)
+              }, yR.type = "text/javascript", yR.charset = "UTF-8",
               function() {
-                var WW, iW;
-                return null !== (iW = null === (WW = document.getElementsByTagName("head")) || void 0 === WW ? void 0 : WW[0]) && void 0 !== iW ? iW : document
-              }().appendChild(mW)
+                var RR, JR;
+                return null !== (JR = null === (RR = document.getElementsByTagName("head")) || void 0 === RR ? void 0 : RR[0]) && void 0 !== JR ? JR : document
+              }().appendChild(yR)
           }))
         }
 
-        function Ji(WW) {
-          return `__${WW}${Math.floor(1e6*Math.random())}`
+        function pJ(RR) {
+          return `__${RR}${Math.floor(1e6*Math.random())}`
         }
-        class Hi {
-          constructor(WW) {
-            this.type = "recaptcha-enterprise", this.auth = di(WW)
+        class gJ {
+          constructor(RR) {
+            this.type = "recaptcha-enterprise", this.auth = xJ(RR)
           }
           async verify() {
-            let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
+              JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function OW(iW, OW, mW) {
-              const EW = window.grecaptcha;
-              Yi(EW) ? EW.enterprise.ready((() => {
-                EW.enterprise.execute(iW, {
-                  action: WW
-                }).then((WW => {
-                  OW(WW)
+            function GR(JR, GR, yR) {
+              const tR = window.grecaptcha;
+              MJ(tR) ? tR.enterprise.ready((() => {
+                tR.enterprise.execute(JR, {
+                  action: RR
+                }).then((RR => {
+                  GR(RR)
                 })).catch((() => {
-                  OW("NO_RECAPTCHA")
+                  GR("NO_RECAPTCHA")
                 }))
-              })) : mW(Error("No reCAPTCHA enterprise script loaded."))
+              })) : yR(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((WW, mW) => {
-              (async function(WW) {
-                if (!iW) {
-                  if (null == WW.tenantId && null != WW._agentRecaptchaConfig) return WW._agentRecaptchaConfig.siteKey;
-                  if (null != WW.tenantId && void 0 !== WW._tenantRecaptchaConfigs[WW.tenantId]) return WW._tenantRecaptchaConfigs[WW.tenantId].siteKey
+            return new Promise(((RR, yR) => {
+              (async function(RR) {
+                if (!JR) {
+                  if (null == RR.tenantId && null != RR._agentRecaptchaConfig) return RR._agentRecaptchaConfig.siteKey;
+                  if (null != RR.tenantId && void 0 !== RR._tenantRecaptchaConfigs[RR.tenantId]) return RR._tenantRecaptchaConfigs[RR.tenantId].siteKey
                 }
-                return new Promise((async (iW, OW) => {
-                  Ki(WW, {
+                return new Promise((async (JR, GR) => {
+                  CJ(RR, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((mW => {
-                    if (void 0 !== mW.recaptchaKey) {
-                      const OW = new yi(mW);
-                      return null == WW.tenantId ? WW._agentRecaptchaConfig = OW : WW._tenantRecaptchaConfigs[WW.tenantId] = OW, iW(OW.siteKey)
+                  }).then((yR => {
+                    if (void 0 !== yR.recaptchaKey) {
+                      const GR = new BJ(yR);
+                      return null == RR.tenantId ? RR._agentRecaptchaConfig = GR : RR._tenantRecaptchaConfigs[RR.tenantId] = GR, JR(GR.siteKey)
                     }
-                    OW(new Error("recaptcha Enterprise site key undefined"))
-                  })).catch((WW => {
-                    OW(WW)
+                    GR(new Error("recaptcha Enterprise site key undefined"))
+                  })).catch((RR => {
+                    GR(RR)
                   }))
                 }))
-              })(this.auth).then((EW => {
-                if (!iW && Yi(window.grecaptcha)) OW(EW, WW, mW);
+              })(this.auth).then((tR => {
+                if (!JR && MJ(window.grecaptcha)) GR(tR, RR, yR);
                 else {
-                  if ("undefined" === typeof window) return void mW(new Error("RecaptchaVerifier is only supported in browser"));
-                  Ti("https://www.google.com/recaptcha/enterprise.js?render=" + EW).then((() => {
-                    OW(EW, WW, mW)
-                  })).catch((WW => {
-                    mW(WW)
+                  if ("undefined" === typeof window) return void yR(new Error("RecaptchaVerifier is only supported in browser"));
+                  lJ("https://www.google.com/recaptcha/enterprise.js?render=" + tR).then((() => {
+                    GR(tR, RR, yR)
+                  })).catch((RR => {
+                    yR(RR)
                   }))
                 }
-              })).catch((WW => {
-                mW(WW)
+              })).catch((RR => {
+                yR(RR)
               }))
             }))
           }
         }
-        async function ni(WW, iW, OW) {
-          let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const EW = new Hi(WW);
-          let NW;
+        async function bJ(RR, JR, GR) {
+          let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const tR = new gJ(RR);
+          let uR;
           try {
-            NW = await EW.verify(OW)
-          } catch (LW) {
-            NW = await EW.verify(OW, !0)
+            uR = await tR.verify(GR)
+          } catch (qR) {
+            uR = await tR.verify(GR, !0)
           }
-          const PW = Object.assign({}, iW);
-          return mW ? Object.assign(PW, {
-            captchaResp: NW
-          }) : Object.assign(PW, {
-            captchaResponse: NW
-          }), Object.assign(PW, {
+          const ZR = Object.assign({}, JR);
+          return yR ? Object.assign(ZR, {
+            captchaResp: uR
+          }) : Object.assign(ZR, {
+            captchaResponse: uR
+          }), Object.assign(ZR, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(PW, {
+          }), Object.assign(ZR, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), PW
+          }), ZR
         }
-        class ui {
-          constructor(WW) {
-            this.auth = WW, this.queue = []
+        class vJ {
+          constructor(RR) {
+            this.auth = RR, this.queue = []
           }
-          pushCallback(WW, iW) {
-            const OW = iW => new Promise(((OW, mW) => {
+          pushCallback(RR, JR) {
+            const GR = JR => new Promise(((GR, yR) => {
               try {
-                OW(WW(iW))
-              } catch (EW) {
-                mW(EW)
+                GR(RR(JR))
+              } catch (tR) {
+                yR(tR)
               }
             }));
-            OW.onAbort = iW, this.queue.push(OW);
-            const mW = this.queue.length - 1;
+            GR.onAbort = JR, this.queue.push(GR);
+            const yR = this.queue.length - 1;
             return () => {
-              this.queue[mW] = () => Promise.resolve()
+              this.queue[yR] = () => Promise.resolve()
             }
           }
-          async runMiddleware(WW) {
-            if (this.auth.currentUser === WW) return;
-            const iW = [];
+          async runMiddleware(RR) {
+            if (this.auth.currentUser === RR) return;
+            const JR = [];
             try {
-              for (const OW of this.queue) await OW(WW), OW.onAbort && iW.push(OW.onAbort)
-            } catch (OW) {
-              iW.reverse();
-              for (const WW of iW) try {
-                WW()
-              } catch (mW) {}
+              for (const GR of this.queue) await GR(RR), GR.onAbort && JR.push(GR.onAbort)
+            } catch (GR) {
+              JR.reverse();
+              for (const RR of JR) try {
+                RR()
+              } catch (yR) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === OW || void 0 === OW ? void 0 : OW.message
+                originalMessage: null === GR || void 0 === GR ? void 0 : GR.message
               })
             }
           }
         }
-        class oi {
-          constructor(WW, iW, OW, mW) {
-            this.app = WW, this.heartbeatServiceProvider = iW, this.appCheckServiceProvider = OW, this.config = mW, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new ei(this), this.idTokenSubscription = new ei(this), this.beforeStateQueue = new ui(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = jW, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class OJ {
+          constructor(RR, JR, GR, yR) {
+            this.app = RR, this.heartbeatServiceProvider = JR, this.appCheckServiceProvider = GR, this.config = yR, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new NJ(this), this.idTokenSubscription = new NJ(this), this.beforeStateQueue = new vJ(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = LR, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = WW.name, this.clientVersion = mW.sdkClientVersion
+            }, this.frameworks = [], this.name = RR.name, this.clientVersion = yR.sdkClientVersion
           }
-          _initializeWithPersistence(WW, iW) {
-            return iW && (this._popupRedirectResolver = Ni(iW)), this._initializationPromise = this.queue((async () => {
-              var OW, mW;
-              if (!this._deleted && (this.persistenceManager = await wi.create(this, WW), !this._deleted)) {
-                if (null === (OW = this._popupRedirectResolver) || void 0 === OW ? void 0 : OW._shouldInitProactively) try {
+          _initializeWithPersistence(RR, JR) {
+            return JR && (this._popupRedirectResolver = uJ(JR)), this._initializationPromise = this.queue((async () => {
+              var GR, yR;
+              if (!this._deleted && (this.persistenceManager = await fJ.create(this, RR), !this._deleted)) {
+                if (null === (GR = this._popupRedirectResolver) || void 0 === GR ? void 0 : GR._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (EW) {}
-                await this.initializeCurrentUser(iW), this.lastNotifiedUid = (null === (mW = this.currentUser) || void 0 === mW ? void 0 : mW.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (tR) {}
+                await this.initializeCurrentUser(JR), this.lastNotifiedUid = (null === (yR = this.currentUser) || void 0 === yR ? void 0 : yR.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
           async _onStorageEvent() {
             if (this._deleted) return;
-            const WW = await this.assertedPersistence.getCurrentUser();
-            return this.currentUser || WW ? this.currentUser && WW && this.currentUser.uid === WW.uid ? (this._currentUser._assign(WW), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(WW, !0) : void 0
+            const RR = await this.assertedPersistence.getCurrentUser();
+            return this.currentUser || RR ? this.currentUser && RR && this.currentUser.uid === RR.uid ? (this._currentUser._assign(RR), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(RR, !0) : void 0
           }
-          async initializeCurrentUser(WW) {
-            var iW;
-            const OW = await this.assertedPersistence.getCurrentUser();
-            let mW = OW,
-              EW = !1;
-            if (WW && this.config.authDomain) {
+          async initializeCurrentUser(RR) {
+            var JR;
+            const GR = await this.assertedPersistence.getCurrentUser();
+            let yR = GR,
+              tR = !1;
+            if (RR && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const OW = null === (iW = this.redirectUser) || void 0 === iW ? void 0 : iW._redirectEventId,
-                NW = null === mW || void 0 === mW ? void 0 : mW._redirectEventId,
-                PW = await this.tryRedirectSignIn(WW);
-              OW && OW !== NW || !(null === PW || void 0 === PW ? void 0 : PW.user) || (mW = PW.user, EW = !0)
+              const GR = null === (JR = this.redirectUser) || void 0 === JR ? void 0 : JR._redirectEventId,
+                uR = null === yR || void 0 === yR ? void 0 : yR._redirectEventId,
+                ZR = await this.tryRedirectSignIn(RR);
+              GR && GR !== uR || !(null === ZR || void 0 === ZR ? void 0 : ZR.user) || (yR = ZR.user, tR = !0)
             }
-            if (!mW) return this.directlySetCurrentUser(null);
-            if (!mW._redirectEventId) {
-              if (EW) try {
-                await this.beforeStateQueue.runMiddleware(mW)
-              } catch (NW) {
-                mW = OW, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(NW)))
+            if (!yR) return this.directlySetCurrentUser(null);
+            if (!yR._redirectEventId) {
+              if (tR) try {
+                await this.beforeStateQueue.runMiddleware(yR)
+              } catch (uR) {
+                yR = GR, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(uR)))
               }
-              return mW ? this.reloadAndSetCurrentUserOrClear(mW) : this.directlySetCurrentUser(null)
+              return yR ? this.reloadAndSetCurrentUserOrClear(yR) : this.directlySetCurrentUser(null)
             }
-            return TW(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === mW._redirectEventId ? this.directlySetCurrentUser(mW) : this.reloadAndSetCurrentUserOrClear(mW)
+            return lR(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === yR._redirectEventId ? this.directlySetCurrentUser(yR) : this.reloadAndSetCurrentUserOrClear(yR)
           }
-          async tryRedirectSignIn(WW) {
-            let iW = null;
+          async tryRedirectSignIn(RR) {
+            let JR = null;
             try {
-              iW = await this._popupRedirectResolver._completeRedirectFn(this, WW, !0)
-            } catch (OW) {
+              JR = await this._popupRedirectResolver._completeRedirectFn(this, RR, !0)
+            } catch (GR) {
               await this._setRedirectUser(null)
             }
-            return iW
+            return JR
           }
-          async reloadAndSetCurrentUserOrClear(WW) {
+          async reloadAndSetCurrentUserOrClear(RR) {
             try {
-              await QW(WW)
-            } catch (iW) {
-              if ("auth/network-request-failed" !== (null === iW || void 0 === iW ? void 0 : iW.code)) return this.directlySetCurrentUser(null)
+              await hR(RR)
+            } catch (JR) {
+              if ("auth/network-request-failed" !== (null === JR || void 0 === JR ? void 0 : JR.code)) return this.directlySetCurrentUser(null)
             }
-            return this.directlySetCurrentUser(WW)
+            return this.directlySetCurrentUser(RR)
           }
           useDeviceLanguage() {
             this.languageCode = function() {
               if ("undefined" === typeof navigator) return null;
-              const WW = navigator;
-              return WW.languages && WW.languages[0] || WW.language || null
+              const RR = navigator;
+              return RR.languages && RR.languages[0] || RR.language || null
             }()
           }
           async _delete() {
             this._deleted = !0
           }
-          async updateCurrentUser(WW) {
-            const iW = WW ? (0, mW.J)(WW) : null;
-            return iW && TW(iW.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(iW && iW._clone(this))
+          async updateCurrentUser(RR) {
+            const JR = RR ? (0, yR.C)(RR) : null;
+            return JR && lR(JR.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(JR && JR._clone(this))
           }
-          async _updateCurrentUser(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return WW && TW(this.tenantId === WW.tenantId, this, "tenant-id-mismatch"), iW || await this.beforeStateQueue.runMiddleware(WW), this.queue((async () => {
-              await this.directlySetCurrentUser(WW), this.notifyAuthListeners()
+          async _updateCurrentUser(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return RR && lR(this.tenantId === RR.tenantId, this, "tenant-id-mismatch"), JR || await this.beforeStateQueue.runMiddleware(RR), this.queue((async () => {
+              await this.directlySetCurrentUser(RR), this.notifyAuthListeners()
             }))
           }
           async signOut() {
             return await this.beforeStateQueue.runMiddleware(null), (this.redirectPersistenceManager || this._popupRedirectResolver) && await this._setRedirectUser(null), this._updateCurrentUser(null, !0)
           }
-          setPersistence(WW) {
+          setPersistence(RR) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(Ni(WW))
+              await this.assertedPersistence.setPersistence(uJ(RR))
             }))
           }
           async initializeRecaptchaConfig() {
-            const WW = await Ki(this, {
+            const RR = await CJ(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              iW = new yi(WW);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = iW : this._tenantRecaptchaConfigs[this.tenantId] = iW, iW.emailPasswordEnabled) {
-              new Hi(this).verify()
+              JR = new BJ(RR);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = JR : this._tenantRecaptchaConfigs[this.tenantId] = JR, JR.emailPasswordEnabled) {
+              new gJ(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1393,47 +1393,47 @@ export const modules = {
           _getPersistence() {
             return this.assertedPersistence.persistence.type
           }
-          _updateErrorMap(WW) {
-            this._errorFactory = new mW.h("auth", "Firebase", WW())
+          _updateErrorMap(RR) {
+            this._errorFactory = new yR.e("auth", "Firebase", RR())
           }
-          onAuthStateChanged(WW, iW, OW) {
-            return this.registerStateListener(this.authStateSubscription, WW, iW, OW)
+          onAuthStateChanged(RR, JR, GR) {
+            return this.registerStateListener(this.authStateSubscription, RR, JR, GR)
           }
-          beforeAuthStateChanged(WW, iW) {
-            return this.beforeStateQueue.pushCallback(WW, iW)
+          beforeAuthStateChanged(RR, JR) {
+            return this.beforeStateQueue.pushCallback(RR, JR)
           }
-          onIdTokenChanged(WW, iW, OW) {
-            return this.registerStateListener(this.idTokenSubscription, WW, iW, OW)
+          onIdTokenChanged(RR, JR, GR) {
+            return this.registerStateListener(this.idTokenSubscription, RR, JR, GR)
           }
           toJSON() {
-            var WW;
+            var RR;
             return {
               apiKey: this.config.apiKey,
               authDomain: this.config.authDomain,
               appName: this.name,
-              currentUser: null === (WW = this._currentUser) || void 0 === WW ? void 0 : WW.toJSON()
+              currentUser: null === (RR = this._currentUser) || void 0 === RR ? void 0 : RR.toJSON()
             }
           }
-          async _setRedirectUser(WW, iW) {
-            const OW = await this.getOrInitRedirectPersistenceManager(iW);
-            return null === WW ? OW.removeCurrentUser() : OW.setCurrentUser(WW)
+          async _setRedirectUser(RR, JR) {
+            const GR = await this.getOrInitRedirectPersistenceManager(JR);
+            return null === RR ? GR.removeCurrentUser() : GR.setCurrentUser(RR)
           }
-          async getOrInitRedirectPersistenceManager(WW) {
+          async getOrInitRedirectPersistenceManager(RR) {
             if (!this.redirectPersistenceManager) {
-              const iW = WW && Ni(WW) || this._popupRedirectResolver;
-              TW(iW, this, "argument-error"), this.redirectPersistenceManager = await wi.create(this, [Ni(iW._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const JR = RR && uJ(RR) || this._popupRedirectResolver;
+              lR(JR, this, "argument-error"), this.redirectPersistenceManager = await fJ.create(this, [uJ(JR._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
-          async _redirectUserForId(WW) {
-            var iW, OW;
-            return this._isInitialized && await this.queue((async () => {})), (null === (iW = this._currentUser) || void 0 === iW ? void 0 : iW._redirectEventId) === WW ? this._currentUser : (null === (OW = this.redirectUser) || void 0 === OW ? void 0 : OW._redirectEventId) === WW ? this.redirectUser : null
+          async _redirectUserForId(RR) {
+            var JR, GR;
+            return this._isInitialized && await this.queue((async () => {})), (null === (JR = this._currentUser) || void 0 === JR ? void 0 : JR._redirectEventId) === RR ? this._currentUser : (null === (GR = this.redirectUser) || void 0 === GR ? void 0 : GR._redirectEventId) === RR ? this.redirectUser : null
           }
-          async _persistUserIfCurrent(WW) {
-            if (WW === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(WW)))
+          async _persistUserIfCurrent(RR) {
+            if (RR === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(RR)))
           }
-          _notifyListenersIfCurrent(WW) {
-            WW === this.currentUser && this.notifyAuthListeners()
+          _notifyListenersIfCurrent(RR) {
+            RR === this.currentUser && this.notifyAuthListeners()
           }
           _key() {
             return `${this.config.authDomain}:${this.config.apiKey}:${this.name}`
@@ -1448,192 +1448,192 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var WW, iW;
+            var RR, JR;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const OW = null !== (iW = null === (WW = this.currentUser) || void 0 === WW ? void 0 : WW.uid) && void 0 !== iW ? iW : null;
-            this.lastNotifiedUid !== OW && (this.lastNotifiedUid = OW, this.authStateSubscription.next(this.currentUser))
+            const GR = null !== (JR = null === (RR = this.currentUser) || void 0 === RR ? void 0 : RR.uid) && void 0 !== JR ? JR : null;
+            this.lastNotifiedUid !== GR && (this.lastNotifiedUid = GR, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(WW, iW, OW, mW) {
+          registerStateListener(RR, JR, GR, yR) {
             if (this._deleted) return () => {};
-            const EW = "function" === typeof iW ? iW : iW.next.bind(iW),
-              NW = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return TW(NW, this, "internal-error"), NW.then((() => EW(this.currentUser))), "function" === typeof iW ? WW.addObserver(iW, OW, mW) : WW.addObserver(iW)
+            const tR = "function" === typeof JR ? JR : JR.next.bind(JR),
+              uR = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return lR(uR, this, "internal-error"), uR.then((() => tR(this.currentUser))), "function" === typeof JR ? RR.addObserver(JR, GR, yR) : RR.addObserver(JR)
           }
-          async directlySetCurrentUser(WW) {
-            this.currentUser && this.currentUser !== WW && this._currentUser._stopProactiveRefresh(), WW && this.isProactiveRefreshEnabled && WW._startProactiveRefresh(), this.currentUser = WW, WW ? await this.assertedPersistence.setCurrentUser(WW) : await this.assertedPersistence.removeCurrentUser()
+          async directlySetCurrentUser(RR) {
+            this.currentUser && this.currentUser !== RR && this._currentUser._stopProactiveRefresh(), RR && this.isProactiveRefreshEnabled && RR._startProactiveRefresh(), this.currentUser = RR, RR ? await this.assertedPersistence.setCurrentUser(RR) : await this.assertedPersistence.removeCurrentUser()
           }
-          queue(WW) {
-            return this.operations = this.operations.then(WW, WW), this.operations
+          queue(RR) {
+            return this.operations = this.operations.then(RR, RR), this.operations
           }
           get assertedPersistence() {
-            return TW(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return lR(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
-          _logFramework(WW) {
-            WW && !this.frameworks.includes(WW) && (this.frameworks.push(WW), this.frameworks.sort(), this.clientVersion = Mi(this.config.clientPlatform, this._getFrameworks()))
+          _logFramework(RR) {
+            RR && !this.frameworks.includes(RR) && (this.frameworks.push(RR), this.frameworks.sort(), this.clientVersion = AJ(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
-            var WW;
-            const iW = {
+            var RR;
+            const JR = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (iW["X-Firebase-gmpid"] = this.app.options.appId);
-            const OW = await (null === (WW = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (JR["X-Firebase-gmpid"] = this.app.options.appId);
+            const GR = await (null === (RR = this.heartbeatServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === WW ? void 0 : WW.getHeartbeatsHeader());
-            OW && (iW["X-Firebase-Client"] = OW);
-            const mW = await this._getAppCheckToken();
-            return mW && (iW["X-Firebase-AppCheck"] = mW), iW
+            })) || void 0 === RR ? void 0 : RR.getHeartbeatsHeader());
+            GR && (JR["X-Firebase-Client"] = GR);
+            const yR = await this._getAppCheckToken();
+            return yR && (JR["X-Firebase-AppCheck"] = yR), JR
           }
           async _getAppCheckToken() {
-            var WW;
-            const iW = await (null === (WW = this.appCheckServiceProvider.getImmediate({
+            var RR;
+            const JR = await (null === (RR = this.appCheckServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === WW ? void 0 : WW.getToken());
-            return (null === iW || void 0 === iW ? void 0 : iW.error) && function(WW) {
-              if (kW.logLevel <= PW.b.WARN) {
-                for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
-                kW.warn(`Auth (${EW.f}): ${WW}`, ...OW)
+            })) || void 0 === RR ? void 0 : RR.getToken());
+            return (null === JR || void 0 === JR ? void 0 : JR.error) && function(RR) {
+              if (UR.logLevel <= ZR.d.WARN) {
+                for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), yR = 1; yR < JR; yR++) GR[yR - 1] = arguments[yR];
+                UR.warn(`Auth (${tR.c}): ${RR}`, ...GR)
               }
-            }(`Error while retrieving App Check token: ${iW.error}`), null === iW || void 0 === iW ? void 0 : iW.token
+            }(`Error while retrieving App Check token: ${JR.error}`), null === JR || void 0 === JR ? void 0 : JR.token
           }
         }
 
-        function di(WW) {
-          return (0, mW.J)(WW)
+        function xJ(RR) {
+          return (0, yR.C)(RR)
         }
-        class ei {
-          constructor(WW) {
-            this.auth = WW, this.observer = null, this.addObserver = (0, mW.y)((WW => this.observer = WW))
+        class NJ {
+          constructor(RR) {
+            this.auth = RR, this.observer = null, this.addObserver = (0, yR.q)((RR => this.observer = RR))
           }
           get next() {
-            return TW(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return lR(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function vi(WW, iW) {
-          const OW = (0, EW.B)(WW, "auth");
-          if (OW.isInitialized()) {
-            const WW = OW.getImmediate(),
-              EW = OW.getOptions();
-            if ((0, mW.C)(EW, null !== iW && void 0 !== iW ? iW : {})) return WW;
-            MW(WW, "already-initialized")
+        function DJ(RR, JR) {
+          const GR = (0, tR.t)(RR, "auth");
+          if (GR.isInitialized()) {
+            const RR = GR.getImmediate(),
+              tR = GR.getOptions();
+            if ((0, yR.r)(tR, null !== JR && void 0 !== JR ? JR : {})) return RR;
+            AR(RR, "already-initialized")
           }
-          return OW.initialize({
-            options: iW
+          return GR.initialize({
+            options: JR
           })
         }
 
-        function gi(WW, iW, OW) {
-          const mW = di(WW);
-          TW(mW._canInitEmulator, mW, "emulator-config-failed"), TW(/^https?:\/\//.test(iW), mW, "invalid-emulator-scheme");
-          const EW = !!(null === OW || void 0 === OW ? void 0 : OW.disableWarnings),
-            NW = Di(iW),
+        function HJ(RR, JR, GR) {
+          const yR = xJ(RR);
+          lR(yR._canInitEmulator, yR, "emulator-config-failed"), lR(/^https?:\/\//.test(JR), yR, "invalid-emulator-scheme");
+          const tR = !!(null === GR || void 0 === GR ? void 0 : GR.disableWarnings),
+            uR = oJ(JR),
             {
-              host: PW,
-              port: LW
-            } = function(WW) {
-              const iW = Di(WW),
-                OW = /(\/\/)?([^?#/]+)/.exec(WW.substr(iW.length));
-              if (!OW) return {
+              host: ZR,
+              port: qR
+            } = function(RR) {
+              const JR = oJ(RR),
+                GR = /(\/\/)?([^?#/]+)/.exec(RR.substr(JR.length));
+              if (!GR) return {
                 host: "",
                 port: null
               };
-              const mW = OW[2].split("@").pop() || "",
-                EW = /^(\[[^\]]+\])(:|$)/.exec(mW);
-              if (EW) {
-                const WW = EW[1];
+              const yR = GR[2].split("@").pop() || "",
+                tR = /^(\[[^\]]+\])(:|$)/.exec(yR);
+              if (tR) {
+                const RR = tR[1];
                 return {
-                  host: WW,
-                  port: Vi(mW.substr(WW.length + 1))
+                  host: RR,
+                  port: cJ(yR.substr(RR.length + 1))
                 }
               } {
-                const [WW, iW] = mW.split(":");
+                const [RR, JR] = yR.split(":");
                 return {
-                  host: WW,
-                  port: Vi(iW)
+                  host: RR,
+                  port: cJ(JR)
                 }
               }
-            }(iW),
-            cW = null === LW ? "" : `:${LW}`;
-          mW.config.emulator = {
-            url: `${NW}//${PW}${cW}/`
-          }, mW.settings.appVerificationDisabledForTesting = !0, mW.emulatorConfig = Object.freeze({
-            host: PW,
-            port: LW,
-            protocol: NW.replace(":", ""),
+            }(JR),
+            iR = null === qR ? "" : `:${qR}`;
+          yR.config.emulator = {
+            url: `${uR}//${ZR}${iR}/`
+          }, yR.settings.appVerificationDisabledForTesting = !0, yR.emulatorConfig = Object.freeze({
+            host: ZR,
+            port: qR,
+            protocol: uR.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: EW
+              disableWarnings: tR
             })
-          }), EW || function() {
-            function WW() {
-              const WW = document.createElement("p"),
-                iW = WW.style;
-              WW.innerText = "Running in emulator mode. Do not use with production credentials.", iW.position = "fixed", iW.width = "100%", iW.backgroundColor = "#ffffff", iW.border = ".1em solid #000000", iW.color = "#b50000", iW.bottom = "0px", iW.left = "0px", iW.margin = "0px", iW.zIndex = "10000", iW.textAlign = "center", WW.classList.add("firebase-emulator-warning"), document.body.appendChild(WW)
+          }), tR || function() {
+            function RR() {
+              const RR = document.createElement("p"),
+                JR = RR.style;
+              RR.innerText = "Running in emulator mode. Do not use with production credentials.", JR.position = "fixed", JR.width = "100%", JR.backgroundColor = "#ffffff", JR.border = ".1em solid #000000", JR.color = "#b50000", JR.bottom = "0px", JR.left = "0px", JR.margin = "0px", JR.zIndex = "10000", JR.textAlign = "center", RR.classList.add("firebase-emulator-warning"), document.body.appendChild(RR)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
-            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", WW) : WW())
+            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", RR) : RR())
           }()
         }
 
-        function Di(WW) {
-          const iW = WW.indexOf(":");
-          return iW < 0 ? "" : WW.substr(0, iW + 1)
+        function oJ(RR) {
+          const JR = RR.indexOf(":");
+          return JR < 0 ? "" : RR.substr(0, JR + 1)
         }
 
-        function Vi(WW) {
-          if (!WW) return null;
-          const iW = Number(WW);
-          return isNaN(iW) ? null : iW
+        function cJ(RR) {
+          if (!RR) return null;
+          const JR = Number(RR);
+          return isNaN(JR) ? null : JR
         }
-        class fi {
-          constructor(WW, iW) {
-            this.providerId = WW, this.signInMethod = iW
+        class PJ {
+          constructor(RR, JR) {
+            this.providerId = RR, this.signInMethod = JR
           }
           toJSON() {
-            return JW("not implemented")
+            return pR("not implemented")
           }
-          _getIdTokenResponse(WW) {
-            return JW("not implemented")
+          _getIdTokenResponse(RR) {
+            return pR("not implemented")
           }
-          _linkToIdToken(WW, iW) {
-            return JW("not implemented")
+          _linkToIdToken(RR, JR) {
+            return pR("not implemented")
           }
-          _getReauthenticationResolver(WW) {
-            return JW("not implemented")
+          _getReauthenticationResolver(RR) {
+            return pR("not implemented")
           }
         }
-        async function Ci(WW, iW) {
-          return VW(WW, "POST", "/v1/accounts:resetPassword", DW(WW, iW))
+        async function IJ(RR, JR) {
+          return PR(RR, "POST", "/v1/accounts:resetPassword", cR(RR, JR))
         }
-        async function Xi(WW, iW) {
-          return VW(WW, "POST", "/v1/accounts:update", iW)
+        async function mJ(RR, JR) {
+          return PR(RR, "POST", "/v1/accounts:update", JR)
         }
-        async function Bi(WW, iW) {
-          return fW(WW, "POST", "/v1/accounts:signInWithPassword", DW(WW, iW))
+        async function zJ(RR, JR) {
+          return mR(RR, "POST", "/v1/accounts:signInWithPassword", cR(RR, JR))
         }
-        async function qi(WW, iW) {
-          return VW(WW, "POST", "/v1/accounts:sendOobCode", DW(WW, iW))
+        async function SJ(RR, JR) {
+          return PR(RR, "POST", "/v1/accounts:sendOobCode", cR(RR, JR))
         }
-        async function Ri(WW, iW) {
-          return qi(WW, iW)
+        async function jJ(RR, JR) {
+          return SJ(RR, JR)
         }
-        async function Gi(WW, iW) {
-          return qi(WW, iW)
+        async function dJ(RR, JR) {
+          return SJ(RR, JR)
         }
-        class Ii extends fi {
-          constructor(WW, iW, OW) {
-            let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", OW), this._email = WW, this._password = iW, this._tenantId = mW
+        class EJ extends PJ {
+          constructor(RR, JR, GR) {
+            let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", GR), this._email = RR, this._password = JR, this._tenantId = yR
           }
-          static _fromEmailAndPassword(WW, iW) {
-            return new Ii(WW, iW, "password")
+          static _fromEmailAndPassword(RR, JR) {
+            return new EJ(RR, JR, "password")
           }
-          static _fromEmailAndCode(WW, iW) {
-            return new Ii(WW, iW, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(RR, JR) {
+            return new EJ(RR, JR, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1643,82 +1643,82 @@ export const modules = {
               tenantId: this._tenantId
             }
           }
-          static fromJSON(WW) {
-            const iW = "string" === typeof WW ? JSON.parse(WW) : WW;
-            if ((null === iW || void 0 === iW ? void 0 : iW.email) && (null === iW || void 0 === iW ? void 0 : iW.password)) {
-              if ("password" === iW.signInMethod) return this._fromEmailAndPassword(iW.email, iW.password);
-              if ("emailLink" === iW.signInMethod) return this._fromEmailAndCode(iW.email, iW.password, iW.tenantId)
+          static fromJSON(RR) {
+            const JR = "string" === typeof RR ? JSON.parse(RR) : RR;
+            if ((null === JR || void 0 === JR ? void 0 : JR.email) && (null === JR || void 0 === JR ? void 0 : JR.password)) {
+              if ("password" === JR.signInMethod) return this._fromEmailAndPassword(JR.email, JR.password);
+              if ("emailLink" === JR.signInMethod) return this._fromEmailAndCode(JR.email, JR.password, JR.tenantId)
             }
             return null
           }
-          async _getIdTokenResponse(WW) {
-            var iW;
+          async _getIdTokenResponse(RR) {
+            var JR;
             switch (this.signInMethod) {
               case "password":
-                const OW = {
+                const GR = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (iW = WW._getRecaptchaConfig()) || void 0 === iW ? void 0 : iW.emailPasswordEnabled) {
-                  const iW = await ni(WW, OW, "signInWithPassword");
-                  return Bi(WW, iW)
+                if (null === (JR = RR._getRecaptchaConfig()) || void 0 === JR ? void 0 : JR.emailPasswordEnabled) {
+                  const JR = await bJ(RR, GR, "signInWithPassword");
+                  return zJ(RR, JR)
                 }
-                return Bi(WW, OW).catch((async iW => {
-                  if ("auth/missing-recaptcha-token" === iW.code) {
+                return zJ(RR, GR).catch((async JR => {
+                  if ("auth/missing-recaptcha-token" === JR.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const iW = await ni(WW, OW, "signInWithPassword");
-                    return Bi(WW, iW)
+                    const JR = await bJ(RR, GR, "signInWithPassword");
+                    return zJ(RR, JR)
                   }
-                  return Promise.reject(iW)
+                  return Promise.reject(JR)
                 }));
               case "emailLink":
-                return async function(WW, iW) {
-                  return fW(WW, "POST", "/v1/accounts:signInWithEmailLink", DW(WW, iW))
-                }(WW, {
+                return async function(RR, JR) {
+                  return mR(RR, "POST", "/v1/accounts:signInWithEmailLink", cR(RR, JR))
+                }(RR, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                MW(WW, "internal-error")
+                AR(RR, "internal-error")
             }
           }
-          async _linkToIdToken(WW, iW) {
+          async _linkToIdToken(RR, JR) {
             switch (this.signInMethod) {
               case "password":
-                return Xi(WW, {
-                  idToken: iW,
+                return mJ(RR, {
+                  idToken: JR,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(WW, iW) {
-                  return fW(WW, "POST", "/v1/accounts:signInWithEmailLink", DW(WW, iW))
-                }(WW, {
-                  idToken: iW,
+                return async function(RR, JR) {
+                  return mR(RR, "POST", "/v1/accounts:signInWithEmailLink", cR(RR, JR))
+                }(RR, {
+                  idToken: JR,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                MW(WW, "internal-error")
+                AR(RR, "internal-error")
             }
           }
-          _getReauthenticationResolver(WW) {
-            return this._getIdTokenResponse(WW)
+          _getReauthenticationResolver(RR) {
+            return this._getIdTokenResponse(RR)
           }
         }
-        async function ai(WW, iW) {
-          return fW(WW, "POST", "/v1/accounts:signInWithIdp", DW(WW, iW))
+        async function YJ(RR, JR) {
+          return mR(RR, "POST", "/v1/accounts:signInWithIdp", cR(RR, JR))
         }
-        class ri extends fi {
+        class kJ extends PJ {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
-          static _fromParams(WW) {
-            const iW = new ri(WW.providerId, WW.signInMethod);
-            return WW.idToken || WW.accessToken ? (WW.idToken && (iW.idToken = WW.idToken), WW.accessToken && (iW.accessToken = WW.accessToken), WW.nonce && !WW.pendingToken && (iW.nonce = WW.nonce), WW.pendingToken && (iW.pendingToken = WW.pendingToken)) : WW.oauthToken && WW.oauthTokenSecret ? (iW.accessToken = WW.oauthToken, iW.secret = WW.oauthTokenSecret) : MW("argument-error"), iW
+          static _fromParams(RR) {
+            const JR = new kJ(RR.providerId, RR.signInMethod);
+            return RR.idToken || RR.accessToken ? (RR.idToken && (JR.idToken = RR.idToken), RR.accessToken && (JR.accessToken = RR.accessToken), RR.nonce && !RR.pendingToken && (JR.nonce = RR.nonce), RR.pendingToken && (JR.pendingToken = RR.pendingToken)) : RR.oauthToken && RR.oauthTokenSecret ? (JR.accessToken = RR.oauthToken, JR.secret = RR.oauthTokenSecret) : AR("argument-error"), JR
           }
           toJSON() {
             return {
@@ -1731,126 +1731,126 @@ export const modules = {
               signInMethod: this.signInMethod
             }
           }
-          static fromJSON(WW) {
-            const iW = "string" === typeof WW ? JSON.parse(WW) : WW,
+          static fromJSON(RR) {
+            const JR = "string" === typeof RR ? JSON.parse(RR) : RR,
               {
-                providerId: OW,
-                signInMethod: mW
-              } = iW,
-              EW = NW(iW, ["providerId", "signInMethod"]);
-            if (!OW || !mW) return null;
-            const PW = new ri(OW, mW);
-            return PW.idToken = EW.idToken || void 0, PW.accessToken = EW.accessToken || void 0, PW.secret = EW.secret, PW.nonce = EW.nonce, PW.pendingToken = EW.pendingToken || null, PW
+                providerId: GR,
+                signInMethod: yR
+              } = JR,
+              tR = uR(JR, ["providerId", "signInMethod"]);
+            if (!GR || !yR) return null;
+            const ZR = new kJ(GR, yR);
+            return ZR.idToken = tR.idToken || void 0, ZR.accessToken = tR.accessToken || void 0, ZR.secret = tR.secret, ZR.nonce = tR.nonce, ZR.pendingToken = tR.pendingToken || null, ZR
           }
-          _getIdTokenResponse(WW) {
-            return ai(WW, this.buildRequest())
+          _getIdTokenResponse(RR) {
+            return YJ(RR, this.buildRequest())
           }
-          _linkToIdToken(WW, iW) {
-            const OW = this.buildRequest();
-            return OW.idToken = iW, ai(WW, OW)
+          _linkToIdToken(RR, JR) {
+            const GR = this.buildRequest();
+            return GR.idToken = JR, YJ(RR, GR)
           }
-          _getReauthenticationResolver(WW) {
-            const iW = this.buildRequest();
-            return iW.autoCreate = !1, ai(WW, iW)
+          _getReauthenticationResolver(RR) {
+            const JR = this.buildRequest();
+            return JR.autoCreate = !1, YJ(RR, JR)
           }
           buildRequest() {
-            const WW = {
+            const RR = {
               requestUri: "http://localhost",
               returnSecureToken: !0
             };
-            if (this.pendingToken) WW.pendingToken = this.pendingToken;
+            if (this.pendingToken) RR.pendingToken = this.pendingToken;
             else {
-              const iW = {};
-              this.idToken && (iW.id_token = this.idToken), this.accessToken && (iW.access_token = this.accessToken), this.secret && (iW.oauth_token_secret = this.secret), iW.providerId = this.providerId, this.nonce && !this.pendingToken && (iW.nonce = this.nonce), WW.postBody = (0, mW.$)(iW)
+              const JR = {};
+              this.idToken && (JR.id_token = this.idToken), this.accessToken && (JR.access_token = this.accessToken), this.secret && (JR.oauth_token_secret = this.secret), JR.providerId = this.providerId, this.nonce && !this.pendingToken && (JR.nonce = this.nonce), RR.postBody = (0, yR.db)(JR)
             }
-            return WW
+            return RR
           }
         }
-        const zi = {
+        const QJ = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class Fi extends fi {
-          constructor(WW) {
-            super("phone", "phone"), this.params = WW
+        class FJ extends PJ {
+          constructor(RR) {
+            super("phone", "phone"), this.params = RR
           }
-          static _fromVerification(WW, iW) {
-            return new Fi({
-              verificationId: WW,
-              verificationCode: iW
+          static _fromVerification(RR, JR) {
+            return new FJ({
+              verificationId: RR,
+              verificationCode: JR
             })
           }
-          static _fromTokenResponse(WW, iW) {
-            return new Fi({
-              phoneNumber: WW,
-              temporaryProof: iW
+          static _fromTokenResponse(RR, JR) {
+            return new FJ({
+              phoneNumber: RR,
+              temporaryProof: JR
             })
           }
-          _getIdTokenResponse(WW) {
-            return async function(WW, iW) {
-              return fW(WW, "POST", "/v1/accounts:signInWithPhoneNumber", DW(WW, iW))
-            }(WW, this._makeVerificationRequest())
+          _getIdTokenResponse(RR) {
+            return async function(RR, JR) {
+              return mR(RR, "POST", "/v1/accounts:signInWithPhoneNumber", cR(RR, JR))
+            }(RR, this._makeVerificationRequest())
           }
-          _linkToIdToken(WW, iW) {
-            return async function(WW, iW) {
-              const OW = await fW(WW, "POST", "/v1/accounts:signInWithPhoneNumber", DW(WW, iW));
-              if (OW.temporaryProof) throw BW(WW, "account-exists-with-different-credential", OW);
-              return OW
-            }(WW, Object.assign({
-              idToken: iW
+          _linkToIdToken(RR, JR) {
+            return async function(RR, JR) {
+              const GR = await mR(RR, "POST", "/v1/accounts:signInWithPhoneNumber", cR(RR, JR));
+              if (GR.temporaryProof) throw jR(RR, "account-exists-with-different-credential", GR);
+              return GR
+            }(RR, Object.assign({
+              idToken: JR
             }, this._makeVerificationRequest()))
           }
-          _getReauthenticationResolver(WW) {
-            return async function(WW, iW) {
-              return fW(WW, "POST", "/v1/accounts:signInWithPhoneNumber", DW(WW, Object.assign(Object.assign({}, iW), {
+          _getReauthenticationResolver(RR) {
+            return async function(RR, JR) {
+              return mR(RR, "POST", "/v1/accounts:signInWithPhoneNumber", cR(RR, Object.assign(Object.assign({}, JR), {
                 operation: "REAUTH"
-              })), zi)
-            }(WW, this._makeVerificationRequest())
+              })), QJ)
+            }(RR, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
-              temporaryProof: WW,
-              phoneNumber: iW,
-              verificationId: OW,
-              verificationCode: mW
+              temporaryProof: RR,
+              phoneNumber: JR,
+              verificationId: GR,
+              verificationCode: yR
             } = this.params;
-            return WW && iW ? {
-              temporaryProof: WW,
-              phoneNumber: iW
+            return RR && JR ? {
+              temporaryProof: RR,
+              phoneNumber: JR
             } : {
-              sessionInfo: OW,
-              code: mW
+              sessionInfo: GR,
+              code: yR
             }
           }
           toJSON() {
-            const WW = {
+            const RR = {
               providerId: this.providerId
             };
-            return this.params.phoneNumber && (WW.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (WW.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (WW.verificationCode = this.params.verificationCode), this.params.verificationId && (WW.verificationId = this.params.verificationId), WW
+            return this.params.phoneNumber && (RR.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (RR.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (RR.verificationCode = this.params.verificationCode), this.params.verificationId && (RR.verificationId = this.params.verificationId), RR
           }
-          static fromJSON(WW) {
-            "string" === typeof WW && (WW = JSON.parse(WW));
+          static fromJSON(RR) {
+            "string" === typeof RR && (RR = JSON.parse(RR));
             const {
-              verificationId: iW,
-              verificationCode: OW,
-              phoneNumber: mW,
-              temporaryProof: EW
-            } = WW;
-            return OW || iW || mW || EW ? new Fi({
-              verificationId: iW,
-              verificationCode: OW,
-              phoneNumber: mW,
-              temporaryProof: EW
+              verificationId: JR,
+              verificationCode: GR,
+              phoneNumber: yR,
+              temporaryProof: tR
+            } = RR;
+            return GR || JR || yR || tR ? new FJ({
+              verificationId: JR,
+              verificationCode: GR,
+              phoneNumber: yR,
+              temporaryProof: tR
             }) : null
           }
         }
-        class Qi {
-          constructor(WW) {
-            var iW, OW, EW, NW, PW, LW;
-            const cW = (0, mW.Z)((0, mW.F)(WW)),
-              wW = null !== (iW = cW.apiKey) && void 0 !== iW ? iW : null,
-              tW = null !== (OW = cW.oobCode) && void 0 !== OW ? OW : null,
-              ZW = function(WW) {
-                switch (WW) {
+        class TJ {
+          constructor(RR) {
+            var JR, GR, tR, uR, ZR, qR;
+            const iR = (0, yR.$)((0, yR.s)(RR)),
+              fR = null !== (JR = iR.apiKey) && void 0 !== JR ? JR : null,
+              VR = null !== (GR = iR.oobCode) && void 0 !== GR ? GR : null,
+              KR = function(RR) {
+                switch (RR) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
                   case "resetPassword":
@@ -1866,226 +1866,226 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (EW = cW.mode) && void 0 !== EW ? EW : null);
-            TW(wW && tW && ZW, "argument-error"), this.apiKey = wW, this.operation = ZW, this.code = tW, this.continueUrl = null !== (NW = cW.continueUrl) && void 0 !== NW ? NW : null, this.languageCode = null !== (PW = cW.languageCode) && void 0 !== PW ? PW : null, this.tenantId = null !== (LW = cW.tenantId) && void 0 !== LW ? LW : null
+              }(null !== (tR = iR.mode) && void 0 !== tR ? tR : null);
+            lR(fR && VR && KR, "argument-error"), this.apiKey = fR, this.operation = KR, this.code = VR, this.continueUrl = null !== (uR = iR.continueUrl) && void 0 !== uR ? uR : null, this.languageCode = null !== (ZR = iR.languageCode) && void 0 !== ZR ? ZR : null, this.tenantId = null !== (qR = iR.tenantId) && void 0 !== qR ? qR : null
           }
-          static parseLink(WW) {
-            const iW = function(WW) {
-              const iW = (0, mW.Z)((0, mW.F)(WW)).link,
-                OW = iW ? (0, mW.Z)((0, mW.F)(iW)).deep_link_id : null,
-                EW = (0, mW.Z)((0, mW.F)(WW)).deep_link_id;
-              return (EW ? (0, mW.Z)((0, mW.F)(EW)).link : null) || EW || OW || iW || WW
-            }(WW);
+          static parseLink(RR) {
+            const JR = function(RR) {
+              const JR = (0, yR.$)((0, yR.s)(RR)).link,
+                GR = JR ? (0, yR.$)((0, yR.s)(JR)).deep_link_id : null,
+                tR = (0, yR.$)((0, yR.s)(RR)).deep_link_id;
+              return (tR ? (0, yR.$)((0, yR.s)(tR)).link : null) || tR || GR || JR || RR
+            }(RR);
             try {
-              return new Qi(iW)
-            } catch (OW) {
+              return new TJ(JR)
+            } catch (GR) {
               return null
             }
           }
         }
 
-        function WO(WW) {
-          return Qi.parseLink(WW)
+        function sJ(RR) {
+          return TJ.parseLink(RR)
         }
-        class iO {
+        class hJ {
           constructor() {
-            this.providerId = iO.PROVIDER_ID
+            this.providerId = hJ.PROVIDER_ID
           }
-          static credential(WW, iW) {
-            return Ii._fromEmailAndPassword(WW, iW)
+          static credential(RR, JR) {
+            return EJ._fromEmailAndPassword(RR, JR)
           }
-          static credentialWithLink(WW, iW) {
-            const OW = Qi.parseLink(iW);
-            return TW(OW, "argument-error"), Ii._fromEmailAndCode(WW, OW.code, OW.tenantId)
+          static credentialWithLink(RR, JR) {
+            const GR = TJ.parseLink(JR);
+            return lR(GR, "argument-error"), EJ._fromEmailAndCode(RR, GR.code, GR.tenantId)
           }
         }
-        iO.PROVIDER_ID = "password", iO.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", iO.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class OO {
-          constructor(WW) {
-            this.providerId = WW, this.defaultLanguageCode = null, this.customParameters = {}
+        hJ.PROVIDER_ID = "password", hJ.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", hJ.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class RG {
+          constructor(RR) {
+            this.providerId = RR, this.defaultLanguageCode = null, this.customParameters = {}
           }
-          setDefaultLanguage(WW) {
-            this.defaultLanguageCode = WW
+          setDefaultLanguage(RR) {
+            this.defaultLanguageCode = RR
           }
-          setCustomParameters(WW) {
-            return this.customParameters = WW, this
+          setCustomParameters(RR) {
+            return this.customParameters = RR, this
           }
           getCustomParameters() {
             return this.customParameters
           }
         }
-        class mO extends OO {
+        class JG extends RG {
           constructor() {
             super(...arguments), this.scopes = []
           }
-          addScope(WW) {
-            return this.scopes.includes(WW) || this.scopes.push(WW), this
+          addScope(RR) {
+            return this.scopes.includes(RR) || this.scopes.push(RR), this
           }
           getScopes() {
             return [...this.scopes]
           }
         }
-        class EO extends mO {
-          static credentialFromJSON(WW) {
-            const iW = "string" === typeof WW ? JSON.parse(WW) : WW;
-            return TW("providerId" in iW && "signInMethod" in iW, "argument-error"), ri._fromParams(iW)
+        class GG extends JG {
+          static credentialFromJSON(RR) {
+            const JR = "string" === typeof RR ? JSON.parse(RR) : RR;
+            return lR("providerId" in JR && "signInMethod" in JR, "argument-error"), kJ._fromParams(JR)
           }
-          credential(WW) {
-            return this._credential(Object.assign(Object.assign({}, WW), {
-              nonce: WW.rawNonce
+          credential(RR) {
+            return this._credential(Object.assign(Object.assign({}, RR), {
+              nonce: RR.rawNonce
             }))
           }
-          _credential(WW) {
-            return TW(WW.idToken || WW.accessToken, "argument-error"), ri._fromParams(Object.assign(Object.assign({}, WW), {
+          _credential(RR) {
+            return lR(RR.idToken || RR.accessToken, "argument-error"), kJ._fromParams(Object.assign(Object.assign({}, RR), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
-          static credentialFromResult(WW) {
-            return EO.oauthCredentialFromTaggedObject(WW)
+          static credentialFromResult(RR) {
+            return GG.oauthCredentialFromTaggedObject(RR)
           }
-          static credentialFromError(WW) {
-            return EO.oauthCredentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return GG.oauthCredentialFromTaggedObject(RR.customData || {})
           }
-          static oauthCredentialFromTaggedObject(WW) {
+          static oauthCredentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR) return null;
             const {
-              oauthIdToken: OW,
-              oauthAccessToken: mW,
-              oauthTokenSecret: EW,
-              pendingToken: NW,
-              nonce: PW,
-              providerId: LW
-            } = iW;
-            if (!mW && !EW && !OW && !NW) return null;
-            if (!LW) return null;
+              oauthIdToken: GR,
+              oauthAccessToken: yR,
+              oauthTokenSecret: tR,
+              pendingToken: uR,
+              nonce: ZR,
+              providerId: qR
+            } = JR;
+            if (!yR && !tR && !GR && !uR) return null;
+            if (!qR) return null;
             try {
-              return new EO(LW)._credential({
-                idToken: OW,
-                accessToken: mW,
-                nonce: PW,
-                pendingToken: NW
+              return new GG(qR)._credential({
+                idToken: GR,
+                accessToken: yR,
+                nonce: ZR,
+                pendingToken: uR
               })
-            } catch (cW) {
+            } catch (iR) {
               return null
             }
           }
         }
-        class NO extends mO {
+        class yG extends JG {
           constructor() {
             super("facebook.com")
           }
-          static credential(WW) {
-            return ri._fromParams({
-              providerId: NO.PROVIDER_ID,
-              signInMethod: NO.FACEBOOK_SIGN_IN_METHOD,
-              accessToken: WW
+          static credential(RR) {
+            return kJ._fromParams({
+              providerId: yG.PROVIDER_ID,
+              signInMethod: yG.FACEBOOK_SIGN_IN_METHOD,
+              accessToken: RR
             })
           }
-          static credentialFromResult(WW) {
-            return NO.credentialFromTaggedObject(WW)
+          static credentialFromResult(RR) {
+            return yG.credentialFromTaggedObject(RR)
           }
-          static credentialFromError(WW) {
-            return NO.credentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return yG.credentialFromTaggedObject(RR.customData || {})
           }
-          static credentialFromTaggedObject(WW) {
+          static credentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW || !("oauthAccessToken" in iW)) return null;
-            if (!iW.oauthAccessToken) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR || !("oauthAccessToken" in JR)) return null;
+            if (!JR.oauthAccessToken) return null;
             try {
-              return NO.credential(iW.oauthAccessToken)
-            } catch (OW) {
+              return yG.credential(JR.oauthAccessToken)
+            } catch (GR) {
               return null
             }
           }
         }
-        NO.FACEBOOK_SIGN_IN_METHOD = "facebook.com", NO.PROVIDER_ID = "facebook.com";
-        class PO extends mO {
+        yG.FACEBOOK_SIGN_IN_METHOD = "facebook.com", yG.PROVIDER_ID = "facebook.com";
+        class tG extends JG {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(WW, iW) {
-            return ri._fromParams({
-              providerId: PO.PROVIDER_ID,
-              signInMethod: PO.GOOGLE_SIGN_IN_METHOD,
-              idToken: WW,
-              accessToken: iW
+          static credential(RR, JR) {
+            return kJ._fromParams({
+              providerId: tG.PROVIDER_ID,
+              signInMethod: tG.GOOGLE_SIGN_IN_METHOD,
+              idToken: RR,
+              accessToken: JR
             })
           }
-          static credentialFromResult(WW) {
-            return PO.credentialFromTaggedObject(WW)
+          static credentialFromResult(RR) {
+            return tG.credentialFromTaggedObject(RR)
           }
-          static credentialFromError(WW) {
-            return PO.credentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return tG.credentialFromTaggedObject(RR.customData || {})
           }
-          static credentialFromTaggedObject(WW) {
+          static credentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR) return null;
             const {
-              oauthIdToken: OW,
-              oauthAccessToken: mW
-            } = iW;
-            if (!OW && !mW) return null;
+              oauthIdToken: GR,
+              oauthAccessToken: yR
+            } = JR;
+            if (!GR && !yR) return null;
             try {
-              return PO.credential(OW, mW)
-            } catch (EW) {
+              return tG.credential(GR, yR)
+            } catch (tR) {
               return null
             }
           }
         }
-        PO.GOOGLE_SIGN_IN_METHOD = "google.com", PO.PROVIDER_ID = "google.com";
-        class LO extends mO {
+        tG.GOOGLE_SIGN_IN_METHOD = "google.com", tG.PROVIDER_ID = "google.com";
+        class uG extends JG {
           constructor() {
             super("github.com")
           }
-          static credential(WW) {
-            return ri._fromParams({
-              providerId: LO.PROVIDER_ID,
-              signInMethod: LO.GITHUB_SIGN_IN_METHOD,
-              accessToken: WW
+          static credential(RR) {
+            return kJ._fromParams({
+              providerId: uG.PROVIDER_ID,
+              signInMethod: uG.GITHUB_SIGN_IN_METHOD,
+              accessToken: RR
             })
           }
-          static credentialFromResult(WW) {
-            return LO.credentialFromTaggedObject(WW)
+          static credentialFromResult(RR) {
+            return uG.credentialFromTaggedObject(RR)
           }
-          static credentialFromError(WW) {
-            return LO.credentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return uG.credentialFromTaggedObject(RR.customData || {})
           }
-          static credentialFromTaggedObject(WW) {
+          static credentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW || !("oauthAccessToken" in iW)) return null;
-            if (!iW.oauthAccessToken) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR || !("oauthAccessToken" in JR)) return null;
+            if (!JR.oauthAccessToken) return null;
             try {
-              return LO.credential(iW.oauthAccessToken)
-            } catch (OW) {
+              return uG.credential(JR.oauthAccessToken)
+            } catch (GR) {
               return null
             }
           }
         }
-        LO.GITHUB_SIGN_IN_METHOD = "github.com", LO.PROVIDER_ID = "github.com";
-        class cO extends fi {
-          constructor(WW, iW) {
-            super(WW, WW), this.pendingToken = iW
+        uG.GITHUB_SIGN_IN_METHOD = "github.com", uG.PROVIDER_ID = "github.com";
+        class ZG extends PJ {
+          constructor(RR, JR) {
+            super(RR, RR), this.pendingToken = JR
           }
-          _getIdTokenResponse(WW) {
-            return ai(WW, this.buildRequest())
+          _getIdTokenResponse(RR) {
+            return YJ(RR, this.buildRequest())
           }
-          _linkToIdToken(WW, iW) {
-            const OW = this.buildRequest();
-            return OW.idToken = iW, ai(WW, OW)
+          _linkToIdToken(RR, JR) {
+            const GR = this.buildRequest();
+            return GR.idToken = JR, YJ(RR, GR)
           }
-          _getReauthenticationResolver(WW) {
-            const iW = this.buildRequest();
-            return iW.autoCreate = !1, ai(WW, iW)
+          _getReauthenticationResolver(RR) {
+            const JR = this.buildRequest();
+            return JR.autoCreate = !1, YJ(RR, JR)
           }
           toJSON() {
             return {
@@ -2094,17 +2094,17 @@ export const modules = {
               pendingToken: this.pendingToken
             }
           }
-          static fromJSON(WW) {
-            const iW = "string" === typeof WW ? JSON.parse(WW) : WW,
+          static fromJSON(RR) {
+            const JR = "string" === typeof RR ? JSON.parse(RR) : RR,
               {
-                providerId: OW,
-                signInMethod: mW,
-                pendingToken: EW
-              } = iW;
-            return OW && mW && EW && OW === mW ? new cO(OW, EW) : null
+                providerId: GR,
+                signInMethod: yR,
+                pendingToken: tR
+              } = JR;
+            return GR && yR && tR && GR === yR ? new ZG(GR, tR) : null
           }
-          static _create(WW, iW) {
-            return new cO(WW, iW)
+          static _create(RR, JR) {
+            return new ZG(RR, JR)
           }
           buildRequest() {
             return {
@@ -2114,753 +2114,753 @@ export const modules = {
             }
           }
         }
-        class wO extends OO {
-          constructor(WW) {
-            TW(WW.startsWith("saml."), "argument-error"), super(WW)
+        class qG extends RG {
+          constructor(RR) {
+            lR(RR.startsWith("saml."), "argument-error"), super(RR)
           }
-          static credentialFromResult(WW) {
-            return wO.samlCredentialFromTaggedObject(WW)
+          static credentialFromResult(RR) {
+            return qG.samlCredentialFromTaggedObject(RR)
           }
-          static credentialFromError(WW) {
-            return wO.samlCredentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return qG.samlCredentialFromTaggedObject(RR.customData || {})
           }
-          static credentialFromJSON(WW) {
-            const iW = cO.fromJSON(WW);
-            return TW(iW, "argument-error"), iW
+          static credentialFromJSON(RR) {
+            const JR = ZG.fromJSON(RR);
+            return lR(JR, "argument-error"), JR
           }
-          static samlCredentialFromTaggedObject(WW) {
+          static samlCredentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR) return null;
             const {
-              pendingToken: OW,
-              providerId: mW
-            } = iW;
-            if (!OW || !mW) return null;
+              pendingToken: GR,
+              providerId: yR
+            } = JR;
+            if (!GR || !yR) return null;
             try {
-              return cO._create(mW, OW)
-            } catch (EW) {
+              return ZG._create(yR, GR)
+            } catch (tR) {
               return null
             }
           }
         }
-        class tO extends mO {
+        class iG extends JG {
           constructor() {
             super("twitter.com")
           }
-          static credential(WW, iW) {
-            return ri._fromParams({
-              providerId: tO.PROVIDER_ID,
-              signInMethod: tO.TWITTER_SIGN_IN_METHOD,
-              oauthToken: WW,
-              oauthTokenSecret: iW
+          static credential(RR, JR) {
+            return kJ._fromParams({
+              providerId: iG.PROVIDER_ID,
+              signInMethod: iG.TWITTER_SIGN_IN_METHOD,
+              oauthToken: RR,
+              oauthTokenSecret: JR
             })
           }
-          static credentialFromResult(WW) {
-            return tO.credentialFromTaggedObject(WW)
+          static credentialFromResult(RR) {
+            return iG.credentialFromTaggedObject(RR)
           }
-          static credentialFromError(WW) {
-            return tO.credentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return iG.credentialFromTaggedObject(RR.customData || {})
           }
-          static credentialFromTaggedObject(WW) {
+          static credentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR) return null;
             const {
-              oauthAccessToken: OW,
-              oauthTokenSecret: mW
-            } = iW;
-            if (!OW || !mW) return null;
+              oauthAccessToken: GR,
+              oauthTokenSecret: yR
+            } = JR;
+            if (!GR || !yR) return null;
             try {
-              return tO.credential(OW, mW)
-            } catch (EW) {
+              return iG.credential(GR, yR)
+            } catch (tR) {
               return null
             }
           }
         }
-        async function ZO(WW, iW) {
-          return fW(WW, "POST", "/v1/accounts:signUp", DW(WW, iW))
+        async function fG(RR, JR) {
+          return mR(RR, "POST", "/v1/accounts:signUp", cR(RR, JR))
         }
-        tO.TWITTER_SIGN_IN_METHOD = "twitter.com", tO.PROVIDER_ID = "twitter.com";
-        class xO {
-          constructor(WW) {
-            this.user = WW.user, this.providerId = WW.providerId, this._tokenResponse = WW._tokenResponse, this.operationType = WW.operationType
+        iG.TWITTER_SIGN_IN_METHOD = "twitter.com", iG.PROVIDER_ID = "twitter.com";
+        class VG {
+          constructor(RR) {
+            this.user = RR.user, this.providerId = RR.providerId, this._tokenResponse = RR._tokenResponse, this.operationType = RR.operationType
           }
-          static async _fromIdTokenResponse(WW, iW, OW) {
-            let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const EW = await mi._fromIdTokenResponse(WW, OW, mW),
-              NW = lO(OW);
-            return new xO({
-              user: EW,
-              providerId: NW,
-              _tokenResponse: OW,
-              operationType: iW
+          static async _fromIdTokenResponse(RR, JR, GR) {
+            let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const tR = await yJ._fromIdTokenResponse(RR, GR, yR),
+              uR = KG(GR);
+            return new VG({
+              user: tR,
+              providerId: uR,
+              _tokenResponse: GR,
+              operationType: JR
             })
           }
-          static async _forOperation(WW, iW, OW) {
-            await WW._updateTokensIfNecessary(OW, !0);
-            const mW = lO(OW);
-            return new xO({
-              user: WW,
-              providerId: mW,
-              _tokenResponse: OW,
-              operationType: iW
+          static async _forOperation(RR, JR, GR) {
+            await RR._updateTokensIfNecessary(GR, !0);
+            const yR = KG(GR);
+            return new VG({
+              user: RR,
+              providerId: yR,
+              _tokenResponse: GR,
+              operationType: JR
             })
           }
         }
 
-        function lO(WW) {
-          return WW.providerId ? WW.providerId : "phoneNumber" in WW ? "phone" : null
+        function KG(RR) {
+          return RR.providerId ? RR.providerId : "phoneNumber" in RR ? "phone" : null
         }
-        async function AO(WW) {
-          var iW;
-          const OW = di(WW);
-          if (await OW._initializationPromise, null === (iW = OW.currentUser) || void 0 === iW ? void 0 : iW.isAnonymous) return new xO({
-            user: OW.currentUser,
+        async function wG(RR) {
+          var JR;
+          const GR = xJ(RR);
+          if (await GR._initializationPromise, null === (JR = GR.currentUser) || void 0 === JR ? void 0 : JR.isAnonymous) return new VG({
+            user: GR.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const mW = await ZO(OW, {
+          const yR = await fG(GR, {
               returnSecureToken: !0
             }),
-            EW = await xO._fromIdTokenResponse(OW, "signIn", mW, !0);
-          return await OW._updateCurrentUser(EW.user), EW
+            tR = await VG._fromIdTokenResponse(GR, "signIn", yR, !0);
+          return await GR._updateCurrentUser(tR.user), tR
         }
-        class bO extends mW.k {
-          constructor(WW, iW, OW, mW) {
-            var EW;
-            super(iW.code, iW.message), this.operationType = OW, this.user = mW, Object.setPrototypeOf(this, bO.prototype), this.customData = {
-              appName: WW.name,
-              tenantId: null !== (EW = WW.tenantId) && void 0 !== EW ? EW : void 0,
-              _serverResponse: iW.customData._serverResponse,
-              operationType: OW
+        class rG extends yR.f {
+          constructor(RR, JR, GR, yR) {
+            var tR;
+            super(JR.code, JR.message), this.operationType = GR, this.user = yR, Object.setPrototypeOf(this, rG.prototype), this.customData = {
+              appName: RR.name,
+              tenantId: null !== (tR = RR.tenantId) && void 0 !== tR ? tR : void 0,
+              _serverResponse: JR.customData._serverResponse,
+              operationType: GR
             }
           }
-          static _fromErrorAndOperation(WW, iW, OW, mW) {
-            return new bO(WW, iW, OW, mW)
+          static _fromErrorAndOperation(RR, JR, GR, yR) {
+            return new rG(RR, JR, GR, yR)
           }
         }
 
-        function jO(WW, iW, OW, mW) {
-          return ("reauthenticate" === iW ? OW._getReauthenticationResolver(WW) : OW._getIdTokenResponse(WW)).catch((OW => {
-            if ("auth/multi-factor-auth-required" === OW.code) throw bO._fromErrorAndOperation(WW, OW, iW, mW);
-            throw OW
+        function eG(RR, JR, GR, yR) {
+          return ("reauthenticate" === JR ? GR._getReauthenticationResolver(RR) : GR._getIdTokenResponse(RR)).catch((GR => {
+            if ("auth/multi-factor-auth-required" === GR.code) throw rG._fromErrorAndOperation(RR, GR, JR, yR);
+            throw GR
           }))
         }
 
-        function UO(WW) {
-          return new Set(WW.map((WW => {
+        function aG(RR) {
+          return new Set(RR.map((RR => {
             let {
-              providerId: iW
-            } = WW;
-            return iW
-          })).filter((WW => !!WW)))
+              providerId: JR
+            } = RR;
+            return JR
+          })).filter((RR => !!RR)))
         }
-        async function kO(WW, iW) {
-          const OW = (0, mW.J)(WW);
-          await MO(!0, OW, iW);
+        async function LG(RR, JR) {
+          const GR = (0, yR.C)(RR);
+          await UG(!0, GR, JR);
           const {
-            providerUserInfo: EW
-          } = await async function(WW, iW) {
-            return VW(WW, "POST", "/v1/accounts:update", iW)
-          }(OW.auth, {
-            idToken: await OW.getIdToken(),
-            deleteProvider: [iW]
-          }), NW = UO(EW || []);
-          return OW.providerData = OW.providerData.filter((WW => NW.has(WW.providerId))), NW.has("phone") || (OW.phoneNumber = null), await OW.auth._persistUserIfCurrent(OW), OW
+            providerUserInfo: tR
+          } = await async function(RR, JR) {
+            return PR(RR, "POST", "/v1/accounts:update", JR)
+          }(GR.auth, {
+            idToken: await GR.getIdToken(),
+            deleteProvider: [JR]
+          }), uR = aG(tR || []);
+          return GR.providerData = GR.providerData.filter((RR => uR.has(RR.providerId))), uR.has("phone") || (GR.phoneNumber = null), await GR.auth._persistUserIfCurrent(GR), GR
         }
-        async function sO(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const mW = await rW(WW, iW._linkToIdToken(WW.auth, await WW.getIdToken()), OW);
-          return xO._forOperation(WW, "link", mW)
+        async function nG(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const yR = await FR(RR, JR._linkToIdToken(RR.auth, await RR.getIdToken()), GR);
+          return VG._forOperation(RR, "link", yR)
         }
-        async function MO(WW, iW, OW) {
-          await QW(iW);
-          const mW = !1 === WW ? "provider-already-linked" : "no-such-provider";
-          TW(UO(iW.providerData).has(OW) === WW, iW.auth, mW)
+        async function UG(RR, JR, GR) {
+          await hR(JR);
+          const yR = !1 === RR ? "provider-already-linked" : "no-such-provider";
+          lR(aG(JR.providerData).has(GR) === RR, JR.auth, yR)
         }
-        async function KO(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function WG(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: mW
-          } = WW, EW = "reauthenticate";
+            auth: yR
+          } = RR, tR = "reauthenticate";
           try {
-            const NW = await rW(WW, jO(mW, EW, iW, WW), OW);
-            TW(NW.idToken, mW, "internal-error");
-            const PW = aW(NW.idToken);
-            TW(PW, mW, "internal-error");
+            const uR = await FR(RR, eG(yR, tR, JR, RR), GR);
+            lR(uR.idToken, yR, "internal-error");
+            const ZR = QR(uR.idToken);
+            lR(ZR, yR, "internal-error");
             const {
-              sub: LW
-            } = PW;
-            return TW(WW.uid === LW, mW, "user-mismatch"), xO._forOperation(WW, EW, NW)
-          } catch (NW) {
-            throw "auth/user-not-found" === (null === NW || void 0 === NW ? void 0 : NW.code) && MW(mW, "user-mismatch"), NW
+              sub: qR
+            } = ZR;
+            return lR(RR.uid === qR, yR, "user-mismatch"), VG._forOperation(RR, tR, uR)
+          } catch (uR) {
+            throw "auth/user-not-found" === (null === uR || void 0 === uR ? void 0 : uR.code) && AR(yR, "user-mismatch"), uR
           }
         }
-        async function SO(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const mW = "signIn",
-            EW = await jO(WW, mW, iW),
-            NW = await xO._fromIdTokenResponse(WW, mW, EW);
-          return OW || await WW._updateCurrentUser(NW.user), NW
+        async function AG(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const yR = "signIn",
+            tR = await eG(RR, yR, JR),
+            uR = await VG._fromIdTokenResponse(RR, yR, tR);
+          return GR || await RR._updateCurrentUser(uR.user), uR
         }
-        async function YO(WW, iW) {
-          return SO(di(WW), iW)
+        async function CG(RR, JR) {
+          return AG(xJ(RR), JR)
         }
-        async function yO(WW, iW) {
-          const OW = (0, mW.J)(WW);
-          return await MO(!1, OW, iW.providerId), sO(OW, iW)
+        async function XG(RR, JR) {
+          const GR = (0, yR.C)(RR);
+          return await UG(!1, GR, JR.providerId), nG(GR, JR)
         }
-        async function TO(WW, iW) {
-          return KO((0, mW.J)(WW), iW)
+        async function MG(RR, JR) {
+          return WG((0, yR.C)(RR), JR)
         }
-        async function JO(WW, iW) {
-          const OW = di(WW),
-            mW = await async function(WW, iW) {
-              return fW(WW, "POST", "/v1/accounts:signInWithCustomToken", DW(WW, iW))
-            }(OW, {
-              token: iW,
+        async function BG(RR, JR) {
+          const GR = xJ(RR),
+            yR = await async function(RR, JR) {
+              return mR(RR, "POST", "/v1/accounts:signInWithCustomToken", cR(RR, JR))
+            }(GR, {
+              token: JR,
               returnSecureToken: !0
-            }), EW = await xO._fromIdTokenResponse(OW, "signIn", mW);
-          return await OW._updateCurrentUser(EW.user), EW
+            }), tR = await VG._fromIdTokenResponse(GR, "signIn", yR);
+          return await GR._updateCurrentUser(tR.user), tR
         }
-        class hO {
-          constructor(WW, iW) {
-            this.factorId = WW, this.uid = iW.mfaEnrollmentId, this.enrollmentTime = new Date(iW.enrolledAt).toUTCString(), this.displayName = iW.displayName
+        class lG {
+          constructor(RR, JR) {
+            this.factorId = RR, this.uid = JR.mfaEnrollmentId, this.enrollmentTime = new Date(JR.enrolledAt).toUTCString(), this.displayName = JR.displayName
           }
-          static _fromServerResponse(WW, iW) {
-            return "phoneInfo" in iW ? HO._fromServerResponse(WW, iW) : "totpInfo" in iW ? nO._fromServerResponse(WW, iW) : MW(WW, "internal-error")
-          }
-        }
-        class HO extends hO {
-          constructor(WW) {
-            super("phone", WW), this.phoneNumber = WW.phoneInfo
-          }
-          static _fromServerResponse(WW, iW) {
-            return new HO(iW)
+          static _fromServerResponse(RR, JR) {
+            return "phoneInfo" in JR ? pG._fromServerResponse(RR, JR) : "totpInfo" in JR ? gG._fromServerResponse(RR, JR) : AR(RR, "internal-error")
           }
         }
-        class nO extends hO {
-          constructor(WW) {
-            super("totp", WW)
+        class pG extends lG {
+          constructor(RR) {
+            super("phone", RR), this.phoneNumber = RR.phoneInfo
           }
-          static _fromServerResponse(WW, iW) {
-            return new nO(iW)
+          static _fromServerResponse(RR, JR) {
+            return new pG(JR)
+          }
+        }
+        class gG extends lG {
+          constructor(RR) {
+            super("totp", RR)
+          }
+          static _fromServerResponse(RR, JR) {
+            return new gG(JR)
           }
         }
 
-        function uO(WW, iW, OW) {
-          var mW;
-          TW((null === (mW = OW.url) || void 0 === mW ? void 0 : mW.length) > 0, WW, "invalid-continue-uri"), TW("undefined" === typeof OW.dynamicLinkDomain || OW.dynamicLinkDomain.length > 0, WW, "invalid-dynamic-link-domain"), iW.continueUrl = OW.url, iW.dynamicLinkDomain = OW.dynamicLinkDomain, iW.canHandleCodeInApp = OW.handleCodeInApp, OW.iOS && (TW(OW.iOS.bundleId.length > 0, WW, "missing-ios-bundle-id"), iW.iOSBundleId = OW.iOS.bundleId), OW.android && (TW(OW.android.packageName.length > 0, WW, "missing-android-pkg-name"), iW.androidInstallApp = OW.android.installApp, iW.androidMinimumVersionCode = OW.android.minimumVersion, iW.androidPackageName = OW.android.packageName)
+        function bG(RR, JR, GR) {
+          var yR;
+          lR((null === (yR = GR.url) || void 0 === yR ? void 0 : yR.length) > 0, RR, "invalid-continue-uri"), lR("undefined" === typeof GR.dynamicLinkDomain || GR.dynamicLinkDomain.length > 0, RR, "invalid-dynamic-link-domain"), JR.continueUrl = GR.url, JR.dynamicLinkDomain = GR.dynamicLinkDomain, JR.canHandleCodeInApp = GR.handleCodeInApp, GR.iOS && (lR(GR.iOS.bundleId.length > 0, RR, "missing-ios-bundle-id"), JR.iOSBundleId = GR.iOS.bundleId), GR.android && (lR(GR.android.packageName.length > 0, RR, "missing-android-pkg-name"), JR.androidInstallApp = GR.android.installApp, JR.androidMinimumVersionCode = GR.android.minimumVersion, JR.androidPackageName = GR.android.packageName)
         }
-        async function oO(WW, iW, OW) {
-          var mW;
-          const EW = di(WW),
-            NW = {
+        async function vG(RR, JR, GR) {
+          var yR;
+          const tR = xJ(RR),
+            uR = {
               requestType: "PASSWORD_RESET",
-              email: iW,
+              email: JR,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (mW = EW._getRecaptchaConfig()) || void 0 === mW ? void 0 : mW.emailPasswordEnabled) {
-            const WW = await ni(EW, NW, "getOobCode", !0);
-            OW && uO(EW, WW, OW), await Ri(EW, WW)
-          } else OW && uO(EW, NW, OW), await Ri(EW, NW).catch((async WW => {
-            if ("auth/missing-recaptcha-token" !== WW.code) return Promise.reject(WW);
+          if (null === (yR = tR._getRecaptchaConfig()) || void 0 === yR ? void 0 : yR.emailPasswordEnabled) {
+            const RR = await bJ(tR, uR, "getOobCode", !0);
+            GR && bG(tR, RR, GR), await jJ(tR, RR)
+          } else GR && bG(tR, uR, GR), await jJ(tR, uR).catch((async RR => {
+            if ("auth/missing-recaptcha-token" !== RR.code) return Promise.reject(RR);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const WW = await ni(EW, NW, "getOobCode", !0);
-              OW && uO(EW, WW, OW), await Ri(EW, WW)
+              const RR = await bJ(tR, uR, "getOobCode", !0);
+              GR && bG(tR, RR, GR), await jJ(tR, RR)
             }
           }))
         }
-        async function dO(WW, iW, OW) {
-          await Ci((0, mW.J)(WW), {
-            oobCode: iW,
-            newPassword: OW
+        async function OG(RR, JR, GR) {
+          await IJ((0, yR.C)(RR), {
+            oobCode: JR,
+            newPassword: GR
           })
         }
-        async function eO(WW, iW) {
-          await async function(WW, iW) {
-            return VW(WW, "POST", "/v1/accounts:update", DW(WW, iW))
-          }((0, mW.J)(WW), {
-            oobCode: iW
+        async function xG(RR, JR) {
+          await async function(RR, JR) {
+            return PR(RR, "POST", "/v1/accounts:update", cR(RR, JR))
+          }((0, yR.C)(RR), {
+            oobCode: JR
           })
         }
-        async function vO(WW, iW) {
-          const OW = (0, mW.J)(WW),
-            EW = await Ci(OW, {
-              oobCode: iW
+        async function NG(RR, JR) {
+          const GR = (0, yR.C)(RR),
+            tR = await IJ(GR, {
+              oobCode: JR
             }),
-            NW = EW.requestType;
-          switch (TW(NW, OW, "internal-error"), NW) {
+            uR = tR.requestType;
+          switch (lR(uR, GR, "internal-error"), uR) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              TW(EW.newEmail, OW, "internal-error");
+              lR(tR.newEmail, GR, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              TW(EW.mfaInfo, OW, "internal-error");
+              lR(tR.mfaInfo, GR, "internal-error");
             default:
-              TW(EW.email, OW, "internal-error")
+              lR(tR.email, GR, "internal-error")
           }
-          let PW = null;
-          return EW.mfaInfo && (PW = hO._fromServerResponse(di(OW), EW.mfaInfo)), {
+          let ZR = null;
+          return tR.mfaInfo && (ZR = lG._fromServerResponse(xJ(GR), tR.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === EW.requestType ? EW.newEmail : EW.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === EW.requestType ? EW.email : EW.newEmail) || null,
-              multiFactorInfo: PW
+              email: ("VERIFY_AND_CHANGE_EMAIL" === tR.requestType ? tR.newEmail : tR.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === tR.requestType ? tR.email : tR.newEmail) || null,
+              multiFactorInfo: ZR
             },
-            operation: NW
+            operation: uR
           }
         }
-        async function gO(WW, iW) {
+        async function DG(RR, JR) {
           const {
-            data: OW
-          } = await vO((0, mW.J)(WW), iW);
-          return OW.email
+            data: GR
+          } = await NG((0, yR.C)(RR), JR);
+          return GR.email
         }
-        async function DO(WW, iW, OW) {
-          var mW;
-          const EW = di(WW),
-            NW = {
+        async function HG(RR, JR, GR) {
+          var yR;
+          const tR = xJ(RR),
+            uR = {
               returnSecureToken: !0,
-              email: iW,
-              password: OW,
+              email: JR,
+              password: GR,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let PW;
-          if (null === (mW = EW._getRecaptchaConfig()) || void 0 === mW ? void 0 : mW.emailPasswordEnabled) {
-            const WW = await ni(EW, NW, "signUpPassword");
-            PW = ZO(EW, WW)
-          } else PW = ZO(EW, NW).catch((async WW => {
-            if ("auth/missing-recaptcha-token" === WW.code) {
+          let ZR;
+          if (null === (yR = tR._getRecaptchaConfig()) || void 0 === yR ? void 0 : yR.emailPasswordEnabled) {
+            const RR = await bJ(tR, uR, "signUpPassword");
+            ZR = fG(tR, RR)
+          } else ZR = fG(tR, uR).catch((async RR => {
+            if ("auth/missing-recaptcha-token" === RR.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const WW = await ni(EW, NW, "signUpPassword");
-              return ZO(EW, WW)
+              const RR = await bJ(tR, uR, "signUpPassword");
+              return fG(tR, RR)
             }
-            return Promise.reject(WW)
+            return Promise.reject(RR)
           }));
-          const LW = await PW.catch((WW => Promise.reject(WW))),
-            cW = await xO._fromIdTokenResponse(EW, "signIn", LW);
-          return await EW._updateCurrentUser(cW.user), cW
+          const qR = await ZR.catch((RR => Promise.reject(RR))),
+            iR = await VG._fromIdTokenResponse(tR, "signIn", qR);
+          return await tR._updateCurrentUser(iR.user), iR
         }
 
-        function VO(WW, iW, OW) {
-          return YO((0, mW.J)(WW), iO.credential(iW, OW))
+        function oG(RR, JR, GR) {
+          return CG((0, yR.C)(RR), hJ.credential(JR, GR))
         }
-        async function pO(WW, iW, OW) {
-          var mW;
-          const EW = di(WW),
-            NW = {
+        async function cG(RR, JR, GR) {
+          var yR;
+          const tR = xJ(RR),
+            uR = {
               requestType: "EMAIL_SIGNIN",
-              email: iW,
+              email: JR,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function PW(WW, iW) {
-            TW(iW.handleCodeInApp, EW, "argument-error"), iW && uO(EW, WW, iW)
+          function ZR(RR, JR) {
+            lR(JR.handleCodeInApp, tR, "argument-error"), JR && bG(tR, RR, JR)
           }
-          if (null === (mW = EW._getRecaptchaConfig()) || void 0 === mW ? void 0 : mW.emailPasswordEnabled) {
-            const WW = await ni(EW, NW, "getOobCode", !0);
-            PW(WW, OW), await Gi(EW, WW)
-          } else PW(NW, OW), await Gi(EW, NW).catch((async WW => {
-            if ("auth/missing-recaptcha-token" !== WW.code) return Promise.reject(WW);
+          if (null === (yR = tR._getRecaptchaConfig()) || void 0 === yR ? void 0 : yR.emailPasswordEnabled) {
+            const RR = await bJ(tR, uR, "getOobCode", !0);
+            ZR(RR, GR), await dJ(tR, RR)
+          } else ZR(uR, GR), await dJ(tR, uR).catch((async RR => {
+            if ("auth/missing-recaptcha-token" !== RR.code) return Promise.reject(RR);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const WW = await ni(EW, NW, "getOobCode", !0);
-              PW(WW, OW), await Gi(EW, WW)
+              const RR = await bJ(tR, uR, "getOobCode", !0);
+              ZR(RR, GR), await dJ(tR, RR)
             }
           }))
         }
 
-        function fO(WW, iW) {
-          const OW = Qi.parseLink(iW);
-          return "EMAIL_SIGNIN" === (null === OW || void 0 === OW ? void 0 : OW.operation)
+        function PG(RR, JR) {
+          const GR = TJ.parseLink(JR);
+          return "EMAIL_SIGNIN" === (null === GR || void 0 === GR ? void 0 : GR.operation)
         }
-        async function CO(WW, iW, OW) {
-          const EW = (0, mW.J)(WW),
-            NW = iO.credentialWithLink(iW, OW || HW());
-          return TW(NW._tenantId === (EW.tenantId || null), EW, "tenant-id-mismatch"), YO(EW, NW)
+        async function IG(RR, JR, GR) {
+          const tR = (0, yR.C)(RR),
+            uR = hJ.credentialWithLink(JR, GR || bR());
+          return lR(uR._tenantId === (tR.tenantId || null), tR, "tenant-id-mismatch"), CG(tR, uR)
         }
-        async function XO(WW, iW) {
-          const OW = {
-              identifier: iW,
-              continueUri: nW() ? HW() : "http://localhost"
+        async function mG(RR, JR) {
+          const GR = {
+              identifier: JR,
+              continueUri: vR() ? bR() : "http://localhost"
             },
             {
-              signinMethods: EW
-            } = await async function(WW, iW) {
-              return VW(WW, "POST", "/v1/accounts:createAuthUri", DW(WW, iW))
-            }((0, mW.J)(WW), OW);
-          return EW || []
+              signinMethods: tR
+            } = await async function(RR, JR) {
+              return PR(RR, "POST", "/v1/accounts:createAuthUri", cR(RR, JR))
+            }((0, yR.C)(RR), GR);
+          return tR || []
         }
-        async function BO(WW, iW) {
-          const OW = (0, mW.J)(WW),
-            EW = {
+        async function zG(RR, JR) {
+          const GR = (0, yR.C)(RR),
+            tR = {
               requestType: "VERIFY_EMAIL",
-              idToken: await WW.getIdToken()
+              idToken: await RR.getIdToken()
             };
-          iW && uO(OW.auth, EW, iW);
+          JR && bG(GR.auth, tR, JR);
           const {
-            email: NW
-          } = await async function(WW, iW) {
-            return qi(WW, iW)
-          }(OW.auth, EW);
-          NW !== WW.email && await WW.reload()
+            email: uR
+          } = await async function(RR, JR) {
+            return SJ(RR, JR)
+          }(GR.auth, tR);
+          uR !== RR.email && await RR.reload()
         }
-        async function qO(WW, iW, OW) {
-          const EW = (0, mW.J)(WW),
-            NW = {
+        async function SG(RR, JR, GR) {
+          const tR = (0, yR.C)(RR),
+            uR = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
-              idToken: await WW.getIdToken(),
-              newEmail: iW
+              idToken: await RR.getIdToken(),
+              newEmail: JR
             };
-          OW && uO(EW.auth, NW, OW);
+          GR && bG(tR.auth, uR, GR);
           const {
-            email: PW
-          } = await async function(WW, iW) {
-            return qi(WW, iW)
-          }(EW.auth, NW);
-          PW !== WW.email && await WW.reload()
+            email: ZR
+          } = await async function(RR, JR) {
+            return SJ(RR, JR)
+          }(tR.auth, uR);
+          ZR !== RR.email && await RR.reload()
         }
-        async function RO(WW, iW) {
+        async function jG(RR, JR) {
           let {
-            displayName: OW,
-            photoURL: EW
-          } = iW;
-          if (void 0 === OW && void 0 === EW) return;
-          const NW = (0, mW.J)(WW),
-            PW = {
-              idToken: await NW.getIdToken(),
-              displayName: OW,
-              photoUrl: EW,
+            displayName: GR,
+            photoURL: tR
+          } = JR;
+          if (void 0 === GR && void 0 === tR) return;
+          const uR = (0, yR.C)(RR),
+            ZR = {
+              idToken: await uR.getIdToken(),
+              displayName: GR,
+              photoUrl: tR,
               returnSecureToken: !0
             },
-            LW = await rW(NW, async function(WW, iW) {
-              return VW(WW, "POST", "/v1/accounts:update", iW)
-            }(NW.auth, PW));
-          NW.displayName = LW.displayName || null, NW.photoURL = LW.photoUrl || null;
-          const cW = NW.providerData.find((WW => {
+            qR = await FR(uR, async function(RR, JR) {
+              return PR(RR, "POST", "/v1/accounts:update", JR)
+            }(uR.auth, ZR));
+          uR.displayName = qR.displayName || null, uR.photoURL = qR.photoUrl || null;
+          const iR = uR.providerData.find((RR => {
             let {
-              providerId: iW
-            } = WW;
-            return "password" === iW
+              providerId: JR
+            } = RR;
+            return "password" === JR
           }));
-          cW && (cW.displayName = NW.displayName, cW.photoURL = NW.photoURL), await NW._updateTokensIfNecessary(LW)
+          iR && (iR.displayName = uR.displayName, iR.photoURL = uR.photoURL), await uR._updateTokensIfNecessary(qR)
         }
 
-        function GO(WW, iW) {
-          return aO((0, mW.J)(WW), iW, null)
+        function dG(RR, JR) {
+          return YG((0, yR.C)(RR), JR, null)
         }
 
-        function IO(WW, iW) {
-          return aO((0, mW.J)(WW), null, iW)
+        function EG(RR, JR) {
+          return YG((0, yR.C)(RR), null, JR)
         }
-        async function aO(WW, iW, OW) {
+        async function YG(RR, JR, GR) {
           const {
-            auth: mW
-          } = WW, EW = {
-            idToken: await WW.getIdToken(),
+            auth: yR
+          } = RR, tR = {
+            idToken: await RR.getIdToken(),
             returnSecureToken: !0
           };
-          iW && (EW.email = iW), OW && (EW.password = OW);
-          const NW = await rW(WW, Xi(mW, EW));
-          await WW._updateTokensIfNecessary(NW, !0)
+          JR && (tR.email = JR), GR && (tR.password = GR);
+          const uR = await FR(RR, mJ(yR, tR));
+          await RR._updateTokensIfNecessary(uR, !0)
         }
-        class rO {
-          constructor(WW, iW) {
-            let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = WW, this.providerId = iW, this.profile = OW
+        class kG {
+          constructor(RR, JR) {
+            let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = RR, this.providerId = JR, this.profile = GR
           }
         }
-        class zO extends rO {
-          constructor(WW, iW, OW, mW) {
-            super(WW, iW, OW), this.username = mW
+        class QG extends kG {
+          constructor(RR, JR, GR, yR) {
+            super(RR, JR, GR), this.username = yR
           }
         }
-        class FO extends rO {
-          constructor(WW, iW) {
-            super(WW, "facebook.com", iW)
+        class FG extends kG {
+          constructor(RR, JR) {
+            super(RR, "facebook.com", JR)
           }
         }
-        class QO extends zO {
-          constructor(WW, iW) {
-            super(WW, "github.com", iW, "string" === typeof(null === iW || void 0 === iW ? void 0 : iW.login) ? null === iW || void 0 === iW ? void 0 : iW.login : null)
+        class TG extends QG {
+          constructor(RR, JR) {
+            super(RR, "github.com", JR, "string" === typeof(null === JR || void 0 === JR ? void 0 : JR.login) ? null === JR || void 0 === JR ? void 0 : JR.login : null)
           }
         }
-        class Wm extends rO {
-          constructor(WW, iW) {
-            super(WW, "google.com", iW)
+        class sG extends kG {
+          constructor(RR, JR) {
+            super(RR, "google.com", JR)
           }
         }
-        class im extends zO {
-          constructor(WW, iW, OW) {
-            super(WW, "twitter.com", iW, OW)
+        class hG extends QG {
+          constructor(RR, JR, GR) {
+            super(RR, "twitter.com", JR, GR)
           }
         }
 
-        function Om(WW) {
+        function Ry(RR) {
           const {
-            user: iW,
-            _tokenResponse: OW
-          } = WW;
-          return iW.isAnonymous && !OW ? {
+            user: JR,
+            _tokenResponse: GR
+          } = RR;
+          return JR.isAnonymous && !GR ? {
             providerId: null,
             isNewUser: !1,
             profile: null
-          } : function(WW) {
-            var iW, OW;
-            if (!WW) return null;
+          } : function(RR) {
+            var JR, GR;
+            if (!RR) return null;
             const {
-              providerId: mW
-            } = WW, EW = WW.rawUserInfo ? JSON.parse(WW.rawUserInfo) : {}, NW = WW.isNewUser || "identitytoolkit#SignupNewUserResponse" === WW.kind;
-            if (!mW && (null === WW || void 0 === WW ? void 0 : WW.idToken)) {
-              const mW = null === (OW = null === (iW = aW(WW.idToken)) || void 0 === iW ? void 0 : iW.firebase) || void 0 === OW ? void 0 : OW.sign_in_provider;
-              if (mW) return new rO(NW, "anonymous" !== mW && "custom" !== mW ? mW : null)
+              providerId: yR
+            } = RR, tR = RR.rawUserInfo ? JSON.parse(RR.rawUserInfo) : {}, uR = RR.isNewUser || "identitytoolkit#SignupNewUserResponse" === RR.kind;
+            if (!yR && (null === RR || void 0 === RR ? void 0 : RR.idToken)) {
+              const yR = null === (GR = null === (JR = QR(RR.idToken)) || void 0 === JR ? void 0 : JR.firebase) || void 0 === GR ? void 0 : GR.sign_in_provider;
+              if (yR) return new kG(uR, "anonymous" !== yR && "custom" !== yR ? yR : null)
             }
-            if (!mW) return null;
-            switch (mW) {
+            if (!yR) return null;
+            switch (yR) {
               case "facebook.com":
-                return new FO(NW, EW);
+                return new FG(uR, tR);
               case "github.com":
-                return new QO(NW, EW);
+                return new TG(uR, tR);
               case "google.com":
-                return new Wm(NW, EW);
+                return new sG(uR, tR);
               case "twitter.com":
-                return new im(NW, EW, WW.screenName || null);
+                return new hG(uR, tR, RR.screenName || null);
               case "custom":
               case "anonymous":
-                return new rO(NW, null);
+                return new kG(uR, null);
               default:
-                return new rO(NW, mW, EW)
+                return new kG(uR, yR, tR)
             }
-          }(OW)
+          }(GR)
         }
 
-        function mm(WW, iW) {
-          return (0, mW.J)(WW).setPersistence(iW)
+        function Jy(RR, JR) {
+          return (0, yR.C)(RR).setPersistence(JR)
         }
 
-        function Em(WW) {
-          return di(WW).initializeRecaptchaConfig()
+        function Gy(RR) {
+          return xJ(RR).initializeRecaptchaConfig()
         }
 
-        function Nm(WW, iW, OW, EW) {
-          return (0, mW.J)(WW).onIdTokenChanged(iW, OW, EW)
+        function yy(RR, JR, GR, tR) {
+          return (0, yR.C)(RR).onIdTokenChanged(JR, GR, tR)
         }
 
-        function Pm(WW, iW, OW) {
-          return (0, mW.J)(WW).beforeAuthStateChanged(iW, OW)
+        function ty(RR, JR, GR) {
+          return (0, yR.C)(RR).beforeAuthStateChanged(JR, GR)
         }
 
-        function Lm(WW, iW, OW, EW) {
-          return (0, mW.J)(WW).onAuthStateChanged(iW, OW, EW)
+        function uy(RR, JR, GR, tR) {
+          return (0, yR.C)(RR).onAuthStateChanged(JR, GR, tR)
         }
 
-        function cm(WW) {
-          (0, mW.J)(WW).useDeviceLanguage()
+        function Zy(RR) {
+          (0, yR.C)(RR).useDeviceLanguage()
         }
 
-        function wm(WW, iW) {
-          return (0, mW.J)(WW).updateCurrentUser(iW)
+        function qy(RR, JR) {
+          return (0, yR.C)(RR).updateCurrentUser(JR)
         }
 
-        function tm(WW) {
-          return (0, mW.J)(WW).signOut()
+        function iy(RR) {
+          return (0, yR.C)(RR).signOut()
         }
-        async function Zm(WW) {
-          return (0, mW.J)(WW).delete()
+        async function fy(RR) {
+          return (0, yR.C)(RR).delete()
         }
-        class xm {
-          constructor(WW, iW, OW) {
-            this.type = WW, this.credential = iW, this.auth = OW
+        class Vy {
+          constructor(RR, JR, GR) {
+            this.type = RR, this.credential = JR, this.auth = GR
           }
-          static _fromIdtoken(WW, iW) {
-            return new xm("enroll", WW, iW)
+          static _fromIdtoken(RR, JR) {
+            return new Vy("enroll", RR, JR)
           }
-          static _fromMfaPendingCredential(WW) {
-            return new xm("signin", WW)
+          static _fromMfaPendingCredential(RR) {
+            return new Vy("signin", RR)
           }
           toJSON() {
-            const WW = "enroll" === this.type ? "idToken" : "pendingCredential";
+            const RR = "enroll" === this.type ? "idToken" : "pendingCredential";
             return {
               multiFactorSession: {
-                [WW]: this.credential
+                [RR]: this.credential
               }
             }
           }
-          static fromJSON(WW) {
-            var iW, OW;
-            if (null === WW || void 0 === WW ? void 0 : WW.multiFactorSession) {
-              if (null === (iW = WW.multiFactorSession) || void 0 === iW ? void 0 : iW.pendingCredential) return xm._fromMfaPendingCredential(WW.multiFactorSession.pendingCredential);
-              if (null === (OW = WW.multiFactorSession) || void 0 === OW ? void 0 : OW.idToken) return xm._fromIdtoken(WW.multiFactorSession.idToken)
+          static fromJSON(RR) {
+            var JR, GR;
+            if (null === RR || void 0 === RR ? void 0 : RR.multiFactorSession) {
+              if (null === (JR = RR.multiFactorSession) || void 0 === JR ? void 0 : JR.pendingCredential) return Vy._fromMfaPendingCredential(RR.multiFactorSession.pendingCredential);
+              if (null === (GR = RR.multiFactorSession) || void 0 === GR ? void 0 : GR.idToken) return Vy._fromIdtoken(RR.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class lm {
-          constructor(WW, iW, OW) {
-            this.session = WW, this.hints = iW, this.signInResolver = OW
+        class Ky {
+          constructor(RR, JR, GR) {
+            this.session = RR, this.hints = JR, this.signInResolver = GR
           }
-          static _fromError(WW, iW) {
-            const OW = di(WW),
-              mW = iW.customData._serverResponse,
-              EW = (mW.mfaInfo || []).map((WW => hO._fromServerResponse(OW, WW)));
-            TW(mW.mfaPendingCredential, OW, "internal-error");
-            const NW = xm._fromMfaPendingCredential(mW.mfaPendingCredential);
-            return new lm(NW, EW, (async WW => {
-              const EW = await WW._process(OW, NW);
-              delete mW.mfaInfo, delete mW.mfaPendingCredential;
-              const PW = Object.assign(Object.assign({}, mW), {
-                idToken: EW.idToken,
-                refreshToken: EW.refreshToken
+          static _fromError(RR, JR) {
+            const GR = xJ(RR),
+              yR = JR.customData._serverResponse,
+              tR = (yR.mfaInfo || []).map((RR => lG._fromServerResponse(GR, RR)));
+            lR(yR.mfaPendingCredential, GR, "internal-error");
+            const uR = Vy._fromMfaPendingCredential(yR.mfaPendingCredential);
+            return new Ky(uR, tR, (async RR => {
+              const tR = await RR._process(GR, uR);
+              delete yR.mfaInfo, delete yR.mfaPendingCredential;
+              const ZR = Object.assign(Object.assign({}, yR), {
+                idToken: tR.idToken,
+                refreshToken: tR.refreshToken
               });
-              switch (iW.operationType) {
+              switch (JR.operationType) {
                 case "signIn":
-                  const WW = await xO._fromIdTokenResponse(OW, iW.operationType, PW);
-                  return await OW._updateCurrentUser(WW.user), WW;
+                  const RR = await VG._fromIdTokenResponse(GR, JR.operationType, ZR);
+                  return await GR._updateCurrentUser(RR.user), RR;
                 case "reauthenticate":
-                  return TW(iW.user, OW, "internal-error"), xO._forOperation(iW.user, iW.operationType, PW);
+                  return lR(JR.user, GR, "internal-error"), VG._forOperation(JR.user, JR.operationType, ZR);
                 default:
-                  MW(OW, "internal-error")
+                  AR(GR, "internal-error")
               }
             }))
           }
-          async resolveSignIn(WW) {
-            const iW = WW;
-            return this.signInResolver(iW)
+          async resolveSignIn(RR) {
+            const JR = RR;
+            return this.signInResolver(JR)
           }
         }
 
-        function Am(WW, iW) {
-          var OW;
-          const EW = (0, mW.J)(WW),
-            NW = iW;
-          return TW(iW.customData.operationType, EW, "argument-error"), TW(null === (OW = NW.customData._serverResponse) || void 0 === OW ? void 0 : OW.mfaPendingCredential, EW, "argument-error"), lm._fromError(EW, NW)
+        function wy(RR, JR) {
+          var GR;
+          const tR = (0, yR.C)(RR),
+            uR = JR;
+          return lR(JR.customData.operationType, tR, "argument-error"), lR(null === (GR = uR.customData._serverResponse) || void 0 === GR ? void 0 : GR.mfaPendingCredential, tR, "argument-error"), Ky._fromError(tR, uR)
         }
-        class bm {
-          constructor(WW) {
-            this.user = WW, this.enrolledFactors = [], WW._onReload((iW => {
-              iW.mfaInfo && (this.enrolledFactors = iW.mfaInfo.map((iW => hO._fromServerResponse(WW.auth, iW))))
+        class ry {
+          constructor(RR) {
+            this.user = RR, this.enrolledFactors = [], RR._onReload((JR => {
+              JR.mfaInfo && (this.enrolledFactors = JR.mfaInfo.map((JR => lG._fromServerResponse(RR.auth, JR))))
             }))
           }
-          static _fromUser(WW) {
-            return new bm(WW)
+          static _fromUser(RR) {
+            return new ry(RR)
           }
           async getSession() {
-            return xm._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return Vy._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(WW, iW) {
-            const OW = WW,
-              mW = await this.getSession(),
-              EW = await rW(this.user, OW._process(this.user.auth, mW, iW));
-            return await this.user._updateTokensIfNecessary(EW), this.user.reload()
+          async enroll(RR, JR) {
+            const GR = RR,
+              yR = await this.getSession(),
+              tR = await FR(this.user, GR._process(this.user.auth, yR, JR));
+            return await this.user._updateTokensIfNecessary(tR), this.user.reload()
           }
-          async unenroll(WW) {
-            const iW = "string" === typeof WW ? WW : WW.uid,
-              OW = await this.user.getIdToken();
+          async unenroll(RR) {
+            const JR = "string" === typeof RR ? RR : RR.uid,
+              GR = await this.user.getIdToken();
             try {
-              const WW = await rW(this.user, (mW = this.user.auth, EW = {
-                idToken: OW,
-                mfaEnrollmentId: iW
-              }, VW(mW, "POST", "/v2/accounts/mfaEnrollment:withdraw", DW(mW, EW))));
-              this.enrolledFactors = this.enrolledFactors.filter((WW => {
+              const RR = await FR(this.user, (yR = this.user.auth, tR = {
+                idToken: GR,
+                mfaEnrollmentId: JR
+              }, PR(yR, "POST", "/v2/accounts/mfaEnrollment:withdraw", cR(yR, tR))));
+              this.enrolledFactors = this.enrolledFactors.filter((RR => {
                 let {
-                  uid: OW
-                } = WW;
-                return OW !== iW
-              })), await this.user._updateTokensIfNecessary(WW), await this.user.reload()
-            } catch (NW) {
-              throw NW
+                  uid: GR
+                } = RR;
+                return GR !== JR
+              })), await this.user._updateTokensIfNecessary(RR), await this.user.reload()
+            } catch (uR) {
+              throw uR
             }
-            var mW, EW
+            var yR, tR
           }
         }
-        const jm = new WeakMap;
+        const ey = new WeakMap;
 
-        function Um(WW) {
-          const iW = (0, mW.J)(WW);
-          return jm.has(iW) || jm.set(iW, bm._fromUser(iW)), jm.get(iW)
+        function ay(RR) {
+          const JR = (0, yR.C)(RR);
+          return ey.has(JR) || ey.set(JR, ry._fromUser(JR)), ey.get(JR)
         }
-        const km = "__sak";
-        class sm {
-          constructor(WW, iW) {
-            this.storageRetriever = WW, this.type = iW
+        const Ly = "__sak";
+        class ny {
+          constructor(RR, JR) {
+            this.storageRetriever = RR, this.type = JR
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(km, "1"), this.storage.removeItem(km), Promise.resolve(!0)) : Promise.resolve(!1)
-            } catch (WW) {
+              return this.storage ? (this.storage.setItem(Ly, "1"), this.storage.removeItem(Ly), Promise.resolve(!0)) : Promise.resolve(!1)
+            } catch (RR) {
               return Promise.resolve(!1)
             }
           }
-          _set(WW, iW) {
-            return this.storage.setItem(WW, JSON.stringify(iW)), Promise.resolve()
+          _set(RR, JR) {
+            return this.storage.setItem(RR, JSON.stringify(JR)), Promise.resolve()
           }
-          _get(WW) {
-            const iW = this.storage.getItem(WW);
-            return Promise.resolve(iW ? JSON.parse(iW) : null)
+          _get(RR) {
+            const JR = this.storage.getItem(RR);
+            return Promise.resolve(JR ? JSON.parse(JR) : null)
           }
-          _remove(WW) {
-            return this.storage.removeItem(WW), Promise.resolve()
+          _remove(RR) {
+            return this.storage.removeItem(RR), Promise.resolve()
           }
           get storage() {
             return this.storageRetriever()
           }
         }
-        class Mm extends sm {
+        class Uy extends ny {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (WW, iW) => this.onStorageEvent(WW, iW), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const WW = (0, mW.L)();
-              return xi(WW) || ki(WW)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (RR, JR) => this.onStorageEvent(RR, JR), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const RR = (0, yR.F)();
+              return wJ(RR) || UJ(RR)
             }() && function() {
               try {
                 return !(!window || window === window.top)
-              } catch (WW) {
+              } catch (RR) {
                 return !1
               }
-            }(), this.fallbackToPolling = si(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = WJ(), this._shouldAllowMigration = !0
           }
-          forAllChangedKeys(WW) {
-            for (const iW of Object.keys(this.listeners)) {
-              const OW = this.storage.getItem(iW),
-                mW = this.localCache[iW];
-              OW !== mW && WW(iW, mW, OW)
+          forAllChangedKeys(RR) {
+            for (const JR of Object.keys(this.listeners)) {
+              const GR = this.storage.getItem(JR),
+                yR = this.localCache[JR];
+              GR !== yR && RR(JR, yR, GR)
             }
           }
-          onStorageEvent(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!WW.key) return void this.forAllChangedKeys(((WW, iW, OW) => {
-              this.notifyListeners(WW, OW)
+          onStorageEvent(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!RR.key) return void this.forAllChangedKeys(((RR, JR, GR) => {
+              this.notifyListeners(RR, GR)
             }));
-            const OW = WW.key;
-            if (iW ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const mW = this.storage.getItem(OW);
-              if (WW.newValue !== mW) null !== WW.newValue ? this.storage.setItem(OW, WW.newValue) : this.storage.removeItem(OW);
-              else if (this.localCache[OW] === WW.newValue && !iW) return
+            const GR = RR.key;
+            if (JR ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const yR = this.storage.getItem(GR);
+              if (RR.newValue !== yR) null !== RR.newValue ? this.storage.setItem(GR, RR.newValue) : this.storage.removeItem(GR);
+              else if (this.localCache[GR] === RR.newValue && !JR) return
             }
-            const EW = () => {
-                const WW = this.storage.getItem(OW);
-                (iW || this.localCache[OW] !== WW) && this.notifyListeners(OW, WW)
+            const tR = () => {
+                const RR = this.storage.getItem(GR);
+                (JR || this.localCache[GR] !== RR) && this.notifyListeners(GR, RR)
               },
-              NW = this.storage.getItem(OW);
-            (0, mW.R)() && 10 === document.documentMode && NW !== WW.newValue && WW.newValue !== WW.oldValue ? setTimeout(EW, 10) : EW()
+              uR = this.storage.getItem(GR);
+            (0, yR.M)() && 10 === document.documentMode && uR !== RR.newValue && RR.newValue !== RR.oldValue ? setTimeout(tR, 10) : tR()
           }
-          notifyListeners(WW, iW) {
-            this.localCache[WW] = iW;
-            const OW = this.listeners[WW];
-            if (OW)
-              for (const mW of Array.from(OW)) mW(iW ? JSON.parse(iW) : iW)
+          notifyListeners(RR, JR) {
+            this.localCache[RR] = JR;
+            const GR = this.listeners[RR];
+            if (GR)
+              for (const yR of Array.from(GR)) yR(JR ? JSON.parse(JR) : JR)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((WW, iW, OW) => {
+              this.forAllChangedKeys(((RR, JR, GR) => {
                 this.onStorageEvent(new StorageEvent("storage", {
-                  key: WW,
-                  oldValue: iW,
-                  newValue: OW
+                  key: RR,
+                  oldValue: JR,
+                  newValue: GR
                 }), !0)
               }))
             }), 1e3)
@@ -2874,313 +2874,313 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(WW, iW) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[WW] || (this.listeners[WW] = new Set, this.localCache[WW] = this.storage.getItem(WW)), this.listeners[WW].add(iW)
+          _addListener(RR, JR) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[RR] || (this.listeners[RR] = new Set, this.localCache[RR] = this.storage.getItem(RR)), this.listeners[RR].add(JR)
           }
-          _removeListener(WW, iW) {
-            this.listeners[WW] && (this.listeners[WW].delete(iW), 0 === this.listeners[WW].size && delete this.listeners[WW]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(RR, JR) {
+            this.listeners[RR] && (this.listeners[RR].delete(JR), 0 === this.listeners[RR].size && delete this.listeners[RR]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(WW, iW) {
-            await super._set(WW, iW), this.localCache[WW] = JSON.stringify(iW)
+          async _set(RR, JR) {
+            await super._set(RR, JR), this.localCache[RR] = JSON.stringify(JR)
           }
-          async _get(WW) {
-            const iW = await super._get(WW);
-            return this.localCache[WW] = JSON.stringify(iW), iW
+          async _get(RR) {
+            const JR = await super._get(RR);
+            return this.localCache[RR] = JSON.stringify(JR), JR
           }
-          async _remove(WW) {
-            await super._remove(WW), delete this.localCache[WW]
+          async _remove(RR) {
+            await super._remove(RR), delete this.localCache[RR]
           }
         }
-        Mm.type = "LOCAL";
-        const Km = Mm;
-        class Sm extends sm {
+        Uy.type = "LOCAL";
+        const Wy = Uy;
+        class Ay extends ny {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(WW, iW) {}
-          _removeListener(WW, iW) {}
+          _addListener(RR, JR) {}
+          _removeListener(RR, JR) {}
         }
-        Sm.type = "SESSION";
-        const Ym = Sm;
-        class ym {
-          constructor(WW) {
-            this.eventTarget = WW, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
+        Ay.type = "SESSION";
+        const Cy = Ay;
+        class Xy {
+          constructor(RR) {
+            this.eventTarget = RR, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
-          static _getInstance(WW) {
-            const iW = this.receivers.find((iW => iW.isListeningto(WW)));
-            if (iW) return iW;
-            const OW = new ym(WW);
-            return this.receivers.push(OW), OW
+          static _getInstance(RR) {
+            const JR = this.receivers.find((JR => JR.isListeningto(RR)));
+            if (JR) return JR;
+            const GR = new Xy(RR);
+            return this.receivers.push(GR), GR
           }
-          isListeningto(WW) {
-            return this.eventTarget === WW
+          isListeningto(RR) {
+            return this.eventTarget === RR
           }
-          async handleEvent(WW) {
-            const iW = WW,
+          async handleEvent(RR) {
+            const JR = RR,
               {
-                eventId: OW,
-                eventType: mW,
-                data: EW
-              } = iW.data,
-              NW = this.handlersMap[mW];
-            if (!(null === NW || void 0 === NW ? void 0 : NW.size)) return;
-            iW.ports[0].postMessage({
+                eventId: GR,
+                eventType: yR,
+                data: tR
+              } = JR.data,
+              uR = this.handlersMap[yR];
+            if (!(null === uR || void 0 === uR ? void 0 : uR.size)) return;
+            JR.ports[0].postMessage({
               status: "ack",
-              eventId: OW,
-              eventType: mW
+              eventId: GR,
+              eventType: yR
             });
-            const PW = Array.from(NW).map((async WW => WW(iW.origin, EW))),
-              LW = await
-            function(WW) {
-              return Promise.all(WW.map((async WW => {
+            const ZR = Array.from(uR).map((async RR => RR(JR.origin, tR))),
+              qR = await
+            function(RR) {
+              return Promise.all(RR.map((async RR => {
                 try {
                   return {
                     fulfilled: !0,
-                    value: await WW
+                    value: await RR
                   }
-                } catch (iW) {
+                } catch (JR) {
                   return {
                     fulfilled: !1,
-                    reason: iW
+                    reason: JR
                   }
                 }
               })))
-            }(PW);
-            iW.ports[0].postMessage({
+            }(ZR);
+            JR.ports[0].postMessage({
               status: "done",
-              eventId: OW,
-              eventType: mW,
-              response: LW
+              eventId: GR,
+              eventType: yR,
+              response: qR
             })
           }
-          _subscribe(WW, iW) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[WW] || (this.handlersMap[WW] = new Set), this.handlersMap[WW].add(iW)
+          _subscribe(RR, JR) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[RR] || (this.handlersMap[RR] = new Set), this.handlersMap[RR].add(JR)
           }
-          _unsubscribe(WW, iW) {
-            this.handlersMap[WW] && iW && this.handlersMap[WW].delete(iW), iW && 0 !== this.handlersMap[WW].size || delete this.handlersMap[WW], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(RR, JR) {
+            this.handlersMap[RR] && JR && this.handlersMap[RR].delete(JR), JR && 0 !== this.handlersMap[RR].size || delete this.handlersMap[RR], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function Tm() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            OW = "";
-          for (let mW = 0; mW < iW; mW++) OW += Math.floor(10 * Math.random());
-          return WW + OW
+        function My() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+            JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            GR = "";
+          for (let yR = 0; yR < JR; yR++) GR += Math.floor(10 * Math.random());
+          return RR + GR
         }
-        ym.receivers = [];
-        class Jm {
-          constructor(WW) {
-            this.target = WW, this.handlers = new Set
+        Xy.receivers = [];
+        class By {
+          constructor(RR) {
+            this.target = RR, this.handlers = new Set
           }
-          removeMessageHandler(WW) {
-            WW.messageChannel && (WW.messageChannel.port1.removeEventListener("message", WW.zk), WW.messageChannel.port1.close()), this.handlers.delete(WW)
+          removeMessageHandler(RR) {
+            RR.messageChannel && (RR.messageChannel.port1.removeEventListener("message", RR.DW), RR.messageChannel.port1.close()), this.handlers.delete(RR)
           }
-          async _send(WW, iW) {
-            let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const mW = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!mW) throw new Error("connection_unavailable");
-            let EW, NW;
-            return new Promise(((PW, LW) => {
-              const cW = Tm("", 20);
-              mW.port1.start();
-              const wW = setTimeout((() => {
-                LW(new Error("unsupported_event"))
-              }), OW);
-              NW = {
-                messageChannel: mW,
-                zk(WW) {
-                  const iW = WW;
-                  if (iW.data.eventId === cW) switch (iW.data.status) {
+          async _send(RR, JR) {
+            let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const yR = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!yR) throw new Error("connection_unavailable");
+            let tR, uR;
+            return new Promise(((ZR, qR) => {
+              const iR = My("", 20);
+              yR.port1.start();
+              const fR = setTimeout((() => {
+                qR(new Error("unsupported_event"))
+              }), GR);
+              uR = {
+                messageChannel: yR,
+                DW(RR) {
+                  const JR = RR;
+                  if (JR.data.eventId === iR) switch (JR.data.status) {
                     case "ack":
-                      clearTimeout(wW), EW = setTimeout((() => {
-                        LW(new Error("timeout"))
+                      clearTimeout(fR), tR = setTimeout((() => {
+                        qR(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(EW), PW(iW.data.response);
+                      clearTimeout(tR), ZR(JR.data.response);
                       break;
                     default:
-                      clearTimeout(wW), clearTimeout(EW), LW(new Error("invalid_response"))
+                      clearTimeout(fR), clearTimeout(tR), qR(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(NW), mW.port1.addEventListener("message", NW.zk), this.target.postMessage({
-                eventType: WW,
-                eventId: cW,
-                data: iW
-              }, [mW.port2])
+              }, this.handlers.add(uR), yR.port1.addEventListener("message", uR.DW), this.target.postMessage({
+                eventType: RR,
+                eventId: iR,
+                data: JR
+              }, [yR.port2])
             })).finally((() => {
-              NW && this.removeMessageHandler(NW)
+              uR && this.removeMessageHandler(uR)
             }))
           }
         }
 
-        function hm() {
+        function ly() {
           return window
         }
 
-        function Hm() {
-          return "undefined" !== typeof hm().WorkerGlobalScope && "function" === typeof hm().importScripts
+        function py() {
+          return "undefined" !== typeof ly().WorkerGlobalScope && "function" === typeof ly().importScripts
         }
-        const nm = "firebaseLocalStorageDb",
-          um = "firebaseLocalStorage",
-          om = "fbase_key";
-        class dm {
-          constructor(WW) {
-            this.request = WW
+        const gy = "firebaseLocalStorageDb",
+          by = "firebaseLocalStorage",
+          vy = "fbase_key";
+        class Oy {
+          constructor(RR) {
+            this.request = RR
           }
           toPromise() {
-            return new Promise(((WW, iW) => {
+            return new Promise(((RR, JR) => {
               this.request.addEventListener("success", (() => {
-                WW(this.request.result)
+                RR(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                iW(this.request.error)
+                JR(this.request.error)
               }))
             }))
           }
         }
 
-        function em(WW, iW) {
-          return WW.transaction([um], iW ? "readwrite" : "readonly").objectStore(um)
+        function xy(RR, JR) {
+          return RR.transaction([by], JR ? "readwrite" : "readonly").objectStore(by)
         }
 
-        function gm() {
-          const WW = indexedDB.open(nm, 1);
-          return new Promise(((iW, OW) => {
-            WW.addEventListener("error", (() => {
-              OW(WW.error)
-            })), WW.addEventListener("upgradeneeded", (() => {
-              const iW = WW.result;
+        function Ny() {
+          const RR = indexedDB.open(gy, 1);
+          return new Promise(((JR, GR) => {
+            RR.addEventListener("error", (() => {
+              GR(RR.error)
+            })), RR.addEventListener("upgradeneeded", (() => {
+              const JR = RR.result;
               try {
-                iW.createObjectStore(um, {
-                  keyPath: om
+                JR.createObjectStore(by, {
+                  keyPath: vy
                 })
-              } catch (mW) {
-                OW(mW)
+              } catch (yR) {
+                GR(yR)
               }
-            })), WW.addEventListener("success", (async () => {
-              const OW = WW.result;
-              OW.objectStoreNames.contains(um) ? iW(OW) : (OW.close(), await
+            })), RR.addEventListener("success", (async () => {
+              const GR = RR.result;
+              GR.objectStoreNames.contains(by) ? JR(GR) : (GR.close(), await
                 function() {
-                  const WW = indexedDB.deleteDatabase(nm);
-                  return new dm(WW).toPromise()
-                }(), iW(await gm()))
+                  const RR = indexedDB.deleteDatabase(gy);
+                  return new Oy(RR).toPromise()
+                }(), JR(await Ny()))
             }))
           }))
         }
-        async function Dm(WW, iW, OW) {
-          const mW = em(WW, !0).put({
-            [om]: iW,
-            value: OW
+        async function Dy(RR, JR, GR) {
+          const yR = xy(RR, !0).put({
+            [vy]: JR,
+            value: GR
           });
-          return new dm(mW).toPromise()
+          return new Oy(yR).toPromise()
         }
 
-        function Vm(WW, iW) {
-          const OW = em(WW, !0).delete(iW);
-          return new dm(OW).toPromise()
+        function Hy(RR, JR) {
+          const GR = xy(RR, !0).delete(JR);
+          return new Oy(GR).toPromise()
         }
-        class pm {
+        class oy {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await gm()), this.db
+            return this.db || (this.db = await Ny()), this.db
           }
-          async _withRetries(WW) {
-            let iW = 0;
+          async _withRetries(RR) {
+            let JR = 0;
             for (;;) try {
-              const iW = await this._openDb();
-              return await WW(iW)
-            } catch (OW) {
-              if (iW++ > 3) throw OW;
+              const JR = await this._openDb();
+              return await RR(JR)
+            } catch (GR) {
+              if (JR++ > 3) throw GR;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return Hm() ? this.initializeReceiver() : this.initializeSender()
+            return py() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = ym._getInstance(Hm() ? self : null), this.receiver._subscribe("keyChanged", (async (WW, iW) => ({
-              keyProcessed: (await this._poll()).includes(iW.key)
-            }))), this.receiver._subscribe("ping", (async (WW, iW) => ["keyChanged"]))
+            this.receiver = Xy._getInstance(py() ? self : null), this.receiver._subscribe("keyChanged", (async (RR, JR) => ({
+              keyProcessed: (await this._poll()).includes(JR.key)
+            }))), this.receiver._subscribe("ping", (async (RR, JR) => ["keyChanged"]))
           }
           async initializeSender() {
-            var WW, iW;
+            var RR, JR;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
                   return (await navigator.serviceWorker.ready).active
-                } catch (WW) {
+                } catch (RR) {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new Jm(this.activeServiceWorker);
-            const OW = await this.sender._send("ping", {}, 800);
-            OW && (null === (WW = OW[0]) || void 0 === WW ? void 0 : WW.fulfilled) && (null === (iW = OW[0]) || void 0 === iW ? void 0 : iW.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new By(this.activeServiceWorker);
+            const GR = await this.sender._send("ping", {}, 800);
+            GR && (null === (RR = GR[0]) || void 0 === RR ? void 0 : RR.fulfilled) && (null === (JR = GR[0]) || void 0 === JR ? void 0 : JR.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
-          async notifyServiceWorker(WW) {
+          async notifyServiceWorker(RR) {
             if (this.sender && this.activeServiceWorker && function() {
-                var WW;
-                return (null === (WW = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === WW ? void 0 : WW.controller) || null
+                var RR;
+                return (null === (RR = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === RR ? void 0 : RR.controller) || null
               }() === this.activeServiceWorker) try {
               await this.sender._send("keyChanged", {
-                key: WW
+                key: RR
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (iW) {}
+            } catch (JR) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const WW = await gm();
-              return await Dm(WW, km, "1"), await Vm(WW, km), !0
-            } catch (WW) {}
+              const RR = await Ny();
+              return await Dy(RR, Ly, "1"), await Hy(RR, Ly), !0
+            } catch (RR) {}
             return !1
           }
-          async _withPendingWrite(WW) {
+          async _withPendingWrite(RR) {
             this.pendingWrites++;
             try {
-              await WW()
+              await RR()
             } finally {
               this.pendingWrites--
             }
           }
-          async _set(WW, iW) {
-            return this._withPendingWrite((async () => (await this._withRetries((OW => Dm(OW, WW, iW))), this.localCache[WW] = iW, this.notifyServiceWorker(WW))))
+          async _set(RR, JR) {
+            return this._withPendingWrite((async () => (await this._withRetries((GR => Dy(GR, RR, JR))), this.localCache[RR] = JR, this.notifyServiceWorker(RR))))
           }
-          async _get(WW) {
-            const iW = await this._withRetries((iW => async function(WW, iW) {
-              const OW = em(WW, !1).get(iW),
-                mW = await new dm(OW).toPromise();
-              return void 0 === mW ? null : mW.value
-            }(iW, WW)));
-            return this.localCache[WW] = iW, iW
+          async _get(RR) {
+            const JR = await this._withRetries((JR => async function(RR, JR) {
+              const GR = xy(RR, !1).get(JR),
+                yR = await new Oy(GR).toPromise();
+              return void 0 === yR ? null : yR.value
+            }(JR, RR)));
+            return this.localCache[RR] = JR, JR
           }
-          async _remove(WW) {
-            return this._withPendingWrite((async () => (await this._withRetries((iW => Vm(iW, WW))), delete this.localCache[WW], this.notifyServiceWorker(WW))))
+          async _remove(RR) {
+            return this._withPendingWrite((async () => (await this._withRetries((JR => Hy(JR, RR))), delete this.localCache[RR], this.notifyServiceWorker(RR))))
           }
           async _poll() {
-            const WW = await this._withRetries((WW => {
-              const iW = em(WW, !1).getAll();
-              return new dm(iW).toPromise()
+            const RR = await this._withRetries((RR => {
+              const JR = xy(RR, !1).getAll();
+              return new Oy(JR).toPromise()
             }));
-            if (!WW) return [];
+            if (!RR) return [];
             if (0 !== this.pendingWrites) return [];
-            const iW = [],
-              OW = new Set;
+            const JR = [],
+              GR = new Set;
             for (const {
-                fbase_key: mW,
-                value: EW
+                fbase_key: yR,
+                value: tR
               }
-              of WW) OW.add(mW), JSON.stringify(this.localCache[mW]) !== JSON.stringify(EW) && (this.notifyListeners(mW, EW), iW.push(mW));
-            for (const mW of Object.keys(this.localCache)) this.localCache[mW] && !OW.has(mW) && (this.notifyListeners(mW, null), iW.push(mW));
-            return iW
+              of RR) GR.add(yR), JSON.stringify(this.localCache[yR]) !== JSON.stringify(tR) && (this.notifyListeners(yR, tR), JR.push(yR));
+            for (const yR of Object.keys(this.localCache)) this.localCache[yR] && !GR.has(yR) && (this.notifyListeners(yR, null), JR.push(yR));
+            return JR
           }
-          notifyListeners(WW, iW) {
-            this.localCache[WW] = iW;
-            const OW = this.listeners[WW];
-            if (OW)
-              for (const mW of Array.from(OW)) mW(iW)
+          notifyListeners(RR, JR) {
+            this.localCache[RR] = JR;
+            const GR = this.listeners[RR];
+            if (GR)
+              for (const yR of Array.from(GR)) yR(JR)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(WW, iW) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[WW] || (this.listeners[WW] = new Set, this._get(WW)), this.listeners[WW].add(iW)
+          _addListener(RR, JR) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[RR] || (this.listeners[RR] = new Set, this._get(RR)), this.listeners[RR].add(JR)
           }
-          _removeListener(WW, iW) {
-            this.listeners[WW] && (this.listeners[WW].delete(iW), 0 === this.listeners[WW].size && delete this.listeners[WW]), 0 === Object.keys(this.listeners).length && this.stopPolling()
-          }
-        }
-        pm.type = "LOCAL";
-        const fm = pm;
-        const Cm = 1e12;
-        class Xm {
-          constructor(WW) {
-            this.auth = WW, this.counter = Cm, this._widgets = new Map
-          }
-          render(WW, iW) {
-            const OW = this.counter;
-            return this._widgets.set(OW, new Bm(WW, this.auth.name, iW || {})), this.counter++, OW
-          }
-          reset(WW) {
-            var iW;
-            const OW = WW || Cm;
-            null === (iW = this._widgets.get(OW)) || void 0 === iW || iW.delete(), this._widgets.delete(OW)
-          }
-          getResponse(WW) {
-            var iW;
-            const OW = WW || Cm;
-            return (null === (iW = this._widgets.get(OW)) || void 0 === iW ? void 0 : iW.getResponse()) || ""
-          }
-          async execute(WW) {
-            var iW;
-            const OW = WW || Cm;
-            return null === (iW = this._widgets.get(OW)) || void 0 === iW || iW.execute(), ""
+          _removeListener(RR, JR) {
+            this.listeners[RR] && (this.listeners[RR].delete(JR), 0 === this.listeners[RR].size && delete this.listeners[RR]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        class Bm {
-          constructor(WW, iW, OW) {
-            this.params = OW, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        oy.type = "LOCAL";
+        const cy = oy;
+        const Py = 1e12;
+        class Iy {
+          constructor(RR) {
+            this.auth = RR, this.counter = Py, this._widgets = new Map
+          }
+          render(RR, JR) {
+            const GR = this.counter;
+            return this._widgets.set(GR, new my(RR, this.auth.name, JR || {})), this.counter++, GR
+          }
+          reset(RR) {
+            var JR;
+            const GR = RR || Py;
+            null === (JR = this._widgets.get(GR)) || void 0 === JR || JR.delete(), this._widgets.delete(GR)
+          }
+          getResponse(RR) {
+            var JR;
+            const GR = RR || Py;
+            return (null === (JR = this._widgets.get(GR)) || void 0 === JR ? void 0 : JR.getResponse()) || ""
+          }
+          async execute(RR) {
+            var JR;
+            const GR = RR || Py;
+            return null === (JR = this._widgets.get(GR)) || void 0 === JR || JR.execute(), ""
+          }
+        }
+        class my {
+          constructor(RR, JR, GR) {
+            this.params = GR, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const mW = "string" === typeof WW ? document.getElementById(WW) : WW;
-            TW(mW, "argument-error", {
-              appName: iW
-            }), this.container = mW, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const yR = "string" === typeof RR ? document.getElementById(RR) : RR;
+            lR(yR, "argument-error", {
+              appName: JR
+            }), this.container = yR, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3240,23 +3240,23 @@ export const modules = {
           }
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
-              this.responseToken = function(WW) {
-                const iW = [],
-                  OW = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let mW = 0; mW < WW; mW++) iW.push(OW.charAt(Math.floor(Math.random() * OW.length)));
-                return iW.join("")
+              this.responseToken = function(RR) {
+                const JR = [],
+                  GR = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let yR = 0; yR < RR; yR++) JR.push(GR.charAt(Math.floor(Math.random() * GR.length)));
+                return JR.join("")
               }(50);
               const {
-                callback: WW,
-                "expired-callback": iW
+                callback: RR,
+                "expired-callback": JR
               } = this.params;
-              if (WW) try {
-                WW(this.responseToken)
-              } catch (OW) {}
+              if (RR) try {
+                RR(this.responseToken)
+              } catch (GR) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, iW) try {
-                  iW()
-                } catch (OW) {}
+                if (this.timerId = null, this.responseToken = null, JR) try {
+                  JR()
+                } catch (GR) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,268 +3265,268 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const qm = Ji("rcb"),
-          Rm = new oW(3e4, 6e4);
-        class Gm {
+        const zy = pJ("rcb"),
+          Sy = new xR(3e4, 6e4);
+        class jy {
           constructor() {
-            var WW;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (WW = hm().grecaptcha) || void 0 === WW ? void 0 : WW.render)
+            var RR;
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (RR = ly().grecaptcha) || void 0 === RR ? void 0 : RR.render)
           }
-          load(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return TW(function(WW) {
-              return WW.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(WW)
-            }(iW), WW, "argument-error"), this.shouldResolveImmediately(iW) && Si(hm().grecaptcha) ? Promise.resolve(hm().grecaptcha) : new Promise(((OW, EW) => {
-              const NW = hm().setTimeout((() => {
-                EW(KW(WW, "network-request-failed"))
-              }), Rm.get());
-              hm()[qm] = () => {
-                hm().clearTimeout(NW), delete hm()[qm];
-                const mW = hm().grecaptcha;
-                if (!mW || !Si(mW)) return void EW(KW(WW, "internal-error"));
-                const PW = mW.render;
-                mW.render = (WW, iW) => {
-                  const OW = PW(WW, iW);
-                  return this.counter++, OW
-                }, this.hostLanguage = iW, OW(mW)
+          load(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return lR(function(RR) {
+              return RR.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(RR)
+            }(JR), RR, "argument-error"), this.shouldResolveImmediately(JR) && XJ(ly().grecaptcha) ? Promise.resolve(ly().grecaptcha) : new Promise(((GR, tR) => {
+              const uR = ly().setTimeout((() => {
+                tR(CR(RR, "network-request-failed"))
+              }), Sy.get());
+              ly()[zy] = () => {
+                ly().clearTimeout(uR), delete ly()[zy];
+                const yR = ly().grecaptcha;
+                if (!yR || !XJ(yR)) return void tR(CR(RR, "internal-error"));
+                const ZR = yR.render;
+                yR.render = (RR, JR) => {
+                  const GR = ZR(RR, JR);
+                  return this.counter++, GR
+                }, this.hostLanguage = JR, GR(yR)
               };
-              Ti(`https://www.google.com/recaptcha/api.js??${(0,mW.$)({onload:qm,render:"explicit",hl:iW})}`).catch((() => {
-                clearTimeout(NW), EW(KW(WW, "internal-error"))
+              lJ(`https://www.google.com/recaptcha/api.js??${(0,yR.db)({onload:zy,render:"explicit",hl:JR})}`).catch((() => {
+                clearTimeout(uR), tR(CR(RR, "internal-error"))
               }))
             }))
           }
           clearedOneInstance() {
             this.counter--
           }
-          shouldResolveImmediately(WW) {
-            var iW;
-            return !!(null === (iW = hm().grecaptcha) || void 0 === iW ? void 0 : iW.render) && (WW === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+          shouldResolveImmediately(RR) {
+            var JR;
+            return !!(null === (JR = ly().grecaptcha) || void 0 === JR ? void 0 : JR.render) && (RR === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class Im {
-          async load(WW) {
-            return new Xm(WW)
+        class dy {
+          async load(RR) {
+            return new Iy(RR)
           }
           clearedOneInstance() {}
         }
-        const am = "recaptcha",
-          rm = {
+        const Ey = "recaptcha",
+          Yy = {
             theme: "light",
             type: "image"
           };
-        class zm {
-          constructor(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, rm),
-              OW = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = iW, this.type = am, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = di(OW), this.isInvisible = "invisible" === this.parameters.size, TW("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const mW = "string" === typeof WW ? document.getElementById(WW) : WW;
-            TW(mW, this.auth, "argument-error"), this.container = mW, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new Im : new Gm, this.validateStartingState()
+        class ky {
+          constructor(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, Yy),
+              GR = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = JR, this.type = Ey, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = xJ(GR), this.isInvisible = "invisible" === this.parameters.size, lR("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const yR = "string" === typeof RR ? document.getElementById(RR) : RR;
+            lR(yR, this.auth, "argument-error"), this.container = yR, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new dy : new jy, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
-            const WW = await this.render(),
-              iW = this.getAssertedRecaptcha(),
-              OW = iW.getResponse(WW);
-            return OW || new Promise((OW => {
-              const mW = WW => {
-                WW && (this.tokenChangeListeners.delete(mW), OW(WW))
+            const RR = await this.render(),
+              JR = this.getAssertedRecaptcha(),
+              GR = JR.getResponse(RR);
+            return GR || new Promise((GR => {
+              const yR = RR => {
+                RR && (this.tokenChangeListeners.delete(yR), GR(RR))
               };
-              this.tokenChangeListeners.add(mW), this.isInvisible && iW.execute(WW)
+              this.tokenChangeListeners.add(yR), this.isInvisible && JR.execute(RR)
             }))
           }
           render() {
             try {
               this.assertNotDestroyed()
-            } catch (WW) {
-              return Promise.reject(WW)
+            } catch (RR) {
+              return Promise.reject(RR)
             }
-            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((WW => {
-              throw this.renderPromise = null, WW
+            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((RR => {
+              throw this.renderPromise = null, RR
             }))), this.renderPromise
           }
           _reset() {
             this.assertNotDestroyed(), null !== this.widgetId && this.getAssertedRecaptcha().reset(this.widgetId)
           }
           clear() {
-            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((WW => {
-              this.container.removeChild(WW)
+            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((RR => {
+              this.container.removeChild(RR)
             }))
           }
           validateStartingState() {
-            TW(!this.parameters.sitekey, this.auth, "argument-error"), TW(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), TW("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            lR(!this.parameters.sitekey, this.auth, "argument-error"), lR(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), lR("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
-          makeTokenCallback(WW) {
-            return iW => {
-              if (this.tokenChangeListeners.forEach((WW => WW(iW))), "function" === typeof WW) WW(iW);
-              else if ("string" === typeof WW) {
-                const OW = hm()[WW];
-                "function" === typeof OW && OW(iW)
+          makeTokenCallback(RR) {
+            return JR => {
+              if (this.tokenChangeListeners.forEach((RR => RR(JR))), "function" === typeof RR) RR(JR);
+              else if ("string" === typeof RR) {
+                const GR = ly()[RR];
+                "function" === typeof GR && GR(JR)
               }
             }
           }
           assertNotDestroyed() {
-            TW(!this.destroyed, this.auth, "internal-error")
+            lR(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
-              let WW = this.container;
+              let RR = this.container;
               if (!this.isInvisible) {
-                const iW = document.createElement("div");
-                WW.appendChild(iW), WW = iW
+                const JR = document.createElement("div");
+                RR.appendChild(JR), RR = JR
               }
-              this.widgetId = this.getAssertedRecaptcha().render(WW, this.parameters)
+              this.widgetId = this.getAssertedRecaptcha().render(RR, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            TW(nW() && !Hm(), this.auth, "internal-error"), await
+            lR(vR() && !py(), this.auth, "internal-error"), await
             function() {
-              let WW = null;
-              return new Promise((iW => {
-                "complete" !== document.readyState ? (WW = () => iW(), window.addEventListener("load", WW)) : iW()
-              })).catch((iW => {
-                throw WW && window.removeEventListener("load", WW), iW
+              let RR = null;
+              return new Promise((JR => {
+                "complete" !== document.readyState ? (RR = () => JR(), window.addEventListener("load", RR)) : JR()
+              })).catch((JR => {
+                throw RR && window.removeEventListener("load", RR), JR
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
-            const WW = await async function(WW) {
-              return (await VW(WW, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+            const RR = await async function(RR) {
+              return (await PR(RR, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            TW(WW, this.auth, "internal-error"), this.parameters.sitekey = WW
+            lR(RR, this.auth, "internal-error"), this.parameters.sitekey = RR
           }
           getAssertedRecaptcha() {
-            return TW(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return lR(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class Fm {
-          constructor(WW, iW) {
-            this.verificationId = WW, this.onConfirmation = iW
+        class Qy {
+          constructor(RR, JR) {
+            this.verificationId = RR, this.onConfirmation = JR
           }
-          confirm(WW) {
-            const iW = Fi._fromVerification(this.verificationId, WW);
-            return this.onConfirmation(iW)
+          confirm(RR) {
+            const JR = FJ._fromVerification(this.verificationId, RR);
+            return this.onConfirmation(JR)
           }
         }
-        async function Qm(WW, iW, OW) {
-          const EW = di(WW),
-            NW = await OE(EW, iW, (0, mW.J)(OW));
-          return new Fm(NW, (WW => YO(EW, WW)))
+        async function Fy(RR, JR, GR) {
+          const tR = xJ(RR),
+            uR = await hy(tR, JR, (0, yR.C)(GR));
+          return new Qy(uR, (RR => CG(tR, RR)))
         }
-        async function WE(WW, iW, OW) {
-          const EW = (0, mW.J)(WW);
-          await MO(!1, EW, "phone");
-          const NW = await OE(EW.auth, iW, (0, mW.J)(OW));
-          return new Fm(NW, (WW => yO(EW, WW)))
+        async function Ty(RR, JR, GR) {
+          const tR = (0, yR.C)(RR);
+          await UG(!1, tR, "phone");
+          const uR = await hy(tR.auth, JR, (0, yR.C)(GR));
+          return new Qy(uR, (RR => XG(tR, RR)))
         }
-        async function iE(WW, iW, OW) {
-          const EW = (0, mW.J)(WW),
-            NW = await OE(EW.auth, iW, (0, mW.J)(OW));
-          return new Fm(NW, (WW => TO(EW, WW)))
+        async function sy(RR, JR, GR) {
+          const tR = (0, yR.C)(RR),
+            uR = await hy(tR.auth, JR, (0, yR.C)(GR));
+          return new Qy(uR, (RR => MG(tR, RR)))
         }
-        async function OE(WW, iW, OW) {
-          var mW;
-          const EW = await OW.verify();
+        async function hy(RR, JR, GR) {
+          var yR;
+          const tR = await GR.verify();
           try {
-            let NW;
-            if (TW("string" === typeof EW, WW, "argument-error"), TW(OW.type === am, WW, "argument-error"), NW = "string" === typeof iW ? {
-                phoneNumber: iW
-              } : iW, "session" in NW) {
-              const iW = NW.session;
-              if ("phoneNumber" in NW) {
-                TW("enroll" === iW.type, WW, "internal-error");
-                const OW = await
-                function(WW, iW) {
-                  return VW(WW, "POST", "/v2/accounts/mfaEnrollment:start", DW(WW, iW))
-                }(WW, {
-                  idToken: iW.credential,
+            let uR;
+            if (lR("string" === typeof tR, RR, "argument-error"), lR(GR.type === Ey, RR, "argument-error"), uR = "string" === typeof JR ? {
+                phoneNumber: JR
+              } : JR, "session" in uR) {
+              const JR = uR.session;
+              if ("phoneNumber" in uR) {
+                lR("enroll" === JR.type, RR, "internal-error");
+                const GR = await
+                function(RR, JR) {
+                  return PR(RR, "POST", "/v2/accounts/mfaEnrollment:start", cR(RR, JR))
+                }(RR, {
+                  idToken: JR.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: NW.phoneNumber,
-                    recaptchaToken: EW
+                    phoneNumber: uR.phoneNumber,
+                    recaptchaToken: tR
                   }
                 });
-                return OW.phoneSessionInfo.sessionInfo
+                return GR.phoneSessionInfo.sessionInfo
               } {
-                TW("signin" === iW.type, WW, "internal-error");
-                const OW = (null === (mW = NW.multiFactorHint) || void 0 === mW ? void 0 : mW.uid) || NW.multiFactorUid;
-                TW(OW, WW, "missing-multi-factor-info");
-                const PW = await
-                function(WW, iW) {
-                  return VW(WW, "POST", "/v2/accounts/mfaSignIn:start", DW(WW, iW))
-                }(WW, {
-                  mfaPendingCredential: iW.credential,
-                  mfaEnrollmentId: OW,
+                lR("signin" === JR.type, RR, "internal-error");
+                const GR = (null === (yR = uR.multiFactorHint) || void 0 === yR ? void 0 : yR.uid) || uR.multiFactorUid;
+                lR(GR, RR, "missing-multi-factor-info");
+                const ZR = await
+                function(RR, JR) {
+                  return PR(RR, "POST", "/v2/accounts/mfaSignIn:start", cR(RR, JR))
+                }(RR, {
+                  mfaPendingCredential: JR.credential,
+                  mfaEnrollmentId: GR,
                   phoneSignInInfo: {
-                    recaptchaToken: EW
+                    recaptchaToken: tR
                   }
                 });
-                return PW.phoneResponseInfo.sessionInfo
+                return ZR.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: iW
-              } = await async function(WW, iW) {
-                return VW(WW, "POST", "/v1/accounts:sendVerificationCode", DW(WW, iW))
-              }(WW, {
-                phoneNumber: NW.phoneNumber,
-                recaptchaToken: EW
+                sessionInfo: JR
+              } = await async function(RR, JR) {
+                return PR(RR, "POST", "/v1/accounts:sendVerificationCode", cR(RR, JR))
+              }(RR, {
+                phoneNumber: uR.phoneNumber,
+                recaptchaToken: tR
               });
-              return iW
+              return JR
             }
           } finally {
-            OW._reset()
+            GR._reset()
           }
         }
-        async function mE(WW, iW) {
-          await sO((0, mW.J)(WW), iW)
+        async function Rt(RR, JR) {
+          await nG((0, yR.C)(RR), JR)
         }
-        class EE {
-          constructor(WW) {
-            this.providerId = EE.PROVIDER_ID, this.auth = di(WW)
+        class Jt {
+          constructor(RR) {
+            this.providerId = Jt.PROVIDER_ID, this.auth = xJ(RR)
           }
-          verifyPhoneNumber(WW, iW) {
-            return OE(this.auth, WW, (0, mW.J)(iW))
+          verifyPhoneNumber(RR, JR) {
+            return hy(this.auth, RR, (0, yR.C)(JR))
           }
-          static credential(WW, iW) {
-            return Fi._fromVerification(WW, iW)
+          static credential(RR, JR) {
+            return FJ._fromVerification(RR, JR)
           }
-          static credentialFromResult(WW) {
-            const iW = WW;
-            return EE.credentialFromTaggedObject(iW)
+          static credentialFromResult(RR) {
+            const JR = RR;
+            return Jt.credentialFromTaggedObject(JR)
           }
-          static credentialFromError(WW) {
-            return EE.credentialFromTaggedObject(WW.customData || {})
+          static credentialFromError(RR) {
+            return Jt.credentialFromTaggedObject(RR.customData || {})
           }
-          static credentialFromTaggedObject(WW) {
+          static credentialFromTaggedObject(RR) {
             let {
-              _tokenResponse: iW
-            } = WW;
-            if (!iW) return null;
+              _tokenResponse: JR
+            } = RR;
+            if (!JR) return null;
             const {
-              phoneNumber: OW,
-              temporaryProof: mW
-            } = iW;
-            return OW && mW ? Fi._fromTokenResponse(OW, mW) : null
+              phoneNumber: GR,
+              temporaryProof: yR
+            } = JR;
+            return GR && yR ? FJ._fromTokenResponse(GR, yR) : null
           }
         }
 
-        function NE(WW, iW) {
-          return iW ? Ni(iW) : (TW(WW._popupRedirectResolver, WW, "argument-error"), WW._popupRedirectResolver)
+        function Gt(RR, JR) {
+          return JR ? uJ(JR) : (lR(RR._popupRedirectResolver, RR, "argument-error"), RR._popupRedirectResolver)
         }
-        EE.PROVIDER_ID = "phone", EE.PHONE_SIGN_IN_METHOD = "phone";
-        class PE extends fi {
-          constructor(WW) {
-            super("custom", "custom"), this.params = WW
+        Jt.PROVIDER_ID = "phone", Jt.PHONE_SIGN_IN_METHOD = "phone";
+        class yt extends PJ {
+          constructor(RR) {
+            super("custom", "custom"), this.params = RR
           }
-          _getIdTokenResponse(WW) {
-            return ai(WW, this._buildIdpRequest())
+          _getIdTokenResponse(RR) {
+            return YJ(RR, this._buildIdpRequest())
           }
-          _linkToIdToken(WW, iW) {
-            return ai(WW, this._buildIdpRequest(iW))
+          _linkToIdToken(RR, JR) {
+            return YJ(RR, this._buildIdpRequest(JR))
           }
-          _getReauthenticationResolver(WW) {
-            return ai(WW, this._buildIdpRequest())
+          _getReauthenticationResolver(RR) {
+            return YJ(RR, this._buildIdpRequest())
           }
-          _buildIdpRequest(WW) {
-            const iW = {
+          _buildIdpRequest(RR) {
+            const JR = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,187 +3535,187 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return WW && (iW.idToken = WW), iW
+            return RR && (JR.idToken = RR), JR
           }
         }
 
-        function LE(WW) {
-          return SO(WW.auth, new PE(WW), WW.bypassAuthState)
+        function tt(RR) {
+          return AG(RR.auth, new yt(RR), RR.bypassAuthState)
         }
 
-        function cE(WW) {
+        function ut(RR) {
           const {
-            auth: iW,
-            user: OW
-          } = WW;
-          return TW(OW, iW, "internal-error"), KO(OW, new PE(WW), WW.bypassAuthState)
+            auth: JR,
+            user: GR
+          } = RR;
+          return lR(GR, JR, "internal-error"), WG(GR, new yt(RR), RR.bypassAuthState)
         }
-        async function wE(WW) {
+        async function Zt(RR) {
           const {
-            auth: iW,
-            user: OW
-          } = WW;
-          return TW(OW, iW, "internal-error"), sO(OW, new PE(WW), WW.bypassAuthState)
+            auth: JR,
+            user: GR
+          } = RR;
+          return lR(GR, JR, "internal-error"), nG(GR, new yt(RR), RR.bypassAuthState)
         }
-        class tE {
-          constructor(WW, iW, OW, mW) {
-            let EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = WW, this.resolver = OW, this.user = mW, this.bypassAuthState = EW, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(iW) ? iW : [iW]
+        class qt {
+          constructor(RR, JR, GR, yR) {
+            let tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = RR, this.resolver = GR, this.user = yR, this.bypassAuthState = tR, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(JR) ? JR : [JR]
           }
           execute() {
-            return new Promise((async (WW, iW) => {
+            return new Promise((async (RR, JR) => {
               this.pendingPromise = {
-                resolve: WW,
-                reject: iW
+                resolve: RR,
+                reject: JR
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (OW) {
-                this.reject(OW)
+              } catch (GR) {
+                this.reject(GR)
               }
             }))
           }
-          async onAuthEvent(WW) {
+          async onAuthEvent(RR) {
             const {
-              urlResponse: iW,
-              sessionId: OW,
-              postBody: mW,
-              tenantId: EW,
-              error: NW,
-              type: PW
-            } = WW;
-            if (NW) return void this.reject(NW);
-            const LW = {
+              urlResponse: JR,
+              sessionId: GR,
+              postBody: yR,
+              tenantId: tR,
+              error: uR,
+              type: ZR
+            } = RR;
+            if (uR) return void this.reject(uR);
+            const qR = {
               auth: this.auth,
-              requestUri: iW,
-              sessionId: OW,
-              tenantId: EW || void 0,
-              postBody: mW || void 0,
+              requestUri: JR,
+              sessionId: GR,
+              tenantId: tR || void 0,
+              postBody: yR || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(PW)(LW))
-            } catch (cW) {
-              this.reject(cW)
+              this.resolve(await this.getIdpTask(ZR)(qR))
+            } catch (iR) {
+              this.reject(iR)
             }
           }
-          onError(WW) {
-            this.reject(WW)
+          onError(RR) {
+            this.reject(RR)
           }
-          getIdpTask(WW) {
-            switch (WW) {
+          getIdpTask(RR) {
+            switch (RR) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return LE;
+                return tt;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return wE;
+                return Zt;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return cE;
+                return ut;
               default:
-                MW(this.auth, "internal-error")
+                AR(this.auth, "internal-error")
             }
           }
-          resolve(WW) {
-            hW(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(WW), this.unregisterAndCleanUp()
+          resolve(RR) {
+            gR(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(RR), this.unregisterAndCleanUp()
           }
-          reject(WW) {
-            hW(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(WW), this.unregisterAndCleanUp()
+          reject(RR) {
+            gR(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(RR), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const ZE = new oW(2e3, 1e4);
-        async function xE(WW, iW, OW) {
-          const mW = di(WW);
-          YW(WW, iW, OO);
-          const EW = NE(mW, OW);
-          return new bE(mW, "signInViaPopup", iW, EW).executeNotNull()
+        const it = new xR(2e3, 1e4);
+        async function ft(RR, JR, GR) {
+          const yR = xJ(RR);
+          MR(RR, JR, RG);
+          const tR = Gt(yR, GR);
+          return new wt(yR, "signInViaPopup", JR, tR).executeNotNull()
         }
-        async function lE(WW, iW, OW) {
-          const EW = (0, mW.J)(WW);
-          YW(EW.auth, iW, OO);
-          const NW = NE(EW.auth, OW);
-          return new bE(EW.auth, "reauthViaPopup", iW, NW, EW).executeNotNull()
+        async function Vt(RR, JR, GR) {
+          const tR = (0, yR.C)(RR);
+          MR(tR.auth, JR, RG);
+          const uR = Gt(tR.auth, GR);
+          return new wt(tR.auth, "reauthViaPopup", JR, uR, tR).executeNotNull()
         }
-        async function AE(WW, iW, OW) {
-          const EW = (0, mW.J)(WW);
-          YW(EW.auth, iW, OO);
-          const NW = NE(EW.auth, OW);
-          return new bE(EW.auth, "linkViaPopup", iW, NW, EW).executeNotNull()
+        async function Kt(RR, JR, GR) {
+          const tR = (0, yR.C)(RR);
+          MR(tR.auth, JR, RG);
+          const uR = Gt(tR.auth, GR);
+          return new wt(tR.auth, "linkViaPopup", JR, uR, tR).executeNotNull()
         }
-        class bE extends tE {
-          constructor(WW, iW, OW, mW, EW) {
-            super(WW, iW, mW, EW), this.provider = OW, this.authWindow = null, this.pollId = null, bE.currentPopupAction && bE.currentPopupAction.cancel(), bE.currentPopupAction = this
+        class wt extends qt {
+          constructor(RR, JR, GR, yR, tR) {
+            super(RR, JR, yR, tR), this.provider = GR, this.authWindow = null, this.pollId = null, wt.currentPopupAction && wt.currentPopupAction.cancel(), wt.currentPopupAction = this
           }
           async executeNotNull() {
-            const WW = await this.execute();
-            return TW(WW, this.auth, "internal-error"), WW
+            const RR = await this.execute();
+            return lR(RR, this.auth, "internal-error"), RR
           }
           async onExecution() {
-            hW(1 === this.filter.length, "Popup operations only handle one event");
-            const WW = Tm();
-            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], WW), this.authWindow.associatedEvent = WW, this.resolver._originValidation(this.auth).catch((WW => {
-              this.reject(WW)
-            })), this.resolver._isIframeWebStorageSupported(this.auth, (WW => {
-              WW || this.reject(KW(this.auth, "web-storage-unsupported"))
+            gR(1 === this.filter.length, "Popup operations only handle one event");
+            const RR = My();
+            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], RR), this.authWindow.associatedEvent = RR, this.resolver._originValidation(this.auth).catch((RR => {
+              this.reject(RR)
+            })), this.resolver._isIframeWebStorageSupported(this.auth, (RR => {
+              RR || this.reject(CR(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
-            var WW;
-            return (null === (WW = this.authWindow) || void 0 === WW ? void 0 : WW.associatedEvent) || null
+            var RR;
+            return (null === (RR = this.authWindow) || void 0 === RR ? void 0 : RR.associatedEvent) || null
           }
           cancel() {
-            this.reject(KW(this.auth, "cancelled-popup-request"))
+            this.reject(CR(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, bE.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, wt.currentPopupAction = null
           }
           pollUserCancellation() {
-            const WW = () => {
-              var iW, OW;
-              (null === (OW = null === (iW = this.authWindow) || void 0 === iW ? void 0 : iW.window) || void 0 === OW ? void 0 : OW.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(KW(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(WW, ZE.get())
+            const RR = () => {
+              var JR, GR;
+              (null === (GR = null === (JR = this.authWindow) || void 0 === JR ? void 0 : JR.window) || void 0 === GR ? void 0 : GR.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(CR(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(RR, it.get())
             };
-            WW()
+            RR()
           }
         }
-        bE.currentPopupAction = null;
-        const jE = "pendingRedirect",
-          UE = new Map;
-        class kE extends tE {
-          constructor(WW, iW) {
-            super(WW, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], iW, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        wt.currentPopupAction = null;
+        const rt = "pendingRedirect",
+          et = new Map;
+        class Lt extends qt {
+          constructor(RR, JR) {
+            super(RR, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], JR, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let WW = UE.get(this.auth._key());
-            if (!WW) {
+            let RR = et.get(this.auth._key());
+            if (!RR) {
               try {
-                const iW = await async function(WW, iW) {
-                  const OW = SE(iW),
-                    mW = KE(WW);
-                  if (!await mW._isAvailable()) return !1;
-                  const EW = "true" === await mW._get(OW);
-                  return await mW._remove(OW), EW
+                const JR = await async function(RR, JR) {
+                  const GR = At(JR),
+                    yR = Wt(RR);
+                  if (!await yR._isAvailable()) return !1;
+                  const tR = "true" === await yR._get(GR);
+                  return await yR._remove(GR), tR
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                WW = () => Promise.resolve(iW)
-              } catch (iW) {
-                WW = () => Promise.reject(iW)
+                RR = () => Promise.resolve(JR)
+              } catch (JR) {
+                RR = () => Promise.reject(JR)
               }
-              UE.set(this.auth._key(), WW)
+              et.set(this.auth._key(), RR)
             }
-            return this.bypassAuthState || UE.set(this.auth._key(), (() => Promise.resolve(null))), WW()
+            return this.bypassAuthState || et.set(this.auth._key(), (() => Promise.resolve(null))), RR()
           }
-          async onAuthEvent(WW) {
-            if ("signInViaRedirect" === WW.type) return super.onAuthEvent(WW);
-            if ("unknown" !== WW.type) {
-              if (WW.eventId) {
-                const iW = await this.auth._redirectUserForId(WW.eventId);
-                if (iW) return this.user = iW, super.onAuthEvent(WW);
+          async onAuthEvent(RR) {
+            if ("signInViaRedirect" === RR.type) return super.onAuthEvent(RR);
+            if ("unknown" !== RR.type) {
+              if (RR.eventId) {
+                const JR = await this.auth._redirectUserForId(RR.eventId);
+                if (JR) return this.user = JR, super.onAuthEvent(RR);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,199 +3723,199 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function sE(WW, iW) {
-          return KE(WW)._set(SE(iW), "true")
+        async function nt(RR, JR) {
+          return Wt(RR)._set(At(JR), "true")
         }
 
-        function ME(WW, iW) {
-          UE.set(WW._key(), iW)
+        function Ut(RR, JR) {
+          et.set(RR._key(), JR)
         }
 
-        function KE(WW) {
-          return Ni(WW._redirectPersistence)
+        function Wt(RR) {
+          return uJ(RR._redirectPersistence)
         }
 
-        function SE(WW) {
-          return ci(jE, WW.config.apiKey, WW.name)
+        function At(RR) {
+          return iJ(rt, RR.config.apiKey, RR.name)
         }
 
-        function YE(WW, iW, OW) {
-          return async function(WW, iW, OW) {
-            const mW = di(WW);
-            YW(WW, iW, OO), await mW._initializationPromise;
-            const EW = NE(mW, OW);
-            return await sE(EW, mW), EW._openRedirect(mW, iW, "signInViaRedirect")
-          }(WW, iW, OW)
+        function Ct(RR, JR, GR) {
+          return async function(RR, JR, GR) {
+            const yR = xJ(RR);
+            MR(RR, JR, RG), await yR._initializationPromise;
+            const tR = Gt(yR, GR);
+            return await nt(tR, yR), tR._openRedirect(yR, JR, "signInViaRedirect")
+          }(RR, JR, GR)
         }
 
-        function yE(WW, iW, OW) {
-          return async function(WW, iW, OW) {
-            const EW = (0, mW.J)(WW);
-            YW(EW.auth, iW, OO), await EW.auth._initializationPromise;
-            const NW = NE(EW.auth, OW);
-            await sE(NW, EW.auth);
-            const PW = await HE(EW);
-            return NW._openRedirect(EW.auth, iW, "reauthViaRedirect", PW)
-          }(WW, iW, OW)
+        function Xt(RR, JR, GR) {
+          return async function(RR, JR, GR) {
+            const tR = (0, yR.C)(RR);
+            MR(tR.auth, JR, RG), await tR.auth._initializationPromise;
+            const uR = Gt(tR.auth, GR);
+            await nt(uR, tR.auth);
+            const ZR = await pt(tR);
+            return uR._openRedirect(tR.auth, JR, "reauthViaRedirect", ZR)
+          }(RR, JR, GR)
         }
 
-        function TE(WW, iW, OW) {
-          return async function(WW, iW, OW) {
-            const EW = (0, mW.J)(WW);
-            YW(EW.auth, iW, OO), await EW.auth._initializationPromise;
-            const NW = NE(EW.auth, OW);
-            await MO(!1, EW, iW.providerId), await sE(NW, EW.auth);
-            const PW = await HE(EW);
-            return NW._openRedirect(EW.auth, iW, "linkViaRedirect", PW)
-          }(WW, iW, OW)
+        function Mt(RR, JR, GR) {
+          return async function(RR, JR, GR) {
+            const tR = (0, yR.C)(RR);
+            MR(tR.auth, JR, RG), await tR.auth._initializationPromise;
+            const uR = Gt(tR.auth, GR);
+            await UG(!1, tR, JR.providerId), await nt(uR, tR.auth);
+            const ZR = await pt(tR);
+            return uR._openRedirect(tR.auth, JR, "linkViaRedirect", ZR)
+          }(RR, JR, GR)
         }
-        async function JE(WW, iW) {
-          return await di(WW)._initializationPromise, hE(WW, iW, !1)
+        async function Bt(RR, JR) {
+          return await xJ(RR)._initializationPromise, lt(RR, JR, !1)
         }
-        async function hE(WW, iW) {
-          let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const mW = di(WW),
-            EW = NE(mW, iW),
-            NW = new kE(mW, EW, OW),
-            PW = await NW.execute();
-          return PW && !OW && (delete PW.user._redirectEventId, await mW._persistUserIfCurrent(PW.user), await mW._setRedirectUser(null, iW)), PW
+        async function lt(RR, JR) {
+          let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const yR = xJ(RR),
+            tR = Gt(yR, JR),
+            uR = new Lt(yR, tR, GR),
+            ZR = await uR.execute();
+          return ZR && !GR && (delete ZR.user._redirectEventId, await yR._persistUserIfCurrent(ZR.user), await yR._setRedirectUser(null, JR)), ZR
         }
-        async function HE(WW) {
-          const iW = Tm(`${WW.uid}:::`);
-          return WW._redirectEventId = iW, await WW.auth._setRedirectUser(WW), await WW.auth._persistUserIfCurrent(WW), iW
+        async function pt(RR) {
+          const JR = My(`${RR.uid}:::`);
+          return RR._redirectEventId = JR, await RR.auth._setRedirectUser(RR), await RR.auth._persistUserIfCurrent(RR), JR
         }
-        class nE {
-          constructor(WW) {
-            this.auth = WW, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
+        class gt {
+          constructor(RR) {
+            this.auth = RR, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
-          registerConsumer(WW) {
-            this.consumers.add(WW), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, WW) && (this.sendToConsumer(this.queuedRedirectEvent, WW), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
+          registerConsumer(RR) {
+            this.consumers.add(RR), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, RR) && (this.sendToConsumer(this.queuedRedirectEvent, RR), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
           }
-          unregisterConsumer(WW) {
-            this.consumers.delete(WW)
+          unregisterConsumer(RR) {
+            this.consumers.delete(RR)
           }
-          onEvent(WW) {
-            if (this.hasEventBeenHandled(WW)) return !1;
-            let iW = !1;
-            return this.consumers.forEach((OW => {
-              this.isEventForConsumer(WW, OW) && (iW = !0, this.sendToConsumer(WW, OW), this.saveEventToCache(WW))
-            })), this.hasHandledPotentialRedirect || ! function(WW) {
-              switch (WW.type) {
+          onEvent(RR) {
+            if (this.hasEventBeenHandled(RR)) return !1;
+            let JR = !1;
+            return this.consumers.forEach((GR => {
+              this.isEventForConsumer(RR, GR) && (JR = !0, this.sendToConsumer(RR, GR), this.saveEventToCache(RR))
+            })), this.hasHandledPotentialRedirect || ! function(RR) {
+              switch (RR.type) {
                 case "signInViaRedirect":
                 case "linkViaRedirect":
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return oE(WW);
+                  return vt(RR);
                 default:
                   return !1
               }
-            }(WW) || (this.hasHandledPotentialRedirect = !0, iW || (this.queuedRedirectEvent = WW, iW = !0)), iW
+            }(RR) || (this.hasHandledPotentialRedirect = !0, JR || (this.queuedRedirectEvent = RR, JR = !0)), JR
           }
-          sendToConsumer(WW, iW) {
-            var OW;
-            if (WW.error && !oE(WW)) {
-              const mW = (null === (OW = WW.error.code) || void 0 === OW ? void 0 : OW.split("auth/")[1]) || "internal-error";
-              iW.onError(KW(this.auth, mW))
-            } else iW.onAuthEvent(WW)
+          sendToConsumer(RR, JR) {
+            var GR;
+            if (RR.error && !vt(RR)) {
+              const yR = (null === (GR = RR.error.code) || void 0 === GR ? void 0 : GR.split("auth/")[1]) || "internal-error";
+              JR.onError(CR(this.auth, yR))
+            } else JR.onAuthEvent(RR)
           }
-          isEventForConsumer(WW, iW) {
-            const OW = null === iW.eventId || !!WW.eventId && WW.eventId === iW.eventId;
-            return iW.filter.includes(WW.type) && OW
+          isEventForConsumer(RR, JR) {
+            const GR = null === JR.eventId || !!RR.eventId && RR.eventId === JR.eventId;
+            return JR.filter.includes(RR.type) && GR
           }
-          hasEventBeenHandled(WW) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(uE(WW))
+          hasEventBeenHandled(RR) {
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(bt(RR))
           }
-          saveEventToCache(WW) {
-            this.cachedEventUids.add(uE(WW)), this.lastProcessedEventTime = Date.now()
+          saveEventToCache(RR) {
+            this.cachedEventUids.add(bt(RR)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function uE(WW) {
-          return [WW.type, WW.eventId, WW.sessionId, WW.tenantId].filter((WW => WW)).join("-")
+        function bt(RR) {
+          return [RR.type, RR.eventId, RR.sessionId, RR.tenantId].filter((RR => RR)).join("-")
         }
 
-        function oE(WW) {
+        function vt(RR) {
           let {
-            type: iW,
-            error: OW
-          } = WW;
-          return "unknown" === iW && "auth/no-auth-event" === (null === OW || void 0 === OW ? void 0 : OW.code)
+            type: JR,
+            error: GR
+          } = RR;
+          return "unknown" === JR && "auth/no-auth-event" === (null === GR || void 0 === GR ? void 0 : GR.code)
         }
-        const dE = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          eE = /^https?/;
-        async function vE(WW) {
-          if (WW.config.emulator) return;
+        const Ot = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          xt = /^https?/;
+        async function Nt(RR) {
+          if (RR.config.emulator) return;
           const {
-            authorizedDomains: iW
-          } = await async function(WW) {
-            return VW(WW, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }(WW);
-          for (const mW of iW) try {
-            if (gE(mW)) return
-          } catch (OW) {}
-          MW(WW, "unauthorized-domain")
+            authorizedDomains: JR
+          } = await async function(RR) {
+            return PR(RR, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+          }(RR);
+          for (const yR of JR) try {
+            if (Dt(yR)) return
+          } catch (GR) {}
+          AR(RR, "unauthorized-domain")
         }
 
-        function gE(WW) {
-          const iW = HW(),
+        function Dt(RR) {
+          const JR = bR(),
             {
-              protocol: OW,
-              hostname: mW
-            } = new URL(iW);
-          if (WW.startsWith("chrome-extension://")) {
-            const EW = new URL(WW);
-            return "" === EW.hostname && "" === mW ? "chrome-extension:" === OW && WW.replace("chrome-extension://", "") === iW.replace("chrome-extension://", "") : "chrome-extension:" === OW && EW.hostname === mW
+              protocol: GR,
+              hostname: yR
+            } = new URL(JR);
+          if (RR.startsWith("chrome-extension://")) {
+            const tR = new URL(RR);
+            return "" === tR.hostname && "" === yR ? "chrome-extension:" === GR && RR.replace("chrome-extension://", "") === JR.replace("chrome-extension://", "") : "chrome-extension:" === GR && tR.hostname === yR
           }
-          if (!eE.test(OW)) return !1;
-          if (dE.test(WW)) return mW === WW;
-          const EW = WW.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + EW + "|" + EW + ")$", "i").test(mW)
+          if (!xt.test(GR)) return !1;
+          if (Ot.test(RR)) return yR === RR;
+          const tR = RR.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + tR + "|" + tR + ")$", "i").test(yR)
         }
-        const DE = new oW(3e4, 6e4);
+        const Ht = new xR(3e4, 6e4);
 
-        function VE() {
-          const WW = hm().___jsl;
-          if (null === WW || void 0 === WW ? void 0 : WW.H)
-            for (const iW of Object.keys(WW.H))
-              if (WW.H[iW].r = WW.H[iW].r || [], WW.H[iW].L = WW.H[iW].L || [], WW.H[iW].r = [...WW.H[iW].L], WW.CP)
-                for (let OW = 0; OW < WW.CP.length; OW++) WW.CP[OW] = null
+        function ot() {
+          const RR = ly().___jsl;
+          if (null === RR || void 0 === RR ? void 0 : RR.H)
+            for (const JR of Object.keys(RR.H))
+              if (RR.H[JR].r = RR.H[JR].r || [], RR.H[JR].L = RR.H[JR].L || [], RR.H[JR].r = [...RR.H[JR].L], RR.CP)
+                for (let GR = 0; GR < RR.CP.length; GR++) RR.CP[GR] = null
         }
-        let pE = null;
+        let ct = null;
 
-        function fE(WW) {
-          return pE = pE || function(WW) {
-            return new Promise(((iW, OW) => {
-              var mW, EW, NW;
+        function Pt(RR) {
+          return ct = ct || function(RR) {
+            return new Promise(((JR, GR) => {
+              var yR, tR, uR;
 
-              function PW() {
-                VE(), gapi.load("gapi.iframes", {
+              function ZR() {
+                ot(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    iW(gapi.iframes.getContext())
+                    JR(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    VE(), OW(KW(WW, "network-request-failed"))
+                    ot(), GR(CR(RR, "network-request-failed"))
                   },
-                  timeout: DE.get()
+                  timeout: Ht.get()
                 })
               }
-              if (null === (EW = null === (mW = hm().gapi) || void 0 === mW ? void 0 : mW.iframes) || void 0 === EW ? void 0 : EW.Iframe) iW(gapi.iframes.getContext());
+              if (null === (tR = null === (yR = ly().gapi) || void 0 === yR ? void 0 : yR.iframes) || void 0 === tR ? void 0 : tR.Iframe) JR(gapi.iframes.getContext());
               else {
-                if (!(null === (NW = hm().gapi) || void 0 === NW ? void 0 : NW.load)) {
-                  const iW = Ji("iframefcb");
-                  return hm()[iW] = () => {
-                    gapi.load ? PW() : OW(KW(WW, "network-request-failed"))
-                  }, Ti(`https://apis.google.com/js/api.js?onload=${iW}`).catch((WW => OW(WW)))
+                if (!(null === (uR = ly().gapi) || void 0 === uR ? void 0 : uR.load)) {
+                  const JR = pJ("iframefcb");
+                  return ly()[JR] = () => {
+                    gapi.load ? ZR() : GR(CR(RR, "network-request-failed"))
+                  }, lJ(`https://apis.google.com/js/api.js?onload=${JR}`).catch((RR => GR(RR)))
                 }
-                PW()
+                ZR()
               }
-            })).catch((WW => {
-              throw pE = null, WW
+            })).catch((RR => {
+              throw ct = null, RR
             }))
-          }(WW), pE
+          }(RR), ct
         }
-        const CE = new oW(5e3, 15e3),
-          XE = {
+        const It = new xR(5e3, 15e3),
+          mt = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,102 +3925,102 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          BE = new Map([
+          zt = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function qE(WW) {
-          const iW = WW.config;
-          TW(iW.authDomain, WW, "auth-domain-config-required");
-          const OW = iW.emulator ? dW(iW, "emulator/auth/iframe") : `https://${WW.config.authDomain}/__/auth/iframe`,
-            NW = {
-              apiKey: iW.apiKey,
-              appName: WW.name,
-              v: EW.f
+        function St(RR) {
+          const JR = RR.config;
+          lR(JR.authDomain, RR, "auth-domain-config-required");
+          const GR = JR.emulator ? NR(JR, "emulator/auth/iframe") : `https://${RR.config.authDomain}/__/auth/iframe`,
+            uR = {
+              apiKey: JR.apiKey,
+              appName: RR.name,
+              v: tR.c
             },
-            PW = BE.get(WW.config.apiHost);
-          PW && (NW.eid = PW);
-          const LW = WW._getFrameworks();
-          return LW.length && (NW.fw = LW.join(",")), `${OW}?${(0,mW.$)(NW).slice(1)}`
+            ZR = zt.get(RR.config.apiHost);
+          ZR && (uR.eid = ZR);
+          const qR = RR._getFrameworks();
+          return qR.length && (uR.fw = qR.join(",")), `${GR}?${(0,yR.db)(uR).slice(1)}`
         }
-        const RE = {
+        const jt = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class GE {
-          constructor(WW) {
-            this.window = WW, this.associatedEvent = null
+        class dt {
+          constructor(RR) {
+            this.window = RR, this.associatedEvent = null
           }
           close() {
             if (this.window) try {
               this.window.close()
-            } catch (WW) {}
+            } catch (RR) {}
           }
         }
 
-        function IE(WW, iW, OW) {
-          let EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const PW = Math.max((window.screen.availHeight - NW) / 2, 0).toString(),
-            LW = Math.max((window.screen.availWidth - EW) / 2, 0).toString();
-          let cW = "";
-          const wW = Object.assign(Object.assign({}, RE), {
-              width: EW.toString(),
-              height: NW.toString(),
-              top: PW,
-              left: LW
+        function Et(RR, JR, GR) {
+          let tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const ZR = Math.max((window.screen.availHeight - uR) / 2, 0).toString(),
+            qR = Math.max((window.screen.availWidth - tR) / 2, 0).toString();
+          let iR = "";
+          const fR = Object.assign(Object.assign({}, jt), {
+              width: tR.toString(),
+              height: uR.toString(),
+              top: ZR,
+              left: qR
             }),
-            tW = (0, mW.L)().toLowerCase();
-          OW && (cW = li(tW) ? "_blank" : OW), Zi(tW) && (iW = iW || "http://localhost", wW.scrollbars = "yes");
-          const ZW = Object.entries(wW).reduce(((WW, iW) => {
-            let [OW, mW] = iW;
-            return `${WW}${OW}=${mW},`
+            VR = (0, yR.F)().toLowerCase();
+          GR && (iR = rJ(VR) ? "_blank" : GR), KJ(VR) && (JR = JR || "http://localhost", fR.scrollbars = "yes");
+          const KR = Object.entries(fR).reduce(((RR, JR) => {
+            let [GR, yR] = JR;
+            return `${RR}${GR}=${yR},`
           }), "");
           if (function() {
-              var WW;
-              return ki(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, mW.L)()) && !!(null === (WW = window.navigator) || void 0 === WW ? void 0 : WW.standalone)
-            }(tW) && "_self" !== cW) return function(WW, iW) {
-            const OW = document.createElement("a");
-            OW.href = WW, OW.target = iW;
-            const mW = document.createEvent("MouseEvent");
-            mW.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), OW.dispatchEvent(mW)
-          }(iW || "", cW), new GE(null);
-          const xW = window.open(iW || "", cW, ZW);
-          TW(xW, WW, "popup-blocked");
+              var RR;
+              return UJ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, yR.F)()) && !!(null === (RR = window.navigator) || void 0 === RR ? void 0 : RR.standalone)
+            }(VR) && "_self" !== iR) return function(RR, JR) {
+            const GR = document.createElement("a");
+            GR.href = RR, GR.target = JR;
+            const yR = document.createEvent("MouseEvent");
+            yR.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), GR.dispatchEvent(yR)
+          }(JR || "", iR), new dt(null);
+          const wR = window.open(JR || "", iR, KR);
+          lR(wR, RR, "popup-blocked");
           try {
-            xW.focus()
-          } catch (lW) {}
-          return new GE(xW)
+            wR.focus()
+          } catch (rR) {}
+          return new dt(wR)
         }
-        const aE = "__/auth/handler",
-          rE = "emulator/auth/handler",
-          zE = encodeURIComponent("fac");
-        async function FE(WW, iW, OW, NW, PW, LW) {
-            TW(WW.config.authDomain, WW, "auth-domain-config-required"), TW(WW.config.apiKey, WW, "invalid-api-key");
-            const cW = {
-              apiKey: WW.config.apiKey,
-              appName: WW.name,
-              authType: OW,
-              redirectUrl: NW,
-              v: EW.f,
-              eventId: PW
+        const Yt = "__/auth/handler",
+          kt = "emulator/auth/handler",
+          Qt = encodeURIComponent("fac");
+        async function Ft(RR, JR, GR, uR, ZR, qR) {
+            lR(RR.config.authDomain, RR, "auth-domain-config-required"), lR(RR.config.apiKey, RR, "invalid-api-key");
+            const iR = {
+              apiKey: RR.config.apiKey,
+              appName: RR.name,
+              authType: GR,
+              redirectUrl: uR,
+              v: tR.c,
+              eventId: ZR
             };
-            if (iW instanceof OO) {
-              iW.setDefaultLanguage(WW.languageCode), cW.providerId = iW.providerId || "", (0, mW.P)(iW.getCustomParameters()) || (cW.customParameters = JSON.stringify(iW.getCustomParameters()));
-              for (const [WW, iW] of Object.entries(LW || {})) cW[WW] = iW
+            if (JR instanceof RG) {
+              JR.setDefaultLanguage(RR.languageCode), iR.providerId = JR.providerId || "", (0, yR.J)(JR.getCustomParameters()) || (iR.customParameters = JSON.stringify(JR.getCustomParameters()));
+              for (const [RR, JR] of Object.entries(qR || {})) iR[RR] = JR
             }
-            if (iW instanceof mO) {
-              const WW = iW.getScopes().filter((WW => "" !== WW));
-              WW.length > 0 && (cW.scopes = WW.join(","))
+            if (JR instanceof JG) {
+              const RR = JR.getScopes().filter((RR => "" !== RR));
+              RR.length > 0 && (iR.scopes = RR.join(","))
             }
-            WW.tenantId && (cW.tid = WW.tenantId);
-            const wW = cW;
-            for (const mW of Object.keys(wW)) void 0 === wW[mW] && delete wW[mW];
-            const tW = await WW._getAppCheckToken(),
-              ZW = tW ? `#${zE}=${encodeURIComponent(tW)}` : "";
-            return `${function(WW){let{config:iW}=WW;if(!iW.emulator)return`
-            https: //${iW.authDomain}/${aE}`;return dW(iW,rE)}(WW)}?${(0,mW.$)(wW).slice(1)}${ZW}`}const QE="webStorageSupport";const WN=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=Ym,this._completeRedirectFn=hE,this._overrideRedirectResult=ME}async _openPopup(WW,iW,OW,mW){var EW;hW(null===(EW=this.eventManagers[WW._key()])||void 0===EW?void 0:EW.manager,"_initialize() not called before _openPopup()");return IE(WW,await FE(WW,iW,OW,HW(),mW),Tm())}async _openRedirect(WW,iW,OW,mW){await this._originValidation(WW);return function(WW){hm().location.href=WW}(await FE(WW,iW,OW,HW(),mW)),new Promise((()=>{}))}_initialize(WW){const iW=WW._key();if(this.eventManagers[iW]){const{manager:WW,promise:OW}=this.eventManagers[iW];return WW?Promise.resolve(WW):(hW(OW,"If manager is not set, promise should be"),OW)}const OW=this.initAndGetManager(WW);return this.eventManagers[iW]={promise:OW},OW.catch((()=>{delete this.eventManagers[iW]})),OW}async initAndGetManager(WW){const iW=await async function(WW){const iW=await fE(WW),OW=hm().gapi;return TW(OW,WW,"internal-error"),iW.open({where:document.body,url:qE(WW),messageHandlersFilter:OW.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:XE,dontclear:!0},(iW=>new Promise((async(OW,mW)=>{await iW.restyle({setHideOnLeave:!1});const EW=KW(WW,"network-request-failed"),NW=hm().setTimeout((()=>{mW(EW)}),CE.get());function PW(){hm().clearTimeout(NW),OW(iW)}iW.ping(PW).then(PW,(()=>{mW(EW)}))}))))}(WW),OW=new nE(WW);return iW.register("authEvent",(iW=>{TW(null===iW||void 0===iW?void 0:iW.authEvent,WW,"invalid-auth-event");return{status:OW.onEvent(iW.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[WW._key()]={manager:OW},this.iframes[WW._key()]=iW,OW}_isIframeWebStorageSupported(WW,iW){this.iframes[WW._key()].send(QE,{type:QE},(OW=>{var mW;const EW=null===(mW=null===OW||void 0===OW?void 0:OW[0])||void 0===mW?void 0:mW[QE];void 0!==EW&&iW(!!EW),MW(WW,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(WW){const iW=WW._key();return this.originValidationPromises[iW]||(this.originValidationPromises[iW]=vE(WW)),this.originValidationPromises[iW]}get _shouldInitProactively(){return si()||xi()||ki()}};class iN{constructor(WW){this.factorId=WW}_process(WW,iW,OW){switch(iW.type){case"enroll":return this._finalizeEnroll(WW,iW.credential,OW);case"signin":return this._finalizeSignIn(WW,iW.credential);default:return JW("unexpected MultiFactorSessionType")}}}class ON extends iN{constructor(WW){super("phone"),this.credential=WW}static _fromCredential(WW){return new ON(WW)}_finalizeEnroll(WW,iW,OW){return function(WW,iW){return VW(WW,"POST","/v2/accounts/mfaEnrollment:finalize",DW(WW,iW))}(WW,{idToken:iW,displayName:OW,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(WW,iW){return function(WW,iW){return VW(WW,"POST","/v2/accounts/mfaSignIn:finalize",DW(WW,iW))}(WW,{mfaPendingCredential:iW,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class mN{constructor(){}static assertion(WW){return ON._fromCredential(WW)}}mN.FACTOR_ID="phone";class EN{static assertionForEnrollment(WW,iW){return NN._fromSecret(WW,iW)}static assertionForSignIn(WW,iW){return NN._fromEnrollmentId(WW,iW)}static async generateSecret(WW){const iW=WW;TW("undefined"!==typeof iW.auth,"internal-error");const OW=await(mW=iW.auth,EW={idToken:iW.credential,totpEnrollmentInfo:{}},VW(mW,"POST","/v2/accounts/mfaEnrollment:start",DW(mW,EW)));var mW,EW;return PN._fromStartTotpMfaEnrollmentResponse(OW,iW.auth)}}EN.FACTOR_ID="totp";class NN extends iN{constructor(WW,iW,OW){super("totp"),this.otp=WW,this.enrollmentId=iW,this.secret=OW}static _fromSecret(WW,iW){return new NN(iW,void 0,WW)}static _fromEnrollmentId(WW,iW){return new NN(iW,WW)}async _finalizeEnroll(WW,iW,OW){return TW("undefined"!==typeof this.secret,WW,"argument-error"),function(WW,iW){return VW(WW,"POST","/v2/accounts/mfaEnrollment:finalize",DW(WW,iW))}(WW,{idToken:iW,displayName:OW,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(WW,iW){TW(void 0!==this.enrollmentId&&void 0!==this.otp,WW,"argument-error");const OW={verificationCode:this.otp};return function(WW,iW){return VW(WW,"POST","/v2/accounts/mfaSignIn:finalize",DW(WW,iW))}(WW,{mfaPendingCredential:iW,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:OW})}}class PN{constructor(WW,iW,OW,mW,EW,NW,PW){this.sessionInfo=NW,this.auth=PW,this.secretKey=WW,this.hashingAlgorithm=iW,this.codeLength=OW,this.codeIntervalSeconds=mW,this.enrollmentCompletionDeadline=EW}static _fromStartTotpMfaEnrollmentResponse(WW,iW){return new PN(WW.totpSessionInfo.sharedSecretKey,WW.totpSessionInfo.hashingAlgorithm,WW.totpSessionInfo.verificationCodeLength,WW.totpSessionInfo.periodSec,new Date(WW.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),WW.totpSessionInfo.sessionInfo,iW)}_makeTotpVerificationInfo(WW){return{sessionInfo:this.sessionInfo,verificationCode:WW}}generateQrCodeUrl(WW,iW){var OW;let mW=!1;return(LN(WW)||LN(iW))&&(mW=!0),mW&&(LN(WW)&&(WW=(null===(OW=this.auth.currentUser)||void 0===OW?void 0:OW.email)||"unknownuser"),LN(iW)&&(iW=this.auth.name)),`otpauth://totp/${iW}:${WW}?secret=${this.secretKey}&issuer=${iW}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function LN(WW){return"undefined"===typeof WW||0===(null===WW||void 0===WW?void 0:WW.length)}var cN="@firebase/auth",wN="0.23.2";class tN{constructor(WW){this.auth=WW,this.internalListeners=new Map}getUid(){var WW;return this.assertAuthConfigured(),(null===(WW=this.auth.currentUser)||void 0===WW?void 0:WW.uid)||null}async getToken(WW){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(WW)}}addAuthTokenListener(WW){if(this.assertAuthConfigured(),this.internalListeners.has(WW))return;const iW=this.auth.onIdTokenChanged((iW=>{WW((null===iW||void 0===iW?void 0:iW.stsTokenManager.accessToken)||null)}));this.internalListeners.set(WW,iW),this.updateProactiveRefresh()}removeAuthTokenListener(WW){this.assertAuthConfigured();const iW=this.internalListeners.get(WW);iW&&(this.internalListeners.delete(WW),iW(),this.updateProactiveRefresh())}assertAuthConfigured(){TW(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const ZN=(0,mW.I)("authIdTokenMaxAge")||300;let xN=null;const lN=WW=>async iW=>{const OW=iW&&await iW.getIdTokenResult(),mW=OW&&((new Date).getTime()-Date.parse(OW.issuedAtTime))/1e3;if(mW&&mW>ZN)return;const EW=null===OW||void 0===OW?void 0:OW.token;xN!==EW&&(xN=EW,await fetch(WW,{method:EW?"POST":"DELETE",headers:EW?{Authorization:`Bearer ${EW}`}:{}}))};function AN(){let WW=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,EW.N)();const iW=(0,EW.B)(WW,"auth");if(iW.isInitialized())return iW.getImmediate();const OW=vi(WW,{popupRedirectResolver:WN,persistence:[fm,Km,Ym]}),NW=(0,mW.I)("authTokenSyncURL");if(NW){const WW=lN(NW);Pm(OW,WW,(()=>WW(OW.currentUser))),Nm(OW,(iW=>WW(iW)))}const PW=(0,mW.H)("auth");return PW&&gi(OW,`http://${PW}`),OW}var bN;bN="Browser",(0,EW.E)(new LW.h("auth",((WW,iW)=>{let{options:OW}=iW;const mW=WW.getProvider("app").getImmediate(),EW=WW.getProvider("heartbeat"),NW=WW.getProvider("app-check-internal"),{apiKey:PW,authDomain:LW}=mW.options;TW(PW&&!PW.includes(":"),"invalid-api-key",{appName:mW.name});const cW={apiKey:PW,authDomain:LW,clientPlatform:bN,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:Mi(bN)},wW=new oi(mW,EW,NW,cW);return function(WW,iW){const OW=(null===iW||void 0===iW?void 0:iW.persistence)||[],mW=(Array.isArray(OW)?OW:[OW]).map(Ni);(null===iW||void 0===iW?void 0:iW.errorMap)&&WW._updateErrorMap(iW.errorMap),WW._initializeWithPersistence(mW,null===iW||void 0===iW?void 0:iW.popupRedirectResolver)}(wW,OW),wW}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((WW,iW,OW)=>{WW.getProvider("auth-internal").initialize()}))),(0,EW.E)(new LW.h("auth-internal",(WW=>(WW=>new tN(WW))(di(WW.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,EW.V)(cN,wN,function(WW){switch(WW){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(bN)),(0,EW.V)(cN,wN,"esm2017")}};Object.freeze(modules);for(const WW in modules)Object.freeze(modules[WW]);
+            RR.tenantId && (iR.tid = RR.tenantId);
+            const fR = iR;
+            for (const yR of Object.keys(fR)) void 0 === fR[yR] && delete fR[yR];
+            const VR = await RR._getAppCheckToken(),
+              KR = VR ? `#${Qt}=${encodeURIComponent(VR)}` : "";
+            return `${function(RR){let{config:JR}=RR;if(!JR.emulator)return`
+            https: //${JR.authDomain}/${Yt}`;return NR(JR,kt)}(RR)}?${(0,yR.db)(fR).slice(1)}${KR}`}const Tt="webStorageSupport";const st=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=Cy,this._completeRedirectFn=lt,this._overrideRedirectResult=Ut}async _openPopup(RR,JR,GR,yR){var tR;gR(null===(tR=this.eventManagers[RR._key()])||void 0===tR?void 0:tR.manager,"_initialize() not called before _openPopup()");return Et(RR,await Ft(RR,JR,GR,bR(),yR),My())}async _openRedirect(RR,JR,GR,yR){await this._originValidation(RR);return function(RR){ly().location.href=RR}(await Ft(RR,JR,GR,bR(),yR)),new Promise((()=>{}))}_initialize(RR){const JR=RR._key();if(this.eventManagers[JR]){const{manager:RR,promise:GR}=this.eventManagers[JR];return RR?Promise.resolve(RR):(gR(GR,"If manager is not set, promise should be"),GR)}const GR=this.initAndGetManager(RR);return this.eventManagers[JR]={promise:GR},GR.catch((()=>{delete this.eventManagers[JR]})),GR}async initAndGetManager(RR){const JR=await async function(RR){const JR=await Pt(RR),GR=ly().gapi;return lR(GR,RR,"internal-error"),JR.open({where:document.body,url:St(RR),messageHandlersFilter:GR.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:mt,dontclear:!0},(JR=>new Promise((async(GR,yR)=>{await JR.restyle({setHideOnLeave:!1});const tR=CR(RR,"network-request-failed"),uR=ly().setTimeout((()=>{yR(tR)}),It.get());function ZR(){ly().clearTimeout(uR),GR(JR)}JR.ping(ZR).then(ZR,(()=>{yR(tR)}))}))))}(RR),GR=new gt(RR);return JR.register("authEvent",(JR=>{lR(null===JR||void 0===JR?void 0:JR.authEvent,RR,"invalid-auth-event");return{status:GR.onEvent(JR.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[RR._key()]={manager:GR},this.iframes[RR._key()]=JR,GR}_isIframeWebStorageSupported(RR,JR){this.iframes[RR._key()].send(Tt,{type:Tt},(GR=>{var yR;const tR=null===(yR=null===GR||void 0===GR?void 0:GR[0])||void 0===yR?void 0:yR[Tt];void 0!==tR&&JR(!!tR),AR(RR,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(RR){const JR=RR._key();return this.originValidationPromises[JR]||(this.originValidationPromises[JR]=Nt(RR)),this.originValidationPromises[JR]}get _shouldInitProactively(){return WJ()||wJ()||UJ()}};class ht{constructor(RR){this.factorId=RR}_process(RR,JR,GR){switch(JR.type){case"enroll":return this._finalizeEnroll(RR,JR.credential,GR);case"signin":return this._finalizeSignIn(RR,JR.credential);default:return pR("unexpected MultiFactorSessionType")}}}class Ru extends ht{constructor(RR){super("phone"),this.credential=RR}static _fromCredential(RR){return new Ru(RR)}_finalizeEnroll(RR,JR,GR){return function(RR,JR){return PR(RR,"POST","/v2/accounts/mfaEnrollment:finalize",cR(RR,JR))}(RR,{idToken:JR,displayName:GR,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(RR,JR){return function(RR,JR){return PR(RR,"POST","/v2/accounts/mfaSignIn:finalize",cR(RR,JR))}(RR,{mfaPendingCredential:JR,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class Ju{constructor(){}static assertion(RR){return Ru._fromCredential(RR)}}Ju.FACTOR_ID="phone";class Gu{static assertionForEnrollment(RR,JR){return yu._fromSecret(RR,JR)}static assertionForSignIn(RR,JR){return yu._fromEnrollmentId(RR,JR)}static async generateSecret(RR){const JR=RR;lR("undefined"!==typeof JR.auth,"internal-error");const GR=await(yR=JR.auth,tR={idToken:JR.credential,totpEnrollmentInfo:{}},PR(yR,"POST","/v2/accounts/mfaEnrollment:start",cR(yR,tR)));var yR,tR;return tu._fromStartTotpMfaEnrollmentResponse(GR,JR.auth)}}Gu.FACTOR_ID="totp";class yu extends ht{constructor(RR,JR,GR){super("totp"),this.otp=RR,this.enrollmentId=JR,this.secret=GR}static _fromSecret(RR,JR){return new yu(JR,void 0,RR)}static _fromEnrollmentId(RR,JR){return new yu(JR,RR)}async _finalizeEnroll(RR,JR,GR){return lR("undefined"!==typeof this.secret,RR,"argument-error"),function(RR,JR){return PR(RR,"POST","/v2/accounts/mfaEnrollment:finalize",cR(RR,JR))}(RR,{idToken:JR,displayName:GR,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(RR,JR){lR(void 0!==this.enrollmentId&&void 0!==this.otp,RR,"argument-error");const GR={verificationCode:this.otp};return function(RR,JR){return PR(RR,"POST","/v2/accounts/mfaSignIn:finalize",cR(RR,JR))}(RR,{mfaPendingCredential:JR,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:GR})}}class tu{constructor(RR,JR,GR,yR,tR,uR,ZR){this.sessionInfo=uR,this.auth=ZR,this.secretKey=RR,this.hashingAlgorithm=JR,this.codeLength=GR,this.codeIntervalSeconds=yR,this.enrollmentCompletionDeadline=tR}static _fromStartTotpMfaEnrollmentResponse(RR,JR){return new tu(RR.totpSessionInfo.sharedSecretKey,RR.totpSessionInfo.hashingAlgorithm,RR.totpSessionInfo.verificationCodeLength,RR.totpSessionInfo.periodSec,new Date(RR.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),RR.totpSessionInfo.sessionInfo,JR)}_makeTotpVerificationInfo(RR){return{sessionInfo:this.sessionInfo,verificationCode:RR}}generateQrCodeUrl(RR,JR){var GR;let yR=!1;return(uu(RR)||uu(JR))&&(yR=!0),yR&&(uu(RR)&&(RR=(null===(GR=this.auth.currentUser)||void 0===GR?void 0:GR.email)||"unknownuser"),uu(JR)&&(JR=this.auth.name)),`otpauth://totp/${JR}:${RR}?secret=${this.secretKey}&issuer=${JR}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function uu(RR){return"undefined"===typeof RR||0===(null===RR||void 0===RR?void 0:RR.length)}var Zu="@firebase/auth",qu="0.23.2";class iu{constructor(RR){this.auth=RR,this.internalListeners=new Map}getUid(){var RR;return this.assertAuthConfigured(),(null===(RR=this.auth.currentUser)||void 0===RR?void 0:RR.uid)||null}async getToken(RR){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(RR)}}addAuthTokenListener(RR){if(this.assertAuthConfigured(),this.internalListeners.has(RR))return;const JR=this.auth.onIdTokenChanged((JR=>{RR((null===JR||void 0===JR?void 0:JR.stsTokenManager.accessToken)||null)}));this.internalListeners.set(RR,JR),this.updateProactiveRefresh()}removeAuthTokenListener(RR){this.assertAuthConfigured();const JR=this.internalListeners.get(RR);JR&&(this.internalListeners.delete(RR),JR(),this.updateProactiveRefresh())}assertAuthConfigured(){lR(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const fu=(0,yR.B)("authIdTokenMaxAge")||300;let Vu=null;const Ku=RR=>async JR=>{const GR=JR&&await JR.getIdTokenResult(),yR=GR&&((new Date).getTime()-Date.parse(GR.issuedAtTime))/1e3;if(yR&&yR>fu)return;const tR=null===GR||void 0===GR?void 0:GR.token;Vu!==tR&&(Vu=tR,await fetch(RR,{method:tR?"POST":"DELETE",headers:tR?{Authorization:`Bearer ${tR}`}:{}}))};function wu(){let RR=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,tR.G)();const JR=(0,tR.t)(RR,"auth");if(JR.isInitialized())return JR.getImmediate();const GR=DJ(RR,{popupRedirectResolver:st,persistence:[cy,Wy,Cy]}),uR=(0,yR.B)("authTokenSyncURL");if(uR){const RR=Ku(uR);ty(GR,RR,(()=>RR(GR.currentUser))),yy(GR,(JR=>RR(JR)))}const ZR=(0,yR.x)("auth");return ZR&&HJ(GR,`http://${ZR}`),GR}var ru;ru="Browser",(0,tR.w)(new qR.i("auth",((RR,JR)=>{let{options:GR}=JR;const yR=RR.getProvider("app").getImmediate(),tR=RR.getProvider("heartbeat"),uR=RR.getProvider("app-check-internal"),{apiKey:ZR,authDomain:qR}=yR.options;lR(ZR&&!ZR.includes(":"),"invalid-api-key",{appName:yR.name});const iR={apiKey:ZR,authDomain:qR,clientPlatform:ru,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:AJ(ru)},fR=new OJ(yR,tR,uR,iR);return function(RR,JR){const GR=(null===JR||void 0===JR?void 0:JR.persistence)||[],yR=(Array.isArray(GR)?GR:[GR]).map(uJ);(null===JR||void 0===JR?void 0:JR.errorMap)&&RR._updateErrorMap(JR.errorMap),RR._initializeWithPersistence(yR,null===JR||void 0===JR?void 0:JR.popupRedirectResolver)}(fR,GR),fR}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((RR,JR,GR)=>{RR.getProvider("auth-internal").initialize()}))),(0,tR.w)(new qR.i("auth-internal",(RR=>(RR=>new iu(RR))(xJ(RR.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,tR.M)(Zu,qu,function(RR){switch(RR){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(ru)),(0,tR.M)(Zu,qu,"esm2017")}};Object.freeze(modules);for(const RR in modules)Object.freeze(modules[RR]);

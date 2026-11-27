@@ -1,11 +1,11 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  10303: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      pageBody: () => mW
+  10413: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      pageBody: () => yR
     });
-    const mW = {
+    const yR = {
       whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a busy little town. You work jobs around town, buy a car, do up your house and hang out with other players, and there's no rush to do any of it."],
       howToPlay: ["You start with a free house on your own plot in town. Then pick a job: drill for ore at the Quarry and sell it to Nugget, blast buildings at the Demolition Yard, harvest crops for Tillie at Greenville Farm or chop trees for Timbertooth at the Lumber Mill. At Greenville Grocers on Market Street, pick orders for Chip, stock shelves for Bruno or drive deliveries for Dash. Jobs level up as you work them, unlocking deeper caves, new explosives, new crops and bigger vans.", "Press B to open the shop and spend your gold on houses like the Castle, Treehouse or Japanese House, or grab an Empty Plot and build your own. Buy a car at Wheeler's Wheels, and fast travel back to any job you've visited. Rest in your bed to keep your energy up, because a well-rested player earns a lot more. And if you meet the Professor, he might take you somewhere that isn't on any map."],
       features: ["Unlock and Switch Between Houses on Your Own Plot", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "Buy Cars at the Dealership and Call Them to You", "Fast Travel to Every Job You've Visited", "Host Parties, Turn On PvP or Build a Parkour Course at Home", "A Hidden Island With 7 Keepsakes to Find"],
@@ -34,4 +34,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

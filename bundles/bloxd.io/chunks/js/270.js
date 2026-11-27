@@ -1,107 +1,107 @@
 export const id = 270;
 export const ids = [270];
 export const modules = {
-  38900: (WW, iW, OW) => {
-    var mW = OW(38905);
+  38891: (RR, JR, GR) => {
+    var yR = GR(38898);
 
-    function EW(WW) {
-      for (var iW, OW, EW = 0, NW = WW.length, PW = 0; PW < WW.length;) {
-        for (iW = WW[PW], OW = 0; PW < NW && WW[PW] === iW;) ++PW, ++OW;
-        EW += mW.log2(OW) / 7 | 0, EW += mW.log2(iW >>> 0) / 7 | 0, EW += 2
+    function tR(RR) {
+      for (var JR, GR, tR = 0, uR = RR.length, ZR = 0; ZR < RR.length;) {
+        for (JR = RR[ZR], GR = 0; ZR < uR && RR[ZR] === JR;) ++ZR, ++GR;
+        tR += yR.log2(GR) / 7 | 0, tR += yR.log2(JR >>> 0) / 7 | 0, tR += 2
       }
-      return EW
+      return tR
     }
-    iW.size = EW, iW.encode = function(WW, iW) {
-      iW || (iW = new Uint8Array(EW(WW)));
-      for (var OW, mW, NW = 0, PW = iW.length, LW = 0; LW < WW.length;) {
-        for (OW = WW[LW], mW = 0; LW < WW.length && WW[LW] === OW;) ++LW, ++mW;
-        for (; NW < PW && mW >= 128;) iW[NW++] = 128 + (127 & mW), mW >>>= 7;
-        if (NW >= PW) throw new Error("RLE buffer overflow");
-        for (iW[NW++] = mW, OW >>>= 0; NW < PW && OW >= 128;) iW[NW++] = 128 + (127 & OW), OW >>>= 7;
-        if (NW >= PW) throw new Error("RLE buffer overflow");
-        iW[NW++] = OW
+    JR.size = tR, JR.encode = function(RR, JR) {
+      JR || (JR = new Uint8Array(tR(RR)));
+      for (var GR, yR, uR = 0, ZR = JR.length, qR = 0; qR < RR.length;) {
+        for (GR = RR[qR], yR = 0; qR < RR.length && RR[qR] === GR;) ++qR, ++yR;
+        for (; uR < ZR && yR >= 128;) JR[uR++] = 128 + (127 & yR), yR >>>= 7;
+        if (uR >= ZR) throw new Error("RLE buffer overflow");
+        for (JR[uR++] = yR, GR >>>= 0; uR < ZR && GR >= 128;) JR[uR++] = 128 + (127 & GR), GR >>>= 7;
+        if (uR >= ZR) throw new Error("RLE buffer overflow");
+        JR[uR++] = GR
       }
-      return iW
-    }, iW.decode = function(WW, iW) {
-      for (var OW, mW, EW, NW, PW = iW.length, LW = WW.length, cW = 0, wW = 0; wW < LW;) {
-        for (OW = 0, mW = 0; wW < LW && WW[wW] >= 128;) OW += (127 & WW[wW++]) << mW, mW += 7;
-        if (OW += WW[wW++] << mW, wW >= LW) throw new Error("RLE buffer underrun");
-        if (cW + OW > PW) throw new Error("Chunk buffer overflow");
-        for (EW = 0, mW = 0; wW < LW && WW[wW] >= 128;) EW += (127 & WW[wW++]) << mW, mW += 7;
-        if (wW >= LW) throw new Error("RLE buffer underrun");
-        for (EW += WW[wW++] << mW, NW = 0; NW < OW; ++NW) iW[cW++] = EW
+      return JR
+    }, JR.decode = function(RR, JR) {
+      for (var GR, yR, tR, uR, ZR = JR.length, qR = RR.length, iR = 0, fR = 0; fR < qR;) {
+        for (GR = 0, yR = 0; fR < qR && RR[fR] >= 128;) GR += (127 & RR[fR++]) << yR, yR += 7;
+        if (GR += RR[fR++] << yR, fR >= qR) throw new Error("RLE buffer underrun");
+        if (iR + GR > ZR) throw new Error("Chunk buffer overflow");
+        for (tR = 0, yR = 0; fR < qR && RR[fR] >= 128;) tR += (127 & RR[fR++]) << yR, yR += 7;
+        if (fR >= qR) throw new Error("RLE buffer underrun");
+        for (tR += RR[fR++] << yR, uR = 0; uR < GR; ++uR) JR[iR++] = tR
       }
-      return iW
+      return JR
     }
   },
-  38905: (WW, iW) => {
-    function OW(WW) {
-      var iW = 32;
-      return (WW &= -WW) && iW--, 65535 & WW && (iW -= 16), 16711935 & WW && (iW -= 8), 252645135 & WW && (iW -= 4), 858993459 & WW && (iW -= 2), 1431655765 & WW && (iW -= 1), iW
+  38898: (RR, JR) => {
+    function GR(RR) {
+      var JR = 32;
+      return (RR &= -RR) && JR--, 65535 & RR && (JR -= 16), 16711935 & RR && (JR -= 8), 252645135 & RR && (JR -= 4), 858993459 & RR && (JR -= 2), 1431655765 & RR && (JR -= 1), JR
     }
-    iW.INT_BITS = 32, iW.INT_MAX = 2147483647, iW.INT_MIN = -1 << 31, iW.sign = function(WW) {
-      return (WW > 0) - (WW < 0)
-    }, iW.abs = function(WW) {
-      var iW = WW >> 31;
-      return (WW ^ iW) - iW
-    }, iW.min = function(WW, iW) {
-      return iW ^ (WW ^ iW) & -(WW < iW)
-    }, iW.max = function(WW, iW) {
-      return WW ^ (WW ^ iW) & -(WW < iW)
-    }, iW.isPow2 = function(WW) {
-      return !(WW & WW - 1) && !!WW
-    }, iW.log2 = function(WW) {
-      var iW, OW;
-      return iW = (WW > 65535) << 4, iW |= OW = ((WW >>>= iW) > 255) << 3, iW |= OW = ((WW >>>= OW) > 15) << 2, (iW |= OW = ((WW >>>= OW) > 3) << 1) | (WW >>>= OW) >> 1
-    }, iW.log10 = function(WW) {
-      return WW >= 1e9 ? 9 : WW >= 1e8 ? 8 : WW >= 1e7 ? 7 : WW >= 1e6 ? 6 : WW >= 1e5 ? 5 : WW >= 1e4 ? 4 : WW >= 1e3 ? 3 : WW >= 100 ? 2 : WW >= 10 ? 1 : 0
-    }, iW.popCount = function(WW) {
-      return 16843009 * ((WW = (858993459 & (WW -= WW >>> 1 & 1431655765)) + (WW >>> 2 & 858993459)) + (WW >>> 4) & 252645135) >>> 24
-    }, iW.countTrailingZeros = OW, iW.nextPow2 = function(WW) {
-      return WW += 0 === WW, --WW, WW |= WW >>> 1, WW |= WW >>> 2, WW |= WW >>> 4, WW |= WW >>> 8, (WW |= WW >>> 16) + 1
-    }, iW.prevPow2 = function(WW) {
-      return WW |= WW >>> 1, WW |= WW >>> 2, WW |= WW >>> 4, WW |= WW >>> 8, (WW |= WW >>> 16) - (WW >>> 1)
-    }, iW.parity = function(WW) {
-      return WW ^= WW >>> 16, WW ^= WW >>> 8, WW ^= WW >>> 4, 27030 >>> (WW &= 15) & 1
+    JR.INT_BITS = 32, JR.INT_MAX = 2147483647, JR.INT_MIN = -1 << 31, JR.sign = function(RR) {
+      return (RR > 0) - (RR < 0)
+    }, JR.abs = function(RR) {
+      var JR = RR >> 31;
+      return (RR ^ JR) - JR
+    }, JR.min = function(RR, JR) {
+      return JR ^ (RR ^ JR) & -(RR < JR)
+    }, JR.max = function(RR, JR) {
+      return RR ^ (RR ^ JR) & -(RR < JR)
+    }, JR.isPow2 = function(RR) {
+      return !(RR & RR - 1) && !!RR
+    }, JR.log2 = function(RR) {
+      var JR, GR;
+      return JR = (RR > 65535) << 4, JR |= GR = ((RR >>>= JR) > 255) << 3, JR |= GR = ((RR >>>= GR) > 15) << 2, (JR |= GR = ((RR >>>= GR) > 3) << 1) | (RR >>>= GR) >> 1
+    }, JR.log10 = function(RR) {
+      return RR >= 1e9 ? 9 : RR >= 1e8 ? 8 : RR >= 1e7 ? 7 : RR >= 1e6 ? 6 : RR >= 1e5 ? 5 : RR >= 1e4 ? 4 : RR >= 1e3 ? 3 : RR >= 100 ? 2 : RR >= 10 ? 1 : 0
+    }, JR.popCount = function(RR) {
+      return 16843009 * ((RR = (858993459 & (RR -= RR >>> 1 & 1431655765)) + (RR >>> 2 & 858993459)) + (RR >>> 4) & 252645135) >>> 24
+    }, JR.countTrailingZeros = GR, JR.nextPow2 = function(RR) {
+      return RR += 0 === RR, --RR, RR |= RR >>> 1, RR |= RR >>> 2, RR |= RR >>> 4, RR |= RR >>> 8, (RR |= RR >>> 16) + 1
+    }, JR.prevPow2 = function(RR) {
+      return RR |= RR >>> 1, RR |= RR >>> 2, RR |= RR >>> 4, RR |= RR >>> 8, (RR |= RR >>> 16) - (RR >>> 1)
+    }, JR.parity = function(RR) {
+      return RR ^= RR >>> 16, RR ^= RR >>> 8, RR ^= RR >>> 4, 27030 >>> (RR &= 15) & 1
     };
-    var mW = new Array(256);
-    ! function(WW) {
-      for (var iW = 0; iW < 256; ++iW) {
-        var OW = iW,
-          mW = iW,
-          EW = 7;
-        for (OW >>>= 1; OW; OW >>>= 1) mW <<= 1, mW |= 1 & OW, --EW;
-        WW[iW] = mW << EW & 255
+    var yR = new Array(256);
+    ! function(RR) {
+      for (var JR = 0; JR < 256; ++JR) {
+        var GR = JR,
+          yR = JR,
+          tR = 7;
+        for (GR >>>= 1; GR; GR >>>= 1) yR <<= 1, yR |= 1 & GR, --tR;
+        RR[JR] = yR << tR & 255
       }
-    }(mW), iW.reverse = function(WW) {
-      return mW[255 & WW] << 24 | mW[WW >>> 8 & 255] << 16 | mW[WW >>> 16 & 255] << 8 | mW[WW >>> 24 & 255]
-    }, iW.interleave2 = function(WW, iW) {
-      return (WW = 1431655765 & ((WW = 858993459 & ((WW = 252645135 & ((WW = 16711935 & ((WW &= 65535) | WW << 8)) | WW << 4)) | WW << 2)) | WW << 1)) | (iW = 1431655765 & ((iW = 858993459 & ((iW = 252645135 & ((iW = 16711935 & ((iW &= 65535) | iW << 8)) | iW << 4)) | iW << 2)) | iW << 1)) << 1
-    }, iW.deinterleave2 = function(WW, iW) {
-      return (WW = 65535 & ((WW = 16711935 & ((WW = 252645135 & ((WW = 858993459 & ((WW = WW >>> iW & 1431655765) | WW >>> 1)) | WW >>> 2)) | WW >>> 4)) | WW >>> 16)) << 16 >> 16
-    }, iW.interleave3 = function(WW, iW, OW) {
-      return WW = 1227133513 & ((WW = 3272356035 & ((WW = 251719695 & ((WW = 4278190335 & ((WW &= 1023) | WW << 16)) | WW << 8)) | WW << 4)) | WW << 2), (WW |= (iW = 1227133513 & ((iW = 3272356035 & ((iW = 251719695 & ((iW = 4278190335 & ((iW &= 1023) | iW << 16)) | iW << 8)) | iW << 4)) | iW << 2)) << 1) | (OW = 1227133513 & ((OW = 3272356035 & ((OW = 251719695 & ((OW = 4278190335 & ((OW &= 1023) | OW << 16)) | OW << 8)) | OW << 4)) | OW << 2)) << 2
-    }, iW.deinterleave3 = function(WW, iW) {
-      return (WW = 1023 & ((WW = 4278190335 & ((WW = 251719695 & ((WW = 3272356035 & ((WW = WW >>> iW & 1227133513) | WW >>> 2)) | WW >>> 4)) | WW >>> 8)) | WW >>> 16)) << 22 >> 22
-    }, iW.nextCombination = function(WW) {
-      var iW = WW | WW - 1;
-      return iW + 1 | (~iW & -~iW) - 1 >>> OW(WW) + 1
+    }(yR), JR.reverse = function(RR) {
+      return yR[255 & RR] << 24 | yR[RR >>> 8 & 255] << 16 | yR[RR >>> 16 & 255] << 8 | yR[RR >>> 24 & 255]
+    }, JR.interleave2 = function(RR, JR) {
+      return (RR = 1431655765 & ((RR = 858993459 & ((RR = 252645135 & ((RR = 16711935 & ((RR &= 65535) | RR << 8)) | RR << 4)) | RR << 2)) | RR << 1)) | (JR = 1431655765 & ((JR = 858993459 & ((JR = 252645135 & ((JR = 16711935 & ((JR &= 65535) | JR << 8)) | JR << 4)) | JR << 2)) | JR << 1)) << 1
+    }, JR.deinterleave2 = function(RR, JR) {
+      return (RR = 65535 & ((RR = 16711935 & ((RR = 252645135 & ((RR = 858993459 & ((RR = RR >>> JR & 1431655765) | RR >>> 1)) | RR >>> 2)) | RR >>> 4)) | RR >>> 16)) << 16 >> 16
+    }, JR.interleave3 = function(RR, JR, GR) {
+      return RR = 1227133513 & ((RR = 3272356035 & ((RR = 251719695 & ((RR = 4278190335 & ((RR &= 1023) | RR << 16)) | RR << 8)) | RR << 4)) | RR << 2), (RR |= (JR = 1227133513 & ((JR = 3272356035 & ((JR = 251719695 & ((JR = 4278190335 & ((JR &= 1023) | JR << 16)) | JR << 8)) | JR << 4)) | JR << 2)) << 1) | (GR = 1227133513 & ((GR = 3272356035 & ((GR = 251719695 & ((GR = 4278190335 & ((GR &= 1023) | GR << 16)) | GR << 8)) | GR << 4)) | GR << 2)) << 2
+    }, JR.deinterleave3 = function(RR, JR) {
+      return (RR = 1023 & ((RR = 4278190335 & ((RR = 251719695 & ((RR = 3272356035 & ((RR = RR >>> JR & 1227133513) | RR >>> 2)) | RR >>> 4)) | RR >>> 8)) | RR >>> 16)) << 22 >> 22
+    }, JR.nextCombination = function(RR) {
+      var JR = RR | RR - 1;
+      return JR + 1 | (~JR & -~JR) - 1 >>> GR(RR) + 1
     }
   },
-  41343: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      emptyColumnHeight: () => sW,
-      loadHeatmapSchematic: () => MW,
-      readSchematicBlocks: () => KW
+  41342: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      emptyColumnHeight: () => WR,
+      loadHeatmapSchematic: () => AR,
+      readSchematicBlocks: () => CR
     });
-    var mW = OW(2484),
-      EW = OW.n(mW),
-      NW = OW(2437),
-      PW = OW(38900),
-      LW = OW(182),
-      cW = OW(5725),
-      wW = OW(40748);
-    const tW = [{
+    var yR = GR(2537),
+      tR = GR.n(yR),
+      uR = GR(2502),
+      ZR = GR(38891),
+      qR = GR(203),
+      iR = GR(5844),
+      fR = GR(40752);
+    const VR = [{
         name: "x",
         type: "int"
       }, {
@@ -111,20 +111,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      ZW = [{
+      KR = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: tW
+          fields: VR
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: tW
+          fields: VR
         }
       }, {
         name: "chunkData",
@@ -132,26 +132,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...tW, {
+            fields: [...VR, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      xW = EW().Type.forSchema({
+      wR = tR().Type.forSchema({
         type: "record",
-        fields: ZW
+        fields: KR
       }),
-      lW = EW().Type.forSchema({
+      rR = tR().Type.forSchema({
         type: "record",
-        fields: [...ZW, {
+        fields: [...KR, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...tW, {
+              fields: [...VR, {
                 name: "data",
                 type: "bytes"
               }]
@@ -161,213 +161,213 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: tW
+            fields: VR
           }
         }]
       }),
-      AW = 2,
-      bW = 6,
-      jW = 16,
-      UW = 4096,
-      kW = LW.f.jZ,
-      sW = -2147483648;
-    async function MW(WW) {
-      const iW = await (0, wW.e)(),
-        OW = await KW(new Uint8Array(await WW.arrayBuffer()), (WW => iW.get(WW)));
+      eR = 2,
+      aR = 6,
+      LR = 16,
+      nR = 4096,
+      UR = qR.g.LK,
+      WR = -2147483648;
+    async function AR(RR) {
+      const JR = await (0, fR.e)(),
+        GR = await CR(new Uint8Array(await RR.arrayBuffer()), (RR => JR.get(RR)));
       return {
-        surface: OW.surface,
-        topDown: YW(OW.columnTops)
+        surface: GR.surface,
+        topDown: MR(GR.columnTops)
       }
     }
-    async function KW(WW, iW) {
-      var OW;
-      if (WW.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const mW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength).getUint32(0, !0);
-      if (mW > bW) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const EW = (mW >= AW ? lW : xW).decode(NW.OZ.from(WW.subarray(4)), 0).value;
-      if (!EW) throw new Error("The file isn't a schematic.");
-      if (0 === EW.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const LW = null !== (OW = EW.pasteOffset) && void 0 !== OW ? OW : {
+    async function CR(RR, JR) {
+      var GR;
+      if (RR.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const yR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength).getUint32(0, !0);
+      if (yR > aR) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const tR = (yR >= eR ? rR : wR).decode(uR.GK.from(RR.subarray(4)), 0).value;
+      if (!tR) throw new Error("The file isn't a schematic.");
+      if (0 === tR.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const qR = null !== (GR = tR.pasteOffset) && void 0 !== GR ? GR : {
           x: 0,
           y: 0,
           z: 0
         },
-        cW = [LW.x, LW.y, LW.z].map((WW => Math.floor(WW / kW))),
-        wW = EW.chunkData.map((WW => ({
-          x: WW.x + cW[0],
-          y: WW.y + cW[1],
-          z: WW.z + cW[2],
-          rle: WW.rle
+        iR = [qR.x, qR.y, qR.z].map((RR => Math.floor(RR / UR))),
+        fR = tR.chunkData.map((RR => ({
+          x: RR.x + iR[0],
+          y: RR.y + iR[1],
+          z: RR.z + iR[2],
+          rle: RR.rle
         }))),
-        tW = new Map;
-      for (const [NW, xW] of wW.entries()) {
-        const WW = new Uint16Array(kW ** 3);
-        PW.decode(xW.rle, WW), tW.set(`${xW.x},${xW.y},${xW.z}`, WW), NW % jW === jW - 1 && await yW()
+        VR = new Map;
+      for (const [uR, wR] of fR.entries()) {
+        const RR = new Uint16Array(UR ** 3);
+        ZR.decode(wR.rle, RR), VR.set(`${wR.x},${wR.y},${wR.z}`, RR), uR % LR === LR - 1 && await BR()
       }
-      const ZW = (WW, iW, OW) => WW * kW * kW + iW * kW + OW,
-        UW = (WW, iW, OW) => {
-          var mW, EW;
-          const NW = Math.floor(WW / kW),
-            PW = Math.floor(iW / kW),
-            LW = Math.floor(OW / kW);
-          return null !== (mW = null === (EW = tW.get(`${NW},${PW},${LW}`)) || void 0 === EW ? void 0 : EW[ZW(WW - NW * kW, iW - PW * kW, OW - LW * kW)]) && void 0 !== mW ? mW : 0
+      const KR = (RR, JR, GR) => RR * UR * UR + JR * UR + GR,
+        nR = (RR, JR, GR) => {
+          var yR, tR;
+          const uR = Math.floor(RR / UR),
+            ZR = Math.floor(JR / UR),
+            qR = Math.floor(GR / UR);
+          return null !== (yR = null === (tR = VR.get(`${uR},${ZR},${qR}`)) || void 0 === tR ? void 0 : tR[KR(RR - uR * UR, JR - ZR * UR, GR - qR * UR)]) && void 0 !== yR ? yR : 0
         },
-        MW = new Map,
-        KW = [],
-        YW = [];
-      for (const [NW, PW] of wW.entries()) {
-        const WW = tW.get(`${PW.x},${PW.y},${PW.z}`),
-          OW = [PW.x * kW, PW.y * kW, PW.z * kW],
-          mW = (iW, mW, EW) => iW < 0 || mW < 0 || EW < 0 || iW >= kW || mW >= kW || EW >= kW ? UW(OW[0] + iW, OW[1] + mW, OW[2] + EW) : WW[ZW(iW, mW, EW)],
-          EW = `${PW.x},${PW.z}`;
-        let LW = MW.get(EW);
-        void 0 === LW && (LW = {
-          chunkX: PW.x,
-          chunkZ: PW.z,
-          heights: new Int32Array(kW * kW).fill(sW),
-          colours: new Uint8Array(kW * kW * 3)
-        }, MW.set(EW, LW));
-        for (let NW = 0; NW < kW; NW++)
-          for (let EW = 0; EW < kW; EW++)
-            for (let PW = 0; PW < kW; PW++) {
-              const cW = WW[ZW(NW, EW, PW)];
-              if (0 === cW) continue;
-              const wW = OW[0] + NW,
-                tW = OW[1] + EW,
-                xW = OW[2] + PW,
-                lW = iW(cW);
-              if (null === lW) continue;
-              const AW = PW * kW + NW;
-              tW > LW.heights[AW] && (LW.heights[AW] = tW, LW.colours.set(lW, 3 * AW));
-              !SW(cW) && (SW(mW(NW + 1, EW, PW)) || SW(mW(NW - 1, EW, PW)) || SW(mW(NW, EW + 1, PW)) || SW(mW(NW, EW - 1, PW)) || SW(mW(NW, EW, PW + 1)) || SW(mW(NW, EW, PW - 1))) && (KW.push(wW, tW, xW), YW.push(lW[0], lW[1], lW[2]))
+        AR = new Map,
+        CR = [],
+        MR = [];
+      for (const [uR, ZR] of fR.entries()) {
+        const RR = VR.get(`${ZR.x},${ZR.y},${ZR.z}`),
+          GR = [ZR.x * UR, ZR.y * UR, ZR.z * UR],
+          yR = (JR, yR, tR) => JR < 0 || yR < 0 || tR < 0 || JR >= UR || yR >= UR || tR >= UR ? nR(GR[0] + JR, GR[1] + yR, GR[2] + tR) : RR[KR(JR, yR, tR)],
+          tR = `${ZR.x},${ZR.z}`;
+        let qR = AR.get(tR);
+        void 0 === qR && (qR = {
+          chunkX: ZR.x,
+          chunkZ: ZR.z,
+          heights: new Int32Array(UR * UR).fill(WR),
+          colours: new Uint8Array(UR * UR * 3)
+        }, AR.set(tR, qR));
+        for (let uR = 0; uR < UR; uR++)
+          for (let tR = 0; tR < UR; tR++)
+            for (let ZR = 0; ZR < UR; ZR++) {
+              const iR = RR[KR(uR, tR, ZR)];
+              if (0 === iR) continue;
+              const fR = GR[0] + uR,
+                VR = GR[1] + tR,
+                wR = GR[2] + ZR,
+                rR = JR(iR);
+              if (null === rR) continue;
+              const eR = ZR * UR + uR;
+              VR > qR.heights[eR] && (qR.heights[eR] = VR, qR.colours.set(rR, 3 * eR));
+              !XR(iR) && (XR(yR(uR + 1, tR, ZR)) || XR(yR(uR - 1, tR, ZR)) || XR(yR(uR, tR + 1, ZR)) || XR(yR(uR, tR - 1, ZR)) || XR(yR(uR, tR, ZR + 1)) || XR(yR(uR, tR, ZR - 1))) && (CR.push(fR, VR, wR), MR.push(rR[0], rR[1], rR[2]))
             }
-        NW % jW === jW - 1 && await yW()
+        uR % LR === LR - 1 && await BR()
       }
-      if (0 === KW.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === CR.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: EW.name,
+        name: tR.name,
         surface: {
-          positions: Int32Array.from(KW),
-          colours: Uint8Array.from(YW),
-          count: KW.length / 3
+          positions: Int32Array.from(CR),
+          colours: Uint8Array.from(MR),
+          count: CR.length / 3
         },
-        columnTops: [...MW.values()]
+        columnTops: [...AR.values()]
       }
     }
 
-    function SW(WW) {
-      if (0 === WW) return !0;
-      const iW = cW.j[WW];
-      return void 0 === iW || iW.dl || iW.transTex || !1 === iW.solid
+    function XR(RR) {
+      if (0 === RR) return !0;
+      const JR = iR.l[RR];
+      return void 0 === JR || JR.Nr || JR.transTex || !1 === JR.solid
     }
 
-    function YW(WW) {
-      let iW = 1 / 0,
-        OW = -1 / 0,
-        mW = 1 / 0,
-        EW = -1 / 0;
+    function MR(RR) {
+      let JR = 1 / 0,
+        GR = -1 / 0,
+        yR = 1 / 0,
+        tR = -1 / 0;
       for (const {
-          chunkX: AW,
-          chunkZ: bW,
-          heights: jW
+          chunkX: eR,
+          chunkZ: aR,
+          heights: LR
         }
-        of WW) jW.forEach(((WW, NW) => {
-        if (WW === sW) return;
-        const PW = AW * kW + NW % kW,
-          LW = bW * kW + Math.floor(NW / kW);
-        iW = Math.min(iW, PW), OW = Math.max(OW, PW), mW = Math.min(mW, LW), EW = Math.max(EW, LW)
+        of RR) LR.forEach(((RR, uR) => {
+        if (RR === WR) return;
+        const ZR = eR * UR + uR % UR,
+          qR = aR * UR + Math.floor(uR / UR);
+        JR = Math.min(JR, ZR), GR = Math.max(GR, ZR), yR = Math.min(yR, qR), tR = Math.max(tR, qR)
       }));
-      const NW = OW - iW + 1,
-        PW = EW - mW + 1,
-        LW = Math.max(1, Math.ceil(NW / UW), Math.ceil(PW / UW)),
-        cW = Math.ceil(NW / LW),
-        wW = Math.ceil(PW / LW),
-        tW = document.createElement("canvas");
-      tW.width = cW, tW.height = wW;
-      const ZW = tW.getContext("2d");
-      if (!ZW) throw new Error("Couldn't draw the schematic from above.");
-      const xW = ZW.createImageData(cW, wW),
-        lW = new Int32Array(cW * wW).fill(sW);
+      const uR = GR - JR + 1,
+        ZR = tR - yR + 1,
+        qR = Math.max(1, Math.ceil(uR / nR), Math.ceil(ZR / nR)),
+        iR = Math.ceil(uR / qR),
+        fR = Math.ceil(ZR / qR),
+        VR = document.createElement("canvas");
+      VR.width = iR, VR.height = fR;
+      const KR = VR.getContext("2d");
+      if (!KR) throw new Error("Couldn't draw the schematic from above.");
+      const wR = KR.createImageData(iR, fR),
+        rR = new Int32Array(iR * fR).fill(WR);
       for (const {
-          chunkX: AW,
-          chunkZ: bW,
-          heights: jW,
-          colours: UW
+          chunkX: eR,
+          chunkZ: aR,
+          heights: LR,
+          colours: nR
         }
-        of WW) jW.forEach(((WW, iW) => {
-        const EW = AW * kW + iW % kW,
-          NW = bW * kW + Math.floor(iW / kW),
-          PW = Math.floor((NW - mW) / LW) * cW + Math.floor((OW - EW) / LW);
-        WW === sW || WW <= lW[PW] || (lW[PW] = WW, xW.data.set(UW.subarray(3 * iW, 3 * iW + 3), 4 * PW), xW.data[4 * PW + 3] = 255)
+        of RR) LR.forEach(((RR, JR) => {
+        const tR = eR * UR + JR % UR,
+          uR = aR * UR + Math.floor(JR / UR),
+          ZR = Math.floor((uR - yR) / qR) * iR + Math.floor((GR - tR) / qR);
+        RR === WR || RR <= rR[ZR] || (rR[ZR] = RR, wR.data.set(nR.subarray(3 * JR, 3 * JR + 3), 4 * ZR), wR.data[4 * ZR + 3] = 255)
       }));
-      return ZW.putImageData(xW, 0, 0), {
-        maxX: OW,
-        minZ: mW,
-        width: cW * LW,
-        depth: wW * LW,
-        canvas: tW
+      return KR.putImageData(wR, 0, 0), {
+        maxX: GR,
+        minZ: yR,
+        width: iR * qR,
+        depth: fR * qR,
+        canvas: VR
       }
     }
 
-    function yW() {
-      return new Promise((WW => {
-        setTimeout(WW, 0)
+    function BR() {
+      return new Promise((RR => {
+        setTimeout(RR, 0)
       }))
     }
   },
-  40748: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW
+  40752: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR
     });
-    var mW = OW(40751);
-    async function EW() {
+    var yR = GR(40756);
+    async function tR() {
       const {
-        averageColors: WW
-      } = await OW.e(234).then((() => OW(35332)));
-      return new mW.d(WW)
+        averageColors: RR
+      } = await GR.e(234).then((() => GR(35257)));
+      return new yR.b(RR)
     }
   },
-  40751: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      e: () => PW
+  40756: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      d: () => ZR
     });
-    var mW = OW(5725);
-    const EW = {
+    var yR = GR(5844);
+    const tR = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      NW = [150, 150, 150],
-      PW = -2147483648;
-    class LW {
-      constructor(WW) {
-        this.averages = WW, this.byId = new Map
+      uR = [150, 150, 150],
+      ZR = -2147483648;
+    class qR {
+      constructor(RR) {
+        this.averages = RR, this.byId = new Map
       }
-      get(WW) {
-        var iW, OW, PW, LW, cW;
-        const wW = this.byId.get(WW);
-        if (void 0 !== wW) return wW;
-        const tW = null !== (iW = null === (OW = mW.j[WW]) || void 0 === OW ? void 0 : OW.name) && void 0 !== iW ? iW : "",
-          ZW = tW.split("|")[0],
-          xW = null !== (PW = this.averages[tW]) && void 0 !== PW ? PW : this.averages[ZW],
-          lW = null !== (LW = null !== (cW = null === xW || void 0 === xW ? void 0 : xW[0]) && void 0 !== cW ? cW : EW[ZW]) && void 0 !== LW ? LW : 0 === (null === xW || void 0 === xW ? void 0 : xW.length) ? null : NW;
-        return this.byId.set(WW, lW), lW
+      get(RR) {
+        var JR, GR, ZR, qR, iR;
+        const fR = this.byId.get(RR);
+        if (void 0 !== fR) return fR;
+        const VR = null !== (JR = null === (GR = yR.l[RR]) || void 0 === GR ? void 0 : GR.name) && void 0 !== JR ? JR : "",
+          KR = VR.split("|")[0],
+          wR = null !== (ZR = this.averages[VR]) && void 0 !== ZR ? ZR : this.averages[KR],
+          rR = null !== (qR = null !== (iR = null === wR || void 0 === wR ? void 0 : wR[0]) && void 0 !== iR ? iR : tR[KR]) && void 0 !== qR ? qR : 0 === (null === wR || void 0 === wR ? void 0 : wR.length) ? null : uR;
+        return this.byId.set(RR, rR), rR
       }
       getDrawnIds() {
-        const WW = new Uint8Array(65536);
-        for (let iW = 1; iW < 65536; iW++) void 0 !== mW.j[iW] && null !== this.get(iW) && (WW[iW] = 1);
-        return WW
+        const RR = new Uint8Array(65536);
+        for (let JR = 1; JR < 65536; JR++) void 0 !== yR.l[JR] && null !== this.get(JR) && (RR[JR] = 1);
+        return RR
       }
-      drawPixel(WW, iW, OW, mW, EW, NW) {
-        const LW = function(WW, iW, OW) {
-            const mW = WW - iW + (WW - OW);
-            return Math.max(.65, Math.min(1.2, .97 + .055 * mW))
-          }(mW, EW === PW ? mW : EW, NW === PW ? mW : NW),
-          cW = this.get(OW);
-        WW[iW] = cW[0] * LW, WW[iW + 1] = cW[1] * LW, WW[iW + 2] = cW[2] * LW, WW[iW + 3] = 255
+      drawPixel(RR, JR, GR, yR, tR, uR) {
+        const qR = function(RR, JR, GR) {
+            const yR = RR - JR + (RR - GR);
+            return Math.max(.65, Math.min(1.2, .97 + .055 * yR))
+          }(yR, tR === ZR ? yR : tR, uR === ZR ? yR : uR),
+          iR = this.get(GR);
+        RR[JR] = iR[0] * qR, RR[JR + 1] = iR[1] * qR, RR[JR + 2] = iR[2] * qR, RR[JR + 3] = 255
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

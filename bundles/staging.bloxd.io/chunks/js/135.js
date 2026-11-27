@@ -1,530 +1,530 @@
 export const id = 135;
 export const ids = [135];
 export const modules = {
-  5978: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => tW,
-      e: () => wW
+  6092: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => VR,
+      g: () => fR
     });
-    var mW = OW(62),
-      EW = OW(1532),
-      NW = OW(1172),
-      PW = OW(100),
-      LW = OW(4304),
-      cW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1590),
+      uR = GR(1270),
+      ZR = GR(103),
+      qR = GR(4385),
+      iR = GR(1378);
 
-    function wW() {
-      return !(0, PW.isMobile)()
+    function fR() {
+      return !(0, ZR.isMobile)()
     }
 
-    function tW(WW) {
+    function VR(RR) {
       let {
-        disabled: iW,
-        openFolderPicker: OW,
-        onFiles: PW
-      } = WW;
+        disabled: JR,
+        openFolderPicker: GR,
+        onFiles: ZR
+      } = RR;
       const {
-        t: tW
-      } = (0, NW.B)(), ZW = (0, mW.useRef)(null);
-      return (0, cW.jsxs)("div", {
+        t: VR
+      } = (0, uR.A)(), KR = (0, yR.useRef)(null);
+      return (0, iR.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, cW.jsx)("input", {
-          ref: ZW,
+        children: [(0, iR.jsx)("input", {
+          ref: KR,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(WW) {
-            const iW = Array.from(WW.target.files);
-            WW.target.value = "", PW(iW)
+          onChange: function(RR) {
+            const JR = Array.from(RR.target.files);
+            RR.target.value = "", ZR(JR)
           }
-        }), wW() && (0, cW.jsx)(EW.f, {
-          disabled: iW,
-          onClick: OW,
-          children: tW("general:chooseFolder")
-        }), (0, cW.jsx)(EW.f, {
-          disabled: iW,
+        }), fR() && (0, iR.jsx)(tR.g, {
+          disabled: JR,
+          onClick: GR,
+          children: VR("general:chooseFolder")
+        }), (0, iR.jsx)(tR.g, {
+          disabled: JR,
           onClick: () => {
-            (0, LW.f)(ZW.current)
+            (0, qR.e)(KR.current)
           },
-          children: tW("general:chooseZip")
+          children: VR("general:chooseZip")
         })]
       })
     }
   },
-  5952: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      e: () => PW,
-      h: () => NW
+  6076: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      c: () => ZR,
+      d: () => uR
     });
-    var mW = OW(5961);
-    const EW = [WW => WW.strict ? "strict" : "nonStrict", WW => WW.program];
+    var yR = GR(6080);
+    const tR = [RR => RR.strict ? "strict" : "nonStrict", RR => RR.program];
 
-    function NW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const mW = {};
-      for (const EW in OW) mW[EW] = `\0${EW}\0`;
-      return WW(iW, mW).replace(/\0(\w+)\0/g, ((WW, iW) => OW[iW]))
+    function uR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const yR = {};
+      for (const tR in GR) yR[tR] = `\0${tR}\0`;
+      return RR(JR, yR).replace(/\0(\w+)\0/g, ((RR, JR) => GR[JR]))
     }
 
-    function PW(WW) {
-      return null === WW.file ? null : WW.line > 0 ? `${WW.file}:${WW.line}` : WW.file
+    function ZR(RR) {
+      return null === RR.file ? null : RR.line > 0 ? `${RR.file}:${RR.line}` : RR.file
     }
 
-    function LW(WW) {
-      const iW = new Map(WW.map((WW => [cW(WW).join("."), WW])));
-      if (0 === iW.size) return [];
-      const OW = tW([...iW.values()]);
-      return 0 === OW[0].length ? [] : OW
+    function qR(RR) {
+      const JR = new Map(RR.map((RR => [iR(RR).join("."), RR])));
+      if (0 === JR.size) return [];
+      const GR = VR([...JR.values()]);
+      return 0 === GR[0].length ? [] : GR
     }
 
-    function cW(WW) {
-      return EW.map((iW => iW(WW)))
+    function iR(RR) {
+      return tR.map((JR => JR(RR)))
     }
-    const wW = EW.map((WW => new Set(mW.c.map(WW)).size));
+    const fR = tR.map((RR => new Set(yR.g.map(RR)).size));
 
-    function tW(WW) {
-      const iW = EW.map((iW => new Set(WW.map(iW)))),
-        OW = iW.reduce(((WW, iW) => WW * iW.size), 1),
-        mW = iW.every(((WW, iW) => 1 === WW.size || WW.size === wW[iW]));
-      if (OW === WW.length && mW) return [EW.filter(((WW, OW) => 1 === iW[OW].size)).map((iW => iW(WW[0])))];
-      let NW = null;
-      for (let PW = 0; PW < EW.length; PW++) {
-        if (1 === iW[PW].size) continue;
-        const OW = ZW(WW, EW[PW]).flatMap(tW);
-        (null === NW || OW.length < NW.length) && (NW = OW)
+    function VR(RR) {
+      const JR = tR.map((JR => new Set(RR.map(JR)))),
+        GR = JR.reduce(((RR, JR) => RR * JR.size), 1),
+        yR = JR.every(((RR, JR) => 1 === RR.size || RR.size === fR[JR]));
+      if (GR === RR.length && yR) return [tR.filter(((RR, GR) => 1 === JR[GR].size)).map((JR => JR(RR[0])))];
+      let uR = null;
+      for (let ZR = 0; ZR < tR.length; ZR++) {
+        if (1 === JR[ZR].size) continue;
+        const GR = KR(RR, tR[ZR]).flatMap(VR);
+        (null === uR || GR.length < uR.length) && (uR = GR)
       }
-      return NW
+      return uR
     }
 
-    function ZW(WW, iW) {
-      const OW = new Map;
-      for (const EW of WW) {
-        var mW;
-        const WW = iW(EW);
-        OW.set(WW, [...null !== (mW = OW.get(WW)) && void 0 !== mW ? mW : [], EW])
+    function KR(RR, JR) {
+      const GR = new Map;
+      for (const tR of RR) {
+        var yR;
+        const RR = JR(tR);
+        GR.set(RR, [...null !== (yR = GR.get(RR)) && void 0 !== yR ? yR : [], tR])
       }
-      return [...OW.values()]
+      return [...GR.values()]
     }
   },
-  7600: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      ShaderPackPublishForm: () => sW
+  7736: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      ShaderPackPublishForm: () => WR
     });
-    var mW = OW(62),
-      EW = OW(7570),
-      NW = OW(190),
-      PW = OW(5970),
-      LW = OW(1391),
-      cW = OW(1532),
-      wW = OW(1782),
-      tW = OW(1107),
-      ZW = OW(7609),
-      xW = OW(7615),
-      lW = OW(1584),
-      AW = OW(1172),
-      bW = OW(7621),
-      jW = OW(7648),
-      UW = OW(7567),
-      kW = OW(1283);
+    var yR = GR(66),
+      tR = GR(7702),
+      uR = GR(212),
+      ZR = GR(6084),
+      qR = GR(1468),
+      iR = GR(1590),
+      fR = GR(1867),
+      VR = GR(1196),
+      KR = GR(7743),
+      wR = GR(7750),
+      rR = GR(1647),
+      eR = GR(1270),
+      aR = GR(7756),
+      LR = GR(7792),
+      nR = GR(7697),
+      UR = GR(1378);
 
-    function sW(WW) {
-      var iW, OW, ZW;
+    function WR(RR) {
+      var JR, GR, KR;
       let {
-        existing: sW,
-        onPublished: KW
-      } = WW;
+        existing: WR,
+        onPublished: CR
+      } = RR;
       const {
-        t: YW
-      } = (0, AW.B)(), {
-        userContext: yW,
-        isUserContextUpdating: TW
-      } = (0, tW.e)(), [JW, hW] = (0, mW.useState)(null), [HW, nW] = (0, mW.useState)(0), [uW, oW] = (0, mW.useState)(null !== (iW = null === sW || void 0 === sW ? void 0 : sW.name) && void 0 !== iW ? iW : ""), dW = (0, mW.useRef)(uW), eW = (0, mW.useRef)(""), vW = WW => {
-        dW.current = WW, oW(WW)
-      }, [gW, DW] = (0, mW.useState)(null !== (OW = null === sW || void 0 === sW ? void 0 : sW.description) && void 0 !== OW ? OW : ""), VW = (0, mW.useRef)(gW), pW = (0, mW.useRef)(""), fW = WW => {
-        VW.current = WW, DW(WW)
-      }, [CW, XW] = (0, mW.useState)(!1), {
-        loading: BW,
-        error: qW,
-        setError: RW,
-        onFiles: GW
-      } = (0, xW.d)((async WW => {
-        const iW = await (0, bW.loadPageShaderPackCompiler)();
-        if (!iW) return void RW(YW("shaderPack:compilerUnavailable"));
-        const OW = await (0, jW.g)(iW, WW.files);
-        if (hW({
-            pack: WW,
-            validation: OW,
-            sourceBytes: (0, PW.D)(WW.files)
-          }), !sW) {
-          var mW;
-          if ("" !== dW.current.trim() && dW.current !== eW.current || (eW.current = (0, EW.N)(WW.manifest.name.trim(), EW.x), vW(eW.current)), "" === VW.current.trim() || VW.current === pW.current) pW.current = (0, EW.N)((null !== (mW = WW.manifest.description) && void 0 !== mW ? mW : "").trim(), EW.j), fW(pW.current);
-          nW((WW => WW + 1))
+        t: MR
+      } = (0, eR.A)(), {
+        userContext: BR,
+        isUserContextUpdating: lR
+      } = (0, VR.d)(), [pR, gR] = (0, yR.useState)(null), [bR, vR] = (0, yR.useState)(0), [OR, xR] = (0, yR.useState)(null !== (JR = null === WR || void 0 === WR ? void 0 : WR.name) && void 0 !== JR ? JR : ""), NR = (0, yR.useRef)(OR), DR = (0, yR.useRef)(""), HR = RR => {
+        NR.current = RR, xR(RR)
+      }, [oR, cR] = (0, yR.useState)(null !== (GR = null === WR || void 0 === WR ? void 0 : WR.description) && void 0 !== GR ? GR : ""), PR = (0, yR.useRef)(oR), IR = (0, yR.useRef)(""), mR = RR => {
+        PR.current = RR, cR(RR)
+      }, [zR, SR] = (0, yR.useState)(!1), {
+        loading: jR,
+        error: dR,
+        setError: ER,
+        onFiles: YR
+      } = (0, wR.i)((async RR => {
+        const JR = await (0, aR.loadPageShaderPackCompiler)();
+        if (!JR) return void ER(MR("shaderPack:compilerUnavailable"));
+        const GR = await (0, LR.h)(JR, RR.files);
+        if (gR({
+            pack: RR,
+            validation: GR,
+            sourceBytes: (0, ZR.z)(RR.files)
+          }), !WR) {
+          var yR;
+          if ("" !== NR.current.trim() && NR.current !== DR.current || (DR.current = (0, tR.N)(RR.manifest.name.trim(), tR.w), HR(DR.current)), "" === PR.current.trim() || PR.current === IR.current) IR.current = (0, tR.N)((null !== (yR = RR.manifest.description) && void 0 !== yR ? yR : "").trim(), tR.q), mR(IR.current);
+          vR((RR => RR + 1))
         }
-      })), IW = !TW && !yW.isLoggedIn() && !NW.b.offlineMode, aW = uW.trim(), rW = aW.length < EW.B, zW = null !== JW && !1 !== (null === (ZW = JW.validation) || void 0 === ZW ? void 0 : ZW.ok) && !BW && !rW && !IW && !TW;
-      return (0, kW.jsxs)("div", {
+      })), kR = !lR && !BR.isLoggedIn() && !uR.c.offlineMode, QR = OR.trim(), FR = QR.length < tR.z, TR = null !== pR && !1 !== (null === (KR = pR.validation) || void 0 === KR ? void 0 : KR.ok) && !jR && !FR && !kR && !lR;
+      return (0, UR.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, kW.jsx)("p", {
+        children: [(0, UR.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: sW ? YW("shaderPackListing:uploadIntro", {
-            minutes: String(EW.G / 6e4)
-          }) : YW("shaderPackListing:publishIntro")
-        }), (0, kW.jsx)(SW, {}), IW && (0, kW.jsx)("div", {
+          children: WR ? MR("shaderPackListing:uploadIntro", {
+            minutes: String(tR.C / 6e4)
+          }) : MR("shaderPackListing:publishIntro")
+        }), (0, UR.jsx)(XR, {}), kR && (0, UR.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: YW("shaderPackListing:publishNeedsLogin")
-        }), (0, kW.jsx)(xW.c, {
-          busy: BW,
-          disabled: BW || CW,
-          onFiles: WW => {
-            hW(null), GW(WW)
+          children: MR("shaderPackListing:publishNeedsLogin")
+        }), (0, UR.jsx)(wR.e, {
+          busy: jR,
+          disabled: jR || zR,
+          onFiles: RR => {
+            gR(null), YR(RR)
           }
-        }), JW && (0, kW.jsxs)("div", {
+        }), pR && (0, UR.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, kW.jsx)("div", {
+          children: [(0, UR.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: JW.pack.manifest.name
-          }), (0, kW.jsxs)("div", {
+            children: pR.pack.manifest.name
+          }), (0, UR.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [YW("shaderPackListing:sizeValue", {
-              kilobytes: String((0, UW.Q)(JW.sourceBytes))
-            }), " \xb7", " ", YW("shaderPackListing:filesValue", {
-              files: String(JW.pack.files.length)
+            children: [MR("shaderPackListing:sizeValue", {
+              kilobytes: String((0, nR.V)(pR.sourceBytes))
+            }), " \xb7", " ", MR("shaderPackListing:filesValue", {
+              files: String(pR.pack.files.length)
             })]
-          }), (0, kW.jsx)(MW, {
-            picked: JW
+          }), (0, UR.jsx)(AR, {
+            picked: pR
           })]
-        }), !sW && (0, kW.jsxs)(kW.Fragment, {
-          children: [(0, kW.jsxs)("label", {
+        }), !WR && (0, UR.jsxs)(UR.Fragment, {
+          children: [(0, UR.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, kW.jsx)("span", {
-              children: YW("general:name")
-            }), (0, kW.jsx)(wW.b, {
+            children: [(0, UR.jsx)("span", {
+              children: MR("general:name")
+            }), (0, UR.jsx)(fR.b, {
               className: "ShaderPackPublishInput",
-              defaultValue: uW,
-              maxLength: EW.x,
-              onValueChange: vW
-            }, HW), JW && rW && (0, kW.jsx)("span", {
+              defaultValue: OR,
+              maxLength: tR.w,
+              onValueChange: HR
+            }, bR), pR && FR && (0, UR.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: YW("shaderPackListing:nameTooShort", {
-                min: String(EW.B)
+              children: MR("shaderPackListing:nameTooShort", {
+                min: String(tR.z)
               })
             })]
-          }), (0, kW.jsxs)("label", {
+          }), (0, UR.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, kW.jsx)("span", {
-              children: YW("general:description")
-            }), (0, kW.jsx)(wW.b, {
+            children: [(0, UR.jsx)("span", {
+              children: MR("general:description")
+            }), (0, UR.jsx)(fR.b, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: gW,
-              maxLength: EW.j,
-              onValueChange: fW,
+              defaultValue: oR,
+              maxLength: tR.q,
+              onValueChange: mR,
               useTextarea: !0
-            }, HW)]
+            }, bR)]
           })]
-        }), qW && (0, kW.jsx)("div", {
+        }), dR && (0, UR.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: qW
-        }), (0, kW.jsxs)(cW.n, {
+          children: dR
+        }), (0, UR.jsxs)(iR.n, {
           className: "ShaderPackPublishButton",
-          disabled: !zW,
-          loading: CW,
+          disabled: !TR,
+          loading: zR,
           onClick: () => {
             !async function() {
-              var WW;
-              if (!JW) return;
+              var RR;
+              if (!pR) return;
               const {
-                name: iW,
-                description: OW
-              } = null !== sW && void 0 !== sW ? sW : {
-                name: aW,
-                description: gW.trim()
-              }, mW = {
-                packId: null !== (WW = null === sW || void 0 === sW ? void 0 : sW.packId) && void 0 !== WW ? WW : null,
-                name: iW,
-                description: OW,
-                apiVersion: JW.pack.manifest.apiVersion,
-                files: (0, PW.A)(JW.pack.files),
-                keepCircleShadows: !0 === JW.pack.manifest.keepCircleShadows
+                name: JR,
+                description: GR
+              } = null !== WR && void 0 !== WR ? WR : {
+                name: QR,
+                description: oR.trim()
+              }, yR = {
+                packId: null !== (RR = null === WR || void 0 === WR ? void 0 : WR.packId) && void 0 !== RR ? RR : null,
+                name: JR,
+                description: GR,
+                apiVersion: pR.pack.manifest.apiVersion,
+                files: (0, ZR.x)(pR.pack.files),
+                keepCircleShadows: !0 === pR.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(mW)).byteLength > 1024 * EW.M) RW(YW("shaderPackListing:publishTooBig", {
-                kilobytes: String(EW.M)
+              if ((new TextEncoder).encode(JSON.stringify(yR)).byteLength > 1024 * tR.M) ER(MR("shaderPackListing:publishTooBig", {
+                kilobytes: String(tR.M)
               }));
               else {
-                XW(!0), RW(null);
+                SR(!0), ER(null);
                 try {
-                  KW(await lW.e.publishShaderPack(yW, mW))
-                } catch (NW) {
-                  console.error("Failed to publish the shader pack", NW), RW((0, UW.y)(NW, YW, "shaderPackListing:publishFailed"))
+                  CR(await rR.c.publishShaderPack(BR, yR))
+                } catch (uR) {
+                  console.error("Failed to publish the shader pack", uR), ER((0, nR.F)(uR, MR, "shaderPackListing:publishFailed"))
                 } finally {
-                  XW(!1)
+                  SR(!1)
                 }
               }
             }()
           },
-          children: [(0, kW.jsx)(LW.c, {
+          children: [(0, UR.jsx)(qR.d, {
             name: "upload"
-          }), " ", YW(sW ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", MR(WR ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function MW(WW) {
+    function AR(RR) {
       let {
-        picked: iW
-      } = WW;
+        picked: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, AW.B)(), {
-        validation: mW
-      } = iW;
-      return null === mW ? (0, kW.jsx)("div", {
+        t: GR
+      } = (0, eR.A)(), {
+        validation: yR
+      } = JR;
+      return null === yR ? (0, UR.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: OW("shaderPackListing:publishUnchecked")
-      }) : mW.ok ? (0, kW.jsxs)(kW.Fragment, {
-        children: [(0, kW.jsxs)("div", {
+        children: GR("shaderPackListing:publishUnchecked")
+      }) : yR.ok ? (0, UR.jsxs)(UR.Fragment, {
+        children: [(0, UR.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, kW.jsx)(LW.c, {
+          children: [(0, UR.jsx)(qR.d, {
             name: "circle-check"
-          }), " ", OW("shaderPackListing:publishReady")]
-        }), mW.offInStrict.length > 0 && (0, kW.jsxs)(kW.Fragment, {
-          children: [(0, kW.jsxs)("div", {
+          }), " ", GR("shaderPackListing:publishReady")]
+        }), yR.offInStrict.length > 0 && (0, UR.jsxs)(UR.Fragment, {
+          children: [(0, UR.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, kW.jsx)(LW.c, {
+            children: [(0, UR.jsx)(qR.d, {
               name: "triangle-exclamation"
-            }), " ", OW("shaderPack:offInStrict")]
-          }), (0, kW.jsx)(ZW.b, {
-            diagnostics: mW.offInStrict,
-            t: OW
+            }), " ", GR("shaderPack:offInStrict")]
+          }), (0, UR.jsx)(KR.c, {
+            diagnostics: yR.offInStrict,
+            t: GR
           })]
         })]
-      }) : (0, kW.jsxs)(kW.Fragment, {
-        children: [(0, kW.jsxs)("div", {
+      }) : (0, UR.jsxs)(UR.Fragment, {
+        children: [(0, UR.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, kW.jsx)(LW.c, {
+          children: [(0, UR.jsx)(qR.d, {
             name: "triangle-exclamation"
-          }), " ", OW("shaderPackListing:publishHasErrors")]
-        }), (0, kW.jsx)(ZW.b, {
-          diagnostics: mW.errors,
-          more: mW.moreErrors,
-          t: OW
+          }), " ", GR("shaderPackListing:publishHasErrors")]
+        }), (0, UR.jsx)(KR.c, {
+          diagnostics: yR.errors,
+          more: yR.moreErrors,
+          t: GR
         })]
       })
     }
-    const KW = "\0";
+    const CR = "\0";
 
-    function SW() {
+    function XR() {
       const {
-        t: WW
-      } = (0, AW.B)(), [iW, OW] = WW("shaderPackListing:bloxdhubHelp", {
-        site: KW
-      }).split(KW);
-      return (0, kW.jsxs)("p", {
+        t: RR
+      } = (0, eR.A)(), [JR, GR] = RR("shaderPackListing:bloxdhubHelp", {
+        site: CR
+      }).split(CR);
+      return (0, UR.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [iW, (0, kW.jsx)("a", {
+        children: [JR, (0, UR.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: EW.e,
+          href: tR.i,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: EW.c
-        }), OW]
+          children: tR.d
+        }), GR]
       })
     }
   },
-  5961: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW.l,
-      c: () => EW,
-      g: () => mW.r
+  6080: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR.f,
+      g: () => tR,
+      i: () => yR.o
     });
-    var mW = OW(5970);
-    const EW = [!1, !0].flatMap((WW => ["terrain", "liquid", "model"].map((iW => ({
-      strict: WW,
-      program: iW
+    var yR = GR(6084);
+    const tR = [!1, !0].flatMap((RR => ["terrain", "liquid", "model"].map((JR => ({
+      strict: RR,
+      program: JR
     })))))
   },
-  5970: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => tW,
-      D: () => xW,
-      e: () => LW,
-      i: () => PW,
-      l: () => mW,
-      o: () => bW,
-      p: () => ZW,
-      r: () => EW,
-      v: () => NW,
-      x: () => wW
+  6084: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      e: () => ZR,
+      f: () => yR,
+      j: () => aR,
+      l: () => KR,
+      o: () => tR,
+      r: () => uR,
+      t: () => fR,
+      x: () => VR,
+      z: () => wR
     });
-    const mW = 5;
+    const yR = 5;
 
-    function EW(WW) {
-      return WW === mW
+    function tR(RR) {
+      return RR === yR
     }
 
-    function NW(WW) {
-      return [...WW.features]
+    function uR(RR) {
+      return [...RR.features]
     }
-    const PW = 262144,
-      LW = 256,
-      cW = 256;
+    const ZR = 262144,
+      qR = 256,
+      iR = 256;
 
-    function wW(WW) {
-      if ("object" !== typeof WW || null === WW || Array.isArray(WW)) return "The pack has no files.";
-      const iW = [];
-      for (const [OW, mW] of Object.entries(WW)) {
-        if ("string" !== typeof mW) return `${OW} isn't text.`;
-        iW.push({
-          path: OW,
-          source: mW
+    function fR(RR) {
+      if ("object" !== typeof RR || null === RR || Array.isArray(RR)) return "The pack has no files.";
+      const JR = [];
+      for (const [GR, yR] of Object.entries(RR)) {
+        if ("string" !== typeof yR) return `${GR} isn't text.`;
+        JR.push({
+          path: GR,
+          source: yR
         })
       }
-      return iW.sort(((WW, iW) => ZW(WW.path, iW.path))),
-        function(WW) {
-          if (0 === WW.length) return "The pack has no .wgsl files.";
-          if (WW.length > LW) return `The pack has more than ${LW} .wgsl files.`;
-          const iW = new Set;
+      return JR.sort(((RR, JR) => KR(RR.path, JR.path))),
+        function(RR) {
+          if (0 === RR.length) return "The pack has no .wgsl files.";
+          if (RR.length > qR) return `The pack has more than ${qR} .wgsl files.`;
+          const JR = new Set;
           for (const {
-              path: OW
+              path: GR
             }
-            of WW) {
-            const WW = lW(OW);
-            if (null !== WW) return WW;
-            if (iW.has(OW)) return `The pack has two files at ${OW}.`;
-            iW.add(OW)
+            of RR) {
+            const RR = rR(GR);
+            if (null !== RR) return RR;
+            if (JR.has(GR)) return `The pack has two files at ${GR}.`;
+            JR.add(GR)
           }
-          return xW(WW) > PW ? `The pack's .wgsl files are over ${PW/1024} KB in total.` : null
-        }(iW) ?? iW
+          return wR(RR) > ZR ? `The pack's .wgsl files are over ${ZR/1024} KB in total.` : null
+        }(JR) ?? JR
     }
 
-    function tW(WW) {
-      const iW = {};
-      for (const OW of WW) iW[OW.path] = OW.source;
-      return iW
+    function VR(RR) {
+      const JR = {};
+      for (const GR of RR) JR[GR.path] = GR.source;
+      return JR
     }
 
-    function ZW(WW, iW) {
-      return WW < iW ? -1 : WW > iW ? 1 : 0
+    function KR(RR, JR) {
+      return RR < JR ? -1 : RR > JR ? 1 : 0
     }
 
-    function xW(WW) {
-      const iW = new TextEncoder;
-      let OW = 0;
+    function wR(RR) {
+      const JR = new TextEncoder;
+      let GR = 0;
       for (const {
-          source: mW
+          source: yR
         }
-        of WW) OW += iW.encode(mW).byteLength;
-      return OW
+        of RR) GR += JR.encode(yR).byteLength;
+      return GR
     }
 
-    function lW(WW) {
-      if (!WW.toLowerCase().endsWith(".wgsl")) return `${WW} isn't a .wgsl file.`;
-      if (WW.length > cW) return `A file path is over ${cW} characters.`;
-      if (WW.includes("\\") || /[\u0000-\u001f]/.test(WW)) return `${WW} isn't a valid file path.`;
-      return WW.split("/").some((WW => "" === WW || "." === WW || ".." === WW)) ? `${WW} isn't a valid file path.` : null
+    function rR(RR) {
+      if (!RR.toLowerCase().endsWith(".wgsl")) return `${RR} isn't a .wgsl file.`;
+      if (RR.length > iR) return `A file path is over ${iR} characters.`;
+      if (RR.includes("\\") || /[\u0000-\u001f]/.test(RR)) return `${RR} isn't a valid file path.`;
+      return RR.split("/").some((RR => "" === RR || "." === RR || ".." === RR)) ? `${RR} isn't a valid file path.` : null
     }
-    const AW = /^(.*)\[rot\[([1-4])$/;
+    const eR = /^(.*)\[rot\[([1-4])$/;
 
-    function bW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const mW = new Map;
-      iW.forEach(((WW, iW) => {
+    function aR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const yR = new Map;
+      JR.forEach(((RR, JR) => {
         let {
-          numAnimStates: OW,
-          animStartIdx: EW
-        } = WW;
-        for (let NW = 1; NW < OW; NW++) mW.set(EW + NW - 1, iW)
+          numAnimStates: GR,
+          animStartIdx: tR
+        } = RR;
+        for (let uR = 1; uR < GR; uR++) yR.set(tR + uR - 1, JR)
       }));
-      const EW = Object.entries(WW),
-        NW = new Map;
-      for (const [bW, jW] of EW) {
-        const WW = AW.exec(bW);
-        "1" === WW?.[2] && NW.set(WW[1], jW + 1)
+      const tR = Object.entries(RR),
+        uR = new Map;
+      for (const [aR, LR] of tR) {
+        const RR = eR.exec(aR);
+        "1" === RR?.[2] && uR.set(RR[1], LR + 1)
       }
-      const PW = WW => {
-          const iW = AW.exec(WW);
-          return iW && NW.has(iW[1]) ? {
-            root: iW[1],
-            rotation: Number(iW[2]) - 1
+      const ZR = RR => {
+          const JR = eR.exec(RR);
+          return JR && uR.has(JR[1]) ? {
+            root: JR[1],
+            rotation: Number(JR[2]) - 1
           } : null
         },
-        LW = new Set(EW.map((WW => {
-          let [iW] = WW;
-          return PW(iW)?.root ?? iW
+        qR = new Set(tR.map((RR => {
+          let [JR] = RR;
+          return ZR(JR)?.root ?? JR
         }))),
-        cW = (WW, OW) => {
-          const mW = WW.replace(/_?0$/, "");
-          return (iW[OW]?.numAnimStates ?? 0) > 1 && !LW.has(mW) ? mW : WW
+        iR = (RR, GR) => {
+          const yR = RR.replace(/_?0$/, "");
+          return (JR[GR]?.numAnimStates ?? 0) > 1 && !qR.has(yR) ? yR : RR
         },
-        wW = new Map;
-      for (const [AW, bW] of EW) wW.set(bW, cW(PW(AW)?.root ?? AW, bW));
-      const tW = EW.reduce(((WW, iW) => {
-          let [, OW] = iW;
-          return Math.max(WW, OW + 1)
+        fR = new Map;
+      for (const [eR, aR] of tR) fR.set(aR, iR(ZR(eR)?.root ?? eR, aR));
+      const VR = tR.reduce(((RR, JR) => {
+          let [, GR] = JR;
+          return Math.max(RR, GR + 1)
         }), 0),
-        ZW = Array.from({
-          length: tW
-        }, ((WW, iW) => ({
-          id: iW + 1,
+        KR = Array.from({
+          length: VR
+        }, ((RR, JR) => ({
+          id: JR + 1,
           rotation: 0
         }))),
-        xW = new Map,
-        lW = new Map;
-      for (const [AW, bW] of EW) {
-        const WW = PW(AW),
-          iW = mW.get(bW);
-        if (void 0 !== iW) {
-          const OW = wW.get(iW);
-          lW.set(AW, {
-            name: AW,
-            texture: OW,
+        wR = new Map,
+        rR = new Map;
+      for (const [eR, aR] of tR) {
+        const RR = ZR(eR),
+          JR = yR.get(aR);
+        if (void 0 !== JR) {
+          const GR = fR.get(JR);
+          rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "frame"
-          }), WW && !lW.has(WW.root) && lW.set(WW.root, {
-            name: WW.root,
-            texture: OW,
+          }), RR && !rR.has(RR.root) && rR.set(RR.root, {
+            name: RR.root,
+            texture: GR,
             kind: "frame"
           });
           continue
         }
-        const OW = wW.get(bW),
-          EW = WW?.root ?? AW;
-        if (OW !== EW && lW.set(EW, {
-            name: EW,
-            texture: OW,
+        const GR = fR.get(aR),
+          tR = RR?.root ?? eR;
+        if (GR !== tR && rR.set(tR, {
+            name: tR,
+            texture: GR,
             kind: "frame"
-          }), WW) {
-          const iW = NW.get(WW.root);
-          ZW[bW] = {
-            id: iW,
-            rotation: WW.rotation
-          }, xW.set(OW, iW), lW.set(AW, {
-            name: AW,
-            texture: OW,
+          }), RR) {
+          const JR = uR.get(RR.root);
+          KR[aR] = {
+            id: JR,
+            rotation: RR.rotation
+          }, wR.set(GR, JR), rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "rotation"
           })
-        } else xW.set(OW, bW + 1)
+        } else wR.set(GR, aR + 1)
       }
-      for (const AW of xW.keys()) lW.delete(AW);
-      for (const [AW, bW] of OW) {
-        const WW = xW.get(bW);
-        void 0 === WW || xW.has(AW) || (xW.set(AW, WW), lW.delete(AW))
+      for (const eR of wR.keys()) rR.delete(eR);
+      for (const [eR, aR] of GR) {
+        const RR = wR.get(aR);
+        void 0 === RR || wR.has(eR) || (wR.set(eR, RR), rR.delete(eR))
       }
       return {
-        named: [...xW].sort(((WW, iW) => {
-          let [OW] = WW, [mW] = iW;
-          return OW < mW ? -1 : OW > mW ? 1 : 0
-        })).map((WW => {
-          let [iW, OW] = WW;
+        named: [...wR].sort(((RR, JR) => {
+          let [GR] = RR, [yR] = JR;
+          return GR < yR ? -1 : GR > yR ? 1 : 0
+        })).map((RR => {
+          let [JR, GR] = RR;
           return {
-            name: iW,
-            id: OW
+            name: JR,
+            id: GR
           }
         })),
-        aliases: [...lW.values()],
-        layers: ZW
+        aliases: [...rR.values()],
+        layers: KR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

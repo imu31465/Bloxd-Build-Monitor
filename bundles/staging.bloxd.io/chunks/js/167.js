@@ -1,31 +1,31 @@
 export const id = 167;
 export const ids = [167];
 export const modules = {
-  7717: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      BloxdDiscordActivitySdk: () => sW
+  7846: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      BloxdDiscordActivitySdk: () => WR
     });
-    var mW = OW(7720),
-      EW = OW(1220),
-      NW = OW(1172),
-      PW = OW(643),
-      LW = OW(1244),
-      cW = OW(1856),
-      wW = OW(1351),
-      tW = OW(805),
-      ZW = OW(25),
-      xW = OW(1189),
-      lW = OW(3245),
-      AW = function(WW) {
-        return WW.APPLICATION_COMMANDS = "applications.commands", WW.IDENTIFY = "identify", WW.EMAIL = "email", WW.GUILDS = "guilds", WW.READ_DM_CHANNELS = "dm_channels.read", WW.WRITE_ACTIVITIES = "rpc.activities.write", WW
-      }(AW || {}),
-      bW = function(WW) {
-        return WW[WW.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", WW[WW.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", WW[WW.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", WW[WW.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", WW[WW.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", WW[WW.RATELIMITED = 4002] = "RATELIMITED", WW[WW.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", WW[WW.INVALID_VERSION = 4004] = "INVALID_VERSION", WW[WW.INVALID_ENCODING = 4005] = "INVALID_ENCODING", WW
-      }(bW || {}),
-      jW = function(WW) {
-        return WW[WW.PLAYING = 0] = "PLAYING", WW[WW.STREAMING = 1] = "STREAMING", WW[WW.LISTENING = 2] = "LISTENING", WW[WW.WATCHING = 3] = "WATCHING", WW[WW.CUSTOM = 4] = "CUSTOM", WW[WW.COMPETING = 5] = "COMPETING", WW
-      }(jW || {});
-    const UW = {
+    var yR = GR(7853),
+      tR = GR(1322),
+      uR = GR(1270),
+      ZR = GR(679),
+      qR = GR(1343),
+      iR = GR(1943),
+      fR = GR(1449),
+      VR = GR(858),
+      KR = GR(25),
+      wR = GR(1287),
+      rR = GR(3357),
+      eR = function(RR) {
+        return RR.APPLICATION_COMMANDS = "applications.commands", RR.IDENTIFY = "identify", RR.EMAIL = "email", RR.GUILDS = "guilds", RR.READ_DM_CHANNELS = "dm_channels.read", RR.WRITE_ACTIVITIES = "rpc.activities.write", RR
+      }(eR || {}),
+      aR = function(RR) {
+        return RR[RR.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", RR[RR.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", RR[RR.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", RR[RR.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", RR[RR.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", RR[RR.RATELIMITED = 4002] = "RATELIMITED", RR[RR.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", RR[RR.INVALID_VERSION = 4004] = "INVALID_VERSION", RR[RR.INVALID_ENCODING = 4005] = "INVALID_ENCODING", RR
+      }(aR || {}),
+      LR = function(RR) {
+        return RR[RR.PLAYING = 0] = "PLAYING", RR[RR.STREAMING = 1] = "STREAMING", RR[RR.LISTENING = 2] = "LISTENING", RR[RR.WATCHING = 3] = "WATCHING", RR[RR.CUSTOM = 4] = "CUSTOM", RR[RR.COMPETING = 5] = "COMPETING", RR
+      }(LR || {});
+    const nR = {
         Minigames: "Playing",
         Puzzle: "Solving",
         Escape: "Escaping",
@@ -56,216 +56,216 @@ export const modules = {
         Adventure: "Adventuring",
         Other: "Being mischievous"
       },
-      kW = {
+      UR = {
         goalRush: "Playing",
         heroesvbrainrots: "Battling",
         hideseek: "Playing",
         bingo: "Playing"
       };
-    class sW {
-      constructor(WW) {
-        this.discordSdk = WW, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
+    class WR {
+      constructor(RR) {
+        this.discordSdk = RR, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
       }
       static async setup() {
-        console.log("Setting up Discord SDK with client id", xW.d.discordClientID);
-        const WW = new mW.e(xW.d.discordClientID);
-        let iW = !1;
+        console.log("Setting up Discord SDK with client id", wR.e.discordClientID);
+        const RR = new yR.e(wR.e.discordClientID);
+        let JR = !1;
         setTimeout((() => {
-          iW || (console.warn("Discord SDK took too long to initialize"), (0, cW.reloadBloxd)())
-        }), 15e3), await WW.ready(), iW = !0;
+          JR || (console.warn("Discord SDK took too long to initialize"), (0, iR.reloadBloxd)())
+        }), 15e3), await RR.ready(), JR = !0;
         try {
           const {
-            enabled: iW
-          } = await WW.commands.encourageHardwareAcceleration();
-          iW || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (EW) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", EW)
+            enabled: JR
+          } = await RR.commands.encourageHardwareAcceleration();
+          JR || console.warn("Hardware acceleration not enabled in the Discord client")
+        } catch (tR) {
+          console.error("Failed to encourage hardware acceleration in the Discord client", tR)
         }
-        const OW = new sW(WW);
-        return OW.isMobilePlatform() && (OW.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          OW.applyDiscordSafeAreaNotch()
-        }))), OW
+        const GR = new WR(RR);
+        return GR.isMobilePlatform() && (GR.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
+          GR.applyDiscordSafeAreaNotch()
+        }))), GR
       }
-      async updateActivityDescription(WW) {
-        const iW = ++this.activityUpdateId;
-        let OW, mW;
-        switch (WW) {
+      async updateActivityDescription(RR) {
+        const JR = ++this.activityUpdateId;
+        let GR, yR;
+        switch (RR) {
           case "homePage":
-            OW = "Chilling in the Main Menu";
+            GR = "Chilling in the Main Menu";
             break;
           case "inGame": {
-            const WW = await this.getInGameDescriptions();
-            OW = WW.primary, mW = WW.secondary;
+            const RR = await this.getInGameDescriptions();
+            GR = RR.primary, yR = RR.secondary;
             break
           }
         }
-        iW === this.activityUpdateId && await this.discordSdk.commands.setActivity({
+        JR === this.activityUpdateId && await this.discordSdk.commands.setActivity({
           activity: {
-            type: jW.PLAYING,
-            details: OW,
-            state: mW,
+            type: LR.PLAYING,
+            details: GR,
+            state: yR,
             assets: {
               large_image: "icon",
-              large_text: OW
+              large_text: GR
             },
             timestamps: {
               start: this.startTime
             }
           }
-        }).catch((WW => {
-          console.error(`Failed to update Discord activity rich presence with description="${OW}":`, WW)
+        }).catch((RR => {
+          console.error(`Failed to update Discord activity rich presence with description="${GR}":`, RR)
         }))
       }
       async getInGameDescriptions() {
-        const WW = (0, wW.d)(),
+        const RR = (0, fR.d)(),
           {
-            verb: iW,
-            title: OW
-          } = await this.getGameVerbAndTitle(WW.requestedGameNameWithVariation);
-        if ((0, wW.g)(WW)) return {
-          primary: `${iW} in a Discord World`
+            verb: JR,
+            title: GR
+          } = await this.getGameVerbAndTitle(RR.requestedGameNameWithVariation);
+        if ((0, fR.j)(RR)) return {
+          primary: `${JR} in a Discord World`
         };
-        const mW = `${iW} in ${OW}`;
-        return (0, PW.K)(WW.lobbyName) ? {
-          primary: mW
+        const yR = `${JR} in ${GR}`;
+        return (0, ZR.I)(RR.lobbyName) ? {
+          primary: yR
         } : {
-          primary: mW,
-          secondary: `Lobby ${WW.lobbyName}`
+          primary: yR,
+          secondary: `Lobby ${RR.lobbyName}`
         }
       }
-      async getGameVerbAndTitle(WW) {
-        var iW;
-        const OW = "Playing";
-        if ((0, PW.K)(WW)) return {
-          verb: OW,
+      async getGameVerbAndTitle(RR) {
+        var JR;
+        const GR = "Playing";
+        if ((0, ZR.I)(RR)) return {
+          verb: GR,
           title: "Bloxd"
         };
-        const mW = (0, tW.o)(WW);
-        var EW;
-        if (null !== mW) return {
-          verb: null !== (EW = kW[WW]) && void 0 !== EW ? EW : UW[mW.type],
-          title: await (0, NW.y)(LW.b.ENGLISH, mW.title)
+        const yR = (0, VR.k)(RR);
+        var tR;
+        if (null !== yR) return {
+          verb: null !== (tR = UR[RR]) && void 0 !== tR ? tR : nR[yR.type],
+          title: await (0, uR.x)(qR.c.ENGLISH, yR.title)
         };
-        const cW = await (0, lW.e)(WW);
+        const iR = await (0, rR.b)(RR);
         return {
-          verb: null !== (iW = cW && UW[cW.gameCategory]) && void 0 !== iW ? iW : OW,
-          title: (null === cW || void 0 === cW ? void 0 : cW.name) || "a Custom World"
+          verb: null !== (JR = iR && nR[iR.gameCategory]) && void 0 !== JR ? JR : GR,
+          title: (null === iR || void 0 === iR ? void 0 : iR.name) || "a Custom World"
         }
       }
       getCurrentChannelType() {
         const {
-          channelId: WW,
-          guildId: iW
+          channelId: RR,
+          guildId: JR
         } = this.getCurrentChannelAndGuild();
-        return null !== iW ? EW.d.GUILD : null !== WW ? EW.d.DM : null
+        return null !== JR ? tR.e.GUILD : null !== RR ? tR.e.DM : null
       }
       getRequiredScopeForCurrentChannel() {
-        const WW = this.getCurrentChannelType(),
-          iW = [AW.APPLICATION_COMMANDS, AW.IDENTIFY, AW.EMAIL, AW.GUILDS, AW.WRITE_ACTIVITIES];
-        switch (WW) {
-          case EW.d.DM:
-          case EW.d.GUILD:
-            return [...iW];
+        const RR = this.getCurrentChannelType(),
+          JR = [eR.APPLICATION_COMMANDS, eR.IDENTIFY, eR.EMAIL, eR.GUILDS, eR.WRITE_ACTIVITIES];
+        switch (RR) {
+          case tR.e.DM:
+          case tR.e.GUILD:
+            return [...JR];
           default:
-            throw new Error(`Unknown Discord channel type: ${WW}`)
+            throw new Error(`Unknown Discord channel type: ${RR}`)
         }
       }
       getCurrentChannelAndGuild() {
         const {
-          channelId: WW,
-          guildId: iW
+          channelId: RR,
+          guildId: JR
         } = this.discordSdk;
         return {
-          channelId: null !== WW && void 0 !== WW ? WW : null,
-          guildId: null !== iW && void 0 !== iW ? iW : null
+          channelId: null !== RR && void 0 !== RR ? RR : null,
+          guildId: null !== JR && void 0 !== JR ? JR : null
         }
       }
       getInstanceId() {
         return this.discordSdk.instanceId
       }
       async askDiscordUserForAuthorization() {
-        const WW = this.getRequiredScopeForCurrentChannel(),
+        const RR = this.getRequiredScopeForCurrentChannel(),
           {
-            code: iW
+            code: JR
           } = await this.discordSdk.commands.authorize({
-            client_id: xW.d.discordClientID,
+            client_id: wR.e.discordClientID,
             response_type: "code",
             state: "",
             prompt: "none",
-            scope: WW
+            scope: RR
           });
-        return iW
+        return JR
       }
       getCachedAccessToken() {
         return this.cachedAccessToken
       }
-      setCachedAccessToken(WW) {
-        this.cachedAccessToken = WW
+      setCachedAccessToken(RR) {
+        this.cachedAccessToken = RR
       }
-      registerGuild(WW, iW) {
-        this.guildNameCache[WW] = iW
+      registerGuild(RR, JR) {
+        this.guildNameCache[RR] = JR
       }
-      async authenticate(WW) {
+      async authenticate(RR) {
         return this.discordSdk.commands.authenticate({
-          access_token: WW
-        }).then((WW => null !== WW))
+          access_token: RR
+        }).then((RR => null !== RR))
       }
       async getUserLocale() {
         try {
           const {
-            locale: WW
+            locale: RR
           } = await this.discordSdk.commands.userSettingsGetLocale();
-          return WW
-        } catch (WW) {
-          return console.error("Failed to get user locale from Discord:", WW.stack), null
+          return RR
+        } catch (RR) {
+          return console.error("Failed to get user locale from Discord:", RR.stack), null
         }
       }
-      async getChannelName(WW) {
+      async getChannelName(RR) {
         return this.discordSdk.commands.getChannel({
-          channel_id: WW
-        }).then((WW => WW.name)).catch((WW => "Your Current Discord Chat"))
+          channel_id: RR
+        }).then((RR => RR.name)).catch((RR => "Your Current Discord Chat"))
       }
-      async getDiscordContextFromChannelId(WW) {
-        const iW = await this.getChannelName(WW);
-        return EW.j.from({
-          type: EW.d.DM,
-          channelId: WW,
-          channelName: iW
+      async getDiscordContextFromChannelId(RR) {
+        const JR = await this.getChannelName(RR);
+        return tR.j.from({
+          type: tR.e.DM,
+          channelId: RR,
+          channelName: JR
         })
       }
-      getDiscordContextFromGuildId(WW) {
-        const iW = this.guildNameCache[WW];
-        return (0, PW.K)(iW) ? null : EW.g.from({
-          type: EW.d.GUILD,
-          guildId: WW,
-          guildName: iW
+      getDiscordContextFromGuildId(RR) {
+        const JR = this.guildNameCache[RR];
+        return (0, ZR.I)(JR) ? null : tR.h.from({
+          type: tR.e.GUILD,
+          guildId: RR,
+          guildName: JR
         })
       }
       async getCurrentDiscordContext() {
         const {
-          channelId: WW,
-          guildId: iW
+          channelId: RR,
+          guildId: JR
         } = this.getCurrentChannelAndGuild();
-        return null !== iW ? this.getDiscordContextFromGuildId(iW) : null !== WW ? this.getDiscordContextFromChannelId(WW) : null
+        return null !== JR ? this.getDiscordContextFromGuildId(JR) : null !== RR ? this.getDiscordContextFromChannelId(RR) : null
       }
-      exit(WW) {
-        console.log("Exiting Discord Activity:", WW), this.discordSdk.close(bW.CLOSE_NORMAL, WW)
+      exit(RR) {
+        console.log("Exiting Discord Activity:", RR), this.discordSdk.close(aR.CLOSE_NORMAL, RR)
       }
       isMobilePlatform() {
-        return this.discordSdk.platform === mW.i.MOBILE
+        return this.discordSdk.platform === yR.f.MOBILE
       }
       applyDiscordSafeAreaNotch() {
-        const WW = getComputedStyle(document.documentElement),
-          iW = (iW, OW) => {
-            const mW = parseFloat(WW.getPropertyValue(`--discord-safe-area-inset-${iW}`));
-            return isNaN(mW) || 0 === OW ? 0 : mW / OW * 100
+        const RR = getComputedStyle(document.documentElement),
+          JR = (JR, GR) => {
+            const yR = parseFloat(RR.getPropertyValue(`--discord-safe-area-inset-${JR}`));
+            return isNaN(yR) || 0 === GR ? 0 : yR / GR * 100
           };
-        ZW.d.set({
+        KR.d.set({
           notchSize: {
-            top: iW("top", window.innerHeight),
-            right: Math.max(iW("right", window.innerWidth), 7),
+            top: JR("top", window.innerHeight),
+            right: Math.max(JR("right", window.innerWidth), 7),
             bottom: 0,
-            left: iW("left", window.innerWidth)
+            left: JR("left", window.innerWidth)
           }
         })
       }
@@ -273,4 +273,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

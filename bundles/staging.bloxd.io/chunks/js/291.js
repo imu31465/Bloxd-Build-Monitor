@@ -1,35 +1,35 @@
 export const id = 291;
 export const ids = [291];
 export const modules = {
-  41940: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW
+  41972: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    let mW = !1
+    let yR = !1
   },
-  41511: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW
+  41514: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => eR
     });
-    var mW = OW(41516),
-      EW = OW(41519),
-      NW = OW(38276),
-      PW = OW(38241),
-      LW = OW(38270),
-      cW = OW(39088),
-      wW = OW(41531);
-    class tW {
+    var yR = GR(41520),
+      tR = GR(41524),
+      uR = GR(38233),
+      ZR = GR(38204),
+      qR = GR(38224),
+      iR = GR(39062),
+      fR = GR(41534);
+    class VR {
       get wrapU() {
         return this._wrapU
       }
-      set wrapU(WW) {
-        this._wrapU = WW
+      set wrapU(RR) {
+        this._wrapU = RR
       }
       get wrapV() {
         return this._wrapV
       }
-      set wrapV(WW) {
-        this._wrapV = WW
+      set wrapV(RR) {
+        this._wrapV = RR
       }
       get coordinatesMode() {
         return 0
@@ -37,29 +37,29 @@ export const modules = {
       get isCube() {
         return !!this._texture && this._texture.isCube
       }
-      set isCube(WW) {
-        this._texture && (this._texture.isCube = WW)
+      set isCube(RR) {
+        this._texture && (this._texture.isCube = RR)
       }
       get is3D() {
         return !!this._texture && this._texture.is3D
       }
-      set is3D(WW) {
-        this._texture && (this._texture.is3D = WW)
+      set is3D(RR) {
+        this._texture && (this._texture.is3D = RR)
       }
       get is2DArray() {
         return !!this._texture && this._texture.is2DArray
       }
-      set is2DArray(WW) {
-        this._texture && (this._texture.is2DArray = WW)
+      set is2DArray(RR) {
+        this._texture && (this._texture.is2DArray = RR)
       }
       getClassName() {
         return "ThinTexture"
       }
-      static _IsRenderTargetWrapper(WW) {
-        return void 0 !== WW?.shareDepth
+      static _IsRenderTargetWrapper(RR) {
+        return void 0 !== RR?.shareDepth
       }
-      constructor(WW) {
-        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = wW.d.Zero(), this._cachedBaseSize = wW.d.Zero(), this._initialSamplingMode = 2, this._texture = tW._IsRenderTargetWrapper(WW) ? WW.texture : WW, this._texture && (this._engine = this._texture.VA(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      constructor(RR) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = fR.b.Zero(), this._cachedBaseSize = fR.b.Zero(), this._initialSamplingMode = 2, this._texture = VR._IsRenderTargetWrapper(RR) ? RR.texture : RR, this._texture && (this._engine = this._texture.ke(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
       }
       isReady() {
         return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
@@ -81,9 +81,9 @@ export const modules = {
       get samplingMode() {
         return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      updateSamplingMode(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._texture && this._engine && this._engine.updateTextureSamplingMode(WW, this._texture, this._texture.generateMipMaps && iW)
+      updateSamplingMode(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(RR, this._texture, this._texture.generateMipMaps && JR)
       }
       releaseInternalTexture() {
         this._texture && (this._texture.dispose(), this._texture = null)
@@ -92,63 +92,63 @@ export const modules = {
         this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-    var ZW, xW = OW(41538),
-      lW = OW(41415);
-    let AW = (() => {
-      var WW;
-      let iW, OW, wW, ZW, lW, AW, bW, jW, UW, kW, sW, MW, KW, SW, YW, yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW = tW,
-        gW = [],
-        DW = [],
-        VW = [],
-        pW = [],
-        fW = [],
-        CW = [],
-        XW = [],
-        BW = [],
-        qW = [],
-        RW = [],
-        GW = [],
-        IW = [],
-        aW = [],
-        rW = [],
-        zW = [],
-        FW = [],
-        QW = [],
-        Wi = [],
-        ii = [],
-        Oi = [],
-        mi = [],
-        Ei = [],
-        Ni = [],
-        Pi = [],
-        Li = [],
-        ci = [],
-        wi = [],
-        ti = [],
-        Zi = [],
-        xi = [],
-        li = [];
-      return WW = class extends vW {
-        set hasAlpha(WW) {
-          this._hasAlpha = WW
+    var KR, wR = GR(41542),
+      rR = GR(41407);
+    let eR = (() => {
+      var RR;
+      let JR, GR, fR, KR, rR, eR, aR, LR, nR, UR, WR, AR, CR, XR, MR, BR, lR, pR, gR, bR, vR, OR, xR, NR, DR, HR = VR,
+        oR = [],
+        cR = [],
+        PR = [],
+        IR = [],
+        mR = [],
+        zR = [],
+        SR = [],
+        jR = [],
+        dR = [],
+        ER = [],
+        YR = [],
+        kR = [],
+        QR = [],
+        FR = [],
+        TR = [],
+        sR = [],
+        hR = [],
+        RJ = [],
+        JJ = [],
+        GJ = [],
+        yJ = [],
+        tJ = [],
+        uJ = [],
+        ZJ = [],
+        qJ = [],
+        iJ = [],
+        fJ = [],
+        VJ = [],
+        KJ = [],
+        wJ = [],
+        rJ = [];
+      return RR = class extends HR {
+        set hasAlpha(RR) {
+          this._hasAlpha = RR
         }
         get hasAlpha() {
           return this._hasAlpha
         }
-        set getAlphaFromRGB(WW) {
-          this._getAlphaFromRGB !== WW && (this._getAlphaFromRGB = WW, this._scene && this._scene.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        set getAlphaFromRGB(RR) {
+          this._getAlphaFromRGB !== RR && (this._getAlphaFromRGB = RR, this._scene && this._scene.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this))))
         }
         get getAlphaFromRGB() {
           return this._getAlphaFromRGB
         }
-        set coordinatesIndex(WW) {
-          this._coordinatesIndex !== WW && (this._coordinatesIndex = WW, this._scene && this._scene.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        set coordinatesIndex(RR) {
+          this._coordinatesIndex !== RR && (this._coordinatesIndex = RR, this._scene && this._scene.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this))))
         }
         get coordinatesIndex() {
           return this._coordinatesIndex
         }
-        set coordinatesMode(WW) {
-          this._coordinatesMode !== WW && (this._coordinatesMode = WW, this._scene && this._scene.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        set coordinatesMode(RR) {
+          this._coordinatesMode !== RR && (this._coordinatesMode = RR, this._scene && this._scene.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this))))
         }
         get coordinatesMode() {
           return this._coordinatesMode
@@ -156,51 +156,51 @@ export const modules = {
         get wrapU() {
           return this._wrapU
         }
-        set wrapU(WW) {
-          this._wrapU = WW
+        set wrapU(RR) {
+          this._wrapU = RR
         }
         get wrapV() {
           return this._wrapV
         }
-        set wrapV(WW) {
-          this._wrapV = WW
+        set wrapV(RR) {
+          this._wrapV = RR
         }
         get isCube() {
           return this._texture ? this._texture.isCube : this._isCube
         }
-        set isCube(WW) {
-          this._texture ? this._texture.isCube = WW : this._isCube = WW
+        set isCube(RR) {
+          this._texture ? this._texture.isCube = RR : this._isCube = RR
         }
         get is3D() {
           return !!this._texture && this._texture.is3D
         }
-        set is3D(WW) {
-          this._texture && (this._texture.is3D = WW)
+        set is3D(RR) {
+          this._texture && (this._texture.is3D = RR)
         }
         get is2DArray() {
           return !!this._texture && this._texture.is2DArray
         }
-        set is2DArray(WW) {
-          this._texture && (this._texture.is2DArray = WW)
+        set is2DArray(RR) {
+          this._texture && (this._texture.is2DArray = RR)
         }
         get gammaSpace() {
           return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
         }
-        set gammaSpace(WW) {
+        set gammaSpace(RR) {
           if (this._texture) {
-            if (this._texture._gammaSpace === WW) return;
-            this._texture._gammaSpace = WW
+            if (this._texture._gammaSpace === RR) return;
+            this._texture._gammaSpace = RR
           } else {
-            if (this._gammaSpace === WW) return;
-            this._gammaSpace = WW
+            if (this._gammaSpace === RR) return;
+            this._gammaSpace = RR
           }
-          this.bD()?.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this)))
+          this.jH()?.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this)))
         }
         get isRGBD() {
           return null != this._texture && this._texture._isRGBD
         }
-        set isRGBD(WW) {
-          WW !== this.isRGBD && (this._texture && (this._texture._isRGBD = WW), this.bD()?.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        set isRGBD(RR) {
+          RR !== this.isRGBD && (this._texture && (this._texture._isRGBD = RR), this.jH()?.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this))))
         }
         get noMipmap() {
           return !1
@@ -208,29 +208,29 @@ export const modules = {
         get lodGenerationOffset() {
           return this._texture ? this._texture._lodGenerationOffset : 0
         }
-        set lodGenerationOffset(WW) {
-          this._texture && (this._texture._lodGenerationOffset = WW)
+        set lodGenerationOffset(RR) {
+          this._texture && (this._texture._lodGenerationOffset = RR)
         }
         get lodGenerationScale() {
           return this._texture ? this._texture._lodGenerationScale : 0
         }
-        set lodGenerationScale(WW) {
-          this._texture && (this._texture._lodGenerationScale = WW)
+        set lodGenerationScale(RR) {
+          this._texture && (this._texture._lodGenerationScale = RR)
         }
         get linearSpecularLOD() {
           return !!this._texture && this._texture._linearSpecularLOD
         }
-        set linearSpecularLOD(WW) {
-          this._texture && (this._texture._linearSpecularLOD = WW)
+        set linearSpecularLOD(RR) {
+          this._texture && (this._texture._linearSpecularLOD = RR)
         }
         get irradianceTexture() {
           return this._texture ? this._texture._irradianceTexture : null
         }
-        set irradianceTexture(WW) {
-          this._texture && (this._texture._irradianceTexture = WW)
+        set irradianceTexture(RR) {
+          this._texture && (this._texture._irradianceTexture = RR)
         }
         get uid() {
-          return this._uid || (this._uid = (0, cW.b)()), this._uid
+          return this._uid || (this._uid = (0, iR.c)()), this._uid
         }
         toString() {
           return this.name
@@ -238,8 +238,8 @@ export const modules = {
         getClassName() {
           return "BaseTexture"
         }
-        set onDispose(WW) {
-          this._onDisposeObserver && this.jD.remove(this._onDisposeObserver), this._onDisposeObserver = this.jD.add(WW)
+        set onDispose(RR) {
+          this._onDisposeObserver && this.YH.remove(this._onDisposeObserver), this._onDisposeObserver = this.YH.add(RR)
         }
         get isBlocking() {
           return !0
@@ -250,21 +250,21 @@ export const modules = {
         get errorObject() {
           return this._errorObject
         }
-        constructor(iW) {
-          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          super(null), this.uniqueId = ((0, mW.g)(this, gW), (0, mW.g)(this, DW, void 0)), this.name = ((0, mW.g)(this, VW), (0, mW.g)(this, pW, void 0)), this.displayName = ((0, mW.g)(this, fW), (0, mW.g)(this, CW, void 0)), this.metadata = ((0, mW.g)(this, XW), (0, mW.g)(this, BW, null)), this._internalMetadata = (0, mW.g)(this, qW), this.reservedDataStore = null, this._hasAlpha = (0, mW.g)(this, RW, !1), this._getAlphaFromRGB = ((0, mW.g)(this, GW), (0, mW.g)(this, IW, !1)), this.level = ((0, mW.g)(this, aW), (0, mW.g)(this, rW, 1)), this._coordinatesIndex = ((0, mW.g)(this, zW), (0, mW.g)(this, FW, 0)), this.optimizeUVAllocation = ((0, mW.g)(this, QW), (0, mW.g)(this, Wi, !0)), this._coordinatesMode = ((0, mW.g)(this, ii), (0, mW.g)(this, Oi, 0)), this.wrapR = ((0, mW.g)(this, mi), (0, mW.g)(this, Ei, 1)), this.anisotropicFilteringLevel = ((0, mW.g)(this, Ni), (0, mW.g)(this, Pi, WW.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, mW.g)(this, Li), !1), this._gammaSpace = !0, this.invertZ = (0, mW.g)(this, ci, !1), this.lodLevelInAlpha = ((0, mW.g)(this, wi), (0, mW.g)(this, ti, !1)), this._dominantDirection = ((0, mW.g)(this, Zi), null), this.isRenderTarget = (0, mW.g)(this, xi, !1), this._prefiltered = ((0, mW.g)(this, li), !1), this._forceSerialize = !1, this.animations = [], this.jD = new NW.e, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, iW ? WW._IsScene(iW) ? this._scene = iW : this._engine = iW : this._scene = LW.d.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.VA()), this._texture = OW, this._uid = null
+        constructor(JR) {
+          let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, yR.m)(this, oR), (0, yR.m)(this, cR, void 0)), this.name = ((0, yR.m)(this, PR), (0, yR.m)(this, IR, void 0)), this.displayName = ((0, yR.m)(this, mR), (0, yR.m)(this, zR, void 0)), this.metadata = ((0, yR.m)(this, SR), (0, yR.m)(this, jR, null)), this._internalMetadata = (0, yR.m)(this, dR), this.reservedDataStore = null, this._hasAlpha = (0, yR.m)(this, ER, !1), this._getAlphaFromRGB = ((0, yR.m)(this, YR), (0, yR.m)(this, kR, !1)), this.level = ((0, yR.m)(this, QR), (0, yR.m)(this, FR, 1)), this._coordinatesIndex = ((0, yR.m)(this, TR), (0, yR.m)(this, sR, 0)), this.optimizeUVAllocation = ((0, yR.m)(this, hR), (0, yR.m)(this, RJ, !0)), this._coordinatesMode = ((0, yR.m)(this, JJ), (0, yR.m)(this, GJ, 0)), this.wrapR = ((0, yR.m)(this, yJ), (0, yR.m)(this, tJ, 1)), this.anisotropicFilteringLevel = ((0, yR.m)(this, uJ), (0, yR.m)(this, ZJ, RR.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, yR.m)(this, qJ), !1), this._gammaSpace = !0, this.invertZ = (0, yR.m)(this, iJ, !1), this.lodLevelInAlpha = ((0, yR.m)(this, fJ), (0, yR.m)(this, VJ, !1)), this._dominantDirection = ((0, yR.m)(this, KJ), null), this.isRenderTarget = (0, yR.m)(this, wJ, !1), this._prefiltered = ((0, yR.m)(this, rJ), !1), this._forceSerialize = !1, this.animations = [], this.YH = new uR.b, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, JR ? RR._IsScene(JR) ? this._scene = JR : this._engine = JR : this._scene = qR.c.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.ke()), this._texture = GR, this._uid = null
         }
-        bD() {
+        jH() {
           return this._scene
         }
         _getEngine() {
           return this._engine
         }
         getTextureMatrix() {
-          return PW.d.IdentityReadOnly
+          return ZR.e.IdentityReadOnly
         }
         getReflectionTextureMatrix() {
-          return PW.d.IdentityReadOnly
+          return ZR.e.IdentityReadOnly
         }
         getRefractionTextureMatrix() {
           return this.getReflectionTextureMatrix()
@@ -272,18 +272,18 @@ export const modules = {
         isReadyOrNotBlocking() {
           return !this.isBlocking || this.isReady() || this.loadingError
         }
-        scale(WW) {}
+        scale(RR) {}
         get canRescale() {
           return !1
         }
-        _getFromCache(WW, iW, OW, mW, EW, NW) {
-          const PW = this._getEngine();
-          if (!PW) return null;
-          const LW = PW._getUseSRGBBuffer(!!EW, iW),
-            cW = PW.getLoadedTexturesCache();
-          for (let wW = 0; wW < cW.length; wW++) {
-            const PW = cW[wW];
-            if ((void 0 === EW || LW === PW._useSRGBBuffer) && (void 0 === mW || mW === PW.invertY) && PW.url === WW && PW.generateMipMaps === !iW && (!OW || OW === PW.samplingMode) && (void 0 === NW || NW === PW.isCube)) return PW.incrementReferences(), PW
+        _getFromCache(RR, JR, GR, yR, tR, uR) {
+          const ZR = this._getEngine();
+          if (!ZR) return null;
+          const qR = ZR._getUseSRGBBuffer(!!tR, JR),
+            iR = ZR.getLoadedTexturesCache();
+          for (let fR = 0; fR < iR.length; fR++) {
+            const ZR = iR[fR];
+            if ((void 0 === tR || qR === ZR._useSRGBBuffer) && (void 0 === yR || yR === ZR.invertY) && ZR.url === RR && ZR.generateMipMaps === !JR && (!GR || GR === ZR.samplingMode) && (void 0 === uR || uR === ZR.isCube)) return ZR.incrementReferences(), ZR
           }
           return null
         }
@@ -298,48 +298,48 @@ export const modules = {
           return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
         }
         _markAllSubMeshesAsTexturesDirty() {
-          const WW = this.bD();
-          WW && WW.markAllMaterialsAsDirty(1)
+          const RR = this.jH();
+          RR && RR.markAllMaterialsAsDirty(1)
         }
         readPixels() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            mW = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-            NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-            PW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
-            LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
-            cW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            yR = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            ZR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            qR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            iR = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
           if (!this._texture) return null;
-          const wW = this._getEngine();
-          if (!wW) return null;
-          const tW = this.getSize();
-          let ZW = tW.width,
-            xW = tW.height;
-          0 !== iW && (ZW /= Math.pow(2, iW), xW /= Math.pow(2, iW), ZW = Math.round(ZW), xW = Math.round(xW)), LW = Math.min(ZW, LW), cW = Math.min(xW, cW);
+          const fR = this._getEngine();
+          if (!fR) return null;
+          const VR = this.getSize();
+          let KR = VR.width,
+            wR = VR.height;
+          0 !== JR && (KR /= Math.pow(2, JR), wR /= Math.pow(2, JR), KR = Math.round(KR), wR = Math.round(wR)), qR = Math.min(KR, qR), iR = Math.min(wR, iR);
           try {
-            return this._texture.isCube || this._texture.is2DArray ? wW._readTexturePixels(this._texture, LW, cW, WW, iW, OW, mW, EW, NW, PW) : wW._readTexturePixels(this._texture, LW, cW, -1, iW, OW, mW, EW, NW, PW)
-          } catch (lW) {
+            return this._texture.isCube || this._texture.is2DArray ? fR._readTexturePixels(this._texture, qR, iR, RR, JR, GR, yR, tR, uR, ZR) : fR._readTexturePixels(this._texture, qR, iR, -1, JR, GR, yR, tR, uR, ZR)
+          } catch (rR) {
             return null
           }
         }
         _readPixelsSync() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            mW = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            yR = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
           if (!this._texture) return null;
-          const NW = this.getSize();
-          let PW = NW.width,
-            LW = NW.height;
-          const cW = this._getEngine();
-          if (!cW) return null;
-          0 != iW && (PW /= Math.pow(2, iW), LW /= Math.pow(2, iW), PW = Math.round(PW), LW = Math.round(LW));
+          const uR = this.getSize();
+          let ZR = uR.width,
+            qR = uR.height;
+          const iR = this._getEngine();
+          if (!iR) return null;
+          0 != JR && (ZR /= Math.pow(2, JR), qR /= Math.pow(2, JR), ZR = Math.round(ZR), qR = Math.round(qR));
           try {
-            return this._texture.isCube ? cW._readTexturePixelsSync(this._texture, PW, LW, WW, iW, OW, mW, EW) : cW._readTexturePixelsSync(this._texture, PW, LW, -1, iW, OW, mW, EW)
-          } catch (wW) {
+            return this._texture.isCube ? iR._readTexturePixelsSync(this._texture, ZR, qR, RR, JR, GR, yR, tR) : iR._readTexturePixelsSync(this._texture, ZR, qR, -1, JR, GR, yR, tR)
+          } catch (fR) {
             return null
           }
         }
@@ -355,438 +355,438 @@ export const modules = {
         dispose() {
           if (this._scene) {
             this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
-            const WW = this._scene.textures.indexOf(this);
-            if (WW >= 0 && this._scene.textures.splice(WW, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
-              const WW = this._parentContainer.textures.indexOf(this);
-              WW > -1 && this._parentContainer.textures.splice(WW, 1), this._parentContainer = null
+            const RR = this._scene.textures.indexOf(this);
+            if (RR >= 0 && this._scene.textures.splice(RR, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const RR = this._parentContainer.textures.indexOf(this);
+              RR > -1 && this._parentContainer.textures.splice(RR, 1), this._parentContainer = null
             }
           }
-          this.jD.notifyObservers(this), this.jD.clear(), this.metadata = null, super.dispose()
+          this.YH.notifyObservers(this), this.YH.clear(), this.metadata = null, super.dispose()
         }
         serialize() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (!this.name && !WW) return null;
-          const iW = xW.d.Serialize(this);
-          return xW.d.AppendSerializedAnimations(this, iW), iW
+          let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !RR) return null;
+          const JR = wR.c.Serialize(this);
+          return wR.c.AppendSerializedAnimations(this, JR), JR
         }
-        static WhenAllReady(WW, iW) {
-          let OW = WW.length;
-          if (0 !== OW)
-            for (let mW = 0; mW < WW.length; mW++) {
-              const EW = WW[mW];
-              if (EW.isReady()) 0 === --OW && iW();
+        static WhenAllReady(RR, JR) {
+          let GR = RR.length;
+          if (0 !== GR)
+            for (let yR = 0; yR < RR.length; yR++) {
+              const tR = RR[yR];
+              if (tR.isReady()) 0 === --GR && JR();
               else {
-                const WW = EW.onLoadObservable;
-                WW ? WW.addOnce((() => {
-                  0 === --OW && iW()
-                })) : 0 === --OW && iW()
+                const RR = tR.onLoadObservable;
+                RR ? RR.addOnce((() => {
+                  0 === --GR && JR()
+                })) : 0 === --GR && JR()
               }
-            } else iW()
+            } else JR()
         }
-        static _IsScene(WW) {
-          return "Scene" === WW.getClassName()
+        static _IsScene(RR) {
+          return "Scene" === RR.getClassName()
         }
       }, (() => {
-        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(vW[Symbol.metadata] ?? null) : void 0;
-        iW = [(0, EW.M)()], OW = [(0, EW.M)()], wW = [(0, EW.M)()], ZW = [(0, EW.M)()], lW = [(0, EW.M)("hasAlpha")], AW = [(0, EW.M)("getAlphaFromRGB")], bW = [(0, EW.M)()], jW = [(0, EW.M)("coordinatesIndex")], UW = [(0, EW.M)()], kW = [(0, EW.M)("coordinatesMode")], sW = [(0, EW.M)()], MW = [(0, EW.M)()], KW = [(0, EW.M)()], SW = [(0, EW.M)()], YW = [(0, EW.M)()], yW = [(0, EW.M)()], TW = [(0, EW.M)()], JW = [(0, EW.M)()], hW = [(0, EW.M)()], HW = [(0, EW.M)()], nW = [(0, EW.M)()], uW = [(0, EW.M)()], oW = [(0, EW.M)()], dW = [(0, EW.F)()], eW = [(0, EW.M)()], (0, mW.e)(WW, null, sW, {
+        const uR = "function" === typeof Symbol && Symbol.metadata ? Object.create(HR[Symbol.metadata] ?? null) : void 0;
+        JR = [(0, tR.H)()], GR = [(0, tR.H)()], fR = [(0, tR.H)()], KR = [(0, tR.H)()], rR = [(0, tR.H)("hasAlpha")], eR = [(0, tR.H)("getAlphaFromRGB")], aR = [(0, tR.H)()], LR = [(0, tR.H)("coordinatesIndex")], nR = [(0, tR.H)()], UR = [(0, tR.H)("coordinatesMode")], WR = [(0, tR.H)()], AR = [(0, tR.H)()], CR = [(0, tR.H)()], XR = [(0, tR.H)()], MR = [(0, tR.H)()], BR = [(0, tR.H)()], lR = [(0, tR.H)()], pR = [(0, tR.H)()], gR = [(0, tR.H)()], bR = [(0, tR.H)()], vR = [(0, tR.H)()], OR = [(0, tR.H)()], xR = [(0, tR.H)()], NR = [(0, tR.C)()], DR = [(0, tR.H)()], (0, yR.l)(RR, null, WR, {
           kind: "getter",
           name: "wrapU",
           static: !1,
           private: !1,
           access: {
-            has: WW => "wrapU" in WW,
-            get: WW => WW.wrapU
+            has: RR => "wrapU" in RR,
+            get: RR => RR.wrapU
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, MW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, AR, {
           kind: "getter",
           name: "wrapV",
           static: !1,
           private: !1,
           access: {
-            has: WW => "wrapV" in WW,
-            get: WW => WW.wrapV
+            has: RR => "wrapV" in RR,
+            get: RR => RR.wrapV
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, YW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, MR, {
           kind: "getter",
           name: "isCube",
           static: !1,
           private: !1,
           access: {
-            has: WW => "isCube" in WW,
-            get: WW => WW.isCube
+            has: RR => "isCube" in RR,
+            get: RR => RR.isCube
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, yW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, BR, {
           kind: "getter",
           name: "is3D",
           static: !1,
           private: !1,
           access: {
-            has: WW => "is3D" in WW,
-            get: WW => WW.is3D
+            has: RR => "is3D" in RR,
+            get: RR => RR.is3D
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, TW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, lR, {
           kind: "getter",
           name: "is2DArray",
           static: !1,
           private: !1,
           access: {
-            has: WW => "is2DArray" in WW,
-            get: WW => WW.is2DArray
+            has: RR => "is2DArray" in RR,
+            get: RR => RR.is2DArray
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, JW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, pR, {
           kind: "getter",
           name: "gammaSpace",
           static: !1,
           private: !1,
           access: {
-            has: WW => "gammaSpace" in WW,
-            get: WW => WW.gammaSpace
+            has: RR => "gammaSpace" in RR,
+            get: RR => RR.gammaSpace
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, nW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, vR, {
           kind: "getter",
           name: "lodGenerationOffset",
           static: !1,
           private: !1,
           access: {
-            has: WW => "lodGenerationOffset" in WW,
-            get: WW => WW.lodGenerationOffset
+            has: RR => "lodGenerationOffset" in RR,
+            get: RR => RR.lodGenerationOffset
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, uW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, OR, {
           kind: "getter",
           name: "lodGenerationScale",
           static: !1,
           private: !1,
           access: {
-            has: WW => "lodGenerationScale" in WW,
-            get: WW => WW.lodGenerationScale
+            has: RR => "lodGenerationScale" in RR,
+            get: RR => RR.lodGenerationScale
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, oW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, xR, {
           kind: "getter",
           name: "linearSpecularLOD",
           static: !1,
           private: !1,
           access: {
-            has: WW => "linearSpecularLOD" in WW,
-            get: WW => WW.linearSpecularLOD
+            has: RR => "linearSpecularLOD" in RR,
+            get: RR => RR.linearSpecularLOD
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(WW, null, dW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(RR, null, NR, {
           kind: "getter",
           name: "irradianceTexture",
           static: !1,
           private: !1,
           access: {
-            has: WW => "irradianceTexture" in WW,
-            get: WW => WW.irradianceTexture
+            has: RR => "irradianceTexture" in RR,
+            get: RR => RR.irradianceTexture
           },
-          metadata: NW
-        }, null, gW), (0, mW.e)(null, null, iW, {
+          metadata: uR
+        }, null, oR), (0, yR.l)(null, null, JR, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: WW => "uniqueId" in WW,
-            get: WW => WW.uniqueId,
-            set: (WW, iW) => {
-              WW.uniqueId = iW
+            has: RR => "uniqueId" in RR,
+            get: RR => RR.uniqueId,
+            set: (RR, JR) => {
+              RR.uniqueId = JR
             }
           },
-          metadata: NW
-        }, DW, VW), (0, mW.e)(null, null, OW, {
+          metadata: uR
+        }, cR, PR), (0, yR.l)(null, null, GR, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: WW => "name" in WW,
-            get: WW => WW.name,
-            set: (WW, iW) => {
-              WW.name = iW
+            has: RR => "name" in RR,
+            get: RR => RR.name,
+            set: (RR, JR) => {
+              RR.name = JR
             }
           },
-          metadata: NW
-        }, pW, fW), (0, mW.e)(null, null, wW, {
+          metadata: uR
+        }, IR, mR), (0, yR.l)(null, null, fR, {
           kind: "field",
           name: "displayName",
           static: !1,
           private: !1,
           access: {
-            has: WW => "displayName" in WW,
-            get: WW => WW.displayName,
-            set: (WW, iW) => {
-              WW.displayName = iW
+            has: RR => "displayName" in RR,
+            get: RR => RR.displayName,
+            set: (RR, JR) => {
+              RR.displayName = JR
             }
           },
-          metadata: NW
-        }, CW, XW), (0, mW.e)(null, null, ZW, {
+          metadata: uR
+        }, zR, SR), (0, yR.l)(null, null, KR, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: WW => "metadata" in WW,
-            get: WW => WW.metadata,
-            set: (WW, iW) => {
-              WW.metadata = iW
+            has: RR => "metadata" in RR,
+            get: RR => RR.metadata,
+            set: (RR, JR) => {
+              RR.metadata = JR
             }
           },
-          metadata: NW
-        }, BW, qW), (0, mW.e)(null, null, lW, {
+          metadata: uR
+        }, jR, dR), (0, yR.l)(null, null, rR, {
           kind: "field",
           name: "_hasAlpha",
           static: !1,
           private: !1,
           access: {
-            has: WW => "_hasAlpha" in WW,
-            get: WW => WW._hasAlpha,
-            set: (WW, iW) => {
-              WW._hasAlpha = iW
+            has: RR => "_hasAlpha" in RR,
+            get: RR => RR._hasAlpha,
+            set: (RR, JR) => {
+              RR._hasAlpha = JR
             }
           },
-          metadata: NW
-        }, RW, GW), (0, mW.e)(null, null, AW, {
+          metadata: uR
+        }, ER, YR), (0, yR.l)(null, null, eR, {
           kind: "field",
           name: "_getAlphaFromRGB",
           static: !1,
           private: !1,
           access: {
-            has: WW => "_getAlphaFromRGB" in WW,
-            get: WW => WW._getAlphaFromRGB,
-            set: (WW, iW) => {
-              WW._getAlphaFromRGB = iW
+            has: RR => "_getAlphaFromRGB" in RR,
+            get: RR => RR._getAlphaFromRGB,
+            set: (RR, JR) => {
+              RR._getAlphaFromRGB = JR
             }
           },
-          metadata: NW
-        }, IW, aW), (0, mW.e)(null, null, bW, {
+          metadata: uR
+        }, kR, QR), (0, yR.l)(null, null, aR, {
           kind: "field",
           name: "level",
           static: !1,
           private: !1,
           access: {
-            has: WW => "level" in WW,
-            get: WW => WW.level,
-            set: (WW, iW) => {
-              WW.level = iW
+            has: RR => "level" in RR,
+            get: RR => RR.level,
+            set: (RR, JR) => {
+              RR.level = JR
             }
           },
-          metadata: NW
-        }, rW, zW), (0, mW.e)(null, null, jW, {
+          metadata: uR
+        }, FR, TR), (0, yR.l)(null, null, LR, {
           kind: "field",
           name: "_coordinatesIndex",
           static: !1,
           private: !1,
           access: {
-            has: WW => "_coordinatesIndex" in WW,
-            get: WW => WW._coordinatesIndex,
-            set: (WW, iW) => {
-              WW._coordinatesIndex = iW
+            has: RR => "_coordinatesIndex" in RR,
+            get: RR => RR._coordinatesIndex,
+            set: (RR, JR) => {
+              RR._coordinatesIndex = JR
             }
           },
-          metadata: NW
-        }, FW, QW), (0, mW.e)(null, null, UW, {
+          metadata: uR
+        }, sR, hR), (0, yR.l)(null, null, nR, {
           kind: "field",
           name: "optimizeUVAllocation",
           static: !1,
           private: !1,
           access: {
-            has: WW => "optimizeUVAllocation" in WW,
-            get: WW => WW.optimizeUVAllocation,
-            set: (WW, iW) => {
-              WW.optimizeUVAllocation = iW
+            has: RR => "optimizeUVAllocation" in RR,
+            get: RR => RR.optimizeUVAllocation,
+            set: (RR, JR) => {
+              RR.optimizeUVAllocation = JR
             }
           },
-          metadata: NW
-        }, Wi, ii), (0, mW.e)(null, null, kW, {
+          metadata: uR
+        }, RJ, JJ), (0, yR.l)(null, null, UR, {
           kind: "field",
           name: "_coordinatesMode",
           static: !1,
           private: !1,
           access: {
-            has: WW => "_coordinatesMode" in WW,
-            get: WW => WW._coordinatesMode,
-            set: (WW, iW) => {
-              WW._coordinatesMode = iW
+            has: RR => "_coordinatesMode" in RR,
+            get: RR => RR._coordinatesMode,
+            set: (RR, JR) => {
+              RR._coordinatesMode = JR
             }
           },
-          metadata: NW
-        }, Oi, mi), (0, mW.e)(null, null, KW, {
+          metadata: uR
+        }, GJ, yJ), (0, yR.l)(null, null, CR, {
           kind: "field",
           name: "wrapR",
           static: !1,
           private: !1,
           access: {
-            has: WW => "wrapR" in WW,
-            get: WW => WW.wrapR,
-            set: (WW, iW) => {
-              WW.wrapR = iW
+            has: RR => "wrapR" in RR,
+            get: RR => RR.wrapR,
+            set: (RR, JR) => {
+              RR.wrapR = JR
             }
           },
-          metadata: NW
-        }, Ei, Ni), (0, mW.e)(null, null, SW, {
+          metadata: uR
+        }, tJ, uJ), (0, yR.l)(null, null, XR, {
           kind: "field",
           name: "anisotropicFilteringLevel",
           static: !1,
           private: !1,
           access: {
-            has: WW => "anisotropicFilteringLevel" in WW,
-            get: WW => WW.anisotropicFilteringLevel,
-            set: (WW, iW) => {
-              WW.anisotropicFilteringLevel = iW
+            has: RR => "anisotropicFilteringLevel" in RR,
+            get: RR => RR.anisotropicFilteringLevel,
+            set: (RR, JR) => {
+              RR.anisotropicFilteringLevel = JR
             }
           },
-          metadata: NW
-        }, Pi, Li), (0, mW.e)(null, null, hW, {
+          metadata: uR
+        }, ZJ, qJ), (0, yR.l)(null, null, gR, {
           kind: "field",
           name: "invertZ",
           static: !1,
           private: !1,
           access: {
-            has: WW => "invertZ" in WW,
-            get: WW => WW.invertZ,
-            set: (WW, iW) => {
-              WW.invertZ = iW
+            has: RR => "invertZ" in RR,
+            get: RR => RR.invertZ,
+            set: (RR, JR) => {
+              RR.invertZ = JR
             }
           },
-          metadata: NW
-        }, ci, wi), (0, mW.e)(null, null, HW, {
+          metadata: uR
+        }, iJ, fJ), (0, yR.l)(null, null, bR, {
           kind: "field",
           name: "lodLevelInAlpha",
           static: !1,
           private: !1,
           access: {
-            has: WW => "lodLevelInAlpha" in WW,
-            get: WW => WW.lodLevelInAlpha,
-            set: (WW, iW) => {
-              WW.lodLevelInAlpha = iW
+            has: RR => "lodLevelInAlpha" in RR,
+            get: RR => RR.lodLevelInAlpha,
+            set: (RR, JR) => {
+              RR.lodLevelInAlpha = JR
             }
           },
-          metadata: NW
-        }, ti, Zi), (0, mW.e)(null, null, eW, {
+          metadata: uR
+        }, VJ, KJ), (0, yR.l)(null, null, DR, {
           kind: "field",
           name: "isRenderTarget",
           static: !1,
           private: !1,
           access: {
-            has: WW => "isRenderTarget" in WW,
-            get: WW => WW.isRenderTarget,
-            set: (WW, iW) => {
-              WW.isRenderTarget = iW
+            has: RR => "isRenderTarget" in RR,
+            get: RR => RR.isRenderTarget,
+            set: (RR, JR) => {
+              RR.isRenderTarget = JR
             }
           },
-          metadata: NW
-        }, xi, li), NW && Object.defineProperty(WW, Symbol.metadata, {
+          metadata: uR
+        }, wJ, rJ), uR && Object.defineProperty(RR, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: NW
+          value: uR
         })
-      })(), WW.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, WW
+      })(), RR.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, RR
     })();
-    (ZW = AW.prototype).forceSphericalPolynomialsRecompute ?? (ZW.forceSphericalPolynomialsRecompute = (0, lW.k)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(AW.prototype, "sphericalPolynomial") || Object.defineProperty(AW.prototype, "sphericalPolynomial", (0, lW.h)("BaseTexture", "sphericalPolynomial"))
+    (KR = eR.prototype).forceSphericalPolynomialsRecompute ?? (KR.forceSphericalPolynomialsRecompute = (0, rR.f)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(eR.prototype, "sphericalPolynomial") || Object.defineProperty(eR.prototype, "sphericalPolynomial", (0, rR.e)("BaseTexture", "sphericalPolynomial"))
   },
-  41992: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => KW,
-      h: () => sW
+  42011: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => CR,
+      f: () => WR
     });
-    var mW = OW(41516),
-      EW = OW(41519),
-      NW = OW(38276),
-      PW = OW(38241),
-      LW = OW(41511),
-      cW = OW(38299),
-      wW = OW(41415),
-      tW = OW(41420),
-      ZW = OW(41626),
-      xW = OW(38939),
-      lW = OW(41574);
+    var yR = GR(41520),
+      tR = GR(41524),
+      uR = GR(38233),
+      ZR = GR(38204),
+      qR = GR(41514),
+      iR = GR(38253),
+      fR = GR(41407),
+      VR = GR(41415),
+      KR = GR(41620),
+      wR = GR(38933),
+      rR = GR(41581);
 
-    function AW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const mW = iW.width,
-        EW = iW.height;
-      if (WW instanceof Float32Array) {
-        let iW = WW.byteLength / WW.BYTES_PER_ELEMENT;
-        const OW = new Uint8Array(iW);
-        for (; --iW >= 0;) {
-          let mW = WW[iW];
-          mW < 0 ? mW = 0 : mW > 1 && (mW = 1), OW[iW] = 255 * mW
+    function eR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const yR = JR.width,
+        tR = JR.height;
+      if (RR instanceof Float32Array) {
+        let JR = RR.byteLength / RR.BYTES_PER_ELEMENT;
+        const GR = new Uint8Array(JR);
+        for (; --JR >= 0;) {
+          let yR = RR[JR];
+          yR < 0 ? yR = 0 : yR > 1 && (yR = 1), GR[JR] = 255 * yR
         }
-        WW = OW
+        RR = GR
       }
-      const NW = document.createElement("canvas");
-      NW.width = mW, NW.height = EW;
-      const PW = NW.getContext("2d");
-      if (!PW) return null;
-      const LW = PW.createImageData(mW, EW);
-      if (LW.data.set(WW), PW.putImageData(LW, 0, 0), OW) {
-        const WW = document.createElement("canvas");
-        WW.width = mW, WW.height = EW;
-        const iW = WW.getContext("2d");
-        return iW ? (iW.translate(0, EW), iW.scale(1, -1), iW.drawImage(NW, 0, 0), WW.toDataURL("image/png")) : null
+      const uR = document.createElement("canvas");
+      uR.width = yR, uR.height = tR;
+      const ZR = uR.getContext("2d");
+      if (!ZR) return null;
+      const qR = ZR.createImageData(yR, tR);
+      if (qR.data.set(RR), ZR.putImageData(qR, 0, 0), GR) {
+        const RR = document.createElement("canvas");
+        RR.width = yR, RR.height = tR;
+        const JR = RR.getContext("2d");
+        return JR ? (JR.translate(0, tR), JR.scale(1, -1), JR.drawImage(uR, 0, 0), RR.toDataURL("image/png")) : null
       }
-      return NW.toDataURL("image/png")
+      return uR.toDataURL("image/png")
     }
 
-    function bW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const mW = WW.getInternalTexture();
-      if (!mW) return null;
-      const EW = WW._readPixelsSync(iW, OW);
-      return EW ? AW(EW, WW.getSize(), mW.invertY) : null
+    function aR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const yR = RR.getInternalTexture();
+      if (!yR) return null;
+      const tR = RR._readPixelsSync(JR, GR);
+      return tR ? eR(tR, RR.getSize(), yR.invertY) : null
     }
-    async function jW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const mW = WW.getInternalTexture();
-      if (!mW) return null;
-      const EW = await WW.readPixels(iW, OW);
-      return EW ? AW(EW, WW.getSize(), mW.invertY) : null
+    async function LR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const yR = RR.getInternalTexture();
+      if (!yR) return null;
+      const tR = await RR.readPixels(JR, GR);
+      return tR ? eR(tR, RR.getSize(), yR.invertY) : null
     }
-    var UW = OW(41940),
-      kW = OW(41538);
-    let sW = (() => {
-        var WW;
-        let iW, OW, AW, sW, MW, KW, SW, YW, yW, TW, JW, hW, HW, nW = LW.c,
-          uW = [],
-          oW = [],
-          dW = [],
-          eW = [],
-          vW = [],
-          gW = [],
-          DW = [],
-          VW = [],
-          pW = [],
-          fW = [],
-          CW = [],
-          XW = [],
-          BW = [],
-          qW = [],
-          RW = [],
-          GW = [],
-          IW = [],
-          aW = [],
-          rW = [],
-          zW = [],
-          FW = [],
-          QW = [],
-          Wi = [],
-          ii = [],
-          Oi = [];
-        return WW = class extends nW {
-          static _CreateVideoTexture(iW, OW, mW) {
-            arguments.length > 5 && void 0 !== arguments[5] || WW.TRILINEAR_SAMPLINGMODE;
-            throw (0, wW.o)("VideoTexture")
+    var nR = GR(41972),
+      UR = GR(41542);
+    let WR = (() => {
+        var RR;
+        let JR, GR, eR, WR, AR, CR, XR, MR, BR, lR, pR, gR, bR, vR = qR.c,
+          OR = [],
+          xR = [],
+          NR = [],
+          DR = [],
+          HR = [],
+          oR = [],
+          cR = [],
+          PR = [],
+          IR = [],
+          mR = [],
+          zR = [],
+          SR = [],
+          jR = [],
+          dR = [],
+          ER = [],
+          YR = [],
+          kR = [],
+          QR = [],
+          FR = [],
+          TR = [],
+          sR = [],
+          hR = [],
+          RJ = [],
+          JJ = [],
+          GJ = [];
+        return RR = class extends vR {
+          static _CreateVideoTexture(JR, GR, yR) {
+            arguments.length > 5 && void 0 !== arguments[5] || RR.TRILINEAR_SAMPLINGMODE;
+            throw (0, fR.j)("VideoTexture")
           }
           get noMipmap() {
             return this._noMipmap
@@ -794,8 +794,8 @@ export const modules = {
           get mimeType() {
             return this._mimeType
           }
-          set isBlocking(WW) {
-            this._isBlocking = WW
+          set isBlocking(RR) {
+            this._isBlocking = RR
           }
           get isBlocking() {
             return this._isBlocking
@@ -803,109 +803,109 @@ export const modules = {
           get invertY() {
             return this._invertY
           }
-          constructor(iW, OW, EW, PW) {
-            let LW, cW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : WW.TRILINEAR_SAMPLINGMODE,
-              wW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              ZW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              xW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              lW = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              AW = arguments.length > 9 ? arguments[9] : void 0,
-              bW = arguments.length > 10 ? arguments[10] : void 0,
-              jW = arguments.length > 11 ? arguments[11] : void 0,
-              kW = arguments.length > 12 ? arguments[12] : void 0,
-              sW = arguments.length > 13 ? arguments[13] : void 0;
-            super(OW), this.url = ((0, mW.g)(this, uW), (0, mW.g)(this, oW, null)), this.uOffset = ((0, mW.g)(this, dW), (0, mW.g)(this, eW, 0)), this.vOffset = ((0, mW.g)(this, vW), (0, mW.g)(this, gW, 0)), this.uScale = ((0, mW.g)(this, DW), (0, mW.g)(this, VW, 1)), this.vScale = ((0, mW.g)(this, pW), (0, mW.g)(this, fW, 1)), this.uAng = ((0, mW.g)(this, CW), (0, mW.g)(this, XW, 0)), this.vAng = ((0, mW.g)(this, BW), (0, mW.g)(this, qW, 0)), this.wAng = ((0, mW.g)(this, RW), (0, mW.g)(this, GW, 0)), this.uRotationCenter = ((0, mW.g)(this, IW), (0, mW.g)(this, aW, .5)), this.vRotationCenter = ((0, mW.g)(this, rW), (0, mW.g)(this, zW, .5)), this.wRotationCenter = ((0, mW.g)(this, FW), (0, mW.g)(this, QW, .5)), this.homogeneousRotationInUVTransform = ((0, mW.g)(this, Wi), (0, mW.g)(this, ii, !1)), this.inspectableCustomProperties = ((0, mW.g)(this, Oi), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new NW.e, this._isBlocking = !0, this.name = iW || "", this.url = iW;
-            let MW = !1,
-              KW = null,
-              SW = !0;
-            "object" === typeof EW && null !== EW ? (LW = EW.noMipmap ?? !1, PW = EW.invertY ?? !UW.b, cW = EW.samplingMode ?? WW.TRILINEAR_SAMPLINGMODE, wW = EW.onLoad ?? null, ZW = EW.onError ?? null, xW = EW.buffer ?? null, lW = EW.deleteBuffer ?? !1, AW = EW.format, bW = EW.mimeType, jW = EW.loaderOptions, kW = EW.creationFlags, MW = EW.useSRGBBuffer ?? !1, KW = EW.internalTexture ?? null, SW = EW.gammaSpace ?? SW, sW = EW.forcedExtension ?? sW) : LW = !!EW, this._gammaSpace = SW, this._noMipmap = LW, this._invertY = void 0 === PW ? !UW.b : PW, this._initialSamplingMode = cW, this._buffer = xW, this._deleteBuffer = lW, this._mimeType = bW, this._loaderOptions = jW, this._creationFlags = kW, this._useSRGBBuffer = MW, this._forcedExtension = sW, void 0 !== AW && (this._format = AW);
-            const YW = this.bD(),
-              yW = this._getEngine();
-            if (!yW) return;
-            yW.onBeforeTextureInitObservable.notifyObservers(this);
-            const TW = () => {
-                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), wW && wW(), !this.isBlocking && YW && YW.resetCachedMaterial()
+          constructor(JR, GR, tR, ZR) {
+            let qR, iR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : RR.TRILINEAR_SAMPLINGMODE,
+              fR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              KR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              wR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              rR = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              eR = arguments.length > 9 ? arguments[9] : void 0,
+              aR = arguments.length > 10 ? arguments[10] : void 0,
+              LR = arguments.length > 11 ? arguments[11] : void 0,
+              UR = arguments.length > 12 ? arguments[12] : void 0,
+              WR = arguments.length > 13 ? arguments[13] : void 0;
+            super(GR), this.url = ((0, yR.m)(this, OR), (0, yR.m)(this, xR, null)), this.uOffset = ((0, yR.m)(this, NR), (0, yR.m)(this, DR, 0)), this.vOffset = ((0, yR.m)(this, HR), (0, yR.m)(this, oR, 0)), this.uScale = ((0, yR.m)(this, cR), (0, yR.m)(this, PR, 1)), this.vScale = ((0, yR.m)(this, IR), (0, yR.m)(this, mR, 1)), this.uAng = ((0, yR.m)(this, zR), (0, yR.m)(this, SR, 0)), this.vAng = ((0, yR.m)(this, jR), (0, yR.m)(this, dR, 0)), this.wAng = ((0, yR.m)(this, ER), (0, yR.m)(this, YR, 0)), this.uRotationCenter = ((0, yR.m)(this, kR), (0, yR.m)(this, QR, .5)), this.vRotationCenter = ((0, yR.m)(this, FR), (0, yR.m)(this, TR, .5)), this.wRotationCenter = ((0, yR.m)(this, sR), (0, yR.m)(this, hR, .5)), this.homogeneousRotationInUVTransform = ((0, yR.m)(this, RJ), (0, yR.m)(this, JJ, !1)), this.inspectableCustomProperties = ((0, yR.m)(this, GJ), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new uR.b, this._isBlocking = !0, this.name = JR || "", this.url = JR;
+            let AR = !1,
+              CR = null,
+              XR = !0;
+            "object" === typeof tR && null !== tR ? (qR = tR.noMipmap ?? !1, ZR = tR.invertY ?? !nR.d, iR = tR.samplingMode ?? RR.TRILINEAR_SAMPLINGMODE, fR = tR.onLoad ?? null, KR = tR.onError ?? null, wR = tR.buffer ?? null, rR = tR.deleteBuffer ?? !1, eR = tR.format, aR = tR.mimeType, LR = tR.loaderOptions, UR = tR.creationFlags, AR = tR.useSRGBBuffer ?? !1, CR = tR.internalTexture ?? null, XR = tR.gammaSpace ?? XR, WR = tR.forcedExtension ?? WR) : qR = !!tR, this._gammaSpace = XR, this._noMipmap = qR, this._invertY = void 0 === ZR ? !nR.d : ZR, this._initialSamplingMode = iR, this._buffer = wR, this._deleteBuffer = rR, this._mimeType = aR, this._loaderOptions = LR, this._creationFlags = UR, this._useSRGBBuffer = AR, this._forcedExtension = WR, void 0 !== eR && (this._format = eR);
+            const MR = this.jH(),
+              BR = this._getEngine();
+            if (!BR) return;
+            BR.onBeforeTextureInitObservable.notifyObservers(this);
+            const lR = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), fR && fR(), !this.isBlocking && MR && MR.resetCachedMaterial()
               },
-              JW = (iW, OW) => {
+              pR = (JR, GR) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: iW,
-                  exception: OW
-                }, ZW && ZW(iW, OW), WW.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: JR,
+                  exception: GR
+                }, KR && KR(JR, GR), RR.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            if (!this.url && !KW) return this._delayedOnLoad = TW, void(this._delayedOnError = JW);
-            if (this._texture = KW ?? this._getFromCache(this.url, LW, cW, this._invertY, MW, this.isCube), this._texture)
-              if (this._texture.isReady) tW.d.SetImmediate((() => TW()));
+            if (!this.url && !CR) return this._delayedOnLoad = lR, void(this._delayedOnError = pR);
+            if (this._texture = CR ?? this._getFromCache(this.url, qR, iR, this._invertY, AR, this.isCube), this._texture)
+              if (this._texture.isReady) VR.e.SetImmediate((() => lR()));
               else {
-                const WW = this._texture.onLoadedObservable.add(TW);
-                this._texture.onErrorObservable.add((iW => {
-                  JW(iW.message, iW.exception), this._texture?.onLoadedObservable.remove(WW)
+                const RR = this._texture.onLoadedObservable.add(lR);
+                this._texture.onErrorObservable.add((JR => {
+                  pR(JR.message, JR.exception), this._texture?.onLoadedObservable.remove(RR)
                 }))
               }
-            else if (YW && YW.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = TW, this._delayedOnError = JW;
+            else if (MR && MR.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = lR, this._delayedOnError = pR;
             else {
               try {
-                this._texture = yW.createTexture(this.url, LW, this._invertY, YW, cW, TW, JW, this._buffer, void 0, this._format, this._forcedExtension, bW, jW, kW, MW)
-              } catch (hW) {
-                throw JW("error loading", hW), hW
+                this._texture = BR.createTexture(this.url, qR, this._invertY, MR, iR, lR, pR, this._buffer, void 0, this._format, this._forcedExtension, aR, LR, UR, AR)
+              } catch (gR) {
+                throw pR("error loading", gR), gR
               }
-              lW && (this._buffer = null)
+              rR && (this._buffer = null)
             }
           }
-          updateURL(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              OW = arguments.length > 2 ? arguments[2] : void 0,
-              mW = arguments.length > 3 ? arguments[3] : void 0;
-            this.url && (this.releaseInternalTexture(), this.bD().markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = WW), this.url = WW, this._buffer = iW, this._forcedExtension = mW, this.delayLoadState = 4;
-            const EW = this._delayedOnLoad;
+          updateURL(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              GR = arguments.length > 2 ? arguments[2] : void 0,
+              yR = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.jH().markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = RR), this.url = RR, this._buffer = JR, this._forcedExtension = yR, this.delayLoadState = 4;
+            const tR = this._delayedOnLoad;
             this._delayedOnLoad = () => {
-              EW ? EW() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), OW && OW()
+              tR ? tR() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), GR && GR()
             }, this.delayLoad()
           }
           delayLoad() {
             if (4 !== this.delayLoadState) return;
-            const WW = this.bD();
-            if (!WW) return;
-            let iW = this.url;
-            !iW && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (iW = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(iW, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? tW.d.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = WW.VA().createTexture(iW, this._noMipmap, this._invertY, WW, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+            const RR = this.jH();
+            if (!RR) return;
+            let JR = this.url;
+            !JR && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (JR = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(JR, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? VR.e.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = RR.ke().createTexture(JR, this._noMipmap, this._invertY, RR, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
           }
-          _prepareRowForTextureGeneration(WW, iW, OW, mW) {
-            WW *= this._cachedUScale, iW *= this._cachedVScale, WW -= this.uRotationCenter * this._cachedUScale, iW -= this.vRotationCenter * this._cachedVScale, OW -= this.wRotationCenter, PW.q.TransformCoordinatesFromFloatsToRef(WW, iW, OW, this._rowGenerationMatrix, mW), mW.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, mW.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, mW.z += this.wRotationCenter
+          _prepareRowForTextureGeneration(RR, JR, GR, yR) {
+            RR *= this._cachedUScale, JR *= this._cachedVScale, RR -= this.uRotationCenter * this._cachedUScale, JR -= this.vRotationCenter * this._cachedVScale, GR -= this.wRotationCenter, ZR.r.TransformCoordinatesFromFloatsToRef(RR, JR, GR, this._rowGenerationMatrix, yR), yR.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, yR.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, yR.z += this.wRotationCenter
           }
           getTextureMatrix() {
-            let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * WW === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
-            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * WW, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = PW.d.Zero(), this._rowGenerationMatrix = new PW.d, this._t0 = PW.q.Zero(), this._t1 = PW.q.Zero(), this._t2 = PW.q.Zero()), PW.d.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (PW.d.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, PW.l.Matrix[0]), PW.d.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, PW.l.Matrix[1]), PW.d.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, PW.l.Matrix[2]), PW.d.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, PW.l.Matrix[3]), PW.l.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(PW.l.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(PW.l.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(PW.l.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.yEW(this._t0), this._t2.yEW(this._t0), PW.d.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
-            const iW = this.bD();
-            if (!iW) return this._cachedTextureMatrix;
-            const OW = this._cachedIdentity3x2;
-            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && OW !== this._cachedIdentity3x2 && iW.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))), this._cachedTextureMatrix
+            let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * RR === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * RR, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = ZR.e.Zero(), this._rowGenerationMatrix = new ZR.e, this._t0 = ZR.r.Zero(), this._t1 = ZR.r.Zero(), this._t2 = ZR.r.Zero()), ZR.e.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (ZR.e.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, ZR.l.Matrix[0]), ZR.e.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, ZR.l.Matrix[1]), ZR.e.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, ZR.l.Matrix[2]), ZR.e.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, ZR.l.Matrix[3]), ZR.l.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(ZR.l.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(ZR.l.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(ZR.l.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.VuR(this._t0), this._t2.VuR(this._t0), ZR.e.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const JR = this.jH();
+            if (!JR) return this._cachedTextureMatrix;
+            const GR = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && GR !== this._cachedIdentity3x2 && JR.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this))), this._cachedTextureMatrix
           }
           getReflectionTextureMatrix() {
-            const iW = this.bD();
-            if (!iW) return this._cachedReflectionTextureMatrix;
+            const JR = this.jH();
+            if (!JR) return this._cachedReflectionTextureMatrix;
             if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
-              if (this.coordinatesMode !== WW.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
-              if (this._cachedReflectionProjectionMatrixId === iW.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+              if (this.coordinatesMode !== RR.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === JR.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
             }
-            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = PW.d.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = PW.d.Zero());
-            const OW = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = ZR.e.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = ZR.e.Zero());
+            const GR = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
             switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
-              case WW.PLANAR_MODE:
-                PW.d.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+              case RR.PLANAR_MODE:
+                ZR.e.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
                 break;
-              case WW.PROJECTION_MODE: {
-                PW.d.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
-                const WW = iW.getProjectionMatrix();
-                this._cachedReflectionProjectionMatrixId = WW.updateFlag, WW.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+              case RR.PROJECTION_MODE: {
+                ZR.e.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const RR = JR.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = RR.updateFlag, RR.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
                 break
               }
               default:
-                PW.d.IdentityToRef(this._cachedReflectionTextureMatrix)
+                ZR.e.IdentityToRef(this._cachedReflectionTextureMatrix)
             }
-            return OW && iW.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))), this._cachedReflectionTextureMatrix
+            return GR && JR.markAllMaterialsAsDirty(1, (RR => RR.hasTexture(this))), this._cachedReflectionTextureMatrix
           }
           clone() {
-            const iW = {
+            const JR = {
               noMipmap: this._noMipmap,
               invertY: this._invertY,
               samplingMode: this.samplingMode,
@@ -919,20 +919,20 @@ export const modules = {
               creationFlags: this._creationFlags,
               useSRGBBuffer: this._useSRGBBuffer
             };
-            return kW.d.Clone((() => new WW(this._texture ? this._texture.url : null, this.bD(), iW)), this)
+            return UR.c.Clone((() => new RR(this._texture ? this._texture.url : null, this.jH(), JR)), this)
           }
           serialize() {
-            const iW = this.name;
-            WW.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
-            const OW = super.serialize(WW._SerializeInternalTextureUniqueId);
-            if (!OW) return null;
-            if (WW.SerializeBuffers || WW.ForceSerializeBuffers)
-              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) OW.base64String = this._buffer, OW.name = OW.name.replace("data:", "");
+            const JR = this.name;
+            RR.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const GR = super.serialize(RR._SerializeInternalTextureUniqueId);
+            if (!GR) return null;
+            if (RR.SerializeBuffers || RR.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) GR.base64String = this._buffer, GR.name = GR.name.replace("data:", "");
               else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
-              const WW = this.mimeType || "image/png";
-              OW.base64String = `data:${WW};base64,${(0,lW.h)(this._buffer)}`
-            } else(WW.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (OW.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? bW(this) : jW(this));
-            return OW.invertY = this._invertY, OW.samplingMode = this.samplingMode, OW._creationFlags = this._creationFlags, OW._useSRGBBuffer = this._useSRGBBuffer, WW._SerializeInternalTextureUniqueId && (OW.internalTextureUniqueId = this._texture?.uniqueId), OW.internalTextureLabel = this._texture?.label, OW.noMipmap = this._noMipmap, this.name = iW, OW
+              const RR = this.mimeType || "image/png";
+              GR.base64String = `data:${RR};base64,${(0,rR.g)(this._buffer)}`
+            } else(RR.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (GR.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? aR(this) : LR(this));
+            return GR.invertY = this._invertY, GR.samplingMode = this.samplingMode, GR._creationFlags = this._creationFlags, GR._useSRGBBuffer = this._useSRGBBuffer, RR._SerializeInternalTextureUniqueId && (GR.internalTextureUniqueId = this._texture?.uniqueId), GR.internalTextureLabel = this._texture?.label, GR.noMipmap = this._noMipmap, this.name = JR, GR
           }
           getClassName() {
             return "Texture"
@@ -940,304 +940,304 @@ export const modules = {
           dispose() {
             super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
           }
-          static Parse(iW, OW, mW) {
-            if (iW.customType) {
-              const WW = ZW.b.Instantiate(iW.customType).Parse(iW, OW, mW);
-              return iW.samplingMode && WW.updateSamplingMode && WW._samplingMode && WW._samplingMode !== iW.samplingMode && WW.updateSamplingMode(iW.samplingMode), WW
+          static Parse(JR, GR, yR) {
+            if (JR.customType) {
+              const RR = KR.b.Instantiate(JR.customType).Parse(JR, GR, yR);
+              return JR.samplingMode && RR.updateSamplingMode && RR._samplingMode && RR._samplingMode !== JR.samplingMode && RR.updateSamplingMode(JR.samplingMode), RR
             }
-            if (iW.isCube && !iW.isRenderTarget) return WW._CubeTextureParser(iW, OW, mW);
-            const EW = void 0 !== iW.internalTextureUniqueId;
-            if (!iW.name && !iW.isRenderTarget && !EW) return null;
-            let NW;
-            if (EW) {
-              const WW = OW.VA().getLoadedTexturesCache();
-              for (const OW of WW)
-                if (OW.uniqueId === iW.internalTextureUniqueId) {
-                  NW = OW;
+            if (JR.isCube && !JR.isRenderTarget) return RR._CubeTextureParser(JR, GR, yR);
+            const tR = void 0 !== JR.internalTextureUniqueId;
+            if (!JR.name && !JR.isRenderTarget && !tR) return null;
+            let uR;
+            if (tR) {
+              const RR = GR.ke().getLoadedTexturesCache();
+              for (const GR of RR)
+                if (GR.uniqueId === JR.internalTextureUniqueId) {
+                  uR = GR;
                   break
                 }
             }
-            const PW = WW => {
-              if (WW && WW._texture && (WW._texture._cachedWrapU = null, WW._texture._cachedWrapV = null, WW._texture._cachedWrapR = null), iW.samplingMode) {
-                const OW = iW.samplingMode;
-                WW && WW.samplingMode !== OW && WW.updateSamplingMode(OW)
+            const ZR = RR => {
+              if (RR && RR._texture && (RR._texture._cachedWrapU = null, RR._texture._cachedWrapV = null, RR._texture._cachedWrapR = null), JR.samplingMode) {
+                const GR = JR.samplingMode;
+                RR && RR.samplingMode !== GR && RR.updateSamplingMode(GR)
               }
-              if (WW && iW.animations)
-                for (let OW = 0; OW < iW.animations.length; OW++) {
-                  const mW = iW.animations[OW],
-                    EW = (0, cW.d)("BABYLON.Animation");
-                  EW && WW.animations.push(EW.Parse(mW))
+              if (RR && JR.animations)
+                for (let GR = 0; GR < JR.animations.length; GR++) {
+                  const yR = JR.animations[GR],
+                    tR = (0, iR.e)("BABYLON.Animation");
+                  tR && RR.animations.push(tR.Parse(yR))
                 }
-              WW && WW._texture && (EW && !NW && WW._texture._setUniqueId(iW.internalTextureUniqueId), WW._texture.label = iW.internalTextureLabel)
+              RR && RR._texture && (tR && !uR && RR._texture._setUniqueId(JR.internalTextureUniqueId), RR._texture.label = JR.internalTextureLabel)
             };
-            return kW.d.Parse((() => {
-              let EW = !0;
-              if (iW.noMipmap && (EW = !1), iW.mirrorPlane) {
-                const mW = WW._CreateMirror(iW.name, iW.renderTargetSize, OW, EW);
-                return mW._waitingRenderList = iW.renderList, mW.mirrorPlane = xW.c.FromArray(iW.mirrorPlane), PW(mW), mW
+            return UR.c.Parse((() => {
+              let tR = !0;
+              if (JR.noMipmap && (tR = !1), JR.mirrorPlane) {
+                const yR = RR._CreateMirror(JR.name, JR.renderTargetSize, GR, tR);
+                return yR._waitingRenderList = JR.renderList, yR.mirrorPlane = wR.c.FromArray(JR.mirrorPlane), ZR(yR), yR
               }
-              if (iW.isRenderTarget && !iW.base64String) {
-                let mW = null;
-                if (iW.isCube) {
-                  if (OW.reflectionProbes)
-                    for (let WW = 0; WW < OW.reflectionProbes.length; WW++) {
-                      const mW = OW.reflectionProbes[WW];
-                      if (mW.name === iW.name) return mW.cubeTexture
+              if (JR.isRenderTarget && !JR.base64String) {
+                let yR = null;
+                if (JR.isCube) {
+                  if (GR.reflectionProbes)
+                    for (let RR = 0; RR < GR.reflectionProbes.length; RR++) {
+                      const yR = GR.reflectionProbes[RR];
+                      if (yR.name === JR.name) return yR.cubeTexture
                     }
-                } else mW = WW._CreateRenderTargetTexture(iW.name, iW.renderTargetSize, OW, EW, iW._creationFlags ?? 0), mW._waitingRenderList = iW.renderList;
-                return PW(mW), mW
+                } else yR = RR._CreateRenderTargetTexture(JR.name, JR.renderTargetSize, GR, tR, JR._creationFlags ?? 0), yR._waitingRenderList = JR.renderList;
+                return ZR(yR), yR
               }
-              if (iW.isVideo) {
-                const NW = WW._CreateVideoTexture(mW + (iW.url || iW.name), mW + (iW.src || iW.url), OW, EW, iW.invertY, iW.samplingMode, iW.settings || {});
-                return PW(NW), NW
+              if (JR.isVideo) {
+                const uR = RR._CreateVideoTexture(yR + (JR.url || JR.name), yR + (JR.src || JR.url), GR, tR, JR.invertY, JR.samplingMode, JR.settings || {});
+                return ZR(uR), uR
               } {
-                let LW;
-                if ("string" === typeof iW.base64String && iW.base64String && !NW) {
-                  const mW = {
-                      buffer: iW.base64String,
-                      noMipmap: !EW,
-                      invertY: iW.invertY,
-                      samplingMode: iW.samplingMode,
-                      useSRGBBuffer: iW._useSRGBBuffer ?? !1,
-                      creationFlags: iW._creationFlags ?? 0,
+                let qR;
+                if ("string" === typeof JR.base64String && JR.base64String && !uR) {
+                  const yR = {
+                      buffer: JR.base64String,
+                      noMipmap: !tR,
+                      invertY: JR.invertY,
+                      samplingMode: JR.samplingMode,
+                      useSRGBBuffer: JR._useSRGBBuffer ?? !1,
+                      creationFlags: JR._creationFlags ?? 0,
                       onLoad: () => {
-                        PW(LW)
+                        ZR(qR)
                       }
                     },
-                    NW = iW.base64String,
-                    cW = NW.startsWith("data:") ? NW.substring(5) : NW;
-                  LW = WW.CreateFromBase64String("", cW, OW, mW), LW.name = iW.name
+                    uR = JR.base64String,
+                    iR = uR.startsWith("data:") ? uR.substring(5) : uR;
+                  qR = RR.CreateFromBase64String("", iR, GR, yR), qR.name = JR.name
                 } else {
-                  let cW;
-                  cW = iW.name && (iW.name.indexOf("://") > 0 || iW.name.startsWith("data:")) ? iW.name : mW + iW.name, iW.url && (iW.url.startsWith("data:") || WW.UseSerializedUrlIfAny) && (cW = iW.url);
-                  const wW = {
-                    noMipmap: !EW,
-                    invertY: iW.invertY,
-                    samplingMode: iW.samplingMode,
-                    useSRGBBuffer: iW._useSRGBBuffer ?? !1,
-                    creationFlags: iW._creationFlags ?? 0,
+                  let iR;
+                  iR = JR.name && (JR.name.indexOf("://") > 0 || JR.name.startsWith("data:")) ? JR.name : yR + JR.name, JR.url && (JR.url.startsWith("data:") || RR.UseSerializedUrlIfAny) && (iR = JR.url);
+                  const fR = {
+                    noMipmap: !tR,
+                    invertY: JR.invertY,
+                    samplingMode: JR.samplingMode,
+                    useSRGBBuffer: JR._useSRGBBuffer ?? !1,
+                    creationFlags: JR._creationFlags ?? 0,
                     onLoad: () => {
-                      PW(LW)
+                      ZR(qR)
                     },
-                    internalTexture: NW
+                    internalTexture: uR
                   };
-                  LW = new WW(cW, OW, wW)
+                  qR = new RR(iR, GR, fR)
                 }
-                return LW
+                return qR
               }
-            }), iW, OW)
+            }), JR, GR)
           }
-          static CreateFromBase64String(iW, OW, mW, EW, NW) {
-            let PW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : WW.TRILINEAR_SAMPLINGMODE;
-            return new WW("data:" + OW, mW, EW, NW, PW, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, iW, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          static CreateFromBase64String(JR, GR, yR, tR, uR) {
+            let ZR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RR.TRILINEAR_SAMPLINGMODE;
+            return new RR("data:" + GR, yR, tR, uR, ZR, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, JR, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
           }
-          static LoadFromDataString(iW, OW, mW) {
-            let EW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              NW = arguments.length > 4 ? arguments[4] : void 0,
-              PW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-              LW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : WW.TRILINEAR_SAMPLINGMODE,
-              cW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              wW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-              tW = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
-              ZW = arguments.length > 10 ? arguments[10] : void 0,
-              xW = arguments.length > 11 ? arguments[11] : void 0;
-            return "data:" !== iW.substring(0, 5) && (iW = "data:" + iW), new WW(iW, mW, NW, PW, LW, cW, wW, OW, EW, tW, void 0, void 0, ZW, xW)
+          static LoadFromDataString(JR, GR, yR) {
+            let tR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              uR = arguments.length > 4 ? arguments[4] : void 0,
+              ZR = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              qR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : RR.TRILINEAR_SAMPLINGMODE,
+              iR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              fR = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              VR = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              KR = arguments.length > 10 ? arguments[10] : void 0,
+              wR = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== JR.substring(0, 5) && (JR = "data:" + JR), new RR(JR, yR, uR, ZR, qR, iR, fR, GR, tR, VR, void 0, void 0, KR, wR)
           }
         }, (() => {
-          const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(nW[Symbol.metadata] ?? null) : void 0;
-          iW = [(0, EW.M)()], OW = [(0, EW.M)()], AW = [(0, EW.M)()], sW = [(0, EW.M)()], MW = [(0, EW.M)()], KW = [(0, EW.M)()], SW = [(0, EW.M)()], YW = [(0, EW.M)()], yW = [(0, EW.M)()], TW = [(0, EW.M)()], JW = [(0, EW.M)()], hW = [(0, EW.M)()], HW = [(0, EW.M)()], (0, mW.e)(WW, null, HW, {
+          const uR = "function" === typeof Symbol && Symbol.metadata ? Object.create(vR[Symbol.metadata] ?? null) : void 0;
+          JR = [(0, tR.H)()], GR = [(0, tR.H)()], eR = [(0, tR.H)()], WR = [(0, tR.H)()], AR = [(0, tR.H)()], CR = [(0, tR.H)()], XR = [(0, tR.H)()], MR = [(0, tR.H)()], BR = [(0, tR.H)()], lR = [(0, tR.H)()], pR = [(0, tR.H)()], gR = [(0, tR.H)()], bR = [(0, tR.H)()], (0, yR.l)(RR, null, bR, {
             kind: "getter",
             name: "isBlocking",
             static: !1,
             private: !1,
             access: {
-              has: WW => "isBlocking" in WW,
-              get: WW => WW.isBlocking
+              has: RR => "isBlocking" in RR,
+              get: RR => RR.isBlocking
             },
-            metadata: NW
-          }, null, uW), (0, mW.e)(null, null, iW, {
+            metadata: uR
+          }, null, OR), (0, yR.l)(null, null, JR, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: WW => "url" in WW,
-              get: WW => WW.url,
-              set: (WW, iW) => {
-                WW.url = iW
+              has: RR => "url" in RR,
+              get: RR => RR.url,
+              set: (RR, JR) => {
+                RR.url = JR
               }
             },
-            metadata: NW
-          }, oW, dW), (0, mW.e)(null, null, OW, {
+            metadata: uR
+          }, xR, NR), (0, yR.l)(null, null, GR, {
             kind: "field",
             name: "uOffset",
             static: !1,
             private: !1,
             access: {
-              has: WW => "uOffset" in WW,
-              get: WW => WW.uOffset,
-              set: (WW, iW) => {
-                WW.uOffset = iW
+              has: RR => "uOffset" in RR,
+              get: RR => RR.uOffset,
+              set: (RR, JR) => {
+                RR.uOffset = JR
               }
             },
-            metadata: NW
-          }, eW, vW), (0, mW.e)(null, null, AW, {
+            metadata: uR
+          }, DR, HR), (0, yR.l)(null, null, eR, {
             kind: "field",
             name: "vOffset",
             static: !1,
             private: !1,
             access: {
-              has: WW => "vOffset" in WW,
-              get: WW => WW.vOffset,
-              set: (WW, iW) => {
-                WW.vOffset = iW
+              has: RR => "vOffset" in RR,
+              get: RR => RR.vOffset,
+              set: (RR, JR) => {
+                RR.vOffset = JR
               }
             },
-            metadata: NW
-          }, gW, DW), (0, mW.e)(null, null, sW, {
+            metadata: uR
+          }, oR, cR), (0, yR.l)(null, null, WR, {
             kind: "field",
             name: "uScale",
             static: !1,
             private: !1,
             access: {
-              has: WW => "uScale" in WW,
-              get: WW => WW.uScale,
-              set: (WW, iW) => {
-                WW.uScale = iW
+              has: RR => "uScale" in RR,
+              get: RR => RR.uScale,
+              set: (RR, JR) => {
+                RR.uScale = JR
               }
             },
-            metadata: NW
-          }, VW, pW), (0, mW.e)(null, null, MW, {
+            metadata: uR
+          }, PR, IR), (0, yR.l)(null, null, AR, {
             kind: "field",
             name: "vScale",
             static: !1,
             private: !1,
             access: {
-              has: WW => "vScale" in WW,
-              get: WW => WW.vScale,
-              set: (WW, iW) => {
-                WW.vScale = iW
+              has: RR => "vScale" in RR,
+              get: RR => RR.vScale,
+              set: (RR, JR) => {
+                RR.vScale = JR
               }
             },
-            metadata: NW
-          }, fW, CW), (0, mW.e)(null, null, KW, {
+            metadata: uR
+          }, mR, zR), (0, yR.l)(null, null, CR, {
             kind: "field",
             name: "uAng",
             static: !1,
             private: !1,
             access: {
-              has: WW => "uAng" in WW,
-              get: WW => WW.uAng,
-              set: (WW, iW) => {
-                WW.uAng = iW
+              has: RR => "uAng" in RR,
+              get: RR => RR.uAng,
+              set: (RR, JR) => {
+                RR.uAng = JR
               }
             },
-            metadata: NW
-          }, XW, BW), (0, mW.e)(null, null, SW, {
+            metadata: uR
+          }, SR, jR), (0, yR.l)(null, null, XR, {
             kind: "field",
             name: "vAng",
             static: !1,
             private: !1,
             access: {
-              has: WW => "vAng" in WW,
-              get: WW => WW.vAng,
-              set: (WW, iW) => {
-                WW.vAng = iW
+              has: RR => "vAng" in RR,
+              get: RR => RR.vAng,
+              set: (RR, JR) => {
+                RR.vAng = JR
               }
             },
-            metadata: NW
-          }, qW, RW), (0, mW.e)(null, null, YW, {
+            metadata: uR
+          }, dR, ER), (0, yR.l)(null, null, MR, {
             kind: "field",
             name: "wAng",
             static: !1,
             private: !1,
             access: {
-              has: WW => "wAng" in WW,
-              get: WW => WW.wAng,
-              set: (WW, iW) => {
-                WW.wAng = iW
+              has: RR => "wAng" in RR,
+              get: RR => RR.wAng,
+              set: (RR, JR) => {
+                RR.wAng = JR
               }
             },
-            metadata: NW
-          }, GW, IW), (0, mW.e)(null, null, yW, {
+            metadata: uR
+          }, YR, kR), (0, yR.l)(null, null, BR, {
             kind: "field",
             name: "uRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: WW => "uRotationCenter" in WW,
-              get: WW => WW.uRotationCenter,
-              set: (WW, iW) => {
-                WW.uRotationCenter = iW
+              has: RR => "uRotationCenter" in RR,
+              get: RR => RR.uRotationCenter,
+              set: (RR, JR) => {
+                RR.uRotationCenter = JR
               }
             },
-            metadata: NW
-          }, aW, rW), (0, mW.e)(null, null, TW, {
+            metadata: uR
+          }, QR, FR), (0, yR.l)(null, null, lR, {
             kind: "field",
             name: "vRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: WW => "vRotationCenter" in WW,
-              get: WW => WW.vRotationCenter,
-              set: (WW, iW) => {
-                WW.vRotationCenter = iW
+              has: RR => "vRotationCenter" in RR,
+              get: RR => RR.vRotationCenter,
+              set: (RR, JR) => {
+                RR.vRotationCenter = JR
               }
             },
-            metadata: NW
-          }, zW, FW), (0, mW.e)(null, null, JW, {
+            metadata: uR
+          }, TR, sR), (0, yR.l)(null, null, pR, {
             kind: "field",
             name: "wRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: WW => "wRotationCenter" in WW,
-              get: WW => WW.wRotationCenter,
-              set: (WW, iW) => {
-                WW.wRotationCenter = iW
+              has: RR => "wRotationCenter" in RR,
+              get: RR => RR.wRotationCenter,
+              set: (RR, JR) => {
+                RR.wRotationCenter = JR
               }
             },
-            metadata: NW
-          }, QW, Wi), (0, mW.e)(null, null, hW, {
+            metadata: uR
+          }, hR, RJ), (0, yR.l)(null, null, gR, {
             kind: "field",
             name: "homogeneousRotationInUVTransform",
             static: !1,
             private: !1,
             access: {
-              has: WW => "homogeneousRotationInUVTransform" in WW,
-              get: WW => WW.homogeneousRotationInUVTransform,
-              set: (WW, iW) => {
-                WW.homogeneousRotationInUVTransform = iW
+              has: RR => "homogeneousRotationInUVTransform" in RR,
+              get: RR => RR.homogeneousRotationInUVTransform,
+              set: (RR, JR) => {
+                RR.homogeneousRotationInUVTransform = JR
               }
             },
-            metadata: NW
-          }, ii, Oi), NW && Object.defineProperty(WW, Symbol.metadata, {
+            metadata: uR
+          }, JJ, GJ), uR && Object.defineProperty(RR, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: NW
+            value: uR
           })
-        })(), WW.SerializeBuffers = !0, WW.ForceSerializeBuffers = !1, WW.OnTextureLoadErrorObservable = new NW.e, WW._SerializeInternalTextureUniqueId = !1, WW._CubeTextureParser = (WW, iW, OW) => {
-          throw (0, wW.o)("CubeTexture")
-        }, WW._CreateMirror = (WW, iW, OW, mW) => {
-          throw (0, wW.o)("MirrorTexture")
-        }, WW._CreateRenderTargetTexture = (WW, iW, OW, mW, EW) => {
-          throw (0, wW.o)("RenderTargetTexture")
-        }, WW.NEAREST_SAMPLINGMODE = 1, WW.NEAREST_NEAREST_MIPLINEAR = 8, WW.BILINEAR_SAMPLINGMODE = 2, WW.LINEAR_LINEAR_MIPNEAREST = 11, WW.TRILINEAR_SAMPLINGMODE = 3, WW.LINEAR_LINEAR_MIPLINEAR = 3, WW.NEAREST_NEAREST_MIPNEAREST = 4, WW.NEAREST_LINEAR_MIPNEAREST = 5, WW.NEAREST_LINEAR_MIPLINEAR = 6, WW.NEAREST_LINEAR = 7, WW.NEAREST_NEAREST = 1, WW.LINEAR_NEAREST_MIPNEAREST = 9, WW.LINEAR_NEAREST_MIPLINEAR = 10, WW.LINEAR_LINEAR = 2, WW.LINEAR_NEAREST = 12, WW.EXPLICIT_MODE = 0, WW.SPHERICAL_MODE = 1, WW.PLANAR_MODE = 2, WW.CUBIC_MODE = 3, WW.PROJECTION_MODE = 4, WW.SKYBOX_MODE = 5, WW.INVCUBIC_MODE = 6, WW.EQUIRECTANGULAR_MODE = 7, WW.FIXED_EQUIRECTANGULAR_MODE = 8, WW.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, WW.CLAMP_ADDRESSMODE = 0, WW.WRAP_ADDRESSMODE = 1, WW.MIRROR_ADDRESSMODE = 2, WW.UseSerializedUrlIfAny = !1, WW
+        })(), RR.SerializeBuffers = !0, RR.ForceSerializeBuffers = !1, RR.OnTextureLoadErrorObservable = new uR.b, RR._SerializeInternalTextureUniqueId = !1, RR._CubeTextureParser = (RR, JR, GR) => {
+          throw (0, fR.j)("CubeTexture")
+        }, RR._CreateMirror = (RR, JR, GR, yR) => {
+          throw (0, fR.j)("MirrorTexture")
+        }, RR._CreateRenderTargetTexture = (RR, JR, GR, yR, tR) => {
+          throw (0, fR.j)("RenderTargetTexture")
+        }, RR.NEAREST_SAMPLINGMODE = 1, RR.NEAREST_NEAREST_MIPLINEAR = 8, RR.BILINEAR_SAMPLINGMODE = 2, RR.LINEAR_LINEAR_MIPNEAREST = 11, RR.TRILINEAR_SAMPLINGMODE = 3, RR.LINEAR_LINEAR_MIPLINEAR = 3, RR.NEAREST_NEAREST_MIPNEAREST = 4, RR.NEAREST_LINEAR_MIPNEAREST = 5, RR.NEAREST_LINEAR_MIPLINEAR = 6, RR.NEAREST_LINEAR = 7, RR.NEAREST_NEAREST = 1, RR.LINEAR_NEAREST_MIPNEAREST = 9, RR.LINEAR_NEAREST_MIPLINEAR = 10, RR.LINEAR_LINEAR = 2, RR.LINEAR_NEAREST = 12, RR.EXPLICIT_MODE = 0, RR.SPHERICAL_MODE = 1, RR.PLANAR_MODE = 2, RR.CUBIC_MODE = 3, RR.PROJECTION_MODE = 4, RR.SKYBOX_MODE = 5, RR.INVCUBIC_MODE = 6, RR.EQUIRECTANGULAR_MODE = 7, RR.FIXED_EQUIRECTANGULAR_MODE = 8, RR.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, RR.CLAMP_ADDRESSMODE = 0, RR.WRAP_ADDRESSMODE = 1, RR.MIRROR_ADDRESSMODE = 2, RR.UseSerializedUrlIfAny = !1, RR
       })(),
-      MW = !1;
+      AR = !1;
 
-    function KW() {
-      MW || (MW = !0, (0, cW.h)("BABYLON.Texture", sW), kW.d._TextureParser = sW.Parse)
+    function CR() {
+      AR || (AR = !0, (0, iR.f)("BABYLON.Texture", WR), UR.c._TextureParser = WR.Parse)
     }
   },
-  41531: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW
+  41534: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR
     });
-    class mW {
-      constructor(WW, iW) {
-        this.width = WW, this.height = iW
+    class yR {
+      constructor(RR, JR) {
+        this.width = RR, this.height = JR
       }
       toString() {
         return `{W: ${this.width}, H: ${this.height}}`
@@ -1246,49 +1246,49 @@ export const modules = {
         return "Size"
       }
       getHashCode() {
-        let WW = 0 | this.width;
-        return WW = 397 * WW ^ this.height, WW
+        let RR = 0 | this.width;
+        return RR = 397 * RR ^ this.height, RR
       }
-      HJ(WW) {
-        this.width = WW.width, this.height = WW.height
+      vN(RR) {
+        this.width = RR.width, this.height = RR.height
       }
-      yWW(WW, iW) {
-        return this.width = WW, this.height = iW, this
+      VJR(RR, JR) {
+        return this.width = RR, this.height = JR, this
       }
-      set(WW, iW) {
-        return this.yWW(WW, iW)
+      set(RR, JR) {
+        return this.VJR(RR, JR)
       }
-      multiplyByFloats(WW, iW) {
-        return new mW(this.width * WW, this.height * iW)
+      multiplyByFloats(RR, JR) {
+        return new yR(this.width * RR, this.height * JR)
       }
       clone() {
-        return new mW(this.width, this.height)
+        return new yR(this.width, this.height)
       }
-      equals(WW) {
-        return !!WW && (this.width === WW.width && this.height === WW.height)
+      equals(RR) {
+        return !!RR && (this.width === RR.width && this.height === RR.height)
       }
       get surface() {
         return this.width * this.height
       }
       static Zero() {
-        return new mW(0, 0)
+        return new yR(0, 0)
       }
-      add(WW) {
-        return new mW(this.width + WW.width, this.height + WW.height)
+      add(RR) {
+        return new yR(this.width + RR.width, this.height + RR.height)
       }
-      subtract(WW) {
-        return new mW(this.width - WW.width, this.height - WW.height)
+      subtract(RR) {
+        return new yR(this.width - RR.width, this.height - RR.height)
       }
-      scale(WW) {
-        return new mW(this.width * WW, this.height * WW)
+      scale(RR) {
+        return new yR(this.width * RR, this.height * RR)
       }
-      static Lerp(WW, iW, OW) {
-        const EW = WW.width + (iW.width - WW.width) * OW,
-          NW = WW.height + (iW.height - WW.height) * OW;
-        return new mW(EW, NW)
+      static Lerp(RR, JR, GR) {
+        const tR = RR.width + (JR.width - RR.width) * GR,
+          uR = RR.height + (JR.height - RR.height) * GR;
+        return new yR(tR, uR)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

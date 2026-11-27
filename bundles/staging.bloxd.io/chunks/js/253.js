@@ -1,380 +1,380 @@
 export const id = 253;
 export const ids = [253];
 export const modules = {
-  42561: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      LobbyManageView: () => si
+  42608: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      LobbyManageView: () => WJ
     });
-    var mW = OW(62),
-      EW = OW(1556),
-      NW = OW(38169),
-      PW = OW(3348),
-      LW = OW(3353),
-      cW = OW(3332),
-      wW = OW(37824);
+    var yR = GR(66),
+      tR = GR(1618),
+      uR = GR(38131),
+      ZR = GR(3479),
+      qR = GR(3488),
+      iR = GR(3465),
+      fR = GR(37751);
 
-    function tW() {
-      const [WW, iW] = (0, mW.useState)(new Map);
+    function VR() {
+      const [RR, JR] = (0, yR.useState)(new Map);
       return {
-        get: iW => WW.get(iW),
-        hold: (0, mW.useCallback)(((WW, OW, mW) => {
-          iW((iW => new Map(iW).set(WW, OW))), mW.then((() => {
-            iW((iW => {
-              const OW = new Map(iW);
-              return OW.delete(WW), OW
+        get: JR => RR.get(JR),
+        hold: (0, yR.useCallback)(((RR, GR, yR) => {
+          JR((JR => new Map(JR).set(RR, GR))), yR.then((() => {
+            JR((JR => {
+              const GR = new Map(JR);
+              return GR.delete(RR), GR
             }))
           }))
         }), [])
       }
     }
-    var ZW = OW(1089),
-      xW = OW.n(ZW),
-      lW = OW(1172),
-      AW = OW(1391),
-      bW = OW(1383),
-      jW = OW(3665),
-      UW = OW(4171),
-      kW = OW(4653);
-    var sW = OW(2075),
-      MW = OW(1532),
-      KW = OW(37829),
-      SW = OW(3661),
-      YW = OW(3798),
-      yW = OW(37953),
-      TW = OW(4292),
-      JW = OW(344);
+    var KR = GR(1163),
+      wR = GR.n(KR),
+      rR = GR(1270),
+      eR = GR(1468),
+      aR = GR(1465),
+      LR = GR(3763),
+      nR = GR(4250),
+      UR = GR(4757);
+    var WR = GR(2173),
+      AR = GR(1590),
+      CR = GR(37759),
+      XR = GR(3761),
+      MR = GR(3897),
+      BR = GR(37890),
+      lR = GR(4375),
+      pR = GR(377);
 
-    function hW(WW, iW, OW) {
-      return iW.map((iW => {
-        if ("string" === typeof iW) return iW;
-        const mW = "str" in iW ? iW.str : iW;
-        return "string" === typeof mW ? mW : "entityName" in mW ? mW.entityName : "translationKey" in mW ? WW(mW.translationKey, (0, lW.o)(mW.params, OW)) : ""
+    function gR(RR, JR, GR) {
+      return JR.map((JR => {
+        if ("string" === typeof JR) return JR;
+        const yR = "str" in JR ? JR.str : JR;
+        return "string" === typeof yR ? yR : "entityName" in yR ? yR.entityName : "translationKey" in yR ? RR(yR.translationKey, (0, rR.o)(yR.params, GR)) : ""
       })).join("")
     }
 
-    function HW(WW, iW, OW, mW, EW) {
-      return EW - mW < 6e4 ? WW(`${OW}JustNow`) : WW(OW, {
-        time: (0, JW.$)((0, lW.k)(iW, OW), mW, EW)
+    function bR(RR, JR, GR, yR, tR) {
+      return tR - yR < 6e4 ? RR(`${GR}JustNow`) : RR(GR, {
+        time: (0, pR.Z)((0, rR.n)(JR, GR), yR, tR)
       })
     }
-    var nW = OW(2021),
-      uW = OW(1782),
-      oW = OW(1283);
+    var vR = GR(2105),
+      OR = GR(1867),
+      xR = GR(1378);
 
-    function dW(WW) {
+    function NR(RR) {
       let {
-        status: iW
-      } = WW;
-      return (0, oW.jsx)("span", {
-        className: xW()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !iW.ok
+        status: JR
+      } = RR;
+      return (0, xR.jsx)("span", {
+        className: wR()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !JR.ok
         }),
-        children: (0, oW.jsx)(nW.d, {
-          text: iW.text
+        children: (0, xR.jsx)(vR.c, {
+          text: JR.text
         })
       })
     }
 
-    function eW(WW) {
+    function DR(RR) {
       let {
-        names: iW,
-        cap: OW,
-        filterFrom: EW,
-        moreLabel: NW,
-        reveal: PW = null,
-        renderRow: LW
-      } = WW;
+        names: JR,
+        cap: GR,
+        filterFrom: tR,
+        moreLabel: uR,
+        reveal: ZR = null,
+        renderRow: qR
+      } = RR;
       const {
-        t: cW
-      } = (0, lW.B)(), [wW, tW] = (0, mW.useState)(!1), [ZW, xW] = (0, mW.useState)(""), bW = wW || null !== PW && iW.indexOf(PW) >= OW, UW = (bW || iW.length <= OW) && null !== EW && iW.length > EW, kW = ZW.trim().toLowerCase();
-      let sW = bW ? iW : iW.slice(0, OW);
-      return UW && "" !== kW && (sW = sW.filter((WW => WW.toLowerCase().includes(kW)))), (0, oW.jsxs)(oW.Fragment, {
-        children: [UW && (0, oW.jsx)(uW.b, {
+        t: iR
+      } = (0, rR.A)(), [fR, VR] = (0, yR.useState)(!1), [KR, wR] = (0, yR.useState)(""), aR = fR || null !== ZR && JR.indexOf(ZR) >= GR, nR = (aR || JR.length <= GR) && null !== tR && JR.length > tR, UR = KR.trim().toLowerCase();
+      let WR = aR ? JR : JR.slice(0, GR);
+      return nR && "" !== UR && (WR = WR.filter((RR => RR.toLowerCase().includes(UR)))), (0, xR.jsxs)(xR.Fragment, {
+        children: [nR && (0, xR.jsx)(OR.b, {
           className: "LobbyManageFilter",
-          placeholderText: cW("lobbyManage:findName"),
-          ariaLabel: cW("lobbyManage:findName"),
-          onValueChange: WW => {
-            xW(WW)
+          placeholderText: iR("lobbyManage:findName"),
+          ariaLabel: iR("lobbyManage:findName"),
+          onValueChange: RR => {
+            wR(RR)
           }
-        }), sW.length > 0 && (0, oW.jsx)("div", {
+        }), WR.length > 0 && (0, xR.jsx)("div", {
           className: "PlayerRows",
-          children: sW.map(((WW, iW) => LW(WW, sW.length - iW)))
-        }), !bW && iW.length > OW && (0, oW.jsx)("div", {
+          children: WR.map(((RR, JR) => qR(RR, WR.length - JR)))
+        }), !aR && JR.length > GR && (0, xR.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, oW.jsx)(jW.b, {
-            label: (0, oW.jsxs)(oW.Fragment, {
-              children: [NW, " ", (0, oW.jsx)(AW.c, {
+          children: (0, xR.jsx)(LR.c, {
+            label: (0, xR.jsxs)(xR.Fragment, {
+              children: [uR, " ", (0, xR.jsx)(eR.d, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              tW(!0)
+              VR(!0)
             }
           })
         })]
       })
     }
 
-    function vW(WW) {
+    function HR(RR) {
       let {
-        value: iW,
-        placeholder: OW,
-        ariaLabel: EW,
-        maxLength: NW,
-        wide: PW = !1,
-        onSave: LW
-      } = WW;
-      const cW = (0, mW.useRef)(null),
-        [wW, tW] = (0, mW.useState)(0),
-        ZW = (0, mW.useRef)(!0),
-        lW = (0, mW.useRef)(null),
-        AW = (0, mW.useRef)({
-          value: iW,
-          onSave: LW
+        value: JR,
+        placeholder: GR,
+        ariaLabel: tR,
+        maxLength: uR,
+        wide: ZR = !1,
+        onSave: qR
+      } = RR;
+      const iR = (0, yR.useRef)(null),
+        [fR, VR] = (0, yR.useState)(0),
+        KR = (0, yR.useRef)(!0),
+        rR = (0, yR.useRef)(null),
+        eR = (0, yR.useRef)({
+          value: JR,
+          onSave: qR
         });
-      AW.current = {
-        value: iW,
-        onSave: LW
+      eR.current = {
+        value: JR,
+        onSave: qR
       };
-      const bW = () => {
-        const WW = lW.current;
-        lW.current = null, null !== WW && WW !== AW.current.value && AW.current.onSave(WW).then((() => {
-          ZW.current && tW((WW => WW + 1))
+      const aR = () => {
+        const RR = rR.current;
+        rR.current = null, null !== RR && RR !== eR.current.value && eR.current.onSave(RR).then((() => {
+          KR.current && VR((RR => RR + 1))
         }))
       };
-      return (0, mW.useEffect)((() => {
-        null === lW.current && cW.current && (cW.current.value = iW)
-      }), [iW, wW]), (0, mW.useEffect)((() => () => {
-        ZW.current = !1, bW()
-      }), []), (0, oW.jsx)("div", {
-        className: xW()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: PW
+      return (0, yR.useEffect)((() => {
+        null === rR.current && iR.current && (iR.current.value = JR)
+      }), [JR, fR]), (0, yR.useEffect)((() => () => {
+        KR.current = !1, aR()
+      }), []), (0, xR.jsx)("div", {
+        className: wR()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: ZR
         }),
-        onBlur: bW,
-        children: (0, oW.jsx)(uW.b, {
-          domRef: cW,
-          defaultValue: iW,
-          placeholderText: OW,
-          ariaLabel: EW,
-          maxLength: NW,
-          onValueChange: WW => {
-            lW.current = WW
+        onBlur: aR,
+        children: (0, xR.jsx)(OR.b, {
+          domRef: iR,
+          defaultValue: JR,
+          placeholderText: GR,
+          ariaLabel: tR,
+          maxLength: uR,
+          onValueChange: RR => {
+            rR.current = RR
           },
-          onEnter: bW
+          onEnter: aR
         })
       })
     }
-    const gW = ["mod", "coOwner"],
-      DW = {
+    const oR = ["mod", "coOwner"],
+      cR = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function VW(WW) {
-      var iW, OW, NW;
+    function PR(RR) {
+      var JR, GR, uR;
       let {
-        name: PW,
-        place: LW,
-        openedIn: cW,
-        isYou: wW,
-        manage: ZW,
-        hiddenNames: xW,
-        zIndex: bW
-      } = WW;
+        name: ZR,
+        place: qR,
+        openedIn: iR,
+        isYou: fR,
+        manage: KR,
+        hiddenNames: wR,
+        zIndex: aR
+      } = RR;
       const {
-        t: jW,
-        selectedLanguage: UW
-      } = (0, lW.B)(), [kW, sW] = (0, mW.useState)(null), {
-        state: JW
-      } = ZW, nW = `player:${PW}`, uW = (0, KW.i)(LW, null !== JW.gamemodes), eW = ZW.statusOf(nW), vW = ZW.isPending(nW), VW = tW(), pW = Date.now(), fW = WW => {
-        var iW, OW;
-        return null !== (iW = null === (OW = (WW => JW.roles.find((iW => iW.role === WW)))(WW)) || void 0 === OW ? void 0 : OW.label) && void 0 !== iW ? iW : WW
-      }, CW = WW => {
-        const iW = DW[WW];
-        return void 0 === iW ? void 0 : jW(iW)
-      }, XW = "here" === LW.section || "away" === LW.section ? LW.player : null, BW = null !== (iW = VW.get("role")) && void 0 !== iW ? iW : null === XW || void 0 === XW ? void 0 : XW.role, qW = "here" === LW.section ? LW.player.id : null, {
-        playerSocialPreview: RW,
-        isFriend: GW
-      } = null === qW ? {
-        playerSocialPreview: (0, yW.k)(PW, null),
+        t: LR,
+        selectedLanguage: nR
+      } = (0, rR.A)(), [UR, WR] = (0, yR.useState)(null), {
+        state: pR
+      } = KR, vR = `player:${ZR}`, OR = (0, CR.k)(qR, null !== pR.gamemodes), DR = KR.statusOf(vR), HR = KR.isPending(vR), PR = VR(), IR = Date.now(), mR = RR => {
+        var JR, GR;
+        return null !== (JR = null === (GR = (RR => pR.roles.find((JR => JR.role === RR)))(RR)) || void 0 === GR ? void 0 : GR.label) && void 0 !== JR ? JR : RR
+      }, zR = RR => {
+        const JR = cR[RR];
+        return void 0 === JR ? void 0 : LR(JR)
+      }, SR = "here" === qR.section || "away" === qR.section ? qR.player : null, jR = null !== (JR = PR.get("role")) && void 0 !== JR ? JR : null === SR || void 0 === SR ? void 0 : SR.role, dR = "here" === qR.section ? qR.player.id : null, {
+        playerSocialPreview: ER,
+        isFriend: YR
+      } = null === dR ? {
+        playerSocialPreview: (0, BR.i)(ZR, null),
         isFriend: !1
-      } : (0, YW.c)(qW, PW), IW = function() {
-        ZW.send(...arguments)
-      }, aW = (WW, iW) => {
-        VW.hold("role", WW, ZW.send({
+      } : (0, MR.h)(dR, ZR), kR = function() {
+        KR.send(...arguments)
+      }, QR = (RR, JR) => {
+        PR.hold("role", RR, KR.send({
           type: "setRole",
-          name: PW,
-          role: WW
-        }, nW, iW))
+          name: ZR,
+          role: RR
+        }, vR, JR))
       };
-      let rW = null;
-      if ("ban" === (null === kW || void 0 === kW ? void 0 : kW.kind)) rW = jW("lobbyManageEntry:banConfirm", {
-        playerName: PW
+      let FR = null;
+      if ("ban" === (null === UR || void 0 === UR ? void 0 : UR.kind)) FR = LR("lobbyManageEntry:banConfirm", {
+        playerName: ZR
       });
-      else if ("role" === (null === kW || void 0 === kW ? void 0 : kW.kind)) {
-        var zW;
-        rW = `${jW("lobbyManage:roleConfirm",{playerName:PW,role:fW(kW.role)})} ${null!==(zW=CW(kW.role))&&void 0!==zW?zW:""}`
-      } else if (eW) rW = (0, oW.jsx)(dW, {
-        status: eW
+      else if ("role" === (null === UR || void 0 === UR ? void 0 : UR.kind)) {
+        var TR;
+        FR = `${LR("lobbyManage:roleConfirm",{playerName:ZR,role:mR(UR.role)})} ${null!==(TR=zR(UR.role))&&void 0!==TR?TR:""}`
+      } else if (DR) FR = (0, xR.jsx)(NR, {
+        status: DR
       });
-      else if (wW) rW = jW("lobbyManage:you");
-      else if ("here" === LW.section) "none" === LW.player.role && pW - LW.player.at < 6e5 && (rW = HW(jW, UW.code, "lobbyManage:joinedAgo", LW.player.at, pW));
-      else if ("away" === LW.section) {
-        if (LW.player.at > 0) {
-          const WW = "kicked" === LW.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          rW = HW(jW, UW.code, WW, LW.player.at, pW)
+      else if (fR) FR = LR("lobbyManage:you");
+      else if ("here" === qR.section) "none" === qR.player.role && IR - qR.player.at < 6e5 && (FR = bR(LR, nR.code, "lobbyManage:joinedAgo", qR.player.at, IR));
+      else if ("away" === qR.section) {
+        if (qR.player.at > 0) {
+          const RR = "kicked" === qR.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          FR = bR(LR, nR.code, RR, qR.player.at, IR)
         }
-      } else "banned" === LW.section ? null !== LW.bannedAt && (rW = HW(jW, UW.code, "lobbyManage:bannedAgo", LW.bannedAt, pW)) : "banned" === cW && (rW = jW("lobbyManageEntry:unbanned"));
-      return (0, oW.jsx)("div", {
+      } else "banned" === qR.section ? null !== qR.bannedAt && (FR = bR(LR, nR.code, "lobbyManage:bannedAgo", qR.bannedAt, IR)) : "banned" === iR && (FR = LR("lobbyManageEntry:unbanned"));
+      return (0, xR.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": PW,
-        children: (0, oW.jsxs)(SW.h, {
-          playerSocialPreview: RW,
-          isFriend: GW,
-          status: rW,
-          opensProfileCard: !wW && (0, YW.d)(!0, PW, xW),
-          zIndex: bW,
-          children: [null !== kW && (0, oW.jsxs)("div", {
+        "data-lobby-manage-row": ZR,
+        children: (0, xR.jsxs)(XR.g, {
+          playerSocialPreview: ER,
+          isFriend: YR,
+          status: FR,
+          opensProfileCard: !fR && (0, MR.l)(!0, ZR, wR),
+          zIndex: aR,
+          children: [null !== UR && (0, xR.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === kW.kind && (0, oW.jsxs)(MW.O, {
+            children: ["ban" === UR.kind && (0, xR.jsxs)(AR.M, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                sW(null), IW({
+                WR(null), kR({
                   type: "ban",
-                  name: PW
-                }, nW)
+                  name: ZR
+                }, vR)
               },
-              children: [(0, oW.jsx)(AW.c, {
+              children: [(0, xR.jsx)(eR.d, {
                 name: "gavel"
-              }), (0, oW.jsx)("span", {
+              }), (0, xR.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: jW("lobbyManageEntry:ban")
+                children: LR("lobbyManageEntry:ban")
               })]
-            }), "role" === kW.kind && (0, oW.jsx)(MW.f, {
+            }), "role" === UR.kind && (0, xR.jsx)(AR.g, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: kW.role
+                value: UR.role
               },
               onClick: () => {
-                sW(null), aW(kW.role)
+                WR(null), QR(UR.role)
               },
-              children: jW("lobbyManage:makeRole", {
-                role: fW(kW.role)
+              children: LR("lobbyManage:makeRole", {
+                role: mR(UR.role)
               })
-            }), (0, oW.jsx)(MW.h, {
+            }), (0, xR.jsx)(AR.i, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                sW(null)
+                WR(null)
               },
-              children: jW("general:cancel")
+              children: LR("general:cancel")
             })]
-          }), null === kW && (0, oW.jsxs)(oW.Fragment, {
-            children: [(0, oW.jsxs)("div", {
+          }), null === UR && (0, xR.jsxs)(xR.Fragment, {
+            children: [(0, xR.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [uW.gamemode && null !== XW && (0, oW.jsx)(TW.e, {
-                options: (null !== (OW = JW.gamemodes) && void 0 !== OW ? OW : []).map((WW => ({
-                  value: WW.value,
-                  label: hW(jW, WW.label, xW)
+              children: [OR.gamemode && null !== SR && (0, xR.jsx)(lR.e, {
+                options: (null !== (GR = pR.gamemodes) && void 0 !== GR ? GR : []).map((RR => ({
+                  value: RR.value,
+                  label: gR(LR, RR.label, wR)
                 }))),
-                value: null !== (NW = VW.get("gamemode")) && void 0 !== NW ? NW : XW.gamemode,
-                disabled: vW,
+                value: null !== (uR = PR.get("gamemode")) && void 0 !== uR ? uR : SR.gamemode,
+                disabled: HR,
                 revealOnOpen: !0,
-                onChange: WW => {
-                  (0, EW.reportAnalyticsClick)({
+                onChange: RR => {
+                  (0, tR.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: WW.value
-                  }), VW.hold("gamemode", WW.value, ZW.send({
+                    value: RR.value
+                  }), PR.hold("gamemode", RR.value, KR.send({
                     type: "setGamemode",
-                    name: PW,
-                    gamemode: WW.value
-                  }, nW))
+                    name: ZR,
+                    gamemode: RR.value
+                  }, vR))
                 }
-              }), uW.roles.length > 0 && null !== XW && (0, oW.jsx)(TW.e, {
-                options: [...JW.roles].reverse().filter((WW => uW.roles.includes(WW.role))).map((WW => ({
-                  value: WW.role,
-                  label: WW.label
+              }), OR.roles.length > 0 && null !== SR && (0, xR.jsx)(lR.e, {
+                options: [...pR.roles].reverse().filter((RR => OR.roles.includes(RR.role))).map((RR => ({
+                  value: RR.role,
+                  label: RR.label
                 }))),
-                value: "none" === BW ? void 0 : BW,
-                placeholder: jW("lobbyManageEntry:giveRole"),
-                disabled: vW,
+                value: "none" === jR ? void 0 : jR,
+                placeholder: LR("lobbyManageEntry:giveRole"),
+                disabled: HR,
                 revealOnOpen: !0,
-                onChange: WW => {
-                  var iW;
-                  (iW = WW.value) !== (null === XW || void 0 === XW ? void 0 : XW.role) && (gW.includes(iW) ? sW({
+                onChange: RR => {
+                  var JR;
+                  (JR = RR.value) !== (null === SR || void 0 === SR ? void 0 : SR.role) && (oR.includes(JR) ? WR({
                     kind: "role",
-                    role: iW
-                  }) : ((0, EW.reportAnalyticsClick)({
+                    role: JR
+                  }) : ((0, tR.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: iW
-                  }), aW(iW, CW(iW))))
+                    value: JR
+                  }), QR(JR, zR(JR))))
                 }
-              }), null !== uW.fixedRole && (0, oW.jsx)("div", {
+              }), null !== OR.fixedRole && (0, xR.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: fW(uW.fixedRole)
+                children: mR(OR.fixedRole)
               })]
-            }), (0, oW.jsxs)("div", {
+            }), (0, xR.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [uW.kick && (0, oW.jsxs)(MW.h, {
+              children: [OR.kick && (0, xR.jsxs)(AR.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${jW("lobbyManageEntry:kick")} ${PW}`,
-                disabled: vW,
+                ariaLabel: `${LR("lobbyManageEntry:kick")} ${ZR}`,
+                disabled: HR,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  IW({
+                  kR({
                     type: "kick",
-                    name: PW
-                  }, nW)
+                    name: ZR
+                  }, vR)
                 },
-                children: [(0, oW.jsx)(AW.c, {
+                children: [(0, xR.jsx)(eR.d, {
                   name: "person-falling-burst"
-                }), (0, oW.jsx)("span", {
+                }), (0, xR.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: jW("lobbyManageEntry:kick")
+                  children: LR("lobbyManageEntry:kick")
                 })]
-              }), uW.ban && (0, oW.jsxs)(MW.S, {
+              }), OR.ban && (0, xR.jsxs)(AR.O, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${jW("lobbyManageEntry:ban")} ${PW}`,
-                disabled: vW,
+                ariaLabel: `${LR("lobbyManageEntry:ban")} ${ZR}`,
+                disabled: HR,
                 padDestructive: !0,
                 onClick: () => {
-                  sW({
+                  WR({
                     kind: "ban"
                   })
                 },
-                children: [(0, oW.jsx)(AW.c, {
+                children: [(0, xR.jsx)(eR.d, {
                   name: "gavel"
-                }), (0, oW.jsx)("span", {
+                }), (0, xR.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: jW("lobbyManageEntry:ban")
+                  children: LR("lobbyManageEntry:ban")
                 })]
-              }), uW.unban && (0, oW.jsxs)(MW.h, {
+              }), OR.unban && (0, xR.jsxs)(AR.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${jW("lobbyManageEntry:unban")} ${PW}`,
-                disabled: vW,
+                ariaLabel: `${LR("lobbyManageEntry:unban")} ${ZR}`,
+                disabled: HR,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  IW({
+                  kR({
                     type: "unban",
-                    name: PW
-                  }, nW)
+                    name: ZR
+                  }, vR)
                 },
-                children: [(0, oW.jsx)(AW.c, {
+                children: [(0, xR.jsx)(eR.d, {
                   name: "user-unlock"
-                }), (0, oW.jsx)("span", {
+                }), (0, xR.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: jW("lobbyManageEntry:unban")
+                  children: LR("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -383,770 +383,770 @@ export const modules = {
       })
     }
 
-    function pW(WW) {
-      var iW, OW, EW, NW;
+    function IR(RR) {
+      var JR, GR, tR, uR;
       let {
-        manage: PW,
-        focusRequest: LW,
-        onFocused: cW
-      } = WW;
+        manage: ZR,
+        focusRequest: qR,
+        onFocused: iR
+      } = RR;
       const {
-        t: wW
-      } = (0, lW.B)(), tW = (0, sW.g)("players"), ZW = (0, sW.g)("hiddenPlayerNames"), xW = (0, mW.useRef)(null), {
-        state: bW
-      } = PW, UW = null === tW.localId ? null : null !== (iW = null === (OW = tW.byId[tW.localId]) || void 0 === OW ? void 0 : OW.name) && void 0 !== iW ? iW : null, [kW] = (0, mW.useState)((() => (0, KW.o)(bW, UW))), SW = (0, KW.k)(kW, bW, UW), [YW, yW] = (0, mW.useState)(!1), TW = (0, KW.h)(bW, UW), JW = PW.statusOf("kickAll");
-      (0, mW.useEffect)((() => {
-        var WW, iW;
-        if (null === LW) return;
-        const OW = null === (WW = xW.current) || void 0 === WW ? void 0 : WW.querySelector(`[data-lobby-manage-row="${CSS.escape(LW.name)}"]`);
-        null === OW || void 0 === OW || OW.scrollIntoView({
+        t: fR
+      } = (0, rR.A)(), VR = (0, WR.i)("players"), KR = (0, WR.i)("hiddenPlayerNames"), wR = (0, yR.useRef)(null), {
+        state: aR
+      } = ZR, nR = null === VR.localId ? null : null !== (JR = null === (GR = VR.byId[VR.localId]) || void 0 === GR ? void 0 : GR.name) && void 0 !== JR ? JR : null, [UR] = (0, yR.useState)((() => (0, CR.w)(aR, nR))), XR = (0, CR.q)(UR, aR, nR), [MR, BR] = (0, yR.useState)(!1), lR = (0, CR.h)(aR, nR), pR = ZR.statusOf("kickAll");
+      (0, yR.useEffect)((() => {
+        var RR, JR;
+        if (null === qR) return;
+        const GR = null === (RR = wR.current) || void 0 === RR ? void 0 : RR.querySelector(`[data-lobby-manage-row="${CSS.escape(qR.name)}"]`);
+        null === GR || void 0 === GR || GR.scrollIntoView({
           block: "center"
-        }), null === OW || void 0 === OW || null === (iW = OW.querySelector(".ProfilePreview")) || void 0 === iW || iW.focus({
+        }), null === GR || void 0 === GR || null === (JR = GR.querySelector(".ProfilePreview")) || void 0 === JR || JR.focus({
           preventScroll: !0
-        }), cW(LW.seq)
-      }), [null === LW || void 0 === LW ? void 0 : LW.seq]);
-      const hW = WW => (iW, OW) => (0, oW.jsx)(VW, {
-        name: iW,
-        place: (0, KW.e)(bW, iW),
-        openedIn: WW,
-        isYou: iW === UW,
-        manage: PW,
-        hiddenNames: ZW,
-        zIndex: OW
-      }, iW);
-      return (0, oW.jsxs)("div", {
-        ref: xW,
+        }), iR(qR.seq)
+      }), [null === qR || void 0 === qR ? void 0 : qR.seq]);
+      const gR = RR => (JR, GR) => (0, xR.jsx)(PR, {
+        name: JR,
+        place: (0, CR.d)(aR, JR),
+        openedIn: RR,
+        isYou: JR === nR,
+        manage: ZR,
+        hiddenNames: KR,
+        zIndex: GR
+      }, JR);
+      return (0, xR.jsxs)("div", {
+        ref: wR,
         className: "LobbyManagePage",
-        children: [SW.here.length > 0 && (0, oW.jsxs)("div", {
+        children: [XR.here.length > 0 && (0, xR.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, oW.jsxs)("div", {
+          children: [(0, xR.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, oW.jsx)(jW.b, {
-              label: wW("lobbyManage:here"),
-              meta: bW.here.length
-            }), TW >= KW.n && !YW && (0, oW.jsxs)(MW.S, {
+            children: [(0, xR.jsx)(LR.c, {
+              label: fR("lobbyManage:here"),
+              meta: aR.here.length
+            }), lR >= CR.u && !MR && (0, xR.jsxs)(AR.O, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: PW.isPending("kickAll"),
+              disabled: ZR.isPending("kickAll"),
               onClick: () => {
-                yW(!0)
+                BR(!0)
               },
-              children: [(0, oW.jsx)(AW.c, {
+              children: [(0, xR.jsx)(eR.d, {
                 name: "person-falling-burst"
-              }), " ", wW("lobbyManage:kickAll")]
+              }), " ", fR("lobbyManage:kickAll")]
             })]
-          }), YW && TW >= KW.n && (0, oW.jsxs)("div", {
+          }), MR && lR >= CR.u && (0, xR.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, oW.jsx)("span", {
+            children: [(0, xR.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: wW("lobbyManage:kickAllConfirm", {
-                count: TW
+              children: fR("lobbyManage:kickAllConfirm", {
+                count: lR
               })
-            }), (0, oW.jsxs)("div", {
+            }), (0, xR.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, oW.jsx)(MW.O, {
+              children: [(0, xR.jsx)(AR.M, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  yW(!1), PW.send({
+                  BR(!1), ZR.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: wW("lobbyManage:kickAll")
-              }), (0, oW.jsx)(MW.h, {
+                children: fR("lobbyManage:kickAll")
+              }), (0, xR.jsx)(AR.i, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  yW(!1)
+                  BR(!1)
                 },
-                children: wW("general:cancel")
+                children: fR("general:cancel")
               })]
             })]
-          }), JW && (0, oW.jsx)("div", {
+          }), pR && (0, xR.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, oW.jsx)(dW, {
-              status: JW
+            children: (0, xR.jsx)(NR, {
+              status: pR
             })
-          }), (0, oW.jsx)(eW, {
-            names: SW.here,
-            cap: SW.here.length,
+          }), (0, xR.jsx)(DR, {
+            names: XR.here,
+            cap: XR.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: hW("here")
+            renderRow: gR("here")
           })]
-        }), SW.away.length > 0 && (0, oW.jsxs)("div", {
+        }), XR.away.length > 0 && (0, xR.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, oW.jsx)(jW.b, {
-            label: wW("lobbyManage:notHere"),
-            meta: SW.away.length
-          }), (0, oW.jsx)(eW, {
-            names: SW.away,
+          children: [(0, xR.jsx)(LR.c, {
+            label: fR("lobbyManage:notHere"),
+            meta: XR.away.length
+          }), (0, xR.jsx)(DR, {
+            names: XR.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: wW("lobbyManage:allCount", {
-              count: SW.away.length
+            moreLabel: fR("lobbyManage:allCount", {
+              count: XR.away.length
             }),
-            reveal: null !== (EW = null === LW || void 0 === LW ? void 0 : LW.name) && void 0 !== EW ? EW : null,
-            renderRow: hW("away")
+            reveal: null !== (tR = null === qR || void 0 === qR ? void 0 : qR.name) && void 0 !== tR ? tR : null,
+            renderRow: gR("away")
           })]
-        }), SW.banned.length > 0 && (0, oW.jsxs)("div", {
+        }), XR.banned.length > 0 && (0, xR.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, oW.jsx)(jW.b, {
-            label: wW("lobbyManage:banned"),
-            meta: SW.banned.length
-          }), (0, oW.jsx)(eW, {
-            names: SW.banned,
+          children: [(0, xR.jsx)(LR.c, {
+            label: fR("lobbyManage:banned"),
+            meta: XR.banned.length
+          }), (0, xR.jsx)(DR, {
+            names: XR.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: wW("lobbyManage:allCount", {
-              count: SW.banned.length
+            moreLabel: fR("lobbyManage:allCount", {
+              count: XR.banned.length
             }),
-            reveal: null !== (NW = null === LW || void 0 === LW ? void 0 : LW.name) && void 0 !== NW ? NW : null,
-            renderRow: hW("banned")
+            reveal: null !== (uR = null === qR || void 0 === qR ? void 0 : qR.name) && void 0 !== uR ? uR : null,
+            renderRow: gR("banned")
           })]
         })]
       })
     }
-    var fW = OW(5318),
-      CW = OW(1736),
-      XW = OW(37932),
-      BW = OW(37948),
-      qW = OW(37945),
-      RW = OW(37936),
-      GW = OW(37960),
-      IW = OW(37956),
-      aW = OW(37958);
+    var mR = GR(5425),
+      zR = GR(1803),
+      SR = GR(37863),
+      jR = GR(37881),
+      dR = GR(37873),
+      ER = GR(37865),
+      YR = GR(37911),
+      kR = GR(37897),
+      QR = GR(37905);
 
-    function rW(WW) {
-      const iW = new Set;
-      for (const OW of WW) iW.add(OW.toLowerCase());
-      return iW
+    function FR(RR) {
+      const JR = new Set;
+      for (const GR of RR) JR.add(GR.toLowerCase());
+      return JR
     }
 
-    function zW(WW) {
-      var iW, OW;
+    function TR(RR) {
+      var JR, GR;
       let {
-        state: EW,
-        lobbyName: NW,
-        listed: PW,
-        isListed: LW,
-        Hk: cW,
-        mY: wW,
-        statusOf: tW
-      } = WW;
+        state: tR,
+        lobbyName: uR,
+        listed: ZR,
+        isListed: qR,
+        UW: iR,
+        mC: fR,
+        statusOf: VR
+      } = RR;
       const {
-        t: ZW,
-        selectedLanguage: xW
-      } = (0, lW.B)(), AW = (0, CW.l)(), bW = (0, sW.g)("players"), UW = null === bW.localId ? null : null !== (iW = null === (OW = bW.byId[bW.localId]) || void 0 === OW ? void 0 : OW.name) && void 0 !== iW ? iW : null, kW = (0, mW.useMemo)((() => (0, RW.g)(AW.friends, NW, EW.here.map((WW => WW.name)))), [AW.friends, NW, EW.here]), MW = new Map(kW.map((WW => [WW.friend.name.toLowerCase(), WW]))), KW = function(WW) {
+        t: KR,
+        selectedLanguage: wR
+      } = (0, rR.A)(), eR = (0, zR.k)(), aR = (0, WR.i)("players"), nR = null === aR.localId ? null : null !== (JR = null === (GR = aR.byId[aR.localId]) || void 0 === GR ? void 0 : GR.name) && void 0 !== JR ? JR : null, UR = (0, yR.useMemo)((() => (0, ER.j)(eR.friends, uR, tR.here.map((RR => RR.name)))), [eR.friends, uR, tR.here]), AR = new Map(UR.map((RR => [RR.friend.name.toLowerCase(), RR]))), CR = function(RR) {
         let {
-          refused: iW,
-          listed: OW,
-          here: mW,
-          friends: EW,
-          excluded: NW
-        } = WW;
-        const PW = rW(NW),
-          LW = WW => WW.filter((WW => {
-            const iW = WW.toLowerCase();
-            return !PW.has(iW) && (PW.add(iW), !0)
+          refused: JR,
+          listed: GR,
+          here: yR,
+          friends: tR,
+          excluded: uR
+        } = RR;
+        const ZR = FR(uR),
+          qR = RR => RR.filter((RR => {
+            const JR = RR.toLowerCase();
+            return !ZR.has(JR) && (ZR.add(JR), !0)
           }));
         return {
           added: [],
-          refused: LW(iW),
-          listed: LW(OW),
-          suggested: LW([...mW, ...EW])
+          refused: qR(JR),
+          listed: qR(GR),
+          suggested: qR([...yR, ...tR])
         }
       }({
-        refused: EW.refused.map((WW => WW.name)),
-        listed: PW,
-        here: EW.here.map((WW => WW.name)),
-        friends: kW.flatMap((WW => "here" === WW.place ? [] : [WW.friend.name])),
-        excluded: [...null === UW ? [] : [UW], ...[...EW.here, ...EW.away].flatMap((WW => "none" === WW.role || (0, RW.h)(PW, WW.name) ? [] : [WW.name]))]
-      }), [SW] = (0, mW.useState)(KW), [TW, JW] = (0, mW.useState)([]), hW = function(WW, iW, OW) {
-        const mW = rW(OW),
-          EW = rW([...OW, ...WW.refused, ...WW.listed, ...WW.suggested]),
-          NW = OW => [...WW[OW].filter((WW => !mW.has(WW.toLowerCase()))), ...iW[OW].filter((WW => {
-            const iW = WW.toLowerCase();
-            return !EW.has(iW) && (EW.add(iW), !0)
+        refused: tR.refused.map((RR => RR.name)),
+        listed: ZR,
+        here: tR.here.map((RR => RR.name)),
+        friends: UR.flatMap((RR => "here" === RR.place ? [] : [RR.friend.name])),
+        excluded: [...null === nR ? [] : [nR], ...[...tR.here, ...tR.away].flatMap((RR => "none" === RR.role || (0, ER.n)(ZR, RR.name) ? [] : [RR.name]))]
+      }), [XR] = (0, yR.useState)(CR), [lR, pR] = (0, yR.useState)([]), gR = function(RR, JR, GR) {
+        const yR = FR(GR),
+          tR = FR([...GR, ...RR.refused, ...RR.listed, ...RR.suggested]),
+          uR = GR => [...RR[GR].filter((RR => !yR.has(RR.toLowerCase()))), ...JR[GR].filter((RR => {
+            const JR = RR.toLowerCase();
+            return !tR.has(JR) && (tR.add(JR), !0)
           }))];
         return {
-          added: [...OW],
-          refused: NW("refused"),
-          listed: NW("listed"),
-          suggested: NW("suggested")
+          added: [...GR],
+          refused: uR("refused"),
+          listed: uR("listed"),
+          suggested: uR("suggested")
         }
-      }(SW, KW, TW), nW = (WW, iW) => {
-        var OW, mW;
-        const NW = WW.toLowerCase(),
-          PW = MW.get(NW),
-          wW = EW.here.find((WW => WW.name.toLowerCase() === NW)),
-          lW = EW.refused.find((WW => WW.name.toLowerCase() === NW)),
-          AW = null !== (OW = null === tW || void 0 === tW ? void 0 : tW(WW)) && void 0 !== OW ? OW : null;
-        let bW = null;
-        AW ? bW = (0, oW.jsx)(dW, {
-          status: AW
-        }) : lW ? bW = HW(ZW, xW.code, "lobbyManage:triedToJoinAgo", lW.at, Date.now()) : PW && wW ? bW = ZW("lobbyManage:friendHere") : PW ? bW = "online" === PW.place ? ZW("lobbyManage:friendOnline") : ZW("lobbyManage:friend") : wW && (bW = ZW("lobbyManage:hereStatus"));
-        let jW = null !== (mW = null === PW || void 0 === PW ? void 0 : PW.friend) && void 0 !== mW ? mW : (0, yW.k)(WW, null);
-        return !PW && null !== wW && void 0 !== wW && wW.id && (jW = (0, YW.c)(wW.id, wW.name).playerSocialPreview), (0, oW.jsx)(IW.d, {
-          playerSocialPreview: jW,
-          isFriend: void 0 !== PW,
+      }(XR, CR, lR), vR = (RR, JR) => {
+        var GR, yR;
+        const uR = RR.toLowerCase(),
+          ZR = AR.get(uR),
+          fR = tR.here.find((RR => RR.name.toLowerCase() === uR)),
+          rR = tR.refused.find((RR => RR.name.toLowerCase() === uR)),
+          eR = null !== (GR = null === VR || void 0 === VR ? void 0 : VR(RR)) && void 0 !== GR ? GR : null;
+        let aR = null;
+        eR ? aR = (0, xR.jsx)(NR, {
+          status: eR
+        }) : rR ? aR = bR(KR, wR.code, "lobbyManage:triedToJoinAgo", rR.at, Date.now()) : ZR && fR ? aR = KR("lobbyManage:friendHere") : ZR ? aR = "online" === ZR.place ? KR("lobbyManage:friendOnline") : KR("lobbyManage:friend") : fR && (aR = KR("lobbyManage:hereStatus"));
+        let LR = null !== (yR = null === ZR || void 0 === ZR ? void 0 : ZR.friend) && void 0 !== yR ? yR : (0, BR.i)(RR, null);
+        return !ZR && null !== fR && void 0 !== fR && fR.id && (LR = (0, MR.h)(fR.id, fR.name).playerSocialPreview), (0, xR.jsx)(kR.b, {
+          playerSocialPreview: LR,
+          isFriend: void 0 !== ZR,
           hideFriendBadge: !0,
-          status: bW,
-          zIndex: iW,
-          hZ: {
-            on: LW(WW),
-            onChange: iW => {
-              cW(WW, iW)
+          status: aR,
+          zIndex: JR,
+          gK: {
+            on: qR(RR),
+            onChange: JR => {
+              iR(RR, JR)
             }
           }
-        }, NW)
-      }, uW = [...hW.added, ...hW.refused];
-      return (0, oW.jsxs)("div", {
+        }, uR)
+      }, OR = [...gR.added, ...gR.refused];
+      return (0, xR.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, oW.jsx)(jW.b, {
-          label: ZW("worldSocial:whitelist"),
-          meta: PW.length
-        }), (0, oW.jsx)(aW.b, {
-          label: ZW("lobbyManage:add"),
+        children: [(0, xR.jsx)(LR.c, {
+          label: KR("worldSocial:whitelist"),
+          meta: ZR.length
+        }), (0, xR.jsx)(QR.b, {
+          label: KR("lobbyManage:add"),
           icon: "user-check",
-          placeholder: ZW("socialBar:enterPlayerName"),
-          onSubmit: async WW => {
-            const iW = await wW(WW);
-            return iW.ok && JW((iW => [WW, ...iW])), iW
+          placeholder: KR("socialBar:enterPlayerName"),
+          onSubmit: async RR => {
+            const JR = await fR(RR);
+            return JR.ok && pR((JR => [RR, ...JR])), JR
           }
-        }), uW.length > 0 && (0, oW.jsx)("div", {
+        }), OR.length > 0 && (0, xR.jsx)("div", {
           className: "PlayerRows",
-          children: uW.map(((WW, iW) => nW(WW, uW.length - iW)))
-        }), (0, oW.jsx)(eW, {
-          names: hW.listed,
+          children: OR.map(((RR, JR) => vR(RR, OR.length - JR)))
+        }), (0, xR.jsx)(DR, {
+          names: gR.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: ZW("lobbyManage:allOnWhitelist", {
-            count: hW.listed.length
+          moreLabel: KR("lobbyManage:allOnWhitelist", {
+            count: gR.listed.length
           }),
-          renderRow: nW
-        }), (0, oW.jsx)(eW, {
-          names: hW.suggested,
+          renderRow: vR
+        }), (0, xR.jsx)(DR, {
+          names: gR.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: ZW("lobbyManage:allCount", {
-            count: hW.suggested.length
+          moreLabel: KR("lobbyManage:allCount", {
+            count: gR.suggested.length
           }),
-          renderRow: nW
+          renderRow: vR
         })]
       })
     }
 
-    function FW(WW) {
+    function sR(RR) {
       let {
-        manage: iW,
-        listing: OW
-      } = WW;
+        manage: JR,
+        listing: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, lW.B)(), NW = (WW, OW) => ((0, EW.reportAnalyticsClick)({
+        t: yR
+      } = (0, rR.A)(), uR = (RR, GR) => ((0, tR.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: WW
-      }), iW.send({
+        value: RR
+      }), JR.send({
         type: "setListing",
-        field: WW,
-        value: OW
-      }, `listing:${WW}`)), PW = WW => {
-        const OW = iW.statusOf(`listing:${WW}`);
-        return OW && !OW.ok && (0, oW.jsx)("div", {
+        field: RR,
+        value: GR
+      }, `listing:${RR}`)), ZR = RR => {
+        const GR = JR.statusOf(`listing:${RR}`);
+        return GR && !GR.ok && (0, xR.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, oW.jsx)(dW, {
-            status: OW
+          children: (0, xR.jsx)(NR, {
+            status: GR
           })
         })
       };
-      return (0, oW.jsxs)("div", {
+      return (0, xR.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, oW.jsx)(jW.b, {
-          label: mW("lobbyManage:inWorldsList")
-        }), (0, oW.jsxs)("div", {
+        children: [(0, xR.jsx)(LR.c, {
+          label: yR("lobbyManage:inWorldsList")
+        }), (0, xR.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, oW.jsx)("div", {
+          children: [(0, xR.jsx)("div", {
             className: "SliderText",
-            children: mW("lobbyManage:description")
-          }), (0, oW.jsx)(vW, {
-            value: OW.description,
-            ariaLabel: mW("lobbyManage:description"),
+            children: yR("lobbyManage:description")
+          }), (0, xR.jsx)(HR, {
+            value: GR.description,
+            ariaLabel: yR("lobbyManage:description"),
             wide: !0,
-            onSave: WW => NW("description", WW)
+            onSave: RR => uR("description", RR)
           })]
-        }), PW("description"), (0, oW.jsxs)("div", {
+        }), ZR("description"), (0, xR.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, oW.jsx)("div", {
+          children: [(0, xR.jsx)("div", {
             className: "SliderText",
-            children: mW("lobbyManage:emojis")
-          }), (0, oW.jsx)(vW, {
-            value: OW.emojis,
-            ariaLabel: mW("lobbyManage:emojis"),
-            onSave: WW => NW("emojis", WW)
+            children: yR("lobbyManage:emojis")
+          }), (0, xR.jsx)(HR, {
+            value: GR.emojis,
+            ariaLabel: yR("lobbyManage:emojis"),
+            onSave: RR => uR("emojis", RR)
           })]
-        }), PW("emojis"), (0, oW.jsxs)("div", {
+        }), ZR("emojis"), (0, xR.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, oW.jsx)("div", {
+          children: [(0, xR.jsx)("div", {
             className: "SliderText",
-            children: mW("lobbyManage:colour")
-          }), (0, oW.jsx)(QW, {
-            value: OW.colour,
-            ariaLabel: mW("lobbyManage:colour"),
-            onSave: WW => {
-              NW("colour", WW)
+            children: yR("lobbyManage:colour")
+          }), (0, xR.jsx)(hR, {
+            value: GR.colour,
+            ariaLabel: yR("lobbyManage:colour"),
+            onSave: RR => {
+              uR("colour", RR)
             }
           })]
-        }), PW("colour")]
+        }), ZR("colour")]
       })
     }
 
-    function QW(WW) {
+    function hR(RR) {
       let {
-        value: iW,
-        ariaLabel: OW,
-        onSave: EW
-      } = WW;
-      const NW = (0, mW.useRef)(null),
-        PW = (0, mW.useRef)({
-          value: iW,
-          onSave: EW
+        value: JR,
+        ariaLabel: GR,
+        onSave: tR
+      } = RR;
+      const uR = (0, yR.useRef)(null),
+        ZR = (0, yR.useRef)({
+          value: JR,
+          onSave: tR
         });
-      PW.current = {
-        value: iW,
-        onSave: EW
+      ZR.current = {
+        value: JR,
+        onSave: tR
       };
-      const LW = (0, mW.useRef)(null),
-        cW = (0, mW.useRef)(!1),
-        wW = WW => {
-          cW.current && WW.value !== PW.current.value && WW.value !== LW.current && (LW.current = WW.value, PW.current.onSave(WW.value))
+      const qR = (0, yR.useRef)(null),
+        iR = (0, yR.useRef)(!1),
+        fR = RR => {
+          iR.current && RR.value !== ZR.current.value && RR.value !== qR.current && (qR.current = RR.value, ZR.current.onSave(RR.value))
         };
-      return (0, mW.useEffect)((() => {
-        NW.current && document.activeElement !== NW.current && (NW.current.value = iW)
-      }), [iW]), (0, mW.useEffect)((() => {
-        const WW = NW.current,
-          iW = () => {
-            wW(WW)
+      return (0, yR.useEffect)((() => {
+        uR.current && document.activeElement !== uR.current && (uR.current.value = JR)
+      }), [JR]), (0, yR.useEffect)((() => {
+        const RR = uR.current,
+          JR = () => {
+            fR(RR)
           };
-        return WW.addEventListener("change", iW), () => {
-          WW.removeEventListener("change", iW), wW(WW)
+        return RR.addEventListener("change", JR), () => {
+          RR.removeEventListener("change", JR), fR(RR)
         }
-      }), []), (0, oW.jsx)("input", {
-        ref: NW,
+      }), []), (0, xR.jsx)("input", {
+        ref: uR,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: iW,
-        "aria-label": OW,
+        defaultValue: JR,
+        "aria-label": GR,
         onInput: () => {
-          cW.current = !0
+          iR.current = !0
         },
-        onBlur: WW => {
-          wW(WW.currentTarget)
+        onBlur: RR => {
+          fR(RR.currentTarget)
         }
       })
     }
 
-    function Wi(WW) {
+    function RJ(RR) {
       let {
-        manage: iW
-      } = WW;
+        manage: JR
+      } = RR;
       const {
-        lobbyName: OW,
-        shownLobbyName: mW
-      } = (0, sW.g)("connectedGame");
-      return iW.state.you.canSetVisibility && null !== OW ? (0, oW.jsx)(Oi, {
-        manage: iW,
-        lobbyName: OW,
-        worldCode: null !== mW && void 0 !== mW ? mW : OW
-      }, OW) : (0, oW.jsx)(mi, {
-        manage: iW,
-        lobbyName: null !== OW && void 0 !== OW ? OW : ""
+        lobbyName: GR,
+        shownLobbyName: yR
+      } = (0, WR.i)("connectedGame");
+      return JR.state.you.canSetVisibility && null !== GR ? (0, xR.jsx)(GJ, {
+        manage: JR,
+        lobbyName: GR,
+        worldCode: null !== yR && void 0 !== yR ? yR : GR
+      }, GR) : (0, xR.jsx)(yJ, {
+        manage: JR,
+        lobbyName: null !== GR && void 0 !== GR ? GR : ""
       })
     }
 
-    function ii(WW) {
-      return WW.map((WW => WW.toLowerCase())).sort().join(",")
+    function JJ(RR) {
+      return RR.map((RR => RR.toLowerCase())).sort().join(",")
     }
 
-    function Oi(WW) {
-      var iW;
+    function GJ(RR) {
+      var JR;
       let {
-        manage: OW,
-        lobbyName: NW,
-        worldCode: PW
-      } = WW;
+        manage: GR,
+        lobbyName: uR,
+        worldCode: ZR
+      } = RR;
       const {
-        t: LW
-      } = (0, lW.B)(), {
-        settings: cW,
-        loading: wW,
-        change: tW,
-        retry: ZW,
-        refresh: xW
-      } = (0, XW.j)(NW), AW = (0, CW.l)(), {
-        state: UW
-      } = OW, kW = (0, mW.useRef)(cW);
-      kW.current = cW;
-      const sW = ii(null !== (iW = UW.whitelist) && void 0 !== iW ? iW : []),
-        KW = null !== UW.whitelist;
-      (0, mW.useEffect)((() => {
-        const WW = kW.current;
-        null !== WW && (WW.visibility !== UW.visibility || KW && ii(WW.whitelist) !== sW) && xW()
-      }), [UW.visibility, sW, KW, xW]);
-      const SW = async (WW, iW) => {
-        let OW = null;
-        return await tW(WW, iW, {
+        t: qR
+      } = (0, rR.A)(), {
+        settings: iR,
+        loading: fR,
+        change: VR,
+        retry: KR,
+        refresh: wR
+      } = (0, SR.j)(uR), eR = (0, zR.k)(), {
+        state: nR
+      } = GR, UR = (0, yR.useRef)(iR);
+      UR.current = iR;
+      const WR = JJ(null !== (JR = nR.whitelist) && void 0 !== JR ? JR : []),
+        CR = null !== nR.whitelist;
+      (0, yR.useEffect)((() => {
+        const RR = UR.current;
+        null !== RR && (RR.visibility !== nR.visibility || CR && JJ(RR.whitelist) !== WR) && wR()
+      }), [nR.visibility, WR, CR, wR]);
+      const XR = async (RR, JR) => {
+        let GR = null;
+        return await VR(RR, JR, {
           quiet: !0,
-          onAnswer: WW => {
-            OW = WW
+          onAnswer: RR => {
+            GR = RR
           }
-        }), OW
-      }, YW = (WW, iW) => {
-        null !== iW && "error" in iW && OW.showStatus(WW, {
+        }), GR
+      }, MR = (RR, JR) => {
+        null !== JR && "error" in JR && GR.showStatus(RR, {
           ok: !1,
-          text: [LW(iW.error)]
+          text: [qR(JR.error)]
         })
-      }, yW = async WW => {
-        if (null === cW || WW === cW.visibility) return;
-        (0, EW.reportAnalyticsClick)({
+      }, BR = async RR => {
+        if (null === iR || RR === iR.visibility) return;
+        (0, tR.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: WW
+          value: RR
         });
-        const iW = "whitelist" === WW ? (0, RW.f)((0, RW.g)(AW.friends, NW, UW.here.map((WW => WW.name))), (0, GW.d)(NW), cW.whitelist) : [],
-          OW = await SW({
-            setVisibility: WW
-          }, (iW => ({
-            ...iW,
-            visibility: WW
+        const JR = "whitelist" === RR ? (0, ER.f)((0, ER.j)(eR.friends, uR, nR.here.map((RR => RR.name))), (0, YR.d)(uR), iR.whitelist) : [],
+          GR = await XR({
+            setVisibility: RR
+          }, (JR => ({
+            ...JR,
+            visibility: RR
           })));
-        YW("mode", OW), null === OW || "error" in OW || await (async WW => {
-          for (const iW of (0, RW.k)(WW, fW.I))
-            if (!await tW({
-                whitelistAdd: iW
-              }, (WW => (0, RW.s)(WW, iW, !0)))) return !1;
+        MR("mode", GR), null === GR || "error" in GR || await (async RR => {
+          for (const JR of (0, ER.r)(RR, mR.x))
+            if (!await VR({
+                whitelistAdd: JR
+              }, (RR => (0, ER.x)(RR, JR, !0)))) return !1;
           return !0
-        })(iW)
-      }, TW = (0, mW.useMemo)((() => {
-        var WW;
-        if (null === cW) return [];
-        const iW = null !== (WW = UW.whitelist) && void 0 !== WW ? WW : [];
-        return [...iW.filter((WW => (0, RW.h)(cW.whitelist, WW))), ...cW.whitelist.filter((WW => !(0, RW.h)(iW, WW)))]
-      }), [cW, UW.whitelist]), JW = OW.statusOf("mode");
-      return (0, oW.jsxs)("div", {
+        })(JR)
+      }, lR = (0, yR.useMemo)((() => {
+        var RR;
+        if (null === iR) return [];
+        const JR = null !== (RR = nR.whitelist) && void 0 !== RR ? RR : [];
+        return [...JR.filter((RR => (0, ER.n)(iR.whitelist, RR))), ...iR.whitelist.filter((RR => !(0, ER.n)(JR, RR)))]
+      }), [iR, nR.whitelist]), pR = GR.statusOf("mode");
+      return (0, xR.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, oW.jsxs)("div", {
+        children: [(0, xR.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, oW.jsx)(jW.b, {
-            label: LW("worldSocial:whoCanJoin")
-          }), null === cW && wW && (0, oW.jsx)("div", {
+          children: [(0, xR.jsx)(LR.c, {
+            label: qR("worldSocial:whoCanJoin")
+          }), null === iR && fR && (0, xR.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, oW.jsx)(bW.d, {})
-          }), null === cW && !wW && (0, oW.jsx)(MW.h, {
+            children: (0, xR.jsx)(aR.d, {})
+          }), null === iR && !fR && (0, xR.jsx)(AR.i, {
             className: "SmallTextLight",
-            onClick: ZW,
-            children: LW("worldSocial:loadFailed")
-          }), null !== cW && (0, oW.jsx)(BW.b, {
-            visibility: cW.visibility,
-            onPick: WW => {
-              yW(WW)
+            onClick: KR,
+            children: qR("worldSocial:loadFailed")
+          }), null !== iR && (0, xR.jsx)(jR.e, {
+            visibility: iR.visibility,
+            onPick: RR => {
+              BR(RR)
             }
-          }), JW && (0, oW.jsx)("div", {
+          }), pR && (0, xR.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, oW.jsx)(dW, {
-              status: JW
+            children: (0, xR.jsx)(NR, {
+              status: pR
             })
-          }), null !== cW && "private" !== cW.visibility && (0, oW.jsx)(qW.c, {
-            worldCode: PW,
+          }), null !== iR && "private" !== iR.visibility && (0, xR.jsx)(dR.e, {
+            worldCode: ZR,
             message: null
           })]
-        }), "whitelist" === (null === cW || void 0 === cW ? void 0 : cW.visibility) && (0, oW.jsx)(zW, {
-          state: UW,
-          lobbyName: NW,
-          listed: TW,
-          isListed: WW => (0, RW.h)(cW.whitelist, WW),
-          Hk: (WW, iW) => {
-            (0, EW.reportAnalyticsClick)(iW ? {
+        }), "whitelist" === (null === iR || void 0 === iR ? void 0 : iR.visibility) && (0, xR.jsx)(TR, {
+          state: nR,
+          lobbyName: uR,
+          listed: lR,
+          isListed: RR => (0, ER.n)(iR.whitelist, RR),
+          UW: (RR, JR) => {
+            (0, tR.reportAnalyticsClick)(JR ? {
               id: "lobby_manage.whitelist_add",
-              value: "hZ"
+              value: "gK"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), SW(iW ? {
-              whitelistAdd: [WW]
+            }), XR(JR ? {
+              whitelistAdd: [RR]
             } : {
-              whitelistRemove: WW
-            }, (OW => (0, RW.s)(OW, [WW], iW))).then((iW => {
-              YW(`whitelist:${WW.toLowerCase()}`, iW)
+              whitelistRemove: RR
+            }, (GR => (0, ER.x)(GR, [RR], JR))).then((JR => {
+              MR(`whitelist:${RR.toLowerCase()}`, JR)
             }))
           },
-          mY: async WW => {
-            (0, EW.reportAnalyticsClick)({
+          mC: async RR => {
+            (0, tR.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const iW = await SW({
-              whitelistAdd: [WW]
-            }, (iW => (0, RW.s)(iW, [WW], !0)));
-            return null === iW ? {
+            const JR = await XR({
+              whitelistAdd: [RR]
+            }, (JR => (0, ER.x)(JR, [RR], !0)));
+            return null === JR ? {
               ok: !1,
-              error: LW("worldSocial:changeFailed")
-            } : "error" in iW ? {
+              error: qR("worldSocial:changeFailed")
+            } : "error" in JR ? {
               ok: !1,
-              error: LW(iW.error)
-            } : (0, RW.h)(iW.notFound, WW) ? {
+              error: qR(JR.error)
+            } : (0, ER.n)(JR.notFound, RR) ? {
               ok: !1,
-              error: LW("lobbyManage:noPlayerCalled", {
-                playerName: WW
+              error: qR("lobbyManage:noPlayerCalled", {
+                playerName: RR
               })
             } : {
               ok: !0
             }
           },
-          statusOf: WW => OW.statusOf(`whitelist:${WW.toLowerCase()}`)
-        }), "public" === (null === cW || void 0 === cW ? void 0 : cW.visibility) && null !== UW.listing && (0, oW.jsx)(FW, {
-          manage: OW,
-          listing: UW.listing
+          statusOf: RR => GR.statusOf(`whitelist:${RR.toLowerCase()}`)
+        }), "public" === (null === iR || void 0 === iR ? void 0 : iR.visibility) && null !== nR.listing && (0, xR.jsx)(sR, {
+          manage: GR,
+          listing: nR.listing
         })]
       })
     }
 
-    function mi(WW) {
-      var iW;
+    function yJ(RR) {
+      var JR;
       let {
-        manage: OW,
-        lobbyName: mW
-      } = WW;
+        manage: GR,
+        lobbyName: yR
+      } = RR;
       const {
-        t: NW
-      } = (0, lW.B)(), {
-        state: PW
-      } = OW, LW = tW(), cW = null !== (iW = PW.whitelist) && void 0 !== iW ? iW : [];
-      return (0, oW.jsxs)("div", {
+        t: uR
+      } = (0, rR.A)(), {
+        state: ZR
+      } = GR, qR = VR(), iR = null !== (JR = ZR.whitelist) && void 0 !== JR ? JR : [];
+      return (0, xR.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, oW.jsxs)("div", {
+        children: [(0, xR.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, oW.jsx)(jW.b, {
-            label: NW("worldSocial:whoCanJoin")
-          }), (0, oW.jsx)("div", {
+          children: [(0, xR.jsx)(LR.c, {
+            label: uR("worldSocial:whoCanJoin")
+          }), (0, xR.jsx)("div", {
             className: "LobbyManageModeText",
-            children: NW(`worldSocial:${PW.visibility}`)
+            children: uR(`worldSocial:${ZR.visibility}`)
           })]
-        }), "whitelist" === PW.visibility && PW.you.canEditWhitelist && (0, oW.jsx)(zW, {
-          state: PW,
-          lobbyName: mW,
-          listed: cW,
-          isListed: WW => {
-            var iW;
-            return null !== (iW = LW.get(WW.toLowerCase())) && void 0 !== iW ? iW : (0, RW.h)(cW, WW)
+        }), "whitelist" === ZR.visibility && ZR.you.canEditWhitelist && (0, xR.jsx)(TR, {
+          state: ZR,
+          lobbyName: yR,
+          listed: iR,
+          isListed: RR => {
+            var JR;
+            return null !== (JR = qR.get(RR.toLowerCase())) && void 0 !== JR ? JR : (0, ER.n)(iR, RR)
           },
-          Hk: (WW, iW) => {
-            (0, EW.reportAnalyticsClick)(iW ? {
+          UW: (RR, JR) => {
+            (0, tR.reportAnalyticsClick)(JR ? {
               id: "lobby_manage.whitelist_add",
-              value: "hZ"
+              value: "gK"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const mW = WW.toLowerCase();
-            LW.hold(mW, iW, OW.send(iW ? {
+            const yR = RR.toLowerCase();
+            qR.hold(yR, JR, GR.send(JR ? {
               type: "whitelistAdd",
-              names: [WW]
+              names: [RR]
             } : {
               type: "whitelistRemove",
-              name: WW
-            }, `whitelist:${mW}`))
+              name: RR
+            }, `whitelist:${yR}`))
           },
-          mY: async WW => {
-            (0, EW.reportAnalyticsClick)({
+          mC: async RR => {
+            (0, tR.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const iW = await OW.send({
+            const JR = await GR.send({
               type: "whitelistAdd",
-              names: [WW]
+              names: [RR]
             }, "whitelist-field");
-            return iW.ok ? {
+            return JR.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, oW.jsx)(nW.d, {
-                text: iW.message
+              error: (0, xR.jsx)(vR.c, {
+                text: JR.message
               })
             }
           },
-          statusOf: WW => OW.statusOf(`whitelist:${WW.toLowerCase()}`)
-        }), "public" === PW.visibility && null !== PW.listing && (0, oW.jsx)(FW, {
-          manage: OW,
-          listing: PW.listing
+          statusOf: RR => GR.statusOf(`whitelist:${RR.toLowerCase()}`)
+        }), "public" === ZR.visibility && null !== ZR.listing && (0, xR.jsx)(sR, {
+          manage: GR,
+          listing: ZR.listing
         })]
       })
     }
-    var Ei = OW(5910),
-      Ni = OW(1434);
-    const Pi = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const Li = (0, mW.memo)((function(WW) {
-      var iW;
+    var tJ = GR(6037),
+      uJ = GR(1501);
+    const ZJ = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const qJ = (0, yR.memo)((function(RR) {
+      var JR;
       let {
-        rule: OW,
-        value: mW,
-        status: EW,
-        pending: NW,
-        hiddenNames: PW,
-        eT: LW,
-        onAction: cW
-      } = WW;
+        rule: GR,
+        value: yR,
+        status: tR,
+        pending: uR,
+        hiddenNames: ZR,
+        Fv: qR,
+        onAction: iR
+      } = RR;
       const {
-        t: wW
-      } = (0, lW.B)(), tW = WW => LW(OW, WW), ZW = (WW, iW) => {
-        cW(OW, WW, iW)
-      }, xW = hW(wW, OW.label, PW), AW = OW.info ? hW(wW, OW.info, PW) : void 0, bW = OW.placeholder ? hW(wW, OW.placeholder, PW) : void 0, jW = (null !== (iW = OW.options) && void 0 !== iW ? iW : []).map((WW => ({
-        value: WW.value,
-        label: hW(wW, WW.label, PW)
-      }))), UW = Math.max(0, ...jW.map((WW => function(WW) {
-        let iW = 0;
-        for (const OW of WW) iW += Pi.test(OW) ? 2 : 1;
-        return iW
-      }(WW.label)))), kW = EW && (0, oW.jsx)("div", {
+        t: fR
+      } = (0, rR.A)(), VR = RR => qR(GR, RR), KR = (RR, JR) => {
+        iR(GR, RR, JR)
+      }, wR = gR(fR, GR.label, ZR), eR = GR.info ? gR(fR, GR.info, ZR) : void 0, aR = GR.placeholder ? gR(fR, GR.placeholder, ZR) : void 0, LR = (null !== (JR = GR.options) && void 0 !== JR ? JR : []).map((RR => ({
+        value: RR.value,
+        label: gR(fR, RR.label, ZR)
+      }))), nR = Math.max(0, ...LR.map((RR => function(RR) {
+        let JR = 0;
+        for (const GR of RR) JR += ZJ.test(GR) ? 2 : 1;
+        return JR
+      }(RR.label)))), UR = tR && (0, xR.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, oW.jsx)(dW, {
-          status: EW
+        children: (0, xR.jsx)(NR, {
+          status: tR
         })
-      }), sW = (0, oW.jsxs)("div", {
+      }), WR = (0, xR.jsxs)("div", {
         className: "SliderText",
-        children: [xW, void 0 !== AW && (0, oW.jsx)(Ni.d, {
+        children: [wR, void 0 !== eR && (0, xR.jsx)(uJ.e, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: AW
+          hoverInfo: eR
         })]
       });
-      return "toggle" === OW.kind ? (0, oW.jsxs)(oW.Fragment, {
-        children: [(0, oW.jsx)(Ei.e, {
-          label: xW,
-          checked: !0 === mW,
-          circleInfoText: AW,
-          disabled: NW,
-          onClick: tW
-        }), kW]
-      }) : "choice" === OW.kind && jW.length <= 3 ? (0, oW.jsxs)(oW.Fragment, {
-        children: [(0, oW.jsx)(Ei.h, {
-          label: xW,
-          options: jW,
-          value: String(mW),
-          circleInfoText: AW,
-          onChange: tW
-        }), kW]
-      }) : (0, oW.jsxs)("div", {
+      return "toggle" === GR.kind ? (0, xR.jsxs)(xR.Fragment, {
+        children: [(0, xR.jsx)(tJ.e, {
+          label: wR,
+          checked: !0 === yR,
+          circleInfoText: eR,
+          disabled: uR,
+          onClick: VR
+        }), UR]
+      }) : "choice" === GR.kind && LR.length <= 3 ? (0, xR.jsxs)(xR.Fragment, {
+        children: [(0, xR.jsx)(tJ.g, {
+          label: wR,
+          options: LR,
+          value: String(yR),
+          circleInfoText: eR,
+          onChange: VR
+        }), UR]
+      }) : (0, xR.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [sW, "choice" === OW.kind && (0, oW.jsx)("span", {
+        children: [WR, "choice" === GR.kind && (0, xR.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": UW
+            "--lobby-choice-chars": nR
           },
-          children: (0, oW.jsx)(TW.e, {
-            options: jW,
-            value: String(mW),
-            disabled: NW,
+          children: (0, xR.jsx)(lR.e, {
+            options: LR,
+            value: String(yR),
+            disabled: uR,
             revealOnOpen: !0,
-            onChange: WW => {
-              tW(WW.value)
+            onChange: RR => {
+              VR(RR.value)
             }
           })
-        }), ("number" === OW.kind || "text" === OW.kind) && (0, oW.jsx)(vW, {
-          value: null === mW ? "" : String(mW),
-          placeholder: bW,
-          ariaLabel: xW,
-          onSave: WW => {
-            const iW = WW.trim(),
-              mW = Number(iW);
-            return tW("number" === OW.kind && "" !== iW && Number.isFinite(mW) ? mW : iW)
+        }), ("number" === GR.kind || "text" === GR.kind) && (0, xR.jsx)(HR, {
+          value: null === yR ? "" : String(yR),
+          placeholder: aR,
+          ariaLabel: wR,
+          onSave: RR => {
+            const JR = RR.trim(),
+              yR = Number(JR);
+            return VR("number" === GR.kind && "" !== JR && Number.isFinite(yR) ? yR : JR)
           }
-        }), "action" === OW.kind && (0, oW.jsxs)("div", {
+        }), "action" === GR.kind && (0, xR.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [jW.length > 3 && (0, oW.jsx)(TW.e, {
-            options: jW,
+          children: [LR.length > 3 && (0, xR.jsx)(lR.e, {
+            options: LR,
             value: {
               value: "",
-              label: null !== bW && void 0 !== bW ? bW : xW
+              label: null !== aR && void 0 !== aR ? aR : wR
             },
-            disabled: NW,
+            disabled: uR,
             revealOnOpen: !0,
-            onChange: WW => {
-              ZW(WW.value)
+            onChange: RR => {
+              KR(RR.value)
             }
-          }), jW.length > 0 && jW.length <= 3 && jW.map((WW => (0, oW.jsx)(MW.h, {
+          }), LR.length > 0 && LR.length <= 3 && LR.map((RR => (0, xR.jsx)(AR.i, {
             className: "SmallTextLight",
-            disabled: NW,
+            disabled: uR,
             onClick: () => {
-              ZW(WW.value)
+              KR(RR.value)
             },
-            children: WW.label
-          }, WW.value))), 0 === jW.length && (0, oW.jsx)(MW.h, {
+            children: RR.label
+          }, RR.value))), 0 === LR.length && (0, xR.jsx)(AR.i, {
             className: "SmallTextLight",
-            disabled: NW,
+            disabled: uR,
             onClick: () => {
-              ZW()
+              KR()
             },
-            children: null !== bW && void 0 !== bW ? bW : xW
+            children: null !== aR && void 0 !== aR ? aR : wR
           })]
-        }), "names" === OW.kind && (0, oW.jsx)(ci, {
-          names: Array.isArray(mW) ? mW : [],
-          pending: NW,
-          onAction: ZW
-        }), kW]
+        }), "names" === GR.kind && (0, xR.jsx)(iJ, {
+          names: Array.isArray(yR) ? yR : [],
+          pending: uR,
+          onAction: KR
+        }), UR]
       })
     }));
 
-    function ci(WW) {
+    function iJ(RR) {
       let {
-        names: iW,
-        pending: OW,
-        onAction: EW
-      } = WW;
+        names: JR,
+        pending: GR,
+        onAction: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, lW.B)(), PW = (0, mW.useRef)(null), [LW, cW] = (0, mW.useState)(""), wW = () => {
-        const WW = LW.trim();
-        "" !== WW && (EW(WW, "add"), PW.current && (PW.current.value = ""), cW(""))
+        t: uR
+      } = (0, rR.A)(), ZR = (0, yR.useRef)(null), [qR, iR] = (0, yR.useState)(""), fR = () => {
+        const RR = qR.trim();
+        "" !== RR && (tR(RR, "add"), ZR.current && (ZR.current.value = ""), iR(""))
       };
-      return (0, oW.jsxs)("div", {
+      return (0, xR.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [iW.map((WW => (0, oW.jsxs)("div", {
+        children: [JR.map((RR => (0, xR.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, oW.jsx)("span", {
+          children: [(0, xR.jsx)("span", {
             className: "LobbyManageNameText",
-            children: WW
-          }), (0, oW.jsx)(MW.h, {
+            children: RR
+          }), (0, xR.jsx)(AR.i, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: NW("lobbyManage:removeName", {
-              name: WW
+            ariaLabel: uR("lobbyManage:removeName", {
+              name: RR
             }),
-            disabled: OW,
+            disabled: GR,
             onClick: () => {
-              EW(WW, "remove")
+              tR(RR, "remove")
             },
-            children: (0, oW.jsx)(AW.c, {
+            children: (0, xR.jsx)(eR.d, {
               name: "xmark"
             })
           })]
-        }, WW))), (0, oW.jsxs)("div", {
+        }, RR))), (0, xR.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, oW.jsx)(uW.b, {
-            domRef: PW,
-            placeholderText: NW("lobbyManage:namePlaceholder"),
-            ariaLabel: NW("lobbyManage:namePlaceholder"),
+          children: [(0, xR.jsx)(OR.b, {
+            domRef: ZR,
+            placeholderText: uR("lobbyManage:namePlaceholder"),
+            ariaLabel: uR("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: WW => {
-              cW(WW)
+            onValueChange: RR => {
+              iR(RR)
             },
-            onEnter: wW
-          }), (0, oW.jsx)(MW.h, {
+            onEnter: fR
+          }), (0, xR.jsx)(AR.i, {
             className: "SmallTextLight",
-            disabled: OW || "" === LW.trim(),
-            onClick: wW,
-            children: NW("lobbyManage:addHere")
+            disabled: GR || "" === qR.trim(),
+            onClick: fR,
+            children: uR("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const wi = [{
+    const fJ = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1154,125 +1154,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function ti(WW, iW) {
-      return wi.map((OW => {
+    function VJ(RR, JR) {
+      return fJ.map((GR => {
         let {
-          group: mW,
-          title: EW
-        } = OW;
-        const NW = WW.filter((WW => WW.group === mW && void 0 === WW.parent)).map((OW => {
-          const mW = !0 === iW(OW) ? WW.filter((WW => WW.parent === OW.key)) : [];
+          group: yR,
+          title: tR
+        } = GR;
+        const uR = RR.filter((RR => RR.group === yR && void 0 === RR.parent)).map((GR => {
+          const yR = !0 === JR(GR) ? RR.filter((RR => RR.parent === GR.key)) : [];
           return {
-            rule: OW,
-            children: mW
+            rule: GR,
+            children: yR
           }
         }));
         return {
-          group: mW,
-          title: EW,
-          items: NW
+          group: yR,
+          title: tR,
+          items: uR
         }
       }))
     }
 
-    function Zi(WW) {
-      return WW.flatMap((WW => {
+    function KJ(RR) {
+      return RR.flatMap((RR => {
         let {
-          items: iW
-        } = WW;
-        return iW.flatMap((WW => {
+          items: JR
+        } = RR;
+        return JR.flatMap((RR => {
           let {
-            rule: iW,
-            children: OW
-          } = WW;
-          return [iW, ...OW]
+            rule: JR,
+            children: GR
+          } = RR;
+          return [JR, ...GR]
         }))
       }))
     }
 
-    function xi(WW) {
+    function wJ(RR) {
       let {
-        manage: iW,
-        rowsShown: OW
-      } = WW;
+        manage: JR,
+        rowsShown: GR
+      } = RR;
       const {
-        t: NW
-      } = (0, lW.B)(), PW = (0, sW.g)("hiddenPlayerNames"), {
-        rules: LW
-      } = iW.state, cW = tW(), wW = WW => {
-        const iW = cW.get(WW.key);
-        return void 0 === iW ? WW.value : iW
-      }, ZW = ti(LW, wW), [xW] = (0, mW.useState)((() => Zi(ZW).map((WW => WW.key)))), AW = OW === 1 / 0 ? null : new Set(xW.slice(0, OW)), bW = WW => null === AW || AW.has(WW.key), {
-        hold: UW
-      } = cW, kW = (0, mW.useCallback)(((WW, OW) => {
-        (0, EW.reportAnalyticsClick)({
+        t: uR
+      } = (0, rR.A)(), ZR = (0, WR.i)("hiddenPlayerNames"), {
+        rules: qR
+      } = JR.state, iR = VR(), fR = RR => {
+        const JR = iR.get(RR.key);
+        return void 0 === JR ? RR.value : JR
+      }, KR = VJ(qR, fR), [wR] = (0, yR.useState)((() => KJ(KR).map((RR => RR.key)))), eR = GR === 1 / 0 ? null : new Set(wR.slice(0, GR)), aR = RR => null === eR || eR.has(RR.key), {
+        hold: nR
+      } = iR, UR = (0, yR.useCallback)(((RR, GR) => {
+        (0, tR.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: WW.key
+          value: RR.key
         });
-        const mW = iW.send({
+        const yR = JR.send({
           type: "setRule",
-          key: WW.key,
-          value: OW
-        }, `rule:${WW.key}`);
-        return UW(WW.key, OW, mW), mW
-      }), [iW, UW]), MW = (0, mW.useCallback)(((WW, OW, mW) => {
-        (0, EW.reportAnalyticsClick)({
+          key: RR.key,
+          value: GR
+        }, `rule:${RR.key}`);
+        return nR(RR.key, GR, yR), yR
+      }), [JR, nR]), AR = (0, yR.useCallback)(((RR, GR, yR) => {
+        (0, tR.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: WW.key
-        }), iW.send({
+          value: RR.key
+        }), JR.send({
           type: "ruleAction",
-          key: WW.key,
-          ...void 0 === OW ? {} : {
-            arg: OW
+          key: RR.key,
+          ...void 0 === GR ? {} : {
+            arg: GR
           },
-          ...void 0 === mW ? {} : {
-            op: mW
+          ...void 0 === yR ? {} : {
+            op: yR
           }
-        }, `rule:${WW.key}`, void 0 === mW ? NW("lobbyManage:setJustNow") : void 0)
-      }), [iW, NW]), KW = WW => {
-        const OW = `rule:${WW.key}`;
-        return (0, oW.jsx)(Li, {
-          rule: WW,
-          value: wW(WW),
-          status: iW.statusOf(OW),
-          pending: iW.isPending(OW),
-          hiddenNames: PW,
-          eT: kW,
-          onAction: MW
-        }, WW.key)
+        }, `rule:${RR.key}`, void 0 === yR ? uR("lobbyManage:setJustNow") : void 0)
+      }), [JR, uR]), CR = RR => {
+        const GR = `rule:${RR.key}`;
+        return (0, xR.jsx)(qJ, {
+          rule: RR,
+          value: fR(RR),
+          status: JR.statusOf(GR),
+          pending: JR.isPending(GR),
+          hiddenNames: ZR,
+          Fv: UR,
+          onAction: AR
+        }, RR.key)
       };
-      return (0, oW.jsx)("div", {
+      return (0, xR.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: ZW.map((WW => {
+        children: KR.map((RR => {
           let {
-            group: iW,
-            title: OW,
-            items: EW
-          } = WW;
-          const PW = EW.filter((WW => {
+            group: JR,
+            title: GR,
+            items: tR
+          } = RR;
+          const ZR = tR.filter((RR => {
             let {
-              rule: iW
-            } = WW;
-            return bW(iW)
+              rule: JR
+            } = RR;
+            return aR(JR)
           }));
-          return 0 === PW.length ? null : (0, oW.jsxs)(mW.Fragment, {
-            children: [(0, oW.jsx)(jW.b, {
-              label: NW(OW)
-            }), PW.map((WW => {
+          return 0 === ZR.length ? null : (0, xR.jsxs)(yR.Fragment, {
+            children: [(0, xR.jsx)(LR.c, {
+              label: uR(GR)
+            }), ZR.map((RR => {
               let {
-                rule: iW,
-                children: OW
-              } = WW;
-              return 0 === OW.length ? KW(iW) : (0, oW.jsxs)("div", {
+                rule: JR,
+                children: GR
+              } = RR;
+              return 0 === GR.length ? CR(JR) : (0, xR.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [KW(iW), OW.filter(bW).map(KW)]
-              }, iW.key)
+                children: [CR(JR), GR.filter(aR).map(CR)]
+              }, JR.key)
             }))]
-          }, iW)
+          }, JR)
         }))
       })
     }
-    const li = {
+    const rJ = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1290,427 +1290,427 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      Ai = 5,
-      bi = (0, mW.memo)((function(WW) {
+      eJ = 5,
+      aJ = (0, yR.memo)((function(RR) {
         let {
-          page: iW,
-          manage: OW,
-          leaderboard: EW,
-          focusRequest: NW,
-          onFocused: PW,
-          ruleRowsShown: LW
-        } = WW;
-        return "leaderboard" === iW ? (0, oW.jsx)(mW.Suspense, {
-          fallback: (0, oW.jsx)("div", {
+          page: JR,
+          manage: GR,
+          leaderboard: tR,
+          focusRequest: uR,
+          onFocused: ZR,
+          ruleRowsShown: qR
+        } = RR;
+        return "leaderboard" === JR ? (0, xR.jsx)(yR.Suspense, {
+          fallback: (0, xR.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, oW.jsx)(bW.d, {})
+            children: (0, xR.jsx)(aR.d, {})
           }),
-          children: EW
-        }) : "joining" === iW ? (0, oW.jsx)(Wi, {
-          manage: OW
-        }) : "rules" === iW ? (0, oW.jsx)(xi, {
-          manage: OW,
-          rowsShown: LW
-        }) : (0, oW.jsx)(pW, {
-          manage: OW,
-          focusRequest: NW,
-          onFocused: PW
+          children: tR
+        }) : "joining" === JR ? (0, xR.jsx)(RJ, {
+          manage: GR
+        }) : "rules" === JR ? (0, xR.jsx)(wJ, {
+          manage: GR,
+          rowsShown: qR
+        }) : (0, xR.jsx)(IR, {
+          manage: GR,
+          focusRequest: uR,
+          onFocused: ZR
         })
       }));
 
-    function ji(WW) {
+    function LJ(RR) {
       let {
-        page: iW
-      } = WW;
+        page: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, lW.B)(), mW = li[iW];
-      return (0, oW.jsxs)(oW.Fragment, {
-        children: [(0, oW.jsx)(AW.c, {
-          name: mW.icon
-        }), " ", (0, oW.jsx)("span", {
+        t: GR
+      } = (0, rR.A)(), yR = rJ[JR];
+      return (0, xR.jsxs)(xR.Fragment, {
+        children: [(0, xR.jsx)(eR.d, {
+          name: yR.icon
+        }), " ", (0, xR.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: OW(mW.title)
+          children: GR(yR.title)
         })]
       })
     }
 
-    function Ui(WW) {
-      var iW;
+    function nJ(RR) {
+      var JR;
       const {
-        t: OW
-      } = (0, lW.B)(), {
-        pages: NW,
-        landing: PW
-      } = WW, cW = (0, mW.useRef)(null), wW = (0, mW.useRef)(null), tW = (0, mW.useRef)(null), ZW = (0, mW.useRef)(new Map), [AW, bW] = (0, mW.useState)(null), sW = (0, mW.useRef)(AW), MW = (0, mW.useRef)(0), [KW, SW] = (0, mW.useState)(NW[0]), YW = null !== AW && void 0 !== AW ? AW : NW.includes(KW) ? KW : NW[0], [yW] = (0, mW.useState)(null !== (iW = null === PW || void 0 === PW ? void 0 : PW.page) && void 0 !== iW ? iW : null), TW = null !== yW && NW.includes(yW) ? [yW, ...NW.filter((WW => WW !== yW))] : NW, [JW] = (0, mW.useState)((() => {
-        const iW = Zi(ti(WW.manage.state.rules, (WW => WW.value)));
-        return Math.max(1, Math.ceil(iW.length / Ai))
-      })), hW = TW.flatMap((WW => "rules" === WW ? Array(JW).fill(WW) : [WW])), HW = function(WW, iW) {
-        const [OW, EW] = (0, mW.useState)(WW), NW = OW >= iW;
-        return NW && OW !== 1 / 0 && EW(1 / 0), (0, mW.useLayoutEffect)((() => {
-          if (NW) return;
-          let WW = !0;
-          return (0, kW.c)().then((() => {
-            WW && EW((WW => WW + 1))
+        t: GR
+      } = (0, rR.A)(), {
+        pages: uR,
+        landing: ZR
+      } = RR, iR = (0, yR.useRef)(null), fR = (0, yR.useRef)(null), VR = (0, yR.useRef)(null), KR = (0, yR.useRef)(new Map), [eR, aR] = (0, yR.useState)(null), WR = (0, yR.useRef)(eR), AR = (0, yR.useRef)(0), [CR, XR] = (0, yR.useState)(uR[0]), MR = null !== eR && void 0 !== eR ? eR : uR.includes(CR) ? CR : uR[0], [BR] = (0, yR.useState)(null !== (JR = null === ZR || void 0 === ZR ? void 0 : ZR.page) && void 0 !== JR ? JR : null), lR = null !== BR && uR.includes(BR) ? [BR, ...uR.filter((RR => RR !== BR))] : uR, [pR] = (0, yR.useState)((() => {
+        const JR = KJ(VJ(RR.manage.state.rules, (RR => RR.value)));
+        return Math.max(1, Math.ceil(JR.length / eJ))
+      })), gR = lR.flatMap((RR => "rules" === RR ? Array(pR).fill(RR) : [RR])), bR = function(RR, JR) {
+        const [GR, tR] = (0, yR.useState)(RR), uR = GR >= JR;
+        return uR && GR !== 1 / 0 && tR(1 / 0), (0, yR.useLayoutEffect)((() => {
+          if (uR) return;
+          let RR = !0;
+          return (0, UR.h)().then((() => {
+            RR && tR((RR => RR + 1))
           })), () => {
-            WW = !1
+            RR = !1
           }
-        }), [OW, NW]), NW ? 1 / 0 : OW
-      }(1, hW.length), nW = hW.slice(0, HW), uW = new Set(nW), dW = HW < hW.length, eW = dW ? nW.filter((WW => "rules" === WW)).length * Ai : 1 / 0, vW = (0, mW.useRef)(WW.focusRequest);
-      vW.current = WW.focusRequest;
-      const gW = WW => {
-          sW.current = WW, bW(WW)
+        }), [GR, uR]), uR ? 1 / 0 : GR
+      }(1, gR.length), vR = gR.slice(0, bR), OR = new Set(vR), NR = bR < gR.length, DR = NR ? vR.filter((RR => "rules" === RR)).length * eJ : 1 / 0, HR = (0, yR.useRef)(RR.focusRequest);
+      HR.current = RR.focusRequest;
+      const oR = RR => {
+          WR.current = RR, aR(RR)
         },
-        DW = () => {
-          var WW, iW;
-          cW.current.style.scrollPaddingTop = `${null!==(WW=null===(iW=tW.current)||void 0===iW?void 0:iW.offsetHeight)&&void 0!==WW?WW:0}px`
+        cR = () => {
+          var RR, JR;
+          iR.current.style.scrollPaddingTop = `${null!==(RR=null===(JR=VR.current)||void 0===JR?void 0:JR.offsetHeight)&&void 0!==RR?RR:0}px`
         },
-        VW = WW => {
-          const iW = cW.current,
-            OW = ZW.current.get(WW);
-          if (void 0 === OW) return;
-          const mW = document.activeElement,
-            EW = vW.current,
-            NW = null === EW ? null : OW.querySelector(`[data-lobby-manage-row="${CSS.escape(EW.name)}"]`);
-          DW(), mW instanceof HTMLElement && null !== NW && void 0 !== NW && NW.contains(mW) ? mW.scrollIntoView({
+        PR = RR => {
+          const JR = iR.current,
+            GR = KR.current.get(RR);
+          if (void 0 === GR) return;
+          const yR = document.activeElement,
+            tR = HR.current,
+            uR = null === tR ? null : GR.querySelector(`[data-lobby-manage-row="${CSS.escape(tR.name)}"]`);
+          cR(), yR instanceof HTMLElement && null !== uR && void 0 !== uR && uR.contains(yR) ? yR.scrollIntoView({
             block: "center"
-          }) : null === OW.previousElementSibling ? iW.scrollTop = 0 : OW.scrollIntoView({
+          }) : null === GR.previousElementSibling ? JR.scrollTop = 0 : GR.scrollIntoView({
             block: "start"
-          }), MW.current = iW.scrollTop
+          }), AR.current = JR.scrollTop
         },
-        pW = WW => {
-          (0, EW.reportAnalyticsClick)({
+        IR = RR => {
+          (0, tR.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: WW
-          }), gW(WW), VW(WW)
+            value: RR
+          }), oR(RR), PR(RR)
         },
-        fW = () => {
-          var WW, iW;
-          const OW = cW.current,
-            mW = OW.getBoundingClientRect().top + (null !== (WW = null === (iW = tW.current) || void 0 === iW ? void 0 : iW.offsetHeight) && void 0 !== WW ? WW : 0),
-            EW = NW.map((WW => {
-              var iW, OW;
-              return (null !== (iW = null === (OW = ZW.current.get(WW)) || void 0 === OW ? void 0 : OW.getBoundingClientRect().top) && void 0 !== iW ? iW : 1 / 0) - mW
+        mR = () => {
+          var RR, JR;
+          const GR = iR.current,
+            yR = GR.getBoundingClientRect().top + (null !== (RR = null === (JR = VR.current) || void 0 === JR ? void 0 : JR.offsetHeight) && void 0 !== RR ? RR : 0),
+            tR = uR.map((RR => {
+              var JR, GR;
+              return (null !== (JR = null === (GR = KR.current.get(RR)) || void 0 === GR ? void 0 : GR.getBoundingClientRect().top) && void 0 !== JR ? JR : 1 / 0) - yR
             })),
-            PW = !dW && OW.scrollTop + OW.clientHeight >= OW.scrollHeight - 1;
-          SW(NW[(0, LW.g)(EW, PW)])
+            ZR = !NR && GR.scrollTop + GR.clientHeight >= GR.scrollHeight - 1;
+          XR(uR[(0, qR.i)(tR, ZR)])
         },
-        CW = () => {
-          null !== sW.current && (gW(null), fW())
+        zR = () => {
+          null !== WR.current && (oR(null), mR())
         };
-      (0, mW.useLayoutEffect)((() => {
-        null !== PW && NW.includes(PW.page) && pW(PW.page)
-      }), [null === PW || void 0 === PW ? void 0 : PW.seq]), (0, mW.useLayoutEffect)((() => {
-        null === sW.current || NW.includes(sW.current) || CW()
+      (0, yR.useLayoutEffect)((() => {
+        null !== ZR && uR.includes(ZR.page) && IR(ZR.page)
+      }), [null === ZR || void 0 === ZR ? void 0 : ZR.seq]), (0, yR.useLayoutEffect)((() => {
+        null === WR.current || uR.includes(WR.current) || zR()
       }));
       const {
-        onFocused: XW
-      } = WW, BW = (0, mW.useCallback)((WW => {
-        null !== sW.current && VW(sW.current), XW(WW)
-      }), [XW]);
-      (0, mW.useLayoutEffect)((() => {
-        const WW = sW.current;
-        null !== WW && (!dW || NW.indexOf(hW[HW - 1]) < NW.indexOf(WW)) && VW(WW)
-      }), [HW]), (0, mW.useEffect)((() => {
-        const WW = new ResizeObserver((() => {
-          null !== sW.current ? VW(sW.current) : DW()
+        onFocused: SR
+      } = RR, jR = (0, yR.useCallback)((RR => {
+        null !== WR.current && PR(WR.current), SR(RR)
+      }), [SR]);
+      (0, yR.useLayoutEffect)((() => {
+        const RR = WR.current;
+        null !== RR && (!NR || uR.indexOf(gR[bR - 1]) < uR.indexOf(RR)) && PR(RR)
+      }), [bR]), (0, yR.useEffect)((() => {
+        const RR = new ResizeObserver((() => {
+          null !== WR.current ? PR(WR.current) : cR()
         }));
-        return WW.observe(cW.current), WW.observe(wW.current), () => {
-          WW.disconnect()
+        return RR.observe(iR.current), RR.observe(fR.current), () => {
+          RR.disconnect()
         }
-      }), []), (0, mW.useLayoutEffect)((() => {
-        const WW = tW.current,
-          iW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".SegmentedToggleOptionSelected");
-        iW && (WW.scrollLeft = Math.min(iW.offsetLeft, Math.max(WW.scrollLeft, iW.offsetLeft + iW.offsetWidth - WW.clientWidth)))
-      }), [YW]);
-      return (0, oW.jsxs)("div", {
-        ref: cW,
+      }), []), (0, yR.useLayoutEffect)((() => {
+        const RR = VR.current,
+          JR = null === RR || void 0 === RR ? void 0 : RR.querySelector(".SegmentedToggleOptionSelected");
+        JR && (RR.scrollLeft = Math.min(JR.offsetLeft, Math.max(RR.scrollLeft, JR.offsetLeft + JR.offsetWidth - RR.clientWidth)))
+      }), [MR]);
+      return (0, xR.jsxs)("div", {
+        ref: iR,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === sW.current ? fW() : Math.abs(cW.current.scrollTop - MW.current) > 1 && CW()
+          null === WR.current ? mR() : Math.abs(iR.current.scrollTop - AR.current) > 1 && zR()
         },
-        onClick: WW => {
-          var iW;
-          null !== (iW = tW.current) && void 0 !== iW && iW.contains(WW.target) || CW()
+        onClick: RR => {
+          var JR;
+          null !== (JR = VR.current) && void 0 !== JR && JR.contains(RR.target) || zR()
         },
-        onFocus: WW => {
-          var iW;
-          const OW = null === sW.current ? null : ZW.current.get(sW.current);
-          !OW || OW.contains(WW.target) || null !== (iW = tW.current) && void 0 !== iW && iW.contains(WW.target) || CW()
+        onFocus: RR => {
+          var JR;
+          const GR = null === WR.current ? null : KR.current.get(WR.current);
+          !GR || GR.contains(RR.target) || null !== (JR = VR.current) && void 0 !== JR && JR.contains(RR.target) || zR()
         },
-        children: [NW.length > 1 && (0, oW.jsx)("div", {
-          ref: tW,
+        children: [uR.length > 1 && (0, xR.jsx)("div", {
+          ref: VR,
           className: "LobbyManageChips",
-          children: (0, oW.jsx)(UW.c, {
-            options: NW.map((WW => ({
-              value: WW,
-              label: (0, oW.jsx)(ji, {
-                page: WW
+          children: (0, xR.jsx)(nR.c, {
+            options: uR.map((RR => ({
+              value: RR,
+              label: (0, xR.jsx)(LJ, {
+                page: RR
               }),
-              ariaLabel: OW(li[WW].title)
+              ariaLabel: GR(rJ[RR].title)
             }))),
-            value: YW,
+            value: MR,
             padTabs: "2",
-            ariaLabel: OW("lobbyManageEntry:manageLobby"),
+            ariaLabel: GR("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: pW
+            onChange: IR
           })
-        }), (0, oW.jsx)("div", {
-          ref: wW,
-          className: xW()("LobbyManageInner", {
-            Staging: dW
+        }), (0, xR.jsx)("div", {
+          ref: fR,
+          className: wR()("LobbyManageInner", {
+            Staging: NR
           }),
-          children: NW.filter((WW => uW.has(WW))).map((iW => {
-            const OW = iW === AW;
-            return (0, oW.jsxs)("section", {
-              ref: WW => {
-                WW ? ZW.current.set(iW, WW) : ZW.current.delete(iW)
+          children: uR.filter((RR => OR.has(RR))).map((JR => {
+            const GR = JR === eR;
+            return (0, xR.jsxs)("section", {
+              ref: RR => {
+                RR ? KR.current.set(JR, RR) : KR.current.delete(JR)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": OW || void 0,
-              children: [NW.length > 1 && (0, oW.jsx)("div", {
+              "data-pad-initial-area": GR || void 0,
+              children: [uR.length > 1 && (0, xR.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": OW || void 0,
-                "data-pad-unavailable": OW || void 0,
-                children: (0, oW.jsx)(jW.b, {
-                  label: (0, oW.jsx)(ji, {
-                    page: iW
+                "data-pad-focusable": GR || void 0,
+                "data-pad-unavailable": GR || void 0,
+                children: (0, xR.jsx)(LR.c, {
+                  label: (0, xR.jsx)(LJ, {
+                    page: JR
                   })
                 })
-              }), (0, oW.jsx)(bi, {
-                page: iW,
-                manage: WW.manage,
-                leaderboard: WW.leaderboard,
-                focusRequest: WW.focusRequest,
-                onFocused: BW,
-                ruleRowsShown: "rules" === iW ? eW : 1 / 0
+              }), (0, xR.jsx)(aJ, {
+                page: JR,
+                manage: RR.manage,
+                leaderboard: RR.leaderboard,
+                focusRequest: RR.focusRequest,
+                onFocused: jR,
+                ruleRowsShown: "rules" === JR ? DR : 1 / 0
               })]
-            }, iW)
+            }, JR)
           }))
         })]
       })
     }
 
-    function ki(WW) {
-      return void 0 === (null === WW || void 0 === WW ? void 0 : WW.page) ? null : {
-        page: WW.page,
-        seq: WW.seq
+    function UJ(RR) {
+      return void 0 === (null === RR || void 0 === RR ? void 0 : RR.page) ? null : {
+        page: RR.page,
+        seq: RR.seq
       }
     }
 
-    function si(WW) {
+    function WJ(RR) {
       let {
-        leaderboard: iW
-      } = WW;
-      const OW = function() {
-          const WW = (0, cW.e)("lobbyManage"),
-            [iW, OW] = (0, mW.useReducer)((WW => WW + 1), 0),
-            [EW] = (0, mW.useState)((() => new wW.e(OW)));
-          return (0, mW.useEffect)((() => {
-            const WW = EW.nextDeadline();
-            if (null === WW) return;
-            const iW = setTimeout((() => {
-              EW.expire(Date.now()), OW()
-            }), Math.max(0, WW - Date.now()));
+        leaderboard: JR
+      } = RR;
+      const GR = function() {
+          const RR = (0, iR.f)("lobbyManage"),
+            [JR, GR] = (0, yR.useReducer)((RR => RR + 1), 0),
+            [tR] = (0, yR.useState)((() => new fR.b(GR)));
+          return (0, yR.useEffect)((() => {
+            const RR = tR.nextDeadline();
+            if (null === RR) return;
+            const JR = setTimeout((() => {
+              tR.expire(Date.now()), GR()
+            }), Math.max(0, RR - Date.now()));
             return () => {
-              clearTimeout(iW)
+              clearTimeout(JR)
             }
-          })), (0, mW.useMemo)((() => null === WW ? null : {
-            state: WW,
-            send: (WW, iW, mW) => {
-              const NW = EW.send(WW, iW, null !== mW && void 0 !== mW ? mW : null);
-              return OW(), NW
+          })), (0, yR.useMemo)((() => null === RR ? null : {
+            state: RR,
+            send: (RR, JR, yR) => {
+              const uR = tR.send(RR, JR, null !== yR && void 0 !== yR ? yR : null);
+              return GR(), uR
             },
-            statusOf: WW => EW.statusOf(WW, Date.now()),
-            showStatus: (WW, iW) => {
-              EW.show(WW, iW)
+            statusOf: RR => tR.statusOf(RR, Date.now()),
+            showStatus: (RR, JR) => {
+              tR.show(RR, JR)
             },
-            isPending: WW => EW.isPending(WW)
-          }), [WW, iW, EW])
+            isPending: RR => tR.isPending(RR)
+          }), [RR, JR, tR])
         }(),
-        tW = (0, LW.j)((0, NW.e)()),
-        ZW = (0, PW.l)(),
-        [xW, lW] = (0, mW.useState)((() => ki(ZW))),
-        [AW, bW] = (0, mW.useState)(null);
-      return (0, mW.useEffect)((() => {
-        null === ZW && (0, EW.reportAnalyticsClick)({
+        VR = (0, qR.l)((0, uR.e)()),
+        KR = (0, ZR.j)(),
+        [wR, rR] = (0, yR.useState)((() => UJ(KR))),
+        [eR, aR] = (0, yR.useState)(null);
+      return (0, yR.useEffect)((() => {
+        null === KR && (0, tR.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, mW.useEffect)((() => {
-        null !== ZW && (lW((WW => (null === WW || void 0 === WW ? void 0 : WW.seq) === ZW.seq ? WW : ki(ZW))), void 0 !== ZW.focusName && "players" === ZW.page ? bW({
-          name: ZW.focusName,
-          seq: ZW.seq
-        }) : (0, PW.j)(ZW.seq))
-      }), [null === ZW || void 0 === ZW ? void 0 : ZW.seq]), null === OW ? null : (0, oW.jsx)("div", {
+      }), []), (0, yR.useEffect)((() => {
+        null !== KR && (rR((RR => (null === RR || void 0 === RR ? void 0 : RR.seq) === KR.seq ? RR : UJ(KR))), void 0 !== KR.focusName && "players" === KR.page ? aR({
+          name: KR.focusName,
+          seq: KR.seq
+        }) : (0, ZR.i)(KR.seq))
+      }), [null === KR || void 0 === KR ? void 0 : KR.seq]), null === GR ? null : (0, xR.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, oW.jsx)(Ui, {
-          pages: (0, LW.f)(OW.state, tW),
-          manage: OW,
-          leaderboard: iW,
-          focusRequest: AW,
-          onFocused: PW.j,
-          landing: xW
+        children: (0, xR.jsx)(nJ, {
+          pages: (0, qR.h)(GR.state, VR),
+          manage: GR,
+          leaderboard: JR,
+          focusRequest: eR,
+          onFocused: ZR.i,
+          landing: wR
         })
       })
     }
   },
-  37824: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => tW,
-      f: () => cW
+  37751: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => VR,
+      c: () => iR
     });
-    var mW = OW(1556),
-      EW = OW(2061),
-      NW = OW(2037);
-    const PW = 1e4;
-    let LW = 0;
+    var yR = GR(1618),
+      tR = GR(2163),
+      uR = GR(2134);
+    const ZR = 1e4;
+    let qR = 0;
 
-    function cW(WW) {
-      const iW = ++LW;
-      return new Promise((OW => {
-        const LW = iW => {
-            cW(), clearTimeout(wW), !1 === (null === iW || void 0 === iW ? void 0 : iW.ok) && (0, mW.reportAnalyticsClick)({
+    function iR(RR) {
+      const JR = ++qR;
+      return new Promise((GR => {
+        const qR = JR => {
+            iR(), clearTimeout(fR), !1 === (null === JR || void 0 === JR ? void 0 : JR.ok) && (0, yR.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: WW.type
-            }), OW(iW)
+              value: RR.type
+            }), GR(JR)
           },
-          cW = EW.d.subscribe("lobbyManage", (WW => {
-            const OW = function(WW, iW) {
-              var OW;
-              return null !== (OW = null === WW || void 0 === WW ? void 0 : WW.results.find((WW => WW.requestId === iW))) && void 0 !== OW ? OW : null
-            }(WW, iW);
-            null !== OW && LW(OW)
+          iR = tR.c.subscribe("lobbyManage", (RR => {
+            const GR = function(RR, JR) {
+              var GR;
+              return null !== (GR = null === RR || void 0 === RR ? void 0 : RR.results.find((RR => RR.requestId === JR))) && void 0 !== GR ? GR : null
+            }(RR, JR);
+            null !== GR && qR(GR)
           })),
-          wW = setTimeout((() => {
-            LW(null)
-          }), PW);
-        NW.gameBridge.send("lobbyManage", {
-          ...WW,
-          requestId: iW
+          fR = setTimeout((() => {
+            qR(null)
+          }), ZR);
+        uR.gameBridge.send("lobbyManage", {
+          ...RR,
+          requestId: JR
         })
       }))
     }
-    const wW = [{
+    const fR = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class tW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cW;
-        this.onChange = WW, this.sendAction = iW, this.pending = new Map, this.statuses = new Map
+    class VR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : iR;
+        this.onChange = RR, this.sendAction = JR, this.pending = new Map, this.statuses = new Map
       }
-      send(WW, iW, OW) {
-        var mW;
-        return this.statuses.delete(iW), this.pending.set(iW, (null !== (mW = this.pending.get(iW)) && void 0 !== mW ? mW : 0) + 1), this.sendAction(WW).then((WW => {
-          var mW;
-          const EW = null !== WW && void 0 !== WW ? WW : {
+      send(RR, JR, GR) {
+        var yR;
+        return this.statuses.delete(JR), this.pending.set(JR, (null !== (yR = this.pending.get(JR)) && void 0 !== yR ? yR : 0) + 1), this.sendAction(RR).then((RR => {
+          var yR;
+          const tR = null !== RR && void 0 !== RR ? RR : {
               requestId: -1,
               ok: !1,
-              message: wW
+              message: fR
             },
-            NW = (null !== (mW = this.pending.get(iW)) && void 0 !== mW ? mW : 1) - 1;
-          NW > 0 ? this.pending.set(iW, NW) : this.pending.delete(iW);
-          const PW = !EW.ok || EW.message.length > 0 ? EW.message : null === OW ? null : [OW];
-          return null !== PW && this.statuses.set(iW, {
-            ok: EW.ok,
-            text: PW,
+            uR = (null !== (yR = this.pending.get(JR)) && void 0 !== yR ? yR : 1) - 1;
+          uR > 0 ? this.pending.set(JR, uR) : this.pending.delete(JR);
+          const ZR = !tR.ok || tR.message.length > 0 ? tR.message : null === GR ? null : [GR];
+          return null !== ZR && this.statuses.set(JR, {
+            ok: tR.ok,
+            text: ZR,
             until: Date.now() + 4e3
-          }), this.onChange(), EW
+          }), this.onChange(), tR
         }))
       }
-      show(WW, iW) {
-        this.statuses.set(WW, {
-          ...iW,
+      show(RR, JR) {
+        this.statuses.set(RR, {
+          ...JR,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(WW) {
-        for (const [iW, OW] of this.statuses) OW.until <= WW && this.statuses.delete(iW)
+      expire(RR) {
+        for (const [JR, GR] of this.statuses) GR.until <= RR && this.statuses.delete(JR)
       }
       nextDeadline() {
-        let WW = null;
-        for (const OW of this.statuses.values()) {
-          var iW;
-          WW = Math.min(null !== (iW = WW) && void 0 !== iW ? iW : 1 / 0, OW.until)
+        let RR = null;
+        for (const GR of this.statuses.values()) {
+          var JR;
+          RR = Math.min(null !== (JR = RR) && void 0 !== JR ? JR : 1 / 0, GR.until)
         }
-        return WW
+        return RR
       }
-      statusOf(WW, iW) {
-        const OW = this.statuses.get(WW);
-        return !OW || OW.until <= iW ? null : {
-          ok: OW.ok,
-          text: OW.text
+      statusOf(RR, JR) {
+        const GR = this.statuses.get(RR);
+        return !GR || GR.until <= JR ? null : {
+          ok: GR.ok,
+          text: GR.text
         }
       }
-      isPending(WW) {
-        return this.pending.has(WW)
+      isPending(RR) {
+        return this.pending.has(RR)
       }
     }
   },
-  37829: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      h: () => ZW,
-      i: () => tW,
-      j: () => wW,
-      k: () => PW,
-      n: () => mW,
-      o: () => NW
+  37759: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR,
+      h: () => KR,
+      k: () => VR,
+      o: () => fR,
+      q: () => ZR,
+      u: () => yR,
+      w: () => uR
     });
-    const mW = 2;
+    const yR = 2;
 
-    function EW(WW, iW, OW) {
-      const mW = WW.filter((WW => WW.name !== iW)),
-        EW = mW.filter((WW => "none" === WW.role)).sort(((WW, iW) => iW.at - WW.at)),
-        NW = mW.filter((WW => "none" !== WW.role)).sort(((WW, iW) => OW.indexOf(WW.role) - OW.indexOf(iW.role) || iW.at - WW.at));
-      return [...WW.some((WW => WW.name === iW)) && null !== iW ? [iW] : [], ...[...EW, ...NW].map((WW => WW.name))]
+    function tR(RR, JR, GR) {
+      const yR = RR.filter((RR => RR.name !== JR)),
+        tR = yR.filter((RR => "none" === RR.role)).sort(((RR, JR) => JR.at - RR.at)),
+        uR = yR.filter((RR => "none" !== RR.role)).sort(((RR, JR) => GR.indexOf(RR.role) - GR.indexOf(JR.role) || JR.at - RR.at));
+      return [...RR.some((RR => RR.name === JR)) && null !== JR ? [JR] : [], ...[...tR, ...uR].map((RR => RR.name))]
     }
 
-    function NW(WW, iW) {
-      const OW = WW.banned.map((WW => WW.name)),
-        mW = new Set(OW);
+    function uR(RR, JR) {
+      const GR = RR.banned.map((RR => RR.name)),
+        yR = new Set(GR);
       return {
-        here: EW(WW.here, iW, WW.roles.map((WW => WW.role))),
-        away: WW.away.filter((WW => !mW.has(WW.name))).map((WW => WW.name)),
-        banned: OW
+        here: tR(RR.here, JR, RR.roles.map((RR => RR.role))),
+        away: RR.away.filter((RR => !yR.has(RR.name))).map((RR => RR.name)),
+        banned: GR
       }
     }
 
-    function PW(WW, iW, OW) {
-      const mW = new Set([...WW.here, ...WW.away, ...WW.banned]),
-        EW = NW(iW, OW),
-        PW = iW => {
-          const OW = EW[iW].filter((WW => !mW.has(WW)));
-          for (const WW of OW) mW.add(WW);
-          return [...WW[iW], ...OW]
+    function ZR(RR, JR, GR) {
+      const yR = new Set([...RR.here, ...RR.away, ...RR.banned]),
+        tR = uR(JR, GR),
+        ZR = JR => {
+          const GR = tR[JR].filter((RR => !yR.has(RR)));
+          for (const RR of GR) yR.add(RR);
+          return [...RR[JR], ...GR]
         };
       return {
-        here: PW("here"),
-        away: PW("away"),
-        banned: PW("banned")
+        here: ZR("here"),
+        away: ZR("away"),
+        banned: ZR("banned")
       }
     }
 
-    function LW(WW, iW) {
-      const OW = WW.here.find((WW => WW.name === iW));
-      if (OW) return {
+    function qR(RR, JR) {
+      const GR = RR.here.find((RR => RR.name === JR));
+      if (GR) return {
         section: "here",
-        player: OW
+        player: GR
       };
-      const mW = WW.banned.find((WW => WW.name === iW));
-      if (mW) return {
+      const yR = RR.banned.find((RR => RR.name === JR));
+      if (yR) return {
         section: "banned",
-        bannedAt: mW.at
+        bannedAt: yR.at
       };
-      const EW = WW.away.find((WW => WW.name === iW));
-      return EW ? {
+      const tR = RR.away.find((RR => RR.name === JR));
+      return tR ? {
         section: "away",
-        player: EW
+        player: tR
       } : {
         section: "gone"
       }
     }
-    const cW = {
+    const iR = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -1719,221 +1719,221 @@ export const modules = {
       unban: !1
     };
 
-    function wW(WW) {
-      const iW = WW.can.roles.filter((iW => "none" !== iW || "none" !== WW.role));
-      return iW.some((iW => iW !== WW.role)) ? iW : []
+    function fR(RR) {
+      const JR = RR.can.roles.filter((JR => "none" !== JR || "none" !== RR.role));
+      return JR.some((JR => JR !== RR.role)) ? JR : []
     }
 
-    function tW(WW, iW) {
-      if ("banned" === WW.section) return {
-        ...cW,
+    function VR(RR, JR) {
+      if ("banned" === RR.section) return {
+        ...iR,
         unban: !0
       };
-      if ("gone" === WW.section) return cW;
+      if ("gone" === RR.section) return iR;
       const {
-        player: OW
-      } = WW, mW = "here" === WW.section, EW = wW(OW), NW = mW && iW && null !== OW.gamemode && OW.can.gamemode;
+        player: GR
+      } = RR, yR = "here" === RR.section, tR = fR(GR), uR = yR && JR && null !== GR.gamemode && GR.can.gamemode;
       return {
-        gamemode: NW,
-        roles: EW,
-        fixedRole: 0 !== EW.length || "none" === OW.role && !NW ? null : OW.role,
-        kick: mW && OW.can.kick,
-        ban: OW.can.ban,
+        gamemode: uR,
+        roles: tR,
+        fixedRole: 0 !== tR.length || "none" === GR.role && !uR ? null : GR.role,
+        kick: yR && GR.can.kick,
+        ban: GR.can.ban,
         unban: !1
       }
     }
 
-    function ZW(WW, iW) {
-      return WW.here.filter((WW => WW.name !== iW && "none" === WW.role && WW.can.kick)).length
+    function KR(RR, JR) {
+      return RR.here.filter((RR => RR.name !== JR && "none" === RR.role && RR.can.kick)).length
     }
   },
-  37958: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => ZW
+  37905: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => KR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1782),
-      LW = OW(1532),
-      cW = OW(1383),
-      wW = OW(1391),
-      tW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1867),
+      qR = GR(1590),
+      iR = GR(1465),
+      fR = GR(1468),
+      VR = GR(1378);
 
-    function ZW(WW) {
+    function KR(RR) {
       let {
-        label: iW,
-        icon: OW,
-        placeholder: EW,
-        onSubmit: ZW
-      } = WW;
-      const xW = (0, mW.useRef)(null),
-        [lW, AW] = (0, mW.useState)(""),
-        [bW, jW] = (0, mW.useState)("Enter"),
-        [UW, kW] = (0, mW.useState)(null);
-      (0, mW.useEffect)((() => {
-        if ("Success" !== bW && "Error" !== bW) return;
-        const WW = setTimeout((() => {
-          "Success" === bW && xW.current && (xW.current.value = "", AW("")), jW("Enter")
-        }), "Success" === bW ? 1e3 : 4e3);
+        label: JR,
+        icon: GR,
+        placeholder: tR,
+        onSubmit: KR
+      } = RR;
+      const wR = (0, yR.useRef)(null),
+        [rR, eR] = (0, yR.useState)(""),
+        [aR, LR] = (0, yR.useState)("Enter"),
+        [nR, UR] = (0, yR.useState)(null);
+      (0, yR.useEffect)((() => {
+        if ("Success" !== aR && "Error" !== aR) return;
+        const RR = setTimeout((() => {
+          "Success" === aR && wR.current && (wR.current.value = "", eR("")), LR("Enter")
+        }), "Success" === aR ? 1e3 : 4e3);
         return () => {
-          clearTimeout(WW)
+          clearTimeout(RR)
         }
-      }), [bW]);
-      const sW = () => {
-        const WW = lW.trim();
-        "" !== WW && "Enter" === bW && (jW("Loading"), ZW(WW).then((WW => {
-          xW.current && ("error" in WW ? null === WW.error ? jW("Enter") : (kW(WW.error), jW("Error")) : jW("Success"))
+      }), [aR]);
+      const WR = () => {
+        const RR = rR.trim();
+        "" !== RR && "Enter" === aR && (LR("Loading"), KR(RR).then((RR => {
+          wR.current && ("error" in RR ? null === RR.error ? LR("Enter") : (UR(RR.error), LR("Error")) : LR("Success"))
         })))
       };
-      return (0, tW.jsxs)("div", {
+      return (0, VR.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: WW => {
-          WW.target === xW.current && "Escape" !== WW.key && WW.stopPropagation()
+        onKeyDown: RR => {
+          RR.target === wR.current && "Escape" !== RR.key && RR.stopPropagation()
         },
-        children: [(0, tW.jsxs)("div", {
-          className: NW()("AddFriendBodyOverlay", `AddFriendBodyOverlay${bW}`),
-          children: ["Loading" === bW && (0, tW.jsx)(cW.d, {}), "Success" === bW && (0, tW.jsx)(wW.c, {
+        children: [(0, VR.jsxs)("div", {
+          className: uR()("AddFriendBodyOverlay", `AddFriendBodyOverlay${aR}`),
+          children: ["Loading" === aR && (0, VR.jsx)(iR.d, {}), "Success" === aR && (0, VR.jsx)(fR.d, {
             name: "check"
-          }), "Error" === bW && UW]
-        }), (0, tW.jsxs)("div", {
+          }), "Error" === aR && nR]
+        }), (0, VR.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, tW.jsx)(PW.b, {
+          children: [(0, VR.jsx)(ZR.b, {
             className: "PlayerSearchInput",
-            domRef: xW,
+            domRef: wR,
             maxLength: 32,
-            placeholderText: EW,
-            ariaLabel: EW,
+            placeholderText: tR,
+            ariaLabel: tR,
             stopPropagation: !1,
-            onValueChange: WW => {
-              AW(WW)
+            onValueChange: RR => {
+              eR(RR)
             },
-            onEnter: sW
-          }), (0, tW.jsxs)(LW.f, {
+            onEnter: WR
+          }), (0, VR.jsxs)(qR.g, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== bW || "" === lW.trim(),
-            onClick: sW,
-            children: [(0, tW.jsx)(wW.c, {
-              name: OW
-            }), " ", iW]
+            disabled: "Enter" !== aR || "" === rR.trim(),
+            onClick: WR,
+            children: [(0, VR.jsx)(fR.d, {
+              name: GR
+            }), " ", JR]
           })]
         })]
       })
     }
   },
-  37948: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => ZW
+  37881: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => KR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1172),
-      LW = OW(1391),
-      cW = OW(1283);
-    const wW = {
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1270),
+      qR = GR(1468),
+      iR = GR(1378);
+    const fR = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      tW = ["unlisted", "public", "whitelist", "private"];
+      VR = ["unlisted", "public", "whitelist", "private"];
 
-    function ZW(WW) {
+    function KR(RR) {
       let {
-        visibility: iW,
-        onPick: OW
-      } = WW;
+        visibility: JR,
+        onPick: GR
+      } = RR;
       const {
-        t: EW
-      } = (0, PW.B)(), ZW = (0, mW.useRef)([]);
-      return (0, cW.jsx)("div", {
+        t: tR
+      } = (0, ZR.A)(), KR = (0, yR.useRef)([]);
+      return (0, iR.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": EW("worldSocial:whoCanJoin"),
-        children: tW.map(((WW, mW) => {
-          const PW = WW === iW;
-          return (0, cW.jsxs)("button", {
-            ref: WW => {
-              ZW.current[mW] = WW
+        "aria-label": tR("worldSocial:whoCanJoin"),
+        children: VR.map(((RR, yR) => {
+          const ZR = RR === JR;
+          return (0, iR.jsxs)("button", {
+            ref: RR => {
+              KR.current[yR] = RR
             },
             type: "button",
-            className: NW()("WorldSocialTile", {
-              WorldSocialTileSelected: PW
+            className: uR()("WorldSocialTile", {
+              WorldSocialTileSelected: ZR
             }),
-            "aria-pressed": PW,
-            tabIndex: PW ? 0 : -1,
-            onKeyDown: WW => {
-              ((WW, iW) => {
-                const OW = "ArrowRight" === WW.key || "ArrowDown" === WW.key ? 1 : "ArrowLeft" === WW.key || "ArrowUp" === WW.key ? -1 : 0;
-                var mW;
-                0 !== OW && (WW.preventDefault(), null === (mW = ZW.current[(iW + OW + tW.length) % tW.length]) || void 0 === mW || mW.focus())
-              })(WW, mW)
+            "aria-pressed": ZR,
+            tabIndex: ZR ? 0 : -1,
+            onKeyDown: RR => {
+              ((RR, JR) => {
+                const GR = "ArrowRight" === RR.key || "ArrowDown" === RR.key ? 1 : "ArrowLeft" === RR.key || "ArrowUp" === RR.key ? -1 : 0;
+                var yR;
+                0 !== GR && (RR.preventDefault(), null === (yR = KR.current[(JR + GR + VR.length) % VR.length]) || void 0 === yR || yR.focus())
+              })(RR, yR)
             },
             onClick: () => {
-              OW(WW)
+              GR(RR)
             },
-            children: [(0, cW.jsx)("span", {
+            children: [(0, iR.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, cW.jsx)(LW.c, {
-                name: wW[WW]
+              children: (0, iR.jsx)(qR.d, {
+                name: fR[RR]
               })
-            }), (0, cW.jsxs)("span", {
+            }), (0, iR.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, cW.jsx)("span", {
+              children: [(0, iR.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: EW(`worldSocial:${WW}`)
-              }), (0, cW.jsx)("span", {
+                children: tR(`worldSocial:${RR}`)
+              }), (0, iR.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: EW(`worldSocial:${WW}Description`)
+                children: tR(`worldSocial:${RR}Description`)
               })]
             })]
-          }, WW)
+          }, RR)
         }))
       })
     }
   },
-  37956: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW
+  37897: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR
     });
-    var mW = OW(1172),
-      EW = OW(3661),
-      NW = OW(5041),
-      PW = OW(1283);
+    var yR = GR(1270),
+      tR = GR(3761),
+      uR = GR(5141),
+      ZR = GR(1378);
 
-    function LW(WW) {
+    function qR(RR) {
       let {
-        hZ: iW,
-        children: OW,
-        ...LW
-      } = WW;
+        gK: JR,
+        children: GR,
+        ...qR
+      } = RR;
       const {
-        t: cW
-      } = (0, mW.B)();
-      return (0, PW.jsx)("div", {
+        t: iR
+      } = (0, yR.A)();
+      return (0, ZR.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          iW.onChange(!iW.on)
+          JR.onChange(!JR.on)
         },
-        children: (0, PW.jsx)(EW.h, {
-          ...LW,
+        children: (0, ZR.jsx)(tR.g, {
+          ...qR,
           opensProfileCard: !1,
-          children: (0, PW.jsxs)("div", {
+          children: (0, ZR.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: WW => {
-              WW.stopPropagation()
+            onClick: RR => {
+              RR.stopPropagation()
             },
-            children: [OW, (0, PW.jsx)("label", {
+            children: [GR, (0, ZR.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, PW.jsx)(NW.e, {
-                checked: iW.on,
+              children: (0, ZR.jsx)(uR.d, {
+                checked: JR.on,
                 disabled: !1,
-                ariaLabel: cW("worldSocial:letJoin", {
-                  playerName: LW.playerSocialPreview.name
+                ariaLabel: iR("worldSocial:letJoin", {
+                  playerName: qR.playerSocialPreview.name
                 }),
-                onChange: WW => {
-                  iW.onChange(WW.target.checked)
+                onChange: RR => {
+                  JR.onChange(RR.target.checked)
                 }
               })
             })]
@@ -1942,395 +1942,395 @@ export const modules = {
       })
     }
   },
-  37945: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => AW
+  37873: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => eR
     });
-    var mW = OW(62),
-      EW = OW(1172),
-      NW = OW(1977),
-      PW = OW(100),
-      LW = OW(25),
-      cW = OW(1556),
-      wW = OW(3687),
-      tW = OW(35121),
-      ZW = OW(1532),
-      xW = OW(1391),
-      lW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1270),
+      uR = GR(2068),
+      ZR = GR(103),
+      qR = GR(25),
+      iR = GR(1618),
+      fR = GR(3791),
+      VR = GR(35044),
+      KR = GR(1590),
+      wR = GR(1468),
+      rR = GR(1378);
 
-    function AW(WW) {
+    function eR(RR) {
       let {
-        worldCode: iW,
-        message: OW
-      } = WW;
+        worldCode: JR,
+        message: GR
+      } = RR;
       const {
-        t: AW
-      } = (0, EW.B)(), {
-        isTouchScreen: bW
-      } = (0, LW.p)(["isTouchScreen"]), jW = PW.featureFlags.canUseInviteLinks, UW = (0, tW.l)(jW && null === OW), [kW, sW] = (0, wW.j)(), MW = (0, mW.useRef)(null);
-      if (null !== OW) return (0, lW.jsxs)("div", {
+        t: eR
+      } = (0, tR.A)(), {
+        isTouchScreen: aR
+      } = (0, qR.o)(["isTouchScreen"]), LR = ZR.featureFlags.canUseInviteLinks, nR = (0, VR.j)(LR && null === GR), [UR, WR] = (0, fR.h)(), AR = (0, yR.useRef)(null);
+      if (null !== GR) return (0, rR.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, lW.jsx)(xW.c, {
+        children: [(0, rR.jsx)(wR.d, {
           name: "lock"
-        }), (0, lW.jsx)("span", {
-          children: OW
+        }), (0, rR.jsx)("span", {
+          children: GR
         })]
       });
-      const KW = jW ? UW : iW,
-        SW = bW && jW && (0, wW.e)();
-      return (0, lW.jsxs)("div", {
+      const CR = LR ? nR : JR,
+        XR = aR && LR && (0, fR.b)();
+      return (0, rR.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!jW && (0, lW.jsx)("span", {
+        children: [!LR && (0, rR.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: AW("worldSocial:worldCode")
-        }), (0, lW.jsx)("input", {
-          ref: MW,
+          children: eR("worldSocial:worldCode")
+        }), (0, rR.jsx)("input", {
+          ref: AR,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== KW && void 0 !== KW ? KW : "",
-          "aria-label": AW(jW ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: WW => {
-            WW.currentTarget.select()
+          value: null !== CR && void 0 !== CR ? CR : "",
+          "aria-label": eR(LR ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: RR => {
+            RR.currentTarget.select()
           }
-        }), (0, lW.jsxs)(ZW.f, {
+        }), (0, rR.jsxs)(KR.g, {
           className: "WorldSocialCopy",
-          disabled: null === KW,
+          disabled: null === CR,
           onClick: () => {
-            null !== KW && (0, wW.g)(KW, {
-              useShareSheet: SW,
-              onOutcome: WW => {
-                if ((0, cW.reportAnalyticsClick)({
+            null !== CR && (0, fR.d)(CR, {
+              useShareSheet: XR,
+              onOutcome: RR => {
+                if ((0, iR.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== WW || jW ? WW : "code"
-                  }), "copied" === WW) sW();
-                else if ("failed" === WW) {
-                  var iW;
-                  null === (iW = MW.current) || void 0 === iW || iW.focus(), NW.g.showMessage({
+                    value: "copied" !== RR || LR ? RR : "code"
+                  }), "copied" === RR) WR();
+                else if ("failed" === RR) {
+                  var JR;
+                  null === (JR = AR.current) || void 0 === JR || JR.focus(), uR.j.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, lW.jsx)(xW.c, {
-            name: kW ? "check" : SW ? "up-from-bracket" : "copy"
-          }), " ", AW(kW ? "general:copied" : SW ? "worldSocial:share" : "general:copy")]
+          children: [(0, rR.jsx)(wR.d, {
+            name: UR ? "check" : XR ? "up-from-bracket" : "copy"
+          }), " ", eR(UR ? "general:copied" : XR ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  37953: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => lW,
-      g: () => xW,
-      k: () => ZW
+  37890: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => rR,
+      f: () => wR,
+      i: () => KR
     });
-    var mW = OW(625),
-      EW = OW(1172),
-      NW = OW(1736),
-      PW = OW(3661),
-      LW = OW(3610),
-      cW = OW(1532),
-      wW = OW(37956),
-      tW = OW(1283);
+    var yR = GR(656),
+      tR = GR(1270),
+      uR = GR(1803),
+      ZR = GR(3761),
+      qR = GR(3713),
+      iR = GR(1590),
+      fR = GR(37897),
+      VR = GR(1378);
 
-    function ZW(WW, iW) {
-      var OW;
+    function KR(RR, JR) {
+      var GR;
       return {
         isError: !1,
-        name: WW,
+        name: RR,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== iW && void 0 !== iW ? iW : {},
-        nameColour: null !== (OW = null === iW || void 0 === iW ? void 0 : iW.nameColour) && void 0 !== OW ? OW : mW.d,
+        cosmetics: null !== JR && void 0 !== JR ? JR : {},
+        nameColour: null !== (GR = null === JR || void 0 === JR ? void 0 : JR.nameColour) && void 0 !== GR ? GR : yR.c,
         location: {
           status: "offline"
         }
       }
     }
 
-    function xW(WW) {
+    function wR(RR) {
       let {
-        player: iW,
-        isFriend: OW = !1,
-        status: mW,
-        showLocation: cW = void 0 === mW,
-        hZ: ZW,
-        onSendFriendRequest: xW,
-        actions: lW,
-        zIndex: AW
-      } = WW;
+        player: JR,
+        isFriend: GR = !1,
+        status: yR,
+        showLocation: iR = void 0 === yR,
+        gK: KR,
+        onSendFriendRequest: wR,
+        actions: rR,
+        zIndex: eR
+      } = RR;
       const {
-        t: bW
-      } = (0, EW.B)();
-      let jW = mW;
-      null !== ZW && void 0 !== ZW && ZW.on && (jW = (0, tW.jsxs)(tW.Fragment, {
-        children: [null !== mW && void 0 !== mW ? mW : (0, tW.jsx)(LW.d, {
-          socialPreview: iW
-        }), (0, tW.jsxs)("span", {
+        t: aR
+      } = (0, tR.A)();
+      let LR = yR;
+      null !== KR && void 0 !== KR && KR.on && (LR = (0, VR.jsxs)(VR.Fragment, {
+        children: [null !== yR && void 0 !== yR ? yR : (0, VR.jsx)(qR.d, {
+          socialPreview: JR
+        }), (0, VR.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", bW("worldSocial:canJoin")]
+          children: [" \xb7 ", aR("worldSocial:canJoin")]
         })]
       }));
-      const UW = {
-        playerSocialPreview: iW,
-        isFriend: OW,
+      const nR = {
+        playerSocialPreview: JR,
+        isFriend: GR,
         hideFriendBadge: !0,
-        onFriendRemoved: OW ? WW => {
-          NW.e.removeFriendFromState(WW)
+        onFriendRemoved: GR ? RR => {
+          uR.e.removeFriendFromState(RR)
         } : void 0,
-        status: jW,
-        showLocation: cW,
-        onSendFriendRequest: xW,
-        zIndex: AW
+        status: LR,
+        showLocation: iR,
+        onSendFriendRequest: wR,
+        zIndex: eR
       };
-      return ZW ? (0, tW.jsx)(wW.d, {
-        ...UW,
-        hZ: ZW,
-        children: lW
-      }) : (0, tW.jsx)(PW.h, {
-        ...UW,
+      return KR ? (0, VR.jsx)(fR.b, {
+        ...nR,
+        gK: KR,
+        children: rR
+      }) : (0, VR.jsx)(ZR.g, {
+        ...nR,
         opensProfileCard: !1,
-        children: lW || void 0
+        children: rR || void 0
       })
     }
 
-    function lW(WW) {
+    function rR(RR) {
       let {
-        row: iW,
-        hZ: OW,
-        canInvite: mW,
-        invited: NW,
-        onInvite: PW,
-        zIndex: LW
-      } = WW;
+        row: JR,
+        gK: GR,
+        canInvite: yR,
+        invited: uR,
+        onInvite: ZR,
+        zIndex: qR
+      } = RR;
       const {
-        t: wW
-      } = (0, EW.B)(), ZW = "online" === iW.place ? cW.f : cW.h;
-      return (0, tW.jsx)(xW, {
-        player: iW.friend,
+        t: fR
+      } = (0, tR.A)(), KR = "online" === JR.place ? iR.g : iR.i;
+      return (0, VR.jsx)(wR, {
+        player: JR.friend,
         isFriend: !0,
-        status: "here" === iW.place ? wW("worldSocial:inThisWorld") : void 0,
+        status: "here" === JR.place ? fR("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        hZ: OW,
-        zIndex: LW,
-        actions: mW && (0, tW.jsx)(ZW, {
+        gK: GR,
+        zIndex: qR,
+        actions: yR && (0, VR.jsx)(KR, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: NW,
-          onClick: PW,
-          ariaLabel: `${wW("worldSocial:invite")} ${iW.friend.name}`,
-          children: wW(NW ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: uR,
+          onClick: ZR,
+          ariaLabel: `${fR("worldSocial:invite")} ${JR.friend.name}`,
+          children: fR(uR ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  37932: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => cW,
-      g: () => PW,
-      j: () => wW
+  37863: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => iR,
+      g: () => ZR,
+      j: () => fR
     });
-    var mW = OW(62),
-      EW = OW(5282),
-      NW = OW(1977);
+    var yR = GR(66),
+      tR = GR(5392),
+      uR = GR(2068);
 
-    function PW(WW) {
-      const iW = {
-        lobbyName: WW,
+    function ZR(RR) {
+      const JR = {
+        lobbyName: RR,
         answer: null,
-        response: EW.b.getSocialSettings(WW)
+        response: tR.c.getSocialSettings(RR)
       };
-      return iW.response.then((WW => {
-        iW.answer = WW
-      })), iW
+      return JR.response.then((RR => {
+        JR.answer = RR
+      })), JR
     }
-    const LW = new Map;
+    const qR = new Map;
 
-    function cW(WW) {
-      LW.set(WW.lobbyName, WW)
+    function iR(RR) {
+      qR.set(RR.lobbyName, RR)
     }
 
-    function wW(WW) {
-      const [iW] = (0, mW.useState)((() => function(WW) {
-        var iW;
-        const OW = null !== (iW = LW.get(WW)) && void 0 !== iW ? iW : null;
-        return null !== OW && void 0 !== OW && OW.answer && "error" in OW.answer ? null : OW
-      }(WW))), [OW, PW] = (0, mW.useState)((() => null !== iW && void 0 !== iW && iW.answer && "settings" in iW.answer ? iW.answer.settings : null)), [cW, wW] = (0, mW.useState)(!0), [tW, ZW] = (0, mW.useState)(null !== OW), xW = (0, mW.useRef)(OW);
-      xW.current = OW;
-      const lW = (0, mW.useRef)(0),
-        AW = (0, mW.useRef)(0),
-        bW = (0, mW.useRef)(!1),
-        jW = (0, mW.useRef)(!0),
-        UW = (0, mW.useCallback)((async iW => {
-          const OW = ++lW.current,
-            mW = await (null !== iW && void 0 !== iW ? iW : EW.b.getSocialSettings(WW));
-          jW.current && OW === lW.current && (ZW(!0), wW(!1), "error" in mW || PW(mW.settings))
-        }), [WW]),
-        kW = (0, mW.useCallback)((() => {
-          wW(!0), UW()
-        }), [UW]),
-        sW = (0, mW.useCallback)((() => {
-          AW.current > 0 ? bW.current = !0 : UW()
-        }), [UW]);
-      (0, mW.useEffect)((() => (jW.current = !0, LW.delete(WW), wW(!0), UW(null === iW || void 0 === iW ? void 0 : iW.response), () => {
-        jW.current = !1
-      })), [UW, WW, iW]);
-      const MW = WW => {
-        lW.current++, wW(!1), xW.current = WW, PW(WW)
+    function fR(RR) {
+      const [JR] = (0, yR.useState)((() => function(RR) {
+        var JR;
+        const GR = null !== (JR = qR.get(RR)) && void 0 !== JR ? JR : null;
+        return null !== GR && void 0 !== GR && GR.answer && "error" in GR.answer ? null : GR
+      }(RR))), [GR, ZR] = (0, yR.useState)((() => null !== JR && void 0 !== JR && JR.answer && "settings" in JR.answer ? JR.answer.settings : null)), [iR, fR] = (0, yR.useState)(!0), [VR, KR] = (0, yR.useState)(null !== GR), wR = (0, yR.useRef)(GR);
+      wR.current = GR;
+      const rR = (0, yR.useRef)(0),
+        eR = (0, yR.useRef)(0),
+        aR = (0, yR.useRef)(!1),
+        LR = (0, yR.useRef)(!0),
+        nR = (0, yR.useCallback)((async JR => {
+          const GR = ++rR.current,
+            yR = await (null !== JR && void 0 !== JR ? JR : tR.c.getSocialSettings(RR));
+          LR.current && GR === rR.current && (KR(!0), fR(!1), "error" in yR || ZR(yR.settings))
+        }), [RR]),
+        UR = (0, yR.useCallback)((() => {
+          fR(!0), nR()
+        }), [nR]),
+        WR = (0, yR.useCallback)((() => {
+          eR.current > 0 ? aR.current = !0 : nR()
+        }), [nR]);
+      (0, yR.useEffect)((() => (LR.current = !0, qR.delete(RR), fR(!0), nR(null === JR || void 0 === JR ? void 0 : JR.response), () => {
+        LR.current = !1
+      })), [nR, RR, JR]);
+      const AR = RR => {
+        rR.current++, fR(!1), wR.current = RR, ZR(RR)
       };
       return {
-        settings: OW,
-        loading: cW,
-        answered: tW,
-        retry: kW,
-        refresh: sW,
-        change: async function(iW, OW) {
+        settings: GR,
+        loading: iR,
+        answered: VR,
+        retry: UR,
+        refresh: WR,
+        change: async function(JR, GR) {
           let {
-            quiet: mW = !1,
-            onAnswer: PW
+            quiet: yR = !1,
+            onAnswer: ZR
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const LW = xW.current;
-          if (null === LW) return !1;
-          MW(OW(LW)), AW.current > 0 && (bW.current = !0), AW.current++;
-          const cW = await EW.b.setSocialSettings(WW, iW);
-          AW.current--;
-          const wW = !("error" in cW);
-          if (!jW.current) return wW;
-          if (null === PW || void 0 === PW || PW(cW), mW);
-          else if ("error" in cW) NW.g.showMessage({
-            translationKey: cW.error
+          const qR = wR.current;
+          if (null === qR) return !1;
+          AR(GR(qR)), eR.current > 0 && (aR.current = !0), eR.current++;
+          const iR = await tR.c.setSocialSettings(RR, JR);
+          eR.current--;
+          const fR = !("error" in iR);
+          if (!LR.current) return fR;
+          if (null === ZR || void 0 === ZR || ZR(iR), yR);
+          else if ("error" in iR) uR.j.showMessage({
+            translationKey: iR.error
           });
           else
-            for (const WW of cW.notFound) NW.g.showMessage({
+            for (const RR of iR.notFound) uR.j.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: WW
+                playerName: RR
               }
             });
-          if (AW.current > 0) return wW;
-          const tW = bW.current;
-          return bW.current = !1, !tW && "settings" in cW ? MW(cW.settings) : (tW || MW(LW), UW()), wW
+          if (eR.current > 0) return fR;
+          const VR = aR.current;
+          return aR.current = !1, !VR && "settings" in iR ? AR(iR.settings) : (VR || AR(qR), nR()), fR
         }
       }
     }
   },
-  37960: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      h: () => NW
+  37911: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      g: () => uR
     });
-    var mW = OW(154);
-    const EW = new Map;
+    var yR = GR(163);
+    const tR = new Map;
 
-    function NW(WW, iW) {
-      var OW;
-      const mW = null !== (OW = EW.get(WW)) && void 0 !== OW ? OW : new Map;
-      mW.set(iW, Date.now()), EW.set(WW, mW)
+    function uR(RR, JR) {
+      var GR;
+      const yR = null !== (GR = tR.get(RR)) && void 0 !== GR ? GR : new Map;
+      yR.set(JR, Date.now()), tR.set(RR, yR)
     }
 
-    function PW(WW) {
-      const iW = EW.get(WW);
-      if (!iW) return [];
-      const OW = Date.now();
-      for (const [EW, NW] of iW) OW - NW >= mW.q && iW.delete(EW);
-      return [...iW.keys()]
+    function ZR(RR) {
+      const JR = tR.get(RR);
+      if (!JR) return [];
+      const GR = Date.now();
+      for (const [tR, uR] of JR) GR - uR >= yR.q && JR.delete(tR);
+      return [...JR.keys()]
     }
   },
-  37936: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      const OW = iW.toLowerCase();
-      for (const mW of WW)
-        if (mW.toLowerCase() === OW) return !0;
+  37865: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      const GR = JR.toLowerCase();
+      for (const yR of RR)
+        if (yR.toLowerCase() === GR) return !0;
       return !1
     }
 
-    function EW(WW, iW, OW) {
-      const EW = [],
-        NW = [],
-        PW = [];
-      for (const LW of WW) !LW.isError && LW.name && ("inGame" === LW.location.status && LW.location.inLobbyName === iW || mW(OW, LW.name) ? NW.push({
-        friend: LW,
+    function tR(RR, JR, GR) {
+      const tR = [],
+        uR = [],
+        ZR = [];
+      for (const qR of RR) !qR.isError && qR.name && ("inGame" === qR.location.status && qR.location.inLobbyName === JR || yR(GR, qR.name) ? uR.push({
+        friend: qR,
         place: "here"
-      }) : "offline" === LW.location.status ? PW.push({
-        friend: LW,
+      }) : "offline" === qR.location.status ? ZR.push({
+        friend: qR,
         place: "offline"
-      }) : EW.push({
-        friend: LW,
+      }) : tR.push({
+        friend: qR,
         place: "online"
       }));
-      return [...EW, ...NW, ...PW]
+      return [...tR, ...uR, ...ZR]
     }
 
-    function NW(WW, iW, OW) {
-      const EW = [],
-        NW = WW.flatMap((WW => "here" === WW.place ? [WW.friend.name] : []));
-      for (const PW of [...NW, ...iW]) mW(EW, PW) || mW(OW, PW) || EW.push(PW);
-      return EW
+    function uR(RR, JR, GR) {
+      const tR = [],
+        uR = RR.flatMap((RR => "here" === RR.place ? [RR.friend.name] : []));
+      for (const ZR of [...uR, ...JR]) yR(tR, ZR) || yR(GR, ZR) || tR.push(ZR);
+      return tR
     }
 
-    function PW(WW, iW) {
-      return null === WW || void 0 === WW || !WW.canManage || mW(WW.whitelist, iW) ? "none" : "whitelist" === WW.visibility ? "required" : "quiet"
+    function ZR(RR, JR) {
+      return null === RR || void 0 === RR || !RR.canManage || yR(RR.whitelist, JR) ? "none" : "whitelist" === RR.visibility ? "required" : "quiet"
     }
 
-    function LW(WW) {
-      if (null === WW) return !0;
+    function qR(RR) {
+      if (null === RR) return !0;
       const {
-        visibility: iW
-      } = WW;
-      return "public" === iW || "unlisted" === iW || "whitelist" === iW && WW.canManage
+        visibility: JR
+      } = RR;
+      return "public" === JR || "unlisted" === JR || "whitelist" === JR && RR.canManage
     }
 
-    function cW(WW, iW, OW) {
-      if (OW) {
-        const OW = iW.filter((iW => !mW(WW.whitelist, iW)));
+    function iR(RR, JR, GR) {
+      if (GR) {
+        const GR = JR.filter((JR => !yR(RR.whitelist, JR)));
         return {
-          ...WW,
-          whitelist: [...WW.whitelist, ...OW]
+          ...RR,
+          whitelist: [...RR.whitelist, ...GR]
         }
       }
       return {
-        ...WW,
-        whitelist: WW.whitelist.filter((WW => !mW(iW, WW)))
+        ...RR,
+        whitelist: RR.whitelist.filter((RR => !yR(JR, RR)))
       }
     }
 
-    function wW(WW, iW) {
-      const OW = [];
-      for (let mW = 0; mW < WW.length; mW += iW) OW.push(WW.slice(mW, mW + iW));
-      return OW
+    function fR(RR, JR) {
+      const GR = [];
+      for (let yR = 0; yR < RR.length; yR += JR) GR.push(RR.slice(yR, yR + JR));
+      return GR
     }
-    OW.d(iW, {
-      c: () => LW,
-      f: () => NW,
-      g: () => EW,
-      h: () => mW,
-      k: () => wW,
-      o: () => PW,
-      s: () => cW
+    GR.d(JR, {
+      d: () => qR,
+      f: () => uR,
+      j: () => tR,
+      n: () => yR,
+      r: () => fR,
+      t: () => ZR,
+      x: () => iR
     })
   },
-  38169: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW
+  38131: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(62),
-      EW = OW(3332);
+    var yR = GR(66),
+      tR = GR(3465);
 
-    function NW() {
-      const WW = (0, EW.e)("lobbyLeaderboardInfo");
-      return (0, mW.useMemo)((() => function(WW) {
-        if (null === WW) return null;
-        const iW = Object.entries(WW),
-          OW = iW.filter((WW => {
-            let [, iW] = WW;
-            return void 0 !== iW
+    function uR() {
+      const RR = (0, tR.f)("lobbyLeaderboardInfo");
+      return (0, yR.useMemo)((() => function(RR) {
+        if (null === RR) return null;
+        const JR = Object.entries(RR),
+          GR = JR.filter((RR => {
+            let [, JR] = RR;
+            return void 0 !== JR
           }));
-        if (OW.length === iW.length) return WW;
-        const mW = Object.fromEntries(OW),
-          EW = Object.keys(WW).filter((WW => !Object.hasOwn(mW, WW)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${EW.join(", ")}`), mW
-      }(WW)), [WW])
+        if (GR.length === JR.length) return RR;
+        const yR = Object.fromEntries(GR),
+          tR = Object.keys(RR).filter((RR => !Object.hasOwn(yR, RR)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${tR.join(", ")}`), yR
+      }(RR)), [RR])
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

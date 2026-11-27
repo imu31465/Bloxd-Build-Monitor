@@ -1,462 +1,462 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  40380: (WW, iW, OW) => {
-    function mW(WW) {
-      return void 0 === WW ? void 0 : [WW[0], WW[1], WW[2]]
+  40429: (RR, JR, GR) => {
+    function yR(RR) {
+      return void 0 === RR ? void 0 : [RR[0], RR[1], RR[2]]
     }
 
-    function EW(WW) {
-      const iW = WW.particles;
+    function tR(RR) {
+      const JR = RR.particles;
       return {
         opts: {
-          texture: iW.texture,
-          aZ: iW.aZ,
-          minLifeTime: iW.minLifeTime,
-          maxLifeTime: iW.maxLifeTime,
-          minSize: iW.minSize,
-          maxSize: iW.maxSize,
-          minEmitPower: iW.minEmitPower,
-          maxEmitPower: iW.maxEmitPower,
-          emitRate: iW.emitRate,
-          gravity: mW(iW.gravity),
-          dir1: mW(iW.dir1),
-          dir2: mW(iW.dir2),
-          colorGradients: iW.colorGradients,
-          blendMode: iW.blendMode
+          texture: JR.texture,
+          hK: JR.hK,
+          minLifeTime: JR.minLifeTime,
+          maxLifeTime: JR.maxLifeTime,
+          minSize: JR.minSize,
+          maxSize: JR.maxSize,
+          minEmitPower: JR.minEmitPower,
+          maxEmitPower: JR.maxEmitPower,
+          emitRate: JR.emitRate,
+          gravity: yR(JR.gravity),
+          dir1: yR(JR.dir1),
+          dir2: yR(JR.dir2),
+          colorGradients: JR.colorGradients,
+          blendMode: JR.blendMode
         },
-        half: [iW.width / 2, iW.height / 2, iW.depth / 2]
+        half: [JR.width / 2, JR.height / 2, JR.depth / 2]
       }
     }
-    OW.d(iW, {
-      d: () => EW
+    GR.d(JR, {
+      c: () => tR
     })
   },
-  40337: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      g: () => wW,
-      h: () => cW,
-      i: () => PW
+  40393: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      d: () => fR,
+      e: () => iR,
+      i: () => ZR
     });
-    var mW = OW(192);
-    const EW = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      NW = "PetRoot";
-    let PW = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      LW = EW;
+    var yR = GR(216);
+    const tR = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      uR = "PetRoot";
+    let ZR = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      qR = tR;
     new Map, new Map;
 
-    function cW(WW) {
-      var iW;
-      return null !== (iW = (0, mW.c)(PW, WW)) && void 0 !== iW ? iW : null
+    function iR(RR) {
+      var JR;
+      return null !== (JR = (0, yR.b)(ZR, RR)) && void 0 !== JR ? JR : null
     }
 
-    function wW(WW) {
-      var iW;
-      return null !== (iW = (0, mW.c)(LW, WW)) && void 0 !== iW ? iW : null
+    function fR(RR) {
+      var JR;
+      return null !== (JR = (0, yR.b)(qR, RR)) && void 0 !== JR ? JR : null
     }
   },
-  39881: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      h: () => NW
+  39862: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      f: () => uR
     });
-    const mW = new WeakMap;
+    const yR = new WeakMap;
 
-    function EW(WW, iW) {
-      return mW.set(WW, iW), WW
+    function tR(RR, JR) {
+      return yR.set(RR, JR), RR
     }
 
-    function NW(WW) {
-      var iW;
-      return null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : null
+    function uR(RR) {
+      var JR;
+      return null !== (JR = yR.get(RR)) && void 0 !== JR ? JR : null
     }
   },
-  42659: (WW, iW, OW) => {
-    function mW(WW, iW, OW) {
-      return new Promise((mW => {
-        const EW = setTimeout((() => {
-            NW(), mW(null)
-          }), OW),
-          NW = iW((() => {
-            clearTimeout(EW);
-            const iW = WW();
-            mW(null === iW ? null : function(WW) {
-              if (0 === WW.width || 0 === WW.height) return null;
-              const iW = document.createElement("canvas");
-              iW.width = WW.width, iW.height = WW.height;
-              const OW = iW.getContext("2d");
-              return OW ? (OW.drawImage(WW, 0, 0), iW) : null
-            }(iW))
+  42736: (RR, JR, GR) => {
+    function yR(RR, JR, GR) {
+      return new Promise((yR => {
+        const tR = setTimeout((() => {
+            uR(), yR(null)
+          }), GR),
+          uR = JR((() => {
+            clearTimeout(tR);
+            const JR = RR();
+            yR(null === JR ? null : function(RR) {
+              if (0 === RR.width || 0 === RR.height) return null;
+              const JR = document.createElement("canvas");
+              JR.width = RR.width, JR.height = RR.height;
+              const GR = JR.getContext("2d");
+              return GR ? (GR.drawImage(RR, 0, 0), JR) : null
+            }(JR))
           }))
       }))
     }
-    OW.d(iW, {
-      c: () => mW
+    GR.d(JR, {
+      e: () => yR
     })
   },
-  37327: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW
+  37238: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    const mW = 4e5,
-      EW = 2;
+    const yR = 4e5,
+      tR = 2;
 
-    function NW(WW, iW, OW) {
-      let [NW, PW] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [WW, iW], LW = Math.min(Number.isFinite(OW) && OW > 0 ? OW : 1, EW);
-      const cW = Math.max(0, NW, WW) * Math.max(0, PW, iW) * LW * LW;
-      return cW > mW && (LW *= Math.sqrt(mW / cW)), [Math.max(1, Math.floor(Math.max(0, WW) * LW)), Math.max(1, Math.floor(Math.max(0, iW) * LW))]
+    function uR(RR, JR, GR) {
+      let [uR, ZR] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [RR, JR], qR = Math.min(Number.isFinite(GR) && GR > 0 ? GR : 1, tR);
+      const iR = Math.max(0, uR, RR) * Math.max(0, ZR, JR) * qR * qR;
+      return iR > yR && (qR *= Math.sqrt(yR / iR)), [Math.max(1, Math.floor(Math.max(0, RR) * qR)), Math.max(1, Math.floor(Math.max(0, JR) * qR))]
     }
   },
-  35247: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW,
-      f: () => tW
+  35176: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR,
+      i: () => VR
     });
-    const mW = .01,
-      EW = .08,
-      NW = .01,
-      PW = 5,
-      LW = 100,
-      cW = 40,
-      wW = 800;
+    const yR = .01,
+      tR = .08,
+      uR = .01,
+      ZR = 5,
+      qR = 100,
+      iR = 40,
+      fR = 800;
 
-    function tW(WW) {
+    function VR(RR) {
       const {
-        canvas: iW
-      } = WW;
-      let OW = null;
-      const tW = WW => {
-          var mW;
-          OW = {
-            pointer: WW.pointerId,
-            x: WW.clientX,
-            y: WW.clientY
-          }, null === (mW = iW.setPointerCapture) || void 0 === mW || mW.call(iW, WW.pointerId)
+        canvas: JR
+      } = RR;
+      let GR = null;
+      const VR = RR => {
+          var yR;
+          GR = {
+            pointer: RR.pointerId,
+            x: RR.clientX,
+            y: RR.clientY
+          }, null === (yR = JR.setPointerCapture) || void 0 === yR || yR.call(JR, RR.pointerId)
         },
-        ZW = iW => {
-          var EW;
-          const PW = WW.orbit;
-          if ((null === (EW = OW) || void 0 === EW ? void 0 : EW.pointer) !== iW.pointerId || null === PW) return;
-          const LW = iW.clientX - OW.x,
-            cW = iW.clientY - OW.y;
-          OW = {
-            ...OW,
-            x: iW.clientX,
-            y: iW.clientY
-          }, WW.setOrbit({
-            alpha: PW.alpha - LW * mW,
-            beta: Math.min(Math.PI - NW, Math.max(NW, PW.beta - cW * mW)),
-            radius: PW.radius
+        KR = JR => {
+          var tR;
+          const ZR = RR.orbit;
+          if ((null === (tR = GR) || void 0 === tR ? void 0 : tR.pointer) !== JR.pointerId || null === ZR) return;
+          const qR = JR.clientX - GR.x,
+            iR = JR.clientY - GR.y;
+          GR = {
+            ...GR,
+            x: JR.clientX,
+            y: JR.clientY
+          }, RR.setOrbit({
+            alpha: ZR.alpha - qR * yR,
+            beta: Math.min(Math.PI - uR, Math.max(uR, ZR.beta - iR * yR)),
+            radius: ZR.radius
           })
         },
-        xW = WW => {
-          var iW;
-          (null === (iW = OW) || void 0 === iW ? void 0 : iW.pointer) === WW.pointerId && (OW = null)
+        wR = RR => {
+          var JR;
+          (null === (JR = GR) || void 0 === JR ? void 0 : JR.pointer) === RR.pointerId && (GR = null)
         },
-        lW = iW => {
-          const OW = WW.orbit;
-          if (null === OW) return;
-          iW.preventDefault();
-          const mW = iW.deltaY * (iW.deltaMode === WheelEvent.DOM_DELTA_LINE ? cW : iW.deltaMode === WheelEvent.DOM_DELTA_PAGE ? wW : 1),
-            NW = Math.min(LW, Math.max(PW, OW.radius + mW * EW));
-          WW.setOrbit({
-            ...OW,
-            radius: NW
+        rR = JR => {
+          const GR = RR.orbit;
+          if (null === GR) return;
+          JR.preventDefault();
+          const yR = JR.deltaY * (JR.deltaMode === WheelEvent.DOM_DELTA_LINE ? iR : JR.deltaMode === WheelEvent.DOM_DELTA_PAGE ? fR : 1),
+            uR = Math.min(qR, Math.max(ZR, GR.radius + yR * tR));
+          RR.setOrbit({
+            ...GR,
+            radius: uR
           })
         };
-      return iW.style.touchAction = "none", iW.addEventListener("pointerdown", tW), iW.addEventListener("pointermove", ZW), iW.addEventListener("pointerup", xW), iW.addEventListener("pointercancel", xW), iW.addEventListener("wheel", lW, {
+      return JR.style.touchAction = "none", JR.addEventListener("pointerdown", VR), JR.addEventListener("pointermove", KR), JR.addEventListener("pointerup", wR), JR.addEventListener("pointercancel", wR), JR.addEventListener("wheel", rR, {
         passive: !1
       }), () => {
-        iW.removeEventListener("pointerdown", tW), iW.removeEventListener("pointermove", ZW), iW.removeEventListener("pointerup", xW), iW.removeEventListener("pointercancel", xW), iW.removeEventListener("wheel", lW)
+        JR.removeEventListener("pointerdown", VR), JR.removeEventListener("pointermove", KR), JR.removeEventListener("pointerup", wR), JR.removeEventListener("pointercancel", wR), JR.removeEventListener("wheel", rR)
       }
     }
   },
-  44911: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      WasmPreviewHost: () => fi,
-      pageBuiltInAnimationPack: () => xW,
-      pagePreviews: () => Li,
-      previewModule: () => QW
+  45007: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      WasmPreviewHost: () => PJ,
+      pageBuiltInAnimationPack: () => wR,
+      pagePreviews: () => qJ,
+      previewModule: () => hR
     });
-    var mW = OW(2388),
-      EW = OW(649);
-    const NW = "[bloxd-wasm-client]";
+    var yR = GR(2457),
+      tR = GR(688);
+    const uR = "[bloxd-wasm-client]";
 
-    function PW(WW) {
-      const iW = {
+    function ZR(RR) {
+      const JR = {
         wasm: "unknown",
-        client: String(EW.d)
+        client: String(tR.d)
       };
       try {
-        var OW;
-        iW.wasm = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.RZ()) && void 0 !== OW ? OW : iW.wasm
+        var GR;
+        JR.wasm = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.FK()) && void 0 !== GR ? GR : JR.wasm
       } catch {}
-      return iW
+      return JR
     }
-    async function LW(WW) {
-      if (WW.length < 2 || 31 !== WW[0] || 139 !== WW[1]) return WW;
+    async function qR(RR) {
+      if (RR.length < 2 || 31 !== RR[0] || 139 !== RR[1]) return RR;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: iW
-        } = await Promise.resolve().then((() => OW(3876)));
-        return iW(WW)
+          ungzip: JR
+        } = await Promise.resolve().then((() => GR(3968)));
+        return JR(RR)
       }
-      const iW = new Blob([WW]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(iW).arrayBuffer())
+      const JR = new Blob([RR]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(JR).arrayBuffer())
     }
 
-    function cW(WW, iW, mW, EW) {
-      Promise.resolve().then((() => OW(42266))).then((OW => {
+    function iR(RR, JR, yR, tR) {
+      Promise.resolve().then((() => GR(42288))).then((GR => {
         let {
-          reportDataLoadFailure: NW
-        } = OW;
-        NW(WW, iW, mW, EW)
-      }), (iW => {
-        console.warn(`${NW} ${WW} didn't load, and the report couldn't be sent`, mW.error, iW)
+          reportDataLoadFailure: uR
+        } = GR;
+        uR(RR, JR, yR, tR)
+      }), (JR => {
+        console.warn(`${uR} ${RR} didn't load, and the report couldn't be sent`, yR.error, JR)
       }))
     }
-    const wW = [3e4, 12e4, 3e5];
-    class tW {
-      constructor(WW) {
-        this.deps = WW, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((WW => {
-          this.resolveSet = WW
+    const fR = [3e4, 12e4, 3e5];
+    class VR {
+      constructor(RR) {
+        this.deps = RR, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((RR => {
+          this.resolveSet = RR
         }))
       }
-      provide(WW) {
-        return this.loading ??= this.load(WW), this.loading
+      provide(RR) {
+        return this.loading ??= this.load(RR), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(WW) {
-        const iW = PW(WW),
-          OW = await async function(WW, iW) {
-            let OW;
+      async load(RR) {
+        const JR = ZR(RR),
+          GR = await async function(RR, JR) {
+            let GR;
             try {
-              OW = await WW()
-            } catch (mW) {
+              GR = await RR()
+            } catch (yR) {
               return {
                 stage: "fetch",
-                error: mW
+                error: yR
               }
             }
             try {
-              return iW(OW) ? null : {
+              return JR(GR) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (mW) {
+            } catch (yR) {
               return {
                 stage: "decode",
-                error: mW
+                error: yR
               }
             }
-          }((() => this.deps.fetch()), (iW => {
-            const OW = WW.omW(iW);
-            return OW && this.resolveSet(iW), OW
+          }((() => this.deps.fetch()), (JR => {
+            const GR = RR.UtR(JR);
+            return GR && this.resolveSet(JR), GR
           }));
-        if (null !== OW) {
-          if ("fetch" === OW.stage) {
+        if (null !== GR) {
+          if ("fetch" === GR.stage) {
             this.loading = null;
-            const iW = wW[this.retries++];
-            void 0 !== iW && this.deps.later((() => {
-              this.provide(WW)
-            }), iW)
+            const JR = fR[this.retries++];
+            void 0 !== JR && this.deps.later((() => {
+              this.provide(RR)
+            }), JR)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(OW, iW))
+          this.reported || (this.reported = !0, this.deps.onFailed(GR, JR))
         }
       }
     }
-    let ZW = null;
+    let KR = null;
 
-    function xW() {
-      return ZW ??= new tW({
-        fetch: async () => LW(await (0, mW.C)(lW(), {
+    function wR() {
+      return KR ??= new VR({
+        fetch: async () => qR(await (0, yR.B)(rR(), {
           priority: "low"
         })),
-        onFailed: (WW, iW) => {
-          cW("builtInAnimations", lW(), WW, iW)
+        onFailed: (RR, JR) => {
+          iR("builtInAnimations", rR(), RR, JR)
         },
-        later: (WW, iW) => {
-          setTimeout(WW, iW)
+        later: (RR, JR) => {
+          setTimeout(RR, JR)
         }
-      }), ZW
+      }), KR
     }
 
-    function lW() {
-      return OW(44913)
+    function rR() {
+      return GR(45013)
     }
-    var AW = OW(2381),
-      bW = OW(1185),
-      jW = OW(324),
-      UW = OW(315),
-      kW = OW(671),
-      sW = OW(5546),
-      MW = OW(42216),
-      KW = OW(42240),
-      SW = OW(42448),
-      YW = (OW(42244), OW(37325)),
-      yW = OW(42330),
-      TW = OW(42339),
-      JW = OW(42344),
-      hW = OW(42225),
-      HW = OW(42461),
-      nW = OW(42463),
-      uW = OW(42255),
-      oW = OW(42362),
-      dW = OW(42388),
-      eW = OW(42358),
-      vW = OW(42402),
-      gW = OW(42455),
-      DW = OW(37336),
-      VW = OW(37265),
-      pW = OW(2372),
-      fW = OW(37327);
-    const CW = "[bloxd-previews]",
-      XW = 0,
-      BW = 1,
-      qW = 2,
-      RW = 3,
-      GW = 1,
-      IW = 2,
-      aW = 3,
-      rW = 0,
-      zW = 1,
-      FW = 2;
+    var eR = GR(2448),
+      aR = GR(1282),
+      LR = GR(350),
+      nR = GR(342),
+      UR = GR(709),
+      WR = GR(5676),
+      AR = GR(42230),
+      CR = GR(42259),
+      XR = GR(42475),
+      MR = (GR(42265), GR(37232)),
+      BR = GR(42344),
+      lR = GR(42352),
+      pR = GR(42357),
+      gR = GR(42239),
+      bR = GR(42494),
+      vR = GR(42503),
+      OR = GR(42281),
+      xR = GR(42379),
+      NR = GR(42420),
+      DR = GR(42374),
+      HR = GR(42430),
+      oR = GR(42488),
+      cR = GR(37247),
+      PR = GR(37183),
+      IR = GR(2445),
+      mR = GR(37238);
+    const zR = "[bloxd-previews]",
+      SR = 0,
+      jR = 1,
+      dR = 2,
+      ER = 3,
+      YR = 1,
+      kR = 2,
+      QR = 3,
+      FR = 0,
+      TR = 1,
+      sR = 2;
 
-    function QW(WW) {
-      const iW = WW,
-        OW = (0, MW.M)(WW),
-        mW = (0, MW.n)(WW);
-      return null !== OW && null !== mW && "function" === typeof iW.dmW && "function" === typeof iW.emW && "function" === typeof iW.vmW && "function" === typeof iW.DH ? iW : null
+    function hR(RR) {
+      const JR = RR,
+        GR = (0, AR.M)(RR),
+        yR = (0, AR.n)(RR);
+      return null !== GR && null !== yR && "function" === typeof JR.WtR && "function" === typeof JR.AtR && "function" === typeof JR.CtR && "function" === typeof JR.ZH ? JR : null
     }
 
-    function Wi() {
-      return OW(44918)
+    function RJ() {
+      return GR(45017)
     }
-    async function ii(WW, iW, mW) {
-      var EW;
-      let NW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === WW && (0, uW.x)();
-      const LW = await (0, uW.J)();
-      if (null === LW || (0, MW.r)(LW) || (0, uW.c)()) return;
-      const cW = "webgpu" === LW.backend;
-      if (!cW && "lost" !== WW) return;
-      const wW = cW && (0, UW.p)(LW.adapter, null !== mW && void 0 !== mW ? mW : null, "lost" === WW, NW),
-        tW = null !== (EW = "lost" === WW ? (0, KW.n)((0, AW.R)() ? (0, MW.M)((0, AW.G)()) : null) : void 0) && void 0 !== EW ? EW : iW,
-        ZW = cW ? (0, MW.Z)(WW, void 0, (0, KW.e)(tW)) : (0, kW.u)() ? null : kW.i;
-      if (null === ZW) {
-        (0, uW.o)();
+    async function JJ(RR, JR, yR) {
+      var tR;
+      let uR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === RR && (0, OR.D)();
+      const qR = await (0, OR.W)();
+      if (null === qR || (0, AR.o)(qR) || (0, OR.c)()) return;
+      const iR = "webgpu" === qR.backend;
+      if (!iR && "lost" !== RR) return;
+      const fR = iR && (0, nR.m)(qR.adapter, null !== yR && void 0 !== yR ? yR : null, "lost" === RR, uR),
+        VR = null !== (tR = "lost" === RR ? (0, CR.l)((0, eR.F)() ? (0, AR.M)((0, eR.w)()) : null) : void 0) && void 0 !== tR ? tR : JR,
+        KR = iR ? (0, AR.W)(RR, void 0, (0, CR.d)(VR)) : (0, UR.u)() ? null : UR.e;
+      if (null === KR) {
+        (0, OR.t)();
         try {
-          await async function(WW, iW, mW, EW, NW) {
+          await async function(RR, JR, yR, tR, uR) {
             let {
-              restoreLost: LW,
-              adapterRemembered: cW
-            } = NW;
-            const wW = (0, AW.R)(),
+              restoreLost: qR,
+              adapterRemembered: iR
+            } = uR;
+            const fR = (0, eR.F)(),
               {
-                flushCrashReports: tW,
-                reportRenderReload: ZW
-              } = await Promise.resolve().then((() => OW(42266)));
-            ZW(WW.backend, EW, PW(wW ? (0, AW.G)() : null), {
+                flushCrashReports: VR,
+                reportRenderReload: KR
+              } = await Promise.resolve().then((() => GR(42288)));
+            KR(RR.backend, tR, ZR(fR ? (0, eR.w)() : null), {
               from: "home",
-              cause: iW,
-              restoreLost: LW,
-              adapterRemembered: cW,
-              ...Oi(WW, iW, mW)
-            }), await tW(dW.d)
-          }(LW, WW, tW, null !== mW && void 0 !== mW ? mW : "start_failed" === WW ? 0 : 1, {
-            restoreLost: NW,
-            adapterRemembered: wW
+              cause: JR,
+              restoreLost: qR,
+              adapterRemembered: iR,
+              ...GJ(RR, JR, yR)
+            }), await VR(NR.d)
+          }(qR, RR, VR, null !== yR && void 0 !== yR ? yR : "start_failed" === RR ? 0 : 1, {
+            restoreLost: uR,
+            adapterRemembered: fR
           })
-        } catch (lW) {
-          console.warn(`${CW} ${LW.backend} failed at home (${WW}), and its report couldn't be sent`, lW)
-        }(0, dW.j)()
+        } catch (rR) {
+          console.warn(`${zR} ${qR.backend} failed at home (${RR}), and its report couldn't be sent`, rR)
+        }(0, NR.j)()
       } else {
-        var xW;
-        const iW = Oi(LW, WW, tW),
-          mW = `${cW?"WebGPU":"WebGL"} failed at home (${WW}${void 0===iW.error?"":`: ${iW.error instanceof Error?iW.error.message:(0,VW.m)(iW.error)}`}) and ${ZW}`;
-        console.warn(`${CW} ${mW}: the previews stop`, null !== (xW = iW.error) && void 0 !== xW ? xW : ""), (0, uW.r)({
-          why: mW,
-          webgpu: cW
+        var wR;
+        const JR = GJ(qR, RR, VR),
+          yR = `${iR?"WebGPU":"WebGL"} failed at home (${RR}${void 0===JR.error?"":`: ${JR.error instanceof Error?JR.error.message:(0,PR.k)(JR.error)}`}) and ${KR}`;
+        console.warn(`${zR} ${yR}: the previews stop`, null !== (wR = JR.error) && void 0 !== wR ? wR : ""), (0, OR.x)({
+          why: yR,
+          webgpu: iR
         });
         try {
           const {
-            countRenderLost: mW
-          } = await Promise.resolve().then((() => OW(42266)));
-          mW(WW, iW.error, iW.context)
-        } catch (bW) {
-          console.warn(`${CW} ${LW.backend} failed at home (${WW}), and its count couldn't be sent`, bW)
+            countRenderLost: yR
+          } = await Promise.resolve().then((() => GR(42288)));
+          yR(RR, JR.error, JR.context)
+        } catch (aR) {
+          console.warn(`${zR} ${qR.backend} failed at home (${RR}), and its count couldn't be sent`, aR)
         }
       }
     }
 
-    function Oi(WW, iW, OW) {
+    function GJ(RR, JR, GR) {
       let {
-        adapter: mW
-      } = WW;
+        adapter: yR
+      } = RR;
       return {
-        error: OW,
+        error: GR,
         context: {
-          adapter: mW,
-          boundAtMs: "start_failed" === iW ? null : (0, uW.G)(),
-          indirectHangs: (0, uW.y)(),
-          restoresSkipped: (0, uW.H)()
+          adapter: yR,
+          boundAtMs: "start_failed" === JR ? null : (0, OR.Q)(),
+          indirectHangs: (0, OR.H)(),
+          restoresSkipped: (0, OR.S)()
         }
       }
     }
-    async function mi(WW) {
-      if (!(0, AW.R)()) {
-        await (null === WW || void 0 === WW ? void 0 : WW("renderer pick", {
+    async function yJ(RR) {
+      if (!(0, eR.F)()) {
+        await (null === RR || void 0 === RR ? void 0 : RR("renderer pick", {
           longStep: !0
         }));
-        const iW = await (0, uW.J)();
-        if (null === iW || (0, MW.r)(iW)) return null;
-        const OW = await iW.load();
-        if (await (null === WW || void 0 === WW ? void 0 : WW("renderer instantiation", {
+        const JR = await (0, OR.W)();
+        if (null === JR || (0, AR.o)(JR)) return null;
+        const GR = await JR.load();
+        if (await (null === RR || void 0 === RR ? void 0 : RR("renderer instantiation", {
             longStep: !0
-          })), await (0, oW.c)(OW), !(0, AW.R)()) return null
+          })), await (0, xR.e)(GR), !(0, eR.F)()) return null
       }
-      return QW((0, AW.G)())
+      return hR((0, eR.w)())
     }
-    class Ei {
-      constructor(WW, iW, OW, mW, EW, NW) {
-        this.page = WW, this.host = iW, this.id = OW, this.canvas = mW, this.size = EW, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const PW = {
-            ...NW.images,
-            glbUrl: WW => {
-              var iW;
-              return null !== (iW = this.models.drawnUrl(WW)) && void 0 !== iW ? iW : NW.images.glbUrl(WW)
+    class tJ {
+      constructor(RR, JR, GR, yR, tR, uR) {
+        this.page = RR, this.host = JR, this.id = GR, this.canvas = yR, this.size = tR, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const ZR = {
+            ...uR.images,
+            glbUrl: RR => {
+              var JR;
+              return null !== (JR = this.models.drawnUrl(RR)) && void 0 !== JR ? JR : uR.images.glbUrl(RR)
             }
           },
-          LW = iW => WW.modelFile(iW);
-        this.images = new SW.g(PW, (WW => {
-          console.warn(`${CW} image ${WW.key.kind}:${WW.key.index}:${WW.key.word} failed`, WW.error)
+          qR = JR => RR.modelFile(JR);
+        this.images = new XR.f(ZR, (RR => {
+          console.warn(`${zR} image ${RR.key.kind}:${RR.key.index}:${RR.key.word} failed`, RR.error)
         }), {
-          fetchFile: LW,
-          fetchImage: iW => WW.imageFile(iW)
-        }), WW.startModels(), this.models = new yW.f(NW.files, ((iW, OW) => WW.buildModel(iW, OW)), (WW => {
-          console.warn(`${CW} model file ${WW.file} (${WW.url}) failed`, WW.error)
+          fetchFile: qR,
+          fetchImage: JR => RR.imageFile(JR)
+        }), RR.startModels(), this.models = new BR.e(uR.files, ((JR, GR) => RR.buildModel(JR, GR)), (RR => {
+          console.warn(`${zR} model file ${RR.file} (${RR.url}) failed`, RR.error)
         }), {
-          fetchFile: LW,
-          onWritten: (WW, iW) => {
-            this.images.glbWritten(WW, iW)
+          fetchFile: qR,
+          onWritten: (RR, JR) => {
+            this.images.glbWritten(RR, JR)
           },
-          onTaken: (WW, iW) => {
-            this.images.glbTaken(WW, iW)
+          onTaken: (RR, JR) => {
+            this.images.glbTaken(RR, JR)
           }
-        }), this.write = (WW, iW, OW) => {
+        }), this.write = (RR, JR, GR) => {
           if (this.closed) return !0;
-          if (WW === yW.b) {
-            const WW = new DataView(OW.buffer, OW.byteOffset, JW.b),
-              mW = WW.getUint32(0, !0),
-              EW = WW.getUint32(JW.d, !0),
-              NW = this.page.hostCall(FW, (() => this.host.gmW(this.id, mW, iW, OW.subarray(JW.b))));
-            return this.outcomes.push([EW, NW]), !0
+          if (RR === BR.c) {
+            const RR = new DataView(GR.buffer, GR.byteOffset, pR.e),
+              yR = RR.getUint32(0, !0),
+              tR = RR.getUint32(pR.h, !0),
+              uR = this.page.hostCall(sR, (() => this.host.XtR(this.id, yR, JR, GR.subarray(pR.e))));
+            return this.outcomes.push([tR, uR]), !0
           }
-          return WW === SW.d && (this.page.hostCall(void 0, (() => {
-            this.host.DmW(this.id, OW)
+          return RR === XR.b && (this.page.hostCall(void 0, (() => {
+            this.host.MtR(this.id, GR)
           })), !0)
         }
       }
@@ -466,94 +466,94 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(WW, iW, OW) {
+      resize(RR, JR, GR) {
         if (this.closed) return;
-        const [mW, EW] = (0, fW.b)(WW, iW, this.page.dpr(), OW);
-        mW === this.size[0] && EW === this.size[1] || (this.size = [mW, EW], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, mW, EW)
+        const [yR, tR] = (0, mR.e)(RR, JR, this.page.dpr(), GR);
+        yR === this.size[0] && tR === this.size[1] || (this.size = [yR, tR], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, yR, tR)
         })))
       }
-      setMob(WW, iW, OW, mW) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.VmW(this.id, WW, iW, OW, mW))))
+      setMob(RR, JR, GR, yR) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.BtR(this.id, RR, JR, GR, yR))))
       }
-      setPet(WW, iW, OW, mW) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.pmW(this.id, WW, iW, OW, mW))))
+      setPet(RR, JR, GR, yR) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ltR(this.id, RR, JR, GR, yR))))
       }
-      setPlayer(WW, iW, OW) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.fmW(this.id, WW, iW, OW))))
+      setPlayer(RR, JR, GR) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ptR(this.id, RR, JR, GR))))
       }
-      setCompanions(WW) {
-        var iW;
+      setCompanions(RR) {
+        var JR;
         let {
-          pet: OW,
-          aura: mW
-        } = WW;
+          pet: GR,
+          aura: yR
+        } = RR;
         if (this.closed) return;
-        const EW = null !== (iW = null === OW || void 0 === OW ? void 0 : OW.model) && void 0 !== iW ? iW : -1,
-          NW = new Float64Array(OW ? [OW.scale, ...OW.offset, OW.yawOffset, OW.bobAmplitude, OW.bobHz] : []),
-          PW = new Float64Array(mW ? [...mW.offset, ...mW.half] : []);
+        const tR = null !== (JR = null === GR || void 0 === GR ? void 0 : GR.model) && void 0 !== JR ? JR : -1,
+          uR = new Float64Array(GR ? [GR.scale, ...GR.offset, GR.yawOffset, GR.bobAmplitude, GR.bobHz] : []),
+          ZR = new Float64Array(yR ? [...yR.offset, ...yR.half] : []);
         this.page.hostCall(void 0, (() => {
-          var WW, iW;
-          this.host.CmW(this.id, EW, NW, null !== (WW = null === OW || void 0 === OW ? void 0 : OW.flyClip) && void 0 !== WW ? WW : "", null !== (iW = null === mW || void 0 === mW ? void 0 : mW.opts) && void 0 !== iW ? iW : "", PW)
+          var RR, JR;
+          this.host.gtR(this.id, tR, uR, null !== (RR = null === GR || void 0 === GR ? void 0 : GR.flyClip) && void 0 !== RR ? RR : "", null !== (JR = null === yR || void 0 === yR ? void 0 : yR.opts) && void 0 !== JR ? JR : "", ZR)
         }))
       }
-      setNametag(WW, iW, OW) {
+      setNametag(RR, JR, GR) {
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.XmW(this.id, WW, iW, OW)
+          this.host.btR(this.id, RR, JR, GR)
         }))
       }
-      setFigure(WW, iW, OW, mW) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.BmW(this.id, WW, iW, OW, mW))))
+      setFigure(RR, JR, GR, yR) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.vtR(this.id, RR, JR, GR, yR))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const WW = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === WW || WW.length < 3 ? null : {
-          alpha: WW[0],
-          beta: WW[1],
-          radius: WW[2]
+        const RR = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === RR || RR.length < 3 ? null : {
+          alpha: RR[0],
+          beta: RR[1],
+          radius: RR[2]
         }
       }
-      setOrbit(WW) {
+      setOrbit(RR) {
         let {
-          alpha: iW,
-          beta: OW,
-          radius: mW
-        } = WW;
+          alpha: JR,
+          beta: GR,
+          radius: yR
+        } = RR;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.qmW(this.id, iW, OW, mW)
+          this.host.OtR(this.id, JR, GR, yR)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((WW => {
-          this.settled.push(WW)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((RR => {
+          this.settled.push(RR)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, HW.i)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, bR.f)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [WW, iW] of this.outcomes) {
-          const OW = iW === rW ? [] : [iW === zW ? WW : (WW | yW.c) >>> 0];
-          this.models.taken(WW, OW)
+        for (const [RR, JR] of this.outcomes) {
+          const GR = JR === FR ? [] : [JR === TR ? RR : (RR | BR.d) >>> 0];
+          this.models.taken(RR, GR)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(WW) {
-        let iW = !1;
-        if (WW) {
-          const WW = this.host.RmW(this.id);
-          for (const iW of WW) this.models.request(iW);
-          const OW = this.host.GmW(this.id);
-          OW.length > 0 && this.images.onEvent(OW), iW = WW.length > 0 || OW.length > 0
+      collect(RR) {
+        let JR = !1;
+        if (RR) {
+          const RR = this.host.xtR(this.id);
+          for (const JR of RR) this.models.request(JR);
+          const GR = this.host.NtR(this.id);
+          GR.length > 0 && this.images.onEvent(GR), JR = RR.length > 0 || GR.length > 0
         }
-        const OW = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          mW = iW || OW > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = mW ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const GR = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          yR = JR || GR > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = yR ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -561,313 +561,313 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(WW) {
+      dispose(RR) {
         this.page.hostCall(void 0, (() => {
-          const iW = this.host.close(this.id);
-          iW.length > 0 && this.images.onEvent(iW), this.page.isTrapped || WW.vmW(this.id)
+          const JR = this.host.close(this.id);
+          JR.length > 0 && this.images.onEvent(JR), this.page.isTrapped || RR.CtR(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const WW = this.settled;
+        const RR = this.settled;
         this.settled = [];
-        for (const iW of WW) iW()
+        for (const JR of RR) JR()
       }
     }
-    class Ni {
-      constructor(WW) {
-        this.deps = WW, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: WW => {
-            this.modelsFailed(WW)
+    class uJ {
+      constructor(RR) {
+        this.deps = RR, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: RR => {
+            this.modelsFailed(RR)
           },
-          onWorkerLost: WW => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${CW} a model worker was lost: ${WW}`))
+          onWorkerLost: RR => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${zR} a model worker was lost: ${RR}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.kA = {
-          setShaderPack: (WW, iW, OW, mW, EW) => (this.shaderPackArgs = [WW, iW, OW, mW, EW], this.handOverShaderPack(), !0)
-        }, this.frame = WW => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Be = {
+          setShaderPack: (RR, JR, GR, yR, tR) => (this.shaderPackArgs = [RR, JR, GR, yR, tR], this.handOverShaderPack(), !0)
+        }, this.frame = RR => {
           this.frameId = null;
-          const iW = this.host;
-          if (null !== iW && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped)
-            if (this.deps.frameDue(WW)) try {
-              this.drawFrame(iW, WW)
-            } catch (OW) {
-              if (!this.stopIfTrapped(OW) && (this.stop(), (0, MW.s)(OW))) return void this.deps.onRenderFailed("frames_refused", OW);
-              console.warn(`${CW} the previews stopped: their frame threw`, OW)
+          const JR = this.host;
+          if (null !== JR && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped)
+            if (this.deps.frameDue(RR)) try {
+              this.drawFrame(JR, RR)
+            } catch (GR) {
+              if (!this.stopIfTrapped(GR) && (this.stop(), (0, AR.s)(GR))) return void this.deps.onRenderFailed("frames_refused", GR);
+              console.warn(`${zR} the previews stopped: their frame threw`, GR)
             } else this.startFrames()
-        }, WW.pack.onChange((() => {
+        }, RR.pack.onChange((() => {
           this.packChanged()
-        })), WW.game.onGameChange((() => {
+        })), RR.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const WW of this.previews.values()) WW.packChanged()
+          for (const RR of this.previews.values()) RR.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.host) || void 0 === iW ? void 0 : iW.attached()) && void 0 !== WW && WW
+        var RR, JR;
+        return null !== (RR = null === (JR = this.host) || void 0 === JR ? void 0 : JR.attached()) && void 0 !== RR && RR
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((WW, iW) => WW + iW), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((RR, JR) => RR + JR), 0) / this.costs.length
       }
-      async bindSession(WW, iW, OW) {
-        const mW = this.binding,
-          EW = this.sessionEnds;
+      async bindSession(RR, JR, GR) {
+        const yR = this.binding,
+          tR = this.sessionEnds;
         try {
-          const NW = this.hostOf(WW);
-          if (!NW.ImW()) {
-            const iW = (0, vW.e)().sampleCount,
-              PW = await OW(iW);
-            if (this.sessionEnds !== EW) return this.keepRendererOfEndedSession(WW, NW, PW, iW, mW), iW;
-            if (!NW.amW(PW)) throw new Error("the page has a renderer already");
-            (0, uW.u)(performance.now()), this.samples = iW, (0, gW.d)((0, MW.n)(WW))
+          const uR = this.hostOf(RR);
+          if (!uR.DtR()) {
+            const JR = (0, HR.g)().sampleCount,
+              ZR = await GR(JR);
+            if (this.sessionEnds !== tR) return this.keepRendererOfEndedSession(RR, uR, ZR, JR, yR), JR;
+            if (!uR.HtR(ZR)) throw new Error("the page has a renderer already");
+            (0, OR.A)(performance.now()), this.samples = JR, (0, oR.f)((0, AR.n)(RR))
           }
-          if (!NW.attach(iW)) throw new Error("the page's renderer is lent to another session");
+          if (!uR.attach(JR)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === mW && this.endBinding()
+          this.binding === yR && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(WW, iW, OW, mW, EW) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== EW) try {
-          OW.free()
-        } catch (NW) {
-          console.warn(`${CW} an ended session's renderer didn't free`, NW)
-        } else iW.amW(OW) && ((0, uW.u)(performance.now()), this.samples = mW, (0, gW.d)(this.registryOf(WW)))
+      keepRendererOfEndedSession(RR, JR, GR, yR, tR) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== tR) try {
+          GR.free()
+        } catch (uR) {
+          console.warn(`${zR} an ended session's renderer didn't free`, uR)
+        } else JR.HtR(GR) && ((0, OR.A)(performance.now()), this.samples = yR, (0, oR.f)(this.registryOf(RR)))
       }
       async beginSession() {
-        var WW;
-        let iW = () => {};
-        const OW = new Promise((WW => {
-          iW = WW
+        var RR;
+        let JR = () => {};
+        const GR = new Promise((RR => {
+          JR = RR
         }));
         this.binding = {
-          done: OW,
-          release: iW
-        }, await (null === (WW = this.opening) || void 0 === WW ? void 0 : WW.catch((() => null)));
-        const mW = this.pageCanvas;
-        return this.pageCanvas = null, mW
+          done: GR,
+          release: JR
+        }, await (null === (RR = this.opening) || void 0 === RR ? void 0 : RR.catch((() => null)));
+        const yR = this.pageCanvas;
+        return this.pageCanvas = null, yR
       }
-      endSession(WW) {
-        var iW, OW;
-        if (this.sessionEnds++, this.lastEndReturned = WW, this.endBinding(), WW) {
+      endSession(RR) {
+        var JR, GR;
+        if (this.sessionEnds++, this.lastEndReturned = RR, this.endBinding(), RR) {
           try {
-            var mW;
-            null === (mW = this.host) || void 0 === mW || mW.detach()
-          } catch (EW) {
-            return void console.warn(`${CW} the session's core kept the page's renderer`, EW)
-          }!0 === (null === (iW = this.host) || void 0 === iW ? void 0 : iW.attached()) && console.warn(`${CW} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (OW = this.host) || void 0 === OW ? void 0 : OW.ImW()) && (0, gW.d)(this.registryOf(this.module))
+            var yR;
+            null === (yR = this.host) || void 0 === yR || yR.detach()
+          } catch (tR) {
+            return void console.warn(`${zR} the session's core kept the page's renderer`, tR)
+          }!0 === (null === (JR = this.host) || void 0 === JR ? void 0 : JR.attached()) && console.warn(`${zR} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (GR = this.host) || void 0 === GR ? void 0 : GR.DtR()) && (0, oR.f)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var WW;
-        null === (WW = this.binding) || void 0 === WW || WW.release(), this.binding = null
+        var RR;
+        null === (RR = this.binding) || void 0 === RR || RR.release(), this.binding = null
       }
-      async openPreview(WW, iW, OW, mW) {
-        const EW = await this.renderingHost(),
-          NW = this.module;
-        if (null === EW || null === NW) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(EW), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(RR, JR, GR, yR) {
+        const tR = await this.renderingHost(),
+          uR = this.module;
+        if (null === tR || null === uR) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(tR), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(NW)
+          this.deps.provideBuiltInAnimationPack(uR)
         }));
-        const PW = this.nextId++,
-          LW = this.deps.createCanvas(),
-          [cW, wW] = (0, fW.b)(iW, OW, this.deps.dpr(), mW);
-        LW.width = cW, LW.height = wW;
-        if (!this.guarded((() => (NW.emW(PW, LW), EW.open(PW, cW, wW, WW))))) throw this.hostCall(void 0, (() => {
-          NW.vmW(PW)
+        const ZR = this.nextId++,
+          qR = this.deps.createCanvas(),
+          [iR, fR] = (0, mR.e)(JR, GR, this.deps.dpr(), yR);
+        qR.width = iR, qR.height = fR;
+        if (!this.guarded((() => (uR.AtR(ZR, qR), tR.open(ZR, iR, fR, RR))))) throw this.hostCall(void 0, (() => {
+          uR.CtR(ZR)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const tW = new Ei(this, EW, PW, LW, [cW, wW], this.deps);
-        return this.previews.set(PW, tW), this.startFrames(), tW
+        const VR = new tJ(this, tR, ZR, qR, [iR, fR], this.deps);
+        return this.previews.set(ZR, VR), this.startFrames(), VR
       }
-      prefetch(WW) {
+      prefetch(RR) {
         if (this.prefetched || !this.mayPrefetch) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule(WW) : Promise.resolve(this.module)).then((async iW => {
-          null !== iW && (await (null === WW || void 0 === WW ? void 0 : WW("preview workers and files")), this.mayPrefetch && (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles()))
+        (null === this.module ? this.loadModule(RR) : Promise.resolve(this.module)).then((async JR => {
+          null !== JR && (await (null === RR || void 0 === RR ? void 0 : RR("preview workers and files")), this.mayPrefetch && (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles()))
         }), (() => {}))
       }
-      modelFile(WW) {
-        return this.prefetchedOr(WW, this.deps.fetchModel)
+      modelFile(RR) {
+        return this.prefetchedOr(RR, this.deps.fetchModel)
       }
-      imageFile(WW) {
-        return this.prefetchedOr(WW, mW.C)
+      imageFile(RR) {
+        return this.prefetchedOr(RR, yR.B)
       }
-      prefetchedOr(WW, iW) {
-        const OW = this.prefetchedFiles.get(WW);
-        return void 0 === OW ? iW(WW) : OW.catch((() => iW(WW)))
+      prefetchedOr(RR, JR) {
+        const GR = this.prefetchedFiles.get(RR);
+        return void 0 === GR ? JR(RR) : GR.catch((() => JR(RR)))
       }
       async prefetchPlayerFiles() {
-        const WW = this.deps.playerFile().then((WW => this.deps.files.url(WW))),
-          iW = await Promise.all([WW, this.deps.images.lifeformAtlasUrl(HW.e)]).catch((() => null));
-        if (null === iW) return;
-        const [OW, mW] = iW, EW = (WW, iW) => {
-          if (null === WW) return;
-          const OW = iW(WW);
-          this.prefetchedFiles.set(WW, OW), OW.catch((() => {
-            this.prefetchedFiles.delete(WW)
+        const RR = this.deps.playerFile().then((RR => this.deps.files.url(RR))),
+          JR = await Promise.all([RR, this.deps.images.lifeformAtlasUrl(bR.b)]).catch((() => null));
+        if (null === JR) return;
+        const [GR, yR] = JR, tR = (RR, JR) => {
+          if (null === RR) return;
+          const GR = JR(RR);
+          this.prefetchedFiles.set(RR, GR), GR.catch((() => {
+            this.prefetchedFiles.delete(RR)
           }))
         };
-        EW(OW, (WW => this.modelFile(WW))), EW(mW, (WW => this.imageFile(WW)))
+        tR(GR, (RR => this.modelFile(RR))), tR(yR, (RR => this.imageFile(RR)))
       }
-      loadModule(WW) {
-        return this.moduleLoad ??= this.deps.loadModule(WW).then((WW => (null === WW && (this.moduleLoad = null), WW)), (WW => {
-          throw this.moduleLoad = null, WW
+      loadModule(RR) {
+        return this.moduleLoad ??= this.deps.loadModule(RR).then((RR => (null === RR && (this.moduleLoad = null), RR)), (RR => {
+          throw this.moduleLoad = null, RR
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((WW => {
-          throw this.animationTable = null, WW
+        return this.animationTable ??= this.deps.fetchAnimations().catch((RR => {
+          throw this.animationTable = null, RR
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((WW => (this.modelsFailed(WW), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((RR => (this.modelsFailed(RR), () => new Promise((() => {})))))
       }
-      buildModel(WW, iW) {
-        return this.startModels(), this.models.then((OW => OW(WW, iW))).then((WW => this.unavailable ? new Promise((() => {})) : WW))
+      buildModel(RR, JR) {
+        return this.startModels(), this.models.then((GR => GR(RR, JR))).then((RR => this.unavailable ? new Promise((() => {})) : RR))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(WW) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${CW} the model workers didn't start: models won't draw in the previews`, WW))
+      modelsFailed(RR) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${zR} the model workers didn't start: models won't draw in the previews`, RR))
       }
-      called(WW) {
-        return 0 !== WW && this.logError(WW, 0), WW
+      called(RR) {
+        return 0 !== RR && this.logError(RR, 0), RR
       }
-      closePreview(WW) {
-        this.previews.delete(WW.id), null !== this.module && WW.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(RR) {
+        this.previews.delete(RR.id), null !== this.module && RR.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(WW) {
-        if (null !== this.module && this.module !== WW) throw new Error("a second renderer module on one page");
-        return this.module = WW, null === this.host && (this.host = this.guarded((() => new WW.dmW)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(RR) {
+        if (null !== this.module && this.module !== RR) throw new Error("a second renderer module on one page");
+        return this.module = RR, null === this.host && (this.host = this.guarded((() => new RR.WtR)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: WW
+          host: RR
         } = this;
-        null !== WW && this.outsideCall("the game's start or end", (() => {
-          WW.rmW(this.deps.game.inGame())
+        null !== RR && this.outsideCall("the game's start or end", (() => {
+          RR.otR(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: WW,
-          shaderPackArgs: iW
+          host: RR,
+          shaderPackArgs: JR
         } = this;
-        null !== WW && null !== iW && this.outsideCall("the shader pack's hand-over", (() => {
-          WW.umW(...iW) || console.warn(`${CW} the host refused the shader pack: previews draw without it at home`)
+        null !== RR && null !== JR && this.outsideCall("the shader pack's hand-over", (() => {
+          RR.ntR(...JR) || console.warn(`${zR} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(WW, iW) {
+      outsideCall(RR, JR) {
         try {
-          this.hostCall(void 0, iW)
-        } catch (OW) {
-          this.stop(), console.warn(`${CW} the previews stopped: ${WW} threw`, OW)
+          this.hostCall(void 0, JR)
+        } catch (GR) {
+          this.stop(), console.warn(`${zR} the previews stopped: ${RR} threw`, GR)
         }
       }
-      async loadAnimations(WW) {
-        const iW = PW(null),
-          OW = this.module;
+      async loadAnimations(RR) {
+        const JR = ZR(null),
+          GR = this.module;
         try {
-          iW.wasm = null === OW ? iW.wasm : this.hostCall(iW.wasm, (() => OW.RZ()))
+          JR.wasm = null === GR ? JR.wasm : this.hostCall(JR.wasm, (() => GR.FK()))
         } catch {}
-        let mW, EW;
+        let yR, tR;
         try {
-          mW = await this.fetchAnimationTable()
-        } catch (NW) {
+          yR = await this.fetchAnimationTable()
+        } catch (uR) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: NW
-          }, iW)
+            error: uR
+          }, JR)
         }
         if (!this.settleIfTrapped()) {
           try {
-            EW = WW.zmW(mW)
-          } catch (NW) {
-            if (this.stopIfTrapped(NW)) return;
+            tR = RR.ctR(yR)
+          } catch (uR) {
+            if (this.stopIfTrapped(uR)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: NW
-            }, iW)
+              error: uR
+            }, JR)
           }
-          EW || this.deps.onAnimationsFailed({
+          tR || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, iW)
+          }, JR)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const WW = this.host;
-        return null !== WW && this.guarded((() => WW.ImW())) ? WW : (this.opening ??= this.openAtHome().finally((() => {
+        const RR = this.host;
+        return null !== RR && this.guarded((() => RR.DtR())) ? RR : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var WW;
-        const iW = null !== (WW = this.module) && void 0 !== WW ? WW : await this.loadModule();
-        if (null === iW) return null;
-        const OW = this.hostOf(iW),
-          mW = () => this.guarded((() => OW.ImW()));
-        if (mW()) return OW;
-        if (null !== (0, uW.F)() || (0, uW.c)()) return null;
-        const EW = this.deps.createCanvas();
-        EW.width = 1, EW.height = 1;
-        const NW = await this.deps.openExtras();
+        var RR;
+        const JR = null !== (RR = this.module) && void 0 !== RR ? RR : await this.loadModule();
+        if (null === JR) return null;
+        const GR = this.hostOf(JR),
+          yR = () => this.guarded((() => GR.DtR()));
+        if (yR()) return GR;
+        if (null !== (0, OR.O)() || (0, OR.c)()) return null;
+        const tR = this.deps.createCanvas();
+        tR.width = 1, tR.height = 1;
+        const uR = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const PW = (0, vW.e)().sampleCount;
-        let LW;
+        const ZR = (0, HR.g)().sampleCount;
+        let qR;
         try {
-          LW = await (0, MW.x)(iW, "previewRenderer", EW, PW, DW.h, NW)
-        } catch (cW) {
-          throw cW instanceof hW.e ? this.stopForTrap(cW) : (0, MW.u)(cW) && await this.deps.onRenderFailed("start_failed", cW), cW
+          qR = await (0, AR.v)(JR, "previewRenderer", tR, ZR, cR.f, uR)
+        } catch (iR) {
+          throw iR instanceof gR.e ? this.stopForTrap(iR) : (0, AR.t)(iR) && await this.deps.onRenderFailed("start_failed", iR), iR
         }
-        return this.guarded((() => OW.amW(LW))) ? ((0, uW.u)(performance.now()), this.samples = PW, this.pageCanvas = EW, (0, gW.d)(this.registryOf(iW)), OW) : mW() ? OW : null
+        return this.guarded((() => GR.HtR(qR))) ? ((0, OR.A)(performance.now()), this.samples = ZR, this.pageCanvas = tR, (0, oR.f)(this.registryOf(JR)), GR) : yR() ? GR : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(WW, iW) {
-        for (const PW of this.previews.values()) PW.feed();
+      drawFrame(RR, JR) {
+        for (const ZR of this.previews.values()) ZR.feed();
         if (this.stopped) return;
-        this.module.DH(this.deps.heldLow());
-        const OW = this.deps.now(),
-          mW = WW.frame(iW);
-        this.costs.push(this.deps.now() - OW), this.costs.length > 120 && this.costs.shift();
-        const EW = 0 !== (256 & mW),
-          NW = 255 & mW;
-        for (const PW of this.previews.values()) {
+        this.module.ZH(this.deps.heldLow());
+        const GR = this.deps.now(),
+          yR = RR.frame(JR);
+        this.costs.push(this.deps.now() - GR), this.costs.length > 120 && this.costs.shift();
+        const tR = 0 !== (256 & yR),
+          uR = 255 & yR;
+        for (const ZR of this.previews.values()) {
           if (this.stopped) return;
-          PW.collect(EW)
+          ZR.collect(tR)
         }
         if (!this.stopped) {
-          if (0 !== (512 & mW) && this.deps.onDrew(), EW) {
-            const iW = WW.FmW();
-            for (let WW = 0; WW + 1 < iW.length; WW += 2) iW[WW] === sW.D.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(iW[WW], iW[WW + 1])
+          if (0 !== (512 & yR) && this.deps.onDrew(), tR) {
+            const JR = RR.PtR();
+            for (let RR = 0; RR + 1 < JR.length; RR += 2) JR[RR] === WR.K.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(JR[RR], JR[RR + 1])
           }
-          if (NW !== GW) {
-            if (NW === IW) return this.stop(), void this.deps.onFatal(WW.WEW(), WW.iEW());
-            if (NW === aW) return this.stop(), void console.warn(`${CW} the previews stopped: the page's renderer went with its session`);
-            (0, jW.c)(iW), this.startFrames()
+          if (uR !== YR) {
+            if (uR === kR) return this.stop(), void this.deps.onFatal(RR.mtR(), RR.ztR());
+            if (uR === QR) return this.stop(), void console.warn(`${zR} the previews stopped: the page's renderer went with its session`);
+            (0, LR.b)(JR), this.startFrames()
           } else {
-            const iW = WW.QmW();
+            const JR = RR.ItR();
             this.stop();
-            const OW = iW[2] === sW.cd.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(OW, void 0, iW[1], iW[2] === sW.cd.RESTORE_LOST)
+            const GR = JR[2] === WR.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(GR, void 0, JR[1], JR[2] === WR.Yc.RESTORE_LOST)
           }
         }
       }
@@ -875,136 +875,136 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get mayPrefetch() {
-        return !this.isStopped && !(0, uW.c)() && null === (0, uW.F)()
+        return !this.isStopped && !(0, OR.c)() && null === (0, OR.O)()
       }
       get isTrapped() {
-        return null !== this.module && ((0, hW.i)(this.module) || "failed" === (0, AW.D)())
+        return null !== this.module && ((0, gR.j)(this.module) || "failed" === (0, eR.s)())
       }
-      hostCall(WW, iW) {
-        if (this.settleIfTrapped()) return WW;
+      hostCall(RR, JR) {
+        if (this.settleIfTrapped()) return RR;
         try {
-          return iW()
-        } catch (OW) {
-          if (this.stopIfTrapped(OW)) return WW;
-          throw OW
+          return JR()
+        } catch (GR) {
+          if (this.stopIfTrapped(GR)) return RR;
+          throw GR
         }
       }
-      guarded(WW) {
+      guarded(RR) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return WW()
-        } catch (iW) {
-          throw this.stopIfTrapped(iW), iW
+          return RR()
+        } catch (JR) {
+          throw this.stopIfTrapped(JR), JR
         }
       }
-      registryOf(WW) {
+      registryOf(RR) {
         return {
-          OEW: (iW, OW) => {
+          StR: (JR, GR) => {
             this.hostCall(void 0, (() => {
-              WW.OEW(iW, OW)
+              RR.StR(JR, GR)
             }))
           },
-          mEW: iW => {
+          jtR: JR => {
             this.hostCall(void 0, (() => {
-              WW.mEW(iW)
+              RR.jtR(JR)
             }))
           },
-          ...void 0 === WW.EEW ? {} : {
-            EEW: (iW, OW) => {
+          ...void 0 === RR.dtR ? {} : {
+            dtR: (JR, GR) => {
               this.hostCall(void 0, (() => {
-                var mW;
-                null === (mW = WW.EEW) || void 0 === mW || mW.call(WW, iW, OW)
+                var yR;
+                null === (yR = RR.dtR) || void 0 === yR || yR.call(RR, JR, GR)
               }))
             }
           },
-          ...void 0 === WW.PEW ? {} : {
-            PEW: iW => {
+          ...void 0 === RR.EtR ? {} : {
+            EtR: JR => {
               this.hostCall(void 0, (() => {
-                var OW;
-                null === (OW = WW.PEW) || void 0 === OW || OW.call(WW, iW)
+                var GR;
+                null === (GR = RR.EtR) || void 0 === GR || GR.call(RR, JR)
               }))
             }
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, gW.d)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, oR.f)(null)), !0)
       }
-      stopIfTrapped(WW) {
-        return !(null === this.module || !(0, hW.k)(this.module, WW)) && (this.stopForTrap(WW), !0)
+      stopIfTrapped(RR) {
+        return !(null === this.module || !(0, gR.n)(this.module, RR)) && (this.stopForTrap(RR), !0)
       }
-      stopForTrap(WW) {
-        this.stop(), (0, gW.d)(null), (0, pW.g)("previews", WW)
+      stopForTrap(RR) {
+        this.stop(), (0, oR.f)(null), (0, IR.g)("previews", RR)
       }
       stop() {
         this.stopped = !0;
-        for (const WW of this.previews.values()) WW.abandon()
+        for (const RR of this.previews.values()) RR.abandon()
       }
-      logError(WW, iW) {
-        const OW = `${WW}:${iW}`;
-        this.loggedErrors.has(OW) || (this.loggedErrors.add(OW), console.warn(`${CW} error ${WW} (detail ${iW})`))
+      logError(RR, JR) {
+        const GR = `${RR}:${JR}`;
+        this.loggedErrors.has(GR) || (this.loggedErrors.add(GR), console.warn(`${zR} error ${RR} (detail ${JR})`))
       }
     }
-    let Pi = null;
+    let ZJ = null;
 
-    function Li() {
-      return Pi ??= new Ni(function() {
-        const WW = (0, TW.p)(bW.clientSideServerUrls.staticUrl, {
-          packUrl: WW => {
-            var iW, OW;
-            return null !== (iW = null === (OW = HW.h.current) || void 0 === OW ? void 0 : OW.modelUrl(WW)) && void 0 !== iW ? iW : null
+    function qJ() {
+      return ZJ ??= new uJ(function() {
+        const RR = (0, lR.m)(aR.clientSideServerUrls.staticUrl, {
+          packUrl: RR => {
+            var JR, GR;
+            return null !== (JR = null === (GR = bR.e.current) || void 0 === GR ? void 0 : GR.modelUrl(RR)) && void 0 !== JR ? JR : null
           }
         });
         return {
-          loadModule: mi,
-          startModels: async WW => {
+          loadModule: yJ,
+          startModels: async RR => {
             const {
-              pageModelPool: iW
-            } = await OW.e(51).then((() => OW(54853))), {
-              pool: mW
-            } = iW(WW);
-            return (WW, iW) => mW.build(WW, iW)
+              pageModelPool: JR
+            } = await GR.e(51).then((() => GR(54712))), {
+              pool: yR
+            } = JR(RR);
+            return (RR, JR) => yR.build(RR, JR)
           },
-          fetchAnimations: async () => LW(await (0, mW.C)(Wi())),
-          playerFile: async () => (await (0, TW.l)()).PLAYER_FILE,
-          onAnimationsFailed: (WW, iW) => {
-            cW("previewAnimations", Wi(), WW, iW)
+          fetchAnimations: async () => qR(await (0, yR.B)(RJ())),
+          playerFile: async () => (await (0, lR.j)()).PLAYER_FILE,
+          onAnimationsFailed: (RR, JR) => {
+            iR("previewAnimations", RJ(), RR, JR)
           },
-          provideBuiltInAnimationPack: WW => {
-            xW().provide(WW)
+          provideBuiltInAnimationPack: RR => {
+            wR().provide(RR)
           },
-          openExtras: uW.z,
-          files: WW,
-          images: (0, HW.m)((0, SW.q)(WW.url), (() => HW.h.current)),
-          pack: HW.h,
-          game: nW.d,
-          fetchModel: WW => (0, TW.h)(WW),
+          openExtras: OR.J,
+          files: RR,
+          images: (0, bR.j)((0, XR.l)(RR.url), (() => bR.e.current)),
+          pack: bR.e,
+          game: vR.d,
+          fetchModel: RR => (0, lR.f)(RR),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: WW => requestAnimationFrame(WW),
-          cancelFrame: WW => {
-            cancelAnimationFrame(WW)
+          requestFrame: RR => requestAnimationFrame(RR),
+          cancelFrame: RR => {
+            cancelAnimationFrame(RR)
           },
-          onRenderFailed: ii,
-          onFatal: (WW, iW) => {
-            console.error(`${CW} the previews stopped: renderer error ${WW} (detail ${iW})`)
+          onRenderFailed: JJ,
+          onFatal: (RR, JR) => {
+            console.error(`${zR} the previews stopped: renderer error ${RR} (detail ${JR})`)
           },
           onDeviceLost: () => {
-            (0, uW.B)() === eW.e.webgpu && ((0, KW.h)((0, AW.R)() ? (0, MW.M)((0, AW.G)()) : null), UW.G.lost())
+            (0, OR.M)() === DR.d.webgpu && ((0, CR.e)((0, eR.F)() ? (0, AR.M)((0, eR.w)()) : null), nR.C.lost())
           },
           onDrew: () => {
-            UW.G.drew(), (0, YW.l)()
+            nR.C.drew(), (0, MR.q)()
           },
-          frameDue: YW.r,
-          heldLow: YW.o
+          frameDue: MR.s,
+          heldLow: MR.r
         }
-      }()), Pi
+      }()), ZJ
     }
-    var ci = OW(632),
-      wi = OW(39881),
-      ti = OW(4454);
-    const Zi = {
+    var iJ = GR(664),
+      fJ = GR(39862),
+      VJ = GR(4555);
+    const KJ = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1024,337 +1024,337 @@ export const modules = {
       gunReady: 16,
       gunAimed: 17
     };
-    var xi = OW(40380),
-      li = OW(40337),
-      Ai = OW(44924);
-    class bi {
+    var wJ = GR(40429),
+      rJ = GR(40393),
+      eJ = GR(45021);
+    class aJ {
       constructor() {
         this.pet = null, this.aura = null, this.companions = {
           pet: null,
           aura: null
         }
       }
-      of(WW, iW) {
-        const OW = void 0 === WW ? null : (0, li.h)(WW),
-          mW = void 0 === iW ? null : (0, li.g)(iW);
-        return OW === this.pet && mW === this.aura || (this.pet = OW, this.aura = mW, this.companions = {
-          pet: OW && ji(OW),
-          aura: mW && Ui(mW)
+      of(RR, JR) {
+        const GR = void 0 === RR ? null : (0, rJ.e)(RR),
+          yR = void 0 === JR ? null : (0, rJ.d)(JR);
+        return GR === this.pet && yR === this.aura || (this.pet = GR, this.aura = yR, this.companions = {
+          pet: GR && LJ(GR),
+          aura: yR && nJ(yR)
         }), this.companions
       }
     }
 
-    function ji(WW) {
-      var iW;
-      const OW = Ai.COSMETIC_MODEL_KEYS.get(WW.model);
-      if (void 0 === OW) return console.warn(`[bloxd-previews] pet model ${WW.model} isn't a Player attachment model`), null;
+    function LJ(RR) {
+      var JR;
+      const GR = eJ.COSMETIC_MODEL_KEYS.get(RR.model);
+      if (void 0 === GR) return console.warn(`[bloxd-previews] pet model ${RR.model} isn't a Player attachment model`), null;
       const {
-        scale: mW,
-        followOffset: EW,
-        yawOffset: NW,
-        bobAmplitude: PW,
-        bobHz: LW,
-        clips: cW
-      } = WW;
+        scale: yR,
+        followOffset: tR,
+        yawOffset: uR,
+        bobAmplitude: ZR,
+        bobHz: qR,
+        clips: iR
+      } = RR;
       return {
-        model: OW,
-        scale: mW,
-        offset: EW,
-        yawOffset: NW,
-        bobAmplitude: PW,
-        bobHz: LW,
-        flyClip: null !== (iW = null === cW || void 0 === cW ? void 0 : cW.fly) && void 0 !== iW ? iW : null
+        model: GR,
+        scale: yR,
+        offset: tR,
+        yawOffset: uR,
+        bobAmplitude: ZR,
+        bobHz: qR,
+        flyClip: null !== (JR = null === iR || void 0 === iR ? void 0 : iR.fly) && void 0 !== JR ? JR : null
       }
     }
 
-    function Ui(WW) {
+    function nJ(RR) {
       const {
-        opts: iW,
-        half: OW
-      } = (0, xi.d)(WW);
+        opts: JR,
+        half: GR
+      } = (0, wJ.c)(RR);
       return {
-        opts: JSON.stringify(iW),
-        offset: WW.offset,
-        half: OW
+        opts: JSON.stringify(JR),
+        offset: RR.offset,
+        half: GR
       }
     }
-    var ki = OW(35247),
-      si = OW(37432),
-      Mi = OW(42659);
-    const Ki = "[bloxd-previews]",
-      Si = new Uint32Array(5);
+    var UJ = GR(35176),
+      WJ = GR(37341),
+      AJ = GR(42736);
+    const CJ = "[bloxd-previews]",
+      XJ = new Uint32Array(5);
 
-    function Yi(WW) {
-      return ci.i.indexOf(WW)
+    function MJ(RR) {
+      return iJ.k.indexOf(RR)
     }
-    const yi = new WeakSet;
+    const BJ = new WeakSet;
 
-    function Ti(WW) {
-      const iW = (0, wi.h)(WW),
-        OW = null === iW ? -1 : Ji(iW);
-      return -1 !== OW ? OW : (yi.has(WW) || (yi.add(WW), console.warn(`${Ki} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function Ji(WW) {
-      var iW;
-      return null !== (iW = Zi[WW]) && void 0 !== iW ? iW : -1
+    function lJ(RR) {
+      const JR = (0, fJ.f)(RR),
+        GR = null === JR ? -1 : pJ(JR);
+      return -1 !== GR ? GR : (BJ.has(RR) || (BJ.add(RR), console.warn(`${CJ} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function Hi(WW, iW) {
+    function pJ(RR) {
+      var JR;
+      return null !== (JR = KJ[RR]) && void 0 !== JR ? JR : -1
+    }
+
+    function gJ(RR, JR) {
       const {
-        canvas: OW
-      } = iW;
-      OW.style.width = "100%", OW.style.height = "100%", OW.style.display = "block", WW.appendChild(OW)
+        canvas: GR
+      } = JR;
+      GR.style.width = "100%", GR.style.height = "100%", GR.style.display = "block", RR.appendChild(GR)
     }
 
-    function ni(WW) {
-      const iW = WW.getBoundingClientRect();
-      return [iW.width, iW.height]
+    function bJ(RR) {
+      const JR = RR.getBoundingClientRect();
+      return [JR.width, JR.height]
     }
-    class ui {
-      constructor(WW, iW) {
-        this.preview = WW, this.showView = iW
+    class vJ {
+      constructor(RR, JR) {
+        this.preview = RR, this.showView = JR
       }
-      show(WW) {
-        this.showView(this.preview, WW)
+      show(RR) {
+        this.showView(this.preview, RR)
       }
-      resize(WW, iW) {
-        this.preview.resize(WW, iW)
+      resize(RR, JR) {
+        this.preview.resize(RR, JR)
       }
       close() {
         this.preview.close()
       }
     }
-    class oi {
-      constructor(WW) {
-        this.preview = WW, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new bi, this.companions = null, this.nametag = null, this.stopRasteringNametag = null, this.detachControls = void 0, this.detachControls = (0, ki.f)(WW), this.dev = {
-          canvas: () => WW.canvas,
-          captureFrame: iW => (0, Mi.c)((() => WW.isClosed ? null : WW.canvas), YW.b, iW),
+    class OJ {
+      constructor(RR) {
+        this.preview = RR, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new aJ, this.companions = null, this.nametag = null, this.stopRasteringNametag = null, this.detachControls = void 0, this.detachControls = (0, UJ.i)(RR), this.dev = {
+          canvas: () => RR.canvas,
+          captureFrame: JR => (0, AJ.e)((() => RR.isClosed ? null : RR.canvas), MR.e, JR),
           isolateHead: () => {
-            console.warn(`${Ki} isolateHead: noa's character preview only`)
+            console.warn(`${CJ} isolateHead: noa's character preview only`)
           },
           isolatePet: () => {
-            console.warn(`${Ki} isolatePet: noa's character preview only`)
+            console.warn(`${CJ} isolatePet: noa's character preview only`)
           }
-        }, this.apply(), this.ready = WW.untilSettled().then((() => {
-          if (WW.isStopped) throw new Error(`${Ki} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = RR.untilSettled().then((() => {
+          if (RR.isStopped) throw new Error(`${CJ} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(WW, iW) {
-        this.cosmetics[WW] = iW, this.apply()
+      setCosmetic(RR, JR) {
+        this.cosmetics[RR] = JR, this.apply()
       }
-      setNametag(WW) {
-        var iW;
-        if (this.nametag = WW, null === (iW = this.stopRasteringNametag) || void 0 === iW || iW.call(this), this.stopRasteringNametag = null, !WW) return void this.preview.setNametag("", "null", "null");
-        const OW = () => {
-          this.preview.setNametag(WW.name, JSON.stringify(WW.nameColour), JSON.stringify(WW.ranks))
+      setNametag(RR) {
+        var JR;
+        if (this.nametag = RR, null === (JR = this.stopRasteringNametag) || void 0 === JR || JR.call(this), this.stopRasteringNametag = null, null === RR || void 0 === RR || !RR.name) return void this.preview.setNametag("", "null", "null");
+        const GR = () => {
+          this.preview.setNametag(RR.name, JSON.stringify(RR.nameColour), JSON.stringify(RR.ranks))
         };
-        si.k.untilLoadedFor(WW.name).then((() => {
-          this.nametag !== WW || this.preview.isClosed || (OW(), this.stopRasteringNametag = (0, si.i)(OW))
+        WJ.i.untilLoadedFor(RR.name).then((() => {
+          this.nametag !== RR || this.preview.isClosed || (GR(), this.stopRasteringNametag = (0, WJ.h)(GR))
         }))
       }
-      playEmote(WW) {
-        null === WW || WW !== this.emote ? (this.emote = WW, this.apply()) : this.preview.replay()
+      playEmote(RR) {
+        null === RR || RR !== this.emote ? (this.emote = RR, this.apply()) : this.preview.replay()
       }
-      untilDrawn(WW) {
+      untilDrawn(RR) {
         return this.preview.untilSettled()
       }
-      setOrbit(WW) {
+      setOrbit(RR) {
         let {
-          yaw: iW,
-          pitch: OW,
-          radius: mW
-        } = WW;
-        const EW = this.preview.orbit;
-        null !== EW && this.preview.setOrbit({
-          alpha: iW,
-          beta: OW,
-          radius: null !== mW && void 0 !== mW ? mW : EW.radius
+          yaw: JR,
+          pitch: GR,
+          radius: yR
+        } = RR;
+        const tR = this.preview.orbit;
+        null !== tR && this.preview.setOrbit({
+          alpha: JR,
+          beta: GR,
+          radius: null !== yR && void 0 !== yR ? yR : tR.radius
         })
       }
       resetCamera() {}
-      resize(WW, iW) {
-        this.preview.resize(WW, iW)
+      resize(RR, JR) {
+        this.preview.resize(RR, JR)
       }
       close() {
-        var WW;
-        null === (WW = this.stopRasteringNametag) || void 0 === WW || WW.call(this), this.detachControls(), this.preview.close()
+        var RR;
+        null === (RR = this.stopRasteringNametag) || void 0 === RR || RR.call(this), this.detachControls(), this.preview.close()
       }
       apply() {
-        var WW;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), Si, null === (WW = this.emote) ? -1 : Ji(WW));
-        const iW = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
-        iW !== this.companions && (this.companions = iW, this.preview.setCompanions(iW))
+        var RR;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), XJ, null === (RR = this.emote) ? -1 : pJ(RR));
+        const JR = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
+        JR !== this.companions && (this.companions = JR, this.preview.setCompanions(JR))
       }
     }
 
-    function di(WW, iW) {
+    function xJ(RR, JR) {
       let {
-        mobType: OW,
-        variation: mW,
-        animation: EW
-      } = iW;
-      WW.setMob(Yi(OW), null !== mW && void 0 !== mW ? mW : "", 1, Ti(EW))
+        mobType: GR,
+        variation: yR,
+        animation: tR
+      } = JR;
+      RR.setMob(MJ(GR), null !== yR && void 0 !== yR ? yR : "", 1, lJ(tR))
     }
 
-    function ei(WW, iW) {
+    function NJ(RR, JR) {
       let {
-        mobType: OW,
-        variation: mW,
-        metaInfo: EW,
-        tamed: NW
-      } = iW;
-      WW.setPet(Yi(OW), mW, EW, NW)
+        mobType: GR,
+        variation: yR,
+        metaInfo: tR,
+        tamed: uR
+      } = JR;
+      RR.setPet(MJ(GR), yR, tR, uR)
     }
-    const vi = {
+    const DJ = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class gi {
-      constructor(WW, iW, OW, mW) {
+    class HJ {
+      constructor(RR, JR, GR, yR) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, WW(OW.width, mW[1], mW).then((WW => {
-          if (this.closed) return void WW.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, RR(GR.width, yR[1], yR).then((RR => {
+          if (this.closed) return void RR.close();
           const {
-            style: OW
-          } = WW.canvas;
-          OW.position = "absolute", OW.top = "0", OW.visibility = "hidden", Hi(iW, WW), this.preview = WW, this.apply()
-        })).catch((WW => {
-          console.error(`${Ki} couldn't open a lineup figure`, WW)
+            style: GR
+          } = RR.canvas;
+          GR.position = "absolute", GR.top = "0", GR.visibility = "hidden", gJ(JR, RR), this.preview = RR, this.apply()
+        })).catch((RR => {
+          console.error(`${CJ} couldn't open a lineup figure`, RR)
         }))
       }
-      update(WW, iW, OW, mW, EW) {
-        this.figure = WW, this.shown = iW, this.order = OW, this.span = mW, this.lineup = EW, this.apply()
+      update(RR, JR, GR, yR, tR) {
+        this.figure = RR, this.shown = JR, this.order = GR, this.span = yR, this.lineup = tR, this.apply()
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.preview) || void 0 === WW || WW.close(), this.preview = null
+        var RR;
+        this.closed = !0, null === (RR = this.preview) || void 0 === RR || RR.close(), this.preview = null
       }
       apply() {
-        var WW;
+        var RR;
         const {
-          preview: iW,
-          figure: OW,
-          lineup: mW
+          preview: JR,
+          figure: GR,
+          lineup: yR
         } = this;
-        if (null === iW || null === OW) return;
-        if (this.given !== OW) {
-          var EW;
-          this.given = OW, this.loaded = !1;
-          const WW = null === OW.nS ? 0 : null !== (EW = (0, ti.b)(OW.nS)) && void 0 !== EW ? EW : 0;
-          iW.setFigure(function(WW) {
-            return JSON.stringify(Object.fromEntries(WW.cosmetics))
-          }(OW), WW, Ti(OW.animation), OW.size), iW.untilSettled().then((() => {
-            this.given === OW && (this.loaded = !0, this.apply())
+        if (null === JR || null === GR) return;
+        if (this.given !== GR) {
+          var tR;
+          this.given = GR, this.loaded = !1;
+          const RR = null === GR.gC ? 0 : null !== (tR = (0, VJ.b)(GR.gC)) && void 0 !== tR ? tR : 0;
+          JR.setFigure(function(RR) {
+            return JSON.stringify(Object.fromEntries(RR.cosmetics))
+          }(GR), RR, lJ(GR.animation), GR.size), JR.untilSettled().then((() => {
+            this.given === GR && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: NW,
-          width: PW
+          left: uR,
+          width: ZR
         } = this.span;
-        iW.resize(PW, mW[1], mW);
+        JR.resize(ZR, yR[1], yR);
         const {
-          style: LW
-        } = iW.canvas;
-        LW.top = -(null !== (WW = OW.lift) && void 0 !== WW ? WW : 0) * mW[1] + "px", LW.left = `${NW}px`, LW.width = `${PW}px`, LW.zIndex = this.order, LW.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: qR
+        } = JR.canvas;
+        qR.top = -(null !== (RR = GR.lift) && void 0 !== RR ? RR : 0) * yR[1] + "px", qR.left = `${uR}px`, qR.width = `${ZR}px`, qR.zIndex = this.order, qR.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class Di {
-      constructor(WW, iW) {
-        this.open = iW, this.layer = void 0, this.figures = [], this.view = {
+    class oJ {
+      constructor(RR, JR) {
+        this.open = JR, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = ni(WW), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = bJ(RR), this.layer = document.createElement("div");
         const {
-          style: OW
+          style: GR
         } = this.layer;
-        OW.position = "relative", OW.isolation = "isolate", OW.overflow = "hidden", OW.width = "100%", OW.height = "100%", OW.pointerEvents = "none", WW.appendChild(this.layer)
+        GR.position = "relative", GR.isolation = "isolate", GR.overflow = "hidden", GR.width = "100%", GR.height = "100%", GR.pointerEvents = "none", RR.appendChild(this.layer)
       }
-      show(WW) {
-        this.view = WW, this.place()
+      show(RR) {
+        this.view = RR, this.place()
       }
-      resize(WW, iW) {
-        this.size = [WW, iW], this.place()
+      resize(RR, JR) {
+        this.size = [RR, JR], this.place()
       }
       close() {
-        for (const WW of this.figures) WW.close();
+        for (const RR of this.figures) RR.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: WW,
-          shown: iW
+          figures: RR,
+          shown: JR
         } = this.view;
-        for (const mW of this.figures.splice(WW.length)) mW.close();
+        for (const yR of this.figures.splice(RR.length)) yR.close();
         const {
-          size: OW
+          size: GR
         } = this;
-        WW.forEach(((mW, EW) => {
-          var NW;
-          const PW = function(WW, iW, OW, mW) {
-            let [EW, NW] = mW;
-            const PW = (WW + .5) * EW / iW,
-              LW = Math.min(Math.max(EW / iW, 2 * OW * NW), 2 * Math.max(PW, EW - PW));
+        RR.forEach(((yR, tR) => {
+          var uR;
+          const ZR = function(RR, JR, GR, yR) {
+            let [tR, uR] = yR;
+            const ZR = (RR + .5) * tR / JR,
+              qR = Math.min(Math.max(tR / JR, 2 * GR * uR), 2 * Math.max(ZR, tR - ZR));
             return {
-              left: PW - LW / 2,
-              width: LW
+              left: ZR - qR / 2,
+              width: qR
             }
-          }(EW, WW.length, function(WW) {
+          }(tR, RR.length, function(RR) {
             let {
-              animation: iW,
-              size: OW
-            } = WW;
+              animation: JR,
+              size: GR
+            } = RR;
             const {
-              aimed: mW,
-              ready: EW
-            } = vi;
-            return (Ti(iW) === Zi.gunAimed ? mW : EW) * OW
-          }(mW), OW);
-          this.figures[EW] ??= new gi(this.open, this.layer, PW, OW), this.figures[EW].update(mW, null !== (NW = iW[EW]) && void 0 !== NW && NW, function(WW, iW) {
-            return String(Math.round(1e3 * WW) + iW)
-          }(mW.size, EW), PW, OW)
+              aimed: yR,
+              ready: tR
+            } = DJ;
+            return (lJ(JR) === KJ.gunAimed ? yR : tR) * GR
+          }(yR), GR);
+          this.figures[tR] ??= new HJ(this.open, this.layer, ZR, GR), this.figures[tR].update(yR, null !== (uR = JR[tR]) && void 0 !== uR && uR, function(RR, JR) {
+            return String(Math.round(1e3 * RR) + JR)
+          }(yR.size, tR), ZR, GR)
         }))
       }
     }
-    const Vi = {
-      player: BW,
-      store: qW,
-      showcase: RW
+    const cJ = {
+      player: jR,
+      store: dR,
+      showcase: ER
     };
-    class fi {
-      constructor(WW) {
-        this.page = WW
+    class PJ {
+      constructor(RR) {
+        this.page = RR
       }
-      async openMob(WW) {
-        return new ui(await this.open(WW, XW), di)
+      async openMob(RR) {
+        return new vJ(await this.open(RR, SR), xJ)
       }
-      async openPet(WW) {
-        return new ui(await this.open(WW, XW), ei)
+      async openPet(RR) {
+        return new vJ(await this.open(RR, SR), NJ)
       }
-      openMobLineup(WW) {
-        return new Di(WW, ((WW, iW, OW) => this.page.openPreview(XW, WW, iW, OW)))
+      openMobLineup(RR) {
+        return new oJ(RR, ((RR, JR, GR) => this.page.openPreview(SR, RR, JR, GR)))
       }
-      async openCharacter(WW, iW) {
-        return new oi(await this.open(WW, Vi[iW]))
+      async openCharacter(RR, JR) {
+        return new OJ(await this.open(RR, cJ[JR]))
       }
-      async open(WW, iW) {
-        const [OW, mW] = ni(WW), EW = await this.page.openPreview(iW, OW, mW);
-        return Hi(WW, EW), EW
+      async open(RR, JR) {
+        const [GR, yR] = bJ(RR), tR = await this.page.openPreview(JR, GR, yR);
+        return gJ(RR, tR), tR
       }
     }
   },
-  44913: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
+  45013: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
   },
-  44918: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
+  45017: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

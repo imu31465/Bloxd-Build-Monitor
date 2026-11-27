@@ -1,467 +1,467 @@
 export const id = 626;
 export const ids = [626];
 export const modules = {
-  53970: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      _ENVTextureLoader: () => TW
+  53817: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      _ENVTextureLoader: () => lR
     });
-    var mW = OW(41458),
-      EW = OW(38241),
-      NW = OW(38285),
-      PW = OW(41506),
-      LW = OW(41371),
-      cW = OW(41511),
-      wW = (OW(41612), OW(53977)),
-      tW = OW(39911),
-      ZW = (OW(53986), OW(54011), OW(41582));
-    const xW = "image/png",
-      lW = [134, 22, 135, 150, 246, 214, 150, 54];
+    var yR = GR(41449),
+      tR = GR(38204),
+      uR = GR(38239),
+      ZR = GR(41509),
+      qR = GR(41364),
+      iR = GR(41514),
+      fR = (GR(41612), GR(53823)),
+      VR = GR(39914),
+      KR = (GR(53831), GR(53856), GR(41586));
+    const wR = "image/png",
+      rR = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function AW(WW) {
-      const iW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength);
-      let OW = 0;
-      for (let PW = 0; PW < lW.length; PW++)
-        if (iW.getUint8(OW++) !== lW[PW]) return tW.b.Error("Not a babylon environment map"), null;
-      let mW, EW = "";
-      for (; mW = iW.getUint8(OW++);) EW += String.fromCharCode(mW);
-      let NW = JSON.parse(EW);
-      return NW = bW(NW), NW.binaryDataPosition = OW, NW.specular && (NW.specular.lodGenerationScale = NW.specular.lodGenerationScale || .8), NW
+    function eR(RR) {
+      const JR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength);
+      let GR = 0;
+      for (let ZR = 0; ZR < rR.length; ZR++)
+        if (JR.getUint8(GR++) !== rR[ZR]) return VR.c.Error("Not a babylon environment map"), null;
+      let yR, tR = "";
+      for (; yR = JR.getUint8(GR++);) tR += String.fromCharCode(yR);
+      let uR = JSON.parse(tR);
+      return uR = aR(uR), uR.binaryDataPosition = GR, uR.specular && (uR.specular.lodGenerationScale = uR.specular.lodGenerationScale || .8), uR
     }
 
-    function bW(WW) {
-      if (WW.version > 2) throw new Error(`Unsupported babylon environment map version "${WW.version}". Latest supported version is "2".`);
-      return 2 === WW.version ? WW : WW = {
-        ...WW,
+    function aR(RR) {
+      if (RR.version > 2) throw new Error(`Unsupported babylon environment map version "${RR.version}". Latest supported version is "2".`);
+      return 2 === RR.version ? RR : RR = {
+        ...RR,
         version: 2,
-        imageType: xW
+        imageType: wR
       }
     }
 
-    function jW(WW, iW) {
-      const OW = (iW = bW(iW)).specular;
-      let mW = Math.log2(iW.width);
-      if (mW = Math.round(mW) + 1, OW.mipmaps.length !== 6 * mW) throw new Error(`Unsupported specular mipmaps number "${OW.mipmaps.length}"`);
-      const EW = new Array(mW);
-      for (let NW = 0; NW < mW; NW++) {
-        EW[NW] = new Array(6);
-        for (let mW = 0; mW < 6; mW++) {
-          const PW = OW.mipmaps[6 * NW + mW];
-          EW[NW][mW] = new Uint8Array(WW.buffer, WW.byteOffset + iW.binaryDataPosition + PW.position, PW.length)
+    function LR(RR, JR) {
+      const GR = (JR = aR(JR)).specular;
+      let yR = Math.log2(JR.width);
+      if (yR = Math.round(yR) + 1, GR.mipmaps.length !== 6 * yR) throw new Error(`Unsupported specular mipmaps number "${GR.mipmaps.length}"`);
+      const tR = new Array(yR);
+      for (let uR = 0; uR < yR; uR++) {
+        tR[uR] = new Array(6);
+        for (let yR = 0; yR < 6; yR++) {
+          const ZR = GR.mipmaps[6 * uR + yR];
+          tR[uR][yR] = new Uint8Array(RR.buffer, RR.byteOffset + JR.binaryDataPosition + ZR.position, ZR.length)
         }
       }
-      return EW
+      return tR
     }
 
-    function UW(WW, iW) {
-      iW = bW(iW);
-      const OW = new Array(6),
-        mW = iW.irradiance?.irradianceTexture;
-      if (mW) {
-        if (6 !== mW.faces.length) throw new Error(`Incorrect irradiance texture faces number "${mW.faces.length}"`);
-        for (let EW = 0; EW < 6; EW++) {
-          const NW = mW.faces[EW];
-          OW[EW] = new Uint8Array(WW.buffer, WW.byteOffset + iW.binaryDataPosition + NW.position, NW.length)
+    function nR(RR, JR) {
+      JR = aR(JR);
+      const GR = new Array(6),
+        yR = JR.irradiance?.irradianceTexture;
+      if (yR) {
+        if (6 !== yR.faces.length) throw new Error(`Incorrect irradiance texture faces number "${yR.faces.length}"`);
+        for (let tR = 0; tR < 6; tR++) {
+          const uR = yR.faces[tR];
+          GR[tR] = new Uint8Array(RR.buffer, RR.byteOffset + JR.binaryDataPosition + uR.position, uR.length)
         }
       }
-      return OW
+      return GR
     }
 
-    function kW(WW, iW, OW) {
-      const mW = (OW = bW(OW)).specular;
-      if (!mW) return Promise.resolve([]);
-      WW._lodGenerationScale = mW.lodGenerationScale;
-      const NW = [],
-        PW = jW(iW, OW);
-      NW.push(MW(WW, PW, OW.imageType));
-      const LW = OW.irradiance?.irradianceTexture;
-      if (LW) {
-        const mW = UW(iW, OW);
-        let PW = null;
-        OW.irradiance?.irradianceTexture?.dominantDirection && (PW = EW.q.FromArray(OW.irradiance.irradianceTexture.dominantDirection)), NW.push(KW(WW, mW, LW.size, OW.imageType, PW))
+    function UR(RR, JR, GR) {
+      const yR = (GR = aR(GR)).specular;
+      if (!yR) return Promise.resolve([]);
+      RR._lodGenerationScale = yR.lodGenerationScale;
+      const uR = [],
+        ZR = LR(JR, GR);
+      uR.push(AR(RR, ZR, GR.imageType));
+      const qR = GR.irradiance?.irradianceTexture;
+      if (qR) {
+        const yR = nR(JR, GR);
+        let ZR = null;
+        GR.irradiance?.irradianceTexture?.dominantDirection && (ZR = tR.r.FromArray(GR.irradiance.irradianceTexture.dominantDirection)), uR.push(CR(RR, yR, qR.size, GR.imageType, ZR))
       }
-      return Promise.all(NW)
+      return Promise.all(uR)
     }
-    async function sW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW) {
-      return await new Promise(((ZW, xW) => {
-        if (OW) {
-          const OW = iW.createTexture(null, !0, !0, null, 1, null, (WW => {
-            xW(WW)
-          }), WW);
-          mW?.onEffectCreatedObservable.addOnce((LW => {
-            LW.executeWhenCompiled((() => {
-              mW.externalTextureSamplerBinding = !0, mW.onApply = mW => {
-                mW._bindTexture("textureSampler", OW), mW.setFloat2("scale", 1, iW._features.needsInvertingBitmap && WW instanceof ImageBitmap ? -1 : 1)
-              }, iW.scenes.length && (iW.scenes[0].postProcessManager.directRender([mW], wW, !0, NW, PW), iW.restoreDefaultFramebuffer(), OW.dispose(), URL.revokeObjectURL(EW), ZW())
+    async function WR(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR, VR) {
+      return await new Promise(((KR, wR) => {
+        if (GR) {
+          const GR = JR.createTexture(null, !0, !0, null, 1, null, (RR => {
+            wR(RR)
+          }), RR);
+          yR?.onEffectCreatedObservable.addOnce((qR => {
+            qR.executeWhenCompiled((() => {
+              yR.externalTextureSamplerBinding = !0, yR.onApply = yR => {
+                yR._bindTexture("textureSampler", GR), yR.setFloat2("scale", 1, JR._features.needsInvertingBitmap && RR instanceof ImageBitmap ? -1 : 1)
+              }, JR.scenes.length && (JR.scenes[0].postProcessManager.directRender([yR], fR, !0, uR, ZR), JR.restoreDefaultFramebuffer(), GR.dispose(), URL.revokeObjectURL(tR), KR())
             }))
           }))
         } else {
-          if (iW._uploadImageToTexture(tW, WW, NW, PW), LW) {
-            const OW = cW[PW];
-            OW && iW._uploadImageToTexture(OW._texture, WW, NW, 0)
+          if (JR._uploadImageToTexture(VR, RR, uR, ZR), qR) {
+            const GR = iR[ZR];
+            GR && JR._uploadImageToTexture(GR._texture, RR, uR, 0)
           }
-          ZW()
+          KR()
         }
       }))
     }
-    async function MW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : xW;
-      const mW = WW.VA();
-      WW.format = 5, WW.type = 0, WW.generateMipMaps = !0, WW._cachedAnisotropicFilteringLevel = null, mW.updateTextureSamplingMode(3, WW), await SW(WW, iW, !0, OW), WW.isReady = !0
+    async function AR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wR;
+      const yR = RR.ke();
+      RR.format = 5, RR.type = 0, RR.generateMipMaps = !0, RR._cachedAnisotropicFilteringLevel = null, yR.updateTextureSamplingMode(3, RR), await XR(RR, JR, !0, GR), RR.isReady = !0
     }
-    async function KW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : xW,
-        EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const NW = WW.VA(),
-        PW = new LW.e(NW, 5),
-        wW = new cW.c(NW, PW);
-      WW._irradianceTexture = wW, wW._dominantDirection = EW, PW.isCube = !0, PW.format = 5, PW.type = 0, PW.generateMipMaps = !0, PW._cachedAnisotropicFilteringLevel = null, PW.generateMipMaps = !0, PW.width = OW, PW.height = OW, NW.updateTextureSamplingMode(3, PW), await SW(PW, [iW], !1, mW), NW.generateMipMapsForCubemap(PW), PW.isReady = !0
+    async function CR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wR,
+        tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const uR = RR.ke(),
+        ZR = new qR.b(uR, 5),
+        fR = new iR.c(uR, ZR);
+      RR._irradianceTexture = fR, fR._dominantDirection = tR, ZR.isCube = !0, ZR.format = 5, ZR.type = 0, ZR.generateMipMaps = !0, ZR._cachedAnisotropicFilteringLevel = null, ZR.generateMipMaps = !0, ZR.width = GR, ZR.height = GR, uR.updateTextureSamplingMode(3, ZR), await XR(ZR, [JR], !1, yR), uR.generateMipMapsForCubemap(ZR), ZR.isReady = !0
     }
-    async function SW(WW, iW, EW) {
-      let PW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : xW;
-      if (!(0, mW.i)(WW.width)) throw new Error("Texture size must be a power of two");
-      const tW = (0, NW.ILog2)(WW.width) + 1,
-        lW = WW.VA();
-      let AW = !1,
-        bW = !1,
-        jW = null,
-        UW = null,
-        kW = null;
-      const MW = lW.getCaps();
-      MW.textureLOD ? lW._features.supportRenderAndCopyToLodForFloatTextures ? MW.textureHalfFloatRender && MW.textureHalfFloatLinearFiltering ? (AW = !0, WW.type = 2) : MW.textureFloatRender && MW.textureFloatLinearFiltering && (AW = !0, WW.type = 1) : AW = !1 : (AW = !1, bW = EW);
-      let KW = 0;
-      if (AW) lW.isWebGPU ? (KW = 1, await OW.e(660).then((() => OW(64519)))) : await OW.e(642).then((() => OW(64523))), jW = new wW.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, lW, !1, void 0, WW.type, void 0, null, !1, void 0, KW), WW._isRGBD = !1, WW.invertY = !1, UW = lW.createRenderTargetCubeTexture(WW.width, {
+    async function XR(RR, JR, tR) {
+      let ZR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wR;
+      if (!(0, yR.f)(RR.width)) throw new Error("Texture size must be a power of two");
+      const VR = (0, uR.ILog2)(RR.width) + 1,
+        rR = RR.ke();
+      let eR = !1,
+        aR = !1,
+        LR = null,
+        nR = null,
+        UR = null;
+      const AR = rR.getCaps();
+      AR.textureLOD ? rR._features.supportRenderAndCopyToLodForFloatTextures ? AR.textureHalfFloatRender && AR.textureHalfFloatLinearFiltering ? (eR = !0, RR.type = 2) : AR.textureFloatRender && AR.textureFloatLinearFiltering && (eR = !0, RR.type = 1) : eR = !1 : (eR = !1, aR = tR);
+      let CR = 0;
+      if (eR) rR.isWebGPU ? (CR = 1, await GR.e(660).then((() => GR(64253)))) : await GR.e(642).then((() => GR(64257))), LR = new fR.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, rR, !1, void 0, RR.type, void 0, null, !1, void 0, CR), RR._isRGBD = !1, RR.invertY = !1, nR = rR.createRenderTargetCubeTexture(RR.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: WW.type,
+        type: RR.type,
         format: 5
       });
-      else if (WW._isRGBD = !0, WW.invertY = !0, bW) {
-        const iW = 3;
-        kW = {};
-        const OW = WW._lodGenerationScale,
-          mW = WW._lodGenerationOffset;
-        for (let EW = 0; EW < iW; EW++) {
-          const NW = (tW - 1) * OW + mW,
-            PW = mW + (NW - mW) * (1 - EW / (iW - 1)),
-            wW = Math.round(Math.min(Math.max(PW, 0), NW)),
-            ZW = new LW.e(lW, 2);
-          ZW.isCube = !0, ZW.invertY = !0, ZW.generateMipMaps = !1, lW.updateTextureSamplingMode(2, ZW);
-          const xW = new cW.c(null);
-          switch (xW._isCube = !0, xW._texture = ZW, kW[wW] = xW, EW) {
+      else if (RR._isRGBD = !0, RR.invertY = !0, aR) {
+        const JR = 3;
+        UR = {};
+        const GR = RR._lodGenerationScale,
+          yR = RR._lodGenerationOffset;
+        for (let tR = 0; tR < JR; tR++) {
+          const uR = (VR - 1) * GR + yR,
+            ZR = yR + (uR - yR) * (1 - tR / (JR - 1)),
+            fR = Math.round(Math.min(Math.max(ZR, 0), uR)),
+            KR = new qR.b(rR, 2);
+          KR.isCube = !0, KR.invertY = !0, KR.generateMipMaps = !1, rR.updateTextureSamplingMode(2, KR);
+          const wR = new iR.c(null);
+          switch (wR._isCube = !0, wR._texture = KR, UR[fR] = wR, tR) {
             case 0:
-              WW._lodTextureLow = xW;
+              RR._lodTextureLow = wR;
               break;
             case 1:
-              WW._lodTextureMid = xW;
+              RR._lodTextureMid = wR;
               break;
             case 2:
-              WW._lodTextureHigh = xW
+              RR._lodTextureHigh = wR
           }
         }
       }
-      const SW = [];
-      for (let OW = 0; OW < iW.length; OW++)
-        for (let mW = 0; mW < 6; mW++) {
-          const EW = iW[OW][mW],
-            NW = (0, ZW.g)(EW),
-            LW = new Blob([NW], {
-              type: PW
+      const XR = [];
+      for (let GR = 0; GR < JR.length; GR++)
+        for (let yR = 0; yR < 6; yR++) {
+          const tR = JR[GR][yR],
+            uR = (0, KR.f)(tR),
+            qR = new Blob([uR], {
+              type: ZR
             }),
-            cW = URL.createObjectURL(LW);
-          let wW;
-          if (lW._features.forceBitmapOverHTMLImageElement) wW = lW.createImageBitmap(LW, {
+            iR = URL.createObjectURL(qR);
+          let fR;
+          if (rR._features.forceBitmapOverHTMLImageElement) fR = rR.createImageBitmap(qR, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async iW => await sW(iW, lW, AW, jW, cW, mW, OW, bW, kW, UW, WW)));
+          }).then((async JR => await WR(JR, rR, eR, LR, iR, yR, GR, aR, UR, nR, RR)));
           else {
-            const iW = new Image;
-            iW.src = cW, wW = new Promise(((EW, NW) => {
-              iW.onload = () => {
-                sW(iW, lW, AW, jW, cW, mW, OW, bW, kW, UW, WW).then((() => EW())).catch((WW => {
-                  NW(WW)
+            const JR = new Image;
+            JR.src = iR, fR = new Promise(((tR, uR) => {
+              JR.onload = () => {
+                WR(JR, rR, eR, LR, iR, yR, GR, aR, UR, nR, RR).then((() => tR())).catch((RR => {
+                  uR(RR)
                 }))
-              }, iW.onerror = WW => {
-                NW(WW)
+              }, JR.onerror = RR => {
+                uR(RR)
               }
             }))
           }
-          SW.push(wW)
+          XR.push(fR)
         }
-      if (await Promise.all(SW), iW.length < tW) {
-        let OW;
-        const mW = Math.pow(2, tW - 1 - iW.length),
-          EW = mW * mW * 4;
-        switch (WW.type) {
+      if (await Promise.all(XR), JR.length < VR) {
+        let GR;
+        const yR = Math.pow(2, VR - 1 - JR.length),
+          tR = yR * yR * 4;
+        switch (RR.type) {
           case 0:
-            OW = new Uint8Array(EW);
+            GR = new Uint8Array(tR);
             break;
           case 2:
-            OW = new Uint16Array(EW);
+            GR = new Uint16Array(tR);
             break;
           case 1:
-            OW = new Float32Array(EW)
+            GR = new Float32Array(tR)
         }
-        for (let NW = iW.length; NW < tW; NW++)
-          for (let iW = 0; iW < 6; iW++) lW._uploadArrayBufferViewToTexture(UW?.texture || WW, OW, iW, NW)
+        for (let uR = JR.length; uR < VR; uR++)
+          for (let JR = 0; JR < 6; JR++) rR._uploadArrayBufferViewToTexture(nR?.texture || RR, GR, JR, uR)
       }
-      if (UW) {
-        const iW = WW._irradianceTexture;
-        WW._irradianceTexture = null, lW._releaseTexture(WW), UW._swapAndDie(WW), WW._irradianceTexture = iW
+      if (nR) {
+        const JR = RR._irradianceTexture;
+        RR._irradianceTexture = null, rR._releaseTexture(RR), nR._swapAndDie(RR), RR._irradianceTexture = JR
       }
-      jW && jW.dispose(), bW && (WW._lodTextureHigh && WW._lodTextureHigh._texture && (WW._lodTextureHigh._texture.isReady = !0), WW._lodTextureMid && WW._lodTextureMid._texture && (WW._lodTextureMid._texture.isReady = !0), WW._lodTextureLow && WW._lodTextureLow._texture && (WW._lodTextureLow._texture.isReady = !0))
+      LR && LR.dispose(), aR && (RR._lodTextureHigh && RR._lodTextureHigh._texture && (RR._lodTextureHigh._texture.isReady = !0), RR._lodTextureMid && RR._lodTextureMid._texture && (RR._lodTextureMid._texture.isReady = !0), RR._lodTextureLow && RR._lodTextureLow._texture && (RR._lodTextureLow._texture.isReady = !0))
     }
 
-    function YW(WW, iW) {
-      const OW = (iW = bW(iW)).irradiance;
-      if (!OW) return;
-      const mW = new PW.f;
-      EW.q.FromArrayToRef(OW.x, 0, mW.x), EW.q.FromArrayToRef(OW.y, 0, mW.y), EW.q.FromArrayToRef(OW.z, 0, mW.z), EW.q.FromArrayToRef(OW.xx, 0, mW.xx), EW.q.FromArrayToRef(OW.yy, 0, mW.yy), EW.q.FromArrayToRef(OW.zz, 0, mW.zz), EW.q.FromArrayToRef(OW.yz, 0, mW.yz), EW.q.FromArrayToRef(OW.zx, 0, mW.zx), EW.q.FromArrayToRef(OW.xy, 0, mW.xy), WW._sphericalPolynomial = mW
+    function MR(RR, JR) {
+      const GR = (JR = aR(JR)).irradiance;
+      if (!GR) return;
+      const yR = new ZR.g;
+      tR.r.FromArrayToRef(GR.x, 0, yR.x), tR.r.FromArrayToRef(GR.y, 0, yR.y), tR.r.FromArrayToRef(GR.z, 0, yR.z), tR.r.FromArrayToRef(GR.xx, 0, yR.xx), tR.r.FromArrayToRef(GR.yy, 0, yR.yy), tR.r.FromArrayToRef(GR.zz, 0, yR.zz), tR.r.FromArrayToRef(GR.yz, 0, yR.yz), tR.r.FromArrayToRef(GR.zx, 0, yR.zx), tR.r.FromArrayToRef(GR.xy, 0, yR.xy), RR._sphericalPolynomial = yR
     }
-    var yW = OW(54015);
-    class TW {
+    var BR = GR(53863);
+    class lR {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(WW, iW, OW, mW, EW) {
-        if (Array.isArray(WW)) return;
-        const NW = AW(WW);
-        if (NW) {
-          iW.width = NW.width, iW.height = NW.width;
+      loadCubeData(RR, JR, GR, yR, tR) {
+        if (Array.isArray(RR)) return;
+        const uR = eR(RR);
+        if (uR) {
+          JR.width = uR.width, JR.height = uR.width;
           try {
-            (0, yW.c)(), YW(iW, NW), kW(iW, WW, NW).then((() => {
-              iW.isReady = !0, iW.onLoadedObservable.notifyObservers(iW), iW.onLoadedObservable.clear(), mW && mW()
-            }), (WW => {
-              EW?.("Can not upload environment levels", WW)
+            (0, BR.d)(), MR(JR, uR), UR(JR, RR, uR).then((() => {
+              JR.isReady = !0, JR.onLoadedObservable.notifyObservers(JR), JR.onLoadedObservable.clear(), yR && yR()
+            }), (RR => {
+              tR?.("Can not upload environment levels", RR)
             }))
-          } catch (PW) {
-            EW?.("Can not upload environment file", PW)
+          } catch (ZR) {
+            tR?.("Can not upload environment file", ZR)
           }
-        } else EW && EW("Can not parse the environment file", null)
+        } else tR && tR("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  54015: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW
+  53863: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR
     });
-    var mW = OW(53951),
-      EW = OW(41511);
-    let NW = !1;
+    var yR = GR(53798),
+      tR = GR(41514);
+    let uR = !1;
 
-    function PW() {
-      NW || (NW = !0, EW.c.prototype._sphericalPolynomialTargetSize = 0, EW.c.prototype.forceSphericalPolynomialsRecompute = function() {
+    function ZR() {
+      uR || (uR = !0, tR.c.prototype._sphericalPolynomialTargetSize = 0, tR.c.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(EW.c.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(tR.c.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = mW.b.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((WW => {
-              this._texture._sphericalPolynomial = WW, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = yR.e.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((RR => {
+              this._texture._sphericalPolynomial = RR, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(WW) {
-          this._texture && (this._texture._sphericalPolynomial = WW)
+        set: function(RR) {
+          this._texture && (this._texture._sphericalPolynomial = RR)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  53951: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => wW
+  53798: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR
     });
-    var mW = OW(38241),
-      EW = OW(38285),
-      NW = OW(41506),
-      PW = OW(38249),
-      LW = OW(38372);
-    class cW {
-      constructor(WW, iW, OW, mW) {
-        this.name = WW, this.worldAxisForNormal = iW, this.worldAxisForFileX = OW, this.worldAxisForFileY = mW
+    var yR = GR(38204),
+      tR = GR(38239),
+      uR = GR(41509),
+      ZR = GR(38213),
+      qR = GR(38331);
+    class iR {
+      constructor(RR, JR, GR, yR) {
+        this.name = RR, this.worldAxisForNormal = JR, this.worldAxisForFileX = GR, this.worldAxisForFileY = yR
       }
     }
-    class wW {
-      static _NearestPow2Floor(WW) {
-        return WW <= 1 ? 1 : 1 << Math.floor(Math.log2(WW))
+    class fR {
+      static _NearestPow2Floor(RR) {
+        return RR <= 1 ? 1 : 1 << Math.floor(Math.log2(RR))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(WW) {
-        if (!WW.isCube) return null;
-        WW.bD()?.VA().flushFramebuffer();
-        const iW = WW.getSize().width,
-          OW = WW._sphericalPolynomialTargetSize,
-          mW = OW > 0 ? this._NearestPow2Floor(OW) : 0,
-          EW = !WW.noMipmap && !0 === WW._texture?.generateMipMaps,
-          NW = mW > 0 && mW < iW && EW,
-          PW = NW ? Math.max(0, Math.round(Math.log2(iW / mW))) : 0,
-          LW = NW ? Math.max(1, Math.floor(iW / Math.pow(2, PW))) : iW,
-          cW = WW.readPixels(0, PW, void 0, !1),
-          wW = WW.readPixels(1, PW, void 0, !1);
-        let tW, ZW;
-        WW.isRenderTarget ? (tW = WW.readPixels(3, PW, void 0, !1), ZW = WW.readPixels(2, PW, void 0, !1)) : (tW = WW.readPixels(2, PW, void 0, !1), ZW = WW.readPixels(3, PW, void 0, !1));
-        const xW = WW.readPixels(4, PW, void 0, !1),
-          lW = WW.readPixels(5, PW, void 0, !1),
-          AW = WW.gammaSpace,
-          bW = mW > 0 && mW < iW && !NW;
-        return new Promise((WW => {
-          Promise.all([wW, cW, tW, ZW, xW, lW]).then((OW => {
-            let [EW, NW, PW, cW, wW, tW] = OW, ZW = LW;
-            if (bW) {
-              const WW = 4;
-              EW = this._DownsampleFace(EW, iW, mW, WW), NW = this._DownsampleFace(NW, iW, mW, WW), PW = this._DownsampleFace(PW, iW, mW, WW), cW = this._DownsampleFace(cW, iW, mW, WW), wW = this._DownsampleFace(wW, iW, mW, WW), tW = this._DownsampleFace(tW, iW, mW, WW), ZW = mW
+      static ConvertCubeMapTextureToSphericalPolynomial(RR) {
+        if (!RR.isCube) return null;
+        RR.jH()?.ke().flushFramebuffer();
+        const JR = RR.getSize().width,
+          GR = RR._sphericalPolynomialTargetSize,
+          yR = GR > 0 ? this._NearestPow2Floor(GR) : 0,
+          tR = !RR.noMipmap && !0 === RR._texture?.generateMipMaps,
+          uR = yR > 0 && yR < JR && tR,
+          ZR = uR ? Math.max(0, Math.round(Math.log2(JR / yR))) : 0,
+          qR = uR ? Math.max(1, Math.floor(JR / Math.pow(2, ZR))) : JR,
+          iR = RR.readPixels(0, ZR, void 0, !1),
+          fR = RR.readPixels(1, ZR, void 0, !1);
+        let VR, KR;
+        RR.isRenderTarget ? (VR = RR.readPixels(3, ZR, void 0, !1), KR = RR.readPixels(2, ZR, void 0, !1)) : (VR = RR.readPixels(2, ZR, void 0, !1), KR = RR.readPixels(3, ZR, void 0, !1));
+        const wR = RR.readPixels(4, ZR, void 0, !1),
+          rR = RR.readPixels(5, ZR, void 0, !1),
+          eR = RR.gammaSpace,
+          aR = yR > 0 && yR < JR && !uR;
+        return new Promise((RR => {
+          Promise.all([fR, iR, VR, KR, wR, rR]).then((GR => {
+            let [tR, uR, ZR, iR, fR, VR] = GR, KR = qR;
+            if (aR) {
+              const RR = 4;
+              tR = this._DownsampleFace(tR, JR, yR, RR), uR = this._DownsampleFace(uR, JR, yR, RR), ZR = this._DownsampleFace(ZR, JR, yR, RR), iR = this._DownsampleFace(iR, JR, yR, RR), fR = this._DownsampleFace(fR, JR, yR, RR), VR = this._DownsampleFace(VR, JR, yR, RR), KR = yR
             }
-            const xW = {
-              size: ZW,
-              right: NW,
-              left: EW,
-              up: PW,
-              down: cW,
-              front: wW,
-              back: tW,
+            const wR = {
+              size: KR,
+              right: uR,
+              left: tR,
+              up: ZR,
+              down: iR,
+              front: fR,
+              back: VR,
               format: 5,
-              type: EW instanceof Float32Array ? 1 : 0,
-              gammaSpace: AW
+              type: tR instanceof Float32Array ? 1 : 0,
+              gammaSpace: eR
             };
-            WW(this.ConvertCubeMapToSphericalPolynomial(xW))
+            RR(this.ConvertCubeMapToSphericalPolynomial(wR))
           }))
         }))
       }
-      static _AreaElement(WW, iW) {
-        return Math.atan2(WW * iW, Math.sqrt(WW * WW + iW * iW + 1))
+      static _AreaElement(RR, JR) {
+        return Math.atan2(RR * JR, Math.sqrt(RR * RR + JR * JR + 1))
       }
-      static _DownsampleFace(WW, iW, OW, mW) {
-        const EW = WW instanceof Float32Array ? WW : Float32Array.from(WW),
-          NW = OW * OW * mW,
-          PW = new Float32Array(NW),
-          LW = iW / OW,
-          cW = 1 / (LW * LW);
-        for (let tW = 0; tW < OW; tW++) {
-          const WW = Math.floor(tW * LW),
-            NW = Math.floor((tW + 1) * LW);
-          for (let wW = 0; wW < OW; wW++) {
-            const ZW = Math.floor(wW * LW),
-              xW = Math.floor((wW + 1) * LW),
-              lW = (tW * OW + wW) * mW;
-            for (let OW = 0; OW < mW; OW++) {
-              let LW = 0;
-              for (let PW = WW; PW < NW; PW++)
-                for (let WW = ZW; WW < xW; WW++) LW += EW[(PW * iW + WW) * mW + OW];
-              PW[lW + OW] = LW * cW
+      static _DownsampleFace(RR, JR, GR, yR) {
+        const tR = RR instanceof Float32Array ? RR : Float32Array.from(RR),
+          uR = GR * GR * yR,
+          ZR = new Float32Array(uR),
+          qR = JR / GR,
+          iR = 1 / (qR * qR);
+        for (let VR = 0; VR < GR; VR++) {
+          const RR = Math.floor(VR * qR),
+            uR = Math.floor((VR + 1) * qR);
+          for (let fR = 0; fR < GR; fR++) {
+            const KR = Math.floor(fR * qR),
+              wR = Math.floor((fR + 1) * qR),
+              rR = (VR * GR + fR) * yR;
+            for (let GR = 0; GR < yR; GR++) {
+              let qR = 0;
+              for (let ZR = RR; ZR < uR; ZR++)
+                for (let RR = KR; RR < wR; RR++) qR += tR[(ZR * JR + RR) * yR + GR];
+              ZR[rR + GR] = qR * iR
             }
           }
         }
-        if (WW instanceof Float32Array) return PW;
-        const wW = new(0, WW.constructor)(NW);
-        for (let tW = 0; tW < NW; tW++) wW[tW] = PW[tW] + .5 | 0;
-        return wW
+        if (RR instanceof Float32Array) return ZR;
+        const fR = new(0, RR.constructor)(uR);
+        for (let VR = 0; VR < uR; VR++) fR[VR] = ZR[VR] + .5 | 0;
+        return fR
       }
-      static ConvertCubeMapToSphericalPolynomial(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const OW = iW > 0 ? this._NearestPow2Floor(iW) : 0;
-        if (OW > 0 && WW.size > OW) {
-          const iW = 5 === WW.format ? 4 : 3,
-            mW = ["right", "left", "up", "down", "front", "back"],
-            EW = {};
-          for (const NW of mW) EW[NW] = this._DownsampleFace(WW[NW], WW.size, OW, iW);
-          WW = {
-            ...WW,
-            ...EW,
-            size: OW
+      static ConvertCubeMapToSphericalPolynomial(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const GR = JR > 0 ? this._NearestPow2Floor(JR) : 0;
+        if (GR > 0 && RR.size > GR) {
+          const JR = 5 === RR.format ? 4 : 3,
+            yR = ["right", "left", "up", "down", "front", "back"],
+            tR = {};
+          for (const uR of yR) tR[uR] = this._DownsampleFace(RR[uR], RR.size, GR, JR);
+          RR = {
+            ...RR,
+            ...tR,
+            size: GR
           }
         }
-        const mW = new NW.e;
-        let cW = 0;
-        const wW = 2 / WW.size,
-          tW = wW,
-          ZW = .5 * wW,
-          xW = ZW - 1;
-        for (let NW = 0; NW < 6; NW++) {
-          const iW = this._FileFaces[NW],
-            OW = WW[iW.name];
-          let lW = xW;
-          const AW = 5 === WW.format ? 4 : 3;
-          for (let NW = 0; NW < WW.size; NW++) {
-            let bW = xW;
-            for (let tW = 0; tW < WW.size; tW++) {
-              const xW = iW.worldAxisForFileX.scale(bW).add(iW.worldAxisForFileY.scale(lW)).add(iW.worldAxisForNormal);
-              xW.normalize();
-              const jW = this._AreaElement(bW - ZW, lW - ZW) - this._AreaElement(bW - ZW, lW + ZW) - this._AreaElement(bW + ZW, lW - ZW) + this._AreaElement(bW + ZW, lW + ZW);
-              let UW = OW[NW * WW.size * AW + tW * AW + 0],
-                kW = OW[NW * WW.size * AW + tW * AW + 1],
-                sW = OW[NW * WW.size * AW + tW * AW + 2];
-              isNaN(UW) && (UW = 0), isNaN(kW) && (kW = 0), isNaN(sW) && (sW = 0), 0 === WW.type && (UW /= 255, kW /= 255, sW /= 255), WW.gammaSpace && (UW = Math.pow((0, EW.Clamp)(UW), PW.i), kW = Math.pow((0, EW.Clamp)(kW), PW.i), sW = Math.pow((0, EW.Clamp)(sW), PW.i));
-              const MW = this.MAX_HDRI_VALUE;
+        const yR = new uR.c;
+        let iR = 0;
+        const fR = 2 / RR.size,
+          VR = fR,
+          KR = .5 * fR,
+          wR = KR - 1;
+        for (let uR = 0; uR < 6; uR++) {
+          const JR = this._FileFaces[uR],
+            GR = RR[JR.name];
+          let rR = wR;
+          const eR = 5 === RR.format ? 4 : 3;
+          for (let uR = 0; uR < RR.size; uR++) {
+            let aR = wR;
+            for (let VR = 0; VR < RR.size; VR++) {
+              const wR = JR.worldAxisForFileX.scale(aR).add(JR.worldAxisForFileY.scale(rR)).add(JR.worldAxisForNormal);
+              wR.normalize();
+              const LR = this._AreaElement(aR - KR, rR - KR) - this._AreaElement(aR - KR, rR + KR) - this._AreaElement(aR + KR, rR - KR) + this._AreaElement(aR + KR, rR + KR);
+              let nR = GR[uR * RR.size * eR + VR * eR + 0],
+                UR = GR[uR * RR.size * eR + VR * eR + 1],
+                WR = GR[uR * RR.size * eR + VR * eR + 2];
+              isNaN(nR) && (nR = 0), isNaN(UR) && (UR = 0), isNaN(WR) && (WR = 0), 0 === RR.type && (nR /= 255, UR /= 255, WR /= 255), RR.gammaSpace && (nR = Math.pow((0, tR.Clamp)(nR), ZR.i), UR = Math.pow((0, tR.Clamp)(UR), ZR.i), WR = Math.pow((0, tR.Clamp)(WR), ZR.i));
+              const AR = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const WW = Math.max(UW, kW, sW);
-                if (WW > MW) {
-                  const iW = MW / WW;
-                  UW *= iW, kW *= iW, sW *= iW
+                const RR = Math.max(nR, UR, WR);
+                if (RR > AR) {
+                  const JR = AR / RR;
+                  nR *= JR, UR *= JR, WR *= JR
                 }
-              } else UW = (0, EW.Clamp)(UW, 0, MW), kW = (0, EW.Clamp)(kW, 0, MW), sW = (0, EW.Clamp)(sW, 0, MW);
-              const KW = new LW.b(UW, kW, sW);
-              mW.addLight(xW, KW, jW), cW += jW, bW += wW
+              } else nR = (0, tR.Clamp)(nR, 0, AR), UR = (0, tR.Clamp)(UR, 0, AR), WR = (0, tR.Clamp)(WR, 0, AR);
+              const CR = new qR.d(nR, UR, WR);
+              yR.addLight(wR, CR, LR), iR += LR, aR += fR
             }
-            lW += tW
+            rR += VR
           }
         }
-        const lW = 6 * (4 * Math.PI) / 6 / cW;
-        return mW.scaleInPlace(lW), mW.convertIncidentRadianceToIrradiance(), mW.convertIrradianceToLambertianRadiance(), NW.f.FromHarmonics(mW)
+        const rR = 6 * (4 * Math.PI) / 6 / iR;
+        return yR.scaleInPlace(rR), yR.convertIncidentRadianceToIrradiance(), yR.convertIrradianceToLambertianRadiance(), uR.g.FromHarmonics(yR)
       }
     }
-    wW._FileFaces = [new cW("right", new mW.q(1, 0, 0), new mW.q(0, 0, -1), new mW.q(0, -1, 0)), new cW("left", new mW.q(-1, 0, 0), new mW.q(0, 0, 1), new mW.q(0, -1, 0)), new cW("up", new mW.q(0, 1, 0), new mW.q(1, 0, 0), new mW.q(0, 0, 1)), new cW("down", new mW.q(0, -1, 0), new mW.q(1, 0, 0), new mW.q(0, 0, -1)), new cW("front", new mW.q(0, 0, 1), new mW.q(1, 0, 0), new mW.q(0, -1, 0)), new cW("back", new mW.q(0, 0, -1), new mW.q(-1, 0, 0), new mW.q(0, -1, 0))], wW.MAX_HDRI_VALUE = 4096, wW.PRESERVE_CLAMPED_COLORS = !1
+    fR._FileFaces = [new iR("right", new yR.r(1, 0, 0), new yR.r(0, 0, -1), new yR.r(0, -1, 0)), new iR("left", new yR.r(-1, 0, 0), new yR.r(0, 0, 1), new yR.r(0, -1, 0)), new iR("up", new yR.r(0, 1, 0), new yR.r(1, 0, 0), new yR.r(0, 0, 1)), new iR("down", new yR.r(0, -1, 0), new yR.r(1, 0, 0), new yR.r(0, 0, -1)), new iR("front", new yR.r(0, 0, 1), new yR.r(1, 0, 0), new yR.r(0, -1, 0)), new iR("back", new yR.r(0, 0, -1), new yR.r(-1, 0, 0), new yR.r(0, -1, 0))], fR.MAX_HDRI_VALUE = 4096, fR.PRESERVE_CLAMPED_COLORS = !1
   },
-  53986: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW
+  53831: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(53977),
-      EW = OW(53995);
-    class NW {
-      static ExpandRGBDTexture(WW) {
-        const iW = WW._texture;
-        if (!iW || !WW.isRGBD) return;
-        const EW = iW.VA(),
-          NW = EW.getCaps(),
-          PW = iW.isReady;
-        let LW = !1;
-        NW.textureHalfFloatRender && NW.textureHalfFloatLinearFiltering ? (LW = !0, iW.type = 2) : NW.textureFloatRender && NW.textureFloatLinearFiltering && (LW = !0, iW.type = 1), LW && (iW.isReady = !1, iW._isRGBD = !1, iW.invertY = !1);
-        const cW = async () => {
-          const NW = EW.isWebGPU,
-            PW = NW ? 1 : 0;
-          iW.isReady = !1, NW ? await OW.e(660).then((() => OW(64519))) : await OW.e(642).then((() => OW(64523)));
-          const LW = new mW.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, EW, !1, void 0, iW.type, void 0, null, !1, void 0, PW);
-          LW.externalTextureSamplerBinding = !0;
-          const cW = EW.createRenderTargetTexture(iW.width, {
+    var yR = GR(53823),
+      tR = GR(53836);
+    class uR {
+      static ExpandRGBDTexture(RR) {
+        const JR = RR._texture;
+        if (!JR || !RR.isRGBD) return;
+        const tR = JR.ke(),
+          uR = tR.getCaps(),
+          ZR = JR.isReady;
+        let qR = !1;
+        uR.textureHalfFloatRender && uR.textureHalfFloatLinearFiltering ? (qR = !0, JR.type = 2) : uR.textureFloatRender && uR.textureFloatLinearFiltering && (qR = !0, JR.type = 1), qR && (JR.isReady = !1, JR._isRGBD = !1, JR.invertY = !1);
+        const iR = async () => {
+          const uR = tR.isWebGPU,
+            ZR = uR ? 1 : 0;
+          JR.isReady = !1, uR ? await GR.e(660).then((() => GR(64253))) : await GR.e(642).then((() => GR(64257)));
+          const qR = new yR.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, tR, !1, void 0, JR.type, void 0, null, !1, void 0, ZR);
+          qR.externalTextureSamplerBinding = !0;
+          const iR = tR.createRenderTargetTexture(JR.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: iW.samplingMode,
-            type: iW.type,
+            samplingMode: JR.samplingMode,
+            type: JR.type,
             format: 5
           });
-          LW.onEffectCreatedObservable.addOnce((OW => {
-            OW.executeWhenCompiled((() => {
-              LW.onApply = WW => {
-                WW._bindTexture("textureSampler", iW), WW.setFloat2("scale", 1, 1)
-              }, WW.bD()?.postProcessManager.directRender([LW], cW, !0), EW.restoreDefaultFramebuffer(), EW._releaseTexture(iW), LW && LW.dispose(), cW._swapAndDie(iW), iW.isReady = !0
+          qR.onEffectCreatedObservable.addOnce((GR => {
+            GR.executeWhenCompiled((() => {
+              qR.onApply = RR => {
+                RR._bindTexture("textureSampler", JR), RR.setFloat2("scale", 1, 1)
+              }, RR.jH()?.postProcessManager.directRender([qR], iR, !0), tR.restoreDefaultFramebuffer(), tR._releaseTexture(JR), qR && qR.dispose(), iR._swapAndDie(JR), JR.isReady = !0
             }))
           }))
         };
-        LW && (PW ? cW() : WW.onLoadObservable.addOnce(cW))
+        qR && (ZR ? iR() : RR.onLoadObservable.addOnce(iR))
       }
-      static async EncodeTextureToRGBD(WW, iW) {
-        let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return iW.VA().isWebGPU ? await OW.e(661).then((() => OW(64545))) : await OW.e(643).then((() => OW(64537))), await (0, EW.c)("rgbdEncode", WW, iW, mW, 1, 5)
+      static async EncodeTextureToRGBD(RR, JR) {
+        let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return JR.ke().isWebGPU ? await GR.e(661).then((() => GR(64281))) : await GR.e(643).then((() => GR(64274))), await (0, tR.e)("rgbdEncode", RR, JR, yR, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

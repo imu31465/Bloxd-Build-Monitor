@@ -1,31 +1,31 @@
 export const id = 159;
 export const ids = [159];
 export const modules = {
-  7637: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      loadShaderPackTextures: () => PW,
-      shaderPackTextures: () => LW
+  7773: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      loadShaderPackTextures: () => ZR,
+      shaderPackTextures: () => qR
     });
-    var mW = OW(5970);
-    let EW = null,
-      NW = null;
+    var yR = GR(6084);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return NW ??= Promise.all([OW.e(85), OW.e(126)]).then((() => OW(42015))).then((WW => {
+    function ZR() {
+      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: iW,
-          textureNameToIndex: OW,
-          textureAnimationData: NW
-        } = WW;
-        return EW ??= (0, mW.o)(OW, NW, iW), EW
-      })), NW
+          FORMER_BLOCK_IMAGE_NAMES: JR,
+          textureNameToIndex: GR,
+          textureAnimationData: uR
+        } = RR;
+        return tR ??= (0, yR.j)(GR, uR, JR), tR
+      })), uR
     }
 
-    function LW() {
-      if (null === EW) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return EW
+    function qR() {
+      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return tR
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

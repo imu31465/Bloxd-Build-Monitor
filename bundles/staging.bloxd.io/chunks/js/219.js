@@ -1,202 +1,202 @@
 export const id = 219;
 export const ids = [218, 219];
 export const modules = {
-  35078: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      CAPPED_COUNTS_VISIT_CAP: () => NW,
-      reportCappedWasmFailure: () => cW,
-      reportUncappedWasmFailure: () => LW,
-      reportWasmCrash: () => EW,
-      reportWasmFailure: () => PW
+  34980: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      CAPPED_COUNTS_VISIT_CAP: () => uR,
+      reportCappedWasmFailure: () => iR,
+      reportUncappedWasmFailure: () => qR,
+      reportWasmCrash: () => tR,
+      reportWasmFailure: () => ZR
     });
-    var mW = OW(1888);
+    var yR = GR(1972);
 
-    function EW(WW) {
-      (0, mW.reportClientError)("wasm_load", WW.message, WW.code)
+    function tR(RR) {
+      (0, yR.reportClientError)("wasm_load", RR.message, RR.code)
     }
-    const NW = mW.MAX_ERRORS_PER_VISIT - 4;
+    const uR = yR.MAX_ERRORS_PER_VISIT - 4;
 
-    function PW(WW, iW, OW, EW) {
-      (0, mW.reportClientError)(WW, iW, OW, !1, mW.MAX_ERRORS_PER_VISIT, {
-        context: EW
+    function ZR(RR, JR, GR, tR) {
+      (0, yR.reportClientError)(RR, JR, GR, !1, yR.MAX_ERRORS_PER_VISIT, {
+        context: tR
       })
     }
 
-    function LW(WW, iW, OW, EW) {
-      (0, mW.reportClientError)(WW, iW, OW, !1, 1 / 0, {
-        context: EW
+    function qR(RR, JR, GR, tR) {
+      (0, yR.reportClientError)(RR, JR, GR, !1, 1 / 0, {
+        context: tR
       })
     }
 
-    function cW(WW, iW, OW, EW) {
-      (0, mW.reportClientError)(WW, iW, OW, !1, NW, {
-        context: EW
+    function iR(RR, JR, GR, tR) {
+      (0, yR.reportClientError)(RR, JR, GR, !1, uR, {
+        context: tR
       })
     }
   },
-  37250: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => SW,
-      g: () => TW,
-      j: () => JW,
-      l: () => YW
+  37162: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => XR,
+      f: () => lR,
+      g: () => pR,
+      j: () => MR
     });
-    var mW = OW(37271),
-      EW = OW(2381),
-      NW = OW(37286),
-      PW = OW(2388),
-      LW = OW(35078),
-      cW = OW(3974),
-      wW = OW(4417),
-      tW = OW(4409),
-      ZW = OW(37257),
-      xW = OW(1888),
-      lW = OW(37260),
-      AW = OW(37265),
-      bW = OW(2372);
-    let jW = !1;
-    const UW = 40;
-    var kW = OW(299),
-      sW = OW(4816);
-    const MW = "bloxdWasmFailureReported";
+    var yR = GR(37187),
+      tR = GR(2448),
+      uR = GR(37205),
+      ZR = GR(2457),
+      qR = GR(34980),
+      iR = GR(4066),
+      fR = GR(4498),
+      VR = GR(4491),
+      KR = GR(37169),
+      wR = GR(1972),
+      rR = GR(37178),
+      eR = GR(37183),
+      aR = GR(2445);
+    let LR = !1;
+    const nR = 40;
+    var UR = GR(327),
+      WR = GR(4928);
+    const AR = "bloxdWasmFailureReported";
 
-    function KW() {
+    function CR() {
       return "undefined" === typeof WebAssembly
     }
 
-    function SW() {
-      return (0, mW.f)()
+    function XR() {
+      return (0, yR.f)()
     }
 
-    function YW() {
-      if (KW()) return "this browser has no WebAssembly";
-      const WW = (0, EW.p)();
-      return "compile" === WW || "instantiate" === WW ? `the core wasm didn't load here (${(0,EW.h)()})` : null
+    function MR() {
+      if (CR()) return "this browser has no WebAssembly";
+      const RR = (0, tR.i)();
+      return "compile" === RR || "instantiate" === RR ? `the core wasm didn't load here (${(0,tR.e)()})` : null
     }
-    async function yW(WW) {
-      return await (0, kW.p)(), await (0, NW.f)(NW.e, void 0, WW)
+    async function BR(RR) {
+      return await (0, UR.k)(), await (0, uR.f)(uR.b, void 0, RR)
     }
 
-    function TW() {
-      KW() || (0, sW.e)((() => {
-        yW()
+    function lR() {
+      CR() || (0, WR.e)((() => {
+        BR()
       }))
     }
 
-    function JW() {
-      if (KW()) return async () => ((0, cW.d)("unsupported", 0), hW("unsupported", "This browser has no WebAssembly"), !1);
-      const WW = {
+    function pR() {
+      if (CR()) return async () => ((0, iR.i)("unsupported", 0), gR("unsupported", "This browser has no WebAssembly"), !1);
+      const RR = {
         reloadFailedDownload: !0
       };
-      return yW(WW), async () => {
-        var iW;
-        const OW = performance.now();
-        await yW(WW);
-        const mW = (performance.now() - OW) / 1e3;
-        if ((0, EW.R)()) return (0, cW.d)("ready", mW), jW || (jW = !0, (0, EW.Y)((() => {
-          if ("call" !== (0, EW.p)()) return;
-          const WW = (0, EW.m)(),
-            iW = (0, ZW.l)(WW, EW.H, EW.eb),
-            OW = (0, EW.v)().buffer.byteLength,
-            mW = (0, ZW.e)(iW.kind, iW.refusedBytes),
-            NW = mW ? "alloc_failed" : iW.kind,
-            PW = (0, lW.h)(OW),
-            LW = mW ? `_r${Math.floor(Math.log2(iW.refusedBytes))}` : "",
-            cW = (0, bW.e)();
-          null === cW && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
-          const wW = new Error((0, AW.b)(WW, OW, iW));
-          if (WW instanceof Error && void 0 !== WW.stack) {
-            const iW = WW.stack.split("\n"),
-              OW = iW.length > UW ? [...iW.slice(0, UW / 2), ...iW.slice(-UW / 2)] : iW;
-            wW.stack = OW.join("\n")
-          }(0, xW.reportClientError)("wasm_load", wW, `wasm_call_${NW}_${null!==cW&&void 0!==cW?cW:"unnamed"}_m${PW}${LW}`)
-        }))), (0, PW.J)(NW.e.url()) && (0, LW.reportCappedWasmFailure)("wasm_load", wW.e.message, wW.e.code), !0;
-        const kW = tW.b[null !== (iW = (0, EW.p)()) && void 0 !== iW ? iW : "call"];
-        return (0, cW.d)(kW, mW), hW(kW, (0, EW.h)()), !1
+      return BR(RR), async () => {
+        var JR;
+        const GR = performance.now();
+        await BR(RR);
+        const yR = (performance.now() - GR) / 1e3;
+        if ((0, tR.F)()) return (0, iR.i)("ready", yR), LR || (LR = !0, (0, tR.M)((() => {
+          if ("call" !== (0, tR.i)()) return;
+          const RR = (0, tR.h)(),
+            JR = (0, KR.h)(RR, tR.x, tR.Z),
+            GR = (0, tR.m)().buffer.byteLength,
+            yR = (0, KR.c)(JR.kind, JR.refusedBytes),
+            uR = yR ? "alloc_failed" : JR.kind,
+            ZR = (0, rR.g)(GR),
+            qR = yR ? `_r${Math.floor(Math.log2(JR.refusedBytes))}` : "",
+            iR = (0, aR.e)();
+          null === iR && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
+          const fR = new Error((0, eR.e)(RR, GR, JR));
+          if (RR instanceof Error && void 0 !== RR.stack) {
+            const JR = RR.stack.split("\n"),
+              GR = JR.length > nR ? [...JR.slice(0, nR / 2), ...JR.slice(-nR / 2)] : JR;
+            fR.stack = GR.join("\n")
+          }(0, wR.reportClientError)("wasm_load", fR, `wasm_call_${uR}_${null!==iR&&void 0!==iR?iR:"unnamed"}_m${ZR}${qR}`)
+        }))), (0, ZR.H)(uR.b.url()) && (0, qR.reportCappedWasmFailure)("wasm_load", fR.d.message, fR.d.code), !0;
+        const UR = VR.d[null !== (JR = (0, tR.i)()) && void 0 !== JR ? JR : "call"];
+        return (0, iR.i)(UR, yR), gR(UR, (0, tR.e)()), !1
       }
     }
 
-    function hW(WW, iW) {
-      (0, tW.j)(MW, `Bloxd wasm ${WW}, so the game can't start: ${iW}`, iW, WW)
+    function gR(RR, JR) {
+      (0, VR.j)(AR, `Bloxd wasm ${RR}, so the game can't start: ${JR}`, JR, RR)
     }
   },
-  37306: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/bloxd_wasm_bg.c887ae513bec2c674549.wasm"
+  37219: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/bloxd_wasm_bg.039608235c8f47710330.wasm"
   },
-  37283: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/bloxd_wasm_textures_bg.5f6ebeba7b776ee2ab3c.wasm"
+  37199: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/bloxd_wasm_textures_bg.ceca9f4af5d2b6e59dc7.wasm"
   },
-  37295: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      NO: () => mW,
-      EnvelopeKind: () => EW,
-      TO: () => NW,
-      PhysicsEngine: () => PW,
-      HE: () => LW,
-      BE: () => cW,
-      AN: () => wW,
-      IN: () => tW,
-      VP: () => ZW,
-      SL: () => xW,
-      cc: () => lW,
-      ec: () => AW,
-      ac: () => bW,
-      sw: () => jW,
-      default: () => Yi,
-      initSync: () => Si,
-      qt: () => UW,
-      dZ: () => kW,
-      eZ: () => sW,
-      vZ: () => MW,
-      gZ: () => KW,
-      DZ: () => SW,
-      VZ: () => YW,
-      pZ: () => yW,
-      fZ: () => TW,
-      CZ: () => JW,
-      XZ: () => hW,
-      BZ: () => HW,
-      qZ: () => nW,
-      RZ: () => uW,
-      GZ: () => oW
+  37208: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      SR: () => yR,
+      EnvelopeKind: () => tR,
+      TR: () => uR,
+      PhysicsEngine: () => ZR,
+      BG: () => qR,
+      EG: () => iR,
+      sy: () => fR,
+      qt: () => VR,
+      Nu: () => KR,
+      pq: () => wR,
+      xf: () => rR,
+      UV: () => eR,
+      DK: () => aR,
+      HK: () => LR,
+      default: () => MJ,
+      initSync: () => XJ,
+      oK: () => nR,
+      cK: () => UR,
+      PK: () => WR,
+      IK: () => AR,
+      mK: () => CR,
+      zK: () => XR,
+      SK: () => MR,
+      jK: () => BR,
+      dK: () => lR,
+      EK: () => pR,
+      YK: () => gR,
+      kK: () => bR,
+      QK: () => vR,
+      FK: () => OR,
+      TK: () => xR
     });
-    class mW {
+    class yR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, eW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, DR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.hZNs(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.FaJF(RR, 0)
       }
-      IZ() {
-        const WW = si.QvcQ(this.__wbg_ptr);
-        if (WW[2]) throw xi(WW[1]);
-        return WW[0] >>> 0
+      sK() {
+        const RR = WJ.lizN(this.__wbg_ptr);
+        if (RR[2]) throw wJ(RR[1]);
+        return RR[0] >>> 0
       }
-      aZ() {
-        return si.qwgF(this.__wbg_ptr) >>> 0
+      hK() {
+        return WJ.OR16(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const WW = si.pt1D();
-        return this.__wbg_ptr = WW, eW.register(this, this.__wbg_ptr, this), this
+        const RR = WJ.rpbX();
+        return this.__wbg_ptr = RR, DR.register(this, this.__wbg_ptr, this), this
       }
-      rZ() {
-        return si.jY9D(this.__wbg_ptr) >>> 0
+      Rw() {
+        return WJ.riGb(this.__wbg_ptr) >>> 0
       }
-      zZ(WW) {
-        const iW = si.t9fM(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Jw(RR) {
+        const JR = WJ.QKhi(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
-      FZ(WW) {
-        const iW = si.jcIu(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Gw(RR) {
+        const JR = WJ.g7xV(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
     }
-    Symbol.dispose && (mW.prototype[Symbol.dispose] = mW.prototype.free);
-    const EW = Object.freeze({
+    Symbol.dispose && (yR.prototype[Symbol.dispose] = yR.prototype.free);
+    const tR = Object.freeze({
       Js: 0,
       0: "Js",
       Error: 1,
@@ -218,1031 +218,1031 @@ export const modules = {
       StringType: 16,
       16: "StringType"
     });
-    class NW {
+    class uR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, vW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, HR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.UAWg(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.JJt1(RR, 0)
       }
-      ix(WW, iW) {
-        const OW = si.JuoC(this.__wbg_ptr, WW, iW);
-        if (OW[2]) throw xi(OW[1]);
-        return OW[0] >>> 0
+      uw(RR, JR) {
+        const GR = WJ.l7Pw(this.__wbg_ptr, RR, JR);
+        if (GR[2]) throw wJ(GR[1]);
+        return GR[0] >>> 0
       }
-      Ox(WW) {
-        const iW = si.xrS5(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Zw(RR) {
+        const JR = WJ.SbDk(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
-      mx() {
-        si.JBxm(this.__wbg_ptr)
+      qw() {
+        WJ.QVSe(this.__wbg_ptr)
       }
-      static Ex() {
-        return si.gsbE() >>> 0
+      static iw() {
+        return WJ.lVg8() >>> 0
       }
-      Nx() {
-        return si.VDVM(this.__wbg_ptr) >>> 0
+      fw() {
+        return WJ.LulB(this.__wbg_ptr) >>> 0
       }
-      Px() {
-        const WW = si.yNEw(this.__wbg_ptr);
-        return 0 === WW[0] ? void 0 : WW[1]
+      Vw() {
+        const RR = WJ.OFSj(this.__wbg_ptr);
+        return 0 === RR[0] ? void 0 : RR[1]
       }
-      Lx() {
-        return si.kgof(this.__wbg_ptr) >>> 0
+      Kw() {
+        return WJ.Tn2I(this.__wbg_ptr) >>> 0
       }
-      wx() {
-        return si.kkpA(this.__wbg_ptr) >>> 0
+      ww() {
+        return WJ.bOcY(this.__wbg_ptr) >>> 0
       }
-      static Wx() {
-        return si.YrbY() >>> 0
+      static tw() {
+        return WJ.E5Gl() >>> 0
       }
       constructor() {
-        const WW = si.MaLa();
-        return this.__wbg_ptr = WW, vW.register(this, this.__wbg_ptr, this), this
+        const RR = WJ.MxMI();
+        return this.__wbg_ptr = RR, HR.register(this, this.__wbg_ptr, this), this
       }
-      tx() {
-        return si.g6A9(this.__wbg_ptr) >>> 0
+      rw() {
+        return WJ.jBWG(this.__wbg_ptr) >>> 0
       }
-      Zx() {
-        return si.aqpx(this.__wbg_ptr) >>> 0
+      ew() {
+        return WJ.QFHr(this.__wbg_ptr) >>> 0
       }
-      lx() {
-        return si.RVbi(this.__wbg_ptr) >>> 0
+      aw() {
+        return WJ.UxLr(this.__wbg_ptr) >>> 0
       }
-      QZ(WW) {
-        return si.lL0s(this.__wbg_ptr, WW) >>> 0
+      yw(RR) {
+        return WJ.YapY(this.__wbg_ptr, RR) >>> 0
       }
-      reserve(WW, iW) {
-        const OW = si.mk5h(this.__wbg_ptr, WW, iW);
-        if (OW[1]) throw xi(OW[0])
+      reserve(RR, JR) {
+        const GR = WJ.uBmu(this.__wbg_ptr, RR, JR);
+        if (GR[1]) throw wJ(GR[0])
       }
-      jx(WW, iW) {
-        const OW = ci(WW, si.qZbx),
-          mW = Mi;
-        si.Ci2h(this.__wbg_ptr, OW, mW, iW)
+      Uw(RR, JR) {
+        const GR = iJ(RR, WJ.OLc9),
+          yR = AJ;
+        WJ.iSy6(this.__wbg_ptr, GR, yR, JR)
       }
       text() {
-        let WW, iW;
+        let RR, JR;
         try {
-          const OW = si.Paiz(this.__wbg_ptr);
-          return WW = OW[0], iW = OW[1], zW(OW[0], OW[1])
+          const GR = WJ.E56J(this.__wbg_ptr);
+          return RR = GR[0], JR = GR[1], TR(GR[0], GR[1])
         } finally {
-          si.NQBs(WW, iW, 1)
+          WJ.jJvb(RR, JR, 1)
         }
       }
     }
-    Symbol.dispose && (NW.prototype[Symbol.dispose] = NW.prototype.free);
-    class PW {
+    Symbol.dispose && (uR.prototype[Symbol.dispose] = uR.prototype.free);
+    class ZR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, gW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, oR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.Joyz(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.boWK(RR, 0)
       }
-      kx(WW, iW) {
-        BW(iW, mW);
-        const OW = si.Uc1K(this.__wbg_ptr, WW, iW.__wbg_ptr);
-        if (OW[2]) throw xi(OW[1]);
-        return OW[0] >>> 0
+      Aw(RR, JR) {
+        jR(JR, yR);
+        const GR = WJ.OA5O(this.__wbg_ptr, RR, JR.__wbg_ptr);
+        if (GR[2]) throw wJ(GR[1]);
+        return GR[0] >>> 0
       }
-      sx() {
-        const WW = si.rs5P(this.__wbg_ptr);
-        if (WW[1]) throw xi(WW[0])
+      Cw() {
+        const RR = WJ.BI46(this.__wbg_ptr);
+        if (RR[1]) throw wJ(RR[0])
       }
-      Yx(WW, iW, OW, mW, EW, NW, PW, cW, wW, tW, ZW) {
-        BW(WW, LW);
-        const xW = si.fqRV(this.__wbg_ptr, WW.__wbg_ptr, iW, OW, mW, EW, NW, PW, cW, wW, tW, ZW);
-        if (xW[2]) throw xi(xW[1]);
-        return xW[0]
+      lw(RR, JR, GR, yR, tR, uR, ZR, iR, fR, VR, KR) {
+        jR(RR, qR);
+        const wR = WJ.URwu(this.__wbg_ptr, RR.__wbg_ptr, JR, GR, yR, tR, uR, ZR, iR, fR, VR, KR);
+        if (wR[2]) throw wJ(wR[1]);
+        return wR[0]
       }
-      yx() {
-        const WW = si.P264(this.__wbg_ptr);
-        var iW = qW(WW[0], WW[1]).slice();
-        return si.NQBs(WW[0], 8 * WW[1], 8), iW
+      pw() {
+        const RR = WJ.HxUM(this.__wbg_ptr);
+        var JR = dR(RR[0], RR[1]).slice();
+        return WJ.jJvb(RR[0], 8 * RR[1], 8), JR
       }
-      Tx() {
-        return si.ygKB(this.__wbg_ptr) >>> 0
+      gw() {
+        return WJ.y0fX(this.__wbg_ptr) >>> 0
       }
-      Jx() {
-        return si.FV6x(this.__wbg_ptr) >>> 0
+      bw() {
+        return WJ.WNjx(this.__wbg_ptr) >>> 0
       }
-      hx() {
-        return si.JkTG(this.__wbg_ptr) >>> 0
+      Ow() {
+        return WJ.FzhU(this.__wbg_ptr) >>> 0
       }
-      constructor(WW, iW, OW, mW, EW, NW, PW, LW) {
-        const cW = si.Fv4r(WW, iW, OW, mW, EW, NW, PW, LW);
-        if (cW[2]) throw xi(cW[1]);
-        return this.__wbg_ptr = cW[0], gW.register(this, this.__wbg_ptr, this), this
+      constructor(RR, JR, GR, yR, tR, uR, ZR, qR) {
+        const iR = WJ.LbIx(RR, JR, GR, yR, tR, uR, ZR, qR);
+        if (iR[2]) throw wJ(iR[1]);
+        return this.__wbg_ptr = iR[0], oR.register(this, this.__wbg_ptr, this), this
       }
-      vx(WW) {
-        BW(WW, mW);
-        const iW = si.kibH(this.__wbg_ptr, WW.__wbg_ptr);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Dw(RR) {
+        jR(RR, yR);
+        const JR = WJ.jZOE(this.__wbg_ptr, RR.__wbg_ptr);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
-      gx(WW) {
-        const iW = si.CRSh(this.__wbg_ptr, WW);
-        if (iW[1]) throw xi(iW[0])
+      Hw(RR) {
+        const JR = WJ.WxPx(this.__wbg_ptr, RR);
+        if (JR[1]) throw wJ(JR[0])
       }
-      Dx() {
-        return si.g3Zk(this.__wbg_ptr) >>> 0
+      ow() {
+        return WJ.y8Ot(this.__wbg_ptr) >>> 0
       }
-      resume(WW, iW) {
-        BW(WW, LW), BW(iW, mW);
-        const OW = si.WTcv(this.__wbg_ptr, WW.__wbg_ptr, iW.__wbg_ptr);
-        if (OW[2]) throw xi(OW[1]);
-        return OW[0] >>> 0
+      resume(RR, JR) {
+        jR(RR, qR), jR(JR, yR);
+        const GR = WJ.hbgu(this.__wbg_ptr, RR.__wbg_ptr, JR.__wbg_ptr);
+        if (GR[2]) throw wJ(GR[1]);
+        return GR[0] >>> 0
       }
-      qx(WW) {
-        const iW = si.uEig(this.__wbg_ptr, WW);
-        if (iW[1]) throw xi(iW[0])
+      Sw(RR) {
+        const JR = WJ.AvdW(this.__wbg_ptr, RR);
+        if (JR[1]) throw wJ(JR[0])
       }
-      Ix(WW, iW) {
-        BW(iW, mW);
-        const OW = si.spWb(this.__wbg_ptr, WW, iW.__wbg_ptr);
-        if (OW[1]) throw xi(OW[0])
+      Ew(RR, JR) {
+        jR(JR, yR);
+        const GR = WJ.hG5c(this.__wbg_ptr, RR, JR.__wbg_ptr);
+        if (GR[1]) throw wJ(GR[0])
       }
-      Qx(WW) {
-        const iW = ti(WW, si.qZbx),
-          OW = Mi,
-          mW = si.DDZq(this.__wbg_ptr, iW, OW);
-        if (mW[1]) throw xi(mW[0])
+      Qw(RR) {
+        const JR = VJ(RR, WJ.OLc9),
+          GR = AJ,
+          yR = WJ.uBoc(this.__wbg_ptr, JR, GR);
+        if (yR[1]) throw wJ(yR[0])
       }
-      Kx(WW, iW, OW, mW, EW, NW) {
-        const PW = si.Vrdp(this.__wbg_ptr, WW, iW, OW, mW, EW, NW);
-        if (PW[1]) throw xi(PW[0])
+      Mw(RR, JR, GR, yR, tR, uR) {
+        const ZR = WJ.F1Y9(this.__wbg_ptr, RR, JR, GR, yR, tR, uR);
+        if (ZR[1]) throw wJ(ZR[0])
       }
-      Sx(WW, iW, OW, mW) {
-        const EW = ci(WW, si.qZbx),
-          NW = Mi,
-          PW = ti(iW, si.qZbx),
-          LW = Mi,
-          cW = ti(OW, si.qZbx),
-          wW = Mi,
-          tW = ti(mW, si.qZbx),
-          ZW = Mi,
-          xW = si.dXJO(this.__wbg_ptr, EW, NW, PW, LW, cW, wW, tW, ZW);
-        if (xW[1]) throw xi(xW[0])
+      Bw(RR, JR, GR, yR) {
+        const tR = iJ(RR, WJ.OLc9),
+          uR = AJ,
+          ZR = VJ(JR, WJ.OLc9),
+          qR = AJ,
+          iR = VJ(GR, WJ.OLc9),
+          fR = AJ,
+          VR = VJ(yR, WJ.OLc9),
+          KR = AJ,
+          wR = WJ.APAc(this.__wbg_ptr, tR, uR, ZR, qR, iR, fR, VR, KR);
+        if (wR[1]) throw wJ(wR[0])
       }
-      il(WW, iW) {
-        BW(iW, mW);
-        const OW = si.grTy(this.__wbg_ptr, WW, iW.__wbg_ptr);
-        if (OW[1]) throw xi(OW[0])
+      Tw(RR, JR) {
+        jR(JR, yR);
+        const GR = WJ.AONj(this.__wbg_ptr, RR, JR.__wbg_ptr);
+        if (GR[1]) throw wJ(GR[0])
       }
-      nx(WW, iW, OW) {
-        const mW = si.dhgp(this.__wbg_ptr, WW, iW, OW);
-        if (mW[1]) throw xi(mW[0])
+      Nw(RR, JR, GR) {
+        const yR = WJ.Ml1r(this.__wbg_ptr, RR, JR, GR);
+        if (yR[1]) throw wJ(yR[0])
       }
-      ml(WW, iW, OW, mW, EW, NW, PW, cW, wW, tW) {
-        BW(WW, LW);
-        return si.fwQk(this.__wbg_ptr, WW.__wbg_ptr, iW, OW, mW, EW, NW, PW, cW, wW, tW)
+      hw(RR, JR, GR, yR, tR, uR, ZR, iR, fR, VR) {
+        jR(RR, qR);
+        return WJ.b16D(this.__wbg_ptr, RR.__wbg_ptr, JR, GR, yR, tR, uR, ZR, iR, fR, VR)
       }
     }
-    Symbol.dispose && (PW.prototype[Symbol.dispose] = PW.prototype.free);
-    class LW {
-      static __wrap(WW) {
-        const iW = Object.create(LW.prototype);
-        return iW.__wbg_ptr = WW, DW.register(iW, iW.__wbg_ptr, iW), iW
+    Symbol.dispose && (ZR.prototype[Symbol.dispose] = ZR.prototype.free);
+    class qR {
+      static __wrap(RR) {
+        const JR = Object.create(qR.prototype);
+        return JR.__wbg_ptr = RR, cR.register(JR, JR.__wbg_ptr, JR), JR
       }
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, DW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, cR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.cghE(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.icJg(RR, 0)
       }
-      Nl(WW) {
-        const iW = si.fH5X(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Jr(RR) {
+        const JR = WJ.mt8F(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
-      Pl(WW, iW, OW) {
-        return si.ss4E(this.__wbg_ptr, WW, iW, OW)
+      Gr(RR, JR, GR) {
+        return WJ.dk0I(this.__wbg_ptr, RR, JR, GR)
       }
-      Ll(WW, iW, OW) {
-        return si.H4ae(this.__wbg_ptr, WW, iW, OW) >>> 0
+      yr(RR, JR, GR) {
+        return WJ.Ivoz(this.__wbg_ptr, RR, JR, GR) >>> 0
       }
-      cl(WW, iW, OW, mW) {
-        return 0 !== si.hNrn(this.__wbg_ptr, WW, iW, OW, mW)
+      tr(RR, JR, GR, yR) {
+        return 0 !== WJ.QJKx(this.__wbg_ptr, RR, JR, GR, yR)
       }
-      wl() {
-        si.Iif8(this.__wbg_ptr)
+      ur() {
+        WJ.tt8D(this.__wbg_ptr)
       }
-      tl(WW) {
-        const iW = si.yQ2G(this.__wbg_ptr, WW);
-        if (iW[3]) throw xi(iW[2]);
-        var OW = GW(iW[0], iW[1]).slice();
-        return si.NQBs(iW[0], 1 * iW[1], 1), OW
+      Zr(RR) {
+        const JR = WJ.WXwY(this.__wbg_ptr, RR);
+        if (JR[3]) throw wJ(JR[2]);
+        var GR = YR(JR[0], JR[1]).slice();
+        return WJ.jJvb(JR[0], 1 * JR[1], 1), GR
       }
-      evict(WW, iW) {
-        return si.QDB5(this.__wbg_ptr, WW, iW) >>> 0
+      evict(RR, JR) {
+        return WJ.MGCY(this.__wbg_ptr, RR, JR) >>> 0
       }
-      Zl() {
-        si.OWUS(this.__wbg_ptr)
+      qr() {
+        WJ.VcX4(this.__wbg_ptr)
       }
-      xl(WW, iW, OW) {
-        si.d9jo(this.__wbg_ptr, WW, iW, OW)
+      ir(RR, JR, GR) {
+        WJ.fQBs(this.__wbg_ptr, RR, JR, GR)
       }
-      ll(WW) {
-        const iW = si.PRuS(this.__wbg_ptr, WW);
-        if (iW[1]) throw xi(iW[0])
+      Vr(RR) {
+        const JR = WJ.TmUv(this.__wbg_ptr, RR);
+        if (JR[1]) throw wJ(JR[0])
       }
-      Al() {
-        return si.X7cP(this.__wbg_ptr) >>> 0
+      Kr() {
+        return WJ.p7Cz(this.__wbg_ptr) >>> 0
       }
-      bl() {
-        return si.R8XC(this.__wbg_ptr) >>> 0
+      wr() {
+        return WJ.b4EA(this.__wbg_ptr) >>> 0
       }
-      jl(WW, iW, OW) {
-        si.wzEc(this.__wbg_ptr, WW, iW, OW)
+      rr(RR, JR, GR) {
+        WJ.U63x(this.__wbg_ptr, RR, JR, GR)
       }
-      Ul(WW, iW, OW) {
-        si.KaiG(this.__wbg_ptr, WW, iW, OW)
+      er(RR, JR, GR) {
+        WJ.aaOS(this.__wbg_ptr, RR, JR, GR)
       }
-      kl() {
-        return si.qGEt(this.__wbg_ptr) >>> 0
+      ar() {
+        return WJ.aKZ4(this.__wbg_ptr) >>> 0
       }
-      sl() {
-        return si.tl6N(this.__wbg_ptr) >>> 0
+      Lr() {
+        return WJ.v9oO(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const WW = si.JsGL();
-        return this.__wbg_ptr = WW, DW.register(this, this.__wbg_ptr, this), this
+        const RR = WJ.DKvX();
+        return this.__wbg_ptr = RR, cR.register(this, this.__wbg_ptr, this), this
       }
-      static Ml() {
-        const WW = si.fQZO();
-        return LW.__wrap(WW)
+      static nr() {
+        const RR = WJ.Ure0();
+        return qR.__wrap(RR)
       }
-      Kl() {
-        return si.xw45(this.__wbg_ptr) >>> 0
+      Ur() {
+        return WJ.LEaL(this.__wbg_ptr) >>> 0
       }
-      Sl() {
-        return si.kGj6(this.__wbg_ptr) >>> 0
+      Wr() {
+        return WJ.GNho(this.__wbg_ptr) >>> 0
       }
-      Yl(WW, iW, OW, mW) {
-        const EW = si.Y2zd(this.__wbg_ptr, WW, iW, OW, mW);
-        if (EW[1]) throw xi(EW[0])
+      Ar(RR, JR, GR, yR) {
+        const tR = WJ.VhXf(this.__wbg_ptr, RR, JR, GR, yR);
+        if (tR[1]) throw wJ(tR[0])
       }
-      yl() {
-        return si.n6HT(this.__wbg_ptr) >>> 0
+      Cr() {
+        return WJ.quWX(this.__wbg_ptr) >>> 0
       }
-      Tl() {
-        return si.GkgU(this.__wbg_ptr) >>> 0
+      Xr() {
+        return WJ.Z3xQ(this.__wbg_ptr) >>> 0
       }
-      Jl(WW, iW, OW, mW) {
-        si.dYab(this.__wbg_ptr, WW, iW, OW, mW)
+      Mr(RR, JR, GR, yR) {
+        WJ.JGe5(this.__wbg_ptr, RR, JR, GR, yR)
       }
-      hl(WW) {
-        si.Zkh1(this.__wbg_ptr, WW)
+      Br(RR) {
+        WJ.F2lN(this.__wbg_ptr, RR)
       }
-      nl(WW, iW, OW, mW, EW) {
-        const NW = wi(iW, si.qZbx),
-          PW = Mi,
-          LW = ci(OW, si.qZbx),
-          cW = Mi,
-          wW = ti(mW, si.qZbx),
-          tW = Mi,
-          ZW = si.Defp(this.__wbg_ptr, WW, NW, PW, LW, cW, wW, tW, EW);
-        if (ZW[1]) throw xi(ZW[0])
+      br(RR, JR, GR, yR, tR) {
+        const uR = fJ(JR, WJ.OLc9),
+          ZR = AJ,
+          qR = iJ(GR, WJ.OLc9),
+          iR = AJ,
+          fR = VJ(yR, WJ.OLc9),
+          VR = AJ,
+          KR = WJ.HGKK(this.__wbg_ptr, RR, uR, ZR, qR, iR, fR, VR, tR);
+        if (KR[1]) throw wJ(KR[0])
       }
-      Hl(WW, iW, OW, mW) {
-        const EW = wi(WW, si.qZbx),
-          NW = Mi,
-          PW = ci(iW, si.qZbx),
-          LW = Mi,
-          cW = ti(OW, si.qZbx),
-          wW = Mi,
-          tW = wi(mW, si.qZbx),
-          ZW = Mi,
-          xW = si.NHEf(this.__wbg_ptr, EW, NW, PW, LW, cW, wW, tW, ZW);
-        if (xW[1]) throw xi(xW[0])
+      lr(RR, JR, GR, yR) {
+        const tR = fJ(RR, WJ.OLc9),
+          uR = AJ,
+          ZR = iJ(JR, WJ.OLc9),
+          qR = AJ,
+          iR = VJ(GR, WJ.OLc9),
+          fR = AJ,
+          VR = fJ(yR, WJ.OLc9),
+          KR = AJ,
+          wR = WJ.fHxS(this.__wbg_ptr, tR, uR, ZR, qR, iR, fR, VR, KR);
+        if (wR[1]) throw wJ(wR[0])
       }
-      vl(WW) {
-        const iW = wi(WW, si.qZbx),
-          OW = Mi,
-          mW = si.ChHL(this.__wbg_ptr, iW, OW);
-        if (mW[1]) throw xi(mW[0])
+      Hr(RR) {
+        const JR = fJ(RR, WJ.OLc9),
+          GR = AJ,
+          yR = WJ.tBm7(this.__wbg_ptr, JR, GR);
+        if (yR[1]) throw wJ(yR[0])
       }
-      gl() {
-        return si.zbsQ(this.__wbg_ptr) >>> 0
+      Pr() {
+        return WJ.k71z(this.__wbg_ptr) >>> 0
       }
-      Dl(WW) {
-        const iW = si.ZQ5D(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Ir(RR) {
+        const JR = WJ.N524(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
       steer() {
-        return si.MhTv(this.__wbg_ptr) >>> 0
+        return WJ.esTF(this.__wbg_ptr) >>> 0
       }
-      Vl() {
-        const WW = si.O4ju(this.__wbg_ptr);
-        var iW = qW(WW[0], WW[1]).slice();
-        return si.NQBs(WW[0], 8 * WW[1], 8), iW
+      mr() {
+        const RR = WJ.V3iF(this.__wbg_ptr);
+        var JR = dR(RR[0], RR[1]).slice();
+        return WJ.jJvb(RR[0], 8 * RR[1], 8), JR
       }
-      pl() {
-        return si.npnV(this.__wbg_ptr) >>> 0
+      zr() {
+        return WJ.UR6t(this.__wbg_ptr) >>> 0
       }
-      Cx() {
-        const WW = si.N0uq(this.__wbg_ptr);
-        var iW, OW, mW = (iW = WW[0], OW = WW[1], iW >>>= 0, (null !== rW && 0 !== rW.byteLength || (rW = new Int32Array(si.memory.buffer)), rW).subarray(iW / 4, iW / 4 + OW)).slice();
-        return si.NQBs(WW[0], 4 * WW[1], 4), mW
+      Iw() {
+        const RR = WJ.uW1d(this.__wbg_ptr);
+        var JR, GR, yR = (JR = RR[0], GR = RR[1], JR >>>= 0, (null !== FR && 0 !== FR.byteLength || (FR = new Int32Array(WJ.memory.buffer)), FR).subarray(JR / 4, JR / 4 + GR)).slice();
+        return WJ.jJvb(RR[0], 4 * RR[1], 4), yR
       }
     }
-    Symbol.dispose && (LW.prototype[Symbol.dispose] = LW.prototype.free);
-    class cW {
+    Symbol.dispose && (qR.prototype[Symbol.dispose] = qR.prototype.free);
+    class iR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, VW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, PR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.G2BH(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.rIoC(RR, 0)
       }
-      kZ(WW) {
-        const iW = ci(WW, si.qZbx),
-          OW = Mi,
-          mW = si.wAZb(this.__wbg_ptr, iW, OW);
-        if (mW[1]) throw xi(mW[0])
+      UK(RR) {
+        const JR = iJ(RR, WJ.OLc9),
+          GR = AJ,
+          yR = WJ.v4wE(this.__wbg_ptr, JR, GR);
+        if (yR[1]) throw wJ(yR[0])
       }
-      fl() {
-        return si.NFw0(this.__wbg_ptr) >>> 0
+      Sr() {
+        return WJ.Tiyf(this.__wbg_ptr) >>> 0
       }
-      Cl() {
-        return si.UpRJ(this.__wbg_ptr) >>> 0
+      jr() {
+        return WJ.YlyL(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const WW = si.F1Z9();
-        return this.__wbg_ptr = WW, VW.register(this, this.__wbg_ptr, this), this
+        const RR = WJ.OhED();
+        return this.__wbg_ptr = RR, PR.register(this, this.__wbg_ptr, this), this
       }
-      run(WW, iW) {
-        BW(WW, LW);
-        const OW = si.wVde(this.__wbg_ptr, WW.__wbg_ptr, iW);
-        if (OW[2]) throw xi(OW[1]);
-        return OW[0] >>> 0
+      run(RR, JR) {
+        jR(RR, qR);
+        const GR = WJ.Oig3(this.__wbg_ptr, RR.__wbg_ptr, JR);
+        if (GR[2]) throw wJ(GR[1]);
+        return GR[0] >>> 0
       }
-      Xl(WW) {
-        const iW = ci(WW, si.qZbx),
-          OW = Mi;
-        si.WdzA(this.__wbg_ptr, iW, OW)
+      dr(RR) {
+        const JR = iJ(RR, WJ.OLc9),
+          GR = AJ;
+        WJ.hQKz(this.__wbg_ptr, JR, GR)
       }
-      Bl(WW) {
-        const iW = ci(WW, si.qZbx),
-          OW = Mi;
-        si.BXjk(this.__wbg_ptr, iW, OW)
+      Er(RR) {
+        const JR = iJ(RR, WJ.OLc9),
+          GR = AJ;
+        WJ.u2TA(this.__wbg_ptr, JR, GR)
       }
     }
-    Symbol.dispose && (cW.prototype[Symbol.dispose] = cW.prototype.free);
-    class wW {
+    Symbol.dispose && (iR.prototype[Symbol.dispose] = iR.prototype.free);
+    class fR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, pW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, IR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.rT3f(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.LKRU(RR, 0)
       }
-      Rl(WW, iW) {
-        const OW = wi(WW, si.qZbx),
-          mW = Mi;
-        return si.TxCb(this.__wbg_ptr, OW, mW, iW) >>> 0
+      kr(RR, JR) {
+        const GR = fJ(RR, WJ.OLc9),
+          yR = AJ;
+        return WJ.spq3(this.__wbg_ptr, GR, yR, JR) >>> 0
       }
-      Gl(WW, iW, OW) {
-        BW(WW, LW);
-        const mW = wi(OW, si.qZbx),
-          EW = Mi,
-          NW = si.JZq3(this.__wbg_ptr, WW.__wbg_ptr, iW, mW, EW);
-        if (NW[2]) throw xi(NW[1]);
-        return NW[0] >>> 0
+      Qr(RR, JR, GR) {
+        jR(RR, qR);
+        const yR = fJ(GR, WJ.OLc9),
+          tR = AJ,
+          uR = WJ.jngk(this.__wbg_ptr, RR.__wbg_ptr, JR, yR, tR);
+        if (uR[2]) throw wJ(uR[1]);
+        return uR[0] >>> 0
       }
-      ql(WW) {
-        return si.rbs6(this.__wbg_ptr, WW) >>> 0
+      Yr(RR) {
+        return WJ.yV8R(this.__wbg_ptr, RR) >>> 0
       }
       constructor() {
-        const WW = si.RADm();
-        return this.__wbg_ptr = WW, pW.register(this, this.__wbg_ptr, this), this
+        const RR = WJ.edZI();
+        return this.__wbg_ptr = RR, IR.register(this, this.__wbg_ptr, this), this
       }
-      scan(WW, iW) {
-        BW(WW, LW);
-        const OW = si.vimU(this.__wbg_ptr, WW.__wbg_ptr, iW);
-        if (OW[2]) throw xi(OW[1]);
-        return OW[0] >>> 0
+      scan(RR, JR) {
+        jR(RR, qR);
+        const GR = WJ.m2vK(this.__wbg_ptr, RR.__wbg_ptr, JR);
+        if (GR[2]) throw wJ(GR[1]);
+        return GR[0] >>> 0
       }
-      rl(WW) {
-        const iW = wi(WW, si.qZbx),
-          OW = Mi;
-        si.afwX(this.__wbg_ptr, iW, OW)
+      sr(RR) {
+        const JR = fJ(RR, WJ.OLc9),
+          GR = AJ;
+        WJ.WsqU(this.__wbg_ptr, JR, GR)
       }
-      al() {
-        return si.Y9t2(this.__wbg_ptr) >>> 0
+      Tr() {
+        return WJ.LCIr(this.__wbg_ptr) >>> 0
       }
-      Il() {
-        return si.RMUj(this.__wbg_ptr) >>> 0
+      Fr() {
+        return WJ.Ja4r(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (wW.prototype[Symbol.dispose] = wW.prototype.free);
-    class tW {
+    Symbol.dispose && (fR.prototype[Symbol.dispose] = fR.prototype.free);
+    class VR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, fW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, mR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.O3Qz(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.lZhS(RR, 0)
       }
-      Fl(WW) {
-        const iW = si.CbPc(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Je(RR) {
+        const JR = WJ.R4UO(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
-      compute(WW, iW, OW, mW) {
-        var EW = Pi(mW) ? 0 : Zi(mW, si.qZbx, si.Ds7I),
-          NW = Mi;
-        const PW = si.kUq2(this.__wbg_ptr, WW, Pi(iW) ? Number.MAX_SAFE_INTEGER : iW | 0, OW, EW, NW);
-        if (PW[2]) throw xi(PW[1]);
-        return PW[0] >>> 0
+      compute(RR, JR, GR, yR) {
+        var tR = ZJ(yR) ? 0 : KJ(yR, WJ.OLc9, WJ.l8g9),
+          uR = AJ;
+        const ZR = WJ.xgvz(this.__wbg_ptr, RR, ZJ(JR) ? Number.MAX_SAFE_INTEGER : JR | 0, GR, tR, uR);
+        if (ZR[2]) throw wJ(ZR[1]);
+        return ZR[0] >>> 0
       }
-      WA(WW) {
-        const iW = Zi(WW, si.qZbx, si.Ds7I),
-          OW = Mi;
-        si.jYP4(this.__wbg_ptr, iW, OW)
+      ye(RR) {
+        const JR = KJ(RR, WJ.OLc9, WJ.l8g9),
+          GR = AJ;
+        WJ.VSzr(this.__wbg_ptr, JR, GR)
       }
-      iA() {
-        return si.d4ZJ(this.__wbg_ptr)
+      te() {
+        return WJ.ZEeo(this.__wbg_ptr)
       }
-      OA(WW) {
-        return si.k3e5(this.__wbg_ptr, WW) >>> 0
+      ue(RR) {
+        return WJ.Hxp7(this.__wbg_ptr, RR) >>> 0
       }
-      mA() {
-        return si.SewK(this.__wbg_ptr) >>> 0
+      Ze() {
+        return WJ.tFBB(this.__wbg_ptr) >>> 0
       }
-      EA() {
-        return si.dsR4(this.__wbg_ptr) >>> 0
+      qe() {
+        return WJ.eZyM(this.__wbg_ptr) >>> 0
       }
-      NA(WW, iW) {
-        const OW = si.K1g5(this.__wbg_ptr, WW, iW);
-        if (OW[1]) throw xi(OW[0])
+      ie(RR, JR) {
+        const GR = WJ.oPOO(this.__wbg_ptr, RR, JR);
+        if (GR[1]) throw wJ(GR[0])
       }
-      PA() {
-        return si.iluo(this.__wbg_ptr) >>> 0
+      fe() {
+        return WJ.A5lR(this.__wbg_ptr) >>> 0
       }
-      LA() {
-        return si.lC1h(this.__wbg_ptr) >>> 0
+      Ve() {
+        return WJ.Nz1j(this.__wbg_ptr) >>> 0
       }
-      cA() {
-        return si.f8aJ(this.__wbg_ptr) >>> 0
+      Ke() {
+        return WJ.bRa7(this.__wbg_ptr) >>> 0
       }
-      Ql(WW, iW, OW) {
-        const mW = ci(WW, si.qZbx),
-          EW = Mi,
-          NW = ci(iW, si.qZbx),
-          PW = Mi,
-          LW = si.QGpP(this.__wbg_ptr, mW, EW, NW, PW, OW);
-        if (LW[1]) throw xi(LW[0])
+      Ge(RR, JR, GR) {
+        const yR = iJ(RR, WJ.OLc9),
+          tR = AJ,
+          uR = iJ(JR, WJ.OLc9),
+          ZR = AJ,
+          qR = WJ.g3Dd(this.__wbg_ptr, yR, tR, uR, ZR, GR);
+        if (qR[1]) throw wJ(qR[0])
       }
-      tA() {
-        return si.WFyO(this.__wbg_ptr) >>> 0
+      ae() {
+        return WJ.tpnk(this.__wbg_ptr) >>> 0
       }
-      mesh(WW, iW, OW, mW, EW) {
-        const NW = si.oUxY(this.__wbg_ptr, WW, iW, OW, mW, EW);
-        if (NW[2]) throw xi(NW[1]);
-        return NW[0] >>> 0
+      mesh(RR, JR, GR, yR, tR) {
+        const uR = WJ.iXxM(this.__wbg_ptr, RR, JR, GR, yR, tR);
+        if (uR[2]) throw wJ(uR[1]);
+        return uR[0] >>> 0
       }
-      constructor(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW, xW, lW, AW, bW, jW, UW, kW, sW, MW) {
-        const KW = Li(WW, si.qZbx),
-          SW = Mi,
-          YW = ti(iW, si.qZbx),
-          yW = Mi,
-          TW = ci(OW, si.qZbx),
-          JW = Mi,
-          hW = wi(mW, si.qZbx),
-          HW = Mi,
-          nW = wi(EW, si.qZbx),
-          uW = Mi,
-          oW = ci(NW, si.qZbx),
-          dW = Mi,
-          eW = ci(PW, si.qZbx),
-          vW = Mi,
-          gW = ti(LW, si.qZbx),
-          DW = Mi,
-          VW = ti(cW, si.qZbx),
-          pW = Mi,
-          CW = wi(wW, si.qZbx),
-          XW = Mi;
-        var BW = Pi(tW) ? 0 : Li(tW, si.qZbx),
-          qW = Mi;
-        const RW = ci(ZW, si.qZbx),
-          GW = Mi,
-          IW = wi(xW, si.qZbx),
-          aW = Mi;
-        var rW = Pi(lW) ? 0 : wi(lW, si.qZbx),
-          zW = Mi,
-          FW = Pi(AW) ? 0 : wi(AW, si.qZbx),
-          QW = Mi;
-        const Wi = ti(bW, si.qZbx),
-          ii = Mi,
-          Oi = si.Ab1d(KW, SW, YW, yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW, gW, DW, VW, pW, CW, XW, BW, qW, RW, GW, IW, aW, rW, zW, FW, QW, Wi, ii, jW, UW, kW, sW, MW);
-        if (Oi[2]) throw xi(Oi[1]);
-        return this.__wbg_ptr = Oi[0], fW.register(this, this.__wbg_ptr, this), this
+      constructor(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR, VR, KR, wR, rR, eR, aR, LR, nR, UR, WR, AR) {
+        const CR = qJ(RR, WJ.OLc9),
+          XR = AJ,
+          MR = VJ(JR, WJ.OLc9),
+          BR = AJ,
+          lR = iJ(GR, WJ.OLc9),
+          pR = AJ,
+          gR = fJ(yR, WJ.OLc9),
+          bR = AJ,
+          vR = fJ(tR, WJ.OLc9),
+          OR = AJ,
+          xR = iJ(uR, WJ.OLc9),
+          NR = AJ,
+          DR = iJ(ZR, WJ.OLc9),
+          HR = AJ,
+          oR = VJ(qR, WJ.OLc9),
+          cR = AJ,
+          PR = VJ(iR, WJ.OLc9),
+          IR = AJ,
+          zR = fJ(fR, WJ.OLc9),
+          SR = AJ;
+        var jR = ZJ(VR) ? 0 : qJ(VR, WJ.OLc9),
+          dR = AJ;
+        const ER = iJ(KR, WJ.OLc9),
+          YR = AJ,
+          kR = fJ(wR, WJ.OLc9),
+          QR = AJ;
+        var FR = ZJ(rR) ? 0 : fJ(rR, WJ.OLc9),
+          TR = AJ,
+          sR = ZJ(eR) ? 0 : fJ(eR, WJ.OLc9),
+          hR = AJ;
+        const RJ = VJ(aR, WJ.OLc9),
+          JJ = AJ,
+          GJ = WJ.DhA3(CR, XR, MR, BR, lR, pR, gR, bR, vR, OR, xR, NR, DR, HR, oR, cR, PR, IR, zR, SR, jR, dR, ER, YR, kR, QR, FR, TR, sR, hR, RJ, JJ, LR, nR, UR, WR, AR);
+        if (GJ[2]) throw wJ(GJ[1]);
+        return this.__wbg_ptr = GJ[0], mR.register(this, this.__wbg_ptr, this), this
       }
-      wA(WW, iW) {
-        const OW = ci(WW, si.qZbx),
-          mW = Mi,
-          EW = si.QMKW(this.__wbg_ptr, OW, mW, iW);
-        if (EW[3]) throw xi(EW[2]);
-        var NW = GW(EW[0], EW[1]).slice();
-        return si.NQBs(EW[0], 1 * EW[1], 1), NW
+      ee(RR, JR) {
+        const GR = iJ(RR, WJ.OLc9),
+          yR = AJ,
+          tR = WJ.Ezso(this.__wbg_ptr, GR, yR, JR);
+        if (tR[3]) throw wJ(tR[2]);
+        var uR = YR(tR[0], tR[1]).slice();
+        return WJ.jJvb(tR[0], 1 * tR[1], 1), uR
       }
-      ZA(WW) {
-        si.u5Sr(this.__wbg_ptr, Pi(WW) ? 16777215 : WW)
+      Le(RR) {
+        WJ.qNqd(this.__wbg_ptr, ZJ(RR) ? 16777215 : RR)
       }
-      xA(WW) {
-        return si.anWd(this.__wbg_ptr, WW) >>> 0
+      ne(RR) {
+        return WJ.CeSp(this.__wbg_ptr, RR) >>> 0
       }
-      AA() {
-        return si.Fnv2(this.__wbg_ptr) >>> 0
+      Ae() {
+        return WJ.nFiF(this.__wbg_ptr) >>> 0
       }
-      lA() {
-        const WW = si.V0gd(this.__wbg_ptr);
-        if (WW[2]) throw xi(WW[1]);
-        return 0 !== WW[0]
+      Ue() {
+        const RR = WJ.j3VZ(this.__wbg_ptr);
+        if (RR[2]) throw wJ(RR[1]);
+        return 0 !== RR[0]
       }
-      bA() {
-        return si.NCqH(this.__wbg_ptr) >>> 0
+      Ce() {
+        return WJ.TDBE(this.__wbg_ptr) >>> 0
       }
-      jA() {
-        return si.xPoe(this.__wbg_ptr) >>> 0
+      Xe() {
+        return WJ.csIY(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (tW.prototype[Symbol.dispose] = tW.prototype.free);
-    class ZW {
+    Symbol.dispose && (VR.prototype[Symbol.dispose] = VR.prototype.free);
+    class KR {
       __destroy_into_raw() {
-        const WW = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, CW.unregister(this), WW
+        const RR = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, zR.unregister(this), RR
       }
       free() {
-        const WW = this.__destroy_into_raw();
-        si.fy4U(WW, 0)
+        const RR = this.__destroy_into_raw();
+        WJ.LuBB(RR, 0)
       }
-      compute(WW, iW, OW, mW) {
-        var EW = Pi(mW) ? 0 : Zi(mW, si.qZbx, si.Ds7I),
-          NW = Mi;
-        const PW = si.JJOf(this.__wbg_ptr, WW, Pi(iW) ? Number.MAX_SAFE_INTEGER : iW | 0, OW, EW, NW);
-        if (PW[2]) throw xi(PW[1]);
-        return PW[0] >>> 0
+      compute(RR, JR, GR, yR) {
+        var tR = ZJ(yR) ? 0 : KJ(yR, WJ.OLc9, WJ.l8g9),
+          uR = AJ;
+        const ZR = WJ.JSpZ(this.__wbg_ptr, RR, ZJ(JR) ? Number.MAX_SAFE_INTEGER : JR | 0, GR, tR, uR);
+        if (ZR[2]) throw wJ(ZR[1]);
+        return ZR[0] >>> 0
       }
-      WA(WW) {
-        const iW = Zi(WW, si.qZbx, si.Ds7I),
-          OW = Mi;
-        si.LSzm(this.__wbg_ptr, iW, OW)
+      ye(RR) {
+        const JR = KJ(RR, WJ.OLc9, WJ.l8g9),
+          GR = AJ;
+        WJ.GINb(this.__wbg_ptr, JR, GR)
       }
-      LA() {
-        return si.N9vO(this.__wbg_ptr) >>> 0
+      Ve() {
+        return WJ.lhi0(this.__wbg_ptr) >>> 0
       }
-      cA() {
-        return si.FXK4(this.__wbg_ptr) >>> 0
+      Ke() {
+        return WJ.PgnD(this.__wbg_ptr) >>> 0
       }
-      UA(WW) {
-        const iW = si.nZUu(this.__wbg_ptr, WW);
-        if (iW[2]) throw xi(iW[1]);
-        return iW[0] >>> 0
+      Me(RR) {
+        const JR = WJ.W8Zw(this.__wbg_ptr, RR);
+        if (JR[2]) throw wJ(JR[1]);
+        return JR[0] >>> 0
       }
-      constructor(WW, iW, OW, mW, EW, NW) {
-        const PW = Li(WW, si.qZbx),
-          LW = Mi,
-          cW = ti(iW, si.qZbx),
-          wW = Mi,
-          tW = ci(OW, si.qZbx),
-          ZW = Mi,
-          xW = wi(mW, si.qZbx),
-          lW = Mi,
-          AW = si.qMwJ(PW, LW, cW, wW, tW, ZW, xW, lW, EW, NW);
-        if (AW[2]) throw xi(AW[1]);
-        return this.__wbg_ptr = AW[0], CW.register(this, this.__wbg_ptr, this), this
+      constructor(RR, JR, GR, yR, tR, uR) {
+        const ZR = qJ(RR, WJ.OLc9),
+          qR = AJ,
+          iR = VJ(JR, WJ.OLc9),
+          fR = AJ,
+          VR = iJ(GR, WJ.OLc9),
+          KR = AJ,
+          wR = fJ(yR, WJ.OLc9),
+          rR = AJ,
+          eR = WJ.lKG9(ZR, qR, iR, fR, VR, KR, wR, rR, tR, uR);
+        if (eR[2]) throw wJ(eR[1]);
+        return this.__wbg_ptr = eR[0], zR.register(this, this.__wbg_ptr, this), this
       }
-      AA() {
-        return si.cMIe(this.__wbg_ptr) >>> 0
+      Ae() {
+        return WJ.Y2Ap(this.__wbg_ptr) >>> 0
       }
-      lA() {
-        const WW = si.a8GJ(this.__wbg_ptr);
-        if (WW[2]) throw xi(WW[1]);
-        return 0 !== WW[0]
+      Ue() {
+        const RR = WJ.zOHU(this.__wbg_ptr);
+        if (RR[2]) throw wJ(RR[1]);
+        return 0 !== RR[0]
       }
-      bA() {
-        return si.e8wG(this.__wbg_ptr) >>> 0
+      Ce() {
+        return WJ.Q41m(this.__wbg_ptr) >>> 0
       }
     }
 
-    function xW() {
-      const WW = si.E0hc();
-      var iW = RW(WW[0], WW[1]).slice();
-      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    function wR() {
+      const RR = WJ.akBN();
+      var JR = ER(RR[0], RR[1]).slice();
+      return WJ.jJvb(RR[0], 4 * RR[1], 4), JR
     }
 
-    function lW(WW, iW) {
-      let OW, mW;
+    function rR(RR, JR) {
+      let GR, yR;
       try {
-        const EW = Li(WW, si.qZbx),
-          NW = Mi,
-          PW = Zi(iW, si.qZbx, si.Ds7I),
-          LW = Mi,
-          cW = si.f7qI(EW, NW, PW, LW);
-        return OW = cW[0], mW = cW[1], zW(cW[0], cW[1])
+        const tR = qJ(RR, WJ.OLc9),
+          uR = AJ,
+          ZR = KJ(JR, WJ.OLc9, WJ.l8g9),
+          qR = AJ,
+          iR = WJ.oWkK(tR, uR, ZR, qR);
+        return GR = iR[0], yR = iR[1], TR(iR[0], iR[1])
       } finally {
-        si.NQBs(OW, mW, 1)
+        WJ.jJvb(GR, yR, 1)
       }
     }
 
-    function AW() {
-      const WW = si.nQNx();
-      var iW = RW(WW[0], WW[1]).slice();
-      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    function eR() {
+      const RR = WJ.QiZX();
+      var JR = ER(RR[0], RR[1]).slice();
+      return WJ.jJvb(RR[0], 4 * RR[1], 4), JR
     }
 
-    function bW(WW) {
-      return 0 !== si.xE2f(WW)
+    function aR(RR) {
+      return 0 !== WJ.UZxx(RR)
     }
 
-    function jW(WW, iW) {
-      const OW = Zi(WW, si.qZbx, si.Ds7I),
-        mW = Mi,
-        EW = si.A35a(OW, mW, iW);
-      if (EW[1]) throw xi(EW[0])
+    function LR(RR, JR) {
+      const GR = KJ(RR, WJ.OLc9, WJ.l8g9),
+        yR = AJ,
+        tR = WJ.mO87(GR, yR, JR);
+      if (tR[1]) throw wJ(tR[0])
     }
 
-    function UW() {
-      si.V18R()
+    function nR() {
+      WJ.mhIu()
     }
 
-    function kW() {
-      return si.coZd() >>> 0
+    function UR() {
+      return WJ.SzCt() >>> 0
     }
 
-    function sW(WW) {
-      return 0 !== si.DJIf(WW)
+    function WR(RR) {
+      return 0 !== WJ.YMYX(RR)
     }
 
-    function MW(WW) {
-      return 0 !== si.N8h8(WW)
+    function AR(RR) {
+      return 0 !== WJ.fdHI(RR)
     }
 
-    function KW(WW) {
-      si.akbt(WW)
+    function CR(RR) {
+      WJ.K53Q(RR)
     }
 
-    function SW() {
-      return si.YhCq() >>> 0
+    function XR() {
+      return WJ.FoxG() >>> 0
     }
 
-    function YW() {
-      return si.FJi0() >>> 0
+    function MR() {
+      return WJ.EfOj() >>> 0
     }
 
-    function yW() {
-      return 0 !== si.YQn6()
+    function BR() {
+      return 0 !== WJ.CNOj()
     }
 
-    function TW() {
-      const WW = si.MYOh();
-      var iW = RW(WW[0], WW[1]).slice();
-      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    function lR() {
+      const RR = WJ.puKY();
+      var JR = ER(RR[0], RR[1]).slice();
+      return WJ.jJvb(RR[0], 4 * RR[1], 4), JR
     }
 
-    function JW() {
-      const WW = si.x0CV();
-      var iW = RW(WW[0], WW[1]).slice();
-      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    function pR() {
+      const RR = WJ.UVkr();
+      var JR = ER(RR[0], RR[1]).slice();
+      return WJ.jJvb(RR[0], 4 * RR[1], 4), JR
     }
 
-    function hW() {
-      const WW = si.ID1h();
-      var iW = RW(WW[0], WW[1]).slice();
-      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    function gR() {
+      const RR = WJ.GQNL();
+      var JR = ER(RR[0], RR[1]).slice();
+      return WJ.jJvb(RR[0], 4 * RR[1], 4), JR
     }
 
-    function HW() {
-      return si.Pfxp() >>> 0
+    function bR() {
+      return WJ.LIo0() >>> 0
     }
 
-    function nW() {
-      si.hlbk()
+    function vR() {
+      WJ.CqFC()
     }
 
-    function uW() {
-      let WW, iW;
+    function OR() {
+      let RR, JR;
       try {
-        const OW = si.waU3();
-        return WW = OW[0], iW = OW[1], zW(OW[0], OW[1])
+        const GR = WJ.VZ6d();
+        return RR = GR[0], JR = GR[1], TR(GR[0], GR[1])
       } finally {
-        si.NQBs(WW, iW, 1)
+        WJ.jJvb(RR, JR, 1)
       }
     }
 
-    function oW(WW) {
-      si.WKG9(XW(WW))
+    function xR(RR) {
+      WJ.nIa7(SR(RR))
     }
 
-    function dW() {
+    function NR() {
       return {
         __proto__: null,
-        YXom: {
+        tG6Z: {
           __proto__: null,
-          SKwr: function(WW, iW) {
-            return XW(Error(zW(WW, iW)))
+          qG9I: function(RR, JR) {
+            return SR(Error(TR(RR, JR)))
           },
-          xftO: function(WW, iW) {
-            throw new Error(zW(WW, iW))
+          V34K: function(RR, JR) {
+            throw new Error(TR(RR, JR))
           },
-          WKIv: function(WW) {
-            mi(WW).call()
+          R0bE: function(RR) {
+            yJ(RR).call()
           },
-          xsi2: function(WW, iW) {
-            console.error(zW(WW, iW))
+          eU84: function(RR, JR) {
+            console.error(TR(RR, JR))
           },
-          yxoH: function() {
+          tBZO: function() {
             return performance.now()
           },
-          lkn2: function(WW) {
-            xi(WW)
+          wjtm: function(RR) {
+            wJ(RR)
           }
         }
       }
     }
-    Symbol.dispose && (ZW.prototype[Symbol.dispose] = ZW.prototype.free);
-    const eW = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (KR.prototype[Symbol.dispose] = KR.prototype.free);
+    const DR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.hZNs(WW, 1))),
-      vW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.FaJF(RR, 1))),
+      HR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.UAWg(WW, 1))),
-      gW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.JJt1(RR, 1))),
+      oR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.Joyz(WW, 1))),
-      DW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.boWK(RR, 1))),
+      cR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.cghE(WW, 1))),
-      VW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.icJg(RR, 1))),
+      PR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.G2BH(WW, 1))),
-      pW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.rIoC(RR, 1))),
+      IR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.rT3f(WW, 1))),
-      fW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.LKRU(RR, 1))),
+      mR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.O3Qz(WW, 1))),
-      CW = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((RR => WJ.lZhS(RR, 1))),
+      zR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((WW => si.fy4U(WW, 1)));
+      } : new FinalizationRegistry((RR => WJ.LuBB(RR, 1)));
 
-    function XW(WW) {
-      Ni === Ei.length && Ei.push(Ei.length + 1);
-      const iW = Ni;
-      return Ni = Ei[iW], Ei[iW] = WW, iW
+    function SR(RR) {
+      uJ === tJ.length && tJ.push(tJ.length + 1);
+      const JR = uJ;
+      return uJ = tJ[JR], tJ[JR] = RR, JR
     }
 
-    function BW(WW, iW) {
-      if (!(WW instanceof iW)) throw new Error(`expected instance of ${iW.name}`)
+    function jR(RR, JR) {
+      if (!(RR instanceof JR)) throw new Error(`expected instance of ${JR.name}`)
     }
 
-    function qW(WW, iW) {
-      return WW >>>= 0, aW().subarray(WW / 8, WW / 8 + iW)
+    function dR(RR, JR) {
+      return RR >>>= 0, QR().subarray(RR / 8, RR / 8 + JR)
     }
 
-    function RW(WW, iW) {
-      return WW >>>= 0, Wi().subarray(WW / 4, WW / 4 + iW)
+    function ER(RR, JR) {
+      return RR >>>= 0, RJ().subarray(RR / 4, RR / 4 + JR)
     }
 
-    function GW(WW, iW) {
-      return WW >>>= 0, Oi().subarray(WW / 1, WW / 1 + iW)
+    function YR(RR, JR) {
+      return RR >>>= 0, GJ().subarray(RR / 1, RR / 1 + JR)
     }
-    let IW = null;
+    let kR = null;
 
-    function aW() {
-      return null !== IW && 0 !== IW.byteLength || (IW = new Float64Array(si.memory.buffer)), IW
+    function QR() {
+      return null !== kR && 0 !== kR.byteLength || (kR = new Float64Array(WJ.memory.buffer)), kR
     }
-    let rW = null;
+    let FR = null;
 
-    function zW(WW, iW) {
-      return function(WW, iW) {
-        bi += iW, bi >= Ai && (li = new TextDecoder("utf-8", {
+    function TR(RR, JR) {
+      return function(RR, JR) {
+        aJ += JR, aJ >= eJ && (rJ = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), li.decode(), bi = iW);
-        return li.decode(Oi().subarray(WW, WW + iW))
-      }(WW >>> 0, iW)
+        }), rJ.decode(), aJ = JR);
+        return rJ.decode(GJ().subarray(RR, RR + JR))
+      }(RR >>> 0, JR)
     }
-    let FW = null;
-    let QW = null;
+    let sR = null;
+    let hR = null;
 
-    function Wi() {
-      return null !== QW && 0 !== QW.byteLength || (QW = new Uint32Array(si.memory.buffer)), QW
+    function RJ() {
+      return null !== hR && 0 !== hR.byteLength || (hR = new Uint32Array(WJ.memory.buffer)), hR
     }
-    let ii = null;
+    let JJ = null;
 
-    function Oi() {
-      return null !== ii && 0 !== ii.byteLength || (ii = new Uint8Array(si.memory.buffer)), ii
-    }
-
-    function mi(WW) {
-      return Ei[WW]
-    }
-    let Ei = new Array(1024).fill(void 0);
-    Ei.push(void 0, null, !0, !1);
-    let Ni = Ei.length;
-
-    function Pi(WW) {
-      return void 0 === WW || null === WW
+    function GJ() {
+      return null !== JJ && 0 !== JJ.byteLength || (JJ = new Uint8Array(WJ.memory.buffer)), JJ
     }
 
-    function Li(WW, iW) {
-      const OW = iW(2 * WW.length, 2) >>> 0;
-      return (null !== FW && 0 !== FW.byteLength || (FW = new Uint16Array(si.memory.buffer)), FW).set(WW, OW / 2), Mi = WW.length, OW
+    function yJ(RR) {
+      return tJ[RR]
+    }
+    let tJ = new Array(1024).fill(void 0);
+    tJ.push(void 0, null, !0, !1);
+    let uJ = tJ.length;
+
+    function ZJ(RR) {
+      return void 0 === RR || null === RR
     }
 
-    function ci(WW, iW) {
-      const OW = iW(4 * WW.length, 4) >>> 0;
-      return Wi().set(WW, OW / 4), Mi = WW.length, OW
+    function qJ(RR, JR) {
+      const GR = JR(2 * RR.length, 2) >>> 0;
+      return (null !== sR && 0 !== sR.byteLength || (sR = new Uint16Array(WJ.memory.buffer)), sR).set(RR, GR / 2), AJ = RR.length, GR
     }
 
-    function wi(WW, iW) {
-      const OW = iW(1 * WW.length, 1) >>> 0;
-      return Oi().set(WW, OW / 1), Mi = WW.length, OW
+    function iJ(RR, JR) {
+      const GR = JR(4 * RR.length, 4) >>> 0;
+      return RJ().set(RR, GR / 4), AJ = RR.length, GR
     }
 
-    function ti(WW, iW) {
-      const OW = iW(8 * WW.length, 8) >>> 0;
-      return aW().set(WW, OW / 8), Mi = WW.length, OW
+    function fJ(RR, JR) {
+      const GR = JR(1 * RR.length, 1) >>> 0;
+      return GJ().set(RR, GR / 1), AJ = RR.length, GR
     }
 
-    function Zi(WW, iW, OW) {
-      if (void 0 === OW) {
-        const OW = ji.encode(WW),
-          mW = iW(OW.length, 1) >>> 0;
-        return Oi().subarray(mW, mW + OW.length).set(OW), Mi = OW.length, mW
+    function VJ(RR, JR) {
+      const GR = JR(8 * RR.length, 8) >>> 0;
+      return QR().set(RR, GR / 8), AJ = RR.length, GR
+    }
+
+    function KJ(RR, JR, GR) {
+      if (void 0 === GR) {
+        const GR = LJ.encode(RR),
+          yR = JR(GR.length, 1) >>> 0;
+        return GJ().subarray(yR, yR + GR.length).set(GR), AJ = GR.length, yR
       }
-      let mW = WW.length,
-        EW = iW(mW, 1) >>> 0;
-      const NW = Oi();
-      let PW = 0;
-      for (; PW < mW; PW++) {
-        const iW = WW.charCodeAt(PW);
-        if (iW > 127) break;
-        NW[EW + PW] = iW
+      let yR = RR.length,
+        tR = JR(yR, 1) >>> 0;
+      const uR = GJ();
+      let ZR = 0;
+      for (; ZR < yR; ZR++) {
+        const JR = RR.charCodeAt(ZR);
+        if (JR > 127) break;
+        uR[tR + ZR] = JR
       }
-      if (PW !== mW) {
-        0 !== PW && (WW = WW.slice(PW)), EW = OW(EW, mW, mW = PW + 3 * WW.length, 1) >>> 0;
-        const iW = Oi().subarray(EW + PW, EW + mW);
-        PW += ji.encodeInto(WW, iW).written, EW = OW(EW, mW, PW, 1) >>> 0
+      if (ZR !== yR) {
+        0 !== ZR && (RR = RR.slice(ZR)), tR = GR(tR, yR, yR = ZR + 3 * RR.length, 1) >>> 0;
+        const JR = GJ().subarray(tR + ZR, tR + yR);
+        ZR += LJ.encodeInto(RR, JR).written, tR = GR(tR, yR, ZR, 1) >>> 0
       }
-      return Mi = PW, EW
+      return AJ = ZR, tR
     }
 
-    function xi(WW) {
-      const iW = mi(WW);
-      return function(WW) {
-        WW < 1028 || (Ei[WW] = Ni, Ni = WW)
-      }(WW), iW
+    function wJ(RR) {
+      const JR = yJ(RR);
+      return function(RR) {
+        RR < 1028 || (tJ[RR] = uJ, uJ = RR)
+      }(RR), JR
     }
-    let li = new TextDecoder("utf-8", {
+    let rJ = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    li.decode();
-    const Ai = 2146435072;
-    let bi = 0;
-    const ji = new TextEncoder;
-    "encodeInto" in ji || (ji.encodeInto = function(WW, iW) {
-      const OW = ji.encode(WW);
-      return iW.set(OW), {
-        read: WW.length,
-        written: OW.length
+    rJ.decode();
+    const eJ = 2146435072;
+    let aJ = 0;
+    const LJ = new TextEncoder;
+    "encodeInto" in LJ || (LJ.encodeInto = function(RR, JR) {
+      const GR = LJ.encode(RR);
+      return JR.set(GR), {
+        read: RR.length,
+        written: GR.length
       }
     });
-    let Ui, ki, si, Mi = 0;
+    let nJ, UJ, WJ, AJ = 0;
 
-    function Ki(WW, iW) {
-      return ki = WW, si = WW.exports, Ui = iW, IW = null, rW = null, FW = null, QW = null, ii = null, si.ctR0(), si
+    function CJ(RR, JR) {
+      return UJ = RR, WJ = RR.exports, nJ = JR, kR = null, FR = null, sR = null, hR = null, JJ = null, WJ.o4zk(), WJ
     }
 
-    function Si(WW) {
-      if (void 0 !== si) return si;
-      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
-        module: WW
-      } = WW) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const iW = dW();
-      WW instanceof WebAssembly.Module || (WW = new WebAssembly.Module(WW));
-      return Ki(new WebAssembly.Instance(WW, iW), WW)
+    function XJ(RR) {
+      if (void 0 !== WJ) return WJ;
+      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
+        module: RR
+      } = RR) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const JR = NR();
+      RR instanceof WebAssembly.Module || (RR = new WebAssembly.Module(RR));
+      return CJ(new WebAssembly.Instance(RR, JR), RR)
     }
-    async function Yi(WW) {
-      if (void 0 !== si) return si;
-      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
-        module_or_path: WW
-      } = WW) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const iW = dW();
-      ("string" === typeof WW || "function" === typeof Request && WW instanceof Request || "function" === typeof URL && WW instanceof URL) && (WW = fetch(WW));
+    async function MJ(RR) {
+      if (void 0 !== WJ) return WJ;
+      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
+        module_or_path: RR
+      } = RR) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const JR = NR();
+      ("string" === typeof RR || "function" === typeof Request && RR instanceof Request || "function" === typeof URL && RR instanceof URL) && (RR = fetch(RR));
       const {
-        instance: OW,
-        module: mW
-      } = await async function(WW, iW) {
-        if ("function" === typeof Response && WW instanceof Response) {
-          if (!WW.ok) throw new Error(`failed to fetch Wasm: ${WW.status} ${WW.statusText} fetching '${WW.url}'`);
+        instance: GR,
+        module: yR
+      } = await async function(RR, JR) {
+        if ("function" === typeof Response && RR instanceof Response) {
+          if (!RR.ok) throw new Error(`failed to fetch Wasm: ${RR.status} ${RR.statusText} fetching '${RR.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(WW, iW)
-          } catch (OW) {
-            if (! function(WW) {
-                switch (WW) {
+            return await WebAssembly.instantiateStreaming(RR, JR)
+          } catch (GR) {
+            if (! function(RR) {
+                switch (RR) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(WW.type) || "application/wasm" === WW.headers.get("Content-Type")) throw OW;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", OW)
+              }(RR.type) || "application/wasm" === RR.headers.get("Content-Type")) throw GR;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", GR)
           }
-          const mW = await WW.arrayBuffer();
-          return await WebAssembly.instantiate(mW, iW)
+          const yR = await RR.arrayBuffer();
+          return await WebAssembly.instantiate(yR, JR)
         } {
-          const OW = await WebAssembly.instantiate(WW, iW);
-          return OW instanceof WebAssembly.Instance ? {
-            instance: OW,
-            module: WW
-          } : OW
+          const GR = await WebAssembly.instantiate(RR, JR);
+          return GR instanceof WebAssembly.Instance ? {
+            instance: GR,
+            module: RR
+          } : GR
         }
-      }(await WW, iW);
-      return Ki(OW, mW)
+      }(await RR, JR);
+      return CJ(GR, yR)
     }
   },
-  37286: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      f: () => LW,
-      i: () => cW
+  37205: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      f: () => qR,
+      g: () => iR
     });
-    var mW = OW(37295),
-      EW = OW(2381),
-      NW = OW(37297);
-    const PW = {
-      name: EW.d,
-      url: () => new OW.U(OW(37306)),
-      init: mW.default,
-      bindings: mW
+    var yR = GR(37208),
+      tR = GR(2448),
+      uR = GR(37213);
+    const ZR = {
+      name: tR.c,
+      url: () => new GR.U(GR(37219)),
+      init: yR.default,
+      bindings: yR
     };
 
-    function LW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW,
-        iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW,
-        OW = arguments.length > 2 ? arguments[2] : void 0;
-      return (0, NW.o)(WW, iW, OW)
+    function qR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ZR,
+        JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR,
+        GR = arguments.length > 2 ? arguments[2] : void 0;
+      return (0, uR.r)(RR, JR, GR)
     }
 
-    function cW(WW) {
-      return (0, EW.L)((() => WW), mW, PW)
+    function iR(RR) {
+      return (0, tR.z)((() => RR), yR, ZR)
     }
   },
-  37279: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      return new Error(`${WW}: ${iW instanceof Error?`${iW.name}: ${iW.message}`:String(iW)}`, {
-        cause: iW
+  37191: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      return new Error(`${RR}: ${JR instanceof Error?`${JR.name}: ${JR.message}`:String(JR)}`, {
+        cause: JR
       })
     }
-    OW.d(iW, {
-      e: () => mW
+    GR.d(JR, {
+      b: () => yR
     })
   },
-  37271: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => PW,
-      f: () => cW
+  37187: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      f: () => iR
     });
-    var mW = OW(2388),
-      EW = OW(7625),
-      NW = OW(37279);
+    var yR = GR(2457),
+      tR = GR(7762),
+      uR = GR(37191);
 
-    function PW() {
-      return new URL(new OW.U(OW(37283)).href, globalThis.location?.href).href
+    function ZR() {
+      return new URL(new GR.U(GR(37199)).href, globalThis.location?.href).href
     }
-    let LW = null;
+    let qR = null;
 
-    function cW() {
-      return LW ??= (async () => (0, mW.B)(new URL(PW()), (0, EW.c)("bloxd_wasm_textures")))().catch((WW => {
-        throw (0, NW.e)((0, mW.E)(WW), WW)
-      })), LW
+    function iR() {
+      return qR ??= (async () => (0, yR.A)(new URL(ZR()), (0, tR.c)("bloxd_wasm_textures")))().catch((RR => {
+        throw (0, uR.b)((0, yR.E)(RR), RR)
+      })), qR
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

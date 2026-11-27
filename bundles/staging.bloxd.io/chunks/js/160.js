@@ -1,94 +1,94 @@
 export const id = 160;
 export const ids = [159, 160];
 export const modules = {
-  7656: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      forgetShaderPackActiveHint: () => HW,
-      isOtherApiVersion: () => yW,
-      isShaderPackActive: () => MW,
-      isShaderPackChangePending: () => YW,
-      markShaderPackChangePending: () => SW,
-      pageShaderPackValidationVersion: () => TW,
-      reconcileStoredShaderPackHint: () => hW,
-      removeShaderPack: () => sW,
-      replaceShaderPack: () => jW,
-      saveShaderPack: () => bW,
-      shaderPackNeedsCheck: () => JW,
-      storedPackOutcome: () => KW,
-      storedShaderPackFiles: () => xW,
-      toStoredShaderPack: () => ZW
+  7800: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      forgetShaderPackActiveHint: () => bR,
+      isOtherApiVersion: () => BR,
+      isShaderPackActive: () => AR,
+      isShaderPackChangePending: () => MR,
+      markShaderPackChangePending: () => XR,
+      pageShaderPackValidationVersion: () => lR,
+      reconcileStoredShaderPackHint: () => gR,
+      removeShaderPack: () => WR,
+      replaceShaderPack: () => LR,
+      saveShaderPack: () => aR,
+      shaderPackNeedsCheck: () => pR,
+      storedPackOutcome: () => CR,
+      storedShaderPackFiles: () => wR,
+      toStoredShaderPack: () => KR
     });
-    var mW = OW(5970),
-      EW = OW(5961),
-      NW = OW(39),
-      PW = OW(4666),
-      LW = OW(7659),
-      cW = OW(7637);
-    const wW = "shaderPackChangePending";
-    let tW = null;
+    var yR = GR(6084),
+      tR = GR(6080),
+      uR = GR(46),
+      ZR = GR(4776),
+      qR = GR(7802),
+      iR = GR(7773);
+    const fR = "shaderPackChangePending";
+    let VR = null;
 
-    function ZW(WW, iW, OW) {
+    function KR(RR, JR, GR) {
       return {
-        manifest: WW.manifest,
-        files: (0, mW.A)(WW.files),
-        validation: iW,
-        ...OW && {
-          listing: OW
+        manifest: RR.manifest,
+        files: (0, yR.x)(RR.files),
+        validation: JR,
+        ...GR && {
+          listing: GR
         }
       }
     }
 
-    function xW(WW) {
-      return Object.keys(WW.files).map((iW => ({
-        path: iW,
-        source: WW.files[iW]
+    function wR(RR) {
+      return Object.keys(RR.files).map((JR => ({
+        path: JR,
+        source: RR.files[JR]
       })))
     }
-    let lW = Promise.resolve();
+    let rR = Promise.resolve();
 
-    function AW(WW) {
-      const iW = lW.then(WW);
-      return lW = iW.catch((() => {})), iW
-    }
-
-    function bW(WW, iW) {
-      return AW((() => UW(WW, iW)))
+    function eR(RR) {
+      const JR = rR.then(RR);
+      return rR = JR.catch((() => {})), JR
     }
 
-    function jW(WW, iW, OW) {
-      return AW((async () => JSON.stringify(await (0, LW.g)()) === JSON.stringify(WW) && (null === iW ? (await kW(), !0) : UW(iW, OW))))
-    }
-    async function UW(WW, iW) {
-      const OW = await NW.f.setItem(LW.c, WW);
-      return OW && nW(WW, iW), OW
-    }
-    async function kW() {
-      await NW.f.removeItem(LW.c), NW.i.removeItem(PW.b)
+    function aR(RR, JR) {
+      return eR((() => nR(RR, JR)))
     }
 
-    function sW() {
-      return AW(kW)
+    function LR(RR, JR, GR) {
+      return eR((async () => JSON.stringify(await (0, qR.d)()) === JSON.stringify(RR) && (null === JR ? (await UR(), !0) : nR(JR, GR))))
+    }
+    async function nR(RR, JR) {
+      const GR = await uR.g.setItem(qR.c, RR);
+      return GR && vR(RR, JR), GR
+    }
+    async function UR() {
+      await uR.g.removeItem(qR.c), uR.i.removeItem(ZR.e)
     }
 
-    function MW(WW, iW) {
-      return "active" === KW(WW, iW).kind
+    function WR() {
+      return eR(UR)
     }
 
-    function KW(WW, iW) {
-      var OW;
-      return null === WW ? {
+    function AR(RR, JR) {
+      return "active" === CR(RR, JR).kind
+    }
+
+    function CR(RR, JR) {
+      var GR;
+      return null === RR ? {
         kind: "none",
         reason: "nothingStored"
-      } : yW(WW) ? {
+      } : BR(RR) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.ok) || WW.validation.fromRecheck ? null === iW ? {
+      } : !1 !== (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.ok) || RR.validation.fromRecheck ? null === JR ? {
         kind: "none",
         reason: "noCompiler"
-      } : JW(WW, iW) ? {
+      } : pR(RR, JR) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : WW.validation.ok ? {
+      } : RR.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -99,68 +99,68 @@ export const modules = {
       }
     }
 
-    function SW() {
-      NW.j.setItem(wW, performance.timeOrigin)
+    function XR() {
+      uR.k.setItem(fR, performance.timeOrigin)
     }
 
-    function YW() {
-      return NW.j.getItem(wW) === performance.timeOrigin
+    function MR() {
+      return uR.k.getItem(fR) === performance.timeOrigin
     }
 
-    function yW(WW) {
-      return !(0, EW.g)(WW.manifest.apiVersion)
+    function BR(RR) {
+      return !(0, tR.i)(RR.manifest.apiVersion)
     }
 
-    function TW(WW) {
-      return tW ??= WW.IH((0, cW.shaderPackTextures)()), tW
+    function lR(RR) {
+      return VR ??= RR.iH((0, iR.shaderPackTextures)()), VR
     }
 
-    function JW(WW, iW) {
-      var OW;
-      return (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.headerVersion) !== TW(iW)
+    function pR(RR, JR) {
+      var GR;
+      return (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.headerVersion) !== lR(JR)
     }
 
-    function hW(WW) {
-      return AW((async () => {
-        nW(await (0, LW.g)(!0), WW)
+    function gR(RR) {
+      return eR((async () => {
+        vR(await (0, qR.d)(!0), RR)
       }))
     }
 
-    function HW() {
-      return AW((async () => {
-        NW.i.removeItem(PW.b)
+    function bR() {
+      return eR((async () => {
+        uR.i.removeItem(ZR.e)
       }))
     }
 
-    function nW(WW, iW) {
-      MW(WW, iW) ? NW.i.setItem(PW.b, !0) : NW.i.removeItem(PW.b)
+    function vR(RR, JR) {
+      AR(RR, JR) ? uR.i.setItem(ZR.e, !0) : uR.i.removeItem(ZR.e)
     }
   },
-  7637: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      loadShaderPackTextures: () => PW,
-      shaderPackTextures: () => LW
+  7773: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      loadShaderPackTextures: () => ZR,
+      shaderPackTextures: () => qR
     });
-    var mW = OW(5970);
-    let EW = null,
-      NW = null;
+    var yR = GR(6084);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return NW ??= Promise.all([OW.e(85), OW.e(126)]).then((() => OW(42015))).then((WW => {
+    function ZR() {
+      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: iW,
-          textureNameToIndex: OW,
-          textureAnimationData: NW
-        } = WW;
-        return EW ??= (0, mW.o)(OW, NW, iW), EW
-      })), NW
+          FORMER_BLOCK_IMAGE_NAMES: JR,
+          textureNameToIndex: GR,
+          textureAnimationData: uR
+        } = RR;
+        return tR ??= (0, yR.j)(GR, uR, JR), tR
+      })), uR
     }
 
-    function LW() {
-      if (null === EW) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return EW
+    function qR() {
+      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return tR
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

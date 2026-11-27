@@ -1,117 +1,117 @@
 export const id = 116;
 export const ids = [116];
 export const modules = {
-  5668: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => xW
+  5792: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => wR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1391),
-      PW = OW(1383),
-      LW = OW(4746),
-      cW = OW(136),
-      wW = OW(4787),
-      tW = OW(4776),
-      ZW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1468),
+      ZR = GR(1465),
+      qR = GR(4850),
+      iR = GR(134),
+      fR = GR(4889),
+      VR = GR(4881),
+      KR = GR(1378);
 
-    function xW(WW) {
+    function wR(RR) {
       let {
-        game: iW
-      } = WW;
-      const OW = (0, cW.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        mW = (0, wW.f)(iW, OW),
-        xW = (0, LW.f)(mW),
-        lW = void 0 !== xW.blurhash;
-      return (0, ZW.jsxs)("div", {
+        game: JR
+      } = RR;
+      const GR = (0, iR.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        yR = (0, fR.d)(JR, GR),
+        wR = (0, qR.h)(yR),
+        rR = void 0 !== wR.blurhash;
+      return (0, KR.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [xW.isLoading && !lW && (0, ZW.jsx)(PW.d, {
+        children: [wR.isLoading && !rR && (0, KR.jsx)(ZR.d, {
           loaderType: "Secondary"
-        }), !xW.failed && (null !== xW.src || lW) && (0, ZW.jsx)("div", {
-          className: EW()("SchematicImage", tW.j, {
-            SchematicImageFadeIn: xW.fadeIn && !lW
+        }), !wR.failed && (null !== wR.src || rR) && (0, KR.jsx)("div", {
+          className: tR()("SchematicImage", VR.f, {
+            SchematicImageFadeIn: wR.fadeIn && !rR
           }),
-          style: (0, tW.f)(xW),
-          children: (0, ZW.jsx)(tW.b, {
-            image: xW
+          style: (0, VR.c)(wR),
+          children: (0, KR.jsx)(VR.b, {
+            image: wR
           })
-        }), xW.failed && (0, ZW.jsx)("div", {
+        }), wR.failed && (0, KR.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, ZW.jsx)(NW.c, {
+          children: (0, KR.jsx)(uR.d, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5660: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => TW
+  5777: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => lR
     });
-    OW(5662);
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(327),
-      LW = OW(1065),
-      cW = OW(1217),
-      wW = OW(1172),
-      tW = OW(1107),
-      ZW = OW(1584),
-      xW = OW(5668),
-      lW = OW(1532),
-      AW = OW(5673),
-      bW = OW(1383),
-      jW = OW(1605),
-      UW = OW(5325),
-      kW = OW(1391),
-      sW = OW(1049),
-      MW = OW(3488),
-      KW = OW(5676),
-      SW = OW(1638),
-      YW = OW(1283);
+    GR(5785);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(359),
+      qR = GR(1141),
+      iR = GR(1317),
+      fR = GR(1270),
+      VR = GR(1196),
+      KR = GR(1647),
+      wR = GR(5792),
+      rR = GR(1590),
+      eR = GR(5798),
+      aR = GR(1465),
+      LR = GR(1663),
+      nR = GR(5430),
+      UR = GR(1468),
+      WR = GR(1120),
+      AR = GR(3611),
+      CR = GR(5804),
+      XR = GR(1695),
+      MR = GR(1378);
 
-    function yW() {
+    function BR() {
       const {
-        t: WW
-      } = (0, wW.B)(), iW = (0, jW.useNavigatePreserveSearch)(), OW = (0, MW.m)(), EW = (0, mW.useMemo)((() => [...sW.e].sort(((iW, mW) => {
-        var EW, NW;
-        const PW = (null !== (EW = (0, MW.e)(mW, OW)) && void 0 !== EW ? EW : 0) - (null !== (NW = (0, MW.e)(iW, OW)) && void 0 !== NW ? NW : 0);
-        return 0 !== PW ? PW : (0, SW.s)(iW, WW).localeCompare((0, SW.s)(mW, WW))
-      }))), [OW, WW]);
-      return (0, YW.jsxs)(YW.Fragment, {
-        children: [(0, YW.jsx)("div", {
+        t: RR
+      } = (0, fR.A)(), JR = (0, LR.useNavigatePreserveSearch)(), GR = (0, AR.l)(), tR = (0, yR.useMemo)((() => [...WR.b].sort(((JR, yR) => {
+        var tR, uR;
+        const ZR = (null !== (tR = (0, AR.c)(yR, GR)) && void 0 !== tR ? tR : 0) - (null !== (uR = (0, AR.c)(JR, GR)) && void 0 !== uR ? uR : 0);
+        return 0 !== ZR ? ZR : (0, XR.n)(JR, RR).localeCompare((0, XR.n)(yR, RR))
+      }))), [GR, RR]);
+      return (0, MR.jsxs)(MR.Fragment, {
+        children: [(0, MR.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, YW.jsx)("h1", {
+          children: (0, MR.jsx)("h1", {
             className: "StudioPageTitle",
-            children: WW("studio:firstPartyGames")
+            children: RR("studio:firstPartyGames")
           })
-        }), (0, YW.jsx)(AW.b, {
+        }), (0, MR.jsx)(eR.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: WW("general:game")
+            header: RR("general:game")
           }, {
             key: "ccu",
-            header: WW("studio:metricCcu")
+            header: RR("studio:metricCcu")
           }],
-          rows: EW,
-          getRowKey: WW => WW,
-          renderRow: mW => {
-            var EW;
-            return (0, YW.jsxs)("tr", {
+          rows: tR,
+          getRowKey: RR => RR,
+          renderRow: yR => {
+            var tR;
+            return (0, MR.jsxs)("tr", {
               onClick: () => {
-                iW((0, SW.v)((0, LW.e)(mW, !0)))
+                JR((0, XR.p)((0, qR.e)(yR, !0)))
               },
-              children: [(0, YW.jsx)("td", {
-                children: (0, YW.jsx)(KW.e, {
-                  thumbnail: (0, YW.jsx)(KW.c, {
-                    game: mW
+              children: [(0, MR.jsx)("td", {
+                children: (0, MR.jsx)(CR.e, {
+                  thumbnail: (0, MR.jsx)(CR.d, {
+                    game: yR
                   }),
-                  name: (0, SW.s)(mW, WW)
+                  name: (0, XR.n)(yR, RR)
                 })
-              }), (0, YW.jsx)("td", {
-                children: (0, cW.V)(null !== (EW = (0, MW.e)(mW, OW)) && void 0 !== EW ? EW : 0)
+              }), (0, MR.jsx)("td", {
+                children: (0, iR.J)(null !== (tR = (0, AR.c)(yR, GR)) && void 0 !== tR ? tR : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function TW() {
+    function lR() {
       const {
-        t: WW
-      } = (0, wW.B)(), iW = (0, jW.useNavigatePreserveSearch)(), {
-        userContext: OW,
-        isUserContextUpdating: EW
-      } = (0, tW.e)(), {
-        isCreating: sW,
-        create: MW
-      } = (0, UW.h)(), [TW, JW] = (0, mW.useState)(null), [hW, HW] = (0, mW.useState)(null), [nW, uW] = (0, mW.useState)(!1);
-      (0, mW.useEffect)((() => {
-        EW || (uW(!1), ZW.e.getPublishedGamePreviews(OW, {
+        t: RR
+      } = (0, fR.A)(), JR = (0, LR.useNavigatePreserveSearch)(), {
+        userContext: GR,
+        isUserContextUpdating: tR
+      } = (0, VR.d)(), {
+        isCreating: WR,
+        create: AR
+      } = (0, nR.g)(), [lR, pR] = (0, yR.useState)(null), [gR, bR] = (0, yR.useState)(null), [vR, OR] = (0, yR.useState)(!1);
+      (0, yR.useEffect)((() => {
+        tR || (OR(!1), KR.c.getPublishedGamePreviews(GR, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,168 +140,168 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((WW => {
-          JW({
-            ...WW,
-            results: (0, PW.cb)(WW.results)
+        }).then((RR => {
+          pR({
+            ...RR,
+            results: (0, ZR.$)(RR.results)
           })
-        })).catch((WW => {
-          console.error("Failed to get owned published games", WW), uW(!0)
-        })), ZW.e.getOwnedUnpublishedGames(OW).then((WW => {
-          HW(WW)
-        })).catch((WW => {
-          console.error("Failed to get owned unpublished games", WW), uW(!0)
+        })).catch((RR => {
+          console.error("Failed to get owned published games", RR), OR(!0)
+        })), KR.c.getOwnedUnpublishedGames(GR).then((RR => {
+          bR(RR)
+        })).catch((RR => {
+          console.error("Failed to get owned unpublished games", RR), OR(!0)
         })))
-      }), [EW, OW]);
-      const oW = null !== TW && null !== hW ? [...TW.results, ...hW] : [],
-        dW = !nW && (null === TW || null === hW),
-        eW = !dW && !nW && 0 === oW.length,
-        vW = !EW && OW.playerHasRank("developer");
-      return (0, YW.jsxs)("div", {
+      }), [tR, GR]);
+      const xR = null !== lR && null !== gR ? [...lR.results, ...gR] : [],
+        NR = !vR && (null === lR || null === gR),
+        DR = !NR && !vR && 0 === xR.length,
+        HR = !tR && GR.playerHasRank("developer");
+      return (0, MR.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, YW.jsxs)("div", {
+        children: [(0, MR.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, YW.jsx)("h1", {
+          children: [(0, MR.jsx)("h1", {
             className: "StudioPageTitle",
-            children: WW("studio:myGames")
-          }), (0, YW.jsxs)(lW.n, {
-            onClick: MW,
-            loading: sW,
-            children: [(0, YW.jsx)(kW.c, {
+            children: RR("studio:myGames")
+          }), (0, MR.jsxs)(rR.n, {
+            onClick: AR,
+            loading: WR,
+            children: [(0, MR.jsx)(UR.d, {
               name: "plus"
-            }), " ", WW("homePage:createCustomGame")]
+            }), " ", RR("homePage:createCustomGame")]
           })]
-        }), dW && (0, YW.jsx)("div", {
+        }), NR && (0, MR.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, YW.jsx)(bW.d, {})
-        }), nW && (0, YW.jsx)("div", {
+          children: (0, MR.jsx)(aR.d, {})
+        }), vR && (0, MR.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: WW("studio:failedToLoadGames")
-        }), eW && (0, YW.jsx)("div", {
+          children: RR("studio:failedToLoadGames")
+        }), DR && (0, MR.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: WW("studio:noGamesYet")
-        }), !dW && !nW && !eW && (0, YW.jsx)(AW.b, {
+          children: RR("studio:noGamesYet")
+        }), !NR && !vR && !DR && (0, MR.jsx)(eR.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: WW("general:game")
+            header: RR("general:game")
           }, {
             key: "status",
-            header: WW("general:status")
+            header: RR("general:status")
           }, {
             key: "ccu",
-            header: WW("studio:metricCcu")
+            header: RR("studio:metricCcu")
           }, {
             key: "favourites",
-            header: WW("general:favourites")
+            header: RR("general:favourites")
           }],
-          rows: oW,
-          getRowKey: WW => WW.schematicId,
-          renderRow: OW => {
-            const mW = function(WW) {
-              return (0, SW.f)(WW.gamePublished, "takenDown" in WW && WW.takenDown)
-            }(OW);
-            return (0, YW.jsxs)("tr", {
+          rows: xR,
+          getRowKey: RR => RR.schematicId,
+          renderRow: GR => {
+            const yR = function(RR) {
+              return (0, XR.d)(RR.gamePublished, "takenDown" in RR && RR.takenDown)
+            }(GR);
+            return (0, MR.jsxs)("tr", {
               onClick: () => {
-                var WW;
-                WW = OW.schematicId, iW((0, SW.v)((0, LW.d)(WW)))
+                var RR;
+                RR = GR.schematicId, JR((0, XR.p)((0, qR.d)(RR)))
               },
-              children: [(0, YW.jsx)("td", {
-                children: (0, YW.jsx)(KW.e, {
-                  thumbnail: (0, YW.jsx)(xW.b, {
-                    game: OW
+              children: [(0, MR.jsx)("td", {
+                children: (0, MR.jsx)(CR.e, {
+                  thumbnail: (0, MR.jsx)(wR.e, {
+                    game: GR
                   }),
-                  name: OW.name
+                  name: GR.name
                 })
-              }), (0, YW.jsx)("td", {
-                children: (0, YW.jsx)("span", {
-                  className: NW()("StudioGameListStatusChip", {
-                    StudioGameListStatusChipPublished: "published" === mW,
-                    StudioGameListStatusChipTakenDown: "takenDown" === mW
+              }), (0, MR.jsx)("td", {
+                children: (0, MR.jsx)("span", {
+                  className: uR()("StudioGameListStatusChip", {
+                    StudioGameListStatusChipPublished: "published" === yR,
+                    StudioGameListStatusChipTakenDown: "takenDown" === yR
                   }),
-                  children: (0, SW.c)(WW, mW)
+                  children: (0, XR.c)(RR, yR)
                 })
-              }), (0, YW.jsx)("td", {
-                children: (0, cW.V)(OW.ccu)
-              }), (0, YW.jsx)("td", {
-                children: (0, cW.V)(OW.favourites)
+              }), (0, MR.jsx)("td", {
+                children: (0, iR.J)(GR.ccu)
+              }), (0, MR.jsx)("td", {
+                children: (0, iR.J)(GR.favourites)
               })]
             })
           }
-        }), vW && (0, YW.jsx)(yW, {})]
+        }), HR && (0, MR.jsx)(BR, {})]
       })
     }
   },
-  5676: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW,
-      e: () => NW
+  5804: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      e: () => uR
     });
-    var mW = OW(1638),
-      EW = OW(1283);
+    var yR = GR(1695),
+      tR = GR(1378);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        thumbnail: iW,
-        name: OW
-      } = WW;
-      return (0, EW.jsxs)("div", {
+        thumbnail: JR,
+        name: GR
+      } = RR;
+      return (0, tR.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, EW.jsx)("div", {
+        children: [(0, tR.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: iW
-        }), (0, EW.jsx)("span", {
+          children: JR
+        }), (0, tR.jsx)("span", {
           className: "StudioTableGameName",
-          children: OW
+          children: GR
         })]
       })
     }
 
-    function PW(WW) {
+    function ZR(RR) {
       let {
-        game: iW
-      } = WW;
-      return (0, EW.jsx)("img", {
+        game: JR
+      } = RR;
+      return (0, tR.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, mW.o)(iW),
+        src: (0, yR.k)(JR),
         alt: ""
       })
     }
   },
-  5673: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW
+  5798: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR
     });
-    var mW = OW(62),
-      EW = OW(1089),
-      NW = OW.n(EW),
-      PW = OW(1283);
+    var yR = GR(66),
+      tR = GR(1163),
+      uR = GR.n(tR),
+      ZR = GR(1378);
 
-    function LW(WW) {
+    function qR(RR) {
       let {
-        columns: iW,
-        rows: OW,
-        getRowKey: EW,
-        renderRow: LW,
-        className: cW
-      } = WW;
-      return (0, PW.jsxs)("table", {
-        className: NW()("Table", cW),
-        children: [(0, PW.jsx)("thead", {
-          children: (0, PW.jsx)("tr", {
-            children: iW.map((WW => (0, PW.jsx)("th", {
-              children: WW.header
-            }, WW.key)))
+        columns: JR,
+        rows: GR,
+        getRowKey: tR,
+        renderRow: qR,
+        className: iR
+      } = RR;
+      return (0, ZR.jsxs)("table", {
+        className: uR()("Table", iR),
+        children: [(0, ZR.jsx)("thead", {
+          children: (0, ZR.jsx)("tr", {
+            children: JR.map((RR => (0, ZR.jsx)("th", {
+              children: RR.header
+            }, RR.key)))
           })
-        }), (0, PW.jsx)("tbody", {
-          children: OW.map(((WW, iW) => (0, PW.jsx)(mW.Fragment, {
-            children: LW(WW, iW)
-          }, EW(WW))))
+        }), (0, ZR.jsx)("tbody", {
+          children: GR.map(((RR, JR) => (0, ZR.jsx)(yR.Fragment, {
+            children: qR(RR, JR)
+          }, tR(RR))))
         })]
       })
     }
   },
-  5662: () => {}
+  5785: () => {}
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,136 +1,136 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37868: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => jW,
-      h: () => UW,
-      l: () => xW,
-      o: () => ZW
+  37796: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => LR,
+      d: () => nR,
+      g: () => wR,
+      j: () => KR
     });
-    var mW = OW(35220),
-      EW = OW(3361),
-      NW = OW(3368),
-      PW = OW(9954),
-      LW = OW(1526),
-      cW = OW(62),
-      wW = OW(80),
-      tW = OW(1283);
+    var yR = GR(35140),
+      tR = GR(3494),
+      uR = GR(3498),
+      ZR = GR(10048),
+      qR = GR(1581),
+      iR = GR(66),
+      fR = GR(83),
+      VR = GR(1378);
 
-    function ZW() {
-      var WW;
-      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
-        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
+    function KR() {
+      var RR;
+      return (0, qR.h)(tR.e, (0, tR.r)()), (0, VR.jsx)(VR.Fragment, {
+        children: null === (RR = (0, tR.r)()) || void 0 === RR ? void 0 : RR.content
       })
     }
 
-    function xW(WW) {
-      var iW;
+    function wR(RR) {
+      var JR;
       let {
-        show: OW
-      } = WW;
-      (0, LW.g)(EW.g, (0, EW.F)());
-      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
-      return (0, cW.useEffect)((() => {
-        var WW;
-        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
-      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
-        showing: OW,
+        show: GR
+      } = RR;
+      (0, qR.h)(tR.e, (0, tR.r)());
+      const fR = null === (JR = (0, tR.r)()) || void 0 === JR ? void 0 : JR.menu;
+      return (0, iR.useEffect)((() => {
+        var RR;
+        GR || (null === fR || void 0 === fR || null === (RR = fR.onClose) || void 0 === RR || RR.call(fR), (0, uR.m)())
+      }), [GR, fR]), (0, iR.useEffect)((() => GR ? (0, ZR.e)(uR.q, uR.e) : void 0), [GR]), (0, VR.jsx)(yR.b, {
+        showing: GR,
         globallyUniqueKey: "clientGameMenu",
-        children: null === wW || void 0 === wW ? void 0 : wW.content
+        children: null === fR || void 0 === fR ? void 0 : fR.content
       })
     }
-    const lW = new Map,
-      AW = new Set;
+    const rR = new Map,
+      eR = new Set;
 
-    function bW(WW, iW) {
-      iW ? lW.set(WW, iW) : lW.delete(WW);
-      for (const OW of AW) OW()
+    function aR(RR, JR) {
+      JR ? rR.set(RR, JR) : rR.delete(RR);
+      for (const GR of eR) GR()
     }
 
-    function jW(WW) {
+    function LR(RR) {
       let {
-        placement: iW = "bottom"
-      } = WW;
-      const OW = (0, cW.useRef)(null);
-      return (0, cW.useLayoutEffect)((() => {
-        const WW = OW.current;
-        return bW(iW, WW), () => {
-          lW.get(iW) === WW && bW(iW, null)
+        placement: JR = "bottom"
+      } = RR;
+      const GR = (0, iR.useRef)(null);
+      return (0, iR.useLayoutEffect)((() => {
+        const RR = GR.current;
+        return aR(JR, RR), () => {
+          rR.get(JR) === RR && aR(JR, null)
         }
-      }), [iW]), (0, tW.jsx)("div", {
-        ref: OW,
-        id: `clientGameHud-${iW}`,
+      }), [JR]), (0, VR.jsx)("div", {
+        ref: GR,
+        id: `clientGameHud-${JR}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function UW(WW) {
+    function nR(RR) {
       let {
-        children: iW,
-        placement: OW = "bottom"
-      } = WW;
-      const [mW, EW] = (0, cW.useState)((() => {
-        var WW;
-        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
+        children: JR,
+        placement: GR = "bottom"
+      } = RR;
+      const [yR, tR] = (0, iR.useState)((() => {
+        var RR;
+        return null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null
       }));
-      return (0, cW.useEffect)((() => {
-        const WW = () => {
-          var WW;
-          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
+      return (0, iR.useEffect)((() => {
+        const RR = () => {
+          var RR;
+          tR(null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null)
         };
-        return AW.add(WW), WW(), () => {
-          AW.delete(WW)
+        return eR.add(RR), RR(), () => {
+          eR.delete(RR)
         }
-      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
+      }), [GR]), yR ? (0, fR.createPortal)(JR, yR) : null
     }
   },
-  35220: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  35140: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(5243),
-      EW = OW(5251);
+    var yR = GR(5343),
+      tR = GR(5347);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        children: iW,
-        showing: OW,
-        globallyUniqueKey: NW,
-        alwaysMountChildren: PW = !1,
-        doGameplayStartStopOnShow: LW = !0,
-        keepsMovement: cW = !1
-      } = WW;
-      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
+        children: JR,
+        showing: GR,
+        globallyUniqueKey: uR,
+        alwaysMountChildren: ZR = !1,
+        doGameplayStartStopOnShow: qR = !0,
+        keepsMovement: iR = !1
+      } = RR;
+      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
     }
   },
-  9954: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      e: () => EW
+  10048: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR,
+      e: () => tR
     });
-    let mW = null;
-    const EW = function(WW) {
-        const iW = {
-          cycle: WW,
+    let yR = null;
+    const tR = function(RR) {
+        const JR = {
+          cycle: RR,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return mW = iW, () => {
-          mW === iW && (mW = null)
+        return yR = JR, () => {
+          yR === JR && (yR = null)
         }
       },
-      NW = () => {
-        var WW;
-        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
+      uR = () => {
+        var RR;
+        return null !== (RR = yR) && void 0 !== RR && RR.canCycle() ? yR.cycle : null
       }
   },
-  40771: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => QW
+  40772: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => hR
     });
-    const mW = {
+    const yR = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -140,270 +140,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var EW = OW(62),
-      NW = OW(39220),
-      PW = OW(344);
-    const LW = ["Basic", "Rare", "Super"];
+    var tR = GR(66),
+      uR = GR(39198),
+      ZR = GR(377);
+    const qR = ["Basic", "Rare", "Super"];
 
-    function cW(WW, iW) {
-      return `${"Basic"===iW?"":`${iW} `}${"Simple"===WW?"":`${WW} `}Lucky Block`
+    function iR(RR, JR) {
+      return `${"Basic"===JR?"":`${JR} `}${"Simple"===RR?"":`${RR} `}Lucky Block`
     }
-    const wW = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((WW => LW.map((iW => [cW(WW, iW), {
-      category: WW,
-      rarity: iW
+    const fR = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((RR => qR.map((JR => [iR(RR, JR), {
+      category: RR,
+      rarity: JR
     }])))));
-    wW.keys();
+    fR.keys();
 
-    function tW(WW) {
-      return wW.get(WW)
+    function VR(RR) {
+      return fR.get(RR)
     }
-    const ZW = "Obsidian",
-      xW = ["Cobweb"],
-      lW = [...["Red", "Blue", "Green", "Yellow"].map((WW => `${(0,PW.Z)(WW)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", ZW, ...xW];
+    const KR = "Obsidian",
+      wR = ["Cobweb"],
+      rR = [...["Red", "Blue", "Green", "Yellow"].map((RR => `${(0,ZR.T)(RR)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", KR, ...wR];
 
-    function AW(WW) {
-      return lW.includes(WW)
+    function eR(RR) {
+      return rR.includes(RR)
     }
-    var bW = OW(643);
+    var aR = GR(679);
 
-    function jW(WW, iW) {
-      const OW = tW(WW);
-      if (OW) {
-        const WW = tW(iW);
-        if (!WW) return;
-        const mW = LW.length - 1 - LW.indexOf(WW.rarity);
-        return (WW.category === OW.category ? 0 : 1) * LW.length + mW
+    function LR(RR, JR) {
+      const GR = VR(RR);
+      if (GR) {
+        const RR = VR(JR);
+        if (!RR) return;
+        const yR = qR.length - 1 - qR.indexOf(RR.rarity);
+        return (RR.category === GR.category ? 0 : 1) * qR.length + yR
       }
-      if (!AW(WW)) return;
-      if (iW === WW) return 0;
-      const mW = WW => AW(WW) && !xW.includes(WW) && WW !== ZW;
-      return mW(WW) && mW(iW) ? 1 : void 0
+      if (!eR(RR)) return;
+      if (JR === RR) return 0;
+      const yR = RR => eR(RR) && !wR.includes(RR) && RR !== KR;
+      return yR(RR) && yR(JR) ? 1 : void 0
     }
-    const UW = [...Array.from({
-      length: bW.o - bW.m
-    }, ((WW, iW) => bW.m + iW)), ...Array.from({
-      length: bW.m
-    }, ((WW, iW) => iW))];
-    class kW {
-      constructor(WW) {
-        this.inventory = WW, this.pending = new Map
+    const nR = [...Array.from({
+      length: aR.q - aR.m
+    }, ((RR, JR) => aR.m + JR)), ...Array.from({
+      length: aR.m
+    }, ((RR, JR) => JR))];
+    class UR {
+      constructor(RR) {
+        this.inventory = RR, this.pending = new Map
       }
-      onPlace(WW) {
-        var iW;
-        const OW = this.inventory.selectedSlot(),
-          mW = this.inventory.itemAt(OW);
-        (null === mW || void 0 === mW ? void 0 : mW.name) === WW && (null !== (iW = mW.amount) && void 0 !== iW ? iW : 1) <= 1 && sW(WW) && this.pending.set(OW, WW)
+      onPlace(RR) {
+        var JR;
+        const GR = this.inventory.selectedSlot(),
+          yR = this.inventory.itemAt(GR);
+        (null === yR || void 0 === yR ? void 0 : yR.name) === RR && (null !== (JR = yR.amount) && void 0 !== JR ? JR : 1) <= 1 && WR(RR) && this.pending.set(GR, RR)
       }
-      onDrop(WW, iW) {
-        iW < bW.m && null === this.inventory.itemAt(iW) && sW(WW) && this.refill(iW, WW)
+      onDrop(RR, JR) {
+        JR < aR.m && null === this.inventory.itemAt(JR) && WR(RR) && this.refill(JR, RR)
       }
-      hZ() {
-        const WW = [...this.pending];
+      gK() {
+        const RR = [...this.pending];
         this.pending.clear();
-        for (const [iW, OW] of WW) null === this.inventory.itemAt(iW) && this.refill(iW, OW)
+        for (const [JR, GR] of RR) null === this.inventory.itemAt(JR) && this.refill(JR, GR)
       }
-      refill(WW, iW) {
-        const OW = function(WW, iW, OW, mW) {
-          let EW, NW = 1 / 0;
-          for (const PW of UW) {
-            if (PW === iW) continue;
-            const LW = mW(PW);
-            if (!LW || PW < bW.m && iW !== OW) continue;
-            const cW = jW(WW, LW.name);
-            void 0 !== cW && cW < NW && (EW = PW, NW = cW)
+      refill(RR, JR) {
+        const GR = function(RR, JR, GR, yR) {
+          let tR, uR = 1 / 0;
+          for (const ZR of nR) {
+            if (ZR === JR) continue;
+            const qR = yR(ZR);
+            if (!qR || ZR < aR.m && JR !== GR) continue;
+            const iR = LR(RR, qR.name);
+            void 0 !== iR && iR < uR && (tR = ZR, uR = iR)
           }
-          return EW
-        }(iW, WW, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== OW && this.inventory.swap(WW, OW)
+          return tR
+        }(JR, RR, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== GR && this.inventory.swap(RR, GR)
       }
     }
 
-    function sW(WW) {
-      return !!tW(WW) || AW(WW)
+    function WR(RR) {
+      return !!VR(RR) || eR(RR)
     }
-    var MW = OW(3361),
-      KW = OW(80),
-      SW = OW(1089),
-      YW = OW.n(SW);
-    const yW = "Lucky Clover",
-      TW = {
+    var AR = GR(3494),
+      CR = GR(83),
+      XR = GR(1163),
+      MR = GR.n(XR);
+    const BR = "Lucky Clover",
+      lR = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function JW(WW) {
-      return TW[WW][0]
+    function pR(RR) {
+      return lR[RR][0]
     }
 
-    function hW(WW) {
-      return LW.filter((iW => WW >= JW(iW)))
+    function gR(RR) {
+      return qR.filter((JR => RR >= pR(JR)))
     }
-    var HW = OW(327),
-      nW = OW(3332),
-      uW = OW(25),
-      oW = OW(3599),
-      dW = OW(2032),
-      eW = OW(37868),
-      vW = OW(1391);
-    var gW = OW(1283);
-    const DW = {
-      Basic: PW.M.whiteUiText,
-      Rare: PW.M.goldUiText,
-      Super: PW.M.cyanUiText
+    var bR = GR(359),
+      vR = GR(3465),
+      OR = GR(25),
+      xR = GR(3701),
+      NR = GR(2123),
+      DR = GR(37796),
+      HR = GR(1468);
+    var oR = GR(1378);
+    const cR = {
+      Basic: ZR.C.whiteUiText,
+      Rare: ZR.C.goldUiText,
+      Super: ZR.C.cyanUiText
     };
-    let VW = 1;
+    let PR = 1;
 
-    function pW() {
-      const WW = (0, nW.e)("currencyAmounts"),
-        iW = null === WW || void 0 === WW ? void 0 : WW.Clovers;
-      return !iW || iW.hidden ? null : (0, gW.jsx)(eW.h, {
-        children: (0, gW.jsx)(fW, {
-          amount: iW.amount
+    function IR() {
+      const RR = (0, vR.f)("currencyAmounts"),
+        JR = null === RR || void 0 === RR ? void 0 : RR.Clovers;
+      return !JR || JR.hidden ? null : (0, oR.jsx)(DR.d, {
+        children: (0, oR.jsx)(mR, {
+          amount: JR.amount
         })
       })
     }
 
-    function fW(WW) {
-      var iW, OW, mW;
+    function mR(RR) {
+      var JR, GR, yR;
       let {
-        amount: NW
-      } = WW;
+        amount: uR
+      } = RR;
       const {
-        openEverythingMenuName: cW
-      } = (0, uW.p)(["openEverythingMenuName"]), wW = (0, oW.e)(), [tW, ZW] = (0, EW.useState)(NW), [xW, lW] = (0, EW.useState)(null), [AW, bW] = (0, EW.useState)(0), [jW, UW] = (0, EW.useState)([]), kW = (0, EW.useRef)(NW), sW = (0, EW.useRef)(!1), MW = (0, EW.useRef)(null), SW = cW === HW.m.SHOP;
-      (0, EW.useEffect)((() => {
-        const WW = kW.current;
-        if (kW.current = NW, NW <= WW || SW) return void ZW(NW);
-        const iW = wW || jW.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (OW = NW - WW, mW = !sW.current, OW <= 0 || !mW && OW < 40 ? 0 : Math.min(4, Math.ceil(OW / 30)));
-        var OW, mW;
-        if (sW.current = !0, hW(NW).length > hW(WW).length && bW(VW++), iW > 0) {
-          const WW = [];
-          for (let OW = 0; OW < iW; OW++) WW.push({
-            id: VW++,
+        openEverythingMenuName: iR
+      } = (0, OR.o)(["openEverythingMenuName"]), fR = (0, xR.c)(), [VR, KR] = (0, tR.useState)(uR), [wR, rR] = (0, tR.useState)(null), [eR, aR] = (0, tR.useState)(0), [LR, nR] = (0, tR.useState)([]), UR = (0, tR.useRef)(uR), WR = (0, tR.useRef)(!1), AR = (0, tR.useRef)(null), XR = iR === bR.o.SHOP;
+      (0, tR.useEffect)((() => {
+        const RR = UR.current;
+        if (UR.current = uR, uR <= RR || XR) return void KR(uR);
+        const JR = fR || LR.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (GR = uR - RR, yR = !WR.current, GR <= 0 || !yR && GR < 40 ? 0 : Math.min(4, Math.ceil(GR / 30)));
+        var GR, yR;
+        if (WR.current = !0, gR(uR).length > gR(RR).length && aR(PR++), JR > 0) {
+          const RR = [];
+          for (let GR = 0; GR < JR; GR++) RR.push({
+            id: PR++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * OW
+            delayMs: 70 * GR
           });
-          UW((iW => [...iW, ...WW]))
+          nR((JR => [...JR, ...RR]))
         }
-        const EW = iW > 0 ? 600 : 0;
-        lW({
-          id: VW++,
-          delayMs: EW
+        const tR = JR > 0 ? 600 : 0;
+        rR({
+          id: PR++,
+          delayMs: tR
         });
-        const LW = performance.now() + EW;
-        let cW = 0;
-        const tW = iW => {
-          const OW = PW.e.clamp((iW - LW) / 600, 0, 1);
-          ZW(Math.round(WW + (NW - WW) * OW)), OW < 1 && (cW = requestAnimationFrame(tW))
+        const qR = performance.now() + tR;
+        let iR = 0;
+        const VR = JR => {
+          const GR = ZR.e.clamp((JR - qR) / 600, 0, 1);
+          KR(Math.round(RR + (uR - RR) * GR)), GR < 1 && (iR = requestAnimationFrame(VR))
         };
-        return cW = requestAnimationFrame(tW), () => {
-          cancelAnimationFrame(cW)
+        return iR = requestAnimationFrame(VR), () => {
+          cancelAnimationFrame(iR)
         }
-      }), [NW, SW]);
-      const TW = function(WW) {
-          var iW;
-          const OW = null !== (iW = LW.find((iW => WW < JW(iW)))) && void 0 !== iW ? iW : "Super";
+      }), [uR, XR]);
+      const lR = function(RR) {
+          var JR;
+          const GR = null !== (JR = qR.find((JR => RR < pR(JR)))) && void 0 !== JR ? JR : "Super";
           return {
-            rarity: OW,
-            progress: PW.e.clamp(WW / JW(OW), 0, 1)
+            rarity: GR,
+            progress: ZR.e.clamp(RR / pR(GR), 0, 1)
           }
-        }(tW),
-        nW = hW(tW).at(-1);
-      return (0, gW.jsxs)(gW.Fragment, {
-        children: [(0, gW.jsx)("div", {
+        }(VR),
+        vR = gR(VR).at(-1);
+      return (0, oR.jsxs)(oR.Fragment, {
+        children: [(0, oR.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, gW.jsxs)("div", {
-            className: YW()("LuckyCloverWallet", {
-              Capped: nW && "Basic" !== nW
+          children: (0, oR.jsxs)("div", {
+            className: MR()("LuckyCloverWallet", {
+              Capped: vR && "Basic" !== vR
             }),
-            style: nW && {
-              "--luckyTierColour": DW[nW]
+            style: vR && {
+              "--luckyTierColour": cR[vR]
             },
-            children: [(0, gW.jsx)("div", {
+            children: [(0, oR.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${TW.progress})`
+                transform: `scaleX(${lR.progress})`
               }
-            }), AW > 0 && (0, gW.jsx)("div", {
+            }), eR > 0 && (0, oR.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(iW=null===xW||void 0===xW?void 0:xW.delayMs)&&void 0!==iW?iW:0}ms`
+                animationDelay: `${null!==(JR=null===wR||void 0===wR?void 0:wR.delayMs)&&void 0!==JR?JR:0}ms`
               }
-            }, AW), (0, gW.jsx)("div", {
-              ref: MW,
-              className: YW()("LuckyCloverWalletIcon", xW && "Bounce"),
+            }, eR), (0, oR.jsx)("div", {
+              ref: AR,
+              className: MR()("LuckyCloverWalletIcon", wR && "Bounce"),
               style: {
-                animationDelay: `${null!==(mW=null===xW||void 0===xW?void 0:xW.delayMs)&&void 0!==mW?mW:0}ms`
+                animationDelay: `${null!==(yR=null===wR||void 0===wR?void 0:wR.delayMs)&&void 0!==yR?yR:0}ms`
               },
-              children: (0, gW.jsx)(dW.b, {
-                itemName: yW,
+              children: (0, oR.jsx)(NR.b, {
+                itemName: BR,
                 amount: 0
               })
-            }, null !== (OW = null === xW || void 0 === xW ? void 0 : xW.id) && void 0 !== OW ? OW : 0), (0, gW.jsx)("span", {
+            }, null !== (GR = null === wR || void 0 === wR ? void 0 : wR.id) && void 0 !== GR ? GR : 0), (0, oR.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: tW
-            }), nW && (0, gW.jsx)(vW.c, {
+              children: VR
+            }), vR && (0, oR.jsx)(HR.d, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, KW.createPortal)(jW.map((WW => (0, gW.jsx)(CW, {
-          flyer: WW,
-          target: MW,
+        }), (0, CR.createPortal)(LR.map((RR => (0, oR.jsx)(zR, {
+          flyer: RR,
+          target: AR,
           onDone: () => {
-            UW((iW => iW.filter((iW => iW.id !== WW.id))))
+            nR((JR => JR.filter((JR => JR.id !== RR.id))))
           }
-        }, WW.id))), document.body)]
+        }, RR.id))), document.body)]
       })
     }
 
-    function CW(WW) {
+    function zR(RR) {
       let {
-        flyer: iW,
-        target: OW,
-        onDone: mW
-      } = WW;
-      const NW = (0, EW.useRef)(null);
-      return (0, EW.useEffect)((() => {
-        var WW;
-        const EW = null === (WW = OW.current) || void 0 === WW ? void 0 : WW.getBoundingClientRect();
-        if (!NW.current || !EW) return void mW();
+        flyer: JR,
+        target: GR,
+        onDone: yR
+      } = RR;
+      const uR = (0, tR.useRef)(null);
+      return (0, tR.useEffect)((() => {
+        var RR;
+        const tR = null === (RR = GR.current) || void 0 === RR ? void 0 : RR.getBoundingClientRect();
+        if (!uR.current || !tR) return void yR();
         const {
-          x: PW,
-          y: LW
-        } = iW, cW = PW + 140 * (Math.random() - .5), wW = LW - 30 - 40 * Math.random(), tW = NW.current.animate([{
-          transform: `translate(${PW}px, ${LW}px) scale(0.3)`,
+          x: ZR,
+          y: qR
+        } = JR, iR = ZR + 140 * (Math.random() - .5), fR = qR - 30 - 40 * Math.random(), VR = uR.current.animate([{
+          transform: `translate(${ZR}px, ${qR}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${cW}px, ${wW}px) scale(1.3)`,
+          transform: `translate(${iR}px, ${fR}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${EW.left}px, ${EW.top}px) scale(0.8)`,
+          transform: `translate(${tR.left}px, ${tR.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: iW.delayMs,
+          delay: JR.delayMs,
           fill: "backwards"
         });
-        return tW.onfinish = mW, () => {
-          tW.cancel()
+        return VR.onfinish = yR, () => {
+          VR.cancel()
         }
-      }), []), (0, gW.jsx)("div", {
-        ref: NW,
+      }), []), (0, oR.jsx)("div", {
+        ref: uR,
         className: "LuckyCloverFlying",
-        children: (0, gW.jsx)(dW.b, {
-          itemName: yW,
+        children: (0, oR.jsx)(NR.b, {
+          itemName: BR,
           amount: 0
         })
       })
     }
-    var XW = OW(27);
-    const BW = "luckyGearUpgradeView",
-      qW = {
+    var SR = GR(32);
+    const jR = "luckyGearUpgradeView",
+      dR = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -411,13 +411,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function RW(WW) {
-      var iW;
-      return null !== (iW = qW[WW.split(" ")[0]]) && void 0 !== iW ? iW : "#e07bff"
+    function ER(RR) {
+      var JR;
+      return null !== (JR = dR[RR.split(" ")[0]]) && void 0 !== JR ? JR : "#e07bff"
     }
-    class GW {
-      constructor(WW, iW) {
-        this.selectedSlot = WW, this.itemAt = iW, this.rings = [], this.unseen = new Map, this.view = {
+    class YR {
+      constructor(RR, JR) {
+        this.selectedSlot = RR, this.itemAt = JR, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -425,200 +425,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      yZ(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [OW, mW, EW] of WW) this.rings.push({
+      BK(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [GR, yR, tR] of RR) this.rings.push({
           id: this.nextId++,
-          slot: OW,
-          colour: RW(EW),
-          until: iW + 1200
-        }), OW !== this.selectedSlot() && this.unseen.set(OW, {
-          from: mW,
-          to: EW
+          slot: GR,
+          colour: ER(tR),
+          until: JR + 1200
+        }), GR !== this.selectedSlot() && this.unseen.set(GR, {
+          from: yR,
+          to: tR
         });
-        this.iZ()
+        this.JK()
       }
-      hZ() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      gK() {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const iW = this.rings.filter((iW => iW.until > WW));
-        let OW = iW.length !== this.rings.length;
-        this.rings = iW;
-        for (const [mW, {
-            from: EW,
-            to: NW
+        const JR = this.rings.filter((JR => JR.until > RR));
+        let GR = JR.length !== this.rings.length;
+        this.rings = JR;
+        for (const [yR, {
+            from: tR,
+            to: uR
           }] of this.unseen) {
-          const WW = this.itemAt(mW);
-          (mW === this.selectedSlot() || WW !== NW && WW !== EW) && (this.unseen.delete(mW), OW = !0)
+          const RR = this.itemAt(yR);
+          (yR === this.selectedSlot() || RR !== uR && RR !== tR) && (this.unseen.delete(yR), GR = !0)
         }
-        OW && this.iZ()
+        GR && this.JK()
       }
-      iZ() {
+      JK() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, XW.l.iZ(BW, this.view)
+        }, SR.n.JK(jR, this.view)
       }
     }
-    var IW = OW(1526);
+    var kR = GR(1581);
 
-    function aW(WW) {
-      return document.querySelector(`.HotBar [data-inven-idx="${WW}"]`)
+    function QR(RR) {
+      return document.querySelector(`.HotBar [data-inven-idx="${RR}"]`)
     }
 
-    function rW(WW) {
+    function FR(RR) {
       let {
-        ring: iW
-      } = WW;
-      const [OW, mW] = (0, EW.useState)(null);
-      return (0, EW.useLayoutEffect)((() => {
-        var WW, OW;
-        mW(null !== (WW = null === (OW = aW(iW.slot)) || void 0 === OW ? void 0 : OW.getBoundingClientRect()) && void 0 !== WW ? WW : null)
-      }), [iW]), OW ? (0, gW.jsx)("div", {
+        ring: JR
+      } = RR;
+      const [GR, yR] = (0, tR.useState)(null);
+      return (0, tR.useLayoutEffect)((() => {
+        var RR, GR;
+        yR(null !== (RR = null === (GR = QR(JR.slot)) || void 0 === GR ? void 0 : GR.getBoundingClientRect()) && void 0 !== RR ? RR : null)
+      }), [JR]), GR ? (0, oR.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: OW.left,
-          top: OW.top,
-          width: OW.width,
-          height: OW.height,
-          "--ringColour": iW.colour,
+          left: GR.left,
+          top: GR.top,
+          width: GR.width,
+          height: GR.height,
+          "--ringColour": JR.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function zW(WW) {
+    function TR(RR) {
       let {
-        slot: iW
-      } = WW;
-      const [OW, mW] = (0, EW.useState)(null);
-      return (0, EW.useLayoutEffect)((() => {
-        const WW = () => {
-          mW(aW(iW))
+        slot: JR
+      } = RR;
+      const [GR, yR] = (0, tR.useState)(null);
+      return (0, tR.useLayoutEffect)((() => {
+        const RR = () => {
+          yR(QR(JR))
         };
-        WW();
-        const OW = new MutationObserver(WW),
-          EW = document.querySelector(".BottomMiddleElements");
-        return EW && OW.observe(EW, {
+        RR();
+        const GR = new MutationObserver(RR),
+          tR = document.querySelector(".BottomMiddleElements");
+        return tR && GR.observe(tR, {
           childList: !0,
           subtree: !0
         }), () => {
-          OW.disconnect()
+          GR.disconnect()
         }
-      }), [iW]), OW ? (0, KW.createPortal)((0, gW.jsx)("div", {
+      }), [JR]), GR ? (0, CR.createPortal)((0, oR.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), OW) : null
+      }), GR) : null
     }
 
-    function FW(WW) {
+    function sR(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, IW.g)(BW, iW.getView());
-      return (0, gW.jsxs)(gW.Fragment, {
-        children: [OW.rings.map((WW => (0, gW.jsx)(rW, {
-          ring: WW
-        }, WW.id))), OW.unseenSlots.map((WW => (0, gW.jsx)(zW, {
-          slot: WW
-        }, WW)))]
+        controller: JR
+      } = RR;
+      const GR = (0, kR.h)(jR, JR.getView());
+      return (0, oR.jsxs)(oR.Fragment, {
+        children: [GR.rings.map((RR => (0, oR.jsx)(FR, {
+          ring: RR
+        }, RR.id))), GR.unseenSlots.map((RR => (0, oR.jsx)(TR, {
+          slot: RR
+        }, RR)))]
       })
     }
-    const QW = function(WW, iW, OW, PW) {
-      let LW, {
-          localPlayerId: cW
-        } = PW,
-        wW = null;
-      const tW = new kW({
-          itemAt: WW => LW.getItemSlot(cW, WW),
-          selectedSlot: () => LW.getSelectedInventorySlotI(cW),
-          swap: (WW, iW) => {
-            LW.swapInventorySlots(WW, iW)
+    const hR = function(RR, JR, GR, ZR) {
+      let qR, {
+          localPlayerId: iR
+        } = ZR,
+        fR = null;
+      const VR = new UR({
+          itemAt: RR => qR.getItemSlot(iR, RR),
+          selectedSlot: () => qR.getSelectedInventorySlotI(iR),
+          swap: (RR, JR) => {
+            qR.swapInventorySlots(RR, JR)
           }
         }),
-        ZW = new GW((() => LW.getSelectedInventorySlotI(cW)), (WW => {
-          var iW;
-          return null === (iW = LW.getItemSlot(cW, WW)) || void 0 === iW ? void 0 : iW.name
+        KR = new YR((() => qR.getSelectedInventorySlotI(iR)), (RR => {
+          var JR;
+          return null === (JR = qR.getItemSlot(iR, RR)) || void 0 === JR ? void 0 : JR.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, NW.d)()
+          placeAgainstBeds: (0, uR.e)()
         },
-        onCreate: WW => {
-          LW = WW, wW = (0, MW.O)((0, EW.createElement)(EW.Fragment, null, (0, EW.createElement)(pW), (0, EW.createElement)(FW, {
-            controller: ZW
+        onCreate: RR => {
+          qR = RR, fR = (0, AR.G)((0, tR.createElement)(tR.Fragment, null, (0, tR.createElement)(IR), (0, tR.createElement)(sR, {
+            controller: KR
           })))
         },
         onClose: () => {
-          var WW;
-          null === (WW = wW) || void 0 === WW || WW()
+          var RR;
+          null === (RR = fR) || void 0 === RR || RR()
         },
-        hZ: () => {
-          tW.hZ(), ZW.hZ()
+        gK: () => {
+          VR.gK(), KR.gK()
         },
-        onReceivedMessageFromServer: (WW, iW) => {
-          "luckyGearUpgrade" === WW && ZW.yZ(iW)
+        onReceivedMessageFromServer: (RR, JR) => {
+          "luckyGearUpgrade" === RR && KR.BK(JR)
         },
-        onPlayerChangeBlock: (WW, iW, OW, mW, EW, NW) => {
-          "Air" !== NW && tW.onPlace(NW)
+        onPlayerChangeBlock: (RR, JR, GR, yR, tR, uR) => {
+          "Air" !== uR && VR.onPlace(uR)
         },
-        onPlayerDropItem: (WW, iW, OW, mW) => {
-          tW.onDrop(iW, mW)
+        onPlayerDropItem: (RR, JR, GR, yR) => {
+          VR.onDrop(JR, yR)
         },
-        onPlayerAltAction: (WW, iW, OW, EW, NW, PW) => {
-          if (!PW || "Mesh" !== LW.getEntityType(PW)) return;
-          const cW = LW.getEntityName(PW),
-            wW = Object.values(mW).find((WW => WW.name === cW));
-          wW && LW.openShop(WW, !1, wW.shopTab)
+        onPlayerAltAction: (RR, JR, GR, tR, uR, ZR) => {
+          if (!ZR || "Mesh" !== qR.getEntityType(ZR)) return;
+          const iR = qR.getEntityName(ZR),
+            fR = Object.values(yR).find((RR => RR.name === iR));
+          fR && qR.openShop(RR, !1, fR.shopTab)
         }
       }
     }
   },
-  39220: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW
+  39198: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR
     });
-    var mW = OW(344),
-      EW = OW(38097),
-      NW = OW(5187);
-    const PW = ["Leaf Bed", "_Leaf Bed Head", ...mW.yc.flatMap((WW => [`${WW} Bed`, `_${WW} Bed Head`, `${WW} Strongbed`, `_${WW} Strongbed Head`]))];
+    var yR = GR(377),
+      tR = GR(38040),
+      uR = GR(5290);
+    const ZR = ["Leaf Bed", "_Leaf Bed Head", ...yR.Cc.flatMap((RR => [`${RR} Bed`, `_${RR} Bed Head`, `${RR} Strongbed`, `_${RR} Strongbed Head`]))];
 
-    function LW() {
-      let WW;
+    function qR() {
+      let RR;
       return {
-        onCreate(iW) {
-          WW = iW
+        onCreate(JR) {
+          RR = JR
         },
-        altVetoBlocks: PW,
-        onPlayerAttemptAltAction(iW, OW, mW, PW, LW, cW) {
-          var wW;
-          if ((0, EW.d)(WW.getMetaInfo(LW).rootName) && !WW.isEntityInteractable(cW) && (0, NW.f)(null === (wW = WW.kOW(iW)) || void 0 === wW ? void 0 : wW.typeObj.type)) return "preventAction"
+        altVetoBlocks: ZR,
+        onPlayerAttemptAltAction(JR, GR, yR, ZR, qR, iR) {
+          var fR;
+          if ((0, tR.d)(RR.getMetaInfo(qR).rootName) && !RR.isEntityInteractable(iR) && (0, uR.c)(null === (fR = RR.uyR(JR)) || void 0 === fR ? void 0 : fR.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  38097: (WW, iW, OW) => {
-    function mW(WW) {
-      return WW.includes("Leaf Bed")
+  38040: (RR, JR, GR) => {
+    function yR(RR) {
+      return RR.includes("Leaf Bed")
     }
 
-    function EW(WW) {
-      return / Bed(?: Head)?(?:\||$)/.test(WW) && !mW(WW)
+    function tR(RR) {
+      return / Bed(?: Head)?(?:\||$)/.test(RR) && !yR(RR)
     }
 
-    function NW(WW) {
-      return WW.includes(" Strongbed")
+    function uR(RR) {
+      return RR.includes(" Strongbed")
     }
 
-    function PW(WW) {
-      return mW(WW) || EW(WW) || NW(WW)
+    function ZR(RR) {
+      return yR(RR) || tR(RR) || uR(RR)
     }
-    OW.d(iW, {
-      d: () => PW,
-      f: () => mW,
-      j: () => NW,
-      l: () => EW
+    GR.d(JR, {
+      d: () => ZR,
+      f: () => yR,
+      h: () => uR,
+      k: () => tR
     })
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

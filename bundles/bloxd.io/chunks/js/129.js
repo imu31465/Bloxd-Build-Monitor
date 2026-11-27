@@ -1,173 +1,173 @@
 export const id = 129;
 export const ids = [129];
 export const modules = {
-  5923: (WW, iW, OW) => {
-    function mW(WW) {
-      return mW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(WW) {
-        return typeof WW
-      } : function(WW) {
-        return WW && "function" == typeof Symbol && WW.constructor === Symbol && WW !== Symbol.prototype ? "symbol" : typeof WW
-      }, mW(WW)
+  6044: (RR, JR, GR) => {
+    function yR(RR) {
+      return yR = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(RR) {
+        return typeof RR
+      } : function(RR) {
+        return RR && "function" == typeof Symbol && RR.constructor === Symbol && RR !== Symbol.prototype ? "symbol" : typeof RR
+      }, yR(RR)
     }
-    Object.defineProperty(iW, "__esModule", {
+    Object.defineProperty(JR, "__esModule", {
       value: !0
-    }), iW.default = void 0;
-    var EW = ZW(OW(1089)),
-      NW = function(WW, iW) {
-        if (!iW && WW && WW.__esModule) return WW;
-        if (null === WW || "object" !== mW(WW) && "function" !== typeof WW) return {
-          default: WW
+    }), JR.default = void 0;
+    var tR = KR(GR(1163)),
+      uR = function(RR, JR) {
+        if (!JR && RR && RR.__esModule) return RR;
+        if (null === RR || "object" !== yR(RR) && "function" !== typeof RR) return {
+          default: RR
         };
-        var OW = tW(iW);
-        if (OW && OW.has(WW)) return OW.get(WW);
-        var EW = {},
-          NW = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var PW in WW)
-          if ("default" !== PW && Object.prototype.hasOwnProperty.call(WW, PW)) {
-            var LW = NW ? Object.getOwnPropertyDescriptor(WW, PW) : null;
-            LW && (LW.get || LW.set) ? Object.defineProperty(EW, PW, LW) : EW[PW] = WW[PW]
-          } EW.default = WW, OW && OW.set(WW, EW);
-        return EW
-      }(OW(62)),
-      PW = ZW(OW(5868)),
-      LW = ZW(OW(5925)),
-      cW = OW(5934),
-      wW = OW(1283);
+        var GR = VR(JR);
+        if (GR && GR.has(RR)) return GR.get(RR);
+        var tR = {},
+          uR = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var ZR in RR)
+          if ("default" !== ZR && Object.prototype.hasOwnProperty.call(RR, ZR)) {
+            var qR = uR ? Object.getOwnPropertyDescriptor(RR, ZR) : null;
+            qR && (qR.get || qR.set) ? Object.defineProperty(tR, ZR, qR) : tR[ZR] = RR[ZR]
+          } tR.default = RR, GR && GR.set(RR, tR);
+        return tR
+      }(GR(66)),
+      ZR = KR(GR(6008)),
+      qR = KR(GR(6047)),
+      iR = GR(6055),
+      fR = GR(1378);
 
-    function tW(WW) {
+    function VR(RR) {
       if ("function" !== typeof WeakMap) return null;
-      var iW = new WeakMap,
-        OW = new WeakMap;
-      return (tW = function(WW) {
-        return WW ? OW : iW
-      })(WW)
+      var JR = new WeakMap,
+        GR = new WeakMap;
+      return (VR = function(RR) {
+        return RR ? GR : JR
+      })(RR)
     }
 
-    function ZW(WW) {
-      return WW && WW.__esModule ? WW : {
-        default: WW
+    function KR(RR) {
+      return RR && RR.__esModule ? RR : {
+        default: RR
       }
     }
 
-    function xW(WW, iW) {
-      var OW = "undefined" !== typeof Symbol && WW[Symbol.iterator] || WW["@@iterator"];
-      if (!OW) {
-        if (Array.isArray(WW) || (OW = function(WW, iW) {
-            if (!WW) return;
-            if ("string" === typeof WW) return lW(WW, iW);
-            var OW = Object.prototype.toString.call(WW).slice(8, -1);
-            "Object" === OW && WW.constructor && (OW = WW.constructor.name);
-            if ("Map" === OW || "Set" === OW) return Array.from(WW);
-            if ("Arguments" === OW || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(OW)) return lW(WW, iW)
-          }(WW)) || iW && WW && "number" === typeof WW.length) {
-          OW && (WW = OW);
-          var mW = 0,
-            EW = function() {};
+    function wR(RR, JR) {
+      var GR = "undefined" !== typeof Symbol && RR[Symbol.iterator] || RR["@@iterator"];
+      if (!GR) {
+        if (Array.isArray(RR) || (GR = function(RR, JR) {
+            if (!RR) return;
+            if ("string" === typeof RR) return rR(RR, JR);
+            var GR = Object.prototype.toString.call(RR).slice(8, -1);
+            "Object" === GR && RR.constructor && (GR = RR.constructor.name);
+            if ("Map" === GR || "Set" === GR) return Array.from(RR);
+            if ("Arguments" === GR || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(GR)) return rR(RR, JR)
+          }(RR)) || JR && RR && "number" === typeof RR.length) {
+          GR && (RR = GR);
+          var yR = 0,
+            tR = function() {};
           return {
-            s: EW,
+            s: tR,
             n: function() {
-              return mW >= WW.length ? {
+              return yR >= RR.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: WW[mW++]
+                value: RR[yR++]
               }
             },
-            e: function(WW) {
-              throw WW
+            e: function(RR) {
+              throw RR
             },
-            f: EW
+            f: tR
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var NW, PW = !0,
-        LW = !1;
+      var uR, ZR = !0,
+        qR = !1;
       return {
         s: function() {
-          OW = OW.call(WW)
+          GR = GR.call(RR)
         },
         n: function() {
-          var WW = OW.next();
-          return PW = WW.done, WW
+          var RR = GR.next();
+          return ZR = RR.done, RR
         },
-        e: function(WW) {
-          LW = !0, NW = WW
+        e: function(RR) {
+          qR = !0, uR = RR
         },
         f: function() {
           try {
-            PW || null == OW.return || OW.return()
+            ZR || null == GR.return || GR.return()
           } finally {
-            if (LW) throw NW
+            if (qR) throw uR
           }
         }
       }
     }
 
-    function lW(WW, iW) {
-      (null == iW || iW > WW.length) && (iW = WW.length);
-      for (var OW = 0, mW = new Array(iW); OW < iW; OW++) mW[OW] = WW[OW];
-      return mW
+    function rR(RR, JR) {
+      (null == JR || JR > RR.length) && (JR = RR.length);
+      for (var GR = 0, yR = new Array(JR); GR < JR; GR++) yR[GR] = RR[GR];
+      return yR
     }
 
-    function AW(WW, iW) {
-      for (var OW = 0; OW < iW.length; OW++) {
-        var mW = iW[OW];
-        mW.enumerable = mW.enumerable || !1, mW.configurable = !0, "value" in mW && (mW.writable = !0), Object.defineProperty(WW, mW.key, mW)
+    function eR(RR, JR) {
+      for (var GR = 0; GR < JR.length; GR++) {
+        var yR = JR[GR];
+        yR.enumerable = yR.enumerable || !1, yR.configurable = !0, "value" in yR && (yR.writable = !0), Object.defineProperty(RR, yR.key, yR)
       }
     }
 
-    function bW(WW, iW) {
-      return bW = Object.setPrototypeOf || function(WW, iW) {
-        return WW.__proto__ = iW, WW
-      }, bW(WW, iW)
+    function aR(RR, JR) {
+      return aR = Object.setPrototypeOf || function(RR, JR) {
+        return RR.__proto__ = JR, RR
+      }, aR(RR, JR)
     }
 
-    function jW(WW) {
-      var iW = function() {
+    function LR(RR) {
+      var JR = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (WW) {
+        } catch (RR) {
           return !1
         }
       }();
       return function() {
-        var OW, EW = kW(WW);
-        if (iW) {
-          var NW = kW(this).constructor;
-          OW = Reflect.construct(EW, arguments, NW)
-        } else OW = EW.apply(this, arguments);
-        return function(WW, iW) {
-          if (iW && ("object" === mW(iW) || "function" === typeof iW)) return iW;
-          if (void 0 !== iW) throw new TypeError("Derived constructors may only return object or undefined");
-          return UW(WW)
-        }(this, OW)
+        var GR, tR = UR(RR);
+        if (JR) {
+          var uR = UR(this).constructor;
+          GR = Reflect.construct(tR, arguments, uR)
+        } else GR = tR.apply(this, arguments);
+        return function(RR, JR) {
+          if (JR && ("object" === yR(JR) || "function" === typeof JR)) return JR;
+          if (void 0 !== JR) throw new TypeError("Derived constructors may only return object or undefined");
+          return nR(RR)
+        }(this, GR)
       }
     }
 
-    function UW(WW) {
-      if (void 0 === WW) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return WW
+    function nR(RR) {
+      if (void 0 === RR) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return RR
     }
 
-    function kW(WW) {
-      return kW = Object.setPrototypeOf ? Object.getPrototypeOf : function(WW) {
-        return WW.__proto__ || Object.getPrototypeOf(WW)
-      }, kW(WW)
+    function UR(RR) {
+      return UR = Object.setPrototypeOf ? Object.getPrototypeOf : function(RR) {
+        return RR.__proto__ || Object.getPrototypeOf(RR)
+      }, UR(RR)
     }
 
-    function sW(WW, iW, OW) {
-      return iW in WW ? Object.defineProperty(WW, iW, {
-        value: OW,
+    function WR(RR, JR, GR) {
+      return JR in RR ? Object.defineProperty(RR, JR, {
+        value: GR,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : WW[iW] = OW, WW
+      }) : RR[JR] = GR, RR
     }
-    var MW = {
+    var AR = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      KW = function(WW) {
-        ! function(WW, iW) {
-          if ("function" !== typeof iW && null !== iW) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(WW, "prototype", {
-            value: Object.create(iW && iW.prototype, {
+      CR = function(RR) {
+        ! function(RR, JR) {
+          if ("function" !== typeof JR && null !== JR) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(RR, "prototype", {
+            value: Object.create(JR && JR.prototype, {
               constructor: {
-                value: WW,
+                value: RR,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), iW && bW(WW, iW)
-        }(PW, WW);
-        var iW, OW, mW, NW = jW(PW);
+          }), JR && aR(RR, JR)
+        }(ZR, RR);
+        var JR, GR, yR, uR = LR(ZR);
 
-        function PW(WW, iW) {
-          var OW;
-          return function(WW, iW) {
-            if (!(WW instanceof iW)) throw new TypeError("Cannot call a class as a function")
-          }(this, PW), sW(UW(OW = NW.call(this, WW, iW)), "handleFormat", (function(WW) {
-            var iW = OW.props.format;
-            return iW ? iW(WW) : WW
-          })), sW(UW(OW), "handleUpdate", (function() {
-            if (OW.slider) {
-              var WW = OW.props.orientation,
-                iW = (0, cW.capitalize)(MW.orientation[WW].dimension),
-                mW = OW.slider["offset".concat(iW)],
-                EW = OW.handle["offset".concat(iW)];
-              OW.setState({
-                limit: mW - EW,
-                grab: EW / 2
+        function ZR(RR, JR) {
+          var GR;
+          return function(RR, JR) {
+            if (!(RR instanceof JR)) throw new TypeError("Cannot call a class as a function")
+          }(this, ZR), WR(nR(GR = uR.call(this, RR, JR)), "handleFormat", (function(RR) {
+            var JR = GR.props.format;
+            return JR ? JR(RR) : RR
+          })), WR(nR(GR), "handleUpdate", (function() {
+            if (GR.slider) {
+              var RR = GR.props.orientation,
+                JR = (0, iR.capitalize)(AR.orientation[RR].dimension),
+                yR = GR.slider["offset".concat(JR)],
+                tR = GR.handle["offset".concat(JR)];
+              GR.setState({
+                limit: yR - tR,
+                grab: tR / 2
               })
             }
-          })), sW(UW(OW), "handleStart", (function(WW) {
-            var iW = OW.props.onChangeStart;
-            document.addEventListener("mousemove", OW.handleDrag), document.addEventListener("mouseup", OW.handleEnd), OW.setState({
+          })), WR(nR(GR), "handleStart", (function(RR) {
+            var JR = GR.props.onChangeStart;
+            document.addEventListener("mousemove", GR.handleDrag), document.addEventListener("mouseup", GR.handleEnd), GR.setState({
               active: !0
             }, (function() {
-              iW && iW(WW)
+              JR && JR(RR)
             }))
-          })), sW(UW(OW), "handleDrag", (function(WW) {
-            WW.stopPropagation();
-            var iW = OW.props.onChange,
-              mW = WW.target,
-              EW = mW.className,
-              NW = mW.classList,
-              PW = mW.dataset;
-            if (iW && "rangeslider__labels" !== EW) {
-              var LW = OW.position(WW);
-              NW && NW.contains("rangeslider__label-item") && PW.value && (LW = parseFloat(PW.value)), iW && iW(LW, WW)
+          })), WR(nR(GR), "handleDrag", (function(RR) {
+            RR.stopPropagation();
+            var JR = GR.props.onChange,
+              yR = RR.target,
+              tR = yR.className,
+              uR = yR.classList,
+              ZR = yR.dataset;
+            if (JR && "rangeslider__labels" !== tR) {
+              var qR = GR.position(RR);
+              uR && uR.contains("rangeslider__label-item") && ZR.value && (qR = parseFloat(ZR.value)), JR && JR(qR, RR)
             }
-          })), sW(UW(OW), "handleEnd", (function(WW) {
-            var iW = OW.props.onChangeComplete;
-            OW.setState({
+          })), WR(nR(GR), "handleEnd", (function(RR) {
+            var JR = GR.props.onChangeComplete;
+            GR.setState({
               active: !1
             }, (function() {
-              iW && iW(WW)
-            })), document.removeEventListener("mousemove", OW.handleDrag), document.removeEventListener("mouseup", OW.handleEnd)
-          })), sW(UW(OW), "handleKeyDown", (function(WW) {
-            WW.preventDefault();
-            var iW, mW = WW.keyCode,
-              EW = OW.props,
-              NW = EW.value,
-              PW = EW.min,
-              LW = EW.max,
-              cW = EW.step,
-              wW = EW.onChange;
-            switch (mW) {
+              JR && JR(RR)
+            })), document.removeEventListener("mousemove", GR.handleDrag), document.removeEventListener("mouseup", GR.handleEnd)
+          })), WR(nR(GR), "handleKeyDown", (function(RR) {
+            RR.preventDefault();
+            var JR, yR = RR.keyCode,
+              tR = GR.props,
+              uR = tR.value,
+              ZR = tR.min,
+              qR = tR.max,
+              iR = tR.step,
+              fR = tR.onChange;
+            switch (yR) {
               case 38:
               case 39:
-                iW = NW + cW > LW ? LW : NW + cW, wW && wW(iW, WW);
+                JR = uR + iR > qR ? qR : uR + iR, fR && fR(JR, RR);
                 break;
               case 37:
               case 40:
-                iW = NW - cW < PW ? PW : NW - cW, wW && wW(iW, WW)
+                JR = uR - iR < ZR ? ZR : uR - iR, fR && fR(JR, RR)
             }
-          })), sW(UW(OW), "getPositionFromValue", (function(WW) {
-            var iW = OW.state.limit,
-              mW = OW.props,
-              EW = mW.min,
-              NW = (WW - EW) / (mW.max - EW);
-            return Math.round(NW * iW)
-          })), sW(UW(OW), "getValueFromPosition", (function(WW) {
-            var iW = OW.state.limit,
-              mW = OW.props,
-              EW = mW.orientation,
-              NW = mW.min,
-              PW = mW.max,
-              LW = mW.step,
-              wW = (0, cW.clamp)(WW, 0, iW) / (iW || 1),
-              tW = LW * Math.round(wW * (PW - NW) / LW),
-              ZW = "horizontal" === EW ? tW + NW : PW - tW;
-            return (0, cW.clamp)(ZW, NW, PW)
-          })), sW(UW(OW), "position", (function(WW) {
-            var iW = OW.state.grab,
-              mW = OW.props,
-              EW = mW.orientation,
-              NW = mW.reverse,
-              PW = OW.slider,
-              LW = MW.orientation[EW].coordinate,
-              wW = NW ? MW.orientation[EW].reverseDirection : MW.orientation[EW].direction,
-              tW = "client".concat((0, cW.capitalize)(LW)),
-              ZW = WW.touches ? WW.touches[0][tW] : WW[tW],
-              xW = PW.getBoundingClientRect()[wW],
-              lW = NW ? xW - ZW - iW : ZW - xW - iW;
-            return OW.getValueFromPosition(lW)
-          })), sW(UW(OW), "coordinates", (function(WW) {
-            var iW = OW.state,
-              mW = iW.limit,
-              EW = iW.grab,
-              NW = OW.props.orientation,
-              PW = OW.getValueFromPosition(WW),
-              LW = OW.getPositionFromValue(PW),
-              cW = "horizontal" === NW ? LW + EW : LW;
+          })), WR(nR(GR), "getPositionFromValue", (function(RR) {
+            var JR = GR.state.limit,
+              yR = GR.props,
+              tR = yR.min,
+              uR = (RR - tR) / (yR.max - tR);
+            return Math.round(uR * JR)
+          })), WR(nR(GR), "getValueFromPosition", (function(RR) {
+            var JR = GR.state.limit,
+              yR = GR.props,
+              tR = yR.orientation,
+              uR = yR.min,
+              ZR = yR.max,
+              qR = yR.step,
+              fR = (0, iR.clamp)(RR, 0, JR) / (JR || 1),
+              VR = qR * Math.round(fR * (ZR - uR) / qR),
+              KR = "horizontal" === tR ? VR + uR : ZR - VR;
+            return (0, iR.clamp)(KR, uR, ZR)
+          })), WR(nR(GR), "position", (function(RR) {
+            var JR = GR.state.grab,
+              yR = GR.props,
+              tR = yR.orientation,
+              uR = yR.reverse,
+              ZR = GR.slider,
+              qR = AR.orientation[tR].coordinate,
+              fR = uR ? AR.orientation[tR].reverseDirection : AR.orientation[tR].direction,
+              VR = "client".concat((0, iR.capitalize)(qR)),
+              KR = RR.touches ? RR.touches[0][VR] : RR[VR],
+              wR = ZR.getBoundingClientRect()[fR],
+              rR = uR ? wR - KR - JR : KR - wR - JR;
+            return GR.getValueFromPosition(rR)
+          })), WR(nR(GR), "coordinates", (function(RR) {
+            var JR = GR.state,
+              yR = JR.limit,
+              tR = JR.grab,
+              uR = GR.props.orientation,
+              ZR = GR.getValueFromPosition(RR),
+              qR = GR.getPositionFromValue(ZR),
+              iR = "horizontal" === uR ? qR + tR : qR;
             return {
-              fill: "horizontal" === NW ? cW : mW - cW,
-              handle: cW,
-              label: cW
+              fill: "horizontal" === uR ? iR : yR - iR,
+              handle: iR,
+              label: iR
             }
-          })), sW(UW(OW), "renderLabels", (function(WW) {
-            return (0, wW.jsx)("ul", {
-              ref: function(WW) {
-                OW.labels = WW
+          })), WR(nR(GR), "renderLabels", (function(RR) {
+            return (0, fR.jsx)("ul", {
+              ref: function(RR) {
+                GR.labels = RR
               },
-              className: (0, EW.default)("rangeslider__labels"),
-              children: WW
+              className: (0, tR.default)("rangeslider__labels"),
+              children: RR
             })
-          })), OW.state = {
+          })), GR.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, OW
+          }, GR
         }
-        return iW = PW, (OW = [{
+        return JR = ZR, (GR = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new LW.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new qR.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var WW = this,
-              iW = this.props,
-              OW = iW.value,
-              mW = iW.orientation,
-              NW = iW.className,
-              PW = iW.tooltip,
-              LW = iW.reverse,
-              cW = iW.labels,
-              tW = iW.min,
-              ZW = iW.max,
-              lW = iW.handleLabel,
-              AW = this.state.active,
-              bW = MW.orientation[mW].dimension,
-              jW = LW ? MW.orientation[mW].reverseDirection : MW.orientation[mW].direction,
-              UW = this.getPositionFromValue(OW),
-              kW = this.coordinates(UW),
-              KW = sW({}, bW, "".concat(kW.fill, "px")),
-              SW = sW({}, jW, "".concat(kW.handle, "px")),
-              YW = PW && AW,
-              yW = [],
-              TW = Object.keys(cW);
-            if (TW.length > 0) {
-              var JW, hW = xW(TW = TW.sort((function(WW, iW) {
-                return LW ? WW - iW : iW - WW
+            var RR = this,
+              JR = this.props,
+              GR = JR.value,
+              yR = JR.orientation,
+              uR = JR.className,
+              ZR = JR.tooltip,
+              qR = JR.reverse,
+              iR = JR.labels,
+              VR = JR.min,
+              KR = JR.max,
+              rR = JR.handleLabel,
+              eR = this.state.active,
+              aR = AR.orientation[yR].dimension,
+              LR = qR ? AR.orientation[yR].reverseDirection : AR.orientation[yR].direction,
+              nR = this.getPositionFromValue(GR),
+              UR = this.coordinates(nR),
+              CR = WR({}, aR, "".concat(UR.fill, "px")),
+              XR = WR({}, LR, "".concat(UR.handle, "px")),
+              MR = ZR && eR,
+              BR = [],
+              lR = Object.keys(iR);
+            if (lR.length > 0) {
+              var pR, gR = wR(lR = lR.sort((function(RR, JR) {
+                return qR ? RR - JR : JR - RR
               })));
               try {
-                for (hW.s(); !(JW = hW.n()).done;) {
-                  var HW = JW.value,
-                    nW = this.getPositionFromValue(HW),
-                    uW = this.coordinates(nW),
-                    oW = sW({}, jW, "".concat(uW.label, "px"));
-                  yW.push((0, wW.jsx)("li", {
-                    className: (0, EW.default)("rangeslider__label-item"),
-                    "data-value": HW,
+                for (gR.s(); !(pR = gR.n()).done;) {
+                  var bR = pR.value,
+                    vR = this.getPositionFromValue(bR),
+                    OR = this.coordinates(vR),
+                    xR = WR({}, LR, "".concat(OR.label, "px"));
+                  BR.push((0, fR.jsx)("li", {
+                    className: (0, tR.default)("rangeslider__label-item"),
+                    "data-value": bR,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: oW,
-                    children: this.props.labels[HW]
-                  }, HW))
+                    style: xR,
+                    children: this.props.labels[bR]
+                  }, bR))
                 }
-              } catch (dW) {
-                hW.e(dW)
+              } catch (NR) {
+                gR.e(NR)
               } finally {
-                hW.f()
+                gR.f()
               }
             }
-            return (0, wW.jsxs)("div", {
-              ref: function(iW) {
-                WW.slider = iW
+            return (0, fR.jsxs)("div", {
+              ref: function(JR) {
+                RR.slider = JR
               },
-              className: (0, EW.default)("rangeslider", "rangeslider-".concat(mW), {
-                "rangeslider-reverse": LW
-              }, NW),
+              className: (0, tR.default)("rangeslider", "rangeslider-".concat(yR), {
+                "rangeslider-reverse": qR
+              }, uR),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": tW,
-              "aria-valuemax": ZW,
-              "aria-valuenow": OW,
-              "aria-orientation": mW,
-              children: [(0, wW.jsx)("div", {
+              "aria-valuemin": VR,
+              "aria-valuemax": KR,
+              "aria-valuenow": GR,
+              "aria-orientation": yR,
+              children: [(0, fR.jsx)("div", {
                 className: "rangeslider__fill",
-                style: KW
-              }), (0, wW.jsxs)("div", {
-                ref: function(iW) {
-                  WW.handle = iW
+                style: CR
+              }), (0, fR.jsxs)("div", {
+                ref: function(JR) {
+                  RR.handle = JR
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: SW,
+                style: XR,
                 tabIndex: 0,
-                children: [YW && (0, wW.jsx)("div", {
-                  ref: function(iW) {
-                    WW.tooltip = iW
+                children: [MR && (0, fR.jsx)("div", {
+                  ref: function(JR) {
+                    RR.tooltip = JR
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, wW.jsx)("span", {
-                    children: this.handleFormat(OW)
+                  children: (0, fR.jsx)("span", {
+                    children: this.handleFormat(GR)
                   })
-                }), (0, wW.jsx)("div", {
+                }), (0, fR.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: lW
+                  children: rR
                 })]
-              }), cW && this.renderLabels(yW)]
+              }), iR && this.renderLabels(BR)]
             })
           }
-        }]) && AW(iW.prototype, OW), mW && AW(iW, mW), Object.defineProperty(iW, "prototype", {
+        }]) && eR(JR.prototype, GR), yR && eR(JR, yR), Object.defineProperty(JR, "prototype", {
           writable: !1
-        }), PW
-      }(NW.Component);
-    sW(KW, "propTypes", {
-      min: PW.default.number,
-      max: PW.default.number,
-      step: PW.default.number,
-      value: PW.default.number,
-      orientation: PW.default.string,
-      tooltip: PW.default.bool,
-      reverse: PW.default.bool,
-      labels: PW.default.object,
-      handleLabel: PW.default.string,
-      format: PW.default.func,
-      onChangeStart: PW.default.func,
-      onChange: PW.default.func,
-      onChangeComplete: PW.default.func
-    }), sW(KW, "defaultProps", {
+        }), ZR
+      }(uR.Component);
+    WR(CR, "propTypes", {
+      min: ZR.default.number,
+      max: ZR.default.number,
+      step: ZR.default.number,
+      value: ZR.default.number,
+      orientation: ZR.default.string,
+      tooltip: ZR.default.bool,
+      reverse: ZR.default.bool,
+      labels: ZR.default.object,
+      handleLabel: ZR.default.string,
+      format: ZR.default.func,
+      onChangeStart: ZR.default.func,
+      onChange: ZR.default.func,
+      onChangeComplete: ZR.default.func
+    }), WR(CR, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var SW = KW;
-    iW.default = SW
+    var XR = CR;
+    JR.default = XR
   },
-  5919: (WW, iW, OW) => {
-    var mW;
-    iW.c = void 0;
-    var EW = ((mW = OW(5923)) && mW.__esModule ? mW : {
-      default: mW
+  6041: (RR, JR, GR) => {
+    var yR;
+    JR.b = void 0;
+    var tR = ((yR = GR(6044)) && yR.__esModule ? yR : {
+      default: yR
     }).default;
-    iW.c = EW
+    JR.b = tR
   },
-  5934: (WW, iW) => {
-    Object.defineProperty(iW, "__esModule", {
+  6055: (RR, JR) => {
+    Object.defineProperty(JR, "__esModule", {
       value: !0
-    }), iW.capitalize = function(WW) {
-      return WW.charAt(0).toUpperCase() + WW.substr(1)
-    }, iW.clamp = function(WW, iW, OW) {
-      return Math.min(Math.max(WW, iW), OW)
+    }), JR.capitalize = function(RR) {
+      return RR.charAt(0).toUpperCase() + RR.substr(1)
+    }, JR.clamp = function(RR, JR, GR) {
+      return Math.min(Math.max(RR, JR), GR)
     }
   },
-  5877: (WW, iW, OW) => {
-    var mW = OW(5886);
+  6015: (RR, JR, GR) => {
+    var yR = GR(6021);
 
-    function EW() {}
+    function tR() {}
 
-    function NW() {}
-    NW.resetWarningCache = EW, WW.exports = function() {
-      function WW(WW, iW, OW, EW, NW, PW) {
-        if (PW !== mW) {
-          var LW = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw LW.name = "Invariant Violation", LW
+    function uR() {}
+    uR.resetWarningCache = tR, RR.exports = function() {
+      function RR(RR, JR, GR, tR, uR, ZR) {
+        if (ZR !== yR) {
+          var qR = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw qR.name = "Invariant Violation", qR
         }
       }
 
-      function iW() {
-        return WW
+      function JR() {
+        return RR
       }
-      WW.isRequired = WW;
-      var OW = {
-        array: WW,
-        bigint: WW,
-        bool: WW,
-        func: WW,
-        number: WW,
-        object: WW,
-        string: WW,
-        symbol: WW,
-        any: WW,
-        arrayOf: iW,
-        element: WW,
-        elementType: WW,
-        instanceOf: iW,
-        node: WW,
-        objectOf: iW,
-        oneOf: iW,
-        oneOfType: iW,
-        shape: iW,
-        exact: iW,
-        checkPropTypes: NW,
-        resetWarningCache: EW
+      RR.isRequired = RR;
+      var GR = {
+        array: RR,
+        bigint: RR,
+        bool: RR,
+        func: RR,
+        number: RR,
+        object: RR,
+        string: RR,
+        symbol: RR,
+        any: RR,
+        arrayOf: JR,
+        element: RR,
+        elementType: RR,
+        instanceOf: JR,
+        node: RR,
+        objectOf: JR,
+        oneOf: JR,
+        oneOfType: JR,
+        shape: JR,
+        exact: JR,
+        checkPropTypes: uR,
+        resetWarningCache: tR
       };
-      return OW.PropTypes = OW, OW
+      return GR.PropTypes = GR, GR
     }
   },
-  5868: (WW, iW, OW) => {
-    WW.exports = OW(5877)()
+  6008: (RR, JR, GR) => {
+    RR.exports = GR(6015)()
   },
-  5886: WW => {
-    WW.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  6021: RR => {
+    RR.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5925: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => yW
+  6047: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => BR
     });
-    var mW = function() {
+    var yR = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function WW(WW, iW) {
-          var OW = -1;
-          return WW.some((function(WW, mW) {
-            return WW[0] === iW && (OW = mW, !0)
-          })), OW
+        function RR(RR, JR) {
+          var GR = -1;
+          return RR.some((function(RR, yR) {
+            return RR[0] === JR && (GR = yR, !0)
+          })), GR
         }
         return function() {
-          function iW() {
+          function JR() {
             this.__entries__ = []
           }
-          return Object.defineProperty(iW.prototype, "size", {
+          return Object.defineProperty(JR.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), iW.prototype.get = function(iW) {
-            var OW = WW(this.__entries__, iW),
-              mW = this.__entries__[OW];
-            return mW && mW[1]
-          }, iW.prototype.set = function(iW, OW) {
-            var mW = WW(this.__entries__, iW);
-            ~mW ? this.__entries__[mW][1] = OW : this.__entries__.push([iW, OW])
-          }, iW.prototype.delete = function(iW) {
-            var OW = this.__entries__,
-              mW = WW(OW, iW);
-            ~mW && OW.splice(mW, 1)
-          }, iW.prototype.has = function(iW) {
-            return !!~WW(this.__entries__, iW)
-          }, iW.prototype.clear = function() {
+          }), JR.prototype.get = function(JR) {
+            var GR = RR(this.__entries__, JR),
+              yR = this.__entries__[GR];
+            return yR && yR[1]
+          }, JR.prototype.set = function(JR, GR) {
+            var yR = RR(this.__entries__, JR);
+            ~yR ? this.__entries__[yR][1] = GR : this.__entries__.push([JR, GR])
+          }, JR.prototype.delete = function(JR) {
+            var GR = this.__entries__,
+              yR = RR(GR, JR);
+            ~yR && GR.splice(yR, 1)
+          }, JR.prototype.has = function(JR) {
+            return !!~RR(this.__entries__, JR)
+          }, JR.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, iW.prototype.forEach = function(WW, iW) {
-            void 0 === iW && (iW = null);
-            for (var OW = 0, mW = this.__entries__; OW < mW.length; OW++) {
-              var EW = mW[OW];
-              WW.call(iW, EW[1], EW[0])
+          }, JR.prototype.forEach = function(RR, JR) {
+            void 0 === JR && (JR = null);
+            for (var GR = 0, yR = this.__entries__; GR < yR.length; GR++) {
+              var tR = yR[GR];
+              RR.call(JR, tR[1], tR[0])
             }
-          }, iW
+          }, JR
         }()
       }(),
-      EW = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      NW = "undefined" !== typeof OW.g && OW.g.Math === Math ? OW.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      PW = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(NW) : function(WW) {
+      tR = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      uR = "undefined" !== typeof GR.g && GR.g.Math === Math ? GR.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      ZR = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(uR) : function(RR) {
         return setTimeout((function() {
-          return WW(Date.now())
+          return RR(Date.now())
         }), 1e3 / 60)
       };
-    var LW = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      cW = "undefined" !== typeof MutationObserver,
-      wW = function() {
-        function WW() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(WW, iW) {
-            var OW = !1,
-              mW = !1,
-              EW = 0;
+    var qR = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      iR = "undefined" !== typeof MutationObserver,
+      fR = function() {
+        function RR() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(RR, JR) {
+            var GR = !1,
+              yR = !1,
+              tR = 0;
 
-            function NW() {
-              OW && (OW = !1, WW()), mW && cW()
+            function uR() {
+              GR && (GR = !1, RR()), yR && iR()
             }
 
-            function LW() {
-              PW(NW)
+            function qR() {
+              ZR(uR)
             }
 
-            function cW() {
-              var WW = Date.now();
-              if (OW) {
-                if (WW - EW < 2) return;
-                mW = !0
-              } else OW = !0, mW = !1, setTimeout(LW, iW);
-              EW = WW
+            function iR() {
+              var RR = Date.now();
+              if (GR) {
+                if (RR - tR < 2) return;
+                yR = !0
+              } else GR = !0, yR = !1, setTimeout(qR, JR);
+              tR = RR
             }
-            return cW
+            return iR
           }(this.refresh.bind(this), 20)
         }
-        return WW.prototype.addObserver = function(WW) {
-          ~this.observers_.indexOf(WW) || this.observers_.push(WW), this.connected_ || this.connect_()
-        }, WW.prototype.removeObserver = function(WW) {
-          var iW = this.observers_,
-            OW = iW.indexOf(WW);
-          ~OW && iW.splice(OW, 1), !iW.length && this.connected_ && this.disconnect_()
-        }, WW.prototype.refresh = function() {
+        return RR.prototype.addObserver = function(RR) {
+          ~this.observers_.indexOf(RR) || this.observers_.push(RR), this.connected_ || this.connect_()
+        }, RR.prototype.removeObserver = function(RR) {
+          var JR = this.observers_,
+            GR = JR.indexOf(RR);
+          ~GR && JR.splice(GR, 1), !JR.length && this.connected_ && this.disconnect_()
+        }, RR.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, WW.prototype.updateObservers_ = function() {
-          var WW = this.observers_.filter((function(WW) {
-            return WW.gatherActive(), WW.hasActive()
+        }, RR.prototype.updateObservers_ = function() {
+          var RR = this.observers_.filter((function(RR) {
+            return RR.gatherActive(), RR.hasActive()
           }));
-          return WW.forEach((function(WW) {
-            return WW.broadcastActive()
-          })), WW.length > 0
-        }, WW.prototype.connect_ = function() {
-          EW && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), cW ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return RR.forEach((function(RR) {
+            return RR.broadcastActive()
+          })), RR.length > 0
+        }, RR.prototype.connect_ = function() {
+          tR && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), iR ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, WW.prototype.disconnect_ = function() {
-          EW && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, WW.prototype.onTransitionEnd_ = function(WW) {
-          var iW = WW.propertyName,
-            OW = void 0 === iW ? "" : iW;
-          LW.some((function(WW) {
-            return !!~OW.indexOf(WW)
+        }, RR.prototype.disconnect_ = function() {
+          tR && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, RR.prototype.onTransitionEnd_ = function(RR) {
+          var JR = RR.propertyName,
+            GR = void 0 === JR ? "" : JR;
+          qR.some((function(RR) {
+            return !!~GR.indexOf(RR)
           })) && this.refresh()
-        }, WW.getInstance = function() {
-          return this.instance_ || (this.instance_ = new WW), this.instance_
-        }, WW.instance_ = null, WW
+        }, RR.getInstance = function() {
+          return this.instance_ || (this.instance_ = new RR), this.instance_
+        }, RR.instance_ = null, RR
       }(),
-      tW = function(WW, iW) {
-        for (var OW = 0, mW = Object.keys(iW); OW < mW.length; OW++) {
-          var EW = mW[OW];
-          Object.defineProperty(WW, EW, {
-            value: iW[EW],
+      VR = function(RR, JR) {
+        for (var GR = 0, yR = Object.keys(JR); GR < yR.length; GR++) {
+          var tR = yR[GR];
+          Object.defineProperty(RR, tR, {
+            value: JR[tR],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return WW
+        return RR
       },
-      ZW = function(WW) {
-        return WW && WW.ownerDocument && WW.ownerDocument.defaultView || NW
+      KR = function(RR) {
+        return RR && RR.ownerDocument && RR.ownerDocument.defaultView || uR
       },
-      xW = kW(0, 0, 0, 0);
+      wR = UR(0, 0, 0, 0);
 
-    function lW(WW) {
-      return parseFloat(WW) || 0
+    function rR(RR) {
+      return parseFloat(RR) || 0
     }
 
-    function AW(WW) {
-      for (var iW = [], OW = 1; OW < arguments.length; OW++) iW[OW - 1] = arguments[OW];
-      return iW.reduce((function(iW, OW) {
-        return iW + lW(WW["border-" + OW + "-width"])
+    function eR(RR) {
+      for (var JR = [], GR = 1; GR < arguments.length; GR++) JR[GR - 1] = arguments[GR];
+      return JR.reduce((function(JR, GR) {
+        return JR + rR(RR["border-" + GR + "-width"])
       }), 0)
     }
 
-    function bW(WW) {
-      var iW = WW.clientWidth,
-        OW = WW.clientHeight;
-      if (!iW && !OW) return xW;
-      var mW = ZW(WW).getComputedStyle(WW),
-        EW = function(WW) {
-          for (var iW = {}, OW = 0, mW = ["top", "right", "bottom", "left"]; OW < mW.length; OW++) {
-            var EW = mW[OW],
-              NW = WW["padding-" + EW];
-            iW[EW] = lW(NW)
+    function aR(RR) {
+      var JR = RR.clientWidth,
+        GR = RR.clientHeight;
+      if (!JR && !GR) return wR;
+      var yR = KR(RR).getComputedStyle(RR),
+        tR = function(RR) {
+          for (var JR = {}, GR = 0, yR = ["top", "right", "bottom", "left"]; GR < yR.length; GR++) {
+            var tR = yR[GR],
+              uR = RR["padding-" + tR];
+            JR[tR] = rR(uR)
           }
-          return iW
-        }(mW),
-        NW = EW.left + EW.right,
-        PW = EW.top + EW.bottom,
-        LW = lW(mW.width),
-        cW = lW(mW.height);
-      if ("border-box" === mW.boxSizing && (Math.round(LW + NW) !== iW && (LW -= AW(mW, "left", "right") + NW), Math.round(cW + PW) !== OW && (cW -= AW(mW, "top", "bottom") + PW)), ! function(WW) {
-          return WW === ZW(WW).document.documentElement
-        }(WW)) {
-        var wW = Math.round(LW + NW) - iW,
-          tW = Math.round(cW + PW) - OW;
-        1 !== Math.abs(wW) && (LW -= wW), 1 !== Math.abs(tW) && (cW -= tW)
+          return JR
+        }(yR),
+        uR = tR.left + tR.right,
+        ZR = tR.top + tR.bottom,
+        qR = rR(yR.width),
+        iR = rR(yR.height);
+      if ("border-box" === yR.boxSizing && (Math.round(qR + uR) !== JR && (qR -= eR(yR, "left", "right") + uR), Math.round(iR + ZR) !== GR && (iR -= eR(yR, "top", "bottom") + ZR)), ! function(RR) {
+          return RR === KR(RR).document.documentElement
+        }(RR)) {
+        var fR = Math.round(qR + uR) - JR,
+          VR = Math.round(iR + ZR) - GR;
+        1 !== Math.abs(fR) && (qR -= fR), 1 !== Math.abs(VR) && (iR -= VR)
       }
-      return kW(EW.left, EW.top, LW, cW)
+      return UR(tR.left, tR.top, qR, iR)
     }
-    var jW = "undefined" !== typeof SVGGraphicsElement ? function(WW) {
-      return WW instanceof ZW(WW).SVGGraphicsElement
-    } : function(WW) {
-      return WW instanceof ZW(WW).SVGElement && "function" === typeof WW.getBBox
+    var LR = "undefined" !== typeof SVGGraphicsElement ? function(RR) {
+      return RR instanceof KR(RR).SVGGraphicsElement
+    } : function(RR) {
+      return RR instanceof KR(RR).SVGElement && "function" === typeof RR.getBBox
     };
 
-    function UW(WW) {
-      return EW ? jW(WW) ? function(WW) {
-        var iW = WW.getBBox();
-        return kW(0, 0, iW.width, iW.height)
-      }(WW) : bW(WW) : xW
+    function nR(RR) {
+      return tR ? LR(RR) ? function(RR) {
+        var JR = RR.getBBox();
+        return UR(0, 0, JR.width, JR.height)
+      }(RR) : aR(RR) : wR
     }
 
-    function kW(WW, iW, OW, mW) {
+    function UR(RR, JR, GR, yR) {
       return {
-        x: WW,
-        y: iW,
-        width: OW,
-        height: mW
+        x: RR,
+        y: JR,
+        width: GR,
+        height: yR
       }
     }
-    var sW = function() {
-        function WW(WW) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = kW(0, 0, 0, 0), this.target = WW
+    var WR = function() {
+        function RR(RR) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = UR(0, 0, 0, 0), this.target = RR
         }
-        return WW.prototype.isActive = function() {
-          var WW = UW(this.target);
-          return this.contentRect_ = WW, WW.width !== this.broadcastWidth || WW.height !== this.broadcastHeight
-        }, WW.prototype.broadcastRect = function() {
-          var WW = this.contentRect_;
-          return this.broadcastWidth = WW.width, this.broadcastHeight = WW.height, WW
-        }, WW
+        return RR.prototype.isActive = function() {
+          var RR = nR(this.target);
+          return this.contentRect_ = RR, RR.width !== this.broadcastWidth || RR.height !== this.broadcastHeight
+        }, RR.prototype.broadcastRect = function() {
+          var RR = this.contentRect_;
+          return this.broadcastWidth = RR.width, this.broadcastHeight = RR.height, RR
+        }, RR
       }(),
-      MW = function(WW, iW) {
-        var OW = function(WW) {
-          var iW = WW.x,
-            OW = WW.y,
-            mW = WW.width,
-            EW = WW.height,
-            NW = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            PW = Object.create(NW.prototype);
-          return tW(PW, {
-            x: iW,
-            y: OW,
-            width: mW,
-            height: EW,
-            top: OW,
-            right: iW + mW,
-            bottom: EW + OW,
-            left: iW
-          }), PW
-        }(iW);
-        tW(this, {
-          target: WW,
-          contentRect: OW
+      AR = function(RR, JR) {
+        var GR = function(RR) {
+          var JR = RR.x,
+            GR = RR.y,
+            yR = RR.width,
+            tR = RR.height,
+            uR = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            ZR = Object.create(uR.prototype);
+          return VR(ZR, {
+            x: JR,
+            y: GR,
+            width: yR,
+            height: tR,
+            top: GR,
+            right: JR + yR,
+            bottom: tR + GR,
+            left: JR
+          }), ZR
+        }(JR);
+        VR(this, {
+          target: RR,
+          contentRect: GR
         })
       },
-      KW = function() {
-        function WW(WW, iW, OW) {
-          if (this.activeObservations_ = [], this.observations_ = new mW, "function" !== typeof WW) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = WW, this.controller_ = iW, this.callbackCtx_ = OW
+      CR = function() {
+        function RR(RR, JR, GR) {
+          if (this.activeObservations_ = [], this.observations_ = new yR, "function" !== typeof RR) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = RR, this.controller_ = JR, this.callbackCtx_ = GR
         }
-        return WW.prototype.observe = function(WW) {
+        return RR.prototype.observe = function(RR) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(WW instanceof ZW(WW).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var iW = this.observations_;
-            iW.has(WW) || (iW.set(WW, new sW(WW)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(RR instanceof KR(RR).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var JR = this.observations_;
+            JR.has(RR) || (JR.set(RR, new WR(RR)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, WW.prototype.unobserve = function(WW) {
+        }, RR.prototype.unobserve = function(RR) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(WW instanceof ZW(WW).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var iW = this.observations_;
-            iW.has(WW) && (iW.delete(WW), iW.size || this.controller_.removeObserver(this))
+            if (!(RR instanceof KR(RR).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var JR = this.observations_;
+            JR.has(RR) && (JR.delete(RR), JR.size || this.controller_.removeObserver(this))
           }
-        }, WW.prototype.disconnect = function() {
+        }, RR.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, WW.prototype.gatherActive = function() {
-          var WW = this;
-          this.clearActive(), this.observations_.forEach((function(iW) {
-            iW.isActive() && WW.activeObservations_.push(iW)
+        }, RR.prototype.gatherActive = function() {
+          var RR = this;
+          this.clearActive(), this.observations_.forEach((function(JR) {
+            JR.isActive() && RR.activeObservations_.push(JR)
           }))
-        }, WW.prototype.broadcastActive = function() {
+        }, RR.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var WW = this.callbackCtx_,
-              iW = this.activeObservations_.map((function(WW) {
-                return new MW(WW.target, WW.broadcastRect())
+            var RR = this.callbackCtx_,
+              JR = this.activeObservations_.map((function(RR) {
+                return new AR(RR.target, RR.broadcastRect())
               }));
-            this.callback_.call(WW, iW, WW), this.clearActive()
+            this.callback_.call(RR, JR, RR), this.clearActive()
           }
-        }, WW.prototype.clearActive = function() {
+        }, RR.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, WW.prototype.hasActive = function() {
+        }, RR.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, WW
+        }, RR
       }(),
-      SW = "undefined" !== typeof WeakMap ? new WeakMap : new mW,
-      YW = function WW(iW) {
-        if (!(this instanceof WW)) throw new TypeError("Cannot call a class as a function.");
+      XR = "undefined" !== typeof WeakMap ? new WeakMap : new yR,
+      MR = function RR(JR) {
+        if (!(this instanceof RR)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var OW = wW.getInstance(),
-          mW = new KW(iW, OW, this);
-        SW.set(this, mW)
+        var GR = fR.getInstance(),
+          yR = new CR(JR, GR, this);
+        XR.set(this, yR)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(WW) {
-      YW.prototype[WW] = function() {
-        var iW;
-        return (iW = SW.get(this))[WW].apply(iW, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(RR) {
+      MR.prototype[RR] = function() {
+        var JR;
+        return (JR = XR.get(this))[RR].apply(JR, arguments)
       }
     }));
-    const yW = "undefined" !== typeof NW.ResizeObserver ? NW.ResizeObserver : YW
+    const BR = "undefined" !== typeof uR.ResizeObserver ? uR.ResizeObserver : MR
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

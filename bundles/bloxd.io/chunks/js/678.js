@@ -1,29 +1,29 @@
 export const id = 678;
 export const ids = [678];
 export const modules = {
-  64490: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      for (const OW of WW._frameGraph._tasks)
-        if (OW?._config && OW._colorAttachment && (OW._config.rt === iW.scRT || OW._config.rst === iW.scRT)) return OW
+  64230: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      for (const GR of RR._frameGraph._tasks)
+        if (GR?._config && GR._colorAttachment && (GR._config.rt === JR.scRT || GR._config.rst === JR.scRT)) return GR
     }
 
-    function EW(WW, iW) {
-      const OW = WW._renderingContexts[WW._renderingContexts.length - 1];
-      if (!OW?._frameGraph) return;
-      const EW = mW(iW, WW);
-      if (!EW) return;
-      if (1 === WW.msaaSamples) return void(EW._config.clr = !1);
-      const NW = EW.enabled;
-      EW._config.clr = !0, EW.enabled = !1, iW._beforeRender.unshift((() => {
-        const iW = mW(OW, WW),
-          PW = iW?._config.rst === WW.scRT && iW._config.rt._colorView;
-        EW.enabled = !!PW && NW, EW._config.clr = !PW, PW && (EW._colorAttachment.view = PW)
+    function tR(RR, JR) {
+      const GR = RR._renderingContexts[RR._renderingContexts.length - 1];
+      if (!GR?._frameGraph) return;
+      const tR = yR(JR, RR);
+      if (!tR) return;
+      if (1 === RR.msaaSamples) return void(tR._config.clr = !1);
+      const uR = tR.enabled;
+      tR._config.clr = !0, tR.enabled = !1, JR._beforeRender.unshift((() => {
+        const JR = yR(GR, RR),
+          ZR = JR?._config.rst === RR.scRT && JR._config.rt._colorView;
+        tR.enabled = !!ZR && uR, tR._config.clr = !ZR, ZR && (tR._colorAttachment.view = ZR)
       }))
     }
-    OW.r(iW), OW.d(iW, {
-      configureSwapchainOverlayScene: () => EW
+    GR.r(JR), GR.d(JR, {
+      configureSwapchainOverlayScene: () => tR
     })
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

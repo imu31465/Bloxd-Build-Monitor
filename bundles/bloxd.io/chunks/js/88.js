@@ -1,14 +1,14 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  38208: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW,
-      d: () => EW
+  38166: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      d: () => tR
     });
-    const mW = ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"],
-      EW = 47 == OW.j ? ["canAutoStep", "speedMultiplier"] : null
+    const yR = ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"],
+      tR = 47 == GR.j ? ["canAutoStep", "speedMultiplier"] : null
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

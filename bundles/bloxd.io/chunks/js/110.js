@@ -1,126 +1,126 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  5615: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      Howl: () => EW.Howl,
-      Howler: () => EW.Howler,
-      musicOutput: () => jW,
-      readyAudioContext: () => UW
+  5742: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      Howl: () => tR.Howl,
+      Howler: () => tR.Howler,
+      musicOutput: () => LR,
+      readyAudioContext: () => nR
     });
-    var mW, EW = OW(5618),
-      NW = OW(4653),
-      PW = OW(5356);
-    const LW = EW.Howler;
+    var yR, tR = GR(5744),
+      uR = GR(4757),
+      ZR = GR(5456);
+    const qR = tR.Howler;
 
-    function cW() {
-      var WW, iW;
-      if (LW.ctx || !LW.usingWebAudio || "undefined" === typeof AudioContext || !(0, PW.k)()) return;
-      const OW = navigator.audioSession;
-      let mW;
-      "auto" === (null === OW || void 0 === OW ? void 0 : OW.type) && (OW.type = "ambient");
+    function iR() {
+      var RR, JR;
+      if (qR.ctx || !qR.usingWebAudio || "undefined" === typeof AudioContext || !(0, ZR.h)()) return;
+      const GR = navigator.audioSession;
+      let yR;
+      "auto" === (null === GR || void 0 === GR ? void 0 : GR.type) && (GR.type = "ambient");
       try {
-        mW = new AudioContext({
+        yR = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const EW = mW.createGain();
-      EW.gain.setValueAtTime(LW._muted ? 0 : null !== (WW = LW._volume) && void 0 !== WW ? WW : 1, mW.currentTime), EW.connect(mW.destination), LW.ctx = mW, LW.masterGain = EW, null === (iW = LW._setup) || void 0 === iW || iW.call(LW)
+      const tR = yR.createGain();
+      tR.gain.setValueAtTime(qR._muted ? 0 : null !== (RR = qR._volume) && void 0 !== RR ? RR : 1, yR.currentTime), tR.connect(yR.destination), qR.ctx = yR, qR.masterGain = tR, null === (JR = qR._setup) || void 0 === JR || JR.call(qR)
     }
-    LW._mobileUnloaded = !0;
-    const wW = LW.volume.bind(EW.Howler);
-    LW.volume = function() {
-      return cW(), wW(...arguments)
+    qR._mobileUnloaded = !0;
+    const fR = qR.volume.bind(tR.Howler);
+    qR.volume = function() {
+      return iR(), fR(...arguments)
     };
-    const tW = LW.mute.bind(EW.Howler);
-    LW.mute = WW => (cW(), tW(WW));
-    const ZW = EW.Howl.prototype,
-      xW = ZW.init;
+    const VR = qR.mute.bind(tR.Howler);
+    qR.mute = RR => (iR(), VR(RR));
+    const KR = tR.Howl.prototype,
+      wR = KR.init;
 
-    function lW() {
-      for (; LW._html5AudioPool.length < LW.html5PoolSize;) {
-        const WW = new Audio;
-        WW._unlocked = !0, LW._releaseHtml5Audio(WW)
+    function rR() {
+      for (; qR._html5AudioPool.length < qR.html5PoolSize;) {
+        const RR = new Audio;
+        RR._unlocked = !0, qR._releaseHtml5Audio(RR)
       }
-      for (const iW of LW._howls)
-        if (!iW._webAudio)
-          for (const OW of iW._getSoundIds()) {
-            var WW;
-            const mW = null === (WW = iW._soundById(OW)) || void 0 === WW ? void 0 : WW._node;
-            mW && !mW._unlocked && (mW._unlocked = !0, mW.load())
+      for (const JR of qR._howls)
+        if (!JR._webAudio)
+          for (const GR of JR._getSoundIds()) {
+            var RR;
+            const yR = null === (RR = JR._soundById(GR)) || void 0 === RR ? void 0 : RR._node;
+            yR && !yR._unlocked && (yR._unlocked = !0, yR.load())
           }
     }
-    ZW.init = function(WW) {
-      return cW(), xW.call(this, WW)
-    }, (0, PW.k)() && (LW._unlockAudio = () => {
-      const WW = LW.ctx;
-      if (LW._audioUnlocked || !WW) return;
-      LW.autoUnlock = !1;
-      const iW = WW.createBuffer(1, 1, 22050);
-      LW._scratchBuffer = iW;
-      const OW = new AbortController;
-      let mW = "afterPaint";
-      const EW = () => {
-          var mW;
-          if (LW._audioUnlocked) return;
-          null === (mW = LW._autoResume) || void 0 === mW || mW.call(LW);
-          const EW = WW.createBufferSource();
-          EW.buffer = iW, EW.connect(WW.destination), EW.start(0), WW.resume().catch((() => {})), EW.onended = () => {
-            EW.disconnect(0), LW._audioUnlocked = !0, OW.abort();
-            for (const WW of LW._howls) WW._emit("unlock")
+    KR.init = function(RR) {
+      return iR(), wR.call(this, RR)
+    }, (0, ZR.h)() && (qR._unlockAudio = () => {
+      const RR = qR.ctx;
+      if (qR._audioUnlocked || !RR) return;
+      qR.autoUnlock = !1;
+      const JR = RR.createBuffer(1, 1, 22050);
+      qR._scratchBuffer = JR;
+      const GR = new AbortController;
+      let yR = "afterPaint";
+      const tR = () => {
+          var yR;
+          if (qR._audioUnlocked) return;
+          null === (yR = qR._autoResume) || void 0 === yR || yR.call(qR);
+          const tR = RR.createBufferSource();
+          tR.buffer = JR, tR.connect(RR.destination), tR.start(0), RR.resume().catch((() => {})), tR.onended = () => {
+            tR.disconnect(0), qR._audioUnlocked = !0, GR.abort();
+            for (const RR of qR._howls) RR._emit("unlock")
           }
         },
-        cW = () => {
-          lW(), EW()
+        iR = () => {
+          rR(), tR()
         },
-        wW = iW => {
-          if (lW(), "inTap" === mW) {
-            if ("running" === WW.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), EW()
-          } else "afterPaint" === mW && (mW = "queued", (0, NW.b)(iW.timeStamp, (() => {
-            mW = "inTap", EW()
+        fR = JR => {
+          if (rR(), "inTap" === yR) {
+            if ("running" === RR.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), tR()
+          } else "afterPaint" === yR && (yR = "queued", (0, uR.d)(JR.timeStamp, (() => {
+            yR = "inTap", tR()
           })))
         };
-      for (const NW of ["touchstart", "touchend"]) document.addEventListener(NW, cW, {
+      for (const uR of ["touchstart", "touchend"]) document.addEventListener(uR, iR, {
         capture: !0,
-        signal: OW.signal
+        signal: GR.signal
       });
-      for (const NW of PW.d) document.addEventListener(NW, wW, {
+      for (const uR of ZR.b) document.addEventListener(uR, fR, {
         capture: !0,
-        signal: OW.signal
+        signal: GR.signal
       })
     });
-    let AW = 0;
-    const bW = null === (mW = LW._autoSuspend) || void 0 === mW ? void 0 : mW.bind(EW.Howler);
+    let eR = 0;
+    const aR = null === (yR = qR._autoSuspend) || void 0 === yR ? void 0 : yR.bind(tR.Howler);
 
-    function jW() {
-      UW();
+    function LR() {
+      nR();
       const {
-        ctx: WW,
-        masterGain: iW
-      } = LW;
-      return WW && iW ? {
-        ctx: WW,
-        destination: iW,
-        holdAwake: WW => {
-          var iW, OW;
-          (AW += WW ? 1 : -1, WW) ? null === (iW = LW._autoResume) || void 0 === iW || iW.call(LW): null === (OW = LW._autoSuspend) || void 0 === OW || OW.call(LW)
+        ctx: RR,
+        masterGain: JR
+      } = qR;
+      return RR && JR ? {
+        ctx: RR,
+        destination: JR,
+        holdAwake: RR => {
+          var JR, GR;
+          (eR += RR ? 1 : -1, RR) ? null === (JR = qR._autoResume) || void 0 === JR || JR.call(qR): null === (GR = qR._autoSuspend) || void 0 === GR || GR.call(qR)
         },
         wake: () => {
-          var iW;
-          "running" !== WW.state && (null === (iW = LW._autoResume) || void 0 === iW || iW.call(LW), WW.resume().catch((() => {})))
+          var JR;
+          "running" !== RR.state && (null === (JR = qR._autoResume) || void 0 === JR || JR.call(qR), RR.resume().catch((() => {})))
         }
       } : null
     }
 
-    function UW() {
-      var WW;
-      (LW.volume(), LW.ctx && LW.autoUnlock) && (null === (WW = LW._unlockAudio) || void 0 === WW || WW.call(LW))
+    function nR() {
+      var RR;
+      (qR.volume(), qR.ctx && qR.autoUnlock) && (null === (RR = qR._unlockAudio) || void 0 === RR || RR.call(qR))
     }
-    bW && (LW._autoSuspend = () => AW > 0 ? EW.Howler : bW())
+    aR && (qR._autoSuspend = () => eR > 0 ? tR.Howler : aR())
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

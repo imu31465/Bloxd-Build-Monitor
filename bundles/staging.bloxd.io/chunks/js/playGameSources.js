@@ -1,184 +1,184 @@
 export const id = 55;
 export const ids = [55];
 export const modules = {
-  40976: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW,
-      e: () => NW,
-      i: () => EW
+  40978: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR,
+      f: () => uR,
+      i: () => tR
     });
-    const mW = 6e3;
+    const yR = 6e3;
 
-    function EW(WW, iW) {
-      return [Math.floor(WW[0] / iW) * iW, Math.floor(WW[1] / iW) * iW, Math.floor(WW[2] / iW) * iW]
+    function tR(RR, JR) {
+      return [Math.floor(RR[0] / JR) * JR, Math.floor(RR[1] / JR) * JR, Math.floor(RR[2] / JR) * JR]
     }
 
-    function NW(WW) {
-      const iW = (null !== WW && void 0 !== WW ? WW : "").match(/-?\d+(?:\.\d+)?/g);
-      return iW && iW.length >= 3 ? [Number(iW[0]), Number(iW[1]), Number(iW[2])] : null
+    function uR(RR) {
+      const JR = (null !== RR && void 0 !== RR ? RR : "").match(/-?\d+(?:\.\d+)?/g);
+      return JR && JR.length >= 3 ? [Number(JR[0]), Number(JR[1]), Number(JR[2])] : null
     }
 
-    function PW(WW, iW) {
-      return WW === iW ? String(WW) : `${WW}-${iW}`
+    function ZR(RR, JR) {
+      return RR === JR ? String(RR) : `${RR}-${JR}`
     }
 
-    function LW(WW, iW, OW, mW) {
-      const EW = [];
-      let NW = new Map;
-      for (let PW = WW[2]; PW < WW[2] + iW; PW++) {
-        const LW = new Map;
-        let cW = WW[0];
-        for (; cW < WW[0] + iW;) {
-          const EW = mW(cW, OW, PW);
-          let wW = cW;
-          for (; wW + 1 < WW[0] + iW && mW(wW + 1, OW, PW) === EW;) wW++;
-          if (null !== EW) {
-            const WW = `${cW} ${wW} ${EW}`,
-              iW = NW.get(WW);
-            iW ? (iW.z1 = PW, NW.delete(WW), LW.set(WW, iW)) : LW.set(WW, {
-              x0: cW,
-              x1: wW,
-              z0: PW,
-              z1: PW,
-              name: EW
+    function qR(RR, JR, GR, yR) {
+      const tR = [];
+      let uR = new Map;
+      for (let ZR = RR[2]; ZR < RR[2] + JR; ZR++) {
+        const qR = new Map;
+        let iR = RR[0];
+        for (; iR < RR[0] + JR;) {
+          const tR = yR(iR, GR, ZR);
+          let fR = iR;
+          for (; fR + 1 < RR[0] + JR && yR(fR + 1, GR, ZR) === tR;) fR++;
+          if (null !== tR) {
+            const RR = `${iR} ${fR} ${tR}`,
+              JR = uR.get(RR);
+            JR ? (JR.z1 = ZR, uR.delete(RR), qR.set(RR, JR)) : qR.set(RR, {
+              x0: iR,
+              x1: fR,
+              z0: ZR,
+              z1: ZR,
+              name: tR
             })
           }
-          cW = wW + 1
+          iR = fR + 1
         }
-        EW.push(...NW.values()), NW = LW
+        tR.push(...uR.values()), uR = qR
       }
-      return EW.push(...NW.values()), EW.sort(((WW, iW) => WW.z0 - iW.z0 || WW.x0 - iW.x0)).map((WW => `x${PW(WW.x0,WW.x1)} z${PW(WW.z0,WW.z1)} ${WW.name}`))
+      return tR.push(...uR.values()), tR.sort(((RR, JR) => RR.z0 - JR.z0 || RR.x0 - JR.x0)).map((RR => `x${ZR(RR.x0,RR.x1)} z${ZR(RR.z0,RR.z1)} ${RR.name}`))
     }
 
-    function cW(WW, iW, OW, EW) {
-      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : mW;
-      const cW = [WW[0] + iW - 1, WW[1] + iW - 1, WW[2] + iW - 1],
-        wW = null !== EW && EW.every(((iW, OW) => Math.floor(iW) >= WW[OW] && Math.floor(iW) <= cW[OW])),
-        tW = [`The chunk from ${WW.join(" ")} to ${cW.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== EW && tW.push(`The player's feet are at ${EW.map(Math.floor).join(" ")}, ${wW?"in this chunk":"outside this chunk"}.`);
-      const ZW = [];
-      for (let mW = WW[1]; mW <= cW[1]; mW++) {
-        const EW = LW(WW, iW, mW, OW).join("; "),
-          NW = ZW[ZW.length - 1];
-        (null === NW || void 0 === NW ? void 0 : NW.boxes) === EW ? NW.to = mW : ZW.push({
-          from: mW,
-          to: mW,
-          boxes: EW
+    function iR(RR, JR, GR, tR) {
+      let uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : yR;
+      const iR = [RR[0] + JR - 1, RR[1] + JR - 1, RR[2] + JR - 1],
+        fR = null !== tR && tR.every(((JR, GR) => Math.floor(JR) >= RR[GR] && Math.floor(JR) <= iR[GR])),
+        VR = [`The chunk from ${RR.join(" ")} to ${iR.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== tR && VR.push(`The player's feet are at ${tR.map(Math.floor).join(" ")}, ${fR?"in this chunk":"outside this chunk"}.`);
+      const KR = [];
+      for (let yR = RR[1]; yR <= iR[1]; yR++) {
+        const tR = qR(RR, JR, yR, GR).join("; "),
+          uR = KR[KR.length - 1];
+        (null === uR || void 0 === uR ? void 0 : uR.boxes) === tR ? uR.to = yR : KR.push({
+          from: yR,
+          to: yR,
+          boxes: tR
         })
       }
-      const xW = ZW.filter((WW => "" !== WW.boxes));
-      0 === xW.length && tW.push("It is all air.");
-      let lW = tW.join("\n").length;
-      for (const mW of xW) {
-        const WW = `y${PW(mW.from,mW.to)}: ${mW.boxes}`;
-        if (lW += WW.length + 1, lW > NW) {
-          tW.push(`Cut short: the layers from y${mW.from} up aren't shown, as there are too many blocks.`);
+      const wR = KR.filter((RR => "" !== RR.boxes));
+      0 === wR.length && VR.push("It is all air.");
+      let rR = VR.join("\n").length;
+      for (const yR of wR) {
+        const RR = `y${ZR(yR.from,yR.to)}: ${yR.boxes}`;
+        if (rR += RR.length + 1, rR > uR) {
+          VR.push(`Cut short: the layers from y${yR.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        tW.push(WW)
+        VR.push(RR)
       }
-      return tW.join("\n")
+      return VR.join("\n")
     }
   },
-  10027: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW
+  10149: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR
     });
-    var mW = OW(25);
+    var yR = GR(25);
 
-    function EW() {
-      return !mW.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function tR() {
+      return !yR.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  38107: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      h: () => NW,
-      k: () => EW
+  38060: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      g: () => uR,
+      i: () => tR
     });
-    const mW = [.25, .5, 1, 2, 4, 8, 16];
+    const yR = [.25, .5, 1, 2, 4, 8, 16];
 
-    function EW(WW, iW) {
-      const OW = mW;
-      let EW = OW.indexOf(WW);
-      return -1 === EW && (EW = OW.findIndex((iW => iW >= WW)), -1 === EW && (EW = OW.length - 1)), "up" === iW ? OW[Math.min(EW + 1, OW.length - 1)] : OW[Math.max(EW - 1, 0)]
+    function tR(RR, JR) {
+      const GR = yR;
+      let tR = GR.indexOf(RR);
+      return -1 === tR && (tR = GR.findIndex((JR => JR >= RR)), -1 === tR && (tR = GR.length - 1)), "up" === JR ? GR[Math.min(tR + 1, GR.length - 1)] : GR[Math.max(tR - 1, 0)]
     }
 
-    function NW(WW) {
-      return WW <= mW[0]
+    function uR(RR) {
+      return RR <= yR[0]
     }
 
-    function PW(WW) {
-      return WW >= mW[mW.length - 1]
+    function ZR(RR) {
+      return RR >= yR[yR.length - 1]
     }
   },
-  37735: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      g: () => NW
+  37651: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      i: () => uR
     });
-    let mW = !1;
+    let yR = !1;
 
-    function EW() {
-      return mW
+    function tR() {
+      return yR
     }
 
-    function NW(WW) {
-      return mW !== WW && (mW = WW, !0)
+    function uR(RR) {
+      return yR !== RR && (yR = RR, !0)
     }
   },
-  40229: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  40270: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(27),
-      EW = OW(2061);
+    var yR = GR(32),
+      tR = GR(2163);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        taskId: iW,
-        progress: OW
-      } = WW;
-      const mW = EW.d.get("_tasks");
-      null !== mW && void 0 !== mW && mW[iW] && EW.d.apply({
+        taskId: JR,
+        progress: GR
+      } = RR;
+      const yR = tR.c.get("_tasks");
+      null !== yR && void 0 !== yR && yR[JR] && tR.c.apply({
         _tasks: {
-          ...mW,
-          [iW]: {
-            ...mW[iW],
-            progress: OW
+          ...yR,
+          [JR]: {
+            ...yR[JR],
+            progress: GR
           }
         }
       })
     }
-    mW.l.subscribe("clientTaskProgress", (WW => {
-      NW(WW)
+    yR.n.subscribe("clientTaskProgress", (RR => {
+      uR(RR)
     }))
   },
-  40951: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => lW,
-      h: () => bW,
-      i: () => wW,
-      k: () => ZW,
-      o: () => xW,
-      p: () => cW,
-      r: () => PW,
-      t: () => tW,
-      v: () => jW
+  40951: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => rR,
+      h: () => aR,
+      l: () => fR,
+      n: () => KR,
+      q: () => wR,
+      s: () => iR,
+      t: () => ZR,
+      v: () => VR,
+      z: () => LR
     });
-    var mW = OW(2061),
-      EW = OW(27),
-      NW = OW(2072);
-    const PW = (0, NW.r)((function() {
-        var WW, iW, OW, EW;
+    var yR = GR(2163),
+      tR = GR(32),
+      uR = GR(2170);
+    const ZR = (0, uR.l)((function() {
+        var RR, JR, GR, tR;
         return {
-          health: null !== (WW = mW.d.get("_health")) && void 0 !== WW ? WW : null,
-          maxHealth: null !== (iW = mW.d.get("_totalMaxHealth")) && void 0 !== iW ? iW : null,
-          shield: null !== (OW = mW.d.get("_shield")) && void 0 !== OW ? OW : null,
-          maxShield: null !== (EW = mW.d.get("maxShield")) && void 0 !== EW ? EW : null
+          health: null !== (RR = yR.c.get("_health")) && void 0 !== RR ? RR : null,
+          maxHealth: null !== (JR = yR.c.get("_totalMaxHealth")) && void 0 !== JR ? JR : null,
+          shield: null !== (GR = yR.c.get("_shield")) && void 0 !== GR ? GR : null,
+          maxShield: null !== (tR = yR.c.get("maxShield")) && void 0 !== tR ? tR : null
         }
-      }), [], (0, NW.o)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      LW = [{
+      }), [], (0, uR.j)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      qR = [{
         canFly: !1,
         flying: !1
       }, {
@@ -192,767 +192,767 @@ export const modules = {
         flying: !0
       }];
 
-    function cW(WW, iW) {
-      return LW[(WW ? 2 : 0) + (iW ? 1 : 0)]
+    function iR(RR, JR) {
+      return qR[(RR ? 2 : 0) + (JR ? 1 : 0)]
     }
-    const wW = (0, NW.r)((function() {
-      var WW;
-      return null !== (WW = mW.d.get("_aura")) && void 0 !== WW ? WW : null
-    }), [], (0, NW.o)("_aura"));
+    const fR = (0, uR.l)((function() {
+      var RR;
+      return null !== (RR = yR.c.get("_aura")) && void 0 !== RR ? RR : null
+    }), [], (0, uR.j)("_aura"));
 
-    function tW(WW) {
+    function VR(RR) {
       return {
-        watch: iW => (0, EW.n)("shotPlayer", (OW => {
+        watch: JR => (0, tR.q)("shotPlayer", (GR => {
           let {
-            playerId: mW,
-            damage: EW,
-            wasCrit: NW,
-            distance: PW
-          } = OW;
-          WW(mW) && iW({
-            damage: EW,
-            wasCrit: NW,
-            distance: PW
+            playerId: yR,
+            damage: tR,
+            wasCrit: uR,
+            distance: ZR
+          } = GR;
+          RR(yR) && JR({
+            damage: tR,
+            wasCrit: uR,
+            distance: ZR
           })
         }))
       }
     }
 
-    function ZW(WW) {
-      return (0, NW.d)("chat", (iW => {
+    function KR(RR) {
+      return (0, uR.d)("chat", (JR => {
         let {
-          serverChatMsgId: OW,
-          worldCodeLineId: mW,
-          content: EW,
-          chatterEId: NW,
-          chatterObjectsToReplay: PW
-        } = iW;
+          serverChatMsgId: GR,
+          worldCodeLineId: yR,
+          content: tR,
+          chatterEId: uR,
+          chatterObjectsToReplay: ZR
+        } = JR;
         return {
-          serverChatMsgId: null !== OW && void 0 !== OW ? OW : null,
-          worldCodeLineId: null !== mW && void 0 !== mW ? mW : null,
-          content: EW,
-          author: NW ? WW(NW) : null,
-          hiddenFromReplay: !0 === PW
+          serverChatMsgId: null !== GR && void 0 !== GR ? GR : null,
+          worldCodeLineId: null !== yR && void 0 !== yR ? yR : null,
+          content: tR,
+          author: uR ? RR(uR) : null,
+          hiddenFromReplay: !0 === ZR
         }
       }))
     }
-    const xW = (0, NW.d)("chatRemoved");
-    class lW {
+    const wR = (0, uR.d)("chatRemoved");
+    class rR {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const OW = this.shown;
-        return WW !== this.needed && (this.needed = WW, this.neededSince = iW, null === WW && (this.shown = null)), this.shown !== this.needed && iW - this.neededSince > 200 && (this.shown = this.needed), this.shown !== OW
+      update(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const GR = this.shown;
+        return RR !== this.needed && (this.needed = RR, this.neededSince = JR, null === RR && (this.shown = null)), this.shown !== this.needed && JR - this.neededSince > 200 && (this.shown = this.needed), this.shown !== GR
       }
     }
 
-    function AW(WW) {
+    function eR(RR) {
       return [{
-        translationKey: `touchKeys:${WW}`
+        translationKey: `touchKeys:${RR}`
       }]
     }
-    const bW = {
-      open: AW("open"),
-      close: AW("close"),
-      milk: AW("milk"),
-      shear: AW("shear"),
-      tame: AW("tame"),
-      feed: AW("feed"),
-      ride: AW("ride")
+    const aR = {
+      open: eR("open"),
+      close: eR("close"),
+      milk: eR("milk"),
+      shear: eR("shear"),
+      tame: eR("tame"),
+      feed: eR("feed"),
+      ride: eR("ride")
     };
 
-    function jW(WW) {
+    function LR(RR) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: WW
+        icon: RR
       }]
     }
   },
-  37444: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW,
-      e: () => PW
+  37357: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      h: () => ZR
     });
-    var mW = OW(4459);
-    let EW = null,
-      NW = null;
+    var yR = GR(4563);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return NW ??= OW.e(241).then((() => OW(37314))).then((WW => {
+    function ZR() {
+      return uR ??= GR.e(241).then((() => GR(37221))).then((RR => {
         let {
-          ITEM_SPRITES: iW,
-          ITEM_SPRITES_WITHOUT_FILE: OW,
-          ITEM_FILES_WITHOUT_SPRITE: NW
-        } = WW;
-        EW = function(WW, iW, OW) {
-          const EW = new Set,
-            NW = (0, mW.w)(iW);
-          let PW = 0;
-          for (const [mW, LW] of WW.entries()) mW === NW[PW] ? PW++ : EW.add(LW);
-          if ("" !== OW)
-            for (const LW of OW.split(mW.s)) EW.add(LW);
-          return EW
-        }(iW.split(mW.s), OW, NW)
-      }), (WW => {
-        throw NW = null, WW
-      })), NW
+          ITEM_SPRITES: JR,
+          ITEM_SPRITES_WITHOUT_FILE: GR,
+          ITEM_FILES_WITHOUT_SPRITE: uR
+        } = RR;
+        tR = function(RR, JR, GR) {
+          const tR = new Set,
+            uR = (0, yR.u)(JR);
+          let ZR = 0;
+          for (const [yR, qR] of RR.entries()) yR === uR[ZR] ? ZR++ : tR.add(qR);
+          if ("" !== GR)
+            for (const qR of GR.split(yR.r)) tR.add(qR);
+          return tR
+        }(JR.split(yR.r), GR, uR)
+      }), (RR => {
+        throw uR = null, RR
+      })), uR
     }
 
-    function LW(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = EW) || void 0 === OW ? void 0 : OW.has(WW)) && void 0 !== iW && iW
+    function qR(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = tR) || void 0 === GR ? void 0 : GR.has(RR)) && void 0 !== JR && JR
     }
   },
-  40960: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW,
-      h: () => NW,
-      k: () => EW
+  40965: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR,
+      e: () => uR,
+      f: () => tR
     });
-    const mW = 128;
+    const yR = 128;
 
-    function EW(WW, iW, OW, mW) {
-      const EW = 2 * iW - 1,
-        NW = 1 - 2 * OW,
-        PW = WW(0) - EW * WW(3),
-        LW = WW(4) - EW * WW(7),
-        cW = WW(8) - EW * WW(11),
-        wW = WW(1) - NW * WW(3),
-        tW = WW(5) - NW * WW(7),
-        ZW = WW(9) - NW * WW(11);
-      mW[0] = LW * ZW - cW * tW, mW[1] = cW * wW - PW * ZW, mW[2] = PW * tW - LW * wW;
-      const xW = mW[0] * WW(3) + mW[1] * WW(7) + mW[2] * WW(11) < 0 ? -1 : 1,
-        lW = Math.hypot(mW[0], mW[1], mW[2]) * xW;
-      return mW[0] /= lW, mW[1] /= lW, mW[2] /= lW, mW
+    function tR(RR, JR, GR, yR) {
+      const tR = 2 * JR - 1,
+        uR = 1 - 2 * GR,
+        ZR = RR(0) - tR * RR(3),
+        qR = RR(4) - tR * RR(7),
+        iR = RR(8) - tR * RR(11),
+        fR = RR(1) - uR * RR(3),
+        VR = RR(5) - uR * RR(7),
+        KR = RR(9) - uR * RR(11);
+      yR[0] = qR * KR - iR * VR, yR[1] = iR * fR - ZR * KR, yR[2] = ZR * VR - qR * fR;
+      const wR = yR[0] * RR(3) + yR[1] * RR(7) + yR[2] * RR(11) < 0 ? -1 : 1,
+        rR = Math.hypot(yR[0], yR[1], yR[2]) * wR;
+      return yR[0] /= rR, yR[1] /= rR, yR[2] /= rR, yR
     }
 
-    function NW(WW, iW, OW, mW, EW, NW) {
-      const PW = [Math.floor(iW[0]), Math.floor(iW[1]), Math.floor(iW[2])],
-        LW = [0, 0, 0],
-        cW = [1 / 0, 1 / 0, 1 / 0],
-        wW = [1 / 0, 1 / 0, 1 / 0];
-      for (let xW = 0; xW < 3; xW++) LW[xW] = Math.sign(OW[xW]), 0 !== LW[xW] && (wW[xW] = Math.abs(1 / OW[xW]), cW[xW] = (PW[xW] + (LW[xW] > 0 ? 1 : 0) - iW[xW]) / OW[xW]);
-      let tW = 0,
-        ZW = Math.abs(OW[0]) > Math.abs(OW[1]) ? 0 : 1;
-      for (Math.abs(OW[2]) > Math.abs(OW[ZW]) && (ZW = 2); tW <= mW;) {
-        if (WW(PW[0], PW[1], PW[2])) return EW[0] = PW[0], EW[1] = PW[1], EW[2] = PW[2], NW[0] = 0, NW[1] = 0, NW[2] = 0, NW[ZW] = -LW[ZW], !0;
-        ZW = cW[0] < cW[1] ? 0 : 1, cW[2] < cW[ZW] && (ZW = 2), tW = cW[ZW], PW[ZW] += LW[ZW], cW[ZW] += wW[ZW]
+    function uR(RR, JR, GR, yR, tR, uR) {
+      const ZR = [Math.floor(JR[0]), Math.floor(JR[1]), Math.floor(JR[2])],
+        qR = [0, 0, 0],
+        iR = [1 / 0, 1 / 0, 1 / 0],
+        fR = [1 / 0, 1 / 0, 1 / 0];
+      for (let wR = 0; wR < 3; wR++) qR[wR] = Math.sign(GR[wR]), 0 !== qR[wR] && (fR[wR] = Math.abs(1 / GR[wR]), iR[wR] = (ZR[wR] + (qR[wR] > 0 ? 1 : 0) - JR[wR]) / GR[wR]);
+      let VR = 0,
+        KR = Math.abs(GR[0]) > Math.abs(GR[1]) ? 0 : 1;
+      for (Math.abs(GR[2]) > Math.abs(GR[KR]) && (KR = 2); VR <= yR;) {
+        if (RR(ZR[0], ZR[1], ZR[2])) return tR[0] = ZR[0], tR[1] = ZR[1], tR[2] = ZR[2], uR[0] = 0, uR[1] = 0, uR[2] = 0, uR[KR] = -qR[KR], !0;
+        KR = iR[0] < iR[1] ? 0 : 1, iR[2] < iR[KR] && (KR = 2), VR = iR[KR], ZR[KR] += qR[KR], iR[KR] += fR[KR]
       }
       return !1
     }
   },
-  37640: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => hW,
-      c: () => HW,
-      f: () => KW,
-      g: () => sW,
-      h: () => SW
+  37558: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => gR,
+      i: () => bR,
+      m: () => CR,
+      o: () => WR,
+      r: () => XR
     });
-    var mW = OW(259),
-      EW = OW(100);
-    const NW = new(OW(37646).e)(new URL(OW.p + OW.u(3), OW.b), {
+    var yR = GR(289),
+      tR = GR(103);
+    const uR = new(GR(37561).b)(new URL(GR.p + GR.u(3), GR.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var PW = OW(1755),
-      LW = OW(2289);
-    const cW = 1e4,
-      wW = 3e4;
-    let tW = null,
-      ZW = null,
-      xW = null,
-      lW = !1,
-      AW = 0;
-    const bW = new Map;
-    let jW = null;
-    const UW = new Map,
-      kW = new Map;
+    var ZR = GR(1825),
+      qR = GR(2366);
+    const iR = 1e4,
+      fR = 3e4;
+    let VR = null,
+      KR = null,
+      wR = null,
+      rR = !1,
+      eR = 0;
+    const aR = new Map;
+    let LR = null;
+    const nR = new Map,
+      UR = new Map;
 
-    function sW(WW) {
-      const iW = new Promise(((iW, OW) => {
-        const mW = new Image;
-        mW.crossOrigin = "anonymous", mW.fetchPriority = "high", mW.onload = () => {
-          iW(mW)
-        }, mW.onerror = () => {
-          OW(new Error(`A block icon's texture did not load: ${WW.slice(0,100)}`))
-        }, mW.src = WW
+    function WR(RR) {
+      const JR = new Promise(((JR, GR) => {
+        const yR = new Image;
+        yR.crossOrigin = "anonymous", yR.fetchPriority = "high", yR.onload = () => {
+          JR(yR)
+        }, yR.onerror = () => {
+          GR(new Error(`A block icon's texture did not load: ${RR.slice(0,100)}`))
+        }, yR.src = RR
       }));
-      return (0, LW.f)(iW)
+      return (0, qR.h)(JR)
     }
 
-    function MW(WW) {
-      var iW, OW;
-      lW || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${WW}`), lW = !0, null === (iW = tW) || void 0 === iW || iW.terminate(), tW = null, ZW = null, UW.clear(), kW.clear();
-      for (const mW of bW.values()) mW(null);
-      bW.clear(), null === (OW = jW) || void 0 === OW || OW()
+    function AR(RR) {
+      var JR, GR;
+      rR || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${RR}`), rR = !0, null === (JR = VR) || void 0 === JR || JR.terminate(), VR = null, KR = null, nR.clear(), UR.clear();
+      for (const yR of aR.values()) yR(null);
+      aR.clear(), null === (GR = LR) || void 0 === GR || GR()
     }
 
-    function KW() {
-      return null !== ZW
+    function CR() {
+      return null !== KR
     }
 
-    function SW() {
-      return xW ??= async function() {
+    function XR() {
+      return wR ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === mW.d.ios_icon_worker_v1 && (0, EW.isWebKit)()) return;
+        if ("page" === yR.c.ios_icon_worker_v1 && (0, tR.isWebKit)()) return;
         try {
-          tW = await async function() {
-            return await NW.ready(), NW.start()
+          VR = await async function() {
+            return await uR.ready(), uR.start()
           }()
-        } catch (LW) {
-          return void MW(`did not start (${String(LW)})`)
+        } catch (qR) {
+          return void AR(`did not start (${String(qR)})`)
         }
-        let WW = () => {};
-        const iW = new Promise((iW => {
-          WW = iW
+        let RR = () => {};
+        const JR = new Promise((JR => {
+          RR = JR
         }));
-        tW.onmessage = iW => {
+        VR.onmessage = JR => {
           let {
-            data: OW
-          } = iW;
-          if ("started" === OW.type) ZW = tW, WW();
-          else if ("failed" === OW.type) MW(`failed a draw (${OW.message})`);
+            data: GR
+          } = JR;
+          if ("started" === GR.type) KR = VR, RR();
+          else if ("failed" === GR.type) AR(`failed a draw (${GR.message})`);
           else {
-            var mW, EW;
-            null === (mW = bW.get(OW.id)) || void 0 === mW || mW(OW.url), bW.delete(OW.id), null === (EW = jW) || void 0 === EW || EW()
+            var yR, tR;
+            null === (yR = aR.get(GR.id)) || void 0 === yR || yR(GR.url), aR.delete(GR.id), null === (tR = LR) || void 0 === tR || tR()
           }
-        }, tW.onerror = iW => {
-          iW.preventDefault(), MW(`stopped (${iW.message||"its script did not load or run"})`), WW()
+        }, VR.onerror = JR => {
+          JR.preventDefault(), AR(`stopped (${JR.message||"its script did not load or run"})`), RR()
         };
-        const OW = `did not start in ${wW/1e3} s`;
-        await (0, PW.o)(iW, wW, OW).catch((() => {
-          MW(OW)
+        const GR = `did not start in ${fR/1e3} s`;
+        await (0, ZR.k)(JR, fR, GR).catch((() => {
+          AR(GR)
         }))
-      }(), xW
+      }(), wR
     }
 
-    function YW() {
-      if (null !== jW || 0 === bW.size) return;
-      const WW = new Promise((WW => {
-          jW = WW
+    function MR() {
+      if (null !== LR || 0 === aR.size) return;
+      const RR = new Promise((RR => {
+          LR = RR
         })),
-        iW = `did not answer in ${cW/1e3} s`;
-      (0, PW.o)(WW, cW, iW).then((() => {
-        jW = null, YW()
+        JR = `did not answer in ${iR/1e3} s`;
+      (0, ZR.k)(RR, iR, JR).then((() => {
+        LR = null, MR()
       }), (() => {
-        jW = null, MW(iW)
+        LR = null, AR(JR)
       }))
     }
 
-    function yW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      WW.postMessage(iW, OW)
+    function BR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      RR.postMessage(JR, GR)
     }
 
-    function TW(WW, iW, OW, mW) {
-      let EW = iW.get(OW);
-      return void 0 === EW && (EW = mW().then((async iW => {
+    function lR(RR, JR, GR, yR) {
+      let tR = JR.get(GR);
+      return void 0 === tR && (tR = yR().then((async JR => {
         let {
-          image: OW,
-          request: mW
-        } = iW;
+          image: GR,
+          request: yR
+        } = JR;
         try {
-          const iW = await createImageBitmap(OW);
-          yW(WW, mW(iW), [iW])
-        } catch (EW) {
-          MW(`could not take an image (${String(EW)})`)
+          const JR = await createImageBitmap(GR);
+          BR(RR, yR(JR), [JR])
+        } catch (tR) {
+          AR(`could not take an image (${String(tR)})`)
         }
-      })), EW.catch((() => {
-        iW.get(OW) === EW && iW.delete(OW)
-      })), iW.set(OW, EW)), EW
+      })), tR.catch((() => {
+        JR.get(GR) === tR && JR.delete(GR)
+      })), JR.set(GR, tR)), tR
     }
-    async function JW(WW, iW) {
-      SW();
-      const OW = ZW;
-      if (null === OW) return null;
-      if (await WW(OW), ZW !== OW) return null;
-      const mW = ++AW;
-      return new Promise((WW => {
-        bW.set(mW, WW), yW(OW, iW(mW)), YW()
+    async function pR(RR, JR) {
+      XR();
+      const GR = KR;
+      if (null === GR) return null;
+      if (await RR(GR), KR !== GR) return null;
+      const yR = ++eR;
+      return new Promise((RR => {
+        aR.set(yR, RR), BR(GR, JR(yR)), MR()
       }))
     }
 
-    function hW(WW, iW, OW) {
-      return JW((iW => Promise.all([WW.top, WW.left, WW.right].map((WW => function(WW, iW) {
-        return TW(WW, UW, iW, (async () => ({
-          image: await sW(iW),
-          request: WW => ({
+    function gR(RR, JR, GR) {
+      return pR((JR => Promise.all([RR.top, RR.left, RR.right].map((RR => function(RR, JR) {
+        return lR(RR, nR, JR, (async () => ({
+          image: await WR(JR),
+          request: RR => ({
             type: "texture",
-            url: iW,
-            bitmap: WW
+            url: JR,
+            bitmap: RR
           })
         })))
-      }(iW, WW))))), (mW => ({
+      }(JR, RR))))), (yR => ({
         type: "draw",
-        id: mW,
-        ...WW,
-        size: iW,
-        outlineWidth: OW
+        id: yR,
+        ...RR,
+        size: JR,
+        outlineWidth: GR
       })))
     }
 
-    function HW(WW, iW, OW, mW) {
-      return JW((OW => function(WW, iW, OW) {
-        return TW(WW, kW, iW, (async () => {
+    function bR(RR, JR, GR, yR) {
+      return pR((GR => function(RR, JR, GR) {
+        return lR(RR, UR, JR, (async () => {
           const {
-            texture: WW,
-            ...mW
-          } = await OW();
+            texture: RR,
+            ...yR
+          } = await GR();
           return {
-            image: await sW(WW),
-            request: WW => ({
+            image: await WR(RR),
+            request: RR => ({
               type: "model",
-              name: iW,
-              bitmap: WW,
-              geometry: mW
+              name: JR,
+              bitmap: RR,
+              geometry: yR
             })
           }
         }))
-      }(OW, WW, iW)), (iW => ({
+      }(GR, RR, JR)), (JR => ({
         type: "drawModel",
-        id: iW,
-        name: WW,
-        size: OW,
-        outlineWidth: mW
+        id: JR,
+        name: RR,
+        size: GR,
+        outlineWidth: yR
       })))
     }
   },
-  40943: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW
+  40942: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR
     });
-    var mW = OW(2012);
+    var yR = GR(2102);
 
-    function EW(WW, iW, OW) {
-      return (0, mW.l)(WW, iW) < OW
+    function tR(RR, JR, GR) {
+      return (0, yR.h)(RR, JR) < GR
     }
   },
-  9957: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW
+  10057: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR
     });
-    var mW = OW(1250);
+    var yR = GR(1349);
 
-    function EW(WW, iW) {
-      var OW, EW;
+    function tR(RR, JR) {
+      var GR, tR;
       try {
-        const OW = (0, mW.e)();
-        if ("function" === typeof OW) {
-          const mW = new OW(WW, iW);
-          if (mW.type === WW) return mW
+        const GR = (0, yR.d)();
+        if ("function" === typeof GR) {
+          const yR = new GR(RR, JR);
+          if (yR.type === RR) return yR
         }
       } catch {}
-      const NW = document.createEvent("Event");
-      return NW.initEvent(WW, null !== (OW = null === iW || void 0 === iW ? void 0 : iW.bubbles) && void 0 !== OW && OW, null !== (EW = null === iW || void 0 === iW ? void 0 : iW.cancelable) && void 0 !== EW && EW), NW
+      const uR = document.createEvent("Event");
+      return uR.initEvent(RR, null !== (GR = null === JR || void 0 === JR ? void 0 : JR.bubbles) && void 0 !== GR && GR, null !== (tR = null === JR || void 0 === JR ? void 0 : JR.cancelable) && void 0 !== tR && tR), uR
     }
   },
-  40216: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => tW
+  40258: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => VR
     });
-    var mW = OW(1217),
-      EW = OW(1365),
-      NW = OW(25),
-      PW = OW(1339),
-      LW = OW(1351),
-      cW = OW(1605),
-      wW = OW(37709);
+    var yR = GR(1317),
+      tR = GR(1459),
+      uR = GR(25),
+      ZR = GR(1444),
+      qR = GR(1449),
+      iR = GR(1663),
+      fR = GR(37620);
 
-    function tW(WW) {
+    function VR(RR) {
       let {
-        cN: iW,
-        wN: OW
-      } = WW;
-      const tW = null !== iW && void 0 !== iW ? iW : (0, LW.d)().gameNameWithVariation;
-      (0, mW.N)(tW) && ((0, wW.j)(), (0, PW.$)((() => {
-        console.log("Received matchmaking order from game server to game", iW), (0, NW.l)("inGameReplay"), (0, cW.navigatePreserveSearch)((0, EW.e)(tW, null !== OW && void 0 !== OW ? OW : void 0))
+        au: JR,
+        Lu: GR
+      } = RR;
+      const VR = null !== JR && void 0 !== JR ? JR : (0, qR.d)().gameNameWithVariation;
+      (0, yR.D)(VR) && ((0, fR.i)(), (0, ZR.ib)((() => {
+        console.log("Received matchmaking order from game server to game", JR), (0, uR.k)("inGameReplay"), (0, iR.navigatePreserveSearch)((0, tR.e)(VR, null !== GR && void 0 !== GR ? GR : void 0))
       }), "video_start"))
     }
   },
-  40416: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW
+  40464: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(27),
-      EW = OW(2085);
+    var yR = GR(32),
+      tR = GR(2194);
 
-    function NW(WW) {
-      var iW, OW;
-      const NW = (0, EW.m)(null !== (iW = null === (OW = EW.v.toggleFreeCam) || void 0 === OW ? void 0 : OW[0]) && void 0 !== iW ? iW : null);
-      mW.l.iZ("showBottomMessage", {
-        message: `Free Camera ${WW?"Enabled":"Disabled"}${NW?` - Press ${NW} to toggle`:""}`,
+    function uR(RR) {
+      var JR, GR;
+      const uR = (0, tR.m)(null !== (JR = null === (GR = tR.t.toggleFreeCam) || void 0 === GR ? void 0 : GR[0]) && void 0 !== JR ? JR : null);
+      yR.n.JK("showBottomMessage", {
+        message: `Free Camera ${RR?"Enabled":"Disabled"}${uR?` - Press ${uR} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  40213: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => tW,
-      f: () => cW,
-      h: () => wW,
-      j: () => ZW
+  40256: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => VR,
+      f: () => iR,
+      g: () => fR,
+      i: () => KR
     });
-    var mW = OW(2037),
-      EW = OW(27),
-      NW = OW(1422),
-      PW = OW(1255);
-    const LW = new Map;
+    var yR = GR(2134),
+      tR = GR(32),
+      uR = GR(1493),
+      ZR = GR(1351);
+    const qR = new Map;
 
-    function cW(WW, iW) {
-      EW.l.iZ("newUiRequest", {
-        id: WW,
-        clientParameters: iW
+    function iR(RR, JR) {
+      tR.n.JK("newUiRequest", {
+        id: RR,
+        clientParameters: JR
       }, !0)
     }
 
-    function wW(WW) {
-      EW.l.iZ("removeUiRequest", WW, !0);
-      const iW = LW.get(WW);
-      iW && (iW.tearDownNotification(), LW.delete(WW))
+    function fR(RR) {
+      tR.n.JK("removeUiRequest", RR, !0);
+      const JR = qR.get(RR);
+      JR && (JR.tearDownNotification(), qR.delete(RR))
     }
 
-    function tW() {
-      EW.l.iZ("clearUiRequests");
-      for (const WW of LW.values()) WW.tearDownNotification();
-      LW.clear()
+    function VR() {
+      tR.n.JK("clearUiRequests");
+      for (const RR of qR.values()) RR.tearDownNotification();
+      qR.clear()
     }
 
-    function ZW(WW, iW, OW, EW) {
-      const cW = "string" === typeof iW ? {
-          translationKey: iW
-        } : iW,
-        wW = NW.NotificationProvider.showPromptPopup({
-          title: cW.translationKey,
+    function KR(RR, JR, GR, tR) {
+      const iR = "string" === typeof JR ? {
+          translationKey: JR
+        } : JR,
+        fR = uR.NotificationProvider.showPromptPopup({
+          title: iR.translationKey,
           textOpts: {
-            title: (0, PW.j)(cW.params, mW.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, ZR.f)(iR.params, yR.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: OW,
+          destructive: GR,
           unlockPointerKey: "uiRequestPopup"
         });
-      LW.set(WW, wW), wW.getResult().then((iW => {
-        LW.delete(WW), "notificationTornDown" !== iW && EW(iW)
+      qR.set(RR, fR), fR.getResult().then((JR => {
+        qR.delete(RR), "notificationTornDown" !== JR && tR(JR)
       }))
     }
   },
-  40969: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => ZW,
-      e: () => xW
+  40974: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => KR,
+      d: () => wR
     });
-    var mW = OW(182),
-      EW = OW(40976);
-    const NW = 20;
+    var yR = GR(203),
+      tR = GR(40978);
+    const uR = 20;
 
-    function PW(WW) {
-      return WW.map(Math.floor).join(" ")
+    function ZR(RR) {
+      return RR.map(Math.floor).join(" ")
     }
 
-    function LW(WW) {
-      return null === WW.amount || 1 === WW.amount ? WW.name : `${WW.amount} ${WW.name}`
+    function qR(RR) {
+      return null === RR.amount || 1 === RR.amount ? RR.name : `${RR.amount} ${RR.name}`
     }
-    var cW = OW(40980),
-      wW = OW(2061),
-      tW = OW(1351);
+    var iR = GR(40983),
+      fR = GR(2163),
+      VR = GR(1449);
 
-    function ZW(WW, iW) {
-      if (!WW) return cW.c;
-      const OW = WW.playerFeet();
-      if (!OW) return "The player isn't in the world yet, so no blocks can be seen.";
-      const NW = mW.f.jZ,
-        PW = (0, EW.i)(null !== iW && void 0 !== iW ? iW : OW, NW),
-        LW = WW.chunkBlocks(PW);
-      return LW ? (0, EW.b)(PW, NW, ((iW, OW, mW) => {
-        const EW = LW(iW, OW, mW);
-        return 0 === EW ? null : WW.blockName(EW).split("|")[0]
-      }), OW) : `The chunk from ${PW.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${OW.map(Math.floor).join(" ")}.`
+    function KR(RR, JR) {
+      if (!RR) return iR.b;
+      const GR = RR.playerFeet();
+      if (!GR) return "The player isn't in the world yet, so no blocks can be seen.";
+      const uR = yR.g.LK,
+        ZR = (0, tR.i)(null !== JR && void 0 !== JR ? JR : GR, uR),
+        qR = RR.chunkBlocks(ZR);
+      return qR ? (0, tR.c)(ZR, uR, ((JR, GR, yR) => {
+        const tR = qR(JR, GR, yR);
+        return 0 === tR ? null : RR.blockName(tR).split("|")[0]
+      }), GR) : `The chunk from ${ZR.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${GR.map(Math.floor).join(" ")}.`
     }
 
-    function xW(WW) {
-      var iW, OW, mW;
-      if (!WW) return cW.e;
-      const EW = WW.playerFeet();
-      if (!EW) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function wR(RR) {
+      var JR, GR, yR;
+      if (!RR) return iR.e;
+      const tR = RR.playerFeet();
+      if (!tR) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: ZW,
-        heldSlot: xW
-      } = WW.inventory();
-      return function(WW) {
-        const iW = [];
-        null !== WW.game && iW.push(`Game: ${WW.game}.`);
-        const OW = null === WW.health ? "" : `, health ${Math.round(WW.health)}${null===WW.maxHealth?"":` of ${Math.round(WW.maxHealth)}`}`;
-        iW.push(`The player (the creator) stands at ${PW(WW.position)}${OW}, ${WW.creative?"in":"not in"} creative mode.`);
-        const mW = WW.slots[WW.heldSlot];
-        iW.push(mW ? `Holding (slot ${WW.heldSlot}): ${LW(mW)}.` : `Holding nothing (slot ${WW.heldSlot} is empty).`);
-        const EW = WW.slots.flatMap(((WW, iW) => WW ? [`slot ${iW}: ${LW(WW)}`] : []));
-        iW.push(EW.length > 0 ? `Inventory: ${EW.join(", ")}.` : "Inventory: empty.");
-        const cW = iW => Math.hypot(iW.position[0] - WW.position[0], iW.position[1] - WW.position[1], iW.position[2] - WW.position[2]),
-          wW = [...WW.nearby].sort(((WW, iW) => cW(WW) - cW(iW)));
-        if (0 === wW.length) iW.push("No other players or mobs are near enough to see.");
+        slots: KR,
+        heldSlot: wR
+      } = RR.inventory();
+      return function(RR) {
+        const JR = [];
+        null !== RR.game && JR.push(`Game: ${RR.game}.`);
+        const GR = null === RR.health ? "" : `, health ${Math.round(RR.health)}${null===RR.maxHealth?"":` of ${Math.round(RR.maxHealth)}`}`;
+        JR.push(`The player (the creator) stands at ${ZR(RR.position)}${GR}, ${RR.creative?"in":"not in"} creative mode.`);
+        const yR = RR.slots[RR.heldSlot];
+        JR.push(yR ? `Holding (slot ${RR.heldSlot}): ${qR(yR)}.` : `Holding nothing (slot ${RR.heldSlot} is empty).`);
+        const tR = RR.slots.flatMap(((RR, JR) => RR ? [`slot ${JR}: ${qR(RR)}`] : []));
+        JR.push(tR.length > 0 ? `Inventory: ${tR.join(", ")}.` : "Inventory: empty.");
+        const iR = JR => Math.hypot(JR.position[0] - RR.position[0], JR.position[1] - RR.position[1], JR.position[2] - RR.position[2]),
+          fR = [...RR.nearby].sort(((RR, JR) => iR(RR) - iR(JR)));
+        if (0 === fR.length) JR.push("No other players or mobs are near enough to see.");
         else {
-          iW.push("Near them, nearest first:");
-          for (const WW of wW.slice(0, NW)) {
-            const OW = "player" === WW.kind ? `player "${WW.name||"?"}"` : WW.name && WW.name !== WW.kind ? `${WW.kind} "${WW.name}"` : WW.kind,
-              mW = Math.round(cW(WW));
-            iW.push(`- ${OW} at ${PW(WW.position)}, ${mW} block${1===mW?"":"s"} away`)
+          JR.push("Near them, nearest first:");
+          for (const RR of fR.slice(0, uR)) {
+            const GR = "player" === RR.kind ? `player "${RR.name||"?"}"` : RR.name && RR.name !== RR.kind ? `${RR.kind} "${RR.name}"` : RR.kind,
+              yR = Math.round(iR(RR));
+            JR.push(`- ${GR} at ${ZR(RR.position)}, ${yR} block${1===yR?"":"s"} away`)
           }
-          wW.length > NW && iW.push(`- and ${wW.length-NW} more further away`)
+          fR.length > uR && JR.push(`- and ${fR.length-uR} more further away`)
         }
-        return WW.droppedItems > 0 && iW.push(`${WW.droppedItems} dropped item${1===WW.droppedItems?" is":"s are"} on the ground nearby.`), iW.join("\n")
+        return RR.droppedItems > 0 && JR.push(`${RR.droppedItems} dropped item${1===RR.droppedItems?" is":"s are"} on the ground nearby.`), JR.join("\n")
       }({
-        game: null !== (iW = (0, tW.d)().gameNameWithVariation) && void 0 !== iW ? iW : null,
-        position: EW,
-        health: null !== (OW = wW.d.get("_health")) && void 0 !== OW ? OW : null,
-        maxHealth: null !== (mW = wW.d.get("_totalMaxHealth")) && void 0 !== mW ? mW : null,
-        creative: !0 === wW.d.get("creative"),
-        heldSlot: xW,
-        slots: ZW,
-        nearby: WW.nearby(),
-        droppedItems: WW.droppedItems()
+        game: null !== (JR = (0, VR.d)().gameNameWithVariation) && void 0 !== JR ? JR : null,
+        position: tR,
+        health: null !== (GR = fR.c.get("_health")) && void 0 !== GR ? GR : null,
+        maxHealth: null !== (yR = fR.c.get("_totalMaxHealth")) && void 0 !== yR ? yR : null,
+        creative: !0 === fR.c.get("creative"),
+        heldSlot: wR,
+        slots: KR,
+        nearby: RR.nearby(),
+        droppedItems: RR.droppedItems()
       })
     }
   },
-  42495: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      attachPlayGameSources: () => am,
-      playGameSources: () => Im
+  42538: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      attachPlayGameSources: () => Ey,
+      playGameSources: () => dy
     });
-    var mW = OW(2037),
-      EW = OW(42373),
-      NW = OW(5533),
-      PW = OW(42109),
-      LW = OW(42479),
-      cW = OW(40951),
-      wW = OW(27),
-      tW = OW(5551),
-      ZW = OW(5546),
-      xW = OW(42137),
-      lW = OW(42174),
-      AW = OW(42502),
-      bW = OW(42149);
-    (0, bW.j)(tW.uc.Chat, (WW => {
-      if (WW.payloadKind !== ZW.hc.Msgpack) return;
-      const iW = function(WW) {
-        if (null === WW || "object" !== typeof WW || !("content" in WW)) return null;
+    var yR = GR(2134),
+      tR = GR(42394),
+      uR = GR(5665),
+      ZR = GR(42118),
+      qR = GR(42523),
+      iR = GR(40951),
+      fR = GR(32),
+      VR = GR(5685),
+      KR = GR(5676),
+      wR = GR(42154),
+      rR = GR(42185),
+      eR = GR(42543),
+      aR = GR(42164);
+    (0, aR.l)(VR.sc.Chat, (RR => {
+      if (RR.payloadKind !== KR.gc.Msgpack) return;
+      const JR = function(RR) {
+        if (null === RR || "object" !== typeof RR || !("content" in RR)) return null;
         const {
-          chatMsgId: iW,
-          worldCodeLineId: OW,
-          content: mW,
-          chatterEId: EW,
-          chatterObjectsToReplay: NW
-        } = WW;
+          chatMsgId: JR,
+          worldCodeLineId: GR,
+          content: yR,
+          chatterEId: tR,
+          chatterObjectsToReplay: uR
+        } = RR;
         return {
-          serverChatMsgId: null !== iW && void 0 !== iW ? iW : void 0,
-          worldCodeLineId: null !== OW && void 0 !== OW ? OW : void 0,
-          content: mW,
-          chatterEId: void 0 === EW || null === EW ? void 0 : String(EW),
-          chatterObjectsToReplay: NW
+          serverChatMsgId: null !== JR && void 0 !== JR ? JR : void 0,
+          worldCodeLineId: null !== GR && void 0 !== GR ? GR : void 0,
+          content: yR,
+          chatterEId: void 0 === tR || null === tR ? void 0 : String(tR),
+          chatterObjectsToReplay: uR
         }
-      }((0, xW.d)(WW.payload));
-      null !== iW && wW.l.iZ("chat", iW, !0)
-    })), (0, bW.j)(tW.uc.ChatRemoved, (WW => {
-      if (WW.payloadKind === ZW.hc.Msgpack) {
+      }((0, wR.e)(RR.payload));
+      null !== JR && fR.n.JK("chat", JR, !0)
+    })), (0, aR.l)(VR.sc.ChatRemoved, (RR => {
+      if (RR.payloadKind === KR.gc.Msgpack) {
         const {
-          chatMsgId: iW
-        } = (0, xW.d)(WW.payload);
-        wW.l.iZ("chatRemoved", iW, !0)
+          chatMsgId: JR
+        } = (0, wR.e)(RR.payload);
+        fR.n.JK("chatRemoved", JR, !0)
       }
     }));
-    const jW = {
-        chatReceived: (0, cW.k)((function(WW) {
-          var iW, OW, mW;
+    const LR = {
+        chatReceived: (0, iR.n)((function(RR) {
+          var JR, GR, yR;
           return {
-            id: WW,
-            name: null !== (iW = AW.i.getName(WW)) && void 0 !== iW ? iW : null,
-            local: (0, lW.g)() === WW,
-            profileEffect: null !== (OW = null === (mW = (0, AW.m)(WW)) || void 0 === mW ? void 0 : mW.profileEffect) && void 0 !== OW ? OW : null
+            id: RR,
+            name: null !== (JR = eR.f.getName(RR)) && void 0 !== JR ? JR : null,
+            local: (0, rR.e)() === RR,
+            profileEffect: null !== (GR = null === (yR = (0, eR.i)(RR)) || void 0 === yR ? void 0 : yR.profileEffect) && void 0 !== GR ? GR : null
           }
         })),
-        chatRemoved: cW.o
+        chatRemoved: iR.q
       },
-      UW = {
-        sendChatMessage(WW) {
-          var iW, OW;
+      nR = {
+        sendChatMessage(RR) {
+          var JR, GR;
           let {
-            tP: mW,
-            channelName: EW
-          } = WW;
-          return null !== (iW = null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.clientApi.sendChat(mW, EW)) && void 0 !== iW && iW
+            LZ: yR,
+            channelName: tR
+          } = RR;
+          return null !== (JR = null === (GR = (0, ZR.l)()) || void 0 === GR ? void 0 : GR.clientApi.sendChat(yR, tR)) && void 0 !== JR && JR
         }
       };
-    var kW = OW(182),
-      sW = OW(2061),
-      MW = OW(42094),
-      KW = OW(40943);
-    const SW = [0, 0, 0],
-      YW = {
-        codeBlockClickable(WW) {
-          var iW;
-          const OW = (0, PW.f)();
-          if (null === OW || void 0 === OW || !OW.isSessionLive) return !1;
-          const mW = OW.api;
-          if (0 !== (MW.z.playerFlags(mW.apiView, 0) & MW.Ud.Crouching)) return !1;
-          const EW = mW.queries.directorEntity(mW.localId) >= MW.zb.BYTES ? mW.memoryData(mW.scratch(), MW.zb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === EW) return !1;
-          for (let NW = 0; NW < 3; NW++) SW[NW] = MW.zb.feet(EW, 0, NW);
-          return SW[1] += MW.zb.eyeHeight(EW, 0), (0, KW.b)(SW, WW, null !== (iW = sW.d.get("blockReach")) && void 0 !== iW ? iW : kW.f.lU)
+    var UR = GR(203),
+      WR = GR(2163),
+      AR = GR(42106),
+      CR = GR(40942);
+    const XR = [0, 0, 0],
+      MR = {
+        codeBlockClickable(RR) {
+          var JR;
+          const GR = (0, ZR.l)();
+          if (null === GR || void 0 === GR || !GR.isSessionLive) return !1;
+          const yR = GR.api;
+          if (0 !== (AR.s.playerFlags(yR.apiView, 0) & AR.xd.Crouching)) return !1;
+          const tR = yR.queries.directorEntity(yR.localId) >= AR.pb.BYTES ? yR.memoryData(yR.scratch(), AR.pb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === tR) return !1;
+          for (let uR = 0; uR < 3; uR++) XR[uR] = AR.pb.feet(tR, 0, uR);
+          return XR[1] += AR.pb.eyeHeight(tR, 0), (0, CR.e)(XR, RR, null !== (JR = WR.c.get("blockReach")) && void 0 !== JR ? JR : UR.g.Ln)
         }
       },
-      yW = {
-        clickCodeBlock(WW) {
-          var iW;
-          null === (iW = (0, PW.f)()) || void 0 === iW || iW.clickCodeBlock(WW)
+      BR = {
+        clickCodeBlock(RR) {
+          var JR;
+          null === (JR = (0, ZR.l)()) || void 0 === JR || JR.clickCodeBlock(RR)
         }
       };
-    var TW = OW(42118),
-      JW = OW(42508),
-      hW = OW(1052),
-      HW = OW(40242),
-      nW = OW(5525),
-      uW = OW(42131),
-      oW = OW(42116),
-      dW = OW(42134);
+    var lR = GR(42130),
+      pR = GR(42552),
+      gR = GR(1127),
+      bR = GR(40283),
+      vR = GR(5658),
+      OR = GR(42137),
+      xR = GR(42126),
+      NR = GR(42145);
 
-    function eW(WW) {
-      if (null === WW) return null;
-      const iW = [];
-      for (const OW of WW) {
-        const WW = Object.keys(OW)[0];
-        if ("Ii" === WW) {
+    function DR(RR) {
+      if (null === RR) return null;
+      const JR = [];
+      for (const GR of RR) {
+        const RR = Object.keys(GR)[0];
+        if ("EJ" === RR) {
           const {
-            str: WW,
-            style: mW,
-            clickableUrl: EW
-          } = OW.Ii, NW = Object.keys(WW)[0], PW = WW[NW];
-          "string" !== NW && "styledEntityName" !== NW && "styledTranslatedText" !== NW || iW.push({
-            str: PW,
-            style: mW,
-            clickableUrl: EW
+            str: RR,
+            style: yR,
+            clickableUrl: tR
+          } = GR.EJ, uR = Object.keys(RR)[0], ZR = RR[uR];
+          "string" !== uR && "styledEntityName" !== uR && "styledTranslatedText" !== uR || JR.push({
+            str: ZR,
+            style: yR,
+            clickableUrl: tR
           })
-        } else iW.push(OW[WW])
+        } else JR.push(GR[RR])
       }
-      return iW
+      return JR
     }
-    const vW = {
-      screenPos(WW) {
-        var iW, OW;
-        return null !== (iW = null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.renderFrame.projectWorldPosToScreenPos(WW)) && void 0 !== iW ? iW : {
+    const HR = {
+      screenPos(RR) {
+        var JR, GR;
+        return null !== (JR = null === (GR = (0, ZR.l)()) || void 0 === GR ? void 0 : GR.renderFrame.projectWorldPosToScreenPos(RR)) && void 0 !== JR ? JR : {
           x: 0,
           y: 0
         }
       }
     };
-    let gW = !1;
+    let oR = !1;
 
-    function DW() {
-      gW || (gW = !0, (0, bW.j)(tW.uc.ProgressBarUpdate, (WW => {
-        const iW = (0, dW.j)(WW);
-        (0, dW.d)(iW) && wW.l.iZ("progressBarUpdate", iW, !0)
-      })), (0, bW.j)(uW.v, (WW => {
-        const iW = (0, dW.g)(uW.v, WW);
-        iW && wW.l.iZ("middleScreenBarInitiate", {
-          duration: iW.xN,
-          lN: iW.lN,
-          horizBarRemOffset: iW.bN
+    function cR() {
+      oR || (oR = !0, (0, aR.l)(VR.sc.ProgressBarUpdate, (RR => {
+        const JR = (0, NR.k)(RR);
+        (0, NR.e)(JR) && fR.n.JK("progressBarUpdate", JR, !0)
+      })), (0, aR.l)(OR.s, (RR => {
+        const JR = (0, NR.i)(OR.s, RR);
+        JR && fR.n.JK("middleScreenBarInitiate", {
+          duration: JR.Wu,
+          Au: JR.Au,
+          horizBarRemOffset: JR.Cu
         }, !0)
-      })), (0, bW.j)(tW.uc.RemoveMiddleScreenBar, (() => {
-        wW.l.iZ("middleScreenBarRemove")
-      })), (0, bW.j)(uW.hb, (WW => {
-        const iW = (0, dW.g)(uW.hb, WW);
-        if (iW) {
-          var OW;
-          const WW = iW.oi ? null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.renderFrame.projectDirectionToScreenPos(iW.oi) : void 0;
-          wW.l.iZ("sendHitmarker", {
-            ui: iW.ui,
-            screenPos: WW
+      })), (0, aR.l)(VR.sc.RemoveMiddleScreenBar, (() => {
+        fR.n.JK("middleScreenBarRemove")
+      })), (0, aR.l)(OR.fb, (RR => {
+        const JR = (0, NR.i)(OR.fb, RR);
+        if (JR) {
+          var GR;
+          const RR = JR.NJ ? null === (GR = (0, ZR.l)()) || void 0 === GR ? void 0 : GR.renderFrame.projectDirectionToScreenPos(JR.NJ) : void 0;
+          fR.n.JK("sendHitmarker", {
+            xJ: JR.xJ,
+            screenPos: RR
           }, !0)
         }
-      })), (0, bW.j)(uW.mb, (WW => {
-        const iW = (0, dW.g)(uW.mb, WW);
-        if (iW) {
+      })), (0, aR.l)(OR.kb, (RR => {
+        const JR = (0, NR.i)(OR.kb, RR);
+        if (JR) {
           const {
-            id: WW,
-            position: OW,
-            style: mW,
-            Gi: EW,
-            zi: NW
-          } = iW;
-          wW.l.iZ("setDirectionArrow", {
-            id: WW,
-            position: OW,
-            style: mW,
-            text: eW(EW),
-            zi: NW
+            id: RR,
+            position: GR,
+            style: yR,
+            dJ: tR,
+            QJ: uR
+          } = JR;
+          fR.n.JK("setDirectionArrow", {
+            id: RR,
+            position: GR,
+            style: yR,
+            text: DR(tR),
+            QJ: uR
           }, !0)
         }
-      })), (0, bW.j)(uW.d, (WW => {
-        const iW = (0, dW.g)(uW.d, WW);
-        iW && wW.l.iZ("clearDirectionArrow", {
-          id: iW.id
+      })), (0, aR.l)(OR.d, (RR => {
+        const JR = (0, NR.i)(OR.d, RR);
+        JR && fR.n.JK("clearDirectionArrow", {
+          id: JR.id
         }, !0)
-      })), (0, bW.j)(uW.n, (WW => {
-        const iW = (0, dW.g)(uW.n, WW);
-        iW && wW.l.iZ("flyingMiddleMessage", {
-          content: eW(iW.qN),
-          RN: iW.RN,
-          GN: iW.GN
+      })), (0, aR.l)(OR.l, (RR => {
+        const JR = (0, NR.i)(OR.l, RR);
+        JR && fR.n.JK("flyingMiddleMessage", {
+          content: DR(JR.su),
+          hu: JR.hu,
+          RZ: JR.RZ
         }, !0)
-      })), (0, bW.j)(tW.uc.WorldVariation, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ("string" === typeof iW) {
-          const WW = iW === hW.e ? null : {
-            message: `Currently loaded as variation: ${iW}`,
+      })), (0, aR.l)(VR.sc.WorldVariation, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ("string" === typeof JR) {
+          const RR = JR === gR.i ? null : {
+            message: `Currently loaded as variation: ${JR}`,
             type: "Warning"
           };
-          wW.l.iZ("showPermanentBottomMessage", WW, !0)
+          fR.n.JK("showPermanentBottomMessage", RR, !0)
         }
-      })), (0, bW.j)(uW.J, (WW => {
-        const iW = (0, dW.g)(uW.J, WW);
-        iW && function(WW, iW) {
+      })), (0, aR.l)(OR.I, (RR => {
+        const JR = (0, NR.i)(OR.I, RR);
+        JR && function(RR, JR) {
           const {
-            type: OW,
-            params: mW
-          } = (0, HW.f)(iW), EW = {
-            ...mW
+            type: GR,
+            params: yR
+          } = (0, bR.g)(JR), tR = {
+            ...yR
           };
-          for (const NW of HW.c) EW[NW] && (EW[NW] = eW(EW[NW]));
-          nW.d.queueQTE(WW, OW, EW).getResult().then((iW => {
-            var OW;
-            "boolean" === typeof iW && (null === (OW = (0, PW.f)()) || void 0 === OW || OW.send(oW.e.QteResponse, {
-              qteId: WW,
-              qteResponse: iW
+          for (const uR of bR.e) tR[uR] && (tR[uR] = DR(tR[uR]));
+          vR.d.queueQTE(RR, GR, tR).getResult().then((JR => {
+            var GR;
+            "boolean" === typeof JR && (null === (GR = (0, ZR.l)()) || void 0 === GR || GR.send(xR.d.QteResponse, {
+              qteId: RR,
+              qteResponse: JR
             }))
           }))
-        }(iW.id, iW.jN)
-      })), (0, bW.j)(uW.Y, (WW => {
-        const iW = (0, dW.g)(uW.Y, WW);
-        "number" === typeof iW && nW.d.cancelQTE(iW)
-      })), (0, bW.e)((() => {
-        nW.d.reset()
-      })), (0, bW.i)((() => {
-        nW.d.reset()
-      })), (0, bW.j)(tW.uc.EditItemCraftingRecipes, (WW => {
-        const iW = (0, dW.j)(WW);
-        (0, dW.d)(iW) && wW.l.iZ("craftingRecipesEdited", {
-          itemName: iW.craftingRecipeItemName,
-          recipesForItem: iW.recipesForItem
+        }(JR.id, JR.Xu)
+      })), (0, aR.l)(OR.Y, (RR => {
+        const JR = (0, NR.i)(OR.Y, RR);
+        "number" === typeof JR && vR.d.cancelQTE(JR)
+      })), (0, aR.f)((() => {
+        vR.d.reset()
+      })), (0, aR.i)((() => {
+        vR.d.reset()
+      })), (0, aR.l)(VR.sc.EditItemCraftingRecipes, (RR => {
+        const JR = (0, NR.k)(RR);
+        (0, NR.e)(JR) && fR.n.JK("craftingRecipesEdited", {
+          itemName: JR.craftingRecipeItemName,
+          recipesForItem: JR.recipesForItem
         })
-      })), (0, bW.j)(uW.V, (WW => {
-        const iW = (0, dW.g)(uW.V, WW);
-        iW && wW.l.iZ("craftingRecipesEdited", {
-          itemName: iW.Oi,
+      })), (0, aR.l)(OR.V, (RR => {
+        const JR = (0, NR.i)(OR.V, RR);
+        JR && fR.n.JK("craftingRecipesEdited", {
+          itemName: JR.tJ,
           recipesForItem: []
         })
       })))
     }
-    var VW = OW(25);
-    const pW = [{
+    var PR = GR(25);
+    const IR = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -966,1621 +966,1621 @@ export const modules = {
       movesFly: !0
     }];
 
-    function fW(WW) {
-      return MW.z.playerFlags(WW.api.apiView, 0)
+    function mR(RR) {
+      return AR.s.playerFlags(RR.api.apiView, 0)
     }
-    const CW = {
-        freeCamera: (0, lW.e)((WW => () => {
-          const iW = WW.isSessionLive && 0 !== (fW(WW) & MW.Ud.FreeCamMoves),
-            OW = WW.freeCameraAllowed() && null === VW.d.get("scriptedCameraFacing");
-          return pW[(OW ? 2 : 0) + (iW ? 1 : 0)]
-        }), pW[0], (WW => (0, NW.v)(WW)))
+    const zR = {
+        freeCamera: (0, rR.c)((RR => () => {
+          const JR = RR.isSessionLive && 0 !== (mR(RR) & AR.xd.FreeCamMoves),
+            GR = RR.freeCameraAllowed() && null === PR.d.get("scriptedCameraFacing");
+          return IR[(GR ? 2 : 0) + (JR ? 1 : 0)]
+        }), IR[0], (RR => (0, uR.n)(RR)))
       },
-      XW = {
-        setFreeCameraMovesFly: WW => {
-          var iW;
-          null === (iW = (0, PW.f)()) || void 0 === iW || iW.setFreeCameraMovesFly(WW)
+      SR = {
+        setFreeCameraMovesFly: RR => {
+          var JR;
+          null === (JR = (0, ZR.l)()) || void 0 === JR || JR.setFreeCameraMovesFly(RR)
         }
       },
-      BW = {
+      jR = {
         freeCameraPos: () => {
-          const WW = (0, PW.f)();
-          return null !== WW && void 0 !== WW && WW.isSessionLive && WW.renderFrame.hasView && 0 !== (fW(WW) & MW.Ud.FreeCam) ? WW.renderFrame.cameraPosition : null
+          const RR = (0, ZR.l)();
+          return null !== RR && void 0 !== RR && RR.isSessionLive && RR.renderFrame.hasView && 0 !== (mR(RR) & AR.xd.FreeCam) ? RR.renderFrame.cameraPosition : null
         }
       };
-    var qW = OW(40416);
-    let RW = !1,
-      GW = !1;
+    var dR = GR(40464);
+    let ER = !1,
+      YR = !1;
 
-    function IW() {
-      const WW = (0, PW.f)();
-      if (null === WW || void 0 === WW || !WW.isSessionLive) return void(RW = !1);
-      const iW = 0 !== (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.FreeCam);
-      iW !== RW && (RW = iW, (0, qW.e)(iW))
+    function kR() {
+      const RR = (0, ZR.l)();
+      if (null === RR || void 0 === RR || !RR.isSessionLive) return void(ER = !1);
+      const JR = 0 !== (AR.s.playerFlags(RR.api.apiView, 0) & AR.xd.FreeCam);
+      JR !== ER && (ER = JR, (0, dR.e)(JR))
     }
-    var aW = OW(344),
-      rW = OW(38195),
-      zW = OW(2072);
-    var FW = OW(42513),
-      QW = OW(42165);
-    const Wi = {
+    var QR = GR(377),
+      FR = GR(38150),
+      TR = GR(2170);
+    var sR = GR(42555),
+      hR = GR(42177);
+    const RJ = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let ii = "off";
+    let JJ = "off";
 
-    function Oi(WW) {
-      var iW;
-      return null === WW ? null : {
-        label: null !== (iW = (0, FW.c)(WW, "interactionPrompt")) && void 0 !== iW ? iW : null
+    function GJ(RR) {
+      var JR;
+      return null === RR ? null : {
+        label: null !== (JR = (0, sR.b)(RR, "interactionPrompt")) && void 0 !== JR ? JR : null
       }
     }
-    const mi = new Map([
-      [MW.Jc.Open, {
-        label: cW.h.open
+    const yJ = new Map([
+      [AR.qc.Open, {
+        label: iR.h.open
       }],
-      [MW.Jc.Close, {
-        label: cW.h.close
+      [AR.qc.Close, {
+        label: iR.h.close
       }],
-      [MW.Jc.Milk, {
-        label: cW.h.milk
+      [AR.qc.Milk, {
+        label: iR.h.milk
       }],
-      [MW.Jc.Shear, {
-        label: cW.h.shear
+      [AR.qc.Shear, {
+        label: iR.h.shear
       }],
-      [MW.Jc.Tame, {
-        label: cW.h.tame
+      [AR.qc.Tame, {
+        label: iR.h.tame
       }],
-      [MW.Jc.Feed, {
-        label: cW.h.feed
+      [AR.qc.Feed, {
+        label: iR.h.feed
       }],
-      [MW.Jc.Ride, {
-        label: cW.h.ride
+      [AR.qc.Ride, {
+        label: iR.h.ride
       }]
     ]);
-    class Ei {
+    class tJ {
       constructor() {
-        this.target = Wi, this.NL = MW.nd, this.optionName = null, this.pickaxe = new cW.d
+        this.target = RJ, this.Vq = AR.Yc, this.optionName = null, this.pickaxe = new iR.e
       }
-      read(WW) {
-        var iW;
-        const OW = MW.z.targetBlockId(WW.api.apiView, 0);
-        OW !== this.NL && (this.NL = OW, this.optionName = OW === MW.nd ? null : `${WW.tables.getMetaInfo(OW).rootName}CrosshairText`);
-        const mW = null === this.optionName ? null : null !== (iW = WW.tables.getClientOption(this.optionName)) && void 0 !== iW ? iW : null;
-        this.pickaxe.update(function(WW, iW) {
-          var OW, mW, EW;
-          if (0 === (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.Breaking) || iW === MW.nd || 0 === iW) return null;
+      read(RR) {
+        var JR;
+        const GR = AR.s.targetBlockId(RR.api.apiView, 0);
+        GR !== this.Vq && (this.Vq = GR, this.optionName = GR === AR.Yc ? null : `${RR.tables.getMetaInfo(GR).rootName}CrosshairText`);
+        const yR = null === this.optionName ? null : null !== (JR = RR.tables.getClientOption(this.optionName)) && void 0 !== JR ? JR : null;
+        this.pickaxe.update(function(RR, JR) {
+          var GR, yR, tR;
+          if (0 === (AR.s.playerFlags(RR.api.apiView, 0) & AR.xd.Breaking) || JR === AR.Yc || 0 === JR) return null;
           const {
-            tables: NW
-          } = WW;
-          if (!0 === NW.getClientOption("creative")) return null;
-          const PW = NW.nameOfId(iW),
-            LW = null === (OW = WW.items.BL()) || void 0 === OW ? void 0 : OW.name,
-            cW = null !== (mW = NW.getItemStat(PW, "harvestLevel")) && void 0 !== mW ? mW : 0;
-          return (0, aW.uc)({
-            blockHarvestType: NW.getDefaultItemStat(PW, "harvestType"),
-            blockHarvestLevel: NW.getDefaultItemStat(PW, "harvestLevel"),
-            harvestLevel: cW,
-            heldToolType: void 0 === LW ? void 0 : NW.getDefaultItemStat(LW, "harvests"),
-            heldToolLevel: void 0 === LW ? void 0 : NW.getDefaultItemStat(LW, "level")
-          }) && null !== (EW = rW.p[cW]) && void 0 !== EW ? EW : null
-        }(WW, OW)), WW.watchPromptPick(ii);
-        const EW = "touch" === ii ? function(WW) {
-          var iW;
-          const OW = WW.interactLabel;
-          return OW === MW.Jc.Entity ? Oi(WW.promptEntity) : OW === MW.Jc.TameWith ? {
-            label: (0, cW.v)(WW.tables.nameOfId(WW.interactIcon))
-          } : null !== (iW = mi.get(OW)) && void 0 !== iW ? iW : null
-        }(WW) : Oi(WW.promptEntity);
-        return this.target = (0, zW.t)(this.target, {
-          interactPrompt: EW,
-          blockText: mW,
+            tables: uR
+          } = RR;
+          if (!0 === uR.getClientOption("creative")) return null;
+          const ZR = uR.nameOfId(JR),
+            qR = null === (GR = RR.items.Qq()) || void 0 === GR ? void 0 : GR.name,
+            iR = null !== (yR = uR.getItemStat(ZR, "harvestLevel")) && void 0 !== yR ? yR : 0;
+          return (0, QR.yc)({
+            blockHarvestType: uR.getDefaultItemStat(ZR, "harvestType"),
+            blockHarvestLevel: uR.getDefaultItemStat(ZR, "harvestLevel"),
+            harvestLevel: iR,
+            heldToolType: void 0 === qR ? void 0 : uR.getDefaultItemStat(qR, "harvests"),
+            heldToolLevel: void 0 === qR ? void 0 : uR.getDefaultItemStat(qR, "level")
+          }) && null !== (tR = FR.p[iR]) && void 0 !== tR ? tR : null
+        }(RR, GR)), RR.watchPromptPick(JJ);
+        const tR = "touch" === JJ ? function(RR) {
+          var JR;
+          const GR = RR.interactLabel;
+          return GR === AR.qc.Entity ? GJ(RR.promptEntity) : GR === AR.qc.TameWith ? {
+            label: (0, iR.z)(RR.tables.nameOfId(RR.interactIcon))
+          } : null !== (JR = yJ.get(GR)) && void 0 !== JR ? JR : null
+        }(RR) : GJ(RR.promptEntity);
+        return this.target = (0, TR.m)(this.target, {
+          interactPrompt: tR,
+          blockText: yR,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let Ni = null;
-    const Pi = {
+    let uJ = null;
+    const ZJ = {
       current: () => {
-        var WW, iW;
-        return null !== (WW = null === (iW = Ni) || void 0 === iW ? void 0 : iW.target) && void 0 !== WW ? WW : Wi
+        var RR, JR;
+        return null !== (RR = null === (JR = uJ) || void 0 === JR ? void 0 : JR.target) && void 0 !== RR ? RR : RJ
       },
-      watch: WW => {
-        const iW = new Ei;
-        Ni = iW;
-        const OW = (0, lW.k)((OW => {
-          let mW = iW.read(OW);
-          WW(mW);
-          const EW = (0, NW.x)((() => {
-            const EW = iW.read(OW);
-            EW !== mW && (mW = EW, WW(EW))
+      watch: RR => {
+        const JR = new tJ;
+        uJ = JR;
+        const GR = (0, rR.g)((GR => {
+          let yR = JR.read(GR);
+          RR(yR);
+          const tR = (0, uR.r)((() => {
+            const tR = JR.read(GR);
+            tR !== yR && (yR = tR, RR(tR))
           }));
           return () => {
-            EW(), OW.watchPromptPick("off")
+            tR(), GR.watchPromptPick("off")
           }
         }));
         return () => {
-          OW(), Ni === iW && (Ni = null)
+          GR(), uJ === JR && (uJ = null)
         }
       }
     };
-    let Li = 0,
-      ci = 0;
-    const wi = {
-        health: cW.r,
-        aura: cW.i,
-        hotbar: QW.c.states.hotbar,
-        heldItemAim: QW.c.states.heldItemAim,
-        crouching: (0, lW.e)((WW => function(WW) {
-          const iW = () => 0 !== (MW.z.playerFlags(WW.apiView, 0) & MW.Ud.Crouching);
+    let qJ = 0,
+      iJ = 0;
+    const fJ = {
+        health: iR.t,
+        aura: iR.l,
+        hotbar: hR.e.states.hotbar,
+        heldItemAim: hR.e.states.heldItemAim,
+        crouching: (0, rR.c)((RR => function(RR) {
+          const JR = () => 0 !== (AR.s.playerFlags(RR.apiView, 0) & AR.xd.Crouching);
           return {
-            current: iW,
-            watch(WW) {
-              let OW = iW();
-              return (0, NW.v)((() => {
-                const mW = iW();
-                mW !== OW && (OW = mW, WW(mW))
+            current: JR,
+            watch(RR) {
+              let GR = JR();
+              return (0, uR.n)((() => {
+                const yR = JR();
+                yR !== GR && (GR = yR, RR(yR))
               }))
             }
           }
-        }(WW.api).current), !1, (WW => (0, NW.v)(WW))),
-        flight: (0, lW.e)((WW => () => function(WW) {
-          const iW = MW.z.playerFlags(WW.apiView, 0);
-          return (0, cW.p)(0 !== (iW & MW.Ud.CanFly), 0 !== (iW & MW.Ud.Flying))
-        }(WW.api)), (0, cW.p)(!1, !1), (WW => (0, NW.v)(WW))),
-        gliderBoostFuel: (0, lW.e)((WW => () => MW.z.gliderBoostFuel(WW.api.apiView, 0)), 0, (WW => (0, NW.v)(WW))),
-        crosshairTarget: Pi
+        }(RR.api).current), !1, (RR => (0, uR.n)(RR))),
+        flight: (0, rR.c)((RR => () => function(RR) {
+          const JR = AR.s.playerFlags(RR.apiView, 0);
+          return (0, iR.s)(0 !== (JR & AR.xd.CanFly), 0 !== (JR & AR.xd.Flying))
+        }(RR.api)), (0, iR.s)(!1, !1), (RR => (0, uR.n)(RR))),
+        gliderBoostFuel: (0, rR.c)((RR => () => AR.s.gliderBoostFuel(RR.api.apiView, 0)), 0, (RR => (0, uR.n)(RR))),
+        crosshairTarget: ZJ
       },
-      ti = {
-        hotbarSlotRequested: QW.c.events.hotbarSlotRequested,
-        hotbarScrolled: QW.c.events.hotbarScrolled,
-        numberKeyPressed: QW.c.events.numberKeyPressed,
-        shotDamageToShow: (0, cW.t)((WW => !0 === (0, FW.c)(WW, "showDamageAmounts")))
+      VJ = {
+        hotbarSlotRequested: hR.e.events.hotbarSlotRequested,
+        hotbarScrolled: hR.e.events.hotbarScrolled,
+        numberKeyPressed: hR.e.events.numberKeyPressed,
+        shotDamageToShow: (0, iR.v)((RR => !0 === (0, sR.b)(RR, "showDamageAmounts")))
       },
-      Zi = {
-        selectHotbarSlot: QW.c.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: WW => {
-          ii = WW
+      KJ = {
+        selectHotbarSlot: hR.e.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: RR => {
+          JJ = RR
         }
       },
-      xi = {
+      wJ = {
         momentumFrac: function() {
-          var WW, iW, OW;
-          const mW = (0, PW.f)(),
-            EW = performance.now(),
-            NW = null === mW || void 0 === mW || null === (WW = mW.items.BL()) || void 0 === WW || null === (iW = WW.attributes) || void 0 === iW || null === (OW = iW.customAttributes) || void 0 === OW ? void 0 : OW.enchantments;
-          return Li = null !== mW && null !== NW && void 0 !== NW && NW.Momentum ? 0 !== (MW.z.playerFlags(mW.api.apiView, 0) & MW.Ud.Breaking) ? Math.max(0, MW.z.momentumFrac(mW.api.apiView, 0)) : Math.max(0, Li - (EW - ci) / 1500) : 0, ci = EW, Li
+          var RR, JR, GR;
+          const yR = (0, ZR.l)(),
+            tR = performance.now(),
+            uR = null === yR || void 0 === yR || null === (RR = yR.items.Qq()) || void 0 === RR || null === (JR = RR.attributes) || void 0 === JR || null === (GR = JR.customAttributes) || void 0 === GR ? void 0 : GR.enchantments;
+          return qJ = null !== yR && null !== uR && void 0 !== uR && uR.Momentum ? 0 !== (AR.s.playerFlags(yR.api.apiView, 0) & AR.xd.Breaking) ? Math.max(0, AR.s.momentumFrac(yR.api.apiView, 0)) : Math.max(0, qJ - (tR - iJ) / 1500) : 0, iJ = tR, qJ
         }
       };
-    var li = OW(42103);
-    const Ai = {
-      lobbyManage(WW) {
-        var iW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.LobbyManage, WW)
+    var rJ = GR(42114);
+    const eJ = {
+      lobbyManage(RR) {
+        var JR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.LobbyManage, RR)
       }
     };
-    var bi = OW(1230),
-      ji = OW(37735),
-      Ui = OW(10027),
-      ki = OW(1729),
-      si = OW(3305),
-      Mi = OW(5560);
-    let Ki = !1;
+    var aJ = GR(1336),
+      LJ = GR(37651),
+      nJ = GR(10149),
+      UJ = GR(1800),
+      WJ = GR(3428),
+      AJ = GR(5692);
+    let CJ = !1;
 
-    function Si(WW) {
-      Ki = WW
+    function XJ(RR) {
+      CJ = RR
     }
 
-    function Yi() {
-      "inGame" !== VW.d.get("gameState") || (0, ki.m)() || wW.l.iZ("ctrlCrouchWithoutFullscreen")
+    function MJ() {
+      "inGame" !== PR.d.get("gameState") || (0, UJ.r)() || fR.n.JK("ctrlCrouchWithoutFullscreen")
     }
-    let yi = !1;
-    const Ti = {
+    let BJ = !1;
+    const lJ = {
         OpenEmoteWheel: () => {
-          Si(!0), yi = !0, queueMicrotask((() => {
-            yi && (yi = !1, wW.l.iZ("requestEmoteWheelHoldOpen"))
+          XJ(!0), BJ = !0, queueMicrotask((() => {
+            BJ && (BJ = !1, fR.n.JK("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          wW.l.iZ("toggleFullCoordinateOverlay")
+          fR.n.JK("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, ji.e)() || wW.l.iZ("YKeyPressed")
+          (0, LJ.e)() || fR.n.JK("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, ji.e)() || wW.l.iZ("XKeyPressed")
+          (0, LJ.e)() || fR.n.JK("XKeyPressed")
         },
-        CtrlCrouch: Yi,
+        CtrlCrouch: MJ,
         "primary-fire": () => {
-          wW.l.iZ("mouseState", {
-            IL: bi.c.DownFirePrimary,
+          fR.n.JK("mouseState", {
+            hq: aJ.e.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          wW.l.iZ("mouseState", {
-            IL: bi.c.DownFireSecondary,
+          fR.n.JK("mouseState", {
+            hq: aJ.e.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          wW.l.iZ("mouseState", {
-            IL: bi.c.TouchDownLong,
+          fR.n.JK("mouseState", {
+            hq: aJ.e.TouchDownLong,
             isDown: !0
           })
         }
       },
-      Ji = {
+      pJ = {
         OpenEmoteWheel: () => {
-          Si(!1), yi ? (yi = !1, (0, Ui.d)() || wW.l.iZ("requestEmoteWheelHoldOpen")) : wW.l.iZ("requestEmoteWheelHoldRelease")
+          XJ(!1), BJ ? (BJ = !1, (0, nJ.b)() || fR.n.JK("requestEmoteWheelHoldOpen")) : fR.n.JK("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: Yi,
+        CtrlCrouch: MJ,
         "primary-fire": () => {
-          wW.l.iZ("mouseState", {
-            IL: bi.c.UpFirePrimary,
+          fR.n.JK("mouseState", {
+            hq: aJ.e.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          wW.l.iZ("mouseState", {
-            IL: bi.c.UpFireSecondary,
+          fR.n.JK("mouseState", {
+            hq: aJ.e.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          wW.l.iZ("mouseState", {
-            IL: bi.c.UpFirePrimary,
+          fR.n.JK("mouseState", {
+            hq: aJ.e.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let Hi = !1;
+    let gJ = !1;
 
-    function ni() {
-      Hi || (Hi = !0, (0, Mi.g)((WW => {
-        if ((0, EW.d)()) return;
-        const iW = (0, Mi.f)(WW) ? "primary-fire" : WW.action;
-        var OW;
-        if (WW.down) {
-          if (0 === (WW.flags & si.e.Synthetic)) {
-            var mW;
-            null === (mW = Ti[iW]) || void 0 === mW || mW.call(Ti)
+    function bJ() {
+      gJ || (gJ = !0, (0, AJ.f)((RR => {
+        if ((0, tR.b)()) return;
+        const JR = (0, AJ.d)(RR) ? "primary-fire" : RR.action;
+        var GR;
+        if (RR.down) {
+          if (0 === (RR.flags & WJ.b.Synthetic)) {
+            var yR;
+            null === (yR = lJ[JR]) || void 0 === yR || yR.call(lJ)
           }
-        } else null === (OW = Ji[iW]) || void 0 === OW || OW.call(Ji)
+        } else null === (GR = pJ[JR]) || void 0 === GR || GR.call(pJ)
       })))
     }
-    var ui = OW(327),
-      oi = OW(100),
-      di = OW(39),
-      ei = OW(42394),
-      vi = OW(1351),
-      gi = OW(3323);
-    let Di = !1;
-    const Vi = {
-      sendCodeCollab(WW) {
-        var iW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.CodeCollab, (0, oW.r)(WW), (0, gi.h)(WW))
+    var vJ = GR(359),
+      OJ = GR(103),
+      xJ = GR(46),
+      NJ = GR(42423),
+      DJ = GR(1449),
+      HJ = GR(3452);
+    let oJ = !1;
+    const cJ = {
+      sendCodeCollab(RR) {
+        var JR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.CodeCollab, (0, xR.q)(RR), (0, HJ.e)(RR))
       }
     };
-    var fi = OW(40305),
-      Ci = OW(9957);
-    let Xi = null,
-      Bi = !1,
-      qi = null;
+    var PJ = GR(40356),
+      IJ = GR(10057);
+    let mJ = null,
+      zJ = !1,
+      SJ = null;
 
-    function Ri() {
-      return "inGame" === VW.d.get("gameState") && !(0, ji.e)()
+    function jJ() {
+      return "inGame" === PR.d.get("gameState") && !(0, LJ.e)()
     }
-    const Gi = {
-        OpenInventory: WW => {
-          (0, ki.t)(WW, "inventory", (0, li.h)())
+    const dJ = {
+        OpenInventory: RR => {
+          (0, UJ.y)(RR, "inventory", (0, rJ.p)())
         },
-        OpenShop: WW => {
-          Xi && Ri() && (0, ki.s)(WW, ui.m.SHOP, !Xi.shopIsEmpty(sW.d.get("shopInfo")))
+        OpenShop: RR => {
+          mJ && jJ() && (0, UJ.v)(RR, vJ.o.SHOP, !mJ.shopIsEmpty(WR.c.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: WW => {
-          var iW, OW;
-          Ri() && (0, ki.x)(WW, (0, fi.d)({
-            lobbyLeaderboardInfo: sW.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: sW.d.get("lobbyManage")
-          }), null !== (iW = null === (OW = Xi) || void 0 === OW ? void 0 : OW.getClientGameLeaderboardKey()) && void 0 !== iW ? iW : null)
+        OpenLobbyLeaderboard: RR => {
+          var JR, GR;
+          jJ() && (0, UJ.A)(RR, (0, PJ.b)({
+            lobbyLeaderboardInfo: WR.c.get("lobbyLeaderboardInfo"),
+            lobbyManage: WR.c.get("lobbyManage")
+          }), null !== (JR = null === (GR = mJ) || void 0 === GR ? void 0 : GR.getClientGameLeaderboardKey()) && void 0 !== JR ? JR : null)
         },
-        OpenTasksAndLeaderboard: WW => {
-          var iW;
-          const OW = null === (iW = Xi) || void 0 === iW ? void 0 : iW.getClientGameMapKey();
-          OW ? (0, ki.A)(WW, !0, OW) : (0, ki.t)(WW, "retentionFeatures", !(!sW.d.get("_tasks") && !sW.d.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: RR => {
+          var JR;
+          const GR = null === (JR = mJ) || void 0 === JR ? void 0 : JR.getClientGameMapKey();
+          GR ? (0, UJ.B)(RR, !0, GR) : (0, UJ.y)(RR, "retentionFeatures", !(!WR.c.get("_tasks") && !WR.c.get("_availableLeaderboards")))
         },
-        OpenInviteLink: WW => {
-          (0, ki.t)(WW, "inviteLink", oi.featureFlags.canUseInviteLinks)
+        OpenInviteLink: RR => {
+          (0, UJ.y)(RR, "inviteLink", OJ.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: WW => {
-          Ri() && function(WW) {
-            const iW = (0, PW.f)(),
-              OW = null !== iW && void 0 !== iW && iW.isSessionLive ? iW.api : null,
-              mW = OW ? OW.Vk(OW.localId) : null;
-            (0, ki.A)(WW, null !== mW && (0, gi.d)((0, vi.d)()), (() => {
-              (0, gi.i)(mW)
+        OpenCodeEditor: RR => {
+          jJ() && function(RR) {
+            const JR = (0, ZR.l)(),
+              GR = null !== JR && void 0 !== JR && JR.isSessionLive ? JR.api : null,
+              yR = GR ? GR.vW(GR.localId) : null;
+            (0, UJ.B)(RR, null !== yR && (0, HJ.b)((0, DJ.d)()), (() => {
+              (0, HJ.i)(yR)
             }))
-          }(WW)
+          }(RR)
         },
         HideUi: () => {
-          wW.l.iZ("showUi", !1)
+          fR.n.JK("showUi", !1)
         }
       },
-      Ii = {
+      EJ = {
         HideUi: () => {
-          wW.l.iZ("showUi", !0)
+          fR.n.JK("showUi", !0)
         }
       };
 
-    function ai() {
-      Bi || (Bi = !0, OW.e(183).then((() => OW(64355))).then((WW => {
-        Xi = WW
-      }), (WW => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", WW)
-      })), (0, ei.z)((WW => {
-        WW || !(0, ei.i)() || (0, oi.isMobile)() || !di.i.getItem("disableFullscreen") || (0, ki.l)() || VW.d.set({
-          openEverythingMenuName: ui.m.SETTINGS
+    function YJ() {
+      zJ || (zJ = !0, GR.e(183).then((() => GR(64110))).then((RR => {
+        mJ = RR
+      }), (RR => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", RR)
+      })), (0, NJ.A)((RR => {
+        RR || !(0, NJ.k)() || (0, OJ.isMobile)() || !xJ.i.getItem("disableFullscreen") || (0, UJ.o)() || PR.d.set({
+          openEverythingMenuName: vJ.o.SETTINGS
         })
-      })), (0, Mi.g)((WW => {
+      })), (0, AJ.f)((RR => {
         let {
-          action: iW,
-          down: OW,
-          press: mW
-        } = WW;
-        var NW, PW;
-        (0, EW.d)() || (OW ? null === (NW = Gi[iW]) || void 0 === NW || NW.call(Gi, function(WW) {
-          var iW;
-          if (0 === WW || (null === (iW = qi) || void 0 === iW ? void 0 : iW.press) !== WW) {
-            const iW = {
-              press: WW,
-              event: (0, Ci.e)("inputAction")
+          action: JR,
+          down: GR,
+          press: yR
+        } = RR;
+        var uR, ZR;
+        (0, tR.b)() || (GR ? null === (uR = dJ[JR]) || void 0 === uR || uR.call(dJ, function(RR) {
+          var JR;
+          if (0 === RR || (null === (JR = SJ) || void 0 === JR ? void 0 : JR.press) !== RR) {
+            const JR = {
+              press: RR,
+              event: (0, IJ.e)("inputAction")
             };
-            qi = iW, queueMicrotask((() => {
-              qi === iW && (qi = null)
+            SJ = JR, queueMicrotask((() => {
+              SJ === JR && (SJ = null)
             }))
           }
-          return qi.event
-        }(mW)) : null === (PW = Ii[iW]) || void 0 === PW || PW.call(Ii))
+          return SJ.event
+        }(yR)) : null === (ZR = EJ[JR]) || void 0 === ZR || ZR.call(EJ))
       })))
     }
-    var ri = OW(40229),
-      zi = OW(40216),
-      Fi = OW(40213);
-    const Qi = {
-      completeTask(WW) {
-        var iW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.CompleteTask, (0, oW.s)(WW))
+    var kJ = GR(40270),
+      QJ = GR(40258),
+      FJ = GR(40256);
+    const TJ = {
+      completeTask(RR) {
+        var JR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.CompleteTask, (0, xR.s)(RR))
       },
-      setServerCookie(WW) {
-        var iW;
+      setServerCookie(RR) {
+        var JR;
         let {
-          key: OW,
-          value: mW
-        } = WW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.GeneralCookieSet, (0, oW.A)({
-          bt: OW,
-          jt: mW
+          key: GR,
+          value: yR
+        } = RR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.GeneralCookieSet, (0, xR.y)({
+          WV: GR,
+          AV: yR
         }))
       },
-      answerUiRequest(WW) {
-        var iW;
+      answerUiRequest(RR) {
+        var JR;
         let {
-          id: OW,
-          ct: mW
-        } = WW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.UiRequestResp, (0, oW.V)({
-          jP: OW,
-          UP: mW,
-          kP: 5
+          id: GR,
+          wV: yR
+        } = RR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.UiRequestResp, (0, xR.U)({
+          XZ: GR,
+          MZ: yR,
+          BZ: 5
         }))
       },
-      chooseRewardedAd(WW) {
-        var iW;
+      chooseRewardedAd(RR) {
+        var JR;
         let {
-          id: OW,
-          ct: mW
-        } = WW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.UiRequestResponded, (0, oW.U)({
-          id: OW,
-          ct: mW
+          id: GR,
+          wV: yR
+        } = RR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.UiRequestResponded, (0, xR.T)({
+          id: GR,
+          wV: yR
         }))
       },
-      requestLeaderboard(WW) {
-        var iW;
+      requestLeaderboard(RR) {
+        var JR;
         let {
-          category: OW,
-          timeframe: mW,
-          seeTop: EW
-        } = WW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.LeaderboardRequest, {
-          category: OW,
-          timeframe: mW,
-          seeTop: EW
+          category: GR,
+          timeframe: yR,
+          seeTop: tR
+        } = RR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.LeaderboardRequest, {
+          category: GR,
+          timeframe: yR,
+          seeTop: tR
         })
       }
     };
-    let WO = !1;
-    const iO = kW.f.tU / 2,
-      OO = [iO, -iO, -iO, -iO, iO, iO, -iO, iO],
-      mO = [0, 0, 0];
+    let sJ = !1;
+    const hJ = UR.g.Vn / 2,
+      RG = [hJ, -hJ, -hJ, -hJ, hJ, hJ, -hJ, hJ],
+      JG = [0, 0, 0];
 
-    function EO(WW, iW, OW) {
-      for (let mW = 0; mW < WW.length; mW += 2)
-        if (WW[mW] === iW && WW[mW + 1] === OW) return !0;
+    function GG(RR, JR, GR) {
+      for (let yR = 0; yR < RR.length; yR += 2)
+        if (RR[yR] === JR && RR[yR + 1] === GR) return !0;
       return !1
     }
-    const NO = {
+    const yG = {
       blocksStandingOn: function() {
-        const WW = (0, PW.f)();
-        if (null === WW) return [];
+        const RR = (0, ZR.l)();
+        if (null === RR) return [];
         const {
-          api: iW,
-          chunks: OW,
-          tables: mW
-        } = WW;
-        if (!iW.readPosition(iW.localId, mO)) return [];
-        const [EW, NW, LW] = mO, cW = Math.ceil(NW) - 1, wW = [], tW = [];
-        for (let PW = 0; PW < OO.length; PW += 2) {
-          const WW = EW + OO[PW],
-            iW = LW + OO[PW + 1];
-          if (Number.isInteger(WW) || Number.isInteger(iW)) continue;
-          const NW = Math.floor(WW),
-            ZW = Math.floor(iW);
-          if (EO(tW, NW, ZW)) continue;
-          const xW = OW.NL(NW, cW, ZW);
-          mW.isSolidBlockId(xW) && (tW.push(NW, ZW), wW.push(mW.nameOfId(xW)))
+          api: JR,
+          chunks: GR,
+          tables: yR
+        } = RR;
+        if (!JR.readPosition(JR.localId, JG)) return [];
+        const [tR, uR, qR] = JG, iR = Math.ceil(uR) - 1, fR = [], VR = [];
+        for (let ZR = 0; ZR < RG.length; ZR += 2) {
+          const RR = tR + RG[ZR],
+            JR = qR + RG[ZR + 1];
+          if (Number.isInteger(RR) || Number.isInteger(JR)) continue;
+          const uR = Math.floor(RR),
+            KR = Math.floor(JR);
+          if (GG(VR, uR, KR)) continue;
+          const wR = GR.Vq(uR, iR, KR);
+          yR.isSolidBlockId(wR) && (VR.push(uR, KR), fR.push(yR.nameOfId(wR)))
         }
-        return wW
+        return fR
       },
       dropAhead: function() {
-        const WW = (0, PW.f)();
-        return null !== WW && 0 !== (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.DropAhead)
+        const RR = (0, ZR.l)();
+        return null !== RR && 0 !== (AR.s.playerFlags(RR.api.apiView, 0) & AR.xd.DropAhead)
       }
     };
-    var PO = OW(38107),
-      LO = OW(40287),
-      cO = OW(1422),
-      wO = OW(42176);
-    const tO = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      ZO = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var tG = GR(38060),
+      uG = GR(40333),
+      ZG = GR(1493),
+      qG = GR(42188);
+    const iG = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      fG = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function xO() {
-      const WW = new Set;
+    function VG() {
+      const RR = new Set;
       return {
-        add: iW => (WW.add(iW), () => {
-          WW.delete(iW)
+        add: JR => (RR.add(JR), () => {
+          RR.delete(JR)
         }),
         fire() {
-          for (const iW of WW) iW()
+          for (const JR of RR) JR()
         }
       }
     }
-    const lO = Object.freeze([]);
+    const KG = Object.freeze([]);
 
-    function AO(WW, iW) {
-      let OW, {
-        rereads: mW,
-        followLocalId: EW
-      } = iW;
-      const PW = () => (OW = (0, zW.t)(OW, WW()), OW);
+    function wG(RR, JR) {
+      let GR, {
+        rereads: yR,
+        followLocalId: tR
+      } = JR;
+      const ZR = () => (GR = (0, TR.m)(GR, RR()), GR);
       return {
-        current: PW,
-        watch(WW) {
-          const iW = (0, AW.e)((iW => {
-            mW(iW) && WW(PW())
+        current: ZR,
+        watch(RR) {
+          const JR = (0, eR.e)((JR => {
+            yR(JR) && RR(ZR())
           }));
-          if (!EW) return iW;
-          let OW = (0, lW.g)();
-          const LW = (0, NW.x)((() => {
-            const iW = (0, lW.g)();
-            iW !== OW && (OW = iW, WW(PW()))
+          if (!tR) return JR;
+          let GR = (0, rR.e)();
+          const qR = (0, uR.r)((() => {
+            const JR = (0, rR.e)();
+            JR !== GR && (GR = JR, RR(ZR()))
           }));
           return () => {
-            iW(), LW()
+            JR(), qR()
           }
         }
       }
     }
-    const bO = {
-        players: AO((function() {
-          const WW = AW.i.ids(),
-            iW = {};
-          for (const NW of WW) {
-            var OW, mW, EW;
-            iW[NW] = {
-              name: null !== (OW = AW.i.getName(NW)) && void 0 !== OW ? OW : null,
-              ranks: null !== (mW = AW.i.getSetting(NW, "ranks")) && void 0 !== mW ? mW : lO,
-              cosmetics: null !== (EW = (0, AW.m)(NW)) && void 0 !== EW ? EW : null
+    const rG = {
+        players: wG((function() {
+          const RR = eR.f.ids(),
+            JR = {};
+          for (const uR of RR) {
+            var GR, yR, tR;
+            JR[uR] = {
+              name: null !== (GR = eR.f.getName(uR)) && void 0 !== GR ? GR : null,
+              ranks: null !== (yR = eR.f.getSetting(uR, "ranks")) && void 0 !== yR ? yR : KG,
+              cosmetics: null !== (tR = (0, eR.i)(uR)) && void 0 !== tR ? tR : null
             }
           }
           return {
-            ids: WW,
-            byId: iW,
-            localId: (0, lW.g)()
+            ids: RR,
+            byId: JR,
+            localId: (0, rR.e)()
           }
         }), {
-          rereads: WW => "roster" !== WW.kind || WW.members || WW.settings.has("ranks"),
+          rereads: RR => "roster" !== RR.kind || RR.members || RR.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: AO((function() {
-          const WW = {};
-          for (const EW of AW.i.ids()) {
-            var iW, OW, mW;
-            WW[EW] = {
-              colour: null !== (iW = AW.i.getSetting(EW, "colorInLobbyLeaderboard")) && void 0 !== iW ? iW : null,
-              values: null !== (OW = AW.i.getSetting(EW, "lobbyLeaderboardValues")) && void 0 !== OW ? OW : null,
-              tags: null !== (mW = AW.i.getSetting(EW, "lobbyLeaderboardTags")) && void 0 !== mW ? mW : null
+        lobbyLeaderboardRows: wG((function() {
+          const RR = {};
+          for (const tR of eR.f.ids()) {
+            var JR, GR, yR;
+            RR[tR] = {
+              colour: null !== (JR = eR.f.getSetting(tR, "colorInLobbyLeaderboard")) && void 0 !== JR ? JR : null,
+              values: null !== (GR = eR.f.getSetting(tR, "lobbyLeaderboardValues")) && void 0 !== GR ? GR : null,
+              tags: null !== (yR = eR.f.getSetting(tR, "lobbyLeaderboardTags")) && void 0 !== yR ? yR : null
             }
           }
-          return WW
+          return RR
         }), {
-          rereads: function(WW) {
-            if ("roster" !== WW.kind) return "reset" === WW.kind;
+          rereads: function(RR) {
+            if ("roster" !== RR.kind) return "reset" === RR.kind;
             const {
-              members: iW,
-              settings: OW
-            } = WW;
-            return iW || OW.has("colorInLobbyLeaderboard") || OW.has("lobbyLeaderboardValues") || OW.has("lobbyLeaderboardTags")
+              members: JR,
+              settings: GR
+            } = RR;
+            return JR || GR.has("colorInLobbyLeaderboard") || GR.has("lobbyLeaderboardValues") || GR.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      jO = {
+      eG = {
         cosmeticsUpdated: {
-          watch: WW => (0, AW.e)((iW => {
-            if ("cosmetics" !== iW.kind) return;
-            const OW = (0, lW.g)();
-            WW(iW.updates.map((WW => {
+          watch: RR => (0, eR.e)((JR => {
+            if ("cosmetics" !== JR.kind) return;
+            const GR = (0, rR.e)();
+            RR(JR.updates.map((RR => {
               let {
-                EE: iW,
-                NE: mW,
-                PE: EW
-              } = WW;
+                Zt: JR,
+                ft: yR,
+                Vt: tR
+              } = RR;
               return {
-                local: iW === OW,
-                NE: mW,
-                PE: EW
+                local: JR === GR,
+                ft: yR,
+                Vt: tR
               }
             })))
           }))
         }
       };
-    var UO = OW(3960),
-      kO = OW(1856),
-      sO = OW(683),
-      MO = OW(42432);
-    let KO = !1,
-      SO = null;
-    const YO = {
-      setShopOpen(WW) {
-        var iW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.ShopMenuChanged, (0, oW.P)(WW))
+    var aG = GR(4053),
+      LG = GR(1943),
+      nG = GR(726),
+      UG = GR(42463);
+    let WG = !1,
+      AG = null;
+    const CG = {
+      setShopOpen(RR) {
+        var JR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.ShopMenuChanged, (0, xR.O)(RR))
       },
-      buyShopItem(WW) {
-        var iW;
+      buyShopItem(RR) {
+        var JR;
         let {
-          categoryKey: OW,
-          itemKey: mW,
-          userInput: EW
-        } = WW;
-        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.ItemBought, {
-          categoryKey: OW,
-          itemKey: mW,
-          shopVersion: sW.d.get("_shopVersion"),
-          userInput: EW
+          categoryKey: GR,
+          itemKey: yR,
+          userInput: tR
+        } = RR;
+        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.ItemBought, {
+          categoryKey: GR,
+          itemKey: yR,
+          shopVersion: WR.c.get("_shopVersion"),
+          userInput: tR
         })
       }
     };
-    let yO = !1;
-    var TO = OW(5575);
-    const JO = si.y.LookFrozen | si.y.ClicksSuppressed;
+    let XG = !1;
+    var MG = GR(5699);
+    const BG = WJ.C.LookFrozen | WJ.C.ClicksSuppressed;
 
-    function hO(WW, iW) {
-      var OW;
-      null !== (OW = (0, PW.f)()) && void 0 !== OW && OW.send(WW, iW) || console.warn(`[bloxd-wasm-client] message ${WW} not sent: no live game or the core's command ring is full`)
-    }(0, bW.j)(uW.pb, (WW => {
-      const iW = (0, dW.g)(uW.pb, WW);
-      void 0 !== iW && wW.l.iZ("setDiscordReportKey", iW)
+    function lG(RR, JR) {
+      var GR;
+      null !== (GR = (0, ZR.l)()) && void 0 !== GR && GR.send(RR, JR) || console.warn(`[bloxd-wasm-client] message ${RR} not sent: no live game or the core's command ring is full`)
+    }(0, aR.l)(OR.ob, (RR => {
+      const JR = (0, NR.i)(OR.ob, RR);
+      void 0 !== JR && fR.n.JK("setDiscordReportKey", JR)
     }));
-    const HO = {
-      ignorePlayer(WW) {
-        hO(oW.e.IgnoreUser, (0, oW.B)({
-          Nt: WW
+    const pG = {
+      ignorePlayer(RR) {
+        lG(xR.d.IgnoreUser, (0, xR.z)({
+          fV: RR
         }))
       },
-      reportPlayer(WW) {
+      reportPlayer(RR) {
         let {
-          playerId: iW,
-          chatMsgId: OW,
-          contextChatMsgIds: mW,
-          policy: EW,
-          details: NW
-        } = WW;
-        hO(oW.e.UserReport, (0, oW.gb)({
-          et: iW,
-          vt: OW,
-          policy: EW,
-          PL: NW,
-          gt: mW
+          playerId: JR,
+          chatMsgId: GR,
+          contextChatMsgIds: yR,
+          policy: tR,
+          details: uR
+        } = RR;
+        lG(xR.d.UserReport, (0, xR.cb)({
+          PV: JR,
+          IV: GR,
+          policy: tR,
+          Kq: uR,
+          mV: yR
         }))
       },
-      reportWorldCodeChat(WW) {
+      reportWorldCodeChat(RR) {
         let {
-          chatMsgId: iW,
-          policy: OW,
-          details: mW
-        } = WW;
-        hO(oW.e.UserReport, (0, oW.gb)({
-          et: "",
-          vt: iW,
-          policy: OW,
-          PL: mW,
-          gt: []
+          chatMsgId: JR,
+          policy: GR,
+          details: yR
+        } = RR;
+        lG(xR.d.UserReport, (0, xR.cb)({
+          PV: "",
+          IV: JR,
+          policy: GR,
+          Kq: yR,
+          mV: []
         }))
       },
-      requestDiscordReportKey(WW) {
-        hO(oW.e.ReqDiscordReportKey, (0, oW.L)(WW))
+      requestDiscordReportKey(RR) {
+        lG(xR.d.ReqDiscordReportKey, (0, xR.M)(RR))
       },
-      reportLobbyOrGame(WW) {
+      reportLobbyOrGame(RR) {
         let {
-          target: iW,
-          policy: OW,
-          details: mW
-        } = WW;
-        "customGame" === iW ? hO(oW.e.CustomGameReport, (0, oW.w)({
-          policy: OW,
-          PL: mW
-        })) : hO(oW.e.LobbyReport, (0, oW.E)({
-          policy: OW,
-          PL: mW
+          target: JR,
+          policy: GR,
+          details: yR
+        } = RR;
+        "customGame" === JR ? lG(xR.d.CustomGameReport, (0, xR.w)({
+          policy: GR,
+          Kq: yR
+        })) : lG(xR.d.LobbyReport, (0, xR.D)({
+          policy: GR,
+          Kq: yR
         }))
       },
-      updateMyCosmetic(WW) {
-        hO(oW.e.UpdateMyCosmetic, (0, oW.db)(WW))
+      updateMyCosmetic(RR) {
+        lG(xR.d.UpdateMyCosmetic, (0, xR.bb)(RR))
       },
-      holdEmoteWheel(WW) {
-        !WW || Ki ? (0, TO.j)(JO, WW ? JO : 0) : wW.l.iZ("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(RR) {
+        !RR || CJ ? (0, MG.i)(BG, RR ? BG : 0) : fR.n.JK("requestEmoteWheelHoldRelease")
       }
     };
-    var nO = OW(42519),
-      uO = OW(5725),
-      oO = OW(40960);
-    const dO = [0, 0, 0],
-      eO = [0, 0, 0],
-      vO = [0, 0, 0],
-      gO = {
-        blockAtViewPoint(WW) {
+    var gG = GR(42563),
+      bG = GR(5844),
+      vG = GR(40965);
+    const OG = [0, 0, 0],
+      xG = [0, 0, 0],
+      NG = [0, 0, 0],
+      DG = {
+        blockAtViewPoint(RR) {
           let {
-            x: iW,
-            y: OW
-          } = WW;
-          const mW = (0, PW.f)();
-          if (null === mW || void 0 === mW || !mW.renderFrame.hasView) return null;
+            x: JR,
+            y: GR
+          } = RR;
+          const yR = (0, ZR.l)();
+          if (null === yR || void 0 === yR || !yR.renderFrame.hasView) return null;
           const {
-            renderFrame: EW,
-            clientApi: NW,
-            api: LW
-          } = mW;
-          let cW = 0;
-          return (0, oO.h)(((WW, iW, OW) => (cW = NW.getBlockId(WW, iW, OW), 0 !== cW)), EW.cameraPosition, (0, oO.k)((WW => MW.z.viewProj(LW.apiView, 0, WW)), iW, OW, dO), oO.d, eO, vO) ? {
-            pos: [eO[0], eO[1], eO[2]],
-            normal: [vO[0], vO[1], vO[2]],
-            name: (0, uO.f)(cW)
+            renderFrame: tR,
+            clientApi: uR,
+            api: qR
+          } = yR;
+          let iR = 0;
+          return (0, vG.e)(((RR, JR, GR) => (iR = uR.getBlockId(RR, JR, GR), 0 !== iR)), tR.cameraPosition, (0, vG.f)((RR => AR.s.viewProj(qR.apiView, 0, RR)), JR, GR, OG), vG.d, xG, NG) ? {
+            pos: [xG[0], xG[1], xG[2]],
+            normal: [NG[0], NG[1], NG[2]],
+            name: (0, bG.h)(iR)
           } : null
         }
       },
-      DO = {
-        setBlockHighlight(WW) {
-          var iW;
-          null === (iW = (0, PW.f)()) || void 0 === iW || iW.setBlockHighlight(WW)
+      HG = {
+        setBlockHighlight(RR) {
+          var JR;
+          null === (JR = (0, ZR.l)()) || void 0 === JR || JR.setBlockHighlight(RR)
         }
       };
-    var VO = OW(2047),
-      pO = OW(42427),
-      fO = OW(42528),
-      CO = OW(2077),
-      XO = OW(37640),
-      BO = OW(232);
-    const qO = {
+    var oG = GR(2144),
+      cG = GR(42454),
+      PG = GR(42568),
+      IG = GR(2177),
+      mG = GR(37558),
+      zG = GR(271);
+    const SG = {
         icon: ".EntireInventoryWrapper .InvenBodyRight .InvenItem .DrawnBlockIcon",
         fallbackRem: 3.4,
         asked: new Set
       },
-      RO = {
+      jG = {
         icon: ".EntireInventoryWrapper .LazyLoadedItemWrapper .InvenItem .DrawnBlockIcon",
-        fallbackRem: .9 * qO.fallbackRem,
+        fallbackRem: .9 * SG.fallbackRem,
         asked: new Set
       },
-      GO = 2e3,
-      IO = 4;
-    let aO = [],
-      rO = !1,
-      zO = !1,
-      FO = !1;
-    const QO = new Set,
-      Wm = [];
-    let im = 0,
-      Om = null;
+      dG = 2e3,
+      EG = 4;
+    let YG = [],
+      kG = !1,
+      QG = !1,
+      FG = !1;
+    const TG = new Set,
+      sG = [];
+    let hG = 0,
+      Ry = null;
 
-    function mm() {
-      return rO && (0, XO.f)()
+    function Jy() {
+      return kG && (0, mG.m)()
     }
 
-    function Em() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mW.gameBridge.latest("inventory");
-      if (FO && !zO) {
-        for (const OW of WW.player) {
-          var iW;
-          if (null !== OW) Nm(null !== (iW = OW.icon) && void 0 !== iW ? iW : OW.name, qO)
+    function Gy() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yR.gameBridge.latest("inventory");
+      if (FG && !QG) {
+        for (const GR of RR.player) {
+          var JR;
+          if (null !== GR) yy(null !== (JR = GR.icon) && void 0 !== JR ? JR : GR.name, SG)
         }
-        for (const WW of [...MW.P, ...aO]) Nm(WW, RO);
-        Lm()
+        for (const RR of [...AR.I, ...YG]) yy(RR, jG);
+        uy()
       }
     }
 
-    function Nm(WW, iW) {
-      iW.asked.has(WW) || QO.has(WW) || ("model" === mW.gameBridge.lookup("itemIcon", WW).kind ? (iW.asked.add(WW), Wm.push({
-        name: WW,
-        slot: iW
-      })) : QO.add(WW))
+    function yy(RR, JR) {
+      JR.asked.has(RR) || TG.has(RR) || ("model" === yR.gameBridge.lookup("itemIcon", RR).kind ? (JR.asked.add(RR), sG.push({
+        name: RR,
+        slot: JR
+      })) : TG.add(RR))
     }
 
-    function Pm(WW) {
-      aO = WW, Em()
+    function ty(RR) {
+      YG = RR, Gy()
     }
 
-    function Lm() {
-      !FO || zO || null !== Om || 0 === Wm.length || im >= IO || (Om = (0, BO.d)((() => {
-        Om = null;
-        const WW = Wm.shift();
-        void 0 !== WW && FO && (im++, async function(WW, iW) {
-          var OW, EW;
-          if (await (0, XO.h)(), !FO) return void iW.asked.delete(WW);
-          if (!(0, XO.f)()) return void(zO = !0);
-          const NW = window.devicePixelRatio,
-            PW = null !== (OW = null === (EW = document.querySelector(iW.icon)) || void 0 === EW ? void 0 : EW.getBoundingClientRect().width) && void 0 !== OW ? OW : 0,
-            LW = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
-            cW = Math.round((PW > 0 ? PW : iW.fallbackRem * LW) * NW);
+    function uy() {
+      !FG || QG || null !== Ry || 0 === sG.length || hG >= EG || (Ry = (0, zG.e)((() => {
+        Ry = null;
+        const RR = sG.shift();
+        void 0 !== RR && FG && (hG++, async function(RR, JR) {
+          var GR, tR;
+          if (await (0, mG.r)(), !FG) return void JR.asked.delete(RR);
+          if (!(0, mG.m)()) return void(QG = !0);
+          const uR = window.devicePixelRatio,
+            ZR = null !== (GR = null === (tR = document.querySelector(JR.icon)) || void 0 === tR ? void 0 : tR.getBoundingClientRect().width) && void 0 !== GR ? GR : 0,
+            qR = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+            iR = Math.round((ZR > 0 ? ZR : JR.fallbackRem * qR) * uR);
           try {
-            await mW.gameBridge.query("blockIcon", {
-              name: WW,
-              size: cW,
-              lineWidth: (0, CO.d)(NW)
-            }) || iW.asked.delete(WW)
+            await yR.gameBridge.query("blockIcon", {
+              name: RR,
+              size: iR,
+              lineWidth: (0, IG.e)(uR)
+            }) || JR.asked.delete(RR)
           } catch {
-            iW.asked.delete(WW)
+            JR.asked.delete(RR)
           }
-        }(WW.name, WW.slot).finally((() => {
-          im--, Lm()
-        })), Lm())
+        }(RR.name, RR.slot).finally((() => {
+          hG--, uy()
+        })), uy())
       }), {
-        timeoutMs: GO
+        timeoutMs: dG
       }))
     }
-    var cm = OW(5199),
-      wm = OW(5178),
-      tm = OW(42533),
-      Zm = OW(4454),
-      xm = OW(4459);
-    let lm = null,
-      Am = null;
+    var Zy = GR(5303),
+      qy = GR(5276),
+      iy = GR(42577),
+      fy = GR(4555),
+      Vy = GR(4563);
+    let Ky = null,
+      wy = null;
 
-    function bm(WW) {
-      const iW = WW.startsWith(xm.k),
-        [OW, mW = OW, EW = OW] = (iW ? WW.slice(xm.k.length) : WW).split(xm.i);
+    function ry(RR) {
+      const JR = RR.startsWith(Vy.h),
+        [GR, yR = GR, tR = GR] = (JR ? RR.slice(Vy.h.length) : RR).split(Vy.e);
       return {
-        top: OW,
-        left: mW,
-        right: EW,
-        half: iW
+        top: GR,
+        left: yR,
+        right: tR,
+        half: JR
       }
     }
 
-    function jm(WW) {
-      const iW = null === lm ? void 0 : (0, Zm.b)(WW),
-        OW = void 0 === iW ? 0 : lm.codes[iW];
-      return 0 === OW ? void 0 : lm.pool[OW - 1]
+    function ey(RR) {
+      const JR = null === Ky ? void 0 : (0, fy.b)(RR),
+        GR = void 0 === JR ? 0 : Ky.codes[JR];
+      return 0 === GR ? void 0 : Ky.pool[GR - 1]
     }
-    var Um = OW(4448),
-      km = OW(5166),
-      sm = OW(5195),
-      Mm = OW(37436),
-      Km = OW(37441);
-    const Sm = "item:";
-    let Ym = null,
-      ym = null,
-      Tm = null,
-      Jm = null,
-      hm = !1,
-      Hm = !1;
+    var ay = GR(4546),
+      Ly = GR(5263),
+      ny = GR(5299),
+      Uy = GR(37346),
+      Wy = GR(37353);
+    const Ay = "item:";
+    let Cy = null,
+      Xy = null,
+      My = null,
+      By = null,
+      ly = !1,
+      py = !1;
 
-    function nm() {
-      return Hm || (Hm = !0, (0, sm.n)().then((WW => {
-        WW && (0, VO.b)()
-      }))), Tm ??= Promise.all([(0, Um.f)(), (Am ??= OW.e(1).then((() => OW(64378))).then((WW => {
+    function gy() {
+      return py || (py = !0, (0, ny.m)().then((RR => {
+        RR && (0, oG.e)()
+      }))), My ??= Promise.all([(0, ay.d)(), (wy ??= GR.e(1).then((() => GR(64123))).then((RR => {
         let {
-          BLOCK_FACE_RUNS: iW,
-          BLOCK_FACES: OW,
-          MAX_FACE_ITEM_ID: mW
-        } = WW;
-        lm = {
-          codes: (0, xm.y)(iW, mW + 1),
-          pool: OW.split(xm.s).map(bm)
+          BLOCK_FACE_RUNS: JR,
+          BLOCK_FACES: GR,
+          MAX_FACE_ITEM_ID: yR
+        } = RR;
+        Ky = {
+          codes: (0, Vy.y)(JR, yR + 1),
+          pool: GR.split(Vy.r).map(ry)
         }
-      }), (WW => {
-        throw Am = null, WW
-      })), Am), (0, Km.d)(), OW.e(224).then((() => OW(35231)))]).then((WW => {
-        let [, , iW, OW] = WW;
-        iW.followBundledTextures(), Ym = iW, ym = OW, (0, VO.b)()
-      }), (WW => {
-        Tm = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", WW)
-      })), Tm
+      }), (RR => {
+        throw wy = null, RR
+      })), wy), (0, Wy.e)(), GR.e(224).then((() => GR(35162)))]).then((RR => {
+        let [, , JR, GR] = RR;
+        JR.followBundledTextures(), Cy = JR, Xy = GR, (0, oG.e)()
+      }), (RR => {
+        My = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", RR)
+      })), My
     }
 
-    function um(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = (0, Mm.f)()) || void 0 === OW ? void 0 : OW.textureUrl(WW)) && void 0 !== iW ? iW : Ym.itemSpriteUrl(WW)
+    function by(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = (0, Uy.g)()) || void 0 === GR ? void 0 : GR.textureUrl(RR)) && void 0 !== JR ? JR : Cy.itemSpriteUrl(RR)
     }
 
-    function om(WW) {
-      var iW, OW;
-      return null !== (iW = null === (OW = (0, Mm.f)()) || void 0 === OW ? void 0 : OW.textureUrl(WW)) && void 0 !== iW ? iW : Ym.blockTextureUrl(WW)
+    function vy(RR) {
+      var JR, GR;
+      return null !== (JR = null === (GR = (0, Uy.g)()) || void 0 === GR ? void 0 : GR.textureUrl(RR)) && void 0 !== JR ? JR : Cy.blockTextureUrl(RR)
     }
 
-    function dm(WW) {
-      var iW;
-      return null !== (iW = (0, Um.b)(WW)) && void 0 !== iW ? iW : WW
+    function Oy(RR) {
+      var JR;
+      return null !== (JR = (0, ay.c)(RR)) && void 0 !== JR ? JR : RR
     }
 
-    function em(WW, iW) {
-      var OW, mW, EW;
-      return null !== (OW = null !== (mW = null !== (EW = om(WW)) && void 0 !== EW ? EW : null === iW || void 0 === iW ? void 0 : iW.rotated[WW]) && void 0 !== mW ? mW : null === iW || void 0 === iW ? void 0 : iW.animated[WW]) && void 0 !== OW ? OW : Ym.notFoundUrl()
+    function xy(RR, JR) {
+      var GR, yR, tR;
+      return null !== (GR = null !== (yR = null !== (tR = vy(RR)) && void 0 !== tR ? tR : null === JR || void 0 === JR ? void 0 : JR.rotated[RR]) && void 0 !== yR ? yR : null === JR || void 0 === JR ? void 0 : JR.animated[RR]) && void 0 !== GR ? GR : Cy.notFoundUrl()
     }
 
-    function gm(WW) {
-      return void 0 !== (0, Zm.b)(WW) ? WW : /^[1-9][0-9]*$/.test(WW) ? (0, Zm.d)(Number(WW)) : void 0
+    function Ny(RR) {
+      return void 0 !== (0, fy.b)(RR) ? RR : /^[1-9][0-9]*$/.test(RR) ? (0, fy.c)(Number(RR)) : void 0
     }
 
-    function Dm(WW) {
-      var iW;
-      if (WW.startsWith(Sm)) {
-        var OW;
-        const iW = (0, Um.b)(WW.slice(5));
-        return null !== (OW = void 0 === iW ? null : um(iW)) && void 0 !== OW ? OW : Ym.notFoundUrl()
+    function Dy(RR) {
+      var JR;
+      if (RR.startsWith(Ay)) {
+        var GR;
+        const JR = (0, ay.c)(RR.slice(5));
+        return null !== (GR = void 0 === JR ? null : by(JR)) && void 0 !== GR ? GR : Cy.notFoundUrl()
       }
-      return null !== (iW = Ym.particleUrl(WW)) && void 0 !== iW ? iW : Ym.notFoundUrl()
+      return null !== (JR = Cy.particleUrl(RR)) && void 0 !== JR ? JR : Cy.notFoundUrl()
     }
 
-    function Vm(WW, iW) {
-      return "StairsBlock" === WW ? WW : iW ? "SlabBlock" : "CubeBlock"
+    function Hy(RR, JR) {
+      return "StairsBlock" === RR ? RR : JR ? "SlabBlock" : "CubeBlock"
     }
-    const pm = {
-        async blockIcon(WW) {
-          var iW;
+    const oy = {
+        async blockIcon(RR) {
+          var JR;
           let {
-            name: mW,
-            size: EW,
-            lineWidth: NW
-          } = WW;
-          await nm();
-          const PW = null !== (iW = gm(mW)) && void 0 !== iW ? iW : mW,
-            LW = (0, sm.e)(PW, EW, NW);
-          if (null !== LW) return LW;
-          const cW = jm(PW),
-            wW = (0, Zm.b)(PW),
-            tW = void 0 === wW || null === ym ? void 0 : ym.itemTypeNameOf(wW);
-          if (null === Ym || void 0 === cW) return "";
-          const ZW = [cW.top, cW.left, cW.right].some((WW => null === om(WW))),
-            xW = ZW ? await (Jm ??= OW.e(234).then((() => OW(35332))).then((WW => (hm && (hm = !1, (0, VO.b)()), {
-              rotated: WW.rotatedBlockTextures,
-              animated: WW.animatedBlockTextures
-            })), (WW => (Jm = null, hm = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", WW), null))), Jm) : null;
-          if (ZW && null === xW) return "";
-          const lW = {
-              top: em(cW.top, xW),
-              left: em(cW.left, xW),
-              right: em(cW.right, xW),
-              itemType: Vm(tW, cW.half)
+            name: yR,
+            size: tR,
+            lineWidth: uR
+          } = RR;
+          await gy();
+          const ZR = null !== (JR = Ny(yR)) && void 0 !== JR ? JR : yR,
+            qR = (0, ny.g)(ZR, tR, uR);
+          if (null !== qR) return qR;
+          const iR = ey(ZR),
+            fR = (0, fy.b)(ZR),
+            VR = void 0 === fR || null === Xy ? void 0 : Xy.itemTypeNameOf(fR);
+          if (null === Cy || void 0 === iR) return "";
+          const KR = [iR.top, iR.left, iR.right].some((RR => null === vy(RR))),
+            wR = KR ? await (By ??= GR.e(234).then((() => GR(35257))).then((RR => (ly && (ly = !1, (0, oG.e)()), {
+              rotated: RR.rotatedBlockTextures,
+              animated: RR.animatedBlockTextures
+            })), (RR => (By = null, ly = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", RR), null))), By) : null;
+          if (KR && null === wR) return "";
+          const rR = {
+              top: xy(iR.top, wR),
+              left: xy(iR.left, wR),
+              right: xy(iR.right, wR),
+              itemType: Hy(VR, iR.half)
             },
-            AW = (0, Mm.d)(),
-            bW = 0 === AW ? PW : `${PW}#${AW}`;
-          return (await (0, km.e)()).drawBlockIconUrl(bW, EW, NW, (() => lW))
+            eR = (0, Uy.f)(),
+            aR = 0 === eR ? ZR : `${ZR}#${eR}`;
+          return (await (0, Ly.d)()).drawBlockIconUrl(aR, tR, uR, (() => rR))
         }
       },
-      fm = {
-        itemIcon: function(WW) {
-          var iW, OW, EW, NW;
-          if (null === Ym) return nm(), mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(WW);
-          if ((0, wm.h)(WW)) return {
+      cy = {
+        itemIcon: function(RR) {
+          var JR, GR, tR, uR;
+          if (null === Cy) return gy(), yR.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(RR);
+          if ((0, qy.l)(RR)) return {
             kind: "icon",
-            url: null !== (OW = null !== (EW = null === (NW = (0, Mm.f)()) || void 0 === NW ? void 0 : NW.textureUrl(WW)) && void 0 !== EW ? EW : Ym.ingameIconUrl(WW)) && void 0 !== OW ? OW : Ym.notFoundUrl()
+            url: null !== (GR = null !== (tR = null === (uR = (0, Uy.g)()) || void 0 === uR ? void 0 : uR.textureUrl(RR)) && void 0 !== tR ? tR : Cy.ingameIconUrl(RR)) && void 0 !== GR ? GR : Cy.notFoundUrl()
           };
-          if (WW.startsWith(wm.d)) return {
+          if (RR.startsWith(qy.d)) return {
             kind: "icon",
-            url: Dm(WW.slice(wm.d.length))
+            url: Dy(RR.slice(qy.d.length))
           };
-          if (0 === (0, Zm.f)()) return (0, tm.e)(), mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(WW);
-          const PW = null !== (iW = gm(WW)) && void 0 !== iW ? iW : WW,
-            LW = (0, Zm.b)(PW),
-            cW = void 0 === LW ? void 0 : ym.itemTypeNameOf(LW);
-          if (void 0 !== jm(PW)) return {
+          if (0 === (0, fy.f)()) return (0, iy.c)(), yR.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(RR);
+          const ZR = null !== (JR = Ny(RR)) && void 0 !== JR ? JR : RR,
+            qR = (0, fy.b)(ZR),
+            iR = void 0 === qR ? void 0 : Xy.itemTypeNameOf(qR);
+          if (void 0 !== ey(ZR)) return {
             kind: "drawnBlock"
           };
-          const wW = function(WW) {
-            var iW;
-            return null !== (iW = um(dm(WW))) && void 0 !== iW ? iW : Ym.notFoundUrl()
-          }(PW);
-          if ((0, sm.k)(PW) && ! function(WW) {
-              const iW = (0, Mm.f)();
-              return null !== iW && (null !== iW.textureUrl(dm(WW)) || (0, sm.d)(WW).some((WW => null !== iW.modelUrl(WW))))
-            }(PW)) return {
+          const fR = function(RR) {
+            var JR;
+            return null !== (JR = by(Oy(RR))) && void 0 !== JR ? JR : Cy.notFoundUrl()
+          }(ZR);
+          if ((0, ny.l)(ZR) && ! function(RR) {
+              const JR = (0, Uy.g)();
+              return null !== JR && (null !== JR.textureUrl(Oy(RR)) || (0, ny.c)(RR).some((RR => null !== JR.modelUrl(RR))))
+            }(ZR)) return {
             kind: "model",
-            url: wW,
-            drawn: (0, sm.h)(PW)
+            url: fR,
+            drawn: (0, ny.i)(ZR)
           };
-          if ("Gun" === cW) return {
+          if ("Gun" === iR) return {
             kind: "gun",
-            url: wW
+            url: fR
           };
-          if (void 0 !== LW && "GrayscaleArmour" === ym.itemTypeOf(LW) || Object.hasOwn(cm.b, PW)) {
-            var tW;
-            const iW = null !== (tW = (0, cm.c)(WW)) && void 0 !== tW ? tW : (0, cm.c)(PW);
-            if (iW) return {
+          if (void 0 !== qR && "GrayscaleArmour" === Xy.itemTypeOf(qR) || Object.hasOwn(Zy.d, ZR)) {
+            var VR;
+            const JR = null !== (VR = (0, Zy.f)(RR)) && void 0 !== VR ? VR : (0, Zy.f)(ZR);
+            if (JR) return {
               kind: "item",
-              url: wW,
-              tint: iW
+              url: fR,
+              tint: JR
             }
           }
           return {
             kind: "item",
-            url: wW
+            url: fR
           }
         },
-        hasIcon: function(WW) {
-          return void 0 !== gm(WW) || (0, wm.h)(WW) || WW.startsWith(wm.d)
+        hasIcon: function(RR) {
+          return void 0 !== Ny(RR) || (0, qy.l)(RR) || RR.startsWith(qy.d)
         },
-        isItemName: function(WW) {
-          return void 0 !== gm(WW)
+        isItemName: function(RR) {
+          return void 0 !== Ny(RR)
         }
       };
 
-    function Cm() {
-      (0, mW.installPageSources)({
+    function Py() {
+      (0, yR.installPageSources)({
         commands: {
-          ...mW.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: pO.m,
-          prewarmCreativeIcons: Pm
+          ...yR.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: cG.o,
+          prewarmCreativeIcons: ty
         },
-        queries: pm,
+        queries: oy,
         lookups: {
-          ...mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...fm,
-          YM: pO.f,
-          drawCallStats: fO.f,
-          iconsDrawAhead: mm
+          ...yR.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...cy,
+          zW: cG.g,
+          drawCallStats: PG.g,
+          iconsDrawAhead: Jy
         }
-      }), (0, VO.b)(), nm(), rO || (rO = !0, wW.l.subscribe("gameJoined", (() => {
-        var WW;
-        FO = !1, null === (WW = Om) || void 0 === WW || WW(), Om = null;
+      }), (0, oG.e)(), gy(), kG || (kG = !0, fR.n.subscribe("gameJoined", (() => {
+        var RR;
+        FG = !1, null === (RR = Ry) || void 0 === RR || RR(), Ry = null;
         for (const {
-            name: iW,
-            slot: OW
+            name: JR,
+            slot: GR
           }
-          of Wm.splice(0)) OW.asked.delete(iW)
-      })), wW.l.subscribe("gamePlayable", (() => {
-        FO = !0, Em()
-      })), mW.gameBridge.subscribe("inventory", Em), mW.gameBridge.subscribe("itemIconsVersion", (() => {
-        QO.clear(), Em()
+          of sG.splice(0)) GR.asked.delete(JR)
+      })), fR.n.subscribe("gamePlayable", (() => {
+        FG = !0, Gy()
+      })), yR.gameBridge.subscribe("inventory", Gy), yR.gameBridge.subscribe("itemIconsVersion", (() => {
+        TG.clear(), Gy()
       })))
     }
-    var Xm = OW(632),
-      Bm = OW(40969);
+    var Iy = GR(664),
+      my = GR(40974);
 
-    function qm(WW) {
-      if (null === WW || void 0 === WW || !WW.isCoreRunning) return null;
+    function zy(RR) {
+      if (null === RR || void 0 === RR || !RR.isCoreRunning) return null;
       const {
-        api: iW,
-        chunks: OW,
-        items: mW,
-        tables: EW
-      } = WW;
+        api: JR,
+        chunks: GR,
+        items: yR,
+        tables: tR
+      } = RR;
       return {
         playerFeet() {
-          const WW = iW.Vk(iW.localId);
-          return null !== WW && void 0 !== WW && WW.every(Number.isFinite) ? WW : null
+          const RR = JR.vW(JR.localId);
+          return null !== RR && void 0 !== RR && RR.every(Number.isFinite) ? RR : null
         },
-        chunkBlocks: WW => OW.isLoaded(WW[0], WW[1], WW[2]) ? (WW, iW, mW) => OW.NL(WW, iW, mW) : null,
-        blockName: WW => EW.nameOfId(WW),
+        chunkBlocks: RR => GR.isLoaded(RR[0], RR[1], RR[2]) ? (RR, JR, yR) => GR.Vq(RR, JR, yR) : null,
+        blockName: RR => tR.nameOfId(RR),
         inventory: () => ({
-          slots: mW.playerItems().map((WW => WW ? {
-            name: WW.name,
-            amount: WW.amount
+          slots: yR.playerItems().map((RR => RR ? {
+            name: RR.name,
+            amount: RR.amount
           } : null)),
-          heldSlot: mW.selectedSlot
+          heldSlot: yR.selectedSlot
         }),
         nearby() {
-          const OW = [];
-          for (let EW = 0; EW < iW.idStr.length; EW++) {
-            var mW;
-            const NW = iW.idStr[EW],
-              PW = iW.serverIds[EW],
-              LW = iW.kinds[EW];
-            if (null === NW || iW.isLocal(PW) || LW >>> MW.e !== MW.v.Lifeform) continue;
-            const cW = iW.Vk(PW),
-              wW = Xm.i[LW & MW.g];
-            cW && void 0 !== wW && OW.push({
-              kind: "Player" === wW ? "player" : wW,
-              name: null !== (mW = WW.clientApi.getEntityName(NW)) && void 0 !== mW ? mW : null,
-              position: cW
+          const GR = [];
+          for (let tR = 0; tR < JR.idStr.length; tR++) {
+            var yR;
+            const uR = JR.idStr[tR],
+              ZR = JR.serverIds[tR],
+              qR = JR.kinds[tR];
+            if (null === uR || JR.isLocal(ZR) || qR >>> AR.d !== AR.q.Lifeform) continue;
+            const iR = JR.vW(ZR),
+              fR = Iy.k[qR & AR.e];
+            iR && void 0 !== fR && GR.push({
+              kind: "Player" === fR ? "player" : fR,
+              name: null !== (yR = RR.clientApi.getEntityName(uR)) && void 0 !== yR ? yR : null,
+              position: iR
             })
           }
-          return OW
+          return GR
         },
         droppedItems() {
-          let WW = 0;
-          for (let OW = 0; OW < iW.idStr.length; OW++) null !== iW.idStr[OW] && iW.kinds[OW] >>> MW.e === MW.v.Item && WW++;
-          return WW
+          let RR = 0;
+          for (let GR = 0; GR < JR.idStr.length; GR++) null !== JR.idStr[GR] && JR.kinds[GR] >>> AR.d === AR.q.Item && RR++;
+          return RR
         }
       }
     }
-    const Rm = {
-        worldCodeAiChunk: WW => Promise.resolve((0, Bm.d)(qm((0, PW.f)()), WW)),
-        worldCodeAiGameState: () => Promise.resolve((0, Bm.e)(qm((0, PW.f)())))
+    const Sy = {
+        worldCodeAiChunk: RR => Promise.resolve((0, my.b)(zy((0, ZR.l)()), RR)),
+        worldCodeAiGameState: () => Promise.resolve((0, my.d)(zy((0, ZR.l)())))
       },
-      Gm = function(WW) {
-        const iW = xO(),
-          mW = xO(),
-          EW = new Set,
-          NW = new Set,
-          PW = () => {
-            var iW, OW;
-            return null !== (iW = null === (OW = WW.runtime()) || void 0 === OW ? void 0 : OW.currentViewer) && void 0 !== iW ? iW : null
+      jy = function(RR) {
+        const JR = VG(),
+          yR = VG(),
+          tR = new Set,
+          uR = new Set,
+          ZR = () => {
+            var JR, GR;
+            return null !== (JR = null === (GR = RR.runtime()) || void 0 === GR ? void 0 : GR.currentViewer) && void 0 !== JR ? JR : null
           };
-        let LW = null,
-          cW = null;
-        const tW = (WW, iW) => ({
-            current: WW,
-            watch(OW) {
-              let mW = WW();
-              return iW.add((() => {
-                const iW = WW();
-                iW !== mW && (mW = iW, OW(iW))
+        let qR = null,
+          iR = null;
+        const VR = (RR, JR) => ({
+            current: RR,
+            watch(GR) {
+              let yR = RR();
+              return JR.add((() => {
+                const JR = RR();
+                JR !== yR && (yR = JR, GR(JR))
               }))
             }
           }),
-          xW = WW => ({
-            watch: iW => (WW.add(iW), () => {
-              WW.delete(iW)
+          wR = RR => ({
+            watch: JR => (RR.add(JR), () => {
+              RR.delete(JR)
             })
           }),
-          lW = WW => {
-            const iW = PW(),
-              OW = null === iW || void 0 === iW ? void 0 : iW.view;
-            iW && OW && iW.seek(Math.max(0, Math.min(OW.totalTicks - 1, OW.hZ + WW * ZW.Jd)))
+          rR = RR => {
+            const JR = ZR(),
+              GR = null === JR || void 0 === JR ? void 0 : JR.view;
+            JR && GR && JR.seek(Math.max(0, Math.min(GR.totalTicks - 1, GR.gK + RR * KR.Bd)))
           },
-          AW = {
-            replay: tW((() => {
-              var WW;
-              const iW = PW(),
-                OW = null !== (WW = null === iW || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null;
-              return null === iW || null === OW || OW.state === ZW.td.None ? (LW = null, null) : (LW = (0, zW.t)(LW, {
-                id: iW.id,
-                hZ: OW.hZ,
-                totalTicks: OW.totalTicks,
-                Fv: ZW.Jd,
-                playing: OW.state === ZW.td.Playing,
-                speed: OW.speed,
-                cameraMode: OW.cameraMode,
-                freecam: "freecam" === OW.cameraMode
-              }), LW)
-            }), iW),
-            replayEdits: tW((() => {
-              var WW;
-              const iW = PW(),
-                OW = null !== (WW = null === iW || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null;
-              return null === iW || null === OW || OW.state === ZW.td.None ? (cW = null, null) : (cW = (0, zW.t)(cW, {
-                cameraKeyframes: [...iW.keyframes],
-                playbackMark: OW.mark,
-                fileName: iW.fileName,
-                unsavedChanges: iW.unsavedChanges,
-                suggestSaveAs: iW.suggestSaveAs
-              }), cW)
-            }), iW),
-            replayRecorder: tW((() => {
-              var iW, OW;
-              return null !== (iW = null === (OW = WW.runtime()) || void 0 === OW ? void 0 : OW.recorder.current) && void 0 !== iW ? iW : wO.c.states.replayRecorder.current()
-            }), mW),
+          eR = {
+            replay: VR((() => {
+              var RR;
+              const JR = ZR(),
+                GR = null !== (RR = null === JR || void 0 === JR ? void 0 : JR.view) && void 0 !== RR ? RR : null;
+              return null === JR || null === GR || GR.state === KR.ld.None ? (qR = null, null) : (qR = (0, TR.m)(qR, {
+                id: JR.id,
+                gK: GR.gK,
+                totalTicks: GR.totalTicks,
+                lH: KR.Bd,
+                playing: GR.state === KR.ld.Playing,
+                speed: GR.speed,
+                cameraMode: GR.cameraMode,
+                freecam: "freecam" === GR.cameraMode
+              }), qR)
+            }), JR),
+            replayEdits: VR((() => {
+              var RR;
+              const JR = ZR(),
+                GR = null !== (RR = null === JR || void 0 === JR ? void 0 : JR.view) && void 0 !== RR ? RR : null;
+              return null === JR || null === GR || GR.state === KR.ld.None ? (iR = null, null) : (iR = (0, TR.m)(iR, {
+                cameraKeyframes: [...JR.keyframes],
+                playbackMark: GR.mark,
+                fileName: JR.fileName,
+                unsavedChanges: JR.unsavedChanges,
+                suggestSaveAs: JR.suggestSaveAs
+              }), iR)
+            }), JR),
+            replayRecorder: VR((() => {
+              var JR, GR;
+              return null !== (JR = null === (GR = RR.runtime()) || void 0 === GR ? void 0 : GR.recorder.current) && void 0 !== JR ? JR : qG.c.states.replayRecorder.current()
+            }), yR),
             replayVideoExporting: {
-              current: LO.b,
-              watch: WW => (0, wW.n)("replayViewer|videoExportChanged", (() => {
-                WW((0, LO.b)())
+              current: uG.b,
+              watch: RR => (0, fR.q)("replayViewer|videoExportChanged", (() => {
+                RR((0, uG.b)())
               }))
             }
           },
-          bW = {
-            replayUiActionRequested: xW(NW),
-            replayViewerRequested: xW(EW)
+          aR = {
+            replayUiActionRequested: wR(uR),
+            replayViewerRequested: wR(tR)
           },
-          jW = WW => {
-            for (const iW of EW) iW(WW)
+          LR = RR => {
+            for (const JR of tR) JR(RR)
           },
-          UW = () => {
-            var mW;
-            !0 === (null === (mW = PW()) || void 0 === mW ? void 0 : mW.isOpen) && Promise.all([OW.e(113), OW.e(79)]).then((() => OW(64363))).then((OW => {
+          nR = () => {
+            var yR;
+            !0 === (null === (yR = ZR()) || void 0 === yR ? void 0 : yR.isOpen) && Promise.all([GR.e(113), GR.e(79)]).then((() => GR(64117))).then((GR => {
               let {
-                startWasmReplayVideoExport: mW
-              } = OW;
-              return mW({
-                viewer: PW,
+                startWasmReplayVideoExport: yR
+              } = GR;
+              return yR({
+                viewer: ZR,
                 canvas: () => {
-                  var iW, OW;
-                  return null !== (iW = null === (OW = WW.canvas) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : null
+                  var JR, GR;
+                  return null !== (JR = null === (GR = RR.canvas) || void 0 === GR ? void 0 : GR.call(RR)) && void 0 !== JR ? JR : null
                 },
-                watchViewer: iW.add,
-                requestViewer: jW
+                watchViewer: JR.add,
+                requestViewer: LR
               })
-            }), (WW => {
-              console.error("Couldn't load the video export", WW), cO.NotificationProvider.showAlertPopup({
+            }), (RR => {
+              console.error("Couldn't load the video export", RR), ZG.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((WW => {
-              console.error("The video export failed", WW)
+            })).catch((RR => {
+              console.error("The video export failed", RR)
             }))
           },
-          kW = {
-            replayAction(WW) {
-              if ((0, LO.b)()) return;
-              const iW = PW();
-              switch (WW) {
+          UR = {
+            replayAction(RR) {
+              if ((0, uG.b)()) return;
+              const JR = ZR();
+              switch (RR) {
                 case "replaySkipBack":
-                  lW(-1);
+                  rR(-1);
                   break;
                 case "replaySkipForward":
-                  lW(1);
+                  rR(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== iW && void 0 !== iW && iW.view && iW.setSpeed((0, PO.k)(iW.view.speed, "replaySpeedUp" === WW ? "up" : "down"));
+                  null !== JR && void 0 !== JR && JR.view && JR.setSpeed((0, tG.i)(JR.view.speed, "replaySpeedUp" === RR ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === iW || void 0 === iW || iW.addKeyframe()
+                  null === JR || void 0 === JR || JR.addKeyframe()
               }
             },
-            setReplayPlaying(WW) {
-              var iW, OW;
-              (0, LO.b)() || (WW ? null === (iW = PW()) || void 0 === iW || iW.play() : null === (OW = PW()) || void 0 === OW || OW.pause())
+            setReplayPlaying(RR) {
+              var JR, GR;
+              (0, uG.b)() || (RR ? null === (JR = ZR()) || void 0 === JR || JR.play() : null === (GR = ZR()) || void 0 === GR || GR.pause())
             },
-            seekReplay(WW) {
-              var iW;
+            seekReplay(RR) {
+              var JR;
               let {
-                hZ: OW,
-                ignorePlaybackMark: mW
-              } = WW;
-              null === (iW = PW()) || void 0 === iW || iW.seek(OW, null !== mW && void 0 !== mW && mW)
+                gK: GR,
+                ignorePlaybackMark: yR
+              } = RR;
+              null === (JR = ZR()) || void 0 === JR || JR.seek(GR, null !== yR && void 0 !== yR && yR)
             },
-            setReplayCameraMode(WW) {
-              var iW;
-              null === (iW = PW()) || void 0 === iW || iW.setCameraMode(WW)
+            setReplayCameraMode(RR) {
+              var JR;
+              null === (JR = ZR()) || void 0 === JR || JR.setCameraMode(RR)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(WW) {
-              var iW;
-              null === (iW = PW()) || void 0 === iW || iW.setKeyframe(WW)
+            setReplayCameraKeyframe(RR) {
+              var JR;
+              null === (JR = ZR()) || void 0 === JR || JR.setKeyframe(RR)
             },
-            moveReplayCameraKeyframe(WW) {
-              var iW;
+            moveReplayCameraKeyframe(RR) {
+              var JR;
               let {
-                from: OW,
-                to: mW
-              } = WW;
-              null === (iW = PW()) || void 0 === iW || iW.moveKeyframe(OW, mW)
+                from: GR,
+                to: yR
+              } = RR;
+              null === (JR = ZR()) || void 0 === JR || JR.moveKeyframe(GR, yR)
             },
-            deleteReplayCameraKeyframes(WW) {
-              var iW;
+            deleteReplayCameraKeyframes(RR) {
+              var JR;
               let {
-                start: OW,
-                end: mW
-              } = WW;
-              null === (iW = PW()) || void 0 === iW || iW.deleteKeyframes(OW, mW)
+                start: GR,
+                end: yR
+              } = RR;
+              null === (JR = ZR()) || void 0 === JR || JR.deleteKeyframes(GR, yR)
             },
-            setReplayPlaybackMark(WW) {
-              var iW;
-              null === (iW = PW()) || void 0 === iW || iW.setMark(WW)
+            setReplayPlaybackMark(RR) {
+              var JR;
+              null === (JR = ZR()) || void 0 === JR || JR.setMark(RR)
             },
-            cropReplay(WW) {
-              var iW, OW;
+            cropReplay(RR) {
+              var JR, GR;
               let {
-                start: mW,
-                end: EW
-              } = WW;
-              return !(0, LO.b)() && (null !== (iW = null === (OW = PW()) || void 0 === OW ? void 0 : OW.crop(mW, EW)) && void 0 !== iW && iW)
+                start: yR,
+                end: tR
+              } = RR;
+              return !(0, uG.b)() && (null !== (JR = null === (GR = ZR()) || void 0 === GR ? void 0 : GR.crop(yR, tR)) && void 0 !== JR && JR)
             },
-            holdReplayForShaderPackFailure(WW) {
-              const iW = PW();
-              iW && (iW.holdForShaderPackFailure(), function(WW) {
-                OW.e(138).then((() => OW(40448))).then((iW => {
+            holdReplayForShaderPackFailure(RR) {
+              const JR = ZR();
+              JR && (JR.holdForShaderPackFailure(), function(RR) {
+                GR.e(138).then((() => GR(40495))).then((JR => {
                   let {
-                    shaderPackPage: OW
-                  } = iW;
-                  OW.block(WW)
-                })).catch((WW => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", WW)
+                    shaderPackPage: GR
+                  } = JR;
+                  GR.block(RR)
+                })).catch((RR => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", RR)
                 }))
-              }(WW))
+              }(RR))
             },
             exportReplayVideo() {
-              UW()
+              nR()
             },
             toggleRecording() {
-              var iW;
-              null === (iW = WW.runtime()) || void 0 === iW || iW.recorder.toggleRecording()
+              var JR;
+              null === (JR = RR.runtime()) || void 0 === JR || JR.recorder.toggleRecording()
             },
             saveClip() {
-              var iW;
-              null === (iW = WW.runtime()) || void 0 === iW || iW.recorder.saveClip()
+              var JR;
+              null === (JR = RR.runtime()) || void 0 === JR || JR.recorder.saveClip()
             },
-            setRecorderPrefs(iW) {
-              var OW;
+            setRecorderPrefs(JR) {
+              var GR;
               let {
-                clipping: mW,
-                clipSeconds: EW
-              } = iW;
-              null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.setPrefs(mW, EW)
+                clipping: yR,
+                clipSeconds: tR
+              } = JR;
+              null === (GR = RR.runtime()) || void 0 === GR || GR.recorder.setPrefs(yR, tR)
             },
-            setReplayViewerOpen(iW) {
-              var OW;
-              (0, ji.g)(iW) && (null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.viewerShown(iW))
+            setReplayViewerOpen(JR) {
+              var GR;
+              (0, LJ.i)(JR) && (null === (GR = RR.runtime()) || void 0 === GR || GR.recorder.viewerShown(JR))
             },
-            recordFlyingMiddleText(iW) {
-              var OW;
+            recordFlyingMiddleText(JR) {
+              var GR;
               let {
-                content: mW,
-                RN: EW,
-                angle: NW,
-                GN: PW
-              } = iW;
-              null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.recordFlyingText(JSON.stringify(mW), EW, NW, PW)
+                content: yR,
+                hu: tR,
+                angle: uR,
+                RZ: ZR
+              } = JR;
+              null === (GR = RR.runtime()) || void 0 === GR || GR.recorder.recordFlyingText(JSON.stringify(yR), tR, uR, ZR)
             },
-            dragReplayCamera(iW) {
-              var OW;
+            dragReplayCamera(JR) {
+              var GR;
               let {
-                dx: mW,
-                dy: EW
-              } = iW;
-              null === (OW = WW.freecam()) || void 0 === OW || OW.drag(mW, EW)
+                dx: yR,
+                dy: tR
+              } = JR;
+              null === (GR = RR.freecam()) || void 0 === GR || GR.drag(yR, tR)
             },
-            moveReplayFreecam(iW) {
-              var OW;
-              null === (OW = WW.freecam()) || void 0 === OW || OW.move(iW)
+            moveReplayFreecam(JR) {
+              var GR;
+              null === (GR = RR.freecam()) || void 0 === GR || GR.move(JR)
             },
-            holdReplayFreecamVertical(iW) {
-              var OW;
+            holdReplayFreecamVertical(JR) {
+              var GR;
               let {
-                action: mW,
-                BL: EW
-              } = iW;
-              null === (OW = WW.freecam()) || void 0 === OW || OW.holdVertical(mW, EW)
+                action: yR,
+                Qq: tR
+              } = JR;
+              null === (GR = RR.freecam()) || void 0 === GR || GR.holdVertical(yR, tR)
             }
           },
-          sW = WW => {
-            var iW;
-            const OW = PW(),
-              mW = null !== (iW = null === OW || void 0 === OW ? void 0 : OW.view) && void 0 !== iW ? iW : null;
-            tO.has(WW) ? (WW => {
-              for (const iW of NW) iW(WW)
-            })(WW) : ZO.has(WW) ? kW.replayAction(WW) : "replayPlayPause" === WW ? OW && mW && mW.state !== ZW.td.None && kW.setReplayPlaying(mW.state !== ZW.td.Playing) : "replayChangeCameraMode" === WW ? null === OW || void 0 === OW || OW.cycleCameraMode() : "replayExit" === WW ? !0 === (null === OW || void 0 === OW ? void 0 : OW.inPlayback) && (0, vi.k)("/") : "replayExportVideo" === WW && UW()
+          WR = RR => {
+            var JR;
+            const GR = ZR(),
+              yR = null !== (JR = null === GR || void 0 === GR ? void 0 : GR.view) && void 0 !== JR ? JR : null;
+            iG.has(RR) ? (RR => {
+              for (const JR of uR) JR(RR)
+            })(RR) : fG.has(RR) ? UR.replayAction(RR) : "replayPlayPause" === RR ? GR && yR && yR.state !== KR.ld.None && UR.setReplayPlaying(yR.state !== KR.ld.Playing) : "replayChangeCameraMode" === RR ? null === GR || void 0 === GR || GR.cycleCameraMode() : "replayExit" === RR ? !0 === (null === GR || void 0 === GR ? void 0 : GR.inPlayback) && (0, DJ.m)("/") : "replayExportVideo" === RR && nR()
           };
-        let MW = !1;
+        let AR = !1;
         return {
-          states: AW,
-          events: bW,
-          commands: kW,
+          states: eR,
+          events: aR,
+          commands: UR,
           lookups: {
             replayCamera() {
-              var iW, OW, mW;
-              return !0 !== (null === (iW = PW()) || void 0 === iW ? void 0 : iW.isOpen) ? null : null !== (OW = null === (mW = WW.cameraView) || void 0 === mW ? void 0 : mW.call(WW)) && void 0 !== OW ? OW : null
+              var JR, GR, yR;
+              return !0 !== (null === (JR = ZR()) || void 0 === JR ? void 0 : JR.isOpen) ? null : null !== (GR = null === (yR = RR.cameraView) || void 0 === yR ? void 0 : yR.call(RR)) && void 0 !== GR ? GR : null
             },
             leaveGameReloadsPage() {
-              var WW;
-              return !0 === (null === (WW = PW()) || void 0 === WW ? void 0 : WW.inPlayback)
+              var RR;
+              return !0 === (null === (RR = ZR()) || void 0 === RR ? void 0 : RR.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var WW;
-              const OW = !0 === (null === (WW = PW()) || void 0 === WW ? void 0 : WW.inPlayback);
-              OW !== MW && (MW = OW, wW.l.iZ("connectedGameChanged")), iW.fire()
+              var RR;
+              const GR = !0 === (null === (RR = ZR()) || void 0 === RR ? void 0 : RR.inPlayback);
+              GR !== AR && (AR = GR, fR.n.JK("connectedGameChanged")), JR.fire()
             },
-            recorderChanged: mW.fire,
-            keyDown: WW => {
-              var iW;
-              switch (WW) {
+            recorderChanged: yR.fire,
+            keyDown: RR => {
+              var JR;
+              switch (RR) {
                 case "recordGame":
-                  return void kW.toggleRecording();
+                  return void UR.toggleRecording();
                 case "recordClip":
-                  return void((0, ji.e)() || kW.saveClip())
-              }(0, LO.b)() || ("replayViewerOpen" !== WW ? WW.startsWith("replay") && ((0, ji.e)() || !0 === (null === (iW = PW()) || void 0 === iW ? void 0 : iW.inPlayback)) && sW(WW) : jW("toggle"))
+                  return void((0, LJ.e)() || UR.saveClip())
+              }(0, uG.b)() || ("replayViewerOpen" !== RR ? RR.startsWith("replay") && ((0, LJ.e)() || !0 === (null === (JR = ZR()) || void 0 === JR ? void 0 : JR.inPlayback)) && WR(RR) : LR("toggle"))
             }
           }
         }
       }({
-        runtime: EW.n,
+        runtime: tR.l,
         cameraView: () => {
-          var WW;
-          const iW = null === (WW = (0, PW.f)()) || void 0 === WW ? void 0 : WW.renderFrame;
-          if (!iW) return null;
-          const [OW, mW, EW] = iW.cameraPosition, [NW, LW, cW] = iW.cameraDirection;
+          var RR;
+          const JR = null === (RR = (0, ZR.l)()) || void 0 === RR ? void 0 : RR.renderFrame;
+          if (!JR) return null;
+          const [GR, yR, tR] = JR.cameraPosition, [uR, qR, iR] = JR.cameraDirection;
           return {
-            position: [OW, mW, EW],
-            direction: [NW, LW, cW]
+            position: [GR, yR, tR],
+            direction: [uR, qR, iR]
           }
         },
         canvas: () => {
-          var WW, iW, OW;
-          return null !== (WW = null === (iW = (OW = (0, NW.K)()).canvas) || void 0 === iW ? void 0 : iW.call(OW)) && void 0 !== WW ? WW : null
+          var RR, JR, GR;
+          return null !== (RR = null === (JR = (GR = (0, uR.E)()).canvas) || void 0 === JR ? void 0 : JR.call(GR)) && void 0 !== RR ? RR : null
         },
-        freecam: EW.j
+        freecam: tR.i
       }),
-      Im = {
+      dy = {
         states: {
-          ...wi,
-          ...li.f,
-          ...Gm.states,
-          ...bO,
-          ...CW
+          ...fJ,
+          ...rJ.l,
+          ...jy.states,
+          ...rG,
+          ...zR
         },
         events: {
-          ...ti,
-          ...jW,
-          ...li.d,
-          ...JW.b,
-          ...nO.k,
-          ...Gm.events,
-          ...jO,
-          ...TW.k
+          ...VJ,
+          ...LR,
+          ...rJ.e,
+          ...pR.c,
+          ...gG.j,
+          ...jy.events,
+          ...eG,
+          ...lR.j
         },
         commands: {
-          ...yW,
-          ...Zi,
-          ...UW,
-          ...li.b,
-          ...Qi,
-          ...HO,
-          ...TW.g,
-          ...Vi,
-          ...Gm.commands,
-          ...YO,
-          ...XW,
-          ...DO,
-          ...Ai
+          ...BR,
+          ...KJ,
+          ...nR,
+          ...rJ.b,
+          ...TJ,
+          ...pG,
+          ...lR.f,
+          ...cJ,
+          ...jy.commands,
+          ...CG,
+          ...SR,
+          ...HG,
+          ...eJ
         },
         queries: {
-          ...li.e,
-          ...Rm
+          ...rJ.i,
+          ...Sy
         },
         lookups: {
-          ...xi,
-          ...vW,
-          ...nO.l,
-          ...Gm.lookups,
-          ...YW,
-          ...NO,
-          ...gO,
-          ...BW
+          ...wJ,
+          ...HR,
+          ...gG.l,
+          ...jy.lookups,
+          ...MR,
+          ...yG,
+          ...DG,
+          ...jR
         }
       };
 
-    function am() {
-      (0, LW.e)(bW.k), (0, EW.q)(Gm.feed), (0, JW.c)(), WO || (WO = !0, (0, bW.j)(uW.g, (WW => {
-        const iW = (0, dW.g)(uW.g, WW);
-        "string" === typeof iW && Promise.resolve().then((() => OW(4866))).then((WW => {
+    function Ey() {
+      (0, qR.g)(aR.o), (0, tR.n)(jy.feed), (0, pR.g)(), sJ || (sJ = !0, (0, aR.l)(OR.h, (RR => {
+        const JR = (0, NR.i)(OR.h, RR);
+        "string" === typeof JR && Promise.resolve().then((() => GR(4983))).then((RR => {
           let {
-            onCosmeticPackGranted: OW
-          } = WW;
-          OW(iW)
+            onCosmeticPackGranted: GR
+          } = RR;
+          GR(JR)
         }))
-      })), (0, bW.j)(uW.kb, (WW => {
-        const iW = (0, dW.g)(uW.kb, WW);
-        "number" === typeof iW && wW.l.iZ("serverUpdating", Date.now() + iW, !0)
-      })), (0, bW.j)(uW.F, (WW => {
-        const iW = (0, dW.g)(uW.F, WW);
-        if ((0, dW.d)(iW)) {
+      })), (0, aR.l)(OR.jb, (RR => {
+        const JR = (0, NR.i)(OR.jb, RR);
+        "number" === typeof JR && fR.n.JK("serverUpdating", Date.now() + JR, !0)
+      })), (0, aR.l)(OR.F, (RR => {
+        const JR = (0, NR.i)(OR.F, RR);
+        if ((0, NR.e)(JR)) {
           const {
-            cN: WW,
-            wN: OW
-          } = iW;
-          (0, zi.d)({
-            cN: "string" === typeof WW ? WW : null,
-            wN: "string" === typeof OW ? OW : null
+            au: RR,
+            Lu: GR
+          } = JR;
+          (0, QJ.d)({
+            au: "string" === typeof RR ? RR : null,
+            Lu: "string" === typeof GR ? GR : null
           })
         }
-      })), (0, bW.j)(tW.uc.NewUiRequest, (WW => {
-        const iW = (0, dW.j)(WW);
-        (0, dW.d)(iW) && "number" === typeof iW.id && (0, dW.d)(iW.clientParameters) && (0, Fi.f)(iW.id, iW.clientParameters)
-      })), (0, bW.j)(uW.ab, (WW => {
-        const iW = (0, dW.g)(uW.ab, WW);
-        "number" === typeof iW && (0, Fi.h)(iW)
-      })), (0, bW.i)(Fi.c), (0, bW.j)(tW.uc.UiRequestPopup, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ((0, dW.d)(iW) && "number" === typeof iW.id && ("string" === typeof iW.text || (0, dW.d)(iW.text) && "string" === typeof iW.text.translationKey)) {
-          const WW = iW.id;
-          (0, Fi.j)(WW, iW.text, !0 === iW.destructive, (iW => {
-            Qi.answerUiRequest({
-              id: WW,
-              ct: iW
+      })), (0, aR.l)(VR.sc.NewUiRequest, (RR => {
+        const JR = (0, NR.k)(RR);
+        (0, NR.e)(JR) && "number" === typeof JR.id && (0, NR.e)(JR.clientParameters) && (0, FJ.f)(JR.id, JR.clientParameters)
+      })), (0, aR.l)(OR._, (RR => {
+        const JR = (0, NR.i)(OR._, RR);
+        "number" === typeof JR && (0, FJ.g)(JR)
+      })), (0, aR.i)(FJ.c), (0, aR.l)(VR.sc.UiRequestPopup, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ((0, NR.e)(JR) && "number" === typeof JR.id && ("string" === typeof JR.text || (0, NR.e)(JR.text) && "string" === typeof JR.text.translationKey)) {
+          const RR = JR.id;
+          (0, FJ.i)(RR, JR.text, !0 === JR.destructive, (JR => {
+            TJ.answerUiRequest({
+              id: RR,
+              wV: JR
             })
           }))
         }
-      })), (0, bW.j)(tW.uc.TopRightHelper, (WW => {
-        const iW = (0, dW.j)(WW);
-        void 0 !== iW && wW.l.iZ("TopRightHelper", iW, !0)
-      })), (0, bW.j)(tW.uc.TaskProgress, (WW => {
-        const iW = (0, dW.j)(WW);
-        (0, dW.d)(iW) && "string" === typeof iW.taskId && "number" === typeof iW.progress && (0, ri.d)({
-          taskId: iW.taskId,
-          progress: iW.progress
+      })), (0, aR.l)(VR.sc.TopRightHelper, (RR => {
+        const JR = (0, NR.k)(RR);
+        void 0 !== JR && fR.n.JK("TopRightHelper", JR, !0)
+      })), (0, aR.l)(VR.sc.TaskProgress, (RR => {
+        const JR = (0, NR.k)(RR);
+        (0, NR.e)(JR) && "string" === typeof JR.taskId && "number" === typeof JR.progress && (0, kJ.e)({
+          taskId: JR.taskId,
+          progress: JR.progress
         })
-      }))), yO || (yO = !0, (0, bW.j)(uW.o, (WW => {
-        const iW = (0, dW.g)(uW.o, WW);
-        (0, dW.d)(iW) && wW.l.iZ("showShopFromServer", {
-          toggle: iW.Hi,
-          ni: iW.ni
+      }))), XG || (XG = !0, (0, aR.l)(OR.n, (RR => {
+        const JR = (0, NR.i)(OR.n, RR);
+        (0, NR.e)(JR) && fR.n.JK("showShopFromServer", {
+          toggle: JR.vJ,
+          OJ: JR.OJ
         }, !0)
-      })), (0, bW.j)(tW.uc.OverShopInfo, (WW => {
-        const iW = (0, dW.j)(WW);
-        (0, dW.d)(iW) && wW.l.iZ("overShopInfo", iW.info, !0)
-      })), (0, bW.j)(tW.uc.ShowShopTutorial, (() => {
-        wW.l.iZ("showShopTutorial", null, !0)
-      }))), KO || (KO = !0, (0, bW.e)((() => {
-        var WW;
-        (0, UO.resetLeaveEvents)(), null === (WW = SO) || void 0 === WW || WW(), SO = (0, bW.c)() ? (0, sO.onVisitSessionGameServerConnected)(bW.c) : null, (0, bW.c)() || wW.l.pU()
-      })), (0, bW.j)(tW.uc.SetCookie, (WW => {
-        const iW = (0, dW.j)(WW),
-          OW = (0, vi.d)().gameNameWithVariation;
-        (0, dW.d)(iW) && "string" === typeof iW.key && null !== OW && (0, kO.setCookie)(OW, iW.key, iW.value)
-      })), (0, bW.j)(tW.uc.LeaveValues, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ((0, dW.d)(iW) && "string" === typeof iW.leaveEventType) {
+      })), (0, aR.l)(VR.sc.OverShopInfo, (RR => {
+        const JR = (0, NR.k)(RR);
+        (0, NR.e)(JR) && fR.n.JK("overShopInfo", JR.info, !0)
+      })), (0, aR.l)(VR.sc.ShowShopTutorial, (() => {
+        fR.n.JK("showShopTutorial", null, !0)
+      }))), WG || (WG = !0, (0, aR.f)((() => {
+        var RR;
+        (0, aG.resetLeaveEvents)(), null === (RR = AG) || void 0 === RR || RR(), AG = (0, aR.c)() ? (0, nG.onVisitSessionGameServerConnected)(aR.c) : null, (0, aR.c)() || fR.n.PU()
+      })), (0, aR.l)(VR.sc.SetCookie, (RR => {
+        const JR = (0, NR.k)(RR),
+          GR = (0, DJ.d)().gameNameWithVariation;
+        (0, NR.e)(JR) && "string" === typeof JR.key && null !== GR && (0, LG.setCookie)(GR, JR.key, JR.value)
+      })), (0, aR.l)(VR.sc.LeaveValues, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ((0, NR.e)(JR) && "string" === typeof JR.leaveEventType) {
           const {
-            leaveEventType: WW,
-            category: OW,
-            subCategory: mW,
-            value: EW
-          } = iW;
-          (0, UO.updateLeaveValue)({
-            leaveEventType: WW,
-            category: OW,
-            subCategory: mW,
-            value: EW
+            leaveEventType: RR,
+            category: GR,
+            subCategory: yR,
+            value: tR
+          } = JR;
+          (0, aG.updateLeaveValue)({
+            leaveEventType: RR,
+            category: GR,
+            subCategory: yR,
+            value: tR
           })
         }
-      })), (0, bW.j)(tW.uc.CustomAnalyticsEvent, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ((0, dW.d)(iW) && "string" === typeof iW.cat1) {
+      })), (0, aR.l)(VR.sc.CustomAnalyticsEvent, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ((0, NR.e)(JR) && "string" === typeof JR.cat1) {
           const {
-            cat1: WW,
-            cat2: OW,
-            cat3: mW,
-            value: EW
-          } = iW;
-          (0, UO.logCustomAnalyticsEvent)({
-            cat1: WW,
-            cat2: OW,
-            cat3: mW,
-            value: EW
+            cat1: RR,
+            cat2: GR,
+            cat3: yR,
+            value: tR
+          } = JR;
+          (0, aG.logCustomAnalyticsEvent)({
+            cat1: RR,
+            cat2: GR,
+            cat3: yR,
+            value: tR
           })
         }
-      })), (0, bW.j)(tW.uc.ProgressionEvent, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ((0, dW.d)(iW)) {
+      })), (0, aR.l)(VR.sc.ProgressionEvent, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ((0, NR.e)(JR)) {
           const {
-            type: WW,
-            location1: OW,
-            location2: mW,
-            location3: EW,
-            score: NW
-          } = iW;
-          (0, UO.logProgressionEvent)({
-            type: WW,
-            location1: OW,
-            location2: mW,
-            location3: EW,
-            score: NW
+            type: RR,
+            location1: GR,
+            location2: yR,
+            location3: tR,
+            score: uR
+          } = JR;
+          (0, aG.logProgressionEvent)({
+            type: RR,
+            location1: GR,
+            location2: yR,
+            location3: tR,
+            score: uR
           })
         }
-      })), (0, bW.j)(tW.uc.ResourceEvent, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ((0, dW.d)(iW)) {
+      })), (0, aR.l)(VR.sc.ResourceEvent, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ((0, NR.e)(JR)) {
           const {
-            type: WW,
-            resourceType: OW,
-            amount: mW,
-            category: EW,
-            itemName: NW
-          } = iW;
-          (0, UO.logResourceEvent)({
-            type: WW,
-            resourceType: OW,
-            amount: mW,
-            category: EW,
-            itemName: NW
+            type: RR,
+            resourceType: GR,
+            amount: yR,
+            category: tR,
+            itemName: uR
+          } = JR;
+          (0, aG.logResourceEvent)({
+            type: RR,
+            resourceType: GR,
+            amount: yR,
+            category: tR,
+            itemName: uR
           })
         }
-      })), (0, bW.j)(tW.uc.LeaderboardResponse, (WW => {
-        const iW = (0, dW.j)(WW);
-        if ((0, dW.d)(iW)) {
+      })), (0, aR.l)(VR.sc.LeaderboardResponse, (RR => {
+        const JR = (0, NR.k)(RR);
+        if ((0, NR.e)(JR)) {
           const {
-            category: WW,
-            timeframe: OW,
-            data: mW
-          } = iW;
-          wW.l.iZ("leaderboardResponse", {
-            category: WW,
-            timeframe: OW,
-            data: mW
+            category: RR,
+            timeframe: GR,
+            data: yR
+          } = JR;
+          fR.n.JK("leaderboardResponse", {
+            category: RR,
+            timeframe: GR,
+            data: yR
           })
         }
-      })), (0, bW.j)(uW.z, (WW => {
-        const iW = (0, dW.g)(uW.z, WW);
-        "string" === typeof iW && (0, MO.b)(WW.conn, iW)
-      })), (0, bW.j)(uW.C, (WW => {
-        const iW = (0, dW.g)(uW.C, WW);
-        "string" === typeof iW && console.error(`[logErrorToConsole]: ${iW}`)
-      }))), DW(), (0, nO.c)(), Di || (Di = !0, (0, bW.j)(uW.f, (WW => {
-        const iW = (0, dW.g)(uW.f, WW);
-        void 0 !== iW && (0, gi.k)(iW)
-      }))), ai(), ni(), GW || (GW = !0, (0, NW.v)(IW)), mW.gameBridge.attach(Im), Cm()
+      })), (0, aR.l)(OR.w, (RR => {
+        const JR = (0, NR.i)(OR.w, RR);
+        "string" === typeof JR && (0, UG.e)(RR.conn, JR)
+      })), (0, aR.l)(OR.z, (RR => {
+        const JR = (0, NR.i)(OR.z, RR);
+        "string" === typeof JR && console.error(`[logErrorToConsole]: ${JR}`)
+      }))), cR(), (0, gG.c)(), oJ || (oJ = !0, (0, aR.l)(OR.g, (RR => {
+        const JR = (0, NR.i)(OR.g, RR);
+        void 0 !== JR && (0, HJ.m)(JR)
+      }))), YJ(), bJ(), YR || (YR = !0, (0, uR.n)(kR)), yR.gameBridge.attach(dy), Py()
     }
   },
-  37441: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW,
-      d: () => LW
+  37353: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      e: () => qR
     });
-    var mW = OW(37444);
-    let EW = null,
-      NW = null;
+    var yR = GR(37357);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return EW ??= OW.e(74).then((() => OW(42663))).catch((WW => {
-        throw EW = null, WW
-      })), EW
+    function ZR() {
+      return tR ??= GR.e(74).then((() => GR(42743))).catch((RR => {
+        throw tR = null, RR
+      })), tR
     }
 
-    function LW() {
-      return NW ??= Promise.all([PW(), (0, mW.e)()]).then((WW => {
-        let [iW] = WW;
-        return iW
-      }), (WW => {
-        throw NW = null, WW
-      })), NW
+    function qR() {
+      return uR ??= Promise.all([ZR(), (0, yR.h)()]).then((RR => {
+        let [JR] = RR;
+        return JR
+      }), (RR => {
+        throw uR = null, RR
+      })), uR
     }
   },
-  37646: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW
+  37561: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR
     });
-    const mW = {
-      wait: function(WW) {
-        return new Promise((iW => {
-          setTimeout(iW, WW)
+    const yR = {
+      wait: function(RR) {
+        return new Promise((JR => {
+          setTimeout(JR, RR)
         }))
       },
       stallMs: 2e4
     };
-    class EW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mW;
-        this.url = WW, this.options = iW, this.timing = OW, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = WW
+    class tR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yR;
+        this.url = RR, this.options = JR, this.timing = GR, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = RR
       }
       ready() {
         if (null === this.fetched) {
-          const WW = new AbortController;
-          this.fetchAbort = WW, this.fetched = this.fetchWithRetries(WW.signal).then((iW => (this.fetchAbort === WW && (this.fetchAbort = null), iW)))
+          const RR = new AbortController;
+          this.fetchAbort = RR, this.fetched = this.fetchWithRetries(RR.signal).then((JR => (this.fetchAbort === RR && (this.fetchAbort = null), JR)))
         }
         return this.fetched
       }
@@ -2596,56 +2596,56 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(WW) {
-        for (let iW = 0;; iW++) {
-          const OW = new URL(this.url);
-          if (iW > 0 && OW.searchParams.set("cache-bust", `${Date.now()}-${iW}`), await this.fetchWhole(OW, WW)) return this.scriptUrl = OW, !0;
-          if (iW >= 3 || WW.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** iW), WW.aborted) return !1
+      async fetchWithRetries(RR) {
+        for (let JR = 0;; JR++) {
+          const GR = new URL(this.url);
+          if (JR > 0 && GR.searchParams.set("cache-bust", `${Date.now()}-${JR}`), await this.fetchWhole(GR, RR)) return this.scriptUrl = GR, !0;
+          if (JR >= 3 || RR.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** JR), RR.aborted) return !1
         }
       }
-      async fetchWhole(WW, iW) {
-        const OW = new AbortController;
-        let mW;
-        const EW = () => {
-            clearTimeout(mW), mW = setTimeout((() => {
-              OW.abort()
+      async fetchWhole(RR, JR) {
+        const GR = new AbortController;
+        let yR;
+        const tR = () => {
+            clearTimeout(yR), yR = setTimeout((() => {
+              GR.abort()
             }), this.timing.stallMs)
           },
-          NW = () => {
-            OW.abort()
+          uR = () => {
+            GR.abort()
           };
-        iW.addEventListener("abort", NW, {
+        JR.addEventListener("abort", uR, {
           once: !0
-        }), EW();
+        }), tR();
         try {
-          var PW;
-          const iW = await fetch(WW, {
-            signal: OW.signal
+          var ZR;
+          const JR = await fetch(RR, {
+            signal: GR.signal
           });
-          if (!iW.ok) return !1;
-          const mW = null === (PW = iW.body) || void 0 === PW ? void 0 : PW.getReader();
-          if (!mW) return !1;
+          if (!JR.ok) return !1;
+          const yR = null === (ZR = JR.body) || void 0 === ZR ? void 0 : ZR.getReader();
+          if (!yR) return !1;
           for (;;) {
             const {
-              done: WW
-            } = await mW.read();
-            if (WW) return !0;
-            EW()
+              done: RR
+            } = await yR.read();
+            if (RR) return !0;
+            tR()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(mW), iW.removeEventListener("abort", NW)
+          clearTimeout(yR), JR.removeEventListener("abort", uR)
         }
       }
     }
   },
-  38214: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  38176: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR
     });
-    const mW = {
+    const yR = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2805,21 +2805,21 @@ export const modules = {
       }
     }
   },
-  40242: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW,
-      f: () => EW
+  40283: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR,
+      g: () => tR
     });
-    const mW = ["description", "label"];
+    const yR = ["description", "label"];
 
-    function EW(WW) {
-      const iW = WW.type;
+    function tR(RR) {
+      const JR = RR.type;
       return {
-        type: iW,
-        params: WW[iW]
+        type: JR,
+        params: RR[JR]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

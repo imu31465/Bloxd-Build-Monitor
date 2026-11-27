@@ -1,213 +1,213 @@
 export const id = 139;
 export const ids = [139, 159];
 export const modules = {
-  7637: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      loadShaderPackTextures: () => PW,
-      shaderPackTextures: () => LW
+  7773: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      loadShaderPackTextures: () => ZR,
+      shaderPackTextures: () => qR
     });
-    var mW = OW(5970);
-    let EW = null,
-      NW = null;
+    var yR = GR(6084);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return NW ??= Promise.all([OW.e(85), OW.e(126)]).then((() => OW(42015))).then((WW => {
+    function ZR() {
+      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: iW,
-          textureNameToIndex: OW,
-          textureAnimationData: NW
-        } = WW;
-        return EW ??= (0, mW.o)(OW, NW, iW), EW
-      })), NW
+          FORMER_BLOCK_IMAGE_NAMES: JR,
+          textureNameToIndex: GR,
+          textureAnimationData: uR
+        } = RR;
+        return tR ??= (0, yR.j)(GR, uR, JR), tR
+      })), uR
     }
 
-    function LW() {
-      if (null === EW) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return EW
+    function qR() {
+      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return tR
     }
   },
-  5970: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => tW,
-      D: () => xW,
-      e: () => LW,
-      i: () => PW,
-      l: () => mW,
-      o: () => bW,
-      p: () => ZW,
-      r: () => EW,
-      v: () => NW,
-      x: () => wW
+  6084: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      e: () => ZR,
+      f: () => yR,
+      j: () => aR,
+      l: () => KR,
+      o: () => tR,
+      r: () => uR,
+      t: () => fR,
+      x: () => VR,
+      z: () => wR
     });
-    const mW = 5;
+    const yR = 5;
 
-    function EW(WW) {
-      return WW === mW
+    function tR(RR) {
+      return RR === yR
     }
 
-    function NW(WW) {
-      return [...WW.features]
+    function uR(RR) {
+      return [...RR.features]
     }
-    const PW = 262144,
-      LW = 256,
-      cW = 256;
+    const ZR = 262144,
+      qR = 256,
+      iR = 256;
 
-    function wW(WW) {
-      if ("object" !== typeof WW || null === WW || Array.isArray(WW)) return "The pack has no files.";
-      const iW = [];
-      for (const [OW, mW] of Object.entries(WW)) {
-        if ("string" !== typeof mW) return `${OW} isn't text.`;
-        iW.push({
-          path: OW,
-          source: mW
+    function fR(RR) {
+      if ("object" !== typeof RR || null === RR || Array.isArray(RR)) return "The pack has no files.";
+      const JR = [];
+      for (const [GR, yR] of Object.entries(RR)) {
+        if ("string" !== typeof yR) return `${GR} isn't text.`;
+        JR.push({
+          path: GR,
+          source: yR
         })
       }
-      return iW.sort(((WW, iW) => ZW(WW.path, iW.path))),
-        function(WW) {
-          if (0 === WW.length) return "The pack has no .wgsl files.";
-          if (WW.length > LW) return `The pack has more than ${LW} .wgsl files.`;
-          const iW = new Set;
+      return JR.sort(((RR, JR) => KR(RR.path, JR.path))),
+        function(RR) {
+          if (0 === RR.length) return "The pack has no .wgsl files.";
+          if (RR.length > qR) return `The pack has more than ${qR} .wgsl files.`;
+          const JR = new Set;
           for (const {
-              path: OW
+              path: GR
             }
-            of WW) {
-            const WW = lW(OW);
-            if (null !== WW) return WW;
-            if (iW.has(OW)) return `The pack has two files at ${OW}.`;
-            iW.add(OW)
+            of RR) {
+            const RR = rR(GR);
+            if (null !== RR) return RR;
+            if (JR.has(GR)) return `The pack has two files at ${GR}.`;
+            JR.add(GR)
           }
-          return xW(WW) > PW ? `The pack's .wgsl files are over ${PW/1024} KB in total.` : null
-        }(iW) ?? iW
+          return wR(RR) > ZR ? `The pack's .wgsl files are over ${ZR/1024} KB in total.` : null
+        }(JR) ?? JR
     }
 
-    function tW(WW) {
-      const iW = {};
-      for (const OW of WW) iW[OW.path] = OW.source;
-      return iW
+    function VR(RR) {
+      const JR = {};
+      for (const GR of RR) JR[GR.path] = GR.source;
+      return JR
     }
 
-    function ZW(WW, iW) {
-      return WW < iW ? -1 : WW > iW ? 1 : 0
+    function KR(RR, JR) {
+      return RR < JR ? -1 : RR > JR ? 1 : 0
     }
 
-    function xW(WW) {
-      const iW = new TextEncoder;
-      let OW = 0;
+    function wR(RR) {
+      const JR = new TextEncoder;
+      let GR = 0;
       for (const {
-          source: mW
+          source: yR
         }
-        of WW) OW += iW.encode(mW).byteLength;
-      return OW
+        of RR) GR += JR.encode(yR).byteLength;
+      return GR
     }
 
-    function lW(WW) {
-      if (!WW.toLowerCase().endsWith(".wgsl")) return `${WW} isn't a .wgsl file.`;
-      if (WW.length > cW) return `A file path is over ${cW} characters.`;
-      if (WW.includes("\\") || /[\u0000-\u001f]/.test(WW)) return `${WW} isn't a valid file path.`;
-      return WW.split("/").some((WW => "" === WW || "." === WW || ".." === WW)) ? `${WW} isn't a valid file path.` : null
+    function rR(RR) {
+      if (!RR.toLowerCase().endsWith(".wgsl")) return `${RR} isn't a .wgsl file.`;
+      if (RR.length > iR) return `A file path is over ${iR} characters.`;
+      if (RR.includes("\\") || /[\u0000-\u001f]/.test(RR)) return `${RR} isn't a valid file path.`;
+      return RR.split("/").some((RR => "" === RR || "." === RR || ".." === RR)) ? `${RR} isn't a valid file path.` : null
     }
-    const AW = /^(.*)\[rot\[([1-4])$/;
+    const eR = /^(.*)\[rot\[([1-4])$/;
 
-    function bW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const mW = new Map;
-      iW.forEach(((WW, iW) => {
+    function aR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const yR = new Map;
+      JR.forEach(((RR, JR) => {
         let {
-          numAnimStates: OW,
-          animStartIdx: EW
-        } = WW;
-        for (let NW = 1; NW < OW; NW++) mW.set(EW + NW - 1, iW)
+          numAnimStates: GR,
+          animStartIdx: tR
+        } = RR;
+        for (let uR = 1; uR < GR; uR++) yR.set(tR + uR - 1, JR)
       }));
-      const EW = Object.entries(WW),
-        NW = new Map;
-      for (const [bW, jW] of EW) {
-        const WW = AW.exec(bW);
-        "1" === WW?.[2] && NW.set(WW[1], jW + 1)
+      const tR = Object.entries(RR),
+        uR = new Map;
+      for (const [aR, LR] of tR) {
+        const RR = eR.exec(aR);
+        "1" === RR?.[2] && uR.set(RR[1], LR + 1)
       }
-      const PW = WW => {
-          const iW = AW.exec(WW);
-          return iW && NW.has(iW[1]) ? {
-            root: iW[1],
-            rotation: Number(iW[2]) - 1
+      const ZR = RR => {
+          const JR = eR.exec(RR);
+          return JR && uR.has(JR[1]) ? {
+            root: JR[1],
+            rotation: Number(JR[2]) - 1
           } : null
         },
-        LW = new Set(EW.map((WW => {
-          let [iW] = WW;
-          return PW(iW)?.root ?? iW
+        qR = new Set(tR.map((RR => {
+          let [JR] = RR;
+          return ZR(JR)?.root ?? JR
         }))),
-        cW = (WW, OW) => {
-          const mW = WW.replace(/_?0$/, "");
-          return (iW[OW]?.numAnimStates ?? 0) > 1 && !LW.has(mW) ? mW : WW
+        iR = (RR, GR) => {
+          const yR = RR.replace(/_?0$/, "");
+          return (JR[GR]?.numAnimStates ?? 0) > 1 && !qR.has(yR) ? yR : RR
         },
-        wW = new Map;
-      for (const [AW, bW] of EW) wW.set(bW, cW(PW(AW)?.root ?? AW, bW));
-      const tW = EW.reduce(((WW, iW) => {
-          let [, OW] = iW;
-          return Math.max(WW, OW + 1)
+        fR = new Map;
+      for (const [eR, aR] of tR) fR.set(aR, iR(ZR(eR)?.root ?? eR, aR));
+      const VR = tR.reduce(((RR, JR) => {
+          let [, GR] = JR;
+          return Math.max(RR, GR + 1)
         }), 0),
-        ZW = Array.from({
-          length: tW
-        }, ((WW, iW) => ({
-          id: iW + 1,
+        KR = Array.from({
+          length: VR
+        }, ((RR, JR) => ({
+          id: JR + 1,
           rotation: 0
         }))),
-        xW = new Map,
-        lW = new Map;
-      for (const [AW, bW] of EW) {
-        const WW = PW(AW),
-          iW = mW.get(bW);
-        if (void 0 !== iW) {
-          const OW = wW.get(iW);
-          lW.set(AW, {
-            name: AW,
-            texture: OW,
+        wR = new Map,
+        rR = new Map;
+      for (const [eR, aR] of tR) {
+        const RR = ZR(eR),
+          JR = yR.get(aR);
+        if (void 0 !== JR) {
+          const GR = fR.get(JR);
+          rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "frame"
-          }), WW && !lW.has(WW.root) && lW.set(WW.root, {
-            name: WW.root,
-            texture: OW,
+          }), RR && !rR.has(RR.root) && rR.set(RR.root, {
+            name: RR.root,
+            texture: GR,
             kind: "frame"
           });
           continue
         }
-        const OW = wW.get(bW),
-          EW = WW?.root ?? AW;
-        if (OW !== EW && lW.set(EW, {
-            name: EW,
-            texture: OW,
+        const GR = fR.get(aR),
+          tR = RR?.root ?? eR;
+        if (GR !== tR && rR.set(tR, {
+            name: tR,
+            texture: GR,
             kind: "frame"
-          }), WW) {
-          const iW = NW.get(WW.root);
-          ZW[bW] = {
-            id: iW,
-            rotation: WW.rotation
-          }, xW.set(OW, iW), lW.set(AW, {
-            name: AW,
-            texture: OW,
+          }), RR) {
+          const JR = uR.get(RR.root);
+          KR[aR] = {
+            id: JR,
+            rotation: RR.rotation
+          }, wR.set(GR, JR), rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "rotation"
           })
-        } else xW.set(OW, bW + 1)
+        } else wR.set(GR, aR + 1)
       }
-      for (const AW of xW.keys()) lW.delete(AW);
-      for (const [AW, bW] of OW) {
-        const WW = xW.get(bW);
-        void 0 === WW || xW.has(AW) || (xW.set(AW, WW), lW.delete(AW))
+      for (const eR of wR.keys()) rR.delete(eR);
+      for (const [eR, aR] of GR) {
+        const RR = wR.get(aR);
+        void 0 === RR || wR.has(eR) || (wR.set(eR, RR), rR.delete(eR))
       }
       return {
-        named: [...xW].sort(((WW, iW) => {
-          let [OW] = WW, [mW] = iW;
-          return OW < mW ? -1 : OW > mW ? 1 : 0
-        })).map((WW => {
-          let [iW, OW] = WW;
+        named: [...wR].sort(((RR, JR) => {
+          let [GR] = RR, [yR] = JR;
+          return GR < yR ? -1 : GR > yR ? 1 : 0
+        })).map((RR => {
+          let [JR, GR] = RR;
           return {
-            name: iW,
-            id: OW
+            name: JR,
+            id: GR
           }
         })),
-        aliases: [...lW.values()],
-        layers: ZW
+        aliases: [...rR.values()],
+        layers: KR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

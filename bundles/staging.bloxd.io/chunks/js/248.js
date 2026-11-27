@@ -1,64 +1,30 @@
 export const id = 248;
 export const ids = [60, 248];
 export const modules = {
-  39780: (WW, iW, OW) => {
-    var mW = {
-      "./combat_1.png": 39785,
-      "./dungeon_crumbling_crypt.png": 39793,
-      "./dungeon_frozen_hollow.png": 39795,
-      "./dungeon_wildwood_grove.png": 39803,
-      "./dungeons.png": 39808,
-      "./farming_1.png": 39811,
-      "./fishing_1.png": 39819,
-      "./hub.png": 39823,
-      "./island.png": 39828,
-      "./mining_1.png": 39830,
-      "./mining_1_bridge.png": 39839,
-      "./mining_1_gallery.png": 39848,
-      "./mining_1_hollow.png": 39857,
-      "./mining_1_village.png": 39863
-    };
-
-    function EW(WW) {
-      var iW = NW(WW);
-      return OW(iW)
-    }
-
-    function NW(WW) {
-      if (!OW.o(mW, WW)) {
-        var iW = new Error("Cannot find module '" + WW + "'");
-        throw iW.code = "MODULE_NOT_FOUND", iW
-      }
-      return mW[WW]
-    }
-    EW.keys = function() {
-      return Object.keys(mW)
-    }, EW.resolve = NW, WW.exports = EW, EW.id = 39780
-  },
-  39881: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      h: () => NW
+  39862: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      f: () => uR
     });
-    const mW = new WeakMap;
+    const yR = new WeakMap;
 
-    function EW(WW, iW) {
-      return mW.set(WW, iW), WW
+    function tR(RR, JR) {
+      return yR.set(RR, JR), RR
     }
 
-    function NW(WW) {
-      var iW;
-      return null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : null
+    function uR(RR) {
+      var JR;
+      return null !== (JR = yR.get(RR)) && void 0 !== JR ? JR : null
     }
   },
-  39733: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW
+  39727: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    class mW {
-      constructor(WW, iW, OW) {
-        this.iZ = WW, this.beforeOpen = iW, this.afterClose = OW, this.open = !1, this.JA = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.JA && (this.open = !0, this.beforeOpen(this), this.emit())
+    class yR {
+      constructor(RR, JR, GR) {
+        this.JK = RR, this.beforeOpen = JR, this.afterClose = GR, this.open = !1, this.He = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.He && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -71,179 +37,179 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(WW) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(WW)
+      closePanel(RR) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(RR)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.JA = !0
+        this.open = !1, this.emit(), this.He = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.JA || (this.snapshot = this.buildSnapshot(), this.iZ(this.snapshot))
+        this.He || (this.snapshot = this.buildSnapshot(), this.JK(this.snapshot))
       }
     }
   },
-  39894: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      SkyblockEntityFacing: () => LW,
-      needsSkyblockEntityFacing: () => PW
+  39880: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      SkyblockEntityFacing: () => qR,
+      needsSkyblockEntityFacing: () => ZR
     });
-    var mW = OW(639),
-      EW = OW(2937),
-      NW = OW(39897);
+    var yR = GR(671),
+      tR = GR(3017),
+      uR = GR(39889);
 
-    function PW(WW, iW) {
-      if (WW.metaInfo === mW.d || "Iron Guardian" === WW.type || "Gold Guardian" === WW.type) return !0;
-      if ("Pig" === WW.type) return "sitting" === WW.pose;
-      if ("Person" !== WW.meshKind || void 0 === WW.meshOpts) return !1;
-      let OW = null === iW || void 0 === iW ? void 0 : iW.get(WW.meshOpts);
-      if (void 0 === OW) {
-        var NW, PW;
-        const mW = (0, EW.h)(WW);
-        OW = !1, "pig_napoleon" === (null === mW || void 0 === mW || null === (NW = mW.opts.textures) || void 0 === NW ? void 0 : NW.head) ? OW = !0 : "npc_pig_head" === (null === mW || void 0 === mW || null === (PW = mW.opts.textures) || void 0 === PW ? void 0 : PW.head) && (OW = "sitting" === mW.opts.pose || "sitting"), iW && (iW.size >= 256 && iW.clear(), iW.set(WW.meshOpts, OW))
+    function ZR(RR, JR) {
+      if (RR.metaInfo === yR.e || "Iron Guardian" === RR.type || "Gold Guardian" === RR.type) return !0;
+      if ("Pig" === RR.type) return "sitting" === RR.pose;
+      if ("Person" !== RR.meshKind || void 0 === RR.meshOpts) return !1;
+      let GR = null === JR || void 0 === JR ? void 0 : JR.get(RR.meshOpts);
+      if (void 0 === GR) {
+        var uR, ZR;
+        const yR = (0, tR.g)(RR);
+        GR = !1, "pig_napoleon" === (null === yR || void 0 === yR || null === (uR = yR.opts.textures) || void 0 === uR ? void 0 : uR.head) ? GR = !0 : "npc_pig_head" === (null === yR || void 0 === yR || null === (ZR = yR.opts.textures) || void 0 === ZR ? void 0 : ZR.head) && (GR = "sitting" === yR.opts.pose || "sitting"), JR && (JR.size >= 256 && JR.clear(), JR.set(RR.meshOpts, GR))
       }
-      return "sitting" === OW ? "sitting" === WW.pose : OW
-    }(0, NW.e)("skyblock", ((WW, iW) => {
-      iW.setFacingTolerance(PW(WW) ? 0 : null)
+      return "sitting" === GR ? "sitting" === RR.pose : GR
+    }(0, uR.e)("skyblock", ((RR, JR) => {
+      JR.setFacingTolerance(ZR(RR) ? 0 : null)
     }));
-    class LW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = WW, this.alsoVisit = iW, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = WW => {
-          var iW;
-          const OW = this.api.getEntityInfo(WW);
-          OW && (PW(OW, this.meshFacingCache) && (this.api.setFacingTolerance(WW, 0), this.nextFacing.add(WW)), null === (iW = this.alsoVisit) || void 0 === iW || iW.call(this, WW, OW))
+    class qR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = RR, this.alsoVisit = JR, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = RR => {
+          var JR;
+          const GR = this.api.getEntityInfo(RR);
+          GR && (ZR(GR, this.meshFacingCache) && (this.api.setFacingTolerance(RR, 0), this.nextFacing.add(RR)), null === (JR = this.alsoVisit) || void 0 === JR || JR.call(this, RR, GR))
         }
       }
-      hZ() {
+      gK() {
         const {
-          api: WW
-        } = this, iW = this.nextFacing;
-        WW.forEachEntity(this.visit);
-        for (const OW of this.facing) iW.has(OW) || WW.setFacingTolerance(OW, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = iW
+          api: RR
+        } = this, JR = this.nextFacing;
+        RR.forEachEntity(this.visit);
+        for (const GR of this.facing) JR.has(GR) || RR.setFacingTolerance(GR, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = JR
       }
       dispose() {
-        for (const WW of this.facing) this.api.setFacingTolerance(WW, null);
+        for (const RR of this.facing) this.api.setFacingTolerance(RR, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   },
-  39715: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      default: () => nL
+  39705: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      default: () => gq
     });
-    const mW = "island";
-    var EW = OW(39722);
+    const yR = "island";
+    var tR = GR(39713);
 
-    function NW(WW, iW, OW) {
-      const NW = "local" === iW,
-        LW = WW.background,
-        cW = iW => LW ? (0, EW.e)(iW[0] - WW.mapOrigin[0], iW[2] - WW.mapOrigin[2], LW.bounds) : [50, 50],
-        wW = (WW.insideDungeon ? [] : WW.landmarks).map((WW => {
-          var iW, mW;
+    function uR(RR, JR, GR) {
+      const uR = "local" === JR,
+        qR = RR.background,
+        iR = JR => qR ? (0, tR.d)(JR[0] - RR.mapOrigin[0], JR[2] - RR.mapOrigin[2], qR.bounds) : [50, 50],
+        fR = (RR.insideDungeon ? [] : RR.landmarks).map((RR => {
+          var JR, yR;
           return {
-            id: WW.id,
-            name: OW(WW.visited && WW.nameKey ? null !== (iW = WW.mapLabelKey) && void 0 !== iW ? iW : WW.nameKey : "skyblockGame:mapUnknown"),
-            icon: WW.visited && null !== (mW = WW.icon) && void 0 !== mW ? mW : "unknown",
-            visited: WW.visited,
+            id: RR.id,
+            name: GR(RR.visited && RR.nameKey ? null !== (JR = RR.mapLabelKey) && void 0 !== JR ? JR : RR.nameKey : "skyblockGame:mapUnknown"),
+            icon: RR.visited && null !== (yR = RR.icon) && void 0 !== yR ? yR : "unknown",
+            visited: RR.visited,
             current: !1,
-            position: cW(WW.position),
+            position: iR(RR.position),
             travelKind: "landmark",
-            travelId: WW.id
+            travelId: RR.id
           }
         })),
-        tW = WW.zones.map((iW => {
-          var mW;
+        VR = RR.zones.map((JR => {
+          var yR;
           return {
-            id: iW.id,
-            name: OW(iW.visited && iW.nameKey ? iW.nameKey : "skyblockGame:mapUnknown"),
-            icon: iW.visited && null !== (mW = iW.icon) && void 0 !== mW ? mW : "unknown",
-            visited: iW.visited,
-            current: iW.id === WW.zoneId,
-            position: iW.position,
-            thumbnail: iW.visited ? iW.id : void 0,
+            id: JR.id,
+            name: GR(JR.visited && JR.nameKey ? JR.nameKey : "skyblockGame:mapUnknown"),
+            icon: JR.visited && null !== (yR = JR.icon) && void 0 !== yR ? yR : "unknown",
+            visited: JR.visited,
+            current: JR.id === RR.zoneId,
+            position: JR.position,
+            thumbnail: JR.visited ? JR.id : void 0,
             travelKind: "zone",
-            travelId: iW.id
+            travelId: JR.id
           }
         })),
-        ZW = WW.insideDungeon || !LW ? [] : WW.portals.map((WW => {
-          var iW;
+        KR = RR.insideDungeon || !qR ? [] : RR.portals.map((RR => {
+          var JR;
           return {
-            id: WW.id,
-            name: OW(null !== (iW = WW.nameKey) && void 0 !== iW ? iW : "skyblockGame:mapUnknown"),
-            icon: WW.visited ? "dungeons" === WW.destination ? "portal_orange" : "portal" : "unknown",
-            visited: WW.visited,
+            id: RR.id,
+            name: GR(null !== (JR = RR.nameKey) && void 0 !== JR ? JR : "skyblockGame:mapUnknown"),
+            icon: RR.visited ? "dungeons" === RR.destination ? "portal_orange" : "portal" : "unknown",
+            visited: RR.visited,
             current: !1,
-            position: cW(WW.position),
-            colour: WW.colour,
+            position: iR(RR.position),
+            colour: RR.colour,
             travelKind: "zone",
-            travelId: WW.destination
+            travelId: RR.destination
           }
         })),
-        xW = NW ? wW : tW,
-        lW = xW.filter((WW => WW.visited)).length,
-        AW = LW ? (LW.bounds.mapMaxX - LW.bounds.mapMinX) / (LW.bounds.mapMaxZ - LW.bounds.mapMinZ) : 2,
-        bW = LW ? JSON.stringify([LW.bounds, WW.mapOrigin]) : "";
+        wR = uR ? fR : VR,
+        rR = wR.filter((RR => RR.visited)).length,
+        eR = qR ? (qR.bounds.mapMaxX - qR.bounds.mapMinX) / (qR.bounds.mapMaxZ - qR.bounds.mapMinZ) : 2,
+        aR = qR ? JSON.stringify([qR.bounds, RR.mapOrigin]) : "";
       return {
-        local: NW,
-        points: xW,
-        portals: NW ? ZW : [],
-        progress: xW.length ? OW("skyblockGame:mapDiscovered", {
-          current: String(lW),
-          total: String(xW.length)
+        local: uR,
+        points: wR,
+        portals: uR ? KR : [],
+        progress: wR.length ? GR("skyblockGame:mapDiscovered", {
+          current: String(rR),
+          total: String(wR.length)
         }) : null,
-        percent: xW.length ? 100 * lW / xW.length : 0,
-        canTravel: [...xW, ...NW ? ZW : []].some((WW => WW.visited && !WW.current)),
-        noLandmarks: NW && !WW.insideDungeon && 0 === wW.length,
-        background: LW ? {
-          imageKey: LW.imageKey,
-          fallbackImageKey: WW.zoneId,
-          geometryKey: bW,
-          label: OW(LW.labelKey),
-          colour: LW.backgroundColour,
-          ratio: AW
+        percent: wR.length ? 100 * rR / wR.length : 0,
+        canTravel: [...wR, ...uR ? KR : []].some((RR => RR.visited && !RR.current)),
+        noLandmarks: uR && !RR.insideDungeon && 0 === fR.length,
+        background: qR ? {
+          imageKey: qR.imageKey,
+          fallbackImageKey: RR.zoneId,
+          geometryKey: aR,
+          label: GR(qR.labelKey),
+          colour: qR.backgroundColour,
+          ratio: eR
         } : null,
-        connections: PW(WW.zones),
-        minimap: LW ? {
-          imageKey: LW.imageKey,
-          fallbackImageKey: WW.zoneId,
-          geometryKey: bW,
-          label: OW(LW.labelKey),
-          colour: LW.backgroundColour,
-          caption: OW(WW.zoneId === mW ? "skyblockGame:zoneIsland" : LW.labelKey),
-          width: (LW.bounds.mapMaxX - LW.bounds.mapMinX) / LW.minimapSpan * 100 + "%",
-          height: (LW.bounds.mapMaxZ - LW.bounds.mapMinZ) / LW.minimapSpan * 100 + "%",
-          markers: [...wW, ...ZW]
+        connections: ZR(RR.zones),
+        minimap: qR ? {
+          imageKey: qR.imageKey,
+          fallbackImageKey: RR.zoneId,
+          geometryKey: aR,
+          label: GR(qR.labelKey),
+          colour: qR.backgroundColour,
+          caption: GR(RR.zoneId === yR ? "skyblockGame:zoneIsland" : qR.labelKey),
+          width: (qR.bounds.mapMaxX - qR.bounds.mapMinX) / qR.minimapSpan * 100 + "%",
+          height: (qR.bounds.mapMaxZ - qR.bounds.mapMinZ) / qR.minimapSpan * 100 + "%",
+          markers: [...fR, ...KR]
         } : null
       }
     }
 
-    function PW(WW) {
-      const iW = new Set;
-      return WW.flatMap((OW => OW.connections.flatMap((mW => {
-        const EW = WW.find((WW => WW.id === mW)),
-          NW = [OW.id, mW].sort().join("|");
-        return !EW || iW.has(NW) ? [] : (iW.add(NW), [{
-          id: `${OW.id}-${mW}`,
-          start: OW.position,
-          end: EW.position,
-          explored: OW.visited && EW.visited
+    function ZR(RR) {
+      const JR = new Set;
+      return RR.flatMap((GR => GR.connections.flatMap((yR => {
+        const tR = RR.find((RR => RR.id === yR)),
+          uR = [GR.id, yR].sort().join("|");
+        return !tR || JR.has(uR) ? [] : (JR.add(uR), [{
+          id: `${GR.id}-${yR}`,
+          start: GR.position,
+          end: tR.position,
+          explored: GR.visited && tR.visited
         }])
       }))))
     }
-    var LW = OW(39733);
-    class cW extends LW.e {}
-    const wW = "skyblockMapView";
-    class tW extends cW {
-      constructor(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(WW, mW, EW), this.requestTravel = iW, this.translate = OW, this.now = NW, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
+    var qR = GR(39727);
+    class iR extends qR.d {}
+    const fR = "skyblockMapView";
+    class VR extends iR {
+      constructor(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(RR, yR, tR), this.requestTravel = JR, this.translate = GR, this.now = uR, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
           presentation: null,
           enabled: !1,
           open: !1,
@@ -253,25 +219,25 @@ export const modules = {
           feedback: ""
         }, this.showLocal = () => {
           this.selectTab("local"), this.show()
-        }, this.selectTab = WW => {
-          this.tab = WW, this.feedbackKey = "", this.emit()
-        }, this.travel = (WW, iW) => {
-          if (!this.map || this.pending || this.JA) return;
-          const OW = ("zone" === WW ? this.map.zones : this.map.landmarks).find((WW => WW.id === iW));
-          if (OW) {
+        }, this.selectTab = RR => {
+          this.tab = RR, this.feedbackKey = "", this.emit()
+        }, this.travel = (RR, JR) => {
+          if (!this.map || this.pending || this.He) return;
+          const GR = ("zone" === RR ? this.map.zones : this.map.landmarks).find((RR => RR.id === JR));
+          if (GR) {
             if (this.map.insideDungeon) this.feedbackKey = "skyblockGame:mapDungeonTravelDisabled";
-            else if ("fastTravelEnabled" in OW && !OW.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
-            else if (OW.visited)
-              if ("zone" === WW && iW === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
+            else if ("fastTravelEnabled" in GR && !GR.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
+            else if (GR.visited)
+              if ("zone" === RR && JR === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
               else {
-                const OW = ++this.nextRequestId;
+                const GR = ++this.nextRequestId;
                 this.pending = {
-                  requestId: OW,
+                  requestId: GR,
                   expiresAt: this.now() + 1e4
                 }, this.feedbackKey = "skyblockGame:mapTravelling", this.requestTravel({
-                  kind: WW,
-                  id: iW,
-                  requestId: OW
+                  kind: RR,
+                  id: JR,
+                  requestId: GR
                 })
               }
             else this.feedbackKey = "skyblockGame:mapVisitFirst";
@@ -282,28 +248,28 @@ export const modules = {
       getEntities() {
         return this.entities
       }
-      setTranslator(WW) {
-        this.translate = WW, this.emit()
+      setTranslator(RR) {
+        this.translate = RR, this.emit()
       }
-      yZ(WW) {
-        var iW;
-        if (!this.JA)
-          if ("entities" !== WW.kind)
-            if ("open" !== WW.kind) {
-              var OW, mW;
-              if ("snapshot" === WW.kind)(null === (OW = WW.snapshot) || void 0 === OW ? void 0 : OW.zoneId) !== (null === (mW = this.map) || void 0 === mW ? void 0 : mW.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = WW.snapshot, !this.map && this.open && this.close();
-              else if ("travelQueued" === WW.kind) {
-                var EW;
-                WW.requestId === (null === (EW = this.pending) || void 0 === EW ? void 0 : EW.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
-              } else if (WW.requestId === (null === (iW = this.pending) || void 0 === iW ? void 0 : iW.requestId)) {
-                var NW;
-                this.pending = null, this.feedbackKey = null !== (NW = WW.errorKey) && void 0 !== NW ? NW : "", null === WW.errorKey && this.close()
+      BK(RR) {
+        var JR;
+        if (!this.He)
+          if ("entities" !== RR.kind)
+            if ("open" !== RR.kind) {
+              var GR, yR;
+              if ("snapshot" === RR.kind)(null === (GR = RR.snapshot) || void 0 === GR ? void 0 : GR.zoneId) !== (null === (yR = this.map) || void 0 === yR ? void 0 : yR.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = RR.snapshot, !this.map && this.open && this.close();
+              else if ("travelQueued" === RR.kind) {
+                var tR;
+                RR.requestId === (null === (tR = this.pending) || void 0 === tR ? void 0 : tR.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
+              } else if (RR.requestId === (null === (JR = this.pending) || void 0 === JR ? void 0 : JR.requestId)) {
+                var uR;
+                this.pending = null, this.feedbackKey = null !== (uR = RR.errorKey) && void 0 !== uR ? uR : "", null === RR.errorKey && this.close()
               }
               this.emit()
             } else this.show();
-        else this.entities = WW.entities
+        else this.entities = RR.entities
       }
-      hZ() {
+      gK() {
         this.pending && this.now() >= this.pending.expiresAt && (this.pending = null, this.feedbackKey = "skyblockGame:mapTravelTimeout", this.emit())
       }
       dispose() {
@@ -314,7 +280,7 @@ export const modules = {
       }
       buildSnapshot() {
         return {
-          presentation: this.map ? NW(this.map, this.tab, this.translate) : null,
+          presentation: this.map ? uR(this.map, this.tab, this.translate) : null,
           enabled: this.isEnabled(),
           open: this.open,
           tab: this.tab,
@@ -324,184 +290,184 @@ export const modules = {
         }
       }
     }
-    var ZW = OW(344);
-    const xW = 67.5 * Math.PI / 180;
+    var KR = GR(377);
+    const wR = 67.5 * Math.PI / 180;
 
-    function lW(WW, iW) {
-      const OW = Math.abs(WW);
-      if (OW > xW || iW.trackHalfWidth <= 0) return null;
-      const mW = iW.trackHalfWidth,
-        EW = iW.screenHalfWidth / (iW.tanHalfFovX * Math.max(.5, Math.cos(iW.pitch))),
-        NW = Math.min(Math.atan(.6 * mW / EW), .75 * xW),
-        PW = EW * Math.tan(NW);
-      let LW;
-      if (OW <= NW) LW = EW * Math.tan(OW);
+    function rR(RR, JR) {
+      const GR = Math.abs(RR);
+      if (GR > wR || JR.trackHalfWidth <= 0) return null;
+      const yR = JR.trackHalfWidth,
+        tR = JR.screenHalfWidth / (JR.tanHalfFovX * Math.max(.5, Math.cos(JR.pitch))),
+        uR = Math.min(Math.atan(.6 * yR / tR), .75 * wR),
+        ZR = tR * Math.tan(uR);
+      let qR;
+      if (GR <= uR) qR = tR * Math.tan(GR);
       else {
-        const WW = xW - NW,
-          iW = Math.max(0, EW * WW / (Math.cos(NW) ** 2 * (mW - PW)) - 1),
-          cW = (OW - NW) / WW;
-        LW = PW + (mW - PW) * (1 + iW) * cW / (1 + iW * cW)
+        const RR = wR - uR,
+          JR = Math.max(0, tR * RR / (Math.cos(uR) ** 2 * (yR - ZR)) - 1),
+          iR = (GR - uR) / RR;
+        qR = ZR + (yR - ZR) * (1 + JR) * iR / (1 + JR * iR)
       }
-      return 50 + Math.sign(WW) * LW * 50 / mW
+      return 50 + Math.sign(RR) * qR * 50 / yR
     }
-    class AW {
-      constructor(WW, iW) {
-        this.map = WW, this.visited = iW, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = iW ? "landmarks" : "unknownLandmarks"
+    class eR {
+      constructor(RR, JR) {
+        this.map = RR, this.visited = JR, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = JR ? "landmarks" : "unknownLandmarks"
       }
       getPoints() {
-        const WW = this.map.getSnapshot().map;
-        return !WW || WW.insideDungeon ? [] : WW.landmarks.filter((WW => WW.visited === this.visited)).map((WW => {
-          var iW, OW;
+        const RR = this.map.getSnapshot().map;
+        return !RR || RR.insideDungeon ? [] : RR.landmarks.filter((RR => RR.visited === this.visited)).map((RR => {
+          var JR, GR;
           return {
-            id: `landmark:${WW.id}`,
-            position: WW.position,
-            icon: null !== (iW = WW.icon) && void 0 !== iW ? iW : "unknown",
-            nameKey: null !== (OW = WW.nameKey) && void 0 !== OW ? OW : "skyblockGame:compassUnknown",
+            id: `landmark:${RR.id}`,
+            position: RR.position,
+            icon: null !== (JR = RR.icon) && void 0 !== JR ? JR : "unknown",
+            nameKey: null !== (GR = RR.nameKey) && void 0 !== GR ? GR : "skyblockGame:compassUnknown",
             kind: this.visited ? "landmark" : "unknown"
           }
         }))
       }
     }
-    class bW {
-      constructor(WW, iW, OW, mW) {
-        this.map = WW, this.kind = iW, this.position = OW, this.alive = mW, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = iW, this.range = "enemy" === iW ? 48 : 64, this.limit = 12
+    class aR {
+      constructor(RR, JR, GR, yR) {
+        this.map = RR, this.kind = JR, this.position = GR, this.alive = yR, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = JR, this.range = "enemy" === JR ? 48 : 64, this.limit = 12
       }
-      Vk(WW) {
-        if ("enemy" !== this.kind || this.alive(WW.ZO)) return this.position(WW.ZO)
+      vW(RR) {
+        if ("enemy" !== this.kind || this.alive(RR.fG)) return this.position(RR.fG)
       }
       getPoints() {
-        const WW = [];
-        for (const mW of this.map.getEntities()) {
-          if (mW.kind !== this.kind || "enemy" === this.kind && !this.alive(mW.compassEntityId)) continue;
-          const EW = this.position(mW.compassEntityId);
-          var iW, OW;
-          if (EW) WW.push({
-            id: `${this.kind}:${mW.compassEntityId}`,
-            ZO: mW.compassEntityId,
+        const RR = [];
+        for (const yR of this.map.getEntities()) {
+          if (yR.kind !== this.kind || "enemy" === this.kind && !this.alive(yR.compassEntityId)) continue;
+          const tR = this.position(yR.compassEntityId);
+          var JR, GR;
+          if (tR) RR.push({
+            id: `${this.kind}:${yR.compassEntityId}`,
+            fG: yR.compassEntityId,
             kind: this.kind,
-            icon: null !== (iW = mW.icon) && void 0 !== iW ? iW : mW.npcSkin ? `npc_${mW.npcSkin}` : this.kind,
-            displayName: mW.displayName,
-            position: EW,
-            nameKey: null !== (OW = mW.nameKey) && void 0 !== OW ? OW : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
+            icon: null !== (JR = yR.icon) && void 0 !== JR ? JR : yR.npcSkin ? `npc_${yR.npcSkin}` : this.kind,
+            displayName: yR.displayName,
+            position: tR,
+            nameKey: null !== (GR = yR.nameKey) && void 0 !== GR ? GR : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
           })
         }
-        return WW
+        return RR
       }
     }
-    class jW {
-      constructor(WW) {
-        this.map = WW, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
+    class LR {
+      constructor(RR) {
+        this.map = RR, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
       }
       getPoints() {
-        const WW = this.map.getSnapshot().map;
-        return !WW || WW.insideDungeon ? [] : WW.portals.map((WW => {
-          var iW;
+        const RR = this.map.getSnapshot().map;
+        return !RR || RR.insideDungeon ? [] : RR.portals.map((RR => {
+          var JR;
           return {
-            id: "portal:" + WW.id,
+            id: "portal:" + RR.id,
             kind: "portal",
-            position: WW.position,
-            nameKey: null !== (iW = WW.nameKey) && void 0 !== iW ? iW : "skyblockGame:compassUnvisitedZone",
-            icon: WW.visited ? "dungeons" === WW.destination ? "portal_orange" : "portal" : "unknown",
-            colour: WW.colour
+            position: RR.position,
+            nameKey: null !== (JR = RR.nameKey) && void 0 !== JR ? JR : "skyblockGame:compassUnvisitedZone",
+            icon: RR.visited ? "dungeons" === RR.destination ? "portal_orange" : "portal" : "unknown",
+            colour: RR.colour
           }
         }))
       }
     }
-    class UW {
-      constructor(WW) {
-        this.target = WW, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
+    class nR {
+      constructor(RR) {
+        this.target = RR, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
       }
       getPoints() {
-        const WW = this.target();
-        return WW ? [{
+        const RR = this.target();
+        return RR ? [{
           id: "quest",
           kind: "quest",
           icon: "quest",
-          position: WW.position,
-          nameKey: WW.nameKey
+          position: RR.position,
+          nameKey: RR.nameKey
         }] : []
       }
     }
 
-    function kW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : WW.position;
-      const EW = mW[0] - iW[0],
-        NW = mW[2] - iW[2];
+    function UR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RR.position;
+      const tR = yR[0] - JR[0],
+        uR = yR[2] - JR[2];
       return {
-        ...WW,
-        position: mW,
-        offset: ZW.e.computeShortestRotation(OW, (0, ZW.Ab)([EW, 0, NW])),
-        distance: Math.hypot(EW, mW[1] - iW[1], NW)
+        ...RR,
+        position: yR,
+        offset: KR.e.computeShortestRotation(GR, (0, KR.Bb)([tR, 0, uR])),
+        distance: Math.hypot(tR, yR[1] - JR[1], uR)
       }
     }
-    let sW;
+    let WR;
 
-    function MW(WW, iW) {
-      var OW;
-      return (null === (OW = sW) || void 0 === OW ? void 0 : OW.locale) !== iW && (sW = {
-        locale: iW,
-        near: new Intl.NumberFormat(iW, {
+    function AR(RR, JR) {
+      var GR;
+      return (null === (GR = WR) || void 0 === GR ? void 0 : GR.locale) !== JR && (WR = {
+        locale: JR,
+        near: new Intl.NumberFormat(JR, {
           minimumFractionDigits: 1,
           maximumFractionDigits: 1
         }),
-        far: new Intl.NumberFormat(iW, {
+        far: new Intl.NumberFormat(JR, {
           minimumFractionDigits: 0,
           maximumFractionDigits: 0
         })
-      }), (WW < 10 ? sW.near : sW.far).format(WW)
+      }), (RR < 10 ? WR.near : WR.far).format(RR)
     }
-    class KW {
+    class CR {
       constructor() {
         this.providers = new Map, this.candidates = [], this.refreshAt = 0
       }
-      register(WW) {
-        return this.providers.set(WW.id, WW), this.refreshAt = 0, () => {
-          this.providers.get(WW.id) === WW && (this.providers.delete(WW.id), this.refreshAt = 0)
+      register(RR) {
+        return this.providers.set(RR.id, RR), this.refreshAt = 0, () => {
+          this.providers.get(RR.id) === RR && (this.providers.delete(RR.id), this.refreshAt = 0)
         }
       }
-      frame(WW, iW, OW) {
-        if (OW >= this.refreshAt) {
-          this.refreshAt = OW + 200, this.candidates = [];
-          for (const iW of this.providers.values()) {
-            if (!iW.enabled) continue;
-            const OW = iW.getPoints().map((iW => {
-              const OW = iW.position;
+      frame(RR, JR, GR) {
+        if (GR >= this.refreshAt) {
+          this.refreshAt = GR + 200, this.candidates = [];
+          for (const JR of this.providers.values()) {
+            if (!JR.enabled) continue;
+            const GR = JR.getPoints().map((JR => {
+              const GR = JR.position;
               return {
-                point: iW,
-                distance: Math.hypot(OW[0] - WW[0], OW[1] - WW[1], OW[2] - WW[2])
+                point: JR,
+                distance: Math.hypot(GR[0] - RR[0], GR[1] - RR[1], GR[2] - RR[2])
               }
-            })).filter((WW => WW.distance <= iW.range)).sort(((WW, iW) => WW.distance - iW.distance)).slice(0, iW.limit);
+            })).filter((RR => RR.distance <= JR.range)).sort(((RR, JR) => RR.distance - JR.distance)).slice(0, JR.limit);
             for (const {
-                point: WW
+                point: RR
               }
-              of OW) this.candidates.push({
-              provider: iW,
-              point: WW
+              of GR) this.candidates.push({
+              provider: JR,
+              point: RR
             })
           }
         }
-        const mW = [];
+        const yR = [];
         for (const {
-            point: EW,
-            provider: NW
+            point: tR,
+            provider: uR
           }
           of this.candidates) {
-          if (!NW.enabled) continue;
-          const OW = NW.Vk ? NW.Vk(EW) : EW.position;
-          if (OW) {
-            const NW = kW(EW, WW, iW, OW);
-            Math.abs(NW.offset) <= xW && mW.push(NW)
+          if (!uR.enabled) continue;
+          const GR = uR.vW ? uR.vW(tR) : tR.position;
+          if (GR) {
+            const uR = UR(tR, RR, JR, GR);
+            Math.abs(uR.offset) <= wR && yR.push(uR)
           }
         }
-        return mW
+        return yR
       }
       dispose() {
         this.providers.clear(), this.candidates = []
       }
     }
-    var SW = OW(3368),
-      YW = OW(62);
-    const yW = [{
+    var XR = GR(3498),
+      MR = GR(66);
+    const BR = [{
         dailyRewardCoins: 1e3,
         dailyRewardItems: []
       }, {
@@ -532,41 +498,41 @@ export const modules = {
           dailyRewardItemAmount: 1
         }]
       }],
-      TW = yW.length;
+      lR = BR.length;
 
-    function JW(WW) {
-      return WW >= TW ? 1 : WW + 1
+    function pR(RR) {
+      return RR >= lR ? 1 : RR + 1
     }
-    const hW = "skyblockQuests",
-      HW = Object.freeze({
+    const gR = "skyblockQuests",
+      bR = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      nW = Object.freeze({
+      vR = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function uW(WW) {
-      let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const OW = Math.max(0, Math.floor(WW)),
-        mW = Math.floor(OW % 1e3 / 100),
-        EW = Math.floor(OW / 1e3),
-        NW = EW % 60,
-        PW = Math.floor(EW / 60),
-        LW = PW % 60,
-        cW = Math.floor(PW / 60),
-        wW = WW => WW < 10 ? `0${WW}` : String(WW),
-        tW = iW ? `.${mW}` : "";
-      return cW > 0 ? `${cW}:${wW(LW)}:${wW(NW)}${tW}` : `${LW}:${wW(NW)}${tW}`
+    function OR(RR) {
+      let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const GR = Math.max(0, Math.floor(RR)),
+        yR = Math.floor(GR % 1e3 / 100),
+        tR = Math.floor(GR / 1e3),
+        uR = tR % 60,
+        ZR = Math.floor(tR / 60),
+        qR = ZR % 60,
+        iR = Math.floor(ZR / 60),
+        fR = RR => RR < 10 ? `0${RR}` : String(RR),
+        VR = JR ? `.${yR}` : "";
+      return iR > 0 ? `${iR}:${fR(qR)}:${fR(uR)}${VR}` : `${qR}:${fR(uR)}${VR}`
     }
-    const oW = "devquests",
-      dW = "none",
-      eW = {
+    const xR = "devquests",
+      NR = "none",
+      DR = {
         hub: {
           farming_1: {
             min: [4, 16, 90],
@@ -604,8 +570,8 @@ export const modules = {
           }
         }
       },
-      vW = "Compressed Messy Stone",
-      gW = {
+      HR = "Compressed Messy Stone",
+      oR = {
         "Grass Block": "Useless Soil",
         "Pine Grass Block": "Useless Soil",
         "Jungle Grass Block": "Useless Soil",
@@ -618,120 +584,120 @@ export const modules = {
         Sand: "Sandstone",
         Gravel: "Smooth Andesite"
       },
-      DW = ["Stone", "Diorite", "Andesite", "Granite"],
-      VW = new Set(DW),
-      pW = (Object.keys(gW), {
+      cR = ["Stone", "Diorite", "Andesite", "Granite"],
+      PR = new Set(cR),
+      IR = (Object.keys(oR), {
         "Pure Coal Ore": "Coal Ore",
         "Pure Iron Ore": "Iron Ore",
         "Pure Gold Ore": "Gold Ore",
         "Pure Diamond Ore": "Diamond Ore",
         "Pure Moonstone Ore": "Moonstone Ore"
       });
-    const fW = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
+    const mR = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
 
-    function CW(WW, iW) {
-      const OW = Math.floor(5 * WW / (2 * iW + 1));
-      return Math.min(4, Math.max(0, OW))
+    function zR(RR, JR) {
+      const GR = Math.floor(5 * RR / (2 * JR + 1));
+      return Math.min(4, Math.max(0, GR))
     }
-    var XW = OW(1230);
-    var BW = OW(37503);
-    var qW = OW(3361),
-      RW = OW(27),
-      GW = OW(10114);
-    const IW = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
-      aW = 1e3;
+    var SR = GR(1336);
+    var jR = GR(37415);
+    var dR = GR(3494),
+      ER = GR(32),
+      YR = GR(10238);
+    const kR = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
+      QR = 1e3;
 
-    function rW(WW) {
-      return Math.max(0, WW)
-    }
-
-    function zW(WW) {
-      return 1 + .01 * rW(WW)
+    function FR(RR) {
+      return Math.max(0, RR)
     }
 
-    function FW(WW) {
-      return 1 + .005 * rW(WW)
+    function TR(RR) {
+      return 1 + .01 * FR(RR)
     }
 
-    function QW(WW) {
-      return 1 + .005 * rW(WW)
+    function sR(RR) {
+      return 1 + .005 * FR(RR)
     }
 
-    function Wi(WW) {
-      return .01 * rW(WW)
+    function hR(RR) {
+      return 1 + .005 * FR(RR)
     }
 
-    function ii(WW) {
-      return 150 / (150 + rW(WW))
+    function RJ(RR) {
+      return .01 * FR(RR)
     }
 
-    function Oi(WW) {
-      return 1 + .002 * rW(WW)
+    function JJ(RR) {
+      return 150 / (150 + FR(RR))
     }
 
-    function mi(WW) {
-      return Math.round(10 * WW) / 10
+    function GJ(RR) {
+      return 1 + .002 * FR(RR)
     }
 
-    function Ei(WW, iW) {
-      switch (WW) {
+    function yJ(RR) {
+      return Math.round(10 * RR) / 10
+    }
+
+    function tJ(RR, JR) {
+      switch (RR) {
         case "foraging":
           return {
-            translationKey: "skyblockGame:foragingBenefit", percent: mi(100 * (FW(iW) - 1))
+            translationKey: "skyblockGame:foragingBenefit", percent: yJ(100 * (sR(JR) - 1))
           };
         case "combat":
           return {
-            translationKey: "skyblockGame:combatBenefit", percent: mi(100 * (zW(iW) - 1))
+            translationKey: "skyblockGame:combatBenefit", percent: yJ(100 * (TR(JR) - 1))
           };
         case "mining":
           return {
-            translationKey: "skyblockGame:miningBenefit", percent: mi(100 * (QW(iW) - 1))
+            translationKey: "skyblockGame:miningBenefit", percent: yJ(100 * (hR(JR) - 1))
           };
         case "farming":
           return {
-            translationKey: "skyblockGame:farmingBenefit", percent: mi(100 * Wi(iW))
+            translationKey: "skyblockGame:farmingBenefit", percent: yJ(100 * RJ(JR))
           };
         case "fishing":
           return {
-            translationKey: "skyblockGame:fishingBenefit", percent: mi(100 * (1 - ii(iW)))
+            translationKey: "skyblockGame:fishingBenefit", percent: yJ(100 * (1 - JJ(JR)))
           };
         case "exploration":
           return {
-            translationKey: "skyblockGame:explorationBenefit", percent: mi(100 * (Oi(iW) - 1))
+            translationKey: "skyblockGame:explorationBenefit", percent: yJ(100 * (GJ(JR) - 1))
           }
       }
     }
 
-    function Ni(WW) {
-      return "farming" === WW ? 200 : 100
+    function uJ(RR) {
+      return "farming" === RR ? 200 : 100
     }
 
-    function Pi(WW, iW) {
-      if (!Number.isSafeInteger(WW) || WW < 0) throw new Error("Skill XP must be a non-negative safe integer");
-      const OW = Ni(iW),
-        mW = WW => function(WW, iW) {
-          return Ni(WW) * iW * (iW + 1) / 2
-        }(iW, WW);
-      let EW = Math.min(aW, Math.floor((Math.sqrt(8 * WW / OW + 1) - 1) / 2));
-      return EW < aW && mW(EW + 1) <= WW ? EW++ : mW(EW) > WW && EW--, {
-        totalXp: WW,
-        level: EW,
-        xpIntoLevel: WW - mW(EW),
-        xpForNextLevel: EW === aW ? null : OW * (EW + 1)
+    function ZJ(RR, JR) {
+      if (!Number.isSafeInteger(RR) || RR < 0) throw new Error("Skill XP must be a non-negative safe integer");
+      const GR = uJ(JR),
+        yR = RR => function(RR, JR) {
+          return uJ(RR) * JR * (JR + 1) / 2
+        }(JR, RR);
+      let tR = Math.min(QR, Math.floor((Math.sqrt(8 * RR / GR + 1) - 1) / 2));
+      return tR < QR && yR(tR + 1) <= RR ? tR++ : yR(tR) > RR && tR--, {
+        totalXp: RR,
+        level: tR,
+        xpIntoLevel: RR - yR(tR),
+        xpForNextLevel: tR === QR ? null : GR * (tR + 1)
       }
     }
-    const Li = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
+    const qJ = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
 
-    function ci(WW) {
-      return Li.has(WW)
+    function iJ(RR) {
+      return qJ.has(RR)
     }
-    const wi = new Set(ZW.mb);
+    const fJ = new Set(KR.nb);
 
-    function ti(WW) {
-      return wi.has(WW)
+    function VJ(RR) {
+      return fJ.has(RR)
     }
     new Set(["Watermelon", "Melon", "Wheat|FreshlyGrown", "Rice|FreshlyGrown", "Corn Plant|FreshlyGrown", "Chili Pepper Plant|FreshlyGrown", "Chili Pepper Plant|Lava|FreshlyGrown", "Tomato Plant|FreshlyGrown", "Tomato Plant|Top|FreshlyGrown", "Carrot Plant|FreshlyGrown", "Potato Plant|FreshlyGrown", "Sugar Cane Plant|FreshlyGrown", "Sugar Cane Plant|Top|FreshlyGrown", "Coffee Plant|FreshlyGrown", "Lettuce Plant|FreshlyGrown", "Cauliflower Plant|FreshlyGrown", "Parsnip Plant|FreshlyGrown", "Red Cabbage Plant|FreshlyGrown", "Beetroot Plant|FreshlyGrown"]);
-    const Zi = {
+    const KJ = {
         "Maple Log": 10,
         "Pine Log": 10,
         "Plum Log": 10,
@@ -744,7 +710,7 @@ export const modules = {
         "Spectral Log": 10,
         "Mango Log": 10
       },
-      xi = {
+      wJ = {
         Stone: 2,
         Diorite: 18,
         Granite: 18,
@@ -757,14 +723,14 @@ export const modules = {
         "Block of Coal": 15,
         "Block of Gold": 30
       },
-      li = {
-        ...xi,
-        ...Object.fromEntries(Object.entries(pW).map((WW => {
-          let [iW, OW] = WW;
-          return [iW, 9 * xi[OW]]
+      rJ = {
+        ...wJ,
+        ...Object.fromEntries(Object.entries(IR).map((RR => {
+          let [JR, GR] = RR;
+          return [JR, 9 * wJ[GR]]
         })))
       },
-      Ai = {
+      eJ = {
         Watermelon: 10,
         Melon: 10,
         "Wheat|FreshlyGrown": 10,
@@ -785,7 +751,7 @@ export const modules = {
         "Red Cabbage Plant|FreshlyGrown": 10,
         "Beetroot Plant|FreshlyGrown": 10
       },
-      bi = {
+      aJ = {
         Wheatfish: 25,
         Darter: 25,
         "Sunset Minnow": 25,
@@ -849,7 +815,7 @@ export const modules = {
         "Pearlescent Moonfish": 300,
         "Game Dev Fish": 50
       };
-    const ji = {
+    const LJ = {
         foraging: "Iron Axe",
         combat: "Iron Sword",
         mining: "Iron Pickaxe",
@@ -857,7 +823,7 @@ export const modules = {
         fishing: "Rusty Rod",
         exploration: "Compass"
       },
-      Ui = {
+      nJ = {
         foraging: [80, 220, 100],
         combat: [240, 70, 70],
         mining: [60, 220, 240],
@@ -866,112 +832,112 @@ export const modules = {
         exploration: [255, 180, 70]
       };
 
-    function ki(WW) {
-      return `rgb(${Ui[WW].join(", ")})`
+    function UJ(RR) {
+      return `rgb(${nJ[RR].join(", ")})`
     }
 
-    function si(WW, iW, OW) {
-      if (!OW) return WW(iW);
-      const mW = {};
-      for (const [EW, NW] of Object.entries(OW)) mW[EW] = "string" === typeof NW ? NW : WW(NW.translationKey);
-      return WW(iW, mW)
+    function WJ(RR, JR, GR) {
+      if (!GR) return RR(JR);
+      const yR = {};
+      for (const [tR, uR] of Object.entries(GR)) yR[tR] = "string" === typeof uR ? uR : RR(uR.translationKey);
+      return RR(JR, yR)
     }
-    class Mi {
-      constructor(WW, iW) {
-        this.now = WW, this.getJournal = iW, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.BL = !1, this.onShown = () => {}
+    class AJ {
+      constructor(RR, JR) {
+        this.now = RR, this.getJournal = JR, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.Qq = !1, this.onShown = () => {}
       }
-      enqueue(WW) {
-        const iW = Ki(WW);
-        if (iW) this.pending.push(WW);
+      enqueue(RR) {
+        const JR = CJ(RR);
+        if (JR) this.pending.push(RR);
         else {
-          const iW = this.pending.findIndex(Ki);
-          this.pending.splice(-1 === iW ? this.pending.length : iW, 0, WW)
+          const JR = this.pending.findIndex(CJ);
+          this.pending.splice(-1 === JR ? this.pending.length : JR, 0, RR)
         }
-        return (null === this.current || null !== this.followUp && !iW) && (this.advance(), !0)
+        return (null === this.current || null !== this.followUp && !JR) && (this.advance(), !0)
       }
-      setHeld(WW) {
-        return this.BL = WW, !WW && null === this.current && this.pending.length > 0 && (this.advance(), !0)
+      setHeld(RR) {
+        return this.Qq = RR, !RR && null === this.current && this.pending.length > 0 && (this.advance(), !0)
       }
-      hZ() {
-        const WW = this.getJournal(),
-          iW = this.followUp;
-        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === iW ? this.findFollowUp(this.current) : null), !0;
-        if ("explore" === (null === iW || void 0 === iW ? void 0 : iW.kind) && WW && WW.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
-        if ("step" === (null === iW || void 0 === iW ? void 0 : iW.kind)) {
-          const WW = this.findFollowUp(this.current);
-          if ("step" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || WW.questId !== iW.questId || WW.step.id !== iW.step.id) return this.showFollowUp(WW, this.expiresAt), !0
+      gK() {
+        const RR = this.getJournal(),
+          JR = this.followUp;
+        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === JR ? this.findFollowUp(this.current) : null), !0;
+        if ("explore" === (null === JR || void 0 === JR ? void 0 : JR.kind) && RR && RR.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
+        if ("step" === (null === JR || void 0 === JR ? void 0 : JR.kind)) {
+          const RR = this.findFollowUp(this.current);
+          if ("step" !== (null === RR || void 0 === RR ? void 0 : RR.kind) || RR.questId !== JR.questId || RR.step.id !== JR.step.id) return this.showFollowUp(RR, this.expiresAt), !0
         }
         return !1
       }
       clear() {
         this.pending = [], this.current = null, this.followUp = null, this.expiresAt = 0
       }
-      getView(WW, iW, OW) {
-        var mW, EW, NW, PW;
+      getView(RR, JR, GR) {
+        var yR, tR, uR, ZR;
         if (null === this.current) return null;
-        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, WW, OW);
-        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, WW);
-        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, WW, iW);
+        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, RR, GR);
+        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, RR);
+        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, RR, JR);
         const {
-          questCompletionKind: LW,
-          questCompletionNameKey: cW
-        } = this.current, wW = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, tW = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, ZW = "step" === (null === (mW = this.followUp) || void 0 === mW ? void 0 : mW.kind) ? this.followUp : null, xW = "explore" === (null === (EW = this.followUp) || void 0 === EW ? void 0 : EW.kind);
-        let lW;
-        return lW = xW ? WW("skyblockGame:questExploreTitle") : null !== ZW ? "quest" === LW ? WW("skyblockGame:questNextQuestTitle", {
-          quest: WW(ZW.questNameKey)
-        }) : WW("skyblockGame:questNextStepTitle") : WW("started" === LW ? "skyblockGame:questStartedTitle" : "quest" === LW ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
+          questCompletionKind: qR,
+          questCompletionNameKey: iR
+        } = this.current, fR = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, VR = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, KR = "step" === (null === (yR = this.followUp) || void 0 === yR ? void 0 : yR.kind) ? this.followUp : null, wR = "explore" === (null === (tR = this.followUp) || void 0 === tR ? void 0 : tR.kind);
+        let rR;
+        return rR = wR ? RR("skyblockGame:questExploreTitle") : null !== KR ? "quest" === qR ? RR("skyblockGame:questNextQuestTitle", {
+          quest: RR(KR.questNameKey)
+        }) : RR("skyblockGame:questNextStepTitle") : RR("started" === qR ? "skyblockGame:questStartedTitle" : "quest" === qR ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
           token: this.token,
-          kind: null === this.followUp ? LW : "step",
+          kind: null === this.followUp ? qR : "step",
           phase: null === this.followUp ? "completion" : "next",
-          title: lW,
-          name: xW ? iW("skyblockGame:questExploreName") : null !== ZW ? si(iW, ZW.step.nameKey, ZW.step.nameParams) : si(iW, cW, wW),
-          description: xW ? iW("skyblockGame:questExploreDescription") : null === ZW ? null : si(iW, ZW.step.descriptionKey, ZW.step.descriptionParams),
-          reward: null === this.followUp && tW > 0 ? iW("skyblockGame:questCoinRewardSuffix", {
-            amount: tW.toLocaleString(OW)
+          title: rR,
+          name: wR ? JR("skyblockGame:questExploreName") : null !== KR ? WJ(JR, KR.step.nameKey, KR.step.nameParams) : WJ(JR, iR, fR),
+          description: wR ? JR("skyblockGame:questExploreDescription") : null === KR ? null : WJ(JR, KR.step.descriptionKey, KR.step.descriptionParams),
+          reward: null === this.followUp && VR > 0 ? JR("skyblockGame:questCoinRewardSuffix", {
+            amount: VR.toLocaleString(GR)
           }) : null,
-          iconItem: null !== (NW = null === ZW || void 0 === ZW ? void 0 : ZW.step.questIconItem) && void 0 !== NW ? NW : null,
+          iconItem: null !== (uR = null === KR || void 0 === KR ? void 0 : KR.step.questIconItem) && void 0 !== uR ? uR : null,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
-          waypointNameKey: null !== ZW && (null === (PW = this.getJournal()) || void 0 === PW ? void 0 : PW.trackedQuestId) === ZW.questId ? ZW.step.nameKey : null
+          waypointNameKey: null !== KR && (null === (ZR = this.getJournal()) || void 0 === ZR ? void 0 : ZR.trackedQuestId) === KR.questId ? KR.step.nameKey : null
         }
       }
-      getSkillLevelView(WW, iW, OW) {
+      getSkillLevelView(RR, JR, GR) {
         let {
-          skill: mW,
-          beforeLevel: EW,
-          level: NW
-        } = WW;
-        const PW = Ei(mW, EW),
-          LW = Ei(mW, NW);
+          skill: yR,
+          beforeLevel: tR,
+          level: uR
+        } = RR;
+        const ZR = tJ(yR, tR),
+          qR = tJ(yR, uR);
         return {
           token: this.token,
           kind: "skillLevel",
           phase: "completion",
-          title: iW(`skyblockGame:${mW}`),
-          name: iW("skyblockGame:skillLevelUp", {
-            to: NW.toLocaleString(OW)
+          title: JR(`skyblockGame:${yR}`),
+          name: JR("skyblockGame:skillLevelUp", {
+            to: uR.toLocaleString(GR)
           }),
-          description: PW.percent === LW.percent ? null : iW(`${LW.translationKey}Change`, {
-            before: PW.percent.toLocaleString(OW),
-            after: LW.percent.toLocaleString(OW)
+          description: ZR.percent === qR.percent ? null : JR(`${qR.translationKey}Change`, {
+            before: ZR.percent.toLocaleString(GR),
+            after: qR.percent.toLocaleString(GR)
           }),
           reward: null,
-          iconItem: ji[mW],
-          accent: ki(mW),
+          iconItem: LJ[yR],
+          accent: UJ(yR),
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
-      getLandmarkView(WW, iW) {
+      getLandmarkView(RR, JR) {
         let {
-          landmarkNameKey: OW
-        } = WW;
+          landmarkNameKey: GR
+        } = RR;
         return {
           token: this.token,
           kind: "landmark",
           phase: "completion",
-          title: iW("skyblockGame:landmarkDiscovered"),
-          name: iW(OW),
+          title: JR("skyblockGame:landmarkDiscovered"),
+          name: JR(GR),
           description: null,
           reward: null,
           iconItem: null,
@@ -980,36 +946,36 @@ export const modules = {
           waypointNameKey: null
         }
       }
-      getNpcNoteView(WW, iW, OW) {
+      getNpcNoteView(RR, JR, GR) {
         let {
-          titleKey: mW,
-          textKey: EW,
-          params: NW = {},
-          nameKeys: PW = {},
-          iconItem: LW = null
-        } = WW;
-        const cW = {
-          ...NW
+          titleKey: yR,
+          textKey: tR,
+          params: uR = {},
+          nameKeys: ZR = {},
+          iconItem: qR = null
+        } = RR;
+        const iR = {
+          ...uR
         };
-        for (const [wW, tW] of Object.entries(PW)) cW[wW] = iW(tW);
+        for (const [fR, VR] of Object.entries(ZR)) iR[fR] = JR(VR);
         return {
           token: this.token,
           kind: "npcNote",
           phase: "completion",
-          title: iW(mW),
-          name: OW(EW, cW),
+          title: JR(yR),
+          name: GR(tR, iR),
           description: null,
           reward: null,
-          iconItem: LW,
+          iconItem: qR,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
       durationMs() {
-        var WW;
+        var RR;
         if (null !== this.followUp) return 5600;
-        switch (null === (WW = this.current) || void 0 === WW ? void 0 : WW.questCompletionKind) {
+        switch (null === (RR = this.current) || void 0 === RR ? void 0 : RR.questCompletionKind) {
           case "quest":
             return 4800;
           case "started":
@@ -1024,48 +990,48 @@ export const modules = {
             return 2400
         }
       }
-      showFollowUp(WW, iW) {
-        null === WW || this.BL ? this.advance() : (this.followUp = WW, this.token++, this.shownAt = this.now(), this.expiresAt = null !== iW && void 0 !== iW ? iW : this.shownAt + this.durationMs())
+      showFollowUp(RR, JR) {
+        null === RR || this.Qq ? this.advance() : (this.followUp = RR, this.token++, this.shownAt = this.now(), this.expiresAt = null !== JR && void 0 !== JR ? JR : this.shownAt + this.durationMs())
       }
-      findFollowUp(WW) {
-        var iW;
-        const OW = this.getJournal();
-        if (!OW || this.hasPendingQuestPopup() || Ki(WW)) return null;
-        const mW = "started" === WW.questCompletionKind ? OW.active.some((iW => iW.id === WW.questCompletionQuestId)) : "quest" === WW.questCompletionKind ? OW.completed.some((iW => iW.id === WW.questCompletionQuestId)) : [...OW.active, ...OW.completed].some((iW => iW.id === WW.questCompletionQuestId && iW.subquests.some((iW => iW.id === WW.questCompletionStepId && "completed" === iW.status))));
-        if (!mW) return null;
-        if ("quest" === WW.questCompletionKind && 0 === OW.active.length && !this.hasPendingQuestPopup()) return {
+      findFollowUp(RR) {
+        var JR;
+        const GR = this.getJournal();
+        if (!GR || this.hasPendingQuestPopup() || CJ(RR)) return null;
+        const yR = "started" === RR.questCompletionKind ? GR.active.some((JR => JR.id === RR.questCompletionQuestId)) : "quest" === RR.questCompletionKind ? GR.completed.some((JR => JR.id === RR.questCompletionQuestId)) : [...GR.active, ...GR.completed].some((JR => JR.id === RR.questCompletionQuestId && JR.subquests.some((JR => JR.id === RR.questCompletionStepId && "completed" === JR.status))));
+        if (!yR) return null;
+        if ("quest" === RR.questCompletionKind && 0 === GR.active.length && !this.hasPendingQuestPopup()) return {
           kind: "explore"
         };
-        const EW = OW.active.find((WW => WW.id === OW.trackedQuestId)),
-          NW = null !== (iW = null === EW || void 0 === EW ? void 0 : EW.subquests.find((WW => "ready" === WW.status))) && void 0 !== iW ? iW : null === EW || void 0 === EW ? void 0 : EW.subquests.find((WW => "active" === WW.status));
-        return NW ? {
+        const tR = GR.active.find((RR => RR.id === GR.trackedQuestId)),
+          uR = null !== (JR = null === tR || void 0 === tR ? void 0 : tR.subquests.find((RR => "ready" === RR.status))) && void 0 !== JR ? JR : null === tR || void 0 === tR ? void 0 : tR.subquests.find((RR => "active" === RR.status));
+        return uR ? {
           kind: "step",
-          questId: EW.id,
-          questNameKey: EW.nameKey,
-          step: NW
+          questId: tR.id,
+          questNameKey: tR.nameKey,
+          step: uR
         } : null
       }
       hasPendingQuestPopup() {
-        return this.pending.some((WW => !Ki(WW)))
+        return this.pending.some((RR => !CJ(RR)))
       }
       advance() {
-        var WW;
-        this.current = this.BL ? null : null !== (WW = this.pending.shift()) && void 0 !== WW ? WW : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
+        var RR;
+        this.current = this.Qq ? null : null !== (RR = this.pending.shift()) && void 0 !== RR ? RR : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
       }
     }
 
-    function Ki(WW) {
-      return Si(WW.questCompletionKind)
+    function CJ(RR) {
+      return XJ(RR.questCompletionKind)
     }
 
-    function Si(WW) {
-      return "skillLevel" === WW || "landmark" === WW || "npcNote" === WW
+    function XJ(RR) {
+      return "skillLevel" === RR || "landmark" === RR || "npcNote" === RR
     }
-    var Yi = OW(39739),
-      yi = OW(39747),
-      Ti = OW(39701),
-      Ji = OW(2955);
-    const Hi = [{
+    var MJ = GR(39731),
+      BJ = GR(39739),
+      lJ = GR(39691),
+      pJ = GR(3031);
+    const gJ = [{
       lobes: [3, 4],
       amount: [.04, .055]
     }, {
@@ -1073,52 +1039,52 @@ export const modules = {
       amount: [.025, .035]
     }];
 
-    function ni(WW) {
-      const iW = new Ji.g(WW);
+    function bJ(RR) {
+      const JR = new pJ.i(RR);
       return {
         radius: 45,
         squareness: 3,
-        wobbles: Hi.map((WW => {
+        wobbles: gJ.map((RR => {
           let {
-            lobes: OW,
-            amount: mW
-          } = WW;
+            lobes: GR,
+            amount: yR
+          } = RR;
           return {
-            lobes: OW[Math.floor(iW.next() * OW.length)],
-            amount: mW[0] + iW.next() * (mW[1] - mW[0]),
-            phase: 2 * iW.next() * Math.PI
+            lobes: GR[Math.floor(JR.next() * GR.length)],
+            amount: yR[0] + JR.next() * (yR[1] - yR[0]),
+            phase: 2 * JR.next() * Math.PI
           }
         })),
         samples: 160
       }
     }
 
-    function ui(WW) {
+    function vJ(RR) {
       let {
-        radius: iW,
-        squareness: OW,
-        wobbles: mW,
-        samples: EW
-      } = WW;
-      const NW = [];
-      for (let PW = 0; PW < EW; PW++) {
-        const WW = 2 * Math.PI * PW / EW,
-          LW = Math.cos(WW),
-          cW = Math.sin(WW),
-          wW = iW * (Math.abs(LW) ** OW + Math.abs(cW) ** OW) ** (-1 / OW) * mW.reduce(((iW, OW) => {
+        radius: JR,
+        squareness: GR,
+        wobbles: yR,
+        samples: tR
+      } = RR;
+      const uR = [];
+      for (let ZR = 0; ZR < tR; ZR++) {
+        const RR = 2 * Math.PI * ZR / tR,
+          qR = Math.cos(RR),
+          iR = Math.sin(RR),
+          fR = JR * (Math.abs(qR) ** GR + Math.abs(iR) ** GR) ** (-1 / GR) * yR.reduce(((JR, GR) => {
             let {
-              lobes: mW,
-              amount: EW,
-              phase: NW
-            } = OW;
-            return iW + EW * Math.sin(mW * WW + NW)
+              lobes: yR,
+              amount: tR,
+              phase: uR
+            } = GR;
+            return JR + tR * Math.sin(yR * RR + uR)
           }), 1);
-        NW.push(`${(50+wW*LW).toFixed(2)} ${(50+wW*cW).toFixed(2)}`)
+        uR.push(`${(50+fR*qR).toFixed(2)} ${(50+fR*iR).toFixed(2)}`)
       }
-      return `M${NW.join("L")}Z`
+      return `M${uR.join("L")}Z`
     }
-    const oi = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
-    class di {
+    const OJ = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
+    class xJ {
       constructor() {
         this.compassSpacing = 1, this.compassSize = {
           trackHalfWidth: 0,
@@ -1139,593 +1105,593 @@ export const modules = {
         }, this.viewport = {
           width: 0,
           height: 0
-        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.JA = !1, this.mountCompass = WW => {
-          var iW;
-          if (null === (iW = this.stopLayout) || void 0 === iW || iW.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !WW || this.JA) return;
-          const OW = WW.querySelector(".SkyblockCompassTrack");
+        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.He = !1, this.mountCompass = RR => {
+          var JR;
+          if (null === (JR = this.stopLayout) || void 0 === JR || JR.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !RR || this.He) return;
+          const GR = RR.querySelector(".SkyblockCompassTrack");
           this.compass = {
-            root: WW,
-            track: OW,
-            label: WW.querySelector(".SkyblockCompassLabel")
-          }, OW.replaceChildren();
-          for (let EW = 0; EW < 4; EW++) {
-            const WW = document.createElement("span");
-            WW.className = "SkyblockCompassCardinal", OW.appendChild(WW), this.cardinals.push(WW)
+            root: RR,
+            track: GR,
+            label: RR.querySelector(".SkyblockCompassLabel")
+          }, GR.replaceChildren();
+          for (let tR = 0; tR < 4; tR++) {
+            const RR = document.createElement("span");
+            RR.className = "SkyblockCompassCardinal", GR.appendChild(RR), this.cardinals.push(RR)
           }
-          const mW = (0, Ti.d)(oi, [WW], this.layout);
+          const yR = (0, lJ.c)(OJ, [RR], this.layout);
           this.stopLayout = () => {
-            mW(), OW.replaceChildren()
+            yR(), GR.replaceChildren()
           }, this.render(this.frame)
-        }, this.mountTerrain = WW => {
-          this.terrain = this.JA ? null : WW, this.render(this.frame)
-        }, this.mountMinimapSearchArea = WW => {
-          this.mountSearchArea("minimap", WW)
-        }, this.mountMapSearchArea = WW => {
-          this.mountSearchArea("map", WW)
-        }, this.mountPlayer = WW => {
-          this.player = this.JA ? null : WW, this.render(this.frame)
-        }, this.mountWaypoint = WW => {
-          var iW, OW;
-          if (null === (iW = this.stopWaypoint) || void 0 === iW || iW.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !WW || this.JA) return;
-          const mW = WW.querySelector(".SkyblockQuestWaypointMarker");
-          mW.replaceChildren((0, yi.c)("quest")), this.markerIcon = "quest", this.waypoint = {
-            root: WW,
-            marker: mW,
-            clip: WW.querySelector(".SkyblockQuestWaypointTextClip"),
-            text: WW.querySelector(".SkyblockQuestWaypointText"),
-            label: WW.querySelector(".SkyblockQuestWaypointLabel"),
-            distance: WW.querySelector(".SkyblockQuestWaypointDistance"),
-            hint: WW.querySelector(".SkyblockQuestWaypointHint")
+        }, this.mountTerrain = RR => {
+          this.terrain = this.He ? null : RR, this.render(this.frame)
+        }, this.mountMinimapSearchArea = RR => {
+          this.mountSearchArea("minimap", RR)
+        }, this.mountMapSearchArea = RR => {
+          this.mountSearchArea("map", RR)
+        }, this.mountPlayer = RR => {
+          this.player = this.He ? null : RR, this.render(this.frame)
+        }, this.mountWaypoint = RR => {
+          var JR, GR;
+          if (null === (JR = this.stopWaypoint) || void 0 === JR || JR.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !RR || this.He) return;
+          const yR = RR.querySelector(".SkyblockQuestWaypointMarker");
+          yR.replaceChildren((0, BJ.d)("quest")), this.markerIcon = "quest", this.waypoint = {
+            root: RR,
+            marker: yR,
+            clip: RR.querySelector(".SkyblockQuestWaypointTextClip"),
+            text: RR.querySelector(".SkyblockQuestWaypointText"),
+            label: RR.querySelector(".SkyblockQuestWaypointLabel"),
+            distance: RR.querySelector(".SkyblockQuestWaypointDistance"),
+            hint: RR.querySelector(".SkyblockQuestWaypointHint")
           };
-          const EW = () => {
+          const tR = () => {
               this.waypointMarkerSize = {
-                width: mW.offsetWidth,
-                height: mW.offsetHeight
+                width: yR.offsetWidth,
+                height: yR.offsetHeight
               }, this.waypointInset = {
-                x: mW.offsetWidth / 2 + 8,
-                top: mW.offsetHeight + 8,
+                x: yR.offsetWidth / 2 + 8,
+                top: yR.offsetHeight + 8,
                 bottom: 8
               }
             },
-            NW = new ResizeObserver((() => {
-              EW(), this.render(this.frame)
+            uR = new ResizeObserver((() => {
+              tR(), this.render(this.frame)
             }));
-          NW.observe(mW, {
+          uR.observe(yR, {
             box: "border-box"
           });
-          const PW = () => {
+          const ZR = () => {
             this.viewport = {
               width: window.innerWidth,
               height: window.innerHeight
             }
           };
-          window.addEventListener("resize", PW), null === (OW = window.visualViewport) || void 0 === OW || OW.addEventListener("resize", PW), this.stopWaypoint = () => {
-            var WW;
-            NW.disconnect(), window.removeEventListener("resize", PW), null === (WW = window.visualViewport) || void 0 === WW || WW.removeEventListener("resize", PW)
-          }, PW(), EW(), this.render(this.frame)
-        }, this.mountWaypointOrigin = WW => {
-          var iW;
-          if (null === (iW = this.stopWaypointOrigin) || void 0 === iW || iW.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = WW && !this.JA ? Number(WW.dataset.notificationToken) : null, WW && !this.JA && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            const iW = {
-              nameKey: WW.dataset.waypointNameKey,
+          window.addEventListener("resize", ZR), null === (GR = window.visualViewport) || void 0 === GR || GR.addEventListener("resize", ZR), this.stopWaypoint = () => {
+            var RR;
+            uR.disconnect(), window.removeEventListener("resize", ZR), null === (RR = window.visualViewport) || void 0 === RR || RR.removeEventListener("resize", ZR)
+          }, ZR(), tR(), this.render(this.frame)
+        }, this.mountWaypointOrigin = RR => {
+          var JR;
+          if (null === (JR = this.stopWaypointOrigin) || void 0 === JR || JR.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = RR && !this.He ? Number(RR.dataset.notificationToken) : null, RR && !this.He && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const JR = {
+              nameKey: RR.dataset.waypointNameKey,
               x: 0,
               y: 0,
               startedAt: null
             };
-            this.waypointLaunch = iW;
-            const OW = () => {
-                const OW = WW.getBoundingClientRect();
-                iW.x = (OW.left + OW.width / 2) / window.innerWidth * 100, iW.y = (OW.top + OW.height / 2) / window.innerHeight * 100
+            this.waypointLaunch = JR;
+            const GR = () => {
+                const GR = RR.getBoundingClientRect();
+                JR.x = (GR.left + GR.width / 2) / window.innerWidth * 100, JR.y = (GR.top + GR.height / 2) / window.innerHeight * 100
               },
-              mW = new ResizeObserver(OW);
-            mW.observe(WW.parentElement), mW.observe(WW), window.addEventListener("resize", OW), this.stopWaypointOrigin = () => {
-              mW.disconnect(), window.removeEventListener("resize", OW)
-            }, OW()
+              yR = new ResizeObserver(GR);
+            yR.observe(RR.parentElement), yR.observe(RR), window.addEventListener("resize", GR), this.stopWaypointOrigin = () => {
+              yR.disconnect(), window.removeEventListener("resize", GR)
+            }, GR()
           }
           this.render(this.frame)
         }, this.layout = () => {
           if (!this.compass) return;
-          const WW = this.compass.root,
-            iW = getComputedStyle(WW),
-            OW = getComputedStyle(document.documentElement),
-            mW = parseFloat(OW.fontSize),
-            EW = parseFloat(iW.getPropertyValue("--compass-icon-size")) * mW,
-            NW = "1" === iW.getPropertyValue("--compass-fit-top").trim(),
-            PW = NW ? 1 : 8,
-            LW = Array.from(document.querySelectorAll(oi), (WW => {
-              var iW;
-              return (null !== (iW = WW.querySelector(".MiddleTextTop")) && void 0 !== iW ? iW : WW).getBoundingClientRect()
-            })).filter((WW => WW.width > 0 && WW.height > 0));
-          let cW = (parseFloat(OW.getPropertyValue("--notchTop")) || 0) + PW,
-            wW = "";
-          if (NW) {
-            const iW = window.innerWidth / 2,
-              OW = WW.getBoundingClientRect().height,
-              NW = [cW, ...LW.map((WW => Math.max(cW, WW.bottom + PW)))].sort(((WW, iW) => WW - iW));
-            for (const WW of NW) {
-              let NW = iW - 8;
-              for (const mW of LW) mW.bottom + PW <= WW || mW.top >= WW + OW + PW || (NW = Math.min(NW, mW.right <= iW ? iW - mW.right - 8 : mW.left - iW - 8));
-              const tW = 2 * NW - EW;
-              if (tW >= 16 * mW) {
-                wW = `${tW}px`, cW = WW;
+          const RR = this.compass.root,
+            JR = getComputedStyle(RR),
+            GR = getComputedStyle(document.documentElement),
+            yR = parseFloat(GR.fontSize),
+            tR = parseFloat(JR.getPropertyValue("--compass-icon-size")) * yR,
+            uR = "1" === JR.getPropertyValue("--compass-fit-top").trim(),
+            ZR = uR ? 1 : 8,
+            qR = Array.from(document.querySelectorAll(OJ), (RR => {
+              var JR;
+              return (null !== (JR = RR.querySelector(".MiddleTextTop")) && void 0 !== JR ? JR : RR).getBoundingClientRect()
+            })).filter((RR => RR.width > 0 && RR.height > 0));
+          let iR = (parseFloat(GR.getPropertyValue("--notchTop")) || 0) + ZR,
+            fR = "";
+          if (uR) {
+            const JR = window.innerWidth / 2,
+              GR = RR.getBoundingClientRect().height,
+              uR = [iR, ...qR.map((RR => Math.max(iR, RR.bottom + ZR)))].sort(((RR, JR) => RR - JR));
+            for (const RR of uR) {
+              let uR = JR - 8;
+              for (const yR of qR) yR.bottom + ZR <= RR || yR.top >= RR + GR + ZR || (uR = Math.min(uR, yR.right <= JR ? JR - yR.right - 8 : yR.left - JR - 8));
+              const VR = 2 * uR - tR;
+              if (VR >= 16 * yR) {
+                fR = `${VR}px`, iR = RR;
                 break
               }
             }
           }
-          WW.style.maxWidth !== wW && (WW.style.maxWidth = wW);
-          const tW = WW.getBoundingClientRect(),
-            ZW = this.compassSize.trackHalfWidth;
-          if (tW.width > 0) {
-            const WW = this.compass.track.getBoundingClientRect();
+          RR.style.maxWidth !== fR && (RR.style.maxWidth = fR);
+          const VR = RR.getBoundingClientRect(),
+            KR = this.compassSize.trackHalfWidth;
+          if (VR.width > 0) {
+            const RR = this.compass.track.getBoundingClientRect();
             this.compassSize = {
-              trackHalfWidth: WW.width / 2,
+              trackHalfWidth: RR.width / 2,
               screenHalfWidth: window.innerWidth / 2
-            }, this.compassSpacing = 4 * EW / WW.width
+            }, this.compassSpacing = 4 * tR / RR.width
           }
-          if (!wW)
-            for (const xW of LW) xW.right > tW.left - 8 && xW.left < tW.right + 8 && (cW = Math.max(cW, xW.bottom + PW));
-          WW.style.top = `${cW}px`, this.compassSize.trackHalfWidth !== ZW && this.render(this.frame)
+          if (!fR)
+            for (const wR of qR) wR.right > VR.left - 8 && wR.left < VR.right + 8 && (iR = Math.max(iR, wR.bottom + ZR));
+          RR.style.top = `${iR}px`, this.compassSize.trackHalfWidth !== KR && this.render(this.frame)
         }
       }
-      mountSearchArea(WW, iW) {
-        this.searchAreas[WW] = this.JA ? null : iW, this.render(this.frame)
+      mountSearchArea(RR, JR) {
+        this.searchAreas[RR] = this.He ? null : JR, this.render(this.frame)
       }
-      render(WW) {
-        if (this.JA) return;
-        if (this.frame = WW, this.compass && (ei(this.compass.root, !WW), WW)) {
-          const iW = this.compassSize.trackHalfWidth / 50;
-          WW.compass.cardinals.forEach(((WW, OW) => {
-            const mW = this.cardinals[OW];
-            mW.textContent !== WW.name && (mW.textContent = WW.name), ei(mW, WW.hidden), mW.style.translate = WW.left * iW + "px"
+      render(RR) {
+        if (this.He) return;
+        if (this.frame = RR, this.compass && (NJ(this.compass.root, !RR), RR)) {
+          const JR = this.compassSize.trackHalfWidth / 50;
+          RR.compass.cardinals.forEach(((RR, GR) => {
+            const yR = this.cardinals[GR];
+            yR.textContent !== RR.name && (yR.textContent = RR.name), NJ(yR, RR.hidden), yR.style.translate = RR.left * JR + "px"
           }));
-          const OW = new Set;
-          WW.compass.markers.forEach(((mW, EW) => {
-            var NW;
-            OW.add(mW.id);
-            let PW = this.markers.get(mW.id);
-            PW || (PW = document.createElement("span"), PW.className = "SkyblockCompassMarker", this.markers.set(mW.id, PW), this.compass.track.appendChild(PW)), PW.dataset.icon !== mW.icon && (PW.dataset.icon = mW.icon, PW.replaceChildren((0, yi.c)(mW.icon))), PW.style.color = null !== (NW = mW.colour) && void 0 !== NW ? NW : "", PW.style.translate = mW.left * iW + "px", PW.style.zIndex = String(WW.compass.markers.length - EW), PW.title !== mW.name && (PW.title = mW.name)
+          const GR = new Set;
+          RR.compass.markers.forEach(((yR, tR) => {
+            var uR;
+            GR.add(yR.id);
+            let ZR = this.markers.get(yR.id);
+            ZR || (ZR = document.createElement("span"), ZR.className = "SkyblockCompassMarker", this.markers.set(yR.id, ZR), this.compass.track.appendChild(ZR)), ZR.dataset.icon !== yR.icon && (ZR.dataset.icon = yR.icon, ZR.replaceChildren((0, BJ.d)(yR.icon))), ZR.style.color = null !== (uR = yR.colour) && void 0 !== uR ? uR : "", ZR.style.translate = yR.left * JR + "px", ZR.style.zIndex = String(RR.compass.markers.length - tR), ZR.title !== yR.name && (ZR.title = yR.name)
           }));
-          for (const [WW, mW] of this.markers) OW.has(WW) || (mW.remove(), this.markers.delete(WW));
-          this.compass.label.textContent !== WW.compass.label && (this.compass.label.textContent = WW.compass.label)
+          for (const [RR, yR] of this.markers) GR.has(RR) || (yR.remove(), this.markers.delete(RR));
+          this.compass.label.textContent !== RR.compass.label && (this.compass.label.textContent = RR.compass.label)
         }
-        this.terrain && (ei(this.terrain, !(null !== WW && void 0 !== WW && WW.minimap)), null !== WW && void 0 !== WW && WW.minimap && (this.terrain.style.transform = WW.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", WW.minimap.iconRotation)));
-        const iW = null === WW || void 0 === WW ? void 0 : WW.searchArea;
-        for (const OW of [this.searchAreas.minimap, this.searchAreas.map])
-          if (OW && (ei(OW, !iW), iW)) {
-            if (this.searchAreaPath.seed !== iW.shapeSeed && (this.searchAreaPath = {
-                seed: iW.shapeSeed,
-                d: ui(ni(iW.shapeSeed))
-              }), OW.dataset.shapeSeed !== iW.shapeSeed) {
-              OW.dataset.shapeSeed = iW.shapeSeed;
-              for (const WW of OW.querySelectorAll("path")) WW.setAttribute("d", this.searchAreaPath.d)
+        this.terrain && (NJ(this.terrain, !(null !== RR && void 0 !== RR && RR.minimap)), null !== RR && void 0 !== RR && RR.minimap && (this.terrain.style.transform = RR.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", RR.minimap.iconRotation)));
+        const JR = null === RR || void 0 === RR ? void 0 : RR.searchArea;
+        for (const GR of [this.searchAreas.minimap, this.searchAreas.map])
+          if (GR && (NJ(GR, !JR), JR)) {
+            if (this.searchAreaPath.seed !== JR.shapeSeed && (this.searchAreaPath = {
+                seed: JR.shapeSeed,
+                d: vJ(bJ(JR.shapeSeed))
+              }), GR.dataset.shapeSeed !== JR.shapeSeed) {
+              GR.dataset.shapeSeed = JR.shapeSeed;
+              for (const RR of GR.querySelectorAll("path")) RR.setAttribute("d", this.searchAreaPath.d)
             }
-            OW.style.left = `${iW.left}%`, OW.style.top = `${iW.top}%`, OW.style.width = `${iW.width}%`, OW.style.height = `${iW.height}%`
-          } if (this.player && (ei(this.player, !(null !== WW && void 0 !== WW && WW.player) || WW.player.hidden), null !== WW && void 0 !== WW && WW.player && (this.player.style.left = `${WW.player.left}%`, this.player.style.top = `${WW.player.top}%`, this.player.style.setProperty("--map-player-rotation", WW.player.rotation))), this.waypoint) {
+            GR.style.left = `${JR.left}%`, GR.style.top = `${JR.top}%`, GR.style.width = `${JR.width}%`, GR.style.height = `${JR.height}%`
+          } if (this.player && (NJ(this.player, !(null !== RR && void 0 !== RR && RR.player) || RR.player.hidden), null !== RR && void 0 !== RR && RR.player && (this.player.style.left = `${RR.player.left}%`, this.player.style.top = `${RR.player.top}%`, this.player.style.setProperty("--map-player-rotation", RR.player.rotation))), this.waypoint) {
           const {
-            root: iW,
-            marker: OW,
-            clip: mW,
-            text: EW,
-            label: NW,
-            distance: PW,
-            hint: LW
-          } = this.waypoint, cW = !(null !== WW && void 0 !== WW && WW.waypoint) || null !== WW.waypoint.popupToken && WW.waypoint.popupToken !== this.waypointOriginToken;
-          ei(iW, cW);
-          let wW = 1;
-          const tW = this.waypointLaunch;
-          if (!cW && tW && WW.waypoint.nameKey === tW.nameKey) {
-            const WW = performance.now();
-            tW.startedAt ??= WW, wW = Math.min(1, Math.max(0, (WW - tW.startedAt - 450) / 1e3)), OW.style.opacity = String(Math.min(1, (WW - tW.startedAt) / 150)), 1 === wW && (this.waypointLaunch = null)
-          } else OW.style.opacity = "", tW && null !== tW.startedAt && (this.waypointLaunch = null);
-          if (iW.classList.toggle("Launching", wW < 1), null !== WW && void 0 !== WW && WW.waypoint) {
-            const iW = this.waypointInset,
-              cW = "quest_talk" === WW.waypoint.markerIcon ? function(WW, iW, OW) {
-                if (!WW.text || null === WW.blockHeight || 0 === WW.nearness) return WW;
-                const mW = WW.blockHeight / 100 * OW.height,
-                  EW = -WW.nearness * (vi * mW + iW.width / 2),
-                  NW = WW.nearness * (gi * mW + iW.height / 2);
+            root: JR,
+            marker: GR,
+            clip: yR,
+            text: tR,
+            label: uR,
+            distance: ZR,
+            hint: qR
+          } = this.waypoint, iR = !(null !== RR && void 0 !== RR && RR.waypoint) || null !== RR.waypoint.popupToken && RR.waypoint.popupToken !== this.waypointOriginToken;
+          NJ(JR, iR);
+          let fR = 1;
+          const VR = this.waypointLaunch;
+          if (!iR && VR && RR.waypoint.nameKey === VR.nameKey) {
+            const RR = performance.now();
+            VR.startedAt ??= RR, fR = Math.min(1, Math.max(0, (RR - VR.startedAt - 450) / 1e3)), GR.style.opacity = String(Math.min(1, (RR - VR.startedAt) / 150)), 1 === fR && (this.waypointLaunch = null)
+          } else GR.style.opacity = "", VR && null !== VR.startedAt && (this.waypointLaunch = null);
+          if (JR.classList.toggle("Launching", fR < 1), null !== RR && void 0 !== RR && RR.waypoint) {
+            const JR = this.waypointInset,
+              iR = "quest_talk" === RR.waypoint.markerIcon ? function(RR, JR, GR) {
+                if (!RR.text || null === RR.blockHeight || 0 === RR.nearness) return RR;
+                const yR = RR.blockHeight / 100 * GR.height,
+                  tR = -RR.nearness * (DJ * yR + JR.width / 2),
+                  uR = RR.nearness * (HJ * yR + JR.height / 2);
                 return {
-                  ...WW,
+                  ...RR,
                   text: {
-                    x: WW.text.x + EW / OW.width * 100,
-                    y: WW.text.y + NW / OW.height * 100
+                    x: RR.text.x + tR / GR.width * 100,
+                    y: RR.text.y + uR / GR.height * 100
                   }
                 }
-              }(WW.waypoint, this.waypointMarkerSize, this.viewport) : WW.waypoint,
-              ZW = (0, Yi.b)(cW, iW, this.viewport),
-              xW = wW * wW * (3 - 2 * wW),
-              lW = wW < 1 ? tW.x + (ZW.x - tW.x) * xW : ZW.x,
-              AW = wW < 1 ? tW.y + (ZW.y - tW.y) * xW : ZW.y;
-            OW.style.translate = `${lW}vw ${AW}vh`, mW.style.clipPath = `inset(${iW.top}px ${iW.x}px ${iW.bottom}px)`, ei(EW, wW < 1 || !WW.waypoint.text), EW.style.opacity = String(1 - WW.waypoint.nearness), WW.waypoint.text && (EW.style.translate = `${WW.waypoint.text.x}vw ${WW.waypoint.text.y}vh`), NW.textContent !== WW.waypoint.name && (NW.textContent = WW.waypoint.name), this.markerIcon !== WW.waypoint.markerIcon && (this.markerIcon = WW.waypoint.markerIcon, OW.replaceChildren((0, yi.c)(this.markerIcon))), PW.textContent !== WW.waypoint.distance && (PW.textContent = WW.waypoint.distance), ei(LW, null === WW.waypoint.hint), null !== WW.waypoint.hint && LW.textContent !== WW.waypoint.hint && (LW.textContent = WW.waypoint.hint)
+              }(RR.waypoint, this.waypointMarkerSize, this.viewport) : RR.waypoint,
+              KR = (0, MJ.d)(iR, JR, this.viewport),
+              wR = fR * fR * (3 - 2 * fR),
+              rR = fR < 1 ? VR.x + (KR.x - VR.x) * wR : KR.x,
+              eR = fR < 1 ? VR.y + (KR.y - VR.y) * wR : KR.y;
+            GR.style.translate = `${rR}vw ${eR}vh`, yR.style.clipPath = `inset(${JR.top}px ${JR.x}px ${JR.bottom}px)`, NJ(tR, fR < 1 || !RR.waypoint.text), tR.style.opacity = String(1 - RR.waypoint.nearness), RR.waypoint.text && (tR.style.translate = `${RR.waypoint.text.x}vw ${RR.waypoint.text.y}vh`), uR.textContent !== RR.waypoint.name && (uR.textContent = RR.waypoint.name), this.markerIcon !== RR.waypoint.markerIcon && (this.markerIcon = RR.waypoint.markerIcon, GR.replaceChildren((0, BJ.d)(this.markerIcon))), ZR.textContent !== RR.waypoint.distance && (ZR.textContent = RR.waypoint.distance), NJ(qR, null === RR.waypoint.hint), null !== RR.waypoint.hint && qR.textContent !== RR.waypoint.hint && (qR.textContent = RR.waypoint.hint)
           }
         }
       }
       dispose() {
-        var WW, iW;
-        this.mountWaypointOrigin(null), this.render(null), null === (WW = this.stopLayout) || void 0 === WW || WW.call(this), this.stopLayout = null, null === (iW = this.stopWaypoint) || void 0 === iW || iW.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
+        var RR, JR;
+        this.mountWaypointOrigin(null), this.render(null), null === (RR = this.stopLayout) || void 0 === RR || RR.call(this), this.stopLayout = null, null === (JR = this.stopWaypoint) || void 0 === JR || JR.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
           minimap: null,
           map: null
-        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.JA = !0
+        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.He = !0
       }
     }
 
-    function ei(WW, iW) {
-      WW.hidden !== iW && (WW.hidden = iW)
+    function NJ(RR, JR) {
+      RR.hidden !== JR && (RR.hidden = JR)
     }
-    const vi = .55,
-      gi = .6;
-    var Di = OW(39726);
-    const Vi = {
+    const DJ = .55,
+      HJ = .6;
+    var oJ = GR(39722);
+    const cJ = {
       talk: "quest_talk",
       search: "quest_search"
     };
-    class fi {
-      constructor(WW, iW, OW, mW) {
-        this.map = WW, this.quests = iW, this.compass = OW, this.display = new di, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.JA = !1, this.snapshot = null, this.texts = new Map, this.translate = mW
+    class PJ {
+      constructor(RR, JR, GR, yR) {
+        this.map = RR, this.quests = JR, this.compass = GR, this.display = new xJ, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.He = !1, this.snapshot = null, this.texts = new Map, this.translate = yR
       }
-      setTranslator(WW, iW) {
-        this.translate = WW, this.locale = iW, this.metresFormat = new Intl.NumberFormat(iW), this.texts.clear()
+      setTranslator(RR, JR) {
+        this.translate = RR, this.locale = JR, this.metresFormat = new Intl.NumberFormat(JR), this.texts.clear()
       }
-      translateCached(WW, iW) {
-        const OW = void 0 === iW ? WW : `${WW} ${iW}`;
-        let mW = this.texts.get(OW);
-        return void 0 === mW && (this.texts.size >= 500 && this.texts.clear(), mW = this.translate(WW, void 0 === iW ? void 0 : {
-          distance: iW
-        }), this.texts.set(OW, mW)), mW
+      translateCached(RR, JR) {
+        const GR = void 0 === JR ? RR : `${RR} ${JR}`;
+        let yR = this.texts.get(GR);
+        return void 0 === yR && (this.texts.size >= 500 && this.texts.clear(), yR = this.translate(RR, void 0 === JR ? void 0 : {
+          distance: JR
+        }), this.texts.set(GR, yR)), yR
       }
       getSnapshot() {
         return this.snapshot
       }
-      afterRender(WW, iW, OW) {
-        if (this.JA) return;
-        if (!WW) return this.snapshot = null, void this.display.render(null);
-        const mW = this.map.getSnapshot().map,
-          NW = OW.cameraHeading,
-          PW = {
+      afterRender(RR, JR, GR) {
+        if (this.He) return;
+        if (!RR) return this.snapshot = null, void this.display.render(null);
+        const yR = this.map.getSnapshot().map,
+          uR = GR.cameraHeading,
+          ZR = {
             ...this.display.compassSize,
-            tanHalfFovX: OW.tanHalfFovX,
-            pitch: OW.cameraPitch
+            tanHalfFovX: GR.tanHalfFovX,
+            pitch: GR.cameraPitch
           },
-          LW = [];
-        if (mW)
-          for (const EW of this.compass.frame(WW, NW, iW)) {
-            const WW = lW(EW.offset, PW);
-            null !== WW && LW.push({
-              ...EW,
-              left: WW
+          qR = [];
+        if (yR)
+          for (const tR of this.compass.frame(RR, uR, JR)) {
+            const RR = rR(tR.offset, ZR);
+            null !== RR && qR.push({
+              ...tR,
+              left: RR
             })
           }
-        const cW = function(WW, iW) {
-            const OW = [],
-              mW = WW => "quest" === WW.kind ? WW.distance - 1 : WW.distance,
-              EW = [...WW].sort(((WW, iW) => mW(WW) - mW(iW) || WW.id.localeCompare(iW.id)));
-            for (const NW of EW) {
-              let WW = !1;
-              if ("quest" !== NW.kind)
-                for (const mW of OW)
-                  if (Math.abs(mW.left - NW.left) < iW) {
-                    WW = !0;
+        const iR = function(RR, JR) {
+            const GR = [],
+              yR = RR => "quest" === RR.kind ? RR.distance - 1 : RR.distance,
+              tR = [...RR].sort(((RR, JR) => yR(RR) - yR(JR) || RR.id.localeCompare(JR.id)));
+            for (const uR of tR) {
+              let RR = !1;
+              if ("quest" !== uR.kind)
+                for (const yR of GR)
+                  if (Math.abs(yR.left - uR.left) < JR) {
+                    RR = !0;
                     break
-                  } WW || OW.push(NW)
+                  } RR || GR.push(uR)
             }
-            return OW
-          }(LW, this.display.compassSpacing),
-          wW = function(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
-              OW = null;
-            for (const mW of WW) Math.abs(mW.offset) <= iW && (!OW || mW.distance < OW.distance || mW.distance === OW.distance && Math.abs(mW.offset) < Math.abs(OW.offset)) && (OW = mW);
-            return OW
-          }(cW),
-          tW = WW => {
-            var iW;
-            return null !== (iW = WW.displayName) && void 0 !== iW ? iW : this.translateCached(WW.nameKey)
+            return GR
+          }(qR, this.display.compassSpacing),
+          fR = function(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
+              GR = null;
+            for (const yR of RR) Math.abs(yR.offset) <= JR && (!GR || yR.distance < GR.distance || yR.distance === GR.distance && Math.abs(yR.offset) < Math.abs(GR.offset)) && (GR = yR);
+            return GR
+          }(iR),
+          VR = RR => {
+            var JR;
+            return null !== (JR = RR.displayName) && void 0 !== JR ? JR : this.translateCached(RR.nameKey)
           },
-          xW = {
+          wR = {
             compass: {
-              markers: cW.map((WW => ({
-                id: WW.id,
-                icon: WW.icon,
-                colour: WW.colour,
-                name: tW(WW),
-                left: WW.left
+              markers: iR.map((RR => ({
+                id: RR.id,
+                icon: RR.icon,
+                colour: RR.colour,
+                name: VR(RR),
+                left: RR.left
               }))),
-              cardinals: Di.e.map((WW => {
+              cardinals: oJ.e.map((RR => {
                 let {
-                  name: iW,
-                  bearing: OW
-                } = WW;
-                const mW = lW(ZW.e.computeShortestRotation(NW, OW), PW);
+                  name: JR,
+                  bearing: GR
+                } = RR;
+                const yR = rR(KR.e.computeShortestRotation(uR, GR), ZR);
                 return {
-                  name: iW,
-                  left: null !== mW && void 0 !== mW ? mW : 0,
-                  hidden: null === mW
+                  name: JR,
+                  left: null !== yR && void 0 !== yR ? yR : 0,
+                  hidden: null === yR
                 }
               })),
-              label: wW ? `${tW(wW)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",MW(wW.distance,this.locale))}` : ""
+              label: fR ? `${VR(fR)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",AR(fR.distance,this.locale))}` : ""
             },
             minimap: null,
             searchArea: null,
             player: null,
             waypoint: null
           };
-        if (null !== mW && void 0 !== mW && mW.background) {
-          const iW = WW[0] - mW.mapOrigin[0],
-            OW = WW[2] - mW.mapOrigin[2],
+        if (null !== yR && void 0 !== yR && yR.background) {
+          const JR = RR[0] - yR.mapOrigin[0],
+            GR = RR[2] - yR.mapOrigin[2],
             {
-              rotation: PW,
-              transform: LW
-            } = (0, EW.f)(iW, OW, NW, mW.background.bounds);
-          xW.minimap = {
-            transform: LW,
-            iconRotation: -PW + "rad"
+              rotation: ZR,
+              transform: qR
+            } = (0, tR.h)(JR, GR, uR, yR.background.bounds);
+          wR.minimap = {
+            transform: qR,
+            iconRotation: -ZR + "rad"
           };
-          const [cW, wW] = (0, EW.e)(iW, OW, mW.background.bounds);
-          xW.player = {
-            left: cW,
-            top: wW,
-            hidden: cW < 0 || wW < 0 || cW > 100 || wW > 100,
-            rotation: -PW + "rad"
+          const [iR, fR] = (0, tR.d)(JR, GR, yR.background.bounds);
+          wR.player = {
+            left: iR,
+            top: fR,
+            hidden: iR < 0 || fR < 0 || iR > 100 || fR > 100,
+            rotation: -ZR + "rad"
           }
         }
         const {
-          waypoint: AW
+          waypoint: eR
         } = this.quests.getSnapshot();
-        if ("search" === (null === AW || void 0 === AW ? void 0 : AW.questMarkerIcon) && null !== mW && void 0 !== mW && mW.background) {
+        if ("search" === (null === eR || void 0 === eR ? void 0 : eR.questMarkerIcon) && null !== yR && void 0 !== yR && yR.background) {
           const {
-            bounds: WW
-          } = mW.background, [iW, OW] = (0, EW.e)(AW.position[0] - mW.mapOrigin[0], AW.position[2] - mW.mapOrigin[2], WW);
-          xW.searchArea = {
-            left: iW,
-            top: OW,
-            width: 6400 / (WW.mapMaxX - WW.mapMinX),
-            height: 6400 / (WW.mapMaxZ - WW.mapMinZ),
-            shapeSeed: AW.nameKey
+            bounds: RR
+          } = yR.background, [JR, GR] = (0, tR.d)(eR.position[0] - yR.mapOrigin[0], eR.position[2] - yR.mapOrigin[2], RR);
+          wR.searchArea = {
+            left: JR,
+            top: GR,
+            width: 6400 / (RR.mapMaxX - RR.mapMinX),
+            height: 6400 / (RR.mapMaxZ - RR.mapMinZ),
+            shapeSeed: eR.nameKey
           }
         }
-        const bW = this.quests.getNotificationSnapshot(),
-          jW = "completion" === (null === bW || void 0 === bW ? void 0 : bW.phase) && !Si(bW.kind);
-        if (AW && !jW) {
-          const iW = Math.hypot(...AW.position.map(((iW, OW) => iW - WW[OW]))),
-            mW = Math.round(iW),
-            EW = "talk" === AW.questMarkerIcon ? Math.min(1, Math.max(0, (10 - iW) / 5)) : 0,
-            NW = OW.projectWorldPosToViewport(AW.position),
-            PW = NW && OW.projectWorldPosToViewport([AW.position[0], AW.position[1] - 1, AW.position[2]]);
-          xW.waypoint = {
-            ...OW.projectWorldPosToScreenPos(AW.position),
-            text: NW,
-            nearness: EW * EW * (3 - 2 * EW),
-            blockHeight: NW && PW ? PW.y - NW.y : null,
-            name: this.translateCached(AW.nameKey),
-            nameKey: AW.nameKey,
-            markerIcon: AW.questMarkerIcon ? Vi[AW.questMarkerIcon] : "quest",
-            popupToken: (null === bW || void 0 === bW ? void 0 : bW.waypointNameKey) === AW.nameKey ? bW.token : null,
-            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(mW)),
-            hint: "search" === AW.questMarkerIcon && Math.hypot(AW.position[0] - WW[0], AW.position[2] - WW[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
+        const aR = this.quests.getNotificationSnapshot(),
+          LR = "completion" === (null === aR || void 0 === aR ? void 0 : aR.phase) && !XJ(aR.kind);
+        if (eR && !LR) {
+          const JR = Math.hypot(...eR.position.map(((JR, GR) => JR - RR[GR]))),
+            yR = Math.round(JR),
+            tR = "talk" === eR.questMarkerIcon ? Math.min(1, Math.max(0, (10 - JR) / 5)) : 0,
+            uR = GR.projectWorldPosToViewport(eR.position),
+            ZR = uR && GR.projectWorldPosToViewport([eR.position[0], eR.position[1] - 1, eR.position[2]]);
+          wR.waypoint = {
+            ...GR.projectWorldPosToScreenPos(eR.position),
+            text: uR,
+            nearness: tR * tR * (3 - 2 * tR),
+            blockHeight: uR && ZR ? ZR.y - uR.y : null,
+            name: this.translateCached(eR.nameKey),
+            nameKey: eR.nameKey,
+            markerIcon: eR.questMarkerIcon ? cJ[eR.questMarkerIcon] : "quest",
+            popupToken: (null === aR || void 0 === aR ? void 0 : aR.waypointNameKey) === eR.nameKey ? aR.token : null,
+            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(yR)),
+            hint: "search" === eR.questMarkerIcon && Math.hypot(eR.position[0] - RR[0], eR.position[2] - RR[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
           }
         }
-        this.snapshot = xW, this.display.render(xW)
+        this.snapshot = wR, this.display.render(wR)
       }
       dispose() {
-        this.JA = !0, this.snapshot = null, this.display.dispose()
+        this.He = !0, this.snapshot = null, this.display.dispose()
       }
     }
-    const Ci = "skyblockSkillsView";
-    class Xi extends cW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          OW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : WW => WW,
-          mW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          EW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : WW => WW;
-        super(WW, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = iW, this.translate = OW, this.locale = mW, this.itemName = EW, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
+    const IJ = "skyblockSkillsView";
+    class mJ extends iR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          GR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RR => RR,
+          yR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          tR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RR => RR;
+        super(RR, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = JR, this.translate = GR, this.locale = yR, this.itemName = tR, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
           enabled: !1,
           open: !1,
           skills: [],
           detail: null,
           overallLevel: null,
           hud: null
-        }, this.select = WW => {
-          this.selected = WW, this.emit()
+        }, this.select = RR => {
+          this.selected = RR, this.emit()
         }
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, this.locale = iW, this.itemName = OW, this.skillText.clear(), this.sourceText.clear(), this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, this.locale = JR, this.itemName = GR, this.skillText.clear(), this.sourceText.clear(), this.emit()
       }
-      text(WW) {
-        let iW = this.skillText.get(WW);
-        return iW || (iW = {
-          label: this.translate(`skyblockGame:${WW}`),
-          description: this.translate(`skyblockGame:${WW}Description`)
-        }, this.skillText.set(WW, iW)), iW
+      text(RR) {
+        let JR = this.skillText.get(RR);
+        return JR || (JR = {
+          label: this.translate(`skyblockGame:${RR}`),
+          description: this.translate(`skyblockGame:${RR}Description`)
+        }, this.skillText.set(RR, JR)), JR
       }
-      sources(WW) {
-        if ("mining" === WW || "fishing" === WW) return this.buildSources(WW);
-        let iW = this.sourceText.get(WW);
-        return iW || (iW = this.buildSources(WW), this.sourceText.set(WW, iW)), iW
+      sources(RR) {
+        if ("mining" === RR || "fishing" === RR) return this.buildSources(RR);
+        let JR = this.sourceText.get(RR);
+        return JR || (JR = this.buildSources(RR), this.sourceText.set(RR, JR)), JR
       }
-      buildSources(WW) {
-        const iW = this.translate;
-        return "exploration" === WW ? [iW("skyblockGame:explorationZoneSource", {
+      buildSources(RR) {
+        const JR = this.translate;
+        return "exploration" === RR ? [JR("skyblockGame:explorationZoneSource", {
           xp: this.number(100)
-        }), iW("skyblockGame:explorationLandmarkSource", {
+        }), JR("skyblockGame:explorationLandmarkSource", {
           xp: this.number(50)
-        })] : "foraging" === WW ? [iW("skyblockGame:logSource", {
-          xp: this.number(Zi["Maple Log"])
-        })] : "combat" === WW ? [iW("skyblockGame:creatureKillSource"), iW("skyblockGame:noEnvironmentalXp")] : "farming" === WW ? [iW("skyblockGame:cropSource", {
-          xp: this.number(Ai["Wheat|FreshlyGrown"])
-        }), iW("skyblockGame:terrainFarmingSource", {
+        })] : "foraging" === RR ? [JR("skyblockGame:logSource", {
+          xp: this.number(KJ["Maple Log"])
+        })] : "combat" === RR ? [JR("skyblockGame:creatureKillSource"), JR("skyblockGame:noEnvironmentalXp")] : "farming" === RR ? [JR("skyblockGame:cropSource", {
+          xp: this.number(eJ["Wheat|FreshlyGrown"])
+        }), JR("skyblockGame:terrainFarmingSource", {
           xp: this.number(2)
-        }), iW("skyblockGame:noYoungCropXp")] : Object.entries("mining" === WW ? li : bi).map((WW => {
-          let [OW, mW] = WW;
-          return iW("skyblockGame:itemXpSource", {
-            item: this.itemName(OW),
-            xp: this.number(mW)
+        }), JR("skyblockGame:noYoungCropXp")] : Object.entries("mining" === RR ? rJ : aJ).map((RR => {
+          let [GR, yR] = RR;
+          return JR("skyblockGame:itemXpSource", {
+            item: this.itemName(GR),
+            xp: this.number(yR)
           })
         }))
       }
-      number(WW) {
-        return WW.toLocaleString(this.locale)
+      number(RR) {
+        return RR.toLocaleString(this.locale)
       }
-      benefit(WW, iW) {
-        const OW = Ei(WW, iW);
-        return this.translate(OW.translationKey, {
-          bonus: this.number(OW.percent)
+      benefit(RR, JR) {
+        const GR = tJ(RR, JR);
+        return this.translate(GR.translationKey, {
+          bonus: this.number(GR.percent)
         })
       }
-      yZ(WW) {
-        if (!this.JA) {
-          if ("snapshot" === WW.kind) this.progress = WW.progress, this.pending.clear(), this.recent = null;
-          else if ("award" === WW.kind && this.progress) {
+      BK(RR) {
+        if (!this.He) {
+          if ("snapshot" === RR.kind) this.progress = RR.progress, this.pending.clear(), this.recent = null;
+          else if ("award" === RR.kind && this.progress) {
             const {
-              award: iW
-            } = WW;
+              award: JR
+            } = RR;
             this.progress = {
               ...this.progress,
-              [iW.skill]: iW.after
+              [JR.skill]: JR.after
             };
-            for (const [WW, mW] of this.pending) mW.skill === iW.skill && this.pending.delete(WW);
-            const OW = iW.after.level > iW.before.level;
-            this.recordGain(iW.skill, iW.amount, OW ? ++this.nextLevelUpToken : null), OW && this.onLevelUp({
+            for (const [RR, yR] of this.pending) yR.skill === JR.skill && this.pending.delete(RR);
+            const GR = JR.after.level > JR.before.level;
+            this.recordGain(JR.skill, JR.amount, GR ? ++this.nextLevelUpToken : null), GR && this.onLevelUp({
               questCompletionKind: "skillLevel",
-              skill: iW.skill,
-              beforeLevel: iW.before.level,
-              level: iW.after.level
+              skill: JR.skill,
+              beforeLevel: JR.before.level,
+              level: JR.after.level
             })
           } else {
-            if ("rejectBlock" === WW.kind) return void this.rejectBlock(WW.position);
-            if ("open" === WW.kind) return void this.show()
+            if ("rejectBlock" === RR.kind) return void this.rejectBlock(RR.position);
+            if ("open" === RR.kind) return void this.show()
           }
           this.emit()
         }
       }
-      predictBlock(WW, iW, OW) {
-        if (!this.progress || this.JA || OW) return;
-        const mW = function(WW, iW) {
-          const OW = WW.split("|")[0];
-          return "Air" === iW || iW === `Barkless ${WW}` ? Object.hasOwn(Zi, OW) ? {
+      predictBlock(RR, JR, GR) {
+        if (!this.progress || this.He || GR) return;
+        const yR = function(RR, JR) {
+          const GR = RR.split("|")[0];
+          return "Air" === JR || JR === `Barkless ${RR}` ? Object.hasOwn(KJ, GR) ? {
             skill: "foraging",
-            amount: Zi[OW]
-          } : "Air" !== iW ? null : Object.hasOwn(li, WW) ? {
+            amount: KJ[GR]
+          } : "Air" !== JR ? null : Object.hasOwn(rJ, RR) ? {
             skill: "mining",
-            amount: li[WW]
-          } : ci(WW) ? {
+            amount: rJ[RR]
+          } : iJ(RR) ? {
             skill: "farming",
             amount: 10
-          } : ti(WW) ? {
+          } : VJ(RR) ? {
             skill: "foraging",
             amount: 2
-          } : Object.hasOwn(Ai, WW) ? {
+          } : Object.hasOwn(eJ, RR) ? {
             skill: "farming",
-            amount: Ai[WW]
-          } : Object.hasOwn(gW, WW) ? {
+            amount: eJ[RR]
+          } : Object.hasOwn(oR, RR) ? {
             skill: "farming",
             amount: 2
           } : null : null
-        }(iW, "Air");
-        if (!mW) return;
-        const EW = WW.join(",");
-        if (this.pending.has(EW)) return;
-        const NW = this.predictedProgress(mW.skill).totalXp + mW.amount;
-        Number.isSafeInteger(NW) && (this.pending.set(EW, {
-          ...mW,
+        }(JR, "Air");
+        if (!yR) return;
+        const tR = RR.join(",");
+        if (this.pending.has(tR)) return;
+        const uR = this.predictedProgress(yR.skill).totalXp + yR.amount;
+        Number.isSafeInteger(uR) && (this.pending.set(tR, {
+          ...yR,
           expires: this.now() + 2e3
-        }), this.recordGain(mW.skill, 0), this.emit())
+        }), this.recordGain(yR.skill, 0), this.emit())
       }
-      rejectBlock(WW) {
-        this.pending.delete(WW.join(",")) && this.emit()
+      rejectBlock(RR) {
+        this.pending.delete(RR.join(",")) && this.emit()
       }
-      hZ() {
-        if (this.JA) return;
-        let WW = !1;
-        for (const [iW, OW] of this.pending) OW.expires <= this.now() && (this.pending.delete(iW), WW = !0);
-        this.recent && this.recent.expires <= this.now() && (this.recent = null, WW = !0), WW && this.emit()
+      gK() {
+        if (this.He) return;
+        let RR = !1;
+        for (const [JR, GR] of this.pending) GR.expires <= this.now() && (this.pending.delete(JR), RR = !0);
+        this.recent && this.recent.expires <= this.now() && (this.recent = null, RR = !0), RR && this.emit()
       }
       dispose() {
         this.progress = null, this.pending.clear(), this.recent = null, super.dispose()
       }
-      recordGain(WW, iW) {
-        var OW, mW;
-        let EW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const NW = (null === (OW = this.recent) || void 0 === OW ? void 0 : OW.skill) === WW && this.recent.expires > this.now() ? this.recent.confirmed : 0,
-          PW = (null === (mW = this.recent) || void 0 === mW ? void 0 : mW.skill) === WW && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
+      recordGain(RR, JR) {
+        var GR, yR;
+        let tR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const uR = (null === (GR = this.recent) || void 0 === GR ? void 0 : GR.skill) === RR && this.recent.expires > this.now() ? this.recent.confirmed : 0,
+          ZR = (null === (yR = this.recent) || void 0 === yR ? void 0 : yR.skill) === RR && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
         this.recent = {
-          skill: WW,
-          confirmed: NW + iW,
+          skill: RR,
+          confirmed: uR + JR,
           expires: this.now() + 3e3,
-          levelUpToken: null !== EW && void 0 !== EW ? EW : PW
+          levelUpToken: null !== tR && void 0 !== tR ? tR : ZR
         }
       }
-      pendingXp(WW) {
-        let iW = 0;
-        for (const OW of this.pending.values()) OW.skill === WW && (iW += OW.amount);
-        return iW
+      pendingXp(RR) {
+        let JR = 0;
+        for (const GR of this.pending.values()) GR.skill === RR && (JR += GR.amount);
+        return JR
       }
-      predictedProgress(WW) {
-        const iW = this.progress[WW],
-          OW = this.pendingXp(WW);
-        return OW ? Pi(iW.totalXp + OW, WW) : iW
+      predictedProgress(RR) {
+        const JR = this.progress[RR],
+          GR = this.pendingXp(RR);
+        return GR ? ZJ(JR.totalXp + GR, RR) : JR
       }
       isEnabled() {
         return null !== this.progress
       }
       buildSnapshot() {
-        var WW, iW, OW;
-        const mW = this.progress ? IW.map((WW => {
-            const iW = this.predictedProgress(WW);
+        var RR, JR, GR;
+        const yR = this.progress ? kR.map((RR => {
+            const JR = this.predictedProgress(RR);
             return {
-              ...this.text(WW),
-              icon: ji[WW],
-              benefit: this.benefit(WW, iW.level),
-              sources: this.sources(WW),
-              id: WW,
-              selected: WW === this.selected,
+              ...this.text(RR),
+              icon: LJ[RR],
+              benefit: this.benefit(RR, JR.level),
+              sources: this.sources(RR),
+              id: RR,
+              selected: RR === this.selected,
               level: this.translate("skyblockGame:level", {
-                level: this.number(iW.level)
+                level: this.number(JR.level)
               }),
-              xp: null === iW.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
-                current: this.number(iW.xpIntoLevel),
-                target: this.number(iW.xpForNextLevel)
+              xp: null === JR.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
+                current: this.number(JR.xpIntoLevel),
+                target: this.number(JR.xpForNextLevel)
               }),
-              percent: null === iW.xpForNextLevel ? 100 : Math.min(100, iW.xpIntoLevel / iW.xpForNextLevel * 100)
+              percent: null === JR.xpForNextLevel ? 100 : Math.min(100, JR.xpIntoLevel / JR.xpForNextLevel * 100)
             }
           })) : [],
-          EW = mW.find((WW => {
-            var iW;
-            return WW.id === (null === (iW = this.recent) || void 0 === iW ? void 0 : iW.skill)
+          tR = yR.find((RR => {
+            var JR;
+            return RR.id === (null === (JR = this.recent) || void 0 === JR ? void 0 : JR.skill)
           })),
-          NW = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
+          uR = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          skills: mW,
-          detail: null !== (WW = mW.find((WW => WW.selected))) && void 0 !== WW ? WW : null,
-          overallLevel: this.progress ? IW.reduce(((WW, iW) => WW + this.predictedProgress(iW).level), 0) : null,
-          hud: EW && NW > 0 ? {
-            skill: EW,
+          skills: yR,
+          detail: null !== (RR = yR.find((RR => RR.selected))) && void 0 !== RR ? RR : null,
+          overallLevel: this.progress ? kR.reduce(((RR, JR) => RR + this.predictedProgress(JR).level), 0) : null,
+          hud: tR && uR > 0 ? {
+            skill: tR,
             gain: this.translate("skyblockGame:xpGain", {
-              xp: this.number(NW)
+              xp: this.number(uR)
             }),
-            levelUpToken: null !== (iW = null === (OW = this.recent) || void 0 === OW ? void 0 : OW.levelUpToken) && void 0 !== iW ? iW : null,
-            colour: ki(EW.id)
+            levelUpToken: null !== (JR = null === (GR = this.recent) || void 0 === GR ? void 0 : GR.levelUpToken) && void 0 !== JR ? JR : null,
+            colour: UJ(tR.id)
           } : null
         }
       }
     }
-    const Bi = Math.max(1600, 600, 950) + 400,
-      qi = {
+    const zJ = Math.max(1600, 600, 950) + 400,
+      SJ = {
         "--quest-step-flash": "1600ms",
         "--quest-step-pop": "600ms",
         "--quest-step-unlock": "500ms",
         "--quest-step-unlock-delay": "450ms"
       },
-      Ri = "skyblockQuestsView",
-      Gi = "skyblockQuestNotificationView";
-    class Ii extends cW {
-      constructor(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
-          NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
-          PW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
-        super(WW, mW, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = iW, this.translate = OW, this.now = EW, this.locale = NW, this.publishNotification = PW, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
+      jJ = "skyblockQuestsView",
+      dJ = "skyblockQuestNotificationView";
+    class EJ extends iR {
+      constructor(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
+          uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
+          ZR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
+        super(RR, yR, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = JR, this.translate = GR, this.now = tR, this.locale = uR, this.publishNotification = ZR, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
           enabled: !1,
           open: !1,
           active: [],
@@ -1737,189 +1703,189 @@ export const modules = {
           waypoint: null,
           compassTarget: null
         }, this.getNotificationSnapshot = () => this.notificationSnapshot, this.showTracked = () => {
-          var WW, iW;
-          this.selected = null !== (WW = null === (iW = this.authoritative) || void 0 === iW ? void 0 : iW.trackedQuestId) && void 0 !== WW ? WW : null, this.show()
-        }, this.select = WW => {
-          this.selected = WW, this.emit()
+          var RR, JR;
+          this.selected = null !== (RR = null === (JR = this.authoritative) || void 0 === JR ? void 0 : JR.trackedQuestId) && void 0 !== RR ? RR : null, this.show()
+        }, this.select = RR => {
+          this.selected = RR, this.emit()
         }, this.toggleCompleted = () => {
           this.completedExpanded = !this.completedExpanded, this.emit()
         }, this.trackSelected = () => {
-          const WW = this.snapshot.detail;
-          !this.JA && null !== WW && void 0 !== WW && WW.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(WW.id), this.emit())
+          const RR = this.snapshot.detail;
+          !this.He && null !== RR && void 0 !== RR && RR.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(RR.id), this.emit())
         }, this.viewDialogue = () => {
-          const WW = this.snapshot.detail;
-          var iW;
-          WW && (null === (iW = this.onViewDialogue) || void 0 === iW || iW.call(this, WW.id))
-        }, this.notifications = new Mi(EW, (() => this.authoritative))
+          const RR = this.snapshot.detail;
+          var JR;
+          RR && (null === (JR = this.onViewDialogue) || void 0 === JR || JR.call(this, RR.id))
+        }, this.notifications = new AJ(tR, (() => this.authoritative))
       }
       getTrackedQuestId() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.authoritative) || void 0 === iW ? void 0 : iW.trackedQuestId) && void 0 !== WW ? WW : null
+        var RR, JR;
+        return null !== (RR = null === (JR = this.authoritative) || void 0 === JR ? void 0 : JR.trackedQuestId) && void 0 !== RR ? RR : null
       }
-      notify(WW) {
-        !this.JA && this.notifications.enqueue(WW) && this.emitNotification()
+      notify(RR) {
+        !this.He && this.notifications.enqueue(RR) && this.emitNotification()
       }
-      setNotificationsHeld(WW) {
-        (this.notifications.setHeld(WW) || WW) && this.emitNotification()
+      setNotificationsHeld(RR) {
+        (this.notifications.setHeld(RR) || RR) && this.emitNotification()
       }
-      hZ() {
-        var WW, iW;
-        if (this.JA) return;
-        this.notifications.hZ() && this.emitNotification();
-        let OW = !1;
-        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, OW = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, OW = !0);
-        const mW = ai(this.authoritative);
-        null !== mW && void 0 !== mW && null !== (WW = mW.questClock) && void 0 !== WW && WW.running && this.clockText(mW) !== (null === (iW = this.snapshot.tracked) || void 0 === iW ? void 0 : iW.clock) && (OW = !0), OW && this.emit()
+      gK() {
+        var RR, JR;
+        if (this.He) return;
+        this.notifications.gK() && this.emitNotification();
+        let GR = !1;
+        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, GR = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, GR = !0);
+        const yR = YJ(this.authoritative);
+        null !== yR && void 0 !== yR && null !== (RR = yR.questClock) && void 0 !== RR && RR.running && this.clockText(yR) !== (null === (JR = this.snapshot.tracked) || void 0 === JR ? void 0 : JR.clock) && (GR = !0), GR && this.emit()
       }
-      setTranslator(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = WW, this.locale = iW, this.emitNotification(), this.emit()
+      setTranslator(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = RR, this.locale = JR, this.emitNotification(), this.emit()
       }
-      yZ(WW) {
-        if (!this.JA)
-          if ("completion" === WW.kind) this.notify(WW.questCompletion);
-          else if ("landmark" === WW.kind) this.notify({
+      BK(RR) {
+        if (!this.He)
+          if ("completion" === RR.kind) this.notify(RR.questCompletion);
+          else if ("landmark" === RR.kind) this.notify({
           questCompletionKind: "landmark",
-          landmarkNameKey: WW.landmarkDiscoveredNameKey
+          landmarkNameKey: RR.landmarkDiscoveredNameKey
         });
-        else if ("npcNote" === WW.kind) {
-          var iW, OW, mW;
+        else if ("npcNote" === RR.kind) {
+          var JR, GR, yR;
           this.notify({
             questCompletionKind: "npcNote",
-            titleKey: WW.npcNoteTitleKey,
-            textKey: WW.npcNoteTextKey,
-            params: null !== (iW = WW.npcNoteParams) && void 0 !== iW ? iW : {},
-            nameKeys: null !== (OW = WW.npcNoteNameKeys) && void 0 !== OW ? OW : {},
-            iconItem: null !== (mW = WW.npcNoteIconItem) && void 0 !== mW ? mW : null
+            titleKey: RR.npcNoteTitleKey,
+            textKey: RR.npcNoteTextKey,
+            params: null !== (JR = RR.npcNoteParams) && void 0 !== JR ? JR : {},
+            nameKeys: null !== (GR = RR.npcNoteNameKeys) && void 0 !== GR ? GR : {},
+            iconItem: null !== (yR = RR.npcNoteIconItem) && void 0 !== yR ? yR : null
           })
-        } else if ("open" === WW.kind) this.show();
-        else if ("guidance" === WW.kind) this.waypoint = WW.waypoint, this.compassTarget = WW.compassTarget, this.snapshot = {
+        } else if ("open" === RR.kind) this.show();
+        else if ("guidance" === RR.kind) this.waypoint = RR.waypoint, this.compassTarget = RR.compassTarget, this.snapshot = {
           ...this.snapshot,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
         };
-        else if ("snapshot" === WW.kind) {
-          this.authoritative = WW.snapshot, this.notifications.hZ() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
-          const iW = this.trackedStepPulse;
-          this.updateTrackedStepPulse(WW.snapshot), this.emit(), this.trackedStepPulse > iW && this.onTrackedStepFinished()
+        else if ("snapshot" === RR.kind) {
+          this.authoritative = RR.snapshot, this.notifications.gK() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
+          const JR = this.trackedStepPulse;
+          this.updateTrackedStepPulse(RR.snapshot), this.emit(), this.trackedStepPulse > JR && this.onTrackedStepFinished()
         }
       }
       dispose() {
         this.notifications.clear(), this.emitNotification(), this.authoritative = null, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.waypoint = null, this.compassTarget = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, super.dispose()
       }
       emitNotification() {
-        this.JA || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
+        this.He || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
       }
       questTextTranslator() {
-        var WW;
-        return null !== (WW = this.translateWithIcons) && void 0 !== WW ? WW : this.translate
+        var RR;
+        return null !== (RR = this.translateWithIcons) && void 0 !== RR ? RR : this.translate
       }
-      clockText(WW) {
-        const iW = WW.questClock;
-        if (!iW) return null;
-        const OW = iW.elapsedMs + (iW.running ? this.now() - this.receivedAt : 0);
-        return void 0 === iW.countdownFromMs ? uW(OW, !1) : uW(1e3 * Math.ceil(Math.max(0, iW.countdownFromMs - OW) / 1e3), !1)
+      clockText(RR) {
+        const JR = RR.questClock;
+        if (!JR) return null;
+        const GR = JR.elapsedMs + (JR.running ? this.now() - this.receivedAt : 0);
+        return void 0 === JR.countdownFromMs ? OR(GR, !1) : OR(1e3 * Math.ceil(Math.max(0, JR.countdownFromMs - GR) / 1e3), !1)
       }
-      updateTrackedStepPulse(WW) {
-        var iW, OW, mW;
-        const EW = ai(WW);
-        if (!EW) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
-        const NW = WW => EW.subquests.filter((iW => WW(iW.status))).map((WW => WW.id)),
-          PW = NW((WW => "completed" === WW || "skipped" === WW)),
-          LW = NW((WW => "locked" !== WW)),
-          cW = (null === (iW = this.trackedSteps) || void 0 === iW ? void 0 : iW.questId) === EW.id && EW.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
-        if (cW) {
-          const WW = PW.filter((WW => !cW.finished.has(WW))),
-            iW = NW((WW => "active" === WW || "ready" === WW)).filter((WW => !cW.unlocked.has(WW)));
-          WW.length > 0 && this.trackedStepPulse++, (WW.length > 0 || iW.length > 0) && (this.trackedChange = {
-            finished: new Set(WW),
-            unlocked: new Set(iW),
-            expiresAt: this.now() + Bi
+      updateTrackedStepPulse(RR) {
+        var JR, GR, yR;
+        const tR = YJ(RR);
+        if (!tR) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
+        const uR = RR => tR.subquests.filter((JR => RR(JR.status))).map((RR => RR.id)),
+          ZR = uR((RR => "completed" === RR || "skipped" === RR)),
+          qR = uR((RR => "locked" !== RR)),
+          iR = (null === (JR = this.trackedSteps) || void 0 === JR ? void 0 : JR.questId) === tR.id && tR.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
+        if (iR) {
+          const RR = ZR.filter((RR => !iR.finished.has(RR))),
+            JR = uR((RR => "active" === RR || "ready" === RR)).filter((RR => !iR.unlocked.has(RR)));
+          RR.length > 0 && this.trackedStepPulse++, (RR.length > 0 || JR.length > 0) && (this.trackedChange = {
+            finished: new Set(RR),
+            unlocked: new Set(JR),
+            expiresAt: this.now() + zJ
           })
         } else {
-          var wW;
-          this.trackedStepPulse = (null === (wW = this.trackedSteps) || void 0 === wW ? void 0 : wW.questId) === EW.id ? this.trackedStepPulse : 0, this.trackedChange = null
+          var fR;
+          this.trackedStepPulse = (null === (fR = this.trackedSteps) || void 0 === fR ? void 0 : fR.questId) === tR.id ? this.trackedStepPulse : 0, this.trackedChange = null
         }
         this.trackedSteps = {
-          questId: EW.id,
-          progress: EW.progress,
-          finished: new Set([...null !== (OW = null === cW || void 0 === cW ? void 0 : cW.finished) && void 0 !== OW ? OW : [], ...PW]),
-          unlocked: new Set([...null !== (mW = null === cW || void 0 === cW ? void 0 : cW.unlocked) && void 0 !== mW ? mW : [], ...LW])
+          questId: tR.id,
+          progress: tR.progress,
+          finished: new Set([...null !== (GR = null === iR || void 0 === iR ? void 0 : iR.finished) && void 0 !== GR ? GR : [], ...ZR]),
+          unlocked: new Set([...null !== (yR = null === iR || void 0 === iR ? void 0 : iR.unlocked) && void 0 !== yR ? yR : [], ...qR])
         }
       }
-      entry(WW, iW) {
-        var OW, mW;
-        const EW = WW.id === (null === (OW = this.authoritative) || void 0 === OW ? void 0 : OW.trackedQuestId),
-          NW = this.now() < this.trackAvailableAt,
-          PW = this.questTextTranslator(),
-          LW = WW.subquests.map((iW => {
-            var OW, mW, NW, LW, cW, wW;
-            const tW = null !== (OW = iW.handInNpcName) && void 0 !== OW ? OW : WW.giverName,
-              ZW = this.translate("skyblockGame:progress", {
-                current: iW.progress.toLocaleString(this.locale),
-                target: iW.target.toLocaleString(this.locale)
+      entry(RR, JR) {
+        var GR, yR;
+        const tR = RR.id === (null === (GR = this.authoritative) || void 0 === GR ? void 0 : GR.trackedQuestId),
+          uR = this.now() < this.trackAvailableAt,
+          ZR = this.questTextTranslator(),
+          qR = RR.subquests.map((JR => {
+            var GR, yR, uR, qR, iR, fR;
+            const VR = null !== (GR = JR.handInNpcName) && void 0 !== GR ? GR : RR.giverName,
+              KR = this.translate("skyblockGame:progress", {
+                current: JR.progress.toLocaleString(this.locale),
+                target: JR.target.toLocaleString(this.locale)
               }),
-              xW = {
+              wR = {
                 active: null,
                 locked: "skyblockGame:subquestLocked",
-                ready: tW ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
+                ready: VR ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
                 completed: "skyblockGame:completed",
                 skipped: "skyblockGame:subquestSkipped"
-              } [iW.status],
-              lW = "active" === iW.status || "ready" === iW.status;
+              } [JR.status],
+              rR = "active" === JR.status || "ready" === JR.status;
             return {
-              id: iW.id,
-              name: si(PW, iW.nameKey, iW.nameParams),
-              description: si(PW, iW.descriptionKey, iW.descriptionParams),
-              progress: ZW,
-              status: iW.status,
-              statusLabel: xW ? this.translate(xW, {
-                npc: tW
-              }) : ZW,
-              iconItem: lW && null !== (mW = iW.questIconItem) && void 0 !== mW ? mW : null,
-              barPercent: "active" === iW.status && iW.showsProgressBar ? Math.min(100, 100 * iW.progress / iW.target) : null,
-              justFinished: EW && null !== (NW = null === (LW = this.trackedChange) || void 0 === LW ? void 0 : LW.finished.has(iW.id)) && void 0 !== NW && NW,
-              justUnlocked: EW && null !== (cW = null === (wW = this.trackedChange) || void 0 === wW ? void 0 : wW.unlocked.has(iW.id)) && void 0 !== cW && cW
+              id: JR.id,
+              name: WJ(ZR, JR.nameKey, JR.nameParams),
+              description: WJ(ZR, JR.descriptionKey, JR.descriptionParams),
+              progress: KR,
+              status: JR.status,
+              statusLabel: wR ? this.translate(wR, {
+                npc: VR
+              }) : KR,
+              iconItem: rR && null !== (yR = JR.questIconItem) && void 0 !== yR ? yR : null,
+              barPercent: "active" === JR.status && JR.showsProgressBar ? Math.min(100, 100 * JR.progress / JR.target) : null,
+              justFinished: tR && null !== (uR = null === (qR = this.trackedChange) || void 0 === qR ? void 0 : qR.finished.has(JR.id)) && void 0 !== uR && uR,
+              justUnlocked: tR && null !== (iR = null === (fR = this.trackedChange) || void 0 === fR ? void 0 : fR.unlocked.has(JR.id)) && void 0 !== iR && iR
             }
           }));
         return {
-          id: WW.id,
-          name: si(PW, WW.nameKey, WW.nameParams),
-          description: si(PW, WW.descriptionKey, WW.descriptionParams),
-          progress: iW ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
-            current: WW.progress.toLocaleString(this.locale),
-            target: WW.target.toLocaleString(this.locale)
+          id: RR.id,
+          name: WJ(ZR, RR.nameKey, RR.nameParams),
+          description: WJ(ZR, RR.descriptionKey, RR.descriptionParams),
+          progress: JR ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
+            current: RR.progress.toLocaleString(this.locale),
+            target: RR.target.toLocaleString(this.locale)
           }),
-          completed: iW,
-          tracked: EW,
-          selected: WW.id === this.selected,
-          canTrack: !iW && !EW && !NW,
-          trackLabel: this.translate(EW ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : NW ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
-          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== WW.id,
-          subquests: LW,
-          focusStep: null !== (mW = LW.find((WW => null !== WW.barPercent))) && void 0 !== mW ? mW : null,
-          clock: this.clockText(WW)
+          completed: JR,
+          tracked: tR,
+          selected: RR.id === this.selected,
+          canTrack: !JR && !tR && !uR,
+          trackLabel: this.translate(tR ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : uR ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
+          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== RR.id,
+          subquests: qR,
+          focusStep: null !== (yR = qR.find((RR => null !== RR.barPercent))) && void 0 !== yR ? yR : null,
+          clock: this.clockText(RR)
         }
       }
       isEnabled() {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var WW, iW, OW, mW, EW, NW, PW, LW, cW, wW;
-        const tW = [...null !== (WW = null === (iW = this.authoritative) || void 0 === iW ? void 0 : iW.active) && void 0 !== WW ? WW : [], ...null !== (OW = null === (mW = this.authoritative) || void 0 === mW ? void 0 : mW.completed) && void 0 !== OW ? OW : []];
-        var ZW, xW, lW, AW;
-        tW.some((WW => WW.id === this.selected)) || (this.selected = null !== (ZW = null !== (xW = null === (lW = this.authoritative) || void 0 === lW ? void 0 : lW.trackedQuestId) && void 0 !== xW ? xW : null === (AW = tW[0]) || void 0 === AW ? void 0 : AW.id) && void 0 !== ZW ? ZW : null);
-        const bW = null !== (EW = null === (NW = this.authoritative) || void 0 === NW ? void 0 : NW.active.map((WW => this.entry(WW, !1)))) && void 0 !== EW ? EW : [];
-        bW.sort(((WW, iW) => Number(iW.tracked) - Number(WW.tracked)));
-        const jW = null !== (PW = null === (LW = this.authoritative) || void 0 === LW ? void 0 : LW.completed.map((WW => this.entry(WW, !0)))) && void 0 !== PW ? PW : [];
+        var RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR;
+        const VR = [...null !== (RR = null === (JR = this.authoritative) || void 0 === JR ? void 0 : JR.active) && void 0 !== RR ? RR : [], ...null !== (GR = null === (yR = this.authoritative) || void 0 === yR ? void 0 : yR.completed) && void 0 !== GR ? GR : []];
+        var KR, wR, rR, eR;
+        VR.some((RR => RR.id === this.selected)) || (this.selected = null !== (KR = null !== (wR = null === (rR = this.authoritative) || void 0 === rR ? void 0 : rR.trackedQuestId) && void 0 !== wR ? wR : null === (eR = VR[0]) || void 0 === eR ? void 0 : eR.id) && void 0 !== KR ? KR : null);
+        const aR = null !== (tR = null === (uR = this.authoritative) || void 0 === uR ? void 0 : uR.active.map((RR => this.entry(RR, !1)))) && void 0 !== tR ? tR : [];
+        aR.sort(((RR, JR) => Number(JR.tracked) - Number(RR.tracked)));
+        const LR = null !== (ZR = null === (qR = this.authoritative) || void 0 === qR ? void 0 : qR.completed.map((RR => this.entry(RR, !0)))) && void 0 !== ZR ? ZR : [];
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          active: bW,
-          completed: jW,
+          active: aR,
+          completed: LR,
           completedExpanded: this.completedExpanded,
-          detail: null !== (cW = [...bW, ...jW].find((WW => WW.selected))) && void 0 !== cW ? cW : null,
-          tracked: null !== (wW = bW.find((WW => WW.tracked))) && void 0 !== wW ? wW : null,
+          detail: null !== (iR = [...aR, ...LR].find((RR => RR.selected))) && void 0 !== iR ? iR : null,
+          tracked: null !== (fR = aR.find((RR => RR.tracked))) && void 0 !== fR ? fR : null,
           trackedStepPulse: this.trackedStepPulse,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
@@ -1927,40 +1893,40 @@ export const modules = {
       }
     }
 
-    function ai(WW) {
-      var iW;
-      return null !== (iW = null === WW || void 0 === WW ? void 0 : WW.active.find((iW => iW.id === WW.trackedQuestId))) && void 0 !== iW ? iW : null
+    function YJ(RR) {
+      var JR;
+      return null !== (JR = null === RR || void 0 === RR ? void 0 : RR.active.find((JR => JR.id === RR.trackedQuestId))) && void 0 !== JR ? JR : null
     }
-    const ri = "skyblockDungeonsView";
-    class zi extends cW {
-      constructor(WW, iW) {
-        let OW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
-          mW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
-        super(WW, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = iW, this.locale = OW, this.requestEnter = mW, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
+    const kJ = "skyblockDungeonsView";
+    class QJ extends iR {
+      constructor(RR, JR) {
+        let GR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
+          yR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
+        super(RR, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = JR, this.locale = GR, this.requestEnter = yR, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           dungeons: [],
           detail: null,
           picker: null
-        }, this.select = WW => {
-          this.selected = WW, this.emit()
+        }, this.select = RR => {
+          this.selected = RR, this.emit()
         }, this.previous = () => {
           this.turnTo(this.pageIndex - 1)
         }, this.next = () => {
           this.turnTo(this.pageIndex + 1)
         }, this.enter = () => {
-          const WW = this.pickerEntry(),
-            iW = null === WW || void 0 === WW ? void 0 : WW.difficulties[this.pageIndex];
-          void 0 !== iW && null !== iW.unlockedBoss && (this.close(), this.requestEnter(WW.id, iW.difficulty))
+          const RR = this.pickerEntry(),
+            JR = null === RR || void 0 === RR ? void 0 : RR.difficulties[this.pageIndex];
+          void 0 !== JR && null !== JR.unlockedBoss && (this.close(), this.requestEnter(RR.id, JR.difficulty))
         }
       }
-      setTranslator(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = WW, this.locale = iW, this.emit()
+      setTranslator(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = RR, this.locale = JR, this.emit()
       }
-      yZ(WW) {
-        var iW, OW;
-        if (!this.JA) return "open" === WW.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== WW.kind ? "snapshot" === WW.kind && (this.authoritative = WW.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (iW = null === (OW = this.pickerEntry()) || void 0 === OW ? void 0 : OW.difficulties.length) && void 0 !== iW ? iW : 1) - 1)), null === WW.snapshot && this.open ? this.close() : this.emit()) : this.choose(WW.chooseDungeonId))
+      BK(RR) {
+        var JR, GR;
+        if (!this.He) return "open" === RR.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== RR.kind ? "snapshot" === RR.kind && (this.authoritative = RR.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (JR = null === (GR = this.pickerEntry()) || void 0 === GR ? void 0 : GR.difficulties.length) && void 0 !== JR ? JR : 1) - 1)), null === RR.snapshot && this.open ? this.close() : this.emit()) : this.choose(RR.chooseDungeonId))
       }
       dispose() {
         this.authoritative = null, this.selected = null, this.pickerDungeonId = null, super.dispose()
@@ -1968,133 +1934,133 @@ export const modules = {
       onClosed() {
         this.pickerDungeonId = null
       }
-      choose(WW) {
-        var iW;
-        const OW = null === (iW = this.authoritative) || void 0 === iW ? void 0 : iW.dungeons.find((iW => iW.id === WW));
-        void 0 !== OW ? this.open && this.pickerDungeonId === WW || (this.pickerDungeonId = WW, this.pageIndex = Math.max(0, OW.difficulties.findLastIndex((WW => null !== WW.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${WW}`)
+      choose(RR) {
+        var JR;
+        const GR = null === (JR = this.authoritative) || void 0 === JR ? void 0 : JR.dungeons.find((JR => JR.id === RR));
+        void 0 !== GR ? this.open && this.pickerDungeonId === RR || (this.pickerDungeonId = RR, this.pageIndex = Math.max(0, GR.difficulties.findLastIndex((RR => null !== RR.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${RR}`)
       }
-      turnTo(WW) {
-        var iW, OW;
-        const mW = null !== (iW = null === (OW = this.pickerEntry()) || void 0 === OW ? void 0 : OW.difficulties.length) && void 0 !== iW ? iW : 0;
-        WW < 0 || WW >= mW || WW === this.pageIndex || (this.pageIndex = WW, this.emit())
+      turnTo(RR) {
+        var JR, GR;
+        const yR = null !== (JR = null === (GR = this.pickerEntry()) || void 0 === GR ? void 0 : GR.difficulties.length) && void 0 !== JR ? JR : 0;
+        RR < 0 || RR >= yR || RR === this.pageIndex || (this.pageIndex = RR, this.emit())
       }
       pickerEntry() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.authoritative) || void 0 === iW ? void 0 : iW.dungeons.find((WW => WW.id === this.pickerDungeonId))) && void 0 !== WW ? WW : null
+        var RR, JR;
+        return null !== (RR = null === (JR = this.authoritative) || void 0 === JR ? void 0 : JR.dungeons.find((RR => RR.id === this.pickerDungeonId))) && void 0 !== RR ? RR : null
       }
-      difficulty(WW) {
-        const iW = WW.completions > 0,
-          OW = null === WW.bestMs ? null : uW(WW.bestMs);
+      difficulty(RR) {
+        const JR = RR.completions > 0,
+          GR = null === RR.bestMs ? null : OR(RR.bestMs);
         return {
-          difficulty: WW.difficulty,
-          label: this.translate(HW[WW.difficulty]),
-          colour: nW[WW.difficulty],
-          beaten: iW,
-          bestTime: OW,
-          completions: WW.completions,
-          summary: iW ? [null === OW ? null : this.translate("skyblockGame:dungeonBestTime", {
-            time: OW
+          difficulty: RR.difficulty,
+          label: this.translate(bR[RR.difficulty]),
+          colour: vR[RR.difficulty],
+          beaten: JR,
+          bestTime: GR,
+          completions: RR.completions,
+          summary: JR ? [null === GR ? null : this.translate("skyblockGame:dungeonBestTime", {
+            time: GR
           }), this.translate("skyblockGame:dungeonCompletions", {
-            completions: WW.completions.toLocaleString(this.locale)
-          })].filter((WW => null !== WW)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
+            completions: RR.completions.toLocaleString(this.locale)
+          })].filter((RR => null !== RR)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
         }
       }
-      entry(WW) {
-        const iW = WW.difficulties.map((WW => this.difficulty(WW))),
-          OW = iW.filter((WW => WW.beaten)).length;
+      entry(RR) {
+        const JR = RR.difficulties.map((RR => this.difficulty(RR))),
+          GR = JR.filter((RR => RR.beaten)).length;
         return {
-          id: WW.id,
-          name: this.translate(WW.nameKey),
-          selected: WW.id === this.selected,
-          beatenSummary: `${OW} / ${iW.length}`,
-          difficulties: iW
+          id: RR.id,
+          name: this.translate(RR.nameKey),
+          selected: RR.id === this.selected,
+          beatenSummary: `${GR} / ${JR.length}`,
+          difficulties: JR
         }
       }
       picker() {
-        const WW = this.pickerEntry();
-        if (null === WW || 0 === WW.difficulties.length) return null;
-        const iW = WW.difficulties.map(((iW, OW) => {
-          var mW, EW, NW, PW;
-          const LW = iW.unlockedBoss,
-            cW = null === LW ? this.lockedHint(WW, OW) : null;
+        const RR = this.pickerEntry();
+        if (null === RR || 0 === RR.difficulties.length) return null;
+        const JR = RR.difficulties.map(((JR, GR) => {
+          var yR, tR, uR, ZR;
+          const qR = JR.unlockedBoss,
+            iR = null === qR ? this.lockedHint(RR, GR) : null;
           return {
-            ...this.difficulty(iW),
-            unlocked: null !== LW,
-            bossName: null === LW ? null : this.translate(LW.bossNameKey),
-            bossMobType: null !== (mW = null === LW || void 0 === LW ? void 0 : LW.bossMobType) && void 0 !== mW ? mW : null,
-            bossMobVariation: null !== (EW = null === LW || void 0 === LW ? void 0 : LW.bossMobVariation) && void 0 !== EW ? EW : null,
-            lockedHint: null !== (NW = null === cW || void 0 === cW ? void 0 : cW.text) && void 0 !== NW ? NW : null,
-            lockedHintHighlight: null !== (PW = null === cW || void 0 === cW ? void 0 : cW.highlight) && void 0 !== PW ? PW : null,
-            current: OW === this.pageIndex
+            ...this.difficulty(JR),
+            unlocked: null !== qR,
+            bossName: null === qR ? null : this.translate(qR.bossNameKey),
+            bossMobType: null !== (yR = null === qR || void 0 === qR ? void 0 : qR.bossMobType) && void 0 !== yR ? yR : null,
+            bossMobVariation: null !== (tR = null === qR || void 0 === qR ? void 0 : qR.bossMobVariation) && void 0 !== tR ? tR : null,
+            lockedHint: null !== (uR = null === iR || void 0 === iR ? void 0 : iR.text) && void 0 !== uR ? uR : null,
+            lockedHintHighlight: null !== (ZR = null === iR || void 0 === iR ? void 0 : iR.highlight) && void 0 !== ZR ? ZR : null,
+            current: GR === this.pageIndex
           }
         }));
         return {
-          dungeonName: this.translate(WW.nameKey),
-          pages: iW,
-          page: iW[this.pageIndex],
+          dungeonName: this.translate(RR.nameKey),
+          pages: JR,
+          page: JR[this.pageIndex],
           canPrevious: this.pageIndex > 0,
-          canNext: this.pageIndex < iW.length - 1
+          canNext: this.pageIndex < JR.length - 1
         }
       }
-      lockedHint(WW, iW) {
-        var OW, mW, EW;
-        if (0 === iW && "number" === typeof WW.combatLevelLock) {
-          const iW = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
-            level: WW.combatLevelLock
+      lockedHint(RR, JR) {
+        var GR, yR, tR;
+        if (0 === JR && "number" === typeof RR.combatLevelLock) {
+          const JR = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
+            level: RR.combatLevelLock
           });
           return this.hintHighlighting("skyblockGame:dungeonBossLockedCombat", {}, "skill", {
-            name: iW,
-            colour: ki("combat"),
-            icon: ji.combat
+            name: JR,
+            colour: UJ("combat"),
+            icon: LJ.combat
           })
         }
-        const NW = null !== (OW = null === (mW = this.authoritative) || void 0 === mW ? void 0 : mW.dungeons) && void 0 !== OW ? OW : [],
-          PW = iW > 0 ? WW : null !== (EW = NW[NW.indexOf(WW) - 1]) && void 0 !== EW ? EW : null,
-          LW = iW > 0 ? WW.difficulties[iW - 1] : null === PW || void 0 === PW ? void 0 : PW.difficulties[0];
-        if (null === PW || void 0 === LW) return null;
-        const cW = this.translate(PW.nameKey);
-        if (null === LW.unlockedBoss) return PW === WW ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, LW.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
-          dungeon: cW
-        }, LW.difficulty);
-        const wW = this.translate(LW.unlockedBoss.bossNameKey);
-        return PW === WW ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
-          boss: wW
-        }, LW.difficulty) : {
+        const uR = null !== (GR = null === (yR = this.authoritative) || void 0 === yR ? void 0 : yR.dungeons) && void 0 !== GR ? GR : [],
+          ZR = JR > 0 ? RR : null !== (tR = uR[uR.indexOf(RR) - 1]) && void 0 !== tR ? tR : null,
+          qR = JR > 0 ? RR.difficulties[JR - 1] : null === ZR || void 0 === ZR ? void 0 : ZR.difficulties[0];
+        if (null === ZR || void 0 === qR) return null;
+        const iR = this.translate(ZR.nameKey);
+        if (null === qR.unlockedBoss) return ZR === RR ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, qR.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
+          dungeon: iR
+        }, qR.difficulty);
+        const fR = this.translate(qR.unlockedBoss.bossNameKey);
+        return ZR === RR ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
+          boss: fR
+        }, qR.difficulty) : {
           text: this.translate("skyblockGame:dungeonBossLockedElsewhere", {
-            boss: wW,
-            dungeon: cW
+            boss: fR,
+            dungeon: iR
           }),
           highlight: null
         }
       }
-      hintNamingDifficulty(WW, iW, OW) {
-        return this.hintHighlighting(WW, iW, "difficulty", {
-          name: this.translate(HW[OW]),
-          colour: nW[OW],
+      hintNamingDifficulty(RR, JR, GR) {
+        return this.hintHighlighting(RR, JR, "difficulty", {
+          name: this.translate(bR[GR]),
+          colour: vR[GR],
           icon: null
         })
       }
-      hintHighlighting(WW, iW, OW, mW) {
+      hintHighlighting(RR, JR, GR, yR) {
         let {
-          name: EW,
-          colour: NW,
-          icon: PW
-        } = mW;
-        const LW = this.translate(WW, {
-          ...iW,
-          [OW]: "\x01"
+          name: tR,
+          colour: uR,
+          icon: ZR
+        } = yR;
+        const qR = this.translate(RR, {
+          ...JR,
+          [GR]: "\x01"
         }).split("\x01");
         return {
-          text: this.translate(WW, {
-            ...iW,
-            [OW]: EW
+          text: this.translate(RR, {
+            ...JR,
+            [GR]: tR
           }),
-          highlight: 2 === LW.length ? {
-            before: LW[0],
-            name: EW,
-            after: LW[1],
-            colour: NW,
-            icon: PW
+          highlight: 2 === qR.length ? {
+            before: qR[0],
+            name: tR,
+            after: qR[1],
+            colour: uR,
+            icon: ZR
           } : null
         }
       }
@@ -2102,49 +2068,49 @@ export const modules = {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var WW, iW, OW;
-        const mW = null !== (WW = null === (iW = this.authoritative) || void 0 === iW ? void 0 : iW.dungeons) && void 0 !== WW ? WW : [];
-        var EW, NW;
-        mW.some((WW => WW.id === this.selected)) || (this.selected = null !== (EW = null === (NW = mW[0]) || void 0 === NW ? void 0 : NW.id) && void 0 !== EW ? EW : null);
-        const PW = mW.map((WW => this.entry(WW)));
+        var RR, JR, GR;
+        const yR = null !== (RR = null === (JR = this.authoritative) || void 0 === JR ? void 0 : JR.dungeons) && void 0 !== RR ? RR : [];
+        var tR, uR;
+        yR.some((RR => RR.id === this.selected)) || (this.selected = null !== (tR = null === (uR = yR[0]) || void 0 === uR ? void 0 : uR.id) && void 0 !== tR ? tR : null);
+        const ZR = yR.map((RR => this.entry(RR)));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          dungeons: PW,
-          detail: null !== (OW = PW.find((WW => WW.selected))) && void 0 !== OW ? OW : null,
+          dungeons: ZR,
+          detail: null !== (GR = ZR.find((RR => RR.selected))) && void 0 !== GR ? GR : null,
           picker: null === this.pickerDungeonId ? null : this.picker()
         }
       }
     }
-    const Fi = ["mining", "farming", "foraging", "fishing", "combat"],
-      Qi = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
-      WO = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
+    const FJ = ["mining", "farming", "foraging", "fishing", "combat"],
+      TJ = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
+      sJ = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
 
-    function iO() {
-      for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
-      return iW.map(((WW, iW) => ({
-        amount: WW,
-        coins: Qi[iW],
-        xp: WO[iW]
+    function hJ() {
+      for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+      return JR.map(((RR, JR) => ({
+        amount: RR,
+        coins: TJ[JR],
+        xp: sJ[JR]
       })))
     }
-    const OO = iO(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
-      mO = iO(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
-      EO = iO(50, 100, 250, 500, 1e3, 2500, 5e3),
-      NO = iO(25, 50, 100, 250, 500, 1e3),
-      PO = iO(10, 25, 50, 100, 250, 500, 1e3),
-      LO = iO(1, 5, 10, 25, 50);
+    const RG = hJ(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
+      JG = hJ(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
+      GG = hJ(50, 100, 250, 500, 1e3, 2500, 5e3),
+      yG = hJ(25, 50, 100, 250, 500, 1e3),
+      tG = hJ(10, 25, 50, 100, 250, 500, 1e3),
+      uG = hJ(1, 5, 10, 25, 50);
 
-    function cO(WW, iW) {
+    function ZG(RR, JR) {
       return {
-        id: WW,
+        id: RR,
         category: "fishing",
-        item: iW,
-        drops: [iW],
-        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : PO
+        item: JR,
+        drops: [JR],
+        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tG
       }
     }
-    const wO = [{
+    const qG = [{
         id: "coal",
         category: "mining",
         item: "Coal",
@@ -2153,7 +2119,7 @@ export const modules = {
           "Pure Coal Ore": 9,
           "Block of Coal": 3
         },
-        tiers: mO
+        tiers: JG
       }, {
         id: "iron",
         category: "mining",
@@ -2162,7 +2128,7 @@ export const modules = {
           "Iron Ore": 1,
           "Pure Iron Ore": 9
         },
-        tiers: EO
+        tiers: GG
       }, {
         id: "gold",
         category: "mining",
@@ -2171,7 +2137,7 @@ export const modules = {
           "Gold Ore": 1,
           "Pure Gold Ore": 9
         },
-        tiers: EO
+        tiers: GG
       }, {
         id: "diamond",
         category: "mining",
@@ -2180,7 +2146,7 @@ export const modules = {
           "Diamond Ore": 1,
           "Pure Diamond Ore": 9
         },
-        tiers: NO
+        tiers: yG
       }, {
         id: "moonstone",
         category: "mining",
@@ -2189,7 +2155,7 @@ export const modules = {
           "Moonstone Ore": 1,
           "Pure Moonstone Ore": 9
         },
-        tiers: NO
+        tiers: yG
       }, {
         id: "stone",
         category: "mining",
@@ -2197,7 +2163,7 @@ export const modules = {
         blocks: {
           Stone: 1
         },
-        tiers: mO
+        tiers: JG
       }, {
         id: "wheat",
         category: "farming",
@@ -2205,7 +2171,7 @@ export const modules = {
         blocks: {
           "Wheat|FreshlyGrown": 1
         },
-        tiers: OO
+        tiers: RG
       }, {
         id: "carrot",
         category: "farming",
@@ -2213,7 +2179,7 @@ export const modules = {
         blocks: {
           "Carrot Plant|FreshlyGrown": 1
         },
-        tiers: OO
+        tiers: RG
       }, {
         id: "potato",
         category: "farming",
@@ -2221,7 +2187,7 @@ export const modules = {
         blocks: {
           "Potato Plant|FreshlyGrown": 1
         },
-        tiers: OO
+        tiers: RG
       }, {
         id: "beetroot",
         category: "farming",
@@ -2229,7 +2195,7 @@ export const modules = {
         blocks: {
           "Beetroot Plant|FreshlyGrown": 1
         },
-        tiers: EO
+        tiers: GG
       }, {
         id: "melon",
         category: "farming",
@@ -2237,7 +2203,7 @@ export const modules = {
         blocks: {
           Melon: 1
         },
-        tiers: mO
+        tiers: JG
       }, {
         id: "watermelon",
         category: "farming",
@@ -2245,7 +2211,7 @@ export const modules = {
         blocks: {
           Watermelon: 1
         },
-        tiers: mO
+        tiers: JG
       }, {
         id: "maple_log",
         category: "foraging",
@@ -2253,7 +2219,7 @@ export const modules = {
         blocks: {
           "Maple Log": 1
         },
-        tiers: mO
+        tiers: JG
       }, {
         id: "pear_log",
         category: "foraging",
@@ -2261,7 +2227,7 @@ export const modules = {
         blocks: {
           "Pear Log": 1
         },
-        tiers: EO
+        tiers: GG
       }, {
         id: "palm_log",
         category: "foraging",
@@ -2269,78 +2235,78 @@ export const modules = {
         blocks: {
           "Palm Log": 1
         },
-        tiers: EO
-      }, cO("wheatfish", "Wheatfish"), cO("darter", "Darter"), cO("sunset_minnow", "Sunset Minnow"), cO("root_flounder", "Root Flounder"), cO("greenfin_loach", "Greenfin Loach"), cO("red_strongfish", "Red Strongfish"), cO("green_strongfish", "Green Strongfish"), cO("boomerang_fish", "Boomerang Fish"), cO("seahorse", "Seahorse"), cO("spined_stickleback", "Spined Stickleback"), cO("moon_strongfish", "Moon Strongfish"), cO("boulder_bass", "Boulder Bass"), cO("grass_snapper", "Grass Snapper"), cO("crystal_wheatfish", "Crystalized Wheatfish", LO), cO("moonstone_pupfish", "Moonstone Pupfish", LO), cO("reedglass_minnow", "Reedglass Minnow"), cO("mangrove_herring", "Mangrove Herring"), cO("mudline_perch", "Mudline Perch"), cO("coastal_mullet", "Coastal Mullet"), cO("reef_sardine", "Reef Sardine"), cO("root_perch", "Root Perch"), cO("driftwood_catfish", "Driftwood Catfish"), cO("aether_minnow", "Aether Minnow"), cO("needlefish", "Tri-Pointed Needlefish"), cO("threadfin_bream", "Threadfin Bream"), cO("mudbelly_tilapia", "Mudbelly Tilapia"), cO("rotslab_eel", "Rotslab Eel"), cO("polarflash_electron", "Polarflash Electron"), cO("mireback_carp", "Mireback Carp"), cO("blackwater_bream", "Blackwater Bream"), cO("stone_grouper", "Stone Grouper"), cO("shadeback_ray", "Shadeback Ray"), cO("glacial_silverfish", "Glacial Silverfish"), cO("hatchetfish", "Hatchetfish"), cO("moonlit_boomerang", "Moonlit Boomerang Fish"), cO("murkborne_ray", "Murkborne Ray"), cO("bamboo_catfish", "Bamboo Catfish"), cO("mossback_arapaima", "Mossback Arapaima"), cO("murk_stingray", "Murk Stingray"), cO("channel_sawfish", "Channel Sawfish"), cO("boned_sturgeon", "Boned Sturgeon"), cO("oarfish", "Oarfish"), cO("snakehead", "Snakehead", LO), cO("eldertide_leviathan", "Eldertide Leviathan", LO), cO("pithead", "Pithead"), cO("electric_eel", "Electric Eel"), cO("shadow_darter", "Shadow Darter"), cO("abyss_carp", "Abyss Carp"), cO("nomai_moray", "Nomai Moray"), cO("silver_dragonfish", "Silver Dragonfish"), cO("giant_moray", "Giant Moray"), cO("coelacanth", "Coelacanth", LO), cO("frost_herring", "Frost Herring"), cO("permafrost_halibut", "Permafrost Halibut"), cO("glacial_lanternfish", "Glacial Lanternfish"), cO("frozen_grenadier", "Frozen Grenadier"), cO("blackfin_icefish", "Blackfin Icefish"), cO("moonfish", "Moonfish"), cO("alpha_strongfish", "Alpha Moon Strongfish"), cO("deep_lanternfish", "Deepwater Lanternfish", LO), cO("pearlescent_moonfish", "Pearlescent Moonfish", LO), {
+        tiers: GG
+      }, ZG("wheatfish", "Wheatfish"), ZG("darter", "Darter"), ZG("sunset_minnow", "Sunset Minnow"), ZG("root_flounder", "Root Flounder"), ZG("greenfin_loach", "Greenfin Loach"), ZG("red_strongfish", "Red Strongfish"), ZG("green_strongfish", "Green Strongfish"), ZG("boomerang_fish", "Boomerang Fish"), ZG("seahorse", "Seahorse"), ZG("spined_stickleback", "Spined Stickleback"), ZG("moon_strongfish", "Moon Strongfish"), ZG("boulder_bass", "Boulder Bass"), ZG("grass_snapper", "Grass Snapper"), ZG("crystal_wheatfish", "Crystalized Wheatfish", uG), ZG("moonstone_pupfish", "Moonstone Pupfish", uG), ZG("reedglass_minnow", "Reedglass Minnow"), ZG("mangrove_herring", "Mangrove Herring"), ZG("mudline_perch", "Mudline Perch"), ZG("coastal_mullet", "Coastal Mullet"), ZG("reef_sardine", "Reef Sardine"), ZG("root_perch", "Root Perch"), ZG("driftwood_catfish", "Driftwood Catfish"), ZG("aether_minnow", "Aether Minnow"), ZG("needlefish", "Tri-Pointed Needlefish"), ZG("threadfin_bream", "Threadfin Bream"), ZG("mudbelly_tilapia", "Mudbelly Tilapia"), ZG("rotslab_eel", "Rotslab Eel"), ZG("polarflash_electron", "Polarflash Electron"), ZG("mireback_carp", "Mireback Carp"), ZG("blackwater_bream", "Blackwater Bream"), ZG("stone_grouper", "Stone Grouper"), ZG("shadeback_ray", "Shadeback Ray"), ZG("glacial_silverfish", "Glacial Silverfish"), ZG("hatchetfish", "Hatchetfish"), ZG("moonlit_boomerang", "Moonlit Boomerang Fish"), ZG("murkborne_ray", "Murkborne Ray"), ZG("bamboo_catfish", "Bamboo Catfish"), ZG("mossback_arapaima", "Mossback Arapaima"), ZG("murk_stingray", "Murk Stingray"), ZG("channel_sawfish", "Channel Sawfish"), ZG("boned_sturgeon", "Boned Sturgeon"), ZG("oarfish", "Oarfish"), ZG("snakehead", "Snakehead", uG), ZG("eldertide_leviathan", "Eldertide Leviathan", uG), ZG("pithead", "Pithead"), ZG("electric_eel", "Electric Eel"), ZG("shadow_darter", "Shadow Darter"), ZG("abyss_carp", "Abyss Carp"), ZG("nomai_moray", "Nomai Moray"), ZG("silver_dragonfish", "Silver Dragonfish"), ZG("giant_moray", "Giant Moray"), ZG("coelacanth", "Coelacanth", uG), ZG("frost_herring", "Frost Herring"), ZG("permafrost_halibut", "Permafrost Halibut"), ZG("glacial_lanternfish", "Glacial Lanternfish"), ZG("frozen_grenadier", "Frozen Grenadier"), ZG("blackfin_icefish", "Blackfin Icefish"), ZG("moonfish", "Moonfish"), ZG("alpha_strongfish", "Alpha Moon Strongfish"), ZG("deep_lanternfish", "Deepwater Lanternfish", uG), ZG("pearlescent_moonfish", "Pearlescent Moonfish", uG), {
         id: "rotten_flesh",
         category: "combat",
         item: "Rotten Flesh",
         drops: ["Rotten Flesh"],
-        tiers: mO
+        tiers: JG
       }, {
         id: "rotten_brain",
         category: "combat",
         item: "Rotten Brain",
         drops: ["Rotten Brain"],
-        tiers: NO
+        tiers: yG
       }, {
         id: "iron_fragment",
         category: "combat",
         item: "Iron Fragment",
         drops: ["Iron Fragment"],
-        tiers: NO
+        tiers: yG
       }],
-      tO = (new Map(wO.map((WW => [WW.id, WW]))), new Map),
-      ZO = new Map;
-    for (const uL of wO) {
-      for (const [WW, iW] of Object.entries(null !== (xO = uL.blocks) && void 0 !== xO ? xO : {})) {
-        var xO;
-        tO.set(WW, {
-          collection: uL,
-          amount: iW
+      iG = (new Map(qG.map((RR => [RR.id, RR]))), new Map),
+      fG = new Map;
+    for (const bq of qG) {
+      for (const [RR, JR] of Object.entries(null !== (VG = bq.blocks) && void 0 !== VG ? VG : {})) {
+        var VG;
+        iG.set(RR, {
+          collection: bq,
+          amount: JR
         })
       }
-      for (const WW of null !== (lO = uL.drops) && void 0 !== lO ? lO : []) {
-        var lO;
-        ZO.set(WW, uL)
+      for (const RR of null !== (KG = bq.drops) && void 0 !== KG ? KG : []) {
+        var KG;
+        fG.set(RR, bq)
       }
     }
 
-    function AO(WW, iW) {
-      let OW = 0;
-      for (; OW < WW.tiers.length && iW >= WW.tiers[OW].amount;) OW++;
-      return OW
+    function wG(RR, JR) {
+      let GR = 0;
+      for (; GR < RR.tiers.length && JR >= RR.tiers[GR].amount;) GR++;
+      return GR
     }
-    const bO = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const rG = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
 
-    function jO(WW) {
-      return bO[WW - 1]
+    function eG(RR) {
+      return rG[RR - 1]
     }
-    const UO = "skyblockCollectionsView";
-    class kO extends cW {
-      constructor(WW, iW) {
-        let OW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          mW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : WW => WW;
-        super(WW, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = iW, this.locale = OW, this.itemName = mW, this.counts = null, this.category = "mining", this.selected = wO[0].id, this.snapshot = {
+    const aG = "skyblockCollectionsView";
+    class LG extends iR {
+      constructor(RR, JR) {
+        let GR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          yR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RR => RR;
+        super(RR, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = JR, this.locale = GR, this.itemName = yR, this.counts = null, this.category = "mining", this.selected = qG[0].id, this.snapshot = {
           enabled: !1,
           open: !1,
           categories: [],
           collections: [],
           detail: null,
           tiersUnlocked: ""
-        }, this.selectCategory = WW => {
-          this.category = WW, this.selected = this.inCategory(WW)[0].id, this.emit()
-        }, this.select = WW => {
-          this.selected = WW, this.emit()
+        }, this.selectCategory = RR => {
+          this.category = RR, this.selected = this.inCategory(RR)[0].id, this.emit()
+        }, this.select = RR => {
+          this.selected = RR, this.emit()
         }
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, this.locale = iW, this.itemName = OW, this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, this.locale = JR, this.itemName = GR, this.emit()
       }
-      yZ(WW) {
-        if (!this.JA)
-          if ("collOpen" !== WW.kind) {
-            (WW.collFull || null === this.counts) && (this.counts = new Map);
-            for (const [iW, OW] of WW.collCounts) this.counts.set(iW, OW);
+      BK(RR) {
+        if (!this.He)
+          if ("collOpen" !== RR.kind) {
+            (RR.collFull || null === this.counts) && (this.counts = new Map);
+            for (const [JR, GR] of RR.collCounts) this.counts.set(JR, GR);
             this.emit()
           } else this.show()
       }
@@ -2351,7 +2317,7 @@ export const modules = {
         return null !== this.counts
       }
       buildSnapshot() {
-        var WW;
+        var RR;
         if (null === this.counts) return {
           enabled: !1,
           open: this.open,
@@ -2360,297 +2326,297 @@ export const modules = {
           detail: null,
           tiersUnlocked: ""
         };
-        const iW = this.inCategory(this.category).map((WW => this.collectionView(WW))),
-          OW = wO.reduce(((WW, iW) => WW + this.tierOf(iW)), 0);
+        const JR = this.inCategory(this.category).map((RR => this.collectionView(RR))),
+          GR = qG.reduce(((RR, JR) => RR + this.tierOf(JR)), 0);
         return {
           enabled: !0,
           open: this.open,
-          categories: Fi.map((WW => this.categoryView(WW))),
-          collections: iW,
-          detail: null !== (WW = iW.find((WW => WW.selected))) && void 0 !== WW ? WW : null,
+          categories: FJ.map((RR => this.categoryView(RR))),
+          collections: JR,
+          detail: null !== (RR = JR.find((RR => RR.selected))) && void 0 !== RR ? RR : null,
           tiersUnlocked: this.translate("skyblockGame:collectionTiersUnlocked", {
-            count: this.number(OW)
+            count: this.number(GR)
           })
         }
       }
-      categoryView(WW) {
-        const iW = this.inCategory(WW),
-          OW = iW.reduce(((WW, iW) => WW + this.tierOf(iW)), 0),
-          mW = iW.reduce(((WW, iW) => WW + iW.tiers.length), 0);
+      categoryView(RR) {
+        const JR = this.inCategory(RR),
+          GR = JR.reduce(((RR, JR) => RR + this.tierOf(JR)), 0),
+          yR = JR.reduce(((RR, JR) => RR + JR.tiers.length), 0);
         return {
-          id: WW,
-          label: this.translate(`skyblockGame:${WW}`),
-          icon: ji[WW],
+          id: RR,
+          label: this.translate(`skyblockGame:${RR}`),
+          icon: LJ[RR],
           tiers: this.translate("skyblockGame:collectionProgress", {
-            current: this.number(OW),
-            target: this.number(mW)
+            current: this.number(GR),
+            target: this.number(yR)
           }),
-          selected: WW === this.category
+          selected: RR === this.category
         }
       }
-      collectionView(WW) {
-        var iW, OW;
-        const mW = null !== (iW = this.counts.get(WW.id)) && void 0 !== iW ? iW : 0,
-          EW = AO(WW, mW),
-          NW = null !== (OW = WW.tiers[EW]) && void 0 !== OW ? OW : null,
-          PW = 0 === EW ? 0 : WW.tiers[EW - 1].amount;
+      collectionView(RR) {
+        var JR, GR;
+        const yR = null !== (JR = this.counts.get(RR.id)) && void 0 !== JR ? JR : 0,
+          tR = wG(RR, yR),
+          uR = null !== (GR = RR.tiers[tR]) && void 0 !== GR ? GR : null,
+          ZR = 0 === tR ? 0 : RR.tiers[tR - 1].amount;
         return {
-          id: WW.id,
-          name: this.itemName(WW.item),
-          icon: WW.item,
-          selected: WW.id === this.selected,
-          locked: 0 === mW,
+          id: RR.id,
+          name: this.itemName(RR.item),
+          icon: RR.item,
+          selected: RR.id === this.selected,
+          locked: 0 === yR,
           count: this.translate("skyblockGame:collectionCount", {
-            count: this.number(mW)
+            count: this.number(yR)
           }),
-          tier: 0 === EW ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(EW),
-          percent: null === NW ? 100 : Math.min(100, (mW - PW) / (NW.amount - PW) * 100),
-          progress: null === NW ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
-            current: this.number(mW),
-            target: this.number(NW.amount)
+          tier: 0 === tR ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(tR),
+          percent: null === uR ? 100 : Math.min(100, (yR - ZR) / (uR.amount - ZR) * 100),
+          progress: null === uR ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
+            current: this.number(yR),
+            target: this.number(uR.amount)
           }),
-          nextReward: null === NW ? null : this.reward(WW, NW.coins, NW.xp)
+          nextReward: null === uR ? null : this.reward(RR, uR.coins, uR.xp)
         }
       }
-      reward(WW, iW, OW) {
+      reward(RR, JR, GR) {
         return this.translate("skyblockGame:collectionReward", {
-          coins: this.number(iW),
-          xp: this.number(OW),
-          skill: this.translate(`skyblockGame:${WW.category}`)
+          coins: this.number(JR),
+          xp: this.number(GR),
+          skill: this.translate(`skyblockGame:${RR.category}`)
         })
       }
-      tierLabel(WW) {
+      tierLabel(RR) {
         return this.translate("skyblockGame:collectionTier", {
-          tier: jO(WW)
+          tier: eG(RR)
         })
       }
-      tierOf(WW) {
-        var iW;
-        return AO(WW, null !== (iW = this.counts.get(WW.id)) && void 0 !== iW ? iW : 0)
+      tierOf(RR) {
+        var JR;
+        return wG(RR, null !== (JR = this.counts.get(RR.id)) && void 0 !== JR ? JR : 0)
       }
-      inCategory(WW) {
-        return wO.filter((iW => iW.category === WW))
+      inCategory(RR) {
+        return qG.filter((JR => JR.category === RR))
       }
-      number(WW) {
-        return WW.toLocaleString(this.locale)
+      number(RR) {
+        return RR.toLocaleString(this.locale)
       }
     }
-    const sO = "skyblockPortalTransitView",
-      MO = "skyblockPortalArrival";
-    class KO {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.iZ = WW, this.storage = iW, this.now = OW, this.view = null, this.token = 0, this.hideTimer = null
+    const nG = "skyblockPortalTransitView",
+      UG = "skyblockPortalArrival";
+    class WG {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.JK = RR, this.storage = JR, this.now = GR, this.view = null, this.token = 0, this.hideTimer = null
       }
       getSnapshot() {
         return this.view
       }
-      yZ(WW) {
-        const iW = {
-          zoneNameKey: WW.transitZoneNameKey,
-          variation: WW.transitZoneVariation,
-          colour: WW.transitColour,
+      BK(RR) {
+        const JR = {
+          zoneNameKey: RR.transitZoneNameKey,
+          variation: RR.transitZoneVariation,
+          colour: RR.transitColour,
           departedAt: this.now()
         };
-        this.storage.setItem(MO, iW), this.show("departure", iW.zoneNameKey, iW.colour, WW.transitDurationMs, WW.transitDurationMs + 1500, (() => {
-          this.storage.removeItem(MO)
+        this.storage.setItem(UG, JR), this.show("departure", JR.zoneNameKey, JR.colour, RR.transitDurationMs, RR.transitDurationMs + 1500, (() => {
+          this.storage.removeItem(UG)
         }))
       }
-      resumeArrival(WW) {
-        const iW = this.storage.getItem(MO);
-        this.storage.removeItem(MO), null === iW || iW.variation !== WW || this.now() - iW.departedAt > 3e4 || this.show("arrival", iW.zoneNameKey, iW.colour, 3200, 2e4)
+      resumeArrival(RR) {
+        const JR = this.storage.getItem(UG);
+        this.storage.removeItem(UG), null === JR || JR.variation !== RR || this.now() - JR.departedAt > 3e4 || this.show("arrival", JR.zoneNameKey, JR.colour, 3200, 2e4)
       }
-      finishArrival(WW) {
-        var iW;
-        "arrival" === (null === (iW = this.view) || void 0 === iW ? void 0 : iW.phase) && this.view.token === WW && (this.clearTimer(), this.view = null, this.iZ(null))
+      finishArrival(RR) {
+        var JR;
+        "arrival" === (null === (JR = this.view) || void 0 === JR ? void 0 : JR.phase) && this.view.token === RR && (this.clearTimer(), this.view = null, this.JK(null))
       }
       dispose() {
         this.clearTimer()
       }
-      show(WW, iW, OW, mW, EW, NW) {
+      show(RR, JR, GR, yR, tR, uR) {
         this.clearTimer(), this.view = {
           token: ++this.token,
-          phase: WW,
-          zoneNameKey: iW,
-          colour: OW,
-          durationMs: mW
-        }, this.iZ(this.view), this.hideTimer = setTimeout((() => {
-          this.hideTimer = null, this.view = null, this.iZ(null), null === NW || void 0 === NW || NW()
-        }), EW)
+          phase: RR,
+          zoneNameKey: JR,
+          colour: GR,
+          durationMs: yR
+        }, this.JK(this.view), this.hideTimer = setTimeout((() => {
+          this.hideTimer = null, this.view = null, this.JK(null), null === uR || void 0 === uR || uR()
+        }), tR)
       }
       clearTimer() {
         null !== this.hideTimer && (clearTimeout(this.hideTimer), this.hideTimer = null)
       }
     }
-    const SO = "skyblockDailyRewardView",
-      YO = "skyblockDailyRewardCoin";
-    class yO {
-      constructor(WW, iW, OW, mW) {
-        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          PW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
-          LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
-          cW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
-        this.iZ = WW, this.isBusy = iW, this.holdQuestPopups = OW, this.onHeldCoinsChanged = mW, this.onCoinLanded = EW, this.onStarted = NW, this.onFinished = PW, this.onItemLanded = LW, this.now = cW, this.BL = [], this.queue = [], this.playing = null, this.token = 0
+    const AG = "skyblockDailyRewardView",
+      CG = "skyblockDailyRewardCoin";
+    class XG {
+      constructor(RR, JR, GR, yR) {
+        let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          ZR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
+          qR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
+          iR = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
+        this.JK = RR, this.isBusy = JR, this.holdQuestPopups = GR, this.onHeldCoinsChanged = yR, this.onCoinLanded = tR, this.onStarted = uR, this.onFinished = ZR, this.onItemLanded = qR, this.now = iR, this.Qq = [], this.queue = [], this.playing = null, this.token = 0
       }
       getSnapshot() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.playing) || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null
+        var RR, JR;
+        return null !== (RR = null === (JR = this.playing) || void 0 === JR ? void 0 : JR.view) && void 0 !== RR ? RR : null
       }
       getHeldCoins() {
-        var WW, iW;
-        let OW = 0;
-        for (const mW of this.BL) OW += mW.coins;
-        return OW - (null !== (WW = null === (iW = this.playing) || void 0 === iW ? void 0 : iW.released) && void 0 !== WW ? WW : 0)
+        var RR, JR;
+        let GR = 0;
+        for (const yR of this.Qq) GR += yR.coins;
+        return GR - (null !== (RR = null === (JR = this.playing) || void 0 === JR ? void 0 : JR.released) && void 0 !== RR ? RR : 0)
       }
-      yZ(WW) {
-        "dailyRewardClaimed" !== WW.kind ? (this.queue.push(WW), this.hZ()) : this.BL.push({
-          coins: WW.dailyRewardCoins,
+      BK(RR) {
+        "dailyRewardClaimed" !== RR.kind ? (this.queue.push(RR), this.gK()) : this.Qq.push({
+          coins: RR.dailyRewardCoins,
           receivedAt: this.now()
         })
       }
-      hZ() {
-        const WW = this.now();
-        if (null === this.playing) return this.releaseUnshown(WW), void this.startNext(WW);
-        const iW = this.playing,
-          OW = WW - iW.startedAt,
-          mW = iW.view.flyingCoins,
-          EW = function(WW, iW) {
-            let OW = 0;
-            for (; OW < iW && JO(OW, iW) <= WW;) OW++;
-            return OW
-          }(OW, mW);
-        if (EW !== iW.landed) {
-          for (let WW = EW - iW.landed > 2 ? EW - 1 : iW.landed; WW < EW; WW++) this.onCoinLanded(WW, mW);
-          iW.landed = EW, iW.released = Math.round(iW.view.coins * EW / mW), this.onHeldCoinsChanged()
+      gK() {
+        const RR = this.now();
+        if (null === this.playing) return this.releaseUnshown(RR), void this.startNext(RR);
+        const JR = this.playing,
+          GR = RR - JR.startedAt,
+          yR = JR.view.flyingCoins,
+          tR = function(RR, JR) {
+            let GR = 0;
+            for (; GR < JR && BG(GR, JR) <= RR;) GR++;
+            return GR
+          }(GR, yR);
+        if (tR !== JR.landed) {
+          for (let RR = tR - JR.landed > 2 ? tR - 1 : JR.landed; RR < tR; RR++) this.onCoinLanded(RR, yR);
+          JR.landed = tR, JR.released = Math.round(JR.view.coins * tR / yR), this.onHeldCoinsChanged()
         }
-        for (; iW.itemsLanded < iW.view.items.length && 2e3 + 160 * iW.itemsLanded + 630 <= OW;) this.onItemLanded(iW.itemsLanded), iW.itemsLanded++;
-        OW >= iW.view.durationMs && (this.finish(), this.startNext(WW))
+        for (; JR.itemsLanded < JR.view.items.length && 2e3 + 160 * JR.itemsLanded + 630 <= GR;) this.onItemLanded(JR.itemsLanded), JR.itemsLanded++;
+        GR >= JR.view.durationMs && (this.finish(), this.startNext(RR))
       }
       dispose() {
-        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.BL = [], this.iZ(null)
+        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.Qq = [], this.JK(null)
       }
-      startNext(WW) {
+      startNext(RR) {
         if (0 === this.queue.length || this.isBusy()) return;
-        const iW = this.queue.shift();
+        const JR = this.queue.shift();
         this.token++;
-        const OW = {
+        const GR = {
           token: this.token,
-          day: iW.dailyRewardDay,
-          coins: iW.dailyRewardCoins,
-          items: iW.dailyRewardItems,
+          day: JR.dailyRewardDay,
+          coins: JR.dailyRewardCoins,
+          items: JR.dailyRewardItems,
           durationMs: 5e3,
-          flyingCoins: iW.dailyRewardDay === TW ? 24 : 14
+          flyingCoins: JR.dailyRewardDay === lR ? 24 : 14
         };
         this.playing = {
-          view: OW,
-          startedAt: WW,
+          view: GR,
+          startedAt: RR,
           landed: 0,
           released: 0,
           itemsLanded: 0
-        }, this.holdQuestPopups(!0), this.iZ(OW), this.onStarted(OW)
+        }, this.holdQuestPopups(!0), this.JK(GR), this.onStarted(GR)
       }
       finish() {
-        this.BL.shift(), this.playing = null, this.holdQuestPopups(!1), this.iZ(null), this.onHeldCoinsChanged(), this.onFinished()
+        this.Qq.shift(), this.playing = null, this.holdQuestPopups(!1), this.JK(null), this.onHeldCoinsChanged(), this.onFinished()
       }
-      releaseUnshown(WW) {
-        if (this.queue.length > 0 || 0 === this.BL.length) return;
-        const iW = this.BL.length;
-        this.BL = this.BL.filter((iW => WW - iW.receivedAt < 6e4)), this.BL.length !== iW && this.onHeldCoinsChanged()
+      releaseUnshown(RR) {
+        if (this.queue.length > 0 || 0 === this.Qq.length) return;
+        const JR = this.Qq.length;
+        this.Qq = this.Qq.filter((JR => RR - JR.receivedAt < 6e4)), this.Qq.length !== JR && this.onHeldCoinsChanged()
       }
     }
 
-    function TO(WW, iW) {
-      return 450 + 715 * WW / (iW - 1)
+    function MG(RR, JR) {
+      return 450 + 715 * RR / (JR - 1)
     }
 
-    function JO(WW, iW) {
-      return TO(WW, iW) + 650
+    function BG(RR, JR) {
+      return MG(RR, JR) + 650
     }
-    const hO = "skyblockMailboxView";
-    class HO {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
-        this.iZ = WW, this.isBusy = iW, this.onStarted = OW, this.now = mW, this.waiting = [], this.playing = null, this.token = 0, this.itemName = WW => WW
+    const lG = "skyblockMailboxView";
+    class pG {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
+        this.JK = RR, this.isBusy = JR, this.onStarted = GR, this.now = yR, this.waiting = [], this.playing = null, this.token = 0, this.itemName = RR => RR
       }
       getSnapshot() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.playing) || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null
+        var RR, JR;
+        return null !== (RR = null === (JR = this.playing) || void 0 === JR ? void 0 : JR.view) && void 0 !== RR ? RR : null
       }
-      setItemName(WW) {
-        this.itemName = WW
+      setItemName(RR) {
+        this.itemName = RR
       }
-      yZ(WW) {
-        this.waiting.push(...WW.mailLetters), this.hZ()
+      BK(RR) {
+        this.waiting.push(...RR.mailLetters), this.gK()
       }
-      hZ() {
-        const WW = this.now();
-        null !== this.playing && WW - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.iZ(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(WW)
+      gK() {
+        const RR = this.now();
+        null !== this.playing && RR - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.JK(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(RR)
       }
       dispose() {
-        this.playing = null, this.waiting = [], this.iZ(null)
+        this.playing = null, this.waiting = [], this.JK(null)
       }
-      start(WW) {
-        const iW = this.waiting.slice(0, 3);
+      start(RR) {
+        const JR = this.waiting.slice(0, 3);
         this.token++;
-        const OW = {
+        const GR = {
           token: this.token,
-          letters: iW.map((WW => this.toView(WW))),
-          more: this.waiting.length - iW.length,
-          durationMs: 4500 + 700 * iW.length
+          letters: JR.map((RR => this.toView(RR))),
+          more: this.waiting.length - JR.length,
+          durationMs: 4500 + 700 * JR.length
         };
         this.waiting = [], this.playing = {
-          view: OW,
-          startedAt: WW
-        }, this.iZ(OW), this.onStarted(OW)
+          view: GR,
+          startedAt: RR
+        }, this.JK(GR), this.onStarted(GR)
       }
-      toView(WW) {
+      toView(RR) {
         return {
-          coins: WW.mailCoins,
-          items: WW.mailItems.map((WW => {
-            var iW;
+          coins: RR.mailCoins,
+          items: RR.mailItems.map((RR => {
+            var JR;
             return {
-              itemName: WW.mailItemName,
-              amount: WW.mailItemAmount,
-              label: null !== (iW = WW.mailItemLabel) && void 0 !== iW ? iW : this.itemName(WW.mailItemName)
+              itemName: RR.mailItemName,
+              amount: RR.mailItemAmount,
+              label: null !== (JR = RR.mailItemLabel) && void 0 !== JR ? JR : this.itemName(RR.mailItemName)
             }
           })),
-          reasonKey: WW.mailReasonKey,
-          reasonParams: WW.mailReasonParams
+          reasonKey: RR.mailReasonKey,
+          reasonParams: RR.mailReasonParams
         }
       }
     }
-    const nO = "skyblockQuestGraphView",
-      uO = "skyblockDevQuestJump";
+    const gG = "skyblockQuestGraphView",
+      bG = "skyblockDevQuestJump";
 
-    function oO(WW) {
-      if (0 === WW.length) return "";
-      const iW = [`M ${WW[0].x} ${WW[0].y}`];
-      for (let mW = 1; mW < WW.length - 1; mW++) {
-        const OW = WW[mW + 1];
-        iW.push(`Q ${WW[mW].x} ${WW[mW].y} ${(WW[mW].x+OW.x)/2} ${(WW[mW].y+OW.y)/2}`)
+    function vG(RR) {
+      if (0 === RR.length) return "";
+      const JR = [`M ${RR[0].x} ${RR[0].y}`];
+      for (let yR = 1; yR < RR.length - 1; yR++) {
+        const GR = RR[yR + 1];
+        JR.push(`Q ${RR[yR].x} ${RR[yR].y} ${(RR[yR].x+GR.x)/2} ${(RR[yR].y+GR.y)/2}`)
       }
-      const OW = WW[WW.length - 1];
-      return iW.push(`L ${OW.x} ${OW.y}`), iW.join(" ")
+      const GR = RR[RR.length - 1];
+      return JR.push(`L ${GR.x} ${GR.y}`), JR.join(" ")
     }
 
-    function dO(WW, iW) {
-      return WW < iW ? `${WW}|${iW}` : `${iW}|${WW}`
+    function OG(RR, JR) {
+      return RR < JR ? `${RR}|${JR}` : `${JR}|${RR}`
     }
-    class eO extends cW {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          PW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
+    class xG extends iR {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          ZR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
             getItem: () => null,
             setItem: () => {},
             removeItem: () => {}
           },
-          LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
-        super(WW, OW, mW), this.translate = iW, this.requestJump = EW, this.requestArrive = NW, this.storage = PW, this.now = LW, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
+          qR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
+        super(RR, GR, yR), this.translate = JR, this.requestJump = tR, this.requestArrive = uR, this.storage = ZR, this.now = qR, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           width: 0,
@@ -2658,89 +2624,89 @@ export const modules = {
           nodes: [],
           edges: [],
           planning: !1
-        }, this.hover = WW => {
-          WW !== this.hoveredId && (this.hoveredId = WW, this.emit())
-        }, this.jump = WW => {
-          this.close(), this.requestJump(WW)
+        }, this.hover = RR => {
+          RR !== this.hoveredId && (this.hoveredId = RR, this.emit())
+        }, this.jump = RR => {
+          this.close(), this.requestJump(RR)
         }
       }
-      yZ(WW) {
-        if (!this.JA)
-          if ("graph" !== WW.kind) {
-            if ("jumping" === WW.kind) {
-              const iW = {
-                questId: WW.graphQuestId,
-                variation: WW.graphVariation,
-                completes: WW.graphCompletesOnArrival,
+      BK(RR) {
+        if (!this.He)
+          if ("graph" !== RR.kind) {
+            if ("jumping" === RR.kind) {
+              const JR = {
+                questId: RR.graphQuestId,
+                variation: RR.graphVariation,
+                completes: RR.graphCompletesOnArrival,
                 departedAt: this.now()
               };
-              this.storage.setItem(uO, iW)
+              this.storage.setItem(bG, JR)
             }
           } else {
-            const iW = ++this.graphCount;
-            OW.e(141).then((() => OW(7416))).then((OW => {
+            const JR = ++this.graphCount;
+            GR.e(141).then((() => GR(7550))).then((GR => {
               let {
-                default: mW
-              } = OW;
-              this.JA || iW !== this.graphCount || (this.layout = function(WW, iW, OW) {
-                var mW, EW;
-                const NW = new WW.graphlib.Graph;
-                NW.setGraph({
+                default: yR
+              } = GR;
+              this.He || JR !== this.graphCount || (this.layout = function(RR, JR, GR) {
+                var yR, tR;
+                const uR = new RR.graphlib.Graph;
+                uR.setGraph({
                   rankdir: "LR",
                   ranksep: 70,
                   nodesep: 14,
                   marginx: 24,
                   marginy: 24
-                }), NW.setDefaultEdgeLabel((() => ({})));
-                const PW = new Set;
-                for (const tW of iW) PW.add(tW.graphQuestId), NW.setNode(tW.graphQuestId, {
+                }), uR.setDefaultEdgeLabel((() => ({})));
+                const ZR = new Set;
+                for (const VR of JR) ZR.add(VR.graphQuestId), uR.setNode(VR.graphQuestId, {
                   width: 190,
                   height: 52
                 });
-                const LW = OW.filter((WW => PW.has(WW.graphFromId) && PW.has(WW.graphToId) && WW.graphFromId !== WW.graphToId)),
-                  cW = new Map;
-                for (const tW of [...LW].sort(((WW, iW) => Number("awaits" === WW.graphEdgeKind) - Number("awaits" === iW.graphEdgeKind)))) {
-                  const WW = dO(tW.graphFromId, tW.graphToId);
-                  cW.has(WW) || (cW.set(WW, tW), NW.setEdge(tW.graphFromId, tW.graphToId))
+                const qR = GR.filter((RR => ZR.has(RR.graphFromId) && ZR.has(RR.graphToId) && RR.graphFromId !== RR.graphToId)),
+                  iR = new Map;
+                for (const VR of [...qR].sort(((RR, JR) => Number("awaits" === RR.graphEdgeKind) - Number("awaits" === JR.graphEdgeKind)))) {
+                  const RR = OG(VR.graphFromId, VR.graphToId);
+                  iR.has(RR) || (iR.set(RR, VR), uR.setEdge(VR.graphFromId, VR.graphToId))
                 }
-                WW.layout(NW);
-                const wW = NW.graph();
+                RR.layout(uR);
+                const fR = uR.graph();
                 return {
-                  width: Math.ceil(null !== (mW = wW.width) && void 0 !== mW ? mW : 0),
-                  height: Math.ceil(null !== (EW = wW.height) && void 0 !== EW ? EW : 0),
-                  nodes: iW.map((WW => {
-                    var iW, OW;
-                    const mW = NW.node(WW.graphQuestId);
+                  width: Math.ceil(null !== (yR = fR.width) && void 0 !== yR ? yR : 0),
+                  height: Math.ceil(null !== (tR = fR.height) && void 0 !== tR ? tR : 0),
+                  nodes: JR.map((RR => {
+                    var JR, GR;
+                    const yR = uR.node(RR.graphQuestId);
                     return {
-                      node: WW,
-                      left: (null !== (iW = mW.x) && void 0 !== iW ? iW : 0) - 95,
-                      top: (null !== (OW = mW.y) && void 0 !== OW ? OW : 0) - 26
+                      node: RR,
+                      left: (null !== (JR = yR.x) && void 0 !== JR ? JR : 0) - 95,
+                      top: (null !== (GR = yR.y) && void 0 !== GR ? GR : 0) - 26
                     }
                   })),
-                  edges: LW.map((WW => {
-                    var iW;
-                    const OW = cW.get(dO(WW.graphFromId, WW.graphToId)),
-                      mW = null !== (iW = NW.edge(OW.graphFromId, OW.graphToId).points) && void 0 !== iW ? iW : [];
+                  edges: qR.map((RR => {
+                    var JR;
+                    const GR = iR.get(OG(RR.graphFromId, RR.graphToId)),
+                      yR = null !== (JR = uR.edge(GR.graphFromId, GR.graphToId).points) && void 0 !== JR ? JR : [];
                     return {
-                      edge: WW,
-                      key: `${WW.graphFromId}|${WW.graphToId}|${WW.graphEdgeKind}`,
-                      path: oO(OW.graphFromId === WW.graphFromId ? mW : [...mW].reverse())
+                      edge: RR,
+                      key: `${RR.graphFromId}|${RR.graphToId}|${RR.graphEdgeKind}`,
+                      path: vG(GR.graphFromId === RR.graphFromId ? yR : [...yR].reverse())
                     }
                   })),
-                  plans: new Map(iW.map((WW => [WW.graphQuestId, new Set([WW.graphQuestId, ...WW.graphPlanIds])])))
+                  plans: new Map(JR.map((RR => [RR.graphQuestId, new Set([RR.graphQuestId, ...RR.graphPlanIds])])))
                 }
-              }(mW, WW.graphNodes, WW.graphEdges), this.show())
-            })).catch((WW => {
-              console.error("The quest graph could not be laid out", WW)
+              }(yR, RR.graphNodes, RR.graphEdges), this.show())
+            })).catch((RR => {
+              console.error("The quest graph could not be laid out", RR)
             }))
           }
       }
-      resumeJump(WW) {
-        const iW = this.storage.getItem(uO);
-        this.storage.removeItem(uO), null === iW || iW.variation !== WW || this.now() - iW.departedAt > 6e4 || this.requestArrive(iW.questId, iW.completes)
+      resumeJump(RR) {
+        const JR = this.storage.getItem(bG);
+        this.storage.removeItem(bG), null === JR || JR.variation !== RR || this.now() - JR.departedAt > 6e4 || this.requestArrive(JR.questId, JR.completes)
       }
-      setTranslator(WW) {
-        this.translate = WW, this.emit()
+      setTranslator(RR) {
+        this.translate = RR, this.emit()
       }
       dispose() {
         this.layout = null, this.hoveredId = null, super.dispose()
@@ -2752,12 +2718,12 @@ export const modules = {
         return null !== this.layout
       }
       getPlan() {
-        var WW, iW;
-        return null !== (WW = null === this.hoveredId || null === (iW = this.layout) || void 0 === iW ? void 0 : iW.plans.get(this.hoveredId)) && void 0 !== WW ? WW : new Set
+        var RR, JR;
+        return null !== (RR = null === this.hoveredId || null === (JR = this.layout) || void 0 === JR ? void 0 : JR.plans.get(this.hoveredId)) && void 0 !== RR ? RR : new Set
       }
       buildSnapshot() {
-        const WW = this.layout;
-        if (null === WW) return {
+        const RR = this.layout;
+        if (null === RR) return {
           enabled: !1,
           open: this.open,
           width: 0,
@@ -2766,230 +2732,230 @@ export const modules = {
           edges: [],
           planning: !1
         };
-        const iW = this.getPlan();
+        const JR = this.getPlan();
         return {
           enabled: !0,
           open: this.open,
-          width: WW.width,
-          height: WW.height,
-          nodes: WW.nodes.map((WW => {
+          width: RR.width,
+          height: RR.height,
+          nodes: RR.nodes.map((RR => {
             let {
-              node: OW,
-              left: mW,
-              top: EW
-            } = WW;
+              node: GR,
+              left: yR,
+              top: tR
+            } = RR;
             return {
-              id: OW.graphQuestId,
-              name: this.translate(OW.graphNameKey),
-              detail: null === OW.graphGiverName ? OW.graphZoneId : `${OW.graphGiverName} \xb7 ${OW.graphZoneId}`,
-              state: OW.graphState,
-              left: mW,
-              top: EW,
-              inPlan: iW.has(OW.graphQuestId),
-              hovered: OW.graphQuestId === this.hoveredId
+              id: GR.graphQuestId,
+              name: this.translate(GR.graphNameKey),
+              detail: null === GR.graphGiverName ? GR.graphZoneId : `${GR.graphGiverName} \xb7 ${GR.graphZoneId}`,
+              state: GR.graphState,
+              left: yR,
+              top: tR,
+              inPlan: JR.has(GR.graphQuestId),
+              hovered: GR.graphQuestId === this.hoveredId
             }
           })),
-          edges: WW.edges.map((WW => {
+          edges: RR.edges.map((RR => {
             let {
-              edge: OW,
-              key: mW,
-              path: EW
-            } = WW;
+              edge: GR,
+              key: yR,
+              path: tR
+            } = RR;
             return {
-              key: mW,
-              kind: OW.graphEdgeKind,
-              path: EW,
-              inPlan: iW.has(OW.graphFromId) && iW.has(OW.graphToId)
+              key: yR,
+              kind: GR.graphEdgeKind,
+              path: tR,
+              inPlan: JR.has(GR.graphFromId) && JR.has(GR.graphToId)
             }
           })),
-          planning: iW.size > 0
+          planning: JR.size > 0
         }
       }
     }
-    var vO = OW(38210);
-    const gO = 250,
-      DO = 2150,
-      VO = -2.8,
-      pO = 2.2,
-      fO = -27,
-      CO = {
+    var NG = GR(38172);
+    const DG = 250,
+      HG = 2150,
+      oG = -2.8,
+      cG = 2.2,
+      PG = -27,
+      IG = {
         zeta: .34,
         period: .7,
         lead: .1,
         rush: .04
       },
-      XO = {
+      mG = {
         zeta: .45,
         period: .55,
         delay: .12,
         to: 1.25
       },
-      BO = Math.round(50 + 1e3 * (XO.delay + XO.period / 2)),
-      qO = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
-      RO = Array.from({
+      zG = Math.round(50 + 1e3 * (mG.delay + mG.period / 2)),
+      SG = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
+      jG = Array.from({
         length: 26
-      }, ((WW, iW) => {
-        const OW = 2.39996 * iW,
-          mW = .5 + .618034 * iW % 1 * .23,
-          EW = iW % 3 !== 2;
+      }, ((RR, JR) => {
+        const GR = 2.39996 * JR,
+          yR = .5 + .618034 * JR % 1 * .23,
+          tR = JR % 3 !== 2;
         return {
-          rune: EW ? qO[7 * iW % 24] : "",
+          rune: tR ? SG[7 * JR % 24] : "",
           style: {
-            "--from-x": `calc(var(--sword-size) * ${(Math.cos(OW)*mW).toFixed(3)})`,
-            "--from-y": `calc(var(--sword-size) * ${(Math.sin(OW)*mW).toFixed(3)})`,
-            "--spin": 40 * (iW % 5 - 2) + "deg",
-            "--size": (EW ? 1 + iW % 4 * .2 : .3 + iW % 2 * .15) + "rem",
-            "--duration": `${(1.8+7*iW%5*.35).toFixed(2)}s`,
-            "--delay": `${(-.83*iW%3).toFixed(2)}s`
+            "--from-x": `calc(var(--sword-size) * ${(Math.cos(GR)*yR).toFixed(3)})`,
+            "--from-y": `calc(var(--sword-size) * ${(Math.sin(GR)*yR).toFixed(3)})`,
+            "--spin": 40 * (JR % 5 - 2) + "deg",
+            "--size": (tR ? 1 + JR % 4 * .2 : .3 + JR % 2 * .15) + "rem",
+            "--duration": `${(1.8+7*JR%5*.35).toFixed(2)}s`,
+            "--delay": `${(-.83*JR%3).toFixed(2)}s`
           }
         }
       }));
 
-    function GO(WW, iW) {
+    function dG(RR, JR) {
       return Array.from({
-        length: 30 + 3 * WW + (iW ? 10 : 0)
-      }, ((WW, iW) => {
-        const OW = iW < 4,
-          mW = OW ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
-          EW = OW ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
-          NW = OW ? 2.2 : .6 + Math.random(),
-          PW = OW ? .3 : Math.random() < .5 ? .16 : .24,
-          LW = OW ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
+        length: 30 + 3 * RR + (JR ? 10 : 0)
+      }, ((RR, JR) => {
+        const GR = JR < 4,
+          yR = GR ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
+          tR = GR ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
+          uR = GR ? 2.2 : .6 + Math.random(),
+          ZR = GR ? .3 : Math.random() < .5 ? .16 : .24,
+          qR = GR ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
         return {
-          "--c": mW,
+          "--c": yR,
           "--angle": `${Math.round(220*(Math.random()-.5)+15)}deg`,
-          "--distance": `${EW.toFixed(2)}rem`,
-          "--length": `${NW.toFixed(2)}rem`,
-          "--width": `${PW}rem`,
-          "--duration": `${Math.round(LW)}ms`,
+          "--distance": `${tR.toFixed(2)}rem`,
+          "--length": `${uR.toFixed(2)}rem`,
+          "--width": `${ZR}rem`,
+          "--duration": `${Math.round(qR)}ms`,
           "--delay": `${Math.round(40*Math.random())}ms`,
           "--fall": `${(1+Math.random()).toFixed(2)}rem`
         }
       }))
     }
 
-    function IO(WW) {
+    function EG(RR) {
       let {
-        zeta: iW,
-        period: OW
-      } = WW;
-      const mW = 2 * Math.PI / OW;
+        zeta: JR,
+        period: GR
+      } = RR;
+      const yR = 2 * Math.PI / GR;
       return {
-        w: mW,
-        decay: iW * mW / Math.sqrt(1 - iW * iW)
+        w: yR,
+        decay: JR * yR / Math.sqrt(1 - JR * JR)
       }
     }
-    let aO = !1;
+    let YG = !1;
 
-    function rO() {
-      if (aO) return;
-      aO = !0;
-      const WW = document.createElement("style");
-      WW.textContent = function() {
-        const WW = IO(CO),
-          iW = IO(XO),
-          OW = iW => Math.exp(-WW.decay * iW) * Math.sin(WW.w * iW),
-          mW = OW(Math.atan(WW.w / WW.decay) / WW.w),
-          EW = .25,
-          NW = 2.15,
-          PW = Math.round(215),
-          LW = [];
-        for (let cW = 0; cW <= PW; cW++) {
-          const WW = cW / PW * NW;
-          let wW = Math.sin(Math.min(WW, EW) / EW * Math.PI / 2) ** 2,
-            tW = 0,
-            ZW = 1,
-            xW = 1 - .2 * wW,
-            lW = 1;
-          if (WW >= EW) {
-            const PW = WW - EW,
-              LW = Math.max(0, PW - .05);
-            wW = Math.exp(-LW / .05), tW = OW(LW + CO.lead * (1 - Math.exp(-LW / CO.rush))) / mW;
-            const cW = LW - XO.delay,
-              AW = cW <= 0 ? 0 : 1 - Math.exp(-iW.decay * cW) * (Math.cos(iW.w * cW) + iW.decay / iW.w * Math.sin(iW.w * cW)),
-              bW = Math.max(0, (WW - 1.77) / (NW - 1.77));
-            ZW = (1 + (XO.to - 1) * AW) * (1 + .08 * bW), xW = 1.1 + 1.5 * Math.exp(-PW / .07) + .3 * Math.exp(-(((1e3 * PW - BO) / 100) ** 2)) + .8 * bW, lW = 1 - bW ** 1.5
+    function kG() {
+      if (YG) return;
+      YG = !0;
+      const RR = document.createElement("style");
+      RR.textContent = function() {
+        const RR = EG(IG),
+          JR = EG(mG),
+          GR = JR => Math.exp(-RR.decay * JR) * Math.sin(RR.w * JR),
+          yR = GR(Math.atan(RR.w / RR.decay) / RR.w),
+          tR = .25,
+          uR = 2.15,
+          ZR = Math.round(215),
+          qR = [];
+        for (let iR = 0; iR <= ZR; iR++) {
+          const RR = iR / ZR * uR;
+          let fR = Math.sin(Math.min(RR, tR) / tR * Math.PI / 2) ** 2,
+            VR = 0,
+            KR = 1,
+            wR = 1 - .2 * fR,
+            rR = 1;
+          if (RR >= tR) {
+            const ZR = RR - tR,
+              qR = Math.max(0, ZR - .05);
+            fR = Math.exp(-qR / .05), VR = GR(qR + IG.lead * (1 - Math.exp(-qR / IG.rush))) / yR;
+            const iR = qR - mG.delay,
+              eR = iR <= 0 ? 0 : 1 - Math.exp(-JR.decay * iR) * (Math.cos(JR.w * iR) + JR.decay / JR.w * Math.sin(JR.w * iR)),
+              aR = Math.max(0, (RR - 1.77) / (uR - 1.77));
+            KR = (1 + (mG.to - 1) * eR) * (1 + .08 * aR), wR = 1.1 + 1.5 * Math.exp(-ZR / .07) + .3 * Math.exp(-(((1e3 * ZR - zG) / 100) ** 2)) + .8 * aR, rR = 1 - aR ** 1.5
           }
-          const AW = .15 * wW + VO * tW,
-            bW = -.1 * wW + pO * tW,
-            jW = 3 * wW + fO * tW;
-          LW.push(`${(cW/PW*100).toFixed(3)}% { opacity: ${lW.toFixed(3)}; transform: translate(${AW.toFixed(3)}rem, ${bW.toFixed(3)}rem) rotate(${jW.toFixed(2)}deg) scale(${ZW.toFixed(3)}); filter: brightness(${xW.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
+          const eR = .15 * fR + oG * VR,
+            aR = -.1 * fR + cG * VR,
+            LR = 3 * fR + PG * VR;
+          qR.push(`${(iR/ZR*100).toFixed(3)}% { opacity: ${rR.toFixed(3)}; transform: translate(${eR.toFixed(3)}rem, ${aR.toFixed(3)}rem) rotate(${LR.toFixed(2)}deg) scale(${KR.toFixed(3)}); filter: brightness(${wR.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
         }
-        return `@keyframes SkyblockForgeSwordBurst { ${LW.join(" ")} }`
-      }(), document.head.append(WW)
+        return `@keyframes SkyblockForgeSwordBurst { ${qR.join(" ")} }`
+      }(), document.head.append(RR)
     }
-    const zO = "skyblockForgeView",
-      FO = {
+    const QG = "skyblockForgeView",
+      FG = {
         Blade: "skyblockGame:forgeSlotBlade",
         Guard: "skyblockGame:forgeSlotGuard",
         Handle: "skyblockGame:forgeSlotHandle"
       };
-    class QO extends cW {
-      constructor(WW, iW, OW, mW, EW) {
-        super(WW, OW, mW), this.translate = iW, this.requestForge = EW, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
+    class TG extends iR {
+      constructor(RR, JR, GR, yR, tR) {
+        super(RR, GR, yR), this.translate = JR, this.requestForge = tR, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
           Blade: null,
           Guard: null,
           Handle: null
-        }, this.onForgeStarted = null, this.onPartSelected = null, this.onOpened = null, this.select = (WW, iW) => {
-          var OW, mW;
-          null !== this.forging || (null !== (OW = this.owned[(0, vO.n)(iW, WW)]) && void 0 !== OW ? OW : 0) <= 0 || (this.selected[WW] = this.selected[WW] === iW ? null : iW, this.status = null, null === (mW = this.onPartSelected) || void 0 === mW || mW.call(this), this.emit())
-        }, this.forge = WW => {
-          var iW, OW;
-          const mW = this.selectedParts();
-          if (null === mW || this.isPending() || !this.open) return;
-          const EW = (0, vO.m)(mW);
-          if (null === EW || EW.coalCost > this.coal) return;
-          const NW = this.preview(EW),
-            PW = null !== (iW = null === (OW = this.onForgeStarted) || void 0 === OW ? void 0 : OW.call(this, NW.tier, NW.named, WW)) && void 0 !== iW ? iW : () => {};
-          if (this.dropArrival(), WW) {
-            const WW = {
+        }, this.onForgeStarted = null, this.onPartSelected = null, this.onOpened = null, this.select = (RR, JR) => {
+          var GR, yR;
+          null !== this.forging || (null !== (GR = this.owned[(0, NG.p)(JR, RR)]) && void 0 !== GR ? GR : 0) <= 0 || (this.selected[RR] = this.selected[RR] === JR ? null : JR, this.status = null, null === (yR = this.onPartSelected) || void 0 === yR || yR.call(this), this.emit())
+        }, this.forge = RR => {
+          var JR, GR;
+          const yR = this.selectedParts();
+          if (null === yR || this.isPending() || !this.open) return;
+          const tR = (0, NG.m)(yR);
+          if (null === tR || tR.coalCost > this.coal) return;
+          const uR = this.preview(tR),
+            ZR = null !== (JR = null === (GR = this.onForgeStarted) || void 0 === GR ? void 0 : GR.call(this, uR.tier, uR.named, RR)) && void 0 !== JR ? JR : () => {};
+          if (this.dropArrival(), RR) {
+            const RR = {
               id: ++this.forgeId,
-              preview: NW,
+              preview: uR,
               timers: [],
-              stopSounds: PW,
+              stopSounds: ZR,
               landed: !1,
               reply: null
             };
-            WW.timers.push(setTimeout((() => {
-              WW.landed = !0, null !== WW.reply && (this.apply(WW.reply), WW.reply = null, this.emit())
-            }), gO), setTimeout((() => {
-              this.finishForge(WW)
-            }), DO)), this.forging = WW
+            RR.timers.push(setTimeout((() => {
+              RR.landed = !0, null !== RR.reply && (this.apply(RR.reply), RR.reply = null, this.emit())
+            }), DG), setTimeout((() => {
+              this.finishForge(RR)
+            }), HG)), this.forging = RR
           }
           this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestForge(mW)
+          }), 8e3), this.emit(), this.requestForge(yR)
         }, this.snapshot = this.buildSnapshot()
       }
-      yZ(WW) {
-        var iW;
-        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === WW.forgeMessageKind) return this.dropForge(), this.apply(WW), this.status = null, this.show(), void(null === (iW = this.onOpened) || void 0 === iW || iW.call(this));
-        const OW = this.forging;
-        if (null !== OW && null !== WW.forgeRefusalKey) this.dropForge();
-        else if (null !== OW && !OW.landed) return void(OW.reply = WW);
-        this.apply(WW), this.emit()
+      BK(RR) {
+        var JR;
+        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === RR.forgeMessageKind) return this.dropForge(), this.apply(RR), this.status = null, this.show(), void(null === (JR = this.onOpened) || void 0 === JR || JR.call(this));
+        const GR = this.forging;
+        if (null !== GR && null !== RR.forgeRefusalKey) this.dropForge();
+        else if (null !== GR && !GR.landed) return void(GR.reply = RR);
+        this.apply(RR), this.emit()
       }
-      apply(WW) {
-        if (this.owned = WW.forgeOwnedParts, this.coal = WW.forgeCoalOwned, this.keepSelectionOwned("open" === WW.forgeMessageKind), null !== WW.forgeForgedSwordId) {
-          var iW;
-          const OW = (0, vO.m)(WW.forgeForgedSwordId);
+      apply(RR) {
+        if (this.owned = RR.forgeOwnedParts, this.coal = RR.forgeCoalOwned, this.keepSelectionOwned("open" === RR.forgeMessageKind), null !== RR.forgeForgedSwordId) {
+          var JR;
+          const GR = (0, NG.m)(RR.forgeForgedSwordId);
           this.status = {
             tone: "forged",
             key: "skyblockGame:forgeForged",
             params: {
-              sword: null !== (iW = null === OW || void 0 === OW ? void 0 : OW.displayName) && void 0 !== iW ? iW : ""
+              sword: null !== (JR = null === GR || void 0 === GR ? void 0 : GR.displayName) && void 0 !== JR ? JR : ""
             }
           }
-        } else null !== WW.forgeRefusalKey && (this.status = {
+        } else null !== RR.forgeRefusalKey && (this.status = {
           tone: "refused",
-          key: WW.forgeRefusalKey,
+          key: RR.forgeRefusalKey,
           params: {}
         })
       }
-      setTranslator(WW) {
-        this.translate = WW, this.emit()
+      setTranslator(RR) {
+        this.translate = RR, this.emit()
       }
       isEnabled() {
         return this.received
@@ -2997,25 +2963,25 @@ export const modules = {
       onClosed() {
         this.dropForge(), this.dropArrival(), this.status = null, this.awaitingReply = !1, this.clearReplyTimeout()
       }
-      finishForge(WW) {
-        var iW;
+      finishForge(RR) {
+        var JR;
         this.forging = null;
-        const OW = this.selectedParts(),
-          mW = setTimeout((() => {
+        const GR = this.selectedParts(),
+          yR = setTimeout((() => {
             this.arriving = null, this.emit()
           }), 400);
         this.arriving = {
-          id: WW.id,
-          sameSword: null !== OW && (null === (iW = (0, vO.m)(OW)) || void 0 === iW ? void 0 : iW.displayName) === WW.preview.name,
-          timer: mW
+          id: RR.id,
+          sameSword: null !== GR && (null === (JR = (0, NG.m)(GR)) || void 0 === JR ? void 0 : JR.displayName) === RR.preview.name,
+          timer: yR
         }, this.emit()
       }
       dropForge() {
-        const WW = this.forging;
-        if (null !== WW) {
+        const RR = this.forging;
+        if (null !== RR) {
           this.forging = null;
-          for (const iW of WW.timers) clearTimeout(iW);
-          WW.stopSounds(), null !== WW.reply && this.apply(WW.reply)
+          for (const JR of RR.timers) clearTimeout(JR);
+          RR.stopSounds(), null !== RR.reply && this.apply(RR.reply)
         }
       }
       dropArrival() {
@@ -3028,23 +2994,23 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       buildSnapshot() {
-        var WW, iW, OW;
-        const mW = this.selectedParts(),
-          EW = null === mW ? null : (0, vO.m)(mW),
-          NW = null !== (WW = null === (iW = this.forging) || void 0 === iW ? void 0 : iW.preview) && void 0 !== WW ? WW : null === EW ? null : this.preview(EW);
+        var RR, JR, GR;
+        const yR = this.selectedParts(),
+          tR = null === yR ? null : (0, NG.m)(yR),
+          uR = null !== (RR = null === (JR = this.forging) || void 0 === JR ? void 0 : JR.preview) && void 0 !== RR ? RR : null === tR ? null : this.preview(tR);
         return {
           enabled: this.received,
           open: this.open,
-          slots: vO.j.map((WW => ({
-            kind: WW,
-            label: this.translate(FO[WW]),
-            parts: this.partsFor(WW)
+          slots: NG.i.map((RR => ({
+            kind: RR,
+            label: this.translate(FG[RR]),
+            parts: this.partsFor(RR)
           }))),
           coalOwned: this.coal,
-          preview: NW,
-          unformedSword: vO.i[null !== (OW = this.selected.Blade) && void 0 !== OW ? OW : "Iron"].baseSword,
-          anyParts: Object.values(this.owned).some((WW => WW > 0)),
-          canForge: null !== NW && !NW.coalShort && !this.isPending(),
+          preview: uR,
+          unformedSword: NG.h[null !== (GR = this.selected.Blade) && void 0 !== GR ? GR : "Iron"].baseSword,
+          anyParts: Object.values(this.owned).some((RR => RR > 0)),
+          canForge: null !== uR && !uR.coalShort && !this.isPending(),
           status: null === this.status ? null : {
             tone: this.status.tone,
             text: this.translate(this.status.key, this.status.params)
@@ -3059,144 +3025,144 @@ export const modules = {
           }
         }
       }
-      preview(WW) {
+      preview(RR) {
         return {
-          name: WW.displayName,
-          lore: WW.lore,
-          baseSword: WW.baseSword,
-          enchantmentTier: WW.enchantmentTier,
-          tier: Number(WW.enchantmentTier.slice(-1)),
-          named: WW.named,
-          stats: this.stats(WW),
-          effects: WW.effects,
-          coalCost: WW.coalCost,
-          coalShort: null === this.forging && WW.coalCost > this.coal
+          name: RR.displayName,
+          lore: RR.lore,
+          baseSword: RR.baseSword,
+          enchantmentTier: RR.enchantmentTier,
+          tier: Number(RR.enchantmentTier.slice(-1)),
+          named: RR.named,
+          stats: this.stats(RR),
+          effects: RR.effects,
+          coalCost: RR.coalCost,
+          coalShort: null === this.forging && RR.coalCost > this.coal
         }
       }
-      partsFor(WW) {
-        const iW = [];
-        for (const mW of vO.e) {
-          var OW;
-          const EW = (0, vO.n)(mW, WW),
-            NW = null !== (OW = this.owned[EW]) && void 0 !== OW ? OW : 0;
-          NW > 0 && iW.push({
-            material: mW,
-            itemName: EW,
-            owned: NW,
-            selected: this.selected[WW] === mW,
+      partsFor(RR) {
+        const JR = [];
+        for (const yR of NG.g) {
+          var GR;
+          const tR = (0, NG.p)(yR, RR),
+            uR = null !== (GR = this.owned[tR]) && void 0 !== GR ? GR : 0;
+          uR > 0 && JR.push({
+            material: yR,
+            itemName: tR,
+            owned: uR,
+            selected: this.selected[RR] === yR,
             placeholder: !1
           })
         }
-        if (0 === iW.length) {
-          const OW = vO.e[0];
-          iW.push({
-            material: OW,
-            itemName: (0, vO.n)(OW, WW),
+        if (0 === JR.length) {
+          const GR = NG.g[0];
+          JR.push({
+            material: GR,
+            itemName: (0, NG.p)(GR, RR),
             owned: 0,
             selected: !1,
             placeholder: !0
           })
         }
-        return iW
+        return JR
       }
-      stats(WW) {
-        const iW = [{
+      stats(RR) {
+        const JR = [{
           label: this.translate("skyblockGame:forgeStatPower"),
-          value: `\xd7${WW.powerMultiplier.toFixed(2)}`,
-          better: WW.powerMultiplier > 1
+          value: `\xd7${RR.powerMultiplier.toFixed(2)}`,
+          better: RR.powerMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatDamage"),
-          value: `\xd7${WW.damageMultiplier.toFixed(2)}`,
-          better: WW.damageMultiplier > 1
+          value: `\xd7${RR.damageMultiplier.toFixed(2)}`,
+          better: RR.damageMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatSpeed"),
-          value: `\xd7${(1/WW.cooldownMultiplier).toFixed(2)}`,
-          better: WW.cooldownMultiplier < 1
+          value: `\xd7${(1/RR.cooldownMultiplier).toFixed(2)}`,
+          better: RR.cooldownMultiplier < 1
         }, {
           label: this.translate("skyblockGame:forgeStatKnockback"),
-          value: `\xd7${WW.knockbackMultiplier.toFixed(2)}`,
-          better: WW.knockbackMultiplier > 1
+          value: `\xd7${RR.knockbackMultiplier.toFixed(2)}`,
+          better: RR.knockbackMultiplier > 1
         }];
-        return WW.reachBonus > 0 && iW.push({
+        return RR.reachBonus > 0 && JR.push({
           label: this.translate("skyblockGame:forgeStatReach"),
-          value: `+${WW.reachBonus.toFixed(1)}`,
+          value: `+${RR.reachBonus.toFixed(1)}`,
           better: !0
-        }), WW.damageReduction > 0 && iW.push({
+        }), RR.damageReduction > 0 && JR.push({
           label: this.translate("skyblockGame:forgeStatDefence"),
-          value: `${Math.round(100*WW.damageReduction)}%`,
+          value: `${Math.round(100*RR.damageReduction)}%`,
           better: !0
-        }), iW
+        }), JR
       }
       selectedParts() {
         const {
-          Blade: WW,
-          Guard: iW,
-          Handle: OW
+          Blade: RR,
+          Guard: JR,
+          Handle: GR
         } = this.selected;
-        return null === WW || null === iW || null === OW ? null : {
-          blade: WW,
-          guard: iW,
-          handle: OW
+        return null === RR || null === JR || null === GR ? null : {
+          blade: RR,
+          guard: JR,
+          handle: GR
         }
       }
-      keepSelectionOwned(WW) {
-        for (const OW of vO.j) {
-          var iW;
-          const mW = this.selected[OW];
-          if (null !== mW && (null !== (iW = this.owned[(0, vO.n)(mW, OW)]) && void 0 !== iW ? iW : 0) > 0) continue;
-          if (!WW) {
-            this.selected[OW] = null;
+      keepSelectionOwned(RR) {
+        for (const GR of NG.i) {
+          var JR;
+          const yR = this.selected[GR];
+          if (null !== yR && (null !== (JR = this.owned[(0, NG.p)(yR, GR)]) && void 0 !== JR ? JR : 0) > 0) continue;
+          if (!RR) {
+            this.selected[GR] = null;
             continue
           }
-          const EW = [...vO.e].reverse().find((WW => {
-            var iW;
-            return (null !== (iW = this.owned[(0, vO.n)(WW, OW)]) && void 0 !== iW ? iW : 0) > 0
+          const tR = [...NG.g].reverse().find((RR => {
+            var JR;
+            return (null !== (JR = this.owned[(0, NG.p)(RR, GR)]) && void 0 !== JR ? JR : 0) > 0
           }));
-          this.selected[OW] = null !== EW && void 0 !== EW ? EW : null
+          this.selected[GR] = null !== tR && void 0 !== tR ? tR : null
         }
       }
       dispose() {
         this.received = !1, this.dropForge(), this.dropArrival(), this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const Wm = "skyblockSmugglerView",
-      im = {
+    const sG = "skyblockSmugglerView",
+      hG = {
         "Red Firecracker Pebble": "skyblockGame:mortarStrike",
         "Purple Firecracker Pebble": "skyblockGame:interdimensionalStrike"
       };
-    class Om extends cW {
-      constructor(WW, iW, OW, mW, EW) {
-        super(WW, OW, mW), this.translate = iW, this.requestBuy = EW, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = WW => WW, this.onBought = null, this.buy = WW => {
-          const iW = this.deals[WW];
-          void 0 !== iW && !this.isPending() && this.open && !this.soldOut.has(WW) && this.canAfford(iW) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
+    class Ry extends iR {
+      constructor(RR, JR, GR, yR, tR) {
+        super(RR, GR, yR), this.translate = JR, this.requestBuy = tR, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = RR => RR, this.onBought = null, this.buy = RR => {
+          const JR = this.deals[RR];
+          void 0 !== JR && !this.isPending() && this.open && !this.soldOut.has(RR) && this.canAfford(JR) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestBuy(this.day, WW))
+          }), 8e3), this.emit(), this.requestBuy(this.day, RR))
         }, this.snapshot = this.buildSnapshot()
       }
-      yZ(WW) {
-        if (this.received = !0, this.day = WW.smugglerDay, this.deals = WW.smugglerDeals, this.rivets = WW.smugglerRivetsOwned, this.crests = WW.smugglerCrestsOwned, this.soldOut = new Set(WW.smugglerSoldOutSlots), this.rotatesAtMs = Date.now() + WW.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === WW.smugglerMessageKind) return this.status = null, this.boughtSlot = null, void this.show();
-        if (this.boughtSlot = WW.smugglerBoughtSlot, null !== WW.smugglerBoughtSlot) {
-          var iW, OW;
-          const mW = this.deals[WW.smugglerBoughtSlot];
+      BK(RR) {
+        if (this.received = !0, this.day = RR.smugglerDay, this.deals = RR.smugglerDeals, this.rivets = RR.smugglerRivetsOwned, this.crests = RR.smugglerCrestsOwned, this.soldOut = new Set(RR.smugglerSoldOutSlots), this.rotatesAtMs = Date.now() + RR.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === RR.smugglerMessageKind) return this.status = null, this.boughtSlot = null, void this.show();
+        if (this.boughtSlot = RR.smugglerBoughtSlot, null !== RR.smugglerBoughtSlot) {
+          var JR, GR;
+          const yR = this.deals[RR.smugglerBoughtSlot];
           this.status = {
             tone: "bought",
             key: "skyblockGame:smugglerBought",
             params: {
-              item: void 0 === mW ? "" : this.dealName(mW),
-              amount: String(null !== (iW = null === mW || void 0 === mW ? void 0 : mW.smugglerDealAmount) && void 0 !== iW ? iW : 0)
+              item: void 0 === yR ? "" : this.dealName(yR),
+              amount: String(null !== (JR = null === yR || void 0 === yR ? void 0 : yR.smugglerDealAmount) && void 0 !== JR ? JR : 0)
             }
-          }, this.boughtCount++, null === (OW = this.onBought) || void 0 === OW || OW.call(this)
-        } else null !== WW.smugglerRefusalKey && (this.status = {
+          }, this.boughtCount++, null === (GR = this.onBought) || void 0 === GR || GR.call(this)
+        } else null !== RR.smugglerRefusalKey && (this.status = {
           tone: "refused",
-          key: WW.smugglerRefusalKey,
+          key: RR.smugglerRefusalKey,
           params: {}
         });
         this.emit()
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, void 0 !== OW && (this.itemName = OW), this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, void 0 !== GR && (this.itemName = GR), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3204,13 +3170,13 @@ export const modules = {
       onClosed() {
         this.status = null, this.boughtSlot = null, this.awaitingReply = !1, this.clearReplyTimeout(), this.boughtCount = 0
       }
-      dealName(WW) {
-        if (null !== WW.smugglerDealUniqueName) return WW.smugglerDealUniqueName;
-        const iW = im[WW.smugglerDealItem];
-        return void 0 === iW ? this.itemName(WW.smugglerDealItem) : this.translate(iW)
+      dealName(RR) {
+        if (null !== RR.smugglerDealUniqueName) return RR.smugglerDealUniqueName;
+        const JR = hG[RR.smugglerDealItem];
+        return void 0 === JR ? this.itemName(RR.smugglerDealItem) : this.translate(JR)
       }
-      canAfford(WW) {
-        return WW.smugglerDealRivets <= this.rivets && WW.smugglerDealCrests <= this.crests
+      canAfford(RR) {
+        return RR.smugglerDealRivets <= this.rivets && RR.smugglerDealCrests <= this.crests
       }
       isPending() {
         return this.awaitingReply || null !== this.pacing
@@ -3222,16 +3188,16 @@ export const modules = {
         return {
           enabled: this.received,
           open: this.open,
-          deals: this.deals.map(((WW, iW) => ({
-            slot: iW,
-            itemName: WW.smugglerDealItem,
-            displayName: this.dealName(WW),
-            enchantmentTier: WW.smugglerDealEnchantmentTier,
-            amount: WW.smugglerDealAmount,
-            rivets: WW.smugglerDealRivets,
-            crests: WW.smugglerDealCrests,
-            soldOut: this.soldOut.has(iW),
-            justBought: this.boughtSlot === iW
+          deals: this.deals.map(((RR, JR) => ({
+            slot: JR,
+            itemName: RR.smugglerDealItem,
+            displayName: this.dealName(RR),
+            enchantmentTier: RR.smugglerDealEnchantmentTier,
+            amount: RR.smugglerDealAmount,
+            rivets: RR.smugglerDealRivets,
+            crests: RR.smugglerDealCrests,
+            soldOut: this.soldOut.has(JR),
+            justBought: this.boughtSlot === JR
           }))),
           rivetsOwned: this.rivets,
           crestsOwned: this.crests,
@@ -3248,56 +3214,56 @@ export const modules = {
         this.received = !1, this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const mm = "skyblockPassageView",
-      Em = {
+    const Jy = "skyblockPassageView",
+      Gy = {
         new: "skyblockGame:passagePhaseNew",
         waxing: "skyblockGame:passagePhaseWaxing",
         full: "skyblockGame:passagePhaseFull",
         waning: "skyblockGame:passagePhaseWaning"
       };
 
-    function Nm(WW, iW) {
-      return WW(Em[iW])
+    function yy(RR, JR) {
+      return RR(Gy[JR])
     }
 
-    function Pm(WW, iW, OW, mW) {
-      const EW = Math.ceil((OW - mW) / 864e5),
-        NW = Nm(WW, iW);
-      return EW > 1 ? WW("skyblockGame:passageNextDays", {
-        phase: NW,
-        days: String(EW)
-      }) : WW("skyblockGame:passageNextSoon", {
-        phase: NW
+    function ty(RR, JR, GR, yR) {
+      const tR = Math.ceil((GR - yR) / 864e5),
+        uR = yy(RR, JR);
+      return tR > 1 ? RR("skyblockGame:passageNextDays", {
+        phase: uR,
+        days: String(tR)
+      }) : RR("skyblockGame:passageNextSoon", {
+        phase: uR
       })
     }
-    class Lm extends cW {
-      constructor(WW, iW, OW, mW) {
-        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(WW, OW, mW), this.translate = iW, this.now = EW, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = WW => WW, this.toggle = () => {
+    class uy extends iR {
+      constructor(RR, JR, GR, yR) {
+        let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(RR, GR, yR), this.translate = JR, this.now = tR, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = RR => RR, this.toggle = () => {
           this.open ? this.dismiss() : this.show()
         }, this.snapshot = this.buildSnapshot()
       }
-      yZ(WW) {
-        this.message = WW, this.receivedAtMs = this.now(), this.emit()
+      BK(RR) {
+        this.message = RR, this.receivedAtMs = this.now(), this.emit()
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, void 0 !== OW && (this.itemName = OW), this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, void 0 !== GR && (this.itemName = GR), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describe(WW) {
+      describe(RR) {
         return {
-          itemName: WW.passageFish,
-          displayName: this.itemName(WW.passageFish),
+          itemName: RR.passageFish,
+          displayName: this.itemName(RR.passageFish),
           where: this.translate("skyblockGame:passageInWater", {
-            water: this.translate(WW.passageFishWaterKey)
+            water: this.translate(RR.passageFishWaterKey)
           })
         }
       }
       buildSnapshot() {
-        const WW = this.message;
-        return null === WW ? {
+        const RR = this.message;
+        return null === RR ? {
           enabled: !1,
           open: !1,
           phase: "new",
@@ -3309,43 +3275,43 @@ export const modules = {
         } : {
           enabled: !0,
           open: this.open,
-          phase: WW.passagePhase,
-          phaseName: Nm(this.translate, WW.passagePhase),
-          visitors: WW.passageVisitors.map((WW => this.describe(WW))),
-          resting: this.describe(WW.passageResting),
-          nextPhase: WW.passageNextPhase,
-          next: Pm(this.translate, WW.passageNextPhase, WW.passageTurnsInMs, this.now() - this.receivedAtMs)
+          phase: RR.passagePhase,
+          phaseName: yy(this.translate, RR.passagePhase),
+          visitors: RR.passageVisitors.map((RR => this.describe(RR))),
+          resting: this.describe(RR.passageResting),
+          nextPhase: RR.passageNextPhase,
+          next: ty(this.translate, RR.passageNextPhase, RR.passageTurnsInMs, this.now() - this.receivedAtMs)
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    var cm = OW(39775);
-    const wm = "skyblockKeepersChairView";
-    class tm extends cW {
-      constructor(WW, iW, OW, mW, EW) {
-        let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          PW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new cm.c;
-        super(WW, OW, mW), this.translate = iW, this.requestAim = EW, this.now = NW, this.pacer = PW, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = WW => WW, this.aim = WW => {
-          !this.awaitingReply && this.open && this.atChair && WW !== this.favoured && (null === WW || this.islands.some((iW => iW.keepersChairIslandId === WW && iW.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+    var Zy = GR(39767);
+    const qy = "skyblockKeepersChairView";
+    class iy extends iR {
+      constructor(RR, JR, GR, yR, tR) {
+        let uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          ZR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new Zy.c;
+        super(RR, GR, yR), this.translate = JR, this.requestAim = tR, this.now = uR, this.pacer = ZR, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = RR => RR, this.aim = RR => {
+          !this.awaitingReply && this.open && this.atChair && RR !== this.favoured && (null === RR || this.islands.some((JR => JR.keepersChairIslandId === RR && JR.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestAim(null !== WW && void 0 !== WW ? WW : "none"))
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = PW.subscribe((() => {
+          }), 8e3), this.emit(), this.requestAim(null !== RR && void 0 !== RR ? RR : "none"))
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = ZR.subscribe((() => {
           this.emit()
         }))
       }
-      yZ(WW) {
-        var iW, OW;
+      BK(RR) {
+        var JR, GR;
         this.received = !0;
-        const mW = this.favoured,
-          EW = this.atChair;
-        var NW;
-        return this.islands = WW.keepersChairIslands, this.favoured = WW.keepersChairFavoured, this.passage = null !== (iW = WW.keepersChairPassage) && void 0 !== iW ? iW : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (OW = WW.keepersChairAtChair) || void 0 === OW || OW, "place" === WW.keepersChairMessageKind ? (!EW && this.atChair && "refused" === (null === (NW = this.status) || void 0 === NW ? void 0 : NW.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === WW.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== WW.keepersChairRefusalKey ? this.status = {
+        const yR = this.favoured,
+          tR = this.atChair;
+        var uR;
+        return this.islands = RR.keepersChairIslands, this.favoured = RR.keepersChairFavoured, this.passage = null !== (JR = RR.keepersChairPassage) && void 0 !== JR ? JR : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (GR = RR.keepersChairAtChair) || void 0 === GR || GR, "place" === RR.keepersChairMessageKind ? (!tR && this.atChair && "refused" === (null === (uR = this.status) || void 0 === uR ? void 0 : uR.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === RR.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== RR.keepersChairRefusalKey ? this.status = {
           tone: "refused",
-          key: WW.keepersChairRefusalKey,
+          key: RR.keepersChairRefusalKey,
           island: null
-        } : this.favoured !== mW && (this.status = null === this.favoured ? {
+        } : this.favoured !== yR && (this.status = null === this.favoured ? {
           tone: "aimed",
           key: "skyblockGame:keepersChairRestedStatus",
           island: null
@@ -3358,11 +3324,11 @@ export const modules = {
       isAtChair() {
         return this.atChair
       }
-      receivePassage(WW) {
-        this.received && (this.passage = WW, this.passageReceivedAtMs = this.now(), this.emit())
+      receivePassage(RR) {
+        this.received && (this.passage = RR, this.passageReceivedAtMs = this.now(), this.emit())
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, void 0 !== OW && (this.itemName = OW), this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, void 0 !== GR && (this.itemName = GR), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3376,47 +3342,47 @@ export const modules = {
       clearReplyTimeout() {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
-      islandName(WW) {
-        const iW = this.islands.find((iW => iW.keepersChairIslandId === WW));
-        return void 0 === iW ? WW : this.translate(iW.keepersChairIslandNameKey)
+      islandName(RR) {
+        const JR = this.islands.find((JR => JR.keepersChairIslandId === RR));
+        return void 0 === JR ? RR : this.translate(JR.keepersChairIslandNameKey)
       }
       buildSnapshot() {
-        const WW = this.atChair ? this.status : {
+        const RR = this.atChair ? this.status : {
             tone: "refused",
             key: "skyblockGame:keepersChairTooFar",
             island: null
           },
-          iW = this.passage;
+          JR = this.passage;
         return {
           enabled: this.received,
           open: this.open,
-          islands: this.islands.map((WW => {
-            const iW = WW.keepersChairFeaturedFish;
+          islands: this.islands.map((RR => {
+            const JR = RR.keepersChairFeaturedFish;
             return {
-              id: WW.keepersChairIslandId,
-              name: this.translate(WW.keepersChairIslandNameKey),
-              relit: WW.keepersChairIslandRelit,
-              featuredFish: null === iW ? null : {
-                itemName: iW,
-                displayName: this.itemName(iW)
+              id: RR.keepersChairIslandId,
+              name: this.translate(RR.keepersChairIslandNameKey),
+              relit: RR.keepersChairIslandRelit,
+              featuredFish: null === JR ? null : {
+                itemName: JR,
+                displayName: this.itemName(JR)
               },
-              favoured: WW.keepersChairIslandId === this.favoured
+              favoured: RR.keepersChairIslandId === this.favoured
             }
           })),
           aimed: null !== this.favoured,
           canAim: this.atChair && !this.isPending(),
-          status: null === WW ? null : {
-            tone: WW.tone,
-            text: this.translate(WW.key, null === WW.island ? void 0 : {
-              island: this.islandName(WW.island)
+          status: null === RR ? null : {
+            tone: RR.tone,
+            text: this.translate(RR.key, null === RR.island ? void 0 : {
+              island: this.islandName(RR.island)
             })
           },
           aimedCount: this.aimedCount,
-          almanac: null === iW ? null : {
-            phase: iW.keepersChairPassagePhase,
-            phaseName: Nm(this.translate, iW.keepersChairPassagePhase),
-            nextPhase: iW.keepersChairPassageNextPhase,
-            next: Pm(this.translate, iW.keepersChairPassageNextPhase, iW.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
+          almanac: null === JR ? null : {
+            phase: JR.keepersChairPassagePhase,
+            phaseName: yy(this.translate, JR.keepersChairPassagePhase),
+            nextPhase: JR.keepersChairPassageNextPhase,
+            next: ty(this.translate, JR.keepersChairPassageNextPhase, JR.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
           }
         }
       }
@@ -3424,63 +3390,63 @@ export const modules = {
         this.received = !1, this.passage = null, this.atChair = !0, this.clearReplyTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const Zm = "skyblockReachLogView",
-      xm = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
-      lm = "Caught Fish",
-      Am = [1, 2, 4];
+    const fy = "skyblockReachLogView",
+      Vy = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
+      Ky = "Caught Fish",
+      wy = [1, 2, 4];
 
-    function bm(WW, iW) {
-      return WW.map((WW => ({
-        ...WW,
-        reachLogPageFish: WW.reachLogPageFish.map((WW => ({
-          ...WW,
-          reachLogFishFresh: iW(WW)
+    function ry(RR, JR) {
+      return RR.map((RR => ({
+        ...RR,
+        reachLogPageFish: RR.reachLogPageFish.map((RR => ({
+          ...RR,
+          reachLogFishFresh: JR(RR)
         })))
       })))
     }
-    class jm extends cW {
-      constructor(WW, iW, OW, mW, EW) {
-        let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new cm.c;
-        super(WW, OW, mW), this.translate = iW, this.requestOpen = EW, this.pacer = NW, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = WW => WW, this.ask = () => {
+    class ey extends iR {
+      constructor(RR, JR, GR, yR, tR) {
+        let uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new Zy.c;
+        super(RR, GR, yR), this.translate = JR, this.requestOpen = tR, this.pacer = uR, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = RR => RR, this.ask = () => {
           !this.received || this.open || this.awaitingReply || (this.pagesCurrent && 0 === this.serverFresh ? this.showPages() : this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestOpen()))
-        }, this.selectPage = WW => {
-          this.pages.some((iW => iW.reachLogIslandId === WW)) && (this.selected = WW, this.emit())
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = NW.subscribe((() => {
+        }, this.selectPage = RR => {
+          this.pages.some((JR => JR.reachLogIslandId === RR)) && (this.selected = RR, this.emit())
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = uR.subscribe((() => {
           this.emit()
         }))
       }
-      yZ(WW) {
-        if (this.received = !0, "status" === WW.reachLogMessageKind) return !0 === WW.reachLogNews && this.markNews(), this.serverFresh = WW.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
-        const iW = this.awaitingReply;
-        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== WW.reachLogMessageKind)
-          if (this.pageViews = null, this.pages = bm(WW.reachLogPages, (WW => WW.reachLogFishFresh || this.heldFresh.has(WW.reachLogFishItem))), this.letGoShown = WW.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, iW) this.showPages();
+      BK(RR) {
+        if (this.received = !0, "status" === RR.reachLogMessageKind) return !0 === RR.reachLogNews && this.markNews(), this.serverFresh = RR.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
+        const JR = this.awaitingReply;
+        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== RR.reachLogMessageKind)
+          if (this.pageViews = null, this.pages = ry(RR.reachLogPages, (RR => RR.reachLogFishFresh || this.heldFresh.has(RR.reachLogFishItem))), this.letGoShown = RR.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, JR) this.showPages();
           else {
-            for (const WW of this.pages)
-              for (const iW of WW.reachLogPageFish) iW.reachLogFishFresh && this.heldFresh.add(iW.reachLogFishItem);
+            for (const RR of this.pages)
+              for (const JR of RR.reachLogPageFish) JR.reachLogFishFresh && this.heldFresh.add(JR.reachLogFishItem);
             this.emit()
           }
         else this.emit()
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, this.pageViews = null, void 0 !== OW && (this.itemName = OW), this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, this.pageViews = null, void 0 !== GR && (this.itemName = GR), this.emit()
       }
       isEnabled() {
         return this.received
       }
       onClosed() {
-        this.shown && (this.shown = !1, this.pageViews = null, this.pages = bm(this.pages, (() => !1)))
+        this.shown && (this.shown = !1, this.pageViews = null, this.pages = ry(this.pages, (() => !1)))
       }
       showPages() {
         this.heldFresh.clear(), this.selected = this.pickPage(), this.show(), this.shown = this.isOpen()
       }
       pickPage() {
-        var WW, iW, OW, mW;
-        const EW = this.pages.find((WW => WW.reachLogPageFish.some((WW => WW.reachLogFishFresh))));
-        if (void 0 !== EW) return EW.reachLogIslandId;
-        if (null !== this.selected && this.pages.some((WW => WW.reachLogIslandId === this.selected))) return this.selected;
-        return null !== (WW = null !== (iW = null === (OW = this.pages.filter((WW => WW.reachLogIslandAwake)).at(-1)) || void 0 === OW ? void 0 : OW.reachLogIslandId) && void 0 !== iW ? iW : null === (mW = this.pages[0]) || void 0 === mW ? void 0 : mW.reachLogIslandId) && void 0 !== WW ? WW : null
+        var RR, JR, GR, yR;
+        const tR = this.pages.find((RR => RR.reachLogPageFish.some((RR => RR.reachLogFishFresh))));
+        if (void 0 !== tR) return tR.reachLogIslandId;
+        if (null !== this.selected && this.pages.some((RR => RR.reachLogIslandId === this.selected))) return this.selected;
+        return null !== (RR = null !== (JR = null === (GR = this.pages.filter((RR => RR.reachLogIslandAwake)).at(-1)) || void 0 === GR ? void 0 : GR.reachLogIslandId) && void 0 !== JR ? JR : null === (yR = this.pages[0]) || void 0 === yR ? void 0 : yR.reachLogIslandId) && void 0 !== RR ? RR : null
       }
       markNews() {
         this.newsToken++, this.news = !0, this.clearNewsTimeout(), this.newsTimeout = setTimeout((() => {
@@ -3507,119 +3473,119 @@ export const modules = {
         }
       }
       buildPages() {
-        return this.pages.map((WW => {
-          var iW;
+        return this.pages.map((RR => {
+          var JR;
           return {
-            id: WW.reachLogIslandId,
-            name: this.translate(WW.reachLogIslandNameKey),
-            awake: WW.reachLogIslandAwake,
-            gold: WW.reachLogPageGold,
-            caught: WW.reachLogPageFish.filter((WW => WW.reachLogFishCaught && !WW.reachLogFishVisitor)).length,
-            total: WW.reachLogPageFish.filter((WW => !WW.reachLogFishVisitor)).length,
-            fish: WW.reachLogPageFish.map((WW => {
-              const iW = WW.reachLogFishBestKg;
+            id: RR.reachLogIslandId,
+            name: this.translate(RR.reachLogIslandNameKey),
+            awake: RR.reachLogIslandAwake,
+            gold: RR.reachLogPageGold,
+            caught: RR.reachLogPageFish.filter((RR => RR.reachLogFishCaught && !RR.reachLogFishVisitor)).length,
+            total: RR.reachLogPageFish.filter((RR => !RR.reachLogFishVisitor)).length,
+            fish: RR.reachLogPageFish.map((RR => {
+              const JR = RR.reachLogFishBestKg;
               return {
-                itemName: WW.reachLogFishItem,
-                name: WW.reachLogFishCaught ? this.itemName(WW.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
-                caught: WW.reachLogFishCaught,
+                itemName: RR.reachLogFishItem,
+                name: RR.reachLogFishCaught ? this.itemName(RR.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
+                caught: RR.reachLogFishCaught,
                 chance: this.translate("skyblockGame:reachLogChance", {
-                  count: Math.max(1, Math.round(1 / WW.reachLogFishChance))
+                  count: Math.max(1, Math.round(1 / RR.reachLogFishChance))
                 }),
-                best: WW.reachLogFishCaught ? null === iW ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
-                  kg: iW.toFixed(1)
+                best: RR.reachLogFishCaught ? null === JR ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
+                  kg: JR.toFixed(1)
                 }) : this.translate("skyblockGame:reachLogNotCaught"),
-                marks: WW.reachLogFishMarks,
-                ribbons: Am.map((iW => 0 !== (WW.reachLogFishRibbons & iW))),
-                glimmer: 0 !== (8 & WW.reachLogFishRibbons),
-                halo: 0 !== (32 & WW.reachLogFishRibbons),
-                fresh: WW.reachLogFishFresh,
-                visitor: WW.reachLogFishVisitor
+                marks: RR.reachLogFishMarks,
+                ribbons: wy.map((JR => 0 !== (RR.reachLogFishRibbons & JR))),
+                glimmer: 0 !== (8 & RR.reachLogFishRibbons),
+                halo: 0 !== (32 & RR.reachLogFishRibbons),
+                fresh: RR.reachLogFishFresh,
+                visitor: RR.reachLogFishVisitor
               }
             })),
-            returner: this.buildReturner(null !== (iW = WW.reachLogPageReturner) && void 0 !== iW ? iW : null)
+            returner: this.buildReturner(null !== (JR = RR.reachLogPageReturner) && void 0 !== JR ? JR : null)
           }
         }))
       }
-      buildReturner(WW) {
-        return null === WW ? null : {
-          itemName: WW.reachLogReturnerFishItem,
-          line: this.translate(WW.reachLogReturnerLineKey, {
-            name: this.translate(WW.reachLogReturnerNameKey),
-            trinket: this.translate(WW.reachLogReturnerTrinketKey)
+      buildReturner(RR) {
+        return null === RR ? null : {
+          itemName: RR.reachLogReturnerFishItem,
+          line: this.translate(RR.reachLogReturnerLineKey, {
+            name: this.translate(RR.reachLogReturnerNameKey),
+            trinket: this.translate(RR.reachLogReturnerTrinketKey)
           }),
-          back: WW.reachLogReturnerBack
+          back: RR.reachLogReturnerBack
         }
       }
-      receivePassagePhase(WW) {
-        null !== this.passagePhase && this.passagePhase !== WW && (this.pagesCurrent = !1), this.passagePhase = WW
+      receivePassagePhase(RR) {
+        null !== this.passagePhase && this.passagePhase !== RR && (this.pagesCurrent = !1), this.passagePhase = RR
       }
       dispose() {
         this.received = !1, this.pagesCurrent = !1, this.passagePhase = null, this.heldFresh.clear(), this.clearReplyTimeout(), this.clearNewsTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const Um = "skyblockLampLightView";
-    class km {
-      constructor(WW, iW, OW, mW) {
-        this.iZ = WW, this.translate = iW, this.requestCommand = OW, this.pacer = mW, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.JA = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = WW => {
-          WW ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
-        }, this.buy = WW => {
-          this.send(`buy ${WW}`)
-        }, this.socket = WW => {
-          this.send(`socket ${null!==WW&&void 0!==WW?WW:dW}`)
-        }, this.wearTint = WW => {
-          this.send(`tint ${null!==WW&&void 0!==WW?WW:dW}`)
-        }, this.setSituation = WW => {
-          this.situation = WW, this.emit()
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = mW.subscribe((() => {
+    const ay = "skyblockLampLightView";
+    class Ly {
+      constructor(RR, JR, GR, yR) {
+        this.JK = RR, this.translate = JR, this.requestCommand = GR, this.pacer = yR, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.He = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = RR => {
+          RR ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
+        }, this.buy = RR => {
+          this.send(`buy ${RR}`)
+        }, this.socket = RR => {
+          this.send(`socket ${null!==RR&&void 0!==RR?RR:NR}`)
+        }, this.wearTint = RR => {
+          this.send(`tint ${null!==RR&&void 0!==RR?RR:NR}`)
+        }, this.setSituation = RR => {
+          this.situation = RR, this.emit()
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = yR.subscribe((() => {
           this.sendQueuedOff(), this.emit()
-        })), this.removePriority = mW.addPriority({
+        })), this.removePriority = yR.addPriority({
           waiting: () => this.offQueued,
           flush: () => {
             this.sendQueuedOff()
           }
         })
       }
-      yZ(WW) {
-        if (this.message = WW, null !== WW.lampLightShop && (this.shop = WW.lampLightShop), "open" === WW.lampLightKind && (this.refusalKey = null), "reply" === WW.lampLightKind) {
-          var iW;
-          const EW = null !== (iW = WW.lampLightReplyTag) && void 0 !== iW ? iW : null,
-            NW = null !== EW && EW === this.offTag;
-          var OW, mW;
-          if (NW ? this.settleOff() : null !== EW && EW !== this.awaitingTag || this.settleReply(), this.refusalKey = WW.lampLightRefusalKey, null !== WW.lampLightBought && !NW) this.sparkle = {
-            id: WW.lampLightBought,
-            count: (null !== (OW = null === (mW = this.sparkle) || void 0 === mW ? void 0 : mW.count) && void 0 !== OW ? OW : 0) + 1
+      BK(RR) {
+        if (this.message = RR, null !== RR.lampLightShop && (this.shop = RR.lampLightShop), "open" === RR.lampLightKind && (this.refusalKey = null), "reply" === RR.lampLightKind) {
+          var JR;
+          const tR = null !== (JR = RR.lampLightReplyTag) && void 0 !== JR ? JR : null,
+            uR = null !== tR && tR === this.offTag;
+          var GR, yR;
+          if (uR ? this.settleOff() : null !== tR && tR !== this.awaitingTag || this.settleReply(), this.refusalKey = RR.lampLightRefusalKey, null !== RR.lampLightBought && !uR) this.sparkle = {
+            id: RR.lampLightBought,
+            count: (null !== (GR = null === (yR = this.sparkle) || void 0 === yR ? void 0 : yR.count) && void 0 !== GR ? GR : 0) + 1
           }
         }
-        WW.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === WW.lampLightKind && (this.lastGained = WW.lampLightGained, this.gainedCount++), this.emit()
+        RR.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === RR.lampLightKind && (this.lastGained = RR.lampLightGained, this.gainedCount++), this.emit()
       }
-      setAtChair(WW) {
-        WW !== this.atChair && (this.atChair = WW, WW && (this.refusalKey = null), this.emit())
+      setAtChair(RR) {
+        RR !== this.atChair && (this.atChair = RR, RR && (this.refusalKey = null), this.emit())
       }
-      setTranslator(WW, iW) {
-        this.translate = WW, this.locale = null !== iW && void 0 !== iW ? iW : this.locale, this.emit()
+      setTranslator(RR, JR) {
+        this.translate = RR, this.locale = null !== JR && void 0 !== JR ? JR : this.locale, this.emit()
       }
       onChairClosed() {
         this.refusalKey = null, this.emit()
       }
       dispose() {
-        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.JA = !0
+        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.He = !0
       }
-      send(WW) {
-        var iW;
-        if (null !== this.awaitingTag || "ready" !== (null === (iW = this.message) || void 0 === iW ? void 0 : iW.lampLightStatus) || !this.atChair) return;
+      send(RR) {
+        var JR;
+        if (null !== this.awaitingTag || "ready" !== (null === (JR = this.message) || void 0 === JR ? void 0 : JR.lampLightStatus) || !this.atChair) return;
         if (this.sendQueuedOff(), this.offQueued || !this.pacer.tryStart()) return;
-        const OW = this.nextTag();
-        this.awaitingTag = OW, this.replyTimeout = setTimeout((() => {
+        const GR = this.nextTag();
+        this.awaitingTag = GR, this.replyTimeout = setTimeout((() => {
           this.replyTimeout = null, this.awaitingTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-${WW} ${OW}`), this.emit()
+        }), 8e3), this.requestCommand(`lamplight-${RR} ${GR}`), this.emit()
       }
       sendQueuedOff() {
         if (!this.offQueued || !this.pacer.canSendPriority()) return;
         this.offQueued = !1;
-        const WW = this.nextTag();
-        this.offTag = WW, this.pacer.start(), this.offTimeout = setTimeout((() => {
+        const RR = this.nextTag();
+        this.offTag = RR, this.pacer.start(), this.offTimeout = setTimeout((() => {
           this.offTimeout = null, this.awaitingOff = !1, this.offTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-release off ${WW}`)
+        }), 8e3), this.requestCommand(`lamplight-release off ${RR}`)
       }
       nextTag() {
         return this.lastTag = this.lastTag % 999999 + 1, this.lastTag
@@ -3637,427 +3603,427 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       emit() {
-        this.JA || (this.snapshot = this.buildSnapshot(), this.iZ(this.snapshot))
+        this.He || (this.snapshot = this.buildSnapshot(), this.JK(this.snapshot))
       }
-      formatLight(WW) {
-        return Math.floor(WW).toLocaleString(this.locale)
+      formatLight(RR) {
+        return Math.floor(RR).toLocaleString(this.locale)
       }
-      formatPercent(WW) {
-        const iW = 100 * WW;
-        return iW >= 10 ? Math.round(iW).toLocaleString(this.locale) : iW.toLocaleString(this.locale, {
+      formatPercent(RR) {
+        const JR = 100 * RR;
+        return JR >= 10 ? Math.round(JR).toLocaleString(this.locale) : JR.toLocaleString(this.locale, {
           maximumFractionDigits: 1
         })
       }
-      formatOdds(WW, iW) {
-        if ("bite" === WW) return this.translate("skyblockGame:lampLightBite", {
-          seconds: (iW.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
+      formatOdds(RR, JR) {
+        if ("bite" === RR) return this.translate("skyblockGame:lampLightBite", {
+          seconds: (JR.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
             maximumFractionDigits: 1
           })
         });
-        if ("rare" === WW) return this.translate("skyblockGame:lampLightRare", {
-          percent: this.formatPercent(iW.lampLightRareChance)
+        if ("rare" === RR) return this.translate("skyblockGame:lampLightRare", {
+          percent: this.formatPercent(JR.lampLightRareChance)
         });
-        if ("notice" === WW) return null === iW.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
-          percent: this.formatPercent(iW.lampLightNoticeChance)
+        if ("notice" === RR) return null === JR.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
+          percent: this.formatPercent(JR.lampLightNoticeChance)
         });
-        const OW = "meter" === WW ? iW.lampLightMeterCatches : iW.lampLightBloomCatches;
-        return null === OW ? null : this.translate("meter" === WW ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
-          catches: String(Math.round(OW))
+        const GR = "meter" === RR ? JR.lampLightMeterCatches : JR.lampLightBloomCatches;
+        return null === GR ? null : this.translate("meter" === RR ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
+          catches: String(Math.round(GR))
         })
       }
-      oddsLines(WW, iW) {
-        const OW = (WW, iW) => {
-            var OW;
-            return null !== (OW = {
-              bite: iW.lampLightBiteMs,
-              rare: iW.lampLightRareChance,
-              meter: iW.lampLightMeterCatches,
-              bloom: iW.lampLightBloomCatches,
-              notice: iW.lampLightNoticeChance
-            } [WW]) && void 0 !== OW ? OW : 0
+      oddsLines(RR, JR) {
+        const GR = (RR, JR) => {
+            var GR;
+            return null !== (GR = {
+              bite: JR.lampLightBiteMs,
+              rare: JR.lampLightRareChance,
+              meter: JR.lampLightMeterCatches,
+              bloom: JR.lampLightBloomCatches,
+              notice: JR.lampLightNoticeChance
+            } [RR]) && void 0 !== GR ? GR : 0
           },
-          mW = {
+          yR = {
             bite: !0,
             rare: !1,
             meter: !0,
             bloom: !1,
             notice: !1
           },
-          EW = [];
-        for (const NW of ["bite", "rare", "meter", "bloom", "notice"]) {
-          const PW = this.formatOdds(NW, WW),
-            LW = this.formatOdds(NW, iW);
-          if (null === PW || null === LW || "bite" !== NW && "rare" !== NW && PW === LW) continue;
-          const cW = OW(NW, iW) - OW(NW, WW),
-            wW = mW[NW] ? cW < 0 : cW > 0;
-          EW.push({
-            label: NW,
-            before: PW,
-            after: LW,
-            tone: PW === LW ? "same" : wW ? "better" : "worse"
+          tR = [];
+        for (const uR of ["bite", "rare", "meter", "bloom", "notice"]) {
+          const ZR = this.formatOdds(uR, RR),
+            qR = this.formatOdds(uR, JR);
+          if (null === ZR || null === qR || "bite" !== uR && "rare" !== uR && ZR === qR) continue;
+          const iR = GR(uR, JR) - GR(uR, RR),
+            fR = yR[uR] ? iR < 0 : iR > 0;
+          tR.push({
+            label: uR,
+            before: ZR,
+            after: qR,
+            tone: ZR === qR ? "same" : fR ? "better" : "worse"
           })
         }
-        return EW
+        return tR
       }
-      charmView(WW, iW, OW) {
-        const mW = WW.lampLightCharmId.charAt(0).toUpperCase() + WW.lampLightCharmId.slice(1),
-          EW = "bloom" === this.situation;
+      charmView(RR, JR, GR) {
+        const yR = RR.lampLightCharmId.charAt(0).toUpperCase() + RR.lampLightCharmId.slice(1),
+          tR = "bloom" === this.situation;
         return {
-          id: WW.lampLightCharmId,
-          name: this.translate(`skyblockGame:lampLightCharm${mW}`),
-          effect: this.translate(`skyblockGame:lampLightCharm${mW}Effect`),
+          id: RR.lampLightCharmId,
+          name: this.translate(`skyblockGame:lampLightCharm${yR}`),
+          effect: this.translate(`skyblockGame:lampLightCharm${yR}Effect`),
           cost: this.translate("skyblockGame:lampLightCost", {
-            light: this.formatLight(WW.lampLightCharmCost)
+            light: this.formatLight(RR.lampLightCharmCost)
           }),
-          owned: WW.lampLightCharmOwned,
-          affordable: OW >= WW.lampLightCharmCost,
-          socketed: iW.lampLightSocketed === WW.lampLightCharmId,
-          lines: this.oddsLines(EW ? iW.lampLightBareBloom : iW.lampLightBareOpen, EW ? WW.lampLightCharmBloom : WW.lampLightCharmOpen)
+          owned: RR.lampLightCharmOwned,
+          affordable: GR >= RR.lampLightCharmCost,
+          socketed: JR.lampLightSocketed === RR.lampLightCharmId,
+          lines: this.oddsLines(tR ? JR.lampLightBareBloom : JR.lampLightBareOpen, tR ? RR.lampLightCharmBloom : RR.lampLightCharmOpen)
         }
       }
       buildSnapshot() {
-        var WW, iW, OW, mW;
-        const EW = this.message,
-          NW = "ready" === (null === EW || void 0 === EW ? void 0 : EW.lampLightStatus) ? this.shop : null,
-          PW = null !== (WW = null === EW || void 0 === EW ? void 0 : EW.lampLightBalance) && void 0 !== WW ? WW : 0,
-          LW = this.atChair,
-          cW = "loading" === (null === EW || void 0 === EW ? void 0 : EW.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === EW || void 0 === EW ? void 0 : EW.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
-          wW = "ready" !== (null === EW || void 0 === EW ? void 0 : EW.lampLightStatus) || LW ? null !== (iW = this.refusalKey) && void 0 !== iW ? iW : cW : "skyblockGame:lampLightTooFar";
+        var RR, JR, GR, yR;
+        const tR = this.message,
+          uR = "ready" === (null === tR || void 0 === tR ? void 0 : tR.lampLightStatus) ? this.shop : null,
+          ZR = null !== (RR = null === tR || void 0 === tR ? void 0 : tR.lampLightBalance) && void 0 !== RR ? RR : 0,
+          qR = this.atChair,
+          iR = "loading" === (null === tR || void 0 === tR ? void 0 : tR.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === tR || void 0 === tR ? void 0 : tR.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
+          fR = "ready" !== (null === tR || void 0 === tR ? void 0 : tR.lampLightStatus) || qR ? null !== (JR = this.refusalKey) && void 0 !== JR ? JR : iR : "skyblockGame:lampLightTooFar";
         return {
-          enabled: null !== EW && "locked" !== EW.lampLightStatus,
-          status: null !== (OW = null === EW || void 0 === EW ? void 0 : EW.lampLightStatus) && void 0 !== OW ? OW : "loading",
+          enabled: null !== tR && "locked" !== tR.lampLightStatus,
+          status: null !== (GR = null === tR || void 0 === tR ? void 0 : tR.lampLightStatus) && void 0 !== GR ? GR : "loading",
           balance: this.translate("skyblockGame:lampLightBalance", {
-            light: this.formatLight(PW)
+            light: this.formatLight(ZR)
           }),
-          releasing: null !== (mW = null === EW || void 0 === EW ? void 0 : EW.lampLightReleasing) && void 0 !== mW && mW,
-          gained: null === EW || 0 === this.gainedCount ? null : {
+          releasing: null !== (yR = null === tR || void 0 === tR ? void 0 : tR.lampLightReleasing) && void 0 !== yR && yR,
+          gained: null === tR || 0 === this.gainedCount ? null : {
             text: this.translate("skyblockGame:lampLightGained", {
               light: this.formatLight(this.lastGained)
             }),
             count: this.gainedCount
           },
-          canCommand: "ready" === (null === EW || void 0 === EW ? void 0 : EW.lampLightStatus) && LW && !this.isPending(),
+          canCommand: "ready" === (null === tR || void 0 === tR ? void 0 : tR.lampLightStatus) && qR && !this.isPending(),
           situation: this.situation,
-          shop: null === NW ? null : {
+          shop: null === uR ? null : {
             oddsFor: this.translate("skyblockGame:lampLightOddsFor", {
-              rod: NW.lampLightOddsRod,
-              island: this.translate(NW.lampLightIslandNameKey)
+              rod: uR.lampLightOddsRod,
+              island: this.translate(uR.lampLightIslandNameKey)
             }),
-            heldRod: null !== NW.lampLightHeldRod,
-            charms: NW.lampLightCharms.map((WW => this.charmView(WW, NW, PW))),
-            tints: NW.lampLightTints.map((WW => {
-              const iW = WW.lampLightTintId,
-                [OW, mW, EW] = WW.lampLightTintColour;
+            heldRod: null !== uR.lampLightHeldRod,
+            charms: uR.lampLightCharms.map((RR => this.charmView(RR, uR, ZR))),
+            tints: uR.lampLightTints.map((RR => {
+              const JR = RR.lampLightTintId,
+                [GR, yR, tR] = RR.lampLightTintColour;
               return {
-                id: iW,
-                name: this.translate(`skyblockGame:lampLightTint${iW.charAt(0).toUpperCase()}${iW.slice(1)}`),
+                id: JR,
+                name: this.translate(`skyblockGame:lampLightTint${JR.charAt(0).toUpperCase()}${JR.slice(1)}`),
                 cost: this.translate("skyblockGame:lampLightCost", {
-                  light: this.formatLight(WW.lampLightTintCost)
+                  light: this.formatLight(RR.lampLightTintCost)
                 }),
-                owned: WW.lampLightTintOwned,
-                affordable: PW >= WW.lampLightTintCost,
-                wearing: NW.lampLightTint === iW,
-                colour: `rgb(${OW}, ${mW}, ${EW})`
+                owned: RR.lampLightTintOwned,
+                affordable: ZR >= RR.lampLightTintCost,
+                wearing: uR.lampLightTint === JR,
+                colour: `rgb(${GR}, ${yR}, ${tR})`
               }
             })),
-            wearingIslandColours: null === NW.lampLightTint
+            wearingIslandColours: null === uR.lampLightTint
           },
-          notice: null === wW ? null : this.translate(wW),
+          notice: null === fR ? null : this.translate(fR),
           sparkle: this.sparkle
         }
       }
     }
-    const sm = "skyblockMagmawardView";
-    class Mm {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.iZ = WW, this.now = iW, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = fW.map((() => 0)), this.wornAt = fW.map((() => -1 / 0))
+    const ny = "skyblockMagmawardView";
+    class Uy {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.JK = RR, this.now = JR, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = mR.map((() => 0)), this.wornAt = mR.map((() => -1 / 0))
       }
       getSnapshot() {
         return this.snapshot
       }
-      yZ(WW) {
-        var iW, OW;
-        const mW = fW.map(((iW, OW) => !0 === WW.magmawardPiecesWorn[OW]));
-        if (!mW.includes(!0)) return this.snapshot = null, void this.iZ(null);
-        const EW = this.now(),
-          NW = this.snapshot;
-        null === NW && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
-        const PW = WW.magmawardFuelCarried,
-          LW = !mW.includes(!1);
-        let cW = null !== (iW = null === NW || void 0 === NW ? void 0 : NW.pulse) && void 0 !== iW ? iW : null,
-          wW = null !== (OW = null === NW || void 0 === NW ? void 0 : NW.flare) && void 0 !== OW ? OW : null;
-        WW.magmawardFuelBurned ? (cW = "burn", wW = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = EW, this.flareAt = EW) : null !== NW && PW > NW.fuel && (cW = "gain", this.pulseToken++, this.pulseAt = EW), LW && null !== NW && !NW.fullSet && (wW = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = EW, this.setLitAt = EW);
-        const tW = fW.map(((WW, iW) => (mW[iW] && null !== NW && !NW.pieces[iW].worn && (this.wornTokens[iW]++, this.wornAt[iW] = EW), {
-          itemName: WW,
-          worn: mW[iW],
-          wornToken: this.wornTokens[iW],
-          justWorn: mW[iW] && this.isPlaying(this.wornAt[iW], EW)
+      BK(RR) {
+        var JR, GR;
+        const yR = mR.map(((JR, GR) => !0 === RR.magmawardPiecesWorn[GR]));
+        if (!yR.includes(!0)) return this.snapshot = null, void this.JK(null);
+        const tR = this.now(),
+          uR = this.snapshot;
+        null === uR && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
+        const ZR = RR.magmawardFuelCarried,
+          qR = !yR.includes(!1);
+        let iR = null !== (JR = null === uR || void 0 === uR ? void 0 : uR.pulse) && void 0 !== JR ? JR : null,
+          fR = null !== (GR = null === uR || void 0 === uR ? void 0 : uR.flare) && void 0 !== GR ? GR : null;
+        RR.magmawardFuelBurned ? (iR = "burn", fR = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = tR, this.flareAt = tR) : null !== uR && ZR > uR.fuel && (iR = "gain", this.pulseToken++, this.pulseAt = tR), qR && null !== uR && !uR.fullSet && (fR = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = tR, this.setLitAt = tR);
+        const VR = mR.map(((RR, JR) => (yR[JR] && null !== uR && !uR.pieces[JR].worn && (this.wornTokens[JR]++, this.wornAt[JR] = tR), {
+          itemName: RR,
+          worn: yR[JR],
+          wornToken: this.wornTokens[JR],
+          justWorn: yR[JR] && this.isPlaying(this.wornAt[JR], tR)
         })));
         this.snapshot = {
-          pieces: tW,
-          wornCount: mW.filter(Boolean).length,
-          fullSet: LW,
-          fuel: PW,
-          fuelState: PW <= 0 ? "empty" : PW <= 3 ? "low" : "ok",
-          pulse: this.isPlaying(this.pulseAt, EW) ? cW : null,
+          pieces: VR,
+          wornCount: yR.filter(Boolean).length,
+          fullSet: qR,
+          fuel: ZR,
+          fuelState: ZR <= 0 ? "empty" : ZR <= 3 ? "low" : "ok",
+          pulse: this.isPlaying(this.pulseAt, tR) ? iR : null,
           pulseToken: this.pulseToken,
-          flare: this.isPlaying(this.flareAt, EW) ? wW : null,
+          flare: this.isPlaying(this.flareAt, tR) ? fR : null,
           flareToken: this.flareToken,
-          setLit: LW && this.isPlaying(this.setLitAt, EW),
+          setLit: qR && this.isPlaying(this.setLitAt, tR),
           setLitToken: this.setLitToken
-        }, this.iZ(this.snapshot)
+        }, this.JK(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.iZ(null)
+        this.snapshot = null, this.JK(null)
       }
-      isPlaying(WW, iW) {
-        return iW - WW < 1200
+      isPlaying(RR, JR) {
+        return JR - RR < 1200
       }
     }
-    const Km = "skyblockGlowtideView";
-    class Sm {
-      constructor(WW) {
-        this.iZ = WW, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = WW => {
-          this.arrow = WW, this.arrowTurn = NaN
+    const Wy = "skyblockGlowtideView";
+    class Ay {
+      constructor(RR) {
+        this.JK = RR, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = RR => {
+          this.arrow = RR, this.arrowTurn = NaN
         }
       }
       getSnapshot() {
         return this.snapshot
       }
-      yZ(WW) {
-        this.bloom = WW.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.iZ(null))
+      BK(RR) {
+        this.bloom = RR.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.JK(null))
       }
-      afterRender(WW, iW) {
-        const OW = this.bloom;
-        if (null === OW || null === WW) return;
-        const mW = OW.glowtideBloomX - WW[0],
-          EW = OW.glowtideBloomZ - WW[2],
-          NW = Math.hypot(mW, EW),
-          PW = this.snapshot,
-          LW = null !== PW && void 0 !== PW && PW.inRange ? 1 : 0,
-          cW = NW <= 12.5 + LW && WW[1] - OW.glowtideBloomY <= 10 + LW;
-        !cW || null !== PW && void 0 !== PW && PW.inRange || this.inRangeToken++;
-        const wW = {
-          colour: OW.glowtideBloomColour,
-          inRange: cW,
-          distance: Math.round(NW),
+      afterRender(RR, JR) {
+        const GR = this.bloom;
+        if (null === GR || null === RR) return;
+        const yR = GR.glowtideBloomX - RR[0],
+          tR = GR.glowtideBloomZ - RR[2],
+          uR = Math.hypot(yR, tR),
+          ZR = this.snapshot,
+          qR = null !== ZR && void 0 !== ZR && ZR.inRange ? 1 : 0,
+          iR = uR <= 12.5 + qR && RR[1] - GR.glowtideBloomY <= 10 + qR;
+        !iR || null !== ZR && void 0 !== ZR && ZR.inRange || this.inRangeToken++;
+        const fR = {
+          colour: GR.glowtideBloomColour,
+          inRange: iR,
+          distance: Math.round(uR),
           inRangeToken: this.inRangeToken
         };
-        (null === PW || wW.colour !== PW.colour || wW.inRange !== PW.inRange || !cW && wW.distance !== PW.distance) && (this.snapshot = wW, this.iZ(wW));
-        const tW = ZW.e.computeShortestRotation(iW, (0, ZW.Ab)([mW, 0, EW]));
-        null === this.arrow || Math.abs(tW - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${tW}rad)`, this.arrowTurn = tW)
+        (null === ZR || fR.colour !== ZR.colour || fR.inRange !== ZR.inRange || !iR && fR.distance !== ZR.distance) && (this.snapshot = fR, this.JK(fR));
+        const VR = KR.e.computeShortestRotation(JR, (0, KR.Bb)([yR, 0, tR]));
+        null === this.arrow || Math.abs(VR - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${VR}rad)`, this.arrowTurn = VR)
       }
       dispose() {
-        this.bloom = null, this.arrow = null, this.snapshot = null, this.iZ(null)
+        this.bloom = null, this.arrow = null, this.snapshot = null, this.JK(null)
       }
     }
-    const Ym = "skyblockGlowMeterView";
-    class ym {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.iZ = WW, this.now = iW, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
+    const Cy = "skyblockGlowMeterView";
+    class Xy {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.JK = RR, this.now = JR, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
       }
       getSnapshot() {
         return this.snapshot
       }
-      yZ(WW) {
-        const iW = this.now(),
+      BK(RR) {
+        const JR = this.now(),
           {
-            glowMeterFill: OW,
-            glowMeterCapacity: mW
-          } = WW,
-          EW = OW >= mW,
-          NW = this.snapshot;
-        null !== NW && (EW && !NW.full && (this.fullToken++, this.fullAt = iW), NW.full && !EW ? (this.burstToken++, this.burstAt = iW) : OW > NW.fill && (this.gainToken++, this.gainAt = iW)), this.snapshot = {
-          fill: OW,
-          aZ: mW,
-          ratio: Math.min(1, Math.max(0, OW / mW)),
-          full: EW,
-          rares: WW.glowMeterRares,
-          ready: EW && this.isPlaying(this.fullAt, iW),
+            glowMeterFill: GR,
+            glowMeterCapacity: yR
+          } = RR,
+          tR = GR >= yR,
+          uR = this.snapshot;
+        null !== uR && (tR && !uR.full && (this.fullToken++, this.fullAt = JR), uR.full && !tR ? (this.burstToken++, this.burstAt = JR) : GR > uR.fill && (this.gainToken++, this.gainAt = JR)), this.snapshot = {
+          fill: GR,
+          hK: yR,
+          ratio: Math.min(1, Math.max(0, GR / yR)),
+          full: tR,
+          rares: RR.glowMeterRares,
+          ready: tR && this.isPlaying(this.fullAt, JR),
           fullToken: this.fullToken,
-          burst: this.isPlaying(this.burstAt, iW),
+          burst: this.isPlaying(this.burstAt, JR),
           burstToken: this.burstToken,
-          gained: this.isPlaying(this.gainAt, iW),
+          gained: this.isPlaying(this.gainAt, JR),
           gainToken: this.gainToken
-        }, this.iZ(this.snapshot)
+        }, this.JK(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.iZ(null)
+        this.snapshot = null, this.JK(null)
       }
-      isPlaying(WW, iW) {
-        return iW - WW < 2e3
+      isPlaying(RR, JR) {
+        return JR - RR < 2e3
       }
     }
-    const Tm = "skyblockHushWaitView";
-    class Jm {
-      constructor(WW) {
-        this.iZ = WW, this.snapshot = null, this.token = 0, this.timers = []
+    const My = "skyblockHushWaitView";
+    class By {
+      constructor(RR) {
+        this.JK = RR, this.snapshot = null, this.token = 0, this.timers = []
       }
       getSnapshot() {
         return this.snapshot
       }
-      yZ(WW) {
+      BK(RR) {
         let {
-          hushWaitMs: iW,
-          hushWaitTotalMs: OW,
-          hushWaitLines: mW
-        } = WW;
-        if (this.clearTimers(), this.token++, 0 === mW.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
-        if (iW <= 0) return this.show({
+          hushWaitMs: JR,
+          hushWaitTotalMs: GR,
+          hushWaitLines: yR
+        } = RR;
+        if (this.clearTimers(), this.token++, 0 === yR.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
+        if (JR <= 0) return this.show({
           token: this.token,
           phase: "abandoned",
           waitMs: 3500,
           elapsedMs: 0,
-          line: mW[0],
+          line: yR[0],
           lineIndex: 0
         }), void this.later(3500, (() => {
           this.show(null)
         }));
-        const EW = Math.max(null !== OW && void 0 !== OW ? OW : iW, iW),
-          NW = EW - iW,
-          PW = WW => EW * WW / mW.length,
-          LW = WW => {
+        const tR = Math.max(null !== GR && void 0 !== GR ? GR : JR, JR),
+          uR = tR - JR,
+          ZR = RR => tR * RR / yR.length,
+          qR = RR => {
             this.show({
               token: this.token,
               phase: "waiting",
-              waitMs: EW,
-              elapsedMs: NW,
-              line: mW[WW],
-              lineIndex: WW
+              waitMs: tR,
+              elapsedMs: uR,
+              line: yR[RR],
+              lineIndex: RR
             })
           };
-        let cW = 0;
-        for (; cW + 1 < mW.length && PW(cW + 1) <= NW;) cW++;
-        LW(cW);
-        for (let wW = cW + 1; wW < mW.length; wW++) this.later(PW(wW) - NW, (() => {
-          LW(wW)
+        let iR = 0;
+        for (; iR + 1 < yR.length && ZR(iR + 1) <= uR;) iR++;
+        qR(iR);
+        for (let fR = iR + 1; fR < yR.length; fR++) this.later(ZR(fR) - uR, (() => {
+          qR(fR)
         }));
-        this.later(iW, (() => {
+        this.later(JR, (() => {
           this.show(null)
         }))
       }
       dispose() {
         this.clearTimers(), this.show(null)
       }
-      show(WW) {
-        this.snapshot = WW, this.iZ(WW)
+      show(RR) {
+        this.snapshot = RR, this.JK(RR)
       }
-      later(WW, iW) {
-        this.timers.push(setTimeout(iW, WW))
+      later(RR, JR) {
+        this.timers.push(setTimeout(JR, RR))
       }
       clearTimers() {
-        for (const WW of this.timers) clearTimeout(WW);
+        for (const RR of this.timers) clearTimeout(RR);
         this.timers = []
       }
     }
-    const hm = "skyblockTideChartsView",
-      Hm = 36e5,
-      nm = 864e5;
+    const ly = "skyblockTideChartsView",
+      py = 36e5,
+      gy = 864e5;
 
-    function um(WW, iW, OW) {
-      const [mW, EW, NW, PW] = WW.tideChartArea, LW = Math.floor(iW), cW = Math.floor(OW);
-      return LW >= mW && LW <= NW && cW >= EW && cW <= PW
+    function by(RR, JR, GR) {
+      const [yR, tR, uR, ZR] = RR.tideChartArea, qR = Math.floor(JR), iR = Math.floor(GR);
+      return qR >= yR && qR <= uR && iR >= tR && iR <= ZR
     }
 
-    function om(WW, iW, OW) {
-      const [mW, EW, NW, PW] = WW.tideChartWater;
-      return function(WW, iW, OW, mW, EW, NW) {
-        const PW = 4 - CW(Math.floor(EW) - (WW - OW), OW);
-        return 5 * CW(Math.floor(NW) - (iW - mW), mW) + PW
-      }(mW, EW, NW, PW, iW, OW)
+    function vy(RR, JR, GR) {
+      const [yR, tR, uR, ZR] = RR.tideChartWater;
+      return function(RR, JR, GR, yR, tR, uR) {
+        const ZR = 4 - zR(Math.floor(tR) - (RR - GR), GR);
+        return 5 * zR(Math.floor(uR) - (JR - yR), yR) + ZR
+      }(yR, tR, uR, ZR, JR, GR)
     }
 
-    function dm(WW, iW, OW) {
-      const mW = WW.tideCharts;
-      for (let EW = 0; EW < mW.length; EW++)
-        if (um(mW[EW], iW, OW)) return mW[EW];
+    function Oy(RR, JR, GR) {
+      const yR = RR.tideCharts;
+      for (let tR = 0; tR < yR.length; tR++)
+        if (by(yR[tR], JR, GR)) return yR[tR];
       return null
     }
 
-    function em(WW, iW, OW) {
-      const mW = Math.max(0, iW - OW);
-      return mW > nm ? WW("skyblockGame:tideChartsTurnDays", {
-        days: String(Math.ceil(mW / nm))
-      }) : mW > Hm ? WW("skyblockGame:tideChartsTurnHours", {
-        hours: String(Math.ceil(mW / Hm))
-      }) : WW("skyblockGame:tideChartsTurnSoon")
+    function xy(RR, JR, GR) {
+      const yR = Math.max(0, JR - GR);
+      return yR > gy ? RR("skyblockGame:tideChartsTurnDays", {
+        days: String(Math.ceil(yR / gy))
+      }) : yR > py ? RR("skyblockGame:tideChartsTurnHours", {
+        hours: String(Math.ceil(yR / py))
+      }) : RR("skyblockGame:tideChartsTurnSoon")
     }
-    class gm extends cW {
-      constructor(WW, iW, OW, mW) {
-        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(WW, OW, mW), this.translate = iW, this.now = EW, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
+    class Ny extends iR {
+      constructor(RR, JR, GR, yR) {
+        let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(RR, GR, yR), this.translate = JR, this.now = tR, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
           island: "",
           cells: 0,
           token: 0,
           atMs: 0
         }, this.cast = null, this.castToken = 0, this.turnsCheckedAtMs = 0, this.toggle = () => {
           this.open ? this.dismiss() : (this.picked = null, this.show())
-        }, this.Kl = WW => {
-          this.picked = WW, this.emit()
+        }, this.Ur = RR => {
+          this.picked = RR, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      yZ(WW) {
-        const iW = this.message;
-        if (null !== iW)
-          for (const mW of WW.tideCharts) {
-            var OW;
-            const WW = iW.tideCharts.find((WW => WW.tideChartIsland === mW.tideChartIsland)),
-              EW = mW.tideChartLit & ~(null !== (OW = null === WW || void 0 === WW ? void 0 : WW.tideChartLit) && void 0 !== OW ? OW : 0);
-            void 0 !== WW && 0 !== EW && (this.pulse = {
-              island: mW.tideChartIsland,
-              cells: EW,
+      BK(RR) {
+        const JR = this.message;
+        if (null !== JR)
+          for (const yR of RR.tideCharts) {
+            var GR;
+            const RR = JR.tideCharts.find((RR => RR.tideChartIsland === yR.tideChartIsland)),
+              tR = yR.tideChartLit & ~(null !== (GR = null === RR || void 0 === RR ? void 0 : RR.tideChartLit) && void 0 !== GR ? GR : 0);
+            void 0 !== RR && 0 !== tR && (this.pulse = {
+              island: yR.tideChartIsland,
+              cells: tR,
               token: this.pulse.token + 1,
               atMs: this.now()
             })
           }
-        this.message = WW, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
+        this.message = RR, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
       }
-      locate(WW, iW) {
-        var OW;
-        const mW = null === this.message || Number.isNaN(WW) ? null : dm(this.message, WW, iW),
-          EW = null !== (OW = null === mW || void 0 === mW ? void 0 : mW.tideChartIsland) && void 0 !== OW ? OW : null,
-          NW = null === mW ? -1 : function(WW, iW, OW) {
-            const [mW, EW, NW, PW] = WW.tideChartWater;
-            return function(WW, iW, OW, mW, EW, NW, PW) {
-              return ((EW - WW) / (OW + PW)) ** 2 + ((NW - iW) / (mW + PW)) ** 2 <= 1
-            }(mW, EW, NW, PW, iW, OW, 2) ? om(WW, iW, OW) : -1
-          }(mW, WW, iW);
-        return (EW !== this.hereIsland || NW !== this.hereCell) && (this.hereIsland = EW, this.hereCell = NW, null !== EW && (this.lastIsland = EW), !0)
+      locate(RR, JR) {
+        var GR;
+        const yR = null === this.message || Number.isNaN(RR) ? null : Oy(this.message, RR, JR),
+          tR = null !== (GR = null === yR || void 0 === yR ? void 0 : yR.tideChartIsland) && void 0 !== GR ? GR : null,
+          uR = null === yR ? -1 : function(RR, JR, GR) {
+            const [yR, tR, uR, ZR] = RR.tideChartWater;
+            return function(RR, JR, GR, yR, tR, uR, ZR) {
+              return ((tR - RR) / (GR + ZR)) ** 2 + ((uR - JR) / (yR + ZR)) ** 2 <= 1
+            }(yR, tR, uR, ZR, JR, GR, 2) ? vy(RR, JR, GR) : -1
+          }(yR, RR, JR);
+        return (tR !== this.hereIsland || uR !== this.hereCell) && (this.hereIsland = tR, this.hereCell = uR, null !== tR && (this.lastIsland = tR), !0)
       }
-      afterRender(WW) {
+      afterRender(RR) {
         if (null === this.message) return;
-        this.lastX = null === WW ? Number.NaN : WW[0], this.lastZ = null === WW ? Number.NaN : WW[2];
-        const iW = this.locate(this.lastX, this.lastZ),
-          OW = this.expirePulses();
-        (iW || OW || this.turnsChanged()) && this.emit()
+        this.lastX = null === RR ? Number.NaN : RR[0], this.lastZ = null === RR ? Number.NaN : RR[2];
+        const JR = this.locate(this.lastX, this.lastZ),
+          GR = this.expirePulses();
+        (JR || GR || this.turnsChanged()) && this.emit()
       }
       turnsChanged() {
-        const WW = this.now();
-        return !(!this.open || WW - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = WW, em(this.translate, this.message.tideChartTurnsInMs, WW - this.receivedAtMs) !== this.snapshot.turnsText)
+        const RR = this.now();
+        return !(!this.open || RR - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = RR, xy(this.translate, this.message.tideChartTurnsInMs, RR - this.receivedAtMs) !== this.snapshot.turnsText)
       }
-      castLanded(WW, iW) {
-        const OW = null === this.message ? null : dm(this.message, WW, iW);
-        if (null === OW) return;
-        const mW = om(OW, WW, iW);
-        0 === (OW.tideChartPreBlank & 1 << mW) && (this.cast = {
-          island: OW.tideChartIsland,
-          cell: mW,
+      castLanded(RR, JR) {
+        const GR = null === this.message ? null : Oy(this.message, RR, JR);
+        if (null === GR) return;
+        const yR = vy(GR, RR, JR);
+        0 === (GR.tideChartPreBlank & 1 << yR) && (this.cast = {
+          island: GR.tideChartIsland,
+          cell: yR,
           token: ++this.castToken,
           atMs: this.now()
         }, this.emit())
       }
       expirePulses() {
-        const WW = this.now();
-        let iW = !1;
-        return 0 !== this.pulse.cells && WW - this.pulse.atMs >= 1500 && (this.pulse = {
+        const RR = this.now();
+        let JR = !1;
+        return 0 !== this.pulse.cells && RR - this.pulse.atMs >= 1500 && (this.pulse = {
           ...this.pulse,
           cells: 0
-        }, iW = !0), null !== this.cast && WW - this.cast.atMs >= 1500 && (this.cast = null, iW = !0), iW
+        }, JR = !0), null !== this.cast && RR - this.cast.atMs >= 1500 && (this.cast = null, JR = !0), JR
       }
-      setTranslator(WW) {
-        this.translate = WW, this.emit()
+      setTranslator(RR) {
+        this.translate = RR, this.emit()
       }
       isEnabled() {
         return null !== this.message && this.message.tideCharts.length > 0
@@ -4065,62 +4031,62 @@ export const modules = {
       onClosed() {
         this.picked = null
       }
-      findChart(WW, iW) {
-        var OW;
-        return null !== (OW = WW.tideCharts.find((WW => WW.tideChartIsland === iW))) && void 0 !== OW ? OW : null
+      findChart(RR, JR) {
+        var GR;
+        return null !== (GR = RR.tideCharts.find((RR => RR.tideChartIsland === JR))) && void 0 !== GR ? GR : null
       }
-      describe(WW) {
-        var iW, OW, mW;
-        const EW = WW.tideChartIsland,
-          NW = [];
-        for (let lW = 0; lW < 25; lW++) {
-          const iW = 1 << lW;
-          0 !== (WW.tideChartLit & iW) ? NW.push("lit") : 0 !== (WW.tideChartClear & iW) ? NW.push("clear") : 0 !== (WW.tideChartPreBlank & iW) ? NW.push("shore") : NW.push("water")
+      describe(RR) {
+        var JR, GR, yR;
+        const tR = RR.tideChartIsland,
+          uR = [];
+        for (let rR = 0; rR < 25; rR++) {
+          const JR = 1 << rR;
+          0 !== (RR.tideChartLit & JR) ? uR.push("lit") : 0 !== (RR.tideChartClear & JR) ? uR.push("clear") : 0 !== (RR.tideChartPreBlank & JR) ? uR.push("shore") : uR.push("water")
         }
-        const PW = function(WW) {
-            let iW = 0;
-            for (let OW = WW >>> 0; 0 !== OW; OW &= OW - 1) iW++;
-            return iW
-          }(WW.tideChartLit),
-          LW = WW.tideChartInkCount,
-          cW = this.translate(WW.tideChartIslandNameKey),
-          wW = this.translate("skyblockGame:tideChartsLit", {
-            lit: String(PW),
-            ink: String(LW)
+        const ZR = function(RR) {
+            let JR = 0;
+            for (let GR = RR >>> 0; 0 !== GR; GR &= GR - 1) JR++;
+            return JR
+          }(RR.tideChartLit),
+          qR = RR.tideChartInkCount,
+          iR = this.translate(RR.tideChartIslandNameKey),
+          fR = this.translate("skyblockGame:tideChartsLit", {
+            lit: String(ZR),
+            ink: String(qR)
           }),
-          tW = null === WW.tideChartPictureNameKey ? null : this.translate(WW.tideChartPictureNameKey),
-          ZW = this.hereIsland === EW && -1 !== this.hereCell ? this.hereCell : null,
-          xW = [`${cW}: ${wW}.`];
-        if (null !== tW && xW.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
-            picture: tW
-          })), null !== ZW) {
-          const WW = Math.floor(ZW / 5) + 1,
-            iW = ZW % 5 + 1;
-          xW.push(this.translate("skyblockGame:tideChartsHereCell", {
-            row: String(WW),
-            column: String(iW)
+          VR = null === RR.tideChartPictureNameKey ? null : this.translate(RR.tideChartPictureNameKey),
+          KR = this.hereIsland === tR && -1 !== this.hereCell ? this.hereCell : null,
+          wR = [`${iR}: ${fR}.`];
+        if (null !== VR && wR.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
+            picture: VR
+          })), null !== KR) {
+          const RR = Math.floor(KR / 5) + 1,
+            JR = KR % 5 + 1;
+          wR.push(this.translate("skyblockGame:tideChartsHereCell", {
+            row: String(RR),
+            column: String(JR)
           }))
         }
         return {
-          island: EW,
-          islandName: cW,
-          cells: NW,
-          hereCell: ZW,
-          lit: PW,
-          ink: LW,
-          litText: wW,
-          pictureName: tW,
-          gridLabel: xW.join(" "),
-          pulseCells: this.pulse.island === EW ? this.pulse.cells : 0,
+          island: tR,
+          islandName: iR,
+          cells: uR,
+          hereCell: KR,
+          lit: ZR,
+          ink: qR,
+          litText: fR,
+          pictureName: VR,
+          gridLabel: wR.join(" "),
+          pulseCells: this.pulse.island === tR ? this.pulse.cells : 0,
           pulseToken: this.pulse.token,
-          castCell: (null === (iW = this.cast) || void 0 === iW ? void 0 : iW.island) === EW ? this.cast.cell : null,
-          castToken: null !== (OW = null === (mW = this.cast) || void 0 === mW ? void 0 : mW.token) && void 0 !== OW ? OW : 0
+          castCell: (null === (JR = this.cast) || void 0 === JR ? void 0 : JR.island) === tR ? this.cast.cell : null,
+          castToken: null !== (GR = null === (yR = this.cast) || void 0 === yR ? void 0 : yR.token) && void 0 !== GR ? GR : 0
         }
       }
       buildSnapshot() {
-        var WW, iW, OW;
-        const mW = this.message;
-        if (null === mW || 0 === mW.tideCharts.length) return {
+        var RR, JR, GR;
+        const yR = this.message;
+        if (null === yR || 0 === yR.tideCharts.length) return {
           enabled: !1,
           open: !1,
           chip: null,
@@ -4129,22 +4095,22 @@ export const modules = {
           bookText: "",
           tabs: []
         };
-        const EW = this.findChart(mW, this.hereIsland),
-          NW = null !== (WW = null !== (iW = null !== (OW = this.findChart(mW, this.open ? this.picked : null)) && void 0 !== OW ? OW : EW) && void 0 !== iW ? iW : this.findChart(mW, this.lastIsland)) && void 0 !== WW ? WW : mW.tideCharts[0],
-          PW = null === EW ? null : this.describe(EW);
+        const tR = this.findChart(yR, this.hereIsland),
+          uR = null !== (RR = null !== (JR = null !== (GR = this.findChart(yR, this.open ? this.picked : null)) && void 0 !== GR ? GR : tR) && void 0 !== JR ? JR : this.findChart(yR, this.lastIsland)) && void 0 !== RR ? RR : yR.tideCharts[0],
+          ZR = null === tR ? null : this.describe(tR);
         return this.turnsCheckedAtMs = this.now(), {
           enabled: !0,
           open: this.open,
-          chip: PW,
-          card: NW === EW ? PW : this.describe(NW),
-          turnsText: em(this.translate, mW.tideChartTurnsInMs, this.now() - this.receivedAtMs),
+          chip: ZR,
+          card: uR === tR ? ZR : this.describe(uR),
+          turnsText: xy(this.translate, yR.tideChartTurnsInMs, this.now() - this.receivedAtMs),
           bookText: this.translate("skyblockGame:tideChartsBook", {
-            count: String(mW.tideChartBookCount)
+            count: String(yR.tideChartBookCount)
           }),
-          tabs: mW.tideCharts.map((WW => ({
-            island: WW.tideChartIsland,
-            name: this.translate(WW.tideChartIslandNameKey),
-            selected: WW.tideChartIsland === NW.tideChartIsland
+          tabs: yR.tideCharts.map((RR => ({
+            island: RR.tideChartIsland,
+            name: this.translate(RR.tideChartIslandNameKey),
+            selected: RR.tideChartIsland === uR.tideChartIsland
           })))
         }
       }
@@ -4152,173 +4118,173 @@ export const modules = {
         this.message = null, this.hereIsland = null, this.hereCell = -1, this.cast = null, super.dispose()
       }
     }
-    const Dm = "skyblockRegularsView",
-      Vm = {
+    const Dy = "skyblockRegularsView",
+      Hy = {
         goal: "skyblockGame:regularsGiftTint",
         given: "skyblockGame:regularsGiftTint",
         owed: "skyblockGame:regularsGiftTintOwed"
       },
-      pm = {
+      oy = {
         goal: "skyblockGame:regularsCharmGoal",
         given: "skyblockGame:regularsCharmGiven",
         owed: "skyblockGame:regularsCharmOwed"
       };
 
-    function fm(WW, iW) {
-      return "given" === WW ? iW.given : "owed" === WW ? iW.owed : iW.goal
+    function cy(RR, JR) {
+      return "given" === RR ? JR.given : "owed" === RR ? JR.owed : JR.goal
     }
-    class Cm extends cW {
-      constructor(WW, iW, OW, mW) {
-        super(WW, OW, mW), this.translate = iW, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = WW => WW, this.openIsland = WW => {
-          this.selected = WW, this.openedFromReachLog = !0, this.show()
-        }, this.selectIsland = WW => {
-          this.selected = WW, this.emit()
+    class Py extends iR {
+      constructor(RR, JR, GR, yR) {
+        super(RR, GR, yR), this.translate = JR, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = RR => RR, this.openIsland = RR => {
+          this.selected = RR, this.openedFromReachLog = !0, this.show()
+        }, this.selectIsland = RR => {
+          this.selected = RR, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      yZ(WW) {
-        this.message = WW, this.emit()
+      BK(RR) {
+        this.message = RR, this.emit()
       }
       isOverReachLog() {
         return this.open && this.openedFromReachLog
       }
       takeReturnToReachLog() {
-        const WW = this.openedFromReachLog;
-        return this.openedFromReachLog = !1, WW
+        const RR = this.openedFromReachLog;
+        return this.openedFromReachLog = !1, RR
       }
-      setTranslator(WW, iW, OW) {
-        this.translate = WW, void 0 !== OW && (this.itemName = OW), this.emit()
+      setTranslator(RR, JR, GR) {
+        this.translate = RR, void 0 !== GR && (this.itemName = GR), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describeGift(WW, iW, OW) {
+      describeGift(RR, JR, GR) {
         return {
-          text: this.translate(fm(WW, iW), OW),
-          given: "given" === WW
+          text: this.translate(cy(RR, JR), GR),
+          given: "given" === RR
         }
       }
-      describeRegular(WW, iW) {
-        const OW = this.translate,
-          mW = null !== WW.regularKg,
-          EW = WW.regularMeetings,
-          NW = mW ? 0 === EW ? OW("skyblockGame:regularsNotMet") : 1 === EW ? OW("skyblockGame:regularsMeetingsOne") : OW("skyblockGame:regularsMeetings", {
-            count: EW
+      describeRegular(RR, JR) {
+        const GR = this.translate,
+          yR = null !== RR.regularKg,
+          tR = RR.regularMeetings,
+          uR = yR ? 0 === tR ? GR("skyblockGame:regularsNotMet") : 1 === tR ? GR("skyblockGame:regularsMeetingsOne") : GR("skyblockGame:regularsMeetings", {
+            count: tR
           }) : "";
         return {
-          id: WW.regularId,
-          name: OW(WW.regularNameKey),
-          line: OW(WW.regularLineKey),
-          itemName: WW.regularFishItem,
-          fishName: this.itemName(WW.regularFishItem),
-          tagged: mW,
-          size: null === WW.regularKg ? OW("skyblockGame:regularsNotTagged") : OW("skyblockGame:regularsSize", {
-            kg: WW.regularKg.toFixed(1)
+          id: RR.regularId,
+          name: GR(RR.regularNameKey),
+          line: GR(RR.regularLineKey),
+          itemName: RR.regularFishItem,
+          fishName: this.itemName(RR.regularFishItem),
+          tagged: yR,
+          size: null === RR.regularKg ? GR("skyblockGame:regularsNotTagged") : GR("skyblockGame:regularsSize", {
+            kg: RR.regularKg.toFixed(1)
           }),
-          meetings: NW,
-          chance: OW("skyblockGame:regularsChance", {
-            count: WW.regularOneInCasts
+          meetings: uR,
+          chance: GR("skyblockGame:regularsChance", {
+            count: RR.regularOneInCasts
           }),
-          resting: WW.regularRestingToday,
+          resting: RR.regularRestingToday,
           gifts: [{
-            text: OW("skyblockGame:regularsGiftFlare"),
-            given: EW >= 3
-          }, this.describeGift(WW.regularTintGift, Vm, {
-            tint: OW(WW.regularTintNameKey)
+            text: GR("skyblockGame:regularsGiftFlare"),
+            given: tR >= 3
+          }, this.describeGift(RR.regularTintGift, Hy, {
+            tint: GR(RR.regularTintNameKey)
           })],
-          history: [...WW.regularHistory].reverse().map((WW => {
-            const mW = WW.regularMeetingKg.toFixed(1),
-              EW = iW - WW.regularMeetingDay;
-            return EW <= 0 ? OW("skyblockGame:regularsToday", {
-              kg: mW
-            }) : OW("skyblockGame:regularsDaysAgo", {
-              days: EW,
-              kg: mW
+          history: [...RR.regularHistory].reverse().map((RR => {
+            const yR = RR.regularMeetingKg.toFixed(1),
+              tR = JR - RR.regularMeetingDay;
+            return tR <= 0 ? GR("skyblockGame:regularsToday", {
+              kg: yR
+            }) : GR("skyblockGame:regularsDaysAgo", {
+              days: tR,
+              kg: yR
             })
           }))
         }
       }
-      describeIsland(WW, iW) {
+      describeIsland(RR, JR) {
         return {
-          id: WW.regularsIslandId,
-          name: this.translate(WW.regularsIslandNameKey),
-          charm: this.describeGift(WW.regularsCharmGift, pm, {
-            charm: this.translate(WW.regularsCharmNameKey)
+          id: RR.regularsIslandId,
+          name: this.translate(RR.regularsIslandNameKey),
+          charm: this.describeGift(RR.regularsCharmGift, oy, {
+            charm: this.translate(RR.regularsCharmNameKey)
           }),
-          regulars: WW.regularsList.map((WW => this.describeRegular(WW, iW)))
+          regulars: RR.regularsList.map((RR => this.describeRegular(RR, JR)))
         }
       }
       buildSnapshot() {
-        var WW, iW, OW, mW;
-        const EW = this.message;
-        if (null === EW) return {
+        var RR, JR, GR, yR;
+        const tR = this.message;
+        if (null === tR) return {
           enabled: !1,
           open: !1,
           selected: "",
           islands: []
         };
-        const NW = EW.regularsIslands.map((WW => this.describeIsland(WW, EW.regularsToday))),
-          PW = null !== (WW = null !== (iW = null === (OW = NW.find((WW => WW.id === this.selected))) || void 0 === OW ? void 0 : OW.id) && void 0 !== iW ? iW : null === (mW = NW[0]) || void 0 === mW ? void 0 : mW.id) && void 0 !== WW ? WW : "";
+        const uR = tR.regularsIslands.map((RR => this.describeIsland(RR, tR.regularsToday))),
+          ZR = null !== (RR = null !== (JR = null === (GR = uR.find((RR => RR.id === this.selected))) || void 0 === GR ? void 0 : GR.id) && void 0 !== JR ? JR : null === (yR = uR[0]) || void 0 === yR ? void 0 : yR.id) && void 0 !== RR ? RR : "";
         return {
           enabled: !0,
           open: this.open,
-          selected: PW,
-          islands: NW
+          selected: ZR,
+          islands: uR
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    const Xm = "skyblockHiddenWatersView";
-    class Bm {
-      constructor(WW) {
-        this.iZ = WW, this.snapshot = null
+    const Iy = "skyblockHiddenWatersView";
+    class my {
+      constructor(RR) {
+        this.JK = RR, this.snapshot = null
       }
       getSnapshot() {
         return this.snapshot
       }
-      yZ(WW) {
-        this.snapshot = function(WW) {
-          const [iW, OW] = WW.hiddenWatersMapSize, mW = (WW, mW) => ({
-            left: 1 - WW / iW,
-            top: mW / OW
-          }), EW = new Map;
-          for (const [PW, LW] of WW.hiddenWatersGlimpses) {
-            var NW;
-            const WW = null !== (NW = EW.get(PW)) && void 0 !== NW ? NW : [];
-            WW.push(LW), EW.set(PW, WW)
+      BK(RR) {
+        this.snapshot = function(RR) {
+          const [JR, GR] = RR.hiddenWatersMapSize, yR = (RR, yR) => ({
+            left: 1 - RR / JR,
+            top: yR / GR
+          }), tR = new Map;
+          for (const [ZR, qR] of RR.hiddenWatersGlimpses) {
+            var uR;
+            const RR = null !== (uR = tR.get(ZR)) && void 0 !== uR ? uR : [];
+            RR.push(qR), tR.set(ZR, RR)
           }
           return {
-            found: WW.hiddenWatersFound,
-            total: WW.hiddenWatersTotal,
-            aspect: OW / iW,
-            pins: WW.hiddenWatersPins.map((WW => {
-              let [iW, OW] = WW;
-              return mW(iW, OW)
+            found: RR.hiddenWatersFound,
+            total: RR.hiddenWatersTotal,
+            aspect: GR / JR,
+            pins: RR.hiddenWatersPins.map((RR => {
+              let [JR, GR] = RR;
+              return yR(JR, GR)
             })),
-            islands: WW.hiddenWatersIslands.map((WW => {
-              let [EW, NW, PW, LW] = WW;
+            islands: RR.hiddenWatersIslands.map((RR => {
+              let [tR, uR, ZR, qR] = RR;
               const {
-                left: cW,
-                top: wW
-              } = mW(PW + 1, NW);
+                left: iR,
+                top: fR
+              } = yR(ZR + 1, uR);
               return {
-                left: cW,
-                top: wW,
-                width: (PW + 1 - EW) / iW,
-                height: (LW + 1 - NW) / OW
+                left: iR,
+                top: fR,
+                width: (ZR + 1 - tR) / JR,
+                height: (qR + 1 - uR) / GR
               }
             })),
-            glimpses: EW
+            glimpses: tR
           }
-        }(WW), this.iZ(this.snapshot)
+        }(RR), this.JK(this.snapshot)
       }
     }
-    const qm = "skyblockDialogueView";
-    class Rm extends cW {
-      constructor(WW, iW, OW, mW, EW) {
-        let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(WW, OW, mW), this.translate = iW, this.requestDialogue = EW, this.now = NW, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
+    const zy = "skyblockDialogueView";
+    class Sy extends iR {
+      constructor(RR, JR, GR, yR, tR) {
+        let uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(RR, GR, yR), this.translate = JR, this.requestDialogue = tR, this.now = uR, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
           kind: "character",
           npcId: null
         }, this.requestAvailableAt = 0, this.showCharacters = () => {
@@ -4326,122 +4292,122 @@ export const modules = {
             kind: "character",
             npcId: "character" === this.selection.kind ? this.selection.npcId : null
           }, this.request(), this.show()
-        }, this.showQuest = WW => {
+        }, this.showQuest = RR => {
           this.selection = {
             kind: "quest",
-            questId: WW
+            questId: RR
           }, this.request(), this.show()
-        }, this.selectCharacter = WW => {
+        }, this.selectCharacter = RR => {
           this.selection = {
             kind: "character",
-            npcId: WW
+            npcId: RR
           }, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      yZ(WW) {
-        this.received = !0, this.scripts = WW.questDialogueScripts, this.speakers = new Map(WW.questDialogueSpeakers.map((WW => [WW.dialogueSpeakerId, WW]))), this.emit()
+      BK(RR) {
+        this.received = !0, this.scripts = RR.questDialogueScripts, this.speakers = new Map(RR.questDialogueSpeakers.map((RR => [RR.dialogueSpeakerId, RR]))), this.emit()
       }
-      setTranslator(WW) {
-        this.translate = WW, this.emit()
+      setTranslator(RR) {
+        this.translate = RR, this.emit()
       }
       isEnabled() {
         return this.enabled
       }
       request() {
-        const WW = this.now();
-        WW >= this.requestAvailableAt && (this.requestAvailableAt = WW + 3e3, this.requestDialogue())
+        const RR = this.now();
+        RR >= this.requestAvailableAt && (this.requestAvailableAt = RR + 3e3, this.requestDialogue())
       }
       buildSnapshot() {
-        var WW;
-        const iW = {
+        var RR;
+        const JR = {
           enabled: this.enabled,
           open: this.open,
           loading: !this.received,
           completedLabel: this.translate("skyblockDialogue:completed")
         };
         if (!this.open) return {
-          ...iW,
+          ...JR,
           characters: [],
           questFocus: null,
           conversations: []
         };
-        const OW = this.selection;
-        if ("quest" === OW.kind) {
-          const WW = this.scripts.find((WW => WW.dialogueQuestId === OW.questId));
+        const GR = this.selection;
+        if ("quest" === GR.kind) {
+          const RR = this.scripts.find((RR => RR.dialogueQuestId === GR.questId));
           return {
-            ...iW,
+            ...JR,
             characters: [],
-            questFocus: OW.questId,
-            conversations: WW ? [this.conversation(WW)] : []
+            questFocus: GR.questId,
+            conversations: RR ? [this.conversation(RR)] : []
           }
         }
-        const mW = [];
-        for (let NW = this.scripts.length - 1; NW >= 0; NW--) {
-          const WW = this.scripts[NW].dialogueLines;
-          for (let iW = WW.length - 1; iW >= 0; iW--) mW.includes(WW[iW].dialogueSpeakerId) || mW.push(WW[iW].dialogueSpeakerId)
+        const yR = [];
+        for (let uR = this.scripts.length - 1; uR >= 0; uR--) {
+          const RR = this.scripts[uR].dialogueLines;
+          for (let JR = RR.length - 1; JR >= 0; JR--) yR.includes(RR[JR].dialogueSpeakerId) || yR.push(RR[JR].dialogueSpeakerId)
         }
-        const EW = null !== OW.npcId && mW.includes(OW.npcId) ? OW.npcId : null !== (WW = mW[0]) && void 0 !== WW ? WW : null;
+        const tR = null !== GR.npcId && yR.includes(GR.npcId) ? GR.npcId : null !== (RR = yR[0]) && void 0 !== RR ? RR : null;
         return {
-          ...iW,
-          characters: mW.map((WW => {
-            var iW, OW;
+          ...JR,
+          characters: yR.map((RR => {
+            var JR, GR;
             return {
-              id: WW,
-              styling: null !== (iW = null === (OW = this.speakers.get(WW)) || void 0 === OW ? void 0 : OW.dialogueSpeakerStyling) && void 0 !== iW ? iW : WW,
-              selected: WW === EW
+              id: RR,
+              styling: null !== (JR = null === (GR = this.speakers.get(RR)) || void 0 === GR ? void 0 : GR.dialogueSpeakerStyling) && void 0 !== JR ? JR : RR,
+              selected: RR === tR
             }
           })),
           questFocus: null,
-          conversations: this.scripts.filter((WW => WW.dialogueLines.some((WW => WW.dialogueSpeakerId === EW)))).map((WW => this.conversation(WW))).reverse()
+          conversations: this.scripts.filter((RR => RR.dialogueLines.some((RR => RR.dialogueSpeakerId === tR)))).map((RR => this.conversation(RR))).reverse()
         }
       }
-      conversation(WW) {
-        let iW = null;
+      conversation(RR) {
+        let JR = null;
         return {
-          questId: WW.dialogueQuestId,
-          questName: this.translate(WW.dialogueQuestNameKey),
-          completed: WW.dialogueQuestCompleted,
-          lines: WW.dialogueLines.map(((WW, OW) => {
-            var mW;
-            const EW = WW.dialogueSpeakerId === iW || null === (mW = this.speakers.get(WW.dialogueSpeakerId)) || void 0 === mW ? void 0 : mW.dialogueSpeakerStyling;
-            return iW = WW.dialogueSpeakerId, {
-              key: OW,
+          questId: RR.dialogueQuestId,
+          questName: this.translate(RR.dialogueQuestNameKey),
+          completed: RR.dialogueQuestCompleted,
+          lines: RR.dialogueLines.map(((RR, GR) => {
+            var yR;
+            const tR = RR.dialogueSpeakerId === JR || null === (yR = this.speakers.get(RR.dialogueSpeakerId)) || void 0 === yR ? void 0 : yR.dialogueSpeakerStyling;
+            return JR = RR.dialogueSpeakerId, {
+              key: GR,
               display: {
                 line: {
-                  translationKey: WW.dialogueLineKey,
-                  params: this.params(WW.dialogueLineParams)
+                  translationKey: RR.dialogueLineKey,
+                  params: this.params(RR.dialogueLineParams)
                 },
-                speakerName: EW,
+                speakerName: tR,
                 animateIn: !1
               }
             }
           }))
         }
       }
-      params(WW) {
-        if (void 0 !== WW) return Object.fromEntries(Object.entries(WW).map((WW => {
-          let [iW, OW] = WW;
-          return [iW, "string" === typeof OW ? OW : this.translate(OW.translationKey)]
+      params(RR) {
+        if (void 0 !== RR) return Object.fromEntries(Object.entries(RR).map((RR => {
+          let [JR, GR] = RR;
+          return [JR, "string" === typeof GR ? GR : this.translate(GR.translationKey)]
         })))
       }
     }
-    var Gm = OW(625),
-      Im = OW(1259),
-      am = OW(100);
-    const rm = "skyblockAutographsView";
+    var jy = GR(656),
+      dy = GR(1359),
+      Ey = GR(103);
+    const Yy = "skyblockAutographsView";
 
-    function zm(WW) {
-      const iW = Gm.p[WW];
+    function ky(RR) {
+      const JR = jy.n[RR];
       return {
-        label: iW.chatTag.map((WW => WW.str)).join(""),
-        icon: iW.icon,
-        colour: iW.mainRGB
+        label: JR.chatTag.map((RR => RR.str)).join(""),
+        icon: JR.icon,
+        colour: JR.mainRGB
       }
     }
-    class Fm extends cW {
-      constructor(WW) {
-        let iW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
-        super(WW, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = iW, this.signatures = null, this.snapshot = {
+    class Qy extends iR {
+      constructor(RR) {
+        let JR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
+        super(RR, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = JR, this.signatures = null, this.snapshot = {
           enabled: !1,
           open: !1,
           entries: [],
@@ -4449,12 +4415,12 @@ export const modules = {
           rankTotal: 0
         }
       }
-      yZ(WW) {
-        this.signatures = WW.autographSignatures, WW.autographOpen ? this.show() : this.emit()
+      BK(RR) {
+        this.signatures = RR.autographSignatures, RR.autographOpen ? this.show() : this.emit()
       }
-      setTranslator(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.locale = iW, this.emit()
+      setTranslator(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.locale = JR, this.emit()
       }
       dispose() {
         this.signatures = null, super.dispose()
@@ -4463,256 +4429,256 @@ export const modules = {
         return null !== this.signatures
       }
       buildSnapshot() {
-        var WW;
-        const iW = null !== (WW = this.signatures) && void 0 !== WW ? WW : [],
-          OW = new Intl.DateTimeFormat(this.locale, {
+        var RR;
+        const JR = null !== (RR = this.signatures) && void 0 !== RR ? RR : [],
+          GR = new Intl.DateTimeFormat(this.locale, {
             dateStyle: "medium"
           }),
-          mW = [...iW].sort(((WW, iW) => Number(null !== iW.autographRank) - Number(null !== WW.autographRank) || iW.autographSignedAtMs - WW.autographSignedAtMs)).map((WW => ({
-            key: `${WW.autographSignedAtMs}|${WW.autographSignerName}`,
-            name: (0, Im.b)(WW.autographSignerName, !am.featureFlags.canSeeRealPlayerNames),
-            rank: null === WW.autographRank ? null : zm(WW.autographRank),
-            signedOn: OW.format(WW.autographSignedAtMs)
+          yR = [...JR].sort(((RR, JR) => Number(null !== JR.autographRank) - Number(null !== RR.autographRank) || JR.autographSignedAtMs - RR.autographSignedAtMs)).map((RR => ({
+            key: `${RR.autographSignedAtMs}|${RR.autographSignerName}`,
+            name: (0, dy.e)(RR.autographSignerName, !Ey.featureFlags.canSeeRealPlayerNames),
+            rank: null === RR.autographRank ? null : ky(RR.autographRank),
+            signedOn: GR.format(RR.autographSignedAtMs)
           })));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          entries: mW,
-          total: mW.length,
-          rankTotal: mW.filter((WW => null !== WW.rank)).length
+          entries: yR,
+          total: yR.length,
+          rankTotal: yR.filter((RR => null !== RR.rank)).length
         }
       }
     }
-    const Qm = "skyblockHudView",
-      WE = () => {},
-      iE = {
+    const Fy = "skyblockHudView",
+      Ty = () => {},
+      sy = {
         getItem: () => null,
-        setItem: WE,
-        removeItem: WE
+        setItem: Ty,
+        removeItem: Ty
       };
-    class OE {
-      constructor(WW) {
+    class hy {
+      constructor(RR) {
         let {
-          translate: iW,
-          translateWithIcons: OW,
-          setMenuOpen: mW = WE,
-          dismissMenu: EW = () => {
-            mW(!1)
+          translate: JR,
+          translateWithIcons: GR,
+          setMenuOpen: yR = Ty,
+          dismissMenu: tR = () => {
+            yR(!1)
           },
-          publishSkills: NW = WE,
-          publishQuests: PW = WE,
-          publishQuestNotification: LW = WE,
-          publishDungeons: cW = WE,
-          publishCollections: wW = WE,
-          publishMap: ZW = WE,
-          publishHud: xW = WE,
-          publishPortalTransit: lW = WE,
-          publishDailyReward: AW = WE,
-          publishMailbox: bW = WE,
-          publishQuestGraph: jW = WE,
-          publishForge: UW = WE,
-          publishSmuggler: kW = WE,
-          publishKeepersChair: sW = WE,
-          publishReachLog: MW = WE,
-          publishLampLight: SW = WE,
-          publishMagmaward: YW = WE,
-          publishGlowtide: yW = WE,
-          publishGlowMeter: TW = WE,
-          publishHushWait: JW = WE,
-          publishPassage: hW = WE,
-          publishTideCharts: HW = WE,
-          publishRegulars: nW = WE,
-          publishHiddenWaters: uW = WE,
-          publishDialogue: oW = WE,
-          publishAutographs: dW = WE,
-          isLoadingScreenUp: eW = () => !1,
-          onDailyRewardCoinLanded: vW = WE,
-          onDailyRewardStarted: gW = WE,
-          onDailyRewardFinished: DW = WE,
-          onDailyRewardItemLanded: VW = WE,
-          onMailboxStarted: pW = WE,
-          journeyStorage: fW = iE,
-          requestTracking: CW = WE,
-          requestTravel: XW = WE,
-          requestDungeonEnter: BW = WE,
-          requestQuestJump: qW = WE,
-          requestQuestArrive: RW = WE,
-          requestForge: GW = WE,
-          requestSmuggle: IW = WE,
-          requestKeepersChairAim: aW = WE,
-          requestReachLogOpen: rW = WE,
-          requestLampLight: zW = WE,
-          requestDialogue: FW = WE
-        } = WW;
-        this.navigation = void 0, this.map = void 0, this.compass = new KW, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new cm.c, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = WW => WW, this.close = () => {
-          for (const WW of this.panels) WW.close()
-        }, this.setMenuOpen = mW, this.publishHud = xW, this.portalTransit = new KO(lW, fW), this.magmaward = new Mm(YW), this.glowtide = new Sm(yW), this.glowMeter = new ym(TW), this.hushWait = new Jm(JW), this.dailyReward = new yO(AW, (() => eW() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (WW => {
-          this.quests.setNotificationsHeld(WW)
+          publishSkills: uR = Ty,
+          publishQuests: ZR = Ty,
+          publishQuestNotification: qR = Ty,
+          publishDungeons: iR = Ty,
+          publishCollections: fR = Ty,
+          publishMap: KR = Ty,
+          publishHud: wR = Ty,
+          publishPortalTransit: rR = Ty,
+          publishDailyReward: eR = Ty,
+          publishMailbox: aR = Ty,
+          publishQuestGraph: LR = Ty,
+          publishForge: nR = Ty,
+          publishSmuggler: UR = Ty,
+          publishKeepersChair: WR = Ty,
+          publishReachLog: AR = Ty,
+          publishLampLight: XR = Ty,
+          publishMagmaward: MR = Ty,
+          publishGlowtide: BR = Ty,
+          publishGlowMeter: lR = Ty,
+          publishHushWait: pR = Ty,
+          publishPassage: gR = Ty,
+          publishTideCharts: bR = Ty,
+          publishRegulars: vR = Ty,
+          publishHiddenWaters: OR = Ty,
+          publishDialogue: xR = Ty,
+          publishAutographs: NR = Ty,
+          isLoadingScreenUp: DR = () => !1,
+          onDailyRewardCoinLanded: HR = Ty,
+          onDailyRewardStarted: oR = Ty,
+          onDailyRewardFinished: cR = Ty,
+          onDailyRewardItemLanded: PR = Ty,
+          onMailboxStarted: IR = Ty,
+          journeyStorage: mR = sy,
+          requestTracking: zR = Ty,
+          requestTravel: SR = Ty,
+          requestDungeonEnter: jR = Ty,
+          requestQuestJump: dR = Ty,
+          requestQuestArrive: ER = Ty,
+          requestForge: YR = Ty,
+          requestSmuggle: kR = Ty,
+          requestKeepersChairAim: QR = Ty,
+          requestReachLogOpen: FR = Ty,
+          requestLampLight: TR = Ty,
+          requestDialogue: sR = Ty
+        } = RR;
+        this.navigation = void 0, this.map = void 0, this.compass = new CR, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new Zy.c, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = RR => RR, this.close = () => {
+          for (const RR of this.panels) RR.close()
+        }, this.setMenuOpen = yR, this.publishHud = wR, this.portalTransit = new WG(rR, mR), this.magmaward = new Uy(MR), this.glowtide = new Ay(BR), this.glowMeter = new Xy(lR), this.hushWait = new By(pR), this.dailyReward = new XG(eR, (() => DR() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (RR => {
+          this.quests.setNotificationsHeld(RR)
         }), (() => {
           null !== this.hudSnapshot && this.publishHud(this.getHudSnapshot())
-        }), vW, gW, DW, VW);
-        const QW = WW => {
-          this.panels.some((WW => WW.isOpen())) || (WW ? EW() : this.setMenuOpen(!1))
+        }), HR, oR, cR, PR);
+        const hR = RR => {
+          this.panels.some((RR => RR.isOpen())) || (RR ? tR() : this.setMenuOpen(!1))
         };
-        this.skills = new Xi(NW, Date.now, (() => {
+        this.skills = new mJ(uR, Date.now, (() => {
           this.beforePanelOpen(this.skills)
-        }), iW, void 0, void 0, QW), this.quests = new Ii(PW, CW, iW, (() => {
+        }), JR, void 0, void 0, hR), this.quests = new EJ(ZR, zR, JR, (() => {
           this.beforePanelOpen(this.quests)
-        }), void 0, void 0, QW, LW), this.dungeons = new zi(cW, iW, (() => {
+        }), void 0, void 0, hR, qR), this.dungeons = new QJ(iR, JR, (() => {
           this.beforePanelOpen(this.dungeons)
-        }), void 0, QW, BW), this.collections = new kO(wW, iW, (() => {
+        }), void 0, hR, jR), this.collections = new LG(fR, JR, (() => {
           this.beforePanelOpen(this.collections)
-        }), QW), this.map = new tW(ZW, XW, iW, (() => {
+        }), hR), this.map = new VR(KR, SR, JR, (() => {
           this.beforePanelOpen(this.map)
-        }), QW), this.questGraph = new eO(jW, iW, (() => {
+        }), hR), this.questGraph = new xG(LR, JR, (() => {
           this.beforePanelOpen(this.questGraph)
-        }), QW, qW, RW, fW), this.forge = new QO(UW, iW, (() => {
+        }), hR, dR, ER, mR), this.forge = new TG(nR, JR, (() => {
           this.beforePanelOpen(this.forge)
-        }), QW, GW), this.smuggler = new Om(kW, iW, (() => {
+        }), hR, YR), this.smuggler = new Ry(UR, JR, (() => {
           this.beforePanelOpen(this.smuggler)
-        }), QW, IW), this.lampLight = new km(SW, iW, zW, this.commandPacer), this.keepersChair = new tm(sW, iW, (() => {
+        }), hR, kR), this.lampLight = new Ly(XR, JR, TR, this.commandPacer), this.keepersChair = new iy(WR, JR, (() => {
           this.beforePanelOpen(this.keepersChair)
-        }), (WW => {
-          this.lampLight.onChairClosed(), QW(WW)
-        }), aW, Date.now, this.commandPacer), this.reachLog = new jm(MW, iW, (() => {
+        }), (RR => {
+          this.lampLight.onChairClosed(), hR(RR)
+        }), QR, Date.now, this.commandPacer), this.reachLog = new ey(AR, JR, (() => {
           this.beforePanelOpen(this.reachLog)
-        }), QW, rW, this.commandPacer), this.passage = new Lm(hW, iW, (() => {
+        }), hR, FR, this.commandPacer), this.passage = new uy(gR, JR, (() => {
           this.beforePanelOpen(this.passage)
-        }), QW), this.tideCharts = new gm(HW, iW, (() => {
+        }), hR), this.tideCharts = new Ny(bR, JR, (() => {
           this.beforePanelOpen(this.tideCharts)
-        }), QW), this.regulars = new Cm(nW, iW, (() => {
+        }), hR), this.regulars = new Py(vR, JR, (() => {
           this.beforePanelOpen(this.regulars)
-        }), (WW => {
-          this.regulars.takeReturnToReachLog() && !WW && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), QW(WW)
-        })), this.hiddenWaters = new Bm(uW), this.dialogue = new Rm(oW, iW, (() => {
+        }), (RR => {
+          this.regulars.takeReturnToReachLog() && !RR && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), hR(RR)
+        })), this.hiddenWaters = new my(OR), this.dialogue = new Sy(xR, JR, (() => {
           this.beforePanelOpen(this.dialogue)
-        }), QW, FW), this.autographs = new Fm(dW, (() => {
+        }), hR, sR), this.autographs = new Qy(NR, (() => {
           this.beforePanelOpen(this.autographs)
-        }), QW), this.mailbox = new HO(bW, (() => eW() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), pW), this.quests.translateWithIcons = null !== OW && void 0 !== OW ? OW : null, this.skills.onLevelUp = WW => {
-          this.quests.notify(WW)
-        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new fi(this.map, this.quests, this.compass, iW)
+        }), hR), this.mailbox = new pG(aR, (() => DR() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), IR), this.quests.translateWithIcons = null !== GR && void 0 !== GR ? GR : null, this.skills.onLevelUp = RR => {
+          this.quests.notify(RR)
+        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new PJ(this.map, this.quests, this.compass, JR)
       }
       getHudSnapshot() {
-        const WW = this.hudSnapshot,
-          iW = this.dailyReward.getHeldCoins();
-        return null === WW || iW <= 0 || !("hudPurseCoins" in WW) ? WW : {
-          ...WW,
-          hudPurseCoins: Math.max(0, WW.hudPurseCoins - iW)
+        const RR = this.hudSnapshot,
+          JR = this.dailyReward.getHeldCoins();
+        return null === RR || JR <= 0 || !("hudPurseCoins" in RR) ? RR : {
+          ...RR,
+          hudPurseCoins: Math.max(0, RR.hudPurseCoins - JR)
         }
       }
-      receiveHud(WW) {
-        this.hudSnapshot = WW, this.publishHud(this.getHudSnapshot())
+      receiveHud(RR) {
+        this.hudSnapshot = RR, this.publishHud(this.getHudSnapshot())
       }
-      beforePanelOpen(WW) {
+      beforePanelOpen(RR) {
         this.setMenuOpen(!0);
-        const iW = WW === this.regulars && this.regulars.isOverReachLog();
-        this.openingPanel = WW;
-        for (const OW of this.panels) OW === WW || iW && OW === this.reachLog || OW.close();
+        const JR = RR === this.regulars && this.regulars.isOverReachLog();
+        this.openingPanel = RR;
+        for (const GR of this.panels) GR === RR || JR && GR === this.reachLog || GR.close();
         this.openingPanel = null
       }
-      setTranslator(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iW => this.resolveItemName(iW, WW);
-        this.quests.translateWithIcons = null !== OW && void 0 !== OW ? OW : null, this.navigation.setTranslator(WW, iW), this.lampLight.setTranslator(WW, iW), this.mailbox.setItemName(mW);
-        for (const EW of this.panels) EW.setTranslator(WW, iW, mW)
+      setTranslator(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JR => this.resolveItemName(JR, RR);
+        this.quests.translateWithIcons = null !== GR && void 0 !== GR ? GR : null, this.navigation.setTranslator(RR, JR), this.lampLight.setTranslator(RR, JR), this.mailbox.setItemName(yR);
+        for (const tR of this.panels) tR.setTranslator(RR, JR, yR)
       }
       dispose() {
         this.navigation.dispose(), this.compass.dispose(), this.portalTransit.dispose(), this.dailyReward.dispose(), this.mailbox.dispose(), this.magmaward.dispose(), this.glowtide.dispose(), this.glowMeter.dispose(), this.hushWait.dispose(), this.lampLight.dispose(), this.commandPacer.dispose();
-        for (const WW of this.panels) WW.dispose()
+        for (const RR of this.panels) RR.dispose()
       }
     }
-    var mE = OW(1089),
-      EE = OW.n(mE),
-      NE = OW(25),
-      PE = OW(37868),
-      LE = OW(4613),
-      cE = OW(2032),
-      wE = OW(2021),
-      tE = OW(35243),
-      ZE = OW(1172),
-      xE = OW(1526),
-      lE = OW(1283);
+    var Rt = GR(1163),
+      Jt = GR.n(Rt),
+      Gt = GR(25),
+      yt = GR(37796),
+      tt = GR(4717),
+      ut = GR(2123),
+      Zt = GR(2105),
+      qt = GR(35174),
+      it = GR(1270),
+      ft = GR(1581),
+      Vt = GR(1378);
 
-    function AE(WW) {
+    function Kt(RR) {
       let {
-        controller: iW,
-        minimap: OW,
-        children: mW
-      } = WW;
-      const EW = (0, xE.g)(Qm, iW.getHudSnapshot()),
-        [NW, PW] = (0, YW.useState)(iW.skills.getSnapshot().overallLevel);
-      (0, xE.e)(Ci, (WW => {
-        PW(WW.overallLevel)
+        controller: JR,
+        minimap: GR,
+        children: yR
+      } = RR;
+      const tR = (0, ft.h)(Fy, JR.getHudSnapshot()),
+        [uR, ZR] = (0, MR.useState)(JR.skills.getSnapshot().overallLevel);
+      (0, ft.f)(IJ, (RR => {
+        ZR(RR.overallLevel)
       }));
-      const LW = (0, YW.useRef)(null);
-      (0, xE.e)(YO, (WW => {
-        ! function(WW, iW) {
-          if (null === WW || "function" !== typeof WW.animate) return;
-          const OW = iW ? 1.35 : 1.15;
-          WW.animate([{
+      const qR = (0, MR.useRef)(null);
+      (0, ft.f)(CG, (RR => {
+        ! function(RR, JR) {
+          if (null === RR || "function" !== typeof RR.animate) return;
+          const GR = JR ? 1.35 : 1.15;
+          RR.animate([{
             transform: "scale(1)"
           }, {
-            transform: `scale(${OW})`
+            transform: `scale(${GR})`
           }, {
             transform: "scale(1)"
           }], {
-            duration: iW ? 320 : 160,
+            duration: JR ? 320 : 160,
             easing: "ease-out"
-          }), WW.classList.toggle("Receiving", !iW), iW && (WW.classList.remove("Shine"), WW.offsetWidth, WW.classList.add("Shine"))
-        }(LW.current, WW)
+          }), RR.classList.toggle("Receiving", !JR), JR && (RR.classList.remove("Shine"), RR.offsetWidth, RR.classList.add("Shine"))
+        }(qR.current, RR)
       }));
       const {
-        t: cW
-      } = (0, ZE.B)(), {
-        isTouchScreen: wW
-      } = (0, NE.p)(["isTouchScreen"]), [tW, xW] = (0, YW.useState)(null);
-      return (0, LE.l)(tW, ".SkyblockRightHud"), null !== EW || OW ? (0, lE.jsx)(PE.h, {
+        t: iR
+      } = (0, it.A)(), {
+        isTouchScreen: fR
+      } = (0, Gt.o)(["isTouchScreen"]), [VR, wR] = (0, MR.useState)(null);
+      return (0, tt.l)(VR, ".SkyblockRightHud"), null !== tR || GR ? (0, Vt.jsx)(yt.d, {
         placement: "topRight",
-        children: (0, lE.jsxs)("div", {
-          className: EE()("SkyblockRightHud", {
-            TouchScreen: wW
+        children: (0, Vt.jsxs)("div", {
+          className: Jt()("SkyblockRightHud", {
+            TouchScreen: fR
           }),
-          children: [OW, null !== EW && (0, lE.jsxs)("div", {
-            ref: xW,
+          children: [GR, null !== tR && (0, Vt.jsxs)("div", {
+            ref: wR,
             className: "SkyblockRightHudCard",
-            children: ["hudHelpText" in EW ? (0, lE.jsx)("div", {
+            children: ["hudHelpText" in tR ? (0, Vt.jsx)("div", {
               className: "SkyblockHudHelp",
-              children: EW.hudHelpText
-            }) : (0, lE.jsxs)(lE.Fragment, {
-              children: [(0, lE.jsxs)("div", {
+              children: tR.hudHelpText
+            }) : (0, Vt.jsxs)(Vt.Fragment, {
+              children: [(0, Vt.jsxs)("div", {
                 className: "SkyblockHudStatus",
-                children: [(0, lE.jsxs)("span", {
+                children: [(0, Vt.jsxs)("span", {
                   className: "SkyblockHudIdentity",
-                  children: [(0, lE.jsx)("strong", {
+                  children: [(0, Vt.jsx)("strong", {
                     style: {
-                      color: ZW.M.cyanUiText
+                      color: KR.C.cyanUiText
                     },
-                    children: cW(EW.hudZoneNameKey)
-                  }), null !== NW && (0, lE.jsx)("span", {
+                    children: iR(tR.hudZoneNameKey)
+                  }), null !== uR && (0, Vt.jsx)("span", {
                     style: {
-                      color: ZW.M.goldUiText
+                      color: KR.C.goldUiText
                     },
-                    children: cW("skyblockGame:level", {
-                      level: (0, tE.g)(NW)
+                    children: iR("skyblockGame:level", {
+                      level: (0, qt.i)(uR)
                     })
                   })]
-                }), (0, lE.jsxs)("span", {
+                }), (0, Vt.jsxs)("span", {
                   className: "SkyblockHudCoins",
-                  ref: LW,
-                  children: [(0, lE.jsx)("span", {
+                  ref: qR,
+                  children: [(0, Vt.jsx)("span", {
                     "aria-hidden": "true",
-                    children: (0, lE.jsx)(cE.b, {
+                    children: (0, Vt.jsx)(ut.b, {
                       itemName: "Gold Coin",
                       amount: 0
                     })
-                  }), (0, tE.g)(EW.hudPurseCoins)]
+                  }), (0, qt.i)(tR.hudPurseCoins)]
                 })]
-              }), EW.hudClockText.length > 0 && (0, lE.jsx)("div", {
+              }), tR.hudClockText.length > 0 && (0, Vt.jsx)("div", {
                 className: "SkyblockHudClock",
-                children: (0, lE.jsx)(wE.d, {
-                  text: EW.hudClockText
+                children: (0, Vt.jsx)(Zt.c, {
+                  text: tR.hudClockText
                 })
               })]
-            }), mW, "hudZoneNameKey" in EW && (0, lE.jsx)("div", {
+            }), yR, "hudZoneNameKey" in tR && (0, Vt.jsx)("div", {
               className: "SkyblockHudAddress",
               children: "www.bloxd.io"
             })]
@@ -4720,662 +4686,662 @@ export const modules = {
         })
       }) : null
     }
-    var bE = OW(39778);
+    var wt = GR(39769);
 
-    function jE(WW) {
+    function rt(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)();
-      return (0, lE.jsx)("div", {
+        t: GR
+      } = (0, it.A)();
+      return (0, Vt.jsx)("div", {
         className: "SkyblockMapPlayer",
-        ref: iW.display.mountPlayer,
-        title: OW("skyblockGame:mapYouAreHere"),
-        children: (0, lE.jsx)(bE.b, {
+        ref: JR.display.mountPlayer,
+        title: GR("skyblockGame:mapYouAreHere"),
+        children: (0, Vt.jsx)(wt.d, {
           icon: "player"
         })
       })
     }
-    const UE = OW(39780),
-      kE = Object.fromEntries(UE.keys().map((WW => [WW.replace(/^\.\/(.*)\.png$/, "$1"), UE(WW)])));
+    const et = GR(39773),
+      Lt = Object.fromEntries(et.keys().map((RR => [RR.replace(/^\.\/(.*)\.png$/, "$1"), et(RR)])));
 
-    function sE(WW, iW) {
-      var OW;
-      return null !== (OW = kE[WW]) && void 0 !== OW ? OW : kE[iW]
+    function nt(RR, JR) {
+      var GR;
+      return null !== (GR = Lt[RR]) && void 0 !== GR ? GR : Lt[JR]
     }
 
-    function ME(WW) {
+    function Ut(RR) {
       let {
-        imageKey: iW,
-        fallbackImageKey: OW,
-        geometryKey: mW,
-        alt: EW,
-        className: NW
-      } = WW;
-      const [PW, LW] = (0, YW.useState)((() => function(WW, iW) {
+        imageKey: JR,
+        fallbackImageKey: GR,
+        geometryKey: yR,
+        alt: tR,
+        className: uR
+      } = RR;
+      const [ZR, qR] = (0, MR.useState)((() => function(RR, JR) {
         return [{
           id: 0,
-          imageKey: WW,
-          geometryKey: iW,
+          imageKey: RR,
+          geometryKey: JR,
           phase: "shown"
         }]
-      }(iW, mW))), cW = function(WW, iW, OW) {
-        const mW = WW[WW.length - 1];
-        if (mW.imageKey === iW && mW.geometryKey === OW) return WW;
-        const EW = {
-          id: mW.id + 1,
-          imageKey: iW,
-          geometryKey: OW,
+      }(JR, yR))), iR = function(RR, JR, GR) {
+        const yR = RR[RR.length - 1];
+        if (yR.imageKey === JR && yR.geometryKey === GR) return RR;
+        const tR = {
+          id: yR.id + 1,
+          imageKey: JR,
+          geometryKey: GR,
           phase: "entering"
         };
-        return mW.geometryKey === OW ? [{
-          ...mW,
+        return yR.geometryKey === GR ? [{
+          ...yR,
           phase: "leaving"
-        }, EW] : [EW]
-      }(PW, iW, mW);
-      return cW !== PW && LW(cW), (0, lE.jsx)(lE.Fragment, {
-        children: cW.map((WW => (0, lE.jsx)("img", {
-          className: EE()("SkyblockMapTerrainImage", NW, {
-            Entering: "entering" === WW.phase,
-            Leaving: "leaving" === WW.phase
+        }, tR] : [tR]
+      }(ZR, JR, yR);
+      return iR !== ZR && qR(iR), (0, Vt.jsx)(Vt.Fragment, {
+        children: iR.map((RR => (0, Vt.jsx)("img", {
+          className: Jt()("SkyblockMapTerrainImage", uR, {
+            Entering: "entering" === RR.phase,
+            Leaving: "leaving" === RR.phase
           }),
-          src: sE(WW.imageKey, OW),
-          alt: "leaving" === WW.phase ? "" : EW,
+          src: nt(RR.imageKey, GR),
+          alt: "leaving" === RR.phase ? "" : tR,
           onAnimationEnd: () => {
-            LW((iW => function(WW, iW) {
-              return WW.flatMap((WW => WW.id !== iW ? [WW] : "leaving" === WW.phase ? [] : [{
-                ...WW,
+            qR((JR => function(RR, JR) {
+              return RR.flatMap((RR => RR.id !== JR ? [RR] : "leaving" === RR.phase ? [] : [{
+                ...RR,
                 phase: "shown"
               }]))
-            }(iW, WW.id)))
+            }(JR, RR.id)))
           }
-        }, WW.id)))
+        }, RR.id)))
       })
     }
-    var KE = OW(5238),
-      SE = OW(1532);
+    var Wt = GR(5338),
+      At = GR(1590);
 
-    function YE(WW) {
-      if ("Tab" !== WW.key) return;
-      const iW = Array.from(WW.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
-        OW = iW.indexOf(document.activeElement);
-      var mW;
-      if (WW.shiftKey && OW <= 0) WW.preventDefault(), null === (mW = iW.at(-1)) || void 0 === mW || mW.focus();
-      else if (!WW.shiftKey && (-1 === OW || OW === iW.length - 1)) {
-        var EW;
-        WW.preventDefault(), null === (EW = iW[0]) || void 0 === EW || EW.focus()
+    function Ct(RR) {
+      if ("Tab" !== RR.key) return;
+      const JR = Array.from(RR.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
+        GR = JR.indexOf(document.activeElement);
+      var yR;
+      if (RR.shiftKey && GR <= 0) RR.preventDefault(), null === (yR = JR.at(-1)) || void 0 === yR || yR.focus();
+      else if (!RR.shiftKey && (-1 === GR || GR === JR.length - 1)) {
+        var tR;
+        RR.preventDefault(), null === (tR = JR[0]) || void 0 === tR || tR.focus()
       }
     }
 
-    function yE() {
-      const WW = (0, YW.useRef)(null);
-      return (0, YW.useCallback)((iW => {
-        var OW;
-        iW ? (WW.current = document.activeElement, iW.focus()) : null === (OW = WW.current) || void 0 === OW || OW.focus()
+    function Xt() {
+      const RR = (0, MR.useRef)(null);
+      return (0, MR.useCallback)((JR => {
+        var GR;
+        JR ? (RR.current = document.activeElement, JR.focus()) : null === (GR = RR.current) || void 0 === GR || GR.focus()
       }), [])
     }
 
-    function TE(WW) {
+    function Mt(RR) {
       let {
-        percent: iW,
-        label: OW,
-        levelUpToken: mW,
-        colour: EW
-      } = WW;
-      return (0, lE.jsxs)("div", {
+        percent: JR,
+        label: GR,
+        levelUpToken: yR,
+        colour: tR
+      } = RR;
+      return (0, Vt.jsxs)("div", {
         className: "SkillProgressBar",
         role: "progressbar",
-        "aria-label": OW,
+        "aria-label": GR,
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": iW,
-        "aria-valuetext": OW,
-        children: [(0, lE.jsx)("div", {
+        "aria-valuenow": JR,
+        "aria-valuetext": GR,
+        children: [(0, Vt.jsx)("div", {
           className: "SkillProgressBarFill",
           style: {
-            transform: `scaleX(${iW/100})`
+            transform: `scaleX(${JR/100})`
           }
-        }), null !== mW && void 0 !== mW && (0, lE.jsx)("div", {
+        }), null !== yR && void 0 !== yR && (0, Vt.jsx)("div", {
           className: "SkillProgressBarLevelUp",
           style: {
-            "--skill-colour": EW
+            "--skill-colour": tR
           }
-        }, mW)]
+        }, yR)]
       })
     }
 
-    function JE(WW) {
+    function Bt(RR) {
       let {
-        mount: iW
-      } = WW;
-      return (0, lE.jsx)("div", {
+        mount: JR
+      } = RR;
+      return (0, Vt.jsx)("div", {
         className: "SkyblockSearchArea",
-        ref: iW,
+        ref: JR,
         hidden: !0,
-        children: (0, lE.jsxs)("svg", {
+        children: (0, Vt.jsxs)("svg", {
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
-          children: [(0, lE.jsx)("path", {
+          children: [(0, Vt.jsx)("path", {
             className: "SkyblockSearchAreaShadow"
-          }), (0, lE.jsx)("path", {
+          }), (0, Vt.jsx)("path", {
             className: "SkyblockSearchAreaDashes"
           })]
         })
       })
     }
 
-    function hE(WW, iW, OW, mW) {
-      (0, YW.useLayoutEffect)((() => {
-        const EW = WW.current;
-        if (!OW || null === iW || void 0 === iW || !iW.local || !EW) return;
-        const NW = Array.from(EW.querySelectorAll(".SkyblockMapNode")),
-          PW = [...iW.points, ...iW.portals],
-          LW = () => {
-            const WW = EW.clientWidth,
-              OW = EW.clientHeight,
-              LW = NW.map(((EW, NW) => {
-                const LW = PW[NW];
+    function lt(RR, JR, GR, yR) {
+      (0, MR.useLayoutEffect)((() => {
+        const tR = RR.current;
+        if (!GR || null === JR || void 0 === JR || !JR.local || !tR) return;
+        const uR = Array.from(tR.querySelectorAll(".SkyblockMapNode")),
+          ZR = [...JR.points, ...JR.portals],
+          qR = () => {
+            const RR = tR.clientWidth,
+              GR = tR.clientHeight,
+              qR = uR.map(((tR, uR) => {
+                const qR = ZR[uR];
                 return {
-                  id: LW.id,
-                  portal: NW >= iW.points.length,
-                  x: LW.position[0] * WW / 100,
-                  y: LW.position[1] * OW / 100,
-                  width: EW.offsetWidth / mW,
-                  height: EW.offsetHeight / mW
+                  id: qR.id,
+                  portal: uR >= JR.points.length,
+                  x: qR.position[0] * RR / 100,
+                  y: qR.position[1] * GR / 100,
+                  width: tR.offsetWidth / yR,
+                  height: tR.offsetHeight / yR
                 }
               })),
-              cW = new Map(PW.map(((WW, iW) => [WW.id, NW[iW]])));
-            for (const iW of function(WW, iW, OW) {
-                const mW = [],
-                  EW = [...WW].sort(((WW, iW) => Number(iW.portal) - Number(WW.portal) || WW.id.localeCompare(iW.id)));
-                for (const NW of EW) {
-                  const WW = WW => Math.max(NW.width / 2, Math.min(iW - NW.width / 2, WW)),
-                    EW = WW => Math.max(NW.height / 2, Math.min(OW - NW.height / 2, WW)),
-                    PW = [WW(NW.x)],
-                    LW = [EW(NW.y)];
-                  for (const iW of mW) PW.push(WW(iW.x - (iW.width + NW.width) / 2 - 4), WW(iW.x + (iW.width + NW.width) / 2 + 4)), LW.push(EW(iW.y - (iW.height + NW.height) / 2 - 4), EW(iW.y + (iW.height + NW.height) / 2 + 4));
-                  let cW = {
-                      ...NW,
-                      x: PW[0],
-                      y: LW[0]
+              iR = new Map(ZR.map(((RR, JR) => [RR.id, uR[JR]])));
+            for (const JR of function(RR, JR, GR) {
+                const yR = [],
+                  tR = [...RR].sort(((RR, JR) => Number(JR.portal) - Number(RR.portal) || RR.id.localeCompare(JR.id)));
+                for (const uR of tR) {
+                  const RR = RR => Math.max(uR.width / 2, Math.min(JR - uR.width / 2, RR)),
+                    tR = RR => Math.max(uR.height / 2, Math.min(GR - uR.height / 2, RR)),
+                    ZR = [RR(uR.x)],
+                    qR = [tR(uR.y)];
+                  for (const JR of yR) ZR.push(RR(JR.x - (JR.width + uR.width) / 2 - 4), RR(JR.x + (JR.width + uR.width) / 2 + 4)), qR.push(tR(JR.y - (JR.height + uR.height) / 2 - 4), tR(JR.y + (JR.height + uR.height) / 2 + 4));
+                  let iR = {
+                      ...uR,
+                      x: ZR[0],
+                      y: qR[0]
                     },
-                    wW = 1 / 0,
-                    tW = 1 / 0;
-                  for (const iW of new Set(PW))
-                    for (const WW of new Set(LW)) {
-                      let OW = 0;
-                      for (const PW of mW) OW += Math.max(0, (NW.width + PW.width) / 2 + 4 - Math.abs(iW - PW.x)) * Math.max(0, (NW.height + PW.height) / 2 + 4 - Math.abs(WW - PW.y));
-                      const EW = (iW - NW.x) ** 2 + (WW - NW.y) ** 2;
-                      (OW < wW || OW === wW && EW < tW) && (cW = {
-                        ...NW,
-                        x: iW,
-                        y: WW
-                      }, wW = OW, tW = EW)
+                    fR = 1 / 0,
+                    VR = 1 / 0;
+                  for (const JR of new Set(ZR))
+                    for (const RR of new Set(qR)) {
+                      let GR = 0;
+                      for (const ZR of yR) GR += Math.max(0, (uR.width + ZR.width) / 2 + 4 - Math.abs(JR - ZR.x)) * Math.max(0, (uR.height + ZR.height) / 2 + 4 - Math.abs(RR - ZR.y));
+                      const tR = (JR - uR.x) ** 2 + (RR - uR.y) ** 2;
+                      (GR < fR || GR === fR && tR < VR) && (iR = {
+                        ...uR,
+                        x: JR,
+                        y: RR
+                      }, fR = GR, VR = tR)
                     }
-                  mW.push(cW)
+                  yR.push(iR)
                 }
-                return mW
-              }(LW, WW, OW)) {
-              const WW = cW.get(iW.id);
-              WW.style.left = `${iW.x}px`, WW.style.top = `${iW.y}px`
+                return yR
+              }(qR, RR, GR)) {
+              const RR = iR.get(JR.id);
+              RR.style.left = `${JR.x}px`, RR.style.top = `${JR.y}px`
             }
           };
-        LW();
-        const cW = new ResizeObserver(LW);
-        cW.observe(EW);
-        for (const WW of NW) cW.observe(WW);
+        qR();
+        const iR = new ResizeObserver(qR);
+        iR.observe(tR);
+        for (const RR of uR) iR.observe(RR);
         return () => {
-          cW.disconnect()
+          iR.disconnect()
         }
-      }), [WW, iW, OW, mW])
+      }), [RR, JR, GR, yR])
     }
-    var HE = OW(39865),
-      nE = OW(39876);
+    var pt = GR(39844),
+      gt = GR(39855);
 
-    function uE(WW) {
-      var iW, OW, mW, EW;
+    function bt(RR) {
+      var JR, GR, yR, tR;
       let {
-        controller: NW,
-        navigation: PW
-      } = WW;
-      const LW = (0, xE.g)(wW, NW.getSnapshot()),
+        controller: uR,
+        navigation: ZR
+      } = RR;
+      const qR = (0, ft.h)(fR, uR.getSnapshot()),
         {
-          t: cW
-        } = (0, ZE.B)(),
-        tW = yE(),
-        ZW = LW.presentation,
-        xW = (0, YW.useRef)(null),
-        lW = (0, YW.useRef)(null),
-        AW = Boolean(LW.open && (null === ZW || void 0 === ZW ? void 0 : ZW.local) && ZW.background),
-        bW = (0, HE.b)(xW, AW, `${LW.open}|${LW.tab}|${null===ZW||void 0===ZW||null===(iW=ZW.background)||void 0===iW?void 0:iW.geometryKey}`, null !== (OW = null === ZW || void 0 === ZW || null === (mW = ZW.background) || void 0 === mW ? void 0 : mW.ratio) && void 0 !== OW ? OW : 2);
-      if (hE(lW, ZW, LW.open, bW.view.zoom), !ZW || !LW.open) return null;
-      const jW = ZW.local ? ZW.background : null,
-        UW = {
-          "--map-ratio": String(null !== (EW = null === jW || void 0 === jW ? void 0 : jW.ratio) && void 0 !== EW ? EW : 2),
-          backgroundColor: null === jW || void 0 === jW ? void 0 : jW.colour
+          t: iR
+        } = (0, it.A)(),
+        VR = Xt(),
+        KR = qR.presentation,
+        wR = (0, MR.useRef)(null),
+        rR = (0, MR.useRef)(null),
+        eR = Boolean(qR.open && (null === KR || void 0 === KR ? void 0 : KR.local) && KR.background),
+        aR = (0, pt.c)(wR, eR, `${qR.open}|${qR.tab}|${null===KR||void 0===KR||null===(JR=KR.background)||void 0===JR?void 0:JR.geometryKey}`, null !== (GR = null === KR || void 0 === KR || null === (yR = KR.background) || void 0 === yR ? void 0 : yR.ratio) && void 0 !== GR ? GR : 2);
+      if (lt(rR, KR, qR.open, aR.view.zoom), !KR || !qR.open) return null;
+      const LR = KR.local ? KR.background : null,
+        nR = {
+          "--map-ratio": String(null !== (tR = null === LR || void 0 === LR ? void 0 : LR.ratio) && void 0 !== tR ? tR : 2),
+          backgroundColor: null === LR || void 0 === LR ? void 0 : LR.colour
         },
-        kW = {
-          "--map-zoom": String(bW.view.zoom),
-          transform: `translate(${100*bW.view.x}%, ${100*bW.view.y}%) scale(${bW.view.zoom})`
+        UR = {
+          "--map-zoom": String(aR.view.zoom),
+          transform: `translate(${100*aR.view.x}%, ${100*aR.view.y}%) scale(${aR.view.zoom})`
         };
-      return (0, lE.jsx)(KE.b, {
-        show: LW.open,
-        close: NW.dismiss,
+      return (0, Vt.jsx)(Wt.e, {
+        show: qR.open,
+        close: uR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockMapPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockMapTitle",
           tabIndex: -1,
-          ref: tW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: VR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
+            children: [(0, Vt.jsxs)("div", {
               className: "SkyblockMapTitle",
-              children: [(0, lE.jsx)("h2", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockMapTitle",
-                children: cW("skyblockGame:map")
-              }), ZW.minimap && (0, lE.jsx)("p", {
-                children: ZW.minimap.caption
+                children: iR("skyblockGame:map")
+              }), KR.minimap && (0, Vt.jsx)("p", {
+                children: KR.minimap.caption
               })]
-            }), (0, lE.jsx)("div", {
+            }), (0, Vt.jsx)("div", {
               className: "SkyblockMapTabs",
               "data-pad-tabs": "1",
-              children: ["local", "world"].map((WW => (0, lE.jsx)("button", {
+              children: ["local", "world"].map((RR => (0, Vt.jsx)("button", {
                 type: "button",
                 "data-pad-tab": !0,
-                "data-pad-selected": WW === LW.tab ? "true" : void 0,
-                className: EE()({
-                  Selected: WW === LW.tab
+                "data-pad-selected": RR === qR.tab ? "true" : void 0,
+                className: Jt()({
+                  Selected: RR === qR.tab
                 }),
-                "aria-pressed": WW === LW.tab,
+                "aria-pressed": RR === qR.tab,
                 onClick: () => {
-                  NW.selectTab(WW)
+                  uR.selectTab(RR)
                 },
-                children: cW("local" === WW ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
-              }, WW)))
-            }), (0, lE.jsx)(SE.l, {
+                children: iR("local" === RR ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
+              }, RR)))
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: NW.dismiss
+              onClick: uR.dismiss
             })]
-          }), (0, lE.jsx)("div", {
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockMapBody",
-            children: (0, lE.jsxs)("div", {
-              ref: xW,
-              className: EE()("SkyblockMapCanvas", {
-                Local: ZW.local,
-                Overview: !ZW.local,
-                Zoomed: bW.view.zoom > 1
+            children: (0, Vt.jsxs)("div", {
+              ref: wR,
+              className: Jt()("SkyblockMapCanvas", {
+                Local: KR.local,
+                Overview: !KR.local,
+                Zoomed: aR.view.zoom > 1
               }),
-              style: UW,
-              children: [(0, lE.jsx)("div", {
+              style: nR,
+              children: [(0, Vt.jsx)("div", {
                 className: "SkyblockMapZoomLayer",
-                style: AW ? kW : void 0,
-                children: (0, lE.jsxs)("div", {
+                style: eR ? UR : void 0,
+                children: (0, Vt.jsxs)("div", {
                   className: "SkyblockMapArea",
-                  ref: lW,
-                  children: [jW && (0, lE.jsx)(ME, {
+                  ref: rR,
+                  children: [LR && (0, Vt.jsx)(Ut, {
                     className: "SkyblockMapTerrain",
-                    imageKey: jW.imageKey,
-                    fallbackImageKey: jW.fallbackImageKey,
-                    geometryKey: jW.geometryKey,
-                    alt: jW.label
-                  }), ZW.local && (0, lE.jsx)(JE, {
-                    mount: PW.display.mountMapSearchArea
-                  }), !ZW.local && (0, lE.jsx)("svg", {
+                    imageKey: LR.imageKey,
+                    fallbackImageKey: LR.fallbackImageKey,
+                    geometryKey: LR.geometryKey,
+                    alt: LR.label
+                  }), KR.local && (0, Vt.jsx)(Bt, {
+                    mount: ZR.display.mountMapSearchArea
+                  }), !KR.local && (0, Vt.jsx)("svg", {
                     className: "SkyblockMapConnections",
                     viewBox: "0 0 100 100",
                     preserveAspectRatio: "none",
                     "aria-hidden": "true",
-                    children: ZW.connections.map((WW => (0, lE.jsx)("line", {
-                      className: EE()({
-                        Explored: WW.explored
+                    children: KR.connections.map((RR => (0, Vt.jsx)("line", {
+                      className: Jt()({
+                        Explored: RR.explored
                       }),
-                      x1: WW.start[0],
-                      y1: WW.start[1],
-                      x2: WW.end[0],
-                      y2: WW.end[1]
-                    }, WW.id)))
-                  }), ZW.points.map((WW => {
-                    const iW = !ZW.local && WW.thumbnail ? kE[WW.thumbnail] : void 0;
-                    return (0, lE.jsxs)("div", {
-                      className: EE()("SkyblockMapNode", {
-                        Current: WW.current
+                      x1: RR.start[0],
+                      y1: RR.start[1],
+                      x2: RR.end[0],
+                      y2: RR.end[1]
+                    }, RR.id)))
+                  }), KR.points.map((RR => {
+                    const JR = !KR.local && RR.thumbnail ? Lt[RR.thumbnail] : void 0;
+                    return (0, Vt.jsxs)("div", {
+                      className: Jt()("SkyblockMapNode", {
+                        Current: RR.current
                       }),
                       style: {
-                        left: `${WW.position[0]}%`,
-                        top: `${WW.position[1]}%`
+                        left: `${RR.position[0]}%`,
+                        top: `${RR.position[1]}%`
                       },
-                      children: [(0, lE.jsxs)(SE.f, {
-                        className: EE()("SkyblockMapPin", {
-                          Unknown: !WW.visited,
-                          Current: WW.current
+                      children: [(0, Vt.jsxs)(At.g, {
+                        className: Jt()("SkyblockMapPin", {
+                          Unknown: !RR.visited,
+                          Current: RR.current
                         }),
-                        disabled: LW.pending,
+                        disabled: qR.pending,
                         onClick: () => {
-                          NW.travel(WW.travelKind, WW.travelId)
+                          uR.travel(RR.travelKind, RR.travelId)
                         },
-                        children: [iW && (0, lE.jsx)("img", {
+                        children: [JR && (0, Vt.jsx)("img", {
                           className: "SkyblockMapZoneThumbnail",
-                          src: iW,
+                          src: JR,
                           alt: ""
-                        }), !iW && (0, lE.jsx)("span", {
+                        }), !JR && (0, Vt.jsx)("span", {
                           className: "SkyblockMapPinSymbol",
                           "aria-hidden": "true",
-                          children: (0, lE.jsx)(bE.b, {
-                            icon: WW.icon
+                          children: (0, Vt.jsx)(wt.d, {
+                            icon: RR.icon
                           })
-                        }), (0, lE.jsx)("span", {
+                        }), (0, Vt.jsx)("span", {
                           className: "SkyblockMapPinName",
-                          children: WW.name
+                          children: RR.name
                         })]
-                      }), WW.current && (0, lE.jsx)("span", {
-                        className: EE()("SkyblockMapHereBadge", {
-                          Above: WW.position[1] > 50
+                      }), RR.current && (0, Vt.jsx)("span", {
+                        className: Jt()("SkyblockMapHereBadge", {
+                          Above: RR.position[1] > 50
                         }),
-                        children: cW("skyblockGame:mapYouAreHere")
+                        children: iR("skyblockGame:mapYouAreHere")
                       })]
-                    }, WW.id)
-                  })), ZW.portals.map((WW => (0, lE.jsx)("div", {
+                    }, RR.id)
+                  })), KR.portals.map((RR => (0, Vt.jsx)("div", {
                     className: "SkyblockMapNode",
                     style: {
-                      left: `clamp(3rem, ${WW.position[0]}%, calc(100% - 3rem))`,
-                      top: `clamp(2rem, ${WW.position[1]}%, calc(100% - 2rem))`
+                      left: `clamp(3rem, ${RR.position[0]}%, calc(100% - 3rem))`,
+                      top: `clamp(2rem, ${RR.position[1]}%, calc(100% - 2rem))`
                     },
-                    children: (0, lE.jsxs)(SE.f, {
+                    children: (0, Vt.jsxs)(At.g, {
                       className: "SkyblockMapPin",
-                      disabled: LW.pending,
+                      disabled: qR.pending,
                       onClick: () => {
-                        NW.travel(WW.travelKind, WW.travelId)
+                        uR.travel(RR.travelKind, RR.travelId)
                       },
-                      children: [(0, lE.jsx)("span", {
+                      children: [(0, Vt.jsx)("span", {
                         className: "SkyblockMapPinSymbol",
                         style: {
-                          color: WW.colour
+                          color: RR.colour
                         },
                         "aria-hidden": "true",
-                        children: (0, lE.jsx)(bE.b, {
-                          icon: WW.icon
+                        children: (0, Vt.jsx)(wt.d, {
+                          icon: RR.icon
                         })
-                      }), (0, lE.jsx)("span", {
+                      }), (0, Vt.jsx)("span", {
                         className: "SkyblockMapPinName",
-                        children: WW.name
+                        children: RR.name
                       })]
                     })
-                  }, WW.id))), ZW.local && (0, lE.jsx)(jE, {
-                    controller: PW
+                  }, RR.id))), KR.local && (0, Vt.jsx)(rt, {
+                    controller: ZR
                   })]
                 })
-              }), AW && (0, lE.jsx)(nE.e, {
-                zoom: bW,
-                zoomInLabel: cW("skyblockGame:mapZoomIn"),
-                zoomOutLabel: cW("skyblockGame:mapZoomOut")
-              }), (0, lE.jsx)("div", {
+              }), eR && (0, Vt.jsx)(gt.b, {
+                zoom: aR,
+                zoomInLabel: iR("skyblockGame:mapZoomIn"),
+                zoomOutLabel: iR("skyblockGame:mapZoomOut")
+              }), (0, Vt.jsx)("div", {
                 className: "SkyblockMapFeedback",
                 role: "status",
                 "aria-live": "polite",
-                children: LW.feedback
+                children: qR.feedback
               })]
             })
-          }), (0, lE.jsxs)("footer", {
+          }), (0, Vt.jsxs)("footer", {
             className: "SkyblockMapFooter",
-            children: [ZW.progress && (0, lE.jsxs)("div", {
+            children: [KR.progress && (0, Vt.jsxs)("div", {
               className: "SkyblockMapProgress",
-              children: [(0, lE.jsx)("span", {
-                children: ZW.progress
-              }), (0, lE.jsx)(TE, {
-                percent: ZW.percent,
-                label: ZW.progress
+              children: [(0, Vt.jsx)("span", {
+                children: KR.progress
+              }), (0, Vt.jsx)(Mt, {
+                percent: KR.percent,
+                label: KR.progress
               })]
-            }), ZW.noLandmarks && (0, lE.jsx)("span", {
-              children: cW("skyblockGame:mapNoLandmarks")
-            }), ZW.canTravel && (0, lE.jsx)("span", {
+            }), KR.noLandmarks && (0, Vt.jsx)("span", {
+              children: iR("skyblockGame:mapNoLandmarks")
+            }), KR.canTravel && (0, Vt.jsx)("span", {
               className: "SkyblockMapHint",
-              children: cW("skyblockGame:mapTravelHint")
+              children: iR("skyblockGame:mapTravelHint")
             })]
           })]
         })
       })
     }
 
-    function oE(WW) {
+    function vt(RR) {
       let {
-        view: iW,
-        controller: OW,
-        navigation: mW
-      } = WW;
+        view: JR,
+        controller: GR,
+        navigation: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, ZE.B)(), {
-        isTouchScreen: NW
-      } = (0, NE.p)(["isTouchScreen"]);
-      return (0, lE.jsxs)("aside", {
+        t: tR
+      } = (0, it.A)(), {
+        isTouchScreen: uR
+      } = (0, Gt.o)(["isTouchScreen"]);
+      return (0, Vt.jsxs)("aside", {
         className: "SkyblockMinimap",
-        "aria-label": EW("skyblockGame:mapLocal"),
-        children: [NW && (0, lE.jsx)(SE.f, {
+        "aria-label": tR("skyblockGame:mapLocal"),
+        children: [uR && (0, Vt.jsx)(At.g, {
           className: "SkyblockMinimapOpen",
-          onClick: OW.showLocal,
-          children: EW("skyblockGame:map")
-        }), (0, lE.jsxs)("div", {
+          onClick: GR.showLocal,
+          children: tR("skyblockGame:map")
+        }), (0, Vt.jsxs)("div", {
           className: "SkyblockMinimapFrame",
           style: {
-            backgroundColor: iW.colour
+            backgroundColor: JR.colour
           },
-          children: [(0, lE.jsxs)("div", {
+          children: [(0, Vt.jsxs)("div", {
             className: "SkyblockMinimapTerrain",
-            ref: mW.display.mountTerrain,
+            ref: yR.display.mountTerrain,
             style: {
-              width: iW.width,
-              height: iW.height
+              width: JR.width,
+              height: JR.height
             },
-            children: [(0, lE.jsx)(ME, {
-              imageKey: iW.imageKey,
-              fallbackImageKey: iW.fallbackImageKey,
-              geometryKey: iW.geometryKey,
-              alt: iW.label
-            }), (0, lE.jsx)(JE, {
-              mount: mW.display.mountMinimapSearchArea
-            }), iW.markers.map((WW => (0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)(Ut, {
+              imageKey: JR.imageKey,
+              fallbackImageKey: JR.fallbackImageKey,
+              geometryKey: JR.geometryKey,
+              alt: JR.label
+            }), (0, Vt.jsx)(Bt, {
+              mount: yR.display.mountMinimapSearchArea
+            }), JR.markers.map((RR => (0, Vt.jsx)("span", {
               className: "SkyblockMinimapLandmark",
               style: {
-                left: `${WW.position[0]}%`,
-                top: `${WW.position[1]}%`,
-                color: WW.colour
+                left: `${RR.position[0]}%`,
+                top: `${RR.position[1]}%`,
+                color: RR.colour
               },
-              title: WW.name,
-              children: (0, lE.jsx)(bE.b, {
-                icon: WW.icon
+              title: RR.name,
+              children: (0, Vt.jsx)(wt.d, {
+                icon: RR.icon
               })
-            }, WW.id)))]
-          }), (0, lE.jsx)("div", {
+            }, RR.id)))]
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockMinimapPlayer",
-            title: EW("skyblockGame:mapYouAreHere"),
-            children: (0, lE.jsx)(bE.b, {
+            title: tR("skyblockGame:mapYouAreHere"),
+            children: (0, Vt.jsx)(wt.d, {
               icon: "player"
             })
           })]
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockMinimapCaption",
-          children: iW.caption
+          children: JR.caption
         })]
       })
     }
 
-    function dE(WW) {
+    function Ot(RR) {
       let {
-        controller: iW
-      } = WW;
-      return (0, lE.jsxs)("div", {
+        controller: JR
+      } = RR;
+      return (0, Vt.jsxs)("div", {
         className: "SkyblockCompass",
-        ref: iW.display.mountCompass,
-        children: [(0, lE.jsx)("span", {
+        ref: JR.display.mountCompass,
+        children: [(0, Vt.jsx)("span", {
           className: "SkyblockCompassArrow",
           "aria-hidden": "true",
           children: "\u25bc"
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockCompassTrack",
           "aria-hidden": "true"
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockCompassLabel"
         })]
       })
     }
 
-    function eE(WW) {
+    function xt(RR) {
       let {
-        controller: iW,
-        surface: OW
-      } = WW;
+        controller: JR,
+        surface: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)(), EW = (0, xE.g)(Ci, iW.getSnapshot()), NW = yE();
-      return EW.enabled ? (0, lE.jsxs)(lE.Fragment, {
-        children: ["hud" === OW && (0, lE.jsx)(PE.h, {
+        t: yR
+      } = (0, it.A)(), tR = (0, ft.h)(IJ, JR.getSnapshot()), uR = Xt();
+      return tR.enabled ? (0, Vt.jsxs)(Vt.Fragment, {
+        children: ["hud" === GR && (0, Vt.jsx)(yt.d, {
           placement: "statBars",
-          children: EW.hud && (0, lE.jsxs)("div", {
+          children: tR.hud && (0, Vt.jsxs)("div", {
             className: "SkyblockSkillsHudCompact",
             style: {
-              "--skill-colour": EW.hud.colour
+              "--skill-colour": tR.hud.colour
             },
-            children: [(0, lE.jsx)(TE, {
-              percent: EW.hud.skill.percent,
-              label: EW.hud.skill.xp,
-              levelUpToken: EW.hud.levelUpToken,
-              colour: EW.hud.colour
-            }), (0, lE.jsxs)("div", {
+            children: [(0, Vt.jsx)(Mt, {
+              percent: tR.hud.skill.percent,
+              label: tR.hud.skill.xp,
+              levelUpToken: tR.hud.levelUpToken,
+              colour: tR.hud.colour
+            }), (0, Vt.jsxs)("div", {
               className: "SkyblockSkillsHudCompactText SmallTextBold",
-              children: [(0, lE.jsxs)("span", {
-                children: [EW.hud.skill.label, " \xb7 ", EW.hud.skill.level]
-              }), (0, lE.jsx)("span", {
-                children: EW.hud.gain
+              children: [(0, Vt.jsxs)("span", {
+                children: [tR.hud.skill.label, " \xb7 ", tR.hud.skill.level]
+              }), (0, Vt.jsx)("span", {
+                children: tR.hud.gain
               })]
             })]
           })
-        }), "hud" === OW && (0, lE.jsx)(PE.h, {
-          children: EW.hud && (0, lE.jsxs)("div", {
+        }), "hud" === GR && (0, Vt.jsx)(yt.d, {
+          children: tR.hud && (0, Vt.jsxs)("div", {
             className: "SkyblockSkillsHud",
-            children: [(0, lE.jsxs)("div", {
+            children: [(0, Vt.jsxs)("div", {
               className: "SkyblockSkillsHudHeading",
-              children: [(0, lE.jsx)("strong", {
-                children: EW.hud.skill.label
-              }), (0, lE.jsx)("span", {
-                children: EW.hud.gain
+              children: [(0, Vt.jsx)("strong", {
+                children: tR.hud.skill.label
+              }), (0, Vt.jsx)("span", {
+                children: tR.hud.gain
               })]
-            }), (0, lE.jsx)(TE, {
-              percent: EW.hud.skill.percent,
-              label: EW.hud.skill.xp,
-              levelUpToken: EW.hud.levelUpToken,
-              colour: EW.hud.colour
-            }), (0, lE.jsxs)("div", {
+            }), (0, Vt.jsx)(Mt, {
+              percent: tR.hud.skill.percent,
+              label: tR.hud.skill.xp,
+              levelUpToken: tR.hud.levelUpToken,
+              colour: tR.hud.colour
+            }), (0, Vt.jsxs)("div", {
               className: "SkyblockSkillsHudProgress",
-              children: [(0, lE.jsx)("span", {
-                children: EW.hud.skill.level
-              }), (0, lE.jsx)("span", {
-                children: EW.hud.skill.xp
+              children: [(0, Vt.jsx)("span", {
+                children: tR.hud.skill.level
+              }), (0, Vt.jsx)("span", {
+                children: tR.hud.skill.xp
               })]
             })]
           })
-        }), "menu" === OW && (0, lE.jsx)(KE.b, {
-          show: EW.open,
-          close: iW.dismiss,
+        }), "menu" === GR && (0, Vt.jsx)(Wt.e, {
+          show: tR.open,
+          close: JR.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, lE.jsxs)("section", {
+          children: (0, Vt.jsxs)("section", {
             className: "SkyblockSkillsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockSkillsTitle",
             tabIndex: -1,
-            ref: NW,
-            onKeyDown: YE,
-            children: [(0, lE.jsxs)("header", {
+            ref: uR,
+            onKeyDown: Ct,
+            children: [(0, Vt.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, lE.jsxs)("div", {
-                children: [(0, lE.jsx)("h2", {
+              children: [(0, Vt.jsxs)("div", {
+                children: [(0, Vt.jsx)("h2", {
                   id: "skyblockSkillsTitle",
-                  children: mW("skyblockGame:skills")
-                }), (0, lE.jsx)("p", {
-                  children: mW("skyblockGame:skillsIntro")
+                  children: yR("skyblockGame:skills")
+                }), (0, Vt.jsx)("p", {
+                  children: yR("skyblockGame:skillsIntro")
                 })]
-              }), (0, lE.jsx)(SE.l, {
+              }), (0, Vt.jsx)(At.l, {
                 padIgnore: !0,
-                onClick: iW.dismiss
+                onClick: JR.dismiss
               })]
-            }), (0, lE.jsxs)("div", {
+            }), (0, Vt.jsxs)("div", {
               className: "SkyblockSkillsBody",
-              children: [(0, lE.jsx)("div", {
+              children: [(0, Vt.jsx)("div", {
                 className: "SkyblockSkillsList",
                 "data-pad-select-on-focus": !0,
-                children: EW.skills.map((WW => (0, lE.jsxs)(SE.f, {
-                  className: EE()("SkyblockSkillCard", {
-                    Selected: WW.selected
+                children: tR.skills.map((RR => (0, Vt.jsxs)(At.g, {
+                  className: Jt()("SkyblockSkillCard", {
+                    Selected: RR.selected
                   }),
-                  ariaPressed: WW.selected,
+                  ariaPressed: RR.selected,
                   onClick: () => {
-                    iW.select(WW.id)
+                    JR.select(RR.id)
                   },
-                  children: [(0, lE.jsx)("div", {
+                  children: [(0, Vt.jsx)("div", {
                     className: "SkyblockSkillIcon",
-                    children: (0, lE.jsx)(cE.b, {
-                      itemName: WW.icon,
+                    children: (0, Vt.jsx)(ut.b, {
+                      itemName: RR.icon,
                       amount: 0
                     })
-                  }), (0, lE.jsxs)("div", {
+                  }), (0, Vt.jsxs)("div", {
                     className: "SkyblockSkillSummary",
-                    children: [(0, lE.jsxs)("div", {
+                    children: [(0, Vt.jsxs)("div", {
                       className: "SkyblockSkillTitle",
-                      children: [(0, lE.jsx)("strong", {
-                        children: WW.label
-                      }), (0, lE.jsx)("span", {
-                        children: WW.level
+                      children: [(0, Vt.jsx)("strong", {
+                        children: RR.label
+                      }), (0, Vt.jsx)("span", {
+                        children: RR.level
                       })]
-                    }), (0, lE.jsx)(TE, {
-                      percent: WW.percent,
-                      label: `${WW.label}: ${WW.xp}`
-                    }), (0, lE.jsx)("span", {
+                    }), (0, Vt.jsx)(Mt, {
+                      percent: RR.percent,
+                      label: `${RR.label}: ${RR.xp}`
+                    }), (0, Vt.jsx)("span", {
                       className: "SkyblockSkillXp",
-                      children: WW.xp
+                      children: RR.xp
                     })]
                   })]
-                }, WW.id)))
-              }), EW.detail && (0, lE.jsxs)("div", {
+                }, RR.id)))
+              }), tR.detail && (0, Vt.jsxs)("div", {
                 className: "SkyblockSkillDetail",
-                children: [(0, lE.jsx)("div", {
+                children: [(0, Vt.jsx)("div", {
                   className: "SkyblockSkillDetailIcon",
-                  children: (0, lE.jsx)(cE.b, {
-                    itemName: EW.detail.icon,
+                  children: (0, Vt.jsx)(ut.b, {
+                    itemName: tR.detail.icon,
                     amount: 0
                   })
-                }), (0, lE.jsx)("h3", {
-                  children: EW.detail.label
-                }), (0, lE.jsx)("strong", {
+                }), (0, Vt.jsx)("h3", {
+                  children: tR.detail.label
+                }), (0, Vt.jsx)("strong", {
                   className: "SkyblockSkillDetailLevel",
-                  children: EW.detail.level
-                }), (0, lE.jsx)("p", {
-                  children: EW.detail.description
-                }), (0, lE.jsxs)("div", {
+                  children: tR.detail.level
+                }), (0, Vt.jsx)("p", {
+                  children: tR.detail.description
+                }), (0, Vt.jsxs)("div", {
                   className: "SkyblockSkillBenefit",
-                  children: [(0, lE.jsx)("strong", {
-                    children: mW("skyblockGame:currentBenefit")
-                  }), (0, lE.jsx)("span", {
-                    children: EW.detail.benefit
+                  children: [(0, Vt.jsx)("strong", {
+                    children: yR("skyblockGame:currentBenefit")
+                  }), (0, Vt.jsx)("span", {
+                    children: tR.detail.benefit
                   })]
-                }), (0, lE.jsx)(TE, {
-                  percent: EW.detail.percent,
-                  label: EW.detail.xp
-                }), (0, lE.jsx)("p", {
-                  children: EW.detail.xp
-                }), (0, lE.jsx)("h4", {
-                  children: mW("skyblockGame:earnXp")
-                }), (0, lE.jsx)("ul", {
-                  children: EW.detail.sources.map((WW => (0, lE.jsx)("li", {
-                    children: WW
-                  }, WW)))
+                }), (0, Vt.jsx)(Mt, {
+                  percent: tR.detail.percent,
+                  label: tR.detail.xp
+                }), (0, Vt.jsx)("p", {
+                  children: tR.detail.xp
+                }), (0, Vt.jsx)("h4", {
+                  children: yR("skyblockGame:earnXp")
+                }), (0, Vt.jsx)("ul", {
+                  children: tR.detail.sources.map((RR => (0, Vt.jsx)("li", {
+                    children: RR
+                  }, RR)))
                 })]
               })]
             })]
@@ -5383,274 +5349,274 @@ export const modules = {
         })]
       }) : null
     }
-    var vE = OW(1434),
-      gE = OW(5593),
-      DE = OW(327);
+    var Nt = GR(1501),
+      Dt = GR(5719),
+      Ht = GR(359);
 
-    function VE(WW) {
+    function ot(RR) {
       let {
-        item: iW
-      } = WW;
-      return (0, lE.jsx)("span", {
+        item: JR
+      } = RR;
+      return (0, Vt.jsx)("span", {
         className: "SkyblockQuestStepIcon",
         "aria-hidden": "true",
-        children: (0, lE.jsx)(cE.b, {
-          itemName: iW,
+        children: (0, Vt.jsx)(ut.b, {
+          itemName: JR,
           amount: 0
         })
       })
     }
 
-    function pE(WW) {
+    function ct(RR) {
       let {
-        name: iW,
-        percent: OW,
-        progress: mW
-      } = WW;
-      return (0, lE.jsxs)("span", {
+        name: JR,
+        percent: GR,
+        progress: yR
+      } = RR;
+      return (0, Vt.jsxs)("span", {
         className: "SkyblockQuestStepBar",
-        children: [(0, lE.jsx)(TE, {
-          percent: OW,
-          label: `${(0,DE.vb)(iW)}: ${mW}`
-        }), (0, lE.jsx)("span", {
+        children: [(0, Vt.jsx)(Mt, {
+          percent: GR,
+          label: `${(0,Ht.ob)(JR)}: ${yR}`
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockQuestStepBarLabel",
-          children: mW
+          children: yR
         })]
       })
     }
 
-    function fE(WW) {
+    function Pt(RR) {
       let {
-        subquests: iW,
-        showDescriptions: OW = !1
-      } = WW;
-      return (0, lE.jsx)("ul", {
+        subquests: JR,
+        showDescriptions: GR = !1
+      } = RR;
+      return (0, Vt.jsx)("ul", {
         className: "SkyblockQuestChecklist",
-        children: iW.map((WW => {
-          const iW = OW && "completed" === WW.status,
-            mW = (0, lE.jsxs)("li", {
-              className: EE()("SkyblockQuestStep", WW.status, {
-                JustFinished: WW.justFinished,
-                JustUnlocked: WW.justUnlocked
+        children: JR.map((RR => {
+          const JR = GR && "completed" === RR.status,
+            yR = (0, Vt.jsxs)("li", {
+              className: Jt()("SkyblockQuestStep", RR.status, {
+                JustFinished: RR.justFinished,
+                JustUnlocked: RR.justUnlocked
               }),
-              tabIndex: iW ? 0 : void 0,
-              children: [null !== WW.iconItem && (0, lE.jsx)(VE, {
-                item: WW.iconItem
-              }), null === WW.iconItem && (0, lE.jsx)("span", {
+              tabIndex: JR ? 0 : void 0,
+              children: [null !== RR.iconItem && (0, Vt.jsx)(ot, {
+                item: RR.iconItem
+              }), null === RR.iconItem && (0, Vt.jsx)("span", {
                 className: "SkyblockQuestStepMark",
                 "aria-hidden": "true",
-                children: "completed" === WW.status ? "\u2713" : "skipped" === WW.status ? "\u2212" : "\u25cb"
-              }), (0, lE.jsxs)("span", {
+                children: "completed" === RR.status ? "\u2713" : "skipped" === RR.status ? "\u2212" : "\u25cb"
+              }), (0, Vt.jsxs)("span", {
                 className: "SkyblockQuestStepBody",
-                children: [(0, lE.jsx)("strong", {
-                  children: (0, lE.jsx)(gE.b, {
-                    text: WW.name
+                children: [(0, Vt.jsx)("strong", {
+                  children: (0, Vt.jsx)(Dt.b, {
+                    text: RR.name
                   })
-                }), OW && !iW && (0, lE.jsx)("span", {
-                  children: (0, lE.jsx)(gE.b, {
-                    text: WW.description
+                }), GR && !JR && (0, Vt.jsx)("span", {
+                  children: (0, Vt.jsx)(Dt.b, {
+                    text: RR.description
                   })
-                }), null !== WW.barPercent && (0, lE.jsx)(pE, {
-                  name: WW.name,
-                  percent: WW.barPercent,
-                  progress: WW.progress
-                }), null === WW.barPercent && !iW && (0, lE.jsx)("span", {
+                }), null !== RR.barPercent && (0, Vt.jsx)(ct, {
+                  name: RR.name,
+                  percent: RR.barPercent,
+                  progress: RR.progress
+                }), null === RR.barPercent && !JR && (0, Vt.jsx)("span", {
                   className: "SkyblockQuestStepStatus",
-                  children: WW.statusLabel
+                  children: RR.statusLabel
                 })]
               })]
-            }, WW.id);
-          return iW ? (0, lE.jsx)(vE.f, {
+            }, RR.id);
+          return JR ? (0, Vt.jsx)(Nt.h, {
             delayShow: 200,
-            tooltipInner: (0, lE.jsxs)("div", {
+            tooltipInner: (0, Vt.jsxs)("div", {
               className: "SkyblockQuestStepTooltip",
-              children: [(0, lE.jsx)("span", {
-                children: (0, lE.jsx)(gE.b, {
-                  text: WW.description
+              children: [(0, Vt.jsx)("span", {
+                children: (0, Vt.jsx)(Dt.b, {
+                  text: RR.description
                 })
-              }), (0, lE.jsx)("strong", {
-                children: WW.statusLabel
+              }), (0, Vt.jsx)("strong", {
+                children: RR.statusLabel
               })]
             }),
-            children: mW
-          }, WW.id) : mW
+            children: yR
+          }, RR.id) : yR
         }))
       })
     }
 
-    function CE(WW) {
+    function It(RR) {
       let {
-        quest: iW,
-        select: OW
-      } = WW;
+        quest: JR,
+        select: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)(), EW = iW.focusStep;
-      return (0, lE.jsxs)(SE.f, {
-        className: EE()("SkyblockQuestCard", {
-          Selected: iW.selected,
-          Tracked: iW.tracked
+        t: yR
+      } = (0, it.A)(), tR = JR.focusStep;
+      return (0, Vt.jsxs)(At.g, {
+        className: Jt()("SkyblockQuestCard", {
+          Selected: JR.selected,
+          Tracked: JR.tracked
         }),
         onClick: () => {
-          OW(iW.id)
+          GR(JR.id)
         },
-        children: [(0, lE.jsxs)("div", {
+        children: [(0, Vt.jsxs)("div", {
           className: "SkyblockQuestCardTitle",
-          children: [(0, lE.jsx)("strong", {
-            children: (0, lE.jsx)(gE.b, {
-              text: iW.name
+          children: [(0, Vt.jsx)("strong", {
+            children: (0, Vt.jsx)(Dt.b, {
+              text: JR.name
             })
-          }), iW.tracked && (0, lE.jsx)("span", {
+          }), JR.tracked && (0, Vt.jsx)("span", {
             className: "SkyblockQuestTrackingBadge",
-            children: mW("skyblockGame:currentQuest")
+            children: yR("skyblockGame:currentQuest")
           })]
-        }), EW && (0, lE.jsxs)("div", {
+        }), tR && (0, Vt.jsxs)("div", {
           className: "SkyblockQuestCardStep",
-          children: [null !== EW.iconItem && (0, lE.jsx)(VE, {
-            item: EW.iconItem
-          }), (0, lE.jsx)(pE, {
-            name: EW.name,
-            percent: EW.barPercent,
-            progress: EW.progress
+          children: [null !== tR.iconItem && (0, Vt.jsx)(ot, {
+            item: tR.iconItem
+          }), (0, Vt.jsx)(ct, {
+            name: tR.name,
+            percent: tR.barPercent,
+            progress: tR.progress
           })]
-        }), (0, lE.jsx)("span", {
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockQuestProgress",
-          children: iW.progress
+          children: JR.progress
         })]
       })
     }
 
-    function XE(WW) {
+    function mt(RR) {
       let {
-        controller: iW,
-        surface: OW
-      } = WW;
-      const mW = (0, xE.g)(Ri, iW.getSnapshot()),
+        controller: JR,
+        surface: GR
+      } = RR;
+      const yR = (0, ft.h)(jJ, JR.getSnapshot()),
         {
-          t: EW
-        } = (0, ZE.B)(),
-        NW = yE();
-      return mW.enabled ? (0, lE.jsxs)(lE.Fragment, {
-        children: ["hud" === OW && (0, lE.jsx)(lE.Fragment, {
-          children: mW.tracked && (0, lE.jsx)("div", {
+          t: tR
+        } = (0, it.A)(),
+        uR = Xt();
+      return yR.enabled ? (0, Vt.jsxs)(Vt.Fragment, {
+        children: ["hud" === GR && (0, Vt.jsx)(Vt.Fragment, {
+          children: yR.tracked && (0, Vt.jsx)("div", {
             className: "SkyblockQuestTracker",
-            style: qi,
-            children: (0, lE.jsxs)("div", {
+            style: SJ,
+            children: (0, Vt.jsxs)("div", {
               className: "SkyblockQuestTrackerBody",
-              children: [mW.trackedStepPulse > 0 && (0, lE.jsx)("span", {
+              children: [yR.trackedStepPulse > 0 && (0, Vt.jsx)("span", {
                 className: "SkyblockQuestTrackerPulse",
                 "aria-hidden": "true"
-              }, mW.trackedStepPulse), (0, lE.jsx)("span", {
+              }, yR.trackedStepPulse), (0, Vt.jsx)("span", {
                 className: "SkyblockQuestEyebrow",
-                children: EW("skyblockGame:currentQuest")
-              }), (0, lE.jsxs)("span", {
+                children: tR("skyblockGame:currentQuest")
+              }), (0, Vt.jsxs)("span", {
                 className: "SkyblockQuestTrackerTitle",
-                children: [(0, lE.jsx)("strong", {
-                  children: (0, lE.jsx)(gE.b, {
-                    text: mW.tracked.name
+                children: [(0, Vt.jsx)("strong", {
+                  children: (0, Vt.jsx)(Dt.b, {
+                    text: yR.tracked.name
                   })
-                }), null !== mW.tracked.clock && (0, lE.jsx)("span", {
+                }), null !== yR.tracked.clock && (0, Vt.jsx)("span", {
                   className: "SkyblockQuestClock",
-                  children: mW.tracked.clock
+                  children: yR.tracked.clock
                 })]
-              }), (0, lE.jsx)(fE, {
-                subquests: mW.tracked.subquests
+              }), (0, Vt.jsx)(Pt, {
+                subquests: yR.tracked.subquests
               })]
             })
           })
-        }), "menu" === OW && (0, lE.jsx)(KE.b, {
-          show: mW.open,
-          close: iW.dismiss,
+        }), "menu" === GR && (0, Vt.jsx)(Wt.e, {
+          show: yR.open,
+          close: JR.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, lE.jsxs)("section", {
+          children: (0, Vt.jsxs)("section", {
             className: "SkyblockSkillsPanel SkyblockQuestsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockQuestsTitle",
             tabIndex: -1,
-            ref: NW,
-            onKeyDown: YE,
-            children: [(0, lE.jsxs)("header", {
+            ref: uR,
+            onKeyDown: Ct,
+            children: [(0, Vt.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, lE.jsx)("div", {
-                children: (0, lE.jsx)("h2", {
+              children: [(0, Vt.jsx)("div", {
+                children: (0, Vt.jsx)("h2", {
                   id: "skyblockQuestsTitle",
-                  children: EW("skyblockGame:quests")
+                  children: tR("skyblockGame:quests")
                 })
-              }), (0, lE.jsx)(SE.l, {
+              }), (0, Vt.jsx)(At.l, {
                 padIgnore: !0,
-                onClick: iW.dismiss
+                onClick: JR.dismiss
               })]
-            }), (0, lE.jsxs)("div", {
+            }), (0, Vt.jsxs)("div", {
               className: "SkyblockSkillsBody SkyblockQuestsBody",
-              children: [(0, lE.jsxs)("div", {
+              children: [(0, Vt.jsxs)("div", {
                 className: "SkyblockQuestList",
-                children: [(0, lE.jsx)("h3", {
-                  children: EW("skyblockGame:current")
-                }), 0 === mW.active.length && (0, lE.jsx)("p", {
+                children: [(0, Vt.jsx)("h3", {
+                  children: tR("skyblockGame:current")
+                }), 0 === yR.active.length && (0, Vt.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: EW("skyblockGame:noActiveQuests")
-                }), mW.active.map((WW => (0, lE.jsx)(CE, {
-                  quest: WW,
-                  select: iW.select
-                }, WW.id))), (0, lE.jsx)("h3", {
-                  children: (0, lE.jsxs)("button", {
+                  children: tR("skyblockGame:noActiveQuests")
+                }), yR.active.map((RR => (0, Vt.jsx)(It, {
+                  quest: RR,
+                  select: JR.select
+                }, RR.id))), (0, Vt.jsx)("h3", {
+                  children: (0, Vt.jsxs)("button", {
                     type: "button",
-                    className: EE()("SkyblockQuestSectionToggle", {
-                      Expanded: mW.completedExpanded
+                    className: Jt()("SkyblockQuestSectionToggle", {
+                      Expanded: yR.completedExpanded
                     }),
-                    "aria-expanded": mW.completedExpanded,
-                    onClick: iW.toggleCompleted,
-                    children: [(0, lE.jsx)("span", {
+                    "aria-expanded": yR.completedExpanded,
+                    onClick: JR.toggleCompleted,
+                    children: [(0, Vt.jsx)("span", {
                       className: "SkyblockQuestSectionCaret",
                       "aria-hidden": "true"
-                    }), EW("skyblockGame:completed"), (0, lE.jsx)("span", {
+                    }), tR("skyblockGame:completed"), (0, Vt.jsx)("span", {
                       className: "SkyblockQuestSectionCount",
-                      children: mW.completed.length
+                      children: yR.completed.length
                     })]
                   })
-                }), mW.completedExpanded && 0 === mW.completed.length && (0, lE.jsx)("p", {
+                }), yR.completedExpanded && 0 === yR.completed.length && (0, Vt.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: EW("skyblockGame:noCompletedQuests")
-                }), mW.completedExpanded && mW.completed.map((WW => (0, lE.jsx)(CE, {
-                  quest: WW,
-                  select: iW.select
-                }, WW.id)))]
-              }), mW.detail && (0, lE.jsxs)("div", {
+                  children: tR("skyblockGame:noCompletedQuests")
+                }), yR.completedExpanded && yR.completed.map((RR => (0, Vt.jsx)(It, {
+                  quest: RR,
+                  select: JR.select
+                }, RR.id)))]
+              }), yR.detail && (0, Vt.jsxs)("div", {
                 className: "SkyblockQuestDetail",
-                children: [mW.detail.completed && (0, lE.jsx)("span", {
+                children: [yR.detail.completed && (0, Vt.jsx)("span", {
                   className: "SkyblockQuestEyebrow",
-                  children: EW("skyblockGame:completedQuest")
-                }), (0, lE.jsx)("h3", {
-                  children: (0, lE.jsx)(gE.b, {
-                    text: mW.detail.name
+                  children: tR("skyblockGame:completedQuest")
+                }), (0, Vt.jsx)("h3", {
+                  children: (0, Vt.jsx)(Dt.b, {
+                    text: yR.detail.name
                   })
-                }), (0, lE.jsx)("p", {
+                }), (0, Vt.jsx)("p", {
                   className: "SkyblockQuestDescription",
-                  children: (0, lE.jsx)(gE.b, {
-                    text: mW.detail.description
+                  children: (0, Vt.jsx)(Dt.b, {
+                    text: yR.detail.description
                   })
-                }), (0, lE.jsxs)("p", {
+                }), (0, Vt.jsxs)("p", {
                   className: "SkyblockQuestProgress",
-                  children: [mW.detail.progress, null !== mW.detail.clock && (0, lE.jsx)("span", {
+                  children: [yR.detail.progress, null !== yR.detail.clock && (0, Vt.jsx)("span", {
                     className: "SkyblockQuestClock",
-                    children: mW.detail.clock
+                    children: yR.detail.clock
                   })]
-                }), (0, lE.jsx)(fE, {
-                  subquests: mW.detail.subquests,
+                }), (0, Vt.jsx)(Pt, {
+                  subquests: yR.detail.subquests,
                   showDescriptions: !0
-                }), mW.detail.tracked && (0, lE.jsx)("p", {
+                }), yR.detail.tracked && (0, Vt.jsx)("p", {
                   className: "SkyblockQuestTrackingStatus",
-                  children: mW.detail.trackLabel
-                }), !mW.detail.completed && !mW.detail.tracked && (0, lE.jsx)(SE.n, {
-                  onClick: iW.trackSelected,
-                  disabled: !mW.detail.canTrack,
-                  children: mW.detail.trackLabel
-                }), mW.detail.canViewDialogue && (0, lE.jsx)(SE.f, {
+                  children: yR.detail.trackLabel
+                }), !yR.detail.completed && !yR.detail.tracked && (0, Vt.jsx)(At.n, {
+                  onClick: JR.trackSelected,
+                  disabled: !yR.detail.canTrack,
+                  children: yR.detail.trackLabel
+                }), yR.detail.canViewDialogue && (0, Vt.jsx)(At.g, {
                   className: "SkyblockQuestViewDialogue",
-                  onClick: iW.viewDialogue,
-                  children: EW("skyblockDialogue:viewDialogue")
+                  onClick: JR.viewDialogue,
+                  children: tR("skyblockDialogue:viewDialogue")
                 })]
               })]
             })]
@@ -5658,35 +5624,35 @@ export const modules = {
         })]
       }) : null
     }
-    var BE = OW(1391),
-      qE = OW(3637);
+    var zt = GR(1468),
+      St = GR(3731);
 
-    function RE(WW, iW, OW, mW, EW) {
-      const NW = WW => "linear" === EW ? WW : {
-          YO: EW,
-          point: WW
+    function jt(RR, JR, GR, yR, tR) {
+      const uR = RR => "linear" === tR ? RR : {
+          CG: tR,
+          point: RR
         },
-        PW = {};
-      for (const [LW, cW] of mW)
-        for (const [iW, OW] of Object.entries(WW(LW, cW, NW))) PW[iW] ??= {
+        ZR = {};
+      for (const [qR, iR] of yR)
+        for (const [JR, GR] of Object.entries(RR(qR, iR, uR))) ZR[JR] ??= {
           timeline: []
-        }, PW[iW].timeline.push(OW);
+        }, ZR[JR].timeline.push(GR);
       return {
-        kO: iW,
-        loop: OW,
-        MO: PW
+        LG: JR,
+        loop: GR,
+        UG: ZR
       }
     }
-    const GE = .547,
-      IE = .022,
-      aE = {
+    const dt = .547,
+      Et = .022,
+      Yt = {
         drop: -.03,
         torso: -.28,
         nod: -.4,
         arms: -2.85,
         spread: .18
       },
-      rE = {
+      kt = {
         drop: .22,
         torso: .7,
         nod: -.25,
@@ -5695,167 +5661,167 @@ export const modules = {
         spread: .12
       };
 
-    function zE(WW, iW, OW) {
+    function Qt(RR, JR, GR) {
       const {
-        drop: mW = 0,
-        shift: EW = 0,
-        torso: NW = 0,
-        nod: PW = 0,
-        tilt: LW = 0,
-        legs: cW = [0, 0],
-        arms: wW = 0,
-        spread: tW = 0
-      } = iW, ZW = GE * Math.cos(NW) - IE * Math.sin(NW), xW = GE * Math.sin(NW) + IE * Math.cos(NW), lW = OW([0, -mW, EW]);
+        drop: yR = 0,
+        shift: tR = 0,
+        torso: uR = 0,
+        nod: ZR = 0,
+        tilt: qR = 0,
+        legs: iR = [0, 0],
+        arms: fR = 0,
+        spread: VR = 0
+      } = JR, KR = dt * Math.cos(uR) - Et * Math.sin(uR), wR = dt * Math.sin(uR) + Et * Math.cos(uR), rR = GR([0, -yR, tR]);
       return {
         LowerBody: {
-          timeFraction: WW,
-          position: lW,
-          rotation: OW([0, 0, 0])
+          timeFraction: RR,
+          position: rR,
+          rotation: GR([0, 0, 0])
         },
         UpperBody: {
-          timeFraction: WW,
-          position: lW,
-          rotation: OW([NW, 0, LW])
+          timeFraction: RR,
+          position: rR,
+          rotation: GR([uR, 0, qR])
         },
         HeadMesh: {
-          timeFraction: WW,
-          position: OW([0, ZW - GE - mW, xW - IE + EW]),
-          rotation: OW([NW + PW, 0, LW])
+          timeFraction: RR,
+          position: GR([0, KR - dt - yR, wR - Et + tR]),
+          rotation: GR([uR + ZR, 0, qR])
         },
         LegLeftMesh: {
-          timeFraction: WW,
-          rotation: OW([cW[0], 0, 0])
+          timeFraction: RR,
+          rotation: GR([iR[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: WW,
-          rotation: OW([cW[1], 0, 0])
+          timeFraction: RR,
+          rotation: GR([iR[1], 0, 0])
         },
         ArmLeftMesh: {
-          timeFraction: WW,
-          rotation: OW([wW, 0, tW])
+          timeFraction: RR,
+          rotation: GR([fR, 0, VR])
         },
         ArmRightMesh: {
-          timeFraction: WW,
-          rotation: OW([wW, 0, -tW])
+          timeFraction: RR,
+          rotation: GR([fR, 0, -VR])
         }
       }
     }
 
-    function FE(WW, iW, OW) {
-      return RE(zE, WW, iW, OW, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+    function Ft(RR, JR, GR) {
+      return jt(Qt, RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
     }
 
-    function QE(WW) {
-      return "number" === typeof WW ? [WW, WW] : WW
+    function Tt(RR) {
+      return "number" === typeof RR ? [RR, RR] : RR
     }
 
-    function WN(WW, iW, OW) {
+    function st(RR, JR, GR) {
       const {
-        rise: mW = 0,
-        shift: EW = 0,
-        torso: NW = 0,
-        twist: PW = 0,
-        tilt: LW = 0,
-        nod: cW = 0,
-        cock: wW = 0,
-        arms: tW = 0,
-        spread: ZW = 0
-      } = iW, [xW, lW] = QE(tW), [AW, bW] = QE(ZW);
+        rise: yR = 0,
+        shift: tR = 0,
+        torso: uR = 0,
+        twist: ZR = 0,
+        tilt: qR = 0,
+        nod: iR = 0,
+        cock: fR = 0,
+        arms: VR = 0,
+        spread: KR = 0
+      } = JR, [wR, rR] = Tt(VR), [eR, aR] = Tt(KR);
       return {
         TorsoNode: {
-          timeFraction: WW,
-          position: OW([0, mW, EW]),
-          rotation: OW([NW, PW, LW])
+          timeFraction: RR,
+          position: GR([0, yR, tR]),
+          rotation: GR([uR, ZR, qR])
         },
         HeadMesh: {
-          timeFraction: WW,
-          rotation: OW([cW, 0, wW])
+          timeFraction: RR,
+          rotation: GR([iR, 0, fR])
         },
         ArmLeftMesh: {
-          timeFraction: WW,
-          rotation: OW([xW, 0, AW])
+          timeFraction: RR,
+          rotation: GR([wR, 0, eR])
         },
         ArmRightMesh: {
-          timeFraction: WW,
-          rotation: OW([lW, 0, -bW])
+          timeFraction: RR,
+          rotation: GR([rR, 0, -aR])
         }
       }
     }
-    const iN = [1.0625, -1, 0];
+    const ht = [1.0625, -1, 0];
 
-    function ON(WW) {
-      return "number" === typeof WW ? [WW, WW] : WW
+    function Ru(RR) {
+      return "number" === typeof RR ? [RR, RR] : RR
     }
 
-    function mN(WW, iW, OW) {
+    function Ju(RR, JR, GR) {
       const {
-        drop: mW = 0,
-        shift: EW = 0,
-        torso: NW = 0,
-        tilt: PW = 0,
-        nod: LW = 0,
-        cock: cW = 0,
-        legs: wW = [0, 0],
-        arms: tW = 0,
-        spread: ZW = 0
-      } = iW, [xW, lW] = ON(tW), [AW, bW] = ON(ZW), jW = -NW, UW = -PW, [kW, sW, MW] = function(WW, iW) {
-        const [OW, mW, EW] = [-iN[0], iN[1], -iN[2]], NW = OW * Math.cos(iW) - mW * Math.sin(iW), PW = OW * Math.sin(iW) + mW * Math.cos(iW);
-        return [NW - OW, -(PW * Math.cos(WW) - EW * Math.sin(WW) - mW), PW * Math.sin(WW) + EW * Math.cos(WW) - EW]
-      }(jW, UW), KW = OW([0, -mW, EW]);
+        drop: yR = 0,
+        shift: tR = 0,
+        torso: uR = 0,
+        tilt: ZR = 0,
+        nod: qR = 0,
+        cock: iR = 0,
+        legs: fR = [0, 0],
+        arms: VR = 0,
+        spread: KR = 0
+      } = JR, [wR, rR] = Ru(VR), [eR, aR] = Ru(KR), LR = -uR, nR = -ZR, [UR, WR, AR] = function(RR, JR) {
+        const [GR, yR, tR] = [-ht[0], ht[1], -ht[2]], uR = GR * Math.cos(JR) - yR * Math.sin(JR), ZR = GR * Math.sin(JR) + yR * Math.cos(JR);
+        return [uR - GR, -(ZR * Math.cos(RR) - tR * Math.sin(RR) - yR), ZR * Math.sin(RR) + tR * Math.cos(RR) - tR]
+      }(LR, nR), CR = GR([0, -yR, tR]);
       return {
         TorsoNode: {
-          timeFraction: WW,
-          position: OW([kW, sW - mW, MW + EW]),
-          rotation: OW([jW, 0, UW])
+          timeFraction: RR,
+          position: GR([UR, WR - yR, AR + tR]),
+          rotation: GR([LR, 0, nR])
         },
         HeadMesh: {
-          timeFraction: WW,
-          rotation: OW([-LW, 0, -cW])
+          timeFraction: RR,
+          rotation: GR([-qR, 0, -iR])
         },
         ArmLeftMesh: {
-          timeFraction: WW,
-          rotation: OW([-xW, 0, -AW])
+          timeFraction: RR,
+          rotation: GR([-wR, 0, -eR])
         },
         ArmRightMesh: {
-          timeFraction: WW,
-          rotation: OW([-lW, 0, bW])
+          timeFraction: RR,
+          rotation: GR([-rR, 0, aR])
         },
         LegLeftMesh: {
-          timeFraction: WW,
-          position: KW,
-          rotation: OW([-wW[0], 0, 0])
+          timeFraction: RR,
+          position: CR,
+          rotation: GR([-fR[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: WW,
-          position: KW,
-          rotation: OW([-wW[1], 0, 0])
+          timeFraction: RR,
+          position: CR,
+          rotation: GR([-fR[1], 0, 0])
         }
       }
     }
-    var EN = OW(38320),
-      NN = OW(39661),
-      PN = OW(39881);
+    var Gu = GR(38275),
+      yu = GR(39630),
+      tu = GR(39862);
 
-    function LN(WW, iW, OW) {
-      var mW, EW;
-      const NW = function() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-          return WW + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - WW) * OW
+    function uu(RR, JR, GR) {
+      var yR, tR;
+      const uR = function() {
+          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+          return RR + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - RR) * GR
         },
-        [PW, LW] = null !== (mW = WW.legs) && void 0 !== mW ? mW : [0, 0],
-        [cW, wW] = null !== (EW = iW.legs) && void 0 !== EW ? EW : [0, 0];
+        [ZR, qR] = null !== (yR = RR.legs) && void 0 !== yR ? yR : [0, 0],
+        [iR, fR] = null !== (tR = JR.legs) && void 0 !== tR ? tR : [0, 0];
       return {
-        drop: NW(WW.drop, iW.drop),
-        shift: NW(WW.shift, iW.shift),
-        torso: NW(WW.torso, iW.torso),
-        nod: NW(WW.nod, iW.nod),
-        tilt: NW(WW.tilt, iW.tilt),
-        legs: [NW(PW, cW), NW(LW, wW)],
-        arms: NW(WW.arms, iW.arms),
-        spread: NW(WW.spread, iW.spread)
+        drop: uR(RR.drop, JR.drop),
+        shift: uR(RR.shift, JR.shift),
+        torso: uR(RR.torso, JR.torso),
+        nod: uR(RR.nod, JR.nod),
+        tilt: uR(RR.tilt, JR.tilt),
+        legs: [uR(ZR, iR), uR(qR, fR)],
+        arms: uR(RR.arms, JR.arms),
+        spread: uR(RR.spread, JR.spread)
       }
     }
-    const cN = {
+    const Zu = {
         drop: .1,
         torso: .22,
         nod: -.32,
@@ -5863,44 +5829,44 @@ export const modules = {
         arms: -.75,
         spread: .32
       },
-      wN = FE(4400, !0, [
-        [0, cN],
+      qu = Ft(4400, !0, [
+        [0, Zu],
         [.16, {
-          ...cN,
+          ...Zu,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.3, cN],
+        [.3, Zu],
         [.44, {
-          ...cN,
+          ...Zu,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.56, LN(cN, aE, .7)],
-        [.66, LN(cN, aE, .78)],
-        [.74, LN(cN, rE, .65)],
+        [.56, uu(Zu, Yt, .7)],
+        [.66, uu(Zu, Yt, .78)],
+        [.74, uu(Zu, kt, .65)],
         [.86, {
-          ...cN,
+          ...Zu,
           drop: .14
         }],
-        [1, cN]
+        [1, Zu]
       ], "catmull-rom-spline"),
-      tN = {
-        ...cN,
+      iu = {
+        ...Zu,
         drop: .14,
         torso: .3,
         spread: .4
       },
-      ZN = {
+      fu = {
         rise: .15,
         torso: .15,
         nod: -.25,
         arms: -.6,
         spread: .35
       },
-      xN = {
+      Vu = {
         drop: .06,
         torso: .18,
         nod: -.25,
@@ -5908,62 +5874,62 @@ export const modules = {
         arms: -.45,
         spread: .45
       },
-      lN = {
-        caveGolem: wN,
-        magmaGolem: FE(3600, !0, [
-          [0, tN],
+      Ku = {
+        caveGolem: qu,
+        magmaGolem: Ft(3600, !0, [
+          [0, iu],
           [.12, {
-            ...tN,
+            ...iu,
             tilt: .08,
             drop: .11
           }],
           [.26, {
-            ...tN,
+            ...iu,
             tilt: -.08
           }],
           [.4, {
-            ...tN,
+            ...iu,
             tilt: .06,
             drop: .11
           }],
-          [.52, LN(tN, aE, .9)],
-          [.62, LN(tN, rE, .8)],
-          [.7, LN(tN, rE, .45)],
-          [.78, LN(tN, rE, .85)],
+          [.52, uu(iu, Yt, .9)],
+          [.62, uu(iu, kt, .8)],
+          [.7, uu(iu, kt, .45)],
+          [.78, uu(iu, kt, .85)],
           [.9, {
-            ...tN,
+            ...iu,
             drop: .17
           }],
-          [1, tN]
+          [1, iu]
         ], "catmull-rom-spline"),
-        frostWraith: function(WW, iW, OW) {
-          return RE(WN, WW, iW, OW, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        frostWraith: function(RR, JR, GR) {
+          return jt(st, RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4800, !0, [
-          [0, ZN],
+          [0, fu],
           [.14, {
-            ...ZN,
+            ...fu,
             rise: .25,
             tilt: .06
           }],
           [.28, {
-            ...ZN,
+            ...fu,
             rise: .12,
             tilt: -.04
           }],
           [.42, {
-            ...ZN,
+            ...fu,
             rise: .24,
             tilt: .04
           }],
           [.54, {
-            ...ZN,
+            ...fu,
             rise: .22,
             twist: .2,
             arms: [-.3, -1.6],
             spread: [.4, .05]
           }],
           [.64, {
-            ...ZN,
+            ...fu,
             rise: .26,
             twist: .2,
             torso: .05,
@@ -5971,7 +5937,7 @@ export const modules = {
             spread: [.4, .05]
           }],
           [.72, {
-            ...ZN,
+            ...fu,
             rise: .1,
             twist: .22,
             torso: .35,
@@ -5980,26 +5946,26 @@ export const modules = {
             spread: [.4, -.05]
           }],
           [.86, {
-            ...ZN,
+            ...fu,
             rise: .16,
             tilt: -.04
           }],
-          [1, ZN]
+          [1, fu]
         ], "catmull-rom-spline"),
-        tikiTerror: function(WW, iW, OW) {
-          return RE(mN, WW, iW, OW, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        tikiTerror: function(RR, JR, GR) {
+          return jt(Ju, RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4400, !0, [
-          [0, xN],
+          [0, Vu],
           [.16, {
-            ...xN,
+            ...Vu,
             drop: .02,
             torso: .12,
             arms: -.55,
             spread: .52
           }],
-          [.3, xN],
+          [.3, Vu],
           [.44, {
-            ...xN,
+            ...Vu,
             drop: .02,
             torso: .12,
             arms: -.55,
@@ -6032,271 +5998,271 @@ export const modules = {
             spread: 1.1
           }],
           [.86, {
-            ...xN,
+            ...Vu,
             drop: .1
           }],
-          [1, xN]
+          [1, Vu]
         ], "catmull-rom-spline")
       },
-      AN = {
+      wu = {
         golem: "caveGolem",
         wraith: "frostWraith",
         tiki: "tikiTerror"
       },
-      bN = {
+      ru = {
         "Cave Golem": "caveGolem",
         "Magma Golem": "magmaGolem"
       },
-      jN = Object.fromEntries(Object.entries(lN).map((WW => {
-        let [iW, OW] = WW;
-        return [iW, (0, PN.e)((0, EN.h)(OW), iW)]
+      eu = Object.fromEntries(Object.entries(Ku).map((RR => {
+        let [JR, GR] = RR;
+        return [JR, (0, tu.c)((0, Gu.h)(GR), JR)]
       })));
 
-    function UN(WW) {
-      const iW = function(WW) {
-        var iW;
-        const OW = (0, NN.c)(WW).poseRig;
-        return null !== (iW = bN[WW]) && void 0 !== iW ? iW : void 0 === OW ? null : AN[OW]
-      }(WW);
-      return null === iW ? null : jN[iW]
+    function au(RR) {
+      const JR = function(RR) {
+        var JR;
+        const GR = (0, yu.d)(RR).poseRig;
+        return null !== (JR = ru[RR]) && void 0 !== JR ? JR : void 0 === GR ? null : wu[GR]
+      }(RR);
+      return null === JR ? null : eu[JR]
     }
 
-    function kN(WW) {
+    function Lu(RR) {
       return {
-        "--difficulty-colour": WW
+        "--difficulty-colour": RR
       }
     }
-    const sN = (0, YW.lazy)((() => (0, qE.b)(OW.e(229).then((() => OW(53703))), (WW => WW.MobPreview))));
+    const nu = (0, MR.lazy)((() => (0, St.b)(GR.e(229).then((() => GR(53531))), (RR => RR.MobPreview))));
 
-    function MN(WW) {
-      var iW, OW, mW;
+    function Uu(RR) {
+      var JR, GR, yR;
       let {
-        picker: EW,
-        controller: NW
-      } = WW;
+        picker: tR,
+        controller: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, ZE.B)(), LW = yE(), {
-        page: cW
-      } = EW;
-      return (0, lE.jsxs)("section", {
+        t: ZR
+      } = (0, it.A)(), qR = Xt(), {
+        page: iR
+      } = tR;
+      return (0, Vt.jsxs)("section", {
         className: "SkyblockSkillsPanel SkyblockBossPicker",
         role: "dialog",
         "aria-modal": "true",
         "aria-labelledby": "skyblockBossPickerTitle",
         tabIndex: -1,
-        ref: LW,
-        onKeyDown: WW => {
-          "ArrowLeft" === WW.key ? (WW.preventDefault(), WW.stopPropagation(), NW.previous()) : "ArrowRight" === WW.key ? (WW.preventDefault(), WW.stopPropagation(), NW.next()) : YE(WW)
+        ref: qR,
+        onKeyDown: RR => {
+          "ArrowLeft" === RR.key ? (RR.preventDefault(), RR.stopPropagation(), uR.previous()) : "ArrowRight" === RR.key ? (RR.preventDefault(), RR.stopPropagation(), uR.next()) : Ct(RR)
         },
-        style: kN(cW.colour),
-        children: [(0, lE.jsxs)("header", {
+        style: Lu(iR.colour),
+        children: [(0, Vt.jsxs)("header", {
           className: "SkyblockSkillsHeader",
-          children: [(0, lE.jsx)("h2", {
+          children: [(0, Vt.jsx)("h2", {
             id: "skyblockBossPickerTitle",
-            children: EW.dungeonName
-          }), (0, lE.jsx)(SE.l, {
+            children: tR.dungeonName
+          }), (0, Vt.jsx)(At.l, {
             padIgnore: !0,
-            onClick: NW.dismiss
+            onClick: uR.dismiss
           })]
-        }), (0, lE.jsxs)("div", {
+        }), (0, Vt.jsxs)("div", {
           className: "SkyblockBossPickerBody",
-          children: [(0, lE.jsxs)("div", {
+          children: [(0, Vt.jsxs)("div", {
             className: "SkyblockBossPickerStage",
-            children: [(0, lE.jsx)(SE.f, {
+            children: [(0, Vt.jsx)(At.g, {
               className: "SkyblockBossPickerTurn Previous",
-              disabled: !EW.canPrevious,
-              onClick: NW.previous,
-              children: (0, lE.jsx)("span", {
+              disabled: !tR.canPrevious,
+              onClick: uR.previous,
+              children: (0, Vt.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, lE.jsx)(BE.c, {
+                children: (0, Vt.jsx)(zt.d, {
                   name: "angle-up"
                 })
               })
-            }), (0, lE.jsxs)("div", {
-              className: EE()("SkyblockBossPickerBoss", {
-                Locked: !cW.unlocked
+            }), (0, Vt.jsxs)("div", {
+              className: Jt()("SkyblockBossPickerBoss", {
+                Locked: !iR.unlocked
               }),
-              children: [null !== cW.bossMobType && (0, lE.jsx)(YW.Suspense, {
-                fallback: (0, lE.jsx)("div", {
+              children: [null !== iR.bossMobType && (0, Vt.jsx)(MR.Suspense, {
+                fallback: (0, Vt.jsx)("div", {
                   className: "SkyblockBossPickerModel"
                 }),
-                children: (0, lE.jsx)(sN, {
+                children: (0, Vt.jsx)(nu, {
                   className: "SkyblockBossPickerModel",
-                  mobType: cW.bossMobType,
-                  variation: cW.bossMobVariation,
-                  animation: null !== (iW = UN(cW.bossMobType)) && void 0 !== iW ? iW : void 0
+                  mobType: iR.bossMobType,
+                  variation: iR.bossMobVariation,
+                  animation: null !== (JR = au(iR.bossMobType)) && void 0 !== JR ? JR : void 0
                 })
-              }), null === cW.bossMobType && (0, lE.jsx)("div", {
+              }), null === iR.bossMobType && (0, Vt.jsx)("div", {
                 className: "SkyblockBossPickerModel SkyblockBossPickerUnknown",
                 "aria-hidden": "true",
                 children: "?"
               })]
-            }), (0, lE.jsx)(SE.f, {
+            }), (0, Vt.jsx)(At.g, {
               className: "SkyblockBossPickerTurn Next",
-              disabled: !EW.canNext,
-              onClick: NW.next,
-              children: (0, lE.jsx)("span", {
+              disabled: !tR.canNext,
+              onClick: uR.next,
+              children: (0, Vt.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, lE.jsx)(BE.c, {
+                children: (0, Vt.jsx)(zt.d, {
                   name: "angle-up"
                 })
               })
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockBossPickerCaption",
-            children: [(0, lE.jsxs)("span", {
+            children: [(0, Vt.jsxs)("span", {
               className: "SkyblockBossPickerDifficulty",
-              children: [cW.beaten && (0, lE.jsx)("span", {
+              children: [iR.beaten && (0, Vt.jsx)("span", {
                 "aria-hidden": "true",
                 children: "\u2713 "
-              }), cW.label]
-            }), (0, lE.jsx)("strong", {
+              }), iR.label]
+            }), (0, Vt.jsx)("strong", {
               className: "SkyblockBossPickerName",
-              children: null !== (OW = cW.bossName) && void 0 !== OW ? OW : "???"
-            }), (0, lE.jsxs)("span", {
-              className: EE()("SkyblockBossPickerRecord", {
-                Locked: null !== cW.lockedHint
+              children: null !== (GR = iR.bossName) && void 0 !== GR ? GR : "???"
+            }), (0, Vt.jsxs)("span", {
+              className: Jt()("SkyblockBossPickerRecord", {
+                Locked: null !== iR.lockedHint
               }),
-              children: [null !== cW.lockedHintHighlight && (0, lE.jsxs)(lE.Fragment, {
-                children: [cW.lockedHintHighlight.before, (0, lE.jsxs)("span", {
+              children: [null !== iR.lockedHintHighlight && (0, Vt.jsxs)(Vt.Fragment, {
+                children: [iR.lockedHintHighlight.before, (0, Vt.jsxs)("span", {
                   className: "SkyblockDifficulty",
-                  style: kN(cW.lockedHintHighlight.colour),
-                  children: [null !== cW.lockedHintHighlight.icon && (0, lE.jsx)("span", {
+                  style: Lu(iR.lockedHintHighlight.colour),
+                  children: [null !== iR.lockedHintHighlight.icon && (0, Vt.jsx)("span", {
                     className: "SkyblockBossPickerHintIcon",
                     "aria-hidden": "true",
-                    children: (0, lE.jsx)(cE.b, {
-                      itemName: cW.lockedHintHighlight.icon,
+                    children: (0, Vt.jsx)(ut.b, {
+                      itemName: iR.lockedHintHighlight.icon,
                       amount: 0
                     })
-                  }), cW.lockedHintHighlight.name]
-                }), cW.lockedHintHighlight.after]
-              }), null === cW.lockedHintHighlight && (null !== (mW = cW.lockedHint) && void 0 !== mW ? mW : cW.summary)]
+                  }), iR.lockedHintHighlight.name]
+                }), iR.lockedHintHighlight.after]
+              }), null === iR.lockedHintHighlight && (null !== (yR = iR.lockedHint) && void 0 !== yR ? yR : iR.summary)]
             })]
-          }), (0, lE.jsx)("div", {
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockBossPickerDots",
             "aria-hidden": "true",
-            children: EW.pages.map((WW => (0, lE.jsx)("span", {
-              className: EE()("SkyblockBossPickerDot", {
-                Current: WW.current,
-                Locked: !WW.unlocked
+            children: tR.pages.map((RR => (0, Vt.jsx)("span", {
+              className: Jt()("SkyblockBossPickerDot", {
+                Current: RR.current,
+                Locked: !RR.unlocked
               }),
-              style: kN(WW.colour)
-            }, WW.difficulty)))
-          }), (0, lE.jsx)(SE.s, {
+              style: Lu(RR.colour)
+            }, RR.difficulty)))
+          }), (0, Vt.jsx)(At.r, {
             className: "SkyblockBossPickerFight",
-            disabled: !cW.unlocked,
-            onClick: NW.enter,
-            children: PW("skyblockGame:dungeonFight")
+            disabled: !iR.unlocked,
+            onClick: uR.enter,
+            children: ZR("skyblockGame:dungeonFight")
           })]
         })]
       })
     }
 
-    function KN(WW) {
+    function Wu(RR) {
       let {
-        dungeon: iW,
-        select: OW
-      } = WW;
-      return (0, lE.jsxs)(SE.f, {
-        className: EE()("SkyblockDungeonCard", {
-          Selected: iW.selected
+        dungeon: JR,
+        select: GR
+      } = RR;
+      return (0, Vt.jsxs)(At.g, {
+        className: Jt()("SkyblockDungeonCard", {
+          Selected: JR.selected
         }),
         onClick: () => {
-          OW(iW.id)
+          GR(JR.id)
         },
-        children: [(0, lE.jsxs)("div", {
+        children: [(0, Vt.jsxs)("div", {
           className: "SkyblockDungeonCardTitle",
-          children: [(0, lE.jsx)("strong", {
-            children: iW.name
-          }), (0, lE.jsx)("span", {
-            children: iW.beatenSummary
+          children: [(0, Vt.jsx)("strong", {
+            children: JR.name
+          }), (0, Vt.jsx)("span", {
+            children: JR.beatenSummary
           })]
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockDungeonChips",
-          children: iW.difficulties.map((WW => (0, lE.jsxs)("span", {
-            className: EE()("SkyblockDungeonChip", "SkyblockDifficulty", {
-              Beaten: WW.beaten
+          children: JR.difficulties.map((RR => (0, Vt.jsxs)("span", {
+            className: Jt()("SkyblockDungeonChip", "SkyblockDifficulty", {
+              Beaten: RR.beaten
             }),
-            style: kN(WW.colour),
-            title: WW.summary,
-            children: [WW.beaten && (0, lE.jsx)("span", {
+            style: Lu(RR.colour),
+            title: RR.summary,
+            children: [RR.beaten && (0, Vt.jsx)("span", {
               "aria-hidden": "true",
               children: "\u2713 "
-            }), WW.label]
-          }, WW.difficulty)))
+            }), RR.label]
+          }, RR.difficulty)))
         })]
       })
     }
 
-    function SN(WW) {
+    function Au(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(ri, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(kJ, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = yE();
-      return OW.enabled ? (0, lE.jsxs)(KE.b, {
-        show: OW.open,
-        close: iW.dismiss,
+          t: yR
+        } = (0, it.A)(),
+        tR = Xt();
+      return GR.enabled ? (0, Vt.jsxs)(Wt.e, {
+        show: GR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: [OW.picker && (0, lE.jsx)(MN, {
-          picker: OW.picker,
-          controller: iW
-        }), !OW.picker && (0, lE.jsxs)("section", {
+        children: [GR.picker && (0, Vt.jsx)(Uu, {
+          picker: GR.picker,
+          controller: JR
+        }), !GR.picker && (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDungeonsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDungeonsTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockDungeonsTitle",
-                children: mW("skyblockGame:dungeons")
-              }), (0, lE.jsx)("p", {
-                children: mW("skyblockGame:dungeonsIntro")
+                children: yR("skyblockGame:dungeons")
+              }), (0, Vt.jsx)("p", {
+                children: yR("skyblockGame:dungeonsIntro")
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: iW.dismiss
+              onClick: JR.dismiss
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockSkillsBody SkyblockDungeonsBody",
-            children: [(0, lE.jsx)("div", {
+            children: [(0, Vt.jsx)("div", {
               className: "SkyblockDungeonList",
-              children: OW.dungeons.map((WW => (0, lE.jsx)(KN, {
-                dungeon: WW,
-                select: iW.select
-              }, WW.id)))
-            }), OW.detail && (0, lE.jsxs)("div", {
+              children: GR.dungeons.map((RR => (0, Vt.jsx)(Wu, {
+                dungeon: RR,
+                select: JR.select
+              }, RR.id)))
+            }), GR.detail && (0, Vt.jsxs)("div", {
               className: "SkyblockDungeonDetail",
-              children: [(0, lE.jsx)("h3", {
-                children: OW.detail.name
-              }), (0, lE.jsx)("ul", {
+              children: [(0, Vt.jsx)("h3", {
+                children: GR.detail.name
+              }), (0, Vt.jsx)("ul", {
                 className: "SkyblockDungeonRecords",
-                children: OW.detail.difficulties.map((WW => (0, lE.jsxs)("li", {
-                  className: EE()("SkyblockDungeonRecord", {
-                    Beaten: WW.beaten
+                children: GR.detail.difficulties.map((RR => (0, Vt.jsxs)("li", {
+                  className: Jt()("SkyblockDungeonRecord", {
+                    Beaten: RR.beaten
                   }),
-                  children: [(0, lE.jsxs)("span", {
+                  children: [(0, Vt.jsxs)("span", {
                     className: "SkyblockDungeonRecordName SkyblockDifficulty",
-                    style: kN(WW.colour),
-                    children: [WW.beaten && (0, lE.jsx)("span", {
+                    style: Lu(RR.colour),
+                    children: [RR.beaten && (0, Vt.jsx)("span", {
                       "aria-hidden": "true",
                       children: "\u2713 "
-                    }), WW.label]
-                  }), (0, lE.jsx)("span", {
+                    }), RR.label]
+                  }), (0, Vt.jsx)("span", {
                     className: "SkyblockDungeonRecordSummary",
-                    children: WW.summary
+                    children: RR.summary
                   })]
-                }, WW.difficulty)))
+                }, RR.difficulty)))
               })]
             })]
           })]
@@ -6304,236 +6270,236 @@ export const modules = {
       }) : null
     }
 
-    function YN(WW) {
+    function Cu(RR) {
       let {
-        collection: iW,
-        select: OW
-      } = WW;
-      return (0, lE.jsxs)(SE.f, {
-        className: EE()("SkyblockSkillCard", "SkyblockCollectionCard", {
-          Selected: iW.selected,
-          Locked: iW.locked
+        collection: JR,
+        select: GR
+      } = RR;
+      return (0, Vt.jsxs)(At.g, {
+        className: Jt()("SkyblockSkillCard", "SkyblockCollectionCard", {
+          Selected: JR.selected,
+          Locked: JR.locked
         }),
-        ariaPressed: iW.selected,
+        ariaPressed: JR.selected,
         onClick: () => {
-          OW(iW.id)
+          GR(JR.id)
         },
-        children: [(0, lE.jsx)("div", {
+        children: [(0, Vt.jsx)("div", {
           className: "SkyblockSkillIcon",
-          children: (0, lE.jsx)(cE.b, {
-            itemName: iW.icon,
+          children: (0, Vt.jsx)(ut.b, {
+            itemName: JR.icon,
             amount: 0
           })
-        }), (0, lE.jsxs)("div", {
+        }), (0, Vt.jsxs)("div", {
           className: "SkyblockSkillSummary",
-          children: [(0, lE.jsxs)("div", {
+          children: [(0, Vt.jsxs)("div", {
             className: "SkyblockSkillTitle",
-            children: [(0, lE.jsx)("strong", {
-              children: iW.name
-            }), (0, lE.jsx)("span", {
-              children: iW.tier
+            children: [(0, Vt.jsx)("strong", {
+              children: JR.name
+            }), (0, Vt.jsx)("span", {
+              children: JR.tier
             })]
-          }), (0, lE.jsx)(TE, {
-            percent: iW.percent,
-            label: `${iW.name}: ${iW.progress}`
-          }), (0, lE.jsx)("span", {
+          }), (0, Vt.jsx)(Mt, {
+            percent: JR.percent,
+            label: `${JR.name}: ${JR.progress}`
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockSkillXp",
-            children: iW.progress
+            children: JR.progress
           })]
         })]
       })
     }
 
-    function yN(WW) {
+    function Xu(RR) {
       let {
-        collection: iW
-      } = WW;
+        collection: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)("div", {
+        t: GR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)("div", {
         className: "SkyblockSkillDetail SkyblockCollectionDetail",
-        children: [(0, lE.jsx)("div", {
+        children: [(0, Vt.jsx)("div", {
           className: "SkyblockSkillDetailIcon",
-          children: (0, lE.jsx)(cE.b, {
-            itemName: iW.icon,
+          children: (0, Vt.jsx)(ut.b, {
+            itemName: JR.icon,
             amount: 0
           })
-        }), (0, lE.jsx)("h3", {
-          children: iW.name
-        }), (0, lE.jsx)("strong", {
+        }), (0, Vt.jsx)("h3", {
+          children: JR.name
+        }), (0, Vt.jsx)("strong", {
           className: "SkyblockSkillDetailLevel",
-          children: iW.tier
-        }), (0, lE.jsx)("p", {
-          children: iW.locked ? OW("skyblockGame:collectionLocked") : iW.count
-        }), null !== iW.nextReward && (0, lE.jsxs)("div", {
+          children: JR.tier
+        }), (0, Vt.jsx)("p", {
+          children: JR.locked ? GR("skyblockGame:collectionLocked") : JR.count
+        }), null !== JR.nextReward && (0, Vt.jsxs)("div", {
           className: "SkyblockSkillBenefit",
-          children: [(0, lE.jsx)("strong", {
-            children: OW("skyblockGame:collectionNextReward")
-          }), (0, lE.jsx)("span", {
-            children: iW.nextReward
+          children: [(0, Vt.jsx)("strong", {
+            children: GR("skyblockGame:collectionNextReward")
+          }), (0, Vt.jsx)("span", {
+            children: JR.nextReward
           })]
-        }), (0, lE.jsx)(TE, {
-          percent: iW.percent,
-          label: iW.progress
-        }), (0, lE.jsx)("p", {
-          children: iW.progress
+        }), (0, Vt.jsx)(Mt, {
+          percent: JR.percent,
+          label: JR.progress
+        }), (0, Vt.jsx)("p", {
+          children: JR.progress
         })]
       })
     }
 
-    function TN(WW) {
+    function Mu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(UO, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(aG, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = yE();
-      return OW.enabled ? (0, lE.jsx)(KE.b, {
-        show: OW.open,
-        close: iW.dismiss,
+          t: yR
+        } = (0, it.A)(),
+        tR = Xt();
+      return GR.enabled ? (0, Vt.jsx)(Wt.e, {
+        show: GR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockCollectionsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockCollectionsTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockCollectionsTitle",
-                children: mW("skyblockGame:collections")
-              }), (0, lE.jsxs)("p", {
-                children: [mW("skyblockGame:collectionsIntro"), " ", OW.tiersUnlocked]
+                children: yR("skyblockGame:collections")
+              }), (0, Vt.jsxs)("p", {
+                children: [yR("skyblockGame:collectionsIntro"), " ", GR.tiersUnlocked]
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: iW.dismiss
+              onClick: JR.dismiss
             })]
-          }), (0, lE.jsx)("div", {
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockCollectionCategories",
             "data-pad-tabs": "1",
-            children: OW.categories.map((WW => (0, lE.jsxs)(SE.f, {
-              className: EE()("SkyblockCollectionCategory", {
-                Selected: WW.selected
+            children: GR.categories.map((RR => (0, Vt.jsxs)(At.g, {
+              className: Jt()("SkyblockCollectionCategory", {
+                Selected: RR.selected
               }),
-              ariaPressed: WW.selected,
-              padTabSelected: WW.selected,
+              ariaPressed: RR.selected,
+              padTabSelected: RR.selected,
               onClick: () => {
-                iW.selectCategory(WW.id)
+                JR.selectCategory(RR.id)
               },
-              children: [(0, lE.jsx)("span", {
+              children: [(0, Vt.jsx)("span", {
                 className: "SkyblockCollectionCategoryIcon",
-                children: (0, lE.jsx)(cE.b, {
-                  itemName: WW.icon,
+                children: (0, Vt.jsx)(ut.b, {
+                  itemName: RR.icon,
                   amount: 0
                 })
-              }), (0, lE.jsxs)("span", {
+              }), (0, Vt.jsxs)("span", {
                 className: "SkyblockCollectionCategoryText",
-                children: [(0, lE.jsx)("strong", {
-                  children: WW.label
-                }), (0, lE.jsx)("span", {
-                  children: WW.tiers
+                children: [(0, Vt.jsx)("strong", {
+                  children: RR.label
+                }), (0, Vt.jsx)("span", {
+                  children: RR.tiers
                 })]
               })]
-            }, WW.id)))
-          }), (0, lE.jsxs)("div", {
+            }, RR.id)))
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockSkillsBody",
-            children: [(0, lE.jsx)("div", {
+            children: [(0, Vt.jsx)("div", {
               className: "SkyblockSkillsList",
               "data-pad-select-on-focus": !0,
-              children: OW.collections.map((WW => (0, lE.jsx)(YN, {
-                collection: WW,
-                select: iW.select
-              }, WW.id)))
-            }), OW.detail && (0, lE.jsx)(yN, {
-              collection: OW.detail
+              children: GR.collections.map((RR => (0, Vt.jsx)(Cu, {
+                collection: RR,
+                select: JR.select
+              }, RR.id)))
+            }), GR.detail && (0, Vt.jsx)(Xu, {
+              collection: GR.detail
             })]
           })]
         })
       }) : null
     }
-    const JN = ["completed", "active", "available", "locked"],
-      hN = ["prerequisite", "acceptFirst", "sends", "awaits"];
+    const Bu = ["completed", "active", "available", "locked"],
+      lu = ["prerequisite", "acceptFirst", "sends", "awaits"];
 
-    function HN(WW) {
+    function pu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(nO, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(gG, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = yE();
-      return OW.enabled ? (0, lE.jsx)(KE.b, {
-        show: OW.open,
-        close: iW.dismiss,
+          t: yR
+        } = (0, it.A)(),
+        tR = Xt();
+      return GR.enabled ? (0, Vt.jsx)(Wt.e, {
+        show: GR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockQuestGraphPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockQuestGraphTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockQuestGraphTitle",
-                children: mW("skyblockDevQuests:title")
-              }), (0, lE.jsx)("p", {
-                children: mW("skyblockDevQuests:intro")
+                children: yR("skyblockDevQuests:title")
+              }), (0, Vt.jsx)("p", {
+                children: yR("skyblockDevQuests:intro")
               })]
-            }), (0, lE.jsx)(SE.l, {
-              onClick: iW.dismiss
+            }), (0, Vt.jsx)(At.l, {
+              onClick: JR.dismiss
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockQuestGraphLegend",
-            children: [JN.map((WW => (0, lE.jsx)("span", {
-              className: EE()("SkyblockQuestGraphLegendState", WW),
-              children: mW(`skyblockDevQuests:state_${WW}`)
-            }, WW))), hN.map((WW => (0, lE.jsxs)("span", {
+            children: [Bu.map((RR => (0, Vt.jsx)("span", {
+              className: Jt()("SkyblockQuestGraphLegendState", RR),
+              children: yR(`skyblockDevQuests:state_${RR}`)
+            }, RR))), lu.map((RR => (0, Vt.jsxs)("span", {
               className: "SkyblockQuestGraphLegendEdge",
-              children: [(0, lE.jsx)("svg", {
+              children: [(0, Vt.jsx)("svg", {
                 width: "28",
                 height: "8",
                 "aria-hidden": "true",
-                children: (0, lE.jsx)("line", {
-                  className: EE()("SkyblockQuestGraphEdge", WW),
+                children: (0, Vt.jsx)("line", {
+                  className: Jt()("SkyblockQuestGraphEdge", RR),
                   x1: "0",
                   y1: "4",
                   x2: "28",
                   y2: "4"
                 })
-              }), mW(`skyblockDevQuests:edge_${WW}`)]
-            }, WW)))]
-          }), (0, lE.jsx)("div", {
+              }), yR(`skyblockDevQuests:edge_${RR}`)]
+            }, RR)))]
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockQuestGraphScroll",
-            children: (0, lE.jsxs)("div", {
-              className: EE()("SkyblockQuestGraphCanvas", {
-                Planning: OW.planning
+            children: (0, Vt.jsxs)("div", {
+              className: Jt()("SkyblockQuestGraphCanvas", {
+                Planning: GR.planning
               }),
               style: {
-                width: OW.width,
-                height: OW.height
+                width: GR.width,
+                height: GR.height
               },
-              children: [(0, lE.jsxs)("svg", {
+              children: [(0, Vt.jsxs)("svg", {
                 className: "SkyblockQuestGraphEdges",
-                width: OW.width,
-                height: OW.height,
+                width: GR.width,
+                height: GR.height,
                 "aria-hidden": "true",
-                children: [(0, lE.jsx)("defs", {
-                  children: (0, lE.jsx)("marker", {
+                children: [(0, Vt.jsx)("defs", {
+                  children: (0, Vt.jsx)("marker", {
                     id: "skyblockQuestGraphArrow",
                     viewBox: "0 0 8 8",
                     refX: "7",
@@ -6541,404 +6507,404 @@ export const modules = {
                     markerWidth: "6",
                     markerHeight: "6",
                     orient: "auto-start-reverse",
-                    children: (0, lE.jsx)("path", {
+                    children: (0, Vt.jsx)("path", {
                       className: "SkyblockQuestGraphArrow",
                       d: "M 0 0 L 8 4 L 0 8 z"
                     })
                   })
-                }), OW.edges.map((WW => (0, lE.jsx)("path", {
-                  className: EE()("SkyblockQuestGraphEdge", WW.kind, {
-                    InPlan: WW.inPlan
+                }), GR.edges.map((RR => (0, Vt.jsx)("path", {
+                  className: Jt()("SkyblockQuestGraphEdge", RR.kind, {
+                    InPlan: RR.inPlan
                   }),
-                  d: WW.path,
+                  d: RR.path,
                   markerEnd: "url(#skyblockQuestGraphArrow)"
-                }, WW.key)))]
-              }), OW.nodes.map((WW => (0, lE.jsxs)("button", {
+                }, RR.key)))]
+              }), GR.nodes.map((RR => (0, Vt.jsxs)("button", {
                 type: "button",
-                className: EE()("SkyblockQuestGraphNode", WW.state, {
-                  InPlan: WW.inPlan,
-                  Hovered: WW.hovered
+                className: Jt()("SkyblockQuestGraphNode", RR.state, {
+                  InPlan: RR.inPlan,
+                  Hovered: RR.hovered
                 }),
                 style: {
-                  left: WW.left,
-                  top: WW.top,
+                  left: RR.left,
+                  top: RR.top,
                   width: 190,
                   height: 52
                 },
-                title: WW.id,
+                title: RR.id,
                 onMouseEnter: () => {
-                  iW.hover(WW.id)
+                  JR.hover(RR.id)
                 },
                 onMouseLeave: () => {
-                  iW.hover(null)
+                  JR.hover(null)
                 },
                 onFocus: () => {
-                  iW.hover(WW.id)
+                  JR.hover(RR.id)
                 },
                 onBlur: () => {
-                  iW.hover(null)
+                  JR.hover(null)
                 },
                 onClick: () => {
-                  iW.jump(WW.id)
+                  JR.jump(RR.id)
                 },
-                children: [(0, lE.jsx)("strong", {
-                  children: WW.name
-                }), (0, lE.jsx)("span", {
-                  children: WW.detail
+                children: [(0, Vt.jsx)("strong", {
+                  children: RR.name
+                }), (0, Vt.jsx)("span", {
+                  children: RR.detail
                 })]
-              }, WW.id)))]
+              }, RR.id)))]
             })
           })]
         })
       }) : null
     }
-    const nN = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
-      uN = {
+    const gu = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
+      bu = {
         "--impact": "250ms",
         "--hold": "50ms",
-        "--pop-at": `${BO}ms`,
+        "--pop-at": `${zG}ms`,
         "--forge-duration": "2150ms"
       },
-      oN = Array.from({
+      vu = Array.from({
         length: 18
-      }, ((WW, iW) => ({
-        "--ember-left": `${(4+92*(.618034*iW%1)).toFixed(1)}%`,
-        "--ember-size": 3 + iW % 3 * 2 + "px",
-        "--ember-drift": 14 * (iW % 5 - 2) + "px",
-        "--ember-duration": `${(5.5+7*iW%5*.9).toFixed(1)}s`,
-        "--ember-delay": `${(-1.37*iW%8).toFixed(2)}s`
+      }, ((RR, JR) => ({
+        "--ember-left": `${(4+92*(.618034*JR%1)).toFixed(1)}%`,
+        "--ember-size": 3 + JR % 3 * 2 + "px",
+        "--ember-drift": 14 * (JR % 5 - 2) + "px",
+        "--ember-duration": `${(5.5+7*JR%5*.9).toFixed(1)}s`,
+        "--ember-delay": `${(-1.37*JR%8).toFixed(2)}s`
       })));
 
-    function dN(WW) {
-      if (WW.style.removeProperty("--part-size"), null === WW.parentElement || "wrap" === getComputedStyle(WW.parentElement).flexWrap) return;
-      const iW = [...WW.children],
-        OW = getComputedStyle(WW),
-        mW = parseFloat(OW.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
-        EW = (WW.clientHeight - parseFloat(OW.rowGap) * (iW.length - 1)) / iW.length,
-        NW = iW.map((WW => {
-          const iW = getComputedStyle(WW),
-            OW = WW.querySelector("h3"),
-            NW = WW.querySelector(".SkyblockForgeParts");
-          if (null === OW || null === NW) return mW;
-          const PW = EW - parseFloat(iW.paddingTop) - parseFloat(iW.paddingBottom) - OW.offsetHeight - parseFloat(getComputedStyle(OW).marginBottom),
-            LW = parseFloat(getComputedStyle(NW).columnGap),
-            cW = NW.children.length;
-          let wW = 0;
-          for (let mW = 1; mW <= cW; mW++) {
-            const WW = Math.ceil(cW / mW);
-            wW = Math.max(wW, Math.min((NW.clientWidth - LW * (mW - 1)) / mW, (PW - LW * (WW - 1)) / WW))
+    function Ou(RR) {
+      if (RR.style.removeProperty("--part-size"), null === RR.parentElement || "wrap" === getComputedStyle(RR.parentElement).flexWrap) return;
+      const JR = [...RR.children],
+        GR = getComputedStyle(RR),
+        yR = parseFloat(GR.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
+        tR = (RR.clientHeight - parseFloat(GR.rowGap) * (JR.length - 1)) / JR.length,
+        uR = JR.map((RR => {
+          const JR = getComputedStyle(RR),
+            GR = RR.querySelector("h3"),
+            uR = RR.querySelector(".SkyblockForgeParts");
+          if (null === GR || null === uR) return yR;
+          const ZR = tR - parseFloat(JR.paddingTop) - parseFloat(JR.paddingBottom) - GR.offsetHeight - parseFloat(getComputedStyle(GR).marginBottom),
+            qR = parseFloat(getComputedStyle(uR).columnGap),
+            iR = uR.children.length;
+          let fR = 0;
+          for (let yR = 1; yR <= iR; yR++) {
+            const RR = Math.ceil(iR / yR);
+            fR = Math.max(fR, Math.min((uR.clientWidth - qR * (yR - 1)) / yR, (ZR - qR * (RR - 1)) / RR))
           }
-          return wW
+          return fR
         }));
-      WW.style.setProperty("--part-size", `${Math.floor(Math.max(mW,Math.min(...NW)))}px`)
+      RR.style.setProperty("--part-size", `${Math.floor(Math.max(yR,Math.min(...uR)))}px`)
     }
 
-    function eN(WW) {
-      var iW, OW, mW, EW, NW;
+    function xu(RR) {
+      var JR, GR, yR, tR, uR;
       let {
-        controller: PW
-      } = WW;
-      const LW = (0, xE.g)(zO, PW.getSnapshot()),
+        controller: ZR
+      } = RR;
+      const qR = (0, ft.h)(QG, ZR.getSnapshot()),
         {
-          t: cW
-        } = (0, ZE.B)(),
-        wW = yE(),
-        tW = function() {
-          const WW = (0, YW.useRef)(null),
-            iW = (0, YW.useRef)(null);
-          return (0, YW.useLayoutEffect)((() => {
-            null !== WW.current && dN(WW.current)
-          })), (0, YW.useCallback)((OW => {
-            var mW;
-            null === (mW = iW.current) || void 0 === mW || mW.disconnect(), iW.current = null, WW.current = OW, null !== OW && (iW.current = new ResizeObserver((() => {
-              dN(OW)
-            })), iW.current.observe(OW))
+          t: iR
+        } = (0, it.A)(),
+        fR = Xt(),
+        VR = function() {
+          const RR = (0, MR.useRef)(null),
+            JR = (0, MR.useRef)(null);
+          return (0, MR.useLayoutEffect)((() => {
+            null !== RR.current && Ou(RR.current)
+          })), (0, MR.useCallback)((GR => {
+            var yR;
+            null === (yR = JR.current) || void 0 === yR || yR.disconnect(), JR.current = null, RR.current = GR, null !== GR && (JR.current = new ResizeObserver((() => {
+              Ou(GR)
+            })), JR.current.observe(GR))
           }), [])
         }(),
-        xW = function(WW) {
-          const iW = (0, YW.useRef)(null);
-          return (0, YW.useLayoutEffect)((() => {
-            const WW = iW.current;
-            if (null !== WW) {
-              WW.style.removeProperty("font-size");
-              for (let iW = 1.7; iW > 1.1 && WW.scrollWidth > WW.clientWidth; iW -= .1) WW.style.fontSize = iW - .1 + "rem"
+        wR = function(RR) {
+          const JR = (0, MR.useRef)(null);
+          return (0, MR.useLayoutEffect)((() => {
+            const RR = JR.current;
+            if (null !== RR) {
+              RR.style.removeProperty("font-size");
+              for (let JR = 1.7; JR > 1.1 && RR.scrollWidth > RR.clientWidth; JR -= .1) RR.style.fontSize = JR - .1 + "rem"
             }
-          }), [WW]), (0, YW.useCallback)((WW => {
-            iW.current = WW
+          }), [RR]), (0, MR.useCallback)((RR => {
+            JR.current = RR
           }), [])
-        }(null === (iW = LW.preview) || void 0 === iW ? void 0 : iW.name),
-        lW = (0, YW.useRef)(null),
-        AW = (0, YW.useRef)({}),
-        bW = LW.forging,
-        jW = null !== (OW = null === bW || void 0 === bW ? void 0 : bW.preview.tier) && void 0 !== OW ? OW : 0,
-        UW = null !== (mW = null === bW || void 0 === bW ? void 0 : bW.preview.named) && void 0 !== mW && mW,
-        kW = (0, YW.useMemo)((() => {
-          return null === bW ? null : {
-            flames: (WW = jW, iW = UW, Array.from({
-              length: 26 + 6 * WW + (iW ? 20 : 0)
-            }, ((WW, iW) => {
-              const OW = iW < 6,
-                mW = Math.random() * Math.PI * 2,
-                EW = OW ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
-                NW = Math.cos(mW) * EW,
-                PW = Math.sin(mW) * EW - 2 - 3 * Math.random(),
-                LW = Math.random(),
-                [cW, wW, tW] = OW ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : LW < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : LW < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [LW < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
+        }(null === (JR = qR.preview) || void 0 === JR ? void 0 : JR.name),
+        rR = (0, MR.useRef)(null),
+        eR = (0, MR.useRef)({}),
+        aR = qR.forging,
+        LR = null !== (GR = null === aR || void 0 === aR ? void 0 : aR.preview.tier) && void 0 !== GR ? GR : 0,
+        nR = null !== (yR = null === aR || void 0 === aR ? void 0 : aR.preview.named) && void 0 !== yR && yR,
+        UR = (0, MR.useMemo)((() => {
+          return null === aR ? null : {
+            flames: (RR = LR, JR = nR, Array.from({
+              length: 26 + 6 * RR + (JR ? 20 : 0)
+            }, ((RR, JR) => {
+              const GR = JR < 6,
+                yR = Math.random() * Math.PI * 2,
+                tR = GR ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
+                uR = Math.cos(yR) * tR,
+                ZR = Math.sin(yR) * tR - 2 - 3 * Math.random(),
+                qR = Math.random(),
+                [iR, fR, VR] = GR ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : qR < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : qR < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [qR < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
               return {
-                "--c": cW,
-                "--x0": `${(.15*NW).toFixed(2)}rem`,
-                "--y0": `${(.15*PW).toFixed(2)}rem`,
-                "--x": `${NW.toFixed(2)}rem`,
-                "--y": `${PW.toFixed(2)}rem`,
+                "--c": iR,
+                "--x0": `${(.15*uR).toFixed(2)}rem`,
+                "--y0": `${(.15*ZR).toFixed(2)}rem`,
+                "--x": `${uR.toFixed(2)}rem`,
+                "--y": `${ZR.toFixed(2)}rem`,
                 "--spin": `${Math.round(360*(Math.random()-.5))}deg`,
-                "--size": `${wW.toFixed(2)}rem`,
-                "--duration": `${Math.round(tW)}ms`,
+                "--size": `${fR.toFixed(2)}rem`,
+                "--duration": `${Math.round(VR)}ms`,
                 "--delay": `${Math.round(80*Math.random())}ms`
               }
             }))),
-            sparks: GO(jW, UW)
+            sparks: dG(LR, nR)
           };
-          var WW, iW
-        }), [null === bW || void 0 === bW ? void 0 : bW.id]);
-      if (!LW.enabled) return null;
-      const sW = LW.preview,
-        MW = LW.arriving,
-        KW = null !== MW && !MW.sameSword,
-        SW = null !== sW && (0, lE.jsx)(cE.b, {
-          itemName: sW.baseSword,
+          var RR, JR
+        }), [null === aR || void 0 === aR ? void 0 : aR.id]);
+      if (!qR.enabled) return null;
+      const WR = qR.preview,
+        AR = qR.arriving,
+        CR = null !== AR && !AR.sameSword,
+        XR = null !== WR && (0, Vt.jsx)(ut.b, {
+          itemName: WR.baseSword,
           amount: 0,
-          enchantmentTier: sW.enchantmentTier
+          enchantmentTier: WR.enchantmentTier
         });
-      return (0, lE.jsx)(KE.b, {
-        show: LW.open,
-        close: PW.dismiss,
+      return (0, Vt.jsx)(Wt.e, {
+        show: qR.open,
+        close: ZR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockForgePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockForgeTitle",
           tabIndex: -1,
-          ref: wW,
-          onKeyDown: YE,
-          children: [(0, lE.jsx)("div", {
+          ref: fR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsx)("div", {
             className: "SkyblockForgeEmbers",
             "aria-hidden": "true",
-            children: oN.map(((WW, iW) => (0, lE.jsx)("span", {
-              style: WW
-            }, iW)))
-          }), (0, lE.jsxs)("header", {
+            children: vu.map(((RR, JR) => (0, Vt.jsx)("span", {
+              style: RR
+            }, JR)))
+          }), (0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockForgeTitle",
-                children: cW("skyblockGame:forgeTitle")
-              }), (0, lE.jsx)("p", {
-                children: cW("skyblockGame:forgeIntro")
+                children: iR("skyblockGame:forgeTitle")
+              }), (0, Vt.jsx)("p", {
+                children: iR("skyblockGame:forgeIntro")
               })]
-            }), (0, lE.jsx)(SE.l, {
-              onClick: PW.dismiss
+            }), (0, Vt.jsx)(At.l, {
+              onClick: ZR.dismiss
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockForgeBody",
-            children: [(0, lE.jsx)("div", {
-              ref: tW,
-              className: EE()("SkyblockForgeSlots", {
-                Locked: null !== bW
+            children: [(0, Vt.jsx)("div", {
+              ref: VR,
+              className: Jt()("SkyblockForgeSlots", {
+                Locked: null !== aR
               }),
-              children: LW.slots.map((WW => (0, lE.jsxs)("div", {
+              children: qR.slots.map((RR => (0, Vt.jsxs)("div", {
                 className: "SkyblockForgeSlot",
-                children: [(0, lE.jsx)("h3", {
-                  children: WW.label
-                }), (0, lE.jsx)("div", {
+                children: [(0, Vt.jsx)("h3", {
+                  children: RR.label
+                }), (0, Vt.jsx)("div", {
                   className: "SkyblockForgeParts",
-                  children: WW.parts.map((iW => (0, lE.jsx)("button", {
+                  children: RR.parts.map((JR => (0, Vt.jsx)("button", {
                     type: "button",
-                    className: EE()("SkyblockForgePart", {
-                      Selected: iW.selected,
-                      Missing: iW.placeholder
+                    className: Jt()("SkyblockForgePart", {
+                      Selected: JR.selected,
+                      Missing: JR.placeholder
                     }),
-                    disabled: iW.placeholder,
-                    title: iW.placeholder ? cW("skyblockGame:forgePickParts") : iW.itemName,
-                    "aria-pressed": iW.selected,
+                    disabled: JR.placeholder,
+                    title: JR.placeholder ? iR("skyblockGame:forgePickParts") : JR.itemName,
+                    "aria-pressed": JR.selected,
                     onClick: () => {
-                      PW.select(WW.kind, iW.material)
+                      ZR.select(RR.kind, JR.material)
                     },
-                    children: (0, lE.jsx)(cE.b, {
-                      itemName: iW.itemName,
-                      amount: iW.owned
+                    children: (0, Vt.jsx)(ut.b, {
+                      itemName: JR.itemName,
+                      amount: JR.owned
                     })
-                  }, iW.material)))
+                  }, JR.material)))
                 })]
-              }, WW.kind)))
-            }), (0, lE.jsxs)("div", {
-              className: EE()("SkyblockForgeAnvil", {
-                Named: null === sW || void 0 === sW ? void 0 : sW.named
+              }, RR.kind)))
+            }), (0, Vt.jsxs)("div", {
+              className: Jt()("SkyblockForgeAnvil", {
+                Named: null === WR || void 0 === WR ? void 0 : WR.named
               }),
               style: {
-                "--tier": null === sW ? "transparent" : ZW.kb[sW.enchantmentTier]
+                "--tier": null === WR ? "transparent" : KR.kb[WR.enchantmentTier]
               },
-              children: [(0, lE.jsxs)("div", {
-                className: EE()("SkyblockForgeAltar", {
-                  Forging: null !== bW
+              children: [(0, Vt.jsxs)("div", {
+                className: Jt()("SkyblockForgeAltar", {
+                  Forging: null !== aR
                 }),
-                style: null === bW ? void 0 : uN,
-                children: [(0, lE.jsxs)("div", {
-                  className: EE()("SkyblockForgeMount", {
-                    Arrive: null !== MW
+                style: null === aR ? void 0 : bu,
+                children: [(0, Vt.jsxs)("div", {
+                  className: Jt()("SkyblockForgeMount", {
+                    Arrive: null !== AR
                   }),
-                  children: [null === sW && (0, lE.jsx)("div", {
+                  children: [null === WR && (0, Vt.jsx)("div", {
                     className: "SkyblockForgeSword Unformed",
-                    children: (0, lE.jsx)(cE.b, {
-                      itemName: LW.unformedSword,
+                    children: (0, Vt.jsx)(ut.b, {
+                      itemName: qR.unformedSword,
                       amount: 0
                     })
-                  }), null !== sW && (0, lE.jsx)("div", {
+                  }), null !== WR && (0, Vt.jsx)("div", {
                     className: "SkyblockForgeGlow"
-                  }), null !== sW && null === bW && (0, lE.jsx)("div", {
-                    ref: lW,
+                  }), null !== WR && null === aR && (0, Vt.jsx)("div", {
+                    ref: rR,
                     className: "SkyblockForgeFloat",
-                    children: (0, lE.jsx)("div", {
+                    children: (0, Vt.jsx)("div", {
                       className: "SkyblockForgeSword",
-                      children: SW
+                      children: XR
                     })
-                  }), null !== sW && (0, lE.jsx)("div", {
+                  }), null !== WR && (0, Vt.jsx)("div", {
                     className: "SkyblockForgeAura",
                     "aria-hidden": "true",
-                    children: RO.map(((WW, iW) => (0, lE.jsx)("span", {
-                      className: EE()({
-                        Rune: "" !== WW.rune
+                    children: jG.map(((RR, JR) => (0, Vt.jsx)("span", {
+                      className: Jt()({
+                        Rune: "" !== RR.rune
                       }),
-                      style: WW.style,
-                      children: WW.rune
-                    }, iW)))
-                  }), null !== bW && null !== kW && (0, lE.jsxs)(lE.Fragment, {
-                    children: [(0, lE.jsx)("div", {
+                      style: RR.style,
+                      children: RR.rune
+                    }, JR)))
+                  }), null !== aR && null !== UR && (0, Vt.jsxs)(Vt.Fragment, {
+                    children: [(0, Vt.jsx)("div", {
                       className: "SkyblockForgeFlash"
-                    }), (0, lE.jsx)("div", {
+                    }), (0, Vt.jsx)("div", {
                       className: "SkyblockForgeFlames",
-                      children: kW.flames.map(((WW, iW) => (0, lE.jsx)("span", {
-                        style: WW
-                      }, iW)))
-                    }), (0, lE.jsx)("div", {
+                      children: UR.flames.map(((RR, JR) => (0, Vt.jsx)("span", {
+                        style: RR
+                      }, JR)))
+                    }), (0, Vt.jsx)("div", {
                       className: "SkyblockForgeSettle",
-                      style: AW.current,
-                      children: (0, lE.jsx)("div", {
+                      style: eR.current,
+                      children: (0, Vt.jsx)("div", {
                         className: "SkyblockForgeSword",
-                        children: SW
+                        children: XR
                       })
-                    }), (0, lE.jsx)("div", {
+                    }), (0, Vt.jsx)("div", {
                       className: "SkyblockForgeHitFlash"
-                    }), (0, lE.jsx)("div", {
+                    }), (0, Vt.jsx)("div", {
                       className: "SkyblockForgeShock"
-                    }), (jW >= 4 || UW) && (0, lE.jsx)("div", {
+                    }), (LR >= 4 || nR) && (0, Vt.jsx)("div", {
                       className: "SkyblockForgeShock Echo"
-                    }), (0, lE.jsx)("div", {
+                    }), (0, Vt.jsx)("div", {
                       className: "SkyblockForgeSparks",
-                      children: kW.sparks.map(((WW, iW) => (0, lE.jsx)("span", {
-                        style: WW
-                      }, iW)))
-                    }), (0, lE.jsx)("div", {
+                      children: UR.sparks.map(((RR, JR) => (0, Vt.jsx)("span", {
+                        style: RR
+                      }, JR)))
+                    }), (0, Vt.jsx)("div", {
                       className: "SkyblockForgeSwing"
                     })]
                   })]
-                }), (0, lE.jsx)("p", {
-                  className: EE()("SkyblockForgeStatus", null === (EW = LW.status) || void 0 === EW ? void 0 : EW.tone),
-                  children: null === (NW = LW.status) || void 0 === NW ? void 0 : NW.text
+                }), (0, Vt.jsx)("p", {
+                  className: Jt()("SkyblockForgeStatus", null === (tR = qR.status) || void 0 === tR ? void 0 : tR.tone),
+                  children: null === (uR = qR.status) || void 0 === uR ? void 0 : uR.text
                 })]
-              }), null === sW && (0, lE.jsx)("p", {
-                className: EE()("SkyblockForgeName Waiting", {
-                  ArriveText: KW
+              }), null === WR && (0, Vt.jsx)("p", {
+                className: Jt()("SkyblockForgeName Waiting", {
+                  ArriveText: CR
                 }),
-                children: cW(LW.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
-              }), null !== sW && (0, lE.jsx)("h3", {
-                ref: xW,
-                className: EE()("SkyblockForgeName", {
-                  ArriveText: KW
+                children: iR(qR.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
+              }), null !== WR && (0, Vt.jsx)("h3", {
+                ref: wR,
+                className: Jt()("SkyblockForgeName", {
+                  ArriveText: CR
                 }),
-                title: sW.name,
-                children: sW.name
-              }), (null === sW || void 0 === sW ? void 0 : sW.named) && (0, lE.jsx)("span", {
+                title: WR.name,
+                children: WR.name
+              }), (null === WR || void 0 === WR ? void 0 : WR.named) && (0, Vt.jsx)("span", {
                 className: "SkyblockForgeSecret",
-                children: cW("skyblockGame:forgeSecret")
-              }), (0, lE.jsxs)(SE.s, {
+                children: iR("skyblockGame:forgeSecret")
+              }), (0, Vt.jsxs)(At.r, {
                 className: "SkyblockForgeButton",
-                disabled: !LW.canForge,
-                title: null === sW ? void 0 : cW("skyblockGame:forgeCoalOwned", {
-                  owned: String(LW.coalOwned)
+                disabled: !qR.canForge,
+                title: null === WR ? void 0 : iR("skyblockGame:forgeCoalOwned", {
+                  owned: String(qR.coalOwned)
                 }),
                 onClick: () => {
-                  AW.current = function(WW) {
-                    const iW = null === WW ? "none" : getComputedStyle(WW).transform,
-                      OW = new DOMMatrixReadOnly("none" === iW ? void 0 : iW);
+                  eR.current = function(RR) {
+                    const JR = null === RR ? "none" : getComputedStyle(RR).transform,
+                      GR = new DOMMatrixReadOnly("none" === JR ? void 0 : JR);
                     return {
-                      "--settle-y": `${OW.f.toFixed(2)}px`,
-                      "--settle-turn": `${(180*Math.atan2(OW.b,OW.a)/Math.PI).toFixed(2)}deg`
+                      "--settle-y": `${GR.f.toFixed(2)}px`,
+                      "--settle-turn": `${(180*Math.atan2(GR.b,GR.a)/Math.PI).toFixed(2)}deg`
                     }
-                  }(lW.current), rO(), PW.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+                  }(rR.current), kG(), ZR.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
                 },
-                children: [cW("skyblockGame:forgeButton"), null !== sW && (0, lE.jsxs)("span", {
-                  className: EE()("SkyblockForgeCost", {
-                    Short: sW.coalShort
+                children: [iR("skyblockGame:forgeButton"), null !== WR && (0, Vt.jsxs)("span", {
+                  className: Jt()("SkyblockForgeCost", {
+                    Short: WR.coalShort
                   }),
-                  children: [(0, lE.jsx)("span", {
+                  children: [(0, Vt.jsx)("span", {
                     className: "SkyblockForgeCoal",
-                    children: (0, lE.jsx)(cE.b, {
-                      itemName: vO.b,
+                    children: (0, Vt.jsx)(ut.b, {
+                      itemName: NG.e,
                       amount: 0
                     })
-                  }), sW.coalCost]
+                  }), WR.coalCost]
                 })]
               })]
-            }), (0, lE.jsxs)("div", {
-              className: EE()("SkyblockForgeDetails", {
-                Named: null === sW || void 0 === sW ? void 0 : sW.named
+            }), (0, Vt.jsxs)("div", {
+              className: Jt()("SkyblockForgeDetails", {
+                Named: null === WR || void 0 === WR ? void 0 : WR.named
               }),
-              children: [(0, lE.jsx)("p", {
-                className: EE()("SkyblockForgeLore", {
-                  ArriveText: KW
+              children: [(0, Vt.jsx)("p", {
+                className: Jt()("SkyblockForgeLore", {
+                  ArriveText: CR
                 }),
-                title: null === sW || void 0 === sW ? void 0 : sW.lore,
-                children: null === sW || void 0 === sW ? void 0 : sW.lore
-              }), (0, lE.jsxs)("dl", {
-                className: EE()("SkyblockForgeStats", {
-                  ArriveText: KW
+                title: null === WR || void 0 === WR ? void 0 : WR.lore,
+                children: null === WR || void 0 === WR ? void 0 : WR.lore
+              }), (0, Vt.jsxs)("dl", {
+                className: Jt()("SkyblockForgeStats", {
+                  ArriveText: CR
                 }),
-                children: [null === sW && nN.map((WW => (0, lE.jsxs)("div", {
+                children: [null === WR && gu.map((RR => (0, Vt.jsxs)("div", {
                   className: "SkyblockForgeStat Empty",
-                  children: [(0, lE.jsx)("dt", {
-                    children: cW(WW)
-                  }), (0, lE.jsx)("dd", {
+                  children: [(0, Vt.jsx)("dt", {
+                    children: iR(RR)
+                  }), (0, Vt.jsx)("dd", {
                     children: "\u2013"
                   })]
-                }, WW))), null === sW || void 0 === sW ? void 0 : sW.stats.map((WW => (0, lE.jsxs)("div", {
-                  className: EE()("SkyblockForgeStat", {
-                    Better: WW.better
+                }, RR))), null === WR || void 0 === WR ? void 0 : WR.stats.map((RR => (0, Vt.jsxs)("div", {
+                  className: Jt()("SkyblockForgeStat", {
+                    Better: RR.better
                   }),
-                  children: [(0, lE.jsx)("dt", {
-                    children: WW.label
-                  }), (0, lE.jsx)("dd", {
-                    children: WW.value
+                  children: [(0, Vt.jsx)("dt", {
+                    children: RR.label
+                  }), (0, Vt.jsx)("dd", {
+                    children: RR.value
                   })]
-                }, WW.label)))]
-              }), (0, lE.jsx)("ul", {
-                className: EE()("SkyblockForgeEffects", {
-                  ArriveText: KW
+                }, RR.label)))]
+              }), (0, Vt.jsx)("ul", {
+                className: Jt()("SkyblockForgeEffects", {
+                  ArriveText: CR
                 }),
-                children: null === sW || void 0 === sW ? void 0 : sW.effects.map((WW => (0, lE.jsx)("li", {
-                  children: WW
-                }, WW)))
+                children: null === WR || void 0 === WR ? void 0 : WR.effects.map((RR => (0, Vt.jsx)("li", {
+                  children: RR
+                }, RR)))
               })]
             })]
           })]
         })
       })
     }
-    var vN = OW(39888);
-    const gN = "Doom Rivet",
-      DN = "Doom Crest",
-      VN = {
+    var Nu = GR(39869);
+    const Du = "Doom Rivet",
+      Hu = "Doom Crest",
+      ou = {
         title: "skyblockGame:smugglerTitle",
         intro: "skyblockGame:smugglerIntro",
         buy: "skyblockGame:smugglerBuy",
@@ -6950,188 +6916,188 @@ export const modules = {
         rotatesHours: "skyblockGame:smugglerRotatesHours"
       };
 
-    function pN(WW) {
+    function cu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(Wm, iW.getSnapshot()),
-        mW = yE();
-      return OW.enabled ? (0, lE.jsx)(vN.b, {
-        keys: VN,
-        open: OW.open,
-        onDismiss: iW.dismiss,
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(sG, JR.getSnapshot()),
+        yR = Xt();
+      return GR.enabled ? (0, Vt.jsx)(Nu.e, {
+        keys: ou,
+        open: GR.open,
+        onDismiss: JR.dismiss,
         wallet: [{
-          itemName: gN,
-          amount: OW.rivetsOwned
+          itemName: Du,
+          amount: GR.rivetsOwned
         }, {
-          itemName: DN,
-          amount: OW.crestsOwned
+          itemName: Hu,
+          amount: GR.crestsOwned
         }],
-        deals: OW.deals.map((WW => ({
-          ...WW,
+        deals: GR.deals.map((RR => ({
+          ...RR,
           prices: [{
-            itemName: gN,
-            amount: WW.rivets,
-            owned: OW.rivetsOwned
+            itemName: Du,
+            amount: RR.rivets,
+            owned: GR.rivetsOwned
           }, {
-            itemName: DN,
-            amount: WW.crests,
-            owned: OW.crestsOwned
-          }].filter((WW => {
+            itemName: Hu,
+            amount: RR.crests,
+            owned: GR.crestsOwned
+          }].filter((RR => {
             let {
-              amount: iW
-            } = WW;
-            return iW > 0
+              amount: JR
+            } = RR;
+            return JR > 0
           }))
         }))),
-        rotatesAtMs: OW.rotatesAtMs,
-        status: OW.status,
-        pending: OW.pending,
-        boughtCount: OW.boughtCount,
-        onBuy: iW.buy,
-        panelRef: mW,
-        onKeyDown: YE
+        rotatesAtMs: GR.rotatesAtMs,
+        status: GR.status,
+        pending: GR.pending,
+        boughtCount: GR.boughtCount,
+        onBuy: JR.buy,
+        panelRef: yR,
+        onKeyDown: Ct
       }) : null
     }
 
-    function fN(WW) {
+    function Pu(RR) {
       let {
-        phase: iW,
-        className: OW
-      } = WW;
-      return (0, lE.jsx)("span", {
-        className: EE()("SkyblockMoon", `Moon-${iW}`, OW),
+        phase: JR,
+        className: GR
+      } = RR;
+      return (0, Vt.jsx)("span", {
+        className: Jt()("SkyblockMoon", `Moon-${JR}`, GR),
         "aria-hidden": "true"
       })
     }
 
-    function CN(WW) {
+    function Iu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(mm, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(Jy, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)();
-      return OW.enabled ? (0, lE.jsx)(PE.h, {
+          t: yR
+        } = (0, it.A)();
+      return GR.enabled ? (0, Vt.jsx)(yt.d, {
         placement: "statBars",
-        children: (0, lE.jsx)("button", {
+        children: (0, Vt.jsx)("button", {
           type: "button",
           tabIndex: -1,
-          className: EE()("SkyblockPassageChip", OW.open && "Open"),
-          "aria-label": mW("skyblockGame:passageChipLabel", {
-            phase: OW.phaseName
+          className: Jt()("SkyblockPassageChip", GR.open && "Open"),
+          "aria-label": yR("skyblockGame:passageChipLabel", {
+            phase: GR.phaseName
           }),
-          title: mW("skyblockGame:passageChipLabel", {
-            phase: OW.phaseName
+          title: yR("skyblockGame:passageChipLabel", {
+            phase: GR.phaseName
           }),
-          onMouseDown: WW => {
-            WW.preventDefault()
+          onMouseDown: RR => {
+            RR.preventDefault()
           },
-          onClick: iW.toggle,
-          children: (0, lE.jsx)(fN, {
-            phase: OW.phase
-          }, OW.phase)
+          onClick: JR.toggle,
+          children: (0, Vt.jsx)(Pu, {
+            phase: GR.phase
+          }, GR.phase)
         })
       }) : null
     }
 
-    function XN(WW) {
+    function mu(RR) {
       let {
-        fish: iW
-      } = WW;
-      return (0, lE.jsxs)("li", {
+        fish: JR
+      } = RR;
+      return (0, Vt.jsxs)("li", {
         className: "SkyblockPassageFish",
-        children: [(0, lE.jsx)("span", {
+        children: [(0, Vt.jsx)("span", {
           className: "SkyblockPassageFishIcon",
-          children: (0, lE.jsx)(cE.b, {
-            itemName: iW.itemName,
+          children: (0, Vt.jsx)(ut.b, {
+            itemName: JR.itemName,
             amount: 0
           })
-        }), (0, lE.jsxs)("span", {
+        }), (0, Vt.jsxs)("span", {
           className: "SkyblockPassageFishText",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockPassageFishName",
-            children: iW.displayName
-          }), (0, lE.jsx)("span", {
+            children: JR.displayName
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockPassageFishWhere",
-            children: iW.where
+            children: JR.where
           })]
         })]
       })
     }
 
-    function BN(WW) {
+    function zu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(mm, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(Jy, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = yE();
-      return OW.enabled ? (0, lE.jsx)(KE.b, {
-        show: OW.open,
-        close: iW.dismiss,
+          t: yR
+        } = (0, it.A)(),
+        tR = Xt();
+      return GR.enabled ? (0, Vt.jsx)(Wt.e, {
+        show: GR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockPassagePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockPassageTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockPassageHeader",
-            children: [(0, lE.jsx)(fN, {
-              phase: OW.phase,
+            children: [(0, Vt.jsx)(Pu, {
+              phase: GR.phase,
               className: "SkyblockPassageHeaderMoon"
-            }), (0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            }), (0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockPassageTitle",
-                children: mW("skyblockGame:passageTitle")
-              }), (0, lE.jsx)("p", {
+                children: yR("skyblockGame:passageTitle")
+              }), (0, Vt.jsx)("p", {
                 className: "SkyblockPassagePhase",
-                children: OW.phaseName
+                children: GR.phaseName
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: iW.dismiss
+              onClick: JR.dismiss
             })]
-          }), (0, lE.jsx)("p", {
+          }), (0, Vt.jsx)("p", {
             className: "SkyblockPassageIntro",
-            children: mW("skyblockGame:passageIntro")
-          }), (0, lE.jsxs)("div", {
+            children: yR("skyblockGame:passageIntro")
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockPassageBody",
-            children: [(0, lE.jsxs)("section", {
+            children: [(0, Vt.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [(0, lE.jsx)("h3", {
-                children: mW("skyblockGame:passageVisiting")
-              }), (0, lE.jsx)("ul", {
+              children: [(0, Vt.jsx)("h3", {
+                children: yR("skyblockGame:passageVisiting")
+              }), (0, Vt.jsx)("ul", {
                 className: "SkyblockPassageList",
-                children: OW.visitors.map((WW => (0, lE.jsx)(XN, {
-                  fish: WW
-                }, WW.itemName)))
+                children: GR.visitors.map((RR => (0, Vt.jsx)(mu, {
+                  fish: RR
+                }, RR.itemName)))
               })]
-            }), (0, lE.jsxs)("section", {
+            }), (0, Vt.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [null !== OW.resting && (0, lE.jsxs)(lE.Fragment, {
-                children: [(0, lE.jsx)("h3", {
-                  children: mW("skyblockGame:passageResting")
-                }), (0, lE.jsx)("ul", {
+              children: [null !== GR.resting && (0, Vt.jsxs)(Vt.Fragment, {
+                children: [(0, Vt.jsx)("h3", {
+                  children: yR("skyblockGame:passageResting")
+                }), (0, Vt.jsx)("ul", {
                   className: "SkyblockPassageList Resting",
-                  children: (0, lE.jsx)(XN, {
-                    fish: OW.resting
+                  children: (0, Vt.jsx)(mu, {
+                    fish: GR.resting
                   })
                 })]
-              }), (0, lE.jsxs)("p", {
+              }), (0, Vt.jsxs)("p", {
                 className: "SkyblockPassageNext",
-                children: [(0, lE.jsx)(fN, {
-                  phase: OW.nextPhase
-                }), (0, lE.jsx)("span", {
-                  children: OW.next
+                children: [(0, Vt.jsx)(Pu, {
+                  phase: GR.nextPhase
+                }), (0, Vt.jsx)("span", {
+                  children: GR.next
                 })]
               })]
             })]
@@ -7140,664 +7106,664 @@ export const modules = {
       }) : null
     }
 
-    function qN() {
-      return (0, lE.jsx)("span", {
+    function Su() {
+      return (0, Vt.jsx)("span", {
         className: "SkyblockLampLightSparkle",
         "aria-hidden": "true",
-        children: [0, 1, 2, 3, 4, 5].map((WW => (0, lE.jsx)("i", {
+        children: [0, 1, 2, 3, 4, 5].map((RR => (0, Vt.jsx)("i", {
           style: {
-            "--sparkle-index": WW
+            "--sparkle-index": RR
           }
-        }, WW)))
+        }, RR)))
       })
     }
 
-    function RN(WW) {
-      var iW;
+    function ju(RR) {
+      var JR;
       let {
-        charm: OW,
-        view: mW,
-        controller: EW
-      } = WW;
+        charm: GR,
+        view: yR,
+        controller: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, ZE.B)(), PW = mW.shop, LW = (null === (iW = mW.sparkle) || void 0 === iW ? void 0 : iW.id) === OW.id;
-      return (0, lE.jsxs)("li", {
-        className: EE()("SkyblockLampLightCharm", OW.owned && "Owned", OW.socketed && "Socketed"),
-        children: [LW && (0, lE.jsx)(qN, {}, mW.sparkle.count), (0, lE.jsx)("h4", {
-          children: OW.name
-        }), (0, lE.jsx)("p", {
+        t: uR
+      } = (0, it.A)(), ZR = yR.shop, qR = (null === (JR = yR.sparkle) || void 0 === JR ? void 0 : JR.id) === GR.id;
+      return (0, Vt.jsxs)("li", {
+        className: Jt()("SkyblockLampLightCharm", GR.owned && "Owned", GR.socketed && "Socketed"),
+        children: [qR && (0, Vt.jsx)(Su, {}, yR.sparkle.count), (0, Vt.jsx)("h4", {
+          children: GR.name
+        }), (0, Vt.jsx)("p", {
           className: "SkyblockLampLightEffect",
-          children: OW.effect
-        }), (0, lE.jsx)("ul", {
+          children: GR.effect
+        }), (0, Vt.jsx)("ul", {
           className: "SkyblockLampLightOdds",
-          children: OW.lines.map((WW => (0, lE.jsxs)("li", {
-            className: EE()("SkyblockLampLightOddsLine", "better" === WW.tone ? "Better" : "worse" === WW.tone ? "Worse" : "Same"),
-            children: [(0, lE.jsx)("span", {
+          children: GR.lines.map((RR => (0, Vt.jsxs)("li", {
+            className: Jt()("SkyblockLampLightOddsLine", "better" === RR.tone ? "Better" : "worse" === RR.tone ? "Worse" : "Same"),
+            children: [(0, Vt.jsx)("span", {
               className: "Before",
-              children: WW.before
-            }), (0, lE.jsx)("span", {
+              children: RR.before
+            }), (0, Vt.jsx)("span", {
               className: "Arrow",
               children: "\u2192"
-            }), (0, lE.jsx)("span", {
+            }), (0, Vt.jsx)("span", {
               className: "After",
-              children: WW.after
+              children: RR.after
             })]
-          }, WW.label)))
-        }), (0, lE.jsx)("div", {
+          }, RR.label)))
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockLampLightCharmAction",
-          children: OW.owned ? OW.socketed ? (0, lE.jsxs)(lE.Fragment, {
-            children: [(0, lE.jsx)("span", {
+          children: GR.owned ? GR.socketed ? (0, Vt.jsxs)(Vt.Fragment, {
+            children: [(0, Vt.jsx)("span", {
               className: "SkyblockLampLightBadge",
-              children: NW("skyblockGame:lampLightSocketed")
-            }), (0, lE.jsx)(SE.Z, {
-              disabled: !mW.canCommand,
-              ariaLabel: NW("skyblockGame:lampLightRemoveLabel", {
-                charm: OW.name
+              children: uR("skyblockGame:lampLightSocketed")
+            }), (0, Vt.jsx)(At.U, {
+              disabled: !yR.canCommand,
+              ariaLabel: uR("skyblockGame:lampLightRemoveLabel", {
+                charm: GR.name
               }),
               onClick: () => {
-                EW.socket(null)
+                tR.socket(null)
               },
-              children: NW("skyblockGame:lampLightRemove")
+              children: uR("skyblockGame:lampLightRemove")
             })]
-          }) : (0, lE.jsx)(SE.f, {
-            disabled: !mW.canCommand || !PW.heldRod,
-            ariaLabel: NW("skyblockGame:lampLightSocketLabel", {
-              charm: OW.name
+          }) : (0, Vt.jsx)(At.g, {
+            disabled: !yR.canCommand || !ZR.heldRod,
+            ariaLabel: uR("skyblockGame:lampLightSocketLabel", {
+              charm: GR.name
             }),
             onClick: () => {
-              EW.socket(OW.id)
+              tR.socket(GR.id)
             },
-            children: NW("skyblockGame:lampLightSocket")
-          }) : (0, lE.jsx)(SE.f, {
-            disabled: !mW.canCommand || !OW.affordable,
-            ariaLabel: NW("skyblockGame:lampLightBuyLabel", {
-              item: OW.name,
-              cost: OW.cost
+            children: uR("skyblockGame:lampLightSocket")
+          }) : (0, Vt.jsx)(At.g, {
+            disabled: !yR.canCommand || !GR.affordable,
+            ariaLabel: uR("skyblockGame:lampLightBuyLabel", {
+              item: GR.name,
+              cost: GR.cost
             }),
             onClick: () => {
-              EW.buy(OW.id)
+              tR.buy(GR.id)
             },
-            children: OW.cost
+            children: GR.cost
           })
         })]
       })
     }
 
-    function GN(WW) {
-      var iW;
+    function du(RR) {
+      var JR;
       let {
-        tint: OW,
-        view: mW,
-        controller: EW
-      } = WW;
+        tint: GR,
+        view: yR,
+        controller: tR
+      } = RR;
       const {
-        t: NW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)("li", {
-        className: EE()("SkyblockLampLightTint", OW.wearing && "Wearing"),
+        t: uR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)("li", {
+        className: Jt()("SkyblockLampLightTint", GR.wearing && "Wearing"),
         style: {
-          "--tint-colour": OW.colour
+          "--tint-colour": GR.colour
         },
-        children: [(null === (iW = mW.sparkle) || void 0 === iW ? void 0 : iW.id) === OW.id && (0, lE.jsx)(qN, {}, mW.sparkle.count), (0, lE.jsx)("span", {
+        children: [(null === (JR = yR.sparkle) || void 0 === JR ? void 0 : JR.id) === GR.id && (0, Vt.jsx)(Su, {}, yR.sparkle.count), (0, Vt.jsx)("span", {
           className: "SkyblockLampLightSwatch",
           "aria-hidden": "true"
-        }), (0, lE.jsx)("span", {
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockLampLightTintName",
-          children: OW.name
-        }), OW.wearing ? (0, lE.jsx)("span", {
+          children: GR.name
+        }), GR.wearing ? (0, Vt.jsx)("span", {
           className: "SkyblockLampLightBadge",
-          children: NW("skyblockGame:lampLightWearing")
-        }) : (0, lE.jsx)(SE.f, {
-          disabled: !mW.canCommand || !OW.owned && !OW.affordable,
-          ariaLabel: OW.owned ? NW("skyblockGame:lampLightWearLabel", {
-            tint: OW.name
-          }) : NW("skyblockGame:lampLightBuyLabel", {
-            item: OW.name,
-            cost: OW.cost
+          children: uR("skyblockGame:lampLightWearing")
+        }) : (0, Vt.jsx)(At.g, {
+          disabled: !yR.canCommand || !GR.owned && !GR.affordable,
+          ariaLabel: GR.owned ? uR("skyblockGame:lampLightWearLabel", {
+            tint: GR.name
+          }) : uR("skyblockGame:lampLightBuyLabel", {
+            item: GR.name,
+            cost: GR.cost
           }),
           onClick: () => {
-            OW.owned ? EW.wearTint(OW.id) : EW.buy(OW.id)
+            GR.owned ? tR.wearTint(GR.id) : tR.buy(GR.id)
           },
-          children: OW.owned ? NW("skyblockGame:lampLightWear") : OW.cost
+          children: GR.owned ? uR("skyblockGame:lampLightWear") : GR.cost
         })]
       })
     }
 
-    function IN(WW) {
+    function Eu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(Um, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(ay, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = OW.shop;
-      return (0, lE.jsxs)("div", {
+          t: yR
+        } = (0, it.A)(),
+        tR = GR.shop;
+      return (0, Vt.jsxs)("div", {
         className: "SkyblockLampLightTab",
-        children: [(0, lE.jsxs)("div", {
+        children: [(0, Vt.jsxs)("div", {
           className: "SkyblockLampLightTop",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockLampLightBalance",
-            children: OW.balance
-          }), (0, lE.jsxs)("button", {
+            children: GR.balance
+          }), (0, Vt.jsxs)("button", {
             type: "button",
             role: "switch",
-            "aria-checked": OW.releasing,
-            className: EE()("SkyblockLampLightSwitch", OW.releasing && "On"),
-            disabled: OW.releasing ? "ready" !== OW.status : !OW.canCommand,
+            "aria-checked": GR.releasing,
+            className: Jt()("SkyblockLampLightSwitch", GR.releasing && "On"),
+            disabled: GR.releasing ? "ready" !== GR.status : !GR.canCommand,
             onClick: () => {
-              iW.setRelease(!OW.releasing)
+              JR.setRelease(!GR.releasing)
             },
-            children: [(0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("span", {
               className: "SkyblockLampLightSwitchTrack",
               "aria-hidden": "true",
-              children: (0, lE.jsx)("span", {
+              children: (0, Vt.jsx)("span", {
                 className: "SkyblockLampLightSwitchKnob"
               })
-            }), mW("skyblockGame:lampLightRelease")]
-          }), (0, lE.jsx)("span", {
+            }), yR("skyblockGame:lampLightRelease")]
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockLampLightHint",
-            children: mW("skyblockGame:lampLightReleaseHint")
+            children: yR("skyblockGame:lampLightReleaseHint")
           })]
-        }), null !== OW.notice && (0, lE.jsx)("p", {
+        }), null !== GR.notice && (0, Vt.jsx)("p", {
           className: "SkyblockLampLightNotice",
           role: "status",
-          children: OW.notice
-        }), null !== EW && (0, lE.jsxs)(lE.Fragment, {
-          children: [(0, lE.jsxs)("div", {
+          children: GR.notice
+        }), null !== tR && (0, Vt.jsxs)(Vt.Fragment, {
+          children: [(0, Vt.jsxs)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: [(0, lE.jsx)("h3", {
-              children: mW("skyblockGame:lampLightCharms")
-            }), (0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("h3", {
+              children: yR("skyblockGame:lampLightCharms")
+            }), (0, Vt.jsx)("span", {
               className: "SkyblockLampLightOddsFor",
-              children: EW.oddsFor
-            }), (0, lE.jsx)("div", {
+              children: tR.oddsFor
+            }), (0, Vt.jsx)("div", {
               className: "SkyblockLampLightSituations",
               role: "group",
-              children: ["open", "bloom"].map((WW => (0, lE.jsx)("button", {
+              children: ["open", "bloom"].map((RR => (0, Vt.jsx)("button", {
                 type: "button",
-                "aria-pressed": OW.situation === WW,
-                className: EE()("SkyblockLampLightSituation", OW.situation === WW && "Selected"),
+                "aria-pressed": GR.situation === RR,
+                className: Jt()("SkyblockLampLightSituation", GR.situation === RR && "Selected"),
                 onClick: () => {
-                  iW.setSituation(WW)
+                  JR.setSituation(RR)
                 },
-                children: mW("open" === WW ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
-              }, WW)))
+                children: yR("open" === RR ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
+              }, RR)))
             })]
-          }), !EW.heldRod && (0, lE.jsx)("p", {
+          }), !tR.heldRod && (0, Vt.jsx)("p", {
             className: "SkyblockLampLightHoldRod",
-            children: mW("skyblockGame:lampLightHoldRod")
-          }), (0, lE.jsx)("ul", {
+            children: yR("skyblockGame:lampLightHoldRod")
+          }), (0, Vt.jsx)("ul", {
             className: "SkyblockLampLightCharms",
-            children: EW.charms.map((WW => (0, lE.jsx)(RN, {
-              charm: WW,
-              view: OW,
-              controller: iW
-            }, WW.id)))
-          }), (0, lE.jsx)("div", {
+            children: tR.charms.map((RR => (0, Vt.jsx)(ju, {
+              charm: RR,
+              view: GR,
+              controller: JR
+            }, RR.id)))
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: (0, lE.jsx)("h3", {
-              children: mW("skyblockGame:lampLightTints")
+            children: (0, Vt.jsx)("h3", {
+              children: yR("skyblockGame:lampLightTints")
             })
-          }), (0, lE.jsxs)("ul", {
+          }), (0, Vt.jsxs)("ul", {
             className: "SkyblockLampLightTints",
-            children: [(0, lE.jsxs)("li", {
-              className: EE()("SkyblockLampLightTint", "Islands", EW.wearingIslandColours && "Wearing"),
-              children: [(0, lE.jsx)("span", {
+            children: [(0, Vt.jsxs)("li", {
+              className: Jt()("SkyblockLampLightTint", "Islands", tR.wearingIslandColours && "Wearing"),
+              children: [(0, Vt.jsx)("span", {
                 className: "SkyblockLampLightSwatch",
                 "aria-hidden": "true"
-              }), (0, lE.jsx)("span", {
+              }), (0, Vt.jsx)("span", {
                 className: "SkyblockLampLightTintName",
-                children: mW("skyblockGame:lampLightIslandColours")
-              }), EW.wearingIslandColours ? (0, lE.jsx)("span", {
+                children: yR("skyblockGame:lampLightIslandColours")
+              }), tR.wearingIslandColours ? (0, Vt.jsx)("span", {
                 className: "SkyblockLampLightBadge",
-                children: mW("skyblockGame:lampLightWearing")
-              }) : (0, lE.jsx)(SE.f, {
-                disabled: !OW.canCommand,
-                ariaLabel: mW("skyblockGame:lampLightWearLabel", {
-                  tint: mW("skyblockGame:lampLightIslandColours")
+                children: yR("skyblockGame:lampLightWearing")
+              }) : (0, Vt.jsx)(At.g, {
+                disabled: !GR.canCommand,
+                ariaLabel: yR("skyblockGame:lampLightWearLabel", {
+                  tint: yR("skyblockGame:lampLightIslandColours")
                 }),
                 onClick: () => {
-                  iW.wearTint(null)
+                  JR.wearTint(null)
                 },
-                children: mW("skyblockGame:lampLightWear")
+                children: yR("skyblockGame:lampLightWear")
               })]
-            }), EW.tints.map((WW => (0, lE.jsx)(GN, {
-              tint: WW,
-              view: OW,
-              controller: iW
-            }, WW.id)))]
+            }), tR.tints.map((RR => (0, Vt.jsx)(du, {
+              tint: RR,
+              view: GR,
+              controller: JR
+            }, RR.id)))]
           })]
         })]
       })
     }
 
-    function aN(WW) {
+    function Yu(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(Um, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(ay, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)();
-      return OW.releasing ? (0, lE.jsx)(PE.h, {
-        children: (0, lE.jsxs)("button", {
+          t: yR
+        } = (0, it.A)();
+      return GR.releasing ? (0, Vt.jsx)(yt.d, {
+        children: (0, Vt.jsxs)("button", {
           type: "button",
           className: "SkyblockLampLightPill",
           onClick: () => {
-            iW.setRelease(!1)
+            JR.setRelease(!1)
           },
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockLampLightPillOrb",
             "aria-hidden": "true"
-          }), (0, lE.jsxs)("span", {
+          }), (0, Vt.jsxs)("span", {
             className: "SkyblockLampLightPillText SmallTextBold",
-            children: [mW("skyblockGame:lampLightReleasing"), " \xb7 ", OW.balance]
-          }), (0, lE.jsx)("span", {
+            children: [yR("skyblockGame:lampLightReleasing"), " \xb7 ", GR.balance]
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockLampLightPillStop SmallTextBold",
-            children: mW("skyblockGame:lampLightKeepCatches")
-          }), null !== OW.gained && (0, lE.jsx)("span", {
+            children: yR("skyblockGame:lampLightKeepCatches")
+          }), null !== GR.gained && (0, Vt.jsx)("span", {
             className: "SkyblockLampLightPillGain SmallTextBold",
             "aria-hidden": "true",
-            children: OW.gained.text
-          }, OW.gained.count)]
+            children: GR.gained.text
+          }, GR.gained.count)]
         })
       }) : null
     }
 
-    function rN(WW) {
+    function ku(RR) {
       let {
-        island: iW,
-        view: OW,
-        aim: mW
-      } = WW;
+        island: JR,
+        view: GR,
+        aim: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, ZE.B)(), NW = iW.featuredFish;
-      return (0, lE.jsxs)("li", {
-        className: EE()("SkyblockKeepersChairIsland", `Island-${iW.id}`, iW.favoured && "Aimed", !iW.relit && "Dark"),
-        children: [(0, lE.jsx)("h3", {
-          children: iW.name
-        }), iW.relit && null !== NW ? (0, lE.jsxs)("div", {
+        t: tR
+      } = (0, it.A)(), uR = JR.featuredFish;
+      return (0, Vt.jsxs)("li", {
+        className: Jt()("SkyblockKeepersChairIsland", `Island-${JR.id}`, JR.favoured && "Aimed", !JR.relit && "Dark"),
+        children: [(0, Vt.jsx)("h3", {
+          children: JR.name
+        }), JR.relit && null !== uR ? (0, Vt.jsxs)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockKeepersChairNoticeLabel",
-            children: EW("skyblockGame:keepersChairTideNotice")
-          }), (0, lE.jsx)("span", {
+            children: tR("skyblockGame:keepersChairTideNotice")
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockKeepersChairFish",
-            children: (0, lE.jsx)(cE.b, {
-              itemName: NW.itemName,
+            children: (0, Vt.jsx)(ut.b, {
+              itemName: uR.itemName,
               amount: 0
             })
-          }), (0, lE.jsx)("span", {
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockKeepersChairFishName",
-            children: NW.displayName
+            children: uR.displayName
           })]
-        }) : (0, lE.jsx)("div", {
+        }) : (0, Vt.jsx)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: (0, lE.jsx)("span", {
+          children: (0, Vt.jsx)("span", {
             className: "SkyblockKeepersChairDarkLens",
-            children: EW("skyblockGame:keepersChairDark")
+            children: tR("skyblockGame:keepersChairDark")
           })
-        }), iW.relit && (iW.favoured ? (0, lE.jsx)("span", {
+        }), JR.relit && (JR.favoured ? (0, Vt.jsx)("span", {
           className: "SkyblockKeepersChairAimedBadge",
-          children: EW("skyblockGame:keepersChairAimed")
-        }) : (0, lE.jsx)(SE.f, {
+          children: tR("skyblockGame:keepersChairAimed")
+        }) : (0, Vt.jsx)(At.g, {
           className: "SkyblockKeepersChairAim",
-          disabled: !OW.canAim,
-          ariaLabel: EW("skyblockGame:keepersChairAimLabel", {
-            island: iW.name
+          disabled: !GR.canAim,
+          ariaLabel: tR("skyblockGame:keepersChairAimLabel", {
+            island: JR.name
           }),
           onClick: () => {
-            mW(iW.id)
+            yR(JR.id)
           },
-          children: EW("skyblockGame:keepersChairAim")
+          children: tR("skyblockGame:keepersChairAim")
         }))]
-      }, iW.favoured ? OW.aimedCount : 0)
+      }, JR.favoured ? GR.aimedCount : 0)
     }
 
-    function zN(WW) {
+    function Qu(RR) {
       let {
-        controller: iW,
-        lampLight: OW
-      } = WW;
-      const mW = (0, xE.g)(wm, iW.getSnapshot()),
-        EW = (0, xE.g)(Um, OW.getSnapshot()),
-        [NW, PW] = (0, YW.useState)("lamp"),
+        controller: JR,
+        lampLight: GR
+      } = RR;
+      const yR = (0, ft.h)(qy, JR.getSnapshot()),
+        tR = (0, ft.h)(ay, GR.getSnapshot()),
+        [uR, ZR] = (0, MR.useState)("lamp"),
         {
-          t: LW
-        } = (0, ZE.B)(),
-        cW = yE();
-      if (!mW.enabled) return null;
-      const wW = "light" === NW && EW.enabled;
-      return (0, lE.jsx)(KE.b, {
-        show: mW.open,
-        close: iW.dismiss,
+          t: qR
+        } = (0, it.A)(),
+        iR = Xt();
+      if (!yR.enabled) return null;
+      const fR = "light" === uR && tR.enabled;
+      return (0, Vt.jsx)(Wt.e, {
+        show: yR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
-          className: EE()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", wW && "OnLampLight"),
+        children: (0, Vt.jsxs)("section", {
+          className: Jt()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", fR && "OnLampLight"),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockKeepersChairTitle",
           tabIndex: -1,
-          ref: cW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: iR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockKeepersChairHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockKeepersChairTitle",
-                children: LW("skyblockGame:keepersChairTitle")
-              }), (0, lE.jsx)("p", {
-                children: LW(wW ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
+                children: qR("skyblockGame:keepersChairTitle")
+              }), (0, Vt.jsx)("p", {
+                children: qR(fR ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              ariaLabel: LW("skyblockGame:keepersChairClose"),
-              onClick: iW.dismiss
+              ariaLabel: qR("skyblockGame:keepersChairClose"),
+              onClick: JR.dismiss
             })]
-          }), EW.enabled && (0, lE.jsx)("div", {
+          }), tR.enabled && (0, Vt.jsx)("div", {
             className: "SkyblockKeepersChairTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: ["lamp", "light"].map((WW => (0, lE.jsxs)("button", {
+            children: ["lamp", "light"].map((RR => (0, Vt.jsxs)("button", {
               type: "button",
               role: "tab",
-              "aria-selected": "light" === WW === wW,
+              "aria-selected": "light" === RR === fR,
               "data-pad-tab": !0,
-              "data-pad-selected": "light" === WW === wW ? "true" : void 0,
-              className: EE()("SkyblockKeepersChairTab", "light" === WW === wW && "Selected"),
+              "data-pad-selected": "light" === RR === fR ? "true" : void 0,
+              className: Jt()("SkyblockKeepersChairTab", "light" === RR === fR && "Selected"),
               onClick: () => {
-                PW(WW)
+                ZR(RR)
               },
-              children: [LW("lamp" === WW ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === WW && (0, lE.jsx)("span", {
+              children: [qR("lamp" === RR ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === RR && (0, Vt.jsx)("span", {
                 className: "SkyblockKeepersChairTabBalance",
-                children: EW.balance
+                children: tR.balance
               })]
-            }, WW)))
-          }), wW ? (0, lE.jsx)(IN, {
-            controller: OW
-          }) : (0, lE.jsx)(FN, {
-            view: mW,
-            controller: iW
+            }, RR)))
+          }), fR ? (0, Vt.jsx)(Eu, {
+            controller: GR
+          }) : (0, Vt.jsx)(Fu, {
+            view: yR,
+            controller: JR
           })]
         })
       })
     }
 
-    function FN(WW) {
+    function Fu(RR) {
       let {
-        view: iW,
-        controller: OW
-      } = WW;
+        view: JR,
+        controller: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)(lE.Fragment, {
-        children: [(0, lE.jsx)("ul", {
+        t: yR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)(Vt.Fragment, {
+        children: [(0, Vt.jsx)("ul", {
           className: "SkyblockKeepersChairIslands",
-          children: iW.islands.map((WW => (0, lE.jsx)(rN, {
-            island: WW,
-            view: iW,
-            aim: OW.aim
-          }, WW.id)))
-        }), null !== iW.almanac && (0, lE.jsxs)("div", {
+          children: JR.islands.map((RR => (0, Vt.jsx)(ku, {
+            island: RR,
+            view: JR,
+            aim: GR.aim
+          }, RR.id)))
+        }), null !== JR.almanac && (0, Vt.jsxs)("div", {
           className: "SkyblockKeepersChairAlmanac",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockKeepersChairAlmanacLabel",
-            children: mW("skyblockGame:passageTitle")
-          }), (0, lE.jsxs)("span", {
+            children: yR("skyblockGame:passageTitle")
+          }), (0, Vt.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek",
-            children: [(0, lE.jsx)(fN, {
-              phase: iW.almanac.phase
-            }), iW.almanac.phaseName]
-          }), (0, lE.jsxs)("span", {
+            children: [(0, Vt.jsx)(Pu, {
+              phase: JR.almanac.phase
+            }), JR.almanac.phaseName]
+          }), (0, Vt.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek Next",
-            children: [(0, lE.jsx)(fN, {
-              phase: iW.almanac.nextPhase
-            }), iW.almanac.next]
+            children: [(0, Vt.jsx)(Pu, {
+              phase: JR.almanac.nextPhase
+            }), JR.almanac.next]
           })]
-        }), (0, lE.jsxs)("footer", {
+        }), (0, Vt.jsxs)("footer", {
           className: "SkyblockKeepersChairFooter",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockKeepersChairFavour",
-            children: mW("skyblockGame:keepersChairFavour")
-          }), iW.aimed && (0, lE.jsx)(SE.Z, {
+            children: yR("skyblockGame:keepersChairFavour")
+          }), JR.aimed && (0, Vt.jsx)(At.U, {
             className: "SkyblockKeepersChairRest",
-            disabled: !iW.canAim,
+            disabled: !JR.canAim,
             onClick: () => {
-              OW.aim(null)
+              GR.aim(null)
             },
-            children: mW("skyblockGame:keepersChairRest")
+            children: yR("skyblockGame:keepersChairRest")
           })]
-        }), null !== iW.status && (0, lE.jsx)("p", {
-          className: EE()("SkyblockKeepersChairStatus", "refused" === iW.status.tone ? "Refused" : "Shines"),
+        }), null !== JR.status && (0, Vt.jsx)("p", {
+          className: Jt()("SkyblockKeepersChairStatus", "refused" === JR.status.tone ? "Refused" : "Shines"),
           role: "status",
-          children: iW.status.text
+          children: JR.status.text
         })]
       })
     }
 
-    function QN(WW) {
+    function Tu(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, xE.g)(Zm, iW.getSnapshot());
-      if (!mW.enabled) return null;
-      const EW = mW.freshCount > 0 ? OW("skyblockGame:reachLogOpenNews", {
-        count: mW.freshCount
-      }) : OW("skyblockGame:reachLogOpen");
-      return (0, lE.jsx)(PE.h, {
+        t: GR
+      } = (0, it.A)(), yR = (0, ft.h)(fy, JR.getSnapshot());
+      if (!yR.enabled) return null;
+      const tR = yR.freshCount > 0 ? GR("skyblockGame:reachLogOpenNews", {
+        count: yR.freshCount
+      }) : GR("skyblockGame:reachLogOpen");
+      return (0, Vt.jsx)(yt.d, {
         placement: "statBars",
-        children: (0, lE.jsxs)("button", {
+        children: (0, Vt.jsxs)("button", {
           type: "button",
-          className: EE()("SkyblockReachLogButton", mW.freshCount > 0 && "HasNews", mW.pending && "Pending"),
-          "aria-label": EW,
-          title: EW,
-          onClick: iW.ask,
-          children: [mW.news && (0, lE.jsx)("span", {
+          className: Jt()("SkyblockReachLogButton", yR.freshCount > 0 && "HasNews", yR.pending && "Pending"),
+          "aria-label": tR,
+          title: tR,
+          onClick: JR.ask,
+          children: [yR.news && (0, Vt.jsx)("span", {
             className: "SkyblockReachLogPulse",
             "aria-hidden": "true"
-          }, `pulse:${mW.newsToken}`), (0, lE.jsx)("span", {
-            className: EE()("SkyblockReachLogIcon", mW.news && "Jump"),
+          }, `pulse:${yR.newsToken}`), (0, Vt.jsx)("span", {
+            className: Jt()("SkyblockReachLogIcon", yR.news && "Jump"),
             "aria-hidden": "true",
-            children: (0, lE.jsx)(cE.b, {
-              itemName: lm,
+            children: (0, Vt.jsx)(ut.b, {
+              itemName: Ky,
               amount: 0
             })
-          }, `icon:${mW.newsToken}`), mW.freshCount > 0 && (0, lE.jsx)("span", {
+          }, `icon:${yR.newsToken}`), yR.freshCount > 0 && (0, Vt.jsx)("span", {
             className: "SkyblockReachLogBadge",
-            children: mW.freshCount
+            children: yR.freshCount
           })]
         })
       })
     }
 
-    function WP(WW) {
+    function su(RR) {
       let {
-        gift: iW
-      } = WW;
-      return (0, lE.jsx)("li", {
-        className: EE()("SkyblockRegularsGift", iW.given && "Given"),
-        children: iW.text
+        gift: JR
+      } = RR;
+      return (0, Vt.jsx)("li", {
+        className: Jt()("SkyblockRegularsGift", JR.given && "Given"),
+        children: JR.text
       })
     }
 
-    function iP(WW) {
+    function hu(RR) {
       let {
-        regular: iW
-      } = WW;
+        regular: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)("li", {
-        className: EE()("SkyblockRegularsCard", iW.tagged ? "Tagged" : "Untagged", iW.resting && "Resting"),
-        children: [(0, lE.jsxs)("div", {
+        t: GR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)("li", {
+        className: Jt()("SkyblockRegularsCard", JR.tagged ? "Tagged" : "Untagged", JR.resting && "Resting"),
+        children: [(0, Vt.jsxs)("div", {
           className: "SkyblockRegularsCardTop",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockRegularsIcon",
-            title: iW.fishName,
-            children: (0, lE.jsx)(cE.b, {
-              itemName: iW.itemName,
+            title: JR.fishName,
+            children: (0, Vt.jsx)(ut.b, {
+              itemName: JR.itemName,
               amount: 0
             })
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockRegularsNames",
-            children: [(0, lE.jsx)("h3", {
-              children: iW.name
-            }), (0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("h3", {
+              children: JR.name
+            }), (0, Vt.jsx)("span", {
               className: "SkyblockRegularsFish",
-              children: iW.fishName
+              children: JR.fishName
             })]
           })]
-        }), (0, lE.jsx)("p", {
+        }), (0, Vt.jsx)("p", {
           className: "SkyblockRegularsLine",
-          children: iW.line
-        }), (0, lE.jsxs)("p", {
+          children: JR.line
+        }), (0, Vt.jsxs)("p", {
           className: "SkyblockRegularsStats",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockRegularsSize",
-            children: iW.size
-          }), iW.tagged && (0, lE.jsx)("span", {
+            children: JR.size
+          }), JR.tagged && (0, Vt.jsx)("span", {
             className: "SkyblockRegularsMeetings",
-            children: iW.resting ? OW("skyblockGame:regularsResting") : iW.meetings
+            children: JR.resting ? GR("skyblockGame:regularsResting") : JR.meetings
           })]
-        }), (0, lE.jsx)("p", {
+        }), (0, Vt.jsx)("p", {
           className: "SkyblockRegularsChance",
-          children: iW.chance
-        }), (0, lE.jsx)("ul", {
+          children: JR.chance
+        }), (0, Vt.jsx)("ul", {
           className: "SkyblockRegularsGifts",
-          children: iW.gifts.map((WW => (0, lE.jsx)(WP, {
-            gift: WW
-          }, WW.text)))
-        }), iW.history.length > 0 && (0, lE.jsx)("ul", {
+          children: JR.gifts.map((RR => (0, Vt.jsx)(su, {
+            gift: RR
+          }, RR.text)))
+        }), JR.history.length > 0 && (0, Vt.jsx)("ul", {
           className: "SkyblockRegularsHistory",
-          children: iW.history.map(((WW, iW) => (0, lE.jsx)("li", {
-            children: WW
-          }, iW)))
+          children: JR.history.map(((RR, JR) => (0, Vt.jsx)("li", {
+            children: RR
+          }, JR)))
         })]
       })
     }
 
-    function OP(WW) {
+    function RZ(RR) {
       let {
-        controller: iW,
-        island: OW
-      } = WW;
+        controller: JR,
+        island: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)(), EW = (0, xE.g)(Dm, iW.getSnapshot()), NW = EW.islands.find((WW => WW.id === OW));
-      if (!EW.enabled || void 0 === NW) return null;
-      const PW = mW("skyblockGame:regularsOpen");
-      return (0, lE.jsxs)("button", {
+        t: yR
+      } = (0, it.A)(), tR = (0, ft.h)(Dy, JR.getSnapshot()), uR = tR.islands.find((RR => RR.id === GR));
+      if (!tR.enabled || void 0 === uR) return null;
+      const ZR = yR("skyblockGame:regularsOpen");
+      return (0, Vt.jsxs)("button", {
         type: "button",
         className: "SkyblockRegularsStrip",
-        "aria-label": PW,
-        title: PW,
+        "aria-label": ZR,
+        title: ZR,
         onClick: () => {
-          iW.openIsland(OW)
+          JR.openIsland(GR)
         },
-        children: [(0, lE.jsx)("span", {
+        children: [(0, Vt.jsx)("span", {
           className: "SkyblockRegularsStripTitle",
-          children: mW("skyblockGame:regularsTitle")
-        }), NW.regulars.map((WW => (0, lE.jsx)("span", {
-          className: EE()("SkyblockRegularsStripIcon", WW.tagged && "Tagged"),
-          title: WW.name,
-          children: (0, lE.jsx)(cE.b, {
-            itemName: WW.itemName,
+          children: yR("skyblockGame:regularsTitle")
+        }), uR.regulars.map((RR => (0, Vt.jsx)("span", {
+          className: Jt()("SkyblockRegularsStripIcon", RR.tagged && "Tagged"),
+          title: RR.name,
+          children: (0, Vt.jsx)(ut.b, {
+            itemName: RR.itemName,
             amount: 0
           })
-        }, WW.id)))]
+        }, RR.id)))]
       })
     }
 
-    function mP(WW) {
-      var iW;
+    function JZ(RR) {
+      var JR;
       let {
-        controller: OW
-      } = WW;
-      const mW = (0, xE.g)(Dm, OW.getSnapshot()),
+        controller: GR
+      } = RR;
+      const yR = (0, ft.h)(Dy, GR.getSnapshot()),
         {
-          t: EW
-        } = (0, ZE.B)(),
-        NW = yE();
-      if (!mW.enabled) return null;
-      const PW = null !== (iW = mW.islands.find((WW => WW.id === mW.selected))) && void 0 !== iW ? iW : null;
-      return (0, lE.jsx)(KE.b, {
-        show: mW.open,
-        close: OW.dismiss,
+          t: tR
+        } = (0, it.A)(),
+        uR = Xt();
+      if (!yR.enabled) return null;
+      const ZR = null !== (JR = yR.islands.find((RR => RR.id === yR.selected))) && void 0 !== JR ? JR : null;
+      return (0, Vt.jsx)(Wt.e, {
+        show: yR.open,
+        close: GR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel SkyblockRegularsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockRegularsTitle",
           tabIndex: -1,
-          ref: NW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: uR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockRegularsTitle",
-                children: EW("skyblockGame:regularsTitle")
-              }), (0, lE.jsx)("p", {
-                children: EW("skyblockGame:pimRegularsLedgerWelcome")
+                children: tR("skyblockGame:regularsTitle")
+              }), (0, Vt.jsx)("p", {
+                children: tR("skyblockGame:pimRegularsLedgerWelcome")
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: OW.dismiss
+              onClick: GR.dismiss
             })]
-          }), (0, lE.jsx)("nav", {
+          }), (0, Vt.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: mW.islands.map((WW => {
-              const iW = WW.id === mW.selected;
-              return (0, lE.jsx)("button", {
+            children: yR.islands.map((RR => {
+              const JR = RR.id === yR.selected;
+              return (0, Vt.jsx)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": iW,
+                "aria-selected": JR,
                 "data-pad-tab": !0,
-                "data-pad-selected": iW ? "true" : void 0,
-                className: EE()("SkyblockReachLogTab", `Island-${WW.id}`, iW && "Selected", WW.charm.given && "GoldPage"),
+                "data-pad-selected": JR ? "true" : void 0,
+                className: Jt()("SkyblockReachLogTab", `Island-${RR.id}`, JR && "Selected", RR.charm.given && "GoldPage"),
                 onClick: () => {
-                  OW.selectIsland(WW.id)
+                  GR.selectIsland(RR.id)
                 },
-                children: (0, lE.jsx)("span", {
+                children: (0, Vt.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: WW.name
+                  children: RR.name
                 })
-              }, WW.id)
+              }, RR.id)
             }))
-          }), (0, lE.jsxs)("div", {
-            className: EE()("SkyblockRegularsPage", null !== PW && `Island-${PW.id}`),
+          }), (0, Vt.jsxs)("div", {
+            className: Jt()("SkyblockRegularsPage", null !== ZR && `Island-${ZR.id}`),
             role: "tabpanel",
-            children: [(0, lE.jsx)("p", {
+            children: [(0, Vt.jsx)("p", {
               className: "SkyblockRegularsHow",
-              children: EW("skyblockGame:regularsHow")
-            }), null !== PW && (0, lE.jsx)("ul", {
+              children: tR("skyblockGame:regularsHow")
+            }), null !== ZR && (0, Vt.jsx)("ul", {
               className: "SkyblockRegularsGrid",
-              children: PW.regulars.map((WW => (0, lE.jsx)(iP, {
-                regular: WW
-              }, WW.id)))
+              children: ZR.regulars.map((RR => (0, Vt.jsx)(hu, {
+                regular: RR
+              }, RR.id)))
             })]
-          }), null !== PW && (0, lE.jsx)("footer", {
+          }), null !== ZR && (0, Vt.jsx)("footer", {
             className: "SkyblockRegularsFooter",
-            children: (0, lE.jsx)("span", {
-              className: EE()("SkyblockRegularsCharm", PW.charm.given && "Given"),
-              children: PW.charm.text
+            children: (0, Vt.jsx)("span", {
+              className: Jt()("SkyblockRegularsCharm", ZR.charm.given && "Given"),
+              children: ZR.charm.text
             })
           })]
         })
       })
     }
-    const EP = [{
+    const GZ = [{
         "--left": "12%",
         "--tilt": "14deg",
         "--duration": "11s",
@@ -7808,120 +7774,120 @@ export const modules = {
         "--duration": "14s",
         "--delay": "-9s"
       }],
-      NP = Array.from({
+      yZ = Array.from({
         length: 6
-      }, ((WW, iW) => ({
-        "--x": `${(88*(.618034*iW%1)).toFixed(1)}%`,
-        "--y": `${(10+37*iW%70).toFixed(1)}%`,
-        "--size": 7 + iW % 3 * 3 + "rem",
-        "--drift-x": 3 * (iW % 3 - 1) + "rem",
-        "--drift-y": 2 * (iW % 2 === 0 ? -1 : 1) + "rem",
-        "--duration": 14 + iW % 4 * 3 + "s",
-        "--delay": 2.5 * -iW + "s"
+      }, ((RR, JR) => ({
+        "--x": `${(88*(.618034*JR%1)).toFixed(1)}%`,
+        "--y": `${(10+37*JR%70).toFixed(1)}%`,
+        "--size": 7 + JR % 3 * 3 + "rem",
+        "--drift-x": 3 * (JR % 3 - 1) + "rem",
+        "--drift-y": 2 * (JR % 2 === 0 ? -1 : 1) + "rem",
+        "--duration": 14 + JR % 4 * 3 + "s",
+        "--delay": 2.5 * -JR + "s"
       }))),
-      PP = Array.from({
+      tZ = Array.from({
         length: 14
-      }, ((WW, iW) => ({
-        "--left": `${(3+94*((.618034*iW+.3)%1)).toFixed(1)}%`,
-        "--size": 4 + iW % 4 * 2 + "px",
-        "--sway": iW % 3 * 3 + 3 + "px",
-        "--duration": `${(8+7*iW%6*1.1).toFixed(1)}s`,
-        "--delay": `${(-1.73*iW%12).toFixed(2)}s`
+      }, ((RR, JR) => ({
+        "--left": `${(3+94*((.618034*JR+.3)%1)).toFixed(1)}%`,
+        "--size": 4 + JR % 4 * 2 + "px",
+        "--sway": JR % 3 * 3 + 3 + "px",
+        "--duration": `${(8+7*JR%6*1.1).toFixed(1)}s`,
+        "--delay": `${(-1.73*JR%12).toFixed(2)}s`
       }))),
-      LP = (0, YW.memo)((function(WW) {
+      uZ = (0, MR.memo)((function(RR) {
         let {
-          island: iW
-        } = WW;
-        return (0, lE.jsxs)("div", {
-          className: EE()("SkyblockReachLogDepths", null !== iW && `Island-${iW}`),
+          island: JR
+        } = RR;
+        return (0, Vt.jsxs)("div", {
+          className: Jt()("SkyblockReachLogDepths", null !== JR && `Island-${JR}`),
           "aria-hidden": "true",
-          children: [EP.map(((WW, iW) => (0, lE.jsx)("span", {
+          children: [GZ.map(((RR, JR) => (0, Vt.jsx)("span", {
             className: "SkyblockReachLogShaft",
-            style: WW
-          }, `shaft${iW}`))), NP.map(((WW, iW) => (0, lE.jsx)("span", {
-            className: EE()("SkyblockReachLogMote", iW % 2 === 1 && "Violet"),
-            style: WW
-          }, `mote${iW}`))), PP.map(((WW, iW) => (0, lE.jsx)("span", {
+            style: RR
+          }, `shaft${JR}`))), yZ.map(((RR, JR) => (0, Vt.jsx)("span", {
+            className: Jt()("SkyblockReachLogMote", JR % 2 === 1 && "Violet"),
+            style: RR
+          }, `mote${JR}`))), tZ.map(((RR, JR) => (0, Vt.jsx)("span", {
             className: "SkyblockReachLogBubble",
-            style: WW
-          }, `bubble${iW}`)))]
+            style: RR
+          }, `bubble${JR}`)))]
         })
       })),
-      cP = 100;
+      ZZ = 100;
 
-    function wP(WW) {
+    function qZ(RR) {
       let {
-        view: iW
-      } = WW;
+        view: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)();
-      if (null === iW || 0 === iW.total) return null;
-      const mW = cP * iW.aspect,
-        EW = OW("skyblockGame:hiddenWatersCount", {
-          found: iW.found,
-          total: iW.total
+        t: GR
+      } = (0, it.A)();
+      if (null === JR || 0 === JR.total) return null;
+      const yR = ZZ * JR.aspect,
+        tR = GR("skyblockGame:hiddenWatersCount", {
+          found: JR.found,
+          total: JR.total
         });
-      return (0, lE.jsxs)("div", {
+      return (0, Vt.jsxs)("div", {
         className: "SkyblockHiddenWatersStrip",
-        title: `${OW("skyblockGame:hiddenWatersTitle")}: ${EW}`,
-        children: [(0, lE.jsxs)("svg", {
+        title: `${GR("skyblockGame:hiddenWatersTitle")}: ${tR}`,
+        children: [(0, Vt.jsxs)("svg", {
           className: "SkyblockHiddenWatersOutline",
-          viewBox: `0 0 100 ${mW}`,
+          viewBox: `0 0 100 ${yR}`,
           "aria-hidden": "true",
-          children: [iW.islands.map(((WW, iW) => (0, lE.jsx)("ellipse", {
+          children: [JR.islands.map(((RR, JR) => (0, Vt.jsx)("ellipse", {
             className: "SkyblockHiddenWatersIsland",
-            cx: (WW.left + WW.width / 2) * cP,
-            cy: (WW.top + WW.height / 2) * mW,
-            rx: WW.width / 2 * cP,
-            ry: WW.height / 2 * mW
-          }, iW))), iW.pins.map(((WW, iW) => (0, lE.jsx)("circle", {
+            cx: (RR.left + RR.width / 2) * ZZ,
+            cy: (RR.top + RR.height / 2) * yR,
+            rx: RR.width / 2 * ZZ,
+            ry: RR.height / 2 * yR
+          }, JR))), JR.pins.map(((RR, JR) => (0, Vt.jsx)("circle", {
             className: "SkyblockHiddenWatersPin",
-            cx: WW.left * cP,
-            cy: WW.top * mW,
+            cx: RR.left * ZZ,
+            cy: RR.top * yR,
             r: 13
-          }, iW)))]
-        }), (0, lE.jsxs)("span", {
+          }, JR)))]
+        }), (0, Vt.jsxs)("span", {
           className: "SkyblockHiddenWatersText",
-          children: [(0, lE.jsx)("span", {
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockHiddenWatersTitle",
-            children: OW("skyblockGame:hiddenWatersTitle")
-          }), (0, lE.jsx)("span", {
-            className: iW.found === iW.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
-            children: EW
+            children: GR("skyblockGame:hiddenWatersTitle")
+          }), (0, Vt.jsx)("span", {
+            className: JR.found === JR.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
+            children: tR
           })]
         })]
       })
     }
 
-    function tP(WW) {
+    function iZ(RR) {
       let {
-        view: iW,
-        island: OW
-      } = WW;
+        view: JR,
+        island: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)(), EW = null === iW || void 0 === iW ? void 0 : iW.glimpses.get(OW);
-      return void 0 === EW || 0 === EW.length ? null : (0, lE.jsxs)("div", {
+        t: yR
+      } = (0, it.A)(), tR = null === JR || void 0 === JR ? void 0 : JR.glimpses.get(GR);
+      return void 0 === tR || 0 === tR.length ? null : (0, Vt.jsxs)("div", {
         className: "SkyblockHiddenWatersGlimpses",
-        children: [(0, lE.jsx)("span", {
+        children: [(0, Vt.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesTitle",
-          children: mW("skyblockGame:hiddenWatersGlimpsed")
-        }), (0, lE.jsx)("span", {
+          children: yR("skyblockGame:hiddenWatersGlimpsed")
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesRow",
-          children: EW.map((WW => (0, lE.jsx)("span", {
+          children: tR.map((RR => (0, Vt.jsx)("span", {
             className: "SkyblockHiddenWatersSilhouette",
             "aria-hidden": "true",
-            children: (0, lE.jsx)(cE.b, {
-              itemName: WW,
+            children: (0, Vt.jsx)(ut.b, {
+              itemName: RR,
               amount: 0
             })
-          }, WW)))
+          }, RR)))
         })]
       })
     }
-    const ZP = ["Bronze", "Silver", "Gold"],
-      xP = [{
+    const fZ = ["Bronze", "Silver", "Gold"],
+      VZ = [{
         className: "Bloom",
         titleKey: "skyblockGame:reachLogRibbonBloomTitle",
         legendKey: "skyblockGame:reachLogLegendBloom"
@@ -7934,481 +7900,481 @@ export const modules = {
         titleKey: "skyblockGame:reachLogRibbonLetGoTitle",
         legendKey: "skyblockGame:reachLogLegendLetGo"
       }],
-      lP = xP.slice(0, 2);
+      KZ = VZ.slice(0, 2);
 
-    function AP(WW) {
-      return WW ? xP : lP
+    function wZ(RR) {
+      return RR ? VZ : KZ
     }
 
-    function bP(WW) {
+    function rZ(RR) {
       let {
-        fish: iW,
-        letGoShown: OW
-      } = WW;
+        fish: JR,
+        letGoShown: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)("span", {
+        t: yR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)("span", {
         className: "SkyblockReachLogMarks",
-        children: [ZP.map(((WW, OW) => {
-          const EW = OW < iW.marks;
-          return (0, lE.jsx)("span", {
-            className: EE()("SkyblockReachLogPip", WW, EW && "Earned", EW && iW.fresh && OW === iW.marks - 1 && "Newest"),
-            title: mW(xm[OW])
-          }, WW)
-        })), (0, lE.jsx)("span", {
+        children: [fZ.map(((RR, GR) => {
+          const tR = GR < JR.marks;
+          return (0, Vt.jsx)("span", {
+            className: Jt()("SkyblockReachLogPip", RR, tR && "Earned", tR && JR.fresh && GR === JR.marks - 1 && "Newest"),
+            title: yR(Vy[GR])
+          }, RR)
+        })), (0, Vt.jsx)("span", {
           className: "SkyblockReachLogDivider"
-        }), AP(OW).map(((WW, OW) => (0, lE.jsx)("span", {
-          className: EE()("SkyblockReachLogRibbon", WW.className, !0 === iW.ribbons[OW] && "Earned"),
-          title: mW(WW.titleKey)
-        }, WW.className)))]
+        }), wZ(GR).map(((RR, GR) => (0, Vt.jsx)("span", {
+          className: Jt()("SkyblockReachLogRibbon", RR.className, !0 === JR.ribbons[GR] && "Earned"),
+          title: yR(RR.titleKey)
+        }, RR.className)))]
       })
     }
 
-    function jP(WW) {
+    function eZ(RR) {
       let {
-        letGoShown: iW,
-        haloShown: OW
-      } = WW;
+        letGoShown: JR,
+        haloShown: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)("span", {
+        t: yR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)("span", {
         className: "SkyblockReachLogLegend",
-        children: [(0, lE.jsxs)("span", {
+        children: [(0, Vt.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: mW("skyblockGame:reachLogMarks"),
-          children: [(0, lE.jsx)("span", {
+          title: yR("skyblockGame:reachLogMarks"),
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockReachLogPip Gold Earned"
-          }), mW("skyblockGame:reachLogLegendMarks")]
-        }), AP(iW).map((WW => (0, lE.jsxs)("span", {
+          }), yR("skyblockGame:reachLogLegendMarks")]
+        }), wZ(JR).map((RR => (0, Vt.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: mW(WW.titleKey),
-          children: [(0, lE.jsx)("span", {
-            className: EE()("SkyblockReachLogRibbon", WW.className, "Earned")
-          }), mW(WW.legendKey)]
-        }, WW.className))), (0, lE.jsxs)("span", {
+          title: yR(RR.titleKey),
+          children: [(0, Vt.jsx)("span", {
+            className: Jt()("SkyblockReachLogRibbon", RR.className, "Earned")
+          }), yR(RR.legendKey)]
+        }, RR.className))), (0, Vt.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: mW("skyblockGame:reachLogGlimmerTitle"),
-          children: [(0, lE.jsx)("span", {
+          title: yR("skyblockGame:reachLogGlimmerTitle"),
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockReachLogGlimmer"
-          }), mW("skyblockGame:reachLogLegendGlimmer")]
-        }), OW && (0, lE.jsxs)("span", {
+          }), yR("skyblockGame:reachLogLegendGlimmer")]
+        }), GR && (0, Vt.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: mW("skyblockGame:reachLogHaloTitle"),
-          children: [(0, lE.jsx)("span", {
+          title: yR("skyblockGame:reachLogHaloTitle"),
+          children: [(0, Vt.jsx)("span", {
             className: "SkyblockReachLogHalo"
-          }), mW("skyblockGame:reachLogLegendHalo")]
+          }), yR("skyblockGame:reachLogLegendHalo")]
         })]
       })
     }
 
-    function UP(WW) {
+    function aZ(RR) {
       let {
-        returner: iW
-      } = WW;
-      return (0, lE.jsxs)("div", {
-        className: EE()("SkyblockReachLogReturner", iW.back && "Back"),
-        children: [(0, lE.jsx)("span", {
+        returner: JR
+      } = RR;
+      return (0, Vt.jsxs)("div", {
+        className: Jt()("SkyblockReachLogReturner", JR.back && "Back"),
+        children: [(0, Vt.jsx)("span", {
           className: "SkyblockReachLogReturnerIcon",
           "aria-hidden": "true",
-          children: (0, lE.jsx)(cE.b, {
-            itemName: iW.itemName,
+          children: (0, Vt.jsx)(ut.b, {
+            itemName: JR.itemName,
             amount: 0
           })
-        }), (0, lE.jsx)("span", {
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockReachLogReturnerLine",
-          children: iW.line
+          children: JR.line
         })]
       })
     }
 
-    function kP(WW) {
+    function LZ(RR) {
       let {
-        fish: iW,
-        letGoShown: OW
-      } = WW;
+        fish: JR,
+        letGoShown: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, ZE.B)();
-      return (0, lE.jsxs)("li", {
-        className: EE()("SkyblockReachLogCard", iW.caught ? "Caught" : "Unknown", iW.marks >= 3 && "GoldCard", iW.fresh && "Fresh", iW.visitor && "Visitor"),
-        children: [iW.visitor && (0, lE.jsx)("span", {
+        t: yR
+      } = (0, it.A)();
+      return (0, Vt.jsxs)("li", {
+        className: Jt()("SkyblockReachLogCard", JR.caught ? "Caught" : "Unknown", JR.marks >= 3 && "GoldCard", JR.fresh && "Fresh", JR.visitor && "Visitor"),
+        children: [JR.visitor && (0, Vt.jsx)("span", {
           className: "SkyblockReachLogVisitorTag",
-          children: mW("skyblockGame:reachLogVisitor")
-        }), iW.fresh && Array.from({
+          children: yR("skyblockGame:reachLogVisitor")
+        }), JR.fresh && Array.from({
           length: 4
-        }, ((WW, iW) => (0, lE.jsx)("span", {
+        }, ((RR, JR) => (0, Vt.jsx)("span", {
           className: "SkyblockReachLogSparkle"
-        }, iW))), (0, lE.jsxs)("span", {
+        }, JR))), (0, Vt.jsxs)("span", {
           className: "SkyblockReachLogFishIcon",
           "aria-hidden": "true",
-          children: [iW.halo && (0, lE.jsx)("span", {
+          children: [JR.halo && (0, Vt.jsx)("span", {
             className: "SkyblockReachLogHalo",
-            title: mW("skyblockGame:reachLogHaloTitle")
-          }), (0, lE.jsx)(cE.b, {
-            itemName: iW.itemName,
+            title: yR("skyblockGame:reachLogHaloTitle")
+          }), (0, Vt.jsx)(ut.b, {
+            itemName: JR.itemName,
             amount: 0
-          }), iW.glimmer && (0, lE.jsx)("span", {
+          }), JR.glimmer && (0, Vt.jsx)("span", {
             className: "SkyblockReachLogGlimmer",
-            title: mW("skyblockGame:reachLogGlimmerTitle")
+            title: yR("skyblockGame:reachLogGlimmerTitle")
           })]
-        }), (0, lE.jsx)("span", {
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockReachLogFishName",
-          children: iW.name
-        }), (0, lE.jsx)("span", {
+          children: JR.name
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockReachLogFishChance",
-          children: iW.chance
-        }), (0, lE.jsx)("span", {
+          children: JR.chance
+        }), (0, Vt.jsx)("span", {
           className: "SkyblockReachLogFishBest",
-          children: iW.best
-        }), (0, lE.jsx)(bP, {
-          fish: iW,
-          letGoShown: OW
+          children: JR.best
+        }), (0, Vt.jsx)(rZ, {
+          fish: JR,
+          letGoShown: GR
         })]
       })
     }
 
-    function sP(WW) {
+    function nZ(RR) {
       let {
-        page: iW,
-        letGoShown: OW,
-        hiddenWaters: mW
-      } = WW;
+        page: JR,
+        letGoShown: GR,
+        hiddenWaters: yR
+      } = RR;
       const {
-        t: EW
-      } = (0, ZE.B)();
-      return iW.awake ? (0, lE.jsx)("ul", {
+        t: tR
+      } = (0, it.A)();
+      return JR.awake ? (0, Vt.jsx)("ul", {
         className: "SkyblockReachLogGrid",
-        children: iW.fish.map((WW => (0, lE.jsx)(kP, {
-          fish: WW,
-          letGoShown: OW
-        }, WW.itemName)))
-      }) : (0, lE.jsxs)(lE.Fragment, {
-        children: [(0, lE.jsx)("p", {
+        children: JR.fish.map((RR => (0, Vt.jsx)(LZ, {
+          fish: RR,
+          letGoShown: GR
+        }, RR.itemName)))
+      }) : (0, Vt.jsxs)(Vt.Fragment, {
+        children: [(0, Vt.jsx)("p", {
           className: "SkyblockReachLogAsleep",
-          children: EW("skyblockGame:reachLogAsleep")
-        }), (0, lE.jsx)(tP, {
-          view: mW,
-          island: iW.id
+          children: tR("skyblockGame:reachLogAsleep")
+        }), (0, Vt.jsx)(iZ, {
+          view: yR,
+          island: JR.id
         })]
       })
     }
 
-    function MP(WW) {
-      var iW, OW;
+    function UZ(RR) {
+      var JR, GR;
       let {
-        controller: mW,
-        regulars: EW,
-        hiddenWaters: NW
-      } = WW;
-      const PW = (0, xE.g)(Zm, mW.getSnapshot()),
-        LW = function(WW) {
-          return (0, xE.g)(Xm, WW.getSnapshot())
-        }(NW),
-        cW = (0, xE.g)(Dm, EW.getSnapshot()),
+        controller: yR,
+        regulars: tR,
+        hiddenWaters: uR
+      } = RR;
+      const ZR = (0, ft.h)(fy, yR.getSnapshot()),
+        qR = function(RR) {
+          return (0, ft.h)(Iy, RR.getSnapshot())
+        }(uR),
+        iR = (0, ft.h)(Dy, tR.getSnapshot()),
         {
-          t: wW
-        } = (0, ZE.B)(),
-        tW = yE();
-      if (!PW.enabled) return null;
-      const ZW = null !== (iW = PW.pages.find((WW => WW.id === PW.selected))) && void 0 !== iW ? iW : null;
-      return (0, lE.jsx)(KE.b, {
-        show: PW.open,
-        close: mW.dismiss,
+          t: fR
+        } = (0, it.A)(),
+        VR = Xt();
+      if (!ZR.enabled) return null;
+      const KR = null !== (JR = ZR.pages.find((RR => RR.id === ZR.selected))) && void 0 !== JR ? JR : null;
+      return (0, Vt.jsx)(Wt.e, {
+        show: ZR.open,
+        close: yR.dismiss,
         togglePointerLock: !1,
-        className: EE()("SkyblockSkillsOverlay", cW.open && "SkyblockReachLogUnderLedger"),
-        children: (0, lE.jsxs)("section", {
+        className: Jt()("SkyblockSkillsOverlay", iR.open && "SkyblockReachLogUnderLedger"),
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockReachLogTitle",
           tabIndex: -1,
-          ref: tW,
-          onKeyDown: YE,
-          children: [(0, lE.jsx)(LP, {
-            island: null !== (OW = null === ZW || void 0 === ZW ? void 0 : ZW.id) && void 0 !== OW ? OW : null
-          }), (0, lE.jsxs)("header", {
+          ref: VR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsx)(uZ, {
+            island: null !== (GR = null === KR || void 0 === KR ? void 0 : KR.id) && void 0 !== GR ? GR : null
+          }), (0, Vt.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockReachLogTitle",
-                children: wW("skyblockGame:reachLogTitle")
-              }), (0, lE.jsx)("p", {
-                children: wW("skyblockGame:keeperWickReachLogWelcome")
+                children: fR("skyblockGame:reachLogTitle")
+              }), (0, Vt.jsx)("p", {
+                children: fR("skyblockGame:keeperWickReachLogWelcome")
               })]
-            }), (0, lE.jsx)(wP, {
-              view: LW
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(qZ, {
+              view: qR
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: mW.dismiss
+              onClick: yR.dismiss
             })]
-          }), (0, lE.jsx)("nav", {
+          }), (0, Vt.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: PW.pages.map((WW => {
-              const iW = WW.id === PW.selected,
-                OW = WW.fish.some((WW => WW.fresh));
-              return (0, lE.jsxs)("button", {
+            children: ZR.pages.map((RR => {
+              const JR = RR.id === ZR.selected,
+                GR = RR.fish.some((RR => RR.fresh));
+              return (0, Vt.jsxs)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": iW,
+                "aria-selected": JR,
                 "data-pad-tab": !0,
-                "data-pad-selected": iW ? "true" : void 0,
-                className: EE()("SkyblockReachLogTab", `Island-${WW.id}`, iW && "Selected", !WW.awake && "Asleep", WW.gold && "GoldPage", OW && "HasNews"),
+                "data-pad-selected": JR ? "true" : void 0,
+                className: Jt()("SkyblockReachLogTab", `Island-${RR.id}`, JR && "Selected", !RR.awake && "Asleep", RR.gold && "GoldPage", GR && "HasNews"),
                 onClick: () => {
-                  mW.selectPage(WW.id)
+                  yR.selectPage(RR.id)
                 },
-                children: [(0, lE.jsx)("span", {
+                children: [(0, Vt.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: WW.name
-                }), WW.awake && (0, lE.jsx)("span", {
+                  children: RR.name
+                }), RR.awake && (0, Vt.jsx)("span", {
                   className: "SkyblockReachLogTabCount",
-                  children: wW("skyblockGame:reachLogCaughtCount", {
-                    caught: WW.caught,
-                    total: WW.total
+                  children: fR("skyblockGame:reachLogCaughtCount", {
+                    caught: RR.caught,
+                    total: RR.total
                   })
                 })]
-              }, WW.id)
+              }, RR.id)
             }))
-          }), (0, lE.jsxs)("div", {
-            className: EE()("SkyblockReachLogPage", null !== ZW && `Island-${ZW.id}`),
+          }), (0, Vt.jsxs)("div", {
+            className: Jt()("SkyblockReachLogPage", null !== KR && `Island-${KR.id}`),
             role: "tabpanel",
-            children: [null !== ZW && (0, lE.jsx)(sP, {
-              page: ZW,
-              letGoShown: PW.letGoShown,
-              hiddenWaters: LW
-            }), !0 === (null === ZW || void 0 === ZW ? void 0 : ZW.awake) && null !== ZW.returner && (0, lE.jsx)(UP, {
-              returner: ZW.returner
-            }), !0 === (null === ZW || void 0 === ZW ? void 0 : ZW.awake) && (0, lE.jsx)(OP, {
-              controller: EW,
-              island: ZW.id
+            children: [null !== KR && (0, Vt.jsx)(nZ, {
+              page: KR,
+              letGoShown: ZR.letGoShown,
+              hiddenWaters: qR
+            }), !0 === (null === KR || void 0 === KR ? void 0 : KR.awake) && null !== KR.returner && (0, Vt.jsx)(aZ, {
+              returner: KR.returner
+            }), !0 === (null === KR || void 0 === KR ? void 0 : KR.awake) && (0, Vt.jsx)(RZ, {
+              controller: tR,
+              island: KR.id
             })]
-          }), (0, lE.jsx)("footer", {
-            className: EE()("SkyblockReachLogFooter", null !== ZW && `Island-${ZW.id}`, !0 === (null === ZW || void 0 === ZW ? void 0 : ZW.gold) && "GoldPage"),
-            children: !0 === (null === ZW || void 0 === ZW ? void 0 : ZW.gold) ? (0, lE.jsx)("span", {
+          }), (0, Vt.jsx)("footer", {
+            className: Jt()("SkyblockReachLogFooter", null !== KR && `Island-${KR.id}`, !0 === (null === KR || void 0 === KR ? void 0 : KR.gold) && "GoldPage"),
+            children: !0 === (null === KR || void 0 === KR ? void 0 : KR.gold) ? (0, Vt.jsx)("span", {
               className: "SkyblockReachLogGoldLine",
-              children: wW("skyblockGame:keeperWickReachLogPageGold")
-            }) : (0, lE.jsxs)(lE.Fragment, {
-              children: [(0, lE.jsx)(jP, {
-                letGoShown: PW.letGoShown,
-                haloShown: !0 === (null === ZW || void 0 === ZW ? void 0 : ZW.fish.some((WW => WW.halo)))
-              }), (0, lE.jsx)("span", {
+              children: fR("skyblockGame:keeperWickReachLogPageGold")
+            }) : (0, Vt.jsxs)(Vt.Fragment, {
+              children: [(0, Vt.jsx)(eZ, {
+                letGoShown: ZR.letGoShown,
+                haloShown: !0 === (null === KR || void 0 === KR ? void 0 : KR.fish.some((RR => RR.halo)))
+              }), (0, Vt.jsx)("span", {
                 className: "SkyblockReachLogReward",
-                children: wW("skyblockGame:reachLogPageReward")
+                children: fR("skyblockGame:reachLogPageReward")
               })]
             })
           })]
         })
       })
     }
-    var KP = OW(5590);
+    var WZ = GR(5712);
 
-    function SP(WW) {
+    function AZ(RR) {
       let {
-        conversation: iW,
-        completedLabel: OW
-      } = WW;
-      return (0, lE.jsxs)("article", {
+        conversation: JR,
+        completedLabel: GR
+      } = RR;
+      return (0, Vt.jsxs)("article", {
         className: "SkyblockDialogueConversation",
-        children: [(0, lE.jsxs)("header", {
-          children: [(0, lE.jsx)("h3", {
-            children: iW.questName
-          }), iW.completed && (0, lE.jsx)("span", {
+        children: [(0, Vt.jsxs)("header", {
+          children: [(0, Vt.jsx)("h3", {
+            children: JR.questName
+          }), JR.completed && (0, Vt.jsx)("span", {
             className: "SkyblockDialogueCompleted",
-            children: OW
+            children: GR
           })]
-        }), iW.lines.map((WW => (0, lE.jsx)(KP.e, {
-          display: WW.display
-        }, WW.key)))]
+        }), JR.lines.map((RR => (0, Vt.jsx)(WZ.b, {
+          display: RR.display
+        }, RR.key)))]
       })
     }
 
-    function YP(WW) {
+    function CZ(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, xE.g)(qm, iW.getSnapshot()), EW = yE();
-      if (!mW.enabled) return null;
-      const NW = !mW.loading && 0 === mW.conversations.length;
-      return (0, lE.jsx)(KE.b, {
-        show: mW.open,
-        close: iW.dismiss,
+        t: GR
+      } = (0, it.A)(), yR = (0, ft.h)(zy, JR.getSnapshot()), tR = Xt();
+      if (!yR.enabled) return null;
+      const uR = !yR.loading && 0 === yR.conversations.length;
+      return (0, Vt.jsx)(Wt.e, {
+        show: yR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDialoguePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDialogueTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockDialogueTitle",
-                children: OW("skyblockDialogue:title")
-              }), (0, lE.jsx)("p", {
-                children: OW("skyblockDialogue:intro")
+                children: GR("skyblockDialogue:title")
+              }), (0, Vt.jsx)("p", {
+                children: GR("skyblockDialogue:intro")
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: iW.dismiss
+              onClick: JR.dismiss
             })]
-          }), (0, lE.jsxs)("div", {
-            className: EE()("SkyblockDialogueBody", {
-              SingleColumn: null !== mW.questFocus || 0 === mW.characters.length
+          }), (0, Vt.jsxs)("div", {
+            className: Jt()("SkyblockDialogueBody", {
+              SingleColumn: null !== yR.questFocus || 0 === yR.characters.length
             }),
-            children: [null === mW.questFocus && mW.characters.length > 0 && (0, lE.jsx)("nav", {
+            children: [null === yR.questFocus && yR.characters.length > 0 && (0, Vt.jsx)("nav", {
               className: "SkyblockDialogueCharacters",
-              children: mW.characters.map((WW => (0, lE.jsx)(SE.f, {
-                className: EE()("SkyblockDialogueCharacter", {
-                  Selected: WW.selected
+              children: yR.characters.map((RR => (0, Vt.jsx)(At.g, {
+                className: Jt()("SkyblockDialogueCharacter", {
+                  Selected: RR.selected
                 }),
                 onClick: () => {
-                  iW.selectCharacter(WW.id)
+                  JR.selectCharacter(RR.id)
                 },
-                children: (0, lE.jsx)(wE.d, {
-                  text: WW.styling
+                children: (0, Vt.jsx)(Zt.c, {
+                  text: RR.styling
                 })
-              }, WW.id)))
-            }), (0, lE.jsxs)("div", {
+              }, RR.id)))
+            }), (0, Vt.jsxs)("div", {
               className: "SkyblockDialogueConversations",
-              children: [null !== mW.questFocus && (0, lE.jsx)(SE.f, {
+              children: [null !== yR.questFocus && (0, Vt.jsx)(At.g, {
                 className: "SkyblockDialogueBack",
-                onClick: iW.showCharacters,
-                children: OW("skyblockDialogue:allCharacters")
-              }), mW.loading && (0, lE.jsx)("p", {
+                onClick: JR.showCharacters,
+                children: GR("skyblockDialogue:allCharacters")
+              }), yR.loading && (0, Vt.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: OW("skyblockDialogue:loading")
-              }), NW && (0, lE.jsx)("p", {
+                children: GR("skyblockDialogue:loading")
+              }), uR && (0, Vt.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: OW(null === mW.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
-              }), mW.conversations.map((WW => (0, lE.jsx)(SP, {
-                conversation: WW,
-                completedLabel: mW.completedLabel
-              }, WW.questId)))]
+                children: GR(null === yR.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
+              }), yR.conversations.map((RR => (0, Vt.jsx)(AZ, {
+                conversation: RR,
+                completedLabel: yR.completedLabel
+              }, RR.questId)))]
             })]
           })]
         })
       })
     }
 
-    function yP(WW) {
+    function XZ(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(rm, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(Yy, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = yE();
-      return OW.enabled ? (0, lE.jsx)(KE.b, {
-        show: OW.open,
-        close: iW.dismiss,
+          t: yR
+        } = (0, it.A)(),
+        tR = Xt();
+      return GR.enabled ? (0, Vt.jsx)(Wt.e, {
+        show: GR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockAutographsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockAutographsTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockAutographsTitle",
-                children: mW("skyblockGame:autographBook")
-              }), (0, lE.jsx)("p", {
-                children: mW("skyblockGame:autographBookIntro")
+                children: yR("skyblockGame:autographBook")
+              }), (0, Vt.jsx)("p", {
+                children: yR("skyblockGame:autographBookIntro")
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              onClick: iW.dismiss
+              onClick: JR.dismiss
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockAutographsBody",
-            children: [(0, lE.jsxs)("div", {
+            children: [(0, Vt.jsxs)("div", {
               className: "SkyblockAutographTotals",
-              children: [(0, lE.jsxs)("div", {
+              children: [(0, Vt.jsxs)("div", {
                 className: "SkyblockAutographTotal",
-                children: [(0, lE.jsx)("strong", {
-                  children: OW.total
-                }), (0, lE.jsx)("span", {
-                  children: mW("skyblockGame:autographTotal")
+                children: [(0, Vt.jsx)("strong", {
+                  children: GR.total
+                }), (0, Vt.jsx)("span", {
+                  children: yR("skyblockGame:autographTotal")
                 })]
-              }), (0, lE.jsxs)("div", {
+              }), (0, Vt.jsxs)("div", {
                 className: "SkyblockAutographTotal Ranked",
-                children: [(0, lE.jsx)("strong", {
-                  children: OW.rankTotal
-                }), (0, lE.jsx)("span", {
-                  children: mW("skyblockGame:autographRankTotal")
+                children: [(0, Vt.jsx)("strong", {
+                  children: GR.rankTotal
+                }), (0, Vt.jsx)("span", {
+                  children: yR("skyblockGame:autographRankTotal")
                 })]
               })]
-            }), 0 === OW.entries.length ? (0, lE.jsx)("p", {
+            }), 0 === GR.entries.length ? (0, Vt.jsx)("p", {
               className: "SkyblockAutographsEmpty",
-              children: mW("skyblockGame:autographBookEmpty")
-            }) : (0, lE.jsx)("ul", {
+              children: yR("skyblockGame:autographBookEmpty")
+            }) : (0, Vt.jsx)("ul", {
               className: "SkyblockAutographList",
-              children: OW.entries.map((WW => (0, lE.jsxs)("li", {
-                className: EE()("SkyblockAutograph", {
-                  Ranked: null !== WW.rank
+              children: GR.entries.map((RR => (0, Vt.jsxs)("li", {
+                className: Jt()("SkyblockAutograph", {
+                  Ranked: null !== RR.rank
                 }),
-                style: null === WW.rank ? void 0 : {
-                  color: WW.rank.colour
+                style: null === RR.rank ? void 0 : {
+                  color: RR.rank.colour
                 },
-                children: [null !== WW.rank && (0, lE.jsx)(BE.c, {
+                children: [null !== RR.rank && (0, Vt.jsx)(zt.d, {
                   className: "SkyblockAutographRankIcon",
-                  name: WW.rank.icon,
-                  kit: (0, BE.e)(WW.rank.icon)
-                }), (0, lE.jsxs)("div", {
+                  name: RR.rank.icon,
+                  kit: (0, zt.f)(RR.rank.icon)
+                }), (0, Vt.jsxs)("div", {
                   className: "SkyblockAutographText",
-                  children: [(0, lE.jsx)("span", {
+                  children: [(0, Vt.jsx)("span", {
                     className: "SkyblockAutographName",
-                    children: WW.name
-                  }), (0, lE.jsxs)("span", {
+                    children: RR.name
+                  }), (0, Vt.jsxs)("span", {
                     className: "SkyblockAutographDetails",
-                    children: [null !== WW.rank && (0, lE.jsx)("span", {
+                    children: [null !== RR.rank && (0, Vt.jsx)("span", {
                       className: "SkyblockAutographRank",
-                      children: WW.rank.label
-                    }), (0, lE.jsx)("span", {
+                      children: RR.rank.label
+                    }), (0, Vt.jsx)("span", {
                       className: "SkyblockAutographDate",
-                      children: WW.signedOn
+                      children: RR.signedOn
                     })]
                   })]
                 })]
-              }, WW.key)))
+              }, RR.key)))
             })]
           })]
         })
       }) : null
     }
-    const TP = (0, YW.memo)((function(WW) {
+    const MZ = (0, MR.memo)((function(RR) {
         let {
-          controller: iW
-        } = WW;
-        return (0, lE.jsxs)("div", {
+          controller: JR
+        } = RR;
+        return (0, Vt.jsxs)("div", {
           className: "SkyblockQuestWaypoint",
-          ref: iW.display.mountWaypoint,
-          children: [(0, lE.jsx)("div", {
+          ref: JR.display.mountWaypoint,
+          children: [(0, Vt.jsx)("div", {
             className: "SkyblockQuestWaypointMarker"
-          }), (0, lE.jsx)("div", {
+          }), (0, Vt.jsx)("div", {
             className: "SkyblockQuestWaypointTextClip",
-            children: (0, lE.jsxs)("div", {
+            children: (0, Vt.jsxs)("div", {
               className: "SkyblockQuestWaypointText",
-              children: [(0, lE.jsx)("span", {
+              children: [(0, Vt.jsx)("span", {
                 className: "SkyblockQuestWaypointLabel"
-              }), (0, lE.jsx)("span", {
+              }), (0, Vt.jsx)("span", {
                 className: "SkyblockQuestWaypointDistance"
-              }), (0, lE.jsx)("span", {
+              }), (0, Vt.jsx)("span", {
                 className: "SkyblockQuestWaypointHint",
                 hidden: !0
               })]
@@ -8416,7 +8382,7 @@ export const modules = {
           })]
         })
       })),
-      JP = {
+      BZ = {
         started: "!",
         quest: "\u2605",
         step: "\u2713",
@@ -8425,631 +8391,631 @@ export const modules = {
         npcNote: "\u2709\ufe0e"
       };
 
-    function hP(WW) {
-      return "next" === WW.phase ? "\u2192" : JP[WW.kind]
+    function lZ(RR) {
+      return "next" === RR.phase ? "\u2192" : BZ[RR.kind]
     }
-    const HP = (0, YW.memo)((function(WW) {
+    const pZ = (0, MR.memo)((function(RR) {
       let {
-        controller: iW,
-        display: OW
-      } = WW;
-      const mW = (0, xE.g)(Gi, iW.getNotificationSnapshot()),
-        [EW, NW] = (0, YW.useState)(!1);
-      return (0, xE.e)("qteStateUpdated", (WW => {
-        NW(WW.isActive)
-      })), (0, lE.jsxs)("div", {
-        className: "SkyblockQuestNotificationAnchor" + (EW ? " UnderQte" : ""),
+        controller: JR,
+        display: GR
+      } = RR;
+      const yR = (0, ft.h)(dJ, JR.getNotificationSnapshot()),
+        [tR, uR] = (0, MR.useState)(!1);
+      return (0, ft.f)("qteStateUpdated", (RR => {
+        uR(RR.isActive)
+      })), (0, Vt.jsxs)("div", {
+        className: "SkyblockQuestNotificationAnchor" + (tR ? " UnderQte" : ""),
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: [mW && (0, lE.jsxs)("div", {
-          className: `SkyblockQuestNotification ${mW.kind} ${mW.phase}`,
+        children: [yR && (0, Vt.jsxs)("div", {
+          className: `SkyblockQuestNotification ${yR.kind} ${yR.phase}`,
           style: {
-            "--quest-notification-duration": `${mW.durationMs}ms`,
-            ...mW.accent && {
-              "--quest-notification-accent": mW.accent
+            "--quest-notification-duration": `${yR.durationMs}ms`,
+            ...yR.accent && {
+              "--quest-notification-accent": yR.accent
             }
           },
-          children: [(0, lE.jsxs)("div", {
-            className: "SkyblockQuestNotificationSymbols" + (mW.iconItem ? " WithIcon" : ""),
+          children: [(0, Vt.jsxs)("div", {
+            className: "SkyblockQuestNotificationSymbols" + (yR.iconItem ? " WithIcon" : ""),
             "aria-hidden": "true",
-            children: [(0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("span", {
               className: "SkyblockQuestNotificationMark",
-              children: hP(mW)
-            }), mW.iconItem && (0, lE.jsx)("span", {
+              children: lZ(yR)
+            }), yR.iconItem && (0, Vt.jsx)("span", {
               className: "SkyblockQuestNotificationIcon",
-              children: (0, lE.jsx)(cE.b, {
-                itemName: mW.iconItem,
+              children: (0, Vt.jsx)(ut.b, {
+                itemName: yR.iconItem,
                 amount: 0
               })
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockQuestNotificationText",
-            children: [(0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("span", {
               className: "SkyblockQuestNotificationTitle",
-              children: mW.title
-            }), (0, lE.jsx)("strong", {
+              children: yR.title
+            }), (0, Vt.jsx)("strong", {
               className: "SkyblockQuestNotificationName",
-              children: (0, lE.jsx)(gE.b, {
-                text: mW.name
+              children: (0, Vt.jsx)(Dt.b, {
+                text: yR.name
               })
-            }), mW.description && (0, lE.jsx)("span", {
+            }), yR.description && (0, Vt.jsx)("span", {
               className: "SkyblockQuestNotificationDescription",
-              children: (0, lE.jsx)(gE.b, {
-                text: mW.description
+              children: (0, Vt.jsx)(Dt.b, {
+                text: yR.description
               })
-            }), mW.reward && (0, lE.jsx)("span", {
+            }), yR.reward && (0, Vt.jsx)("span", {
               className: "SkyblockQuestNotificationReward",
-              children: (0, lE.jsx)(gE.b, {
-                text: mW.reward
+              children: (0, Vt.jsx)(Dt.b, {
+                text: yR.reward
               })
             })]
           })]
-        }, mW.token), (null === mW || void 0 === mW ? void 0 : mW.waypointNameKey) && (0, lE.jsx)("div", {
+        }, yR.token), (null === yR || void 0 === yR ? void 0 : yR.waypointNameKey) && (0, Vt.jsx)("div", {
           className: "SkyblockQuestNotificationWaypointOrigin",
-          "data-waypoint-name-key": mW.waypointNameKey,
-          "data-notification-token": mW.token,
-          ref: OW.mountWaypointOrigin,
+          "data-waypoint-name-key": yR.waypointNameKey,
+          "data-notification-token": yR.token,
+          ref: GR.mountWaypointOrigin,
           "aria-hidden": "true"
-        }, `waypoint-${mW.token}`)]
+        }, `waypoint-${yR.token}`)]
       })
     }));
 
-    function nP(WW) {
-      const iW = parseInt(WW.replace("#", ""), 16);
-      return `${iW>>16&255}, ${iW>>8&255}, ${255&iW}`
+    function gZ(RR) {
+      const JR = parseInt(RR.replace("#", ""), 16);
+      return `${JR>>16&255}, ${JR>>8&255}, ${255&JR}`
     }
-    const uP = (0, YW.memo)((function(WW) {
+    const bZ = (0, MR.memo)((function(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, xE.g)(sO, iW.getSnapshot());
-      if (!mW) return null;
-      const EW = "arrival" === mW.phase;
-      return (0, lE.jsxs)("div", {
-        className: EE()("SkyblockPortalTransit", {
-          Departure: !EW,
-          Arrival: EW
+        t: GR
+      } = (0, it.A)(), yR = (0, ft.h)(nG, JR.getSnapshot());
+      if (!yR) return null;
+      const tR = "arrival" === yR.phase;
+      return (0, Vt.jsxs)("div", {
+        className: Jt()("SkyblockPortalTransit", {
+          Departure: !tR,
+          Arrival: tR
         }),
         style: {
-          "--portal-rgb": nP(mW.colour),
-          "--portal-duration": `${mW.durationMs}ms`
+          "--portal-rgb": gZ(yR.colour),
+          "--portal-duration": `${yR.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, lE.jsx)("div", {
+        children: [(0, Vt.jsx)("div", {
           className: "SkyblockPortalTransitVeil",
           "aria-hidden": "true"
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockPortalTransitRim",
           "aria-hidden": "true",
           onAnimationEnd: () => {
-            iW.finishArrival(mW.token)
+            JR.finishArrival(yR.token)
           }
-        }), (0, lE.jsxs)("div", {
+        }), (0, Vt.jsxs)("div", {
           className: "SkyblockPortalTransitTitle",
-          children: [(0, lE.jsx)("div", {
+          children: [(0, Vt.jsx)("div", {
             className: "SkyblockPortalTransitBand",
             "aria-hidden": "true"
-          }), !EW && (0, lE.jsx)("span", {
+          }), !tR && (0, Vt.jsx)("span", {
             className: "SkyblockPortalTransitEyebrow",
-            children: OW("skyblockGame:portalTransitHeading")
-          }), (0, lE.jsx)("strong", {
+            children: GR("skyblockGame:portalTransitHeading")
+          }), (0, Vt.jsx)("strong", {
             className: "SkyblockPortalTransitZone",
-            children: OW(mW.zoneNameKey)
+            children: GR(yR.zoneNameKey)
           })]
         })]
-      }, mW.token)
+      }, yR.token)
     }));
 
-    function oP() {
+    function vZ() {
       return window.matchMedia("(prefers-reduced-motion: reduce)").matches
     }
 
-    function dP() {
-      const WW = document.querySelector(".SkyblockHudCoins"),
-        iW = null === WW || void 0 === WW ? void 0 : WW.getBoundingClientRect();
-      return iW && iW.width > 0 ? {
-        x: iW.left + Math.min(iW.width, 24) / 2,
-        y: iW.top + iW.height / 2
+    function OZ() {
+      const RR = document.querySelector(".SkyblockHudCoins"),
+        JR = null === RR || void 0 === RR ? void 0 : RR.getBoundingClientRect();
+      return JR && JR.width > 0 ? {
+        x: JR.left + Math.min(JR.width, 24) / 2,
+        y: JR.top + JR.height / 2
       } : {
         x: window.innerWidth - 48,
         y: 48
       }
     }
 
-    function eP(WW) {
+    function xZ(RR) {
       return {
-        x: WW.left + WW.width / 2,
-        y: WW.top + WW.height / 2
+        x: RR.left + RR.width / 2,
+        y: RR.top + RR.height / 2
       }
     }
 
-    function vP() {
-      var WW;
-      const iW = null === (WW = document.querySelector(".HotBar")) || void 0 === WW ? void 0 : WW.getBoundingClientRect();
-      return iW && iW.width > 0 ? eP(iW) : {
+    function NZ() {
+      var RR;
+      const JR = null === (RR = document.querySelector(".HotBar")) || void 0 === RR ? void 0 : RR.getBoundingClientRect();
+      return JR && JR.width > 0 ? xZ(JR) : {
         x: window.innerWidth / 2,
         y: window.innerHeight - 40
       }
     }
 
-    function gP(WW) {
+    function DZ(RR) {
       let {
-        items: iW,
-        origins: OW,
-        target: mW
-      } = WW;
-      return (0, lE.jsx)("div", {
+        items: JR,
+        origins: GR,
+        target: yR
+      } = RR;
+      return (0, Vt.jsx)("div", {
         className: "SkyblockDailyRewardFlyingItems",
-        children: iW.map(((WW, iW) => {
-          const EW = OW[iW];
-          return (0, lE.jsx)("span", {
+        children: JR.map(((RR, JR) => {
+          const tR = GR[JR];
+          return (0, Vt.jsx)("span", {
             className: "SkyblockDailyRewardFlyingItem",
             style: {
-              left: `${EW.x}px`,
-              top: `${EW.y}px`,
-              "--item-dx": mW.x - EW.x + "px",
-              "--item-dy": mW.y - EW.y + "px",
-              "--item-delay": 2e3 + 160 * iW + "ms",
+              left: `${tR.x}px`,
+              top: `${tR.y}px`,
+              "--item-dx": yR.x - tR.x + "px",
+              "--item-dy": yR.y - tR.y + "px",
+              "--item-delay": 2e3 + 160 * JR + "ms",
               "--item-flight": "700ms"
             },
-            children: (0, lE.jsx)(cE.b, {
-              itemName: WW.dailyRewardItemName,
+            children: (0, Vt.jsx)(ut.b, {
+              itemName: RR.dailyRewardItemName,
               amount: 0
             })
-          }, WW.dailyRewardItemName)
+          }, RR.dailyRewardItemName)
         }))
       })
     }
 
-    function DP(WW, iW) {
-      const OW = -Math.PI / 2 + 1.25 * (WW / (iW - 1) * 2 - 1),
-        mW = 70 + WW % 3 * 22;
+    function HZ(RR, JR) {
+      const GR = -Math.PI / 2 + 1.25 * (RR / (JR - 1) * 2 - 1),
+        yR = 70 + RR % 3 * 22;
       return {
-        x: Math.cos(OW) * mW,
-        y: Math.sin(OW) * mW * .7
+        x: Math.cos(GR) * yR,
+        y: Math.sin(GR) * yR * .7
       }
     }
 
-    function VP(WW) {
+    function oZ(RR) {
       let {
-        origin: iW,
-        target: OW,
-        count: mW
-      } = WW;
-      const EW = [];
-      for (let NW = 0; NW < mW; NW++) {
-        const WW = DP(NW, mW);
-        EW.push((0, lE.jsx)("span", {
+        origin: JR,
+        target: GR,
+        count: yR
+      } = RR;
+      const tR = [];
+      for (let uR = 0; uR < yR; uR++) {
+        const RR = HZ(uR, yR);
+        tR.push((0, Vt.jsx)("span", {
           className: "SkyblockDailyRewardCoin",
           style: {
-            left: `${iW.x}px`,
-            top: `${iW.y}px`,
-            "--coin-bx": `${WW.x}px`,
-            "--coin-by": `${WW.y}px`,
-            "--coin-dx": OW.x - iW.x + "px",
-            "--coin-dy": OW.y - iW.y + "px",
-            "--coin-delay": `${TO(NW,mW)}ms`,
+            left: `${JR.x}px`,
+            top: `${JR.y}px`,
+            "--coin-bx": `${RR.x}px`,
+            "--coin-by": `${RR.y}px`,
+            "--coin-dx": GR.x - JR.x + "px",
+            "--coin-dy": GR.y - JR.y + "px",
+            "--coin-delay": `${MG(uR,yR)}ms`,
             "--coin-flight": "650ms"
           },
-          children: (0, lE.jsx)(cE.b, {
+          children: (0, Vt.jsx)(ut.b, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }, NW))
+        }, uR))
       }
-      return (0, lE.jsx)("div", {
+      return (0, Vt.jsx)("div", {
         className: "SkyblockDailyRewardCoins",
-        children: EW
+        children: tR
       })
     }
 
-    function pP(WW) {
+    function cZ(RR) {
       let {
-        day: iW
-      } = WW;
-      const OW = yW[iW - 1];
-      return (0, lE.jsxs)(lE.Fragment, {
-        children: [(0, lE.jsxs)("span", {
+        day: JR
+      } = RR;
+      const GR = BR[JR - 1];
+      return (0, Vt.jsxs)(Vt.Fragment, {
+        children: [(0, Vt.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, lE.jsx)(cE.b, {
+          children: [(0, Vt.jsx)(ut.b, {
             itemName: "Gold Coin",
             amount: 0
-          }), (0, tE.g)(OW.dailyRewardCoins)]
-        }), OW.dailyRewardItems.map((WW => (0, lE.jsxs)("span", {
+          }), (0, qt.i)(GR.dailyRewardCoins)]
+        }), GR.dailyRewardItems.map((RR => (0, Vt.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, lE.jsx)(cE.b, {
-            itemName: WW.dailyRewardItemName,
+          children: [(0, Vt.jsx)(ut.b, {
+            itemName: RR.dailyRewardItemName,
             amount: 0
-          }), "\xd7", WW.dailyRewardItemAmount]
-        }, WW.dailyRewardItemName)))]
+          }), "\xd7", RR.dailyRewardItemAmount]
+        }, RR.dailyRewardItemName)))]
       })
     }
 
-    function fP(WW) {
+    function PZ(RR) {
       let {
-        day: iW
-      } = WW;
-      const OW = JW(iW);
-      return (0, lE.jsx)("ol", {
+        day: JR
+      } = RR;
+      const GR = pR(JR);
+      return (0, Vt.jsx)("ol", {
         className: "SkyblockDailyRewardStrip",
-        children: yW.map(((WW, mW) => {
-          const EW = mW + 1;
-          return (0, lE.jsxs)("li", {
-            className: EE()("SkyblockDailyRewardTile", {
-              Claimed: EW < iW && EW !== OW,
-              Today: EW === iW,
-              Tomorrow: EW === OW,
-              Jackpot: EW === TW
+        children: BR.map(((RR, yR) => {
+          const tR = yR + 1;
+          return (0, Vt.jsxs)("li", {
+            className: Jt()("SkyblockDailyRewardTile", {
+              Claimed: tR < JR && tR !== GR,
+              Today: tR === JR,
+              Tomorrow: tR === GR,
+              Jackpot: tR === lR
             }),
-            children: [(0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("span", {
               className: "SkyblockDailyRewardTileDay",
-              children: EW
-            }), (0, lE.jsxs)("span", {
+              children: tR
+            }), (0, Vt.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward SkyblockDailyRewardTileCoins",
-              children: [(0, lE.jsx)(cE.b, {
+              children: [(0, Vt.jsx)(ut.b, {
                 itemName: "Gold Coin",
                 amount: 0
-              }), (0, tE.g)(WW.dailyRewardCoins)]
-            }), WW.dailyRewardItems.map((WW => (0, lE.jsxs)("span", {
+              }), (0, qt.i)(RR.dailyRewardCoins)]
+            }), RR.dailyRewardItems.map((RR => (0, Vt.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward",
-              children: [(0, lE.jsx)(cE.b, {
-                itemName: WW.dailyRewardItemName,
+              children: [(0, Vt.jsx)(ut.b, {
+                itemName: RR.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", WW.dailyRewardItemAmount]
-            }, WW.dailyRewardItemName)))]
-          }, EW)
+              }), "\xd7", RR.dailyRewardItemAmount]
+            }, RR.dailyRewardItemName)))]
+          }, tR)
         }))
       })
     }
 
-    function CP(WW) {
+    function IZ(RR) {
       let {
-        view: iW
-      } = WW;
+        view: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, YW.useRef)(null), EW = (0, YW.useRef)(null), [NW, PW] = (0, YW.useState)(null);
-      (0, YW.useLayoutEffect)((() => {
-        var WW;
-        const iW = null === (WW = mW.current) || void 0 === WW ? void 0 : WW.getBoundingClientRect();
-        if (iW) {
-          var OW, NW;
-          const WW = Array.from(null !== (OW = null === (NW = EW.current) || void 0 === NW ? void 0 : NW.children) && void 0 !== OW ? OW : [], (WW => eP(WW.getBoundingClientRect())));
-          PW({
-            origin: eP(iW),
-            target: dP(),
-            itemOrigins: WW,
-            itemTarget: vP()
+        t: GR
+      } = (0, it.A)(), yR = (0, MR.useRef)(null), tR = (0, MR.useRef)(null), [uR, ZR] = (0, MR.useState)(null);
+      (0, MR.useLayoutEffect)((() => {
+        var RR;
+        const JR = null === (RR = yR.current) || void 0 === RR ? void 0 : RR.getBoundingClientRect();
+        if (JR) {
+          var GR, uR;
+          const RR = Array.from(null !== (GR = null === (uR = tR.current) || void 0 === uR ? void 0 : uR.children) && void 0 !== GR ? GR : [], (RR => xZ(RR.getBoundingClientRect())));
+          ZR({
+            origin: xZ(JR),
+            target: OZ(),
+            itemOrigins: RR,
+            itemTarget: NZ()
           })
         }
       }), []);
-      const LW = JW(iW.day),
-        cW = function(WW, iW) {
-          const [OW, mW] = (0, YW.useState)((() => oP() ? WW : 0));
-          return (0, YW.useEffect)((() => {
-            if (oP()) return;
-            const OW = performance.now();
-            let EW = 0;
-            const NW = PW => {
-              const LW = Math.min(Math.max((PW - OW) / iW, 0), 1);
-              mW(Math.round(WW * (1 - (1 - LW) ** 3))), LW < 1 && (EW = requestAnimationFrame(NW))
+      const qR = pR(JR.day),
+        iR = function(RR, JR) {
+          const [GR, yR] = (0, MR.useState)((() => vZ() ? RR : 0));
+          return (0, MR.useEffect)((() => {
+            if (vZ()) return;
+            const GR = performance.now();
+            let tR = 0;
+            const uR = ZR => {
+              const qR = Math.min(Math.max((ZR - GR) / JR, 0), 1);
+              yR(Math.round(RR * (1 - (1 - qR) ** 3))), qR < 1 && (tR = requestAnimationFrame(uR))
             };
-            return EW = requestAnimationFrame(NW), () => {
-              cancelAnimationFrame(EW)
+            return tR = requestAnimationFrame(uR), () => {
+              cancelAnimationFrame(tR)
             }
-          }), [WW, iW]), OW
-        }(iW.coins, 450);
-      return (0, lE.jsxs)("div", {
-        className: EE()("SkyblockDailyReward", {
-          Jackpot: iW.day === TW
+          }), [RR, JR]), GR
+        }(JR.coins, 450);
+      return (0, Vt.jsxs)("div", {
+        className: Jt()("SkyblockDailyReward", {
+          Jackpot: JR.day === lR
         }),
         style: {
-          "--daily-duration": `${iW.durationMs}ms`
+          "--daily-duration": `${JR.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, lE.jsx)("div", {
+        children: [(0, Vt.jsx)("div", {
           className: "SkyblockDailyRewardGlow",
           "aria-hidden": "true"
-        }), (0, lE.jsxs)("div", {
+        }), (0, Vt.jsxs)("div", {
           className: "SkyblockDailyRewardCard",
-          children: [(0, lE.jsxs)("div", {
+          children: [(0, Vt.jsxs)("div", {
             className: "SkyblockDailyRewardHeading",
-            children: [(0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)("span", {
               className: "SkyblockDailyRewardTitle",
-              children: OW("skyblockGame:dailyRewardTitle")
-            }), (0, lE.jsx)("span", {
+              children: GR("skyblockGame:dailyRewardTitle")
+            }), (0, Vt.jsx)("span", {
               className: "SkyblockDailyRewardDay",
-              children: OW("skyblockGame:dailyRewardDay", {
-                day: String(iW.day)
+              children: GR("skyblockGame:dailyRewardDay", {
+                day: String(JR.day)
               })
             })]
-          }), (0, lE.jsxs)("div", {
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockDailyRewardAmount",
-            ref: mW,
-            children: [(0, lE.jsx)(cE.b, {
+            ref: yR,
+            children: [(0, Vt.jsx)(ut.b, {
               itemName: "Gold Coin",
               amount: 0
-            }), (0, lE.jsxs)("span", {
-              children: ["+", (0, tE.g)(cW)]
+            }), (0, Vt.jsxs)("span", {
+              children: ["+", (0, qt.i)(iR)]
             })]
-          }), iW.items.length > 0 && (0, lE.jsx)("div", {
+          }), JR.items.length > 0 && (0, Vt.jsx)("div", {
             className: "SkyblockDailyRewardItems",
-            ref: EW,
-            children: iW.items.map((WW => (0, lE.jsxs)("span", {
+            ref: tR,
+            children: JR.items.map((RR => (0, Vt.jsxs)("span", {
               className: "SkyblockDailyRewardItem",
-              children: [(0, lE.jsx)(cE.b, {
-                itemName: WW.dailyRewardItemName,
+              children: [(0, Vt.jsx)(ut.b, {
+                itemName: RR.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", WW.dailyRewardItemAmount]
-            }, WW.dailyRewardItemName)))
-          }), (0, lE.jsx)(fP, {
-            day: iW.day
-          }), (0, lE.jsxs)("div", {
+              }), "\xd7", RR.dailyRewardItemAmount]
+            }, RR.dailyRewardItemName)))
+          }), (0, Vt.jsx)(PZ, {
+            day: JR.day
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockDailyRewardFooter",
-            children: [OW("skyblockGame:dailyRewardComeBack"), (0, lE.jsx)(pP, {
-              day: LW
+            children: [GR("skyblockGame:dailyRewardComeBack"), (0, Vt.jsx)(cZ, {
+              day: qR
             })]
           })]
-        }), null !== NW && (0, lE.jsx)(VP, {
-          origin: NW.origin,
-          target: NW.target,
-          count: iW.flyingCoins
-        }), null !== NW && NW.itemOrigins.length === iW.items.length && (0, lE.jsx)(gP, {
-          items: iW.items,
-          origins: NW.itemOrigins,
-          target: NW.itemTarget
+        }), null !== uR && (0, Vt.jsx)(oZ, {
+          origin: uR.origin,
+          target: uR.target,
+          count: JR.flyingCoins
+        }), null !== uR && uR.itemOrigins.length === JR.items.length && (0, Vt.jsx)(DZ, {
+          items: JR.items,
+          origins: uR.itemOrigins,
+          target: uR.itemTarget
         })]
       })
     }
-    const XP = (0, YW.memo)((function(WW) {
+    const mZ = (0, MR.memo)((function(RR) {
         let {
-          controller: iW
-        } = WW;
-        const OW = (0, xE.g)(SO, iW.getSnapshot());
-        return OW ? (0, lE.jsx)(CP, {
-          view: OW
-        }, OW.token) : null
+          controller: JR
+        } = RR;
+        const GR = (0, ft.h)(AG, JR.getSnapshot());
+        return GR ? (0, Vt.jsx)(IZ, {
+          view: GR
+        }, GR.token) : null
       })),
-      BP = "Gold Coin";
+      zZ = "Gold Coin";
 
-    function qP(WW) {
-      return 650 + 220 * WW
+    function SZ(RR) {
+      return 650 + 220 * RR
     }
 
-    function RP(WW) {
+    function jZ(RR) {
       return {
-        "--letter-delay": `${qP(WW)}ms`,
-        "--letter-land": `${qP(WW)+300}ms`
+        "--letter-delay": `${SZ(RR)}ms`,
+        "--letter-land": `${SZ(RR)+300}ms`
       }
     }
 
-    function GP(WW) {
+    function dZ(RR) {
       let {
-        letterCount: iW
-      } = WW;
-      return (0, lE.jsxs)("div", {
+        letterCount: JR
+      } = RR;
+      return (0, Vt.jsxs)("div", {
         className: "SkyblockMailboxArt",
         "aria-hidden": "true",
-        children: [(0, lE.jsx)("img", {
+        children: [(0, Vt.jsx)("img", {
           className: "SkyblockMailboxFrame",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgGBTgPxbMgKHoU7Y/Cr7hqI9VMVji8yqV//8veYHxPC0l7ApBEugYp/UgXBNljteN6BrIBwC4hzWhsgbVSgAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, lE.jsx)("img", {
+        }), (0, Vt.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameFlag",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEU/H/T9n+YIUgGoRvOOpjVQyWACkE0SA8T0sJu0KQBDrGaT0I10SZ43UjugbyAQAsw0ABFINz6QAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, lE.jsx)("img", {
+        }), (0, Vt.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameOpen",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEjBlQFH3K9gcrBNEgHGyt9P//rwMYiv/fcNQHKwTRIPzh8SEwxlA4T0sJBYNMBJmM1XoQrokyx+tGdA3kAwD3jUzPjfodhAAAAABJRU5ErkJggg==",
           alt: ""
         }), Array.from({
-          length: iW
-        }, ((WW, iW) => (0, lE.jsx)("img", {
+          length: JR
+        }, ((RR, JR) => (0, Vt.jsx)("img", {
           className: "SkyblockMailboxFlyingLetter",
-          style: RP(iW),
+          style: jZ(JR),
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoCX4jwOjgP//fx1AwZ+y/f/fcNTHUPz/w+NDKBikaJ6WEnaFa7qCwBhZA0ETcSkEKybGM9QDAOtbYxX7UuH5AAAAAElFTkSuQmCC",
           alt: ""
-        }, iW)))]
+        }, JR)))]
       })
     }
 
-    function IP(WW) {
-      var iW, OW, mW;
+    function EZ(RR) {
+      var JR, GR, yR;
       let {
-        letter: EW,
-        index: NW
-      } = WW;
+        letter: tR,
+        index: uR
+      } = RR;
       const {
-        t: PW
-      } = (0, ZE.B)(), LW = null !== (iW = null === (OW = EW.items[0]) || void 0 === OW ? void 0 : OW.itemName) && void 0 !== iW ? iW : BP;
-      return (0, lE.jsxs)("li", {
+        t: ZR
+      } = (0, it.A)(), qR = null !== (JR = null === (GR = tR.items[0]) || void 0 === GR ? void 0 : GR.itemName) && void 0 !== JR ? JR : zZ;
+      return (0, Vt.jsxs)("li", {
         className: "SkyblockMailboxLetter",
-        style: RP(NW),
-        children: [(0, lE.jsx)("div", {
+        style: jZ(uR),
+        children: [(0, Vt.jsx)("div", {
           className: "SkyblockMailboxStamp",
           "aria-hidden": "true",
-          children: (0, lE.jsx)(cE.b, {
-            itemName: LW,
+          children: (0, Vt.jsx)(ut.b, {
+            itemName: qR,
             amount: 0
           })
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockMailboxReason",
-          children: PW(EW.reasonKey, null !== (mW = EW.reasonParams) && void 0 !== mW ? mW : void 0)
-        }), (0, lE.jsxs)("div", {
+          children: ZR(tR.reasonKey, null !== (yR = tR.reasonParams) && void 0 !== yR ? yR : void 0)
+        }), (0, Vt.jsxs)("div", {
           className: "SkyblockMailboxContents",
-          children: [EW.coins > 0 && (0, lE.jsxs)("span", {
+          children: [tR.coins > 0 && (0, Vt.jsxs)("span", {
             className: "SkyblockMailboxGift SkyblockMailboxCoins",
-            children: [(0, lE.jsx)(cE.b, {
-              itemName: BP,
+            children: [(0, Vt.jsx)(ut.b, {
+              itemName: zZ,
               amount: 0
-            }), "+", (0, tE.g)(EW.coins)]
-          }), EW.items.map(((WW, iW) => (0, lE.jsxs)("span", {
+            }), "+", (0, qt.i)(tR.coins)]
+          }), tR.items.map(((RR, JR) => (0, Vt.jsxs)("span", {
             className: "SkyblockMailboxGift",
-            children: [(0, lE.jsx)(cE.b, {
-              itemName: WW.itemName,
+            children: [(0, Vt.jsx)(ut.b, {
+              itemName: RR.itemName,
               amount: 0
-            }), WW.label, " \xd7", WW.amount]
-          }, iW)))]
+            }), RR.label, " \xd7", RR.amount]
+          }, JR)))]
         })]
       })
     }
 
-    function aP(WW) {
+    function YZ(RR) {
       let {
-        view: iW
-      } = WW;
+        view: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)();
-      return (0, lE.jsx)("div", {
+        t: GR
+      } = (0, it.A)();
+      return (0, Vt.jsx)("div", {
         className: "SkyblockMailbox",
         style: {
-          "--mail-duration": `${iW.durationMs}ms`,
+          "--mail-duration": `${JR.durationMs}ms`,
           "--flag-up": "300ms",
           "--door-open": "500ms",
-          "--more-land": `${qP(iW.letters.length)+300}ms`
+          "--more-land": `${SZ(JR.letters.length)+300}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: (0, lE.jsxs)("div", {
+        children: (0, Vt.jsxs)("div", {
           className: "SkyblockMailboxCard",
-          children: [(0, lE.jsxs)("div", {
+          children: [(0, Vt.jsxs)("div", {
             className: "SkyblockMailboxHeading",
-            children: [(0, lE.jsx)(GP, {
-              letterCount: iW.letters.length
-            }), (0, lE.jsx)("span", {
+            children: [(0, Vt.jsx)(dZ, {
+              letterCount: JR.letters.length
+            }), (0, Vt.jsx)("span", {
               className: "SkyblockMailboxTitle",
-              children: OW("skyblockGame:mailboxTitle")
+              children: GR("skyblockGame:mailboxTitle")
             })]
-          }), (0, lE.jsx)("ol", {
+          }), (0, Vt.jsx)("ol", {
             className: "SkyblockMailboxLetters",
-            children: iW.letters.map(((WW, iW) => (0, lE.jsx)(IP, {
-              letter: WW,
-              index: iW
-            }, iW)))
-          }), iW.more > 0 && (0, lE.jsx)("div", {
+            children: JR.letters.map(((RR, JR) => (0, Vt.jsx)(EZ, {
+              letter: RR,
+              index: JR
+            }, JR)))
+          }), JR.more > 0 && (0, Vt.jsx)("div", {
             className: "SkyblockMailboxMore",
-            children: OW("skyblockGame:mailboxMore", {
-              count: String(iW.more)
+            children: GR("skyblockGame:mailboxMore", {
+              count: String(JR.more)
             })
           })]
         })
       })
     }
-    const rP = (0, YW.memo)((function(WW) {
+    const kZ = (0, MR.memo)((function(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(hO, iW.getSnapshot());
-      return OW ? (0, lE.jsx)(aP, {
-        view: OW
-      }, OW.token) : null
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(lG, JR.getSnapshot());
+      return GR ? (0, Vt.jsx)(YZ, {
+        view: GR
+      }, GR.token) : null
     }));
 
-    function zP(WW) {
+    function QZ(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, xE.g)(sm, iW.getSnapshot());
-      if (null === mW) return null;
-      const EW = mW.fullSet ? "empty" === mW.fuelState ? {
-        text: OW("skyblockGame:magmawardHudNoFuel"),
+        t: GR
+      } = (0, it.A)(), yR = (0, ft.h)(ny, JR.getSnapshot());
+      if (null === yR) return null;
+      const tR = yR.fullSet ? "empty" === yR.fuelState ? {
+        text: GR("skyblockGame:magmawardHudNoFuel"),
         tone: "empty"
       } : null : {
-        text: OW("skyblockGame:magmawardHudFullSet", {
-          worn: String(mW.wornCount)
+        text: GR("skyblockGame:magmawardHudFullSet", {
+          worn: String(yR.wornCount)
         }),
         tone: "partial"
       };
-      return (0, lE.jsx)(PE.h, {
+      return (0, Vt.jsx)(yt.d, {
         placement: "statBars",
-        children: (0, lE.jsxs)("div", {
-          className: EE()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${mW.fuelState}`, {
-            "SkyblockMagmawardHud-partial": !mW.fullSet,
-            "SkyblockMagmawardHud-armed": mW.fullSet && "empty" !== mW.fuelState
+        children: (0, Vt.jsxs)("div", {
+          className: Jt()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${yR.fuelState}`, {
+            "SkyblockMagmawardHud-partial": !yR.fullSet,
+            "SkyblockMagmawardHud-armed": yR.fullSet && "empty" !== yR.fuelState
           }),
-          children: [null !== mW.flare && (0, lE.jsx)("div", {
-            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${mW.flare}`
-          }, `flare:${mW.flareToken}`), (0, lE.jsx)("div", {
-            className: EE()("SkyblockMagmawardPieces", {
-              SkyblockMagmawardPiecesComplete: mW.setLit
+          children: [null !== yR.flare && (0, Vt.jsx)("div", {
+            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${yR.flare}`
+          }, `flare:${yR.flareToken}`), (0, Vt.jsx)("div", {
+            className: Jt()("SkyblockMagmawardPieces", {
+              SkyblockMagmawardPiecesComplete: yR.setLit
             }),
-            children: mW.pieces.map(((WW, iW) => (0, lE.jsx)("div", {
-              className: EE()("SkyblockMagmawardPiece", {
-                SkyblockMagmawardPieceWorn: WW.worn,
-                SkyblockMagmawardPieceJustWorn: WW.justWorn
+            children: yR.pieces.map(((RR, JR) => (0, Vt.jsx)("div", {
+              className: Jt()("SkyblockMagmawardPiece", {
+                SkyblockMagmawardPieceWorn: RR.worn,
+                SkyblockMagmawardPieceJustWorn: RR.justWorn
               }),
-              children: (0, lE.jsx)(cE.b, {
-                itemName: WW.itemName,
+              children: (0, Vt.jsx)(ut.b, {
+                itemName: RR.itemName,
                 amount: 0
               })
-            }, `${iW}:${WW.wornToken}`)))
-          }, `pieces:${mW.setLitToken}`), (0, lE.jsxs)("div", {
+            }, `${JR}:${RR.wornToken}`)))
+          }, `pieces:${yR.setLitToken}`), (0, Vt.jsxs)("div", {
             className: "SkyblockMagmawardFuel",
-            children: [(0, lE.jsx)("div", {
+            children: [(0, Vt.jsx)("div", {
               className: "SkyblockMagmawardLowGlow"
-            }), (0, lE.jsxs)("div", {
-              className: EE()("SkyblockMagmawardFuelCounter", mW.pulse && `SkyblockMagmawardFuelCounter-${mW.pulse}`),
-              children: [(0, lE.jsx)("div", {
+            }), (0, Vt.jsxs)("div", {
+              className: Jt()("SkyblockMagmawardFuelCounter", yR.pulse && `SkyblockMagmawardFuelCounter-${yR.pulse}`),
+              children: [(0, Vt.jsx)("div", {
                 className: "SkyblockMagmawardFuelIcon",
-                children: (0, lE.jsx)(cE.b, {
+                children: (0, Vt.jsx)(ut.b, {
                   itemName: "Magmaward Fuel",
                   amount: 0
                 })
-              }), (0, lE.jsx)("span", {
+              }), (0, Vt.jsx)("span", {
                 className: "SkyblockMagmawardFuelCount SmallTextBold",
-                children: mW.fuel
+                children: yR.fuel
               })]
-            }, `counter:${mW.pulseToken}`), "burn" === mW.pulse && (0, lE.jsx)("span", {
+            }, `counter:${yR.pulseToken}`), "burn" === yR.pulse && (0, Vt.jsx)("span", {
               className: "SkyblockMagmawardEmber SmallTextBold",
               children: "-1"
-            }, `ember:${mW.pulseToken}`)]
-          }), EW && (0, lE.jsx)("div", {
-            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${EW.tone} SmallTextBold`,
-            children: EW.text
+            }, `ember:${yR.pulseToken}`)]
+          }), tR && (0, Vt.jsx)("div", {
+            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${tR.tone} SmallTextBold`,
+            children: tR.text
           })]
         })
       })
     }
 
-    function FP(WW) {
+    function FZ(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW,
-        selectedLanguage: mW
-      } = (0, ZE.B)(), EW = (0, xE.g)(Km, iW.getSnapshot());
-      return null === EW ? null : (0, lE.jsx)(PE.h, {
+        t: GR,
+        selectedLanguage: yR
+      } = (0, it.A)(), tR = (0, ft.h)(Wy, JR.getSnapshot());
+      return null === tR ? null : (0, Vt.jsx)(yt.d, {
         placement: "statBars",
-        children: (0, lE.jsxs)("div", {
-          className: EE()("SkyblockGlowtideChip", {
-            SkyblockGlowtideChipInRange: EW.inRange
+        children: (0, Vt.jsxs)("div", {
+          className: Jt()("SkyblockGlowtideChip", {
+            SkyblockGlowtideChipInRange: tR.inRange
           }),
           style: {
-            "--glowtide-colour": EW.colour
+            "--glowtide-colour": tR.colour
           },
-          "aria-label": OW("skyblockGame:glowtideChipLabel"),
-          children: [(0, lE.jsx)("div", {
+          "aria-label": GR("skyblockGame:glowtideChipLabel"),
+          children: [(0, Vt.jsx)("div", {
             className: "SkyblockGlowtideChipOrb"
-          }), EW.inRange ? (0, lE.jsx)("span", {
+          }), tR.inRange ? (0, Vt.jsx)("span", {
             className: "SkyblockGlowtideChipCall SmallTextBold",
-            children: OW("skyblockGame:glowtideChipInRange")
-          }, `call:${EW.inRangeToken}`) : (0, lE.jsxs)(lE.Fragment, {
-            children: [(0, lE.jsx)("div", {
-              ref: iW.mountArrow,
+            children: GR("skyblockGame:glowtideChipInRange")
+          }, `call:${tR.inRangeToken}`) : (0, Vt.jsxs)(Vt.Fragment, {
+            children: [(0, Vt.jsx)("div", {
+              ref: JR.mountArrow,
               className: "SkyblockGlowtideChipArrow"
-            }), (0, lE.jsx)("span", {
+            }), (0, Vt.jsx)("span", {
               className: "SkyblockGlowtideChipDistance SmallTextBold",
-              children: OW("skyblockGame:waypointDistance", {
-                distance: MW(EW.distance, mW.code)
+              children: GR("skyblockGame:waypointDistance", {
+                distance: AR(tR.distance, yR.code)
               })
             })]
           })]
@@ -9057,266 +9023,266 @@ export const modules = {
       })
     }
 
-    function QP(WW) {
+    function TZ(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, xE.g)(Ym, iW.getSnapshot());
-      return null === mW ? null : (0, lE.jsx)(PE.h, {
+        t: GR
+      } = (0, it.A)(), yR = (0, ft.h)(Cy, JR.getSnapshot());
+      return null === yR ? null : (0, Vt.jsx)(yt.d, {
         placement: "statBars",
-        children: (0, lE.jsxs)("div", {
-          className: EE()("SkyblockGlowMeter", {
-            SkyblockGlowMeterFull: mW.full
+        children: (0, Vt.jsxs)("div", {
+          className: Jt()("SkyblockGlowMeter", {
+            SkyblockGlowMeterFull: yR.full
           }),
-          "aria-label": OW("skyblockGame:glowMeterLabel", {
-            fill: String(mW.fill),
-            aZ: String(mW.aZ)
+          "aria-label": GR("skyblockGame:glowMeterLabel", {
+            fill: String(yR.fill),
+            hK: String(yR.hK)
           }),
-          children: [mW.burst && (0, lE.jsx)("div", {
+          children: [yR.burst && (0, Vt.jsx)("div", {
             className: "SkyblockGlowMeterBurst"
-          }, `burst:${mW.burstToken}`), (0, lE.jsxs)("div", {
+          }, `burst:${yR.burstToken}`), (0, Vt.jsxs)("div", {
             className: "SkyblockGlowMeterVial",
-            children: [(0, lE.jsx)("div", {
+            children: [(0, Vt.jsx)("div", {
               className: "SkyblockGlowMeterLiquid",
               style: {
-                transform: `scaleX(${mW.ratio})`
+                transform: `scaleX(${yR.ratio})`
               }
-            }), mW.gained && (0, lE.jsx)("div", {
+            }), yR.gained && (0, Vt.jsx)("div", {
               className: "SkyblockGlowMeterGlint"
-            }, `gain:${mW.gainToken}`), mW.full && Array.from({
+            }, `gain:${yR.gainToken}`), yR.full && Array.from({
               length: 5
-            }, ((WW, iW) => (0, lE.jsx)("span", {
+            }, ((RR, JR) => (0, Vt.jsx)("span", {
               className: "SkyblockGlowMeterSparkle"
-            }, iW)))]
-          }), mW.full && mW.rares.map((WW => (0, lE.jsx)("div", {
+            }, JR)))]
+          }), yR.full && yR.rares.map((RR => (0, Vt.jsx)("div", {
             className: "SkyblockGlowMeterRare",
-            children: (0, lE.jsx)(cE.b, {
-              itemName: WW,
+            children: (0, Vt.jsx)(ut.b, {
+              itemName: RR,
               amount: 0
             })
-          }, WW))), mW.ready && (0, lE.jsx)("div", {
+          }, RR))), yR.ready && (0, Vt.jsx)("div", {
             className: "SkyblockGlowMeterReady SmallTextBold",
-            children: (0, lE.jsx)("span", {
-              children: OW("skyblockGame:glowMeterReady")
+            children: (0, Vt.jsx)("span", {
+              children: GR("skyblockGame:glowMeterReady")
             })
-          }, `ready:${mW.fullToken}`)]
+          }, `ready:${yR.fullToken}`)]
         })
       })
     }
 
-    function WL(WW) {
+    function sZ(RR) {
       let {
-        controller: iW
-      } = WW;
+        controller: JR
+      } = RR;
       const {
-        t: OW
-      } = (0, ZE.B)(), mW = (0, xE.g)(Tm, iW.getSnapshot());
-      if (null === mW) return null;
-      const EW = "waiting" === mW.phase,
-        NW = {
-          animationDuration: `${mW.waitMs}ms`,
-          animationDelay: -mW.elapsedMs + "ms"
+        t: GR
+      } = (0, it.A)(), yR = (0, ft.h)(My, JR.getSnapshot());
+      if (null === yR) return null;
+      const tR = "waiting" === yR.phase,
+        uR = {
+          animationDuration: `${yR.waitMs}ms`,
+          animationDelay: -yR.elapsedMs + "ms"
         },
-        PW = EW ? void 0 : {
-          animationDuration: `${mW.waitMs}ms`
+        ZR = tR ? void 0 : {
+          animationDuration: `${yR.waitMs}ms`
         };
-      return (0, lE.jsxs)("div", {
-        className: EW ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
-        children: [EW && (0, lE.jsxs)("div", {
+      return (0, Vt.jsxs)("div", {
+        className: tR ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
+        children: [tR && (0, Vt.jsxs)("div", {
           className: "SkyblockHushWaitRing",
           children: [Array.from({
             length: 3
-          }, ((WW, iW) => (0, lE.jsx)("span", {
+          }, ((RR, JR) => (0, Vt.jsx)("span", {
             className: "SkyblockHushWaitRipple"
-          }, iW))), (0, lE.jsx)("span", {
+          }, JR))), (0, Vt.jsx)("span", {
             className: "SkyblockHushWaitClosing",
-            style: NW
-          }), (0, lE.jsxs)("svg", {
+            style: uR
+          }), (0, Vt.jsxs)("svg", {
             className: "SkyblockHushWaitProgress",
             viewBox: "0 0 100 100",
-            children: [(0, lE.jsx)("circle", {
+            children: [(0, Vt.jsx)("circle", {
               className: "SkyblockHushWaitTrack",
               cx: "50",
               cy: "50",
               r: 46
-            }), (0, lE.jsx)("circle", {
+            }), (0, Vt.jsx)("circle", {
               className: "SkyblockHushWaitArc",
               cx: "50",
               cy: "50",
               r: 46,
               pathLength: 100,
-              style: NW
+              style: uR
             })]
-          }), (0, lE.jsx)("span", {
+          }), (0, Vt.jsx)("span", {
             className: "SkyblockHushWaitMoon"
           })]
-        }), (0, lE.jsx)("div", {
+        }), (0, Vt.jsx)("div", {
           className: "SkyblockHushWaitLine SmallTextBold",
-          style: PW,
-          children: OW(mW.line)
-        }, mW.lineIndex)]
-      }, mW.token)
+          style: ZR,
+          children: GR(yR.line)
+        }, yR.lineIndex)]
+      }, yR.token)
     }
 
-    function iL(WW) {
+    function hZ(RR) {
       let {
-        chart: iW,
-        showHere: OW,
-        className: mW
-      } = WW;
-      return (0, lE.jsx)("div", {
-        className: EE()("SkyblockTideChartGrid", mW, null !== iW.pictureName && "Complete"),
+        chart: JR,
+        showHere: GR,
+        className: yR
+      } = RR;
+      return (0, Vt.jsx)("div", {
+        className: Jt()("SkyblockTideChartGrid", yR, null !== JR.pictureName && "Complete"),
         "aria-hidden": "true",
-        children: iW.cells.map(((WW, mW) => {
-          const EW = 0 !== (iW.pulseCells & 1 << mW),
-            NW = iW.castCell === mW;
-          return (0, lE.jsx)("span", {
-            className: EE()("SkyblockTideChartCell", `Cell-${WW}`, EW && "Pulse", NW && "Cast", OW && iW.hereCell === mW && "Here")
-          }, `${mW}:${EW?`p${iW.pulseToken}`:""}:${NW?`c${iW.castToken}`:""}`)
+        children: JR.cells.map(((RR, yR) => {
+          const tR = 0 !== (JR.pulseCells & 1 << yR),
+            uR = JR.castCell === yR;
+          return (0, Vt.jsx)("span", {
+            className: Jt()("SkyblockTideChartCell", `Cell-${RR}`, tR && "Pulse", uR && "Cast", GR && JR.hereCell === yR && "Here")
+          }, `${yR}:${tR?`p${JR.pulseToken}`:""}:${uR?`c${JR.castToken}`:""}`)
         }))
       })
     }
 
-    function OL(WW) {
+    function Rq(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(hm, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(ly, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = OW.chip;
-      if (!OW.enabled || null === EW) return null;
-      const NW = mW("skyblockGame:tideChartsChipLabel", {
-        island: EW.islandName,
-        lit: String(EW.lit),
-        ink: String(EW.ink)
+          t: yR
+        } = (0, it.A)(),
+        tR = GR.chip;
+      if (!GR.enabled || null === tR) return null;
+      const uR = yR("skyblockGame:tideChartsChipLabel", {
+        island: tR.islandName,
+        lit: String(tR.lit),
+        ink: String(tR.ink)
       });
-      return (0, lE.jsx)(PE.h, {
+      return (0, Vt.jsx)(yt.d, {
         placement: "statBars",
-        children: (0, lE.jsxs)("button", {
+        children: (0, Vt.jsxs)("button", {
           type: "button",
           tabIndex: -1,
-          className: EE()("SkyblockTideChartsChip", OW.open && "Open", null !== EW.pictureName && "Complete"),
-          "aria-label": NW,
-          title: NW,
-          onMouseDown: WW => {
-            WW.preventDefault()
+          className: Jt()("SkyblockTideChartsChip", GR.open && "Open", null !== tR.pictureName && "Complete"),
+          "aria-label": uR,
+          title: uR,
+          onMouseDown: RR => {
+            RR.preventDefault()
           },
-          onClick: iW.toggle,
-          children: [(0, lE.jsx)(iL, {
-            chart: EW,
+          onClick: JR.toggle,
+          children: [(0, Vt.jsx)(hZ, {
+            chart: tR,
             showHere: !1,
             className: "Mini"
-          }), (0, lE.jsxs)("span", {
+          }), (0, Vt.jsxs)("span", {
             className: "SkyblockTideChartsChipCount SmallTextBold",
-            children: [EW.lit, "/", EW.ink]
+            children: [tR.lit, "/", tR.ink]
           })]
         })
       })
     }
 
-    function mL(WW) {
+    function Jq(RR) {
       let {
-        controller: iW
-      } = WW;
-      const OW = (0, xE.g)(hm, iW.getSnapshot()),
+        controller: JR
+      } = RR;
+      const GR = (0, ft.h)(ly, JR.getSnapshot()),
         {
-          t: mW
-        } = (0, ZE.B)(),
-        EW = yE(),
-        NW = OW.card;
-      return OW.enabled && null !== NW ? (0, lE.jsx)(KE.b, {
-        show: OW.open,
-        close: iW.dismiss,
+          t: yR
+        } = (0, it.A)(),
+        tR = Xt(),
+        uR = GR.card;
+      return GR.enabled && null !== uR ? (0, Vt.jsx)(Wt.e, {
+        show: GR.open,
+        close: JR.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, lE.jsxs)("section", {
+        children: (0, Vt.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockTideChartsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockTideChartsTitle",
           tabIndex: -1,
-          ref: EW,
-          onKeyDown: YE,
-          children: [(0, lE.jsxs)("header", {
+          ref: tR,
+          onKeyDown: Ct,
+          children: [(0, Vt.jsxs)("header", {
             className: "SkyblockTideChartsHeader",
-            children: [(0, lE.jsxs)("div", {
-              children: [(0, lE.jsx)("h2", {
+            children: [(0, Vt.jsxs)("div", {
+              children: [(0, Vt.jsx)("h2", {
                 id: "skyblockTideChartsTitle",
-                children: mW("skyblockGame:tideChartsTitle")
-              }), (0, lE.jsx)("p", {
+                children: yR("skyblockGame:tideChartsTitle")
+              }), (0, Vt.jsx)("p", {
                 className: "SkyblockTideChartsIntro",
-                children: mW("skyblockGame:tideChartsIntro")
+                children: yR("skyblockGame:tideChartsIntro")
               })]
-            }), (0, lE.jsx)(SE.l, {
+            }), (0, Vt.jsx)(At.l, {
               padIgnore: !0,
-              ariaLabel: mW("skyblockGame:tideChartsClose"),
-              onClick: iW.dismiss
+              ariaLabel: yR("skyblockGame:tideChartsClose"),
+              onClick: JR.dismiss
             })]
-          }), OW.tabs.length > 1 && (0, lE.jsx)("div", {
+          }), GR.tabs.length > 1 && (0, Vt.jsx)("div", {
             className: "SkyblockTideChartsTabs",
             role: "group",
-            "aria-label": mW("skyblockGame:tideChartsIslands"),
-            children: OW.tabs.map((WW => (0, lE.jsx)("button", {
+            "aria-label": yR("skyblockGame:tideChartsIslands"),
+            children: GR.tabs.map((RR => (0, Vt.jsx)("button", {
               type: "button",
-              className: EE()("SkyblockTideChartsTab", WW.selected && "Selected"),
-              "aria-pressed": WW.selected,
+              className: Jt()("SkyblockTideChartsTab", RR.selected && "Selected"),
+              "aria-pressed": RR.selected,
               onClick: () => {
-                iW.Kl(WW.island)
+                JR.Ur(RR.island)
               },
-              children: WW.name
-            }, WW.island)))
-          }), (0, lE.jsxs)("div", {
+              children: RR.name
+            }, RR.island)))
+          }), (0, Vt.jsxs)("div", {
             className: "SkyblockTideChartsBody",
-            children: [(0, lE.jsx)("div", {
+            children: [(0, Vt.jsx)("div", {
               className: "SkyblockTideChartsMap",
               role: "img",
-              "aria-label": NW.gridLabel,
-              children: (0, lE.jsx)(iL, {
-                chart: NW,
+              "aria-label": uR.gridLabel,
+              children: (0, Vt.jsx)(hZ, {
+                chart: uR,
                 showHere: !0,
                 className: "Large"
               })
-            }), (0, lE.jsxs)("div", {
+            }), (0, Vt.jsxs)("div", {
               className: "SkyblockTideChartsInfo",
-              children: [(0, lE.jsx)("h3", {
-                children: NW.islandName
-              }), (0, lE.jsx)("p", {
+              children: [(0, Vt.jsx)("h3", {
+                children: uR.islandName
+              }), (0, Vt.jsx)("p", {
                 className: "SkyblockTideChartsLit",
-                children: NW.litText
-              }), null === NW.pictureName ? (0, lE.jsx)("p", {
+                children: uR.litText
+              }), null === uR.pictureName ? (0, Vt.jsx)("p", {
                 className: "SkyblockTideChartsPicture",
-                children: mW("skyblockGame:tideChartsPictureHidden")
-              }) : (0, lE.jsx)("p", {
+                children: yR("skyblockGame:tideChartsPictureHidden")
+              }) : (0, Vt.jsx)("p", {
                 className: "SkyblockTideChartsPicture Revealed",
-                children: mW("skyblockGame:tideChartsPictureRevealed", {
-                  picture: NW.pictureName
+                children: yR("skyblockGame:tideChartsPictureRevealed", {
+                  picture: uR.pictureName
                 })
-              }, NW.pictureName), (0, lE.jsxs)("ul", {
+              }, uR.pictureName), (0, Vt.jsxs)("ul", {
                 className: "SkyblockTideChartsLegend",
                 "aria-hidden": "true",
-                children: [(0, lE.jsxs)("li", {
-                  children: [(0, lE.jsx)("span", {
+                children: [(0, Vt.jsxs)("li", {
+                  children: [(0, Vt.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-lit"
-                  }), mW("skyblockGame:tideChartsLegendLit")]
-                }), (0, lE.jsxs)("li", {
-                  children: [(0, lE.jsx)("span", {
+                  }), yR("skyblockGame:tideChartsLegendLit")]
+                }), (0, Vt.jsxs)("li", {
+                  children: [(0, Vt.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-clear"
-                  }), mW("skyblockGame:tideChartsLegendClear")]
-                }), null !== NW.hereCell && (0, lE.jsxs)("li", {
-                  children: [(0, lE.jsx)("span", {
+                  }), yR("skyblockGame:tideChartsLegendClear")]
+                }), null !== uR.hereCell && (0, Vt.jsxs)("li", {
+                  children: [(0, Vt.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-water Here"
-                  }), mW("skyblockGame:tideChartsLegendHere")]
+                  }), yR("skyblockGame:tideChartsLegendHere")]
                 })]
-              }), (0, lE.jsxs)("p", {
+              }), (0, Vt.jsxs)("p", {
                 className: "SkyblockTideChartsFooter",
-                children: [(0, lE.jsx)("span", {
-                  children: OW.turnsText
-                }), (0, lE.jsx)("span", {
-                  children: OW.bookText
+                children: [(0, Vt.jsx)("span", {
+                  children: GR.turnsText
+                }), (0, Vt.jsx)("span", {
+                  children: GR.bookText
                 })]
               })]
             })]
@@ -9325,144 +9291,144 @@ export const modules = {
       }) : null
     }
 
-    function EL(WW) {
-      var iW;
+    function Gq(RR) {
+      var JR;
       let {
-        controller: OW
-      } = WW;
+        controller: GR
+      } = RR;
       const {
-        selectedLanguage: mW
-      } = (0, ZE.B)(), EW = mW.code;
-      (0, YW.useEffect)((() => {
-        OW.setTranslator(((WW, iW) => (0, ZE.u)(EW, WW, iW)), EW, ((WW, iW) => (0, ZE.p)(EW, WW, iW)))
-      }), [OW, EW]);
-      const NW = (0, xE.g)(wW, OW.map.getSnapshot()),
+        selectedLanguage: yR
+      } = (0, it.A)(), tR = yR.code;
+      (0, MR.useEffect)((() => {
+        GR.setTranslator(((RR, JR) => (0, it.w)(tR, RR, JR)), tR, ((RR, JR) => (0, it.r)(tR, RR, JR)))
+      }), [GR, tR]);
+      const uR = (0, ft.h)(fR, GR.map.getSnapshot()),
         {
-          openInGameMenuName: PW
-        } = (0, NE.p)(["openInGameMenuName"]);
-      return (0, lE.jsxs)(lE.Fragment, {
-        children: [(0, lE.jsx)(HP, {
-          controller: OW.quests,
-          display: OW.navigation.display
-        }), NW.enabled && !PW && (0, lE.jsx)(dE, {
-          controller: OW.navigation
-        }), (0, lE.jsx)(AE, {
-          controller: OW,
-          minimap: NW.enabled && (null === (iW = NW.presentation) || void 0 === iW ? void 0 : iW.minimap) && (0, lE.jsx)(oE, {
-            view: NW.presentation.minimap,
-            navigation: OW.navigation,
-            controller: OW.map
+          openInGameMenuName: ZR
+        } = (0, Gt.o)(["openInGameMenuName"]);
+      return (0, Vt.jsxs)(Vt.Fragment, {
+        children: [(0, Vt.jsx)(pZ, {
+          controller: GR.quests,
+          display: GR.navigation.display
+        }), uR.enabled && !ZR && (0, Vt.jsx)(Ot, {
+          controller: GR.navigation
+        }), (0, Vt.jsx)(Kt, {
+          controller: GR,
+          minimap: uR.enabled && (null === (JR = uR.presentation) || void 0 === JR ? void 0 : JR.minimap) && (0, Vt.jsx)(vt, {
+            view: uR.presentation.minimap,
+            navigation: GR.navigation,
+            controller: GR.map
           }),
-          children: (0, lE.jsx)(XE, {
-            controller: OW.quests,
+          children: (0, Vt.jsx)(mt, {
+            controller: GR.quests,
             surface: "hud"
           })
-        }), (0, lE.jsx)(TP, {
-          controller: OW.navigation
-        }), (0, lE.jsx)(uP, {
-          controller: OW.portalTransit
-        }), (0, lE.jsx)(XP, {
-          controller: OW.dailyReward
-        }), (0, lE.jsx)(rP, {
-          controller: OW.mailbox
-        }), (0, lE.jsx)(zP, {
-          controller: OW.magmaward
-        }), (0, lE.jsx)(FP, {
-          controller: OW.glowtide
-        }), (0, lE.jsx)(CN, {
-          controller: OW.passage
-        }), (0, lE.jsx)(OL, {
-          controller: OW.tideCharts
-        }), (0, lE.jsx)(QP, {
-          controller: OW.glowMeter
-        }), (0, lE.jsx)(QN, {
-          controller: OW.reachLog
-        }), (0, lE.jsx)(WL, {
-          controller: OW.hushWait
-        }), (0, lE.jsx)(aN, {
-          controller: OW.lampLight
-        }), (0, lE.jsx)(eE, {
-          controller: OW.skills,
+        }), (0, Vt.jsx)(MZ, {
+          controller: GR.navigation
+        }), (0, Vt.jsx)(bZ, {
+          controller: GR.portalTransit
+        }), (0, Vt.jsx)(mZ, {
+          controller: GR.dailyReward
+        }), (0, Vt.jsx)(kZ, {
+          controller: GR.mailbox
+        }), (0, Vt.jsx)(QZ, {
+          controller: GR.magmaward
+        }), (0, Vt.jsx)(FZ, {
+          controller: GR.glowtide
+        }), (0, Vt.jsx)(Iu, {
+          controller: GR.passage
+        }), (0, Vt.jsx)(Rq, {
+          controller: GR.tideCharts
+        }), (0, Vt.jsx)(TZ, {
+          controller: GR.glowMeter
+        }), (0, Vt.jsx)(Tu, {
+          controller: GR.reachLog
+        }), (0, Vt.jsx)(sZ, {
+          controller: GR.hushWait
+        }), (0, Vt.jsx)(Yu, {
+          controller: GR.lampLight
+        }), (0, Vt.jsx)(xt, {
+          controller: GR.skills,
           surface: "hud"
         })]
       })
     }
 
-    function NL(WW) {
+    function yq(RR) {
       let {
-        controller: iW
-      } = WW;
-      return (0, lE.jsxs)(lE.Fragment, {
-        children: [(0, lE.jsx)(uE, {
-          controller: iW.map,
-          navigation: iW.navigation
-        }), (0, lE.jsx)(eE, {
-          controller: iW.skills,
+        controller: JR
+      } = RR;
+      return (0, Vt.jsxs)(Vt.Fragment, {
+        children: [(0, Vt.jsx)(bt, {
+          controller: JR.map,
+          navigation: JR.navigation
+        }), (0, Vt.jsx)(xt, {
+          controller: JR.skills,
           surface: "menu"
-        }), (0, lE.jsx)(XE, {
-          controller: iW.quests,
+        }), (0, Vt.jsx)(mt, {
+          controller: JR.quests,
           surface: "menu"
-        }), (0, lE.jsx)(SN, {
-          controller: iW.dungeons
-        }), (0, lE.jsx)(TN, {
-          controller: iW.collections
-        }), (0, lE.jsx)(HN, {
-          controller: iW.questGraph
-        }), (0, lE.jsx)(eN, {
-          controller: iW.forge
-        }), (0, lE.jsx)(pN, {
-          controller: iW.smuggler
-        }), (0, lE.jsx)(zN, {
-          controller: iW.keepersChair,
-          lampLight: iW.lampLight
-        }), (0, lE.jsx)(MP, {
-          controller: iW.reachLog,
-          regulars: iW.regulars,
-          hiddenWaters: iW.hiddenWaters
-        }), (0, lE.jsx)(mP, {
-          controller: iW.regulars
-        }), (0, lE.jsx)(BN, {
-          controller: iW.passage
-        }), (0, lE.jsx)(mL, {
-          controller: iW.tideCharts
-        }), (0, lE.jsx)(YP, {
-          controller: iW.dialogue
-        }), (0, lE.jsx)(yP, {
-          controller: iW.autographs
+        }), (0, Vt.jsx)(Au, {
+          controller: JR.dungeons
+        }), (0, Vt.jsx)(Mu, {
+          controller: JR.collections
+        }), (0, Vt.jsx)(pu, {
+          controller: JR.questGraph
+        }), (0, Vt.jsx)(xu, {
+          controller: JR.forge
+        }), (0, Vt.jsx)(cu, {
+          controller: JR.smuggler
+        }), (0, Vt.jsx)(Qu, {
+          controller: JR.keepersChair,
+          lampLight: JR.lampLight
+        }), (0, Vt.jsx)(UZ, {
+          controller: JR.reachLog,
+          regulars: JR.regulars,
+          hiddenWaters: JR.hiddenWaters
+        }), (0, Vt.jsx)(JZ, {
+          controller: JR.regulars
+        }), (0, Vt.jsx)(zu, {
+          controller: JR.passage
+        }), (0, Vt.jsx)(Jq, {
+          controller: JR.tideCharts
+        }), (0, Vt.jsx)(CZ, {
+          controller: JR.dialogue
+        }), (0, Vt.jsx)(XZ, {
+          controller: JR.autographs
         })]
       })
     }
-    var PL = OW(37559);
-    const LL = gO + BO;
+    var tq = GR(37470);
+    const uq = DG + zG;
 
-    function cL(WW, iW) {
-      const OW = [{
+    function Zq(RR, JR) {
+      const GR = [{
         sound: "rpgKnifeSlice1",
-        beat: gO,
+        beat: DG,
         lead: 260,
         volume: .5,
         rate: 1
       }, {
         sound: "sweep6",
-        beat: gO,
+        beat: DG,
         lead: 140,
         volume: .35,
         rate: .85
       }, {
         sound: "rpgMetalPot1",
-        beat: gO,
+        beat: DG,
         lead: 100,
         volume: 1,
         rate: .78 + .04 * Math.random()
       }, {
         sound: "hit1",
-        beat: gO,
+        beat: DG,
         lead: 0,
         volume: .8,
         rate: .7
       }, {
         sound: "lowDrum1",
-        beat: gO,
+        beat: DG,
         lead: 60,
         volume: .6,
         rate: 1
@@ -9474,7 +9440,7 @@ export const modules = {
         rate: 1.3
       }, {
         sound: "firecracker",
-        Kl: !0,
+        Ur: !0,
         beat: 420,
         lead: 160,
         volume: .25,
@@ -9482,103 +9448,103 @@ export const modules = {
         cutAfter: 500
       }, {
         sound: "fireBurn",
-        beat: LL + 150,
+        beat: uq + 150,
         lead: 400,
         volume: .6,
         rate: 1.2
       }, {
         sound: "bigDrumSwish",
-        Kl: !0,
-        beat: LL + 80,
+        Ur: !0,
+        beat: uq + 80,
         lead: 480,
         volume: .35,
         rate: 1,
         cutAfter: 1400
       }, {
         sound: "magicAccent2",
-        beat: LL + 60,
+        beat: uq + 60,
         lead: 180,
-        volume: .5 + .06 * WW,
-        rate: .82 + .07 * WW
+        volume: .5 + .06 * RR,
+        rate: .82 + .07 * RR
       }];
-      return WW >= 4 && OW.push({
+      return RR >= 4 && GR.push({
         sound: "exp_levelup",
-        beat: LL + 120,
+        beat: uq + 120,
         lead: 60,
         volume: .35,
         rate: 1
-      }), iW && OW.push({
+      }), JR && GR.push({
         sound: "trumpetFlare",
-        beat: LL + 40,
+        beat: uq + 40,
         lead: 20,
         volume: .8,
         rate: 1
-      }), OW.push({
+      }), GR.push({
         sound: "harp_pling",
-        beat: DO,
+        beat: HG,
         lead: 40,
         volume: .2,
         rate: 1.5
-      }), OW
+      }), GR
     }
-    class wL {
-      constructor(WW) {
-        this.deps = WW, this.pending = new Map, this.localHook = null
+    class qq {
+      constructor(RR) {
+        this.deps = RR, this.pending = new Map, this.localHook = null
       }
-      hookWaiting(WW, iW) {
-        this.pending.delete(WW);
-        const OW = this.deps.now();
-        if (null === iW) {
-          var mW;
-          if ((null === (mW = this.localHook) || void 0 === mW ? void 0 : mW.hookId) === WW) {
-            const WW = OW >= this.localHook.biteAtMs - 300;
-            this.localHook = null, this.deps.onLocalWaitEnded(WW)
+      hookWaiting(RR, JR) {
+        this.pending.delete(RR);
+        const GR = this.deps.now();
+        if (null === JR) {
+          var yR;
+          if ((null === (yR = this.localHook) || void 0 === yR ? void 0 : yR.hookId) === RR) {
+            const RR = GR >= this.localHook.biteAtMs - 300;
+            this.localHook = null, this.deps.onLocalWaitEnded(RR)
           }
           return
         }
-        const EW = OW + iW;
-        this.settle(WW, EW) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(WW, {
-          untilMs: OW + 1e3,
-          biteAtMs: EW
+        const tR = GR + JR;
+        this.settle(RR, tR) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(RR, {
+          untilMs: GR + 1e3,
+          biteAtMs: tR
         }))
       }
       getLocalHook() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.localHook) || void 0 === iW ? void 0 : iW.hookId) && void 0 !== WW ? WW : null
+        var RR, JR;
+        return null !== (RR = null === (JR = this.localHook) || void 0 === JR ? void 0 : JR.hookId) && void 0 !== RR ? RR : null
       }
       afterRender() {
         if (0 === this.pending.size) return;
-        const WW = this.deps.now();
-        for (const [iW, {
-            untilMs: OW,
-            biteAtMs: mW
-          }] of this.pending)(this.settle(iW, mW) || WW > OW) && this.pending.delete(iW)
+        const RR = this.deps.now();
+        for (const [JR, {
+            untilMs: GR,
+            biteAtMs: yR
+          }] of this.pending)(this.settle(JR, yR) || RR > GR) && this.pending.delete(JR)
       }
       dispose() {
         this.pending.clear(), this.localHook = null
       }
-      settle(WW, iW) {
-        const OW = this.deps.getLineOwner(WW);
-        if (null === OW) return !1;
-        if (!this.deps.isLocalPlayer(OW)) return !0;
+      settle(RR, JR) {
+        const GR = this.deps.getLineOwner(RR);
+        if (null === GR) return !1;
+        if (!this.deps.isLocalPlayer(GR)) return !0;
         if (this.localHook = {
-            hookId: WW,
-            biteAtMs: iW
+            hookId: RR,
+            biteAtMs: JR
           }, !this.deps.isHushWaiting()) {
-          const [iW, OW] = this.deps.getHookPosition(WW);
-          this.deps.onCastLanded(iW, OW)
+          const [JR, GR] = this.deps.getHookPosition(RR);
+          this.deps.onCastLanded(JR, GR)
         }
         return this.deps.onLocalHookSettled(), !0
       }
     }
-    var tL = OW(2937);
-    const ZL = {
+    var iq = GR(3017);
+    const fq = {
         0: [15],
         1: [40, 60, 40],
         2: [40, 60, 40, 60, 60],
         3: [30, 50, 30, 50, 90]
       },
-      xL = {
+      Vq = {
         1: {
           count: 24,
           rise: 2.5,
@@ -9595,16 +9561,16 @@ export const modules = {
           colour: [206, 145, 206]
         }
       };
-    class lL {
-      constructor(WW) {
-        this.deps = WW, this.tell = null
+    class Kq {
+      constructor(RR) {
+        this.deps = RR, this.tell = null
       }
-      receiveTell(WW) {
+      receiveTell(RR) {
         let {
-          biteTellTier: iW
-        } = WW;
+          biteTellTier: JR
+        } = RR;
         this.tell = {
-          tier: iW,
+          tier: JR,
           atMs: this.deps.now(),
           burst: !1
         }, this.burstAtHook()
@@ -9612,35 +9578,35 @@ export const modules = {
       onLocalHookSettled() {
         null !== this.tell && this.deps.now() - this.tell.atMs <= 500 && this.burstAtHook()
       }
-      onLocalWaitEnded(WW) {
-        const iW = this.tell;
-        if (this.tell = null, !WW) return;
-        const OW = null !== iW && this.deps.now() - iW.atMs <= 3e3 ? iW.tier : 0;
-        this.deps.vibrate(ZL[OW])
+      onLocalWaitEnded(RR) {
+        const JR = this.tell;
+        if (this.tell = null, !RR) return;
+        const GR = null !== JR && this.deps.now() - JR.atMs <= 3e3 ? JR.tier : 0;
+        this.deps.vibrate(fq[GR])
       }
       burstAtHook() {
-        const WW = this.tell,
-          iW = this.deps.getLocalHookPosition();
-        null === WW || WW.burst || null === iW || (WW.burst = !0, this.deps.playParticles(function(WW, iW) {
-          let [OW, mW, EW] = iW;
+        const RR = this.tell,
+          JR = this.deps.getLocalHookPosition();
+        null === RR || RR.burst || null === JR || (RR.burst = !0, this.deps.playParticles(function(RR, JR) {
+          let [GR, yR, tR] = JR;
           const {
-            count: NW,
-            rise: PW,
-            colour: LW
-          } = xL[WW], [cW, wW, tW] = LW;
+            count: uR,
+            rise: ZR,
+            colour: qR
+          } = Vq[RR], [iR, fR, VR] = qR;
           return {
             texture: "glint",
-            pos1: [OW - .3, mW, EW - .3],
-            pos2: [OW + .3, mW + .2, EW + .3],
-            dir1: [-.6, PW, -.6],
-            dir2: [.6, 1.4 * PW, .6],
+            pos1: [GR - .3, yR, tR - .3],
+            pos2: [GR + .3, yR + .2, tR + .3],
+            dir1: [-.6, ZR, -.6],
+            dir2: [.6, 1.4 * ZR, .6],
             minLifeTime: .5,
             maxLifeTime: .9,
             minEmitPower: 1,
             maxEmitPower: 1.6,
             minSize: .12,
             maxSize: .3,
-            manualEmitCount: NW,
+            manualEmitCount: uR,
             gravity: [0, -4, 0],
             velocityGradients: [{
               timeFraction: 0,
@@ -9653,92 +9619,92 @@ export const modules = {
             }],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [cW, wW, tW, 1],
+              minColor: [iR, fR, VR, 1],
               maxColor: [255, 255, 255, 1]
             }, {
               timeFraction: 1,
-              minColor: [cW, wW, tW, 0],
-              maxColor: [cW, wW, tW, 0]
+              minColor: [iR, fR, VR, 0],
+              maxColor: [iR, fR, VR, 0]
             }],
-            blendMode: tL.d.Add,
+            blendMode: iq.c.Add,
             hideDist: 48
           }
-        }(WW.tier, iW)))
+        }(RR.tier, JR)))
       }
     }
-    var AL = OW(1244),
-      bL = OW(2042),
-      jL = OW(39),
-      UL = OW(39890),
-      kL = OW(182);
-    const sL = kL.f.ZU * kL.f.playerEyeToHeightRatio;
-    class ML {
-      constructor(WW) {
-        this.host = WW, this.lava = [], this.loop = null, this.nextUpdateAt = 0
+    var wq = GR(1343),
+      rq = GR(2137),
+      eq = GR(46),
+      aq = GR(39878),
+      Lq = GR(203);
+    const nq = Lq.g.Kn * Lq.g.playerEyeToHeightRatio;
+    class Uq {
+      constructor(RR) {
+        this.host = RR, this.lava = [], this.loop = null, this.nextUpdateAt = 0
       }
-      yZ(WW) {
-        this.lava = WW, this.nextUpdateAt = 0
+      BK(RR) {
+        this.lava = RR, this.nextUpdateAt = 0
       }
-      hZ() {
-        var WW;
-        const iW = this.host.now();
-        if (iW < this.nextUpdateAt) return;
-        this.nextUpdateAt = iW + 250;
-        const OW = this.host.playerPosition(),
-          mW = OW && this.findNearest([OW[0], OW[1] + sL, OW[2]]);
-        if (!mW || mW.distance >= 40) return void this.stop();
-        const EW = .5 * Math.min(1, (40 - mW.distance) / 8);
-        this.loop ? this.loop.setRelativeVolume(EW) : this.loop = this.host.play("lavaFlow", EW, mW.position, 40 + sL, 9, !0), null === (WW = this.loop) || void 0 === WW || WW.setPosition(mW.position)
+      gK() {
+        var RR;
+        const JR = this.host.now();
+        if (JR < this.nextUpdateAt) return;
+        this.nextUpdateAt = JR + 250;
+        const GR = this.host.playerPosition(),
+          yR = GR && this.findNearest([GR[0], GR[1] + nq, GR[2]]);
+        if (!yR || yR.distance >= 40) return void this.stop();
+        const tR = .5 * Math.min(1, (40 - yR.distance) / 8);
+        this.loop ? this.loop.setRelativeVolume(tR) : this.loop = this.host.play("lavaFlow", tR, yR.position, 40 + nq, 9, !0), null === (RR = this.loop) || void 0 === RR || RR.setPosition(yR.position)
       }
       dispose() {
         this.stop(), this.lava = []
       }
       stop() {
-        var WW;
-        null === (WW = this.loop) || void 0 === WW || WW.stop(), this.loop = null
+        var RR;
+        null === (RR = this.loop) || void 0 === RR || RR.stop(), this.loop = null
       }
-      findNearest(WW) {
-        let iW = -1,
-          OW = 1 / 0;
-        for (let mW = 0; mW < this.lava.length; mW += 3) {
-          const EW = this.lava[mW] - WW[0],
-            NW = this.lava[mW + 1] - WW[1],
-            PW = this.lava[mW + 2] - WW[2],
-            LW = EW * EW + NW * NW + PW * PW;
-          LW < OW && (OW = LW, iW = mW)
+      findNearest(RR) {
+        let JR = -1,
+          GR = 1 / 0;
+        for (let yR = 0; yR < this.lava.length; yR += 3) {
+          const tR = this.lava[yR] - RR[0],
+            uR = this.lava[yR + 1] - RR[1],
+            ZR = this.lava[yR + 2] - RR[2],
+            qR = tR * tR + uR * uR + ZR * ZR;
+          qR < GR && (GR = qR, JR = yR)
         }
-        return iW < 0 ? null : {
-          position: [this.lava[iW], this.lava[iW + 1], this.lava[iW + 2]],
-          distance: Math.sqrt(OW)
+        return JR < 0 ? null : {
+          position: [this.lava[JR], this.lava[JR + 1], this.lava[JR + 2]],
+          distance: Math.sqrt(GR)
         }
       }
     }
-    var KL = OW(2029),
-      SL = OW(39894);
-    const YL = {
+    var Wq = GR(2115),
+      Aq = GR(39880);
+    const Cq = {
       "Grey Portal": "Gray"
     };
-    for (const uL of ZW.yc) YL[`${uL} Portal`] = uL;
-    const yL = Object.keys(YL),
-      TL = Object.fromEntries(yL.map((WW => [WW, (0, ZW.Y)(ZW.M[`${(0,ZW.qe)(YL[WW])}Team`])])));
-    Object.fromEntries(yL.map((WW => [WW, ZW.M[`${(0,ZW.qe)(YL[WW])}UiText`]])));
-    class JL {
-      constructor(WW, iW) {
-        this.presentation = WW, this.portal = iW, this.unlocked = void 0
+    for (const bq of KR.Cc) Cq[`${bq} Portal`] = bq;
+    const Xq = Object.keys(Cq),
+      Mq = Object.fromEntries(Xq.map((RR => [RR, (0, KR.P)(KR.C[`${(0,KR.ve)(Cq[RR])}Team`])])));
+    Object.fromEntries(Xq.map((RR => [RR, KR.C[`${(0,KR.ve)(Cq[RR])}UiText`]])));
+    class Bq {
+      constructor(RR, JR) {
+        this.presentation = RR, this.portal = JR, this.unlocked = void 0
       }
-      yZ(WW) {
-        const iW = !1 === this.unlocked && WW;
-        this.unlocked = WW, this.hZ();
+      BK(RR) {
+        const JR = !1 === this.unlocked && RR;
+        this.unlocked = RR, this.gK();
         const {
-          min: OW,
-          max: mW,
-          unlockedBlock: EW
+          min: GR,
+          max: yR,
+          unlockedBlock: tR
         } = this.portal;
-        if (iW && this.presentation.hasChunk(...OW)) {
-          const [WW, iW, NW] = TL[EW];
+        if (JR && this.presentation.hasChunk(...GR)) {
+          const [RR, JR, uR] = Mq[tR];
           this.presentation.playParticles({
-            pos1: [...OW],
-            pos2: mW.map((WW => WW + 1)),
+            pos1: [...GR],
+            pos2: yR.map((RR => RR + 1)),
             dir1: [-1, 0, -1],
             dir2: [1, 1, 1],
             texture: "glint",
@@ -9753,8 +9719,8 @@ export const modules = {
             gravity: [0, .5, 0],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [WW, iW, NW, 1],
-              maxColor: [Math.min(255, WW + 55), Math.min(255, iW + 55), Math.min(255, NW + 90), 1]
+              minColor: [RR, JR, uR, 1],
+              maxColor: [Math.min(255, RR + 55), Math.min(255, JR + 55), Math.min(255, uR + 90), 1]
             }],
             velocityGradients: [{
               timeFraction: 0,
@@ -9765,329 +9731,329 @@ export const modules = {
           })
         }
       }
-      hZ() {
-        var WW;
-        const iW = this.unlocked ? this.portal.unlockedBlock : null !== (WW = this.portal.lockedBlock) && void 0 !== WW ? WW : "Light Gray Portal",
+      gK() {
+        var RR;
+        const JR = this.unlocked ? this.portal.unlockedBlock : null !== (RR = this.portal.lockedBlock) && void 0 !== RR ? RR : "Light Gray Portal",
           {
-            min: OW,
-            max: mW
+            min: GR,
+            max: yR
           } = this.portal;
-        for (let EW = OW[0]; EW <= mW[0]; EW++)
-          for (let WW = OW[1]; WW <= mW[1]; WW++)
-            for (let NW = OW[2]; NW <= mW[2]; NW++) this.presentation.hasChunk(EW, WW, NW) && this.presentation.Yk(EW, WW, NW) !== iW && this.presentation.xH(EW, WW, NW, iW)
+        for (let tR = GR[0]; tR <= yR[0]; tR++)
+          for (let RR = GR[1]; RR <= yR[1]; RR++)
+            for (let uR = GR[2]; uR <= yR[2]; uR++) this.presentation.hasChunk(tR, RR, uR) && this.presentation.rW(tR, RR, uR) !== JR && this.presentation.lD(tR, RR, uR, JR)
       }
     }
-    var hL = OW(39771);
-    OW(39752);
-    const HL = {
+    var lq = GR(39758);
+    GR(39741);
+    const pq = {
         farming_1: {
-          raises: WW => "NPC" === WW.type && "chef" === WW.variation,
+          raises: RR => "NPC" === RR.type && "chef" === RR.variation,
           rise: .4
         },
         fishing_1: {
-          raises: WW => "Draugr Warper" === WW.type,
+          raises: RR => "Draugr Warper" === RR.type,
           rise: .4
         }
       },
-      nL = (WW, iW, OW, EW) => {
+      gq = (RR, JR, GR, tR) => {
         let {
-          localPlayerId: NW
-        } = EW;
-        const PW = new OE({
-          translate: (WW, iW) => (0, ZE.u)(AL.e.get().getCurrentLanguageCode(), WW, iW),
-          translateWithIcons: (WW, iW) => (0, ZE.p)(AL.e.get().getCurrentLanguageCode(), WW, iW),
-          setMenuOpen: WW => {
-            WW ? (0, qW.H)() : (0, qW.m)()
+          localPlayerId: uR
+        } = tR;
+        const ZR = new hy({
+          translate: (RR, JR) => (0, it.w)(wq.g.get().getCurrentLanguageCode(), RR, JR),
+          translateWithIcons: (RR, JR) => (0, it.r)(wq.g.get().getCurrentLanguageCode(), RR, JR),
+          setMenuOpen: RR => {
+            RR ? (0, dR.t)() : (0, dR.h)()
           },
-          dismissMenu: qW.q,
-          publishSkills: WW => {
-            RW.l.iZ(Ci, WW, !0)
+          dismissMenu: dR.j,
+          publishSkills: RR => {
+            ER.n.JK(IJ, RR, !0)
           },
-          publishQuests: WW => {
-            RW.l.iZ(Ri, WW, !0)
+          publishQuests: RR => {
+            ER.n.JK(jJ, RR, !0)
           },
-          publishQuestNotification: WW => {
-            RW.l.iZ(Gi, WW, !0)
+          publishQuestNotification: RR => {
+            ER.n.JK(dJ, RR, !0)
           },
-          publishDungeons: WW => {
-            RW.l.iZ(ri, WW, !0)
+          publishDungeons: RR => {
+            ER.n.JK(kJ, RR, !0)
           },
-          publishCollections: WW => {
-            RW.l.iZ(UO, WW, !0)
+          publishCollections: RR => {
+            ER.n.JK(aG, RR, !0)
           },
-          publishMap: WW => {
-            RW.l.iZ(wW, WW, !0)
+          publishMap: RR => {
+            ER.n.JK(fR, RR, !0)
           },
-          publishHud: WW => {
-            RW.l.iZ(Qm, WW, !0)
+          publishHud: RR => {
+            ER.n.JK(Fy, RR, !0)
           },
-          publishPortalTransit: WW => {
-            RW.l.iZ(sO, WW, !0)
+          publishPortalTransit: RR => {
+            ER.n.JK(nG, RR, !0)
           },
-          isLoadingScreenUp: () => NE.d.get("loadingOverlayVisible"),
-          publishDailyReward: WW => {
-            RW.l.iZ(SO, WW, !0)
+          isLoadingScreenUp: () => Gt.d.get("loadingOverlayVisible"),
+          publishDailyReward: RR => {
+            ER.n.JK(AG, RR, !0)
           },
-          publishMailbox: WW => {
-            RW.l.iZ(hO, WW, !0)
+          publishMailbox: RR => {
+            ER.n.JK(lG, RR, !0)
           },
-          publishQuestGraph: WW => {
-            RW.l.iZ(nO, WW, !0)
+          publishQuestGraph: RR => {
+            ER.n.JK(gG, RR, !0)
           },
-          publishForge: WW => {
-            RW.l.iZ(zO, WW, !0)
+          publishForge: RR => {
+            ER.n.JK(QG, RR, !0)
           },
-          publishSmuggler: WW => {
-            RW.l.iZ(Wm, WW, !0)
+          publishSmuggler: RR => {
+            ER.n.JK(sG, RR, !0)
           },
-          publishKeepersChair: WW => {
-            RW.l.iZ(wm, WW, !0)
+          publishKeepersChair: RR => {
+            ER.n.JK(qy, RR, !0)
           },
-          publishReachLog: WW => {
-            RW.l.iZ(Zm, WW, !0)
+          publishReachLog: RR => {
+            ER.n.JK(fy, RR, !0)
           },
-          publishLampLight: WW => {
-            RW.l.iZ(Um, WW, !0)
+          publishLampLight: RR => {
+            ER.n.JK(ay, RR, !0)
           },
-          publishMagmaward: WW => {
-            RW.l.iZ(sm, WW, !0)
+          publishMagmaward: RR => {
+            ER.n.JK(ny, RR, !0)
           },
-          publishGlowtide: WW => {
-            RW.l.iZ(Km, WW, !0)
+          publishGlowtide: RR => {
+            ER.n.JK(Wy, RR, !0)
           },
-          publishGlowMeter: WW => {
-            RW.l.iZ(Ym, WW, !0)
+          publishGlowMeter: RR => {
+            ER.n.JK(Cy, RR, !0)
           },
-          publishHushWait: WW => {
-            RW.l.iZ(Tm, WW, !0)
+          publishHushWait: RR => {
+            ER.n.JK(My, RR, !0)
           },
-          publishPassage: WW => {
-            RW.l.iZ(mm, WW, !0)
+          publishPassage: RR => {
+            ER.n.JK(Jy, RR, !0)
           },
-          publishTideCharts: WW => {
-            RW.l.iZ(hm, WW, !0)
+          publishTideCharts: RR => {
+            ER.n.JK(ly, RR, !0)
           },
-          publishRegulars: WW => {
-            RW.l.iZ(Dm, WW, !0)
+          publishRegulars: RR => {
+            ER.n.JK(Dy, RR, !0)
           },
-          publishHiddenWaters: WW => {
-            RW.l.iZ(Xm, WW, !0)
+          publishHiddenWaters: RR => {
+            ER.n.JK(Iy, RR, !0)
           },
-          publishDialogue: WW => {
-            RW.l.iZ(qm, WW, !0)
+          publishDialogue: RR => {
+            ER.n.JK(zy, RR, !0)
           },
-          publishAutographs: WW => {
-            RW.l.iZ(rm, WW, !0)
+          publishAutographs: RR => {
+            ER.n.JK(Yy, RR, !0)
           },
-          onDailyRewardStarted: WW => {
-            uW.playSound(NW, WW.day === TW ? "trumpetFlare" : "chestOpen", .8, 1)
+          onDailyRewardStarted: RR => {
+            OR.playSound(uR, RR.day === lR ? "trumpetFlare" : "chestOpen", .8, 1)
           },
-          onDailyRewardCoinLanded: (WW, iW) => {
-            uW.playSound(NW, "exp_collect", .35, 1 + .6 * WW / (iW - 1)), RW.l.iZ(YO, WW === iW - 1)
+          onDailyRewardCoinLanded: (RR, JR) => {
+            OR.playSound(uR, "exp_collect", .35, 1 + .6 * RR / (JR - 1)), ER.n.JK(CG, RR === JR - 1)
           },
-          onDailyRewardItemLanded: WW => {
-            uW.playSound(NW, "pickUp", .6, 1 + .15 * WW)
+          onDailyRewardItemLanded: RR => {
+            OR.playSound(uR, "pickUp", .6, 1 + .15 * RR)
           },
           onMailboxStarted: () => {
-            uW.playSound(NW, "rpgMetalClick", .6, 1), uW.playSound(NW, "rpgBookFlip1", .7, 1)
+            OR.playSound(uR, "rpgMetalClick", .6, 1), OR.playSound(uR, "rpgBookFlip1", .7, 1)
           },
           onDailyRewardFinished: () => {
-            uW.sendCommand("skyblockDailyRewardDone")
+            OR.sendCommand("skyblockDailyRewardDone")
           },
-          journeyStorage: jL.j,
-          requestTracking: WW => {
-            uW.sendCommand(`quests track ${WW}`)
+          journeyStorage: eq.k,
+          requestTracking: RR => {
+            OR.sendCommand(`quests track ${RR}`)
           },
-          requestDungeonEnter: (WW, iW) => {
-            uW.sendCommand(`dungeonEnter ${WW} ${iW}`)
+          requestDungeonEnter: (RR, JR) => {
+            OR.sendCommand(`dungeonEnter ${RR} ${JR}`)
           },
-          requestQuestJump: WW => {
-            uW.sendCommand(`${oW} jump ${WW}`)
+          requestQuestJump: RR => {
+            OR.sendCommand(`${xR} jump ${RR}`)
           },
-          requestQuestArrive: (WW, iW) => {
-            const OW = `${oW} arrive ${WW}`;
-            uW.sendCommand(iW ? `${OW} complete` : OW)
+          requestQuestArrive: (RR, JR) => {
+            const GR = `${xR} arrive ${RR}`;
+            OR.sendCommand(JR ? `${GR} complete` : GR)
           },
-          requestForge: WW => {
+          requestForge: RR => {
             let {
-              blade: iW,
-              guard: OW,
-              handle: mW
-            } = WW;
-            uW.sendCommand(`forge ${iW} ${OW} ${mW}`)
+              blade: JR,
+              guard: GR,
+              handle: yR
+            } = RR;
+            OR.sendCommand(`forge ${JR} ${GR} ${yR}`)
           },
           requestDialogue: () => {
-            uW.sendCommand("quests dialogue")
+            OR.sendCommand("quests dialogue")
           },
-          requestSmuggle: (WW, iW) => {
-            uW.sendCommand(`smuggle ${WW} ${iW}`)
+          requestSmuggle: (RR, JR) => {
+            OR.sendCommand(`smuggle ${RR} ${JR}`)
           },
-          requestKeepersChairAim: WW => {
-            uW.sendCommand(`keeperschair-aim ${WW}`)
+          requestKeepersChairAim: RR => {
+            OR.sendCommand(`keeperschair-aim ${RR}`)
           },
           requestReachLogOpen: () => {
-            uW.sendCommand("reachlog-open")
+            OR.sendCommand("reachlog-open")
           },
-          requestLampLight: WW => {
-            uW.sendCommand(`${WW}`)
+          requestLampLight: RR => {
+            OR.sendCommand(`${RR}`)
           },
-          requestTravel: WW => {
-            uW.sendCommand(`map travel ${WW.kind} ${WW.id} ${WW.requestId}`)
+          requestTravel: RR => {
+            OR.sendCommand(`map travel ${RR.kind} ${RR.id} ${RR.requestId}`)
           }
         });
-        let LW, cW, tW, xW, lW, kW, sW, MW, KW, yW, JW, HW, nW, uW, dW = null;
-        const DW = HL[null !== OW && void 0 !== OW ? OW : ""],
-          fW = (WW, iW) => {
-            null !== DW && void 0 !== DW && DW.raises(iW) && uW.setNametagOffset(WW, DW.rise)
+        let qR, iR, VR, wR, rR, UR, WR, AR, CR, BR, pR, bR, vR, OR, NR = null;
+        const cR = pq[null !== GR && void 0 !== GR ? GR : ""],
+          mR = (RR, JR) => {
+            null !== cR && void 0 !== cR && cR.raises(JR) && OR.setNametagOffset(RR, cR.rise)
           },
-          CW = new lL({
+          zR = new Kq({
             getLocalHookPosition: () => {
-              const WW = IW.getLocalHook();
-              return null !== WW && uW.checkValid(WW) ? uW.Vk(WW) : null
+              const RR = kR.getLocalHook();
+              return null !== RR && OR.checkValid(RR) ? OR.vW(RR) : null
             },
-            playParticles: WW => {
-              uW.playParticleEffect(WW)
+            playParticles: RR => {
+              OR.playParticleEffect(RR)
             },
-            vibrate: WW => {
-              GW.g.play("fishBite", WW)
+            vibrate: RR => {
+              YR.e.play("fishBite", RR)
             },
             now: () => performance.now()
           }),
-          IW = new wL({
-            getLineOwner: WW => uW.checkValid(WW) ? uW.getLineOwner(WW) : null,
-            isLocalPlayer: WW => uW.isLocalPlayer(WW),
-            getHookPosition: WW => {
-              const [iW, , OW] = uW.Vk(WW);
-              return [iW, OW]
+          kR = new qq({
+            getLineOwner: RR => OR.checkValid(RR) ? OR.getLineOwner(RR) : null,
+            isLocalPlayer: RR => OR.isLocalPlayer(RR),
+            getHookPosition: RR => {
+              const [JR, , GR] = OR.vW(RR);
+              return [JR, GR]
             },
             isHushWaiting: () => {
-              var WW;
-              return "waiting" === (null === (WW = PW.hushWait.getSnapshot()) || void 0 === WW ? void 0 : WW.phase)
+              var RR;
+              return "waiting" === (null === (RR = ZR.hushWait.getSnapshot()) || void 0 === RR ? void 0 : RR.phase)
             },
-            onCastLanded: (WW, iW) => {
-              PW.tideCharts.castLanded(WW, iW)
+            onCastLanded: (RR, JR) => {
+              ZR.tideCharts.castLanded(RR, JR)
             },
             onLocalHookSettled: () => {
-              CW.onLocalHookSettled()
+              zR.onLocalHookSettled()
             },
-            onLocalWaitEnded: WW => {
-              CW.onLocalWaitEnded(WW)
+            onLocalWaitEnded: RR => {
+              zR.onLocalWaitEnded(RR)
             },
             now: () => performance.now()
           }),
-          aW = new ML({
+          QR = new Uq({
             now: () => performance.now(),
-            playerPosition: () => uW.checkValid(NW) ? uW.Vk(NW) : null,
-            play: (WW, iW, OW, mW, EW, PW) => uW.playSound(NW, WW, iW, 1, {
-              FO: OW,
-              maxHearDist: mW,
-              refDistance: EW
-            }, PW)
+            playerPosition: () => OR.checkValid(uR) ? OR.vW(uR) : null,
+            play: (RR, JR, GR, yR, tR, ZR) => OR.playSound(uR, RR, JR, 1, {
+              TG: GR,
+              maxHearDist: yR,
+              refDistance: tR
+            }, ZR)
           }),
-          rW = new Map;
-        let zW;
+          FR = new Map;
+        let TR;
         return {
-          onCreate: WW => {
-            if (uW = WW, dW = new SL.SkyblockEntityFacing(WW, DW ? fW : null), PW.portalTransit.resumeArrival(null !== OW && void 0 !== OW ? OW : null), (null !== OW && void 0 !== OW ? OW : mW) === mW) {
-              let WW = -1 / 0;
-              zW = RW.l.subscribe("toggleMenu", (iW => {
-                const OW = performance.now();
-                "inventory|Workbench" !== iW || "cross_to_hub" !== PW.quests.getTrackedQuestId() || OW - WW < 1e4 || (WW = OW, uW.sendCommand("skyblockWorkbenchOpened"))
+          onCreate: RR => {
+            if (OR = RR, NR = new Aq.SkyblockEntityFacing(RR, cR ? mR : null), ZR.portalTransit.resumeArrival(null !== GR && void 0 !== GR ? GR : null), (null !== GR && void 0 !== GR ? GR : yR) === yR) {
+              let RR = -1 / 0;
+              TR = ER.n.subscribe("toggleMenu", (JR => {
+                const GR = performance.now();
+                "inventory|Workbench" !== JR || "cross_to_hub" !== ZR.quests.getTrackedQuestId() || GR - RR < 1e4 || (RR = GR, OR.sendCommand("skyblockWorkbenchOpened"))
               }))
             }
-            for (const [mW, EW] of Object.entries(null !== (iW = eW[null !== OW && void 0 !== OW ? OW : ""]) && void 0 !== iW ? iW : {})) {
-              var iW;
-              rW.set(mW, new JL({
-                hasChunk: (iW, OW, mW) => WW.isBlockInLoadedChunk(iW, OW, mW),
-                Yk: (iW, OW, mW) => WW.blockIdToBlockName(WW.getBlockId(iW, OW, mW)),
-                xH: (iW, OW, mW, EW) => {
-                  WW.xH(iW, OW, mW, EW)
+            for (const [yR, tR] of Object.entries(null !== (JR = DR[null !== GR && void 0 !== GR ? GR : ""]) && void 0 !== JR ? JR : {})) {
+              var JR;
+              FR.set(yR, new Bq({
+                hasChunk: (JR, GR, yR) => RR.isBlockInLoadedChunk(JR, GR, yR),
+                rW: (JR, GR, yR) => RR.blockIdToBlockName(RR.getBlockId(JR, GR, yR)),
+                lD: (JR, GR, yR, tR) => {
+                  RR.lD(JR, GR, yR, tR)
                 },
-                playParticles: iW => {
-                  WW.playParticleEffect(iW)
+                playParticles: JR => {
+                  RR.playParticleEffect(JR)
                 }
-              }, EW))
+              }, tR))
             }
-            nW = (0, KL.f)((WW => (0, yi.f)(WW) ? (0, yi.c)(WW) : null)), PW.resolveItemName = (iW, OW) => {
-              const mW = WW.getItemStat(NW, iW, "displayName");
-              return mW && "object" === typeof mW && "translationKey" in mW ? OW(mW.translationKey, (0, ZE.o)(mW.params, bL.e.shown)) : "string" === typeof mW ? OW(mW) : iW
-            }, PW.quests.notifications.onShown = WW => {
-              "quest" === WW ? uW.playSound(NW, "magicAccent1", 1, 1) : "skillLevel" === WW ? uW.playSound(NW, "magicAccent1", 1, .6) : "landmark" === WW ? uW.playSound(NW, "trumpetFlare", 1, .6) : "npcNote" === WW ? uW.playSound(NW, "magicAccent2", .8, 1.1) : "started" === WW ? uW.playSound(NW, (0, PL.h)("bigDrumSwish"), 1, 1) : uW.playSound(NW, (0, PL.h)("rpgHandleSmallLeather"), 1, 1)
-            }, PW.forge.onPartSelected = () => {
-              uW.playSound(NW, "rpgMetalClick", .6, .9 + .2 * Math.random())
-            }, PW.forge.onOpened = () => {
-              ! function(WW) {
-                WW.preloadSounds(cL(4, !0).map((WW => WW.sound)))
-              }(WW)
-            }, PW.forge.onForgeStarted = (iW, OW, mW) => function(WW, iW, OW, mW, EW) {
-              const NW = [],
-                PW = [],
-                LW = OW => {
-                  const mW = WW.playSound(iW, OW.Kl ? (0, PL.h)(OW.sound) : OW.sound, OW.volume, OW.rate);
-                  mW && (PW.push(mW), void 0 !== OW.cutAfter && NW.push(setTimeout((() => {
-                    mW.fade(mW.getVolume(), 0, 300)
-                  }), OW.cutAfter)))
+            vR = (0, Wq.h)((RR => (0, BJ.g)(RR) ? (0, BJ.d)(RR) : null)), ZR.resolveItemName = (JR, GR) => {
+              const yR = RR.getItemStat(uR, JR, "displayName");
+              return yR && "object" === typeof yR && "translationKey" in yR ? GR(yR.translationKey, (0, it.o)(yR.params, rq.e.shown)) : "string" === typeof yR ? GR(yR) : JR
+            }, ZR.quests.notifications.onShown = RR => {
+              "quest" === RR ? OR.playSound(uR, "magicAccent1", 1, 1) : "skillLevel" === RR ? OR.playSound(uR, "magicAccent1", 1, .6) : "landmark" === RR ? OR.playSound(uR, "trumpetFlare", 1, .6) : "npcNote" === RR ? OR.playSound(uR, "magicAccent2", .8, 1.1) : "started" === RR ? OR.playSound(uR, (0, tq.f)("bigDrumSwish"), 1, 1) : OR.playSound(uR, (0, tq.f)("rpgHandleSmallLeather"), 1, 1)
+            }, ZR.forge.onPartSelected = () => {
+              OR.playSound(uR, "rpgMetalClick", .6, .9 + .2 * Math.random())
+            }, ZR.forge.onOpened = () => {
+              ! function(RR) {
+                RR.preloadSounds(Zq(4, !0).map((RR => RR.sound)))
+              }(RR)
+            }, ZR.forge.onForgeStarted = (JR, GR, yR) => function(RR, JR, GR, yR, tR) {
+              const uR = [],
+                ZR = [],
+                qR = GR => {
+                  const yR = RR.playSound(JR, GR.Ur ? (0, tq.f)(GR.sound) : GR.sound, GR.volume, GR.rate);
+                  yR && (ZR.push(yR), void 0 !== GR.cutAfter && uR.push(setTimeout((() => {
+                    yR.fade(yR.getVolume(), 0, 300)
+                  }), GR.cutAfter)))
                 };
-              for (const cW of cL(OW, mW)) EW ? NW.push(setTimeout((() => {
-                LW(cW)
-              }), Math.max(0, cW.beat - cW.lead / cW.rate))) : cW.beat !== gO && "magicAccent2" !== cW.sound && "trumpetFlare" !== cW.sound || LW(cW);
+              for (const iR of Zq(GR, yR)) tR ? uR.push(setTimeout((() => {
+                qR(iR)
+              }), Math.max(0, iR.beat - iR.lead / iR.rate))) : iR.beat !== DG && "magicAccent2" !== iR.sound && "trumpetFlare" !== iR.sound || qR(iR);
               return () => {
-                for (const WW of NW) clearTimeout(WW);
-                for (const WW of PW) WW.fade(WW.getVolume(), 0, 120)
+                for (const RR of uR) clearTimeout(RR);
+                for (const RR of ZR) RR.fade(RR.getVolume(), 0, 120)
               }
-            }(WW, NW, iW, OW, mW), PW.smuggler.onBought = () => {
-              (0, UL.e)(uW, NW)
-            }, PW.compass.register(new AW(PW.map, !0)), PW.compass.register(new AW(PW.map, !1)), PW.compass.register(new jW(PW.map)), PW.compass.register(new UW((() => PW.quests.getSnapshot().compassTarget)));
-            for (const OW of ["enemy", "npc"]) PW.compass.register(new bW(PW.map, OW, (iW => WW.checkValid(iW) ? WW.Vk(iW) : void 0), (iW => WW.isAlive(iW))))
+            }(RR, uR, JR, GR, yR), ZR.smuggler.onBought = () => {
+              (0, aq.e)(OR, uR)
+            }, ZR.compass.register(new eR(ZR.map, !0)), ZR.compass.register(new eR(ZR.map, !1)), ZR.compass.register(new LR(ZR.map)), ZR.compass.register(new nR((() => ZR.quests.getSnapshot().compassTarget)));
+            for (const GR of ["enemy", "npc"]) ZR.compass.register(new aR(ZR.map, GR, (JR => RR.checkValid(JR) ? RR.vW(JR) : void 0), (JR => RR.isAlive(JR))))
           },
-          onAfterRender: (WW, iW) => {
-            const OW = uW.checkValid(NW) ? uW.Vk(NW) : null;
-            PW.navigation.afterRender(OW, performance.now(), iW), PW.glowtide.afterRender(OW, iW.cameraHeading), PW.tideCharts.afterRender(OW), IW.afterRender()
+          onAfterRender: (RR, JR) => {
+            const GR = OR.checkValid(uR) ? OR.vW(uR) : null;
+            ZR.navigation.afterRender(GR, performance.now(), JR), ZR.glowtide.afterRender(GR, JR.cameraHeading), ZR.tideCharts.afterRender(GR), kR.afterRender()
           },
           onClose: () => {
-            var WW, iW, OW, mW, EW, NW, wW, ZW, AW, bW, jW, UW, kW, SW, YW;
-            zW && RW.l.unsubscribe(zW), null === (WW = nW) || void 0 === WW || WW(), aW.dispose(), null === (iW = dW) || void 0 === iW || iW.dispose(), IW.dispose(), PW.dispose(), null === (OW = LW) || void 0 === OW || OW(), null === (mW = cW) || void 0 === mW || mW(), null === (EW = tW) || void 0 === EW || EW(), null === (NW = xW) || void 0 === NW || NW(), null === (wW = lW) || void 0 === wW || wW(), null === (ZW = sW) || void 0 === ZW || ZW(), null === (AW = undefined) || void 0 === AW || AW(), null === (bW = MW) || void 0 === bW || bW(), null === (jW = KW) || void 0 === jW || jW(), null === (UW = yW) || void 0 === UW || UW(), null === (kW = JW) || void 0 === kW || kW(), null === (SW = undefined) || void 0 === SW || SW(), null === (YW = HW) || void 0 === YW || YW()
+            var RR, JR, GR, yR, tR, uR, fR, KR, eR, aR, LR, nR, UR, XR, MR;
+            TR && ER.n.unsubscribe(TR), null === (RR = vR) || void 0 === RR || RR(), QR.dispose(), null === (JR = NR) || void 0 === JR || JR.dispose(), kR.dispose(), ZR.dispose(), null === (GR = qR) || void 0 === GR || GR(), null === (yR = iR) || void 0 === yR || yR(), null === (tR = VR) || void 0 === tR || tR(), null === (uR = wR) || void 0 === uR || uR(), null === (fR = rR) || void 0 === fR || fR(), null === (KR = WR) || void 0 === KR || KR(), null === (eR = undefined) || void 0 === eR || eR(), null === (aR = AR) || void 0 === aR || aR(), null === (LR = CR) || void 0 === LR || LR(), null === (nR = BR) || void 0 === nR || nR(), null === (UR = pR) || void 0 === UR || UR(), null === (XR = undefined) || void 0 === XR || XR(), null === (MR = bR) || void 0 === MR || MR()
           },
-          onPlayerChangeBlock: (WW, iW, mW, EW, LW, cW) => {
-            if (WW === NW && "Air" === cW) {
-              const WW = uW.getClientOption(NW, "creative");
-              PW.skills.predictBlock([iW, mW, EW], LW, WW);
-              const cW = function(WW, iW) {
-                  if ("hub" === iW || "farming_1" === iW || "mining_1" === iW) return !VW.has(WW) || "hub" !== iW && "mining_1" !== iW ? Object.hasOwn(gW, WW) ? gW[WW] : void 0 : vW
-                }(LW, OW),
-                wW = ("hub" === OW || "mining_1" === OW) && (ZW.jd.some((WW => WW === LW)) || Object.hasOwn(pW, LW) || "mining_1" === OW && "Block of Coal" === LW);
-              WW || void 0 === cW && !wW || uW.xH(iW, mW, EW, null !== cW && void 0 !== cW ? cW : vW)
+          onPlayerChangeBlock: (RR, JR, yR, tR, qR, iR) => {
+            if (RR === uR && "Air" === iR) {
+              const RR = OR.getClientOption(uR, "creative");
+              ZR.skills.predictBlock([JR, yR, tR], qR, RR);
+              const iR = function(RR, JR) {
+                  if ("hub" === JR || "farming_1" === JR || "mining_1" === JR) return !PR.has(RR) || "hub" !== JR && "mining_1" !== JR ? Object.hasOwn(oR, RR) ? oR[RR] : void 0 : HR
+                }(qR, GR),
+                fR = ("hub" === GR || "mining_1" === GR) && (KR.od.some((RR => RR === qR)) || Object.hasOwn(IR, qR) || "mining_1" === GR && "Block of Coal" === qR);
+              RR || void 0 === iR && !fR || OR.lD(JR, yR, tR, null !== iR && void 0 !== iR ? iR : HR)
             }
           },
-          onPlayerAttackEntity: (WW, iW) => {
-            if (WW !== NW || "Player" !== uW.getEntityType(iW)) return;
-            const [OW, mW, EW] = uW.Vk(iW);
-            uW.burstParticlePreset("critical", [OW, mW + 1, EW], 10)
+          onPlayerAttackEntity: (RR, JR) => {
+            if (RR !== uR || "Player" !== OR.getEntityType(JR)) return;
+            const [GR, yR, tR] = OR.vW(JR);
+            OR.burstParticlePreset("critical", [GR, yR + 1, tR], 10)
           },
-          onChangeBlockFail: WW => {
+          onChangeBlockFail: RR => {
             for (const {
-                Zi: iW
+                rJ: JR
               }
-              of WW) PW.skills.rejectBlock(iW)
+              of RR) ZR.skills.rejectBlock(JR)
           },
-          onReceivedMessageFromServer: (WW, iW) => {
-            if ("skyblockGatedPortal" === WW) {
-              var OW;
-              const [WW, mW] = iW;
-              return void(null === (OW = rW.get(WW)) || void 0 === OW || OW.yZ(mW))
+          onReceivedMessageFromServer: (RR, JR) => {
+            if ("skyblockGatedPortal" === RR) {
+              var GR;
+              const [RR, yR] = JR;
+              return void(null === (GR = FR.get(RR)) || void 0 === GR || GR.BK(yR))
             }
-            if ("skyblockDailyReward" === WW) return void PW.dailyReward.yZ(iW);
-            if ("skyblockMailbox" === WW) return void PW.mailbox.yZ(iW);
-            if ("skyblockPortalTransit" === WW) return void PW.portalTransit.yZ(iW);
-            if ("skyblockLava" === WW) return void aW.yZ(iW);
-            if ("skyblockForge" === WW) return void PW.forge.yZ(iW);
-            if ("skyblockMagmaward" === WW) return void PW.magmaward.yZ(iW);
-            if ("skyblockGlowtide" === WW) return void PW.glowtide.yZ(iW);
-            if ("skyblockGlowMeter" === WW) return void PW.glowMeter.yZ(iW);
-            if ("skyblockHushWait" === WW) return void PW.hushWait.yZ(iW);
-            if ("skyblockPassage" === WW) {
-              const WW = iW;
-              return PW.passage.yZ(WW), PW.reachLog.receivePassagePhase(WW.passagePhase), yW ??= (0, SW.y)({
+            if ("skyblockDailyReward" === RR) return void ZR.dailyReward.BK(JR);
+            if ("skyblockMailbox" === RR) return void ZR.mailbox.BK(JR);
+            if ("skyblockPortalTransit" === RR) return void ZR.portalTransit.BK(JR);
+            if ("skyblockLava" === RR) return void QR.BK(JR);
+            if ("skyblockForge" === RR) return void ZR.forge.BK(JR);
+            if ("skyblockMagmaward" === RR) return void ZR.magmaward.BK(JR);
+            if ("skyblockGlowtide" === RR) return void ZR.glowtide.BK(JR);
+            if ("skyblockGlowMeter" === RR) return void ZR.glowMeter.BK(JR);
+            if ("skyblockHushWait" === RR) return void ZR.hushWait.BK(JR);
+            if ("skyblockPassage" === RR) {
+              const RR = JR;
+              return ZR.passage.BK(RR), ZR.reachLog.receivePassagePhase(RR.passagePhase), BR ??= (0, XR.p)({
                 id: "skyblockPassage",
                 order: 5,
                 labelKey: "skyblockGame:passageButton",
@@ -10096,16 +10062,16 @@ export const modules = {
                   name: "Moonfish"
                 },
                 panel: !0,
-                onClick: PW.passage.show
-              }), void PW.keepersChair.receivePassage({
-                keepersChairPassagePhase: WW.passagePhase,
-                keepersChairPassageNextPhase: WW.passageNextPhase,
-                keepersChairPassageTurnsInMs: WW.passageTurnsInMs
+                onClick: ZR.passage.show
+              }), void ZR.keepersChair.receivePassage({
+                keepersChairPassagePhase: RR.passagePhase,
+                keepersChairPassageNextPhase: RR.passageNextPhase,
+                keepersChairPassageTurnsInMs: RR.passageTurnsInMs
               })
             }
-            if ("skyblockTideCharts" === WW) {
-              const WW = iW;
-              return PW.tideCharts.yZ(WW), void(WW.tideCharts.length > 0 && (JW ??= (0, SW.y)({
+            if ("skyblockTideCharts" === RR) {
+              const RR = JR;
+              return ZR.tideCharts.BK(RR), void(RR.tideCharts.length > 0 && (pR ??= (0, XR.p)({
                 id: "skyblockTideCharts",
                 order: 8,
                 labelKey: "skyblockGame:tideChartsTitle",
@@ -10114,24 +10080,24 @@ export const modules = {
                   name: "Chunk Map"
                 },
                 panel: !0,
-                onClick: PW.tideCharts.show
+                onClick: ZR.tideCharts.show
               })))
             }
-            if (WW === XW.r) {
-              var mW;
+            if (RR === SR.B) {
+              var yR;
               const {
-                hookId: WW,
-                waiting: OW
-              } = iW;
-              return void IW.hookWaiting(WW, null !== (mW = null === OW || void 0 === OW ? void 0 : OW.remainingMs) && void 0 !== mW ? mW : null)
+                hookId: RR,
+                waiting: GR
+              } = JR;
+              return void kR.hookWaiting(RR, null !== (yR = null === GR || void 0 === GR ? void 0 : GR.remainingMs) && void 0 !== yR ? yR : null)
             }
-            if ("skyblockBiteTell" === WW) return void CW.receiveTell(iW);
-            if ("skyblockSmuggler" === WW) return void PW.smuggler.yZ(iW);
-            if ("skyblockKeepersChair" === WW) return PW.keepersChair.yZ(iW), void PW.lampLight.setAtChair(PW.keepersChair.isAtChair());
-            if ("skyblockLampLight" === WW) {
-              const WW = iW;
-              var EW;
-              if (PW.lampLight.yZ(WW), WW.lampLightReleasing) KW ??= (0, SW.y)({
+            if ("skyblockBiteTell" === RR) return void zR.receiveTell(JR);
+            if ("skyblockSmuggler" === RR) return void ZR.smuggler.BK(JR);
+            if ("skyblockKeepersChair" === RR) return ZR.keepersChair.BK(JR), void ZR.lampLight.setAtChair(ZR.keepersChair.isAtChair());
+            if ("skyblockLampLight" === RR) {
+              const RR = JR;
+              var tR;
+              if (ZR.lampLight.BK(RR), RR.lampLightReleasing) CR ??= (0, XR.p)({
                 id: "skyblockLampLightKeepCatches",
                 order: 7,
                 labelKey: "skyblockGame:lampLightKeepCatches",
@@ -10140,42 +10106,42 @@ export const modules = {
                   name: "Bucket"
                 },
                 onClick: () => {
-                  PW.lampLight.setRelease(!1)
+                  ZR.lampLight.setRelease(!1)
                 }
               });
-              else null === (EW = KW) || void 0 === EW || EW(), KW = void 0;
+              else null === (tR = CR) || void 0 === tR || tR(), CR = void 0;
               return
             }
-            if ("skyblockRegulars" === WW) return void PW.regulars.yZ(iW);
-            if ("skyblockHiddenWaters" === WW) return void PW.hiddenWaters.yZ(iW);
-            if ("skyblockReachLog" === WW) return PW.reachLog.yZ(iW), void(MW ??= (0, SW.y)({
+            if ("skyblockRegulars" === RR) return void ZR.regulars.BK(JR);
+            if ("skyblockHiddenWaters" === RR) return void ZR.hiddenWaters.BK(JR);
+            if ("skyblockReachLog" === RR) return ZR.reachLog.BK(JR), void(AR ??= (0, XR.p)({
               id: "skyblockReachLog",
               order: 6,
               labelKey: "skyblockGame:reachLogTitle",
               icon: {
                 kind: "item",
-                name: lm
+                name: Ky
               },
-              onClick: PW.reachLog.ask
+              onClick: ZR.reachLog.ask
             }));
-            if ("skyblockBurrowDoor" === WW) {
-              for (const [WW, OW, mW, EW] of iW) uW.xH(WW, OW, mW, EW);
+            if ("skyblockBurrowDoor" === RR) {
+              for (const [RR, GR, yR, tR] of JR) OR.lD(RR, GR, yR, tR);
               return
             }
-            if ("skyblockHud" === WW) PW.receiveHud(iW);
-            else if ("skyblockMap" === WW) PW.map.yZ(iW);
-            else if (WW === BW.e) PW.skills.yZ(iW);
-            else if (WW === hW && "dialogue" === iW.kind) PW.dialogue.yZ(iW);
-            else if (WW === hW) PW.quests.yZ(iW);
-            else if ("skyblockDungeons" === WW) PW.dungeons.yZ(iW);
-            else if ("sbCollections" === WW) PW.collections.yZ(iW);
-            else if ("skyblockQuestGraph" === WW) PW.questGraph.yZ(iW);
+            if ("skyblockHud" === RR) ZR.receiveHud(JR);
+            else if ("skyblockMap" === RR) ZR.map.BK(JR);
+            else if (RR === jR.g) ZR.skills.BK(JR);
+            else if (RR === gR && "dialogue" === JR.kind) ZR.dialogue.BK(JR);
+            else if (RR === gR) ZR.quests.BK(JR);
+            else if ("skyblockDungeons" === RR) ZR.dungeons.BK(JR);
+            else if ("sbCollections" === RR) ZR.collections.BK(JR);
+            else if ("skyblockQuestGraph" === RR) ZR.questGraph.BK(JR);
             else {
-              if ("skyblockAutographs" !== WW) return;
-              PW.autographs.yZ(iW)
+              if ("skyblockAutographs" !== RR) return;
+              ZR.autographs.BK(JR)
             }
-            if (!cW && PW.map.getSnapshot().enabled) {
-              const WW = (0, SW.y)({
+            if (!iR && ZR.map.getSnapshot().enabled) {
+              const RR = (0, XR.p)({
                   id: "skyblockMap",
                   order: 3,
                   labelKey: "skyblockGame:map",
@@ -10184,13 +10150,13 @@ export const modules = {
                     name: "Compass"
                   },
                   panel: !0,
-                  onClick: PW.map.show
+                  onClick: ZR.map.show
                 }),
-                iW = (0, qW.L)(PW.map.show);
-              cW = () => {
-                WW(), iW()
+                JR = (0, dR.B)(ZR.map.show);
+              iR = () => {
+                RR(), JR()
               }
-            }!tW && PW.skills.getSnapshot().enabled && (tW = (0, SW.y)({
+            }!VR && ZR.skills.getSnapshot().enabled && (VR = (0, XR.p)({
               id: "skyblockSkills",
               order: 0,
               labelKey: "skyblockGame:skills",
@@ -10199,8 +10165,8 @@ export const modules = {
                 name: "Iron Sword"
               },
               panel: !0,
-              onClick: PW.skills.show
-            })), !sW && PW.collections.getSnapshot().enabled && (sW = (0, SW.y)({
+              onClick: ZR.skills.show
+            })), !WR && ZR.collections.getSnapshot().enabled && (WR = (0, XR.p)({
               id: "skyblockCollections",
               order: 2.5,
               labelKey: "skyblockGame:collections",
@@ -10209,8 +10175,8 @@ export const modules = {
                 name: "Coal"
               },
               panel: !0,
-              onClick: PW.collections.show
-            })), !xW && PW.quests.getSnapshot().enabled && (xW = (0, SW.y)({
+              onClick: ZR.collections.show
+            })), !wR && ZR.quests.getSnapshot().enabled && (wR = (0, XR.p)({
               id: "skyblockQuests",
               order: 1,
               labelKey: "skyblockGame:quests",
@@ -10219,8 +10185,8 @@ export const modules = {
                 name: "Book"
               },
               panel: !0,
-              onClick: PW.quests.show
-            })), !HW && PW.autographs.getSnapshot().enabled && (HW = (0, SW.y)({
+              onClick: ZR.quests.show
+            })), !bR && ZR.autographs.getSnapshot().enabled && (bR = (0, XR.p)({
               id: "skyblockAutographs",
               order: 5,
               labelKey: "skyblockGame:autographs",
@@ -10229,129 +10195,163 @@ export const modules = {
                 name: "Name Tag"
               },
               panel: !0,
-              onClick: PW.autographs.show
+              onClick: ZR.autographs.show
             }));
-            const NW = PW.dungeons.getSnapshot().enabled;
-            var wW;
-            (tW || xW || NW) && kW !== NW && (kW = NW, null === (wW = lW) || void 0 === wW || wW(), lW = (0, SW.y)({
+            const uR = ZR.dungeons.getSnapshot().enabled;
+            var fR;
+            (VR || wR || uR) && UR !== uR && (UR = uR, null === (fR = rR) || void 0 === fR || fR(), rR = (0, XR.p)({
               id: "skyblockDungeons",
               order: 2,
               labelKey: "skyblockGame:dungeons",
               icon: {
                 kind: "image",
-                src: hL
+                src: lq
               },
-              disabled: !NW,
+              disabled: !uR,
               panel: !0,
-              onClick: PW.dungeons.show
+              onClick: ZR.dungeons.show
             }));
-            LW || (LW = (0, qW.O)((0, YW.createElement)(EL, {
-              controller: PW
+            qR || (qR = (0, dR.G)((0, MR.createElement)(Gq, {
+              controller: ZR
             }), {
-              content: (0, YW.createElement)(NL, {
-                controller: PW
+              content: (0, MR.createElement)(yq, {
+                controller: ZR
               }),
-              onClose: PW.close
+              onClose: ZR.close
             }))
           },
-          hZ: () => {
-            var WW;
-            for (const iW of rW.values()) iW.hZ();
-            aW.hZ(), null === (WW = dW) || void 0 === WW || WW.hZ(), PW.skills.hZ(), PW.quests.hZ(), PW.dailyReward.hZ(), PW.mailbox.hZ(), PW.map.hZ()
+          gK: () => {
+            var RR;
+            for (const JR of FR.values()) JR.gK();
+            QR.gK(), null === (RR = NR) || void 0 === RR || RR.gK(), ZR.skills.gK(), ZR.quests.gK(), ZR.dailyReward.gK(), ZR.mailbox.gK(), ZR.map.gK()
           }
         }
       }
   },
-  39726: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW,
-      f: () => EW
+  39722: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      g: () => tR
     });
-    var mW = OW(344);
-    const EW = (0, mW.Ab)([0, 0, -1]),
-      NW = [{
+    var yR = GR(377);
+    const tR = (0, yR.Bb)([0, 0, -1]),
+      uR = [{
         name: "S",
-        bearing: (0, mW.Ab)([0, 0, 1])
+        bearing: (0, yR.Bb)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, mW.Ab)([-1, 0, 0])
+        bearing: (0, yR.Bb)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: EW
+        bearing: tR
       }, {
         name: "W",
-        bearing: (0, mW.Ab)([1, 0, 0])
+        bearing: (0, yR.Bb)([1, 0, 0])
       }]
   },
-  39722: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      f: () => NW
+  39713: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      h: () => uR
     });
-    var mW = OW(39726);
+    var yR = GR(39722);
 
-    function EW(WW, iW, OW) {
-      return [100 * (OW.mapMaxX - WW) / (OW.mapMaxX - OW.mapMinX), 100 * (iW - OW.mapMinZ) / (OW.mapMaxZ - OW.mapMinZ)]
+    function tR(RR, JR, GR) {
+      return [100 * (GR.mapMaxX - RR) / (GR.mapMaxX - GR.mapMinX), 100 * (JR - GR.mapMinZ) / (GR.mapMaxZ - GR.mapMinZ)]
     }
 
-    function NW(WW, iW, OW, NW) {
-      const [PW, LW] = EW(WW, iW, NW), cW = mW.f - OW;
+    function uR(RR, JR, GR, uR) {
+      const [ZR, qR] = tR(RR, JR, uR), iR = yR.g - GR;
       return {
-        rotation: cW,
-        transform: `rotate(${cW}rad) translate(-${PW}%, -${LW}%)`
+        rotation: iR,
+        transform: `rotate(${iR}rad) translate(-${ZR}%, -${qR}%)`
       }
     }
   },
-  37503: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      e: () => mW
+  37415: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      g: () => yR
     });
-    const mW = "skyblockSkills",
-      EW = "skills_test_gym"
+    const yR = "skyblockSkills",
+      tR = "skills_test_gym"
   },
-  39785: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/combat_1.72ac23641446e4f80923.png"
+  39773: (RR, JR, GR) => {
+    var yR = {
+      "./combat_1.png": 39776,
+      "./dungeon_crumbling_crypt.png": 39781,
+      "./dungeon_frozen_hollow.png": 39786,
+      "./dungeon_wildwood_grove.png": 39791,
+      "./dungeons.png": 39795,
+      "./farming_1.png": 39800,
+      "./fishing_1.png": 39808,
+      "./hub.png": 39812,
+      "./island.png": 39815,
+      "./mining_1.png": 39818,
+      "./mining_1_bridge.png": 39825,
+      "./mining_1_gallery.png": 39833,
+      "./mining_1_hollow.png": 39840,
+      "./mining_1_village.png": 39842
+    };
+
+    function tR(RR) {
+      var JR = uR(RR);
+      return GR(JR)
+    }
+
+    function uR(RR) {
+      if (!GR.o(yR, RR)) {
+        var JR = new Error("Cannot find module '" + RR + "'");
+        throw JR.code = "MODULE_NOT_FOUND", JR
+      }
+      return yR[RR]
+    }
+    tR.keys = function() {
+      return Object.keys(yR)
+    }, tR.resolve = uR, RR.exports = tR, tR.id = 39773
   },
-  39793: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
+  39776: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/combat_1.72ac23641446e4f80923.png"
   },
-  39795: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
+  39781: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
   },
-  39803: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
+  39786: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
   },
-  39808: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/dungeons.6836b40c30687755a545.png"
+  39791: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
   },
-  39811: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/farming_1.88c6a10630aed3ef8195.png"
+  39795: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/dungeons.6836b40c30687755a545.png"
   },
-  39819: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
+  39800: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/farming_1.88c6a10630aed3ef8195.png"
   },
-  39823: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/hub.2531ead8f8a327f34b1c.png"
+  39808: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
   },
-  39828: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/island.205bb9973a65f87b60a3.png"
+  39812: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/hub.2531ead8f8a327f34b1c.png"
   },
-  39830: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/mining_1.98c7a7e3424532a89b98.png"
+  39815: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/island.205bb9973a65f87b60a3.png"
   },
-  39839: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/mining_1_bridge.65d4e676030492359993.png"
+  39818: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/mining_1.98c7a7e3424532a89b98.png"
   },
-  39848: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/mining_1_gallery.f9f2baffc0a921cd9ffe.png"
+  39825: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/mining_1_bridge.65d4e676030492359993.png"
   },
-  39857: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  39833: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/mining_1_gallery.f9f2baffc0a921cd9ffe.png"
   },
-  39863: (WW, iW, OW) => {
-    WW.exports = OW.p + "static/media/mining_1_village.855cb5fdab046ca65e04.png"
+  39840: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  },
+  39842: (RR, JR, GR) => {
+    RR.exports = GR.p + "static/media/mining_1_village.855cb5fdab046ca65e04.png"
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

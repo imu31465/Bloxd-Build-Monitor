@@ -1,167 +1,167 @@
 export const id = 46;
 export const ids = [46];
 export const modules = {
-  5442: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      LEAVE_POINTER_MARGIN_PX: () => PW,
-      RECHECK_MS: () => NW,
-      iframeHost: () => tW,
-      isNear: () => bW,
-      leaveCoverLine: () => xW,
-      overlaps: () => AW,
-      resetLeaveCoverDebugForTest: () => kW,
-      startLeaveCoverDebug: () => MW,
-      startLeaveCoverProbe: () => sW,
-      whereIs: () => ZW
+  5579: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      LEAVE_POINTER_MARGIN_PX: () => ZR,
+      RECHECK_MS: () => uR,
+      iframeHost: () => VR,
+      isNear: () => aR,
+      leaveCoverLine: () => wR,
+      overlaps: () => eR,
+      resetLeaveCoverDebugForTest: () => UR,
+      startLeaveCoverDebug: () => AR,
+      startLeaveCoverProbe: () => WR,
+      whereIs: () => KR
     });
-    var mW = OW(5445),
-      EW = OW(3866);
-    const NW = 2e3,
-      PW = 32,
-      LW = 80,
-      cW = ".EverythingMenuBannerDiv";
+    var yR = GR(5581),
+      tR = GR(3960);
+    const uR = 2e3,
+      ZR = 32,
+      qR = 80,
+      iR = ".EverythingMenuBannerDiv";
 
-    function wW(WW) {
-      const iW = WW.trim().replace(/[\s=]+/g, ".").slice(0, LW);
-      return "" === iW ? "-" : iW
+    function fR(RR) {
+      const JR = RR.trim().replace(/[\s=]+/g, ".").slice(0, qR);
+      return "" === JR ? "-" : JR
     }
 
-    function tW(WW, iW) {
-      const OW = WW.getAttribute("src");
-      if (null === OW || "" === OW.trim()) return "none";
+    function VR(RR, JR) {
+      const GR = RR.getAttribute("src");
+      if (null === GR || "" === GR.trim()) return "none";
       try {
-        const WW = new URL(OW, iW);
-        return "http:" === WW.protocol || "https:" === WW.protocol ? WW.hostname : WW.protocol.replace(":", "")
+        const RR = new URL(GR, JR);
+        return "http:" === RR.protocol || "https:" === RR.protocol ? RR.hostname : RR.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function ZW(WW, iW) {
-      return null !== WW.closest(cW) ? "banner" : null !== iW && iW.contains(WW) ? "app" : "body"
+    function KR(RR, JR) {
+      return null !== RR.closest(iR) ? "banner" : null !== JR && JR.contains(RR) ? "app" : "body"
     }
 
-    function xW(WW, iW, OW, mW) {
-      var EW, NW, PW, LW;
-      if (null === WW || WW === iW || iW.contains(WW)) return null;
-      const cW = null === (EW = WW.ownerDocument.defaultView) || void 0 === EW ? void 0 : EW.getComputedStyle(WW),
-        xW = WW.getBoundingClientRect();
-      return `leave covered ${[["trigger",mW],["where",ZW(WW,OW)],["tag",WW.tagName.toLowerCase()],["id",wW(WW.id)],["class",wW(null!==(NW=WW.getAttribute("class"))&&void 0!==NW?NW:"")],["z",wW(null!==(PW=null===cW||void 0===cW?void 0:cW.zIndex)&&void 0!==PW?PW:"")],["position",wW(null!==(LW=null===cW||void 0===cW?void 0:cW.position)&&void 0!==LW?LW:"")],["size",`${Math.round(xW.width)}x${Math.round(xW.height)}`],["iframe","IFRAME"===WW.tagName?wW(tW(WW,WW.ownerDocument.baseURI)):"-"]].map((WW=>{let[iW,OW]=WW;return`${iW}=${OW}`})).join(" ")}`
+    function wR(RR, JR, GR, yR) {
+      var tR, uR, ZR, qR;
+      if (null === RR || RR === JR || JR.contains(RR)) return null;
+      const iR = null === (tR = RR.ownerDocument.defaultView) || void 0 === tR ? void 0 : tR.getComputedStyle(RR),
+        wR = RR.getBoundingClientRect();
+      return `leave covered ${[["trigger",yR],["where",KR(RR,GR)],["tag",RR.tagName.toLowerCase()],["id",fR(RR.id)],["class",fR(null!==(uR=RR.getAttribute("class"))&&void 0!==uR?uR:"")],["z",fR(null!==(ZR=null===iR||void 0===iR?void 0:iR.zIndex)&&void 0!==ZR?ZR:"")],["position",fR(null!==(qR=null===iR||void 0===iR?void 0:iR.position)&&void 0!==qR?qR:"")],["size",`${Math.round(wR.width)}x${Math.round(wR.height)}`],["iframe","IFRAME"===RR.tagName?fR(VR(RR,RR.ownerDocument.baseURI)):"-"]].map((RR=>{let[JR,GR]=RR;return`${JR}=${GR}`})).join(" ")}`
     }
 
-    function lW(WW) {
-      const iW = WW.getBoundingClientRect();
-      return 0 === iW.width || 0 === iW.height ? null : {
-        x: iW.left + iW.width / 2,
-        y: iW.top + iW.height / 2
+    function rR(RR) {
+      const JR = RR.getBoundingClientRect();
+      return 0 === JR.width || 0 === JR.height ? null : {
+        x: JR.left + JR.width / 2,
+        y: JR.top + JR.height / 2
       }
     }
 
-    function AW(WW, iW) {
-      const OW = WW.getBoundingClientRect(),
-        mW = iW.getBoundingClientRect();
-      return Math.max(OW.left, mW.left) < Math.min(OW.right, mW.right) && Math.max(OW.top, mW.top) < Math.min(OW.bottom, mW.bottom)
+    function eR(RR, JR) {
+      const GR = RR.getBoundingClientRect(),
+        yR = JR.getBoundingClientRect();
+      return Math.max(GR.left, yR.left) < Math.min(GR.right, yR.right) && Math.max(GR.top, yR.top) < Math.min(GR.bottom, yR.bottom)
     }
 
-    function bW(WW, iW, OW, mW) {
-      const EW = WW.getBoundingClientRect();
-      return iW >= EW.left - mW && iW <= EW.right + mW && OW >= EW.top - mW && OW <= EW.bottom + mW
+    function aR(RR, JR, GR, yR) {
+      const tR = RR.getBoundingClientRect();
+      return JR >= tR.left - yR && JR <= tR.right + yR && GR >= tR.top - yR && GR <= tR.bottom + yR
     }
 
-    function jW(WW) {
-      (0, EW.m)("leavecover", WW)
+    function LR(RR) {
+      (0, tR.k)("leavecover", RR)
     }
-    const UW = new Set;
+    const nR = new Set;
 
-    function kW() {
-      UW.clear()
+    function UR() {
+      nR.clear()
     }
 
-    function sW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jW;
-      const OW = WW.ownerDocument,
-        mW = OW.defaultView;
-      if (null === mW) return () => {};
-      const EW = (WW, OW) => {
-          null === WW || UW.has(OW) || (UW.add(OW), iW(WW))
+    function WR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LR;
+      const GR = RR.ownerDocument,
+        yR = GR.defaultView;
+      if (null === yR) return () => {};
+      const tR = (RR, GR) => {
+          null === RR || nR.has(GR) || (nR.add(GR), JR(RR))
         },
-        LW = iW => {
-          const mW = WW.isConnected ? lW(WW) : null;
-          if (null === mW) return;
-          const NW = OW.elementFromPoint(mW.x, mW.y);
-          if (null !== NW) {
-            const mW = OW.getElementById("root");
-            EW(xW(NW, WW, mW, iW), ZW(NW, mW))
+        qR = JR => {
+          const yR = RR.isConnected ? rR(RR) : null;
+          if (null === yR) return;
+          const uR = GR.elementFromPoint(yR.x, yR.y);
+          if (null !== uR) {
+            const yR = GR.getElementById("root");
+            tR(wR(uR, RR, yR, JR), KR(uR, yR))
           }
         };
-      let cW = null;
-      const wW = WW => {
-        cW = {
-          x: WW.clientX,
-          y: WW.clientY
+      let iR = null;
+      const fR = RR => {
+        iR = {
+          x: RR.clientX,
+          y: RR.clientY
         }
       };
-      let tW = null;
-      const kW = () => {
-          tW = setTimeout((() => {
-            tW = null;
-            const iW = OW.activeElement;
-            if ("IFRAME" !== (null === iW || void 0 === iW ? void 0 : iW.tagName) || !WW.isConnected) return;
-            const mW = lW(WW),
-              NW = null !== mW && bW(iW, mW.x, mW.y, 0),
-              LW = cW,
-              wW = null !== LW && bW(WW, LW.x, LW.y, PW);
-            if (AW(iW, WW) && (NW || wW)) {
-              const mW = OW.getElementById("root");
-              EW(xW(iW, WW, mW, "blurIframe"), ZW(iW, mW))
+      let VR = null;
+      const UR = () => {
+          VR = setTimeout((() => {
+            VR = null;
+            const JR = GR.activeElement;
+            if ("IFRAME" !== (null === JR || void 0 === JR ? void 0 : JR.tagName) || !RR.isConnected) return;
+            const yR = rR(RR),
+              uR = null !== yR && aR(JR, yR.x, yR.y, 0),
+              qR = iR,
+              fR = null !== qR && aR(RR, qR.x, qR.y, ZR);
+            if (eR(JR, RR) && (uR || fR)) {
+              const yR = GR.getElementById("root");
+              tR(wR(JR, RR, yR, "blurIframe"), KR(JR, yR))
             }
           }), 0)
         },
-        sW = mW.requestAnimationFrame((() => {
-          LW("open")
+        WR = yR.requestAnimationFrame((() => {
+          qR("open")
         })),
-        MW = setTimeout((() => {
-          LW("recheck")
-        }), NW);
-      return mW.addEventListener("pointermove", wW, {
+        AR = setTimeout((() => {
+          qR("recheck")
+        }), uR);
+      return yR.addEventListener("pointermove", fR, {
         capture: !0,
         passive: !0
-      }), mW.addEventListener("pointerdown", wW, {
+      }), yR.addEventListener("pointerdown", fR, {
         capture: !0,
         passive: !0
-      }), mW.addEventListener("blur", kW), () => {
-        mW.cancelAnimationFrame(sW), clearTimeout(MW), null !== tW && clearTimeout(tW), mW.removeEventListener("pointermove", wW, {
+      }), yR.addEventListener("blur", UR), () => {
+        yR.cancelAnimationFrame(WR), clearTimeout(AR), null !== VR && clearTimeout(VR), yR.removeEventListener("pointermove", fR, {
           capture: !0
-        }), mW.removeEventListener("pointerdown", wW, {
+        }), yR.removeEventListener("pointerdown", fR, {
           capture: !0
-        }), mW.removeEventListener("blur", kW)
+        }), yR.removeEventListener("blur", UR)
       }
     }
 
-    function MW() {
-      (0, mW.k)(sW)
+    function AR() {
+      (0, yR.e)(WR)
     }
   },
-  5445: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      g: () => NW,
-      k: () => EW
+  5581: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      c: () => uR,
+      e: () => tR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW() {
-      return mW
+    function uR() {
+      return yR
     }
 
-    function PW(WW) {
-      return "bloxd" === WW.site && !WW.isMobileApp && !WW.isTouchScreen
+    function ZR(RR) {
+      return "bloxd" === RR.site && !RR.isMobileApp && !RR.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,38 +1,38 @@
 export const id = 76;
 export const ids = [76, 138, 139, 159];
 export const modules = {
-  40980: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW,
-      e: () => EW
+  40983: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      e: () => tR
     });
-    const mW = "The world isn't loaded, so no blocks can be seen.",
-      EW = "The world isn't loaded, so nothing in it can be seen."
+    const yR = "The world isn't loaded, so no blocks can be seen.",
+      tR = "The world isn't loaded, so nothing in it can be seen."
   },
-  5424: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => tW
+  5547: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => VR
     });
-    var mW = OW(25),
-      EW = OW(27),
-      NW = OW(1294),
-      PW = OW(3866);
-    const LW = 3e4,
-      cW = 1e3;
+    var yR = GR(25),
+      tR = GR(32),
+      uR = GR(1383),
+      ZR = GR(3960);
+    const qR = 3e4,
+      iR = 1e3;
 
-    function wW() {
-      return "visible" === document.visibilityState && "inGame" === mW.d.get("gameState") && (0, NW.z)()
+    function fR() {
+      return "visible" === document.visibilityState && "inGame" === yR.d.get("gameState") && (0, uR.u)()
     }
 
-    function tW(WW, iW) {
-      (0, PW.x)() || function(WW, iW, OW) {
-        let mW = 0;
-        const EW = setInterval((() => {
-          iW() && (mW += cW, mW >= WW && (clearInterval(EW), OW()))
-        }), cW)
-      }(LW, wW, (() => {
-        iW().then((() => {
-          WW(`saved for the player after ${LW/1e3} s of play`), (0, PW.J)(), EW.l.iZ("chat", {
+    function VR(RR, JR) {
+      (0, ZR.p)() || function(RR, JR, GR) {
+        let yR = 0;
+        const tR = setInterval((() => {
+          JR() && (yR += iR, yR >= RR && (clearInterval(tR), GR()))
+        }), iR)
+      }(qR, fR, (() => {
+        JR().then((() => {
+          RR(`saved for the player after ${qR/1e3} s of play`), (0, ZR.C)(), tR.n.JK("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -44,342 +44,342 @@ export const modules = {
       }))
     }
   },
-  35093: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      return 0 === WW.length ? 0 : WW[Math.min(WW.length - 1, Math.floor(iW * WW.length))]
+  35005: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      return 0 === RR.length ? 0 : RR[Math.min(RR.length - 1, Math.floor(JR * RR.length))]
     }
 
-    function EW(WW) {
-      return WW.toFixed(1)
+    function tR(RR) {
+      return RR.toFixed(1)
     }
-    OW.d(iW, {
-      c: () => EW,
-      d: () => mW
+    GR.d(JR, {
+      d: () => tR,
+      g: () => yR
     })
   },
-  39133: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => wW,
-      i: () => tW,
-      l: () => MW,
-      n: () => sW,
-      q: () => kW
+  39112: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR,
+      f: () => VR,
+      j: () => AR,
+      l: () => WR,
+      p: () => UR
     });
-    var mW = OW(5424),
-      EW = OW(35093),
-      NW = OW(3866);
-    const PW = 20,
-      LW = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "aZ", "jobMs"];
+    var yR = GR(5547),
+      tR = GR(35005),
+      uR = GR(3960);
+    const ZR = 20,
+      qR = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "hK", "jobMs"];
 
-    function cW(WW) {
-      return [...WW].sort(((WW, iW) => WW - iW))
+    function iR(RR) {
+      return [...RR].sort(((RR, JR) => RR - JR))
     }
-    const wW = [];
+    const fR = [];
 
-    function tW(WW, iW, OW) {
-      return `${WW},${iW},${OW}`
+    function VR(RR, JR, GR) {
+      return `${RR},${JR},${GR}`
     }
-    class ZW {
+    class KR {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(WW, iW) {
-        var OW;
-        const mW = null !== (OW = this.pending.get(WW)) && void 0 !== OW ? OW : [];
-        mW.push({
-          editAt: iW,
+      edit(RR, JR) {
+        var GR;
+        const yR = null !== (GR = this.pending.get(RR)) && void 0 !== GR ? GR : [];
+        yR.push({
+          editAt: JR,
           meshJobId: 0
-        }), this.pending.set(WW, mW)
+        }), this.pending.set(RR, yR)
       }
-      frame(WW) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, WW - this.lastFrameAt)), this.lastFrameAt = WW, this.frames++, WW - this.windowStart >= 1e3 && this.summarise(WW)
+      frame(RR) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, RR - this.lastFrameAt)), this.lastFrameAt = RR, this.frames++, RR - this.windowStart >= 1e3 && this.summarise(RR)
       }
-      sent(WW, iW, OW, mW, EW, NW, PW) {
-        this.jobs.set(iW, {
-          sentAt: PW,
+      sent(RR, JR, GR, yR, tR, uR, ZR) {
+        this.jobs.set(JR, {
+          sentAt: ZR,
           receivedAt: 0,
-          ahead: OW,
-          inFlight: mW,
-          aZ: EW,
+          ahead: GR,
+          inFlight: yR,
+          hK: tR,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, OW), this.maxCapacity = Math.max(this.maxCapacity, EW);
-        for (const cW of null !== (LW = this.pending.get(WW)) && void 0 !== LW ? LW : []) {
-          var LW;
-          NW.includes(cW.meshJobId) || (cW.meshJobId = iW)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, GR), this.maxCapacity = Math.max(this.maxCapacity, tR);
+        for (const iR of null !== (qR = this.pending.get(RR)) && void 0 !== qR ? qR : []) {
+          var qR;
+          uR.includes(iR.meshJobId) || (iR.meshJobId = JR)
         }
       }
-      received(WW, iW, OW) {
-        const mW = this.jobs.get(WW);
-        void 0 !== mW && (this.roundTrips.push(OW - mW.sentAt), mW.receivedAt = OW, mW.jobMs = iW)
+      received(RR, JR, GR) {
+        const yR = this.jobs.get(RR);
+        void 0 !== yR && (this.roundTrips.push(GR - yR.sentAt), yR.receivedAt = GR, yR.jobMs = JR)
       }
-      failed(WW) {
-        this.jobs.delete(WW)
+      failed(RR) {
+        this.jobs.delete(RR)
       }
-      reassign(WW, iW, OW) {
-        this.jobs.delete(iW);
-        for (const EW of null !== (mW = this.pending.get(WW)) && void 0 !== mW ? mW : []) {
-          var mW;
-          EW.meshJobId === iW && (EW.meshJobId = OW)
+      reassign(RR, JR, GR) {
+        this.jobs.delete(JR);
+        for (const tR of null !== (yR = this.pending.get(RR)) && void 0 !== yR ? yR : []) {
+          var yR;
+          tR.meshJobId === JR && (tR.meshJobId = GR)
         }
       }
-      applied(WW, iW, OW) {
-        const mW = this.jobs.get(iW);
-        this.jobs.delete(iW), void 0 !== mW && this.show(WW, mW, OW, (WW => WW.meshJobId === iW))
+      applied(RR, JR, GR) {
+        const yR = this.jobs.get(JR);
+        this.jobs.delete(JR), void 0 !== yR && this.show(RR, yR, GR, (RR => RR.meshJobId === JR))
       }
-      emptied(WW, iW) {
-        const OW = {
-          sentAt: iW,
-          receivedAt: iW,
+      emptied(RR, JR) {
+        const GR = {
+          sentAt: JR,
+          receivedAt: JR,
           ahead: 0,
           inFlight: 0,
-          aZ: 0,
+          hK: 0,
           jobMs: 0
         };
-        this.show(WW, OW, iW, (() => !0))
+        this.show(RR, GR, JR, (() => !0))
       }
-      show(WW, iW, OW, mW) {
-        const EW = this.pending.get(WW);
-        if (!EW) return;
-        const NW = EW.filter((EW => !mW(EW) || (this.record(WW, EW.editAt, iW, OW), !1)));
-        NW.length > 0 ? this.pending.set(WW, NW) : this.pending.delete(WW)
+      show(RR, JR, GR, yR) {
+        const tR = this.pending.get(RR);
+        if (!tR) return;
+        const uR = tR.filter((tR => !yR(tR) || (this.record(RR, tR.editAt, JR, GR), !1)));
+        uR.length > 0 ? this.pending.set(RR, uR) : this.pending.delete(RR)
       }
-      wZ(WW) {
-        this.reported += WW, this === lW && this.reported >= PW && null !== AW && (AW(), AW = null)
+      fK(RR) {
+        this.reported += RR, this === rR && this.reported >= ZR && null !== eR && (eR(), eR = null)
       }
-      record(WW, iW, OW, mW) {
-        const EW = {
-          totalMs: mW - iW,
-          slotMs: OW.sentAt - iW,
-          workerMs: OW.receivedAt - OW.sentAt,
-          applyMs: mW - OW.receivedAt,
-          ahead: OW.ahead,
-          inFlight: OW.inFlight,
-          aZ: OW.aZ,
-          jobMs: OW.jobMs
+      record(RR, JR, GR, yR) {
+        const tR = {
+          totalMs: yR - JR,
+          slotMs: GR.sentAt - JR,
+          workerMs: GR.receivedAt - GR.sentAt,
+          applyMs: yR - GR.receivedAt,
+          ahead: GR.ahead,
+          inFlight: GR.inFlight,
+          hK: GR.hK,
+          jobMs: GR.jobMs
         };
-        if (this.edits[this.nextEdit] = EW, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(EW.totalMs), this.wZ(1), EW.totalMs < 100 || ++this.outliers > 5) return;
-        const PW = WW => Math.round(WW);
-        (0, NW.m)("remesh", `slow edit (${WW}) shown in ${PW(EW.totalMs)} ms: slot ${PW(EW.slotMs)}, worker ${PW(EW.workerMs)} (${EW.ahead} ahead, ${EW.inFlight}/${EW.aZ} in flight; job ${PW(EW.jobMs)}), apply ${PW(EW.applyMs)}`)
+        if (this.edits[this.nextEdit] = tR, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(tR.totalMs), this.fK(1), tR.totalMs < 100 || ++this.outliers > 5) return;
+        const ZR = RR => Math.round(RR);
+        (0, uR.k)("remesh", `slow edit (${RR}) shown in ${ZR(tR.totalMs)} ms: slot ${ZR(tR.slotMs)}, worker ${ZR(tR.workerMs)} (${tR.ahead} ahead, ${tR.inFlight}/${tR.hK} in flight; job ${ZR(tR.jobMs)}), apply ${ZR(tR.applyMs)}`)
       }
-      summarise(WW) {
-        const iW = (WW - this.windowStart) / 1e3;
-        for (const [OW, mW] of this.pending) {
-          const iW = mW.filter((iW => WW - iW.editAt <= 1e4));
-          this.gaveUp += mW.length - iW.length, this.wZ(mW.length - iW.length), iW.length > 0 ? this.pending.set(OW, iW) : this.pending.delete(OW)
+      summarise(RR) {
+        const JR = (RR - this.windowStart) / 1e3;
+        for (const [GR, yR] of this.pending) {
+          const JR = yR.filter((JR => RR - JR.editAt <= 1e4));
+          this.gaveUp += yR.length - JR.length, this.fK(yR.length - JR.length), JR.length > 0 ? this.pending.set(GR, JR) : this.pending.delete(GR)
         }
-        for (const [OW, mW] of this.jobs) WW - mW.sentAt > (mW.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(OW);
+        for (const [GR, yR] of this.jobs) RR - yR.sentAt > (yR.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(GR);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const WW = cW(this.roundTrips),
-            OW = cW(this.windowEdits),
-            mW = Math.max(0, this.outliers - 5);
-          (0, NW.m)("remesh", `${Math.round(this.frames/iW)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,EW.d)(WW,.5))} max ${Math.round((0,EW.d)(WW,1))} ms | ${OW.length} edits shown, p50 ${Math.round((0,EW.d)(OW,.5))} max ${Math.round((0,EW.d)(OW,1))} ms${mW>0?`, ${mW} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const RR = iR(this.roundTrips),
+            GR = iR(this.windowEdits),
+            yR = Math.max(0, this.outliers - 5);
+          (0, uR.k)("remesh", `${Math.round(this.frames/JR)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,tR.g)(RR,.5))} max ${Math.round((0,tR.g)(RR,1))} ms | ${GR.length} edits shown, p50 ${Math.round((0,tR.g)(GR,.5))} max ${Math.round((0,tR.g)(GR,1))} ms${yR>0?`, ${yR} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = WW, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = RR, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const WW = LW.map((WW => {
-          const iW = cW(this.edits.map((iW => iW[WW])));
-          return `${WW}: p50 ${Math.round((0,EW.d)(iW,.5))} p90 ${Math.round((0,EW.d)(iW,.9))} max ${Math.round((0,EW.d)(iW,1))}`
+        const RR = qR.map((RR => {
+          const JR = iR(this.edits.map((JR => JR[RR])));
+          return `${RR}: p50 ${Math.round((0,tR.g)(JR,.5))} p90 ${Math.round((0,tR.g)(JR,.9))} max ${Math.round((0,tR.g)(JR,1))}`
         }));
-        return [`${this.edits.length} edits`, ...WW].join("\n")
+        return [`${this.edits.length} edits`, ...RR].join("\n")
       }
       dump() {
-        const WW = this.edits.map((WW => LW.map((iW => Math.round(10 * WW[iW]) / 10)).join(",")));
-        return [this.stats(), LW.join(","), ...WW].join("\n")
+        const RR = this.edits.map((RR => qR.map((JR => Math.round(10 * RR[JR]) / 10)).join(",")));
+        return [this.stats(), qR.join(","), ...RR].join("\n")
       }
     }
-    class xW {
-      constructor(WW, iW) {
-        this.log = WW, this.Hx = iW
+    class wR {
+      constructor(RR, JR) {
+        this.log = RR, this.xw = JR
       }
-      edit(WW, iW, OW) {
-        const [mW, EW, NW] = this.Hx.oZ.KmW(WW, iW, OW), PW = this.Hx.oZ.Tb.Jb(mW, EW, NW);
-        PW && PW.Yb && this.log.edit(tW(mW, EW, NW), performance.now())
+      edit(RR, JR, GR) {
+        const [yR, tR, uR] = this.xw.NK.itR(RR, JR, GR), ZR = this.xw.NK.Ha.oa(yR, tR, uR);
+        ZR && ZR.Na && this.log.edit(VR(yR, tR, uR), performance.now())
       }
-      sent(WW, iW, OW, mW, EW) {
-        this.log.sent(tW(WW.i, WW.j, WW.k), iW, OW, mW, EW, wW, performance.now())
+      sent(RR, JR, GR, yR, tR) {
+        this.log.sent(VR(RR.i, RR.j, RR.k), JR, GR, yR, tR, fR, performance.now())
       }
-      received(WW) {
-        this.log.received(WW.meshJobId, WW.jobMs, performance.now())
+      received(RR) {
+        this.log.received(RR.meshJobId, RR.jobMs, performance.now())
       }
-      failed(WW) {
-        this.log.failed(WW)
+      failed(RR) {
+        this.log.failed(RR)
       }
-      applied(WW, iW) {
-        this.log.applied(tW(WW.i, WW.j, WW.k), iW, performance.now())
+      applied(RR, JR) {
+        this.log.applied(VR(RR.i, RR.j, RR.k), JR, performance.now())
       }
     }
-    let lW = null,
-      AW = null,
-      bW = !1,
-      jW = null;
+    let rR = null,
+      eR = null,
+      aR = !1,
+      LR = null;
 
-    function UW() {
-      return new Promise((WW => {
-        null !== lW && lW.reported >= PW ? WW() : AW = WW
+    function nR() {
+      return new Promise((RR => {
+        null !== rR && rR.reported >= ZR ? RR() : eR = RR
       }))
     }
 
-    function kW() {
-      const WW = new ZW;
-      return lW = WW, (0, NW.l)("remesh", (() => WW.dump())), (0, NW.e)("remeshStats", (() => {
-        console.log(WW.stats())
-      })), bW || (bW = !0, (0, mW.c)((WW => {
-        (0, NW.m)("remesh", WW)
-      }), UW)), WW
+    function UR() {
+      const RR = new KR;
+      return rR = RR, (0, uR.i)("remesh", (() => RR.dump())), (0, uR.b)("remeshStats", (() => {
+        console.log(RR.stats())
+      })), aR || (aR = !0, (0, yR.b)((RR => {
+        (0, uR.k)("remesh", RR)
+      }), nR)), RR
     }
 
-    function sW(WW) {
-      const iW = kW();
-      jW = new xW(iW, WW), WW.bY.meshProbe = jW, WW.on("beforeRender", (() => {
-        iW.frame(performance.now())
+    function WR(RR) {
+      const JR = UR();
+      LR = new wR(JR, RR), RR.BX.meshProbe = LR, RR.on("beforeRender", (() => {
+        JR.frame(performance.now())
       }))
     }
 
-    function MW(WW, iW, OW) {
-      var mW;
-      null === (mW = jW) || void 0 === mW || mW.edit(WW, iW, OW)
+    function AR(RR, JR, GR) {
+      var yR;
+      null === (yR = LR) || void 0 === yR || yR.edit(RR, JR, GR)
     }
   },
-  35116: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW
+  35031: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR
     });
-    const mW = new Set(["chunkBorders"])
+    const yR = new Set(["chunkBorders"])
   },
-  37968: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW,
-      c: () => mW
+  37914: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR,
+      f: () => yR
     });
-    const mW = 3,
-      EW = {
+    const yR = 3,
+      tR = {
         recording: !1,
         clipping: !1,
         hasClipBuffer: !1,
         seconds: 0
       }
   },
-  35270: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      e: () => EW,
-      f: () => ZW
+  35195: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      i: () => tR,
+      l: () => KR
     });
-    var mW = OW(1659);
+    var yR = GR(1718);
 
-    function EW(WW) {
-      var iW;
+    function tR(RR) {
+      var JR;
       return {
-        ...LW.store,
-        yaw: LW.store.yaw + (null !== (iW = mW.e[WW].previewYaw) && void 0 !== iW ? iW : 0)
+        ...qR.store,
+        yaw: qR.store.yaw + (null !== (JR = yR.b[RR].previewYaw) && void 0 !== JR ? JR : 0)
       }
     }
-    const NW = {
+    const uR = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      PW = {
-        ...NW,
+      ZR = {
+        ...uR,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      LW = {
-        player: NW,
-        store: PW,
+      qR = {
+        player: uR,
+        store: ZR,
         showcase: {
-          ...PW,
+          ...ZR,
           target: [0, 1.9, 0]
         }
       };
 
-    function cW(WW, iW) {
-      WW instanceof Promise ? WW.then(iW).catch((WW => {
-        console.error("Couldn't open the preview", WW)
-      })) : iW(WW)
+    function iR(RR, JR) {
+      RR instanceof Promise ? RR.then(JR).catch((RR => {
+        console.error("Couldn't open the preview", RR)
+      })) : JR(RR)
     }
-    class wW {
-      constructor(WW) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, cW(WW, (WW => {
-          this.closed ? WW.close() : (this.opened = WW, null !== this.size && WW.resize(this.size.width, this.size.height), null !== this.view && WW.show(this.view))
+    class fR {
+      constructor(RR) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, iR(RR, (RR => {
+          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height), null !== this.view && RR.show(this.view))
         }))
       }
-      show(WW) {
-        var iW;
-        this.view = WW, null === (iW = this.opened) || void 0 === iW || iW.show(WW)
+      show(RR) {
+        var JR;
+        this.view = RR, null === (JR = this.opened) || void 0 === JR || JR.show(RR)
       }
-      resize(WW, iW) {
-        var OW;
+      resize(RR, JR) {
+        var GR;
         this.size = {
-          width: WW,
-          height: iW
-        }, null === (OW = this.opened) || void 0 === OW || OW.resize(WW, iW)
+          width: RR,
+          height: JR
+        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.opened) || void 0 === WW || WW.close(), this.opened = null
+        var RR;
+        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
       }
     }
-    class tW {
-      constructor(WW) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(WW).then((WW => WW.ready)), cW(WW, (WW => {
-          this.closed ? WW.close() : (this.opened = WW, null !== this.size && WW.resize(this.size.width, this.size.height))
+    class VR {
+      constructor(RR) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(RR).then((RR => RR.ready)), iR(RR, (RR => {
+          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var WW, iW;
-        return null !== (WW = null === (iW = this.opened) || void 0 === iW ? void 0 : iW.isReady()) && void 0 !== WW && WW
+        var RR, JR;
+        return null !== (RR = null === (JR = this.opened) || void 0 === JR ? void 0 : JR.isReady()) && void 0 !== RR && RR
       }
-      setCosmetic(WW, iW) {
-        var OW;
-        null === (OW = this.opened) || void 0 === OW || OW.setCosmetic(WW, iW)
+      setCosmetic(RR, JR) {
+        var GR;
+        null === (GR = this.opened) || void 0 === GR || GR.setCosmetic(RR, JR)
       }
-      setNametag(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.setNametag(WW)
+      setNametag(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.setNametag(RR)
       }
-      playEmote(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.playEmote(WW)
+      playEmote(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.playEmote(RR)
       }
-      setOrbit(WW) {
-        var iW;
-        null === (iW = this.opened) || void 0 === iW || iW.setOrbit(WW)
+      setOrbit(RR) {
+        var JR;
+        null === (JR = this.opened) || void 0 === JR || JR.setOrbit(RR)
       }
       resetCamera() {
-        var WW;
-        null === (WW = this.opened) || void 0 === WW || WW.resetCamera()
+        var RR;
+        null === (RR = this.opened) || void 0 === RR || RR.resetCamera()
       }
-      async untilDrawn(WW) {
-        var iW;
-        await this.ready, await (null === (iW = this.opened) || void 0 === iW ? void 0 : iW.untilDrawn(WW))
+      async untilDrawn(RR) {
+        var JR;
+        await this.ready, await (null === (JR = this.opened) || void 0 === JR ? void 0 : JR.untilDrawn(RR))
       }
-      resize(WW, iW) {
-        var OW;
+      resize(RR, JR) {
+        var GR;
         this.size = {
-          width: WW,
-          height: iW
-        }, null === (OW = this.opened) || void 0 === OW || OW.resize(WW, iW)
+          width: RR,
+          height: JR
+        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
       }
       close() {
-        var WW;
-        this.closed = !0, null === (WW = this.opened) || void 0 === WW || WW.close(), this.opened = null
+        var RR;
+        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
       }
     }
-    const ZW = new class {
+    const KR = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(WW) {
-        this.host = WW
+      setHost(RR) {
+        this.host = RR
       }
-      setDefaultHost(WW) {
-        this.makeDefault = WW
+      setDefaultHost(RR) {
+        this.makeDefault = RR
       }
       current() {
         if (null === this.host) {
@@ -388,212 +388,212 @@ export const modules = {
         }
         return this.host
       }
-      openMob(WW) {
-        return new wW(this.current().openMob(WW))
+      openMob(RR) {
+        return new fR(this.current().openMob(RR))
       }
-      openPet(WW) {
-        return new wW(this.current().openPet(WW))
+      openPet(RR) {
+        return new fR(this.current().openPet(RR))
       }
-      openMobLineup(WW) {
-        return new wW(this.current().openMobLineup(WW))
+      openMobLineup(RR) {
+        return new fR(this.current().openMobLineup(RR))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(WW, iW) {
-        return new tW(this.current().openCharacter(WW, iW))
+      openCharacter(RR, JR) {
+        return new VR(this.current().openCharacter(RR, JR))
       }
     }
   },
-  5961: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW.l,
-      c: () => EW,
-      g: () => mW.r
+  6080: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR.f,
+      g: () => tR,
+      i: () => yR.o
     });
-    var mW = OW(5970);
-    const EW = [!1, !0].flatMap((WW => ["terrain", "liquid", "model"].map((iW => ({
-      strict: WW,
-      program: iW
+    var yR = GR(6084);
+    const tR = [!1, !0].flatMap((RR => ["terrain", "liquid", "model"].map((JR => ({
+      strict: RR,
+      program: JR
     })))))
   },
-  40448: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      ShaderPackPage: () => cW,
-      harnessShaderPackMode: () => xW,
-      setHarnessUrlShaderPack: () => ZW,
-      shaderPackPage: () => tW
+  40495: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      ShaderPackPage: () => iR,
+      harnessShaderPackMode: () => wR,
+      setHarnessUrlShaderPack: () => KR,
+      shaderPackPage: () => VR
     });
-    var mW = OW(100),
-      EW = OW(39),
-      NW = (OW(4675), OW(5961), OW(4666)),
-      PW = OW(7659);
-    OW(7637);
-    const LW = {
+    var yR = GR(103),
+      tR = GR(46),
+      uR = (GR(4781), GR(6080), GR(4776)),
+      ZR = GR(7802);
+    GR(7773);
+    const qR = {
       status: "none"
     };
-    class cW {
+    class iR {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, NW.g)(mW.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), wW().then((WW => {
-            WW && EW.i.removeItem(NW.b)
+          if ((0, uR.l)(yR.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), fR().then((RR => {
+            RR && tR.i.removeItem(uR.e)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, NW.c)(mW.featureFlags.settings.canUseShaderPacks)
+        return (0, uR.h)(yR.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const WW = await this.load();
-        return "active" === WW.status ? WW.pack : null
+        const RR = await this.load();
+        return "active" === RR.status ? RR.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((WW => (console.error("Failed to load the shader pack", WW), LW))).then((WW => (this.resolved ??= WW, WW))), this.pagePack
+        return this.pagePack ??= this.read().catch((RR => (console.error("Failed to load the shader pack", RR), qR))).then((RR => (this.resolved ??= RR, RR))), this.pagePack
       }
       hasNone() {
-        var WW;
-        return "none" === (null === (WW = this.resolved) || void 0 === WW ? void 0 : WW.status)
+        var RR;
+        return "none" === (null === (RR = this.resolved) || void 0 === RR ? void 0 : RR.status)
       }
-      block(WW) {
+      block(RR) {
         this.resolved = {
           status: "blocked",
-          messageKey: WW,
+          messageKey: RR,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([OW.e(91), OW.e(157), OW.e(163)]).then((() => OW(53916))).then((WW => (WW.prefetchCompiler(), WW))), this.compiling
+        return this.compiling ??= Promise.all([GR.e(91), GR.e(157), GR.e(163)]).then((() => GR(53760))).then((RR => (RR.prefetchCompiler(), RR))), this.compiling
       }
       async readStored() {
-        const WW = await wW();
-        return WW && this.compiler().then((WW => WW.reconcileHint())).catch((WW => {
-          console.error("Failed to correct the shader pack hint", WW)
-        })), WW
+        const RR = await fR();
+        return RR && this.compiler().then((RR => RR.reconcileHint())).catch((RR => {
+          console.error("Failed to correct the shader pack hint", RR)
+        })), RR
       }
       async read() {
-        const WW = await this.preload();
-        return WW ? (await this.compiler()).compilePagePack(WW) : LW
+        const RR = await this.preload();
+        return RR ? (await this.compiler()).compilePagePack(RR) : qR
       }
     }
-    async function wW() {
-      if (!(0, NW.i)(mW.featureFlags.settings.canUseShaderPacks)) return null;
+    async function fR() {
+      if (!(0, uR.o)(yR.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const WW = await (0, PW.g)(!0);
-        return WW || EW.i.setItem(NW.b, !1), WW
-      } catch (WW) {
-        return console.error("Failed to read the stored shader pack", WW), EW.i.removeItem(NW.b), null
+        const RR = await (0, ZR.d)(!0);
+        return RR || tR.i.setItem(uR.e, !1), RR
+      } catch (RR) {
+        return console.error("Failed to read the stored shader pack", RR), tR.i.removeItem(uR.e), null
       }
     }
-    const tW = new cW;
+    const VR = new iR;
 
-    function ZW(WW, iW) {}
+    function KR(RR, JR) {}
 
-    function xW() {
+    function wR() {
       return null
     }
   },
-  40491: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => ZW,
-      i: () => xW
+  40534: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => KR,
+      f: () => wR
     });
-    var mW = OW(154),
-      EW = OW(172),
-      NW = OW(1567),
-      PW = OW(1888),
-      LW = OW(1584),
-      cW = OW(37709),
-      wW = OW(683),
-      tW = OW(40448);
+    var yR = GR(163),
+      tR = GR(188),
+      uR = GR(1633),
+      ZR = GR(1972),
+      qR = GR(1647),
+      iR = GR(37620),
+      fR = GR(726),
+      VR = GR(40495);
 
-    function ZW(WW) {
-      (0, PW.reportClientError)("matchmake_failed", WW, mW.k[mW.k.SHADER_PACK])
+    function KR(RR) {
+      (0, ZR.reportClientError)("matchmake_failed", RR, yR.j[yR.j.SHADER_PACK])
     }
-    async function xW(WW, iW) {
-      var OW;
-      const mW = null === (OW = await tW.shaderPackPage.preload()) || void 0 === OW ? void 0 : OW.listing,
-        PW = (0, cW.c)();
-      mW && null !== PW && await LW.e.reportShaderPackSession(WW, {
-        packId: mW.packId,
-        sourceHash: mW.sourceHash,
-        game: (0, NW.d)(iW, EW.G, "other"),
-        playSessionId: PW,
-        visitSessionId: (0, wW.getVisitSessionId)()
+    async function wR(RR, JR) {
+      var GR;
+      const yR = null === (GR = await VR.shaderPackPage.preload()) || void 0 === GR ? void 0 : GR.listing,
+        ZR = (0, iR.b)();
+      yR && null !== ZR && await qR.c.reportShaderPackSession(RR, {
+        packId: yR.packId,
+        sourceHash: yR.sourceHash,
+        game: (0, uR.e)(JR, tR.D, "other"),
+        playSessionId: ZR,
+        visitSessionId: (0, fR.getVisitSessionId)()
       })
     }
   },
-  7659: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      g: () => NW
+  7802: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      d: () => uR
     });
-    var mW = OW(39);
-    const EW = "shaderPack";
-    async function NW() {
-      var WW;
-      let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (WW = await mW.f.getItem(EW, iW)) && void 0 !== WW ? WW : null
+    var yR = GR(46);
+    const tR = "shaderPack";
+    async function uR() {
+      var RR;
+      let JR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (RR = await yR.g.getItem(tR, JR)) && void 0 !== RR ? RR : null
     }
   },
-  7637: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      loadShaderPackTextures: () => PW,
-      shaderPackTextures: () => LW
+  7773: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      loadShaderPackTextures: () => ZR,
+      shaderPackTextures: () => qR
     });
-    var mW = OW(5970);
-    let EW = null,
-      NW = null;
+    var yR = GR(6084);
+    let tR = null,
+      uR = null;
 
-    function PW() {
-      return NW ??= Promise.all([OW.e(85), OW.e(126)]).then((() => OW(42015))).then((WW => {
+    function ZR() {
+      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: iW,
-          textureNameToIndex: OW,
-          textureAnimationData: NW
-        } = WW;
-        return EW ??= (0, mW.o)(OW, NW, iW), EW
-      })), NW
+          FORMER_BLOCK_IMAGE_NAMES: JR,
+          textureNameToIndex: GR,
+          textureAnimationData: uR
+        } = RR;
+        return tR ??= (0, yR.j)(GR, uR, JR), tR
+      })), uR
     }
 
-    function LW() {
-      if (null === EW) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return EW
+    function qR() {
+      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return tR
     }
   },
-  40250: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW
+  40285: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR
     });
-    var mW = OW(27),
-      EW = OW(1294),
-      NW = OW(2458);
-    const PW = "Reconnecting";
-    class LW {
-      constructor(WW) {
-        this.hooks = WW, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var yR = GR(32),
+      tR = GR(1383),
+      uR = GR(2513);
+    const ZR = "Reconnecting";
+    class qR {
+      constructor(RR) {
+        this.hooks = RR, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = WW => {
-          WW.persisted || this.leave()
-        }, this.controller = new NW.i((iW => WW.reconnect(iW)), {
-          isSessionLive: () => !this.ended && WW.isLive(),
-          onPhaseChanged: WW => {
-            this.onPhaseChanged(WW)
+        }, this.onPageHide = RR => {
+          RR.persisted || this.leave()
+        }, this.controller = new uR.k((JR => RR.reconnect(JR)), {
+          isSessionLive: () => !this.ended && RR.isLive(),
+          onPhaseChanged: RR => {
+            this.onPhaseChanged(RR)
           },
-          onReconnected: iW => {
-            WW.onReconnected(iW)
+          onReconnected: JR => {
+            RR.onReconnected(JR)
           },
-          onGaveUp: iW => {
-            !this.ended && WW.isLive() && WW.onGaveUp(this.sessionBased, iW)
+          onGaveUp: JR => {
+            !this.ended && RR.isLive() && RR.onGaveUp(this.sessionBased, JR)
           }
         })
       }
-      onInitialInfo(WW, iW) {
-        this.graceMs = WW, this.sessionBased = iW
+      onInitialInfo(RR, JR) {
+        this.graceMs = RR, this.sessionBased = JR
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -601,8 +601,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(WW) {
-        this.ended || this.controller.onConnectionLost(WW, this.graceMs)
+      onConnectionLost(RR) {
+        this.ended || this.controller.onConnectionLost(RR, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -611,40 +611,40 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const WW = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          iW = this.controller.heldToken;
-        this.end(), WW && "" !== iW && this.hooks.releaseSeat(iW)
+        const RR = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          JR = this.controller.heldToken;
+        this.end(), RR && "" !== JR && this.hooks.releaseSeat(JR)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(WW) {
-        const iW = (0, NW.u)(WW);
-        iW !== this.stopped && (this.stopped = iW, this.hooks.freeze(iW));
-        const OW = "frozen" === WW || "resuming" === WW && this.frozen;
-        OW && !this.frozen ? (0, EW.y)(PW, {
+      onPhaseChanged(RR) {
+        const JR = (0, uR.t)(RR);
+        JR !== this.stopped && (this.stopped = JR, this.hooks.freeze(JR));
+        const GR = "frozen" === RR || "resuming" === RR && this.frozen;
+        GR && !this.frozen ? (0, tR.s)(ZR, {
           overridesPause: !0
-        }) : !OW && this.frozen && (0, EW.v)(PW), this.frozen = OW, this.setListening("connected" !== WW), mW.l.iZ(NW.t, OW ? "frozen" : WW)
+        }) : !GR && this.frozen && (0, tR.q)(ZR), this.frozen = GR, this.setListening("connected" !== RR), yR.n.JK(uR.r, GR ? "frozen" : RR)
       }
-      setListening(WW) {
-        WW !== this.listening && (this.listening = WW, WW ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(RR) {
+        RR !== this.listening && (this.listening = RR, RR ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  40253: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  40288: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR
     });
-    class mW {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = WW, this.now = iW, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const WW = this.now(),
-            iW = WW - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = WW;
-          const OW = "visible" === document.visibilityState;
-          !OW || iW && this.wasVisible || (this.resumedAt = WW), this.wasVisible = OW, OW && WW - this.lastHeardAt > 12e3 && WW - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = iW(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class yR {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = RR, this.now = JR, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const RR = this.now(),
+            JR = RR - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = RR;
+          const GR = "visible" === document.visibilityState;
+          !GR || JR && this.wasVisible || (this.resumedAt = RR), this.wasVisible = GR, GR && RR - this.lastHeardAt > 12e3 && RR - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = JR(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -654,28 +654,28 @@ export const modules = {
       }
     }
   },
-  35167: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  35085: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => uR
     });
-    var mW = OW(1303);
+    var yR = GR(1406);
 
-    function EW() {
-      var WW, iW;
-      return null !== (WW = null === (iW = screen.orientation) || void 0 === iW ? void 0 : iW.type) && void 0 !== WW ? WW : innerWidth > innerHeight ? "landscape" : "portrait"
+    function tR() {
+      var RR, JR;
+      return null !== (RR = null === (JR = screen.orientation) || void 0 === JR ? void 0 : JR.type) && void 0 !== RR ? RR : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const NW = new class {
+    const uR = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && EW() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && tR() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = EW(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, mW.ub)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = tR(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, yR.ma)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -683,657 +683,657 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const WW of this.resizers) WW()
+            for (const RR of this.resizers) RR()
           }
         }), 1e3)
       }
-      heldSizer(WW) {
-        let iW = !1;
+      heldSizer(RR) {
+        let JR = !1;
         return () => {
-          if (iW && this.isHeld()) return null;
-          const OW = WW();
-          return iW ||= null !== OW, OW
+          if (JR && this.isHeld()) return null;
+          const GR = RR();
+          return JR ||= null !== GR, GR
         }
       }
-      onRelease(WW) {
-        return this.resizers.add(WW), () => {
-          this.resizers.delete(WW)
+      onRelease(RR) {
+        return this.resizers.add(RR), () => {
+          this.resizers.delete(RR)
         }
       }
     }
   },
-  10223: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => EW
+  10336: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      h: () => tR
     });
-    let mW = Promise.resolve();
+    let yR = Promise.resolve();
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW() {
-      return mW
+    function uR() {
+      return yR
     }
   },
-  40478: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW
+  40525: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => tR
     });
-    let mW = !1;
-    async function EW(WW, iW) {
-      if (!mW) {
-        mW = !0;
+    let yR = !1;
+    async function tR(RR, JR) {
+      if (!yR) {
+        yR = !0;
         try {
           const [{
-            reloadBloxd: mW
+            reloadBloxd: yR
           }, {
-            NotificationProvider: EW
-          }] = await Promise.all([Promise.resolve().then((() => OW(1856))), Promise.resolve().then((() => OW(1422)))]);
-          if (!WW || !0 === await EW.showPromptPopup({
+            NotificationProvider: tR
+          }] = await Promise.all([Promise.resolve().then((() => GR(1943))), Promise.resolve().then((() => GR(1493)))]);
+          if (!RR || !0 === await tR.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void mW(iW)
-        } catch (EW) {
-          console.error("Leaving the replay failed", EW)
+            }).getResult()) return void yR(JR)
+        } catch (tR) {
+          console.error("Leaving the replay failed", tR)
         }
-        mW = !1
+        yR = !1
       }
     }
   },
-  40261: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      d: () => tW
+  40304: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => fR,
+      f: () => VR
     });
-    var mW = OW(1813),
-      EW = OW(182),
-      NW = OW(1787),
-      PW = OW(1917),
-      LW = OW(1185),
-      cW = OW(1111);
-    async function wW(WW, iW) {
-      return function(WW) {
-        return "object" === typeof WW && null !== WW && WW.code === EW.e.VpnIp.code
-      }(iW) && function(WW) {
-        return NW.d.supports("appCheck") && WW.isLoggedIn() && !WW.hasTriedAppAttestation()
-      }(WW) && await async function(WW) {
+    var yR = GR(1916),
+      tR = GR(203),
+      uR = GR(1879),
+      ZR = GR(1997),
+      qR = GR(1282),
+      iR = GR(1201);
+    async function fR(RR, JR) {
+      return function(RR) {
+        return "object" === typeof RR && null !== RR && RR.code === tR.e.VpnIp.code
+      }(JR) && function(RR) {
+        return uR.c.supports("appCheck") && RR.isLoggedIn() && !RR.hasTriedAppAttestation()
+      }(RR) && await async function(RR) {
         try {
           const {
-            token: iW
-          } = await (0, PW.e)(), {
-            "3PSIDMCPP": OW
-          } = await (0, cW.postJsonWithMetricsCookiesAndJsonResponse)(`${LW.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: iW
+            token: JR
+          } = await (0, ZR.b)(), {
+            "3PSIDMCPP": GR
+          } = await (0, iR.postJsonWithMetricsCookiesAndJsonResponse)(`${qR.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: JR
           }, {
             retries: 0
-          }, WW.getMetricsCookies());
-          return WW.setAppAttestedAuthJwt(OW), !0
-        } catch (iW) {
-          return iW instanceof mW.d && "failed" === iW.code ? (console.warn("The app couldn't get an App Check token:", iW), WW.markAppAttestationTried()) : console.error("Failed to attest the app:", iW), !1
+          }, RR.getMetricsCookies());
+          return RR.setAppAttestedAuthJwt(GR), !0
+        } catch (JR) {
+          return JR instanceof yR.b && "failed" === JR.code ? (console.warn("The app couldn't get an App Check token:", JR), RR.markAppAttestationTried()) : console.error("Failed to attest the app:", JR), !1
         }
-      }(WW)
+      }(RR)
     }
-    async function tW(WW, iW) {
+    async function VR(RR, JR) {
       try {
-        return await iW()
-      } catch (OW) {
-        if (!await wW(WW, OW)) throw OW
+        return await JR()
+      } catch (GR) {
+        if (!await fR(RR, GR)) throw GR
       }
-      return iW()
+      return JR()
     }
   },
-  42471: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      f: () => cW
+  42516: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      f: () => iR
     });
-    var mW = OW(1876);
-    const EW = 33177600,
-      NW = 3e4;
-    let PW = !1;
+    var yR = GR(1963);
+    const tR = 33177600,
+      uR = 3e4;
+    let ZR = !1;
 
-    function LW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function qR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: LW = 1,
-        type: cW = "image/png",
-        quality: wW
-      } = mW;
-      return WW.KZ() ? PW ? Promise.reject(new Error("A screenshot is already being taken")) : (PW = !0, new Promise(((mW, tW) => {
-        let ZW, xW = 2,
-          lW = null;
-        const AW = () => {
-          var iW;
-          PW = !1, null === (iW = lW) || void 0 === iW || iW(), clearTimeout(ZW);
+        scale: qR = 1,
+        type: iR = "image/png",
+        quality: fR
+      } = yR;
+      return RR.CK() ? ZR ? Promise.reject(new Error("A screenshot is already being taken")) : (ZR = !0, new Promise(((yR, VR) => {
+        let KR, wR = 2,
+          rR = null;
+        const eR = () => {
+          var JR;
+          ZR = !1, null === (JR = rR) || void 0 === JR || JR(), clearTimeout(KR);
           try {
-            WW.restoreSize()
-          } catch (OW) {
-            console.error("A screenshot couldn't size the canvas back", OW)
+            RR.restoreSize()
+          } catch (GR) {
+            console.error("A screenshot couldn't size the canvas back", GR)
           }
         };
-        ZW = setTimeout((() => {
-          AW(), tW(new Error("No frame was drawn to capture"))
-        }), NW);
+        KR = setTimeout((() => {
+          eR(), VR(new Error("No frame was drawn to capture"))
+        }), uR);
         try {
-          const mW = function(WW, iW, OW) {
-            const mW = Math.max(1, WW),
-              NW = Math.max(1, iW),
-              PW = Math.min(1, OW / Math.max(mW, NW), Math.sqrt(EW / (mW * NW)));
+          const yR = function(RR, JR, GR) {
+            const yR = Math.max(1, RR),
+              uR = Math.max(1, JR),
+              ZR = Math.min(1, GR / Math.max(yR, uR), Math.sqrt(tR / (yR * uR)));
             return {
-              width: Math.max(1, Math.floor(mW * PW)),
-              height: Math.max(1, Math.floor(NW * PW))
+              width: Math.max(1, Math.floor(yR * ZR)),
+              height: Math.max(1, Math.floor(uR * ZR))
             }
-          }(iW, OW, WW.maxTextureSize);
-          WW.resize(mW.width, mW.height, LW * mW.width / Math.max(1, iW))
-        } catch (bW) {
-          return AW(), void tW(bW)
+          }(JR, GR, RR.maxTextureSize);
+          RR.resize(yR.width, yR.height, qR * yR.width / Math.max(1, JR))
+        } catch (aR) {
+          return eR(), void VR(aR)
         }
-        lW = WW.onFrameDrawn((() => {
-          if (xW--, xW > 0) return;
+        rR = RR.onFrameDrawn((() => {
+          if (wR--, wR > 0) return;
           const {
-            canvas: iW
-          } = WW, OW = {
-            width: iW.width,
-            height: iW.height
+            canvas: JR
+          } = RR, GR = {
+            width: JR.width,
+            height: JR.height
           };
           try {
-            iW.toBlob((WW => {
-              WW ? mW({
-                blob: WW,
-                ...OW
-              }) : tW(new Error("The canvas gave no image"))
-            }), cW, wW)
-          } catch (bW) {
-            tW(bW)
+            JR.toBlob((RR => {
+              RR ? yR({
+                blob: RR,
+                ...GR
+              }) : VR(new Error("The canvas gave no image"))
+            }), iR, fR)
+          } catch (aR) {
+            VR(aR)
           } finally {
-            AW()
+            eR()
           }
         }))
       }))) : Promise.reject(new Error("Screenshots need a game to be running"))
     }
-    async function cW(WW, iW, OW) {
+    async function iR(RR, JR, GR) {
       try {
-        const EW = await LW(WW, iW, OW);
-        (0, mW.e)(EW.blob, `bloxd-screenshot-${EW.width}x${EW.height}-${Date.now()}.png`)
-      } catch (EW) {
-        console.error("Error taking screenshot:", EW)
+        const tR = await qR(RR, JR, GR);
+        (0, yR.e)(tR.blob, `bloxd-screenshot-${tR.width}x${tR.height}-${Date.now()}.png`)
+      } catch (tR) {
+        console.error("Error taking screenshot:", tR)
       }
     }
   },
-  38871: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW
+  38861: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR
     });
-    const mW = {
+    const yR = {
       noaReady: null,
       chunkRequested: null,
       beforeServerListeners: null,
       wasmNetReady: null
     }
   },
-  40258: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => xW,
-      e: () => tW
+  40295: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => wR,
+      h: () => VR
     });
-    var mW = OW(182),
-      EW = OW(1943),
-      NW = OW(1194),
-      PW = OW(10181);
-    const LW = [250, 500, 1e3, 2e3, 1250],
-      cW = 406;
+    var yR = GR(203),
+      tR = GR(2023),
+      uR = GR(1295),
+      ZR = GR(10298);
+    const qR = [250, 500, 1e3, 2e3, 1250],
+      iR = 406;
 
-    function wW(WW) {
-      if ("object" !== typeof WW || null === WW) return !1;
+    function fR(RR) {
+      if ("object" !== typeof RR || null === RR) return !1;
       const {
-        code: iW,
-        message: OW
-      } = WW, EW = mW.e.duplicateLobbyNameError;
-      return (iW === EW.code || iW === cW) && (OW === EW.text || OW === EW.text + mW.j)
+        code: JR,
+        message: GR
+      } = RR, tR = yR.e.duplicateLobbyNameError;
+      return (JR === tR.code || JR === iR) && (GR === tR.text || GR === tR.text + yR.k)
     }
-    async function tW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : EW.b;
-      for (let EW = 0;; EW++) {
-        let PW;
-        (0, NW.s)(iW);
+    async function VR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tR.b;
+      for (let tR = 0;; tR++) {
+        let ZR;
+        (0, uR.r)(JR);
         try {
-          return await WW()
-        } catch (mW) {
-          if (PW = LW[EW], void 0 === PW || !wW(mW)) throw mW
+          return await RR()
+        } catch (yR) {
+          if (ZR = qR[tR], void 0 === ZR || !fR(yR)) throw yR
         }
-        await OW(PW, iW)
+        await GR(ZR, JR)
       }
     }
-    const ZW = new Set([mW.e.duplicateLobbyNameError.code, mW.e.lobbyCantBeCreated.code, mW.e.roomDisposedEarlyError.code, mW.e.roomDisposedLateError.code, mW.e.serverRoomLimitReached.code]);
+    const KR = new Set([yR.e.duplicateLobbyNameError.code, yR.e.lobbyCantBeCreated.code, yR.e.roomDisposedEarlyError.code, yR.e.roomDisposedLateError.code, yR.e.serverRoomLimitReached.code]);
 
-    function xW(WW) {
-      if (wW(WW)) return !0;
-      const iW = (0, PW.f)(WW);
-      return "number" === typeof iW && ZW.has(iW)
+    function wR(RR) {
+      if (fR(RR)) return !0;
+      const JR = (0, ZR.h)(RR);
+      return "number" === typeof JR && KR.has(JR)
     }
   },
-  10167: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => wW,
-      f: () => cW
+  10285: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR,
+      e: () => iR
     });
-    var mW = OW(344);
+    var yR = GR(377);
 
-    function EW(WW) {
-      if (!WW.startsWith("{")) return WW;
-      let iW;
+    function tR(RR) {
+      if (!RR.startsWith("{")) return RR;
+      let JR;
       try {
-        iW = JSON.parse(WW)
+        JR = JSON.parse(RR)
       } catch {
-        return WW
+        return RR
       }
-      return function(WW) {
-        if (null === (0, mW.ye)(WW)) return !1;
+      return function(RR) {
+        if (null === (0, yR.Ee)(RR)) return !1;
         const {
-          params: iW
-        } = WW;
-        return void 0 === iW || "object" === typeof iW && null !== iW && Object.values(iW).every((WW => "string" === typeof WW))
-      }(iW) ? iW : WW
+          params: JR
+        } = RR;
+        return void 0 === JR || "object" === typeof JR && null !== JR && Object.values(JR).every((RR => "string" === typeof RR))
+      }(JR) ? JR : RR
     }
-    var NW = OW(1172),
-      PW = OW(1244);
+    var uR = GR(1270),
+      ZR = GR(1343);
 
-    function LW(WW) {
-      return (0, NW.u)(PW.e.get().getCurrentLanguageCode(), WW.translationKey, WW.params)
-    }
-
-    function cW(WW) {
-      const iW = EW(WW);
-      return "string" === typeof iW ? iW : LW(iW)
+    function qR(RR) {
+      return (0, uR.w)(ZR.g.get().getCurrentLanguageCode(), RR.translationKey, RR.params)
     }
 
-    function wW(WW) {
-      const iW = EW(WW);
-      return "string" === typeof iW ? iW : LW({
+    function iR(RR) {
+      const JR = tR(RR);
+      return "string" === typeof JR ? JR : qR(JR)
+    }
+
+    function fR(RR) {
+      const JR = tR(RR);
+      return "string" === typeof JR ? JR : qR({
         translationKey: "moderation:kicked",
         params: {
-          reason: LW(iW)
+          reason: qR(JR)
         }
       })
     }
   },
-  40402: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW
+  40455: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR
     });
-    var mW = OW(327),
-      EW = OW(136),
-      NW = OW(39);
+    var yR = GR(359),
+      tR = GR(134),
+      uR = GR(46);
 
-    function PW() {
-      NW.i.setItem(mW.Qb, NW.i.getItem(mW.Qb) + 1), (0, EW.is99NightsCrazyGamesBundle)() && NW.i.setItem(mW.Nb, NW.i.getItem(mW.Nb) + 1)
+    function ZR() {
+      uR.i.setItem(yR.Eb, uR.i.getItem(yR.Eb) + 1), (0, tR.is99NightsCrazyGamesBundle)() && uR.i.setItem(yR.Db, uR.i.getItem(yR.Db) + 1)
     }
   },
-  37707: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => KW,
-      e: () => SW
+  37616: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => CR,
+      g: () => XR
     });
-    var mW = OW(1052),
-      EW = OW(192),
-      NW = OW(339),
-      PW = OW(649),
-      LW = OW(344),
-      cW = OW(1061),
-      wW = OW(671),
-      tW = OW(698),
-      ZW = OW(5230),
-      xW = OW(100),
-      lW = OW(136),
-      AW = OW(1856),
-      bW = OW(117),
-      jW = OW(37709),
-      UW = OW(39),
-      kW = OW(683),
-      sW = OW(657),
-      MW = OW(37711);
+    var yR = GR(1127),
+      tR = GR(216),
+      uR = GR(371),
+      ZR = GR(688),
+      qR = GR(377),
+      iR = GR(1136),
+      fR = GR(709),
+      VR = GR(743),
+      KR = GR(5326),
+      wR = GR(103),
+      rR = GR(134),
+      eR = GR(1943),
+      aR = GR(116),
+      LR = GR(37620),
+      nR = GR(46),
+      UR = GR(726),
+      WR = GR(696),
+      AR = GR(37622);
 
-    function KW() {
-      var WW, iW;
-      return [...null !== (WW = navigator.languages) && void 0 !== WW ? WW : [null !== (iW = navigator.language) && void 0 !== iW ? iW : "none"], "EN-gb"]
+    function CR() {
+      var RR, JR;
+      return [...null !== (RR = navigator.languages) && void 0 !== RR ? RR : [null !== (JR = navigator.language) && void 0 !== JR ? JR : "none"], "EN-gb"]
     }
 
-    function SW(WW, iW, OW, SW, YW) {
-      const yW = (0, mW.i)(iW) ? (0, mW.n)(iW) : null,
-        TW = WW.isLoggedIn() && void 0 !== (0, EW.c)(NW.k, lW.siteUsed) ? (0, sW.g)() : null,
-        JW = {
-          cookies: (0, AW.getAllCookiesForGameNameWithVariation)(iW),
-          isMobile: (0, xW.isMobile)(),
-          isUsingCustomGameTexturePack: null !== yW && YW(yW),
+    function XR(RR, JR, GR, XR, MR) {
+      const BR = (0, yR.n)(JR) ? (0, yR.s)(JR) : null,
+        lR = RR.isLoggedIn() && void 0 !== (0, tR.b)(uR.o, rR.siteUsed) ? (0, WR.f)() : null,
+        pR = {
+          cookies: (0, eR.getAllCookiesForGameNameWithVariation)(JR),
+          isMobile: (0, wR.isMobile)(),
+          isUsingCustomGameTexturePack: null !== BR && MR(BR),
           generalCookies: {
-            joinDiscord: !!UW.i.getItem("DiscordPressed"),
-            newGo: ZW.c,
-            ...WW.getMetricsCookies(),
-            trafficCode: SW,
-            compliance: xW.compliance
+            joinDiscord: !!nR.i.getItem("DiscordPressed"),
+            newGo: KR.c,
+            ...RR.getMetricsCookies(),
+            trafficCode: XR,
+            compliance: wR.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, xW.getBrowserName)(),
-            version: (0, xW.getBrowserVersion)(),
+            name: (0, wR.getBrowserName)(),
+            version: (0, wR.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, xW.getPlatformType)(),
-            deviceType: (0, bW.d)()
+            platformType: (0, wR.getPlatformType)(),
+            deviceType: (0, aR.c)()
           },
-          isLoggedIn: WW.isLoggedIn(),
-          lobbyName: OW,
-          languages: KW(),
-          version: PW.d,
-          siteUsed: lW.siteUsed,
-          subsiteUsed: lW.subsiteUsed,
-          playSessionId: (0, jW.g)(iW),
-          visitSessionId: (0, kW.getVisitSessionId)(),
-          clientReason: wW.B.reason,
-          budgetBasis: (0, MW.g)(),
-          ...null !== tW.o && {
-            diagClaim: tW.o.claimId
+          isLoggedIn: RR.isLoggedIn(),
+          lobbyName: GR,
+          languages: CR(),
+          version: ZR.d,
+          siteUsed: rR.siteUsed,
+          subsiteUsed: rR.subsiteUsed,
+          playSessionId: (0, LR.h)(JR),
+          visitSessionId: (0, UR.getVisitSessionId)(),
+          clientReason: fR.z.reason,
+          budgetBasis: (0, AR.k)(),
+          ...null !== VR.p && {
+            diagClaim: VR.p.claimId
           },
-          ...null !== TW && {
-            webGpuLoss: TW
+          ...null !== lR && {
+            webGpuLoss: lR
           }
         };
-      return null !== yW && (0, LW.xc)(yW) ? (JW.lobbyName = (0, mW.f)(yW, (0, mW.m)(iW), OW), {
-        roomName: `classic_${cW.e}`,
-        joinOptions: JW
+      return null !== BR && (0, qR.Ac)(BR) ? (pR.lobbyName = (0, yR.l)(BR, (0, yR.p)(JR), GR), {
+        roomName: `classic_${iR.h}`,
+        joinOptions: pR
       }) : {
-        roomName: iW,
-        joinOptions: JW
+        roomName: JR,
+        joinOptions: pR
       }
     }
   },
-  35130: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      e: () => EW
+  35051: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR,
+      g: () => tR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW() {
-      mW = performance.now()
+    function tR() {
+      yR = performance.now()
     }
 
-    function NW() {
-      return mW
+    function uR() {
+      return yR
     }
   },
-  40282: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => lW,
-      d: () => xW
+  40327: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => rR,
+      f: () => wR
     });
-    const mW = "ue:",
-      EW = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
-      NW = "[A-Za-z0-9]{1,24}",
-      PW = 15,
-      LW = new RegExp(`^${NW}$`);
-    new RegExp(`^${mW}(${[...EW,"other"].join("|")}):(?:n|k(${NW})|b(0|[1-9][0-9]?)):([01])([01])$`);
+    const yR = "ue:",
+      tR = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
+      uR = "[A-Za-z0-9]{1,24}",
+      ZR = 15,
+      qR = new RegExp(`^${uR}$`);
+    new RegExp(`^${yR}(${[...tR,"other"].join("|")}):(?:n|k(${uR})|b(0|[1-9][0-9]?)):([01])([01])$`);
 
-    function cW(WW, iW, OW, NW, cW) {
-      const wW = "string" === typeof WW && EW.includes(WW) ? WW : "other";
-      let tW = "n";
-      return "string" === typeof iW ? tW = LW.test(iW) ? `k${iW}` : "n" : "number" === typeof OW && Number.isInteger(OW) && OW >= 0 && OW <= PW && (tW = `b${OW}`), `${mW}${wW}:${tW}:${NW?1:0}${cW?1:0}`
+    function iR(RR, JR, GR, uR, iR) {
+      const fR = "string" === typeof RR && tR.includes(RR) ? RR : "other";
+      let VR = "n";
+      return "string" === typeof JR ? VR = qR.test(JR) ? `k${JR}` : "n" : "number" === typeof GR && Number.isInteger(GR) && GR >= 0 && GR <= ZR && (VR = `b${GR}`), `${yR}${fR}:${VR}:${uR?1:0}${iR?1:0}`
     }
-    var wW = OW(1774),
-      tW = OW(1864);
-    let ZW = null;
+    var fR = GR(1850),
+      VR = GR(1950);
+    let KR = null;
 
-    function xW(WW) {
-      const iW = WW instanceof Element && WW !== document.body && WW !== document.documentElement && !(0, wW.r)(WW) && !WW.closest("#root");
+    function wR(RR) {
+      const JR = RR instanceof Element && RR !== document.body && RR !== document.documentElement && !(0, fR.v)(RR) && !RR.closest("#root");
       return {
-        editable: (0, tW.b)(WW),
-        outsideView: iW
+        editable: (0, VR.b)(RR),
+        outsideView: JR
       }
     }
 
-    function lW(WW) {
-      return ZW ??= function(WW) {
+    function rR(RR) {
+      return KR ??= function(RR) {
         try {
           const {
-            editable: iW,
-            outsideView: OW
-          } = xW(WW.target), mW = WW;
-          return cW(WW.type, mW.code, mW.button, iW, OW)
+            editable: JR,
+            outsideView: GR
+          } = wR(RR.target), yR = RR;
+          return iR(RR.type, yR.code, yR.button, JR, GR)
         } catch {
-          return cW(null, null, null, !1, !1)
+          return iR(null, null, null, !1, !1)
         }
-      }(WW), ZW
+      }(RR), KR
     }
   },
-  42394: (WW, iW, OW) => {
-    OW.d(iW, {
-      C: () => dW,
-      G: () => rW,
-      H: () => gW,
-      I: () => nW,
-      J: () => vW,
-      M: () => HW,
-      P: () => qW,
-      S: () => BW,
-      V: () => oW,
-      d: () => RW,
-      h: () => VW,
-      i: () => JW,
-      m: () => GW,
-      q: () => hW,
-      t: () => TW,
-      u: () => DW,
-      v: () => uW,
-      z: () => eW
+  42423: (RR, JR, GR) => {
+    GR.d(JR, {
+      A: () => DR,
+      E: () => NR,
+      I: () => FR,
+      M: () => oR,
+      O: () => vR,
+      S: () => HR,
+      T: () => bR,
+      X: () => dR,
+      _: () => jR,
+      ab: () => xR,
+      d: () => ER,
+      h: () => PR,
+      k: () => pR,
+      o: () => YR,
+      r: () => gR,
+      t: () => lR,
+      w: () => cR,
+      y: () => OR
     });
-    var mW = OW(1459),
-      EW = OW(27),
-      NW = OW(1294),
-      PW = OW(3305),
-      LW = OW(5575),
-      cW = OW(5533);
-    let wW, tW = !1,
-      ZW = !1,
-      xW = !1,
-      lW = !1;
-    const AW = 1300,
-      bW = 3e3;
-    let jW = 0,
-      UW = !1,
-      kW = !1,
-      sW = 0;
-    const MW = 2;
-    let KW = !1,
-      SW = !1;
-    const YW = new Set,
-      yW = new Set;
+    var yR = GR(1532),
+      tR = GR(32),
+      uR = GR(1383),
+      ZR = GR(3428),
+      qR = GR(5699),
+      iR = GR(5665);
+    let fR, VR = !1,
+      KR = !1,
+      wR = !1,
+      rR = !1;
+    const eR = 1300,
+      aR = 3e3;
+    let LR = 0,
+      nR = !1,
+      UR = !1,
+      WR = 0;
+    const AR = 2;
+    let CR = !1,
+      XR = !1;
+    const MR = new Set,
+      BR = new Set;
 
-    function TW() {
-      return tW
+    function lR() {
+      return VR
     }
 
-    function JW() {
-      return kW
+    function pR() {
+      return UR
     }
 
-    function hW() {
-      return SW
+    function gR() {
+      return XR
     }
 
-    function HW() {
-      return (0, NW.z)() && !SW
+    function bR() {
+      return (0, uR.u)() && !XR
     }
 
-    function nW(WW) {
-      let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (WW !== SW) {
-        SW = WW;
-        for (const WW of [...yW]) WW(SW);
-        iW && BW()
+    function vR(RR) {
+      let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (RR !== XR) {
+        XR = RR;
+        for (const RR of [...BR]) RR(XR);
+        JR && jR()
       }
     }
 
-    function uW(WW) {
-      return yW.add(WW), () => {
-        yW.delete(WW)
+    function OR(RR) {
+      return BR.add(RR), () => {
+        BR.delete(RR)
       }
     }
 
-    function oW() {
-      (0, LW.j)(PW.y.Menu, (0, NW.z)() ? 0 : PW.y.Menu)
+    function xR() {
+      (0, qR.i)(ZR.C.Menu, (0, uR.u)() ? 0 : ZR.C.Menu)
     }
 
-    function dW() {
-      kW = !1, sW = 0, oW(), BW()
+    function NR() {
+      UR = !1, WR = 0, xR(), jR()
     }
 
-    function eW(WW) {
-      return YW.add(WW), () => {
-        YW.delete(WW)
+    function DR(RR) {
+      return MR.add(RR), () => {
+        MR.delete(RR)
       }
     }
 
-    function vW(WW) {
-      ZW = !1, WW !== tW && (tW = WW, lW = !1, clearTimeout(wW), xW = !tW && KW, tW ? (UW = !1, kW = !1, sW = 0) : HW() && !KW && (kW = !0), KW = !1, tW && !HW() && aW(), zW(), xW && BW())
+    function HR(RR) {
+      KR = !1, RR !== VR && (VR = RR, rR = !1, clearTimeout(fR), wR = !VR && CR, VR ? (nR = !1, UR = !1, WR = 0) : bR() && !CR && (UR = !0), CR = !1, VR && !bR() && QR(), TR(), wR && jR())
     }
 
-    function gW(WW) {
-      WW !== UW && (UW = WW, WW || BW())
+    function oR(RR) {
+      RR !== nR && (nR = RR, RR || jR())
     }
 
-    function DW() {
-      ZW = !1, lW || !0 !== CW() || (lW = !0, clearTimeout(wW), wW = setTimeout(pW, AW))
+    function cR() {
+      KR = !1, rR || !0 !== zR() || (rR = !0, clearTimeout(fR), fR = setTimeout(IR, eR))
     }
 
-    function VW() {
-      return (!ZW || performance.now() - jW > bW) && (ZW = (0, cW.K)().lockPointer(), jW = performance.now()), ZW
+    function PR() {
+      return (!KR || performance.now() - LR > aR) && (KR = (0, iR.E)().lockPointer(), LR = performance.now()), KR
     }
 
-    function pW() {
-      fW() && XW() && VW()
+    function IR() {
+      mR() && SR() && PR()
     }
 
-    function fW() {
-      return HW() && !tW && !UW && !(0, mW.k)()
+    function mR() {
+      return bR() && !VR && !nR && !(0, yR.j)()
     }
 
-    function CW() {
-      var WW;
-      return "undefined" === typeof navigator || null === (WW = navigator.userActivation) || void 0 === WW ? void 0 : WW.isActive
+    function zR() {
+      var RR;
+      return "undefined" === typeof navigator || null === (RR = navigator.userActivation) || void 0 === RR ? void 0 : RR.isActive
     }
 
-    function XW() {
-      return xW && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== CW()
+    function SR() {
+      return wR && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== zR()
     }
 
-    function BW() {
-      HW() ? fW() && !kW && XW() && VW() : tW && !KW && aW()
+    function jR() {
+      bR() ? mR() && !UR && SR() && PR() : VR && !CR && QR()
     }
 
-    function qW() {
-      kW ? navigator.vendor.startsWith("Apple") ? IW() : sW = MW : BW()
+    function dR() {
+      UR ? navigator.vendor.startsWith("Apple") ? kR() : WR = AR : jR()
     }
 
-    function RW() {
-      sW > 0 && 0 === --sW && IW()
+    function ER() {
+      WR > 0 && 0 === --WR && kR()
     }
 
-    function GW() {
-      sW = 0
+    function YR() {
+      WR = 0
     }
 
-    function IW() {
-      fW() && !0 === CW() && VW()
+    function kR() {
+      mR() && !0 === zR() && PR()
     }
 
-    function aW() {
-      KW = !0, (0, cW.K)().unlockPointer()
+    function QR() {
+      CR = !0, (0, iR.E)().unlockPointer()
     }
 
-    function rW() {
-      ZW = !1, xW = !1, lW = !1, clearTimeout(wW), UW = !1, kW = !1, sW = 0, KW = !1;
-      const WW = tW;
-      tW = !1, WW && zW()
+    function FR() {
+      KR = !1, wR = !1, rR = !1, clearTimeout(fR), nR = !1, UR = !1, WR = 0, CR = !1;
+      const RR = VR;
+      VR = !1, RR && TR()
     }
 
-    function zW() {
-      for (const WW of [...YW]) WW(tW);
-      EW.l.iZ("pointerLockUpdate", tW)
-    }
-  },
-  42373: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => xW,
-      h: () => LW,
-      j: () => ZW,
-      n: () => wW,
-      q: () => PW,
-      t: () => tW,
-      x: () => cW
-    });
-    let mW = null,
-      EW = null,
-      NW = null;
-
-    function PW(WW) {
-      mW = WW
-    }
-
-    function LW() {
-      return mW
-    }
-
-    function cW(WW) {
-      EW = WW
-    }
-
-    function wW() {
-      return EW
-    }
-
-    function tW(WW) {
-      NW = WW
-    }
-
-    function ZW() {
-      return NW
-    }
-
-    function xW() {
-      var WW, iW;
-      return !0 === (null === (WW = EW) || void 0 === WW || null === (iW = WW.currentViewer) || void 0 === iW ? void 0 : iW.inPlayback)
+    function TR() {
+      for (const RR of [...MR]) RR(VR);
+      tR.n.JK("pointerLockUpdate", VR)
     }
   },
-  42176: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW
+  42394: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => wR,
+      f: () => qR,
+      i: () => KR,
+      l: () => fR,
+      n: () => ZR,
+      o: () => VR,
+      r: () => iR
     });
-    var mW = OW(40980),
-      EW = OW(37968);
+    let yR = null,
+      tR = null,
+      uR = null;
 
-    function NW(WW) {
+    function ZR(RR) {
+      yR = RR
+    }
+
+    function qR() {
+      return yR
+    }
+
+    function iR(RR) {
+      tR = RR
+    }
+
+    function fR() {
+      return tR
+    }
+
+    function VR(RR) {
+      uR = RR
+    }
+
+    function KR() {
+      return uR
+    }
+
+    function wR() {
+      var RR, JR;
+      return !0 === (null === (RR = tR) || void 0 === RR || null === (JR = RR.currentViewer) || void 0 === JR ? void 0 : JR.inPlayback)
+    }
+  },
+  42188: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR
+    });
+    var yR = GR(40983),
+      tR = GR(37914);
+
+    function uR(RR) {
       return {
-        current: () => WW,
+        current: () => RR,
         watch: () => () => {}
       }
     }
 
-    function PW() {}
-    const LW = Object.freeze([0, 0, 0]),
-      cW = {
+    function ZR() {}
+    const qR = Object.freeze([0, 0, 0]),
+      iR = {
         states: {
-          health: NW({
+          health: uR({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: NW({
+          inventory: uR({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -1341,58 +1341,58 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: NW({
+          hotbar: uR({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: NW({
+          stationItems: uR({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: NW({}),
-          creativeVisibility: NW({
+          itemInfo: uR({}),
+          creativeVisibility: uR({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: NW(null),
-          heldItemAim: NW({
+          aura: uR(null),
+          heldItemAim: uR({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: NW(!1),
-          gliderBoostFuel: NW(0),
-          flight: NW({
+          crouching: uR(!1),
+          gliderBoostFuel: uR(0),
+          flight: uR({
             canFly: !1,
             flying: !1
           }),
-          crafting: NW({
+          crafting: uR({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: NW({
+          players: uR({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: NW({}),
-          fullInventory: NW(!1),
-          crosshairTarget: NW({
+          lobbyLeaderboardRows: uR({}),
+          fullInventory: uR(!1),
+          crosshairTarget: uR({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: NW(!0),
-          freeCamera: NW({
+          localPlayerAlive: uR(!0),
+          freeCamera: uR({
             allowed: !1,
             movesFly: !1
           }),
-          replay: NW(null),
-          replayEdits: NW(null),
-          replayRecorder: NW(EW.b),
-          replayVideoExporting: NW(!1)
+          replay: uR(null),
+          replayEdits: uR(null),
+          replayRecorder: uR(tR.b),
+          replayVideoExporting: uR(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -1457,87 +1457,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: PW,
+          selectHotbarSlot: ZR,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: PW,
-          setInventoryOpen: PW,
-          changeIronChestPasskey: PW,
-          dragReplayCamera: PW,
-          applyTemporaryThirdPerson: PW,
-          holdEmoteWheel: PW,
-          recordFlyingMiddleText: PW,
-          focusCrafting: PW,
+          closeChest: ZR,
+          setInventoryOpen: ZR,
+          changeIronChestPasskey: ZR,
+          dragReplayCamera: ZR,
+          applyTemporaryThirdPerson: ZR,
+          holdEmoteWheel: ZR,
+          recordFlyingMiddleText: ZR,
+          focusCrafting: ZR,
           craftRecipe: () => ({
-            lL: 0,
-            WZ: null,
+            Uq: 0,
+            RK: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: PW,
-          setShopOpen: PW,
-          buyShopItem: PW,
-          lobbyManage: PW,
+          enchantItem: ZR,
+          setShopOpen: ZR,
+          buyShopItem: ZR,
+          lobbyManage: ZR,
           sendChatMessage: () => !1,
-          ignorePlayer: PW,
-          reportPlayer: PW,
-          reportWorldCodeChat: PW,
-          requestDiscordReportKey: PW,
-          reportLobbyOrGame: PW,
-          playEmote: PW,
-          updateMyCosmetic: PW,
-          writeOnBoard: PW,
-          writeBook: PW,
-          writeNameTag: PW,
-          setCustomLobbyBlock: PW,
-          openIronChest: PW,
-          sendCodeCollab: PW,
-          clickCodeBlock: PW,
-          bindCustomButtonKeys: PW,
-          pressCustomButton: PW,
-          moveReplayFreecam: PW,
-          holdReplayFreecamVertical: PW,
-          respawn: PW,
-          wakeUp: PW,
-          requestLeaderboard: PW,
-          completeTask: PW,
-          setServerCookie: PW,
-          answerUiRequest: PW,
-          chooseRewardedAd: PW,
-          setCameraZoom: PW,
-          setFreeCameraMovesFly: PW,
-          setBlockHighlight: PW,
-          setCrosshairInteractPrompt: PW,
-          setLookSensitivity: PW,
-          replayAction: PW,
-          setReplayPlaying: PW,
-          seekReplay: PW,
-          setReplayCameraMode: PW,
-          syncReplayCameraMode: PW,
-          setReplayCameraKeyframe: PW,
-          moveReplayCameraKeyframe: PW,
-          deleteReplayCameraKeyframes: PW,
-          setReplayPlaybackMark: PW,
+          ignorePlayer: ZR,
+          reportPlayer: ZR,
+          reportWorldCodeChat: ZR,
+          requestDiscordReportKey: ZR,
+          reportLobbyOrGame: ZR,
+          playEmote: ZR,
+          updateMyCosmetic: ZR,
+          writeOnBoard: ZR,
+          writeBook: ZR,
+          writeNameTag: ZR,
+          setCustomLobbyBlock: ZR,
+          openIronChest: ZR,
+          sendCodeCollab: ZR,
+          clickCodeBlock: ZR,
+          bindCustomButtonKeys: ZR,
+          pressCustomButton: ZR,
+          moveReplayFreecam: ZR,
+          holdReplayFreecamVertical: ZR,
+          respawn: ZR,
+          wakeUp: ZR,
+          requestLeaderboard: ZR,
+          completeTask: ZR,
+          setServerCookie: ZR,
+          answerUiRequest: ZR,
+          chooseRewardedAd: ZR,
+          setCameraZoom: ZR,
+          setFreeCameraMovesFly: ZR,
+          setBlockHighlight: ZR,
+          setCrosshairInteractPrompt: ZR,
+          setLookSensitivity: ZR,
+          replayAction: ZR,
+          setReplayPlaying: ZR,
+          seekReplay: ZR,
+          setReplayCameraMode: ZR,
+          syncReplayCameraMode: ZR,
+          setReplayCameraKeyframe: ZR,
+          moveReplayCameraKeyframe: ZR,
+          deleteReplayCameraKeyframes: ZR,
+          setReplayPlaybackMark: ZR,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: PW,
-          exportReplayVideo: PW,
-          toggleRecording: PW,
-          saveClip: PW,
-          setRecorderPrefs: PW,
-          setReplayViewerOpen: PW
+          holdReplayForShaderPackFailure: ZR,
+          exportReplayVideo: ZR,
+          toggleRecording: ZR,
+          saveClip: ZR,
+          setRecorderPrefs: ZR,
+          setReplayViewerOpen: ZR
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => mW.c,
-          worldCodeAiGameState: () => mW.e
+          worldCodeAiChunk: () => yR.b,
+          worldCodeAiGameState: () => yR.e
         },
         lookups: {
-          localPos: () => LW,
+          localPos: () => qR,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -1555,45 +1555,45 @@ export const modules = {
         }
       }
   },
-  42185: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      h: () => NW,
-      i: () => EW
+  42194: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      g: () => uR,
+      h: () => tR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW(WW) {
-      mW === WW && (mW = null)
+    function uR(RR) {
+      yR === RR && (yR = null)
     }
 
-    function PW() {
-      var WW;
-      null === (WW = mW) || void 0 === WW || WW()
+    function ZR() {
+      var RR;
+      null === (RR = yR) || void 0 === RR || RR()
     }
   },
-  37861: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => tW,
-      f: () => xW,
-      g: () => UW,
-      j: () => wW
+  37789: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => VR,
+      d: () => wR,
+      h: () => nR,
+      i: () => fR
     });
-    var mW = OW(25),
-      EW = OW(3305),
-      NW = OW(3308),
-      PW = OW(3310),
-      LW = OW(3457),
-      cW = OW(27);
+    var yR = GR(25),
+      tR = GR(3428),
+      uR = GR(3437),
+      ZR = GR(3441),
+      qR = GR(3593),
+      iR = GR(32);
 
-    function wW(WW, iW) {
-      return (!(0, PW.d)() || 0 === WW && 0 === iW) && (0, NW.v)(EW.k.Joystick, 0, WW, iW, 0)
+    function fR(RR, JR) {
+      return (!(0, ZR.d)() || 0 === RR && 0 === JR) && (0, uR.z)(tR.j.Joystick, 0, RR, JR, 0)
     }
-    const tW = {
+    const VR = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1603,394 +1603,394 @@ export const modules = {
       Boost: 7
     };
 
-    function ZW(WW) {
-      return WW.classList.contains("TouchKeyHit") && lW() ? null : WW.firstElementChild
+    function KR(RR) {
+      return RR.classList.contains("TouchKeyHit") && rR() ? null : RR.firstElementChild
     }
 
-    function xW(WW) {
-      return WW.classList.contains("TouchKeyHit") && !WW.classList.contains("CanvasZone") ? {
-        whole: !lW(),
+    function wR(RR) {
+      return RR.classList.contains("TouchKeyHit") && !RR.classList.contains("CanvasZone") ? {
+        whole: !rR(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: AW(ZW(WW))
+        keyBox: eR(KR(RR))
       }
     }
 
-    function lW() {
-      return document.documentElement.classList.contains(LW.i)
+    function rR() {
+      return document.documentElement.classList.contains(qR.m)
     }
 
-    function AW(WW) {
-      return !(WW instanceof HTMLElement) || WW.offsetWidth <= 0 || WW.offsetHeight <= 0 ? null : {
-        width: WW.offsetWidth,
-        height: WW.offsetHeight
+    function eR(RR) {
+      return !(RR instanceof HTMLElement) || RR.offsetWidth <= 0 || RR.offsetHeight <= 0 ? null : {
+        width: RR.offsetWidth,
+        height: RR.offsetHeight
       }
     }
 
-    function bW(WW, iW) {
-      const OW = WW => Math.min(65535, Math.round(4 * WW));
-      return (OW(WW) | OW(iW) << 16) >>> 0
+    function aR(RR, JR) {
+      const GR = RR => Math.min(65535, Math.round(4 * RR));
+      return (GR(RR) | GR(JR) << 16) >>> 0
     }
 
-    function jW(WW) {
+    function LR(RR) {
       return {
-        x: WW.left + WW.width / 2,
-        y: WW.top + WW.height / 2,
-        radius: Math.min(WW.width, WW.height) / 2
+        x: RR.left + RR.width / 2,
+        y: RR.top + RR.height / 2,
+        radius: Math.min(RR.width, RR.height) / 2
       }
     }
-    const UW = new class {
-      constructor(WW) {
-        this.write = WW, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const nR = new class {
+      constructor(RR) {
+        this.write = RR, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        iW ? this.elements.set(WW, {
-          element: iW,
-          hidden: OW
-        }) : this.elements.delete(WW), this.measureOne(WW)
+      set(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        JR ? this.elements.set(RR, {
+          element: JR,
+          hidden: GR
+        }) : this.elements.delete(RR), this.measureOne(RR)
       }
       measure() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = WW.left, this.canvasTop = WW.top;
-        for (const iW of this.elements.keys()) this.measureOne(iW)
+        this.canvasLeft = RR.left, this.canvasTop = RR.top;
+        for (const JR of this.elements.keys()) this.measureOne(JR)
       }
-      hitZone(WW, iW) {
-        let OW = null,
-          mW = 1;
-        for (const EW of this.elements.keys()) {
-          const NW = this.shown(EW);
-          if (!NW) continue;
+      hitZone(RR, JR) {
+        let GR = null,
+          yR = 1;
+        for (const tR of this.elements.keys()) {
+          const uR = this.shown(tR);
+          if (!uR) continue;
           const {
-            rect: PW,
-            element: LW
-          } = NW, cW = jW(PW), wW = Math.max(0, PW.width / 2 - cW.radius), tW = Math.max(0, PW.height / 2 - cW.radius), xW = Math.max(0, Math.abs(WW - cW.x) - wW), lW = Math.max(0, Math.abs(iW - cW.y) - tW), bW = LW.firstElementChild;
-          let UW = Math.hypot(xW, lW) / cW.radius;
-          const kW = AW(ZW(LW));
-          kW && (UW = Math.min(UW, Math.max(2 * Math.abs(WW - cW.x) / kW.width, 2 * Math.abs(iW - cW.y) / kW.height))), UW < mW && (OW = {
-            code: EW,
-            element: LW,
-            key: bW,
-            ...cW
-          }, mW = UW)
+            rect: ZR,
+            element: qR
+          } = uR, iR = LR(ZR), fR = Math.max(0, ZR.width / 2 - iR.radius), VR = Math.max(0, ZR.height / 2 - iR.radius), wR = Math.max(0, Math.abs(RR - iR.x) - fR), rR = Math.max(0, Math.abs(JR - iR.y) - VR), aR = qR.firstElementChild;
+          let nR = Math.hypot(wR, rR) / iR.radius;
+          const UR = eR(KR(qR));
+          UR && (nR = Math.min(nR, Math.max(2 * Math.abs(RR - iR.x) / UR.width, 2 * Math.abs(JR - iR.y) / UR.height))), nR < yR && (GR = {
+            code: tR,
+            element: qR,
+            key: aR,
+            ...iR
+          }, yR = nR)
         }
-        return OW
+        return GR
       }
-      measureOne(WW) {
-        const iW = this.shown(WW);
-        if (!iW) return void this.write(EW.k.TouchZone, WW, 0, 0, 0);
+      measureOne(RR) {
+        const JR = this.shown(RR);
+        if (!JR) return void this.write(tR.j.TouchZone, RR, 0, 0, 0);
         const {
-          rect: OW,
-          element: mW
-        } = iW, NW = jW(OW);
-        this.write(EW.k.TouchZone, WW, NW.x - this.canvasLeft, NW.y - this.canvasTop, bW(OW.width, OW.height));
-        const PW = AW(ZW(mW));
-        this.write(EW.k.TouchZone, 256 | WW, 0, 0, PW ? bW(PW.width, PW.height) : 0)
+          rect: GR,
+          element: yR
+        } = JR, uR = LR(GR);
+        this.write(tR.j.TouchZone, RR, uR.x - this.canvasLeft, uR.y - this.canvasTop, aR(GR.width, GR.height));
+        const ZR = eR(KR(yR));
+        this.write(tR.j.TouchZone, 256 | RR, 0, 0, ZR ? aR(ZR.width, ZR.height) : 0)
       }
-      shown(WW) {
-        const iW = this.elements.get(WW),
-          OW = mW.d.get("worldPanelHud");
-        if (!iW || iW.hidden || "none" === OW) return null;
-        const EW = iW.element.getBoundingClientRect();
-        return EW.width <= 0 || EW.height <= 0 ? null : {
-          rect: EW,
-          element: iW.element
+      shown(RR) {
+        const JR = this.elements.get(RR),
+          GR = yR.d.get("worldPanelHud");
+        if (!JR || JR.hidden || "none" === GR) return null;
+        const tR = JR.element.getBoundingClientRect();
+        return tR.width <= 0 || tR.height <= 0 ? null : {
+          rect: tR,
+          element: JR.element
         }
       }
-    }(NW.v);
-    (0, cW.n)(LW.d, (() => {
-      UW.measure()
+    }(uR.z);
+    (0, iR.q)(qR.h, (() => {
+      nR.measure()
     }))
   },
-  42375: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => cW,
-      c: () => wW
+  42402: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR,
+      f: () => fR
     });
-    var mW = OW(42379),
-      EW = OW(40261),
-      NW = OW(37707),
-      PW = OW(42255),
-      LW = OW(42307);
-    const cW = mW.e.timeForPlayerToConnect - 1e4;
-    async function wW(WW, iW, OW, mW) {
-      let cW;
+    var yR = GR(42411),
+      tR = GR(40304),
+      uR = GR(37616),
+      ZR = GR(42281),
+      qR = GR(42329);
+    const iR = yR.b.timeForPlayerToConnect - 1e4;
+    async function fR(RR, JR, GR, yR) {
+      let iR;
       try {
-        cW = await WW.getTrafficCode()
-      } catch (AW) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", AW), new LW.z(AW)
+        iR = await RR.getTrafficCode()
+      } catch (eR) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", eR), new qR.z(eR)
       }
       const {
-        gameNameWithVariation: wW,
-        lobbyName: tW
-      } = iW, ZW = () => {
-        const iW = (0, NW.e)(WW, wW, tW, cW, (WW => {
-          var iW;
-          return null !== (iW = null === OW || void 0 === OW ? void 0 : OW.isUsingCustomGameTexturePack(WW)) && void 0 !== iW && iW
+        gameNameWithVariation: fR,
+        lobbyName: VR
+      } = JR, KR = () => {
+        const JR = (0, uR.g)(RR, fR, VR, iR, (RR => {
+          var JR;
+          return null !== (JR = null === GR || void 0 === GR ? void 0 : GR.isUsingCustomGameTexturePack(RR)) && void 0 !== JR && JR
         }));
-        iW.joinOptions.wasmClient = !0;
-        const EW = (0, PW.B)();
-        return null !== EW && (iW.joinOptions.renderBackend = EW), iW.joinOptions.joinAdHold = mW, iW
+        JR.joinOptions.wasmClient = !0;
+        const tR = (0, ZR.M)();
+        return null !== tR && (JR.joinOptions.renderBackend = tR), JR.joinOptions.joinAdHold = yR, JR
       }, {
-        roomName: xW,
-        joinOptions: lW
-      } = ZW();
+        roomName: wR,
+        joinOptions: rR
+      } = KR();
       return {
-        endpoint: iW.endpoint,
-        roomName: xW,
-        joinOptions: lW,
+        endpoint: JR.endpoint,
+        roomName: wR,
+        joinOptions: rR,
         session: {
-          gameNameWithVariation: wW,
-          lobbyName: tW,
-          playerDbId: WW.whamm
+          gameNameWithVariation: fR,
+          lobbyName: VR,
+          playerDbId: RR.whamm
         },
-        optionsAfterRefusal: async iW => await (0, EW.c)(WW, iW) ? ZW().joinOptions : null
+        optionsAfterRefusal: async JR => await (0, tR.c)(RR, JR) ? KR().joinOptions : null
       }
     }
   },
-  5984: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      return EW(WW, iW)
+  6103: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      return tR(RR, JR)
     }
 
-    function EW(WW, iW) {
-      if (WW === iW) return !0;
-      if ("object" !== typeof WW || "object" !== typeof iW || null === WW || null === iW || Array.isArray(WW) !== Array.isArray(iW)) return !1;
-      const OW = WW,
-        mW = iW,
-        NW = Object.keys(OW);
-      return NW.length === Object.keys(mW).length && NW.every((WW => Object.prototype.hasOwnProperty.call(mW, WW) && EW(OW[WW], mW[WW])))
+    function tR(RR, JR) {
+      if (RR === JR) return !0;
+      if ("object" !== typeof RR || "object" !== typeof JR || null === RR || null === JR || Array.isArray(RR) !== Array.isArray(JR)) return !1;
+      const GR = RR,
+        yR = JR,
+        uR = Object.keys(GR);
+      return uR.length === Object.keys(yR).length && uR.every((RR => Object.prototype.hasOwnProperty.call(yR, RR) && tR(GR[RR], yR[RR])))
     }
-    OW.d(iW, {
-      c: () => mW
+    GR.d(JR, {
+      d: () => yR
     })
   },
-  42422: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => SW,
-      d: () => MW,
-      f: () => bW,
-      h: () => AW
+  42451: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => XR,
+      h: () => AR,
+      j: () => aR,
+      k: () => eR
     });
-    var mW = OW(1943),
-      EW = OW(1194),
-      NW = OW(40258),
-      PW = OW(37727),
-      LW = OW(40269),
-      cW = OW(42307);
-    const wW = {
+    var yR = GR(2023),
+      tR = GR(1295),
+      uR = GR(40295),
+      ZR = GR(37640),
+      qR = GR(40317),
+      iR = GR(42329);
+    const fR = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      tW = 3,
-      ZW = [500, 1500];
+      VR = 3,
+      KR = [500, 1500];
 
-    function xW(WW) {
-      const iW = new URL(WW);
+    function wR(RR) {
+      const JR = new URL(RR);
       return {
-        secure: "https:" === iW.protocol || "wss:" === iW.protocol,
-        host: iW.host,
-        pathname: iW.pathname.replace(/\/+$/, ""),
-        search: iW.searchParams.toString()
+        secure: "https:" === JR.protocol || "wss:" === JR.protocol,
+        host: JR.host,
+        pathname: JR.pathname.replace(/\/+$/, ""),
+        search: JR.searchParams.toString()
       }
     }
 
-    function lW(WW, iW, OW) {
+    function rR(RR, JR, GR) {
       const {
-        secure: mW,
-        host: EW,
-        pathname: NW,
-        search: PW
-      } = xW(WW);
-      return `${mW?"https":"http"}://${EW}${NW}/matchmake/${iW}/${encodeURIComponent(OW)}${PW?`?${PW}`:""}`
+        secure: yR,
+        host: tR,
+        pathname: uR,
+        search: ZR
+      } = wR(RR);
+      return `${yR?"https":"http"}://${tR}${uR}/matchmake/${JR}/${encodeURIComponent(GR)}${ZR?`?${ZR}`:""}`
     }
 
-    function AW(WW, iW) {
-      var OW;
-      const mW = null !== (OW = iW.protocol) && void 0 !== OW ? OW : "ws";
-      if ("ws" !== mW) throw new Error(`seat reservation asks for the ${mW} transport`);
+    function eR(RR, JR) {
+      var GR;
+      const yR = null !== (GR = JR.protocol) && void 0 !== GR ? GR : "ws";
+      if ("ws" !== yR) throw new Error(`seat reservation asks for the ${yR} transport`);
       const {
-        secure: EW,
-        host: NW,
-        pathname: PW,
-        search: LW
-      } = xW(WW), cW = new URLSearchParams(LW);
-      cW.append("sessionId", iW.sessionId), iW.reconnectionToken && cW.append("reconnectionToken", iW.reconnectionToken);
-      return `${EW?"wss":"ws"}://${iW.room.publicAddress||`${NW}${PW}`}/${iW.room.processId}/${iW.room.roomId}?${cW.toString()}`
+        secure: tR,
+        host: uR,
+        pathname: ZR,
+        search: qR
+      } = wR(RR), iR = new URLSearchParams(qR);
+      iR.append("sessionId", JR.sessionId), JR.reconnectionToken && iR.append("reconnectionToken", JR.reconnectionToken);
+      return `${tR?"wss":"ws"}://${JR.room.publicAddress||`${uR}${ZR}`}/${JR.room.processId}/${JR.room.roomId}?${iR.toString()}`
     }
-    async function bW(WW, iW, OW) {
-      var LW;
-      let wW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const xW = null !== (LW = wW.sleep) && void 0 !== LW ? LW : mW.b,
-        AW = new EW.c(wW.signal),
-        bW = new PW.b((() => {
-          (0, EW.i)(AW.controller, new PW.c("seat"))
+    async function aR(RR, JR, GR) {
+      var qR;
+      let fR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const wR = null !== (qR = fR.sleep) && void 0 !== qR ? qR : yR.b,
+        eR = new tR.d(fR.signal),
+        aR = new ZR.d((() => {
+          (0, tR.k)(eR.controller, new ZR.g("seat"))
         })),
         {
-          signal: sW
-        } = AW;
+          signal: WR
+        } = eR;
       try {
-        const mW = await (0, NW.e)((() => async function(WW, iW, OW, mW) {
-          var NW;
+        const yR = await (0, uR.h)((() => async function(RR, JR, GR, yR) {
+          var uR;
           const {
-            signal: PW,
-            sleep: LW
-          } = mW, wW = lW(WW, "joinOrCreate", iW), xW = JSON.stringify(OW);
-          let AW = null;
-          for (let lW = 0; lW < tW; lW++) {
-            var bW;
-            if (lW > 0) await LW(null !== (bW = ZW[lW - 1]) && void 0 !== bW ? bW : 1500, PW);
-            let WW;
-            (0, EW.s)(PW);
+            signal: ZR,
+            sleep: qR
+          } = yR, fR = rR(RR, "joinOrCreate", JR), wR = JSON.stringify(GR);
+          let eR = null;
+          for (let rR = 0; rR < VR; rR++) {
+            var aR;
+            if (rR > 0) await qR(null !== (aR = KR[rR - 1]) && void 0 !== aR ? aR : 1500, ZR);
+            let RR;
+            (0, tR.r)(ZR);
             try {
-              WW = await UW(wW, xW, mW)
-            } catch (sW) {
-              (0, EW.s)(PW), AW = jW(sW);
+              RR = await nR(fR, wR, yR)
+            } catch (WR) {
+              (0, tR.r)(ZR), eR = LR(WR);
               continue
             }
             const {
-              response: iW,
-              answer: OW,
-              refusal: NW,
-              lost: tW
-            } = WW;
-            if (null === tW) {
-              if (null !== NW) throw kW(NW, OW);
-              if (iW.ok && null !== OW && YW(OW)) return OW;
-              AW = new cW.v(`seat request answered HTTP ${iW.status}${null===OW?" without JSON":" without a seat"}`, !1, void 0, iW.status)
-            } else AW = jW(tW.error)
+              response: JR,
+              answer: GR,
+              refusal: uR,
+              lost: VR
+            } = RR;
+            if (null === VR) {
+              if (null !== uR) throw UR(uR, GR);
+              if (JR.ok && null !== GR && MR(GR)) return GR;
+              eR = new iR.v(`seat request answered HTTP ${JR.status}${null===GR?" without JSON":" without a seat"}`, !1, void 0, JR.status)
+            } else eR = LR(VR.error)
           }
-          throw null !== (NW = AW) && void 0 !== NW ? NW : new cW.v("seat request made no attempt", !1)
-        }(WW, iW, OW, {
-          ...wW,
-          signal: sW,
-          sleep: xW
-        })), sW, xW);
-        return bW.answered(), mW
+          throw null !== (uR = eR) && void 0 !== uR ? uR : new iR.v("seat request made no attempt", !1)
+        }(RR, JR, GR, {
+          ...fR,
+          signal: WR,
+          sleep: wR
+        })), WR, wR);
+        return aR.answered(), yR
       } finally {
-        bW.stop(), AW.unfollow()
+        aR.stop(), eR.unfollow()
       }
     }
 
-    function jW(WW) {
-      return new cW.v(WW instanceof Error ? WW.message : String(WW), !0, WW)
+    function LR(RR) {
+      return new iR.v(RR instanceof Error ? RR.message : String(RR), !0, RR)
     }
-    async function UW(WW, iW, OW) {
-      var mW;
+    async function nR(RR, JR, GR) {
+      var yR;
       const {
-        signal: NW
-      } = OW, PW = null !== (mW = OW.fetch) && void 0 !== mW ? mW : fetch, LW = await PW(WW, {
+        signal: uR
+      } = GR, ZR = null !== (yR = GR.fetch) && void 0 !== yR ? yR : fetch, qR = await ZR(RR, {
         method: "POST",
         headers: {
-          ...wW,
+          ...fR,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: iW,
+        body: JR,
         credentials: "include",
-        signal: NW
+        signal: uR
       }), {
-        answer: cW,
-        lost: tW
-      } = await async function(WW) {
+        answer: iR,
+        lost: VR
+      } = await async function(RR) {
         try {
-          const iW = await WW.json();
+          const JR = await RR.json();
           return {
-            answer: "object" === typeof iW && null !== iW ? iW : null,
+            answer: "object" === typeof JR && null !== JR ? JR : null,
             lost: null
           }
-        } catch (iW) {
+        } catch (JR) {
           return {
             answer: null,
-            lost: iW instanceof SyntaxError ? null : {
-              error: iW
+            lost: JR instanceof SyntaxError ? null : {
+              error: JR
             }
           }
         }
-      }(LW), ZW = null !== cW && "string" === typeof cW.error ? cW.error : null;
-      var xW;
-      null !== ZW && (null === (xW = OW.onRefusal) || void 0 === xW || xW.call(OW));
-      return (0, EW.s)(NW), {
-        response: LW,
-        answer: cW,
-        refusal: ZW,
-        lost: tW
+      }(qR), KR = null !== iR && "string" === typeof iR.error ? iR.error : null;
+      var wR;
+      null !== KR && (null === (wR = GR.onRefusal) || void 0 === wR || wR.call(GR));
+      return (0, tR.r)(uR), {
+        response: qR,
+        answer: iR,
+        refusal: KR,
+        lost: VR
       }
     }
 
-    function kW(WW, iW) {
-      return new cW.n(WW, "number" === typeof(null === iW || void 0 === iW ? void 0 : iW.code) ? iW.code : 0, (0, LW.n)(WW).text)
+    function UR(RR, JR) {
+      return new iR.m(RR, "number" === typeof(null === JR || void 0 === JR ? void 0 : JR.code) ? JR.code : 0, (0, qR.h)(RR).text)
     }
-    class sW extends Error {
-      constructor(WW, iW) {
-        super(WW), this.code = iW, this.name = "SeatHttpError"
+    class WR extends Error {
+      constructor(RR, JR) {
+        super(RR), this.code = JR, this.name = "SeatHttpError"
       }
     }
-    async function MW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function AR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: EW,
-        answer: NW,
-        refusal: PW,
-        lost: LW
-      } = await UW(lW(WW, "reconnect", iW), JSON.stringify({
-        reconnectionToken: OW
-      }), mW);
-      if (null !== LW) throw LW.error;
-      if (!EW.ok) {
-        const WW = null !== NW && "number" === typeof NW.code && 0 !== NW.code ? NW.code : EW.status;
-        throw new sW(`the seat's reconnect was refused: ${null!==PW&&void 0!==PW?PW:`HTTP ${EW.status}`}`, WW)
+        response: tR,
+        answer: uR,
+        refusal: ZR,
+        lost: qR
+      } = await nR(rR(RR, "reconnect", JR), JSON.stringify({
+        reconnectionToken: GR
+      }), yR);
+      if (null !== qR) throw qR.error;
+      if (!tR.ok) {
+        const RR = null !== uR && "number" === typeof uR.code && 0 !== uR.code ? uR.code : tR.status;
+        throw new WR(`the seat's reconnect was refused: ${null!==ZR&&void 0!==ZR?ZR:`HTTP ${tR.status}`}`, RR)
       }
-      if (null !== PW) throw kW(PW, NW);
-      if (null === NW || !YW(NW)) throw new Error("the seat's reconnect answered " + (null === NW ? "without JSON" : "without a seat"));
+      if (null !== ZR) throw UR(ZR, uR);
+      if (null === uR || !MR(uR)) throw new Error("the seat's reconnect answered " + (null === uR ? "without JSON" : "without a seat"));
       return {
-        ...NW,
-        reconnectionToken: OW
+        ...uR,
+        reconnectionToken: GR
       }
     }
-    const KW = 10;
+    const CR = 10;
 
-    function SW(WW) {
-      if (WW.byteLength < 2 || WW[0] !== KW) return null;
-      const iW = 2 + WW[1];
-      return iW > WW.byteLength ? null : (new TextDecoder).decode(WW.subarray(2, iW))
+    function XR(RR) {
+      if (RR.byteLength < 2 || RR[0] !== CR) return null;
+      const JR = 2 + RR[1];
+      return JR > RR.byteLength ? null : (new TextDecoder).decode(RR.subarray(2, JR))
     }
 
-    function YW(WW) {
-      const iW = WW.room;
-      return "string" === typeof WW.sessionId && "object" === typeof iW && null !== iW && "string" === typeof iW.roomId && "string" === typeof iW.processId && "string" === typeof iW.name
+    function MR(RR) {
+      const JR = RR.room;
+      return "string" === typeof RR.sessionId && "object" === typeof JR && null !== JR && "string" === typeof JR.roomId && "string" === typeof JR.processId && "string" === typeof JR.name
     }
   },
-  42116: (WW, iW, OW) => {
-    OW.d(iW, {
-      $: () => UW,
-      A: () => hW,
-      B: () => TW,
-      E: () => YW,
-      G: () => nW,
-      I: () => MW,
-      L: () => KW,
-      N: () => jW,
-      P: () => JW,
-      T: () => oW,
-      U: () => AW,
-      V: () => eW,
-      Y: () => kW,
-      db: () => sW,
-      e: () => EW,
-      gb: () => SW,
-      i: () => dW,
-      m: () => uW,
-      p: () => lW,
-      r: () => bW,
-      s: () => HW,
-      w: () => yW
+  42126: (RR, JR, GR) => {
+    GR.d(JR, {
+      D: () => MR,
+      F: () => vR,
+      I: () => AR,
+      M: () => CR,
+      N: () => LR,
+      O: () => pR,
+      Q: () => xR,
+      T: () => eR,
+      U: () => DR,
+      Y: () => UR,
+      Z: () => nR,
+      bb: () => WR,
+      cb: () => XR,
+      d: () => tR,
+      g: () => NR,
+      k: () => OR,
+      m: () => rR,
+      q: () => aR,
+      s: () => bR,
+      w: () => BR,
+      y: () => gR,
+      z: () => lR
     });
-    var mW = OW(2908);
-    const EW = {
+    var yR = GR(2989);
+    const tR = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -2019,234 +2019,234 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function NW(WW, iW) {
-      return !ArrayBuffer.isView(WW) || WW instanceof DataView ? Array.isArray(WW) ? WW.map((WW => iW(WW))) : WW : Array.from(WW, (WW => iW(WW)))
+    function uR(RR, JR) {
+      return !ArrayBuffer.isView(RR) || RR instanceof DataView ? Array.isArray(RR) ? RR.map((RR => JR(RR))) : RR : Array.from(RR, (RR => JR(RR)))
     }
 
-    function PW(WW) {
-      if ("string" !== typeof WW) return WW;
-      for (let iW = 0; iW < WW.length; iW++) {
-        const OW = WW.charCodeAt(iW);
-        if (OW >= 55296 && OW <= 57343) return cW.decode(LW.encode(WW))
+    function ZR(RR) {
+      if ("string" !== typeof RR) return RR;
+      for (let JR = 0; JR < RR.length; JR++) {
+        const GR = RR.charCodeAt(JR);
+        if (GR >= 55296 && GR <= 57343) return iR.decode(qR.encode(RR))
       }
-      return WW
+      return RR
     }
-    const LW = new TextEncoder,
-      cW = new TextDecoder;
+    const qR = new TextEncoder,
+      iR = new TextDecoder;
 
-    function wW(WW) {
-      return WW
+    function fR(RR) {
+      return RR
     }
-    let tW;
+    let VR;
 
-    function ZW(WW) {
-      return null === WW || "object" !== typeof WW ? WW : [PW(WW.policy), PW(WW.PL)]
-    }
-
-    function xW(WW) {
-      return null === WW || "object" !== typeof WW ? WW : [NW(WW.CE, wW), NW(WW.rL, wW)]
+    function KR(RR) {
+      return null === RR || "object" !== typeof RR ? RR : [ZR(RR.policy), ZR(RR.Kq)]
     }
 
-    function lW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.tP), PW(iW.ZP)];
-      var iW
+    function wR(RR) {
+      return null === RR || "object" !== typeof RR ? RR : [uR(RR.Ft, fR), uR(RR.Ji, fR)]
     }
 
-    function AW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [iW.id, iW.ct];
-      var iW
+    function rR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.LZ), ZR(JR.nZ)];
+      var JR
     }
 
-    function bW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [iW.uO, PW(iW.oO), iW.dO, PW(iW.gO), iW.fO, iW.CO, iW.LP, PW(iW.cP), PW(iW.wP)];
-      var iW
+    function eR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [JR.id, JR.wV];
+      var JR
     }
 
-    function jW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [NW(iW.EL, wW), iW.NL];
-      var iW
+    function aR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [JR.bG, ZR(JR.vG), JR.OG, ZR(JR.DG), JR.PG, JR.IG, JR.rZ, ZR(JR.eZ), ZR(JR.aZ)];
+      var JR
     }
 
-    function UW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [NW(iW.Ut, (WW => PW(WW))), PW(iW.kt), iW.st];
-      var iW
+    function LR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [uR(JR.fq, fR), JR.Vq];
+      var JR
     }
 
-    function kW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [NW(iW.QL, wW), PW(iW.Wc), PW(iW.Oc), iW.mc];
-      var iW
+    function nR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [uR(JR.CV, (RR => ZR(RR))), ZR(JR.XV), JR.MV];
+      var JR
     }
 
-    function sW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.NE), PW(iW.PE)];
-      var iW
+    function UR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [uR(JR.ti, fR), ZR(JR.ui), ZR(JR.Zi), JR.qi];
+      var JR
     }
 
-    function MW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.LL)];
-      var iW
+    function WR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.ft), ZR(JR.Vt)];
+      var JR
     }
 
-    function KW(WW) {
-      return PW(WW)
+    function AR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.wq)];
+      var JR
     }
 
-    function SW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.et), PW(iW.vt), PW(iW.policy), PW(iW.PL), NW(iW.gt, (WW => PW(WW)))];
-      var iW
+    function CR(RR) {
+      return ZR(RR)
     }
 
-    function YW(WW) {
-      return ZW(WW)
+    function XR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.PV), ZR(JR.IV), ZR(JR.policy), ZR(JR.Kq), uR(JR.mV, (RR => ZR(RR)))];
+      var JR
     }
 
-    function yW(WW) {
-      return ZW(WW)
+    function MR(RR) {
+      return KR(RR)
     }
 
-    function TW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.Nt)];
-      var iW
+    function BR(RR) {
+      return KR(RR)
     }
 
-    function JW(WW) {
-      return WW
+    function lR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.fV)];
+      var JR
     }
 
-    function hW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.bt), PW(iW.jt)];
-      var iW
+    function pR(RR) {
+      return RR
     }
 
-    function HW(WW) {
-      return PW(WW)
+    function gR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.WV), ZR(JR.AV)];
+      var JR
     }
 
-    function nW(WW) {
-      return xW(WW)
+    function bR(RR) {
+      return ZR(RR)
     }
 
-    function uW(WW) {
-      return xW(WW)
+    function vR(RR) {
+      return wR(RR)
     }
 
-    function oW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [PW(iW.rw)];
-      var iW
+    function OR(RR) {
+      return wR(RR)
     }
 
-    function dW(WW) {
-      return (tW ??= (0, mW.g)().map((WW => WW.name)), tW).map((iW => {
-        return "string" === typeof(OW = WW[iW]) ? PW(OW) : NW(OW, wW);
-        var OW
+    function xR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [ZR(JR.GV)];
+      var JR
+    }
+
+    function NR(RR) {
+      return (VR ??= (0, yR.e)().map((RR => RR.name)), VR).map((JR => {
+        return "string" === typeof(GR = RR[JR]) ? ZR(GR) : uR(GR, fR);
+        var GR
       }))
     }
 
-    function eW(WW) {
-      return null === (iW = WW) || "object" !== typeof iW ? iW : [iW.jP, iW.UP, iW.kP];
-      var iW
+    function DR(RR) {
+      return null === (JR = RR) || "object" !== typeof JR ? JR : [JR.XZ, JR.MZ, JR.BZ];
+      var JR
     }
   },
-  5981: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => PW,
-      e: () => LW
+  6101: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      c: () => qR
     });
-    var mW = OW(2300),
-      EW = OW(5984);
-    let NW = null;
+    var yR = GR(2374),
+      tR = GR(6103);
+    let uR = null;
 
-    function PW(WW) {
-      NW = {
-        pack: WW.metaData.id === mW.d ? null : WW
+    function ZR(RR) {
+      uR = {
+        pack: RR.metaData.id === yR.e ? null : RR
       }
     }
 
-    function LW(WW) {
-      return !(null === NW || !(0, EW.c)(NW.pack, WW)) && (NW = null, !0)
+    function qR(RR) {
+      return !(null === uR || !(0, tR.d)(uR.pack, RR)) && (uR = null, !0)
     }
   },
-  42371: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      followPageUiPack: () => CZ,
-      packForGame: () => fZ,
-      playWasmGame: () => Wx,
-      prefetchWasmPreviews: () => Jw,
-      setGamePackConfirm: () => qt,
-      startWasmPlay: () => GZ,
-      startWasmPreviews: () => Tw
+  42387: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      followPageUiPack: () => mK,
+      packForGame: () => IK,
+      playWasmGame: () => hK,
+      prefetchWasmPreviews: () => lf,
+      setGamePackConfirm: () => dV,
+      startWasmPlay: () => EK,
+      startWasmPreviews: () => Bf
     });
-    var mW = OW(182),
-      EW = OW(1239),
-      NW = OW(154),
-      PW = OW(40287),
-      LW = OW(2037),
-      cW = OW(27),
-      wW = OW(5417),
-      tW = OW(1339),
-      ZW = OW(1822),
-      xW = OW(1351),
-      lW = OW(40478),
-      AW = OW(1301),
-      bW = OW(10223),
-      jW = OW(172),
-      UW = OW(3934),
-      kW = OW(1937),
-      sW = OW(3974);
-    let MW = null,
-      KW = null,
-      SW = null,
-      YW = !1,
-      yW = "previews",
-      TW = null,
-      JW = !1,
-      hW = 0;
+    var yR = GR(203),
+      tR = GR(1341),
+      uR = GR(163),
+      ZR = GR(40333),
+      qR = GR(2134),
+      iR = GR(32),
+      fR = GR(5536),
+      VR = GR(1444),
+      KR = GR(1921),
+      wR = GR(1449),
+      rR = GR(40525),
+      eR = GR(1397),
+      aR = GR(10336),
+      LR = GR(188),
+      nR = GR(4035),
+      UR = GR(2011),
+      WR = GR(4066);
+    let AR = null,
+      CR = null,
+      XR = null,
+      MR = !1,
+      BR = "previews",
+      lR = null,
+      pR = !1,
+      gR = 0;
 
-    function HW(WW) {
-      yW = WW
+    function bR(RR) {
+      BR = RR
     }
 
-    function nW(WW) {
-      var iW;
-      const OW = WW instanceof Error ? WW.name : null;
-      return null !== (iW = jW.d.find((WW => WW === OW))) && void 0 !== iW ? iW : "other"
+    function vR(RR) {
+      var JR;
+      const GR = RR instanceof Error ? RR.name : null;
+      return null !== (JR = LR.b.find((RR => RR === GR))) && void 0 !== JR ? JR : "other"
     }
 
-    function uW() {
-      MW ??= performance.now()
+    function OR() {
+      AR ??= performance.now()
     }
 
-    function oW(WW) {
-      KW ??= performance.now(), TW = WW, hW > 0 && dW()
+    function xR(RR) {
+      CR ??= performance.now(), lR = RR, gR > 0 && NR()
     }
 
-    function dW() {
-      null !== KW && null !== TW && (0, AW.p)("wasm_loaded", KW, `${TW}:${(0,UW.m)()}`)
+    function NR() {
+      null !== CR && null !== lR && (0, eR.y)("wasm_loaded", CR, `${lR}:${(0,nR.n)()}`)
     }
-    const eW = {
+    const DR = {
       ready: () => {
-        kW.d.markAdmissionAwaited()
+        UR.d.markAdmissionAwaited()
       },
       adEnded: () => {
-        kW.d.markJoinAdEnded()
+        UR.d.markJoinAdEnded()
       },
       admitted: () => {
-        kW.d.markAdmitted()
+        UR.d.markAdmitted()
       }
     };
-    var vW = OW(40491),
-      gW = OW(40402),
-      DW = OW(37709),
-      VW = OW(1584),
-      pW = OW(40258),
-      fW = OW(10181),
-      CW = OW(37727),
-      XW = OW(42373),
-      BW = OW(5533),
-      qW = OW(42109),
-      RW = OW(42176),
-      GW = OW(42116);
-    const IW = {
+    var HR = GR(40534),
+      oR = GR(40455),
+      cR = GR(37620),
+      PR = GR(1647),
+      IR = GR(40295),
+      mR = GR(10298),
+      zR = GR(37640),
+      SR = GR(42394),
+      jR = GR(5665),
+      dR = GR(42118),
+      ER = GR(42188),
+      YR = GR(42126);
+    const kR = {
       states: {
         health: !0,
         aura: !0,
@@ -2370,178 +2370,178 @@ export const modules = {
       }
     };
 
-    function aW(WW) {
-      const iW = {
-        ...RW.c[WW]
+    function QR(RR) {
+      const JR = {
+        ...ER.c[RR]
       };
-      for (const OW of Object.keys(IW[WW])) delete iW[OW];
-      return iW
+      for (const GR of Object.keys(kR[RR])) delete JR[GR];
+      return JR
     }
 
-    function rW() {
-      var WW, iW;
-      return null === (WW = null === (iW = (0, qW.f)()) || void 0 === iW ? void 0 : iW.localPlayerAlive()) || void 0 === WW || WW
+    function FR() {
+      var RR, JR;
+      return null === (RR = null === (JR = (0, dR.l)()) || void 0 === JR ? void 0 : JR.localPlayerAlive()) || void 0 === RR || RR
     }
 
-    function zW() {
-      var WW, iW;
-      return null !== (WW = null === (iW = (0, qW.f)()) || void 0 === iW ? void 0 : iW.localDeaths()) && void 0 !== WW ? WW : null
+    function TR() {
+      var RR, JR;
+      return null !== (RR = null === (JR = (0, dR.l)()) || void 0 === JR ? void 0 : JR.localDeaths()) && void 0 !== RR ? RR : null
     }
-    const FW = {
-        current: rW,
-        watch: WW => {
-          let iW = rW(),
-            OW = zW();
-          return (0, BW.x)((() => {
-            const mW = rW(),
-              EW = zW(),
-              NW = null !== EW && null !== OW && EW !== OW;
-            OW = EW, NW ? (iW || WW(!0), WW(!1), mW && WW(!0), iW = mW) : mW !== iW && (iW = mW, WW(mW))
+    const sR = {
+        current: FR,
+        watch: RR => {
+          let JR = FR(),
+            GR = TR();
+          return (0, jR.r)((() => {
+            const yR = FR(),
+              tR = TR(),
+              uR = null !== tR && null !== GR && tR !== GR;
+            GR = tR, uR ? (JR || RR(!0), RR(!1), yR && RR(!0), JR = yR) : yR !== JR && (JR = yR, RR(yR))
           }))
         }
       },
-      QW = {
+      hR = {
         states: {
-          ...aW("states"),
-          localPlayerAlive: FW
+          ...QR("states"),
+          localPlayerAlive: sR
         },
         events: {
-          ...aW("events"),
+          ...QR("events"),
           localPlayerAliveSet: {
-            watch: FW.watch
+            watch: sR.watch
           }
         },
         commands: {
-          ...aW("commands"),
+          ...QR("commands"),
           respawn: () => {
-            var WW;
-            null === (WW = (0, qW.f)()) || void 0 === WW || WW.respawn()
+            var RR;
+            null === (RR = (0, dR.l)()) || void 0 === RR || RR.respawn()
           },
-          playEmote: WW => {
-            var iW;
-            null === (iW = (0, qW.f)()) || void 0 === iW || iW.send(GW.e.PlayEmote, (0, GW.I)({
-              LL: WW
+          playEmote: RR => {
+            var JR;
+            null === (JR = (0, dR.l)()) || void 0 === JR || JR.send(YR.d.PlayEmote, (0, YR.I)({
+              wq: RR
             }))
           },
-          applyTemporaryThirdPerson: WW => {
-            var iW;
+          applyTemporaryThirdPerson: RR => {
+            var JR;
             let {
-              durationMs: OW
-            } = WW;
-            null === (iW = (0, qW.f)()) || void 0 === iW || iW.thirdPersonFor(OW)
+              durationMs: GR
+            } = RR;
+            null === (JR = (0, dR.l)()) || void 0 === JR || JR.thirdPersonFor(GR)
           },
-          bindCustomButtonKeys: WW => {
-            var iW;
-            null === (iW = (0, qW.f)()) || void 0 === iW || iW.bindCustomButtonKeys(WW)
+          bindCustomButtonKeys: RR => {
+            var JR;
+            null === (JR = (0, dR.l)()) || void 0 === JR || JR.bindCustomButtonKeys(RR)
           },
-          pressCustomButton: WW => {
-            var iW;
+          pressCustomButton: RR => {
+            var JR;
             let {
-              id: OW,
-              down: mW
-            } = WW;
-            null === (iW = (0, qW.f)()) || void 0 === iW || iW.pressCustomButton(OW, mW)
+              id: GR,
+              down: yR
+            } = RR;
+            null === (JR = (0, dR.l)()) || void 0 === JR || JR.pressCustomButton(GR, yR)
           },
           setLookSensitivity: () => {},
-          wakeUp: WW => {
-            const iW = (0, GW.T)({
-                rw: WW
+          wakeUp: RR => {
+            const JR = (0, YR.Q)({
+                GV: RR
               }),
-              OW = () => {
-                const WW = (0, qW.f)();
-                return !(null !== WW && void 0 !== WW && WW.isSessionLive) || WW.send(GW.e.StopSleeping, iW)
+              GR = () => {
+                const RR = (0, dR.l)();
+                return !(null !== RR && void 0 !== RR && RR.isSessionLive) || RR.send(YR.d.StopSleeping, JR)
               };
-            if (!OW()) {
-              const WW = (0, BW.x)((() => {
-                OW() && WW()
+            if (!GR()) {
+              const RR = (0, jR.r)((() => {
+                GR() && RR()
               }))
             }
           },
-          setCameraZoom: WW => {
-            var iW;
-            null === (iW = (0, qW.f)()) || void 0 === iW || iW.setCameraZoom(WW)
+          setCameraZoom: RR => {
+            var JR;
+            null === (JR = (0, dR.l)()) || void 0 === JR || JR.setCameraZoom(RR)
           }
         },
-        queries: aW("queries"),
+        queries: QR("queries"),
         lookups: {
-          ...aW("lookups"),
+          ...QR("lookups"),
           cameraZoom: () => {
-            var WW, iW;
-            return null !== (WW = null === (iW = (0, qW.f)()) || void 0 === iW ? void 0 : iW.cameraZoom()) && void 0 !== WW ? WW : 0
+            var RR, JR;
+            return null !== (RR = null === (JR = (0, dR.l)()) || void 0 === JR ? void 0 : JR.cameraZoom()) && void 0 !== RR ? RR : 0
           }
         }
       };
-    var Wi = OW(40269),
-      ii = OW(42307),
-      Oi = OW(42309),
-      mi = OW(42375),
-      Ei = OW(1250),
-      Ni = OW(109),
-      Pi = OW(5230),
-      Li = OW(2423),
-      ci = OW(1149);
-    const wi = {
-      eL: () => (0, Ei.i)(),
-      inbuiltOverwritten: () => Pi.g,
-      reflectApplyHit: () => ci.b,
-      definerHit: () => Ni.currentUrl.c,
-      emitReplaced: () => (0, cW.d)(),
-      confirmMesh: () => (0, Li.d)(),
-      confirmMeshHitStack: () => (0, Li.f)()
+    var RJ = GR(40317),
+      JJ = GR(42329),
+      GJ = GR(42331),
+      yJ = GR(42402),
+      tJ = GR(1349),
+      uJ = GR(112),
+      ZJ = GR(5326),
+      qJ = GR(2491),
+      iJ = GR(1249);
+    const fJ = {
+      Iq: () => (0, tJ.g)(),
+      inbuiltOverwritten: () => ZJ.f,
+      reflectApplyHit: () => iJ.b,
+      definerHit: () => uJ.currentUrl.c,
+      emitReplaced: () => (0, iR.e)(),
+      confirmMesh: () => (0, qJ.d)(),
+      confirmMeshHitStack: () => (0, qJ.g)()
     };
-    var ti = OW(42316),
-      Zi = OW(42388);
-    var xi = OW(25),
-      li = OW(2042),
-      Ai = OW(2085),
-      bi = OW(1736),
-      ji = OW(2129),
-      Ui = OW(1172),
-      ki = OW(1244),
-      si = OW(37446);
+    var VJ = GR(42335),
+      KJ = GR(42420);
+    var wJ = GR(25),
+      rJ = GR(2137),
+      eJ = GR(2194),
+      aJ = GR(1803),
+      LJ = GR(2234),
+      nJ = GR(1270),
+      UJ = GR(1343),
+      WJ = GR(37362);
 
-    function Mi() {
-      return ki.e.get().getCurrentLanguageCode()
+    function AJ() {
+      return UJ.g.get().getCurrentLanguageCode()
     }
 
-    function Ki(WW) {
-      const iW = () => {
-        WW({
-          translate: (WW, iW) => (0, Ui.t)(Mi(), WW, iW),
-          keyBindingText: WW => {
-            const iW = (0, Ai.r)(WW, xi.d.get("isTouchScreen"));
-            return null !== iW ? (0, Ui.u)(Mi(), iW.translationKey, iW.params) : (0, Ai.m)((0, Ai.n)(WW))
+    function CJ(RR) {
+      const JR = () => {
+        RR({
+          translate: (RR, JR) => (0, nJ.u)(AJ(), RR, JR),
+          keyBindingText: RR => {
+            const JR = (0, eJ.q)(RR, wJ.d.get("isTouchScreen"));
+            return null !== JR ? (0, nJ.w)(AJ(), JR.translationKey, JR.params) : (0, eJ.m)((0, eJ.n)(RR))
           },
-          isFriend: ji.g,
-          hiddenNames: li.e.shown,
-          loadsFontRest: (0, si.b)(Mi())
+          isFriend: LJ.e,
+          hiddenNames: rJ.e.shown,
+          loadsFontRest: (0, WJ.c)(AJ())
         })
       };
-      let OW = !1;
-      const mW = () => {
-          const WW = Mi();
-          (0, Ui.i)(WW).then((() => {
-            OW || WW !== Mi() || iW()
+      let GR = !1;
+      const yR = () => {
+          const RR = AJ();
+          (0, nJ.k)(RR).then((() => {
+            GR || RR !== AJ() || JR()
           }))
         },
-        EW = () => bi.e.getSocialState().friends.map((WW => WW.name.toLowerCase())).sort().join(" ");
-      let NW = EW();
-      iW(), mW();
-      const PW = [(0, ki.g)((() => {
-        iW(), mW()
-      })), (0, cW.n)("customBindingsChanged", iW), (0, cW.n)("appManagerUpdated|isTouchScreen", iW), (0, ji.d)((() => {
-        const WW = EW();
-        WW !== NW && (NW = WW, iW())
-      })), li.e.subscribe(iW)];
+        tR = () => aJ.e.getSocialState().friends.map((RR => RR.name.toLowerCase())).sort().join(" ");
+      let uR = tR();
+      JR(), yR();
+      const ZR = [(0, UJ.i)((() => {
+        JR(), yR()
+      })), (0, iR.q)("customBindingsChanged", JR), (0, iR.q)("appManagerUpdated|isTouchScreen", JR), (0, LJ.b)((() => {
+        const RR = tR();
+        RR !== uR && (uR = RR, JR())
+      })), rJ.e.subscribe(JR)];
       return () => {
-        OW = !0;
-        for (const WW of PW) WW()
+        GR = !0;
+        for (const RR of ZR) RR()
       }
     }
-    var Si = OW(1181),
-      Yi = OW(5153),
-      yi = OW(37998);
-    const Ti = {
+    var XJ = GR(1275),
+      MJ = GR(5250),
+      BJ = GR(37958);
+    const lJ = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -2568,269 +2568,269 @@ export const modules = {
         graphicsLostStillHelp: "Still blocked. Press your browser\u2019s reload button, or restart your browser.",
         stillBlockedHelpApp: "Still blocked. Close the app fully, then open it again."
       },
-      wasmScreens: Si.wasmScreens
+      wasmScreens: XJ.wasmScreens
     };
-    let Ji = null;
+    let pJ = null;
 
-    function Hi(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return null === Ji ? function(WW) {
-        var iW, OW;
-        let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const [EW, NW] = WW.split(":"), PW = null !== (iW = null === (OW = Ti[EW]) || void 0 === OW ? void 0 : OW[NW]) && void 0 !== iW ? iW : WW;
-        return PW.replace(/\{\{(\w+)\}\}/g, ((WW, iW) => {
-          var OW;
-          return null !== (OW = mW[iW]) && void 0 !== OW ? OW : WW
+    function gJ(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return null === pJ ? function(RR) {
+        var JR, GR;
+        let yR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const [tR, uR] = RR.split(":"), ZR = null !== (JR = null === (GR = lJ[tR]) || void 0 === GR ? void 0 : GR[uR]) && void 0 !== JR ? JR : RR;
+        return ZR.replace(/\{\{(\w+)\}\}/g, ((RR, JR) => {
+          var GR;
+          return null !== (GR = yR[JR]) && void 0 !== GR ? GR : RR
         }))
-      }(WW, iW) : Ji(WW, iW)
+      }(RR, JR) : pJ(RR, JR)
     }
 
-    function ni(WW, iW) {
-      (0, Yi.e)();
-      const OW = document.createElement("div");
-      OW.setAttribute("role", "alertdialog"), OW.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const mW = document.createElement("div");
-      mW.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const EW = document.createElement("h2");
-      EW.textContent = Hi(WW.title);
-      const NW = document.createElement("p");
-      if (NW.textContent = Hi(WW.help, WW.helpValues), NW.style.whiteSpace = "pre-line", mW.append(EW, NW), WW.discordLink) {
-        const WW = document.createElement("a");
-        WW.href = yi.b, WW.target = "_blank", WW.rel = "noreferrer", WW.style.color = "#8ab4ff", WW.textContent = Hi("wasmScreens:reportOnDiscord"), mW.append(WW)
+    function bJ(RR, JR) {
+      (0, MJ.c)();
+      const GR = document.createElement("div");
+      GR.setAttribute("role", "alertdialog"), GR.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const yR = document.createElement("div");
+      yR.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const tR = document.createElement("h2");
+      tR.textContent = gJ(RR.title);
+      const uR = document.createElement("p");
+      if (uR.textContent = gJ(RR.help, RR.helpValues), uR.style.whiteSpace = "pre-line", yR.append(tR, uR), RR.discordLink) {
+        const RR = document.createElement("a");
+        RR.href = BJ.d, RR.target = "_blank", RR.rel = "noreferrer", RR.style.color = "#8ab4ff", RR.textContent = gJ("wasmScreens:reportOnDiscord"), yR.append(RR)
       }
-      const PW = document.createElement("div");
-      return PW.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", mW.append(PW), OW.append(mW), document.body.append(OW), new Promise((mW => {
-        const EW = WW => {
-            null === iW || void 0 === iW || iW.removeEventListener("abort", NW), OW.remove(), mW(WW)
+      const ZR = document.createElement("div");
+      return ZR.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", yR.append(ZR), GR.append(yR), document.body.append(GR), new Promise((yR => {
+        const tR = RR => {
+            null === JR || void 0 === JR || JR.removeEventListener("abort", uR), GR.remove(), yR(RR)
           },
-          NW = () => {
-            EW(!1)
+          uR = () => {
+            tR(!1)
           };
-        null === iW || void 0 === iW || iW.addEventListener("abort", NW, {
+        null === JR || void 0 === JR || JR.addEventListener("abort", uR, {
           once: !0
         });
-        const LW = (WW, iW) => {
-          const OW = document.createElement("button");
-          OW.textContent = Hi(WW), OW.style.cssText = "padding:0.5rem 1.25rem;font:inherit", OW.addEventListener("click", (() => {
-            EW(iW)
-          })), PW.append(OW)
+        const qR = (RR, JR) => {
+          const GR = document.createElement("button");
+          GR.textContent = gJ(RR), GR.style.cssText = "padding:0.5rem 1.25rem;font:inherit", GR.addEventListener("click", (() => {
+            tR(JR)
+          })), ZR.append(GR)
         };
-        null !== WW.cancel && LW(WW.cancel, !1), LW(WW.confirm, !0)
+        null !== RR.cancel && qR(RR.cancel, !1), qR(RR.confirm, !0)
       }))
     }
-    var ui = OW(10167),
-      oi = OW(649),
-      di = OW(1052),
-      ei = OW(2066),
-      vi = OW(327),
-      gi = OW(2381),
-      Di = OW(37297),
-      Vi = OW(2388),
-      fi = OW(39961),
-      Ci = OW(5427),
-      Xi = OW(42202),
-      Bi = OW(698),
-      qi = OW(671),
-      Ri = OW(696),
-      Gi = OW(3995),
-      Ii = OW(2061),
-      ai = OW(2429),
-      ri = OW(4448);
-    let zi = null;
-    var Fi = OW(1185),
-      Qi = OW(1194),
-      WO = OW(1943),
-      iO = OW(5072),
-      OO = OW(5136),
-      mO = OW(4659),
-      EO = OW(53),
-      NO = OW(324),
-      PO = OW(315),
-      LO = OW(35130),
-      cO = OW(299),
-      wO = OW(42394),
-      tO = OW(5540),
-      ZO = OW(5096);
-    var xO = OW(5113),
-      lO = OW(39);
+    var vJ = GR(10285),
+      OJ = GR(688),
+      xJ = GR(1127),
+      NJ = GR(2167),
+      DJ = GR(359),
+      HJ = GR(2448),
+      oJ = GR(37213),
+      cJ = GR(2457),
+      PJ = GR(39956),
+      IJ = GR(5554),
+      mJ = GR(42212),
+      zJ = GR(743),
+      SJ = GR(709),
+      jJ = GR(741),
+      dJ = GR(4088),
+      EJ = GR(2163),
+      YJ = GR(2500),
+      kJ = GR(4546);
+    let QJ = null;
+    var FJ = GR(1282),
+      TJ = GR(1295),
+      sJ = GR(2023),
+      hJ = GR(5180),
+      RG = GR(5227),
+      JG = GR(4769),
+      GG = GR(62),
+      yG = GR(350),
+      tG = GR(342),
+      uG = GR(35051),
+      ZG = GR(327),
+      qG = GR(42423),
+      iG = GR(5671),
+      fG = GR(5201);
+    var VG = GR(5207),
+      KG = GR(46);
 
-    function AO(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => document.createElement("canvas");
+    function wG(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => document.createElement("canvas");
       try {
-        var OW;
-        const mW = iW(),
-          EW = WW ? mW.getContext("webgl") : mW.getContext("webgl2");
-        return null !== EW && (null === (OW = EW.getExtension("WEBGL_lose_context")) || void 0 === OW || OW.loseContext(), !0)
+        var GR;
+        const yR = JR(),
+          tR = RR ? yR.getContext("webgl") : yR.getContext("webgl2");
+        return null !== tR && (null === (GR = tR.getExtension("WEBGL_lose_context")) || void 0 === GR || GR.loseContext(), !0)
       } catch {
         return !1
       }
     }
-    var bO = OW(1755);
-    var jO = OW(38871),
-      UO = OW(42402);
-    class kO {
-      constructor(WW, iW, OW) {
-        this.showView = WW, this.holdForAd = iW, this.render = OW
+    var rG = GR(1825);
+    var eG = GR(38861),
+      aG = GR(42430);
+    class LG {
+      constructor(RR, JR, GR) {
+        this.showView = RR, this.holdForAd = JR, this.render = GR
       }
       pointerUnlockRequestsChanged() {
-        (0, wO.C)()
+        (0, qG.E)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, wO.t)())
+          value: String((0, qG.t)())
         }]
       }
-      setGameViewShown(WW) {
-        this.showView(WW)
+      setGameViewShown(RR) {
+        this.showView(RR)
       }
-      setGameView(WW) {
-        (0, UO.k)(WW)
+      setGameView(RR) {
+        (0, aG.m)(RR)
       }
-      videoAdHold(WW, iW) {
-        this.holdForAd(WW, iW)
+      videoAdHold(RR, JR) {
+        this.holdForAd(RR, JR)
       }
       gameRender() {
         return this.render()
       }
     }
-    class sO {
-      leave(WW) {
-        ! function(WW) {
-          if (null !== (0, xW.d)().websocketUrl) try {
-            (0, BW.K)().leaveGame(WW)
+    class nG {
+      leave(RR) {
+        ! function(RR) {
+          if (null !== (0, wR.d)().websocketUrl) try {
+            (0, jR.E)().leaveGame(RR)
           } finally {
-            (0, xW.r)({
+            (0, wR.s)({
               websocketUrl: null
             })
           }
-        }(WW)
+        }(RR)
       }
       isReplay() {
         return !1
       }
     }
-    class MO {
-      constructor(WW) {
-        this.workMs = WW
+    class UG {
+      constructor(RR) {
+        this.workMs = RR
       }
-      watchFrameStarts(WW) {
-        return (0, BW.r)(WW)
+      watchFrameStarts(RR) {
+        return (0, jR.m)(RR)
       }
-      watchFrames(WW) {
-        return (0, BW.o)(WW)
+      watchFrames(RR) {
+        return (0, jR.k)(RR)
       }
-      watchTicks(WW) {
-        return (0, BW.x)(WW)
+      watchTicks(RR) {
+        return (0, jR.r)(RR)
       }
       frameWorkMs() {
         return this.workMs()
       }
     }
-    var KO = OW(42358),
-      SO = OW(42411);
+    var WG = GR(42374),
+      AG = GR(42435);
 
-    function YO(WW) {
-      return WW >= 0 ? Math.min(1, WW) : 0
+    function CG(RR) {
+      return RR >= 0 ? Math.min(1, RR) : 0
     }
 
-    function yO(WW, iW) {
+    function XG(RR, JR) {
       const {
-        fade: OW
-      } = WW;
-      return null === OW || iW - OW.at >= OW.ms ? WW.volume : OW.from + (WW.volume - OW.from) * Math.max(0, (iW - OW.at) / OW.ms)
+        fade: GR
+      } = RR;
+      return null === GR || JR - GR.at >= GR.ms ? RR.volume : GR.from + (RR.volume - GR.from) * Math.max(0, (JR - GR.at) / GR.ms)
     }
 
-    function TO(WW) {
-      const iW = Object.entries(WW),
-        OW = new Uint32Array(iW.length);
-      let mW = 0;
-      for (const [PW, [, LW]] of iW.entries()) OW[PW] = LW.length, mW += LW.length;
-      const EW = new Float64Array(3 * mW);
-      let NW = 0;
-      for (const [, PW] of iW)
-        for (const WW of PW) EW.set(WW, NW), NW += 3;
+    function MG(RR) {
+      const JR = Object.entries(RR),
+        GR = new Uint32Array(JR.length);
+      let yR = 0;
+      for (const [ZR, [, qR]] of JR.entries()) GR[ZR] = qR.length, yR += qR.length;
+      const tR = new Float64Array(3 * yR);
+      let uR = 0;
+      for (const [, ZR] of JR)
+        for (const RR of ZR) tR.set(RR, uR), uR += 3;
       return {
-        blocks: iW.map((WW => {
-          let [iW] = WW;
-          return iW
+        blocks: JR.map((RR => {
+          let [JR] = RR;
+          return JR
         })).join("\0"),
-        counts: OW,
-        values: EW
+        counts: GR,
+        values: tR
       }
     }
-    class JO {
-      constructor(WW, iW) {
-        this.core = WW, this.warn = iW, this.latest = 0
+    class BG {
+      constructor(RR, JR) {
+        this.core = RR, this.warn = JR, this.latest = 0
       }
       async feed() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hO;
-        const iW = ++this.latest;
-        let OW;
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lG;
+        const JR = ++this.latest;
+        let GR;
         try {
-          OW = await WW()
-        } catch (mW) {
-          return void(this.core.isStopped || iW !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", mW))
+          GR = await RR()
+        } catch (yR) {
+          return void(this.core.isStopped || JR !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", yR))
         }
-        iW === this.latest && (this.core.setBlockColours(OW) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        JR === this.latest && (this.core.setBlockColours(GR) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function hO() {
-      return TO((await OW.e(234).then((() => OW(35332)))).averageColors)
+    async function lG() {
+      return MG((await GR.e(234).then((() => GR(35257)))).averageColors)
     }
-    var HO = OW(5546),
-      nO = OW(5551),
-      uO = OW(42158),
-      oO = OW(4422),
-      dO = OW(37257),
-      eO = OW(42259),
-      vO = OW(639),
-      gO = OW(38208),
-      DO = OW(632),
-      VO = OW(344),
-      pO = OW(42225);
-    const fO = [3e4, 12e4, 3e5];
-    class CO extends Error {}
-    const XO = {
-      mobTypes: vO.k,
-      vehicleTypes: gO.c,
-      mobAiStates: vO.h,
-      playerPoses: DO.k
+    var pG = GR(5676),
+      gG = GR(5685),
+      bG = GR(42170),
+      vG = GR(4500),
+      OG = GR(37169),
+      xG = GR(42283),
+      NG = GR(671),
+      DG = GR(38166),
+      HG = GR(664),
+      oG = GR(377),
+      cG = GR(42239);
+    const PG = [3e4, 12e4, 3e5];
+    class IG extends Error {}
+    const mG = {
+      mobTypes: NG.l,
+      vehicleTypes: DG.b,
+      mobAiStates: NG.k,
+      playerPoses: HG.n
     };
-    var BO = OW(42216),
-      qO = OW(42240),
-      RO = OW(42281),
-      GO = OW(1303),
-      IO = OW(3930),
-      aO = OW(42416),
-      rO = OW(42419),
-      zO = OW(2458),
-      FO = OW(40250),
-      QO = OW(5575),
-      Wm = OW(3305);
-    const im = Wm.y.KeysDisabled | Wm.y.LookFrozen | Wm.y.ClicksSuppressed,
-      Om = zO.l;
-    var mm = (0, rO.b)("resumingConn");
-    class Em {
-      constructor(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = WW, this.now = iW, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, mm, {
+    var zG = GR(42230),
+      SG = GR(42259),
+      jG = GR(42310),
+      dG = GR(1406),
+      EG = GR(4026),
+      YG = GR(42444),
+      kG = GR(42449),
+      QG = GR(2513),
+      FG = GR(40285),
+      TG = GR(5699),
+      sG = GR(3428);
+    const hG = sG.C.KeysDisabled | sG.C.LookFrozen | sG.C.ClicksSuppressed,
+      Ry = QG.m;
+    var Jy = (0, kG.c)("resumingConn");
+    class Gy {
+      constructor(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = RR, this.now = JR, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, Jy, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new FO.d({
-          reconnect: WW => this.reconnect(WW),
-          isLive: () => WW.isLive(),
-          onReconnected: iW => {
-            this.landed = iW, WW.onReconnected(iW), this.landIfResumed()
+        }), this.drops = 0, this.session = new FG.c({
+          reconnect: RR => this.reconnect(RR),
+          isLive: () => RR.isLive(),
+          onReconnected: JR => {
+            this.landed = JR, RR.onReconnected(JR), this.landIfResumed()
           },
-          onGaveUp: (iW, OW) => {
-            this.abortAttempt(), WW.onGaveUp(iW, OW)
+          onGaveUp: (JR, GR) => {
+            this.abortAttempt(), RR.onGaveUp(JR, GR)
           },
-          freeze: iW => {
-            WW.gJ(iW), (0, QO.j)(im, iW ? im : 0, "reconnectFreeze")
+          freeze: JR => {
+            RR.kN(JR), (0, TG.i)(hG, JR ? hG : 0, "reconnectFreeze")
           },
-          releaseSeat: WW => {
-            this.releaseSeat(WW)
+          releaseSeat: RR => {
+            this.releaseSeat(RR)
           }
         })
       }
@@ -2838,155 +2838,155 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, aO.d)(this, mm)[mm]
+        return (0, YG.e)(this, Jy)[Jy]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(WW) {
+      onInitialInfo(RR) {
         let {
-          conn: iW,
-          graceMs: OW,
-          sessionBased: mW,
-          replayOffer: EW
-        } = WW;
-        this.session.onInitialInfo(OW, mW), this.isResuming() && (this.initialInfoConn = iW, this.initialInfoOffer = EW, this.landIfResumed())
+          conn: JR,
+          graceMs: GR,
+          sessionBased: yR,
+          replayOffer: tR
+        } = RR;
+        this.session.onInitialInfo(GR, yR), this.isResuming() && (this.initialInfoConn = JR, this.initialInfoOffer = tR, this.landIfResumed())
       }
-      onResumeComplete(WW) {
-        0 !== WW && (WW === (0, aO.d)(this, mm)[mm] ? ((0, aO.d)(this, mm)[mm] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = WW))
+      onResumeComplete(RR) {
+        0 !== RR && (RR === (0, YG.e)(this, Jy)[Jy] ? ((0, YG.e)(this, Jy)[Jy] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = RR))
       }
-      onDropped(WW) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, aO.d)(this, mm)[mm] = 0, this.session.onConnectionLost(WW)
+      onDropped(RR) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, YG.e)(this, Jy)[Jy] = 0, this.session.onConnectionLost(RR)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, aO.d)(this, mm)[mm] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, YG.e)(this, Jy)[Jy] = 0, this.session.end()
       }
-      reconnect(WW) {
-        const iW = this.attempt;
-        if (null !== iW && this.awaitingJoinRoom(iW)) return iW.result;
+      reconnect(RR) {
+        const JR = this.attempt;
+        if (null !== JR && this.awaitingJoinRoom(JR)) return JR.result;
         this.abortAttempt();
-        const OW = new AbortController,
-          mW = this.drops,
-          EW = {
+        const GR = new AbortController,
+          yR = this.drops,
+          tR = {
             attachedAt: null
           },
-          NW = this.shell.reconnect(WW, OW.signal, (() => {
-            EW.attachedAt = this.now()
-          })).then((WW => {
-            if (this.clearAttempt(PW), this.drops !== mW) throw new Error("the resumed room dropped before its attempt settled");
-            return WW
-          }), (WW => {
-            throw this.clearAttempt(PW), WW
+          uR = this.shell.reconnect(RR, GR.signal, (() => {
+            tR.attachedAt = this.now()
+          })).then((RR => {
+            if (this.clearAttempt(ZR), this.drops !== yR) throw new Error("the resumed room dropped before its attempt settled");
+            return RR
+          }), (RR => {
+            throw this.clearAttempt(ZR), RR
           })),
-          PW = {
-            abort: OW,
-            socket: EW,
-            result: NW
+          ZR = {
+            abort: GR,
+            socket: tR,
+            result: uR
           };
-        return this.attempt = PW, NW
+        return this.attempt = ZR, uR
       }
-      clearAttempt(WW) {
-        this.attempt === WW && (this.attempt = null)
+      clearAttempt(RR) {
+        this.attempt === RR && (this.attempt = null)
       }
       abortAttempt() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const iW = this.attempt;
-        this.attempt = null, null === iW || void 0 === iW || iW.abort.abort(WW)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const JR = this.attempt;
+        this.attempt = null, null === JR || void 0 === JR || JR.abort.abort(RR)
       }
-      awaitingJoinRoom(WW) {
-        const iW = WW.socket.attachedAt;
-        return null !== iW && this.now() - iW < Om
+      awaitingJoinRoom(RR) {
+        const JR = RR.socket.attachedAt;
+        return null !== JR && this.now() - JR < Ry
       }
-      releaseSeat(WW) {
-        const iW = this.attempt,
-          OW = null !== iW && this.awaitingJoinRoom(iW);
-        this.abortAttempt(new ii.t), OW || this.shell.releaseSeat(WW)
+      releaseSeat(RR) {
+        const JR = this.attempt,
+          GR = null !== JR && this.awaitingJoinRoom(JR);
+        this.abortAttempt(new JJ.s), GR || this.shell.releaseSeat(RR)
       }
       landIfResumed() {
-        const WW = this.landed;
-        if (null !== WW && WW.conn === this.initialInfoConn) {
-          const iW = this.initialInfoOffer && this.completedEarlyConn !== WW.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !iW) return void this.session.onResumed();
-          (0, aO.d)(this, mm)[mm] = WW.conn, this.session.onResuming()
+        const RR = this.landed;
+        if (null !== RR && RR.conn === this.initialInfoConn) {
+          const JR = this.initialInfoOffer && this.completedEarlyConn !== RR.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !JR) return void this.session.onResumed();
+          (0, YG.e)(this, Jy)[Jy] = RR.conn, this.session.onResuming()
         }
       }
     }
-    var Nm = OW(40253),
-      Pm = OW(42422),
-      Lm = OW(37717),
-      cm = OW(37711),
-      wm = OW(2300),
-      tm = OW(2012),
-      Zm = OW(4981),
-      xm = OW(42266),
-      lm = OW(5981);
+    var yy = GR(40288),
+      ty = GR(42451),
+      uy = GR(37627),
+      Zy = GR(37622),
+      qy = GR(2374),
+      iy = GR(2102),
+      fy = GR(5081),
+      Vy = GR(42288),
+      Ky = GR(6101);
 
-    function Am(WW) {
+    function wy(RR) {
       let {
-        pack: iW,
-        gameSource: OW
-      } = WW;
-      if (null !== OW && "" !== OW) return `game:${OW}`;
-      if (null === iW) return "default";
+        pack: JR,
+        gameSource: GR
+      } = RR;
+      if (null !== GR && "" !== GR) return `game:${GR}`;
+      if (null === JR) return "default";
       const {
-        id: mW,
-        version: EW
-      } = iW.metaData;
-      if (mW !== wm.n.CUSTOM) return `${mW}@${EW}`;
-      const NW = [];
-      for (const PW of [iW.textureOverrides, iW.modelOverrides, iW.animations])
-        for (const [WW, iW] of Object.entries(null !== PW && void 0 !== PW ? PW : {})) NW.push(`${WW}:${iW.length}`);
-      return `${mW}:${(0,tm.r)(NW.join())}`
+        id: yR,
+        version: tR
+      } = JR.metaData;
+      if (yR !== qy.q.CUSTOM) return `${yR}@${tR}`;
+      const uR = [];
+      for (const ZR of [JR.textureOverrides, JR.modelOverrides, JR.animations])
+        for (const [RR, JR] of Object.entries(null !== ZR && void 0 !== ZR ? ZR : {})) uR.push(`${RR}:${JR.length}`);
+      return `${yR}:${(0,iy.q)(uR.join())}`
     }
-    var bm = OW(5126),
-      jm = OW(4431),
-      Um = OW(42427),
-      km = OW(673),
-      sm = OW(4433),
-      Mm = OW(100),
-      Km = OW(4025),
-      Sm = OW(4013),
-      Ym = OW(5203),
-      ym = OW(4987),
-      Tm = OW(42301),
-      Jm = OW(42292),
-      hm = OW(3308),
-      Hm = OW(1729),
-      nm = OW(1774),
-      um = OW(1294),
-      om = OW(117),
-      dm = OW(284),
-      em = OW(40282),
-      gm = OW(3310),
-      Dm = OW(5568);
-    const Vm = new Set([HO.hb.KeyDown, HO.hb.MouseMove, HO.hb.MouseDown, HO.hb.Wheel, HO.hb.TouchStart, HO.hb.TouchMove]);
+    var ry = GR(5218),
+      ey = GR(4521),
+      ay = GR(42454),
+      Ly = GR(715),
+      ny = GR(4526),
+      Uy = GR(103),
+      Wy = GR(4115),
+      Ay = GR(4106),
+      Cy = GR(5310),
+      Xy = GR(5087),
+      My = GR(42325),
+      By = GR(42322),
+      ly = GR(3437),
+      py = GR(1800),
+      gy = GR(1850),
+      by = GR(1383),
+      vy = GR(116),
+      Oy = GR(313),
+      xy = GR(40327),
+      Ny = GR(3441),
+      Dy = GR(5697);
+    const Hy = new Set([pG.wb.KeyDown, pG.wb.MouseMove, pG.wb.MouseDown, pG.wb.Wheel, pG.wb.TouchStart, pG.wb.TouchMove]);
 
-    function pm(WW) {
-      return (WW.shiftKey ? HO.Hb.Shift : 0) | (WW.ctrlKey ? HO.Hb.Ctrl : 0) | (WW.altKey ? HO.Hb.Alt : 0) | (WW.metaKey ? HO.Hb.Meta : 0) | ("repeat" in WW && WW.repeat ? HO.Hb.Repeat : 0) | (WW.isTrusted ? 0 : HO.Hb.Untrusted | function(WW) {
+    function oy(RR) {
+      return (RR.shiftKey ? pG.Kb.Shift : 0) | (RR.ctrlKey ? pG.Kb.Ctrl : 0) | (RR.altKey ? pG.Kb.Alt : 0) | (RR.metaKey ? pG.Kb.Meta : 0) | ("repeat" in RR && RR.repeat ? pG.Kb.Repeat : 0) | (RR.isTrusted ? 0 : pG.Kb.Untrusted | function(RR) {
         try {
           const {
-            editable: iW,
-            outsideView: OW
-          } = (0, em.d)(WW.target);
-          return (iW ? HO.Hb.UntrustedEditable : 0) | (OW ? HO.Hb.UntrustedOutsideView : 0)
+            editable: JR,
+            outsideView: GR
+          } = (0, xy.f)(RR.target);
+          return (JR ? pG.Kb.UntrustedEditable : 0) | (GR ? pG.Kb.UntrustedOutsideView : 0)
         } catch {
           return 0
         }
-      }(WW))
+      }(RR))
     }
 
-    function fm(WW) {
-      return "touchOnly" !== (0, om.d)() && "function" === typeof WW.requestPointerLock
+    function cy(RR) {
+      return "touchOnly" !== (0, vy.c)() && "function" === typeof RR.requestPointerLock
     }
 
-    function Cm(WW) {
-      return 0 === WW.button ? WW.altKey ? Dm.n["Alt+Left Click"] : Dm.n.Mouse1 : 1 === WW.button ? Dm.n.Mouse2 : Dm.n.Mouse3
+    function Py(RR) {
+      return 0 === RR.button ? RR.altKey ? Dy.i["Alt+Left Click"] : Dy.i.Mouse1 : 1 === RR.button ? Dy.i.Mouse2 : Dy.i.Mouse3
     }
-    const Xm = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      Bm = new Map([
+    const Iy = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      my = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2996,608 +2996,657 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      qm = 32768,
-      Rm = 1;
+      zy = 32768,
+      Sy = 1;
 
-    function Gm(WW) {
-      return Math.min(Math.max(Math.round(WW), 0), 65535)
+    function jy(RR) {
+      return Math.min(Math.max(Math.round(RR), 0), 65535)
     }
 
-    function Im(WW, iW, OW) {
-      const mW = [],
-        EW = (WW, iW, OW, EW) => {
-          const NW = WW => {
-            (0, nm.x)(WW) || OW(WW)
+    function dy(RR, JR, GR) {
+      const yR = [],
+        tR = (RR, JR, GR, tR) => {
+          const uR = RR => {
+            (0, gy.A)(RR) || GR(RR)
           };
-          WW.addEventListener(iW, NW, EW), mW.push((() => {
-            WW.removeEventListener(iW, NW, EW)
+          RR.addEventListener(JR, uR, tR), yR.push((() => {
+            RR.removeEventListener(JR, uR, tR)
           }))
         },
-        NW = {
+        uR = {
           capture: !0,
           passive: !0
         },
-        PW = (WW, OW, mW, EW, NW) => (!(0, gm.d)() || !Vm.has(WW)) && (iW(WW, OW, mW, EW, NW), !0),
-        LW = () => document.pointerLockElement === WW,
-        cW = (0, dm.e)(),
-        wW = WW => {
-          WW.ctrlKey && OW.ctrlCombosAreGames() && !(0, QO.h)(WW.target) && WW.preventDefault()
+        ZR = (RR, GR, yR, tR, uR) => (!(0, Ny.d)() || !Hy.has(RR)) && (JR(RR, GR, yR, tR, uR), !0),
+        qR = () => document.pointerLockElement === RR,
+        iR = (0, Oy.d)(),
+        fR = RR => {
+          RR.ctrlKey && GR.ctrlCombosAreGames() && !(0, TG.h)(RR.target) && RR.preventDefault()
         },
-        tW = (WW, mW, EW) => {
-          OW.inspect(WW, mW, !1), iW(HO.hb.KeyUp, mW, 0, 0, (0, hm.q)(EW, WW.timeStamp)), OW.keyReleased(mW)
+        VR = (RR, yR, tR) => {
+          GR.inspect(RR, yR, !1), JR(pG.wb.KeyUp, yR, 0, 0, (0, ly.s)(tR, RR.timeStamp)), GR.keyReleased(yR)
         },
-        ZW = new Map,
-        xW = (WW, iW, OW) => WW[OW] || ("AltRight" === iW || "ControlLeft" === iW) && WW.getModifierState("AltGraph"),
-        lW = new Map,
-        AW = () => {
-          ZW.clear(), lW.clear()
+        KR = new Map,
+        wR = (RR, JR, GR) => RR[GR] || ("AltRight" === JR || "ControlLeft" === JR) && RR.getModifierState("AltGraph"),
+        rR = new Map,
+        eR = () => {
+          KR.clear(), rR.clear()
         },
-        bW = WW => {
-          if (WW.isTrusted && document.hasFocus())
-            for (const [iW, OW] of lW) lW.delete(iW), xW(WW, iW, OW) || (ZW.delete(iW), tW(WW, Dm.n[iW], pm(WW)))
+        aR = RR => {
+          if (RR.isTrusted && document.hasFocus())
+            for (const [JR, GR] of rR) rR.delete(JR), wR(RR, JR, GR) || (KR.delete(JR), VR(RR, Dy.i[JR], oy(RR)))
         };
-      WW.tabIndex = -1;
-      let jW = 0,
-        UW = 0;
-      const kW = () => {
-        const iW = WW.getBoundingClientRect();
-        jW = iW.left, UW = iW.top
+      RR.tabIndex = -1;
+      let LR = 0,
+        nR = 0;
+      const UR = () => {
+        const JR = RR.getBoundingClientRect();
+        LR = JR.left, nR = JR.top
       };
-      let sW = "mouse";
-      const MW = () => !LW() && ("mouse" === sW || !OW.touchUiShown()),
-        KW = (WW, iW, OW) => {
-          const mW = (Gm(WW.clientX - jW) | Gm(WW.clientY - UW) << 16) >>> 0;
-          PW(HO.hb.MouseMove, HO.Lb.Point, iW, OW, mW)
+      let WR = "mouse";
+      const AR = () => !qR() && ("mouse" === WR || !GR.touchUiShown()),
+        CR = (RR, JR, GR) => {
+          const yR = (jy(RR.clientX - LR) | jy(RR.clientY - nR) << 16) >>> 0;
+          ZR(pG.wb.MouseMove, pG.Nb.Point, JR, GR, yR)
         };
-      let SW = !1,
-        YW = 0;
-      const yW = () => {
-        SW && (SW = !1, OW.viewShown() && (0, wO.P)())
+      let XR = !1,
+        MR = 0;
+      const BR = () => {
+        XR && (XR = !1, GR.viewShown() && (0, qG.X)())
       };
-      mW.push((() => {
-        clearTimeout(YW)
-      })), EW(window, "keydown", (WW => {
-        "Escape" === WW.key ? (0, wO.H)(!0) : WW.repeat || (0, QO.h)(WW.target) || (SW = !0, clearTimeout(YW), YW = window.setTimeout(yW, 0))
-      }), NW), EW(window, "keydown", (WW => {
-        yW(), wW(WW), bW(WW);
-        const iW = Dm.n[WW.code];
-        if ("number" !== typeof iW || !OW.viewShown()) return;
-        const mW = (0, QO.h)(WW.target);
-        mW || !OW.prevents(iW) && !Xm.has(WW.code) || WW.preventDefault(), WW.repeat || OW.inspect(WW, iW, !0), PW(HO.hb.KeyDown, iW, 0, 0, (0, hm.q)(pm(WW), WW.timeStamp)) && ZW.set(WW.code, iW), mW || OW.keyPressed(iW)
+      yR.push((() => {
+        clearTimeout(MR)
+      })), tR(window, "keydown", (RR => {
+        "Escape" === RR.key ? (0, qG.M)(!0) : RR.repeat || (0, TG.h)(RR.target) || (XR = !0, clearTimeout(MR), MR = window.setTimeout(BR, 0))
+      }), uR), tR(window, "keydown", (RR => {
+        BR(), fR(RR), aR(RR);
+        const JR = Dy.i[RR.code];
+        if ("number" !== typeof JR || !GR.viewShown()) return;
+        const yR = (0, TG.h)(RR.target);
+        yR || !GR.prevents(JR) && !Iy.has(RR.code) || RR.preventDefault(), RR.repeat || GR.inspect(RR, JR, !0), ZR(pG.wb.KeyDown, JR, 0, 0, (0, ly.s)(oy(RR), RR.timeStamp)) && KR.set(RR.code, JR), yR || GR.keyPressed(JR)
       }), {
         capture: !1,
         passive: !1
-      }), EW(window, "keyup", (WW => {
-        "Escape" === WW.key && (0, wO.H)(!1), wW(WW), ZW.delete(WW.code), lW.delete(WW.code), bW(WW);
-        const iW = Dm.n[WW.code];
-        "number" === typeof iW && tW(WW, iW, pm(WW))
+      }), tR(window, "keyup", (RR => {
+        "Escape" === RR.key && (0, qG.M)(!1), fR(RR), KR.delete(RR.code), rR.delete(RR.code), aR(RR);
+        const JR = Dy.i[RR.code];
+        "number" === typeof JR && VR(RR, JR, oy(RR))
       }), {
         capture: !0,
         passive: !1
-      }), EW(window, "mousemove", (WW => {
-        "mouse" === sW && MW() ? KW(WW, WW.movementX, WW.movementY) : LW() ? PW(HO.hb.MouseMove, HO.Lb.Stamped, WW.movementX, WW.movementY, (0, hm.q)(0, WW.timeStamp)) : PW(HO.hb.MouseMove, 0, WW.movementX, WW.movementY, 0)
-      }), NW);
-      let TW = 0,
-        JW = 0;
-      const hW = [];
-      let HW = !1,
-        nW = !1;
-      EW(WW, "mousedown", (WW => {
-        if ((0, gm.d)()) return;
-        bW(WW);
-        const mW = 1 << WW.button;
-        if (!LW() && (0, wO.M)() && (0, wO.h)() && (nW = !0, !HW)) return void(TW |= mW);
-        TW &= ~mW;
-        const EW = WW.button <= 2 ? Cm(WW) : void 0;
-        void 0 !== EW && (hW[WW.button] = EW, OW.inspect(WW, EW, !0)), MW() && KW(WW, 0, 0), iW(HO.hb.MouseDown, WW.button, WW.clientX, WW.clientY, (0, hm.q)(pm(WW), WW.timeStamp)), JW |= mW, void 0 !== EW && OW.keyPressed(EW)
-      }), NW), EW(window, "mouseup", (WW => {
-        var mW;
-        bW(WW);
-        const EW = 1 << WW.button,
-          NW = 0 !== (TW & ~JW & EW);
-        if (TW &= ~EW, JW &= ~EW, NW) return;
-        const PW = WW.button <= 2 ? null !== (mW = hW[WW.button]) && void 0 !== mW ? mW : Cm(WW) : void 0;
-        void 0 !== PW && OW.inspect(WW, PW, !1), iW(HO.hb.MouseUp, WW.button, WW.clientX, WW.clientY, (0, hm.q)(pm(WW), WW.timeStamp)), void 0 !== PW && OW.keyReleased(PW)
-      }), NW), EW(WW, "contextmenu", (WW => {
-        WW.preventDefault()
+      }), tR(window, "mousemove", (RR => {
+        "mouse" === WR && AR() ? CR(RR, RR.movementX, RR.movementY) : qR() ? ZR(pG.wb.MouseMove, pG.Nb.Stamped, RR.movementX, RR.movementY, (0, ly.s)(0, RR.timeStamp)) : ZR(pG.wb.MouseMove, 0, RR.movementX, RR.movementY, 0)
+      }), uR);
+      let lR = 0,
+        pR = 0;
+      const gR = [];
+      let bR = !1,
+        vR = !1;
+      tR(RR, "mousedown", (RR => {
+        if ((0, Ny.d)()) return;
+        aR(RR);
+        const yR = 1 << RR.button;
+        if (!qR() && (0, qG.T)() && (0, qG.h)() && (vR = !0, !bR)) return void(lR |= yR);
+        lR &= ~yR;
+        const tR = RR.button <= 2 ? Py(RR) : void 0;
+        void 0 !== tR && (gR[RR.button] = tR, GR.inspect(RR, tR, !0)), AR() && CR(RR, 0, 0), JR(pG.wb.MouseDown, RR.button, RR.clientX, RR.clientY, (0, ly.s)(oy(RR), RR.timeStamp)), pR |= yR, void 0 !== tR && GR.keyPressed(tR)
+      }), uR), tR(window, "mouseup", (RR => {
+        var yR;
+        aR(RR);
+        const tR = 1 << RR.button,
+          uR = 0 !== (lR & ~pR & tR);
+        if (lR &= ~tR, pR &= ~tR, uR) return;
+        const ZR = RR.button <= 2 ? null !== (yR = gR[RR.button]) && void 0 !== yR ? yR : Py(RR) : void 0;
+        void 0 !== ZR && GR.inspect(RR, ZR, !1), JR(pG.wb.MouseUp, RR.button, RR.clientX, RR.clientY, (0, ly.s)(oy(RR), RR.timeStamp)), void 0 !== ZR && GR.keyReleased(ZR)
+      }), uR), tR(RR, "contextmenu", (RR => {
+        RR.preventDefault()
       }), {
         passive: !1
       });
-      const uW = WW => {
-        (LW() || (0, wO.q)() && (0, um.z)()) && (WW.ctrlKey || cW && !document.fullscreenElement) && WW.preventDefault()
+      const OR = RR => {
+        (qR() || (0, qG.r)() && (0, by.u)()) && (RR.ctrlKey || iR && !document.fullscreenElement) && RR.preventDefault()
       };
-      EW(WW, "wheel", (WW => {
-        uW(WW), bW(WW), PW(HO.hb.Wheel, WW.deltaMode, WW.deltaX, WW.deltaY, 0)
+      tR(RR, "wheel", (RR => {
+        OR(RR), aR(RR), ZR(pG.wb.Wheel, RR.deltaMode, RR.deltaX, RR.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const oW = {
+      const xR = {
           capture: !0,
           passive: !1
         },
-        dW = WW => {
-          WW ? window.addEventListener("wheel", uW, oW) : window.removeEventListener("wheel", uW, oW)
+        NR = RR => {
+          RR ? window.addEventListener("wheel", OR, xR) : window.removeEventListener("wheel", OR, xR)
         };
-      dW((0, wO.q)()), mW.push((0, wO.v)(dW)), mW.push((() => {
-        dW(!1)
+      NR((0, qG.r)()), yR.push((0, qG.y)(NR)), yR.push((() => {
+        NR(!1)
       }));
-      const eW = new Map,
-        vW = new Set,
-        gW = WW => {
-          const iW = "stylus" === WW.touchType;
-          for (const OW of eW.values())
-            if (!OW.touched && (iW || Math.abs(WW.clientX - OW.x) <= Rm && Math.abs(WW.clientY - OW.y) <= Rm)) return OW.touched = !0, !0;
+      const DR = new Map,
+        HR = new Set,
+        oR = RR => {
+          const JR = "stylus" === RR.touchType;
+          for (const GR of DR.values())
+            if (!GR.touched && (JR || Math.abs(RR.clientX - GR.x) <= Sy && Math.abs(RR.clientY - GR.y) <= Sy)) return GR.touched = !0, !0;
           return !1
         },
-        DW = WW => 32767 & WW,
-        VW = new Set,
-        pW = WW => OW => {
-          const mW = (0, hm.q)(pm(OW), OW.timeStamp);
-          WW !== HO.hb.TouchStart && WW !== HO.hb.TouchMove || ((WW, OW) => {
-            const mW = WW.touches;
-            if (mW)
-              for (const EW of VW) {
-                let WW = !1;
-                for (let iW = 0; iW < mW.length && !WW; iW++) WW = DW(mW[iW].identifier) === EW;
-                WW || (VW.delete(EW), iW(HO.hb.TouchCancel, EW, 0, 0, OW))
+        cR = RR => 32767 & RR,
+        PR = new Set,
+        IR = RR => GR => {
+          const yR = (0, ly.s)(oy(GR), GR.timeStamp);
+          RR !== pG.wb.TouchStart && RR !== pG.wb.TouchMove || ((RR, GR) => {
+            const yR = RR.touches;
+            if (yR)
+              for (const tR of PR) {
+                let RR = !1;
+                for (let JR = 0; JR < yR.length && !RR; JR++) RR = cR(yR[JR].identifier) === tR;
+                RR || (PR.delete(tR), JR(pG.wb.TouchCancel, tR, 0, 0, GR))
               }
-          })(OW, mW);
-          const EW = OW.changedTouches;
-          for (let iW = 0; iW < EW.length; iW++) {
-            const OW = EW[iW];
-            if (WW === HO.hb.TouchStart && gW(OW) && vW.add(OW.identifier), vW.has(OW.identifier)) {
-              WW !== HO.hb.TouchEnd && WW !== HO.hb.TouchCancel || vW.delete(OW.identifier);
+          })(GR, yR);
+          const tR = GR.changedTouches;
+          for (let JR = 0; JR < tR.length; JR++) {
+            const GR = tR[JR];
+            if (RR === pG.wb.TouchStart && oR(GR) && HR.add(GR.identifier), HR.has(GR.identifier)) {
+              RR !== pG.wb.TouchEnd && RR !== pG.wb.TouchCancel || HR.delete(GR.identifier);
               continue
             }
-            const NW = DW(OW.identifier),
-              LW = PW(WW, NW, OW.clientX - jW, OW.clientY - UW, mW);
-            WW === HO.hb.TouchStart ? LW && VW.add(NW) : WW !== HO.hb.TouchMove && VW.delete(NW)
+            const uR = cR(GR.identifier),
+              qR = ZR(RR, uR, GR.clientX - LR, GR.clientY - nR, yR);
+            RR === pG.wb.TouchStart ? qR && PR.add(uR) : RR !== pG.wb.TouchMove && PR.delete(uR)
           }
         },
-        fW = pW(HO.hb.TouchStart);
-      EW(WW, "touchstart", (WW => {
-        WW.preventDefault(), (0, gm.d)() || (OW.touchStarting(), fW(WW))
+        mR = IR(pG.wb.TouchStart);
+      tR(RR, "touchstart", (RR => {
+        RR.preventDefault(), (0, Ny.d)() || (GR.touchStarting(), mR(RR))
       }), {
         passive: !1
-      }), EW(WW, "touchmove", pW(HO.hb.TouchMove), NW), EW(WW, "touchend", pW(HO.hb.TouchEnd), NW), EW(WW, "touchcancel", pW(HO.hb.TouchCancel), NW);
-      const CW = WW => qm | 32767 & WW,
-        XW = (WW, iW) => {
-          PW(WW, CW(iW.pointerId), iW.clientX - jW, iW.clientY - UW, (0, hm.q)(pm(iW), iW.timeStamp))
+      }), tR(RR, "touchmove", IR(pG.wb.TouchMove), uR), tR(RR, "touchend", IR(pG.wb.TouchEnd), uR), tR(RR, "touchcancel", IR(pG.wb.TouchCancel), uR);
+      const zR = RR => zy | 32767 & RR,
+        SR = (RR, JR) => {
+          ZR(RR, zR(JR.pointerId), JR.clientX - LR, JR.clientY - nR, (0, ly.s)(oy(JR), JR.timeStamp))
         };
-      EW(window, "pointerdown", (iW => {
-        sW = iW.pointerType, "mouse" === iW.pointerType && iW.target !== WW && OW.viewShown() && (0, wO.S)()
-      }), NW), EW(WW, "pointerdown", (WW => {
-        "pen" === WW.pointerType && 0 === WW.button && (0, wO.q)() && (0, um.z)() && (WW.preventDefault(), (0, gm.d)() || (eW.set(WW.pointerId, {
-          x: WW.clientX,
-          y: WW.clientY,
+      tR(window, "pointerdown", (JR => {
+        WR = JR.pointerType, "mouse" === JR.pointerType && JR.target !== RR && GR.viewShown() && (0, qG._)()
+      }), uR), tR(RR, "pointerdown", (RR => {
+        "pen" === RR.pointerType && 0 === RR.button && (0, qG.r)() && (0, by.u)() && (RR.preventDefault(), (0, Ny.d)() || (DR.set(RR.pointerId, {
+          x: RR.clientX,
+          y: RR.clientY,
           touched: !1
-        }), OW.touchStarting(), XW(HO.hb.TouchStart, WW)))
+        }), GR.touchStarting(), SR(pG.wb.TouchStart, RR)))
       }), {
         passive: !1
-      }), EW(window, "pointermove", (WW => {
-        sW = WW.pointerType, eW.has(WW.pointerId) && XW(HO.hb.TouchMove, WW), "mouse" !== WW.pointerType && MW() && KW(WW, 0, 0)
-      }), NW);
-      const BW = WW => iW => {
-        eW.delete(iW.pointerId) && XW(WW, iW)
+      }), tR(window, "pointermove", (RR => {
+        WR = RR.pointerType, DR.has(RR.pointerId) && SR(pG.wb.TouchMove, RR), "mouse" !== RR.pointerType && AR() && CR(RR, 0, 0)
+      }), uR);
+      const jR = RR => JR => {
+        DR.delete(JR.pointerId) && SR(RR, JR)
       };
-      EW(window, "pointerup", BW(HO.hb.TouchEnd), NW), EW(window, "pointercancel", BW(HO.hb.TouchCancel), NW);
-      let qW = 0,
-        RW = !1;
-      const GW = () => {
-          qW = 0, RW && OW.coverHeld() || (kW(), OW.resized())
+      tR(window, "pointerup", jR(pG.wb.TouchEnd), uR), tR(window, "pointercancel", jR(pG.wb.TouchCancel), uR);
+      let dR = 0,
+        ER = !1;
+      const YR = () => {
+          dR = 0, ER && GR.coverHeld() || (UR(), GR.resized())
         },
-        IW = () => {
-          if (RW && OW.coverHeld()) return;
-          const WW = OW.sizeCanvas();
-          null !== WW && (RW = !0, iW(HO.hb.Resize, 0, WW.cssWidth, WW.cssHeight, (0, hm.i)(WW.renderScale))), kW(), OW.resized(), 0 === qW && (qW = requestAnimationFrame(GW))
+        kR = () => {
+          if (ER && GR.coverHeld()) return;
+          const RR = GR.sizeCanvas();
+          null !== RR && (ER = !0, JR(pG.wb.Resize, 0, RR.cssWidth, RR.cssHeight, (0, ly.l)(RR.renderScale))), UR(), GR.resized(), 0 === dR && (dR = requestAnimationFrame(YR))
         };
-      EW(window, "resize", IW, NW), mW.push(OW.watchRenderScale(IW)), mW.push((() => {
-        cancelAnimationFrame(qW)
-      })), EW(window, "focus", (WW => {
-        WW.isTrusted && (iW(HO.hb.Focus, 0, 0, 0, 0), OW.viewShown() && (0, wO.S)())
+      tR(window, "resize", kR, uR), yR.push(GR.watchRenderScale(kR)), yR.push((() => {
+        cancelAnimationFrame(dR)
+      })), tR(window, "focus", (RR => {
+        RR.isTrusted && (JR(pG.wb.Focus, 0, 0, 0, 0), GR.viewShown() && (0, qG._)())
       }), {
         passive: !0
       });
-      const aW = () => {
-          (0, wO.H)(!1), TW = 0
+      const QR = () => {
+          (0, qG.M)(!1), lR = 0
         },
-        rW = () => {
-          VW.clear(), eW.clear(), vW.clear()
+        FR = () => {
+          PR.clear(), DR.clear(), HR.clear()
         };
-      let zW = 0,
-        FW = 0;
-      EW(window, "blur", (mW => {
-        aW(), (0, wO.m)();
-        for (const WW of ZW.keys()) {
-          const iW = Bm.get(WW);
-          void 0 !== iW && lW.set(WW, iW)
+      let TR = 0,
+        sR = 0;
+      tR(window, "blur", (yR => {
+        QR(), (0, qG.o)();
+        for (const RR of KR.keys()) {
+          const JR = my.get(RR);
+          void 0 !== JR && rR.set(RR, JR)
         }
-        mW.isTrusted && ((WW => {
-          for (const [OW, mW] of eW) iW(HO.hb.TouchCancel, CW(OW), mW.x, mW.y, (0, hm.q)(0, WW));
-          eW.clear()
-        })(mW.timeStamp), iW(HO.hb.Blur, HO.n.KeepTouches, 0, 0, 0)), cW && mW.isTrusted && (clearTimeout(FW), FW = window.setTimeout((() => {
+        yR.isTrusted && ((RR => {
+          for (const [GR, yR] of DR) JR(pG.wb.TouchCancel, zR(GR), yR.x, yR.y, (0, ly.s)(0, RR));
+          DR.clear()
+        })(yR.timeStamp), JR(pG.wb.Blur, pG.u.KeepTouches, 0, 0, 0)), iR && yR.isTrusted && (clearTimeout(sR), sR = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const WW of ZW.values()) tW(mW, WW, 0);
-            AW()
+            for (const RR of KR.values()) VR(yR, RR, 0);
+            eR()
           }
-        }), 0)), clearTimeout(zW), zW = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, um.z)() && OW.viewShown() && WW.focus({
+        }), 0)), clearTimeout(TR), TR = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, by.u)() && GR.viewShown() && RR.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), mW.push((() => {
-        clearTimeout(zW), clearTimeout(FW)
-      })), EW(window, "mousedown", (iW => {
-        cW && iW.isTrusted && !document.hasFocus() && (0, um.z)() && OW.viewShown() && (window.focus(), WW.focus({
+      }), yR.push((() => {
+        clearTimeout(TR), clearTimeout(sR)
+      })), tR(window, "mousedown", (JR => {
+        iR && JR.isTrusted && !document.hasFocus() && (0, by.u)() && GR.viewShown() && (window.focus(), RR.focus({
           preventScroll: !0
         }))
-      }), NW), EW(document, "visibilitychange", (() => {
-        document.hidden ? (iW(HO.hb.Blur, 0, 0, 0, 0), rW()) : document.hasFocus() && iW(HO.hb.Focus, 0, 0, 0, 0)
+      }), uR), tR(document, "visibilitychange", (() => {
+        document.hidden ? (JR(pG.wb.Blur, 0, 0, 0, 0), FR()) : document.hasFocus() && JR(pG.wb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), mW.push((0, gm.j)((() => {
-        aW(), iW(HO.hb.Blur, HO.n.Release, 0, 0, 0), OW.keysReleased(), AW(), JW = 0, rW(), iW(HO.hb.Joystick, 0, 0, 0, 0), document.hasFocus() && iW(HO.hb.Focus, 0, 0, 0, 0)
+      }), yR.push((0, Ny.k)((() => {
+        QR(), JR(pG.wb.Blur, pG.u.Release, 0, 0, 0), GR.keysReleased(), eR(), pR = 0, FR(), JR(pG.wb.Joystick, 0, 0, 0, 0), document.hasFocus() && JR(pG.wb.Focus, 0, 0, 0, 0)
       })));
-      const QW = !OW.canLock(),
-        Wi = () => QW && !(0, wO.q)() ? HO.lc.Lockless : HO.lc.Released,
-        ii = () => {
-          LW() && (HW = !1, nW = !1), iW(HO.hb.PointerLock, LW() ? HO.lc.Locked : Wi(), 0, 0, 0), (0, wO.J)(LW())
+      const hR = !GR.canLock(),
+        RJ = () => hR && !(0, qG.r)() ? pG.jc.Lockless : pG.jc.Released,
+        JJ = () => {
+          qR() && (bR = !1, vR = !1), JR(pG.wb.PointerLock, qR() ? pG.jc.Locked : RJ(), 0, 0, 0), (0, qG.S)(qR())
         };
-      return EW(document, "pointerlockchange", ii, {
+      return tR(document, "pointerlockchange", JJ, {
         passive: !0
-      }), EW(document, "pointerlockerror", (() => {
-        HW ||= nW, nW = !1, (0, wO.u)()
+      }), tR(document, "pointerlockerror", (() => {
+        bR ||= vR, vR = !1, (0, qG.w)()
       }), {
         passive: !0
-      }), QW && mW.push((0, wO.v)((() => {
-        iW(HO.hb.PointerLock, Wi(), 0, 0, 0)
-      }))), IW(), iW(document.hasFocus() ? HO.hb.Focus : HO.hb.Blur, 0, 0, 0, 0), ii(), () => {
-        for (const WW of mW.splice(0)) WW()
+      }), hR && yR.push((0, qG.y)((() => {
+        JR(pG.wb.PointerLock, RJ(), 0, 0, 0)
+      }))), kR(), JR(document.hasFocus() ? pG.wb.Focus : pG.wb.Blur, 0, 0, 0, 0), JJ(), () => {
+        for (const RR of yR.splice(0)) RR()
       }
     }
-    var am = OW(4320),
-      rm = OW(35167),
-      zm = OW(35159),
-      Fm = OW(2093);
-    const Qm = new Map(Dm.e.map(((WW, iW) => [WW, iW]))),
-      WE = ["jump", "primary-fire", "alt-fire"],
-      iE = ["primary-fire", "alt-fire"];
+    var Ey = GR(4403),
+      Yy = GR(35085),
+      ky = GR(35072),
+      Qy = GR(2196);
+    const Fy = new Map(Dy.e.map(((RR, JR) => [RR, JR]))),
+      Ty = ["jump", "primary-fire", "alt-fire"],
+      sy = ["primary-fire", "alt-fire"];
 
-    function OE(WW) {
-      return `${Fm.c}${WW}`
+    function hy(RR) {
+      return `${Qy.b}${RR}`
     }
-    const mE = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const Rt = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function EE(WW) {
-      const iW = [];
-      for (const OW of WW) {
-        const WW = "string" === typeof OW ? Dm.n[OW] : void 0;
-        "number" === typeof WW && iW.push(WW)
+    function Jt(RR) {
+      const JR = [];
+      for (const GR of RR) {
+        const RR = "string" === typeof GR ? Dy.i[GR] : void 0;
+        "number" === typeof RR && JR.push(RR)
       }
-      return iW
+      return JR
     }
-    class NE {
+    class Gt {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [WW, iW] of Object.entries(Dm.i)) this.keys.set(WW, iW);
+        for (const [RR, JR] of Object.entries(Dy.f)) this.keys.set(RR, JR);
         this.updateKeySets()
       }
-      prevents(WW) {
-        return this.preventKeys.has(WW)
+      prevents(RR) {
+        return this.preventKeys.has(RR)
       }
-      moves(WW) {
-        return this.movementKeys.has(WW)
+      moves(RR) {
+        return this.movementKeys.has(RR)
       }
-      checks(WW, iW) {
-        return (iW ? this.checkedDown : this.checkedUp).has(WW)
+      checks(RR, JR) {
+        return (JR ? this.checkedDown : this.checkedUp).has(RR)
       }
-      sync(WW, iW) {
-        for (const [OW, mW] of this.keys) {
-          const EW = WW(OE(OW)),
-            NW = Array.isArray(EW) ? EE(EW) : Dm.i[OW];
-          (NW.length !== mW.length || NW.some(((WW, iW) => WW !== mW[iW]))) && this.bind(OW, NW, iW)
+      sync(RR, JR) {
+        for (const [GR, yR] of this.keys) {
+          const tR = RR(hy(GR)),
+            uR = Array.isArray(tR) ? Jt(tR) : Dy.f[GR];
+          (uR.length !== yR.length || uR.some(((RR, JR) => RR !== yR[JR]))) && this.bind(GR, uR, JR)
         }
       }
-      bind(WW, iW, OW) {
-        const mW = Qm.get(WW);
-        if (void 0 !== mW) {
-          OW(HO.hb.Binding, 0, 0, 0, mW | HO.k.Clear << 8);
-          for (const NW of [...iW, ...null !== (EW = Dm.m[WW]) && void 0 !== EW ? EW : []]) {
-            var EW;
-            OW(HO.hb.Binding, NW, 0, 0, mW | HO.k.Add << 8)
+      bind(RR, JR, GR) {
+        const yR = Fy.get(RR);
+        if (void 0 !== yR) {
+          GR(pG.wb.Binding, 0, 0, 0, yR | pG.q.Clear << 8);
+          for (const uR of [...JR, ...null !== (tR = Dy.g[RR]) && void 0 !== tR ? tR : []]) {
+            var tR;
+            GR(pG.wb.Binding, uR, 0, 0, yR | pG.q.Add << 8)
           }
-          this.keys.set(WW, iW), this.updateKeySets()
+          this.keys.set(RR, JR), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const mW of Dm.q)
-          for (const iW of null !== (WW = this.keys.get(Dm.e[mW])) && void 0 !== WW ? WW : []) {
-            var WW;
-            this.preventKeys.add(iW)
+        for (const yR of Dy.k)
+          for (const JR of null !== (RR = this.keys.get(Dy.e[yR])) && void 0 !== RR ? RR : []) {
+            var RR;
+            this.preventKeys.add(JR)
           }
         this.movementKeys.clear();
-        for (const mW of mE)
-          for (const WW of null !== (iW = this.keys.get(mW)) && void 0 !== iW ? iW : []) {
-            var iW;
-            this.movementKeys.add(WW)
+        for (const yR of Rt)
+          for (const RR of null !== (JR = this.keys.get(yR)) && void 0 !== JR ? JR : []) {
+            var JR;
+            this.movementKeys.add(RR)
           }
-        for (const [mW, EW] of [
-            [this.checkedDown, WE],
-            [this.checkedUp, iE]
+        for (const [yR, tR] of [
+            [this.checkedDown, Ty],
+            [this.checkedUp, sy]
           ]) {
-          mW.clear();
-          for (const WW of EW)
-            for (const iW of null !== (OW = this.keys.get(WW)) && void 0 !== OW ? OW : []) {
-              var OW;
-              mW.add(iW)
+          yR.clear();
+          for (const RR of tR)
+            for (const JR of null !== (GR = this.keys.get(RR)) && void 0 !== GR ? GR : []) {
+              var GR;
+              yR.add(JR)
             }
         }
       }
     }
-    var PE = OW(5560),
-      LE = OW(37861);
-    const cE = "[bloxd-wasm-client]";
+    var yt = GR(5692),
+      tt = GR(37789);
+    const ut = "[bloxd-wasm-client]";
 
-    function wE() {
-      return "inGame" === xi.d.get("gameState") && !(0, Hm.m)()
+    function Zt() {
+      return "inGame" === wJ.d.get("gameState") && !(0, py.r)()
     }
-    let tE = null;
+    let qt = null;
 
-    function ZE(WW, iW) {
-      tE && iW.writePendingInput() && tE.push(function(WW, iW) {
-        let OW = "";
-        for (const mW of iW) OW += mW.toString(16).padStart(2, "0");
-        return OW ? `${WW} ${OW}` : String(WW)
-      }(WW, iW.rings.input.written()))
+    function it(RR, JR) {
+      qt && JR.writePendingInput() && qt.push(function(RR, JR) {
+        let GR = "";
+        for (const yR of JR) GR += yR.toString(16).padStart(2, "0");
+        return GR ? `${RR} ${GR}` : String(RR)
+      }(RR, JR.rings.input.written()))
     }
-    const xE = [];
+    const ft = [];
 
-    function lE(WW, iW, OW, mW) {
-      WW === HO.Q.InputAction && mW === HO.db && xE.push(iW.getUint32(OW, !0))
+    function Vt(RR, JR, GR, yR) {
+      RR === pG.X.InputAction && yR === pG.ob && ft.push(JR.getUint32(GR, !0))
     }
-    var AE = OW(42429),
-      bE = OW(248),
-      jE = OW(131);
-    const UE = new Set(["android", "ios"]);
-    let kE = null;
+    var Kt = GR(42457),
+      wt = GR(279),
+      rt = GR(132);
+    const et = new Set(["android", "ios"]);
+    let Lt = null;
 
-    function sE() {
-      return kE ??= function() {
-        let WW = null;
+    function nt() {
+      return Lt ??= function() {
+        let RR = null;
         try {
-          var iW, OW, mW;
-          const EW = document.createElement("canvas"),
-            NW = {
-              powerPreference: jE.b
+          var JR, GR, yR;
+          const tR = document.createElement("canvas"),
+            uR = {
+              powerPreference: rt.b
             };
-          if (WW = null !== (iW = EW.getContext("webgl2", NW)) && void 0 !== iW ? iW : EW.getContext("webgl", NW), !WW) return null;
-          const PW = WW.getExtension("WEBGL_debug_renderer_info");
-          if (!PW) return "unknown";
-          const LW = String(null !== (OW = WW.getParameter(PW.UNMASKED_RENDERER_WEBGL)) && void 0 !== OW ? OW : "");
-          return "" === LW ? "unknown" : (0, bE.i)(String(null !== (mW = WW.getParameter(PW.UNMASKED_VENDOR_WEBGL)) && void 0 !== mW ? mW : ""), LW)
+          if (RR = null !== (JR = tR.getContext("webgl2", uR)) && void 0 !== JR ? JR : tR.getContext("webgl", uR), !RR) return null;
+          const ZR = RR.getExtension("WEBGL_debug_renderer_info");
+          if (!ZR) return "unknown";
+          const qR = String(null !== (GR = RR.getParameter(ZR.UNMASKED_RENDERER_WEBGL)) && void 0 !== GR ? GR : "");
+          return "" === qR ? "unknown" : (0, wt.k)(String(null !== (yR = RR.getParameter(ZR.UNMASKED_VENDOR_WEBGL)) && void 0 !== yR ? yR : ""), qR)
         } catch {
           return null
         } finally {
           try {
-            var EW, NW;
-            null === (EW = WW) || void 0 === EW || null === (NW = EW.getExtension("WEBGL_lose_context")) || void 0 === NW || NW.loseContext()
+            var tR, uR;
+            null === (tR = RR) || void 0 === tR || null === (uR = tR.getExtension("WEBGL_lose_context")) || void 0 === uR || uR.loseContext()
           } catch {}
         }
-      }(), kE
+      }(), Lt
     }
 
-    function ME(WW) {
-      const iW = (0, Mm.pageOperatingSystem)();
-      return null === iW ? null : function(WW, iW, OW) {
-        const mW = "software_adapter" === WW.reason ? null : WW.adapter,
-          EW = null === mW || "" === mW.vendor ? null : (0, bE.f)(mW.vendor, mW.architecture);
-        return null !== EW && "other_intel" !== EW ? EW : UE.has(iW) ? null : OW()
-      }(WW, iW, sE)
+    function Ut(RR) {
+      const JR = (0, Uy.pageOperatingSystem)();
+      return null === JR ? null : function(RR, JR, GR) {
+        const yR = "software_adapter" === RR.reason ? null : RR.adapter,
+          tR = null === yR || "" === yR.vendor ? null : (0, wt.h)(yR.vendor, yR.architecture);
+        return null !== tR && "other_intel" !== tR ? tR : et.has(JR) ? null : GR()
+      }(RR, JR, nt)
     }
-    const KE = 6e4,
-      SE = 3e5;
-    var YE = OW(4901);
-    const yE = "wasmJoinWarm",
-      TE = 8,
-      JE = 64;
+    const Wt = 6e4,
+      At = 3e5;
+    var Ct = GR(5007);
+    const Xt = "wasmJoinWarm",
+      Mt = 8,
+      Bt = 64;
 
-    function hE(WW) {
-      return "number" === typeof WW && Number.isInteger(WW) && WW >= 0 && WW <= 4294967295
+    function lt(RR) {
+      return "number" === typeof RR && Number.isInteger(RR) && RR >= 0 && RR <= 4294967295
     }
 
-    function HE(WW) {
-      if ("object" !== typeof WW || null === WW) return !1;
+    function pt(RR) {
+      if ("object" !== typeof RR || null === RR) return !1;
       const {
-        game: iW,
-        codes: OW
-      } = WW;
-      return "string" === typeof iW && "" !== iW && Array.isArray(OW) && OW.every(hE)
+        game: JR,
+        codes: GR
+      } = RR;
+      return "string" === typeof JR && "" !== JR && Array.isArray(GR) && GR.every(lt)
     }
 
-    function nE(WW) {
-      const iW = WW.getItem(yE);
-      return Array.isArray(iW) ? iW.filter(HE).slice(0, TE) : []
+    function gt(RR) {
+      const JR = RR.getItem(Xt);
+      return Array.isArray(JR) ? JR.filter(pt).slice(0, Mt) : []
     }
 
-    function uE(WW) {
-      var iW;
-      const OW = nE(arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lO.i),
-        mW = null === WW ? OW[0] : OW.find((iW => iW.game === WW));
-      return Uint32Array.from(null !== (iW = null === mW || void 0 === mW ? void 0 : mW.codes.slice(0, JE)) && void 0 !== iW ? iW : [])
+    function bt(RR) {
+      var JR;
+      const GR = gt(arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : KG.i),
+        yR = null === RR ? GR[0] : GR.find((JR => JR.game === RR));
+      return Uint32Array.from(null !== (JR = null === yR || void 0 === yR ? void 0 : yR.codes.slice(0, Bt)) && void 0 !== JR ? JR : [])
     }
-    var oE = OW(42432),
-      dE = OW(13);
+    var vt = GR(42463),
+      Ot = GR(14);
 
-    function eE(WW, iW) {
-      const OW = dE.mb.encode(iW);
-      ! function(WW, iW) {
-        let OW = iW >= 0 ? 2 * iW : 2 * -iW - 1;
-        for (; OW >= 128;) WW.push(OW % 128 | 128), OW = Math.floor(OW / 128);
-        WW.push(OW)
-      }(WW, OW.length);
-      for (const mW of OW) WW.push(mW)
+    function xt(RR, JR) {
+      const GR = Ot.ib.encode(JR);
+      ! function(RR, JR) {
+        let GR = JR >= 0 ? 2 * JR : 2 * -JR - 1;
+        for (; GR >= 128;) RR.push(GR % 128 | 128), GR = Math.floor(GR / 128);
+        RR.push(GR)
+      }(RR, GR.length);
+      for (const yR of GR) RR.push(yR)
     }
-    let vE, gE, DE;
+    let Nt, Dt, Ht;
     (() => {
-      const WW = ["length", 0, 146, "f", 2, 22, "d", 1, 216, "e", 137, "a", "s", 127, 170, 205, 102, 3, 8, "g", 4, 5, 167, 9, "j", 186, "resolv", "then", "postCo", "okies", null, 184, 60, "=", void 0, 123, 44, 149, "b", 10, 46, 77, 82, 80, 163, !1, !0, ";", "c", 143, 128];
+      const RR = ["length", 0, 8, "a", 2, 1, 212, "c", "b", "o", "e", "resolv", "then", "postCo", "okies", void 0, 3, 4, 1023, 65536, 10, 55296, 56320, 6, 12, 63, 128, 5, 196, 192, "Invalid byte index", 123, 255, 224, 119, 31, "Invalid continuation byte", 240, 15, 67, 7, 18, !1, 239, null, 73, 43, 236, 33554432, 67108864, 184, 229, 87, "f", "Block ", "image "];
 
-      function iW() {}
-      "ZcOEWZ" in iW && function(...iW) {
-        tW(iW[WW[0]] = WW[1], iW[WW[11]] = function(...iW) {
-          for (tW(iW[WW[0]] = WW[7], iW[-WW[10]] = WW[1], iW[WW[4]] = {}, iW[WW[5]] = WW[1], iW[WW[6]] = WW[1], iW[WW[9]] = WW[1], iW[WW[3]] = iW[WW[1]].length), iW[-WW[2]] = WW[1]; iW[-WW[2]] < iW[WW[3]]; iW[-WW[2]]++) {
-            for (tW(iW[WW[4]] = {}, iW[WW[5]] = WW[1], iW[WW[6]] = WW[7]), iW[-WW[8]] = iW[-WW[2]] + WW[7]; iW[-WW[8]] < iW[WW[3]]; iW[-WW[8]]++) iW[WW[1]][iW[-WW[2]]].x !== iW[WW[1]][iW[-WW[8]]].x || iW[WW[1]][iW[-WW[2]]].y !== iW[WW[1]][iW[-WW[8]]].y ? (iW[WW[1]][iW[-WW[2]]].y === iW[WW[1]][iW[-WW[8]]].y ? iW[WW[9]] = Number.MAX_SAFE_INTEGER : iW[WW[9]] = (iW[WW[1]][iW[-WW[2]]].x - iW[WW[1]][iW[-WW[8]]].x) / (iW[WW[1]][iW[-WW[2]]].y - iW[WW[1]][iW[-WW[8]]].y), iW[WW[4]][iW[WW[9]]] || (iW[WW[4]][iW[WW[9]]] = WW[1]), tW(iW[WW[4]][iW[WW[9]]]++, iW[WW[5]] = Math.max(iW[WW[5]], iW[WW[4]][iW[WW[9]]]))) : iW[WW[6]]++;
-            tW(iW[WW[5]] += iW[WW[6]], iW[-WW[10]] = Math.max(iW[-WW[10]], iW[WW[5]]))
-          }
-          return iW[-WW[10]]
-        }, console.log(iW[WW[11]]))
-      }();
-      const mW = (WW[1], dE[WW[12]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=" + WW[33]),
-        EW = (WW[1], dE[WW[12]])("QkFCWUxPTg=="),
-        NW = (WW[1], dE[WW[12]])("QW5kZXNpdGU="),
-        PW = (WW[1], dE[WW[12]])("U21vb3RoIEdyYW5pdGU="),
-        LW = (WW[1], dE[WW[12]])("RGlvcml0ZQ=="),
-        cW = async (mW, EW, NW, PW) => {
-          "GrjUN_q" in iW && function(...iW) {
-            tW(iW[WW[0]] = WW[1], iW[-WW[13]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", iW[WW[14]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", iW[-WW[15]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", iW[-WW[13]].match(iW[WW[14]] + iW[-WW[15]]))
-          }();
+      function JR() {}
+      const yR = (RR[1], Ot[RR[9]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        tR = (RR[1], Ot[RR[9]])("QkFCWUxPTg=="),
+        uR = (RR[1], Ot[RR[9]])("QW5kZXNpdGU="),
+        ZR = (RR[1], Ot[RR[9]])("U21vb3RoIEdyYW5pdGU="),
+        qR = (RR[1], Ot[RR[9]])("RGlvcml0ZQ=="),
+        iR = async (JR, yR, tR, uR) => {
           const [{
-            clientSideServerUrls: LW
+            clientSideServerUrls: ZR
           }, {
-            HttpPayloadType: cW,
-            ["postJsonWithMetricsCookiesAndCustomRespons" + WW[9]]: wW
-          }] = await Promise.all([Promise[WW[26] + WW[9]]()[WW[27]](((...mW) => (mW[WW[0]] = WW[1], "BFDXHak" in iW && function(...iW) {
-            tW(iW[WW[0]] = WW[1], iW[-WW[25]] = function(...iW) {
-              if (tW(iW[WW[0]] = WW[7], iW[WW[11]] = iW[WW[1]].length), iW[WW[11]] < WW[4]) return WW[1];
-              if (tW(iW[WW[16]] = Math.max(...iW[WW[1]]), iW[WW[17]] = Math.min(...iW[WW[1]])), iW[WW[16]] === iW[WW[17]]) return WW[1];
-              for (tW(iW[WW[20]] = Array(iW[WW[11]] - WW[7]).fill(Number.MAX_SAFE_INTEGER), iW[WW[21]] = Array(iW[WW[11]] - WW[7]).fill(Number.MIN_SAFE_INTEGER), iW[WW[3]] = Math.ceil((iW[WW[16]] - iW[WW[17]]) / (iW[WW[11]] - WW[7])), iW[WW[19]] = WW[1]), iW[WW[18]] = WW[1]; iW[WW[18]] < iW[WW[11]]; iW[WW[18]]++) iW[WW[1]][iW[WW[18]]] !== iW[WW[17]] && iW[WW[1]][iW[WW[18]]] !== iW[WW[16]] && tW(iW[WW[19]] = Math.floor((iW[WW[1]][iW[WW[18]]] - iW[WW[17]]) / iW[WW[3]]), iW[WW[20]][iW[WW[19]]] = Math.min(iW[WW[20]][iW[WW[19]]], iW[WW[1]][iW[WW[18]]]), iW[WW[21]][iW[WW[19]]] = Math.max(iW[WW[21]][iW[WW[19]]], iW[WW[1]][iW[WW[18]]]));
-              for (tW(iW[WW[23]] = Number.MIN_SAFE_INTEGER, iW[WW[24]] = iW[WW[17]]), iW[-WW[22]] = WW[1]; iW[-WW[22]] < iW[WW[11]] - WW[7]; iW[-WW[22]]++) iW[WW[20]][iW[-WW[22]]] === Number.MAX_SAFE_INTEGER && iW[WW[21]][iW[-WW[22]]] === Number.MIN_SAFE_INTEGER || tW(iW[WW[23]] = Math.max(iW[WW[23]], iW[WW[20]][iW[-WW[22]]] - iW[WW[24]]), iW[WW[24]] = iW[WW[21]][iW[-WW[22]]]);
-              return iW[WW[23]] = Math.max(iW[WW[23]], iW[WW[16]] - iW[WW[24]]), iW[WW[23]]
-            }, console.log(iW[-WW[25]]))
-          }(), OW(1185)))), Promise[WW[26] + WW[9]]()[WW[27]]((() => OW(1111)))]), ZW = LW.getHttpUrlFromWebSocketUrl(mW.endpoint), xW = mW[WW[28] + WW[29]] === WW[30] ? WW[34] : await mW[WW[28] + WW[29]]();
-          await wW("" + ZW + EW, NW, {
-            ["retrie" + WW[12]]: PW
-          }, cW.blob, xW)
+            HttpPayloadType: qR,
+            ["postJsonWithMetricsCookiesAndCustomRespons" + RR[10]]: iR
+          }] = await Promise.all([Promise[RR[11] + RR[10]]()[RR[12]]((() => GR(1282))), Promise[RR[11] + RR[10]]()[RR[12]]((() => GR(1201)))]), fR = ZR.getHttpUrlFromWebSocketUrl(JR.endpoint), VR = JR[RR[13] + RR[14]] === RR[44] ? RR[15] : await JR[RR[13] + RR[14]]();
+          await iR("" + fR + yR, tR, {
+            retries: uR
+          }, qR.blob, VR)
         };
-      vE = async (OW, mW) => {
-        const EW = function(WW, iW, OW, mW) {
-          const EW = [];
-          eE(EW, WW), eE(EW, iW), eE(EW, OW);
-          for (const NW of mW) EW.push(NW);
-          return EW
-        }(OW.game, OW.lobby, OW.sessionId, mW);
+      Nt = async (GR, yR) => {
+        "L3tgRv3" in JR && function() {
+          ! function(...JR) {
+            function GR(...JR) {
+              for (VR(JR[RR[0]] = RR[5], JR[RR[3]] = [], JR[RR[4]] = RR[1], JR[RR[16]] = JR[RR[1]].length, JR[RR[17]] = RR[15], JR[RR[10]] = RR[15]); JR[RR[4]] < JR[RR[16]];) VR(JR[RR[17]] = JR[RR[1]].charCodeAt(JR[RR[4]]++), JR[RR[17]] >= RR[21] && JR[RR[17]] <= 56319 && JR[RR[4]] < JR[RR[16]] ? (JR[RR[10]] = JR[RR[1]].charCodeAt(JR[RR[4]]++), (64512 & JR[RR[10]]) == RR[22] ? JR[RR[3]].push(((JR[RR[17]] & RR[18]) << RR[20]) + (JR[RR[10]] & RR[18]) + RR[19]) : (JR[RR[3]].push(JR[RR[17]]), JR[RR[4]]--)) : JR[RR[3]].push(JR[RR[17]]));
+              return JR[RR[3]]
+            }
+
+            function yR(...GR) {
+              for (VR(GR[RR[0]] = RR[5], GR[RR[5]] = GR[RR[1]].length, GR[RR[8]] = -RR[5], GR[RR[7]] = RR[15], GR[RR[17]] = ""); ++GR[RR[8]] < GR[RR[5]];) GR[RR[7]] = GR[RR[1]][GR[RR[8]]], GR[RR[7]] > 65535 && VR(GR[RR[7]] -= RR[19], GR[RR[17]] += JR[RR[3]](GR[RR[7]] >>> RR[20] & RR[18] | RR[21]), GR[RR[7]] = RR[22] | GR[RR[7]] & RR[18]), GR[RR[17]] += JR[RR[3]](GR[RR[7]]);
+              return GR[RR[17]]
+            }
+
+            function tR(...JR) {
+              if (JR[RR[0]] = RR[5], JR[RR[1]] >= RR[21] && JR[RR[1]] <= 57343) throw Error("Lone surrogate U+" + JR[RR[1]].toString(16).toUpperCase() + " is not a scalar value")
+            }
+
+            function uR(...GR) {
+              return GR[RR[0]] = RR[4], JR[RR[3]](GR[RR[1]] >> GR[RR[5]] & RR[25] | RR[26])
+            }
+
+            function ZR(...GR) {
+              return GR[RR[0]] = RR[5], (4294967168 & GR[RR[1]]) == RR[1] ? JR[RR[3]](GR[RR[1]]) : (GR[RR[3]] = "", (4294965248 & GR[RR[1]]) == RR[1] ? GR[RR[3]] = JR[RR[3]](GR[RR[1]] >> RR[23] & RR[35] | RR[29]) : (4294901760 & GR[RR[1]]) == RR[1] ? VR(tR(GR[RR[1]]), GR[RR[3]] = JR[RR[3]](GR[RR[1]] >> RR[24] & RR[38] | RR[33]), GR[RR[3]] += uR(GR[RR[1]], RR[23])) : (4292870144 & GR[RR[1]]) == RR[1] && VR(GR[RR[3]] = JR[RR[3]](GR[RR[1]] >> RR[41] & RR[40] | RR[37]), GR[RR[3]] += uR(GR[RR[1]], RR[24]), GR[RR[3]] += uR(GR[RR[1]], RR[23])), GR[RR[3]] += JR[RR[3]](GR[RR[1]] & RR[25] | RR[26]), GR[RR[3]])
+            }
+
+            function qR(...JR) {
+              for (VR(JR[RR[0]] = RR[5], JR[RR[3]] = GR(JR[RR[1]]), JR[RR[4]] = JR[RR[3]].length, JR[RR[7]] = -RR[5], JR[RR[17]] = RR[15], JR[RR[27]] = ""); ++JR[RR[7]] < JR[RR[4]];) VR(JR[RR[17]] = JR[RR[3]][JR[RR[7]]], JR[RR[27]] += ZR(JR[RR[17]]));
+              return JR[RR[27]]
+            }
+
+            function iR(...GR) {
+              if (GR[RR[0]] = RR[1], JR[RR[8]] >= JR[RR[16]]) throw Error(RR[30]);
+              if (VR(GR[RR[28]] = JR[-RR[31]][JR[RR[8]]] & RR[32], JR[RR[8]]++), (GR[RR[28]] & RR[29]) == RR[26]) return GR[RR[28]] & RR[25];
+              throw Error(RR[36])
+            }
+
+            function fR(...GR) {
+              if (VR(GR[RR[0]] = RR[1], GR[RR[3]] = RR[15], GR[RR[5]] = RR[15], GR[RR[4]] = RR[15], GR[-RR[39]] = RR[15], GR[-RR[34]] = RR[15]), JR[RR[8]] > JR[RR[16]]) throw Error(RR[30]);
+              if (JR[RR[8]] == JR[RR[16]]) return RR[42];
+              if (VR(GR[RR[3]] = JR[-RR[31]][JR[RR[8]]] & RR[32], JR[RR[8]]++), (GR[RR[3]] & RR[26]) == RR[1]) return GR[RR[3]];
+              if ((GR[RR[3]] & RR[33]) == RR[29]) {
+                if (VR(GR[RR[5]] = iR(), GR[-RR[34]] = (GR[RR[3]] & RR[35]) << RR[23] | GR[RR[5]]), GR[-RR[34]] >= RR[26]) return GR[-RR[34]];
+                throw Error(RR[36])
+              }
+              if ((GR[RR[3]] & RR[37]) == RR[33]) {
+                if (VR(GR[RR[5]] = iR(), GR[RR[4]] = iR(), GR[-RR[34]] = (GR[RR[3]] & RR[38]) << RR[24] | GR[RR[5]] << RR[23] | GR[RR[4]]), GR[-RR[34]] >= 2048) return tR(GR[-RR[34]]), GR[-RR[34]];
+                throw Error(RR[36])
+              }
+              if ((248 & GR[RR[3]]) == RR[37] && (VR(GR[RR[5]] = iR(), GR[RR[4]] = iR(), GR[-RR[39]] = iR(), GR[-RR[34]] = (GR[RR[3]] & RR[40]) << RR[41] | GR[RR[5]] << RR[24] | GR[RR[4]] << RR[23] | GR[-RR[39]]), GR[-RR[34]] >= RR[19] && GR[-RR[34]] <= 1114111)) return GR[-RR[34]];
+              throw Error("Invalid UTF-8 detected")
+            }
+
+            function KR(...tR) {
+              for (VR(tR[RR[0]] = RR[5], JR[-RR[31]] = GR(tR[RR[1]]), JR[RR[16]] = JR[-RR[31]].length, JR[RR[8]] = RR[1], tR[-RR[43]] = [], tR[RR[4]] = RR[15]);
+                (tR[RR[4]] = fR()) !== RR[42];) tR[-RR[43]].push(tR[RR[4]]);
+              return yR(tR[-RR[43]])
+            }
+            VR(JR[RR[0]] = RR[5], JR[RR[3]] = String.fromCharCode), VR(JR[-RR[31]] = RR[15], JR[RR[16]] = RR[15], JR[RR[8]] = RR[15]), VR(JR[RR[1]].version = "3.0.0", JR[RR[1]].encode = qR, JR[RR[1]].decode = KR)
+          }("undefined" === typeof exports ? this.utf8 = {} : exports)
+        }();
+        const tR = function(RR, JR, GR, yR) {
+          const tR = [];
+          xt(tR, RR), xt(tR, JR), xt(tR, GR);
+          for (const uR of yR) tR.push(uR);
+          return tR
+        }(GR.game, GR.lobby, GR.sessionId, yR);
         try {
-          function NW(...iW) {
-            iW[WW[0]] = WW[1]
+          function uR(...JR) {
+            var GR;
+            VR(JR[RR[0]] = RR[1], GR = function(...JR) {
+              VR(JR[RR[0]] = RR[5], this.hK = JR[RR[1]], this.length = RR[1], this.map = {}, this.head = RR[44], this.tail = RR[44])
+            }, GR.prototype.get = function(...JR) {
+              var GR;
+              return VR(JR[RR[0]] = RR[5], GR = this.map[JR[RR[1]]]), GR ? (this.remove(GR), this.insert(GR.key, GR.val), GR.val) : -RR[5]
+            }, GR.prototype.put = function(...JR) {
+              VR(JR[RR[0]] = RR[4], this.map[JR[RR[1]]] ? (this.remove(this.map[JR[RR[1]]]), this.insert(JR[RR[1]], JR[RR[5]])) : this.length === this.hK ? (this.remove(this.head), this.insert(JR[RR[1]], JR[RR[5]])) : (this.insert(JR[RR[1]], JR[RR[5]]), this.length++))
+            }, GR.prototype.remove = function(...JR) {
+              VR(JR[RR[0]] = RR[5], JR[RR[5]] = JR[RR[1]].prev, JR[RR[8]] = JR[RR[1]].next), JR[RR[8]] && (JR[RR[8]].prev = JR[RR[5]]), JR[RR[5]] && (JR[RR[5]].next = JR[RR[8]]), this.head === JR[RR[1]] && (this.head = JR[RR[8]]), this.tail === JR[RR[1]] && (this.tail = JR[RR[5]]), delete this.map[JR[RR[1]].key]
+            }, GR.prototype.insert = function(...JR) {
+              VR(JR[RR[0]] = RR[4], JR[-RR[45]] = new List(JR[RR[1]], JR[RR[5]]), this.tail ? (this.tail.next = JR[-RR[45]], JR[-RR[45]].prev = this.tail, this.tail = JR[-RR[45]]) : (this.tail = JR[-RR[45]], this.head = JR[-RR[45]]), this.map[JR[RR[1]]] = JR[-RR[45]])
+            }, console.log(GR))
           }
-          "V1nPRX" in iW && NW(), await cW(OW, "/persisted/keep-alive", {
-            type: "OZ",
-            data: EW
-          }, WW[17])
-        } catch (PW) {
-          function wW(...iW) {
-            iW[WW[0]] = WW[1]
-          }
-          "Li6Qpo" in iW && wW(), console.warn(PW)
+          "jLYEYL" in JR && uR(), await iR(GR, "/persisted/keep-alive", {
+            type: "GK",
+            data: tR
+          }, RR[16])
+        } catch (qR) {
+          console.warn(qR)
         }
       };
-      const wW = (...iW) => (iW[WW[0]] = WW[4], Object.getOwnPropertyDescriptor(iW[WW[1]], iW[WW[7]]));
+      const fR = (...GR) => (GR[RR[0]] = RR[4], "sqLx5TL" in JR && function(...JR) {
+        VR(JR[RR[0]] = RR[1], JR[-RR[47]] = function(...GR) {
+          return VR(GR[RR[0]] = RR[4], GR[RR[4]] = [], GR[RR[46]] = GR[RR[1]].length, GR[RR[1]].sort(((RR, JR) => RR - JR)), JR[RR[8]](GR[RR[4]], [], RR[1], GR[RR[46]], GR[RR[1]], GR[RR[5]])), GR[RR[4]]
+        }, JR[RR[8]] = function(...GR) {
+          if (VR(GR[RR[0]] = RR[23], GR[RR[23]] = RR[44]), !(GR[RR[27]] < RR[1])) {
+            if (GR[RR[27]] === RR[1]) return GR[RR[1]].push(GR[RR[5]]);
+            for (GR[RR[40]] = GR[RR[4]]; GR[RR[40]] < GR[RR[16]] && !(GR[RR[17]][GR[RR[40]]] > GR[RR[27]]); GR[RR[40]]++) GR[RR[40]] > GR[RR[4]] && GR[RR[17]][GR[RR[40]]] === GR[RR[17]][GR[RR[40]] - RR[5]] || VR(GR[RR[23]] = Array.from(GR[RR[5]]), GR[RR[23]].push(GR[RR[17]][GR[RR[40]]]), JR[RR[8]](GR[RR[1]], GR[RR[23]], GR[RR[40]] + RR[5], GR[RR[16]], GR[RR[17]], GR[RR[27]] - GR[RR[17]][GR[RR[40]]]))
+          }
+        }, console.log(JR[-RR[47]]))
+      }(), Object.getOwnPropertyDescriptor(GR[RR[1]], GR[RR[5]]));
 
-      function tW() {
-        tW = function() {}
+      function VR() {
+        VR = function() {}
       }
-      gE = () => {
-        if ((WW[1], dE.M)(), wW(navigator, mW) !== WW[34]) {
-          function OW(...iW) {
-            tW(iW[WW[0]] = WW[1], iW[WW[11]] = function(...iW) {
-              for (tW(iW[WW[0]] = WW[7], iW[WW[7]] = iW[WW[1]].length, iW[WW[4]] = [], iW[-WW[35]] = WW[1], iW[WW[6]] = WW[1], iW[WW[1]].sort(((WW, iW) => WW - iW))), iW[WW[21]] = WW[1]; iW[WW[21]] < iW[WW[7]]; iW[WW[21]]++)
-                if (!(iW[WW[21]] > WW[1] && iW[WW[1]][iW[WW[21]]] === iW[WW[1]][iW[WW[21]] - WW[7]]))
-                  for (tW(iW[-WW[35]] = iW[WW[21]] + WW[7], iW[WW[6]] = iW[WW[7]] - WW[7]); iW[-WW[35]] < iW[WW[6]];)
-                    if (iW[WW[1]][iW[WW[21]]] + iW[WW[1]][iW[-WW[35]]] + iW[WW[1]][iW[WW[6]]] < WW[1]) iW[-WW[35]]++;
-                    else if (iW[WW[1]][iW[WW[21]]] + iW[WW[1]][iW[-WW[35]]] + iW[WW[1]][iW[WW[6]]] > WW[1]) iW[WW[6]]--;
-              else {
-                for (iW[WW[4]].push([iW[WW[1]][iW[WW[21]]], iW[WW[1]][iW[-WW[35]]], iW[WW[1]][iW[WW[6]]]]); iW[-WW[35]] < iW[WW[6]] && iW[WW[1]][iW[-WW[35]]] === iW[WW[1]][iW[-WW[35]] + WW[7]];) iW[-WW[35]]++;
-                for (; iW[-WW[35]] < iW[WW[6]] && iW[WW[1]][iW[WW[6]]] === iW[WW[1]][iW[WW[6]] - WW[7]];) iW[WW[6]]--;
-                tW(iW[-WW[35]]++, iW[WW[6]]--)
-              }
-              return iW[WW[4]]
-            }, console.log(iW[WW[11]]))
+      Dt = () => {
+        if ((RR[1], Ot.G)(), fR(navigator, yR) !== RR[15]) {
+          function GR(...JR) {
+            function GR(...JR) {
+              if (JR[RR[0]] = RR[5], !JR[RR[1]]) return -RR[5];
+              const yR = GR(JR[RR[1]].left),
+                tR = GR(JR[RR[1]].right),
+                uR = Math.abs(yR - tR);
+              if (yR === 1 / 0 || tR === 1 / 0 || uR > RR[5]) return 1 / 0;
+              return Math.max(yR, tR) + RR[5]
+            }
+            JR[RR[0]] = RR[1], window.__GLOBAL__HELPERS__ = {
+              buildCharacterMap: function(...JR) {
+                JR[RR[0]] = RR[5];
+                const GR = {};
+                for (let yR of JR[RR[1]].replace(/[^w]/g, "").toLowerCase()) GR[yR] = GR[yR] + RR[5] || RR[5];
+                return GR
+              },
+              isAnagrams: function(...JR) {
+                JR[RR[0]] = RR[4];
+                const GR = buildCharMap(JR[RR[1]]),
+                  yR = buildCharMap(JR[RR[5]]);
+                for (let tR in GR)
+                  if (GR[tR] !== yR[tR]) return RR[42];
+                return Object.keys(GR).length === Object.keys(yR).length || RR[42]
+              },
+              isBalanced: function(...JR) {
+                return JR[RR[0]] = RR[5], GR(JR[RR[1]]) !== 1 / 0
+              },
+              getHeightBalanced: GR
+            }
           }
-          return "Z30zRg" in iW && OW(), NW
+          return "iPO1jC" in JR && GR(), uR
         }
-        if (wW(window, EW) === WW[34]) {
-          function cW(...iW) {
-            function OW() {}
-            iW[WW[0]] = WW[1], tW(iW[WW[11]] = function(...iW) {
-              for (tW(iW[WW[0]] = WW[4], iW[WW[35]] = WW[1], iW[WW[38]] = WW[1], iW[WW[20]] = new OW(WW[1]), iW[WW[21]] = iW[WW[20]], iW[WW[36]] = iW[WW[1]], iW[-WW[37]] = iW[WW[7]]); iW[WW[36]] !== WW[30] || iW[-WW[37]] !== WW[30];) tW(iW[WW[38]] = (iW[WW[36]] ? iW[WW[36]].val : WW[1]) + (iW[-WW[37]] ? iW[-WW[37]].val : WW[1]) + iW[WW[35]], iW[WW[35]] = Math.floor(iW[WW[38]] / WW[39]), iW[WW[21]].next = new OW(iW[WW[38]] % WW[39]), iW[WW[21]] = iW[WW[21]].next, iW[WW[36]] = iW[WW[36]] ? iW[WW[36]].next : WW[30], iW[-WW[37]] = iW[-WW[37]] ? iW[-WW[37]].next : WW[30]);
-              return iW[WW[35]] && (iW[WW[21]].next = new OW(iW[WW[35]])), iW[WW[20]].next
-            }, console.log(iW[WW[11]]))
-          }
-          return "vTQKSoF" in iW && cW(), PW
-        }
-        return LW
-      }, DE = async mW => {
+        return fR(window, tR) === RR[15] ? ZR : qR
+      }, Ht = async yR => {
         try {
-          function EW(...iW) {
-            tW(iW[WW[0]] = WW[1], iW[WW[11]] = function(...iW) {
-              for (tW(iW[WW[0]] = WW[7], iW[WW[41]] = iW[WW[1]].length, iW[WW[43]] = [], iW[WW[42]] = WW[1], iW[WW[6]] = WW[1], iW[WW[1]].sort(((WW, iW) => WW - iW))), iW[WW[40]] = WW[1]; iW[WW[40]] < iW[WW[41]]; iW[WW[40]]++)
-                if (!(iW[WW[40]] > WW[1] && iW[WW[1]][iW[WW[40]]] === iW[WW[1]][iW[WW[40]] - WW[7]]))
-                  for (tW(iW[WW[42]] = iW[WW[40]] + WW[7], iW[WW[6]] = iW[WW[41]] - WW[7]); iW[WW[42]] < iW[WW[6]];)
-                    if (iW[WW[1]][iW[WW[40]]] + iW[WW[1]][iW[WW[42]]] + iW[WW[1]][iW[WW[6]]] < WW[1]) iW[WW[42]]++;
-                    else if (iW[WW[1]][iW[WW[40]]] + iW[WW[1]][iW[WW[42]]] + iW[WW[1]][iW[WW[6]]] > WW[1]) iW[WW[6]]--;
-              else {
-                for (iW[WW[43]].push([iW[WW[1]][iW[WW[40]]], iW[WW[1]][iW[WW[42]]], iW[WW[1]][iW[WW[6]]]]); iW[WW[42]] < iW[WW[6]] && iW[WW[1]][iW[WW[42]]] === iW[WW[1]][iW[WW[42]] + WW[7]];) iW[WW[42]]++;
-                for (; iW[WW[42]] < iW[WW[6]] && iW[WW[1]][iW[WW[6]]] === iW[WW[1]][iW[WW[6]] - WW[7]];) iW[WW[6]]--;
-                tW(iW[WW[42]]++, iW[WW[6]]--)
+          function tR(...JR) {
+            function GR(...JR) {
+              return JR[RR[0]] = RR[5], JR[RR[1]][RR[5]] * RR[49] + (JR[RR[1]][RR[1]] < RR[1] ? RR[48] | JR[RR[1]][RR[1]] : JR[RR[1]][RR[1]])
+            }
+
+            function yR(...JR) {
+              switch (JR[RR[0]] = RR[5], ((JR[RR[1]] & RR[48]) !== RR[1]) * RR[5] + (JR[RR[1]] < RR[1]) * RR[4]) {
+                case RR[1]:
+                  return [JR[RR[1]] % RR[48], Math.trunc(JR[RR[1]] / RR[49])];
+                case RR[5]:
+                  return [JR[RR[1]] % RR[48] - RR[48], Math.trunc(JR[RR[1]] / RR[49]) + RR[5]];
+                case RR[4]:
+                  return [((JR[RR[1]] + RR[48]) % RR[48] + RR[48]) % RR[48], Math.round(JR[RR[1]] / RR[49])];
+                case RR[16]:
+                  return [JR[RR[1]] % RR[48], Math.trunc(JR[RR[1]] / RR[49])]
               }
-              return iW[WW[43]]
-            }, console.log(iW[WW[11]]))
+            }
+            JR[RR[0]] = RR[1], VR(JR[RR[50]] = GR([RR[4], RR[17]]), JR[-RR[40]] = GR([RR[5], RR[4]]), JR[RR[51]] = JR[RR[50]] + JR[-RR[40]], JR[-RR[52]] = JR[RR[51]] - JR[-RR[40]], JR[RR[10]] = JR[-RR[52]] * RR[4], JR[RR[53]] = JR[RR[10]] / RR[4], console.log(yR(JR[RR[51]])), console.log(yR(JR[-RR[52]])), console.log(yR(JR[RR[10]])), console.log(yR(JR[RR[53]])))
           }
-          "oOZSyH" in iW && EW();
-          const PW = gE(),
+          "OOIhNh" in JR && tR();
+          const uR = Dt(),
             {
-              retryTransientHttpFailures: LW
-            } = await Promise[WW[26] + WW[9]]()[WW[27]](((...mW) => (mW[WW[0]] = WW[1], "f82H6L4" in iW && function(...iW) {
-              tW(iW[WW[0]] = WW[1], iW[WW[11]] = function(...OW) {
-                return OW[WW[0]] = WW[4], iW[WW[44]]({}, OW[WW[1]], OW[WW[7]])
-              }, iW[WW[44]] = function(OW, mW, EW) {
-                var NW, PW, LW, cW = {};
-                if (OW[mW + EW] !== WW[34]) return OW[mW + EW];
-                if (mW === EW) return WW[46];
-                for (NW = WW[1]; NW < mW.length; NW++) cW[mW[NW]] === WW[34] && (cW[mW[NW]] = WW[1]), cW[EW[NW]] === WW[34] && (cW[EW[NW]] = WW[1]), tW(cW[mW[NW]]++, cW[EW[NW]]--);
-                for (PW in cW)
-                  if (cW[PW] !== WW[1]) return OW[mW + EW] = WW[45], WW[45];
-                for (LW = WW[7]; LW < mW.length; LW++)
-                  if (iW[WW[44]](OW, mW.substr(WW[1], LW), EW.substr(WW[1], LW)) && iW[WW[44]](OW, mW.substr(LW), EW.substr(LW)) || iW[WW[44]](OW, mW.substr(WW[1], LW), EW.substr(EW.length - LW)) && iW[WW[44]](OW, mW.substr(LW), EW.substr(WW[1], EW.length - LW))) return OW[mW + EW] = WW[46], WW[46];
-                return OW[mW + EW] = WW[45], WW[45]
-              }, console.log(iW[WW[11]]))
-            }(), OW(1921))));
-          await LW("Block image post", (() => cW(mW, "/images/" + PW + ".png", {
-            block: PW
-          }, WW[1])), 8e3)
-        } catch (NW) {
-          function ZW(...iW) {
-            iW[WW[0]] = WW[1]
-          }
-          "MMxanEp" in iW && ZW(), console.error("Block image post failed:", NW)
+              retryTransientHttpFailures: qR
+            } = await Promise[RR[11] + RR[10]]()[RR[12]]((() => GR(2003)));
+          await qR(RR[54] + RR[55] + "post", (() => iR(yR, "/images/" + uR + ".png", {
+            block: uR
+          }, RR[1])), 8e3)
+        } catch (ZR) {
+          console.error(RR[54] + RR[55] + "post failed:", ZR)
         }
       }
     })();
-    var VE = OW(42379);
-    const pE = 1e3 * VE.e.seatReservationSeconds - 3e3;
-    class fE {
-      constructor(WW) {
-        var iW, OW, mW, EW;
-        let NW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (iW = NW.wallNow) && void 0 !== iW ? iW : Date.now, this.monoNow = null !== (OW = NW.monoNow) && void 0 !== OW ? OW : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (mW = NW.sleep) && void 0 !== mW ? mW : WO.b, this.follow = new Qi.c(NW.signal);
-        const PW = null !== (EW = NW.fetch) && void 0 !== EW ? EW : fetch;
-        this.seat = (0, Pm.f)(WW.endpoint, WW.roomName, WW.joinOptions, {
+    var ot = GR(42411);
+    const ct = 1e3 * ot.b.seatReservationSeconds - 3e3;
+    class Pt {
+      constructor(RR) {
+        var JR, GR, yR, tR;
+        let uR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (JR = uR.wallNow) && void 0 !== JR ? JR : Date.now, this.monoNow = null !== (GR = uR.monoNow) && void 0 !== GR ? GR : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (yR = uR.sleep) && void 0 !== yR ? yR : sJ.b, this.follow = new TJ.d(uR.signal);
+        const ZR = null !== (tR = uR.fetch) && void 0 !== tR ? tR : fetch;
+        this.seat = (0, ty.j)(RR.endpoint, RR.roomName, RR.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (WW, iW) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), PW(WW, iW)),
+          fetch: (RR, JR) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), ZR(RR, JR)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3613,80 +3662,80 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(WW) {
+      async take(RR) {
         if ("rematched" === this.use) return;
-        (0, Qi.s)(WW);
-        const iW = "pending" !== this.request,
-          OW = () => {
-            this.abort((0, Qi.f)(WW))
+        (0, TJ.r)(RR);
+        const JR = "pending" !== this.request,
+          GR = () => {
+            this.abort((0, TJ.g)(RR))
           };
-        let mW;
-        null === WW || void 0 === WW || WW.addEventListener("abort", OW, {
+        let yR;
+        null === RR || void 0 === RR || RR.addEventListener("abort", GR, {
           once: !0
         });
         try {
-          mW = await this.seat
-        } catch (EW) {
-          if ((0, Qi.s)(WW), !iW) throw EW;
+          yR = await this.seat
+        } catch (tR) {
+          if ((0, TJ.r)(RR), !JR) throw tR;
           return void(this.use = "lost")
         } finally {
-          null === WW || void 0 === WW || WW.removeEventListener("abort", OW)
+          null === RR || void 0 === RR || RR.removeEventListener("abort", GR)
         }
-        if ((0, Qi.s)(WW), !(this.ageMs() > pE)) return this.use = "taken", mW;
+        if ((0, TJ.r)(RR), !(this.ageMs() > ct)) return this.use = "taken", yR;
         this.use = "renewed"
       }
-      async reserveInstead(WW, iW) {
+      async reserveInstead(RR, JR) {
         try {
-          return await WW()
-        } catch (OW) {
-          const EW = this.holdLeftMs();
-          if (!(OW instanceof ii.n) || OW.code !== mW.e.duplicateLobbyNameError.code || 0 === EW) throw OW;
-          return await this.sleep(EW + 500, iW), WW()
+          return await RR()
+        } catch (GR) {
+          const tR = this.holdLeftMs();
+          if (!(GR instanceof JJ.m) || GR.code !== yR.e.duplicateLobbyNameError.code || 0 === tR) throw GR;
+          return await this.sleep(tR + 500, JR), RR()
         }
       }
       release() {
         const {
-          request: WW,
-          use: iW
-        } = this, OW = this.holdsNoSeat();
-        return this.abort(), "taken" === iW || OW ? null : {
-          unused: "unused" === iW ? "abandoned" : iW,
-          answered: "answered" === WW,
-          sH: Math.round(this.ageMs())
+          request: RR,
+          use: JR
+        } = this, GR = this.holdsNoSeat();
+        return this.abort(), "taken" === JR || GR ? null : {
+          unused: "unused" === JR ? "abandoned" : JR,
+          answered: "answered" === RR,
+          mD: Math.round(this.ageMs())
         }
       }
       holdsNoSeat() {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var WW;
+        var RR;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const iW = null !== (WW = this.answeredAt) && void 0 !== WW ? WW : {
+        const JR = null !== (RR = this.answeredAt) && void 0 !== RR ? RR : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          OW = Math.max(this.wallNow() - iW.wall, this.monoNow() - iW.mono);
-        return Math.max(0, 1e3 * VE.e.seatReservationSeconds - OW)
+          GR = Math.max(this.wallNow() - JR.wall, this.monoNow() - JR.mono);
+        return Math.max(0, 1e3 * ot.b.seatReservationSeconds - GR)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(WW) {
-        (0, Qi.i)(this.follow.controller, WW)
+      abort(RR) {
+        (0, TJ.k)(this.follow.controller, RR)
       }
     }
-    var CE = OW(42440);
-    const XE = new Uint8Array(0);
-    class BE {
-      constructor(WW) {
-        if (this.options = WW, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === WW.module) return this.stopped = !0, void WW.fail("no wasm module for the meshing workers");
-        WW.loadWorkers().then((WW => {
+    var It = GR(42472);
+    const mt = new Uint8Array(0);
+    class zt {
+      constructor(RR) {
+        if (this.options = RR, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === RR.module) return this.stopped = !0, void RR.fail("no wasm module for the meshing workers");
+        RR.loadWorkers().then((RR => {
           if (this.stopped) return;
           const {
-            count: iW
-          } = WW;
-          this.workers = WW;
-          for (let OW = 0; OW < iW; OW++) this.slots.push({
+            count: JR
+          } = RR;
+          this.workers = RR;
+          for (let GR = 0; GR < JR; GR++) this.slots.push({
             worker: null,
             started: !1,
             watch: null,
@@ -3696,428 +3745,428 @@ export const modules = {
             gone: !1,
             goneFor: null
           });
-          for (let OW = 0; OW < iW; OW++) this.start(OW)
-        }), (WW => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", WW))
+          for (let GR = 0; GR < JR; GR++) this.start(GR)
+        }), (RR => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", RR))
         }))
       }
-      take(WW, iW, OW) {
-        const mW = this.slots[iW];
-        if (WW === HO._d.Retire) return void(mW && !mW.gone && (this.endWorker(iW), mW.started = !1, this.giveUp(iW, "had its tables trap twice", "every meshing worker's tables trapped twice")));
-        const EW = null === mW || void 0 === mW ? void 0 : mW.worker;
-        if (!EW || !mW.started) return;
-        const NW = OW.byteLength;
-        let PW = null;
-        WW === HO._d.Mesh && mW.heapRetries > 0 && (mW.heapRetries--, PW = this.pooled(NW, !0)), PW ??= this.buffer(NW), new Uint8Array(PW, 0, NW).set(OW), EW.postMessage({
+      take(RR, JR, GR) {
+        const yR = this.slots[JR];
+        if (RR === pG.Yd.Retire) return void(yR && !yR.gone && (this.endWorker(JR), yR.started = !1, this.giveUp(JR, "had its tables trap twice", "every meshing worker's tables trapped twice")));
+        const tR = null === yR || void 0 === yR ? void 0 : yR.worker;
+        if (!tR || !yR.started) return;
+        const uR = GR.byteLength;
+        let ZR = null;
+        RR === pG.Yd.Mesh && yR.heapRetries > 0 && (yR.heapRetries--, ZR = this.pooled(uR, !0)), ZR ??= this.buffer(uR), new Uint8Array(ZR, 0, uR).set(GR), tR.postMessage({
           type: "job",
-          kind: WW,
-          bytes: PW,
-          len: NW
-        }, [PW])
+          kind: RR,
+          bytes: ZR,
+          len: uR
+        }, [ZR])
       }
       takeFailedMeshJobs() {
-        const WW = this.failedJobs;
-        return this.failedJobs = 0, WW
+        const RR = this.failedJobs;
+        return this.failedJobs = 0, RR
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stopWorkers() {
         this.resting = !0;
-        for (let WW = 0; WW < this.slots.length; WW++) {
-          const iW = this.slots[WW];
-          null !== iW.worker && (this.endWorker(WW), iW.startsWithoutResult = 0, iW.trapsWithoutResult = 0, this.tellLost(WW))
+        for (let RR = 0; RR < this.slots.length; RR++) {
+          const JR = this.slots[RR];
+          null !== JR.worker && (this.endWorker(RR), JR.startsWithoutResult = 0, JR.trapsWithoutResult = 0, this.tellLost(RR))
         }
         this.pool.length = 0
       }
       restartWorkers() {
         if (this.resting) {
           this.resting = !1;
-          for (let WW = 0; WW < this.slots.length; WW++) this.start(WW)
+          for (let RR = 0; RR < this.slots.length; RR++) this.start(RR)
         }
       }
       stop() {
         this.stopped = !0;
-        for (const iW of this.slots) {
-          var WW;
-          qE(iW), null === (WW = iW.worker) || void 0 === WW || WW.terminate(), iW.worker = null, iW.started = !1
+        for (const JR of this.slots) {
+          var RR;
+          St(JR), null === (RR = JR.worker) || void 0 === RR || RR.terminate(), JR.worker = null, JR.started = !1
         }
       }
-      start(WW) {
-        const iW = this.slots[WW],
+      start(RR) {
+        const JR = this.slots[RR],
           {
-            module: OW
+            module: GR
           } = this.options,
           {
-            workers: mW
+            workers: yR
           } = this;
-        if (this.stopped || this.resting || iW.gone || null === OW || null === mW) return;
-        if (iW.startsWithoutResult >= 3) return void this.giveUp(WW, "failed to start 3 times in a row", "no meshing worker would start");
-        let EW;
-        iW.startsWithoutResult++;
+        if (this.stopped || this.resting || JR.gone || null === GR || null === yR) return;
+        if (JR.startsWithoutResult >= 3) return void this.giveUp(RR, "failed to start 3 times in a row", "no meshing worker would start");
+        let tR;
+        JR.startsWithoutResult++;
         try {
-          EW = mW.create()
-        } catch (NW) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${WW} did not start`, NW), void this.start(WW)
+          tR = yR.create()
+        } catch (uR) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${RR} did not start`, uR), void this.start(RR)
         }
-        iW.worker = EW, EW.onmessage = OW => {
+        JR.worker = tR, tR.onmessage = GR => {
           let {
-            data: mW
-          } = OW;
-          iW.worker === EW && this.onReply(WW, mW)
-        }, EW.onmessageerror = () => {
-          iW.worker === EW && this.lose(WW, "a reply could not be read")
-        }, EW.onerror = OW => {
-          OW.preventDefault(), iW.worker === EW && this.lose(WW, OW.message || "its script failed")
+            data: yR
+          } = GR;
+          JR.worker === tR && this.onReply(RR, yR)
+        }, tR.onmessageerror = () => {
+          JR.worker === tR && this.lose(RR, "a reply could not be read")
+        }, tR.onerror = GR => {
+          GR.preventDefault(), JR.worker === tR && this.lose(RR, GR.message || "its script failed")
         };
         try {
-          EW.postMessage({
+          tR.postMessage({
             type: "start",
-            module: OW,
-            maxKeptLightStates: mW.maxKeptLightStates
+            module: GR,
+            maxKeptLightStates: yR.maxKeptLightStates
           })
-        } catch (NW) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${WW} could not be sent the module`, NW), EW.terminate(), iW.worker = null, void this.start(WW)
+        } catch (uR) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${RR} could not be sent the module`, uR), tR.terminate(), JR.worker = null, void this.start(RR)
         }
-        iW.watch = new CE.f(CE.c, (iW => {
-          this.lose(WW, (0, CE.g)(iW), (() => {
-            this.options.onStartTimeout(iW)
+        JR.watch = new It.h(It.d, (JR => {
+          this.lose(RR, (0, It.l)(JR), (() => {
+            this.options.onStartTimeout(JR)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(WW, iW) {
-        const OW = this.slots[WW];
-        switch (iW.type) {
+      onReply(RR, JR) {
+        const GR = this.slots[RR];
+        switch (JR.type) {
           case "started":
-            qE(OW), OW.started = !0, this.options.write(0, HO.Xd.WorkerStarted, 0, WW, 0, XE);
+            St(GR), GR.started = !0, this.options.write(0, pG.Xd.WorkerStarted, 0, RR, 0, mt);
             break;
           case "lost":
-            this.lose(WW, iW.reason);
+            this.lose(RR, JR.reason);
             break;
           case "memory":
-            var mW, EW;
-            null === (mW = (EW = this.options).onMemoryStats) || void 0 === mW || mW.call(EW, WW, iW.stats);
+            var yR, tR;
+            null === (yR = (tR = this.options).onMemoryStats) || void 0 === yR || yR.call(tR, RR, JR.stats);
             break;
           case "result": {
-            const mW = iW.status === HO.ib.Trapped;
-            if (0 !== iW.jobId) {
-              if (mW) this.countFailedJob(iW.outOfMemory, "light_trap", iW.trap);
-              else if (OW.startsWithoutResult = 0, OW.trapsWithoutResult = 0, iW.status === HO.ib.Refused) {
-                const OW = function(WW) {
-                  if (WW.byteLength < 32) return "(no reason)";
-                  const iW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength),
-                    OW = Math.min(iW.getUint32(28, !0), WW.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(WW.subarray(32, 32 + OW)).slice(0, 200)
-                }(new Uint8Array(iW.bytes, 0, iW.len));
-                this.countFailedJob(dO.c.test(OW), "light_refused_input", OW), this.logRefusal(WW, OW)
+            const yR = JR.status === pG.yb.Trapped;
+            if (0 !== JR.jobId) {
+              if (yR) this.countFailedJob(JR.outOfMemory, "light_trap", JR.trap);
+              else if (GR.startsWithoutResult = 0, GR.trapsWithoutResult = 0, JR.status === pG.yb.Refused) {
+                const GR = function(RR) {
+                  if (RR.byteLength < 32) return "(no reason)";
+                  const JR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength),
+                    GR = Math.min(JR.getUint32(28, !0), RR.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(RR.subarray(32, 32 + GR)).slice(0, 200)
+                }(new Uint8Array(JR.bytes, 0, JR.len));
+                this.countFailedJob(OG.b.test(GR), "light_refused_input", GR), this.logRefusal(RR, GR)
               }
-              iW.status === HO.ib.HeapRefused && (OW.heapRetries = Math.min(OW.heapRetries + 1, 4), this.logHeapRefusal(WW))
+              JR.status === pG.yb.HeapRefused && (GR.heapRetries = Math.min(GR.heapRetries + 1, 4), this.logHeapRefusal(RR))
             }
-            if (this.options.write(iW.jobId, HO.Xd.JobResult, iW.status, WW, iW.workerUs, new Uint8Array(iW.bytes, 0, iW.len)), this.recycle(iW.bytes), iW.spare && this.recycle(iW.spare), !mW) break;
-            if (OW.startsWithoutResult = 0, 0 === iW.jobId) {
-              this.lose(WW, `the tables trapped its wasm: ${iW.trap}`);
+            if (this.options.write(JR.jobId, pG.Xd.JobResult, JR.status, RR, JR.workerUs, new Uint8Array(JR.bytes, 0, JR.len)), this.recycle(JR.bytes), JR.spare && this.recycle(JR.spare), !yR) break;
+            if (GR.startsWithoutResult = 0, 0 === JR.jobId) {
+              this.lose(RR, `the tables trapped its wasm: ${JR.trap}`);
               break
             }
-            OW.trapsWithoutResult++;
-            const EW = OW.trapsWithoutResult > 6;
-            OW.gone ||= EW, this.lose(WW, `a job trapped its wasm: ${iW.trap}`), EW && this.giveUp(WW, `trapped ${OW.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            GR.trapsWithoutResult++;
+            const tR = GR.trapsWithoutResult > 6;
+            GR.gone ||= tR, this.lose(RR, `a job trapped its wasm: ${JR.trap}`), tR && this.giveUp(RR, `trapped ${GR.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(WW, iW, OW) {
-        if (WW) {
+      countFailedJob(RR, JR, GR) {
+        if (RR) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(iW) || (this.faultsReported.add(iW), this.options.onLightFault(iW, OW));
+        } else this.faultsReported.has(JR) || (this.faultsReported.add(JR), this.options.onLightFault(JR, GR));
         this.failedJobs++
       }
-      logRefusal(WW, iW) {
-        var OW;
-        !this.refusals.has(iW) && this.refusals.size >= 16 && (iW = "(other reasons)");
-        const mW = (null !== (OW = this.refusals.get(iW)) && void 0 !== OW ? OW : 0) + 1;
-        this.refusals.set(iW, mW), (0, tm.w)(mW) && console.warn(`[bloxd-wasm-client] meshing worker ${WW} refused a chunk (${mW} so far for this reason): ${iW}`)
+      logRefusal(RR, JR) {
+        var GR;
+        !this.refusals.has(JR) && this.refusals.size >= 16 && (JR = "(other reasons)");
+        const yR = (null !== (GR = this.refusals.get(JR)) && void 0 !== GR ? GR : 0) + 1;
+        this.refusals.set(JR, yR), (0, iy.w)(yR) && console.warn(`[bloxd-wasm-client] meshing worker ${RR} refused a chunk (${yR} so far for this reason): ${JR}`)
       }
-      logHeapRefusal(WW) {
-        this.heapRefusals++, (0, tm.w)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${WW} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(RR) {
+        this.heapRefusals++, (0, iy.w)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${RR} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(WW, iW, OW) {
-        const mW = this.slots[WW];
-        if (mW.gone = !0, mW.goneFor = {
-            why: iW,
-            failure: OW
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${WW} ${iW}: giving up on it`), this.slots.every((WW => WW.gone))) {
+      giveUp(RR, JR, GR) {
+        const yR = this.slots[RR];
+        if (yR.gone = !0, yR.goneFor = {
+            why: JR,
+            failure: GR
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${RR} ${JR}: giving up on it`), this.slots.every((RR => RR.gone))) {
           this.stop();
-          const WW = new Set(this.slots.map((WW => {
-              var iW;
-              return null === (iW = WW.goneFor) || void 0 === iW ? void 0 : iW.failure
+          const RR = new Set(this.slots.map((RR => {
+              var JR;
+              return null === (JR = RR.goneFor) || void 0 === JR ? void 0 : JR.failure
             }))),
-            iW = this.slots.map(((WW, iW) => {
-              var OW, mW;
-              return `worker ${iW} ${null!==(OW=null===(mW=WW.goneFor)||void 0===mW?void 0:mW.why)&&void 0!==OW?OW:"went"}`
+            JR = this.slots.map(((RR, JR) => {
+              var GR, yR;
+              return `worker ${JR} ${null!==(GR=null===(yR=RR.goneFor)||void 0===yR?void 0:yR.why)&&void 0!==GR?GR:"went"}`
             }));
-          this.options.fail(1 === WW.size ? OW : `no meshing worker is left (${iW.join(", ")})`)
+          this.options.fail(1 === RR.size ? GR : `no meshing worker is left (${JR.join(", ")})`)
         }
       }
-      lose(WW, iW, OW) {
-        console.warn(`[bloxd-wasm-client] meshing worker ${WW} was lost: ${iW}`), this.endWorker(WW), this.stopped || (OW ? OW() : this.options.onWorkerLost(iW), this.tellLost(WW), this.start(WW))
+      lose(RR, JR, GR) {
+        console.warn(`[bloxd-wasm-client] meshing worker ${RR} was lost: ${JR}`), this.endWorker(RR), this.stopped || (GR ? GR() : this.options.onWorkerLost(JR), this.tellLost(RR), this.start(RR))
       }
-      endWorker(WW) {
-        var iW, OW, mW;
-        const EW = this.slots[WW];
-        qE(EW), null === (iW = EW.worker) || void 0 === iW || iW.terminate(), EW.worker = null, EW.heapRetries = 0, null === (OW = (mW = this.options).onMemoryGone) || void 0 === OW || OW.call(mW, WW)
+      endWorker(RR) {
+        var JR, GR, yR;
+        const tR = this.slots[RR];
+        St(tR), null === (JR = tR.worker) || void 0 === JR || JR.terminate(), tR.worker = null, tR.heapRetries = 0, null === (GR = (yR = this.options).onMemoryGone) || void 0 === GR || GR.call(yR, RR)
       }
-      tellLost(WW) {
-        const iW = this.slots[WW];
-        iW.started && (iW.started = !1, this.options.write(0, HO.Xd.WorkerLost, 0, WW, 0, XE))
+      tellLost(RR) {
+        const JR = this.slots[RR];
+        JR.started && (JR.started = !1, this.options.write(0, pG.Xd.WorkerLost, 0, RR, 0, mt))
       }
-      buffer(WW) {
-        var iW;
-        return null !== (iW = this.pooled(WW)) && void 0 !== iW ? iW : new ArrayBuffer(Math.max(16384, WW))
+      buffer(RR) {
+        var JR;
+        return null !== (JR = this.pooled(RR)) && void 0 !== JR ? JR : new ArrayBuffer(Math.max(16384, RR))
       }
-      pooled(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          OW = -1;
-        for (let EW = 0; EW < this.pool.length; EW++) {
-          const mW = this.pool[EW].byteLength;
-          mW >= WW && (OW < 0 || (iW ? mW > this.pool[OW].byteLength : mW < this.pool[OW].byteLength)) && (OW = EW)
+      pooled(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          GR = -1;
+        for (let tR = 0; tR < this.pool.length; tR++) {
+          const yR = this.pool[tR].byteLength;
+          yR >= RR && (GR < 0 || (JR ? yR > this.pool[GR].byteLength : yR < this.pool[GR].byteLength)) && (GR = tR)
         }
-        if (OW < 0) return null;
-        const mW = this.pool[OW];
-        return this.pool[OW] = this.pool[this.pool.length - 1], this.pool.pop(), mW
+        if (GR < 0) return null;
+        const yR = this.pool[GR];
+        return this.pool[GR] = this.pool[this.pool.length - 1], this.pool.pop(), yR
       }
-      recycle(WW) {
-        this.pool.length < 4 * this.slots.length && WW.byteLength > 0 && WW.byteLength <= 1048576 && this.pool.push(WW)
+      recycle(RR) {
+        this.pool.length < 4 * this.slots.length && RR.byteLength > 0 && RR.byteLength <= 1048576 && this.pool.push(RR)
       }
     }
 
-    function qE(WW) {
-      var iW;
-      null === (iW = WW.watch) || void 0 === iW || iW.cancel(), WW.watch = null
+    function St(RR) {
+      var JR;
+      null === (JR = RR.watch) || void 0 === JR || JR.cancel(), RR.watch = null
     }
-    var RE = OW(37724),
-      GE = OW(42270),
-      IE = OW(42448),
-      aE = OW(42452),
-      rE = (OW(42244), OW(37325)),
-      zE = OW(42455),
-      FE = OW(42348);
+    var jt = GR(37633),
+      dt = GR(42294),
+      Et = GR(42475),
+      Yt = GR(42479),
+      kt = (GR(42265), GR(37232)),
+      Qt = GR(42488),
+      Ft = GR(42364);
 
-    function QE(WW) {
-      const iW = new Uint8Array(WW.length >> 2);
-      for (let OW = 0; OW < iW.length; OW++) iW[OW] = WW[4 * OW + 3];
-      return iW
+    function Tt(RR) {
+      const JR = new Uint8Array(RR.length >> 2);
+      for (let GR = 0; GR < JR.length; GR++) JR[GR] = RR[4 * GR + 3];
+      return JR
     }
-    async function WN(WW) {
-      const iW = await (0, zE.h)(WW);
+    async function st(RR) {
+      const JR = await (0, Qt.g)(RR);
       try {
         const {
-          width: WW,
-          height: OW,
-          pixels: mW
-        } = (0, FE.m)(iW);
+          width: RR,
+          height: GR,
+          pixels: yR
+        } = (0, Ft.w)(JR);
         return {
-          width: WW,
-          height: OW,
-          alpha: QE(mW)
+          width: RR,
+          height: GR,
+          alpha: Tt(yR)
         }
       } finally {
-        iW.close()
+        JR.close()
       }
     }
-    class iN {
-      constructor(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : WN;
-        this.session = WW, this.sources = iW, this.warn = OW, this.load = mW, this.nextPoll = 0, this.JA = !1, this.warned = new Set
+    class ht {
+      constructor(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : st;
+        this.session = RR, this.sources = JR, this.warn = GR, this.load = yR, this.nextPoll = 0, this.He = !1, this.warned = new Set
       }
-      drain(WW) {
-        if (WW < this.nextPoll) return;
-        this.nextPoll = WW + 250;
-        const iW = this.session.sunShadowWantedTextures();
-        if (iW)
-          for (let OW = 0; OW + 1 < iW.length; OW += 2) this.hand(iW[OW], iW[OW + 1]);
-        for (const OW of this.session.takeSunShadowWarnings()) this.warn(OW)
+      drain(RR) {
+        if (RR < this.nextPoll) return;
+        this.nextPoll = RR + 250;
+        const JR = this.session.sunShadowWantedTextures();
+        if (JR)
+          for (let GR = 0; GR + 1 < JR.length; GR += 2) this.hand(JR[GR], JR[GR + 1]);
+        for (const GR of this.session.takeSunShadowWarnings()) this.warn(GR)
       }
       dispose() {
-        this.JA = !0
+        this.He = !0
       }
-      async hand(WW, iW) {
-        var OW, mW, EW, NW, PW;
-        let LW, cW = null;
+      async hand(RR, JR) {
+        var GR, yR, tR, uR, ZR;
+        let qR, iR = null;
         try {
-          if (cW = await this.sources.blockImageUrl(WW), null === cW) throw new Error(`block image ${WW} has no URL`);
-          LW = await this.load(cW)
-        } catch (tW) {
-          var wW;
-          const iW = null !== (wW = cW) && void 0 !== wW ? wW : `block image ${WW}`;
-          this.warned.has(iW) || (this.warned.add(iW), this.warn(`sun shadow plane texture ${iW} didn't load: its blocks cast no shadow`, tW))
+          if (iR = await this.sources.blockImageUrl(RR), null === iR) throw new Error(`block image ${RR} has no URL`);
+          qR = await this.load(iR)
+        } catch (VR) {
+          var fR;
+          const JR = null !== (fR = iR) && void 0 !== fR ? fR : `block image ${RR}`;
+          this.warned.has(JR) || (this.warned.add(JR), this.warn(`sun shadow plane texture ${JR} didn't load: its blocks cast no shadow`, VR))
         }
-        this.JA || this.session.setSunShadowTexture(WW, iW, null !== (OW = null === (mW = LW) || void 0 === mW ? void 0 : mW.width) && void 0 !== OW ? OW : 0, null !== (EW = null === (NW = LW) || void 0 === NW ? void 0 : NW.height) && void 0 !== EW ? EW : 0, null === (PW = LW) || void 0 === PW ? void 0 : PW.alpha)
+        this.He || this.session.setSunShadowTexture(RR, JR, null !== (GR = null === (yR = qR) || void 0 === yR ? void 0 : yR.width) && void 0 !== GR ? GR : 0, null !== (tR = null === (uR = qR) || void 0 === uR ? void 0 : uR.height) && void 0 !== tR ? tR : 0, null === (ZR = qR) || void 0 === ZR ? void 0 : ZR.alpha)
       }
     }
-    var ON = OW(37436),
-      mN = OW(42330),
-      EN = OW(42461),
-      NN = OW(42463),
-      PN = OW(42339),
-      LN = OW(42344),
-      cN = OW(35270),
-      wN = OW(35116),
-      tN = OW(42471);
-    const ZN = 8192,
-      xN = new Set;
-    const lN = new Set([...wN.e, "sceneDownload"]);
-    var AN = OW(42255),
-      bN = OW(42362);
-    const jN = [1e3, 4e3],
-      UN = [2e3, 4e3, 8e3, 15e3, 3e4, 3e4, 3e4, 3e4];
-    async function kN(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UN,
-        OW = 0,
-        mW = !1,
-        EW = null,
-        NW = () => {};
-      const PW = () => {
-        const iW = new AbortController;
-        EW = iW, WW.showScreen(iW.signal).then((WW => {
-          iW.signal.aborted || (EW === iW && (EW = null), mW ||= !WW, NW())
+    var Ru = GR(37346),
+      Ju = GR(42344),
+      Gu = GR(42494),
+      yu = GR(42503),
+      tu = GR(42352),
+      uu = GR(42357),
+      Zu = GR(35195),
+      qu = GR(35031),
+      iu = GR(42516);
+    const fu = 8192,
+      Vu = new Set;
+    const Ku = new Set([...qu.e, "sceneDownload"]);
+    var wu = GR(42281),
+      ru = GR(42379);
+    const eu = [1e3, 4e3],
+      au = [2e3, 4e3, 8e3, 15e3, 3e4, 3e4, 3e4, 3e4];
+    async function Lu(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : au,
+        GR = 0,
+        yR = !1,
+        tR = null,
+        uR = () => {};
+      const ZR = () => {
+        const JR = new AbortController;
+        tR = JR, RR.showScreen(JR.signal).then((RR => {
+          JR.signal.aborted || (tR === JR && (tR = null), yR ||= !RR, uR())
         }))
       };
-      let LW = 0;
+      let qR = 0;
       try {
-        for (; LW < iW.length;) {
-          null === EW && PW();
-          const cW = new AbortController;
-          if (NW = () => {
-              cW.abort()
-            }, await WW.sleep(iW[LW], cW.signal), mW) return {
+        for (; qR < JR.length;) {
+          null === tR && ZR();
+          const iR = new AbortController;
+          if (uR = () => {
+              iR.abort()
+            }, await RR.sleep(JR[qR], iR.signal), yR) return {
             picked: null,
-            tries: OW,
+            tries: GR,
             gaveUp: !1
           };
-          cW.signal.aborted || LW++, OW++;
-          const wW = await WW.repick();
-          if (mW) return {
+          iR.signal.aborted || qR++, GR++;
+          const fR = await RR.repick();
+          if (yR) return {
             picked: null,
-            tries: OW,
+            tries: GR,
             gaveUp: !1
           };
-          if (null !== wW) return {
-            picked: wW,
-            tries: OW,
+          if (null !== fR) return {
+            picked: fR,
+            tries: GR,
             gaveUp: !1
           }
         }
         return {
           picked: null,
-          tries: OW,
+          tries: GR,
           gaveUp: !0
         }
       } finally {
         (() => {
-          var WW;
-          null === (WW = EW) || void 0 === WW || WW.abort(), EW = null
+          var RR;
+          null === (RR = tR) || void 0 === RR || RR.abort(), tR = null
         })()
       }
     }
-    var sN = OW(42479);
-    const MN = new Uint8Array(0);
-    let KN = null;
+    var nu = GR(42523);
+    const Uu = new Uint8Array(0);
+    let Wu = null;
 
-    function SN(WW) {
+    function Au(RR) {
       return {
-        aux: HO.bc.AdStart | (WW ? HO.bc.PreventMovement : 0),
-        payload: MN
+        aux: pG.$b.AdStart | (RR ? pG.$b.PreventMovement : 0),
+        payload: Uu
       }
     }
-    var YN = OW(3941),
-      yN = OW(281);
-    const TN = "__bloxdSceneCapture";
-    var JN = OW(42482);
-    class hN {
-      constructor(WW) {
-        var iW, OW;
-        this.host = WW, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((WW => {
-          this.landRequest = WW
-        })), this.follow = WW => {
-          let iW = WW;
+    var Cu = GR(4044),
+      Xu = GR(310);
+    const Mu = "__bloxdSceneCapture";
+    var Bu = GR(42526);
+    class lu {
+      constructor(RR) {
+        var JR, GR;
+        this.host = RR, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((RR => {
+          this.landRequest = RR
+        })), this.follow = RR => {
+          let JR = RR;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const WW = null === this.requested && null !== iW;
-            var OW;
-            WW && (null === (OW = iW) || void 0 === OW || OW(null));
-            const mW = await this.landing;
-            var EW;
-            null === mW && WW || (null === (EW = iW) || void 0 === EW || EW(mW))
+            const RR = null === this.requested && null !== JR;
+            var GR;
+            RR && (null === (GR = JR) || void 0 === GR || GR(null));
+            const yR = await this.landing;
+            var tR;
+            null === yR && RR || (null === (tR = JR) || void 0 === tR || tR(yR))
           })), () => {
-            iW = null
+            JR = null
           }
-        }, this.startRead = (OW = WW.store, OW.keys().then((WW => ({
-          own: WW.includes(jm.d),
-          oneShot: WW.includes(jm.h)
+        }, this.startRead = (GR = RR.store, GR.keys().then((RR => ({
+          own: RR.includes(ey.e),
+          oneShot: RR.includes(ey.g)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((WW => {
+        })))).then((RR => {
           let {
-            own: iW,
-            oneShot: OW
-          } = WW;
-          this.oneShotStored = OW, (iW || OW) && this.request()
-        })), this.channel = (null !== (iW = WW.openChannel) && void 0 !== iW ? iW : jm.v)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: JR,
+            oneShot: GR
+          } = RR;
+          this.oneShotStored = GR, (JR || GR) && this.request()
+        })), this.channel = (null !== (JR = RR.openChannel) && void 0 !== JR ? JR : ey.v)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var WW;
+        var RR;
         if (null !== this.requested) return this.requested;
-        null === (WW = this.channel) || void 0 === WW || WW.close(), this.channel = null;
-        const iW = this.oneShotStored;
-        return this.requested = function(WW, iW, OW) {
-          return new Promise((iW => {
-            iW(WW())
-          })).catch((WW => (null !== iW && (0, jm.p)(iW), OW(WW), null)))
-        }((() => this.host.load(iW).then((WW => (WW.setGamePackConfirm(this.confirm), this.landed = WW, WW)))), iW ? this.host.store : null, this.host.wZ), this.landRequest(this.requested), this.requested
+        null === (RR = this.channel) || void 0 === RR || RR.close(), this.channel = null;
+        const JR = this.oneShotStored;
+        return this.requested = function(RR, JR, GR) {
+          return new Promise((JR => {
+            JR(RR())
+          })).catch((RR => (null !== JR && (0, ey.q)(JR), GR(RR), null)))
+        }((() => this.host.load(JR).then((RR => (RR.setGamePackConfirm(this.confirm), this.landed = RR, RR)))), JR ? this.host.store : null, this.host.fK), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var WW;
-          return null !== (WW = this.requested) && void 0 !== WW ? WW : null
+          var RR;
+          return null !== (RR = this.requested) && void 0 !== RR ? RR : null
         }))
       }
-      setGamePackConfirm(WW) {
-        var iW;
-        this.confirm = WW, null === (iW = this.landed) || void 0 === iW || iW.setGamePackConfirm(WW)
+      setGamePackConfirm(RR) {
+        var JR;
+        this.confirm = RR, null === (JR = this.landed) || void 0 === JR || JR.setGamePackConfirm(RR)
       }
     }
-    var HN = OW(37260);
-    const nN = 216 * HN.d,
-      uN = 92 * HN.b,
-      oN = 64 * HN.d,
-      dN = 16 * HN.d;
+    var pu = GR(37178);
+    const gu = 216 * pu.f,
+      bu = 92 * pu.b,
+      vu = 64 * pu.f,
+      Ou = 16 * pu.f;
 
-    function eN() {
-      var WW, iW;
-      return null !== (WW = null === (iW = performance.memory) || void 0 === iW ? void 0 : iW.Wk) && void 0 !== WW ? WW : null
+    function xu() {
+      var RR, JR;
+      return null !== (RR = null === (JR = performance.memory) || void 0 === JR ? void 0 : JR.kU) && void 0 !== RR ? RR : null
     }
-    class vN {
-      constructor(WW, iW) {
-        this.budgetBytes = WW, this.reads = iW, this.estimate = null, this.shedAt = null
+    class Nu {
+      constructor(RR, JR) {
+        this.budgetBytes = RR, this.reads = JR, this.estimate = null, this.shedAt = null
       }
-      read(WW) {
-        var iW;
-        const OW = this.reads.storedChunks(),
-          mW = this.reads.gpuBytes(),
-          EW = Math.max(null !== (iW = this.reads.jsHeapBytes()) && void 0 !== iW ? iW : 0, oN),
-          NW = nN + WW + EW + mW + OW * uN;
+      read(RR) {
+        var JR;
+        const GR = this.reads.storedChunks(),
+          yR = this.reads.gpuBytes(),
+          tR = Math.max(null !== (JR = this.reads.jsHeapBytes()) && void 0 !== JR ? JR : 0, vu),
+          uR = gu + RR + tR + yR + GR * bu;
         this.estimate = {
-          wasmBytes: WW,
-          jsHeapBytes: EW,
-          gpuBytes: mW,
-          storedChunks: OW,
-          totalBytes: NW
+          wasmBytes: RR,
+          jsHeapBytes: tR,
+          gpuBytes: yR,
+          storedChunks: GR,
+          totalBytes: uR
         }
       }
       last() {
@@ -4125,291 +4174,291 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: WW,
-          budgetBytes: iW,
-          shedAt: OW
+          estimate: RR,
+          budgetBytes: JR,
+          shedAt: GR
         } = this;
-        return !(null === WW || null === iW || WW.totalBytes < iW || null !== OW && WW.totalBytes < OW + dN) && (this.shedAt = WW.totalBytes, !0)
+        return !(null === RR || null === JR || RR.totalBytes < JR || null !== GR && RR.totalBytes < GR + Ou) && (this.shedAt = RR.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: WW,
-          budgetBytes: iW
+          estimate: RR,
+          budgetBytes: JR
         } = this;
-        return null === WW ? null : `estimate ${(0,HN.j)(WW.totalBytes)} MiB of budget ${null===iW?"none":(0,HN.j)(iW)}: wasm ${(0,HN.j)(WW.wasmBytes)} js ${(0,HN.j)(WW.jsHeapBytes)} gpu ${(0,HN.j)(WW.gpuBytes)} chunks ${WW.storedChunks}`
+        return null === RR ? null : `estimate ${(0,pu.k)(RR.totalBytes)} MiB of budget ${null===JR?"none":(0,pu.k)(JR)}: wasm ${(0,pu.k)(RR.wasmBytes)} js ${(0,pu.k)(RR.jsHeapBytes)} gpu ${(0,pu.k)(RR.gpuBytes)} chunks ${RR.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: WW,
-          budgetBytes: iW
+          estimate: RR,
+          budgetBytes: JR
         } = this;
         return {
-          ...null === WW ? {} : {
-            footprintMiB: Number((0, HN.j)(WW.totalBytes)),
-            gpuMiB: Number((0, HN.j)(WW.gpuBytes)),
-            storedChunks: WW.storedChunks
+          ...null === RR ? {} : {
+            footprintMiB: Number((0, pu.k)(RR.totalBytes)),
+            gpuMiB: Number((0, pu.k)(RR.gpuBytes)),
+            storedChunks: RR.storedChunks
           },
-          footprintBudgetMiB: null === iW ? -1 : Number((0, HN.j)(iW))
+          footprintBudgetMiB: null === JR ? -1 : Number((0, pu.k)(JR))
         }
       }
     }
-    var gN = OW(3866),
-      DN = OW(5223),
-      VN = OW(37518),
-      pN = OW(39133);
-    const fN = nO.kb + 1,
-      CN = 4096 * fN;
-    class XN {
-      constructor(WW, iW) {
-        this.log = WW, this.take = iW, this.BL = [], this.unshown = new Map, this.latest = new Map
+    var Du = GR(3960),
+      Hu = GR(5323),
+      ou = GR(37431),
+      cu = GR(39112);
+    const Pu = gG.nb + 1,
+      Iu = 4096 * Pu;
+    class mu {
+      constructor(RR, JR) {
+        this.log = RR, this.take = JR, this.Qq = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(WW, iW) {
-        const OW = this.take();
-        OW.length >= nO.gb && OW[0] > 0 && (0, gN.m)("remesh", `${OW[0]} core records lost to a full log`);
-        const mW = this.BL;
-        for (let EW = nO.gb; EW + nO.kb <= OW.length; EW += nO.kb) {
-          for (let WW = EW; WW < EW + nO.kb; WW++) mW.push(OW[WW]);
-          mW.push(WW)
+      afterFrame(RR, JR) {
+        const GR = this.take();
+        GR.length >= gG.lb && GR[0] > 0 && (0, Du.k)("remesh", `${GR[0]} core records lost to a full log`);
+        const yR = this.Qq;
+        for (let tR = gG.lb; tR + gG.nb <= GR.length; tR += gG.nb) {
+          for (let RR = tR; RR < tR + gG.nb; RR++) yR.push(GR[RR]);
+          yR.push(RR)
         }
-        if (iW || !(mW.length < CN)) {
-          for (let iW = 0; iW < mW.length; iW += fN) this.feed(iW, WW);
-          mW.length = 0, iW && this.log.frame(WW)
+        if (JR || !(yR.length < Iu)) {
+          for (let JR = 0; JR < yR.length; JR += Pu) this.feed(JR, RR);
+          yR.length = 0, JR && this.log.frame(RR)
         }
       }
-      feed(WW, iW) {
-        var OW;
-        const mW = this.BL,
-          EW = (0, pN.i)(mW[WW + 1], mW[WW + 2], mW[WW + 3]),
-          NW = mW[WW + 4],
-          PW = mW[WW + nO.kb];
-        switch (mW[WW]) {
-          case nO.Qb.Edit:
-            this.log.edit(EW, PW);
+      feed(RR, JR) {
+        var GR;
+        const yR = this.Qq,
+          tR = (0, cu.f)(yR[RR + 1], yR[RR + 2], yR[RR + 3]),
+          uR = yR[RR + 4],
+          ZR = yR[RR + gG.nb];
+        switch (yR[RR]) {
+          case gG.Pb.Edit:
+            this.log.edit(tR, ZR);
             break;
-          case nO.Qb.Sent:
-            this.latest.set(EW, NW), this.log.sent(EW, NW, mW[WW + 5], mW[WW + 6], mW[WW + 7], null !== (OW = this.unshown.get(EW)) && void 0 !== OW ? OW : pN.e, PW);
+          case gG.Pb.Sent:
+            this.latest.set(tR, uR), this.log.sent(tR, uR, yR[RR + 5], yR[RR + 6], yR[RR + 7], null !== (GR = this.unshown.get(tR)) && void 0 !== GR ? GR : cu.b, ZR);
             break;
-          case nO.Qb.Done: {
-            this.log.received(NW, mW[WW + 5] / 1e3, PW);
-            const iW = this.unshown.get(EW);
-            void 0 === iW ? this.unshown.set(EW, [NW]) : iW.push(NW);
+          case gG.Pb.Done: {
+            this.log.received(uR, yR[RR + 5] / 1e3, ZR);
+            const JR = this.unshown.get(tR);
+            void 0 === JR ? this.unshown.set(tR, [uR]) : JR.push(uR);
             break
           }
-          case nO.Qb.Failed: {
-            const WW = this.latest.get(EW);
-            void 0 !== WW && WW !== NW ? this.log.reassign(EW, NW, WW) : this.log.failed(NW), this.ended(EW, NW);
+          case gG.Pb.Failed: {
+            const RR = this.latest.get(tR);
+            void 0 !== RR && RR !== uR ? this.log.reassign(tR, uR, RR) : this.log.failed(uR), this.ended(tR, uR);
             break
           }
-          case nO.Qb.Shown:
-            this.log.applied(EW, NW, iW), this.ended(EW, NW);
+          case gG.Pb.Shown:
+            this.log.applied(tR, uR, JR), this.ended(tR, uR);
             break;
-          case nO.Qb.Replaced:
-            this.log.reassign(EW, NW, mW[WW + 5]), this.ended(EW, NW);
+          case gG.Pb.Replaced:
+            this.log.reassign(tR, uR, yR[RR + 5]), this.ended(tR, uR);
             break;
-          case nO.Qb.Emptied:
-            this.log.emptied(EW, iW);
+          case gG.Pb.Emptied:
+            this.log.emptied(tR, JR);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${mW[WW]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${yR[RR]}`)
         }
       }
-      ended(WW, iW) {
-        this.latest.get(WW) === iW && this.latest.delete(WW);
-        const OW = this.unshown.get(WW);
-        if (void 0 === OW) return;
-        const mW = OW.indexOf(iW);
-        mW >= 0 && OW.splice(mW, 1), 0 === OW.length && this.unshown.delete(WW)
+      ended(RR, JR) {
+        this.latest.get(RR) === JR && this.latest.delete(RR);
+        const GR = this.unshown.get(RR);
+        if (void 0 === GR) return;
+        const yR = GR.indexOf(JR);
+        yR >= 0 && GR.splice(yR, 1), 0 === GR.length && this.unshown.delete(RR)
       }
     }
-    let BN = null;
-    var qN = OW(4417),
-      RN = OW(40987);
-    const GN = "its script failed",
-      IN = "the block and item tables did not load",
-      aN = new Uint8Array(0);
-    class rN {
-      constructor(WW) {
-        this.options = WW, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.BL = [], this.startsWithoutResult = 0, this.generated = !1, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== WW.module ? WW.write(0, HO.Xd.WorldgenStarted, 0, 0, aN) : this.giveUp()
+    let zu = null;
+    var Su = GR(4498),
+      ju = GR(40985);
+    const du = "its script failed",
+      Eu = "the block and item tables did not load",
+      Yu = new Uint8Array(0);
+    class ku {
+      constructor(RR) {
+        this.options = RR, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.Qq = [], this.startsWithoutResult = 0, this.generated = !1, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== RR.module ? RR.write(0, pG.Xd.WorldgenStarted, 0, 0, Yu) : this.giveUp()
       }
-      take(WW, iW) {
-        if (!(this.gone || null === this.worker && null === this.BL))
-          if (WW === HO._d.WorldgenSeed) {
-            const WW = 0 === iW.byteLength ? null : this.options.decodeSettings(iW);
-            null === WW ? this.release() : function(WW, iW) {
-              if ((null === WW || void 0 === WW ? void 0 : WW.byteLength) !== iW.byteLength) return !1;
-              for (let OW = 0; OW < WW.byteLength; OW++)
-                if (WW[OW] !== iW[OW]) return !1;
+      take(RR, JR) {
+        if (!(this.gone || null === this.worker && null === this.Qq))
+          if (RR === pG.Yd.WorldgenSeed) {
+            const RR = 0 === JR.byteLength ? null : this.options.decodeSettings(JR);
+            null === RR ? this.release() : function(RR, JR) {
+              if ((null === RR || void 0 === RR ? void 0 : RR.byteLength) !== JR.byteLength) return !1;
+              for (let GR = 0; GR < RR.byteLength; GR++)
+                if (RR[GR] !== JR[GR]) return !1;
               return !0
-            }(this.seed, iW) || (this.seed = iW.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, JR) || (this.seed = JR.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: WW
-            }, []), null !== WW ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (WW === HO._d.Generate) {
-          var OW;
-          const WW = new DataView(iW.buffer, iW.byteOffset, HO.Sd),
-            mW = null !== (OW = this.pool.pop()) && void 0 !== OW ? OW : new ArrayBuffer(8192);
+              settings: RR
+            }, []), null !== RR ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (RR === pG.Yd.Generate) {
+          var GR;
+          const RR = new DataView(JR.buffer, JR.byteOffset, pG.Rd),
+            yR = null !== (GR = this.pool.pop()) && void 0 !== GR ? GR : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: WW.getUint32(0, !0),
-            x: WW.getInt32(4, !0),
-            y: WW.getInt32(8, !0),
-            z: WW.getInt32(12, !0),
-            bytes: mW
-          }, [mW])
+            ticket: RR.getUint32(0, !0),
+            x: RR.getInt32(4, !0),
+            y: RR.getInt32(8, !0),
+            z: RR.getInt32(12, !0),
+            bytes: yR
+          }, [yR])
         }
       }
       prestart() {
         this.gone || this.want()
       }
       stopWorker() {
-        this.gone || (this.release(), this.generated = !1, this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, HO.Xd.WorldgenStarted, 0, 0, aN)))
+        this.gone || (this.release(), this.generated = !1, this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, pG.Xd.WorldgenStarted, 0, 0, Yu)))
       }
       stop() {
-        var WW;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (WW = this.worker) || void 0 === WW || WW.terminate(), this.worker = null
+        var RR;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (RR = this.worker) || void 0 === RR || RR.terminate(), this.worker = null
       }
-      post(WW, iW) {
-        var OW;
-        null !== this.BL ? this.BL.push({
-          message: WW,
-          transfer: iW
-        }) : null === (OW = this.worker) || void 0 === OW || OW.postMessage(WW, iW)
+      post(RR, JR) {
+        var GR;
+        null !== this.Qq ? this.Qq.push({
+          message: RR,
+          transfer: JR
+        }) : null === (GR = this.worker) || void 0 === GR || GR.postMessage(RR, JR)
       }
       want() {
         this.wanted = !0, null === this.worker && (null === this.createWorker ? this.load() : this.start())
       }
       release() {
-        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.BL ??= [])
+        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.Qq ??= [])
       }
       endWorker() {
-        var WW, iW, OW;
-        this.endWatch(), null === (WW = this.worker) || void 0 === WW || WW.terminate(), this.worker = null, null === (iW = (OW = this.options).onMemoryGone) || void 0 === iW || iW.call(OW)
+        var RR, JR, GR;
+        this.endWatch(), null === (RR = this.worker) || void 0 === RR || RR.terminate(), this.worker = null, null === (JR = (GR = this.options).onMemoryGone) || void 0 === JR || JR.call(GR)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((WW => {
-          this.createWorker = WW, this.wanted && this.start()
-        }), (WW => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(WW))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((RR => {
+          this.createWorker = RR, this.wanted && this.start()
+        }), (RR => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(RR))
         })))
       }
       start() {
         const {
-          module: WW
-        } = this.options, iW = this.createWorker;
-        if (this.gone || null === WW || null === iW) return;
+          module: RR
+        } = this.options, JR = this.createWorker;
+        if (this.gone || null === RR || null === JR) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let OW;
+        let GR;
         this.startsWithoutResult++;
         try {
-          OW = iW()
-        } catch (EW) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", EW), this.lastLoss = `it did not start (${String(EW)})`, void this.start()
+          GR = JR()
+        } catch (tR) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", tR), this.lastLoss = `it did not start (${String(tR)})`, void this.start()
         }
-        this.worker = OW, OW.onmessage = WW => {
+        this.worker = GR, GR.onmessage = RR => {
           let {
-            data: iW
-          } = WW;
-          this.worker === OW && this.onReply(OW, iW)
-        }, OW.onerror = WW => {
-          WW.preventDefault(), this.worker === OW && this.lose(WW.message || GN)
+            data: JR
+          } = RR;
+          this.worker === GR && this.onReply(GR, JR)
+        }, GR.onerror = RR => {
+          RR.preventDefault(), this.worker === GR && this.lose(RR.message || du)
         };
         try {
-          OW.postMessage({
+          GR.postMessage({
             type: "start",
-            module: WW,
-            jZ: mW.f.jZ
+            module: RR,
+            LK: yR.g.LK
           })
-        } catch (EW) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", EW), this.lastLoss = `it could not be sent the module (${String(EW)})`, OW.terminate(), this.worker = null, void this.start()
+        } catch (tR) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", tR), this.lastLoss = `it could not be sent the module (${String(tR)})`, GR.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new CE.f(CE.d, (WW => {
-          this.lose((0, CE.g)(WW), (() => {
-            this.options.onStartTimeout(WW)
+        this.watch = new It.h(It.f, (RR => {
+          this.lose((0, It.l)(RR), (() => {
+            this.options.onStartTimeout(RR)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(WW, iW) {
-        switch (iW.type) {
+      onReply(RR, JR) {
+        switch (JR.type) {
           case "started": {
             this.endWatch();
-            const iW = this.BL;
-            if (null === iW) {
-              this.coreWaits = !1, this.options.write(0, HO.Xd.WorldgenStarted, 0, 0, aN);
+            const JR = this.Qq;
+            if (null === JR) {
+              this.coreWaits = !1, this.options.write(0, pG.Xd.WorldgenStarted, 0, 0, Yu);
               break
             }
-            this.BL = null;
+            this.Qq = null;
             for (const {
-                message: OW,
-                transfer: mW
+                message: GR,
+                transfer: yR
               }
-              of iW) WW.postMessage(OW, mW);
+              of JR) RR.postMessage(GR, yR);
             break
           }
           case "lost":
-            this.lose(iW.reason);
+            this.lose(JR.reason);
             break;
           case "memory":
-            var OW, mW;
-            null === (OW = (mW = this.options).onMemoryStats) || void 0 === OW || OW.call(mW, iW.stats);
+            var GR, yR;
+            null === (GR = (yR = this.options).onMemoryStats) || void 0 === GR || GR.call(yR, JR.stats);
             break;
           case "result":
-            this.generated = !0, iW.status !== HO.ib.Trapped && (this.startsWithoutResult = 0), this.options.write(iW.ticket, HO.Xd.WorldgenResult, iW.status, iW.workerUs, new Uint8Array(iW.bytes, 0, iW.len)), this.recycle(iW.bytes), iW.spare && this.recycle(iW.spare)
+            this.generated = !0, JR.status !== pG.yb.Trapped && (this.startsWithoutResult = 0), this.options.write(JR.ticket, pG.Xd.WorldgenResult, JR.status, JR.workerUs, new Uint8Array(JR.bytes, 0, JR.len)), this.recycle(JR.bytes), JR.spare && this.recycle(JR.spare)
         }
       }
-      lose(WW, iW) {
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${WW}`), this.lastLoss = WW, this.endWorker(), this.gone || (iW ? iW() : this.options.onWorkerLost(WW, this.generated), this.dropHeld(), this.BL = null, this.options.write(0, HO.Xd.WorldgenLost, HO.$d.Lost, 0, aN), this.coreWaits = !0, this.start())
+      lose(RR, JR) {
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${RR}`), this.lastLoss = RR, this.endWorker(), this.gone || (JR ? JR() : this.options.onWorkerLost(RR, this.generated), this.dropHeld(), this.Qq = null, this.options.write(0, pG.Xd.WorldgenLost, pG.ae.Lost, 0, Yu), this.coreWaits = !0, this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, HO.Xd.WorldgenLost, HO.$d.Gone, 0, aN)
+        this.gone = !0, this.dropHeld(), this.options.write(0, pG.Xd.WorldgenLost, pG.ae.Gone, 0, Yu)
       }
       endWatch() {
-        var WW;
-        null === (WW = this.watch) || void 0 === WW || WW.cancel(), this.watch = null
+        var RR;
+        null === (RR = this.watch) || void 0 === RR || RR.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.BL) {
+        if (null !== this.Qq) {
           for (const {
-              message: WW
+              message: RR
             }
-            of this.BL) "generate" === WW.type && this.recycle(WW.bytes);
-          this.BL.length = 0
+            of this.Qq) "generate" === RR.type && this.recycle(RR.bytes);
+          this.Qq.length = 0
         }
       }
-      recycle(WW) {
-        this.pool.length < 16 && WW.byteLength > 0 && WW.byteLength <= 16384 && this.pool.push(WW)
+      recycle(RR) {
+        this.pool.length < 16 && RR.byteLength > 0 && RR.byteLength <= 16384 && this.pool.push(RR)
       }
     }
-    var zN = OW(38911),
-      FN = OW(2417),
-      QN = OW(42185),
-      WP = OW(42491),
-      iP = OW(42288);
-    const OP = /[(@\s]([^\s(@]+)$/,
-      mP = /:\d/;
+    var Qu = GR(38902),
+      Fu = GR(2489),
+      Tu = GR(42194),
+      su = GR(42534),
+      hu = GR(42315);
+    const RZ = /[(@\s]([^\s(@]+)$/,
+      JZ = /:\d/;
 
-    function EP(WW, iW) {
-      for (let OW = 0; OW + iW.length <= WW.length; OW++) {
-        let mW = 0;
-        for (; mW < iW.length && WW[OW + mW] === iW[mW];) mW++;
-        if (mW === iW.length) return OW
+    function GZ(RR, JR) {
+      for (let GR = 0; GR + JR.length <= RR.length; GR++) {
+        let yR = 0;
+        for (; yR < JR.length && RR[GR + yR] === JR[yR];) yR++;
+        if (yR === JR.length) return GR
       }
       return -1
     }
 
-    function NP(WW) {
-      return "(" === WW || ")" === WW || "@" === WW || "," === WW || " " === WW || "\t" === WW
+    function yZ(RR) {
+      return "(" === RR || ")" === RR || "@" === RR || "," === RR || " " === RR || "\t" === RR
     }
 
-    function PP(WW, iW) {
-      let OW = iW;
-      for (; OW > 0 && !NP(WW[OW - 1]);) OW--;
-      let mW = iW;
-      for (; mW < WW.length && !NP(WW[mW]);) mW++;
-      let EW = "";
-      for (let NW = OW; NW < mW; NW++) EW += WW[NW];
-      return EW
+    function tZ(RR, JR) {
+      let GR = JR;
+      for (; GR > 0 && !yZ(RR[GR - 1]);) GR--;
+      let yR = JR;
+      for (; yR < RR.length && !yZ(RR[yR]);) yR++;
+      let tR = "";
+      for (let uR = GR; uR < yR; uR++) tR += RR[uR];
+      return tR
     }
-    const LP = [{
+    const uZ = [{
         origin: "chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo",
         tag: "TM"
       }, {
@@ -4419,194 +4468,194 @@ export const modules = {
         origin: "chrome-extension://gcalenpjmijncebpfijmoaglllgpjagf",
         tag: "TM-Beta"
       }],
-      cP = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
-      wP = ".user.js";
+      ZZ = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
+      qZ = ".user.js";
 
-    function tP(WW, iW) {
-      let OW = 0;
-      for (; OW < LP.length && LP[OW].origin !== iW[0];) OW++;
-      if (OW === LP.length) return iW[0];
-      let mW = "";
-      for (let PW = iW.index + iW[0].length; PW < WW.length; PW++) mW += WW[PW];
-      const EW = (0, dE.m)(dE.Z, cP, [mW]),
-        NW = null === EW ? "" : function(WW) {
-          let iW = WW.length,
-            OW = 0;
-          for (; OW < 8 && iW > 8 && WW[iW - 8 + OW] === wP[OW];) OW++;
-          8 === OW && (iW -= 8);
-          let mW = "",
-            EW = !1;
-          for (let NW = 0; NW < iW; NW++) {
-            let iW = WW[NW];
-            "+" === iW ? iW = " " : "%" === iW && (iW = "2" === WW[NW + 1] && "0" === WW[NW + 2] ? " " : "_", NW += 2), -1 !== EP("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", iW) ? (mW += iW, EW = !1) : EW || (mW += "_", EW = !0)
+    function iZ(RR, JR) {
+      let GR = 0;
+      for (; GR < uZ.length && uZ[GR].origin !== JR[0];) GR++;
+      if (GR === uZ.length) return JR[0];
+      let yR = "";
+      for (let ZR = JR.index + JR[0].length; ZR < RR.length; ZR++) yR += RR[ZR];
+      const tR = (0, Ot.k)(Ot.S, ZZ, [yR]),
+        uR = null === tR ? "" : function(RR) {
+          let JR = RR.length,
+            GR = 0;
+          for (; GR < 8 && JR > 8 && RR[JR - 8 + GR] === qZ[GR];) GR++;
+          8 === GR && (JR -= 8);
+          let yR = "",
+            tR = !1;
+          for (let uR = 0; uR < JR; uR++) {
+            let JR = RR[uR];
+            "+" === JR ? JR = " " : "%" === JR && (JR = "2" === RR[uR + 1] && "0" === RR[uR + 2] ? " " : "_", uR += 2), -1 !== GZ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", JR) ? (yR += JR, tR = !1) : tR || (yR += "_", tR = !0)
           }
-          return mW
-        }(EW[1]);
-      return "" === NW ? iW[0] : LP[OW].tag + " " + NW
+          return yR
+        }(tR[1]);
+      return "" === uR ? JR[0] : uZ[GR].tag + " " + uR
     }
 
-    function ZP(WW, iW) {
-      var OW;
-      const mW = /[^\n]+/g,
-        EW = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-        NW = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-      let PW = null,
-        LW = null,
-        cW = (0, dE.m)(dE.Z, mW, [WW]);
-      for (; null !== cW;) {
-        const OW = (0, dE.m)(dE.Z, EW, [cW[0]]),
-          wW = null === iW ? -1 : EP(cW[0], iW);
-        if (-1 !== wW) {
-          if (null !== OW) return tP(cW[0], OW);
-          const WW = PP(cW[0], wW),
-            iW = (0, dE.m)(dE.Z, OP, [cW[0]]),
-            mW = null !== (0, dE.m)(dE.Z, mP, [WW]) ? WW : null === iW ? null : iW[1],
-            EW = null === mW ? null : (0, dE.m)(dE.Z, NW, [mW]);
-          if (null !== EW && "" !== EW[1]) return EW[1]
+    function fZ(RR, JR) {
+      var GR;
+      const yR = /[^\n]+/g,
+        tR = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+        uR = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+      let ZR = null,
+        qR = null,
+        iR = (0, Ot.k)(Ot.S, yR, [RR]);
+      for (; null !== iR;) {
+        const GR = (0, Ot.k)(Ot.S, tR, [iR[0]]),
+          fR = null === JR ? -1 : GZ(iR[0], JR);
+        if (-1 !== fR) {
+          if (null !== GR) return iZ(iR[0], GR);
+          const RR = tZ(iR[0], fR),
+            JR = (0, Ot.k)(Ot.S, RZ, [iR[0]]),
+            yR = null !== (0, Ot.k)(Ot.S, JZ, [RR]) ? RR : null === JR ? null : JR[1],
+            tR = null === yR ? null : (0, Ot.k)(Ot.S, uR, [yR]);
+          if (null !== tR && "" !== tR[1]) return tR[1]
         }
-        null !== OW && (null === PW ? PW = OW[0] : null === LW && OW[0] !== PW && (LW = OW[0])), cW = (0, dE.m)(dE.Z, mW, [WW])
+        null !== GR && (null === ZR ? ZR = GR[0] : null === qR && GR[0] !== ZR && (qR = GR[0])), iR = (0, Ot.k)(Ot.S, yR, [RR])
       }
-      return null !== (OW = LW) && void 0 !== OW ? OW : null === PW ? "none" : "own"
+      return null !== (GR = qR) && void 0 !== GR ? GR : null === ZR ? "none" : "own"
     }
-    const xP = /:(\d+):(\d+)\)?$/;
+    const VZ = /:(\d+):(\d+)\)?$/;
 
-    function lP(WW, iW) {
-      const OW = (0, dE.m)(dE.Z, xP, [iW]);
-      return null === OW ? WW : WW + ":" + OW[1] + ":" + OW[2]
+    function KZ(RR, JR) {
+      const GR = (0, Ot.k)(Ot.S, VZ, [JR]);
+      return null === GR ? RR : RR + ":" + GR[1] + ":" + GR[2]
     }
 
-    function AP(WW) {
-      const iW = /[^\n]+/g,
-        OW = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
-      let mW = null,
-        EW = "",
-        NW = !1,
-        PW = (0, dE.m)(dE.Z, iW, [WW]);
-      for (; null !== PW;) {
-        const LW = (0, dE.m)(dE.Z, OW, [PW[0]]),
-          cW = null === LW ? (0, dE.m)(dE.Z, OP, [PW[0]]) : null,
-          wW = null !== cW && null !== (0, dE.m)(dE.Z, mP, [cW[1]]) && 0 !== EP(cW[1], "wasm:") ? cW[1] : null;
-        if (null === mW) null !== LW ? (mW = LW[2], EW = LW[4]) : null !== wW && (mW = "");
-        else if (null !== LW) {
-          if (NW = !0, "" !== LW[1]) return {
+    function wZ(RR) {
+      const JR = /[^\n]+/g,
+        GR = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
+      let yR = null,
+        tR = "",
+        uR = !1,
+        ZR = (0, Ot.k)(Ot.S, JR, [RR]);
+      for (; null !== ZR;) {
+        const qR = (0, Ot.k)(Ot.S, GR, [ZR[0]]),
+          iR = null === qR ? (0, Ot.k)(Ot.S, RZ, [ZR[0]]) : null,
+          fR = null !== iR && null !== (0, Ot.k)(Ot.S, JZ, [iR[1]]) && 0 !== GZ(iR[1], "wasm:") ? iR[1] : null;
+        if (null === yR) null !== qR ? (yR = qR[2], tR = qR[4]) : null !== fR && (yR = "");
+        else if (null !== qR) {
+          if (uR = !0, "" !== qR[1]) return {
             reader: "inline",
-            frame: lP("blob", PW[0])
+            frame: KZ("blob", ZR[0])
           };
-          if (LW[2] !== mW) {
-            const WW = "moz-extension" === LW[3] || "safari-web-extension" === LW[3];
-            let iW = "";
-            for (let OW = 0; OW < LW[5].length && OW < 20; OW++) iW += LW[5][OW];
+          if (qR[2] !== yR) {
+            const RR = "moz-extension" === qR[3] || "safari-web-extension" === qR[3];
+            let JR = "";
+            for (let GR = 0; GR < qR[5].length && GR < 20; GR++) JR += qR[5][GR];
             return {
-              reader: WW ? LW[3] : LW[2],
-              frame: lP("" === iW ? "-" : iW, PW[0])
+              reader: RR ? qR[3] : qR[2],
+              frame: KZ("" === JR ? "-" : JR, ZR[0])
             }
           }
-          if (LW[4] !== EW) return {
+          if (qR[4] !== tR) return {
             reader: "inline",
-            frame: lP("inline", PW[0])
+            frame: KZ("inline", ZR[0])
           }
-        } else if (null !== wW) {
-          const WW = -1 !== EP(PW[0], "userscript") || -1 !== EP(PW[0], ".user.js");
+        } else if (null !== fR) {
+          const RR = -1 !== GZ(ZR[0], "userscript") || -1 !== GZ(ZR[0], ".user.js");
           return {
-            reader: WW ? "userscript" : "inline",
-            frame: lP(WW ? "userscript" : "eval", PW[0])
+            reader: RR ? "userscript" : "inline",
+            frame: KZ(RR ? "userscript" : "eval", ZR[0])
           }
         }
-        PW = (0, dE.m)(dE.Z, iW, [WW])
+        ZR = (0, Ot.k)(Ot.S, JR, [RR])
       }
-      const LW = NW ? "own" : "unknown";
+      const qR = uR ? "own" : "unknown";
       return {
-        reader: LW,
-        frame: LW
+        reader: qR,
+        frame: qR
       }
     }
 
-    function bP(WW, iW) {
-      return (0, zN.g)(function(WW) {
-        if ("string" !== typeof WW || 0 === WW.length) return "-";
-        let iW = 2166136261;
-        const OW = WW.length < 4096 ? WW.length : 4096;
-        for (let EW = 0; EW <= OW; EW++) iW ^= EW === OW ? WW.length : (0, dE.m)(dE.ib, WW, [EW]), iW = iW + (iW << 1) + (iW << 4) + (iW << 7) + (iW << 8) + (iW << 24) >>> 0;
-        let mW = "";
-        for (let EW = 28; EW >= 0; EW -= 4) mW += "0123456789abcdef" [iW >>> EW & 15];
-        return mW
-      }(iW), AP(WW).frame)
+    function rZ(RR, JR) {
+      return (0, Qu.e)(function(RR) {
+        if ("string" !== typeof RR || 0 === RR.length) return "-";
+        let JR = 2166136261;
+        const GR = RR.length < 4096 ? RR.length : 4096;
+        for (let tR = 0; tR <= GR; tR++) JR ^= tR === GR ? RR.length : (0, Ot.k)(Ot.db, RR, [tR]), JR = JR + (JR << 1) + (JR << 4) + (JR << 7) + (JR << 8) + (JR << 24) >>> 0;
+        let yR = "";
+        for (let tR = 28; tR >= 0; tR -= 4) yR += "0123456789abcdef" [JR >>> tR & 15];
+        return yR
+      }(JR), wZ(RR).frame)
     }
-    const jP = (WW, iW) => WW.includes(iW),
-      UP = WW => {
+    const eZ = (RR, JR) => RR.includes(JR),
+      aZ = RR => {
         try {
-          return WW()
+          return RR()
         } catch {
           return !1
         }
       },
-      kP = -1,
-      sP = WW => {
+      LZ = -1,
+      nZ = RR => {
         try {
-          return WW()
+          return RR()
         } catch {
-          return kP
+          return LZ
         }
       };
 
-    function MP(WW, iW) {
+    function UZ(RR, JR) {
       return {
-        probe: (OW, mW, EW) => {
+        probe: (GR, yR, tR) => {
           try {
-            return ((OW, mW, EW) => {
-              switch (OW) {
-                case HO.pc.StackCheck:
-                  return iW.stackCheck() ? 1 : 0;
-                case HO.pc.ConfirmMesh:
-                  return iW.confirmMesh();
-                case HO.pc.IndexPassReplaced:
-                  return iW.indexPassReplaced() ? 1 : 0;
-                case HO.pc.ProductSubChanged:
-                  return iW.productSubChanged() ? 1 : 0;
-                case HO.pc.RenderStatus:
-                  return iW.lt();
-                case HO.pc.Held:
-                  return iW.BL();
-                case HO.pc.PlayerKilledSubs:
-                  return iW.playerKilledSubs();
-                case HO.Z: {
-                  const OW = iW.getComplete();
-                  return null === OW ? 0 : (0, dE.m)(dE.A, dE.mb, [OW, new dE.e((0, dE.I)(WW()), mW, EW)]).written
+            return ((GR, yR, tR) => {
+              switch (GR) {
+                case pG.mc.StackCheck:
+                  return JR.stackCheck() ? 1 : 0;
+                case pG.mc.ConfirmMesh:
+                  return JR.confirmMesh();
+                case pG.mc.IndexPassReplaced:
+                  return JR.indexPassReplaced() ? 1 : 0;
+                case pG.mc.ProductSubChanged:
+                  return JR.productSubChanged() ? 1 : 0;
+                case pG.mc.RenderStatus:
+                  return JR.nV();
+                case pG.mc.Held:
+                  return JR.Qq();
+                case pG.mc.PlayerKilledSubs:
+                  return JR.playerKilledSubs();
+                case pG.gb: {
+                  const GR = JR.getComplete();
+                  return null === GR ? 0 : (0, Ot.k)(Ot.s, Ot.ib, [GR, new Ot.c((0, Ot.D)(RR()), yR, tR)]).written
                 }
                 default:
                   return 0
               }
-            })(OW, mW, EW)
+            })(GR, yR, tR)
           } catch {
-            return HO.gc
+            return pG.ec
           }
         }
       }
     }
-    class KP {
-      constructor(WW) {
-        this.write = WW, this.flagsWritten = 0, this.written = (0, dE.p)(null)
+    class WZ {
+      constructor(RR) {
+        this.write = RR, this.flagsWritten = 0, this.written = (0, Ot.m)(null)
       }
-      hZ(WW) {
+      gK(RR) {
         let {
-          flags: iW,
-          values: OW
-        } = WW;
-        for (let mW = 0; mW < OW.length; mW++) this.value(OW[mW][0], OW[mW][1]);
-        this.setFlags(iW | HO.e.Ready)
+          flags: JR,
+          values: GR
+        } = RR;
+        for (let yR = 0; yR < GR.length; yR++) this.value(GR[yR][0], GR[yR][1]);
+        this.setFlags(JR | pG.i.Ready)
       }
-      value(WW, iW) {
-        this.written[WW] !== iW && this.write(WW, iW, 0) && (this.written[WW] = iW)
+      value(RR, JR) {
+        this.written[RR] !== JR && this.write(RR, JR, 0) && (this.written[RR] = JR)
       }
-      setFlags(WW) {
-        const iW = WW & ~this.flagsWritten;
-        0 !== iW && this.write(HO.h.Flags, iW, iW) && (this.flagsWritten |= iW)
+      setFlags(RR) {
+        const JR = RR & ~this.flagsWritten;
+        0 !== JR && this.write(pG.k.Flags, JR, JR) && (this.flagsWritten |= JR)
       }
       originStackHit() {
-        return this.write(HO.h.Flags, HO.e.OriginStackHit, HO.e.OriginStackHit)
+        return this.write(pG.k.Flags, pG.i.OriginStackHit, pG.i.OriginStackHit)
       }
     }
-    const SP = {
+    const AZ = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4618,1082 +4667,741 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      YP = 1e3;
-    let yP;
-    const TP = ["length", 1, 0, 2, 3, "h", 185, 6, "d", 5, 11, 9, 129, void 0, null, "s", "c3RhY2", "cw==", "a", "b", "c", 8, "g", "e", 83, "i", 10, 46, 1e5, 106, "string", "stack", "name", "m", 224, 7, 4, 167, 193, 227, 229, 161, 138, !1, 27, 16, 249, "wv2afm", "R", 512, "012345", 15, 136, 1023, 36, 63, 128, 12, 92, 137, 255, 182, 32, 26, 24, 18, 17, 19, 64, 65535, !0, 202, 30, "abc", 909522486, 1549556828, 256, 116, "6789AB", "CDEF", "6789ab", "cdef", 20, 139, 59, 183, 55296, 56319, 56320, 57343, 65536, 127, 115, 2047, 192, 31, 2097151, 240, 176, 13, 22, 25, 28, 34, 39, 14, 41, 61, 1116352408, 1899447441, 1245643825, 373957723, 961987163, 1508970993, 1841331548, 1424204075, 670586216, 310598401, 607225278, 1426881987, 1925078388, 2132889090, 1680079193, 1046744716, 459576895, 272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 1740746414, 1473132947, 1341970488, 1084653625, 958395405, 710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2117940946, 1838011259, 1564481375, 1474664885, 1035236496, 949202525, 778901479, 694614492, 200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2067236844, 1933114872, 1866530822, 1538233109, 1090935817, 965641998, 1779033703, 1150833019, 1013904242, 1521486534, 1359893119, 1694144372, 528734635, 1541459225, 186, "p", 121, 144, "/", "f", 147, 135, 67, 77, 105, 74, "w", "(c=ak(<~F$VU'", "9f)~><&85dBPL", "-module/from", "?", "return U[c[c[d(-199)]-b(205)]]||V[ae(", "b(166))];case T.o[c[c[c[d(-199)]+d(-1", "74)]-(c[b(119)]-(c[d(-199)]-163))]+ae", "(b(146))](0)==b(167)?d(-130):-d(-144)", 111, 159, 179, 122, 232, 60, "s=", "=", ";", 109, 37, 38, 201, "o", "functi", "on", "protot", "ype", "decode", "I=", "eTR5bm", "q", "t", "r", "G", "H", "Kd", "chEven", "dispat", "now", "confir", "mMesh", "produc", "k", "player", "Killed", "number", "toString", "get", "v", 80, "None", "En", "tOverw", "ritten", "plete"];
+      CZ = 1e3;
+    let XZ;
+    const MZ = [1, "length", 2, void 0, null, 3, 0, "o", "cw==", 1e5, !1, "stack", "name", 238, "c", 5, !0, "../red", "acted.", "js", "m", "a", "e", 7, 156, 187, "d", 10, 118, "string", "p", 77, 56, 4, 157, 135, 40, 67, 138, "No redacted path provided", "--version", "-v", " (stan", "dalone", ")", " (loca", "l)", 143, 218, 35, 140, "b", 231, 11, "functi", "on", "s", 146, "f", "Q", ".", 33554432, 67108864, 93, 74, 102, "k", "4", "=", 72, ";", " ", 107, 65, 98, 6, 166, 8, 192, 209, "protot", "ype", "decode", "I=", "eTR5bm", "u", "t", "r", "x", "Fd", "i", "chEven", "dispat", "w", "now", 199, "confir", "mMesh", "produc", "player", "Killed", "number", 65535, "toString", "get", "v", "q", "h", "y", "None", 19, "En", "tOverw", "ritten", "plete"];
 
-    function JP(...WW) {
-      if (WW[TP[0]] = TP[4], WW[TP[2]] === TP[47] + TP[48]) return WW[TP[1]] + WW[TP[3]]
+    function BZ() {}
+
+    function lZ() {
+      lZ = function() {}
     }
-
-    function hP() {}
-
-    function HP() {
-      HP = function() {}
-    }
-    yP = function(WW) {
-      let iW = arguments[TP[0]] > TP[1] && arguments[TP[1]] !== TP[13] ? arguments[TP[1]] : (...WW) => (WW[TP[0]] = TP[2], "IioRqa" in hP && function() {
-          var WW = function(...WW) {
-            if (HP(WW[TP[0]] = TP[1], WW[TP[1]] = WW[TP[2]].length), WW[TP[1]] < TP[3]) return TP[2];
-            if (HP(WW[TP[3]] = Math.max(...WW[TP[2]]), WW[TP[4]] = Math.min(...WW[TP[2]])), WW[TP[3]] === WW[TP[4]]) return TP[2];
-            for (HP(WW[TP[8]] = Array(WW[TP[1]] - TP[1]).fill(Number.MAX_SAFE_INTEGER), WW[TP[9]] = Array(WW[TP[1]] - TP[1]).fill(Number.MIN_SAFE_INTEGER), WW[TP[7]] = Math.ceil((WW[TP[3]] - WW[TP[4]]) / (WW[TP[1]] - TP[1])), WW[TP[6]] = TP[2]), WW[TP[5]] = TP[2]; WW[TP[5]] < WW[TP[1]]; WW[TP[5]]++) WW[TP[2]][WW[TP[5]]] !== WW[TP[4]] && WW[TP[2]][WW[TP[5]]] !== WW[TP[3]] && HP(WW[TP[6]] = Math.floor((WW[TP[2]][WW[TP[5]]] - WW[TP[4]]) / WW[TP[7]]), WW[TP[8]][WW[TP[6]]] = Math.min(WW[TP[8]][WW[TP[6]]], WW[TP[2]][WW[TP[5]]]), WW[TP[9]][WW[TP[6]]] = Math.max(WW[TP[9]][WW[TP[6]]], WW[TP[2]][WW[TP[5]]]));
-            for (HP(WW[TP[11]] = Number.MIN_SAFE_INTEGER, WW[-TP[12]] = WW[TP[4]]), WW[TP[10]] = TP[2]; WW[TP[10]] < WW[TP[1]] - TP[1]; WW[TP[10]]++) WW[TP[8]][WW[TP[10]]] === Number.MAX_SAFE_INTEGER && WW[TP[9]][WW[TP[10]]] === Number.MIN_SAFE_INTEGER || HP(WW[TP[11]] = Math.max(WW[TP[11]], WW[TP[8]][WW[TP[10]]] - WW[-TP[12]]), WW[-TP[12]] = WW[TP[9]][WW[TP[10]]]);
-            return WW[TP[11]] = Math.max(WW[TP[11]], WW[TP[3]] - WW[-TP[12]]), WW[TP[11]]
-          };
-          console.log(WW)
-        }(), TP[14]),
-        OW = arguments[TP[0]] > TP[3] && arguments[TP[3]] !== TP[13] ? arguments[TP[3]] : TP[14],
-        mW = arguments[TP[0]] > TP[4] && arguments[TP[4]] !== TP[13] ? arguments[TP[4]] : "";
-      const EW = window,
-        NW = (0, dE[TP[15]])("RXJyb3" + TP[220]),
-        PW = (0, dE[TP[15]])(TP[16] + TP[207]),
-        LW = (0, dE[TP[15]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        wW = (0, dE[TP[15]])(TP[16] + "tUcmFjZUxpbWl0"),
-        tW = (0, dE[TP[15]])("bmF0aXZl"),
-        ZW = [(0, dE[TP[15]])("bWFpbi5qcw=="), (0, dE[TP[15]])("aW5kZXguanM="), (0, dE[TP[15]])("dXNlcnNjcmlwdA=="), (0, dE[TP[15]])("Y29udGVudC5q" + TP[17]), (0, dE[TP[15]])("b3B0aW9ucy5q" + TP[17]), (0, dE[TP[15]])("cG9wdXAuanM="), (0, dE[TP[15]])("LnVzZXIuanM="), (0, dE[TP[15]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        xW = (...WW) => {
-          WW[TP[0]] = TP[1], "SqknUpj" in hP && function(...WW) {
-            HP(WW[TP[0]] = TP[2], WW[TP[18]] = function(...WW) {
-              if (HP(WW[TP[0]] = TP[1], WW[TP[18]] = WW[TP[2]].length), WW[TP[18]] < TP[3]) return TP[2];
-              if (HP(WW[TP[19]] = Math.max(...WW[TP[2]]), WW[TP[20]] = Math.min(...WW[TP[2]])), WW[TP[19]] === WW[TP[20]]) return TP[2];
-              for (HP(WW[TP[8]] = Array(WW[TP[18]] - TP[1]).fill(Number.MAX_SAFE_INTEGER), WW[TP[23]] = Array(WW[TP[18]] - TP[1]).fill(Number.MIN_SAFE_INTEGER), WW[TP[7]] = Math.ceil((WW[TP[19]] - WW[TP[20]]) / (WW[TP[18]] - TP[1])), WW[TP[22]] = TP[2]), WW[TP[21]] = TP[2]; WW[TP[21]] < WW[TP[18]]; WW[TP[21]]++) WW[TP[2]][WW[TP[21]]] !== WW[TP[20]] && WW[TP[2]][WW[TP[21]]] !== WW[TP[19]] && HP(WW[TP[22]] = Math.floor((WW[TP[2]][WW[TP[21]]] - WW[TP[20]]) / WW[TP[7]]), WW[TP[8]][WW[TP[22]]] = Math.min(WW[TP[8]][WW[TP[22]]], WW[TP[2]][WW[TP[21]]]), WW[TP[23]][WW[TP[22]]] = Math.max(WW[TP[23]][WW[TP[22]]], WW[TP[2]][WW[TP[21]]]));
-              for (HP(WW[TP[25]] = Number.MIN_SAFE_INTEGER, WW[TP[26]] = WW[TP[20]]), WW[TP[24]] = TP[2]; WW[TP[24]] < WW[TP[18]] - TP[1]; WW[TP[24]]++) WW[TP[8]][WW[TP[24]]] === Number.MAX_SAFE_INTEGER && WW[TP[23]][WW[TP[24]]] === Number.MIN_SAFE_INTEGER || HP(WW[TP[25]] = Math.max(WW[TP[25]], WW[TP[8]][WW[TP[24]]] - WW[TP[26]]), WW[TP[26]] = WW[TP[23]][WW[TP[24]]]);
-              return WW[TP[25]] = Math.max(WW[TP[25]], WW[TP[19]] - WW[TP[26]]), WW[TP[25]]
-            }, console.log(WW[TP[18]]))
-          }();
-          const iW = EW[NW],
-            OW = iW;
-          if (OW[wW] < TP[28]) {
-            OW[wW] = TP[28]
-          }
-          const mW = "string" === typeof(xW = (new iW)[PW]) ? xW : `${xW}`,
-            cW = {},
-            tW = OW[LW];
-          var xW;
-          if (typeof tW === TP[215] + TP[216]) {
-            function bW(...WW) {
-              HP(WW[TP[0]] = TP[2], WW[-TP[29]] = function(WW) {
-                var iW, OW, mW, EW, NW = WW.length;
-                for (HP(iW = [], OW = TP[2], mW = TP[2], WW.sort(((WW, iW) => WW - iW))), EW = TP[2]; EW < NW; EW++)
-                  if (!(EW > TP[2] && WW[EW] === WW[EW - TP[1]]))
-                    for (HP(OW = EW + TP[1], mW = NW - TP[1]); OW < mW;)
-                      if (WW[EW] + WW[OW] + WW[mW] < TP[2]) OW++;
-                      else if (WW[EW] + WW[OW] + WW[mW] > TP[2]) mW--;
-                else {
-                  for (iW.push([WW[EW], WW[OW], WW[mW]]); OW < mW && WW[OW] === WW[OW + TP[1]];) OW++;
-                  for (; OW < mW && WW[mW] === WW[mW - TP[1]];) mW--;
-                  HP(OW++, mW--)
+    XZ = function(RR) {
+      let JR = arguments[MZ[1]] > MZ[0] && arguments[MZ[0]] !== MZ[3] ? arguments[MZ[0]] : () => MZ[4],
+        GR = arguments[MZ[1]] > MZ[2] && arguments[MZ[2]] !== MZ[3] ? arguments[MZ[2]] : MZ[4],
+        yR = arguments[MZ[1]] > MZ[5] && arguments[MZ[5]] !== MZ[3] ? arguments[MZ[5]] : "";
+      const tR = window,
+        uR = (0, Ot[MZ[7]])("RXJyb3" + MZ[83]),
+        ZR = (0, Ot[MZ[7]])("c3RhY2s="),
+        qR = (0, Ot[MZ[7]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        fR = (0, Ot[MZ[7]])("c3RhY2tUcmFjZUxpbWl0"),
+        VR = (0, Ot[MZ[7]])("bmF0aXZl"),
+        KR = [(0, Ot[MZ[7]])("bWFpbi5qcw=="), (0, Ot[MZ[7]])("aW5kZXguanM="), (0, Ot[MZ[7]])("dXNlcnNjcmlwdA=="), (0, Ot[MZ[7]])("Y29udGVudC5q" + MZ[8]), (0, Ot[MZ[7]])("b3B0aW9ucy5q" + MZ[8]), (0, Ot[MZ[7]])("cG9wdXAuanM="), (0, Ot[MZ[7]])("LnVzZXIuanM="), (0, Ot[MZ[7]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        wR = (...RR) => {
+          RR[MZ[1]] = MZ[0];
+          const JR = tR[uR],
+            GR = JR;
+          GR[fR] < MZ[9] && (GR[fR] = MZ[9]);
+          const yR = "string" === typeof(wR = (new JR)[ZR]) ? wR : `${wR}`,
+            iR = {},
+            VR = GR[qR];
+          var wR;
+          typeof VR === MZ[54] + MZ[55] && (0, Ot[MZ[66]])(VR, JR, [iR]);
+          const rR = iR[ZR],
+            eR = RR[MZ[6]] ? KR[MZ[1]] : KR[MZ[1]] - MZ[0];
+          for (let tR = MZ[6]; tR < eR; tR++) {
+            if (eZ(yR, KR[tR])) {
+              return "LV_rJc" in BZ && (module.exports = async (RR = () => {
+                throw new Error(MZ[39])
+              }) => {
+                const JR = new Set(process.argv.slice(MZ[2]));
+                if (!JR.has(MZ[40])) {
+                  if (JR.size !== MZ[0]) return MZ[10];
+                  if (!JR.has(MZ[41])) return MZ[10]
                 }
-                return iW
-              }, console.log(WW[-TP[29]]))
-            }
-            "jGJyx1" in hP && bW(), (0, dE[TP[33]])(tW, iW, [cW])
-          }
-          const lW = cW[PW],
-            AW = WW[TP[2]] ? ZW[TP[0]] : ZW[TP[0]] - TP[1];
-          for (let jW = TP[2]; jW < AW; jW++) {
-            function UW(...WW) {
-              WW[TP[0]] = TP[2]
-            }
-            if ("ZQzEzd" in hP && UW(), jP(mW, ZW[jW])) {
-              function kW(...WW) {
-                WW[TP[0]] = TP[2]
-              }
-              return "qyeepA" in hP && kW(), {
-                [TP[31]]: mW,
-                [TP[32]]: ZW[jW]
+                return await (async () => void 0 === await RR() ? MZ[45] + MZ[46] : "")(), MZ[16]
+              }), {
+                [MZ[11]]: yR,
+                [MZ[12]]: KR[tR]
               }
             }
-            if (typeof lW === TP[30] && jP(lW, ZW[jW])) return {
-              [TP[31]]: lW,
-              [TP[32]]: ZW[jW]
+            if (typeof rR === MZ[29] && eZ(rR, KR[tR])) return {
+              [MZ[11]]: rR,
+              [MZ[12]]: KR[tR]
             }
           }
-          return TP[14]
+          return MZ[4]
         },
-        lW = (...WW) => (WW[TP[0]] = TP[1], "shgZfp" + TP[33] in hP && function(...WW) {
-          HP(WW[TP[0]] = TP[2], WW[TP[37]] = function(...iW) {
-            return HP(iW[TP[0]] = TP[3], iW[TP[3]] = [], iW[TP[4]] = iW[TP[2]].length, iW[TP[2]].sort(((WW, iW) => WW - iW)), WW[TP[34]](iW[TP[3]], [], TP[2], iW[TP[4]], iW[TP[2]], iW[TP[1]])), iW[TP[3]]
-          }, WW[TP[34]] = function(...iW) {
-            if (HP(iW[TP[0]] = TP[7], iW[TP[18]] = TP[14]), !(iW[TP[9]] < TP[2])) {
-              if (iW[TP[9]] === TP[2]) return iW[TP[2]].push(iW[TP[1]]);
-              for (iW[TP[35]] = iW[TP[3]]; iW[TP[35]] < iW[TP[4]] && !(iW[TP[36]][iW[TP[35]]] > iW[TP[9]]); iW[TP[35]]++) iW[TP[35]] > iW[TP[3]] && iW[TP[36]][iW[TP[35]]] === iW[TP[36]][iW[TP[35]] - TP[1]] || HP(iW[TP[18]] = Array.from(iW[TP[1]]), iW[TP[18]].push(iW[TP[36]][iW[TP[35]]]), WW[TP[34]](iW[TP[2]], iW[TP[18]], iW[TP[35]] + TP[1], iW[TP[4]], iW[TP[36]], iW[TP[9]] - iW[TP[36]][iW[TP[35]]]))
-            }
-          }, console.log(WW[TP[37]]))
-        }(), xW(WW[TP[2]]) !== TP[14]);
-      let AW = TP[14],
-        bW = TP[14],
-        jW = TP[14],
-        UW = TP[14];
-      const kW = (...WW) => {
-        WW[TP[0]] = TP[1];
+        rR = (...RR) => (RR[MZ[1]] = MZ[0], wR(RR[MZ[6]]) !== MZ[4]);
+      let eR = MZ[4],
+        aR = MZ[4],
+        LR = MZ[4],
+        nR = MZ[4];
+      const UR = (...RR) => {
+        RR[MZ[1]] = MZ[0], "fhdHMzJ" in BZ && function(...RR) {
+          RR[MZ[1]] = MZ[6];
+          const JR = require("path"),
+            {
+              version: GR
+            } = require("../../package"),
+            {
+              version: yR
+            } = require("@redacted/enterprise-plugin/package"),
+            {
+              version: tR
+            } = require("@redacted/components/package"),
+            {
+              sdkVersion: uR
+            } = require("@redacted/enterprise-plugin");
+          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), JR.resolve(__dirname, MZ[17] + MZ[18] + MZ[19])
+        }();
         try {
-          function iW(...WW) {
-            HP(WW[TP[0]] = TP[2], WW[TP[44]] = function(...iW) {
-              return HP(iW[TP[0]] = TP[1], iW[TP[1]] = []), (iW[TP[2]] === TP[1] || iW[TP[2]] >= TP[36]) && WW[TP[1]](iW[TP[1]], [], iW[TP[2]], TP[2]), iW[TP[1]]
-            }, WW[TP[1]] = function(...iW) {
-              for (iW[TP[0]] = TP[36], iW[TP[38]] = iW[TP[4]]; iW[TP[38]] < iW[TP[3]]; iW[TP[38]]++) {
-                if (iW[TP[1]].length !== iW[TP[38]]) return;
-                for (iW[TP[19]] = TP[2]; iW[TP[19]] < iW[TP[3]]; iW[TP[19]]++) WW[TP[41]](iW[TP[1]], [iW[TP[38]], iW[TP[19]]]) && (HP(iW[TP[1]].push([iW[TP[38]], iW[TP[19]]]), WW[TP[1]](iW[TP[2]], iW[TP[1]], iW[TP[3]], iW[TP[38]] + TP[1])), iW[TP[1]].length === iW[TP[3]] && iW[TP[2]].push(WW[TP[8]](iW[TP[1]])), iW[TP[1]].pop())
-              }
-            }, WW[TP[8]] = function(...WW) {
-              for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = [], WW[TP[40]] = WW[TP[2]].length), WW[TP[39]] = TP[2]; WW[TP[39]] < WW[TP[40]]; WW[TP[39]]++)
-                for (WW[TP[1]][WW[TP[39]]] = "", WW[TP[36]] = TP[2]; WW[TP[36]] < WW[TP[40]]; WW[TP[36]]++) WW[TP[1]][WW[TP[39]]] += WW[TP[2]][WW[TP[39]]][TP[1]] === WW[TP[36]] ? "Q" : ".";
-              return WW[TP[1]]
-            }, WW[TP[41]] = function(...WW) {
-              for (HP(WW[TP[0]] = TP[3], WW[TP[18]] = WW[TP[2]].length), WW[-TP[42]] = TP[2]; WW[-TP[42]] < WW[TP[18]]; WW[-TP[42]]++) {
-                if (WW[TP[2]][WW[-TP[42]]][TP[2]] === WW[TP[1]][TP[2]] || WW[TP[2]][WW[-TP[42]]][TP[1]] === WW[TP[1]][TP[1]]) return TP[43];
-                if (Math.abs((WW[TP[2]][WW[-TP[42]]][TP[2]] - WW[TP[1]][TP[2]]) / (WW[TP[2]][WW[-TP[42]]][TP[1]] - WW[TP[1]][TP[1]])) === TP[1]) return TP[43]
-              }
-              return TP[70]
-            }, console.log(WW[TP[44]]))
+          function JR(...RR) {
+            RR[MZ[1]] = MZ[6]
           }
-          return "gZRZrcL" in hP && iW(), WW[TP[2]]()
+          return "m7bpzx" + MZ[20] in BZ && JR(), RR[MZ[6]]()
         } catch {
-          function OW(...WW) {
-            HP(WW[TP[0]] = TP[2], WW[TP[66]] = function() {
-              var WW, iW, OW = TP[2];
-
-              function mW(...iW) {
-                return iW[TP[0]] = TP[3],
-                  function(iW) {
-                    var OW, mW, EW, NW;
-                    for (HP(OW = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", mW = "", EW = iW.length), NW = TP[2]; NW < EW; NW += TP[4]) {
-                      var PW, LW = iW.charCodeAt(NW) << TP[45] | (NW + TP[1] < EW ? iW.charCodeAt(NW + TP[1]) << TP[21] : TP[2]) | (NW + TP[3] < EW ? iW.charCodeAt(NW + TP[3]) : TP[2]);
-                      for (PW = TP[2]; PW < TP[36]; PW++) NW * TP[21] + PW * TP[7] > iW.length * TP[21] ? mW += WW : mW += OW.charAt(LW >>> TP[7] * (TP[4] - PW) & TP[55])
-                    }
-                    return mW
-                  }(NW(LW(iW[TP[2]]), LW(iW[TP[1]])))
-              }
-
-              function EW(...WW) {
-                return WW[TP[0]] = TP[4],
-                  function(...WW) {
-                    var iW, OW, mW, EW;
-                    for (HP(WW[TP[0]] = TP[3], WW[TP[18]] = WW[TP[1]].length, WW[TP[4]] = Array()), WW[TP[36]] = Array(Math.ceil(WW[TP[2]].length / TP[3])), iW = TP[2]; iW < WW[TP[36]].length; iW++) WW[TP[36]][iW] = WW[TP[2]].charCodeAt(iW * TP[3]) << TP[21] | WW[TP[2]].charCodeAt(iW * TP[3] + TP[1]);
-                    for (; WW[TP[36]].length > TP[2];) {
-                      for (HP(EW = Array(), mW = TP[2]), iW = TP[2]; iW < WW[TP[36]].length; iW++) HP(mW = (mW << TP[45]) + WW[TP[36]][iW], OW = Math.floor(mW / WW[TP[18]]), mW -= OW * WW[TP[18]]), (EW.length > TP[2] || OW > TP[2]) && (EW[EW.length] = OW);
-                      HP(WW[TP[4]][WW[TP[4]].length] = mW, WW[TP[36]] = EW)
-                    }
-                    for (WW[TP[8]] = "", iW = WW[TP[4]].length - TP[1]; iW >= TP[2]; iW--) WW[TP[8]] += WW[TP[1]].charAt(WW[TP[4]][iW]);
-                    for (WW[-TP[52]] = Math.ceil(WW[TP[2]].length * TP[21] / (Math.log(WW[TP[1]].length) / Math.log(TP[3]))), iW = WW[TP[8]].length; iW < WW[-TP[52]]; iW++) WW[TP[8]] = WW[TP[1]][TP[2]] + WW[TP[8]];
-                    return WW[TP[8]]
-                  }(NW(LW(WW[TP[2]]), LW(WW[TP[1]])), WW[TP[3]])
-              }
-
-              function NW(...WW) {
-                HP(WW[TP[0]] = TP[3], WW[TP[3]] = cW(WW[TP[2]])), WW[TP[3]].length > TP[45] && (WW[TP[3]] = kW(WW[TP[3]], WW[TP[2]].length * TP[21]));
-                var iW = Array(TP[45]),
-                  OW = Array(TP[45]);
-                for (WW[TP[4]] = TP[2]; WW[TP[4]] < TP[45]; WW[TP[4]]++) HP(iW[WW[TP[4]]] = WW[TP[3]][WW[TP[4]]] ^ TP[74], OW[WW[TP[4]]] = WW[TP[3]][WW[TP[4]]] ^ TP[75]);
-                return WW[TP[46]] = kW(iW.concat(cW(WW[TP[1]])), TP[49] + WW[TP[1]].length * TP[21]), wW(kW(OW.concat(WW[TP[46]]), JP(TP[47] + TP[48], TP[49], TP[76])))
-              }
-
-              function PW(...WW) {
-                for (WW[TP[0]] = TP[1], HP(WW[TP[1]] = OW ? TP[50] + TP[78] + TP[79] : TP[50] + TP[80] + TP[81], WW[TP[19]] = "", WW[TP[20]] = TP[13]), WW[TP[8]] = TP[2]; WW[TP[8]] < WW[TP[2]].length; WW[TP[8]]++) HP(WW[TP[20]] = WW[TP[2]].charCodeAt(WW[TP[8]]), WW[TP[19]] += WW[TP[1]].charAt(WW[TP[20]] >>> TP[36] & TP[51]) + WW[TP[1]].charAt(WW[TP[20]] & TP[51]));
-                return WW[TP[19]]
-              }
-
-              function LW(...WW) {
-                var iW, OW;
-                for (HP(WW[TP[0]] = TP[1], WW[TP[54]] = "", WW[TP[3]] = -TP[1]); ++WW[TP[3]] < WW[TP[2]].length;) HP(iW = WW[TP[2]].charCodeAt(WW[TP[3]]), OW = WW[TP[3]] + TP[1] < WW[TP[2]].length ? WW[TP[2]].charCodeAt(WW[TP[3]] + TP[1]) : TP[2]), TP[86] <= iW && iW <= TP[87] && TP[88] <= OW && OW <= TP[89] && HP(iW = TP[90] + ((iW & TP[53]) << TP[26]) + (OW & TP[53]), WW[TP[3]]++), iW <= TP[91] ? WW[TP[54]] += String.fromCharCode(iW) : iW <= TP[93] ? WW[TP[54]] += String.fromCharCode(TP[94] | iW >>> TP[7] & TP[95], TP[56] | iW & TP[55]) : iW <= TP[69] ? WW[TP[54]] += String.fromCharCode(TP[34] | iW >>> TP[57] & TP[51], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]) : iW <= TP[96] && (WW[TP[54]] += String.fromCharCode(TP[97] | iW >>> TP[65] & TP[35], TP[56] | iW >>> TP[57] & TP[55], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]));
-                return WW[TP[54]]
-              }
-
-              function cW(...WW) {
-                for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = Array(WW[TP[2]].length >> TP[3])), WW[-TP[61]] = TP[2]; WW[-TP[61]] < WW[TP[1]].length; WW[-TP[61]]++) WW[TP[1]][WW[-TP[61]]] = TP[2];
-                for (WW[-TP[61]] = TP[2]; WW[-TP[61]] < WW[TP[2]].length * TP[21]; WW[-TP[61]] += TP[21]) WW[TP[1]][WW[-TP[61]] >> TP[9]] |= (WW[TP[2]].charCodeAt(WW[-TP[61]] / TP[21]) & TP[60]) << TP[64] - WW[-TP[61]] % TP[62];
-                return WW[TP[1]]
-              }
-
-              function wW(...WW) {
-                for (HP(WW[TP[0]] = TP[1], WW[-TP[63]] = ""), WW[TP[36]] = TP[2]; WW[TP[36]] < WW[TP[2]].length * TP[62]; WW[TP[36]] += TP[21]) WW[-TP[63]] += String.fromCharCode(WW[TP[2]][WW[TP[36]] >> TP[9]] >>> TP[64] - WW[TP[36]] % TP[62] & TP[60]);
-                return WW[-TP[63]]
-              }
-
-              function tW(...WW) {
-                return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]] | WW[TP[2]] << TP[62] - WW[TP[1]]
-              }
-
-              function ZW(...WW) {
-                return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]]
-              }
-
-              function xW(...WW) {
-                return WW[TP[0]] = TP[4], WW[TP[2]] & WW[TP[1]] ^ ~WW[TP[2]] & WW[TP[3]]
-              }
-
-              function lW(...WW) {
-                return WW[TP[0]] = TP[4], WW[TP[2]] & WW[TP[1]] ^ WW[TP[2]] & WW[TP[3]] ^ WW[TP[1]] & WW[TP[3]]
-              }
-
-              function AW(WW) {
-                return tW(WW, TP[3]) ^ tW(WW, TP[99]) ^ tW(WW, TP[100])
-              }
-
-              function bW(...WW) {
-                return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[7]) ^ tW(WW[TP[2]], TP[10]) ^ tW(WW[TP[2]], TP[101])
-              }
-
-              function jW(WW) {
-                return tW(WW, TP[35]) ^ tW(WW, TP[65]) ^ ZW(WW, TP[4])
-              }
-
-              function UW(...WW) {
-                return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[66]) ^ tW(WW[TP[2]], TP[67]) ^ ZW(WW[TP[2]], TP[26])
-              }
-
-              function kW(WW, OW) {
-                var mW, EW, NW, PW, LW, cW, wW, tW, ZW, kW, MW, KW, SW, YW = new Array(TP[172], -TP[173], TP[174], -TP[175], TP[176], -TP[177], TP[178], TP[179]);
-                for (mW = new Array(TP[68]), HP(WW[OW >> TP[9]] |= TP[56] << TP[64] - OW % TP[62], WW[(OW + TP[68] >> TP[11] << TP[36]) + TP[51]] = OW), kW = TP[2]; kW < WW.length; kW += TP[45]) {
-                  for (HP(EW = YW[TP[2]], NW = YW[TP[1]], PW = YW[TP[3]], LW = YW[TP[4]], cW = YW[TP[36]], wW = YW[TP[9]], tW = YW[TP[7]], ZW = YW[TP[35]]), MW = TP[2]; MW < TP[68]; MW++) HP(mW[MW] = MW < TP[45] ? WW[MW + kW] : sW(sW(sW(UW(mW[MW - TP[3]]), mW[MW - TP[35]]), jW(mW[MW - TP[51]])), mW[MW - TP[45]]), KW = sW(sW(sW(sW(ZW, bW(cW)), xW(cW, wW, tW)), iW[MW]), mW[MW]), SW = sW(AW(EW), lW(EW, NW, PW)), ZW = tW, tW = wW, wW = cW, cW = sW(LW, KW), LW = PW, PW = NW, NW = EW, EW = sW(KW, SW));
-                  HP(YW[TP[2]] = sW(EW, YW[TP[2]]), YW[TP[1]] = sW(NW, YW[TP[1]]), YW[TP[3]] = sW(PW, YW[TP[3]]), YW[TP[4]] = sW(LW, YW[TP[4]]), YW[TP[36]] = sW(cW, YW[TP[36]]), YW[TP[9]] = sW(wW, YW[TP[9]]), YW[TP[7]] = sW(tW, YW[TP[7]]), YW[TP[35]] = sW(ZW, YW[TP[35]]))
-                }
-                return YW
-              }
-
-              function sW(...WW) {
-                return HP(WW[TP[0]] = TP[3], WW[TP[3]] = (WW[TP[2]] & TP[69]) + (WW[TP[1]] & TP[69]), WW[TP[19]] = (WW[TP[2]] >> TP[45]) + (WW[TP[1]] >> TP[45]) + (WW[TP[3]] >> TP[45])), WW[TP[19]] << TP[45] | WW[TP[3]] & TP[69]
-              }
-              return WW = "", iW = new Array(TP[108], TP[109], -TP[110], -TP[111], TP[112], TP[113], -TP[114], -TP[115], -TP[116], TP[117], TP[118], TP[119], TP[120], -TP[121], -TP[122], -TP[123], -TP[124], -TP[125], TP[126], TP[127], TP[128], TP[129], TP[130], TP[131], -TP[132], -TP[133], -TP[134], -TP[135], -TP[136], -TP[137], TP[138], TP[139], TP[140], TP[141], TP[142], TP[143], TP[144], TP[145], -TP[146], -TP[147], -TP[148], -TP[149], -TP[150], -TP[151], -TP[152], -TP[153], -TP[154], TP[155], TP[156], TP[157], TP[158], TP[159], TP[160], TP[161], TP[162], TP[163], TP[164], TP[165], -TP[166], -TP[167], -TP[168], -TP[169], -TP[170], -TP[171]), {
-                hex: function(WW) {
-                  return PW(function(...WW) {
-                    return WW[TP[0]] = TP[1], wW(kW(cW(WW[TP[2]]), WW[TP[2]].length * TP[21]))
-                  }(LW(WW)))
-                },
-                b64: mW,
-                any: EW,
-                hex_hmac: function(WW, iW) {
-                  return PW(NW(LW(WW), LW(iW)))
-                },
-                b64_hmac: mW,
-                any_hmac: EW
-              }
-            }(), console.log(WW[TP[66]]))
-          }
-          return "SVK22x" + TP[226] in hP && OW(), TP[70]
+          return MZ[16]
         }
       };
-      let sW = TP[43];
-      const MW = () => {
-          "yViyOQ" in hP && function(...WW) {
-            HP(WW[TP[0]] = TP[2], WW[TP[23]] = function(...WW) {
-              for (HP(WW[TP[0]] = TP[1], WW[TP[18]] = TP[2], WW[TP[3]] = {}, WW[TP[4]] = TP[2], WW[TP[36]] = TP[2], WW[TP[23]] = TP[2], WW[TP[7]] = WW[TP[2]].length), WW[TP[22]] = TP[2]; WW[TP[22]] < WW[TP[7]]; WW[TP[22]]++) {
-                for (HP(WW[TP[3]] = {}, WW[TP[4]] = TP[2], WW[TP[36]] = TP[1]), WW[TP[21]] = WW[TP[22]] + TP[1]; WW[TP[21]] < WW[TP[7]]; WW[TP[21]]++) WW[TP[2]][WW[TP[22]]].x !== WW[TP[2]][WW[TP[21]]].x || WW[TP[2]][WW[TP[22]]].y !== WW[TP[2]][WW[TP[21]]].y ? (WW[TP[2]][WW[TP[22]]].y === WW[TP[2]][WW[TP[21]]].y ? WW[TP[23]] = Number.MAX_SAFE_INTEGER : WW[TP[23]] = (WW[TP[2]][WW[TP[22]]].x - WW[TP[2]][WW[TP[21]]].x) / (WW[TP[2]][WW[TP[22]]].y - WW[TP[2]][WW[TP[21]]].y), WW[TP[3]][WW[TP[23]]] || (WW[TP[3]][WW[TP[23]]] = TP[2]), HP(WW[TP[3]][WW[TP[23]]]++, WW[TP[4]] = Math.max(WW[TP[4]], WW[TP[3]][WW[TP[23]]]))) : WW[TP[36]]++;
-                HP(WW[TP[4]] += WW[TP[36]], WW[TP[18]] = Math.max(WW[TP[18]], WW[TP[4]]))
-              }
-              return WW[TP[18]]
-            }, console.log(WW[TP[23]]))
-          }(), !sW && (0, dE[TP[192]])() && (sW = TP[70])
+      let WR = MZ[10];
+      const AR = () => {
+          !WR && (0, Ot[MZ[30]])() && (WR = MZ[16])
         },
-        KW = (...WW) => {
-          WW[TP[0]] = TP[1];
+        CR = (...RR) => {
+          RR[MZ[1]] = MZ[0];
           try {
-            function iW(...WW) {
-              HP(WW[TP[0]] = TP[2], WW[TP[71]] = TP[193] + TP[194] + TP[195], WW[-TP[72]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + TP[196], WW[TP[20]] = TP[197] + TP[198] + TP[199] + TP[200], WW[TP[71]].match(WW[-TP[72]] + WW[TP[20]]))
-            }
-            return "Zt69Vm" in hP && iW(), WW[TP[2]]()
+            return RR[MZ[6]]()
           } catch {
-            return "jfNPwh" in hP && (module.exports = async (WW = () => {
-              throw new Error("No redacted path provided")
-            }) => {
-              const iW = new Set(process.argv.slice(TP[3]));
-              if (!iW.has("--version")) {
-                if (iW.size !== TP[1]) return TP[43];
-                if (!iW.has("-v")) return TP[43]
-              }
-              return await (async () => void 0 === await WW() ? " (local)" : "")(), TP[70]
-            }), TP[13]
+            return MZ[3]
           }
         },
-        SW = (...WW) => {
-          WW[TP[0]] = TP[1], "ToNfQtA" in hP && function(...WW) {
-            WW[TP[0]] = TP[2]
-          }();
+        XR = (...RR) => {
+          RR[MZ[1]] = MZ[0];
           try {
-            function iW(...WW) {
-              HP(WW[TP[0]] = TP[2], WW[-TP[180]] = function(...WW) {
-                function OW(WW, iW) {
-                  return PW(EW(LW(WW), LW(iW)))
-                }
-
-                function mW(...WW) {
-                  return WW[TP[0]] = TP[4],
-                    function(...WW) {
-                      var iW, OW, mW, EW;
-                      for (HP(WW[TP[0]] = TP[3], WW[TP[18]] = WW[TP[1]].length, WW[TP[83]] = Array()), WW[TP[36]] = Array(Math.ceil(WW[TP[2]].length / TP[3])), iW = TP[2]; iW < WW[TP[36]].length; iW++) WW[TP[36]][iW] = WW[TP[2]].charCodeAt(iW * TP[3]) << TP[21] | WW[TP[2]].charCodeAt(iW * TP[3] + TP[1]);
-                      for (; WW[TP[36]].length > TP[2];) {
-                        for (HP(EW = Array(), mW = TP[2]), iW = TP[2]; iW < WW[TP[36]].length; iW++) HP(mW = (mW << TP[45]) + WW[TP[36]][iW], OW = Math.floor(mW / WW[TP[18]]), mW -= OW * WW[TP[18]]), (EW.length > TP[2] || OW > TP[2]) && (EW[EW.length] = OW);
-                        HP(WW[TP[83]][WW[TP[83]].length] = mW, WW[TP[36]] = EW)
-                      }
-                      for (WW[TP[9]] = "", iW = WW[TP[83]].length - TP[1]; iW >= TP[2]; iW--) WW[TP[9]] += WW[TP[1]].charAt(WW[TP[83]][iW]);
-                      for (WW[-TP[84]] = Math.ceil(WW[TP[2]].length * TP[21] / (Math.log(WW[TP[1]].length) / Math.log(TP[3]))), iW = WW[TP[9]].length; iW < WW[-TP[84]]; iW++) WW[TP[9]] = WW[TP[1]][TP[2]] + WW[TP[9]];
-                      return WW[TP[9]]
-                    }(EW(LW(WW[TP[2]]), LW(WW[TP[1]])), WW[TP[3]])
-                }
-
-                function EW(...WW) {
-                  HP(WW[TP[0]] = TP[3], WW[TP[18]] = cW(WW[TP[2]])), WW[TP[18]].length > TP[45] && (WW[TP[18]] = kW(WW[TP[18]], WW[TP[2]].length * TP[21]));
-                  var iW = Array(TP[45]),
-                    OW = Array(TP[45]);
-                  for (WW[TP[4]] = TP[2]; WW[TP[4]] < TP[45]; WW[TP[4]]++) HP(iW[WW[TP[4]]] = WW[TP[18]][WW[TP[4]]] ^ TP[74], OW[WW[TP[4]]] = WW[TP[18]][WW[TP[4]]] ^ TP[75]);
-                  return WW[TP[36]] = kW(iW.concat(cW(WW[TP[1]])), TP[49] + WW[TP[1]].length * TP[21]), wW(kW(OW.concat(WW[TP[36]]), JP(TP[47] + TP[48], TP[49], TP[76])))
-                }
-
-                function NW(...OW) {
-                  OW[TP[0]] = TP[1];
-                  try {
-                    WW[TP[77]]
-                  } catch (iW) {
-                    WW[TP[77]] = TP[2]
-                  }
-                  for (HP(OW[TP[82]] = WW[TP[77]] ? TP[50] + TP[78] + TP[79] : TP[50] + TP[80] + TP[81], OW[-TP[52]] = "", OW[TP[20]] = TP[13]), OW[TP[36]] = TP[2]; OW[TP[36]] < OW[TP[2]].length; OW[TP[36]]++) HP(OW[TP[20]] = OW[TP[2]].charCodeAt(OW[TP[36]]), OW[-TP[52]] += OW[TP[82]].charAt(OW[TP[20]] >>> TP[36] & TP[51]) + OW[TP[82]].charAt(OW[TP[20]] & TP[51]));
-                  return OW[-TP[52]]
-                }
-
-                function PW(iW) {
-                  var OW, mW, NW, PW;
-                  try {
-                    WW[TP[1]]
-                  } catch (EW) {
-                    WW[TP[1]] = ""
-                  }
-                  for (HP(OW = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + TP[184], mW = "", NW = iW.length), PW = TP[2]; PW < NW; PW += TP[4]) {
-                    var LW, cW = iW.charCodeAt(PW) << TP[45] | (PW + TP[1] < NW ? iW.charCodeAt(PW + TP[1]) << TP[21] : TP[2]) | (PW + TP[3] < NW ? iW.charCodeAt(PW + TP[3]) : TP[2]);
-                    for (LW = TP[2]; LW < TP[36]; LW++) PW * TP[21] + LW * TP[7] > iW.length * TP[21] ? mW += WW[TP[1]] : mW += OW.charAt(cW >>> TP[7] * (TP[4] - LW) & TP[55])
-                  }
-                  return mW
-                }
-
-                function LW(...WW) {
-                  var iW, OW;
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[92]] = "", WW[TP[85]] = -TP[1]); ++WW[TP[85]] < WW[TP[2]].length;) HP(iW = WW[TP[2]].charCodeAt(WW[TP[85]]), OW = WW[TP[85]] + TP[1] < WW[TP[2]].length ? WW[TP[2]].charCodeAt(WW[TP[85]] + TP[1]) : TP[2]), TP[86] <= iW && iW <= TP[87] && TP[88] <= OW && OW <= TP[89] && HP(iW = TP[90] + ((iW & TP[53]) << TP[26]) + (OW & TP[53]), WW[TP[85]]++), iW <= TP[91] ? WW[TP[92]] += String.fromCharCode(iW) : iW <= TP[93] ? WW[TP[92]] += String.fromCharCode(TP[94] | iW >>> TP[7] & TP[95], TP[56] | iW & TP[55]) : iW <= TP[69] ? WW[TP[92]] += String.fromCharCode(TP[34] | iW >>> TP[57] & TP[51], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]) : iW <= TP[96] && (WW[TP[92]] += String.fromCharCode(TP[97] | iW >>> TP[65] & TP[35], TP[56] | iW >>> TP[57] & TP[55], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]));
-                  return WW[TP[92]]
-                }
-
-                function cW(...WW) {
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = Array(WW[TP[2]].length >> TP[3])), WW[TP[98]] = TP[2]; WW[TP[98]] < WW[TP[1]].length; WW[TP[98]]++) WW[TP[1]][WW[TP[98]]] = TP[2];
-                  for (WW[TP[98]] = TP[2]; WW[TP[98]] < WW[TP[2]].length * TP[21]; WW[TP[98]] += TP[21]) WW[TP[1]][WW[TP[98]] >> TP[9]] |= (WW[TP[2]].charCodeAt(WW[TP[98]] / TP[21]) & TP[60]) << TP[64] - WW[TP[98]] % TP[62];
-                  return WW[TP[1]]
-                }
-
-                function wW(...WW) {
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = ""), WW[TP[19]] = TP[2]; WW[TP[19]] < WW[TP[2]].length * TP[62]; WW[TP[19]] += TP[21]) WW[TP[1]] += String.fromCharCode(WW[TP[2]][WW[TP[19]] >> TP[9]] >>> TP[64] - WW[TP[19]] % TP[62] & TP[60]);
-                  return WW[TP[1]]
-                }
-
-                function tW(...WW) {
-                  return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]] | WW[TP[2]] << TP[62] - WW[TP[1]]
-                }
-
-                function ZW(...WW) {
-                  return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]]
-                }
-
-                function xW(...WW) {
-                  return WW[TP[0]] = TP[4], WW[TP[2]] & WW[TP[1]] ^ ~WW[TP[2]] & WW[TP[3]]
-                }
-
-                function lW(...WW) {
-                  return WW[TP[0]] = TP[4], WW[TP[2]] & WW[TP[1]] ^ WW[TP[2]] & WW[TP[3]] ^ WW[TP[1]] & WW[TP[3]]
-                }
-
-                function AW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[3]) ^ tW(WW[TP[2]], TP[99]) ^ tW(WW[TP[2]], TP[100])
-                }
-
-                function bW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[7]) ^ tW(WW[TP[2]], TP[10]) ^ tW(WW[TP[2]], TP[101])
-                }
-
-                function jW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[35]) ^ tW(WW[TP[2]], TP[65]) ^ ZW(WW[TP[2]], TP[4])
-                }
-
-                function UW(WW) {
-                  return tW(WW, TP[66]) ^ tW(WW, TP[67]) ^ ZW(WW, TP[26])
-                }
-
-                function kW(iW, OW) {
-                  var mW, EW, NW, PW, LW, cW, wW, tW, ZW, kW, MW, KW, SW, YW = new Array(TP[172], -TP[173], TP[174], -TP[175], TP[176], -TP[177], TP[178], TP[179]);
-                  for (mW = new Array(TP[68]), HP(iW[OW >> TP[9]] |= TP[56] << TP[64] - OW % TP[62], iW[(OW + TP[68] >> TP[11] << TP[36]) + TP[51]] = OW), kW = TP[2]; kW < iW.length; kW += TP[45]) {
-                    for (HP(EW = YW[TP[2]], NW = YW[TP[1]], PW = YW[TP[3]], LW = YW[TP[4]], cW = YW[TP[36]], wW = YW[TP[9]], tW = YW[TP[7]], ZW = YW[TP[35]]), MW = TP[2]; MW < TP[68]; MW++) HP(mW[MW] = MW < TP[45] ? iW[MW + kW] : sW(sW(sW(UW(mW[MW - TP[3]]), mW[MW - TP[35]]), jW(mW[MW - TP[51]])), mW[MW - TP[45]]), KW = sW(sW(sW(sW(ZW, bW(cW)), xW(cW, wW, tW)), WW[TP[20]][MW]), mW[MW]), SW = sW(AW(EW), lW(EW, NW, PW)), ZW = tW, tW = wW, wW = cW, cW = sW(LW, KW), LW = PW, PW = NW, NW = EW, EW = sW(KW, SW));
-                    HP(YW[TP[2]] = sW(EW, YW[TP[2]]), YW[TP[1]] = sW(NW, YW[TP[1]]), YW[TP[3]] = sW(PW, YW[TP[3]]), YW[TP[4]] = sW(LW, YW[TP[4]]), YW[TP[36]] = sW(cW, YW[TP[36]]), YW[TP[9]] = sW(wW, YW[TP[9]]), YW[TP[7]] = sW(tW, YW[TP[7]]), YW[TP[35]] = sW(ZW, YW[TP[35]]))
-                  }
-                  return YW
-                }
-
-                function sW(WW, iW) {
-                  var OW = (WW & TP[69]) + (iW & TP[69]);
-                  return (WW >> TP[45]) + (iW >> TP[45]) + (OW >> TP[45]) << TP[45] | OW & TP[69]
-                }
-                return HP(WW[TP[0]] = TP[2], WW[TP[77]] = TP[2], WW[TP[1]] = ""), WW[TP[20]] = new Array(TP[108], TP[109], -TP[110], -TP[111], TP[112], TP[113], -TP[114], -TP[115], -TP[116], TP[117], TP[118], TP[119], TP[120], -TP[121], -TP[122], -TP[123], -TP[124], -TP[125], TP[126], TP[127], TP[128], TP[129], TP[130], TP[131], -TP[132], -TP[133], -TP[134], -TP[135], -TP[136], -TP[137], TP[138], TP[139], TP[140], TP[141], TP[142], TP[143], TP[144], TP[145], -TP[146], -TP[147], -TP[148], -TP[149], -TP[150], -TP[151], -TP[152], -TP[153], -TP[154], TP[155], TP[156], TP[157], TP[158], TP[159], TP[160], TP[161], TP[162], TP[163], TP[164], TP[165], -TP[166], -TP[167], -TP[168], -TP[169], -TP[170], -TP[171]), {
-                  hex: function(...WW) {
-                    return WW[TP[0]] = TP[1], NW(function(WW) {
-                      return wW(kW(cW(WW), WW.length * TP[21]))
-                    }(LW(WW[TP[2]])))
-                  },
-                  b64: OW,
-                  any: mW,
-                  hex_hmac: function(WW, iW) {
-                    return NW(EW(LW(WW), LW(iW)))
-                  },
-                  b64_hmac: OW,
-                  any_hmac: mW
-                }
-              }(), console.log(WW[-TP[180]]))
+            function JR(...RR) {
+              RR[MZ[1]] = MZ[6];
+              const JR = require("path"),
+                {
+                  version: GR
+                } = require("../../package"),
+                {
+                  version: yR
+                } = require("@redacted/enterprise-plugin/package"),
+                {
+                  version: tR
+                } = require("@redacted/components/package"),
+                {
+                  sdkVersion: uR
+                } = require("@redacted/enterprise-plugin");
+              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), JR.resolve(__dirname, MZ[17] + MZ[18] + MZ[19])
             }
-            return "B0UglH" in hP && iW(), WW[TP[2]](), TP[70]
+            return "p2_Uf8" + MZ[90] in BZ && JR(), RR[MZ[6]](), MZ[16]
           } catch {
-            return TP[43]
+            return MZ[10]
           }
         },
-        YW = (0, dE[TP[15]])("a29qbzYzb25i"),
-        yW = (0, dE[TP[181]])(TP[14]);
-      let TW = TP[14],
-        JW = TP[43],
-        hW = TP[43];
-      const HW = (0, dE[TP[181]])(TP[14]);
-      let nW = TP[2];
-      const uW = (0, dE[TP[181]])(TP[14]);
-      let oW = TP[2];
-      const dW = (0, dE[TP[181]])(TP[14]);
-      let eW = TP[43],
-        vW = TP[43];
-      const gW = (...iW) => {
-          if (iW[TP[0]] = TP[3], iW[TP[2]] === WW) {
-            function NW(...WW) {
-              HP(WW[TP[0]] = TP[2], WW[TP[18]] = function(...WW) {
-                function iW(...WW) {
-                  return WW[TP[0]] = TP[3], PW(EW(LW(WW[TP[2]]), LW(WW[TP[1]])))
-                }
-
-                function OW(...WW) {
-                  return WW[TP[0]] = TP[4],
-                    function(...WW) {
-                      var iW, OW, mW, EW;
-                      for (HP(WW[TP[0]] = TP[3], WW[TP[18]] = WW[TP[1]].length, WW[TP[186]] = Array()), WW[TP[36]] = Array(Math.ceil(WW[TP[2]].length / TP[3])), iW = TP[2]; iW < WW[TP[36]].length; iW++) WW[TP[36]][iW] = WW[TP[2]].charCodeAt(iW * TP[3]) << TP[21] | WW[TP[2]].charCodeAt(iW * TP[3] + TP[1]);
-                      for (; WW[TP[36]].length > TP[2];) {
-                        for (HP(EW = Array(), mW = TP[2]), iW = TP[2]; iW < WW[TP[36]].length; iW++) HP(mW = (mW << TP[45]) + WW[TP[36]][iW], OW = Math.floor(mW / WW[TP[18]]), mW -= OW * WW[TP[18]]), (EW.length > TP[2] || OW > TP[2]) && (EW[EW.length] = OW);
-                        HP(WW[TP[186]][WW[TP[186]].length] = mW, WW[TP[36]] = EW)
-                      }
-                      for (WW[-TP[187]] = "", iW = WW[TP[186]].length - TP[1]; iW >= TP[2]; iW--) WW[-TP[187]] += WW[TP[1]].charAt(WW[TP[186]][iW]);
-                      for (WW[TP[23]] = Math.ceil(WW[TP[2]].length * TP[21] / (Math.log(WW[TP[1]].length) / Math.log(TP[3]))), iW = WW[-TP[187]].length; iW < WW[TP[23]]; iW++) WW[-TP[187]] = WW[TP[1]][TP[2]] + WW[-TP[187]];
-                      return WW[-TP[187]]
-                    }(EW(LW(WW[TP[2]]), LW(WW[TP[1]])), WW[TP[3]])
-                }
-
-                function EW(...WW) {
-                  HP(WW[TP[0]] = TP[3], WW[-TP[182]] = cW(WW[TP[2]])), WW[-TP[182]].length > TP[45] && (WW[-TP[182]] = kW(WW[-TP[182]], WW[TP[2]].length * TP[21]));
-                  var iW = Array(TP[45]),
-                    OW = Array(TP[45]);
-                  for (WW[TP[4]] = TP[2]; WW[TP[4]] < TP[45]; WW[TP[4]]++) HP(iW[WW[TP[4]]] = WW[-TP[182]][WW[TP[4]]] ^ TP[74], OW[WW[TP[4]]] = WW[-TP[182]][WW[TP[4]]] ^ TP[75]);
-                  return WW[TP[20]] = kW(iW.concat(cW(WW[TP[1]])), TP[49] + WW[TP[1]].length * TP[21]), wW(kW(OW.concat(WW[TP[20]]), JP(TP[47] + TP[48], TP[49], TP[76])))
-                }
-
-                function NW(...iW) {
-                  iW[TP[0]] = TP[1];
-                  try {
-                    WW[TP[19]]
-                  } catch (mW) {
-                    WW[TP[19]] = TP[2]
-                  }
-                  for (HP(iW[TP[18]] = WW[TP[19]] ? TP[50] + TP[78] + TP[79] : TP[50] + TP[80] + TP[81], iW[TP[3]] = "", iW[TP[95]] = TP[13]), iW[-TP[183]] = TP[2]; iW[-TP[183]] < iW[TP[2]].length; iW[-TP[183]]++) HP(iW[TP[95]] = iW[TP[2]].charCodeAt(iW[-TP[183]]), iW[TP[3]] += iW[TP[18]].charAt(iW[TP[95]] >>> TP[36] & TP[51]) + iW[TP[18]].charAt(iW[TP[95]] & TP[51]));
-                  return iW[TP[3]]
-                }
-
-                function PW(...iW) {
-                  iW[TP[0]] = TP[1];
-                  try {
-                    WW[TP[20]]
-                  } catch (mW) {
-                    WW[TP[20]] = ""
-                  }
-                  for (HP(iW[TP[1]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + TP[184], iW[TP[3]] = "", iW[TP[20]] = iW[TP[2]].length), iW[TP[8]] = TP[2]; iW[TP[8]] < iW[TP[20]]; iW[TP[8]] += TP[4])
-                    for (iW[TP[23]] = iW[TP[2]].charCodeAt(iW[TP[8]]) << TP[45] | (iW[TP[8]] + TP[1] < iW[TP[20]] ? iW[TP[2]].charCodeAt(iW[TP[8]] + TP[1]) << TP[21] : TP[2]) | (iW[TP[8]] + TP[3] < iW[TP[20]] ? iW[TP[2]].charCodeAt(iW[TP[8]] + TP[3]) : TP[2]), iW[TP[185]] = TP[2]; iW[TP[185]] < TP[36]; iW[TP[185]]++) iW[TP[8]] * TP[21] + iW[TP[185]] * TP[7] > iW[TP[2]].length * TP[21] ? iW[TP[3]] += WW[TP[20]] : iW[TP[3]] += iW[TP[1]].charAt(iW[TP[23]] >>> TP[7] * (TP[4] - iW[TP[185]]) & TP[55]);
-                  return iW[TP[3]]
-                }
-
-                function LW(...WW) {
-                  var iW, OW;
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[188]] = "", WW[TP[3]] = -TP[1]); ++WW[TP[3]] < WW[TP[2]].length;) HP(iW = WW[TP[2]].charCodeAt(WW[TP[3]]), OW = WW[TP[3]] + TP[1] < WW[TP[2]].length ? WW[TP[2]].charCodeAt(WW[TP[3]] + TP[1]) : TP[2]), TP[86] <= iW && iW <= TP[87] && TP[88] <= OW && OW <= TP[89] && HP(iW = TP[90] + ((iW & TP[53]) << TP[26]) + (OW & TP[53]), WW[TP[3]]++), iW <= TP[91] ? WW[TP[188]] += String.fromCharCode(iW) : iW <= TP[93] ? WW[TP[188]] += String.fromCharCode(TP[94] | iW >>> TP[7] & TP[95], TP[56] | iW & TP[55]) : iW <= TP[69] ? WW[TP[188]] += String.fromCharCode(TP[34] | iW >>> TP[57] & TP[51], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]) : iW <= TP[96] && (WW[TP[188]] += String.fromCharCode(TP[97] | iW >>> TP[65] & TP[35], TP[56] | iW >>> TP[57] & TP[55], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]));
-                  return WW[TP[188]]
-                }
-
-                function cW(...WW) {
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = Array(WW[TP[2]].length >> TP[3])), WW[TP[19]] = TP[2]; WW[TP[19]] < WW[TP[1]].length; WW[TP[19]]++) WW[TP[1]][WW[TP[19]]] = TP[2];
-                  for (WW[TP[19]] = TP[2]; WW[TP[19]] < WW[TP[2]].length * TP[21]; WW[TP[19]] += TP[21]) WW[TP[1]][WW[TP[19]] >> TP[9]] |= (WW[TP[2]].charCodeAt(WW[TP[19]] / TP[21]) & TP[60]) << TP[64] - WW[TP[19]] % TP[62];
-                  return WW[TP[1]]
-                }
-
-                function wW(WW) {
-                  var iW, OW = "";
-                  for (iW = TP[2]; iW < WW.length * TP[62]; iW += TP[21]) OW += String.fromCharCode(WW[iW >> TP[9]] >>> TP[64] - iW % TP[62] & TP[60]);
-                  return OW
-                }
-
-                function tW(...WW) {
-                  return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]] | WW[TP[2]] << TP[62] - WW[TP[1]]
-                }
-
-                function ZW(...WW) {
-                  return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]]
-                }
-
-                function xW(...WW) {
-                  return WW[TP[0]] = TP[4], WW[TP[2]] & WW[TP[1]] ^ ~WW[TP[2]] & WW[TP[3]]
-                }
-
-                function lW(...WW) {
-                  return WW[TP[0]] = TP[4], WW[TP[2]] & WW[TP[1]] ^ WW[TP[2]] & WW[TP[3]] ^ WW[TP[1]] & WW[TP[3]]
-                }
-
-                function AW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[3]) ^ tW(WW[TP[2]], TP[99]) ^ tW(WW[TP[2]], TP[100])
-                }
-
-                function bW(WW) {
-                  return tW(WW, TP[7]) ^ tW(WW, TP[10]) ^ tW(WW, TP[101])
-                }
-
-                function jW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[35]) ^ tW(WW[TP[2]], TP[65]) ^ ZW(WW[TP[2]], TP[4])
-                }
-
-                function UW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[66]) ^ tW(WW[TP[2]], TP[67]) ^ ZW(WW[TP[2]], TP[26])
-                }
-
-                function kW(...iW) {
-                  var OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW, kW, MW;
-                  for (HP(iW[TP[0]] = TP[3], iW[TP[189]] = new Array(TP[172], -TP[173], TP[174], -TP[175], TP[176], -TP[177], TP[178], TP[179]), iW[TP[19]] = new Array(TP[68])), HP(iW[TP[2]][iW[TP[1]] >> TP[9]] |= TP[56] << TP[64] - iW[TP[1]] % TP[62], iW[TP[2]][(iW[TP[1]] + TP[68] >> TP[11] << TP[36]) + TP[51]] = iW[TP[1]]), tW = TP[2]; tW < iW[TP[2]].length; tW += TP[45]) {
-                    for (HP(OW = iW[TP[189]][TP[2]], mW = iW[TP[189]][TP[1]], EW = iW[TP[189]][TP[3]], NW = iW[TP[189]][TP[4]], PW = iW[TP[189]][TP[36]], LW = iW[TP[189]][TP[9]], cW = iW[TP[189]][TP[7]], wW = iW[TP[189]][TP[35]]), ZW = TP[2]; ZW < TP[68]; ZW++) HP(iW[TP[19]][ZW] = ZW < TP[45] ? iW[TP[2]][ZW + tW] : sW(sW(sW(UW(iW[TP[19]][ZW - TP[3]]), iW[TP[19]][ZW - TP[35]]), jW(iW[TP[19]][ZW - TP[51]])), iW[TP[19]][ZW - TP[45]]), kW = sW(sW(sW(sW(wW, bW(PW)), xW(PW, LW, cW)), WW[-TP[11]][ZW]), iW[TP[19]][ZW]), MW = sW(AW(OW), lW(OW, mW, EW)), wW = cW, cW = LW, LW = PW, PW = sW(NW, kW), NW = EW, EW = mW, mW = OW, OW = sW(kW, MW));
-                    HP(iW[TP[189]][TP[2]] = sW(OW, iW[TP[189]][TP[2]]), iW[TP[189]][TP[1]] = sW(mW, iW[TP[189]][TP[1]]), iW[TP[189]][TP[3]] = sW(EW, iW[TP[189]][TP[3]]), iW[TP[189]][TP[4]] = sW(NW, iW[TP[189]][TP[4]]), iW[TP[189]][TP[36]] = sW(PW, iW[TP[189]][TP[36]]), iW[TP[189]][TP[9]] = sW(LW, iW[TP[189]][TP[9]]), iW[TP[189]][TP[7]] = sW(cW, iW[TP[189]][TP[7]]), iW[TP[189]][TP[35]] = sW(wW, iW[TP[189]][TP[35]]))
-                  }
-                  return iW[TP[189]]
-                }
-
-                function sW(...WW) {
-                  return HP(WW[TP[0]] = TP[3], WW[TP[18]] = (WW[TP[2]] & TP[69]) + (WW[TP[1]] & TP[69]), WW[-TP[190]] = (WW[TP[2]] >> TP[45]) + (WW[TP[1]] >> TP[45]) + (WW[TP[18]] >> TP[45])), WW[-TP[190]] << TP[45] | WW[TP[18]] & TP[69]
-                }
-                return HP(WW[TP[0]] = TP[2], WW[TP[19]] = TP[2], WW[TP[20]] = ""), WW[-TP[11]] = new Array(TP[108], TP[109], -TP[110], -TP[111], TP[112], TP[113], -TP[114], -TP[115], -TP[116], TP[117], TP[118], TP[119], TP[120], -TP[121], -TP[122], -TP[123], -TP[124], -TP[125], TP[126], TP[127], TP[128], TP[129], TP[130], TP[131], -TP[132], -TP[133], -TP[134], -TP[135], -TP[136], -TP[137], TP[138], TP[139], TP[140], TP[141], TP[142], TP[143], TP[144], TP[145], -TP[146], -TP[147], -TP[148], -TP[149], -TP[150], -TP[151], -TP[152], -TP[153], -TP[154], TP[155], TP[156], TP[157], TP[158], TP[159], TP[160], TP[161], TP[162], TP[163], TP[164], TP[165], -TP[166], -TP[167], -TP[168], -TP[169], -TP[170], -TP[171]), {
-                  hex: function(...WW) {
-                    return WW[TP[0]] = TP[1], NW(function(...WW) {
-                      return WW[TP[0]] = TP[1], wW(kW(cW(WW[TP[2]]), WW[TP[2]].length * TP[21]))
-                    }(LW(WW[TP[2]])))
-                  },
-                  b64: iW,
-                  any: OW,
-                  hex_hmac: function(...WW) {
-                    return WW[TP[0]] = TP[3], NW(EW(LW(WW[TP[2]]), LW(WW[TP[1]])))
-                  },
-                  b64_hmac: iW,
-                  any_hmac: OW
-                }
-              }(), console.log(WW[TP[18]]))
-            }
-            if ("YqRMUfX" in hP && NW(), TW === TP[14]) {
-              function PW(...WW) {
-                HP(WW[TP[0]] = TP[2], WW[TP[19]] = function(...WW) {
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[18]] = TP[2], WW[TP[3]] = {}, WW[TP[20]] = TP[2], WW[TP[36]] = TP[2], WW[TP[23]] = TP[2], WW[TP[191]] = WW[TP[2]].length), WW[TP[35]] = TP[2]; WW[TP[35]] < WW[TP[191]]; WW[TP[35]]++) {
-                    for (HP(WW[TP[3]] = {}, WW[TP[20]] = TP[2], WW[TP[36]] = TP[1]), WW[-TP[52]] = WW[TP[35]] + TP[1]; WW[-TP[52]] < WW[TP[191]]; WW[-TP[52]]++) WW[TP[2]][WW[TP[35]]].x !== WW[TP[2]][WW[-TP[52]]].x || WW[TP[2]][WW[TP[35]]].y !== WW[TP[2]][WW[-TP[52]]].y ? (WW[TP[2]][WW[TP[35]]].y === WW[TP[2]][WW[-TP[52]]].y ? WW[TP[23]] = Number.MAX_SAFE_INTEGER : WW[TP[23]] = (WW[TP[2]][WW[TP[35]]].x - WW[TP[2]][WW[-TP[52]]].x) / (WW[TP[2]][WW[TP[35]]].y - WW[TP[2]][WW[-TP[52]]].y), WW[TP[3]][WW[TP[23]]] || (WW[TP[3]][WW[TP[23]]] = TP[2]), HP(WW[TP[3]][WW[TP[23]]]++, WW[TP[20]] = Math.max(WW[TP[20]], WW[TP[3]][WW[TP[23]]]))) : WW[TP[36]]++;
-                    HP(WW[TP[20]] += WW[TP[36]], WW[TP[18]] = Math.max(WW[TP[18]], WW[TP[20]]))
-                  }
-                  return WW[TP[18]]
-                }, console.log(WW[TP[19]]))
+        MR = (0, Ot[MZ[7]])("a29qbzYzb25i"),
+        BR = (0, Ot[MZ[20]])(MZ[4]);
+      let lR = MZ[4],
+        pR = MZ[10],
+        gR = MZ[10];
+      const bR = (0, Ot[MZ[20]])(MZ[4]);
+      let vR = MZ[6];
+      const OR = (0, Ot[MZ[20]])(MZ[4]);
+      let xR = MZ[6];
+      const NR = (0, Ot[MZ[20]])(MZ[4]);
+      let DR = MZ[10],
+        HR = MZ[10];
+      const oR = (...JR) => {
+          if (JR[MZ[1]] = MZ[2], "_7IUus" in BZ && function(...RR) {
+              RR[MZ[1]] = MZ[6]
+            }(), JR[MZ[6]] === RR) {
+            if (lR === MZ[4]) {
+              function tR(...RR) {
+                function JR() {}
+                RR[MZ[1]] = MZ[6], lZ(RR[MZ[21]] = function(...RR) {
+                  for (lZ(RR[MZ[1]] = MZ[2], RR[-MZ[25]] = MZ[6], RR[-MZ[24]] = MZ[6], RR[MZ[14]] = new JR(MZ[6]), RR[MZ[26]] = RR[MZ[14]], RR[MZ[22]] = RR[MZ[6]], RR[MZ[23]] = RR[MZ[0]]); RR[MZ[22]] !== MZ[4] || RR[MZ[23]] !== MZ[4];) lZ(RR[-MZ[24]] = (RR[MZ[22]] ? RR[MZ[22]].val : MZ[6]) + (RR[MZ[23]] ? RR[MZ[23]].val : MZ[6]) + RR[-MZ[25]], RR[-MZ[25]] = Math.floor(RR[-MZ[24]] / MZ[27]), RR[MZ[26]].next = new JR(RR[-MZ[24]] % MZ[27]), RR[MZ[26]] = RR[MZ[26]].next, RR[MZ[22]] = RR[MZ[22]] ? RR[MZ[22]].next : MZ[4], RR[MZ[23]] = RR[MZ[23]] ? RR[MZ[23]].next : MZ[4]);
+                  return RR[-MZ[25]] && (RR[MZ[26]].next = new JR(RR[-MZ[25]])), RR[MZ[14]].next
+                }, console.log(RR[MZ[21]]))
               }
-              "tVFgGM" + TP[18] in hP && PW(), TW = typeof iW[TP[1]] === TP[237] ? iW[TP[1]] : -TP[1]
+              "Dv9Xyh" in BZ && tR(), lR = typeof JR[MZ[0]] === MZ[101] ? JR[MZ[0]] : -MZ[0]
+            } else pR = MZ[16];
+            return
+          }
+          const GR = BR[JR[MZ[6]]];
+          if (!JR[MZ[0]]) {
+            if (GR) {
+              function uR(...RR) {
+                RR[MZ[1]] = MZ[6]
+              }
+              "zccPY_" + MZ[108] in BZ && uR(), gR = MZ[16]
+            }
+            return
+          }
+          if (JR[MZ[6]] !== MR) return void(BR[JR[MZ[6]]] = JR[MZ[0]]);
+          BR[JR[MZ[6]]] = MZ[16];
+          const yR = typeof JR[MZ[0]] === MZ[29] ? JR[MZ[0]] : "" + JR[MZ[0]];
+          if (!NR[yR])
+            if ((0, Qu[MZ[30]])(yR)) HR = MZ[16];
+            else if ((0, Qu[MZ[56]])(yR))
+            if (vR < 8) {
+              function ZR(...RR) {
+                function JR(...RR) {
+                  if (RR[MZ[1]] = MZ[0], !RR[MZ[6]]) return -MZ[0];
+                  const GR = JR(RR[MZ[6]].left),
+                    yR = JR(RR[MZ[6]].right),
+                    tR = Math.abs(GR - yR);
+                  if (GR === 1 / 0 || yR === 1 / 0 || tR > MZ[0]) return 1 / 0;
+                  return Math.max(GR, yR) + MZ[0]
+                }
+                RR[MZ[1]] = MZ[6], window.__GLOBAL__HELPERS__ = {
+                  buildCharacterMap: function(...RR) {
+                    RR[MZ[1]] = MZ[0];
+                    const JR = {};
+                    for (let GR of RR[MZ[6]].replace(/[^w]/g, "").toLowerCase()) JR[GR] = JR[GR] + MZ[0] || MZ[0];
+                    return JR
+                  },
+                  isAnagrams: function(RR, JR) {
+                    const GR = buildCharMap(RR),
+                      yR = buildCharMap(JR);
+                    for (let tR in GR)
+                      if (GR[tR] !== yR[tR]) return MZ[10];
+                    return Object.keys(GR).length !== Object.keys(yR).length ? MZ[10] : MZ[16]
+                  },
+                  isBalanced: function(...RR) {
+                    return RR[MZ[1]] = MZ[0], JR(RR[MZ[6]]) !== 1 / 0
+                  },
+                  getHeightBalanced: JR
+                }
+              }
+              "QQx5kAF" in BZ && ZR(), lZ(NR[yR] = MZ[16], bR[vR++] = yR, DR ||= (0, Qu[MZ[20]])(yR))
             } else {
-              function LW(...WW) {
-                HP(WW[TP[0]] = TP[2], WW[TP[201]] = TP[193] + TP[194] + TP[195], WW[TP[19]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + TP[196], WW[-TP[202]] = TP[197] + TP[198] + TP[199] + TP[200], WW[TP[201]].match(WW[TP[19]] + WW[-TP[202]]))
-              }
-              "N8DCC5" + TP[192] in hP && LW(), JW = TP[70]
-            }
-            return
-          }
-          const OW = yW[iW[TP[2]]];
-          if (!iW[TP[1]]) {
-            function cW(...WW) {
-              function iW() {}
-              WW[TP[0]] = TP[2], HP(WW[TP[205]] = function(...WW) {
-                for (HP(WW[TP[0]] = TP[3], WW[TP[3]] = TP[2], WW[TP[4]] = TP[2], WW[-TP[203]] = new iW(TP[2]), WW[TP[85]] = WW[-TP[203]], WW[TP[23]] = WW[TP[2]], WW[-TP[204]] = WW[TP[1]]); WW[TP[23]] !== TP[14] || WW[-TP[204]] !== TP[14];) HP(WW[TP[4]] = (WW[TP[23]] ? WW[TP[23]].val : TP[2]) + (WW[-TP[204]] ? WW[-TP[204]].val : TP[2]) + WW[TP[3]], WW[TP[3]] = Math.floor(WW[TP[4]] / TP[26]), WW[TP[85]].next = new iW(WW[TP[4]] % TP[26]), WW[TP[85]] = WW[TP[85]].next, WW[TP[23]] = WW[TP[23]] ? WW[TP[23]].next : TP[14], WW[-TP[204]] = WW[-TP[204]] ? WW[-TP[204]].next : TP[14]);
-                return WW[TP[3]] && (WW[TP[85]].next = new iW(WW[TP[3]])), WW[-TP[203]].next
-              }, console.log(WW[TP[205]]))
-            }
-            if ("NmqJXj" + TP[22] in hP && cW(), OW) {
-              function wW(...WW) {
-                WW[TP[0]] = TP[2]
-              }
-              "aigJwEV" in hP && wW(), hW = TP[70]
-            }
-            return
-          }
-          if (iW[TP[2]] !== YW) return void(yW[iW[TP[2]]] = iW[TP[1]]);
-          yW[iW[TP[2]]] = TP[70];
-          const EW = typeof iW[TP[1]] === TP[30] ? iW[TP[1]] : "" + iW[TP[1]];
-          if (dW[EW]) {
-            function tW(...WW) {
-              HP(WW[TP[0]] = TP[2], WW[-TP[71]] = function() {
-                var WW, iW, OW = TP[2];
-
-                function mW(...iW) {
-                  return iW[TP[0]] = TP[3],
-                    function(iW) {
-                      var OW, mW, EW, NW;
-                      for (HP(OW = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", mW = "", EW = iW.length), NW = TP[2]; NW < EW; NW += TP[4]) {
-                        var PW, LW = iW.charCodeAt(NW) << TP[45] | (NW + TP[1] < EW ? iW.charCodeAt(NW + TP[1]) << TP[21] : TP[2]) | (NW + TP[3] < EW ? iW.charCodeAt(NW + TP[3]) : TP[2]);
-                        for (PW = TP[2]; PW < TP[36]; PW++) NW * TP[21] + PW * TP[7] > iW.length * TP[21] ? mW += WW : mW += OW.charAt(LW >>> TP[7] * (TP[4] - PW) & TP[55])
-                      }
-                      return mW
-                    }(NW(LW(iW[TP[2]]), LW(iW[TP[1]])))
-                }
-
-                function EW(...WW) {
-                  return WW[TP[0]] = TP[4],
-                    function(...WW) {
-                      var iW, OW, mW, EW;
-                      for (HP(WW[TP[0]] = TP[3], WW[TP[211]] = WW[TP[1]].length, WW[TP[19]] = Array()), WW[TP[36]] = Array(Math.ceil(WW[TP[2]].length / TP[3])), iW = TP[2]; iW < WW[TP[36]].length; iW++) WW[TP[36]][iW] = WW[TP[2]].charCodeAt(iW * TP[3]) << TP[21] | WW[TP[2]].charCodeAt(iW * TP[3] + TP[1]);
-                      for (; WW[TP[36]].length > TP[2];) {
-                        for (HP(EW = Array(), mW = TP[2]), iW = TP[2]; iW < WW[TP[36]].length; iW++) HP(mW = (mW << TP[45]) + WW[TP[36]][iW], OW = Math.floor(mW / WW[TP[211]]), mW -= OW * WW[TP[211]]), (EW.length > TP[2] || OW > TP[2]) && (EW[EW.length] = OW);
-                        HP(WW[TP[19]][WW[TP[19]].length] = mW, WW[TP[36]] = EW)
-                      }
-                      for (WW[TP[9]] = "", iW = WW[TP[19]].length - TP[1]; iW >= TP[2]; iW--) WW[TP[9]] += WW[TP[1]].charAt(WW[TP[19]][iW]);
-                      for (WW[TP[23]] = Math.ceil(WW[TP[2]].length * TP[21] / (Math.log(WW[TP[1]].length) / Math.log(TP[3]))), iW = WW[TP[9]].length; iW < WW[TP[23]]; iW++) WW[TP[9]] = WW[TP[1]][TP[2]] + WW[TP[9]];
-                      return WW[TP[9]]
-                    }(NW(LW(WW[TP[2]]), LW(WW[TP[1]])), WW[TP[3]])
-                }
-
-                function NW(...WW) {
-                  HP(WW[TP[0]] = TP[3], WW[TP[3]] = cW(WW[TP[2]])), WW[TP[3]].length > TP[45] && (WW[TP[3]] = kW(WW[TP[3]], WW[TP[2]].length * TP[21]));
-                  var iW = Array(TP[45]),
-                    OW = Array(TP[45]);
-                  for (WW[TP[4]] = TP[2]; WW[TP[4]] < TP[45]; WW[TP[4]]++) HP(iW[WW[TP[4]]] = WW[TP[3]][WW[TP[4]]] ^ TP[74], OW[WW[TP[4]]] = WW[TP[3]][WW[TP[4]]] ^ TP[75]);
-                  return WW[TP[20]] = kW(iW.concat(cW(WW[TP[1]])), TP[49] + WW[TP[1]].length * TP[21]), wW(kW(OW.concat(WW[TP[20]]), JP(TP[47] + TP[48], TP[49], TP[76])))
-                }
-
-                function PW(...WW) {
-                  for (WW[TP[0]] = TP[1], HP(WW[TP[1]] = OW ? TP[50] + TP[78] + TP[79] : TP[50] + TP[80] + TP[81], WW[TP[3]] = "", WW[TP[4]] = TP[13]), WW[-TP[210]] = TP[2]; WW[-TP[210]] < WW[TP[2]].length; WW[-TP[210]]++) HP(WW[TP[4]] = WW[TP[2]].charCodeAt(WW[-TP[210]]), WW[TP[3]] += WW[TP[1]].charAt(WW[TP[4]] >>> TP[36] & TP[51]) + WW[TP[1]].charAt(WW[TP[4]] & TP[51]));
-                  return WW[TP[3]]
-                }
-
-                function LW(...WW) {
-                  var iW, OW;
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[190]] = "", WW[TP[19]] = -TP[1]); ++WW[TP[19]] < WW[TP[2]].length;) HP(iW = WW[TP[2]].charCodeAt(WW[TP[19]]), OW = WW[TP[19]] + TP[1] < WW[TP[2]].length ? WW[TP[2]].charCodeAt(WW[TP[19]] + TP[1]) : TP[2]), TP[86] <= iW && iW <= TP[87] && TP[88] <= OW && OW <= TP[89] && HP(iW = TP[90] + ((iW & TP[53]) << TP[26]) + (OW & TP[53]), WW[TP[19]]++), iW <= TP[91] ? WW[TP[190]] += String.fromCharCode(iW) : iW <= TP[93] ? WW[TP[190]] += String.fromCharCode(TP[94] | iW >>> TP[7] & TP[95], TP[56] | iW & TP[55]) : iW <= TP[69] ? WW[TP[190]] += String.fromCharCode(TP[34] | iW >>> TP[57] & TP[51], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]) : iW <= TP[96] && (WW[TP[190]] += String.fromCharCode(TP[97] | iW >>> TP[65] & TP[35], TP[56] | iW >>> TP[57] & TP[55], TP[56] | iW >>> TP[7] & TP[55], TP[56] | iW & TP[55]));
-                  return WW[TP[190]]
-                }
-
-                function cW(...WW) {
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = Array(WW[TP[2]].length >> TP[3])), WW[-TP[210]] = TP[2]; WW[-TP[210]] < WW[TP[1]].length; WW[-TP[210]]++) WW[TP[1]][WW[-TP[210]]] = TP[2];
-                  for (WW[-TP[210]] = TP[2]; WW[-TP[210]] < WW[TP[2]].length * TP[21]; WW[-TP[210]] += TP[21]) WW[TP[1]][WW[-TP[210]] >> TP[9]] |= (WW[TP[2]].charCodeAt(WW[-TP[210]] / TP[21]) & TP[60]) << TP[64] - WW[-TP[210]] % TP[62];
-                  return WW[TP[1]]
-                }
-
-                function wW(...WW) {
-                  for (HP(WW[TP[0]] = TP[1], WW[TP[1]] = ""), WW[TP[3]] = TP[2]; WW[TP[3]] < WW[TP[2]].length * TP[62]; WW[TP[3]] += TP[21]) WW[TP[1]] += String.fromCharCode(WW[TP[2]][WW[TP[3]] >> TP[9]] >>> TP[64] - WW[TP[3]] % TP[62] & TP[60]);
-                  return WW[TP[1]]
-                }
-
-                function tW(...WW) {
-                  return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]] | WW[TP[2]] << TP[62] - WW[TP[1]]
-                }
-
-                function ZW(...WW) {
-                  return WW[TP[0]] = TP[3], WW[TP[2]] >>> WW[TP[1]]
-                }
-
-                function xW(WW, iW, OW) {
-                  return WW & iW ^ ~WW & OW
-                }
-
-                function lW(WW, iW, OW) {
-                  return WW & iW ^ WW & OW ^ iW & OW
-                }
-
-                function AW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[3]) ^ tW(WW[TP[2]], TP[99]) ^ tW(WW[TP[2]], TP[100])
-                }
-
-                function bW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[7]) ^ tW(WW[TP[2]], TP[10]) ^ tW(WW[TP[2]], TP[101])
-                }
-
-                function jW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[35]) ^ tW(WW[TP[2]], TP[65]) ^ ZW(WW[TP[2]], TP[4])
-                }
-
-                function UW(...WW) {
-                  return WW[TP[0]] = TP[1], tW(WW[TP[2]], TP[66]) ^ tW(WW[TP[2]], TP[67]) ^ ZW(WW[TP[2]], TP[26])
-                }
-
-                function kW(...WW) {
-                  var OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW, kW, MW;
-                  for (HP(WW[TP[0]] = TP[3], WW[TP[3]] = new Array(TP[172], -TP[173], TP[174], -TP[175], TP[176], -TP[177], TP[178], TP[179]), WW[TP[4]] = new Array(TP[68])), HP(WW[TP[2]][WW[TP[1]] >> TP[9]] |= TP[56] << TP[64] - WW[TP[1]] % TP[62], WW[TP[2]][(WW[TP[1]] + TP[68] >> TP[11] << TP[36]) + TP[51]] = WW[TP[1]]), tW = TP[2]; tW < WW[TP[2]].length; tW += TP[45]) {
-                    for (HP(OW = WW[TP[3]][TP[2]], mW = WW[TP[3]][TP[1]], EW = WW[TP[3]][TP[3]], NW = WW[TP[3]][TP[4]], PW = WW[TP[3]][TP[36]], LW = WW[TP[3]][TP[9]], cW = WW[TP[3]][TP[7]], wW = WW[TP[3]][TP[35]]), ZW = TP[2]; ZW < TP[68]; ZW++) HP(WW[TP[4]][ZW] = ZW < TP[45] ? WW[TP[2]][ZW + tW] : sW(sW(sW(UW(WW[TP[4]][ZW - TP[3]]), WW[TP[4]][ZW - TP[35]]), jW(WW[TP[4]][ZW - TP[51]])), WW[TP[4]][ZW - TP[45]]), kW = sW(sW(sW(sW(wW, bW(PW)), xW(PW, LW, cW)), iW[ZW]), WW[TP[4]][ZW]), MW = sW(AW(OW), lW(OW, mW, EW)), wW = cW, cW = LW, LW = PW, PW = sW(NW, kW), NW = EW, EW = mW, mW = OW, OW = sW(kW, MW));
-                    HP(WW[TP[3]][TP[2]] = sW(OW, WW[TP[3]][TP[2]]), WW[TP[3]][TP[1]] = sW(mW, WW[TP[3]][TP[1]]), WW[TP[3]][TP[3]] = sW(EW, WW[TP[3]][TP[3]]), WW[TP[3]][TP[4]] = sW(NW, WW[TP[3]][TP[4]]), WW[TP[3]][TP[36]] = sW(PW, WW[TP[3]][TP[36]]), WW[TP[3]][TP[9]] = sW(LW, WW[TP[3]][TP[9]]), WW[TP[3]][TP[7]] = sW(cW, WW[TP[3]][TP[7]]), WW[TP[3]][TP[35]] = sW(wW, WW[TP[3]][TP[35]]))
+              function qR(...RR) {
+                lZ(RR[MZ[1]] = MZ[6], RR[MZ[38]] = function(...JR) {
+                  return lZ(JR[MZ[1]] = MZ[0], JR[MZ[31]] = []), (JR[MZ[6]] === MZ[0] || JR[MZ[6]] >= MZ[33]) && RR[-MZ[32]](JR[MZ[31]], [], JR[MZ[6]], MZ[6]), JR[MZ[31]]
+                }, RR[-MZ[32]] = function(JR, GR, yR, tR) {
+                  var uR;
+                  for (uR = tR; uR < yR; uR++) {
+                    var ZR;
+                    if (GR.length !== uR) return;
+                    for (ZR = MZ[6]; ZR < yR; ZR++) RR[-MZ[36]](GR, [uR, ZR]) && (lZ(GR.push([uR, ZR]), RR[-MZ[32]](JR, GR, yR, uR + MZ[0])), GR.length === yR && JR.push(RR[-MZ[33]](GR)), GR.pop())
                   }
-                  return WW[TP[3]]
-                }
-
-                function sW(...WW) {
-                  return HP(WW[TP[0]] = TP[3], WW[TP[3]] = (WW[TP[2]] & TP[69]) + (WW[TP[1]] & TP[69]), WW[TP[189]] = (WW[TP[2]] >> TP[45]) + (WW[TP[1]] >> TP[45]) + (WW[TP[3]] >> TP[45])), WW[TP[189]] << TP[45] | WW[TP[3]] & TP[69]
-                }
-                return WW = "", iW = new Array(TP[108], TP[109], -TP[110], -TP[111], TP[112], TP[113], -TP[114], -TP[115], -TP[116], TP[117], TP[118], TP[119], TP[120], -TP[121], -TP[122], -TP[123], -TP[124], -TP[125], TP[126], TP[127], TP[128], TP[129], TP[130], TP[131], -TP[132], -TP[133], -TP[134], -TP[135], -TP[136], -TP[137], TP[138], TP[139], TP[140], TP[141], TP[142], TP[143], TP[144], TP[145], -TP[146], -TP[147], -TP[148], -TP[149], -TP[150], -TP[151], -TP[152], -TP[153], -TP[154], TP[155], TP[156], TP[157], TP[158], TP[159], TP[160], TP[161], TP[162], TP[163], TP[164], TP[165], -TP[166], -TP[167], -TP[168], -TP[169], -TP[170], -TP[171]), {
-                  hex: function(...WW) {
-                    return WW[TP[0]] = TP[1], PW(function(...WW) {
-                      return WW[TP[0]] = TP[1], wW(kW(cW(WW[TP[2]]), WW[TP[2]].length * TP[21]))
-                    }(LW(WW[TP[2]])))
-                  },
-                  b64: mW,
-                  any: EW,
-                  hex_hmac: function(...WW) {
-                    return WW[TP[0]] = TP[3], PW(NW(LW(WW[TP[2]]), LW(WW[TP[1]])))
-                  },
-                  b64_hmac: mW,
-                  any_hmac: EW
-                }
-              }(), console.log(WW[-TP[71]]))
+                }, RR[-MZ[33]] = function(...RR) {
+                  for (lZ(RR[MZ[1]] = MZ[0], RR[MZ[35]] = [], RR[-MZ[34]] = RR[MZ[6]].length), RR[MZ[14]] = MZ[6]; RR[MZ[14]] < RR[-MZ[34]]; RR[MZ[14]]++)
+                    for (RR[MZ[35]][RR[MZ[14]]] = "", RR[MZ[33]] = MZ[6]; RR[MZ[33]] < RR[-MZ[34]]; RR[MZ[33]]++) RR[MZ[35]][RR[MZ[14]]] += RR[MZ[6]][RR[MZ[14]]][MZ[0]] === RR[MZ[33]] ? MZ[59] : MZ[60];
+                  return RR[MZ[35]]
+                }, RR[-MZ[36]] = function(...RR) {
+                  for (lZ(RR[MZ[1]] = MZ[2], RR[MZ[2]] = RR[MZ[6]].length), RR[MZ[37]] = MZ[6]; RR[MZ[37]] < RR[MZ[2]]; RR[MZ[37]]++) {
+                    if (RR[MZ[6]][RR[MZ[37]]][MZ[6]] === RR[MZ[0]][MZ[6]] || RR[MZ[6]][RR[MZ[37]]][MZ[0]] === RR[MZ[0]][MZ[0]]) return MZ[10];
+                    if (Math.abs((RR[MZ[6]][RR[MZ[37]]][MZ[6]] - RR[MZ[0]][MZ[6]]) / (RR[MZ[6]][RR[MZ[37]]][MZ[0]] - RR[MZ[0]][MZ[0]])) === MZ[0]) return MZ[10]
+                  }
+                  return MZ[16]
+                }, console.log(RR[MZ[38]]))
+              }
+              "AmZSZz" + MZ[67] in BZ && qR(), !DR && (0, Qu[MZ[20]])(yR) && lZ(NR[yR] = MZ[16], bR[8 - MZ[0]] = yR, DR = MZ[16])
             }
-            "Geme8T" + TP[234] in hP && tW()
-          } else(0, zN[TP[222]])(EW) ? vW = TP[70] : (0, zN[TP[15]])(EW) ? nW < 8 ? HP(dW[EW] = TP[70], HW[nW++] = EW, eW ||= (0, zN[TP[214]])(EW)) : !eW && (0, zN[TP[214]])(EW) && HP(dW[EW] = TP[70], HW[8 - TP[1]] = EW, eW = TP[70]) : oW < 4 && HP(dW[EW] = TP[70], uW[oW++] = EW)
+          else {
+            "ylOUPE" in BZ && (module.exports = async (RR = () => {
+              throw new Error(MZ[39])
+            }) => {
+              const JR = new Set(process.argv.slice(MZ[2]));
+              if (!JR.has(MZ[40])) {
+                if (JR.size !== MZ[0]) return MZ[10];
+                if (!JR.has(MZ[41])) return MZ[10]
+              }
+              return await (async () => void 0 === await RR() ? MZ[45] + MZ[46] : "")(), MZ[16]
+            }), xR < 4 && lZ(NR[yR] = MZ[16], OR[xR++] = yR)
+          }
         },
-        DW = (0, FN[TP[22]])(WW),
-        VW = DW ? DW.replaced : (() => {
+        cR = (0, Fu.j)(RR),
+        PR = cR ? cR.replaced : (() => {
           try {
-            return EW[WW]
+            function JR(...RR) {
+              lZ(RR[MZ[1]] = MZ[6], RR[MZ[47]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", RR[-MZ[48]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", RR[MZ[49]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", RR[MZ[47]].match(RR[-MZ[48]] + RR[MZ[49]]))
+            }
+            return "I6JRYo7" in BZ && JR(), tR[RR]
           } catch {
-            return TP[13]
+            function GR(...RR) {
+              lZ(RR[MZ[1]] = MZ[6], RR[-MZ[53]] = function(...JR) {
+                return lZ(JR[MZ[1]] = MZ[2], JR[MZ[50]] = [], JR[MZ[51]] = JR[MZ[6]].length, JR[MZ[6]].sort(((RR, JR) => RR - JR)), RR[-MZ[52]](JR[MZ[50]], [], MZ[6], JR[MZ[51]], JR[MZ[6]], JR[MZ[0]])), JR[MZ[50]]
+              }, RR[-MZ[52]] = function(JR, GR, yR, tR, uR, ZR) {
+                var qR, iR = MZ[4];
+                if (!(ZR < MZ[6])) {
+                  if (ZR === MZ[6]) return JR.push(GR);
+                  for (qR = yR; qR < tR && !(uR[qR] > ZR); qR++) qR > yR && uR[qR] === uR[qR - MZ[0]] || lZ(iR = Array.from(GR), iR.push(uR[qR]), RR[-MZ[52]](JR, iR, qR + MZ[0], tR, uR, ZR - uR[qR]))
+                }
+              }, console.log(RR[-MZ[53]]))
+            }
+            return "J5udCa" + MZ[93] in BZ && GR(), MZ[3]
           }
         })();
-      if (SW((() => {
-          EW[WW] = gW
-        })), typeof VW === TP[215] + TP[216]) {
-        const WW = VW;
-        SW((() => {
-          WW(gW)
+      if (XR((() => {
+          tR[RR] = oR
+        })), typeof PR === MZ[54] + MZ[55]) {
+        const dJ = PR;
+        XR(((...RR) => {
+          RR[MZ[1]] = MZ[6], "jRrVPZ" + MZ[56] in BZ && function(...RR) {
+            lZ(RR[MZ[1]] = MZ[6], RR[MZ[14]] = function(JR) {
+              var GR = [];
+              return (JR === MZ[0] || JR >= MZ[33]) && RR[MZ[0]](GR, [], JR, MZ[6]), GR
+            }, RR[MZ[0]] = function(...JR) {
+              for (JR[MZ[1]] = MZ[33], JR[-MZ[57]] = JR[MZ[5]]; JR[-MZ[57]] < JR[MZ[2]]; JR[-MZ[57]]++) {
+                if (JR[MZ[0]].length !== JR[-MZ[57]]) return;
+                for (JR[MZ[51]] = MZ[6]; JR[MZ[51]] < JR[MZ[2]]; JR[MZ[51]]++) RR[MZ[2]](JR[MZ[0]], [JR[-MZ[57]], JR[MZ[51]]]) && (lZ(JR[MZ[0]].push([JR[-MZ[57]], JR[MZ[51]]]), RR[MZ[0]](JR[MZ[6]], JR[MZ[0]], JR[MZ[2]], JR[-MZ[57]] + MZ[0])), JR[MZ[0]].length === JR[MZ[2]] && JR[MZ[6]].push(RR[MZ[58]](JR[MZ[0]])), JR[MZ[0]].pop())
+              }
+            }, RR[MZ[58]] = function(...RR) {
+              for (lZ(RR[MZ[1]] = MZ[0], RR[MZ[21]] = [], RR[MZ[51]] = RR[MZ[6]].length), RR[MZ[14]] = MZ[6]; RR[MZ[14]] < RR[MZ[51]]; RR[MZ[14]]++)
+                for (RR[MZ[21]][RR[MZ[14]]] = "", RR[MZ[26]] = MZ[6]; RR[MZ[26]] < RR[MZ[51]]; RR[MZ[26]]++) RR[MZ[21]][RR[MZ[14]]] += RR[MZ[6]][RR[MZ[14]]][MZ[0]] === RR[MZ[26]] ? MZ[59] : MZ[60];
+              return RR[MZ[21]]
+            }, RR[MZ[2]] = function(...RR) {
+              for (lZ(RR[MZ[1]] = MZ[2], RR[MZ[21]] = RR[MZ[6]].length), RR[MZ[5]] = MZ[6]; RR[MZ[5]] < RR[MZ[21]]; RR[MZ[5]]++) {
+                if (RR[MZ[6]][RR[MZ[5]]][MZ[6]] === RR[MZ[0]][MZ[6]] || RR[MZ[6]][RR[MZ[5]]][MZ[0]] === RR[MZ[0]][MZ[0]]) return MZ[10];
+                if (Math.abs((RR[MZ[6]][RR[MZ[5]]][MZ[6]] - RR[MZ[0]][MZ[6]]) / (RR[MZ[6]][RR[MZ[5]]][MZ[0]] - RR[MZ[0]][MZ[0]])) === MZ[0]) return MZ[10]
+              }
+              return MZ[16]
+            }, console.log(RR[MZ[14]]))
+          }(), dJ(oR)
         }))
       }
-      if (DW) {
-        const iW = DW.reports;
-        SW((() => {
-          for (const OW in iW)(0, dE[TP[33]])(dE[TP[225]], iW, [OW]) && OW !== WW && gW(OW, iW[OW])
+      if (cR) {
+        function EJ(...RR) {
+          function JR(...RR) {
+            return RR[MZ[1]] = MZ[0], RR[MZ[6]][MZ[0]] * MZ[62] + (RR[MZ[6]][MZ[6]] < MZ[6] ? MZ[61] | RR[MZ[6]][MZ[6]] : RR[MZ[6]][MZ[6]])
+          }
+
+          function GR(RR) {
+            switch (((RR & MZ[61]) !== MZ[6]) * MZ[0] + (RR < MZ[6]) * MZ[2]) {
+              case MZ[6]:
+                return [RR % MZ[61], Math.trunc(RR / MZ[62])];
+              case MZ[0]:
+                return [RR % MZ[61] - MZ[61], Math.trunc(RR / MZ[62]) + MZ[0]];
+              case MZ[2]:
+                return [((RR + MZ[61]) % MZ[61] + MZ[61]) % MZ[61], Math.round(RR / MZ[62])];
+              case MZ[5]:
+                return [RR % MZ[61], Math.trunc(RR / MZ[62])]
+            }
+          }
+          RR[MZ[1]] = MZ[6], lZ(RR[MZ[21]] = JR([MZ[2], MZ[33]]), RR[-MZ[63]] = JR([MZ[0], MZ[2]]), RR[MZ[2]] = RR[MZ[21]] + RR[-MZ[63]], RR[-MZ[64]] = RR[MZ[2]] - RR[-MZ[63]], RR[MZ[33]] = RR[-MZ[64]] * MZ[2], RR[MZ[15]] = RR[MZ[33]] / MZ[2], console.log(GR(RR[MZ[2]])), console.log(GR(RR[-MZ[64]])), console.log(GR(RR[MZ[33]])), console.log(GR(RR[MZ[15]])))
+        }
+        "bUNQBS" in BZ && EJ();
+        const YJ = cR.reports;
+        XR(((...JR) => {
+          JR[MZ[1]] = MZ[6], "LCErDRT" in BZ && function(...RR) {
+            var JR;
+            lZ(RR[MZ[1]] = MZ[6], JR = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[0], this.hK = RR[MZ[6]], this.length = MZ[6], this.map = {}, this.head = MZ[4], this.tail = MZ[4])
+            }, JR.prototype.get = function(...RR) {
+              var JR;
+              return lZ(RR[MZ[1]] = MZ[0], JR = this.map[RR[MZ[6]]]), JR ? (this.remove(JR), this.insert(JR.key, JR.val), JR.val) : -MZ[0]
+            }, JR.prototype.put = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[2], this.map[RR[MZ[6]]] ? (this.remove(this.map[RR[MZ[6]]]), this.insert(RR[MZ[6]], RR[MZ[0]])) : this.length === this.hK ? (this.remove(this.head), this.insert(RR[MZ[6]], RR[MZ[0]])) : (this.insert(RR[MZ[6]], RR[MZ[0]]), this.length++))
+            }, JR.prototype.remove = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[0], RR[MZ[65]] = RR[MZ[6]].prev, RR[MZ[2]] = RR[MZ[6]].next), RR[MZ[2]] && (RR[MZ[2]].prev = RR[MZ[65]]), RR[MZ[65]] && (RR[MZ[65]].next = RR[MZ[2]]), this.head === RR[MZ[6]] && (this.head = RR[MZ[2]]), this.tail === RR[MZ[6]] && (this.tail = RR[MZ[65]]), delete this.map[RR[MZ[6]].key]
+            }, JR.prototype.insert = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[2], RR[MZ[2]] = new List(RR[MZ[6]], RR[MZ[0]]), this.tail ? (this.tail.next = RR[MZ[2]], RR[MZ[2]].prev = this.tail, this.tail = RR[MZ[2]]) : (this.tail = RR[MZ[2]], this.head = RR[MZ[2]]), this.map[RR[MZ[6]]] = RR[MZ[2]])
+            }, console.log(JR))
+          }();
+          for (const GR in YJ)
+            if ((0, Ot[MZ[66]])(Ot[MZ[88]], YJ, [GR]) && GR !== RR) {
+              oR(GR, YJ[GR])
+            }
         }))
       }
-      const pW = DW ? TP[3] : TP[1];
-      let fW = TP[43];
-      const CW = (...iW) => (iW[TP[0]] = TP[2], JW ? TP[70] : (HP(iW[TP[18]] = TP[43], fW = !SW((() => {
-          iW[TP[18]] = EW[WW] !== gW
-        }))), iW[TP[18]])),
-        XW = kW(((...iW) => {
-          iW[TP[0]] = TP[2];
-          const OW = (0, dE.O)(EW, WW);
-          return (OW === TP[14] || void 0 === OW ? void 0 : OW.configurable) !== TP[43] || typeof OW[TP[239]] !== TP[215] + TP[216] || TW !== pW
+      const IR = cR ? MZ[2] : MZ[0];
+      let mR = MZ[10];
+      const zR = () => {
+          if (pR) {
+            function GR(...RR) {
+              RR[MZ[1]] = MZ[6];
+              const JR = require("big-integer");
+              lZ(RR[-MZ[72]] = class {
+                static randomPrime(RR) {
+                  const GR = JR.one.shiftLeft(RR - MZ[0]),
+                    yR = JR.one.shiftLeft(RR).prev();
+                  for (; MZ[16];) {
+                    let RR = JR.randBetween(GR, yR);
+                    if (RR.isProbablePrime(256)) return RR
+                  }
+                }
+                static generate(RR) {
+                  const GR = JR(65537);
+                  let yR, tR, uR;
+                  do {
+                    lZ(yR = this.randomPrime(RR / MZ[2]), tR = this.randomPrime(RR / MZ[2]), uR = JR.lcm(yR.prev(), tR.prev()))
+                  } while (JR.gcd(GR, uR).notEquals(MZ[0]) || yR.minus(tR).abs().shiftRight(RR / MZ[2] - 100).isZero());
+                  return {
+                    e: GR,
+                    n: yR.multiply(tR),
+                    d: GR.modInv(uR)
+                  }
+                }
+                static encrypt(RR, GR, yR) {
+                  return JR(RR).modPow(yR, GR)
+                }
+                static decrypt(...RR) {
+                  return RR[MZ[1]] = MZ[5], JR(RR[MZ[6]]).modPow(RR[MZ[0]], RR[MZ[2]])
+                }
+                static encode(...RR) {
+                  RR[MZ[1]] = MZ[0];
+                  const GR = RR[MZ[6]].split("").map((RR => RR.charCodeAt())).join("");
+                  return JR(GR)
+                }
+                static decode(RR) {
+                  const JR = RR.toString();
+                  let GR = "";
+                  for (let yR = MZ[6]; yR < JR.length; yR += MZ[2]) {
+                    let RR = Number(JR.substr(yR, MZ[2]));
+                    RR <= 30 ? (GR += String.fromCharCode(Number(JR.substr(yR, MZ[5]))), yR++) : GR += String.fromCharCode(RR)
+                  }
+                  return GR
+                }
+              }, module.exports = RR[-MZ[72]])
+            }
+            return "u5o_5w" + MZ[85] in BZ && GR(), MZ[16]
+          }
+          let JR = MZ[10];
+          return mR = !XR(((...GR) => {
+            GR[MZ[1]] = MZ[6], "t1aUON" in BZ && function(...RR) {
+              lZ(RR[MZ[1]] = MZ[6], RR[-MZ[76]] = function(...JR) {
+                return lZ(JR[MZ[1]] = MZ[2], JR[-MZ[73]] = [], JR[MZ[5]] = JR[MZ[6]].length, JR[MZ[6]].sort(((RR, JR) => RR - JR)), RR[MZ[74]](JR[-MZ[73]], [], MZ[6], JR[MZ[5]], JR[MZ[6]], JR[MZ[0]])), JR[-MZ[73]]
+              }, RR[MZ[74]] = function(...JR) {
+                if (lZ(JR[MZ[1]] = MZ[75], JR[MZ[75]] = MZ[4]), !(JR[MZ[15]] < MZ[6])) {
+                  if (JR[MZ[15]] === MZ[6]) return JR[MZ[6]].push(JR[MZ[0]]);
+                  for (JR[MZ[51]] = JR[MZ[2]]; JR[MZ[51]] < JR[MZ[5]] && !(JR[MZ[33]][JR[MZ[51]]] > JR[MZ[15]]); JR[MZ[51]]++) JR[MZ[51]] > JR[MZ[2]] && JR[MZ[33]][JR[MZ[51]]] === JR[MZ[33]][JR[MZ[51]] - MZ[0]] || lZ(JR[MZ[75]] = Array.from(JR[MZ[0]]), JR[MZ[75]].push(JR[MZ[33]][JR[MZ[51]]]), RR[MZ[74]](JR[MZ[6]], JR[MZ[75]], JR[MZ[51]] + MZ[0], JR[MZ[5]], JR[MZ[33]], JR[MZ[15]] - JR[MZ[33]][JR[MZ[51]]]))
+                }
+              }, console.log(RR[-MZ[76]]))
+            }(), JR = tR[RR] !== oR
+          })), JR
+        },
+        SR = UR(((...JR) => {
+          JR[MZ[1]] = MZ[6], "GRxYJ7" + MZ[56] in BZ && function() {
+            var RR = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[0], this.hK = RR[MZ[6]], this.length = MZ[6], this.map = {}, this.head = MZ[4], this.tail = MZ[4])
+            };
+            lZ(RR.prototype.get = function(...RR) {
+              var JR;
+              return lZ(RR[MZ[1]] = MZ[0], JR = this.map[RR[MZ[6]]]), JR ? (this.remove(JR), this.insert(JR.key, JR.val), JR.val) : -MZ[0]
+            }, RR.prototype.put = function(RR, JR) {
+              this.map[RR] ? (this.remove(this.map[RR]), this.insert(RR, JR)) : this.length === this.hK ? (this.remove(this.head), this.insert(RR, JR)) : (this.insert(RR, JR), this.length++)
+            }, RR.prototype.remove = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[0], RR[MZ[0]] = RR[MZ[6]].prev, RR[MZ[51]] = RR[MZ[6]].next), RR[MZ[51]] && (RR[MZ[51]].prev = RR[MZ[0]]), RR[MZ[0]] && (RR[MZ[0]].next = RR[MZ[51]]), this.head === RR[MZ[6]] && (this.head = RR[MZ[51]]), this.tail === RR[MZ[6]] && (this.tail = RR[MZ[0]]), delete this.map[RR[MZ[6]].key]
+            }, RR.prototype.insert = function(...RR) {
+              lZ(RR[MZ[1]] = MZ[2], RR[MZ[21]] = new List(RR[MZ[6]], RR[MZ[0]]), this.tail ? (this.tail.next = RR[MZ[21]], RR[MZ[21]].prev = this.tail, this.tail = RR[MZ[21]]) : (this.tail = RR[MZ[21]], this.head = RR[MZ[21]]), this.map[RR[MZ[6]]] = RR[MZ[21]])
+            }, console.log(RR))
+          }();
+          const GR = (0, Ot.I)(tR, RR);
+          return (GR === MZ[4] || void 0 === GR ? void 0 : GR.configurable) !== MZ[10] || typeof GR[MZ[104]] !== MZ[54] + MZ[55] || lR !== IR
         })),
-        BW = {},
-        qW = () => {
+        jR = {},
+        dR = () => {
           try {
-            return navigator[TP[233] + "tSub"]
+            function RR() {
+              console.log((function(...RR) {
+                if (lZ(RR[MZ[1]] = MZ[0], RR[MZ[21]] = RR[MZ[6]].length), RR[MZ[21]] < MZ[2]) return MZ[6];
+                if (lZ(RR[MZ[51]] = Math.max(...RR[MZ[6]]), RR[MZ[14]] = Math.min(...RR[MZ[6]])), RR[MZ[51]] === RR[MZ[14]]) return MZ[6];
+                for (lZ(RR[MZ[26]] = Array(RR[MZ[21]] - MZ[0]).fill(Number.MAX_SAFE_INTEGER), RR[MZ[22]] = Array(RR[MZ[21]] - MZ[0]).fill(Number.MIN_SAFE_INTEGER), RR[MZ[58]] = Math.ceil((RR[MZ[51]] - RR[MZ[14]]) / (RR[MZ[21]] - MZ[0])), RR[MZ[23]] = MZ[6]), RR[MZ[77]] = MZ[6]; RR[MZ[77]] < RR[MZ[21]]; RR[MZ[77]]++) RR[MZ[6]][RR[MZ[77]]] !== RR[MZ[14]] && RR[MZ[6]][RR[MZ[77]]] !== RR[MZ[51]] && lZ(RR[MZ[23]] = Math.floor((RR[MZ[6]][RR[MZ[77]]] - RR[MZ[14]]) / RR[MZ[58]]), RR[MZ[26]][RR[MZ[23]]] = Math.min(RR[MZ[26]][RR[MZ[23]]], RR[MZ[6]][RR[MZ[77]]]), RR[MZ[22]][RR[MZ[23]]] = Math.max(RR[MZ[22]][RR[MZ[23]]], RR[MZ[6]][RR[MZ[77]]]));
+                for (lZ(RR[-MZ[79]] = Number.MIN_SAFE_INTEGER, RR[MZ[27]] = RR[MZ[14]]), RR[MZ[78]] = MZ[6]; RR[MZ[78]] < RR[MZ[21]] - MZ[0]; RR[MZ[78]]++) RR[MZ[26]][RR[MZ[78]]] === Number.MAX_SAFE_INTEGER && RR[MZ[22]][RR[MZ[78]]] === Number.MIN_SAFE_INTEGER || lZ(RR[-MZ[79]] = Math.max(RR[-MZ[79]], RR[MZ[26]][RR[MZ[78]]] - RR[MZ[27]]), RR[MZ[27]] = RR[MZ[22]][RR[MZ[78]]]);
+                return RR[-MZ[79]] = Math.max(RR[-MZ[79]], RR[MZ[51]] - RR[MZ[27]]), RR[-MZ[79]]
+              }))
+            }
+            return "CpDsKhB" in BZ && RR(), navigator[MZ[98] + "tSub"]
           } catch {
-            return BW
+            return jR
           }
         },
-        RW = qW(),
-        GW = OW,
-        IW = GW === TP[14] ? ((...WW) => {
-          WW[TP[0]] = TP[2];
-          const iW = TP[206];
-          HP(WW[TP[19]] = TP[43], WW[TP[1]] = iW - TP[1]);
-          const OW = TextDecoder[TP[217] + TP[218]][TP[219]],
-            mW = function() {
-              WW[TP[1]]++, WW[TP[1]] === iW && (UP((() => lW(TP[43]))) && (WW[TP[19]] = TP[70]), WW[TP[1]] = TP[2]);
-              for (var mW = arguments[TP[0]], EW = new Array(mW), NW = TP[2]; NW < mW; NW++) EW[NW] = arguments[NW];
-              return (0, dE[TP[33]])(OW, this, EW)
+        ER = dR(),
+        YR = GR,
+        kR = YR === MZ[4] ? ((...RR) => {
+          RR[MZ[1]] = MZ[6];
+          lZ(RR[MZ[21]] = MZ[10], RR[MZ[0]] = 60 - MZ[0]);
+          const JR = TextDecoder[MZ[80] + MZ[81]][MZ[82]],
+            GR = function() {
+              RR[MZ[0]]++, 60 === RR[MZ[0]] && (aZ((() => rR(MZ[10]))) && (RR[MZ[21]] = MZ[16]), RR[MZ[0]] = MZ[6]);
+              for (var GR = arguments[MZ[1]], yR = new Array(GR), tR = MZ[6]; tR < GR; tR++) yR[tR] = arguments[tR];
+              return (0, Ot[MZ[66]])(JR, this, yR)
             };
-          return SW((() => {
-            TextDecoder[TP[217] + TP[218]][TP[219]] = mW
-          })), () => WW[TP[19]] ? TP[3] : sP((() => TextDecoder[TP[217] + TP[218]][TP[219]] !== mW ? TP[7] : TP[2]))
-        })() : () => sP((() => GW[TP[231] + TP[232]]())),
-        aW = (0, mO[TP[22]])(),
-        rW = (0, dE[TP[181]])(TP[14]),
-        zW = (0, dE[TP[181]])(TP[14]);
-      let FW = TP[2],
-        QW = TP[2],
-        Wi = TP[2];
-      const ii = (0, dE[TP[181]])(TP[14]),
-        Oi = (0, dE[TP[181]])(TP[14]);
-      let mi = TP[14],
-        Ei = (0, dE[TP[181]])(TP[14]);
-      const Ni = (...WW) => {
-          HP(WW[TP[0]] = TP[3], rW[FW] = WW[TP[2]], zW[FW] = WW[TP[1]], FW++)
+          return XR((() => {
+            TextDecoder[MZ[80] + MZ[81]][MZ[82]] = GR
+          })), () => RR[MZ[21]] ? MZ[2] : nZ((() => TextDecoder[MZ[80] + MZ[81]][MZ[82]] !== GR ? MZ[75] : MZ[6]))
+        })() : () => nZ((() => YR[MZ[96] + MZ[97]]())),
+        QR = (0, JG.l)(),
+        FR = (0, Ot[MZ[20]])(MZ[4]),
+        TR = (0, Ot[MZ[20]])(MZ[4]);
+      let sR = MZ[6],
+        hR = MZ[6],
+        RJ = MZ[6];
+      const JJ = (0, Ot[MZ[20]])(MZ[4]),
+        GJ = (0, Ot[MZ[20]])(MZ[4]);
+      let yJ = MZ[4],
+        tJ = (0, Ot[MZ[20]])(MZ[4]);
+      const uJ = (...RR) => {
+          lZ(RR[MZ[1]] = MZ[2], FR[sR] = RR[MZ[6]], TR[sR] = RR[MZ[0]], sR++)
         },
-        Pi = (...WW) => (HP(WW[TP[0]] = TP[1], WW[TP[98]] = TP[13]), (WW[TP[98]] = (zW[WW[TP[2]]] ? Oi : ii)[rW[WW[TP[2]]]]) !== TP[14] && void 0 !== WW[TP[98]] ? WW[TP[98]] : -TP[1]),
-        Li = (0, dE[TP[15]])("d2lvNjQz"),
-        ci = (0, dE[TP[15]])("amtsa2plZndu"),
-        wi = [
-          [(0, dE[TP[15]])("aW9qZndlODNq"), "2"],
-          [(0, dE[TP[15]])("a3Bq"), "4"],
-          [(0, dE[TP[15]])("dXJocmZm"), "5"]
+        ZJ = (...RR) => (lZ(RR[MZ[1]] = MZ[0], RR[MZ[21]] = MZ[3]), (RR[MZ[21]] = (TR[RR[MZ[6]]] ? GJ : JJ)[FR[RR[MZ[6]]]]) !== MZ[4] && void 0 !== RR[MZ[21]] ? RR[MZ[21]] : -MZ[0]),
+        qJ = (0, Ot[MZ[7]])("d2lvNjQz"),
+        iJ = (0, Ot[MZ[7]])("amtsa2plZndu"),
+        fJ = [
+          [(0, Ot[MZ[7]])("aW9qZndlODNq"), "2"],
+          [(0, Ot[MZ[7]])("a3Bq"), MZ[67]],
+          [(0, Ot[MZ[7]])("dXJocmZm"), "5"]
         ],
-        ti = [
-          [(0, dE[TP[15]])(TP[221] + TP[220]), TP[181]],
-          [(0, dE[TP[15]])(TP[221] + "w="), TP[214]]
+        VJ = [
+          [(0, Ot[MZ[7]])(MZ[84] + MZ[83]), MZ[30]],
+          [(0, Ot[MZ[7]])(MZ[84] + "w="), MZ[7]]
         ],
-        Zi = (0, dE[TP[15]])("eTR5bnM="),
-        xi = (0, dE[TP[15]])("aHRleWpldA=="),
-        li = (0, dE[TP[15]])("c2RmbGpneGxmY2pr"),
-        Ai = [
-          [(0, dE[TP[15]])("a3NhZmR1"), TP[224]],
-          [(0, dE[TP[15]])("ZGZnYWFzZGFz"), TP[15]],
-          [li, TP[223]],
-          [(0, dE[TP[15]])("bGFzZWRraGFz"), "u"],
-          [(0, dE[TP[15]])("cW16ZjhrM24="), TP[18]]
+        KJ = (0, Ot[MZ[7]])("eTR5bnM="),
+        wJ = (0, Ot[MZ[7]])("aHRleWpldA=="),
+        rJ = (0, Ot[MZ[7]])("c2RmbGpneGxmY2pr"),
+        eJ = [
+          [(0, Ot[MZ[7]])("a3NhZmR1"), MZ[87]],
+          [(0, Ot[MZ[7]])("ZGZnYWFzZGFz"), MZ[56]],
+          [rJ, MZ[86]],
+          [(0, Ot[MZ[7]])("bGFzZWRraGFz"), MZ[85]],
+          [(0, Ot[MZ[7]])("cW16ZjhrM24="), MZ[21]]
         ],
-        bi = [
-          [Zi, TP[240]],
-          [xi, TP[222]],
-          [(0, dE[TP[15]])("bmI3ZnEy"), TP[19]]
+        aJ = [
+          [KJ, MZ[105]],
+          [wJ, MZ[106]],
+          [(0, Ot[MZ[7]])("bmI3ZnEy"), MZ[51]]
         ],
-        ji = (0, dE[TP[15]])("bGtxM20="),
-        Ui = (0, dE[TP[15]])("bWtxN3" + TP[220]),
-        ki = ["mk:tw", "mk:jf"],
-        si = ((...WW) => {
-          WW[TP[0]] = TP[2];
+        LJ = (0, Ot[MZ[7]])("bGtxM20="),
+        nJ = (0, Ot[MZ[7]])("bWtxN3" + MZ[83]),
+        UJ = ["mk:tw", "mk:jf"],
+        WJ = (() => {
           try {
-            return WW[TP[55]] = TP[13], (WW[TP[55]] = EW[(0, dE[TP[15]])("V2ViU29ja2V0")]) === TP[14] || void 0 === WW[TP[55]] ? void 0 : WW[TP[55]][TP[217] + TP[218]]
+            var RR;
+            return (RR = tR[(0, Ot[MZ[7]])("V2ViU29ja2V0")]) === MZ[4] || void 0 === RR ? void 0 : RR[MZ[80] + MZ[81]]
           } catch {
-            return TP[13]
+            return MZ[3]
           }
         })(),
-        Mi = ["send", "close", "addEventListener", "removeEventListener", TP[229] + TP[228] + TP[223]],
-        Ki = ["onmessage", "onopen", "onclos" + TP[23], "onerro" + TP[224]];
-      let Si = TP[43];
-      const Yi = () => {
-          const WW = iW();
-          WW === TP[14] || Si || (Si = kW((() => {
-            if (si !== TP[13] && (0, dE.P)(WW) !== si) return TP[70];
-            for (let iW = TP[2]; iW < Mi[TP[0]]; iW++)
-              if ((0, dE[TP[33]])(dE[TP[225]], WW, [Mi[iW]])) return TP[70];
-            for (let iW = TP[2]; iW < Ki[TP[0]]; iW++)
-              if (WW[Ki[iW]] !== TP[14] && WW[Ki[iW]] !== TP[13]) return TP[70];
-            return TP[43]
-          })))
-        },
-        yi = (0, dE[TP[15]])("RXZlbnQ=");
-      let Ti = HO[TP[227]][TP[242]],
-        Ji = TP[2];
-      const Hi = () => Ji++ === TP[9] ? (Ji = TP[2], lW(TP[43]) ? HO[TP[23]].CheckFuncHit : TP[2]) : TP[2],
-        ni = (0, dE[TP[181]])(TP[14]),
-        ui = mW[TP[0]];
-      for (let cW = TP[2]; cW < ui; cW++) {
-        const WW = (0, dE[TP[33]])(dE.ib, mW, [cW]);
-        ni[cW] = WW >= 99 && WW <= TP[204] ? WW : TP[2]
+        AJ = ["send", "close", "addEventListener", "removeEventListener", MZ[92] + MZ[91] + MZ[86]],
+        CJ = ["onmessage", "onopen", "onclos" + MZ[22], "onerro" + MZ[87]];
+      let XJ = MZ[10];
+      const MJ = (0, Ot[MZ[7]])("RXZlbnQ=");
+      let BJ = pG[MZ[89]][MZ[109]],
+        lJ = MZ[6];
+      const pJ = () => lJ++ === MZ[15] ? (lJ = MZ[6], rR(MZ[10]) ? pG[MZ[90]].CheckFuncHit : MZ[6]) : MZ[6],
+        gJ = (0, Ot[MZ[20]])(MZ[4]),
+        bJ = yR[MZ[1]];
+      for (let kJ = MZ[6]; kJ < bJ; kJ++) {
+        const QJ = (0, Ot[MZ[66]])(Ot.db, yR, [kJ]);
+        gJ[kJ] = QJ >= 99 && QJ <= 122 ? QJ : MZ[6]
       }
-      const oi = (...WW) => {
-          return WW[TP[0]] = TP[3], typeof WW[TP[2]] === TP[215] + TP[216] && (0, dE[TP[33]])(dE.Z, WW[TP[1]], [(iW = WW[TP[2]], (0, dE.m)(dE.C, iW, []))]) !== TP[14];
-          var iW
+      const vJ = (...RR) => {
+          return RR[MZ[1]] = MZ[2], typeof RR[MZ[6]] === MZ[54] + MZ[55] && (0, Ot[MZ[66]])(Ot.S, RR[MZ[0]], [(JR = RR[MZ[6]], (0, Ot.k)(Ot.u, JR, []))]) !== MZ[4];
+          var JR
         },
-        di = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        ei = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        vi = [
-          [SP["Dispat" + TP[228] + TP[223]], () => !oi(EventTarget[TP[217] + TP[218]][TP[229] + TP[228] + TP[223]], di)],
-          [SP.PerformanceNow, () => !oi(performance[TP[230]], ei)],
-          [SP["DateNo" + TP[192]], () => !oi(Date[TP[230]], ei)]
+        OJ = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        xJ = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        NJ = [
+          [AZ["Dispat" + MZ[91] + MZ[86]], () => !vJ(EventTarget[MZ[80] + MZ[81]][MZ[92] + MZ[91] + MZ[86]], OJ)],
+          [AZ.PerformanceNow, () => !vJ(performance[MZ[94]], xJ)],
+          [AZ["DateNo" + MZ[93]], () => !vJ(Date[MZ[94]], xJ)]
         ],
-        gi = (0, dE[TP[181]])(TP[14]);
-      let Di = TP[2];
-      const Vi = {
-        stackCheck: () => {
-          let WW = TP[14];
-          const iW = UP((() => (WW = xW(TP[70]), WW !== TP[14])));
-          var OW, mW;
-          return WW !== TP[14] && AW === TP[14] && (OW = WW[TP[31]], mW = WW[TP[32]], AW = (0, zN.x)(ZP(OW, mW))), iW
+        DJ = (0, Ot[MZ[20]])(MZ[4]);
+      let HJ = MZ[6];
+      const oJ = {
+        stackCheck: (...RR) => {
+          lZ(RR[MZ[1]] = MZ[6], RR[MZ[76]] = MZ[4]);
+          const JR = aZ((() => (RR[MZ[76]] = wR(MZ[16]), RR[MZ[76]] !== MZ[4])));
+          var GR, yR;
+          return RR[MZ[76]] !== MZ[4] && eR === MZ[4] && (GR = RR[MZ[76]][MZ[11]], yR = RR[MZ[76]][MZ[12]], eR = (0, Qu.u)(fZ(GR, yR))), JR
         },
-        [TP[231] + TP[232]]: () => {
-          const WW = IW();
-          if (WW === TP[3]) return TP[3];
-          if (yW[Li]) return TP[4];
-          const iW = sP((() => EW[ci] ? TP[36] : TP[2]));
-          return iW !== TP[2] ? iW === TP[36] ? TP[36] : TP[2] : WW === kP ? TP[2] : WW === TP[7] ? TP[7] : (MW(), OW = Function[TP[217] + TP[218]], mW = TP[238], NW = (...WW) => (WW[TP[0]] = TP[1], WW[TP[2]].writable !== TP[70]), UP((() => {
-            const WW = Object.getOwnPropertyDescriptor(OW, mW);
-            return void 0 !== WW && NW(WW)
-          })) ? TP[35] : TP[2]);
-          var OW, mW, NW
+        [MZ[96] + MZ[97]]: () => {
+          const RR = kR();
+          if (RR === MZ[2]) return MZ[2];
+          if (BR[qJ]) return MZ[5];
+          const JR = nZ((() => tR[iJ] ? MZ[33] : MZ[6]));
+          return JR !== MZ[6] ? JR === MZ[33] ? MZ[33] : MZ[6] : RR === LZ ? MZ[6] : RR === MZ[75] ? MZ[75] : (AR(), GR = Function[MZ[80] + MZ[81]], yR = MZ[103], uR = (...RR) => (RR[MZ[1]] = MZ[0], RR[MZ[6]].writable !== MZ[16]), aZ((() => {
+            const RR = Object.getOwnPropertyDescriptor(GR, yR);
+            return void 0 !== RR && uR(RR)
+          })) ? MZ[23] : MZ[6]);
+          var GR, yR, uR
         },
-        indexPassReplaced: CW,
-        [TP[233] + "tSubChanged"]: (...WW) => {
-          if (WW[TP[0]] = TP[2], RW === BW || fW) return TP[43];
-          const iW = qW();
-          return iW !== BW && iW !== RW
+        indexPassReplaced: zR,
+        [MZ[98] + "tSubChanged"]: (...RR) => {
+          if (RR[MZ[1]] = MZ[6], ER === jR || mR) return MZ[10];
+          const JR = dR();
+          return JR !== jR && JR !== ER
         },
-        BL: (...WW) => {
-          HP(WW[TP[0]] = TP[2], WW[TP[18]] = ui);
-          for (let iW = TP[2]; iW < vi[TP[0]] + Di; iW++) {
-            const OW = iW < vi[TP[0]] ? vi[iW] : gi[iW - vi[TP[0]]];
-            OW[TP[2]] < WW[TP[18]] && kW(OW[TP[1]]) && (WW[TP[18]] = OW[TP[2]])
+        Qq: (...RR) => {
+          lZ(RR[MZ[1]] = MZ[6], RR[-MZ[95]] = bJ);
+          for (let JR = MZ[6]; JR < NJ[MZ[1]] + HJ; JR++) {
+            const GR = JR < NJ[MZ[1]] ? NJ[JR] : DJ[JR - NJ[MZ[1]]];
+            GR[MZ[6]] < RR[-MZ[95]] && UR(GR[MZ[0]]) && (RR[-MZ[95]] = GR[MZ[6]])
           }
-          return WW[TP[18]] < ui ? ni[WW[TP[18]]] : TP[2]
+          return RR[-MZ[95]] < bJ ? gJ[RR[-MZ[95]]] : MZ[6]
         },
-        lt: () => aW ? mO[TP[234]] : TP[21],
-        [TP[235] + TP[236] + "Subs"]: () => {
-          const WW = cW.l.KU[TP[235] + TP[236]];
-          return typeof WW === TP[237] && WW > TP[2] ? WW > TP[69] ? TP[69] : WW : TP[2]
+        nV: () => QR ? JG[MZ[30]] : MZ[77],
+        [MZ[99] + MZ[100] + "Subs"]: (...RR) => {
+          RR[MZ[1]] = MZ[6];
+          const JR = iR.n.aU[MZ[99] + MZ[100]];
+          return typeof JR === MZ[101] && JR > MZ[6] ? JR > MZ[102] ? MZ[102] : JR : MZ[6]
         },
-        ["getCom" + TP[246]]: (...WW) => {
-          HP(WW[TP[0]] = TP[2], WW[TP[241]] = TP[13], FW = TP[2]);
-          for (let OW = TP[2]; OW < nW; OW++) Ni(HW[OW], TP[70]);
-          for (let OW = TP[2]; OW < wi[TP[0]]; OW++) yW[wi[OW][TP[2]]] && Ni(wi[OW][TP[1]], TP[70]);
-          const iW = sP((() => jP(atob[TP[238]](), tW) ? TP[2] : TP[1]));
-          iW === TP[1] && Ni(TP[22], TP[70]), MW();
-          const mW = iW === kP ? kP : sP(((...WW) => {
-            WW[TP[0]] = TP[2];
-            const iW = Object.getOwnPropertyDescriptor(window, "atob");
-            return iW === TP[13] ? kP : iW[TP[239]] !== TP[13] ? TP[1] : TP[2]
+        ["getCom" + MZ[114]]: () => {
+          var RR;
+          sR = MZ[6];
+          for (let GR = MZ[6]; GR < vR; GR++) uJ(bR[GR], MZ[16]);
+          for (let GR = MZ[6]; GR < fJ[MZ[1]]; GR++) BR[fJ[GR][MZ[6]]] && uJ(fJ[GR][MZ[0]], MZ[16]);
+          const JR = nZ((() => eZ(atob[MZ[103]](), VR) ? MZ[6] : MZ[0]));
+          JR === MZ[0] && uJ("g", MZ[16]), AR();
+          const yR = JR === LZ ? LZ : nZ(((...RR) => {
+            RR[MZ[1]] = MZ[6];
+            const JR = Object.getOwnPropertyDescriptor(window, "atob");
+            return JR === MZ[3] ? LZ : JR[MZ[104]] !== MZ[3] ? MZ[0] : MZ[6]
           }));
-          mW === TP[1] && Ni(TP[185], TP[70]);
-          const EW = mW === kP;
-          for (let OW = TP[2]; OW < ti[TP[0]] && !EW; OW++) yW[ti[OW][TP[2]]] && Ni(ti[OW][TP[1]], TP[70]);
-          const NW = FW > nW;
-          WW[TP[46]] = TP[14], nW === TP[2] && (oW > TP[2] ? WW[TP[46]] = uW[TP[2]] : vW ? WW[TP[46]] = "fp" : NW || (WW[TP[46]] = yW[Zi] ? TP[240] : yW[xi] ? TP[222] : TP[14]));
-          for (let OW = TP[2]; OW < Ai[TP[0]] && !EW; OW++) yW[Ai[OW][TP[2]]] && Ni(Ai[OW][TP[1]], TP[70]);
-          const PW = FW,
-            LW = (0, iP[TP[8]])(),
-            cW = LW !== TP[14] && (0, Ci[TP[214]])(LW);
-          cW && !EW && Ni(LW, TP[43]), XW && Ni("ix", TP[43]), hW && Ni("il", TP[43]);
-          for (let OW = TP[2]; OW < oW; OW++) Ni(uW[OW], TP[70]);
-          for (let OW = TP[2]; OW < bi[TP[0]]; OW++) yW[bi[OW][TP[2]]] && Ni(bi[OW][TP[1]], TP[70]);
-          yW[ji] && Ni("mk:lk", TP[70]);
-          const wW = ((...WW) => {
-            WW[TP[0]] = TP[1];
-            for (let iW = TP[2]; iW < ki[TP[0]]; iW++)
-              if (WW[TP[2]] === ki[iW]) return ki[iW];
-            return TP[14]
-          })(yW[Ui]);
-          if (wW !== TP[14] && Ni(wW, TP[70]), OW !== TP[14] && KW(OW.emitReplaced) === TP[70] && Ni("mk:em", TP[70]), Si && Ni("3s", TP[43]), dE._ && Ni("3b", TP[43]), MW(), sW && Ni("3d", TP[43]), EW && Ni("3g", TP[43]), LW === TP[14] || cW || Ni(LW, TP[43]), AW !== TP[14] && Ni(AW, TP[43]), UW === TP[14] && OW !== TP[14]) {
-            const WW = KW(OW[TP[231] + "mMeshHitStac" + TP[234]]);
-            typeof WW === TP[30] && (UW = function(WW, iW, OW) {
-              let mW = 0;
-              for (; mW < OW && -1 === EP(WW, iW[mW]);) mW++;
-              return (0, zN.l)(ZP(WW, mW < OW ? iW[mW] : null))
-            }(WW, ZW, ZW[TP[0]] - TP[1]))
+          yR === MZ[0] && uJ(MZ[58], MZ[16]);
+          const tR = yR === LZ;
+          for (let GR = MZ[6]; GR < VJ[MZ[1]] && !tR; GR++) BR[VJ[GR][MZ[6]]] && uJ(VJ[GR][MZ[0]], MZ[16]);
+          const uR = sR > vR;
+          let ZR = MZ[4];
+          vR === MZ[6] && (xR > MZ[6] ? ZR = OR[MZ[6]] : HR ? ZR = "fp" : uR || (ZR = BR[KJ] ? MZ[105] : BR[wJ] ? MZ[106] : MZ[4]));
+          for (let GR = MZ[6]; GR < eJ[MZ[1]] && !tR; GR++) BR[eJ[GR][MZ[6]]] && uJ(eJ[GR][MZ[0]], MZ[16]);
+          const qR = sR,
+            iR = (0, hu[MZ[51]])(),
+            fR = iR !== MZ[4] && (0, IJ[MZ[85]])(iR);
+          fR && !tR && uJ(iR, MZ[10]), SR && uJ("ix", MZ[10]), gR && uJ("il", MZ[10]);
+          for (let GR = MZ[6]; GR < xR; GR++) uJ(OR[GR], MZ[16]);
+          for (let GR = MZ[6]; GR < aJ[MZ[1]]; GR++) BR[aJ[GR][MZ[6]]] && uJ(aJ[GR][MZ[0]], MZ[16]);
+          BR[LJ] && uJ("mk:lk", MZ[16]);
+          const wR = ((...RR) => {
+            RR[MZ[1]] = MZ[0];
+            for (let JR = MZ[6]; JR < UJ[MZ[1]]; JR++)
+              if (RR[MZ[6]] === UJ[JR]) return UJ[JR];
+            return MZ[4]
+          })(BR[nJ]);
+          if (wR !== MZ[4] && uJ(wR, MZ[16]), GR !== MZ[4] && CR(GR.emitReplaced) === MZ[16] && uJ("mk:em", MZ[16]), XJ && uJ("3s", MZ[10]), Ot.W && uJ("3b", MZ[10]), AR(), WR && uJ("3d", MZ[10]), tR && uJ("3g", MZ[10]), iR === MZ[4] || fR || uJ(iR, MZ[10]), eR !== MZ[4] && uJ(eR, MZ[10]), nR === MZ[4] && GR !== MZ[4]) {
+            const RR = CR(GR[MZ[96] + "mMeshHitStac" + MZ[66]]);
+            typeof RR === MZ[29] && (nR = function(RR, JR, GR) {
+              let yR = 0;
+              for (; yR < GR && -1 === GZ(RR, JR[yR]);) yR++;
+              return (0, Qu.k)(fZ(RR, yR < GR ? JR[yR] : null))
+            }(RR, KR, KR[MZ[1]] - MZ[0]))
           }
-          var xW;
-          if (UW !== TP[14] && Ni(UW, TP[43]), bW === TP[14] && mO[TP[185]] !== TP[14] && HP((xW = mO[TP[185]], bW = (0, zN.i)(AP(xW).reader)), jW = bP(mO[TP[185]], KW((() => mO[TP[19]] === TP[14] ? TP[14] : (0, dE.lb)(mO[TP[19]]))))), bW !== TP[14] && Ni(bW, TP[43]), jW !== TP[14] && Ni(jW, TP[43]), FW === TP[2]) return TP[14];
-          if (WW[TP[46]] === TP[14] && zW[TP[2]] && !(0, zN[TP[214]])(rW[TP[2]]))
-            for (let OW = TP[1]; OW < PW; OW++)
-              if (zW[OW] && (0, zN[TP[214]])(rW[OW])) {
-                const WW = rW[OW];
-                for (let iW = OW; iW > TP[2]; iW--) HP(rW[iW] = rW[iW - TP[1]], zW[iW] = zW[iW - TP[1]]);
-                HP(rW[TP[2]] = WW, zW[TP[2]] = TP[70]);
+          var rR;
+          if (nR !== MZ[4] && uJ(nR, MZ[10]), aR === MZ[4] && JG[MZ[107]] !== MZ[4] && lZ((rR = JG[MZ[107]], aR = (0, Qu.i)(wZ(rR).reader)), LR = rZ(JG[MZ[107]], CR((() => JG[MZ[22]] === MZ[4] ? MZ[4] : (0, Ot.gb)(JG[MZ[22]]))))), aR !== MZ[4] && uJ(aR, MZ[10]), LR !== MZ[4] && uJ(LR, MZ[10]), sR === MZ[6]) return MZ[4];
+          if (ZR === MZ[4] && TR[MZ[6]] && !(0, Qu[MZ[20]])(FR[MZ[6]]))
+            for (let GR = MZ[0]; GR < qR; GR++)
+              if (TR[GR] && (0, Qu[MZ[20]])(FR[GR])) {
+                const RR = FR[GR];
+                for (let JR = GR; JR > MZ[6]; JR--) lZ(FR[JR] = FR[JR - MZ[0]], TR[JR] = TR[JR - MZ[0]]);
+                lZ(FR[MZ[6]] = RR, TR[MZ[6]] = MZ[16]);
                 break
-              } if (HP(WW[TP[8]] = TP[2], WW[TP[4]] = WW[TP[46]] === TP[14] ? TP[2] : PW), WW[TP[4]] > TP[2] && LW !== TP[14] && cW && !EW) {
-            for (let iW = WW[TP[4]]; iW > TP[2]; iW--) HP(rW[iW] = rW[iW - TP[1]], zW[iW] = zW[iW - TP[1]]);
-            HP(rW[TP[2]] = LW, zW[TP[2]] = TP[43], WW[TP[8]] = TP[1], WW[TP[4]]++)
+              } let UR = MZ[6],
+            XR = ZR === MZ[4] ? MZ[6] : qR;
+          if (XR > MZ[6] && iR !== MZ[4] && fR && !tR) {
+            for (let RR = XR; RR > MZ[6]; RR--) lZ(FR[RR] = FR[RR - MZ[0]], TR[RR] = TR[RR - MZ[0]]);
+            lZ(FR[MZ[6]] = iR, TR[MZ[6]] = MZ[10], UR = MZ[0], XR++)
           }
-          if (WW[-TP[187]] = TP[2], QW++ % TP[3] === TP[1])
-            for (let OW = TP[1]; OW < FW; OW++) Pi(OW) < Pi(WW[-TP[187]]) && (WW[-TP[187]] = OW);
-          const lW = rW[WW[-TP[187]]];
-          (zW[WW[-TP[187]]] ? Oi : ii)[lW] = Wi++;
-          const kW = WW[-TP[187]] >= WW[TP[8]] && WW[-TP[187]] < WW[TP[4]];
-          if (!zW[WW[-TP[187]]] || lW === WW[TP[46]] || WW[-TP[187]] === TP[2] && !kW) return lW === TP[223] ? (0, zN.y)(yW[li], zN[TP[20]]) : lW;
-          const SW = (WW[TP[241]] = WW[TP[46]]) !== TP[14] && void 0 !== WW[TP[241]] ? WW[TP[241]] : rW[TP[2]];
-          return SW !== mi && HP(mi = SW, Ei = (0, dE[TP[181]])(TP[14])), Ei[lW] ??= (0, zN[TP[240]])(lW, SW)
+          let MR = MZ[6];
+          if (hR++ % MZ[2] === MZ[0])
+            for (let GR = MZ[0]; GR < sR; GR++) ZJ(GR) < ZJ(MR) && (MR = GR);
+          const lR = FR[MR];
+          (TR[MR] ? GJ : JJ)[lR] = RJ++;
+          const pR = MR >= UR && MR < XR;
+          if (!TR[MR] || lR === ZR || MR === MZ[6] && !pR) return lR === MZ[86] ? (0, Qu[MZ[108]])(BR[rJ], Qu[MZ[14]]) : lR;
+          const NR = (RR = ZR) !== MZ[4] && void 0 !== RR ? RR : FR[MZ[6]];
+          return NR !== yJ && lZ(yJ = NR, tJ = (0, Ot[MZ[20]])(MZ[4])), tJ[lR] ??= (0, Qu[MZ[86]])(lR, NR)
         }
       };
-      let fi = HO[TP[227]][TP[242]];
-      const Xi = () => Ti !== HO[TP[227]][TP[242]] ? Ti : fi;
-      let Bi = TP[2],
-        qi = TP[3],
-        Ri = TP[2],
-        Gi = TP[2];
+      let cJ = pG[MZ[89]][MZ[109]];
+      const PJ = () => BJ !== pG[MZ[89]][MZ[109]] ? BJ : cJ;
+      let mJ = MZ[6],
+        zJ = MZ[2],
+        SJ = MZ[6],
+        jJ = MZ[6];
       return {
-        checks: Vi,
-        checkEvent: (...WW) => {
-          WW[TP[0]] = TP[1];
+        checks: oJ,
+        checkEvent: (...RR) => {
+          RR[MZ[1]] = MZ[0];
           try {
-            const iW = EW[yi];
-            if (typeof iW === TP[215] + TP[216] && !(WW[TP[2]] instanceof iW) && !(0, dE[TP[226]])(WW[TP[2]])) return Ti = HO[TP[227]].NotEvent, TP[2];
-            if (WW[TP[2]].isTrusted === TP[43]) return TP[2];
-            let OW = TP[2];
-            for (const mW in WW[TP[2]]) OW++;
-            return OW < TP[26] ? (Ti = HO[TP[227]]["FewPropertie" + TP[15]], TP[2]) : Hi()
+            const JR = tR[MJ];
+            if (typeof JR === MZ[54] + MZ[55] && !(RR[MZ[6]] instanceof JR) && !(0, Ot.z)(RR[MZ[6]])) return BJ = pG[MZ[89]].NotEvent, MZ[6];
+            if (RR[MZ[6]].isTrusted === MZ[10]) return MZ[6];
+            let GR = MZ[6];
+            for (const yR in RR[MZ[6]]) GR++;
+            return GR < MZ[27] ? (BJ = pG[MZ[89]]["FewPropertie" + MZ[56]], MZ[6]) : pJ()
           } catch {}
-          return TP[2]
+          return MZ[6]
         },
         checkPadCall: () => {
           try {
-            return Hi()
+            return pJ()
           } catch {
-            return TP[2]
+            return MZ[6]
           }
         },
-        usedProp: Xi,
-        watchHeld: (WW, iW) => {
-          let OW;
-          const mW = SW((() => {
-            OW = iW()
+        usedProp: PJ,
+        watchHeld: (...RR) => {
+          lZ(RR[MZ[1]] = MZ[2], RR[MZ[110]] = MZ[3]);
+          const JR = XR((() => {
+            RR[MZ[110]] = RR[MZ[0]]()
           }));
-          gi[Di++] = [WW, () => !mW || iW() !== OW]
+          DJ[HJ++] = [RR[MZ[6]], () => !JR || RR[MZ[0]]() !== RR[MZ[110]]]
         },
-        hZ: (...WW) => {
-          WW[TP[0]] = TP[2];
-          const iW = CW();
-          return ((...WW) => {
-            if (HP(WW[TP[0]] = TP[1], WW[TP[18]] = TP[13], WW[TP[19]] = TP[13]), OW !== TP[14]) {
-              const iW = KW(OW.eL),
-                mW = "v3" === iW ? TP[4] : "v5" === iW ? TP[9] : "v6" === iW ? TP[7] : TP[3];
-              mW !== TP[3] && (qi = mW);
-              const EW = KW(OW["inbuil" + TP[244] + TP[245]]);
-              typeof EW === TP[237] && EW >= TP[2] && EW <= TP[10] && (EW | TP[2]) === EW && (Ri = EW), HP(WW[TP[18]] = KW(OW.reflectApplyHit), WW[TP[19]] = KW(OW.definerHit))
+        gK: () => {
+          const RR = zR();
+          return ((...RR) => {
+            if (lZ(RR[MZ[1]] = MZ[0], RR[MZ[0]] = MZ[3], RR[-MZ[65]] = MZ[3]), GR !== MZ[4]) {
+              const JR = CR(GR.Iq),
+                yR = "v3" === JR ? MZ[5] : "v5" === JR ? MZ[15] : "v6" === JR ? MZ[75] : MZ[2];
+              yR !== MZ[2] && (zJ = yR);
+              const tR = CR(GR["inbuil" + MZ[112] + MZ[113]]);
+              typeof tR === MZ[101] && tR >= MZ[6] && tR <= MZ[53] && (tR | MZ[6]) === tR && (SJ = tR), lZ(RR[MZ[0]] = CR(GR.reflectApplyHit), RR[-MZ[65]] = CR(GR.definerHit))
             }
-            const iW = WW[TP[2]] ? TP[51] : "11" === WW[TP[19]] ? TP[10] : "13" === WW[TP[19]] ? TP[99] : WW[TP[18]] !== TP[13] && WW[TP[18]] !== TP[14] ? TP[3] : "10" === WW[TP[19]] ? TP[26] : "12" === WW[TP[19]] ? TP[57] : TP[2];
-            iW !== TP[2] && (Gi = iW)
-          })(iW), Bi++ % 10 === TP[2] && (Yi(), UP((() => !jP(EW[NW][TP[238]][TP[238]](), tW))) && (fi = fi === HO[TP[227]][TP[243]] ? HO[TP[227]][TP[243]] : HO[TP[227]].Fr), UP((() => !jP(EW[NW][TP[238]](), tW))) && (fi = HO[TP[227]][TP[243]])), {
-            flags: iW ? HO[TP[23]].Butto : TP[2],
+            const JR = RR[MZ[6]] ? 15 : "11" === RR[-MZ[65]] ? MZ[53] : "13" === RR[-MZ[65]] ? 13 : RR[MZ[0]] !== MZ[3] && RR[MZ[0]] !== MZ[4] ? MZ[2] : "10" === RR[-MZ[65]] ? MZ[27] : "12" === RR[-MZ[65]] ? 12 : MZ[6];
+            JR !== MZ[6] && (jJ = JR)
+          })(RR), mJ++ % 10 === MZ[6] && (((...RR) => {
+            RR[MZ[1]] = MZ[6];
+            const GR = JR();
+            GR === MZ[4] || XJ || (XJ = UR((() => {
+              if (WJ !== MZ[3] && (0, Ot.M)(GR) !== WJ) return MZ[16];
+              for (let RR = MZ[6]; RR < AJ[MZ[1]]; RR++)
+                if ((0, Ot[MZ[66]])(Ot[MZ[88]], GR, [AJ[RR]])) return MZ[16];
+              for (let RR = MZ[6]; RR < CJ[MZ[1]]; RR++)
+                if (GR[CJ[RR]] !== MZ[4] && GR[CJ[RR]] !== MZ[3]) return MZ[16];
+              return MZ[10]
+            })))
+          })(), aZ((() => !eZ(tR[uR][MZ[103]][MZ[103]](), VR))) && (cJ = cJ === pG[MZ[89]][MZ[111]] ? pG[MZ[89]][MZ[111]] : pG[MZ[89]].Fr), aZ((() => !eZ(tR[uR][MZ[103]](), VR))) && (cJ = pG[MZ[89]][MZ[111]])), {
+            flags: RR ? pG[MZ[90]].Butto : MZ[6],
             values: [
-              [HO[TP[5]].PhysicsVersion, qi],
-              [HO[TP[5]]["Inbuil" + TP[244] + TP[245]], Ri],
-              [HO[TP[5]]["AltCom" + TP[246]], Gi],
-              [HO[TP[5]]["ProbeUsedPro" + TP[181]], Xi()]
+              [pG[MZ[66]].PhysicsVersion, zJ],
+              [pG[MZ[66]]["Inbuil" + MZ[112] + MZ[113]], SJ],
+              [pG[MZ[66]]["AltCom" + MZ[114]], jJ],
+              [pG[MZ[66]]["ProbeUsedPro" + MZ[30]], PJ()]
             ]
           }
         }
       }
     };
-    const nP = "[bloxd-wasm-client]",
-      uP = "bloxdWasmDownloadFailed",
-      oP = BO.g,
-      dP = "boot",
-      eP = "playSources",
-      vP = "wasmBuild",
-      gP = "bloxd-wasm-joined",
-      DP = "bloxd-wasm-first-view",
-      VP = "bloxd-wasm-playable-legacy",
-      pP = 1048576,
-      fP = 8 * pP,
-      CP = 1006,
-      XP = 1e3,
-      BP = "You lost connection to the server.",
-      qP = "general:lostConnection",
-      RP = 1048576,
-      GP = 5e3,
-      IP = 100,
-      aP = [2e3, 1e4, 3e4],
-      rP = 3e4;
-    let zP = null,
-      FP = null,
-      QP = !1,
-      WL = !1,
-      iL = !1,
-      OL = null,
-      mL = null,
-      EL = null,
-      NL = null,
-      PL = null,
-      LL = null,
-      cL = null;
-    const wL = new class {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = WW, this.soundOn = iW, this.now = OW, this.player = null, this.local = [], this.stopped = !1
+    const pZ = "[bloxd-wasm-client]",
+      gZ = "bloxdWasmDownloadFailed",
+      bZ = zG.e,
+      vZ = "boot",
+      OZ = "playSources",
+      xZ = "wasmBuild",
+      NZ = "bloxd-wasm-joined",
+      DZ = "bloxd-wasm-first-view",
+      HZ = "bloxd-wasm-playable-legacy",
+      oZ = 1048576,
+      cZ = 8 * oZ,
+      PZ = 1006,
+      IZ = 1e3,
+      mZ = "You lost connection to the server.",
+      zZ = "general:lostConnection",
+      SZ = 1048576,
+      jZ = 5e3,
+      dZ = 100,
+      EZ = [2e3, 1e4, 3e4],
+      YZ = 3e4;
+    let kZ = null,
+      QZ = null,
+      FZ = !1,
+      TZ = !1,
+      sZ = !1,
+      hZ = null,
+      Rq = null,
+      Jq = null,
+      Gq = null,
+      yq = null,
+      tq = null,
+      uq = null;
+    const Zq = new class {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = RR, this.soundOn = JR, this.now = GR, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5701,264 +5409,264 @@ export const modules = {
       get queued() {
         return this.local.length
       }
-      preload(WW) {
-        var iW;
-        this.stopped || (null === (iW = this.player) || void 0 === iW || iW.preload(WW))
+      preload(RR) {
+        var JR;
+        this.stopped || (null === (JR = this.player) || void 0 === JR || JR.preload(RR))
       }
       endSession() {
-        var WW;
-        null === (WW = this.player) || void 0 === WW || WW.cancelPreload(), this.freeSounds()
+        var RR;
+        null === (RR = this.player) || void 0 === RR || RR.cancelPreload(), this.freeSounds()
       }
       freeSounds() {
-        var WW;
-        null === (WW = this.player) || void 0 === WW || WW.freeSoundsAfterGame()
+        var RR;
+        null === (RR = this.player) || void 0 === RR || RR.freeSoundsAfterGame()
       }
-      load(WW) {
+      load(RR) {
         if (null !== this.player || this.stopped) return;
-        this.player = WW, WW.setMaster(this.master, this.soundOn);
-        const iW = this.now(),
-          OW = this.local;
+        this.player = RR, RR.setMaster(this.master, this.soundOn);
+        const JR = this.now(),
+          GR = this.local;
         this.local = [];
-        for (const EW of OW)
-          if (!(EW.stopped || !EW.loop && iW - EW.at >= 300)) try {
-            this.start(EW, WW, iW)
-          } catch (mW) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", mW)
+        for (const tR of GR)
+          if (!(tR.stopped || !tR.loop && JR - tR.at >= 300)) try {
+            this.start(tR, RR, JR)
+          } catch (yR) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", yR)
           }
       }
-      start(WW, iW, OW) {
+      start(RR, JR, GR) {
         const {
-          name: mW,
-          pos: EW,
-          ear: NW,
-          maxHearDist: PW,
-          refDistance: LW,
-          loop: cW,
-          fade: wW
-        } = WW, tW = iW.playGame(mW, yO(WW, OW), EW, NW, PW, LW, cW);
-        if (WW.sound = tW, 1 !== WW.rate && tW.rate(WW.rate), null !== WW.panner && tW.setPannerAttr(WW.panner), null !== WW.moved && tW.setPosition(WW.moved), null !== wW && OW - wW.at < wW.ms) {
-          const iW = YO(this.master);
-          iW > 0 ? tW.fade(0, WW.volume * iW, wW.at + wW.ms - OW) : tW.setRelativeVolume(WW.volume)
+          name: yR,
+          pos: tR,
+          ear: uR,
+          maxHearDist: ZR,
+          refDistance: qR,
+          loop: iR,
+          fade: fR
+        } = RR, VR = JR.playGame(yR, XG(RR, GR), tR, uR, ZR, qR, iR);
+        if (RR.sound = VR, 1 !== RR.rate && VR.rate(RR.rate), null !== RR.panner && VR.setPannerAttr(RR.panner), null !== RR.moved && VR.setPosition(RR.moved), null !== fR && GR - fR.at < fR.ms) {
+          const JR = CG(this.master);
+          JR > 0 ? VR.fade(0, RR.volume * JR, fR.at + fR.ms - GR) : VR.setRelativeVolume(RR.volume)
         }
       }
-      onAudioEvent(WW, iW, OW, mW) {
-        var EW, NW;
-        return null === (EW = null === (NW = this.player) || void 0 === NW ? void 0 : NW.onAudioEvent(WW, iW, OW, mW)) || void 0 === EW || EW
+      onAudioEvent(RR, JR, GR, yR) {
+        var tR, uR;
+        return null === (tR = null === (uR = this.player) || void 0 === uR ? void 0 : uR.onAudioEvent(RR, JR, GR, yR)) || void 0 === tR || tR
       }
-      applyListener(WW) {
-        var iW;
-        null === (iW = this.player) || void 0 === iW || iW.applyListener(WW)
+      applyListener(RR) {
+        var JR;
+        null === (JR = this.player) || void 0 === JR || JR.applyListener(RR)
       }
-      playGame(WW, iW, OW, mW, EW, NW, PW) {
-        if (this.stopped) return SO.c;
-        if (this.player) return this.player.playGame(WW, iW, OW, mW, EW, NW, PW);
-        const LW = this.now();
-        this.local = this.local.filter((WW => !WW.stopped && (WW.loop || LW - WW.at < 300)));
-        const cW = {
-          name: WW,
-          volume: YO(iW),
+      playGame(RR, JR, GR, yR, tR, uR, ZR) {
+        if (this.stopped) return AG.b;
+        if (this.player) return this.player.playGame(RR, JR, GR, yR, tR, uR, ZR);
+        const qR = this.now();
+        this.local = this.local.filter((RR => !RR.stopped && (RR.loop || qR - RR.at < 300)));
+        const iR = {
+          name: RR,
+          volume: CG(JR),
           fade: null,
-          pos: OW && [OW[0], OW[1], OW[2]],
-          ear: mW && [mW[0], mW[1], mW[2]],
-          maxHearDist: EW,
-          refDistance: NW,
-          loop: PW,
+          pos: GR && [GR[0], GR[1], GR[2]],
+          ear: yR && [yR[0], yR[1], yR[2]],
+          maxHearDist: tR,
+          refDistance: uR,
+          loop: ZR,
           rate: 1,
           panner: null,
           moved: null,
-          at: LW,
+          at: qR,
           stopped: !1,
           sound: null
         };
-        this.local.push(cW);
-        const wW = {
+        this.local.push(iR);
+        const fR = {
           stop: () => {
-            var WW;
-            return cW.stopped = !0, null === (WW = cW.sound) || void 0 === WW || WW.stop(), wW
+            var RR;
+            return iR.stopped = !0, null === (RR = iR.sound) || void 0 === RR || RR.stop(), fR
           },
-          fade: (WW, iW, OW) => {
-            if (cW.sound) return cW.sound.fade(WW, iW, OW), wW;
-            const mW = YO(this.master),
-              EW = YO(mW > 0 ? iW / mW : iW > 0 ? cW.volume : 0),
-              NW = this.now(),
-              PW = yO(cW, NW);
-            return cW.volume = EW, cW.fade = OW > 0 && PW !== EW ? {
-              from: PW,
-              at: NW,
-              ms: OW
-            } : null, wW
+          fade: (RR, JR, GR) => {
+            if (iR.sound) return iR.sound.fade(RR, JR, GR), fR;
+            const yR = CG(this.master),
+              tR = CG(yR > 0 ? JR / yR : JR > 0 ? iR.volume : 0),
+              uR = this.now(),
+              ZR = XG(iR, uR);
+            return iR.volume = tR, iR.fade = GR > 0 && ZR !== tR ? {
+              from: ZR,
+              at: uR,
+              ms: GR
+            } : null, fR
           },
-          rate: WW => (cW.sound ? cW.sound.rate(WW) : cW.rate = WW, wW),
-          getVolume: () => cW.sound ? cW.sound.getVolume() : cW.volume * YO(this.master),
-          getRelativeVolume: () => cW.sound ? cW.sound.getRelativeVolume() : cW.volume,
-          setRelativeVolume: WW => (cW.sound ? cW.sound.setRelativeVolume(WW) : (cW.volume = YO(WW), cW.fade = null), wW),
-          setPannerAttr: WW => (cW.sound ? cW.sound.setPannerAttr(WW) : cW.panner = {
-            ...WW
-          }, wW),
-          setPosition: WW => (cW.sound ? cW.sound.setPosition(WW) : cW.moved = [WW[0], WW[1], WW[2]], wW)
+          rate: RR => (iR.sound ? iR.sound.rate(RR) : iR.rate = RR, fR),
+          getVolume: () => iR.sound ? iR.sound.getVolume() : iR.volume * CG(this.master),
+          getRelativeVolume: () => iR.sound ? iR.sound.getRelativeVolume() : iR.volume,
+          setRelativeVolume: RR => (iR.sound ? iR.sound.setRelativeVolume(RR) : (iR.volume = CG(RR), iR.fade = null), fR),
+          setPannerAttr: RR => (iR.sound ? iR.sound.setPannerAttr(RR) : iR.panner = {
+            ...RR
+          }, fR),
+          setPosition: RR => (iR.sound ? iR.sound.setPosition(RR) : iR.moved = [RR[0], RR[1], RR[2]], fR)
         };
-        return wW
+        return fR
       }
-      setMaster(WW, iW) {
-        var OW;
-        this.master = WW, this.soundOn = iW, null === (OW = this.player) || void 0 === OW || OW.setMaster(WW, iW)
+      setMaster(RR, JR) {
+        var GR;
+        this.master = RR, this.soundOn = JR, null === (GR = this.player) || void 0 === GR || GR.setMaster(RR, JR)
       }
       stop() {
-        var WW;
-        this.stopped = !0, null === (WW = this.player) || void 0 === WW || WW.stopAll();
-        for (const iW of this.local) iW.stopped = !0;
+        var RR;
+        this.stopped = !0, null === (RR = this.player) || void 0 === RR || RR.stopAll();
+        for (const JR of this.local) JR.stopped = !0;
         this.local = []
       }
-    }((0, EO.d)(), !0);
-    let tL = {
+    }((0, GG.e)(), !0);
+    let qq = {
         wasm: "unknown",
-        client: String(oi.d)
+        client: String(OJ.d)
       },
-      ZL = null,
-      xL = !1,
-      lL = () => {};
-    const AL = new Promise((WW => {
-      lL = iW => {
-        xL = !0, WW(iW)
+      iq = null,
+      fq = !1,
+      Vq = () => {};
+    const Kq = new Promise((RR => {
+      Vq = JR => {
+        fq = !0, RR(JR)
       }
     }));
-    let bL = () => {};
-    const jL = new Promise((WW => {
-      bL = WW
+    let wq = () => {};
+    const rq = new Promise((RR => {
+      wq = RR
     }));
-    let UL, kL = null,
-      sL = null,
-      ML = null,
-      KL = null,
-      SL = null,
-      YL = null,
-      yL = null,
-      TL = null,
-      JL = null,
-      hL = null,
-      HL = null,
-      nL = null,
-      uL = null,
-      oL = null,
-      dL = null,
-      eL = null,
-      vL = null,
-      gL = null,
-      DL = null,
-      VL = !1,
-      pL = null;
-    const fL = new Set,
-      CL = new Set;
+    let eq, aq = null,
+      Lq = null,
+      nq = null,
+      Uq = null,
+      Wq = null,
+      Aq = null,
+      Cq = null,
+      Xq = null,
+      Mq = null,
+      Bq = null,
+      lq = null,
+      pq = null,
+      gq = null,
+      bq = null,
+      vq = null,
+      Oq = null,
+      xq = null,
+      Nq = null,
+      Dq = null,
+      Hq = !1,
+      oq = null;
+    const cq = new Set,
+      Pq = new Set;
 
-    function XL(WW) {
-      if (!fL.has(WW)) {
-        fL.add(WW);
-        for (const OW of CL) try {
-          OW(WW)
-        } catch (iW) {
-          console.error(`${nP} a startup listener threw`, iW)
+    function Iq(RR) {
+      if (!cq.has(RR)) {
+        cq.add(RR);
+        for (const GR of Pq) try {
+          GR(RR)
+        } catch (JR) {
+          console.error(`${pZ} a startup listener threw`, JR)
         }
       }
     }
 
-    function BL(WW) {
-      VL = !0, WW.isStopped || XL("texturesIn")
+    function mq(RR) {
+      Hq = !0, RR.isStopped || Iq("texturesIn")
     }
-    let qL = 1,
-      RL = -1 / 0,
-      GL = -1 / 0,
-      IL = -1 / 0,
-      aL = !1,
-      rL = null,
-      zL = !1,
-      FL = !1,
-      QL = 0,
-      Wc = null,
-      ic = !1;
-    const Oc = {
+    let zq = 1,
+      Sq = -1 / 0,
+      jq = -1 / 0,
+      dq = -1 / 0,
+      Eq = !1,
+      Yq = null,
+      kq = !1,
+      Qq = !1,
+      Fq = 0,
+      Tq = null,
+      sq = !1;
+    const hq = {
       dropped: -1 / 0,
       pause: -1 / 0,
       backlog: -1 / 0
     };
-    let mc = 0,
-      Ec = 0,
-      Nc = null,
-      Pc = null,
-      Lc = null,
-      cc = null;
-    const wc = new WeakMap;
-    let tc = null,
-      Zc = null,
-      xc = !1,
-      lc = null,
-      Ac = null,
-      bc = null,
-      jc = null,
-      Uc = null,
-      kc = null,
-      sc = 0;
-    const Mc = new Set;
-    let Kc = 0,
-      Sc = 0,
-      Yc = 0,
-      yc = null,
-      Tc = null,
-      Jc = null,
-      hc = null,
-      Hc = -1 / 0,
-      nc = null;
-    const uc = new Set;
-    let oc = !1,
-      dc = null;
-    const ec = new Map,
-      vc = new Set;
-    let gc = !1;
-    const Dc = {
+    let Ri = 0,
+      Ji = 0,
+      Gi = null,
+      yi = null,
+      ti = null,
+      ui = null;
+    const Zi = new WeakMap;
+    let qi = null,
+      ii = null,
+      fi = !1,
+      Vi = null,
+      Ki = null,
+      wi = null,
+      ri = null,
+      ei = null,
+      ai = null,
+      Li = 0;
+    const ni = new Set;
+    let Ui = 0,
+      Wi = 0,
+      Ai = 0,
+      Ci = null,
+      Xi = null,
+      Mi = null,
+      Bi = null,
+      li = -1 / 0,
+      gi = null;
+    const bi = new Set;
+    let vi = !1,
+      Oi = null;
+    const xi = new Map,
+      Ni = new Set;
+    let Di = !1;
+    const Hi = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
-    let Vc = null,
-      pc = () => [0, 0],
-      fc = () => {},
-      Cc = () => {},
-      Xc = null,
-      Bc = null;
-    const qc = new class {
-      constructor(WW) {
-        this.reached = WW, this.next = 1
+    let oi = null,
+      ci = () => [0, 0],
+      Pi = () => {},
+      Ii = () => {},
+      mi = null,
+      zi = null;
+    const Si = new class {
+      constructor(RR) {
+        this.reached = RR, this.next = 1
       }
-      observe(WW) {
-        if (!(WW < this.next)) {
-          for (; this.next <= WW;) this.next *= 2;
-          this.reached(WW)
+      observe(RR) {
+        if (!(RR < this.next)) {
+          for (; this.next <= RR;) this.next *= 2;
+          this.reached(RR)
         }
       }
-    }((WW => {
-      console.warn(`${nP} chunk cancels from the server this session: ${WW}`)
+    }((RR => {
+      console.warn(`${pZ} chunk cancels from the server this session: ${RR}`)
     }));
-    let Rc = 1,
-      Gc = null,
-      Ic = null,
-      ac = null,
-      rc = null,
-      zc = null,
-      Fc = !1,
-      Qc = !1,
-      Ww = 0,
-      iw = null,
-      Ow = !1,
-      mw = null,
-      Ew = null;
-    const Nw = new Jm.e(new IO.d);
-    let Pw = "",
-      Lw = null,
-      ww = null,
-      tw = !1;
-    const Zw = new class {
-      constructor(WW) {
-        this.iZ = WW, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1, this.BL = !1
+    let ji = 1,
+      di = null,
+      Ei = null,
+      Yi = null,
+      ki = null,
+      Qi = null,
+      Fi = !1,
+      Ti = !1,
+      si = 0,
+      Rf = null,
+      Jf = !1,
+      Gf = null,
+      yf = null;
+    const tf = new By.c(new EG.b);
+    let uf = "",
+      Zf = null,
+      qf = null,
+      ff = !1;
+    const Vf = new class {
+      constructor(RR) {
+        this.JK = RR, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1, this.Qq = !1
       }
       isShown() {
         return this.shown
@@ -5966,115 +5674,115 @@ export const modules = {
       deviceLost() {
         this.lossPending = !0
       }
-      frame(WW, iW, OW) {
-        (0, tO.b)(WW) && (this.lossPending = !1);
-        const mW = OW - this.lastFrameMs;
-        this.lastFrameMs = OW, this.lossPending && iW && (0, tO.g)(WW) ? (null === this.undrawnSinceMs || mW > 1e3) && (this.undrawnSinceMs = OW) : this.undrawnSinceMs = null, this.show(this.BL || null !== this.undrawnSinceMs && OW - this.undrawnSinceMs >= 2e3)
+      frame(RR, JR, GR) {
+        (0, iG.c)(RR) && (this.lossPending = !1);
+        const yR = GR - this.lastFrameMs;
+        this.lastFrameMs = GR, this.lossPending && JR && (0, iG.f)(RR) ? (null === this.undrawnSinceMs || yR > 1e3) && (this.undrawnSinceMs = GR) : this.undrawnSinceMs = null, this.show(this.Qq || null !== this.undrawnSinceMs && GR - this.undrawnSinceMs >= 2e3)
       }
-      hold(WW) {
-        this.BL = WW, this.show(WW || this.shown)
+      hold(RR) {
+        this.Qq = RR, this.show(RR || this.shown)
       }
       stop() {
-        this.BL = !1, this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
+        this.Qq = !1, this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
       }
-      show(WW) {
-        WW !== this.shown && (this.shown = WW, this.iZ(WW))
+      show(RR) {
+        RR !== this.shown && (this.shown = RR, this.JK(RR))
       }
-    }((WW => {
-      cW.l.iZ(AW.h, WW)
+    }((RR => {
+      iR.n.JK(eR.l, RR)
     }));
-    let xw = !1;
-    const lw = new class {
-        constructor(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bO.k;
-          this.iZ = WW, this.hidden = iW, this.countdown = null, this.stuckJoins = 0, this.stuck = null
+    let Kf = !1;
+    const wf = new class {
+        constructor(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rG.h;
+          this.JK = RR, this.hidden = JR, this.countdown = null, this.stuckJoins = 0, this.stuck = null
         }
-        join(WW) {
-          this.end(), this.countdown = new bO.d(15e3, (() => {
+        join(RR) {
+          this.end(), this.countdown = new rG.e(15e3, (() => {
             this.countdown = null, this.stuckJoins++, this.show(this.stuckJoins > 2 ? "reload" : "retry")
-          }), (() => this.hidden() || !WW()))
+          }), (() => this.hidden() || !RR()))
         }
         shown() {
           this.stuckJoins = 0, this.end()
         }
         end() {
-          var WW;
-          null === (WW = this.countdown) || void 0 === WW || WW.stop(), this.countdown = null, this.show(null)
+          var RR;
+          null === (RR = this.countdown) || void 0 === RR || RR.stop(), this.countdown = null, this.show(null)
         }
-        show(WW) {
-          WW !== this.stuck && (this.stuck = WW, this.iZ(WW))
+        show(RR) {
+          RR !== this.stuck && (this.stuck = RR, this.JK(RR))
         }
-      }((WW => {
-        cW.l.iZ(AW.d, WW)
+      }((RR => {
+        iR.n.JK(eR.e, RR)
       })),
-      Aw = new class {
-        constructor(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => performance.now();
-          this.wZ = WW, this.now = iW, this.lostAtMs = null, this.asked = !1, this.lastRestore = null, this.watched = new WeakSet
+      rf = new class {
+        constructor(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => performance.now();
+          this.fK = RR, this.now = JR, this.lostAtMs = null, this.asked = !1, this.lastRestore = null, this.watched = new WeakSet
         }
-        watch(WW, iW) {
-          this.watched.has(WW) || (this.watched.add(WW), WW.addEventListener("webglcontextlost", (() => {
-            iW() && this.contextLost()
-          })), WW.addEventListener("webglcontextrestored", (() => {
-            iW() ? this.contextRestored() : (this.take(), this.lastRestore = null)
+        watch(RR, JR) {
+          this.watched.has(RR) || (this.watched.add(RR), RR.addEventListener("webglcontextlost", (() => {
+            JR() && this.contextLost()
+          })), RR.addEventListener("webglcontextrestored", (() => {
+            JR() ? this.contextRestored() : (this.take(), this.lastRestore = null)
           })))
         }
-        frame(WW, iW) {
-          (0, tO.g)(WW) && iW && null !== this.lostAtMs && this.now() - this.lostAtMs >= 1e3 && (this.asked = !0)
+        frame(RR, JR) {
+          (0, iG.f)(RR) && JR && null !== this.lostAtMs && this.now() - this.lostAtMs >= 1e3 && (this.asked = !0)
         }
         contextLost() {
           null === this.lostAtMs && (this.lostAtMs = this.now(), this.asked = !1)
         }
-        unheldRestore(WW) {
-          const iW = this.lastRestore;
-          return null !== iW && WW - iW.atMs < 3e4 ? iW : null
+        unheldRestore(RR) {
+          const JR = this.lastRestore;
+          return null !== JR && RR - JR.atMs < 3e4 ? JR : null
         }
         contextRestored() {
-          const WW = this.take();
-          if (null === WW) this.lastRestore = null;
+          const RR = this.take();
+          if (null === RR) this.lastRestore = null;
           else {
-            var iW, OW;
-            const mW = this.unheldRestore(WW.lostAtMs);
+            var JR, GR;
+            const yR = this.unheldRestore(RR.lostAtMs);
             this.lastRestore = {
               atMs: this.now(),
-              firstLostAtMs: null !== (iW = null === mW || void 0 === mW ? void 0 : mW.firstLostAtMs) && void 0 !== iW ? iW : WW.lostAtMs,
-              asked: null !== (OW = null === mW || void 0 === mW ? void 0 : mW.asked) && void 0 !== OW && OW || WW.asked
+              firstLostAtMs: null !== (JR = null === yR || void 0 === yR ? void 0 : yR.firstLostAtMs) && void 0 !== JR ? JR : RR.lostAtMs,
+              asked: null !== (GR = null === yR || void 0 === yR ? void 0 : yR.asked) && void 0 !== GR && GR || RR.asked
             };
-            const EW = WW.asked ? "restore_context" : "natural";
-            this.wZ(`webgl_restored_${EW}_${WW.delay}`, `WebGL2 context restored (${EW}, wasm)`)
+            const tR = RR.asked ? "restore_context" : "natural";
+            this.fK(`webgl_restored_${tR}_${RR.delay}`, `WebGL2 context restored (${tR}, wasm)`)
           }
         }
         gaveUp() {
-          const WW = this.take();
-          if (null !== WW) {
-            var iW;
-            const OW = this.unheldRestore(WW.lostAtMs),
-              mW = null === OW ? WW.delay : (0, ZO.i)(this.now() - OW.firstLostAtMs),
-              EW = WW.asked || null !== (iW = null === OW || void 0 === OW ? void 0 : OW.asked) && void 0 !== iW && iW ? "restore_tried" : "restore_untried";
-            this.wZ(`webgl_rejoin_${EW}_${mW}`, "WebGL2 context not restored: rejoining (wasm)")
+          const RR = this.take();
+          if (null !== RR) {
+            var JR;
+            const GR = this.unheldRestore(RR.lostAtMs),
+              yR = null === GR ? RR.delay : (0, fG.k)(this.now() - GR.firstLostAtMs),
+              tR = RR.asked || null !== (JR = null === GR || void 0 === GR ? void 0 : GR.asked) && void 0 !== JR && JR ? "restore_tried" : "restore_untried";
+            this.fK(`webgl_rejoin_${tR}_${yR}`, "WebGL2 context not restored: rejoining (wasm)")
           }
           this.lastRestore = null
         }
         take() {
-          const WW = this.lostAtMs;
-          return null === WW ? null : (this.lostAtMs = null, {
-            lostAtMs: WW,
-            delay: (0, ZO.i)(this.now() - WW),
+          const RR = this.lostAtMs;
+          return null === RR ? null : (this.lostAtMs = null, {
+            lostAtMs: RR,
+            delay: (0, fG.k)(this.now() - RR),
             asked: this.asked
           })
         }
-      }(xm.reportRenderRecovery),
-      bw = new class {
-        constructor(WW) {
-          var iW, OW, mW, EW;
-          this.deps = WW, this.firstLostAtMs = null, this.lastLostAtMs = 0, this.heldReload = null, this.generation = 0, this.watched = new WeakSet, this.pageHideWatched = !1, this.storage = void 0, this.now = void 0, this.wallNow = void 0, this.setTimer = void 0, this.storage = null !== (iW = WW.storage) && void 0 !== iW ? iW : lO.j, this.now = null !== (OW = WW.now) && void 0 !== OW ? OW : performance.now.bind(performance), this.wallNow = null !== (mW = WW.wallNow) && void 0 !== mW ? mW : Date.now, this.setTimer = null !== (EW = WW.setTimer) && void 0 !== EW ? EW : (WW, iW) => {
-            setTimeout(WW, iW)
+      }(Vy.reportRenderRecovery),
+      ef = new class {
+        constructor(RR) {
+          var JR, GR, yR, tR;
+          this.deps = RR, this.firstLostAtMs = null, this.lastLostAtMs = 0, this.heldReload = null, this.generation = 0, this.watched = new WeakSet, this.pageHideWatched = !1, this.storage = void 0, this.now = void 0, this.wallNow = void 0, this.setTimer = void 0, this.storage = null !== (JR = RR.storage) && void 0 !== JR ? JR : KG.k, this.now = null !== (GR = RR.now) && void 0 !== GR ? GR : performance.now.bind(performance), this.wallNow = null !== (yR = RR.wallNow) && void 0 !== yR ? yR : Date.now, this.setTimer = null !== (tR = RR.setTimer) && void 0 !== tR ? tR : (RR, JR) => {
+            setTimeout(RR, JR)
           }
         }
-        watch(WW, iW) {
-          this.watched.has(WW) || (this.watched.add(WW), WW.addEventListener("webglcontextlost", (() => {
-            iW() && this.lost()
-          })), WW.addEventListener("webglcontextrestored", (() => {
+        watch(RR, JR) {
+          this.watched.has(RR) || (this.watched.add(RR), RR.addEventListener("webglcontextlost", (() => {
+            JR() && this.lost()
+          })), RR.addEventListener("webglcontextrestored", (() => {
             this.restored()
           })), this.pageHideWatched || (this.pageHideWatched = !0, window.addEventListener("pagehide", (() => {
             this.pageHide()
@@ -6083,33 +5791,33 @@ export const modules = {
           }))))
         }
         lost() {
-          const WW = this.now();
-          null === this.firstLostAtMs && (this.firstLostAtMs = WW, this.writeMarker({
+          const RR = this.now();
+          null === this.firstLostAtMs && (this.firstLostAtMs = RR, this.writeMarker({
             lostAt: this.wallNow()
-          })), this.lastLostAtMs = WW, null === this.heldReload && this.generation++
+          })), this.lastLostAtMs = RR, null === this.heldReload && this.generation++
         }
         restored() {
           if (null === this.firstLostAtMs || null !== this.heldReload) return;
-          const WW = this.now(),
-            iW = ++this.generation;
+          const RR = this.now(),
+            JR = ++this.generation;
           this.setTimer((() => {
-            iW === this.generation && this.end("restored", WW)
+            JR === this.generation && this.end("restored", RR)
           }), 3e4)
         }
-        reload(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        reload(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           if (null !== this.heldReload) return;
-          if (null === this.firstLostAtMs && (iW ? this.lastLostAtMs = this.now() : this.lost()), this.deps.probe()) return this.end("cleared_reload"), void WW();
-          this.heldReload = WW, this.deps.hold(!0);
-          const OW = ++this.generation,
-            mW = () => this.lastLostAtMs + PO.b + 5e3,
-            EW = () => {
-              this.setTimer(NW, Math.max(0, Math.min(5e3, mW() - this.now())))
+          if (null === this.firstLostAtMs && (JR ? this.lastLostAtMs = this.now() : this.lost()), this.deps.probe()) return this.end("cleared_reload"), void RR();
+          this.heldReload = RR, this.deps.hold(!0);
+          const GR = ++this.generation,
+            yR = () => this.lastLostAtMs + tG.c + 5e3,
+            tR = () => {
+              this.setTimer(uR, Math.max(0, Math.min(5e3, yR() - this.now())))
             },
-            NW = () => {
-              OW === this.generation && (this.deps.probe() ? this.release("cleared_reload", WW) : this.now() >= mW() ? this.release("gave_up", WW) : EW())
+            uR = () => {
+              GR === this.generation && (this.deps.probe() ? this.release("cleared_reload", RR) : this.now() >= yR() ? this.release("gave_up", RR) : tR())
             };
-          EW()
+          tR()
         }
         releaseNow() {
           null !== this.heldReload && this.release("gave_up", this.heldReload)
@@ -6118,2707 +5826,2707 @@ export const modules = {
           null !== this.firstLostAtMs && this.clear()
         }
         pageHide() {
-          let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
           if (null === this.firstLostAtMs) return;
-          const iW = (0, xO.f)(this.storage);
-          null !== iW && this.writeMarker(WW ? {
-            lostAt: iW.lostAt
+          const JR = (0, VG.g)(this.storage);
+          null !== JR && this.writeMarker(RR ? {
+            lostAt: JR.lostAt
           } : {
-            ...iW,
+            ...JR,
             leftAt: this.wallNow()
           })
         }
-        release(WW, iW) {
-          this.end(WW), iW()
+        release(RR, JR) {
+          this.end(RR), JR()
         }
-        end(WW) {
-          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.now();
-          const OW = this.firstLostAtMs;
-          if (this.clear(), null !== OW) {
+        end(RR) {
+          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.now();
+          const GR = this.firstLostAtMs;
+          if (this.clear(), null !== GR) {
             const {
-              code: mW,
-              message: EW
-            } = (0, xO.h)(WW, iW - OW);
-            this.deps.wZ(mW, EW)
+              code: yR,
+              message: tR
+            } = (0, VG.k)(RR, JR - GR);
+            this.deps.fK(yR, tR)
           }
         }
         clear() {
-          this.firstLostAtMs = null, this.generation++, null !== this.heldReload && (this.heldReload = null, this.deps.hold(!1)), this.storage.removeItem(xO.b)
+          this.firstLostAtMs = null, this.generation++, null !== this.heldReload && (this.heldReload = null, this.deps.hold(!1)), this.storage.removeItem(VG.e)
         }
-        writeMarker(WW) {
-          this.storage.setItem(xO.b, WW)
+        writeMarker(RR) {
+          this.storage.setItem(VG.e, RR)
         }
       }({
-        wZ: xm.reportRenderRecovery,
-        probe: () => AO("rust_webgl1" === (0, AN.B)()),
-        hold: WW => {
-          Zw.hold(WW)
+        fK: Vy.reportRenderRecovery,
+        probe: () => wG("rust_webgl1" === (0, wu.M)()),
+        hold: RR => {
+          Vf.hold(RR)
         }
       });
-    let jw = !1,
-      Uw = !0,
-      kw = null,
-      sw = !1,
-      Mw = !1;
+    let af = !1,
+      Lf = !0,
+      nf = null,
+      Uf = !1,
+      Wf = !1;
 
-    function Kw() {
-      if (null === Gc) return null;
+    function Af() {
+      if (null === di) return null;
       const {
-        canvas: WW,
-        backend: iW
-      } = Gc;
+        canvas: RR,
+        backend: JR
+      } = di;
       return {
-        canvas: WW,
-        renderer: KO.e[iW]
+        canvas: RR,
+        renderer: WG.d[JR]
       }
     }
 
-    function Sw() {
-      return EL ??= Promise.all([OW.e(177), OW.e(91), OW.e(224), OW.e(158), OW.e(245), OW.e(244), OW.e(243), OW.e(222), OW.e(50), OW.e(161), OW.e(242), OW.e(72)]).then((() => OW(44911))).then((WW => (mL = WW, Object.assign(globalThis, {
-        bloxdPreviewPage: WW.pagePreviews()
-      }), WW)), (WW => {
-        throw EL = null, WW
-      })), EL
+    function Cf() {
+      return Jq ??= Promise.all([GR.e(177), GR.e(91), GR.e(224), GR.e(158), GR.e(245), GR.e(244), GR.e(243), GR.e(222), GR.e(50), GR.e(161), GR.e(242), GR.e(72)]).then((() => GR(45007))).then((RR => (Rq = RR, Object.assign(globalThis, {
+        bloxdPreviewPage: RR.pagePreviews()
+      }), RR)), (RR => {
+        throw Jq = null, RR
+      })), Jq
     }
 
-    function Yw() {
-      return OL ??= OW.e(70).then((() => OW(54800))).catch((WW => {
-        throw OL = null, new qW.b(WW)
-      })), OL
+    function Xf() {
+      return hZ ??= GR.e(70).then((() => GR(54639))).catch((RR => {
+        throw hZ = null, new dR.e(RR)
+      })), hZ
     }
-    class yw {
+    class Mf {
       constructor() {
         this.host = null
       }
-      open(WW) {
-        return null !== this.host ? WW(this.host) : Sw().then((iW => (this.host ??= new iW.WasmPreviewHost(iW.pagePreviews()), WW(this.host))))
+      open(RR) {
+        return null !== this.host ? RR(this.host) : Cf().then((JR => (this.host ??= new JR.WasmPreviewHost(JR.pagePreviews()), RR(this.host))))
       }
-      openMob(WW) {
-        return this.open((iW => iW.openMob(WW)))
+      openMob(RR) {
+        return this.open((JR => JR.openMob(RR)))
       }
-      openPet(WW) {
-        return this.open((iW => iW.openPet(WW)))
+      openPet(RR) {
+        return this.open((JR => JR.openPet(RR)))
       }
-      openMobLineup(WW) {
-        return this.open((iW => iW.openMobLineup(WW)))
+      openMobLineup(RR) {
+        return this.open((JR => JR.openMobLineup(RR)))
       }
-      openCharacter(WW, iW) {
-        return this.open((OW => OW.openCharacter(WW, iW)))
+      openCharacter(RR, JR) {
+        return this.open((GR => GR.openCharacter(RR, JR)))
       }
     }
 
-    function Tw() {
-      iL || (iL = !0, cN.f.setHost(new yw), (0, jm.n)(), EN.h.setFollower(Dt), Object.assign(globalThis, {
-        bloxdPreviews: cN.f
+    function Bf() {
+      sZ || (sZ = !0, Zu.l.setHost(new Mf), (0, ey.n)(), Gu.e.setFollower(cV), Object.assign(globalThis, {
+        bloxdPreviews: Zu.l
       }))
     }
 
-    function Jw() {
-      Sw().then((WW => {
-        WW.pagePreviews().prefetch()
+    function lf() {
+      Cf().then((RR => {
+        RR.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function hw() {
-      let WW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (WL) return;
-      WL = !0, jw = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), Uw = !jw, console.info(`${nP} starting`), QP || (QP = !0, (0, AW.J)(new kO(zw, Nt, Kw)), (0, xW.o)(new sO), (0, AW.F)(new MO((() => performance.now() - RL))), (0, AW.v)()), jw && cW.l.subscribe("appManagerUpdated|gameState", rw), Tw(), (0, xm.setCrashScreen)(KZ), (0, GE.g)(), (0, mO.g)();
-      let iW = null;
+    function pf() {
+      let RR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (TZ) return;
+      TZ = !0, af = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), Lf = !af, console.info(`${pZ} starting`), FZ || (FZ = !0, (0, eR.P)(new LG(Tf, uV, Af)), (0, wR.q)(new nG), (0, eR.N)(new UG((() => performance.now() - Sq))), (0, eR.H)()), af && iR.n.subscribe("appManagerUpdated|gameState", Ff), Bf(), (0, Vy.setCrashScreen)(AK), (0, dt.h)(), (0, JG.l)();
+      let JR = null;
       try {
-        iW = yP("t9kd9lifxzi", (() => {
-          var WW, iW;
-          return null !== (WW = null === (iW = kL) || void 0 === iW ? void 0 : iW.ws) && void 0 !== WW ? WW : null
-        }), WW, "jckntermls")
-      } catch (EW) {
-        console.error(`${nP} probes`, EW)
+        JR = XZ("au0m3y15tnb", (() => {
+          var RR, JR;
+          return null !== (RR = null === (JR = aq) || void 0 === JR ? void 0 : JR.ws) && void 0 !== RR ? RR : null
+        }), RR, "jckntermls")
+      } catch (tR) {
+        console.error(`${pZ} probes`, tR)
       }
-      const mW = function() {
-        const WW = (0, YE.m)(),
-          iW = (0, YE.h)();
-        let OW = !1;
-        return mW => {
-          WW && !OW && (OW = !0, (0, xm.reportStaleBuildReload)(WW, iW, mW))
+      const yR = function() {
+        const RR = (0, Ct.m)(),
+          JR = (0, Ct.h)();
+        let GR = !1;
+        return yR => {
+          RR && !GR && (GR = !0, (0, Vy.reportStaleBuildReload)(RR, JR, yR))
         }
       }();
-      pt(), jw || function() {
-        const WW = function(WW) {
-          var iW;
-          const OW = new URLSearchParams(WW),
-            mW = OW.get("game");
-          return mW ? {
-            game: mW,
-            lobby: null !== (iW = OW.get("lobby")) && void 0 !== iW ? iW : null
+      IV(), af || function() {
+        const RR = function(RR) {
+          var JR;
+          const GR = new URLSearchParams(RR),
+            yR = GR.get("game");
+          return yR ? {
+            game: yR,
+            lobby: null !== (JR = GR.get("lobby")) && void 0 !== JR ? JR : null
           } : null
         }(window.location.search);
-        if (WW) return (0, di.i)(WW.game) && pt().request(), void uw(WW.game, WW.lobby);
-        const iW = new URLSearchParams(window.location.search).get("ws");
-        if (!iW) return;
-        AL.then((WW => {
-          WW && async function(WW, iW) {
+        if (RR) return (0, xJ.n)(RR.game) && IV().request(), void vf(RR.game, RR.lobby);
+        const JR = new URLSearchParams(window.location.search).get("ws");
+        if (!JR) return;
+        Kq.then((RR => {
+          RR && async function(RR, JR) {
             try {
-              await (0, qW.h)(WW), lc = tt(new WebSocket(iW)), null !== lc && NN.d.setGame(null), Hw()
-            } catch (EW) {
-              console.error(`${nP} ?ws=${iW} did not attach`, EW)
+              await (0, dR.m)(RR), Vi = VV(new WebSocket(JR)), null !== Vi && yu.d.setGame(null), gf()
+            } catch (tR) {
+              console.error(`${pZ} ?ws=${JR} did not attach`, tR)
             }
-          }(WW, iW)
+          }(RR, JR)
         }))
-      }(), async function(WW) {
-        var iW, mW, NW, PW, LW, wW;
-        if ("undefined" === typeof WebAssembly) return Tt("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
-        const tW = (0, AN.O)();
-        let xW = await (0, AN.J)();
-        if (ht(xW) && function() {
-            const WW = Date.now();
-            return !(0, Ri.v)((0, Ri.y)(), nt, WW, Ri.e) && (0, Ri.r)(nt, WW, Ri.e)
+      }(), async function(RR) {
+        var JR, yR, uR, ZR, qR, fR;
+        if ("undefined" === typeof WebAssembly) return lV("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
+        const VR = (0, wu.db)();
+        let wR = await (0, wu.W)();
+        if (gV(wR) && function() {
+            const RR = Date.now();
+            return !(0, jJ.q)((0, jJ.t)(), vV, RR, jJ.b) && (0, jJ.p)(vV, RR, jJ.b)
           }()) {
-          const WW = ut(xW, tW),
-            iW = await async function(WW) {
+          const RR = OV(wR, VR),
+            JR = await async function(RR) {
               let {
-                decline: iW,
-                detail: OW,
-                details: mW
-              } = WW;
-              console.warn(`${nP} ${OW}: waiting for a WebGL context`);
-              const EW = performance.now(),
-                NW = await kN({
-                  sleep: (WW, iW) => (0, WO.b)(WW, iW).catch((() => {})),
+                decline: JR,
+                detail: GR,
+                details: yR
+              } = RR;
+              console.warn(`${pZ} ${GR}: waiting for a WebGL context`);
+              const tR = performance.now(),
+                uR = await Lu({
+                  sleep: (RR, JR) => (0, sJ.b)(RR, JR).catch((() => {})),
                   repick: async () => {
-                    const WW = await (0, AN.R)();
-                    return ht(WW) ? null : {
-                      Kl: WW
+                    const RR = await (0, wu.fb)();
+                    return gV(RR) ? null : {
+                      Ur: RR
                     }
                   },
-                  showScreen: WW => {
-                    const OW = (0, yi.g)("blockedAfterLoss" === iW ? "graphicsLost" : "noContext");
-                    return ni({
-                      ...OW,
-                      cancel: jw ? OW.cancel : null
-                    }, WW)
+                  showScreen: RR => {
+                    const GR = (0, BJ.j)("blockedAfterLoss" === JR ? "graphicsLost" : "noContext");
+                    return bJ({
+                      ...GR,
+                      cancel: af ? GR.cancel : null
+                    }, RR)
                   }
                 }),
-                PW = String(Math.round(performance.now() - EW));
-              if (null === NW.picked) {
-                const WW = NW.gaveUp ? "waited" : "left";
-                return (0, xm.reportLoadRecovery)({
+                ZR = String(Math.round(performance.now() - tR));
+              if (null === uR.picked) {
+                const RR = uR.gaveUp ? "waited" : "left";
+                return (0, Vy.reportLoadRecovery)({
                   step: "noContext",
                   outcome: "gaveUp",
-                  tries: NW.tries,
-                  detail: `${OW}; ${WW}`,
+                  tries: uR.tries,
+                  detail: `${GR}; ${RR}`,
                   details: {
-                    ...mW,
-                    waitedMs: PW
+                    ...yR,
+                    waitedMs: ZR
                   }
-                }), NW.gaveUp ? {
+                }), uR.gaveUp ? {
                   gaveUp: !0
-                } : ((0, Zi.f)("/"), null)
+                } : ((0, KJ.f)("/"), null)
               }
               const {
-                Kl: LW
-              } = NW.picked;
-              if (!(0, BO.r)(LW)) {
-                var cW;
-                const WW = null !== (cW = null === LW || void 0 === LW ? void 0 : LW.backend) && void 0 !== cW ? cW : "none";
-                (0, xm.reportLoadRecovery)({
+                Ur: qR
+              } = uR.picked;
+              if (!(0, zG.o)(qR)) {
+                var iR;
+                const RR = null !== (iR = null === qR || void 0 === qR ? void 0 : qR.backend) && void 0 !== iR ? iR : "none";
+                (0, Vy.reportLoadRecovery)({
                   step: "noContext",
                   outcome: "recovered",
-                  tries: NW.tries,
-                  detail: OW,
+                  tries: uR.tries,
+                  detail: GR,
                   details: {
-                    ...mW,
-                    backend: WW,
-                    waitedMs: PW
+                    ...yR,
+                    backend: RR,
+                    waitedMs: ZR
                   }
-                }), null !== LW && (0, AN.L)(LW.backend)
+                }), null !== qR && (0, wu.bb)(qR.backend)
               }
-              return NW.picked
-            }(WW);
-          if (null === iW) return null;
-          if ("gaveUp" in iW) return (0, xm.setCrashBackend)("unsupported"), Tt("browser", WW.decline, WW.detail, {
-            ...WW.details,
+              return uR.picked
+            }(RR);
+          if (null === JR) return null;
+          if ("gaveUp" in JR) return (0, Vy.setCrashBackend)("unsupported"), lV("browser", RR.decline, RR.detail, {
+            ...RR.details,
             afterWait: "true"
           }), null;
-          xW = iW.Kl
+          wR = JR.Ur
         }
-        const lW = await async function(WW, iW) {
-          const OW = (0, BO.r)(WW) ? ut(WW, iW) : null;
-          if (null === OW || void 0 === OW || !OW.retries) return WW;
-          console.warn(`${nP} ${OW.detail}: picking again in ${Jt} ms`), await new Promise((WW => {
-            setTimeout(WW, Jt)
+        const rR = await async function(RR, JR) {
+          const GR = (0, zG.o)(RR) ? OV(RR, JR) : null;
+          if (null === GR || void 0 === GR || !GR.retries) return RR;
+          console.warn(`${pZ} ${GR.detail}: picking again in ${pV} ms`), await new Promise((RR => {
+            setTimeout(RR, pV)
           }));
-          const mW = await (0, AN.R)();
-          if (!(0, BO.r)(mW)) {
-            var EW;
-            (0, xm.reportNoBackendRetry)("reprobed", OW.decline, OW.detail, {
-              ...OW.details,
-              backend: null !== (EW = null === mW || void 0 === mW ? void 0 : mW.backend) && void 0 !== EW ? EW : "none"
-            }), null !== mW && (0, AN.L)(mW.backend)
+          const yR = await (0, wu.fb)();
+          if (!(0, zG.o)(yR)) {
+            var tR;
+            (0, Vy.reportNoBackendRetry)("reprobed", GR.decline, GR.detail, {
+              ...GR.details,
+              backend: null !== (tR = null === yR || void 0 === yR ? void 0 : yR.backend) && void 0 !== tR ? tR : "none"
+            }), null !== yR && (0, wu.bb)(yR.backend)
           }
-          return mW
-        }(xW, tW);
-        if ((0, xm.setCrashBackend)((0, BO.r)(lW) ? "unsupported" : null !== (iW = null === lW || void 0 === lW ? void 0 : lW.backend) && void 0 !== iW ? iW : "none"), (0, BO.r)(lW)) return function(WW) {
+          return yR
+        }(wR, VR);
+        if ((0, Vy.setCrashBackend)((0, zG.o)(rR) ? "unsupported" : null !== (JR = null === rR || void 0 === rR ? void 0 : rR.backend) && void 0 !== JR ? JR : "none"), (0, zG.o)(rR)) return function(RR) {
           let {
-            decline: iW,
-            detail: OW,
-            details: mW,
-            retries: EW
-          } = WW;
-          if (EW && (0, qi.u)()) return (0, xm.reportNoBackendRetry)("reload", iW, OW, mW), void ot(`${OW}, again after ${Jt} ms`);
-          Tt("browser", iW, OW, EW ? {
-            ...mW,
-            afterReload: String(qi.D)
-          } : mW)
-        }(ut(lW, tW)), null;
-        if ((0, gN.t)("render")) try {
+            decline: JR,
+            detail: GR,
+            details: yR,
+            retries: tR
+          } = RR;
+          if (tR && (0, SJ.u)()) return (0, Vy.reportNoBackendRetry)("reload", JR, GR, yR), void xV(`${GR}, again after ${pV} ms`);
+          lV("browser", JR, GR, tR ? {
+            ...yR,
+            afterReload: String(SJ.B)
+          } : yR)
+        }(OV(rR, VR)), null;
+        if ((0, Du.n)("render")) try {
           const {
-            startRenderDebug: WW
-          } = await Promise.all([OW.e(91), OW.e(57)]).then((() => OW(5419)));
-          WW(lW)
-        } catch (Ki) {
-          console.warn("The render debug topic didn't load", Ki)
+            startRenderDebug: RR
+          } = await Promise.all([GR.e(91), GR.e(57)]).then((() => GR(5539)));
+          RR(rR)
+        } catch (CJ) {
+          console.warn("The render debug topic didn't load", CJ)
         }
-        if ((0, gN.t)("renderlite")) try {
+        if ((0, Du.n)("renderlite")) try {
           const {
-            startRenderLite: WW
-          } = await Promise.all([OW.e(306), OW.e(58)]).then((() => OW(54811)));
-          ac = WW(lW)
-        } catch (Ki) {
-          console.warn("The renderlite debug topic didn't load", Ki)
+            startRenderLite: RR
+          } = await Promise.all([GR.e(306), GR.e(58)]).then((() => GR(54647)));
+          Yi = RR(rR)
+        } catch (CJ) {
+          console.warn("The renderlite debug topic didn't load", CJ)
         }
-        if ((0, gN.t)("renderprobe")) try {
+        if ((0, Du.n)("renderprobe")) try {
           const {
-            startRenderProbe: WW
-          } = await OW.e(59).then((() => OW(54813)));
-          WW(lW)
-        } catch (Ki) {
-          console.warn("The renderprobe debug topic didn't load", Ki)
+            startRenderProbe: RR
+          } = await GR.e(59).then((() => GR(54656)));
+          RR(rR)
+        } catch (CJ) {
+          console.warn("The renderprobe debug topic didn't load", CJ)
         }
-        if ("webgl" === (null === lW || void 0 === lW ? void 0 : lW.backend) && jw && "address" !== qi.B.reason) {
-          const WW = ME(lW);
-          null !== WW && (0, Gi.h)(WW)
+        if ("webgl" === (null === rR || void 0 === rR ? void 0 : rR.backend) && af && "address" !== SJ.z.reason) {
+          const RR = Ut(rR);
+          null !== RR && (0, dJ.f)(RR)
         }
-        const AW = null !== (mW = null === lW || void 0 === lW ? void 0 : lW.backend) && void 0 !== mW ? mW : null;
-        Dc.adapter = null !== (NW = null === lW || void 0 === lW ? void 0 : lW.adapter) && void 0 !== NW ? NW : null, Dc.boundAtMs = null, Dc.indirectHangs = null, Dc.restoresSkipped = null;
-        const bW = !(0, BO._)();
-        null === lW || (0, BO.C)(lW.reason) || console.info(`${nP} drawing with ${lW.backend}: ${lW.reason}`);
-        const jW = (0, AN.z)();
-        HW("previews"), bL(!0), (0, qW.t)((WW => {
+        const eR = null !== (yR = null === rR || void 0 === rR ? void 0 : rR.backend) && void 0 !== yR ? yR : null;
+        Hi.adapter = null !== (uR = null === rR || void 0 === rR ? void 0 : rR.adapter) && void 0 !== uR ? uR : null, Hi.boundAtMs = null, Hi.indirectHangs = null, Hi.restoresSkipped = null;
+        const aR = !(0, zG._)();
+        null === rR || (0, zG.B)(rR.reason) || console.info(`${pZ} drawing with ${rR.backend}: ${rR.reason}`);
+        const LR = (0, wu.J)();
+        bR("previews"), wq(!0), (0, dR.y)((RR => {
           try {
-            null !== AW && (Xc = WW.startSkyFeed, vt(), function(WW) {
-              var iW, OW;
-              pc = WW.rasterText, bc = WW.setTextLocalPlayer, WW.setTextLocalPlayer(null !== (iW = null === (OW = Ac) || void 0 === OW ? void 0 : OW.info.playerDbId) && void 0 !== iW ? iW : null), fc = WW.drainTextRerasters, Cc = WW.loadTextIcons, WW.warmText((() => Fc)), WW.textChanged(), Fc && setTimeout(Cc, 0)
-            }(WW), Bc = WW.startShellAnalytics, Rt())
+            null !== eR && (mi = RR.startSkyFeed, HV(), function(RR) {
+              var JR, GR;
+              ci = RR.rasterText, wi = RR.setTextLocalPlayer, RR.setTextLocalPlayer(null !== (JR = null === (GR = Ki) || void 0 === GR ? void 0 : GR.info.playerDbId) && void 0 !== JR ? JR : null), Pi = RR.drainTextRerasters, Ii = RR.loadTextIcons, RR.warmText((() => Fi)), RR.textChanged(), Fi && setTimeout(Ii, 0)
+            }(RR), zi = RR.startShellAnalytics, EV())
           } finally {
-            Mw || (rc = WW.followMenuPrefs({
-              setSoundPrefs: Lt,
-              setEnvPrefs: ct,
-              setUiPrefs: Pt,
-              setLookPrefs: wt
+            Wf || (ki = RR.followMenuPrefs({
+              setSoundPrefs: qV,
+              setEnvPrefs: iV,
+              setUiPrefs: ZV,
+              setLookPrefs: fV
             }))
           }
-        })), (0, qW.l)(wL).catch((WW => {
-          console.warn(`${nP} the game code did not load: a join asks again`, WW)
+        })), (0, dR.p)(Zq).catch((RR => {
+          console.warn(`${pZ} the game code did not load: a join asks again`, RR)
         }));
-        const UW = (0, AN.k)(lW);
-        let kW, sW;
-        UW.catch((() => {})), "loading" === (0, gi.D)() && (uW(), HW("load"));
+        const nR = (0, wu.n)(rR);
+        let UR, WR;
+        nR.catch((() => {})), "loading" === (0, HJ.s)() && (OR(), bR("load"));
         try {
-          kW = function(WW) {
-            const iW = null !== WW && void 0 !== WW ? WW : document.createElement("canvas");
-            iW.id = "wasm-game-canvas", Aw.watch(iW, kZ), bw.watch(iW, kZ),
-              function(WW) {
-                if (TZ.has(WW)) return;
-                TZ.add(WW), WW.addEventListener("webglcontextlost", (() => {
-                  var WW;
-                  const iW = null !== cc && lZ(),
-                    OW = null === (WW = window.bloxdRenderDebug) || void 0 === WW ? void 0 : WW.vaos;
+          UR = function(RR) {
+            const JR = null !== RR && void 0 !== RR ? RR : document.createElement("canvas");
+            JR.id = "wasm-game-canvas", rf.watch(JR, nK), ef.watch(JR, nK),
+              function(RR) {
+                if (BK.has(RR)) return;
+                BK.add(RR), RR.addEventListener("webglcontextlost", (() => {
+                  var RR;
+                  const JR = null !== ui && wK(),
+                    GR = null === (RR = window.bloxdRenderDebug) || void 0 === RR ? void 0 : RR.vaos;
                   setTimeout((() => {
-                    var WW, mW, EW, NW, PW;
-                    null === (WW = ac) || void 0 === WW || WW.glContextLost(iW, OW, null !== (mW = null !== (EW = !1 === (null === (NW = NL) || void 0 === NW ? void 0 : NW.isStopped) ? NL.addDistanceInUse() : null) && void 0 !== EW ? EW : null === (PW = yZ()) || void 0 === PW ? void 0 : PW.horizontal) && void 0 !== mW ? mW : null)
+                    var RR, yR, tR, uR, ZR;
+                    null === (RR = Yi) || void 0 === RR || RR.glContextLost(JR, GR, null !== (yR = null !== (tR = !1 === (null === (uR = Gq) || void 0 === uR ? void 0 : uR.isStopped) ? Gq.addDistanceInUse() : null) && void 0 !== tR ? tR : null === (ZR = MK()) || void 0 === ZR ? void 0 : ZR.horizontal) && void 0 !== yR ? yR : null)
                   }), 0)
                 }))
-              }(iW), (0, yN.k)();
-            const OW = (0, UO.e)(),
-              mW = (0, UO.g)(OW);
-            iW.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, YN.g)(iW, mW), (0, UO.c)(iW, OW), iW.width = mW.bufferWidth, iW.height = mW.bufferHeight;
-            const EW = document.createElement("div");
-            return EW.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", EW.append(iW), Fw(EW, Uw), kw = EW, document.body.append(EW), iW
-          }(null === AW ? null : await (await Sw()).pagePreviews().beginSession())
-        } catch (EW) {
-          return oW("fetch"), await VZ({
-            site: vP,
-            error: EW
+              }(JR), (0, Xu.k)();
+            const GR = (0, aG.g)(),
+              yR = (0, aG.j)(GR);
+            JR.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, Cu.e)(JR, yR), (0, aG.d)(JR, GR), JR.width = yR.bufferWidth, JR.height = yR.bufferHeight;
+            const tR = document.createElement("div");
+            return tR.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", tR.append(JR), sf(tR, Lf), nf = tR, document.body.append(tR), JR
+          }(null === eR ? null : await (await Cf()).pagePreviews().beginSession())
+        } catch (tR) {
+          return xR("fetch"), await cK({
+            site: xZ,
+            error: tR
           }, (() => {
-            (0, xm.showUnsupported)((0, yi.k)("fetch"), qN.g.fetch, `the previews did not load: ${String(EW)}`)
+            (0, Vy.showUnsupported)((0, BJ.p)("fetch"), Su.g.fetch, `the previews did not load: ${String(tR)}`)
           })), null
         }
-        uW(), HW("loading" === (0, gi.D)() ? "load" : "build");
+        OR(), bR("loading" === (0, HJ.s)() ? "load" : "build");
         try {
-          sW = await UW
-        } catch (EW) {
-          return oW("fetch"), await VZ({
-            site: vP,
-            error: EW
+          WR = await nR
+        } catch (tR) {
+          return xR("fetch"), await cK({
+            site: xZ,
+            error: tR
           }, (() => {
-            (0, xm.showUnsupported)((0, yi.k)("fetch"), qN.g.fetch, `the ${null!==AW&&void 0!==AW?AW:"client"} build did not load: ${String(EW)}`)
+            (0, Vy.showUnsupported)((0, BJ.p)("fetch"), Su.g.fetch, `the ${null!==eR&&void 0!==eR?eR:"client"} build did not load: ${String(tR)}`)
           })), null
         }
-        const MW = (0, AN.g)(),
-          SW = !MW && !0 !== lO.j.getItem(uP),
-          YW = !MW && "loading" === (0, gi.D)();
-        HW("load"), await (0, bN.c)(sW, {
-          reloadFailedDownload: SW
-        }), YW && !(0, gi.R)() && await (0, bN.c)(sW, {
-          reloadFailedDownload: SW
+        const AR = (0, wu.g)(),
+          XR = !AR && !0 !== KG.k.getItem(gZ),
+          MR = !AR && "loading" === (0, HJ.s)();
+        bR("load"), await (0, ru.e)(WR, {
+          reloadFailedDownload: XR
+        }), MR && !(0, HJ.F)() && await (0, ru.e)(WR, {
+          reloadFailedDownload: XR
         });
-        let yW = !1,
-          TW = !1;
-        const JW = (0, gi.p)();
-        if (!(0, gi.R)() && ("compile" === JW || "instantiate" === JW) && (0, gi.P)()) {
-          const WW = (0, gi.h)();
-          console.warn(`${nP} the wasm client did not ${JW} here (${WW}): loading it again`);
-          const iW = await async function(WW) {
-            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jN,
-              OW = !1,
-              mW = 0;
-            for (const EW of iW) {
-              if (!WW.retryable()) break;
-              if (WW.outOfMemory() && (OW = !0, "spent" === WW.stepDownMemory())) return {
+        let BR = !1,
+          lR = !1;
+        const pR = (0, HJ.i)();
+        if (!(0, HJ.F)() && ("compile" === pR || "instantiate" === pR) && (0, HJ.B)()) {
+          const RR = (0, HJ.e)();
+          console.warn(`${pZ} the wasm client did not ${pR} here (${RR}): loading it again`);
+          const JR = await async function(RR) {
+            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eu,
+              GR = !1,
+              yR = 0;
+            for (const tR of JR) {
+              if (!RR.retryable()) break;
+              if (RR.outOfMemory() && (GR = !0, "spent" === RR.stepDownMemory())) return {
                 recovered: !1,
-                tries: mW,
-                outOfMemory: OW,
+                tries: yR,
+                outOfMemory: GR,
                 spent: !0
               };
-              if (await WW.sleep(EW), mW++, await WW.retry()) return {
+              if (await RR.sleep(tR), yR++, await RR.retry()) return {
                 recovered: !0,
-                tries: mW,
-                outOfMemory: OW,
+                tries: yR,
+                outOfMemory: GR,
                 spent: !1
               }
             }
-            return OW ||= WW.outOfMemory(), {
+            return GR ||= RR.outOfMemory(), {
               recovered: !1,
-              tries: mW,
-              outOfMemory: OW,
+              tries: yR,
+              outOfMemory: GR,
               spent: !1
             }
           }({
-            sleep: WW => (0, WO.b)(WW),
-            outOfMemory: () => (0, oO.d)((0, gi.m)()),
-            retryable: gi.P,
-            stepDownMemory: () => "instantiate" !== (0, gi.p)() || !dt() || (0, cm.q)() ? "none" : "halve" === (0, cm.p)() ? "halved" : "spent",
-            retry: bN.g
+            sleep: RR => (0, sJ.b)(RR),
+            outOfMemory: () => (0, vG.d)((0, HJ.h)()),
+            retryable: HJ.B,
+            stepDownMemory: () => "instantiate" !== (0, HJ.i)() || !NV() || (0, Zy.u)() ? "none" : "halve" === (0, Zy.t)() ? "halved" : "spent",
+            retry: ru.h
           });
-          yW = iW.outOfMemory, TW = iW.spent;
+          BR = JR.outOfMemory, lR = JR.spent;
           const {
-            tries: OW,
-            recovered: mW
-          } = iW, EW = mW ? WW : (0, gi.h)();
-          (0, xm.reportLoadRecovery)({
+            tries: GR,
+            recovered: yR
+          } = JR, tR = yR ? RR : (0, HJ.e)();
+          (0, Vy.reportLoadRecovery)({
             step: "load",
-            stage: JW,
-            oom: yW,
-            outcome: mW ? "recovered" : "gaveUp",
-            tries: OW,
-            detail: EW
+            stage: pR,
+            oom: BR,
+            outcome: yR ? "recovered" : "gaveUp",
+            tries: GR,
+            detail: tR
           })
         }
-        KW ??= performance.now();
-        const hW = tL;
-        if (!(0, gi.R)()) {
-          (0, gi.Q)() && "compile" !== JW && "instantiate" !== JW && lO.j.setItem(uP, !0);
-          const WW = (0, gi.p)();
-          if (oW("instantiate" === WW || null === WW ? `instantiate_${nW((0,gi.m)())}` : WW), "call" === WW) MZ({
-            site: RO.y,
-            error: (0, gi.m)(),
+        CR ??= performance.now();
+        const gR = qq;
+        if (!(0, HJ.F)()) {
+          (0, HJ.C)() && "compile" !== pR && "instantiate" !== pR && KG.k.setItem(gZ, !0);
+          const RR = (0, HJ.i)();
+          if (xR("instantiate" === RR || null === RR ? `instantiate_${vR((0,HJ.h)())}` : RR), "call" === RR) WK({
+            site: jG.r,
+            error: (0, HJ.h)(),
             header: null
-          }, hW);
+          }, gR);
           else {
-            const iW = null !== WW && void 0 !== WW ? WW : "instantiate",
-              OW = () => {
-                (0, xm.showUnsupported)((0, yi.k)(iW), qN.g[iW], (0, gi.h)())
+            const JR = null !== RR && void 0 !== RR ? RR : "instantiate",
+              GR = () => {
+                (0, Vy.showUnsupported)((0, BJ.p)(JR), Su.g[JR], (0, HJ.e)())
               },
-              mW = "compile" === JW || "instantiate" === JW ? JW : WW;
-            if ("compile" === mW || "instantiate" === mW) {
-              const WW = yW || (0, oO.d)((0, gi.m)());
-              if (jw && (WW && dt() ? !TW && "spent" !== (0, cm.p)(Date.now(), !0) : (0, qi.u)())) {
-                const iW = (0, gi.h)();
-                return (0, xm.reportLoadReload)((0, yi.k)(mW), qN.g[mW], iW), ot(`the wasm client ${WW?"ran out of memory to":"did not"} ${mW} here (${iW})`), null
-              }(0, xm.showUnsupported)(WW ? "memory" : (0, yi.k)(mW), qN.g[mW], (0, gi.h)())
-            } else if ("fetch" === iW) {
-              const WW = [sW.url().href, Xi.d.url().href];
-              await VZ({
-                site: vP,
-                error: (0, gi.h)(),
-                urls: WW
+              yR = "compile" === pR || "instantiate" === pR ? pR : RR;
+            if ("compile" === yR || "instantiate" === yR) {
+              const RR = BR || (0, vG.d)((0, HJ.h)());
+              if (af && (RR && NV() ? !lR && "spent" !== (0, Zy.t)(Date.now(), !0) : (0, SJ.u)())) {
+                const JR = (0, HJ.e)();
+                return (0, Vy.reportLoadReload)((0, BJ.p)(yR), Su.g[yR], JR), xV(`the wasm client ${RR?"ran out of memory to":"did not"} ${yR} here (${JR})`), null
+              }(0, Vy.showUnsupported)(RR ? "memory" : (0, BJ.p)(yR), Su.g[yR], (0, HJ.e)())
+            } else if ("fetch" === JR) {
+              const RR = [WR.url().href, mJ.d.url().href];
+              await cK({
+                site: xZ,
+                error: (0, HJ.e)(),
+                urls: RR
               }, (() => {
-                OW()
+                GR()
               }))
-            } else OW()
+            } else GR()
           }
           return null
-        }(0, Vi.J)(sW.url()) && (0, xm.reportUnstreamedCoreLoad)();
-        const dW = (0, gi.G)();
-        let eW, vW = hW;
-        HW("core");
+        }(0, cJ.H)(WR.url()) && (0, Vy.reportUnstreamedCoreLoad)();
+        const NR = (0, HJ.w)();
+        let DR, HR = gR;
+        bR("core");
         try {
-          vW = {
-            ...hW,
-            wasm: dW.RZ()
+          HR = {
+            ...gR,
+            wasm: NR.FK()
           };
           const {
-            WU: WW
-          } = sW.bindings, iW = WW.TmW();
-          if (iW !== HO.v) return oW("core_other"), MZ({
-            site: RO.d,
-            error: `core ABI ${iW}, page ABI ${HO.v}`,
+            hL: RR
+          } = WR.bindings, JR = RR.wtR();
+          if (JR !== pG.C) return xR("core_other"), WK({
+            site: jG.b,
+            error: `core ABI ${JR}, page ABI ${pG.C}`,
             header: null
-          }, vW), null;
-          const [OW, mW] = (0, HO.te)();
-          eW = new WW(OW, mW)
-        } catch (EW) {
-          return oW(`core_${nW(EW)}`), MZ({
-            site: RO.d,
-            error: EW,
+          }, HR), null;
+          const [GR, yR] = (0, pG.re)();
+          DR = new RR(GR, yR)
+        } catch (tR) {
+          return xR(`core_${vR(tR)}`), WK({
+            site: jG.b,
+            error: tR,
             header: null
-          }, vW), null
+          }, HR), null
         }
-        oW("ok"), tL = vW, ZL = sW.bindings;
-        const gW = new RO.h(eW, gi.v, {
-          onCrash: WW => {
-            var iW;
-            null === (iW = ac) || void 0 === iW || iW.crashed(WW),
-              function(WW, iW, OW, mW) {
-                if ("webgpu" !== iW || (0, AN.c)()) return !1;
-                const EW = function(WW) {
-                  if (WW.site === RO.f && (0, BO.s)(WW.error)) return "frames_refused";
-                  return WW.site === oP && (0, BO.u)(WW.error) ? "start_failed" : null
-                }(WW);
-                if (null === EW) return !1;
-                if (null !== (0, BO.Z)(EW, mW, (0, qO.e)(WW.error))) return (0, xm.countRenderLost)(EW, WW.error, Dc), !1;
-                return PO.G.reloaded(null, !1), (0, xm.reportRenderReload)("webgpu", "start_failed" === EW ? 0 : 1, OW, {
-                  cause: EW,
-                  error: WW.error,
-                  context: Dc,
-                  session: JZ(null)
-                }), WZ(), !0
-              }(WW, AW, vW, bW) || MZ(WW, vW)
+        xR("ok"), qq = HR, iq = WR.bindings;
+        const oR = new jG.f(DR, HJ.m, {
+          onCrash: RR => {
+            var JR;
+            null === (JR = Yi) || void 0 === JR || JR.crashed(RR),
+              function(RR, JR, GR, yR) {
+                if ("webgpu" !== JR || (0, wu.c)()) return !1;
+                const tR = function(RR) {
+                  if (RR.site === jG.e && (0, zG.s)(RR.error)) return "frames_refused";
+                  return RR.site === bZ && (0, zG.t)(RR.error) ? "start_failed" : null
+                }(RR);
+                if (null === tR) return !1;
+                if (null !== (0, zG.W)(tR, yR, (0, SG.d)(RR.error))) return (0, Vy.countRenderLost)(tR, RR.error, Hi), !1;
+                return tG.C.reloaded(null, !1), (0, Vy.reportRenderReload)("webgpu", "start_failed" === tR ? 0 : 1, GR, {
+                  cause: tR,
+                  error: RR.error,
+                  context: Hi,
+                  session: lK(null)
+                }), hV(), !0
+              }(RR, eR, HR, aR) || WK(RR, HR)
           },
-          onNetEvent: zt,
-          onReconnectGrace: St,
-          onJoinPreloadEnded: Kt,
-          onCoreErrors: (WW, iW) => {
-            var OW, mW;
-            WW.some((WW => {
+          onNetEvent: FV,
+          onReconnectGrace: XV,
+          onJoinPreloadEnded: CV,
+          onCoreErrors: (RR, JR) => {
+            var GR, yR;
+            RR.some((RR => {
               let {
-                code: iW
-              } = WW;
-              return iW === HO.D.RenderDeviceLost
-            })) && ((0, AN.x)(), (0, LO.e)(), Zw.deviceLost(), "webgpu" === AW && ((0, qO.h)(Vc), PO.G.lost())), null === (OW = ac) || void 0 === OW || OW.coreErrors(WW);
-            const EW = () => {
-              (0, xm.reportCoreErrors)(WW, iW, vW, ((WW, iW) => {
-                var OW;
-                return WW === HO.D.EnvUnknownSky ? (0, xm.unknownSkyWords)(Ii.d.get("skyBox")) : WW === HO.D.RenderDeviceLost ? (0, xm.deviceLossWords)(iW, Dc.boundAtMs) : null === (OW = Vc) || void 0 === OW ? void 0 : OW.JmW(WW, iW)
+                code: JR
+              } = RR;
+              return JR === pG.K.RenderDeviceLost
+            })) && ((0, wu.D)(), (0, uG.g)(), Vf.deviceLost(), "webgpu" === eR && ((0, SG.e)(oi), tG.C.lost())), null === (GR = Yi) || void 0 === GR || GR.coreErrors(RR);
+            const tR = () => {
+              (0, Vy.reportCoreErrors)(RR, JR, HR, ((RR, JR) => {
+                var GR;
+                return RR === pG.K.EnvUnknownSky ? (0, Vy.unknownSkyWords)(EJ.c.get("skyBox")) : RR === pG.K.RenderDeviceLost ? (0, Vy.deviceLossWords)(JR, Hi.boundAtMs) : null === (GR = oi) || void 0 === GR ? void 0 : GR.rtR(RR, JR)
               }))
             };
-            WW.some((WW => {
+            RR.some((RR => {
               let {
-                code: iW
-              } = WW;
-              return iW === HO.D.EnvUnknownSky
-            })) ? queueMicrotask(EW) : EW(), null === (mW = pL) || void 0 === mW || mW.coreErrors(WW)
+                code: JR
+              } = RR;
+              return JR === pG.K.EnvUnknownSky
+            })) ? queueMicrotask(tR) : tR(), null === (yR = oq) || void 0 === yR || yR.coreErrors(RR)
           },
-          onRenderReload: (WW, iW, OW) => {
-            ! function(WW, iW, OW, mW, EW, NW) {
-              var PW;
-              if ((0, AN.c)()) return;
-              const LW = iW === HO.cd.WEBGPU,
-                cW = mW === HO.cd.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                wW = mW === HO.cd.RESTORE_LOST,
-                tW = LW && (0, PO.p)(Dc.adapter, OW, "lost" === cW, wW),
-                xW = (0, qO.n)(Vc);
-              null === (PW = ac) || void 0 === PW || PW.reload(LW, OW, cW, null === xW || void 0 === xW ? void 0 : xW.message);
-              const lW = LW ? (0, BO.Z)(cW, EW, xW) : null;
-              if (null !== lW) {
-                (0, xm.countRenderLost)(cW, xW, Dc);
-                const iW = void 0 === xW ? "" : ` (${xW.message})`;
-                return void WW.crash(xm.RENDER_RELOAD_SITE, new Error(`${(0,xm.renderReloadMessage)("webgpu",cW,OW)} and ${lW}${iW}`))
+          onRenderReload: (RR, JR, GR) => {
+            ! function(RR, JR, GR, yR, tR, uR) {
+              var ZR;
+              if ((0, wu.c)()) return;
+              const qR = JR === pG.Yc.WEBGPU,
+                iR = yR === pG.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                fR = yR === pG.Yc.RESTORE_LOST,
+                VR = qR && (0, tG.m)(Hi.adapter, GR, "lost" === iR, fR),
+                wR = (0, SG.l)(oi);
+              null === (ZR = Yi) || void 0 === ZR || ZR.reload(qR, GR, iR, null === wR || void 0 === wR ? void 0 : wR.message);
+              const rR = qR ? (0, zG.W)(iR, tR, wR) : null;
+              if (null !== rR) {
+                (0, Vy.countRenderLost)(iR, wR, Hi);
+                const JR = void 0 === wR ? "" : ` (${wR.message})`;
+                return void RR.crash(Vy.RENDER_RELOAD_SITE, new Error(`${(0,Vy.renderReloadMessage)("webgpu",iR,GR)} and ${rR}${JR}`))
               }
-              const AW = LW ? "webgpu" : "webgl1" === NW ? "webgl1" : "webgl";
-              "lost" === cW && (0, AN.x)();
-              if (!LW) {
-                if (Aw.gaveUp(), !(0, qi.u)()) {
-                  (0, xm.countRenderLost)(cW, xW, Dc);
-                  const iW = void 0 === xW ? "" : ` (${xW.message})`;
-                  return void WW.crash(xm.RENDER_RELOAD_SITE, new xm.GraphicsLostError(`${(0,xm.renderReloadMessage)(AW,cW,OW)} and ${qi.i}${iW}`))
+              const eR = qR ? "webgpu" : "webgl1" === uR ? "webgl1" : "webgl";
+              "lost" === iR && (0, wu.D)();
+              if (!qR) {
+                if (rf.gaveUp(), !(0, SJ.u)()) {
+                  (0, Vy.countRenderLost)(iR, wR, Hi);
+                  const JR = void 0 === wR ? "" : ` (${wR.message})`;
+                  return void RR.crash(Vy.RENDER_RELOAD_SITE, new Vy.GraphicsLostError(`${(0,Vy.renderReloadMessage)(eR,iR,GR)} and ${SJ.e}${JR}`))
                 }
-                console.warn(`${nP} the GL render device's recovery gave up: the tab reloads once more onto the wasm client`)
-              }(0, xm.reportRenderReload)(AW, OW, tL, {
+                console.warn(`${pZ} the GL render device's recovery gave up: the tab reloads once more onto the wasm client`)
+              }(0, Vy.reportRenderReload)(eR, GR, qq, {
                 from: "game",
-                cause: cW,
-                restoreLost: wW,
-                adapterRemembered: tW,
-                error: xW,
-                context: Dc,
-                session: JZ(WW.sunShadowsHeld())
-              }), (0, AN.o)();
-              const bW = (0, ZW.f)();
-              let jW = !1;
-              const UW = () => {
-                jW || (jW = !0, LW && "lost" !== cW ? WZ() : bw.reload(WZ, LW))
+                cause: iR,
+                restoreLost: fR,
+                adapterRemembered: VR,
+                error: wR,
+                context: Hi,
+                session: lK(RR.sunShadowsHeld())
+              }), (0, wu.t)();
+              const aR = (0, KR.e)();
+              let LR = !1;
+              const nR = () => {
+                LR || (LR = !0, qR && "lost" !== iR ? hV() : ef.reload(hV, qR))
               };
-              let kW = null;
-              const sW = (0, ZW.t)((() => {
-                null !== kW && clearTimeout(kW), bW ? setTimeout(UW, Qt) : UW()
+              let UR = null;
+              const WR = (0, KR.o)((() => {
+                null !== UR && clearTimeout(UR), aR ? setTimeout(nR, sV) : nR()
               }));
-              !jW && bW && (kW = setTimeout((() => {
-                sW(), UW()
-              }), Ft))
-            }(gW, WW, iW, OW, bW, AW)
+              !LR && aR && (UR = setTimeout((() => {
+                WR(), nR()
+              }), TV))
+            }(oR, RR, JR, GR, aR, eR)
           },
-          onEnvEvent: WW => {
-            var iW;
-            WW.kind === HO.Q.SkyImages ? null === (iW = eL) || void 0 === iW || iW.onEvent(WW.payload) : WW.kind === HO.Q.EnvLighting && (vL = 1 === WW.payload[0])
+          onEnvEvent: RR => {
+            var JR;
+            RR.kind === pG.X.SkyImages ? null === (JR = Oq) || void 0 === JR || JR.onEvent(RR.payload) : RR.kind === pG.X.EnvLighting && (xq = 1 === RR.payload[0])
           },
-          onImages: WW => {
-            var iW;
-            null === (iW = gL) || void 0 === iW || iW.onEvent(WW)
+          onImages: RR => {
+            var JR;
+            null === (JR = Nq) || void 0 === JR || JR.onEvent(RR)
           },
-          onModelRequest: WW => {
-            var iW;
-            null === (iW = uL) || void 0 === iW || iW.request(WW)
+          onModelRequest: RR => {
+            var JR;
+            null === (JR = gq) || void 0 === JR || JR.request(RR)
           },
-          onModelTaken: (WW, iW) => {
-            var OW;
-            null === (OW = uL) || void 0 === OW || OW.taken(WW, iW)
+          onModelTaken: (RR, JR) => {
+            var GR;
+            null === (GR = gq) || void 0 === GR || GR.taken(RR, JR)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(WW, iW) {
-                const OW = cL;
-                if (null === OW || WW.isStopped) return;
-                OW.restore((WW => {
-                  (0, xm.reportTerrainTextureFailure)(WW, iW)
-                })).then((iW => {
-                  !1 !== iW || WW.isStopped ? !0 === iW && console.info(`${nP} terrain textures handed over again after the renderer lost them`) : console.warn(`${nP} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(RR, JR) {
+                const GR = uq;
+                if (null === GR || RR.isStopped) return;
+                GR.restore((RR => {
+                  (0, Vy.reportTerrainTextureFailure)(RR, JR)
+                })).then((JR => {
+                  !1 !== JR || RR.isStopped ? !0 === JR && console.info(`${pZ} terrain textures handed over again after the renderer lost them`) : console.warn(`${pZ} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(gW, vW)
+              }(oR, HR)
             }))
           },
-          onKeepAlive: WW => {
-            const iW = null === cc ? void 0 : wc.get(cc);
-            void 0 !== iW && vE(iW, WW)
+          onKeepAlive: RR => {
+            const JR = null === ui ? void 0 : Zi.get(ui);
+            void 0 !== JR && Nt(JR, RR)
           },
           onSends: () => {
-            ! function(WW) {
-              const iW = performance.now();
-              if (WW.forEachNetOut(jZ), xZ(WW), (0, RO.L)(WW, {
-                  worldgen: ML,
-                  mesh: SL
-                }), null !== Ic) try {
-                Ic.sendsWent(WW, iW, performance.now())
-              } catch (EW) {
-                rt(EW)
+            ! function(RR) {
+              const JR = performance.now();
+              if (RR.forEachNetOut(aK), KK(RR), (0, jG.K)(RR, {
+                  worldgen: nq,
+                  mesh: Wq
+                }), null !== Ei) try {
+                Ei.sendsWent(RR, JR, performance.now())
+              } catch (tR) {
+                QV(tR)
               }
-            }(gW)
+            }(oR)
           }
         });
-        if (NL = gW, null === (PW = jO.d.wasmNetReady) || void 0 === PW || PW.call(jO.d, (() => gW.isStopped ? 0 : gW.netKeptFrames)), null !== WW) {
-          gW.setAntiCheatProbes(MP(gi.v, WW.checks)), WW.watchHeld(SP.CoreFrame, (() => gW.frame)), WW.watchHeld(SP.GlueFrame, (() => eW.frame));
-          const iW = function(WW, iW) {
-            const OW = new KP(iW);
-            let mW = !1;
-            OW.hZ(WW.hZ());
-            const EW = (0, dE.cb)((() => {
-              OW.hZ(WW.hZ())
-            }), YP);
-            let NW = 6 * (0, dE.S)() | 0;
-            const PW = () => {
-              ++NW < 6 || (NW = 0, WW.checks.stackCheck() && (mW = !0))
+        if (Gq = oR, null === (ZR = eG.c.wasmNetReady) || void 0 === ZR || ZR.call(eG.c, (() => oR.isStopped ? 0 : oR.netKeptFrames)), null !== RR) {
+          oR.setAntiCheatProbes(UZ(HJ.m, RR.checks)), RR.watchHeld(AZ.CoreFrame, (() => oR.frame)), RR.watchHeld(AZ.GlueFrame, (() => DR.frame));
+          const JR = function(RR, JR) {
+            const GR = new WZ(JR);
+            let yR = !1;
+            GR.gK(RR.gK());
+            const tR = (0, Ot._)((() => {
+              GR.gK(RR.gK())
+            }), CZ);
+            let uR = 6 * (0, Ot.P)() | 0;
+            const ZR = () => {
+              ++uR < 6 || (uR = 0, RR.checks.stackCheck() && (yR = !0))
             };
-            (0, WP.i)(PW);
-            const LW = () => {
-              const iW = WW.checkPadCall();
-              0 !== iW && OW.setFlags(iW)
+            (0, su.e)(ZR);
+            const qR = () => {
+              const JR = RR.checkPadCall();
+              0 !== JR && GR.setFlags(JR)
             };
-            return (0, QN.i)(LW), {
-              onSend: PW,
+            return (0, Tu.h)(qR), {
+              onSend: ZR,
               beforeFrame: () => {
-                mW && OW.originStackHit() && (mW = !1)
+                yR && GR.originStackHit() && (yR = !1)
               },
-              onEvent: iW => {
-                const mW = WW.checkEvent(iW);
-                OW.value(HO.h.ProbeUsedProp, WW.usedProp()), 0 !== mW && OW.setFlags(mW)
+              onEvent: JR => {
+                const yR = RR.checkEvent(JR);
+                GR.value(pG.k.ProbeUsedProp, RR.usedProp()), 0 !== yR && GR.setFlags(yR)
               },
               stop: () => {
-                (0, dE.eb)(EW), (0, WP.f)(PW), (0, QN.h)(LW)
+                (0, Ot.ab)(tR), (0, su.c)(ZR), (0, Tu.g)(qR)
               }
             }
-          }(WW, ((WW, iW, OW) => {
-            let mW = !1;
-            return uZ(gW, (() => {
-              mW = gW.rings.input.writeRecord(HO.hb.AntiCheat, WW, iW, OW, 0)
-            })), mW
+          }(RR, ((RR, JR, GR) => {
+            let yR = !1;
+            return vK(oR, (() => {
+              yR = oR.rings.input.writeRecord(pG.wb.AntiCheat, RR, JR, GR, 0)
+            })), yR
           }));
-          gW.isStopped ? iW.stop() : HL = iW
+          oR.isStopped ? JR.stop() : lq = JR
         }
-        zP = (WW, iW, OW) => gW.rings.cmd.writeCmd(WW, iW, OW), FP = WW => gW.rings.cmd.growForCmd(WW), ic = !1, vt(), (0, qW.x)(gW, {
-          core: eW,
-          memory: gi.v,
-          staleOr: (WW, iW, OW, mW) => VZ({
-            site: WW,
-            error: iW
-          }, OW, mW),
-          reportReplayFault: (WW, iW) => {
-            (0, xm.reportReplayFault)(WW, iW, tL)
+        kZ = (RR, JR, GR) => oR.rings.cmd.writeCmd(RR, JR, GR), QZ = RR => oR.rings.cmd.growForCmd(RR), sq = !1, HV(), (0, dR.C)(oR, {
+          core: DR,
+          memory: HJ.m,
+          staleOr: (RR, JR, GR, yR) => cK({
+            site: RR,
+            error: JR
+          }, GR, yR),
+          reportReplayFault: (RR, JR) => {
+            (0, Vy.reportReplayFault)(RR, JR, qq)
           },
-          reportCameraFault: WW => {
-            (0, xm.reportCameraDirectorFault)(WW, tL)
+          reportCameraFault: RR => {
+            (0, Vy.reportCameraDirectorFault)(RR, qq)
           },
-          audio: wL,
-          options: Ii.d,
-          onNetEvent: zt,
-          sessionInfo: WW => {
-            var iW;
-            return (null === (iW = Ac) || void 0 === iW ? void 0 : iW.conn) === WW ? Ac.info : null
+          audio: Zq,
+          options: EJ.c,
+          onNetEvent: FV,
+          sessionInfo: RR => {
+            var JR;
+            return (null === (JR = Ki) || void 0 === JR ? void 0 : JR.conn) === RR ? Ki.info : null
           },
-          onEventOverflow: Iw,
-          replayShaderPack: WW => {
-            var iW;
-            null === (iW = pL) || void 0 === iW || iW.replay(WW)
+          onEventOverflow: kf,
+          replayShaderPack: RR => {
+            var JR;
+            null === (JR = oq) || void 0 === JR || JR.replay(RR)
           },
-          hasPackModel: WW => {
-            var iW, OW;
-            return null !== (null !== (iW = null === (OW = gt()) || void 0 === OW ? void 0 : OW.modelUrl(WW)) && void 0 !== iW ? iW : null)
+          hasPackModel: RR => {
+            var JR, GR;
+            return null !== (null !== (JR = null === (GR = oV()) || void 0 === GR ? void 0 : GR.modelUrl(RR)) && void 0 !== JR ? JR : null)
           },
-          beforeWrite: () => (!zL && gW.rings.net.cursor > 0 && mZ(gW, !1, "all"), !gW.isStopped),
-          beforeOp: () => (!zL && gW.netWrittenSinceFrame > 0 && mZ(gW, !1, "budget"), !gW.isStopped)
-        }), (0, BW.G)({
+          beforeWrite: () => (!kq && oR.rings.net.cursor > 0 && GK(oR, !1, "all"), !oR.isStopped),
+          beforeOp: () => (!kq && oR.netWrittenSinceFrame > 0 && GK(oR, !1, "budget"), !oR.isStopped)
+        }), (0, jR.B)({
           lockPointer: () => {
-            if (!fm(kW)) return !1;
+            if (!cy(UR)) return !1;
             try {
-              Promise.resolve(kW.requestPointerLock()).catch((() => {}))
+              Promise.resolve(UR.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, Yi.e)()
+            (0, MJ.c)()
           },
           leaveGame: () => {
-            Gw()
+            Yf()
           },
-          canvas: () => kW
-        }), nL = (0, BW.x)((() => {
-          var WW;
-          const iW = (0, qW.f)();
-          null === (WW = (0, qW.p)()) || void 0 === WW || WW.followCursorAim(!0 === (null === iW || void 0 === iW ? void 0 : iW.isSessionLive) ? iW : null)
-        })), Nc && gW.setUiPrefs(Nc);
-        Pc && gW.setEnvPrefs(Pc);
-        Lc && gW.setLookPrefs(Lc);
-        const DW = KN ? SN(KN.preventMovement) : null;
-        DW && Et(DW);
-        const VW = (0, cm.i)(),
-          pW = (0, cm.d)(gW, VW);
-        JL = VW.basis, (0, Ym.k)((0, Um.e)(null === pW ? null : (0, Lm.o)(pW), (0, Um.i)())), TL = pW;
-        const fW = (0, fi.c)();
-        let CW = 1 / 0,
-          XW = !0,
-          RW = VW.shedFootprintBytes;
-        const GW = new RE.b(fW, (() => eW.AU()), (WW => {
-          gW.crash(RO.m, WW)
+          canvas: () => UR
+        }), pq = (0, jR.r)((() => {
+          var RR;
+          const JR = (0, dR.l)();
+          null === (RR = (0, dR.u)()) || void 0 === RR || RR.followCursorAim(!0 === (null === JR || void 0 === JR ? void 0 : JR.isSessionLive) ? JR : null)
+        })), Gi && oR.setUiPrefs(Gi);
+        yi && oR.setEnvPrefs(yi);
+        ti && oR.setLookPrefs(ti);
+        const cR = Wu ? Au(Wu.preventMovement) : null;
+        cR && tV(cR);
+        const PR = (0, Zy.n)(),
+          IR = (0, Zy.i)(oR, PR);
+        Mq = PR.basis, (0, Cy.o)((0, ay.d)(null === IR ? null : (0, uy.n)(IR), (0, ay.k)())), Xq = IR;
+        const mR = (0, PJ.b)();
+        let zR = 1 / 0,
+          SR = !0,
+          ER = PR.shedFootprintBytes;
+        const YR = new jt.e(mR, (() => DR.nn()), (RR => {
+          oR.crash(jG.n, RR)
         }));
-        YL = GW, yL = GW, null !== pW && GW.setCeiling(Math.min((0, RE.o)(pW), CW, (0, cm.m)()));
-        if (XW) {
-          GW.setShed((WW => {
-            const iW = gW.shedMemory("joinReserve" !== WW && "gcPressure" !== WW);
-            return null !== iW && (null === TL || iW < TL) && (TL = iW, (0, Ym.k)((0, Um.e)((0, Lm.o)(iW), (0, Um.i)()))), iW
-          }), ((WW, iW, OW) => {
-            1 === iW ? (0, xm.reportMemoryShed)(WW, OW, tL) : console.warn(`${nP} wasm memory: shed again (${WW}): shed ${iW}`, OW.wasmMemoryShed)
-          }), (() => gW.addDistanceInUse()));
-          const WW = (0, BO.M)(dW);
-          GW.setFootprint(new vN(RW, {
-            storedChunks: () => eW.hmW(),
+        Aq = YR, Cq = YR, null !== IR && YR.setCeiling(Math.min((0, jt.s)(IR), zR, (0, Zy.r)()));
+        if (SR) {
+          YR.setShed((RR => {
+            const JR = oR.shedMemory("joinReserve" !== RR && "gcPressure" !== RR);
+            return null !== JR && (null === Xq || JR < Xq) && (Xq = JR, (0, Cy.o)((0, ay.d)((0, uy.n)(JR), (0, ay.k)()))), JR
+          }), ((RR, JR, GR) => {
+            1 === JR ? (0, Vy.reportMemoryShed)(RR, GR, qq) : console.warn(`${pZ} wasm memory: shed again (${RR}): shed ${JR}`, GR.wasmMemoryShed)
+          }), (() => oR.addDistanceInUse()));
+          const RR = (0, zG.M)(NR);
+          YR.setFootprint(new Nu(ER, {
+            storedChunks: () => DR.etR(),
             gpuBytes: () => {
-              var iW;
-              return null !== (iW = null === WW || void 0 === WW ? void 0 : WW.HmW()) && void 0 !== iW ? iW : 0
+              var JR;
+              return null !== (JR = null === RR || void 0 === RR ? void 0 : RR.atR()) && void 0 !== JR ? JR : 0
             },
-            jsHeapBytes: eN
-          })), (0, Sm.i)("wasm", GW, (() => {
-            wL.freeSounds()
+            jsHeapBytes: xu
+          })), (0, Ay.g)("wasm", YR, (() => {
+            Zq.freeSounds()
           }))
         }
         window.addEventListener("pagehide", (() => {
-          YL === GW && (GW.refreshStats(), nZ(GW))
-        })), document.addEventListener("visibilitychange", cZ), window.addEventListener("pagehide", wZ), window.addEventListener("pagehide", iZ), window.addEventListener("pagehide", OZ), !1;
-        const [IW, aW] = (0, bm.i)();
-        zc = (0, Um.k)((WW => {
-          const iW = (0, Um.o)(WW, (0, Um.i)());
-          return gW.setChunkAddDistance(iW.horizontal, iW.vertical)
+          Aq === YR && (YR.refreshStats(), bK(YR))
+        })), document.addEventListener("visibilitychange", qK), window.addEventListener("pagehide", iK), window.addEventListener("pagehide", RK), window.addEventListener("pagehide", JK), !1;
+        const [kR, QR] = (0, ry.g)();
+        Qi = (0, ay.l)((RR => {
+          const JR = (0, ay.s)(RR, (0, ay.k)());
+          return oR.setChunkAddDistance(JR.horizontal, JR.vertical)
         }), {
-          horizontal: IW,
-          vertical: aW
-        }), gW.setAmbientOcclusion(!0 !== lO.i.getItem("disableAmbientOcclusion")), gW.setPoseLod(!0 !== lO.i.getItem(vi.N)), gW.setDebugLog(HO.G.Look, !0), gW.setDebugLog(HO.G.CameraSet, !0), (0, VN.startLookDebug)("wasm", {
-          look: () => gW.takeDebugLog(HO.G.Look),
-          cameraSets: () => gW.takeDebugLog(HO.G.CameraSet)
-        }), (0, gN.t)("remesh") && (gW.setDebugLog(HO.G.Remesh, !0), rW = () => gW.takeDebugLog(HO.G.Remesh), BN = new XN((0, pN.q)(), rW));
-        var rW;
-        const zW = function(WW, iW, OW, mW) {
-          const EW = new NE,
-            NW = WW => lO.i.getItem(WW);
-          EW.sync(NW, iW), (0, wO.V)();
-          const PW = (0, cW.n)("customBindingsChanged", (() => {
-            EW.sync(NW, iW)
+          horizontal: kR,
+          vertical: QR
+        }), oR.setAmbientOcclusion(!0 !== KG.i.getItem("disableAmbientOcclusion")), oR.setPoseLod(!0 !== KG.i.getItem(DJ.S)), oR.setDebugLog(pG.M.Look, !0), oR.setDebugLog(pG.M.CameraSet, !0), (0, ou.startLookDebug)("wasm", {
+          look: () => oR.takeDebugLog(pG.M.Look),
+          cameraSets: () => oR.takeDebugLog(pG.M.CameraSet)
+        }), (0, Du.n)("remesh") && (oR.setDebugLog(pG.M.Remesh, !0), FR = () => oR.takeDebugLog(pG.M.Remesh), zu = new mu((0, cu.p)(), FR));
+        var FR;
+        const TR = function(RR, JR, GR, yR) {
+          const tR = new Gt,
+            uR = RR => KG.i.getItem(RR);
+          tR.sync(uR, JR), (0, qG.ab)();
+          const ZR = (0, iR.q)("customBindingsChanged", (() => {
+            tR.sync(uR, JR)
           }));
-          (0, hm.o)(iW);
-          const LW = new Set,
-            wW = (0, BW.x)((() => {
-              var WW;
-              LW.size > 0 && wE() && !0 === (null === (WW = (0, qW.f)()) || void 0 === WW ? void 0 : WW.localPlayerAlive()) && cW.l.iZ("usedKeyboard")
+          (0, ly.q)(JR);
+          const qR = new Set,
+            fR = (0, jR.r)((() => {
+              var RR;
+              qR.size > 0 && Zt() && !0 === (null === (RR = (0, dR.l)()) || void 0 === RR ? void 0 : RR.localPlayerAlive()) && iR.n.JK("usedKeyboard")
             })),
-            tW = rm.c.heldSizer((() => (0, UO.o)(WW))),
-            ZW = Im(WW, iW, {
-              prevents: WW => EW.prevents(WW),
-              keyPressed: WW => {
-                EW.moves(WW) && (LW.add(WW), wE() && cW.l.iZ("usedKeyboard"))
+            VR = Yy.c.heldSizer((() => (0, aG.q)(RR))),
+            KR = dy(RR, JR, {
+              prevents: RR => tR.prevents(RR),
+              keyPressed: RR => {
+                tR.moves(RR) && (qR.add(RR), Zt() && iR.n.JK("usedKeyboard"))
               },
-              keyReleased: WW => {
-                LW.delete(WW)
+              keyReleased: RR => {
+                qR.delete(RR)
               },
               keysReleased: () => {
-                LW.clear()
+                qR.clear()
               },
               resized: () => {
-                LE.g.measure(WW.getBoundingClientRect()), (0, zm.k)()
+                tt.h.measure(RR.getBoundingClientRect()), (0, ky.i)()
               },
-              sizeCanvas: tW,
-              watchRenderScale: iW => {
-                const OW = (0, UO.q)(WW, iW),
-                  mW = rm.c.onRelease(iW),
-                  EW = am.b.onRelease(iW);
+              sizeCanvas: VR,
+              watchRenderScale: JR => {
+                const GR = (0, aG.s)(RR, JR),
+                  yR = Yy.c.onRelease(JR),
+                  tR = Ey.d.onRelease(JR);
                 return () => {
-                  OW(), mW(), EW()
+                  GR(), yR(), tR()
                 }
               },
-              coverHeld: () => am.b.isHeld(),
+              coverHeld: () => Ey.d.isHeld(),
               touchStarting: () => {
-                LE.g.measure(WW.getBoundingClientRect())
+                tt.h.measure(RR.getBoundingClientRect())
               },
-              viewShown: OW,
-              touchUiShown: () => xi.d.get("isTouchScreen"),
-              ctrlCombosAreGames: wE,
-              inspect: (WW, iW, OW) => {
-                EW.checks(iW, OW) && mW(WW)
+              viewShown: GR,
+              touchUiShown: () => wJ.d.get("isTouchScreen"),
+              ctrlCombosAreGames: Zt,
+              inspect: (RR, JR, GR) => {
+                tR.checks(JR, GR) && yR(RR)
               },
-              canLock: () => fm(WW)
+              canLock: () => cy(RR)
             }),
-            xW = (0, QO.d)(iW);
+            wR = (0, TG.e)(JR);
           return () => {
-            PW(), wW(), (0, hm.o)(null), xW(), ZW()
+            ZR(), fR(), (0, ly.q)(null), wR(), KR()
           }
-        }(kW, ((WW, iW, OW, mW, EW) => {
-          uZ(gW, (() => {
-            gW.rings.input.writeRecord(WW, iW, OW, mW, EW)
-          })), !FL && (0, AE.f)(WW, EW) && (0, AE.c)((() => {
-            NL !== gW || Mw || gW.isStopped || !AZ() || mZ(gW, !1, "budget", !1)
+        }(UR, ((RR, JR, GR, yR, tR) => {
+          vK(oR, (() => {
+            oR.rings.input.writeRecord(RR, JR, GR, yR, tR)
+          })), !Qq && (0, Kt.c)(RR, tR) && (0, Kt.b)((() => {
+            Gq !== oR || Wf || oR.isStopped || !rK() || GK(oR, !1, "budget", !1)
           }))
-        }), (() => Uw), (WW => {
-          var iW;
-          null === (iW = HL) || void 0 === iW || iW.onEvent(WW)
+        }), (() => Lf), (RR => {
+          var JR;
+          null === (JR = lq) || void 0 === JR || JR.onEvent(RR)
         }));
-        if (gW.isStopped) return zW(), null;
-        sL = zW;
-        const FW = () => !gW.isStopped && !sw;
-        if (gW.isStopped) return null;
-        (0, gi.Y)((() => {
-          "call" === (0, gi.p)() && gW.crash(RO.y, (0, gi.m)())
+        if (oR.isStopped) return TR(), null;
+        Lq = TR;
+        const sR = () => !oR.isStopped && !Uf;
+        if (oR.isStopped) return null;
+        (0, HJ.M)((() => {
+          "call" === (0, HJ.i)() && oR.crash(jG.r, (0, HJ.h)())
         }));
-        const QW = (0, RO.P)(gW.rings.worker, (() => {
-          mZ(gW, !1, document.hidden ? "all" : "budget")
+        const hR = (0, jG.O)(oR.rings.worker, (() => {
+          GK(oR, !1, document.hidden ? "all" : "budget")
         }));
-        ML = function(WW, iW, OW) {
-          return oZ().then((WW => {
+        nq = function(RR, JR, GR) {
+          return OK().then((RR => {
             let {
-              prefetchWorldgenWorker: iW
-            } = WW;
-            iW()
-          }), (() => {})), new rN({
-            module: (0, gi.z)(),
-            decodeSettings: WW => {
-              const iW = (0, qW.p)();
-              if (null === iW) throw new Error("no game code to decode the world-gen seed with");
-              return iW.decodeMapSettings(WW)
+              prefetchWorldgenWorker: JR
+            } = RR;
+            JR()
+          }), (() => {})), new ku({
+            module: (0, HJ.q)(),
+            decodeSettings: RR => {
+              const JR = (0, dR.u)();
+              if (null === JR) throw new Error("no game code to decode the world-gen seed with");
+              return JR.decodeMapSettings(RR)
             },
-            loadWorker: dZ,
+            loadWorker: xK,
             onMapWithoutWorldgen: () => {
-              eZ((WW => {
+              NK((RR => {
                 let {
-                  stopWorldgenWorkerPrefetch: iW
-                } = WW;
-                iW()
+                  stopWorldgenWorkerPrefetch: JR
+                } = RR;
+                JR()
               }))
             },
-            onLoadFailed: WW => {
-              (0, xm.reportWorldgenLoadFailure)(WW, tL)
+            onLoadFailed: RR => {
+              (0, Vy.reportWorldgenLoadFailure)(RR, qq)
             },
-            onWorkerLost: (WW, iW) => {
-              !async function(WW, iW, OW) {
-                const mW = WW === GN || WW.startsWith(IN);
-                if (!mW || iW) return void OW.wZ(mW);
-                const EW = () => {
-                  OW.wZ(!0)
+            onWorkerLost: (RR, JR) => {
+              !async function(RR, JR, GR) {
+                const yR = RR === du || RR.startsWith(Eu);
+                if (!yR || JR) return void GR.fK(yR);
+                const tR = () => {
+                  GR.fK(!0)
                 };
-                let NW;
+                let uR;
                 try {
-                  NW = await OW.scriptUrl()
+                  uR = await GR.scriptUrl()
                 } catch {
-                  return void EW()
+                  return void tR()
                 }
-                await OW.staleOr({
-                  site: RO.F,
-                  error: new Error(`a world-gen worker's load failed (${WW}): ${NW}`),
-                  urls: [NW]
-                }, EW)
-              }(WW, iW, {
+                await GR.staleOr({
+                  site: jG.B,
+                  error: new Error(`a world-gen worker's load failed (${RR}): ${uR}`),
+                  urls: [uR]
+                }, tR)
+              }(RR, JR, {
                 scriptUrl: async () => {
                   const {
-                    worldgenWorkerScriptUrl: WW
-                  } = await oZ();
-                  return WW()
+                    worldgenWorkerScriptUrl: RR
+                  } = await OK();
+                  return RR()
                 },
-                staleOr: (WW, iW) => VZ(WW, iW, {
-                  stillWanted: OW
+                staleOr: (RR, JR) => cK(RR, JR, {
+                  stillWanted: GR
                 }),
-                wZ: iW => {
-                  (0, xm.reportWorldgenWorkerLost)(WW, iW, tL, {
-                    build: (0, YE.h)(),
-                    ageMs: (0, km.w)()
+                fK: JR => {
+                  (0, Vy.reportWorldgenWorkerLost)(RR, JR, qq, {
+                    build: (0, Ct.h)(),
+                    ageMs: (0, Ly.v)()
                   })
                 }
               })
             },
-            onStartTimeout: WW => {
-              (0, xm.reportWorkerStartTimeout)(RO.F, WW, tL)
+            onStartTimeout: RR => {
+              (0, Vy.reportWorkerStartTimeout)(jG.B, RR, qq)
             },
-            onGaveUp: WW => {
-              (0, xm.reportWorldgenGaveUp)(WW, tL)
+            onGaveUp: RR => {
+              (0, Vy.reportWorldgenGaveUp)(RR, qq)
             },
-            onMemoryStats: WW => {
-              var iW;
-              null === (iW = YL) || void 0 === iW || iW.noteWorldgen(WW)
+            onMemoryStats: RR => {
+              var JR;
+              null === (JR = Aq) || void 0 === JR || JR.noteWorldgen(RR)
             },
             onMemoryGone: () => {
-              var WW;
-              null === (WW = YL) || void 0 === WW || WW.worldgenGone()
+              var RR;
+              null === (RR = Aq) || void 0 === RR || RR.worldgenGone()
             },
-            write: (OW, mW, EW, NW, PW) => {
-              uZ(WW, (() => {
-                WW.rings.worker.writeWorkerRecord(OW, mW, EW, 0, NW, PW) || WW.crash(RO.F, `a world-gen record of kind ${mW} did not fit the worker-in ring`)
-              })), iW()
+            write: (GR, yR, tR, uR, ZR) => {
+              vK(RR, (() => {
+                RR.rings.worker.writeWorkerRecord(GR, yR, tR, 0, uR, ZR) || RR.crash(jG.B, `a world-gen record of kind ${yR} did not fit the worker-in ring`)
+              })), JR()
             }
           })
-        }(gW, QW, FW), SL = function(WW, iW) {
-          return new BE({
-            module: (0, gi.z)(),
+        }(oR, hR, sR), Wq = function(RR, JR) {
+          return new zt({
+            module: (0, HJ.q)(),
             loadWorkers: async () => {
               const [{
-                createMeshWorker: WW
-              }, iW] = await Promise.all([OW.e(49).then((() => OW(54847))), Promise.resolve().then((() => OW(100))).then((WW => {
+                createMeshWorker: RR
+              }, JR] = await Promise.all([GR.e(49).then((() => GR(54703))), Promise.resolve().then((() => GR(103))).then((RR => {
                 let {
-                  isMobile: iW
-                } = WW;
-                return iW()
+                  isMobile: JR
+                } = RR;
+                return JR()
               }), (() => !1))]);
               return {
-                create: WW,
-                count: (0, OO.h)(iW),
-                maxKeptLightStates: iW || (0, iO.k)() ? 1 : void 0
+                create: RR,
+                count: (0, RG.f)(JR),
+                maxKeptLightStates: JR || (0, hJ.k)() ? 1 : void 0
               }
             },
-            write: (OW, mW, EW, NW, PW, LW) => {
-              (0, zm.h)(), uZ(WW, (() => {
-                WW.rings.worker.writeWorkerRecord(OW, mW, EW, NW, PW, LW) || WW.crash(RO.q, `a meshing record of kind ${mW} did not fit the worker-in ring`)
-              })), iW()
+            write: (GR, yR, tR, uR, ZR, qR) => {
+              (0, ky.g)(), vK(RR, (() => {
+                RR.rings.worker.writeWorkerRecord(GR, yR, tR, uR, ZR, qR) || RR.crash(jG.p, `a meshing record of kind ${yR} did not fit the worker-in ring`)
+              })), JR()
             },
-            onWorkerLost: WW => {
-              (0, xm.reportWorkerLost)(RO.q, WW, tL)
+            onWorkerLost: RR => {
+              (0, Vy.reportWorkerLost)(jG.p, RR, qq)
             },
-            onLightFault: (WW, iW) => {
-              (0, xm.reportLightFault)(WW, iW, tL)
+            onLightFault: (RR, JR) => {
+              (0, Vy.reportLightFault)(RR, JR, qq)
             },
-            onStartTimeout: WW => {
-              (0, xm.reportWorkerStartTimeout)(RO.q, WW, tL)
+            onStartTimeout: RR => {
+              (0, Vy.reportWorkerStartTimeout)(jG.p, RR, qq)
             },
-            onMemoryStats: (WW, iW) => {
-              var OW;
-              null === (OW = YL) || void 0 === OW || OW.noteMeshWorker(WW, iW)
+            onMemoryStats: (RR, JR) => {
+              var GR;
+              null === (GR = Aq) || void 0 === GR || GR.noteMeshWorker(RR, JR)
             },
-            onMemoryGone: WW => {
-              var iW;
-              null === (iW = YL) || void 0 === iW || iW.meshWorkerGone(WW)
+            onMemoryGone: RR => {
+              var JR;
+              null === (JR = Aq) || void 0 === JR || JR.meshWorkerGone(RR)
             },
-            fail: (iW, OW) => {
-              const mW = () => {
-                WW.crash(RO.q, void 0 === OW ? iW : new Error(iW, {
-                  cause: OW
+            fail: (JR, GR) => {
+              const yR = () => {
+                RR.crash(jG.p, void 0 === GR ? JR : new Error(JR, {
+                  cause: GR
                 }))
               };
-              void 0 !== OW ? VZ({
-                site: RO.q,
-                error: OW
-              }, mW) : mW()
+              void 0 !== GR ? cK({
+                site: jG.p,
+                error: GR
+              }, yR) : yR()
             }
           })
-        }(gW, QW), rw();
-        const Wi = (0, PN.p)(Fi.clientSideServerUrls.staticUrl, {
-            onTableFailed: WW => {
-              VZ({
-                site: xm.MODEL_FEED_SITE,
-                error: WW
+        }(oR, hR), Ff();
+        const RJ = (0, tu.m)(FJ.clientSideServerUrls.staticUrl, {
+            onTableFailed: RR => {
+              cK({
+                site: Vy.MODEL_FEED_SITE,
+                error: RR
               }, (() => {}), {
-                stillWanted: FW
+                stillWanted: sR
               })
             },
-            packUrl: WW => {
-              var iW, OW;
-              return null !== (iW = null === (OW = gt()) || void 0 === OW ? void 0 : OW.modelUrl(WW)) && void 0 !== iW ? iW : null
+            packUrl: RR => {
+              var JR, GR;
+              return null !== (JR = null === (GR = oV()) || void 0 === GR ? void 0 : GR.modelUrl(RR)) && void 0 !== JR ? JR : null
             }
           }),
-          ii = function(WW, iW, OW) {
-            const mW = OW => {
-              var mW, EW;
-              return null !== (mW = null === (EW = iW()) || void 0 === EW ? void 0 : EW.drawnUrl(OW)) && void 0 !== mW ? mW : WW.url(OW)
+          JJ = function(RR, JR, GR) {
+            const yR = GR => {
+              var yR, tR;
+              return null !== (yR = null === (tR = JR()) || void 0 === tR ? void 0 : tR.drawnUrl(GR)) && void 0 !== yR ? yR : RR.url(GR)
             };
-            return (0, EN.m)((0, IE.q)(mW), OW)
-          }(Wi, (() => uL), gt),
-          Oi = new IE.g(ii, (WW => {
-            console.warn(`${nP} image ${WW.key.kind}:${WW.key.index}:${WW.key.word} failed`, WW.error)
+            return (0, Gu.j)((0, Et.l)(yR), GR)
+          }(RJ, (() => gq), oV),
+          GJ = new Et.f(JJ, (RR => {
+            console.warn(`${pZ} image ${RR.key.kind}:${RR.key.index}:${RR.key.word} failed`, RR.error)
           }));
-        gL = Oi, DL = new iN(gW, ii, ((WW, iW) => {
-          void 0 === iW ? console.warn(`${nP} ${WW}`) : Vt(WW, iW)
+        Nq = GJ, Dq = new ht(oR, JJ, ((RR, JR) => {
+          void 0 === JR ? console.warn(`${pZ} ${RR}`) : PV(RR, JR)
         }));
-        const mi = new mN.f(Wi, function(WW, iW) {
-          let mW = !1,
-            EW = null,
-            NW = null;
-          const PW = {
-              onUnavailable: (OW, mW) => {
-                NW ??= VZ({
-                  site: xm.MODEL_POOL_SITE,
-                  error: OW,
-                  urls: mW
+        const yJ = new Ju.e(RJ, function(RR, JR) {
+          let yR = !1,
+            tR = null,
+            uR = null;
+          const ZR = {
+              onUnavailable: (GR, yR) => {
+                uR ??= cK({
+                  site: Vy.MODEL_POOL_SITE,
+                  error: GR,
+                  urls: yR
                 }, (() => {
-                  (0, xm.reportModelPoolFailure)(OW, WW)
+                  (0, Vy.reportModelPoolFailure)(GR, RR)
                 }), {
-                  stillWanted: iW
+                  stillWanted: JR
                 })
               },
-              onWorkerLost: iW => {
-                (0, xm.reportWorkerLost)(xm.MODEL_POOL_SITE, iW, WW)
+              onWorkerLost: JR => {
+                (0, Vy.reportWorkerLost)(Vy.MODEL_POOL_SITE, JR, RR)
               },
-              onModuleRetry: (iW, OW) => {
-                (0, xm.reportModelsModuleRetry)(iW, OW, WW)
+              onModuleRetry: (JR, GR) => {
+                (0, Vy.reportModelsModuleRetry)(JR, GR, RR)
               }
             },
-            LW = OW.e(51).then((() => OW(54853))).then((WW => {
+            qR = GR.e(51).then((() => GR(54712))).then((RR => {
               let {
-                pageModelPool: iW
-              } = WW;
-              if (mW) return null;
-              const OW = iW(PW);
-              return EW = OW.unlisten, oL = OW.pool, rw(), OW.pool
-            }), (WW => (mW || PW.onUnavailable(WW, void 0), null)));
-          return dL = () => {
-            var WW;
-            mW = !0, null === (WW = EW) || void 0 === WW || WW(), oL = null
-          }, (WW, iW) => LW.then((OW => {
-            var mW;
-            return null !== (mW = null === OW || void 0 === OW ? void 0 : OW.build(WW, iW)) && void 0 !== mW ? mW : (0, LN.l)(WW, "the model workers did not load")
-          })).then((WW => null !== NW && (0, LN.e)(WW) ? NW.then((() => WW)) : WW))
-        }(vW, FW), (WW => {
-          WW.startup ? (sZ(), VZ({
-            site: xm.MODEL_FEED_SITE,
-            error: WW.error,
-            urls: "" === WW.url ? void 0 : [WW.url]
+                pageModelPool: JR
+              } = RR;
+              if (yR) return null;
+              const GR = JR(ZR);
+              return tR = GR.unlisten, bq = GR.pool, Ff(), GR.pool
+            }), (RR => (yR || ZR.onUnavailable(RR, void 0), null)));
+          return vq = () => {
+            var RR;
+            yR = !0, null === (RR = tR) || void 0 === RR || RR(), bq = null
+          }, (RR, JR) => qR.then((GR => {
+            var yR;
+            return null !== (yR = null === GR || void 0 === GR ? void 0 : GR.build(RR, JR)) && void 0 !== yR ? yR : (0, uu.t)(RR, "the model workers did not load")
+          })).then((RR => null !== uR && (0, uu.k)(RR) ? uR.then((() => RR)) : RR))
+        }(HR, sR), (RR => {
+          RR.startup ? (UK(), cK({
+            site: Vy.MODEL_FEED_SITE,
+            error: RR.error,
+            urls: "" === RR.url ? void 0 : [RR.url]
           }, (() => {
-            (0, xm.reportModelFailure)(WW, vW)
-          }))) : (0, xm.reportModelFailure)(WW, vW)
+            (0, Vy.reportModelFailure)(RR, HR)
+          }))) : (0, Vy.reportModelFailure)(RR, HR)
         }), {
-          onWritten: (WW, iW) => {
-            Oi.glbWritten(WW, iW)
+          onWritten: (RR, JR) => {
+            GJ.glbWritten(RR, JR)
           },
-          onTaken: (WW, iW) => {
-            Oi.glbTaken(WW, iW)
+          onTaken: (RR, JR) => {
+            GJ.glbTaken(RR, JR)
           },
-          onPackFileFailed: (WW, iW) => {
-            console.warn(`${nP} the texture pack's model file ${WW} failed: the shipped one loads`, iW)
+          onPackFileFailed: (RR, JR) => {
+            console.warn(`${pZ} the texture pack's model file ${RR} failed: the shipped one loads`, JR)
           }
         });
-        uL = mi;
-        const Ei = new FE.e(gW);
-        cL = Ei, Ei.swap((WW => {
-          const iW = () => {
-            (0, xm.reportTerrainTextureFailure)(WW, vW)
+        gq = yJ;
+        const tJ = new Ft.g(oR);
+        uq = tJ, tJ.swap((RR => {
+          const JR = () => {
+            (0, Vy.reportTerrainTextureFailure)(RR, HR)
           };
-          if (Fc) return void iW();
-          const OW = () => !Fc,
-            mW = null === WW.url ? void 0 : [WW.url];
-          VZ({
-            site: RO.C,
-            error: WW.error,
-            urls: mW
-          }, iW, {
-            stillWanted: OW
+          if (Fi) return void JR();
+          const GR = () => !Fi,
+            yR = null === RR.url ? void 0 : [RR.url];
+          cK({
+            site: jG.x,
+            error: RR.error,
+            urls: yR
+          }, JR, {
+            stillWanted: GR
           })
-        })).then((WW => {
-          null !== WW && (WW || gW.isStopped || console.warn(`${nP} the core refused the terrain textures: terrain draws untextured`), BL(gW))
+        })).then((RR => {
+          null !== RR && (RR || oR.isStopped || console.warn(`${pZ} the core refused the terrain textures: terrain draws untextured`), mq(oR))
         }));
-        const Ni = new JO(gW, ((WW, iW) => {
-          console.warn(`${nP} ${WW}`, ...void 0 === iW ? [] : [iW])
+        const uJ = new BG(oR, ((RR, JR) => {
+          console.warn(`${pZ} ${RR}`, ...void 0 === JR ? [] : [JR])
         }));
-        Ni.feed(), null !== AW && function(WW, iW, mW, EW, NW, PW) {
-          let LW = null,
-            wW = null,
-            tW = !1;
-          const ZW = {
+        uJ.feed(), null !== eR && function(RR, JR, yR, tR, uR, ZR) {
+          let qR = null,
+            fR = null,
+            VR = !1;
+          const KR = {
             textures: null,
             stop: () => {
-              var WW, iW;
-              tW = !0, null === (WW = wW) || void 0 === WW || WW(), null === (iW = LW) || void 0 === iW || iW(), NN.d.setSettled(null), null !== ZL && nw.clear(ZL)
+              var RR, JR;
+              VR = !0, null === (RR = fR) || void 0 === RR || RR(), null === (JR = qR) || void 0 === JR || JR(), yu.d.setSettled(null), null !== iq && bf.clear(iq)
             }
           };
-          LL = ZW, wW = pt().follow((wW => {
-            null !== wW && Promise.all([OW.e(231), OW.e(54)]).then((() => OW(54816))).then((OW => {
+          tq = KR, fR = IV().follow((fR => {
+            null !== fR && Promise.all([GR.e(231), GR.e(54)]).then((() => GR(54664))).then((GR => {
               let {
-                PackTextures: xW
-              } = OW;
-              if (tW || WW.isStopped) return;
-              const lW = new xW({
-                feed: wW,
-                terrain: iW,
-                backend: mW,
-                stopped: () => WW.isStopped,
+                PackTextures: wR
+              } = GR;
+              if (VR || RR.isStopped) return;
+              const rR = new wR({
+                feed: fR,
+                terrain: JR,
+                backend: yR,
+                stopped: () => RR.isStopped,
                 landed: () => {
-                  BL(WW)
+                  mq(RR)
                 },
                 packSwapped: () => {
-                  (0, EN.i)(EW), PW.feed((() => async function(WW) {
-                    const iW = null === WW ? null : await WW.averageColours;
-                    return null === iW ? hO() : TO(iW)
-                  }(lW.assets))), (0, ON.i)(lW.files()), NW.refresh().then((WW => {
-                    null !== WW && console.info(`${nP} texture pack models: ${WW.resent} of ${WW.delivered} files written again, ${WW.refetched} refetched`)
+                  (0, Gu.f)(tR), ZR.feed((() => async function(RR) {
+                    const JR = null === RR ? null : await RR.averageColours;
+                    return null === JR ? lG() : MG(JR)
+                  }(rR.assets))), (0, Ru.j)(rR.files()), uR.refresh().then((RR => {
+                    null !== RR && console.info(`${pZ} texture pack models: ${RR.resent} of ${RR.delivered} files written again, ${RR.refetched} refetched`)
                   }))
                 },
-                settled: (WW, iW, OW) => {
-                  var mW;
-                  (NN.d.setSettled({
-                    state: WW,
-                    files: iW
-                  }), function(WW, iW, OW) {
-                    const mW = null === WW.gameSource && (0, lm.e)(WW.pack);
-                    if (null === iW) return;
-                    const EW = (0, Zm.h)(iW.error),
-                      NW = mW ? "settings" : iW.source;
-                    cW.l.iZ(Zm.d, {
-                      failure: EW,
-                      source: NW,
-                      pack: Am(WW)
-                    }), (0, xm.reportTexturePackKeptOut)(NW, EW, iW.error, OW)
-                  }(WW, OW, tL), null === OW) && function(WW) {
-                    const iW = ZL;
-                    null !== iW && nw.apply(iW, WW).then((iW => {
-                      iW && WW && console.info(`${nP} the texture pack's animations are in (${Object.keys(WW).length} files)`)
+                settled: (RR, JR, GR) => {
+                  var yR;
+                  (yu.d.setSettled({
+                    state: RR,
+                    files: JR
+                  }), function(RR, JR, GR) {
+                    const yR = null === RR.gameSource && (0, Ky.c)(RR.pack);
+                    if (null === JR) return;
+                    const tR = (0, fy.i)(JR.error),
+                      uR = yR ? "settings" : JR.source;
+                    iR.n.JK(fy.c, {
+                      failure: tR,
+                      source: uR,
+                      pack: wy(RR)
+                    }), (0, Vy.reportTexturePackKeptOut)(uR, tR, JR.error, GR)
+                  }(RR, GR, qq), null === GR) && function(RR) {
+                    const JR = iq;
+                    null !== JR && bf.apply(JR, RR).then((JR => {
+                      JR && RR && console.info(`${pZ} the texture pack's animations are in (${Object.keys(RR).length} files)`)
                     }))
-                  }(null === (mW = WW.pack) || void 0 === mW ? void 0 : mW.animations)
+                  }(null === (yR = RR.pack) || void 0 === yR ? void 0 : yR.animations)
                 },
                 settling: () => {
-                  NN.d.setSettled(null)
+                  yu.d.setSettled(null)
                 },
-                warn: Vt,
-                maxTextureSize: () => Promise.resolve((0, BO.bb)(document.createElement("canvas")))
+                warn: PV,
+                maxTextureSize: () => Promise.resolve((0, zG.cb)(document.createElement("canvas")))
               });
-              ZW.textures = lW, LW = lW.start()
-            }), (WW => {
-              console.warn(`${nP} the texture pack's terrain didn't load: the built atlas stays`, WW)
+              KR.textures = rR, qR = rR.start()
+            }), (RR => {
+              console.warn(`${pZ} the texture pack's terrain didn't load: the built atlas stays`, RR)
             }))
           }))
-        }(gW, Ei, AW, Oi, mi, Ni);
-        const Pi = () => {
-            gW.setTextureLayers("")
+        }(oR, tJ, eR, GJ, yJ, uJ);
+        const ZJ = () => {
+            oR.setTextureLayers("")
           },
-          Li = WW => {
-            (zi ??= OW.e(66).then((() => OW(54857))).then((WW => {
+          qJ = RR => {
+            (QJ ??= GR.e(66).then((() => GR(54714))).then((RR => {
               let {
-                TEXTURE_NAMES: iW
-              } = WW;
-              return iW
-            }), (WW => {
-              throw zi = null, WW
-            })), zi).then((WW => {
-              gW.setTextureLayers(WW) || gW.isStopped || (console.warn(`${nP} the core refused the texture names: textured Boxes draw textureNotFound`), Pi())
-            }), (iW => {
-              if (gW.isStopped) return;
-              const [OW, ...mW] = WW;
-              void 0 === OW ? VZ({
-                site: xm.TEXTURE_NAMES_SITE,
-                error: iW
+                TEXTURE_NAMES: JR
+              } = RR;
+              return JR
+            }), (RR => {
+              throw QJ = null, RR
+            })), QJ).then((RR => {
+              oR.setTextureLayers(RR) || oR.isStopped || (console.warn(`${pZ} the core refused the texture names: textured Boxes draw textureNotFound`), ZJ())
+            }), (JR => {
+              if (oR.isStopped) return;
+              const [GR, ...yR] = RR;
+              void 0 === GR ? cK({
+                site: Vy.TEXTURE_NAMES_SITE,
+                error: JR
               }, (() => {
-                console.warn(`${nP} the texture names didn't load, so textured Boxes draw textureNotFound`, iW), Pi()
+                console.warn(`${pZ} the texture names didn't load, so textured Boxes draw textureNotFound`, JR), ZJ()
               }), {
-                stillWanted: FW
+                stillWanted: sR
               }) : setTimeout((() => {
-                Li(mW)
-              }), OW)
+                qJ(yR)
+              }), GR)
             }))
           };
-        if (Li(aP), null !== AW && !await async function(WW, iW, OW, mW, NW, PW) {
-            var LW;
-            const cW = (0, BO.M)(OW);
-            if (null === cW) return WW.crash(oP, new Error(`this ${mW} build has no openRenderer`)), !1;
-            let wW;
-            Vc = cW;
+        if (qJ(EZ), null !== eR && !await async function(RR, JR, GR, yR, uR, ZR) {
+            var qR;
+            const iR = (0, zG.M)(GR);
+            if (null === iR) return RR.crash(bZ, new Error(`this ${yR} build has no openRenderer`)), !1;
+            let fR;
+            oi = iR;
             try {
-              var tW, ZW, xW, lW;
-              const EW = null !== (tW = null === (ZW = mL) || void 0 === ZW ? void 0 : ZW.pagePreviews()) && void 0 !== tW ? tW : null,
-                LW = null !== (xW = null === (lW = mL) || void 0 === lW ? void 0 : lW.previewModule(OW)) && void 0 !== xW ? xW : null;
-              if (null === EW || null === LW) {
-                null === EW || void 0 === EW || EW.endSession(!1), wW = (0, UO.e)().sampleCount, await (0, BO.h)(iW, cW, PW, et, wW, await NW);
-                const WW = (0, BO.n)(OW);
-                null === WW && console.warn(`${nP} this ${mW} build has no image registry: sky and model images won't show`), (0, zE.d)(WW)
+              var VR, KR, wR, rR;
+              const tR = null !== (VR = null === (KR = Rq) || void 0 === KR ? void 0 : KR.pagePreviews()) && void 0 !== VR ? VR : null,
+                qR = null !== (wR = null === (rR = Rq) || void 0 === rR ? void 0 : rR.previewModule(GR)) && void 0 !== wR ? wR : null;
+              if (null === tR || null === qR) {
+                null === tR || void 0 === tR || tR.endSession(!1), fR = (0, aG.g)().sampleCount, await (0, zG.i)(JR, iR, ZR, DV, fR, await uR);
+                const RR = (0, zG.n)(GR);
+                null === RR && console.warn(`${pZ} this ${yR} build has no image registry: sky and model images won't show`), (0, Qt.f)(RR)
               } else {
-                (0, AN.c)() && await (0, Zi.l)();
-                const OW = (0, AN.F)();
-                if (null !== OW) {
-                  const iW = (0, qO.n)(cW),
-                    mW = `${OW.why}${void 0===iW?"":` (${iW.message})`}`;
-                  return WW.crash(xm.RENDER_RELOAD_SITE, OW.webgpu ? new Error(mW) : new xm.GraphicsLostError(mW)), !1
+                (0, wu.c)() && await (0, KJ.m)();
+                const GR = (0, wu.O)();
+                if (null !== GR) {
+                  const JR = (0, SG.l)(iR),
+                    yR = `${GR.why}${void 0===JR?"":` (${JR.message})`}`;
+                  return RR.crash(Vy.RENDER_RELOAD_SITE, GR.webgpu ? new Error(yR) : new Vy.GraphicsLostError(yR)), !1
                 }
-                wW = await EW.bindSession(LW, iW, (async WW => (0, BO.x)(cW, oP, PW, WW, et, await NW)))
+                fR = await tR.bindSession(qR, JR, (async RR => (0, zG.v)(iR, bZ, ZR, RR, DV, await uR)))
               }
-            } catch (EW) {
-              return WW.crash(oP, EW), !1
-            }(function(WW, iW) {
-              const OW = WW,
+            } catch (tR) {
+              return RR.crash(bZ, tR), !1
+            }(function(RR, JR) {
+              const GR = RR,
                 {
-                  requestCapture: mW,
-                  takeCapture: EW
-                } = OW;
-              if ("function" !== typeof mW || "function" !== typeof EW) return;
-              const NW = {
+                  requestCapture: yR,
+                  takeCapture: tR
+                } = GR;
+              if ("function" !== typeof yR || "function" !== typeof tR) return;
+              const uR = {
                 request() {
-                  mW.call(OW, iW)
+                  yR.call(GR, JR)
                 },
                 take() {
-                  var WW;
-                  return null !== (WW = EW.call(OW)) && void 0 !== WW ? WW : null
+                  var RR;
+                  return null !== (RR = tR.call(GR)) && void 0 !== RR ? RR : null
                 }
               };
-              window[TN] = NW
-            })(iW, wW), Rc = wW, gc = !0;
-            const AW = performance.now();
-            return Dc.boundAtMs = null !== (LW = (0, AN.G)()) && void 0 !== LW ? LW : AW, Dc.indirectHangs = (0, AN.y)(), Dc.restoresSkipped = (0, AN.H)(), console.info(`${nP} ${mW} renderer bound at ${Math.round(AW)} ms`), !WW.isStopped
-          }(gW, eW, dW, AW, jW, kW)) return null;
-        if (null !== AW) {
-          var ci, wi, li;
-          (0, Ci.G)(AW);
-          const WW = () => !gW.isStopped && lZ();
-          OW.e(220).then((() => OW(35114))).then((iW => {
+              window[Mu] = uR
+            })(JR, fR), ji = fR, Di = !0;
+            const eR = performance.now();
+            return Hi.boundAtMs = null !== (qR = (0, wu.Q)()) && void 0 !== qR ? qR : eR, Hi.indirectHangs = (0, wu.H)(), Hi.restoresSkipped = (0, wu.S)(), console.info(`${pZ} ${yR} renderer bound at ${Math.round(eR)} ms`), !RR.isStopped
+          }(oR, DR, NR, eR, LR, UR)) return null;
+        if (null !== eR) {
+          var iJ, fJ, rJ;
+          (0, IJ.K)(eR);
+          const RR = () => !oR.isStopped && wK();
+          GR.e(220).then((() => GR(35029))).then((JR => {
             let {
-              devTools: OW
-            } = iW;
-            gW.isStopped || OW.setHost(function(WW) {
+              devTools: GR
+            } = JR;
+            oR.isStopped || GR.setHost(function(RR) {
               return {
-                tools: lN,
-                async downloadScene(iW, OW) {
+                tools: Ku,
+                async downloadScene(JR, GR) {
                   let {
-                    width: mW,
-                    height: EW,
-                    colouring: NW
-                  } = OW;
-                  "screenshot" === iW && null === NW ? await (0, tN.f)(WW, mW, EW) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: yR,
+                    height: tR,
+                    colouring: uR
+                  } = GR;
+                  "screenshot" === JR && null === uR ? await (0, iu.f)(RR, yR, tR) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve()),
-                capturePhoto: (iW, OW, mW) => (0, tN.d)(WW, iW, OW, mW)
+                capturePhoto: (JR, GR, yR) => (0, iu.e)(RR, JR, GR, yR)
               }
-            }(function(WW, iW) {
+            }(function(RR, JR) {
               return {
-                canvas: WW,
-                maxTextureSize: ZN,
-                KZ: iW,
-                resize: (WW, iW, OW) => {
-                  (0, hm.v)(HO.hb.Resize, 0, WW / OW, iW / OW, (0, hm.i)(OW))
+                canvas: RR,
+                maxTextureSize: fu,
+                CK: JR,
+                resize: (RR, JR, GR) => {
+                  (0, ly.z)(pG.wb.Resize, 0, RR / GR, JR / GR, (0, ly.l)(GR))
                 },
                 restoreSize: () => {
-                  const iW = (0, UO.o)(WW);
-                  null !== iW && (0, hm.v)(HO.hb.Resize, 0, iW.cssWidth, iW.cssHeight, (0, hm.i)(iW.renderScale))
+                  const JR = (0, aG.q)(RR);
+                  null !== JR && (0, ly.z)(pG.wb.Resize, 0, JR.cssWidth, JR.cssHeight, (0, ly.l)(JR.renderScale))
                 },
-                onFrameDrawn: WW => (xN.add(WW), () => {
-                  xN.delete(WW)
+                onFrameDrawn: RR => (Vu.add(RR), () => {
+                  Vu.delete(RR)
                 })
               }
-            }(kW, WW)))
-          }), (WW => {
-            console.warn(`${nP} the developer tools didn't load: no captures this session`, WW)
+            }(UR, RR)))
+          }), (RR => {
+            console.warn(`${pZ} the developer tools didn't load: no captures this session`, RR)
           }));
-          const iW = "webgpu" === AW && null !== (ci = null === lW || void 0 === lW || null === (wi = lW.adapter) || void 0 === wi ? void 0 : wi.vendor) && void 0 !== ci ? ci : null;
-          Gc = {
-            backend: AW,
-            canvas: kW,
-            fallbackReason: null !== (li = null === lW || void 0 === lW ? void 0 : lW.reason) && void 0 !== li ? li : null,
-            adapterVendor: iW
-          }, Rt();
+          const JR = "webgpu" === eR && null !== (iJ = null === rR || void 0 === rR || null === (fJ = rR.adapter) || void 0 === fJ ? void 0 : fJ.vendor) && void 0 !== iJ ? iJ : null;
+          di = {
+            backend: eR,
+            canvas: UR,
+            fallbackReason: null !== (rJ = null === rR || void 0 === rR ? void 0 : rR.reason) && void 0 !== rJ ? rJ : null,
+            adapterVendor: JR
+          }, EV();
           try {
-            (0, zm.w)(AW, kW, iW)
-          } catch (EW) {
-            (0, zm.y)(), console.error(`${nP} the quality steps didn't start`, EW)
+            (0, ky.s)(eR, UR, JR)
+          } catch (tR) {
+            (0, ky.t)(), console.error(`${pZ} the quality steps didn't start`, tR)
           }
         }
         const {
-          storagePullBreaks: Ai,
-          splitPassBreaks: bi
-        } = await jW;
-        bi && console.warn(`${nP} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const ji = (0, ti.c)(lW, (0, PO.l)(), (0, cO.e)());
-        if ((0, gN.t)("webgpuloss")) {
-          var Ui, ki;
-          const WW = {
-            backend: AW,
-            reason: null !== (Ui = null === lW || void 0 === lW ? void 0 : lW.reason) && void 0 !== Ui ? Ui : null,
-            source: null !== (ki = null === lW || void 0 === lW ? void 0 : lW.source) && void 0 !== ki ? ki : null,
-            storagePullBreaks: Ai,
-            noWebGpu: ji.messageKey
+          storagePullBreaks: eJ,
+          splitPassBreaks: aJ
+        } = await LR;
+        aJ && console.warn(`${pZ} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const LJ = (0, VJ.g)(rR, (0, tG.j)(), (0, ZG.d)());
+        if ((0, Du.n)("webgpuloss")) {
+          var nJ, UJ;
+          const RR = {
+            backend: eR,
+            reason: null !== (nJ = null === rR || void 0 === rR ? void 0 : rR.reason) && void 0 !== nJ ? nJ : null,
+            source: null !== (UJ = null === rR || void 0 === rR ? void 0 : rR.source) && void 0 !== UJ ? UJ : null,
+            storagePullBreaks: eJ,
+            noWebGpu: LJ.messageKey
           };
-          (0, DN.d)((iW => {
-            iW.noteWasmPick(WW)
+          (0, Hu.d)((JR => {
+            JR.noteWasmPick(RR)
           }))
         }
-        const si = "webgpu" === AW;
-        if (pL = (0, ti.d)(si ? gW : null, si && null !== (LW = null === (wW = mL) || void 0 === wW ? void 0 : wW.pagePreviews().kA) && void 0 !== LW ? LW : null, ji, Vt), Mw) return null;
-        if (GW.reserveAtJoin((0, RE.k)(null !== pW && void 0 !== pW ? pW : Lm.j)), gW.isStopped) return null;
-        const Mi = WW => {
-          if (IL = performance.now(), aL = !1, null !== Ic) try {
-            Ic.animationFrame(WW)
-          } catch (EW) {
-            rt(EW)
+        const WJ = "webgpu" === eR;
+        if (oq = (0, VJ.i)(WJ ? oR : null, WJ && null !== (qR = null === (fR = Rq) || void 0 === fR ? void 0 : fR.pagePreviews().Be) && void 0 !== qR ? qR : null, LJ, PV), Wf) return null;
+        if (YR.reserveAtJoin((0, jt.p)(null !== IR && void 0 !== IR ? IR : uy.j)), oR.isStopped) return null;
+        const AJ = RR => {
+          if (dq = performance.now(), Eq = !1, null !== Ei) try {
+            Ei.animationFrame(RR)
+          } catch (tR) {
+            QV(tR)
           }
-          if (function(WW, iW) {
-              return iW && !Mw && !FL && AZ() && lZ() && WW.framePaces(performance.now())
-            }(gW, Uw)) {
-            if (Nw.animationFrame(IL, "paced", Uw), gW.writePendingInput(), (0, BW.g)(WW, EZ), Gt(!1, WW), null !== Ic) try {
-              Ic.framePaced()
-            } catch (EW) {
-              rt(EW)
+          if (function(RR, JR) {
+              return JR && !Wf && !Qq && rK() && wK() && RR.framePaces(performance.now())
+            }(oR, Lf)) {
+            if (tf.animationFrame(dq, "paced", Lf), oR.writePendingInput(), (0, jR.d)(RR, yK), YV(!1, RR), null !== Ei) try {
+              Ei.framePaced()
+            } catch (tR) {
+              QV(tR)
             }
-            requestAnimationFrame(Mi)
-          } else mZ(gW, Uw, "budget") && (Nw.animationFrame(IL, gW.lastFrameKind, Uw), (0, tO.g)(gW.lastFrameKind) && lZ() && (0, BW.g)(WW, EZ), Gt(Uw && tw, WW), Zw.frame(gW.lastFrameKind, Uw && lZ(), WW), Aw.frame(gW.lastFrameKind, Uw && lZ()), (0, tO.b)(gW.lastFrameKind) && PO.G.drew(), YZ(gW), GW.afterFrame(), requestAnimationFrame(Mi))
+            requestAnimationFrame(AJ)
+          } else GK(oR, Lf, "budget") && (tf.animationFrame(dq, oR.lastFrameKind, Lf), (0, iG.f)(oR.lastFrameKind) && wK() && (0, jR.d)(RR, yK), YV(Lf && ff, RR), Vf.frame(oR.lastFrameKind, Lf && wK(), RR), rf.frame(oR.lastFrameKind, Lf && wK()), (0, iG.c)(oR.lastFrameKind) && tG.C.drew(), XK(oR), YR.afterFrame(), requestAnimationFrame(AJ))
         };
-        requestAnimationFrame(Mi), gW.warmBeforeJoin(uE(null), RO.l.Home);
-        return function(WW) {
-          if (WW.has("inputLog") && (0, PE.g)((WW => {
+        requestAnimationFrame(AJ), oR.warmBeforeJoin(bt(null), jG.j.Home);
+        return function(RR) {
+          if (RR.has("inputLog") && (0, yt.f)((RR => {
               let {
-                action: iW,
-                down: OW,
-                press: mW
-              } = WW;
-              console.info(`${cE} input ${iW} ${OW?"down":"up"} press ${mW} at ${performance.now().toFixed(1)}`)
-            })), WW.has("inputDump")) {
-            const WW = [];
-            tE = WW, Object.assign(window, {
-              bloxdInputDump: () => WW.join("\n")
+                action: JR,
+                down: GR,
+                press: yR
+              } = RR;
+              console.info(`${ut} input ${JR} ${GR?"down":"up"} press ${yR} at ${performance.now().toFixed(1)}`)
+            })), RR.has("inputDump")) {
+            const RR = [];
+            qt = RR, Object.assign(window, {
+              bloxdInputDump: () => RR.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), hL = function(WW) {
-          let iW = null;
-          const OW = () => {
-              null !== iW && (clearInterval(iW), iW = null)
+        }(new URLSearchParams(window.location.search)), Bq = function(RR) {
+          let JR = null;
+          const GR = () => {
+              null !== JR && (clearInterval(JR), JR = null)
             },
-            mW = () => {
-              document.hidden ? iW ??= setInterval((() => {
-                gZ(WW) || OW()
-              }), IP) : OW()
+            yR = () => {
+              document.hidden ? JR ??= setInterval((() => {
+                HK(RR) || GR()
+              }), dZ) : GR()
             };
-          return document.addEventListener("visibilitychange", mW), mW(), () => {
-            OW(), document.removeEventListener("visibilitychange", mW)
+          return document.addEventListener("visibilitychange", yR), yR(), () => {
+            GR(), document.removeEventListener("visibilitychange", yR)
           }
-        }(gW), gW
-      }(iW).then((WW => {
-        var iW;
-        (mW(tL), bL(null !== WW), null !== WW && (SW = performance.now()), lL(WW), null === WW) ? null === (iW = mL) || void 0 === iW || iW.pagePreviews().endSession(null === (0, gi.p)()): XL("booted")
-      }), (WW => {
-        mW(tL), bL(!1), lL(null), MZ({
-          site: dP,
-          error: WW,
+        }(oR), oR
+      }(JR).then((RR => {
+        var JR;
+        (yR(qq), wq(null !== RR), null !== RR && (XR = performance.now()), Vq(RR), null === RR) ? null === (JR = Rq) || void 0 === JR || JR.pagePreviews().endSession(null === (0, HJ.i)()): Iq("booted")
+      }), (RR => {
+        yR(qq), wq(!1), Vq(null), WK({
+          site: vZ,
+          error: RR,
           header: null
-        }, tL)
+        }, qq)
       }))
     }
 
-    function Hw() {
-      const WW = ZL;
-      null !== WW && Sw().then((iW => {
+    function gf() {
+      const RR = iq;
+      null !== RR && Cf().then((JR => {
         let {
-          pageBuiltInAnimationPack: OW
-        } = iW;
-        OW().provide(WW)
-      }), (WW => {
-        console.warn(`${nP} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, WW)
+          pageBuiltInAnimationPack: GR
+        } = JR;
+        GR().provide(RR)
+      }), (RR => {
+        console.warn(`${pZ} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, RR)
       }))
     }
-    const nw = new class {
-      constructor(WW) {
-        this.deps = WW, this.latest = 0, this.BL = null
+    const bf = new class {
+      constructor(RR) {
+        this.deps = RR, this.latest = 0, this.Qq = null
       }
-      apply(WW, iW) {
-        return this.load(WW, iW, 0)
+      apply(RR, JR) {
+        return this.load(RR, JR, 0)
       }
-      async load(WW, iW, OW) {
-        var mW;
-        const EW = ++this.latest,
-          NW = this.deps.compiler;
-        if (void 0 === iW || null === iW || "object" !== typeof iW || 0 === Object.keys(iW).length || null === NW) return this.drop(WW), !1;
-        if ((null === (mW = this.BL) || void 0 === mW ? void 0 : mW.module) === WW && (0, VO.ae)(this.BL.files, iW)) return !1;
+      async load(RR, JR, GR) {
+        var yR;
+        const tR = ++this.latest,
+          uR = this.deps.compiler;
+        if (void 0 === JR || null === JR || "object" !== typeof JR || 0 === Object.keys(JR).length || null === uR) return this.drop(RR), !1;
+        if ((null === (yR = this.Qq) || void 0 === yR ? void 0 : yR.module) === RR && (0, oG.fe)(this.Qq.files, JR)) return !1;
         try {
-          const [OW, mW] = await Promise.all([NW(), this.deps.builtIns()]);
-          if (EW !== this.latest) return !1;
-          const PW = await OW(iW, XO, {
-            builtIns: mW
+          const [GR, yR] = await Promise.all([uR(), this.deps.builtIns()]);
+          if (tR !== this.latest) return !1;
+          const ZR = await GR(JR, mG, {
+            builtIns: yR
           });
-          if (EW !== this.latest) return !1;
-          const LW = this.call(WW, PW);
-          if (void 0 === LW) throw new CO("the compiled animations didn't read against the built-in pack");
-          return this.BL = {
-              module: WW,
-              files: iW
+          if (tR !== this.latest) return !1;
+          const qR = this.call(RR, ZR);
+          if (void 0 === qR) throw new IG("the compiled animations didn't read against the built-in pack");
+          return this.Qq = {
+              module: RR,
+              files: JR
             },
-            function(WW) {
-              for (let iW = 0; iW + 2 < WW.length; iW += 3) {
-                ("error" === WW[iW] ? console.error : console.warn)(`Animation for the texture pack: ${WW[iW+1]}: ${WW[iW+2]}`)
+            function(RR) {
+              for (let JR = 0; JR + 2 < RR.length; JR += 3) {
+                ("error" === RR[JR] ? console.error : console.warn)(`Animation for the texture pack: ${RR[JR+1]}: ${RR[JR+2]}`)
               }
-            }(LW), !0
-        } catch (LW) {
-          var PW;
-          if (EW !== this.latest) return !1;
-          this.drop(WW), 0 === OW && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", LW);
-          const mW = (null !== (PW = this.deps.retryAfterMs) && void 0 !== PW ? PW : fO)[OW];
-          return void 0 === mW || LW instanceof CO || (0, pO.i)(WW) || setTimeout((() => {
-            EW === this.latest && this.load(WW, iW, OW + 1)
-          }), mW), !1
+            }(qR), !0
+        } catch (qR) {
+          var ZR;
+          if (tR !== this.latest) return !1;
+          this.drop(RR), 0 === GR && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", qR);
+          const yR = (null !== (ZR = this.deps.retryAfterMs) && void 0 !== ZR ? ZR : PG)[GR];
+          return void 0 === yR || qR instanceof IG || (0, cG.j)(RR) || setTimeout((() => {
+            tR === this.latest && this.load(RR, JR, GR + 1)
+          }), yR), !1
         }
       }
-      call(WW, iW) {
+      call(RR, JR) {
         try {
-          return WW.YmW(iW)
-        } catch (OW) {
-          throw (0, pO.k)(WW, OW), OW
+          return RR.VtR(JR)
+        } catch (GR) {
+          throw (0, cG.n)(RR, GR), GR
         }
       }
-      clear(WW) {
-        this.latest++, this.drop(WW)
+      clear(RR) {
+        this.latest++, this.drop(RR)
       }
-      drop(WW) {
-        const iW = this.BL;
-        if (this.BL = null, (null === iW || void 0 === iW ? void 0 : iW.module) === WW && !(0, pO.i)(WW)) try {
-          this.call(WW, null)
+      drop(RR) {
+        const JR = this.Qq;
+        if (this.Qq = null, (null === JR || void 0 === JR ? void 0 : JR.module) === RR && !(0, cG.j)(RR)) try {
+          this.call(RR, null)
         } catch {}
       }
     }({
-      compiler: eO.e,
+      compiler: xG.c,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: WW
-        } = await Sw();
-        return WW().whenSet()
+          pageBuiltInAnimationPack: RR
+        } = await Cf();
+        return RR().whenSet()
       },
-      warn: Vt
+      warn: PV
     });
-    async function uw(WW, iW) {
-      let mW = !1;
-      await ow({
+    async function vf(RR, JR) {
+      let yR = !1;
+      await Of({
         matchmake: async () => {
           const {
-            guestJoinTarget: EW,
-            guestJoinWithPack: NW
-          } = await OW.e(133).then((() => OW(54807)));
-          return mW ? EW(WW, iW, Ct()) : (mW = !0, NW(WW, iW, (iW => Xt(WW, iW)), Ct))
+            guestJoinTarget: tR,
+            guestJoinWithPack: uR
+          } = await GR.e(133).then((() => GR(54642)));
+          return yR ? tR(RR, JR, zV()) : (yR = !0, uR(RR, JR, (JR => SV(RR, JR)), zV))
         },
-        onFailure: WW => {
-          (0, xm.showJoinFailure)(WW, tL)
+        onFailure: RR => {
+          (0, Vy.showJoinFailure)(RR, qq)
         },
-        rejoin: Qw,
-        invalidateTrafficCode: Wt
+        rejoin: hf,
+        invalidateTrafficCode: RV
       })
     }
-    async function ow(WW) {
+    async function Of(RR) {
       let {
-        matchmake: iW,
-        onFailure: OW,
-        rejoin: EW,
-        invalidateTrafficCode: NW,
-        pageReady: PW,
-        signal: LW
-      } = WW;
-      const cW = () => !0 === (null === LW || void 0 === LW ? void 0 : LW.aborted);
-      let wW;
-      const tW = NN.d.rejoinHold();
-      Zc = null, (0, Km.g)();
-      const ZW = (0, km.Y)("wasm", HZ);
-      let xW = !1,
-        lW = performance.now();
+        matchmake: JR,
+        onFailure: GR,
+        rejoin: tR,
+        invalidateTrafficCode: uR,
+        pageReady: ZR,
+        signal: qR
+      } = RR;
+      const iR = () => !0 === (null === qR || void 0 === qR ? void 0 : qR.aborted);
+      let fR;
+      const VR = yu.d.rejoinHold();
+      ii = null, (0, Wy.g)();
+      const KR = (0, Ly.S)("wasm", gK);
+      let wR = !1,
+        rR = performance.now();
       try {
-        if (!await jL) return {
+        if (!await rq) return {
           kind: "stopped"
         };
-        if (cW()) return {
-          kind: "uW"
+        if (iR()) return {
+          kind: "xR"
         };
-        Yw().catch((() => {}));
-        let WW = await iW();
-        var bW, jW;
-        if (lW = performance.now(), !cW()) hZ(null !== (bW = null === (jW = WW.target.session) || void 0 === jW ? void 0 : jW.gameNameWithVariation) && void 0 !== bW ? bW : null);
-        const OW = () => performance.now() - WW.matchedAt <= WW.freshMs,
-          mW = ew(WW.target).catch((() => {}));
-        OW() && !cW() && (wW = new fE(WW.target, {
-          signal: LW
+        Xf().catch((() => {}));
+        let RR = await JR();
+        var aR, LR;
+        if (rR = performance.now(), !iR()) pK(null !== (aR = null === (LR = RR.target.session) || void 0 === LR ? void 0 : LR.gameNameWithVariation) && void 0 !== aR ? aR : null);
+        const GR = () => performance.now() - RR.matchedAt <= RR.freshMs,
+          yR = Nf(RR.target).catch((() => {}));
+        GR() && !iR() && (fR = new Pt(RR.target, {
+          signal: qR
         }));
-        const NW = performance.now();
-        let tW = () => {};
-        cW() || (tW = function(WW, iW) {
-          dW(), WW || JW || null !== TW && "ok" !== TW || (JW = !0, (0, AW.p)("wasm_boot_wait", performance.now(), `${yW}:${iW()}:${(0,UW.m)()}`)), hW++;
-          let OW = !1;
+        const uR = performance.now();
+        let VR = () => {};
+        iR() || (VR = function(RR, JR) {
+          NR(), RR || pR || null !== lR && "ok" !== lR || (pR = !0, (0, eR.y)("wasm_boot_wait", performance.now(), `${BR}:${JR()}:${(0,nR.n)()}`)), gR++;
+          let GR = !1;
           return () => {
-            OW || (OW = !0, hW--)
+            GR || (GR = !0, gR--)
           }
-        }(xL, Di.j), null === LW || void 0 === LW || LW.addEventListener("abort", tW, {
+        }(fq, oJ.k), null === qR || void 0 === qR || qR.addEventListener("abort", VR, {
           once: !0
         }));
-        const ZW = await AL;
-        if (tW(), null === LW || void 0 === LW || LW.removeEventListener("abort", tW), null === ZW) return {
+        const KR = await Kq;
+        if (VR(), null === qR || void 0 === qR || qR.removeEventListener("abort", VR), null === KR) return {
           kind: "stopped"
         };
-        var HW, nW;
-        if (function(WW) {
-            var iW, OW;
-            if (kW.d.markGameEngineConstructed(), YW) return;
-            YW = !0;
-            const mW = Math.max(WW, null !== (iW = MW) && void 0 !== iW ? iW : WW);
-            (0, sW.d)("ready", Math.max(0, (null !== (OW = KW) && void 0 !== OW ? OW : mW) - mW) / 1e3)
-          }(NW), !cW())
-          if (null !== KW && null !== SW ? (0, AW.p)("wasm_core_ready", SW) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), WW.target.session && (0, RN.b)(WW.target.session.gameNameWithVariation)) null === (HW = ML) || void 0 === HW || HW.prestart();
-        if (await mW, !OW() && !cW()) null === (nW = wW) || void 0 === nW || nW.rematched(), WW = await iW(), lW = performance.now();
-        if (cW()) return {
-          kind: "uW"
+        var bR, vR;
+        if (function(RR) {
+            var JR, GR;
+            if (UR.d.markGameEngineConstructed(), MR) return;
+            MR = !0;
+            const yR = Math.max(RR, null !== (JR = AR) && void 0 !== JR ? JR : RR);
+            (0, WR.i)("ready", Math.max(0, (null !== (GR = CR) && void 0 !== GR ? GR : yR) - yR) / 1e3)
+          }(uR), !iR())
+          if (null !== CR && null !== XR ? (0, eR.y)("wasm_core_ready", XR) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), RR.target.session && (0, ju.c)(RR.target.session.gameNameWithVariation)) null === (bR = nq) || void 0 === bR || bR.prestart();
+        if (await yR, !GR() && !iR()) null === (vR = fR) || void 0 === vR || vR.rematched(), RR = await JR(), rR = performance.now();
+        if (iR()) return {
+          kind: "xR"
         };
-        const uW = await async function(WW) {
-          var iW, OW, mW;
+        const OR = await async function(RR) {
+          var JR, GR, yR;
           let {
-            signal: EW,
-            rejoin: NW = null,
-            early: PW,
-            pageReady: LW
+            signal: tR,
+            rejoin: uR = null,
+            early: ZR,
+            pageReady: qR
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== EW && void 0 !== EW && EW.aborted) throw new DOMException("the join was left", "AbortError");
-          const cW = (wW = Tc, tW = performance.now(), null !== wW && tW - wW < KE);
-          var wW, tW;
-          Tc = null;
-          const ZW = new AbortController,
-            xW = null !== (iW = null === (OW = WW.session) || void 0 === OW ? void 0 : OW.gameNameWithVariation) && void 0 !== iW ? iW : null;
-          hZ(xW), Dw({
-            controller: ZW,
-            game: xW
-          }), Jc = null, null === (mW = nc) || void 0 === mW || mW.abort(), nc = null, oc = !1, dc = null, ec.clear();
-          const lW = () => {
-            (0, Qi.i)(ZW, (0, Qi.f)(EW))
+          if (null !== tR && void 0 !== tR && tR.aborted) throw new DOMException("the join was left", "AbortError");
+          const iR = (fR = Xi, VR = performance.now(), null !== fR && VR - fR < Wt);
+          var fR, VR;
+          Xi = null;
+          const KR = new AbortController,
+            wR = null !== (JR = null === (GR = RR.session) || void 0 === GR ? void 0 : GR.gameNameWithVariation) && void 0 !== JR ? JR : null;
+          pK(wR), of({
+            controller: KR,
+            game: wR
+          }), Mi = null, null === (yR = gi) || void 0 === yR || yR.abort(), gi = null, vi = !1, Oi = null, xi.clear();
+          const rR = () => {
+            (0, TJ.k)(KR, (0, TJ.g)(tR))
           };
-          null === EW || void 0 === EW || EW.addEventListener("abort", lW, {
+          null === tR || void 0 === tR || tR.addEventListener("abort", rR, {
             once: !0
           });
           try {
-            var bW, jW, UW, kW, sW;
-            const iW = await AL;
-            if (null === iW || iW.isStopped || Mw) throw new Error("no core is running to join a game with");
-            if (iW.warmBeforeJoin(uE(null !== (bW = null === (jW = WW.session) || void 0 === jW ? void 0 : jW.gameNameWithVariation) && void 0 !== bW ? bW : null), RO.l.Play), WW.session && null !== pL) {
-              const iW = await vw(pL.join(WW.session.gameNameWithVariation), ZW.signal);
-              if ((0, gN.t)("webgpuloss")) {
-                const OW = WW.session.gameNameWithVariation,
-                  mW = pL.couldntRunInJoinedGame();
-                (0, DN.d)((WW => WW.noteWasmJoin(OW, iW, mW)))
+            var aR, LR, nR, UR, WR;
+            const JR = await Kq;
+            if (null === JR || JR.isStopped || Wf) throw new Error("no core is running to join a game with");
+            if (JR.warmBeforeJoin(bt(null !== (aR = null === (LR = RR.session) || void 0 === LR ? void 0 : LR.gameNameWithVariation) && void 0 !== aR ? aR : null), jG.j.Play), RR.session && null !== oq) {
+              const JR = await Df(oq.join(RR.session.gameNameWithVariation), KR.signal);
+              if ((0, Du.n)("webgpuloss")) {
+                const GR = RR.session.gameNameWithVariation,
+                  yR = oq.couldntRunInJoinedGame();
+                (0, Hu.d)((RR => RR.noteWasmJoin(GR, JR, yR)))
               }
-              if (null !== iW) throw new ti.b(iW)
+              if (null !== JR) throw new VJ.c(JR)
             }
             const [, , , {
-              joinRoom: OW
-            }] = await vw(Promise.all([(0, qW.h)(iW), ew(WW), null === LW || void 0 === LW ? void 0 : LW(), Yw()]), ZW.signal), mW = WW.session, EW = mW ? {
-              ...mt,
-              attachSocket: iW => {
-                const OW = tt(iW, WW.endpoint);
-                var EW;
-                null !== OW && (Ac = {
-                  conn: OW,
-                  info: mW
-                }, null === (EW = bc) || void 0 === EW || EW(mW.playerDbId));
-                return OW
+              joinRoom: GR
+            }] = await Df(Promise.all([(0, dR.m)(JR), Nf(RR), null === qR || void 0 === qR ? void 0 : qR(), Xf()]), KR.signal), yR = RR.session, tR = yR ? {
+              ...yV,
+              attachSocket: JR => {
+                const GR = VV(JR, RR.endpoint);
+                var tR;
+                null !== GR && (Ki = {
+                  conn: GR,
+                  info: yR
+                }, null === (tR = wi) || void 0 === tR || tR(yR.playerDbId));
+                return GR
               }
-            } : mt, wW = await OW(EW, WW, {
-              signal: ZW.signal,
-              early: PW
-            }).catch((WW => {
-              throw function(WW) {
-                if (!(WW instanceof ii.c)) return WW;
-                if ("roomError" === WW.stage && null !== dc) return dw(new ii.c(WW.message, WW.stage, WW.code, dc), WW);
-                const iW = "closed" === WW.stage && null !== hc ? ec.get(hc.conn) : void 0;
-                return void 0 === iW ? WW : dw(new ii.c(WW.message, WW.stage, iW.code, null, WW.socketOpened), WW)
-              }(WW)
+            } : yV, fR = await GR(tR, RR, {
+              signal: KR.signal,
+              early: ZR
+            }).catch((RR => {
+              throw function(RR) {
+                if (!(RR instanceof JJ.b)) return RR;
+                if ("roomError" === RR.stage && null !== Oi) return xf(new JJ.b(RR.message, RR.stage, RR.code, Oi), RR);
+                const JR = "closed" === RR.stage && null !== Bi ? xi.get(Bi.conn) : void 0;
+                return void 0 === JR ? RR : xf(new JJ.b(RR.message, RR.stage, JR.code, null, RR.socketOpened), RR)
+              }(RR)
             }));
-            if (tc !== ZW) throw wW.leave(), new DOMException("the join was left", "AbortError");
-            Bw(wW), null === (UW = SL) || void 0 === UW || UW.newGame();
-            const tW = function(WW, iW) {
-              var OW, mW;
+            if (qi !== KR) throw fR.leave(), new DOMException("the join was left", "AbortError");
+            jf(fR), null === (nR = Wq) || void 0 === nR || nR.newGame();
+            const VR = function(RR, JR) {
+              var GR, yR;
               const {
-                session: EW
-              } = WW, NW = void 0 === EW ? WW.joinOptions.lobbyName : EW.lobbyName;
+                session: tR
+              } = RR, uR = void 0 === tR ? RR.joinOptions.lobbyName : tR.lobbyName;
               return {
-                endpoint: WW.endpoint,
-                game: null !== (OW = null === EW || void 0 === EW ? void 0 : EW.gameNameWithVariation) && void 0 !== OW ? OW : WW.roomName,
-                lobby: String(null !== NW && void 0 !== NW ? NW : null),
-                sessionId: iW,
-                postCookies: null !== (mW = WW.postCookies) && void 0 !== mW ? mW : null
+                endpoint: RR.endpoint,
+                game: null !== (GR = null === tR || void 0 === tR ? void 0 : tR.gameNameWithVariation) && void 0 !== GR ? GR : RR.roomName,
+                lobby: String(null !== uR && void 0 !== uR ? uR : null),
+                sessionId: JR,
+                postCookies: null !== (yR = RR.postCookies) && void 0 !== yR ? yR : null
               }
-            }(WW, wW.seat.sessionId);
-            wc.set(wW, tW), DE(tW);
-            const xW = performance.now(),
-              lW = {
-                conn: wW.conn,
-                rejoin: NW,
-                game: null !== (kW = null === (sW = WW.session) || void 0 === sW ? void 0 : sW.gameNameWithVariation) && void 0 !== kW ? kW : "",
-                joinedAt: xW,
-                rejoinedAt: cW ? xW : null,
+            }(RR, fR.seat.sessionId);
+            Zi.set(fR, VR), Ht(VR);
+            const wR = performance.now(),
+              rR = {
+                conn: fR.conn,
+                rejoin: uR,
+                game: null !== (UR = null === (WR = RR.session) || void 0 === WR ? void 0 : WR.gameNameWithVariation) && void 0 !== UR ? UR : "",
+                joinedAt: wR,
+                rejoinedAt: iR ? wR : null,
                 overflow: null
               };
-            jc = lW,
-              function(WW, iW) {
-                kt();
-                const OW = {
-                  endpoint: iW,
-                  roomId: WW.seat.room.roomId,
+            ri = rR,
+              function(RR, JR) {
+                UV();
+                const GR = {
+                  endpoint: JR,
+                  roomId: RR.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new Em({
-                    reconnect: (WW, iW, mW) => async function(WW, iW, OW, mW) {
+                  resume: new Gy({
+                    reconnect: (RR, JR, yR) => async function(RR, JR, GR, yR) {
                       const {
-                        roomId: EW,
-                        roomToken: NW
-                      } = Mt(WW, iW), PW = NL;
-                      if (null === PW || PW.isStopped || Mw) throw new Error("no core is running to resume the game on");
+                        roomId: tR,
+                        roomToken: uR
+                      } = AV(RR, JR), ZR = Gq;
+                      if (null === ZR || ZR.isStopped || Wf) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: LW
-                      } = await vw(Yw(), OW), cW = {
-                        ...mt,
-                        attachSocket: iW => Uc !== WW || 0 === WW.heldConn ? (iW.close(), null) : tt(iW, WW.endpoint, !0)
+                        resumeRoom: qR
+                      } = await Df(Xf(), GR), iR = {
+                        ...yV,
+                        attachSocket: JR => ei !== RR || 0 === RR.heldConn ? (JR.close(), null) : VV(JR, RR.endpoint, !0)
                       };
-                      return LW(cW, WW.endpoint, EW, NW, {
-                        signal: OW,
-                        onAttached: mW
+                      return qR(iR, RR.endpoint, tR, uR, {
+                        signal: GR,
+                        onAttached: yR
                       })
-                    }(OW, WW, iW, mW),
-                    releaseSeat: WW => {
-                      !async function(WW, iW) {
+                    }(GR, RR, JR, yR),
+                    releaseSeat: RR => {
+                      !async function(RR, JR) {
                         const {
-                          roomId: OW,
-                          roomToken: mW
-                        } = Mt(WW, iW);
+                          roomId: GR,
+                          roomToken: yR
+                        } = AV(RR, JR);
                         try {
                           const {
-                            leaveHeldSeat: iW
-                          } = await Yw();
-                          await iW(WW.endpoint, OW, mW)
-                        } catch (EW) {
-                          console.warn(`${nP} the held seat of a game left while it reconnected couldn't be released`, EW)
+                            leaveHeldSeat: JR
+                          } = await Xf();
+                          await JR(RR.endpoint, GR, yR)
+                        } catch (tR) {
+                          console.warn(`${pZ} the held seat of a game left while it reconnected couldn't be released`, tR)
                         }
-                      }(OW, WW)
+                      }(GR, RR)
                     },
-                    isLive: () => Uc === OW && null !== jc && !Mw,
-                    gJ: WW => {
-                      yc = WW, Ut()
+                    isLive: () => ei === GR && null !== ri && !Wf,
+                    kN: RR => {
+                      Ci = RR, nV()
                     },
-                    onReconnected: WW => {
-                      ! function(WW) {
-                        const iW = cc;
-                        if (null !== iW && iW !== WW) {
-                          const OW = wc.get(iW);
-                          void 0 !== OW && wc.set(WW, OW), Lw === iW && (Lw = WW), iW.detach()
+                    onReconnected: RR => {
+                      ! function(RR) {
+                        const JR = ui;
+                        if (null !== JR && JR !== RR) {
+                          const GR = Zi.get(JR);
+                          void 0 !== GR && Zi.set(RR, GR), Zf === JR && (Zf = RR), JR.detach()
                         }
-                        Bw(WW)
-                      }(WW)
+                        jf(RR)
+                      }(RR)
                     },
-                    onGaveUp: (WW, iW) => {
-                      ! function(WW, iW, OW) {
-                        var mW, EW;
-                        console.warn(`${nP} gave up reconnecting (${OW.reason}, ${OW.attempts} attempts)`, OW.lastError), (0, xm.reportReconnectGaveUp)(OW, tL);
-                        const NW = null !== (mW = null === (EW = jc) || void 0 === EW ? void 0 : EW.rejoin) && void 0 !== mW ? mW : null;
-                        st(WW, "gaveUp"), Rw();
-                        const PW = {
-                          code: WW.dropCode,
+                    onGaveUp: (RR, JR) => {
+                      ! function(RR, JR, GR) {
+                        var yR, tR;
+                        console.warn(`${pZ} gave up reconnecting (${GR.reason}, ${GR.attempts} attempts)`, GR.lastError), (0, Vy.reportReconnectGaveUp)(GR, qq);
+                        const uR = null !== (yR = null === (tR = ri) || void 0 === tR ? void 0 : tR.rejoin) && void 0 !== yR ? yR : null;
+                        WV(RR, "gaveUp"), Ef();
+                        const ZR = {
+                          code: RR.dropCode,
                           name: null,
-                          reason: BP,
-                          canReconnect: !iW,
+                          reason: mZ,
+                          canReconnect: !JR,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        Ot(PW, iW ? null : NW, !1, {
-                          reasonKey: qP,
-                          canPlayAgain: iW
+                        GV(ZR, JR ? null : uR, !1, {
+                          reasonKey: zZ,
+                          canPlayAgain: JR
                         })
-                      }(OW, WW, iW)
+                      }(GR, RR, JR)
                     }
                   })
                 };
-                Uc = OW, null !== kc && kc.conn === WW.conn && OW.resume.onInitialInfo(kc)
-              }(wW, WW.endpoint), performance.mark(gP), (0, AW.p)("wasm_joined", xW), iW.warmBeforeJoin(new Uint32Array, RO.l.Joined), setTimeout((() => {
-                cc === wW && (0, AW.i)()
-              }), 0), Hw(), console.info(`${nP} joined ${WW.roomName} as ${wW.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const MW = Jc;
-            Jc = null, null !== MW && aw(lW, MW.mask, MW.frames);
-            const KW = ec.get(wW.conn);
-            return ec.clear(), void 0 !== KW && (Bw(null), it(wW.conn, KW.code, KW.reason)), wW
+                ei = GR, null !== ai && ai.conn === RR.conn && GR.resume.onInitialInfo(ai)
+              }(fR, RR.endpoint), performance.mark(NZ), (0, eR.y)("wasm_joined", wR), JR.warmBeforeJoin(new Uint32Array, jG.j.Joined), setTimeout((() => {
+                ui === fR && (0, eR.n)()
+              }), 0), gf(), console.info(`${pZ} joined ${RR.roomName} as ${fR.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const AR = Mi;
+            Mi = null, null !== AR && Qf(rR, AR.mask, AR.frames);
+            const CR = xi.get(fR.conn);
+            return xi.clear(), void 0 !== CR && (jf(null), JV(fR.conn, CR.code, CR.reason)), fR
           } finally {
-            var MW;
-            null === EW || void 0 === EW || EW.removeEventListener("abort", lW), tc === ZW && Xw(cc, null), (null === (MW = hc) || void 0 === MW ? void 0 : MW.join) === ZW && (hc = null)
+            var AR;
+            null === tR || void 0 === tR || tR.removeEventListener("abort", rR), qi === KR && Sf(ui, null), (null === (AR = Bi) || void 0 === AR ? void 0 : AR.join) === KR && (Bi = null)
           }
-        }(WW.target, {
-          signal: LW,
-          rejoin: EW(WW.target),
-          early: wW,
-          pageReady: PW
+        }(RR.target, {
+          signal: qR,
+          rejoin: tR(RR.target),
+          early: fR,
+          pageReady: ZR
         });
-        return xW = !0, {
+        return wR = !0, {
           kind: "joined",
-          game: uW
+          game: OR
         }
-      } catch (oW) {
-        if (oW instanceof DOMException && "AbortError" === oW.name || cW()) return {
-          kind: "uW"
+      } catch (xR) {
+        if (xR instanceof DOMException && "AbortError" === xR.name || iR()) return {
+          kind: "xR"
         };
-        if (Mw) return {
+        if (Wf) return {
           kind: "stopped"
         };
-        if (oc && (oc = !1, await NW().catch((WW => {
-            console.warn(`${nP} the cached traffic code could not be dropped`, WW)
-          }))), null === await AL) return {
+        if (vi && (vi = !1, await uR().catch((RR => {
+            console.warn(`${pZ} the cached traffic code could not be dropped`, RR)
+          }))), null === await Kq) return {
           kind: "stopped"
         };
-        if (oW instanceof ti.b) return OW(oW, performance.now() - lW), {
+        if (xR instanceof VJ.c) return GR(xR, performance.now() - rR), {
           kind: "failed",
-          error: oW,
+          error: xR,
           reloading: !1
         };
-        const WW = oW instanceof ii.c && oW.code === mW.e.wasmClientNotAllowed.code,
-          iW = oW instanceof ii.c && oW.code === mW.e.outdatedVersion.code,
-          EW = () => null === cc,
-          PW = await VZ({
-            site: xm.JOIN_SITE,
-            error: oW,
-            outdated: iW
+        const RR = xR instanceof JJ.b && xR.code === yR.e.wasmClientNotAllowed.code,
+          JR = xR instanceof JJ.b && xR.code === yR.e.outdatedVersion.code,
+          tR = () => null === ui,
+          ZR = await cK({
+            site: Vy.JOIN_SITE,
+            error: xR,
+            outdated: JR
           }, (() => {
-            WW && (0, qi.H)(), OW(oW, performance.now() - lW)
+            RR && (0, SJ.E)(), GR(xR, performance.now() - rR)
           }), {
-            stillWanted: EW
+            stillWanted: tR
           });
         return {
           kind: "failed",
-          error: oW,
-          reloading: PW
+          error: xR,
+          reloading: ZR
         }
       } finally {
-        var uW;
-        xW || ZW.end(), NN.d.releaseHold(tW);
-        const WW = null === (uW = wW) || void 0 === uW ? void 0 : uW.release();
-        WW && (0, xm.reportUnusedSeat)(WW, tL)
+        var OR;
+        wR || KR.end(), yu.d.releaseHold(VR);
+        const RR = null === (OR = fR) || void 0 === OR ? void 0 : OR.release();
+        RR && (0, Vy.reportUnusedSeat)(RR, qq)
       }
     }
 
-    function dw(WW, iW) {
-      return WW.stack = iW.stack, WW
+    function xf(RR, JR) {
+      return RR.stack = JR.stack, RR
     }
 
-    function ew(WW) {
-      return WW.session ? (0, qW.o)(wL, WW.session.gameNameWithVariation) : Promise.resolve()
+    function Nf(RR) {
+      return RR.session ? (0, dR.s)(Zq, RR.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function vw(WW, iW) {
-      return (0, Qi.s)(iW), new Promise(((OW, mW) => {
-        const EW = () => {
-          mW((0, Qi.f)(iW))
+    function Df(RR, JR) {
+      return (0, TJ.r)(JR), new Promise(((GR, yR) => {
+        const tR = () => {
+          yR((0, TJ.g)(JR))
         };
-        iW.addEventListener("abort", EW, {
+        JR.addEventListener("abort", tR, {
           once: !0
-        }), WW.then((WW => {
-          iW.removeEventListener("abort", EW), OW(WW)
-        }), (WW => {
-          iW.removeEventListener("abort", EW), mW(WW)
+        }), RR.then((RR => {
+          JR.removeEventListener("abort", tR), GR(RR)
+        }), (RR => {
+          JR.removeEventListener("abort", tR), yR(RR)
         }))
       }))
     }
 
-    function gw() {
-      Dw(null)
+    function Hf() {
+      of(null)
     }
 
-    function Dw(WW) {
-      var iW, OW, mW;
-      (LZ(null === WW ? "left" : "replaced"), function() {
-        const WW = Uc;
-        null !== WW && st(WW, "left")
-      }(), null === kL || kL.left) || (kL.left = !0, null === (mW = (0, qW.f)()) || void 0 === mW || mW.socketLeft(), (0, xW.r)({
+    function of(RR) {
+      var JR, GR, yR;
+      (ZK(null === RR ? "left" : "replaced"), function() {
+        const RR = ei;
+        null !== RR && WV(RR, "left")
+      }(), null === aq || aq.left) || (aq.left = !0, null === (yR = (0, dR.l)()) || void 0 === yR || yR.socketLeft(), (0, wR.s)({
         websocketUrl: null
       }));
-      tc && (0, Qi.i)(tc, new DOMException("the join was left", "AbortError")), Rw(null !== WW), null === (iW = pL) || void 0 === iW || iW.leave();
-      const EW = cc;
-      null !== WW && NN.d.setGame(WW.game), Xw(null, null !== (OW = null === WW || void 0 === WW ? void 0 : WW.controller) && void 0 !== OW ? OW : null), null === EW || void 0 === EW || EW.leave(), null === WW && (fw = !0, Cw()), qw(0), (0, ai.g)()
+      qi && (0, TJ.k)(qi, new DOMException("the join was left", "AbortError")), Ef(null !== RR), null === (JR = oq) || void 0 === JR || JR.leave();
+      const tR = ui;
+      null !== RR && yu.d.setGame(RR.game), Sf(null, null !== (GR = null === RR || void 0 === RR ? void 0 : RR.controller) && void 0 !== GR ? GR : null), null === tR || void 0 === tR || tR.leave(), null === RR && (mf = !0, zf()), df(0), (0, YJ.h)()
     }
 
-    function Vw() {
-      return null !== NL && 0 !== (NL.headerWord(nO.M.LoadSteps) & nO.V.PlayerBound) && AZ() && !Zw.isShown()
+    function Pf() {
+      return null !== Gq && 0 !== (Gq.headerWord(gG.L.LoadSteps) & gG.Y.PlayerBound) && rK() && !Vf.isShown()
     }
 
-    function pw() {
-      return performance.now() - Hc >= zO.g
+    function If() {
+      return performance.now() - li >= QG.g
     }
-    let fw = !1;
+    let mf = !1;
 
-    function Cw() {
-      const WW = NL;
-      !fw || FL || Uw || (fw = !1, Mw || null === WW || WW.isStopped || WW.releaseLeftGame())
-    }
-
-    function Xw(WW, iW) {
-      null !== iW && iW !== tc && (xw = document.hidden), null === WW ? lw.end() : null === cc && lw.join(Vw), cc = WW, tc = iW, null === cc && null === tc || (fw = !1), null === cc && null === tc && NN.d.setGame(void 0)
+    function zf() {
+      const RR = Gq;
+      !mf || Qq || Lf || (mf = !1, Wf || null === RR || RR.isStopped || RR.releaseLeftGame())
     }
 
-    function Bw(WW) {
-      Xw(WW, tc)
+    function Sf(RR, JR) {
+      null !== JR && JR !== qi && (Kf = document.hidden), null === RR ? wf.end() : null === ui && wf.join(Pf), ui = RR, qi = JR, null === ui && null === qi || (mf = !1), null === ui && null === qi && yu.d.setGame(void 0)
     }
 
-    function qw(WW) {
-      const iW = NL;
-      return null !== zP && !Mw && null !== iW && !iW.isStopped && (!!zP(ii.f, 0, (0, ii.B)(WW)) && (ic = !0, 0 === WW || FL || mZ(iW, !1, "all"), !0))
+    function jf(RR) {
+      Sf(RR, qi)
     }
 
-    function Rw() {
-      var WW, iW;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, km.f)();
-      const OW = null !== (WW = null === (iW = jc) || void 0 === iW ? void 0 : iW.overflow) && void 0 !== WW ? WW : null;
-      jc = null, null !== OW && (0, xm.reportEventOverflow)(OW, tL)
+    function df(RR) {
+      const JR = Gq;
+      return null !== kZ && !Wf && null !== JR && !JR.isStopped && (!!kZ(JJ.f, 0, (0, JJ.A)(RR)) && (sq = !0, 0 === RR || Qq || GK(JR, !1, "all"), !0))
     }
 
-    function Gw() {
-      null !== cc || null !== tc ? gw() : Zt()
+    function Ef() {
+      var RR, JR;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, Ly.f)();
+      const GR = null !== (RR = null === (JR = ri) || void 0 === JR ? void 0 : JR.overflow) && void 0 !== RR ? RR : null;
+      ri = null, null !== GR && (0, Vy.reportEventOverflow)(GR, qq)
     }
 
-    function Iw(WW, iW) {
-      console.warn(`${nP} the event buffer refused records in ${iW} frames (categories ${WW})`), Mw || (null !== jc ? aw(jc, WW, iW) : null !== tc && function(WW, iW, OW) {
-        var mW;
-        const EW = function(WW, iW) {
-          return null === WW ? "drop" : WW.activated ? "keep" : 0 !== (iW & nO.z.NetSession) ? "fail" : "drop"
-        }((null === (mW = hc) || void 0 === mW ? void 0 : mW.join) === WW ? hc : null, iW);
-        "keep" === EW ? Jc = {
-          mask: iW,
-          frames: OW
-        } : "fail" === EW && (0, Qi.i)(WW, new Error("the join's net session was lost to an event overflow"))
-      }(tc, WW, iW))
+    function Yf() {
+      null !== ui || null !== qi ? Hf() : KV()
     }
 
-    function aw(WW, iW, OW) {
-      const mW = WW.overflow ??= {
+    function kf(RR, JR) {
+      console.warn(`${pZ} the event buffer refused records in ${JR} frames (categories ${RR})`), Wf || (null !== ri ? Qf(ri, RR, JR) : null !== qi && function(RR, JR, GR) {
+        var yR;
+        const tR = function(RR, JR) {
+          return null === RR ? "drop" : RR.activated ? "keep" : 0 !== (JR & gG.w.NetSession) ? "fail" : "drop"
+        }((null === (yR = Bi) || void 0 === yR ? void 0 : yR.join) === RR ? Bi : null, JR);
+        "keep" === tR ? Mi = {
+          mask: JR,
+          frames: GR
+        } : "fail" === tR && (0, TJ.k)(RR, new Error("the join's net session was lost to an event overflow"))
+      }(qi, RR, JR))
+    }
+
+    function Qf(RR, JR, GR) {
+      const yR = RR.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      mW.frames += OW, mW.acks++, mW.mask |= iW;
-      const EW = function(WW, iW, OW) {
-        if (0 === (WW & nO.z.NetSession)) return "none";
-        const mW = null !== iW.rejoinedAt && OW - iW.rejoinedAt < SE;
-        return null === iW.rejoin || mW ? "fail" : "rejoin"
-      }(iW, WW, performance.now());
-      "none" !== EW && queueMicrotask((() => {
-        if (jc !== WW) return;
-        const iW = "rejoin" === EW && pw();
-        mW.outcome = iW ? "rejoined" : "failed", Ot(function(WW, iW) {
+      yR.frames += GR, yR.acks++, yR.mask |= JR;
+      const tR = function(RR, JR, GR) {
+        if (0 === (RR & gG.w.NetSession)) return "none";
+        const yR = null !== JR.rejoinedAt && GR - JR.rejoinedAt < At;
+        return null === JR.rejoin || yR ? "fail" : "rejoin"
+      }(JR, RR, performance.now());
+      "none" !== tR && queueMicrotask((() => {
+        if (ri !== RR) return;
+        const JR = "rejoin" === tR && If();
+        yR.outcome = JR ? "rejoined" : "failed", GV(function(RR, JR) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: WW,
-            automaticallyReconnect: iW,
+            canReconnect: RR,
+            automaticallyReconnect: JR,
             requiresRefresh: !1
           }
-        }(null !== WW.rejoin, iW), WW.rejoin, iW), gw(), iW && (Tc = performance.now())
+        }(null !== RR.rejoin, JR), RR.rejoin, JR), Hf(), JR && (Xi = performance.now())
       }))
     }
 
-    function rw() {
-      jw && function(WW, iW) {
+    function Ff() {
+      af && function(RR, JR) {
         let {
-          mesh: OW,
-          worldgen: mW,
-          modelPool: EW
-        } = WW;
-        "landingPage" === iW ? (null === OW || void 0 === OW || OW.stopWorkers(), null === mW || void 0 === mW || mW.stopWorker(), null === EW || void 0 === EW || EW.stopWorkers()) : ((0, xi.i)(iW) || "inGame" === iW) && (null === OW || void 0 === OW || OW.restartWorkers(), null === EW || void 0 === EW || EW.startWorkers())
+          mesh: GR,
+          worldgen: yR,
+          modelPool: tR
+        } = RR;
+        "landingPage" === JR ? (null === GR || void 0 === GR || GR.stopWorkers(), null === yR || void 0 === yR || yR.stopWorker(), null === tR || void 0 === tR || tR.stopWorkers()) : ((0, wJ.j)(JR) || "inGame" === JR) && (null === GR || void 0 === GR || GR.restartWorkers(), null === tR || void 0 === tR || tR.startWorkers())
       }({
-        mesh: SL,
-        worldgen: ML,
-        modelPool: oL
-      }, xi.d.get("gameState"))
+        mesh: Wq,
+        worldgen: nq,
+        modelPool: bq
+      }, wJ.d.get("gameState"))
     }
 
-    function zw(WW) {
-      Uw = WW, kw && Fw(kw, WW), Cw()
+    function Tf(RR) {
+      Lf = RR, nf && sf(nf, RR), zf()
     }
 
-    function Fw(WW, iW) {
-      WW.style.visibility = iW ? "visible" : "hidden"
+    function sf(RR, JR) {
+      RR.style.visibility = JR ? "visible" : "hidden"
     }
 
-    function Qw(WW) {
-      var iW;
-      const OW = WW.roomName,
-        mW = null !== (iW = WW.joinOptions.lobbyName) && void 0 !== iW ? iW : null;
+    function hf(RR) {
+      var JR;
+      const GR = RR.roomName,
+        yR = null !== (JR = RR.joinOptions.lobbyName) && void 0 !== JR ? JR : null;
       return () => {
-        uw(OW, mW)
+        vf(GR, yR)
       }
     }
 
-    function Wt() {
-      return OW.e(133).then((() => OW(54807))).then((WW => {
+    function RV() {
+      return GR.e(133).then((() => GR(54642))).then((RR => {
         let {
-          invalidateGuestTrafficCode: iW
-        } = WW;
-        return iW()
-      })).catch((WW => {
-        console.warn(`${nP} the cached traffic code could not be dropped`, WW)
+          invalidateGuestTrafficCode: JR
+        } = RR;
+        return JR()
+      })).catch((RR => {
+        console.warn(`${pZ} the cached traffic code could not be dropped`, RR)
       }))
     }
 
-    function it(WW, iW, OW) {
-      var EW, NW, PW;
-      let LW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (Mw) return;
-      if ((null === (EW = jc) || void 0 === EW ? void 0 : EW.conn) !== WW) return void(null !== tc && ec.set(WW, {
-        code: iW,
-        reason: OW
+    function JV(RR, JR, GR) {
+      var tR, uR, ZR;
+      let qR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (Wf) return;
+      if ((null === (tR = ri) || void 0 === tR ? void 0 : tR.conn) !== RR) return void(null !== qi && xi.set(RR, {
+        code: JR,
+        reason: GR
       }));
-      LZ("lost");
-      const cW = (null === (NW = Lw) || void 0 === NW ? void 0 : NW.conn) !== WW,
+      ZK("lost");
+      const iR = (null === (uR = Zf) || void 0 === uR ? void 0 : uR.conn) !== RR,
         {
-          rejoin: wW,
-          game: tW,
-          joinedAt: ZW
-        } = jc;
-      Rw(), kt();
-      const xW = (0, Wi.i)(iW, (0, oE.c)(WW));
-      if (console.info(`${nP} the game's connection closed with code ${iW} (${null!==(PW=xW.name)&&void 0!==PW?PW:"unrecognised"})`), iW === mW.e.gameOrPluginKick.code || LW || (0, xm.reportDisconnect)(xW, tL, {
-          closeReason: OW,
-          sinceJoinedMs: performance.now() - ZW,
-          game: tW
-        }), xW.requiresRefresh) {
-        const WW = "outdatedVersion" === xW.name,
-          OW = new Error(`the game's connection closed with code ${iW}`),
-          mW = () => null === jc && null === tc;
-        return void VZ({
-          site: xm.JOIN_SITE,
-          error: OW,
-          outdated: WW
+          rejoin: fR,
+          game: VR,
+          joinedAt: KR
+        } = ri;
+      Ef(), UV();
+      const wR = (0, RJ.e)(JR, (0, vt.g)(RR));
+      if (console.info(`${pZ} the game's connection closed with code ${JR} (${null!==(ZR=wR.name)&&void 0!==ZR?ZR:"unrecognised"})`), JR === yR.e.gameOrPluginKick.code || qR || (0, Vy.reportDisconnect)(wR, qq, {
+          closeReason: GR,
+          sinceJoinedMs: performance.now() - KR,
+          game: VR
+        }), wR.requiresRefresh) {
+        const RR = "outdatedVersion" === wR.name,
+          GR = new Error(`the game's connection closed with code ${JR}`),
+          yR = () => null === ri && null === qi;
+        return void cK({
+          site: Vy.JOIN_SITE,
+          error: GR,
+          outdated: RR
         }, (() => {
-          mW() && Ot(xW, null, !1)
+          yR() && GV(wR, null, !1)
         }), {
-          stillWanted: mW
+          stillWanted: yR
         })
       }
-      const lW = xW.canReconnect ? wW : null,
-        AW = null !== lW && (xW.automaticallyReconnect || cW && xw && "inactivity" === xW.name) && pw();
-      Ot(xW, lW, AW)
+      const rR = wR.canReconnect ? fR : null,
+        eR = null !== rR && (wR.automaticallyReconnect || iR && Kf && "inactivity" === wR.name) && If();
+      GV(wR, rR, eR)
     }
 
-    function Ot(WW, iW, OW) {
-      var mW;
-      let EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function GV(RR, JR, GR) {
+      var yR;
+      let tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (sw) return;
-      NN.d.unwantedLeave(OW && null !== iW && 0 === uc.size), null === (mW = nc) || void 0 === mW || mW.abort();
-      const NW = new AbortController;
-      nc = NW;
-      const PW = null === iW ? null : () => {
-        NW.signal.aborted || (NW.abort(), iW())
+      if (Uf) return;
+      yu.d.unwantedLeave(GR && null !== JR && 0 === bi.size), null === (yR = gi) || void 0 === yR || yR.abort();
+      const uR = new AbortController;
+      gi = uR;
+      const ZR = null === JR ? null : () => {
+        uR.signal.aborted || (uR.abort(), JR())
       };
-      if (OW && null !== PW) {
-        Hc = performance.now();
-        const WW = new bO.d(zO.d, (() => {
-          Hc = performance.now(), PW()
+      if (GR && null !== ZR) {
+        li = performance.now();
+        const RR = new rG.e(QG.d, (() => {
+          li = performance.now(), ZR()
         }));
-        NW.signal.addEventListener("abort", (() => {
-          WW.stop()
+        uR.signal.addEventListener("abort", (() => {
+          RR.stop()
         }))
       }
-      const LW = {
-        code: WW.code,
-        name: WW.name,
-        reason: WW.reason,
-        reasonKey: EW.reasonKey,
-        reconnect: PW,
-        reconnecting: OW,
-        requiresRefresh: WW.requiresRefresh,
-        canPlayAgain: EW.canPlayAgain
+      const qR = {
+        code: RR.code,
+        name: RR.name,
+        reason: RR.reason,
+        reasonKey: tR.reasonKey,
+        reconnect: ZR,
+        reconnecting: GR,
+        requiresRefresh: RR.requiresRefresh,
+        canPlayAgain: tR.canPlayAgain
       };
-      if (uc.size > 0)
-        for (const wW of [...uc]) try {
-          wW(LW)
-        } catch (cW) {
-          console.error(`${nP} an unwanted-leave listener threw`, cW)
-        } else ni((0, yi.f)(WW, null !== PW, OW), NW.signal).then((iW => {
-          iW && (null !== PW ? PW() : WW.requiresRefresh && (0, Zi.j)())
+      if (bi.size > 0)
+        for (const fR of [...bi]) try {
+          fR(qR)
+        } catch (iR) {
+          console.error(`${pZ} an unwanted-leave listener threw`, iR)
+        } else bJ((0, BJ.f)(RR, null !== ZR, GR), uR.signal).then((JR => {
+          JR && (null !== ZR ? ZR() : RR.requiresRefresh && (0, KJ.j)())
         }))
     }
-    const mt = {
-      attachSocket: WW => tt(WW),
-      onConnection: WW => (vc.add(WW), () => {
-        vc.delete(WW)
+    const yV = {
+      attachSocket: RR => VV(RR),
+      onConnection: RR => (Ni.add(RR), () => {
+        Ni.delete(RR)
       }),
-      sendRaw: (WW, iW) => {
-        const OW = kL;
-        return null !== OW && OW.conn === WW && UZ(OW, iW)
+      sendRaw: (RR, JR) => {
+        const GR = aq;
+        return null !== GR && GR.conn === RR && LK(GR, JR)
       },
-      leaveRoom: qw,
-      closeSocket: WW => {
-        var iW;
-        (null === (iW = kL) || void 0 === iW ? void 0 : iW.conn) === WW && Zt()
+      leaveRoom: df,
+      closeSocket: RR => {
+        var JR;
+        (null === (JR = aq) || void 0 === JR ? void 0 : JR.conn) === RR && KV()
       },
-      flushNet: xt
+      flushNet: wV
     };
 
-    function Et(WW) {
-      var iW;
+    function tV(RR) {
+      var JR;
       let {
-        aux: OW,
-        payload: mW
-      } = WW;
-      null === (iW = NL) || void 0 === iW || iW.queueOptions(OW, mW)
+        aux: GR,
+        payload: yR
+      } = RR;
+      null === (JR = Gq) || void 0 === JR || JR.queueOptions(GR, yR)
     }
 
-    function Nt(WW, iW) {
-      Et(function(WW, iW) {
-        return KN = WW ? {
-          preventMovement: iW
-        } : null, WW ? SN(iW) : {
-          aux: HO.bc.AdEnd,
-          payload: MN
+    function uV(RR, JR) {
+      tV(function(RR, JR) {
+        return Wu = RR ? {
+          preventMovement: JR
+        } : null, RR ? Au(JR) : {
+          aux: pG.$b.AdEnd,
+          payload: Uu
         }
-      }(WW, iW))
+      }(RR, JR))
     }
 
-    function Pt(WW) {
-      var iW;
-      Nc = WW, null === (iW = NL) || void 0 === iW || iW.setUiPrefs(WW)
+    function ZV(RR) {
+      var JR;
+      Gi = RR, null === (JR = Gq) || void 0 === JR || JR.setUiPrefs(RR)
     }
 
-    function Lt(WW, iW) {
-      wL.setMaster(WW, iW)
+    function qV(RR, JR) {
+      Zq.setMaster(RR, JR)
     }
 
-    function ct(WW) {
-      var iW;
-      Pc = WW, null === (iW = NL) || void 0 === iW || iW.setEnvPrefs(WW)
+    function iV(RR) {
+      var JR;
+      yi = RR, null === (JR = Gq) || void 0 === JR || JR.setEnvPrefs(RR)
     }
 
-    function wt(WW) {
-      var iW;
-      Lc = WW, null === (iW = NL) || void 0 === iW || iW.setLookPrefs(WW)
+    function fV(RR) {
+      var JR;
+      ti = RR, null === (JR = Gq) || void 0 === JR || JR.setLookPrefs(RR)
     }
 
-    function tt(WW) {
-      var iW;
-      let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(WW.url).origin,
-        mW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (WW.readyState === WebSocket.CLOSING || WW.readyState === WebSocket.CLOSED) return console.warn(`${nP} a closing or closed socket can't be attached`), null;
-      const EW = NL;
-      if (!EW || EW.isStopped) return console.warn(`${nP} no core is running to attach a socket to`), WW.close(), null;
-      if (null === (0, qW.f)()) return console.warn(`${nP} the game has not started to attach a socket to`), WW.close(), null;
-      if (qL > HO.u) return console.warn(`${nP} this core has attached all the sockets it can; reload to play on`), WW.close(), null;
-      if (ic && !FL && (mZ(EW, !1, "all"), EW.isStopped || Mw)) return WW.close(), null;
-      Zt();
-      const NW = qL++;
-      if (!yt(EW, "open", NW, mW ? HO._b.Resume : 0)) return WW.close(), null;
-      mW || Ii.d.reset(), hc = null === tc ? null : {
-        join: tc,
-        conn: NW,
+    function VV(RR) {
+      var JR;
+      let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(RR.url).origin,
+        yR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (RR.readyState === WebSocket.CLOSING || RR.readyState === WebSocket.CLOSED) return console.warn(`${pZ} a closing or closed socket can't be attached`), null;
+      const tR = Gq;
+      if (!tR || tR.isStopped) return console.warn(`${pZ} no core is running to attach a socket to`), RR.close(), null;
+      if (null === (0, dR.l)()) return console.warn(`${pZ} the game has not started to attach a socket to`), RR.close(), null;
+      if (zq > pG.B) return console.warn(`${pZ} this core has attached all the sockets it can; reload to play on`), RR.close(), null;
+      if (sq && !Qq && (GK(tR, !1, "all"), tR.isStopped || Wf)) return RR.close(), null;
+      KV();
+      const uR = zq++;
+      if (!BV(tR, "open", uR, yR ? pG._b.Resume : 0)) return RR.close(), null;
+      yR || EJ.c.reset(), Bi = null === qi ? null : {
+        join: qi,
+        conn: uR,
         activated: !1
-      }, WW.binaryType = "arraybuffer";
-      const PW = new Nm.c((() => {
-          ! function(WW, iW) {
-            if (kL !== iW || WW.isStopped || null === bt(iW, CP)) return;
-            iW.detach(), kL = null, At(WW, iW, CP, "", !0), iW.ws.close()
-          }(EW, LW)
+      }, RR.binaryType = "arraybuffer";
+      const ZR = new yy.c((() => {
+          ! function(RR, JR) {
+            if (aq !== JR || RR.isStopped || null === aV(JR, PZ)) return;
+            JR.detach(), aq = null, eV(RR, JR, PZ, "", !0), JR.ws.close()
+          }(tR, qR)
         })),
-        LW = {
-          ws: WW,
-          conn: NW,
+        qR = {
+          ws: RR,
+          conn: uR,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: mW,
+          resume: yR,
           token: null,
           detach: () => {
-            PW.dispose(), WW.removeEventListener("message", cW), WW.removeEventListener("open", wW), WW.removeEventListener("close", tW)
+            ZR.dispose(), RR.removeEventListener("message", iR), RR.removeEventListener("open", fR), RR.removeEventListener("close", VR)
           }
         },
-        cW = WW => {
-          if (WW.data instanceof ArrayBuffer) {
-            var iW;
-            const OW = new Uint8Array(WW.data);
-            PW.heard(), LW.token = null !== (iW = (0, Pm.b)(OW)) && void 0 !== iW ? iW : LW.token,
-              function(WW, iW, OW) {
-                uZ(WW, (() => {
-                  WW.rings.net.writeFrame(iW, OW) || WW.crash(RO.u, `a socket frame of ${OW.byteLength} bytes did not fit the net-in ring`)
+        iR = RR => {
+          if (RR.data instanceof ArrayBuffer) {
+            var JR;
+            const GR = new Uint8Array(RR.data);
+            ZR.heard(), qR.token = null !== (JR = (0, ty.e)(GR)) && void 0 !== JR ? JR : qR.token,
+              function(RR, JR, GR) {
+                vK(RR, (() => {
+                  RR.rings.net.writeFrame(JR, GR) || RR.crash(jG.q, `a socket frame of ${GR.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const mW = WW.rings.net.cursor >= fP;
-                !vZ() && (mW || WW.netWrittenSinceFrame >= pP) && mZ(WW, !1, document.hidden ? "all" : "budget");
-                DZ(WW)
-              }(EW, NW, OW)
+                const yR = RR.rings.net.cursor >= cZ;
+                !DK() && (yR || RR.netWrittenSinceFrame >= oZ) && GK(RR, !1, document.hidden ? "all" : "budget");
+                oK(RR)
+              }(tR, uR, GR)
           }
         },
-        wW = () => {
-          mW || (0, AW.p)("wasm_socket_open", performance.now());
-          for (const iW of LW.pending.splice(0)) WW.send(iW);
-          LW.pendingBytes = 0
+        fR = () => {
+          yR || (0, eR.y)("wasm_socket_open", performance.now());
+          for (const JR of qR.pending.splice(0)) RR.send(JR);
+          qR.pendingBytes = 0
         },
-        tW = WW => {
-          if (kL === LW && EW.rings.net.cursor > 0 && mZ(EW, !1, "all"), kL === LW) {
-            if (LW.detach(), kL = null, At(EW, LW, WW.code, WW.reason) || lt(EW, LW)) return;
-            yt(EW, "close", NW), jt(NW, LW.left), it(NW, WW.code, WW.reason)
+        VR = RR => {
+          if (aq === qR && tR.rings.net.cursor > 0 && GK(tR, !1, "all"), aq === qR) {
+            if (qR.detach(), aq = null, eV(tR, qR, RR.code, RR.reason) || rV(tR, qR)) return;
+            BV(tR, "close", uR), LV(uR, qR.left), JV(uR, RR.code, RR.reason)
           }
         };
-      return WW.addEventListener("message", cW), WW.addEventListener("open", wW), WW.addEventListener("close", tW), kL = LW, null === (iW = (0, qW.f)()) || void 0 === iW || iW.socketAttached(NW), (0, xW.r)({
-        websocketUrl: OW
-      }), NW
+      return RR.addEventListener("message", iR), RR.addEventListener("open", fR), RR.addEventListener("close", VR), aq = qR, null === (JR = (0, dR.l)()) || void 0 === JR || JR.socketAttached(uR), (0, wR.s)({
+        websocketUrl: GR
+      }), uR
     }
 
-    function Zt() {
-      const WW = kL;
-      if (!WW) return;
-      const iW = NL,
-        OW = WW.resume;
-      OW && (xt(), kL !== WW) || (kL = null, WW.detach(), WW.ws.close(), null !== iW && (lt(iW, WW) || OW && At(iW, WW, XP)) || (null !== iW && yt(iW, "close", WW.conn), jt(WW.conn, WW.left)))
+    function KV() {
+      const RR = aq;
+      if (!RR) return;
+      const JR = Gq,
+        GR = RR.resume;
+      GR && (wV(), aq !== RR) || (aq = null, RR.detach(), RR.ws.close(), null !== JR && (rV(JR, RR) || GR && eV(JR, RR, IZ)) || (null !== JR && BV(JR, "close", RR.conn), LV(RR.conn, RR.left)))
     }
 
-    function xt() {
-      const WW = NL;
-      null !== WW && !WW.isStopped && !Mw && !FL && WW.rings.net.cursor > 0 && mZ(WW, !1, "all")
+    function wV() {
+      const RR = Gq;
+      null !== RR && !RR.isStopped && !Wf && !Qq && RR.rings.net.cursor > 0 && GK(RR, !1, "all")
     }
 
-    function lt(WW, iW) {
-      var OW;
-      if (!iW.resume) return !1;
-      const mW = Uc;
-      return null !== mW && null !== iW.token && "" !== iW.token && (mW.pendingHold = {
-        conn: iW.conn,
-        token: `${mW.roomId}:${iW.token}`
-      }), yt(WW, "close", iW.conn), null === (OW = (0, qW.f)()) || void 0 === OW || OW.socketDetached(iW.conn), !0
+    function rV(RR, JR) {
+      var GR;
+      if (!JR.resume) return !1;
+      const yR = ei;
+      return null !== yR && null !== JR.token && "" !== JR.token && (yR.pendingHold = {
+        conn: JR.conn,
+        token: `${yR.roomId}:${JR.token}`
+      }), BV(RR, "close", JR.conn), null === (GR = (0, dR.l)()) || void 0 === GR || GR.socketDetached(JR.conn), !0
     }
 
-    function At(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const NW = bt(iW, OW);
-      if (null === NW) return !1;
+    function eV(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const uR = aV(JR, GR);
+      if (null === uR) return !1;
       const {
-        BL: PW,
-        token: LW,
-        game: cW,
-        joinedAt: wW
-      } = NW;
-      if (!yt(WW, "close", iW.conn, HO.x.Held)) return !0;
-      console.warn(`${nP} the game's connection ${EW?"went silent":`dropped with code ${OW}`}, holding it`);
-      const tW = {
-        closeReason: mW,
-        sinceJoinedMs: performance.now() - wW,
-        game: cW
+        Qq: ZR,
+        token: qR,
+        game: iR,
+        joinedAt: fR
+      } = uR;
+      if (!BV(RR, "close", JR.conn, pG.E.Held)) return !0;
+      console.warn(`${pZ} the game's connection ${tR?"went silent":`dropped with code ${GR}`}, holding it`);
+      const VR = {
+        closeReason: yR,
+        sinceJoinedMs: performance.now() - fR,
+        game: iR
       };
-      return (0, xm.reportDisconnect)((0, Wi.i)(OW), tL, tW, EW ? "silent" : void 0), PW.heldConn = iW.conn, PW.dropCode = OW, PW.pendingHold = {
-        conn: iW.conn,
-        token: `${PW.roomId}:${LW}`
-      }, FL || mZ(WW, !1, "all"), !0
+      return (0, Vy.reportDisconnect)((0, RJ.e)(GR), qq, VR, tR ? "silent" : void 0), ZR.heldConn = JR.conn, ZR.dropCode = GR, ZR.pendingHold = {
+        conn: JR.conn,
+        token: `${ZR.roomId}:${qR}`
+      }, Qq || GK(RR, !1, "all"), !0
     }
 
-    function bt(WW, iW) {
-      const OW = Uc,
-        EW = jc,
-        NW = WW.token;
-      return null === OW || null === EW || Mw || WW.left || EW.conn !== WW.conn || null === NW || "" === NW ? null : (0, mW.g)(iW) && OW.resume.canHoldSeat() ? {
-        BL: OW,
-        token: NW,
-        game: EW.game,
-        joinedAt: EW.joinedAt
+    function aV(RR, JR) {
+      const GR = ei,
+        tR = ri,
+        uR = RR.token;
+      return null === GR || null === tR || Wf || RR.left || tR.conn !== RR.conn || null === uR || "" === uR ? null : (0, yR.i)(JR) && GR.resume.canHoldSeat() ? {
+        Qq: GR,
+        token: uR,
+        game: tR.game,
+        joinedAt: tR.joinedAt
       } : null
     }
 
-    function jt(WW, iW) {
-      var OW;
-      null === (OW = (0, qW.f)()) || void 0 === OW || OW.closeGame(WW), (0, sN.d)().close(WW), iW || (0, xW.r)({
+    function LV(RR, JR) {
+      var GR;
+      null === (GR = (0, dR.l)()) || void 0 === GR || GR.closeGame(RR), (0, nu.d)().close(RR), JR || (0, wR.s)({
         websocketUrl: null
       })
     }
 
-    function Ut() {
-      const WW = yc;
-      if (null === WW) return;
-      const iW = (0, qW.f)();
-      Mw || null === iW || iW.gJ(WW) ? yc = null : performance.now() - Oc.pause >= GP && (Oc.pause = performance.now(), console.warn(`${nP} the cmd ring had no room for SetPaused(${WW}): written before the next frame`))
+    function nV() {
+      const RR = Ci;
+      if (null === RR) return;
+      const JR = (0, dR.l)();
+      Wf || null === JR || JR.kN(RR) ? Ci = null : performance.now() - hq.pause >= jZ && (hq.pause = performance.now(), console.warn(`${pZ} the cmd ring had no room for SetPaused(${RR}): written before the next frame`))
     }
 
-    function kt() {
-      const WW = Uc;
-      Uc = null, null === WW || void 0 === WW || WW.resume.dispose()
+    function UV() {
+      const RR = ei;
+      ei = null, null === RR || void 0 === RR || RR.resume.dispose()
     }
 
-    function st(WW, iW) {
-      var OW, mW;
+    function WV(RR, JR) {
+      var GR, yR;
       const {
-        heldConn: EW
-      } = WW, NW = WW.resume.resumingConn;
-      WW.heldConn = 0, WW.pendingHold = null, Uc === WW && (Uc = null), "left" === iW ? WW.resume.leave() : WW.resume.dispose(), 0 === Yc || (null === (OW = kL) || void 0 === OW ? void 0 : OW.conn) !== Yc || "left" === iW && (null === (mW = cc) || void 0 === mW ? void 0 : mW.conn) === Yc || Yt(Yc), "gaveUp" === iW && 0 !== NW && Yt(NW), 0 !== EW && "refused" !== iW && (console.info(`${nP} the game held through its drop ${"left"===iW?"was left":"is given up"}`), null === NL || NL.isStopped || yt(NL, "close", EW), jt(EW, !1))
+        heldConn: tR
+      } = RR, uR = RR.resume.resumingConn;
+      RR.heldConn = 0, RR.pendingHold = null, ei === RR && (ei = null), "left" === JR ? RR.resume.leave() : RR.resume.dispose(), 0 === Ai || (null === (GR = aq) || void 0 === GR ? void 0 : GR.conn) !== Ai || "left" === JR && (null === (yR = ui) || void 0 === yR ? void 0 : yR.conn) === Ai || MV(Ai), "gaveUp" === JR && 0 !== uR && MV(uR), 0 !== tR && "refused" !== JR && (console.info(`${pZ} the game held through its drop ${"left"===JR?"was left":"is given up"}`), null === Gq || Gq.isStopped || BV(Gq, "close", tR), LV(tR, !1))
     }
 
-    function Mt(WW, iW) {
-      const OW = iW.indexOf(":");
+    function AV(RR, JR) {
+      const GR = JR.indexOf(":");
       return {
-        roomId: OW < 0 ? WW.roomId : iW.slice(0, OW),
-        roomToken: iW.slice(OW + 1)
+        roomId: GR < 0 ? RR.roomId : JR.slice(0, GR),
+        roomToken: JR.slice(GR + 1)
       }
     }
 
-    function Kt(WW) {
-      (0, GO.logClientMeasurement)("join_preload", WW, {
+    function CV(RR) {
+      (0, dG.logClientMeasurement)("join_preload", RR, {
         client: "wasm"
       })
     }
 
-    function St(WW) {
-      var iW;
-      kc = WW;
-      const OW = WW.replayOffer && Sc !== WW.conn;
-      Kc = OW ? WW.conn : 0, sc = OW || Mc.has(WW.conn) ? 0 : WW.conn, eW.admitted(), WW.conn === Yc && (Yc = 0);
-      const mW = Uc;
-      null !== mW && (null === (iW = jc) || void 0 === iW ? void 0 : iW.conn) === WW.conn && mW.resume.onInitialInfo(WW)
+    function XV(RR) {
+      var JR;
+      ai = RR;
+      const GR = RR.replayOffer && Wi !== RR.conn;
+      Ui = GR ? RR.conn : 0, Li = GR || ni.has(RR.conn) ? 0 : RR.conn, DR.admitted(), RR.conn === Ai && (Ai = 0);
+      const yR = ei;
+      null !== yR && (null === (JR = ri) || void 0 === JR ? void 0 : JR.conn) === RR.conn && yR.resume.onInitialInfo(RR)
     }
 
-    function Yt(WW) {
-      var iW;
-      const OW = kL;
-      (null === OW || void 0 === OW ? void 0 : OW.conn) === WW && (OW.left = !0, null === (iW = (0, qW.f)()) || void 0 === iW || iW.socketLeft(), (0, xW.r)({
+    function MV(RR) {
+      var JR;
+      const GR = aq;
+      (null === GR || void 0 === GR ? void 0 : GR.conn) === RR && (GR.left = !0, null === (JR = (0, dR.l)()) || void 0 === JR || JR.socketLeft(), (0, wR.s)({
         websocketUrl: null
-      }), qw(WW) ? setTimeout((() => {
-        kL === OW && Zt()
-      }), ii.e) : Zt())
+      }), df(RR) ? setTimeout((() => {
+        aq === GR && KV()
+      }), JJ.e) : KV())
     }
 
-    function yt(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        EW = !1;
-      return uZ(WW, (() => {
+    function BV(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        tR = !1;
+      return vK(RR, (() => {
         const {
-          net: NW
-        } = WW.rings;
-        EW = "open" === iW ? NW.writeOpen(OW, mW) : NW.writeClose(OW, mW), EW || WW.crash(RO.u, `a socket ${iW} did not fit the net-in ring`)
-      })), EW
+          net: uR
+        } = RR.rings;
+        tR = "open" === JR ? uR.writeOpen(GR, yR) : uR.writeClose(GR, yR), tR || RR.crash(jG.q, `a socket ${JR} did not fit the net-in ring`)
+      })), tR
     }
 
-    function Tt(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const EW = "noContext" === iW ? "noContext" : "blockedAfterLoss" === iW ? "graphicsLost" : WW;
-      (0, xm.showUnsupported)(EW, "unsupported", OW, {
-        ...mW,
-        decline: iW
+    function lV(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const tR = "noContext" === JR ? "noContext" : "blockedAfterLoss" === JR ? "graphicsLost" : RR;
+      (0, Vy.showUnsupported)(tR, "unsupported", GR, {
+        ...yR,
+        decline: JR
       })
     }
-    const Jt = 1500;
+    const pV = 1500;
 
-    function ht(WW) {
-      return (0, BO.r)(WW) && Ht(WW)
+    function gV(RR) {
+      return (0, zG.o)(RR) && bV(RR)
     }
 
-    function Ht(WW) {
-      return 1 === WW.missing.length && WW.missing[0] === BO.d
+    function bV(RR) {
+      return 1 === RR.missing.length && RR.missing[0] === zG.b
     }
-    const nt = "wasmNoContextWaited";
+    const vV = "wasmNoContextWaited";
 
-    function ut(WW, iW) {
-      const OW = Ht(WW),
-        mW = OW ? (0, BO.$)() : "",
-        EW = iW || (0, BO.V)(mW) ? "blockedAfterLoss" : OW ? "noContext" : "unsupported",
-        NW = `No WebGPU or WebGL2, and WebGL1 lacks ${WW.missing.join(", ")}`;
+    function OV(RR, JR) {
+      const GR = bV(RR),
+        yR = GR ? (0, zG.ab)() : "",
+        tR = JR || (0, zG.T)(yR) ? "blockedAfterLoss" : GR ? "noContext" : "unsupported",
+        uR = `No WebGPU or WebGL2, and WebGL1 lacks ${RR.missing.join(", ")}`;
       return {
-        decline: EW,
-        detail: "" === mW ? NW : `${NW}; ${mW}`,
+        decline: tR,
+        detail: "" === yR ? uR : `${uR}; ${yR}`,
         details: {
-          missing: WW.missing.join(",")
+          missing: RR.missing.join(",")
         },
-        retries: "unsupported" !== EW && jw
+        retries: "unsupported" !== tR && af
       }
     }
 
-    function ot(WW) {
-      console.warn(`${nP} ${WW}: reloading once more onto the wasm client`), (0, AN.o)(), (0, xm.flushCrashReports)(Zi.d).then(Zi.j, Zi.j)
+    function xV(RR) {
+      console.warn(`${pZ} ${RR}: reloading once more onto the wasm client`), (0, wu.t)(), (0, Vy.flushCrashReports)(KJ.d).then(KJ.j, KJ.j)
     }
 
-    function dt() {
-      return jw && "address" !== qi.B.reason
+    function NV() {
+      return af && "address" !== SJ.z.reason
     }
 
-    function et(WW, iW, OW, mW) {
-      return pc(WW, iW, OW, mW)
+    function DV(RR, JR, GR, yR) {
+      return ci(RR, JR, GR, yR)
     }
 
-    function vt() {
-      null === Xc || null === NL || NL.isStopped || Mw || null !== eL || null === zP || (eL = Xc(zP, Vt, pt().follow))
+    function HV() {
+      null === mi || null === Gq || Gq.isStopped || Wf || null !== Oq || null === kZ || (Oq = mi(kZ, PV, IV().follow))
     }
 
-    function gt() {
-      var WW, iW, OW;
-      return null !== (WW = null === (iW = LL) || void 0 === iW || null === (OW = iW.textures) || void 0 === OW ? void 0 : OW.files()) && void 0 !== WW ? WW : null
+    function oV() {
+      var RR, JR, GR;
+      return null !== (RR = null === (JR = tq) || void 0 === JR || null === (GR = JR.textures) || void 0 === GR ? void 0 : GR.files()) && void 0 !== RR ? RR : null
     }
 
-    function Dt(WW) {
-      pt().follow((iW => {
-        null !== iW && Promise.all([Promise.all([OW.e(231), OW.e(54)]).then((() => OW(54833))), (0, AN.J)()]).then((WW => {
+    function cV(RR) {
+      IV().follow((JR => {
+        null !== JR && Promise.all([Promise.all([GR.e(231), GR.e(54)]).then((() => GR(54685))), (0, wu.W)()]).then((RR => {
           let [{
-            followPagePackFiles: OW
-          }, mW] = WW;
-          const EW = null === mW || (0, BO.r)(mW) ? "webgl" : mW.backend;
-          OW(iW, EN.h, EW, (WW => {
-            EN.h.setPageFiles(WW)
-          }), Vt)
-        }), (iW => {
-          console.warn(`${nP} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, iW), WW()
+            followPagePackFiles: GR
+          }, yR] = RR;
+          const tR = null === yR || (0, zG.o)(yR) ? "webgl" : yR.backend;
+          GR(JR, Gu.e, tR, (RR => {
+            Gu.e.setPageFiles(RR)
+          }), PV)
+        }), (JR => {
+          console.warn(`${pZ} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, JR), RR()
         }))
       }))
     }
 
-    function Vt(WW, iW) {
-      console.warn(`${nP} ${WW}`, iW)
+    function PV(RR, JR) {
+      console.warn(`${pZ} ${RR}`, JR)
     }
 
-    function pt() {
-      return PL ??= new hN({
-        load: WW => Promise.all([OW.e(231), OW.e(67)]).then((() => OW(54835))).then((iW => {
+    function IV() {
+      return yq ??= new lu({
+        load: RR => Promise.all([GR.e(231), GR.e(67)]).then((() => GR(54687))).then((JR => {
           let {
-            startPageTexturePackFeed: OW
-          } = iW;
-          return OW(Vt, WW)
+            startPageTexturePackFeed: GR
+          } = JR;
+          return GR(PV, RR)
         })),
-        store: lO.f,
-        wZ: WW => {
-          AL.then((() => {
-            (0, xm.reportTexturePackFeedLoadFailure)(WW, tL)
+        store: KG.g,
+        fK: RR => {
+          Kq.then((() => {
+            (0, Vy.reportTexturePackFeedLoadFailure)(RR, qq)
           }))
         }
-      }), PL
+      }), yq
     }
-    const ft = WW => pt().follow(WW);
+    const mV = RR => IV().follow(RR);
 
-    function Ct() {
-      return pt().loaded()
+    function zV() {
+      return IV().loaded()
     }
-    const Xt = function(WW, iW, OW) {
-        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          EW = 0;
-        return async function(NW, PW) {
-          let LW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const cW = ++EW,
-            wW = mW() + iW,
-            tW = await
-          function(WW, iW) {
-            let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((mW => {
-              const EW = setTimeout((() => {
-                mW(null), WW.then((WW => {
-                  null !== WW && (WW.joinedWithout(), OW(WW))
+    const SV = function(RR, JR, GR) {
+        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          tR = 0;
+        return async function(uR, ZR) {
+          let qR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const iR = ++tR,
+            fR = yR() + JR,
+            VR = await
+          function(RR, JR) {
+            let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((yR => {
+              const tR = setTimeout((() => {
+                yR(null), RR.then((RR => {
+                  null !== RR && (RR.joinedWithout(), GR(RR))
                 }))
-              }), iW);
-              WW.then((WW => {
-                clearTimeout(EW), mW(WW)
+              }), JR);
+              RR.then((RR => {
+                clearTimeout(tR), yR(RR)
               }))
             }))
-          }(WW(NW), iW, (WW => {
-            cW === EW && LW() && PW(WW, mW() + iW).catch((WW => {
-              OW("the texture pack step after the join failed", WW)
+          }(RR(uR), JR, (RR => {
+            iR === tR && qR() && ZR(RR, yR() + JR).catch((RR => {
+              GR("the texture pack step after the join failed", RR)
             }))
           }));
-          return null === tW ? null : PW(tW, wW)
+          return null === VR ? null : ZR(VR, fR)
         }
-      }((WW => (0, di.i)(WW) ? pt().request() : pt().forJoin()), JN.c, Vt),
-      Bt = function(WW, iW) {
-        let OW = !1;
+      }((RR => (0, xJ.n)(RR) ? IV().request() : IV().forJoin()), Bu.b, PV),
+      jV = function(RR, JR) {
+        let GR = !1;
         return {
-          setGamePackConfirm: WW => {
-            OW = null !== WW, iW(WW)
+          setGamePackConfirm: RR => {
+            GR = null !== RR, JR(RR)
           },
-          packStep: (iW, mW, EW) => WW(iW, mW, (() => OW && EW()))
+          packStep: (JR, yR, tR) => RR(JR, yR, (() => GR && tR()))
         }
-      }(Xt, (WW => {
-        pt().setGamePackConfirm(WW)
+      }(SV, (RR => {
+        IV().setGamePackConfirm(RR)
       }));
 
-    function qt(WW) {
-      Bt.setGamePackConfirm(WW)
+    function dV(RR) {
+      jV.setGamePackConfirm(RR)
     }
 
-    function Rt() {
-      if (Mw || null !== Ic || null === Bc || null === Gc) return;
+    function EV() {
+      if (Wf || null !== Ei || null === zi || null === di) return;
       const {
-        backend: WW,
-        canvas: iW,
-        fallbackReason: OW,
-        adapterVendor: mW
-      } = Gc, EW = Bc;
-      Bc = null;
+        backend: RR,
+        canvas: JR,
+        fallbackReason: GR,
+        adapterVendor: yR
+      } = di, tR = zi;
+      zi = null;
       try {
-        Ic = EW({
-          backend: WW,
-          canvas: iW,
-          fallbackReason: OW,
-          adapterVendor: mW,
-          joinedGame: () => Mw ? null : cc,
-          canSend: () => !Mw && null !== cc && cc.conn === sc,
-          inGame: It,
+        Ei = tR({
+          backend: RR,
+          canvas: JR,
+          fallbackReason: GR,
+          adapterVendor: yR,
+          joinedGame: () => Wf ? null : ui,
+          canSend: () => !Wf && null !== ui && ui.conn === Li,
+          inGame: kV,
           shaderPackReach: () => {
-            var WW, iW;
-            return null !== (WW = null === (iW = pL) || void 0 === iW ? void 0 : iW.reachInJoinedGame()) && void 0 !== WW ? WW : null
+            var RR, JR;
+            return null !== (RR = null === (JR = oq) || void 0 === JR ? void 0 : JR.reachInJoinedGame()) && void 0 !== RR ? RR : null
           },
-          qb: () => vL,
-          msaa: () => Rc > 1,
-          writeCmd: (WW, iW, OW) => null !== zP && zP(WW, iW, OW),
+          sa: () => xq,
+          msaa: () => ji > 1,
+          writeCmd: (RR, JR, GR) => null !== kZ && kZ(RR, JR, GR),
           takeFailedMeshJobs: () => {
-            var WW, iW;
-            return null !== (WW = null === (iW = SL) || void 0 === iW ? void 0 : iW.takeFailedMeshJobs()) && void 0 !== WW ? WW : 0
+            var RR, JR;
+            return null !== (RR = null === (JR = Wq) || void 0 === JR ? void 0 : JR.takeFailedMeshJobs()) && void 0 !== RR ? RR : 0
           },
-          readLoadCounts: WW => {
-            var iW, OW;
-            return null !== (iW = null === (OW = NL) || void 0 === OW ? void 0 : OW.readLoadCounts(WW)) && void 0 !== iW && iW
+          readLoadCounts: RR => {
+            var JR, GR;
+            return null !== (JR = null === (GR = Gq) || void 0 === GR ? void 0 : GR.readLoadCounts(RR)) && void 0 !== JR && JR
           },
-          mainStalled: (WW, iW, OW, mW) => {
-            (0, xm.reportMainStall)(WW, iW, OW, mW, tL)
+          mainStalled: (RR, JR, GR, yR) => {
+            (0, Vy.reportMainStall)(RR, JR, GR, yR, qq)
           },
-          eJ: WW => {
-            var iW, OW, mW;
-            return null !== (iW = null === (OW = Vc) || void 0 === OW || null === (mW = OW.eJ) || void 0 === mW ? void 0 : mW.call(OW, WW)) && void 0 !== iW ? iW : -1
+          mN: RR => {
+            var JR, GR, yR;
+            return null !== (JR = null === (GR = oi) || void 0 === GR || null === (yR = GR.mN) || void 0 === yR ? void 0 : yR.call(GR, RR)) && void 0 !== JR ? JR : -1
           }
         })
-      } catch (NW) {
-        console.error(`${nP} the frame telemetry didn't start`, NW)
+      } catch (uR) {
+        console.error(`${pZ} the frame telemetry didn't start`, uR)
       }
     }
 
-    function Gt(WW, iW) {
+    function YV(RR, JR) {
       try {
-        var OW, mW, EW;
-        const NW = gc && null !== (OW = null === (mW = NL) || void 0 === mW || null === (EW = mW.lastHeader) || void 0 === EW ? void 0 : EW.renderPending) && void 0 !== OW ? OW : 0;
-        (0, zm.e)(iW, WW, It() && !(null !== KN), NW)
-      } catch (NW) {
-        (0, zm.y)(), console.error(`${nP} the quality steps stopped`, NW)
+        var GR, yR, tR;
+        const uR = Di && null !== (GR = null === (yR = Gq) || void 0 === yR || null === (tR = yR.lastHeader) || void 0 === tR ? void 0 : tR.renderPending) && void 0 !== GR ? GR : 0;
+        (0, ky.d)(JR, RR, kV() && !(null !== Wu), uR)
+      } catch (uR) {
+        (0, ky.t)(), console.error(`${pZ} the quality steps stopped`, uR)
       }
     }
 
-    function It() {
-      return null !== cc && Lw === cc && !Mw
+    function kV() {
+      return null !== ui && Zf === ui && !Wf
     }
 
-    function rt(WW) {
-      const iW = Ic;
-      Ic = null;
+    function QV(RR) {
+      const JR = Ei;
+      Ei = null;
       try {
-        null === iW || void 0 === iW || iW.stop()
+        null === JR || void 0 === JR || JR.stop()
       } catch {}
-      console.error(`${nP} the frame telemetry threw: it stops`, WW)
+      console.error(`${pZ} the frame telemetry threw: it stops`, RR)
     }
 
-    function zt(WW) {
-      var iW, OW, mW, EW;
-      if ((0, sN.d)().fire(WW), "message" === WW.type) {
-        if (QL++, WW.tP === HO.Sc.ERROR && null !== tc) {
-          var NW;
+    function FV(RR) {
+      var JR, GR, yR, tR;
+      if ((0, nu.d)().fire(RR), "message" === RR.type) {
+        if (Fq++, RR.LZ === pG.Oc.ERROR && null !== qi) {
+          var uR;
           const {
-            text: iW,
-            dropsCache: OW
-          } = (0, Wi.n)((new TextDecoder).decode(WW.payload));
-          oc ||= OW, (null === (NW = hc) || void 0 === NW ? void 0 : NW.conn) === WW.conn && (dc = iW)
-        } else if (WW.tP === nO.uc.ResumeComplete) {
-          var PW;
-          Sc = WW.conn, WW.conn === Kc && (Kc = 0, sc = Mc.has(WW.conn) ? 0 : WW.conn), null === (PW = Uc) || void 0 === PW || PW.resume.onResumeComplete(WW.conn)
+            text: JR,
+            dropsCache: GR
+          } = (0, RJ.h)((new TextDecoder).decode(RR.payload));
+          vi ||= GR, (null === (uR = Bi) || void 0 === uR ? void 0 : uR.conn) === RR.conn && (Oi = JR)
+        } else if (RR.LZ === gG.sc.ResumeComplete) {
+          var ZR;
+          Wi = RR.conn, RR.conn === Ui && (Ui = 0, Li = ni.has(RR.conn) ? 0 : RR.conn), null === (ZR = ei) || void 0 === ZR || ZR.resume.onResumeComplete(RR.conn)
         }
         return
       }
-      WW.phase === HO.A.Left ? Wc = WW.conn : WW.phase === HO.A.Activated && (null === (iW = hc) || void 0 === iW ? void 0 : iW.conn) === WW.conn ? hc.activated = !0 : WW.phase === HO.A.Resumed ? function(WW) {
-        var iW, OW;
-        Yc = WW;
-        const mW = Uc;
-        if (null === mW || 0 === mW.heldConn || (null === (iW = kL) || void 0 === iW ? void 0 : iW.conn) !== WW || !kL.resume || null === jc) return;
-        console.info(`${nP} the game resumed on conn ${WW}, waiting for its InitialInfo`);
-        const EW = mW.heldConn;
-        mW.heldConn = 0, kL.resume = !1, jc.conn = WW, (null === (OW = Ac) || void 0 === OW ? void 0 : OW.conn) === EW && (Ac = {
-          conn: WW,
-          info: Ac.info
-        }), Ii.d.apply({
+      RR.phase === pG.H.Left ? Tq = RR.conn : RR.phase === pG.H.Activated && (null === (JR = Bi) || void 0 === JR ? void 0 : JR.conn) === RR.conn ? Bi.activated = !0 : RR.phase === pG.H.Resumed ? function(RR) {
+        var JR, GR;
+        Ai = RR;
+        const yR = ei;
+        if (null === yR || 0 === yR.heldConn || (null === (JR = aq) || void 0 === JR ? void 0 : JR.conn) !== RR || !aq.resume || null === ri) return;
+        console.info(`${pZ} the game resumed on conn ${RR}, waiting for its InitialInfo`);
+        const tR = yR.heldConn;
+        yR.heldConn = 0, aq.resume = !1, ri.conn = RR, (null === (GR = Ki) || void 0 === GR ? void 0 : GR.conn) === tR && (Ki = {
+          conn: RR,
+          info: Ki.info
+        }), EJ.c.apply({
           shopInfo: null,
-          _shopVersion: ei.c
+          _shopVersion: NJ.e
         })
-      }(WW.conn) : WW.phase === HO.A.Held ? function(WW) {
-        var iW;
-        const OW = Uc,
-          mW = null !== (iW = null === OW || void 0 === OW ? void 0 : OW.pendingHold) && void 0 !== iW ? iW : null;
-        if (null !== OW && null !== mW && mW.conn === WW) return OW.pendingHold = null, OW.heldConn = WW, Yc = 0, console.warn(`${nP} the core holds the game, reconnecting`), void OW.resume.onDropped(mW.token);
-        if (WW === Yc) {
-          Yc = 0;
-          const iW = NL;
-          null === iW || iW.isStopped || (console.info(`${nP} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), yt(iW, "close", WW))
+      }(RR.conn) : RR.phase === pG.H.Held ? function(RR) {
+        var JR;
+        const GR = ei,
+          yR = null !== (JR = null === GR || void 0 === GR ? void 0 : GR.pendingHold) && void 0 !== JR ? JR : null;
+        if (null !== GR && null !== yR && yR.conn === RR) return GR.pendingHold = null, GR.heldConn = RR, Ai = 0, console.warn(`${pZ} the core holds the game, reconnecting`), void GR.resume.onDropped(yR.token);
+        if (RR === Ai) {
+          Ai = 0;
+          const JR = Gq;
+          null === JR || JR.isStopped || (console.info(`${pZ} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), BV(JR, "close", RR))
         }
-      }(WW.conn) : WW.phase === HO.A.Closed && (null === (OW = Uc) || void 0 === OW || null === (mW = OW.pendingHold) || void 0 === mW ? void 0 : mW.conn) === WW.conn && (Uc.heldConn === WW.conn ? function(WW) {
-        const iW = WW.heldConn,
-          OW = WW.dropCode;
-        st(WW, "refused"), console.info(`${nP} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          jt(iW, !1), it(iW, OW, "", !0)
+      }(RR.conn) : RR.phase === pG.H.Closed && (null === (GR = ei) || void 0 === GR || null === (yR = GR.pendingHold) || void 0 === yR ? void 0 : yR.conn) === RR.conn && (ei.heldConn === RR.conn ? function(RR) {
+        const JR = RR.heldConn,
+          GR = RR.dropCode;
+        WV(RR, "refused"), console.info(`${pZ} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          LV(JR, !1), JV(JR, GR, "", !0)
         }))
-      }(Uc) : Uc.pendingHold = null), WW.phase !== HO.A.Held && WW.phase !== HO.A.Left && WW.phase !== HO.A.Closed || (Mc.add(WW.conn), WW.conn === sc && (sc = 0));
-      const LW = Object.keys(HO.A).find((iW => HO.A[iW] === WW.phase)),
-        cW = 0 === WW.code ? "" : ` (code ${WW.code})`;
-      console.info(`${nP} conn ${WW.conn}: ${null!==LW&&void 0!==LW?LW:WW.phase}${cW}, ${QL} raw messages so far`), (null === (EW = cc) || void 0 === EW ? void 0 : EW.conn) !== WW.conn || WW.phase !== HO.A.Left && WW.phase !== HO.A.Closed || Bw(null), lc !== WW.conn || WW.phase !== HO.A.Left && WW.phase !== HO.A.Closed || (lc = null, null === cc && null === tc && NN.d.setGame(void 0));
-      for (const tW of [...vc]) try {
-        tW(WW.conn, WW.phase, WW.code)
-      } catch (wW) {
-        (0, uO.n)(wW, `${nP} a connection listener threw`)
+      }(ei) : ei.pendingHold = null), RR.phase !== pG.H.Held && RR.phase !== pG.H.Left && RR.phase !== pG.H.Closed || (ni.add(RR.conn), RR.conn === Li && (Li = 0));
+      const qR = Object.keys(pG.H).find((JR => pG.H[JR] === RR.phase)),
+        iR = 0 === RR.code ? "" : ` (code ${RR.code})`;
+      console.info(`${pZ} conn ${RR.conn}: ${null!==qR&&void 0!==qR?qR:RR.phase}${iR}, ${Fq} raw messages so far`), (null === (tR = ui) || void 0 === tR ? void 0 : tR.conn) !== RR.conn || RR.phase !== pG.H.Left && RR.phase !== pG.H.Closed || jf(null), Vi !== RR.conn || RR.phase !== pG.H.Left && RR.phase !== pG.H.Closed || (Vi = null, null === ui && null === qi && yu.d.setGame(void 0));
+      for (const VR of [...Ni]) try {
+        VR(RR.conn, RR.phase, RR.code)
+      } catch (fR) {
+        (0, bG.j)(fR, `${pZ} a connection listener threw`)
       }
     }
-    const Ft = 9e4,
-      Qt = 1e3;
+    const TV = 9e4,
+      sV = 1e3;
 
-    function WZ() {
-      (0, AN.o)(), bw.forget(), null === cc && null === tc || (0, ym.e)(), queueMicrotask((() => {
+    function hV() {
+      (0, wu.t)(), ef.forget(), null === ui && null === qi || (0, Xy.i)(), queueMicrotask((() => {
         try {
-          sZ()
-        } catch (WW) {
-          console.warn(`${nP} stopping before the reload threw`, WW)
-        }(0, xm.flushCrashReports)(Zi.d).then(Zi.j, Zi.j)
+          UK()
+        } catch (RR) {
+          console.warn(`${pZ} stopping before the reload threw`, RR)
+        }(0, Vy.flushCrashReports)(KJ.d).then(KJ.j, KJ.j)
       }))
     }
 
-    function iZ() {
-      const WW = NL;
-      null === WW || WW.isStopped || null === kL || FL || !WW.hasPendingCommands() || mZ(WW, !1, "budget")
+    function RK() {
+      const RR = Gq;
+      null === RR || RR.isStopped || null === aq || Qq || !RR.hasPendingCommands() || GK(RR, !1, "budget")
     }
 
-    function OZ(WW) {
-      var iW;
-      const OW = cc;
-      WW.persisted || null === OW || (null === (iW = kL) || void 0 === iW ? void 0 : iW.conn) !== OW.conn || kL.left || OW.leave()
+    function JK(RR) {
+      var JR;
+      const GR = ui;
+      RR.persisted || null === GR || (null === (JR = aq) || void 0 === JR ? void 0 : JR.conn) !== GR.conn || aq.left || GR.leave()
     }
 
-    function mZ(WW, iW, mW) {
-      let EW = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const NW = FL;
-      FL = !0;
+    function GK(RR, JR, yR) {
+      let tR = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const uR = Qq;
+      Qq = !0;
       try {
-        const NW = WW.rings.net.cursor >= fP;
-        NW && "all" !== mW && !document.hidden && SZ("backlog", `a shown tab's net-in is ${WW.rings.net.cursor} bytes behind: one frame reads it all`);
-        return function(WW, iW, mW, EW) {
-          var NW, PW, LW, cW;
-          if (Mw) return !1;
-          if (uZ(WW, NZ), Mw || WW.isStopped) return !1;
-          bZ() && XL("modelsIn");
-          Ut(), RL = performance.now(), Wc = null, ic = !1, (0, BW.N)(), null === (NW = HL) || void 0 === NW || NW.beforeFrame(), ZE(RL, WW), (0, BW.F)(RL, PZ), zL = !0;
-          const wW = iW && AZ();
-          let tW;
+        const uR = RR.rings.net.cursor >= cZ;
+        uR && "all" !== yR && !document.hidden && CK("backlog", `a shown tab's net-in is ${RR.rings.net.cursor} bytes behind: one frame reads it all`);
+        return function(RR, JR, yR, tR) {
+          var uR, ZR, qR, iR;
+          if (Wf) return !1;
+          if (vK(RR, tK), Wf || RR.isStopped) return !1;
+          eK() && Iq("modelsIn");
+          nV(), Sq = performance.now(), Tq = null, sq = !1, (0, jR.H)(), null === (uR = lq) || void 0 === uR || uR.beforeFrame(), it(Sq, RR), (0, jR.z)(Sq, uK), kq = !0;
+          const fR = JR && rK();
+          let VR;
           try {
-            tW = WW.frame(RL, wW, mW)
+            VR = RR.frame(Sq, fR, yR)
           } finally {
-            zL = !1
+            kq = !1
           }
-          if (!tW) return !1;
-          qc.observe(null !== (PW = null === (LW = WW.lastHeader) || void 0 === LW ? void 0 : LW.chunksCancelled) && void 0 !== PW ? PW : 0);
-          const ZW = WW.lastFrameKind,
-            xW = (0, tO.b)(ZW);
-          (function(WW) {
-            null !== BN && BN.afterFrame(performance.now(), WW)
-          })(xW), null === (cW = ac) || void 0 === cW || cW.frame(WW, RL, ZW), iW && (tw = xW);
-          xW && ((0, NO.c)(RL), Nw.frame(RL), lw.end());
-          if (null !== Ic) try {
-            Ic.frameRan(WW, RL, performance.now(), ZW)
-          } catch (bW) {
-            rt(bW)
+          if (!VR) return !1;
+          Si.observe(null !== (ZR = null === (qR = RR.lastHeader) || void 0 === qR ? void 0 : qR.chunksCancelled) && void 0 !== ZR ? ZR : 0);
+          const KR = RR.lastFrameKind,
+            wR = (0, iG.c)(KR);
+          (function(RR) {
+            null !== zu && zu.afterFrame(performance.now(), RR)
+          })(wR), null === (iR = Yi) || void 0 === iR || iR.frame(RR, Sq, KR), JR && (ff = wR);
+          wR && ((0, yG.b)(Sq), tf.frame(Sq), wf.end());
+          if (null !== Ei) try {
+            Ei.frameRan(RR, Sq, performance.now(), KR)
+          } catch (aR) {
+            QV(aR)
           }
-          "drawn" === ZW && lZ() && function() {
-            for (const WW of [...xN]) WW()
+          "drawn" === KR && wK() && function() {
+            for (const RR of [...Vu]) RR()
           }();
-          WW.forEachNetOut(jZ);
-          const lW = kL;
-          null !== Wc && (null === lW || void 0 === lW ? void 0 : lW.conn) === Wc && UZ(lW, ii.j);
-          xZ(WW),
-            function(WW) {
-              const iW = 0 !== (WW.headerWord(nO.M.LoadSteps) & nO.V.JoinPreload);
-              iW !== xc && (xc = iW, (0, xm.setCrashAdPreload)(iW), (0, km.O)())
-            }(WW), iW && (! function(WW) {
-              var iW, mW, EW;
-              if (null === cc || !AZ()) return;
-              const NW = WW.headerWord(nO.M.LoadSteps);
-              null === Ew || Lw === cc && !Ew.frame(RL, 0 !== (NW & nO.Y.TerrainDrawn)) || (Ew = null);
-              if (0 === (NW & nO.V.PlayerBound)) return;
-              const PW = WW.lastHeader,
-                LW = !gc || 0 === (null === PW || void 0 === PW ? void 0 : PW.renderPending);
-              !Qc && LW && (Qc = !0, performance.mark(VP));
-              if (Lw === cc) return;
-              const cW = null !== (iW = null === PW || void 0 === PW ? void 0 : PW.firstView) && void 0 !== iW ? iW : HO.S.NotYet;
-              if (gc && cW === HO.S.NotYet) return;
-              if (Fc && (!0 !== (null === (mW = (0, qW.f)()) || void 0 === mW ? void 0 : mW.isSessionLive) || !LW)) return;
-              var wW;
-              Lw = cc, lw.shown(), gc && null !== jc && function(WW, iW) {
-                let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lO.i;
-                const mW = Array.from(iW).filter(hE).slice(0, JE);
-                if ("" === WW || 0 === mW.length) return;
-                const EW = nE(OW).filter((iW => iW.game !== WW));
-                OW.setItem(yE, [{
-                  game: WW,
-                  codes: mW
-                }, ...EW].slice(0, TE))
-              }(jc.game, null !== (wW = WW.firstViewTerrainCodes()) && void 0 !== wW ? wW : []);
-              const tW = cc;
+          RR.forEachNetOut(aK);
+          const rR = aq;
+          null !== Tq && (null === rR || void 0 === rR ? void 0 : rR.conn) === Tq && LK(rR, JJ.j);
+          KK(RR),
+            function(RR) {
+              const JR = 0 !== (RR.headerWord(gG.L.LoadSteps) & gG.Y.JoinPreload);
+              JR !== fi && (fi = JR, (0, Vy.setCrashAdPreload)(JR), (0, Ly.G)())
+            }(RR), JR && (! function(RR) {
+              var JR, yR, tR;
+              if (null === ui || !rK()) return;
+              const uR = RR.headerWord(gG.L.LoadSteps);
+              null === yf || Zf === ui && !yf.frame(Sq, 0 !== (uR & gG.ab.TerrainDrawn)) || (yf = null);
+              if (0 === (uR & gG.Y.PlayerBound)) return;
+              const ZR = RR.lastHeader,
+                qR = !Di || 0 === (null === ZR || void 0 === ZR ? void 0 : ZR.renderPending);
+              !Ti && qR && (Ti = !0, performance.mark(HZ));
+              if (Zf === ui) return;
+              const iR = null !== (JR = null === ZR || void 0 === ZR ? void 0 : ZR.firstView) && void 0 !== JR ? JR : pG._.NotYet;
+              if (Di && iR === pG._.NotYet) return;
+              if (Fi && (!0 !== (null === (yR = (0, dR.l)()) || void 0 === yR ? void 0 : yR.isSessionLive) || !qR)) return;
+              var fR;
+              Zf = ui, wf.shown(), Di && null !== ri && function(RR, JR) {
+                let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : KG.i;
+                const yR = Array.from(JR).filter(lt).slice(0, Bt);
+                if ("" === RR || 0 === yR.length) return;
+                const tR = gt(GR).filter((JR => JR.game !== RR));
+                GR.setItem(Xt, [{
+                  game: RR,
+                  codes: yR
+                }, ...tR].slice(0, Mt))
+              }(ri.game, null !== (fR = RR.firstViewTerrainCodes()) && void 0 !== fR ? fR : []);
+              const VR = ui;
               if (setTimeout((() => {
-                  cc === tW && (0, AW.k)()
-                }), 0), null === (EW = pL) || void 0 === EW || EW.playable(), function() {
-                  clearTimeout(UL), UL = setTimeout((() => {
-                    It() && eZ((WW => {
+                  ui === VR && (0, eR.q)()
+                }), 0), null === (tR = oq) || void 0 === tR || tR.playable(), function() {
+                  clearTimeout(eq), eq = setTimeout((() => {
+                    kV() && NK((RR => {
                       let {
-                        prefetchWorldgenWorker: iW
-                      } = WW;
-                      iW()
+                        prefetchWorldgenWorker: JR
+                      } = RR;
+                      JR()
                     }))
-                  }), rP)
-                }(), Fc) return;
-              Fc = !0, Nw.shown(), performance.mark(DP), (0, gN.t)("render") && Promise.all([OW.e(91), OW.e(57)]).then((() => OW(5419))).then((WW => {
+                  }), YZ)
+                }(), Fi) return;
+              Fi = !0, tf.shown(), performance.mark(DZ), (0, Du.n)("render") && Promise.all([GR.e(91), GR.e(57)]).then((() => GR(5539))).then((RR => {
                 let {
-                  renderDebugPlayable: iW
-                } = WW;
-                iW()
-              }), (WW => {
-                console.warn("The render debug topic didn't load", WW)
+                  renderDebugPlayable: JR
+                } = RR;
+                JR()
+              }), (RR => {
+                console.warn("The render debug topic didn't load", RR)
               }));
-              const ZW = Math.round(performance.now()),
-                xW = WW.readViewQueuedPrograms();
-              null !== xW && (0, AW.p)("wasm_view_links", ZW, (0, jW.Cb)(xW));
-              const lW = null === mw || null === iw ? 0 : Math.max(0, iw - mw),
-                bW = null === mw ? 0 : Math.max(0, ZW - mw),
-                UW = gc ? WW.readFirstViewWait(lW, bW) : null;
-              null !== UW && (0, AW.o)(UW);
-              if (gc && cW !== HO.S.Drawn) {
-                const iW = cW === HO.S.HeldBackstop ? "held_draws" : "long",
+              const KR = Math.round(performance.now()),
+                wR = RR.readViewQueuedPrograms();
+              null !== wR && (0, eR.y)("wasm_view_links", KR, (0, LR.Fb)(wR));
+              const rR = null === Gf || null === Rf ? 0 : Math.max(0, Rf - Gf),
+                aR = null === Gf ? 0 : Math.max(0, KR - Gf),
+                nR = Di ? RR.readFirstViewWait(rR, aR) : null;
+              null !== nR && (0, eR.v)(nR);
+              if (Di && iR !== pG._.Drawn) {
+                const JR = iR === pG._.HeldBackstop ? "held_draws" : "long",
                   {
-                    cause: OW
-                  } = tZ(WW);
-                if (console.warn(`${nP} playable at ${ZW} ms on the first view's ${iW} backstop, ${OW}: it wasn't drawn whole in time`), (0, AW.p)("wasm_view_backstop", ZW, `${iW}:${OW}`), "long" === iW) {
-                  var kW, sW;
-                  const iW = null !== (kW = null === (sW = jc) || void 0 === sW ? void 0 : sW.game) && void 0 !== kW ? kW : "";
-                  Ew = new Tm.e((() => {
+                    cause: GR
+                  } = fK(RR);
+                if (console.warn(`${pZ} playable at ${KR} ms on the first view's ${JR} backstop, ${GR}: it wasn't drawn whole in time`), (0, eR.y)("wasm_view_backstop", KR, `${JR}:${GR}`), "long" === JR) {
+                  var UR, WR;
+                  const JR = null !== (UR = null === (WR = ri) || void 0 === WR ? void 0 : WR.game) && void 0 !== UR ? UR : "";
+                  yf = new My.d((() => {
                     const {
-                      cause: OW,
-                      census: mW
-                    } = tZ(WW);
-                    (0, xm.reportFirstViewNoTerrain)(iW, OW, mW, tL), (0, Bi.u)("noTerrain")
+                      cause: GR,
+                      census: yR
+                    } = fK(RR);
+                    (0, Vy.reportFirstViewNoTerrain)(JR, GR, yR, qq), (0, zJ.t)("noTerrain")
                   }))
                 }
-              } else console.info(`${nP} playable at ${ZW} ms${gc?"":" (no renderer)"}`);
-              setTimeout(Cc, 0), (0, ri.f)().catch((WW => {
-                console.error(`${nP} item sprites didn't load, so item particles show the missing texture`, WW)
-              })), aE.c.warm()
-            }(WW), xW && null !== cc && 0 !== (WW.headerWord(nO.M.LoadSteps) & nO.Y.MeshLanded) && (ww = cc), (0, rE.g)(null !== cc && ww === cc && Lw !== cc), (0, rE.j)(null !== cc));
-          (0, RO.L)(WW, {
-            worldgen: ML,
-            mesh: SL
+              } else console.info(`${pZ} playable at ${KR} ms${Di?"":" (no renderer)"}`);
+              setTimeout(Ii, 0), (0, kJ.d)().catch((RR => {
+                console.error(`${pZ} item sprites didn't load, so item particles show the missing texture`, RR)
+              })), Yt.b.warm()
+            }(RR), wR && null !== ui && 0 !== (RR.headerWord(gG.L.LoadSteps) & gG.ab.MeshLanded) && (qf = ui), (0, kt.m)(null !== ui && qf === ui && Zf !== ui), (0, kt.o)(null !== ui));
+          (0, jG.K)(RR, {
+            worldgen: nq,
+            mesh: Wq
           }),
-          function(WW) {
-            WW.forEachEvent(lE);
-            for (const iW of xE) try {
-              (0, PE.c)(iW)
-            } catch (bW) {
-              if ((0, uO.j)(bW)) {
-                WW.crashOn(RO.j, bW);
+          function(RR) {
+            RR.forEachEvent(Vt);
+            for (const JR of ft) try {
+              (0, yt.b)(JR)
+            } catch (aR) {
+              if ((0, bG.h)(aR)) {
+                RR.crashOn(jG.g, aR);
                 break
               }
-              console.error(`${cE} an input action listener threw`, bW)
+              console.error(`${ut} an input action listener threw`, aR)
             }
-            xE.length = 0
-          }(WW), EW && (0, wO.d)();
-          return !WW.isStopped
-        }(WW, iW, "all" === mW || NW, EW)
+            ft.length = 0
+          }(RR), tR && (0, qG.d)();
+          return !RR.isStopped
+        }(RR, JR, "all" === yR || uR, tR)
       } finally {
-        FL = NW, NW || (GL = performance.now(), Cw())
+        Qq = uR, uR || (jq = performance.now(), zf())
       }
     }
 
-    function EZ(WW) {
-      console.error(`${nP} a frame-start listener threw`, WW)
+    function yK(RR) {
+      console.error(`${pZ} a frame-start listener threw`, RR)
     }
 
-    function NZ() {
-      var WW, iW, OW, mW;
-      null === (WW = uL) || void 0 === WW || WW.drain(zP, FP), null === (iW = gL) || void 0 === iW || iW.drain(zP), null === (OW = DL) || void 0 === OW || OW.drain(performance.now()), fc(zP), null === (mW = eL) || void 0 === mW || mW.drain()
+    function tK() {
+      var RR, JR, GR, yR;
+      null === (RR = gq) || void 0 === RR || RR.drain(kZ, QZ), null === (JR = Nq) || void 0 === JR || JR.drain(kZ), null === (GR = Dq) || void 0 === GR || GR.drain(performance.now()), Pi(kZ), null === (yR = Oq) || void 0 === yR || yR.drain()
     }
 
-    function PZ(WW) {
-      console.error(`${nP} a before-frame listener threw`, WW)
+    function uK(RR) {
+      console.error(`${pZ} a before-frame listener threw`, RR)
     }
 
-    function LZ(WW) {
-      var iW, OW;
-      const mW = NL;
-      if (null === mW) return;
-      if (mW.isStopped || Mw || (0, AN.c)()) return void Nw.shown();
-      const EW = Nw.end(WW, performance.now());
-      if (null === EW) return;
+    function ZK(RR) {
+      var JR, GR;
+      const yR = Gq;
+      if (null === yR) return;
+      if (yR.isStopped || Wf || (0, wu.c)()) return void tf.shown();
+      const tR = tf.end(RR, performance.now());
+      if (null === tR) return;
       const {
-        cause: NW,
-        census: PW,
-        loadSteps: LW
-      } = tZ(mW), cW = {
-        cause: NW,
-        bound: 0 !== (LW & nO.V.PlayerBound),
-        preload: 0 !== (LW & nO.V.JoinPreload),
-        startupLoaded: AZ(),
-        renderPending: null !== (iW = null === (OW = mW.lastHeader) || void 0 === OW ? void 0 : OW.renderPending) && void 0 !== iW ? iW : 0,
-        wait: mW.readFirstViewWait(0, 0),
-        canvasEmpty: null !== Gc && (0, Jm.f)(Gc.canvas)
+        cause: uR,
+        census: ZR,
+        loadSteps: qR
+      } = fK(yR), iR = {
+        cause: uR,
+        bound: 0 !== (qR & gG.Y.PlayerBound),
+        preload: 0 !== (qR & gG.Y.JoinPreload),
+        startupLoaded: rK(),
+        renderPending: null !== (JR = null === (GR = yR.lastHeader) || void 0 === GR ? void 0 : GR.renderPending) && void 0 !== JR ? JR : 0,
+        wait: yR.readFirstViewWait(0, 0),
+        canvasEmpty: null !== di && (0, By.e)(di.canvas)
       };
-      cW.bound && null === cW.wait && console.warn(`${nP} the first view's wait couldn't be read as the load ended: its report says lacked none`), (0, xm.reportFirstViewUnshown)(Pw, EW, cW, PW, tL), "hidden" !== WW && "pagehide" !== WW || (0, xm.flushCrashReports)(Zi.d)
+      iR.bound && null === iR.wait && console.warn(`${pZ} the first view's wait couldn't be read as the load ended: its report says lacked none`), (0, Vy.reportFirstViewUnshown)(uf, tR, iR, ZR, qq), "hidden" !== RR && "pagehide" !== RR || (0, Vy.flushCrashReports)(KJ.d)
     }
 
-    function cZ() {
-      document.hidden ? (xw = !0, LZ("hidden")) : Nw.pageShown(performance.now())
+    function qK() {
+      document.hidden ? (Kf = !0, ZK("hidden")) : tf.pageShown(performance.now())
     }
 
-    function wZ() {
-      LZ(document.hidden ? "hidden" : "pagehide")
+    function iK() {
+      ZK(document.hidden ? "hidden" : "pagehide")
     }
 
-    function tZ(WW) {
-      const iW = (0, qW.f)(),
-        OW = (0, qW.p)(),
-        mW = null === iW || null === OW ? null : OW.readDrawCensus(iW.api),
-        EW = WW.headerWord(nO.M.LoadSteps);
+    function fK(RR) {
+      const JR = (0, dR.l)(),
+        GR = (0, dR.u)(),
+        yR = null === JR || null === GR ? null : GR.readDrawCensus(JR.api),
+        tR = RR.headerWord(gG.L.LoadSteps);
       return {
-        cause: (0, Tm.m)(EW, mW),
-        census: mW,
-        loadSteps: EW
+        cause: (0, My.l)(tR, yR),
+        census: yR,
+        loadSteps: tR
       }
     }
-    const ZZ = {
+    const VK = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -8826,550 +8534,550 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function xZ(WW) {
-      var iW;
-      if (Fc) return;
-      if (null === iw && AZ() && (iw = performance.now()), null === cc || 0 === (WW.headerWord(nO.M.LoadSteps) & nO.V.PlayerBound) ? mw = null : mw ??= performance.now(), null === tc && null === cc) return;
-      null === iw || Ow || (Ow = !0, (0, AW.p)("wasm_startup_loaded", iw));
-      let OW = 0;
-      null !== cc ? OW = -1 : !0 === (null === (iW = hc) || void 0 === iW ? void 0 : iW.activated) && (OW = ~nO.Y.TerrainDrawn);
-      const mW = WW.headerWord(nO.M.LoadSteps) & OW & ~Ww;
-      if (0 === mW) return;
-      Ww |= mW;
-      const EW = performance.now();
-      var NW, PW, LW;
-      0 !== (mW & nO.Y.PlayerChunk) && (Nw.playerChunk(EW, document.hidden), Pw = null !== (NW = null !== (PW = null === (LW = jc) || void 0 === LW ? void 0 : LW.game) && void 0 !== PW ? PW : Zc) && void 0 !== NW ? NW : "", (0, xm.warmCrashCounts)());
-      for (const [cW, wW] of Object.entries(ZZ)) 0 !== (mW & nO.Y[cW]) && (0, AW.p)(wW, EW)
+    function KK(RR) {
+      var JR;
+      if (Fi) return;
+      if (null === Rf && rK() && (Rf = performance.now()), null === ui || 0 === (RR.headerWord(gG.L.LoadSteps) & gG.Y.PlayerBound) ? Gf = null : Gf ??= performance.now(), null === qi && null === ui) return;
+      null === Rf || Jf || (Jf = !0, (0, eR.y)("wasm_startup_loaded", Rf));
+      let GR = 0;
+      null !== ui ? GR = -1 : !0 === (null === (JR = Bi) || void 0 === JR ? void 0 : JR.activated) && (GR = ~gG.ab.TerrainDrawn);
+      const yR = RR.headerWord(gG.L.LoadSteps) & GR & ~si;
+      if (0 === yR) return;
+      si |= yR;
+      const tR = performance.now();
+      var uR, ZR, qR;
+      0 !== (yR & gG.ab.PlayerChunk) && (tf.playerChunk(tR, document.hidden), uf = null !== (uR = null !== (ZR = null === (qR = ri) || void 0 === qR ? void 0 : qR.game) && void 0 !== ZR ? ZR : ii) && void 0 !== uR ? uR : "", (0, Vy.warmCrashCounts)());
+      for (const [iR, fR] of Object.entries(VK)) 0 !== (yR & gG.ab[iR]) && (0, eR.y)(fR, tR)
     }
 
-    function lZ() {
-      return gc && AZ()
+    function wK() {
+      return Di && rK()
     }
 
-    function AZ() {
-      return VL && bZ()
+    function rK() {
+      return Hq && eK()
     }
 
-    function bZ() {
-      return null === uL || uL.startupDone
+    function eK() {
+      return null === gq || gq.startupDone
     }
 
-    function jZ(WW, iW) {
-      const OW = kL;
-      (null === OW || void 0 === OW ? void 0 : OW.conn) === WW ? UZ(OW, iW) : Ec++
+    function aK(RR, JR) {
+      const GR = aq;
+      (null === GR || void 0 === GR ? void 0 : GR.conn) === RR ? LK(GR, JR) : Ji++
     }
 
-    function UZ(WW, iW) {
+    function LK(RR, JR) {
       const {
-        ws: OW
-      } = WW;
-      return OW.readyState === WebSocket.OPEN ? (OW.send(iW), !0) : OW.readyState === WebSocket.CONNECTING && WW.pendingBytes + iW.byteLength <= RP ? (WW.pending.push(iW.slice()), WW.pendingBytes += iW.byteLength, !0) : (Ec++, !1)
+        ws: GR
+      } = RR;
+      return GR.readyState === WebSocket.OPEN ? (GR.send(JR), !0) : GR.readyState === WebSocket.CONNECTING && RR.pendingBytes + JR.byteLength <= SZ ? (RR.pending.push(JR.slice()), RR.pendingBytes += JR.byteLength, !0) : (Ji++, !1)
     }
 
-    function kZ() {
-      return null !== cc && lZ()
+    function nK() {
+      return null !== ui && wK()
     }
 
-    function sZ() {
-      var WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW, xW, lW, AW, bW, jW;
-      Mw = !0, Zw.stop(), lw.end(), (0, VN.endLookDebugTake)(), BN = null, kt(), (0, BW.K)().unlockPointer(), (0, BW.G)(null), null === (WW = nL) || void 0 === WW || WW(), nL = null, null === (iW = (0, qW.p)()) || void 0 === iW || iW.followCursorAim(null), (0, wO.G)(), (0, qW.e)(), wL.stop(), null === (OW = rc) || void 0 === OW || OW(), rc = null, null === (mW = zc) || void 0 === mW || mW(), zc = null, null === (EW = Ic) || void 0 === EW || EW.stop(), Ic = null, (0, hm.o)(null), null === (NW = sL) || void 0 === NW || NW(), sL = null, null === (PW = ML) || void 0 === PW || PW.stop(), ML = null, null === (LW = SL) || void 0 === LW || LW.stop(), SL = null, null !== (cW = LL) && void 0 !== cW && null !== (wW = cW.textures) && void 0 !== wW && wW.assets && (0, ON.i)(null), null === (tW = LL) || void 0 === tW || tW.stop(), LL = null, cL = null;
-      const UW = YL;
-      YL = null, UW && (UW.stop(), nZ(UW)), null === (ZW = gL) || void 0 === ZW || ZW.dispose(), gL = null, null === (xW = DL) || void 0 === xW || xW.dispose(), DL = null, uL = null, null === (lW = dL) || void 0 === lW || lW(), dL = null, null === (AW = hL) || void 0 === AW || AW(), hL = null, null !== rL && (clearTimeout(rL), rL = null), null === (bW = HL) || void 0 === bW || bW.stop(), HL = null, gw(), NN.d.release(), Zt();
-      const kW = eL;
-      eL = null;
+    function UK() {
+      var RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR, VR, KR, wR, rR, eR, aR, LR;
+      Wf = !0, Vf.stop(), wf.end(), (0, ou.endLookDebugTake)(), zu = null, UV(), (0, jR.E)().unlockPointer(), (0, jR.B)(null), null === (RR = pq) || void 0 === RR || RR(), pq = null, null === (JR = (0, dR.u)()) || void 0 === JR || JR.followCursorAim(null), (0, qG.I)(), (0, dR.i)(), Zq.stop(), null === (GR = ki) || void 0 === GR || GR(), ki = null, null === (yR = Qi) || void 0 === yR || yR(), Qi = null, null === (tR = Ei) || void 0 === tR || tR.stop(), Ei = null, (0, ly.q)(null), null === (uR = Lq) || void 0 === uR || uR(), Lq = null, null === (ZR = nq) || void 0 === ZR || ZR.stop(), nq = null, null === (qR = Wq) || void 0 === qR || qR.stop(), Wq = null, null !== (iR = tq) && void 0 !== iR && null !== (fR = iR.textures) && void 0 !== fR && fR.assets && (0, Ru.j)(null), null === (VR = tq) || void 0 === VR || VR.stop(), tq = null, uq = null;
+      const nR = Aq;
+      Aq = null, nR && (nR.stop(), bK(nR)), null === (KR = Nq) || void 0 === KR || KR.dispose(), Nq = null, null === (wR = Dq) || void 0 === wR || wR.dispose(), Dq = null, gq = null, null === (rR = vq) || void 0 === rR || rR(), vq = null, null === (eR = Bq) || void 0 === eR || eR(), Bq = null, null !== Yq && (clearTimeout(Yq), Yq = null), null === (aR = lq) || void 0 === aR || aR.stop(), lq = null, Hf(), yu.d.release(), KV();
+      const UR = Oq;
+      Oq = null;
       try {
-        null === kW || void 0 === kW || kW.dispose()
-      } catch (sW) {
-        console.warn(`${nP} the sky's images didn't release`, sW)
-      }(0, zE.d)(null), null === (jW = mL) || void 0 === jW || jW.pagePreviews().endSession(null === (0, gi.p)())
+        null === UR || void 0 === UR || UR.dispose()
+      } catch (WR) {
+        console.warn(`${pZ} the sky's images didn't release`, WR)
+      }(0, Qt.f)(null), null === (LR = Rq) || void 0 === LR || LR.pagePreviews().endSession(null === (0, HJ.i)())
     }
 
-    function MZ(WW, iW) {
-      var OW, mW;
-      const EW = null !== (OW = null === (mW = YL) || void 0 === mW ? void 0 : mW.details()) && void 0 !== OW ? OW : {},
-        NW = WW.site === oP || WW.site === dP || WW.site === xm.RENDER_RELOAD_SITE || WW.site === eP ? WW.error instanceof WebAssembly.RuntimeError || WW.error instanceof pO.e : !(0, BO.s)(WW.error) && (0, RO.I)(WW);
-      NW && WW.error instanceof Error && (0, gi.V)(WW.error);
-      const PW = NW || WW.site === RO.y ? (0, xm.readTrap)(WW.error) : null,
-        LW = null !== PW && (0, dO.e)(PW.kind, PW.refusedBytes) ? PW.refusedBytes : 0,
-        cW = (0, cm.m)(),
-        wW = null === yL ? (0, RE.p)(function() {
+    function WK(RR, JR) {
+      var GR, yR;
+      const tR = null !== (GR = null === (yR = Aq) || void 0 === yR ? void 0 : yR.details()) && void 0 !== GR ? GR : {},
+        uR = RR.site === bZ || RR.site === vZ || RR.site === Vy.RENDER_RELOAD_SITE || RR.site === OZ ? RR.error instanceof WebAssembly.RuntimeError || RR.error instanceof cG.e : !(0, zG.s)(RR.error) && (0, jG.E)(RR);
+      uR && RR.error instanceof Error && (0, HJ.J)(RR.error);
+      const ZR = uR || RR.site === jG.r ? (0, Vy.readTrap)(RR.error) : null,
+        qR = null !== ZR && (0, OG.c)(ZR.kind, ZR.refusedBytes) ? ZR.refusedBytes : 0,
+        iR = (0, Zy.r)(),
+        fR = null === Cq ? (0, jt.v)(function() {
           try {
-            return (0, gi.v)().buffer.byteLength
+            return (0, HJ.m)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), LW, cW) : yL.ceilingMayRefuse(LW, cW),
-        tW = LW > 0 && !wW && dt() && !(0, AN.c)() ? (0, cm.p)() : void 0;
-      var ZW;
-      if (sZ(), (0, AN.c)()) return bw.releaseNow(), console.warn(`${nP} the session stopped at ${WW.site} as the page reloads`, WW.error), void((0, BO.s)(WW.error) || (null === (ZW = WW.header) || void 0 === ZW ? void 0 : ZW.lastError) === HO.D.CoreBusy || (0, xm.reportStoppedCore)(WW, iW, PW, {
-        memoryDetails: EW,
-        memoryStep: tW
+        }(), qR, iR) : Cq.ceilingMayRefuse(qR, iR),
+        VR = qR > 0 && !fR && NV() && !(0, wu.c)() ? (0, Zy.t)() : void 0;
+      var KR;
+      if (UK(), (0, wu.c)()) return ef.releaseNow(), console.warn(`${pZ} the session stopped at ${RR.site} as the page reloads`, RR.error), void((0, zG.s)(RR.error) || (null === (KR = RR.header) || void 0 === KR ? void 0 : KR.lastError) === pG.K.CoreBusy || (0, Vy.reportStoppedCore)(RR, JR, ZR, {
+        memoryDetails: tR,
+        memoryStep: VR
       }));
-      (0, xm.showCrash)(WW, iW, PW, {
-        memoryDetails: EW,
-        memoryStep: tW
+      (0, Vy.showCrash)(RR, JR, ZR, {
+        memoryDetails: tR,
+        memoryStep: VR
       })
     }
 
-    function KZ(WW) {
-      var iW, OW;
+    function AK(RR) {
+      var JR, GR;
       let {
-        text: mW,
-        reload: EW,
-        stillBlocked: NW
-      } = WW;
-      if (sw) return;
-      sw = !0, (0, km.$)(), null === (iW = nc) || void 0 === iW || iW.abort(), nc = null, NN.d.release();
-      const PW = jw ? null !== (OW = mW.cancel) && void 0 !== OW ? OW : "general:back" : null;
-      !async function(WW, iW, OW) {
-        let mW = WW;
-        for (; await ni(mW) && iW;) {
-          if (null === OW || AO(!1) || AO(!0)) return void(0, Zi.j)();
-          mW = OW
+        text: yR,
+        reload: tR,
+        stillBlocked: uR
+      } = RR;
+      if (Uf) return;
+      Uf = !0, (0, Ly.W)(), null === (JR = gi) || void 0 === JR || JR.abort(), gi = null, yu.d.release();
+      const ZR = af ? null !== (GR = yR.cancel) && void 0 !== GR ? GR : "general:back" : null;
+      !async function(RR, JR, GR) {
+        let yR = RR;
+        for (; await bJ(yR) && JR;) {
+          if (null === GR || wG(!1) || wG(!0)) return void(0, KJ.j)();
+          yR = GR
         }
-        jw && (0, Zi.f)("/")
+        af && (0, KJ.f)("/")
       }({
-        ...mW,
-        cancel: PW
-      }, EW, null === NW ? null : {
-        ...NW,
-        cancel: PW
+        ...yR,
+        cancel: ZR
+      }, tR, null === uR ? null : {
+        ...uR,
+        cancel: ZR
       })
     }
 
-    function SZ(WW, iW) {
-      const OW = performance.now();
-      return !(OW - Oc[WW] < GP) && (Oc[WW] = OW, console.warn(`${nP} ${iW}`), !0)
+    function CK(RR, JR) {
+      const GR = performance.now();
+      return !(GR - hq[RR] < jZ) && (hq[RR] = GR, console.warn(`${pZ} ${JR}`), !0)
     }
 
-    function YZ(WW) {
+    function XK(RR) {
       const {
-        input: iW,
-        net: OW,
-        worker: mW
-      } = WW.rings, EW = WW.optionsDropped, NW = iW.dropped + EW + OW.dropped + mW.dropped + Ec;
-      NW !== mc && SZ("dropped", `${NW} records dropped so far (input ${iW.dropped}, options ${EW}, net ${OW.dropped}, worker ${mW.dropped}, net-out ${Ec})`) && (mc = NW)
+        input: JR,
+        net: GR,
+        worker: yR
+      } = RR.rings, tR = RR.optionsDropped, uR = JR.dropped + tR + GR.dropped + yR.dropped + Ji;
+      uR !== Ri && CK("dropped", `${uR} records dropped so far (input ${JR.dropped}, options ${tR}, net ${GR.dropped}, worker ${yR.dropped}, net-out ${Ji})`) && (Ri = uR)
     }
 
-    function yZ() {
-      var WW, iW;
-      const OW = (0, Um.f)();
-      if (null === OW) return null;
-      const mW = (0, Ym.o)(OW);
+    function MK() {
+      var RR, JR;
+      const GR = (0, ay.g)();
+      if (null === GR) return null;
+      const yR = (0, Cy.v)(GR);
       return {
-        ...mW,
-        horizontal: Math.min(mW.horizontal, null !== (WW = null === (iW = YL) || void 0 === iW ? void 0 : iW.shedDistanceInUse()) && void 0 !== WW ? WW : 1 / 0)
+        ...yR,
+        horizontal: Math.min(yR.horizontal, null !== (RR = null === (JR = Aq) || void 0 === JR ? void 0 : JR.shedDistanceInUse()) && void 0 !== RR ? RR : 1 / 0)
       }
     }
-    const TZ = new WeakSet;
+    const BK = new WeakSet;
 
-    function JZ(WW) {
-      var iW, OW;
+    function lK(RR) {
+      var JR, GR;
       return {
-        samples: gc ? Rc : null,
-        sunShadows: WW,
-        renderDistance: null !== (iW = null === (OW = yZ()) || void 0 === OW ? void 0 : OW.horizontal) && void 0 !== iW ? iW : null
-      }
-    }
-
-    function hZ(WW) {
-      Zc = WW, (0, km.O)()
-    }
-
-    function HZ() {
-      var WW, iW, OW;
-      const mW = yZ();
-      return {
-        ...null === (WW = YL) || void 0 === WW ? void 0 : WW.pageKillSnapshot(),
-        renderDistance: null !== (iW = null === mW || void 0 === mW ? void 0 : mW.horizontal) && void 0 !== iW ? iW : null,
-        renderDistanceVertical: null !== (OW = null === mW || void 0 === mW ? void 0 : mW.vertical) && void 0 !== OW ? OW : null,
-        chunkCap: TL,
-        budgetBasis: JL,
-        renderBackend: (0, AN.B)(),
-        adPreload: xc,
-        ...(0, sm.b)(Zc)
+        samples: Di ? ji : null,
+        sunShadows: RR,
+        renderDistance: null !== (JR = null === (GR = MK()) || void 0 === GR ? void 0 : GR.horizontal) && void 0 !== JR ? JR : null
       }
     }
 
-    function nZ(WW) {
-      var iW;
-      console.info(`${nP} wasm memory at the session's end`, WW.details());
+    function pK(RR) {
+      ii = RR, (0, Ly.G)()
+    }
+
+    function gK() {
+      var RR, JR, GR;
+      const yR = MK();
+      return {
+        ...null === (RR = Aq) || void 0 === RR ? void 0 : RR.pageKillSnapshot(),
+        renderDistance: null !== (JR = null === yR || void 0 === yR ? void 0 : yR.horizontal) && void 0 !== JR ? JR : null,
+        renderDistanceVertical: null !== (GR = null === yR || void 0 === yR ? void 0 : yR.vertical) && void 0 !== GR ? GR : null,
+        chunkCap: Xq,
+        budgetBasis: Mq,
+        renderBackend: (0, wu.M)(),
+        adPreload: fi,
+        ...(0, ny.d)(ii)
+      }
+    }
+
+    function bK(RR) {
+      var JR;
+      console.info(`${pZ} wasm memory at the session's end`, RR.details());
       const {
-        wasmMainMiB: OW,
-        wasmWorkersMiB: mW,
-        peakStoredChunks: EW
-      } = WW.pageKillSnapshot(), NW = navigator.deviceMemory;
-      (0, GO.logClientMeasurement)("wasm_memory_end", {
-        wasmMainMiB: OW,
-        wasmWorkersMiB: mW,
-        peakStoredChunks: EW
+        wasmMainMiB: GR,
+        wasmWorkersMiB: yR,
+        peakStoredChunks: tR
+      } = RR.pageKillSnapshot(), uR = navigator.deviceMemory;
+      (0, dG.logClientMeasurement)("wasm_memory_end", {
+        wasmMainMiB: GR,
+        wasmWorkersMiB: yR,
+        peakStoredChunks: tR
       }, {
         client: "wasm",
-        renderBackend: null !== (iW = (0, AN.B)()) && void 0 !== iW ? iW : "none",
-        os: (0, Mm.getOperatingSystem)(),
-        deviceMemory: String(null !== NW && void 0 !== NW ? NW : "unreported")
+        renderBackend: null !== (JR = (0, wu.M)()) && void 0 !== JR ? JR : "none",
+        os: (0, Uy.getOperatingSystem)(),
+        deviceMemory: String(null !== uR && void 0 !== uR ? uR : "unreported")
       })
     }
 
-    function uZ(WW, iW) {
-      if (!WW.isStopped) try {
-        iW()
-      } catch (OW) {
-        WW.crash(RO.z, OW)
+    function vK(RR, JR) {
+      if (!RR.isStopped) try {
+        JR()
+      } catch (GR) {
+        RR.crash(jG.v, GR)
       }
     }
 
-    function oZ() {
-      return KL ??= OW.e(84).then((() => OW(54840))).catch((WW => {
-        throw KL = null, WW
-      })), KL
+    function OK() {
+      return Uq ??= GR.e(84).then((() => GR(54695))).catch((RR => {
+        throw Uq = null, RR
+      })), Uq
     }
-    async function dZ() {
+    async function xK() {
       const {
-        createWorldgenWorker: WW,
-        worldgenWorkerReady: iW
-      } = await oZ();
-      return await iW(), WW
+        createWorldgenWorker: RR,
+        worldgenWorkerReady: JR
+      } = await OK();
+      return await JR(), RR
     }
 
-    function eZ(WW) {
-      var iW;
-      null === (iW = KL) || void 0 === iW || iW.then(WW, (() => {}))
+    function NK(RR) {
+      var JR;
+      null === (JR = Uq) || void 0 === JR || JR.then(RR, (() => {}))
     }
 
-    function vZ() {
-      return performance.now() - Math.max(GL, IL) >= IP
+    function DK() {
+      return performance.now() - Math.max(jq, dq) >= dZ
     }
 
-    function gZ(WW) {
-      const iW = document.hidden || aL ? "all" : "budget";
-      aL = !0;
-      const OW = mZ(WW, !1, iW);
-      var mW;
-      OW && (YZ(WW), null === (mW = YL) || void 0 === mW || mW.afterFrame());
-      return OW
+    function HK(RR) {
+      const JR = document.hidden || Eq ? "all" : "budget";
+      Eq = !0;
+      const GR = GK(RR, !1, JR);
+      var yR;
+      GR && (XK(RR), null === (yR = Aq) || void 0 === yR || yR.afterFrame());
+      return GR
     }
 
-    function DZ(WW) {
-      WW.isStopped || 0 === WW.rings.net.cursor || vZ() && !gZ(WW) || WW.rings.net.cursor > 0 && performance.now() - IL >= IP / 2 && function(WW) {
-        rL ??= setTimeout((() => {
-          rL = null, DZ(WW)
-        }), IP)
-      }(WW)
+    function oK(RR) {
+      RR.isStopped || 0 === RR.rings.net.cursor || DK() && !HK(RR) || RR.rings.net.cursor > 0 && performance.now() - dq >= dZ / 2 && function(RR) {
+        Yq ??= setTimeout((() => {
+          Yq = null, oK(RR)
+        }), dZ)
+      }(RR)
     }
 
-    function VZ(WW, iW) {
-      return async function(WW, iW, OW) {
+    function cK(RR, JR) {
+      return async function(RR, JR, GR) {
         let {
-          stop: mW,
-          stillWanted: EW,
-          beforeReload: NW
-        } = OW;
-        const PW = await (0, YE.l)(WW, {
-          stillWanted: EW,
+          stop: yR,
+          stillWanted: tR,
+          beforeReload: uR
+        } = GR;
+        const ZR = await (0, Ct.l)(RR, {
+          stillWanted: tR,
           beforeReload: async () => {
-            mW(), await Promise.all([(0, xm.flushCrashReports)(Zi.d), null === NW || void 0 === NW ? void 0 : NW()])
+            yR(), await Promise.all([(0, Vy.flushCrashReports)(KJ.d), null === uR || void 0 === uR ? void 0 : uR()])
           },
-          reload: Zi.j
+          reload: KJ.j
         });
-        return PW || iW(), PW
-      }(WW, iW, {
+        return ZR || JR(), ZR
+      }(RR, JR, {
         ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        stop: sZ
+        stop: UK
       })
     }
-    let pZ = !1;
+    let PK = !1;
 
-    function fZ() {
-      return pZ = !0, async function(WW, iW, mW) {
+    function IK() {
+      return PK = !0, async function(RR, JR, yR) {
         const {
-          gamePackSource: EW
-        } = await OW.e(132).then((() => OW(42537)));
-        await Bt.packStep(WW, ((OW, mW) => OW.packForGame(WW, EW(iW), mW)), mW)
+          gamePackSource: tR
+        } = await GR.e(132).then((() => GR(42579)));
+        await jV.packStep(RR, ((GR, yR) => GR.packForGame(RR, tR(JR), yR)), yR)
       }(...arguments)
     }
 
-    function CZ(WW) {
-      ! function(WW, iW) {
-        WW((WW => {
-          null === WW || void 0 === WW || WW.subscribe((WW => {
+    function mK(RR) {
+      ! function(RR, JR) {
+        RR((RR => {
+          null === RR || void 0 === RR || RR.subscribe((RR => {
             let {
-              pack: OW,
-              gameSource: mW
-            } = WW;
-            iW(null === mW || null === OW ? null : {
-              pack: OW,
-              source: "" === mW ? null : mW
+              pack: GR,
+              gameSource: yR
+            } = RR;
+            JR(null === yR || null === GR ? null : {
+              pack: GR,
+              source: "" === yR ? null : yR
             })
           }))
         }))
-      }(ft, WW)
+      }(mV, RR)
     }
-    let XZ = !1,
-      BZ = null,
-      qZ = !1,
-      RZ = !1;
+    let zK = !1,
+      SK = null,
+      jK = !1,
+      dK = !1;
 
-    function GZ() {
-      var WW;
-      XZ || (XZ = !0, Ji = (WW, iW) => (0, Ui.u)(ki.e.get().getCurrentLanguageCode(), WW, iW), hw("play", wi), (0, xW.o)(new Nx), LW.gameBridge.attach(QW), QZ().catch((() => {})), (0, qW.t)((WW => {
-        Ki(WW.setTextHost)
-      })), WW = rZ, uc.add(WW), function(WW) {
-        for (const iW of fL) WW(iW);
-        CL.add(WW)
-      }((WW => {
-        aZ(IZ[WW])
+    function EK() {
+      var RR;
+      zK || (zK = !0, pJ = (RR, JR) => (0, nJ.w)(UJ.g.get().getCurrentLanguageCode(), RR, JR), pf("play", fJ), (0, wR.q)(new tw), qR.gameBridge.attach(hR), sK().catch((() => {})), (0, dR.y)((RR => {
+        CJ(RR.setTextHost)
+      })), RR = QK, bi.add(RR), function(RR) {
+        for (const JR of cq) RR(JR);
+        Pq.add(RR)
+      }((RR => {
+        kK(YK[RR])
       })))
     }
-    const IZ = {
-      booted: NW.k.INITIALISE_NOA,
-      texturesIn: NW.k.REGISTRATION,
-      modelsIn: NW.k.SETUP_LIFEFORMS
+    const YK = {
+      booted: uR.j.INITIALISE_NOA,
+      texturesIn: uR.j.REGISTRATION,
+      modelsIn: uR.j.SETUP_LIFEFORMS
     };
 
-    function aZ(WW) {
-      cW.l.iZ("matchmakeAndPlayStepCompleted", {
-        step: WW,
+    function kK(RR) {
+      iR.n.JK("matchmakeAndPlayStepCompleted", {
+        step: RR,
         totalSubSteps: 1
       })
     }
 
-    function rZ(WW) {
-      if (!qZ) return;
+    function QK(RR) {
+      if (!jK) return;
       const {
-        gameNameWithVariation: iW,
-        lobbyName: OW
-      } = (0, xW.d)();
-      if (WW.code === mW.e.serverUpdating.code) return (new Nx).leaveLive(), void FZ(iW, OW);
-      VW.e.leftGame(iW, WW.code), cW.l.iZ("unwantedLeftGame", {
-        reason: zZ(WW),
-        requiresRefresh: WW.requiresRefresh,
-        canReconnect: null !== WW.reconnect,
-        automaticallyReconnect: WW.reconnecting,
-        canPlayAgain: WW.canPlayAgain,
-        gameNameWithVariation: iW,
-        lobbyName: OW
-      }), (new Nx).leaveLive()
+        gameNameWithVariation: JR,
+        lobbyName: GR
+      } = (0, wR.d)();
+      if (RR.code === yR.e.serverUpdating.code) return (new tw).leaveLive(), void TK(JR, GR);
+      PR.c.leftGame(JR, RR.code), iR.n.JK("unwantedLeftGame", {
+        reason: FK(RR),
+        requiresRefresh: RR.requiresRefresh,
+        canReconnect: null !== RR.reconnect,
+        automaticallyReconnect: RR.reconnecting,
+        canPlayAgain: RR.canPlayAgain,
+        gameNameWithVariation: JR,
+        lobbyName: GR
+      }), (new tw).leaveLive()
     }
 
-    function zZ(WW) {
-      return null !== WW.reasonKey ? {
-        translationKey: WW.reasonKey
-      } : "gameOrPluginKick" === WW.name ? (0, ui.d)(WW.reason) : `You have disconnected from the server.\n${WW.reason}`
+    function FK(RR) {
+      return null !== RR.reasonKey ? {
+        translationKey: RR.reasonKey
+      } : "gameOrPluginKick" === RR.name ? (0, vJ.b)(RR.reason) : `You have disconnected from the server.\n${RR.reason}`
     }
 
-    function FZ(WW, iW) {
-      var mW;
-      mW = (0, wW.F)(WW, iW), Promise.resolve().then((() => OW(1605))).then((WW => {
+    function TK(RR, JR) {
+      var yR;
+      yR = (0, fR.D)(RR, JR), Promise.resolve().then((() => GR(1663))).then((RR => {
         let {
-          navigatePreserveSearch: iW
-        } = WW;
-        iW(mW)
-      })).catch((WW => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", WW), (0, Zi.f)(mW)
+          navigatePreserveSearch: JR
+        } = RR;
+        JR(yR)
+      })).catch((RR => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", RR), (0, KJ.f)(yR)
       }))
     }
 
-    function QZ() {
-      return BZ ??= Promise.all([OW.e(85), OW.e(89), OW.e(86), OW.e(87), OW.e(88), OW.e(105), OW.e(102), OW.e(306), OW.e(127), OW.e(280), OW.e(254), OW.e(246), OW.e(55)]).then((() => OW(42495))).then((WW => {
+    function sK() {
+      return SK ??= Promise.all([GR.e(85), GR.e(89), GR.e(86), GR.e(87), GR.e(88), GR.e(105), GR.e(102), GR.e(306), GR.e(127), GR.e(280), GR.e(254), GR.e(246), GR.e(55)]).then((() => GR(42538))).then((RR => {
         try {
-          WW.attachPlayGameSources()
-        } catch (iW) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", iW),
-            function(WW) {
-              AL.then((iW => {
-                null === iW || iW.isStopped || Mw ? console.warn(`${nP} the play sources threw as they attached, after the client stopped`, WW) : MZ({
-                  site: eP,
-                  error: WW,
+          RR.attachPlayGameSources()
+        } catch (JR) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", JR),
+            function(RR) {
+              Kq.then((JR => {
+                null === JR || JR.isStopped || Wf ? console.warn(`${pZ} the play sources threw as they attached, after the client stopped`, RR) : WK({
+                  site: OZ,
+                  error: RR,
                   header: null
-                }, tL)
+                }, qq)
               }))
-            }(iW), iW
+            }(JR), JR
         }
-      }), (WW => {
-        throw BZ = null, new qW.b(WW)
-      })), BZ
+      }), (RR => {
+        throw SK = null, new dR.e(RR)
+      })), SK
     }
-    async function Wx(WW, iW) {
-      GZ(), pZ = !0, qZ = !0;
-      let OW = {
-          place: WW.place,
-          matchedAt: WW.matchedAt
+    async function hK(RR, JR) {
+      EK(), PK = !0, jK = !0;
+      let GR = {
+          place: RR.place,
+          matchedAt: RR.matchedAt
         },
-        PW = WW.place.gameNameWithVariation;
-      const LW = (0, ZW.f)();
-      let cW = null;
-      const wW = await ow({
+        ZR = RR.place.gameNameWithVariation;
+      const qR = (0, KR.e)();
+      let iR = null;
+      const fR = await Of({
         matchmake: async () => {
-          let iW = OW;
-          if (OW = null, null === iW) {
-            const OW = await WW.rematch();
-            if (OW.isError()) throw cW = OW.asError().forward(), new Error(OW.asError().message);
-            iW = {
-              place: OW.getValue(),
+          let JR = GR;
+          if (GR = null, null === JR) {
+            const GR = await RR.rematch();
+            if (GR.isError()) throw iR = GR.asError().forward(), new Error(GR.asError().message);
+            JR = {
+              place: GR.getValue(),
               matchedAt: performance.now()
             }
           }
-          PW = iW.place.gameNameWithVariation, await (0, bW.c)();
+          ZR = JR.place.gameNameWithVariation, await (0, aR.d)();
           return {
-            target: await (0, mi.c)(WW.userContext, iW.place, Ct(), LW),
-            matchedAt: iW.matchedAt,
-            freshMs: mi.b
+            target: await (0, yJ.f)(RR.userContext, JR.place, zV(), qR),
+            matchedAt: JR.matchedAt,
+            freshMs: yJ.c
           }
         },
-        pageReady: QZ,
-        onFailure: (WW, iW) => {
-          null === cW && function(WW, iW) {
-            (0, xm.reportPageJoinFailure)(WW, tL, iW)
-          }(WW, {
-            sinceJoinStartMs: iW,
-            game: PW
+        pageReady: sK,
+        onFailure: (RR, JR) => {
+          null === iR && function(RR, JR) {
+            (0, Vy.reportPageJoinFailure)(RR, qq, JR)
+          }(RR, {
+            sinceJoinStartMs: JR,
+            game: ZR
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => WW.userContext.invalidateTrafficCode(),
-        signal: iW
+        invalidateTrafficCode: () => RR.userContext.invalidateTrafficCode(),
+        signal: JR
       });
-      switch (wW.kind) {
+      switch (fR.kind) {
         case "joined":
-          if (LW) {
+          if (qR) {
             setTimeout((() => {
-              eW.ready()
+              DR.ready()
             }), 0);
             const {
-              game: WW
-            } = wW;
-            (0, ZW.t)((() => {
-              WW.endJoinAd() && ((0, AW.l)(), eW.adEnded())
+              game: RR
+            } = fR;
+            (0, KR.o)((() => {
+              RR.endJoinAd() && ((0, eR.u)(), DR.adEnded())
             }))
           }
-          return RZ || (RZ = !0, (0, gW.c)()), qZ ? (aZ(NW.k.CONNECT_TO_GAME_SERVER), aZ(NW.k.SHADER_PACK), function() {
-            var WW, iW;
-            return null !== (WW = null === (iW = pL) || void 0 === iW ? void 0 : iW.runsInJoinedGame()) && void 0 !== WW && WW
-          }() && (0, vW.i)(WW.userContext, PW).catch((WW => {
-            console.error("Failed to report the shader pack session", WW)
+          return dK || (dK = !0, (0, oR.d)()), jK ? (kK(uR.j.CONNECT_TO_GAME_SERVER), kK(uR.j.SHADER_PACK), function() {
+            var RR, JR;
+            return null !== (RR = null === (JR = oq) || void 0 === JR ? void 0 : JR.runsInJoinedGame()) && void 0 !== RR && RR
+          }() && (0, HR.f)(RR.userContext, ZR).catch((RR => {
+            console.error("Failed to report the shader pack session", RR)
           })), function() {
-            const WW = function() {
-              var WW, iW;
-              return null !== (WW = null === (iW = pL) || void 0 === iW ? void 0 : iW.couldntRunInJoinedGame()) && void 0 !== WW ? WW : null
+            const RR = function() {
+              var RR, JR;
+              return null !== (RR = null === (JR = oq) || void 0 === JR ? void 0 : JR.couldntRunInJoinedGame()) && void 0 !== RR ? RR : null
             }();
-            null !== WW && (0, vW.e)(WW)
-          }(), EW.b.value(void 0)) : Ex("The server ended the game as it joined");
+            null !== RR && (0, HR.e)(RR)
+          }(), tR.e.value(void 0)) : yw("The server ended the game as it joined");
         case "failed":
-          if (!wW.reloading) {
-            if (null !== cW) return cW;
-            if ((wW.error instanceof ii.n || wW.error instanceof ii.c) && wW.error.code === mW.e.serverUpdating.code) {
-              if (iW.aborted) return Ex("Left the game while it loaded");
+          if (!fR.reloading) {
+            if (null !== iR) return iR;
+            if ((fR.error instanceof JJ.m || fR.error instanceof JJ.b) && fR.error.code === yR.e.serverUpdating.code) {
+              if (JR.aborted) return yw("Left the game while it loaded");
               const {
-                gameNameWithVariation: WW,
-                lobbyName: OW
-              } = (0, xW.d)();
-              return FZ(WW, OW), Ex("The server is updating")
+                gameNameWithVariation: RR,
+                lobbyName: GR
+              } = (0, wR.d)();
+              return TK(RR, GR), yw("The server is updating")
             }
-            return wW.error instanceof ti.b ? EW.b.errorWithCode(wW.error.messageKey, NW.k.SHADER_PACK, {
+            return fR.error instanceof VJ.c ? tR.e.errorWithCode(fR.error.messageKey, uR.j.SHADER_PACK, {
               severity: "medium"
-            }) : EW.b.errorWithCode(function(WW) {
-              if (WW instanceof ii.z || WW instanceof CW.c) return WW.message;
-              if (ix(WW)) return (0, Wi.k)(WW.code, WW.serverText);
-              return Wi.e
-            }(wW.error), NW.k.CONNECT_TO_GAME_SERVER, {
-              error: Ox(wW.error) ? wW.error : void 0,
-              severity: mx(wW.error),
-              gameServerUnreachable: (0, Oi.d)(wW.error),
-              joinFailure: (0, Oi.f)(wW.error),
-              rematch: (0, pW.b)(wW.error),
-              gameRefused: (0, fW.c)(wW.error)
+            }) : tR.e.errorWithCode(function(RR) {
+              if (RR instanceof JJ.z || RR instanceof zR.g) return RR.message;
+              if (Rw(RR)) return (0, RJ.f)(RR.code, RR.serverText);
+              return RJ.c
+            }(fR.error), uR.j.CONNECT_TO_GAME_SERVER, {
+              error: Jw(fR.error) ? fR.error : void 0,
+              severity: Gw(fR.error),
+              gameServerUnreachable: (0, GJ.b)(fR.error),
+              joinFailure: (0, GJ.g)(fR.error),
+              rematch: (0, IR.e)(fR.error),
+              gameRefused: (0, mR.d)(fR.error)
             })
           }
-          return Ex("Reloading into the new build");
+          return yw("Reloading into the new build");
         case "stopped":
-          return Ex("The game client stopped, and shows why");
-        case "uW":
-          return Ex("Left the game while it loaded")
+          return yw("The game client stopped, and shows why");
+        case "xR":
+          return yw("Left the game while it loaded")
       }
     }
 
-    function ix(WW) {
-      return WW instanceof ii.n || WW instanceof ii.c && "attach" !== WW.stage
+    function Rw(RR) {
+      return RR instanceof JJ.m || RR instanceof JJ.b && "attach" !== RR.stage
     }
 
-    function Ox(WW) {
-      return !(WW instanceof ii.z) && !ix(WW) && void 0 === (0, Oi.d)(WW)
+    function Jw(RR) {
+      return !(RR instanceof JJ.z) && !Rw(RR) && void 0 === (0, GJ.b)(RR)
     }
 
-    function mx(WW) {
-      return ix(WW) ? WW instanceof ii.c && (0, Wi.i)(WW.code).requiresRefresh ? "medium" : "low" : Ox(WW) || WW instanceof ii.z ? "medium" : "low"
+    function Gw(RR) {
+      return Rw(RR) ? RR instanceof JJ.b && (0, RJ.e)(RR.code).requiresRefresh ? "medium" : "low" : Jw(RR) || RR instanceof JJ.z ? "medium" : "low"
     }
 
-    function Ex(WW) {
-      return EW.b.errorWithCode(WW, NW.k.CONNECT_TO_GAME_SERVER, {
+    function yw(RR) {
+      return tR.e.errorWithCode(RR, uR.j.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        uW: !0
+        xR: !0
       })
     }
-    class Nx {
-      leave(WW) {
-        if ((0, XW.d)()) {
-          var iW, OW;
-          if ((0, PW.b)()) return;
-          (0, lW.b)(!0 === (null === (iW = (0, XW.n)()) || void 0 === iW || null === (OW = iW.currentViewer) || void 0 === OW ? void 0 : OW.unsavedChanges), WW)
+    class tw {
+      leave(RR) {
+        if ((0, SR.b)()) {
+          var JR, GR;
+          if ((0, ZR.b)()) return;
+          (0, rR.b)(!0 === (null === (JR = (0, SR.l)()) || void 0 === JR || null === (GR = JR.currentViewer) || void 0 === GR ? void 0 : GR.unsavedChanges), RR)
         } else this.leaveLive()
       }
       leaveLive() {
-        var WW;
-        pZ && (null === (WW = Ct()) || void 0 === WW || WW.endGamePack());
-        if (!qZ) return;
-        qZ = !1, (0, DW.d)();
+        var RR;
+        PK && (null === (RR = zV()) || void 0 === RR || RR.endGamePack());
+        if (!jK) return;
+        jK = !1, (0, cR.e)();
         try {
-          var iW;
-          null === (iW = (0, qW.p)()) || void 0 === iW || iW.clearWasmCameraScreen()
-        } catch (mW) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", mW)
+          var JR;
+          null === (JR = (0, dR.u)()) || void 0 === JR || JR.clearWasmCameraScreen()
+        } catch (yR) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", yR)
         }
         const {
-          gameNameWithVariation: OW
-        } = (0, xW.d)();
+          gameNameWithVariation: GR
+        } = (0, wR.d)();
         try {
-          Gw()
+          Yf()
         } finally {
-          (0, xW.r)({
+          (0, wR.s)({
             websocketUrl: null
-          }), cW.l.iZ("leaveGame", {
-            gameNameWithVariation: OW
-          }), (0, tW.O)()
+          }), iR.n.JK("leaveGame", {
+            gameNameWithVariation: GR
+          }), (0, VR.S)()
         }
       }
       isReplay() {
-        return (0, XW.d)()
+        return (0, SR.b)()
       }
     }
   },
-  42440: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW,
-      d: () => mW,
-      f: () => LW,
-      g: () => PW
+  42472: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => tR,
+      f: () => yR,
+      h: () => qR,
+      l: () => ZR
     });
-    const mW = 12e4,
-      EW = 3e4,
-      NW = {
+    const yR = 12e4,
+      tR = 3e4,
+      uR = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: WW => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", WW), () => {
-          document.removeEventListener("visibilitychange", WW)
+        listen: RR => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", RR), () => {
+          document.removeEventListener("visibilitychange", RR)
         })
       };
 
-    function PW(WW) {
-      return `it sent no start within ${Math.round(WW)} ms`
+    function ZR(RR) {
+      return `it sent no start within ${Math.round(RR)} ms`
     }
-    class LW {
-      constructor(WW, iW) {
-        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : NW;
-        this.timeoutMs = WW, this.onTimeout = iW, this.now = OW, this.visibility = mW, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = mW.listen((() => {
+    class qR {
+      constructor(RR, JR) {
+        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uR;
+        this.timeoutMs = RR, this.onTimeout = JR, this.now = GR, this.visibility = yR, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = yR.listen((() => {
           this.onVisibility()
-        })), mW.hidden() || this.next()
+        })), yR.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -9378,169 +9086,169 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const WW = this.step;
-        return null === WW ? 0 : Math.min(this.now() - WW.at, WW.ms)
+        const RR = this.step;
+        return null === RR ? 0 : Math.min(this.now() - RR.at, RR.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const WW = this.timeoutMs - this.counted;
-        if (WW <= 0) return void this.arm(1e3, (() => {
+        const RR = this.timeoutMs - this.counted;
+        if (RR <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const iW = Math.min(WW, 5e3);
+        const JR = Math.min(RR, 5e3);
         this.step = {
           at: this.now(),
-          ms: iW
-        }, this.arm(iW, (() => {
+          ms: JR
+        }, this.arm(JR, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(WW, iW) {
+      arm(RR, JR) {
         this.timer = setTimeout((() => {
-          this.timer = null, iW()
-        }), WW)
+          this.timer = null, JR()
+        }), RR)
       }
     }
   },
-  40987: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW
+  40985: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR
     });
-    var mW = OW(344),
-      EW = OW(1052);
-    const NW = new Set(["bingo", "buildAFactory2", "classic", "greenville", "testGym"]),
-      PW = new Set(["creativeFlat", "skyGrid"]);
+    var yR = GR(377),
+      tR = GR(1127);
+    const uR = new Set(["bingo", "buildAFactory2", "classic", "greenville", "testGym"]),
+      ZR = new Set(["creativeFlat", "skyGrid"]);
 
-    function LW(WW) {
-      const iW = (0, mW.Tb)(WW);
-      return "greenville" === iW ? !(0, mW.Lb)(WW) : "classic" !== iW ? NW.has(iW) : !(0, EW.i)(WW) && !PW.has((0, mW.Lb)(WW))
+    function qR(RR) {
+      const JR = (0, yR.Sb)(RR);
+      return "greenville" === JR ? !(0, yR.Mb)(RR) : "classic" !== JR ? uR.has(JR) : !(0, tR.n)(RR) && !ZR.has((0, yR.Mb)(RR))
     }
   },
-  38911: (WW, iW, OW) => {
-    function mW(WW) {
-      return "string" !== typeof WW || 2 !== WW.length && ":" !== WW[2] ? null : WW[0] + WW[1]
+  38902: (RR, JR, GR) => {
+    function yR(RR) {
+      return "string" !== typeof RR || 2 !== RR.length && ":" !== RR[2] ? null : RR[0] + RR[1]
     }
-    OW.d(iW, {
-      c: () => jW,
-      g: () => SW,
-      i: () => KW,
-      l: () => YW,
-      o: () => LW,
-      q: () => PW,
-      s: () => NW,
-      v: () => cW,
-      x: () => UW,
-      y: () => bW
+    GR.d(JR, {
+      c: () => LR,
+      e: () => XR,
+      i: () => CR,
+      k: () => MR,
+      m: () => qR,
+      p: () => ZR,
+      s: () => uR,
+      t: () => iR,
+      u: () => nR,
+      y: () => aR
     });
-    const EW = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const tR = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function NW(WW) {
-      if (function(WW) {
-          for (let iW = 0; iW < EW.length; iW++)
-            if (WW === EW[iW]) return !0;
+    function uR(RR) {
+      if (function(RR) {
+          for (let JR = 0; JR < tR.length; JR++)
+            if (RR === tR[JR]) return !0;
           return !1
-        }(WW)) return !1;
-      const iW = mW(WW);
-      return "op" === iW || "ep" === iW || "wi" === iW || "pp" === iW || "fp:call" === WW || "fp:t" === WW
+        }(RR)) return !1;
+      const JR = yR(RR);
+      return "op" === JR || "ep" === JR || "wi" === JR || "pp" === JR || "fp:call" === RR || "fp:t" === RR
     }
 
-    function PW(WW) {
-      return "fp" === mW(WW) && !NW(WW)
+    function ZR(RR) {
+      return "fp" === yR(RR) && !uR(RR)
     }
 
-    function LW(WW) {
-      if ("string" !== typeof WW) return !1;
-      return "o" === WW[0] && "p" === WW[1] && (2 === WW.length || ":" === WW[2]) || "fp:call" === WW || "2" === WW || "t" === WW || "a" === WW
+    function qR(RR) {
+      if ("string" !== typeof RR) return !1;
+      return "o" === RR[0] && "p" === RR[1] && (2 === RR.length || ":" === RR[2]) || "fp:call" === RR || "2" === RR || "t" === RR || "a" === RR
     }
 
-    function cW(WW, iW) {
-      return `~${function(WW){return WW.length<2?WW:":"===WW[1]?WW[0]:WW[0]+WW[1]}(iW)}~${WW}`
+    function iR(RR, JR) {
+      return `~${function(RR){return RR.length<2?RR:":"===RR[1]?RR[0]:RR[0]+RR[1]}(JR)}~${RR}`
     }
-    const wW = 200;
+    const fR = 200;
 
-    function tW(WW) {
-      let iW = WW.length - 1;
-      for (let OW = 0; OW < 2; OW++) {
-        const OW = iW;
-        for (; iW >= 0 && WW[iW] >= "0" && WW[iW] <= "9";) iW--;
-        if (iW < 0 || iW === OW || ":" !== WW[iW]) return -1;
-        iW--
+    function VR(RR) {
+      let JR = RR.length - 1;
+      for (let GR = 0; GR < 2; GR++) {
+        const GR = JR;
+        for (; JR >= 0 && RR[JR] >= "0" && RR[JR] <= "9";) JR--;
+        if (JR < 0 || JR === GR || ":" !== RR[JR]) return -1;
+        JR--
       }
-      return iW + 1
+      return JR + 1
     }
 
-    function ZW(WW) {
-      return "unknown" === WW || tW(WW) >= 0
+    function KR(RR) {
+      return "unknown" === RR || VR(RR) >= 0
     }
 
-    function xW(WW, iW) {
-      return WW[iW] >= "\ud800" && WW[iW] <= "\udbff" && iW + 1 < WW.length && WW[iW + 1] >= "\udc00" && WW[iW + 1] <= "\udfff" ? 2 : 1
+    function wR(RR, JR) {
+      return RR[JR] >= "\ud800" && RR[JR] <= "\udbff" && JR + 1 < RR.length && RR[JR + 1] >= "\udc00" && RR[JR + 1] <= "\udfff" ? 2 : 1
     }
 
-    function lW(WW, iW, OW) {
-      return 2 === OW ? 4 : WW[iW] <= "\x7f" ? 1 : WW[iW] <= "\u07ff" ? 2 : 3
+    function rR(RR, JR, GR) {
+      return 2 === GR ? 4 : RR[JR] <= "\x7f" ? 1 : RR[JR] <= "\u07ff" ? 2 : 3
     }
 
-    function AW(WW, iW, OW) {
-      let mW = 0;
-      for (; mW < iW;) {
-        const iW = xW(WW, mW),
-          EW = lW(WW, mW, iW);
-        if (EW > OW) break;
-        OW -= EW, mW += iW
+    function eR(RR, JR, GR) {
+      let yR = 0;
+      for (; yR < JR;) {
+        const JR = wR(RR, yR),
+          tR = rR(RR, yR, JR);
+        if (tR > GR) break;
+        GR -= tR, yR += JR
       }
-      return mW
+      return yR
     }
 
-    function bW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof WW || WW.length > wW || !ZW(WW)) return "t";
-      let OW = 2;
-      for (let LW = 0; LW < WW.length;) {
-        const iW = xW(WW, LW);
-        OW += lW(WW, LW, iW), LW += iW
+    function aR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof RR || RR.length > fR || !KR(RR)) return "t";
+      let GR = 2;
+      for (let qR = 0; qR < RR.length;) {
+        const JR = wR(RR, qR);
+        GR += rR(RR, qR, JR), qR += JR
       }
-      if (OW <= iW) return `t ${WW}`;
-      const mW = tW(WW),
-        EW = iW - 2 - (WW.length - mW);
-      if (EW < 0) return "t";
-      const NW = AW(WW, mW, EW);
-      let PW = "t ";
-      for (let LW = 0; LW < NW; LW++) PW += WW[LW];
-      for (let LW = mW; LW < WW.length; LW++) PW += WW[LW];
-      return PW
+      if (GR <= JR) return `t ${RR}`;
+      const yR = VR(RR),
+        tR = JR - 2 - (RR.length - yR);
+      if (tR < 0) return "t";
+      const uR = eR(RR, yR, tR);
+      let ZR = "t ";
+      for (let qR = 0; qR < uR; qR++) ZR += RR[qR];
+      for (let qR = yR; qR < RR.length; qR++) ZR += RR[qR];
+      return ZR
     }
-    const jW = 62;
+    const LR = 62;
 
-    function UW(WW) {
-      let iW = "so:";
-      const OW = AW(WW, WW.length, jW - iW.length);
-      for (let mW = 0; mW < OW; mW++) iW += WW[mW];
-      return iW
+    function nR(RR) {
+      let JR = "so:";
+      const GR = eR(RR, RR.length, LR - JR.length);
+      for (let yR = 0; yR < GR; yR++) JR += RR[yR];
+      return JR
     }
-    const kW = "BABYLON ",
-      sW = "DECODE ",
-      MW = "BABYLON@ ";
+    const UR = "BABYLON ",
+      WR = "DECODE ",
+      AR = "BABYLON@ ";
 
-    function KW(WW) {
-      return UW(kW + WW)
-    }
-
-    function SW(WW, iW) {
-      return UW(MW + WW + " " + iW)
+    function CR(RR) {
+      return nR(UR + RR)
     }
 
-    function YW(WW) {
-      return UW(sW + WW)
+    function XR(RR, JR) {
+      return nR(AR + RR + " " + JR)
+    }
+
+    function MR(RR) {
+      return nR(WR + RR)
     }
   },
-  42379: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW
+  42411: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR
     });
-    const mW = {
+    const yR = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -9564,233 +9272,233 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  39961: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  39956: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(2381);
-    const EW = ["none", "idle", "now"];
+    var yR = GR(2448);
+    const tR = ["none", "idle", "now"];
 
-    function NW() {
-      const WW = () => (0, mW.G)();
+    function uR() {
+      const RR = () => (0, yR.w)();
       return {
-        memoryBytes: () => (0, mW.v)().buffer.byteLength,
-        reserveUpFront: iW => WW().vZ(iW),
-        reserveAhead: iW => WW().eZ(iW),
-        setCeiling: iW => {
-          WW().gZ(iW)
+        memoryBytes: () => (0, yR.m)().buffer.byteLength,
+        reserveUpFront: JR => RR().IK(JR),
+        reserveAhead: JR => RR().PK(JR),
+        setCeiling: JR => {
+          RR().mK(JR)
         },
-        lowWater: () => EW[WW().dZ()] ?? "none",
-        stats: () => function(WW) {
-          const iW = new Uint32Array((0, mW.v)().buffer, WW, 17),
-            OW = WW => iW[WW] ?? 0,
-            EW = WW => ({
-              upFront: OW(WW),
-              ahead: OW(WW + 1),
-              onDemandInFrame: OW(WW + 2),
-              onDemand: OW(WW + 3)
+        lowWater: () => tR[RR().cK()] ?? "none",
+        stats: () => function(RR) {
+          const JR = new Uint32Array((0, yR.m)().buffer, RR, 17),
+            GR = RR => JR[RR] ?? 0,
+            tR = RR => ({
+              upFront: GR(RR),
+              ahead: GR(RR + 1),
+              onDemandInFrame: GR(RR + 2),
+              onDemand: GR(RR + 3)
             });
           return {
-            memoryBytes: OW(0),
-            initialBytes: OW(1),
-            liveBytes: OW(2),
-            peakLiveBytes: OW(3),
-            headroomBytes: OW(4),
-            unusedBytes: OW(5),
-            ceilingBytes: OW(6),
-            reservesRefused: OW(7),
-            grows: EW(8),
-            grownBytes: EW(12),
-            allocationsRefused: OW(16)
+            memoryBytes: GR(0),
+            initialBytes: GR(1),
+            liveBytes: GR(2),
+            peakLiveBytes: GR(3),
+            headroomBytes: GR(4),
+            unusedBytes: GR(5),
+            ceilingBytes: GR(6),
+            reservesRefused: GR(7),
+            grows: tR(8),
+            grownBytes: tR(12),
+            allocationsRefused: GR(16)
           }
-        }(WW().DZ()),
-        takeBallast: () => WW().VZ(),
-        takePressure: () => WW().pZ()
+        }(RR().zK()),
+        takeBallast: () => RR().SK(),
+        takePressure: () => RR().jK()
       }
     }
   },
-  5970: (WW, iW, OW) => {
-    OW.d(iW, {
-      A: () => tW,
-      D: () => xW,
-      e: () => LW,
-      i: () => PW,
-      l: () => mW,
-      o: () => bW,
-      p: () => ZW,
-      r: () => EW,
-      v: () => NW,
-      x: () => wW
+  6084: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => qR,
+      e: () => ZR,
+      f: () => yR,
+      j: () => aR,
+      l: () => KR,
+      o: () => tR,
+      r: () => uR,
+      t: () => fR,
+      x: () => VR,
+      z: () => wR
     });
-    const mW = 5;
+    const yR = 5;
 
-    function EW(WW) {
-      return WW === mW
+    function tR(RR) {
+      return RR === yR
     }
 
-    function NW(WW) {
-      return [...WW.features]
+    function uR(RR) {
+      return [...RR.features]
     }
-    const PW = 262144,
-      LW = 256,
-      cW = 256;
+    const ZR = 262144,
+      qR = 256,
+      iR = 256;
 
-    function wW(WW) {
-      if ("object" !== typeof WW || null === WW || Array.isArray(WW)) return "The pack has no files.";
-      const iW = [];
-      for (const [OW, mW] of Object.entries(WW)) {
-        if ("string" !== typeof mW) return `${OW} isn't text.`;
-        iW.push({
-          path: OW,
-          source: mW
+    function fR(RR) {
+      if ("object" !== typeof RR || null === RR || Array.isArray(RR)) return "The pack has no files.";
+      const JR = [];
+      for (const [GR, yR] of Object.entries(RR)) {
+        if ("string" !== typeof yR) return `${GR} isn't text.`;
+        JR.push({
+          path: GR,
+          source: yR
         })
       }
-      return iW.sort(((WW, iW) => ZW(WW.path, iW.path))),
-        function(WW) {
-          if (0 === WW.length) return "The pack has no .wgsl files.";
-          if (WW.length > LW) return `The pack has more than ${LW} .wgsl files.`;
-          const iW = new Set;
+      return JR.sort(((RR, JR) => KR(RR.path, JR.path))),
+        function(RR) {
+          if (0 === RR.length) return "The pack has no .wgsl files.";
+          if (RR.length > qR) return `The pack has more than ${qR} .wgsl files.`;
+          const JR = new Set;
           for (const {
-              path: OW
+              path: GR
             }
-            of WW) {
-            const WW = lW(OW);
-            if (null !== WW) return WW;
-            if (iW.has(OW)) return `The pack has two files at ${OW}.`;
-            iW.add(OW)
+            of RR) {
+            const RR = rR(GR);
+            if (null !== RR) return RR;
+            if (JR.has(GR)) return `The pack has two files at ${GR}.`;
+            JR.add(GR)
           }
-          return xW(WW) > PW ? `The pack's .wgsl files are over ${PW/1024} KB in total.` : null
-        }(iW) ?? iW
+          return wR(RR) > ZR ? `The pack's .wgsl files are over ${ZR/1024} KB in total.` : null
+        }(JR) ?? JR
     }
 
-    function tW(WW) {
-      const iW = {};
-      for (const OW of WW) iW[OW.path] = OW.source;
-      return iW
+    function VR(RR) {
+      const JR = {};
+      for (const GR of RR) JR[GR.path] = GR.source;
+      return JR
     }
 
-    function ZW(WW, iW) {
-      return WW < iW ? -1 : WW > iW ? 1 : 0
+    function KR(RR, JR) {
+      return RR < JR ? -1 : RR > JR ? 1 : 0
     }
 
-    function xW(WW) {
-      const iW = new TextEncoder;
-      let OW = 0;
+    function wR(RR) {
+      const JR = new TextEncoder;
+      let GR = 0;
       for (const {
-          source: mW
+          source: yR
         }
-        of WW) OW += iW.encode(mW).byteLength;
-      return OW
+        of RR) GR += JR.encode(yR).byteLength;
+      return GR
     }
 
-    function lW(WW) {
-      if (!WW.toLowerCase().endsWith(".wgsl")) return `${WW} isn't a .wgsl file.`;
-      if (WW.length > cW) return `A file path is over ${cW} characters.`;
-      if (WW.includes("\\") || /[\u0000-\u001f]/.test(WW)) return `${WW} isn't a valid file path.`;
-      return WW.split("/").some((WW => "" === WW || "." === WW || ".." === WW)) ? `${WW} isn't a valid file path.` : null
+    function rR(RR) {
+      if (!RR.toLowerCase().endsWith(".wgsl")) return `${RR} isn't a .wgsl file.`;
+      if (RR.length > iR) return `A file path is over ${iR} characters.`;
+      if (RR.includes("\\") || /[\u0000-\u001f]/.test(RR)) return `${RR} isn't a valid file path.`;
+      return RR.split("/").some((RR => "" === RR || "." === RR || ".." === RR)) ? `${RR} isn't a valid file path.` : null
     }
-    const AW = /^(.*)\[rot\[([1-4])$/;
+    const eR = /^(.*)\[rot\[([1-4])$/;
 
-    function bW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const mW = new Map;
-      iW.forEach(((WW, iW) => {
+    function aR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const yR = new Map;
+      JR.forEach(((RR, JR) => {
         let {
-          numAnimStates: OW,
-          animStartIdx: EW
-        } = WW;
-        for (let NW = 1; NW < OW; NW++) mW.set(EW + NW - 1, iW)
+          numAnimStates: GR,
+          animStartIdx: tR
+        } = RR;
+        for (let uR = 1; uR < GR; uR++) yR.set(tR + uR - 1, JR)
       }));
-      const EW = Object.entries(WW),
-        NW = new Map;
-      for (const [bW, jW] of EW) {
-        const WW = AW.exec(bW);
-        "1" === WW?.[2] && NW.set(WW[1], jW + 1)
+      const tR = Object.entries(RR),
+        uR = new Map;
+      for (const [aR, LR] of tR) {
+        const RR = eR.exec(aR);
+        "1" === RR?.[2] && uR.set(RR[1], LR + 1)
       }
-      const PW = WW => {
-          const iW = AW.exec(WW);
-          return iW && NW.has(iW[1]) ? {
-            root: iW[1],
-            rotation: Number(iW[2]) - 1
+      const ZR = RR => {
+          const JR = eR.exec(RR);
+          return JR && uR.has(JR[1]) ? {
+            root: JR[1],
+            rotation: Number(JR[2]) - 1
           } : null
         },
-        LW = new Set(EW.map((WW => {
-          let [iW] = WW;
-          return PW(iW)?.root ?? iW
+        qR = new Set(tR.map((RR => {
+          let [JR] = RR;
+          return ZR(JR)?.root ?? JR
         }))),
-        cW = (WW, OW) => {
-          const mW = WW.replace(/_?0$/, "");
-          return (iW[OW]?.numAnimStates ?? 0) > 1 && !LW.has(mW) ? mW : WW
+        iR = (RR, GR) => {
+          const yR = RR.replace(/_?0$/, "");
+          return (JR[GR]?.numAnimStates ?? 0) > 1 && !qR.has(yR) ? yR : RR
         },
-        wW = new Map;
-      for (const [AW, bW] of EW) wW.set(bW, cW(PW(AW)?.root ?? AW, bW));
-      const tW = EW.reduce(((WW, iW) => {
-          let [, OW] = iW;
-          return Math.max(WW, OW + 1)
+        fR = new Map;
+      for (const [eR, aR] of tR) fR.set(aR, iR(ZR(eR)?.root ?? eR, aR));
+      const VR = tR.reduce(((RR, JR) => {
+          let [, GR] = JR;
+          return Math.max(RR, GR + 1)
         }), 0),
-        ZW = Array.from({
-          length: tW
-        }, ((WW, iW) => ({
-          id: iW + 1,
+        KR = Array.from({
+          length: VR
+        }, ((RR, JR) => ({
+          id: JR + 1,
           rotation: 0
         }))),
-        xW = new Map,
-        lW = new Map;
-      for (const [AW, bW] of EW) {
-        const WW = PW(AW),
-          iW = mW.get(bW);
-        if (void 0 !== iW) {
-          const OW = wW.get(iW);
-          lW.set(AW, {
-            name: AW,
-            texture: OW,
+        wR = new Map,
+        rR = new Map;
+      for (const [eR, aR] of tR) {
+        const RR = ZR(eR),
+          JR = yR.get(aR);
+        if (void 0 !== JR) {
+          const GR = fR.get(JR);
+          rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "frame"
-          }), WW && !lW.has(WW.root) && lW.set(WW.root, {
-            name: WW.root,
-            texture: OW,
+          }), RR && !rR.has(RR.root) && rR.set(RR.root, {
+            name: RR.root,
+            texture: GR,
             kind: "frame"
           });
           continue
         }
-        const OW = wW.get(bW),
-          EW = WW?.root ?? AW;
-        if (OW !== EW && lW.set(EW, {
-            name: EW,
-            texture: OW,
+        const GR = fR.get(aR),
+          tR = RR?.root ?? eR;
+        if (GR !== tR && rR.set(tR, {
+            name: tR,
+            texture: GR,
             kind: "frame"
-          }), WW) {
-          const iW = NW.get(WW.root);
-          ZW[bW] = {
-            id: iW,
-            rotation: WW.rotation
-          }, xW.set(OW, iW), lW.set(AW, {
-            name: AW,
-            texture: OW,
+          }), RR) {
+          const JR = uR.get(RR.root);
+          KR[aR] = {
+            id: JR,
+            rotation: RR.rotation
+          }, wR.set(GR, JR), rR.set(eR, {
+            name: eR,
+            texture: GR,
             kind: "rotation"
           })
-        } else xW.set(OW, bW + 1)
+        } else wR.set(GR, aR + 1)
       }
-      for (const AW of xW.keys()) lW.delete(AW);
-      for (const [AW, bW] of OW) {
-        const WW = xW.get(bW);
-        void 0 === WW || xW.has(AW) || (xW.set(AW, WW), lW.delete(AW))
+      for (const eR of wR.keys()) rR.delete(eR);
+      for (const [eR, aR] of GR) {
+        const RR = wR.get(aR);
+        void 0 === RR || wR.has(eR) || (wR.set(eR, RR), rR.delete(eR))
       }
       return {
-        named: [...xW].sort(((WW, iW) => {
-          let [OW] = WW, [mW] = iW;
-          return OW < mW ? -1 : OW > mW ? 1 : 0
-        })).map((WW => {
-          let [iW, OW] = WW;
+        named: [...wR].sort(((RR, JR) => {
+          let [GR] = RR, [yR] = JR;
+          return GR < yR ? -1 : GR > yR ? 1 : 0
+        })).map((RR => {
+          let [JR, GR] = RR;
           return {
-            name: iW,
-            id: OW
+            name: JR,
+            id: GR
           }
         })),
-        aliases: [...lW.values()],
-        layers: ZW
+        aliases: [...rR.values()],
+        layers: KR
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

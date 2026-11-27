@@ -1,53 +1,53 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  5525: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => MW,
-      f: () => UW
+  5658: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => AR,
+      g: () => nR
     });
-    var mW = OW(1335),
-      EW = OW(27);
-    var NW = OW(344);
-    var PW = OW(643);
-    var LW = OW(3305),
-      cW = OW(5533),
-      wW = OW(5560),
-      tW = OW(5575);
-    class ZW {
-      constructor(WW, iW, OW, mW, EW, NW) {
-        this.id = WW, this.type = iW, this.parameters = OW, this.tearDownNotification = mW, this.onDonePromise = EW, this.resolveRequest = NW
+    var yR = GR(1435),
+      tR = GR(32);
+    var uR = GR(377);
+    var ZR = GR(679);
+    var qR = GR(3428),
+      iR = GR(5665),
+      fR = GR(5692),
+      VR = GR(5699);
+    class KR {
+      constructor(RR, JR, GR, yR, tR, uR) {
+        this.id = RR, this.type = JR, this.parameters = GR, this.tearDownNotification = yR, this.onDonePromise = tR, this.resolveRequest = uR
       }
     }
-    const xW = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class lW {
-      constructor(WW, iW, OW, mW, EW, NW) {
-        this.id = WW, this.type = iW, this.parameters = OW, this.resolveRequest = mW, this.onDonePromise = EW, this.tearDownNotification = NW, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const PW = UW[iW];
-        if (!PW) throw console.error(`No QTE implementation registered for type: ${iW}`), new Error(`No QTE implementation registered for type: ${iW}`);
-        this.implementation = new PW(OW, (WW => {
-          this.isCompleted = !0, this.resolveRequest(WW)
+    const wR = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class rR {
+      constructor(RR, JR, GR, yR, tR, uR) {
+        this.id = RR, this.type = JR, this.parameters = GR, this.resolveRequest = yR, this.onDonePromise = tR, this.tearDownNotification = uR, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const ZR = nR[JR];
+        if (!ZR) throw console.error(`No QTE implementation registered for type: ${JR}`), new Error(`No QTE implementation registered for type: ${JR}`);
+        this.implementation = new ZR(GR, (RR => {
+          this.isCompleted = !0, this.resolveRequest(RR)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = EW.l.subscribe("QTEMouseState", (WW => {
+        this.mouseSub = tR.n.subscribe("QTEMouseState", (RR => {
           let {
-            isDown: iW
-          } = WW;
-          this.isCompleted || this.implementation.handleMouseInput(iW)
-        })), this.stopInputActions = (0, wW.g)((WW => {
-          this.isCompleted || !xW.has(WW.action) && !(0, wW.f)(WW) || this.implementation.handleMouseInput(WW.down)
-        })), this.tickSub = EW.l.subscribe("noaTick", (WW => {
+            isDown: JR
+          } = RR;
+          this.isCompleted || this.implementation.handleMouseInput(JR)
+        })), this.stopInputActions = (0, fR.f)((RR => {
+          this.isCompleted || !wR.has(RR.action) && !(0, fR.d)(RR) || this.implementation.handleMouseInput(RR.down)
+        })), this.tickSub = tR.n.subscribe("noaTick", (RR => {
           if (this.isCompleted) return;
-          const iW = WW / 1e3;
-          this.implementation.handleTick(iW)
-        })), this.stopShellTicks = (0, cW.x)((() => {
-          this.isCompleted || this.implementation.handleTick(LW.t / 1e3)
+          const JR = RR / 1e3;
+          this.implementation.handleTick(JR)
+        })), this.stopShellTicks = (0, iR.r)((() => {
+          this.isCompleted || this.implementation.handleTick(qR.w / 1e3)
         }))
       }
       cleanup() {
-        var WW, iW;
-        this.mouseSub && (EW.l.unsubscribe(this.mouseSub), this.mouseSub = null), null === (WW = this.stopInputActions) || void 0 === WW || WW.call(this), this.stopInputActions = null, null === (iW = this.stopShellTicks) || void 0 === iW || iW.call(this), this.stopShellTicks = null, this.tickSub && (EW.l.unsubscribe(this.tickSub), this.tickSub = null)
+        var RR, JR;
+        this.mouseSub && (tR.n.unsubscribe(this.mouseSub), this.mouseSub = null), null === (RR = this.stopInputActions) || void 0 === RR || RR.call(this), this.stopInputActions = null, null === (JR = this.stopShellTicks) || void 0 === JR || JR.call(this), this.stopShellTicks = null, this.tickSub && (tR.n.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const AW = new mW.d,
-      bW = new Map;
-    let jW = null;
-    const UW = {
+    const eR = new yR.d,
+      aR = new Map;
+    let LR = null;
+    const nR = {
       progressBar: class {
-        constructor(WW, iW, OW) {
-          var mW, EW, NW, PW;
-          this.resolveRequest = iW, this.tearDownNotification = OW, this.progress = 0, this.KN = void 0, this.SN = void 0, this.YN = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const LW = WW;
-          this.KN = null !== (mW = LW.KN) && void 0 !== mW ? mW : .075, this.SN = null !== (EW = LW.SN) && void 0 !== EW ? EW : 1, this.progress = null !== (NW = LW.MN) && void 0 !== NW ? NW : 30, this.YN = null !== (PW = LW.YN) && void 0 !== PW && PW, this.parameters = LW
+        constructor(RR, JR, GR) {
+          var yR, tR, uR, ZR;
+          this.resolveRequest = JR, this.tearDownNotification = GR, this.progress = 0, this.gu = void 0, this.bu = void 0, this.vu = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const qR = RR;
+          this.gu = null !== (yR = qR.gu) && void 0 !== yR ? yR : .075, this.bu = null !== (tR = qR.bu) && void 0 !== tR ? tR : 1, this.progress = null !== (uR = qR.pu) && void 0 !== uR ? uR : 30, this.vu = null !== (ZR = qR.vu) && void 0 !== ZR && ZR, this.parameters = qR
         }
-        handleMouseInput(WW) {
-          WW && !this.isCompleted && (this.clickCount++, this.progress += this.SN, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(RR) {
+          RR && !this.isCompleted && (this.clickCount++, this.progress += this.bu, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.KN, this.YN && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.gu, this.vu && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(WW) {
-          this.isCompleted = !0, this.resolveRequest(WW)
+        complete(RR) {
+          this.isCompleted = !0, this.resolveRequest(RR)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(WW, iW, OW) {
-          var mW;
-          this.resolveRequest = iW, this.tearDownNotification = OW, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = WW, this.timeWindowMs = null !== (mW = this.parameters.JN) && void 0 !== mW ? mW : 3e3, this.startTime = Date.now()
+        constructor(RR, JR, GR) {
+          var yR;
+          this.resolveRequest = JR, this.tearDownNotification = GR, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = RR, this.timeWindowMs = null !== (yR = this.parameters.Du) && void 0 !== yR ? yR : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(WW) {
-          if (!WW || this.isCompleted) return;
+        handleMouseInput(RR) {
+          if (!RR || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(WW) {
-          this.isCompleted = !0, this.resolveRequest(WW)
+        complete(RR) {
+          this.isCompleted = !0, this.resolveRequest(RR)
         }
         getState() {
-          const WW = Date.now() - this.startTime,
-            iW = Math.max(0, this.timeWindowMs - WW);
+          const RR = Date.now() - this.startTime,
+            JR = Math.max(0, this.timeWindowMs - RR);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: iW,
-              JN: this.timeWindowMs
+              timeRemaining: JR,
+              Du: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(WW, iW, OW) {
-          var mW;
-          this.resolveRequest = iW, this.tearDownNotification = OW, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const EW = WW;
+        constructor(RR, JR, GR) {
+          var yR;
+          this.resolveRequest = JR, this.tearDownNotification = GR, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const tR = RR;
           this.parameters = {
-            ...EW,
-            uN: NW.e.clamp(EW.uN, .05, 1)
-          }, this.progress = null !== (mW = EW.MN) && void 0 !== mW ? mW : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...tR,
+            Pu: uR.e.clamp(tR.Pu, .05, 1)
+          }, this.progress = null !== (yR = tR.pu) && void 0 !== yR ? yR : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(WW) {
-          this.isMouseDown = WW
+        handleMouseInput(RR) {
+          this.isMouseDown = RR
         }
-        handleTick(WW) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(WW))
+        handleTick(RR) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(RR))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const WW = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += WW * this.parameters.oN * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const RR = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += RR * this.parameters.Iu * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const WW = NW.e.clamp(1 - .7 * this.parameters.dN, 0, 1.4);
-          return Math.floor(60 * WW + 40 * Math.random())
+          const RR = uR.e.clamp(1 - .7 * this.parameters.mu, 0, 1.4);
+          return Math.floor(60 * RR + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.eN : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = NW.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const WW = this.parameters.uN / 2,
-            iW = WW,
-            OW = 1 - WW;
-          this.catchZonePosition <= iW ? (this.catchZonePosition = iW, this.catchZoneVelocity = 0) : this.catchZonePosition >= OW && (this.catchZonePosition = OW, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.zu : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = uR.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const RR = this.parameters.Pu / 2,
+            JR = RR,
+            GR = 1 - RR;
+          this.catchZonePosition <= JR ? (this.catchZonePosition = JR, this.catchZoneVelocity = 0) : this.catchZonePosition >= GR && (this.catchZonePosition = GR, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const WW = this.parameters.uN / 2;
-          return this.moverPosition >= this.catchZonePosition - WW && this.moverPosition <= this.catchZonePosition + WW
+          const RR = this.parameters.Pu / 2;
+          return this.moverPosition >= this.catchZonePosition - RR && this.moverPosition <= this.catchZonePosition + RR
         }
-        updateProgress(WW) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.vN * WW : this.progress -= this.parameters.gN * WW, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.YN && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(RR) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.Su * RR : this.progress -= this.parameters.ju * RR, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.vu && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(WW) {
-          this.isCompleted = !0, this.resolveRequest(WW)
+        complete(RR) {
+          this.isCompleted = !0, this.resolveRequest(RR)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              uN: this.parameters.uN,
+              Pu: this.parameters.Pu,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(WW, iW, OW) {
-          var mW, EW, PW, LW, cW;
-          this.resolveRequest = iW, this.tearDownNotification = OW, this.startTime = void 0, this.speed = void 0, this.VN = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const wW = WW;
+        constructor(RR, JR, GR) {
+          var yR, tR, ZR, qR, iR;
+          this.resolveRequest = JR, this.tearDownNotification = GR, this.startTime = void 0, this.speed = void 0, this.Eu = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const fR = RR;
           this.parameters = {
-            ...wW,
-            speed: null !== (mW = wW.speed) && void 0 !== mW ? mW : .5,
-            VN: NW.e.clamp(wW.VN, .05, 1),
-            label: null !== (EW = wW.label) && void 0 !== EW ? EW : [{
+            ...fR,
+            speed: null !== (yR = fR.speed) && void 0 !== yR ? yR : .5,
+            Eu: uR.e.clamp(fR.Eu, .05, 1),
+            label: null !== (tR = fR.label) && void 0 !== tR ? tR : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (PW = wW.icon) && void 0 !== PW ? PW : null,
-            scale: null !== (LW = wW.scale) && void 0 !== LW ? LW : 1,
-            rotation: null !== (cW = wW.rotation) && void 0 !== cW ? cW : 0
-          }, this.speed = this.parameters.speed, this.VN = this.parameters.VN, this.startTime = Date.now()
+            icon: null !== (ZR = fR.icon) && void 0 !== ZR ? ZR : null,
+            scale: null !== (qR = fR.scale) && void 0 !== qR ? qR : 1,
+            rotation: null !== (iR = fR.rotation) && void 0 !== iR ? iR : 0
+          }, this.speed = this.parameters.speed, this.Eu = this.parameters.Eu, this.startTime = Date.now()
         }
-        handleMouseInput(WW) {
-          if (WW) {
+        handleMouseInput(RR) {
+          if (RR) {
             this.updateMarkerPosition();
-            const WW = Math.abs(this.markerPosition - .5) <= this.VN / 2;
-            this.complete(WW)
+            const RR = Math.abs(this.markerPosition - .5) <= this.Eu / 2;
+            this.complete(RR)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const WW = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = WW <= .5 ? 2 * WW : 2 - 2 * WW
+          const RR = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = RR <= .5 ? 2 * RR : 2 - 2 * RR
         }
-        complete(WW) {
-          this.isCompleted = !0, this.resolveRequest(WW)
+        complete(RR) {
+          this.isCompleted = !0, this.resolveRequest(RR)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(WW, iW, OW) {
-          this.resolveRequest = iW, this.tearDownNotification = OW, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = WW, this.shrinkStartTime = Date.now()
+        constructor(RR, JR, GR) {
+          this.resolveRequest = JR, this.tearDownNotification = GR, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = RR, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(WW) {
-          if (!WW || this.isCompleted) return;
-          const iW = this.getOuterCircleProgress();
-          if (iW <= this.parameters.XN && iW >= -this.parameters.XN) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.fN) return void this.complete(!0)
+        handleMouseInput(RR) {
+          if (!RR || this.isCompleted) return;
+          const JR = this.getOuterCircleProgress();
+          if (JR <= this.parameters.Fu && JR >= -this.parameters.Fu) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.ku) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, PW.K)(this.parameters.BN) && this.misses > this.parameters.BN ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, ZR.I)(this.parameters.Tu) && this.misses > this.parameters.Tu ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.XN && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.Fu && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.CN
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.Qu
         }
-        complete(WW) {
-          this.isCompleted = !0, this.resolveRequest(WW)
+        complete(RR) {
+          this.isCompleted = !0, this.resolveRequest(RR)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              fN: this.parameters.fN,
+              ku: this.parameters.ku,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function kW() {
-      (0, tW.j)(LW.y.Qte, jW ? LW.y.Qte : 0), jW ? EW.l.iZ("qteStateUpdated", jW.getState()) : EW.l.iZ("qteStateUpdated", {
+    function UR() {
+      (0, VR.i)(qR.C.Qte, LR ? qR.C.Qte : 0), LR ? tR.n.JK("qteStateUpdated", LR.getState()) : tR.n.JK("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class sW {
-      constructor(WW, iW) {
-        this.resultPromise = WW, this.tearDownQTE = iW
+    class WR {
+      constructor(RR, JR) {
+        this.resultPromise = RR, this.tearDownQTE = JR
       }
-      static create(WW, iW, OW) {
-        const mW = Promise.race([WW, iW]);
-        return new sW(mW, OW)
+      static create(RR, JR, GR) {
+        const yR = Promise.race([RR, JR]);
+        return new WR(yR, GR)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class MW {
-      static queueQTE(WW, iW, OW) {
-        let mW, EW;
-        const NW = new Promise((WW => {
-            mW = WW
+    class AR {
+      static queueQTE(RR, JR, GR) {
+        let yR, tR;
+        const uR = new Promise((RR => {
+            yR = RR
           })),
-          PW = new Promise((WW => {
-            EW = () => {
-              WW("qteTornDown")
+          ZR = new Promise((RR => {
+            tR = () => {
+              RR("qteTornDown")
             }
           })),
-          LW = Promise.race([NW, PW]).then((() => {})),
-          cW = new ZW(WW, iW, OW, EW, LW, mW);
-        return bW.set(WW, cW), AW.enqueue(cW), jW || this.processNextQTE(), sW.create(NW, PW, EW)
+          qR = Promise.race([uR, ZR]).then((() => {})),
+          iR = new KR(RR, JR, GR, tR, qR, yR);
+        return aR.set(RR, iR), eR.enqueue(iR), LR || this.processNextQTE(), WR.create(uR, ZR, tR)
       }
       static async processNextQTE() {
-        if (jW || AW.sZ()) return void(AW.sZ() && jW && (jW = null, kW()));
-        const WW = await AW.dequeue();
-        if (!bW.has(WW.id)) return void await this.processNextQTE();
-        bW.delete(WW.id);
-        const iW = new lW(WW.id, WW.type, WW.parameters, WW.resolveRequest, WW.onDonePromise, WW.tearDownNotification);
-        jW = iW, kW();
+        if (LR || eR.WK()) return void(eR.WK() && LR && (LR = null, UR()));
+        const RR = await eR.dequeue();
+        if (!aR.has(RR.id)) return void await this.processNextQTE();
+        aR.delete(RR.id);
+        const JR = new rR(RR.id, RR.type, RR.parameters, RR.resolveRequest, RR.onDonePromise, RR.tearDownNotification);
+        LR = JR, UR();
         try {
-          await iW.waitUntilDone()
-        } catch (OW) {
-          console.error("Error while waiting for QTE to resolve:", OW.stack)
+          await JR.waitUntilDone()
+        } catch (GR) {
+          console.error("Error while waiting for QTE to resolve:", GR.stack)
         }
-        jW === iW && (jW.cleanup(), jW = null, kW()), await this.processNextQTE()
+        LR === JR && (LR.cleanup(), LR = null, UR()), await this.processNextQTE()
       }
-      static cancelQTE(WW) {
-        if (jW && jW.id === WW) return jW.tearDown(), jW = null, kW(), void this.processNextQTE();
-        const iW = bW.get(WW);
-        iW && (bW.delete(WW), iW.tearDownNotification())
+      static cancelQTE(RR) {
+        if (LR && LR.id === RR) return LR.tearDown(), LR = null, UR(), void this.processNextQTE();
+        const JR = aR.get(RR);
+        JR && (aR.delete(RR), JR.tearDownNotification())
       }
       static getCurrentState() {
-        return jW ? jW.getState() : {
+        return LR ? LR.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,209 +348,209 @@ export const modules = {
         }
       }
       static reset() {
-        jW && (jW.tearDown(), jW = null), bW.forEach(((WW, iW) => {
-          this.cancelQTE(iW)
-        })), AW.emptyQueue(), bW.clear(), kW()
+        LR && (LR.tearDown(), LR = null), aR.forEach(((RR, JR) => {
+          this.cancelQTE(JR)
+        })), eR.emptyQueue(), aR.clear(), UR()
       }
     }
   },
-  5533: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => hW,
-      D: () => HW,
-      F: () => kW,
-      G: () => PW,
-      K: () => LW,
-      N: () => TW,
-      e: () => yW,
-      g: () => MW,
-      k: () => uW,
-      m: () => nW,
-      n: () => UW,
-      o: () => SW,
-      r: () => sW,
-      v: () => KW,
-      x: () => JW
+  5665: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => ZR,
+      E: () => qR,
+      H: () => lR,
+      c: () => BR,
+      d: () => AR,
+      e: () => OR,
+      f: () => vR,
+      g: () => nR,
+      k: () => XR,
+      m: () => WR,
+      n: () => CR,
+      r: () => pR,
+      t: () => gR,
+      v: () => bR,
+      z: () => UR
     });
-    var mW = OW(5540);
-    const EW = {
+    var yR = GR(5671);
+    const tR = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let NW = EW;
+    let uR = tR;
 
-    function PW(WW) {
-      NW = null !== WW && void 0 !== WW ? WW : EW
+    function ZR(RR) {
+      uR = null !== RR && void 0 !== RR ? RR : tR
     }
 
-    function LW() {
-      return NW
+    function qR() {
+      return uR
     }
-    const cW = new Set,
-      wW = new Set;
-    let tW = -1;
-    const ZW = new Set,
-      xW = new Set;
-    let lW = 0,
-      AW = 0;
-    const bW = new Set,
-      jW = new Set;
+    const iR = new Set,
+      fR = new Set;
+    let VR = -1;
+    const KR = new Set,
+      wR = new Set;
+    let rR = 0,
+      eR = 0;
+    const aR = new Set,
+      LR = new Set;
 
-    function UW(WW) {
-      return cW.add(WW), () => {
-        cW.delete(WW)
+    function nR(RR) {
+      return iR.add(RR), () => {
+        iR.delete(RR)
       }
     }
 
-    function kW(WW, iW) {
-      for (const mW of cW) try {
-        mW(WW)
-      } catch (OW) {
-        iW(OW)
+    function UR(RR, JR) {
+      for (const yR of iR) try {
+        yR(RR)
+      } catch (GR) {
+        JR(GR)
       }
     }
 
-    function sW(WW) {
-      return wW.add(WW), () => {
-        wW.delete(WW)
+    function WR(RR) {
+      return fR.add(RR), () => {
+        fR.delete(RR)
       }
     }
 
-    function MW(WW, iW) {
-      const OW = tW < 0 ? 0 : WW - tW;
-      tW = WW;
-      for (const EW of wW) try {
-        EW(OW)
-      } catch (mW) {
-        iW(mW)
+    function AR(RR, JR) {
+      const GR = VR < 0 ? 0 : RR - VR;
+      VR = RR;
+      for (const tR of fR) try {
+        tR(GR)
+      } catch (yR) {
+        JR(yR)
       }
     }
 
-    function KW(WW) {
-      return ZW.add(WW), () => {
-        ZW.delete(WW)
+    function CR(RR) {
+      return KR.add(RR), () => {
+        KR.delete(RR)
       }
     }
 
-    function SW(WW) {
-      return xW.add(WW), () => {
-        xW.delete(WW)
+    function XR(RR) {
+      return wR.add(RR), () => {
+        wR.delete(RR)
       }
     }
-    let YW = 0;
+    let MR = 0;
 
-    function yW(WW) {
-      YW += WW
+    function BR(RR) {
+      MR += RR
     }
 
-    function TW() {
-      const WW = YW;
-      return YW = 0, WW
+    function lR() {
+      const RR = MR;
+      return MR = 0, RR
     }
 
-    function JW(WW) {
-      return bW.add(WW), () => {
-        bW.delete(WW)
-      }
-    }
-
-    function hW(WW) {
-      return jW.add(WW), () => {
-        jW.delete(WW)
+    function pR(RR) {
+      return aR.add(RR), () => {
+        aR.delete(RR)
       }
     }
 
-    function HW() {
-      lW = 0, AW = 0, tW = -1
+    function gR(RR) {
+      return LR.add(RR), () => {
+        LR.delete(RR)
+      }
     }
 
-    function nW(WW, iW) {
-      if ("paced" === WW) return AW += iW, null;
-      if ("drawn" !== WW && "skipped" !== WW) return null;
-      const OW = iW + AW;
-      return AW = 0, OW
+    function bR() {
+      rR = 0, eR = 0, VR = -1
     }
 
-    function uW(WW, iW, OW, EW) {
-      const NW = (0, mW.g)(iW),
-        PW = WW > 0 ? performance.now() : 0;
-      for (let mW = 0; mW < WW; mW++)
-        for (const WW of bW) try {
-          WW()
-        } catch (LW) {
-          EW(LW)
+    function vR(RR, JR) {
+      if ("paced" === RR) return eR += JR, null;
+      if ("drawn" !== RR && "skipped" !== RR) return null;
+      const GR = JR + eR;
+      return eR = 0, GR
+    }
+
+    function OR(RR, JR, GR, tR) {
+      const uR = (0, yR.f)(JR),
+        ZR = RR > 0 ? performance.now() : 0;
+      for (let yR = 0; yR < RR; yR++)
+        for (const RR of aR) try {
+          RR()
+        } catch (qR) {
+          tR(qR)
         }
-      if (WW > 0 && yW(performance.now() - PW), null !== OW) {
-        for (const WW of ZW) try {
-          WW(OW)
-        } catch (LW) {
-          EW(LW)
+      if (RR > 0 && BR(performance.now() - ZR), null !== GR) {
+        for (const RR of KR) try {
+          RR(GR)
+        } catch (qR) {
+          tR(qR)
         }
-        lW += OW
+        rR += GR
       }
-      if ("drawn" === iW) {
-        const WW = lW;
-        lW = 0;
-        for (const iW of xW) try {
-          iW(WW)
-        } catch (LW) {
-          EW(LW)
+      if ("drawn" === JR) {
+        const RR = rR;
+        rR = 0;
+        for (const JR of wR) try {
+          JR(RR)
+        } catch (qR) {
+          tR(qR)
         }
       }
-      for (const mW of jW) try {
-        mW(WW, NW)
-      } catch (LW) {
-        EW(LW)
+      for (const yR of LR) try {
+        yR(RR, uR)
+      } catch (qR) {
+        tR(qR)
       }
     }
   },
-  5560: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW,
-      f: () => NW,
-      g: () => LW
+  5692: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => iR,
+      d: () => uR,
+      f: () => qR
     });
-    var mW = OW(3305),
-      EW = OW(5568);
+    var yR = GR(3428),
+      tR = GR(5697);
 
-    function NW(WW) {
+    function uR(RR) {
       let {
-        action: iW,
-        flags: OW
-      } = WW;
-      return "mid-fire" === iW && 0 !== (OW & mW.e.AltLeftClick)
+        action: JR,
+        flags: GR
+      } = RR;
+      return "mid-fire" === JR && 0 !== (GR & yR.b.AltLeftClick)
     }
-    const PW = new Set;
+    const ZR = new Set;
 
-    function LW(WW) {
-      return PW.add(WW), () => {
-        PW.delete(WW)
+    function qR(RR) {
+      return ZR.add(RR), () => {
+        ZR.delete(RR)
       }
     }
 
-    function cW(WW) {
-      const iW = EW.e[255 & WW];
-      if (void 0 === iW) return;
-      const OW = WW >>> 8 & 255,
-        NW = {
-          action: iW,
-          down: 0 !== (OW & mW.e.Down),
-          flags: OW,
-          press: WW >>> 16
+    function iR(RR) {
+      const JR = tR.e[255 & RR];
+      if (void 0 === JR) return;
+      const GR = RR >>> 8 & 255,
+        uR = {
+          action: JR,
+          down: 0 !== (GR & yR.b.Down),
+          flags: GR,
+          press: RR >>> 16
         };
-      for (const mW of PW) mW(NW)
+      for (const yR of ZR) yR(uR)
     }
   },
-  5568: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      i: () => NW,
-      m: () => PW,
-      n: () => mW,
-      q: () => LW
+  5697: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      f: () => uR,
+      g: () => ZR,
+      i: () => yR,
+      k: () => qR
     });
-    const mW = {
+    const yR = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -748,8 +748,8 @@ export const modules = {
         TouchAttack: 195,
         TouchUse: 196
       },
-      EW = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      NW = {
+      tR = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      uR = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -812,7 +812,7 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      PW = {
+      ZR = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
@@ -820,56 +820,56 @@ export const modules = {
         "primary-fire": [195],
         "alt-fire": [196]
       },
-      LW = [16]
+      qR = [16]
   },
-  5575: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      h: () => PW,
-      j: () => wW
+  5699: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      h: () => ZR,
+      i: () => fR
     });
-    var mW = OW(3305),
-      EW = OW(3308);
-    const NW = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var yR = GR(3428),
+      tR = GR(3437);
+    const uR = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function PW(WW) {
-      return WW instanceof HTMLElement && (!!(WW.isContentEditable || WW instanceof HTMLTextAreaElement || WW instanceof HTMLSelectElement) || WW instanceof HTMLInputElement && !NW.has(WW.type))
+    function ZR(RR) {
+      return RR instanceof HTMLElement && (!!(RR.isContentEditable || RR instanceof HTMLTextAreaElement || RR instanceof HTMLSelectElement) || RR instanceof HTMLInputElement && !uR.has(RR.type))
     }
 
-    function LW(WW) {
-      let iW = null;
-      const OW = OW => {
-          const EW = PW(OW);
-          EW !== iW && (iW = EW, WW(mW.k.UiCapture, mW.y.Keyboard, 0, 0, EW ? mW.y.Keyboard : 0))
+    function qR(RR) {
+      let JR = null;
+      const GR = GR => {
+          const tR = ZR(GR);
+          tR !== JR && (JR = tR, RR(yR.j.UiCapture, yR.C.Keyboard, 0, 0, tR ? yR.C.Keyboard : 0))
         },
-        EW = WW => {
-          OW(WW.target)
+        tR = RR => {
+          GR(RR.target)
         },
-        NW = WW => {
-          OW(WW.relatedTarget)
+        uR = RR => {
+          GR(RR.relatedTarget)
         },
-        LW = () => {
-          OW(document.activeElement)
+        qR = () => {
+          GR(document.activeElement)
         },
-        cW = {
+        iR = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", EW, cW), document.addEventListener("focusout", NW, cW), document.addEventListener("keydown", LW, cW), OW(document.activeElement), () => {
-        document.removeEventListener("focusin", EW, cW), document.removeEventListener("focusout", NW, cW), document.removeEventListener("keydown", LW, cW)
+      return document.addEventListener("focusin", tR, iR), document.addEventListener("focusout", uR, iR), document.addEventListener("keydown", qR, iR), GR(document.activeElement), () => {
+        document.removeEventListener("focusin", tR, iR), document.removeEventListener("focusout", uR, iR), document.removeEventListener("keydown", qR, iR)
       }
     }
-    const cW = new Map;
+    const iR = new Map;
 
-    function wW(WW, iW) {
-      var OW;
-      let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      cW.set(mW, (null !== (OW = cW.get(mW)) && void 0 !== OW ? OW : 0) & ~WW | iW & WW);
-      let NW = 0;
-      for (const EW of cW.values()) NW |= EW;
-      return (0, EW.z)(WW, NW & WW)
+    function fR(RR, JR) {
+      var GR;
+      let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      iR.set(yR, (null !== (GR = iR.get(yR)) && void 0 !== GR ? GR : 0) & ~RR | JR & RR);
+      let uR = 0;
+      for (const tR of iR.values()) uR |= tR;
+      return (0, tR.H)(RR, uR & RR)
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

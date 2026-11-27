@@ -1,560 +1,560 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  41118: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      recoverReplayTails: () => vW
+  41102: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      recoverReplayTails: () => HR
     });
-    var mW = OW(41028),
-      EW = OW(39),
-      NW = OW(41014),
-      PW = OW(40999),
-      LW = OW(41021),
-      cW = OW(1194);
-    const wW = 35e3;
-    async function tW(WW, iW, OW) {
-      const mW = {
-          token: WW.token,
-          sequence: iW
+    var yR = GR(41034),
+      tR = GR(46),
+      uR = GR(41028),
+      ZR = GR(41001),
+      qR = GR(41031),
+      iR = GR(1295);
+    const fR = 35e3;
+    async function VR(RR, JR, GR) {
+      const yR = {
+          token: RR.token,
+          sequence: JR
         },
-        EW = (0, cW.t)(wW),
-        NW = void 0 === OW ? EW : (0, cW.m)([OW, EW]);
-      let PW = !1;
+        tR = (0, iR.t)(fR),
+        uR = void 0 === GR ? tR : (0, iR.l)([GR, tR]);
+      let ZR = !1;
       try {
-        const iW = await fetch(WW.releaseUrl, {
+        const JR = await fetch(RR.releaseUrl, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
           },
-          body: JSON.stringify(mW),
-          signal: NW
+          body: JSON.stringify(yR),
+          signal: uR
         });
-        if (503 === iW.status) {
+        if (503 === JR.status) {
           const {
-            reason: WW
-          } = await iW.json();
-          PW = "release_retrying" === WW || "shutting_down" === WW
+            reason: RR
+          } = await JR.json();
+          ZR = "release_retrying" === RR || "shutting_down" === RR
         }
-        if (!iW.ok) throw new Error(`HTTP ${iW.status}`);
-        const OW = await iW.json();
-        return "stored" === OW.outcome ? OW.stored : null
-      } catch (LW) {
-        if (NW.aborted || PW) throw LW;
-        return console.warn(`Session replay couldn't ask the part joiner about video segment ${iW}; uploading it from the journal.`, LW), null
+        if (!JR.ok) throw new Error(`HTTP ${JR.status}`);
+        const GR = await JR.json();
+        return "stored" === GR.outcome ? GR.stored : null
+      } catch (qR) {
+        if (uR.aborted || ZR) throw qR;
+        return console.warn(`Session replay couldn't ask the part joiner about video segment ${JR}; uploading it from the journal.`, qR), null
       }
     }
-    var ZW = OW(41056),
-      xW = OW(41084),
-      lW = OW(5397),
-      AW = OW(41063);
-    async function bW(WW, iW, OW) {
-      if (!WW.mayStartUpload()) return "retryLater";
+    var KR = GR(41051),
+      wR = GR(41072),
+      rR = GR(5506),
+      eR = GR(41053);
+    async function aR(RR, JR, GR) {
+      if (!RR.mayStartUpload()) return "retryLater";
       const {
-        kind: mW,
-        sequence: EW,
-        contentType: NW
-      } = OW;
-      let PW;
+        kind: yR,
+        sequence: tR,
+        contentType: uR
+      } = GR;
+      let ZR;
       try {
-        PW = await OW.bytes()
-      } catch (LW) {
-        return console.warn(`Session replay couldn't mux late ${mW} segment ${EW}; skipping it.`, LW), "refused"
+        ZR = await GR.bytes()
+      } catch (qR) {
+        return console.warn(`Session replay couldn't mux late ${yR} segment ${tR}; skipping it.`, qR), "refused"
       }
       try {
-        const OW = WW.transportFor(iW),
-          LW = await OW.requestPutUrl({
-            uploadToken: iW.uploadToken,
-            kind: mW,
-            sequence: EW,
-            contentType: NW,
-            byteLength: PW.byteLength,
+        const GR = RR.transportFor(JR),
+          qR = await GR.requestPutUrl({
+            uploadToken: JR.uploadToken,
+            kind: yR,
+            sequence: tR,
+            contentType: uR,
+            byteLength: ZR.byteLength,
             late: !0
           });
-        return "rejected" in LW ? (console.warn(`Session replay late ${mW} segment ${EW} refused: ${LW.reason}`), LW.retryable ? "retryLater" : "refused") : (await OW.put(LW.uploadUrl, PW, NW, LW.ifNoneMatch), "uploaded")
-      } catch (LW) {
-        return console.warn(`Session replay late ${mW} segment ${EW} upload failed; trying again later.`, LW), "retryLater"
+        return "rejected" in qR ? (console.warn(`Session replay late ${yR} segment ${tR} refused: ${qR.reason}`), qR.retryable ? "retryLater" : "refused") : (await GR.put(qR.uploadUrl, ZR, uR, qR.ifNoneMatch), "uploaded")
+      } catch (qR) {
+        return console.warn(`Session replay late ${yR} segment ${tR} upload failed; trying again later.`, qR), "retryLater"
       }
     }
-    async function jW(WW, iW, OW) {
-      var mW;
-      const EW = WW.nowMs(),
-        NW = (null !== (mW = OW.domSegments) && void 0 !== mW ? mW : []).filter((WW => WW.endMs <= EW));
-      for (const PW of [...OW.videoSegments, ...OW.telemetrySegments, ...NW]) OW.endedAtMs = Math.max(OW.endedAtMs, PW.endMs);
-      for (const PW of (0, AW.f)({
-          uploadToken: iW.uploadToken,
-          manifest: OW,
+    async function LR(RR, JR, GR) {
+      var yR;
+      const tR = RR.nowMs(),
+        uR = (null !== (yR = GR.domSegments) && void 0 !== yR ? yR : []).filter((RR => RR.endMs <= tR));
+      for (const ZR of [...GR.videoSegments, ...GR.telemetrySegments, ...uR]) GR.endedAtMs = Math.max(GR.endedAtMs, ZR.endMs);
+      for (const ZR of (0, eR.e)({
+          uploadToken: JR.uploadToken,
+          manifest: GR,
           creatorGrants: [],
           late: !0
         })) {
-        const OW = await WW.postManifest(iW, PW);
-        if ("uploaded" !== OW) return OW
+        const GR = await RR.postManifest(JR, ZR);
+        if ("uploaded" !== GR) return GR
       }
       return "uploaded"
     }
-    var UW = OW(41120),
-      kW = OW(41142),
-      sW = OW(41179),
-      MW = OW(41205),
-      KW = OW(41190);
-    class SW {
-      constructor(WW, iW, OW, mW, EW) {
-        this.frameDurationS = OW, this.onFragment = EW, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = iW, this.lastTimestampUs = iW;
-        const NW = WW => {
-          this.boxes.push(WW)
+    var nR = GR(41108),
+      UR = GR(41123),
+      WR = GR(41170),
+      AR = GR(41192),
+      CR = GR(41179);
+    class XR {
+      constructor(RR, JR, GR, yR, tR) {
+        this.frameDurationS = GR, this.onFragment = tR, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = JR, this.lastTimestampUs = JR;
+        const uR = RR => {
+          this.boxes.push(RR)
         };
-        this.output = new UW.c({
-          format: new kW.h({
+        this.output = new nR.b({
+          format: new UR.l({
             fastStart: "fragmented",
-            minimumFragmentDuration: mW,
-            onFtyp: NW,
-            onMoov: NW,
-            onMoof: NW,
-            onMdat: WW => {
-              NW(WW), this.fragmentDone()
+            minimumFragmentDuration: yR,
+            onFtyp: uR,
+            onMoov: uR,
+            onMoof: uR,
+            onMdat: RR => {
+              uR(RR), this.fragmentDone()
             }
           }),
-          target: new sW.f
-        }), this.source = new MW.k(WW), this.output.addVideoTrack(this.source), this.pending = this.output.start()
+          target: new WR.f
+        }), this.source = new AR.f(RR), this.output.addVideoTrack(this.source), this.pending = this.output.start()
       }
       get durationUs() {
         return this.lastTimestampUs - this.firstTimestampUs
       }
-      add(WW, iW) {
-        const OW = new Uint8Array(WW.byteLength);
-        WW.copyTo(OW), this.addData(OW, WW.type, WW.timestamp, iW)
+      add(RR, JR) {
+        const GR = new Uint8Array(RR.byteLength);
+        RR.copyTo(GR), this.addData(GR, RR.type, RR.timestamp, JR)
       }
-      addData(WW, iW, OW, mW) {
-        const EW = new KW.c(WW, iW, (OW - this.firstTimestampUs) / 1e6, this.frameDurationS),
-          NW = 0 === this.chunkCount++;
-        this.lastTimestampUs = Math.max(this.lastTimestampUs, OW), this.pending = this.pending.then((() => (this.addingTimestampUs = OW, this.source.add(EW, NW ? {
-          decoderConfig: mW
+      addData(RR, JR, GR, yR) {
+        const tR = new CR.c(RR, JR, (GR - this.firstTimestampUs) / 1e6, this.frameDurationS),
+          uR = 0 === this.chunkCount++;
+        this.lastTimestampUs = Math.max(this.lastTimestampUs, GR), this.pending = this.pending.then((() => (this.addingTimestampUs = GR, this.source.add(tR, uR ? {
+          decoderConfig: yR
         } : void 0))))
       }
       async finish() {
         await this.pending, this.addingTimestampUs = null, await this.output.finalize()
       }
       fragmentDone() {
-        var WW;
-        const iW = YW(this.boxes);
+        var RR;
+        const JR = MR(this.boxes);
         this.boxes = [], this.onFragment({
-          bytes: iW,
-          endUs: null !== (WW = this.addingTimestampUs) && void 0 !== WW ? WW : this.lastTimestampUs + 1e6 * this.frameDurationS
+          bytes: JR,
+          endUs: null !== (RR = this.addingTimestampUs) && void 0 !== RR ? RR : this.lastTimestampUs + 1e6 * this.frameDurationS
         })
       }
     }
 
-    function YW(WW) {
-      const iW = new Uint8Array(WW.reduce(((WW, iW) => WW + iW.byteLength), 0));
-      let OW = 0;
-      for (const mW of WW) iW.set(mW, OW), OW += mW.byteLength;
-      return iW
+    function MR(RR) {
+      const JR = new Uint8Array(RR.reduce(((RR, JR) => RR + JR.byteLength), 0));
+      let GR = 0;
+      for (const yR of RR) JR.set(yR, GR), GR += yR.byteLength;
+      return JR
     }
-    OW(41052);
+    GR(41049);
 
-    function yW(WW, iW, OW, mW) {
-      const EW = WW / 1e3 + OW;
+    function BR(RR, JR, GR, yR) {
+      const tR = RR / 1e3 + GR;
       return {
-        startMs: EW,
-        endMs: EW + iW / 1e3 + 1e3 / mW
+        startMs: tR,
+        endMs: tR + JR / 1e3 + 1e3 / yR
       }
     }
-    const TW = 2,
-      JW = 18e5;
+    const lR = 2,
+      pR = 18e5;
 
-    function hW(WW, iW) {
-      const OW = iW[iW.length - 1].timestampUs - WW.firstTimestampUs,
+    function gR(RR, JR) {
+      const GR = JR[JR.length - 1].timestampUs - RR.firstTimestampUs,
         {
-          startMs: mW,
-          endMs: EW
-        } = yW(WW.firstTimestampUs, OW, WW.epochOffsetMs, WW.fps);
+          startMs: yR,
+          endMs: tR
+        } = BR(RR.firstTimestampUs, GR, RR.epochOffsetMs, RR.fps);
       return {
-        startMs: Math.round(mW),
-        endMs: Math.round(EW),
-        width: WW.width,
-        height: WW.height,
-        codec: WW.codec
+        startMs: Math.round(yR),
+        endMs: Math.round(tR),
+        width: RR.width,
+        height: RR.height,
+        codec: RR.codec
       }
     }
-    async function HW(WW, iW) {
-      const OW = [],
-        mW = new SW(WW.containerCodec, WW.firstTimestampUs, 1 / WW.fps, TW, (WW => {
+    async function bR(RR, JR) {
+      const GR = [],
+        yR = new XR(RR.containerCodec, RR.firstTimestampUs, 1 / RR.fps, lR, (RR => {
           let {
-            bytes: iW
-          } = WW;
-          OW.push(iW)
+            bytes: JR
+          } = RR;
+          GR.push(JR)
         }));
-      for (const EW of iW) mW.addData(EW.data, EW.key ? "key" : "delta", EW.timestampUs, WW.decoderConfig);
-      return await mW.finish(), YW(OW).buffer
+      for (const tR of JR) yR.addData(tR.data, tR.key ? "key" : "delta", tR.timestampUs, RR.decoderConfig);
+      return await yR.finish(), MR(GR).buffer
     }
 
-    function nW(WW, iW, OW) {
-      var mW;
-      const EW = null === (mW = WW.videoProgress) || void 0 === mW ? void 0 : mW.find((WW => WW.segmentId === iW));
-      return void 0 !== EW && (null === OW || EW.partsLanded > OW.partsLanded) ? EW : OW
+    function vR(RR, JR, GR) {
+      var yR;
+      const tR = null === (yR = RR.videoProgress) || void 0 === yR ? void 0 : yR.find((RR => RR.segmentId === JR));
+      return void 0 !== tR && (null === GR || tR.partsLanded > GR.partsLanded) ? tR : GR
     }
-    const uW = 6e5;
-    async function oW(WW, iW) {
-      const OW = {
-        recordingId: iW.recordingId,
+    const OR = 6e5;
+    async function xR(RR, JR) {
+      const GR = {
+        recordingId: JR.recordingId,
         outcome: "nothing",
         videoSegments: 0,
         telemetrySegments: 0,
         domSegments: 0
       };
-      if (WW.nowMs() > WW.lateUploadUntilMs(iW) - uW) return {
-        ...OW,
+      if (RR.nowMs() > RR.lateUploadUntilMs(JR) - OR) return {
+        ...GR,
         outcome: "expired"
       };
-      const mW = new Set;
-      let EW;
+      const yR = new Set;
+      let tR;
       try {
-        EW = await async function(WW, iW, OW, mW) {
+        tR = await async function(RR, JR, GR, yR) {
           const {
-            partJoiner: EW
-          } = iW;
-          if (void 0 === EW) return OW;
-          const NW = WW.nowMs() > iW.manifest.endedAtMs + JW,
-            PW = new Map;
+            partJoiner: tR
+          } = JR;
+          if (void 0 === tR) return GR;
+          const uR = RR.nowMs() > JR.manifest.endedAtMs + pR,
+            ZR = new Map;
           for (const {
-              header: cW,
-              sequence: wW,
-              progress: tW
+              header: iR,
+              sequence: fR,
+              progress: VR
             }
-            of OW.video)
-            if (null !== wW && null === nW(iW, cW.segmentId, tW)) {
-              let iW;
+            of GR.video)
+            if (null !== fR && null === vR(JR, iR.segmentId, VR)) {
+              let JR;
               try {
-                iW = await WW.releaseJoined(EW, wW)
-              } catch (LW) {
-                if (!NW) {
-                  mW.add(cW.segmentId);
+                JR = await RR.releaseJoined(tR, fR)
+              } catch (qR) {
+                if (!uR) {
+                  yR.add(iR.segmentId);
                   continue
                 }
-                console.warn(`Session replay's part joiner didn't answer about video segment ${wW} in time; uploading it from the journal.`, LW), iW = null
+                console.warn(`Session replay's part joiner didn't answer about video segment ${fR} in time; uploading it from the journal.`, qR), JR = null
               }
-              null !== iW && PW.set(cW.segmentId, iW)
+              null !== JR && ZR.set(iR.segmentId, JR)
             } return {
-            ...OW,
-            joined: PW
+            ...GR,
+            joined: ZR
           }
-        }(WW, iW, await WW.store.read(iW), mW)
-      } catch (UW) {
-        return console.warn(`Session replay couldn't read what an earlier page load left of ${iW.recordingId}; trying again later.`, UW), {
-          ...OW,
+        }(RR, JR, await RR.store.read(JR), yR)
+      } catch (nR) {
+        return console.warn(`Session replay couldn't read what an earlier page load left of ${JR.recordingId}; trying again later.`, nR), {
+          ...GR,
           outcome: "retryLater"
         }
       }
-      const NW = [],
-        PW = {
-          ...iW.manifest,
+      const uR = [],
+        ZR = {
+          ...JR.manifest,
           videoSegments: [],
           telemetrySegments: [],
-          ...EW.dom.length + EW.domTails.length > 0 ? {
-            domSegments: NW
+          ...tR.dom.length + tR.domTails.length > 0 ? {
+            domSegments: uR
           } : {}
         },
-        LW = () => PW.videoSegments.length + PW.telemetrySegments.length + NW.length > 0,
-        cW = function(WW, iW) {
-          let OW = WW.video.reduce(((WW, iW) => {
+        qR = () => ZR.videoSegments.length + ZR.telemetrySegments.length + uR.length > 0,
+        iR = function(RR, JR) {
+          let GR = RR.video.reduce(((RR, JR) => {
             let {
-              sequence: OW
-            } = iW;
-            return null === OW ? WW : Math.max(WW, OW + 1)
-          }), iW.nextVideoSequence);
+              sequence: GR
+            } = JR;
+            return null === GR ? RR : Math.max(RR, GR + 1)
+          }), JR.nextVideoSequence);
           return {
-            segments: [...WW.video].sort(((WW, iW) => WW.header.segmentId - iW.header.segmentId)).map((mW => {
-              var EW, NW, PW;
+            segments: [...RR.video].sort(((RR, JR) => RR.header.segmentId - JR.header.segmentId)).map((yR => {
+              var tR, uR, ZR;
               let {
-                header: LW,
-                sequence: cW,
-                progress: wW,
-                chunks: tW
-              } = mW;
-              const ZW = nW(iW, LW.segmentId, wW),
-                xW = null === (EW = WW.joined) || void 0 === EW ? void 0 : EW.get(LW.segmentId),
-                lW = null !== cW && void 0 !== xW ? {
-                  sequence: cW,
-                  ...xW.meta
-                } : null !== cW && null !== ZW ? {
-                  sequence: cW,
-                  ...ZW.meta,
-                  startMs: Math.round(ZW.meta.startMs),
-                  endMs: Math.round(ZW.meta.endMs),
-                  parts: ZW.partsLanded
+                header: qR,
+                sequence: iR,
+                progress: fR,
+                chunks: VR
+              } = yR;
+              const KR = vR(JR, qR.segmentId, fR),
+                wR = null === (tR = RR.joined) || void 0 === tR ? void 0 : tR.get(qR.segmentId),
+                rR = null !== iR && void 0 !== wR ? {
+                  sequence: iR,
+                  ...wR.meta
+                } : null !== iR && null !== KR ? {
+                  sequence: iR,
+                  ...KR.meta,
+                  startMs: Math.round(KR.meta.startMs),
+                  endMs: Math.round(KR.meta.endMs),
+                  parts: KR.partsLanded
                 } : null,
-                AW = null !== (NW = null !== (PW = null === xW || void 0 === xW ? void 0 : xW.completeUntilUs) && void 0 !== PW ? PW : null === ZW || void 0 === ZW ? void 0 : ZW.completeUntilUs) && void 0 !== NW ? NW : null,
-                bW = function(WW) {
-                  const iW = [...WW].sort(((WW, iW) => WW.index - iW.index)),
-                    OW = [];
-                  for (const mW of iW) {
-                    if (0 === OW.length ? !mW.key : mW.index !== OW[0].index + OW.length) break;
-                    OW.push(mW)
+                eR = null !== (uR = null !== (ZR = null === wR || void 0 === wR ? void 0 : wR.completeUntilUs) && void 0 !== ZR ? ZR : null === KR || void 0 === KR ? void 0 : KR.completeUntilUs) && void 0 !== uR ? uR : null,
+                aR = function(RR) {
+                  const JR = [...RR].sort(((RR, JR) => RR.index - JR.index)),
+                    GR = [];
+                  for (const yR of JR) {
+                    if (0 === GR.length ? !yR.key : yR.index !== GR[0].index + GR.length) break;
+                    GR.push(yR)
                   }
-                  return OW
-                }(null === AW ? tW : tW.filter((WW => WW.timestampUs >= AW))),
-                jW = 0 === bW.length ? null : {
-                  sequence: OW++,
+                  return GR
+                }(null === eR ? VR : VR.filter((RR => RR.timestampUs >= eR))),
+                LR = 0 === aR.length ? null : {
+                  sequence: GR++,
                   header: {
-                    ...LW,
-                    firstTimestampUs: bW[0].timestampUs
+                    ...qR,
+                    firstTimestampUs: aR[0].timestampUs
                   },
-                  chunks: bW
+                  chunks: aR
                 };
               return {
-                segmentId: LW.segmentId,
-                landed: lW,
-                tail: jW
+                segmentId: qR.segmentId,
+                landed: rR,
+                tail: LR
               }
             })),
-            nextSequence: OW
+            nextSequence: GR
           }
-        }(EW, iW),
-        wW = function(WW, iW) {
-          var OW;
-          let mW = WW.dom.reduce(((WW, iW) => {
+        }(tR, JR),
+        fR = function(RR, JR) {
+          var GR;
+          let yR = RR.dom.reduce(((RR, JR) => {
             let {
-              sequence: OW
-            } = iW;
-            return Math.max(WW, OW + 1)
-          }), null !== (OW = iW.nextDomSequence) && void 0 !== OW ? OW : 0);
-          const EW = [...WW.domTails].sort(((WW, iW) => WW.chunkIndex - iW.chunkIndex || WW.fromChar - iW.fromChar)),
-            NW = [];
-          for (const PW of EW) {
-            const WW = NW[NW.length - 1],
-              iW = (null === WW || void 0 === WW ? void 0 : WW.chunkIndex) === PW.chunkIndex;
-            PW.fromChar === (iW ? WW.text.length : 0) && (iW ? (WW.text += PW.text, WW.last = PW) : NW.push({
-              chunkIndex: PW.chunkIndex,
-              sequence: mW++,
-              text: PW.text,
-              last: PW
+              sequence: GR
+            } = JR;
+            return Math.max(RR, GR + 1)
+          }), null !== (GR = JR.nextDomSequence) && void 0 !== GR ? GR : 0);
+          const tR = [...RR.domTails].sort(((RR, JR) => RR.chunkIndex - JR.chunkIndex || RR.fromChar - JR.fromChar)),
+            uR = [];
+          for (const ZR of tR) {
+            const RR = uR[uR.length - 1],
+              JR = (null === RR || void 0 === RR ? void 0 : RR.chunkIndex) === ZR.chunkIndex;
+            ZR.fromChar === (JR ? RR.text.length : 0) && (JR ? (RR.text += ZR.text, RR.last = ZR) : uR.push({
+              chunkIndex: ZR.chunkIndex,
+              sequence: yR++,
+              text: ZR.text,
+              last: ZR
             }))
           }
           return {
-            tails: NW,
-            nextSequence: mW
+            tails: uR,
+            nextSequence: yR
           }
-        }(EW, iW),
-        tW = {
+        }(tR, JR),
+        VR = {
           videoSegmentIds: [],
           telemetrySequences: [],
           domSequences: [],
           domTailChunks: []
         };
-      let ZW = !1;
-      const xW = async EW => {
-        if (LW()) {
-          const LW = await jW(WW, iW, PW);
-          if ("retryLater" === EW && "uploaded" === LW) try {
-            var NW;
-            const OW = wW.tails.find((WW => {
+      let KR = !1;
+      const wR = async tR => {
+        if (qR()) {
+          const qR = await LR(RR, JR, ZR);
+          if ("retryLater" === tR && "uploaded" === qR) try {
+            var uR;
+            const GR = fR.tails.find((RR => {
                 let {
-                  chunkIndex: iW
-                } = WW;
-                return !tW.domTailChunks.includes(iW)
+                  chunkIndex: JR
+                } = RR;
+                return !VR.domTailChunks.includes(JR)
               })),
-              mW = null !== (NW = null === OW || void 0 === OW ? void 0 : OW.sequence) && void 0 !== NW ? NW : wW.nextSequence;
-            await WW.store.forgetSent({
-              ...iW,
-              nextVideoSequence: cW.nextSequence,
-              nextDomSequence: mW
-            }, tW)
-          } catch (UW) {
-            console.warn(`Session replay couldn't drop what it sent of ${iW.recordingId} from its journal.`, UW)
+              yR = null !== (uR = null === GR || void 0 === GR ? void 0 : GR.sequence) && void 0 !== uR ? uR : fR.nextSequence;
+            await RR.store.forgetSent({
+              ...JR,
+              nextVideoSequence: iR.nextSequence,
+              nextDomSequence: yR
+            }, VR)
+          } catch (nR) {
+            console.warn(`Session replay couldn't drop what it sent of ${JR.recordingId} from its journal.`, nR)
           }
-          if ("refused" === LW && mW.size > 0) return {
-            ...OW,
+          if ("refused" === qR && yR.size > 0) return {
+            ...GR,
             outcome: "refused"
           }
         }
         return {
-          ...OW,
-          outcome: EW
+          ...GR,
+          outcome: tR
         }
       };
       for (const {
-          segmentId: jW,
-          landed: kW,
-          tail: sW
+          segmentId: LR,
+          landed: UR,
+          tail: WR
         }
-        of cW.segments)
-        if (!mW.has(jW)) {
-          if (null !== kW && PW.videoSegments.push(kW), null !== sW) {
-            const mW = await bW(WW, iW, {
+        of iR.segments)
+        if (!yR.has(LR)) {
+          if (null !== UR && ZR.videoSegments.push(UR), null !== WR) {
+            const yR = await aR(RR, JR, {
               kind: "video",
-              sequence: sW.sequence,
+              sequence: WR.sequence,
               contentType: "video/mp4",
-              bytes: () => WW.mux(sW.header, sW.chunks)
+              bytes: () => RR.mux(WR.header, WR.chunks)
             });
-            if ("retryLater" === mW) return await xW(mW);
-            "refused" === mW ? ZW = !0 : (PW.videoSegments.push({
-              sequence: sW.sequence,
-              ...hW(sW.header, sW.chunks)
-            }), OW.videoSegments++)
+            if ("retryLater" === yR) return await wR(yR);
+            "refused" === yR ? KR = !0 : (ZR.videoSegments.push({
+              sequence: WR.sequence,
+              ...gR(WR.header, WR.chunks)
+            }), GR.videoSegments++)
           }
-          tW.videoSegmentIds.push(jW)
-        } const lW = [...EW.telemetry].sort(((WW, iW) => WW.sequence - iW.sequence));
-      for (const jW of lW) {
-        const mW = jW.landed ? "uploaded" : await bW(WW, iW, {
+          VR.videoSegmentIds.push(LR)
+        } const rR = [...tR.telemetry].sort(((RR, JR) => RR.sequence - JR.sequence));
+      for (const LR of rR) {
+        const yR = LR.landed ? "uploaded" : await aR(RR, JR, {
           kind: "telemetry",
-          sequence: jW.sequence,
+          sequence: LR.sequence,
           contentType: "application/octet-stream",
-          bytes: async () => jW.bytes
+          bytes: async () => LR.bytes
         });
-        if ("retryLater" === mW) return await xW(mW);
-        tW.telemetrySequences.push(jW.sequence), "refused" !== mW ? (PW.telemetrySegments.push({
-          sequence: jW.sequence,
-          startMs: Math.round(jW.startMs),
-          endMs: Math.round(jW.endMs)
-        }), OW.telemetrySegments++) : ZW = !0
+        if ("retryLater" === yR) return await wR(yR);
+        VR.telemetrySequences.push(LR.sequence), "refused" !== yR ? (ZR.telemetrySegments.push({
+          sequence: LR.sequence,
+          startMs: Math.round(LR.startMs),
+          endMs: Math.round(LR.endMs)
+        }), GR.telemetrySegments++) : KR = !0
       }
-      const AW = [...EW.dom].sort(((WW, iW) => WW.sequence - iW.sequence));
+      const eR = [...tR.dom].sort(((RR, JR) => RR.sequence - JR.sequence));
       for (const {
-          sequence: jW,
-          chunk: kW,
-          bytes: sW
+          sequence: LR,
+          chunk: UR,
+          bytes: WR
         }
-        of AW) {
-        const mW = null === sW ? "uploaded" : await bW(WW, iW, {
+        of eR) {
+        const yR = null === WR ? "uploaded" : await aR(RR, JR, {
           kind: "dom",
-          sequence: jW,
+          sequence: LR,
           contentType: "application/octet-stream",
-          bytes: async () => sW
+          bytes: async () => WR
         });
-        if ("retryLater" === mW) return await xW(mW);
-        tW.domSequences.push(jW), NW.push({
-          sequence: jW,
-          ...kW
-        }), "uploaded" === mW && OW.domSegments++
+        if ("retryLater" === yR) return await wR(yR);
+        VR.domSequences.push(LR), uR.push({
+          sequence: LR,
+          ...UR
+        }), "uploaded" === yR && GR.domSegments++
       }
       for (const {
-          chunkIndex: jW,
-          sequence: kW,
-          text: sW,
-          last: MW
+          chunkIndex: LR,
+          sequence: UR,
+          text: WR,
+          last: AR
         }
-        of wW.tails) {
-        let mW;
-        const EW = await bW(WW, iW, {
+        of fR.tails) {
+        let yR;
+        const tR = await aR(RR, JR, {
           kind: "dom",
-          sequence: kW,
+          sequence: UR,
           contentType: "application/octet-stream",
-          bytes: async () => (mW = await WW.packDom(sW), mW.bytes.buffer)
+          bytes: async () => (yR = await RR.packDom(WR), yR.bytes.buffer)
         });
-        if ("retryLater" === EW) return await xW(EW);
-        if (tW.domTailChunks.push(jW), "refused" === EW) {
-          ZW = !0;
+        if ("retryLater" === tR) return await wR(tR);
+        if (VR.domTailChunks.push(LR), "refused" === tR) {
+          KR = !0;
           continue
         }
         const {
-          bytes: PW,
-          inflatedBytes: LW
-        } = mW, {
-          startMs: cW,
-          endMs: wW,
-          summary: lW
-        } = MW;
-        NW.push({
-          sequence: kW,
-          startMs: cW,
-          endMs: wW,
-          byteLength: PW.byteLength,
+          bytes: ZR,
+          inflatedBytes: qR
+        } = yR, {
+          startMs: iR,
+          endMs: fR,
+          summary: rR
+        } = AR;
+        uR.push({
+          sequence: UR,
+          startMs: iR,
+          endMs: fR,
+          byteLength: ZR.byteLength,
           summary: {
-            ...lW,
-            size: LW
+            ...rR,
+            size: qR
           }
-        }), OW.domSegments++
+        }), GR.domSegments++
       }
-      return mW.size > 0 ? await xW("retryLater") : LW() ? {
-        ...OW,
-        outcome: await jW(WW, iW, PW)
-      } : ZW ? {
-        ...OW,
+      return yR.size > 0 ? await wR("retryLater") : qR() ? {
+        ...GR,
+        outcome: await LR(RR, JR, ZR)
+      } : KR ? {
+        ...GR,
         outcome: "refused"
-      } : OW
+      } : GR
     }
-    var dW = OW(41041),
-      eW = OW(41067);
-    async function vW() {
-      const WW = "undefined" === typeof navigator ? void 0 : navigator.locks;
-      if (!xW.d.supported || void 0 === WW) return;
-      const iW = new xW.d,
-        OW = new dW.e,
-        cW = new NW.d,
-        wW = await async function(WW) {
-          const iW = [];
-          for (const mW of await WW.store.listRecordings()) {
-            let EW = {
-              recordingId: mW.recordingId,
+    var NR = GR(41041),
+      DR = GR(41060);
+    async function HR() {
+      const RR = "undefined" === typeof navigator ? void 0 : navigator.locks;
+      if (!wR.e.supported || void 0 === RR) return;
+      const JR = new wR.e,
+        GR = new NR.e,
+        iR = new uR.d,
+        fR = await async function(RR) {
+          const JR = [];
+          for (const yR of await RR.store.listRecordings()) {
+            let tR = {
+              recordingId: yR.recordingId,
               outcome: "live",
               videoSegments: 0,
               telemetrySegments: 0,
               domSegments: 0
             };
             try {
-              await WW.withLock(mW.recordingId, (async () => {
-                const iW = (await WW.store.listRecordings()).find((WW => {
+              await RR.withLock(yR.recordingId, (async () => {
+                const JR = (await RR.store.listRecordings()).find((RR => {
                   let {
-                    recordingId: iW
-                  } = WW;
-                  return iW === mW.recordingId
+                    recordingId: JR
+                  } = RR;
+                  return JR === yR.recordingId
                 }));
-                if (void 0 !== iW) {
+                if (void 0 !== JR) {
                   try {
-                    EW = await oW(WW, iW)
-                  } catch (OW) {
-                    console.warn(`Session replay couldn't recover what an earlier page load left of ${mW.recordingId}; forgetting it.`, OW), EW = {
-                      ...EW,
+                    tR = await xR(RR, JR)
+                  } catch (GR) {
+                    console.warn(`Session replay couldn't recover what an earlier page load left of ${yR.recordingId}; forgetting it.`, GR), tR = {
+                      ...tR,
                       outcome: "failed"
                     }
                   }
-                  "retryLater" !== EW.outcome && await WW.store.deleteRecording(mW.recordingId)
-                } else EW = {
-                  ...EW,
+                  "retryLater" !== tR.outcome && await RR.store.deleteRecording(yR.recordingId)
+                } else tR = {
+                  ...tR,
                   outcome: "nothing"
                 }
               }))
-            } catch (OW) {
-              console.warn(`Session replay couldn't forget ${mW.recordingId}'s journal.`, OW)
+            } catch (GR) {
+              console.warn(`Session replay couldn't forget ${yR.recordingId}'s journal.`, GR)
             }
-            iW.push(EW)
+            JR.push(tR)
           }
-          return iW
+          return JR
         }({
-          store: iW,
-          transportFor: WW => {
-            var iW;
-            return new eW.f((null !== (iW = WW.endpoints) && void 0 !== iW ? iW : (0, LW.d)()).segmentUploadUrl, {
-              relay: OW.for(WW)
+          store: JR,
+          transportFor: RR => {
+            var JR;
+            return new DR.c((null !== (JR = RR.endpoints) && void 0 !== JR ? JR : (0, qR.c)()).segmentUploadUrl, {
+              relay: GR.for(RR)
             })
           },
-          postManifest: (WW, iW) => {
-            var OW;
-            return (0, ZW.b)((null !== (OW = WW.endpoints) && void 0 !== OW ? OW : (0, LW.d)()).manifestUrl, iW)
+          postManifest: (RR, JR) => {
+            var GR;
+            return (0, KR.b)((null !== (GR = RR.endpoints) && void 0 !== GR ? GR : (0, qR.c)()).manifestUrl, JR)
           },
-          withLock: async (iW, OW) => {
-            await WW.request((0, lW.u)(iW), {
+          withLock: async (JR, GR) => {
+            await RR.request((0, rR.w)(JR), {
               ifAvailable: !0
-            }, (async WW => {
-              null !== WW && await OW()
+            }, (async RR => {
+              null !== RR && await GR()
             }))
           },
-          mux: HW,
-          packDom: WW => cW.pack(WW).catch((() => (0, PW.d)(WW))),
-          releaseJoined: tW,
+          mux: bR,
+          packDom: RR => iR.pack(RR).catch((() => (0, ZR.d)(RR))),
+          releaseJoined: VR,
           nowMs: Date.now,
-          lateUploadUntilMs: WW => {
-            var iW;
-            return null !== (iW = WW.lateUploadUntilMs) && void 0 !== iW ? iW : WW.expiresAtMs + mW.e
+          lateUploadUntilMs: RR => {
+            var JR;
+            return null !== (JR = RR.lateUploadUntilMs) && void 0 !== JR ? JR : RR.expiresAtMs + yR.d
           },
           mayStartUpload: () => !0
         }).finally((() => {
-          cW.close()
+          iR.close()
         }));
-      for (const mW of wW) "live" !== mW.outcome && console.info(`Session replay: ${mW.outcome} what an earlier page load left of ${mW.recordingId} (${mW.videoSegments} video, ${mW.telemetrySegments} telemetry, ${mW.domSegments} page recording).`);
-      0 === (await iW.listRecordings()).length && EW.i.removeItem(lW.j)
+      for (const yR of fR) "live" !== yR.outcome && console.info(`Session replay: ${yR.outcome} what an earlier page load left of ${yR.recordingId} (${yR.videoSegments} video, ${yR.telemetrySegments} telemetry, ${yR.domSegments} page recording).`);
+      0 === (await JR.listRecordings()).length && tR.i.removeItem(rR.m)
     }
   },
-  41185: () => {}
+  41175: () => {}
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

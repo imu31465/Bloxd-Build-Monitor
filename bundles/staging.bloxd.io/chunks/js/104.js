@@ -1,378 +1,378 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  42056: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      startWasmPadGameplay: () => pW
+  42071: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      startWasmPadGameplay: () => IR
     });
-    OW(42060);
-    var mW = OW(42067),
-      EW = OW(42086),
-      NW = OW(2061),
-      PW = OW(42094),
-      LW = OW(5551),
-      cW = OW(5533),
-      wW = OW(42103),
-      tW = OW(42109),
-      ZW = OW(5568),
-      xW = OW(42185),
-      lW = OW(3308),
-      AW = OW(10079),
-      bW = OW(42075),
-      jW = OW(10053),
-      UW = OW(40305);
-    const kW = WW => {
-        const iW = ZW.e.indexOf(WW);
-        if (iW < 0) throw new Error(`No core action "${WW}"`);
-        return iW
+    GR(42078);
+    var yR = GR(42086),
+      tR = GR(42097),
+      uR = GR(2163),
+      ZR = GR(42106),
+      qR = GR(5685),
+      iR = GR(5665),
+      fR = GR(42114),
+      VR = GR(42118),
+      KR = GR(5697),
+      wR = GR(42194),
+      rR = GR(3437),
+      eR = GR(10203),
+      aR = GR(42088),
+      LR = GR(10181),
+      nR = GR(40356);
+    const UR = RR => {
+        const JR = KR.e.indexOf(RR);
+        if (JR < 0) throw new Error(`No core action "${RR}"`);
+        return JR
       },
-      sW = kW("primary-fire"),
-      MW = kW("alt-fire"),
-      KW = kW("mid-fire"),
-      SW = kW("jump"),
-      YW = kW("ReloadGun"),
-      yW = kW("SwapCameraZoom"),
-      TW = kW("Zoom"),
-      JW = kW("TouchAction1"),
-      hW = {
-        SpecialAction1: kW("SpecialAction1"),
-        SpecialAction2: kW("SpecialAction2")
+      WR = UR("primary-fire"),
+      AR = UR("alt-fire"),
+      CR = UR("mid-fire"),
+      XR = UR("jump"),
+      MR = UR("ReloadGun"),
+      BR = UR("SwapCameraZoom"),
+      lR = UR("Zoom"),
+      pR = UR("TouchAction1"),
+      gR = {
+        SpecialAction1: UR("SpecialAction1"),
+        SpecialAction2: UR("SpecialAction2")
       },
-      HW = (WW, iW) => {
-        (0, lW.t)(LW.N.PadAction, WW, 0, 0, (0, lW.q)(iW, performance.now()))
+      bR = (RR, JR) => {
+        (0, rR.w)(qR.N.PadAction, RR, 0, 0, (0, rR.s)(JR, performance.now()))
       },
-      nW = WW => {
-        HW(WW, PW.Id.Down)
+      vR = RR => {
+        bR(RR, ZR.md.Down)
       },
-      uW = WW => {
-        HW(WW, 0)
+      OR = RR => {
+        bR(RR, 0)
       },
-      oW = WW => {
-        nW(WW), uW(WW)
+      xR = RR => {
+        vR(RR), OR(RR)
       },
-      dW = () => {
-        const WW = (0, tW.f)();
-        return null !== WW && void 0 !== WW && WW.isCoreRunning ? WW : null
+      NR = () => {
+        const RR = (0, VR.l)();
+        return null !== RR && void 0 !== RR && RR.isCoreRunning ? RR : null
       },
-      eW = WW => PW.z.playerFlags(WW.api.apiView, 0),
-      vW = WW => null !== WW && PW.z.targetBlockId(WW.api.apiView, 0) !== PW.nd,
-      gW = () => {
-        const WW = (0, AW.d)(),
-          iW = new bW.b;
-        let OW = !1;
-        const mW = (WW, iW) => {
-            (0, lW.t)(LW.N.PadLook, PW.Pd.Rate, WW, iW, 0)
+      DR = RR => ZR.s.playerFlags(RR.api.apiView, 0),
+      HR = RR => null !== RR && ZR.s.targetBlockId(RR.api.apiView, 0) !== ZR.Yc,
+      oR = () => {
+        const RR = (0, eR.e)(),
+          JR = new aR.e;
+        let GR = !1;
+        const yR = (RR, JR) => {
+            (0, rR.w)(qR.N.PadLook, ZR.qd.Rate, RR, JR, 0)
           },
-          EW = () => {
-            OW = !1, iW.reset(), mW(0, 0)
+          tR = () => {
+            GR = !1, JR.reset(), yR(0, 0)
           };
         return {
-          update: (EW, NW, cW) => {
-            OW || (WW.discardPending(), OW = !0);
-            const wW = (0, bW.p)(iW, EW, NW, cW, performance.now());
-            mW(wW.yawRadPerSec, wW.pitchRadPerSec);
-            const tW = WW.drainLookDelta();
-            0 === tW.jH && 0 === tW.UH || (0, lW.t)(LW.N.PadLook, PW.Pd.Gyro, tW.jH, tW.UH, 0)
+          update: (tR, uR, iR) => {
+            GR || (RR.discardPending(), GR = !0);
+            const fR = (0, aR.r)(JR, tR, uR, iR, performance.now());
+            yR(fR.yawRadPerSec, fR.pitchRadPerSec);
+            const VR = RR.drainLookDelta();
+            0 === VR.bD && 0 === VR.PD || (0, rR.w)(qR.N.PadLook, ZR.qd.Gyro, VR.bD, VR.PD, 0)
           },
-          release: EW,
-          uninstall: EW
+          release: tR,
+          uninstall: tR
         }
       },
-      DW = () => {
-        const WW = dW();
-        return null !== WW && 0 !== (eW(WW) & PW.Ud.PadSneakToggled)
+      cR = () => {
+        const RR = NR();
+        return null !== RR && 0 !== (DR(RR) & ZR.xd.PadSneakToggled)
       },
-      VW = () => {
-        const WW = (WW => {
-          const iW = WW => function() {
-            return (0, xW.e)(), WW(...arguments)
+      PR = () => {
+        const RR = (RR => {
+          const JR = RR => function() {
+            return (0, wR.c)(), RR(...arguments)
           };
           return {
-            primaryFireDown: iW((WW => (HW(sW, PW.Id.Down | (WW ? PW.Id.Repeat : 0)), 0))),
-            primaryFireUp: iW((() => {
-              uW(sW)
+            primaryFireDown: JR((RR => (bR(WR, ZR.md.Down | (RR ? ZR.md.Repeat : 0)), 0))),
+            primaryFireUp: JR((() => {
+              OR(WR)
             })),
-            altFireDown: iW((() => (nW(MW), 0))),
-            altFireUp: iW((() => {
-              uW(MW)
+            altFireDown: JR((() => (vR(AR), 0))),
+            altFireUp: JR((() => {
+              OR(AR)
             })),
-            jumpDown: iW((() => {
-              oW(SW)
+            jumpDown: JR((() => {
+              xR(XR)
             })),
-            specialActionDown: iW((WW => {
-              nW(hW[WW])
+            specialActionDown: JR((RR => {
+              vR(gR[RR])
             })),
-            specialActionUp: iW((WW => {
-              uW(hW[WW])
+            specialActionUp: JR((RR => {
+              OR(gR[RR])
             })),
-            reloadGun: iW((() => {
-              oW(YW)
+            reloadGun: JR((() => {
+              xR(MR)
             })),
-            dropItem: iW((WW => {
-              HW(PW.Md.Drop, PW.Id.Down | (WW ? PW.Id.Stack : 0))
+            dropItem: JR((RR => {
+              bR(ZR.nd.Drop, ZR.md.Down | (RR ? ZR.md.Stack : 0))
             })),
-            swapCameraZoom: iW((() => {
-              oW(yW)
+            swapCameraZoom: JR((() => {
+              xR(BR)
             })),
-            zoom: iW((WW => {
-              WW ? nW(TW) : uW(TW)
+            zoom: JR((RR => {
+              RR ? vR(lR) : OR(lR)
             })),
-            pickBlock: iW((() => (oW(KW), vW(WW()))))
+            pickBlock: JR((() => (xR(CR), HR(RR()))))
           }
-        })(dW);
-        let iW = !1,
-          OW = null;
-        const mW = () => {
-          var WW;
-          null === (WW = OW) || void 0 === WW || WW(), OW = null
+        })(NR);
+        let JR = !1,
+          GR = null;
+        const yR = () => {
+          var RR;
+          null === (RR = GR) || void 0 === RR || RR(), GR = null
         };
         return {
-          bodies: () => WW,
-          look: gW(),
-          move: (WW, OW) => {
-            var EW;
-            mW();
+          bodies: () => RR,
+          look: oR(),
+          move: (RR, GR) => {
+            var tR;
+            yR();
             const {
-              bits: NW,
-              flips: LW
-            } = (WW => {
-              if (null === WW) return {
-                bits: PW.Nd.Peek,
+              bits: uR,
+              flips: qR
+            } = (RR => {
+              if (null === RR) return {
+                bits: ZR.pd.Peek,
                 flips: 0
               };
-              const iW = WW.sneakHeld ? PW.Nd.SneakHeld : 0;
-              return "hold" === WW.mode ? {
-                bits: iW | PW.Nd.SneakHoldMode,
-                flips: WW.sneakTogglePressed ? 1 : 0
+              const JR = RR.sneakHeld ? ZR.pd.SneakHeld : 0;
+              return "hold" === RR.mode ? {
+                bits: JR | ZR.pd.SneakHoldMode,
+                flips: RR.sneakTogglePressed ? 1 : 0
               } : {
-                bits: iW,
-                flips: WW.sneakPressed || WW.sneakTogglePressed ? 1 : 0
+                bits: JR,
+                flips: RR.sneakPressed || RR.sneakTogglePressed ? 1 : 0
               }
-            })(OW);
-            null !== (EW = dW()) && void 0 !== EW && EW.padMove(WW.x, WW.y, WW.magnitude, WW.headingOffset, (WW => PW.Nd.Active | (WW.jumpHeld ? PW.Nd.JumpHeld : 0) | (WW.jumpPressed ? PW.Nd.JumpPressed : 0) | (WW.running ? PW.Nd.Running : 0) | (WW.sprintHeld ? PW.Nd.SprintHeld : 0))(WW) | NW, LW) && (iW = !0), (0, jW.g)(DW())
+            })(GR);
+            null !== (tR = NR()) && void 0 !== tR && tR.padMove(RR.x, RR.y, RR.magnitude, RR.headingOffset, (RR => ZR.pd.Active | (RR.jumpHeld ? ZR.pd.JumpHeld : 0) | (RR.jumpPressed ? ZR.pd.JumpPressed : 0) | (RR.running ? ZR.pd.Running : 0) | (RR.sprintHeld ? ZR.pd.SprintHeld : 0))(RR) | uR, qR) && (JR = !0), (0, LR.f)(cR())
           },
           stopMoving: () => {
-            var WW;
-            iW && (iW = !(null !== (WW = dW()) && void 0 !== WW && WW.padMove(0, 0, 0, 0, 0, 0)), mW(), OW = (0, cW.x)((() => {
-              mW(), (0, jW.g)(DW())
+            var RR;
+            JR && (JR = !(null !== (RR = NR()) && void 0 !== RR && RR.padMove(0, 0, 0, 0, 0, 0)), yR(), GR = (0, iR.r)((() => {
+              yR(), (0, LR.f)(cR())
             })))
           },
-          uninstall: mW,
-          deviceChanged: WW => {
-            var OW;
-            "touch" === WW ? ((0, jW.g)(!1), null !== (OW = dW()) && void 0 !== OW && OW.padMove(0, 0, 0, 0, PW.Nd.EndToggle, 0) && (iW = !1)) : "gamepad" === WW && (0, jW.g)(DW())
+          uninstall: yR,
+          deviceChanged: RR => {
+            var GR;
+            "touch" === RR ? ((0, LR.f)(!1), null !== (GR = NR()) && void 0 !== GR && GR.padMove(0, 0, 0, 0, ZR.pd.EndToggle, 0) && (JR = !1)) : "gamepad" === RR && (0, LR.f)(cR())
           },
-          hasPlayer: () => null !== dW(),
+          hasPlayer: () => null !== NR(),
           isPlayerDead: () => {
-            var WW;
-            return !1 === (null === (WW = dW()) || void 0 === WW ? void 0 : WW.localPlayerAlive())
+            var RR;
+            return !1 === (null === (RR = NR()) || void 0 === RR ? void 0 : RR.localPlayerAlive())
           },
           isReplayMode: () => {
-            const WW = dW();
-            return null !== WW && 0 !== (eW(WW) & PW.Ud.Replay)
+            const RR = NR();
+            return null !== RR && 0 !== (DR(RR) & ZR.xd.Replay)
           },
           isFreeCameraOn: () => {
-            const WW = dW();
-            return null !== WW && 0 !== (eW(WW) & PW.Ud.FreeCam)
+            const RR = NR();
+            return null !== RR && 0 !== (DR(RR) & ZR.xd.FreeCam)
           },
-          targetsBlock: () => vW(dW()),
+          targetsBlock: () => HR(NR()),
           selectedSlotEmpty: () => {
-            var WW;
-            return !(null !== (WW = dW()) && void 0 !== WW && WW.items.BL())
+            var RR;
+            return !(null !== (RR = NR()) && void 0 !== RR && RR.items.Qq())
           },
-          pickBlockAllowed: () => !!NW.d.get("creative") && !!NW.d.get("canPickBlocks"),
-          zoomAllowed: () => !!NW.d.get("canUseZoomKey"),
-          scrollHotbar: WW => {
-            HW(PW.Md.Hotbar, PW.Id.Down | (WW > 0 ? PW.Id.Next : 0))
+          pickBlockAllowed: () => !!uR.c.get("creative") && !!uR.c.get("canPickBlocks"),
+          zoomAllowed: () => !!uR.c.get("canUseZoomKey"),
+          scrollHotbar: RR => {
+            bR(ZR.nd.Hotbar, ZR.md.Down | (RR > 0 ? ZR.md.Next : 0))
           },
-          hasFullInventory: wW.h,
-          hasLobbyTab: () => (0, UW.d)({
-            lobbyLeaderboardInfo: NW.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: NW.d.get("lobbyManage")
+          hasFullInventory: fR.p,
+          hasLobbyTab: () => (0, nR.b)({
+            lobbyLeaderboardInfo: uR.c.get("lobbyLeaderboardInfo"),
+            lobbyManage: uR.c.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var WW, iW, OW, mW;
-            const EW = dW();
+            var RR, JR, GR, yR;
+            const tR = NR();
             return {
-              holdingGun: !1 !== (null === EW || void 0 === EW ? void 0 : EW.localPlayerAlive()) && "Gun" === (null === EW || void 0 === EW || null === (WW = EW.items.BL()) || void 0 === WW || null === (iW = WW.typeObj) || void 0 === iW ? void 0 : iW.type),
-              customButtons: null !== (OW = NW.d.get("customButtons")) && void 0 !== OW ? OW : null,
-              touchscreenActionButton: null !== (mW = NW.d.get("touchscreenActionButton")) && void 0 !== mW ? mW : null
+              holdingGun: !1 !== (null === tR || void 0 === tR ? void 0 : tR.localPlayerAlive()) && "Gun" === (null === tR || void 0 === tR || null === (RR = tR.items.Qq()) || void 0 === RR || null === (JR = RR.typeObj) || void 0 === JR ? void 0 : JR.type),
+              customButtons: null !== (GR = uR.c.get("customButtons")) && void 0 !== GR ? GR : null,
+              touchscreenActionButton: null !== (yR = uR.c.get("touchscreenActionButton")) && void 0 !== yR ? yR : null
             }
           },
-          pressTouchButton: WW => {
-            WW ? nW(JW) : uW(JW)
+          pressTouchButton: RR => {
+            RR ? vR(pR) : OR(pR)
           }
         }
       },
-      pW = () => {
-        const WW = (0, EW.b)(VW()),
-          iW = (0, mW.b)(),
-          OW = null;
+      IR = () => {
+        const RR = (0, tR.b)(PR()),
+          JR = (0, yR.c)(),
+          GR = null;
         return () => {
-          WW(), iW(), null === OW || void 0 === OW || OW()
+          RR(), JR(), null === GR || void 0 === GR || GR()
         }
       }
   },
-  5533: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => hW,
-      D: () => HW,
-      F: () => kW,
-      G: () => PW,
-      K: () => LW,
-      N: () => TW,
-      e: () => yW,
-      g: () => MW,
-      k: () => uW,
-      m: () => nW,
-      n: () => UW,
-      o: () => SW,
-      r: () => sW,
-      v: () => KW,
-      x: () => JW
+  5665: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => ZR,
+      E: () => qR,
+      H: () => lR,
+      c: () => BR,
+      d: () => AR,
+      e: () => OR,
+      f: () => vR,
+      g: () => nR,
+      k: () => XR,
+      m: () => WR,
+      n: () => CR,
+      r: () => pR,
+      t: () => gR,
+      v: () => bR,
+      z: () => UR
     });
-    var mW = OW(5540);
-    const EW = {
+    var yR = GR(5671);
+    const tR = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let NW = EW;
+    let uR = tR;
 
-    function PW(WW) {
-      NW = null !== WW && void 0 !== WW ? WW : EW
+    function ZR(RR) {
+      uR = null !== RR && void 0 !== RR ? RR : tR
     }
 
-    function LW() {
-      return NW
+    function qR() {
+      return uR
     }
-    const cW = new Set,
-      wW = new Set;
-    let tW = -1;
-    const ZW = new Set,
-      xW = new Set;
-    let lW = 0,
-      AW = 0;
-    const bW = new Set,
-      jW = new Set;
+    const iR = new Set,
+      fR = new Set;
+    let VR = -1;
+    const KR = new Set,
+      wR = new Set;
+    let rR = 0,
+      eR = 0;
+    const aR = new Set,
+      LR = new Set;
 
-    function UW(WW) {
-      return cW.add(WW), () => {
-        cW.delete(WW)
+    function nR(RR) {
+      return iR.add(RR), () => {
+        iR.delete(RR)
       }
     }
 
-    function kW(WW, iW) {
-      for (const mW of cW) try {
-        mW(WW)
-      } catch (OW) {
-        iW(OW)
+    function UR(RR, JR) {
+      for (const yR of iR) try {
+        yR(RR)
+      } catch (GR) {
+        JR(GR)
       }
     }
 
-    function sW(WW) {
-      return wW.add(WW), () => {
-        wW.delete(WW)
+    function WR(RR) {
+      return fR.add(RR), () => {
+        fR.delete(RR)
       }
     }
 
-    function MW(WW, iW) {
-      const OW = tW < 0 ? 0 : WW - tW;
-      tW = WW;
-      for (const EW of wW) try {
-        EW(OW)
-      } catch (mW) {
-        iW(mW)
+    function AR(RR, JR) {
+      const GR = VR < 0 ? 0 : RR - VR;
+      VR = RR;
+      for (const tR of fR) try {
+        tR(GR)
+      } catch (yR) {
+        JR(yR)
       }
     }
 
-    function KW(WW) {
-      return ZW.add(WW), () => {
-        ZW.delete(WW)
+    function CR(RR) {
+      return KR.add(RR), () => {
+        KR.delete(RR)
       }
     }
 
-    function SW(WW) {
-      return xW.add(WW), () => {
-        xW.delete(WW)
+    function XR(RR) {
+      return wR.add(RR), () => {
+        wR.delete(RR)
       }
     }
-    let YW = 0;
+    let MR = 0;
 
-    function yW(WW) {
-      YW += WW
+    function BR(RR) {
+      MR += RR
     }
 
-    function TW() {
-      const WW = YW;
-      return YW = 0, WW
+    function lR() {
+      const RR = MR;
+      return MR = 0, RR
     }
 
-    function JW(WW) {
-      return bW.add(WW), () => {
-        bW.delete(WW)
-      }
-    }
-
-    function hW(WW) {
-      return jW.add(WW), () => {
-        jW.delete(WW)
+    function pR(RR) {
+      return aR.add(RR), () => {
+        aR.delete(RR)
       }
     }
 
-    function HW() {
-      lW = 0, AW = 0, tW = -1
+    function gR(RR) {
+      return LR.add(RR), () => {
+        LR.delete(RR)
+      }
     }
 
-    function nW(WW, iW) {
-      if ("paced" === WW) return AW += iW, null;
-      if ("drawn" !== WW && "skipped" !== WW) return null;
-      const OW = iW + AW;
-      return AW = 0, OW
+    function bR() {
+      rR = 0, eR = 0, VR = -1
     }
 
-    function uW(WW, iW, OW, EW) {
-      const NW = (0, mW.g)(iW),
-        PW = WW > 0 ? performance.now() : 0;
-      for (let mW = 0; mW < WW; mW++)
-        for (const WW of bW) try {
-          WW()
-        } catch (LW) {
-          EW(LW)
+    function vR(RR, JR) {
+      if ("paced" === RR) return eR += JR, null;
+      if ("drawn" !== RR && "skipped" !== RR) return null;
+      const GR = JR + eR;
+      return eR = 0, GR
+    }
+
+    function OR(RR, JR, GR, tR) {
+      const uR = (0, yR.f)(JR),
+        ZR = RR > 0 ? performance.now() : 0;
+      for (let yR = 0; yR < RR; yR++)
+        for (const RR of aR) try {
+          RR()
+        } catch (qR) {
+          tR(qR)
         }
-      if (WW > 0 && yW(performance.now() - PW), null !== OW) {
-        for (const WW of ZW) try {
-          WW(OW)
-        } catch (LW) {
-          EW(LW)
+      if (RR > 0 && BR(performance.now() - ZR), null !== GR) {
+        for (const RR of KR) try {
+          RR(GR)
+        } catch (qR) {
+          tR(qR)
         }
-        lW += OW
+        rR += GR
       }
-      if ("drawn" === iW) {
-        const WW = lW;
-        lW = 0;
-        for (const iW of xW) try {
-          iW(WW)
-        } catch (LW) {
-          EW(LW)
+      if ("drawn" === JR) {
+        const RR = rR;
+        rR = 0;
+        for (const JR of wR) try {
+          JR(RR)
+        } catch (qR) {
+          tR(qR)
         }
       }
-      for (const mW of jW) try {
-        mW(WW, NW)
-      } catch (LW) {
-        EW(LW)
+      for (const yR of LR) try {
+        yR(RR, uR)
+      } catch (qR) {
+        tR(qR)
       }
     }
   },
-  5568: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => EW,
-      i: () => NW,
-      m: () => PW,
-      n: () => mW,
-      q: () => LW
+  5697: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      f: () => uR,
+      g: () => ZR,
+      i: () => yR,
+      k: () => qR
     });
-    const mW = {
+    const yR = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -570,8 +570,8 @@ export const modules = {
         TouchAttack: 195,
         TouchUse: 196
       },
-      EW = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      NW = {
+      tR = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      uR = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -634,7 +634,7 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      PW = {
+      ZR = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
@@ -642,153 +642,153 @@ export const modules = {
         "primary-fire": [195],
         "alt-fire": [196]
       },
-      LW = [16]
+      qR = [16]
   },
-  42185: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => PW,
-      h: () => NW,
-      i: () => EW
+  42194: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => ZR,
+      g: () => uR,
+      h: () => tR
     });
-    let mW = null;
+    let yR = null;
 
-    function EW(WW) {
-      mW = WW
+    function tR(RR) {
+      yR = RR
     }
 
-    function NW(WW) {
-      mW === WW && (mW = null)
+    function uR(RR) {
+      yR === RR && (yR = null)
     }
 
-    function PW() {
-      var WW;
-      null === (WW = mW) || void 0 === WW || WW()
+    function ZR() {
+      var RR;
+      null === (RR = yR) || void 0 === RR || RR()
     }
   },
-  5575: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      h: () => PW,
-      j: () => wW
+  5699: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      h: () => ZR,
+      i: () => fR
     });
-    var mW = OW(3305),
-      EW = OW(3308);
-    const NW = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var yR = GR(3428),
+      tR = GR(3437);
+    const uR = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function PW(WW) {
-      return WW instanceof HTMLElement && (!!(WW.isContentEditable || WW instanceof HTMLTextAreaElement || WW instanceof HTMLSelectElement) || WW instanceof HTMLInputElement && !NW.has(WW.type))
+    function ZR(RR) {
+      return RR instanceof HTMLElement && (!!(RR.isContentEditable || RR instanceof HTMLTextAreaElement || RR instanceof HTMLSelectElement) || RR instanceof HTMLInputElement && !uR.has(RR.type))
     }
 
-    function LW(WW) {
-      let iW = null;
-      const OW = OW => {
-          const EW = PW(OW);
-          EW !== iW && (iW = EW, WW(mW.k.UiCapture, mW.y.Keyboard, 0, 0, EW ? mW.y.Keyboard : 0))
+    function qR(RR) {
+      let JR = null;
+      const GR = GR => {
+          const tR = ZR(GR);
+          tR !== JR && (JR = tR, RR(yR.j.UiCapture, yR.C.Keyboard, 0, 0, tR ? yR.C.Keyboard : 0))
         },
-        EW = WW => {
-          OW(WW.target)
+        tR = RR => {
+          GR(RR.target)
         },
-        NW = WW => {
-          OW(WW.relatedTarget)
+        uR = RR => {
+          GR(RR.relatedTarget)
         },
-        LW = () => {
-          OW(document.activeElement)
+        qR = () => {
+          GR(document.activeElement)
         },
-        cW = {
+        iR = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", EW, cW), document.addEventListener("focusout", NW, cW), document.addEventListener("keydown", LW, cW), OW(document.activeElement), () => {
-        document.removeEventListener("focusin", EW, cW), document.removeEventListener("focusout", NW, cW), document.removeEventListener("keydown", LW, cW)
+      return document.addEventListener("focusin", tR, iR), document.addEventListener("focusout", uR, iR), document.addEventListener("keydown", qR, iR), GR(document.activeElement), () => {
+        document.removeEventListener("focusin", tR, iR), document.removeEventListener("focusout", uR, iR), document.removeEventListener("keydown", qR, iR)
       }
     }
-    const cW = new Map;
+    const iR = new Map;
 
-    function wW(WW, iW) {
-      var OW;
-      let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      cW.set(mW, (null !== (OW = cW.get(mW)) && void 0 !== OW ? OW : 0) & ~WW | iW & WW);
-      let NW = 0;
-      for (const EW of cW.values()) NW |= EW;
-      return (0, EW.z)(WW, NW & WW)
+    function fR(RR, JR) {
+      var GR;
+      let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      iR.set(yR, (null !== (GR = iR.get(yR)) && void 0 !== GR ? GR : 0) & ~RR | JR & RR);
+      let uR = 0;
+      for (const tR of iR.values()) uR |= tR;
+      return (0, tR.H)(RR, uR & RR)
     }
   },
-  38097: (WW, iW, OW) => {
-    function mW(WW) {
-      return WW.includes("Leaf Bed")
+  38040: (RR, JR, GR) => {
+    function yR(RR) {
+      return RR.includes("Leaf Bed")
     }
 
-    function EW(WW) {
-      return / Bed(?: Head)?(?:\||$)/.test(WW) && !mW(WW)
+    function tR(RR) {
+      return / Bed(?: Head)?(?:\||$)/.test(RR) && !yR(RR)
     }
 
-    function NW(WW) {
-      return WW.includes(" Strongbed")
+    function uR(RR) {
+      return RR.includes(" Strongbed")
     }
 
-    function PW(WW) {
-      return mW(WW) || EW(WW) || NW(WW)
+    function ZR(RR) {
+      return yR(RR) || tR(RR) || uR(RR)
     }
-    OW.d(iW, {
-      d: () => PW,
-      f: () => mW,
-      j: () => NW,
-      l: () => EW
+    GR.d(JR, {
+      d: () => ZR,
+      f: () => yR,
+      h: () => uR,
+      k: () => tR
     })
   },
-  38088: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => wW
+  38034: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => fR
     });
-    var mW = OW(38097),
-      EW = OW(5725);
-    const NW = [],
-      PW = [],
-      LW = [],
-      cW = [];
-    for (const tW of Object.keys(EW.p))(0, mW.f)(tW) ? NW.push(tW) : (0, mW.l)(tW) && PW.push(tW), (0, mW.j)(tW) && LW.push(tW), (tW.includes(" Bed Head") || tW.includes(" Strongbed Head")) && cW.push(tW);
-    const wW = {
-      leafBeds: NW,
-      woolBeds: PW,
-      strongBeds: LW,
-      beds: [...NW, ...PW, ...LW],
-      bedHeads: cW,
+    var yR = GR(38040),
+      tR = GR(5844);
+    const uR = [],
+      ZR = [],
+      qR = [],
+      iR = [];
+    for (const VR of Object.keys(tR.q))(0, yR.f)(VR) ? uR.push(VR) : (0, yR.k)(VR) && ZR.push(VR), (0, yR.h)(VR) && qR.push(VR), (VR.includes(" Bed Head") || VR.includes(" Strongbed Head")) && iR.push(VR);
+    const fR = {
+      leafBeds: uR,
+      woolBeds: ZR,
+      strongBeds: qR,
+      beds: [...uR, ...ZR, ...qR],
+      bedHeads: iR,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7453: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      f: () => EW,
-      g: () => cW,
-      k: () => NW,
-      m: () => wW,
-      p: () => mW,
-      s: () => LW
+  7588: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      c: () => tR,
+      d: () => iR,
+      g: () => uR,
+      j: () => fR,
+      k: () => yR,
+      n: () => qR
     });
-    let mW = function(WW) {
-        return WW[WW.DEFAULT = 0] = "DEFAULT", WW[WW.BOAT = 1] = "BOAT", WW[WW.GLIDER = 2] = "GLIDER", WW[WW.BALLOON = 3] = "BALLOON", WW[WW.SLEEPING = 4] = "SLEEPING", WW[WW.RIDING_MOB = 5] = "RIDING_MOB", WW[WW.CAR = 6] = "CAR", WW[WW.HOVERCRAFT = 7] = "HOVERCRAFT", WW
+    let yR = function(RR) {
+        return RR[RR.DEFAULT = 0] = "DEFAULT", RR[RR.BOAT = 1] = "BOAT", RR[RR.GLIDER = 2] = "GLIDER", RR[RR.BALLOON = 3] = "BALLOON", RR[RR.SLEEPING = 4] = "SLEEPING", RR[RR.RIDING_MOB = 5] = "RIDING_MOB", RR[RR.CAR = 6] = "CAR", RR[RR.HOVERCRAFT = 7] = "HOVERCRAFT", RR
       }({}),
-      EW = function(WW) {
-        return WW[WW.WOOD = 0] = "WOOD", WW[WW.OBSIDIAN = 1] = "OBSIDIAN", WW[WW.SPEED = 2] = "SPEED", WW
+      tR = function(RR) {
+        return RR[RR.WOOD = 0] = "WOOD", RR[RR.OBSIDIAN = 1] = "OBSIDIAN", RR[RR.SPEED = 2] = "SPEED", RR
       }({}),
-      NW = function(WW) {
-        return WW[WW.WOOD = 0] = "WOOD", WW[WW.IRON = 1] = "IRON", WW[WW.GOLD = 2] = "GOLD", WW[WW.DIAMOND = 3] = "DIAMOND", WW
+      uR = function(RR) {
+        return RR[RR.WOOD = 0] = "WOOD", RR[RR.IRON = 1] = "IRON", RR[RR.GOLD = 2] = "GOLD", RR[RR.DIAMOND = 3] = "DIAMOND", RR
       }({}),
-      PW = function(WW) {
-        return WW[WW.YELLOW = 0] = "YELLOW", WW[WW.WHITE = 1] = "WHITE", WW[WW.RED = 2] = "RED", WW[WW.PURPLE = 3] = "PURPLE", WW[WW.PINK = 4] = "PINK", WW[WW.ORANGE = 5] = "ORANGE", WW[WW.MAGENTA = 6] = "MAGENTA", WW[WW.LIME = 7] = "LIME", WW[WW.LIGHT_GRAY = 8] = "LIGHT_GRAY", WW[WW.LIGHT_BLUE = 9] = "LIGHT_BLUE", WW[WW.GREEN = 10] = "GREEN", WW[WW.GRAY = 11] = "GRAY", WW[WW.CYAN = 12] = "CYAN", WW[WW.BROWN = 13] = "BROWN", WW[WW.BLUE = 14] = "BLUE", WW[WW.BLACK = 15] = "BLACK", WW
+      ZR = function(RR) {
+        return RR[RR.YELLOW = 0] = "YELLOW", RR[RR.WHITE = 1] = "WHITE", RR[RR.RED = 2] = "RED", RR[RR.PURPLE = 3] = "PURPLE", RR[RR.PINK = 4] = "PINK", RR[RR.ORANGE = 5] = "ORANGE", RR[RR.MAGENTA = 6] = "MAGENTA", RR[RR.LIME = 7] = "LIME", RR[RR.LIGHT_GRAY = 8] = "LIGHT_GRAY", RR[RR.LIGHT_BLUE = 9] = "LIGHT_BLUE", RR[RR.GREEN = 10] = "GREEN", RR[RR.GRAY = 11] = "GRAY", RR[RR.CYAN = 12] = "CYAN", RR[RR.BROWN = 13] = "BROWN", RR[RR.BLUE = 14] = "BLUE", RR[RR.BLACK = 15] = "BLACK", RR
       }({}),
-      LW = function(WW) {
-        return WW[WW.ROTATION_1 = 0] = "ROTATION_1", WW[WW.ROTATION_2 = 1] = "ROTATION_2", WW[WW.ROTATION_3 = 2] = "ROTATION_3", WW[WW.ROTATION_4 = 3] = "ROTATION_4", WW
+      qR = function(RR) {
+        return RR[RR.ROTATION_1 = 0] = "ROTATION_1", RR[RR.ROTATION_2 = 1] = "ROTATION_2", RR[RR.ROTATION_3 = 2] = "ROTATION_3", RR[RR.ROTATION_4 = 3] = "ROTATION_4", RR
       }({}),
-      cW = function(WW) {
-        return WW[WW.KART = 0] = "KART", WW[WW.OFF_ROADER = 1] = "OFF_ROADER", WW[WW.CAR = 2] = "CAR", WW[WW.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", WW[WW.ARMORED_CAR = 4] = "ARMORED_CAR", WW[WW.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", WW[WW.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", WW[WW.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", WW
+      iR = function(RR) {
+        return RR[RR.KART = 0] = "KART", RR[RR.OFF_ROADER = 1] = "OFF_ROADER", RR[RR.CAR = 2] = "CAR", RR[RR.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", RR[RR.ARMORED_CAR = 4] = "ARMORED_CAR", RR[RR.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", RR[RR.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", RR[RR.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", RR
       }({});
-    mW.DEFAULT, mW.BOAT, EW.SPEED, mW.GLIDER, NW.DIAMOND, mW.BALLOON, PW.BLACK, mW.SLEEPING, LW.ROTATION_4, mW.RIDING_MOB, mW.CAR, cW.MOONSTONE_MINING_DRILL, mW.HOVERCRAFT;
-    let wW = function(WW) {
-      return WW[WW.NORMAL = 0] = "NORMAL", WW[WW.GLIDING = 1] = "GLIDING", WW[WW.FLOATING = 2] = "FLOATING", WW
+    yR.DEFAULT, yR.BOAT, tR.SPEED, yR.GLIDER, uR.DIAMOND, yR.BALLOON, ZR.BLACK, yR.SLEEPING, qR.ROTATION_4, yR.RIDING_MOB, yR.CAR, iR.MOONSTONE_MINING_DRILL, yR.HOVERCRAFT;
+    let fR = function(RR) {
+      return RR[RR.NORMAL = 0] = "NORMAL", RR[RR.GLIDING = 1] = "GLIDING", RR[RR.FLOATING = 2] = "FLOATING", RR
     }({})
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

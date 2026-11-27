@@ -1,19 +1,19 @@
 export const id = 707;
 export const ids = [707];
 export const modules = {
-  65038: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      proceduralVertexShader: () => PW
+  64752: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      proceduralVertexShader: () => ZR
     });
-    var mW = OW(41392);
-    const EW = "proceduralVertexShader",
-      NW = "attribute vec2 position;varying vec2 vPosition;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvPosition=position;vUV=position*madd+madd;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    mW.c.ShadersStore[EW] || (mW.c.ShadersStore[EW] = NW);
-    const PW = {
-      name: EW,
-      shader: NW
+    var yR = GR(41387);
+    const tR = "proceduralVertexShader",
+      uR = "attribute vec2 position;varying vec2 vPosition;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvPosition=position;vUV=position*madd+madd;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    yR.b.ShadersStore[tR] || (yR.b.ShadersStore[tR] = uR);
+    const ZR = {
+      name: tR,
+      shader: uR
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

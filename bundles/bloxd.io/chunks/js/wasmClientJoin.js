@@ -1,31 +1,31 @@
 export const id = 70;
 export const ids = [70];
 export const modules = {
-  42137: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      e: () => tW
+  42154: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      i: () => VR
     });
-    const mW = new TextDecoder;
+    const yR = new TextDecoder;
 
-    function EW(WW) {
-      const iW = new NW(WW),
-        OW = iW.value();
-      if (iW.at !== WW.length) throw new Error(`msgpack: ${WW.length-iW.at} bytes after the value`);
-      return OW
+    function tR(RR) {
+      const JR = new uR(RR),
+        GR = JR.value();
+      if (JR.at !== RR.length) throw new Error(`msgpack: ${RR.length-JR.at} bytes after the value`);
+      return GR
     }
-    class NW {
-      constructor(WW) {
-        this.bytes = WW, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(WW.buffer, WW.byteOffset, WW.byteLength)
+    class uR {
+      constructor(RR) {
+        this.bytes = RR, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(RR.buffer, RR.byteOffset, RR.byteLength)
       }
       value() {
-        const WW = this.u8();
-        if (WW <= 127) return WW;
-        if (WW >= 224) return WW - 256;
-        if (WW >= 128 && WW <= 143) return this.map(15 & WW);
-        if (WW >= 144 && WW <= 159) return this.array(15 & WW);
-        if (WW >= 160 && WW <= 191) return this.str(31 & WW);
-        switch (WW) {
+        const RR = this.u8();
+        if (RR <= 127) return RR;
+        if (RR >= 224) return RR - 256;
+        if (RR >= 128 && RR <= 143) return this.map(15 & RR);
+        if (RR >= 144 && RR <= 159) return this.array(15 & RR);
+        if (RR >= 160 && RR <= 191) return this.str(31 & RR);
+        switch (RR) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${WW.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${RR.toString(16)} at ${this.at-1}`)
         }
       }
-      take(WW) {
-        const iW = this.at;
-        if (iW + WW > this.bytes.length) throw new Error(`msgpack: ${WW} bytes past the end at ${iW}`);
-        return this.at = iW + WW, iW
+      take(RR) {
+        const JR = this.at;
+        if (JR + RR > this.bytes.length) throw new Error(`msgpack: ${RR} bytes past the end at ${JR}`);
+        return this.at = JR + RR, JR
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(WW) {
-        const iW = this.take(8);
-        return WW ? this.view.getBigInt64(iW, !1) : this.view.getBigUint64(iW, !1)
+      int64(RR) {
+        const JR = this.take(8);
+        return RR ? this.view.getBigInt64(JR, !1) : this.view.getBigUint64(JR, !1)
       }
-      str(WW) {
-        const iW = this.take(WW),
-          OW = this.bytes;
-        if (WW < 16) {
-          let EW = "";
-          for (let NW = iW; NW < iW + WW; NW++) {
-            const PW = OW[NW];
-            if (PW >= 128) return mW.decode(OW.subarray(iW, iW + WW));
-            EW += String.fromCharCode(PW)
+      str(RR) {
+        const JR = this.take(RR),
+          GR = this.bytes;
+        if (RR < 16) {
+          let tR = "";
+          for (let uR = JR; uR < JR + RR; uR++) {
+            const ZR = GR[uR];
+            if (ZR >= 128) return yR.decode(GR.subarray(JR, JR + RR));
+            tR += String.fromCharCode(ZR)
           }
-          return EW
+          return tR
         }
-        return mW.decode(OW.subarray(iW, iW + WW))
+        return yR.decode(GR.subarray(JR, JR + RR))
       }
-      bin(WW) {
-        const iW = this.take(WW);
-        return this.bytes.subarray(iW, iW + WW)
+      bin(RR) {
+        const JR = this.take(RR);
+        return this.bytes.subarray(JR, JR + RR)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(WW) {
+      array(RR) {
         this.enter();
-        const iW = [];
-        for (let OW = 0; OW < WW; OW++) iW.push(this.value());
-        return this.depth--, iW
+        const JR = [];
+        for (let GR = 0; GR < RR; GR++) JR.push(this.value());
+        return this.depth--, JR
       }
-      map(WW) {
+      map(RR) {
         this.enter();
-        const iW = {};
-        for (let OW = 0; OW < WW; OW++) {
-          const WW = this.value(),
-            OW = this.value();
-          iW["__proto__" === WW ? "__proto_" : String(WW)] = OW
+        const JR = {};
+        for (let GR = 0; GR < RR; GR++) {
+          const RR = this.value(),
+            GR = this.value();
+          JR["__proto__" === RR ? "__proto_" : String(RR)] = GR
         }
-        return this.depth--, iW
+        return this.depth--, JR
       }
-      ext(WW) {
-        const iW = this.view.getInt8(this.take(1)),
-          OW = this.take(WW);
-        if (0 !== iW) {
-          if (-1 === iW) {
-            if (1 === WW) return new Date(NaN);
-            if (4 === WW) return new Date(1e3 * this.view.getUint32(OW, !1));
-            if (8 === WW) {
-              const WW = this.view.getUint32(OW, !1),
-                iW = WW >>> 2,
-                mW = 4294967296 * (3 & WW) + this.view.getUint32(OW + 4, !1);
-              return new Date(1e3 * mW + iW / 1e6)
+      ext(RR) {
+        const JR = this.view.getInt8(this.take(1)),
+          GR = this.take(RR);
+        if (0 !== JR) {
+          if (-1 === JR) {
+            if (1 === RR) return new Date(NaN);
+            if (4 === RR) return new Date(1e3 * this.view.getUint32(GR, !1));
+            if (8 === RR) {
+              const RR = this.view.getUint32(GR, !1),
+                JR = RR >>> 2,
+                yR = 4294967296 * (3 & RR) + this.view.getUint32(GR + 4, !1);
+              return new Date(1e3 * yR + JR / 1e6)
             }
-            if (12 === WW) {
-              const WW = this.view.getUint32(OW, !1),
-                iW = 4294967296 * this.view.getInt32(OW + 4, !1) + this.view.getUint32(OW + 8, !1);
-              return new Date(1e3 * iW + WW / 1e6)
+            if (12 === RR) {
+              const RR = this.view.getUint32(GR, !1),
+                JR = 4294967296 * this.view.getInt32(GR + 4, !1) + this.view.getUint32(GR + 8, !1);
+              return new Date(1e3 * JR + RR / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${iW} of ${WW} bytes`)
+          throw new Error(`msgpack: ext type ${JR} of ${RR} bytes`)
         }
       }
     }
-    const PW = new TextEncoder,
-      LW = -(2n ** 63n),
-      cW = 2n ** 63n - 1n,
-      wW = 2n ** 64n - 1n;
+    const ZR = new TextEncoder,
+      qR = -(2n ** 63n),
+      iR = 2n ** 63n - 1n,
+      fR = 2n ** 64n - 1n;
 
-    function tW(WW) {
-      const iW = new ZW;
-      return iW.value(WW, 0), iW.bytes()
+    function VR(RR) {
+      const JR = new KR;
+      return JR.value(RR, 0), JR.bytes()
     }
-    class ZW {
+    class KR {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(WW, iW) {
-        if (iW > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof WW) {
+      value(RR, JR) {
+        if (JR > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof RR) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(WW ? 195 : 194);
+            return void this.u8(RR ? 195 : 194);
           case "number":
-            return void this.number(WW);
+            return void this.number(RR);
           case "bigint":
-            return void this.bigint(WW);
+            return void this.bigint(RR);
           case "string":
-            return void this.string(WW);
+            return void this.string(RR);
           case "object":
-            if (null === WW) this.u8(192);
-            else if (WW instanceof Uint8Array) this.head(WW.length, 196, -1, 197, 198), this.room(WW.length), this.buf.set(WW, this.at), this.at += WW.length;
-            else if (Array.isArray(WW)) {
-              this.head(WW.length, 220, 144, 220, 221);
-              for (const OW of WW) this.value(OW, iW + 1)
+            if (null === RR) this.u8(192);
+            else if (RR instanceof Uint8Array) this.head(RR.length, 196, -1, 197, 198), this.room(RR.length), this.buf.set(RR, this.at), this.at += RR.length;
+            else if (Array.isArray(RR)) {
+              this.head(RR.length, 220, 144, 220, 221);
+              for (const GR of RR) this.value(GR, JR + 1)
             } else {
-              var OW, mW;
-              if (Object.getPrototypeOf(WW) !== Object.prototype && null !== Object.getPrototypeOf(WW)) throw new Error(`msgpack: can't encode a ${null!==(OW=null===(mW=WW.constructor)||void 0===mW?void 0:mW.name)&&void 0!==OW?OW:"object"}`);
+              var GR, yR;
+              if (Object.getPrototypeOf(RR) !== Object.prototype && null !== Object.getPrototypeOf(RR)) throw new Error(`msgpack: can't encode a ${null!==(GR=null===(yR=RR.constructor)||void 0===yR?void 0:yR.name)&&void 0!==GR?GR:"object"}`);
               {
-                const OW = Object.keys(WW);
-                this.head(OW.length, 222, 128, 222, 223);
-                for (const mW of OW) this.string(mW), this.value(WW[mW], iW + 1)
+                const GR = Object.keys(RR);
+                this.head(GR.length, 222, 128, 222, 223);
+                for (const yR of GR) this.string(yR), this.value(RR[yR], JR + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof WW)
+            throw new Error("msgpack: can't encode a " + typeof RR)
         }
       }
-      number(WW) {
-        Number.isInteger(WW) && WW >= -2147483648 && WW <= 4294967295 ? WW >= 0 ? WW < 128 ? this.u8(WW) : WW < 256 ? (this.u8(204), this.u8(WW)) : WW < 65536 ? (this.u8(205), this.u16(WW)) : (this.u8(206), this.u32(WW)) : WW >= -32 ? this.u8(WW + 256) : WW >= -128 ? (this.u8(208), this.u8(WW + 256)) : WW >= -32768 ? (this.u8(209), this.u16(WW + 65536)) : (this.u8(210), this.u32(WW >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, WW, !1), this.at += 8)
+      number(RR) {
+        Number.isInteger(RR) && RR >= -2147483648 && RR <= 4294967295 ? RR >= 0 ? RR < 128 ? this.u8(RR) : RR < 256 ? (this.u8(204), this.u8(RR)) : RR < 65536 ? (this.u8(205), this.u16(RR)) : (this.u8(206), this.u32(RR)) : RR >= -32 ? this.u8(RR + 256) : RR >= -128 ? (this.u8(208), this.u8(RR + 256)) : RR >= -32768 ? (this.u8(209), this.u16(RR + 65536)) : (this.u8(210), this.u32(RR >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, RR, !1), this.at += 8)
       }
-      bigint(WW) {
-        const iW = WW >= LW && WW <= cW;
-        if (!iW && (WW < 0n || WW > wW)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(iW ? 211 : 207), this.room(8), iW ? this.view.setBigInt64(this.at, WW, !1) : this.view.setBigUint64(this.at, WW, !1), this.at += 8
+      bigint(RR) {
+        const JR = RR >= qR && RR <= iR;
+        if (!JR && (RR < 0n || RR > fR)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(JR ? 211 : 207), this.room(8), JR ? this.view.setBigInt64(this.at, RR, !1) : this.view.setBigUint64(this.at, RR, !1), this.at += 8
       }
-      string(WW) {
-        const iW = PW.encode(WW);
-        this.head(iW.length, 217, 160, 218, 219), this.room(iW.length), this.buf.set(iW, this.at), this.at += iW.length
+      string(RR) {
+        const JR = ZR.encode(RR);
+        this.head(JR.length, 217, 160, 218, 219), this.room(JR.length), this.buf.set(JR, this.at), this.at += JR.length
       }
-      head(WW, iW, OW, mW, EW) {
-        OW >= 0 && WW < (160 === OW ? 32 : 16) ? this.u8(OW | WW) : iW !== mW && WW < 256 ? (this.u8(iW), this.u8(WW)) : WW < 65536 ? (this.u8(mW), this.u16(WW)) : (this.u8(EW), this.u32(WW))
+      head(RR, JR, GR, yR, tR) {
+        GR >= 0 && RR < (160 === GR ? 32 : 16) ? this.u8(GR | RR) : JR !== yR && RR < 256 ? (this.u8(JR), this.u8(RR)) : RR < 65536 ? (this.u8(yR), this.u16(RR)) : (this.u8(tR), this.u32(RR))
       }
-      room(WW) {
-        if (this.at + WW <= this.buf.length) return;
-        let iW = 2 * this.buf.length;
-        for (; iW < this.at + WW;) iW *= 2;
-        const OW = new Uint8Array(iW);
-        OW.set(this.buf.subarray(0, this.at)), this.buf = OW, this.view = new DataView(OW.buffer)
+      room(RR) {
+        if (this.at + RR <= this.buf.length) return;
+        let JR = 2 * this.buf.length;
+        for (; JR < this.at + RR;) JR *= 2;
+        const GR = new Uint8Array(JR);
+        GR.set(this.buf.subarray(0, this.at)), this.buf = GR, this.view = new DataView(GR.buffer)
       }
-      u8(WW) {
-        this.room(1), this.buf[this.at++] = WW
+      u8(RR) {
+        this.room(1), this.buf[this.at++] = RR
       }
-      u16(WW) {
-        this.room(2), this.view.setUint16(this.at, WW, !1), this.at += 2
+      u16(RR) {
+        this.room(2), this.view.setUint16(this.at, RR, !1), this.at += 2
       }
-      u32(WW) {
-        this.room(4), this.view.setUint32(this.at, WW, !1), this.at += 4
+      u32(RR) {
+        this.room(4), this.view.setUint32(this.at, RR, !1), this.at += 4
       }
     }
   },
-  54800: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      joinRoom: () => ZW,
-      leaveHeldSeat: () => UW,
-      resumeRoom: () => lW
+  54639: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      joinRoom: () => KR,
+      leaveHeldSeat: () => nR,
+      resumeRoom: () => rR
     });
-    var mW = OW(154),
-      EW = OW(1194),
-      NW = OW(37727),
-      PW = OW(42137),
-      LW = OW(5546),
-      cW = OW(42307),
-      wW = OW(42422);
-    const tW = Uint8Array.of(13, ...(0, PW.e)(mW.f));
-    async function ZW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var yR = GR(163),
+      tR = GR(1295),
+      uR = GR(37640),
+      ZR = GR(42154),
+      qR = GR(5676),
+      iR = GR(42329),
+      fR = GR(42451);
+    const VR = Uint8Array.of(13, ...(0, ZR.i)(yR.g));
+    async function KR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await xW(WW, iW, OW)
-      } catch (EW) {
-        var mW;
-        const NW = await (null === (mW = iW.optionsAfterRefusal) || void 0 === mW ? void 0 : mW.call(iW, EW));
-        if (!NW) throw EW;
-        return xW(WW, {
-          ...iW,
-          joinOptions: NW
+        return await wR(RR, JR, GR)
+      } catch (tR) {
+        var yR;
+        const uR = await (null === (yR = JR.optionsAfterRefusal) || void 0 === yR ? void 0 : yR.call(JR, tR));
+        if (!uR) throw tR;
+        return wR(RR, {
+          ...JR,
+          joinOptions: uR
         }, {
-          ...OW,
+          ...GR,
           early: void 0
         })
       }
     }
-    async function xW(WW, iW, OW) {
-      var mW;
+    async function wR(RR, JR, GR) {
+      var yR;
       const {
-        signal: NW
-      } = OW, PW = () => (0, wW.f)(iW.endpoint, iW.roomName, iW.joinOptions, OW), {
-        early: LW
-      } = OW, cW = LW ? null !== (mW = await LW.take(NW)) && void 0 !== mW ? mW : await LW.reserveInstead(PW, NW) : await PW();
-      return (0, EW.s)(NW), jW(WW, iW.endpoint, cW, OW, !1)
+        signal: uR
+      } = GR, ZR = () => (0, fR.j)(JR.endpoint, JR.roomName, JR.joinOptions, GR), {
+        early: qR
+      } = GR, iR = qR ? null !== (yR = await qR.take(uR)) && void 0 !== yR ? yR : await qR.reserveInstead(ZR, uR) : await ZR();
+      return (0, tR.r)(uR), LR(RR, JR.endpoint, iR, GR, !1)
     }
-    async function lW(WW, iW, OW, mW) {
-      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const PW = await (0, wW.d)(iW, OW, mW, NW);
-      return (0, EW.s)(NW.signal), jW(WW, iW, PW, NW, !0)
-    }
-
-    function AW(WW, iW, OW) {
-      const mW = (0, wW.h)(WW, iW);
-      return OW.createSocket ? OW.createSocket(mW) : new WebSocket(mW)
+    async function rR(RR, JR, GR, yR) {
+      let uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const ZR = await (0, fR.h)(JR, GR, yR, uR);
+      return (0, tR.r)(uR.signal), LR(RR, JR, ZR, uR, !0)
     }
 
-    function bW(WW, iW, OW) {
-      var mW;
-      let EW = !1;
-      return (null !== (mW = WW.setTimer) && void 0 !== mW ? mW : (WW, iW) => {
-        setTimeout(WW, iW)
+    function eR(RR, JR, GR) {
+      const yR = (0, fR.k)(RR, JR);
+      return GR.createSocket ? GR.createSocket(yR) : new WebSocket(yR)
+    }
+
+    function aR(RR, JR, GR) {
+      var yR;
+      let tR = !1;
+      return (null !== (yR = RR.setTimer) && void 0 !== yR ? yR : (RR, JR) => {
+        setTimeout(RR, JR)
       })((() => {
-        EW || iW()
-      }), OW), () => {
-        EW = !0
+        tR || JR()
+      }), GR), () => {
+        tR = !0
       }
     }
-    async function jW(WW, iW, OW, mW, PW) {
+    async function LR(RR, JR, GR, yR, ZR) {
       const {
-        signal: wW
-      } = mW, ZW = AW(iW, OW, mW);
-      let xW = !1,
-        lW = null,
-        jW = null;
-      const UW = [];
-      let kW = !1,
-        sW = !1;
-      const MW = WW => {
-        var iW;
-        sW = !0, null === (iW = jW) || void 0 === iW || iW.reject(new cW.c("the room socket closed before the resume", "closed", WW.code))
+        signal: fR
+      } = yR, KR = eR(JR, GR, yR);
+      let wR = !1,
+        rR = null,
+        LR = null;
+      const nR = [];
+      let UR = !1,
+        WR = !1;
+      const AR = RR => {
+        var JR;
+        WR = !0, null === (JR = LR) || void 0 === JR || JR.reject(new iR.b("the room socket closed before the resume", "closed", RR.code))
       };
-      PW && ZW.addEventListener("close", MW);
-      const KW = (WW, iW) => {
-          var OW;
-          if (WW === (PW ? LW.A.Resumed : LW.A.Activated)) kW = !0, null === (OW = jW) || void 0 === OW || OW.resolve();
-          else if (!PW || WW !== LW.A.ResumeRefused && WW !== LW.A.Activated)
-            if (WW === LW.A.Error) {
-              var mW;
-              null === (mW = jW) || void 0 === mW || mW.reject(new cW.c(`the room refused the join (code ${iW})`, "roomError", iW))
+      ZR && KR.addEventListener("close", AR);
+      const CR = (RR, JR) => {
+          var GR;
+          if (RR === (ZR ? qR.H.Resumed : qR.H.Activated)) UR = !0, null === (GR = LR) || void 0 === GR || GR.resolve();
+          else if (!ZR || RR !== qR.H.ResumeRefused && RR !== qR.H.Activated)
+            if (RR === qR.H.Error) {
+              var yR;
+              null === (yR = LR) || void 0 === yR || yR.reject(new iR.b(`the room refused the join (code ${JR})`, "roomError", JR))
             } else {
-              var EW;
-              null === (EW = jW) || void 0 === EW || EW.reject(new cW.c("the room socket closed before the join", "closed", iW, null, xW))
+              var tR;
+              null === (tR = LR) || void 0 === tR || tR.reject(new iR.b("the room socket closed before the join", "closed", JR, null, wR))
             }
           else {
-            var NW;
-            null === (NW = jW) || void 0 === NW || NW.reject(new cW.p("the core refused the resume: it held no game"))
+            var uR;
+            null === (uR = LR) || void 0 === uR || uR.reject(new iR.p("the core refused the resume: it held no game"))
           }
         },
-        SW = WW.onConnection(((WW, iW, OW) => {
-          null === lW ? UW.push([WW, iW, OW]) : WW === lW && KW(iW, OW)
+        XR = RR.onConnection(((RR, JR, GR) => {
+          null === rR ? nR.push([RR, JR, GR]) : RR === rR && CR(JR, GR)
         })),
-        YW = WW.attachSocket(ZW);
-      if (null === YW) throw SW(), new cW.c("the core could not take the room socket", "attach");
-      var yW;
-      (lW = YW, PW) && (null === (yW = mW.onAttached) || void 0 === yW || yW.call(mW));
-      const TW = PW ? null : new NW.b((() => {
-        var iW, OW;
-        null === (iW = WW.flushNet) || void 0 === iW || iW.call(WW), null === (OW = jW) || void 0 === OW || OW.reject(new NW.c(xW ? "socket" : "socket_unopened"))
+        MR = RR.attachSocket(KR);
+      if (null === MR) throw XR(), new iR.b("the core could not take the room socket", "attach");
+      var BR;
+      (rR = MR, ZR) && (null === (BR = yR.onAttached) || void 0 === BR || BR.call(yR));
+      const lR = ZR ? null : new uR.d((() => {
+        var JR, GR;
+        null === (JR = RR.flushNet) || void 0 === JR || JR.call(RR), null === (GR = LR) || void 0 === GR || GR.reject(new uR.g(wR ? "socket" : "socket_unopened"))
       }));
-      ZW.addEventListener("open", (() => {
-        xW = !0, null === TW || void 0 === TW || TW.socketOpened()
+      KR.addEventListener("open", (() => {
+        wR = !0, null === lR || void 0 === lR || lR.socketOpened()
       }), {
         once: !0
       });
-      let JW = !1;
-      const hW = () => {
-        if (JW) return;
-        if (JW = !0, SW(), PW && (ZW.removeEventListener("close", MW), !kW && !(null !== wW && void 0 !== wW && wW.aborted && (0, EW.f)(wW) instanceof cW.t))) return void(sW || WW.closeSocket(YW));
-        kW && WW.leaveRoom(YW) || WW.sendRaw(YW, cW.j) ? bW(mW, (() => {
-          WW.closeSocket(YW)
-        }), cW.e) : WW.closeSocket(YW)
+      let pR = !1;
+      const gR = () => {
+        if (pR) return;
+        if (pR = !0, XR(), ZR && (KR.removeEventListener("close", AR), !UR && !(null !== fR && void 0 !== fR && fR.aborted && (0, tR.g)(fR) instanceof iR.s))) return void(WR || RR.closeSocket(MR));
+        UR && RR.leaveRoom(MR) || RR.sendRaw(MR, iR.j) ? aR(yR, (() => {
+          RR.closeSocket(MR)
+        }), iR.e) : RR.closeSocket(MR)
       };
       try {
-        await new Promise(((iW, OW) => {
-          const mW = () => {
-            var iW;
-            PW && (null === (iW = WW.flushNet) || void 0 === iW || iW.call(WW));
-            OW((0, EW.f)(wW))
+        await new Promise(((JR, GR) => {
+          const yR = () => {
+            var JR;
+            ZR && (null === (JR = RR.flushNet) || void 0 === JR || JR.call(RR));
+            GR((0, tR.g)(fR))
           };
-          null === wW || void 0 === wW || wW.addEventListener("abort", mW, {
+          null === fR || void 0 === fR || fR.addEventListener("abort", yR, {
             once: !0
-          }), jW = {
+          }), LR = {
             resolve: () => {
-              null === wW || void 0 === wW || wW.removeEventListener("abort", mW), iW()
+              null === fR || void 0 === fR || fR.removeEventListener("abort", yR), JR()
             },
-            reject: WW => {
-              null === wW || void 0 === wW || wW.removeEventListener("abort", mW), OW(WW)
+            reject: RR => {
+              null === fR || void 0 === fR || fR.removeEventListener("abort", yR), GR(RR)
             }
           };
-          for (const [WW, EW, NW] of UW.splice(0)) WW === lW && KW(EW, NW)
-        })), null === TW || void 0 === TW || TW.answered()
-      } catch (HW) {
-        throw hW(), HW
+          for (const [RR, tR, uR] of nR.splice(0)) RR === rR && CR(tR, uR)
+        })), null === lR || void 0 === lR || lR.answered()
+      } catch (bR) {
+        throw gR(), bR
       } finally {
-        null === TW || void 0 === TW || TW.stop()
+        null === lR || void 0 === lR || lR.stop()
       }
-      PW && ZW.removeEventListener("close", MW);
+      ZR && KR.removeEventListener("close", AR);
       return {
-        conn: YW,
-        seat: OW,
-        leave: hW,
+        conn: MR,
+        seat: GR,
+        leave: gR,
         detach: () => {
-          JW = !0, SW()
+          pR = !0, XR()
         },
-        endJoinAd: () => !JW && WW.sendRaw(YW, tW)
+        endJoinAd: () => !pR && RR.sendRaw(MR, VR)
       }
     }
-    async function UW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function nR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const EW = AW(WW, await (0, wW.d)(WW, iW, OW, mW), mW);
-        EW.binaryType = "arraybuffer", await new Promise((WW => {
-          const iW = bW(mW, (() => {
-            EW.close(), WW()
-          }), cW.e);
-          EW.addEventListener("open", (() => {
-            EW.send(cW.j)
-          })), EW.addEventListener("close", (() => {
-            iW(), WW()
+        const tR = eR(RR, await (0, fR.h)(RR, JR, GR, yR), yR);
+        tR.binaryType = "arraybuffer", await new Promise((RR => {
+          const JR = aR(yR, (() => {
+            tR.close(), RR()
+          }), iR.e);
+          tR.addEventListener("open", (() => {
+            tR.send(iR.j)
+          })), tR.addEventListener("close", (() => {
+            JR(), RR()
           }))
         }))
-      } catch (EW) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", EW)
+      } catch (tR) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", tR)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

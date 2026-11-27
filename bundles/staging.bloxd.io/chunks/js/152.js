@@ -1,203 +1,203 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  7574: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => LW
+  7709: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(1172),
-      PW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(1270),
+      ZR = GR(1378);
 
-    function LW(WW) {
+    function qR(RR) {
       let {
-        item: iW,
-        className: OW
-      } = WW;
+        item: JR,
+        className: GR
+      } = RR;
       const {
-        t: mW
-      } = (0, NW.B)();
-      return null === iW.renderId || iW.previewsOutdated ? (0, PW.jsx)("div", {
-        className: EW()("ShaderPackPreviewsNotice", OW),
-        children: (0, PW.jsx)("span", {
-          children: mW(null === iW.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: yR
+      } = (0, uR.A)();
+      return null === JR.renderId || JR.previewsOutdated ? (0, ZR.jsx)("div", {
+        className: tR()("ShaderPackPreviewsNotice", GR),
+        children: (0, ZR.jsx)("span", {
+          children: yR(null === JR.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  7591: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW
+  7725: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR
     });
-    var mW = OW(1089),
-      EW = OW.n(mW),
-      NW = OW(7570),
-      PW = OW(1172),
-      LW = OW(7567),
-      cW = OW(1283);
+    var yR = GR(1163),
+      tR = GR.n(yR),
+      uR = GR(7702),
+      ZR = GR(1270),
+      qR = GR(7697),
+      iR = GR(1378);
 
-    function wW(WW) {
+    function fR(RR) {
       let {
-        selected: iW,
-        onSelect: OW,
-        imageUrl: mW
-      } = WW;
+        selected: JR,
+        onSelect: GR,
+        imageUrl: yR
+      } = RR;
       const {
-        t: wW
-      } = (0, PW.B)();
-      return (0, cW.jsx)("div", {
+        t: fR
+      } = (0, ZR.A)();
+      return (0, iR.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: NW.F.map((WW => {
-          const NW = mW(WW);
-          return (0, cW.jsxs)("button", {
+        children: uR.B.map((RR => {
+          const uR = yR(RR);
+          return (0, iR.jsxs)("button", {
             type: "button",
-            "aria-pressed": WW === iW,
-            className: EW()("ShaderPackViewOption", {
-              Selected: WW === iW
+            "aria-pressed": RR === JR,
+            className: tR()("ShaderPackViewOption", {
+              Selected: RR === JR
             }),
             onClick: () => {
-              OW(WW)
+              GR(RR)
             },
-            children: [null !== NW && (0, cW.jsx)("img", {
-              src: NW,
+            children: [null !== uR && (0, iR.jsx)("img", {
+              src: uR,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, cW.jsx)("span", {
+            }), (0, iR.jsx)("span", {
               className: "SmallTextBold",
-              children: wW(LW.fb[WW])
+              children: fR(qR.hb[RR])
             })]
-          }, WW)
+          }, RR)
         }))
       })
     }
   },
-  7577: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => xW,
-      c: () => lW,
-      f: () => ZW,
-      j: () => AW
+  7714: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => wR,
+      e: () => rR,
+      h: () => KR,
+      k: () => eR
     });
-    var mW = OW(62),
-      EW = OW(7570),
-      NW = OW(1584),
-      PW = OW(7567),
-      LW = OW(7583),
-      cW = OW(1107);
-    const wW = "shaderPackListingView",
-      tW = "shaderPackListingFilterOpen";
+    var yR = GR(66),
+      tR = GR(7702),
+      uR = GR(1647),
+      ZR = GR(7697),
+      qR = GR(7717),
+      iR = GR(1196);
+    const fR = "shaderPackListingView",
+      VR = "shaderPackListingFilterOpen";
 
-    function ZW() {
-      var WW;
-      const [iW, OW] = (0, LW.d)(wW, EW.F[0]);
-      return [null !== (WW = EW.F.find((WW => WW === iW))) && void 0 !== WW ? WW : EW.F[0], OW]
+    function KR() {
+      var RR;
+      const [JR, GR] = (0, qR.e)(fR, tR.B[0]);
+      return [null !== (RR = tR.B.find((RR => RR === JR))) && void 0 !== RR ? RR : tR.B[0], GR]
     }
 
-    function xW() {
-      (0, mW.useEffect)((() => () => {
-        window.location.pathname.startsWith(PW.W) || (0, PW.j)()
+    function wR() {
+      (0, yR.useEffect)((() => () => {
+        window.location.pathname.startsWith(ZR.Z) || (0, ZR.p)()
       }), [])
     }
 
-    function lW() {
-      return (0, LW.d)(tW, !1)
+    function rR() {
+      return (0, qR.e)(VR, !1)
     }
 
-    function AW() {
+    function eR() {
       const {
-        userContext: WW,
-        isUserContextUpdating: iW
-      } = (0, cW.e)(), [OW, EW] = (0, mW.useState)(null), PW = (0, mW.useRef)(new Set);
+        userContext: RR,
+        isUserContextUpdating: JR
+      } = (0, iR.d)(), [GR, tR] = (0, yR.useState)(null), ZR = (0, yR.useRef)(new Set);
 
-      function LW(WW, iW) {
-        EW((OW => {
-          const mW = new Set(OW);
-          return iW ? mW.add(WW) : mW.delete(WW), mW
+      function qR(RR, JR) {
+        tR((GR => {
+          const yR = new Set(GR);
+          return JR ? yR.add(RR) : yR.delete(RR), yR
         }))
       }
-      return (0, mW.useEffect)((() => {
-        if (iW) return;
-        let OW = !1;
-        return NW.e.getFavouriteShaderPacks(WW).then((WW => {
-          OW || EW(new Set(WW))
-        })).catch((WW => {
-          console.error("Failed to get favourite shader packs", WW), OW || EW(new Set)
+      return (0, yR.useEffect)((() => {
+        if (JR) return;
+        let GR = !1;
+        return uR.c.getFavouriteShaderPacks(RR).then((RR => {
+          GR || tR(new Set(RR))
+        })).catch((RR => {
+          console.error("Failed to get favourite shader packs", RR), GR || tR(new Set)
         })), () => {
-          OW = !0
+          GR = !0
         }
-      }), [WW, iW]), {
-        isFavourite: WW => null === OW ? null : OW.has(WW),
-        toggle: function(iW) {
-          if (null === OW || PW.current.has(iW)) return;
-          PW.current.add(iW);
-          const mW = !OW.has(iW);
-          LW(iW, mW), (mW ? NW.e.favouriteShaderPack(WW, iW) : NW.e.unfavouriteShaderPack(WW, iW)).catch((WW => {
-            console.error("Failed to change a favourite shader pack", WW), LW(iW, !mW)
+      }), [RR, JR]), {
+        isFavourite: RR => null === GR ? null : GR.has(RR),
+        toggle: function(JR) {
+          if (null === GR || ZR.current.has(JR)) return;
+          ZR.current.add(JR);
+          const yR = !GR.has(JR);
+          qR(JR, yR), (yR ? uR.c.favouriteShaderPack(RR, JR) : uR.c.unfavouriteShaderPack(RR, JR)).catch((RR => {
+            console.error("Failed to change a favourite shader pack", RR), qR(JR, !yR)
           })).finally((() => {
-            PW.current.delete(iW)
+            ZR.current.delete(JR)
           }))
         }
       }
     }
   },
-  7567: (WW, iW, OW) => {
-    OW.d(iW, {
-      $: () => cW,
-      B: () => AW,
-      E: () => UW,
-      G: () => hW,
-      K: () => tW,
-      M: () => nW,
-      N: () => bW,
-      Q: () => VW,
-      S: () => gW,
-      W: () => PW,
-      _: () => DW,
-      bb: () => LW,
-      cb: () => eW,
-      d: () => kW,
-      e: () => TW,
-      f: () => jW,
-      fb: () => vW,
-      j: () => xW,
-      jb: () => sW,
-      kb: () => HW,
-      l: () => ZW,
-      p: () => uW,
-      q: () => lW,
-      u: () => oW,
-      y: () => pW
+  7697: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => xR,
+      F: () => IR,
+      I: () => eR,
+      K: () => nR,
+      M: () => gR,
+      Q: () => VR,
+      R: () => vR,
+      T: () => aR,
+      V: () => PR,
+      W: () => oR,
+      Z: () => ZR,
+      _: () => cR,
+      ab: () => iR,
+      bb: () => qR,
+      db: () => DR,
+      e: () => UR,
+      h: () => lR,
+      hb: () => HR,
+      jb: () => WR,
+      kb: () => bR,
+      l: () => LR,
+      p: () => wR,
+      s: () => KR,
+      u: () => OR,
+      x: () => rR
     });
-    var mW = OW(7570),
-      EW = OW(154),
-      NW = OW(5268);
-    const PW = "/shader-packs",
-      LW = `${PW}/publish`;
+    var yR = GR(7702),
+      tR = GR(163),
+      uR = GR(5368);
+    const ZR = "/shader-packs",
+      qR = `${ZR}/publish`;
 
-    function cW(WW) {
-      return `${PW}/${encodeURIComponent(WW)}`
+    function iR(RR) {
+      return `${ZR}/${encodeURIComponent(RR)}`
     }
-    let wW = null;
+    let fR = null;
 
-    function tW(WW) {
-      wW = WW
-    }
-
-    function ZW() {
-      return wW
+    function VR(RR) {
+      fR = RR
     }
 
-    function xW() {
-      wW = null
+    function KR() {
+      return fR
     }
 
-    function lW(WW) {
-      return WW.playerHasRank("developer") || WW.playerHasRank("admin")
+    function wR() {
+      fR = null
     }
-    const AW = ["terrain", "water", "models", "sunShadows", "strict"],
-      bW = {
+
+    function rR(RR) {
+      return RR.playerHasRank("developer") || RR.playerHasRank("admin")
+    }
+    const eR = ["terrain", "water", "models", "sunShadows", "strict"],
+      aR = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function jW(WW, iW) {
-      return WW.withFeatures.includes(iW) ? "with" : WW.withoutFeatures.includes(iW) ? "without" : null
+    function LR(RR, JR) {
+      return RR.withFeatures.includes(JR) ? "with" : RR.withoutFeatures.includes(JR) ? "without" : null
     }
 
-    function UW(WW) {
-      return null === WW ? "with" : "with" === WW ? "without" : null
+    function nR(RR) {
+      return null === RR ? "with" : "with" === RR ? "without" : null
     }
 
-    function kW(WW) {
-      return "with" === WW ? "only" : null === WW ? "include" : void 0
+    function UR(RR) {
+      return "with" === RR ? "only" : null === RR ? "include" : void 0
     }
 
-    function sW(WW, iW) {
-      const OW = jW(WW, iW),
-        mW = WW => WW.filter((WW => WW !== iW));
+    function WR(RR, JR) {
+      const GR = LR(RR, JR),
+        yR = RR => RR.filter((RR => RR !== JR));
       return {
-        withFeatures: null === OW ? [...WW.withFeatures, iW] : mW(WW.withFeatures),
-        withoutFeatures: "with" === OW ? [...WW.withoutFeatures, iW] : mW(WW.withoutFeatures)
+        withFeatures: null === GR ? [...RR.withFeatures, JR] : yR(RR.withFeatures),
+        withoutFeatures: "with" === GR ? [...RR.withoutFeatures, JR] : yR(RR.withoutFeatures)
       }
     }
-    const MW = "section",
-      KW = "sort",
-      SW = "filters",
-      YW = "q",
-      yW = "banned",
-      TW = "popular",
-      JW = "strict";
+    const AR = "section",
+      CR = "sort",
+      XR = "filters",
+      MR = "q",
+      BR = "banned",
+      lR = "popular",
+      pR = "strict";
 
-    function hW(WW) {
-      var iW, OW, EW;
-      const PW = WW.get(MW),
-        LW = (null !== (iW = WW.get(SW)) && void 0 !== iW ? iW : JW).split(","),
-        cW = WW.get(yW);
+    function gR(RR) {
+      var JR, GR, tR;
+      const ZR = RR.get(AR),
+        qR = (null !== (JR = RR.get(XR)) && void 0 !== JR ? JR : pR).split(","),
+        iR = RR.get(BR);
       return {
-        section: "favourites" === PW || "mine" === PW ? PW : "explore",
-        sort: null !== (OW = mW.u.find((iW => iW === WW.get(KW)))) && void 0 !== OW ? OW : TW,
-        withFeatures: AW.filter((WW => LW.includes(WW) && !LW.includes(`-${WW}`))),
-        withoutFeatures: AW.filter((WW => LW.includes(`-${WW}`))),
-        searchQuery: (null === (EW = WW.get(YW)) || void 0 === EW ? void 0 : EW.slice(0, mW.K)) || null,
-        pageNumber: (0, NW.f)(WW.get(NW.b)),
-        banned: "only" === cW ? "with" : "include" === cW ? null : "without"
+        section: "favourites" === ZR || "mine" === ZR ? ZR : "explore",
+        sort: null !== (GR = yR.v.find((JR => JR === RR.get(CR)))) && void 0 !== GR ? GR : lR,
+        withFeatures: eR.filter((RR => qR.includes(RR) && !qR.includes(`-${RR}`))),
+        withoutFeatures: eR.filter((RR => qR.includes(`-${RR}`))),
+        searchQuery: (null === (tR = RR.get(MR)) || void 0 === tR ? void 0 : tR.slice(0, yR.E)) || null,
+        pageNumber: (0, uR.g)(RR.get(uR.c)),
+        banned: "only" === iR ? "with" : "include" === iR ? null : "without"
       }
     }
 
-    function HW(WW, iW) {
-      var OW;
-      const mW = dW(iW);
-      (0, NW.j)(WW, MW, "explore" === iW.section ? null : iW.section), (0, NW.j)(WW, KW, iW.sort === TW ? null : iW.sort), (0, NW.j)(WW, SW, mW === JW ? null : mW), (0, NW.j)(WW, YW, iW.searchQuery), (0, NW.j)(WW, yW, null !== (OW = kW(iW.banned)) && void 0 !== OW ? OW : null), (0, NW.m)(WW, iW.pageNumber)
+    function bR(RR, JR) {
+      var GR;
+      const yR = NR(JR);
+      (0, uR.h)(RR, AR, "explore" === JR.section ? null : JR.section), (0, uR.h)(RR, CR, JR.sort === lR ? null : JR.sort), (0, uR.h)(RR, XR, yR === pR ? null : yR), (0, uR.h)(RR, MR, JR.searchQuery), (0, uR.h)(RR, BR, null !== (GR = UR(JR.banned)) && void 0 !== GR ? GR : null), (0, uR.l)(RR, JR.pageNumber)
     }
 
-    function nW(WW) {
-      const iW = new URLSearchParams;
-      return HW(iW, {
+    function vR(RR) {
+      const JR = new URLSearchParams;
+      return bR(JR, {
         section: "explore",
-        sort: TW,
-        withFeatures: "strict" === WW ? [WW] : [WW, "strict"],
+        sort: lR,
+        withFeatures: "strict" === RR ? [RR] : [RR, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${PW}?${iW.toString()}`
+      }), `${ZR}?${JR.toString()}`
     }
 
-    function uW(WW) {
-      return dW(WW) === JW
+    function OR(RR) {
+      return NR(RR) === pR
     }
 
-    function oW(WW) {
-      return null !== WW.searchQuery || "with" === WW.banned || dW(WW) !== JW
+    function xR(RR) {
+      return null !== RR.searchQuery || "with" === RR.banned || NR(RR) !== pR
     }
 
-    function dW(WW) {
-      return AW.flatMap((iW => {
-        const OW = jW(WW, iW);
-        return "with" === OW ? [iW] : "without" === OW ? [`-${iW}`] : []
+    function NR(RR) {
+      return eR.flatMap((JR => {
+        const GR = LR(RR, JR);
+        return "with" === GR ? [JR] : "without" === GR ? [`-${JR}`] : []
       })).join(",")
     }
-    const eW = {
+    const DR = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      vW = {
+      HR = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function gW(WW) {
-      return Math.round(100 * Math.max(0, 1 - 1 / WW))
+    function oR(RR) {
+      return Math.round(100 * Math.max(0, 1 - 1 / RR))
     }
 
-    function DW(WW, iW, OW, EW) {
-      const NW = [];
-      WW.isBanned && NW.push({
+    function cR(RR, JR, GR, tR) {
+      const uR = [];
+      RR.isBanned && uR.push({
         tone: "warning",
-        text: EW("shaderPackListing:ownerBanned"),
+        text: tR("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: PW
-      } = WW;
-      if (null === WW.brokenError || PW && !PW.error || NW.push({
+        pending: ZR
+      } = RR;
+      if (null === RR.brokenError || ZR && !ZR.error || uR.push({
           tone: "warning",
-          text: EW("shaderPackListing:ownerBroken"),
-          detail: WW.brokenError
-        }), null !== PW && void 0 !== PW && PW.error) NW.push({
+          text: tR("shaderPackListing:ownerBroken"),
+          detail: RR.brokenError
+        }), null !== ZR && void 0 !== ZR && ZR.error) uR.push({
         tone: "warning",
-        text: EW(iW ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, mW.g)(PW.error) ? null : PW.error
+        text: tR(JR ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, yR.n)(ZR.error) ? null : ZR.error
       });
-      else if (PW) {
-        const WW = null === PW.renderNotBefore ? 0 : PW.renderNotBefore - OW,
-          mW = String(Math.ceil(WW / 6e4)),
-          LW = EW(iW ? WW > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : WW > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: mW
+      else if (ZR) {
+        const RR = null === ZR.renderNotBefore ? 0 : ZR.renderNotBefore - GR,
+          yR = String(Math.ceil(RR / 6e4)),
+          qR = tR(JR ? RR > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : RR > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: yR
           });
-        NW.push({
+        uR.push({
           tone: "info",
-          text: LW,
+          text: qR,
           detail: null
         })
       }
-      return WW.listed || NW.push({
+      return RR.listed || uR.push({
         tone: "info",
-        text: EW("shaderPackListing:ownerUnlisted"),
+        text: tR("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), NW
+      }), uR
     }
 
-    function VW(WW) {
-      return Math.max(1, Math.round(WW / 1024))
+    function PR(RR) {
+      return Math.max(1, Math.round(RR / 1024))
     }
 
-    function pW(WW, iW, OW) {
-      return WW instanceof EW.c && WW.errorMessageForUser ? WW.errorMessageForUser : iW(OW)
+    function IR(RR, JR, GR) {
+      return RR instanceof tR.d && RR.errorMessageForUser ? RR.errorMessageForUser : JR(GR)
     }
   },
-  7583: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW
+  7717: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR
     });
-    var mW = OW(62),
-      EW = OW(39);
+    var yR = GR(66),
+      tR = GR(46);
 
-    function NW(WW, iW) {
-      var OW;
-      const [NW, PW] = (0, mW.useState)(null !== (OW = EW.i.getItem(WW)) && void 0 !== OW ? OW : iW);
-      return [NW, iW => {
-        EW.i.setItem(WW, iW), PW(iW)
+    function uR(RR, JR) {
+      var GR;
+      const [uR, ZR] = (0, yR.useState)(null !== (GR = tR.i.getItem(RR)) && void 0 !== GR ? GR : JR);
+      return [uR, JR => {
+        tR.i.setItem(RR, JR), ZR(JR)
       }]
     }
   },
-  7570: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => PW,
-      F: () => mW,
-      G: () => xW,
-      K: () => tW,
-      L: () => MW,
-      M: () => ZW,
-      N: () => wW,
-      c: () => AW,
-      d: () => jW,
-      e: () => bW,
-      f: () => lW,
-      g: () => sW,
-      i: () => SW,
-      j: () => cW,
-      n: () => EW,
-      q: () => KW,
-      u: () => NW,
-      x: () => LW
+  7702: (RR, JR, GR) => {
+    GR.d(JR, {
+      B: () => yR,
+      C: () => wR,
+      E: () => VR,
+      I: () => AR,
+      M: () => KR,
+      N: () => fR,
+      d: () => eR,
+      e: () => LR,
+      i: () => aR,
+      j: () => rR,
+      n: () => WR,
+      p: () => XR,
+      q: () => iR,
+      s: () => tR,
+      u: () => CR,
+      v: () => uR,
+      w: () => qR,
+      z: () => ZR
     });
-    const mW = ["forest", "desert", "water", "night", "cave"];
-    const EW = {
+    const yR = ["forest", "desert", "water", "night", "cave"];
+    const tR = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      NW = ["popular", "updated", "newest"],
-      PW = 3,
-      LW = 32,
-      cW = 300;
+      uR = ["popular", "updated", "newest"],
+      ZR = 3,
+      qR = 32,
+      iR = 300;
 
-    function wW(WW, iW) {
-      return WW.slice(0, iW).replace(/[\uD800-\uDBFF]$/, "")
+    function fR(RR, JR) {
+      return RR.slice(0, JR).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const tW = 64,
-      ZW = 512,
-      xW = 18e5;
+    const VR = 64,
+      KR = 512,
+      wR = 18e5;
 
-    function lW(WW) {
-      const iW = WW,
-        OW = null === iW || void 0 === iW ? void 0 : iW.files;
-      return "number" === typeof(null === iW || void 0 === iW ? void 0 : iW.apiVersion) && "string" === typeof iW.name && (null === iW.author || "string" === typeof iW.author) && (void 0 === iW.keepCircleShadows || "boolean" === typeof iW.keepCircleShadows) && "object" === typeof OW && null !== OW && Object.values(OW).every((WW => "string" === typeof WW))
+    function rR(RR) {
+      const JR = RR,
+        GR = null === JR || void 0 === JR ? void 0 : JR.files;
+      return "number" === typeof(null === JR || void 0 === JR ? void 0 : JR.apiVersion) && "string" === typeof JR.name && (null === JR.author || "string" === typeof JR.author) && (void 0 === JR.keepCircleShadows || "boolean" === typeof JR.keepCircleShadows) && "object" === typeof GR && null !== GR && Object.values(GR).every((RR => "string" === typeof RR))
     }
-    const AW = "Bloxdhub",
-      bW = "https://bloxdhub.com/shaders";
+    const eR = "Bloxdhub",
+      aR = "https://bloxdhub.com/shaders";
 
-    function jW(WW) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(WW)}`
+    function LR(RR) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(RR)}`
     }
-    const UW = "Screenshot generation failed.",
-      kW = "Its screenshots couldn't be generated:";
+    const nR = "Screenshot generation failed.",
+      UR = "Its screenshots couldn't be generated:";
 
-    function sW(WW) {
-      var iW;
-      return WW === UW || null !== (iW = null === WW || void 0 === WW ? void 0 : WW.startsWith(kW)) && void 0 !== iW && iW
-    }
-
-    function MW(WW, iW) {
-      return `shaderPacks/${WW}/${iW}.json`
+    function WR(RR) {
+      var JR;
+      return RR === nR || null !== (JR = null === RR || void 0 === RR ? void 0 : RR.startsWith(UR)) && void 0 !== JR && JR
     }
 
-    function KW(WW, iW, OW, mW) {
-      return null === iW.renderId ? SW(WW, iW.baselineVersion, OW, mW) : `${WW}/${function(WW,iW,OW,mW){return`shaderPacks/${WW}/${iW}/${OW}-${mW}.webp`}(iW.packId,iW.renderId,OW,mW)}`
+    function AR(RR, JR) {
+      return `shaderPacks/${RR}/${JR}.json`
     }
 
-    function SW(WW, iW, OW, mW) {
-      return `${WW}/${function(WW,iW,OW){return`shaderPacks/baseline/${WW}/${iW}-${OW}.webp`}(iW,OW,mW)}`
+    function CR(RR, JR, GR, yR) {
+      return null === JR.renderId ? XR(RR, JR.baselineVersion, GR, yR) : `${RR}/${function(RR,JR,GR,yR){return`shaderPacks/${RR}/${JR}/${GR}-${yR}.webp`}(JR.packId,JR.renderId,GR,yR)}`
+    }
+
+    function XR(RR, JR, GR, yR) {
+      return `${RR}/${function(RR,JR,GR){return`shaderPacks/baseline/${RR}/${JR}-${GR}.webp`}(JR,GR,yR)}`
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

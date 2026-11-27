@@ -1,92 +1,92 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  37898: (WW, iW, OW) => {
-    function mW(WW, iW, OW, mW) {
-      return !(OW && !WW.aimable) && (!iW || WW.gun && "head" !== mW)
+  37820: (RR, JR, GR) => {
+    function yR(RR, JR, GR, yR) {
+      return !(GR && !RR.aimable) && (!JR || RR.gun && "head" !== yR)
     }
 
-    function EW(WW) {
-      return Math.max(.1 * WW, 1)
+    function tR(RR) {
+      return Math.max(.1 * RR, 1)
     }
 
-    function NW(WW, iW) {
-      return !WW && iW
+    function uR(RR, JR) {
+      return !RR && JR
     }
-    OW.d(iW, {
-      d: () => NW,
-      f: () => EW,
-      i: () => mW
+    GR.d(JR, {
+      e: () => uR,
+      g: () => tR,
+      h: () => yR
     })
   },
-  37902: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      h: () => PW
+  37829: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR,
+      e: () => ZR
     });
-    let mW = null;
-    const EW = {
+    let yR = null;
+    const tR = {
         crosshairAccuracy: [],
         turnDamageIndicators: [],
         turnSoundCues: []
       },
-      NW = {
-        crosshairAccuracy: WW => {
-          const iW = EW.crosshairAccuracy.at(-1);
-          iW ? iW.hook(WW) : mW = WW
+      uR = {
+        crosshairAccuracy: RR => {
+          const JR = tR.crosshairAccuracy.at(-1);
+          JR ? JR.hook(RR) : yR = RR
         },
-        turnDamageIndicators: WW => {
-          var iW;
-          null === (iW = EW.turnDamageIndicators.at(-1)) || void 0 === iW || iW.hook(WW)
+        turnDamageIndicators: RR => {
+          var JR;
+          null === (JR = tR.turnDamageIndicators.at(-1)) || void 0 === JR || JR.hook(RR)
         },
-        turnSoundCues: WW => {
-          var iW;
-          null === (iW = EW.turnSoundCues.at(-1)) || void 0 === iW || iW.hook(WW)
+        turnSoundCues: RR => {
+          var JR;
+          null === (JR = tR.turnSoundCues.at(-1)) || void 0 === JR || JR.hook(RR)
         }
       };
 
-    function PW(WW, iW) {
-      const OW = {
-          hook: iW
+    function ZR(RR, JR) {
+      const GR = {
+          hook: JR
         },
-        PW = EW[WW];
-      if (PW.push(OW), "crosshairAccuracy" === WW && null !== mW) {
-        const WW = mW;
-        mW = null, NW.crosshairAccuracy(WW)
+        ZR = tR[RR];
+      if (ZR.push(GR), "crosshairAccuracy" === RR && null !== yR) {
+        const RR = yR;
+        yR = null, uR.crosshairAccuracy(RR)
       }
       return () => {
-        const WW = PW.indexOf(OW); - 1 !== WW && PW.splice(WW, 1)
+        const RR = ZR.indexOf(GR); - 1 !== RR && ZR.splice(RR, 1)
       }
     }
 
-    function LW() {
-      return NW
+    function qR() {
+      return uR
     }
   },
-  35177: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      d: () => EW
+  35099: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      i: () => tR
     });
-    var mW = OW(25);
+    var yR = GR(25);
 
-    function EW(WW, iW) {
-      return WW && !iW
+    function tR(RR, JR) {
+      return RR && !JR
     }
 
-    function NW() {
-      return EW(mW.d.get("isTouchScreen"), mW.d.get("clientEscMenuOptions").touchActionButtons)
+    function uR() {
+      return tR(yR.d.get("isTouchScreen"), yR.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  38986: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => ZW,
-      e: () => PW
+  38977: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => KR,
+      f: () => ZR
     });
-    var mW = OW(5745),
-      EW = OW(5725),
-      NW = OW(344);
-    const PW = {
+    var yR = GR(5871),
+      tR = GR(5844),
+      uR = GR(377);
+    const ZR = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -3025,52 +3025,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...LW("White"),
-      ...LW("Orange"),
-      ...LW("Magenta"),
-      ...LW("Light Blue"),
-      ...LW("Yellow"),
-      ...LW("Lime"),
-      ...LW("Pink"),
-      ...LW("Gray"),
-      ...LW("Light Gray"),
-      ...LW("Cyan"),
-      ...LW("Purple"),
-      ...LW("Blue"),
-      ...LW("Brown"),
-      ...LW("Green"),
-      ...LW("Red"),
-      ...LW("Black"),
-      ...LW("Draugr"),
-      ...LW("Skull"),
-      ...LW("Rainbow"),
-      ...cW("Sheep"),
-      ...cW("Cow"),
-      ...cW("Pig"),
-      ...cW("Horse"),
-      ...cW("Camel"),
-      ...cW("Wolf"),
-      ...cW("Deer"),
-      ...cW("Wildcat"),
-      ...wW("Radar"),
-      ...wW("Inactive Radar"),
-      ...wW("Active Radar"),
-      ...tW("Magenta"),
-      ...tW("Light Gray"),
-      ...tW("Red"),
-      ...tW("White"),
-      ...tW("Orange"),
-      ...tW("Light Blue"),
-      ...tW("Yellow"),
-      ...tW("Lime"),
-      ...tW("Pink"),
-      ...tW("Gray"),
-      ...tW("Cyan"),
-      ...tW("Purple"),
-      ...tW("Blue"),
-      ...tW("Brown"),
-      ...tW("Green"),
-      ...tW("Black"),
+      ...qR("White"),
+      ...qR("Orange"),
+      ...qR("Magenta"),
+      ...qR("Light Blue"),
+      ...qR("Yellow"),
+      ...qR("Lime"),
+      ...qR("Pink"),
+      ...qR("Gray"),
+      ...qR("Light Gray"),
+      ...qR("Cyan"),
+      ...qR("Purple"),
+      ...qR("Blue"),
+      ...qR("Brown"),
+      ...qR("Green"),
+      ...qR("Red"),
+      ...qR("Black"),
+      ...qR("Draugr"),
+      ...qR("Skull"),
+      ...qR("Rainbow"),
+      ...iR("Sheep"),
+      ...iR("Cow"),
+      ...iR("Pig"),
+      ...iR("Horse"),
+      ...iR("Camel"),
+      ...iR("Wolf"),
+      ...iR("Deer"),
+      ...iR("Wildcat"),
+      ...fR("Radar"),
+      ...fR("Inactive Radar"),
+      ...fR("Active Radar"),
+      ...VR("Magenta"),
+      ...VR("Light Gray"),
+      ...VR("Red"),
+      ...VR("White"),
+      ...VR("Orange"),
+      ...VR("Light Blue"),
+      ...VR("Yellow"),
+      ...VR("Lime"),
+      ...VR("Pink"),
+      ...VR("Gray"),
+      ...VR("Cyan"),
+      ...VR("Purple"),
+      ...VR("Blue"),
+      ...VR("Brown"),
+      ...VR("Green"),
+      ...VR("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3184,11 +3184,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const WW = "Lunite Auto Miner";
+        const RR = "Lunite Auto Miner";
         return {
-          [WW]: {
+          [RR]: {
             positions: [{
-              block: WW,
+              block: RR,
               x: 0,
               y: 0,
               z: 0
@@ -3214,9 +3214,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${WW}|meta|rot2`]: {
+          [`${RR}|meta|rot2`]: {
             positions: [{
-              block: `${WW}|meta|rot2`,
+              block: `${RR}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3242,9 +3242,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${WW}|meta|rot3`]: {
+          [`${RR}|meta|rot3`]: {
             positions: [{
-              block: `${WW}|meta|rot3`,
+              block: `${RR}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3270,9 +3270,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${WW}|meta|rot4`]: {
+          [`${RR}|meta|rot4`]: {
             positions: [{
-              block: `${WW}|meta|rot4`,
+              block: `${RR}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3301,74 +3301,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const WW = {
-            1: WW => ({
+        const RR = {
+            1: RR => ({
               x: 0,
-              z: WW
+              z: RR
             }),
-            2: WW => ({
-              x: WW,
+            2: RR => ({
+              x: RR,
               z: 0
             }),
-            3: WW => ({
+            3: RR => ({
               x: 0,
-              z: -WW
+              z: -RR
             }),
-            4: WW => ({
-              x: -WW,
+            4: RR => ({
+              x: -RR,
               z: 0
             })
           },
-          iW = {};
-        for (let OW = 1; OW <= 4; OW++) {
-          const EW = 1 === OW ? "" : `|meta|rot${OW}`;
-          iW[`${mW.d[0].block}${EW}`] = {
-            positions: mW.d.map((iW => {
+          JR = {};
+        for (let GR = 1; GR <= 4; GR++) {
+          const tR = 1 === GR ? "" : `|meta|rot${GR}`;
+          JR[`${yR.c[0].block}${tR}`] = {
+            positions: yR.c.map((JR => {
               let {
-                block: mW,
-                y: NW,
-                z: PW
-              } = iW;
+                block: yR,
+                y: uR,
+                z: ZR
+              } = JR;
               return {
-                block: `${mW}${EW}`,
-                y: NW,
-                ...WW[OW](PW)
+                block: `${yR}${tR}`,
+                y: uR,
+                ...RR[GR](ZR)
               }
             }))
           }
         }
-        return iW
+        return JR
       }(),
       ... function() {
-        const WW = {};
-        for (let iW = 1; iW <= mW.l; iW++) {
-          const OW = (0, mW.xc)(iW),
-            EW = mW.o[iW - 1],
-            NW = [{
-              block: OW,
+        const RR = {};
+        for (let JR = 1; JR <= yR.l; JR++) {
+          const GR = (0, yR.fc)(JR),
+            tR = yR.p[JR - 1],
+            uR = [{
+              block: GR,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const WW of mW.h)
-            for (let iW = 1; iW <= EW; iW++) {
-              if ("southwest" === WW && 1 === iW) continue;
+          for (const RR of yR.g)
+            for (let JR = 1; JR <= tR; JR++) {
+              if ("southwest" === RR && 1 === JR) continue;
               const {
-                x: OW,
-                z: EW
-              } = mW.i[WW];
-              NW.push({
-                block: (0, mW.tc)(WW, iW),
-                x: OW,
-                y: iW - 1,
-                z: EW
+                x: GR,
+                z: tR
+              } = yR.i[RR];
+              uR.push({
+                block: (0, yR.ec)(RR, JR),
+                x: GR,
+                y: JR - 1,
+                z: tR
               })
             }
-          WW[OW] = {
-            positions: NW
+          RR[GR] = {
+            positions: uR
           }
         }
-        return WW
+        return RR
       }(),
       "Solar Panel": {
         positions: [{
@@ -3482,159 +3482,159 @@ export const modules = {
       }
     };
 
-    function LW(WW) {
+    function qR(RR) {
       return {
-        [`${WW} Banner`]: {
+        [`${RR} Banner`]: {
           positions: [{
-            block: `${WW} Banner`,
+            block: `${RR} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot1|bot`,
+            block: `_${RR} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot2|bot`]: {
+        [`${RR} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot2|bot`,
+            block: `${RR} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot2|bot`,
+            block: `_${RR} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot3|bot`]: {
+        [`${RR} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot3|bot`,
+            block: `${RR} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot3|bot`,
+            block: `_${RR} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot4|bot`]: {
+        [`${RR} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot4|bot`,
+            block: `${RR} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot4|bot`,
+            block: `_${RR} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot1|side`]: {
+        [`${RR} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot1|side`,
+            block: `${RR} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot1|side`,
+            block: `_${RR} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot2|side`]: {
+        [`${RR} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot2|side`,
+            block: `${RR} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot2|side`,
+            block: `_${RR} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot3|side`]: {
+        [`${RR} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot3|side`,
+            block: `${RR} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot3|side`,
+            block: `_${RR} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot4|side`]: {
+        [`${RR} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot4|side`,
+            block: `${RR} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot4|side`,
+            block: `_${RR} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot1|top`]: {
+        [`${RR} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot1|top`,
+            block: `${RR} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag`,
+            block: `_${RR} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot2|top`]: {
+        [`${RR} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot2|top`,
+            block: `${RR} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot2|top`,
+            block: `_${RR} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot3|top`]: {
+        [`${RR} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot3|top`,
+            block: `${RR} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot3|top`,
+            block: `_${RR} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${WW} Banner|meta|rot4|top`]: {
+        [`${RR} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${WW} Banner|meta|rot4|top`,
+            block: `${RR} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${WW} Banner Flag|meta|rot4|top`,
+            block: `_${RR} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3643,96 +3643,96 @@ export const modules = {
       }
     }
 
-    function cW(WW) {
-      const iW = (0, NW.Xb)(WW);
+    function iR(RR) {
+      const JR = (0, uR.Yb)(RR);
       return {
-        [iW]: {
+        [JR]: {
           positions: [{
-            block: iW,
+            block: JR,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${iW} Top Left`,
+            block: `_${JR} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${iW} Top Right`,
+            block: `_${JR} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${iW} Bottom Right`,
+            block: `_${JR} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${iW}|meta|rot2`]: {
+        [`${JR}|meta|rot2`]: {
           positions: [{
-            block: `${iW}|meta|rot2`,
+            block: `${JR}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${iW} Top Left|meta|rot2`,
+            block: `_${JR} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${iW} Top Right|meta|rot2`,
+            block: `_${JR} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${iW} Bottom Right|meta|rot2`,
+            block: `_${JR} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${iW}|meta|rot3`]: {
+        [`${JR}|meta|rot3`]: {
           positions: [{
-            block: `${iW}|meta|rot3`,
+            block: `${JR}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${iW} Top Left|meta|rot3`,
+            block: `_${JR} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${iW} Top Right|meta|rot3`,
+            block: `_${JR} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${iW} Bottom Right|meta|rot3`,
+            block: `_${JR} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${iW}|meta|rot4`]: {
+        [`${JR}|meta|rot4`]: {
           positions: [{
-            block: `${iW}|meta|rot4`,
+            block: `${JR}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${iW} Top Left|meta|rot4`,
+            block: `_${JR} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${iW} Top Right|meta|rot4`,
+            block: `_${JR} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${iW} Bottom Right|meta|rot4`,
+            block: `_${JR} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3741,77 +3741,77 @@ export const modules = {
       }
     }
 
-    function wW(WW) {
-      const iW = `_${WW} Back`,
-        OW = `_${WW} Dish`;
+    function fR(RR) {
+      const JR = `_${RR} Back`,
+        GR = `_${RR} Dish`;
       return {
-        [WW]: {
+        [RR]: {
           positions: [{
-            block: WW,
+            block: RR,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: iW,
+            block: JR,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: OW,
+            block: GR,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${WW}|meta|rot2`]: {
+        [`${RR}|meta|rot2`]: {
           positions: [{
-            block: `${WW}|meta|rot2`,
+            block: `${RR}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${iW}|meta|rot2`,
+            block: `${JR}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${OW}|meta|rot2`,
+            block: `${GR}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${WW}|meta|rot3`]: {
+        [`${RR}|meta|rot3`]: {
           positions: [{
-            block: `${WW}|meta|rot3`,
+            block: `${RR}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${iW}|meta|rot3`,
+            block: `${JR}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${OW}|meta|rot3`,
+            block: `${GR}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${WW}|meta|rot4`]: {
+        [`${RR}|meta|rot4`]: {
           positions: [{
-            block: `${WW}|meta|rot4`,
+            block: `${RR}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${iW}|meta|rot4`,
+            block: `${JR}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${OW}|meta|rot4`,
+            block: `${GR}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3820,22 +3820,22 @@ export const modules = {
       }
     }
 
-    function tW(WW) {
-      const iW = `Small ${WW} Pod`;
+    function VR(RR) {
+      const JR = `Small ${RR} Pod`;
       return {
-        [iW]: {
+        [JR]: {
           positions: [{
-            block: iW,
+            block: JR,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${WW} Pod Mid`,
+            block: `_Small ${RR} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${WW} Pod Top`,
+            block: `_Small ${RR} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3843,286 +3843,286 @@ export const modules = {
         }
       }
     }
-    for (const xW in PW) {
-      for (const WW of PW[xW].positions)
-        if (WW.id = EW.j[WW.block].id, xW === WW.block && (0 !== WW.x || 0 !== WW.y || 0 !== WW.z)) throw new Error(`Multiblock "${xW}" has main block "${WW.block}" at non-origin position (${WW.x}, ${WW.y}, ${WW.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      PW[EW.j[xW].id] = PW[xW]
+    for (const wR in ZR) {
+      for (const RR of ZR[wR].positions)
+        if (RR.id = tR.l[RR.block].id, wR === RR.block && (0 !== RR.x || 0 !== RR.y || 0 !== RR.z)) throw new Error(`Multiblock "${wR}" has main block "${RR.block}" at non-origin position (${RR.x}, ${RR.y}, ${RR.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      ZR[tR.l[wR].id] = ZR[wR]
     }
-    const ZW = {};
-    for (const xW in PW)
+    const KR = {};
+    for (const wR in ZR)
       for (const {
-          block: WW,
-          x: iW,
-          y: OW,
-          z: mW
+          block: RR,
+          x: JR,
+          y: GR,
+          z: yR
         }
-        of PW[xW].positions) {
-        const NW = {
-          mainMultiblock: xW,
-          compX: iW,
-          compY: OW,
-          compZ: mW
+        of ZR[wR].positions) {
+        const uR = {
+          mainMultiblock: wR,
+          compX: JR,
+          compY: GR,
+          compZ: yR
         };
-        ZW[WW] = NW, ZW[EW.j[WW].id] = NW
+        KR[RR] = uR, KR[tR.l[RR].id] = uR
       }
   },
-  39392: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => cW,
-      h: () => LW
+  39380: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => iR,
+      e: () => qR
     });
-    var mW = OW(5725),
-      EW = OW(5772),
-      NW = OW(5774);
-    const PW = EW.o.map((WW => {
+    var yR = GR(5844),
+      tR = GR(5907),
+      uR = GR(5912);
+    const ZR = tR.s.map((RR => {
       let {
-        dx: iW,
-        dz: OW
-      } = WW;
-      return [iW, 0, OW]
+        dx: JR,
+        dz: GR
+      } = RR;
+      return [JR, 0, GR]
     }));
 
-    function LW(WW) {
-      const iW = mW.j[WW];
-      return !!iW && WW !== mW.d && !iW.model && !iW.dl && !1 !== iW.solid && !iW.sj
+    function qR(RR) {
+      const JR = yR.l[RR];
+      return !!JR && RR !== yR.d && !JR.model && !JR.Nr && !1 !== JR.solid && !JR.AL
     }
-    class cW {
-      constructor(WW) {
-        this.model = WW, this.reshapeOffsets = [...PW, [0, -1, 0]]
+    class iR {
+      constructor(RR) {
+        this.model = RR, this.reshapeOffsets = [...ZR, [0, -1, 0]]
       }
-      handles(WW) {
-        const iW = mW.j[WW];
-        return (null === iW || void 0 === iW ? void 0 : iW.model) === this.model && void 0 !== iW.attachedTop
+      handles(RR) {
+        const JR = yR.l[RR];
+        return (null === JR || void 0 === JR ? void 0 : JR.model) === this.model && void 0 !== JR.attachedTop
       }
-      affects(WW) {
-        return this.handles(WW) || LW(WW) || (0, NW.x)(mW.j[WW])
+      affects(RR) {
+        return this.handles(RR) || qR(RR) || (0, uR.v)(yR.l[RR])
       }
-      shape(WW, iW, OW, PW, cW) {
-        let wW = this.handles(WW(iW, OW + 1, PW)) ? EW.e : 0;
-        return EW.o.forEach(((cW, tW) => {
+      shape(RR, JR, GR, ZR, iR) {
+        let fR = this.handles(RR(JR, GR + 1, ZR)) ? tR.h : 0;
+        return tR.s.forEach(((iR, VR) => {
           let {
-            dx: ZW,
-            dz: xW
-          } = cW;
-          const lW = WW(iW + ZW, OW, PW + xW);
-          (this.handles(lW) || LW(lW) || function(WW, iW) {
-            const OW = mW.j[WW];
-            return (0, NW.x)(OW) && (0, NW.q)(OW.meta.rot) === (0 !== EW.o[iW].dx)
-          }(lW, tW)) && (wW |= 1 << tW)
-        })), (0, mW.l)((0, EW.f)(mW.j[cW].meta.rootName, wW))
+            dx: KR,
+            dz: wR
+          } = iR;
+          const rR = RR(JR + KR, GR, ZR + wR);
+          (this.handles(rR) || qR(rR) || function(RR, JR) {
+            const GR = yR.l[RR];
+            return (0, uR.v)(GR) && (0, uR.r)(GR.meta.rot) === (0 !== tR.s[JR].dx)
+          }(rR, VR)) && (fR |= 1 << VR)
+        })), (0, yR.n)((0, tR.j)(yR.l[iR].meta.rootName, fR))
       }
     }
   },
-  39189: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      var OW;
-      iW || (iW = {});
-      const mW = null !== (OW = iW.customAttributes) && void 0 !== OW ? OW : {};
-      var EW, NW, PW;
-      "Gun" === (null === WW || void 0 === WW ? void 0 : WW.type) && (mW.shotsLeft = null !== (EW = null !== (NW = mW.shotsLeft) && void 0 !== NW ? NW : null === (PW = mW.gunStats) || void 0 === PW ? void 0 : PW.clipSize) && void 0 !== EW ? EW : WW.clipSize);
-      if (mW.enchantmentTier && (mW.enchantmentTier = mW.enchantmentTier.toString()), mW.enchantments)
-        for (const ZW in mW.enchantments) {
-          const WW = mW.enchantments[ZW];
-          if ("number" !== typeof WW) {
-            const iW = parseInt(WW);
-            isNaN(iW) || iW < 0 ? mW.enchantments[ZW] = void 0 : mW.enchantments[ZW] = iW > 1e9 ? 1e9 : iW
+  39158: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      var GR;
+      JR || (JR = {});
+      const yR = null !== (GR = JR.customAttributes) && void 0 !== GR ? GR : {};
+      var tR, uR, ZR;
+      "Gun" === (null === RR || void 0 === RR ? void 0 : RR.type) && (yR.shotsLeft = null !== (tR = null !== (uR = yR.shotsLeft) && void 0 !== uR ? uR : null === (ZR = yR.gunStats) || void 0 === ZR ? void 0 : ZR.clipSize) && void 0 !== tR ? tR : RR.clipSize);
+      if (yR.enchantmentTier && (yR.enchantmentTier = yR.enchantmentTier.toString()), yR.enchantments)
+        for (const KR in yR.enchantments) {
+          const RR = yR.enchantments[KR];
+          if ("number" !== typeof RR) {
+            const JR = parseInt(RR);
+            isNaN(JR) || JR < 0 ? yR.enchantments[KR] = void 0 : yR.enchantments[KR] = JR > 1e9 ? 1e9 : JR
           }
         }
-      if (mW.enchantmentData)
-        for (const ZW in mW.enchantmentData) {
-          const WW = mW.enchantmentData[ZW];
-          if (!WW) continue;
-          if ("object" !== typeof WW) {
-            mW.enchantmentData[ZW] = void 0;
+      if (yR.enchantmentData)
+        for (const KR in yR.enchantmentData) {
+          const RR = yR.enchantmentData[KR];
+          if (!RR) continue;
+          if ("object" !== typeof RR) {
+            yR.enchantmentData[KR] = void 0;
             continue
           }
-          const iW = WW.icon,
-            OW = WW.description;
-          var LW, cW, wW, tW;
-          if ("string" !== typeof iW) mW.enchantmentData[ZW].icon = null !== (LW = null === iW || void 0 === iW || null === (cW = iW.toString) || void 0 === cW ? void 0 : cW.call(iW)) && void 0 !== LW ? LW : void 0;
-          if ("string" !== typeof OW) mW.enchantmentData[ZW].description = null !== (wW = null === OW || void 0 === OW || null === (tW = OW.toString) || void 0 === tW ? void 0 : tW.call(OW)) && void 0 !== wW ? wW : void 0
+          const JR = RR.icon,
+            GR = RR.description;
+          var qR, iR, fR, VR;
+          if ("string" !== typeof JR) yR.enchantmentData[KR].icon = null !== (qR = null === JR || void 0 === JR || null === (iR = JR.toString) || void 0 === iR ? void 0 : iR.call(JR)) && void 0 !== qR ? qR : void 0;
+          if ("string" !== typeof GR) yR.enchantmentData[KR].description = null !== (fR = null === GR || void 0 === GR || null === (VR = GR.toString) || void 0 === VR ? void 0 : VR.call(GR)) && void 0 !== fR ? fR : void 0
         }
-      return iW.customAttributes = mW, iW
+      return JR.customAttributes = yR, JR
     }
-    OW.d(iW, {
-      c: () => mW
+    GR.d(JR, {
+      b: () => yR
     })
   },
-  39389: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => YW,
-      i: () => UW,
-      k: () => cW,
-      o: () => ZW,
-      r: () => yW
+  39375: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => MR,
+      h: () => nR,
+      j: () => iR,
+      k: () => KR,
+      l: () => BR
     });
-    var mW = OW(5725),
-      EW = OW(5754),
-      NW = OW(39392);
-    const PW = (0, mW.l)("Noticeboard"),
-      LW = (0, mW.l)("Standing Noticeboard|meta|rot4|lrud");
+    var yR = GR(5844),
+      tR = GR(5886),
+      uR = GR(39380);
+    const ZR = (0, yR.n)("Noticeboard"),
+      qR = (0, yR.n)("Standing Noticeboard|meta|rot4|lrud");
 
-    function cW(WW) {
-      return PW <= WW && WW <= LW
+    function iR(RR) {
+      return ZR <= RR && RR <= qR
     }
-    const wW = new Uint8Array(LW - PW + 1);
-    for (let TW = PW; TW <= LW; TW++) wW[TW - PW] = (0, EW.w)(mW.j[TW].meta.metaStr);
-    const tW = 64,
-      ZW = tW * tW,
-      [xW, lW, AW, bW] = [0, 1, 2, 3];
+    const fR = new Uint8Array(qR - ZR + 1);
+    for (let lR = ZR; lR <= qR; lR++) fR[lR - ZR] = (0, tR.r)(yR.l[lR].meta.metaStr);
+    const VR = 64,
+      KR = VR * VR,
+      [wR, rR, eR, aR] = [0, 1, 2, 3];
 
-    function jW(WW) {
-      var iW, OW;
-      return "string" === typeof(null === WW || void 0 === WW || null === (iW = WW.persisted) || void 0 === iW || null === (OW = iW.shared) || void 0 === OW ? void 0 : OW.text)
-    }
-
-    function UW(WW) {
-      return jW(WW) && "" !== WW.persisted.shared.text.trim()
+    function LR(RR) {
+      var JR, GR;
+      return "string" === typeof(null === RR || void 0 === RR || null === (JR = RR.persisted) || void 0 === JR || null === (GR = JR.shared) || void 0 === GR ? void 0 : GR.text)
     }
 
-    function kW(WW, iW) {
-      let [OW, , mW] = iW;
-      const [NW, , PW] = EW.y[WW][lW];
-      return OW * NW + mW * PW
+    function nR(RR) {
+      return LR(RR) && "" !== RR.persisted.shared.text.trim()
     }
 
-    function sW(WW, iW, OW) {
-      return OW[1] - iW[1] || kW(WW, iW) - kW(WW, OW)
+    function UR(RR, JR) {
+      let [GR, , yR] = JR;
+      const [uR, , ZR] = tR.t[RR][rR];
+      return GR * uR + yR * ZR
     }
 
-    function MW(WW, iW, OW, NW, LW) {
-      var cW;
-      let tW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : WW(iW[0], iW[1], iW[2]);
-      if (!(wW[tW - PW] & 1 << OW)) return null;
-      const [ZW, xW, lW] = EW.y[LW][OW], AW = [iW[0] + ZW, iW[1] + xW, iW[2] + lW], bW = WW(AW[0], AW[1], AW[2]), jW = null === (cW = mW.j[bW]) || void 0 === cW ? void 0 : cW.meta;
-      return (null === jW || void 0 === jW ? void 0 : jW.rootId) === NW && jW.rot === LW && wW[bW - PW] & 1 << (1 ^ OW) ? AW : null
+    function WR(RR, JR, GR) {
+      return GR[1] - JR[1] || UR(RR, JR) - UR(RR, GR)
     }
 
-    function KW(WW, iW, OW, NW) {
-      const PW = WW(iW, OW, NW);
-      if (!cW(PW)) return null;
+    function AR(RR, JR, GR, uR, qR) {
+      var iR;
+      let VR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RR(JR[0], JR[1], JR[2]);
+      if (!(fR[VR - ZR] & 1 << GR)) return null;
+      const [KR, wR, rR] = tR.t[qR][GR], eR = [JR[0] + KR, JR[1] + wR, JR[2] + rR], aR = RR(eR[0], eR[1], eR[2]), LR = null === (iR = yR.l[aR]) || void 0 === iR ? void 0 : iR.meta;
+      return (null === LR || void 0 === LR ? void 0 : LR.rootId) === uR && LR.rot === qR && fR[aR - ZR] & 1 << (1 ^ GR) ? eR : null
+    }
+
+    function CR(RR, JR, GR, uR) {
+      const ZR = RR(JR, GR, uR);
+      if (!iR(ZR)) return null;
       const {
-        rootId: LW,
-        rot: wW
-      } = mW.j[PW].meta, ZW = (iW, OW) => {
-        let mW = iW,
-          EW = 1;
-        for (let NW = MW(WW, mW, OW, LW, wW); NW && EW < tW; NW = MW(WW, mW, OW, LW, wW)) mW = NW, EW++;
+        rootId: qR,
+        rot: fR
+      } = yR.l[ZR].meta, KR = (JR, GR) => {
+        let yR = JR,
+          tR = 1;
+        for (let uR = AR(RR, yR, GR, qR, fR); uR && tR < VR; uR = AR(RR, yR, GR, qR, fR)) yR = uR, tR++;
         return {
-          end: mW,
-          cells: EW
+          end: yR,
+          cells: tR
         }
-      }, jW = ZW(ZW([iW, OW, NW], xW).end, AW).end, UW = ZW(jW, lW).cells, [kW, , sW] = EW.y[wW][lW];
-      let KW = 1;
-      WW: for (; KW < tW; KW++)
-        for (let iW = 0; iW < UW; iW++)
-          if (!MW(WW, [jW[0] + kW * iW, jW[1] - KW + 1, jW[2] + sW * iW], bW, LW, wW)) break WW;
+      }, LR = KR(KR([JR, GR, uR], wR).end, eR).end, nR = KR(LR, rR).cells, [UR, , WR] = tR.t[fR][rR];
+      let CR = 1;
+      RR: for (; CR < VR; CR++)
+        for (let JR = 0; JR < nR; JR++)
+          if (!AR(RR, [LR[0] + UR * JR, LR[1] - CR + 1, LR[2] + WR * JR], aR, qR, fR)) break RR;
       return {
-        anchor: jW,
-        rootId: LW,
-        rot: wW,
-        width: UW,
-        height: KW
+        anchor: LR,
+        rootId: qR,
+        rot: fR,
+        width: nR,
+        height: CR
       }
     }
 
-    function SW(WW, iW) {
-      for (const OW of function(WW) {
+    function XR(RR, JR) {
+      for (const GR of function(RR) {
           let {
-            anchor: iW,
-            rot: OW,
-            width: mW,
-            height: NW
-          } = WW;
-          const [PW, , LW] = EW.y[OW][lW], cW = [];
-          for (let EW = 0; EW < NW; EW++)
-            for (let WW = 0; WW < mW; WW++) cW.push([iW[0] + PW * WW, iW[1] - EW, iW[2] + LW * WW]);
-          return cW
-        }(WW))
-        if (jW(iW(OW[0], OW[1], OW[2]))) return OW;
+            anchor: JR,
+            rot: GR,
+            width: yR,
+            height: uR
+          } = RR;
+          const [ZR, , qR] = tR.t[GR][rR], iR = [];
+          for (let tR = 0; tR < uR; tR++)
+            for (let RR = 0; RR < yR; RR++) iR.push([JR[0] + ZR * RR, JR[1] - tR, JR[2] + qR * RR]);
+          return iR
+        }(RR))
+        if (LR(JR(GR[0], GR[1], GR[2]))) return GR;
       return null
     }
 
-    function YW(WW, iW, OW, EW, NW) {
-      const PW = WW(OW, EW, NW);
-      if (!cW(PW)) return null;
+    function MR(RR, JR, GR, tR, uR) {
+      const ZR = RR(GR, tR, uR);
+      if (!iR(ZR)) return null;
       const {
-        rootId: LW,
-        rot: wW
-      } = mW.j[PW].meta, tW = [
-        [OW, EW, NW]
-      ], xW = new Set([tW[0].join()]);
-      let lW = tW[0],
-        AW = null;
-      for (let mW = 0; mW < tW.length; mW++) {
-        const OW = tW[mW];
-        if (sW(wW, OW, lW) < 0 && (lW = OW), jW(iW(OW[0], OW[1], OW[2]))) {
-          const iW = KW(WW, OW[0], OW[1], OW[2]);
-          (!AW || sW(wW, iW.anchor, AW.anchor) < 0) && (AW = iW)
+        rootId: qR,
+        rot: fR
+      } = yR.l[ZR].meta, VR = [
+        [GR, tR, uR]
+      ], wR = new Set([VR[0].join()]);
+      let rR = VR[0],
+        eR = null;
+      for (let yR = 0; yR < VR.length; yR++) {
+        const GR = VR[yR];
+        if (WR(fR, GR, rR) < 0 && (rR = GR), LR(JR(GR[0], GR[1], GR[2]))) {
+          const JR = CR(RR, GR[0], GR[1], GR[2]);
+          (!eR || WR(fR, JR.anchor, eR.anchor) < 0) && (eR = JR)
         }
-        for (let iW = 0; iW < 4 && tW.length < ZW; iW++) {
-          const mW = MW(WW, OW, iW, LW, wW);
-          mW && !xW.has(mW.join()) && (xW.add(mW.join()), tW.push(mW))
+        for (let JR = 0; JR < 4 && VR.length < KR; JR++) {
+          const yR = AR(RR, GR, JR, qR, fR);
+          yR && !wR.has(yR.join()) && (wR.add(yR.join()), VR.push(yR))
         }
       }
-      return AW ??= KW(WW, lW[0], lW[1], lW[2]), {
-        cells: tW,
-        topLeft: lW,
-        rect: AW,
-        textCell: SW(AW, iW)
+      return eR ??= CR(RR, rR[0], rR[1], rR[2]), {
+        cells: VR,
+        topLeft: rR,
+        rect: eR,
+        textCell: XR(eR, JR)
       }
     }
 
-    function yW(WW, iW, OW, PW, LW) {
-      if (null !== OW && cW(OW)) {
+    function BR(RR, JR, GR, ZR, qR) {
+      if (null !== GR && iR(GR)) {
         const {
-          rootName: WW,
-          rot: iW
-        } = mW.j[OW].meta;
-        if (EW.y[iW].some((WW => {
-            let [iW, OW, mW] = WW;
-            return iW === PW[0] && OW === PW[1] && mW === PW[2]
+          rootName: RR,
+          rot: JR
+        } = yR.l[GR].meta;
+        if (tR.t[JR].some((RR => {
+            let [JR, GR, yR] = RR;
+            return JR === ZR[0] && GR === ZR[1] && yR === ZR[2]
           }))) return {
-          root: WW,
-          rot: iW
+          root: RR,
+          rot: JR
         }
       }
-      const [wW, tW] = EW.r[LW], ZW = WW(iW[0] - wW, iW[1], iW[2] - tW);
+      const [fR, VR] = tR.l[qR], KR = RR(JR[0] - fR, JR[1], JR[2] - VR);
       return {
-        root: (0, NW.h)(ZW) ? EW.B : EW.z,
-        rot: LW
+        root: (0, uR.e)(KR) ? tR.A : tR.w,
+        rot: qR
       }
     }
   },
-  39386: (WW, iW, OW) => {
-    OW.d(iW, {
-      B: () => xW,
-      b: () => UW,
-      d: () => MW,
-      f: () => YW,
-      i: () => yW,
-      l: () => AW,
-      p: () => ZW,
-      s: () => lW,
-      w: () => TW,
-      z: () => JW
+  39368: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => nR,
+      f: () => AR,
+      h: () => MR,
+      j: () => BR,
+      m: () => eR,
+      q: () => KR,
+      r: () => rR,
+      s: () => lR,
+      v: () => pR,
+      y: () => wR
     });
-    var mW = OW(7453),
-      EW = OW(38208),
-      NW = OW(5725);
-    const PW = (0, NW.l)("Water"),
-      LW = (0, NW.l)("Lava"),
-      cW = (0, NW.l)("Air"),
-      wW = {
+    var yR = GR(7588),
+      tR = GR(38166),
+      uR = GR(5844);
+    const ZR = (0, uR.n)("Water"),
+      qR = (0, uR.n)("Lava"),
+      iR = (0, uR.n)("Air"),
+      fR = {
         physicsState: {
-          type: mW.p.CAR,
-          tier: mW.g.KART
+          type: yR.k.CAR,
+          tier: yR.d.KART
         },
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null
       },
-      tW = {
+      VR = {
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null,
@@ -4131,41 +4131,41 @@ export const modules = {
           localOffset: [0, .75, -.35]
         }]
       },
-      ZW = {
+      KR = {
         Boat: {
           meshItemName: "INTERNAL_MESH_Boat",
           physicsState: {
-            type: mW.p.BOAT,
-            tier: mW.f.WOOD
+            type: yR.k.BOAT,
+            tier: yR.c.WOOD
           },
-          validBlockIds: [PW, LW],
+          validBlockIds: [ZR, qR],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         "Obsidian Boat": {
           meshItemName: "INTERNAL_MESH_Obsidian Boat",
           physicsState: {
-            type: mW.p.BOAT,
-            tier: mW.f.OBSIDIAN
+            type: yR.k.BOAT,
+            tier: yR.c.OBSIDIAN
           },
-          validBlockIds: [PW, LW],
+          validBlockIds: [ZR, qR],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Speedboat: {
           meshItemName: "INTERNAL_MESH_Speedboat",
           physicsState: {
-            type: mW.p.BOAT,
-            tier: mW.f.SPEED
+            type: yR.k.BOAT,
+            tier: yR.c.SPEED
           },
-          validBlockIds: [PW],
+          validBlockIds: [ZR],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Hovercraft: {
           meshItemName: "INTERNAL_MESH_Hovercraft",
           physicsState: {
-            type: mW.p.HOVERCRAFT,
+            type: yR.k.HOVERCRAFT,
             tier: null
           },
           validBlockIds: "solidBlocksOrFluid",
@@ -4173,74 +4173,74 @@ export const modules = {
           placeSound: null
         },
         "Yellow Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Yellow Kart"
         },
         "White Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_White Kart"
         },
         "Red Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Red Kart"
         },
         "Purple Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Purple Kart"
         },
         "Pink Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Pink Kart"
         },
         "Orange Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Orange Kart"
         },
         "Magenta Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Magenta Kart"
         },
         "Lime Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Lime Kart"
         },
         "Light Gray Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Light Gray Kart"
         },
         "Light Blue Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Light Blue Kart"
         },
         "Green Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Green Kart"
         },
         "Gray Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Gray Kart"
         },
         "Cyan Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Cyan Kart"
         },
         "Brown Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Brown Kart"
         },
         "Blue Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Blue Kart"
         },
         "Black Kart": {
-          ...wW,
+          ...fR,
           meshItemName: "INTERNAL_MESH_Black Kart"
         },
         "Off Roader": {
           meshItemName: "INTERNAL_MESH_Off Roader",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.OFF_ROADER
+            type: yR.k.CAR,
+            tier: yR.d.OFF_ROADER
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4254,42 +4254,42 @@ export const modules = {
           }]
         },
         "Gold Mining Drill": {
-          ...tW,
+          ...VR,
           meshItemName: "INTERNAL_MESH_Gold Mining Drill",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.GOLD_MINING_DRILL
+            type: yR.k.CAR,
+            tier: yR.d.GOLD_MINING_DRILL
           }
         },
         "Iron Mining Drill": {
-          ...tW,
+          ...VR,
           meshItemName: "INTERNAL_MESH_Iron Mining Drill",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.IRON_MINING_DRILL
+            type: yR.k.CAR,
+            tier: yR.d.IRON_MINING_DRILL
           }
         },
         "Diamond Mining Drill": {
-          ...tW,
+          ...VR,
           meshItemName: "INTERNAL_MESH_Diamond Mining Drill",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.DIAMOND_MINING_DRILL
+            type: yR.k.CAR,
+            tier: yR.d.DIAMOND_MINING_DRILL
           }
         },
         "Moonstone Mining Drill": {
-          ...tW,
+          ...VR,
           meshItemName: "INTERNAL_MESH_Moonstone Mining Drill",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.MOONSTONE_MINING_DRILL
+            type: yR.k.CAR,
+            tier: yR.d.MOONSTONE_MINING_DRILL
           }
         },
         "Armored Car": {
           meshItemName: "INTERNAL_MESH_Armored Car",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.ARMORED_CAR
+            type: yR.k.CAR,
+            tier: yR.d.ARMORED_CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4305,275 +4305,275 @@ export const modules = {
         "Light Blue Car": {
           meshItemName: "INTERNAL_MESH_Car",
           physicsState: {
-            type: mW.p.CAR,
-            tier: mW.g.CAR
+            type: yR.k.CAR,
+            tier: yR.d.CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
           placeSound: null
         }
       },
-      xW = Object.values(ZW).map((WW => WW.meshItemName));
+      wR = Object.values(KR).map((RR => RR.meshItemName));
 
-    function lW(WW) {
-      for (const iW of EW.c)
-        if (ZW[iW].meshItemName === WW) return iW;
+    function rR(RR) {
+      for (const JR of tR.b)
+        if (KR[JR].meshItemName === RR) return JR;
       return null
     }
 
-    function AW(WW, iW) {
-      const OW = WW.validBlockIds;
-      if (Array.isArray(OW)) return OW.includes(iW);
-      if (iW === cW) return !1;
-      if ("solidBlocks" === OW) return !0 !== NW.j[iW].dl;
-      if ("solidBlocksOrFluid" === OW) return !0;
-      throw new Error(`Unsupported validBlockIds for ${iW}: ${JSON.stringify(OW)}`)
+    function eR(RR, JR) {
+      const GR = RR.validBlockIds;
+      if (Array.isArray(GR)) return GR.includes(JR);
+      if (JR === iR) return !1;
+      if ("solidBlocks" === GR) return !0 !== uR.l[JR].Nr;
+      if ("solidBlocksOrFluid" === GR) return !0;
+      throw new Error(`Unsupported validBlockIds for ${JR}: ${JSON.stringify(GR)}`)
     }
-    const bW = {
+    const aR = {
         meshAttachment: {
           size: .12,
           offset: [0, 1.8, -.24],
           rotation: [0, 0, 0]
         }
       },
-      jW = {
+      LR = {
         "Yellow Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.YELLOW
+            type: yR.k.BALLOON,
+            tier: yR.b.YELLOW
           }
         },
         "White Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.WHITE
+            type: yR.k.BALLOON,
+            tier: yR.b.WHITE
           }
         },
         "Red Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.RED
+            type: yR.k.BALLOON,
+            tier: yR.b.RED
           }
         },
         "Purple Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.PURPLE
+            type: yR.k.BALLOON,
+            tier: yR.b.PURPLE
           }
         },
         "Pink Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.PINK
+            type: yR.k.BALLOON,
+            tier: yR.b.PINK
           }
         },
         "Orange Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.ORANGE
+            type: yR.k.BALLOON,
+            tier: yR.b.ORANGE
           }
         },
         "Magenta Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.MAGENTA
+            type: yR.k.BALLOON,
+            tier: yR.b.MAGENTA
           }
         },
         "Lime Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.LIME
+            type: yR.k.BALLOON,
+            tier: yR.b.LIME
           }
         },
         "Light Gray Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.LIGHT_GRAY
+            type: yR.k.BALLOON,
+            tier: yR.b.LIGHT_GRAY
           }
         },
         "Light Blue Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.LIGHT_BLUE
+            type: yR.k.BALLOON,
+            tier: yR.b.LIGHT_BLUE
           }
         },
         "Green Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.GREEN
+            type: yR.k.BALLOON,
+            tier: yR.b.GREEN
           }
         },
         "Gray Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.GRAY
+            type: yR.k.BALLOON,
+            tier: yR.b.GRAY
           }
         },
         "Cyan Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.CYAN
+            type: yR.k.BALLOON,
+            tier: yR.b.CYAN
           }
         },
         "Brown Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.BROWN
+            type: yR.k.BALLOON,
+            tier: yR.b.BROWN
           }
         },
         "Blue Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.BLUE
+            type: yR.k.BALLOON,
+            tier: yR.b.BLUE
           }
         },
         "Black Balloon": {
-          ...bW,
+          ...aR,
           physicsState: {
-            type: mW.p.BALLOON,
-            tier: mW.d.BLACK
+            type: yR.k.BALLOON,
+            tier: yR.b.BLACK
           }
         }
       };
 
-    function UW(WW) {
-      var iW;
-      return null === WW || void 0 === WW ? null : null !== (iW = jW[WW]) && void 0 !== iW ? iW : null
+    function nR(RR) {
+      var JR;
+      return null === RR || void 0 === RR ? null : null !== (JR = LR[RR]) && void 0 !== JR ? JR : null
     }
-    const kW = {
+    const UR = {
         meshAttachment: {
           size: 3,
           offset: [0, .72, .3],
           rotation: [-Math.PI / 2, Math.PI, Math.PI]
         }
       },
-      sW = {
+      WR = {
         "Wood Hang Glider": {
-          ...kW,
+          ...UR,
           physicsState: {
-            type: mW.p.GLIDER,
-            tier: mW.k.WOOD
+            type: yR.k.GLIDER,
+            tier: yR.g.WOOD
           }
         },
         "Iron Hang Glider": {
-          ...kW,
+          ...UR,
           physicsState: {
-            type: mW.p.GLIDER,
-            tier: mW.k.IRON
+            type: yR.k.GLIDER,
+            tier: yR.g.IRON
           }
         },
         "Gold Hang Glider": {
-          ...kW,
+          ...UR,
           physicsState: {
-            type: mW.p.GLIDER,
-            tier: mW.k.GOLD
+            type: yR.k.GLIDER,
+            tier: yR.g.GOLD
           }
         },
         "Diamond Hang Glider": {
-          ...kW,
+          ...UR,
           physicsState: {
-            type: mW.p.GLIDER,
-            tier: mW.k.DIAMOND
+            type: yR.k.GLIDER,
+            tier: yR.g.DIAMOND
           }
         }
       };
 
-    function MW(WW) {
-      var iW;
-      return null === WW || void 0 === WW ? null : null !== (iW = sW[WW]) && void 0 !== iW ? iW : null
+    function AR(RR) {
+      var JR;
+      return null === RR || void 0 === RR ? null : null !== (JR = WR[RR]) && void 0 !== JR ? JR : null
     }
-    const KW = new Set(Object.values(jW).map((WW => WW.physicsState.type))),
-      SW = new Set(Object.values(sW).map((WW => WW.physicsState.type)));
+    const CR = new Set(Object.values(LR).map((RR => RR.physicsState.type))),
+      XR = new Set(Object.values(WR).map((RR => RR.physicsState.type)));
 
-    function YW(WW) {
-      return KW.has(WW)
-    }
-
-    function yW(WW) {
-      return SW.has(WW)
+    function MR(RR) {
+      return CR.has(RR)
     }
 
-    function TW(WW) {
-      return WW === mW.p.DEFAULT || function(WW) {
-        return KW.has(WW) || SW.has(WW)
-      }(WW)
+    function BR(RR) {
+      return XR.has(RR)
     }
 
-    function JW(WW) {
-      return !TW(WW) && WW !== mW.p.SLEEPING
+    function lR(RR) {
+      return RR === yR.k.DEFAULT || function(RR) {
+        return CR.has(RR) || XR.has(RR)
+      }(RR)
+    }
+
+    function pR(RR) {
+      return !lR(RR) && RR !== yR.k.SLEEPING
     }
   },
-  7453: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      f: () => EW,
-      g: () => cW,
-      k: () => NW,
-      m: () => wW,
-      p: () => mW,
-      s: () => LW
+  7588: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR,
+      c: () => tR,
+      d: () => iR,
+      g: () => uR,
+      j: () => fR,
+      k: () => yR,
+      n: () => qR
     });
-    let mW = function(WW) {
-        return WW[WW.DEFAULT = 0] = "DEFAULT", WW[WW.BOAT = 1] = "BOAT", WW[WW.GLIDER = 2] = "GLIDER", WW[WW.BALLOON = 3] = "BALLOON", WW[WW.SLEEPING = 4] = "SLEEPING", WW[WW.RIDING_MOB = 5] = "RIDING_MOB", WW[WW.CAR = 6] = "CAR", WW[WW.HOVERCRAFT = 7] = "HOVERCRAFT", WW
+    let yR = function(RR) {
+        return RR[RR.DEFAULT = 0] = "DEFAULT", RR[RR.BOAT = 1] = "BOAT", RR[RR.GLIDER = 2] = "GLIDER", RR[RR.BALLOON = 3] = "BALLOON", RR[RR.SLEEPING = 4] = "SLEEPING", RR[RR.RIDING_MOB = 5] = "RIDING_MOB", RR[RR.CAR = 6] = "CAR", RR[RR.HOVERCRAFT = 7] = "HOVERCRAFT", RR
       }({}),
-      EW = function(WW) {
-        return WW[WW.WOOD = 0] = "WOOD", WW[WW.OBSIDIAN = 1] = "OBSIDIAN", WW[WW.SPEED = 2] = "SPEED", WW
+      tR = function(RR) {
+        return RR[RR.WOOD = 0] = "WOOD", RR[RR.OBSIDIAN = 1] = "OBSIDIAN", RR[RR.SPEED = 2] = "SPEED", RR
       }({}),
-      NW = function(WW) {
-        return WW[WW.WOOD = 0] = "WOOD", WW[WW.IRON = 1] = "IRON", WW[WW.GOLD = 2] = "GOLD", WW[WW.DIAMOND = 3] = "DIAMOND", WW
+      uR = function(RR) {
+        return RR[RR.WOOD = 0] = "WOOD", RR[RR.IRON = 1] = "IRON", RR[RR.GOLD = 2] = "GOLD", RR[RR.DIAMOND = 3] = "DIAMOND", RR
       }({}),
-      PW = function(WW) {
-        return WW[WW.YELLOW = 0] = "YELLOW", WW[WW.WHITE = 1] = "WHITE", WW[WW.RED = 2] = "RED", WW[WW.PURPLE = 3] = "PURPLE", WW[WW.PINK = 4] = "PINK", WW[WW.ORANGE = 5] = "ORANGE", WW[WW.MAGENTA = 6] = "MAGENTA", WW[WW.LIME = 7] = "LIME", WW[WW.LIGHT_GRAY = 8] = "LIGHT_GRAY", WW[WW.LIGHT_BLUE = 9] = "LIGHT_BLUE", WW[WW.GREEN = 10] = "GREEN", WW[WW.GRAY = 11] = "GRAY", WW[WW.CYAN = 12] = "CYAN", WW[WW.BROWN = 13] = "BROWN", WW[WW.BLUE = 14] = "BLUE", WW[WW.BLACK = 15] = "BLACK", WW
+      ZR = function(RR) {
+        return RR[RR.YELLOW = 0] = "YELLOW", RR[RR.WHITE = 1] = "WHITE", RR[RR.RED = 2] = "RED", RR[RR.PURPLE = 3] = "PURPLE", RR[RR.PINK = 4] = "PINK", RR[RR.ORANGE = 5] = "ORANGE", RR[RR.MAGENTA = 6] = "MAGENTA", RR[RR.LIME = 7] = "LIME", RR[RR.LIGHT_GRAY = 8] = "LIGHT_GRAY", RR[RR.LIGHT_BLUE = 9] = "LIGHT_BLUE", RR[RR.GREEN = 10] = "GREEN", RR[RR.GRAY = 11] = "GRAY", RR[RR.CYAN = 12] = "CYAN", RR[RR.BROWN = 13] = "BROWN", RR[RR.BLUE = 14] = "BLUE", RR[RR.BLACK = 15] = "BLACK", RR
       }({}),
-      LW = function(WW) {
-        return WW[WW.ROTATION_1 = 0] = "ROTATION_1", WW[WW.ROTATION_2 = 1] = "ROTATION_2", WW[WW.ROTATION_3 = 2] = "ROTATION_3", WW[WW.ROTATION_4 = 3] = "ROTATION_4", WW
+      qR = function(RR) {
+        return RR[RR.ROTATION_1 = 0] = "ROTATION_1", RR[RR.ROTATION_2 = 1] = "ROTATION_2", RR[RR.ROTATION_3 = 2] = "ROTATION_3", RR[RR.ROTATION_4 = 3] = "ROTATION_4", RR
       }({}),
-      cW = function(WW) {
-        return WW[WW.KART = 0] = "KART", WW[WW.OFF_ROADER = 1] = "OFF_ROADER", WW[WW.CAR = 2] = "CAR", WW[WW.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", WW[WW.ARMORED_CAR = 4] = "ARMORED_CAR", WW[WW.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", WW[WW.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", WW[WW.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", WW
+      iR = function(RR) {
+        return RR[RR.KART = 0] = "KART", RR[RR.OFF_ROADER = 1] = "OFF_ROADER", RR[RR.CAR = 2] = "CAR", RR[RR.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", RR[RR.ARMORED_CAR = 4] = "ARMORED_CAR", RR[RR.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", RR[RR.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", RR[RR.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", RR
       }({});
-    mW.DEFAULT, mW.BOAT, EW.SPEED, mW.GLIDER, NW.DIAMOND, mW.BALLOON, PW.BLACK, mW.SLEEPING, LW.ROTATION_4, mW.RIDING_MOB, mW.CAR, cW.MOONSTONE_MINING_DRILL, mW.HOVERCRAFT;
-    let wW = function(WW) {
-      return WW[WW.NORMAL = 0] = "NORMAL", WW[WW.GLIDING = 1] = "GLIDING", WW[WW.FLOATING = 2] = "FLOATING", WW
+    yR.DEFAULT, yR.BOAT, tR.SPEED, yR.GLIDER, uR.DIAMOND, yR.BALLOON, ZR.BLACK, yR.SLEEPING, qR.ROTATION_4, yR.RIDING_MOB, yR.CAR, iR.MOONSTONE_MINING_DRILL, yR.HOVERCRAFT;
+    let fR = function(RR) {
+      return RR[RR.NORMAL = 0] = "NORMAL", RR[RR.GLIDING = 1] = "GLIDING", RR[RR.FLOATING = 2] = "FLOATING", RR
     }({})
   },
-  39396: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => NW,
-      f: () => PW,
-      g: () => EW,
-      i: () => LW
+  39383: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR,
+      e: () => ZR,
+      g: () => tR,
+      k: () => qR
     });
-    var mW = OW(349);
-    const EW = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...OW(639).t.map((WW => `${WW} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...mW.j, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      NW = ["Obby RPG"];
+    var yR = GR(382);
+    const tR = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...GR(671).v.map((RR => `${RR} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...yR.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      uR = ["Obby RPG"];
 
-    function PW(WW) {
-      const iW = WW.indexOf("|");
-      return -1 === iW ? {
-        item: WW,
+    function ZR(RR) {
+      const JR = RR.indexOf("|");
+      return -1 === JR ? {
+        item: RR,
         clientPredictedThrower: null
       } : {
-        item: WW.slice(0, iW),
-        clientPredictedThrower: WW.slice(iW + 1)
+        item: RR.slice(0, JR),
+        clientPredictedThrower: RR.slice(JR + 1)
       }
     }
-    const LW = [...EW, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const qR = [...tR, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

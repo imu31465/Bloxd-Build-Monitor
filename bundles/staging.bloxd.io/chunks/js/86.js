@@ -1,11 +1,11 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  35236: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => mW
+  35166: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR
     });
-    const mW = {
+    const yR = {
       "AK-47": {
         gunType: "semi_automatic",
         scopeType: "none",
@@ -524,8 +524,8 @@ export const modules = {
         aimZoomFactor: 2.8
       }
     };
-    for (const EW of Object.values(mW)) EW.msPerRound = 60 / EW.fireRate * 1e3, EW.msPerRoundTouchScreen = void 0 !== EW.fireRateWithHeldTouch ? 60 / EW.fireRateWithHeldTouch * 1e3 : EW.msPerRound, EW.cadenceMs ??= EW.msPerRound, EW.altYVelocityInaccuracy ??= EW.yVelocityInaccuracy, EW.altInaccuracyFromJump ??= EW.inaccuracyFromJump
+    for (const tR of Object.values(yR)) tR.msPerRound = 60 / tR.fireRate * 1e3, tR.msPerRoundTouchScreen = void 0 !== tR.fireRateWithHeldTouch ? 60 / tR.fireRateWithHeldTouch * 1e3 : tR.msPerRound, tR.cadenceMs ??= tR.msPerRound, tR.altYVelocityInaccuracy ??= tR.yVelocityInaccuracy, tR.altInaccuracyFromJump ??= tR.inaccuracyFromJump
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

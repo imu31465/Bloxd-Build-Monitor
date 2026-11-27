@@ -1,78 +1,78 @@
 export const id = 284;
 export const ids = [284];
 export const modules = {
-  41336: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      playDocsSound: () => cW
+  41339: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      playDocsSound: () => iR
     });
-    var mW = OW(5615),
-      EW = OW(37559),
-      NW = OW(1185),
-      PW = OW(37563);
-    const LW = new Map;
+    var yR = GR(5742),
+      tR = GR(37470),
+      uR = GR(1282),
+      ZR = GR(37479);
+    const qR = new Map;
 
-    function cW(WW, iW, OW, cW, wW) {
-      let tW, ZW = 0;
-      if (iW) tW = new mW.Howl({
-        src: [`${NW.clientSideServerUrls.staticUrl}/sounds/music/${WW}.mp3`],
+    function iR(RR, JR, GR, iR, fR) {
+      let VR, KR = 0;
+      if (JR) VR = new yR.Howl({
+        src: [`${uR.clientSideServerUrls.staticUrl}/sounds/music/${RR}.mp3`],
         html5: !0,
-        volume: OW
+        volume: GR
       });
       else {
-        const iW = (0, EW.u)(WW);
-        ZW = iW.ms / 1e3, tW = LW.get(WW), tW || (tW = new mW.Howl({
-          src: [...iW.src],
+        const JR = (0, tR.v)(RR);
+        KR = JR.ms / 1e3, VR = qR.get(RR), VR || (VR = new yR.Howl({
+          src: [...JR.src],
           volume: 1
-        }), LW.set(WW, tW))
+        }), qR.set(RR, VR))
       }
-      const xW = iW ? tW.play() : tW.play(PW.d);
-      tW.volume(OW, xW), cW > 0 && tW.seek(cW, xW);
-      const lW = () => {
-        const WW = tW.duration();
-        return iW || WW > 0 ? WW : ZW
+      const wR = JR ? VR.play() : VR.play(ZR.d);
+      VR.volume(GR, wR), iR > 0 && VR.seek(iR, wR);
+      const rR = () => {
+        const RR = VR.duration();
+        return JR || RR > 0 ? RR : KR
       };
-      let AW = !1;
-      const bW = WW => {
-          AW || (AW = !0, tW.off("play", jW, xW), tW.off("end", UW, xW), tW.off("loaderror", sW), tW.off("playerror", kW, xW), iW && tW.unload(), wW.onEnd(WW))
+      let eR = !1;
+      const aR = RR => {
+          eR || (eR = !0, VR.off("play", LR, wR), VR.off("end", nR, wR), VR.off("loaderror", WR), VR.off("playerror", UR, wR), JR && VR.unload(), fR.onEnd(RR))
         },
-        jW = () => {
-          wW.onPlay(lW())
+        LR = () => {
+          fR.onPlay(rR())
         },
-        UW = () => {
-          bW(!1)
+        nR = () => {
+          aR(!1)
         },
-        kW = (iW, OW) => {
-          console.error(`Could not play docs sound ${WW}`, OW), bW(!0)
+        UR = (JR, GR) => {
+          console.error(`Could not play docs sound ${RR}`, GR), aR(!0)
         },
-        sW = (OW, mW) => {
-          iW || LW.get(WW) !== tW || (LW.delete(WW), tW.unload()), kW(OW, mW)
+        WR = (GR, yR) => {
+          JR || qR.get(RR) !== VR || (qR.delete(RR), VR.unload()), UR(GR, yR)
         };
-      return tW.on("play", jW, xW), tW.once("end", UW, xW), tW.once("loaderror", sW), tW.once("playerror", kW, xW), {
+      return VR.on("play", LR, wR), VR.once("end", nR, wR), VR.once("loaderror", WR), VR.once("playerror", UR, wR), {
         pause: () => {
-          tW.pause(xW)
+          VR.pause(wR)
         },
         resume: () => {
-          tW.play(xW)
+          VR.play(wR)
         },
-        seek: WW => {
-          const iW = lW(),
-            OW = Math.max(WW, 0);
-          tW.seek(iW > 0 ? Math.min(OW, iW) : OW, xW)
+        seek: RR => {
+          const JR = rR(),
+            GR = Math.max(RR, 0);
+          VR.seek(JR > 0 ? Math.min(GR, JR) : GR, wR)
         },
-        Vk: () => {
-          const WW = tW.seek(xW);
-          return "number" === typeof WW ? Math.max(0, WW) : 0
+        vW: () => {
+          const RR = VR.seek(wR);
+          return "number" === typeof RR ? Math.max(0, RR) : 0
         },
-        getDuration: lW,
-        setVolume: WW => {
-          tW.volume(WW, xW)
+        getDuration: rR,
+        setVolume: RR => {
+          VR.volume(RR, wR)
         },
         stop: () => {
-          AW || (tW.stop(xW), bW(!1))
+          eR || (VR.stop(wR), aR(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

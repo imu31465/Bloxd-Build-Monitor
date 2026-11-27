@@ -1,292 +1,292 @@
 export const id = 622;
 export const ids = [622];
 export const modules = {
-  53878: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => NW
+  53728: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR
     });
-    var mW = OW(53868),
-      EW = OW(53885);
+    var yR = GR(53716),
+      tR = GR(53735);
 
-    function NW(WW) {
-      (0, EW.d)(WW), (0, mW.s)(WW);
-      const iW = WW._surfaces;
-      for (const OW of iW) OW._renderingContexts.length = 0, OW._ro?.disconnect(), OW._context.unconfigure();
-      iW.length = 0;
+    function uR(RR) {
+      (0, tR.d)(RR), (0, yR.u)(RR);
+      const JR = RR._surfaces;
+      for (const GR of JR) GR._renderingContexts.length = 0, GR._ro?.disconnect(), GR._context.unconfigure();
+      JR.length = 0;
       try {
-        WW._disposeManagedResources?.(), WW._disposeStorageBuffers?.()
+        RR._disposeManagedResources?.(), RR._disposeStorageBuffers?.()
       } finally {
-        WW._device.destroy()
+        RR._device.destroy()
       }
     }
   },
-  53868: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => xW,
-      f: () => UW,
-      i: () => lW,
-      l: () => AW,
-      o: () => MW,
-      p: () => kW,
-      s: () => sW
+  53716: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => wR,
+      h: () => nR,
+      l: () => rR,
+      n: () => eR,
+      o: () => AR,
+      q: () => UR,
+      u: () => WR
     });
-    var mW = OW(53822);
-    var EW = "Babylon Lite v1.32.0",
-      NW = OW(53875);
+    var yR = GR(53654);
+    var tR = "Babylon Lite v1.32.0",
+      uR = GR(53720);
 
-    function PW(WW) {
-      return "clientWidth" in WW
+    function ZR(RR) {
+      return "clientWidth" in RR
     }
-    var LW = 1;
+    var qR = 1;
 
-    function cW(WW, iW, OW) {
-      const cW = iW.getContext("webgpu");
-      cW || (0, mW.c)(54), PW(iW) && iW.setAttribute("data-engine", EW);
-      const wW = OW?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        tW = OW?.srgb ? (ZW = wW).endsWith("-srgb") ? ZW : `${ZW}-srgb` : wW;
-      var ZW;
-      const xW = OW?.alphaMode ?? "opaque";
-      cW.configure({
-        device: WW._device,
-        format: wW,
-        alphaMode: xW,
-        viewFormats: [tW]
+    function iR(RR, JR, GR) {
+      const iR = JR.getContext("webgpu");
+      iR || (0, yR.c)(54), ZR(JR) && JR.setAttribute("data-engine", tR);
+      const fR = GR?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        VR = GR?.srgb ? (KR = fR).endsWith("-srgb") ? KR : `${KR}-srgb` : fR;
+      var KR;
+      const wR = GR?.alphaMode ?? "opaque";
+      iR.configure({
+        device: RR._device,
+        format: fR,
+        alphaMode: wR,
+        viewFormats: [VR]
       });
-      const lW = 1 === OW?.msaaSamples ? 1 : 4,
-        AW = (0, NW.c)({
+      const rR = 1 === GR?.msaaSamples ? 1 : 4,
+        eR = (0, uR.e)({
           lbl: "swapchain",
-          format: tW,
+          format: VR,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return AW._eager = !0, {
-        engine: WW,
-        canvas: iW,
-        format: tW,
-        msaaSamples: lW,
-        scRT: AW,
-        maxDevicePixelRatio: OW?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: LW++,
-        _context: cW,
-        _configureFormat: wW,
-        _alphaMode: xW,
+      return eR._eager = !0, {
+        engine: RR,
+        canvas: JR,
+        format: VR,
+        msaaSamples: rR,
+        scRT: eR,
+        maxDevicePixelRatio: GR?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: qR++,
+        _context: iR,
+        _configureFormat: fR,
+        _alphaMode: wR,
         _renderingContexts: []
       }
     }
 
-    function wW(WW) {
-      const iW = WW._context.getCurrentTexture(),
-        OW = WW.scRT;
-      OW._colorTexture = iW, OW._colorView = iW.createView({
-        format: WW.format
-      }), OW._width = iW.width, OW._height = iW.height
+    function fR(RR) {
+      const JR = RR._context.getCurrentTexture(),
+        GR = RR.scRT;
+      GR._colorTexture = JR, GR._colorView = JR.createView({
+        format: RR.format
+      }), GR._width = JR.width, GR._height = JR.height
     }
 
-    function tW(WW) {
-      const iW = WW.canvas;
-      if (!PW(iW)) return;
-      const OW = WW._w ?? iW.clientWidth,
-        mW = WW._h ?? iW.clientHeight;
-      if (!(OW > 0 && mW > 0)) return;
-      const EW = Math.min(globalThis.devicePixelRatio || 1, WW.maxDevicePixelRatio);
-      ZW(WW, OW * EW | 0, mW * EW | 0)
+    function VR(RR) {
+      const JR = RR.canvas;
+      if (!ZR(JR)) return;
+      const GR = RR._w ?? JR.clientWidth,
+        yR = RR._h ?? JR.clientHeight;
+      if (!(GR > 0 && yR > 0)) return;
+      const tR = Math.min(globalThis.devicePixelRatio || 1, RR.maxDevicePixelRatio);
+      KR(RR, GR * tR | 0, yR * tR | 0)
     }
 
-    function ZW(WW, iW, OW) {
-      const mW = WW.canvas,
-        EW = 0 | iW,
-        NW = 0 | OW;
-      if (EW > 0 && NW > 0 && (EW !== mW.width || NW !== mW.height)) {
-        mW.width = EW, mW.height = NW, WW.scRT._width = EW, WW.scRT._height = NW;
-        for (const iW of WW._renderingContexts) iW._resize?.()
+    function KR(RR, JR, GR) {
+      const yR = RR.canvas,
+        tR = 0 | JR,
+        uR = 0 | GR;
+      if (tR > 0 && uR > 0 && (tR !== yR.width || uR !== yR.height)) {
+        yR.width = tR, yR.height = uR, RR.scRT._width = tR, RR.scRT._height = uR;
+        for (const JR of RR._renderingContexts) JR._resize?.()
       }
     }
-    var xW = 0;
+    var wR = 0;
 
-    function lW(WW, iW) {
-      return -1 !== WW._renderingContexts.indexOf(iW)
+    function rR(RR, JR) {
+      return -1 !== RR._renderingContexts.indexOf(JR)
     }
 
-    function AW(WW, iW) {
-      return -1 === WW._renderingContexts.indexOf(iW) && (WW._renderingContexts.push(iW), !0)
+    function eR(RR, JR) {
+      return -1 === RR._renderingContexts.indexOf(JR) && (RR._renderingContexts.push(JR), !0)
     }
-    var bW = null;
-    var jW = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function UW(WW, iW) {
-      const NW = await navigator.gpu.requestAdapter({
+    var aR = null;
+    var LR = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function nR(RR, JR) {
+      const uR = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...bW ? bW() : {}
+        ...aR ? aR() : {}
       });
-      NW || (0, mW.c)(47);
-      const PW = bW?.deviceFeatures?.(NW, iW) ?? function(WW) {
-          return jW.filter((iW => WW.features.has(iW)))
-        }(NW),
-        LW = await NW.requestDevice({
-          requiredFeatures: PW,
-          requiredLimits: iW?.requiredLimits
+      uR || (0, yR.c)(47);
+      const ZR = aR?.deviceFeatures?.(uR, JR) ?? function(RR) {
+          return LR.filter((JR => RR.features.has(JR)))
+        }(uR),
+        qR = await uR.requestDevice({
+          requiredFeatures: ZR,
+          requiredLimits: JR?.requiredLimits
         });
-      console.log(`${EW} - WebGPU engine`);
-      const ZW = !!iW?.useHighPrecisionMatrix,
-        xW = !!iW?.useFloatingOrigin;
-      if (xW && !ZW && (0, mW.c)(48), ZW) {
+      console.log(`${tR} - WebGPU engine`);
+      const KR = !!JR?.useHighPrecisionMatrix,
+        wR = !!JR?.useFloatingOrigin;
+      if (wR && !KR && (0, yR.c)(48), KR) {
         const {
-          allocateF64Mat4: WW
-        } = await OW.e(674).then((() => OW(64470)));
+          allocateF64Mat4: RR
+        } = await GR.e(674).then((() => GR(64208)));
         0
       }
-      let lW, AW, UW, kW;
-      if (xW) {
+      let rR, eR, nR, UR;
+      if (wR) {
         const [{
-          wrapRenderableForFO: WW,
-          lightFoVersion: iW,
-          applyLightFoOffset: mW
+          wrapRenderableForFO: RR,
+          lightFoVersion: JR,
+          applyLightFoOffset: yR
         }, {
-          makePackMeshWorld: EW
-        }] = await Promise.all([OW.e(675).then((() => OW(64479))), OW.e(676).then((() => OW(64482)))]);
-        lW = WW, AW = EW, UW = iW, kW = mW
+          makePackMeshWorld: tR
+        }] = await Promise.all([GR.e(675).then((() => GR(64212))), GR.e(676).then((() => GR(64219)))]);
+        rR = RR, eR = tR, nR = JR, UR = yR
       }
-      const sW = {
-          _device: LW
+      const WR = {
+          _device: qR
         },
-        MW = [sW];
-      return Object.assign(sW, {
-        engine: sW,
-        surfaces: MW,
-        _surfaces: MW,
-        _device: LW,
-        _options: iW,
+        AR = [WR];
+      return Object.assign(WR, {
+        engine: WR,
+        surfaces: AR,
+        _surfaces: AR,
+        _device: qR,
+        _options: JR,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: ZW,
-        useFloatingOrigin: xW,
+        useHighPrecisionMatrix: KR,
+        useFloatingOrigin: wR,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: lW,
-        _makePackMeshWorld: AW,
-        _lightFoVersion: UW,
-        _applyLightFoOffset: kW
-      }, cW(sW, WW, iW)), tW(sW), wW(sW), sW
+        _wrapRenderableForFO: rR,
+        _makePackMeshWorld: eR,
+        _lightFoVersion: nR,
+        _applyLightFoOffset: UR
+      }, iR(WR, RR, JR)), VR(WR), fR(WR), WR
     }
 
-    function kW(WW, iW, OW) {
-      ZW(WW, iW, OW)
+    function UR(RR, JR, GR) {
+      KR(RR, JR, GR)
     }
 
-    function sW(WW) {
-      WW._animFrameId && cancelAnimationFrame(WW._animFrameId), WW._animFrameId = 0, WW._renderFn = null, WW._flushGpuRetirements?.(WW)
+    function WR(RR) {
+      RR._animFrameId && cancelAnimationFrame(RR._animFrameId), RR._animFrameId = 0, RR._renderFn = null, RR._flushGpuRetirements?.(RR)
     }
 
-    function MW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : WW.surfaces;
-      if (OW !== WW.surfaces)
-        for (let EW = OW.length; EW--;) OW[EW].engine !== WW && (0, mW.c)(49);
-      KW(WW, iW, OW)
+    function AR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : RR.surfaces;
+      if (GR !== RR.surfaces)
+        for (let tR = GR.length; tR--;) GR[tR].engine !== RR && (0, yR.c)(49);
+      CR(RR, JR, GR)
     }
 
-    function KW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : WW._surfaces,
-        mW = 0;
-      for (let NW = OW.length; NW--;) mW += OW[NW]._renderingContexts.length;
-      if (!mW) return WW.drawCallCount = 0, WW._flushGpuRetirements?.(WW);
-      const EW = WW._device.createCommandEncoder({
+    function CR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : RR._surfaces,
+        yR = 0;
+      for (let uR = GR.length; uR--;) yR += GR[uR]._renderingContexts.length;
+      if (!yR) return RR.drawCallCount = 0, RR._flushGpuRetirements?.(RR);
+      const tR = RR._device.createCommandEncoder({
         label: "frame"
       });
-      WW._currentEncoder = EW, WW._currentDelta = iW;
+      RR._currentEncoder = tR, RR._currentDelta = JR;
       try {
-        WW._gpuTimerBegin?.(EW), mW = 0;
-        for (let WW = 0; WW < OW.length; WW++) {
-          const iW = OW[WW];
-          iW._capturePreFrame?.(iW), wW(iW);
-          const EW = iW._renderingContexts;
-          for (let WW = 0; WW < EW.length; WW++) {
-            const iW = EW[WW];
-            iW._update(), mW += iW._drawCallsPre + iW._record()
+        RR._gpuTimerBegin?.(tR), yR = 0;
+        for (let RR = 0; RR < GR.length; RR++) {
+          const JR = GR[RR];
+          JR._capturePreFrame?.(JR), fR(JR);
+          const tR = JR._renderingContexts;
+          for (let RR = 0; RR < tR.length; RR++) {
+            const JR = tR[RR];
+            JR._update(), yR += JR._drawCallsPre + JR._record()
           }
         }
-        const iW = WW._currentEncoder;
-        for (let WW = 0; WW < OW.length; WW++) {
-          const mW = OW[WW];
-          mW._captureService?.(mW, iW)
+        const JR = RR._currentEncoder;
+        for (let RR = 0; RR < GR.length; RR++) {
+          const yR = GR[RR];
+          yR._captureService?.(yR, JR)
         }
-        WW._gpuTimerEnd?.(iW), WW._cbs[0] = iW.finish(), WW._device.queue.submit(WW._cbs), WW._flushGpuRetirements?.(WW), WW.drawCallCount = mW, WW._gpuTimerResolve?.()
+        RR._gpuTimerEnd?.(JR), RR._cbs[0] = JR.finish(), RR._device.queue.submit(RR._cbs), RR._flushGpuRetirements?.(RR), RR.drawCallCount = yR, RR._gpuTimerResolve?.()
       } finally {
-        WW._currentEncoder = void 0
+        RR._currentEncoder = void 0
       }
     }
   },
-  53828: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW,
-      e: () => NW,
-      h: () => mW
+  53658: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => tR,
+      f: () => uR,
+      j: () => yR
     });
-    var mW = globalThis.GPUTextureUsage,
-      EW = globalThis.GPUBufferUsage,
-      NW = globalThis.GPUShaderStage;
+    var yR = globalThis.GPUTextureUsage,
+      tR = globalThis.GPUBufferUsage,
+      uR = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  53885: (WW, iW, OW) => {
-    function mW(WW) {
-      EW(WW.splice(0))
+  53735: (RR, JR, GR) => {
+    function yR(RR) {
+      tR(RR.splice(0))
     }
 
-    function EW(WW) {
-      for (const OW of WW) try {
-        OW()
-      } catch (iW) {
-        console.error("GPU resource retirement failed.", iW)
+    function tR(RR) {
+      for (const GR of RR) try {
+        GR()
+      } catch (JR) {
+        console.error("GPU resource retirement failed.", JR)
       }
     }
 
-    function NW(WW, iW) {
-      WW._flushGpuRetirements ??= PW, (WW._retirements ??= []).push(iW)
+    function uR(RR, JR) {
+      RR._flushGpuRetirements ??= ZR, (RR._retirements ??= []).push(JR)
     }
 
-    function PW(WW) {
-      const iW = WW._retirements;
-      if (!iW) return;
-      WW._retirements = null;
-      const OW = WW._retiring ??= new Set;
-      OW.add(iW), queueMicrotask((() => {
-        WW._device.queue.onSubmittedWorkDone().then((() => {
-          OW.delete(iW), mW(iW)
+    function ZR(RR) {
+      const JR = RR._retirements;
+      if (!JR) return;
+      RR._retirements = null;
+      const GR = RR._retiring ??= new Set;
+      GR.add(JR), queueMicrotask((() => {
+        RR._device.queue.onSubmittedWorkDone().then((() => {
+          GR.delete(JR), yR(JR)
         })).catch((() => {}))
       }))
     }
 
-    function LW(WW) {
-      const iW = WW._retirements,
-        OW = WW._retiring;
-      WW._retirements = null, WW._retiring = null, iW && mW(iW), OW?.forEach(mW)
+    function qR(RR) {
+      const JR = RR._retirements,
+        GR = RR._retiring;
+      RR._retirements = null, RR._retiring = null, JR && yR(JR), GR?.forEach(yR)
     }
-    OW.d(iW, {
-      d: () => LW,
-      g: () => NW
+    GR.d(JR, {
+      d: () => qR,
+      e: () => uR
     })
   },
-  53875: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW,
-      f: () => PW,
-      h: () => LW
+  53720: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => uR,
+      h: () => ZR,
+      k: () => qR
     });
-    var mW = OW(53828);
+    var yR = GR(53658);
 
-    function EW(WW) {
-      const iW = WW.size;
-      return "canvas" in iW ? iW.canvas : iW
+    function tR(RR) {
+      const JR = RR.size;
+      return "canvas" in JR ? JR.canvas : JR
     }
 
-    function NW(WW) {
+    function uR(RR) {
       return {
-        _descriptor: WW,
-        _resolveSize: EW,
+        _descriptor: RR,
+        _resolveSize: tR,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -296,609 +296,609 @@ export const modules = {
       }
     }
 
-    function PW(WW, iW) {
-      if (WW._eager) return void WW._syncEager?.(iW);
-      LW(WW);
-      const OW = WW._descriptor,
+    function ZR(RR, JR) {
+      if (RR._eager) return void RR._syncEager?.(JR);
+      qR(RR);
+      const GR = RR._descriptor,
         {
-          width: NW,
-          height: PW
-        } = (WW._resolveSize ?? EW)(OW);
-      WW._width = NW, WW._height = PW;
-      const cW = iW._device;
-      OW.format && (WW._colorTexture = cW.createTexture({
-        label: OW.lbl,
+          width: uR,
+          height: ZR
+        } = (RR._resolveSize ?? tR)(GR);
+      RR._width = uR, RR._height = ZR;
+      const iR = JR._device;
+      GR.format && (RR._colorTexture = iR.createTexture({
+        label: GR.lbl,
         size: {
-          width: NW,
-          height: PW
+          width: uR,
+          height: ZR
         },
-        format: OW.format,
-        sampleCount: OW.samples,
-        usage: mW.h.RENDER_ATTACHMENT | mW.h.TEXTURE_BINDING | mW.h.COPY_SRC | mW.h.COPY_DST
-      }), WW._colorView = WW._colorTexture.createView()), OW.dFormat && (WW._depthTexture = cW.createTexture({
-        label: OW.lbl,
+        format: GR.format,
+        sampleCount: GR.samples,
+        usage: yR.j.RENDER_ATTACHMENT | yR.j.TEXTURE_BINDING | yR.j.COPY_SRC | yR.j.COPY_DST
+      }), RR._colorView = RR._colorTexture.createView()), GR.dFormat && (RR._depthTexture = iR.createTexture({
+        label: GR.lbl,
         size: {
-          width: NW,
-          height: PW
+          width: uR,
+          height: ZR
         },
-        format: OW.dFormat,
-        sampleCount: OW.samples,
-        usage: mW.h.RENDER_ATTACHMENT | mW.h.TEXTURE_BINDING
-      }), WW._depthView = WW._depthTexture.createView())
+        format: GR.dFormat,
+        sampleCount: GR.samples,
+        usage: yR.j.RENDER_ATTACHMENT | yR.j.TEXTURE_BINDING
+      }), RR._depthView = RR._depthTexture.createView())
     }
 
-    function LW(WW) {
-      if (!WW || WW._eager && !WW._disposeAttachments) return;
-      const iW = WW._colorTexture,
-        OW = WW._depthTexture;
-      if (WW._colorTexture = WW._depthTexture = null, WW._colorView = WW._depthView = null, WW._width = WW._height = 0, WW._disposeAttachments) WW._disposeAttachments(iW, OW);
+    function qR(RR) {
+      if (!RR || RR._eager && !RR._disposeAttachments) return;
+      const JR = RR._colorTexture,
+        GR = RR._depthTexture;
+      if (RR._colorTexture = RR._depthTexture = null, RR._colorView = RR._depthView = null, RR._width = RR._height = 0, RR._disposeAttachments) RR._disposeAttachments(JR, GR);
       else try {
-        iW?.destroy()
+        JR?.destroy()
       } finally {
-        !1 !== WW._ownsDepthTexture && OW?.destroy()
+        !1 !== RR._ownsDepthTexture && GR?.destroy()
       }
     }
   },
-  53896: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => mW,
-      g: () => EW,
-      h: () => NW
+  53742: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => yR,
+      f: () => tR,
+      h: () => uR
     });
-    var mW = Float32Array,
-      EW = Float64Array,
-      NW = Uint32Array
+    var yR = Float32Array,
+      tR = Float64Array,
+      uR = Uint32Array
   },
-  53901: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW
+  53745: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => yR
     });
-    var mW = 16
+    var yR = 16
   },
-  53822: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => EW
+  53654: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR
     });
-    var mW = null;
+    var yR = null;
 
-    function EW(WW) {
-      for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), EW = 1; EW < iW; EW++) OW[EW - 1] = arguments[EW];
-      const NW = new Error(mW?.(WW, OW) ?? `#${WW}`);
-      throw NW.lite = OW, NW
+    function tR(RR) {
+      for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), tR = 1; tR < JR; tR++) GR[tR - 1] = arguments[tR];
+      const uR = new Error(yR?.(RR, GR) ?? `#${RR}`);
+      throw uR.lite = GR, uR
     }
   },
-  53857: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => EW
+  53689: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR
     });
-    var mW = OW(53836);
+    var yR = GR(53670);
 
-    function EW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const OW = iW.compare,
-        EW = iW.lodMinClamp ?? 0,
-        NW = iW.lodMaxClamp ?? 32,
-        PW = void 0 !== OW || 0 !== EW || 32 !== NW ? `${OW??""}:${EW}:${NW}` : "";
-      return (0, mW.b)(WW, iW, PW)
+    function tR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const GR = JR.compare,
+        tR = JR.lodMinClamp ?? 0,
+        uR = JR.lodMaxClamp ?? 32,
+        ZR = void 0 !== GR || 0 !== tR || 32 !== uR ? `${GR??""}:${tR}:${uR}` : "";
+      return (0, yR.b)(RR, JR, ZR)
     }
   },
-  53833: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => NW
+  53664: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => uR
     });
-    var mW = null;
+    var yR = null;
 
-    function EW(WW) {
-      const iW = mW ??= new WeakMap;
-      iW.set(WW, (iW.get(WW) ?? 0) + 1)
+    function tR(RR) {
+      const JR = yR ??= new WeakMap;
+      JR.set(RR, (JR.get(RR) ?? 0) + 1)
     }
 
-    function NW(WW) {
-      EW(WW.texture)
+    function uR(RR) {
+      tR(RR.texture)
     }
   },
-  53836: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => LW
+  53670: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => qR
     });
-    var mW = null,
-      EW = "nearest",
-      NW = "clamp-to-edge",
-      PW = {
-        minFilter: EW,
-        magFilter: EW,
-        mipmapFilter: EW,
-        addressModeU: NW,
-        addressModeV: NW,
-        addressModeW: NW,
+    var yR = null,
+      tR = "nearest",
+      uR = "clamp-to-edge",
+      ZR = {
+        minFilter: tR,
+        magFilter: tR,
+        mipmapFilter: tR,
+        addressModeU: uR,
+        addressModeV: uR,
+        addressModeW: uR,
         maxAnisotropy: 1
       };
 
-    function LW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const EW = WW._device,
-        NW = mW ??= new WeakMap;
-      let LW = NW.get(EW);
-      LW || NW.set(EW, LW = new Map);
-      let cW = OW;
-      for (const mW in PW) {
-        const WW = mW;
-        cW += `:${iW[WW]??PW[WW]}`
+    function qR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const tR = RR._device,
+        uR = yR ??= new WeakMap;
+      let qR = uR.get(tR);
+      qR || uR.set(tR, qR = new Map);
+      let iR = GR;
+      for (const yR in ZR) {
+        const RR = yR;
+        iR += `:${JR[RR]??ZR[RR]}`
       }
-      let wW = LW.get(cW);
-      return wW || LW.set(cW, wW = EW.createSampler(iW)), wW
+      let fR = qR.get(iR);
+      return fR || qR.set(iR, fR = tR.createSampler(JR)), fR
     }
   },
-  53891: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => DW,
-      e: () => fW
+  53737: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => cR,
+      e: () => mR
     });
-    var mW = OW(53875),
-      EW = OW(53868);
+    var yR = GR(53720),
+      tR = GR(53716);
 
-    function NW(WW, iW) {
-      iW._passes.length = 0, WW._currentProcessedTask = iW;
+    function uR(RR, JR) {
+      JR._passes.length = 0, RR._currentProcessedTask = JR;
       try {
-        iW.record()
+        JR.record()
       } finally {
-        WW._currentProcessedTask = null
+        RR._currentProcessedTask = null
       }
     }
-    var PW = OW(53896);
+    var ZR = GR(53742);
 
-    function LW(WW) {
-      const iW = WW.worldMatrixVersion;
-      if (WW._viewVer === iW) return WW._viewCache;
-      const OW = WW._viewCache,
-        mW = WW.worldMatrix,
-        EW = WW._useFloatingOrigin,
-        NW = EW ? 0 : mW[12],
-        PW = EW ? 0 : mW[13],
-        LW = EW ? 0 : mW[14];
-      return OW[0] = mW[0], OW[1] = mW[4], OW[2] = mW[8], OW[3] = 0, OW[4] = mW[1], OW[5] = mW[5], OW[6] = mW[9], OW[7] = 0, OW[8] = mW[2], OW[9] = mW[6], OW[10] = mW[10], OW[11] = 0, OW[12] = -(mW[0] * NW + mW[1] * PW + mW[2] * LW), OW[13] = -(mW[4] * NW + mW[5] * PW + mW[6] * LW), OW[14] = -(mW[8] * NW + mW[9] * PW + mW[10] * LW), OW[15] = 1, WW._viewVer = iW, OW
+    function qR(RR) {
+      const JR = RR.worldMatrixVersion;
+      if (RR._viewVer === JR) return RR._viewCache;
+      const GR = RR._viewCache,
+        yR = RR.worldMatrix,
+        tR = RR._useFloatingOrigin,
+        uR = tR ? 0 : yR[12],
+        ZR = tR ? 0 : yR[13],
+        qR = tR ? 0 : yR[14];
+      return GR[0] = yR[0], GR[1] = yR[4], GR[2] = yR[8], GR[3] = 0, GR[4] = yR[1], GR[5] = yR[5], GR[6] = yR[9], GR[7] = 0, GR[8] = yR[2], GR[9] = yR[6], GR[10] = yR[10], GR[11] = 0, GR[12] = -(yR[0] * uR + yR[1] * ZR + yR[2] * qR), GR[13] = -(yR[4] * uR + yR[5] * ZR + yR[6] * qR), GR[14] = -(yR[8] * uR + yR[9] * ZR + yR[10] * qR), GR[15] = 1, RR._viewVer = JR, GR
     }
-    var cW = null;
+    var iR = null;
 
-    function wW(WW) {
-      return WW._projFov === WW.fov && WW._projNear === WW.nearPlane && WW._projFar === WW.farPlane || (WW._projFov = WW.fov, WW._projNear = WW.nearPlane, WW._projFar = WW.farPlane, WW._projRev = (WW._projRev ?? 0) + 1), WW.worldMatrixVersion + (WW._projRev ?? 0)
+    function fR(RR) {
+      return RR._projFov === RR.fov && RR._projNear === RR.nearPlane && RR._projFar === RR.farPlane || (RR._projFov = RR.fov, RR._projNear = RR.nearPlane, RR._projFar = RR.farPlane, RR._projRev = (RR._projRev ?? 0) + 1), RR.worldMatrixVersion + (RR._projRev ?? 0)
     }
 
-    function tW(WW, iW) {
-      const OW = wW(WW);
-      if (WW._projVer === OW && WW._projAspect === iW) return WW._projCache;
-      const mW = WW._projCache;
-      return null !== cW && WW.ortho ? cW(WW, iW, mW) : function(WW, iW, OW, mW, EW) {
-        const NW = 1 / Math.tan(.5 * iW),
-          PW = EW - mW;
-        WW[0] = NW / OW, WW[5] = NW, WW[10] = -mW / PW, WW[11] = 1, WW[14] = EW * mW / PW
-      }(mW, WW.fov, iW, WW.nearPlane, WW.farPlane), WW._projVer = OW, WW._projAspect = iW, mW
+    function VR(RR, JR) {
+      const GR = fR(RR);
+      if (RR._projVer === GR && RR._projAspect === JR) return RR._projCache;
+      const yR = RR._projCache;
+      return null !== iR && RR.ortho ? iR(RR, JR, yR) : function(RR, JR, GR, yR, tR) {
+        const uR = 1 / Math.tan(.5 * JR),
+          ZR = tR - yR;
+        RR[0] = uR / GR, RR[5] = uR, RR[10] = -yR / ZR, RR[11] = 1, RR[14] = tR * yR / ZR
+      }(yR, RR.fov, JR, RR.nearPlane, RR.farPlane), RR._projVer = GR, RR._projAspect = JR, yR
     }
-    var ZW = OW(53828);
+    var KR = GR(53658);
 
-    function xW(WW, iW, OW) {
-      return WW._device.createBuffer({
-        label: OW,
-        size: (mW = iW, EW = 16, Math.ceil(mW / EW) * EW),
-        usage: ZW.b.UNIFORM | ZW.b.COPY_DST
+    function wR(RR, JR, GR) {
+      return RR._device.createBuffer({
+        label: GR,
+        size: (yR = JR, tR = 16, Math.ceil(yR / tR) * tR),
+        usage: KR.e.UNIFORM | KR.e.COPY_DST
       });
-      var mW, EW
+      var yR, tR
     }
-    var lW = OW(53885),
-      AW = null;
+    var rR = GR(53735),
+      eR = null;
 
-    function bW(WW) {
-      const iW = WW._device,
-        OW = AW ??= new WeakMap;
-      let mW = OW.get(iW);
-      return mW || (mW = iW.createBindGroupLayout({
-        label: "rb",
+    function aR(RR) {
+      const JR = RR._device,
+        GR = eR ??= new WeakMap;
+      let yR = GR.get(JR);
+      return yR || (yR = JR.createBindGroupLayout({
+        label: "tL",
         entries: [{
           binding: 0,
-          visibility: ZW.e.VERTEX | ZW.e.FRAGMENT,
+          visibility: KR.f.VERTEX | KR.f.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: ZW.e.FRAGMENT,
+          visibility: KR.f.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), OW.set(iW, mW)), mW
+      }), GR.set(JR, yR)), yR
     }
 
-    function jW(WW, iW, OW) {
-      const mW = WW._device,
-        EW = xW(WW, iW.byteLength, OW);
+    function LR(RR, JR, GR) {
+      const yR = RR._device,
+        tR = wR(RR, JR.byteLength, GR);
       try {
-        mW.queue.writeBuffer(EW, 0, iW.buffer, iW.byteOffset, iW.byteLength)
-      } catch (NW) {
-        throw EW.destroy(), NW
+        yR.queue.writeBuffer(tR, 0, JR.buffer, JR.byteOffset, JR.byteLength)
+      } catch (uR) {
+        throw tR.destroy(), uR
       }
-      return EW
+      return tR
     }
-    var UW = OW(53901),
-      kW = new PW.h(1),
-      sW = new PW.e(kW.buffer);
+    var nR = GR(53745),
+      UR = new ZR.h(1),
+      WR = new ZR.b(UR.buffer);
 
-    function MW(WW) {
-      let iW = 0;
-      for (const OW of WW) iW += OW._lightVersion ?? 0;
-      return iW
+    function AR(RR) {
+      let JR = 0;
+      for (const GR of RR) JR += GR._lightVersion ?? 0;
+      return JR
     }
 
-    function KW(WW, iW) {
-      WW.fill(0);
-      let OW = 0;
-      for (const mW of iW) {
-        if (OW >= UW.b) break;
-        mW._writeLightUbo && (mW._writeLightUbo(WW, 4 + 16 * OW), OW++)
+    function CR(RR, JR) {
+      RR.fill(0);
+      let GR = 0;
+      for (const yR of JR) {
+        if (GR >= nR.d) break;
+        yR._writeLightUbo && (yR._writeLightUbo(RR, 4 + 16 * GR), GR++)
       }
-      kW[0] = OW, WW[0] = sW[0]
+      UR[0] = GR, RR[0] = WR[0]
     }
 
-    function SW(WW, iW) {
-      let OW = iW._lightGpuState;
-      const mW = 16 + 16 * UW.b * 4;
-      if (OW && OW._byteSize === mW) return OW;
-      const EW = !OW;
-      OW?._buffer.destroy();
-      const NW = new PW.e(mW / 4);
-      return KW(NW, iW.lights), WW._applyLightFoOffset?.(NW, iW), OW = {
-        _buffer: jW(WW, NW),
-        _scratch: NW,
-        zC: MW(iW.lights) + (WW._lightFoVersion?.(iW) ?? 0),
-        _listVersion: iW._lightListVersion ?? 0,
-        _lightCount: iW.lights.length,
-        _byteSize: mW
-      }, iW._lightGpuState = OW, EW && iW._disposables.push((() => {
-        iW._lightGpuState?._buffer.destroy(), iW._lightGpuState = void 0
-      })), OW
+    function XR(RR, JR) {
+      let GR = JR._lightGpuState;
+      const yR = 16 + 16 * nR.d * 4;
+      if (GR && GR._byteSize === yR) return GR;
+      const tR = !GR;
+      GR?._buffer.destroy();
+      const uR = new ZR.b(yR / 4);
+      return CR(uR, JR.lights), RR._applyLightFoOffset?.(uR, JR), GR = {
+        _buffer: LR(RR, uR),
+        _scratch: uR,
+        FY: AR(JR.lights) + (RR._lightFoVersion?.(JR) ?? 0),
+        _listVersion: JR._lightListVersion ?? 0,
+        _lightCount: JR.lights.length,
+        _byteSize: yR
+      }, JR._lightGpuState = GR, tR && JR._disposables.push((() => {
+        JR._lightGpuState?._buffer.destroy(), JR._lightGpuState = void 0
+      })), GR
     }
 
-    function YW(WW, iW) {
-      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const EW = iW;
-      if (0 === mW && 16 === EW.length) return void WW.set(EW, OW);
-      const NW = mW,
-        PW = OW;
-      WW[PW + 0] = EW[NW + 0], WW[PW + 1] = EW[NW + 1], WW[PW + 2] = EW[NW + 2], WW[PW + 3] = EW[NW + 3], WW[PW + 4] = EW[NW + 4], WW[PW + 5] = EW[NW + 5], WW[PW + 6] = EW[NW + 6], WW[PW + 7] = EW[NW + 7], WW[PW + 8] = EW[NW + 8], WW[PW + 9] = EW[NW + 9], WW[PW + 10] = EW[NW + 10], WW[PW + 11] = EW[NW + 11], WW[PW + 12] = EW[NW + 12], WW[PW + 13] = EW[NW + 13], WW[PW + 14] = EW[NW + 14], WW[PW + 15] = EW[NW + 15]
+    function MR(RR, JR) {
+      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const tR = JR;
+      if (0 === yR && 16 === tR.length) return void RR.set(tR, GR);
+      const uR = yR,
+        ZR = GR;
+      RR[ZR + 0] = tR[uR + 0], RR[ZR + 1] = tR[uR + 1], RR[ZR + 2] = tR[uR + 2], RR[ZR + 3] = tR[uR + 3], RR[ZR + 4] = tR[uR + 4], RR[ZR + 5] = tR[uR + 5], RR[ZR + 6] = tR[uR + 6], RR[ZR + 7] = tR[uR + 7], RR[ZR + 8] = tR[uR + 8], RR[ZR + 9] = tR[uR + 9], RR[ZR + 10] = tR[uR + 10], RR[ZR + 11] = tR[uR + 11], RR[ZR + 12] = tR[uR + 12], RR[ZR + 13] = tR[uR + 13], RR[ZR + 14] = tR[uR + 14], RR[ZR + 15] = tR[uR + 15]
     }
 
-    function yW(WW, iW, OW, mW, EW) {
-      WW.fill(0);
-      const NW = function(WW, iW) {
-          const OW = wW(WW);
-          if (WW._vpVer === OW && WW._vpAspect === iW) return WW._vpCache;
-          const mW = WW._vpCache;
-          return function(WW, iW, OW, mW, EW, NW) {
-            const PW = OW[mW],
-              LW = OW[mW + 1],
-              cW = OW[mW + 2],
-              wW = OW[mW + 3],
-              tW = OW[mW + 4],
-              ZW = OW[mW + 5],
-              xW = OW[mW + 6],
-              lW = OW[mW + 7],
-              AW = OW[mW + 8],
-              bW = OW[mW + 9],
-              jW = OW[mW + 10],
-              UW = OW[mW + 11],
-              kW = OW[mW + 12],
-              sW = OW[mW + 13],
-              MW = OW[mW + 14],
-              KW = OW[mW + 15];
-            let SW = EW[NW],
-              YW = EW[NW + 1],
-              yW = EW[NW + 2],
-              TW = EW[NW + 3];
-            WW[iW] = PW * SW + tW * YW + AW * yW + kW * TW, WW[iW + 1] = LW * SW + ZW * YW + bW * yW + sW * TW, WW[iW + 2] = cW * SW + xW * YW + jW * yW + MW * TW, WW[iW + 3] = wW * SW + lW * YW + UW * yW + KW * TW, SW = EW[NW + 4], YW = EW[NW + 5], yW = EW[NW + 6], TW = EW[NW + 7], WW[iW + 4] = PW * SW + tW * YW + AW * yW + kW * TW, WW[iW + 5] = LW * SW + ZW * YW + bW * yW + sW * TW, WW[iW + 6] = cW * SW + xW * YW + jW * yW + MW * TW, WW[iW + 7] = wW * SW + lW * YW + UW * yW + KW * TW, SW = EW[NW + 8], YW = EW[NW + 9], yW = EW[NW + 10], TW = EW[NW + 11], WW[iW + 8] = PW * SW + tW * YW + AW * yW + kW * TW, WW[iW + 9] = LW * SW + ZW * YW + bW * yW + sW * TW, WW[iW + 10] = cW * SW + xW * YW + jW * yW + MW * TW, WW[iW + 11] = wW * SW + lW * YW + UW * yW + KW * TW, SW = EW[NW + 12], YW = EW[NW + 13], yW = EW[NW + 14], TW = EW[NW + 15], WW[iW + 12] = PW * SW + tW * YW + AW * yW + kW * TW, WW[iW + 13] = LW * SW + ZW * YW + bW * yW + sW * TW, WW[iW + 14] = cW * SW + xW * YW + jW * yW + MW * TW, WW[iW + 15] = wW * SW + lW * YW + UW * yW + KW * TW
-          }(mW, 0, tW(WW, iW), 0, LW(WW), 0), WW._vpVer = OW, WW._vpAspect = iW, mW
-        }(mW, EW),
-        PW = LW(mW),
-        cW = mW.worldMatrix;
-      YW(WW, NW, 0), YW(WW, PW, 16), iW.useFloatingOrigin ? (WW[32] = 0, WW[33] = 0, WW[34] = 0) : (WW[32] = cW[12], WW[33] = cW[13], WW[34] = cW[14]), WW[87] = iW.canvas.width;
-      const ZW = OW.imageProcessing;
-      WW[76] = ZW.exposure, WW[77] = ZW.contrast, WW[78] = OW._envTextures?.lodGenerationScale ?? .8, WW[79] = +ZW.toneMappingEnabled, WW[37] = iW.canvas.height
+    function BR(RR, JR, GR, yR, tR) {
+      RR.fill(0);
+      const uR = function(RR, JR) {
+          const GR = fR(RR);
+          if (RR._vpVer === GR && RR._vpAspect === JR) return RR._vpCache;
+          const yR = RR._vpCache;
+          return function(RR, JR, GR, yR, tR, uR) {
+            const ZR = GR[yR],
+              qR = GR[yR + 1],
+              iR = GR[yR + 2],
+              fR = GR[yR + 3],
+              VR = GR[yR + 4],
+              KR = GR[yR + 5],
+              wR = GR[yR + 6],
+              rR = GR[yR + 7],
+              eR = GR[yR + 8],
+              aR = GR[yR + 9],
+              LR = GR[yR + 10],
+              nR = GR[yR + 11],
+              UR = GR[yR + 12],
+              WR = GR[yR + 13],
+              AR = GR[yR + 14],
+              CR = GR[yR + 15];
+            let XR = tR[uR],
+              MR = tR[uR + 1],
+              BR = tR[uR + 2],
+              lR = tR[uR + 3];
+            RR[JR] = ZR * XR + VR * MR + eR * BR + UR * lR, RR[JR + 1] = qR * XR + KR * MR + aR * BR + WR * lR, RR[JR + 2] = iR * XR + wR * MR + LR * BR + AR * lR, RR[JR + 3] = fR * XR + rR * MR + nR * BR + CR * lR, XR = tR[uR + 4], MR = tR[uR + 5], BR = tR[uR + 6], lR = tR[uR + 7], RR[JR + 4] = ZR * XR + VR * MR + eR * BR + UR * lR, RR[JR + 5] = qR * XR + KR * MR + aR * BR + WR * lR, RR[JR + 6] = iR * XR + wR * MR + LR * BR + AR * lR, RR[JR + 7] = fR * XR + rR * MR + nR * BR + CR * lR, XR = tR[uR + 8], MR = tR[uR + 9], BR = tR[uR + 10], lR = tR[uR + 11], RR[JR + 8] = ZR * XR + VR * MR + eR * BR + UR * lR, RR[JR + 9] = qR * XR + KR * MR + aR * BR + WR * lR, RR[JR + 10] = iR * XR + wR * MR + LR * BR + AR * lR, RR[JR + 11] = fR * XR + rR * MR + nR * BR + CR * lR, XR = tR[uR + 12], MR = tR[uR + 13], BR = tR[uR + 14], lR = tR[uR + 15], RR[JR + 12] = ZR * XR + VR * MR + eR * BR + UR * lR, RR[JR + 13] = qR * XR + KR * MR + aR * BR + WR * lR, RR[JR + 14] = iR * XR + wR * MR + LR * BR + AR * lR, RR[JR + 15] = fR * XR + rR * MR + nR * BR + CR * lR
+          }(yR, 0, VR(RR, JR), 0, qR(RR), 0), RR._vpVer = GR, RR._vpAspect = JR, yR
+        }(yR, tR),
+        ZR = qR(yR),
+        iR = yR.worldMatrix;
+      MR(RR, uR, 0), MR(RR, ZR, 16), JR.useFloatingOrigin ? (RR[32] = 0, RR[33] = 0, RR[34] = 0) : (RR[32] = iR[12], RR[33] = iR[13], RR[34] = iR[14]), RR[87] = JR.canvas.width;
+      const KR = GR.imageProcessing;
+      RR[76] = KR.exposure, RR[77] = KR.contrast, RR[78] = GR._envTextures?.lodGenerationScale ?? .8, RR[79] = +KR.toneMappingEnabled, RR[37] = JR.canvas.height
     }
 
-    function TW(WW, iW) {
+    function lR(RR, JR) {
       return {
-        _renderables: WW,
+        _renderables: RR,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: iW
+        _lastVersion: JR
       }
     }
 
-    function JW(WW, iW, OW) {
-      WW.clr ??= !0;
-      const EW = WW.rt._descriptor,
-        NW = WW.depth?._descriptor,
-        cW = {
-          _colorFormat: EW.format,
-          _depthStencilFormat: NW?.dFormat ?? EW.dFormat,
-          _depthCompare: EW.depthCompare ?? NW?.depthCompare,
-          _sampleCount: EW.samples
+    function pR(RR, JR, GR) {
+      RR.clr ??= !0;
+      const tR = RR.rt._descriptor,
+        uR = RR.depth?._descriptor,
+        iR = {
+          _colorFormat: tR.format,
+          _depthStencilFormat: uR?.dFormat ?? tR.dFormat,
+          _depthCompare: tR.depthCompare ?? uR?.depthCompare,
+          _sampleCount: tR.samples
         },
-        tW = {
+        VR = {
           loadOp: "clear",
           storeOp: "store"
         },
-        ZW = {
-          ...TW([], -1),
-          name: WW.name,
-          _config: WW,
-          _ownsTargets: !WW.sharedRt,
-          engine: iW,
-          rb: OW,
+        KR = {
+          ...lR([], -1),
+          name: RR.name,
+          _config: RR,
+          _ownsTargets: !RR.sharedRt,
+          engine: JR,
+          tL: GR,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [tW]
+            colorAttachments: [VR]
           },
-          _colorAttachment: tW,
-          _sceneUBO: xW(iW, 368),
-          _suData: new PW.e(92),
+          _colorAttachment: VR,
+          _sceneUBO: wR(JR, 368),
+          _suData: new ZR.b(92),
           _sceneUboCacheKey: [],
-          _targetSignature: cW,
+          _targetSignature: iR,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (ZW._disposed) throw new Error("RenderTask has been disposed.");
-            ZW._recordExplicit ? ZW._recordExplicit(ZW, !0) : nW(ZW, !1 !== WW.autoMirror ? OW._renderables.slice() : ZW._renderables, !0)
+            if (KR._disposed) throw new Error("RenderTask has been disposed.");
+            KR._recordExplicit ? KR._recordExplicit(KR, !0) : vR(KR, !1 !== RR.autoMirror ? GR._renderables.slice() : KR._renderables, !0)
           },
-          execute: () => function(WW, iW, OW) {
-            if (!1 === WW.enabled) return 0;
-            const mW = WW.rb;
-            ! function(WW, iW, OW) {
-              const mW = WW.rb;
-              !1 !== WW._config.autoMirror && WW._lastVersion !== mW._renderableVersion && nW(WW, mW._renderables.slice());
-              oW(WW, iW);
-              const EW = WW._updateContext,
-                NW = WW._config.cam ?? mW.camera;
-              OW._colorFormat && (WW._config._skipClusteredLights || mW._clusteredLightUpdater?.(NW, EW.targetWidth, EW.targetHeight), function(WW, iW) {
-                const OW = SW(WW, iW),
-                  mW = MW(iW.lights) + (WW._lightFoVersion?.(iW) ?? 0),
-                  EW = iW._lightListVersion ?? 0;
-                mW === OW.zC && EW === OW._listVersion && iW.lights.length === OW._lightCount || (OW.zC = mW, OW._listVersion = EW, OW._lightCount = iW.lights.length, KW(OW._scratch, iW.lights), WW._applyLightFoOffset?.(OW._scratch, iW), WW._device.queue.writeBuffer(OW._buffer, 0, OW._scratch)), OW._buffer
-              }(iW, mW));
-              (function(WW, iW, OW, mW) {
-                if (!mW) return;
-                const EW = mW.viewport,
-                  NW = WW._config.rt,
-                  PW = (WW._config.cs ? iW.canvas.width / iW.canvas.height : NW._width / NW._height) * (EW ? EW.width / EW.height : 1),
-                  LW = OW.fog,
-                  cW = OW.imageProcessing,
-                  tW = wW(mW),
-                  ZW = OW._envTextures,
-                  xW = WW._sceneUboCacheKey;
-                if (xW[0] === mW && xW[1] === LW && xW[2] === tW && xW[3] === PW && xW[4] === cW.exposure && xW[5] === cW.contrast && xW[6] === ZW) return;
-                xW[0] = mW, xW[1] = LW, xW[2] = tW, xW[3] = PW, xW[4] = cW.exposure, xW[5] = cW.contrast, xW[6] = ZW;
-                const lW = WW._suData;
-                yW(lW, iW, OW, mW, PW);
-                const AW = OW._sceneUboContributors;
-                if (AW)
-                  for (const wW of AW) wW(lW, OW);
-                iW._device.queue.writeBuffer(WW._sceneUBO, 0, lW)
-              })(WW, iW, mW, NW), EW.W9 = NW, WW._batchState?._reset(), dW(WW._opaqueBindings, EW), dW(WW._directBindings, EW), dW(WW._transparentBindings, EW), WW._batchState?._flush(iW),
-                function(WW, iW) {
-                  const OW = WW._transparentBindings;
-                  if (OW.length <= 1 || !iW) return;
-                  const mW = LW(iW);
-                  for (const EW of OW) {
-                    const WW = EW.renderable._worldCenter;
-                    EW._sortDistance = WW ? WW[0] * mW[2] + WW[1] * mW[6] + WW[2] * mW[10] + mW[14] : 0
+          execute: () => function(RR, JR, GR) {
+            if (!1 === RR.enabled) return 0;
+            const yR = RR.tL;
+            ! function(RR, JR, GR) {
+              const yR = RR.tL;
+              !1 !== RR._config.autoMirror && RR._lastVersion !== yR._renderableVersion && vR(RR, yR._renderables.slice());
+              xR(RR, JR);
+              const tR = RR._updateContext,
+                uR = RR._config.cam ?? yR.camera;
+              GR._colorFormat && (RR._config._skipClusteredLights || yR._clusteredLightUpdater?.(uR, tR.targetWidth, tR.targetHeight), function(RR, JR) {
+                const GR = XR(RR, JR),
+                  yR = AR(JR.lights) + (RR._lightFoVersion?.(JR) ?? 0),
+                  tR = JR._lightListVersion ?? 0;
+                yR === GR.FY && tR === GR._listVersion && JR.lights.length === GR._lightCount || (GR.FY = yR, GR._listVersion = tR, GR._lightCount = JR.lights.length, CR(GR._scratch, JR.lights), RR._applyLightFoOffset?.(GR._scratch, JR), RR._device.queue.writeBuffer(GR._buffer, 0, GR._scratch)), GR._buffer
+              }(JR, yR));
+              (function(RR, JR, GR, yR) {
+                if (!yR) return;
+                const tR = yR.viewport,
+                  uR = RR._config.rt,
+                  ZR = (RR._config.cs ? JR.canvas.width / JR.canvas.height : uR._width / uR._height) * (tR ? tR.width / tR.height : 1),
+                  qR = GR.fog,
+                  iR = GR.imageProcessing,
+                  VR = fR(yR),
+                  KR = GR._envTextures,
+                  wR = RR._sceneUboCacheKey;
+                if (wR[0] === yR && wR[1] === qR && wR[2] === VR && wR[3] === ZR && wR[4] === iR.exposure && wR[5] === iR.contrast && wR[6] === KR) return;
+                wR[0] = yR, wR[1] = qR, wR[2] = VR, wR[3] = ZR, wR[4] = iR.exposure, wR[5] = iR.contrast, wR[6] = KR;
+                const rR = RR._suData;
+                BR(rR, JR, GR, yR, ZR);
+                const eR = GR._sceneUboContributors;
+                if (eR)
+                  for (const fR of eR) fR(rR, GR);
+                JR._device.queue.writeBuffer(RR._sceneUBO, 0, rR)
+              })(RR, JR, yR, uR), tR.Z5 = uR, RR._batchState?._reset(), NR(RR._opaqueBindings, tR), NR(RR._directBindings, tR), NR(RR._transparentBindings, tR), RR._batchState?._flush(JR),
+                function(RR, JR) {
+                  const GR = RR._transparentBindings;
+                  if (GR.length <= 1 || !JR) return;
+                  const yR = qR(JR);
+                  for (const tR of GR) {
+                    const RR = tR.renderable._worldCenter;
+                    tR._sortDistance = RR ? RR[0] * yR[2] + RR[1] * yR[6] + RR[2] * yR[10] + yR[14] : 0
                   }
-                  OW.sort(hW)
-                }(WW, NW)
-            }(WW, iW, OW);
-            const EW = WW._colorAttachment,
-              NW = WW._config;
-            NW.rt._colorView && (NW.rt === mW.surface.scRT && (EW.view = NW.rt._colorView), EW.resolveTarget = NW.rst?._colorView ?? void 0, EW.clearValue = NW.clrColor ?? mW.clearColor, EW.loadOp = NW.clr ? "clear" : "load");
-            if (WW._executeWithTransmission) return WW._executeWithTransmission(OW._sampleCount);
-            const PW = iW._currentEncoder.beginRenderPass(WW._renderPassDescriptor),
-              cW = uW(WW, PW);
-            return PW.end(), cW
-          }(ZW, iW, cW),
+                  GR.sort(gR)
+                }(RR, uR)
+            }(RR, JR, GR);
+            const tR = RR._colorAttachment,
+              uR = RR._config;
+            uR.rt._colorView && (uR.rt === yR.surface.scRT && (tR.view = uR.rt._colorView), tR.resolveTarget = uR.rst?._colorView ?? void 0, tR.clearValue = uR.clrColor ?? yR.clearColor, tR.loadOp = uR.clr ? "clear" : "load");
+            if (RR._executeWithTransmission) return RR._executeWithTransmission(GR._sampleCount);
+            const ZR = JR._currentEncoder.beginRenderPass(RR._renderPassDescriptor),
+              iR = OR(RR, ZR);
+            return ZR.end(), iR
+          }(KR, JR, iR),
           dispose() {
-            if (ZW._disposed) return;
-            ZW._disposed = !0;
-            const iW = ZW._pendingMeshes;
-            iW && (iW.length = 0);
-            for (const WW of ZW._renderables) ZW._retireRenderable?.(ZW.engine, WW);
-            ZW._passes.length = ZW._opaqueBindings.length = ZW._directBindings.length = 0, ZW._transparentBindings.length = ZW._renderables.length = ZW._ob.length = 0, ZW._ownsTargets && ((0, mW.h)(WW.rt), (0, mW.h)(WW.rst)), WW.depth?._eager || (0, mW.h)(WW.depth);
-            const OW = ZW._sceneUBO;
-            (0, lW.g)(ZW.engine, (() => OW.destroy())), ZW._batchState?._release(ZW.engine), ZW._batchState = void 0
+            if (KR._disposed) return;
+            KR._disposed = !0;
+            const JR = KR._pendingMeshes;
+            JR && (JR.length = 0);
+            for (const RR of KR._renderables) KR._retireRenderable?.(KR.engine, RR);
+            KR._passes.length = KR._opaqueBindings.length = KR._directBindings.length = 0, KR._transparentBindings.length = KR._renderables.length = KR._ob.length = 0, KR._ownsTargets && ((0, yR.k)(RR.rt), (0, yR.k)(RR.rst)), RR.depth?._eager || (0, yR.k)(RR.depth);
+            const GR = KR._sceneUBO;
+            (0, rR.e)(KR.engine, (() => GR.destroy())), KR._batchState?._release(KR.engine), KR._batchState = void 0
           }
         };
-      return ZW
+      return KR
     }
 
-    function hW(WW, iW) {
-      return iW._sortDistance - WW._sortDistance || WW.renderable.order - iW.renderable.order
+    function gR(RR, JR) {
+      return JR._sortDistance - RR._sortDistance || RR.renderable.order - JR.renderable.order
     }
 
-    function HW(WW, iW) {
-      return WW.renderable.order - iW.renderable.order
+    function bR(RR, JR) {
+      return RR.renderable.order - JR.renderable.order
     }
 
-    function nW(WW) {
-      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW._renderables,
-        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        EW = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        NW = arguments.length > 4 ? arguments[4] : void 0;
-      const PW = WW._config,
-        LW = PW.rt,
-        cW = WW._batchState,
-        wW = TW(iW, WW.rb._renderableVersion);
-      if (OW) {
-        const iW = (iW, OW) => {
-          iW && (OW || WW._ownsTargets || iW._eager) && (0, mW.f)(iW, WW.engine)
+    function vR(RR) {
+      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR._renderables,
+        GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        tR = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        uR = arguments.length > 4 ? arguments[4] : void 0;
+      const ZR = RR._config,
+        qR = ZR.rt,
+        iR = RR._batchState,
+        fR = lR(JR, RR.tL._renderableVersion);
+      if (GR) {
+        const JR = (JR, GR) => {
+          JR && (GR || RR._ownsTargets || JR._eager) && (0, yR.h)(JR, RR.engine)
         };
-        iW(LW), LW._descriptor.samples > 1 && iW(PW.rst), iW(PW.depth, !0)
+        JR(qR), qR._descriptor.samples > 1 && JR(ZR.rst), JR(ZR.depth, !0)
       }
       const {
-        _opaqueBindings: tW,
-        _directBindings: ZW,
-        _transparentBindings: xW
-      } = wW;
+        _opaqueBindings: VR,
+        _directBindings: KR,
+        _transparentBindings: wR
+      } = fR;
       try {
-        for (const OW of iW) {
-          const iW = OW.bind(WW.engine, WW._targetSignature);
-          wW._batchState = WW._targetSignature._collectBatches?.(wW._batchState, iW), OW.isTransparent || OW._transmissive ? xW.push(iW) : OW._direct ? ZW.push(iW) : tW.push(iW)
+        for (const GR of JR) {
+          const JR = GR.bind(RR.engine, RR._targetSignature);
+          fR._batchState = RR._targetSignature._collectBatches?.(fR._batchState, JR), GR.isTransparent || GR._transmissive ? wR.push(JR) : GR._direct ? KR.push(JR) : VR.push(JR)
         }
-        tW.sort(HW), ZW.sort(HW), OW && oW(WW, WW.engine, !1)
-      } catch (lW) {
-        throw wW._batchState?._release(void 0, NW ?? [cW]), lW
+        VR.sort(bR), KR.sort(bR), GR && xR(RR, RR.engine, !1)
+      } catch (rR) {
+        throw fR._batchState?._release(void 0, uR ?? [iR]), rR
       }
-      return OW && (! function(WW, iW) {
-        const OW = WW._config,
-          mW = WW._colorAttachment;
-        mW.view = iW._colorView, WW._renderPassDescriptor.colorAttachments = iW._colorView ? [mW] : [];
-        const EW = OW.depth ?? iW,
-          NW = EW._depthView;
-        let PW;
-        if (NW) {
-          const WW = EW._descriptor,
-            iW = (OW.depth ? EW._eager : !1 === OW.depthClear) ? "load" : "clear";
-          PW = {
-            view: NW,
-            depthClearValue: WW.depthClearValue ?? 0,
-            depthLoadOp: iW,
+      return GR && (! function(RR, JR) {
+        const GR = RR._config,
+          yR = RR._colorAttachment;
+        yR.view = JR._colorView, RR._renderPassDescriptor.colorAttachments = JR._colorView ? [yR] : [];
+        const tR = GR.depth ?? JR,
+          uR = tR._depthView;
+        let ZR;
+        if (uR) {
+          const RR = tR._descriptor,
+            JR = (GR.depth ? tR._eager : !1 === GR.depthClear) ? "load" : "clear";
+          ZR = {
+            view: uR,
+            depthClearValue: RR.depthClearValue ?? 0,
+            depthLoadOp: JR,
             depthStoreOp: "store"
-          }, WW.dFormat?.includes("stencil") && (PW.stencilClearValue = 0, PW.stencilLoadOp = iW, PW.stencilStoreOp = "store")
+          }, RR.dFormat?.includes("stencil") && (ZR.stencilClearValue = 0, ZR.stencilLoadOp = JR, ZR.stencilStoreOp = "store")
         }
-        WW._renderPassDescriptor.depthStencilAttachment = PW
-      }(WW, LW), WW._updateContext.targetWidth = LW._width, WW._updateContext.targetHeight = LW._height), EW && (Object.assign(WW, wW), cW?._release(WW.engine, [wW._batchState])), wW
+        RR._renderPassDescriptor.depthStencilAttachment = ZR
+      }(RR, qR), RR._updateContext.targetWidth = qR._width, RR._updateContext.targetHeight = qR._height), tR && (Object.assign(RR, fR), iR?._release(RR.engine, [fR._batchState])), fR
     }
 
-    function uW(WW, iW) {
-      const OW = WW.engine,
-        mW = WW._config,
-        NW = mW.rt,
-        PW = WW.rb,
-        LW = WW._opaqueBindings,
-        cW = WW._ob,
-        wW = WW._sceneBG;
-      if (function(WW, iW, OW, mW) {
-          const EW = iW?.viewport;
-          if (!EW) return;
-          const NW = Math.floor(EW.x * OW),
-            PW = Math.floor((1 - EW.y - EW.height) * mW),
-            LW = Math.ceil((EW.x + EW.width) * OW) - NW,
-            cW = Math.ceil((1 - EW.y) * mW) - PW;
-          WW.setViewport(NW, PW, LW, cW, 0, 1), WW.setScissorRect(NW, PW, LW, cW)
-        }(iW, mW.cam ?? PW.camera, NW._width, NW._height), iW.setBindGroup(0, wW), WW._lastVis !== EW.c || !cW.length) {
-        const iW = NW._descriptor,
-          mW = OW._device.createRenderBundleEncoder({
-            colorFormats: iW.format ? [iW.format] : [],
-            depthStencilFormat: WW._targetSignature._depthStencilFormat,
-            sampleCount: iW.samples
+    function OR(RR, JR) {
+      const GR = RR.engine,
+        yR = RR._config,
+        uR = yR.rt,
+        ZR = RR.tL,
+        qR = RR._opaqueBindings,
+        iR = RR._ob,
+        fR = RR._sceneBG;
+      if (function(RR, JR, GR, yR) {
+          const tR = JR?.viewport;
+          if (!tR) return;
+          const uR = Math.floor(tR.x * GR),
+            ZR = Math.floor((1 - tR.y - tR.height) * yR),
+            qR = Math.ceil((tR.x + tR.width) * GR) - uR,
+            iR = Math.ceil((1 - tR.y) * yR) - ZR;
+          RR.setViewport(uR, ZR, qR, iR, 0, 1), RR.setScissorRect(uR, ZR, qR, iR)
+        }(JR, yR.cam ?? ZR.camera, uR._width, uR._height), JR.setBindGroup(0, fR), RR._lastVis !== tR.d || !iR.length) {
+        const JR = uR._descriptor,
+          yR = GR._device.createRenderBundleEncoder({
+            colorFormats: JR.format ? [JR.format] : [],
+            depthStencilFormat: RR._targetSignature._depthStencilFormat,
+            sampleCount: JR.samples
           });
-        mW.setBindGroup(0, wW), eW(mW, LW, OW), cW[0] = mW.finish(), WW._lastVis = EW.c
+        yR.setBindGroup(0, fR), DR(yR, qR, GR), iR[0] = yR.finish(), RR._lastVis = tR.d
       }
-      let tW = LW.length;
-      return iW.executeBundles(cW), iW.setBindGroup(0, wW), tW += eW(iW, WW._directBindings, OW), tW += eW(iW, WW._transparentBindings, OW), tW
+      let VR = qR.length;
+      return JR.executeBundles(iR), JR.setBindGroup(0, fR), VR += DR(JR, RR._directBindings, GR), VR += DR(JR, RR._transparentBindings, GR), VR
     }
 
-    function oW(WW, iW) {
-      let OW = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const mW = SW(iW, WW.rb)._buffer;
-      if (mW === WW._lightsUBO) return;
-      const EW = iW._device.createBindGroup({
-        layout: bW(iW),
+    function xR(RR, JR) {
+      let GR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const yR = XR(JR, RR.tL)._buffer;
+      if (yR === RR._lightsUBO) return;
+      const tR = JR._device.createBindGroup({
+        layout: aR(JR),
         entries: [{
           binding: 0,
           resource: {
-            buffer: WW._sceneUBO
+            buffer: RR._sceneUBO
           }
         }, {
           binding: 1,
           resource: {
-            buffer: mW
+            buffer: yR
           }
         }]
       });
-      WW._lightsUBO = mW, WW._sceneBG = EW, OW && (WW._ob = [])
+      RR._lightsUBO = yR, RR._sceneBG = tR, GR && (RR._ob = [])
     }
 
-    function dW(WW, iW) {
-      for (const OW of WW) OW.update?.(iW)
+    function NR(RR, JR) {
+      for (const GR of RR) GR.update?.(JR)
     }
 
-    function eW(WW, iW, OW) {
-      let mW = null,
-        EW = 0;
-      for (const NW of iW) {
-        const iW = NW.renderable.mesh;
-        iW && !1 === iW.visible || (NW.pipeline !== mW && (WW.setPipeline(NW.pipeline), mW = NW.pipeline), EW += NW.draw(WW, OW))
+    function DR(RR, JR, GR) {
+      let yR = null,
+        tR = 0;
+      for (const uR of JR) {
+        const JR = uR.renderable.mesh;
+        JR && !1 === JR.visible || (uR.pipeline !== yR && (RR.setPipeline(uR.pipeline), yR = uR.pipeline), tR += uR.draw(RR, GR))
       }
-      return EW
+      return tR
     }
 
-    function vW(WW) {
-      const iW = WW._materialSwapQueue;
-      if (!iW[0] || WW._runtimeBuilds?.w) return;
-      let mW, EW, NW;
-      const PW = WW._renderables;
-      for (const OW of iW) {
-        const iW = OW.material;
-        if (!iW) continue;
-        const LW = OW._runtimeThinBuild;
-        if (LW) {
-          EW = LW(WW, OW, EW);
+    function HR(RR) {
+      const JR = RR._materialSwapQueue;
+      if (!JR[0] || RR._runtimeBuilds?.w) return;
+      let yR, tR, uR;
+      const ZR = RR._renderables;
+      for (const GR of JR) {
+        const JR = GR.material;
+        if (!JR) continue;
+        const qR = GR._runtimeThinBuild;
+        if (qR) {
+          tR = qR(RR, GR, tR);
           continue
         }
-        const cW = WW._groups.get(iW._buildGroup),
-          wW = cW?.r;
-        if (!wW) {
-          (NW ??= []).push(OW);
+        const iR = RR._groups.get(JR._buildGroup),
+          fR = iR?.r;
+        if (!fR) {
+          (uR ??= []).push(GR);
           continue
         }
-        if (cW._w?.(OW)) {
-          (NW ??= []).push([OW, iW]);
+        if (iR._w?.(GR)) {
+          (uR ??= []).push([GR, JR]);
           continue
         }
-        const tW = WW._meshDisposables.get(OW);
-        tW && (WW._meshDisposables.delete(OW), (0, lW.g)(WW.surface.engine, (() => tW.forEach((WW => WW())))));
-        const ZW = cW.o;
-        let xW;
-        for (let WW = PW.length; WW--;) PW[WW].mesh === OW && (xW = PW.splice(WW, 1)[0]);
-        iW._csmGen = -~iW._csmGen;
-        const AW = wW(WW, OW);
-        if (ZW) {
-          const WW = ZW.indexOf(xW);
-          WW < 0 ? ZW.push(AW) : ZW[WW] = AW
+        const VR = RR._meshDisposables.get(GR);
+        VR && (RR._meshDisposables.delete(GR), (0, rR.e)(RR.surface.engine, (() => VR.forEach((RR => RR())))));
+        const KR = iR.o;
+        let wR;
+        for (let RR = ZR.length; RR--;) ZR[RR].mesh === GR && (wR = ZR.splice(RR, 1)[0]);
+        JR._csmGen = -~JR._csmGen;
+        const eR = fR(RR, GR);
+        if (KR) {
+          const RR = KR.indexOf(wR);
+          RR < 0 ? KR.push(eR) : KR[RR] = eR
         }
-        mW = PW.push(AW)
+        yR = ZR.push(eR)
       }
-      if (mW && (PW.sort(((WW, iW) => WW.order - iW.order)), WW._renderableVersion++, WW._materialEpoch++), iW.length = 0, !NW) return EW;
-      const LW = NW;
-      return OW.e(680).then((() => OW(64503))).then((iW => {
+      if (yR && (ZR.sort(((RR, JR) => RR.order - JR.order)), RR._renderableVersion++, RR._materialEpoch++), JR.length = 0, !uR) return tR;
+      const qR = uR;
+      return GR.e(680).then((() => GR(64244))).then((JR => {
         let {
-          C: OW
-        } = iW;
-        return OW(WW, LW, EW)
-      }), (iW => {
-        const OW = WW._runtimeBuilds;
-        OW ? OW._x(iW) : console.error(iW)
+          C: GR
+        } = JR;
+        return GR(RR, qR, tR)
+      }), (JR => {
+        const GR = RR._runtimeBuilds;
+        GR ? GR._x(JR) : console.error(JR)
       }))
     }
-    var gW = null;
+    var oR = null;
 
-    function DW(WW, iW) {
-      const OW = WW.engine,
-        EW = {
-          _kind: "rb",
-          surface: WW,
+    function cR(RR, JR) {
+      const GR = RR.engine,
+        tR = {
+          _kind: "tL",
+          surface: RR,
           clearColor: {
             r: .2,
             g: .2,
@@ -933,365 +933,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            OW.useFloatingOrigin && EW.camera && !EW.camera._useFloatingOrigin && (EW.camera._useFloatingOrigin = !0, EW.camera._viewVer = -1, EW.camera._vpVer = -1);
-            const WW = EW.fixedDeltaMs > 0 ? EW.fixedDeltaMs : OW._currentDelta,
-              iW = OW._currentEncoder;
-            let mW = 0;
-            for (const OW of EW._beforeRender) OW(WW);
-            EW._materialSwapQueue.length && vW(EW);
-            for (const NW of EW._prePasses) mW += NW.execute(iW, OW);
-            for (const NW of EW._uniformUpdaters) NW.update(OW);
-            EW._drawCallsPre = mW
+            GR.useFloatingOrigin && tR.camera && !tR.camera._useFloatingOrigin && (tR.camera._useFloatingOrigin = !0, tR.camera._viewVer = -1, tR.camera._vpVer = -1);
+            const RR = tR.fixedDeltaMs > 0 ? tR.fixedDeltaMs : GR._currentDelta,
+              JR = GR._currentEncoder;
+            let yR = 0;
+            for (const GR of tR._beforeRender) GR(RR);
+            tR._materialSwapQueue.length && HR(tR);
+            for (const uR of tR._prePasses) yR += uR.execute(JR, GR);
+            for (const uR of tR._uniformUpdaters) uR.update(GR);
+            tR._drawCallsPre = yR
           },
-          _record: () => EW._frameGraph.execute(),
+          _record: () => tR._frameGraph.execute(),
           _resize() {
-            EW._frameGraph.build()
+            tR._frameGraph.build()
           }
         },
-        PW = function() {
-          const WW = {
+        ZR = function() {
+          const RR = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let iW = 0; iW < WW._tasks.length; iW++) NW(WW, WW._tasks[iW]);
-              for (const iW of WW._tasks)
-                for (const WW of iW._passes) WW._initialize()
+              for (let JR = 0; JR < RR._tasks.length; JR++) uR(RR, RR._tasks[JR]);
+              for (const JR of RR._tasks)
+                for (const RR of JR._passes) RR._initialize()
             },
             execute() {
-              let iW = 0;
-              for (const OW of WW._tasks)
-                if (!1 !== OW.executionEnabled)
-                  if (OW.execute) iW += OW.execute();
+              let JR = 0;
+              for (const GR of RR._tasks)
+                if (!1 !== GR.executionEnabled)
+                  if (GR.execute) JR += GR.execute();
                   else
-                    for (const WW of OW._passes) iW += WW._execute();
-              return iW
+                    for (const RR of GR._passes) JR += RR._execute();
+              return JR
             },
             dispose() {
-              for (const iW of WW._tasks) iW.dispose();
-              WW._tasks.length = 0, WW._currentProcessedTask = null
+              for (const JR of RR._tasks) JR.dispose();
+              RR._tasks.length = 0, RR._currentProcessedTask = null
             }
           };
-          return WW
+          return RR
         }();
-      if (EW._frameGraph = PW, !1 !== iW?.defaultRenderTask) {
-        const iW = WW.msaaSamples > 1,
-          NW = iW ? (0, mW.c)({
+      if (tR._frameGraph = ZR, !1 !== JR?.defaultRenderTask) {
+        const JR = RR.msaaSamples > 1,
+          uR = JR ? (0, yR.e)({
             lbl: "scene-color",
-            format: WW.format,
+            format: RR.format,
             dFormat: "depth24plus-stencil8",
-            samples: WW.msaaSamples,
-            size: WW
-          }) : WW.scRT,
-          LW = iW ? void 0 : (0, mW.c)({
+            samples: RR.msaaSamples,
+            size: RR
+          }) : RR.scRT,
+          qR = JR ? void 0 : (0, yR.e)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
-            size: WW
+            size: RR
           });
-        ! function(WW, iW) {
-          WW._tasks.push(iW)
-        }(PW, JW({
-          name: "rb",
-          rt: NW,
-          rst: iW ? WW.scRT : void 0,
-          depth: LW
-        }, OW, EW))
+        ! function(RR, JR) {
+          RR._tasks.push(JR)
+        }(ZR, pR({
+          name: "tL",
+          rt: uR,
+          rst: JR ? RR.scRT : void 0,
+          depth: qR
+        }, GR, tR))
       }
-      return EW._disposables.push((() => PW.dispose())), EW
+      return tR._disposables.push((() => ZR.dispose())), tR
     }
-    async function VW(WW) {
-      const iW = WW;
-      for (iW._built || (iW._materialSwapQueue.length = 0); iW._deferredBuilders.length;) {
-        const WW = iW._deferredBuilders.splice(0);
-        await Promise.all(WW.map((WW => WW())))
+    async function PR(RR) {
+      const JR = RR;
+      for (JR._built || (JR._materialSwapQueue.length = 0); JR._deferredBuilders.length;) {
+        const RR = JR._deferredBuilders.splice(0);
+        await Promise.all(RR.map((RR => RR())))
       }
-      await vW(iW), gW?.get(iW)?.() || (iW._runtimeBuilds?._e(), iW._renderableVersion++, iW._built = !0), await (iW._rebuildHook?.(iW))
+      await HR(JR), oR?.get(JR)?.() || (JR._runtimeBuilds?._e(), JR._renderableVersion++, JR._built = !0), await (JR._rebuildHook?.(JR))
     }
-    var pW = null;
-    async function fW(WW) {
-      const iW = WW,
-        mW = iW.surface;
-      (0, EW.i)(mW, iW) || (await VW(WW), iW._renderables.sort(CW), await Promise.all(iW._frameGraph._tasks.map((WW => WW._preload?.()))), pW && await pW(iW), iW._frameGraph.build(), mW._renderingContexts[0] && (await OW.e(678).then((() => OW(64490)))).configureSwapchainOverlayScene(mW, iW), gW?.get(iW)?.() || (0, EW.l)(mW, iW))
+    var IR = null;
+    async function mR(RR) {
+      const JR = RR,
+        yR = JR.surface;
+      (0, tR.l)(yR, JR) || (await PR(RR), JR._renderables.sort(zR), await Promise.all(JR._frameGraph._tasks.map((RR => RR._preload?.()))), IR && await IR(JR), JR._frameGraph.build(), yR._renderingContexts[0] && (await GR.e(678).then((() => GR(64230)))).configureSwapchainOverlayScene(yR, JR), oR?.get(JR)?.() || (0, tR.n)(yR, JR))
     }
-    var CW = (WW, iW) => WW.order - iW.order
+    var zR = (RR, JR) => RR.order - JR.order
   },
-  53862: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => wW,
-      f: () => tW
+  53707: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR,
+      g: () => VR
     });
-    var mW = OW(53822),
-      EW = OW(53828),
-      NW = OW(53833),
-      PW = OW(53836),
-      LW = OW(53845),
-      cW = OW(53853);
+    var yR = GR(53654),
+      tR = GR(53658),
+      uR = GR(53664),
+      ZR = GR(53670),
+      qR = GR(53672),
+      iR = GR(53680);
 
-    function wW(WW, iW, OW) {
-      let LW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (iW < 1 || OW < 1) && (0, mW.c)(676, iW, OW);
-      const wW = WW._device,
-        tW = LW.mipMaps ?? !1,
-        ZW = LW.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        xW = tW ? (0, cW.d)(iW, OW) : 1,
-        lW = wW.createTexture({
+    function fR(RR, JR, GR) {
+      let qR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (JR < 1 || GR < 1) && (0, yR.c)(676, JR, GR);
+      const fR = RR._device,
+        VR = qR.mipMaps ?? !1,
+        KR = qR.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        wR = VR ? (0, iR.e)(JR, GR) : 1,
+        rR = fR.createTexture({
           size: {
-            width: iW,
-            height: OW
+            width: JR,
+            height: GR
           },
-          format: ZW,
-          mipLevelCount: xW,
-          usage: EW.h.TEXTURE_BINDING | EW.h.COPY_DST | EW.h.RENDER_ATTACHMENT
+          format: KR,
+          mipLevelCount: wR,
+          usage: tR.j.TEXTURE_BINDING | tR.j.COPY_DST | tR.j.RENDER_ATTACHMENT
         }),
-        AW = {
-          addressModeU: LW.addressModeU ?? "clamp-to-edge",
-          addressModeV: LW.addressModeV ?? "clamp-to-edge",
-          minFilter: LW.minFilter ?? "linear",
-          magFilter: LW.magFilter ?? "linear",
-          mipmapFilter: tW ? "linear" : "nearest"
+        eR = {
+          addressModeU: qR.addressModeU ?? "clamp-to-edge",
+          addressModeV: qR.addressModeV ?? "clamp-to-edge",
+          minFilter: qR.minFilter ?? "linear",
+          magFilter: qR.magFilter ?? "linear",
+          mipmapFilter: VR ? "linear" : "nearest"
         },
-        bW = (0, PW.b)(WW, AW),
-        jW = {
-          texture: lW,
-          view: lW.createView(),
-          sampler: bW,
-          width: iW,
-          height: OW
+        aR = (0, ZR.b)(RR, eR),
+        LR = {
+          texture: rR,
+          view: rR.createView(),
+          sampler: aR,
+          width: JR,
+          height: GR
         };
-      return (0, NW.e)(jW), WW._dlr && WW._dlr.t(jW, {
+      return (0, uR.d)(LR), RR._dlr && RR._dlr.t(LR, {
         kind: "dynamic",
-        width: iW,
-        height: OW,
-        format: ZW,
-        levels: xW,
-        samplerDesc: AW,
+        width: JR,
+        height: GR,
+        format: KR,
+        levels: wR,
+        samplerDesc: eR,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), jW
+      }), LR
     }
 
-    function tW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const EW = mW.invertY ?? !0,
-        NW = mW.premultiplyAlpha ?? !1;
-      WW._device.queue.copyExternalImageToTexture({
-        source: OW,
-        flipY: EW
+    function VR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const tR = yR.invertY ?? !0,
+        uR = yR.premultiplyAlpha ?? !1;
+      RR._device.queue.copyExternalImageToTexture({
+        source: GR,
+        flipY: tR
       }, {
-        texture: iW.texture,
-        premultipliedAlpha: NW
-      }, [iW.width, iW.height]);
-      const PW = iW._recoverySource;
-      PW && "dynamic" === PW.kind && (PW.source = OW, PW.flipY = EW, PW.premultipliedAlpha = NW), iW.texture.mipLevelCount > 1 && (0, LW.generateMipmaps)(WW, iW.texture)
+        texture: JR.texture,
+        premultipliedAlpha: uR
+      }, [JR.width, JR.height]);
+      const ZR = JR._recoverySource;
+      ZR && "dynamic" === ZR.kind && (ZR.source = GR, ZR.flipY = tR, ZR.premultipliedAlpha = uR), JR.texture.mipLevelCount > 1 && (0, qR.generateMipmaps)(RR, JR.texture)
     }
   },
-  53859: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => cW
+  53698: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => iR
     });
-    var mW = OW(53822),
-      EW = OW(53828),
-      NW = OW(53833),
-      PW = OW(53836),
-      LW = OW(53853);
-    async function cW(WW, iW) {
-      let cW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [wW, tW] = function(WW) {
-        const iW = WW,
-          OW = [
-            [iW.displayWidth, iW.displayHeight],
-            [iW.videoWidth, iW.videoHeight],
-            [iW.naturalWidth, iW.naturalHeight],
-            [iW.width, iW.height]
+    var yR = GR(53654),
+      tR = GR(53658),
+      uR = GR(53664),
+      ZR = GR(53670),
+      qR = GR(53680);
+    async function iR(RR, JR) {
+      let iR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [fR, VR] = function(RR) {
+        const JR = RR,
+          GR = [
+            [JR.displayWidth, JR.displayHeight],
+            [JR.videoWidth, JR.videoHeight],
+            [JR.naturalWidth, JR.naturalHeight],
+            [JR.width, JR.height]
           ];
-        for (const [mW, EW] of OW)
-          if (void 0 !== mW && void 0 !== EW && Number.isInteger(mW) && Number.isInteger(EW) && mW > 0 && EW > 0) return [mW, EW];
+        for (const [yR, tR] of GR)
+          if (void 0 !== yR && void 0 !== tR && Number.isInteger(yR) && Number.isInteger(tR) && yR > 0 && tR > 0) return [yR, tR];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(iW), [ZW, xW] = function(WW, iW, OW) {
-        if (void 0 === OW) return [WW, iW];
-        if (!Number.isInteger(OW) || OW < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${OW})`);
-        if (Math.max(WW, iW) <= OW) return [WW, iW];
-        const mW = OW / Math.max(WW, iW);
-        return WW >= iW ? [OW, Math.max(1, Math.round(iW * mW))] : [Math.max(1, Math.round(WW * mW)), OW]
-      }(wW, tW, cW.maxDimension), lW = cW.mipMaps ?? !0, AW = cW.premultiplyAlpha ?? !1;
-      let bW = iW,
-        jW = null;
-      const UW = {
+      }(JR), [KR, wR] = function(RR, JR, GR) {
+        if (void 0 === GR) return [RR, JR];
+        if (!Number.isInteger(GR) || GR < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${GR})`);
+        if (Math.max(RR, JR) <= GR) return [RR, JR];
+        const yR = GR / Math.max(RR, JR);
+        return RR >= JR ? [GR, Math.max(1, Math.round(JR * yR))] : [Math.max(1, Math.round(RR * yR)), GR]
+      }(fR, VR, iR.maxDimension), rR = iR.mipMaps ?? !0, eR = iR.premultiplyAlpha ?? !1;
+      let aR = JR,
+        LR = null;
+      const nR = {
         texture: null
       };
       try {
-        ZW === wW && xW === tW || (jW = await createImageBitmap(iW, {
-          resizeWidth: ZW,
-          resizeHeight: xW,
+        KR === fR && wR === VR || (LR = await createImageBitmap(JR, {
+          resizeWidth: KR,
+          resizeHeight: wR,
           resizeQuality: "high",
-          premultiplyAlpha: AW ? "premultiply" : "none",
+          premultiplyAlpha: eR ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), bW = jW);
-        const kW = WW._device,
-          sW = cW.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          MW = lW ? (0, LW.d)(ZW, xW) : 1,
-          KW = MW > 1 ? (await Promise.resolve().then((() => OW(53845)))).generateMipmaps : null,
-          SW = {
-            addressModeU: cW.addressModeU ?? "repeat",
-            addressModeV: cW.addressModeV ?? "repeat",
-            minFilter: cW.minFilter ?? "linear",
-            magFilter: cW.magFilter ?? "linear",
-            mipmapFilter: lW ? "linear" : "nearest"
+        }), aR = LR);
+        const UR = RR._device,
+          WR = iR.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          AR = rR ? (0, qR.e)(KR, wR) : 1,
+          CR = AR > 1 ? (await Promise.resolve().then((() => GR(53672)))).generateMipmaps : null,
+          XR = {
+            addressModeU: iR.addressModeU ?? "repeat",
+            addressModeV: iR.addressModeV ?? "repeat",
+            minFilter: iR.minFilter ?? "linear",
+            magFilter: iR.magFilter ?? "linear",
+            mipmapFilter: rR ? "linear" : "nearest"
           };
-        SW.maxAnisotropy = "linear" === SW.minFilter && "linear" === SW.magFilter && "linear" === SW.mipmapFilter ? 4 : 1;
-        const YW = cW.invertY ?? !0,
-          yW = async iW => {
-            let OW;
-            kW.pushErrorScope("validation"), kW.pushErrorScope("out-of-memory");
-            let NW = null;
+        XR.maxAnisotropy = "linear" === XR.minFilter && "linear" === XR.magFilter && "linear" === XR.mipmapFilter ? 4 : 1;
+        const MR = iR.invertY ?? !0,
+          BR = async JR => {
+            let GR;
+            UR.pushErrorScope("validation"), UR.pushErrorScope("out-of-memory");
+            let uR = null;
             try {
-              const OW = UW.texture = kW.createTexture({
+              const GR = nR.texture = UR.createTexture({
                 size: {
-                  width: ZW,
-                  height: xW
+                  width: KR,
+                  height: wR
                 },
-                format: sW,
-                mipLevelCount: MW,
-                usage: EW.h.TEXTURE_BINDING | EW.h.COPY_DST | EW.h.RENDER_ATTACHMENT
+                format: WR,
+                mipLevelCount: AR,
+                usage: tR.j.TEXTURE_BINDING | tR.j.COPY_DST | tR.j.RENDER_ATTACHMENT
               });
-              kW.queue.copyExternalImageToTexture({
-                source: iW,
-                flipY: YW
+              UR.queue.copyExternalImageToTexture({
+                source: JR,
+                flipY: MR
               }, {
-                texture: OW,
-                premultipliedAlpha: AW
+                texture: GR,
+                premultipliedAlpha: eR
               }, {
-                width: ZW,
-                height: xW
-              }), KW && KW(WW, OW), NW = (0, PW.b)(WW, SW)
-            } catch (lW) {
-              OW = lW
+                width: KR,
+                height: wR
+              }), CR && CR(RR, GR), uR = (0, ZR.b)(RR, XR)
+            } catch (rR) {
+              GR = rR
             }
-            const [LW, cW] = await Promise.all([kW.popErrorScope(), kW.popErrorScope()]);
-            if (OW) throw OW;
-            const wW = cW ?? LW;
-            if (wW) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${wW.message}`, {
-              cause: wW
+            const [qR, iR] = await Promise.all([UR.popErrorScope(), UR.popErrorScope()]);
+            if (GR) throw GR;
+            const fR = iR ?? qR;
+            if (fR) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${fR.message}`, {
+              cause: fR
             });
-            const tW = UW.texture;
-            return tW && NW || (0, mW.c)(677), {
-              texture: tW,
-              view: tW.createView(),
-              sampler: NW,
-              width: ZW,
-              height: xW
+            const VR = nR.texture;
+            return VR && uR || (0, yR.c)(677), {
+              texture: VR,
+              view: VR.createView(),
+              sampler: uR,
+              width: KR,
+              height: wR
             }
-          }, TW = await (WW._dlr?.x(bW, ZW, xW, sW, MW, SW, YW, AW, yW)) ?? await yW(bW);
-        return (0, NW.e)(TW), TW
-      } catch (kW) {
-        throw UW.texture?.destroy(), kW
+          }, lR = await (RR._dlr?.x(aR, KR, wR, WR, AR, XR, MR, eR, BR)) ?? await BR(aR);
+        return (0, uR.d)(lR), lR
+      } catch (UR) {
+        throw nR.texture?.destroy(), UR
       } finally {
-        jW?.close()
+        LR?.close()
       }
     }
   },
-  53845: (WW, iW, OW) => {
-    OW.r(iW), OW.d(iW, {
-      generateMipmaps: () => lW,
-      recordMipmaps: () => AW
+  53672: (RR, JR, GR) => {
+    GR.r(JR), GR.d(JR, {
+      generateMipmaps: () => rR,
+      recordMipmaps: () => eR
     });
-    var mW = OW(53828),
-      EW = OW(53836),
-      NW = {
+    var yR = GR(53658),
+      tR = GR(53670),
+      uR = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var PW = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      LW = null,
-      cW = null,
-      wW = null,
-      tW = null,
-      ZW = null;
+    var ZR = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      qR = null,
+      iR = null,
+      fR = null,
+      VR = null,
+      KR = null;
 
-    function xW(WW) {
-      const iW = WW._device;
-      iW !== ZW && (LW?.clear(), LW = null, cW = null, wW = null, tW = null, ZW = null, ZW = iW), cW ??= iW.createShaderModule({
-        code: PW
-      }), wW ??= function(WW) {
-        return (0, EW.b)(WW, NW)
-      }(WW), tW ??= iW.createBindGroupLayout({
+    function wR(RR) {
+      const JR = RR._device;
+      JR !== KR && (qR?.clear(), qR = null, iR = null, fR = null, VR = null, KR = null, KR = JR), iR ??= JR.createShaderModule({
+        code: ZR
+      }), fR ??= function(RR) {
+        return (0, tR.b)(RR, uR)
+      }(RR), VR ??= JR.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: mW.e.FRAGMENT,
+          visibility: yR.f.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: mW.e.FRAGMENT,
+          visibility: yR.f.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function lW(WW, iW, OW) {
-      const mW = WW._device,
-        EW = mW.createCommandEncoder();
-      AW(WW, iW, EW, OW), mW.queue.submit([EW.finish()])
+    function rR(RR, JR, GR) {
+      const yR = RR._device,
+        tR = yR.createCommandEncoder();
+      eR(RR, JR, tR, GR), yR.queue.submit([tR.finish()])
     }
 
-    function AW(WW, iW, OW, mW) {
-      if (iW.mipLevelCount <= 1) return;
-      const EW = WW._device,
-        NW = function(WW, iW) {
-          const OW = WW._device;
-          xW(WW), LW ??= new Map;
-          let mW = LW.get(iW);
-          return mW || (mW = OW.createRenderPipeline({
-            layout: OW.createPipelineLayout({
-              bindGroupLayouts: [tW]
+    function eR(RR, JR, GR, yR) {
+      if (JR.mipLevelCount <= 1) return;
+      const tR = RR._device,
+        uR = function(RR, JR) {
+          const GR = RR._device;
+          wR(RR), qR ??= new Map;
+          let yR = qR.get(JR);
+          return yR || (yR = GR.createRenderPipeline({
+            layout: GR.createPipelineLayout({
+              bindGroupLayouts: [VR]
             }),
             vertex: {
-              module: cW,
+              module: iR,
               entryPoint: "vs"
             },
             fragment: {
-              module: cW,
+              module: iR,
               entryPoint: "fs",
               targets: [{
-                format: iW
+                format: JR
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), LW.set(iW, mW)), mW
-        }(WW, iW.format),
-        PW = null != mW ? {
+          }), qR.set(JR, yR)), yR
+        }(RR, JR.format),
+        ZR = null != yR ? {
           dimension: "2d",
-          baseArrayLayer: mW,
+          baseArrayLayer: yR,
           arrayLayerCount: 1
         } : {};
-      for (let LW = 1; LW < iW.mipLevelCount; LW++) {
-        const WW = iW.createView({
-            baseMipLevel: LW - 1,
+      for (let qR = 1; qR < JR.mipLevelCount; qR++) {
+        const RR = JR.createView({
+            baseMipLevel: qR - 1,
             mipLevelCount: 1,
-            ...PW
+            ...ZR
           }),
-          mW = iW.createView({
-            baseMipLevel: LW,
+          yR = JR.createView({
+            baseMipLevel: qR,
             mipLevelCount: 1,
-            ...PW
+            ...ZR
           }),
-          cW = EW.createBindGroup({
-            layout: tW,
+          iR = tR.createBindGroup({
+            layout: VR,
             entries: [{
               binding: 0,
-              resource: WW
+              resource: RR
             }, {
               binding: 1,
-              resource: wW
+              resource: fR
             }]
           }),
-          ZW = OW.beginRenderPass({
+          KR = GR.beginRenderPass({
             colorAttachments: [{
-              view: mW,
+              view: yR,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1302,82 +1302,82 @@ export const modules = {
               }
             }]
           });
-        ZW.setPipeline(NW), ZW.setBindGroup(0, cW), ZW.draw(3), ZW.end()
+        KR.setPipeline(uR), KR.setBindGroup(0, iR), KR.draw(3), KR.end()
       }
     }
   },
-  53853: (WW, iW, OW) => {
-    function mW(WW, iW) {
-      return Math.floor(Math.log2(Math.max(WW, iW))) + 1
+  53680: (RR, JR, GR) => {
+    function yR(RR, JR) {
+      return Math.floor(Math.log2(Math.max(RR, JR))) + 1
     }
-    OW.d(iW, {
-      d: () => mW
+    GR.d(JR, {
+      e: () => yR
     })
   },
-  53819: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => wW,
-      d: () => tW
+  53651: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => fR,
+      e: () => VR
     });
-    var mW = OW(53822),
-      EW = OW(53828),
-      NW = OW(53833),
-      PW = OW(53836),
-      LW = OW(53845),
-      cW = OW(53853);
+    var yR = GR(53654),
+      tR = GR(53658),
+      uR = GR(53664),
+      ZR = GR(53670),
+      qR = GR(53672),
+      iR = GR(53680);
 
-    function wW(WW, iW, OW, LW) {
-      let wW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (iW < 1 || OW < 1 || LW < 1) && (0, mW.c)(722, iW, OW, LW);
-      const tW = WW._device,
-        ZW = wW.mipMaps ?? !0,
-        xW = wW.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        lW = tW.createTexture({
+    function fR(RR, JR, GR, qR) {
+      let fR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (JR < 1 || GR < 1 || qR < 1) && (0, yR.c)(722, JR, GR, qR);
+      const VR = RR._device,
+        KR = fR.mipMaps ?? !0,
+        wR = fR.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        rR = VR.createTexture({
           size: {
-            width: iW,
-            height: OW,
-            depthOrArrayLayers: LW
+            width: JR,
+            height: GR,
+            depthOrArrayLayers: qR
           },
           dimension: "2d",
-          format: xW,
-          mipLevelCount: ZW ? (0, cW.d)(iW, OW) : 1,
-          usage: EW.h.TEXTURE_BINDING | EW.h.COPY_DST | EW.h.RENDER_ATTACHMENT
+          format: wR,
+          mipLevelCount: KR ? (0, iR.e)(JR, GR) : 1,
+          usage: tR.j.TEXTURE_BINDING | tR.j.COPY_DST | tR.j.RENDER_ATTACHMENT
         }),
-        AW = (0, PW.b)(WW, {
-          addressModeU: wW.addressModeU ?? "repeat",
-          addressModeV: wW.addressModeV ?? "repeat",
-          minFilter: wW.minFilter ?? "linear",
-          magFilter: wW.magFilter ?? "linear",
-          mipmapFilter: ZW ? "linear" : "nearest"
+        eR = (0, ZR.b)(RR, {
+          addressModeU: fR.addressModeU ?? "repeat",
+          addressModeV: fR.addressModeV ?? "repeat",
+          minFilter: fR.minFilter ?? "linear",
+          magFilter: fR.magFilter ?? "linear",
+          mipmapFilter: KR ? "linear" : "nearest"
         }),
-        bW = {
-          texture: lW,
-          view: lW.createView({
+        aR = {
+          texture: rR,
+          view: rR.createView({
             dimension: "2d-array"
           }),
-          sampler: AW,
-          width: iW,
-          height: OW,
-          layers: LW
+          sampler: eR,
+          width: JR,
+          height: GR,
+          layers: qR
         };
-      return (0, NW.e)(bW), bW
+      return (0, uR.d)(aR), aR
     }
 
-    function tW(WW, iW, OW, EW) {
-      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (OW < 0 || OW >= iW.layers || (0 | OW) !== OW) && (0, mW.c)(723, iW.layers, OW);
-      const PW = NW.invertY ?? !0,
-        cW = NW.premultiplyAlpha ?? !1;
-      WW._device.queue.copyExternalImageToTexture({
-        source: EW,
-        flipY: PW
+    function VR(RR, JR, GR, tR) {
+      let uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (GR < 0 || GR >= JR.layers || (0 | GR) !== GR) && (0, yR.c)(723, JR.layers, GR);
+      const ZR = uR.invertY ?? !0,
+        iR = uR.premultiplyAlpha ?? !1;
+      RR._device.queue.copyExternalImageToTexture({
+        source: tR,
+        flipY: ZR
       }, {
-        texture: iW.texture,
-        origin: [0, 0, OW],
-        premultipliedAlpha: cW
-      }, [iW.width, iW.height, 1]), iW.texture.mipLevelCount > 1 && (0, LW.generateMipmaps)(WW, iW.texture, OW)
+        texture: JR.texture,
+        origin: [0, 0, GR],
+        premultipliedAlpha: iR
+      }, [JR.width, JR.height, 1]), JR.texture.mipLevelCount > 1 && (0, qR.generateMipmaps)(RR, JR.texture, GR)
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

@@ -1,584 +1,584 @@
 export const id = 269;
 export const ids = [269];
 export const modules = {
-  42543: (WW, iW, OW) => {
-    OW.d(iW, {
-      noaDevTools: () => ZW
+  42590: (RR, JR, GR) => {
+    GR.d(JR, {
+      noaDevTools: () => KR
     });
-    var mW = OW(38626),
-      EW = OW(38612),
-      NW = OW(2365),
-      PW = OW(1856),
-      LW = OW(42471);
+    var yR = GR(38616),
+      tR = GR(38599),
+      uR = GR(2435),
+      ZR = GR(1943),
+      qR = GR(42516);
 
-    function cW(WW) {
+    function iR(RR) {
       const {
-        TZ: iW
-      } = WW, OW = iW.engine, mW = {
-        width: OW.getRenderWidth(),
-        height: OW.getRenderHeight()
+        lK: JR
+      } = RR, GR = JR.engine, yR = {
+        width: GR.getRenderWidth(),
+        height: GR.getRenderHeight()
       };
       return {
-        canvas: OW.getRenderingCanvas(),
-        maxTextureSize: OW.getCaps().maxTextureSize,
-        KZ: () => !WW.JZ,
-        resize: (WW, iW) => {
-          OW.setSize(WW, iW)
+        canvas: GR.getRenderingCanvas(),
+        maxTextureSize: GR.getCaps().maxTextureSize,
+        CK: () => !RR.pK,
+        resize: (RR, JR) => {
+          GR.setSize(RR, JR)
         },
         restoreSize: () => {
-          OW.setSize(mW.width, mW.height), iW.resize()
+          GR.setSize(yR.width, yR.height), JR.resize()
         },
-        onFrameDrawn: OW => {
-          const mW = () => {
-            iW.TY && OW()
+        onFrameDrawn: GR => {
+          const yR = () => {
+            JR.FX && GR()
           };
-          return WW.on("afterRender", mW), () => {
-            WW.off("afterRender", mW)
+          return RR.on("afterRender", yR), () => {
+            RR.off("afterRender", yR)
           }
         }
       }
     }
-    var wW = OW(35114);
+    var fR = GR(35029);
 
-    function tW(WW, iW) {
+    function VR(RR, JR) {
       let {
-        width: wW,
-        height: tW,
-        colouring: ZW
-      } = iW;
-      const xW = "normals" === ZW,
-        lW = "depth" === ZW;
-      return new Promise((iW => {
+        width: fR,
+        height: VR,
+        colouring: KR
+      } = JR;
+      const wR = "normals" === KR,
+        rR = "depth" === KR;
+      return new Promise((JR => {
         try {
-          const AW = (0, NW.h)();
-          if (AW.TZ.Lb) return "screenshot" !== WW || null !== ZW ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void iW()) : void(0, LW.f)(cW(AW), wW, tW).finally(iW);
-          const bW = AW.TZ.engine,
-            jW = AW.TZ.bD(),
-            UW = wW,
-            kW = tW;
-          Promise.all([Promise.all([OW.e(289), OW.e(290), OW.e(265)]).then((() => OW(64385))), Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(291), OW.e(294), OW.e(629), OW.e(271)]).then((() => OW(64392))), Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(299), OW.e(273)]).then((() => OW(64398))), OW.e(670).then((() => OW(64402))), Promise.all([OW.e(263), OW.e(259)]).then((() => OW(38235))), OW.e(288).then((() => OW(64405))), OW.e(268).then((() => OW(64410)))]).then((NW => {
+          const eR = (0, uR.i)();
+          if (eR.lK.La) return "screenshot" !== RR || null !== KR ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void JR()) : void(0, qR.f)(iR(eR), fR, VR).finally(JR);
+          const aR = eR.lK.engine,
+            LR = eR.lK.jH(),
+            nR = fR,
+            UR = VR;
+          Promise.all([Promise.all([GR.e(289), GR.e(290), GR.e(265)]).then((() => GR(64132))), Promise.all([GR.e(264), GR.e(263), GR.e(289), GR.e(290), GR.e(287), GR.e(291), GR.e(294), GR.e(629), GR.e(271)]).then((() => GR(64134))), Promise.all([GR.e(264), GR.e(263), GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(291), GR.e(299), GR.e(273)]).then((() => GR(64138))), GR.e(670).then((() => GR(64143))), Promise.all([GR.e(263), GR.e(259)]).then((() => GR(38195))), GR.e(288).then((() => GR(64146))), GR.e(268).then((() => GR(64149)))]).then((uR => {
             const {
-              CreateScreenshotUsingRenderTarget: LW
-            } = NW[1], {
-              ShaderMaterial: cW
-            } = NW[2], {
-              ShaderLanguage: wW
-            } = NW[3], {
-              fA: tW
-            } = NW[4], {
-              registerDevtoolsShader: ZW
-            } = NW[6], AW = wW.GLSL, sW = new Map, MW = jW.meshes.filter((WW => WW.material));
-            let KW = !1,
-              SW = null;
+              CreateScreenshotUsingRenderTarget: qR
+            } = uR[1], {
+              ShaderMaterial: iR
+            } = uR[2], {
+              ShaderLanguage: fR
+            } = uR[3], {
+              Fe: VR
+            } = uR[4], {
+              registerDevtoolsShader: KR
+            } = uR[6], eR = fR.GLSL, WR = new Map, AR = LR.meshes.filter((RR => RR.material));
+            let CR = !1,
+              XR = null;
 
-            function YW() {
-              var WW;
-              KW && (KW = !1, (0, mW.g)(jW.meshes, !1)), null === (WW = SW) || void 0 === WW || WW(), SW = null, MW.forEach((WW => {
-                const iW = sW.get(WW);
-                iW && (WW.material = iW)
+            function MR() {
+              var RR;
+              CR && (CR = !1, (0, yR.h)(LR.meshes, !1)), null === (RR = XR) || void 0 === RR || RR(), XR = null, AR.forEach((RR => {
+                const JR = WR.get(RR);
+                JR && (RR.material = JR)
               }))
             }
-            if (xW) {
-              const WW = [],
-                iW = [];
-              MW.forEach((OW => {
-                const mW = OW.name.toLowerCase(),
-                  EW = OW.KV().boundingBox.center,
-                  NW = jW.activeCamera.position.subtract(EW).length();
-                mW.includes("sky") || mW.includes("background") || mW.includes("environment") || NW > 1e3 ? iW.push(OW) : WW.push(OW)
-              })), ZW("devtoolsNormal", AW);
-              const OW = new cW("normalMaterial", jW, "devtoolsNormal", {
+            if (wR) {
+              const RR = [],
+                JR = [];
+              AR.forEach((GR => {
+                const yR = GR.name.toLowerCase(),
+                  tR = GR.Tm().boundingBox.center,
+                  uR = LR.activeCamera.position.subtract(tR).length();
+                yR.includes("sky") || yR.includes("background") || yR.includes("environment") || uR > 1e3 ? JR.push(GR) : RR.push(GR)
+              })), KR("devtoolsNormal", eR);
+              const GR = new iR("normalMaterial", LR, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: AW
+                shaderLanguage: eR
               });
-              ZW("devtoolsWhite", AW);
-              const mW = new cW("whiteMaterial", jW, "devtoolsWhite", {
+              KR("devtoolsWhite", eR);
+              const yR = new iR("whiteMaterial", LR, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: AW
+                shaderLanguage: eR
               });
-              WW.forEach((WW => {
-                sW.set(WW, WW.material), WW.material = OW
-              })), iW.forEach((WW => {
-                sW.set(WW, WW.material), WW.material = mW
+              RR.forEach((RR => {
+                WR.set(RR, RR.material), RR.material = GR
+              })), JR.forEach((RR => {
+                WR.set(RR, RR.material), RR.material = yR
               }))
-            } else if (lW) {
-              ZW("devtoolsDepth", AW);
-              const WW = jW.activeCamera.position;
-              let iW = 0,
-                OW = 1 / 0;
-              MW.forEach((mW => {
-                const EW = mW.name.toLowerCase();
-                if (EW.includes("sky") || EW.includes("background") || EW.includes("environment")) return;
-                const NW = mW.KV().boundingBox.center,
-                  PW = tW.TransformCoordinates(NW, mW.getWorldMatrix()),
-                  LW = WW.subtract(PW).length();
-                LW > 1e3 || (iW = Math.max(iW, LW), OW = Math.min(OW, LW))
+            } else if (rR) {
+              KR("devtoolsDepth", eR);
+              const RR = LR.activeCamera.position;
+              let JR = 0,
+                GR = 1 / 0;
+              AR.forEach((yR => {
+                const tR = yR.name.toLowerCase();
+                if (tR.includes("sky") || tR.includes("background") || tR.includes("environment")) return;
+                const uR = yR.Tm().boundingBox.center,
+                  ZR = VR.TransformCoordinates(uR, yR.getWorldMatrix()),
+                  qR = RR.subtract(ZR).length();
+                qR > 1e3 || (JR = Math.max(JR, qR), GR = Math.min(GR, qR))
               }));
-              const mW = iW - OW;
-              iW += .1 * mW, OW = Math.max(0, OW - .1 * mW), console.log(`Depth range: min=${OW.toFixed(2)}, max=${iW.toFixed(2)}, range=${mW.toFixed(2)}`), mW < 1 && (iW = OW + 10);
-              const EW = new cW("depthMaterial", jW, "devtoolsDepth", {
+              const yR = JR - GR;
+              JR += .1 * yR, GR = Math.max(0, GR - .1 * yR), console.log(`Depth range: min=${GR.toFixed(2)}, max=${JR.toFixed(2)}, range=${yR.toFixed(2)}`), yR < 1 && (JR = GR + 10);
+              const tR = new iR("depthMaterial", LR, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: AW
+                shaderLanguage: eR
               });
-              EW.setVector3("cameraPosition", WW), EW.setFloat("maxDepth", iW), EW.setFloat("minDepth", OW), MW.forEach((WW => {
-                sW.set(WW, WW.material), WW.material = EW
+              tR.setVector3("cameraPosition", RR), tR.setFloat("maxDepth", JR), tR.setFloat("minDepth", GR), AR.forEach((RR => {
+                WR.set(RR, RR.material), RR.material = tR
               }))
             }
-            if ((0, mW.g)(jW.meshes, !0), KW = !0, "glb" === WW && (SW = (0, EW.c)(jW.meshes)), "screenshot" === WW) {
-              let WW = `bloxd-screenshot-${UW}x${kW}-${Date.now()}.png`;
-              xW ? WW = `bloxd-screenshot-normals-${UW}x${kW}-${Date.now()}.png` : lW && (WW = `bloxd-screenshot-depth-${UW}x${kW}-${Date.now()}.png`), LW(bW, jW.activeCamera, {
-                width: UW,
-                height: kW
-              }, (function(OW) {
-                YW(), fetch(OW).then((function(WW) {
-                  return WW.blob()
-                })).then((function(OW) {
-                  (0, PW.downloadBlob)(OW, WW), iW()
-                })).catch((function(WW) {
-                  console.error("Error processing screenshot:", WW), iW()
+            if ((0, yR.h)(LR.meshes, !0), CR = !0, "glb" === RR && (XR = (0, tR.b)(LR.meshes)), "screenshot" === RR) {
+              let RR = `bloxd-screenshot-${nR}x${UR}-${Date.now()}.png`;
+              wR ? RR = `bloxd-screenshot-normals-${nR}x${UR}-${Date.now()}.png` : rR && (RR = `bloxd-screenshot-depth-${nR}x${UR}-${Date.now()}.png`), qR(aR, LR.activeCamera, {
+                width: nR,
+                height: UR
+              }, (function(GR) {
+                MR(), fetch(GR).then((function(RR) {
+                  return RR.blob()
+                })).then((function(GR) {
+                  (0, ZR.downloadBlob)(GR, RR), JR()
+                })).catch((function(RR) {
+                  console.error("Error processing screenshot:", RR), JR()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), YW(), iW()
+                console.error("Screenshot timed out"), MR(), JR()
               }))
             } else {
-              let WW = "rb";
-              xW ? WW = "scene-normals" : lW && (WW = "scene-depth"), xW || lW ? setTimeout((() => {
+              let RR = "tL";
+              wR ? RR = "scene-normals" : rR && (RR = "scene-depth"), wR || rR ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: WW
-                  } = await Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(296), OW.e(272)]).then((() => OW(41782))), {
-                    Color3: iW
-                  } = await Promise.all([OW.e(264), OW.e(267)]).then((() => OW(38369))), mW = [], EW = [];
-                  if (MW.forEach((WW => {
-                      const iW = WW.name.toLowerCase(),
-                        OW = WW.KV().boundingBox.center,
-                        NW = jW.activeCamera.position.subtract(OW).length();
-                      iW.includes("sky") || iW.includes("background") || iW.includes("environment") || NW > 1e3 ? EW.push(WW) : mW.push(WW)
-                    })), xW) mW.forEach(((OW, mW) => {
-                    const EW = OW.getVerticesData("normal");
-                    if (EW) {
-                      const NW = [];
-                      for (let WW = 0; WW < EW.length; WW += 3) {
-                        const iW = Math.abs(EW[WW]),
-                          OW = Math.abs(EW[WW + 1]),
-                          mW = Math.abs(EW[WW + 2]);
-                        NW.push(iW, OW, mW, 1)
+                    StandardMaterial: RR
+                  } = await Promise.all([GR.e(264), GR.e(263), GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(296), GR.e(272)]).then((() => GR(41781))), {
+                    Color3: JR
+                  } = await Promise.all([GR.e(264), GR.e(267)]).then((() => GR(38329))), yR = [], tR = [];
+                  if (AR.forEach((RR => {
+                      const JR = RR.name.toLowerCase(),
+                        GR = RR.Tm().boundingBox.center,
+                        uR = LR.activeCamera.position.subtract(GR).length();
+                      JR.includes("sky") || JR.includes("background") || JR.includes("environment") || uR > 1e3 ? tR.push(RR) : yR.push(RR)
+                    })), wR) yR.forEach(((GR, yR) => {
+                    const tR = GR.getVerticesData("normal");
+                    if (tR) {
+                      const uR = [];
+                      for (let RR = 0; RR < tR.length; RR += 3) {
+                        const JR = Math.abs(tR[RR]),
+                          GR = Math.abs(tR[RR + 1]),
+                          yR = Math.abs(tR[RR + 2]);
+                        uR.push(JR, GR, yR, 1)
                       }
-                      OW.setVerticesData("color", NW);
-                      const PW = new WW(`vertexColorMat_${mW}`, jW);
-                      PW.disableLighting = !0, PW.emissiveColor = new iW(1, 1, 1), PW.specularColor = new iW(0, 0, 0), OW.material = PW
+                      GR.setVerticesData("color", uR);
+                      const ZR = new RR(`vertexColorMat_${yR}`, LR);
+                      ZR.disableLighting = !0, ZR.emissiveColor = new JR(1, 1, 1), ZR.specularColor = new JR(0, 0, 0), GR.material = ZR
                     }
-                  })), EW.forEach(((OW, mW) => {
-                    const EW = OW.getVerticesData("position");
-                    if (EW) {
-                      const NW = [],
-                        PW = EW.length / 3;
-                      for (let WW = 0; WW < PW; WW++) NW.push(1, 1, 1, 1);
-                      OW.setVerticesData("color", NW);
-                      const LW = new WW(`whiteMat_${mW}`, jW);
-                      LW.disableLighting = !0, LW.emissiveColor = new iW(1, 1, 1), LW.specularColor = new iW(0, 0, 0), OW.material = LW
+                  })), tR.forEach(((GR, yR) => {
+                    const tR = GR.getVerticesData("position");
+                    if (tR) {
+                      const uR = [],
+                        ZR = tR.length / 3;
+                      for (let RR = 0; RR < ZR; RR++) uR.push(1, 1, 1, 1);
+                      GR.setVerticesData("color", uR);
+                      const qR = new RR(`whiteMat_${yR}`, LR);
+                      qR.disableLighting = !0, qR.emissiveColor = new JR(1, 1, 1), qR.specularColor = new JR(0, 0, 0), GR.material = qR
                     }
                   }));
-                  else if (lW) {
-                    const OW = jW.activeCamera.position;
-                    let EW = 0,
-                      NW = 1 / 0;
-                    mW.forEach((WW => {
-                      const iW = WW.KV().boundingBox.center,
-                        mW = tW.TransformCoordinates(iW, WW.getWorldMatrix()),
-                        PW = OW.subtract(mW).length();
-                      EW = Math.max(EW, PW), NW = Math.min(NW, PW)
+                  else if (rR) {
+                    const GR = LR.activeCamera.position;
+                    let tR = 0,
+                      uR = 1 / 0;
+                    yR.forEach((RR => {
+                      const JR = RR.Tm().boundingBox.center,
+                        yR = VR.TransformCoordinates(JR, RR.getWorldMatrix()),
+                        ZR = GR.subtract(yR).length();
+                      tR = Math.max(tR, ZR), uR = Math.min(uR, ZR)
                     }));
-                    const PW = EW - NW;
-                    EW += .1 * PW, NW = Math.max(0, NW - .1 * PW), PW < 1 && (EW = NW + 10), MW.forEach(((mW, PW) => {
-                      const LW = mW.name.toLowerCase(),
-                        cW = mW.KV().boundingBox.center,
-                        wW = tW.TransformCoordinates(cW, mW.getWorldMatrix()),
-                        ZW = OW.subtract(wW).length();
-                      if (!(LW.includes("sky") || LW.includes("background") || LW.includes("environment") || ZW > 1e3)) {
-                        const OW = 1 - Math.min(Math.max((ZW - NW) / (EW - NW), 0), 1),
-                          LW = new WW(`depthMat_${PW}`, jW);
-                        LW.diffuseColor = new iW(OW, OW, OW), LW.specularColor = new iW(0, 0, 0), mW.material = LW
+                    const ZR = tR - uR;
+                    tR += .1 * ZR, uR = Math.max(0, uR - .1 * ZR), ZR < 1 && (tR = uR + 10), AR.forEach(((yR, ZR) => {
+                      const qR = yR.name.toLowerCase(),
+                        iR = yR.Tm().boundingBox.center,
+                        fR = VR.TransformCoordinates(iR, yR.getWorldMatrix()),
+                        KR = GR.subtract(fR).length();
+                      if (!(qR.includes("sky") || qR.includes("background") || qR.includes("environment") || KR > 1e3)) {
+                        const GR = 1 - Math.min(Math.max((KR - uR) / (tR - uR), 0), 1),
+                          qR = new RR(`depthMat_${ZR}`, LR);
+                        qR.diffuseColor = new JR(GR, GR, GR), qR.specularColor = new JR(0, 0, 0), yR.material = qR
                       }
                     }))
                   }
-                })().then((() => Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(629), OW.e(278), OW.e(298), OW.e(262)]).then((() => OW(64419))))).then((iW => iW.GLTF2Export.GLBAsync(jW, WW))).then((WW => {
-                  YW(), WW.downloadFiles(), iW()
-                })).catch((WW => {
-                  console.error("Error exporting GLB:", WW), YW(), iW()
+                })().then((() => Promise.all([GR.e(264), GR.e(263), GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(299), GR.e(311), GR.e(629), GR.e(278), GR.e(298), GR.e(262)]).then((() => GR(64157))))).then((JR => JR.GLTF2Export.GLBAsync(LR, RR))).then((RR => {
+                  MR(), RR.downloadFiles(), JR()
+                })).catch((RR => {
+                  console.error("Error exporting GLB:", RR), MR(), JR()
                 }))
-              }), 100) : Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(629), OW.e(278), OW.e(298), OW.e(262)]).then((() => OW(64419))).then((OW => {
-                OW.GLTF2Export.GLBAsync(jW, WW).then((WW => {
-                  YW(), WW.downloadFiles(), iW()
-                })).catch((WW => {
-                  console.error("Error exporting GLB:", WW), YW(), iW()
+              }), 100) : Promise.all([GR.e(264), GR.e(263), GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(299), GR.e(311), GR.e(629), GR.e(278), GR.e(298), GR.e(262)]).then((() => GR(64157))).then((GR => {
+                GR.GLTF2Export.GLBAsync(LR, RR).then((RR => {
+                  MR(), RR.downloadFiles(), JR()
+                })).catch((RR => {
+                  console.error("Error exporting GLB:", RR), MR(), JR()
                 }))
-              })).catch((WW => {
-                console.error("Error importing serializers:", WW), YW(), iW()
+              })).catch((RR => {
+                console.error("Error importing serializers:", RR), MR(), JR()
               }))
             }
-          })).catch((WW => {
-            console.error("Error downloading the scene:", WW), iW()
+          })).catch((RR => {
+            console.error("Error downloading the scene:", RR), JR()
           }))
-        } catch (AW) {
-          console.error("Error taking screenshot:", AW), iW()
+        } catch (eR) {
+          console.error("Error taking screenshot:", eR), JR()
         }
       }))
     }
-    const ZW = new class {
+    const KR = new class {
       constructor() {
-        this.tools = wW.ALL_DEV_TOOLS
+        this.tools = fR.ALL_DEV_TOOLS
       }
-      downloadScene(WW, iW) {
-        return tW(WW, iW)
+      downloadScene(RR, JR) {
+        return VR(RR, JR)
       }
-      async setAmbientLightIntensity(WW) {
+      async setAmbientLightIntensity(RR) {
         const {
-          Color3: iW
-        } = await Promise.all([OW.e(264), OW.e(267)]).then((() => OW(38369)));
-        (0, NW.h)().TZ.bD().ambientColor = iW.FromArray([WW, WW, WW])
+          Color3: JR
+        } = await Promise.all([GR.e(264), GR.e(267)]).then((() => GR(38329)));
+        (0, uR.i)().lK.jH().ambientColor = JR.FromArray([RR, RR, RR])
       }
-      capturePhoto(WW, iW, OW) {
-        return function(WW, iW, OW, mW) {
-          return (0, LW.d)(cW(WW), iW, OW, mW)
-        }((0, NW.h)(), WW, iW, OW)
+      capturePhoto(RR, JR, GR) {
+        return function(RR, JR, GR, yR) {
+          return (0, qR.e)(iR(RR), JR, GR, yR)
+        }((0, uR.i)(), RR, JR, GR)
       }
     }
   },
-  42471: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      f: () => cW
+  42516: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      f: () => iR
     });
-    var mW = OW(1876);
-    const EW = 33177600,
-      NW = 3e4;
-    let PW = !1;
+    var yR = GR(1963);
+    const tR = 33177600,
+      uR = 3e4;
+    let ZR = !1;
 
-    function LW(WW, iW, OW) {
-      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function qR(RR, JR, GR) {
+      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: LW = 1,
-        type: cW = "image/png",
-        quality: wW
-      } = mW;
-      return WW.KZ() ? PW ? Promise.reject(new Error("A screenshot is already being taken")) : (PW = !0, new Promise(((mW, tW) => {
-        let ZW, xW = 2,
-          lW = null;
-        const AW = () => {
-          var iW;
-          PW = !1, null === (iW = lW) || void 0 === iW || iW(), clearTimeout(ZW);
+        scale: qR = 1,
+        type: iR = "image/png",
+        quality: fR
+      } = yR;
+      return RR.CK() ? ZR ? Promise.reject(new Error("A screenshot is already being taken")) : (ZR = !0, new Promise(((yR, VR) => {
+        let KR, wR = 2,
+          rR = null;
+        const eR = () => {
+          var JR;
+          ZR = !1, null === (JR = rR) || void 0 === JR || JR(), clearTimeout(KR);
           try {
-            WW.restoreSize()
-          } catch (OW) {
-            console.error("A screenshot couldn't size the canvas back", OW)
+            RR.restoreSize()
+          } catch (GR) {
+            console.error("A screenshot couldn't size the canvas back", GR)
           }
         };
-        ZW = setTimeout((() => {
-          AW(), tW(new Error("No frame was drawn to capture"))
-        }), NW);
+        KR = setTimeout((() => {
+          eR(), VR(new Error("No frame was drawn to capture"))
+        }), uR);
         try {
-          const mW = function(WW, iW, OW) {
-            const mW = Math.max(1, WW),
-              NW = Math.max(1, iW),
-              PW = Math.min(1, OW / Math.max(mW, NW), Math.sqrt(EW / (mW * NW)));
+          const yR = function(RR, JR, GR) {
+            const yR = Math.max(1, RR),
+              uR = Math.max(1, JR),
+              ZR = Math.min(1, GR / Math.max(yR, uR), Math.sqrt(tR / (yR * uR)));
             return {
-              width: Math.max(1, Math.floor(mW * PW)),
-              height: Math.max(1, Math.floor(NW * PW))
+              width: Math.max(1, Math.floor(yR * ZR)),
+              height: Math.max(1, Math.floor(uR * ZR))
             }
-          }(iW, OW, WW.maxTextureSize);
-          WW.resize(mW.width, mW.height, LW * mW.width / Math.max(1, iW))
-        } catch (bW) {
-          return AW(), void tW(bW)
+          }(JR, GR, RR.maxTextureSize);
+          RR.resize(yR.width, yR.height, qR * yR.width / Math.max(1, JR))
+        } catch (aR) {
+          return eR(), void VR(aR)
         }
-        lW = WW.onFrameDrawn((() => {
-          if (xW--, xW > 0) return;
+        rR = RR.onFrameDrawn((() => {
+          if (wR--, wR > 0) return;
           const {
-            canvas: iW
-          } = WW, OW = {
-            width: iW.width,
-            height: iW.height
+            canvas: JR
+          } = RR, GR = {
+            width: JR.width,
+            height: JR.height
           };
           try {
-            iW.toBlob((WW => {
-              WW ? mW({
-                blob: WW,
-                ...OW
-              }) : tW(new Error("The canvas gave no image"))
-            }), cW, wW)
-          } catch (bW) {
-            tW(bW)
+            JR.toBlob((RR => {
+              RR ? yR({
+                blob: RR,
+                ...GR
+              }) : VR(new Error("The canvas gave no image"))
+            }), iR, fR)
+          } catch (aR) {
+            VR(aR)
           } finally {
-            AW()
+            eR()
           }
         }))
       }))) : Promise.reject(new Error("Screenshots need a game to be running"))
     }
-    async function cW(WW, iW, OW) {
+    async function iR(RR, JR, GR) {
       try {
-        const EW = await LW(WW, iW, OW);
-        (0, mW.e)(EW.blob, `bloxd-screenshot-${EW.width}x${EW.height}-${Date.now()}.png`)
-      } catch (EW) {
-        console.error("Error taking screenshot:", EW)
+        const tR = await qR(RR, JR, GR);
+        (0, yR.e)(tR.blob, `bloxd-screenshot-${tR.width}x${tR.height}-${Date.now()}.png`)
+      } catch (tR) {
+        console.error("Error taking screenshot:", tR)
       }
     }
   },
-  38626: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => wW,
-      g: () => LW,
-      i: () => PW
+  38616: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => fR,
+      h: () => qR,
+      i: () => ZR
     });
-    var mW = OW(38623),
-      EW = OW(38631);
-    let NW = 0;
+    var yR = GR(38612),
+      tR = GR(38619);
+    let uR = 0;
 
-    function PW(WW, iW) {
-      const OW = WW;
-      OW._noaFaceGroups = null !== iW && void 0 !== iW ? iW : null, OW._noaFaceEpoch = -1, OW._noaFaceMask = -1, OW._noaFaceCount = -1, OW._noaFaceMaterial = null;
-      const mW = WW.hY;
-      mW && 1 === mW.length && (mW[0].indexStart = 0, mW[0].indexCount = WW.getTotalIndices())
+    function ZR(RR, JR) {
+      const GR = RR;
+      GR._noaFaceGroups = null !== JR && void 0 !== JR ? JR : null, GR._noaFaceEpoch = -1, GR._noaFaceMask = -1, GR._noaFaceCount = -1, GR._noaFaceMaterial = null;
+      const yR = RR.XM;
+      yR && 1 === yR.length && (yR[0].indexStart = 0, yR[0].indexCount = RR.getTotalIndices())
     }
 
-    function LW(WW, iW) {
-      if (iW) {
-        NW++;
-        for (const iW of WW) {
-          const WW = iW._noaFaceGroups;
-          WW && PW(iW, WW)
+    function qR(RR, JR) {
+      if (JR) {
+        uR++;
+        for (const JR of RR) {
+          const RR = JR._noaFaceGroups;
+          RR && ZR(JR, RR)
         }
-      } else NW = Math.max(0, NW - 1)
+      } else uR = Math.max(0, uR - 1)
     }
 
-    function cW(WW, iW, OW) {
-      let EW = -1,
-        NW = 0;
-      for (let PW = 0; PW < mW.f; PW++) {
-        const OW = WW[PW],
-          LW = WW[PW + 1];
-        LW > OW && iW & 1 << mW.d[PW] && (EW < 0 && (EW = OW), NW = LW)
+    function iR(RR, JR, GR) {
+      let tR = -1,
+        uR = 0;
+      for (let ZR = 0; ZR < yR.g; ZR++) {
+        const GR = RR[ZR],
+          qR = RR[ZR + 1];
+        qR > GR && JR & 1 << yR.d[ZR] && (tR < 0 && (tR = GR), uR = qR)
       }
-      return EW < 0 ? (OW[0] = 0, OW[1] = 0, 0) : (OW[0] = EW, OW[1] = NW - EW, NW - EW)
+      return tR < 0 ? (GR[0] = 0, GR[1] = 0, 0) : (GR[0] = tR, GR[1] = uR - tR, uR - tR)
     }
-    class wW {
-      constructor(WW, iW) {
-        this.jZ = WW, this.engine = iW, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class fR {
+      constructor(RR, JR) {
+        this.LK = RR, this.engine = JR, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(WW, iW) {
-        if (!iW) return;
-        const OW = iW.getProjectionMatrix().m,
-          PW = 0 === NW && 0 === OW[15],
-          LW = iW.globalPosition,
+      apply(RR, JR) {
+        if (!JR) return;
+        const GR = JR.getProjectionMatrix().m,
+          ZR = 0 === uR && 0 === GR[15],
+          qR = JR.globalPosition,
           {
-            engine: wW
+            engine: fR
           } = this,
-          tW = PW ? (0, EW.e)(OW, wW.getRenderWidth(), wW.getRenderHeight()) : 0;
-        LW.x === this.eyeX && LW.y === this.eyeY && LW.z === this.eyeZ && tW === this.focalPx && PW === this.culling || (this.epoch++, this.eyeX = LW.x, this.eyeY = LW.y, this.eyeZ = LW.z, this.focalPx = tW, this.culling = PW);
+          VR = ZR ? (0, tR.e)(GR, fR.getRenderWidth(), fR.getRenderHeight()) : 0;
+        qR.x === this.eyeX && qR.y === this.eyeY && qR.z === this.eyeZ && VR === this.focalPx && ZR === this.culling || (this.epoch++, this.eyeX = qR.x, this.eyeY = qR.y, this.eyeZ = qR.z, this.focalPx = VR, this.culling = ZR);
         const {
-          epoch: ZW,
-          range: xW
-        } = this, lW = this.jZ / 2, AW = lW * Math.sqrt(3), bW = WW.data, jW = WW.length;
-        let UW = 0;
-        for (let NW = 0; NW < jW; NW++) {
-          const WW = bW[NW],
-            iW = WW._noaFaceGroups;
-          if (iW && (WW._noaFaceEpoch !== ZW || WW._noaFaceMaterial !== WW.material)) {
-            WW._noaFaceEpoch = ZW, WW._noaFaceMaterial = WW.material;
-            const OW = WW.hY,
-              NW = OW && 1 === OW.length ? OW[0] : null;
-            let wW = -1;
-            if (PW && NW && (0, mW.w)(WW.material)) {
-              const OW = WW.position,
-                mW = LW.x - OW.x,
-                NW = LW.y - OW.y,
-                PW = LW.z - OW.z,
-                cW = mW - lW,
-                ZW = NW - lW,
-                xW = PW - lW,
-                bW = Math.sqrt(cW * cW + ZW * ZW + xW * xW) + AW;
-              wW = (0, EW.m)(iW, mW, NW, PW, (0, EW.h)(bW, tW))
+          epoch: KR,
+          range: wR
+        } = this, rR = this.LK / 2, eR = rR * Math.sqrt(3), aR = RR.data, LR = RR.length;
+        let nR = 0;
+        for (let uR = 0; uR < LR; uR++) {
+          const RR = aR[uR],
+            JR = RR._noaFaceGroups;
+          if (JR && (RR._noaFaceEpoch !== KR || RR._noaFaceMaterial !== RR.material)) {
+            RR._noaFaceEpoch = KR, RR._noaFaceMaterial = RR.material;
+            const GR = RR.XM,
+              uR = GR && 1 === GR.length ? GR[0] : null;
+            let fR = -1;
+            if (ZR && uR && (0, yR.s)(RR.material)) {
+              const GR = RR.position,
+                yR = qR.x - GR.x,
+                uR = qR.y - GR.y,
+                ZR = qR.z - GR.z,
+                iR = yR - rR,
+                KR = uR - rR,
+                wR = ZR - rR,
+                aR = Math.sqrt(iR * iR + KR * KR + wR * wR) + eR;
+              fR = (0, tR.k)(JR, yR, uR, ZR, (0, tR.f)(aR, VR))
             }
-            if (NW && wW !== WW._noaFaceMask) {
-              WW._noaFaceMask = wW;
-              let OW = 0,
-                EW = iW[mW.f]; - 1 !== wW && (EW = cW(iW, wW, xW), OW = xW[0]), WW._noaFaceCount = EW, NW.indexStart = 6 * OW, NW.indexCount = 6 * EW, NW.setBoundingInfo(WW.KV())
+            if (uR && fR !== RR._noaFaceMask) {
+              RR._noaFaceMask = fR;
+              let GR = 0,
+                tR = JR[yR.g]; - 1 !== fR && (tR = iR(JR, fR, wR), GR = wR[0]), RR._noaFaceCount = tR, uR.indexStart = 6 * GR, uR.indexCount = 6 * tR, uR.setBoundingInfo(RR.Tm())
             }
           }
-          iW && 0 === WW._noaFaceCount || (bW[UW++] = WW)
+          JR && 0 === RR._noaFaceCount || (aR[nR++] = RR)
         }
-        WW.length = UW
+        RR.length = nR
       }
     }
   },
-  38612: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => cW,
-      d: () => LW
+  38599: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => iR,
+      c: () => qR
     });
-    const mW = new WeakSet;
-    let EW = 0;
-    const NW = new Set;
+    const yR = new WeakSet;
+    let tR = 0;
+    const uR = new Set;
 
-    function PW(WW, iW) {
-      WW._data = iW
+    function ZR(RR, JR) {
+      RR._data = JR
     }
 
-    function LW(WW) {
-      var iW, OW;
-      (null !== (iW = null === (OW = WW.getBuffer()) || void 0 === OW ? void 0 : OW.aZ) && void 0 !== iW ? iW : 0) > 0 && (mW.add(WW), 0 === EW ? PW(WW, null) : NW.add(WW))
+    function qR(RR) {
+      var JR, GR;
+      (null !== (JR = null === (GR = RR.getBuffer()) || void 0 === GR ? void 0 : GR.hK) && void 0 !== JR ? JR : 0) > 0 && (yR.add(RR), 0 === tR ? ZR(RR, null) : uR.add(RR))
     }
 
-    function cW(WW) {
-      EW++;
-      for (const OW of function(WW) {
-          const iW = new Set;
-          for (const EW of WW) {
-            const WW = EW.geometry;
-            for (const EW of Object.values(null !== (OW = null === WW || void 0 === WW ? void 0 : WW.getVertexBuffers()) && void 0 !== OW ? OW : {})) {
-              var OW;
-              const WW = EW.getWrapperBuffer();
-              mW.has(WW) && iW.add(WW)
+    function iR(RR) {
+      tR++;
+      for (const GR of function(RR) {
+          const JR = new Set;
+          for (const tR of RR) {
+            const RR = tR.geometry;
+            for (const tR of Object.values(null !== (GR = null === RR || void 0 === RR ? void 0 : RR.getVertexBuffers()) && void 0 !== GR ? GR : {})) {
+              var GR;
+              const RR = tR.getWrapperBuffer();
+              yR.has(RR) && JR.add(RR)
             }
           }
-          return iW
-        }(WW)) OW.getData() || wW(OW), NW.add(OW);
-      let iW = !0;
+          return JR
+        }(RR)) GR.getData() || fR(GR), uR.add(GR);
+      let JR = !0;
       return () => {
-        if (iW && (iW = !1, EW--, 0 === EW)) {
-          for (const WW of NW) PW(WW, null);
-          NW.clear()
+        if (JR && (JR = !1, tR--, 0 === tR)) {
+          for (const RR of uR) ZR(RR, null);
+          uR.clear()
         }
       }
     }
 
-    function wW(WW) {
-      const iW = WW.getBuffer();
-      if (!iW || !(iW.aZ > 0)) return;
-      const OW = WW._engine,
-        mW = new Uint8Array(iW.aZ);
-      OW.bindArrayBuffer(iW), OW._gl.getBufferSubData(OW._gl.ARRAY_BUFFER, 0, mW), OW._resetVertexBufferBinding(), PW(WW, mW)
+    function fR(RR) {
+      const JR = RR.getBuffer();
+      if (!JR || !(JR.hK > 0)) return;
+      const GR = RR._engine,
+        yR = new Uint8Array(JR.hK);
+      GR.bindArrayBuffer(JR), GR._gl.getBufferSubData(GR._gl.ARRAY_BUFFER, 0, yR), GR._resetVertexBufferBinding(), ZR(RR, yR)
     }
   },
-  38623: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW,
-      f: () => NW,
-      g: () => cW,
-      k: () => mW,
-      o: () => LW,
-      s: () => EW,
-      w: () => wW
+  38612: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => ZR,
+      g: () => uR,
+      j: () => iR,
+      n: () => yR,
+      o: () => qR,
+      r: () => tR,
+      s: () => fR
     });
-    const mW = 6,
-      EW = [0, 2, 4, 1, 3, 5, 0, 2],
-      NW = 6,
-      PW = [1, 0, 3, 2, 5, 4];
-    for (let tW = NW; tW < EW.length; tW++)
-      if (EW[tW] !== EW[tW - NW]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const LW = EW.length + 1,
-      cW = (() => {
-        const WW = [];
-        for (let iW = 0; iW < NW; iW++) WW[EW[iW]] = iW;
-        return WW
+    const yR = 6,
+      tR = [0, 2, 4, 1, 3, 5, 0, 2],
+      uR = 6,
+      ZR = [1, 0, 3, 2, 5, 4];
+    for (let VR = uR; VR < tR.length; VR++)
+      if (tR[VR] !== tR[VR - uR]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const qR = tR.length + 1,
+      iR = (() => {
+        const RR = [];
+        for (let JR = 0; JR < uR; JR++) RR[tR[JR]] = JR;
+        return RR
       })();
 
-    function wW(WW) {
-      return !!WW && WW.backFaceCulling && (0 === WW.transparencyMode || 1 === WW.transparencyMode)
+    function fR(RR) {
+      return !!RR && RR.backFaceCulling && (0 === RR.transparencyMode || 1 === RR.transparencyMode)
     }
   },
-  38631: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      h: () => cW,
-      j: () => tW,
-      m: () => wW,
-      o: () => AW
+  38619: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      f: () => iR,
+      h: () => VR,
+      k: () => fR,
+      l: () => eR
     });
-    var mW = OW(38623);
-    const EW = 1 / 16,
-      NW = 1 / 64,
-      PW = 2048;
-    mW.k;
+    var yR = GR(38612);
+    const tR = 1 / 16,
+      uR = 1 / 64,
+      ZR = 2048;
+    yR.n;
 
-    function LW(WW, iW, OW) {
-      return Math.min(Math.abs(WW[0] * iW), Math.abs(WW[5] * OW)) / 2
+    function qR(RR, JR, GR) {
+      return Math.min(Math.abs(RR[0] * JR), Math.abs(RR[5] * GR)) / 2
     }
 
-    function cW(WW, iW) {
-      return EW + NW * WW * WW / iW
+    function iR(RR, JR) {
+      return tR + uR * RR * RR / JR
     }
 
-    function wW(WW, iW, OW, EW, NW) {
-      const PW = mW.o;
-      return tW(WW[PW], WW[PW + 1], WW[PW + 2], WW[PW + 3], WW[PW + 4], WW[PW + 5], iW, OW, EW, NW)
+    function fR(RR, JR, GR, tR, uR) {
+      const ZR = yR.o;
+      return VR(RR[ZR], RR[ZR + 1], RR[ZR + 2], RR[ZR + 3], RR[ZR + 4], RR[ZR + 5], JR, GR, tR, uR)
     }
 
-    function tW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW) {
-      return (PW <= WW - wW ? 0 : 1) | (PW >= iW + wW ? 0 : 2) | (LW <= OW - wW ? 0 : 4) | (LW >= mW + wW ? 0 : 8) | (cW <= EW - wW ? 0 : 16) | (cW >= NW + wW ? 0 : 32)
+    function VR(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR) {
+      return (ZR <= RR - fR ? 0 : 1) | (ZR >= JR + fR ? 0 : 2) | (qR <= GR - fR ? 0 : 4) | (qR >= yR + fR ? 0 : 8) | (iR <= tR - fR ? 0 : 16) | (iR >= uR + fR ? 0 : 32)
     }
-    const ZW = (() => {
-        const WW = [];
-        for (let iW = 0; iW < mW.s.length; iW++) {
-          let OW = 0;
-          for (let EW = iW + 1; EW <= mW.s.length; EW++) {
-            const NW = 1 << mW.s[EW - 1];
-            if (OW & NW) break;
-            OW |= NW, WW.push({
-              start: iW,
-              end: EW,
-              iW: OW
+    const KR = (() => {
+        const RR = [];
+        for (let JR = 0; JR < yR.r.length; JR++) {
+          let GR = 0;
+          for (let tR = JR + 1; tR <= yR.r.length; tR++) {
+            const uR = 1 << yR.r[tR - 1];
+            if (GR & uR) break;
+            GR |= uR, RR.push({
+              start: JR,
+              end: tR,
+              JR: GR
             })
           }
         }
-        return WW
+        return RR
       })(),
-      xW = [];
+      wR = [];
 
-    function lW(WW, iW) {
-      const OW = mW.g[iW];
-      return WW[OW + 1] - WW[OW]
+    function rR(RR, JR) {
+      const GR = yR.j[JR];
+      return RR[GR + 1] - RR[GR]
     }
 
-    function AW(WW, iW, OW) {
-      let EW = 0;
-      for (let PW = 0; PW < mW.k; PW++) lW(WW, PW) > 0 && (EW |= 1 << PW);
-      if (0 === (iW &= EW)) return 0;
-      if (iW === EW) return OW[0] = 0, OW[1] = WW[mW.f], 1;
-      let NW = null,
-        LW = 1 / 0;
-      for (const wW of function(WW) {
-          let iW = xW[WW];
-          if (iW) return iW;
-          const OW = new Map,
-            mW = (WW, iW) => {
-              const mW = 4 * WW + iW.length / 2;
-              OW.has(mW) || OW.set(mW, {
-                iW: WW,
-                windows: iW
+    function eR(RR, JR, GR) {
+      let tR = 0;
+      for (let ZR = 0; ZR < yR.n; ZR++) rR(RR, ZR) > 0 && (tR |= 1 << ZR);
+      if (0 === (JR &= tR)) return 0;
+      if (JR === tR) return GR[0] = 0, GR[1] = RR[yR.g], 1;
+      let uR = null,
+        qR = 1 / 0;
+      for (const fR of function(RR) {
+          let JR = wR[RR];
+          if (JR) return JR;
+          const GR = new Map,
+            yR = (RR, JR) => {
+              const yR = 4 * RR + JR.length / 2;
+              GR.has(yR) || GR.set(yR, {
+                JR: RR,
+                windows: JR
               })
             };
-          for (const NW of ZW)
-            if ((NW.iW & WW) === WW && mW(NW.iW, [NW.start, NW.end]), 0 !== (NW.iW & WW))
-              for (const iW of ZW) iW.start < NW.end || 0 !== (NW.iW & iW.iW) || 0 === (iW.iW & WW) || ((NW.iW | iW.iW) & WW) !== WW || mW(NW.iW | iW.iW, [NW.start, NW.end, iW.start, iW.end]);
-          const EW = [...OW.values()];
-          return iW = EW.filter((WW => !EW.some((iW => iW !== WW && (iW.iW & WW.iW) === iW.iW && iW.windows.length <= WW.windows.length)))), xW[WW] = iW, iW
-        }(iW)) {
-        let OW = (wW.windows.length / 2 - 1) * PW;
-        const cW = wW.iW & ~iW & EW;
-        for (let iW = 0; iW < mW.k; iW++) cW & 1 << iW && (OW += lW(WW, iW));
-        OW < LW && (NW = wW, LW = OW)
+          for (const uR of KR)
+            if ((uR.JR & RR) === RR && yR(uR.JR, [uR.start, uR.end]), 0 !== (uR.JR & RR))
+              for (const JR of KR) JR.start < uR.end || 0 !== (uR.JR & JR.JR) || 0 === (JR.JR & RR) || ((uR.JR | JR.JR) & RR) !== RR || yR(uR.JR | JR.JR, [uR.start, uR.end, JR.start, JR.end]);
+          const tR = [...GR.values()];
+          return JR = tR.filter((RR => !tR.some((JR => JR !== RR && (JR.JR & RR.JR) === JR.JR && JR.windows.length <= RR.windows.length)))), wR[RR] = JR, JR
+        }(JR)) {
+        let GR = (fR.windows.length / 2 - 1) * ZR;
+        const iR = fR.JR & ~JR & tR;
+        for (let JR = 0; JR < yR.n; JR++) iR & 1 << JR && (GR += rR(RR, JR));
+        GR < qR && (uR = fR, qR = GR)
       }
-      const cW = NW.windows;
-      for (let mW = 0; mW < cW.length; mW += 2) {
-        const iW = WW[cW[mW]];
-        OW[mW] = iW, OW[mW + 1] = WW[cW[mW + 1]] - iW
+      const iR = uR.windows;
+      for (let yR = 0; yR < iR.length; yR += 2) {
+        const JR = RR[iR[yR]];
+        GR[yR] = JR, GR[yR + 1] = RR[iR[yR + 1]] - JR
       }
-      return cW.length / 2
+      return iR.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);

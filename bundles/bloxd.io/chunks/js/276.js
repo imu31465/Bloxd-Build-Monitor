@@ -1,239 +1,239 @@
 export const id = 276;
 export const ids = [276];
 export const modules = {
-  40925: (WW, iW, OW) => {
-    WW.exports = EW;
-    var mW = OW(352);
+  40914: (RR, JR, GR) => {
+    RR.exports = tR;
+    var yR = GR(385);
 
-    function EW(WW, iW) {
-      if (!(this instanceof EW)) return new EW(WW, iW);
-      var OW = mW.create();
-      mW.add(OW, WW, iW), this.base = mW.min(mW.create(), WW, OW), this.vec = mW.clone(iW), this.max = mW.max(mW.create(), WW, OW), this.mag = mW.length(this.vec)
+    function tR(RR, JR) {
+      if (!(this instanceof tR)) return new tR(RR, JR);
+      var GR = yR.create();
+      yR.add(GR, RR, JR), this.base = yR.min(yR.create(), RR, GR), this.vec = yR.clone(JR), this.max = yR.max(yR.create(), RR, GR), this.mag = yR.length(this.vec)
     }
-    var NW = EW.prototype;
-    NW.width = function() {
+    var uR = tR.prototype;
+    uR.width = function() {
       return this.vec[0]
-    }, NW.height = function() {
+    }, uR.height = function() {
       return this.vec[1]
-    }, NW.depth = function() {
+    }, uR.depth = function() {
       return this.vec[2]
-    }, NW.x0 = function() {
+    }, uR.x0 = function() {
       return this.base[0]
-    }, NW.y0 = function() {
+    }, uR.y0 = function() {
       return this.base[1]
-    }, NW.z0 = function() {
+    }, uR.z0 = function() {
       return this.base[2]
-    }, NW.x1 = function() {
+    }, uR.x1 = function() {
       return this.max[0]
-    }, NW.y1 = function() {
+    }, uR.y1 = function() {
       return this.max[1]
-    }, NW.z1 = function() {
+    }, uR.z1 = function() {
       return this.max[2]
-    }, NW.translate = function(WW) {
-      return mW.add(this.max, this.max, WW), mW.add(this.base, this.base, WW), this
-    }, NW.setPosition = function(WW) {
-      return mW.add(this.max, WW, this.vec), mW.copy(this.base, WW), this
-    }, NW.expand = function(WW) {
-      var iW = mW.create(),
-        OW = mW.create();
-      return mW.max(iW, WW.max, this.max), mW.min(OW, WW.base, this.base), mW.subtract(iW, iW, OW), new EW(OW, iW)
-    }, NW.intersects = function(WW) {
-      return !(WW.base[0] > this.max[0]) && (!(WW.base[1] > this.max[1]) && (!(WW.base[2] > this.max[2]) && (!(WW.max[0] < this.base[0]) && (!(WW.max[1] < this.base[1]) && !(WW.max[2] < this.base[2])))))
-    }, NW.touches = function(WW) {
-      var iW = this.union(WW);
-      return null !== iW && (0 == iW.width() || 0 == iW.height() || 0 == iW.depth())
-    }, NW.union = function(WW) {
-      if (!this.intersects(WW)) return null;
-      var iW = Math.max(WW.base[0], this.base[0]),
-        OW = Math.max(WW.base[1], this.base[1]),
-        mW = Math.max(WW.base[2], this.base[2]);
-      return new EW([iW, OW, mW], [Math.min(WW.max[0], this.max[0]) - iW, Math.min(WW.max[1], this.max[1]) - OW, Math.min(WW.max[2], this.max[2]) - mW])
+    }, uR.translate = function(RR) {
+      return yR.add(this.max, this.max, RR), yR.add(this.base, this.base, RR), this
+    }, uR.setPosition = function(RR) {
+      return yR.add(this.max, RR, this.vec), yR.copy(this.base, RR), this
+    }, uR.expand = function(RR) {
+      var JR = yR.create(),
+        GR = yR.create();
+      return yR.max(JR, RR.max, this.max), yR.min(GR, RR.base, this.base), yR.subtract(JR, JR, GR), new tR(GR, JR)
+    }, uR.intersects = function(RR) {
+      return !(RR.base[0] > this.max[0]) && (!(RR.base[1] > this.max[1]) && (!(RR.base[2] > this.max[2]) && (!(RR.max[0] < this.base[0]) && (!(RR.max[1] < this.base[1]) && !(RR.max[2] < this.base[2])))))
+    }, uR.touches = function(RR) {
+      var JR = this.union(RR);
+      return null !== JR && (0 == JR.width() || 0 == JR.height() || 0 == JR.depth())
+    }, uR.union = function(RR) {
+      if (!this.intersects(RR)) return null;
+      var JR = Math.max(RR.base[0], this.base[0]),
+        GR = Math.max(RR.base[1], this.base[1]),
+        yR = Math.max(RR.base[2], this.base[2]);
+      return new tR([JR, GR, yR], [Math.min(RR.max[0], this.max[0]) - JR, Math.min(RR.max[1], this.max[1]) - GR, Math.min(RR.max[2], this.max[2]) - yR])
     }
   },
-  40922: WW => {
-    WW.exports = function(WW, iW, OW, mW, EW, NW) {
-      var PW = +iW[0],
-        LW = +iW[1],
-        cW = +iW[2],
-        wW = +OW[0],
-        tW = +OW[1],
-        ZW = +OW[2],
-        xW = Math.sqrt(wW * wW + tW * tW + ZW * ZW);
-      if (0 === xW) throw new Error("Can't raycast along a zero vector");
-      return function(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW) {
-        for (var tW = 0, ZW = Math.floor, xW = 0 | ZW(iW), lW = 0 | ZW(OW), AW = 0 | ZW(mW), bW = EW > 0 ? 1 : -1, jW = NW > 0 ? 1 : -1, UW = PW > 0 ? 1 : -1, kW = Math.abs(1 / EW), sW = Math.abs(1 / NW), MW = Math.abs(1 / PW), KW = kW < 1 / 0 ? kW * (bW > 0 ? xW + 1 - iW : iW - xW) : 1 / 0, SW = sW < 1 / 0 ? sW * (jW > 0 ? lW + 1 - OW : OW - lW) : 1 / 0, YW = MW < 1 / 0 ? MW * (UW > 0 ? AW + 1 - mW : mW - AW) : 1 / 0, yW = -1; tW <= LW;) {
-          var TW = WW(xW, lW, AW);
-          if (TW) return cW && (cW[0] = iW + tW * EW, cW[1] = OW + tW * NW, cW[2] = mW + tW * PW), wW && (wW[0] = wW[1] = wW[2] = 0, 0 === yW && (wW[0] = -bW), 1 === yW && (wW[1] = -jW), 2 === yW && (wW[2] = -UW)), TW;
-          KW < SW ? KW < YW ? (xW += bW, tW = KW, KW += kW, yW = 0) : (AW += UW, tW = YW, YW += MW, yW = 2) : SW < YW ? (lW += jW, tW = SW, SW += sW, yW = 1) : (AW += UW, tW = YW, YW += MW, yW = 2)
+  40911: RR => {
+    RR.exports = function(RR, JR, GR, yR, tR, uR) {
+      var ZR = +JR[0],
+        qR = +JR[1],
+        iR = +JR[2],
+        fR = +GR[0],
+        VR = +GR[1],
+        KR = +GR[2],
+        wR = Math.sqrt(fR * fR + VR * VR + KR * KR);
+      if (0 === wR) throw new Error("Can't raycast along a zero vector");
+      return function(RR, JR, GR, yR, tR, uR, ZR, qR, iR, fR) {
+        for (var VR = 0, KR = Math.floor, wR = 0 | KR(JR), rR = 0 | KR(GR), eR = 0 | KR(yR), aR = tR > 0 ? 1 : -1, LR = uR > 0 ? 1 : -1, nR = ZR > 0 ? 1 : -1, UR = Math.abs(1 / tR), WR = Math.abs(1 / uR), AR = Math.abs(1 / ZR), CR = UR < 1 / 0 ? UR * (aR > 0 ? wR + 1 - JR : JR - wR) : 1 / 0, XR = WR < 1 / 0 ? WR * (LR > 0 ? rR + 1 - GR : GR - rR) : 1 / 0, MR = AR < 1 / 0 ? AR * (nR > 0 ? eR + 1 - yR : yR - eR) : 1 / 0, BR = -1; VR <= qR;) {
+          var lR = RR(wR, rR, eR);
+          if (lR) return iR && (iR[0] = JR + VR * tR, iR[1] = GR + VR * uR, iR[2] = yR + VR * ZR), fR && (fR[0] = fR[1] = fR[2] = 0, 0 === BR && (fR[0] = -aR), 1 === BR && (fR[1] = -LR), 2 === BR && (fR[2] = -nR)), lR;
+          CR < XR ? CR < MR ? (wR += aR, VR = CR, CR += UR, BR = 0) : (eR += nR, VR = MR, MR += AR, BR = 2) : XR < MR ? (rR += LR, VR = XR, XR += WR, BR = 1) : (eR += nR, VR = MR, MR += AR, BR = 2)
         }
-        return cW && (cW[0] = iW + tW * EW, cW[1] = OW + tW * NW, cW[2] = mW + tW * PW), wW && (wW[0] = wW[1] = wW[2] = 0), 0
-      }(WW, PW, LW, cW, wW /= xW, tW /= xW, ZW /= xW, mW = "undefined" === typeof mW ? 64 : +mW, EW, NW)
+        return iR && (iR[0] = JR + VR * tR, iR[1] = GR + VR * uR, iR[2] = yR + VR * ZR), fR && (fR[0] = fR[1] = fR[2] = 0), 0
+      }(RR, ZR, qR, iR, fR /= wR, VR /= wR, KR /= wR, yR = "undefined" === typeof yR ? 64 : +yR, tR, uR)
     }
   },
-  40312: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => LW,
-      f: () => NW
+  40362: (RR, JR, GR) => {
+    GR.d(JR, {
+      d: () => qR,
+      h: () => uR
     });
-    var mW = OW(2780);
-    let EW = null;
+    var yR = GR(2845);
+    let tR = null;
 
-    function NW(WW) {
-      return null !== EW && WW === EW
+    function uR(RR) {
+      return null !== tR && RR === tR
     }
 
-    function PW() {
-      this.Qq = !1, this.stopPropagation = !1, this.xR = !1, this.disabled = !1
+    function ZR() {
+      this.sF = !1, this.stopPropagation = !1, this.qT = !1, this.disabled = !1
     }
-    class LW {
-      constructor(WW, iW) {
+    class qR {
+      constructor(RR, JR) {
         this.version = "0.7.0";
-        var OW = Object.assign({}, new PW, iW || {});
-        this.element = WW || document, this.Qq = !!OW.Qq, this.stopPropagation = !!OW.stopPropagation, this.xR = !!OW.xR, this.disabled = !!OW.disabled, this.filterEvents = (WW, iW) => !0, this.ignoreEvent = WW => !1, this.down = new mW.EventEmitter, this.up = new mW.EventEmitter, this.state = {}, this.bR = {
+        var GR = Object.assign({}, new ZR, JR || {});
+        this.element = RR || document, this.sF = !!GR.sF, this.stopPropagation = !!GR.stopPropagation, this.qT = !!GR.qT, this.disabled = !!GR.disabled, this.filterEvents = (RR, JR) => !0, this.ignoreEvent = RR => !1, this.down = new yR.EventEmitter, this.up = new yR.EventEmitter, this.state = {}, this.wT = {
           dx: 0,
           dy: 0,
-          diW: 0,
-          eiW: 0,
-          viW: 0
+          WGR: 0,
+          AGR: 0,
+          CGR: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? wW(this) : document.addEventListener("DOMContentLoaded", (WW => {
-          wW(this)
+        }, "loading" !== document.readyState ? fR(this) : document.addEventListener("DOMContentLoaded", (RR => {
+          fR(this)
         }), {
           once: !0
         })
       }
-      bind(WW) {
-        for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
-        OW.forEach((iW => {
-          var OW = this._keyBindmap[iW] || [];
-          OW.includes(WW) || (OW.push(WW), this._keyBindmap[iW] = OW)
-        })), this.state[WW] = !!this.state[WW], this.pressCount[WW] = this.pressCount[WW] || 0, this.releaseCount[WW] = this.releaseCount[WW] || 0
+      bind(RR) {
+        for (var JR = arguments.length, GR = new Array(JR > 1 ? JR - 1 : 0), yR = 1; yR < JR; yR++) GR[yR - 1] = arguments[yR];
+        GR.forEach((JR => {
+          var GR = this._keyBindmap[JR] || [];
+          GR.includes(RR) || (GR.push(RR), this._keyBindmap[JR] = GR)
+        })), this.state[RR] = !!this.state[RR], this.pressCount[RR] = this.pressCount[RR] || 0, this.releaseCount[RR] = this.releaseCount[RR] || 0
       }
-      unbind(WW) {
-        for (var iW in this._keyBindmap) {
-          var OW = this._keyBindmap[iW],
-            mW = OW.indexOf(WW);
-          mW > -1 && OW.splice(mW, 1)
+      unbind(RR) {
+        for (var JR in this._keyBindmap) {
+          var GR = this._keyBindmap[JR],
+            yR = GR.indexOf(RR);
+          yR > -1 && GR.splice(yR, 1)
         }
       }
       getBindings() {
-        var WW = {};
-        for (var iW in this._keyBindmap) {
-          this._keyBindmap[iW].forEach((OW => {
-            WW[OW] = WW[OW] || [], WW[OW].push(iW)
+        var RR = {};
+        for (var JR in this._keyBindmap) {
+          this._keyBindmap[JR].forEach((GR => {
+            RR[GR] = RR[GR] || [], RR[GR].push(JR)
           }))
         }
-        return WW
+        return RR
       }
-      hZ() {
-        cW(this.bR), cW(this.pressCount), cW(this.releaseCount)
+      gK() {
+        iR(this.wT), iR(this.pressCount), iR(this.releaseCount)
       }
     }
 
-    function cW(WW) {
-      for (var iW in WW) WW[iW] = 0
+    function iR(RR) {
+      for (var JR in RR) RR[JR] = 0
     }
 
-    function wW(WW) {
-      window.addEventListener("keydown", jW.bind(null, WW, !0), !1), window.addEventListener("keyup", jW.bind(null, WW, !1), !1);
-      var iW = {
+    function fR(RR) {
+      window.addEventListener("keydown", LR.bind(null, RR, !0), !1), window.addEventListener("keyup", LR.bind(null, RR, !1), !1);
+      var JR = {
         passive: !0
       };
-      WW.element.addEventListener("touchstart", lW.bind(void 0, WW), {
+      RR.element.addEventListener("touchstart", rR.bind(void 0, RR), {
         passive: !1
-      }), WW.element.addEventListener("touchend", bW.bind(void 0, WW), iW), WW.element.addEventListener("mousedown", UW.bind(null, WW, !0), iW), window.document.addEventListener("mouseup", UW.bind(null, WW, !1), iW), WW.element.addEventListener("touchmove", kW.bind(null, WW), iW), WW.element.addEventListener("mousemove", kW.bind(null, WW), iW), window.PointerEvent, WW.element.addEventListener("wheel", sW.bind(null, WW), iW), WW.element.addEventListener("contextmenu", MW.bind(null, WW), !1), window.addEventListener("blur", YW.bind(null, WW), !1)
+      }), RR.element.addEventListener("touchend", aR.bind(void 0, RR), JR), RR.element.addEventListener("mousedown", nR.bind(null, RR, !0), JR), window.document.addEventListener("mouseup", nR.bind(null, RR, !1), JR), RR.element.addEventListener("touchmove", UR.bind(null, RR), JR), RR.element.addEventListener("mousemove", UR.bind(null, RR), JR), window.PointerEvent, RR.element.addEventListener("wheel", WR.bind(null, RR), JR), RR.element.addEventListener("contextmenu", AR.bind(null, RR), !1), window.addEventListener("blur", MR.bind(null, RR), !1)
     }
-    var tW = 0,
-      ZW = 0,
-      xW = null;
+    var VR = 0,
+      KR = 0,
+      wR = null;
 
-    function lW(WW, iW) {
-      iW.preventDefault(), AW(iW)
+    function rR(RR, JR) {
+      JR.preventDefault(), eR(JR)
     }
 
-    function AW(WW) {
-      let iW = !1;
-      for (let OW = 0; OW < WW.touches.length; ++OW)
-        if (WW.touches[OW].identifier === xW) {
-          iW = !0;
+    function eR(RR) {
+      let JR = !1;
+      for (let GR = 0; GR < RR.touches.length; ++GR)
+        if (RR.touches[GR].identifier === wR) {
+          JR = !0;
           break
-        } if (!iW) {
-        const iW = WW.changedTouches[0];
-        tW = iW.clientX, ZW = iW.clientY, xW = iW.identifier
+        } if (!JR) {
+        const JR = RR.changedTouches[0];
+        VR = JR.clientX, KR = JR.clientY, wR = JR.identifier
       }
     }
 
-    function bW(WW, iW) {
-      for (var OW = iW.changedTouches, mW = 0; mW < OW.length; ++mW) OW[mW].identifier === xW && (xW = null)
+    function aR(RR, JR) {
+      for (var GR = JR.changedTouches, yR = 0; yR < GR.length; ++yR) GR[yR].identifier === wR && (wR = null)
     }
 
-    function jW(WW, iW, OW) {
-      if (!WW.ignoreEvent(OW)) try {
-        yW(WW, OW), iW && OW.isTrusted && !OW.repeat && WW._keyStates[OW.code] && TW(WW, OW.code)
+    function LR(RR, JR, GR) {
+      if (!RR.ignoreEvent(GR)) try {
+        BR(RR, GR), JR && GR.isTrusted && !GR.repeat && RR._keyStates[GR.code] && lR(RR, GR.code)
       } finally {
-        JW(OW.code, iW, WW, OW)
+        pR(GR.code, JR, RR, GR)
       }
     }
 
-    function UW(WW, iW, OW) {
-      if (!WW.ignoreEvent(OW)) try {
-        yW(WW, OW)
+    function nR(RR, JR, GR) {
+      if (!RR.ignoreEvent(GR)) try {
+        BR(RR, GR)
       } finally {
-        ! function(WW, iW, OW) {
-          if ("pointerId" in OW)
-            if (iW) {
-              if (null !== WW._touches.currID) return;
-              WW._touches.currID = OW.pointerId
+        ! function(RR, JR, GR) {
+          if ("pointerId" in GR)
+            if (JR) {
+              if (null !== RR._touches.currID) return;
+              RR._touches.currID = GR.pointerId
             } else {
-              if (WW._touches.currID !== OW.pointerId) return;
-              WW._touches.currID = null
-            } var mW = "button" in OW ? OW.button + 1 : 1;
-          JW("Mouse" + mW, iW, WW, OW)
-        }(WW, iW, OW)
+              if (RR._touches.currID !== GR.pointerId) return;
+              RR._touches.currID = null
+            } var yR = "button" in GR ? GR.button + 1 : 1;
+          pR("Mouse" + yR, JR, RR, GR)
+        }(RR, JR, GR)
       }
     }
 
-    function kW(WW, iW) {
-      var OW = iW.movementX || iW.mozMovementX || 0,
-        mW = iW.movementY || iW.mozMovementY || 0;
-      if (iW.touches && 0 === (OW | mW)) {
-        var EW = function(WW) {
-          AW(WW);
-          for (let iW = 0; iW < WW.changedTouches.length; ++iW)
-            if (WW.changedTouches[iW].identifier == xW) {
-              const OW = WW.changedTouches[iW],
-                mW = [OW.clientX - tW, OW.clientY - ZW];
-              return tW = OW.clientX, ZW = OW.clientY, mW
-            } return console.error(`Did not find touch id ${xW}`), [0, 0]
-        }(iW);
-        OW = EW[0], mW = EW[1]
+    function UR(RR, JR) {
+      var GR = JR.movementX || JR.mozMovementX || 0,
+        yR = JR.movementY || JR.mozMovementY || 0;
+      if (JR.touches && 0 === (GR | yR)) {
+        var tR = function(RR) {
+          eR(RR);
+          for (let JR = 0; JR < RR.changedTouches.length; ++JR)
+            if (RR.changedTouches[JR].identifier == wR) {
+              const GR = RR.changedTouches[JR],
+                yR = [GR.clientX - VR, GR.clientY - KR];
+              return VR = GR.clientX, KR = GR.clientY, yR
+            } return console.error(`Did not find touch id ${wR}`), [0, 0]
+        }(JR);
+        GR = tR[0], yR = tR[1]
       }
-      WW.bR.dx += OW, WW.bR.dy += mW
+      RR.wT.dx += GR, RR.wT.dy += yR
     }
 
-    function sW(WW, iW) {
-      yW(WW, iW);
-      var OW = 1;
-      switch (iW.deltaMode) {
+    function WR(RR, JR) {
+      BR(RR, JR);
+      var GR = 1;
+      switch (JR.deltaMode) {
         case 0:
-          OW = 1;
+          GR = 1;
           break;
         case 1:
-          OW = 12;
+          GR = 12;
           break;
         case 2:
-          OW = WW.element.clientHeight || window.innerHeight
+          GR = RR.element.clientHeight || window.innerHeight
       }
-      WW.bR.diW += (iW.deltaX || 0) * OW, WW.bR.eiW += (iW.deltaY || 0) * OW, WW.bR.viW += (iW.deltaZ || 0) * OW
+      RR.wT.WGR += (JR.deltaX || 0) * GR, RR.wT.AGR += (JR.deltaY || 0) * GR, RR.wT.CGR += (JR.deltaZ || 0) * GR
     }
 
-    function MW(WW, iW) {
-      if (!WW.xR) return iW.preventDefault(), !1
+    function AR(RR, JR) {
+      if (!RR.qT) return JR.preventDefault(), !1
     }
-    var KW = {
+    var CR = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -244,331 +244,331 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function SW(WW, iW) {
-      return !!WW[KW[iW]] || ("AltRight" === iW || "ControlLeft" === iW) && "function" === typeof WW.getModifierState && !0 === WW.getModifierState("AltGraph")
+    function XR(RR, JR) {
+      return !!RR[CR[JR]] || ("AltRight" === JR || "ControlLeft" === JR) && "function" === typeof RR.getModifierState && !0 === RR.getModifierState("AltGraph")
     }
 
-    function YW(WW, iW) {
-      for (var OW in WW._modifiersHeldThroughBlur = {}, KW) WW._keyStates[OW] && (WW._modifiersHeldThroughBlur[OW] = !0);
-      iW && iW.isTrusted && function() {
+    function MR(RR, JR) {
+      for (var GR in RR._modifiersHeldThroughBlur = {}, CR) RR._keyStates[GR] && (RR._modifiersHeldThroughBlur[GR] = !0);
+      JR && JR.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (WW) {
+        } catch (RR) {
           return !0
         }
-      }() && (clearTimeout(WW._blurRelease), WW._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(RR._blurRelease), RR._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var iW in WW._modifiersHeldThroughBlur = {}, WW._keyStates) WW._keyStates[iW] && !/^Mouse\d/.test(iW) && TW(WW, iW)
+          for (var JR in RR._modifiersHeldThroughBlur = {}, RR._keyStates) RR._keyStates[JR] && !/^Mouse\d/.test(JR) && lR(RR, JR)
       }), 0))
     }
 
-    function yW(WW, iW) {
-      var OW = WW._modifiersHeldThroughBlur;
-      if (OW && iW.isTrusted && document.hasFocus())
-        for (var mW in OW) delete OW[mW], WW._keyStates[mW] && mW !== iW.code && (SW(iW, mW) || TW(WW, mW))
+    function BR(RR, JR) {
+      var GR = RR._modifiersHeldThroughBlur;
+      if (GR && JR.isTrusted && document.hasFocus())
+        for (var yR in GR) delete GR[yR], RR._keyStates[yR] && yR !== JR.code && (XR(JR, yR) || lR(RR, yR))
     }
 
-    function TW(WW, iW) {
-      const OW = {
-          code: iW,
+    function lR(RR, JR) {
+      const GR = {
+          code: JR,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        mW = EW;
-      EW = OW;
+        yR = tR;
+      tR = GR;
       try {
-        JW(iW, !1, WW, OW)
+        pR(JR, !1, RR, GR)
       } finally {
-        EW = mW
+        tR = yR
       }
     }
 
-    function JW(WW, iW, OW, mW) {
-      var EW = OW._keyBindmap[WW];
-      EW && (hW(OW._keyStates[WW], iW) && (OW._keyStates[WW] = iW, EW.forEach((WW => {
-        (!OW.filterEvents || OW.filterEvents(mW, WW)) && function(WW, iW, OW, mW) {
-          var EW = iW ? OW.pressCount : OW.releaseCount;
-          EW[WW] = (EW[WW] || 0) + 1;
-          var NW = OW._bindPressCount[WW] || 0;
-          (NW += iW ? 1 : -1) < 0 && (NW = 0);
-          OW._bindPressCount[WW] = NW;
-          var PW = OW.state[WW];
-          if (hW(PW, NW)) {
-            OW.state[WW] = NW > 0;
-            var LW = iW ? OW.down : OW.up;
-            OW.disabled || LW.emit(WW, mW)
+    function pR(RR, JR, GR, yR) {
+      var tR = GR._keyBindmap[RR];
+      tR && (gR(GR._keyStates[RR], JR) && (GR._keyStates[RR] = JR, tR.forEach((RR => {
+        (!GR.filterEvents || GR.filterEvents(yR, RR)) && function(RR, JR, GR, yR) {
+          var tR = JR ? GR.pressCount : GR.releaseCount;
+          tR[RR] = (tR[RR] || 0) + 1;
+          var uR = GR._bindPressCount[RR] || 0;
+          (uR += JR ? 1 : -1) < 0 && (uR = 0);
+          GR._bindPressCount[RR] = uR;
+          var ZR = GR.state[RR];
+          if (gR(ZR, uR)) {
+            GR.state[RR] = uR > 0;
+            var qR = JR ? GR.down : GR.up;
+            GR.disabled || qR.emit(RR, yR)
           }
-        }(WW, iW, OW, mW)
-      }))), "button" in mW || (OW.Qq && !mW.defaultPrevented && mW.preventDefault(), OW.stopPropagation && mW.stopPropagation()))
+        }(RR, JR, GR, yR)
+      }))), "button" in yR || (GR.sF && !yR.defaultPrevented && yR.preventDefault(), GR.stopPropagation && yR.stopPropagation()))
     }
 
-    function hW(WW, iW) {
-      return WW ? !iW : iW
+    function gR(RR, JR) {
+      return RR ? !JR : JR
     }
   },
-  40907: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => mW
+  40904: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => yR
     });
-    class mW {
+    class yR {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.rV = !1, this.zV = !1, this.Fv = 30, this.XV = 0, this.mp = 100, this.PU = !1, this.fullscreen = !1, this.Hk = function(WW) {}, this.kp = function(WW, iW, OW) {}, this.uZ = function() {}, this.Lk = function() {}, this.Xp = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(WW) {}, this._data = new EW(iW),
-          function(WW) {
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.XE = !1, this.lE = !1, this.lH = 30, this.ZE = 0, this.pE = 100, this.un = !1, this.fullscreen = !1, this.UW = function(RR) {}, this.OE = function(RR, JR, GR) {}, this.xK = function() {}, this.iW = function() {}, this.kE = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(RR) {}, this._data = new tR(JR),
+          function(RR) {
             if ("loading" === document.readyState) {
-              var iW = () => {
-                document.removeEventListener("readystatechange", iW), WW()
+              var JR = () => {
+                document.removeEventListener("readystatechange", JR), RR()
               };
-              document.addEventListener("readystatechange", iW)
-            } else setTimeout(WW, 0)
+              document.addEventListener("readystatechange", JR)
+            } else setTimeout(RR, 0)
           }((() => {
-            ! function(WW) {
-              var iW = WW._data,
-                OW = iW.nowObject.now();
-              iW.lastTickStarted = OW, iW.lastFrameStarted = OW, iW.lastRenderStarted = OW, iW.frameCB = () => function(WW) {
-                var iW = WW._data;
-                requestAnimationFrame(iW.frameCB), LW(WW);
-                var OW = iW.nowObject.now(),
-                  mW = OW - iW.lastFrameStarted;
-                if (iW.lastFrameStarted = OW, WW.XV > 0) {
-                  iW.renderAccum += mW;
-                  var EW = 1e3 / WW.XV;
-                  if (iW.renderAccum < EW) return;
-                  iW.renderAccum -= EW, iW.renderAccum > EW && (iW.renderAccum = EW)
+            ! function(RR) {
+              var JR = RR._data,
+                GR = JR.nowObject.now();
+              JR.lastTickStarted = GR, JR.lastFrameStarted = GR, JR.lastRenderStarted = GR, JR.frameCB = () => function(RR) {
+                var JR = RR._data;
+                requestAnimationFrame(JR.frameCB), qR(RR);
+                var GR = JR.nowObject.now(),
+                  yR = GR - JR.lastFrameStarted;
+                if (JR.lastFrameStarted = GR, RR.ZE > 0) {
+                  JR.renderAccum += yR;
+                  var tR = 1e3 / RR.ZE;
+                  if (JR.renderAccum < tR) return;
+                  JR.renderAccum -= tR, JR.renderAccum > tR && (JR.renderAccum = tR)
                 }
-                var NW = OW - iW.lastRenderStarted;
-                iW.lastRenderStarted = OW;
-                var PW = 1e3 / WW.Fv,
-                  cW = (OW - iW.lastTickStarted) / PW;
-                cW < 0 && (cW = 0);
-                WW.kp(NW, cW, PW), setTimeout(LW, 0, WW, !0)
-              }(WW), iW.intervalCB = () => LW(WW), requestAnimationFrame(iW.frameCB), iW.pollTime > 0 && (iW.intervalID = setInterval(iW.intervalCB, Math.max(iW.pollTime, 1e3 / WW.Fv / 2)))
+                var uR = GR - JR.lastRenderStarted;
+                JR.lastRenderStarted = GR;
+                var ZR = 1e3 / RR.lH,
+                  iR = (GR - JR.lastTickStarted) / ZR;
+                iR < 0 && (iR = 0);
+                RR.OE(uR, iR, ZR), setTimeout(qR, 0, RR, !0)
+              }(RR), JR.intervalCB = () => qR(RR), requestAnimationFrame(JR.frameCB), JR.pollTime > 0 && (JR.intervalID = setInterval(JR.intervalCB, Math.max(JR.pollTime, 1e3 / RR.lH / 2)))
             }(this),
-            function(WW, iW) {
-              if (!iW) return;
-              var OW = !1,
-                mW = !1,
-                EW = WW => {
-                  if (!!WW !== (OW = iW === document.pointerLockElement))
-                    if (WW) {
-                      var mW = iW.requestPointerLock();
-                      mW && mW.catch && mW.catch((WW => {}))
+            function(RR, JR) {
+              if (!JR) return;
+              var GR = !1,
+                yR = !1,
+                tR = RR => {
+                  if (!!RR !== (GR = JR === document.pointerLockElement))
+                    if (RR) {
+                      var yR = JR.requestPointerLock();
+                      yR && yR.catch && yR.catch((RR => {}))
                     } else document.exitPointerLock()
                 },
-                NW = WW => {
-                  !!WW !== (mW = iW === document.fullscreenElement) && (WW ? iW.requestFullscreen ? iW.requestFullscreen() : iW.webkitRequestFullscreen && iW.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                uR = RR => {
+                  !!RR !== (yR = JR === document.fullscreenElement) && (RR ? JR.requestFullscreen ? JR.requestFullscreen() : JR.webkitRequestFullscreen && JR.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (mW => {
-                OW = iW === document.pointerLockElement, WW.Xp(OW)
-              })), document.addEventListener("fullscreenchange", (OW => {
-                mW = iW === document.fullscreenElement, WW.onFullscreenChanged(mW)
-              })), document.addEventListener("pointerlockerror", (mW => {
-                OW = iW === document.pointerLockElement, WW.onPointerLockError(mW)
-              })), Object.defineProperty(WW, "PU", {
-                get: () => OW,
-                set: EW
-              }), Object.defineProperty(WW, "fullscreen", {
-                get: () => mW,
-                set: NW
-              }), iW.addEventListener("click", (iW => {
-                WW.rV && EW(!0), WW.zV && NW(!0)
+              document.addEventListener("pointerlockchange", (yR => {
+                GR = JR === document.pointerLockElement, RR.kE(GR)
+              })), document.addEventListener("fullscreenchange", (GR => {
+                yR = JR === document.fullscreenElement, RR.onFullscreenChanged(yR)
+              })), document.addEventListener("pointerlockerror", (yR => {
+                GR = JR === document.pointerLockElement, RR.onPointerLockError(yR)
+              })), Object.defineProperty(RR, "un", {
+                get: () => GR,
+                set: tR
+              }), Object.defineProperty(RR, "fullscreen", {
+                get: () => yR,
+                set: uR
+              }), JR.addEventListener("click", (JR => {
+                RR.XE && tR(!0), RR.lE && uR(!0)
               }));
-              var PW = () => WW.Lk();
+              var ZR = () => RR.iW();
               if (window.ResizeObserver) {
-                new ResizeObserver(PW).observe(iW)
-              } else window.addEventListener("resize", PW)
-            }(this, WW), this.uZ()
+                new ResizeObserver(ZR).observe(JR)
+              } else window.addEventListener("resize", ZR)
+            }(this, RR), this.xK()
           }))
       }
     }
 
-    function EW() {
-      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = WW, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function tR() {
+      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = RR, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var NW = 3,
-      PW = 20;
+    var uR = 3,
+      ZR = 20;
 
-    function LW(WW) {
-      for (var iW = WW._data, OW = 1e3 / WW.Fv, mW = iW.nowObject.now() + PW, EW = 0; iW.nowObject.now() >= iW.lastTickStarted + OW && iW.nowObject.now() < mW && ++EW <= NW;) WW.Hk(OW), iW.lastTickStarted += OW;
-      var LW = 5 * (OW + 5),
-        cW = iW.nowObject.now();
-      if (cW - iW.lastTickStarted > LW)
-        for (; cW >= iW.lastTickStarted + OW;) iW.lastTickStarted += OW
+    function qR(RR) {
+      for (var JR = RR._data, GR = 1e3 / RR.lH, yR = JR.nowObject.now() + ZR, tR = 0; JR.nowObject.now() >= JR.lastTickStarted + GR && JR.nowObject.now() < yR && ++tR <= uR;) RR.UW(GR), JR.lastTickStarted += GR;
+      var qR = 5 * (GR + 5),
+        iR = JR.nowObject.now();
+      if (iR - JR.lastTickStarted > qR)
+        for (; iR >= JR.lastTickStarted + GR;) JR.lastTickStarted += GR
     }
   },
-  40189: (WW, iW, OW) => {
-    function mW(WW, iW, OW, mW, EW) {
-      var NW = {};
-      return Object.keys(mW).forEach((function(WW) {
-        NW[WW] = mW[WW]
-      })), NW.enumerable = !!NW.enumerable, NW.configurable = !!NW.configurable, ("value" in NW || NW.initializer) && (NW.writable = !0), NW = OW.slice().reverse().reduce((function(OW, mW) {
-        return mW(WW, iW, OW) || OW
-      }), NW), EW && void 0 !== NW.initializer && (NW.value = NW.initializer ? NW.initializer.call(EW) : void 0, NW.initializer = void 0), void 0 === NW.initializer && (Object.defineProperty(WW, iW, NW), NW = null), NW
+  40231: (RR, JR, GR) => {
+    function yR(RR, JR, GR, yR, tR) {
+      var uR = {};
+      return Object.keys(yR).forEach((function(RR) {
+        uR[RR] = yR[RR]
+      })), uR.enumerable = !!uR.enumerable, uR.configurable = !!uR.configurable, ("value" in uR || uR.initializer) && (uR.writable = !0), uR = GR.slice().reverse().reduce((function(GR, yR) {
+        return yR(RR, JR, GR) || GR
+      }), uR), tR && void 0 !== uR.initializer && (uR.value = uR.initializer ? uR.initializer.call(tR) : void 0, uR.initializer = void 0), void 0 === uR.initializer && (Object.defineProperty(RR, JR, uR), uR = null), uR
     }
-    OW.d(iW, {
-      c: () => mW
+    GR.d(JR, {
+      b: () => yR
     })
   },
-  40181: (WW, iW, OW) => {
-    function mW(WW, iW, OW, mW) {
-      OW && Object.defineProperty(WW, iW, {
-        enumerable: OW.enumerable,
-        configurable: OW.configurable,
-        writable: OW.writable,
-        value: OW.initializer ? OW.initializer.call(mW) : void 0
+  40223: (RR, JR, GR) => {
+    function yR(RR, JR, GR, yR) {
+      GR && Object.defineProperty(RR, JR, {
+        enumerable: GR.enumerable,
+        configurable: GR.configurable,
+        writable: GR.writable,
+        value: GR.initializer ? GR.initializer.call(yR) : void 0
       })
     }
-    OW.d(iW, {
-      e: () => mW
+    GR.d(JR, {
+      b: () => yR
     })
   },
-  39908: (WW, iW, OW) => {
-    OW.d(iW, {
-      c: () => NW
+  39912: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => uR
     });
-    var mW = OW(39911);
-    const EW = (WW, iW, OW) => WW ? WW.getClassName && "Mesh" === WW.getClassName() ? null : !WW.getClassName || "SubMesh" !== WW.getClassName() && "PhysicsBody" !== WW.getClassName() ? WW.clone ? WW.clone() : Array.isArray(WW) ? WW.slice() : OW && "object" === typeof WW ? {
-      ...WW
-    } : null : WW.clone(iW) : null;
-    class NW {
-      static DeepCopy(WW, iW, OW, NW) {
-        let PW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const LW = function(WW) {
-          const iW = [];
+    var yR = GR(39914);
+    const tR = (RR, JR, GR) => RR ? RR.getClassName && "Mesh" === RR.getClassName() ? null : !RR.getClassName || "SubMesh" !== RR.getClassName() && "PhysicsBody" !== RR.getClassName() ? RR.clone ? RR.clone() : Array.isArray(RR) ? RR.slice() : GR && "object" === typeof RR ? {
+      ...RR
+    } : null : RR.clone(JR) : null;
+    class uR {
+      static DeepCopy(RR, JR, GR, uR) {
+        let ZR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const qR = function(RR) {
+          const JR = [];
           do {
-            const OW = Object.getOwnPropertyNames(WW);
-            for (const WW of OW) - 1 === iW.indexOf(WW) && iW.push(WW)
-          } while (WW = Object.getPrototypeOf(WW));
-          return iW
-        }(WW);
-        for (const wW of LW) {
-          if ("_" === wW[0] && (!NW || -1 === NW.indexOf(wW))) continue;
-          if (wW.endsWith("Observable")) continue;
-          if (OW && -1 !== OW.indexOf(wW)) continue;
-          const LW = WW[wW],
-            tW = typeof LW;
-          if ("function" !== tW) try {
-            if ("object" === tW)
-              if (LW instanceof Uint8Array) iW[wW] = Uint8Array.from(LW);
-              else if (LW instanceof Array) {
-              if (iW[wW] = [], LW.length > 0)
-                if ("object" == typeof LW[0])
-                  for (let WW = 0; WW < LW.length; WW++) {
-                    const OW = EW(LW[WW], iW, PW); - 1 === iW[wW].indexOf(OW) && iW[wW].push(OW)
-                  } else iW[wW] = LW.slice(0)
-            } else iW[wW] = EW(LW, iW, PW);
-            else iW[wW] = LW
-          } catch (cW) {
-            mW.b.Warn(cW.message)
+            const GR = Object.getOwnPropertyNames(RR);
+            for (const RR of GR) - 1 === JR.indexOf(RR) && JR.push(RR)
+          } while (RR = Object.getPrototypeOf(RR));
+          return JR
+        }(RR);
+        for (const fR of qR) {
+          if ("_" === fR[0] && (!uR || -1 === uR.indexOf(fR))) continue;
+          if (fR.endsWith("Observable")) continue;
+          if (GR && -1 !== GR.indexOf(fR)) continue;
+          const qR = RR[fR],
+            VR = typeof qR;
+          if ("function" !== VR) try {
+            if ("object" === VR)
+              if (qR instanceof Uint8Array) JR[fR] = Uint8Array.from(qR);
+              else if (qR instanceof Array) {
+              if (JR[fR] = [], qR.length > 0)
+                if ("object" == typeof qR[0])
+                  for (let RR = 0; RR < qR.length; RR++) {
+                    const GR = tR(qR[RR], JR, ZR); - 1 === JR[fR].indexOf(GR) && JR[fR].push(GR)
+                  } else JR[fR] = qR.slice(0)
+            } else JR[fR] = tR(qR, JR, ZR);
+            else JR[fR] = qR
+          } catch (iR) {
+            yR.c.Warn(iR.message)
           }
         }
       }
     }
   },
-  39938: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => EW,
-      g: () => NW,
-      i: () => PW,
-      m: () => LW
+  39941: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => tR,
+      g: () => uR,
+      k: () => ZR,
+      m: () => qR
     });
-    var mW = OW(38372);
-    class EW {
-      constructor(WW, iW, OW) {
-        this.gradient = WW, this.color1 = iW, this.color2 = OW
+    var yR = GR(38331);
+    class tR {
+      constructor(RR, JR, GR) {
+        this.gradient = RR, this.color1 = JR, this.color2 = GR
       }
-      getColorToRef(WW) {
-        this.color2 ? mW.d.LerpToRef(this.color1, this.color2, Math.random(), WW) : WW.HJ(this.color1)
-      }
-    }
-    class NW {
-      constructor(WW, iW) {
-        this.gradient = WW, this.color = iW
+      getColorToRef(RR) {
+        this.color2 ? yR.e.LerpToRef(this.color1, this.color2, Math.random(), RR) : RR.vN(this.color1)
       }
     }
-    class PW {
-      constructor(WW, iW, OW) {
-        this.gradient = WW, this.factor1 = iW, this.factor2 = OW
+    class uR {
+      constructor(RR, JR) {
+        this.gradient = RR, this.color = JR
+      }
+    }
+    class ZR {
+      constructor(RR, JR, GR) {
+        this.gradient = RR, this.factor1 = JR, this.factor2 = GR
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class LW {
-      static GetCurrentGradient(WW, iW, OW) {
-        if (iW[0].gradient > WW) return void OW(iW[0], iW[0], 1);
-        for (let EW = 0; EW < iW.length - 1; EW++) {
-          const mW = iW[EW],
-            NW = iW[EW + 1];
-          if (WW >= mW.gradient && WW <= NW.gradient) {
-            return void OW(mW, NW, (WW - mW.gradient) / (NW.gradient - mW.gradient))
+    class qR {
+      static GetCurrentGradient(RR, JR, GR) {
+        if (JR[0].gradient > RR) return void GR(JR[0], JR[0], 1);
+        for (let tR = 0; tR < JR.length - 1; tR++) {
+          const yR = JR[tR],
+            uR = JR[tR + 1];
+          if (RR >= yR.gradient && RR <= uR.gradient) {
+            return void GR(yR, uR, (RR - yR.gradient) / (uR.gradient - yR.gradient))
           }
         }
-        const mW = iW.length - 1;
-        OW(iW[mW], iW[mW], 1)
+        const yR = JR.length - 1;
+        GR(JR[yR], JR[yR], 1)
       }
     }
   },
-  39911: (WW, iW, OW) => {
-    OW.d(iW, {
-      b: () => mW
+  39914: (RR, JR, GR) => {
+    GR.d(JR, {
+      c: () => yR
     });
-    class mW {
-      static _CheckLimit(WW, iW) {
-        let OW = mW._LogLimitOutputs[WW];
-        return OW ? OW.current++ : (OW = {
-          limit: iW,
+    class yR {
+      static _CheckLimit(RR, JR) {
+        let GR = yR._LogLimitOutputs[RR];
+        return GR ? GR.current++ : (GR = {
+          limit: JR,
           current: 1
-        }, mW._LogLimitOutputs[WW] = OW), OW.current <= OW.limit
+        }, yR._LogLimitOutputs[RR] = GR), GR.current <= GR.limit
       }
-      static _GenerateLimitMessage(WW) {
-        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const OW = mW._LogLimitOutputs[WW];
-        if (!OW || !mW.MessageLimitReached) return;
-        const EW = this._Levels[iW];
-        OW.current === OW.limit && mW[EW.name](mW.MessageLimitReached.replace(/%LIMIT%/g, "" + OW.limit).replace(/%TYPE%/g, EW.name ?? ""))
+      static _GenerateLimitMessage(RR) {
+        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const GR = yR._LogLimitOutputs[RR];
+        if (!GR || !yR.MessageLimitReached) return;
+        const tR = this._Levels[JR];
+        GR.current === GR.limit && yR[tR.name](yR.MessageLimitReached.replace(/%LIMIT%/g, "" + GR.limit).replace(/%TYPE%/g, tR.name ?? ""))
       }
-      static _AddLogEntry(WW) {
-        mW._LogCache = WW + mW._LogCache, mW.OnNewCacheEntry && mW.OnNewCacheEntry(WW)
+      static _AddLogEntry(RR) {
+        yR._LogCache = RR + yR._LogCache, yR.OnNewCacheEntry && yR.OnNewCacheEntry(RR)
       }
-      static _FormatMessage(WW) {
-        const iW = WW => WW < 10 ? "0" + WW : "" + WW,
-          OW = new Date;
-        return "[" + iW(OW.getHours()) + ":" + iW(OW.getMinutes()) + ":" + iW(OW.getSeconds()) + "]: " + WW
+      static _FormatMessage(RR) {
+        const JR = RR => RR < 10 ? "0" + RR : "" + RR,
+          GR = new Date;
+        return "[" + JR(GR.getHours()) + ":" + JR(GR.getMinutes()) + ":" + JR(GR.getSeconds()) + "]: " + RR
       }
-      static _LogDisabled(WW, iW) {}
+      static _LogDisabled(RR, JR) {}
       static _LogEnabled() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          iW = arguments.length > 1 ? arguments[1] : void 0,
-          OW = arguments.length > 2 ? arguments[2] : void 0;
-        const EW = Array.isArray(iW) ? iW[0] : iW;
-        if (void 0 !== OW && !mW._CheckLimit(EW, OW)) return;
-        const NW = mW._FormatMessage(EW),
-          PW = this._Levels[WW],
-          LW = Array.isArray(iW) ? iW.slice(1) : [];
-        PW.logFunc && PW.logFunc("BJS - " + NW, ...LW);
-        const cW = `<div style='color:${PW.color}'>${NW}</div><br>`;
-        mW._AddLogEntry(cW), mW._GenerateLimitMessage(EW, WW)
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          JR = arguments.length > 1 ? arguments[1] : void 0,
+          GR = arguments.length > 2 ? arguments[2] : void 0;
+        const tR = Array.isArray(JR) ? JR[0] : JR;
+        if (void 0 !== GR && !yR._CheckLimit(tR, GR)) return;
+        const uR = yR._FormatMessage(tR),
+          ZR = this._Levels[RR],
+          qR = Array.isArray(JR) ? JR.slice(1) : [];
+        ZR.logFunc && ZR.logFunc("BJS - " + uR, ...qR);
+        const iR = `<div style='color:${ZR.color}'>${uR}</div><br>`;
+        yR._AddLogEntry(iR), yR._GenerateLimitMessage(tR, RR)
       }
       static get LogCache() {
-        return mW._LogCache
+        return yR._LogCache
       }
       static ClearLogCache() {
-        mW._LogCache = "", mW._LogLimitOutputs = {}, mW.errorsCount = 0
+        yR._LogCache = "", yR._LogLimitOutputs = {}, yR.errorsCount = 0
       }
-      static set LogLevels(WW) {
-        mW.Log = mW._LogDisabled, mW.Warn = mW._LogDisabled, mW.Error = mW._LogDisabled;
-        const iW = [mW.MessageLogLevel, mW.WarningLogLevel, mW.ErrorLogLevel];
-        for (const OW of iW)
-          if ((WW & OW) === OW) {
-            const WW = this._Levels[OW];
-            mW[WW.name] = mW._LogEnabled.bind(mW, OW)
+      static set LogLevels(RR) {
+        yR.Log = yR._LogDisabled, yR.Warn = yR._LogDisabled, yR.Error = yR._LogDisabled;
+        const JR = [yR.MessageLogLevel, yR.WarningLogLevel, yR.ErrorLogLevel];
+        for (const GR of JR)
+          if ((RR & GR) === GR) {
+            const RR = this._Levels[GR];
+            yR[RR.name] = yR._LogEnabled.bind(yR, GR)
           }
       }
     }
-    mW.NoneLogLevel = 0, mW.MessageLogLevel = 1, mW.WarningLogLevel = 2, mW.ErrorLogLevel = 4, mW.AllLogLevel = 7, mW.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", mW._LogCache = "", mW._LogLimitOutputs = {}, mW._Levels = [{}, {
+    yR.NoneLogLevel = 0, yR.MessageLogLevel = 1, yR.WarningLogLevel = 2, yR.ErrorLogLevel = 4, yR.AllLogLevel = 7, yR.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", yR._LogCache = "", yR._LogLimitOutputs = {}, yR._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -580,42 +580,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], mW.errorsCount = 0, mW.Log = mW._LogEnabled.bind(mW, mW.MessageLogLevel), mW.Warn = mW._LogEnabled.bind(mW, mW.WarningLogLevel), mW.Error = mW._LogEnabled.bind(mW, mW.ErrorLogLevel)
+    }], yR.errorsCount = 0, yR.Log = yR._LogEnabled.bind(yR, yR.MessageLogLevel), yR.Warn = yR._LogEnabled.bind(yR, yR.WarningLogLevel), yR.Error = yR._LogEnabled.bind(yR, yR.ErrorLogLevel)
   },
-  39940: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => PW
+  39943: (RR, JR, GR) => {
+    GR.d(JR, {
+      b: () => ZR
     });
-    var mW = OW(38241),
-      EW = OW(38285),
-      NW = OW(39908);
-    class PW {
+    var yR = GR(38204),
+      tR = GR(38239),
+      uR = GR(39912);
+    class ZR {
       constructor() {
-        this.direction1 = new mW.q(0, 1, 0), this.direction2 = new mW.q(0, 1, 0), this.minEmitBox = new mW.q(-.5, -.5, -.5), this.maxEmitBox = new mW.q(.5, .5, .5)
+        this.direction1 = new yR.r(0, 1, 0), this.direction2 = new yR.r(0, 1, 0), this.minEmitBox = new yR.r(-.5, -.5, -.5), this.maxEmitBox = new yR.r(.5, .5, .5)
       }
-      startDirectionFunction(WW, iW, OW, NW) {
-        const PW = (0, EW.RandomRange)(this.direction1.x, this.direction2.x),
-          LW = (0, EW.RandomRange)(this.direction1.y, this.direction2.y),
-          cW = (0, EW.RandomRange)(this.direction1.z, this.direction2.z);
-        if (NW) return iW.x = PW, iW.y = LW, void(iW.z = cW);
-        mW.q.TransformNormalFromFloatsToRef(PW, LW, cW, WW, iW)
+      startDirectionFunction(RR, JR, GR, uR) {
+        const ZR = (0, tR.RandomRange)(this.direction1.x, this.direction2.x),
+          qR = (0, tR.RandomRange)(this.direction1.y, this.direction2.y),
+          iR = (0, tR.RandomRange)(this.direction1.z, this.direction2.z);
+        if (uR) return JR.x = ZR, JR.y = qR, void(JR.z = iR);
+        yR.r.TransformNormalFromFloatsToRef(ZR, qR, iR, RR, JR)
       }
-      startPositionFunction(WW, iW, OW, NW) {
-        const PW = (0, EW.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          LW = (0, EW.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          cW = (0, EW.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (NW) return iW.x = PW, iW.y = LW, void(iW.z = cW);
-        mW.q.TransformCoordinatesFromFloatsToRef(PW, LW, cW, WW, iW)
+      startPositionFunction(RR, JR, GR, uR) {
+        const ZR = (0, tR.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          qR = (0, tR.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          iR = (0, tR.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (uR) return JR.x = ZR, JR.y = qR, void(JR.z = iR);
+        yR.r.TransformCoordinatesFromFloatsToRef(ZR, qR, iR, RR, JR)
       }
       clone() {
-        const WW = new PW;
-        return NW.c.DeepCopy(this, WW), WW
+        const RR = new ZR;
+        return uR.b.DeepCopy(this, RR), RR
       }
-      applyToShader(WW) {
-        WW.setVector3("direction1", this.direction1), WW.setVector3("direction2", this.direction2), WW.setVector3("minEmitBox", this.minEmitBox), WW.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(RR) {
+        RR.setVector3("direction1", this.direction1), RR.setVector3("direction2", this.direction2), RR.setVector3("minEmitBox", this.minEmitBox), RR.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(WW) {
-        WW.addUniform("direction1", 3), WW.addUniform("direction2", 3), WW.addUniform("minEmitBox", 3), WW.addUniform("maxEmitBox", 3)
+      buildUniformLayout(RR) {
+        RR.addUniform("direction1", 3), RR.addUniform("direction2", 3), RR.addUniform("minEmitBox", 3), RR.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -624,54 +624,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const WW = {};
-        return WW.type = this.getClassName(), WW.direction1 = this.direction1.wEW(), WW.direction2 = this.direction2.wEW(), WW.minEmitBox = this.minEmitBox.wEW(), WW.maxEmitBox = this.maxEmitBox.wEW(), WW
+        const RR = {};
+        return RR.type = this.getClassName(), RR.direction1 = this.direction1.QtR(), RR.direction2 = this.direction2.QtR(), RR.minEmitBox = this.minEmitBox.QtR(), RR.maxEmitBox = this.maxEmitBox.QtR(), RR
       }
-      parse(WW) {
-        mW.q.FromArrayToRef(WW.direction1, 0, this.direction1), mW.q.FromArrayToRef(WW.direction2, 0, this.direction2), mW.q.FromArrayToRef(WW.minEmitBox, 0, this.minEmitBox), mW.q.FromArrayToRef(WW.maxEmitBox, 0, this.maxEmitBox)
+      parse(RR) {
+        yR.r.FromArrayToRef(RR.direction1, 0, this.direction1), yR.r.FromArrayToRef(RR.direction2, 0, this.direction2), yR.r.FromArrayToRef(RR.minEmitBox, 0, this.minEmitBox), yR.r.FromArrayToRef(RR.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  39906: (WW, iW, OW) => {
-    OW.d(iW, {
-      e: () => LW,
-      i: () => PW
+  39906: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => qR,
+      i: () => ZR
     });
-    var mW = OW(38241),
-      EW = OW(38285),
-      NW = OW(39908);
-    class PW {
+    var yR = GR(38204),
+      tR = GR(38239),
+      uR = GR(39912);
+    class ZR {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = WW, this.height = iW, this.radiusRange = OW, this.directionRandomizer = EW, this._tempVector = mW.q.Zero()
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = RR, this.height = JR, this.radiusRange = GR, this.directionRandomizer = tR, this._tempVector = yR.r.Zero()
       }
-      startDirectionFunction(WW, iW, OW, NW, PW) {
-        OW.position.subtractToRef(WW.getTranslation(), this._tempVector), this._tempVector.normalize(), mW.q.TransformNormalToRef(this._tempVector, PW, this._tempVector);
-        const LW = (0, EW.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let cW = Math.atan2(this._tempVector.x, this._tempVector.z);
-        cW += (0, EW.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = LW, this._tempVector.x = Math.sin(cW), this._tempVector.z = Math.cos(cW), this._tempVector.normalize(), NW ? iW.HJ(this._tempVector) : mW.q.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, WW, iW)
+      startDirectionFunction(RR, JR, GR, uR, ZR) {
+        GR.position.subtractToRef(RR.getTranslation(), this._tempVector), this._tempVector.normalize(), yR.r.TransformNormalToRef(this._tempVector, ZR, this._tempVector);
+        const qR = (0, tR.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let iR = Math.atan2(this._tempVector.x, this._tempVector.z);
+        iR += (0, tR.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = qR, this._tempVector.x = Math.sin(iR), this._tempVector.z = Math.cos(iR), this._tempVector.normalize(), uR ? JR.vN(this._tempVector) : yR.r.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, RR, JR)
       }
-      startPositionFunction(WW, iW, OW, NW) {
-        const PW = (0, EW.RandomRange)(-this.height / 2, this.height / 2),
-          LW = (0, EW.RandomRange)(0, 2 * Math.PI),
-          cW = (0, EW.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          wW = Math.sqrt(cW) * this.radius,
-          tW = wW * Math.cos(LW),
-          ZW = wW * Math.sin(LW);
-        NW ? iW.yWW(tW, PW, ZW) : mW.q.TransformCoordinatesFromFloatsToRef(tW, PW, ZW, WW, iW)
+      startPositionFunction(RR, JR, GR, uR) {
+        const ZR = (0, tR.RandomRange)(-this.height / 2, this.height / 2),
+          qR = (0, tR.RandomRange)(0, 2 * Math.PI),
+          iR = (0, tR.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          fR = Math.sqrt(iR) * this.radius,
+          VR = fR * Math.cos(qR),
+          KR = fR * Math.sin(qR);
+        uR ? JR.VJR(VR, ZR, KR) : yR.r.TransformCoordinatesFromFloatsToRef(VR, ZR, KR, RR, JR)
       }
       clone() {
-        const WW = new PW(this.radius, this.directionRandomizer);
-        return NW.c.DeepCopy(this, WW), WW
+        const RR = new ZR(this.radius, this.directionRandomizer);
+        return uR.b.DeepCopy(this, RR), RR
       }
-      applyToShader(WW) {
-        WW.setFloat("radius", this.radius), WW.setFloat("height", this.height), WW.setFloat("radiusRange", this.radiusRange), WW.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(RR) {
+        RR.setFloat("radius", this.radius), RR.setFloat("height", this.height), RR.setFloat("radiusRange", this.radiusRange), RR.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(WW) {
-        WW.addUniform("radius", 1), WW.addUniform("height", 1), WW.addUniform("radiusRange", 1), WW.addUniform("directionRandomizer", 1)
+      buildUniformLayout(RR) {
+        RR.addUniform("radius", 1), RR.addUniform("height", 1), RR.addUniform("radiusRange", 1), RR.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -680,37 +680,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const WW = {};
-        return WW.type = this.getClassName(), WW.radius = this.radius, WW.height = this.height, WW.radiusRange = this.radiusRange, WW.directionRandomizer = this.directionRandomizer, WW
+        const RR = {};
+        return RR.type = this.getClassName(), RR.radius = this.radius, RR.height = this.height, RR.radiusRange = this.radiusRange, RR.directionRandomizer = this.directionRandomizer, RR
       }
-      parse(WW) {
-        this.radius = WW.radius, this.height = WW.height, this.radiusRange = WW.radiusRange, this.directionRandomizer = WW.directionRandomizer
+      parse(RR) {
+        this.radius = RR.radius, this.height = RR.height, this.radiusRange = RR.radiusRange, this.directionRandomizer = RR.directionRandomizer
       }
     }
-    class LW extends PW {
+    class qR extends ZR {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new mW.q(0, 1, 0),
-          NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new mW.q(0, 1, 0);
-        super(WW, iW, OW), this.direction1 = EW, this.direction2 = NW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new yR.r(0, 1, 0),
+          uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new yR.r(0, 1, 0);
+        super(RR, JR, GR), this.direction1 = tR, this.direction2 = uR
       }
-      startDirectionFunction(WW, iW, OW, NW) {
-        const PW = (0, EW.RandomRange)(this.direction1.x, this.direction2.x),
-          LW = (0, EW.RandomRange)(this.direction1.y, this.direction2.y),
-          cW = (0, EW.RandomRange)(this.direction1.z, this.direction2.z);
-        NW ? iW.yWW(PW, LW, cW) : mW.q.TransformNormalFromFloatsToRef(PW, LW, cW, WW, iW)
+      startDirectionFunction(RR, JR, GR, uR) {
+        const ZR = (0, tR.RandomRange)(this.direction1.x, this.direction2.x),
+          qR = (0, tR.RandomRange)(this.direction1.y, this.direction2.y),
+          iR = (0, tR.RandomRange)(this.direction1.z, this.direction2.z);
+        uR ? JR.VJR(ZR, qR, iR) : yR.r.TransformNormalFromFloatsToRef(ZR, qR, iR, RR, JR)
       }
       clone() {
-        const WW = new LW(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return NW.c.DeepCopy(this, WW), WW
+        const RR = new qR(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return uR.b.DeepCopy(this, RR), RR
       }
-      applyToShader(WW) {
-        WW.setFloat("radius", this.radius), WW.setFloat("height", this.height), WW.setFloat("radiusRange", this.radiusRange), WW.setVector3("direction1", this.direction1), WW.setVector3("direction2", this.direction2)
+      applyToShader(RR) {
+        RR.setFloat("radius", this.radius), RR.setFloat("height", this.height), RR.setFloat("radiusRange", this.radiusRange), RR.setVector3("direction1", this.direction1), RR.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(WW) {
-        WW.addUniform("radius", 1), WW.addUniform("height", 1), WW.addUniform("radiusRange", 1), WW.addUniform("direction1", 3), WW.addUniform("direction2", 3)
+      buildUniformLayout(RR) {
+        RR.addUniform("radius", 1), RR.addUniform("height", 1), RR.addUniform("radiusRange", 1), RR.addUniform("direction1", 3), RR.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -719,239 +719,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const WW = super.serialize();
-        return WW.direction1 = this.direction1.wEW(), WW.direction2 = this.direction2.wEW(), WW
+        const RR = super.serialize();
+        return RR.direction1 = this.direction1.QtR(), RR.direction2 = this.direction2.QtR(), RR
       }
-      parse(WW) {
-        super.parse(WW), mW.q.FromArrayToRef(WW.direction1, 0, this.direction1), mW.q.FromArrayToRef(WW.direction2, 0, this.direction2)
+      parse(RR) {
+        super.parse(RR), yR.r.FromArrayToRef(RR.direction1, 0, this.direction1), yR.r.FromArrayToRef(RR.direction2, 0, this.direction2)
       }
     }
   },
-  40009: (WW, iW, OW) => {
-    OW.d(iW, {
-      d: () => ZW
+  40027: (RR, JR, GR) => {
+    GR.d(JR, {
+      e: () => KR
     });
-    const mW = .5 * (Math.sqrt(3) - 1),
-      EW = (3 - Math.sqrt(3)) / 6,
-      NW = 1 / 3,
-      PW = 1 / 6,
-      LW = (Math.sqrt(5) - 1) / 4,
-      cW = (5 - Math.sqrt(5)) / 20,
-      wW = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      tW = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const ZW = class {
+    const yR = .5 * (Math.sqrt(3) - 1),
+      tR = (3 - Math.sqrt(3)) / 6,
+      uR = 1 / 3,
+      ZR = 1 / 6,
+      qR = (Math.sqrt(5) - 1) / 4,
+      iR = (5 - Math.sqrt(5)) / 20,
+      fR = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      VR = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const KR = class {
       constructor() {
-        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const iW = "function" == typeof WW ? WW : function(WW) {
-          let iW = 0,
-            OW = 0,
-            mW = 0,
-            EW = 1;
-          const NW = function() {
-            let WW = 4022871197;
-            return function(iW) {
-              iW = iW.toString();
-              for (let OW = 0; OW < iW.length; OW++) {
-                WW += iW.charCodeAt(OW);
-                let mW = .02519603282416938 * WW;
-                WW = mW >>> 0, mW -= WW, mW *= WW, WW = mW >>> 0, mW -= WW, WW += 4294967296 * mW
+        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const JR = "function" == typeof RR ? RR : function(RR) {
+          let JR = 0,
+            GR = 0,
+            yR = 0,
+            tR = 1;
+          const uR = function() {
+            let RR = 4022871197;
+            return function(JR) {
+              JR = JR.toString();
+              for (let GR = 0; GR < JR.length; GR++) {
+                RR += JR.charCodeAt(GR);
+                let yR = .02519603282416938 * RR;
+                RR = yR >>> 0, yR -= RR, yR *= RR, RR = yR >>> 0, yR -= RR, RR += 4294967296 * yR
               }
-              return 2.3283064365386963e-10 * (WW >>> 0)
+              return 2.3283064365386963e-10 * (RR >>> 0)
             }
           }();
-          iW = NW(" "), OW = NW(" "), mW = NW(" "), iW -= NW(WW), iW < 0 && (iW += 1);
-          OW -= NW(WW), OW < 0 && (OW += 1);
-          mW -= NW(WW), mW < 0 && (mW += 1);
+          JR = uR(" "), GR = uR(" "), yR = uR(" "), JR -= uR(RR), JR < 0 && (JR += 1);
+          GR -= uR(RR), GR < 0 && (GR += 1);
+          yR -= uR(RR), yR < 0 && (yR += 1);
           return function() {
-            const WW = 2091639 * iW + 2.3283064365386963e-10 * EW;
-            return iW = OW, OW = mW, mW = WW - (EW = 0 | WW)
+            const RR = 2091639 * JR + 2.3283064365386963e-10 * tR;
+            return JR = GR, GR = yR, yR = RR - (tR = 0 | RR)
           }
-        }(WW);
-        this.p = function(WW) {
-          const iW = new Uint8Array(256);
-          for (let OW = 0; OW < 256; OW++) iW[OW] = OW;
-          for (let OW = 0; OW < 255; OW++) {
-            const mW = OW + ~~(WW() * (256 - OW)),
-              EW = iW[OW];
-            iW[OW] = iW[mW], iW[mW] = EW
+        }(RR);
+        this.p = function(RR) {
+          const JR = new Uint8Array(256);
+          for (let GR = 0; GR < 256; GR++) JR[GR] = GR;
+          for (let GR = 0; GR < 255; GR++) {
+            const yR = GR + ~~(RR() * (256 - GR)),
+              tR = JR[GR];
+            JR[GR] = JR[yR], JR[yR] = tR
           }
-          return iW
-        }(iW), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let OW = 0; OW < 512; OW++) this.perm[OW] = this.p[255 & OW], this.permMod12[OW] = this.perm[OW] % 12
+          return JR
+        }(JR), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let GR = 0; GR < 512; GR++) this.perm[GR] = this.p[255 & GR], this.permMod12[GR] = this.perm[GR] % 12
       }
-      noise2D(WW, iW) {
-        const OW = this.permMod12,
-          NW = this.perm;
-        let PW = 0,
-          LW = 0,
-          cW = 0;
-        const tW = (WW + iW) * mW,
-          ZW = Math.floor(WW + tW),
-          xW = Math.floor(iW + tW),
-          lW = (ZW + xW) * EW,
-          AW = WW - (ZW - lW),
-          bW = iW - (xW - lW);
-        let jW, UW;
-        AW > bW ? (jW = 1, UW = 0) : (jW = 0, UW = 1);
-        const kW = AW - jW + EW,
-          sW = bW - UW + EW,
-          MW = AW - 1 + 2 * EW,
-          KW = bW - 1 + 2 * EW,
-          SW = 255 & ZW,
-          YW = 255 & xW;
-        let yW = .5 - AW * AW - bW * bW;
-        if (yW >= 0) {
-          const WW = 3 * OW[SW + NW[YW]];
-          yW *= yW, PW = yW * yW * (wW[WW] * AW + wW[WW + 1] * bW)
+      noise2D(RR, JR) {
+        const GR = this.permMod12,
+          uR = this.perm;
+        let ZR = 0,
+          qR = 0,
+          iR = 0;
+        const VR = (RR + JR) * yR,
+          KR = Math.floor(RR + VR),
+          wR = Math.floor(JR + VR),
+          rR = (KR + wR) * tR,
+          eR = RR - (KR - rR),
+          aR = JR - (wR - rR);
+        let LR, nR;
+        eR > aR ? (LR = 1, nR = 0) : (LR = 0, nR = 1);
+        const UR = eR - LR + tR,
+          WR = aR - nR + tR,
+          AR = eR - 1 + 2 * tR,
+          CR = aR - 1 + 2 * tR,
+          XR = 255 & KR,
+          MR = 255 & wR;
+        let BR = .5 - eR * eR - aR * aR;
+        if (BR >= 0) {
+          const RR = 3 * GR[XR + uR[MR]];
+          BR *= BR, ZR = BR * BR * (fR[RR] * eR + fR[RR + 1] * aR)
         }
-        let TW = .5 - kW * kW - sW * sW;
-        if (TW >= 0) {
-          const WW = 3 * OW[SW + jW + NW[YW + UW]];
-          TW *= TW, LW = TW * TW * (wW[WW] * kW + wW[WW + 1] * sW)
+        let lR = .5 - UR * UR - WR * WR;
+        if (lR >= 0) {
+          const RR = 3 * GR[XR + LR + uR[MR + nR]];
+          lR *= lR, qR = lR * lR * (fR[RR] * UR + fR[RR + 1] * WR)
         }
-        let JW = .5 - MW * MW - KW * KW;
-        if (JW >= 0) {
-          const WW = 3 * OW[SW + 1 + NW[YW + 1]];
-          JW *= JW, cW = JW * JW * (wW[WW] * MW + wW[WW + 1] * KW)
+        let pR = .5 - AR * AR - CR * CR;
+        if (pR >= 0) {
+          const RR = 3 * GR[XR + 1 + uR[MR + 1]];
+          pR *= pR, iR = pR * pR * (fR[RR] * AR + fR[RR + 1] * CR)
         }
-        return 70 * (PW + LW + cW)
+        return 70 * (ZR + qR + iR)
       }
-      noise3D(WW, iW, OW) {
-        const mW = this.permMod12,
-          EW = this.perm;
-        let LW, cW, tW, ZW;
-        const xW = (WW + iW + OW) * NW,
-          lW = Math.floor(WW + xW),
-          AW = Math.floor(iW + xW),
-          bW = Math.floor(OW + xW),
-          jW = (lW + AW + bW) * PW,
-          UW = WW - (lW - jW),
-          kW = iW - (AW - jW),
-          sW = OW - (bW - jW);
-        let MW, KW, SW, YW, yW, TW;
-        UW >= kW ? kW >= sW ? (MW = 1, KW = 0, SW = 0, YW = 1, yW = 1, TW = 0) : UW >= sW ? (MW = 1, KW = 0, SW = 0, YW = 1, yW = 0, TW = 1) : (MW = 0, KW = 0, SW = 1, YW = 1, yW = 0, TW = 1) : kW < sW ? (MW = 0, KW = 0, SW = 1, YW = 0, yW = 1, TW = 1) : UW < sW ? (MW = 0, KW = 1, SW = 0, YW = 0, yW = 1, TW = 1) : (MW = 0, KW = 1, SW = 0, YW = 1, yW = 1, TW = 0);
-        const JW = UW - MW + PW,
-          hW = kW - KW + PW,
-          HW = sW - SW + PW,
-          nW = UW - YW + 2 * PW,
-          uW = kW - yW + 2 * PW,
-          oW = sW - TW + 2 * PW,
-          dW = UW - 1 + .5,
-          eW = kW - 1 + .5,
-          vW = sW - 1 + .5,
-          gW = 255 & lW,
-          DW = 255 & AW,
-          VW = 255 & bW;
-        let pW = .6 - UW * UW - kW * kW - sW * sW;
-        if (pW < 0) LW = 0;
+      noise3D(RR, JR, GR) {
+        const yR = this.permMod12,
+          tR = this.perm;
+        let qR, iR, VR, KR;
+        const wR = (RR + JR + GR) * uR,
+          rR = Math.floor(RR + wR),
+          eR = Math.floor(JR + wR),
+          aR = Math.floor(GR + wR),
+          LR = (rR + eR + aR) * ZR,
+          nR = RR - (rR - LR),
+          UR = JR - (eR - LR),
+          WR = GR - (aR - LR);
+        let AR, CR, XR, MR, BR, lR;
+        nR >= UR ? UR >= WR ? (AR = 1, CR = 0, XR = 0, MR = 1, BR = 1, lR = 0) : nR >= WR ? (AR = 1, CR = 0, XR = 0, MR = 1, BR = 0, lR = 1) : (AR = 0, CR = 0, XR = 1, MR = 1, BR = 0, lR = 1) : UR < WR ? (AR = 0, CR = 0, XR = 1, MR = 0, BR = 1, lR = 1) : nR < WR ? (AR = 0, CR = 1, XR = 0, MR = 0, BR = 1, lR = 1) : (AR = 0, CR = 1, XR = 0, MR = 1, BR = 1, lR = 0);
+        const pR = nR - AR + ZR,
+          gR = UR - CR + ZR,
+          bR = WR - XR + ZR,
+          vR = nR - MR + 2 * ZR,
+          OR = UR - BR + 2 * ZR,
+          xR = WR - lR + 2 * ZR,
+          NR = nR - 1 + .5,
+          DR = UR - 1 + .5,
+          HR = WR - 1 + .5,
+          oR = 255 & rR,
+          cR = 255 & eR,
+          PR = 255 & aR;
+        let IR = .6 - nR * nR - UR * UR - WR * WR;
+        if (IR < 0) qR = 0;
         else {
-          const WW = 3 * mW[gW + EW[DW + EW[VW]]];
-          pW *= pW, LW = pW * pW * (wW[WW] * UW + wW[WW + 1] * kW + wW[WW + 2] * sW)
+          const RR = 3 * yR[oR + tR[cR + tR[PR]]];
+          IR *= IR, qR = IR * IR * (fR[RR] * nR + fR[RR + 1] * UR + fR[RR + 2] * WR)
         }
-        let fW = .6 - JW * JW - hW * hW - HW * HW;
-        if (fW < 0) cW = 0;
+        let mR = .6 - pR * pR - gR * gR - bR * bR;
+        if (mR < 0) iR = 0;
         else {
-          const WW = 3 * mW[gW + MW + EW[DW + KW + EW[VW + SW]]];
-          fW *= fW, cW = fW * fW * (wW[WW] * JW + wW[WW + 1] * hW + wW[WW + 2] * HW)
+          const RR = 3 * yR[oR + AR + tR[cR + CR + tR[PR + XR]]];
+          mR *= mR, iR = mR * mR * (fR[RR] * pR + fR[RR + 1] * gR + fR[RR + 2] * bR)
         }
-        let CW = .6 - nW * nW - uW * uW - oW * oW;
-        if (CW < 0) tW = 0;
+        let zR = .6 - vR * vR - OR * OR - xR * xR;
+        if (zR < 0) VR = 0;
         else {
-          const WW = 3 * mW[gW + YW + EW[DW + yW + EW[VW + TW]]];
-          CW *= CW, tW = CW * CW * (wW[WW] * nW + wW[WW + 1] * uW + wW[WW + 2] * oW)
+          const RR = 3 * yR[oR + MR + tR[cR + BR + tR[PR + lR]]];
+          zR *= zR, VR = zR * zR * (fR[RR] * vR + fR[RR + 1] * OR + fR[RR + 2] * xR)
         }
-        let XW = .6 - dW * dW - eW * eW - vW * vW;
-        if (XW < 0) ZW = 0;
+        let SR = .6 - NR * NR - DR * DR - HR * HR;
+        if (SR < 0) KR = 0;
         else {
-          const WW = 3 * mW[gW + 1 + EW[DW + 1 + EW[VW + 1]]];
-          XW *= XW, ZW = XW * XW * (wW[WW] * dW + wW[WW + 1] * eW + wW[WW + 2] * vW)
+          const RR = 3 * yR[oR + 1 + tR[cR + 1 + tR[PR + 1]]];
+          SR *= SR, KR = SR * SR * (fR[RR] * NR + fR[RR + 1] * DR + fR[RR + 2] * HR)
         }
-        return 32 * (LW + cW + tW + ZW)
+        return 32 * (qR + iR + VR + KR)
       }
-      noise4D(WW, iW, OW, mW) {
-        const EW = this.perm;
-        let NW, PW, wW, ZW, xW;
-        const lW = (WW + iW + OW + mW) * LW,
-          AW = Math.floor(WW + lW),
-          bW = Math.floor(iW + lW),
-          jW = Math.floor(OW + lW),
-          UW = Math.floor(mW + lW),
-          kW = (AW + bW + jW + UW) * cW,
-          sW = WW - (AW - kW),
-          MW = iW - (bW - kW),
-          KW = OW - (jW - kW),
-          SW = mW - (UW - kW);
-        let YW = 0,
-          yW = 0,
-          TW = 0,
-          JW = 0;
-        sW > MW ? YW++ : yW++, sW > KW ? YW++ : TW++, sW > SW ? YW++ : JW++, MW > KW ? yW++ : TW++, MW > SW ? yW++ : JW++, KW > SW ? TW++ : JW++;
-        const hW = YW >= 3 ? 1 : 0,
-          HW = yW >= 3 ? 1 : 0,
-          nW = TW >= 3 ? 1 : 0,
-          uW = JW >= 3 ? 1 : 0,
-          oW = YW >= 2 ? 1 : 0,
-          dW = yW >= 2 ? 1 : 0,
-          eW = TW >= 2 ? 1 : 0,
-          vW = JW >= 2 ? 1 : 0,
-          gW = YW >= 1 ? 1 : 0,
-          DW = yW >= 1 ? 1 : 0,
-          VW = TW >= 1 ? 1 : 0,
-          pW = JW >= 1 ? 1 : 0,
-          fW = sW - hW + cW,
-          CW = MW - HW + cW,
-          XW = KW - nW + cW,
-          BW = SW - uW + cW,
-          qW = sW - oW + 2 * cW,
-          RW = MW - dW + 2 * cW,
-          GW = KW - eW + 2 * cW,
-          IW = SW - vW + 2 * cW,
-          aW = sW - gW + 3 * cW,
-          rW = MW - DW + 3 * cW,
-          zW = KW - VW + 3 * cW,
-          FW = SW - pW + 3 * cW,
-          QW = sW - 1 + 4 * cW,
-          Wi = MW - 1 + 4 * cW,
-          ii = KW - 1 + 4 * cW,
-          Oi = SW - 1 + 4 * cW,
-          mi = 255 & AW,
-          Ei = 255 & bW,
-          Ni = 255 & jW,
-          Pi = 255 & UW;
-        let Li = .6 - sW * sW - MW * MW - KW * KW - SW * SW;
-        if (Li < 0) NW = 0;
+      noise4D(RR, JR, GR, yR) {
+        const tR = this.perm;
+        let uR, ZR, fR, KR, wR;
+        const rR = (RR + JR + GR + yR) * qR,
+          eR = Math.floor(RR + rR),
+          aR = Math.floor(JR + rR),
+          LR = Math.floor(GR + rR),
+          nR = Math.floor(yR + rR),
+          UR = (eR + aR + LR + nR) * iR,
+          WR = RR - (eR - UR),
+          AR = JR - (aR - UR),
+          CR = GR - (LR - UR),
+          XR = yR - (nR - UR);
+        let MR = 0,
+          BR = 0,
+          lR = 0,
+          pR = 0;
+        WR > AR ? MR++ : BR++, WR > CR ? MR++ : lR++, WR > XR ? MR++ : pR++, AR > CR ? BR++ : lR++, AR > XR ? BR++ : pR++, CR > XR ? lR++ : pR++;
+        const gR = MR >= 3 ? 1 : 0,
+          bR = BR >= 3 ? 1 : 0,
+          vR = lR >= 3 ? 1 : 0,
+          OR = pR >= 3 ? 1 : 0,
+          xR = MR >= 2 ? 1 : 0,
+          NR = BR >= 2 ? 1 : 0,
+          DR = lR >= 2 ? 1 : 0,
+          HR = pR >= 2 ? 1 : 0,
+          oR = MR >= 1 ? 1 : 0,
+          cR = BR >= 1 ? 1 : 0,
+          PR = lR >= 1 ? 1 : 0,
+          IR = pR >= 1 ? 1 : 0,
+          mR = WR - gR + iR,
+          zR = AR - bR + iR,
+          SR = CR - vR + iR,
+          jR = XR - OR + iR,
+          dR = WR - xR + 2 * iR,
+          ER = AR - NR + 2 * iR,
+          YR = CR - DR + 2 * iR,
+          kR = XR - HR + 2 * iR,
+          QR = WR - oR + 3 * iR,
+          FR = AR - cR + 3 * iR,
+          TR = CR - PR + 3 * iR,
+          sR = XR - IR + 3 * iR,
+          hR = WR - 1 + 4 * iR,
+          RJ = AR - 1 + 4 * iR,
+          JJ = CR - 1 + 4 * iR,
+          GJ = XR - 1 + 4 * iR,
+          yJ = 255 & eR,
+          tJ = 255 & aR,
+          uJ = 255 & LR,
+          ZJ = 255 & nR;
+        let qJ = .6 - WR * WR - AR * AR - CR * CR - XR * XR;
+        if (qJ < 0) uR = 0;
         else {
-          const WW = EW[mi + EW[Ei + EW[Ni + EW[Pi]]]] % 32 * 4;
-          Li *= Li, NW = Li * Li * (tW[WW] * sW + tW[WW + 1] * MW + tW[WW + 2] * KW + tW[WW + 3] * SW)
+          const RR = tR[yJ + tR[tJ + tR[uJ + tR[ZJ]]]] % 32 * 4;
+          qJ *= qJ, uR = qJ * qJ * (VR[RR] * WR + VR[RR + 1] * AR + VR[RR + 2] * CR + VR[RR + 3] * XR)
         }
-        let ci = .6 - fW * fW - CW * CW - XW * XW - BW * BW;
-        if (ci < 0) PW = 0;
+        let iJ = .6 - mR * mR - zR * zR - SR * SR - jR * jR;
+        if (iJ < 0) ZR = 0;
         else {
-          const WW = EW[mi + hW + EW[Ei + HW + EW[Ni + nW + EW[Pi + uW]]]] % 32 * 4;
-          ci *= ci, PW = ci * ci * (tW[WW] * fW + tW[WW + 1] * CW + tW[WW + 2] * XW + tW[WW + 3] * BW)
+          const RR = tR[yJ + gR + tR[tJ + bR + tR[uJ + vR + tR[ZJ + OR]]]] % 32 * 4;
+          iJ *= iJ, ZR = iJ * iJ * (VR[RR] * mR + VR[RR + 1] * zR + VR[RR + 2] * SR + VR[RR + 3] * jR)
         }
-        let wi = .6 - qW * qW - RW * RW - GW * GW - IW * IW;
-        if (wi < 0) wW = 0;
+        let fJ = .6 - dR * dR - ER * ER - YR * YR - kR * kR;
+        if (fJ < 0) fR = 0;
         else {
-          const WW = EW[mi + oW + EW[Ei + dW + EW[Ni + eW + EW[Pi + vW]]]] % 32 * 4;
-          wi *= wi, wW = wi * wi * (tW[WW] * qW + tW[WW + 1] * RW + tW[WW + 2] * GW + tW[WW + 3] * IW)
+          const RR = tR[yJ + xR + tR[tJ + NR + tR[uJ + DR + tR[ZJ + HR]]]] % 32 * 4;
+          fJ *= fJ, fR = fJ * fJ * (VR[RR] * dR + VR[RR + 1] * ER + VR[RR + 2] * YR + VR[RR + 3] * kR)
         }
-        let ti = .6 - aW * aW - rW * rW - zW * zW - FW * FW;
-        if (ti < 0) ZW = 0;
+        let VJ = .6 - QR * QR - FR * FR - TR * TR - sR * sR;
+        if (VJ < 0) KR = 0;
         else {
-          const WW = EW[mi + gW + EW[Ei + DW + EW[Ni + VW + EW[Pi + pW]]]] % 32 * 4;
-          ti *= ti, ZW = ti * ti * (tW[WW] * aW + tW[WW + 1] * rW + tW[WW + 2] * zW + tW[WW + 3] * FW)
+          const RR = tR[yJ + oR + tR[tJ + cR + tR[uJ + PR + tR[ZJ + IR]]]] % 32 * 4;
+          VJ *= VJ, KR = VJ * VJ * (VR[RR] * QR + VR[RR + 1] * FR + VR[RR + 2] * TR + VR[RR + 3] * sR)
         }
-        let Zi = .6 - QW * QW - Wi * Wi - ii * ii - Oi * Oi;
-        if (Zi < 0) xW = 0;
+        let KJ = .6 - hR * hR - RJ * RJ - JJ * JJ - GJ * GJ;
+        if (KJ < 0) wR = 0;
         else {
-          const WW = EW[mi + 1 + EW[Ei + 1 + EW[Ni + 1 + EW[Pi + 1]]]] % 32 * 4;
-          Zi *= Zi, xW = Zi * Zi * (tW[WW] * QW + tW[WW + 1] * Wi + tW[WW + 2] * ii + tW[WW + 3] * Oi)
+          const RR = tR[yJ + 1 + tR[tJ + 1 + tR[uJ + 1 + tR[ZJ + 1]]]] % 32 * 4;
+          KJ *= KJ, wR = KJ * KJ * (VR[RR] * hR + VR[RR + 1] * RJ + VR[RR + 2] * JJ + VR[RR + 3] * GJ)
         }
-        return 27 * (NW + PW + wW + ZW + xW)
+        return 27 * (uR + ZR + fR + KR + wR)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const WW in modules) Object.freeze(modules[WW]);
+for (const RR in modules) Object.freeze(modules[RR]);
